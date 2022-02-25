@@ -5,10 +5,10 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 22e4c62640222daeaa7fc33a76bc740338b5e7c8
+source-git-commit: f5282d149e80328742ff9008441960f62cea6290
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1732'
+ht-degree: 1%
 
 ---
 
@@ -100,8 +100,6 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 {
     "completeURI": "(string)",
     "folderPath": "(string)",
-    "minPartSize": (number),
-    "maxPartSize": (number),
     "files": [
         {
             "fileName": "(string)",
@@ -110,7 +108,8 @@ En enda begäran kan användas för att initiera överföringar för flera binä
             "uploadURIs": [
                 "(string)"
             ],
-            
+            "minPartSize": (number),
+            "maxPartSize": (number)
         }
     ]
 }
