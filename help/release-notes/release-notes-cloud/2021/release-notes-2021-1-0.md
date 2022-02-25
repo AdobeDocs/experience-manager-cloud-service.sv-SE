@@ -1,8 +1,8 @@
 ---
 title: Versionsinformation om 2021.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-description: '[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.1.0.'
+description: '"[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.1.0."'
 exl-id: cd639736-6e3d-4b69-b8ae-11e4e6490535
-source-git-commit: 44b24a68e2b9a9abd2a9d609c3a28f6b90e492fa
+source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 0%

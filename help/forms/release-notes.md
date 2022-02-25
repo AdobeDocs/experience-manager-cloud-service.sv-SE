@@ -1,8 +1,8 @@
 ---
-title: '[!DNL AEM Forms] as a Cloud Service versionsinformation'
-description: '[!DNL AEM Forms] as a Cloud Service versionsinformation'
+title: '"[!DNL AEM Forms] as a Cloud Service release notes"'
+description: '"[!DNL AEM Forms] as a Cloud Service release notes"'
 exl-id: 35950b81-6e45-4a75-bd27-8c28fd68e42e
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
 workflow-type: tm+mt
 source-wordcount: '2024'
 ht-degree: 2%
