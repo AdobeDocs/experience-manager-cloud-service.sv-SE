@@ -2,9 +2,9 @@
 title: Generera arkivdokument för adaptiv Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: d84365e1a150076abbd3965ffb964f13ba6b5340
 workflow-type: tm+mt
-source-wordcount: '2859'
+source-wordcount: '3611'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Du kan:
 
 Innan du börjar lära dig mer och förbereder de resurser som krävs för ett dokument:
 
-**Basmall:** En XFA-mall (XDP-fil) skapad i AEM Designer eller ett Acrobat-formulär (AcroForm). [Basmall](#base-template-of-a-document-of-record) används för att ange formaterings- och varumärkesinformation för ett arkivdokument. Överför din XFA-mall (XDP-fil) till din AEM Forms-instans innan
+**Basmall:** En XFA-mall (XDP-fil) som skapats i Forms Designer eller ett Acrobat-formulär (AcroForm). [Basmall](#base-template-of-a-document-of-record) används för att ange formaterings- och varumärkesinformation för ett arkivdokument. Överför din XFA-mall (XDP-fil) till din AEM Forms-instans innan
 
 **Adaptiv form:** Ett anpassat formulär som postdokumentet ska skapas för.
 
@@ -38,7 +38,7 @@ Innan du börjar lära dig mer och förbereder de resurser som krävs för ett d
 
 Överför din XFA-mall (XDP-fil) till din AEM Forms-instans. Utför följande steg för att konfigurera ett adaptivt formulär så att XFA-mallen (XDP-filen) används som mall för postdokument:
 
-1. I AEM författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
+1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Markera ett formulär och klicka på **[!UICONTROL Properties]**.
 1. I fönstret Egenskaper trycker du på **[!UICONTROL Form Model]**.
 1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
@@ -51,7 +51,7 @@ Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall fö
 
 Överför Adobe Acrobat PDF (Acrobat) till din AEM Forms-instans. Utför följande steg för att konfigurera ett adaptivt formulär så att det använder Adobe Acrobat PDF (Acrobat) som mall för arkivdokument:
 
-1. I AEM författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
+1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Markera ett formulär och klicka på **[!UICONTROL Properties]**.
 1. I fönstret Egenskaper trycker du på **[!UICONTROL Form Model]**.
 1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
@@ -65,14 +65,14 @@ Ditt adaptiva formulär är nu konfigurerat att använda en Acrobat som mall fö
 När ett anpassat formulär konfigureras för att automatiskt generera ett dokument för registrering uppdateras dess dokument omedelbart varje gång ett formulär ändras. Om ett fält till exempel tas bort från ett befintligt anpassat formulär, tas motsvarande fält också bort och visas inte i postdokumentet. Det finns många andra fördelar med att automatiskt generera arkivdokument. :
 
 * Formulärutvecklare behöver inte hantera databindningar manuellt. Automatiskt genererat arkivdokument tar hand om databindningsrelaterade uppdateringar.
-* Formulärutvecklare behöver inte manuellt dölja fält som är markerade som exkluderade från postdokumentet. Automatiskt genererade arkivhandlingar är förkonfigurerade för att exkludera sådana fält.
+* Formulärutvecklare behöver inte manuellt dölja fält som är markerade som exkluderade från postdokumentet. Automatiskt genererat postdokument är förkonfigurerat för att exkludera sådana fält.
 * Med det automatiskt genererade alternativet Dokument i post sparar du tid som krävs för att skapa en formulärmall för Dokument i post.
 * Med det automatiskt genererade alternativet Dokument för post kan du använda olika format och utseenden med olika basmallar. Det hjälper er att välja det bästa formatet och utseendet för arkivdokument för er organisation. Om du inte anger någon formatering anges systemformaten som standard.
-* Automatiskt genererat arkivhandlingsdokument säkerställer att alla ändringar i formuläret omedelbart återspeglas i arkivdokumentet.
+* Automatiskt genererat arkivdokument säkerställer att alla ändringar i formuläret omedelbart återspeglas i arkivdokumentet.
 
 Så här konfigurerar du ett anpassat formulär så att det automatiskt genererar ett postdokument:
 
-1. I AEM författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
+1. I författarinstansen av Experience Manager klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Markera ett formulär och klicka på **[!UICONTROL Properties]**.
 1. I fönstret Egenskaper trycker du på **[!UICONTROL Form Model]**.
 1. På  **[!UICONTROL Form Model]** -fliken, i **[!UICONTROL Select From]** nedrullningsbar meny, välja **[!UICONTROL Schema]** eller **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
@@ -98,7 +98,7 @@ Bind adaptiva formulärfält med mallfält för att visa hämtade formulärdata 
 In the following video Adaptive Form components are binded with corresponding Acroform template fields and the Document of Record is sent as an email attachment.
 -->
 
-Du kan använda åtgärden Skicka e-post AEM arbetsflöde i kombination med [Dokumentarkivhandlingssteget och andra skicka-åtgärder](configuring-submit-actions.md) för att få ett dokument.
+Du kan använda Skicka e-post, Skicka i Experience Manager i samband med arbetsflödet [Dokumentarkivhandlingssteget och andra skicka-åtgärder](configuring-submit-actions.md) för att få ett dokument.
 
 ## Inkrementella uppdateringar av dokumentmallen {#document-of-record-template-incremental-updates}
 
@@ -148,7 +148,6 @@ While creating an adaptive form, in the Form Model tab of Adaptive Form properti
 * **[Generate Document of Record](creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)**
   Select the option to use an XFA Form as a template. When the option is selected, the Document of Record is automatically generated for your Adaptive Form. When you use an XML schema as a template for an Adaptive Form, ensure that the adaptive form and associated XFA Form use the same XML schema as your Adaptive Form
   
-
 
 When you select a form model, configure Document of Record using options available under Document of Record Template Configuration. See [Document of Record Template Configuration](#document-of-record-template-configuration). -->
 
@@ -301,7 +300,7 @@ En basmall används för att definiera sidhuvud, sidfot, format och utseende fö
 
 * Egenskaperna för dessa fält används för fälten i postdokumentet. Dessa fält ska följa `AF_<name of field in all caps>_XFO` namnkonvention. Fältnamnet för kryssrutan bör till exempel vara `AF_CHECKBOX_XFO`.
 
-Så här skapar du en basmall i AEM Designer.
+Så här skapar du en basmall i Forms Designer.
 
 1. Klicka på **[!UICONTROL File]** > **[!UICONTROL New]**.
 1. Välj **[!UICONTROL Based on a template]** alternativ.
@@ -334,7 +333,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
    ![brandingtemplate](assets/brandingtemplate.png)
 
-   Om du väljer en egen mall bläddrar du till en XDP-fil på [!DNL AEM Forms] server. Om du vill använda en mall som inte redan finns i [!DNL AEM Forms] måste du först överföra XDP-filen till din [!DNL AEM Forms] server.
+   Om du väljer en egen mall bläddrar du till en XDP-fil på [!DNL AEM Forms] server. Om du vill använda en mall som inte redan finns i [!DNL AEM Forms] ska du först överföra XDP-filen till din [!DNL AEM Forms] server.
 
 1. Beroende på om du väljer en standardmall eller en anpassad mall visas några eller alla följande egenskaper på fliken Dokument för post. Ange dessa korrekt:
 
@@ -354,7 +353,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
    >[!NOTE]
    >
-   >Om du använder en mall för adaptiva formulär som skapats med en tidigare version av Designer än version 6.3 för att egenskaperna för dekorfärg och teckensnittsfamilj ska fungera måste du se till att följande finns i mallen för adaptiva formulär under rotdelformuläret:
+   >Om du använder en mall för adaptiva formulär som skapats med en tidigare version av Designer än 6.3, för att egenskaperna för dekorfärg och teckensnittsfamilj ska fungera, kontrollerar du att följande finns i mallen för adaptiva formulär under rotdelformuläret:
 
    ```xml
    <proto>
@@ -388,7 +387,7 @@ Fält i en panel återges i en kolumnlayout i postdokumentet
 
 Med dokumentinställningar kan du välja vilka alternativ du vill inkludera i postdokumentet. En bank godkänner till exempel namn, ålder, personnummer och telefonnummer i ett formulär. Formuläret genererar ett bankkontonummer och filialinformation. Du kan välja att bara visa namn, personnummer, bankkonto och filialinformation i registreringsdokumentet.
 
-Dokumentinställningarna för en komponent är tillgängliga under dess egenskaper. Om du vill komma åt egenskaperna för en komponent markerar du komponenten och klickar på ![cmppr](assets/cmppr.png) i övertäckningen. Egenskaperna listas i sidlisten och du hittar följande inställningar i den.
+Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. Om du vill komma åt egenskaperna för en komponent markerar du komponenten och klickar på ![cmppr](assets/cmppr.png) i övertäckningen. Egenskaperna listas i sidlisten och du hittar följande inställningar i den.
 
 **Fältnivåinställningar**
 
@@ -401,4 +400,70 @@ Dokumentinställningarna för en komponent är tillgängliga under dess egenskap
 **Inställningar för formulärnivå**
 
 * **Inkludera obundna fält i DoR:** När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
-* **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, kommer de att exkluderas från postdokumentet om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd.
+* **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, exkluderas de från Postdokument om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd.
+
+## Använda en anpassad XCI-fil
+
+>[!NOTE]
+>
+> Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague-review.corp.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
+
+En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a Cloud Service har en överordnad XCI-fil. Du kan använda en anpassad XCI-fil för att åsidosätta en eller flera standardegenskaper som anges i den överordnad XCI-filen. Du kan till exempel välja att bädda in ett teckensnitt i ett dokument eller aktivera taggad egenskap för alla dokument. Följande tabell anger XCI-alternativen:
+
+| XCI-alternativ | Beskrivning |
+|--- |--- |
+| config/present/pdf/creator | Identifierar den som har skapat dokumentet med hjälp av posten Skapare i dokumentinformationsordlistan. Mer information om den här ordlistan finns i [Referenshandbok för PDF](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/pdf_reference_archives/PDFReference.pdf). |
+| config/present/pdf/producer | Identifierar dokumenttillverkaren med hjälp av posten Producer i dokumentinformationsordlistan. Mer information om den här ordlistan finns i [Referenshandbok för PDF](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/pdf_reference_archives/PDFReference.pdf). |
+| config/present/layout | Anger om utdata är en enda panel eller sidnumrerad. |
+| config/present/pdf/compression/level | Anger den komprimeringsgrad som ska användas när ett PDF-dokument skapas. |
+| config/present/pdf/fontInfo/embed | Styr teckensnittsinbäddning i utdatadokumentet. |
+| config/present/pdf/scriptModel | Styr om XFA-specifik information ska inkluderas i utdata-PDF-dokumentet. |
+| config/present/common/data/adjustData | Kontrollerar om XFA-programmet justerar data efter sammanslagningen. |
+| config/present/pdf/renderPolicy | Kontrollerar om genereringen av sidinnehåll görs på servern eller skjuts upp till klienten. |
+| config/present/common/locale | Anger standardspråket som används i utdatadokumentet. |
+| config/present/destination | Anger utdataformatet när det finns i ett aktuellt element. Anger vilken åtgärd som ska utföras när dokumentet öppnas i en interaktiv klient när det finns i ett openAction-element. |
+| config/present/output/type | Anger vilken typ av komprimering som ska användas för en fil eller vilken typ av utdata som ska skapas. |
+| config/present/common/temp/uri | Anger formulär-URI. |
+| config/present/common/template/base | Anger en basplats för URI:er i formulärdesignen. När det här elementet saknas eller är tomt används platsen för formulärdesignen som bas. |
+| config/present/common/log/to | Styr platsen dit loggdata eller utdata skrivs. |
+| config/present/output/to | Styr platsen dit loggdata eller utdata skrivs. |
+| config/present/script/currentPage | Anger den inledande sidan när dokumentet öppnas. |
+| config/present/script/exclude | Informerar Forms as a Cloud Service om vilka händelser som ska ignoreras. |
+| config/present/pdf/linearized | Anger om utdatadokumentet för PDF är linjärt. |
+| config/present/script/runScripts | Styr vilken uppsättning skript som Forms as a Cloud Service kör. |
+| config/present/pdf/tagged | Styr om taggar ska tas med i utdatadokumentet för PDF. Taggar i PDF är ytterligare information som ingår i ett dokument för att visa dokumentets logiska struktur. Taggar underlättar hjälpmedelsanvändningen och formateringen. Ett sidnummer kan till exempel taggas som en artefakt så att skärmläsaren inte omsluter den mitt i texten. Även om märkord gör ett dokument mer användbart, ökar de även storleken på dokumentet och bearbetningstiden för att skapa det. |
+| config/present/pdf/fontInfo/alwaysEmbed | Anger ett teckensnitt som är inbäddat i utdatadokumentet. |
+| config/present/pdf/fontInfo/neverEmbed | Anger ett teckensnitt som aldrig får bäddas in i utdatadokumentet. |
+| config/present/pdf/pdfa/part | Anger versionsnumret för den PDF/A-specifikation som dokumentet uppfyller. |
+| config/present/pdf/pdfa/amd | Anger ändringsnivån för PDF/A-specifikationen. |
+| config/present/pdf/pdfa/conformance | Anger överensstämmelsenivå med PDF/A-specifikationen. |
+| config/present/pdf/version | Anger vilken version av PDF-dokumentet som ska genereras |
+| config/present/pdf/version/map | Anger dokumentets reservteckensnitt |
+
+### Använda en anpassad XCI-fil i Forms as a Cloud Service miljö
+
+1. Lägg till den anpassade XCI-filen i utvecklingsprojektet.
+1. Ange följande [egenskapen inline](/help/implementing/deploying/configuring-osgi.md):
+
+   ```JSON
+    {
+     "xciFilePath": "[path of XCI file]"
+    }
+   ```
+
+   Till exempel,
+
+   ```JSON
+    {
+     "xciFilePath": "/content/dam/formsanddocuments/customMinionProBoldAndTagged.xci"
+    }
+   ```
+
+1. Distribuera projektet till din Cloud Service-miljö.
+
+### Använda en anpassad XCI-fil i den lokala Forms as a Cloud Service utvecklingsmiljö
+
+1. Överför XCI-filen till den lokala utvecklingsmiljön.
+1. Öppna konfigurationshanteraren för Cloud Service SDK. Standardwebbadressen är: <http://localhost:4502/system/console/configMgr>.
+1. Leta reda på och öppna **[!UICONTROL Adaptive Forms and Interactive Communication Web Channel]** konfiguration.
+1. Ange sökvägen till XCI-filen och klicka på **[!UICONTROL Save]**.
