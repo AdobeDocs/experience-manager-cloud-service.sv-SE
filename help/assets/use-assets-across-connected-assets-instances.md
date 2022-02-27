@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: f624b287bf5a46d4a20991dae6cd7b521a7fe472
+source-git-commit: 62af8e36b050abacd2160ab09671ed237424bc9b
 workflow-type: tm+mt
-source-wordcount: '3715'
+source-wordcount: '3713'
 ht-degree: 18%
 
 ---
@@ -53,7 +53,7 @@ Författare söker efter bilder och följande typer av dokument i Content Finder
 De olika roller som krävs för att konfigurera och använda funktionen och motsvarande användargrupper beskrivs nedan. Lokalt omfång används för de fall där en författare skapar en webbsida. Fjärromfång används för DAM-distributionen som är värd för de nödvändiga resurserna. The [!DNL Sites] författaren hämtar dessa fjärrresurser.
 
 | Roll | Omfång | Användargrupp | Krav |
-|------|--------|-----------|-----|----------|
+|------|--------|-----------|----------|
 | [!DNL Sites] administratör | Lokalt | [!DNL Experience Manager] `administrators` | Konfigurera [!DNL Experience Manager] och konfigurera integrering med fjärrkontrollen [!DNL Assets] distribution. |
 | DAM-användare | Lokalt | `Authors` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
 | [!DNL Sites] author | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst på lokal [!DNL Sites]) </li> <li>`dam-users` på lokal [!DNL Sites]</li></ul> | Slutanvändarna är [!DNL Sites] författare som använder den här integreringen för att förbättra innehållets hastighet. Författare kan söka efter och bläddra bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som behövs på lokala webbsidor. |
@@ -136,7 +136,7 @@ Du kan kontrollera anslutningen mellan de konfigurerade [!DNL Sites] driftsättn
 
 Du kan konfigurera en anslutning mellan [!DNL Sites] driftsättning och [!DNL Dynamic Media] distribution som tillåter webbsideskonstruktörer att använda [!DNL Dynamic Media] bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och fjärranslutna resurser [!DNL Dynamic Media] distributioner förblir desamma. På så sätt kan du utnyttja [!DNL Dynamic Media] via funktionen Anslutna resurser, till exempel smarta beskärnings- och bildförinställningar.
 
-Med uppkopplade resurser kan du utnyttja [!DNL Dynamic Media] funktioner för bearbetning av bildresurser på DAM-fjärrdistribution.
+Med anslutna resurser kan du använda [!DNL Dynamic Media] för att bearbeta bildresurser på den fjärranslutna DAM-distributionen.
 
 Används [!DNL Dynamic Media] bilder från en fjärransluten DAM-distribution på en [!DNL Sites] distribution:
 
