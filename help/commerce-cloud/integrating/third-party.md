@@ -2,18 +2,17 @@
 title: AEM och tredjeparts Commerce Integration med Commerce Integration Framework
 description: Företag kan behöva ytterligare e-handelslösningar från tredje part för att göra sin butik tillgänglig. Commerce Integration Framework (CIF) kan användas i sådana integreringsscenarier för att ansluta en tredjepartslösning för e-handel till Adobe Experience Manager med hjälp av I/O Runtime.
 thumbnail: cif-third-party-architecture.jpg
-exl-id: 42dd8922-540d-4a93-9e45-b5e83dc11e16
-translation-type: tm+mt
-source-git-commit: c0a79d9ffefba06b64d48aed79e9a00baa4987df
+exl-id: 3ebdb8eb-65ba-46be-aca3-6c06c8d1600c,42dd8922-540d-4a93-9e45-b5e83dc11e16
+source-git-commit: a53ef07cd9da636c8d938c711de6defb9eb8e05f
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
 
 # AEM och tredjeparts Commerce Integration med Commerce Integration Framework {#aem-third-party}
 
-Integrationen av en icke-Adobe-handelslösning är ett vanligt scenario för CIF. Tredjepartslösningar med olika API:er och scheman kopplas samman via ett integreringslager.
+Integrationen av lösningar från andra företag än Adobe Commerce är ett vanligt scenario för CIF. Tredjepartslösningar med olika API:er och scheman kopplas samman via ett integreringslager.
 
 ## Arkitektur {#architecture}
 
@@ -41,7 +40,7 @@ Integreringen av programmeringsgränssnitt för produktkataloger krävs för att
 
 ## Fallstudier
 
-[AEM CIF Core ](https://github.com/adobe/aem-core-cif-components) Components hämtar och utbyter data via de CIF-API:er som stöds i Adobe Commerce. För att återanvända komponenter måste respektive API:er implementeras.
+[AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) hämta och utbyta data via de CIF-stödda Adobe Commerce-API:erna. För att återanvända komponenter måste respektive API:er implementeras.
 
 Rekommendationen för prestandakrävande komponenter på klientsidan är att kommunicera direkt med tredjepartslösningen för att undvika latens.
 
@@ -49,6 +48,17 @@ Rekommendationen för prestandakrävande komponenter på klientsidan är att kom
 
 Vi rekommenderar att du använder [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html) för integreringslagret. Det ingår i CIF-tillägget för tredje part. Eftersom det fungerar med en mikrotjänstliknande metod är det lämpligt att integrera flera lösningar på ett enkelt sätt.
 
-[referensimplementeringen](https://github.com/adobe/commerce-cif-graphql-integration-reference) är en bra utgångspunkt för att bygga integreringen med din e-handelslösning. Även om det har stöd för GraphQL kan det även integreras med andra typer av API som REST.
+The [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference) är en bra startpunkt för att bygga integreringen i e-handelslösningen. Även om det har stöd för GraphQL kan det även integreras med andra typer av API som REST.
 
 Det här integreringslagret är inte nödvändigt om ett lager från tredje part är tillgängligt (t.ex. Mulesoft) eller om integreringen byggs ovanpå tredjepartslösningen.
+
+## Fördefinierade anslutningar {#connectors}
+
+Kopplingar är en bra början för projekt. De levereras med en handelslösningsspecifik anslutning och standardmappning av API. Dessa kontakter byggs av tredje part och underhålls inte av Adobe. Kontakta respektive partner för mer information.
+
+* [SAP Commerce](https://github.com/diconium/commerce-cif-graphql-integration-hybris), skapat av Diconium
+* [Commercetools](https://github.com/diconium/commerce-cif-graphql-integration-commercetool), skapat av Diconium
+
+>[!TIP]
+>
+>Kopplingar hjälper till att snabba upp handelsintegreringen, men de är inte plug-in-play. E-handelslösningar för företag är oftast mycket anpassade och kräver en anpassad integrering. Goda kunskaper om handelsplattformen, Adobe Commerce GraphQL-scheman och Adobe I/O Runtime krävs.
