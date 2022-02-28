@@ -4,10 +4,10 @@ description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa 
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: bb04d3bf3b5f4ca9abc12eee2e50b5f3a95ba405
+source-git-commit: d5dcd7bd94b8c3ef8b6cbe3abda05011737896a5
 workflow-type: tm+mt
-source-wordcount: '9100'
-ht-degree: 4%
+source-wordcount: '8976'
+ht-degree: 3%
 
 ---
 
@@ -103,7 +103,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
 ## Arbeta med video i Dynamic Media {#working-with-video-in-dynamic-media}
 
-Video i Dynamic Media är en totallösning som gör det enkelt att publicera högkvalitativ adaptiv video för direktuppspelning på flera skärmar, inklusive datorer, iOS, Android™, BlackBerry® och Windows®-mobilenheter. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Den stationära datorn eller mobila enheten känner av den tillgängliga bandbredden.
+Video i Dynamic Media är en totallösning som gör det enkelt att publicera högkvalitativ adaptiv video för direktuppspelning på flera skärmar, inklusive stationära datorer, surfplattor och mobila enheter. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Den stationära datorn eller mobila enheten känner av den tillgängliga bandbredden.
 
 På en mobilenhet från iOS identifieras t.ex. en bandbredd som 3G, 4G eller Wi-Fi. Sedan väljs automatiskt rätt kodad video bland de olika videobithastigheterna i den adaptiva videouppsättningen. Videon strömmas till datorer, mobila enheter eller surfplattor.
 
@@ -128,13 +128,13 @@ Följande stöds för hantering av enstaka video och adaptiva videouppsättninga
 
 * Videobildtext i alla HTML5-videovisningsprogram.
 * Ordna, bläddra bland och sök videoklipp med fullt stöd för metadata för effektiv hantering av videomaterial.
-* Leverera adaptiva videouppsättningar till webben och datorer samt till mobila enheter som iPhone, iPad, Android™, BlackBerry® och Windows®.
+* Leverera adaptiva videouppsättningar till webben, datorer, surfplattor och mobila enheter.
 
 Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok för Dynamic Media Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference.html).
 
-Dynamic Media har stöd för videouppspelning i mobiler för MP4 H.264-video. Du kan hitta BlackBerry®-enheter som stöder det här videoformatet på följande: [Videoformat som stöds på BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
+<!-- OUTDATED 2/28/22 BASED ON CQDOC-18692 Dynamic Media supports mobile video playback for MP4 H.264 video. You can find BlackBerry® devices that support this video format at the following: [Supported video formats on BlackBerry®](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
-Följande Windows®-enheter har stöd för det här videoformatet [Videoformat som stöds på Windows® Phone](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs).
+OUTDATED 2/28/22 BASED ON CQDOC-18692 You can find Windows® devices that support this video format at the following [Supported video formats on Windows® Phone](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs). -->
 
 * Spela upp videon med Dynamic Media Video Viewer Presets, inklusive följande:
 
@@ -239,13 +239,15 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
    <td>Chrome (iOS)</td>
    <td>HLS</td>
   </tr>
-  <tr>
-   <td>Mobil</td>
+ </tbody>
+</table>
+
+<!--  THIS LINE WAS REMOVED FROM THE TABLE ABOVE ON FEB 28, 2022 BASED ON CQDOC 18692 -RSB <tr>
+   <td>Mobile</td>
    <td>BlackBerry®</td>
    <td>HLS</td>
   </tr>
- </tbody>
-</table>
+ -->
 
 ## Arkitektur för Dynamic Media videolösning {#architecture-of-dynamic-media-video-solution}
 
@@ -436,21 +438,19 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 **Så här konfigurerar du inställningarna för Google Cloud:**
 
 1. Skapa ett Google-konto.
-   [https://accounts.google.com/SignUp?service=mail](https://accounts.google.com/SignUp?service=mail)
-
-   Om du redan har ett Google-konto går du vidare till nästa steg.
+   [https://accounts.google.com/signup/v2?service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp](https://accounts.google.com/signup/v2?service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp)
 
 1. Gå till [https://cloud.google.com/](https://cloud.google.com/).
 1. På Google Cloud-sidan, nära det övre högra hörnet, väljer du **[!UICONTROL Console]**.
 
    Vid behov **[!UICONTROL Sign in]** med inloggningsuppgifterna för ditt Google-konto för att se **[!UICONTROL Console]** alternativ.
 
-1. På sidan Kontrollpanel, till höger om **[!UICONTROL Google Cloud Platform]** väljer du listrutan Projekt för att öppna dialogrutan Välj ett projekt.
-1. I dialogrutan Välj ett projekt väljer du **[!UICONTROL New Project]**.
+1. På sidan Kontrollpanel, till höger om **[!UICONTROL Google Cloud Platform]** väljer du listrutan Projekt för att öppna **[!UICONTROL Select a project]** -dialogrutan.
+1. I **[!UICONTROL Select a project]** väljer **[!UICONTROL New Project]**.
 
    ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
 
-1. Skriv namnet på det nya projektet i fältet Projektnamn i dialogrutan Nytt projekt.
+1. I **[!UICONTROL New Project]** i **[!UICONTROL Project name]** anger du namnet på det nya projektet.
 
    Ditt projekt-ID baseras på ditt projektnamn. Välj projektnamnet noggrant. den kan inte ändras efter att den har skapats. Du måste även ange samma projekt-ID igen när du konfigurerar YouTube i Experience Manager senare. Skriv därför ned den.
 
@@ -458,72 +458,71 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
 1. Gör något av följande:
 
-   * På ditt projekts Dashboard väljer du Komma igång-kort **[!UICONTROL Explore and enable APIs]**.
-   * I Dashboard för projektet väljer du **[!UICONTROL Go to APIs overview]**.
+   * På Dashboard-panelen i ditt projekt finns **[!UICONTROL Getting Started]** kort, välj **[!UICONTROL Explore and enable APIs]**.
+   * På Dashboard-panelen i ditt projekt finns **[!UICONTROL APIs]** kort, välj **[!UICONTROL Go to APIs overview]**.
 
    ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
-1. I början av API:erna och tjänsterna väljer du **[!UICONTROL Enable APIs and Services]**.
-1. På sidan API-bibliotek, till vänster, under **[!UICONTROL Category]**, markera **[!UICONTROL YouTube]**. Till höger på sidan väljer du **[!UICONTROL YouTube Data API]**.
-1. På sidan YouTube Data API v3 väljer du **[!UICONTROL Enable]**.
+1. Nära överkanten i mitten av **[!UICONTROL APIs & Services]** sida, markera **[!UICONTROL ENABLE APIS AND SERVICES]**.<!-- NEXT STEP BELOW IS STEP 10 -->
+1. På **[!UICONTROL API Library]** sida, till vänster, under **[!UICONTROL Category]**, markera **[!UICONTROL YouTube]**. Till höger på sidan väljer du **[!UICONTROL YouTube]**.
+1. På **[!UICONTROL YouTube]** sida, markera **[!UICONTROL YouTube Data API v3]**.
+1. På **[!UICONTROL YouTube Data API v3]** sida, markera **[!UICONTROL MANAGE]**.
 
-   ![6_5_googleaccount-apis-enable3](assets/6_5_googleaccount-apis-enable3.png)
+   ![6_5_googleaccount-apis-manage](assets/6_5_googleaccount-apis-manage.png)
 
-1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Välj vid behov **[!UICONTROL Create Credentials]**.
+1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Om det behövs, till vänster på sidan API:er och tjänster, väljer du **[!UICONTROL Credentials]**.
 
-   ![6_5_googleaccount-apis-createcredentials](assets/6_5_googleaccount-apis-createcredentials.png)
+1. Välj **[!UICONTROL CREATE CREDENTIALS]** väljer **[!UICONTROL OAuth client ID]**.
 
-1. På **[!UICONTROL Add credentials to your project]** sida, steg 1, gör följande:
+1. På **[!UICONTROL Create OAuth client ID]** sida, på **[!UICONTROL Application type]** nedrullningsbar lista, välja **[!UICONTROL Web application]**.
 
-   * I listrutan **[!UICONTROL Which API are you using?]** väljer du **[!UICONTROL YouTube Data API v3]**.
+   ![6_5_googleaccount-apis-applicationtype](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-applicationtype.png)
 
-   * I listrutan **[!UICONTROL Where are you calling the API from?]** väljer du **[!UICONTROL Web Server (for example, node.js, Tomcat)]**.
+1. Gör något av följande:
 
-   * I listrutan **[!UICONTROL What data are you accessing?]** väljer du **[!UICONTROL User data]**.
+   * I **[!UICONTROL Name]** anger du ett unikt namn för OAuth 2.0-klienten.
+   * Använd det standardnamn som Google redan angett i **[!UICONTROL Name]** fält.
 
-   ![6_5_googleaccount-apis-createcredentials2](assets/6_5_googleaccount-apis-createcredentials2.png)
+1. Under **[!UICONTROL Authorized JavaScript origins]** rubrik, markera **[!UICONTROL ADD URI]**.
 
-1. Välj **[!UICONTROL What credentials do I need?]**
-1. I steg 2 på sidan **[!UICONTROL Add credentials to your project]** anger du ett unikt namn i fältet Namn under rubriken **[!UICONTROL Create an OAuth 2.0 client ID]**. Du kan också använda standardnamnet som anges av Google.
-1. Under **[!UICONTROL Authorized JavaScript origins]** i textfältet anger du följande sökväg och ersätter din egen domän och portnummer i sökvägen. Tryck sedan på **[!UICONTROL Enter]** så här lägger du till sökvägen i listan:
+   ![6_5_googleaccount-apis-namepermissions](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-nameauthorizations.png)
+
+1. I **[!UICONTROL URIs]** textfält, ange följande sökväg och ersätt din egen domän och portnummer i sökvägen och tryck sedan på **[!UICONTROL Enter]** så här lägger du till sökvägen i listan:
 
    `https://<servername.domain>:<port_number>`
 
    Till exempel, `https://1a2b3c.mycompany.com:4321`
 
-   **Anteckning**: Sökvägsexemplen ovan är endast avsedda som förklaringar.
+   >[!IMPORTANT]
+   >
+   >Exempelsökvägen ovan är hypotetisk och endast för att förklara.
 
-   ![6_5_googleaccount-apis-createcredentials-oauth](assets/6_5_googleaccount-apis-createcredentials-oauth.png)
+1. Under **[!UICONTROL Authorized redirect URIs]** välj ADD URI.
 
-1. Under **[!UICONTROL Authorized redirect URIs]** i textfältet anger du följande sökväg och ersätter din egen domän och portnummer i sökvägen. Tryck sedan på **[!UICONTROL Enter]** så här lägger du till sökvägen i listan:
+1. I **[!UICONTROL URIs]** textfält, ange följande sökväg och ersätt din egen domän och portnummer i sökvägen och tryck sedan på **[!UICONTROL Enter]** så här lägger du till sökvägen i listan:
 
    `https://<servername.domain>:<port_number>/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
    Till exempel, `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   **Anteckning**: Sökvägsexemplet ovan är endast avsett som förklaring.
+   >[!IMPORTANT]
+   >
+   >Exempelsökvägen ovan är hypotetisk och endast för att förklara.
 
-1. Välj **[!UICONTROL Create OAuth client ID]**.
-1. På sidan **[!UICONTROL Add credentials to your project]**, steg 3, under rubriken **[!UICONTROL Set up the OAuth 2.0 consent screen]**, väljer du den Gmail-e-postadress som du för närvarande använder.
+1. Nära nederdelen av **[!UICONTROL Create OAuth client ID]** sida, markera **[!UICONTROL Create]**.
 
-   ![6_5_googleaccount-apis-createcredentials-consentscreen](assets/6_5_googleaccount-apis-createcredentials-consentscreen.png)
+1. På **[!UICONTROL OAuth client created]** gör du följande:
 
-1. Under **[!UICONTROL Product name shown to users]** i textfältet anger du det du vill visa på godkännandeskärmen.
-
-   Medgivandeskärmen visas för Experience Manager-administratören när de autentiserar sig för YouTube. Experience Manager kontaktar YouTube för tillstånd.
-
-1. Välj **[!UICONTROL Continue]**.
-1. På sidan Add credentials to your project (Lägg till inloggningsuppgifter), steg 4, under **[!UICONTROL Download credentials]** rubrik, markera **[!UICONTROL Download]**.
-
-   ![6_5_googleaccount-apis-createcredentials-downloadcredentials](assets/6_5_googleaccount-apis-createcredentials-downloadcredentials.png)
-
-1. Spara `client_id.json` -fil.
+   * (Valfritt) Kopiera ditt klient-ID och din klienthemlighet och spara.
+   * Välj **[!UICONTROL DOWNLOAD JSON]** sparar du sedan JSON-filen.
 
    Du behöver den här hämtade JSON-filen när du konfigurerar YouTube i Adobe Experience Manager senare.
 
-1. Välj **[!UICONTROL Done]**.
+   ![6_5_googleaccount-apis-authclientcreated](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-oauthclientcreated.png)
 
-   Logga ut från ditt Google-konto. Skapa nu en YouTube-kanal.
+1. På **[!UICONTROL OAuth client created]** väljer **[!UICONTROL OK]**.
+
+1. Logga ut från ditt Google-konto. Skapa nu en YouTube-kanal.
 
 ### Skapa en YouTube-kanal {#creating-a-youtube-channel}
 
