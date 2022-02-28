@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa 
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: d5dcd7bd94b8c3ef8b6cbe3abda05011737896a5
+source-git-commit: 9608e36904e352af5a7273fcb8e7eef49565680b
 workflow-type: tm+mt
-source-wordcount: '8976'
+source-wordcount: '8974'
 ht-degree: 3%
 
 ---
@@ -447,9 +447,6 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
 1. På sidan Kontrollpanel, till höger om **[!UICONTROL Google Cloud Platform]** väljer du listrutan Projekt för att öppna **[!UICONTROL Select a project]** -dialogrutan.
 1. I **[!UICONTROL Select a project]** väljer **[!UICONTROL New Project]**.
-
-   ![6_5_googleaccount-newproject](assets/6_5_googleaccount-newproject.png)
-
 1. I **[!UICONTROL New Project]** i **[!UICONTROL Project name]** anger du namnet på det nya projektet.
 
    Ditt projekt-ID baseras på ditt projektnamn. Välj projektnamnet noggrant. den kan inte ändras efter att den har skapats. Du måste även ange samma projekt-ID igen när du konfigurerar YouTube i Experience Manager senare. Skriv därför ned den.
@@ -460,8 +457,6 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    * På Dashboard-panelen i ditt projekt finns **[!UICONTROL Getting Started]** kort, välj **[!UICONTROL Explore and enable APIs]**.
    * På Dashboard-panelen i ditt projekt finns **[!UICONTROL APIs]** kort, välj **[!UICONTROL Go to APIs overview]**.
-
-   ![6_5_googleaccount-apis-enable2](assets/6_5_googleaccount-apis-enable2.png)
 
 1. Nära överkanten i mitten av **[!UICONTROL APIs & Services]** sida, markera **[!UICONTROL ENABLE APIS AND SERVICES]**.<!-- NEXT STEP BELOW IS STEP 10 -->
 1. På **[!UICONTROL API Library]** sida, till vänster, under **[!UICONTROL Category]**, markera **[!UICONTROL YouTube]**. Till höger på sidan väljer du **[!UICONTROL YouTube]**.
