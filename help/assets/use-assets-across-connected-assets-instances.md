@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 2b16c2922f575fd0946f1a6aa21b99772114b440
+source-git-commit: 97e704dae32baa52f3e9490aa5dcab8f5081fd1a
 workflow-type: tm+mt
-source-wordcount: '3744'
-ht-degree: 17%
+source-wordcount: '3684'
+ht-degree: 18%
 
 ---
 
@@ -148,11 +148,9 @@ Används [!DNL Dynamic Media] med anslutna resurser:
 >
 >Med sammankopplade resurser och [!DNL Dynamic Media] konfiguration, du kan inte använda [!DNL Dynamic Media] för att bearbeta lokala resurser som finns på [!DNL Sites] distribution.
 
-## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Dynamic Media] distributioner {#sites-dynamic-media-connected-assets}
+## Konfigurera [!DNL Dynamic Media] {#configure-dynamic-media}
 
-Du kan konfigurera en anslutning mellan [!DNL Sites] driftsättning och [!DNL Dynamic Media] distribution som tillåter webbsideskonstruktörer att använda [!DNL Dynamic Media] bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och fjärranslutna resurser [!DNL Dynamic Media] distributioner förblir desamma. På så sätt kan du utnyttja [!DNL Dynamic Media] via funktionen Anslutna resurser, till exempel smarta beskärnings- och bildförinställningar.
-
-Så här konfigurerar du anslutningen:
+Konfigurera [!DNL Dynamic Media] på [!DNL Assets] och [!DNL Sites] distributioner:
 
 1. Skapa konfiguration för anslutna resurser enligt beskrivningen ovan, förutom när du konfigurerar funktionen, välj **[!UICONTROL Fetch original rendition for Dynamic Media Connected Assets]** alternativ.
 
