@@ -5,12 +5,13 @@ contentOwner: AG
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 62af8e36b050abacd2160ab09671ed237424bc9b
+source-git-commit: 2b16c2922f575fd0946f1a6aa21b99772114b440
 workflow-type: tm+mt
-source-wordcount: '3713'
-ht-degree: 18%
+source-wordcount: '3744'
+ht-degree: 17%
 
 ---
+
 
 # Använd Connected Assets när du vill dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
@@ -132,22 +133,24 @@ Du kan kontrollera anslutningen mellan de konfigurerade [!DNL Sites] driftsättn
 
 <!-- TBD: Check if Launchers are to be disabled on CS instances. Is this option even available to the users on CS? -->
 
+## Använda Dynamic Media-resurser {#dynamic-media-assets}
+
+
+Med sammankopplade resurser kan du använda bildresurser som bearbetats av [!DNL Dynamic Media] från fjärrdistribution av DAM på Sites-sidor och utnyttja Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
+
+Används [!DNL Dynamic Media] med anslutna resurser:
+
+1. Konfigurera [!DNL Dynamic Media] på fjärrdistribution av DAM med Sync-läge aktiverat.
+1. Konfigurera [Anslutna resurser](#configure-a-connection-between-sites-and-assets-deployments).
+1. Konfigurera [!DNL Dynamic Media] på Sites-instansen med samma företagsnamn som konfigurerats på fjärr-DAM. Webbplatsdistributionen måste ha skrivskyddad åtkomst till Dynamic Media-kontot för att kunna arbeta med anslutna resurser. Se därför till att inaktivera synkroniseringsläget i Dynamic Media-konfigurationen på platsinstansen.
+
+>[!CAUTION]
+>
+>Med sammankopplade resurser och [!DNL Dynamic Media] konfiguration, du kan inte använda [!DNL Dynamic Media] för att bearbeta lokala resurser som finns på [!DNL Sites] distribution.
+
 ## Konfigurera en anslutning mellan [!DNL Sites] och [!DNL Dynamic Media] distributioner {#sites-dynamic-media-connected-assets}
 
 Du kan konfigurera en anslutning mellan [!DNL Sites] driftsättning och [!DNL Dynamic Media] distribution som tillåter webbsideskonstruktörer att använda [!DNL Dynamic Media] bilder på sina webbsidor. När du skapar webbsidor är upplevelsen av att använda fjärrresurser och fjärranslutna resurser [!DNL Dynamic Media] distributioner förblir desamma. På så sätt kan du utnyttja [!DNL Dynamic Media] via funktionen Anslutna resurser, till exempel smarta beskärnings- och bildförinställningar.
-
-Med anslutna resurser kan du använda [!DNL Dynamic Media] för att bearbeta bildresurser på den fjärranslutna DAM-distributionen.
-
-Används [!DNL Dynamic Media] bilder från en fjärransluten DAM-distribution på en [!DNL Sites] distribution:
-
-1. Konfigurera [!DNL Dynamic Media] på fjärrdistribution av DAM med följande alternativ:
-   * Synkroniseringsläge: Aktiverad som standard
-   * Publicera resurser: Synkronisera allt innehåll
-1. På [!DNL Sites] distribution:
-   1. Konfigurera [!DNL Dynamic Media] med samma företag som i steg 1 (Synkroniseringsläge inaktiverat).
-   1. Konfigurera anslutna resurser.
-
-   [!DNL Dynamic Media] resurser är tillgängliga på [!DNL Sites] i skrivskyddat läge. Därför kan du inte använda [!DNL Dynamic Media] för att bearbeta resurser på [!DNL Sites] distribution.
 
 Så här konfigurerar du anslutningen:
 
