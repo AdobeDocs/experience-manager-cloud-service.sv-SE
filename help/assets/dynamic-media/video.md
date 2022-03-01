@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa 
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 22588f102f5b388d6da3a8aae124c30288ecb0a5
+source-git-commit: e1f0b04dde2eb5a3392a0b9befbc56135b06cff4
 workflow-type: tm+mt
-source-wordcount: '8988'
+source-wordcount: '9002'
 ht-degree: 3%
 
 ---
@@ -433,7 +433,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
 >[!NOTE]
 >
->Följande steg var korrekta när detta skrevs. Google uppdaterar dock regelbundet sina webbplatser utan föregående meddelande. De här stegen kan därför vara något annorlunda.
+>Följande steg var korrekta vid skrivandet. Google uppdaterar dock regelbundet sina webbsidor i molnet utan föregående meddelande. Därför kan vissa konfigurationsalternativ namnges något annorlunda i Google användargränssnitt jämfört med det namn som används i stegen.
 
 **Så här konfigurerar du inställningarna för Google Cloud:**
 
@@ -447,7 +447,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    Vid behov **[!UICONTROL Sign in]** med inloggningsuppgifterna för ditt Google-konto för att se **[!UICONTROL Console]** alternativ.
 
-1. På sidan Kontrollpanel, till höger om **[!UICONTROL Google Cloud Platform]** väljer du listrutan Projekt för att öppna **[!UICONTROL Select a project]** -dialogrutan.
+1. På sidan Kontrollpanel, till höger om **[!UICONTROL Google Cloud Platform]** väljer du **[!UICONTROL Project]** nedrullningsbar lista för att öppna **[!UICONTROL Select a project]** -dialogrutan.
 1. I **[!UICONTROL Select a project]** väljer **[!UICONTROL New Project]**.
 1. I **[!UICONTROL New Project]** i **[!UICONTROL Project name]** anger du namnet på det nya projektet.
 
@@ -468,9 +468,7 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    ![6_5_googleaccount-apis-manage](assets/6_5_googleaccount-apis-manage.png)
 
 1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Om det behövs, till vänster på sidan API:er och tjänster, väljer du **[!UICONTROL Credentials]**.
-
 1. Välj **[!UICONTROL CREATE CREDENTIALS]** väljer **[!UICONTROL OAuth client ID]**.
-
 1. På **[!UICONTROL Create OAuth client ID]** sida, på **[!UICONTROL Application type]** nedrullningsbar lista, välja **[!UICONTROL Web application]**.
 
    ![6_5_googleaccount-apis-applicationtype](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-applicationtype.png)
@@ -495,7 +493,6 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    >Exempelsökvägen ovan är hypotetisk och endast för att förklara.
 
 1. Under **[!UICONTROL Authorized redirect URIs]** välj ADD URI.
-
 1. I **[!UICONTROL URIs]** textfält, ange följande sökväg och ersätt din egen domän och portnummer i sökvägen och tryck sedan på **[!UICONTROL Enter]** så här lägger du till sökvägen i listan:
 
    `https://<servername.domain>:<port_number>/etc/cloudservices/youtube.youtubecredentialcallback.json`
@@ -507,7 +504,6 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    >Exempelsökvägen ovan är hypotetisk och endast för att förklara.
 
 1. Nära nederdelen av **[!UICONTROL Create OAuth client ID]** sida, markera **[!UICONTROL Create]**.
-
 1. På **[!UICONTROL OAuth client created]** gör du följande:
 
    * (Valfritt) Kopiera ditt klient-ID och din klienthemlighet och spara.
@@ -518,7 +514,6 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    ![6_5_googleaccount-apis-authclientcreated](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-oauthclientcreated.png)
 
 1. På **[!UICONTROL OAuth client created]** väljer **[!UICONTROL OK]**.
-
 1. Logga ut från ditt Google-konto. Skapa nu en YouTube-kanal.
 
 ### Skapa en YouTube-kanal {#creating-a-youtube-channel}
