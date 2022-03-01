@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa 
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 9608e36904e352af5a7273fcb8e7eef49565680b
+source-git-commit: 22588f102f5b388d6da3a8aae124c30288ecb0a5
 workflow-type: tm+mt
-source-wordcount: '8974'
+source-wordcount: '8988'
 ht-degree: 3%
 
 ---
@@ -439,6 +439,8 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
 1. Skapa ett Google-konto.
    [https://accounts.google.com/signup/v2?service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp](https://accounts.google.com/signup/v2?service=mail&amp;flowName=GlifWebSignIn&amp;flowEntry=SignUp)
+
+   Om du redan har ett Google-konto kan du gå vidare till nästa steg.
 
 1. Gå till [https://cloud.google.com/](https://cloud.google.com/).
 1. På Google Cloud-sidan, nära det övre högra hörnet, väljer du **[!UICONTROL Console]**.
