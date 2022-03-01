@@ -1,10 +1,10 @@
 ---
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
-source-git-commit: bec7e01a6f192a9b65a038b2e990c2c285743793
+source-git-commit: 0951942690949c23a99da3494526c1c78e7bcf22
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 25%
+source-wordcount: '1069'
+ht-degree: 21%
 
 ---
 
@@ -125,6 +125,44 @@ Följ det här avsnittet för att lära dig hur du använder Content Transfer To
 1. Välj en migreringsuppsättning och klicka på **Egenskaper** om du vill visa eller redigera migreringsuppsättningens egenskaper. När du redigerar egenskaper går det inte att ändra **Namn på migreringsuppsättning** eller **Tjänst-URL**.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ctt06.png)
+
+### Bestämma migreringsuppsättningens storlek och diskutrymme {#migration-set-size}
+
+När du har skapat en migreringsuppsättning rekommenderar vi att du kör en storlekskontroll på migreringsuppsättningen innan du startar en extraheringsprocess.
+Genom att köra en storlekskontroll på migreringsuppsättningen kan du:
+* Kontrollera om det finns tillräckligt med diskutrymme i `crx-quickstart` underkatalog för att slutföra extraheringen.
+* Kontrollera om migreringsuppsättningens storlek ligger inom de produktgränser som stöds och undvik misslyckade innehållsfrågor.
+
+Följ stegen nedan för att göra en storlekskontroll:
+
+1. Välj en migreringsuppsättning och klicka på **Kontrollera storlek**.
+
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image1.png)
+
+1. Detta öppnar **Kontrollera storlek** -dialogrutan.
+
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image2.png)
+
+1. Klicka på **Kontrollera storlek** för att starta processen. Du kommer sedan tillbaka till vyn med migreringsuppsättningslistor och du bör se ett meddelande som anger att **Kontrollera storlek** är igång.
+
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image3.png)
+
+
+1. En gång **Kontrollera storlek** processen är slutförd, statusen ändras till antingen **SLUTFÖRD**. Välj samma migreringsuppsättning och klicka på **Kontrollera storlek** för att visa resultaten.
+
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image4.png)
+
+   Nedan visas ett exempel på **Kontrollera storlek** resultat utan varningar.
+
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image5.png)
+
+1. Om **Kontrollera storlek** resultaten visar att det antingen inte finns tillräckligt med diskutrymme och/eller att migreringsuppsättningen överskrider produktgränserna, **VARNING** status visas.
+
+![bild](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image6.png)
+
+Nedan visas ett exempel på **Kontrollera storlek** resultat med varningar.
+
+![bild](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image7.png)
 
 
 ## What&#39;s Next {#whats-next}
