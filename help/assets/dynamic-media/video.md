@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa 
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: e1f0b04dde2eb5a3392a0b9befbc56135b06cff4
+source-git-commit: efdb8304197a76e66e71d6f7b5c510216ac5ff7e
 workflow-type: tm+mt
-source-wordcount: '9002'
+source-wordcount: '8997'
 ht-degree: 3%
 
 ---
@@ -443,11 +443,11 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
    Om du redan har ett Google-konto kan du gå vidare till nästa steg.
 
 1. Gå till [https://cloud.google.com/](https://cloud.google.com/).
-1. På Google Cloud-sidan, nära det övre högra hörnet, väljer du **[!UICONTROL Console]**.
+1. På **[!UICONTROL Google Cloud]** sida, nära det övre högra hörnet, markera **[!UICONTROL Console]**.
 
    Vid behov **[!UICONTROL Sign in]** med inloggningsuppgifterna för ditt Google-konto för att se **[!UICONTROL Console]** alternativ.
 
-1. På sidan Kontrollpanel, till höger om **[!UICONTROL Google Cloud Platform]** väljer du **[!UICONTROL Project]** nedrullningsbar lista för att öppna **[!UICONTROL Select a project]** -dialogrutan.
+1. På **[!UICONTROL Dashboard]** sida, till höger om **[!UICONTROL Google Cloud Platform]** väljer du **[!UICONTROL Project]** nedrullningsbar lista för att öppna **[!UICONTROL Select a project]** -dialogrutan.
 1. I **[!UICONTROL Select a project]** väljer **[!UICONTROL New Project]**.
 1. I **[!UICONTROL New Project]** i **[!UICONTROL Project name]** anger du namnet på det nya projektet.
 
@@ -467,8 +467,8 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    ![6_5_googleaccount-apis-manage](assets/6_5_googleaccount-apis-manage.png)
 
-1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Om det behövs, till vänster på sidan API:er och tjänster, väljer du **[!UICONTROL Credentials]**.
-1. Välj **[!UICONTROL CREATE CREDENTIALS]** väljer **[!UICONTROL OAuth client ID]**.
+1. Om du vill använda API:t måste du ha autentiseringsuppgifter. Vid behov, till vänster på sidan av **[!UICONTROL APIs & Services]** sida, markera **[!UICONTROL Credentials]**.
+1. På **[!UICONTROL Credentials]** sida, intill överkanten, markera **[!UICONTROL CREATE CREDENTIALS]** väljer **[!UICONTROL OAuth client ID]**.
 1. På **[!UICONTROL Create OAuth client ID]** sida, på **[!UICONTROL Application type]** nedrullningsbar lista, välja **[!UICONTROL Web application]**.
 
    ![6_5_googleaccount-apis-applicationtype](/help/assets/dynamic-media/assets/6_5_googleaccount-apis-applicationtype.png)
@@ -488,9 +488,9 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    Till exempel, `https://1a2b3c.mycompany.com:4321`
 
-   >[!IMPORTANT]
+   >[!NOTE]
    >
-   >Exempelsökvägen ovan är hypotetisk och endast för att förklara.
+   >URI-sökvägsexemplet ovan är hypotetiskt och endast i förklaringssyfte.
 
 1. Under **[!UICONTROL Authorized redirect URIs]** välj ADD URI.
 1. I **[!UICONTROL URIs]** textfält, ange följande sökväg och ersätt din egen domän och portnummer i sökvägen och tryck sedan på **[!UICONTROL Enter]** så här lägger du till sökvägen i listan:
@@ -499,14 +499,14 @@ Google ändrar regelbundet användargränssnittet. Stegen för att publicera vid
 
    Till exempel, `https://1a2b3c.mycompany.com:4321/etc/cloudservices/youtube.youtubecredentialcallback.json`
 
-   >[!IMPORTANT]
+   >[!NOTE]
    >
-   >Exempelsökvägen ovan är hypotetisk och endast för att förklara.
+   >URI-sökvägsexemplet ovan är hypotetiskt och endast i förklaringssyfte.
 
 1. Nära nederdelen av **[!UICONTROL Create OAuth client ID]** sida, markera **[!UICONTROL Create]**.
 1. På **[!UICONTROL OAuth client created]** gör du följande:
 
-   * (Valfritt) Kopiera ditt klient-ID och din klienthemlighet och spara.
+   * (Valfritt) Kopiera värdena i **[!UICONTROL Your Client ID]** och **[!UICONTROL Your Client Secret]** fält och spara.
    * Välj **[!UICONTROL DOWNLOAD JSON]** sparar du sedan JSON-filen.
 
    Du behöver den här hämtade JSON-filen när du konfigurerar YouTube i Adobe Experience Manager senare.
