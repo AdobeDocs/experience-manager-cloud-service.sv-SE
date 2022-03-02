@@ -10,7 +10,7 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: 92cb864f71b5e98bf98519a3f5be6469802be0e4
+source-git-commit: af07bce8618c7b13b4dc5e287c7218316029f565
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 3%
@@ -177,7 +177,7 @@ Specifika produktsidor väljs antingen av produktens sku eller kategori. Den sen
 >
 > Välja specifika produktsidor per kategori kräver [CIF Core Components 2.6.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) eller nyare.
 
-### Distribuera länkning {#specific-pages-deep-linking}
+### Djuplänkning {#specific-pages-deep-linking}
 
 The `UrlProvider` är förkonfigurerat för att generera djupa länkar till specifika kategorier och produktsidor på instanser på författarnivå. Detta är användbart för redigerare som bläddrar på en webbplats i förhandsgranskningsläge, navigerar till en viss produkt- eller kategorisida och växlar tillbaka till redigeringsläget för att redigera sidan.
 
