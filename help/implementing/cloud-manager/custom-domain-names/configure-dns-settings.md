@@ -2,7 +2,7 @@
 title: 'Konfigurera DNS-inställningar '
 description: Konfigurera DNS-inställningar
 exl-id: 6e294f0b-52cb-40dd-bc42-ddbcffdf5600
-source-git-commit: 0b24f8c8b88f476a0d1073e873e46441b1b8b821
+source-git-commit: 016954bc712a135886a6031deba05d92e7d5099c
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Följande steg skall utföras enligt tabellen nedan:
 
 | Steg |  | Ansvarsområde | Läs mer |
 |--- |--- |--- |---|
-| Lägg till SLL-certifikat | Lägg till SLL-certifikat | Kund | [Lägga till ett SSL-certifikat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate.html?lang=en) |
+| Lägg till SSL-certifikat | Lägg till SSL-certifikat | Kund | [Lägga till ett SSL-certifikat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/add-ssl-certificate.html?lang=en) |
 | Domänverifiering | Lägg till TXT-post | Kund | [Lägga till en TXT-post](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/add-text-record.html?lang=en) |
 | Verifieringsstatus för domän |  | Kund |  |
 |  | Status: Domänverifieringsfel | Kund | [Kontrollerar domännamnsstatus](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/check-domain-name-status.html?lang=en) |

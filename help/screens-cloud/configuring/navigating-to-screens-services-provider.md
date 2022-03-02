@@ -1,19 +1,19 @@
 ---
 title: Navigera till Screens Services Provider
 description: Den här sidan beskriver hur du navigerar till Screens Services Provider.
-source-git-commit: e856724c678195d632461c9dc99dcf1bfd1c79a1
+exl-id: 9eff6fe8-41d4-4cf3-b412-847850c4e09c
+source-git-commit: 9263c833edf092a4254b7692924c1638100b9f6d
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '270'
 ht-degree: 1%
 
 ---
-
 
 # Navigera till Screens Services Provider {#setup-screens-services-provider}
 
 ## Introduktion {#introduction}
 
-**Med Screens Services Provider** kan innehållsförfattaren, utvecklare och administratörer hantera skärmar och spelare för uppspelning av innehåll när innehållet har lagts till i kanalerna. När användarna har fått tillgång till AEM Cloud Service bör de kunna logga in på Screens Services Provider.
+**Tjänsteleverantör för skärmar**, gör det möjligt för innehållsförfattaren, utvecklare och administratörer att hantera skärmar och spelare för uppspelning av innehåll när innehållet har lagts till i kanalerna. När användarna har fått tillgång till AEM Cloud Service bör de kunna logga in på Screens Services Provider.
 
 I det här avsnittet beskrivs hur du konfigurerar Screens Services Provider.
 
@@ -26,20 +26,30 @@ Följande avsnitt beskriver hur du konfigurerar och konfigurerar providern för 
 
 Följ stegen nedan för att konfigurera leverantören av skärmtjänster:
 
-1. Navigera till leverantören av skärmtjänster från [här](https://experience.adobe.com/screens).
+1. Navigera till Screens Services Provider från [här](https://experience.adobe.com/screens).
 
    >[!CAUTION]
    >Om du har tillgång till flera organisationer måste du se till att du har loggat in på rätt organisation. Om du vill ändra din organisation klickar du på organisationsnamnet i det övre högra hörnet av skärmen och väljer den organisation som du behöver åtkomst till.
 
-1. Välj **Kanaler** i det vänstra navigeringsfältet och klicka på **öppna i innehållsleverantören**.
+2. Klicka på kugghjulsikonen bredvid Projekt (övre vänstra hörnet)
+
+   ![bild](/help/screens-cloud/assets/configure/configure-screens0.png)
+
+3. Ange följande information i dialogrutan Redigera inställningar.
+o **Bas-URL** - AEM Publish URL o **Författar-URL** - AEM Author URL o **Sökväg för kanalleverantör** - /screens/channels.json
+
+   ![bild](/help/screens-cloud/assets/configure/configure-screens4.png)
+
+4. Klicka på **Spara** för att ansluta till leverantören av skärminnehåll
+
+5. Välj **Kanaler** i det vänstra navigeringsfältet och klicka på **öppna i innehållsleverantör**.
 
    ![bild](/help/screens-cloud/assets/configure/configure-screens1.png)
 
-1. Skärmar Innehållsleverantören öppnas på en annan flik där du kan skapa ditt innehåll.
+6. Skärmar Innehållsleverantören öppnas på en annan flik där du kan skapa ditt innehåll.
 
    ![bild](/help/screens-cloud/assets/configure/configure-screens2.png)
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du konfigurerar leverantören av skärmtjänster kan du navigera till [Använda leverantören av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=end) för mer information.
-
+När du har lärt dig hur du konfigurerar en leverantör av skärmtjänster kan du navigera till [Använda leverantör av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=end) för mer information.
