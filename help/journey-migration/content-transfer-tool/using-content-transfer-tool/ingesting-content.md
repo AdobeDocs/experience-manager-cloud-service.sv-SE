@@ -1,10 +1,10 @@
 ---
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
-source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
+source-git-commit: 80e148aa5533963bcd6354e2117a4619bcf5b27f
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 28%
+source-wordcount: '527'
+ht-degree: 29%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 28%
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 >[!NOTE]
->Om Amazon S3 eller Azure Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp inmatningsfasen. Se [Ingesting with AzCopy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en#ingesting-azcopy) för mer information.
+>Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intagningsfasen. Se [Ingesting with AzCopy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en#ingesting-azcopy) för mer information.
 
 1. Välj en migreringsuppsättning från **Innehållsöverföring** sida och klicka **Ingest** för att börja intag.
 
