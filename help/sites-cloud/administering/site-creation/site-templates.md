@@ -3,13 +3,13 @@ title: Webbplatsmallar
 description: Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet så att du snabbt kan skapa webbplatser.
 feature: Administering
 role: Admin
-source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
+exl-id: 42eec922-b02e-4f2c-8107-7336192919c7
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 0%
 
 ---
-
 
 # Webbplatsmallar {#site-templates}
 

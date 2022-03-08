@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 6c223af722c24e96148146da9a2aa1c055486407
+source-git-commit: e03e15c18e3013a309ee59678ec4024df072e839
 workflow-type: tm+mt
-source-wordcount: '2224'
+source-wordcount: '2366'
 ht-degree: 1%
 
 ---
@@ -36,8 +36,9 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
 1. Begränsningar:
-* För närvarande stöds bara indexhantering på AEM as a Cloud Service för index av typen lucene.
+* För närvarande stöds indexhantering på AEM as a Cloud Service bara för index av typen `lucene`.
 * Endast standardanalysatorer stöds (dvs. de som levereras tillsammans med produkten). Anpassade analysatorer stöds inte.
+* Internt kan andra index konfigureras och användas för frågor. Till exempel frågor som skrivs mot `damAssetLucene` index kan på Skyline faktiskt köras mot en Elasticsearch-version av detta index. Skillnaden är vanligtvis inte synlig för programmet och användaren, men vissa verktyg som `explain` funktionen rapporterar ett annat index. Skillnader mellan Lucene-index och Elastic Index finns i [den elastiska dokumentationen i Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/elastic.html). Kunderna behöver inte, och kan inte, konfigurera Elasticsearch-index direkt.
 
 ## Användning {#how-to-use}
 
@@ -129,7 +130,9 @@ Under utvecklingen, eller vid användning av lokala installationer, kan index l�
 
 ### Indexhantering med blå-grön driftsättning {#index-management-with-blue-green-deployment}
 
-Med blågröna installationer blir det inga driftstopp. För indexhantering kräver detta dock att index bara används av vissa versioner av programmet. Om du till exempel lägger till ett index i version 2 av programmet, vill du inte att det ska användas av version 1 av programmet än. Det motsatta är fallet när ett index tas bort: ett index som tagits bort i version 2 behövs fortfarande i version 1. När du ändrar en indexdefinition vill vi att den gamla versionen av indexet bara ska användas för version 1 och att den nya versionen av indexet bara ska användas för version 2.
+Med blågröna installationer blir det inga driftstopp. Under en uppgradering körs både den gamla versionen (till exempel version 1) av programmet och den nya versionen (version 2) samtidigt mot samma databas. Om version 1 kräver att ett visst index är tillgängligt får detta index inte tas bort i version 2: indexet bör tas bort senare, till exempel i version 3, där det garanteras att version 1 av programmet inte längre körs. Dessutom bör program skrivas så att version 1 fungerar bra, även om version 2 körs, och om det finns index för version 2.
+
+När uppgraderingen till den nya versionen är klar kan gamla index samlas in av systemet. De gamla indexen kan fortfarande finnas kvar en tid för att påskynda återställningen (om en återställning behövs).
 
 I följande tabell visas fem indexdefinitioner: index `cqPageLucene` används i båda versionerna medan index `damAssetLucene-custom-1` används endast i version 2.
 
@@ -160,7 +163,7 @@ När Adobe ändrar ett index som inte finns med i kartongen som &quot;damAssetLu
 
 ### Aktuella begränsningar {#current-limitations}
 
-Indexhantering stöds för närvarande bara för index av typen `lucene`.
+Indexhantering stöds för närvarande bara för index av typen `lucene`. Internt kan andra index konfigureras och användas för frågor, till exempel elastiska index.
 
 ### Lägga till ett index {#adding-an-index}
 
