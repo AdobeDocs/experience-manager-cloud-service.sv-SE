@@ -3,13 +3,13 @@ title: Installera [!DNL Workfront for Experience Manager enhanced connector]
 description: Installera [!DNL Workfront for Experience Manager enhanced connector]
 role: Admin
 feature: Integrations
-source-git-commit: 8ca25f86a8d0d61b40deaff0af85e56e438efbdc
+exl-id: 2907a3b2-e28c-4194-afa8-47eadec6e39a
+source-git-commit: a5776453b261e6f4e6c891763934b236bade8f7f
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
-
 
 # Installera [!DNL Workfront for Experience Manager enhanced connector] {#assets-integration-overview}
 
@@ -42,6 +42,23 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
 
 Installera tillägget i [!DNL Experience Manager] som [!DNL Cloud Service]gör du så här:
 
+1. Ladda ned den förbättrade anslutningen från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
+
+1. [Åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/accessing-repos.html?lang=en) och klona din AEM as a Cloud Service databas från Cloud Manager.
+
+1. Öppna den klonade AEM as a Cloud Service databasen med valfri integrerad utvecklingsmiljö.
+
+1. Placera den utökade ZIP-filen för anslutningen som laddats ned i steg 1 på följande sökväg:
+
+   ```TXT
+      /ui.apps/src/main/resources/<zip file>
+   ```
+
+   >[!NOTE]
+   >
+   >Om `resources` mappen finns inte, skapa mappen.
+
+
 1. Lägg till `pom.xml` beroenden:
 
    1. Lägg till ett beroende i överordnat objekt `pom.xml`.
@@ -51,47 +68,28 @@ Installera tillägget i [!DNL Experience Manager] som [!DNL Cloud Service]gör d
          <groupId>digital.hoodoo</groupId>
          <artifactId>workfront-tools.ui.apps</artifactId>
          <type>zip</type>
-         <version>1.7.4</version>
+         <version>enhanced connector version number</version>
+         <scope>system</scope>
+         <systemPath>${project.basedir}/ui.apps/src/main/resources/workfront-tools.ui.apps.zip</systemPath>
       </dependency>
       ```
 
-   1. Lägg till ett beroende i alla moduler [!DNL pom.xml].
+      >[!NOTE]
+      >
+      >Uppdatera det utökade versionsnumret för anslutningen innan du kopierar beroendet till det överordnade `pom.xml`.
+
+   1. Lägg till ett beroende i `all module pom.xml`.
 
       ```XML
          <dependency>
             <groupId>digital.hoodoo</groupId>
             <artifactId>workfront-tools.ui.apps</artifactId>
             <type>zip</type>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../ui.apps/src/main/resources/workfront-tools.ui.apps.zip</systemPath>
          </dependency>
       ```
 
-1. Lägg till `pom.xml` autentisering.
-
-   1. Inkludera nedanstående databaskonfiguration i pom.xml i profilen adobe-public, så att anslutningsberoendena (ovan) kan lösas vid byggtillfället (både lokalt och med Cloud Manager). Autentiseringsuppgifter för databasåtkomst tillhandahålls när en licens köpts. Autentiseringsuppgifterna måste läggas till filen settings.xml i serveravsnittet.
-
-      ```XML
-      <repository>
-         <id>hoodoo-maven</id>
-         <name>Hoodoo Repository</name>
-         <url>https://gitlab.com/api/v4/projects/12715200/packages/maven</url>
-      </repository>
-      ```
-
-   1. Skapa en fil med namnet `./cloudmanager/maven/settings.xml` i projektets rot. Information om hur du hanterar lösenordsskyddade Maven-databaser finns i [konfigurera projektet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md). Dessutom, ett exempel `settings.xml` fil för referens. Till sist kan du uppdatera din lokala `settings.xml` för att kompilera lokalt.
-
-      ```XML
-         <server>
-            <id>hoodoo-maven</id>
-            <configuration>
-               <httpHeaders>
-                     <property>
-                        <name>Deploy-Token</name>
-                        <value>xxxxxxxxxxxxxxxx</value>
-                     </property>
-               </httpHeaders>
-            </configuration>
-         </server>
-      ```
 
 1. Lägg till `pom.xml` bäddar in. Lägg till [!DNL Workfront for Experience Manager enhanced connector] paket till `embeddeds` i `pom.xml` av alla dina underprojekt. Behöver den vara inbäddad i alla moduler `pom.xml`.
 
@@ -104,6 +102,12 @@ Installera tillägget i [!DNL Experience Manager] som [!DNL Cloud Service]gör d
       <target>/apps/<path-to-project-install-folder>/install</target>
    </embedded>
    ```
+
+   Målet för det inbäddade avsnittet är inställt på `/apps/<path-to-project-install-folder>/install`. Denna JCR-sökväg `/apps/<path-to-project-install-folder>` måste inkluderas i filterreglerna i `all/src/main/content/META-INF/vault/filter.xml` -fil. Filterreglerna för databasen hämtas vanligtvis från programnamnet. Använd namnet på mappen som mål i de befintliga reglerna.
+
+1. Skicka ändringarna till databasen.
+
+1. Kör pipeline till [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
 
 1. Om du vill skapa en systemanvändarkonfiguration skapar du `wf-workfront-users` in [!DNL Experience Manager] Användargrupp och tilldela behörighet `jcr:all` till `/content/dam`. En systemanvändare `workfront-tools` skapas automatiskt och de behörigheter som krävs hanteras automatiskt. Alla användare från [!DNL Workfront] som använder den utökade kopplingen läggs automatiskt till som en del av den här gruppen.
 
