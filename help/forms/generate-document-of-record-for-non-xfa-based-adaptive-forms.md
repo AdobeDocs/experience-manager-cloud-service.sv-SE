@@ -2,9 +2,9 @@
 title: Generera arkivdokument för adaptiv Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: d84365e1a150076abbd3965ffb964f13ba6b5340
+source-git-commit: f75636c1b964c9edbc3e1dee937f3807e194c311
 workflow-type: tm+mt
-source-wordcount: '3611'
+source-wordcount: '3603'
 ht-degree: 1%
 
 ---
@@ -406,7 +406,7 @@ Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. 
 
 >[!NOTE]
 >
-> Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague-review.corp.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
+> Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a Cloud Service har en överordnad XCI-fil. Du kan använda en anpassad XCI-fil för att åsidosätta en eller flera standardegenskaper som anges i den överordnad XCI-filen. Du kan till exempel välja att bädda in ett teckensnitt i ett dokument eller aktivera taggad egenskap för alla dokument. Följande tabell anger XCI-alternativen:
 
