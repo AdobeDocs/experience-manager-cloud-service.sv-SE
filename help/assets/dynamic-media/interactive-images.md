@@ -1,12 +1,12 @@
 ---
 title: Interaktiva bilder
 description: Lär dig hur du arbetar med interaktiva bilder i Dynamic Media.
-feature: Interaktiva bilder
+feature: Interactive Images
 role: User
 exl-id: 89eef5e6-d508-4f33-b54e-24d4df49f8c3
-source-git-commit: 1d42305b6a597dc95bff8b34eee8279eb0e511f3
+source-git-commit: 77f1b744dabd72fc26d3b0607db9561e6cb7fa66
 workflow-type: tm+mt
-source-wordcount: '4144'
+source-wordcount: '4142'
 ht-degree: 1%
 
 ---
@@ -19,17 +19,17 @@ Här följer en köpbar banderoll med ett popup-fönster i snabbvyn. En använda
 
 ![chlimage_1-152](assets/chlimage_1-368.png)
 
-Se [interaktiva bilder in action](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html) på webbsidan som visas ovan.
+Se [interaktiva bilder i praktiken](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion-QVzoom/index2-shoppable.html) på webbsidan som visas ovan.
 
 ## Se hur interaktiva bildbanderoller skapas {#watch-how-interactive-image-banners-are-created}
 
-Titta på en genomgång om [hur interaktiva bildbanderoller skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner) (10 minuter och 33 sekunder). Du får också lära dig hur du förhandsgranskar, redigerar och levererar interaktiva bildbanderoller.
+Se en genomgång på [hur interaktiva bildbanderoller skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveCarouselBanner) (10 minuter och 33 sekunder). Du får också lära dig hur du förhandsgranskar, redigerar och levererar interaktiva bildbanderoller.
 
 ## Snabbstart: Interaktiva bilder {#quick-start-interactive-images}
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med interaktiva bilder i Adobe Experience Manager Assets.
 
-Leta efter rubriken **Exempel** i några av snabbstartsåtgärderna. Den innehåller en kort självstudiekurs som är baserad på ett [exempel på en webbsida som ännu inte har Interactive Images tillagd](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html).
+Leta efter **Exempel** i vissa snabbstartsåtgärder. Den innehåller en kort självstudiekurs som bygger på en [exempel på webbsidor som ännu inte har tillagda interaktiva bilder](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html).
 
 
 
@@ -40,20 +40,20 @@ Interactive Images:
 1. **(Valfritt) Identifiera hotspot-variabler**. Om du använder Adobe Experience Manager Assets och Dynamic Media fristående identifierar du dynamiska variabler som används i den befintliga QuickView-implementeringen. Om du gör det kan du ange aktiveringspunktsdata när du skapar den interaktiva bilden. Se [(Valfritt) Identifiera hotspot-variabler](#optional-identifying-hotspot-variables).
 Om du använder Experience Manager Sites, Experience Manager e-handel eller båda är det här steget inte nödvändigt.
 
-1. **(Valfritt) Skapa en förinställning** för visningsprogrammet för interaktiv bild. Anpassa den grafiska bild som används för att representera aktiveringspunkter. Du behöver inte skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen `Shoppable_Banner` i stället.
-Se [(Valfritt) Skapa en förinställning för visningsprogrammet för interaktiv bild](/help/assets/dynamic-media/managing-viewer-presets.md#creating-a-new-viewer-preset).
+1. **(Valfritt) Skapa en förinställning för Interactive Image Viewer**. Anpassa den grafiska bild som används för att representera aktiveringspunkter. Du behöver inte skapa en egen förinställning för Interactive Image Viewer om du tänker använda den färdiga Interactive Image Viewer-förinställningen med namnet `Shoppable_Banner` i stället.
+Se [(Valfritt) Skapa en förinställning för Interactive Image Viewer](/help/assets/dynamic-media/managing-viewer-presets.md#creating-a-new-viewer-preset).
 
-1. **Överför en bildbanderoll**. Överför bildbanderoller som du vill göra interaktiva.
+1. **Överföra en bildbanderoll**. Ladda upp bildbanners som du vill göra interaktiva.
 Se [Överföra en bildbanderoll](#uploading-an-image-banner).
 
-1. **Lägg till aktiveringspunkter i en bildbanderoll**. Lägg till en eller flera hotspot-områden i en bildbanderoll. Associera vart och ett med en åtgärd som en hyperlänk, en snabbvy eller ett Experience Fragment. När du har lagt till aktiveringspunkter avslutar du den här uppgiften genom att publicera den interaktiva bilden.
+1. **Lägga till aktiveringspunkter i en bildbanderoll**. Lägg till en eller flera hotspot-områden i en bildbanderoll. Associera vart och ett med en åtgärd som en hyperlänk, en snabbvy eller ett Experience Fragment. När du har lagt till aktiveringspunkter avslutar du den här uppgiften genom att publicera den interaktiva bilden.
 Se [Lägga till aktiveringspunkter i en bildbanderoll](#adding-hotspots-to-an-image-banner).
 Se [Förhandsgranska interaktiva bilder](#optional-previewing-interactive-images) - Valfritt. Om du vill kan du visa en representation av din köpbara banner och testa dess interaktivitet.
-Mer information om hur du publicerar interaktiva bildresurser finns i [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) om du vill ha information om hur du publicerar interaktiva bildresurser.
 
-1. **Lägg till en interaktiv bild på din webbplats eller på din webbplats i Experience Manager**. Om du använder Webbplatser, e-handel eller båda kan du lägga till interaktiva bilder direkt på en webbsida i Experience Manager. Dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
-Om du använder Experience Manager Assets och Dynamic Media fristående kopierar du inbäddningskoden på din webbplats. Integrera den sedan med en befintlig snabbvy. Se [Integrera en interaktiv bild med din webbplats](#integrating-an-interactive-image-with-your-website).
-Om du använder en WCM-fil (Web Content Manager) från tredje part integrerar du den nya interaktiva videon med den befintliga snabbvyn som används på webbplatsen. Se [Integrera en interaktiv bild med en befintlig Quickview](#integrating-an-interactive-image-with-an-existing-quickview).
+1. **Lägga till en interaktiv bild på din webbplats eller på din webbplats i Experience Manager**. Om du använder Webbplatser, e-handel eller båda kan du lägga till interaktiva bilder direkt på en webbsida i Experience Manager. Dra Interactive Media-komponenten till sidan. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+Om du använder Experience Manager Assets och Dynamic Media fristående kopierar du inbäddningskoden på din webbplats. Integrera den sedan med en befintlig snabbvy. Se [Integrera en interaktiv bild med webbplatsen](#integrating-an-interactive-image-with-your-website).
+Om du använder en WCM-fil (Web Content Manager) från tredje part integrerar du den nya interaktiva videon med den befintliga snabbvyn som används på webbplatsen. Se [Integrera en interaktiv bild med en befintlig snabbvy](#integrating-an-interactive-image-with-an-existing-quickview).
 
 ## (Valfritt) Identifiera hotspot-variabler {#optional-identifying-hotspot-variables}
 
@@ -62,11 +62,9 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part integrerar du
 >Den här aktiviteten krävs bara om följande är sant:
 >
 >* Du vill lägga till interaktivitet i bilden genom att aktivera snabbvyer.
->* Din implementering av Experience Manager använder *inte* ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar. Sådana lösningar är IBM® WebSphere® Commerce, Elastic Path, SAP Hybris och Intershop.
-
+>* Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar. Bland dessa lösningar finns IBM® WebSphere® Commerce, Elastic Path, SAP Hybris och Intershop.
 >
->
-Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
+>Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
 
 Börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen så att du kan ange hotspot-data för att skapa den interaktiva bilden.
 
@@ -90,14 +88,14 @@ Då besöker man olika delar av den befintliga webbplatsen där QuickView-funkti
 Normalt behöver du inte använda några specialverktyg för felsökning. Moderna webbläsare har webbinspektörer som klarar ett bra jobb. Nedan följer några exempel på webbläsare som innehåller webbinspektörer:
 
 * Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på F12 för att öppna panelen Utvecklarverktyg och väljer sedan fliken Nätverk.
-På en Mac trycker du på Command+Option+I för att öppna panelen Utvecklarverktyg och sedan på fliken Nätverk.
+Tryck på Command+Option+I på en Mac för att öppna panelen Utvecklarverktyg och välj sedan fliken Nätverk.
 
 * I Firefox kan du aktivera plugin-programmet för Firebug genom att trycka på F12 och använda fliken Net. Du kan också använda det inbyggda verktyget Granska och fliken Nätverk.
-Tryck på Kommando+Alt+I på en Mac för att öppna panelen Utvecklarverktyg och välj sedan fliken Granska.
+Tryck på Command+Option+I på en Mac för att öppna panelen Utvecklarverktyg och välj sedan fliken Granska.
 
 När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på sidan.
 
-Nu kan du hitta Quickview Ajax-URL:en i nätverksloggen och kopiera den inspelade URL:en för framtida analys. Vanligtvis skickas flera begäranden till servern när du utlöser snabbvyn. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml` eller `text/javascript`.
+Nu kan du hitta Quickview Ajax-URL:en i nätverksloggen och kopiera den inspelade URL:en för framtida analys. Vanligtvis skickas flera begäranden till servern när du utlöser snabbvyn. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml`, eller `text/javascript`.
 
 Under den här processen är det viktigt att du besöker olika delar av webbplatsen, med olika produktkategorier och typer. Anledningen är att URL-adresser för snabbvyn kan ha delar som är gemensamma för en viss webbplatskategori. De ändras dock endast om du besöker ett annat område på webbplatsen.
 
@@ -135,7 +133,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
-    </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i parametern <code>prodId</code> och kategori-ID<code></code> lagras i parametern <code>category=</code>.</p> <p>Därför är hotspot-definitionerna par. Det vill säga ett SKU-värde och en extra variabel som heter <code>categoryId</code>. De resulterande paren är följande:</p>
+    </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i <code>prodId</code> parameter och kategori-ID<code></code> lagras i <code>category=</code> parameter.</p> <p>Därför är hotspot-definitionerna par. Det vill säga ett SKU-värde och en extra variabel som kallas <code>categoryId</code>. De resulterande paren är följande:</p>
     <ul>
       <li><p>SKU är <strong><code>305466</code></strong> och <code>categoryId</code> är <code>1100004</code>.</p> </li>
       <li><p>SKU är <strong><code>310181</code></strong> och <code>categoryId</code> är <strong><code>1100004</code></strong>.</p> </li>
@@ -147,7 +145,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande hotspot-
 
 **Exempel**
 
-Du kan använda samma metod som i de tre exemplen ovan på [demowebbsidan](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html).
+Du kan använda samma metod som i de tre exemplen ovan för [demowebbsida](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html).
 
 Demonstrationswebbsidan innehåller flera produktminiatyrbilder med en QuickView-knapp med etiketten&quot;See More&quot;. Med webbläsarens felsökningsverktyg fortfarande aktiverat markerar du varje knapp och noterar de inspelade URL:erna för snabbvyn. När du har aktiverat alla fyra snabbvyerna för produkten som finns på sidan, finns följande lista över snabbvybegäranden som har gjorts i serverdelen:
 
@@ -165,35 +163,35 @@ Med hjälp av den här informationen har hela snabbvyns URL följande mönster:
 
 `/datafeed/$categoryId$-$SKU$.json`
 
-Baserat på en sådan analys använder du `categoryId` och `SKU` för aktiveringspunkter.
+Baserat på en sådan analys skulle du använda `categoryId` och `SKU` för aktiveringspunkter.
 
 Du är nu redo att ladda upp en bildbanderoll och lägga till hotspot-områden i den med funktionen för interaktiv bild i Experience Manager Assets.
 
 ## (Valfritt) Skapa en förinställning för Interactive Image Viewer {#optional-creating-an-interactive-image-viewer-preset}
 
-Du kan välja att använda den förinställda interaktiva bildvisningsinställningen `Shoppable_Banner` som medföljer Experience Manager Assets. Du kan också skapa en egen förinställning för visningsprogrammet som kan användas med interaktiva bilder.
+Du kan välja att använda den förinställda interaktiva bildvisningsprogramvaran som är färdig att användas och som kallas `Shoppable_Banner` som kommer med Experience Manager Assets. Du kan också skapa en egen förinställning för visningsprogrammet som kan användas med interaktiva bilder.
 
 När du skapar en anpassad förinställning för Interactive Image Viewer kan du bestämma utseendet på aktiveringspunkter i bildbanderollen. När du skapar visningsförinställningen kan du välja att använda en aktiveringspunktsbild från ett galleri med fördefinierade bilder.
 
-När du har sparat visningsförinställningen aktiveras den automatiskt (aktiveras) på listsidan för visningsförinställningar i Experience Manager Resurser. Den här funktionen innebär att den är synlig i komponenten Interactive Media och när du visar en resurs. Om du vill *leverera* en interaktiv banderoll med den här visningsförinställningen *publicerar du* även din visningsförinställning. Den här regeln gäller för anpassade eller färdiga visningsprogramförinställningar.
+När du har sparat visningsförinställningen aktiveras den automatiskt (aktiveras) på listsidan för visningsförinställningar i Experience Manager Assets. Den här funktionen innebär att den är synlig i komponenten Interactive Media och när du visar en resurs. Men *leverera* en interaktiv banderoll med den här visningsförinställningen, *publicera* visningsförinställningen också. Den här regeln gäller för anpassade eller färdiga visningsprogramförinställningar.
 
 **Så här skapar du en förinställning för Interactive Image Viewer:**
 
-1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]** till vänster.
-1. Tryck på **[!UICONTROL Create]** i sidans övre högra hörn.
+1. Gå till vänster **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Viewer Presets]**.
+1. I sidans övre högra hörn trycker du **[!UICONTROL Create]**.
 1. I dialogrutan Ny visningsförinställning för visningsprogrammet skriver du ett namn som beskriver förinställningen för det interaktiva visningsprogrammet för banderollen.
 
    Titeln visas på listsidan för visningsförinställningar när du har sparat.
 
 1. I listrutan Multimedietyp väljer du **[!UICONTROL Interactive Image]**.
 1. Välj **[!UICONTROL Create]**.
-1. Tryck på fliken **[!UICONTROL Appearance]** på sidan Redigera visningsförinställning.
+1. Tryck på knappen **[!UICONTROL Appearance]** -fliken.
 1. Gör något av följande:
 
    * Om du vill överföra en egen hotspot-bild som du vill använda på bilder trycker du på ikonen Resursväljaren. Gå till den hotspot-bild som du vill använda på sidan Välj innehåll och markera den. Markera bockmarkeringsikonen i det övre högra hörnet.
    * Om du vill välja en fördefinierad hotspot-bild trycker du på ikonen för Hotspot-galleriet. Tryck på den hotspot-bild som du vill använda på paletten för aktivt punktgalleri.
 
-1. Tryck på **[!UICONTROL Save]** i sidans övre högra hörn.
+1. I sidans övre högra hörn trycker du **[!UICONTROL Save]**.
 
    Var noga med att publicera den nya visningsförinställningen.
 
@@ -207,9 +205,9 @@ Om du redan har överfört de bilder du vill använda går du vidare till nästa
 
 **Så här överför du en bildbanderoll:**
 
-1. Överför bildbanderoller som du vill göra interaktiva.
+1. Ladda upp bildbanners som du vill göra interaktiva.
 
-   Se [Överföra resurser](/help/assets/manage-digital-assets.md#uploading-assets).
+   Se [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
 
    Nu kan du lägga till hotspot-områden i bildbanderollen; se nästa uppgift nedan.
 
@@ -245,43 +243,43 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
 1. I resursvyn navigerar du till den bildbanderoll som du vill göra interaktiv.
 1. Gör något av följande:
 
-   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL Select]** (bockmarkeringsikon). Tryck på **[!UICONTROL Edit]** i verktygsfältet.
+   * Hovra över bilden och tryck sedan **[!UICONTROL Select]** (bockmarkeringsikon). Tryck på i verktygsfältet **[!UICONTROL Edit]**.
 
-   * Håll pekaren över bilden och tryck sedan på **[!UICONTROL More actions]** (ikonen med tre punkter) **[!UICONTROL > Edit]**.
+   * Hovra över bilden och tryck sedan **[!UICONTROL More actions]** (ikon med tre punkter) **[!UICONTROL > Edit]**.
 
-   * Tryck på bilden för att öppna den på sidan Detaljvy. Tryck på **[!UICONTROL Edit]** i verktygsfältet.
+   * Tryck på bilden för att öppna den på sidan Detaljvy. Tryck på i verktygsfältet **[!UICONTROL Edit]**.
 
 1. I närheten av sidans övre vänstra hörn trycker du på **[!UICONTROL Add Hotspot]** (pekaren) för att öppna sidan för hantering av hotspot-områden.
-1. I närheten av det övre vänstra hörnet på sidan trycker du på **[!UICONTROL Hotspot]**.
+1. Knacka i det övre vänstra hörnet av sidan **[!UICONTROL Hotspot]**.
 
-   1. Tryck på **[!UICONTROL Hotspot]** i det övre vänstra hörnet på sidan Hantering av hotspot.
+   1. I närheten av det övre vänstra hörnet på sidan Hantering av hotspot trycker du på **[!UICONTROL Hotspot]**.
    1. Tryck på den plats i bilden där du vill att hotspot-området ska visas. Dra hotspot-området om det behövs för att justera dess placering. Du kan också använda piltangenterna på tangentbordet för att styra positionen för en markerad aktiveringspunkt.
    1. Lägg till fler hotspot-områden efter behov genom att upprepa stegen a och b.
-   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den på bilden och trycker sedan på **[!UICONTROL Delete]** (papperskorgsikonen) under rubriken **[!UICONTROL Hotspots]**.
+   1. (Valfritt) Om du vill ta bort en aktiveringspunkt markerar du den i bilden och trycker sedan på **[!UICONTROL Delete]** (papperskorgsikonen) under **[!UICONTROL Hotspots]** rubrik.
 
 1. Skriv namnet på aktiveringspunkten i textfältet Namn. Det här namnet visas också i listrutan Markerad aktiveringspunkt.
 1. Gör något av följande:
 
    * Välj **[!UICONTROL Quickview]**.
 
-      * Om du använder Experience Manager Sites eller eCommerce väljer du produktväljarens ikon (förstoringsglas) för att öppna sidan Select Product (Välj produkt). Markera den produkt du vill använda och tryck sedan på **Välj** i det övre högra hörnet på sidan. Du återgår till sidan för hantering av hotspot.
-      * Om du är *inte* en Experience Manager Sites- eller e-handelskund
+      * Om du är Experience Manager Sites- eller e-handelskund väljer du produktväljarikonen (förstoringsglas) för att öppna sidan Välj produkt. Välj den produkt du vill använda och tryck sedan på **Välj** i det övre högra hörnet på sidan. Du återgår till sidan för hantering av hotspot.
+      * Om du *not* en Experience Manager Sites- eller e-handelskund
 
          * Se [Identifiera hotspot-variabler](#optional-identifying-hotspot-variables); du måste definiera dessa variabler.
          * Ange sedan SKU-värdet manuellt. Skriv produktens SKU i textfältet SKU-värde. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen. Det ser till att systemet känner till att koppla den aktiveringspunkt som användaren knackar på till en viss SKU:s snabbvy.
-         * (Valfritt) Om det finns andra variabler i snabbvyn som används för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. `category=Mens` är till exempel en tillagd variabel.
+         * (Valfritt) Om det finns andra variabler i snabbvyn som används för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. Till exempel: `category=Mens` är en tillagd variabel.
    * Välj **[!UICONTROL Hyperlink]**.
 
-      * Om du använder Experience Manager Sites trycker du på ikonen för platsväljaren (mappen). Navigera till en URL. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
+      * Om du är kund hos Experience Manager Sites trycker du på ikonen för platsväljaren (mappen). Navigera till en URL. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
       * Om du är en fristående kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.
 
    Var noga med att ange om länken ska öppnas på en ny webbläsarflik (rekommenderat standardvärde) eller på samma flik.
 
-   Mer information finns i [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
+   Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md) för mer information.
 
    * Välj **[!UICONTROL Experience Fragment]**.
 
-      * Om du använder Experience Manager Sites väljer du ikonen Sök (förstoringsglas) för att öppna sidan Experience Fragment. Välj det Experience Fragment som du vill använda. Tryck sedan på **[!UICONTROL Select]** i det övre högra hörnet på sidan. Du återgår till sidan för hantering av hotspot.
+      * Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Välj det Experience Fragment som du vill använda. Tryck sedan **[!UICONTROL Select]** i det övre högra hörnet på sidan. Du återgår till sidan för hantering av hotspot.
 Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
 
       * Ange bredd och höjd för Experience Fragment så som du vill att det ska visas på banderollen.
@@ -291,14 +289,14 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-frag
 
 
 
-1. Välj **[!UICONTROL Save]** om du vill spara ditt arbete och återgå till sidan Bläddra.
+1. Välj **[!UICONTROL Save]** om du vill spara ditt arbete och gå tillbaka till sidan Bläddra.
 1. Publicera den interaktiva bilden. Publicering levererar banderollen via molnet och genererar även inbäddningskod som gör att du kan integrera med en tredjepartswebbplats.
 
    Se [Publicera resurser](/help/assets/manage-digital-assets.md#publish-assets).
 
    När du har lagt till aktiveringspunkter och publicerat den interaktiva bilden kan du nu lägga till den på din befintliga webbplats.
 
-   Se [Integrera en interaktiv bild med din webbplats](#integrating-an-interactive-image-with-your-website).
+   Se [Integrera en interaktiv bild med webbplatsen](#integrating-an-interactive-image-with-your-website).
 
    >[!NOTE]
    Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
@@ -309,27 +307,27 @@ Du kan använda Förhandsgranska för att se hur den interaktiva bilden ser ut f
 
 När du är nöjd med den interaktiva bilden kan du publicera den.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager-sidor.
-Se [Lägg till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
+Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
 **Så här förhandsgranskar du interaktiva bilder:**
 
 1. Navigera till en befintlig interaktiv bild som du har skapat i resursvyn och öppna den i förhandsvisningen genom att trycka.
-1. I det övre vänstra hörnet av förhandsgranskningssidan trycker du på **[!UICONTROL Viewers]** i listrutan Innehåll.
-1. Tryck på **[!UICONTROL Shoppable_Banner]** eller namnet på den förinställning för visningsprogrammet för den interaktiva bilden som du har skapat i listan Visare.
+1. I den övre vänstra hörnet av förhandsvisningssidan trycker du på i den nedrullningsbara listan Innehåll **[!UICONTROL Viewers]**.
+1. Tryck på i visningslistan **[!UICONTROL Shoppable_Banner]** eller namnet på den interaktiva bildvisningsförinställning som du har skapat.
 1. Om du vill testa de associerade åtgärderna för aktiveringspunkter trycker du på hotspot-områden i bilden.
 
 ## Publicera interaktiva bildresurser {#publishing-interactive-image-assets}
 
-Mer information om hur du publicerar interaktiva bildresurser finns i [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+Se [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) om du vill ha information om hur du publicerar interaktiva bildresurser.
 
 ## Integrera en interaktiv bild med webbplatsen {#integrating-an-interactive-image-with-your-website}
 
 När du har överfört en banderollbild, lagt till aktiveringspunkter i den och publicerat den interaktiva bilden är du redo att lägga till den på din webbsida.
 
-Om du använder Experience Manager Sites kan du lägga till den interaktiva bilden genom att dra Interactive Media-komponenten till sidan. Se [Lägg till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+Om du är kund hos Experience Manager Sites kan du lägga till den interaktiva bilden genom att dra Interactive Media-komponenten till din sida. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
-Om du är fristående kund av Experience Manager Assets kan du lägga till den interaktiva bilden manuellt på din webbplats enligt beskrivningen i det här avsnittet.
+Om du är en fristående Experience Manager Assets-kund kan du lägga till den interaktiva bilden manuellt på din webbplats enligt beskrivningen i det här avsnittet.
 
 1. Kopiera den publicerade interaktiva bildens inbäddningskod.
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
@@ -339,29 +337,29 @@ Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den 
 
 **Exempel**
 
-Lägg märke till att bilden på de tre personerna är en statisk `IMG`-tagg när du använder [demowebbplatsen som exempel](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html):
+Använda [demowebbplats som exempel](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-0.html), observera att bilden på de tre personerna är statisk `IMG` tagg:
 
-```xml
+```xml {.line-numbers}
 <img class="img-responsive" width="100%" title="Hero Image 2" alt="Hero Image 2" src="images/shoppable-banner.jpg">
 ```
 
-Integrationen är så enkel som att ta bort taggen `IMG` och ersätta den med den kopierade inbäddningskoden från Experience Manager Assets. Du ser att resultatet [visar den interaktiva bilden på sidan med tre cirkelaktiveringspunkter](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html).
+Integreringen är enkel som att ta bort `IMG` tagga och ersätta den med den kopierade inbäddningskoden från Experience Manager Assets. Du ser att resultatet [visar den interaktiva bilden som går att handla på sidan med tre cirkelaktiveringspunkter](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html).
 
 >[!NOTE]
 Nu är de hotspots som finns på den interaktiva bilden av demowebbplatsen endast avsedda för webben. De är ännu inte integrerade med de befintliga snabbvyerna.
 
-Om du vill tillämpa en beskärning på en interaktiv bild för en responsiv miljö inkluderar du konfigurationsattributet för interaktiv bild `ZoomView.iscommand` på sökvägen. I det här fallet anropas `ZoomView`-komponenten och `iscommand` är det kommando för att beskära bilden som du använder.
+Om du vill tillämpa en beskärning på en interaktiv bild för en responsiv miljö inkluderar du konfigurationsattributet Interactive Image `ZoomView.iscommand` till banan. I det här fallet `ZoomView` -komponenten anropas och `iscommand` är det&quot;beskär&quot; bildserverkommando som du använder.
 
 Se [ZoomView.iscommand](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/command-reference-configuration-attributes-interactive-images/r-html5-aem-interactive-image-config-attrib-zoomview-iscommand.html) konfigurationsattribut.
 
-Se [kommandot för att beskära](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) bilder.
+Se [beskära](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-crop.html) kommando för att visa bilder.
 
 Nu kan du integrera den interaktiva bilden med en befintlig Quickview på webbplatsen.
 
 ## Integrera en interaktiv bild med en befintlig snabbvy {#integrating-an-interactive-image-with-an-existing-quickview}
 
 >[!NOTE]
-Den här uppgiften gäller endast om du är en fristående kund av Experience Manager Assets.
+Detta gäller endast om du är en fristående Experience Manager Assets-kund.
 
 Det sista steget i den här processen är att integrera den interaktiva bilden med en befintlig Quickview-implementering på din webbplats. Det finns ingen lösning på integreringen som fungerar i alla fall. Alla QuickView-implementeringar är unika och det krävs en särskild strategi. Det är därför till stor hjälp att hjälpa IT-avdelningen.
 
@@ -372,8 +370,8 @@ Den befintliga Quickview-implementeringen representerar normalt en kedja av inte
 1. Front-end-koden skickar en Ajax-begäran med den URL som fås i steg 2.
 1. Bakåtlogiken returnerar motsvarande QuickView-data eller -innehåll tillbaka till slutkoden.
 1. Slutkoden läser in QuickView-data eller -innehåll.
-1. Om du vill kan du konvertera den inlästa QuickView-informationen till en HTML-representation med hjälp av koden längst fram.
-1. I koden visas en modal dialogruta eller panel och HTML-innehållet återges på skärmen för slutanvändaren.
+1. Om du vill kan du konvertera den inlästa QuickView-informationen till en HTML-representation med hjälp av koden.
+1. I slutkoden visas en modal dialogruta eller panel och HTML-innehållet på skärmen återges för slutanvändaren.
 
 Dessa anrop representerar inte nödvändigtvis fristående offentliga API-anrop som anropas av webbsidans logik från ett godtyckligt steg. I stället är det ett kedjat anrop där varje steg döljs i den sista fasen (återanrop) av föregående steg.
 
@@ -387,7 +385,7 @@ I en sådan händelsehanterare gör koden längst fram följande:
 
 Den inbäddningskod som returneras av Experience Manager Assets har en färdig händelsehanterare som kommenteras ut, vilket visas i följande markerade kodfragment:
 
-```xml
+```xml {.line-numbers}
         var s7interactiveimageviewer = new s7viewers.InteractiveImage({
             "containerId" : "s7interactiveimage_div",
             "params" : {
@@ -450,27 +448,27 @@ Det sista steget för att utlösa snabbvyns URL och aktivera snabbvypanelen krä
 
 Du kan se hur dessa steg tillämpas på demowebbplatsen för att helt integrera en interaktiv bild som kan köpas med QuickView-koden. Tidigare identifierades strukturen för snabbvyns URL som följande:
 
-```xml
+```xml {.line-numbers}
 /datafeed/$categoryId$-$SKU$.json
 ```
 
-Om du vill rekonstruera den här URL:en i `quickViewActivate`-hanteraren kan du använda fälten `categoryId` och `SKU`. Dessa fält är tillgängliga i `inData`-objektet som skickas till hanteraren av användarens kod:
+För att rekonstruera denna URL i `quickViewActivate` -hanterare kan du använda `categoryId` och `SKU` fält. Dessa fält är tillgängliga i `inData` objekt som skickas till hanteraren av användarens kod:
 
-```xml
+```xml {.line-numbers}
 var sku=inData.sku;
 var categoryId=inData.categoryId;
 var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 ```
 
-Demonstrationswebbplatsen aktiverar dialogrutan Quickview med ett enkelt `loadQuickView()`-funktionsanrop. Den här funktionen har bara ett argument, vilket är snabbvydata-URL:en. Det sista steget för att integrera den interaktiva bilden i shoppingläge är att lägga till följande kodrad i `quickViewActivate`-hanteraren:
+Demonstrationswebbplatsen utlöser dialogrutan Snabb visning med en enkel `loadQuickView()` funktionsanrop. Den här funktionen har bara ett argument, vilket är snabbvydata-URL:en. Det sista steget för att integrera den interaktiva bilden för en köpare är att lägga till följande kodrad i `quickViewActivate` hanterare:
 
-```xml
+```xml {.line-numbers}
 loadQuickView(quickViewUrl);
 ```
 
 Här följer den fullständiga källkoden:
 
-```xml
+```xml {.line-numbers}
  var s7interactiveimageviewer = new s7viewers.InteractiveImage({
   "containerId" : "s7interactiveimage_div",
   "params" : {
@@ -490,8 +488,8 @@ Här följer den fullständiga källkoden:
  s7interactiveimageviewer.init();
 ```
 
-Den [färdiga demowebbplatsen med den helt integrerade interaktiva bilden](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html).
+The [den slutliga demowebbplatsen med en helt integrerad interaktiv bild](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-3.html).
 
 ## Skapa anpassade popup-fönster med snabbvyn {#using-quickviews-to-create-custom-pop-ups}
 
-Se [Skapa anpassade popup-fönster® med Quickview](/help/assets/dynamic-media/custom-pop-ups.md).
+Se [Skapa anpassade popup-fönster® med QuickView](/help/assets/dynamic-media/custom-pop-ups.md).

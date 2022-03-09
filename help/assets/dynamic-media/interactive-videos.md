@@ -4,7 +4,7 @@ description: Lär dig hur du arbetar med interaktiv video och videor som kan kö
 feature: Interactive Videos
 role: User
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
-source-git-commit: ba752888601413dd4725a7a137f8b468b92ad5c7
+source-git-commit: 77f1b744dabd72fc26d3b0607db9561e6cb7fa66
 workflow-type: tm+mt
 source-wordcount: '5919'
 ht-degree: 3%
@@ -101,7 +101,6 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part måste du int
 >
 >* Du vill lägga till interaktivitet i videon genom att aktivera snabbvyer.
 >* Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar som IBM® WebSphere® Commerce, Elastic Path, SAP Hybris eller Intershop. <!-- See [eCommerce concepts in Experience Manager Assets](/help/sites-administering/concepts.md).-->
-
 >
 >Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
 
@@ -541,7 +540,7 @@ Använda demowebbplatsen som exempel:
 
 Observera att koden för videoinbäddning är standard:
 
-```xml
+```js {.line-numbers}
 <style type="text/css">
  #s7video_div.s7videoviewer{
    width:100%;
@@ -602,7 +601,7 @@ Dessutom har Interactive Video Viewer stöd för helskärmsläge. Slutanvändare
 
 Den inbäddningskod som returneras av Experience Manager har redan en färdig händelsehanterare på plats. Den kommenteras ut enligt följande markerade kodfragment:
 
-```xml
+```js {.line-numbers}
 <style type="text/css">
  #s7interactivevideo_div.s7interactivevideoviewer{
    width:100%;
@@ -686,13 +685,13 @@ Det sista steget för att utlösa snabbgransknings-URL:en och aktivera snabbvypa
 
 Du kan se hur dessa steg tillämpas på demowebbplatsen för att helt integrera en interaktiv video med QuickView-koden. Tidigare i det här avsnittet identifierades strukturen för snabbvyns URL som följande:
 
-```xml
+```xml {.line-numbers}
 /datafeed/$CategoryId$-$SKU$.json
 ```
 
 Det är enkelt att rekonstruera URL:en i `quickViewActivate` hanterare använda `categoryId` och `sku` fält som är tillgängliga i `inData` objekt som skickas till hanteraren via visningsprogrammets kod enligt följande:
 
-```xml
+```js {.line-numbers}
 var sku=inData.sku;
 var categoryId=inData.categoryId;
 var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
@@ -700,13 +699,13 @@ var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 
 Demonstrationswebbplatsen utlöser dialogrutan Snabb visning med en enkel `loadQuickView()` funktionsanrop. Den här funktionen har bara ett argument, vilket är snabbvydata-URL:en. Så det sista steget för att integrera den interaktiva videon är att lägga till följande kodrad i `quickViewActivate` hanterare:
 
-```xml
+```xml {.line-numbers}
 loadQuickView(quickViewUrl);
 ```
 
 Kontrollera slutligen att dialogrutan Snabbvy är kopplad till visningsprogrammets behållarelement. Standardinställningen för inbäddningskod innehåller exempelsteg för att uppnå den här funktionen. Om du vill få en referens till visningsprogrammets behållarelement kan du använda följande kodrader:
 
-```xml
+```js {.line-numbers}
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
 var inner_container = document.getElementById(sdkContainerId);
 ```
@@ -717,7 +716,7 @@ Stegen för att hitta det modala dialogruteelementet och bifoga det till behåll
 
 För exempelwebbplatsen implementeras den modala dialogrutan för snabbvyn som en `DIV` med det spärra/knipa-ID som är kopplat direkt till dokumentet `BODY`. Koden som flyttar dialogrutan till visningsprogrammets behållare är därför så enkel som följande:
 
-```xml
+```js {.line-numbers}
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component
 var inner_container = document.getElementById(sdkContainerId);
 inner_container.appendChild(document.getElementById("quickview-modal"));
@@ -725,7 +724,7 @@ inner_container.appendChild(document.getElementById("quickview-modal"));
 
 Den fullständiga källkoden är följande:
 
-```xml
+```javascript {.line-numbers}
 <style type="text/css">
  #s7interactivevideo_div.s7interactivevideoviewer{
    width:100%;
@@ -772,4 +771,4 @@ Den färdiga demowebbplatsen med den helt integrerade interaktiva videon ser ut 
 
 ## Skapa anpassade popup-fönster® med QuickView {#using-quickviews-to-create-custom-pop-ups}
 
-Se [Skapa anpassade popup-fönster® med QuickView](/help/assets/dynamic-media/custom-pop-ups.md). —>
+Se [Skapa anpassade popup-fönster® med QuickView](/help/assets/dynamic-media/custom-pop-ups.md).
