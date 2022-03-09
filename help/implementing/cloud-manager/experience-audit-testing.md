@@ -1,68 +1,70 @@
 ---
-title: Experience Audit Testing - Cloud Services
-description: Experience Audit Testing - Cloud Services
+title: Testning av Experience Audit
+description: Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 exl-id: 8d31bc9c-d38d-4d5b-b2ae-b758e02b7073
-translation-type: tm+mt
-source-git-commit: f6c700f82bc5a1a3edf05911a29a6e4d32dd3f72
+source-git-commit: 15de47e28e804fd84434d5e8e5d2fe8fe6797241
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
 
-# Experience Audit Testing {#experience-audit-testing}
+
+# Testning av Experience Audit {#experience-audit-testing}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_nonbpa_expaudittesting"
 >title="Testning av Experience Audit"
->abstract="Experience Audit är en funktion som finns i Cloud Manager Sites Production pipelines, som drivs av Google Lighthuse, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager."
+>abstract="Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO."
 
-Experience Audit är en funktion som finns i Cloud Manager Sites Production pipelines, som drivs av Google Lighthuse, ett verktyg med öppen källkod från Google. Den här funktionen är aktiverad i alla produktionspipelinjer för Cloud Manager.
+Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 
-Den validerar distributionsprocessen och säkerställer att ändringar som distribueras:
+## Översikt {#overview}
+
+Experience Audit är en funktion i Cloud Manager Sites Production pipelines som validerar distributionsprocessen och hjälper till att säkerställa att ändringar som distribueras:
 
 1. Uppfyll grundläggande standarder för prestanda, tillgänglighet, bästa praxis, SEO (Search Engine Optimization) och PWA (Progressive Web App).
 
-1. Inkludera inte regressioner i dessa dimensioner.
+1. Inför inte regressioner.
 
-Experience Audit i Cloud Manager säkerställer att slutanvändarnas digitala upplevelse på webbplatsen kan upprätthållas enligt högsta standard. Resultaten är informativa och gör att användaren kan se poängen och ändringen mellan den aktuella och den tidigare poängen. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
+Experience Audit i Cloud Manager säkerställer att slutanvändarens upplevelse på webbplatsen är av högsta standard.
 
-## Om Experience Audit Results {#understanding-experience-audit-results}
+Granskningsresultaten är informativa och gör det möjligt för distributionshanteraren att se poängen och ändringen mellan aktuella och tidigare poäng. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
 
-Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via sidan för körning av produktionspipeline.
+Experience Audit drivs av Google Lighthuse, ett verktyg med öppen källkod från Googl, och är aktiverat i alla produktionspipelines i Cloud Manager.
 
-* Mätvärden för aggregerad nivå mäter medelpoängen på de sidor som granskats för prestanda, tillgänglighet, bästa praxis, SEO (sökmotoroptimering).
-   >[!NOTE]
-   >Progressive Web App-poäng (PWA) ingår inte i sammanfattningspoängen och visas endast på informationsskärmen på sidnivå.
+## Upplevelsegranskningsresultat {#understanding-experience-audit-results}
+
+Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via [körningssida för produktionsflöde.](/help/implementing/cloud-manager/deploy-code.md)
+
+* Sammanlagda mätvärden mäter medelpoängen på de sidor som granskats med avseende på prestanda, tillgänglighet, bästa praxis, SEO (sökmotoroptimering).
 * Enskilda sidnivåpoäng kan också göras via fördjupning.
-* Det finns uppgifter om poängen för att se vilka resultat de enskilda testerna ger, tillsammans med vägledning om hur man åtgärdar eventuella problem som upptäcktes under granskningen av erfarenheterna.
-* En historik över testresultaten sparas i Cloud Manager så att kunderna kan se om de ändringar som införs i pipeline-körningen innehåller några regressioner från föregående körning.
+* Detaljerad information om poängen finns tillgänglig för att visa resultaten av de enskilda testerna tillsammans med vägledning om hur man åtgärdar eventuella problem som identifierats.
+* En historik över testresultaten finns kvar i Cloud Manager för att avgöra om ändringar som införs i pipeline inkluderar eventuella regressioner från föregående körning.
 
 ### Sammanställd bakgrundsmusik {#aggregate-scores}
 
-Det finns en sammanställd nivå för varje testtyp, som prestanda, tillgänglighet, SEO och bästa praxis.
->[!NOTE]
->Progressive Web App-poäng (PWA) ingår inte i sammanfattningspoängen och visas endast på informationsskärmen på sidnivå.
-
 Poängen för sammanställd nivå tar medelpoängen för de sidor som ingår i körningen. Ändringen på aggregeringsnivå representerar medelpoängen för sidorna i den aktuella körningen jämfört med medelvärdet för poängen från föregående körning, även om den sidsamling som konfigurerats att inkluderas har ändrats mellan körningar.
 
-Värdet för Change-måttet kan vara något av följande:
+Det finns en sammanställd nivå för varje testtyp, som prestanda, tillgänglighet, SEO och bästa praxis.
 
-* **Positivt värde**  - sidan/sidorna har förbättrats på det valda testet sedan den senaste produktionskanalen kördes
+Ändringsmåttet kan ha något av följande värden.
 
-* **Negativt värde**  - sidan/sidorna har gått om på det valda testet sedan den senaste körningen av produktionsflödet
+* **Positivt värde** - Sidorna har förbättrats på det valda testet sedan den senaste produktionspipeline-körningen.
 
-* **Ingen ändring**  - sidan/sidorna har fått samma resultat sedan den senaste produktionspipeline-körningen
+* **Negativt värde** - sidan/sidorna har gått om på det valda testet sedan den senaste produktionspipeline kördes.
 
-* **Ej tillämpligt**  - det fanns ingen tidigare poäng att jämföra med
+* **Ingen ändring** - Sidorna har fått samma resultat sedan den senaste produktionsflödet.
 
-   ![](/help/implementing/cloud-manager/assets/exp-audit-1.png)
+* **Ej tillämpligt** - Det fanns inga tidigare poäng att jämföra.
+
+![Resultat av granskning](/help/implementing/cloud-manager/assets/exp-audit-1.png)
 
 
 ### Poäng på sidnivå {#page-level-scores}
 
-Genom att gå in i något av testerna kan man se en mer detaljerad sidnivåbedömning. Användaren kommer att kunna se hur de enskilda sidorna sparades för det specifika testet tillsammans med ändringen från den föregående gången testet kördes.
+Genom att gå igenom något av testerna blir det lättare att göra en mer detaljerad sidnivåbedömning. Du kan se hur de enskilda sidorna sparades för det specifika testet tillsammans med ändringen från föregående testkörning.
 
-Om du klickar på detaljerna för en enskild sida visas information om de element på sidan som har utvärderats och vägledning för att åtgärda problem om möjligheter till förbättring upptäcks. Detaljer om testerna och tillhörande vägledning tillhandahålls av Google Lighthuse.
+Om du klickar på detaljerna för en enskild sida får du information om vilka element på sidan som har utvärderats, samt vägledning om hur du åtgärdar problem om möjligheter till förbättring upptäcks.
 
-![](/help/implementing/cloud-manager/assets/exp-audit-2.png)
+![Poäng på sidnivå](/help/implementing/cloud-manager/assets/exp-audit-2.png)

@@ -7,10 +7,10 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: b3b91da354d2c805ca89063cbd6d2d9766f1c612
+source-git-commit: a9303c659730022b7417fc9082dedd26d7cbccca
 workflow-type: tm+mt
-source-wordcount: '3436'
-ht-degree: 24%
+source-wordcount: '3419'
+ht-degree: 23%
 
 ---
 
@@ -641,24 +641,24 @@ ht-degree: 24%
          + [Redigeringsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md)
          + [Vilolägen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md)
       + Skapa ett AEM-programprojekt {#create-application-project}
-         + [Använda guiden](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
-         + [Konfigurera projektet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
-         + [Förstå byggmiljön](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md)
+         + [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md)
+         + [Projektinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md)
+         + [Bygg miljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md)
       + [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md)
       + Hantera kod {#managing-code}
          + [Versionshantering för Maven Project](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
          + [Databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md)
          + [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
-         + [Integrera Git med Adobe Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
-         + [Arbeta med Git-databaser med flera källor](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
-         + [Inställningar för utveckling av Enterprise-team för AEM as a Cloud Service](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md)
+         + [Använda Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
+         + [Använda flera databaser](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
+         + [Installation av Enterprise Development Team](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md)
       + [Miljövariabler](/help/implementing/cloud-manager/environment-variables.md)
       + Cloud Manager CI-CD-pipeline {#cicd-pipelines}
          + [Introduktion](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
          + [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md)
          + [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
          + [Hantera pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md)
-      + [Driftsätta kod](/help/implementing/cloud-manager/deploy-code.md)
+      + [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md)
       + Förstå testresultat {#test-results}
          + [Översikt](/help/implementing/cloud-manager/overview-test-results.md)
          + [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md)
@@ -668,8 +668,8 @@ ht-degree: 24%
          + [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
       + [Komma åt och hantera loggar](/help/implementing/cloud-manager/manage-logs.md)
       + [SLA-rapportering](/help/implementing/cloud-manager/sla-reporting.md)
-      + [Användaråtkomst till New Relic](/help/implementing/cloud-manager/user-access-new-relic.md)
-      + [Förstår aviseringar](/help/implementing/cloud-manager/notifications.md)
+      + [New Relic One](/help/implementing/cloud-manager/user-access-new-relic.md)
+      + [Meddelanden](/help/implementing/cloud-manager/notifications.md)
       + Hantera SSL-certifikat {#manage-ssl-certificates}
          + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
          + [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md)

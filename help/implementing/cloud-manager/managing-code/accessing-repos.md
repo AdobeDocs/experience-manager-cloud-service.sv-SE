@@ -1,45 +1,42 @@
 ---
 title: Åtkomst till databaser
-seo-title: Accessing Repositories
-description: På den här sidan beskrivs hur du kan komma åt och hantera Git-databasen.
-seo-description: Follow this page to learn how to access and manage your Git repository.
+description: Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering för självbetjäning från Cloud Manager.
 exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
-source-git-commit: 3cdee254eebcf45762feff8fe081b006a803ef1b
+source-git-commit: 4729574eb31e01077f0d2a35efcef6d134f6aa5c
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 5%
+source-wordcount: '229'
+ht-degree: 0%
 
 ---
 
 # Åtkomst till databaser {#accessing-repos}
 
-Du kan komma åt och hantera din Git-databas med hjälp av Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager.
+Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering för självbetjäning från Cloud Manager.
 
-## Använda kontohantering för självbetjäningsdatabaser {#self-service-repos}
+## Använda självbetjäningsarkivkontohantering {#self-service-repos}
 
-Använd knappen **Åtkomst till repo-information** som är tillgänglig från användargränssnittet i Cloud Manager, som är mest framträdande på pipeline-kortet.
+Med Cloud Manager är det enkelt att hämta databasinformation med **Åtkomst till svarsinformation** finns väl synligt på pipeline-kortet.
 
-1. Gå till **Pipelines**-kortet från sidan **Programöversikt**.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Du kommer att visa alternativet **Åtkomst till repo-information** för att komma åt och hantera din Git-databas.
+1. Navigera till **Pipelines** från **Programöversikt** sidan och hitta **Åtkomst till svarsinformation** för att komma åt och hantera din Git-databas.
 
-   ![](/help/implementing/cloud-manager/assets/repos/access-repo1.png)
+   ![Knappen Åtkomst till upprepningsinformation på miljökortet](/help/implementing/cloud-manager/assets/repos/access-repo1.png)
 
-   Om du dessutom väljer pipelinefliken **Icke-produktion** visas även alternativet **Åtkomst till repo-information**.
+1. Klicka på **Visa information om svar** för att öppna en dialogruta:
 
-   ![](/help/implementing/cloud-manager/assets/repos/access-repo-nonprod.png)
-
-   >[!NOTE]
-   >Alternativet **Åtkomst till repo-information** är synligt för användare i rollen Utvecklare eller Distributionshanterare. Om du klickar på den här knappen öppnas en dialogruta där användaren kan hitta URL:en till sin Git-databas för Cloud Manager tillsammans med användarnamn och lösenord.
+   * URL:en till Cloud Managers Git-databas.
+   * Git-användarnamn.
+   * Git-lösenordet, vars värde visas när **Generera lösenord** klickas på knappen.
 
    ![](/help/implementing/cloud-manager/assets/repos/access-repo-create.png)
 
-   Viktigt att tänka på när du hanterar ditt Git i Cloud Manager är:
+Med hjälp av dessa inloggningsuppgifter kan användaren klona en lokal kopia av databasen och göra ändringar i den lokala databasen, och när den är klar kan han eller hon spara kodändringar i fjärrkoddatabasen i Cloud Manager.
 
-   * **URL**: Databas-URL
-   * **Användarnamn**: Användarnamnet
-   * **Lösenord**: Värdet som visas när användaren klickar på knappen **Generera lösenord**.
+The **Åtkomst till svarsinformation** finns även på **Icke-produktion** fliken pipeline i **Pipelines** kort.
 
+![Knappen Åtkomst till upprepningsinformation på icke-produktionsfliken](/help/implementing/cloud-manager/assets/repos/access-repo-nonprod.png)
 
-      >[!NOTE]
-      >En användare kan checka ut en kopia av sin kod och göra ändringar i den lokala koddatabasen. När det är klart kan användaren spara sina kodändringar i fjärrkoddatabasen i Cloud Manager.
+>[!NOTE]
+>
+>The **Åtkomst till svarsinformation** alternativet är synligt för användare med **Utvecklare** eller **Distributionshanteraren** roller.

@@ -1,107 +1,122 @@
 ---
-title: Användaråtkomst till New Relic
-description: Följ den här sidan om du vill veta mer om prestandaövervakning för nya Relic-program för AEM as a Cloud Service
-source-git-commit: 696b86e9e88ca1fd7c0a5b688fa78f46227df3a4
+title: New Relic One
+description: Läs mer om tjänsten New Relic One Application Performance Monitoring (APM) för AEM as a Cloud Service och hur du kan komma åt den.
+exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
+source-git-commit: 6cf164093cc543fe4847859b248e70efd86efbb1
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
 
 
-# Användaråtkomst till New Relic {#user-access}
+# New Relic One {#user-access}
+
+Läs mer om tjänsten New Relic One Application Performance Monitoring (APM) för AEM as a Cloud Service och hur du kan komma åt den.
 
 ## Introduktion {#introduction}
 
-Adobe lägger stor vikt vid övervakning, tillgänglighet och prestanda för programmet. För att uppnå detta mål tillhandahåller AEM as a Cloud Service tillgång till en anpassad ny Relic-övervakningssvit som en del av standardprodukterbjudandet för att säkerställa att era team får största möjliga insyn i Adobe Experience Manager Cloud Service-systemet och miljöprestandamätningar. I det här avsnittet beskrivs de nya Relic-övervakningsfunktionerna som är aktiverade i dina AEM as a Cloud Service miljöer för att öka prestandan och få ut så mycket som möjligt av AEM as a Cloud Service.
+Adobe lägger stor vikt vid övervakning, tillgänglighet och prestanda för programmet. För att uppnå detta mål tillhandahåller AEM as a Cloud Service tillgång till en anpassad övervakningssvit för New Relic One som en del av standardprodukterbjudandet för att säkerställa att era team har största möjliga insyn i de as a Cloud Service AEM för system- och miljöprestanda.
 
-## AEM as a Cloud Service transaktionsövervakning via New Relic - Value Proposition {#transaction-monitoring}
+Det här dokumentet beskriver de nya APM-funktioner (New Relic One application performance surveillance) som är aktiverade i dina AEM as a Cloud Service miljöer för att ge bättre prestanda och få ut så mycket som möjligt av AEM as a Cloud Service.
 
-Här är en sammanfattning av värdeförslag från New Relic Application Performance Monitoring för AEM as a Cloud Service:
+## Funktioner {#transaction-monitoring}
 
-* Direktåtkomst till ett dedikerat nytt Relic One-konto (åtkomst hanteras av Adobe Support).
+New Relic One APM för AEM as a Cloud Service har många funktioner.
 
-* Instrumented New Relic APM-agent som visar exakta metodanrop med radnummer, inklusive externa beroenden och databaser.
+* Direktåtkomst till ett dedikerat nytt Relic One-konto (åtkomst hanteras av Adobe Support)
 
-* Holistisk prestandaoptimering genom att kombinera viktiga mätvärden från övervakning på infrastrukturnivå och programövervakning (Adobe Experience Manager).
+* Instrumented New Relic One APM-agent som visar exakta metodanrop med radnummer, inklusive externa beroenden och databaser
 
-* Exponering av AEM as a Cloud Service JMX-bönor och hälsokontroller direkt in i nya Relic InsiInsights-mätvärden, vilket möjliggör en djupgående undersökning av programmets prestanda och hälsomått.
+* Holistisk prestandaoptimering genom att kombinera nyckelvärden från övervakning på infrastrukturnivå och programövervakning (Adobe Experience Manager)
 
-## Få åtkomst till ditt AEM as a Cloud Service New Relic-konto {#accessing-new-relic}
+* Exponering av AEM as a Cloud Service JMX-bönor och hälsokontroller direkt inom nya Relic InsiInsights-mätvärden, vilket gör det möjligt att göra djupgående kontroller av programstackens prestanda och hälsomått.
 
-Ditt dedikerade New Relic-konto kommer att tillhandahållas och hanteras av Adobe via kundtjänst. Adobe förblir ägare och administratör och tillhandahåller kontot å dina vägnar för att ge åtkomst till ditt dedikerade underkonto.
+## Använder New Relic One {#accessing-new-relic}
 
-För att få tillgång till ditt New Relic-underkonto som är kopplat till ditt AEM as a Cloud Service program:
+Följ de här stegen för att få tillgång till ditt New Relic One-underkonto som är kopplat till ditt AEM as a Cloud Service program.
 
-* Öppna en begäran via fliken Support i Admin Console.
-* Se till att din biljett innehåller information om ditt program-ID samt en lista över användare som du ber Adobe team att öppna den nya Relic-åtkomsten till.
-* Alla användare måste anges med fullständigt namn och giltig e-postadress.
+1. Öppna en begäran via fliken Support i Admin Console.
+1. Ange i din begäran information om ditt program-ID samt en lista över användare som behöver åtkomst till New Relic.
+   * Alla användares fullständiga namn och giltiga e-postadresser måste anges.
 
-   >[!NOTE]
-   >Se [AEM supportportal för Experience Cloud](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) för mer information.
+Se dokumentet [AEM supportportal för Experience Cloud](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill ha mer information om att öppna biljetter.
 
 När åtkomsten är tillhandahållen skickar New Relic ett bekräftelsemeddelande via e-post till varje användare, så att användaren kan slutföra installationsprocessen och logga in.
 
-Om användaren inte kan hitta e-postadressen till den ursprungliga kontobekräftelsen:
+Följ de här stegen om användaren inte kan hitta det ursprungliga e-postmeddelandet med kontobekräftelsen.
 
-1. Gå till inloggningssidan för New Relic på [login.newrelic.com/login](https://login.newrelic.com/login).
+1. Gå till inloggningssidan för New Relic på [`login.newrelic.com/login`](https://login.newrelic.com/login).
 
-1. Välj **Har glömt lösenordet**.
+1. Välj **Har du glömt lösenordet?**.
 
-   ![](/help/implementing/cloud-manager/assets/new-relic/newrelic-1.png)
+   ![Ny Relic-inloggning](/help/implementing/cloud-manager/assets/new-relic/newrelic-1.png)
 
 1. Skriv e-postadressen till kontot och välj **Skicka min återställningslänk**.
 
-   ![](/help/implementing/cloud-manager/assets/new-relic/newrelic-2.png)
+   ![Ange e-postadress](/help/implementing/cloud-manager/assets/new-relic/newrelic-2.png)
 
-1. När New Relicks system returnerar ett e-postmeddelande markerar du länken i det för att bekräfta ditt konto igen.
+1. New Relic skickar ett e-postmeddelande till användaren med en länk som bekräftar kontot.
 
-   >[!NOTE]
-   >Om du inte får något e-postmeddelande från New Relic:
-   >Kontrollera [skräppostfilter](https://docs.newrelic.com/docs/accounts/accounts-billing/account-setup/create-your-new-relic-account/). Om tillämpligt, [lägg till New Relic i e-postmeddelandet tillåtelselista](https://docs.newrelic.com/docs/accounts/accounts/account-maintenance/account-email-settings/#email-whitelist).
-   >Ge gärna feedback på supportanmälan så hjälper supporten på Adobe ytterligare.
+Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden via e-post eller lösenord loggar du en supportanmälan via [Admin Console](https://adminconsole.adobe.com/).
 
-1. Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden via e-post eller lösenord loggar du en supportanmälan via [Admin Console](https://adminconsole.adobe.com/).
+>[!TIP]
+>
+>Om du inte får något e-postmeddelande från New Relic:
+>
+>* Kontrollera [skräppostfilter](https://docs.newrelic.com/docs/accounts/accounts-billing/account-setup/create-your-new-relic-account/).
+>* Om tillämpligt, [lägg till New Relic i e-postmeddelandet tillåtelselista](https://docs.newrelic.com/docs/accounts/accounts/account-maintenance/account-email-settings/#email-whitelist).
+>* Om ingen av dem föreslår hjälp, ge gärna feedback på supportanmälan så kommer Adobe Support att hjälpa dig vidare.
+
 
 ### Verifiera din e-postadress {#verify-email}
 
-Om du uppmanas att verifiera din e-post under inloggningen innebär det att din e-post är kopplad till flera konton och att du kan verifiera din e-post under inloggningen. På så sätt kan du välja vilket konto du vill få åtkomst till. Om du inte verifierar din e-postadress försöker New Relic logga in dig med den senast skapade användarposten som är kopplad till din e-postadress. Du kan undvika att verifiera din e-postadress vid varje inloggning genom att klicka i kryssrutan Kom ihåg mig på inloggningsskärmen.
+Om du uppmanas att verifiera din e-post under inloggningen innebär det att din e-post är kopplad till flera konton. På så sätt kan du välja vilket konto du vill få åtkomst till.
+
+Om du inte verifierar din e-postadress försöker New Relic logga in dig med den senast skapade användarposten som är kopplad till din e-postadress. Klicka på knappen **Kom ihåg mig** i inloggningsfönstret.
 
 Om du behöver mer hjälp kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Undantag {#exceptions}
 
-AEM as a Cloud Service fokuserar endast erbjudandet kring New Relic APM-lösning och har inte stöd för varningsmeddelanden, loggning eller API-integreringsfunktioner.
+AEM as a Cloud Service har bara New Relic One APM-lösning och har inte stöd för varningar, loggning eller API-integreringar.
 
-Om du vill ha mer hjälp eller mer information om nya Relic-erbjudanden för ditt AEM as a Cloud Service program kan du öppna en supportanmälan via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du behöver hjälp.
+Om du vill ha mer hjälp eller mer information om nya Relic One-erbjudanden för ditt AEM as a Cloud Service program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Frågor och svar för nytt Relic-konto {#faqs}
 
-### Vad övervakar Adobe med New Relic? {#adobe-monitor}
+### Vad övervakar Adobe med New Relic One? {#adobe-monitor}
 
-Adobe övervakar AEM as a Cloud Service tjänster för författare, publicering och förhandsgranskning (där de är tillgängliga) via New Relic APM Java plug-in. Adobe möjliggör anpassad telemetri för ny Relic APM och övervakning över icke-produktion och produktion AEM as a Cloud Service miljöer. Ditt New Relic-konto är kopplat till ett primärt Adobe-konto och har flera program som rapporterar till det.
+Adobe övervakar den AEM as a Cloud Service författaren, publicerar och förhandsgranskar (där det är tillgängligt) via Java-pluginen New Relic One. Adobe möjliggör anpassad New Relic One APM-telemetri och övervakning i icke-produktions- och produktionsmiljöer AEM as a Cloud Service miljöer.
 
-Tre var AEM as a Cloud Service miljö:
+Ditt nya Relic One-konto är kopplat till ett primärt konto som underhålls av Adobe och har flera program som rapporterar till det: tre per AEM as a Cloud Service Environment.
 
 * Ett program för författartjänsten per miljö
 * Ett program för publiceringstjänsten per miljö (inklusive Golden Publish)
 * Ett program för förhandsgranskningstjänsten per miljö
-   >[!IMPORTANT]
-   >Alla program använder en licensnyckel, AEM as a Cloud Service miljöer rapporterar till endast ett nytt Relic-konto. Full övervakning av mått och händelser för både New Relic APM bevaras i 7 dagar.
 
-### Vem har åtkomst till New Relic-Cloud Servicens data? {#access-new-relic-cloud}
+Observera:
 
-Fullständig läsbehörighet ges för upp till 10 medlemmar i ditt team. Läsåtkomst inkluderar alla APM-värden som samlats in av New Relic-agenten.
+* Varje program använder en licensnyckel.
+* AEM as a Cloud Service miljöer rapporterar till endast ett New Relic One-konto.
+* Fullständiga övervakningsvärden och -händelser för både New Relic One bevaras i 7 dagar.
+
+### Vem har åtkomst till molntjänsten New Relic One? {#access-new-relic-cloud}
+
+Fullständig läsbehörighet ges för upp till 10 medlemmar i ditt team. Läsåtkomst inkluderar alla APM-mått som samlats in av New Relic One-agenten.
 
 ### Stöds anpassad SSO-konfiguration? {#custom-sso}
 
-Anpassad SSO-konfiguration stöds för närvarande inte för det nya Relic-konto som tillhandahålls av Adobe.
+Anpassad SSO-konfiguration stöds inte för det nya Relic One-konto som tillhandahålls av Adobe.
 
-### Vad händer om du redan har en lokal New Relic-prenumeration? {#new-relic-subscription}
+### Vad händer om jag redan har en lokal New Relic-prenumeration? {#new-relic-subscription}
 
-Den nya observerbarhetsplattformen från New Relic One som heter New Relic One gör det möjligt för Adobe Support Groups och era medarbetare att observera, övervaka och se mätvärden och händelser på ett och samma ställe. Med New Relic One kan användarna söka i alla konton där de har åtkomst till och visualisera data från alla tjänster och värdar i en och samma vy. Medan Adobe Support Teams övervakar den AEM as a Cloud Service applikationen med hjälp av nya Relic och andra interna verktyg som en del av din tjänst kan era team fortsätta att utnyttja New Relic för lokala värdtjänster och infrastruktur. De kommer att kunna visualisera data från både Adobe och kundhanterade New Relic-konton.
+New Relic One är den nya observerbarhetsplattformen från New Relic och gör det möjligt för Adobe support och era team att observera, övervaka och se mätvärden och händelser på ett och samma ställe.
+
+Med New Relic One kan användarna söka i alla konton där de har åtkomst till och visualisera data från alla tjänster och värdar i en och samma vy.
+
+Medan supporten i Adobe övervakar den AEM as a Cloud Service applikationen med nya Relic One och andra interna verktyg som en del av din tjänst kan era team fortsätta att utnyttja New Relic för lokala värdtjänster och infrastrukturer. De kommer att kunna visualisera data från både Adobe New Relic One-kontot och kundhanterade New Relic-konton.
 
 >[!NOTE]
->Användaren måste ha rätt behörigheter och använda samma inloggningsmetod för båda kontona (Adobe och kundhanterat New Relic-konto).
-
-
+>
+>Om du vill visa båda datauppsättningarna i New Relic One måste användaren ha rätt behörigheter och använda samma inloggningsmetod för båda kontona (Adobe New Relic One och kundhanterade New Relic-konton).

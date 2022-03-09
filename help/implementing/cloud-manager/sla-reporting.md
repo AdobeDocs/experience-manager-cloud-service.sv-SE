@@ -1,51 +1,51 @@
 ---
-title: SLA-rapportering - Cloud Service
-description: SLA-rapportering - Cloud Service
-source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
+title: SLA-rapportering
+description: Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade serviceavtalet (SLA).
+exl-id: 03932415-a029-4703-b44a-f86a87edb328
+source-git-commit: 6cf164093cc543fe4847859b248e70efd86efbb1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
+
 # SLA-rapportering {#sla-reporting}
 
-Följ avsnitten nedan för att lära dig mer om SLA-rapportering på AEM as a Cloud Service.
+Lär dig hur du kan se hur din AEM fungerar i förhållande till det avtalade serviceavtalet (SLA).
 
 ## Introduktion {#introduction}
 
-Kunderna kan se hur väl deras AEM presterar jämfört med deras avtalade serviceavtal (SLA). Det här är tillgängligt via en meny på fliken Rapporter, som du kommer åt från huvudrubriken.
+SLA-rapporteringsdata är tillgängliga för alla produktionsprogram via **Rapporter** -fliken. Följ de här stegen för att komma åt.
 
-Följ exemplet nedan, det vill säga ett diagram som visar hur SLA uppnås månadsvis för 2021.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-![](assets/sla-reporting-1.png)
+1. Navigera till **Rapporter** från **Översikt** sida.
 
+1. Klicka på det år du vill se SLA-data.
 
-När du rullar över en datapunkt visas de specifika värdena för den månaden.
+![Exempel på SLA-diagram](assets/sla-reporting-1.png)
 
-![](assets/sla-reporting-b.png)
+Rulla markören över en datapunkt för att visa specifika värden för den punkten.
 
->[!NOTE]
->Dessa rapporter kommer att göras tillgängliga för kunderna stegvis. Om du inte ser alternativet Rapporter i huvudnavigeringen kontaktar du Adobe för att få en förståelse för när dina rapporter blir tillgängliga.
-
-Händelseanalysavsnittet under det här diagrammet visar den uppsättning incidenter som har inträffat för programmet under det valda året.
-
-Var och en av incidenterna har ett tidsintervall, en orsak och en uppsättning kommentarer, vilket visas i figuren nedan.
-
-![](assets/sla-reporting-c.png)
-
+![Visa detaljerade data](assets/sla-reporting-b.png)
 
 ## SLA-mått {#sla-metrics}
 
-* **Publicera**
-nivåkontraktDetta är det servicenivåavtal som definieras i ditt avtal med Adobe för publiceringsnivån.
+Diagrammet för det valda året innehåller ett antal datauppsättningar.
 
-* **Publiceringsnivå**
-faktiskDet här är den uppmätta drifttiden för produktionsnivåfaktoriseringsincidenter som orsakas av Adobe eller våra leverantörer.
+* **Publicera nivåkontrakt** - Det här är SLA-avtalet som definieras i ditt avtal med Adobe för publiceringsnivån.
 
-* **Författaravtal på**
-nivåDetta är det servicenivåavtal som definieras i ditt kontrakt med Adobe för författarnivån.
+* **Faktisk publiceringsnivå** - Detta är den uppmätta drifttiden för produktionsnivåfaktoriseringsincidenter som orsakas av Adobe eller Adobe.
 
-* **Författarnivå**
-faktiskDetta är den uppmätta drifttiden för produktionsförfattarens nivåfactoringincidenter som orsakas av Adobe eller våra leverantörer.
+* **Författaravtal** - Det här är det SLA som definieras i ditt kontrakt med Adobe för författarnivån.
 
+* **Författarnivå faktisk** - Detta är den uppmätta drifttiden för produktionsförfattarens nivåfactoringincidenter som orsakas av Adobe eller Adobe produktleverantörer.
+
+## Händelseanalys {#event-analysis}
+
+The **Händelseanalys** i diagrammet visar vilka incidenter som har inträffat för programmet under det valda året.
+
+Varje incident har ett tidsintervall, en orsak och en uppsättning kommentarer.
+
+![Exempel på händelseanalys](assets/sla-reporting-c.png)

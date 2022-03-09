@@ -1,40 +1,44 @@
 ---
-title: Meddelanden - Cloud Service
-description: Meddelanden - Cloud Service
-translation-type: tm+mt
-source-git-commit: 0f9d9cc0c1a7a50e5ac5fb1da2227537e75ac8ed
+title: Meddelanden
+description: Lär dig hur du får information om pipeline-distributioner med hjälp av Adobe Experience Cloud meddelandesystem.
+exl-id: c1c740b0-c873-45a8-9518-a856db2be75b
+source-git-commit: 42d4e3bb38e3a7ecb4507d15e2307ed08d752b5c
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 1%
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
+# Meddelanden {#notifications}
 
-# Förstår aviseringar {#notifications}
+[!UICONTROL Cloud Manager] gör att användaren kan ta emot meddelanden när produktionsflödet startar och slutförs (utan fel eller slutförs) under en produktionsdistribution.
 
-[!UICONTROL Cloud Manager] gör att användaren kan ta emot meddelanden när produktionsflödet startar och slutförs (utan fel eller slutförs) i början av en produktionsdistribution. Dessa meddelanden skickas via meddelandesystemet i Adobe [!UICONTROL Experience Cloud].
+Dessa meddelanden skickas via Adobe [!UICONTROL Experience Cloud] meddelandesystem till användare med roller **Företagsägare**, **Programhanteraren** och **Distributionshanteraren**.
 
->[!NOTE]
->
->Godkännandemeddelanden och schemalagda meddelanden skickas endast till användare med rollerna Business Owner, Program Manager och Deployment Manager.
+Meddelandena visas i den högra änden av menyraden i dialogrutan [!UICONTROL Cloud Manager] Användargränssnitt och Adobe [!UICONTROL Experience Cloud].
 
-Meddelandena visas i ett sidofält i [!UICONTROL Cloud Manager]-gränssnittet (användargränssnittet) och i hela Adobe [!UICONTROL Experience Cloud].
-![](assets/notify-1.png)
+![Ikonen Meddelanden i menyraden](assets/notify-1.png)
 
-Klicka på klockikonen i sidhuvudet för att öppna sidlisten och visa meddelanden, som i bilden nedan:
+Klockikonen visas inte när det finns nya meddelanden. Klicka på den för att öppna en panel för att visa meddelandena.
 
-![](assets/notify-2.png)
+![Visa meddelanden](assets/notify-2.png)
 
-I sidlisten visas de senaste meddelandena.
-
+Panelen visar bara de senaste meddelandena. Klicka **Visa alla** längst ned på panelen för att se alla meddelanden.
 
 ## E-postmeddelanden {#email-notifications}
 
-Som standard är meddelanden tillgängliga i webbanvändargränssnittet för alla Adobe [!UICONTROL Experience Cloud]-lösningar. Enskilda användare kan också välja att dessa meddelanden ska skickas via e-post, antingen direkt eller i sammandrag.
+Som standard är meddelanden tillgängliga i användargränssnittet i Adobe [!UICONTROL Experience Cloud] lösningar. Enskilda användare kan också välja att dessa meddelanden ska skickas via e-post genom att följa dessa steg.
 
-Användaren kommer då till fönstret Meddelandeinställningar i Adobe [!UICONTROL Experience Cloud].
+1. Klicka på klockikonen för att visa meddelandena.
+1. Klicka på **Redigera inställningar** -ikon (formad som ett kugghjul) högst upp på meddelandepanelen.
+1. I det fönster som öppnas klickar du på **Meddelanden** i den vänstra navigeringen.
+   ![Redigera inställningsfönstret](assets/notification-preferences.png)
+1. Bläddra nedåt till **E-post** rubrik.
+   ![E-postalternativ](assets/email-preferences.png)
+1. Välj hur du vill få e-postmeddelanden.
+   * Skicka inte e-post (standard)
+   * Snabbmeddelanden
+   * Daglig sammandrag
+   * Veckosammandrag
 
-Användarna kan aktivera e-postmeddelanden och (valfritt) välja vilka typer av meddelanden de vill ta emot via e-post.
-
->[!NOTE]
->Du kan även aktivera hämtning från Adobe [!UICONTROL Experience Cloud].
+När du har gjort ditt val sparas ditt val automatiskt utan att du behöver klicka på en Spara- eller Verkställ-knapp.

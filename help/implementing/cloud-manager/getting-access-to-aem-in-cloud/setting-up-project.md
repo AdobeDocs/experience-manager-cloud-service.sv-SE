@@ -1,38 +1,40 @@
 ---
-title: Information om projektinställningar
-description: Projektkonfigurationsinformation - Cloud Services
+title: Projektinställningar
+description: Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: 4219c8ce30a0f1cd44bbf8e8de46d6be28a1ddf3
+source-git-commit: a9303c659730022b7417fc9082dedd26d7cbccca
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 5%
+source-wordcount: '1264'
+ht-degree: 1%
 
 ---
 
-# Konfigurera projektet {#project-setup-details}
+# Projektinställningar {#project-setup}
 
-## Ändra projektinställningsinformation {#modifying-project-setup-details}
+Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 
-För att kunna byggas och driftsättas med Cloud Manager måste befintliga AEM följa vissa grundläggande regler:
+## Information om projektinställningar {#project-setup-details}
 
-* Projekt måste byggas med Apache Maven.
-* Det måste finnas en *pom.xml* -filen i Git-databasens rot. Detta *pom.xml* filen kan referera till så många undermoduler (som i sin tur kan ha andra undermoduler osv.) vid behov.
+För att byggas och driftsättas med Cloud Manager måste AEM följa dessa riktlinjer:
 
-* Du kan lägga till referenser till ytterligare Maven-artefaktdatabaser i dina *pom.xml* filer. Åtkomst till [lösenordsskyddade artefaktarkiv](#password-protected-maven-repositories) stöds vid konfigurering. Åtkomst till nätverksskyddade artefaktdatabaser stöds dock inte.
-* Distribuerbara innehållspaket identifieras genom sökning efter innehållspaket *zip* filer som finns i en katalog med namnet *target*. Ett valfritt antal undermoduler kan producera innehållspaket.
-
-* Distribuerbara Dispatcher-artefakter upptäcks vid sökning efter *zip* filer (igen, i en katalog med namnet *target*) som har kataloger namngivna *conf* och *conf.d*.
-
-* Om det finns mer än ett innehållspaket är det inte säkert att paketdistributioner ordnas. Om en viss ordning behövs kan innehållspaketets beroenden användas för att definiera ordningen. Paket kan vara [överhoppad](#skipping-content-packages) från driftsättning.
-
+* Projekt måste byggas med [Apache Maven.](https://maven.apache.org)
+* Det måste finnas en `pom.xml` -filen i Git-databasens rot. Detta `pom.xml` filen kan referera till så många undermoduler (som i sin tur kan ha andra undermoduler osv.) vid behov.
+* Du kan lägga till referenser till ytterligare Maven-artefaktdatabaser i dina `pom.xml` filer.
+   * Åtkomst till [lösenordsskyddade artefaktarkiv](#password-protected-maven-repositories) stöds vid konfigurering. Åtkomst till nätverksskyddade artefaktdatabaser stöds dock inte.
+* Distribuerbara innehållspaket identifieras genom sökning efter innehållspaket `.zip` filer som finns i en katalog med namnet `target`.
+   * Ett valfritt antal undermoduler kan producera innehållspaket.
+* Distribuerbara dispatcherartefakter upptäcks vid sökning efter `.zip` filer (finns även i katalogen med namnet `target`), som har kataloger med namn `conf` och `conf.d`.
+* Om det finns mer än ett innehållspaket är det inte säkert att paketdistributioner ordnas.
+   * Om en viss ordning behövs kan innehållspaketets beroenden användas för att definiera ordningen.
+* Paket kan vara [överhoppad](#skipping-content-packages) under driftsättningen.
 
 ## Aktivera Maven-profiler i Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
-I vissa begränsade fall kan du behöva ändra din byggprocess något när du kör i Cloud Manager i stället för när den körs på arbetsstationer för utvecklare. I dessa fall [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) kan användas för att definiera hur bygget ska vara olika i olika miljöer, inklusive Cloud Manager.
+I vissa begränsade fall kan du behöva ändra din byggprocess något när du kör i Cloud Manager i stället för när du kör på arbetsstationer för utvecklare. I dessa fall [Maven profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) kan användas för att definiera hur bygget ska vara olika i olika miljöer, inklusive Cloud Manager.
 
-Aktivering av en Maven-profil i Cloud Managers byggmiljö bör göras genom att söka efter miljövariabeln CM_BUILD som beskrivs ovan. Omvänt bör en profil som bara är avsedd att användas utanför Cloud Manager-byggmiljön göras genom att leta efter denna variabel som saknas.
+Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att leta efter `CM_BUILD` [systemvariabel.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager-byggmiljön göras genom att leta efter denna variabel som saknas.
 
-Om du till exempel bara vill visa ett enkelt meddelande när bygget körs i Cloud Manager gör du följande:
+Om du till exempel bara vill visa ett enkelt meddelande när bygget körs i Cloud Manager gör du det här.
 
 ```xml
         <profile>
@@ -68,9 +70,9 @@ Om du till exempel bara vill visa ett enkelt meddelande när bygget körs i Clou
 
 >[!NOTE]
 >
->Om du vill testa den här profilen på en arbetsstation för utvecklare kan du antingen aktivera den på kommandoraden (med `-PcmBuild`) eller i din integrerade utvecklingsmiljö.
+>Om du vill testa den här profilen på en arbetsstation för utvecklare kan du antingen aktivera den på kommandoraden (med `-PcmBuild`) eller i den integrerade utvecklingsmiljön.
 
-Om du bara vill få ut ett enkelt meddelande när bygget körs utanför Cloud Manager gör du det här:
+Och om du bara vill få ut ett enkelt meddelande när bygget körs utanför Cloud Manager gör du det här.
 
 ```xml
         <profile>
@@ -107,127 +109,142 @@ Om du bara vill få ut ett enkelt meddelande när bygget körs utanför Cloud Ma
 ## Lösenordsskyddat databasstöd för Maven {#password-protected-maven-repositories}
 
 >[!NOTE]
->Artefakter från en lösenordsskyddad Maven-databas bör endast användas med försiktighet eftersom kod som distribueras via den här mekanismen för närvarande inte kan köras med alla kvalitetsregler som implementerats i Cloud Managers Quality Gates. Därför bör det endast användas i sällsynta fall och för kod som inte är knuten till AEM. Du bör också distribuera Java-källorna samt hela projektets källkod tillsammans med binärfilen.
+>
+>Artefakter från en lösenordsskyddad Maven-databas bör endast användas med försiktighet eftersom kod som distribueras via den här mekanismen för närvarande inte kan köras i alla [regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) implementeras i Cloud Managers kvalitetsportar. Därför bör det endast användas i sällsynta fall och för kod som inte är knuten till AEM. Du bör också distribuera Java-källorna samt hela projektets källkod tillsammans med binärfilen.
 
-Om du vill använda en lösenordsskyddad Maven-databas från Cloud Manager anger du lösenordet (och eventuellt användarnamnet) som en hemlig Pipeline-variabel och refererar sedan till hemligheten i en fil med namnet `.cloudmanager/maven/settings.xml` i Git-databasen. Filen följer [Maven Settings-fil](https://maven.apache.org/settings.html) schema. När Cloud Manager-byggprocessen startar `<servers>` -elementet i den här filen kommer att sammanfogas med standardvärdet `settings.xml` som tillhandahålls av Cloud Manager. Server-ID:n som börjar med `adobe` och `cloud-manager` betraktas som reserverade och bör inte användas av anpassade servrar. Server-ID **not** matchar något av dessa prefix eller standard-ID `central` kommer aldrig att speglas av Cloud Manager. När den här filen är på plats refereras server-ID:t inifrån en `<repository>` och/eller `<pluginRepository>` -element inuti `pom.xml` -fil. I allmänhet gäller följande `<repository>` och/eller `<pluginRepository>` -element finns inuti en [Cloud Manager-specifik profil](#activating-maven-profiles-in-cloud-manager)även om det inte är absolut nödvändigt.
+Så här använder du en lösenordsskyddad Maven-databas i Cloud Manager:
 
-Exempel: låt oss säga att databasen finns på https://repository.myco.com/maven2. `cloudmanager` och lösenordet är `secretword`.
+1. Ange lösenordet (och eventuellt användarnamnet) som en hemlighet [pipeline-variabel.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md)
+1. Referera sedan hemligheten inuti en fil med namnet `.cloudmanager/maven/settings.xml` i Git-databasen, som följer [Maven Settings-fil](https://maven.apache.org/settings.html) schema.
 
-Först anger du lösenordet som en hemlighet i pipeline:
+När Cloud Manager-byggprocessen startar:
 
-`$ aio cloudmanager:set-pipeline-variables PIPELINEID --secret CUSTOM_MYCO_REPOSITORY_PASSWORD secretword`
+* The `<servers>` -elementet i den här filen kommer att sammanfogas med standardvärdet `settings.xml` som tillhandahålls av Cloud Manager.
+   * Server-ID:n som börjar med `adobe` och `cloud-manager` betraktas som reserverade och bör inte användas av anpassade servrar.
+   * Server-ID:n som inte matchar något av dessa prefix eller standard-ID:t `central` kommer aldrig att speglas av Cloud Manager.
+* När den här filen är på plats refereras server-ID:t inifrån en `<repository>` och/eller `<pluginRepository>` -element inuti `pom.xml` -fil.
+* I allmänhet gäller följande `<repository>` och/eller `<pluginRepository>` -element finns inuti en [Cloud Manager-specifik profil](#activating-maven-profiles-in-cloud-manager)även om det inte är absolut nödvändigt.
 
-Referera sedan det här från `.cloudmanager/maven/settings.xml` fil:
+Låt oss till exempel säga att databasen är `https://repository.myco.com/maven2`bör användarnamnet Cloud Manager använda `cloudmanager`och lösenordet är `secretword`. Du gör så här:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-    <servers>
-        <server>
-            <id>myco-repository</id>
-            <username>cloudmanager</username>
-            <password>${env.CUSTOM_MYCO_REPOSITORY_PASSWORD}</password>
-        </server>
-    </servers>
-</settings>
-```
+1. Ange lösenordet som en hemlighet i pipeline.
 
-Och referera slutligen till server-ID:t i `pom.xml` fil:
+   ```text
+   $ aio cloudmanager:set-pipeline-variables PIPELINEID --secret CUSTOM_MYCO_REPOSITORY_PASSWORD secretword`
+   ```
 
-```xml
-<profiles>
-    <profile>
-        <id>cmBuild</id>
-        <activation>
-                <property>
-                    <name>env.CM_BUILD</name>
-                </property>
-        </activation>
-        <repositories>
-             <repository>
-                 <id>myco-repository</id>
-                 <name>MyCo Releases</name>
-                 <url>https://repository.myco.com/maven2</url>
-                 <snapshots>
-                     <enabled>false</enabled>
-                 </snapshots>
-                 <releases>
-                     <enabled>true</enabled>
-                 </releases>
-             </repository>
-         </repositories>
-         <pluginRepositories>
-             <pluginRepository>
-                 <id>myco-repository</id>
-                 <name>MyCo Releases</name>
-                 <url>https://repository.myco.com/maven2</url>
-                 <snapshots>
-                     <enabled>false</enabled>
-                 </snapshots>
-                 <releases>
-                     <enabled>true</enabled>
-                 </releases>
-             </pluginRepository>
-         </pluginRepositories>
-    </profile>
-</profiles>
-```
+1. Referera detta från `.cloudmanager/maven/settings.xml` -fil.
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+       <servers>
+           <server>
+               <id>myco-repository</id>
+               <username>cloudmanager</username>
+              <password>${env.CUSTOM_MYCO_REPOSITORY_PASSWORD}</password>
+           </server>
+       </servers>
+   </settings>
+   ```
+
+1. Referera slutligen till server-ID:t i `pom.xml` fil:
+
+   ```xml
+   <profiles>
+       <profile>
+           <id>cmBuild</id>
+           <activation>
+                   <property>
+                       <name>env.CM_BUILD</name>
+                   </property>
+           </activation>
+           <repositories>
+                <repository>
+                    <id>myco-repository</id>
+                    <name>MyCo Releases</name>
+                    <url>https://repository.myco.com/maven2</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>myco-repository</id>
+                    <name>MyCo Releases</name>
+                    <url>https://repository.myco.com/maven2</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
+            </pluginRepositories>
+       </profile>
+   </profiles>
+   ```
 
 ### Distribuera källor {#deploying-sources}
 
 Det är en god vana att driftsätta Java-källorna tillsammans med binärfilen i en Maven-databas.
 
-Konfigurera maven-source-plugin i ditt projekt:
+Det gör du genom att konfigurera maven-source-plugin i projektet.
 
 ```xml
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>attach-sources</id>
-                    <goals>
-                        <goal>jar-no-fork</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-source-plugin</artifactId>
+             <executions>
+                 <execution>
+                     <id>attach-sources</id>
+                     <goals>
+                         <goal>jar-no-fork</goal>
+                     </goals>
+                 </execution>
+             </executions>
+         </plugin>
 ```
 
 ### Distribuera projektkällor {#deploying-project-sources}
 
-Det är en god vana att driftsätta hela projektkällan tillsammans med binärfilen i en Maven-databas, vilket innebär att den exakta artefakten kan återskapas.
+Det är en god vana att driftsätta hela projektkällan tillsammans med binärfilen i en Maven-databas. Detta gör att den exakta artefakten kan återskapas.
 
-Konfigurera maven-assembly-plugin i ditt projekt:
+Det gör du genom att konfigurera maven-assembly-plugin i ditt projekt.
 
 ```xml
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>project-assembly</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>single</goal>
-                    </goals>
-                    <configuration>
-                        <descriptorRefs>
-                            <descriptorRef>project</descriptorRef>
-                        </descriptorRefs>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+         <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-assembly-plugin</artifactId>
+             <executions>
+                 <execution>
+                     <id>project-assembly</id>
+                     <phase>package</phase>
+                     <goals>
+                         <goal>single</goal>
+                     </goals>
+                     <configuration>
+                         <descriptorRefs>
+                             <descriptorRef>project</descriptorRef>
+                         </descriptorRefs>
+                     </configuration>
+                 </execution>
+             </executions>
+         </plugin>
 ```
 
 ## Hoppar över innehållspaket {#skipping-content-packages}
 
-I Cloud Manager kan byggen producera valfritt antal innehållspaket.
-Det kan av olika skäl vara önskvärt att skapa ett innehållspaket men inte distribuera det. Detta kan till exempel vara användbart när du skapar innehållspaket som bara används för testning eller som paketeras om med ett annat steg i byggprocessen, det vill säga som ett underpaket till ett annat paket.
+I Cloud Manager kan byggen producera valfritt antal innehållspaket. Det kan av olika skäl vara önskvärt att skapa ett innehållspaket men inte distribuera det. Ett exempel kan vara när innehållspaket som bara används för testning skapas eller som paketeras om med ett annat steg i byggprocessen, dvs. som ett underpaket till ett annat paket.
 
-För att hantera dessa scenarier söker Cloud Manager efter egenskapen ***cloudManagerTarget*** i egenskaperna för de byggda innehållspaketen. Om den här egenskapen är inställd på ”ingen” hoppas paketet över och driftsätts inte. Mekanismen för hur den här egenskapen anges beror på hur innehållspaketet skapas. Med till exempel filevault-maven-plugin konfigurerar du plugin-programmet så här:
+För att hantera dessa scenarier söker Cloud Manager efter egenskapen `cloudManagerTarget` i egenskaperna för de byggda innehållspaketen. Om den här egenskapen är inställd på `none`, hoppas paketet över och distribueras inte.
+
+Mekanismen för att ange den här egenskapen beror på hur bygget skapar innehållspaketet. Med `filevault-maven-plugin` konfigurerar du plugin-programmet enligt följande.
 
 ```xml
         <plugin>
@@ -243,7 +260,7 @@ För att hantera dessa scenarier söker Cloud Manager efter egenskapen ***cloudM
         </plugin>
 ```
 
-Med content-package-maven-plugin är den ungefär så här:
+The `content-package-maven-plugin` har en liknande konfiguration.
 
 ```xml
         <plugin>

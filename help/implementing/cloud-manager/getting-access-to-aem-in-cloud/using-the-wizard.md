@@ -1,34 +1,49 @@
 ---
-title: Använda guiden
-description: Använda guiden - Cloud Services
+title: Guiden Skapa projekt
+description: Lär dig mer om guiden för att skapa projekt så att du snabbt kan konfigurera projektet efter att du har skapat produktionsprogrammet.
 exl-id: 03736ca7-1345-4faf-a61a-f9213ab5c89a
-source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
+source-git-commit: 93cb0ffa87f2338518c2a23de4e0a692031e1a71
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
 
-# Använda guiden {#using-wizard-to-create-an-aem-application-project}
+# Guiden Skapa projekt {#project-creation-wizard}
 
-För att hjälpa nya kunder att komma igång kan Cloud Manager nu skapa ett minimalt AEM som utgångspunkt. Den här processen baseras på [**AEM Project Archetype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+När du har skapat ditt produktionsprogram kan du använda en guide för att skapa ett AEM baserat på [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att snabbt komma igång.
+
+Följ de här stegen för att skapa ett AEM programprojekt i Cloud Manager med hjälp av guiden.
+
+1. Skapa ett produktionsprogram genom att följa stegen i dokumentet [Skapa produktionsprogram](creating-production-programs.md)
+
+1. När programmet är klart kan du öppna **Översikt** -skärmen och se **Skapa gren och projekt** telefonsamtalskort överst.
+
+   ![Call-to-action-vård för guiden](assets/create-wizard1.png)
+
+1. Klicka **Skapa** för att starta guiden och bekräfta projektet **Titel** och **Nytt grennamn** i **Skapa en gren och ett projekt** -fönstret.
+
+   ![Skapa en gren och ett projekt](assets/create-wizard2.png)
+
+1. Du kan också klicka på avgränsaren för att visa ytterligare parametrar för projektet. Standardvärdena anges av AEM Project Archettype och behöver vanligtvis inte ändras.
+
+   ![Ytterligare projektparametrar](assets/create-wizard5.png)
+
+1. Klicka **Skapa** för att starta projektskapandet.
 
 
-Följ stegen nedan för att skapa ett AEM programprojekt i Cloud Manager med hjälp av guiden:
+A **Projekt skapas** kortet ersätter nu **Skapa gren och projekt** telefonsvararkort som överst på **Programöversikt** skärm.
 
-1. När du har loggat in på Cloud Manager och den grundläggande programkonfigurationen är klar, visas ett särskilt CTA-kort på skärmen **Översikt**, om databasen är tom.
+![Projektskapande pågår](assets/create-wizard3.png)
 
-   ![](assets/create-wizard1.png)
+När programmet är klart **Lägg till miljö** kortet ersätter **Projekt skapas** överst på **Programöversikt** skärm.
 
-1. Klicka på **Skapa** för att gå till skärmen **Skapa gren och projekt**.
+![Lägg till miljö](assets/create-wizard4.png)
 
-   ![](assets/create-wizard2.png)
+Nu har du ett AEM baserat på den AEM typen av arkiv som lagts till i Git-databasen och som kan användas som grund för ditt eget projekt. Därefter kan du skapa miljöer där du kan distribuera projektkoden.
 
-1. Platsen **Projekt skapas under arbete** visas på skärmen *Programöversikt*.
+Se dokumentet [Hantera dina miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill lära dig hur du lägger till eller hanterar miljöer.
 
-   ![](assets/create-wizard3.png)
-
-1. När programmet har skapats visas rutan **Lägg till miljö** på sidan *Programöversikt*.
-   ![](assets/create-wizard4.png)
-
-   Mer information om hur du lägger till eller hanterar miljöer finns i [Hantera dina miljöer](/help/implementing/cloud-manager/manage-environments.md).
+>[!NOTE]
+>
+>Guiden är bara tillgänglig för produktionsprogram. För [sandlådeprogram](introduction-sandbox-programs.md#auto-creation) innehåller automatisk projektgenerering. Guiden behövs inte.

@@ -1,53 +1,59 @@
 ---
-title: Information om byggmiljö
-description: Information om byggmiljö - Cloud Services
+title: Bygg miljö
+description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: f39cc7bcbfe11c64a0fc7bb673f9e9286214106d
+source-git-commit: 3bf8764500d2b0068b808a42ecfd1400f78b1d13
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '914'
 ht-degree: 0%
 
 ---
 
-# Förstå byggmiljön {#understanding-build-environment}
+# Bygg miljö {#build-environment}
+
+Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 
 ## Information om byggmiljö {#build-environment-details}
 
-Cloud Manager bygger och testar koden med en specialiserad byggmiljö. Den här miljön har följande attribut:
+Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
 * Apache Maven 3.6.0 är installerad.
 * De Java-versioner som är installerade är Oraclena JDK 8u202, Azul Zulu 8u292, Oracle JDK 11.0.2 och Azul Zulu 11.0.11.
-* Miljövariabeln `JAVA_HOME` är som standard inställd på `/usr/lib/jvm/jdk1.8.0_202` som innehåller Oraclet JDK 8u202. Mer information finns i [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version).
-* Det finns ytterligare systempaket installerade som är nödvändiga:
+* Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_202`  som innehåller Oraclet JDK 8u202. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
+* Det finns ytterligare systempaket installerade som är nödvändiga.
 
-   * bzip2
-   * uppzip
-   * libpng
-   * imagemagick
-   * grafikSnabb
+   * `bzip2`
+   * `unzip`
+   * `libpng`
+   * `imagemagick`
+   * `graphicsmagick`
 
-* Andra paket kan installeras vid byggtillfället enligt beskrivningen [nedan](#installing-additional-system-packages).
+* Andra paket kan installeras vid byggtillfället enligt beskrivningen i avsnittet [Installerar ytterligare systempaket.](#installing-additional-system-packages)
 * Varje bygge görs i en riktig miljö. byggbehållaren behåller inte något läge mellan körningar.
-* Maven körs alltid med följande tre kommandon:
+* Maven körs alltid med följande tre kommandon.
 
-   * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
-   * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
-   * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent packageco-maven-plugin:prepare-agent package`
-* Maven konfigureras på systemnivå med filen settings.xml som automatiskt inkluderar databasen Adobe **Artifact** med en profil med namnet `adobe-public`. (Mer information finns i [Adobe Public Maven Repository](https://repo1.maven.org/).)
+* `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
+* `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
+* `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent packageco-maven-plugin:prepare-agent package`
+* Maven konfigureras på systemnivå med en `settings.xml` -fil, som automatiskt inkluderar den offentliga Adobe-artefaktdatabasen med en profil med namnet `adobe-public`. (Se [Adobe Public Maven Repository](https://repo1.maven.org/) för mer information).
 
 >[!NOTE]
->Även om Cloud Manager inte definierar en specifik version av `jacoco-maven-plugin` måste den version som används vara minst `0.7.5.201505241946`.
+>
+>Även om Cloud Manager inte definierar en specifik version av `jacoco-maven-plugin`måste den använda versionen vara minst `0.7.5.201505241946`.
 
 ### Använda en specifik Java-version {#using-java-support}
 
-Som standard byggs projekt av Cloud Managers byggprocess med Oracle 8 JDK. Kunder som vill använda en alternativ JDK har två alternativ: Maven Toolchains och välj en alternativ JDK-version för hela Maven-exekveringsprocessen.
+Som standard byggs projekt av Cloud Managers byggprocess med Oracle 8 JDK. Kunder som vill använda en alternativ JDK har två alternativ.
+
+* [Använd Maven Toolchains.](#maven-toolchains)
+* [Välj en alternativ JDK-version för hela körningsprocessen för Maven.](#alternate-maven-jdk-version)
 
 #### Maven Toolchains {#maven-toolchains}
 
-Med [Plugin-programmet Maven Toolchains](https://maven.apache.org/plugins/maven-toolchains-plugin/) kan projekt välja en viss JDK (eller *verktygskedja*) som ska användas i samband med verktygsfältsanpassade Maven-pluginer. Detta görs i projektets `pom.xml`-fil genom att ange en leverantör och ett versionsvärde. Ett exempelavsnitt i `pom.xml`-filen är:
+The [Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/) gör det möjligt för projekt att välja en viss JDK (eller verktygskedja) som ska användas i samband med verktygsfältsmedvetna Maven-plugin-program. Detta görs i projektets `pom.xml` genom att ange en leverantör och ett versionsvärde.
 
-```
+```xml
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-toolchains-plugin</artifactId>
@@ -72,64 +78,77 @@ Med [Plugin-programmet Maven Toolchains](https://maven.apache.org/plugins/maven-
 
 Detta gör att alla verktygskedjedåliga Maven-plugin-program använder Oraclet JDK, version 11.
 
-När du använder den här metoden körs Maven fortfarande med standardvariabeln JDK (Oracle 8) och JAVA_HOME ändras inte. Kontroll eller genomförande av Java-versionen via plugin-program som Apache Maven Enforcer Plugin fungerar därför inte och sådana plugin-program får inte användas.
+När du använder den här metoden körs Maven fortfarande med JDK-standardinställningen (Oracle 8) och `JAVA_HOME`  miljövariabeln har inte ändrats. Kontroll eller genomförande av Java-versionen via plugin-program som Apache Maven Enforcer Plugin fungerar därför inte och sådana plugin-program får inte användas.
 
 De aktuella kombinationerna av leverantör/version är:
 
-* oracle 1.8
-* oracle 1.11
-* oracle 11
-* sol 1.8
-* sol 1.11
-* sol 11
-* azul 1.8
-* azul 1.11
-* azul 8
+| Leverantör | Version |
+|---|---|
+| `oracle` | `1.8` |
+| `oracle` | `1.11` |
+| `oracle` | `11` |
+| `sun` | `1.8` |
+| `sun` | `1.11` |
+| `sun` | `11` |
+| `azul` | `1.8` |
+| `azul` | `1.11` |
+| `azul` | `8` |
 
 #### Alternate Maven Execution JDK Version {#alternate-maven-jdk-version}
 
-Det går också att välja Azul 8 eller Azul 11 som JDK för hela Maven-exekveringen. Till skillnad från alternativen för verktygskedjor ändras det JDK som används för alla plugin-program, såvida inte konfigurationen för verktygskedjor också anges. I så fall tillämpas fortfarande konfigurationen för verktygskedjor för Maven-plugin-program som är medvetna om verktygskedjor. Därför kommer kontroll och genomförande av Java-versionen med [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) att fungera.
+Det går också att välja Azul 8 eller Azul 11 som JDK för hela Maven-exekveringen. Till skillnad från alternativen för verktygskedjor ändras det JDK som används för alla plugin-program, såvida inte konfigurationen för verktygskedjor också anges. I så fall tillämpas fortfarande konfigurationen för verktygskedjor för Maven-plugin-program som är medvetna om verktygskedjor. Resultatet blir att du kontrollerar och använder Java-versionen med [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) kommer att fungera.
 
-Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Den här filen kan ha antingen innehållet 11 eller 8. Alla andra värden ignoreras. Om 11 anges används Azul 11 och miljövariabeln JAVA_HOME ställs in på `/usr/lib/jvm/jdk-11.0.11`. Om 8 anges används Azul 8 och miljövariabeln JAVA_HOME ställs in på `/usr/lib/jvm/jdk-8.0.292`.
+Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Den här filen kan ha antingen innehållet 11 eller 8. Alla andra värden ignoreras. Om 11 anges används Azul 11 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk-11.0.11`. Om 8 anges används Azul 8 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk-8.0.292`.
 
 ## Miljövariabler {#environment-variables}
 
 ### Standardmiljövariabler {#standard-environ-variables}
 
-I vissa fall tycker kunderna att det är nödvändigt att variera byggprocessen baserat på information om programmet eller pipeline.
+Du kan behöva ändra byggprocessen baserat på information om programmet eller pipeline.
 
-Om JavaScript-miniatyrbilder för byggtid utförs, till exempel med hjälp av ett verktyg som Glup, kan det finnas en önskan om att använda en annan miniminivå när du skapar för en utvecklingsmiljö i stället för att bygga för scenen och produktionen.
+Om JavaScript-miniatyrbilder vid bygge görs med ett verktyg som Glup, kan det finnas en önskan om att använda en annan miniminivå när du skapar för en utvecklingsmiljö i stället för att bygga för staging och produktion.
 
 Som stöd för detta lägger Cloud Manager till dessa standardmiljövariabler i byggbehållaren för varje körning.
 
-| **Variabelnamn** | **Definition** |
+| Variabelnamn | Definition |
 |---|---|
-| CM_BUILD | Alltid inställd på &quot;true&quot; |
-| BRANSCHER | Den konfigurerade grenen för körningen |
-| CM_PIPELINE_ID | Den numeriska pipeline-identifieraren |
-| CM_PIPELINE_NAME | Pipeline-namnet |
-| CM_PROGRAM_ID | Den numeriska programidentifieraren |
-| CM_PROGRAM_NAME | Programnamnet |
-| ARTIFACTS_VERSION | Den syntetiska versionen som genererats av Cloud Manager för en fas eller produktionsprocess |
-| CM_AEM_PRODUCT_VERSION | Versionsnamnet |
+| `CM_BUILD` | Alltid inställt på `true` |
+| `BRANCH` | Den konfigurerade grenen för körningen |
+| `CM_PIPELINE_ID` | Den numeriska pipeline-identifieraren |
+| `CM_PIPELINE_NAME` | Pipeline-namnet |
+| `CM_PROGRAM_ID` | Den numeriska programidentifieraren |
+| `CM_PROGRAM_NAME` | Programnamnet |
+| `ARTIFACTS_VERSION` | Den syntetiska versionen som genererats av Cloud Manager för en fas eller produktionsprocess |
+| `CM_AEM_PRODUCT_VERSION` | Versionsversionen |
 
 ### Rörledningsvariabler {#pipeline-variables}
 
-I vissa fall kan en kunds byggprocess vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen eller som behöver variera mellan olika pipeline-körningar som använder samma gren.
+Din byggprocess kan vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen, eller så måste du variera dem mellan pipeline-körningar som använder samma gren.
 
-Med Cloud Manager kan dessa variabler konfigureras via Cloud Manager API eller Cloud Manager CLI per pipeline. Variabler kan lagras som antingen ren text eller krypteras i vila. I båda fallen görs variabler tillgängliga i byggmiljön som en miljövariabel som sedan kan refereras inifrån `pom.xml`-filen eller andra byggskript.
+Med Cloud Manager kan dessa variabler konfigureras via Cloud Manager API eller Cloud Manager CLI per pipeline. Variabler kan lagras som antingen ren text eller krypteras i vila. I båda fallen görs variablerna tillgängliga i byggmiljön som en miljövariabel som sedan kan refereras inifrån `pom.xml` eller andra byggskript.
 
-Om du vill ange en variabel med hjälp av CLI kör du ett kommando som:
+Det här CLI-kommandot anger en variabel.
 
-`$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
+```shell
+$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test
+```
 
-Aktuella variabler kan listas:
+Det här kommandot listar variabler.
 
-`$ aio cloudmanager:list-pipeline-variables PIPELINEID`
+```shell
+$ aio cloudmanager:list-pipeline-variables PIPELINEID
+```
 
-Variabelnamn får endast innehålla alfanumeriska tecken och understreck (_). Namnen ska vara versaler. Det finns en gräns på 200 variabler per pipeline, där varje namn måste innehålla mindre än 100 tecken och varje värde måste vara mindre än 2 048 tecken för strängtypsvariabler och 500 tecken för värden av typen secretsString.
+Variabelnamn måste följa följande konventioner.
 
-När de används i en `Maven pom.xml`-fil är det vanligtvis praktiskt att mappa dessa variabler till Maven-egenskaper med en syntax som liknar den här:
+* Variabler får endast innehålla alfanumeriska tecken och understreck (`_`).
+* Namnen ska vara versaler.
+* Det finns en gräns på 200 variabler per pipeline.
+* Varje namn får innehålla högst 100 tecken.
+* Varje `string` variabelvärdet måste vara mindre än 2 048 tecken.
+* Varje `secretString` variabelvärdet type måste vara mindre än 500 tecken.
+
+Vid användning i en Maven `pom.xml` är det praktiskt att mappa dessa variabler till Maven-egenskaper med en syntax som liknar den här.
 
 ```xml
         <profile>
@@ -147,7 +166,7 @@ När de används i en `Maven pom.xml`-fil är det vanligtvis praktiskt att mappa
 
 ## Installera ytterligare systempaket {#installing-additional-system-packages}
 
-Vissa byggen kräver att ytterligare systempaket installeras för att fungera helt. Ett bygge kan till exempel anropa ett Python- eller ruby-skript och därför måste ha en lämplig språktolk installerad. Detta kan du göra genom att anropa [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) för att anropa APT. Den här exekveringen bör normalt omslutas av en molnhanterarspecifik Maven-profil. Så här installerar du python:
+Vissa byggen kräver att ytterligare systempaket installeras för att fungera helt. Ett bygge kan till exempel anropa ett Python- eller Ruby-skript och måste ha en lämplig språktolk installerad. Detta kan du göra genom att anropa [`exec-maven-plugin`](https://www.mojohaus.org/exec-maven-plugin/) i `pom.xml` för att anropa APT. Den här exekveringen bör normalt omslutas av en molnhanterarspecifik Maven-profil. Det här exemplet installerar Python.
 
 ```xml
         <profile>
@@ -200,7 +219,8 @@ Vissa byggen kräver att ytterligare systempaket installeras för att fungera he
         </profile>
 ```
 
-Samma teknik kan användas för att installera språkspecifika paket, t.ex. med `gem` för RubyGems eller `pip` för Python-paket.
+Samma teknik kan användas för att installera språkspecifika paket, t.ex. med `gem` för RubyGems eller `pip` för Python Packages.
 
 >[!NOTE]
->Om du installerar ett systempaket på det här sättet installeras det **inte** i körningsmiljön som används för att köra Adobe Experience Manager. Om du behöver ett systempaket som är installerat i AEM ska du kontakta Adobe.
+>
+>Om du installerar ett systempaket på det här sättet installeras det inte i den körningsmiljö som används för att köra Adobe Experience Manager. Om du behöver ett systempaket som är installerat i AEM ska du kontakta Adobe.

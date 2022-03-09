@@ -1,23 +1,23 @@
 ---
-title: Integrera med Git
-description: Integrera med Git - Cloud Services
+title: Använda Git med Cloud Manager
+description: Lär dig hur du använder Cloud Managers Git-databaser och hur du integrerar din egen kundhanterade Git-databas med Cloud Manager.
 exl-id: 57e71b8a-4546-4d7f-825c-a1637d08e608
-source-git-commit: 21669a29fbfd1072b637f407f5220825c4d1edbb
+source-git-commit: a9303c659730022b7417fc9082dedd26d7cbccca
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 2%
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
-# Integrera Git med Adobe Cloud Manager {#git-integration}
+# Använda Git med Cloud Manager {#git-integration}
 
-Adobe Cloud Manager levereras med en enda Git-databas som används för att distribuera kod med Cloud Managers CI/CD-pipelines. Kunderna kan använda Cloud Managers Git-databas direkt. Kunderna kan också integrera en lokal eller **kundhanterad** Git-databas med Cloud Manager.
+Adobe Cloud Manager levereras med en enda Git-databas som används för att distribuera kod med Cloud Managers CI/CD-pipelines.
+
+Du kan använda Cloud Managers Git-databas direkt, men du kan också integrera en kundhanterad Git-databas med Cloud Manager.
 
 ## Git-integrering - översikt {#git-integration-overview}
 
->[!VIDEO](https://video.tv.adobe.com/v/28710/)
-
-I den här videoserien utforskas flera användningsexempel när det gäller att integrera en kundhanterad Git-databas med Cloud Manager, bland annat:
+I den här videoserien utforskas flera användningsfall när en kundhanterad Git-databas integreras med Cloud Manager, bland annat:
 
 * [Inledande synkronisering](#initial-sync)
 * [Grundläggande förgreningsstrategi](#branching-strategy)
@@ -27,19 +27,19 @@ I den här videoserien utforskas flera användningsexempel när det gäller att 
 
 Videoserien bygger på grundläggande kunskaper i Git och källkodshantering. Se [ytterligare resurser nedan](#additional-resources) för mer information om Git.
 
->[!NOTE]
->
->Stegen och namnkonventioner som beskrivs i den här videoserien är några av de bästa sätten att arbeta med en kundhanterad Git-databas och Cloud Manager. Konventioner och arbetsflöden som skildras förväntas anpassas för enskilda utvecklingsteam.
+>[!VIDEO](https://video.tv.adobe.com/v/28710/)
+
+Stegen och namnkonventioner som beskrivs i den här videoserien är några av de bästa sätten att arbeta med en kundhanterad Git-databas i Cloud Manager. Konventionerna och arbetsflödena som återges förväntas vara anpassade för enskilda användningsområden.
 
 ## Inledande synkronisering {#initial-sync}
 
-Första steget för synkronisering av en kundhanterad Git-databas med Cloud Managers Git-databas.
+I den här videon lär du dig de första stegen för synkronisering av en kundhanterad Git-databas med Cloud Managers Git-databas.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28711/?quality=12)
 
 ## Grundläggande förgreningsstrategi {#branching-strategy}
 
-Följ videon nedan för att lära dig de grundläggande förgreningsstrategierna.
+I den här videon lär du dig grundläggande förgrenade strategier.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
@@ -57,7 +57,7 @@ Förbered kod för en produktionsrelease i en kundhanterad Git-databas och synkr
 
 ## Synkroniserar versionstaggar {#sync-tags}
 
-Synkronisera versionstaggar från en Cloud Manager Git-databas i en kundhanterad Git-databas för att ge dig en bild av vilken kod som har distribuerats till scen- och produktionsmiljöer.
+Synkronisera versionstaggar från en Cloud Manager Git-databas i en kundhanterad Git-databas för att ge synlighet för vilken kod som har distribuerats till staging- och produktionsmiljöer.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12)
 

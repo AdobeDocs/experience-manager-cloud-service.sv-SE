@@ -1,61 +1,62 @@
 ---
-title: Hantera loggar - Cloud Service
-description: Hantera loggar - Cloud Service
+title: Komma åt och hantera loggar
+description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: b3c26b4e7ad588e0d3214350792d05e55e9db44c
+source-git-commit: a9303c659730022b7417fc9082dedd26d7cbccca
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '272'
+ht-degree: 3%
 
 ---
 
+
 # Komma åt och hantera loggar {#manage-logs}
 
-Användare kan komma åt en lista över tillgängliga loggfiler för den valda miljön med **miljökort**-kortet från sidan **Översikt** eller sidan Miljöinformation.
+Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
+
+Du kan komma åt en lista över tillgängliga loggfiler för den valda miljön med **Miljö** från **Översikt** sida eller miljöinformationssida.
 
 ## Laddar ned loggar {#download-logs}
 
-Följ stegen nedan för att hämta loggar.
+Följ de här stegen för att hämta loggar.
 
-1. Gå till **Miljökortet** från sidan **Översikt**.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Välj **Hämta loggar** från **..**-menyn.
+1. Navigera till **Miljö** från **Översikt** sida.
 
-   ![](assets/download-logs1.png)
+1. Välj **Hämta loggar** på ellipsmenyn.
 
-   *Eller*,
+   ![Menyobjektet Hämta loggar](assets/download-logs1.png)
 
-   Från sidan Miljöinformation:
+1. I **Hämta loggar** väljer du lämplig **Tjänst** i listrutan
 
-   ![](assets/download-logs.png)
+   ![Dialogrutan Hämta loggar](assets/download-preview.png)
 
-   >[!NOTE]
-   >Oavsett var den öppnas visas samma dialogruta så att du kan hämta en enskild loggfil.
+1. När du har valt tjänsten klickar du på nedladdningsikonen bredvid den logg du vill hämta.
 
-1. I listrutan **Service** väljer du alternativ som **Förhandsgranska** eller **Förhandsgranska dispatcher**, följt av att klicka på nedladdningsikonen.
+Du kan även komma åt dina loggar från **Miljö** sida.
 
-   ![](assets/download-preview.png)
-
+![Loggar från miljöskärmen](assets/download-logs.png)
 
 ## Loggar via API {#logs-through-api}
 
 Förutom att hämta loggar via användargränssnittet är loggar tillgängliga via API:t och kommandoradsgränssnittet.
 
-Om du t.ex. vill hämta loggfilerna för en viss miljö, skulle kommandot vara något som följer linjerna i
+Om du vill hämta loggfilerna för en viss miljö ser kommandot ut ungefär så här.
 
-```java
+```shell
 $ aio cloudmanager:download-logs --programId 5 1884 author aemerror
 ```
 
-Med följande kommando kan du anpassa loggar:
+Du kan också avsluta loggar via kommandoradens gränssnitt.
 
-```java
+```shell
 $ aio cloudmanager:tail-log --programId 5 1884 author aemerror
 ```
 
-För att få tillgång till miljö-ID (1884 i det här fallet) och tillgängliga service- eller loggnamnsalternativ kan du använda:
+För att få tillgång till miljö-ID (1884 i det här exemplet) och tillgängliga service- eller loggnamnsalternativ kan du använda följande kommandon.
 
-```java
+```shell
 $ aio cloudmanager:list-environments
 Environment Id Name                     Type  Description                          
 1884           FoundationInternal_dev   dev   Foundation Internal Dev environment  
@@ -75,9 +76,6 @@ Environment Id Service    Name
 1884           dispatcher aemdispatcher
 1884           dispatcher httpdaccess
 ```
-
->[!NOTE]
->Det går att hämta **loggfiler** både via användargränssnittet och API:t, men **loggspårning** är bara API/CLI.
 
 ### Ytterligare resurser {#resources}
 
