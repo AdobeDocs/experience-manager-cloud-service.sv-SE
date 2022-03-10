@@ -1,14 +1,15 @@
 ---
 title: Använd Connected Assets när du vill dela DAM-resurser i [!DNL Sites]
 description: Använd resurser som är tillgängliga på en fjärrdator [!DNL Adobe Experience Manager Assets] distribution när du skapar webbsidor på en annan [!DNL Adobe Experience Manager Sites] distribution.
-contentOwner: AG
+contentOwner: AK
+mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 8457a6eb81b5d28c264e7f75793724b40fe7eb1d
+source-git-commit: 9f90c343aad8a8eaa8624d388e31ad21ef5c02f6
 workflow-type: tm+mt
-source-wordcount: '3684'
-ht-degree: 18%
+source-wordcount: '3658'
+ht-degree: 15%
 
 ---
 
@@ -27,7 +28,7 @@ Funktionen för anslutna resurser har stöd för ovanstående användningsfall g
 
 Vid redigering av sidor i [!UICONTROL Page Editor] som målmål kan författarna söka, bläddra bland och bädda in resurser från ett annat [!DNL Assets] driftsättning som fungerar som en källa till resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites] med en annan driftsättning av [!DNL Experience Manager] med [!DNL Assets] funktioner. Du kan också använda Dynamic Media-bilder på webbplatsens webbsidor med hjälp av Anslutna resurser och använda Dynamic Media-funktionerna, till exempel smarta beskärnings- och bildförinställningar.
 
-För [!DNL Sites] författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder enkel sökning och användning av ett fåtal fjärresurser i taget. Göra många fjärrresurser tillgängliga på en [!DNL Sites] -distribution i en enda gång, överväg att migrera resurser i flera steg.
+För [!DNL Sites] författare är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder smidig sökning och åtkomst till fjärrresurser i Site Editor. För andra användningsområden där det kan krävas att hela resursen är tillgänglig på Sites bör du överväga att migrera resurserna satsvis i stället för att utnyttja anslutna resurser.
 
 ### Förutsättningar och distributioner som stöds {#prerequisites}
 
@@ -44,16 +45,16 @@ Innan du använder eller konfigurerar den här funktionen bör du kontrollera f�
 
 ### Filformat som stöds {#mimetypes}
 
-Författare söker efter bilder och följande typer av dokument i Content Finder och använder de sökbara resurserna i Page Editor. Dokument läggs till i `Download` och bilder till `Image` -komponenten. Författare lägger även till fjärrresurserna i alla anpassade [!DNL Experience Manager] som utökar standardkomponenten `Download` eller `Image` -komponenter. De format som stöds är:
+Författare söker efter bilder och följande typer av dokument i Content Finder och drar de sökbara resurserna i Page Editor. Dokument läggs till i `Download` och bilder till `Image` -komponenten. Författare kan även lägga till fjärrresurserna i valfri anpassad [!DNL Experience Manager] som utökar standardkomponenten `Download` eller `Image` -komponenter. De format som stöds är:
 
 * **Bildformat**: Formaten som [Bildkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) stöder.
 * **Dokumentformat**: Se [dokumentformat som stöds](file-format-support.md#document-formats).
 
 ### Användare och grupper som krävs {#users-and-groups-involved}
 
-De olika roller som krävs för att konfigurera och använda funktionen och motsvarande användargrupper beskrivs nedan. Lokalt omfång används för de fall där en författare skapar en webbsida. Fjärromfång används för DAM-distributionen som är värd för de nödvändiga resurserna. The [!DNL Sites] författaren hämtar dessa fjärrresurser.
+De olika roller som är involverade i konfigureringen och funktionen och deras motsvarande användargrupper beskrivs nedan. Lokalt omfång används för de fall där en författare skapar en webbsida. Fjärromfång används för DAM-distributionen som är värd för de nödvändiga resurserna. The [!DNL Sites] författaren hämtar dessa fjärrresurser.
 
-| Roll | Omfång | Användargrupp | Krav |
+| Roll | Omfång | Användargrupp | Beskrivningar |
 |------|--------|-----------|----------|
 | [!DNL Sites] administratör | Lokalt | [!DNL Experience Manager] `administrators` | Konfigurera [!DNL Experience Manager] och konfigurera integrering med fjärrkontrollen [!DNL Assets] distribution. |
 | DAM-användare | Lokalt | `Authors` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
@@ -81,7 +82,7 @@ An [!DNL Experience Manager] administratören kan skapa den här integreringen. 
 
 Konfigurera anslutna resurser och lokala [!DNL Sites] anslutning, följ dessa steg:
 
-1. Åtkomst till en befintlig [!DNL Sites] distribution. Detta [!DNL Sites] används för att skapa webbsidor, till exempel på `https://[sites_servername]:port`. Under utvecklingen [!DNL Sites] distribution, låt oss ringa [!DNL Sites] som lokal från sidutvecklingsperspektivet.
+1. Åtkomst till en befintlig [!DNL Sites] distribution. Detta [!DNL Sites] används för att skapa webbsidor, till exempel på `https://<sites_server_fqdn>:[port]`. Under utvecklingen [!DNL Sites] distribution, låt oss ringa [!DNL Sites] som lokal från sidutvecklingsperspektivet.
 
 1. Åtkomst till en befintlig [!DNL Assets] distribution. Detta [!DNL Assets] används för att hantera digitala resurser, till exempel `https://[assets_servername]:port`.
 
@@ -96,7 +97,7 @@ Konfigurera anslutna resurser och lokala [!DNL Sites] anslutning, följ dessa st
    1. **[!UICONTROL Local Sites URL]** är platsen för [!DNL Sites] distribution. [!DNL Assets] för distribution används det här värdet för att behålla referenser till de digitala resurserna som hämtas av det här [!DNL Sites] distribution.
    1. Autentiseringsuppgifter för [!DNL Sites] teknisk användare.
    1. Värdet för **[!UICONTROL Original Binary transfer optimization Threshold]** anges om de ursprungliga resurserna (inklusive återgivningarna) överförs synkront eller inte. Resurser med mindre filstorlek kan enkelt hämtas medan resurser med relativt större filstorlek är bäst synkroniserade asynkront. Värdet beror på dina nätverksfunktioner.
-   1. Välj **[!UICONTROL Datastore Shared with Connected Assets]**, om du använder ett datalager för att lagra dina resurser och datalagret är den gemensamma lagringsplatsen mellan båda distributionerna. I det här fallet spelar tröskelvärdet ingen roll eftersom faktiska tillgångsbinärfiler är tillgängliga i datalagret och inte överförs.
+   1. Välj **[!UICONTROL Datastore Shared with Connected Assets]**, om du använder ett datalager för att lagra dina resurser och datalagret delas mellan båda distributionerna. I det här fallet spelar tröskelvärdet ingen roll eftersom faktiska tillgångsbinärfiler är tillgängliga i datalagret och inte överförs.
 
    ![En typisk konfiguration för funktionen för anslutna resurser](assets/connected-assets-typical-config.png)
 
@@ -165,7 +166,7 @@ Konfigurera [!DNL Dynamic Media] på [!DNL Assets] och [!DNL Sites] distribution
 
 ## Använda fjärresurser {#use-remote-assets}
 
-Webbplatsens författare använder Content Finder för att ansluta till DAM-distributionen. Författarna kan bläddra bland, söka efter och dra fjärresurserna till en komponent. Om du vill autentisera med DAM-fjärrdistributionen bör du ha DAM-användarens autentiseringsuppgifter som du fått av administratören till hands.
+Webbplatsens författare använder Content Finder för att ansluta till DAM-distributionen. Författarna kan bläddra bland, söka efter och dra fjärresurserna till en komponent. Om du vill autentisera till fjärr-DAM ska du se till att de autentiseringsuppgifter som administratören har angett är tillgängliga.
 
 Författare kan använda resurserna som finns på den lokala DAM-resursen och den fjärranslutna DAM-distributionen på en enda webbsida. Använd Content Finder för att växla mellan att söka i det lokala DAM-systemet eller söka i det fjärranslutna DAM-systemet.
 
@@ -183,7 +184,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
    Klicka på **[!UICONTROL Toggle Side Panel]** överst till vänster på sidan.
 
-1. Öppna [!UICONTROL Assets] och klicka **[!UICONTROL Log in to Connected Assets]**.
+1. Öppna [!UICONTROL Assets] -flik (Remote Content Finder) och klicka på **[!UICONTROL Log in to Connected Assets]**.
 
 1. Ange autentiseringsuppgifter för inloggning på anslutna resurser. Den här användaren har redigeringsbehörighet för båda [!DNL Experience Manager] distributioner.
 
@@ -195,7 +196,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
    *Bild: Alternativ för att filtrera dokumenttyper och bilder vid sökning efter resurser på DAM-fjärrdistribution.*
 
-1. En Sites-författare meddelas om en resurs hämtas asynkront och om en hämtningsåtgärd misslyckas. Under utvecklingen eller till och med efter redigeringen kan författarna se detaljerad information om hämtningsuppgifter och fel i [asynkrona jobb](/help/operations/asynchronous-jobs.md) användargränssnitt.
+1. En webbplatsförfattare får ett meddelande om en resurs original hämtas asynkront och om någon hämtningsåtgärd misslyckas. Under utvecklingen eller till och med efter redigeringen kan författarna se detaljerad information om hämtningsuppgifter och fel i [asynkrona jobb](/help/operations/asynchronous-jobs.md) användargränssnitt.
 
    ![Meddelande om asynkron hämtning av resurser som sker i bakgrunden.](assets/assets_async_transfer_fails.png)
 
@@ -205,7 +206,7 @@ Använd konfigurationen ovan när du vill prova redigeringsfunktionen och se hur
 
    >[!NOTE]
    >
-   >Sidan publiceras även om en eller flera fjärresurser inte hämtats. Komponenten som använder fjärresursen publiceras tom. The [!DNL Experience Manager] I meddelandeområdet visas ett meddelande om fel som visas på sidan för asynkrona jobb.
+   >Även om en eller flera fjärrresurser inte hämtas helt publiceras sidan. The [!DNL Experience Manager] I meddelandeområdet visas ett meddelande om fel som visas på sidan för asynkrona jobb.
 
 >[!CAUTION]
 >
@@ -226,7 +227,7 @@ Så här visar och hanterar du referenser på [!DNL Assets] -distribution, följ
 
 1. Referenserna för [!DNL Sites] sidor visar totalt antal referenser för varje lokal [!DNL Sites]. Det kan ta en stund att hitta alla referenser och visa det totala antalet referenser.
 1. Listan med referenser är interaktiv och DAM-användare kan klicka på en referens för att öppna referenssidan. Om fjärrreferenser av någon anledning inte kan hämtas visas ett meddelande som informerar användaren om felet.
-1. Användare kan flytta eller ta bort resursen. När du flyttar eller tar bort en resurs visas det totala antalet referenser för alla markerade resurser/mappar i en varningsdialogruta. När du tar bort en resurs för vilken referenser ännu inte visas visas en varningsdialogruta.
+1. Användare kan flytta eller ta bort resursen. När du flyttar eller tar bort en resurs visas det totala antalet referenser för alla markerade resurser/mappar i en varningsdialogruta. När du tar bort en resurs för vilken referenserna ännu inte har hämtats visas en varningsdialogruta.
 
    ![varning om force delete](assets/delete-referenced-asset.png)
 
@@ -278,7 +279,7 @@ Nej, du kan inte använda innehållsfragment och videomaterial från fjärr-DAM-
 
 ### Kan du använda Dynamic Media-resurser från fjärr-DAM-distributionen på [!DNL Sites] distribueras efter konfigurering av anslutna resurser?
 
-Ja, du kan konfigurera och använda Dynamic Media-resurser från den fjärranslutna DAM-distributionen på [!DNL Sites] efter konfigurering av anslutna resurser. Mer information finns i [Konfigurera en anslutning mellan platser och Dynamic Media-distributioner](#dynamic-media-assets).
+Ja, du kan konfigurera och använda Dynamic Media-bildresurser från fjärrdistributionen av DAM på [!DNL Sites] efter konfigurering av anslutna resurser. Mer information finns i [Konfigurera en anslutning mellan platser och Dynamic Media-distributioner](#dynamic-media-assets).
 
 ### När du har konfigurerat anslutna resurser, kan du uppdatera, ta bort, byta namn på och flytta åtgärder på fjärr-DAM-resurser eller -mappar?
 
@@ -295,7 +296,6 @@ Du kan lägga till resurser i [!DNL Sites] distribution, men dessa resurser kan 
 
 ### Tillstånd och resurshantering {#permissions-and-managing-assets}
 
-* Lokala resurser synkroniseras inte med de ursprungliga resurserna i fjärrdistributionen. Ändringar, borttagningar eller återkallande av behörigheter i DAM-distributionen sprids inte längre ned i kedjan.
 * Lokala resurser är skrivskyddade kopior. [!DNL Experience Manager] -komponenter gör icke-förstörande redigeringar av resurser. Inga andra redigeringar tillåts.
 * Lokalt hämtade resurser är endast tillgängliga för redigeringsändamål. Det går inte att använda arbetsflöden för resursuppdatering och metadata kan inte redigeras.
 * När du använder [!DNL Dynamic Media] in [!DNL Sites] sidor som den ursprungliga resursen inte hämtas och lagras på den lokala distributionen. The `dam:Asset` nod, metadata och återgivningar som genereras av [!DNL Assets] distributionen hämtas på [!DNL Sites] distribution.
@@ -309,7 +309,7 @@ Du kan lägga till resurser i [!DNL Sites] distribution, men dessa resurser kan 
 ### Konfigurera och licensiera {#setup-licensing}
 
 * [!DNL Assets] distribution på [!DNL Adobe Managed Services] stöds.
-* [!DNL Sites] kan ansluta till en enda [!DNL Assets] databas åt gången.
+* [!DNL Sites] kan ansluta till en enda [!DNL Assets] driftsättning i taget.
 * En licens för [!DNL Assets] du måste arbeta som fjärrdatabas.
 * En eller flera licenser av [!DNL Sites] måste fungera som lokal redigeringsdistribution.
 
