@@ -1,17 +1,17 @@
 ---
 title: Skapa anpassade popup-fönster med snabbvyn
-description: '"Läs mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstret för Windows®."'
+description: '"Läs mer om hur standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan aktivera anpassat innehåll som ska visas i popup-fönstret."'
 feature: Interactive Images,Interactive Videos,Carousel Banners
 role: Admin,User
 exl-id: c2bc6ec8-d46e-4681-ac3e-3337b9e6ae5c
-source-git-commit: 77f1b744dabd72fc26d3b0607db9561e6cb7fa66
+source-git-commit: 462ce45d24cf8bcad6963011d2d57d9d7da45550
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
 
-# Skapa anpassade popup-fönster® med QuickView {#using-quickviews-to-create-custom-pop-ups}
+# Skapa anpassade popup-fönster med snabbvyn {#using-quickviews-to-create-custom-pop-ups}
 
 Standardsnabbvyn används i e-handelsupplevelser där ett popup-fönster visas med produktinformation som driver ett köp. Du kan emellertid utlösa anpassat innehåll som ska visas i popup-fönstren. Beroende på vilket visningsprogram du använder kan kunderna välja en aktiveringspunkt, en miniatyrbild eller ett bildschema för att se information eller relaterat innehåll.
 
@@ -23,11 +23,11 @@ Quickview stöds av följande visningsprogram i Dynamic Media:
 
 Även om funktionerna i de olika visningsprogrammen skiljer sig åt är processen att skapa en snabbvy densamma för alla tre visningsprogram som stöds.
 
-**Så här skapar du anpassade popup-fönster® med snabbvyn:**
+**Så här skapar du anpassade popup-fönster med snabbvyn:**
 
 1. Skapa en snabbvy för en överförd resurs.
 
-   Vanligtvis skapar du en snabbvy samtidigt som du redigerar en resurs för användning med det visningsprogram du använder.
+   Vanligtvis skapar du en snabbvy samtidigt som du redigerar en resurs som ska användas med det visningsprogram du använder.
 
    <table>
     <tbody>
