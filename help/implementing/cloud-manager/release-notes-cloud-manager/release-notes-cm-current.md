@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2022.3.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2022.3.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 428bba062fcfb44ebfbbf3c1d05ce1a4634fb429
+source-git-commit: 0749099acf98b09d0f83bfe86c2cc4558261c029
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,11 @@ Releasedatum för Cloud Manager version 2022.3.0 i AEM as a Cloud Service 10 mar
 
 ## Nyheter {#what-is-new}
 
-* En användare med **Utvecklare** rollen har nu åtkomst till AEM.
-* [The `reliability_rating` kritiskt mått](/help/implementing/cloud-manager/code-quality-testing.md) har inaktiverats.
-* En användare kan nu sortera kolumnerna i **Pipelines** i Cloud Manager.
+* Åtkomst AEM miljöloggen kan göras med rollen Utvecklare.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* En delmängd av manuellt skapade Git-databaser hade felaktiga namnvärden som påverkades [återanvändningsfunktionen för build-felaktigheter.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) Namnen på dessa databaser har ändrats och användarna ser det korrigerade namnet i Cloud Manager API/UI.
-* [När du lägger till eller redigerar en pipeline för kodkvalitet](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) den **Beteende vid viktiga måttfel** visas inte längre.
-* Oväntade rörliga variabelkonfigurationer orsakar inte längre fel i byggsteget.
+* En delmängd av Git-databaser som skapats manuellt hade ett felaktigt namnvärde, vilket hindrade återanvändningsfunktionen för build-felaktigheter från att vara effektiv. Namnen på dessa databaser har ändrats och användarna ser det korrigerade namnet i Cloud Manager API/UI.
+* Artefakter från rörledningar som inte är avsedda för produktion återanvänds på ett olämpligt sätt i rörledningar för hela produktionen.
+* När du lägger till eller redigerar en pipeline för kodkvalitet visas inte längre alternativen för att hantera måttfel.
+* En del oväntade pipelinevariabelkonfigurationer kan orsaka i byggsteget.
