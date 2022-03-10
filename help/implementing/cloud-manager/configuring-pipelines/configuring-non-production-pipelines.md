@@ -2,13 +2,13 @@
 title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
-source-git-commit: e2031cabfa06a4d55dfa3ec0a77d3d3b0f835f5b
+exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
+source-git-commit: 428bba062fcfb44ebfbbf3c1d05ce1a4634fb429
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera icke-produktionsförlopp {#configuring-non-production-pipelines}
 
@@ -47,12 +47,6 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
 
       * **Manuell** - Använd det här alternativet om du vill starta pipelinen manuellt.
       * **Vid Git-ändringar** - Detta alternativ startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Med det här alternativet kan du fortfarande starta pipelinen manuellt efter behov.
-   * **Beteende vid viktiga måttfel** - Under pipeline-konfiguration eller -redigering **Distributionshanteraren** har alternativet att definiera hur pipelinen fungerar när ett viktigt fel påträffas i någon av kvalitetsportarna. Du har följande alternativ.
-
-      * **Fråga varje gång** - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
-      * **Misslyckas omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
-      * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
-
 
 1. Klicka **Fortsätt**.
 

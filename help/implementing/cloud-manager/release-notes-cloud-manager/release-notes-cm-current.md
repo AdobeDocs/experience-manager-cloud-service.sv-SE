@@ -1,18 +1,19 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2022.02.0
-description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2022.02.0.
+title: Versionsinformation om Cloud Manager 2022.3.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2022.3.0 i AEM as a Cloud Service.
 feature: Release Information
-source-git-commit: d1fe713f0c35a96cf6ba3172ea11986fd9d42fd6
+exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
+source-git-commit: 428bba062fcfb44ebfbbf3c1d05ce1a4634fb429
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2022.02.0 {#release-notes}
+# Versionsinformation om Cloud Manager 2022.3.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2022.02.0.
+Den här sidan dokumenterar versionsinformationen för Cloud Manager 2022.3.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -20,20 +21,16 @@ På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a 
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.0 är 10 februari 2022. Nästa version är planerad till den 10 mars 2022.
+Releasedatum för Cloud Manager version 2022.3.0 i AEM as a Cloud Service 10 mars 2022. Nästa version är planerad till den 7 april 2022.
 
 ## Nyheter {#what-is-new}
 
-* Ny accelererad [Rörledningar för Web Tier Config](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) har introducerats för att exklusivt distribuera HTTPD/dispatcher-konfiguration.
-   * Du måste ha AEM version `2021.12.6151.20211217T120950Z` eller nyare och [välja det flexibla läget för dispatcherverktygen](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill använda den här funktionen.
-   * Den här funktionen kommer att introduceras stegvis under de två veckorna efter version 2022.02.0.
-* Molnhanterarens landningssida har uppdaterats för att ge förbättrad navigering, enkel växling mellan rutnät-/rutvyer och popup-fönster för snabb programsammanfattning.
-* Ett nytt tröskelvärde för misslyckande (`< D`) har lagts till i [tillförlitlighetsmått.](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules)
-   * Kunder med allvarliga kvalitetsproblem som påverkar systemstabiliteten, främst relaterade till ogiltiga index och arbetsflödesprocesser, kommer inte att kunna distribuera förrän dessa problem har lösts.
-* Allvarlighetsgraden i `BannedPath` [kvalitetsregel](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules) har ändrats från blockerare till kritiskt.
-* Pipeline-guiden informerar användaren om när en AEM behöver uppdateras innan du konfigurerar en [Rörledningar för Web Tier Config](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) som är kopplade till den.
+* En användare med **Utvecklare** rollen har nu åtkomst till AEM.
+* [The `reliability_rating` kritiskt mått](/help/implementing/cloud-manager/code-quality-testing.md) har inaktiverats.
+* En användare kan nu sortera kolumnerna i **Pipelines** i Cloud Manager.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* Gamla Git-databaslösenord blir nu alltid ogiltiga när ett nytt lösenord skapas.
-* Uppdatering av miljövariabler via API:t stör inte längre en pipeline-körning i sällsynta fall.
+* En delmängd av manuellt skapade Git-databaser hade felaktiga namnvärden som påverkades [återanvändningsfunktionen för build-felaktigheter.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) Namnen på dessa databaser har ändrats och användarna ser det korrigerade namnet i Cloud Manager API/UI.
+* [När du lägger till eller redigerar en pipeline för kodkvalitet](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) den **Beteende vid viktiga måttfel** visas inte längre.
+* Oväntade rörliga variabelkonfigurationer orsakar inte längre fel i byggsteget.
