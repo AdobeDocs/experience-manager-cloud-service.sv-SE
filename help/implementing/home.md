@@ -5,8 +5,8 @@ landing-page-description: Lär dig hur du anpassar AEM as a Cloud Service drifts
 exl-id: d1e359a0-8a03-4f57-aa9c-cf1d0e9b7d0c
 source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '409'
+ht-degree: 74%
 
 ---
 

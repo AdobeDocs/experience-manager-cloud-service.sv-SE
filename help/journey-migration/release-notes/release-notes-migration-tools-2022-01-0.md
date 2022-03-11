@@ -2,13 +2,13 @@
 title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.1.0
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.1.0
 feature: Release Information
-source-git-commit: 45520a55958030fa053491b921e70da18b16377f
+exl-id: cbd0c316-bda3-48fb-89d6-a8f97bad1970
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 3%
 
 ---
-
 
 # Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.1.0 {#release-notes}
 
@@ -27,4 +27,3 @@ Releasedatum för innehållsöverföringsverktyget v1.7.18 är 18 januari 2022.
 ### Felkorrigeringar {#bug-fixes-ctt}
 
 * Standardkonfigurationer har uppdaterats för att minska tidsgränsen för körning under extraheringen.
-

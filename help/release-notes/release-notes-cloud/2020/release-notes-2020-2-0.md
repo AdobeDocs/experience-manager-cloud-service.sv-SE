@@ -1,26 +1,25 @@
 ---
 title: Versionsinformation för version 2020.2.0
 description: Versionsinformation för version 2020.2.0
-translation-type: tm+mt
-source-git-commit: 13774cc8684166c98f85bf4096d2c7de8d257746
+exl-id: 005c4756-44c6-4af5-9b0c-0fc07bd211a0
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 2%
 
 ---
 
+# Versionsinformation för AEM as a Cloud Service 2020.2.0 {#release-notes}
 
-# Versionsinformation för AEM som en Cloud Service 2020.2.0 {#release-notes}
-
-På den här sidan beskrivs den allmänna versionsinformationen för Experience Manager som Cloud Service 2020.2.0.
+På den här sidan finns en översikt över den allmänna versionsinformationen för Experience Manager as a Cloud Service 2020.2.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Experience Manager som Cloud Service 2020.2.0 är 13 februari 2020.
+Releasedatum för Experience Manager as a Cloud Service 2020.2.0 är 13 februari 2020.
 
 ## Cloud Manager {#cloud-manager}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM som en Cloud Service-version 2020.2.0.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för Cloud Manager i AEM as a Cloud Service Release 2020.2.0.
 
 ### Nyheter {#what-is-new}
 
@@ -31,7 +30,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 * Kodsökningssteget har nu en hämtningsbar logg.
 * Kalkylbladet som innehåller problem som upptäcks vid kodskanning har nu en kolumn med en länk till dokumentationen för den specifika regeln.
 
-### Felkorrigeringar {#bug-fixes}
+### Felkorrigeringar  {#bug-fixes}
 
 * Säkerhetsprofiler för webbläsare kan ibland förhindra att vissa knappar i pipeline-körningsskärmen fungerar som de ska.
 * Länkarna Översikt, Miljö och Aktivitet var ibland tillgängliga på landningssidan för Cloud Manager.

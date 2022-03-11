@@ -66,11 +66,11 @@ Det mest grundläggande sättet att ordna resurser är att spara resurserna i ma
    * **Filstorleksmappar**: innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
    * **Mellanlagringsmappar**: innehåller digitala resurser som är klara att publiceras live på din webbplats.
    * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer, som bilder, dokument och multimedia.
-   * **Arkivmappar**: innehåller pensionerade digitala resurser.
+   * **Arkivera mappar**: innehåller pensionerade digitala resurser.
    * **Datumbaserade mappar**: innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
-* Om en resurs redan är publicerad använder du [!DNL Experience Manager] för att flytta resursen till en annan mapp och publicera den på nytt från den nya platsen. Den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är *borttappad* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
+* Om en resurs redan har publicerats använder du [!DNL Experience Manager] om du vill flytta resursen till en annan mapp och publicera på nytt från den nya platsen. Den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock *vilse* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
 
 ## Ordna resurser med taggar {#use-tags-to-organize-assets}
 
@@ -85,7 +85,7 @@ Mer information finns i följande artiklar:
 
 ## Ordna som samlingar {#organize-as-collections}
 
-Med resurssamlingar i [!DNL Experience Manager Assets] kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar samt samlingar som hämtar resurser baserat på sökvillkor. Du kan skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
+Med resurssamlingar i [!DNL Experience Manager Assets]kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar samt samlingar som hämtar resurser baserat på sökvillkor. Du kan skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
 
 Mer information finns i [hantera samlingar](manage-collections.md)
 

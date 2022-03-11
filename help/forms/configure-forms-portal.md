@@ -1,13 +1,13 @@
 ---
 title: Skapa en Forms Portal på en Experience Manager Sites-sida
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
-source-git-commit: 50eeb2c1e6925b39b03bbbdd627169453ea1c1d8
+exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '1704'
 ht-degree: 0%
 
 ---
-
 
 # List Adaptive Forms on a Portal {#publish-forms-on-portal}
 

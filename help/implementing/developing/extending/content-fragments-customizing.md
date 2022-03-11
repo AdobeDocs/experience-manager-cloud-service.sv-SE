@@ -13,17 +13,17 @@ ht-degree: 1%
 
 Inom Adobe Experience Manager as a Cloud Service utökar ett innehållsfragment en standardresurs. se:
 
-* [Skapa och hantera ](/help/assets/content-fragments/content-fragments.md) innehållsfragment och  [sidredigering med ](/help/sites-cloud/authoring/fundamentals/content-fragments.md) innehållsfragment för mer information om innehållsfragment.
+* [Skapa och hantera innehållsfragment](/help/assets/content-fragments/content-fragments.md) och [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) för mer information om innehållsfragment.
 
-* [Hantera ](/help/assets/manage-digital-assets.md) resurser för mer information om standardresurser.
+* [Hantera resurser](/help/assets/manage-digital-assets.md) för mer information om standardtillgångar.
 
 ## Arkitektur {#architecture}
 
-De grundläggande [beståndsdelarna](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) i ett innehållsfragment är:
+Grundläggande [beståndsdelar](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) för ett innehållsfragment är:
 
-* A *Content Fragment*,
-* bestående av ett eller flera *innehållselement*,
-* och som kan ha en eller flera *innehållsvariationer*.
+* A *Innehållsfragment*,
+* bestående av en eller flera *Innehållselement*,
+* och som kan ha en eller flera *Innehållsvariationer*.
 
 De enskilda innehållsfragmenten baseras på modeller för innehållsfragment:
 
@@ -34,7 +34,7 @@ De enskilda innehållsfragmenten baseras på modeller för innehållsfragment:
 
    >[!NOTE]
    >
-   >För att du ska kunna visa/återge ett innehållsfragment måste ditt konto ha `read` behörighet för modellen.
+   >För att du ska kunna visa/återge ett innehållsfragment måste ditt konto ha `read` behörigheter för modellen.
 
    >[!CAUTION]
    >
@@ -58,18 +58,16 @@ Innehållsfragment betraktas som en webbplatsfunktion som:
 
 Innehållsfragment, som baseras på en innehållsfragmentmodell, mappas till en enda resurs:
 
-* Allt innehåll lagras under noden `jcr:content/data` för resursen:
+* Allt innehåll lagras under `jcr:content/data` resursens nod:
 
    * Elementdata lagras under den överordnad undernoden:
       `jcr:content/data/master`
 
-   * Variationer lagras under en undernod som har variantens namn:
-t.ex. `jcr:content/data/myvariation`
+   * Variationer lagras under en undernod som har variantens namn: t.ex. `jcr:content/data/myvariation`
 
-   * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet:
-Innehållet i elementet `text` lagras t.ex. som egenskapen `text` på `jcr:content/data/master`
+   * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet: t.ex. elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
-* Metadata och tillhörande innehåll lagras under `jcr:content/metadata`
+* Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`
 Förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på 
 `jcr:content`
 
@@ -97,11 +95,11 @@ Integrera med Assets Core:
 
 >[!CAUTION]
 >
->Komponenten [Innehållsfragment är en del av kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html). Mer information finns i [Developing Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
+>The [Content Fragment-komponenten är en del av Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html). Se [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html) för mer information.
 
-Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM innehåller **[kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)** - en [komponent som gör att du kan ta med innehållsfragment på dina sidor](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här **[innehållskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html)**.
+Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM tillhandahåller **[Kärnkomponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)** - en [som gör att du kan ta med innehållsfragment på sidorna](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan även utöka den här **[Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html)** kärnkomponent.
 
-* Komponenten använder egenskapen `fragmentPath` för att referera till det faktiska innehållsfragmentet. Egenskapen `fragmentPath` hanteras på samma sätt som liknande egenskaper för andra tillgångstyper. till exempel när innehållsfragmentet flyttas till en annan plats.
+* Komponenten använder `fragmentPath` -egenskap som refererar till det faktiska innehållsfragmentet. The `fragmentPath` Egenskapen hanteras på samma sätt som liknande egenskaper för andra tillgångstyper. till exempel när innehållsfragmentet flyttas till en annan plats.
 
 * Med komponenten kan du välja varianten som ska visas.
 
@@ -131,7 +129,7 @@ Innehållsfragment kan integreras med:
 
 * **Översättningar**
 
-   Content Fragments are fully integrated with the [AEM translation workflow](/help/sites-cloud/administering/translation/overview.md). Arkitekturnivå innebär följande:
+   Innehållsfragment är helt integrerade med [Arbetsflöde för AEM](/help/sites-cloud/administering/translation/overview.md). Arkitekturnivå innebär följande:
 
    * De enskilda översättningarna av ett innehållsfragment är i själva verket separata fragment. till exempel:
 
@@ -147,12 +145,12 @@ Innehållsfragment kan integreras med:
    >
    >Det AEM arbetsflödet för översättning fungerar med `/content`:
    >
-   >* Eftersom innehållsfragmentmodellerna finns i `/conf` inkluderas de inte i sådana översättningar. Du kan internationalisera gränssnittssträngarna.
+   >* När innehållsfragmentsmodellerna finns i `/conf`, ingår de inte i sådana översättningar. Du kan internationalisera gränssnittssträngarna.
 
 
 * **Metadata-scheman**
 
-   * Innehållsfragment (re) använder [metadatamatcheman](/help/assets/metadata-schemas.md) som kan definieras med standardresurser.
+   * Innehållsfragment (återanvänd) [metadatamodeller](/help/assets/metadata-schemas.md), som kan definieras med standardresurser.
 
    * CFM har ett eget specifikt schema:
 
@@ -176,7 +174,7 @@ Du kan använda serversidans API för att komma åt dina innehållsfragment; se:
 
 Följande tre gränssnitt kan fungera som startpunkter:
 
-* **Innehållsfragment**  ([ContentFragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
+* **Innehållsfragment** ([ContentFragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
    Med det här gränssnittet kan du arbeta med ett innehållsfragment på ett abstrakt sätt.
 
@@ -202,7 +200,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
    Gränssnitt som representerar de primära elementen i ett fragment är:
 
-   * **Innehållselement**  ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
+   * **Innehållselement** ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
@@ -214,13 +212,13 @@ Följande tre gränssnitt kan fungera som startpunkter:
          * Ta bort variationer (se [Caveats](#caveats))
          * Åtkomst till variantdata (se `ContentVariation`)
       * Kortkommando för att matcha variationer (tillämpa ytterligare, implementeringsspecifik reservlogik om den angivna varianten inte är tillgänglig för ett element)
-   * **Innehållsvariation**  ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
+   * **Innehållsvariation** ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
       * Enkel synkronisering, baserat på den senast ändrade informationen
 
-   Alla tre gränssnitten ( `ContentFragment`, `ContentElement`, `ContentVariation`) utökar gränssnittet `Versionable`, som lägger till versionshanteringsfunktioner som krävs för innehållsfragment:
+   Alla tre gränssnitten ( `ContentFragment`, `ContentElement`, `ContentVariation`) utöka `Versionable` gränssnitt, som lägger till versionsfunktioner, som krävs för innehållsfragment:
 
    * Skapa en ny version av elementet
    * Lista versioner av elementet
@@ -238,9 +236,9 @@ Följande kan anpassas:
 
 * `ContentFragment` kan anpassas till
 
-   * `Resource` - den underliggande Sling-resursen, Om du vill uppdatera det underliggande  `Resource` direkt måste du återskapa  `ContentFragment` objektet.
+   * `Resource` - den underliggande Sling-resursen, uppdatera underliggande `Resource` kräver ombyggnad av `ContentFragment` -objekt.
 
-   * `Asset` - DAM- `Asset` förkortningen som representerar innehållsfragmentet, för att uppdatera  `Asset` direkt måste  `ContentFragment` objektet återskapas.
+   * `Asset` - DAM `Asset` abstraktion som representerar innehållsfragmentet, uppdatera `Asset` kräver ombyggnad av `ContentFragment` -objekt.
 
 * `ContentElement` kan anpassas till
 
@@ -256,13 +254,13 @@ Följande kan anpassas:
 
 Det bör noteras att
 
-* Hela API:t är utformat för att **inte** behålla ändringar automatiskt (om inget annat anges i API JavaDoc). Därför måste du alltid implementera resurslösaren för respektive begäran (eller den lösare som du använder).
+* Hela API:t är utformat för **not** Bevara ändringarna automatiskt (om inget annat anges i API JavaDoc). Därför måste du alltid implementera resurslösaren för respektive begäran (eller den lösare som du använder).
 
 * Uppgifter som kan kräva ytterligare arbete:
 
-   * Vi rekommenderar starkt att du skapar nya variationer från `ContentFragment`. Detta garanterar att alla element delar den här variationen och att lämpliga globala datastrukturer uppdateras efter behov för att återspegla den nyligen skapade variationen i innehållsstrukturen.
+   * Vi rekommenderar starkt att du skapar nya varianter av `ContentFragment`. Detta garanterar att alla element delar den här variationen och att lämpliga globala datastrukturer uppdateras efter behov för att återspegla den nyligen skapade variationen i innehållsstrukturen.
 
-   * Om du tar bort befintliga variationer genom ett element med `ContentElement.removeVariation()` uppdateras inte de globala datastrukturer som är tilldelade variationen. Om du vill vara säker på att dessa datastrukturer är synkroniserade använder du `ContentFragment.removeVariation()` i stället, vilket tar bort en global variation.
+   * Ta bort befintliga variationer genom ett element med `ContentElement.removeVariation()`, kommer inte att uppdatera de globala datastrukturer som är tilldelade varianten. Använd `ContentFragment.removeVariation()` som i stället tar bort en variant globalt.
 
 ## API:t för hantering av innehållsfragment - klientsidan {#the-content-fragment-management-api-client-side}
 
@@ -276,22 +274,22 @@ Se följande:
 
 * `filter.xml`
 
-   `filter.xml` för hantering av innehållsfragment har konfigurerats så att den inte överlappar det centrala resurspaketet för resurser.
+   The `filter.xml` för hantering av innehållsfragment konfigureras så att den inte överlappar det centrala resurspaketet.
 
 ## Redigera sessioner {#edit-sessions}
 
 >[!CAUTION]
 >
->Ta hänsyn till den här bakgrundsinformationen. Du ska inte ändra någonting här (eftersom det är markerat som ett *privat område* i databasen), men det kan i vissa fall hjälpa att förstå hur saker och ting fungerar under huven.
+>Ta hänsyn till den här bakgrundsinformationen. Du ska inte ändra någonting här (eftersom det är markerat som en *privat område* i databasen), men det kan i vissa fall hjälpa dig att förstå hur saker och ting fungerar under huven.
 
-Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), är atomiskt. Eftersom sådana atomiska redigeringsfunktioner för flera vyer inte är ett vanligt AEM använder innehållsfragment det som kallas *redigeringssession*.
+Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), är atomiskt. Eftersom sådana atomiska redigeringsfunktioner för flera vyer inte är ett vanligt AEM, används det som kallas för ett innehållsfragment *redigeringssession*.
 
-En redigeringssession startas när användaren öppnar ett innehållsfragment i redigeraren. Redigeringssessionen avslutas när användaren lämnar redigeraren genom att välja antingen **Spara** eller **Avbryt**.
+En redigeringssession startas när användaren öppnar ett innehållsfragment i redigeraren. Redigeringssessionen är slut när användaren lämnar redigeraren genom att välja antingen **Spara** eller **Avbryt**.
 
-Tekniskt sett utförs alla redigeringar på *live*-innehåll, precis som med all annan AEM redigering. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** görs ingenting specifikt, eftersom all redigering utfördes på *live*-innehåll, och därför bevaras alla ändringar redan. Om du klickar på **Spara** utlöses även bakgrundsbearbetning (som att skapa fullständig textsökningsinformation och/eller hantera blandade medieresurser).
+Tekniskt sett utförs alla redigeringar på *live* innehåll, precis som med all annan AEM redigering. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara**, inget specifikt görs eftersom all redigering kördes på *live* därför bevaras alla ändringar redan. Klicka även på **Spara** kommer att utlösa viss bakgrundsbearbetning (till exempel att skapa fullständig textsökningsinformation och/eller hantera blandade medieresurser).
 
 Det finns vissa säkerhetsåtgärder för kantfall. Om användaren till exempel försöker lämna redigeraren utan att spara eller avbryta redigeringssessionen. Det går även att spara data med jämna mellanrum för att förhindra dataförlust.
-Observera att två användare kan redigera samma innehållsfragment samtidigt och därför skriva över varandras ändringar. För att förhindra detta måste innehållsfragmentet låsas genom att DAM-administrationens *utcheckningsåtgärd* används på fragmentet.
+Observera att två användare kan redigera samma innehållsfragment samtidigt och därför skriva över varandras ändringar. För att förhindra detta måste innehållsfragmentet låsas genom att tillämpa DAM-administrationens *Utcheckning* åtgärd på fragmentet.
 
 ## Exempel {#examples}
 
@@ -316,7 +314,7 @@ if (fragmentResource != null) {
 ### Exempel: Skapa ett nytt innehållsfragment {#example-creating-a-new-content-fragment}
 
 Om du vill skapa ett nytt innehållsfragment programmatiskt måste du använda en
-`FragmentTemplate` anpassat från en modellresurs.
+`FragmentTemplate` anpassas från en modellresurs.
 
 Till exempel:
 
@@ -328,7 +326,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 ### Exempel: Ange intervall för autosparande {#example-specifying-the-auto-save-interval}
 
-Du kan definiera intervallet [för automatiskt sparande](/help/assets/content-fragments/content-fragments-managing.md#save-close-and-versions) (i sekunder) med konfigurationshanteraren (ConfMgr):
+The [autosparintervall](/help/assets/content-fragments/content-fragments-managing.md#save-close-and-versions) (mätt i sekunder) kan definieras med konfigurationshanteraren (ConfMgr):
 
 * Nod: `<conf-root>/settings/dam/cfm/jcr:content`
 * Egenskapsnamn: `autoSaveInterval`
@@ -349,4 +347,4 @@ Om du vill ange ett intervall för automatiskt sparande på 5 minuter måste du 
 
 Mer information finns i
 
-* [Kärnkomponenter - Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)  (rekommenderas)
+* [Kärnkomponenter - komponent för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) (rekommenderas)

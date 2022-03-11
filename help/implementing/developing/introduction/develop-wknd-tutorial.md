@@ -13,7 +13,7 @@ ht-degree: 7%
 
 ## Översikt {#overview}
 
-Är du nybörjare på att utveckla Adobe Experience Manager som Cloud Service? Vill du ha en uppdatering av de senaste metoderna? Här börjar du!
+Har du inte använt Adobe Experience Manager as a Cloud Service tidigare? Vill du ha en uppdatering av de senaste metoderna? Här börjar du!
 
 Målet med den här självstudiekursen är att lära en utvecklare som är ny att AEM hur man implementerar en webbplats i AEM med de senaste standarderna och teknikerna. Hoppas att du kommer att förstå grunderna i den AEM plattformen och kunskaper om några av de gemensamma designmönstren.
 
@@ -21,7 +21,7 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 ![WKND](assets/wknd-tutorial-homepage.png)
 
-[WKND Developer Tutorial är tillgänglig ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) här och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
+[WKND Developer Tutorial finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
 
 ## Viktiga begrepp {#core-concepts}
 

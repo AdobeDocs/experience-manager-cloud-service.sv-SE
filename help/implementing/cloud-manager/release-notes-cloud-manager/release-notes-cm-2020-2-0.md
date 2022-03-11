@@ -1,22 +1,22 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.2.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.2.0
-feature: Versionsinformation
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2020.2.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2020.2.0
+feature: Release Information
 exl-id: 3f3324d9-53db-458d-9523-2e0d5d6dc3f7
 source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '199'
+ht-degree: 2%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.2.0 {#release-notes}
+# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2020.2.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.2.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2020.2.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2020.2.0 är 13 februari 2020.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2020.2.0 är 13 februari 2020.
 
 ## Cloud Manager {#cloud-manager}
 

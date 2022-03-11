@@ -49,7 +49,7 @@ Ja, du kan fortsätta använda teman som skapats med AEM 6.4 Forms och AEM 6.5 F
    Du kan också skapa ett projekt baserat på [!DNL AEM Forms] as a Cloud Service [Arketyp](setup-local-development-environment.md#forms-cloud-service-local-development-environment) och använd de medföljande exempeltemana och mallarna.
 
 * **Kan jag producera schemakompatibla data?**
-Ja, du kan skapa Adaptiv Forms för att ta fram schemakompatibla data.
+Ja, du kan skapa Adaptiv Forms för att skapa schemakompatibla data.
 
 <!-- * **Can I pass custom parameters to the prefill service?**
 Custom parameters are planned for an upcoming release. -->

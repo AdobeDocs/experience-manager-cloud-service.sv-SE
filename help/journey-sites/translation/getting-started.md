@@ -4,13 +4,13 @@ description: Lär dig hur du ordnar ditt AEM Sites-innehåll och hur AEM övers�
 index: true
 hide: false
 hidefromtoc: false
-source-git-commit: 8c04ffde2cbafcb6d556de8d48fc19f5b130a2c1
+exl-id: 9bfc3995-ac8e-488e-b68f-9e1b5b4a3176
+source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 0%
 
 ---
-
 
 # Kom igång med AEM Sites Translation {#getting-started}
 
@@ -18,7 +18,7 @@ Lär dig hur du ordnar ditt AEM Sites-innehåll och hur AEM översättningsverkt
 
 ## Story hittills {#story-so-far}
 
-I det tidigare dokumentet om AEM Sites översättningsresa, [Lär dig mer om AEM Sites-innehåll och hur du översätter i AEM](learn-about.md), lärde du dig grunderna i AEM Sites och du bör nu:
+I det föregående dokumentet om AEM Sites översättningsresa [Läs om AEM Sites innehåll och hur du översätter i AEM](learn-about.md) du lärde dig grunderna i AEM Sites och nu bör du:
 
 * Lär dig grunderna i AEM Sites framtagning av innehåll.
 * Läs om hur AEM stöder översättning.
@@ -47,13 +47,13 @@ Det finns ett antal krav innan du börjar översätta AEM innehåll.
 
 >[!TIP]
 >
->Om du inte är van vid att använda ett stort CMS-system som AEM bör du granska [Basic Handling](/help/sites-cloud/authoring/getting-started/basic-handling.md)-dokumentationen innan du fortsätter. Dokumentationen för grundläggande hantering är inte en del av resan, så gå tillbaka till den här sidan när du är klar.
+>Om du inte är van vid att använda ett stort CMS-system som AEM kan du titta i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) dokumentation innan du fortsätter. Dokumentationen för grundläggande hantering är inte en del av resan, så gå tillbaka till den här sidan när du är klar.
 
 ### Verktyg {#tools}
 
 * Tillgång till sandlådor för att testa översättning av ditt innehåll
 * Autentiseringsuppgifter för att ansluta till den översättningstjänst du föredrar
-* Bli medlem i gruppen `project-administrators` i AEM
+* Bli medlem i `project-administrators` grupp i AEM
 
 ## Så här lagrar AEM innehåll {#content-in-aem}
 
@@ -65,9 +65,9 @@ Webbplatskonsolen ger en översikt över innehållets struktur, vilket gör det 
 
 Så här kommer du åt webbplatskonsolen:
 
-1. Klicka eller tryck på **Navigering** -> **Platser** på den globala navigeringsmenyn.
+1. Klicka eller tryck på den globala navigeringsmenyn **Navigering** -> **Webbplatser**.
 1. Webbplatskonsolen öppnas på den översta nivån i ditt innehåll.
-1. Kontrollera att **kolumnvyn** är markerad med vyväljaren längst upp till höger i fönstret.
+1. Se till att **Kolumnvy** markeras med vyväljaren längst upp till höger i fönstret.
 
    ![Markera kolumnvy](assets/selecting-column-view.png)
 
@@ -79,7 +79,7 @@ Så här kommer du åt webbplatskonsolen:
 
    ![Val av innehåll](assets/sites-console-selection.png)
 
-1. Genom att trycka på eller klicka på järnvägsväljaren längst upp till vänster kan du även visa vyn **Innehållsträd** för en trädöversikt över ditt innehåll.
+1. Genom att trycka eller klicka på järnvägsväljaren längst upp till vänster kan du även visa **Innehållsträd** om du vill se en trädöversikt över ditt innehåll.
 
    ![Vyn Innehållsträd](assets/sites-console-content-tree.png)
 
@@ -101,7 +101,7 @@ Så här redigerar du en sida:
 
    ![Markera en sida som ska redigeras](assets/sites-editor-select-page.png)
 
-1. Tryck på alternativet **Redigera** i verktygsfältet.
+1. Tryck på **Redigera** i verktygsfältet.
 1. Webbplatsredigeraren öppnas med den valda sidan inläst för redigering på en ny flik i webbläsaren.
 1. När du för musen över eller knackar på innehåll visas väljare för enskilda komponenter. Komponenter är de dra och släpp-byggstenar som utgör sidan.
 
@@ -129,7 +129,7 @@ AEM innehåll styrs av sin struktur. AEM ställer få krav på innehållsstruktu
 
 Som vi tidigare har rekommenderat arbetar du med din innehållsarkitekt för att fastställa lämplig innehållsstruktur för ditt eget projekt. Följande är dock en beprövad, enkel och intuitiv struktur som är mycket effektiv.
 
-Definiera en basmapp för projektet under `/content`.
+Definiera en basmapp för ditt projekt under `/content`.
 
 ```text
 /content/<your-project>
@@ -187,9 +187,9 @@ Du bör notera den specifika sökvägen för ditt innehåll, eftersom det krävs
 
 Nu när du förstår webbplatskonsolen och redigeraren och vikten av innehållsstrukturen kan vi titta på hur du översätter innehåll. Översättningsverktygen i AEM är mycket kraftfulla, men enkla att förstå på en hög nivå.
 
-* **Translation Connector**  - Kopplingen är länken mellan AEM och den översättningstjänst som du använder.
-* **Översättningsregler**  - Regler definierar vilket innehåll under särskilda sökvägar som ska översättas.
-* **Översättningsprojekt**  - Översättningsprojekt samlar in innehåll som ska hanteras som en enda översättningsåtgärd och spårar översättningens förlopp, interagerar med kopplingen för att överföra innehållet som ska översättas och ta emot det tillbaka från översättningstjänsten.
+* **Translation Connector** - Kopplingen är länken mellan AEM och översättningstjänsten som du använder.
+* **Översättningsregler** - Reglerna definierar vilket innehåll under särskilda sökvägar som ska översättas.
+* **Översättningsprojekt** - Översättningsprojekt samlar in innehåll som ska hanteras som en enda översättningsåtgärd och spårar översättningens förlopp, interagerar med kopplingen för att överföra innehållet som ska översättas och tar emot det tillbaka från översättningstjänsten.
 
 Vanligtvis konfigurerar du bara anslutningen en gång för din instans och regler per projekt. Sedan använder ni översättningsprojekt för att översätta innehållet och hålla översättningarna uppdaterade kontinuerligt.
 
@@ -201,13 +201,13 @@ Nu när du är klar med den här delen av AEM Sites översättningsresa ska du:
 * Förstå hur AEM lagrar innehåll.
 * Bekanta dig med AEM översättningsverktyg.
 
-Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att nästa gång du granskar dokumentet [Konfigurera översättningskopplingen](configure-connector.md) där du får lära dig hur du ansluter AEM till en översättningstjänst.|
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att nästa gång du granskar dokumentet [Konfigurera översättningskopplingen](configure-connector.md) där du får lära dig att ansluta AEM till en översättningstjänst.|
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av översättningsresan genom att granska dokumentet [Konfigurera översättningskopplingen](configure-connector.md). Följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på resan.
+Vi rekommenderar att du går vidare till nästa del av översättningsresan genom att granska dokumentet [Konfigurera översättningskopplingen](configure-connector.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
 
-* [AEM grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md)  - Lär dig grunderna i AEM gränssnitt för att enkelt navigera och utföra viktiga uppgifter som att hitta ditt innehåll.
-* [Identifiera innehåll som ska översättas](/help/sites-cloud/administering/translation/rules.md)  - Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
-* [Configuring the Translation Integration Framework](/help/sites-cloud/administering/translation/integration-framework.md)  - Lär dig hur du konfigurerar översättningsintegreringsramverket för integrering med översättningstjänster från tredje part.
-* [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md)  - Lär dig hur du skapar och hanterar både maskinöversättning och mänskliga översättningsprojekt i AEM.
+* [AEM grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - Lär dig grunderna i det AEM användargränssnittet så att du enkelt kan navigera och utföra viktiga uppgifter som att hitta ditt innehåll.
+* [Identifiera innehåll som ska översättas](/help/sites-cloud/administering/translation/rules.md) - Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
+* [Konfigurera översättningsintegreringsramverket](/help/sites-cloud/administering/translation/integration-framework.md) - Lär dig hur du konfigurerar TLF (Translation Integration Framework) för integrering med översättningstjänster från tredje part.
+* [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md) - Lär dig att skapa och hantera både maskinöversättning och mänsklig översättning i AEM.

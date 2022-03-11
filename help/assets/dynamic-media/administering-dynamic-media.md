@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Konfigurera Dynamic Media {#setting-up-dynamic-media}
 
-[Med Dynamic ](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) Media kan ni hantera mediefiler genom att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) hjälper er att hantera mediefiler genom att leverera omfattande visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobilsajter och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
 
 <!-- OBSOLETE UNTIL THE INTEGRATING SCENE7 TOPIC GETS A MAJOR UPDATE
 
@@ -41,5 +41,5 @@ Se även följande avsnitt:
 >
 >**Om du uppgraderar:**
 >
->* När du har Adobe [!DNL Experience Manager] aktiverat och igång har alla resurser som du överför Dynamic Media automatiskt aktiverats (om det inte uttryckligen inaktiverats av systemadministratören). Om du är i en uppgraderad instans av [!DNL Experience Manager] och inte har använt Dynamic Media tidigare, måste du troligen bearbeta om dina resurser för att aktivera dem för Dynamic Media. Se [Bearbeta resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+>* Efter att du har Adobe [!DNL Experience Manager] alla resurser som du överför har Dynamic Media automatiskt aktiverat (om de inte uttryckligen inaktiverats av systemadministratören). Om du är på en uppgraderad instans av [!DNL Experience Manager] och som är nya i Dynamic Media måste du troligtvis bearbeta dina resurser på nytt för att göra dem Dynamic Media-aktiverade. Se [Bearbeta resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 

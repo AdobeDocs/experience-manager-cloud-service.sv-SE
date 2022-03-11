@@ -17,13 +17,13 @@ En anteckning placerar en enkel skiss eller anteckning (tänk riktig anteckning)
 
 >[!TIP]
 >
->Glöm inte att [kommentarer](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) också är tillgängliga för att ge feedback på en sida.
+>Glöm inte det [kommentarer](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) finns även för att ge feedback på en sida.
 
-Ett särskilt [läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) används för att skapa och visa anteckningar.
+En speciell [läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) används för att skapa och visa anteckningar.
 
 >[!TIP]
 >
->Beroende på dina behov kan du även utveckla ett [arbetsflöde](/help/sites-cloud/authoring/workflows/overview.md) för att skicka meddelanden när anteckningar läggs till, uppdateras eller tas bort.
+>Beroende på dina behov kan du även utveckla en [arbetsflöde](/help/sites-cloud/authoring/workflows/overview.md) för att skicka meddelanden när anteckningar läggs till, uppdateras eller tas bort.
 
 ## Anteckningsindikator {#annotation-indicator}
 
@@ -53,7 +53,7 @@ Anteckningar visas bara i anteckningsläget.
 
 Förutom att visa anteckningarna kan du i anteckningsläget skapa, redigera, flytta eller ta bort anteckningar i innehållet
 
-1. [Starta anteckningsläget ](#annotate-mode) på sidan.
+1. [Starta anteckningsläge](#annotate-mode) på sidan.
 
 1. Klicka eller tryck på ikonen Lägg till anteckning (plus symbol till vänster i verktygsfältet) för att börja lägga till anteckningar.
 
@@ -80,7 +80,7 @@ Förutom att visa anteckningarna kan du i anteckningsläget skapa, redigera, fly
 
 1. När du är klar med redigeringen av en viss anteckning kan du:
 
-   * Klicka eller tryck på textmarkören för att öppna anteckningen. När du har öppnat den fullständiga texten kan du göra ändringar eller [ta bort anteckningen.](#deleting-annotations)
+   * Klicka eller tryck på textmarkören för att öppna anteckningen. När du har öppnat hela texten kan du göra ändringar eller [ta bort anteckningen.](#deleting-annotations)
    * Flytta textmarkören.
    * Klicka eller tryck på en skisslinje för att markera skissen och dra den till önskad plats.
    * Flytta eller kopiera en komponent
@@ -95,11 +95,11 @@ Förutom att visa anteckningarna kan du i anteckningsläget skapa, redigera, fly
 >
 >Definitionen av en enskild komponenttyp avgör om det är möjligt att lägga till en anteckning (eller inte) i instanser av den komponenten.
 
-## Tar bort anteckning och skisser {#deleting-annotations}
+## Ta bort anteckningar och skisser {#deleting-annotations}
 
 Anteckningar och tillhörande skisser kan tas bort.
 
-1. [Starta anteckningsläget ](#annotate-mode) på sidan.
+1. [Starta anteckningsläge](#annotate-mode) på sidan.
 
 1. Klicka/tryck på textmarkören för att öppna anteckningen.
 
@@ -117,7 +117,7 @@ Anteckningar och tillhörande skisser kan tas bort.
 
 Du kan bara ta bort vissa skisser i stället för hela anteckningen med alla associerade skisser.
 
-1. [Starta anteckningsläget ](#annotate-mode) på sidan.
+1. [Starta anteckningsläge](#annotate-mode) på sidan.
 
 1. Klicka eller tryck på skissen. AEM markerar den med en mörkare blå ruta.
 
@@ -132,4 +132,4 @@ Du kan bara ta bort vissa skisser i stället för hela anteckningen med alla ass
 Förutom komponenter kan du lägga till kommentarer i en mängd olika resurser:
 
 * Anteckna resurser [Anteckna resurser](/help/assets/manage-digital-assets.md#annotating)
-* Kommentera videoresurser [Anteckna videoresurser](/help/assets/manage-video-assets.md#annotate-video-assets)
+* Kommentera videomaterial [Kommentera videomaterial](/help/assets/manage-video-assets.md#annotate-video-assets)

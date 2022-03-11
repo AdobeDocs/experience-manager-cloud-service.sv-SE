@@ -1,16 +1,15 @@
 ---
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
-translation-type: tm+mt
-source-git-commit: 21f14d1f4e0ae26e097d4b31fe6811f1d089813d
+exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 5%
 
 ---
 
-
-# Launches {#launches}
+# Startar {#launches}
 
 Med lanseringar kan du effektivt utveckla innehåll för en framtida release.
 
@@ -33,7 +32,7 @@ Startar kan också vara:
 * Skapat för flera rotgrenar. Du kan skapa en start för hela webbplatsen (och göra ändringarna där), men det kan vara opraktiskt eftersom hela webbplatsen behöver kopieras. När det gäller hundratals eller till och med tusentals sidor påverkas systemkraven och prestandan av både kopieringsåtgärden och senare jämförelserna som krävs för kampanjuppgifterna.
 * Kapslad (en programstart inom en programstart) för att ge dig möjlighet att skapa en programstart från en befintlig programstart så att författare kan utnyttja redan gjorda ändringar i stället för att behöva göra samma ändringar flera gånger för varje programstart.
 
-I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och om det behövs [ta bort](/help/sites-cloud/authoring/launches/creating.md#deleting-a-launch)) startsidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
+I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och om det behövs) [delete](/help/sites-cloud/authoring/launches/creating.md#deleting-a-launch)) starta sidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
 
 * [Skapa Launches](/help/sites-cloud/authoring/launches/creating.md)
 * [Redigera Launches](/help/sites-cloud/authoring/launches/editing.md)
@@ -59,13 +58,13 @@ Med Launes kan du:
    * Redigera startegenskaper, som flaggorna **Titel**, **Startdatum** och **Produktionsklar**.
 * Du kan befordra och publicera innehållet antingen manuellt eller automatiskt:
    * Manuellt:
-      * Befordra startinnehållet tillbaka till **Target** (källsidor) när det är klart för publicering.
+      * Befordra ert startmaterial tillbaka till **Mål** (källsidor) när den är klar att publiceras.
       * Publicera innehållet från källsidorna (efter att ha befordrat dem).
       * Befordra antingen alla sidor eller endast ändrade sidor.
    * Automatiskt - det innebär följande:
-      * Fältet **Starta**(**Live**) **datum**: detta kan anges när du skapar eller redigerar en programstart.
-      * Flaggan **Production Ready**: detta kan bara anges när du redigerar en programstart.
-      * Om flaggan **Production Ready** är inställd befordras starten automatiskt till produktionssidorna på den angivna **Launch**(**Live**) **date**. Efter kampanjen publiceras produktionssidorna automatiskt.\
+      * The **Starta**(**Live**) **datum** fält: detta kan anges när du skapar eller redigerar en programstart.
+      * The **Produktionsklar** flagga: detta kan bara anges när du redigerar en programstart.
+      * Om **Produktionsklar** -flaggan är inställd kommer lanseringen automatiskt att befordras till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
          Om inget datum har angetts har flaggan ingen effekt.
 * Uppdatera käll- och startsidor parallellt:
    * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). dvs. som en live-kopia).
@@ -73,9 +72,9 @@ Med Launes kan du:
 
    ![Åtgärder parallellt](/help/sites-cloud/authoring/assets/launches-parallel.png)
 
-* [Skapa en kapslad programstart](/help/sites-cloud/authoring/launches/creating.md#creating-a-nested-launch)  - en programstart i en programstart:
+* [Skapa en kapslad start](/help/sites-cloud/authoring/launches/creating.md#creating-a-nested-launch) - en programstart inom en programstart:
    * Källan är en befintlig start.
-   * Du kan [befordra en kapslad start](/help/sites-cloud/authoring/launches/promoting.md#promoting-a-nested-launch) till vilket mål som helst; detta kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
+   * Du kan [befordra en kapslad lansering](/help/sites-cloud/authoring/launches/promoting.md#promoting-a-nested-launch) till vilket mål som helst, detta kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
 
    ![En kapslad start](/help/sites-cloud/authoring/assets/launches-nested.png)
 
@@ -85,15 +84,15 @@ Med Launes kan du:
 
 >[!NOTE]
 >
->Du måste ha åtkomsträttigheter till `/content/launches` för att kunna skapa och redigera starter, precis som med standardgruppen `content-authors`.
+>Att skapa och redigera starter kräver åtkomsträttigheter till `/content/launches` - som med standardgruppen `content-authors`.
 >
 >Kontakta systemadministratören om du får problem.
 
 ## Startar i referenser (platskonsolen) {#launches-in-references-sites-console}
 
-1. Gå till startkällan i konsolen **Platser**.
-1. Öppna **Referenser**-listen och välj källsidan.
-1. Välj **Startar**. Befintliga starter visas tillsammans med åtkomst till **startkonsolen**:
+1. I **Webbplatser** navigera till startkällan (startfilerna).
+1. Öppna **Referenser** och välj källsidan.
+1. Välj **Startar**, kommer de befintliga starterna att listas tillsammans med tillgång till **Startar konsolen**:
 
    ![Referenser till starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references.png)
 
@@ -101,17 +100,17 @@ Med Launes kan du:
 
    ![Åtgärder som ska vidtas vid starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references-actions.png)
 
-## Startar konsolen {#the-launches-console}
+## Startkonsolen {#the-launches-console}
 
 På startkonsolen får du en översikt över dina starter och kan vidta åtgärder för dem som visas. Konsolen kan nås av:
 
-* **Verktyg**-konsolen: **Verktyg**, **Platser**, **Startar**.
+* The **verktyg** Konsol: **verktyg**, **Webbplatser**, **Startar**.
 
-* **Startar** Console längst ned i avsnittet  **** Starta i  **** referensfältet när du navigerar i källinnehåll i webbplatskonsolen.
+* **Startar konsolen** längst ned i **Startar** i **Referenser** när du navigerar i källinnehåll i webbplatskonsolen.
 
    ![Startar konsolen i referenser till starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references.png)
 
-* Knappen **Startar** längst upp till höger när du navigerar till startinnehåll i webbplatskonsolen:
+* The **Startar** längst upp till höger när du navigerar till startinnehåll i webbplatskonsolen:
 
    ![Startar alternativ i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-console-navigate-launch-content.png)
 

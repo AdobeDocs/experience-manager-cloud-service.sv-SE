@@ -1,7 +1,8 @@
 ---
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
-source-git-commit: a54841ca2e959e885a997b19dd03c6ece3f00d1c
+exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '1782'
 ht-degree: 82%
@@ -12,8 +13,8 @@ ht-degree: 82%
 
 >[!CONTEXTUALHELP]
 >id="intro_aem_cloudservice_architecture"
->title="Introduktion till AEM som Cloud Service Architecture"
->abstract="På den här fliken kan du visa den nya arkitekturen för AEM som en Cloud Service och förstå ändringarna. AEM har resulterat i en dynamisk arkitektur med ett varierande antal bilder, så det är viktigt att du tar dig tid att förstå.molnarkitekturen"
+>title="Introduktion till AEM as a Cloud Service Architecture"
+>abstract="På den här fliken kan du visa den nya arkitekturen AEM as a Cloud Service och förstå ändringarna. AEM har resulterat i en dynamisk arkitektur med ett varierande antal bilder, så det är viktigt att du tar dig tid att förstå.molnarkitekturen"
 >additional-url="https://video.tv.adobe.com/v/330542/" text="Arkitektur - översikt"
 
 
@@ -68,7 +69,7 @@ Skalningen av tjänstens klientinstanser kan vara automatisk eller manuell på t
 
 AEM as a Cloud Service är tillgängligt som enskilda instanser där varje instans representerar en komplett AEM-miljö.
 
-Det finns tre typer av miljöer med AEM som Cloud Service:
+Det finns tre typer av miljöer med AEM as a Cloud Service:
 
 * **Produktionsmiljö**: är värd för de program som riktar sig till företagsanvändare.
 
@@ -76,7 +77,7 @@ Det finns tre typer av miljöer med AEM som Cloud Service:
 
 * **Utvecklingsmiljö**: ger utvecklare möjlighet att implementera AEM-program under samma körningsförhållanden som scen- och produktionsmiljöerna.
 
-   Mer information finns i [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#using-cloud-manager).
+   Se [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#using-cloud-manager) för mer information.
 
 ## Program {#programs}
 
@@ -87,7 +88,7 @@ Ett AEM-program är den behållare som innehåller:
 |  Programelement |  Siffra |
 |--- |--- |
 | Koddatabas (Git) |  1 |
-| Baslinjebild (Sites eller Assets) |  3 |
+| Baslinjebild (Sites eller Assets) |  1 |
 | 1:1-förhållande mellan scen- och produktionsmiljö  | 0 eller 1 |
 | Icke-produktionsmiljöer (utveckling eller demonstration) | 0 till N |
 | Pipeline för varje miljö | 0 eller 1 |
@@ -136,7 +137,7 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
 
    * Redigeringsnivån läser och skriver innehåll från och till det beständiga lagret.
 
-   * BLOB-lagringen delas av alla publicerings-, förhandsgransknings- och författarnivåer. filer är inte *flyttade*.
+   * BLOB-lagringen delas av alla publicerings-, förhandsgransknings- och författarnivåer. filer är inte *flyttad*.
 
    * När innehåll godkänns från författarnivån är detta en indikation på att det kan aktiveras och därför skickas till publiceringsskiktet för beständighet. eller eventuellt till förhandsvisningsnivån. Detta sker via replikeringstjänsten, en pipeline för mellanprogram. Den här pipeline tar emot det nya innehållet, där de enskilda publiceringstjänstens (eller förhandsgranskningstjänstens) noder prenumererar på det innehåll som skickas till pipeline.
 

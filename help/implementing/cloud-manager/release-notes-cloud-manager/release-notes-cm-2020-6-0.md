@@ -1,48 +1,48 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.6.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.6.0
-feature: Versionsinformation
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2020.6.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2020.6.0
+feature: Release Information
 exl-id: 879a5025-f94f-4549-bf6e-e1cc6b6a7b58
 source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.6.0 {#release-notes}
+# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2020.6.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.6.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2020.6.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2020.6.0 är 4 juni 2020.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2020.6.0 är 4 juni 2020.
 
 ## Nyheter {#whats-new-cloud-manager}
 
-* En användare i rollen *Affärsägare* i Cloud Manager kan nu ta bort ett sandlådeprogram från landningssidan (via snabbåtgärdsknappen på programkortet) eller inifrån programmet.
+* En användare i *Företagsägare* rollen i Cloud Manager kan nu ta bort ett sandlådeprogram från landningssidan (via snabbåtgärdsknappen på programkortet) eller inifrån programmet.
 
-   Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
+   Se [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html) för mer information.
 
-* En användare av sandlådeprogrammet i *Business Owner* eller *Deployment Manager*-rollen i Cloud Manager kan nu ta bort sin produktions- och scenmiljö som angetts via användargränssnittet i molnhanteraren. Alternativet Ta bort finns nu både på miljökortet på sidan **Programöversikt** och på sidan **Miljö**. Om du väljer borttagningsalternativet för antingen produktion eller scen tas även det andra bort i uppsättningen.
+* En användare av sandlådeprogrammet i *Företagsägare* eller *Distributionshanteraren* rollen i Cloud Manager kan nu ta bort sin produktionsmiljö och scenmiljö som angetts via användargränssnittet i Cloud Manager. Alternativet Ta bort är nu tillgängligt både från miljökortet på **Programöversikt** sidan och **Miljö** sida. Om du väljer borttagningsalternativet för antingen produktion eller scen tas även det andra bort i uppsättningen.
 
-   Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
+   Se [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html) för mer information.
 
 * Tips på landningssidan som informerar och instruerar användaren om grundläggande navigering.
 
-* Tips på sidan **Programöversikt** om du vill informera och instruera användaren om grundläggande navigering i Cloud Manager för att komma igång.
+* Tips på **Programöversikt** för att informera och instruera användaren om grundläggande navigering i Cloud Manager för att komma igång.
 
-* En **LEARN**-sida är nu tillgänglig i Cloud Manager, som du kommer åt via den övre navigeringen. Den här sidan innehåller resurser som hjälper användare att lära sig mer om de mest använda arbetsflödena som är relevanta för deras roller i Cloud Manager.
+* A **LÄR DIG** sidan är nu tillgänglig i Cloud Manager via den övre navigeringen. Den här sidan innehåller resurser som hjälper användare att lära sig mer om de mest använda arbetsflödena som är relevanta för deras roller i Cloud Manager.
 
-* Sandlådeprogram identifieras nu med hjälp av ett **Sandbox**-märke som visas på programkortet på landningssidan samt bredvid programnamnet på sidan **Programöversikt**.
+* Sandlådeprogram identifieras nu med en **Sandbox** emblem som ska visas på programkortet på landningssidan samt bredvid programnamnet i **Programöversikt** sida.
 
-* En användare i rollen SysAdmin har nu tillgång till den plats i Admin Console där användarroller eller behörigheter till Cloud Manager kan hanteras med ett enda klick. Knappen **Hantera åtkomst** är nu tillgänglig på landningssidan bredvid knappen **Lägg till program**.
+* En användare i rollen SysAdmin har nu tillgång till den plats i Admin Console där användarroller eller behörigheter till Cloud Manager kan hanteras med ett enda klick. A **Hantera åtkomst** finns nu på landningssidan intill **Lägg till program** -knappen.
 
-   Mer information finns i [SysAdmin Tasks](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#sysadmin-tasks).
+   Se [SysAdmin-uppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#sysadmin-tasks) för mer information.
 
 * En användare i rollen SysAdmin har nu tillgång till författarinstansen med ett klick direkt från Cloud Manager.
 
-   Mer information finns i [Hantera åtkomst till författarinstansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem).
+   Se [Hantera åtkomst till författarinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem) för mer information.
 
 * Build-loggen innehåller nu en lista över identifierade artefakter, inklusive överhoppade innehållspaket.
 
@@ -52,14 +52,14 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.6.0 är 4 juni 2020
 
 ### Felkorrigeringar {#bug-fixes-cm}
 
-* I vissa situationer var ikonerna i dialogrutan **Skapa program** feljusterade.
+* I vissa situationer visas ikonerna i **Skapa program** Dialogrutan var feljusterad.
 
-* Den AEM releaseidentifieraren visades inte konsekvent på sidan **Programöversikt**.
+* Den AEM releaseidentifieraren visades inte konsekvent på **Programöversikt** sida.
 
-* När produktionsflödet konfigurerades var alternativet **Schemalagd distribution** inte synligt för vissa kunder.
+* När produktionsflödet konfigureras visas **Schemalagd distribution** för vissa kunder.
 
 ### Kända fel {#known-issues-cm}
 
 * Miljöer i ett sandlådeprogram försätts i viloläge när ingen aktivitet identifieras under en viss tid. Den här statusen visas inte i Cloud Manager. Status kan dock observeras via Developer Console. Detta kommer att åtgärdas i en kommande version.
 
-* Länken till Developer Console direkt från Cloud Manager visar inte alternativet att avplacera/viloläge för sandlådeprogrammets miljö. För att åtgärda detta lägger du till mönstret `#release-cm-p1234-e5678` i slutet av URL:en på Developer Console, där *1234* är program-ID och *5678* är miljö-ID:t. Detta kommer att åtgärdas i en kommande version.
+* Länken till Developer Console direkt från Cloud Manager visar inte alternativet att avplacera/viloläge för sandlådeprogrammets miljö. För att åtgärda detta lägger du till mönstret en gång på Developer Console `#release-cm-p1234-e5678` till slutet av URL:en, där *1234* är program-ID och *5678* är miljö-ID. Detta kommer att åtgärdas i en kommande version.

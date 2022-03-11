@@ -25,7 +25,7 @@ Med innehållsfragment som använder strukturerat innehåll kan du tillhandahål
 
 Med den AEM JSON-exporteraren kan du leverera innehållet på en (y) AEM-sida i JSON-datamodellsformat. Detta kan sedan användas av dina egna program.
 
-Inom AEM leverans uppnås med tillägget väljare `model` och `.json`.
+Inom AEM levereras med väljaren `model` och `.json` tillägg.
 
 `.model.json`
 
@@ -41,7 +41,7 @@ Inom AEM leverans uppnås med tillägget väljare `model` och `.json`.
 
 Du kan också leverera innehållet i ett strukturerat innehållsfragment genom att specifikt rikta in det på det.
 
-Detta görs med hela sökvägen till fragmentet (via `jcr:content`); till exempel med ett suffix som
+Detta görs med hela sökvägen till fragmentet (via `jcr:content`). till exempel med ett suffix som
 
 `.../jcr:content/root/container/container/contentfragment.model.json`
 
@@ -59,11 +59,11 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
    >[!NOTE]
    >
-   >Du kan [anpassa dina egna komponenter](enabling-json-exporter.md) för att komma åt och använda dessa data.
+   >Du kan [anpassa era egna komponenter](enabling-json-exporter.md) för att få tillgång till och använda dessa data.
 
    >[!NOTE]
    >
-   >Även om det inte är en standardimplementering stöds [flera väljare,](enabling-json-exporter.md#multiple-selectors) men `model` måste vara den första.
+   >Även om det inte är en standardimplementering [flera väljare stöds,](enabling-json-exporter.md#multiple-selectors) men `model` måste vara först.
 
 ### Ytterligare information {#further-information}
 
@@ -83,4 +83,4 @@ Mer information finns i:
 * [Content Fragments in the Assets user guide](/help/assets/content-fragments/content-fragments.md)
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
-* [Kärnkomponenter ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och komponenten  [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

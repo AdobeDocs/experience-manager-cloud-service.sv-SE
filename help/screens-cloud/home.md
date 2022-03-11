@@ -1,12 +1,12 @@
 ---
 title: AEM Screens as a Cloud Service
 description: Adobe Experience Manager Screens as a Cloud Service självhjälpsresurser och dokumentationslänkar
-landing-page-description: Understand the AEM Screens as a Cloud Service.
+landing-page-description: Förstå AEM Screens as a Cloud Service.
 exl-id: 5acb8e90-f268-4b99-9b6f-e05ba0f3a482
 source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '408'
+ht-degree: 47%
 
 ---
 
@@ -23,7 +23,7 @@ På den här sidan visas självhjälpsresurser för AEM Screens as a Cloud Servi
 * [Introduktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/overview/introduction.html?lang=en)
 * [Onboarding](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html?lang=en)
 * [Konfigurera skärmtjänster och innehållsleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en)
-* [Create a Project in Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html?lang=en)
+* [Skapa ett projekt på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html?lang=en)
 * [Installera skärmuppspelaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html?lang=en)
 
 ## Handböcker om Experience Manager as a Cloud Service {#aem-guides}

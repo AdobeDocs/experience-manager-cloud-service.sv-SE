@@ -1,18 +1,17 @@
 ---
 title: Översikt över leveransflöde
 description: Översikt över leveransflöde
-translation-type: tm+mt
-source-git-commit: 0080ace746f4a7212180d2404b356176d5f2d72c
+exl-id: fe42fb9e-cdf4-43e1-b688-7cecf4124fa5
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 1%
 
 ---
 
-
 # Flöde för innehållsleverans {#content-delivery}
 
-Den aktuella sidan innehåller information om publicering av tjänstinnehåll i AEM som en Cloud Service. Leverans av publiceringstjänstinnehåll inkluderar:
+Den aktuella sidan innehåller information om publicering av tjänstinnehåll på AEM as a Cloud Service. Leverans av publiceringstjänstinnehåll inkluderar:
 
 * CDN
 * AEM
@@ -32,4 +31,4 @@ Som standard förfaller innehållstypen HTML/text efter 300-talet (5 minuter) i 
 
 Avsnitten nedan innehåller mer detaljerad information om innehållsleverans, inklusive CDN-konfiguration och cachning.
 
-Information om replikering från författartjänsten till publiceringstjänsten finns [här](/help/operations/replication.md).
+Information om replikering från författartjänsten till publiceringstjänsten finns tillgänglig [här](/help/operations/replication.md).

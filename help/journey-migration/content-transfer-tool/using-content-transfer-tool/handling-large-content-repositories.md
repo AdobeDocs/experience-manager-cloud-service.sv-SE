@@ -1,7 +1,8 @@
 ---
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
-source-git-commit: a6d225943c5d23ebd960fda0b0912a81f1f80014
+exl-id: 21bada73-07f3-4743-aae6-2e37565ebe08
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '1739'
 ht-degree: 0%

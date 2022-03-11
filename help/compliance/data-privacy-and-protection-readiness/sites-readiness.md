@@ -1,6 +1,6 @@
 ---
-title: Dataskydd och dataintegritet - Adobe Experience Manager som Cloud Service Sites Readiness
-description: Läs mer om Adobe Experience Manager som stöd för Cloud Service Sites i de olika dataskydds- och datasekretesreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt.
+title: Dataskydd och dataintegritet - beredskap för Adobe Experience Manager as a Cloud Service webbplatser
+description: Läs mer om Adobe Experience Manager as a Cloud Service Sites support för de olika dataskydds- och datasekretessreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
 exl-id: fdcad111-0cdd-46cc-964c-3f8669ca2030
 source-git-commit: e9c1ec6807f86ab00f89ef292a89a0c8efdf802b
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 1%
 
 ---
 
-# Adobe Experience Manager som Cloud Service Sites Readiness for Data Protection and Data Privacy Regulations {#aem-sites-readiness-for-data-protection-and-data-privacy-regulations}
+# Adobe Experience Manager as a Cloud Service Sites Readiness for Data Protection and Data Privacy Regulations {#aem-sites-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -19,23 +19,23 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
 
-Adobe Experience Manager som Cloud Service Sites är redo att hjälpa kunderna med deras skyldigheter vad gäller dataintegritet och skydd. På den här sidan får kunderna hjälp med hur de hanterar sådana förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.
+Adobe Experience Manager as a Cloud Service Sites är redo att hjälpa kunderna med deras skyldigheter vad gäller datasekretess och skydd. På den här sidan får kunderna hjälp med hur de hanterar sådana förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.
 
 Mer information finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
 
 >[!NOTE]
 >
->Mer information finns i [Adobe Experience Manager som Cloud Service Readiness for Data Protection and Data Privacy Regulations](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md).
+>Se [Adobe Experience Manager as a Cloud Service beredskap för dataskydd och dataintegritet](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md) för mer information.
 
 ## AEM-redigeringsnivå {#aem-author-tier}
 
-Användarkonton och UGC-innehåll på författarservern beskrivs i [AEM Foundation-dokumentationen](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md).
+Användarkonton och UGC-innehåll på författarservern beskrivs i [AEM Foundation-dokumentation](/help/compliance/data-privacy-and-protection-readiness/foundation-readiness.md).
 
 ## AEM-publiceringsnivå {#aem-publish-tier}
 
-Användarkonton som används för att autentisera besökare på webbplatsen och UGC-innehåll på publiceringsservern beskrivs i [AEM Foundation-dokumentationen](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md).
+Användarkonton som används för att autentisera besökare på webbplatsen, och UGC-innehåll på publiceringsservern omfattas av [AEM Foundation-dokumentation](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md).
 
 Som standard lagrar inte AEM Sites-komponenter formulärdata som anges av besökare på publiceringsservern. Vi rekommenderar att du vidarebefordrar data till ett tredjepartssystem eller Adobe Campaign för vidare behandling.
 
@@ -52,9 +52,9 @@ Så här avanmäler du:
 1. Navigera till:
    [Sekretesscenter för Adobe - avanmäl dig](https://www.adobe.com/privacy/opt-out.html)
 
-1. Bläddra nedåt till **Tjänster** - **Experience Cloud användardata för tjänsten**.
+1. Bläddra nedåt till **Tjänster** - **Data om användning av tjänsten Experience Cloud**.
 
-1. Markera den refererade länken; för närvarande **här**.
+1. Markera den refererade länken; för närvarande namngiven **här**.
 
 1. Du kommer att få följande information tillsammans med alternativen för att välja bort eller anmäla dig:
 
@@ -62,26 +62,26 @@ Så här avanmäler du:
 
       Om du tar bort cookien för anmälan eller om du byter dator eller webbläsare måste du avanmäla dig igen.
 
-      Avanmäl dig - Uteslut mig från sessionsaggregering och analys för besökare (installera cookien `amcglobal.sc.omtrdc.net` opt-out) - klicka här.
+      Opt-out - Uteslut mig från sessionsaggregering och analys för besökare (installera `amcglobal.sc.omtrdc.net` opt-out cookie) - Klicka här.
 
-      Opt-in - Include me in visitor session aggregation and analysis (do not install the `amcglobal.sc.omtrdc.net` opt-out cookie) - Click Here.
+      Opt-in - Inkludera mig i sessionsaggregering och analys för besökare (installera inte `amcglobal.sc.omtrdc.net` opt-out cookie) - Klicka här.
    Följ stegen ovan för att komma åt de faktiska länkarna.
 
    >[!NOTE]
    >
-   > Det finns ytterligare en beskrivning i **2. Integritet.** i  [Adobe General Terms of Use](https://www.adobe.com/legal/terms.html).
+   > Det finns ytterligare en beskrivning i **2. Integritet.** i [Adobe allmänna användningsvillkor](https://www.adobe.com/legal/terms.html).
 
 ## Analytics Foundation {#analytics-foundation}
 
 AEM Sites innehåller en valfri integrering med Analytics Foundation som använder funktioner i Adobe Analytics On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Analytics finns i [Adobe Analytics och Dataintegritet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-view-settings.html).
+Mer information om hur du hanterar förfrågningar från registrerade personer gällande Adobe Analytics finns i [Adobe Analytics och dataintegritet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-view-settings.html).
 
 ## Personalization Foundation by Target {#personalization-foundation-by-target}
 
 AEM Sites innehåller en valfri integrering med Personalization Foundation by Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Target finns i [Adobe Target - Privacy and General Data Protection Regulation](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Mer information om hur du hanterar förfrågningar från registrerade personer gällande Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 

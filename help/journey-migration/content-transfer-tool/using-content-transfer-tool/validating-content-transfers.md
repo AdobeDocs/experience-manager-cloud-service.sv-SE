@@ -1,13 +1,13 @@
 ---
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
-source-git-commit: c542b631a94b9fcbda4790ca9ca5a461d104c790
+exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 1%
 
 ---
-
 
 # Verifierar innehållsöverföringar {#validating-content-transfers}
 
@@ -157,7 +157,3 @@ Verifiera genom att välja en sökväg i valideringsrapporten och kontrollera om
 Vissa vägar från extraherings- och intagssammanfattningarna exkluderas för att hålla storleken på dessa filer hanterbar, med målet att kunna beräkna migreringens valideringsresultat inom två timmar efter att intaget har slutförts.
 
 De sökvägar vi för närvarande utesluter från sammanfattningarna är: `cqdam.text.txt` återgivningar, noder i `/home`och noder i `/jcr:system`.
-
-
-
-

@@ -26,17 +26,17 @@ Jämfört med tidigare versioner av AEM finns ramverksstöd inte i Analytics Con
 
 ## Skapa Adobe Analytics-konfigurationen {#analytics-configuration}
 
-1. Navigera till **Verktyg** → **Cloud Services**.
+1. Navigera till **verktyg** → **Cloud Services**.
 2. Välj **Adobe Analytics**.
-   ![Adobe Analytics ](assets/analytics_screen2.png "WindowAdobe Analytics Window")
-3. Välj knappen **Skapa**.
+   ![Adobe Analytics Window](assets/analytics_screen2.png "Adobe Analytics Window")
+3. Välj **Skapa** -knappen.
 4. Fyll i informationen (se nedan) och klicka på **Anslut**.
 
 ### Konfigurationsparametrar {#configuration-parameters}
 
 Konfigurationsfälten som finns i konfigurationsfönstret i Adobe Analytics är:
 
-![Configuration ](assets/properties_field1.png "ParametersConfiguration Parameters")
+![Konfigurationsparametrar](assets/properties_field1.png "Konfigurationsparametrar")
 
 | Egenskap | Beskrivning |
 |---|---|
@@ -44,20 +44,20 @@ Konfigurationsfälten som finns i konfigurationsfönstret i Adobe Analytics är:
 | Användarnamn | Adobe Analytics API-användare |
 | Lösenord | Adobe Analytics-lösenord för autentisering |
 | Datacenter | Adobe Analytics datacenter som ditt konto är kopplat till (server, till exempel San Jose, London) |
-| Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Mer information finns på [den här sidan](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html). |
+| Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Se [den här sidan](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html) om du vill ha mer information. |
 | Rapportsviter | En databas där du skickar data och hämtar rapporter. En rapportsvit definierar den fullständiga, oberoende rapporteringen på en vald webbplats, en uppsättning webbplatser eller en delmängd av webbplatssidor. Du kan visa rapporter som hämtats från en enda rapportserie och kan redigera det här fältet i en konfiguration när som helst enligt dina önskemål. |
 
 ### Lägga till en konfiguration till en plats {#add-configuration}
 
-Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Platser** →**Välj en webbplatssida** → **Egenskaper** → **Avancerat** → **Konfiguration** → Välj konfigurationtenant.
+Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Webbplatser** → **Välj en webbplatssida** → **Egenskaper** → **Avancerat** → **Konfiguration** → välj konfigurationspersonen.
 
 ## Integrera Adobe Analytics på AEM sajter med Adobe Launch {#analytics-launch}
 
 Adobe Analytics kan läggas till som ett tillägg i startegenskapen. Regler kan definieras för mappning och postanrop till Adobe Analytics:
 
-* Titta på [den här videon](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html) om du vill lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
+* Titta [den här videon](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html) om du vill lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
 
-* På [den här sidan](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) finns mer information om hur du skapar regler och skickar data till Adobe Analytics.
+* Se [den här sidan](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html) om du vill ha mer information om hur du skapar regler och skickar data till Adobe Analytics.
 
 >[!NOTE]
 >

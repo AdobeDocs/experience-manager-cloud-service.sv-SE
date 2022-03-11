@@ -5,8 +5,8 @@ landing-page-description: Förstå hur du redigerar och administrerar AEM Sites 
 exl-id: 0fedbd4b-9d6b-40d9-88b7-e7469db420fc
 source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '390'
+ht-degree: 73%
 
 ---
 

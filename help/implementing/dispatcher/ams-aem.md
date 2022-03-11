@@ -1,32 +1,32 @@
 ---
-title: Migrera Dispatcher-konfigurationen från AMS till AEM som Cloud Service
-description: 'Migrera Dispatcher-konfigurationen från AMS till AEM som Cloud Service '
+title: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
+description: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 feature: Dispatcher
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+exl-id: ff7397dd-b6e1-4d08-8e2d-d613af6b81b3
+source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1446'
 ht-degree: 14%
 
 ---
 
-# Migrera Dispatcher-konfigurationen från AMS till AEM som Cloud Service {#Dispatcher-in-the-cloud}
+# Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service {#Dispatcher-in-the-cloud}
 
-## De viktigaste skillnaderna mellan AMS Dispatcher och AEM som en Cloud Service {#main-differences-between-ams-dispatcher-configuration-and-aem-as-a-cloud-service}
+## De viktigaste skillnaderna mellan AMS Dispatcher och AEM as a Cloud Service {#main-differences-between-ams-dispatcher-configuration-and-aem-as-a-cloud-service}
 
-Konfigurationen Apache och Dispatcher i AEM som Cloud Service liknar den i AMS. De viktigaste skillnaderna är:
+Konfigurationen av Apache och Dispatcher i AEM as a Cloud Service liknar den i AMS. De viktigaste skillnaderna är:
 
-* I AEM som Cloud Service kan vissa Apache-direktiv inte användas (till exempel `Listen` eller `LogLevel`)
-* I AEM som Cloud Service kan endast vissa delar av Dispatcher-konfigurationen placeras i inkluderingsfiler och deras namn är viktigt. Filterregler som du vill återanvända på olika värdar måste till exempel läggas i en fil med namnet `filters/filters.any`. Mer information finns på referenssidan.
-* I AEM som Cloud Service finns det extra validering för att förhindra att filterregler skrivs med `/glob` för att förhindra säkerhetsproblem. Eftersom `deny *` kommer att användas i stället för `allow *` (som inte kan användas) har kunderna nytta av att köra Dispatcher lokalt och göra testversionen och felsökningen. Loggarna visar exakt vilka sökvägar Dispatcher-filtren blockerar för att dessa ska kunna läggas till.
+* I AEM as a Cloud Service kan vissa Apache-direktiv inte användas (till exempel `Listen` eller `LogLevel`)
+* På AEM as a Cloud Service kan endast vissa delar av Dispatcher-konfigurationen placeras i inkluderingsfiler och deras namn är viktigt. Du måste till exempel lägga in filterregler som du vill återanvända på olika värdar i en fil som kallas `filters/filters.any`. Mer information finns på referenssidan.
+* På AEM as a Cloud Service finns det extra validering för att inte tillåta filterregler skrivna med `/glob` för att förhindra säkerhetsproblem. Sedan `deny *` används i stället för `allow *` (som inte kan användas), kan kunderna dra nytta av att köra Dispatcher lokalt och göra en testversion och ett fel. Loggarna visar exakt vilka vägar Dispatcher-filtren blockerar för att de ska kunna läggas till.
 
-## Riktlinjer för att migrera dispatcher-konfiguration från AMS till AEM som Cloud Service
+## Riktlinjer för migrering av dispatcher-konfiguration från AMS till AEM as a Cloud Service
 
-Dispatcher-konfigurationsstrukturen har skillnader mellan Managed Services och AEM som en Cloud Service. Nedan visas en steg-för-steg-guide om hur du migrerar från AMS Dispatcher-konfiguration version 2 till AEM som Cloud Service.
+Dispatcher-konfigurationsstrukturen har skillnader mellan Managed Services och AEM as a Cloud Service. Nedan visas en steg-för-steg-guide om hur du migrerar från AMS Dispatcher-konfiguration version 2 till AEM as a Cloud Service.
 
 ## Konvertera en AMS till en AEM som en Dispatcher-konfiguration för molntjänster
 
-I följande avsnitt ges stegvisa instruktioner för hur du konverterar en AMS-konfiguration. Det förutsätter
-att du har ett arkiv med en struktur som liknar den som beskrivs i [Cloud Manager Dispatcher configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
+I följande avsnitt ges stegvisa instruktioner för hur du konverterar en AMS-konfiguration. Det förutsätter att du har ett arkiv med en struktur som liknar den som beskrivs i [Dispatcher-konfiguration för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
 
 ### Extrahera arkivet och ta bort ett eventuellt prefix
 
@@ -35,13 +35,12 @@ Extrahera arkivet till en mapp och se till att de omedelbara undermapparna börj
 
 ### Ta bort oanvända undermappar och filer
 
-Ta bort undermappar `conf` och `conf.modules.d`, samt filer som matchar `conf.d/*.conf`.
+Ta bort undermappar `conf` och `conf.modules.d`samt filer som matchar `conf.d/*.conf`.
 
 ### Ta bort alla virtuella värdar som inte är publicerade 
 
 Ta bort alla virtuella värdfiler i `conf.d/enabled_vhosts` som har `author`, `unhealthy`, `health`,
-`lc` eller `flush` i namnet. Alla virtuella värdfiler i `conf.d/available_vhosts` som inte
-som är länkade till kan också tas bort.
+`lc` eller `flush` i namnet. Alla virtuella värdfiler i `conf.d/available_vhosts` som inte är länkade till kan också tas bort.
 
 ### Ta bort eller kommentera virtuell värd-sektioner som inte refererar till port 80
 
@@ -57,45 +56,38 @@ ska du ta bort eller kommentera dem. Programsatser i de här avsnitten bearbetas
 
 ### Kontrollera återskrivningar
 
-Ange katalogen `conf.d/rewrites`.
+Ange katalog `conf.d/rewrites`.
 
-Ta bort alla filer med namnen `base_rewrite.rules` och `xforwarded_forcessl_rewrite.rules` och kom ihåg att
-ta bort `Include`-satser i de virtuella värdfilerna som refererar till dem.
+Ta bort alla namngivna filer `base_rewrite.rules` och `xforwarded_forcessl_rewrite.rules` och kom ihåg att ta bort `Include` programsatser i de virtuella värdfilerna som refererar till dem.
 
-Om `conf.d/rewrites` nu innehåller en enda fil bör namnet på den ändras till `rewrite.rules` och inte
-Glöm inte att anpassa `Include`-programsatserna som refererar till den filen i de virtuella värdfilerna också.
+If `conf.d/rewrites` innehåller nu en enda fil, den bör byta namn till `rewrite.rules` och glöm inte att anpassa `Include` -programsatser som refererar till den filen även i den virtuella värdfilen.
 
-Om mappen emellertid innehåller flera, virtuella värdspecifika filer bör innehållet i dem vara
-kopieras till `Include`-satsen som refererar till dem i de virtuella värdfilerna.
+Om mappen däremot innehåller flera, virtuella värdspecifika filer, ska innehållet kopieras till `Include` -programsats som refererar till dem i de virtuella värdfilerna.
 
 ### Kontrollera variabler
 
-Ange katalogen `conf.d/variables`.
+Ange katalog `conf.d/variables`.
 
-Ta bort en fil med namnet `ams_default.vars` och kom ihåg att ta bort `Include`-satser i den virtuella
-värdfiler som refererar till dem.
+Ta bort alla namngivna filer `ams_default.vars` och kom ihåg att ta bort `Include` programsatser i de virtuella värdfilerna som refererar till dem.
 
-Om `conf.d/variables` nu innehåller en enda fil bör namnet på den ändras till `custom.vars` och inte
-Glöm inte att anpassa `Include`-programsatserna som refererar till den filen i de virtuella värdfilerna också.
+If `conf.d/variables` innehåller nu en enda fil, den bör byta namn till `custom.vars` och glöm inte att anpassa `Include` -programsatser som refererar till den filen även i den virtuella värdfilen.
 
-Om mappen emellertid innehåller flera, virtuella värdspecifika filer bör innehållet i dem vara
-kopieras till `Include`-satsen som refererar till dem i de virtuella värdfilerna.
+Om mappen däremot innehåller flera, virtuella värdspecifika filer, ska innehållet kopieras till `Include` -programsats som refererar till dem i de virtuella värdfilerna.
 
 ### Ta bort tillåtelselista
 
-Ta bort mappen `conf.d/whitelists` och ta bort `Include`-satser i de virtuella värdfilerna som refererar till
-en fil i den undermappen.
+Ta bort mappen `conf.d/whitelists` och ta bort `Include` programsatser i den virtuella värdfilen som refererar till en fil i den undermappen.
 
 ### Ersätt alla variabler som inte längre är tillgängliga
 
 I alla virtuell värd-filer:
 
-Byt namn på `PUBLISH_DOCROOT` till `DOCROOT`
-Ta bort avsnitt som refererar till variabler med namnen `DISP_ID`, `PUBLISH_FORCE_SSL` eller `PUBLISH_WHITELIST_ENABLED`
+Byt namn `PUBLISH_DOCROOT` till `DOCROOT`
+Ta bort avsnitt som refererar till variabler med namnet `DISP_ID`, `PUBLISH_FORCE_SSL` eller `PUBLISH_WHITELIST_ENABLED`
 
 ### Kontrollera status genom att köra valideraren
 
-Kör Dispatcher-valideraren i din katalog med underkommandot `httpd`:
+Kör Dispatcher-valideraren i din katalog med `httpd` underkommando:
 
 ```
 $ validator httpd .
@@ -107,41 +99,32 @@ Om Apache-direktiv som inte är tillåtslista visas tar du bort dem.
 
 ### Ta bort alla icke-publicerade servergrupper
 
-Ta bort alla servergruppsfiler i `conf.dispatcher.d/enabled_farms` som har `author`, `unhealthy`, `health`,
-`lc` eller `flush` i namnet. Alla servergruppsfiler i `conf.dispatcher.d/available_farms` som inte
-som är länkade till kan också tas bort.
+Ta bort en servergruppsfil i `conf.dispatcher.d/enabled_farms` som har `author`, `unhealthy`, `health`,
+`lc` eller `flush` i namnet. Alla gruppfiler i `conf.dispatcher.d/available_farms` som inte är länkade till kan också tas bort.
 
 ### Byta namn på servergruppsfiler
 
-Alla grupper i `conf.d/enabled_farms` måste byta namn för att matcha mönstret `*.farm`, så t.ex. a
-servergruppsfilen `customerX_farm.any` ska byta namn på `customerX.farm`.
+Alla gårdar i `conf.d/enabled_farms` måste byta namn för att matcha mönstret `*.farm`, t.ex. en servergruppsfil som kallas `customerX_farm.any` ska byta namn `customerX.farm`.
 
 ### Kontrollera cache
 
-Ange katalogen `conf.dispatcher.d/cache`.
+Ange katalog `conf.dispatcher.d/cache`.
 
 Ta bort alla filer som har prefixet `ams_`.
 
-Om `conf.dispatcher.d/cache` nu är tomt kopierar du filen `conf.dispatcher.d/cache/rules.any`
-från standardkonfigurationen för Dispatcher till den här mappen. Standardutskickaren
-finns i mappen `src` för denna SDK. Glöm inte att anpassa
-`$include`-satser som refererar till regelfilerna `ams_*_cache.any` i servergruppsfilerna
-också.
+If `conf.dispatcher.d/cache` är nu tomt, kopiera filen `conf.dispatcher.d/cache/rules.any`
+från standardkonfigurationen för Dispatcher till den här mappen. Standardkonfigurationen för Dispatcher finns i mappen `src` av denna SDK. Glöm inte att anpassa
+`$include` programsatser som refererar till `ams_*_cache.any` regelfiler i servergruppsfilerna också.
 
-Om i stället `conf.dispatcher.d/cache` nu innehåller en enda fil med suffixet `_cache.any`,
-det ska byta namn till `rules.any` och glöm inte att anpassa `$include`-programsatserna
-även referera till den filen i servergruppsfilerna.
+Om i stället `conf.dispatcher.d/cache` innehåller nu en enda fil med suffix `_cache.any`bör namnet ändras till `rules.any` och glöm inte att anpassa `$include` programsatser som refererar till den filen i servergruppsfilerna också.
 
-Om mappen däremot innehåller flera, gruppspecifika filer med det mönstret, kommer deras innehåll att
-ska kopieras till `$include`-satsen som refererar till dem i servergruppsfilerna.
+Om mappen emellertid innehåller flera servergruppsspecifika filer med det mönstret, bör innehållet kopieras till `$include` programsats som refererar till dem i servergruppsfilerna.
 
 Ta bort alla filer som har suffixet `_invalidate_allowed.any`.
 
-Kopiera filen `conf.dispatcher.d/cache/default_invalidate_any` från standardvärdet
-AEM i Cloud Dispatcher-konfigurationen till den platsen.
+Kopiera filen `conf.dispatcher.d/cache/default_invalidate_any` från AEM i Cloud Dispatcher-konfigurationen till den platsen.
 
-I varje servergruppsfil tar du bort allt innehåll i `cache/allowedClients`-avsnittet och ersätter det
-med:
+I varje gruppfil tar du bort allt innehåll i `cache/allowedClients` och ersätta den med
 
 ```
 $include "../cache/default_invalidate.any"
@@ -149,19 +132,15 @@ $include "../cache/default_invalidate.any"
 
 ### Kontrollera klientrubriker
 
-Ange katalogen `conf.dispatcher.d/clientheaders`.
+Ange katalog `conf.dispatcher.d/clientheaders`.
 
 Ta bort alla filer som har prefixet `ams_`.
 
-Om `conf.dispatcher.d/clientheaders` nu innehåller en enda fil med suffixet `_clientheaders.any`,
-det ska byta namn till `clientheaders.any` och glöm inte att anpassa `$include`-programsatserna
-även referera till den filen i servergruppsfilerna.
+If `conf.dispatcher.d/clientheaders` innehåller nu en enda fil med suffix `_clientheaders.any`bör namnet ändras till `clientheaders.any` och glöm inte att anpassa `$include` programsatser som refererar till den filen i servergruppsfilerna också.
 
-Om mappen däremot innehåller flera, gruppspecifika filer med det mönstret, kommer deras innehåll att
-ska kopieras till `$include`-satsen som refererar till dem i servergruppsfilerna.
+Om mappen emellertid innehåller flera servergruppsspecifika filer med det mönstret, bör innehållet kopieras till `$include` programsats som refererar till dem i servergruppsfilerna.
 
-Kopiera filen `conf.dispatcher/clientheaders/default_clientheaders.any` från standardvärdet
-AEM som en Cloud Service Dispatcher-konfiguration till den platsen.
+Kopiera filen `conf.dispatcher/clientheaders/default_clientheaders.any` från standardkonfigurationen AEM as a Cloud Service Dispatcher till den platsen.
 
 Ersätt alla inkluderingssatser för klienthuvuden i varje servergruppsfil som ser ut så här:
 
@@ -178,19 +157,16 @@ $include "../clientheaders/default_clientheaders.any"
 
 ### Kontrollera filter
 
-Ange katalogen `conf.dispatcher.d/filters`.
+Ange katalog `conf.dispatcher.d/filters`.
 
 Ta bort alla filer som har prefixet `ams_`.
 
-Om `conf.dispatcher.d/filters` nu innehåller en enda fil bör namnet ändras till
-`filters.any` och glöm inte att anpassa `$include`-programsatserna som refererar till det
-i servergruppsfilerna också.
+If `conf.dispatcher.d/filters` innehåller nu en enda fil som namnet ska ändras till
+`filters.any` och glöm inte att anpassa `$include` programsatser som refererar till den filen i servergruppsfilerna också.
 
-Om mappen däremot innehåller flera, gruppspecifika filer med det mönstret, kommer deras innehåll att
-ska kopieras till `$include`-satsen som refererar till dem i servergruppsfilerna.
+Om mappen emellertid innehåller flera servergruppsspecifika filer med det mönstret, bör innehållet kopieras till `$include` programsats som refererar till dem i servergruppsfilerna.
 
-Kopiera filen `conf.dispatcher/filters/default_filters.any` från standardvärdet
-AEM som en Cloud Service Dispatcher-konfiguration till den platsen.
+Kopiera filen `conf.dispatcher/filters/default_filters.any` från standardkonfigurationen AEM as a Cloud Service Dispatcher till den platsen.
 
 Ersätt eventuella filter med programsatser som ser ut så här i varje servergruppsfil:
 
@@ -206,15 +182,13 @@ $include "../filters/default_filters.any"
 
 ### Kontrollera återgivningar
 
-Ange katalogen `conf.dispatcher.d/renders`.
+Ange katalog `conf.dispatcher.d/renders`.
 
 Ta bort alla filer i den mappen.
 
-Kopiera filen `conf.dispatcher.d/renders/default_renders.any` från standardvärdet
-AEM som en Cloud Service Dispatcher-konfiguration till den platsen.
+Kopiera filen `conf.dispatcher.d/renders/default_renders.any` från standardkonfigurationen AEM as a Cloud Service Dispatcher till den platsen.
 
-I varje servergruppsfil tar du bort allt innehåll i `renders`-avsnittet och ersätter det
-med:
+I varje gruppfil tar du bort allt innehåll i `renders` och ersätta den med
 
 ```
 $include "../renders/default_renders.any"
@@ -222,19 +196,16 @@ $include "../renders/default_renders.any"
 
 ### Kontrollera virtuella värdar
 
-Byt namn på katalogen `conf.dispatcher.d/vhosts` till `conf.dispatcher.d/virtualhosts` och ange den.
+Byta namn på katalogen `conf.dispatcher.d/vhosts` till `conf.dispatcher.d/virtualhosts` och ange det.
 
 Ta bort alla filer som har prefixet `ams_`.
 
-Om `conf.dispatcher.d/virtualhosts` nu innehåller en enda fil bör namnet ändras till
-`virtualhosts.any` och glöm inte att anpassa `$include`-programsatserna som refererar till det
-i servergruppsfilerna också.
+If `conf.dispatcher.d/virtualhosts` innehåller nu en enda fil som namnet ska ändras till
+`virtualhosts.any` och glöm inte att anpassa `$include` programsatser som refererar till den filen i servergruppsfilerna också.
 
-Om mappen däremot innehåller flera, gruppspecifika filer med det mönstret, kommer deras innehåll att
-ska kopieras till `$include`-satsen som refererar till dem i servergruppsfilerna.
+Om mappen emellertid innehåller flera servergruppsspecifika filer med det mönstret, bör innehållet kopieras till `$include` programsats som refererar till dem i servergruppsfilerna.
 
-Kopiera filen `conf.dispatcher/virtualhosts/default_virtualhosts.any` från standardvärdet
-AEM som en Cloud Service Dispatcher-konfiguration till den platsen.
+Kopiera filen `conf.dispatcher/virtualhosts/default_virtualhosts.any` från standardkonfigurationen AEM as a Cloud Service Dispatcher till den platsen.
 
 Ersätt eventuella filter med programsatser som ser ut så här i varje servergruppsfil:
 
@@ -250,7 +221,7 @@ $include "../virtualhosts/default_virtualhosts.any"
 
 ### Kontrollera status genom att köra valideraren
 
-Kör AEM som en Cloud Service Dispatcher-validerare i din katalog med underkommandot `dispatcher`:
+Kör AEM as a Cloud Service Dispatcher-valideraren i din katalog med `dispatcher` underkommando:
 
 ```
 $ validator dispatcher .
@@ -264,9 +235,7 @@ Alla andra fel finns i felsökningsavsnittet i dokumentationen för valideringsv
 
 ### Testa konfigurationen med en lokal distribution (kräver installation av Docker)
 
-Om du använder skriptet `docker_run.sh` i AEM som Cloud Service Dispatcher Tools kan du testa att
-din konfiguration inte innehåller något annat fel som bara skulle visas i
-distribution:
+Använda skriptet `docker_run.sh` I AEM as a Cloud Service Dispatcher Tools kan du testa att din konfiguration inte innehåller några andra fel som bara skulle visas i distributionen:
 
 ### Steg 1: Generera distributionsinformation med valideraren
 
@@ -278,8 +247,7 @@ Detta validerar den fullständiga konfigurationen och genererar distributionsinf
 
 ### Steg 2: Starta Dispatcher i en dockningsbild med den distributionsinformationen
 
-När AEM publiceringsserver körs på din macOS-dator, lyssnar på port 4503,
-Du kan köra Dispatcher framför den servern enligt följande:
+När AEM publiceringsserver körs på din macOS-dator och lyssnar på port 4503 kan du köra Dispatcher framför den servern enligt följande:
 
 ```
 $ docker_run.sh out docker.for.mac.localhost:4503 8080
@@ -289,9 +257,6 @@ Detta startar behållaren och visar Apache på den lokala porten 8080.
 
 ### Använd din nya Dispatcher-konfiguration
 
-Grattis! Om valideraren inte längre rapporterar något problem och
-dockningsbehållaren startas utan fel eller varningar. Du är
-redo att flytta konfigurationen till en `dispatcher/src`-underkatalog
-av din Git-databas.
+Grattis! Om valideraren inte längre rapporterar något problem och dockningsbehållaren startar utan fel eller varningar är du redo att flytta konfigurationen till en `dispatcher/src` underkatalog till din Git-databas.
 
 **Kunder som använder AMS Dispatcher-konfiguration version 1 bör kontakta kundsupport för att hjälpa dem att migrera från version 1 till version 2 så att instruktionerna ovan kan följas.**

@@ -1,14 +1,13 @@
 ---
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
-translation-type: tm+mt
-source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
+exl-id: 6e5c7f14-c980-48e3-8bdd-a7ec10a9e680
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '622'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # Sidskillnader {#page-diff}
 
@@ -20,18 +19,18 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 
 >[!NOTE]
 >
->Användaren måste ha behörigheten **Modify/Create/Delete** på noden `/content/versionhistory` för att kunna använda funktionen.
+>Användaren måste ha **Ändra/skapa/ta bort** behörighet på noden `/content/versionhistory` för att använda funktionen.
 >
->Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/implementing/developing/introduction/page-diff.md#operation-details).
+>Se [Developing and Page Diff](/help/implementing/developing/introduction/page-diff.md#operation-details) om du vill ha mer teknisk information om den här funktionen.
 
-## Använd {#use}
+## Användning {#use}
 
 Diff:en sida vid sida kan jämföra:
 
-* [Versioner](/help/sites-cloud/authoring/features/page-versions.md#comparing-a-version-with-current-page)  - Tidigare version av en sida med det aktuella läget
-* [Live-kopior](/help/sites-cloud/administering/msm/creating-live-copies.md#comparing-a-live-copy-page-with-a-blueprint-page)  - Live Copy med utkast
-* [Startar](/help/sites-cloud/authoring/launches/editing.md#comparing-a-launch-page-to-its-source-page)  - Starta med dess källa
-* [Språkkopior](/help/sites-cloud/administering/translation/managing-projects.md#comparing-language-copies)  - En sida före och efter (re-)översättning
+* [Versioner](/help/sites-cloud/authoring/features/page-versions.md#comparing-a-version-with-current-page) - Tidigare version av en sida med det aktuella läget
+* [Live-kopior](/help/sites-cloud/administering/msm/creating-live-copies.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live Copy med utkast
+* [Startar](/help/sites-cloud/authoring/launches/editing.md#comparing-a-launch-page-to-its-source-page) - Starta med källan
+* [Språkkopior](/help/sites-cloud/administering/translation/managing-projects.md#comparing-language-copies) - En sida före och efter (re-)översättning
 
 Läs respektive avsnitt om hur du påbörjar skillnaderna i dessa sammanhang.
 
@@ -48,23 +47,23 @@ Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webblä
 
 ![Versioner sida vid sida](/help/sites-cloud/authoring/assets/versions-side-by-side.png)
 
-Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som har ändrats markeras med olika färger.
+Skillnaden identifierar ändringar på komponentnivå och HTML. Objekt som har ändrats markeras med olika färger.
 
 **Komponentändringar**
 
 * Ljusgrön - komponent tillagd
 * Rosa - komponent borttagen
 
-**HTML-ändringar**
+**Ändringar i HTML**
 
-* Mörkgrön - HTML tillagd
-* Röd - HTML borttagen
+* Mörkgrön - tillagd HTML
+* Röd - HTML har tagits bort
 
 >[!NOTE]
 >
 >När du jämför språkkopior inaktiveras markering, eftersom i en översättning ändras allt och markering inte har någon fördel.
 
-### Helskärm och Avslutar {#fullscreen-and-exiting}
+### Helskärm och avslutande {#fullscreen-and-exiting}
 
 Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen för endera&quot;sidan&quot; av diff:n för att förstora den till hela webbläsarfönstret.
 
@@ -91,7 +90,7 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 * När olika versioner och starter används inte dynamiska komponenter som vägbeskrivningar, menyer, produktlistor eller logotyper (komponenter som är beroende av webbplatsstrukturen för att återge sitt innehåll).
 * För versioner återskapar inte diff åtkomstkontrollprincipen och Live copy-relationen.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
-   * Om du får problem med en skillnad kontrollerar du [tidslinjen](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
+   * Om du får problem med en skillnad ska du kontrollera [Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) för att se om sidan har flyttats.
 
 >[!NOTE]
 >
@@ -99,4 +98,4 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 >[!NOTE]
 >
->Mer information om hur sidskillnader fungerar och om begränsningar som kan påverka sidskillnader finns i [utvecklardokumentationen](/help/implementing/developing/introduction/page-diff.md) för den här funktionen.
+>Mer information om hur sidskillnader fungerar samt om begränsningar som kan påverka sidskillnader finns i [dokumentation för utvecklare](/help/implementing/developing/introduction/page-diff.md) av den här funktionen.

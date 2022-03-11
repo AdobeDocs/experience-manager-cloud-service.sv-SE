@@ -1,14 +1,13 @@
 ---
 title: Konfigurerar din kontomiljö
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
-translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+exl-id: 1b948f0b-85b9-478a-8b7e-61495c1d57b6
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 4%
 
 ---
-
 
 # Konfigurerar din kontomiljö {#configuring-your-account-environment}
 
@@ -16,11 +15,11 @@ AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författ
 
 Med alternativet [Användare](#user-settings) i [sidhuvudet](/help/sites-cloud/authoring/getting-started/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
 
-Börja med att gå till alternativet [Användare](#user-settings) i rubriken.
+Börja med att gå till [Användare](#user-settings) i sidhuvudet.
 
 ## Användarinställningar {#user-settings}
 
-Dialogrutan **Användare**-inställningar ger dig tillgång till:
+The **Användare** dialogrutan ger dig tillgång till:
 
 * Personifiera som
    * Med funktionen Personifiera som kan en användare arbeta för en annan användares räkning. <!--With the [Impersonate as](/help/sites-administering/security.md#impersonating-another-user) functionality, a user can work on behalf of another user.-->
@@ -33,7 +32,7 @@ Dialogrutan **Användare**-inställningar ger dig tillgång till:
 
 ### Mina inställningar {#my-preferences}
 
-Dialogrutan **Mina inställningar** är tillgänglig via alternativet [Användare](#user-settings) i sidhuvudet.
+The **Mina inställningar** öppnas via [Användare](#user-settings) i sidhuvudet.
 
 Varje användare kan ange vissa egenskaper för sig själv.
 
@@ -47,7 +46,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
    Detta definierar beteendet för att öppna fönster. Välj något av följande:
 
-   * **Flera fönster**  (standard)
+   * **Flera fönster** (Standard)
 
       * Sidorna öppnas i ett nytt fönster.
    * **Ett fönster**
@@ -94,4 +93,4 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Stock-konfiguration**
 
-   Med det här alternativet kan du ange den önskade Adobe Stock-konfigurationen och det är bara tillgängligt om systemadministratören har aktiverat [Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md).
+   Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md).

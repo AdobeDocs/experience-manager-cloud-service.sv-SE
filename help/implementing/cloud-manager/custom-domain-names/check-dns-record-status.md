@@ -13,21 +13,21 @@ ht-degree: 0%
 
 Du kan avgöra om ditt domännamn matchar din AEM as a Cloud Service webbplats genom att klicka på statusikonen för DNS-posten i tabellen på sidan Domäninställningar.
 
-Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn först verifieras och distribueras. För efterföljande försök måste du aktivt välja ikonen **resolve igen** bredvid statusen.
+Cloud Manager utlöser automatiskt en DNS-sökning när ditt anpassade domännamn verifieras och distribueras. För efterföljande försök måste du aktivt välja **lös igen** -ikonen bredvid statusen.
 
 Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av följande statusmeddelanden:
 
-* **DNS-status**
-upptäcktes inte DNS-status kommer inte att identifieras förrän det anpassade domännamnet har verifierats och distribuerats. Den här statusen visas även när ditt anpassade domännamn håller på att tas bort.
+* **DNS-status kunde inte hittas**
+DNS-status kommer inte att identifieras förrän ditt anpassade domännamn har verifierats och distribuerats. Den här statusen visas även när ditt anpassade domännamn håller på att tas bort.
 
-* **DNS-matchningen**
-är felaktig Detta indikerar att konfigurationen av DNS-poster inte har matchats/pekats över än eller är felaktig.
+* **DNS-matchningen är felaktig**
+Detta indikerar att konfigurationen av antingen DNS-poster inte har lösts/pekats över än eller är felaktig.
 
    >[!NOTE]
-   >Du måste konfigurera antingen en `CNAME` eller `A-record` genom att följa motsvarande instruktioner. Mer information finns i Konfigurera DNS-inställningar. När du är klar måste du välja ikonen **lös igen** bredvid statusen.
+   >Du måste konfigurera en `CNAME` eller `A-record` genom att följa motsvarande instruktioner. Mer information finns i Konfigurera DNS-inställningar. När du är klar måste du välja **lös igen** -ikonen bredvid statusen.
 
-* **DNS-matchning**
-pågår. Den här statusen visas vanligtvis när du har valt ikonen&quot;lös igen&quot; bredvid statusen.
+* **DNS-matchning pågår**
+Upplösning pågår. Den här statusen visas vanligtvis när du har valt ikonen&quot;lös igen&quot; bredvid statusen.
 
-* **DNS-matchningen**
-är korrektDNS-inställningarna är korrekt konfigurerade. Din webbplats betjänar besökare.
+* **DNS-matchningar korrekt**
+DNS-inställningarna är korrekt konfigurerade. Din webbplats betjänar besökare.

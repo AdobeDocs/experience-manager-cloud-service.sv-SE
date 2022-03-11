@@ -206,7 +206,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 
 Testerna ibland måste överföra filer till det program som testas. För att driftsättningen av Selenium ska vara flexibel i förhållande till dina tester är det inte möjligt att ladda upp en resurs direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
 
-1. Överför filen på den URL som anges av `UPLOAD_URL` systemvariabel.
+1. Överför filen på den URL som anges av `UPLOAD_URL` miljövariabel.
    * Överföringen måste utföras i en POST med ett multipart-formulär.
    * Multipart-formuläret måste ha ett enda filfält.
    * Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`.

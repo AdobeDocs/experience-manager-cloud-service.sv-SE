@@ -1,13 +1,13 @@
 ---
 title: Panoramabilder
 description: Lär dig hur du arbetar med panoramabilder i Dynamic Media.
-feature: Panoramabilder
+feature: Panoramic Images
 role: User
 exl-id: bdc5d00e-fa92-4db5-a3b2-4dd5885eec0b
 source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 16%
+source-wordcount: '147'
+ht-degree: 15%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 I det här avsnittet beskrivs hur du arbetar med visningsprogrammet för panoramabilder för att återge sfäriska panoramabilder så att du får en totalupplevelse på 360° i ett rum, en egenskap, en plats eller ett landskap.
 
-Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
+Se även [Hantera förinställningar för visningsprogram](/help/assets/dynamic-media/managing-viewer-presets.md).
 
 ![panoramabild2](assets/panoramic-image2.png)
 
@@ -27,11 +27,11 @@ För att en överförd resurs ska kvalificeras som en sfärisk panoramabild som 
 
 <!--  You can override the default aspect ratio setting of 2 in CRXDE Lite at the following:
   `/conf/global/settings/cloudconfigs/dmscene7/jcr:content` -->
-* Taggad med nyckelorden `equirectangular`, `spherical`och `panorama`, eller `spherical` och `panoramic`. Se [Använd taggar](/help/sites-cloud/authoring/features/tags.md).
+* Taggad med nyckelorden `equirectangular`, eller `spherical`och `panorama`, eller `spherical` och `panoramic`. Se [Använd taggar](/help/sites-cloud/authoring/features/tags.md).
 
 Kriterierna för proportioner och nyckelord gäller även för panoramaresurser på sidan med resursinformation och för komponenten `Panoramic Media` i innehållshanteringssystemet.
 
-Information om hur du överför resurser som ska användas med panoramabildsvisningsprogrammet finns i [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
+Information om hur du överför resurser som ska användas med visningsprogrammet för panoramabilder finns i [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
 
 <!--  NEED TO CHECK IF DM CLASSIC PART OF SKYLINE 
 

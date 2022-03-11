@@ -1,13 +1,13 @@
 ---
 title: Bevilja åtkomst till klientutvecklaren
 description: Anlita gränssnittsutvecklare i Cloud Manager så att de får tillgång till era AEM och er pipeline.
-source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
+exl-id: 58e95c92-b859-4bb9-aa62-7766510486fd
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 0%
 
 ---
-
 
 # Bevilja åtkomst till klientutvecklaren {#grant-fed-access}
 
@@ -105,5 +105,3 @@ Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom at
 Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebbplats genom att granska dokumentet [Hämta användaruppgifter för frontendutvecklare,](retrieve-access.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
 
 * [Onboarding Journey](/help/journey-onboarding/home.md) - Den här guiden fungerar som en startpunkt för att säkerställa att era team är konfigurerade och har tillgång till AEM as a Cloud Service.
-
-

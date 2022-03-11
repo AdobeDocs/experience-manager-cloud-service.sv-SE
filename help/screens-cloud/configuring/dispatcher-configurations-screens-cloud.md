@@ -1,21 +1,21 @@
 ---
 title: Dispatcher Configurations in Screens as a Cloud Service
-description: På den här sidan beskrivs Dispatcher Configurations in Screens som en Cloud Service.
-source-git-commit: b00fd1e3826a7d0b0a4bf80b002fffda8f3983d0
+description: På den här sidan beskrivs Dispatcher Configurations in Screens as a Cloud Service.
+exl-id: cc04b480-9310-4975-a7c2-20682c567fa4
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
-
 # Dispatcher Configurations in Screens as a Cloud Service {#dispatcher-configurations-screens-cloud}
 
-I det här avsnittet beskrivs dispatcherkonfigurationerna för skärmar som en Cloud Service.
+I det här avsnittet beskrivs dispatcherkonfigurationerna för as a Cloud Service skärmar.
 
-## Lägga till filter och cacheregler i Dispatcher för skärmar som en Cloud Service-distribution {#deployment}
+## Lägga till filter och cacheregler i Dispatcher för as a Cloud Service distribution av skärmar {#deployment}
 
-Tillåt följande filter och cacheregler i utskickare för publiceringsinstanserna på skärmar som en Cloud Service.
+Tillåt följande filter och cacheregler i utskickare för publiceringsinstanserna på as a Cloud Service Skärmar.
 
 ### AEM Screens Filters {#filters}
 
@@ -32,12 +32,12 @@ Tillåt följande filter och cacheregler i utskickare för publiceringsinstanser
 
 ### Cache-regler {#cache-rules}
 
-* Lägg till `/statfileslevel "10"` i `/cache`-avsnittet i `publish_farm.any`/.
+* Lägg till `/statfileslevel "10"` till `/cache` avsnitt i `publish_farm.any`/.
 
    >[!NOTE]
    >Den här cacheregeln stöder cachelagring av upp till 10 nivåer från cachedokumentroten och gör innehållet ogiltigt när innehållet publiceras i stället för att göra allt ogiltigt. Du kan ändra den här nivån baserat på hur detaljerad innehållsstrukturen är.
 
-* Lägg till följande i `/invalidate`-avsnittet i `publish_farm.any`.
+* Lägg till följande i `/invalidate` avsnitt i `publish_farm.any`.
 
    ```
    /0003 {
@@ -46,7 +46,7 @@ Tillåt följande filter och cacheregler i utskickare för publiceringsinstanser
    }
    ```
 
-* Lägg till följande regler i `/rules`-avsnittet i `/cache` i publish_farm.any eller i en fil som inkluderas från `publish_farm.any`.
+* Lägg till följande regler i `/rules` avsnitt i `/cache` i publish_farm.any eller in a file that&#39;s included from `publish_farm.any`.
 
    ```
    ## Allow Dispatcher Cache for Screens channels

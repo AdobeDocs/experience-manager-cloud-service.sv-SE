@@ -1,14 +1,13 @@
 ---
 title: Marknadsföra Launches
-description: 'Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar. '
-translation-type: tm+mt
-source-git-commit: 645d25753e4baa03ba4df0645a266b793ec64a49
+description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar.
+exl-id: 5f5ed17c-43db-4ef6-ab79-c491326fa01c
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 1%
 
 ---
-
 
 # Marknadsföra Launches {#promoting-launches}
 
@@ -21,41 +20,39 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 
 >[!NOTE]
 >
->När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktion**-sidorna som en enhet (för att göra processen snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM arbetsflöde](#processing-promoted-pages-using-aem-workflow).
+>När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktion** sidor som en enhet (för att göra processen snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM](#processing-promoted-pages-using-aem-workflow).
 
 >[!CAUTION]
 >
->En enstaka programstart kan inte befordras samtidigt. Detta innebär att två befordra åtgärder vid samma start samtidigt kan resultera i ett fel - `Launch could not be promoted` (tillsammans med konfliktfel i loggen).
+>En enstaka programstart kan inte befordras samtidigt. Det innebär att två befordra åtgärder samtidigt vid samma programstart kan resultera i ett fel - `Launch could not be promoted` (tillsammans med konfliktfel i loggen).
 
 >[!CAUTION]
 >
->När du befordrar starter för *ändrade* sidor beaktas ändringar i både käll- och startgrenarna.
+>När du befordrar starter för *ändrad* sidor, ändringar i både käll- och startgrenarna beaktas.
 
-## Markerar startsidor {#promoting-launch-pages}
+## Marknadsför startsidor {#promoting-launch-pages}
 
 >[!NOTE]
 >
 >Detta omfattar den manuella åtgärden att marknadsföra startsidor när det bara finns en startnivå. Se:
 >
->* [Befordra en kapslad ](#promoting-a-nested-launch) start när det finns mer än en start i strukturen.
->* [Startar - Ordning för ](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events) evenemang för mer information om automatisk befordran och publicering.
-
+>* [Befordra en kapslad start](#promoting-a-nested-launch) när det finns mer än en start i strukturen.
+>* [Startar - ordningen för händelser](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events) om du vill ha mer information om automatiska kampanjer och publiceringar.
 >
 
 
-
-Du kan befordra starter från antingen konsolen **Platser** eller konsolen **Startar**:
+Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 
 1. Öppna:
-   * Konsolen **Platser** när du navigerar på källsidor:
-      1. Öppna [referenslinjen](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references) och välj önskad källsida med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md) (eller markera och öppna referenslinjen, ordningen är inte viktig). Alla referenser visas.
-      1. Välj **Startar** (t.ex. Startar (1)) för att visa en lista över specifika starter.
+   * The **Webbplatser** konsol vid navigering på källsidor:
+      1. Öppna [referenser, räl](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references) och välj en källsida med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md) (eller markera och öppna referenslinjen är ordningen inte viktig). Alla referenser visas.
+      1. Välj **Startar** (t.ex. Launches (1)) för att visa en lista över specifika starter.
       1. Välj den specifika starten för att visa tillgängliga åtgärder.
-      1. Välj **Befordra start** för att öppna guiden.
-   * Konsolen **Platser** vid navigering till startsidor:
+      1. Välj **Befordra lansering** för att öppna guiden.
+   * The **Webbplatser** konsol vid navigering på startsidor:
       1. Välj önskad startsida med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md).
-      1. Åtgärden **Befordra** är tillgänglig i verktygsfältet.
-   * **Startar**-konsolen:
+      1. The **Befordra** kommer att vara tillgängligt i verktygsfältet.
+   * The **Startar** konsol:
       1. Välj start (tryck/klicka på miniatyrbilden).
       1. Välj **Befordra**.
 1. I det första steget kan du ange:
@@ -64,7 +61,7 @@ Du kan befordra starter från antingen konsolen **Platser** eller konsolen **Sta
    * **Omfång**
       * **Befordra en fullständig lansering**
       * **Befordra ändrade sidor**
-      * **Befordra godkända sidor**  - beroende på arbetsflödet för godkännande vid start
+      * **Befordra godkända sidor** - beroende av arbetsflödet för godkännande vid start
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
 
@@ -82,9 +79,9 @@ Du kan befordra starter från antingen konsolen **Platser** eller konsolen **Sta
 
 1. Välj **Befordra**.
 
-## Befordra startsidor vid redigering av {#promoting-launch-pages-when-editing}
+## Befordra startsidor vid redigering {#promoting-launch-pages-when-editing}
 
-När du redigerar en startsida är åtgärden **Promote Launch** också tillgänglig från **Sidinformation**. Guiden öppnas för att samla in den information som behövs.
+När du redigerar en startsida visas **Promote Launch** åtgärd är också tillgänglig från **Sidinformation**. Guiden öppnas för att samla in den information som behövs.
 
 ![Befordra lansering från webbplatsinformation](/help/sites-cloud/authoring/assets/launches-promote-page-info.png)
 
@@ -98,31 +95,31 @@ När du har skapat en kapslad start kan du befordra den tillbaka till någon av 
 
 ![En kapslad start](/help/sites-cloud/authoring/assets/launches-promoting-nested.png)
 
-1. På samma sätt som när du skapar en kapslad start går du till och väljer önskad start i **startkonsolen** eller **referenserna**.
-1. Välj **Befordra start** för att öppna guiden.
+1. Precis som när du skapar en kapslad start går du till och väljer önskad start i antingen **Startar** konsolen eller **Referenser** järnväg.
+1. Välj **Befordra lansering** för att öppna guiden.
 1. Ange nödvändig information:
    * **Mål**
-      * **Erbjudandemål**  - Du kan göra reklam för alla källor.
-      * **Ta bort lansering efter befordran**  - När du har befordrat den valda starten och alla starter som är kapslade i den tas de bort.
-   * **Omfång**  - Här kan du välja om du vill befordra hela starten eller bara de sidor som faktiskt har redigerats. Om det är det senare kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
+      * **Erbjudandemål** - Du kan göra reklam för alla källor.
+      * **Ta bort start efter befordran** - När du har befordrat den valda starten och alla starter som är kapslade i den tas de bort.
+   * **Omfång** - Här kan du välja om du vill befordra hela programstarten eller bara de sidor som faktiskt har redigerats. Om det är det senare alternativet kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
       * **Befordra en fullständig lansering**
       * **Befordra ändrade sidor**
-      * **Befordra godkända sidor**  - beroende på arbetsflödet för godkännande vid start
+      * **Befordra godkända sidor** - beroende av arbetsflödet för godkännande vid start
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
 
    ![Befordra startinställningar](/help/sites-cloud/authoring/assets/launches-promote-settings.png)
 
 1. Välj **Nästa**.
-1. Granska kampanjinformationen innan du väljer **Promote**:
+1. Granska kampanjinformationen innan du väljer **Befordra**:
 
    ![Granska kampanjinställningar](/help/sites-cloud/authoring/assets/launches-promote-review-2.png)
 
    >[!NOTE]
    >
-   >Vilka sidor som visas beror på det **omfång** som har definierats och eventuellt på vilka sidor som har redigerats.
+   >Vilka sidor som visas beror på **Omfång** definierade och eventuellt de sidor som har redigerats.
 
-1. Ändringarna kommer att befordras och återspeglas i **startskonsolen**:
+1. Ändringarna kommer att främjas och återspeglas i **Startar** konsol:
 
    ![Startar konsolen](/help/sites-cloud/authoring/assets/launches-console.png)
 

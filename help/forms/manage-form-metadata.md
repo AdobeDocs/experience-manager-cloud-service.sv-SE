@@ -232,7 +232,6 @@ För Adaptiv Forms finns ytterligare funktioner som gör att användaren kan gen
 >
 >* Använd en fyrkantig bild som miniatyrbild. När du använder en bild som inte är fyrkantig och visar miniatyrbilden i listvyn visas miniatyrbilden som bortklippt.
 >* När en ny bild har överförts eller genererats ersätts miniatyrbilden av den här bilden och kan inte återställas till den föregående bilden.
-
 >
 
 

@@ -2,13 +2,13 @@
 title: Arkitektur AEM Headless
 description: Läs mer om Adobe Experience Manager högnivåarkitektur när det gäller headless-driftsättning. Förstå rollen för tjänsterna AEM Author, Preview och Publish och det rekommenderade distributionsmönstret för headless-program.
 feature: Content Fragments,GraphQL API
-source-git-commit: 64b2beb4af2297e19e39ad534856bce33ffcfcf8
+exl-id: 5ba6921f-b06e-463d-b956-d1fb434090c9
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
 
 ---
-
 
 # Arkitektur AEM Headless
 
@@ -49,4 +49,3 @@ Ett annat alternativ för headless-driftsättningar är att införliva en **AEM*
 1. Du kan konfigurera en förhandsgranskningsversion av programmet som ansluter till förhandsgranskningstjänsten.
 1. När innehållet har granskats och godkänts kan det publiceras till AEM Publish-tjänsten.
 1. Slutanvändarna interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten via Dispatcher och använder GraphQL-API:erna för att begära och använda innehåll.
-

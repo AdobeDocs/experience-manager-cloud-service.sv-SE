@@ -1,13 +1,13 @@
 ---
 title: Översikt över verktyget Mappning av användare
 description: Översikt över verktyget Mappning av användare
-source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
+exl-id: 17ed5721-093e-4491-b8c4-3dadcaa6598b
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 7%
 
 ---
-
 
 # Översikt över verktyget Mappning av användare {#overview-user-mapping-tool}
 

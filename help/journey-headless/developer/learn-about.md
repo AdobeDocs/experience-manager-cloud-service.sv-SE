@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Läs om CMS Headless Development {#learn-about}
 
-I den här delen av [AEM Headless Developer Journey](overview.md) lär du dig mer om headless technology och varför du skulle använda den.
+I den här delen av [AEM Headless Developer Journey,](overview.md) lär dig mer om headless-teknik och varför du skulle använda den.
 
 ## Syfte {#objective}
 
@@ -38,7 +38,7 @@ Om du vill lägga till en ny kanal eller stödja nya typer av upplevelser kan du
 
 ![Lägga till en ny kanal i högen](assets/adding-channel.png)
 
-Komplexiteten för beroendena i högen blir snabbt tydlig eftersom du ser att andra objekt i högen kan behöva justeras för att kunna anpassa ändringarna.
+Komplexiteten i beroendena i högen blir snabbt tydlig eftersom du ser att andra objekt i högen kan behöva justeras för att kunna anpassa ändringarna.
 
 ## Gränser för leverans i fullhög {#limits}
 
@@ -58,7 +58,7 @@ Huvudet för alla system är vanligtvis systemets utdatarenderare, vanligtvis i 
 
 En server utan headlessserver sitter till exempel förmodligen i ett rack i ett serverrum någonstans och har ingen övervakare ansluten. För att få tillgång till den måste du fjärransluta till den. I det här fallet är monitorn huvudet när den tar hand om återgivningen av serverns utdata. Du som kund för tjänsten kan ge dig ett eget huvud (bildskärmen) när du fjärransluter till den.
 
-När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsätter att leverera det till konsumenterna. Om du bara levererar **innehållet** på ett standardiserat sätt utelämnar ett headless CMS-system den slutliga återgivningen och lämnar presentationen **av innehållet till den förbrukande tjänsten.**
+När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsätter att leverera det till konsumenterna. Genom att bara leverera **innehåll** på ett standardiserat sätt utelämnar ett headless CMS den slutliga återgivningen och lämnar kvar **presentation** av innehållet till den konsumerande tjänsten.
 
 ![Headless CMS](assets/headless-cms.png)
 
@@ -120,11 +120,11 @@ Tack för att du kom igång med AEM resa utan trassel! Nu när du läser det hä
 * Förstå varför och när headless behövs.
 * Lär dig på en hög nivå hur headless-koncept används och hur de hänger ihop.
 
-Bygg vidare på denna kunskap och fortsätt din AEM resa utan trassel genom att nästa gång läsa dokumentet [Komma igång med AEM Headless som en Cloud Service](getting-started.md) där du får lära dig hur du ställer in nödvändiga verktyg och hur du börjar fundera på hur AEM ska hantera headless-leverans och dess förutsättningar.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa utan trassel genom att nästa gång du granskar dokumentet [Komma igång med AEM Headless as a Cloud Service](getting-started.md) där du får lära dig hur du ställer in de verktyg som behövs och hur du börjar fundera på hur AEM ser på headless-innehållsleverans och dess förutsättningar.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Getting Started with AEM Headless as a Cloud Service,](getting-started.md) nedan är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta den headless-resan.
+Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Komma igång med AEM Headless as a Cloud Service,](getting-started.md) Nedan följer ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den headless-resan.
 
-* [An Introduction to the Architecture of Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md)  - Understanding AEM as a Cloud Services structure
-* [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)  - Använd dessa praktiska självstudiekurser för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless endpoints med AEM och välja vad som är rätt för dig.
+* [En introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Förstå AEM as a Cloud Service struktur
+* [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd dessa praktiska självstudiekurser för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja vad som passar dig bäst.

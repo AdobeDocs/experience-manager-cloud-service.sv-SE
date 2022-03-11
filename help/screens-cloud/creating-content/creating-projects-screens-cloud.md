@@ -1,17 +1,17 @@
 ---
-title: Skapa ett projekt på skärmar som en Cloud Service
-description: På den här sidan beskrivs hur du skapar ett projekt i skärmar som en Cloud Service.
-source-git-commit: d9d38f5949c9590ae68276452eea28044c7e5155
+title: Skapa ett projekt på skärmar as a Cloud Service
+description: På den här sidan beskrivs hur du skapar ett projekt på skärmar as a Cloud Service.
+exl-id: 89e3ac28-7537-413d-b63b-abd2bbae6cb7
+source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
+# Skapa och hantera ett projekt på skärmar as a Cloud Service {#creating-project-screens-cloud}
 
-# Skapa och hantera ett projekt på skärmar som en Cloud Service {#creating-project-screens-cloud}
-
-Det första steget för att implementera ett nytt projekt i skärmar som Cloud Service är att skapa ett nytt projekt.
+Det första steget i implementeringen av ett nytt projekt på skärmar-as a Cloud Service är att skapa ett nytt projekt.
 
 ## Syfte {#objective}
 
@@ -19,25 +19,25 @@ Det här dokumentet hjälper dig att förstå hur du skapar ett nytt AEM Screens
 
 ## Skapa ett nytt projekt {#create-new-project}
 
-Följ stegen nedan för att skapa ett nytt projekt i Skärmar som en Cloud Service:
+Följ stegen nedan för att skapa ett nytt projekt på skärmar as a Cloud Service:
 
 1. Navigera till Screens Content Provider.
 
    >[!NOTE]
-   >Läs [Använda rasterinnehållsleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en) om du vill veta hur du får åtkomst till rasterinnehållsleverantör för att skapa ditt projekt.
+   >Se [Använda leverantör av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en) om du vill veta hur du får åtkomst till Screens Content Provider för att skapa ditt projekt.
 
-1. Klicka på **Skapa skärmprojekt** i åtgärdsfältets övre högra hörn.
+1. Klicka på **Skapa skärmsprojekt** från åtgärdsfältets övre högra hörn.
 
    ![](/help/screens-cloud/assets/create-content/create-screens-project1.png)
 
-1. Ange **titeln** för projektet i **dialogrutan Skapa skärmsprojekt**, till exempel *FirstDigitalExperience*.
+1. Ange **Titel** av ditt projekt i **Skapa skärmsprojekt** dialogrutan, till exempel *FirstDigitalExperience*.
 
    ![](/help/screens-cloud/assets/create-content/create-screens-project2.png)
 
    >[!NOTE]
-   >Fältet **Namn** fylls i automatiskt i dialogrutan **Skapa skärmsprojekt** baserat på den titel du väljer.
+   >The **Namn** fältet fylls i automatiskt i **Skapa skärmsprojekt** baserat på den titel du väljer.
 
-1. Klicka på **Spara**. Du kommer att se ditt skärmsprojekt med namnet *FirstDigitalExperience* i Screens Content Provider. Projektet visas i Skärminnehållsleverantören med två mappar, **Platser** och **Kanaler**.
+1. Klicka på **Spara**. Du kommer att se ditt skärpeprojekt, under namnet *FirstDigitalExperience* i Screens Content Provider. Du kommer att se ditt projekt i Screens Content Provider, med två mappar som heter **Platser** och **Kanaler**.
 
    ![](/help/screens-cloud/assets/create-content/create-screens-project3.png)
 
@@ -45,7 +45,7 @@ Följ stegen nedan för att skapa ett nytt projekt i Skärmar som en Cloud Servi
 
 ### Ta bort ett befintligt projekt {#deleting-project}
 
-Du kan ta bort befintliga skärmar som ett Cloud Service-projekt.
+Du kan ta bort ett as a Cloud Service projekt för skärmar.
 Följ stegen nedan för att ta bort ett befintligt projekt från leverantören av skärminnehåll:
 
 1. Navigera till Screens Content Provider.
@@ -61,4 +61,4 @@ Följ stegen nedan för att ta bort ett befintligt projekt från leverantören a
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har skapat ett AEM Screens-projekt kan du skapa en ny kanal och lägga till innehåll i kanalerna. Mer information om hur du skapar och hanterar innehåll i kanaler finns i [Skapa och hantera en kanal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html?lang=en).
+Nu när du har skapat ett AEM Screens-projekt kan du skapa en ny kanal och lägga till innehåll i kanalerna. Se [Skapa och hantera en kanal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html?lang=en) om du vill lära dig hur du skapar och hanterar innehåll i kanaler.

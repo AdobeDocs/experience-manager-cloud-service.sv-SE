@@ -17,23 +17,23 @@ Guiden för språkkopiering är en guidad upplevelse för att skapa och instrume
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll kan du läsa vår [Site Translation Journey,](/help/journey-sites/translation/overview.md), där du vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 >[!NOTE]
 >
->Användaren måste vara medlem i `project-administrators`-gruppen för att kunna skapa en språkkopia av en plats.
+>Användaren måste vara medlem i `project-administrators` grupp för att skapa en språkkopia av en plats.
 
 Så här öppnar du guiden:
 
-1. I webbplatskonsolen markerar du en sida och trycker eller klickar på **Create** och väljer **Language Copy**.
+1. Markera en sida i webbplatskonsolen och tryck eller klicka på **Skapa** och markera **Språkkopia**.
 
    ![Skapa språkkopia från guide](../assets/language-copy-wizard.png)
 
-1. Guiden öppnas i steget **Välj källa** där du kan lägga till/ta bort sidor. Du kan också välja att ta med eller utesluta undersidor. Markera de sidor som du vill inkludera och tryck eller klicka på **Nästa**.
+1. Guiden öppnas i **Välj källa** som gör att du kan lägga till/ta bort sidor. Du kan också välja att ta med eller utesluta undersidor. Markera de sidor du vill inkludera och tryck eller klicka på **Nästa**.
 
    ![Lägga till sidor med guiden](../assets/language-copy-wizard-add-pages.png)
 
-1. Med steget **Konfigurera** i guiden kan du lägga till/ta bort språk och välja översättningsmetod. Tryck eller klicka på **Nästa**.
+1. The **Konfigurera** kan du lägga till/ta bort språk och välja översättningsmetod. Tryck eller klicka **Nästa**.
 
    ![Konfigurera steg i guiden](../assets/language-copy-wizard-configure.png)
 
@@ -41,7 +41,7 @@ Så här öppnar du guiden:
    >
    >Som standard finns det bara en översättningsinställning. Om du vill kunna välja andra inställningar måste du först konfigurera molnkonfigurationer. Se [Konfigurera översättningsintegreringsramverket](integration-framework.md).
 
-1. I steget **Översätt** i guiden kan du välja mellan att skapa enbart strukturen, skapa ett nytt översättningsprojekt eller lägga till i ett befintligt översättningsprojekt.
+1. I **Översätt** i guiden kan du välja mellan att skapa enbart strukturen, skapa ett nytt översättningsprojekt eller lägga till i ett befintligt översättningsprojekt.
 
    >[!NOTE]
    >
@@ -49,6 +49,6 @@ Så här öppnar du guiden:
 
    ![Guidens översättningssteg](../assets/language-copy-wizard-translate.png)
 
-1. Knappen **Skapa** avslutar guiden. Tryck eller klicka på **Klar** för att stänga guiden eller **Öppna** för att visa det resulterande översättningsprojektet.
+1. The **Skapa** avslutar guiden. Tryck eller klicka **Klar** för att stänga guiden eller **Öppna** för att visa det resulterande översättningsprojektet.
 
    ![Avsluta guiden](../assets/language-copy-wizard-done.png)

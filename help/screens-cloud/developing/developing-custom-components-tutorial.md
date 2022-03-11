@@ -1,13 +1,13 @@
 ---
 title: Utveckla en anpassad komponent för skärmar as a Cloud Service
 description: I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
-source-git-commit: 0ca86e127569e8f6eb92654e4224a4d5da72ebf4
+exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '2125'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla en anpassad komponent för AEM Screens as a Cloud Service{#developing-a-custom-component-for-aem-screens}
 

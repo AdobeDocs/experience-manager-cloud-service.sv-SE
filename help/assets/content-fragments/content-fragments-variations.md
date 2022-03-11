@@ -40,7 +40,7 @@ Utför en rad andra åtgärder beroende på vilken datatyp som redigeras. till e
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering visas **Variationer** som standard är fliken öppen. Här kan du skapa innehållet, för Överordnad eller andra varianter som du har. Det strukturerade fragmentet innehåller olika fält, av olika datatyper, som har definierats i innehållsmodellen.
+När du öppnar ditt innehållsfragment för redigering visas **Variationer** som standard är fliken öppen. Här kan du skapa innehåll, för Överordnad eller andra varianter som du har. Det strukturerade fragmentet innehåller olika fält, av olika datatyper, som har definierats i innehållsmodellen.
 
 Till exempel:
 
@@ -221,6 +221,7 @@ Andra språk är tillgängliga som språkmodellpaket från programvarudistributi
 * [German (de)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-de)
 * [Italienska (it)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-it)
 * [Spanska (es)](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq630/product/smartcontent-model-es)
+>
 
 
 1. Välj **Överordnad** eller den variation som krävs.
@@ -429,7 +430,7 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 
 >[!CAUTION]
 Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
-Endast det aktuella elementet i variationen synkroniseras.
+Endast det aktuella elementet i variationen kommer att synkroniseras.
 Synkronisering fungerar bara på datatypen **Flerradig text**.
 Du kan inte överföra ändringar *från en variant till **mastern***.
 

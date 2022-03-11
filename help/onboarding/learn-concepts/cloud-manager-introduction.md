@@ -11,13 +11,13 @@ ht-degree: 3%
 
 # Introduktion till Cloud Manager {#intro-cloud-manager}
 
-Cloud Manager är en viktig komponent i AEM som Cloud Service och fungerar som en enda startpunkt för ditt team.
+Cloud Manager är en viktig komponent i AEM as a Cloud Service och fungerar som en enda startpunkt för ditt team.
 
-För att ge stöd åt kunder med företagskonfigurationer kan AEM som Cloud Service helt och hållet integreras med Cloud Manager och dess specialbyggda CI/CD-pipelines, som är utrustade för att säkerställa grundlig testning och högsta kodkvalitet för att leverera enastående upplevelser.
+För att ge stöd åt kunder med företagskonfigurationer kan AEM as a Cloud Service integreras helt med Cloud Manager och dess specialbyggda CI/CD-pipelines, som är utrustade för att säkerställa grundlig testning och högsta kodkvalitet för att leverera enastående upplevelser.
 
-För att säkerställa att kunderna snabbt kan komma igång med AEM som Cloud Service har Cloud Manager allt som behövs för att komma igång på ett självbetjäningssätt, inklusive möjligheten att skapa molnresurser och miljöer. På så sätt kan dina AEM utvecklare få åtkomst till Git-databasen via Cloud Manager. Med hjälp av Cloud Manager kan utvecklingsteam arbeta för att implementera ändringar ofta på ett självbetjäningssätt.
+För att säkerställa att kunderna kan komma igång snabbt med AEM as a Cloud Service har Cloud Manager allt som behövs för att komma igång på ett självbetjäningssätt, inklusive möjligheten att skapa molnresurser och miljöer. På så sätt kan dina AEM utvecklare få åtkomst till Git-databasen via Cloud Manager. Med hjälp av Cloud Manager kan utvecklingsteam arbeta för att implementera ändringar ofta på ett självbetjäningssätt.
 
-Din systemadministratör ansvarar för att konfigurera ditt Cloud Manager-team, som kommer att innehålla personer som skapar dina molnresurser och utvecklare. Läs [Enterprise Team Development Setup for AEM som Cloud Service](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md) om du vill veta hur Cloud Manager stöder i Enterprise Team Development Setup.
+Din systemadministratör ansvarar för att konfigurera ditt Cloud Manager-team, som kommer att innehålla personer som skapar dina molnresurser och utvecklare. Se [Inställningar för utveckling av Enterprise-team för AEM as a Cloud Service](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md) om du vill veta mer om hur Cloud Manager kan användas i installationsprogrammet för Enterprise Team Development.
 
 ## Navigera till översiktssidan för Cloud Manager {#navigate-cloud-manager}
 
@@ -28,7 +28,7 @@ Följ stegen nedan för att navigera till Cloud Manager:
    >[!NOTE]
    >Bokmärk den här sidan för framtida referens och för att hjälpa dig att navigera direkt till Cloud Managers landningssida.
 
-1. Välj programmet på sidan **Program och produkter** i Cloud Manager för att starta sidan **Översikt**.
+1. Välj program från Cloud Managers **Program och produkter** sidan som startar **Översikt** sida.
 
 Dessutom kan du gå till sidan Program och produkter i Cloud Manager från Adobe Experience Cloud hemsida. Följ stegen nedan:
 
@@ -62,15 +62,15 @@ Dessutom kan du gå till sidan Program och produkter i Cloud Manager från Adobe
 
 ## Cloud Manager-program {#cloud-manager-programs}
 
-Cloud Manager-program representerar uppsättningar av Cloud Manager-miljöer som stöder logiska uppsättningar av affärsinitiativ, som vanligtvis motsvarar ett köpt serviceavtal (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja de globala offentliga webbplatserna, medan ett annat program representerar en intern central DAM. Titta på den här [videon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en) om du vill veta mer om hur du använder Cloud Manager-program.
+Cloud Manager-program representerar uppsättningar av Cloud Manager-miljöer som stöder logiska uppsättningar av affärsinitiativ, vilket vanligtvis motsvarar ett köpt serviceavtal (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja de globala offentliga webbplatserna, medan ett annat program representerar en intern central DAM. Titta på detta [video](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en) om du vill veta mer om hur du använder Cloud Manager-program.
 
-En användare kan skapa en **sandlåda** eller ett **Production**-program.
+En användare kan skapa **Sandbox** eller en **Produktion** program.
 
-* Ett *produktionsprogram* skapas för att aktivera livstrafik vid rätt tidpunkt i framtiden.
-Mer information finns i [Introduktion till produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/introduction-production-programs.html?lang=en).
+* A *Produktionsprogram* skapas för att möjliggöra livstrafik vid rätt tidpunkt i framtiden.
+Se [Introduktion till produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/introduction-production-programs.html?lang=en) för mer information.
 
-* Ett *sandlådeprogram* skapas vanligtvis för att användas i utbildningssyfte, köra demo, aktivering, POC eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett produktionsprogram inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
-Mer information finns i [Introduktion till sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sandbox-programs/introduction-sandbox-programs.html?lang=en).
+* A *Sandbox Program* skapas vanligtvis för utbildning, för att köra demonstrationer, aktivering, POC:er eller dokumentation. Den är inte avsedd att transportera livstrafik och kommer att ha begränsningar som ett produktionsprogram inte kommer att ha. Den kommer att innehålla Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en Dev-miljö och en icke-produktionsprocess.
+Se [Introduktion till sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sandbox-programs/introduction-sandbox-programs.html?lang=en) för mer information.
 
 ## Cloud Manager-miljöer {#cloud-manager-environments}
 
@@ -81,7 +81,7 @@ Dina molnmiljöer skapas, öppnas och visas via Cloud Manager. Det kan vara en p
 * [Dispatcher Services](#dispatcher-services)
 
    >[!NOTE]
-   > Se videon [Använda miljöer för Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en#cloud-manager) om du vill veta mer om de tillgängliga miljöerna. Läs även [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en) om du vill veta mer om vilka typer av miljöer en användare kan skapa och hur användaren kan skapa en miljö.
+   > Se videon [Använda Adobe Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en#cloud-manager) om du vill veta mer om de tillgängliga miljöerna. Mer information finns i [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en) om du vill veta mer om de typer av miljöer som en användare kan skapa och hur användaren kan skapa en miljö.
 
 ### AEM Author Service {#author-services}
 
@@ -93,4 +93,4 @@ AEM Publish Service ingår i en miljö som är värd för slutanvändarens upple
 
 ### AEM Dispatcher Service {#dispatcher-services}
 
-Dispatcher är en `Apache HTTP Web server`-modul som tillhandahåller ett säkerhets- och prestandalager som placeras framför AEM Publish Service.
+Dispatcher är en `Apache HTTP Web server` som tillhandahåller ett säkerhets- och prestandalager som placeras framför AEM Publish Service.

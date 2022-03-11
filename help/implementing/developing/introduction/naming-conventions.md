@@ -17,13 +17,13 @@ Noderna i databasen omfattas av namnkonventioner i Java Content Repository. AEM 
 
 Dessa namnkonventioner implementeras på olika nivåer:
 
-* JcrUtil: den AEM implementeringen av [JCR-verktygen](#jcr-utilities).
-* PageManager: [Sidhanteraren](#page-manager) innehåller metoder för åtgärder på sidnivå.
-* I AEM-gränssnittet {#ui-behavior}
+* JcrUtil: AEM genomförande av [JCR-verktyg](#jcr-utilities).
+* PageManager: den [Page Manager](#page-manager) innehåller metoder för åtgärder på sidnivå.
+* I AEM {#ui-behavior}
 
 ### JCR-verktyg {#jcr-utilities}
 
-[](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/jcr/JcrUtil.html) JCRutiliserar den AEM implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
+[JcrUtil](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/jcr/JcrUtil.html) är den AEM implementeringen av de gemensamma teknikverktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
 
 * `isValidName`
    * Kontrollerar om namnet inte är tomt och bara innehåller giltiga tecken.
@@ -34,7 +34,7 @@ Dessa namnkonventioner implementeras på olika nivåer:
 
 ### Page Manager {#page-manager}
 
-[](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) PageManager innehåller metoder för åtgärder på sidnivå, baserade på  [JCRUtil](#jcr-utilities).
+[PageManager](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) innehåller metoder för sidnivååtgärder, baserade på [JCRUtil](#jcr-utilities).
 
 ### AEM gränssnittsbeteende {#ui-behavior}
 

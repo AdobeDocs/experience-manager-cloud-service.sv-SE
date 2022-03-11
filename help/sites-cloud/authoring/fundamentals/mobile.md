@@ -1,26 +1,25 @@
 ---
 title: Skapa en sida för mobila enheter
 description: När du skapar för mobilen kan du växla mellan flera emulatorer för att se vad slutanvändaren ser
-translation-type: tm+mt
-source-git-commit: 95ac5e5f6c49d5a2d7aef5dcf30d8298fd459457
+exl-id: fabd4468-3304-402f-9522-342da3bbae94
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
 
 ---
 
-
 # Skapa en sida för mobila enheter {#authoring-a-page-for-mobile-devices}
 
-Adobe Experience Manager sidor baseras på en responsiv layout. [Responsiv ](/help/sites-cloud/authoring/features/responsive-layout.md) layout anpassar innehållet automatiskt så att det passar målenheten, vilket eliminerar behovet av att skapa innehåll för specifika enheter.
+Adobe Experience Manager sidor baseras på en responsiv layout. [Responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md) anpassar innehållet automatiskt så att det passar målenheten och eliminerar behovet av att skapa innehåll för specifika enheter.
 
-När du skapar en mobilsida visas sidan på ett sätt som emulerar den mobila enheten. När du skapar sidan kan du växla mellan flera emulatorer för att se vad slutanvändaren ser när han/hon öppnar sidan.
+När du skapar en mobilsida visas sidan på ett sätt som emulerar den mobila enheten. När du redigerar sidan kan du växla mellan flera emulatorer för att se vad slutanvändaren ser när han/hon öppnar sidan.
 
 Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enhetens funktioner för att återge en sida. När slutanvändaren öppnar en mobilsida upptäcker AEM enheten och skickar den representation som motsvarar enhetsgruppen.
 
 >[!NOTE]
 >
->Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. Se [Skapa live-kopior.](/help/sites-cloud/administering/msm/creating-live-copies.md)
+>Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. Se [Skapa Live-kopior.](/help/sites-cloud/administering/msm/creating-live-copies.md)
 >
 >AEM utvecklare kan skapa nya enhetsgrupper. Se Skapa enhetsgruppsfilter.
 
@@ -30,14 +29,14 @@ Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enh
 
 Använd följande procedur för att skapa en mobilsida:
 
-1. Öppna konsolen **Platser** från global navigering.
+1. Från global navigering öppnar du **Webbplatser** konsol.
 1. Redigera en innehållssida.
-1. Växla till önskad emulator genom att klicka på ikonen **Emulator** längst upp på sidan.
+1. Växla till önskad emulator genom att klicka på **Emulator** ikonen längst upp på sidan.
 
    ![Emulatorikon](/help/sites-cloud/authoring/assets/emulator.png)
 
 1. Dra och släpp komponenter från komponentwebbläsaren eller resursläsaren till sidan.
-1. [Ändra sidans responsiva ](/help/sites-cloud/authoring/features/responsive-layout.md) layout och dess komponenter baserat på den valda enheten.
+1. [Ändra den responsiva layouten](/help/sites-cloud/authoring/features/responsive-layout.md) av sidan och dess komponenter baserat på den valda enheten.
 
 Sidan ser ut ungefär så här:
 

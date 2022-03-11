@@ -1,22 +1,22 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.7.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.7.0
-feature: Versionsinformation
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2020.7.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2020.7.0
+feature: Release Information
 exl-id: b5ac4dd4-18c6-4867-b2df-53711555007f
 source-git-commit: 596a7a41dac617e2fb57ba2e4891a2b4dce31fad
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '309'
+ht-degree: 1%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.7.0 {#release-notes}
+# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2020.7.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.7.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2020.7.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2020.7.0 är 9 juli 2020.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2020.7.0 är 9 juli 2020.
 
 ## Nyheter {#whats-new-cloud-manager}
 
@@ -41,7 +41,7 @@ Mer information finns i Använda Java 11-stöd.
 
 * Länken till Developer Console direkt från Cloud Manager visar inte alternativet att avplacera/viloläge för sandlådeprogrammets miljö.
 
-* Alternativen **Avbryt** och **Spara** på redigeringssidan för icke-produktionsförlopp är inte alltid synliga.
+* The **Avbryt** och **Spara** på redigeringssidan för icke-produktionsförlopp var inte alltid synliga.
 
 * Vissa fel i kodkvalitetsprocessen kan leda till att loggfilen inte genereras korrekt.
 
@@ -55,4 +55,4 @@ Mer information finns i Använda Java 11-stöd.
 
 ### Kända fel {#known-issues}
 
-* På grund av en förändring i hur kodens täckning beräknas är versionen *minimum* av Jacoco-pluginprogrammet nu 0.7.5.201505241946 (släppt i maj 2015). Kunder som uttryckligen hänvisar till en äldre version får ett felmeddelande i kodkvalitetsprocessen.
+* På grund av en förändring i hur kodsatsen beräknas kan *minimum* versionen av Jacoco-pluginprogrammet är nu 0.7.5.201505241946 (släppt i maj 2015). Kunder som uttryckligen hänvisar till en äldre version får ett felmeddelande i kodkvalitetsprocessen.

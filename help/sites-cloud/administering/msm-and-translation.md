@@ -20,11 +20,11 @@ Adobe Experience Manager inbyggda verktyg för Multi Site Manager och översätt
 * Översättning gör att du kan automatisera översättningen av sidinnehåll för att skapa och underhålla flerspråkiga webbplatser:
    * [Översätta innehåll för flerspråkiga webbplatser](translation/overview.md)
 
-Dessa två funktioner kan kombineras för att passa för webbplatser som är både [multinationella och flerspråkiga](#multinational-and-multilingual-sites).
+Dessa två funktioner kan kombineras för att passa för webbplatser som båda [multinationella och flerspråkiga](#multinational-and-multilingual-sites).
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll kan du läsa vår [Site Translation Journey,](/help/journey-sites/translation/overview.md), där du vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 ## Flerspråkiga och flerspråkiga webbplatser {#multinational-and-multilingual-sites}
 
@@ -32,8 +32,8 @@ Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplat
 
 Vanligtvis skapar du en överordnad webbplats på ett språk och för ett visst land, och använder sedan innehållet som bas för de andra webbplatserna, med översättning där det behövs.
 
-1. [Översätt ](translation/overview.md) den överordnad webbplatsen till olika språk.
-1. Använd [Multi Site Manager](msm/overview.md) för att:
+1. [Översätt](translation/overview.md) den överordnad webbplatsen till olika språk.
+1. Använd [Multi Site Manager](msm/overview.md) till:
    1. Återanvänd innehåll från den överordnad webbplatsen och dess översättningar för att skapa webbplatser för andra länder och kulturer.
    1. Om det behövs frigör du element i Live-kopior för att lägga till lokaliseringsinformation.
 
@@ -49,8 +49,8 @@ I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/
 
 I detta fall, och på liknande sätt, hanterar inte MSM de olika språkversionerna som sådana.
 
-* [MSM ](msm/overview.md) hanterar distributionen av översatt innehåll från en plan (dvs. en global överordnad) till Live-kopior (dvs. de lokala platserna), inom ett språks gränser.
-* Integreringsfunktionerna i [translation](translation/overview.md) i AEM, tillsammans med översättningshanteringstjänster från tredje part, hanterar språken och översätter innehåll till dessa olika språk.
+* [MSM](msm/overview.md) hanterar distributionen av översatt innehåll från en ritning (dvs. en global överordnad) till Live-kopior (dvs. lokala platser), inom ett språks gränser.
+* The [översättning](translation/overview.md) integreringsfunktionerna i AEM, tillsammans med översättningshanteringstjänster från tredje part, hanterar språken och översätter innehåll till dessa olika språk.
 
 För mer avancerade användningsområden kan MSM användas även av flerspråkiga mallsidor.
 

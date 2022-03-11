@@ -1,33 +1,32 @@
 ---
 title: SPA
-description: I en SPA tillhandahåller inte sidkomponenten HTML-elementen för dess underordnade komponenter, utan delegerar i stället detta till det SPA ramverket. Det här dokumentet förklarar hur det gör sidkomponenten i ett SPA unik.
-translation-type: tm+mt
-source-git-commit: cdd92032c627740c66de7b2f3836fa1dcd2ee2ca
+description: I en SPA tillhandahåller inte sidkomponenten elementen HTML i de underordnade komponenterna, utan delegerar i stället detta till det SPA ramverket. Det här dokumentet förklarar hur det gör sidkomponenten i ett SPA unik.
+exl-id: 41b56a60-ebb8-499d-a0ab-a2e920f26227
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
 
 ---
 
+# SPA {#spa-page-component}
 
-# SPA sidkomponent {#spa-page-component}
-
-Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess underordnade komponenter via en JSP- eller HTML-fil och resursobjekt. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter hämtas som en JSON-datastruktur (d.v.s. modellen). De SPA komponenterna läggs sedan till på sidan enligt den angivna JSON-modellen. Det innebär att sidkomponentens inledande innehållsdisposition skiljer sig från dess förrenderade HTML-motsvarigheter.
+Sidkomponenten för en SPA tillhandahåller inte HTML-elementen för dess underordnade komponenter via en JSP- eller HTL-fil och resursobjekt. Den här åtgärden har delegerats till SPA ramverk. Representationen av underordnade komponenter hämtas som en JSON-datastruktur (d.v.s. modellen). De SPA komponenterna läggs sedan till på sidan enligt den angivna JSON-modellen. Det innebär att sidkomponentens ursprungliga brödkomposition skiljer sig från de förrenderade motsvarigheterna i HTML.
 
 ## Sidmodellshantering {#page-model-management}
 
-Sidmodellens upplösning och hantering delegeras till en angiven [`PageModelManager`](blueprint.md#pagemodelmanager)-modul. SPA måste interagera med modulen `PageModelManager` när den initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. `PageModelManager` är tillgängligt av SPA som ett npm-paket. Som tolk mellan AEM och SPA ska `PageModelManager` åtfölja SPA.
+Lösning och hantering av sidmodellen delegeras till en angiven [`PageModelManager`](blueprint.md#pagemodelmanager) -modul. SPA måste interagera med `PageModelManager` när det initieras för att hämta den första sidmodellen och registrera sig för modelluppdateringar - oftast när författaren redigerar sidan via sidredigeraren. The `PageModelManager` kan nås av SPA som ett npm-paket. Som tolk mellan AEM och SPA `PageModelManager` är avsedd att medfölja SPA.
 
-För att sidan ska kunna redigeras måste ett klientbibliotek med namnet `cq.authoring.pagemodel.messaging` läggas till för att tillhandahålla en kommunikationskanal mellan SPA och sidredigeraren. Om den SPA sidkomponenten ärver från sidans wcm/core-komponent finns det följande alternativ för att göra klientbibliotekskategorin `cq.authoring.pagemodel.messaging` tillgänglig:
+Om du vill tillåta att sidan kan redigeras, ett klientbibliotek med namnet `cq.authoring.pagemodel.messaging` måste läggas till för att en kommunikationskanal ska kunna skapas mellan SPA och sidredigeraren. Om den SPA sidkomponenten ärver från sidans wcm/core-komponent finns det följande alternativ för att skapa `cq.authoring.pagemodel.messaging` tillgänglig klientbibliotekskategori:
 
 * Om mallen är redigerbar lägger du till klientbibliotekskategorin i sidprincipen.
-* Lägg till klientbibliotekskategorin med hjälp av `customfooterlibs.html` för sidkomponenten.
+* Lägg till klientbibliotekskategorin med `customfooterlibs.html` för sidkomponenten.
 
-Glöm inte att begränsa inkluderingen av kategorin `cq.authoring.pagemodel.messaging` till kontexten för sidredigeraren.
+Glöm inte att begränsa möjligheten att inkludera `cq.authoring.pagemodel.messaging` till sidredigerarens kontext.
 
 ## Kommunikationsdatatyp {#communication-data-type}
 
-Kommunikationsdatatypen ställs in på ett HTML-element i AEM Page-komponenten med attributet `data-cq-datatype`. När kommunikationsdatatypen är JSON, når GET-förfrågningarna en komponents Sling Model-slutpunkter. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket varnar sedan SPA om uppdateringar.
+Kommunikationsdatatypen ställs in på ett HTML-element i AEM Page-komponenten med hjälp av `data-cq-datatype` -attribut. När kommunikationsdatatypen är JSON, når GET-förfrågningarna en komponents Sling Model-slutpunkter. När en uppdatering har gjorts i sidredigeraren skickas JSON-representationen av den uppdaterade komponenten till sidmodellsbiblioteket. Sidmodellbiblioteket varnar sedan SPA om uppdateringar.
 
 **SPA -`body.html`**
 
@@ -67,13 +66,13 @@ Meta-resursegenskaperna som beskriver SPA innehåll:
 ## Metaegenskaper {#meta-properties}
 
 * `cq:wcmmode`: Redigerarnas WCM-läge (t.ex. sida, mall)
-* `cq:pagemodel_root_url`: URL för appens rotmodell. Viktigt vid direkt åtkomst till en underordnad sida eftersom den underordnade sidmodellen är ett fragment av appens rotmodell. `PageModelManager` komponerar sedan systematiskt om den inledande programmodellen när programmet anges från dess rotstartpunkt.
-* `cq:pagemodel_router`: Aktivera eller inaktivera funktionen  [`ModelRouter`](routing.md) för  `PageModelManager` biblioteket
-* `cq:pagemodel_route_filters`: Kommaavgränsad lista eller reguljära uttryck som tillhandahåller vägar som  [`ModelRouter`](routing.md) måste ignoreras.
+* `cq:pagemodel_root_url`: URL för appens rotmodell. Viktigt vid direkt åtkomst till en underordnad sida eftersom den underordnade sidmodellen är ett fragment av appens rotmodell. The `PageModelManager` disponerar sedan systematiskt om den inledande programmodellen när den anger programmet från dess rotstartpunkt.
+* `cq:pagemodel_router`: Aktivera eller inaktivera [`ModelRouter`](routing.md) i `PageModelManager` bibliotek
+* `cq:pagemodel_route_filters`: Kommaseparerad lista eller reguljära uttryck som tillhandahåller vägar i [`ModelRouter`](routing.md) måste ignorera.
 
 ## Synkronisering av sidredigeringsövertäckning {#page-editor-overlay-synchronization}
 
-Synkroniseringen av övertäckningarna garanteras av exakt samma Mutation Observer som finns i kategorin `cq.authoring.page`.
+Synkroniseringen av övertäckningarna garanteras av samma Mutation-server som tillhandahålls av `cq.authoring.page` kategori.
 
 ## Sling Model JSON Exported Structure Configuration {#sling-model-json-exported-structure-configuration}
 

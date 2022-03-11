@@ -1,13 +1,13 @@
 ---
 title: Developing Sites with the Front-End Pipeline
 description: Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan bli betydligt snabbare.
-source-git-commit: fd6a17a199b6cae03e91eba2ee938a03a326e612
+exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 0%
 
 ---
-
 
 # Developing Sites with the Front-End Pipeline {#developing-site-with-front-end-pipeline}
 

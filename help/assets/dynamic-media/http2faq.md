@@ -22,7 +22,7 @@ Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är til
 
 HTTP/2 förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger snabbare överföring av information samtidigt som man minskar behovet av processorkraft.
 
-Webbplatsartikeln [Det du måste känna till om HTTP/2](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html) beskriver HTTP/2 och dess fördelar på ett kort och enkelt sätt.
+Webbplatsartikeln [Vad du måste känna till om HTTP/2](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html) beskriver HTTP/2 och dess fördelar på ett kort och enkelt sätt.
 
 ## Vilka är de viktigaste fördelarna med att gå över till HTTP/2 för innehållsleverans? {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
@@ -43,32 +43,32 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 * Använd säker HTTPS för multimedieförfrågningar.
 * Använd det Adobe-paketerade CDN (Content Delivery Network) som en del av din Dynamic Media Classic-licens.
-* Använd en dedikerad domän (d.v.s. `images.company.com` eller `mycompany.scene7.com`), inte en generisk Dynamic Media-domän (d.v.s. `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
+* Använd en dedikerad domän (d.v.s. `images.company.com` eller `mycompany.scene7.com`), inte en allmän Dynamic Media-domän (det vill säga `s7d1.scene7.com`, `s7d2.scene7.com`, eller `s7d13.scene7.com`).
 
-   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto.
+   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto.
 
-   Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **Publicerat servernamn**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+   Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet med etiketten **Namn på publicerad server**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media-konto? {#what-is-the-process-for-enabling-http-for-my-dm-account}
 
-[Använd Admin Console för att skapa ett supportärende ](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) och begära att gå över till HTTP/2. det görs inte automatiskt åt dig.
+[Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) och begära att få gå över till HTTP/2, det görs inte automatiskt åt dig.
 
 1. Ange följande information i ditt supportärende:
 
    * Primärt kontaktnamn, e-postadress och telefonnummer.
-   * Alla domäner som ska överföras till HTTP2. Det vill säga `images.company.com` eller `mycompany.scene7.com`.
+   * Alla domäner som ska överföras till HTTP2. Det vill säga, `images.company.com` eller `mycompany.scene7.com`.
 
-   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto.
+   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto.
 
-   Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**.
+   Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet med etiketten **[!UICONTROL Published Server Name]**.
 
    * Verifiera att du använder säkra HTTPS för multimedieförfrågningar.
    * Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
-   * Kontrollera att du använder en dedikerad domän. Det vill säga `images.company.com` eller `mycompany.scene7.com` är inte en allmän Dynamic Media-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
+   * Kontrollera att du använder en dedikerad domän. Det vill säga, `images.company.com` eller `mycompany.scene7.com`, inte en allmän Dynamic Media-domän som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
 
-   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto.
+   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt konto.
 
-   Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+   Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet med etiketten **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
 
    1. Kundsupport lägger till dig i HTTP/2-väntelistan baserat på i vilken ordning förfrågningarna skickades.
    1. När Adobe är redo att hantera din begäran kontaktar kundsupporten dig för att koordinera övergången och ange ett måldatum.
@@ -92,4 +92,4 @@ Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen
 
 ## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 
-Ladda ned ett tillägg som du kan använda med webbläsaren. För Firefox och Chrome finns det ett tillägg som heter **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges det av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.
+Ladda ned ett tillägg som du kan använda med webbläsaren. För Firefox och Chrome finns ett tillägg som heter **[!UICONTROL HTTP/2 and SPDY Indicator]**. Webbläsare stöder bara säkert HTTP/2, så det är nödvändigt att anropa en URL med HTTPS för att verifiera. Om HTTP/2 stöds anges det av tillägget i form av en blå Flash-symbol och rubriken&quot;X-Firefox-Spdy&quot;: &quot;h2&quot;.

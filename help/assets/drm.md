@@ -1,20 +1,20 @@
 ---
 title: Digital Rights Management in [!DNL Assets]
-description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information för licensierade mediefiler i [!DNL Experience Manager] som en [!DNL Cloud Service].
+description: Lär dig hur du hanterar förfallotillstånd för mediefiler och information om licensierade mediefiler i [!DNL Experience Manager] som [!DNL Cloud Service].
 contentOwner: AG
-feature: Resurshantering, DRM
+feature: Asset Management,DRM
 role: User,Admin
 exl-id: fa5f94df-1c15-4593-afcb-1d24508da2bf
 source-git-commit: f993148a9f678cfdaf0693e4964f02b9163cf2ff
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1260'
 ht-degree: 2%
 
 ---
 
 # Digital Rights Management för digitala resurser {#digital-rights-management-in-assets}
 
-Digitala resurser är ofta kopplade till en licens som anger användningsvillkoren och hur länge de ska användas. Med [!DNL Experience Manager]-plattformen kan du effektivt hantera information om när mediefiler förfaller och licensieringsinformation.
+Digitala resurser är ofta kopplade till en licens som anger användningsvillkoren och hur länge de ska användas. Använda [!DNL Experience Manager] kan du effektivt hantera information om när mediefiler förfaller och licensinformation.
 
 ## Resursens förfallodatum {#asset-expiration}
 
@@ -23,35 +23,35 @@ Använd information om när mediefiler förfaller för att framtvinga licenskrav
 Du kan visa förfallostatusen för en resurs på följande platser:
 
 * **Kortvy**: För en resurs som har gått ut visas en flagga på kortet som anger att den har gått ut.
-* **Listvy**: För en resurs som har gått ut visas  **[!UICONTROL Status]** banderollen i  **[!UICONTROL Expired]** kolumnen.
+* **Listvy**: För en utgången tillgång gäller följande: **[!UICONTROL Status]** kolumnen visar **[!UICONTROL Expired]** banner.
 * **Tidslinje**: Du kan visa förfallostatusen för en resurs på tidslinjen. Markera resursen och välj Tidslinje.
-* **Referensspår**: Du kan även visa förfallostatusen för resurser i  **[!UICONTROL References]** fältet. Den hanterar förfallostatus och relationer mellan sammansatta resurser och refererade delresurser, samlingar och projekt.
+* **Referensspår**: Du kan även visa förfallostatusen för resurser i **[!UICONTROL References]** järnväg. Den hanterar förfallostatus och relationer mellan sammansatta resurser och refererade delresurser, samlingar och projekt.
 
 Så här visar du referenser till webbsidor och sammansatta resurser för en resurs:
 
-1. Navigera till resursen, markera resursen och klicka på ![ikonen ](assets/do-not-localize/content-rail-icon.png) för referenser till innehåll till vänster. Den vänstra listen öppnas.
-1. Välj **[!UICONTROL References]** i den vänstra listen.
-1. För förfallna resurser visar [!UICONTROL References] förfallostatusen som **[!UICONTROL Asset is Expired]**. Om resursen har upphört att gälla visas statusen [!UICONTROL References] på **[!UICONTROL Asset has Expired Sub-Assets]**-listen.
+1. Navigera till resursen, markera resursen och klicka på ![ikon för referenser till innehåll i vänster räv](assets/do-not-localize/content-rail-icon.png). Den vänstra listen öppnas.
+1. Välj **[!UICONTROL References]** från den vänstra listen.
+1. För förfallna mediefiler är [!UICONTROL References] visar förfallostatus som **[!UICONTROL Asset is Expired]**. Om resursen har upphört att gälla för delresurser [!UICONTROL References] visas status **[!UICONTROL Asset has Expired Sub-Assets]**.
 
 ### Sök efter utgångna resurser {#search-expired-assets}
 
 Så här söker du efter en utgången resurs, inklusive underresurser som har gått ut:
 
-1. Klicka på **[!UICONTROL Search]** i verktygsfältet i [!DNL Assets]-konsolen och tryck på `Enter`.
+1. I [!DNL Assets] konsol, klicka **[!UICONTROL Search]** i verktygsfältet och tryck på `Enter`.
 
-1. Klicka på ikonen GlobalNav och välj alternativet **[!UICONTROL Expiry Status]**.
+1. Klicka på ikonen GlobalNav och välj **[!UICONTROL Expiry Status]** alternativ.
 
 1. Välj **[!UICONTROL Expired]**. Sökresultaten visar utgångna resurser.
 
-När du väljer alternativet **[!UICONTROL Expired]** visar [!DNL Assets]-konsolen endast de förfallna resurserna och delresurserna som sammansatta resurser refererar till. De sammansatta resurserna som refererar till utgångna delresurser visas inte omedelbart efter att delresurserna har upphört att gälla. I stället visas de när [!DNL Experience Manager] upptäcker att de refererar till utgångna delresurser nästa gång som schemaläggaren körs.
+När du väljer **[!UICONTROL Expired]** alternativ, [!DNL Assets] I konsolen visas endast utgångna resurser och underresurser som sammansatta resurser refererar till. De sammansatta resurserna som refererar till utgångna delresurser visas inte omedelbart efter att delresurserna har upphört att gälla. I stället visas de efter [!DNL Experience Manager] identifierar att de refererar till utgångna delresurser nästa gång som schemaläggaren körs.
 
-Det går att ändra förfallodatumet för en publicerad tillgång till ett datum som är tidigare än den aktuella schemaläggningscykeln. Men schemat identifierar fortfarande en sådan resurs som en utgången resurs när den körs nästa gång och [!DNL Experience Manager] visar statusen i sin rapport. Utgångsdatumet för en resurs visas olika för användare i olika tidszoner.
+Det går att ändra förfallodatumet för en publicerad tillgång till ett datum som är tidigare än den aktuella schemaläggningscykeln. Men schemat identifierar fortfarande en sådan resurs som en utgången resurs när den körs nästa gång och [!DNL Experience Manager] återspeglar statusen i rapporten. Utgångsdatumet för en resurs visas olika för användare i olika tidszoner.
 
 Om ett fel dessutom hindrar schemaläggaren från att identifiera förfallna resurser i den aktuella cykeln, undersöker schemaläggaren om dessa resurser i nästa cykel och identifierar deras utgångna status.
 
-Om du vill att [!DNL Assets]-konsolen ska visa de sammansatta resurserna tillsammans med de delresurser som har gått ut konfigurerar du arbetsflödet **[!UICONTROL Adobe CQ DAM Expiry Notification]** i [!DNL Experience Manager]. Den tidsbaserade schemaläggaren schemalägger ett jobb att vid en viss tidpunkt kontrollera om en resurs har upphört att gälla för deltillgångar. När jobbet har slutförts visas resurser som har upphört att gälla och refererade resurser som utgångna i sökresultaten.
+Aktivera [!DNL Assets] konsol för att visa de refererande sammansatta resurserna tillsammans med de utgångna delresurserna, konfigurera **[!UICONTROL Adobe CQ DAM Expiry Notification]** arbetsflöde i [!DNL Experience Manager]. Den tidsbaserade schemaläggaren schemalägger ett jobb att vid en viss tidpunkt kontrollera om en resurs har upphört att gälla för deltillgångar. När jobbet har slutförts visas resurser som har upphört att gälla och refererade resurser som utgångna i sökresultaten.
 
-1. Använd den [!DNL Cloud Manager] Git-databas som är kopplad till din miljö.
+1. Öppna [!DNL Cloud Manager] Git-databas som är kopplad till din miljö.
 1. Spara en fil med namnet `com.day.cq.dam.core.impl.ExpiryNotificationJobImpl.cfg.json` i databasen med följande innehåll.
 
    ```json
@@ -60,14 +60,14 @@ Om du vill att [!DNL Assets]-konsolen ska visa de sammansatta resurserna tillsam
    }
    ```
 
-1. Följ instruktionerna i [hur du gör OSGi-konfiguration i [!DNL Experience Manager] som en [!DNL Cloud Service]](/help/implementing/deploying/configuring-osgi.md).
+1. Följ instruktionerna på [Så här gör du OSGi-konfiguration i [!DNL Experience Manager] som [!DNL Cloud Service]](/help/implementing/deploying/configuring-osgi.md).
 
 Du kan konfigurera schemaläggaren med följande egenskaper:
 
-* Ett `true`-värde för egenskapen `cq.dam.expiry.notification.scheduler.istimebased` initierar schemaläggaren. * Värdet för egenskapen `cq.dam.expiry.notification.scheduler.timebased.rule` är det reguljära uttrycket som definierar tiden. I exemplet ovan initieras schemaläggarjobbet vid 00 timmar.
-* Om `send_email` är `true` får den som skapade resursen (den person som överför en viss resurs till [!DNL Assets]) ett e-postmeddelande när resursen förfaller.
-* Det maximala antalet tillgångar som har gått ut i en iteration i schemaläggaren är värdet för egenskapen `asset_expired_limit`.
-* Om du vill köra jobbet periodiskt anger du värdet för egenskapen `cq.dam.expiry.notification.scheduler.istimebased` som `false` och anger värdet för egenskapen `cq.dam.expiry.notification.scheduler.period.rule` med tiden i sekunder.
+* A `true` egenskapens värde `cq.dam.expiry.notification.scheduler.istimebased` initierar schemaläggaren. * Egenskapens värde `cq.dam.expiry.notification.scheduler.timebased.rule` är det reguljära uttrycket som definierar tiden. I exemplet ovan initieras schemaläggarjobbet vid 00 timmar.
+* If `send_email` är inställd på `true`, den som har skapat tillgången (den person som överför en viss tillgång till [!DNL Assets]) får ett e-postmeddelande när resursen förfaller.
+* Det maximala antalet tillgångar som har gått ut i en iteration i schemaläggaren är egenskapens värde `asset_expired_limit`.
+* Om du vill köra jobbet periodiskt anger du egenskapens värde `cq.dam.expiry.notification.scheduler.istimebased` as `false` och ange egenskapens värde `cq.dam.expiry.notification.scheduler.period.rule` med tid i sekunder.
 
 <!-- TBD: Web Console not available in CS.
 
@@ -85,25 +85,25 @@ Du kan konfigurera schemaläggaren med följande egenskaper:
 
 ## Tillgångstillstånd {#asset-states}
 
-Konsolen [!DNL Assets] kan visa olika lägen för resurser. Beroende på det aktuella tillståndet för en viss resurs visas en etikett som beskriver dess tillstånd, till exempel Utgången, Publicerad, Godkänd, Avvisad och så vidare, i kortvyn.
+The [!DNL Assets] konsolen kan visa olika lägen för resurser. Beroende på det aktuella tillståndet för en viss resurs visas en etikett som beskriver dess tillstånd, till exempel Utgången, Publicerad, Godkänd, Avvisad och så vidare, i kortvyn.
 
-1. Välj en resurs i [!DNL Assets]-användargränssnittet.
+1. I [!DNL Assets] väljer du en resurs i användargränssnittet.
 
-1. Välj **[!UICONTROL Publish]** i verktygsfältet. Om du inte ser alternativet [!UICONTROL Publish] i verktygsfältet klickar du på **[!UICONTROL More]** i verktygsfältet och letar upp alternativet **[!UICONTROL Publish]**.
+1. Välj **[!UICONTROL Publish]** i verktygsfältet. Om du inte ser [!UICONTROL Publish] i verktygsfältet klickar du på **[!UICONTROL More]** i verktygsfältet och leta upp **[!UICONTROL Publish]** alternativ.
 
 1. Välj **[!UICONTROL Publish]** på menyn och stäng sedan bekräftelsedialogrutan.
 
 1. Avsluta markeringsläget. Publiceringsstatusen för resursen visas längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visar kolumnen Publicerad den tidpunkt då resursen publicerades.
 
-1. Om du vill visa sidan med resursinformation väljer du en resurs i gränssnittet [!DNL Assets] och klickar på **[!UICONTROL Properties]**.
+1. Om du vill visa sidan med tillgångsinformation i [!DNL Assets] gränssnitt, markera en resurs och klicka på **[!UICONTROL Properties]**.
 
-1. På fliken [!UICONTROL Advanced] anger du ett förfallodatum för resursen från fältet **[!UICONTROL Expires]**.
+1. I [!UICONTROL Advanced] anger du ett förfallodatum för resursen på fliken **[!UICONTROL Expires]** fält.
 
-1. Klicka på **[!UICONTROL Save]** och sedan på **[!UICONTROL Close]** för att visa resurskonsolen.
+1. Klicka **[!UICONTROL Save]** och sedan klicka **[!UICONTROL Close]** för att visa resurskonsolen.
 
 1. Publiceringsstatusen för resursen anger att den har upphört att gälla längst ned på miniatyrbilden av resursen i kortvyn. I listvyn visas resursens status som **[!UICONTROL Expired]**.
 
-1. I [!DNL Assets]-konsolen väljer du en mapp och skapar en granskningsåtgärd för mappen.
+1. I [!DNL Assets] väljer du en mapp och skapar en granskningsåtgärd för mappen.
 
 1. Granska och godkänn/avvisa resurserna i granskningsaktiviteten och klicka på **[!UICONTROL Complete]**.
 
@@ -111,41 +111,41 @@ Konsolen [!DNL Assets] kan visa olika lägen för resurser. Beroende på det akt
 
 1. Om du vill söka efter resurser baserat på deras status klickar du på **[!UICONTROL Search]** för att visa sökfältet.
 
-1. Välj `Return` och klicka på [!DNL Experience Manager].
+1. Välj `Return` och klicka [!DNL Experience Manager].
 
-1. Klicka på **[!UICONTROL Publish Status]** i sökpanelen och välj **[!UICONTROL Published]** för att söka efter publicerade resurser i [!DNL Assets].
+1. Klicka på **[!UICONTROL Publish Status]** och markera **[!UICONTROL Published]** för att söka efter publicerade resurser i [!DNL Assets].
 
-1. Om du vill söka efter godkända eller avvisade resurser väljer du **[!UICONTROL Approval Status]** och väljer lämpligt alternativ.
+1. Om du vill söka efter godkända eller avvisade resurser väljer du **[!UICONTROL Approval Status]** och välj lämpligt alternativ.
 
-1. Om du vill söka efter resurser baserat på deras förfallostatus väljer du **[!UICONTROL Expiry Status]** i sökpanelen och väljer lämpligt alternativ.
+1. Om du vill söka efter resurser baserat på deras förfallostatus väljer du **[!UICONTROL Expiry Status]** i sökpanelen och välj lämpligt alternativ.
 
 1. Du kan också söka efter resurser baserat på en kombination av statusvärden under olika sökfaktorer. Du kan till exempel söka efter publicerade resurser som har godkänts i en granskningsåtgärd och som inte har förfallit. Om du vill söka efter sådana resurser väljer du lämpliga alternativ i sökmetoderna.
 
-## Digital Rights Management i [!DNL Assets] {#digital-rights-management-in-assets-1}
+## Digital Rights Management in [!DNL Assets] {#digital-rights-management-in-assets-1}
 
-DRM-funktionaliteten framtvingar ett godkännande av licensavtalet innan du kan hämta en licensierad mediefil från [!DNL Assets].
+DRM-funktionaliteten kräver att licensavtalet accepteras innan du kan hämta en licensierad mediefil från [!DNL Assets].
 
-Om du väljer en skyddad resurs och klickar på **[!UICONTROL Download]** omdirigeras du till en licenssida för att godkänna licensavtalet. Om du inte godkänner licensavtalet är alternativet **[!UICONTROL Download]** inte tillgängligt.
+Om du väljer en skyddad resurs och klickar på **[!UICONTROL Download]** omdirigeras du till en licenssida där du godkänner licensavtalet. Om du inte godkänner licensavtalet kan du **[!UICONTROL Download]** är inte tillgängligt.
 
 Om markeringen innehåller flera skyddade resurser markerar du en resurs i taget, godkänner licensavtalet och fortsätter att hämta resursen.
 
 En tillgång anses vara skyddad om något av dessa villkor är uppfyllt:
 
-* Metadataegenskapen `xmpRights:WebStatement` för resursen pekar på sökvägen till sidan som innehåller licensavtalet för resursen.
-* Värdet för resursens metadataegenskap `adobe_dam:restrictions` är en rå HTML-kod som anger licensavtalet.
+* Metadataegenskapen för resursen `xmpRights:WebStatement` pekar på sökvägen till sidan som innehåller licensavtalet för resursen.
+* Värdet för resursens metadataegenskap `adobe_dam:restrictions` är ett obearbetat HTML som anger licensavtalet.
 
 >[!NOTE]
 >
->Platsen `/etc/dam/drm/licences` användes för att lagra licenser i de tidigare versionerna av [!DNL Experience Manager]. Platsen är nu inaktuell. Om du skapar eller ändrar licenssidor, eller porterar sidor från tidigare [!DNL Experience Manager]-versioner, rekommenderar Adobe att du lagrar sådana resurser på platserna `/apps/settings/dam/drm/licenses` eller `/conf/*/settings/dam/drm/licenses`.
+>Platsen `/etc/dam/drm/licences` användes för att lagra licenser i tidigare versioner av [!DNL Experience Manager]. Platsen är nu inaktuell. Om du skapar eller ändrar licenssidor, eller importerar sidorna från föregående [!DNL Experience Manager] releaser rekommenderar Adobe att du lagrar sådana resurser på `/apps/settings/dam/drm/licenses` eller `/conf/*/settings/dam/drm/licenses` platser.
 
 ### Hämta DRM-skyddade resurser {#downloading-drm-assets}
 
 1. I kortvyn väljer du de resurser du vill hämta och väljer **[!UICONTROL Download]**.
 1. På sidan **[!UICONTROL Copyright Management]** väljer du den resurs du vill hämta i listan.
-1. Välj **[!UICONTROL Agree]** i rutan [!UICONTROL License]. En bock visas bredvid resursen. Välj alternativet **[!UICONTROL Download]**.
+1. I [!UICONTROL License] välj **[!UICONTROL Agree]**. En bock visas bredvid resursen. Välj **[!UICONTROL Download]** alternativ.
 
    >[!NOTE]
    >
-   >Alternativet **[!UICONTROL Download]** är bara aktiverat när du väljer att godkänna licensavtalet för en skyddad tillgång. Om markeringen omfattar både skyddade och oskyddade resurser visas endast de skyddade resurserna i rutan och alternativet **[!UICONTROL Download]** är tillgängligt för att hämta de oskyddade resurserna. Om du vill acceptera licensavtal för flera skyddade resurser samtidigt markerar du resurserna i listan och väljer sedan **[!UICONTROL Agree]**.
+   >The **[!UICONTROL Download]** är bara aktiverat när du väljer att godkänna licensavtalet för en skyddad tillgång. Om markeringen omfattar både skyddade och oskyddade resurser visas endast de skyddade resurserna i rutan och **[!UICONTROL Download]** kan du ladda ned de oskyddade resurserna. Om du vill acceptera licensavtal för flera skyddade resurser samtidigt markerar du resurserna i listan och väljer sedan **[!UICONTROL Agree]**.
 
 1. Om du vill hämta resursen eller dess återgivningar väljer du **[!UICONTROL Download]** i dialogrutan.

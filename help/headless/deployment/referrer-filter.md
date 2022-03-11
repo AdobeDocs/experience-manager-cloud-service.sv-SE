@@ -2,13 +2,13 @@
 title: Referensfilterkonfiguration med AEM Headless
 description: Adobe Experience Manager referensfilter ger åtkomst från tredjepartsvärdar. En OSGi-konfiguration för referensfiltret krävs för att aktivera åtkomst till GraphQL-slutpunkten för headless-program.
 feature: GraphQL API
-source-git-commit: 0cc131209f497241949f8da6e8144dfcaffe7e6e
+exl-id: e2e3d2dc-b839-4811-b5d1-38ed8ec2cc87
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
 
 ---
-
 
 # Referensfilter {#referrer-filter}
 

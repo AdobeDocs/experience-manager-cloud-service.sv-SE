@@ -1,18 +1,18 @@
 ---
-title: Skapa och hantera kanaler på skärmar som en Cloud Service
-description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar som en Cloud Service.
-source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
+title: Skapa och hantera kanaler på skärmar as a Cloud Service
+description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
+exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
+source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
-
-# Skapa och hantera en kanal på skärmar som en Cloud Service {#creating-channels-screens-cloud}
+# Skapa och hantera en kanal på skärmar as a Cloud Service {#creating-channels-screens-cloud}
 
 När du har skapat ett AEM Screens-projekt måste du skapa kanaler.
-***Kanaler***, visa en innehållssekvens (bilder och videoklipp), en webbplats eller ett ensidigt program.
+***Kanaler***, visar en sekvens med innehåll (bilder och videoklipp), en webbplats eller ett ensidigt program.
 
 ## Syfte {#objective}
 
@@ -21,35 +21,35 @@ Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler
 * förstå hur du skapar kanaler för leverantörer av skärminnehåll
 * hantera och redigera innehåll i era kanaler
 
-## Steg för att skapa en ny sekvenskanal i skärmar som en Cloud Service {#create-new-channel}
+## Steg för att skapa en ny sekvenskanal på skärmar-as a Cloud Service {#create-new-channel}
 
 >[!NOTE]
 >**Förutsättningar**
->Innan du startar det här avsnittet av handboken bör du granska [Skapa och hantera projekt på skärmar som en Cloud Service](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md).
+>Innan du börjar med det här avsnittet av handboken bör du granska [Skapa och hantera projekt på skärmar as a Cloud Service](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md).
 
-Följ stegen nedan för att skapa en ny sekvenskanal i Skärmar som en Cloud Service:
+Följ stegen nedan för att skapa en ny sekvenskanal på as a Cloud Service Skärmar:
 
 1. Navigera till Screens Content Provider.
 
 1. Navigera till ditt AEM Screens-projekt, till exempel *FirstDigitalExperience*.
 
-1. Välj mappen **Kanaler** i ditt projekt, till exempel **FirstDigitalExperience** —> **Kanaler** och klicka på **Skapa** i åtgärdsfältet.
+1. Välj **Kanaler** mapp från ditt projekt, till exempel **FirstDigitalExperience** —> **Kanaler** och klicka på **Skapa** i åtgärdsfältet.
 
    ![](/help/screens-cloud/assets/create-content/channel-create1.png)
 
-1. Välj mallen, till exempel **Sekvenskanal** i guiden **Skapa** och klicka på **Nästa**.
+1. Välj en mall, till exempel **Sekvenskanal** från **Skapa** guide och klicka på **Nästa**.
 
    ![](/help/screens-cloud/assets/create-content/channel-create2.png)
    >[!NOTE]
-   > Guiden **Skapa** innehåller olika typer av mallar när du skapar en kanal. Mer information finns i avsnittet [Tillgängliga mallar](#available-templates) i guiden Skapa.
+   > The **Skapa** Guiden innehåller olika typer av mallar när du skapar en kanal. Se avsnittet [Tillgängliga mallar](#available-templates) i Skapa guide för mer information.
 
-1. Ange namnet på sekvenskanalen, till exempel **LoopingChannelOne** och klicka på **Create**.
+1. Ange namnet på sekvenskanalen, till exempel **LoopingChannelOne** och klicka på **Skapa**.
 
    ![](/help/screens-cloud/assets/create-content/channel-create3.png)
 
-   Nu visas en **LoopingChannelOne** i din kanalmapp i ditt AEM Screens-projekt.
+   Nu kommer du att se **LoopingChannelOne** i din kanalmapp i ditt AEM Screens-projekt.
 
-   När du har skapat kanalen kan du nu lägga till innehåll i kanalen. Mer information om hur du lägger till resurser (bilder/videor) i kanalen finns i [Lägga till innehåll i en kanal](#add-content).
+   När du har skapat kanalen kan du nu lägga till innehåll i kanalen. Se [Lägga till innehåll i en kanal](#add-content) om du vill lära dig hur du lägger till resurser (bilder/videor) i din kanal.
 
 ## Hantera en kanal {#managing-channels}
 
@@ -79,7 +79,7 @@ Följ stegen nedan om du vill lägga till eller redigera innehåll i en kanal:
 
 ## Tillgängliga mallar i guiden Skapa {#available-templates}
 
-Följande mallar är tillgängliga när du använder kanalguiden **Skapa**:
+Följande mallar är tillgängliga när du använder **Skapa** kanalguide:
 
 | Tillgängliga mallar | Beskrivning |
 |--- |--- |
@@ -90,4 +90,4 @@ Följande mallar är tillgängliga när du använder kanalguiden **Skapa**:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har konfigurerat en AEM Screens-kanal i ditt projekt måste du publicera din kanal. Se [Publiceringskanaler på skärmar som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/manage-publish.html?lang=en) innan du hanterar dina spelare från Screens Services Provider.
+Nu när du har konfigurerat en AEM Screens-kanal i ditt projekt måste du publicera din kanal. Se [Publicera kanaler på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/manage-publish.html?lang=en) innan du hanterar dina spelare från Screens Services Provider.

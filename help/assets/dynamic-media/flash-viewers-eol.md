@@ -14,4 +14,4 @@ ht-degree: 8%
 
 Från och med den 31 januari 2017 upphör stödet för Flash viewer Platform officiellt.
 
-Se [Referenshandboken för Dynamic Media-visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html) för de senaste visningsprogrammen som stöds.
+Se [Referenshandbok för Dynamic Media Viewer](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources.html) för de senaste visningsprogrammen som stöds.

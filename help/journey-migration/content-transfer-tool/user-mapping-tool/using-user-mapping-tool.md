@@ -1,13 +1,13 @@
 ---
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
-source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
+exl-id: dcb750c4-0f81-4d11-ac6c-0592162b683d
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 3%
 
 ---
-
 
 # Använda verktyget för användarmappning {#using-user-mapping-tool}
 

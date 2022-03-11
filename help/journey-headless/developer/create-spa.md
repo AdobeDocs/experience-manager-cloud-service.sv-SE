@@ -1,21 +1,21 @@
 ---
 title: Valfritt - Så här skapar du enkelsidiga program (SPA) med AEM
 description: I den här valfria fortsättningen av den AEM Headless Developer Journey får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA.
-source-git-commit: ddd320ae703225584d4a2055d0f882d238d60987
+exl-id: d74848f2-683e-49e1-9374-32596ca5d7d7
+source-git-commit: 4a5967f682d122d20528b1d904590fb82f438fa7
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 0%
 
 ---
 
-
 # Skapa enkelsidiga program (SPA) med AEM {#create-spa}
 
-I den här valfria fortsättningen av [AEM Headless Developer Journey,](overview.md), får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full-stack och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA Editor, samt integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
+I denna valfria fortsättning av [AEM Headless Developer Journey,](overview.md) Lär dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med AEM ramverk för SPA redigeringsprogram, samt integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
 
-## Berättelsen hittills {#story-so-far}
+## Story hittills {#story-so-far}
 
-Nu ska du ha slutfört hela [AEM Headless Developer Journey](overview.md) och förstå grunderna för headless delivery i AEM inklusive en förståelse av:
+Nu borde du ha slutfört hela [AEM Headless Developer Journey](overview.md) och förstå grunderna för headless-leverans i AEM, inklusive en förståelse för:
 
 * Skillnaden mellan headless och headful content delivery.
 * AEM headless-funktioner.
@@ -26,7 +26,7 @@ Nu ska du ha slutfört hela [AEM Headless Developer Journey](overview.md) och f�
 
 Så du har nu antingen gått live med ditt första AEM Headless-projekt eller har all den kunskap som behövs för att göra det. Grattis!
 
-Varför läser du den här extra, valfria fortsatta resan? I [Getting Started](getting-started.md#integration-levels) diskuterade vi troligen kortfattat hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan också stöder hybridmodeller som kombinerar fördelarna med båda. Även om det inte är den traditionella headless-modellen kan sådana hybridmodeller ge oöverträffad flexibilitet till vissa projekt.
+Varför läser du den här extra, valfria fortsatta resan? Kanske du minns det i [Komma igång](getting-started.md#integration-levels) Vi diskuterade kortfattat hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan också kan stödja hybridmodeller som kombinerar fördelarna med båda. Även om det inte är den traditionella headless-modellen kan sådana hybridmodeller ge oöverträffad flexibilitet till vissa projekt.
 
 Den här artikeln bygger på dina kunskaper om AEM Headless genom att ingående utforska hur du kan skapa egna ensidiga program (SPA) som faktiskt kan redigeras i AEM. På så sätt kan du skapa innehåll och skicka det direkt till en SPA, men det SPA fortfarande redigerbart i AEM.
 
@@ -47,7 +47,7 @@ Det finns ett antal krav innan du börjar arbeta med SPA i AEM.
 
 * Utvecklingserfarenhet som skapar SPA med React- eller Angular-ramverk
 * Grundläggande AEM att skapa innehållsfragment och använda redigeraren
-* Läs dokumentet [Headful and Headless in AEM](/help/implementing/developing/headful-headless.md) för att förstå de olika nivåerna av SPA.
+* Var noga med att granska dokumentet [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md) för att förstå de olika graden av SPA.
 
 ### Verktyg {#tools}
 
@@ -68,30 +68,30 @@ Med AEM SPA Editor kan gränssnittsutvecklare skapa SPA som kan integreras i en 
 
 Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir en SPA en mycket attraktiv upplevelse inte bara för besökaren på webbsidan, utan även för marknadsförare och utvecklare på grund av hur SPA fungerar.
 
-En fullständig beskrivning av SPA och varför du skulle använda dem finns i avsnittet [ytterligare resurser](#additional-resources) för länkar till mer utförlig dokumentation.
+En fullständig beskrivning av SPA och varför du skulle använda dem finns i [ytterligare resurser](#additional-resources) för länkar till mer utförlig dokumentation.
 
 ## Hur AEM hanterar SPA
 
 Utveckla single page-applikationer AEM förutsätter att frontutvecklaren följer vedertagna standarder när han skapar en SPA. Om du som frontendutvecklare följer dessa allmänna bästa metoder samt några AEM-specifika principer, kommer din SPA att fungera med AEM och dess innehållsredigeringsfunktioner.
 
-* **Portabilitet**  - Precis som med andra komponenter bör de SPA komponenterna vara så portabla som möjligt. SPA bör byggas med rörliga och återanvändbara komponenter.
-* **AEM Drives Site Structure**  (Webbplatsstruktur) - Utvecklaren på fronten skapar komponenter och äger sin interna struktur, men använder AEM för att definiera webbplatsens innehållsstruktur.
-* **Dynamisk återgivning**  - All återgivning ska vara dynamisk.
-* **Dynamisk routning**  - SPA ansvarar för routningen och AEM lyssnar på den och hämtar baserat på den. Alla routningar ska också vara dynamiska.
+* **Portabilitet** - Precis som med andra komponenter ska SPA byggas så att de är så portabla som möjligt. SPA bör byggas med rörliga och återanvändbara komponenter.
+* **AEM diskar platsstruktur** - Utvecklaren skapar komponenter och äger sin interna struktur, men använder AEM för att definiera webbplatsens innehållsstruktur.
+* **Dynamisk återgivning** - All återgivning ska vara dynamisk.
+* **Dynamisk routning** - SPA ansvarar för routningen och AEM lyssnar på den och hämtar baserat på den. Alla routningar ska också vara dynamiska.
 
-En fullständig beskrivning av hur AEM hanterar SPA finns i avsnittet [ytterligare resurser](#additional-resources) för länkar till mer utförlig dokumentation.
+En fullständig beskrivning av hur AEM hanterar SPA finns i [ytterligare resurser](#additional-resources) för länkar till mer utförlig dokumentation.
 
 ## AEM SPA Editor {#aem-spa-editor}
 
-Webbplatser som byggts med vanliga SPA ramverk som React och Angular läser in sitt innehåll via dynamisk JSON och tillhandahåller inte den HTML-struktur som krävs för att den AEM sidredigeraren ska kunna placera redigeringskontroller.
+Webbplatser som byggts med vanliga SPA som React och Angular läser in sitt innehåll via dynamisk JSON och tillhandahåller inte den HTML-struktur som krävs för att den AEM sidredigeraren ska kunna placera redigeringskontroller.
 
 Om du vill kunna redigera SPA i AEM måste du mappa mellan JSON-utdata för SPA och innehållsmodellen i den AEM databasen för att kunna spara ändringar i innehållet.
 
 SPA i AEM innehåller ett tunt JS-lager som interagerar med den SPA JS-koden när den läses in i sidredigeraren. Händelser kan skickas med och platsen för redigeringskontrollerna kan aktiveras för redigering i sitt sammanhang. Den här funktionen bygger på API-slutpunktskonceptet för innehållstjänster eftersom innehållet från SPA måste läsas in via innehållstjänster.
 
-En fullständig beskrivning av AEM SPA Editor finns i avsnittet [ytterligare resurser](#additional-resources) för länkar till mer utförlig dokumentation.
+En fullständig beskrivning av AEM SPA Editor finns i [ytterligare resurser](#additional-resources) för länkar till mer utförlig dokumentation.
 
-## Hämtar befintlig SPA {#existing-spas}
+## Antar befintliga SPA {#existing-spas}
 
 Om du har en befintlig SPA har AEM stöd för att bädda in den i AEM så att den är synlig för innehållsförfattarna i AEM redigerare. Det här kan vara användbart om du vill visa innehållet som de skapar via innehållsfragment i slutprogrammet där det kommer att användas.
 
@@ -99,7 +99,7 @@ Dessutom kan du, med endast små ändringar, aktivera vissa redigeringsmöjlighe
 
 RemotePage-komponenten tillåter återgivning av en extern SPA i AEM.
 
-En fullständig beskrivning av hur du gör en extern SPA ändringsbar i AEM finns i [avsnittet ](#additional-resources) ytterligare resurser för länkar till mer utförlig dokumentation.
+En fullständig beskrivning av hur du gör en extern SPA redigerbar i AEM finns i [ytterligare resurser](#additional-resources) för länkar till mer utförlig dokumentation.
 
 ## What&#39;s Next {#what-is-next}
 
@@ -114,17 +114,17 @@ Om du behöver anpassa en befintlig SPA för att använda den i AEM, ska du läs
 * [RemotePage-komponenten](/help/implementing/developing/hybrid/remote-page.md)
 * [Redigera en extern SPA i AEM](/help/implementing/developing/hybrid/editing-external-spa.md)
 
-Nedan finns [ytterligare resurser](#additional-resources) som kan fördjupa dig SPA ämnen i AEM.
+Se nedan för [ytterligare resurser](#additional-resources) som kan fördjupa er i SPA ämnen i AEM.
 
 ## Ytterligare resurser {#additional-resources}
 
 Nedan följer ytterligare resurser som ger en djupdykning i några koncept som nämns i det här dokumentet.
 
-* [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md) - A description of the different delivery models available in AEM
+* [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md) - En beskrivning av de olika leveransmodellerna i AEM
 * [SPA introduktion och genomgång.](/help/implementing/developing/hybrid/introduction.md) - En bra introduktion till SPA i AEM
-* [Utveckla SPA för AEM](/help/implementing/developing/hybrid/developing.md)  - Riktlinjer för hur du utvecklar SPA för AEM
-* [Översikt över](/help/implementing/developing/hybrid/editor-overview.md)  SPA - Information om hur SPA redigeraren fungerar
-* [Återgivning](/help/implementing/developing/hybrid/ssr.md)  på serversidan - Så här konfigurerar du SSR för AEM SPA
-* [SPA referensdokument](/help/implementing/developing/hybrid/reference-materials.md)  - JavaScript API-referenser och länkar till AEM öppen källkod SPA GitHub-projekt
-* [Content Fragments](/help/assets/content-fragments/content-fragments.md)  - How to create Content Fragments
-* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven template that create a minimum, best-practices based Adobe Experience Manager (AEM) project as a starting point for your website
+* [Utveckla SPA för AEM](/help/implementing/developing/hybrid/developing.md) - Riktlinjer för utveckling av SPA för AEM
+* [SPA](/help/implementing/developing/hybrid/editor-overview.md) - Information om hur SPA redigeraren fungerar
+* [Återgivning på serversidan](/help/implementing/developing/hybrid/ssr.md) - Konfigurera SSR för AEM SPA
+* [SPA referensdokument](/help/implementing/developing/hybrid/reference-materials.md) - JavaScript API-referenser och länkar till AEM med öppen källkod SPA GitHub-projekt
+* [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) - Skapa innehållsfragment
+* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats

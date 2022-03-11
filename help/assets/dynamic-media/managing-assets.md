@@ -1,12 +1,12 @@
 ---
 title: Hantera Dynamic Media-resurser
 description: Lär dig hur du arbetar med Dynamic Media resurser.
-feature: Resurshantering
+feature: Asset Management
 role: Admin,User
 exl-id: 0dc6d577-a8ee-4dd5-8643-28862bb1394c
 source-git-commit: aba8896e304619fe7e73d61b52b83da40766477a
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '117'
 ht-degree: 7%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 7%
 
 Hantera Dynamic Media-resurser - bilder, video och interaktiva resurser - när de har överförts måste du utföra många uppgifter, bland annat förhandsgranska, hämta eller publicera.
 
-När du förhandsgranskar kan du även använda bildförinställningar (endast för bilder) eller visningsförinställningar (för video och bilder). Du kan inte använda båda för en resurs. Se [Använd visningsförinställningar](viewer-presets.md) och [Använd bildförinställningar](image-presets.md).
+När du förhandsgranskar kan du även använda bildförinställningar (endast för bilder) eller visningsförinställningar (för video och bilder). Du kan inte använda båda för en resurs. Se [Använda förinställningar för visningsprogram](viewer-presets.md) och [Använda bildförinställningar](image-presets.md).
 
 Allmän information om hur du hanterar resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/manage-digital-assets.md).
 

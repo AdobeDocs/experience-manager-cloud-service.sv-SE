@@ -1,20 +1,19 @@
 ---
 title: Sökning
 description: Hitta materialet snabbare med omfattande sökfunktioner
-translation-type: tm+mt
-source-git-commit: 305f584d89bc92f89b3ddaa49bb5da2f10e567db
+exl-id: 8a799e9a-1461-4e79-ae90-1978af6cf0ed
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 6%
 
 ---
 
-
 # Sökning {#search-feature}
 
 I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
 
-## Sökgrunder {#search-basics}
+## Grunderna i sökning {#search-basics}
 
 Sökfunktionen finns i det övre verktygsfältet:
 
@@ -24,11 +23,11 @@ Med sökfältet kan du:
 
 * Sök efter ett specifikt nyckelord, en viss sökväg eller en viss tagg
 * Filtrera enligt resursspecifika kriterier som ändrade datum, sidstatus, filstorlek osv.
-* Definiera och använd en [sparad sökning](#saved-searches) - baserat på ovanstående villkor
+* Definiera och använda en [sparad sökning](#saved-searches) - baserat på ovanstående kriterier
 
 >[!NOTE]
 >
->Sökningen kan också anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
+>Sökningen kan även anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
 
 ## Sök och filtrera {#search-and-filter}
 
@@ -42,14 +41,14 @@ Så här söker och filtrerar du resurser:
 
    ![Sökplats](/help/sites-cloud/authoring/assets/search-term-location.png)
 
-1. Om det behövs kan du ta bort platsfiltret (markera **X** på filtret som du vill ta bort) för att söka i alla konsoler/resurstyper.
+1. Om det behövs kan du ta bort platsfiltret (välj **X** på det filter som du vill ta bort) för att söka i alla konsoler/resurstyper.
 1. Resultaten visas, grupperade efter konsol och relaterad resurstyp.
 
    Du kan antingen välja en specifik resurs (för ytterligare åtgärder) eller gå nedåt genom att välja önskad resurstyp; till exempel **Visa alla platser**:
 
    ![Sökresultat](/help/sites-cloud/authoring/assets/search-results.png)
 
-1. Om du vill gå vidare väljer du Rail-symbolen (längst upp till vänster) för att öppna sidopanelen **Filter och alternativ**.
+1. Om du vill gå längre ned väljer du skensymbolen (längst upp till vänster) för att öppna sidopanelen **Filter och alternativ**.
 
    ![Rail, knapp](/help/sites-cloud/authoring/assets/rail-button.png)
 
@@ -90,7 +89,7 @@ Så här söker och filtrerar du resurser:
 
 Förutom att söka efter en mängd olika aspekter kan du även spara en viss sökkonfiguration för hämtning och användning i ett senare skede:
 
-1. Definiera sökvillkoren och välj **Spara**.
+1. Definiera sökvillkor och välj **Spara**.
 
    ![Spara en sökning](/help/sites-cloud/authoring/assets/search-side-panel.png)
 
@@ -105,7 +104,7 @@ Förutom att söka efter en mängd olika aspekter kan du även spara en viss sö
 1. När du har sparat kan du:
 
    * Använd **x** (mot namnet på den sparade sökningen) för att starta en ny fråga (den sparade sökningen tas inte bort).
-   * **Redigera sparad sökning**, ändra sökvillkoren och  **** spara igen.
+   * **Redigera sparad sökning**, ändra sökvillkoren och sedan **Spara** igen.
 
 Du kan ändra sparade sökningar genom att markera den sparade sökningen och klicka på **Redigera sparad sökning** längst ned på sökpanelen.
 

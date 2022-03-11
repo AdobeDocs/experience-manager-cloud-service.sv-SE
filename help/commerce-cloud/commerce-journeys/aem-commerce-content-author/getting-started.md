@@ -1,7 +1,8 @@
 ---
 title: Komma igång med CIF-redigering
 description: Komma igång med CIF-redigering
-source-git-commit: e497b5b4439cf91ec7ea698d9bedcb4210802414
+exl-id: 0bef4d8c-0ad3-4ec8-ab08-8c83203b3b68
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 0%

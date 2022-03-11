@@ -1,25 +1,24 @@
 ---
 title: Din inkorg
 description: Hantera dina uppgifter med inkorgen
-translation-type: tm+mt
-source-git-commit: 672f1483c017d791365173c91b0bee5c44c33535
+exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 15%
 
 ---
 
-
 # Din inkorg {#your-inbox}
 
 Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. Du kan till exempel få meddelanden om:
 
 * Uppgifter:
-   * Dessa kan också skapas vid olika punkter i AEM, till exempel under **Projekt**.
+   * Dessa kan också skapas vid olika punkter i AEM, t.ex. under **Projekt**.
    * Dessa kan ha sitt ursprung i arbetsflödessteget **Skapa uppgift** eller **Skapa projektuppgift**.
 * Arbetsflöden:
    * Arbetsobjekt som representerar åtgärder som du behöver utföra på sidinnehåll
-      * Detta är produkten av arbetsflödet **Deltagare** steg.
+      * Det här är produkten av arbetsflödet **Deltagare** steg.
    * Misslyckade objekt, så att administratörer kan försöka igen
 
 Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtgärder.
@@ -41,9 +40,9 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 >[!NOTE]
 >
->Vissa åtgärder visas också i [kortvyn för den aktuella resursen](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view).
+>Vissa åtgärder visas också i [kortvy över lämplig resurs](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view).
 
-## Öppnar inkorgen {#opening-the-inbox}
+## Öppna Inkorgen {#opening-the-inbox}
 
 Så här öppnar du AEM inkorg:
 
@@ -87,7 +86,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Kalendervy**
 
-   För **Kalendervy** kan du konfigurera:
+   För **Kalendervy** du kan konfigurera:
 
    * **Gruppera efter**
    * **Schema** eller **Ingen**
@@ -97,7 +96,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Listvy**
 
-   För **listvyn** kan du konfigurera sorteringsmekanismen:
+   För **Listvy** du kan konfigurera sorteringsmekanismen:
 
    * **Sortera efter**
    * **Sorteringsordning**
@@ -120,14 +119,14 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    Åtgärderna är lämpliga för objektet och omfattar:
 
-   * **** Slutförandeåtgärd
-   * **Delegerande** objekt
-   * **** Öppna ett objekt, beroende på objekttypen, kan den här åtgärden:
+   * **Slutförd** åtgärd
+   * **Delegera** ett objekt
+   * **Öppna** ett objekt, beroende på objekttypen kan den här åtgärden:
 
       * Visa objektegenskaper
       * Öppna en lämplig kontrollpanel eller guide för ytterligare åtgärder
       * Öppna relaterad dokumentation
-   * **Gå** tillbaka till ett föregående steg
+   * **Stega bakåt** till ett föregående steg
    * Visa nyttolasten för ett arbetsflöde
    * Skapa ett projekt från artikeln
 
@@ -144,7 +143,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * En åtgärdsguide startas
    * En dokumentationssida öppnas
 
-   **Delegera** öppnar till exempel en dialogruta:
+   Till exempel: **Delegera** öppnar en dialogruta:
 
    ![Delegera inkorgsaktivitet](/help/sites-cloud/authoring/assets/inbox-assign-task.png)
 
@@ -155,11 +154,11 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * Välj bakåtpilen för att återgå till inkorgen, t.ex. om en åtgärdsguide eller dokumentationssida har öppnats, kan du gå tillbaka till Inkorgen.
 
 
-## Skapar en aktivitet {#creating-a-task}
+## Skapa en uppgift {#creating-a-task}
 
 I inkorgen kan du skapa uppgifter:
 
-1. Välj **Skapa** och sedan **Aktivitet**.
+1. Välj **Skapa** sedan **Uppgift**.
 1. Fyll i de nödvändiga fälten på flikarna **Grundläggande** och **Avancerat** (endast **Titel** är obligatoriskt, alla andra är valfria):
 
    * **Grundläggande**:
@@ -167,7 +166,7 @@ I inkorgen kan du skapa uppgifter:
       * **Titel**
       * **Projekt**
       * **Tilldelad**
-      * **Innehåll**, ungefär som nyttolast, är en referens från aktiviteten till en plats i databasen
+      * **Innehåll**, på samma sätt som nyttolast, är detta en referens från aktiviteten till en plats i databasen
       * **Beskrivning**
       * **Aktivitetsprioritet**
       * **Startdatum**
@@ -177,7 +176,7 @@ I inkorgen kan du skapa uppgifter:
 
    * **Avancerat**
 
-      * **Namn**: Detta används för att skapa URL:en och om det är tomt baseras det på  **titeln**.
+      * **Namn**:Detta kommer att användas för att skapa URL:en och om den är tom kommer den att baseras på **Titel**.
 
    ![Inkorgen lägger till avancerade alternativ för uppgifter](/help/sites-cloud/authoring/assets/inbox-add-task-advanced.png)
 
@@ -185,18 +184,18 @@ I inkorgen kan du skapa uppgifter:
 
 ## Skapa ett projekt {#creating-a-project}
 
-För vissa uppgifter kan du skapa ett [projekt](/help/sites-cloud/authoring/projects/overview.md) baserat på den uppgiften:
+För vissa uppgifter kan du skapa en [Projekt](/help/sites-cloud/authoring/projects/overview.md) baserat på den uppgiften:
 
 1. Välj lämplig åtgärd genom att trycka/klicka på miniatyrbilden.
 
    >[!NOTE]
    >
-   >Endast uppgifter som skapats med alternativet **Skapa** i **Inkorgen** kan användas för att skapa ett projekt.
+   >Endast uppgifter som skapats med **Skapa** alternativ för **Inkorg** kan användas för att skapa ett projekt.
    >
    >Arbetsobjekt (från ett arbetsflöde) kan inte användas för att skapa ett projekt.
 
 1. Välj **Skapa projekt** i verktygsfältet för att öppna guiden.
-1. Välj lämplig mall och **Nästa**.
+1. Välj lämplig mall och sedan **Nästa**.
 1. Ange de nödvändiga egenskaperna:
 
    * **Grundläggande**
@@ -205,21 +204,21 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-cloud/authoring/proj
       * **Beskrivning**
       * **Startdatum**
       * **Förfallodatum**
-      * **** Användarroll
+      * **Användare** och roll
    * **Avancerat**
 
       * **Namn**
    >[!NOTE]
    >
-   >Mer information finns i [Skapa ett projekt](/help/sites-cloud/authoring/projects/managing.md#creating-a-project).
+   >Se [Skapa ett projekt](/help/sites-cloud/authoring/projects/managing.md#creating-a-project) för fullständig information.
 
 1. Välj **Skapa** för att bekräfta åtgärden.
 
-## Filtrera objekt i AEM Inkorg {#filtering-items-in-the-aem-inbox}
+## Filtrera objekt i AEM {#filtering-items-in-the-aem-inbox}
 
 Du kan filtrera objekten i listan:
 
-1. Öppna **AEM Inkorg**.
+1. Öppna **AEM**.
 
 1. Öppna filterväljaren:
 
@@ -231,4 +230,4 @@ Du kan filtrera objekten i listan:
 
    >[!NOTE]
    >
-   >Med [Visa inställningar](#inbox-view-settings) kan du även konfigurera sorteringsordningen när du använder [listvyn](#inbox-list-view).
+   >Med [Visa inställningar](#inbox-view-settings) Du kan också konfigurera sorteringsordningen när du använder [Listvy](#inbox-list-view).

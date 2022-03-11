@@ -2,13 +2,13 @@
 title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.2.0
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.2.0
 feature: Release Information
-source-git-commit: 8876702f1a172282fd1ff46387ade2a45e187fed
+exl-id: b1cd871d-c71e-4902-a97e-2c859f6a4da4
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 2%
 
 ---
-
 
 # Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.2.0 {#release-notes}
 
@@ -44,4 +44,3 @@ Releasedatum för Content Transfer Tool v1.8.6 är 3 februari 2022.
 ### Felkorrigeringar {#bug-fixes-ctt}
 
 * Vissa användare mappades inte eftersom användarmappningen var skiftlägeskänslig. Den här har åtgärdats. Användarmappning är inte längre skiftlägeskänslig.
-

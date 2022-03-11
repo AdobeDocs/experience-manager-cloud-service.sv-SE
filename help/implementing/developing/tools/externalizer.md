@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # Extern URL {#externalizing-urls}
 
-I AEM är **Externalizer** en OSGi-tjänst som gör att du kan omforma en resurssökväg programmatiskt (t.ex. `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefix-sökvägen med en förkonfigurerad DNS.
+AEM **Externalizer** är en OSGi-tjänst som gör att du kan omvandla en resurssökväg med programkod (t.ex. `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
 
 Eftersom en AEM as a Cloud Service instans inte kan känna till sin externt synliga URL och eftersom en länk ibland måste skapas utanför det begärda omfånget, tillhandahåller den här tjänsten en central plats för att konfigurera dessa externa URL:er och skapa dem.
 
-I den här artikeln beskrivs hur du konfigurerar tjänsten Externalizer och hur du använder den. Teknisk information om tjänsten finns i [Javadocs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html).
+I den här artikeln beskrivs hur du konfigurerar tjänsten Externalizer och hur du använder den. Tekniska detaljer om tjänsten finns i [Javadocs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## Externalizerns standardbeteende och hur du åsidosätter {#default-behavior}
 
-Externalizer-tjänsten är inte klar att användas och har värden som `author-p12345-e6789.adobeaemcloud.com` och `publish-p12345-e6789.adobeaemcloud.com`.
+Externalizer-tjänsten har värden som `author-p12345-e6789.adobeaemcloud.com` och `publish-p12345-e6789.adobeaemcloud.com`.
 
-Om du vill åsidosätta sådana värden använder du Cloud Managers miljövariabler enligt beskrivningen i artikeln [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md#cloud-manager-api-format-for-setting-properties) och ange de fördefinierade variablerna `AEM_CDN_DOMAIN_AUTHOR` och `AEM_CDN_DOMAIN_PUBLISH`.
+Om du vill åsidosätta sådana värden använder du Cloud Managers miljövariabler enligt beskrivningen i artikeln [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md#cloud-manager-api-format-for-setting-properties) och ange fördefinierade `AEM_CDN_DOMAIN_AUTHOR` och `AEM_CDN_DOMAIN_PUBLISH` variabler.
 
 ## Konfigurera tjänsten Externalizer {#configuring-the-externalizer-service}
 
-Med tjänsten Externalizer kan du centralt definiera den domän som kan användas för att programmässigt prefix för resurssökvägar. Tjänsten Externalizer bör endast användas för program med en enda domän.
+Med tjänsten Externalizer kan du centralt definiera den domän som kan användas för att programmässigt prefix för resurssökvägar. Externalizer-tjänsten bör endast användas för program med en enda domän.
 
 >[!NOTE]
 >
->As when applying any [OSGi configurations for AEM as a Cloud Service,](/help/implementing/deploying/overview.md#osgi-configuration) the following steps should be performed on a local developer instance and then committed to your project code for deployment.
+>Som när du använder [OSGi-konfigurationer för AEM as a Cloud Service,](/help/implementing/deploying/overview.md#osgi-configuration) följande steg ska utföras på en lokal utvecklarinstans och sedan implementeras i projektkoden för distribution.
 
 Så här definierar du en domänmappning för tjänsten Externalizer:
 
@@ -37,7 +37,7 @@ Så här definierar du en domänmappning för tjänsten Externalizer:
 
    `https://<host>:<port>/system/console/configMgr`
 
-1. Klicka på **Day CQ Link Externalizer** för att öppna konfigurationsdialogrutan.
+1. Klicka **Day CQ Link Externalizer** för att öppna konfigurationsdialogrutan.
 
    ![Externalizer OSGi-konfigurationen](./assets/externalizer-osgi.png)
 
@@ -45,7 +45,7 @@ Så här definierar du en domänmappning för tjänsten Externalizer:
    >
    >Den direkta länken till konfigurationen är `https://<host>:<port>/system/console/configMgr/com.day.cq.commons.impl.ExternalizerImpl`
 
-1. Definiera en **domänmappning**. En mappning består av ett unikt namn som kan användas i koden för att referera till domänen, ett blanksteg och domänen:
+1. Definiera en **Domäner** mappning. En mappning består av ett unikt namn som kan användas i koden för att referera till domänen, ett blanksteg och domänen:
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
@@ -71,7 +71,7 @@ Så här definierar du en domänmappning för tjänsten Externalizer:
    >
    >Med en anpassad konfiguration kan du lägga till en ny kategori, till exempel `production`, `staging` eller till och med externa icke-AEM system som `my-internal-webservice`. Det är användbart att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
 
-1. Klicka på **Spara** för att spara ändringarna.
+1. Klicka **Spara** för att spara ändringarna.
 
 ### Använda tjänsten Externalizer {#using-the-externalizer-service}
 
@@ -125,4 +125,4 @@ I det här avsnittet visas några exempel på hur Externalizer-tjänsten kan anv
 
 >[!TIP]
 >
->Fler exempel finns i [Javadocs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html).
+>Du hittar fler exempel i [Javadocs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html).

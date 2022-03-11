@@ -1,21 +1,21 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.2.0
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.2.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.2.0
 exl-id: 281f9523-dec2-44f1-9459-5a45d48489d9
 source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '388'
+ht-degree: 1%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.6.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.2.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.2.0.
+Den här sidan innehåller versionsinformation för Cloud Manager i AEM as a Cloud Service 2021.2.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.2.0 är 11 februari 2021.
 
 ## Cloud Manager {#cloud-manager}
 
@@ -29,9 +29,9 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari
 
 * SonarQube-profilen för Cloud Manager har uppdaterats för att ta bort Sonar-regelbläckfisk:S2142. Detta kommer inte längre att orsaka en konflikt med kontrollerna för trådavbrott.
 
-* Molnhanterarens användargränssnitt informerar användaren som kanske inte kan lägga till/uppdatera domännamn för tillfället eftersom den associerade miljön antingen har en pågående pipeline kopplad till sig eller som väntar på godkännande.
+* Molnhanterarens användargränssnitt informerar användaren som kanske inte kan lägga till/uppdatera domännamn för tillfället eftersom den associerade miljön antingen har en pågående pipeline kopplad till sig eller väntar på godkännandesteget.
 
-* Egenskaper som angetts i kundens `pom.xml`-filer som har prefixats med sonar kommer nu att tas bort dynamiskt för att undvika problem med bygg- och kvalitetsskanning.
+* Egenskaper angivna i kunden `pom.xml` filer som har prefixats med sonar tas nu bort dynamiskt för att undvika fel i skapande och kvalitetskontroll.
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan välja ett SSL-certifikat tillfälligt om det används av ett domännamn som för närvarande distribueras.
 
@@ -41,7 +41,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.2.0 är 11 februari
 
 * Det är inte längre skiftlägeskänsligt att matcha SSL-certifikat mot ett domännamn.
 
-* Molnhanterarens användargränssnitt informerar nu en användare om att certifikatets privata nycklar inte uppfyller 2 048-bitarsgränsen med ett felmeddelande.
+* Molnhanterarens användargränssnitt informerar nu en användare om de privata certifikatnycklarna inte uppfyller 2048-bitarsgränsen med ett felmeddelande.
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan välja ett SSL-certifikat tillfälligt om det används av ett domännamn som för närvarande distribueras.
 

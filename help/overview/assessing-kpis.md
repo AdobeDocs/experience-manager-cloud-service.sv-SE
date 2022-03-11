@@ -23,7 +23,7 @@ Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projekt
 **Rätt nyckeltal hjälper dig att få ut mer av Adobe Experience Manager**
 
 
-I en studie från 2018 analyserade IDC det affärsvärde som flera stora företag såg när de använde Adobe Experience Manager. I genomsnitt hade de organisationer som använde Experience Manager Sites förbättrat produktiviteten i sina digitala upplevelseteam med 23 %, minskat den tid som krävdes för att göra smärre redaktionella ändringar med 64 % och ökat antalet besökare per månad med 10 %. De företag som använder Experience Manager Assets ökade produktiviteten i sina digitala resursteam med 19 %, kortade tiden för att skapa nya resurser med 47 % och minskade tiden för att lansera marknadsföringskampanjer med 20 %.
+I en studie från 2018 analyserade IDC det affärsvärde som flera stora företag såg när de använde Adobe Experience Manager. I genomsnitt hade de organisationer som använder Experience Manager Sites förbättrat produktiviteten i sina digitala upplevelseteam med 23 %, minskat den tid som krävdes för att göra mindre redaktionella ändringar med 64 % och ökat antalet besökare per månad med 10 %. De företag som använder Experience Manager Assets ökade produktiviteten i sina team för digitala resurser med 19 %, kortade tiden för att skapa nya resurser med 47 % och minskade tiden för att lansera marknadsföringskampanjer med 20 %.
 
 För att uppnå samma dramatiska vinster måste ni ha tydliga mål för implementeringen av Experience Manager. Och ni måste ha nyckeltal som hjälper alla att fokusera på dessa mål.
 
@@ -51,7 +51,7 @@ Efter lanseringen av Experience Manager får du snabbt en klar uppsättning nyck
 
 >[!TIP]
 >
-> Om du vill ha ytterligare hjälp med dina nyckeltal kan du kontakta [Adobe Consulting Services](https://www.adobe.com/experience-cloud/consulting-services.html) eller din implementeringspartner.
+> Om du vill ha mer hjälp med dina nyckeltal kan du kontakta [Adobe konsulttjänster](https://www.adobe.com/experience-cloud/consulting-services.html) eller din implementeringspartner.
 
 Fler exempel på vilka typer av resultat större företag har sett av att använda Adobe Experience Manager finns i IDC-rapporterna:
 * [Adobe Experience Manager Sites affärsvärde](https://www.adobe.com/content/dam/acom/en/modal-offers/idc-aem-sites-q218/pdfs/22037555.en.aem.whitepaper.IDCBusinessValueAEMSites.pdf)

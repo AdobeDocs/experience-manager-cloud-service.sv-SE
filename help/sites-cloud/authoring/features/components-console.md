@@ -1,14 +1,13 @@
 ---
 title: Komponentkonsol
 description: Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för din instans
-translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+exl-id: f4949331-5302-46d3-a004-b813bb95ec2f
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 17%
 
 ---
-
 
 # Komponentkonsol {#components-console}
 
@@ -20,7 +19,7 @@ Den finns under **Verktyg ->** **Allmänt ->** **Komponenter**. Eftersom det int
 
 >[!NOTE]
 >
->Komponentkonsolen visar alla komponenter i systemet. [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) visar komponenter som är tillgängliga för författare och döljer komponentgrupper som börjar med en punkt ( `.`).
+>Komponentkonsolen visar alla komponenter i systemet. The [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) visar komponenter som är tillgängliga för författare och döljer komponentgrupper som börjar med en punkt ( `.`).
 
 ## Sökning {#search-field}
 
@@ -41,12 +40,12 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
    * Visa komponentens allmänna egenskaper.
       * Visa hur ikonen eller förkortningen har definierats för komponenten. <!-- View how the [icon or abbreviation has been defined](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) for the component.-->
       * Om du klickar på ikonens källa kommer du till den komponenten.
-   * Visa **Resurstyp** och **Resurssupertyp** (om den är definierad) för komponenten.
+   * Visa **Resurstyp** och **Resurssupertyp** (om det är definierat) för komponenten.
       * Om du klickar på Resurssupertypen kommer du till den komponenten.
 
    >[!NOTE]
    >
-   >Eftersom `/apps` inte kan redigeras under körning är komponentkonsolen skrivskyddad.
+   >För `/apps` går inte att redigera vid körning, komponentkonsolen är skrivskyddad.
 
 * **Profiler**
 
@@ -62,6 +61,6 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
 
 * **Dokumentation**
 
-   Om utvecklaren har tillhandahållit dokumentation för komponenten visas den på fliken **Dokumentation**. Om det inte finns någon tillgänglig dokumentation visas inte fliken **Dokumentation**. <!-- If the developer has provided [documentation for the component](/help/sites-developing/developing-components.md#documenting-your-component), it will appear on the **Documentation** tab. If there is no documentation available, the **Documentation** tab will not be shown.-->
+   Om utvecklaren har tillhandahållit dokumentation för komponenten visas den på **Dokumentation** -fliken. Om det inte finns någon tillgänglig dokumentation kan du **Dokumentation** kommer inte att visas. <!-- If the developer has provided [documentation for the component](/help/sites-developing/developing-components.md#documenting-your-component), it will appear on the **Documentation** tab. If there is no documentation available, the **Documentation** tab will not be shown.-->
 
    ![Komponentdokumentation](/help/sites-cloud/authoring/assets/components-console-documentation.png)

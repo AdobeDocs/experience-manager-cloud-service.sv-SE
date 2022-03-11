@@ -1,6 +1,6 @@
 ---
-title: Dataskydd och dataintegritet - Adobe Experience Manager som Cloud Service Foundation Readiness
-description: Läs mer om Adobe Experience Manager som en Cloud Service Foundation-support för de olika dataskydds- och dataintegritetsreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför en ny AEM som ett Cloud Service-projekt.
+title: Dataskydd och dataintegritet - Adobe Experience Manager as a Cloud Service Foundation-beredskap
+description: Läs mer om Adobe Experience Manager as a Cloud Service Foundation-stöd för de olika dataskydds- och datasekretessreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
 exl-id: 3a4b9d00-297d-4b1d-ae57-e75fbd5c490c
 source-git-commit: e4527b155179c50e1e423e7e835b3fcde3a4f2af
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 5%
 
 ---
 
-# Adobe Experience Manager som Cloud Service Foundation Readiness for Data Protection and Data Privacy Regulations {#aem-foundation-readiness-for-data-protection-and-data-privacy-regulations}
+# Adobe Experience Manager as a Cloud Service Foundation Readiness for Data Protection and Data Privacy Regulations {#aem-foundation-readiness-for-data-protection-and-data-privacy-regulations}
 
 >[!WARNING]
 >
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad detta innebär för dig som Adobe-kund finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
 
 ## Stöd för AEM Foundation Data Privacy and Protection {#aem-foundation-data-privacy-and-protection-support}
 
@@ -29,7 +29,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
 ### Manuella steg {#manual-steps}
 
-1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Tools - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/security/users.html`
+1. Öppna konsolen Användaradministration genom att bläddra till **[!UICONTROL Tools - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/security/users.html`
 
 <!--
    ![useradmin2](assets/useradmin2.png)
@@ -39,7 +39,7 @@ På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofile
 
    ![sök efter konto](assets/dpp-foundation-01.png)
 
-1. Öppna sedan användarprofilen genom att klicka på den och kontrollera den under fliken **[!UICONTROL Details]**.
+1. Öppna sedan användarprofilen genom att klicka på den och sedan kontrollera under **[!UICONTROL Details]** -fliken.
 
    ![användarprofil](assets/dpp-foundation-02.png)
 
@@ -81,7 +81,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 1. Öppna konsolen för användaradministration och sök efter användaren i fråga enligt beskrivningen ovan.
 2. Håll pekaren över användaren och klicka på markeringsikonen. Profilen blir grå vilket anger att den är markerad.
 
-3. Tryck på knappen **Inaktivera** i den övre menyn för att inaktivera användaren:
+3. Tryck på **Inaktivera** på den övre menyn för att inaktivera användaren:
 
    ![inaktivera konto](assets/dpp-foundation-03.png)
 
@@ -95,7 +95,7 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 >[!NOTE]
 >
->För AEM som Cloud Service finns det ingen manuell procedur tillgänglig från användargränssnittet för borttagning av en användarprofil eftersom CRXDE inte är tillgängligt.
+>För AEM as a Cloud Service finns det ingen manuell procedur tillgänglig från användargränssnittet för borttagning av en användarprofil eftersom CRXDE inte är tillgängligt.
 
 ### HTTP-API {#http-api-1}
 

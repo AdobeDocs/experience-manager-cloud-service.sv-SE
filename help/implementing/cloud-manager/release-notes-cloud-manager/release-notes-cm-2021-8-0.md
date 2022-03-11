@@ -1,31 +1,32 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service 2021.8.0
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.8.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.8.0
 feature: Release Information
-source-git-commit: 11910316836b33e886aeba84f89d1b2eebfe7de2
+exl-id: cf1d5c4f-404a-4ced-90f2-273c710adc0f
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.8.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.8.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.8.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.8.0.
 
 >[!NOTE]
->Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager som en Cloud Service klickar du [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+>Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.8.0 är 12 augusti 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.8.0 är 12 augusti 2021.
 
 ### Nyheter {#what-is-new}
 
 * Cloud Service kan nu visa serviceavtalsrapporter (SLA) i Cloud Manager. Detta kommer att göras tillgängligt stegvis under de närmaste månaderna.
-Mer information finns i [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sla-reporting.html).
+Se [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sla-reporting.html) om du vill veta mer.
 
-* Typen och allvarlighetsgraden för kvalitetsreglerna IndexType och `IndexDamAssetLucene` har ändrats. Dessa är nu båda Bugs of Blocker *serverity*.
+* Typ och allvarlighetsgrad för IndexType och `IndexDamAssetLucene` kvalitetsreglerna har ändrats. Nu finns båda Bugs of Blocker *serverity*.
 
 * Nya kvalitetsregler för Oak-index har införts för att omfatta asynkrona konfigurationer och kodkonfigurationer.
 
@@ -45,4 +46,4 @@ Mer information finns i [SLA-rapportering](https://experienceleague.adobe.com/do
 
 * Inledande introduktion misslyckades för nya organisationer med mycket långa namn.
 
-* När en pipeline aktiveras två gånger av någon anledning resulterar det i att en av körningarna misslyckas med *det går inte att uppdatera pipelinekörningsstatus*-fel.
+* När en pipeline av någon anledning aktiveras två gånger resulterar det ibland i att en av körningarna misslyckas med *det går inte att uppdatera körningsstatus för pipeline* fel.

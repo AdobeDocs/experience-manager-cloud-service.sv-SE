@@ -165,7 +165,6 @@ Du kan lägga till följande attribut i XML-schemaelement om du vill lägga till
 >
 >* Inled det första tecknet i elementnamnet med versal
 >* Infoga tomt utrymme vid gränserna för Camera Case.
-
 >
 >Om du till exempel lägger till `userFirstName` schemaelement, den bildtext som genereras i det adaptiva formuläret är `User First Name`.
 

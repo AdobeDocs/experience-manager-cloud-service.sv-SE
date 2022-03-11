@@ -1,15 +1,15 @@
 ---
-title: Skapa och hantera skärmar som en Cloud Service
-description: På den här sidan beskrivs hur du skapar och hanterar skärmar som en Cloud Service.
-source-git-commit: 3a636a512da40f9a577d25399d33f96d8f6ad8a0
+title: Skapa och hantera skärmar på as a Cloud Service
+description: På den här sidan beskrivs hur du skapar och hanterar skärmar på as a Cloud Service.
+exl-id: 0f9faa4b-b50e-40f8-a8ed-280f8bd0a9b8
+source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 1%
 
 ---
 
-
-# Skapa och hantera skärmar som en Cloud Service {#create-displays-screens-cloud}
+# Skapa och hantera skärmar på as a Cloud Service {#create-displays-screens-cloud}
 
 När du har publicerat kanalen är det nu dags att skapa en skärm i Screens Services Provider.
 
@@ -25,8 +25,8 @@ Det här dokumentet hjälper dig att förstå hur du skapar och hanterar visning
 
 Följ stegen nedan för att skapa visningen från leverantören av skärmtjänster:
 
-1. Navigera till Screens Services Provider från din AEM Cloud Service-instans.
-1. Välj **Visar** i den vänstra navigeringspanelen och klicka på **Skapa** i skärmens övre högra hörn.
+1. Gå till Screens Services Provider från din AEM Cloud Service-instans.
+1. Välj **Visar** från den vänstra navigeringspanelen och klicka på **Skapa** från skärmens övre högra hörn.
 
    ![bild](/help/screens-cloud/assets/display/disp-1.png)
 
@@ -34,11 +34,11 @@ Följ stegen nedan för att skapa visningen från leverantören av skärmtjänst
 
    ![bild](/help/screens-cloud/assets/display/disp-2.png)
 
-1. Ange rubriken som **LoopingChannelDisplay** i **Visningsnamn** och klicka på **Create**.
+1. Ange titeln som **LoopingChannelDisplay** in **Visningsnamn** och klicka på **Skapa**.
 
    ![bild](/help/screens-cloud/assets/display/disp3.png)
 
-1. Visningen **LoopingChannelDisplay** visas nu i visningslistan.
+1. Visningen har namnet **LoopingChannelDisplay** visas nu i visningslistan.
 
    ![bild](/help/screens-cloud/assets/display/disp-4.png)
 
@@ -46,10 +46,10 @@ Följ stegen nedan för att skapa visningen från leverantören av skärmtjänst
 
 Du kan ta bort en visning från leverantören av skärmtjänster.
 
-Markera visningen och klicka på **Ta bort** längst ned på panelen, enligt bilden nedan.
+Markera visningen och klicka på **Ta bort** längst ned på panelen, vilket visas i bilden nedan.
 
 ![bild](/help/screens-cloud/assets/display/disp-5.png)
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig att skapa och hantera displayer för ditt projekt bör du fortsätta att använda dina skärmar som en Cloud Service genom att nästa gång du granskar dokumentet [Tilldela kanal till en bildskärm på skärmar som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/assigning-channels-to-display.html?lang=en).
+Nu när du har lärt dig att skapa och hantera displayer för ditt projekt bör du fortsätta din as a Cloud Service resa för skärmar genom att nästa gång du granskar dokumentet [Tilldela kanal till en skärm på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/assigning-channels-to-display.html?lang=en).

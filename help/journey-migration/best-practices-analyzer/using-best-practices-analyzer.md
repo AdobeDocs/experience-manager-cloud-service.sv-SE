@@ -1,7 +1,8 @@
 ---
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
-source-git-commit: a6d225943c5d23ebd960fda0b0912a81f1f80014
+exl-id: e8498e17-f55a-4600-87d7-60584d947897
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '2470'
 ht-degree: 41%
@@ -14,7 +15,7 @@ ht-degree: 41%
 >id="aemcloud_bpa_using"
 >title="Använda Best Practices Analyzer"
 >abstract="Läs dokumentationen om hur du använder Best Practices Analyzer (tidigare Cloud Readiness Analyzer) och den genererade rapporten. Best Practices Analyzer-rapporten används för att få en god förståelse för den allmänna uppgraderingsberedskapen."
->additional-url="https://my.adobeconnect.com/pqgrfezoxghs?proto=true" text="[Webinar] Introducing Tools to Accelerate the Journey to Adobe Experience Manager as a Cloud Service"
+>additional-url=""
 
 ## Viktigt att tänka på när du använder Best Practices Analyzer {#imp-considerations}
 

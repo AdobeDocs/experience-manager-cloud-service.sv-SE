@@ -2,13 +2,13 @@
 title: Dispatcher-konfiguration med AEM Headless
 description: Dispatcher är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Flera konfigurationer används för att öppna GraphQL-slutpunkter till headless-program.
 feature: Dispatcher, GraphQL API
-source-git-commit: 0cc131209f497241949f8da6e8144dfcaffe7e6e
+exl-id: 78a20021-910f-4cf0-87bf-6e2223994f76
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # Dispatcher-konfiguration med AEM Headless
 

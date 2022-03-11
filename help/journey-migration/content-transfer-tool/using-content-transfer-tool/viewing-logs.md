@@ -1,13 +1,13 @@
 ---
 title: Visa loggar för en migreringsuppsättning i verktyget Innehållsöverföring
 description: Visa loggar för en migreringsuppsättning i verktyget Innehållsöverföring
-source-git-commit: bcbf4e4ba1330bef9f2c8c473419903e40ac0e58
+exl-id: aed1ac83-a2fb-425e-aca4-39cd0bb42fd3
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 52%
 
 ---
-
 
 # Visa loggar för en migreringsuppsättning {#view-logs-content-transfer-tool}
 

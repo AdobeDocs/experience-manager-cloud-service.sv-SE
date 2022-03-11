@@ -1,20 +1,19 @@
 ---
 title: Content Fragments – konfigurera komponenter för återgivning
 description: Content Fragments – konfigurera komponenter för återgivning
-translation-type: tm+mt
-source-git-commit: a5d6a072dfd8df887309f56ad4a61b6b38b32fa7
+exl-id: 6606dc3b-f1b8-4941-8fd0-f69cbd414afa
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 5%
 
 ---
 
-
 # Content Fragments – konfigurera komponenter för återgivning{#content-fragments-configuring-components-for-rendering}
 
-Det finns flera [avancerade tjänster](#definition-of-advanced-services-that-need-configuration) relaterade till återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
+Det finns flera [avancerade tjänster](#definition-of-advanced-services-that-need-configuration) relaterat till återgivning av innehållsfragment. För att kunna använda dessa tjänster måste resurstyperna för sådana komponenter göra sig kända för innehållsfragmentets ramverk.
 
-Detta görs genom att konfigurera [OSGi-tjänsten - komponentkonfigurationen för innehållsfragment](#osgi-service-content-fragment-component-configuration).
+Detta görs genom att konfigurera [OSGi-tjänst - Konfiguration av komponent för innehållsfragment](#osgi-service-content-fragment-component-configuration).
 
 Denna information krävs när
 
@@ -25,22 +24,22 @@ Vi rekommenderar att du använder kärnkomponenterna.
 
 >[!CAUTION]
 >
->* **Om du inte behöver de  [avancerade](#definition-of-advanced-services-that-need-configuration)** tjänster som beskrivs nedan kan du ignorera den här konfigurationen.
+>* **Om du inte behöver [avancerade tjänster](#definition-of-advanced-services-that-need-configuration)** som beskrivs nedan kan du ignorera den här konfigurationen.
 >
->* **När du utökar eller använder en eller flera färdiga komponenter** bör du inte ändra OSGi-konfigurationen.
+>* **När du utökar eller använder komponenter som inte finns i kartongen** rekommenderar vi inte att du ändrar OSGi-konfigurationen.
 >
 >* **Du kan skriva en helt ny komponent som endast använder API:t för innehållsfragment, utan några avancerade tjänster**. I så fall måste du dock utveckla komponenten så att den hanterar lämplig bearbetning.
 >
 >Därför rekommenderar vi att du använder kärnkomponenterna.
 
-## Definition av avancerade tjänster som behöver konfiguration {#definition-of-advanced-services-that-need-configuration}
+## Definition av avancerade tjänster som behöver konfigureras {#definition-of-advanced-services-that-need-configuration}
 
 De tjänster som kräver registrering av en komponent är:
 
 * Kontrollera beroenden korrekt under publiceringen (d.v.s. se till att fragment och modeller kan publiceras automatiskt med en sida om de har ändrats sedan den senaste publiceringen).
 * Stöd för innehållsfragment vid fulltextsökning.
 * Hantering/hantering av *mellanliggande innehåll.*
-* Hantering/hantering av *blandade medieresurser.*
+* Hantering/hantering av *resurser för olika medier.*
 * Skickar rensning för refererade fragment (om en sida som innehåller ett fragment publiceras igen).
 * Använda styckebaserad återgivning.
 
@@ -54,7 +53,7 @@ Konfigurationen måste bindas till OSGi-tjänsten **Konfiguration av komponent f
 
 >[!NOTE]
 >
->Mer information finns i [OSGi Configuration](/help/implementing/deploying/overview.md#osgi-configuration).
+>Se [OSGi-konfiguration](/help/implementing/deploying/overview.md#osgi-configuration) för mer information.
 
 Till exempel:
 
@@ -106,7 +105,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
  <tbody>
   <tr>
    <td><code>paragraphScope</code></td>
-   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut i <em>renderingsläge för ett element</em>.</p> <p>Värden:</p>
+   <td><p>En strängegenskap som definierar hur stycken ska skrivas ut om de finns i <em>renderingsläge för enskilt element</em>.</p> <p>Värden:</p>
     <ul>
      <li><code>all</code> : återge alla stycken</li>
      <li><code>range</code> : för att återge styckeintervallet som tillhandahålls av <code>paragraphRange</code></li>
@@ -114,7 +113,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
   </tr>
   <tr>
    <td><code>paragraphRange</code></td>
-   <td><p>En strängegenskap som definierar det styckeintervall som ska skrivas ut om det i <em>renderingsläget för ett element är </em>.</p> <p>Format:</p>
+   <td><p>En strängegenskap som definierar det intervall med stycken som ska skrivas ut om i <em>renderingsläge för enskilt element</em>.</p> <p>Format:</p>
     <ul>
      <li><code>1</code> eller <code>1-3</code> eller <code>1-3;6;7-8</code> eller <code>*-3;5-*</code>
      <ul>
@@ -123,12 +122,12 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
        <li><code>*</code> jokertecken</li>
      </ul>
      </li>
-     <li>utvärderas bara om <code>paragraphScope</code> är inställt på <code>range</code></li>
+     <li>endast utvärderat om <code>paragraphScope</code> är inställd på <code>range</code></li>
     </ul> </td>
   </tr>
   <tr>
    <td><code>paragraphHeadings</code></td>
-   <td>En boolesk egenskap som definierar om rubriker (till exempel <code>h1</code>, <code>h2</code>, <code>h3</code>) räknas som stycken (<code>true</code>) eller inte (<code>false</code>)</td>
+   <td>En boolesk egenskap som definierar om rubriker (till exempel <code>h1</code>, <code>h2</code>, <code>h3</code>) räknas som punkter (<code>true</code>) eller inte (<code>false</code>)</td>
   </tr>
  </tbody>
 </table>
@@ -149,4 +148,3 @@ dam.cfm.component.fileReferenceProp="fragmentPath"
 dam.cfm.component.elementsProp="elementName"
 dam.cfm.component.variationProp="variationName"
 ```
-

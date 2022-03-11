@@ -19,7 +19,7 @@ ht-degree: 90%
 
 >[!TIP]
 >
->Se vår Experience League-kurs [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS för att AEM as a Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomst till AEM samt funktioner och funktioner. Adobe ID krävs.
+>Se vår Experience League-kurs [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS för att AEM as a Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM och dess funktioner. Adobe ID krävs.
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ Nedan anges de viktigaste OSGI-konfigurationerna som måste ändras för att ege
 
 ### Hantera produkter och användaråtkomst i Admin Console {#managing-products-and-user-access-in-admin-console}
 
-När produktadministratören loggar in på Admin Console visas flera instanser av den AEM as a Cloud Service produktkontexten, vilket visas nedan. Välj till exempel någon av produkterna på sidan **Översikt**:
+När produktadministratören loggar in på Admin Console visas flera instanser av den AEM as a Cloud Service produktkontexten, vilket visas nedan. Välj till exempel någon av produkterna i **Översikt** sida:
 
 ![Inloggning på instanser](/help/security/assets/ims6.png)
 

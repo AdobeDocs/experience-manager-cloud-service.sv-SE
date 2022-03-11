@@ -1,13 +1,13 @@
 ---
 title: Konfigurera [!DNL Microsoft Dynamics] OData?
-description: Lär dig hur du skapar formulärdatamodell baserat på de entiteter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service. The Form Data Model can be used to create Adaptive Forms that interact with [!DNL Microsoft Dynamics] för att möjliggöra arbetsflöden.
+description: Lär dig hur du skapar formulärdatamodell baserat på de entiteter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Microsoft Dynamics] för att möjliggöra arbetsflöden.
 feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb7b41f0-fd4f-4ba6-9f45-792a66ba6368
 source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Innan du börjar konfigurera och konfigurera [!DNL Microsoft Dynamics]måste du 
    * [!DNL Microsoft Dynamics] 365 lokal
    * [!DNL Microsoft Dynamics] 2016 lokal
 
-* [Registrerade ansökan för [!DNL Microsoft Dynamics] online service with [!DNL Microsoft Azure] Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. Dessa värden används medan [konfigurera molntjänster för [!DNL Microsoft Dynamics] service](#configure-cloud-service-for-your-microsoft-dynamics-service).
+* [Registrerade ansökan för [!DNL Microsoft Dynamics] onlinetjänst med [!DNL Microsoft Azure] Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. Dessa värden används medan [konfigurera molntjänster för [!DNL Microsoft Dynamics] service](#configure-cloud-service-for-your-microsoft-dynamics-service).
 
 ## Ange URL för svar för registrerad [!DNL Microsoft Dynamics] program {#set-reply-url-for-registered-microsoft-dynamics-application}
 
@@ -81,7 +81,7 @@ Gör följande för att ange svars-URL för registrerad [!DNL Microsoft Dynamics
 
 ## Konfigurera OAuth-klient på AD FS-dator {#configure-oauth-client-on-ad-fs-machine}
 
-Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Directory Federation Services) och bevilja åtkomst på AD FS-datorn:
+Do the following to register an OAuth client on Active Directory Federation Services (AD FS) machine and grant access on AD FS machine:
 
 >[!NOTE]
 >

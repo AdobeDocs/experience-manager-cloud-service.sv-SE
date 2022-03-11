@@ -1,16 +1,15 @@
 ---
 title: Struktur för AEM
 description: Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement
-translation-type: tm+mt
-source-git-commit: 0799a817095558edd49b53ddc915c9474181fef7
+exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '915'
 ht-degree: 0%
 
 ---
 
-
-# Struktur för AEM{#structure-of-the-aem-ui}
+# Struktur för AEM {#structure-of-the-aem-ui}
 
 Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement:
 
@@ -30,7 +29,7 @@ Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) jus
 
 ![Mobilvyn i webbplatskonsolen](assets/ui-sites-mobile.png)
 
-### Huvudfält {#header-bar}
+### Sidhuvudsfält {#header-bar}
 
 ![AEM](assets/ui-header-bar.png)
 
@@ -65,7 +64,7 @@ Den vänstra listen kan öppnas/döljas efter behov för att visa:
 * **Referenser**
 * **Filter**
 
-Standardvärdet är **Endast innehåll** (dolda skenor).
+Standardvärdet är **Endast innehåll** (dold räl).
 
 ![Vänster linje](assets/ui-left-rail.png)
 
@@ -81,7 +80,7 @@ Innehållsramen finns till höger i fönstret, under verktygsfältet.
 
 ![Innehållsram](assets/ui-content-frame.png)
 
-### Redigeringsbildruta {#editor-frame}
+### Redigeringsram {#editor-frame}
 
 Redigeringsramen aktiverar redigeringsfunktionerna.
 
@@ -94,9 +93,9 @@ Redigeringsramen är en behållare (abstrakt) för alla sidredigeringselement. D
 
 ![Redigeringsram](assets/ui-editor-frame.png)
 
-### Panelen Sida {#side-panel}
+### Side Panel {#side-panel}
 
-Det här innehåller tre standardflikar. På flikarna **Resurser** och **Komponenter** kan du markera sådana element och dra dem från panelen och släppa dem på sidan. På fliken **Innehållsträd** kan du inspektera hierarkin med innehåll på sidan.
+Det här innehåller tre standardflikar. The **Resurser** och **Komponenter** Med -flikar kan du markera sådana element och dra dem från panelen och släppa dem på sidan. The **Innehållsträd** kan du inspektera innehållshierarkin på sidan.
 
 Sidpanelen är dold som standard. När det här alternativet är markerat visas det antingen på vänster sida, eller glida över för att täcka hela fönstret när fönsterstorleken är under bredden 1024px. till exempel på en mobil enhet.
 
@@ -108,7 +107,7 @@ På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera e
 
 ![Fliken Resurser](assets/ui-side-panel-assets.png)
 
-### Sidopanelen - resursgrupper {#side-panel-asset-groups}
+### Sida - Resursgrupper {#side-panel-asset-groups}
 
 På fliken Resurser finns det en listruta där du kan välja specifika resursgrupper.
 
@@ -120,7 +119,7 @@ På fliken Komponenter kan du välja bland komponenterna. Du kan också filtrera
 
 ![Fliken Komponenter](assets/ui-side-panel-components.png)
 
-### Sida-panel - innehållsträd {#side-panel-content-tree}
+### Panelen Sida - Innehållsträd {#side-panel-content-tree}
 
 På fliken Innehållsträd kan du visa hierarkin med innehåll på sidan. Om du klickar på en post på fliken flyttas den till och markerar objektet på sidan i redigeraren.
 
@@ -128,7 +127,7 @@ På fliken Innehållsträd kan du visa hierarkin med innehåll på sidan. Om du 
 
 ### Övertäckningar {#overlays}
 
-Dessa täcker innehållsramen och används av [lagren](#layer) för att realisera mekanismerna för hur du kan interagera (helt genomskinligt) med komponenterna och deras innehåll.
+Dessa överlägg innehållsramen och används av [lager](#layer) för att utnyttja mekanismerna i hur du kan interagera (helt transparent) med komponenterna och deras innehåll.
 
 Övertäckningarna finns i redigerarramen (med alla andra sidredigeringselement), även om de faktiskt täcker över rätt komponenter i innehållsramen.
 
@@ -169,4 +168,4 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 <!--For more details about the concepts around the touch-enabled UI, continue to the article [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).-->
 
-Mer teknisk information finns i [JS-dokumentationsuppsättningen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.
+Mer teknisk information finns i [JS-dokumentationsuppsättning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.

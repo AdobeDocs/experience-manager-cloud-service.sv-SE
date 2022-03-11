@@ -15,7 +15,7 @@ ht-degree: 0%
 På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.9.0.
 
 >[!NOTE]
->Klicka [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html) om du vill se den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service.
+>Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 ## Releasedatum {#release-date}
 
@@ -29,9 +29,9 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.9.0 är 9 septembe
 
 * Kodkvalitetsstegloggen innehåller nu utförlig loggningsinformation om OakPal-skanningen.
 
-* Menyalternativen på sidan Aktivitet kommer nu att innehålla ett alternativ till **Hämta logg** för slutförda kodgeneratorkörningar. Om du väljer det här alternativet hämtas loggen för byggsteget.
+* Menyalternativen på sidan Aktivitet kommer nu att innehålla ett alternativ för att **Hämtningslogg** för slutförda kodgeneratorkörningar. Om du väljer det här alternativet hämtas loggen för byggsteget.
 
-* Om du klickar direkt på programkortet går du nu till sidan **Översikt** i Cloud Manager. Mer information finns i [Skapa ett produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html?lang=en).
+* När du klickar direkt på programkortet går du nu till Cloud Managers **Översikt** sida. Se [Skapa ett produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html?lang=en) för mer information.
 
 ### Felkorrigeringar {#bug-fixes}
 

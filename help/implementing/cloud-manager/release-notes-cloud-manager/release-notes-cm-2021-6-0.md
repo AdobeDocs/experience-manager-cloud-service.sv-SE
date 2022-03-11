@@ -1,38 +1,39 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.5.0
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.5.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.5.0
 feature: Release Information
-source-git-commit: a707968483dc1196628b737ad207bfefe63ca94b
+exl-id: 9a0a53d3-31d4-493d-ba2e-b4bb22f60351
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.6.0 {#release-notes}
+# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.6.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.6.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.6.0.
 
 >[!NOTE]
->Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager som en Cloud Service klickar du [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+>Om du vill visa den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service klickar du på [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.6.0 är 10 juni 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.6.0 är 10 juni 2021.
 
 ### Nyheter {#what-is-new}
 
-* Förhandsgranskningstjänsten kommer att distribueras rullande till alla program. Kunder meddelas i produkten när deras program är aktiverat för förhandsgranskningstjänsten. Mer information finns i [Åtkomst till förhandsgranskningstjänsten](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
+* Förhandsgranskningstjänsten kommer att distribueras rullande till alla program. Kunder meddelas i produkten när deras program är aktiverat för förhandsgranskningstjänsten. Se [Åtkomst till förhandsgranskningstjänsten](/help/implementing/cloud-manager/manage-environments.md#access-preview-service) för mer information.
 
 * Maven Dependencies som laddas ned under byggfasen cachelagras nu mellan pipeline-körningar. Den här funktionen kommer att aktiveras för kunderna under de kommande veckorna.
 
 * Namnet på programmet kan nu redigeras via dialogrutan Redigera program.
 
-* Det standardförgreningsnamn som används både när projektet skapas och i det förvalda push-kommandot via Hantera Git-arbetsflöden har ändrats till `main`.
+* Standardförgreningsnamnet som används både när projektet skapas och i det förvalda push-kommandot via Hantera Git-arbetsflöden har ändrats till `main`.
 
 * Redigera programupplevelser i användargränssnittet har uppdaterats.
 
-* Kvalitetsregeln `ImmutableMutableMixCheck` har uppdaterats för att klassificera `/oak:index`-noder som oföränderliga.
+* Kvalitetsregel `ImmutableMutableMixCheck` har uppdaterats för att klassificeras `/oak:index` noder som oföränderliga.
 
 * Kvalitetsreglerna `CQBP-84` och `CQBP-84--dependencies` har konsoliderats till en enda regel. Som en del av den här konsolideringen identifierar genomsökningen av beroenden mer korrekt problem i tredjepartsberoenden som distribueras till AEM.
 
@@ -40,9 +41,9 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.6.0 är 10 juni 202
 
    ![](/help/implementing/cloud-manager/release-notes-cloud-manager/assets/aem-dispatcher.png)
 
-* En ny regel för kodkvalitet har lagts till för att validera strukturen för `damAssetLucene`-index. Mer information finns i [Anpassade DAM-resursindex Luceneak-index](/help/implementing/cloud-manager/custom-code-quality-rules.md#oakpal-damAssetLucene-sanity-check).
+* En ny regel för kodkvalitet har lagts till för att validera strukturen för `damAssetLucene` index. Se [Anpassade index för DAM-tillgångar, Luceneak](/help/implementing/cloud-manager/custom-code-quality-rules.md#oakpal-damAssetLucene-sanity-check) för mer information.
 
-* Sidan med miljöinformation visar nu flera domännamn för tjänsterna Publicera och Förhandsgranska (beroende på vad som är tillämpligt). Mer information finns i [Miljöinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment).
+* Sidan med miljöinformation visar nu flera domännamn för tjänsterna Publicera och Förhandsgranska (beroende på vad som är tillämpligt). Se [Miljöinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment) mer information.
 
 ### Felkorrigeringar {#bug-fixes}
 
@@ -52,8 +53,8 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2021.6.0 är 10 juni 202
 
 * Ett felaktigt felmeddelande visades när ett ogiltigt värde angavs för schemasteget.
 
-* Ibland kan användaren se en grön *aktiv*-status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
+* Ibland kan användaren se en grön *aktiv* status bredvid ett IP-Tillåtelselista även när konfigurationen inte har distribuerats.
 
 * Vissa programredigeringssekvenser kan leda till att produktionsflödet inte kan skapas eller redigeras.
 
-* Vissa programredigeringssekvenser kan resultera i att sidan **Översikt** visar ett missvisande meddelande om att köra programkonfigurationen igen.
+* Vissa programredigeringssekvenser kan resultera i **Översikt** sida som visar ett missvisande meddelande för att köra programkonfigurationen igen.

@@ -1,24 +1,23 @@
 ---
 title: Lägga till ContextHub på Pages och Access Stores
 description: Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och för att länka till ContextHub Javascript-biblioteken
-translation-type: tm+mt
-source-git-commit: 3277d7470c1abdcc1f759c87e2c1a7ffb3390f47
+exl-id: 8bfe2cff-3944-4e86-a95c-ebf1cb13913c
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
 
 ---
 
-
-# Lägger till ContextHub på Pages och Accessing Stores {#adding-contexthub-to-pages-and-accessing-stores}
+# Lägga till ContextHub på Pages och Access Stores {#adding-contexthub-to-pages-and-accessing-stores}
 
 Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och för att länka till ContextHub Javascript-biblioteken.
 
 ContextHub Javascript-API:t ger åtkomst till kontextdata som hanteras av ContextHub. Den här sidan beskriver kortfattat huvudfunktionerna i API:t för att komma åt och ändra kontextdata. Följ länkarna till API-referensdokumentationen för att se detaljerad information och kodexempel.
 
-## Lägger till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
+## Lägga till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
 
-Om du vill aktivera ContextHub-funktionerna och länka till ContextHub Javascript-biblioteken inkluderar du `contexthub`-komponenten i `head`-avsnittet på sidan. HTML-koden för sidkomponenten ska likna följande exempel:
+Om du vill aktivera ContextHub-funktionerna och länka till ContextHub Javascript-biblioteken inkluderar du `contexthub` i `head` på sidan. HTML-koden för sidkomponenten ska likna följande exempel:
 
 ```xml
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
@@ -35,19 +34,19 @@ Använd ContextHub-arkiv för att behålla kontextdata. ContextHub innehåller f
 * [JSONPStore](contexthub-api.md#contexthub-store-persistedjsonpstore)
 * [PersistedJSONPStore](contexthub-api.md#contexthub-store-persistedstore)
 
-Alla butikstyper är tillägg till klassen [`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core). Mer information om hur du skapar en ny lagringstyp finns i [Skapa anpassade butiker](extending-contexthub.md#creating-custom-store-candidates). Mer information om exempel på lagringstyper finns i [Exempel på ContextHub Store-kandidater](sample-stores.md).
+Alla butikstyper är tillägg till [`ContextHub.Store.Core`](contexthub-api.md#contexthub-store-core) klassen. Mer information om hur du skapar en ny typ av butik finns i [Skapa anpassade butiker](extending-contexthub.md#creating-custom-store-candidates). Mer information om olika typer av exempelarkiv finns i [Exempel på ContextHub Store-kandidater](sample-stores.md).
 
-### Persistenslägen {#persistence-modes}
+### Beständiga lägen {#persistence-modes}
 
 Kontextnavlager använder ett av följande beständiga lägen:
 
-* **Lokal:** Använder lokal lagring i HTML5 för att behålla data. Lokal lagring sparas i webbläsaren i alla sessioner.
-* **Session:** Använder HTML5 sessionStorage för att behålla data. Sessionslagringsplatsen sparas under hela webbläsarsessionen och är tillgänglig för alla webbläsarfönster.
+* **Lokal:** Använder HTML5 localStorage för att behålla data. Lokal lagring sparas i webbläsaren i alla sessioner.
+* **Session:** HTML5 sessionStorage används för att lagra data. Sessionslagringsplatsen sparas under hela webbläsarsessionen och är tillgänglig för alla webbläsarfönster.
 * **Cookie:** Använder webbläsarens inbyggda stöd för cookies för datalagring. Cookie-data skickas till och från servern i HTTP-begäranden.
-* **Window.name:** Använder egenskapen window.name för att behålla data.
-* **Minne:** Använder ett JavaScript-objekt för att behålla data.
+* **Fönster.namn:** Använder egenskapen window.name för att behålla data.
+* **Minne:** Använder ett JavaScript-objekt för att bevara data.
 
-Som standard använder Context Hub det lokala beständighetsläget. Om webbläsaren inte stöder eller tillåter lokal lagring i HTML5 används sessionens beständighet. Om webbläsaren inte stöder eller tillåter HTML5 sessionStorage, används Window.name persistence.
+Som standard använder Context Hub det lokala beständighetsläget. Om webbläsaren inte stöder eller tillåter lokalStorage för HTML5 används sessionens beständighet. Om webbläsaren inte stöder eller tillåter HTML5 sessionStorage, används Window.name persistence.
 
 ### Lagra data {#store-data}
 
@@ -80,21 +79,21 @@ Trädstrukturen för butiksdata kan utformas på följande sätt:
             |- elevation
 ```
 
-Trädstrukturen definierar dataobjekt i arkivet som nyckel/värde-par. I ovanstående exempel motsvarar nyckeln `/number` värdet `321` och nyckeln `/data/country` värdet `Switzerland`.
+Trädstrukturen definierar dataobjekt i arkivet som nyckel/värde-par. I ovanstående exempel är tangenten `/number` motsvarar värdet `321`och nyckeln `/data/country` motsvarar värdet `Switzerland`.
 
 ### Ändra objekt {#manipulating-objects}
 
-ContextHub innehåller klassen [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) för manipulering av JavaScript-objekt. Använd funktionerna i den här klassen för att ändra JavaScript-objekt innan du lägger till dem i en butik eller efter att du har fått dem från en butik.
+ContextHub tillhandahåller [`ContextHub.Utils.JSON.tree`](contexthub-api.md#contexthub-utils-json-tree) -klass för att hantera JavaScript-objekt. Använd funktionerna i den här klassen för att ändra JavaScript-objekt innan du lägger till dem i en butik eller efter att du har fått dem från en butik.
 
-Dessutom innehåller klassen [`ContextHub.Utils.JSON`](contexthub-api.md#contexthub-utils-json) funktioner för serialisering av objekt till strängar och avserialisering av strängar till objekt. Använd den här klassen för att hantera JSON-data som stöd för webbläsare som inte innehåller funktionerna `JSON.parse` och `JSON.stringify`.
+Dessutom finns [`ContextHub.Utils.JSON`](contexthub-api.md#contexthub-utils-json) -klassen innehåller funktioner för att serialisera objekt till strängar och deserialisera strängar till objekt. Använd den här klassen för att hantera JSON-data för webbläsare som inte innehåller `JSON.parse` och `JSON.stringify` funktioner.
 
-## Samverka med ContextHub Stores {#interacting-with-contexthub-stores}
+## Interagera med ContextHub Stores {#interacting-with-contexthub-stores}
 
-Använd JavaScript-objektet [`ContextHub`](contexthub-api.md#ui-event-constants) för att hämta ett arkiv som ett JavaScript-objekt. När du har fått lagringsobjektet kan du ändra de data som det innehåller. Använd funktionen [`getAllStores`](contexthub-api.md#getallstores) eller [`getStore`](contexthub-api.md#getstore-name) för att hämta arkivet.
+Använd [`ContextHub`](contexthub-api.md#ui-event-constants) Javascript-objekt för att hämta ett arkiv som ett Javascript-objekt. När du har fått lagringsobjektet kan du ändra de data som det innehåller. Använd [`getAllStores`](contexthub-api.md#getallstores) eller [`getStore`](contexthub-api.md#getstore-name) för att hämta butiken.
 
-### Åtkomst till arkivdata {#accessing-store-data}
+### Åtkomst till butiksdata {#accessing-store-data}
 
-JavaScript-klassen [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) definierar flera funktioner för interaktion med lagringsdata. Följande funktioner lagrar och hämtar flera dataobjekt som finns i objekt:
+The [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) Javascript-klassen definierar flera funktioner för interaktion med butiksdata. Följande funktioner lagrar och hämtar flera dataobjekt som finns i objekt:
 
 * [addAllItems](contexthub-api.md#addallitems-tree-options)
 * [getTree](contexthub-api.md#gettree-includeinternals)
@@ -110,41 +109,41 @@ Observera att anpassade lagringskandidater kan definiera ytterligare funktioner 
 >
 >ContextHub är som standard inte medveten om den inloggning som för närvarande används på publiceringsservrar, och sådana användare betraktas som&quot;anonyma&quot; av ContextHub.
 >
->Du kan göra ContextHub uppmärksam på inloggade användare genom att läsa in profilarkivet. Mer information finns i [exempelkoden för GitHub här](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/blob/master/ui.apps/src/main/content/jcr_root/apps/weretail/components/structure/header/clientlib/js/utilities.js).
+>Du kan göra ContextHub uppmärksam på inloggade användare genom att läsa in profilarkivet. Se [exempelkod på GitHub här](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/blob/master/ui.apps/src/main/content/jcr_root/apps/weretail/components/structure/header/clientlib/js/utilities.js).
 
 ### ContextHub Eventing {#contexthub-eventing}
 
-ContextHub innehåller ett ramverk för händelser som gör att du automatiskt kan reagera på butikshändelser. Varje butiksobjekt innehåller ett [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing)-objekt som är tillgängligt som butikens [`eventing`](contexthub-api.md#eventing)-egenskap. Använd funktionen [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) eller [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) för att binda en Javascript-funktion till en store-händelse.
+ContextHub innehåller ett ramverk för händelser som gör att du automatiskt kan reagera på butikshändelser. Varje lagringsobjekt innehåller en [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) objekt som är tillgängligt som butikens [`eventing`](contexthub-api.md#eventing) -egenskap. Använd [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) eller [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) funktion för att binda en Javascript-funktion till en store-händelse.
 
-## Använda kontextnav för att hantera cookies {#using-context-hub-to-manipulate-cookies}
+## Använda kontextnavet för att hantera cookies {#using-context-hub-to-manipulate-cookies}
 
-Context Hub Javascript API har stöd för olika webbläsare för hantering av webbläsarcookies. Namnutrymmet [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) definierar flera funktioner för att skapa, ändra och ta bort cookies.
+Context Hub Javascript API har stöd för olika webbläsare för hantering av webbläsarcookies. The [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) I namnutrymmet definieras flera funktioner för att skapa, ändra och ta bort cookies.
 
-## Fastställer matchade ContextHub-segment {#determining-resolved-contexthub-segments}
+## Bestämmer matchade ContextHub-segment {#determining-resolved-contexthub-segments}
 
-Med segmentmotorn för ContextHub kan du avgöra vilket av de registrerade segmenten som matchas i det aktuella sammanhanget. Använd funktionen getResolvedSegments i klassen [`ContextHub.SegmentEngine.SegmentManager`](contexthub-api.md#contexthub-segmentengine-segmentmanager) för att hämta lösta segment. Använd sedan funktionen `getName` eller `getPath` i klassen [`ContextHub.SegmentEngine.Segment`](contexthub-api.md#contexthub-segmentengine-segment) för att testa om det finns ett segment.
+Med segmentmotorn för ContextHub kan du avgöra vilket av de registrerade segmenten som matchas i det aktuella sammanhanget. Använd funktionen getResolvedSegments i [`ContextHub.SegmentEngine.SegmentManager`](contexthub-api.md#contexthub-segmentengine-segmentmanager) för att hämta lösta segment. Använd sedan `getName` eller `getPath` funktionen i [`ContextHub.SegmentEngine.Segment`](contexthub-api.md#contexthub-segmentengine-segment) klass som ska testas för ett segment.
 
 ### ContextHub-segment {#contexthub-segments}
 
-ContextHub-segment installeras under noden `/conf/<site>/settings/wcm/segments`.
+ContextHub-segment installeras under `/conf/<site>/settings/wcm/segments` nod.
 
-Följande segment installeras med självstudiewebbplatsen [WKND.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+Följande segment installeras med [WKND självstudiewebbplats.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
 
 * sommar
 * vintertid
 
 De regler som används för att lösa dessa segment sammanfattas enligt följande:
 
-* Först används arkivet [geolocation](sample-stores.md#contexthub-geolocation-sample-store-candidate) för att fastställa användarens latitud.
-* Sedan avgör månadsdataobjektet för [surferinfo-arkivet](sample-stores.md#contexthub-surferinfo-sample-store-candidate) vilken årstid det är i latituden.
+* Först [geolokalisering](sample-stores.md#contexthub-geolocation-sample-store-candidate) används för att fastställa användarens latitud.
+* Sedan månadsdataobjektet för [surferinfo store](sample-stores.md#contexthub-surferinfo-sample-store-candidate) bestämmer vilken årstid det är i den latituden.
 
 >[!WARNING]
 >
 >De installerade segmenten tillhandahålls som referenskonfigurationer som hjälper dig att skapa en egen dedikerad konfiguration för ditt projekt och bör därför inte användas direkt.
 
-## Felsöka ContextHub {#debugging-contexthub}
+## Debugging ContextHub {#debugging-contexthub}
 
-Det finns ett antal alternativ för felsökning av ContextHub, bland annat att generera loggar. Mer information finns i [Konfigurera ContextHub.](configuring-contexthub.md#logging-debug-messages-for-contexthub)
+Det finns ett antal alternativ för felsökning av ContextHub, bland annat att generera loggar. Se [ContextHub konfigureras för mer information.](configuring-contexthub.md#logging-debug-messages-for-contexthub)
 
 ## Se en översikt över ContextHub Framework {#see-an-overview-of-the-contexthub-framework}
 

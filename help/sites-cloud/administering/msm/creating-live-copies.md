@@ -6,7 +6,7 @@ role: Admin
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
 source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4274'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ En plankonfiguration identifierar en befintlig webbplats som du vill använda so
 
 >[!TIP]
 >
->Med layoutkonfigurationer kan du överföra innehållsändringar till Live-kopior. Se [Live-kopior - Källa, utkast och layoutkonfigurationer](overview.md#source-blueprints-and-blueprint-configurations).
+>Med layoutkonfigurationer kan du överföra innehållsändringar till Live-kopior. Se [Live-kopior - Källa, utkast och skissbilder](overview.md#source-blueprints-and-blueprint-configurations).
 
 När du skapar en ritningskonfiguration väljer du en mall som definierar den interna strukturen för ritningen. Standardmallen för utkast förutsätter att källwebbplatsen har följande egenskaper:
 
@@ -45,7 +45,7 @@ När du använder en ritningskonfiguration kan du associera den med en utrullnin
 
 Blåtryckskonfigurationer betraktas som oföränderliga data och kan därför inte redigeras under körning. Därför måste alla konfigurationsändringar distribueras via Git med CI/CD-pipeline.
 
-Mer information finns i artikeln [Notable Changes to Adobe Experience Manager (AEM) as a Cloud Service.](/help/release-notes/aem-cloud-changes.md)
+Mer information finns i artikeln [Observerbara ändringar av Adobe Experience Manager (AEM) as a Cloud Service.](/help/release-notes/aem-cloud-changes.md)
 
 Följande steg är bara tillgängliga för en administratör på en lokal utvecklingsinstans för testnings- och utvecklingssyften. Dessa alternativ är inte tillgängliga i någon AEMaaCS-molninstans.
 
@@ -53,27 +53,27 @@ Följande steg är bara tillgängliga för en administratör på en lokal utveck
 
 Så här skapar du en ritningskonfiguration:
 
-1. [Gå ](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) till  **** Verktyg-menyn och välj sedan  **** Platser-menyn.
-1. Välj **utkast** för att öppna konsolen **Blueprint Configurations**:
+1. [Navigera](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) till **verktyg** väljer du **Webbplatser** -menyn.
+1. Välj **Blueprints** för att öppna **Konfigurationer för utkast** konsol:
 
    ![Skapa utkast](../assets/blueprint-configurations.png)
 
 1. Välj **Skapa**.
-1. Välj ritningsmallen och **Nästa** för att fortsätta.
-1. Välj den källsida som ska användas som plan, **Nästa** för att fortsätta.
+1. Välj en ritningsmall och sedan **Nästa** för att fortsätta.
+1. Välj den källsida som ska användas som plan, sedan **Nästa** för att fortsätta.
 1. Definiera:
 
    * **Titel**: obligatorisk titel för ritningen
    * **Beskrivning**: en valfri beskrivning med mer information.
 
-1. **Create** skapar en ritningskonfiguration utifrån din specifikation.
+1. **Skapa** skapar en ritningskonfiguration baserat på din specifikation.
 
 ### Redigera eller ta bort en utkastkonfiguration lokalt{#editing-or-deleting-a-blueprint-configuration}
 
 Du kan redigera eller ta bort en befintlig ritningskonfiguration:
 
-1. [Gå ](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) till  **** Verktyg-menyn och välj sedan  **** Platser-menyn.
-1. Välj **utkast** för att öppna konsolen **Blueprint Configurations**:
+1. [Navigera](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) till **verktyg** väljer du **Webbplatser** -menyn.
+1. Välj **Blueprints** för att öppna **Konfigurationer för utkast** konsol:
 
    ![Skapa utkast](../assets/blueprint-configurations.png)
 
@@ -95,22 +95,22 @@ Du kan skapa en Live-kopia av vilken sida eller gren som helst. När du skapar L
 
 Du kan skapa en Live-kopia av vilken sida som helst:
 
-* Sidor som refereras av en [plantryckskonfiguration](#creating-a-blueprint-configuration)
+* Sidor som refereras av en [konfiguration av utkast](#creating-a-blueprint-configuration)
 * Och sidor som inte har någon anslutning till en konfiguration
 * Live-kopia på sidorna i en annan Live-kopia ([kapslade Live-kopior](overview.md#nested-live-copies))
 
-Den enda skillnaden är att tillgängligheten för kommandot **Rollout** på käll-/ritningssidorna är beroende av om källan refereras av en ritningskonfiguration:
+Den enda skillnaden är att tillgängligheten för **Utrullning** -kommandot på käll-/ritningssidorna är beroende av om källan refereras av en ritningskonfiguration:
 
-* Om du skapar Live-kopian från en källsida som **är** refererad till i en ritningskonfiguration, kommer kommandot Rollout att vara tillgängligt på käll-/ritningssidan/sidorna.
-* Om du skapar Live-kopian från en källsida som **inte** refereras till i en ritningskonfiguration, kommer kommandot Rollout inte att vara tillgängligt på käll-/ritningssidorna.
+* Om du skapar Live-kopian från en källsida som **är** som refereras i en ritningskonfiguration, kommer kommandot Rollout att vara tillgängligt på käll-/ritningssidorna.
+* Om du skapar Live-kopian från en källsida som **är inte** som refereras i en ritningskonfiguration, kommer kommandot Rollout inte att vara tillgängligt på käll-/ritningssidan/-sidorna.
 
 Så här skapar du en Live-kopia:
 
-1. I konsolen **Platser** väljer du **Skapa** och sedan **Live Copy**.
+1. I **Webbplatser** välj konsol **Skapa** sedan **Live Copy**.
 
    ![Skapa Live Copy](../assets/create-live-copy.png)
 
-1. Välj källsidan och klicka eller tryck sedan på **Nästa**. Till exempel:
+1. Välj källsida och klicka eller tryck sedan **Nästa**. Till exempel:
 
    ![Välj Live Copy-källa](../assets/live-copy-from.png)
 
@@ -124,24 +124,24 @@ Så här skapar du en Live-kopia:
 
 1. Ange:
 
-   * a **Rubrik** för sidan.
-   * a **Namn**, som används i URL:en.
+   * a **Titel** för sidan.
+   * a **Namn**, som används i URL-adressen.
 
    ![Live Copy-egenskaper](../assets/live-copy-properties.png)
 
-1. Använd kryssrutan **Uteslut undersidor**:
+1. Använd **Uteslut undersidor** kryssruta:
 
    * Markerat: skapa endast en Live-kopia av den markerade sidan (grund Live-kopia)
    * Inte markerat: skapa en Live-kopia som innehåller alla underordnade till den markerade sidan (djup Live Copy)
 
-1. (Valfritt) Om du vill ange en eller flera utrullningskonfigurationer som ska användas för Live-kopian använder du listrutan **Rollout Configs** för att välja dem. Markerade konfigurationer visas under den nedrullningsbara väljaren.
-1. Klicka eller tryck på **Skapa**. Ett bekräftelsemeddelande visas. Här kan du välja antingen **Öppna** eller **Klar**.
+1. (Valfritt) Använd kommandot **Utrullningskonfigurationer** för att markera dem. Markerade konfigurationer visas under den nedrullningsbara väljaren.
+1. Klicka eller tryck **Skapa**. Ett bekräftelsemeddelande visas. Här kan du välja **Öppna** eller **Klar**.
 
 ### Skapa en Live-kopia av en plats från en designkonfiguration {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
 Skapa en Live Copy med hjälp av en ritningskonfiguration för att skapa en webbplats baserad på innehållet i ritningen (källan). När du skapar en Live-kopia från en ritningskonfiguration väljer du en eller flera språkgrenar i den ritningskälla som ska kopieras och sedan markerar du de kapitel som ska kopieras från språkgrenarna. Se [Skapa en designkonfiguration](#creating-a-blueprint-configuration).
 
-Om du utelämnar vissa språkgrenar från Live-kopian kan du lägga till dem senare. Mer information finns i [Skapa en Live-kopia i en Live-kopia (Konfiguration av utkast)](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration).
+Om du utelämnar vissa språkgrenar från Live-kopian kan du lägga till dem senare. Se [Skapa en Live-kopia i en Live-kopia (utkast-konfiguration)](#creating-a-live-copy-inside-a-live-copy-blueprint-configuration) för mer information.
 
 >[!CAUTION]
 >
@@ -156,16 +156,16 @@ När du skapar platsen anger du värden för följande egenskaper:
 * **Namn**: (Valfritt) Namnet på den JCR-nod som lagrar Live-kopians rotsida (standardvärdet baseras på titeln)
 * **Webbplatsägare**: (Valfritt) Information om den part som ansvarar för Live Copy
 * **Live Copy**: Välj det här alternativet om du vill skapa en direktrelation med källplatsen. Om du inte markerar det här alternativet skapas en kopia av ritningen, men den synkroniseras inte med källan.
-* **Konfiguration** för utrullning: (Valfritt) Välj en eller flera utrullningskonfigurationer som ska användas för synkronisering av Live-kopian. Som standard ärvs utrullningskonfigurationerna från ritningen. Mer information finns i [Ange vilka utrullningskonfigurationer som ska användas](live-copy-sync-config.md#specifying-the-rollout-configurations-to-use).
+* **Utrullningskonfigurationer**: (Valfritt) Välj en eller flera utrullningskonfigurationer som ska användas för synkronisering av Live-kopian. Som standard ärvs utrullningskonfigurationerna från ritningen. Se [Ange vilka utrullningskonfigurationer som ska användas](live-copy-sync-config.md#specifying-the-rollout-configurations-to-use) för mer information.
 
 Så här skapar du en Live-kopia av en webbplats från en designkonfiguration:
 
-1. I konsolen **Platser** väljer du **Skapa** och sedan **Plats** i listrutan.
+1. I **Webbplatser** konsol, välj **Skapa** sedan **Plats** i listrutan.
 1. Välj den designkonfiguration som ska användas som källa för Live-kopian och fortsätt med **Nästa**:
 
    ![Skapa en webbplats utifrån en plan](../assets/create-site-from-blueprint.png)
 
-1. Använd väljaren **Ursprungliga språk** för att ange språket/språken för den webbplats som ska användas för Live-kopian.
+1. Använd **Ursprungliga språk** för att ange vilket språk som ska användas för Live Copy.
 
    Alla tillgängliga språk är markerade som standard. Om du vill ta bort ett språk klickar eller trycker du på **X** som visas bredvid språket.
 
@@ -173,8 +173,8 @@ Så här skapar du en Live-kopia av en webbplats från en designkonfiguration:
 
    ![Ange egenskaper när du skapar platsen](../assets/create-site-properties.png)
 
-1. Använd listrutan **Inledande kapitel** för att välja de avsnitt i ritningen som ska ingå i Live-kopian. Alla tillgängliga kapitel inkluderas som standard, men kan tas bort.
-1. Ange värden för de återstående egenskaperna och välj sedan **Skapa**. I bekräftelsedialogrutan väljer du **Klar** för att återgå till konsolen **Platser** eller **Öppna platsen** för att öppna webbplatsens rotsida.
+1. Använd **Inledande kapitel** i listrutan för att markera de avsnitt av ritningen som ska ingå i Live Copy. Alla tillgängliga kapitel inkluderas som standard, men kan tas bort.
+1. Ange värden för de återstående egenskaperna och välj sedan **Skapa**. I bekräftelsedialogrutan väljer du **Klar** för att gå tillbaka till **Webbplatser** konsol, eller **Öppna webbplats** för att öppna webbplatsens rotsida.
 
 ### Skapa en Live-kopia i en Live-kopia (utkast-konfiguration) {#creating-a-live-copy-inside-a-live-copy-blueprint-configuration}
 
@@ -196,18 +196,18 @@ Egenskaperna för en Live Copy-sida visar följande information om Live Copy:
 
 Så här visar du egenskaperna:
 
-1. I konsolen **Platser** väljer du sidan Live-kopia och öppnar egenskaperna.
-1. Välj fliken **Live Copy**.
+1. I **Webbplatser** markerar du sidan Live Copy och öppnar egenskaperna.
+1. Välj **Live Copy** -fliken.
 
    Till exempel:
 
    ![Fliken Live Copy i sidegenskaper](../assets/live-copy-inherit.png)
 
-   Mer information finns i avsnittet [Använda Live-kopieringsöversikt](live-copy-overview.md#using-the-live-copy-overview) i artikeln Live Copy Overview Console.
+   Se avsnittet [Använda Live Copy-översikt](live-copy-overview.md#using-the-live-copy-overview) i artikeln Live Copy Overview Console för mer information.
 
 ### Visa Live-kopior av en blå sida {#seeing-the-live-copies-of-a-blueprint-page}
 
-Du får en lista över de Live Copy-sidor som använder den aktuella (utkast) sidan som källa för utkast (som refereras i en plantryckskonfiguration). Använd den här listan för att hålla reda på Live-kopior. Listan visas på fliken **Blueprint** i [sidegenskaperna](/help/sites-cloud/authoring/fundamentals/page-properties.md).
+Du får en lista över de Live Copy-sidor som använder den aktuella (utkast) sidan som källa för utkast (som refereras i en plantryckskonfiguration). Använd den här listan för att hålla reda på Live-kopior. Listan visas på **Blueprint** -fliken i [sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
 
 ![fliken Utskrift för sidegenskaper](../assets/live-copy-blueprint-tab.png)
 
@@ -217,19 +217,19 @@ Det finns flera sätt att synkronisera din Live-kopia.
 
 ### Rulla ut en skiss {#rolling-out-a-blueprint}
 
-Rulla ut en ritningssida för att överföra innehållsändringar till Live-kopior. En **rollout**-åtgärd kör de rollout-konfigurationer som använder utlösaren [On Rollout](live-copy-sync-config.md#rollout-triggers).
+Rulla ut en ritningssida för att överföra innehållsändringar till Live-kopior. A **Utrullning** åtgärden kör de utrullningskonfigurationer som använder [Vid utrullning](live-copy-sync-config.md#rollout-triggers) utlösare.
 
 >[!NOTE]
 >
 >Konflikter kan uppstå om nya sidor med samma sidnamn skapas både i den blå grenen och i en beroende Live Copy-gren.
 >
->Sådana [konflikter måste hanteras och lösas vid utrullning](rollout-conflicts.md).
+>sådan [konflikter måste hanteras och lösas vid utrullning](rollout-conflicts.md).
 
 #### Skapa en skiss från Sidegenskaper {#rolling-out-a-blueprint-from-page-properties}
 
-1. I konsolen **Platser** markerar du sidan i planen och öppnar egenskaperna.
-1. Öppna fliken **Blå**.
-1. Välj **Överrullning**.
+1. I **Webbplatser** markerar du sidan i utkastet och öppnar egenskaperna.
+1. Öppna **Blueprint** -fliken.
+1. Välj **Utrullning**.
 
    ![Knappen Över](../assets/rollout.png)
 
@@ -237,43 +237,43 @@ Rulla ut en ritningssida för att överföra innehållsändringar till Live-kopi
 
    ![Välj sidor att rulla ut](../assets/select-rollout-pages.png)
 
-1. Ange om utrullningsjobbet ska köras omedelbart (**Now**) eller vid ett annat datum/tid (**Senare**).
+1. Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett annat datum/tid (**Senare**).
 
    ![Definiera utrullningstid](../assets/rollout-now-later.png)
 
-Utsläppen bearbetas som asynkrona jobb och kan kontrolleras på sidan [***Status för asynkrona jobb**.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [***Status för asynkrona jobb** sida.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
 
 #### Rulla ut en skiss från referensspåret {#roll-out-a-blueprint-from-the-reference-rail}
 
-1. I konsolen **Platser** markerar du sidan i den aktiva kopian och öppnar panelen **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** (i verktygsfältet).
-1. Välj alternativet **Utskrift** i listan för att visa de utkast som är associerade med den här sidan.
+1. I **Webbplatser** markerar du sidan i live-kopian och öppnar **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** (från verktygsfältet).
+1. Välj **Blueprint** i listan för att visa de utkast som är kopplade till den här sidan.
 1. Välj önskad rityta i listan.
-1. Klicka eller tryck på **Överrullning**.
+1. Klicka eller tryck **Utrullning**.
 
    ![Rityta från referenslinjen](../assets/rollout-blueprint-from-references.png)
 
 1. Du ombeds bekräfta informationen om utrullningen:
 
-   * **Utrullningsomfång**:
+   * **Rullningsomfång**:
 
       Ange om omfånget gäller enbart för den valda sidan eller om det ska omfatta underordnade sidor.
 
    * **Schema**:
 
-      Ange om utrullningsjobbet ska köras omedelbart (**Now**) eller vid ett senare datum/tid (**senare**).
+      Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett senare datum/tid (**Senare**).
 
       ![Definiera omfång och schema för utrullning](../assets/rollout-scope-schedule.png)
 
-1. När du har bekräftat dessa uppgifter väljer du **Rollout** för att utföra åtgärden.
+1. När du har bekräftat dessa uppgifter väljer du **Utrullning** för att utföra åtgärden.
 
-Utsläppen bearbetas som asynkrona jobb och kan kontrolleras på sidan [**Status för asynkrona jobb**.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [**Status för asynkrona jobb** sida.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
 
 #### Rulla ut en utkast från Live Copy-översikt {#roll-out-a-blueprint-from-the-live-copy-overview}
 
-Åtgärden [**Överrullning** är även tillgänglig från Live-kopieringsöversikten](live-copy-overview.md#using-the-live-copy-overview) när en blåtryckningssida har valts.
+The [**Utrullning** finns även tillgängligt från Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview)när en designsida är markerad.
 
-1. Öppna [Live-kopieringsöversikt](live-copy-overview.md#using-the-live-copy-overview) och välj en designsida.
-1. Välj **Överrullning** i verktygsfältet.
+1. Öppna [Live Copy - översikt](live-copy-overview.md#using-the-live-copy-overview) och väljer en designsida.
+1. Välj **Utrullning** i verktygsfältet.
 
    ![Live Copy - översikt](../assets/live-copy-overview-actions-blueprint.png)
 
@@ -281,11 +281,11 @@ Utsläppen bearbetas som asynkrona jobb och kan kontrolleras på sidan [**Status
 
    ![Välj sidor för utrullning](../assets/select-rollout-pages.png)
 
-1. Ange om utrullningsjobbet ska köras omedelbart (**Now**) eller vid ett annat datum/tid (**Senare**).
+1. Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett annat datum/tid (**Senare**).
 
    ![Definiera distributionsschema](../assets/rollout-now-later.png)
 
-Utsläppen bearbetas som asynkrona jobb och kan kontrolleras på sidan [**Status för asynkrona jobb**.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [**Status för asynkrona jobb** sida.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
 
 ### Synkronisera en Live-kopia {#synchronizing-a-live-copy}
 
@@ -297,23 +297,23 @@ Synkronisera en Live-kopia för att dra ändringar från källan till Live-kopia
 
 >[!NOTE]
 >
->Synkronisering kör de utrullningskonfigurationer som använder utlösaren [Vid utrullning](live-copy-sync-config.md#rollout-triggers).
+>Synkronisering kör de utrullningskonfigurationer som använder [Vid utrullning](live-copy-sync-config.md#rollout-triggers) utlösare.
 
-1. I konsolen **Platser** väljer du sidan Live-kopia och öppnar egenskaperna.
-1. Öppna fliken **Live Copy**.
-1. Klicka eller tryck på **Synkronisera**.
+1. I **Webbplatser** markerar du sidan Live Copy och öppnar egenskaperna.
+1. Öppna **Live Copy** -fliken.
+1. Klicka eller tryck **Synkronisera**.
 
    ![Knappen Synkronisera](../assets/synchronize.png)
 
-   Bekräftelse kommer att begäras. Använd **Synkronisera** för att fortsätta.
+   Bekräftelse kommer att begäras, använd **Synkronisera** för att fortsätta.
 
 #### Synkronisera en Live-kopia från Live Copy-översikt {#synchronize-a-live-copy-from-the-live-copy-overview}
 
-Åtgärden [Synkronisera är även tillgänglig från Live-kopieringsöversikten](live-copy-overview.md#using-the-live-copy-overview) när en Live-kopieringssida är markerad.
+The [Synkroniseringsåtgärden är även tillgänglig från Live-kopieringsöversikten](live-copy-overview.md#using-the-live-copy-overview)när en Live Copy-sida är markerad.
 
-1. Öppna [Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview) och välj en Live Copy-sida.
+1. Öppna [Live Copy - översikt](live-copy-overview.md#using-the-live-copy-overview) och väljer en Live Copy-sida.
 1. Välj **Synkronisera** i verktygsfältet.
-1. Bekräfta åtgärden **Rollout** i dialogrutan när du har angett om du vill inkludera:
+1. Bekräfta **Utrullning** i dialogrutan efter att du har angett om du vill inkludera:
 
    * **Sidor och undersidor**
    * **Endast sida**
@@ -337,7 +337,7 @@ Om du vill ändra Live Copy-innehåll kan du:
 >
 >Konflikter kan uppstå om nya sidor med samma sidnamn skapas både i den blå grenen och i en beroende Live Copy-gren.
 >
->Sådana [konflikter måste hanteras och lösas vid utrullning](rollout-conflicts.md).
+>sådan [konflikter måste hanteras och lösas vid utrullning](rollout-conflicts.md).
 
 ### Lägga till komponenter på en Live Copy-sida {#adding-components-to-a-live-copy-page}
 
@@ -347,7 +347,7 @@ När Live Copy-sidan synkroniseras med källsidan ändras inte de tillagda kompo
 
 >[!TIP]
 >
->Ändringar som görs lokalt för en komponent som markerats som en behållare skrivs inte över av innehållet i ritningen i en utrullning. Mer information finns i [MSM Best Practices](best-practices.md#components-and-container-synchronization).
+>Ändringar som görs lokalt för en komponent som markerats som en behållare skrivs inte över av innehållet i ritningen i en utrullning. Se [MSM Best Practices](best-practices.md#components-and-container-synchronization) för mer information.
 
 ### Pausa arv för en sida {#suspending-inheritance-for-a-page}
 
@@ -357,26 +357,26 @@ Du kan göra uppehåll i Live Copy-arvet för en Live Copy-sida så att du kan �
 
 >[!TIP]
 >
->Du kan också [koppla loss en Live-kopia](#detaching-a-live-copy) från dess plan för att ta bort alla anslutningar. Till skillnad från att avbryta arv är borttagningsåtgärden permanent och icke-återvändbar.
+>Du kan också [frigöra en Live Copy](#detaching-a-live-copy) från sin plan för att ta bort alla anslutningar. Till skillnad från att avbryta arv är borttagningsåtgärden permanent och icke-återvändbar.
 
 #### Pausa arv från Sidegenskaper {#suspending-inheritance-from-page-properties}
 
 Så här gör du uppehåll i arv på en sida:
 
-1. Öppna egenskaperna för Live Copy-sidan antingen med kommandot **Visa egenskaper** i konsolen **Platser** eller med **Sidinformation** i verktygsfältet för sidan.
-1. Klicka på eller tryck på fliken **Live Copy**.
+1. Öppna egenskaperna för Live Copy-sidan med **Visa egenskaper** kommandot **Webbplatser** konsol eller med **Sidinformation** på sidans verktygsfält.
+1. Klicka eller tryck på **Live Copy** -fliken.
 1. Välj **Gör uppehåll** i verktygsfältet. Du kan sedan välja något av följande:
 
    * **Gör uppehåll**: om du bara vill göra uppehåll för den aktuella sidan.
-   * **Gör uppehåll med barn**: om du vill göra uppehåll i den aktuella sidan tillsammans med eventuella underordnade sidor.
+   * **Pausa med barn**: om du vill göra uppehåll i den aktuella sidan tillsammans med eventuella underordnade sidor.
 
 1. Välj **Gör uppehåll** i bekräftelsedialogrutan.
 
 #### Pausa arv från Live Copy-översikt {#suspending-inheritance-from-the-live-copy-overview}
 
-Åtgärden [Gör uppehåll är även tillgänglig från Live-kopieringsöversikten](live-copy-overview.md#using-the-live-copy-overview) när en Live-kopieringssida är markerad.
+The [Åtgärden Gör uppehåll är också tillgänglig via Live Copy-översikt](live-copy-overview.md#using-the-live-copy-overview)när en Live Copy-sida är markerad.
 
-1. Öppna [Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview) och välj en Live Copy-sida.
+1. Öppna [Live Copy - översikt](live-copy-overview.md#using-the-live-copy-overview) och väljer en Live Copy-sida.
 1. Välj **Gör uppehåll** i verktygsfältet.
 1. Välj lämpligt alternativ från:
 
@@ -385,19 +385,19 @@ Så här gör du uppehåll i arv på en sida:
 
    ![Pausa med barn](../assets/suspend-with-children.png)
 
-1. Bekräfta åtgärden **Gör uppehåll** i dialogrutan **Gör uppehåll i Live Copy**:
+1. Bekräfta **Gör uppehåll** i **Skjut upp Live Copy** dialog:
 
    ![Bekräfta uppehåll](../assets/confirm-suspend.png)
 
 ### Återuppta arv för en sida {#resuming-inheritance-for-a-page}
 
-Att skjuta upp Live Copy-arv för en sida är en tillfällig åtgärd. När åtgärden **Återuppta** har inaktiverats blir åtgärden tillgänglig, vilket gör att du kan återskapa den aktiva relationen.
+Att skjuta upp Live Copy-arv för en sida är en tillfällig åtgärd. När den har pausats **Återuppta** blir en åtgärd tillgänglig så att du kan återskapa den aktiva relationen.
 
 ![Återuppta arv](../assets/resume-inheritance.png)
 
 När du återaktiverar arv synkroniseras inte sidan automatiskt med källan. Du kan begära en synkronisering, om detta krävs, antingen:
 
-* I dialogrutan **Fortsätt**/**Återgå**: till exempel:
+* I **Återuppta**/**Återställ** dialog, till exempel:
 
    ![Återuppta och synkronisera](../assets/resume-and-synch.png)
 
@@ -409,7 +409,7 @@ När du återaktiverar arv synkroniseras inte sidan automatiskt med källan. Du 
 
 #### Återuppta arv från Sidegenskaper {#resuming-inheritance-from-page-properties}
 
-När [pausats](#suspending-inheritance-from-page-properties) ändras åtgärden **Fortsätt** i verktygsfältet för sidegenskaperna:
+En gång [pausad](#suspending-inheritance-from-page-properties) den **Återuppta** blir åtgärden i verktygsfältet för sidegenskaperna:
 
 ![Återuppta knapp](../assets/resume.png)
 
@@ -417,11 +417,11 @@ När du väljer det här alternativet visas dialogrutan. Du kan välja en synkro
 
 #### Återuppta en Live Copy-sida från Live Copy-översikten {#resume-a-live-copy-page-from-the-live-copy-overview}
 
-Åtgärden [Återuppta är också tillgänglig från Live-kopieringsöversikten](live-copy-overview.md#using-the-live-copy-overview) när en Live-kopieringssida är markerad.
+The [Åtgärden Återuppta är också tillgänglig från Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview)när en Live Copy-sida är markerad.
 
-1. Öppna [Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview) och välj en Live Copy-sida som har pausats. Sidan visas som **ARV AVBRUTEN**.
-1. Välj **Fortsätt** i verktygsfältet.
-1. Ange om du vill synkronisera sidan efter att du har återställt arvet och bekräfta sedan åtgärden **Återuppta** i dialogrutan **Återuppta Live-kopia**.
+1. Öppna [Live Copy - översikt](live-copy-overview.md#using-the-live-copy-overview) och välj en Live Copy-sida som har pausats. Sidan visas som **ARV AVBRUTEN**.
+1. Välj **Återuppta** i verktygsfältet.
+1. Ange om du vill synkronisera sidan efter att ha återställt arv och bekräfta sedan **Återuppta** i **Fortsätt Live Copy** -dialogrutan.
 
 ### Ändra arvsdjup (grund/djup) {#changing-inheritance-depth-shallow-deep}
 
@@ -442,13 +442,13 @@ I en befintlig Live-kopia kan du ändra siddjupet, dvs. om underordnade sidor sk
 
 * Byt till en ytlig Live Copy och gå sedan tillbaka till:
 
-   * Hanterar alla underordnade objekt i (tidigare) Grund Live Copy som om de skapats manuellt och därför flyttas bort med `[oldname]_msm_moved name`.
+   * Hanterar alla underordnade objekt i (tidigare) Tillåt Live Copy som om de skapats manuellt och därför flyttas bort med `[oldname]_msm_moved name`.
 
 Så här anger eller ändrar du djup:
 
-1. Öppna egenskaperna för Live Copy-sidan antingen med kommandot **Visa egenskaper** i konsolen **Platser** eller med **Sidinformation** i verktygsfältet för sidan.
-1. Klicka på eller tryck på fliken **Live Copy**.
-1. I avsnittet **Konfiguration** anger eller avmarkerar du alternativet **Live Copy-arv** beroende på om underordnade sidor är inkluderade:
+1. Öppna egenskaperna för Live Copy-sidan med **Visa egenskaper** kommandot **Webbplatser** konsol eller med **Sidinformation** på sidans verktygsfält.
+1. Klicka eller tryck på **Live Copy** -fliken.
+1. I **Konfiguration** -avsnittet, ange eller rensa **Live Copy-arv** beroende på om underordnade sidor inkluderas:
 
    * Markerad - en djup Live-kopia (de underordnade sidorna inkluderas)
    * Avmarkerad - en tunn Live-kopia (underordnade sidor exkluderas)
@@ -457,9 +457,9 @@ Så här anger eller ändrar du djup:
    >
    >Om du växlar till en ytlig Live-kopia får den omedelbar effekt och går inte att ångra.
    >
-   >Mer information finns i [Live-kopior - Disposition](overview.md#live-copies-composition).
+   >Se [Live-kopior - komposition](overview.md#live-copies-composition) för mer information.
 
-1. Klicka eller tryck på **Spara** för att behålla uppdateringarna.
+1. Klicka eller tryck **Spara** för att behålla uppdateringarna.
 
 ### Avbryta arv för en komponent {#cancelling-inheritance-for-a-component}
 
@@ -475,17 +475,17 @@ Avbryt arv för att ändra komponentinnehållet eller ta bort komponenten:
 
    ![Arv i komponentens verktygsfält](../assets/inheritance-toolbar.png)
 
-1. Klicka eller tryck på ikonen **Avbryt arv** i komponentens verktygsfält.
+1. Klicka eller tryck på knappen **Avbryt arv** ikon.
 
    ![Ikonen Avbryt arv](../assets/cancel-inheritance-icon.png)
 
-1. Bekräfta åtgärden med **Ja** i dialogrutan Avbryt arv.
+1. Bekräfta åtgärden med i dialogrutan Avbryt arv **Ja**.
 
    Komponentverktygsfältet uppdateras med alla (lämpliga) redigeringskommandon.
 
 ### Återaktivera arv för en komponent {#re-enabling-inheritance-for-a-component}
 
-Om du vill aktivera arv för en komponent klickar eller trycker du på ikonen **Återaktivera arv** i komponentens verktygsfält.
+Om du vill aktivera arv för en komponent klickar eller trycker du på **Återaktivera arv** -ikonen i komponentens verktygsfält.
 
 ![Ikon för återaktivering av arv](../assets/re-enable-inheritance-icon.png)
 
@@ -499,13 +499,13 @@ Om en Live-kopia innehåller komponenter som är en del av ett styckesystem, kom
 
 >[!NOTE]
 >
->När du återställer ett annullerat arv i ett styckesystem återställs inte ordningen på komponenterna **automatiskt** från ritningen. Du kan begära en synkronisering manuellt om det behövs.
+>När du återställer ett annullerat arv i ett styckesystem, komponenternas ordning **återställs inte automatiskt** från planen. Du kan begära en synkronisering manuellt om det behövs.
 
 Använd följande procedur för att avbryta arv av styckesystemet.
 
 1. Öppna sidan Live Copy.
 1. Dra en befintlig komponent till en ny plats på sidan.
-1. I dialogrutan **Avbryt arv** bekräftar du åtgärden med **Ja**.
+1. I **Avbryt arv** bekräfta åtgärden med **Ja**.
 
 ### Åsidosätta egenskaper för en Live Copy-sida {#overriding-properties-of-a-live-copy-page}
 
@@ -525,16 +525,16 @@ Du kan senare återaktivera arv för en egenskap om det behövs.
 >
 >När du återaktiverar arv synkroniseras inte sidegenskapen Live Copy automatiskt med källegenskapen. Du kan begära en synkronisering manuellt om det behövs.
 
-1. Öppna egenskaperna för Live Copy-sidan med antingen alternativet **Visa egenskaper** i konsolen **Platser** eller **Sidinformation** i verktygsfältet för sidan.
+1. Öppna egenskaperna för Live Copy-sidan med hjälp av **Visa egenskaper** alternativ för **Webbplatser** konsol eller **Sidinformation** ikonen i sidans verktygsfält.
 1. Om du vill avbryta arvet av en egenskap klickar eller trycker du på länkikonen som visas till höger om egenskapen.
 
    ![Knappen Avbryt arv](../assets/cancel-inheritance-button.png)
 
-1. I bekräftelsedialogrutan **Avbryt arv** klickar eller trycker du på **Yes**.
+1. I **Avbryt arv** bekräftelsedialogruta, klicka eller tryck **Ja**.
 
 ### Återställa egenskaper för en Live Copy-sida {#revert-properties-of-a-live-copy-page}
 
-Om du vill aktivera arv för en egenskap klickar eller trycker du på ikonen **Återställ arv** som visas bredvid egenskapen.
+Om du vill aktivera arv för en egenskap klickar eller trycker du på **Återställ arv** -ikonen som visas bredvid egenskapen.
 
 ![Knappen Återställ arv](../assets/revert-inheritance-button.png)
 
@@ -549,30 +549,30 @@ Du kan återställa en Live Copy-sida om du vill:
 
 #### Återställ en Live Copy-sida från Sidegenskaperna {#reset-a-live-copy-page-from-the-page-properties}
 
-1. I konsolen **Platser** markerar du sidan Live-kopia och väljer **Visa egenskaper**.
-1. Öppna fliken **Live Copy**.
+1. I **Webbplatser** väljer du sidan Live Copy och väljer **Visa egenskaper**.
+1. Öppna **Live Copy** -fliken.
 1. Välj **Återställ** i verktygsfältet.
 
    ![Knappen Återställ](../assets/reset.png)
 
-1. I dialogrutan **Återställ Live Copy** bekräftar du med **Återställ**.
+1. I **Återställ Live Copy** dialogruta, bekräfta med **Återställ**.
 
 #### Återställ en Live Copy-sida från Live Copy-översikten {#reset-a-live-copy-page-from-the-live-copy-overview}
 
-Åtgärden [**Återställ** är även tillgänglig från Live-kopieringsöversikten](live-copy-overview.md#using-the-live-copy-overview) när en Live-kopieringssida är markerad.
+The [**Återställ** finns även tillgängligt från Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview)när en Live Copy-sida är markerad.
 
-1. Öppna [Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview) och välj en Live Copy-sida.
+1. Öppna [Live Copy - översikt](live-copy-overview.md#using-the-live-copy-overview) och väljer en Live Copy-sida.
 1. Välj **Återställ** i verktygsfältet.
-1. Bekräfta åtgärden **Återställ** i dialogrutan **Återställ Live Copy**:
+1. Bekräfta **Återställ** i **Återställ Live Copy** dialog:
 
    ![Bekräfta återställning av Live Copy](../assets/reset-live-copy.png)
 
 ## Jämföra en Live Copy-sida med en designsida {#comparing-a-live-copy-page-with-a-blueprint-page}
 
-Om du vill spåra de ändringar du har gjort kan du visa sidan med utkast i **Referenser** och jämföra den med sidan med Live Copy:
+Om du vill spåra de ändringar du har gjort kan du visa planeringsidan i **Referenser** och jämför med sin Live Copy-sida:
 
-1. I konsolen **Platser**, [navigerar du till en plan- eller Live Copy-sida och markerar den.](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)
-1. Öppna panelen **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** och välj något av följande alternativ beroende på sammanhanget:
+1. I **Webbplatser** konsol, [navigera till en plan eller en Live Copy-sida och markera den.](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)
+1. Öppna **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** och beroende på sammanhanget väljer du antingen:
 
    * **Blueprint**
    * **Live-kopior**
@@ -588,7 +588,7 @@ Om du vill spåra de ändringar du har gjort kan du visa sidan med utkast i **Re
 
 1. Live Copy- och designsidorna öppnas sida vid sida.
 
-   Mer information om hur du använder jämförelsefunktionen finns i [Sidskillnad](/help/sites-cloud/authoring/features/page-diff.md).
+   Mer information om hur du använder jämförelsefunktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
 
 ## Koppla loss en Live-kopia {#detaching-a-live-copy}
 
@@ -598,7 +598,7 @@ Kopplingsåtgärden tar permanent bort den aktiva relationen mellan en Live-kopi
 >
 >Du kan inte återskapa direktrelationen när du har kopplat loss Live-kopian.
 >
->Om du vill ta bort den aktiva relationen med alternativet att återinföra den senare kan du [avbryta arv av Live-kopia](#suspending-inheritance-for-a-page) för sidan.
+>Om du vill ta bort den aktiva relationen och välja att återställa den senare kan du [avbryt Live Copy-arv](#suspending-inheritance-for-a-page) för sidan.
 
 Det påverkar var i trädet du använder **Koppla loss**:
 
@@ -606,7 +606,7 @@ Det påverkar var i trädet du använder **Koppla loss**:
 
    När den här åtgärden utförs på rotsidan för en Live-kopia tas den aktiva relationen mellan alla sidor i planen och dess Live-kopia bort.
 
-   Ytterligare ändringar av sidor i utkastet **påverkar inte Live-kopian.**
+   Ytterligare ändringar av sidor i planen **inte** påverkar Live Copy.
 
 * **Frigöra på en undersida till en Live-kopia**
 
@@ -624,15 +624,15 @@ Det påverkar var i trädet du använder **Koppla loss**:
 
    >[!NOTE]
    >
-   >Mer information om sådana situationer finns i [MSM-utrullningskonflikter](rollout-conflicts.md).
+   >Se [MSM-utrullningskonflikter](rollout-conflicts.md) för detaljer om sådana situationer.
 
 ### Frigöra en Live Copy-sida från Sidegenskaper {#detach-a-live-copy-page-from-the-page-properties}
 
 Så här frigör du en Live-kopia:
 
-1. I konsolen **Platser** väljer du sidan Live-kopia och klickar eller trycker på **Visa egenskaper**.
-1. Öppna fliken **Live Copy**.
-1. Välj **Koppla loss** i verktygsfältet.
+1. I **Webbplatser** väljer du sidan Live Copy och klickar eller trycker på **Visa egenskaper**.
+1. Öppna **Live Copy** -fliken.
+1. I verktygsfältet väljer du **Koppla loss**.
 
    ![Knappen Frigör](../assets/detach-button.png)
 
@@ -640,10 +640,10 @@ Så här frigör du en Live-kopia:
 
 ### Frigöra en Live Copy-sida från Live Copy-översikten {#detach-a-live-copy-page-from-the-live-copy-overview}
 
-Åtgärden [Koppla loss är även tillgänglig från Live-kopieringsöversikten](live-copy-overview.md#using-the-live-copy-overview) när en Live-kopieringssida är markerad.
+The [Åtgärden Frigör är också tillgänglig från Live-kopieringsöversikten](live-copy-overview.md#using-the-live-copy-overview)när en Live Copy-sida är markerad.
 
-1. Öppna [Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview) och välj en Live Copy-sida.
-1. Välj **Koppla loss** från verktygsfältet.
-1. Bekräfta åtgärden **Koppla loss** i dialogrutan **Koppla loss Live Copy**:
+1. Öppna [Live Copy - översikt](live-copy-overview.md#using-the-live-copy-overview) och väljer en Live Copy-sida.
+1. Välj **Koppla loss** i verktygsfältet.
+1. Bekräfta **Koppla loss** i **Frigör Live Copy** dialog:
 
    ![Koppla loss en Live-kopia](../assets/detach-live-copy.png)

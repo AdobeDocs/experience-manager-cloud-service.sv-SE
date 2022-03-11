@@ -115,7 +115,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 1. I det övre högra hörnet av **[!UICONTROL Batch Upload to Scene7 – Step Properties]** väljer **[!UICONTROL Done]**.
 
-1. I det övre högra hörnet av Scene7: Bearbeta om sida med arbetsflödesmodell för resurser, välj **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]**, är arbetsflödets körningsmodell synkroniserad och klar att bearbeta resurser i en mapp igen.
+1. I det övre högra hörnet av Scene7: Bearbeta om sida med arbetsflödesmodell för resurser, välj **[!UICONTROL Sync]**. När du ser **[!UICONTROL Synced]**, är arbetsflödets körningsmodell synkroniserad och klar att bearbeta om resurser i en mapp.
 
    ![Synkronisera arbetsflödesmodellen](/help/assets/dynamic-media/assets/reprocess-assets1.png)
 

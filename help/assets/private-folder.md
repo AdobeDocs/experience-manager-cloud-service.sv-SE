@@ -4,7 +4,8 @@ description: Lär dig hur du skapar en privat mapp i [!DNL Adobe Experience Mana
 contentOwner: Vishabh Gupta
 role: User
 feature: Collaboration
-source-git-commit: 103bf8a477fb851e093bfde8e2c0535f49a01566
+exl-id: d48f6daf-af81-4024-bff2-e8bf6d683b0c
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 0%

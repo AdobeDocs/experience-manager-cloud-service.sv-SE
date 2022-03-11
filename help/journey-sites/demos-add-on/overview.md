@@ -1,13 +1,13 @@
 ---
 title: AEM Reference Demos Add-On Journey
 description: Börja här för en guidad resa genom hur du enkelt lägger till tillägget AEM Reference Demos i en sandlådemiljö med minimal AEM och kan testa de kraftfulla funktionerna i AEM med detaljerade exempel baserade på bästa praxis.
-source-git-commit: df9b777e24e56ed0329895f833f50b45ecf2defa
+exl-id: 8a6d4abf-0832-40e8-9ba6-1ad4ba794ffa
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 1%
 
 ---
-
 
 # AEM Reference Demos Add-On Journey {#reference-demos-add-on-journey}
 

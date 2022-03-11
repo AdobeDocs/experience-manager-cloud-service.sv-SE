@@ -1,13 +1,13 @@
 ---
 title: AEM för att skapa webbplatser snabbt
 description: Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av AEM sajt och snabbt anpassar sajten utan någon AEM backend-kunskap.
-source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
+exl-id: b8218232-0298-4b16-9dab-fa59be592a24
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 0%
 
 ---
-
 
 # AEM för att skapa webbplatser snabbt {#quick-site-creation-journey}
 

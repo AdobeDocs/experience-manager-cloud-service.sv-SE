@@ -1,17 +1,17 @@
 ---
-title: 'Hantera publikation '
+title: Hantera publikation
 description: Publicera eller avpublicera material på Experience Manager Assets, Dynamic Media och Brand Portal
 contentOwner: Vishabh Gupta
 mini-toc-levels: 1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User, Architect, Admin
-source-git-commit: 6ffdd6801fffb743314759b6c303723c2599dfa5
+exl-id: 691a0925-0061-4c62-85ac-8257b96dddf2
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '1407'
 ht-degree: 4%
 
 ---
-
 
 # Hantera publicering i Experience Manager Assets {#manage-publication-in-aem}
 
@@ -191,4 +191,3 @@ Du kan publicera resurser, mappar och samlingar i [!DNL Experience Manager Asset
 * Tomma mappar publiceras inte.
 * Om du publicerar en resurs som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Vänta tills bearbetningen är klar och publicera eller publicera om resursen när bearbetningen är klar.
 * När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom de kan refereras av andra publicerade resurser.
-

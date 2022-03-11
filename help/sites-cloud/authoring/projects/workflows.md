@@ -13,11 +13,11 @@ ht-degree: 11%
 
 De projektarbetsflöden som är tillgängliga från paketet innehåller följande:
 
-* **Arbetsflöde**  för projektgodkännande - Med det här arbetsflödet kan du tilldela innehåll till en användare, granska och sedan godkänna.
-* **Begär start**  - Ett arbetsflöde som begär start.
-* **Begär landningssida**  - Den här arbetsflödet begär en landningssida.
-* **Begär e-post**  - Arbetsflöde för att begära e-post.
-* **DAM Skapa och översätt kopia och DAM Skapa språkkopia**  - Skapar översatta binärfiler, metadata och taggar för resurser och mappar.
+* **Arbetsflöde för projektgodkännande** - Med det här arbetsflödet kan du tilldela innehåll till en användare, granska och sedan godkänna.
+* **Begär start** - Ett arbetsflöde som begär en start.
+* **Begär landningssida** - Det här arbetsflödet begär en landningssida.
+* **Begär e-post** - Arbetsflöde för att begära e-post.
+* **DAM Skapa och översätt kopia och DAM Skapa språkkopia** - Skapar översatta binärfiler, metadata och taggar för resurser och mappar.
 
 Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
@@ -27,16 +27,16 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 | Begär start | x |  |
 | Begär landningssida | x |  |
 | Begär e-post | x |  |
-| DAM - skapa språkkopia&amp;ast; |  | x |
-| DAM Skapa och översätt språkkopia&amp;ast; |  | x |
+| DAM - skapa &amp;språkkopia; |  | x |
+| DAM Skapa och översätt &amp;språkkopia; |  | x |
 
 >[!NOTE]
 >
->&amp;ast; Dessa arbetsflöden startas inte från **arbetsflödets**-panel i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-cloud/administering/translation/managing-projects.md)
+>&amp;ast; De här arbetsflödena har inte startats från **Arbetsflöde** i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-cloud/administering/translation/managing-projects.md)
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 
-Du startar ett arbetsflöde direkt i Projekt (förutom för DAM Create Language Copy eller DAM Create och Translate Language Copy). Information om väntande uppgifter i ett projekt visas i rutan **Uppgifter**. Meddelanden om uppgifter som behöver slutföras visas bredvid användarikonen.
+Du startar ett arbetsflöde direkt i Projekt (förutom för DAM Create Language Copy eller DAM Create och Translate Language Copy). Information om utestående uppgifter i ett projekt finns i **Uppgifter** platta. Meddelanden om uppgifter som behöver slutföras visas bredvid användarikonen.
 
 Mer information om hur du arbetar med arbetsflöden i AEM finns i:
 
@@ -50,12 +50,12 @@ I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projek
 
 I arbetsflödet för projektgodkännande tilldelar du innehåll till en användare, granskar och godkänner sedan innehållet.
 
-1. I ditt enkla projekt väljer du **`+`**-tecknet i rutan **Arbetsflöden** och väljer **Arbetsflöde för projektgodkännande**.
+1. I ditt enkla projekt väljer du **`+`** logga in på **Arbetsflöden** platta och markera **Arbetsflöde för projektgodkännande**.
 1. Ange en titel och välj vem du vill tilldela den till i grupplistan. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
    ![Begär godkännande](/help/sites-cloud/authoring/assets/projects-approval.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Aktiviteten visas i rutan **Aktiviteter**.
+1. Klicka **Skapa**. Arbetsflödet startar. Uppgiften visas i **Uppgifter** platta.
 
 ## Arbetsflödet Begär start {#request-launch-workflow}
 
@@ -66,7 +66,7 @@ Med det här arbetsflödet kan du begära att programmet startas.
 
    ![Begär start](/help/sites-cloud/authoring/assets/projects-request-launch.png)
 
-1. Klicka på **Skapa**. Arbetsflödet startar. Arbetsflödet visas i listan **Arbetsflöden** (klicka på ellipser **..).** på panelen **Arbetsflöden** för att komma åt den här listan).
+1. Klicka **Skapa**. Arbetsflödet startar. Arbetsflödet visas i **Arbetsflöden** lista (klicka på ovaler) **...** på **Arbetsflöden** för att komma åt den här listan).
 
 ## Skapa (och översätt) språkkopieringsarbetsflöde för resurser {#create-and-translate-language-copy-workflow-for-assets}
 

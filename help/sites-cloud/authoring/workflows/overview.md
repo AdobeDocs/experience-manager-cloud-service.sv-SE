@@ -1,14 +1,13 @@
 ---
 title: Arbeta med arbetsflöden
 description: Med arbetsflöden i AEM kan du automatisera en serie steg som utförs på en sida eller en resurs.
-translation-type: tm+mt
-source-git-commit: 16725342c1a14231025bbc1bafb4c97f0d7cfce8
+exl-id: ed157646-abb3-45c6-bafd-7889bd93fdf3
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 7%
 
 ---
-
 
 # Arbeta med arbetsflöden {#working-with-workflows}
 

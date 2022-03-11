@@ -1,24 +1,24 @@
 ---
 title: Rapporter om användning och delning
-description: Rapporterar om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper dig att förstå användningen, aktiviteten och delningen av dina digitala resurser.
+description: Rapporter om dina resurser i [!DNL Adobe Experience Manager Assets] som hjälper er att förstå användningen, aktiviteten och delningen av era digitala resurser.
 contentOwner: AG
-feature: Resursrapporter,Resurshantering
+feature: Asset Reports,Asset Management
 role: Admin,User
 exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
 source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '819'
 ht-degree: 6%
 
 ---
 
 # Materialrapporter {#asset-reports}
 
-Med tillgångsrapportering kan du utvärdera verktyget för din [!DNL Adobe Experience Manager Assets]-distribution. Med [!DNL Assets] kan du generera olika rapporter för dina digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som delas med <!-- downloaded and -->.
+Med tillgångsrapportering kan du bedöma hur användbar din [!DNL Adobe Experience Manager Assets] distribution. Med [!DNL Assets]kan du generera olika rapporter för dina digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som används <!-- downloaded and --> delade.
 
-Använd informationen i rapporterna för att ta fram nyckeltal för att mäta hur [!DNL Assets] används i ert företag och av era kunder.
+Använd informationen i rapporterna för att ta fram nyckeltal för att mäta antagandet av [!DNL Assets] inom företaget och av kunderna.
 
-I [!DNL Assets]-rapporteringsramverket används [!DNL Sling]-jobb för att asynkront bearbeta rapportbegäranden på ett ordnat sätt. Den kan skalas för stora databaser. Asynkron rapportbearbetning ökar effektiviteten och hastigheten med vilken rapporter genereras.
+The [!DNL Assets] rapporteringsramverk använder [!DNL Sling] jobb för att asynkront bearbeta rapportbegäranden på ett ordnat sätt. Den kan skalas för stora databaser. Asynkron rapportbearbetning ökar effektiviteten och hastigheten med vilken rapporter genereras.
 
 Rapporthanteringsgränssnittet är intuitivt och innehåller detaljerade alternativ och kontroller för att komma åt arkiverade rapporter och visa rapportkörningsstatus (lyckad, misslyckad och köad).
 
@@ -51,12 +51,12 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 
 [!DNL Adobe Experience Manager] administratörer kan enkelt generera och anpassa dessa rapporter för din implementering. Administratören kan följa de här stegen för att skapa en rapport:
 
-1. I [!DNL Experience Manager]-gränssnittet klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
+1. I [!DNL Experience Manager] gränssnitt, klicka **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
 
    ![Verktygssida för att navigera bland resurser - rapport](assets/navigation.png)
 
-1. På sidan [!UICONTROL Asset Reports] klickar du på **[!UICONTROL Create]** i verktygsfältet.
-1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]** och klicka på **[!UICONTROL Next]**.
+1. På [!UICONTROL Asset Reports] sida, klicka **[!UICONTROL Create]** i verktygsfältet.
+1. Från **[!UICONTROL Create Report]** väljer du den rapport du vill skapa och klickar på **[!UICONTROL Next]**.
 
    ![Välj rapporttyp](assets/choose_report.png)
 
@@ -70,7 +70,7 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
    >
    >Om du väljer att schemalägga rapporten senare måste du ange datum och tid i fälten Datum och Tid. Om du inte anger något värde behandlas det som en rapport som ska genereras omedelbart.
 
-   Konfigurationsfälten kan variera beroende på vilken typ av rapport du skapar. Rapporten **[!UICONTROL Disk Usage]** innehåller till exempel alternativ för att inkludera resursåtergivningar när du beräknar det diskutrymme som används av resurserna. Du kan välja att inkludera eller exkludera resurser i undermappar för beräkning av diskanvändning.
+   Konfigurationsfälten kan variera beroende på vilken typ av rapport du skapar. Till exempel **[!UICONTROL Disk Usage]** rapporten innehåller alternativ för att inkludera resursåtergivningar när du beräknar det diskutrymme som används av resurserna. Du kan välja att inkludera eller exkludera resurser i undermappar för beräkning av diskanvändning.
 
    >[!NOTE]
    >
@@ -78,32 +78,32 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 
    ![Sidan Information om rapporten Diskanvändning](assets/disk_usage_configuration.png)
 
-   När du skapar **[!UICONTROL Files]**-rapporten kan du inkludera/exkludera undermappar. Du kan dock inte inkludera resursåtergivningar för den här rapporten.
+   När du skapar **[!UICONTROL Files]** kan du inkludera/exkludera undermappar. Du kan dock inte inkludera resursåtergivningar för den här rapporten.
 
    ![Detaljsida för rapporten Filer](assets/files_report.png)
 
    I rapporten **[!UICONTROL Link Share]** visas URL:er till resurser som delas med externa användare inifrån [!DNL Assets]. <!-- It includes email ids of the user who shared the assets, emails ids of users with which the assets are shared, share date, and expiration date for the link. --> Det går inte att anpassa kolumnerna.
 
-   **[!UICONTROL Link Share]**-rapporten innehåller inga alternativ för undermappar och återgivningar eftersom den bara publicerar de delade URL:er som visas under `/var/dam/share`.
+   The **[!UICONTROL Link Share]** , innehåller inga alternativ för undermappar och återgivningar eftersom den bara publicerar de delade URL:er som visas under `/var/dam/share`.
 
    ![Detaljsida för länkdelningsrapport](assets/link_share.png)
 
 1. Klicka på **[!UICONTROL Next]** i verktygsfältet.
 
-1. På sidan **[!UICONTROL Configure Columns]** är vissa kolumner markerade för att visas i rapporten som standard. Du kan markera fler kolumner. Avbryt valet av en kolumn för att utesluta den i rapporten.
+1. I **[!UICONTROL Configure Columns]** på sidan är vissa kolumner markerade för att visas i rapporten som standard. Du kan markera fler kolumner. Avbryt valet av en kolumn för att utesluta den i rapporten.
 
    ![Markera eller avbryta markering av rapportkolumner](assets/configure_columns.png)
 
-   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under noden `jcr:content` i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
+   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under `jcr:content` nod i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
 
    ![Markera eller avbryta markering av rapportkolumner](assets/custom_columns.png)
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
-1. På sidan [!UICONTROL Asset Reports] baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
+1. På [!UICONTROL Asset Reports] sidan, baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued], eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
 
    ![En genererad rapport](assets/report_page.png)
 
-   Klicka på **[!UICONTROL Download]** i verktygsfältet för att hämta rapporten i CSV-format.
+   Klicka **[!UICONTROL Download]** i verktygsfältet för att hämta rapporten i CSV-format.
 
 ## Lägga till anpassade kolumner i rapporter {#add-custom-columns}
 
@@ -128,22 +128,22 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 
 Följ de här stegen för att lägga till anpassade kolumner i de här rapporterna:
 
-1. I [!DNL Manager interface] klickar du på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
-1. På sidan [!UICONTROL Asset Reports] klickar du på **[!UICONTROL Create]** i verktygsfältet.
+1. I [!DNL Manager interface], klicka **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
+1. På [!UICONTROL Asset Reports] sida, klicka **[!UICONTROL Create]** i verktygsfältet.
 
-1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]**. Klicka på **[!UICONTROL Next]**.
+1. Från **[!UICONTROL Create Report]** väljer du en rapport att skapa. Klicka på **[!UICONTROL Next]**.
 
 1. Konfigurera rapportinformationen, t.ex. titel, beskrivning, miniatyrbild, mappsökväg och datumintervall. Klicka på **[!UICONTROL Next]**.
 
-1. Välj tillämplig information i listan **[!UICONTROL Default Columns]**. Om du vill visa en anpassad kolumn anger du namnet på kolumnen under **[!UICONTROL Custom Columns]**.
+1. Välj tillämplig information i listan över **[!UICONTROL Default Columns]**. Om du vill visa en anpassad kolumn anger du namnet på kolumnen under **[!UICONTROL Custom Columns]**.
 
    ![Ange namn för anpassad rapportkolumn](assets/custom_columns-1.png)
 
-1. Lägg till egenskapssökvägen under noden `jcr:content` i CRXDE med egenskapssökvägsväljaren. Du kan också skriva sökvägen i fältet för egenskapssökväg.
+1. Lägg till egenskapssökvägen under `jcr:content` nod i CRXDE med egenskapssökvägsväljaren. Du kan också skriva sökvägen i fältet för egenskapssökväg.
 
    ![Mappa egenskapssökvägen från banor i jcr:content](assets/property_picker.png)
 
-   Om du vill lägga till fler anpassade kolumner klickar du på **[!UICONTROL Add]** och upprepar stegen ovan.
+   Om du vill lägga till fler anpassade kolumner klickar du på **[!UICONTROL Add]** och upprepa stegen ovan.
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
 
@@ -161,7 +161,7 @@ To remove reports that you no longer require, configure the DAM Report Purge ser
 
 ## Felsökningsinformation {#tips-troubleshoot}
 
-* Om [!UICONTROL Disk Usage Report] inte genererar och om du använder [!DNL Dynamic Media] måste du se till att alla resurser fortsätter korrekt. Du löser problemet genom att bearbeta resurserna på nytt och generera rapporten igen.
+* Om [!UICONTROL Disk Usage Report] genererar inte och om du använder [!DNL Dynamic Media], se till att alla resurser fortsätter korrekt. Du löser problemet genom att bearbeta resurserna på nytt och generera rapporten igen.
 
 <!-- These notes were present in generate report section above. Removing commented text from in between the instructions to preserve the numbering of the ordered list.
 

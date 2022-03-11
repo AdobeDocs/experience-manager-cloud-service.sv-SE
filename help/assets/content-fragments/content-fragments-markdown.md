@@ -1,19 +1,19 @@
 ---
 title: Markdown
 description: Förstå hur Content Fragment Editor använder markeringssyntax för att enkelt skapa rubrikfritt innehåll.
-feature: Innehållsfragment
+feature: Content Fragments
 role: User
 exl-id: 7a6d4a63-faf8-4e1c-95da-90db2027a2dd
 source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '522'
 ht-degree: 4%
 
 ---
 
 # Markering {#markdown}
 
-När du [redigerar](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) använder innehållsfragmentredigeraren syntaxen *markdown* så att du enkelt kan skriva headless-innehåll:
+När du [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva headless-innehåll:
 
 ![markeringsredigerare](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
@@ -129,7 +129,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Om du vill skapa en osorterad lista använder du &amp;ast; -symbolen före objekten i listan. Till exempel:
+Skapa en osorterad &amp;lista med hjälp av den sista; -symbolen före objekten i listan. Till exempel:
 
     `* item in list`
 
@@ -165,7 +165,7 @@ Du kan fet text enligt följande:
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-Om du vill ange ett intervall med kod omsluter du det med citattecken (&amp;grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
+Om du vill ange ett kodomfång omsluter du det med citattecken (&amp;grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
 
 Till exempel:
 
@@ -181,7 +181,7 @@ Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock
 
 ## Omvända snedstreck {#backslash-escapes}
 
-Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML &lt;em>-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
+Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omge ett ord med literala asterisker (i stället för en HTML-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
 
     `\\*literal asterisks\\*`
 

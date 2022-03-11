@@ -3,26 +3,26 @@ title: Utvecklarläge
 seo-title: Developer Mode
 description: I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan
 seo-description: Developer mode opens a side panel with several tabs that provide a developer with information about the current page
-source-git-commit: b80aaa799e1652f7a981006925b50ffef43d7ab3
+exl-id: fbf11c0f-dc6e-43f3-bcf2-080eacc6ba99
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
-
 # Utvecklarläge {#developer-mode}
 
-När du redigerar sidor i AEM finns flera [lägen](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) tillgängliga, bland annat i utvecklarläget. I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren teknisk information om den aktuella sidan.
+När du redigerar sidor i AEM [lägen](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) är tillgängliga, inklusive läget Utvecklare. I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren teknisk information om den aktuella sidan.
 
 Det finns två flikar:
 
-* **[](#components)** Komponenter för att visa struktur- och prestandainformation.
-* **[Det](#errors)** gick inte att se några problem.
+* **[Komponenter](#components)** för att visa struktur- och prestandainformation.
+* **[Fel](#errors)** för att se om det uppstår några problem.
 
 Detta hjälper en utvecklare att:
 
-* **Upptäck** hur sidorna är sammansatta.
+* **Upptäck** hur sidorna disponeras.
 * **Felsök:** vad som händer var och när, vilket i sin tur hjälper till att lösa problem.
 
 >[!NOTE]
@@ -31,19 +31,19 @@ Detta hjälper en utvecklare att:
 >
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
 >  * Detta inträffar när bredden är mindre än 1024px.
->* Är bara tillgänglig för användare som är medlemmar i `administrators`-gruppen.
+>* Är endast tillgänglig för användare som är medlemmar i `administrators` grupp.
 
 
 ## Öppnar utvecklarläge {#opening-developer-mode}
 
-Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** i lägesväljaren i verktygsfältet i sidredigeraren:
+Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** från lägesväljaren i verktygsfältet i sidredigeraren:
 
 ![Öppnar utvecklarläge](assets/developer-mode.png)
 
 Panelen är uppdelad i två flikar:
 
-* **[Komponenter](#components)**  - Detta visar ett komponentträd, som liknar  [innehållsträdet ](/help/sites-cloud/authoring/fundamentals/environment-tools.md#content-tree) för författare
-* **[Fel](#errors)**  - När problem uppstår visas information för varje komponent.
+* **[Komponenter](#components)** - Detta visar ett komponentträd, som liknar [innehållsträd](/help/sites-cloud/authoring/fundamentals/environment-tools.md#content-tree) för författare
+* **[Fel](#errors)** - När problem uppstår visas information för varje komponent.
 
 ### Fliken Komponenter {#components}
 
@@ -56,7 +56,7 @@ Detta visar ett komponentträd som:
 * Gör att du kan expandera trädet och välja specifika komponenter i trädet. Markeringen ger åtkomst till komponentinformation. t.ex.
    * Databassökväg
    * Länkar till skript (används i CRXDE Lite)
-   * Komponentdetaljer som de visas i [komponentkonsolen](/help/sites-cloud/authoring/features/components-console.md)
+   * Komponentdetaljer som de visas i [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md)
 * Komponenter som är markerade i trädet markeras med en blå kant i redigeraren.
 
 Fliken Komponenter hjälper dig att:
@@ -77,7 +77,7 @@ Varje komponentpost kan ha följande alternativ:
 
 * **Redigera skript:** En länk som öppnar komponentskriptet i CRXDE Lite.
 
-* **Visa komponentinformation:** Öppnar information om komponenten i  [komponentkonsolen.](/help/sites-cloud/authoring/features/components-console.md)
+* **Visa komponentinformation:** Öppnar informationen om komponenten i [Komponentkonsolen.](/help/sites-cloud/authoring/features/components-console.md)
 
 Om du expanderar en komponentpost genom att trycka eller klicka på gruppen kan du även visa:
 
@@ -88,9 +88,9 @@ Om du expanderar en komponentpost genom att trycka eller klicka på gruppen kan 
 
 ![Fliken Fel](assets/developer-mode-errors-tab.png)
 
-Förhoppningsvis kommer fliken **Fel** alltid att vara tom (som ovan), men när problem uppstår kan följande information visas för varje komponent:
+Förhoppningsvis **Fel** tabben kommer alltid att vara tom (som ovan), men när problem uppstår kan följande information visas för varje komponent:
 
 * En varning om komponenten skriver en post i felloggen, tillsammans med information om felet och direktlänkar till rätt kod i CRXDE Lite.
 * En varning om komponenten öppnar en administratörssession.
 
-Om till exempel en odefinierad metod anropas visas det resulterande felet på fliken **Fel** och komponentposten i trädet på fliken **Komponenter** markeras också med en indikator när ett fel inträffar.
+Om till exempel en odefinierad metod anropas visas det resulterande felet i **Fel** och komponentposten i trädet i **Komponenter** -fliken markeras också med en indikator när ett fel inträffar.

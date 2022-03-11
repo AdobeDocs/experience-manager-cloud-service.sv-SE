@@ -1,16 +1,15 @@
 ---
 title: Begränsningar för redigerare
 description: Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare.
-translation-type: tm+mt
-source-git-commit: fee73b5f5ba69422494efe554ac5aa62c046ad86
+exl-id: 6a4f0e43-1076-4da9-95dc-9c5bf83e30d0
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
 
 ---
 
-
-# Redigeringsbegränsningar {#editor-limitations}
+# Begränsningar för redigerare {#editor-limitations}
 
 Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare. På den här sidan sammanfattas dessa begränsningar och lösningar eller tillfälliga lösningar ges där det är möjligt.
 
@@ -20,13 +19,13 @@ En författare kan stöta på följande funktionella begränsningar när han ell
 
 ### Länkar som inte är aktiva {#links-not-active}
 
-När [redigerar en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md) är länkar inte aktiva.
+När [redigera en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md), är länkar inte aktiva.
 
-* [Växla till  **** ](/help/sites-cloud/authoring/fundamentals/editing-content.md#preview-mode) Förhandsgranskningsläge om du vill navigera med hjälp av länkarna i ditt innehåll.
+* [Växla till **Förhandsgranska** läge](/help/sites-cloud/authoring/fundamentals/editing-content.md#preview-mode) för att navigera med hjälp av länkarna i ditt innehåll.
 
-### Struktursidor {#structure-pages}
+### Strukturera sidor {#structure-pages}
 
-Sidorna kan inte ha namnet `structure`. Sidor med namnet `structure` kan inte redigeras i sidredigeraren.
+Sidor kan inte namnges `structure`. Sidor med namn `structure` går inte att redigera i sidredigeraren.
 
 ## CSS-begränsningar {#css-limitations}
 
@@ -38,7 +37,7 @@ Absolut positionerade element kan orsaka problem i positionen för deras övert�
 
 * Om det inträffar måste du kontrollera att dimensionerna för det absolut placerade elementet är korrekta eftersom redigeraren kommer att skapa en övertäckning med exakt samma dimensioner.
 
-### vh enheter {#vh-units}
+### vh Enheter {#vh-units}
 
 `vh` enheter stöds inte eftersom iframe-höjden måste justeras automatiskt av AEM.
 
@@ -46,7 +45,7 @@ Absolut positionerade element kan orsaka problem i positionen för deras övert�
 
 Fasta bakgrundsbilder kanske inte visas som fasta vid bläddring eftersom de är inbäddade i en iframe.
 
-* Om du väljer **Visa sidan som Publicerad** i sidhuvudsfältets åtgärder visas sidan korrekt.
+* Markera **Visa sidan som publicerad** i sidhuvudsfältets åtgärder visas sidan korrekt.
 
 ### 100 % höjd {#height}
 
@@ -64,7 +63,7 @@ body {
 }
 ```
 
-### Marginalen komprimeras {#margin-collapsing}
+### Komprimera marginal {#margin-collapsing}
 
 Problem med att komprimera marginaler visas om det första underordnade elementet i body-elementet har en marginal.
 

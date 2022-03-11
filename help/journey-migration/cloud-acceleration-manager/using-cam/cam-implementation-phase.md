@@ -1,7 +1,8 @@
 ---
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
-source-git-commit: a6d225943c5d23ebd960fda0b0912a81f1f80014
+exl-id: e6ac88f0-4b3f-43a1-98bc-8c6608713784
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 2%

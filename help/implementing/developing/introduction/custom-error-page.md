@@ -1,14 +1,13 @@
 ---
 title: Anpassade felsidor
 description: AEM har en standardfelhanterare för hantering av HTTP-fel, som kan anpassas.
-translation-type: tm+mt
-source-git-commit: d7e9bdee83f1b85436185ca57420ee178268cb33
+exl-id: b74c65d1-8ef5-4ad4-8255-8187f3b1d84c
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa felsidor {#customizing-error-pages}
 
@@ -16,21 +15,21 @@ AEM har en standardfelhanterare för hantering av HTTP-fel. genom att till exemp
 
 ![Standardfelmeddelande](assets/error-message-standard.png)
 
-För att svara på fel tillhandahåller AEM ett `404.jsp`-skript under `/libs/sling/servlet/errorhandler`.
+För att svara på fel finns AEM en `404.jsp` skript under `/libs/sling/servlet/errorhandler`.
 
 >[!TIP]
 >
->Eftersom AEM baseras på Apache Sling finns ytterligare information tillgänglig [i dokumentationen för felhantering i Apache.](https://sling.apache.org/documentation/the-sling-engine/errorhandling.html)
+>Eftersom AEM baseras på Apache Sling finns mer information tillgänglig [i dokumentationen för felhantering i Apache.](https://sling.apache.org/documentation/the-sling-engine/errorhandling.html)
 
 >[!NOTE]
 >
->På en författarinstans är [CQ WCM Debug Filter](/help/implementing/deploying/configuring-osgi.md) aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
+>På en författarinstans [CQ WCM-felsökningsfilter](/help/implementing/deploying/configuring-osgi.md) är aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
 >
 >I en publiceringsinstans är CQ WCM-felsökningsfiltret **alltid** inaktiverat (även om det har konfigurerats som aktiverat).
 
 ## Anpassa sidor som visas av felhanteraren {#how-to-customize-pages-shown-by-the-error-handler}
 
-Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren när ett fel inträffar. För att göra detta använder du [AEM standardövertäckningsmekanism](/help/implementing/developing/introduction/overlays.md) så att dina anpassade sidor skapas under `/apps` och täcker över standardsidorna som är under `/libs`.
+Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren när ett fel inträffar. För att göra detta kommer du att [AEM standardövertäckningsmekanism](/help/implementing/developing/introduction/overlays.md) så att dina anpassade sidor skapas under `/apps` och täcka över standardsidorna under `/libs`.
 
 1. Kopiera standardskripten i databasen:
 
@@ -48,13 +47,13 @@ Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren n
 
 >[!CAUTION]
 >
->Skriptet `404.jsp` har utformats särskilt för att hantera AEM autentisering. särskilt för att möjliggöra systeminloggning vid dessa fel.
+>The `404.jsp` Skriptet har utformats särskilt för att AEM autentiseringen. särskilt för att möjliggöra systeminloggning vid dessa fel.
 >
 >Därför bör det här manuset ersättas med stor omsorg.
 
 ### Anpassa svaret till HTTP 500-fel {#customizing-the-response-to-http-errors}
 
-HTTP [500 Internal Server Error](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) indikerar ett serversidesfel, till exempel att servern påträffade ett oväntat tillstånd som gjorde att den inte kunde utföra begäran.
+HTTP [500 internt serverfel](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) indikerar ett fel på serversidan, t.ex. att servern råkade ut för ett oväntat tillstånd som gjorde att den inte kunde utföra begäran.
 
 När bearbetningen av en begäran resulterar i ett undantag, är Apache Sling-ramverket (som AEM bygger på):
 
@@ -63,16 +62,16 @@ När bearbetningen av en begäran resulterar i ett undantag, är Apache Sling-ra
    * HTTP-svarskoden 500
    * Undantagets stackspårning
 
-Genom att [anpassa de sidor som visas av felhanteraren](#how-to-customize-pages-shown-by-the-error-handler) kan ett `500.jsp`-skript skapas. Den används dock bara om `HttpServletResponse.sendError(500)` körs explicit; d.v.s. från en undantagskatalog.
+Av [anpassa de sidor som visas i felhanteraren](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` kan skapas. Det används dock bara om `HttpServletResponse.sendError(500)` exekveras uttryckligen, d.v.s. från en undantagskatalog.
 
-Annars är svarskoden inställd på 500, men `500.jsp`-skriptet körs inte.
+Annars är svarskoden inställd på 500, men `500.jsp` skriptet körs inte.
 
 Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsamma som undantagsklassen (eller superklassen). Om du vill hantera alla sådana undantag kan du skapa ett skript `/apps/sling/servlet/errorhandler/Throwable.jsp` eller `/apps/sling/servlet/errorhandler/Exception.jsp`.
 
 >[!CAUTION]
 >
->På en författarinstans är [CQ WCM Debug Filter](/help/implementing/deploying/configuring-osgi.md) aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
+>På en författarinstans [CQ WCM-felsökningsfilter](/help/implementing/deploying/configuring-osgi.md) är aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
 >
->För en anpassad felhanterare behövs svar med kod 500, så [CQ WCM Debug Filter måste inaktiveras.](/help/implementing/deploying/configuring-osgi.md) Detta garanterar att svarskoden 500 returneras, vilket i sin tur utlöser rätt Sling-felhanterare.
+>För en anpassad felhanterare behövs svar med koden 500, så [CQ WCM Debug Filter måste inaktiveras.](/help/implementing/deploying/configuring-osgi.md) Detta garanterar att svarskoden 500 returneras, vilket i sin tur utlöser rätt Sling-felhanterare.
 >
 >I en publiceringsinstans är CQ WCM-felsökningsfiltret **alltid** inaktiverat (även om det har konfigurerats som aktiverat).

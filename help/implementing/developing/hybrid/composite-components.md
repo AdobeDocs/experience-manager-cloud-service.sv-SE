@@ -1,14 +1,13 @@
 ---
 title: Sammansatta komponenter i SPA
 description: Lär dig hur du skapar egna sammansatta komponenter, komponenter som består av andra komponenter, som fungerar med AEM Single-Page Application (SPA) Editor.
-translation-type: tm+mt
-source-git-commit: 8623a043fd7253f94e0673b18053a6af922367b5
+exl-id: fa1ab1dd-9e8e-4e2c-aa9a-5b46ed8a02cb
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
 
 ---
-
 
 # Sammansatta komponenter i SPA {#composite-components-in-spas}
 
@@ -27,8 +26,8 @@ I den här artikeln används den vanliga kortkomponenten som exempel på hur den
 Följande modeller för stöd av användning av sammansatta komponenter kräver följande krav.
 
 * Din AEM-utvecklingsinstans körs lokalt på port 4502 med ett exempelprojekt.
-* Du har en fungerande extern React-app [aktiverad för redigering i AEM.](editing-external-spa.md).
-* Appen React läses in i AEM redigerare [med hjälp av komponenten RemotePage.](remote-page.md)
+* Du har en fungerande extern React-app [som kan redigeras i AEM.](editing-external-spa.md)
+* Appen React läses in i AEM [med komponenten RemotePage.](remote-page.md)
 
 ## Lägga till sammansatta komponenter i en SPA {#adding-composite-components}
 
@@ -45,13 +44,13 @@ I följande avsnitt ges exempel på hur du implementerar varje fall med kortkomp
 Börja med att skapa de komponenter som ska utgöra den sammansatta komponenten, dvs. komponenter för bilden och dess text.
 
 1. Skapa textkomponenten i AEM.
-1. Lägg till motsvarande `resourceType` från projektet i komponentens `editConfig`-nod.
+1. Lägg till motsvarande `resourceType` från projektet i komponentens `editConfig` nod.
 
    ```text
     resourceType: 'wknd-spa/components/text' 
    ```
 
-1. Använd `withMappable`-hjälpen för att aktivera redigering för komponenten.
+1. Använd `withMappable` hjälp för att aktivera redigering för komponenten.
 
    ```text
    export const AEMText = withMappable(Text, TextEditConfig); 
@@ -86,7 +85,7 @@ export const Text = ({ cqPath, richText, text }) => {
 export const AEMText = withMappable(Text, TextEditConfig);
 ```
 
-Om du skapar en bildkomponent på ett liknande sätt kan du kombinera den med `AEMText`-komponenten till en ny kortkomponent med bild- och textkomponenterna som underordnade.
+Om du skapar en bildkomponent på ett liknande sätt kan du kombinera den med `AEMText` till en ny kortkomponent, med bild- och textkomponenterna som underordnade.
 
 ```javascript
 import React from 'react';
@@ -119,7 +118,7 @@ function Home() {
 }
 ```
 
-Då visas en tom platshållare för en text och en bild i redigeraren. När du anger värden för dessa med redigeraren lagras de på den angivna sidsökvägen, d.v.s. `/content/wknd-spa/home` på rotnivån med de namn som anges i `itemPath`.
+Då visas en tom platshållare för en text och en bild i redigeraren. När du anger värden för dessa med redigeraren lagras de på den angivna sidsökvägen, d.v.s. `/content/wknd-spa/home`  på rotnivån med de namn som anges i `itemPath`.
 
 ![Kompositkortskomponent i redigeraren](assets/composite-card.png)
 
@@ -131,7 +130,7 @@ I det här fallet har kortkomponenten redan skapats i ditt AEM med titel- och bi
 
 Sedan kan du lägga till den i SPA och hämta dess innehåll.
 
-1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM resurstyper i det SPA projektet. I det här exemplet använder vi samma `AEMText`- och `AEMImage`-komponenter som i föregående fall.[a3/>](#component-does-not-exist)
+1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM resurstyper i det SPA projektet. I det här exemplet använder vi samma `AEMText` och `AEMImage` komponenter som [i föregående fall.](#component-does-not-exist)
 
    ```javascript
    import React from 'react';
@@ -147,7 +146,7 @@ Sedan kan du lägga till den i SPA och hämta dess innehåll.
    MapTo('wknd-spa/components/image')(Image, ImageEditConfig);
    ```
 
-1. Eftersom det inte finns något innehåll för `imagecard`-komponenten lägger du till kortet på sidan. Inkludera den befintliga behållaren från AEM i SPA.
+1. Eftersom det inte finns något innehåll för `imagecard` lägger du till kortet på sidan. Inkludera den befintliga behållaren från AEM i SPA.
    * Om det redan finns en behållare i det AEM projektet kan vi inkludera den i SPA i stället och lägga till komponenten i behållaren från AEM.
    * Kontrollera att kortkomponenten är mappad till motsvarande resurstyp i SPA.
 
@@ -157,9 +156,9 @@ Sedan kan du lägga till den i SPA och hämta dess innehåll.
     itemPath='root/responsivegrid' />
    ```
 
-1. Lägg till den skapade `wknd-spa/components/imagecard`-komponenten i de tillåtna komponenterna för behållarkomponenten [i sidmallen.](/help/sites-cloud/authoring/features/templates.md)
+1. Lägg till skapade `wknd-spa/components/imagecard` till de tillåtna komponenterna för behållarkomponenten [i sidmallen.](/help/sites-cloud/authoring/features/templates.md)
 
-Nu kan komponenten `imagecard` läggas till direkt i behållaren i AEM.
+Nu `imagecard` kan läggas till direkt i behållaren i AEM.
 
 ![Sammansatt kort i redigeraren](assets/composite-card.gif)
 
@@ -175,4 +174,4 @@ Om innehållet finns i AEM kan det inkluderas direkt i SPA genom att ange sökv�
 
 ![Sammansatt sökväg i nodstruktur](assets/composite-path.png)
 
-Komponenten `AEMCard` är densamma som [i det föregående användningsfallet.](#content-does-not-exist) Här inkluderas det innehåll som definieras på ovanstående plats i AEM projekt i SPA.
+The `AEMCard` -komponenten är densamma som definierad [i det föregående användningsexemplet.](#content-does-not-exist) Här inkluderas det innehåll som definieras på ovanstående plats i AEM projekt i SPA.

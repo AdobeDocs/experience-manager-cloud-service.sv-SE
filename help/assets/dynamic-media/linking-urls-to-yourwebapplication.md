@@ -14,7 +14,7 @@ ht-degree: 5%
 
 Dina webbplatser och tillämpningar har åtkomst till Dynamic Media tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
-Du länkar bara till URL:er om du är *inte* och använder Adobe Experience Manager som WCM. Länkning - och inte inbäddning - används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder Experience Manager som WCM-fil [lägger du till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
+Du länkar bara till URL-adresser om du är *not* med Adobe Experience Manager som WCM. Länkning - och inte inbäddning - används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder Experience Manager som WCM, [du lägger till resurserna direkt på sidan.](adding-dynamic-media-assets-to-pages.md)
 
 Om du vill placera dessa URL-strängar på dina webbsidor och i dina program kopierar du dem från Dynamic Media.
 
@@ -48,7 +48,7 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
 **Så här hämtar du en URL för en resurs:**
 
-1. Navigera till den *publicerade*-resurs vars URL för bildförinställning eller visningsförinställning som du vill kopiera och markera resursen som du vill öppna den.
+1. Navigera till *publicerad* resurs vars förinställda URL eller URL för visningsförinställning som du vill kopiera, och markera resursen för att öppna den.
 
    Kom ihåg att URL:er endast går att kopiera *efter* att du har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
 
@@ -60,25 +60,25 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
 1. Gör något av följande beroende på vilken resurs du valt:
 
-   * Om du valde en bild väljer du **[!UICONTROL Renditions]** i listrutan.
+   * Om du har markerat en bild väljer du **[!UICONTROL Renditions]**.
 
-      Välj ett förinställningsnamn under rubriken **[!UICONTROL Dynamic]** för att visa återgivningen i den högra bildrutan. Om det behövs bläddrar du i listan Återgivningar för att se den dynamiska rubriken.
+      Under **[!UICONTROL Dynamic]** väljer du ett förinställningsnamn för att visa återgivningen i den högra bildrutan. Om det behövs bläddrar du i listan Återgivningar för att se den dynamiska rubriken.
 
-      Välj **[!UICONTROL URL]** längst ned i den vänstra listen.
+      Längst ned i den vänstra listen väljer du **[!UICONTROL URL]**.
 
       ![chlimage_1-270](assets/chlimage_1-270.png)
 
-   * Om du har valt en snurruppsättning, en bilduppsättning, en Carousel-uppsättning eller en video väljer du **[!UICONTROL Viewers]** i listrutan.
+   * Om du valde en snurra, en bilduppsättning, en Carousel-uppsättning eller en video väljer du **[!UICONTROL Viewers]**.
 
       Välj ett namn på visningsförinställningen i den vänstra listen. En förhandsgranskning av uppsättningen eller videon öppnas på en separat sida.
 
-      Välj **[!UICONTROL URL]** längst ned i den vänstra listen.
+      I den vänstra listen längst ned väljer du **[!UICONTROL URL]**.
 
       ![chlimage_1-271](assets/chlimage_1-271.png)
 
 1. Om du vill förhandsgranska resursen eller lägga till den på webbinnehållssidan markerar och kopierar du texten till webbläsaren.
 
-   Om du vill avsluta URL-fönstret väljer du **[!UICONTROL X]** eller **[!UICONTROL Close]**.
+   Om du vill avsluta URL-fönstret väljer du **[!UICONTROL X]** eller markera **[!UICONTROL Close]**.
 
 ## Hämta en URL för en statisk resurs {#obtaining-a-url-for-a-static-asset}
 
@@ -96,9 +96,9 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
 **Så här hämtar du en URL för en statisk resurs:**
 
-1. Navigera till den *publicerade* statiska resursen vars URL du vill kopiera och markera resursen för att öppna den.
+1. Navigera till *publicerad* statisk resurs vars URL du vill kopiera och markera resursen för att öppna den.
 
-   Kom ihåg att URL:er endast är tillgängliga för kopiering *efter* att du först har *publicerat* den statiska resursen.
+   Kom ihåg att URL-adresser endast är tillgängliga för kopiering *efter* du har först *publicerad* den statiska resursen.
 
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
@@ -109,18 +109,18 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
       * `https://*<server_name>*/is/content/*<company_name>*/*<static_asset_filename>*.*<extension>*`
 
          Till exempel, `https://aem.com/is/content/adobe/image.gif`.
-   * Välj **[!UICONTROL Asset]** > **[!UICONTROL Dynamic Renditions]**, markera sedan en dynamisk återgivning av den statiska resursen och kopiera URL:en.
+   * Välj **[!UICONTROL Asset]** > **[!UICONTROL Dynamic Renditions]** väljer du sedan en dynamisk återgivning av den statiska resursen och kopierar URL:en.
 
-      Ändra den kopierade URL:en till `is/content` i sökvägen i stället för `is/image/`.
+      Ändra den kopierade URL-adressen som ska användas `is/content` i banan i stället för `is/image/`.
 
 
 ## Hämta en video-URL för en publicerad videoåtergivning {#obtaining-a-video-url-for-a-published-video-rendition}
 
 1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
-1. Bläddra nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** på sidan **[!UICONTROL Cloud Services]** och välj sedan **[!UICONTROL Show Configurations]**.
+1. På **[!UICONTROL Cloud Services]** sida, bläddra nedåt till **[!UICONTROL Dynamic Media Cloud Services]** rubrik, markera **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** markerar du namnet på konfigurationen som du vill använda.
 
-1. Kopiera ned hela URL-sökvägen under **[!UICONTROL Video Service URL]** på sidan **[!UICONTROL Dynamic Media Cloud Settings]**. Du behöver den kopierade URL-sökvägen senare i stegen.
+1. På **[!UICONTROL Dynamic Media Cloud Settings]** sida, under **[!UICONTROL Video Service URL]**, kopierar hela URL-sökvägen. Du behöver den kopierade URL-sökvägen senare i stegen.
 
    URL-sökvägen kan till exempel se ut ungefär så här:
 
@@ -130,9 +130,9 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
 1. Under **[!UICONTROL Registration ID]** kopierar du det kundnamn som finns i den sista delen av ID:t.
 
-   Om registrerings-ID till exempel är `87654321|MyCompany` blir kundnamnet `MyCompany`.
+   Om registrerings-ID till exempel var `87654321|MyCompany`, blir kundens namn `MyCompany`.
 
-1. I närheten av det övre vänstra hörnet av sidan väljer du **[!UICONTROL Cloud Services]**, markerar sedan ikonen Experience Manager och navigerar till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Cloud Services]**, markera ikonen Experience Manager och navigera till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Kopiera ned hela videouppdateringssökvägen från JCR (Java™ Content Repository).
 
    Videons återgivningssökväg kan till exempel se ut ungefär så här:
@@ -154,11 +154,11 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 ## Hämta en video-URL för adaptiv strömning (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
-1. Bläddra nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** på sidan **[!UICONTROL Cloud Services]** och välj sedan **[!UICONTROL Show Configurations]**.
+1. På **[!UICONTROL Cloud Services]** sida, bläddra nedåt till **[!UICONTROL Dynamic Media Cloud Services]** rubrik, markera **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** markerar du namnet på konfigurationen som du vill använda.
-1. Gör följande på sidan **[!UICONTROL Dynamic Media Cloud Services Settings]**:
+1. På **[!UICONTROL Dynamic Media Cloud Services Settings]** gör du följande på sidan:
 
-   * Kopiera hela URL-sökvägen under **[!UICONTROL Video Service URL]**. Du behöver den kopierade URL-sökvägen senare i dessa steg. URL-sökvägen kan till exempel se ut ungefär så här:
+   * Under **[!UICONTROL Video Service URL]**, kopierar hela URL-sökvägen. Du behöver den kopierade URL-sökvägen senare i dessa steg. URL-sökvägen kan till exempel se ut ungefär så här:
 
    `https://gateway-na.assetsadobe.com/DMGateway/`
 
@@ -166,7 +166,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    * Under **[!UICONTROL Registration ID]** kopierar du det kundnamn som finns i den sista delen av ID:t. Du behöver det kopierade kundnamnet senare i dessa steg.
 
-      Om registrerings-ID till exempel är `87654321|demoCo` blir kundnamnet som du kopierar `demoCo`.
+      Om registrerings-ID till exempel var `87654321|demoCo`, det kundnamn du kopierar är `demoCo`.
 
 
 1. Kopiera respektive protokollväljare baserat på vilket videoleveransprotokoll du använder. Du behöver den kopierade protokollväljaren senare i dessa steg.
@@ -202,7 +202,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4`
 
-1. Fyll i URL:en genom att lägga till `.m3u8` i slutet av strängen. Om du till exempel lägger till `.m3u8` till strängen från det föregående steget, ser den fullständiga URL-sökvägen ut så här:
+1. Fyll i URL:en genom att lägga till `.m3u8` till strängens slut. Lägg till exempel `.m3u8` till strängen från det föregående steget visas den fullständiga URL-sökvägen enligt följande:
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
@@ -210,4 +210,4 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
-Se [HTTP2 Delivery of Content](http2faq.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
+Se [HTTP2-leverans av innehåll](http2faq.md) om du vill ha fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.

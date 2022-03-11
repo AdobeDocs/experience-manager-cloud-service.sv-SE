@@ -1,13 +1,13 @@
 ---
 title: Innehållsfragment – ta bort överväganden
 description: Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
-feature: Innehållsfragment
+feature: Content Fragments
 role: User
 exl-id: 69c08f2f-4d51-4aea-957e-ee81c4604377
 source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 10%
+source-wordcount: '470'
+ht-degree: 9%
 
 ---
 
@@ -23,19 +23,19 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 1. **Innehållsfragmentet som en enskild enhet.**
 
-   * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment -  **och ta bort ett helt fragment**.
-   * **Behörigheter**: Behörigheten Ta bort kan tilldelas via användar- och/eller grupphantering.  <!-- The [Delete](/help/sites-administering/security.md#actions) permission can be [assigned through User and/or Group Management](/help/sites-administering/security.md#managing-permissions). -->
+   * **Använd skiftläge**: En användare som behöver redigera/uppdatera ett innehållsfragment - **och ta bort ett helt fragment**.
+   * **Behörigheter**: Behörigheten Ta bort kan tilldelas via användar- och/eller grupphantering. <!-- The [Delete](/help/sites-administering/security.md#actions) permission can be [assigned through User and/or Group Management](/help/sites-administering/security.md#managing-permissions). -->
 
 2. **De flera underenheter som utgör ett innehållsfragment. till exempel variationer, undernoder.**
 
    Den grundläggande åtgärden i redigeraren för innehållsfragment kräver att sådana tillfälliga underelement kan tas bort. t.ex. vid manipulering av variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
-   * **Användningsfall**: En användare som behöver redigera/uppdatera ett innehållsfragment -  **utan att kunna ta bort ett helt fragment**.
-   * **Behörigheter**: Se  [Behörigheter krävs endast](#permissions-required-for-editor-functionality-only) för redigeringsfunktionen.
+   * **Använd skiftläge**: En användare som behöver redigera/uppdatera ett innehållsfragment - **utan tillstånd att ta bort ett helt fragment**.
+   * **Behörigheter**: Se [Behörigheter krävs endast för redigeringsfunktionen](#permissions-required-for-editor-functionality-only).
 
 >[!NOTE]
 >
->När en användare inte har någon borttagningsbehörighet fungerar redigeraren för innehållsfragment i *skrivskyddat*-läge. <!-- When a user does not have any [Delete](/help/sites-administering/security.md#actions) permissions, the Content Fragment editor operates in *read-only* mode. -->
+>När en användare inte har någon borttagningsbehörighet fungerar redigeraren för innehållsfragment i *skrivskyddad* läge. <!-- When a user does not have any [Delete](/help/sites-administering/security.md#actions) permissions, the Content Fragment editor operates in *read-only* mode. -->
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ t.ex. vid manipulering av variationer, även när du redigerar metadata eller ha
 >
 >De borttagningsbehörigheter som krävs för att redigera/uppdatera ett innehållsfragment ingår i borttagningsbehörigheten som tilldelats via användar- och/eller grupphantering. <!-- The delete permissions, required to edit/update a Content Fragment, are included in the Delete permission [assigned through User and/or Group Management](/help/sites-administering/security.md#managing-permissions). -->
 
-Behörigheterna som behövs för att redigera/uppdatera ett fragment måste tillämpas på antingen noden som innehåller innehållsfragmentet eller på en lämplig överordnad nod (på alla nivåer under `/content/dam`). När den tilldelas till en sådan överordnad nod tillämpas behörigheterna på alla noder i den grenen.
+Behörigheterna som behövs för att redigera/uppdatera ett fragment måste tillämpas på antingen noden som innehåller innehållsfragmentet eller en lämplig överordnad nod (på alla nivåer under `/content/dam`). När den tilldelas till en sådan överordnad nod tillämpas behörigheterna på alla noder i den grenen.
 
 En mapp som till exempel kommer att innehålla alla innehållsfragment, till exempel:
 
@@ -59,9 +59,9 @@ En mapp som till exempel kommer att innehålla alla innehållsfragment, till exe
 
 >[!CAUTION]
 >
->Det går också att ange behörigheter för `/content/dam` eftersom alla innehållsfragment lagras här.
+>Ange behörigheter för `/content/dam` är också möjligt eftersom alla innehållsfragment lagras här.
 >
->Den här åtgärden tillämpar dock samma borttagningsbehörigheter på *alla* andra resurstyper.
+>Den här åtgärden använder dock samma borttagningsbehörigheter för *alla* även andra tillgångstyper.
 
 Behörigheten som krävs för att en viss användare och/eller grupp ska kunna redigera/uppdatera ett innehållsfragment är:
 
@@ -73,13 +73,13 @@ Behörigheten som krävs för att en viss användare och/eller grupp ska kunna r
 
    * `jcr:addChildNodes`, `jcr:modifyProperties`
 
-* För noden `jcr:content`för alla innehållsfragment:
+* För `jcr:content`nod för alla innehållsfragment:
 
-   * `jcr:addChildNodes`,  `jcr:modifyProperties` och  `jcr:removeChildNodes`
+   * `jcr:addChildNodes`, `jcr:modifyProperties` och `jcr:removeChildNodes`
 
-* För alla noder under `jcr:content` i alla innehållsfragment:
+* För alla noder nedan `jcr:content` av alla innehållsfragment:
 
-   * `jcr:addChildNodes`,  `jcr:modifyProperties` och  `jcr:removeChildNodes`,  `jcr:removeNode`
+   * `jcr:addChildNodes`, `jcr:modifyProperties` och `jcr:removeChildNodes`, `jcr:removeNode`
 
 <!-- There is no CRXDE Lite -->
 

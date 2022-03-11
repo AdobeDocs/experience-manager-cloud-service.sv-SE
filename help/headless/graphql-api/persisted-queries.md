@@ -2,13 +2,13 @@
 title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
-source-git-commit: 0912cadeae13050c9cfc606d1c2b8f4236cd78ed
+exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 1%
 
 ---
-
 
 # Beständiga GraphQL-frågor {#persisted-queries-caching}
 

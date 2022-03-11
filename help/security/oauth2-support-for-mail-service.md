@@ -1,21 +1,21 @@
 ---
 title: OAuth2-stöd för e-posttjänsten
-description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager som Cloud Service
-source-git-commit: 67c4aabea838c1430e43f5ebaa8a52ec55362936
+description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
+exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
+source-git-commit: 4a5967f682d122d20528b1d904590fb82f438fa7
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 0%
 
 ---
 
-
 # OAuth2-stöd för e-posttjänsten {#oauth2-support-for-the-mail-service}
 
-AEM som Cloud Service erbjuder OAuth2-stöd för sin integrerade e-posttjänst, så att organisationer kan följa e-postkraven.
+AEM as a Cloud Service erbjuder OAuth2-stöd för sin integrerade e-posttjänst, så att organisationer kan följa e-postkraven.
 
-Du kan konfigurera OAuth för flera e-postleverantörer. Nedan visas steg-för-steg-instruktioner för hur du konfigurerar AEM e-posttjänst för autentisering via OAuth2 med Microsoft Office 365 Outlook. Andra leverantörer kan konfigureras på liknande sätt.
+Du kan konfigurera OAuth för flera e-postleverantörer. Nedan visas steg-för-steg-instruktioner för hur du konfigurerar AEM Mail Service för att autentisera via OAuth2 med Microsoft Office 365 Outlook. Andra leverantörer kan konfigureras på liknande sätt.
 
-Mer information om AEM som Cloud Service-e-posttjänst finns i [Skicka e-post](/help/implementing/developing/introduction/development-guidelines.md#sending-email).
+Mer information om AEM as a Cloud Service Mail Service finns i [Skickar e-post](/help/implementing/developing/introduction/development-guidelines.md#sending-email).
 
 ## Microsoft Outlook {#microsoft-outlook}
 
@@ -28,18 +28,18 @@ Mer information om AEM som Cloud Service-e-posttjänst finns i [Skicka e-post](/
 1. Fyll i informationen enligt dina krav och klicka sedan på **Registrera**
 1. Gå till den nya appen och välj **API-behörigheter**
 1. Gå till **Lägg till behörighet** - **Diagrambehörighet** - **Delegerade behörigheter**
-1. Välj behörigheterna nedan för din app och klicka sedan på **Lägg till behörighet**:
+1. Välj behörigheter nedan för din app och klicka sedan på **Lägg till behörighet**:
    * `SMTP.Send`
    * `Mail.Read`
    * `Mail.Send`
    * `openid`
    * `offline_access`
-1. Gå till **Autentisering** - **Lägg till en plattform** - **Webb** och lägg till följande URL:er i avsnittet **Omdirigerings-URL:er** - en med och en utan ett snedstreck:
+1. Gå till **Autentisering** - **Lägg till en plattform** - **Webb** och i **Omdirigerings-URL** lägger du till nedanstående URL:er - en med och en utan snedstreck:
    * `http://localhost/`
    * `http://localhost`
-1. Tryck på **Konfigurera** efter att du har lagt till varje URL och konfigurerat inställningarna enligt dina krav
-1. Gå sedan till **Certifikat och hemligheter**, klicka på **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk
-1. Tryck på **Översikt** i den vänstra rutan och kopiera värdena för **program-ID** och **katalog-ID** för senare bruk
+1. Tryck **Konfigurera** efter att du lagt till varje URL-adress och konfigurerat inställningarna enligt dina önskemål
+1. Nästa, gå till **Certifikat och hemligheter**, klicka på **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk
+1. Tryck **Översikt** i den vänstra rutan och kopiera värdena för **Program-ID (klient)** och **Katalog-ID (klientorganisation)** för senare användning
 
 För att komma tillbaka behöver du följande information för att konfigurera OAuth2 för e-posttjänsten på AEM sida:
 
@@ -55,7 +55,7 @@ Därefter måste du generera uppdateringstoken, som kommer att ingå i OSGi-konf
 
 Så här gör du:
 
-1. Öppna följande URL i webbläsaren när du har ersatt `clientID` och `tenantID` med de värden som är specifika för ditt konto: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize?client_id=<clientId>&response_type=code&redirect_uri=http://localhost&response_mode=query&scope=https%3A%2F%2Foutlook.office365.com%2FSMTP.Send%20EWS.AccessAsUser.All%20https%3A%2F%2Foutlook.office365.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office365.com%2FMail.Read%20https%3A%2F%2Foutlook.office365.com%2FMail.Send%20openid%20offline_access&state=12345`
+1. Öppna följande URL i webbläsaren när du har ersatt den `clientID` och `tenantID` med de värden som är specifika för ditt konto: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize?client_id=<clientId>&response_type=code&redirect_uri=http://localhost&response_mode=query&scope=https%3A%2F%2Foutlook.office365.com%2FSMTP.Send%20EWS.AccessAsUser.All%20https%3A%2F%2Foutlook.office365.com%2FSMTP.Send%20https%3A%2F%2Foutlook.office365.com%2FMail.Read%20https%3A%2F%2Foutlook.office365.com%2FMail.Send%20openid%20offline_access&state=12345`
 1. Tillåt behörighet när du tillfrågas
 1. URL:en kommer att omdirigeras till en ny plats som har följande format: `http://localhost/?code=<code>&state=12345&session_state=4f984c6b-cc1f-47b9-81b2-66522ea83f81#`
 1. Kopiera värdet för `<code>` i exemplet ovan
@@ -79,7 +79,7 @@ Så här gör du:
 
 Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera både accessToken och refreshToken med proceduren nedan:
 
-1. Generera accessToken med hjälp av den refreshToken som skapades i föregående procedur. Du kan uppnå detta med följande uttryck och ersätta värdena för `<client_id>`,`<client_secret>` och `<refreshToken>`:
+1. Generera accessToken med hjälp av den refreshToken som skapades i föregående procedur. Du kan uppnå detta med följande kurva och ersätta värdena för `<client_id>`,`<client_secret>` och `<refreshToken>`:
 
    ```
    curl --location --request POST 'https://login.microsoftonline.com/<tenetId>/oauth2/v2.0/token' \
@@ -99,7 +99,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
 >
 > Du kan hämta Postman API-samlingen från [den här platsen](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-### Integrering med AEM som Cloud Service {#integration-with-aem-as-a-cloud-service}
+### Integrering med AEM as a Cloud Service {#integration-with-aem-as-a-cloud-service}
 
 1. Skapa en OSGI-egenskapsfil med namnet `com.day.cq.mailer.oauth.impl.OAuthConfigurationProviderImpl.cfg.json` under `/apps/<my-project>/osgiconfig/config` med följande syntax:
 
@@ -144,9 +144,9 @@ under
    }
    ```
 
-1. Konfigurationsvärdet `smtp.host` är `smtp.office365.com` för Outlook
-1. Vid körning skickar du hemligheterna `refreshToken values` och `clientSecret` med Cloud Manager-variablernas API enligt beskrivningen [här](/help/implementing/deploying/configuring-osgi.md#setting-values-via-api). Värdena för variablerna `SECRET_SMTP_OAUTH_REFRESH_TOKEN` och `SECRET_SMTP_OAUTH_CLIENT_SECRET` ska definieras.
+1. För Outlook gäller följande `smtp.host` konfigurationsvärdet är `smtp.office365.com`
+1. Vid körning skickar du `refreshToken values` och `clientSecret` hemligheter med Cloud Manager-variablernas API enligt beskrivningen [här](/help/implementing/deploying/configuring-osgi.md#setting-values-via-api). Värdena för variablerna `SECRET_SMTP_OAUTH_REFRESH_TOKEN`  och `SECRET_SMTP_OAUTH_CLIENT_SECRET` ska definieras.
 
 ### Felsökning {#troubleshooting}
 
-Om e-posttjänsten inte fungerar som den ska måste du i de flesta fall generera om `refreshToken` enligt beskrivningen ovan och skicka det nya värdet via Cloud Manager API. Det kommer att ta några minuter innan det nya värdet distribueras.
+Om e-posttjänsten inte fungerar som den ska måste du i de flesta fall generera om `refreshToken` så som beskrivs ovan, skicka det nya värdet via Cloud Manager API. Det kommer att ta några minuter innan det nya värdet distribueras.

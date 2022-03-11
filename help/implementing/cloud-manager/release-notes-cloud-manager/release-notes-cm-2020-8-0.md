@@ -1,38 +1,38 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.8.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2020.8.0
-feature: Versionsinformation
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2020.8.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2020.8.0
+feature: Release Information
 exl-id: 70674e16-f9ba-4777-98fe-34161e90a481
 source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2020.8.0 {#release-notes}
+# Versionsinformation om Cloud Manager i Adobe Experience Manager as a Cloud Service 2020.8.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2020.8.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2020.8.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2020.8.0 är 6 augusti 2020.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2020.8.0 är 6 augusti 2020.
 
 ## Nyheter {#whats-new-cloud-manager}
 
-* Content Audit är en funktion som är aktiverad i produktionsstegen för Cloud Manager Sites. Konfigurationen av produktionspipeline för program med platser innehåller nu en tredje flik med namnet **Content Audit**. När en produktionsprocess körs inkluderas ett nytt Content Audit-steg i produktionsflödet efter anpassad funktionstestning som utvärderar webbplatsen mot ett antal dimensioner, inklusive prestanda, SEO (sökmotoroptimering), tillgänglighet, bästa praxis och PWA (Progressive Web App).
+* Content Audit är en funktion som är aktiverad i produktionsstegen för Cloud Manager Sites. Konfigurationen av produktionspipeline för program med Sites innehåller nu en tredje flik med namnet **Granskning av innehåll**. När en produktionsprocess körs inkluderas ett nytt Content Audit-steg i produktionsflödet efter anpassad funktionstestning som utvärderar webbplatsen mot ett antal dimensioner, inklusive prestanda, SEO (sökmotoroptimering), tillgänglighet, bästa praxis och PWA (Progressive Web App).
 
 
    >[!NOTE]
    >Namnet på Content Audit har ändrats till Experience Audit.
 
-   Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-testing.md).
+   Se [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
 
 * Nyligen skapade miljöer i Assets-program konfigureras nu automatiskt med Smart Content Services.
 
-* Vilolägda miljöer kan tas bort från viloläget på sidan **Översikt** i Cloud Manager.
+* Vilolägen miljö kan tas bort från viloläget via Cloud Managers **Översikt** sida.
 
-* Möjlighet att utföra Experience Checks på sidor med Google Lighthuse som bas. Som en del av molnhanterarens pipeline kan upp till 25 sidor kontrolleras och valideras mot upplevelsenyckeltal, och poängen visas i användargränssnittet för molnhanteraren.
+* Möjlighet att utföra Experience Checks på sidor som drivs av Google Lighthuse. Som en del av molnhanterarens pipeline kan upp till 25 sidor kontrolleras och valideras mot upplevelsenyckeltal, och poängen visas i användargränssnittet för molnhanteraren.
 
 ### Felkorrigeringar {#bug-fixes-cm}
 
@@ -42,7 +42,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.8.0 är 6 augusti 2
 
 * I vissa fall kunde slutförda pipeline-körningar inte registreras som slutförda, vilket hindrade nya körningar av pipeline.
 
-* Pipeline-körningar får ibland *fastna* på grund av interna kommunikationsproblem.
+* Pipeline-exekveringar får ibland *fast* på grund av interna kommunikationsproblem.
 
 * När en ny organisation etablerades fick vissa användare med andra administrativa roller än systemadministratörer felaktigt åtkomst till Cloud Manager.
 
@@ -52,7 +52,7 @@ Releasedatum för Cloud Manager i AEM som Cloud Service 2020.8.0 är 6 augusti 2
 
 * Användargränssnittet tillät felaktigt försök att utföra åtgärder i en miljö medan det togs bort.
 
-* Det fanns ett färgmatchningsfel på sidan **Översikt** i Cloud Manager.
+* Ett färgmatchningsfel uppstod i Cloud Managers **Översikt** sida.
 
 ### Kända fel {#known-issues-cm}
 

@@ -6,7 +6,7 @@ role: Admin
 exl-id: 733e9411-50a7-42a5-a5a8-4629f6153f10
 source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '923'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Förutom standardfunktionerna kan anpassade konflikthanterare läggas till för 
 
 ### Exempelscenario {#example-scenario}
 
-I följande avsnitt använder vi exemplet med en ny sida `b`, som skapats både i planbilden och i Live Copy-grenen (skapas manuellt), för att illustrera de olika konfliktlösningsmetoderna:
+I följande avsnitt använder vi exemplet på en ny sida `b`, som har skapats både i utkast och i Live Copy-grenen (skapas manuellt), för att illustrera olika metoder för konfliktlösning:
 
 * skiss: `/b`
 
@@ -41,22 +41,22 @@ I följande avsnitt använder vi exemplet med en ny sida `b`, som skapats både 
 
    En sida som skapats manuellt i Live Copy-grenen med en underordnad sida, `lc-level-1`
 
-   * Aktiverad vid publicering som `/b`, tillsammans med den underordnade sidan
+   * Aktiverat vid publicering som `/b`tillsammans med den underordnade sidan
 
 #### Före utrullning {#before-rollout}
 
 |  | Utskrift före utrullning | Live Copy Before Rolling | Publicera före utrullning |
 |---|---|---|---|
 | Värde | `b` | `b` | `b` |
-| Kommentar | Skapat i en designgren, klar för utrullning | Manuellt skapat i Live Copy-grenen | Innehåller innehållet på sidan `b` som skapades manuellt i Live Copy-grenen |
+| Kommentar | Skapat i en designgren, klar för utrullning | Manuellt skapat i Live Copy-grenen | Innehåller sidans innehåll `b` som skapades manuellt i Live Copy-grenen |
 | Värde | `/bp-level-1` | `/lc-level-1` | `/lc-level-1` |
-| Kommentar |  | Manuellt skapat i Live Copy-grenen | innehåller innehållet på sidan `child-level-1` som skapades manuellt i Live Copy-grenen |
+| Kommentar |  | Manuellt skapat i Live Copy-grenen | innehåller sidans innehåll `child-level-1` som skapades manuellt i Live Copy-grenen |
 
 ## Utrullningshanteraren och konflikthantering {#rollout-manager-and-conflict-handling}
 
 Med utrullningshanteraren kan du aktivera eller inaktivera konflikthantering.
 
-Detta görs med [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md) av **Day CQ WCM Rollout Manager**. Ange värdet **Hantera konflikt med manuellt skapade sidor** ( `rolloutmgr.conflicthandling.enabled`) till true om rollout-hanteraren ska hantera konflikter från en sida som skapats i Live Copy med ett namn som finns i ritningen.
+Detta görs med [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md) av **Day CQ WCM Rollout Manager**. Ange värdet **Hantera konflikt med manuellt skapade sidor** ( `rolloutmgr.conflicthandling.enabled`) till true om rullningshanteraren ska hantera konflikter från en sida som skapats i Live Copy med ett namn som finns i ritningen.
 
 AEM har [fördefinierat beteende när konflikthantering har inaktiverats.](#behavior-when-conflict-handling-deactivated)
 
@@ -66,7 +66,7 @@ AEM använder konflikthanterare för att lösa eventuella sidkonflikter som upps
 
 AEM tillhandahåller:
 
-* [standardkonflikthanteraren](#default-conflict-handler):
+* The [standardkonflikthanterare](#default-conflict-handler):
    * `ResourceNameRolloutConflictHandler`
 * Möjligheten att implementera en [anpassad hanterare](#customized-handlers)
 * Den rangordningsmekanism som gör att du kan ange prioriteten för varje enskild hanterare
@@ -77,9 +77,9 @@ AEM tillhandahåller:
 Standardkonflikthanteraren är `ResourceNameRolloutConflictHandler`
 
 * Med den här hanteraren får plantryckssidan företräde.
-* Tjänstrankningen för den här hanteraren är låg, dvs. under standardvärdet för egenskapen `service.ranking`, eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
+* Tjänstrankningen för hanteraren är låg, dvs. under standardvärdet för `service.ranking` -egenskapen, eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
 
-Den här konflikthanteraren ger prioritet åt ritningen. Exempelvis flyttas Live Copy-sidan `/b` inom Live Copy-grenen till `/b_msm_moved`.
+Den här konflikthanteraren ger prioritet åt ritningen. Till exempel sidan Live Copy `/b` flyttas inom Live Copy-grenen till `/b_msm_moved`.
 
 * Live Copy: `/b`
 
@@ -89,7 +89,7 @@ Den här konflikthanteraren ger prioritet åt ritningen. Exempelvis flyttas Live
 
 * Blå: `/b`
 
-   Går ut på sidan Live Copy `/b`.
+   Är utrullad till sidan Live Copy `/b`.
 
    * `bp-level-1` i till Live Copy.
 
@@ -98,7 +98,7 @@ Den här konflikthanteraren ger prioritet åt ritningen. Exempelvis flyttas Live
 |  | Utskrift efter utrullning | Live Copy After Rollout | Live Copy After Rollout | Publicera efter utrullning |
 |---|---|---|---|---|
 | Värde | `b` | `b` | `b_msm_moved` | `b` |
-| Kommentar |  | Innehåller innehållet på ritningssidan `b` som introducerades | Har innehållet på sidan `b` som skapades manuellt i Live Copy-grenen | Ingen ändring, innehåller innehållet på originalsidan `b` som skapades manuellt i Live Copy-grenen och nu kallas `b_msm_moved` |
+| Kommentar |  | Innehåller innehållet på ritningssidan `b` som lanserades | Har sidans innehåll `b` som skapades manuellt i Live Copy-grenen | Ingen ändring, innehåller innehållet på originalsidan `b` som skapades manuellt i Live Copy-grenen och nu anropas `b_msm_moved` |
 | Värde | `/bp-level-1` | `/bp-level-1` | `/lc-level-1` | `/lc-level-1` |
 | Kommentar |  |  | Ingen ändring | Ingen ändring |
 
@@ -111,19 +111,19 @@ Anpassade konflikthanterare kan:
 * Namnge efter behov.
 * Utvecklas/konfigureras enligt dina krav.
    * Du kan t.ex. utveckla en hanterare så att sidan Live-kopia har prioritet.
-* Kan konfigureras med [OSGi-konfigurationen](/help/implementing/deploying/configuring-osgi.md). Särskilt gäller följande:
-   * **Service** Rankingdefinierar den ordning som hör till andra konflikthanterare (  `service.ranking`).
+* Kan konfigureras med [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md). Särskilt gäller följande:
+   * **Servicerangordning** definierar ordningen som hör till andra konflikthanterare ( `service.ranking`).
       * Standardvärdet är `0`.
 
 ### Beteende när Konflikthantering är inaktiverat {#behavior-when-conflict-handling-deactivated}
 
-Om du manuellt [avaktiverar konflikthantering utför](#rollout-manager-and-conflict-handling) AEM ingen åtgärd på sidor som är i konflikt. Sidor som inte är i konflikt rullas ut som förväntat.
+Om du manuellt [inaktivera konflikthantering,](#rollout-manager-and-conflict-handling) AEM utför ingen åtgärd på sidor som är i konflikt. Sidor som inte är i konflikt rullas ut som förväntat.
 
 >[!CAUTION]
 >
 >När konflikthantering är inaktiverat ger AEM inga indikationer på att konflikter ignoreras. Eftersom detta beteende i sådana fall måste konfigureras explicit antas det vara det önskade beteendet.
 
-I det här fallet har Live Copy företräde. Den blå sidan `/b` kopieras inte och Live Copy-sidan `/b` lämnas orörd.
+I det här fallet har Live Copy företräde. Planeringssidan `/b` kopieras inte och Live Copy-sidan `/b` lämnas orörd.
 
 * Blå: `/b`
 
@@ -138,10 +138,10 @@ I det här fallet har Live Copy företräde. Den blå sidan `/b` kopieras inte o
 |  | Utskrift efter utrullning | Live Copy After Rollout | Publicera efter utrullning |
 |---|---|---|---|
 | Värde | `b` | `b` | `b` |
-| Kommentar |  | Har innehållet på sidan `b` som skapades manuellt i Live Copy-grenen | Ingen ändring, innehåller innehållet på sidan `b` som skapades manuellt i Live Copy-grenen |
+| Kommentar |  | Sidans innehåll ändras inte `b` som skapades manuellt i Live Copy-grenen | Ingen ändring, innehåller sidans innehåll `b` som skapades manuellt i Live Copy-grenen |
 | Värde | `/bp-level-1` | `/lc-level-1` | `/lc-level-1` |
 | Kommentar |  | Ingen ändring | Ingen ändring |
 
 ### Servicerangordning {#service-rankings}
 
-Tjänstrankningen [OSGi](https://www.osgi.org/) kan användas för att definiera prioriteten för enskilda konflikthanterare.
+The [OSGi](https://www.osgi.org/) rankning kan användas för att definiera prioriteten för enskilda konflikthanterare.

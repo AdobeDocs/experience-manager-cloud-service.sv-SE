@@ -16,24 +16,24 @@ ht-degree: 1%
 
 Mer information om typiska konfigurationer av RTE finns i [konfigurera RTE](rich-text-editor.md) och [konfigurera RTE-plugin-program för specifika funktioner](configure-rich-text-editor-plug-ins.md).
 
-Använd RTE-pluginkonfigurationen för att konfigurera och anpassa tillgänglighetsrelaterade funktioner. Använd till exempel `paraformat` om du vill lägga till semantiska element på extra blocknivå, inklusive att utöka antalet rubriknivåer som stöds utöver de grundläggande `H1`, `H2` och `H3` som anges som standard. RTF-redigeringen är möjlig med många komponenter från redigeringsgränssnittet. De vanligaste komponenterna är text, bilder, nedladdningar och så vidare.
+Använd RTE-pluginkonfigurationen för att konfigurera och anpassa tillgänglighetsrelaterade funktioner. Använd till exempel `paraformat` lägga till semantiska element på extra blocknivå, inklusive utökning av antalet rubriknivåer som stöds utanför basnivån `H1`, `H2` och `H3` anges som standard. RTF-redigeringen är möjlig med många komponenter från redigeringsgränssnittet. De vanligaste komponenterna är text, bilder, nedladdningar och så vidare.
 
-RTE-funktionen kan göras tillgänglig i många komponenter. Den primära komponenten är `Text`-komponenten.
+RTE-funktionen kan göras tillgänglig i många komponenter. Den primära komponenten är `Text` -komponenten.
 
-För `Text`-komponenten i [!DNL Experience Manager] visar följande skärmbild RTF-redigeraren med ett antal plugin-program aktiverade, inklusive `paraformat`:
+För `Text` komponent i [!DNL Experience Manager]visas textredigeraren med ett stort antal plugin-program aktiverade, inklusive `paraformat`:
 
 ![Komponenten RTE-text i helskärmsläge](assets/rte-toolbar-full-screen-mode.png)
 
 ## Konfigurera plug-in-funktionerna {#configuring-the-plugin-features}
 
-Anvisningar om hur du konfigurerar RTE finns i [konfigurera RTF-redigeraren](rich-text-editor.md)-sidan. Artikeln omfattar
+Anvisningar om hur du konfigurerar RTE finns i [konfigurera RTF-redigeraren](rich-text-editor.md) sida. Artikeln omfattar
 
 * [Plugin-program och deras funktioner](rich-text-editor.md#aboutplugins)
 * [Konfigurationsplatser](rich-text-editor.md#understand-the-configuration-paths-and-locations)
 * [Aktivera ett plugin-program och konfigurera egenskapen features](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 * [Konfigurera andra funktioner i RTE](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins)
 
-Om du vill aktivera några eller alla funktioner för ett plugin-program konfigurerar du plugin-programmet i lämpligt underfack för `rtePlugins` i CRXDE Lite.
+Om du vill aktivera några eller alla funktioner för ett plugin-program konfigurerar du det i lämplig `rtePlugins` underkontor i CRXDE Lite.
 
 ![CRXDE Lite med exempelplugin-programmet](assets/example-rteplugin-crxde-lite.png)
 
@@ -41,20 +41,20 @@ Om du vill aktivera några eller alla funktioner för ett plugin-program konfigu
 
 Nya semantiska blockformat är tillgängliga för markering.
 
-1. Beroende på vilken RTE du använder kan du bestämma och navigera till [konfigurationsplatsen](rich-text-editor.md#understand-the-configuration-paths-and-locations).
-1. [Aktivera ](rich-text-editor.md) urvalsfältet för stycken genom  [att aktivera plugin-programmet](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
+1. Beroende på din RTE kan du bestämma och navigera till [konfigurationsplats](rich-text-editor.md#understand-the-configuration-paths-and-locations).
+1. [Aktivera styckemarkeringsfältet](rich-text-editor.md) av [aktivera plugin-programmet](rich-text-editor.md#enable-rte-functionalities-by-activating-plug-ins).
 1. [Ange de format som du vill ha i styckemarkeringsfältet](rich-text-editor.md).
 1. Styckeformaten är sedan tillgängliga för innehållsförfattaren från markeringsfälten i textredigeraren.
 
-Med strukturella element som är tillgängliga i textredigeraren via styckeformatalternativen är [!DNL Experience Manager] en bra grund för utveckling av hjälpmedelsanpassat innehåll. Innehållsförfattare kan inte använda textredigeraren för att formatera teckenstorlek, färger eller andra relaterade attribut, vilket förhindrar att textbunden formatering skapas. I stället kan författarna välja lämpliga strukturella element, t.ex. rubriker, och använda globala format som valts med alternativet Format för att säkerställa ren markering och fler alternativ för användare som bläddrar med egna formatmallar och korrekt strukturerat innehåll.
+Med strukturella element tillgängliga i textredigeraren via styckeformatalternativen, [!DNL Experience Manager] utgör en bra grund för utveckling av tillgängligt innehåll. Innehållsförfattare kan inte använda textredigeraren för att formatera teckenstorlek, färger eller andra relaterade attribut, vilket förhindrar att textbunden formatering skapas. I stället kan författarna välja lämpliga strukturella element, t.ex. rubriker, och använda globala format som valts med alternativet Format för att säkerställa ren markering och fler alternativ för användare som bläddrar med egna formatmallar och korrekt strukturerat innehåll.
 
 ## Användning av funktionen Källredigering {#use-of-the-source-edit-feature}
 
-I vissa fall måste innehållsförfattare granska och justera HTML-källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva mer kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med alternativet [källredigering](rich-text-editor.md#aboutplugins) i textredigeringsprogrammet. Du kan ange funktionen [`sourceedit` i `misctools`-plugin-programmet](rich-text-editor.md#aboutplugins).
+I vissa fall måste innehållsförfattare granska och justera HTML källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva mer kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med [källredigering](rich-text-editor.md#aboutplugins) RTE-alternativ. Du kan ange [`sourceedit` på `misctools` plugin-program](rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >
->Använd funktionen `sourceedit` noggrant. Skrivfel och funktioner som inte stöds kan orsaka problem.
+>Använd `sourceedit` noggrant. Skrivfel och funktioner som inte stöds kan orsaka problem.
 
 <!--
 TBD ENGREVIEW: Is this only applicable to Classic UI? 
@@ -148,5 +148,5 @@ In a `Table`, set the attribute to the DOM element or or remove it from the DOM 
 >[!MORELIKETHIS]
 >
 >* [En snabbguide till WCAG-standarder](/help/compliance/accessibility/quick-guide-wcag.md)
-* [Skapa tillgängligt innehåll i Experience Manager](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
+>* [Skapa tillgängligt innehåll i Experience Manager](/help/sites-cloud/authoring/fundamentals/accessible-content.md)
 

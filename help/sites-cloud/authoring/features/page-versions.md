@@ -1,14 +1,13 @@
 ---
 title: Arbeta med sidversioner
 description: Skapa, jämföra och återställa versioner av en sida
-translation-type: tm+mt
-source-git-commit: 83c6301cd804ea1bb41204cf68d9a8de0b373678
+exl-id: 33d8e43c-594d-4bba-9631-b2c42a1e910f
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 4%
 
 ---
-
 
 # Arbeta med sidversioner {#working-with-page-versions}
 
@@ -28,20 +27,20 @@ Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med
 
 Du kan skapa en version av resursen från:
 
-* [Tidslinjen](#creating-a-new-version-timeline)
-* Alternativet [Skapa](#creating-a-new-version-create-with-a-selected-resource) (när en resurs har valts)
+* The [Tidslinjespår](#creating-a-new-version-timeline)
+* The [Skapa](#creating-a-new-version-create-with-a-selected-resource) alternativ (när en resurs har valts)
 
-### Skapar en ny version - Tidslinje {#creating-a-new-version-timeline}
+### Skapa en ny version - Tidslinje {#creating-a-new-version-timeline}
 
 1. Navigera till sidan som du vill skapa en version för.
 1. Markera sidan i [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
-1. Öppna **tidslinjen**.
+1. Öppna **Tidslinje** järnväg.
 1. Klicka/tryck på ellipsen i kommentarfältet för att visa alternativen:
 
    ![Versioner i tidslinjen](/help/sites-cloud/authoring/assets/versions-timeline-rail.png)
 
 1. Välj **Spara som version**.
-1. Ange en **etikett** och **Kommentar** om det behövs.
+1. Ange **Etikett** och **Kommentar** vid behov.
 
    ![Lägg till etikett för en version](/help/sites-cloud/authoring/assets/versions-add-label.png)
 
@@ -53,8 +52,8 @@ Du kan skapa en version av resursen från:
 
 1. Navigera till sidan som du vill skapa en version för.
 1. Markera sidan i [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
-1. Välj alternativet **Skapa** i verktygsfältet.
-1. Samma dialogruta öppnas. Du kan ange en **etikett** och en **kommentar** om det behövs.
+1. Välj **Skapa** i verktygsfältet.
+1. Samma dialogruta öppnas. Du kan ange en **Etikett** och **Kommentar** vid behov.
 1. Bekräfta den nya versionen med **Skapa**.
 
 Tidslinjen öppnas och informationen uppdateras för att ange den nya versionen.
@@ -63,11 +62,11 @@ Tidslinjen öppnas och informationen uppdateras för att ange den nya versionen.
 
 När du har skapat en version av sidan finns det olika metoder för att återställa en tidigare version:
 
-* alternativet **Återställ till denna version** från [tidslinjen](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)
+* den **Återgå till den här versionen** från [Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) järnväg
 
    Återskapa en tidigare version av en markerad sida.
 
-* **Återställ**-alternativen i det övre [verktygsfältet Åtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)
+* den **Återställ** från början [åtgärdsverktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)
 
    * **Återställ version**
 
@@ -90,9 +89,9 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 >1. De genererade etiketterna och nodnamnen blir nu 1.0.0, 1.0.1, 1.0.2 osv.
 
 
-### Återgå till version {#revert-to-a-version}
+### Återgå till en version {#revert-to-a-version}
 
-Om du vill **återställa** den markerade sidan till en tidigare version:
+Till **Återställ** den markerade sidan till en tidigare version:
 
 1. Navigera till sidan som du vill återställa till en tidigare version.
 1. Markera sidan i [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
@@ -101,15 +100,15 @@ Om du vill **återställa** den markerade sidan till en tidigare version:
 
    ![Återgå till den här versionen](/help/sites-cloud/authoring/assets/versions-revert.png)
 
-1. Välj **Återställ till denna version**. Den valda versionen återställs och informationen på tidslinjen uppdateras.
+1. Välj **Återgå till den här versionen**. Den valda versionen återställs och informationen på tidslinjen uppdateras.
 
 ### Återställ version {#restore-version}
 
 Denna metod kan användas för att återställa versioner av angivna sidor i den aktuella mappen; Detta kan även omfatta återställning av sidor som tidigare har tagits bort:
 
-1. Navigera till och [markera](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) den obligatoriska mappen.
+1. Navigera till och [välj](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources), den obligatoriska mappen.
 
-1. Välj **Återställ** och sedan **Återställ version** i det övre verktygsfältet för [åtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar).
+1. Välj **Återställ** sedan **Återställ version** uppifrån [åtgärdsverktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar).
 
    >[!NOTE]
    >
@@ -118,13 +117,13 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
    >* eller ingen av sidorna i mappen har versioner,
 
    >
-   >Då är visningen tom eftersom det inte finns några tillämpliga versioner.
+   >Sedan är visningen tom eftersom det inte finns några tillämpliga versioner.
 
 1. De tillgängliga versionerna visas:
 
    ![Återställ version - Lista över alla sidor i mappen](/help/sites-cloud/authoring/assets/versions-restore-version-01.png)
 
-1. Använd listruteväljaren under **ÅTERSTÄLL TILL VERSION** för att välja önskad version för en viss sida.
+1. För en viss sida använder du listruteväljaren under **ÅTERSTÄLL TILL VERSION** för att välja önskad version för den sidan.
 
    ![Återställ version - Välj version](/help/sites-cloud/authoring/assets/versions-restore-version-02.png)
 
@@ -132,7 +131,7 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
 
    ![Återställ version - Välj sida](/help/sites-cloud/authoring/assets/versions-restore-version-03.png)
 
-1. Välj **Återställ** för den valda versionen av den valda sidan som ska återställas som den aktuella versionen.
+1. Välj **Återställ** för den valda versionen av den valda sidan, som ska återställas som den aktuella versionen.
 
 >[!NOTE]
 >
@@ -142,23 +141,23 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
 
 Den här metoden kan användas för att återställa en version av ett träd vid ett angivet datum och en viss tidpunkt. detta kan omfatta sidor som tidigare har tagits bort:
 
-1. Navigera till och [markera](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources) den obligatoriska mappen.
+1. Navigera till och [välj](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources), den obligatoriska mappen.
 
-1. Välj **Återställ** och **Återställ träd** i det övre verktygsfältet för [åtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar). Trädets senaste version visas:
+1. Välj **Återställ** sedan **Återställ träd** uppifrån [åtgärdsverktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar). Trädets senaste version visas:
 
    ![Återställ träd](/help/sites-cloud/authoring/assets/versions-restore-tree-01.png)
 
-1. Använd datum- och tidsväljaren på **Senaste versioner på Date** för att välja en annan version av trädet - den som ska återställas.
+1. Använd datum- och tidsväljaren vid **Senaste versioner på datum** om du vill välja en annan version av trädet - den som ska återställas.
 
-1. Ange flaggan **Bevarade icke-versionshanterade sidor** efter behov:
+1. Ange flaggan **Bevarade sidor som inte är versionshanterade** efter behov:
 
    * Om den är aktiv (markerad) bevaras alla sidor som inte är versionshanterade och påverkas inte av återställningen.
 
    * Om alternativet är inaktivt (omarkerat) tas alla sidor som inte är versionshanterade bort eftersom de inte fanns i versionsträdet.
 
-1. Välj **Återställ** för den valda versionen av trädet som ska återställas som den *aktuella* versionen.
+1. Välj **Återställ** för den valda versionen av trädet som ska återställas som *aktuell* version.
 
-## Förhandsgranska version {#previewing-a-version}
+## Förhandsgranska en version {#previewing-a-version}
 
 Du kan förhandsgranska en viss version:
 
@@ -175,7 +174,7 @@ Du kan förhandsgranska en viss version:
    >
    >Om en sida har flyttats kan du inte längre förhandsgranska versioner som gjorts före flyttningen.
    >
-   >Om du får problem med en förhandsgranskning kan du kontrollera [tidslinjen](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
+   >Om du får problem med en förhandsgranskning bör du kontrollera [Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) för att se om sidan har flyttats.
 
 ## Jämföra en version med den aktuella sidan {#comparing-a-version-with-current-page}
 
@@ -188,11 +187,11 @@ Så här jämför du en tidigare version med den aktuella sidan:
 
    ![Jämför versioner](/help/sites-cloud/authoring/assets/versions-revert.png)
 
-1. Välj **Jämför med aktuell**. Skillnaden mellan [sidorna](/help/sites-cloud/authoring/features/page-diff.md) öppnas och visas.
+1. Välj **Jämför med aktuell**. The [sidskillnader](/help/sites-cloud/authoring/features/page-diff.md) öppnar och visar skillnaderna.
 
 ## Timewarp {#timewarp}
 
-Timewarp är en funktion som är utformad för att simulera *publicerat*-läge för en sida vid en viss tidpunkt.
+Timewarp är en funktion som simulerar *publicerad* en sidas status vid en viss tidpunkt tidigare.
 
 >[!NOTE]
 >
@@ -203,15 +202,15 @@ Eftersom framtagning av innehåll är en pågående och samarbetsorienterad proc
 Så här gör du:
 
 * Systemet söker efter den sidversion som var aktiv vid den valda tidpunkten.
-* Det innebär att den visade versionen skapades/aktiverades *före* den tidpunkt som valdes i Timewarp.
+* Detta innebär att den visade versionen skapades/aktiverades *före* den tidpunkt som valts i Timewarp.
 * När du navigerar till en sida som har tagits bort återges den också, så länge som de gamla versionerna av sidan fortfarande är tillgängliga i databasen.
 * Om ingen publicerad version hittas återgår Timewarp till sidans aktuella status i redigeringsmiljön (detta för att förhindra ett fel/404-sida, vilket skulle förhindra bläddring).
 
 ### Använda Timewarp {#using-timewarp}
 
-Timewarp är ett [läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) för sidredigeraren. Du startar det genom att helt enkelt växla det på samma sätt som andra lägen.
+Timewarp är en [läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) för sidredigeraren. Du startar det genom att helt enkelt växla det på samma sätt som andra lägen.
 
-1. Starta redigeraren för sidan där du vill starta Timewarp och välj sedan **Timewarp** i lägesvalet.
+1. Starta redigeraren för sidan där du vill starta Timewarp och välj sedan **Timewarp** i lägesmarkeringen.
 
    ![Timewarp, läge](/help/sites-cloud/authoring/assets/versions-timewarp-mode.png)
 
@@ -227,11 +226,11 @@ Timewarp är ett [läge](/help/sites-cloud/authoring/fundamentals/environment-to
 
 Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i den kontinuerliga redigeringen av innehåll i AEM är detta dock inte alltid möjligt. Dessa begränsningar bör beaktas när du använder Timewarp.
 
-* **Timewarp fungerar baserat på publicerade sidor**  - Timewarp fungerar bara helt om du tidigare har publicerat sidan. I annat fall visas den aktuella sidan i författarmiljön.
-* **Vid tidsförvrängning används sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen kommer den att återges korrekt om gamla versioner av sidan fortfarande är tillgängliga i databasen.
+* **Timewarp fungerar baserat på publicerade sidor** - Timewarp fungerar bara helt om du tidigare har publicerat sidan. I annat fall visas den aktuella sidan i författarmiljön.
+* **Timewarp använder sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen kommer den att återges korrekt om det fortfarande finns äldre versioner av sidan i databasen.
 * **Borttagna versioner påverkar Timewarp** - Om versioner tas bort från databasen kan inte Timewarp visa rätt vy.
-* **Timewarp är skrivskyddat**  - Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [restore](#revert-to-a-version).
-* **Timewarp baseras bara på sidinnehåll**  - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats, skiljer sig vyn från den ursprungliga vyn eftersom objekten inte har versionsindelats i databasen.
+* **Timewarp är skrivskyddat** - Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [återställ](#revert-to-a-version).
+* **Timewarp baseras bara på sidinnehåll** - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats, skiljer sig vyn från den ursprungliga, eftersom objekten inte versionsindelas i databasen.
 
 >[!CAUTION]
 >

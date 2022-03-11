@@ -1,7 +1,8 @@
 ---
 title: Översikt över Content Transfer Tool
 description: Översikt över Content Transfer Tool
-source-git-commit: a6d225943c5d23ebd960fda0b0912a81f1f80014
+exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 58%
@@ -58,4 +59,3 @@ För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet
 ## What&#39;s Next {#whats-next}
 
 När du har lärt dig om verktyget Innehållsöverföring och dess översikt som beskriver det här verktyget kan användas för att flytta befintligt innehåll från en AEM (lokalt eller AMS) till målförekomsten i AEM Cloud Service måste du granska [Krav för verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en).
-

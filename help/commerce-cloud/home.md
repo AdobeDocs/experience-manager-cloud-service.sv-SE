@@ -1,12 +1,12 @@
 ---
 title: AEM innehåll och handel
-description: AEM Content and Commerce self-help resources and documentation links
+description: AEM självhjälp och dokumentationslänkar för innehåll och handel
 landing-page-description: Lär dig hur du använder och administrerar Experience Manager Content and Commerce as a Cloud Service.
 exl-id: 7f7ece35-f78b-4c66-8a0b-38d248430d85
 source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '357'
+ht-degree: 54%
 
 ---
 
@@ -18,17 +18,17 @@ På den här sidan visas självhjälpsresurser AEM innehåll och handel.
 >
 >AEM innehåll och handel med AEM 6.5 och klassisk CIF finns på [AEM 6.5 Innehåll och handel](https://experienceleague.adobe.com/docs/experience-manager-65/commerce/home.html).
 
-## Key Content and Commerce Articles {#key-articles}
+## Viktiga artiklar om innehåll och handel {#key-articles}
 
-* [Introduction of AEM Content and Commerce](introduction.md)
+* [Introduktion AEM innehåll och handel](introduction.md)
 * [Komma igång med AEM innehåll och handel](/help/commerce-cloud/getting-started.md)
-* [Developing AEM Content and Commerce](/help/commerce-cloud/develop.md)
+* [Utveckla AEM innehåll och handel](/help/commerce-cloud/develop.md)
 
 ## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
-| [Översikt](/help/overview/home.md) | This guide provides an overview of Experience Manager as a Cloud service, including an introduction, terminology, architecture, etc. |
+| [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över Experience Manager som en molntjänst, inklusive en introduktion, terminologi, arkitektur osv. |
 | [Versionsinformation](/help/release-notes/home.md) | Den här guiden innehåller viktig information om den senaste versionen av Experience Manager as a Cloud Service, inklusive nyheter, borttagna funktioner och kända fel. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
 | [Onboarding](/help/onboarding/home.md) | Den här guiden sammanfattar hur du kommer igång med Experience Manager as a Cloud Service, bland annat hur du kommer åt det och viktig dataskyddsinformation. |

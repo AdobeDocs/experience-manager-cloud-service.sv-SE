@@ -1,22 +1,21 @@
 ---
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
-translation-type: tm+mt
-source-git-commit: 73e7f9a5b0976ebd5228c182d47c1058290f7629
+exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '3296'
 ht-degree: 0%
 
 ---
 
-
 # Sidmallar {#page-templates}
 
 När du skapar en sida måste du välja en mall. Sidmallen används som bas för den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas (designegenskaper). Detta har flera fördelar:
 
-* Med sidmallar kan specialiserade författare [skapa och redigera mallar](/help/sites-cloud/authoring/features/templates.md).
-   * Sådana specialiserade författare kallas **mallförfattare**
-   * Mallförfattare måste vara medlemmar i gruppen `template-authors`.
+* Med sidmallar kan skribenter [skapa och redigera mallar](/help/sites-cloud/authoring/features/templates.md).
+   * Sådana specialister kallas **mallskapare**
+   * Mallförfattare måste vara medlemmar i `template-authors` grupp.
 * Sidmallar behåller en dynamisk anslutning till alla sidor som skapas från dem. Detta säkerställer att alla ändringar i mallen återspeglas på själva sidorna.
 * Sidmallar gör sidkomponenten mer generisk så att huvudsidkomponenten kan användas utan anpassning.
 
@@ -31,24 +30,24 @@ Det här dokumentet:
 
 >[!NOTE]
 >
->Det här dokumentet förutsätter att du redan är bekant med att skapa och redigera mallar. Se redigeringsdokumentet [Creating Page Templates](/help/sites-cloud/authoring/features/templates.md), som innehåller information om funktionerna i redigerbara mallar så som de visas för mallskaparen.
+>Det här dokumentet förutsätter att du redan är bekant med att skapa och redigera mallar. Se redigeringsdokumentet [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md), som beskriver funktionerna i redigerbara mallar så som de visas för mallskaparen.
 
 >[!TIP]
 >
->[WKND-](/help/implementing/developing/introduction/develop-wknd-tutorial.md) självstudiekursen går in på hur du använder sidmallar genom att implementera ett exempel och är mycket användbar för att förstå hur du ställer in en mall i ett nytt projekt
+>[WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) fördjupar sig i hur du använder sidmallar genom att implementera ett exempel och är mycket användbart för att förstå hur du konfigurerar en mall i ett nytt projekt
 
-## Skapar en ny mall {#creating-a-new-template}
+## Skapa en ny mall {#creating-a-new-template}
 
-Skapandet av sidmallar görs huvudsakligen med [mallkonsolen och mallredigeraren](/help/sites-cloud/authoring/features/templates.md) av en mallskapare. I det här avsnittet ges en översikt över processen och en beskrivning av vad som händer på teknisk nivå.
+Skapa sidmallar görs i första hand med [mallkonsol och mallredigerare](/help/sites-cloud/authoring/features/templates.md) av en mallskapare. I det här avsnittet ges en översikt över processen och en beskrivning av vad som händer på teknisk nivå.
 
 När du skapar en ny redigerbar mall:
 
 1. Skapa en [mapp för mallarna](#template-folders). Detta är inte obligatoriskt, men vi rekommenderar bästa praxis.
-1. Välj en [malltyp](#template-type). Detta kopieras för att skapa [malldefinitionen](#template-definitions).
+1. Välj en [malltyp](#template-type). Detta kopieras för att skapa [malldefinition](#template-definitions).
 
    >[!NOTE]
    >
-   >Ett urval av malltyper finns färdiga. Du kan även [skapa egna platsspecifika malltyper](#creating-template-types) om det behövs.
+   >Ett urval av malltyper finns färdiga. Du kan också [skapa egna webbplatsspecifika malltyper](#creating-template-types) vid behov.
 
 1. Konfigurera den nya mallens struktur, innehållsprinciper, ursprungliga innehåll och layout.
 
@@ -61,7 +60,7 @@ När du skapar en ny redigerbar mall:
 
    Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#editing-a-template-structure-template-author).
 
-   Mer teknisk information om strukturen finns i [Struktur](#structure) i det här dokumentet.
+   För teknisk information om strukturen, se [Struktur](#structure) i det här dokumentet.
 
    **Profiler**
 
@@ -72,7 +71,7 @@ När du skapar en ny redigerbar mall:
 
    Mer information om hur en mallskapare definierar principer finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#editing-a-template-structure-template-author).
 
-   Teknisk information om profiler finns i [Innehållsprinciper](#content-policies) i det här dokumentet.
+   Teknisk information om profiler finns i [Innehållsprofiler](#content-policies) i det här dokumentet.
 
    **Ursprungligt innehåll**
 
@@ -81,14 +80,14 @@ När du skapar en ny redigerbar mall:
 
    Mer information om hur en mallskapare definierar strukturen finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#editing-a-template-initial-content-author).
 
-   Teknisk information om ursprungligt innehåll finns i [Ursprungligt innehåll](#initial-content) i det här dokumentet.
+   Teknisk information om ursprungligt innehåll finns på [Ursprungligt innehåll](#initial-content) i det här dokumentet.
 
    **Layout**
 
    * Du kan definiera mallayouten för ett antal olika enheter.
    * Responsiv layout för mallar fungerar på samma sätt som för sidredigering.
 
-   Mer information om hur mallskaparen definierar mallayouten finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#editing-a-template-layout-template-author).
+   Mer information om hur en mallskapare definierar mallayouten finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#editing-a-template-layout-template-author).
 
    Mer teknisk information om mallayout finns i [Layout](#layout) i det här dokumentet.
 
@@ -97,9 +96,9 @@ När du skapar en ny redigerbar mall:
    * En mall kan aktiveras eller inaktiveras för att göra den tillgänglig eller inte tillgänglig för sidförfattare.
    * En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
-   Mer information om hur mallskaparen aktiverar en mall finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author).
+   Mer information om hur en mallskapare aktiverar en mall finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author).
 
-   Teknisk information om hur du aktiverar en mall finns i [Aktivera och tillåta en mall för Används](#enabling-and-allowing-a-template-for-use)e i det här dokumentet
+   Teknisk information om hur du aktiverar en mall finns i [Aktivera och tillåta en mall för oss](#enabling-and-allowing-a-template-for-use)e i det här dokumentet
 
 1. Använd det för att skapa innehållssidor.
 
@@ -108,11 +107,11 @@ När du skapar en ny redigerbar mall:
 
    Mer information om hur en sidförfattare använder mallar för att skapa en sida finns i [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#templates).
 
-   Teknisk information om hur du skapar sidor med redigerbara mallar finns i [Resulterande innehållssidor](#resultant-content-pages) i det här dokumentet.
+   Teknisk information om hur du skapar sidor med redigerbara mallar finns i [Gällande innehållssidor](#resultant-content-pages) i det här dokumentet.
 
 >[!TIP]
 >
->Ange aldrig någon information som behöver internationaliseras i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
+>Ange aldrig någon information som behöver internationaliseras i en mall. För internalisering [lokaliseringsfunktioner för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) rekommenderas.
 
 >[!NOTE]
 >
@@ -122,11 +121,11 @@ När du skapar en ny redigerbar mall:
 
 >[!NOTE]
 >
->Redigeringsklientbiblioteket förutsätter att namnutrymmet `cq.shared` finns på innehållssidorna, och om det saknas kommer JavaScript-felet `Uncaught TypeError: Cannot read property 'shared' of undefined` att uppstå.
+>Redigerarens klientbibliotek förutsätter att det finns `cq.shared` namnutrymme på innehållssidor och om det inte finns något JavaScript-fel `Uncaught TypeError: Cannot read property 'shared' of undefined` blir resultatet.
 >
->Alla exempelinnehållssidor innehåller `cq.shared`, så allt innehåll som baseras på dem inkluderar automatiskt `cq.shared`. Om du vill skapa egna innehållssidor från grunden utan att basera dem på exempelinnehåll måste du se till att inkludera namnutrymmet `cq.shared`.
+>Alla exempelinnehållssidor innehåller `cq.shared`så allt innehåll som baseras på dem automatiskt innehåller `cq.shared`. Om du däremot bestämmer dig för att skapa egna innehållssidor från grunden utan att basera dem på exempelinnehåll måste du se till att inkludera `cq.shared` namnutrymme.
 >
->Mer information finns i [Använda bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md).
+>Se [Använda bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md) för ytterligare information.
 
 
 
@@ -139,17 +138,17 @@ Du kan använda följande mappar för att ordna dina mallar:
 
 >[!NOTE]
 >
->Även om du kan kapsla dina mappar visas de som en platt struktur när användaren visar dem i konsolen **Mallar**.
+>Även om du kan kapsla dina mappar när de visas i **Mallar** konsolen som visas som en platt struktur.
 
-I en AEM finns mappen `global` redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen. Du kan lägga till dina standardmallar i den här mappen eller skapa en ny mapp (rekommenderas).
+I en AEM `global` mappen finns redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen. Du kan lägga till dina standardmallar i den här mappen eller skapa en ny mapp (rekommenderas).
 
 >[!NOTE]
 >
->Det är bäst att skapa en ny mapp för dina anpassade mallar och inte använda mappen `global`.
+>Det är bäst att skapa en ny mapp för dina anpassade mallar och inte använda `global` mapp.
 
 >[!CAUTION]
 >
->Mappar måste skapas av en användare med `admin`-rättigheter.
+>Mappar måste skapas av en användare med `admin` rättigheter.
 
 Malltyper och profiler ärvs i alla mappar enligt följande prioritetsordning:
 
@@ -159,7 +158,7 @@ Malltyper och profiler ärvs i alla mappar enligt följande prioritetsordning:
 1. `/apps`
 1. `/libs`
 
-En lista över alla tillåtna poster skapas. Om några konfigurationer överlappar ( `path`/ `label`) visas endast den instans som är närmast den aktuella mappen för användaren.
+En lista över alla tillåtna poster skapas. Om några konfigurationer överlappar ( `path`/ `label`) visas bara den instans som ligger närmast den aktuella mappen för användaren.
 
 Om du vill skapa en ny mapp kan du göra det här:
 
@@ -187,45 +186,45 @@ Om du vill skapa en ny mapp kan du göra det här:
 
    * Namn: `jcr:title`
    * Typ: `String`
-   * Värde: Titeln (för mappen) som du vill ska visas i konsolen **Mallar**.
+   * Värde: Den rubrik (för mappen) som du vill ska visas i **Mallar** konsol.
 
-1. Förutom de vanliga redigeringsbehörigheterna och -behörigheterna (t.ex. `content-authors`) du måste nu tilldela grupper och definiera de åtkomstbehörigheter som krävs för att författarna ska kunna skapa mallar i den nya mappen.
+1. Förutom de vanliga redigeringsbehörigheterna och -behörigheterna (t.ex. `content-authors`) måste du nu tilldela grupper och definiera de åtkomstbehörigheter som krävs för att författarna ska kunna skapa mallar i den nya mappen.
 
-   Gruppen `template-authors` är den standardgrupp som måste tilldelas. Mer information finns i avsnittet [ACL:er och grupper](#acls-and-groups).
+   The `template-authors` grupp är standardgruppen som måste tilldelas. Se avsnittet [Behörighetslistor och grupper](#acls-and-groups) för mer information.
 
    <!--See [Access Right Management](/help/sites-administering/user-group-ac-admin.md#access-right-management) for full details on managing and assigning access rights.-->
 
-### Använda konfigurationsläsaren {#using-the-configuration-browser}
+### Använda Konfigurationsläsaren {#using-the-configuration-browser}
 
-1. Gå till **Global navigering** -> **Verktyg** > [**Konfigurationsläsaren**.](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
+1. Gå till **Global navigering** -> **verktyg** > [**Konfigurationsläsaren**.](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
 
-   De befintliga mapparna visas till vänster inklusive mappen `global`.
+   De befintliga mapparna visas till vänster, inklusive `global` mapp.
 
-1. Klicka på **Skapa**.
-1. I dialogrutan **Skapa konfiguration** måste följande fält konfigureras:
+1. Klicka **Skapa**.
+1. I **Skapa konfiguration** måste följande fält konfigureras:
 
    * **Titel**: Ange en rubrik för konfigurationsmappen
    * **Redigerbara mallar**: Markera för att tillåta redigerbara mallar i den här mappen
 
-1. Klicka på **Skapa**
+1. Klicka **Skapa**
 
 >[!NOTE]
 >
->I [Configuration Browser,](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) kan du redigera den globala mappen och aktivera alternativet **Redigerbara mallar** om du vill skapa mallar i den här mappen, men detta är inte den bästa metoden.
+>I [Configuration Browser,](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) kan du redigera den globala mappen och aktivera **Redigerbara mallar** om du vill skapa mallar i den här mappen, men detta är inte den bästa metoden.
 
-### ACL:er och grupper {#acls-and-groups}
+### Behörighetslistor och grupper {#acls-and-groups}
 
 När mallmapparna har skapats (antingen via CRXDE eller med Configuration Browser) måste åtkomstkontrollistor definieras för rätt grupper för mallmapparna för att säkerställa rätt säkerhet.
 
-Mallmapparna för [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) kan användas som exempel.
+Mallmappar för [WKND, genomgång](/help/implementing/developing/introduction/develop-wknd-tutorial.md) kan användas som exempel.
 
 #### Mallförfattargruppen {#the-template-authors-group}
 
-Gruppen `template-authors` är den grupp som används för att hantera åtkomst till mallar och levereras som standard med AEM, men är tom. Användare måste läggas till i gruppen för projektet/webbplatsen.
+The `template-authors` grupp är den grupp som används för att hantera åtkomst till mallar och levereras som standard med AEM, men är tom. Användare måste läggas till i gruppen för projektet/webbplatsen.
 
 >[!CAUTION]
 >
->Gruppen `template-authors` är bara avsedd för användare som måste kunna skapa nya mallar.
+>The `template-authors` grupp är bara avsedd för användare som måste kunna skapa nya mallar.
 >
 >Att redigera mallar är mycket kraftfullt och om det inte görs på rätt sätt kan befintliga mallar brytas. Därför bör denna roll fokuseras och endast omfatta kvalificerade användare.
 
@@ -243,7 +242,7 @@ Följande tabell visar vilka behörigheter som krävs för mallredigering.
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/templates</code></td>
    <td>Mallförfattare<br /> </td>
    <td>läsa, skriva, replikera</td>
-   <td>Mallförfattare som skapar, läser, uppdaterar, tar bort och replikerar mallar i platsspecifikt <code>/conf</code>-utrymme</td>
+   <td>Mallförfattare som skapar, läser, uppdaterar, tar bort och replikerar mallar i platsspecifika <code>/conf</code> space</td>
   </tr>
   <tr>
    <td>Anonym webbanvändare</td>
@@ -259,7 +258,7 @@ Följande tabell visar vilka behörigheter som krävs för mallredigering.
    <td rowspan="3"><code>/conf/&lt;<i>your-folder</i>&gt;/settings/wcm/policies</code></td>
    <td><code>Template Author</code></td>
    <td>läsa, skriva, replikera</td>
-   <td>Mallförfattare som skapar, läser, uppdaterar, tar bort och replikerar mallar i platsspecifikt <code>/conf</code>-utrymme</td>
+   <td>Mallförfattare som skapar, läser, uppdaterar, tar bort och replikerar mallar i platsspecifika <code>/conf</code> space</td>
   </tr>
   <tr>
    <td>Anonym webbanvändare</td>
@@ -285,7 +284,7 @@ Följande tabell visar vilka behörigheter som krävs för mallredigering.
  </tbody>
 </table>
 
-Den här standardgruppen `template-authors` täcker bara projektinställningarna, där alla `template-authors`-medlemmar tillåts komma åt och redigera alla mallar. För mer komplexa konfigurationer, där flera mallförfattargrupper behövs för att separera åtkomsten till mallar, måste fler anpassade mallskapargrupper skapas. Behörigheterna för mallförfattargrupperna är dock fortfarande desamma.
+Den här standardinställningen `template-authors` gruppen täcker endast projektinställningarna, där alla `template-authors` -medlemmar har åtkomst till och kan redigera alla mallar. För mer komplexa konfigurationer, där flera mallförfattargrupper behövs för att separera åtkomsten till mallar, måste fler anpassade mallskapargrupper skapas. Behörigheterna för mallförfattargrupperna är dock fortfarande desamma.
 
 ## Malltyp {#template-type}
 
@@ -304,7 +303,7 @@ När du skapar en ny mall måste du ange en malltyp:
 
 * AEM innehåller ett litet urval av färdiga malltyper som HTML5 Page och Adaptive Form Page.
 
-   * Ytterligare exempel finns som en del av [WKND-självstudiekursen.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+   * Ytterligare exempel finns som en del av [WKND självstudiekurs.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
 
 * Malltyper definieras vanligtvis av utvecklare.
 
@@ -314,7 +313,7 @@ Malltyperna som inte finns lagrade under:
 
 >[!CAUTION]
 >
->Du får inte ändra något i `/libs`-sökvägen. Detta beror på att innehållet i `/libs` kan skrivas över när som helst genom en uppdatering till AEM.
+>Du får inte ändra något i `/libs` bana. Detta beror på innehållet i `/libs` kan skrivas över när som helst genom en uppdatering till AEM.
 
 Platsspecifika malltyper bör lagras på samma plats som:
 
@@ -351,14 +350,14 @@ When creating a new editable template, the value is copied from the template typ
 >With editable templates, this value is now stored at the template level and is not supported at the page root level.
 -->
 
-### Skapar malltyper {#creating-template-types}
+### Skapa malltyper {#creating-template-types}
 
 Om du har skapat en mall som kan användas som bas för andra mallar kan du kopiera den här mallen som en malltyp.
 
-1. Skapa en mall på samma sätt som du skapar en sidmall [som beskrivs här](/help/sites-cloud/authoring/features/templates.md#creating-a-new-template-template-author), som fungerar som bas för din malltyp.
-1. Använd CRXDE Lite för att kopiera den nya mallen från noden `templates` till noden `template-types` under [mallmappen](#template-folders).
-1. Ta bort mallen från noden `templates` under [mallmappen](#template-folders).
-1. Ta bort alla `cq:template`- och `cq:templateType` `jcr:content`-egenskaper i kopian av mallen som finns under noden `template-types`.
+1. Skapa en mall på samma sätt som vilken sidmall som helst [dokumenteras här](/help/sites-cloud/authoring/features/templates.md#creating-a-new-template-template-author), som kommer att fungera som bas för din malltyp.
+1. Kopiera den nya mallen från CRXDE Lite med hjälp av `templates` nod till `template-types` noden under [mallmapp](#template-folders).
+1. Ta bort mallen från `templates` noden under [mallmapp](#template-folders).
+1. I kopian av mallen som finns under `template-types` nod, ta bort alla `cq:template` och `cq:templateType` `jcr:content` egenskaper.
 
 Du kan också utveckla en egen malltyp med en exempelredigerbar mall som bas, som finns på GitHub.
 
@@ -371,13 +370,13 @@ Koden för den här sidan finns på GitHub
 
 ## Malldefinitioner {#template-definitions}
 
-Definitioner för redigerbara mallar lagras i [användardefinierade mappar](#template-folders) (rekommenderas) eller alternativt i `global`. Till exempel:
+Definitioner för redigerbara mallar sparas [användardefinierade mappar](#template-folders) (rekommenderas) eller `global`. Till exempel:
 
 * `/conf/<my-folder>/settings/wcm/templates`
 * `/conf/<my-folder-01>/<my-folder-02>/settings/wcm/templates`
 * `/conf/global/settings/wcm/templates`
 
-Mallens rotnod är av typen `cq:Template` med en skelettstruktur på:
+Mallens rotnod är av typen `cq:Template` med en skelettstruktur på
 
 ```xml
 <template-name>
@@ -419,41 +418,41 @@ Huvudelementen är:
    * ` [policies](#policies)`
    * `thumbnail.png`
 
-### jcr:content {#jcr-content}
+### jcr:innehåll {#jcr-content}
 
 Den här noden innehåller egenskaper för mallen:
 
-* **Namn**:  `jcr:title`
-* **Namn**:  `status`
+* **Namn**: `jcr:title`
+* **Namn**: `status`
    * &quot;**Typ**: `String`
-   * **Värde**:  `draft`,  `enabled` eller  `disabled`
+   * **Värde**: `draft`, `enabled` eller `disabled`
 
 ### Struktur {#structure}
 
 Definierar strukturen för den resulterande sidan:
 
-* Sammanfogas med det ursprungliga innehållet ( `/initial`) när en ny sida skapas.
+* Sammanfogas med det ursprungliga innehållet ( `/initial`) när du skapar en ny sida.
 * Ändringar som görs i strukturen återspeglas i alla sidor som skapas med mallen.
-* Noden `root` ( `structure/jcr:content/root`) definierar listan med komponenter som ska vara tillgängliga på den resulterande sidan.
+* The `root` ( `structure/jcr:content/root`)-noden definierar listan med komponenter som ska vara tillgängliga på den resulterande sidan.
    * Komponenter som definieras i mallstrukturen kan inte flyttas eller tas bort från resultatsidor.
-   * När en komponent har låsts upp är egenskapen `editable` inställd på `true`.
-   * När en komponent som redan innehåller innehåll är olåst flyttas det här innehållet till grenen `initial`.
+   * När en komponent har låsts upp `editable` egenskapen är inställd på `true`.
+   * När en komponent som redan innehåller innehåll är olåst flyttas det här innehållet till `initial` förgrening.
 
-* Noden `cq:responsive` innehåller definitioner för den responsiva layouten.
+* The `cq:responsive` noden innehåller definitioner för den responsiva layouten.
 
 ### Ursprungligt innehåll {#initial-content}
 
 Definierar det ursprungliga innehåll som en ny sida kommer att ha när den skapas:
 
-* Innehåller en `jcr:content`-nod som kopieras till alla nya sidor.
-* Sammanfogas med strukturen ( `/structure`) när en ny sida skapas.
+* Innehåller en `jcr:content` nod som kopieras till nya sidor.
+* Sammanfogas med strukturen ( `/structure`) när du skapar en ny sida.
 * Befintliga sidor uppdateras inte om det ursprungliga innehållet ändras efter att de har skapats.
-* Noden `root` innehåller en lista med komponenter som definierar vad som är tillgängligt på den resulterande sidan.
+* The `root` noden innehåller en lista med komponenter för att definiera vad som ska vara tillgängligt på den resulterande sidan.
 * Om innehåll läggs till i en komponent i strukturläge och den komponenten sedan låses upp (eller vice versa), används det här innehållet som ursprungligt innehåll.
 
 ### Layout {#layout}
 
-När du redigerar [en mall kan du definiera layouten](/help/sites-cloud/authoring/features/templates.md), använder detta [responsiv standardlayout](/help/sites-cloud/authoring/features/responsive-layout.md).
+När [redigera en mall kan du definiera layouten](/help/sites-cloud/authoring/features/templates.md)används [responsiv standardlayout](/help/sites-cloud/authoring/features/responsive-layout.md).
 
 <!-- that can also be [configured](/help/sites-administering/configuring-responsive-layout.md). -->
 
@@ -461,7 +460,7 @@ När du redigerar [en mall kan du definiera layouten](/help/sites-cloud/authorin
 
 Innehållsprinciperna definierar designegenskaperna för en komponent. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen). Du kan skapa och välja innehållsprinciper i mallredigeraren.
 
-* Egenskapen `cq:policy`, på noden `root`
+* Egenskapen `cq:policy`, på `root` nod
    `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
 Ger en relativ referens till innehållsprincipen för sidans styckesystem.
 
@@ -476,7 +475,7 @@ Ger en relativ referens till innehållsprincipen för sidans styckesystem.
 
 ### Sidprofiler {#page-policies}
 
-Med sidprofiler kan du definiera [innehållsprincipen](#content-policies) för sidan (huvudparsys), antingen i mallen eller på de resulterande sidorna.
+Med sidprofiler kan du definiera [innehållsprincip](#content-policies) för sidan (huvudparametrar), antingen i mallen eller på de resulterande sidorna.
 
 ### Aktivera och tillåta en mall för användning {#enabling-and-allowing-a-template-for-use}
 
@@ -484,9 +483,9 @@ Med sidprofiler kan du definiera [innehållsprincipen](#content-policies) för s
 
    Innan en mall kan användas måste den aktiveras av något av följande:
 
-   * [Aktivera ](/help/sites-cloud/authoring/features/templates.md) mallen från  **** mallkonsolen.
+   * [Aktivera mallen](/help/sites-cloud/authoring/features/templates.md) från **Mallar** konsol.
 
-   * Anger egenskapen status för noden `jcr:content`.
+   * Ställa in egenskapen status på `jcr:content` nod.
 
       * På:
          `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
@@ -499,7 +498,7 @@ Med sidprofiler kan du definiera [innehållsprincipen](#content-policies) för s
 
 1. **Tillåtna mallar**
 
-   * [Ange tillåtna mallsökvägar på  **sidegenskaperna**](/help/sites-cloud/authoring/features/templates.md#allowing-a-template-author) för respektive sida eller rotsida i en underavdelning.
+   * [Definiera tillåtna mallsökvägar på **Sidegenskaper**](/help/sites-cloud/authoring/features/templates.md#allowing-a-template-author) av rätt sida eller rotsida i en underavdelning.
    * Ange egenskapen:
       `cq:allowedTemplates`
 På 
@@ -508,13 +507,13 @@ På
 
    `/conf/<your-folder>/settings/wcm/templates/.*`
 
-## Resulterande innehållssidor {#resultant-content-pages}
+## Gällande innehållssidor {#resultant-content-pages}
 
 Sidor skapade från redigerbara mallar:
 
 * Skapas med ett underträd som sammanfogas från `structure` och `initial` i mallen
 
-* Har referenser till information som finns i mallen och malltypen. Detta uppnås med en `jcr:content`-nod med egenskaperna:
+* Har referenser till information som finns i mallen och malltypen. Detta uppnås med en `jcr:content` nod med egenskaperna:
 
    * `cq:template` - innehåller en dynamisk referens till den faktiska mallen, gör att ändringar i mallen kan återspeglas på de faktiska sidorna.
 
@@ -525,22 +524,22 @@ Sidor skapade från redigerbara mallar:
 Diagrammet ovan visar hur mallar, innehåll och komponenter samverkar:
 
 * Styrenhet - `/content/<my-site>/<my-page>` - Den resulterande sidan som refererar till mallen. Innehållet styr hela processen. Enligt definitionerna har den åtkomst till rätt mall och komponenter.
-* Konfiguration - `/conf/<my-folder>/settings/wcm/templates/<my-template>` - [Mallen och relaterade innehållsprinciper](#template-definitions) definierar sidkonfigurationen.
-* Modell - OSGi-paket - [OSGI-paket](/help/implementing/deploying/configuring-osgi.md) implementerar funktionen.
+* Konfiguration - `/conf/<my-folder>/settings/wcm/templates/<my-template>` - [mallar och relaterade innehållsprinciper](#template-definitions) definiera sidkonfigurationen.
+* Model - OSGi bundles - The [OSGI-paket](/help/implementing/deploying/configuring-osgi.md) implementera funktionen.
 * Visa - `/apps/<my-site>/components` - I både författar- och publiceringsmiljöer återges innehållet av komponenter.
 
 Vid återgivning av en sida:
 
 * **Mallar**:
 
-   * Egenskapen `cq:template` för noden `jcr:content` refereras till för att komma åt mallen som motsvarar den sidan.
+   * The `cq:template` egenskap för dess `jcr:content` Noden kommer att refereras till för att komma åt mallen som motsvarar den sidan.
 
 * **Komponenter**:
 
-   * Sidkomponenten sammanfogar trädet `structure/jcr:content` i mallen med trädet `jcr:content` på sidan.
+   * Sidkomponenten kommer att sammanfoga `structure/jcr:content` mallens träd med `jcr:content` sidans träd.
       * Sidkomponenten tillåter bara författaren att redigera noderna i mallstrukturen som har flaggats som redigerbara (samt eventuella underordnade noder).
-      * När en komponent återges på en sida hämtas komponentens relativa sökväg från noden `jcr:content`. söks sedan igenom samma sökväg under noden `policies/jcr:content` för mallen.
-         * Egenskapen `cq:policy` för den här noden pekar på den faktiska innehållsprincipen (d.v.s. den innehåller designkonfigurationen för den komponenten).
+      * När du återger en komponent på en sida hämtas komponentens relativa sökväg från `jcr:content` nod; samma bana under `policies/jcr:content` -noden i mallen söks sedan igenom.
+         * The `cq:policy` den här nodens egenskap pekar på den faktiska innehållsprincipen (d.v.s. den innehåller komponentens designkonfiguration).
             * På så sätt kan du ha flera mallar som återanvänder samma innehållsprincipkonfigurationer.
 
 ### Malltillgänglighet {#template-availability}
@@ -549,27 +548,27 @@ När du skapar en ny sida i webbplatsens administratörsgränssnitt beror listan
 
 Följande egenskaper avgör om en mall `T` får användas för en ny sida som ska placeras som underordnad till sidan `P`. Var och en av dessa egenskaper är en sträng med flera värden som innehåller noll eller flera reguljära uttryck som används för matchning med sökvägar:
 
-* Egenskapen `cq:allowedTemplates` för undernoden `jcr:content` för `P` eller en överordnad till `P`.
+* The `cq:allowedTemplates` egenskapen för `jcr:content` undernod till `P` eller en överordnad till `P`.
 
-* Egenskapen `allowedPaths` för `T`.
+* The `allowedPaths` egenskap för `T`.
 
-* Egenskapen `allowedParents` för `T`.
+* The `allowedParents` egenskap för `T`.
 
-* Egenskapen `allowedChildren` för mallen `P`.
+* The `allowedChildren` egenskap för mallen för `P`.
 
 Utvärderingen fungerar enligt följande:
 
-* Den första icke-tomma `cq:allowedTemplates`-egenskapen som påträffades när sidhierarkin som börjar med `P` ökades matchas mot sökvägen `T`. Om inget av värdena matchar avvisas `T`.
+* Den första som inte är tom `cq:allowedTemplates` egenskap påträffades när sidhierarkin skulle ökas från `P` matchas mot sökvägen för `T`. Om inget av värdena matchar, `T` avvisas.
 
-* Om `T` har en `allowedPaths`-egenskap som inte är tom, men inget av värdena matchar sökvägen `P`, avvisas `T`.
+* If `T` har ett värde som inte är tomt `allowedPaths` -egenskapen, men inget av värdena matchar sökvägen för `P`, `T` avvisas.
 
-* Om båda ovanstående egenskaper är tomma eller inte finns, avvisas `T` om den inte tillhör samma program som `P`. `T` tillhör samma program som  `P` if och endast om namnet på den andra nivån i sökvägen  `T` är detsamma som namnet på den andra nivån i sökvägen  `P`. Mallen `/apps/wknd/templates/foo` tillhör till exempel samma program som sidan `/content/wknd`.
+* Om båda ovanstående egenskaper är tomma eller inte finns, `T` avvisas om det inte tillhör samma program som `P`. `T` tillhör samma program som `P` om och bara om namnet på den andra nivån i sökvägen för `T` är samma som namnet på den andra nivån i sökvägen för `P`. Mallen `/apps/wknd/templates/foo` tillhör samma program som sidan `/content/wknd`.
 
-* Om `T` har en `allowedParents`-egenskap som inte är tom, men inget av värdena matchar sökvägen `P`, avvisas `T`.
+* If `T` har ett värde som inte är tomt `allowedParents` -egenskapen, men inget av värdena matchar sökvägen för `P`, `T` avvisas.
 
-* Om mallen för `P` har en `allowedChildren`-egenskap som inte är tom, men inget av värdena matchar sökvägen för `T`, avvisas `T`.
+* Om mallen för `P` har ett värde som inte är tomt `allowedChildren` -egenskapen, men inget av värdena matchar sökvägen för `T`, `T` avvisas.
 
-* I alla andra fall är `T` tillåtet.
+* I alla andra fall `T` är tillåtet.
 
 I följande diagram visas mallutvärderingsprocessen:
 
@@ -577,26 +576,24 @@ I följande diagram visas mallutvärderingsprocessen:
 
 >[!CAUTION]
 >
->AEM erbjuder flera egenskaper för att styra mallarna som tillåts under **Platser**. En kombination av dem kan dock leda till mycket komplexa regler som är svåra att spåra och hantera.
+>AEM har flera egenskaper som styr mallarna under **Webbplatser**. En kombination av dem kan dock leda till mycket komplexa regler som är svåra att spåra och hantera.
 >
 >Därför rekommenderar Adobe att du börjar enkelt genom att definiera:
 >
->* endast egenskapen `cq:allowedTemplates`
-   >
-   >
-* endast i platsroten
+>* endast `cq:allowedTemplates` property
 >
+>* endast i platsroten
 >
-Se till exempel [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) innehåll: `/content/wknd/jcr:content`
+>Se till exempel [WKND, genomgång](/help/implementing/developing/introduction/develop-wknd-tutorial.md) innehåll: `/content/wknd/jcr:content`
 >
->Egenskaperna `allowedPaths`, `allowedParents` och `allowedChildren` kan också placeras i mallarna för att definiera mer avancerade regler. När det är möjligt är det *mycket* enklare att definiera ytterligare `cq:allowedTemplates`-egenskaper för underavsnitt på platsen om det finns behov av att begränsa de tillåtna mallarna ytterligare.
+>Egenskaperna `allowedPaths`, `allowedParents`och `allowedChildren` kan också placeras i mallar för att definiera mer avancerade regler. Men när det är möjligt är det *mycket* enklare att definiera `cq:allowedTemplates` egenskaper för underavsnitt av webbplatsen om det finns behov av att ytterligare begränsa de tillåtna mallarna.
 >
->En ytterligare fördel är att `cq:allowedTemplates`-egenskaperna kan uppdateras av en författare på fliken **Avancerat** på **Sidegenskaper**. De andra mallegenskaperna kan inte uppdateras med (standard) användargränssnittet, så behöver en utvecklare för att behålla reglerna och en koddistribution för varje ändring.
+>Ytterligare en fördel är att `cq:allowedTemplates` kan uppdateras av en författare i **Avancerat** -fliken i **Sidegenskaper**. De andra mallegenskaperna kan inte uppdateras med (standard) användargränssnittet, så behöver en utvecklare för att behålla reglerna och en koddistribution för varje ändring.
 
 #### Begränsa mallar som används på underordnade sidor {#limiting-templates-used-in-child-pages}
 
-Om du vill begränsa vilka mallar som kan användas för att skapa underordnade sidor under en viss sida använder du egenskapen `cq:allowedTemplates` för noden `jcr:content` på sidan för att ange listan med mallar som ska tillåtas som underordnade sidor. Varje värde i listan måste vara en absolut sökväg till en mall för en tillåten underordnad sida, till exempel `/apps/wknd/templates/page-content`.
+Om du vill begränsa vilka mallar som kan användas för att skapa underordnade sidor under en viss sida använder du `cq:allowedTemplates` egenskap för `jcr:content` nod på sidan för att ange listan med mallar som ska tillåtas som underordnade sidor. Varje värde i listan måste vara en absolut sökväg till en mall för en tillåten underordnad sida, till exempel `/apps/wknd/templates/page-content`.
 
-Du kan använda egenskapen `cq:allowedTemplates` på mallens `jcr:content`-nod om du vill att den här konfigurationen ska tillämpas på alla nyskapade sidor som använder den här mallen.
+Du kan använda `cq:allowedTemplates` -egenskap i mallens  `jcr:content` nod som den här konfigurationen ska tillämpas på alla nyskapade sidor som använder den här mallen.
 
-Om du vill lägga till fler begränsningar, till exempel för mallhierarkin, kan du använda egenskaperna `allowedParents/allowedChildren` för mallen. Du kan sedan uttryckligen ange att sidor som skapats från en mall T måste vara överordnade/underordnade sidor till sidor som skapats från en mall T.
+Om du vill lägga till fler begränsningar, till exempel för mallhierarkin, kan du använda `allowedParents/allowedChildren` -egenskaper i mallen. Du kan sedan uttryckligen ange att sidor som skapats från en mall T måste vara överordnade/underordnade sidor till sidor som skapats från en mall T.

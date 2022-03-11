@@ -1,43 +1,42 @@
 ---
 title: Konfigurera segmentering med ContextHub
 description: Lär dig hur du konfigurerar segmentering med ContextHub.
-translation-type: tm+mt
-source-git-commit: c9c7176f6c3bf70529b761183341a2490d4ecbfc
+exl-id: fbc38611-dbee-426e-b823-df64b6730c45
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '1692'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurera segmentering med ContextHub{#configuring-segmentation-with-contexthub}
 
-Segmentering är en viktig faktor när man skapar en kampanj. Mer information om hur segmentering fungerar och nyckeltermer finns i [Förstå segmentering](segmentation.md).
+Segmentering är en viktig faktor när man skapar en kampanj. Se [Förstå segmentering](segmentation.md) för information om hur segmentering fungerar och nyckeltermer.
 
 Beroende på den information du redan har samlat in om webbplatsbesökarna och vilka mål du vill uppnå, måste du definiera de segment och strategier som behövs för målinnehållet.
 
-Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. [De ](activities.md) aktiviteter som definieras här kan läggas in på alla sidor och definiera vilka besökarsegment det specialiserade innehållet ska användas för.
+Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. [Verksamhet](activities.md) som definieras här kan inkluderas på alla sidor och definiera vilket besökarsegment som det specialiserade innehållet gäller.
 
 AEM gör att ni enkelt kan personalisera användarnas upplevelser. Du kan även kontrollera resultatet av segmentdefinitionerna.
 
 ## Åtkomst till segment {#accessing-segments}
 
-Konsolen [Publiker](audiences.md) används för att hantera segment för ContextHub samt målgrupper för ditt Adobe Target-konto. I den här dokumentationen beskrivs hur du hanterar segment för ContextHub.
+The [Målgrupper](audiences.md) Console används för att hantera segment för ContextHub samt målgrupper för ditt Adobe Target-konto. I den här dokumentationen beskrivs hur du hanterar segment för ContextHub.
 
-Om du vill komma åt dina segment väljer du **Navigering > Personalisering > Publiker** i den globala navigeringen.
+Om du vill komma åt dina segment väljer du **Navigering > Personalisering > Publiker**.
 
 ![Hantera målgrupper](../assets/contexthub-segmentation-audiences.png)
 
 ## Segmentredigerare {#segment-editor}
 
 <!--The **Segment Editor** allows you to easily modify a segment. To edit a segment, select a segment in the [list of segments](/help/sites-administering/segmentation.md#accessing-segments) and click the **Edit** button.-->
-Med **segmentredigeraren** kan du enkelt ändra ett segment. Om du vill redigera ett segment markerar du det i listan och klickar på knappen **Redigera**.
+The **Segmentredigerare** gör att du enkelt kan ändra ett segment. Om du vill redigera ett segment markerar du det i listan och klickar på **Redigera** -knappen.
 
 ![Segmentredigerare](../assets/contexthub-segment-editor.png)
 
-Med komponentwebbläsaren kan du lägga till behållare för **AND** och **OR** för att definiera segmentlogiken, och sedan lägga till ytterligare komponenter för att jämföra egenskaper och värden eller referensskript och andra segment för att definiera urvalskriterierna (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för markering av segmentet.
+Med komponentwebbläsaren kan du lägga till **OCH** och **ELLER** behållare för att definiera segmentlogiken och sedan lägga till ytterligare komponenter för att jämföra egenskaper och värden eller referensskript och andra segment för att definiera urvalskriterierna (se [Skapa ett nytt segment](#creating-a-new-segment)) för att definiera det exakta scenariot för att markera segmentet.
 
-När hela programsatsen utvärderas till true är segmentet löst. Om flera segment är tillämpliga används även **Förstärkningsfaktorn**. Mer information om förstärkningsfaktorn finns i [Skapa ett nytt segment](#creating-a-new-segment).
+När hela programsatsen utvärderas till true är segmentet löst. Om flera segment är tillämpliga ska **Öka** Även faktor används. Se [Skapa ett nytt segment](#creating-a-new-segment) om du vill ha information om förstärkningsfaktorn.
 
 >[!CAUTION]
 >
@@ -45,7 +44,7 @@ När hela programsatsen utvärderas till true är segmentet löst. Om flera segm
 
 ### Behållare {#containers}
 
-Följande behållare är tillgängliga när de är klara och gör att du kan gruppera jämförelser och referenser tillsammans för boolesk utvärdering. De kan dras från komponentwebbläsaren till redigeraren. Mer information finns i följande avsnitt [Använda OCH ELLER behållare](#using-and-and-or-containers).
+Följande behållare är tillgängliga när de är klara och gör att du kan gruppera jämförelser och referenser tillsammans för boolesk utvärdering. De kan dras från komponentwebbläsaren till redigeraren. Se följande avsnitt [Använda OCH- och ELLER-behållare](#using-and-and-or-containers) för mer information.
 
 |  |  |
 |---|---|
@@ -70,9 +69,9 @@ Följande segmentjämförelser är tillgängliga när du vill utvärdera segment
 >
 >`null < 30 // will return true`
 >
->När du skapar [ett segment](#creating-a-new-segment) bör du därför välja en **datatyp** när typerna av jämförda värden är kända. Till exempel:
+>Därför när [skapa ett segment](#creating-a-new-segment)bör du välja en **datatyp** när de olika typerna av jämförda värden är kända. Till exempel:
 >
->När du jämför egenskapen `profile/age` vet du redan att den jämförda typen kommer att vara **number**, så även om `profile/age` inte är inställd kommer en jämförelse `profile/age` som är mindre än 30 att returnera **false**, som du skulle kunna förvänta dig.
+>Vid jämförelse av egenskapen `profile/age`, du vet redan att jämförelsetypen kommer att **tal**, så även om `profile/age` har inte angetts, en jämförelse `profile/age` mindre än 30 returneras **false**, som du skulle kunna förvänta dig.
 
 ### Referenser {#references}
 
@@ -81,19 +80,19 @@ Följande referenser är tillgängliga när du vill länka direkt till ett skrip
 |  |  |
 |---|---|
 | Segmentreferens | Utvärdera det refererade segmentet |
-| Skriptreferens | Utvärdera det refererade skriptet. Mer information finns i följande avsnitt [Använda skriptreferenser](#using-script-references). |
+| Skriptreferens | Utvärdera det refererade skriptet. Se följande avsnitt [Använda skriptreferenser](#using-script-references) för mer information. |
 
 ## Skapa ett nytt segment {#creating-a-new-segment}
 
 Så här definierar du det nya segmentet:
 
-1. Efter [åtkomst till segmenten](#accessing-segments), [navigerar du till mappen](#organizing-segments) där du vill skapa segmentet, eller låter det vara kvar i roten.
+1. Efter [komma åt segment](#accessing-segments), [navigera till mappen](#organizing-segments) där du vill skapa segmentet eller lämna det i roten.
 
-1. Tryck eller klicka på knappen **Skapa** och välj **Skapa ContextHub-segment**.
+1. Tryck eller klicka på **Skapa** och markera **Skapa ContextHub-segment**.
 
    ![Lägg till segment](../assets/contexthub-create-segment.png)
 
-1. I **New ContextHub Segment** anger du en rubrik för segmentet samt ett boostvärde om det behövs och trycker eller klickar sedan på **Skapa**.
+1. I **Nytt ContextHub-segment**, ange en titel för segmentet samt ett ökningsvärde om det behövs och tryck eller klicka sedan på **Skapa**.
 
    ![Nytt segment](../assets/contexthub-new-segment.png)
 
@@ -108,12 +107,12 @@ Så här definierar du det nya segmentet:
 
    ![Testning av människor i Basel](../assets/contexthub-comparing-property-value.png)
 
-   Ange alltid en **datatyp** om möjligt för att försäkra dig om att dina jämförelser utvärderas korrekt. Mer information finns i [Jämförelser](#comparisons).
+   Ange alltid en **Datatyp** om möjligt för att säkerställa att dina jämförelser utvärderas på rätt sätt. Se [Jämförelser](#comparisons) för mer information.
 
-1. Klicka på **Klar** för att spara definitionen:
-1. Lägg till fler komponenter efter behov. Du kan formulera booleska uttryck med behållarkomponenterna för AND- och OR-jämförelser (se [Använda OCH och eller behållare](#using-and-and-or-containers) nedan). Med segmentredigeraren kan du ta bort komponenter som inte längre behövs eller dra dem till nya positioner i programsatsen.
+1. Klicka **Klar** för att spara definitionen:
+1. Lägg till fler komponenter efter behov. Du kan formulera booleska uttryck med behållarkomponenterna för AND- och OR-jämförelser (se [Använda OCH och/eller behållare](#using-and-and-or-containers) nedan). Med segmentredigeraren kan du ta bort komponenter som inte längre behövs eller dra dem till nya positioner i programsatsen.
 
-### Använda AND- och OR-behållare {#using-and-and-or-containers}
+### Använda OCH- och ELLER-behållare {#using-and-and-or-containers}
 
 Med hjälp av komponenterna AND och OR kan du skapa komplexa segment i AEM. När du gör detta är det bra att tänka på några grundläggande saker:
 
@@ -140,9 +139,9 @@ Du kan kapsla in flera AND- och OR-operatorer efter behov.
 
 Genom att använda komponenten Skriptreferens kan utvärderingen av en segmentegenskap delegeras till ett externt skript. När skriptet har konfigurerats korrekt kan det användas som en annan komponent i ett segmentvillkor.
 
-#### Definiera ett skript som ska referera {#defining-a-script-to-reference}
+#### Definiera ett skript som ska refereras {#defining-a-script-to-reference}
 
-1. Lägg till filen i klientlib `contexthub.segment-engine.scripts`.
+1. Lägg till fil i `contexthub.segment-engine.scripts` clientlib.
 1. Implementera en funktion som returnerar ett värde. Till exempel:
 
    ```javascript
@@ -185,28 +184,28 @@ this.dependOn(ContextHub.SegmentEngine.Property('profile/age'));
 #### Referera till ett skript {#referencing-a-script}
 
 1. Skapa ContextHub-segment.
-1. Lägg till **skriptreferens**-komponenten på önskad plats i segmentet.
-1. Öppna redigeringsdialogrutan för komponenten **Skriptreferens**. Om [är korrekt konfigurerad](#defining-a-script-to-reference) bör skriptet vara tillgängligt i listrutan **Skriptnamn**.
+1. Lägg till **Skriptreferens** -komponenten på önskad plats i segmentet.
+1. Öppna redigeringsdialogrutan för **Skriptreferens** -komponenten. If [korrekt konfigurerad](#defining-a-script-to-reference), ska skriptet vara tillgängligt i **Skriptnamn** nedrullningsbar meny.
 
-## Ordna segment {#organizing-segments}
+## Organisera segment {#organizing-segments}
 
 Om du har många segment kan det bli svårt att hantera dem som en platt lista. I sådana fall kan det vara användbart att skapa mappar för att hantera dina segment.
 
 ### Skapa en ny mapp {#create-folder}
 
-1. När du har [öppnat segmenten](#accessing-segments) klickar eller trycker du på knappen **Skapa** och väljer **Mapp**.
+1. Efter [komma åt segment](#accessing-segments), klicka eller tryck på **Skapa** och markera **Mapp**.
 
    ![Lägg till mapp](../assets/contexthub-create-segment.png)
 
-1. Ange en **titel** och ett **namn** för mappen.
-   * **Titeln** ska vara beskrivande.
-   * **Namnet** blir nodnamnet i databasen.
-      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+1. Ange en **Titel** och **Namn** för din mapp.
+   * The **Titel** ska vara beskrivande.
+   * The **Namn** blir nodnamnet i databasen.
+      * Det genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
       * Den kan vid behov justeras.
 
    ![Skapa mapp](../assets/contexthub-create-folder.png)
 
-1. Tryck eller klicka på **Skapa**.
+1. Tryck eller klicka **Skapa**.
 
    ![Bekräfta mapp](../assets/contexthub-confirm-folder.png)
 
@@ -217,13 +216,13 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 
 ### Ändra befintliga mappar {#modify-folders}
 
-1. När du har [öppnat segmenten](#accessing-segments) klickar eller trycker du på den mapp du vill ändra för att markera den.
+1. Efter [komma åt segment](#accessing-segments)markerar du mappen genom att klicka på den eller trycka på den.
 
    ![Välj mapp](../assets/contexthub-select-folder.png)
 
-1. Tryck eller klicka på **Byt namn på** i verktygsfältet för att byta namn på mappen.
+1. Tryck eller klicka **Byt namn** i verktygsfältet för att byta namn på mappen.
 
-1. Ange en ny **mapptitel** och tryck eller klicka på **Spara**.
+1. Ange en ny **Mappnamn** och klicka **Spara**.
 
    ![Byt namn på mapp](../assets/contexthub-rename-folder.png)
 
@@ -233,25 +232,25 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 
 ### Ta bort en mapp
 
-1. När du har [öppnat segmenten](#accessing-segments) klickar eller trycker du på den mapp du vill ändra för att markera den.
+1. Efter [komma åt segment](#accessing-segments)markerar du mappen genom att klicka på den eller trycka på den.
 
    ![Välj mapp](../assets/contexthub-select-folder.png)
 
-1. Tryck eller klicka på **Ta bort** i verktygsfältet för att ta bort mappen.
+1. Tryck eller klicka **Ta bort** i verktygsfältet för att ta bort mappen.
 
 1. En dialogruta innehåller en lista med mappar som har markerats för borttagning.
 
    ![Bekräfta borttagning](../assets/contexthub-confirm-segment-delete.png)
 
-   * Tryck eller klicka på **Ta bort** för att bekräfta.
-   * Tryck eller klicka på **Avbryt** om du vill avbryta.
+   * Tryck eller klicka **Ta bort** för att bekräfta.
+   * Tryck eller klicka **Avbryt** för att avbryta.
 
 1. Om någon av de markerade mapparna innehåller undermappar eller segment måste borttagningen bekräftas.
 
    ![Bekräfta borttagning av underordnade](../assets/contexthub-confirm-segment-child-delete.png)
 
-   * Tryck eller klicka på **Tvinga borttagning** för att bekräfta.
-   * Tryck eller klicka på **Avbryt** om du vill avbryta.
+   * Tryck eller klicka **Tvinga borttagning** för att bekräfta.
+   * Tryck eller klicka **Avbryt** för att avbryta.
 
 >[!NOTE]
 >
@@ -259,7 +258,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 
 ## Testa tillämpningen av ett segment {#testing-the-application-of-a-segment}
 
-När segmentet har definierats kan potentiella resultat testas med hjälp av **[ContextHub](contexthub.md).**
+När segmentet är definierat kan man testa potentiella resultat med hjälp av **[ContextHub](contexthub.md).**
 
 1. Förhandsgranska en sida
 1. Klicka på ikonen ContextHub för att visa kontextHub-verktygsfältet
@@ -278,9 +277,9 @@ Eller om den inte är löst:
 >
 >Alla egenskaper åtgärdas omedelbart, men de flesta ändras bara vid sidinläsning.
 
-Sådana tester kan även utföras på innehållssidor och i kombination med riktat innehåll och relaterade **aktiviteter** och **upplevelser**.
+Sådana tester kan även utföras på innehållssidor och i kombination med riktat innehåll och relaterat innehåll **Verksamhet** och **Erfarenheter**.
 
-Om du har konfigurerat en aktivitet och upplevelse kan du enkelt testa ditt segment med aktiviteten. Mer information om hur du konfigurerar en aktivitet finns i den relaterade [dokumentationen om hur du skapar målinnehåll](targeted-content.md).
+Om du har konfigurerat en aktivitet och upplevelse kan du enkelt testa ditt segment med aktiviteten. Mer information om hur du konfigurerar en aktivitet finns i [dokumentation om framtagning av riktat innehåll](targeted-content.md).
 
 1. I redigeringsläget för en sida där du har konfigurerat riktat innehåll kan du se att innehållet har angetts som mål via en pilikon i innehållet.
 1. Växla till förhandsgranskningsläget och använd kontextnavet för att växla till en profil som inte matchar den segmentering som har konfigurerats för upplevelsen.
@@ -288,4 +287,4 @@ Om du har konfigurerat en aktivitet och upplevelse kan du enkelt testa ditt segm
 
 ## Använda ditt segment {#using-your-segment}
 
-Segment används för att styra det faktiska innehåll som ses av specifika målgrupper. Se [Hantera målgrupper](audiences.md) för mer information om målgrupper och segment och [Skapa riktat innehåll](targeted-content.md) om hur du använder målgrupper och segment för att rikta innehåll.
+Segment används för att styra det faktiska innehåll som ses av specifika målgrupper. Se [Hantera målgrupper](audiences.md) för mer information om målgrupper och segment och [Skapa riktat innehåll](targeted-content.md) om att använda målgrupper och segment för att rikta innehåll.

@@ -11,7 +11,7 @@ ht-degree: 65%
 
 # Skydda författarnivån {#securing-the-author-tier}
 
-När du skapar en ny miljö med AEM as a Cloud Service är den resulterande författarnivån som standard tillgänglig via internet. Det går att konfigurera nätverksprinciperna ytterligare för att skydda åtkomsten till författarnivån. Mer information finns i [Använda en IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=en). Processen baseras på auktorisering av IP-intervall som beviljas nätverksåtkomst till författarmiljön.
+När du skapar en ny miljö med AEM as a Cloud Service är den resulterande författarnivån som standard tillgänglig via internet. Det går att konfigurera nätverksprinciperna ytterligare för att skydda åtkomsten till författarnivån. Se [Använda ett IP-Tillåtelselista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=en) för mer information. Processen baseras på auktorisering av IP-intervall som beviljas nätverksåtkomst till författarmiljön.
 
 Om du vill införa dessa regler måste du skicka in en supportanmälan från [Adobe Admin Console](https://adminconsole.adobe.com/) med den begärda informationen:
 

@@ -21,16 +21,16 @@ Du kan använda 360/VR-visningsprogrammet för att återge ekvirektangulär vide
 
 Spatial audio stöds för närvarande inte. om ljudet blandas i stereo ändras inte balansen (L/R) när kunden ändrar kamerans visningsvinkel.
 
-Se [Använda Dynamic Media 360-videoklipp och miniatyrbild för anpassad video med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html#dynamic-media).
+Se [Använda Dynamic Media 360-videor och en anpassad videominiatyr med AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.html#dynamic-media).
 
 Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md).
 
 ## 360 Video in action {#video-in-action}
 
-Välj [Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) om du vill öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
+Välj [Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
 
-![360-](assets/6_5_360videoiss_simplified.png)
-*videoexempelVideobildruta från Space Station 360*
+![360 videoexempel](assets/6_5_360videoiss_simplified.png)
+*Videobildruta från Space Station 360*
 
 ## 360/VR Video och Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
 
@@ -40,10 +40,10 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
 ## Ladda upp material som ska användas med 360-videovisningsprogrammet {#uploading-assets-for-use-with-the-video-viewer}
 
-360 videomaterial som överförs till [!DNL Experience Manager] har etiketten **Multimedia** på en tillgångssida, ungefär som vanliga videomaterial.
+360 videomaterial som överförs till [!DNL Experience Manager] är märkta som **Multimedia** på en Assets-sida, ungefär som i en vanlig videoresurs.
 
-![6_5_360video-](assets/6_5_360video-selecttopreview.png)
-*selectPreviewEn överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
+![6_5_360video-select-opreview](assets/6_5_360video-selecttopreview.png)
+*En överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
 
 **Ladda upp material som ska användas med 360-videovisningsprogrammet:**
 
@@ -58,7 +58,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
       * 1080p - 1920 x 1080, känd som Full HD eller FHD upplösning eller
       * 2160p - 3840 x 2160, känd som 4k, UHD eller Ultra HD-upplösning. Den här stora skärmupplösningen finns oftast på tv-apparater och datorskärmar. Upplösningen 2160p kallas ofta för&quot;4k&quot; eftersom bredden är nästan 4 000 pixlar. Med andra ord har den fyra gånger så många pixlar som 1080p.
-   * [Skapa en anpassad adaptiv ](/help/assets/dynamic-media/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) videoprofil med renderingar av högre kvalitet. Du kan till exempel skapa en adaptiv videoprofil som innehåller följande tre inställningar:
+   * [Skapa en anpassad adaptiv videoprofil](/help/assets/dynamic-media/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming) med renderingar av högre kvalitet. Du kan till exempel skapa en adaptiv videoprofil som innehåller följande tre inställningar:
 
       * Width=auto; Höjd=720; Bithastighet=2 500 kbit/s
       * Width=auto; Höjd=1080; Bithastighet=5000 kbit/s
@@ -99,41 +99,41 @@ Se även [Redigera visningsförinställningar](/help/assets/dynamic-media/managi
 När du är nöjd med 360-videon kan du publicera den.
 
 Se [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till [!DNL Experience Manager Sites]-sidor.
+Se [Länka URL:er till webbprogrammet](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till [!DNL Experience Manager Sites] sidor.
 Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
 
 **Så här förhandsgranskar du 360-videoklipp:**
 
-1. I **[!UICONTROL Assets]** navigerar du till en befintlig 360-video som du har skapat. Om du vill öppna den i förhandsgranskningsläge väljer du videouppsättningen 360.
+1. I **[!UICONTROL Assets]** navigera till en befintlig 360-video som du har skapat. Om du vill öppna den i förhandsgranskningsläge väljer du videouppsättningen 360.
 
    ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
 
    Om du vill förhandsgranska videon väljer du 360-videoresursen.
 
-1. Markera listrutan på förhandsgranskningssidan, nära det övre vänstra hörnet på sidan, och välj sedan **[!UICONTROL Viewers]**.
+1. Markera listrutan på förhandsvisningssidan, i det övre vänstra hörnet på sidan, och välj sedan **[!UICONTROL Viewers]**.
 
    ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
 
-   Välj **[!UICONTROL Video360_social]** i visningslistan och gör sedan något av följande:
+   I visningslistan väljer du **[!UICONTROL Video360_social]** gör du något av följande:
 
    * Om du vill ändra visningsvinkeln för den statiska scenen drar du pekaren över videon.
-   * För att påbörja uppspelningen väljer du videoklippets **[!UICONTROL Play]**-knapp. När videon spelas upp drar du pekaren över videon för att ändra visningsvinkeln.
+   * Välj videons **[!UICONTROL Play]** -knappen. När videon spelas upp drar du pekaren över videon för att ändra visningsvinkeln.
 
-   ![6_5_360video-preview-video360-](assets/6_5_360video-preview-video360-social.png)*socialA 360 video, skärmdump.*
+   ![6_5_360video-preview-video360-social ](assets/6_5_360video-preview-video360-social.png)*En 360-videobildbild.*
 
-   * Välj **[!UICONTROL Video360VR]** i visningslistan.
+   * I visningslistan väljer du **[!UICONTROL Video360VR]**.
 
       VR-video (Virtual Reality) är engagerande videomaterial som nås via virtuella verklighetshuvuden. Precis som med vanliga videor skapar du VR-videor i början när en video spelas in eller spelas in med 360-graderskameror.
    ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
    *En 360 VR-videobildskärm.*
 
-1. Välj **[!UICONTROL Close]** längst upp till höger på förhandsgranskningssidan.
+1. Välj i det övre högra hörnet på förhandsvisningssidan **[!UICONTROL Close]**.
 
 ## Publicera 360-video {#publishing-video}
 
 Om du vill använda 360-video måste du publicera den. När du publicerar en 360-video aktiveras URL:en och Bädda in kod. Dessutom publiceras 360-videon i Dynamic Media-molnet, som är integrerat med ett CDN för skalbar leverans och leverans med höga prestanda.
 
-Mer information om hur du publicerar 360-video finns i [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+Se [Publicera Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) om du vill ha information om hur du publicerar 360-video.
 Se även [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-Se även [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till [!DNL Experience Manager Sites]-sidor.
+Se även [Länka URL:er till webbprogrammet](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md). Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till [!DNL Experience Manager Sites] sidor.
 Se även [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).

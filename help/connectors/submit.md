@@ -54,4 +54,4 @@ Om ISV-partnern är värd för anslutningen på en Internet-åtkomlig (till exem
 </repository>
 ```
 
-Om ISV-partnern väljer att distribuera anslutningsprogrammet som hämtningsbara filer, ska ISV-partnern ge instruktioner om hur filerna kan distribueras till en lokal filsystemmaven som måste checkas in i Git som en del av AEM, så att Cloud Manager kan lösa dessa beroenden.
+Om ISV-partnern väljer att distribuera anslutningsprogrammet som hämtningsbara filer, ska ISV-partnern ge instruktioner om hur filerna kan distribueras till en lokal filsystemmaven-databas som måste checkas in i Git som en del av AEM, så att Cloud Manager kan lösa dessa beroenden.

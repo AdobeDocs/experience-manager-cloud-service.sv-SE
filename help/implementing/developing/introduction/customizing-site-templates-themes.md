@@ -3,13 +3,13 @@ title: Anpassa webbplatsmallar och teman
 description: Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet och hur teman används för att definiera webbplatsformat så att du snabbt kan skapa webbplatser.
 feature: Administering
 role: Admin
-source-git-commit: 0babdc80421c8a2a4be55d005884475dcebeda84
+exl-id: dc20f26c-59f0-4244-9797-926f25ed4da3
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 1%
 
 ---
-
 
 # Anpassa webbplatsmallar och teman {#customizing-site-templates-themes}
 

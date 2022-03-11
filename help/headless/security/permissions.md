@@ -1,14 +1,14 @@
 ---
-title: 'Behörighetsaspekter för headless-innehåll '
+title: Behörighetsaspekter för headless-innehåll
 description: Läs om olika behörigheter och ACL-överväganden för en headless-implementering med Adobe Experience Manager. Förstå de olika personifieringsnivåer och behörighetsnivåer som krävs för både författarmiljön och publiceringsmiljön.
 feature: Content Fragments,GraphQL API
-source-git-commit: c5d67e0ece40cdf7a9009436ec90305fe81425a2
+exl-id: 3fbee755-2fa4-471b-83fc-3f4bf056267a
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 0%
 
 ---
-
 
 # Behörighetsaspekter för headless-innehåll
 
@@ -98,4 +98,3 @@ The [AEM Headless SDK](https://github.com/adobe/aem-headless-client-js#create-ae
 ### Åtkomst till GraphQL API
 
 HTTP-begäranden som ger [lämpliga autentiseringsuppgifter](https://github.com/adobe/aem-headless-client-js#create-aemheadless-client) till AEM Publish-tjänstens GraphQL API-slutpunkter innehåller innehåll som inloggningsuppgifterna har behörighet att läsa och anonymt tillgängligt innehåll. Andra användare av GraphQL API kan inte läsa innehållet i de CUG-skyddade mapparna.
-

@@ -14,17 +14,17 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_domains"
 >title="Hantera anpassade domännamn"
->abstract="Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Din Adobe Experience Manager som Cloud Service etableras med ett standarddomännamn som slutar på *.adobeaemcloud.com. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen."
+>abstract="Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Din Adobe Experience Manager as a Cloud Service etableras med ett standarddomännamn som slutar på *.adobeaemcloud.com. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name.html" text="Lägga till ett anpassat domännamn"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.html" text="Visa och uppdatera anpassat domännamn"
 
-Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Din Adobe Experience Manager som Cloud Service etableras med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen.
+Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Din Adobe Experience Manager as a Cloud Service etableras med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen.
 
 >[!NOTE]
->Anpassade domännamn stöds endast i Cloud Manager för Sites Programs (Publiceringstjänst). Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö. AEM som en Cloud Service saknar stöd för jokerteckendomäner.
+>Anpassade domännamn stöds endast i Cloud Manager för Sites Programs (Publiceringstjänst). Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö. AEM as a Cloud Service stöder inte jokerteckendomäner.
 
 Med hjälp av sidan Domäninställningar för användargränssnitt i Cloud Manager, eller sidan Miljöinformation, kan en användare med behörighet utföra flera åtgärder för att hantera anpassade domännamn för dina miljöer, bland annat:
 
 * [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
-* [Visa eller uppdatera ett anpassat ](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md) domännamn som gör att en användare kan visa information eller ersätta ett certifikat som håller på att upphöra att gälla
+* [Visa eller uppdatera ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md) som gör det möjligt för en användare att visa information eller ersätta ett certifikat som snart upphör att gälla
 * [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)

@@ -1,13 +1,13 @@
 ---
 title: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 description: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
-source-git-commit: a1c57a9d8165c9e67ce270a3f0c2ad80c75b7196
+exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '1503'
 ht-degree: 25%
 
 ---
-
 
 # Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring {#guidelines}
 

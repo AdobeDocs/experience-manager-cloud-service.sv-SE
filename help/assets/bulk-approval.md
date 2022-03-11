@@ -2,12 +2,12 @@
 title: Granska resurser i mappar och samlingar
 description: Ställ in granskningsarbetsflöden för material i en mapp eller en samling och dela dem med granskare eller kreativa partners för att få feedback.
 contentOwner: AG
-feature: samlingar,Samarbete
+feature: Collections,Collaboration
 role: User
 exl-id: 1e5bdd66-2707-4584-87ed-a0ff1bde3718
 source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '745'
 ht-degree: 21%
 
 ---
@@ -27,17 +27,17 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![chlimage_1-403](assets/chlimage_1-403.png)
 
-1. (Valfritt) I listan **[!UICONTROL Project]** väljer du det projekt som du vill associera granskningsaktiviteten med. Alternativet **[!UICONTROL None]** är valt som standard. Om du inte vill associera något projekt med granskningsaktiviteten ska du behålla det här valet.
+1. (Valfritt) Från **[!UICONTROL Project]** väljer du det projekt som du vill associera granskningsuppgiften med. Som standard är **[!UICONTROL None]** är markerat. Om du inte vill associera något projekt med granskningsaktiviteten ska du behålla det här valet.
 
    >[!NOTE]
    >
-   >Endast de projekt som du har redigeringsbehörighet för (eller högre) visas i listan **[!UICONTROL Projects]**.
+   >Endast de projekt som du har redigeringsbehörighet för (eller högre) visas i **[!UICONTROL Projects]** lista.
 
-1. Ange ett namn för granskningsaktiviteten och välj en godkännare i listan **[!UICONTROL Assign To]**.
+1. Ange ett namn för granskningsaktiviteten och välj en godkännare på menyn **[!UICONTROL Assign To]** lista.
 
    >[!NOTE]
    >
-   >Medlemmarna/grupperna i det valda projektet är tillgängliga som godkännare i **[!UICONTROL Assign To]**-listan.
+   >Medlemmarna/grupperna i det valda projektet är tillgängliga som godkännare i **[!UICONTROL Assign To]** lista.
 
 1. Ange en beskrivning, uppgiftsprioritet och förfallodatum för granskningsaktiviteten.
 
@@ -48,7 +48,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
    ![review_name](assets/review_name.png)
 
 1. Tryck/klicka på **[!UICONTROL Submit]** och tryck/klicka sedan på **[!UICONTROL Done]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
-1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till resursgränssnittet. Om du vill godkänna resurser klickar/trycker du på ikonen **[!UICONTROL Notifications]** och väljer sedan granskningsåtgärden i listan.
+1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till resursgränssnittet. Klicka/tryck på knappen **[!UICONTROL Notifications]** och välj sedan en granskningsåtgärd i listan.
 
    ![meddelande](assets/notification.png)
 
@@ -57,7 +57,7 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![review_task](assets/review_task.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Complete]** i verktygsfältet. Skriv en kommentar i dialogrutan och tryck/klicka på **[!UICONTROL Complete]** för att bekräfta.
+1. Tryck/klicka på ikonen **[!UICONTROL Complete]** i verktygsfältet. Ange en kommentar i dialogrutan och tryck/klicka  **[!UICONTROL Complete]** för att bekräfta.
 1. Navigera till resursgränssnittet och öppna mappen. Ikonerna för godkännandestatus för resurserna visas både i kort- och listvyn.
 
    **Kortvy**
@@ -75,30 +75,30 @@ När granskaren har slutfört granskningen (godkänner eller avvisar resurser) f
 
    ![chlimage_1-405](assets/chlimage_1-405.png)
 
-1. (Valfritt) I listan **[!UICONTROL Project]** väljer du det projekt som du vill associera granskningsaktiviteten med. Alternativet **[!UICONTROL None]** är valt som standard. Om du inte vill associera något projekt med granskningsaktiviteten ska du behålla det här valet.
+1. (Valfritt) Från **[!UICONTROL Project]** väljer du det projekt som du vill associera granskningsuppgiften med. Som standard är **[!UICONTROL None]** är markerat. Om du inte vill associera något projekt med granskningsaktiviteten ska du behålla det här valet.
 
    >[!NOTE]
    >
-   >Endast de projekt som du har redigeringsbehörighet för (eller högre) visas i listan **[!UICONTROL Projects]**.
+   >Endast de projekt som du har redigeringsbehörighet för (eller högre) visas i **[!UICONTROL Projects]** lista.
 
-1. Ange ett namn för granskningsaktiviteten och välj en godkännare i listan **[!UICONTROL Assign To]**.
+1. Ange ett namn för granskningsaktiviteten och välj en godkännare på menyn **[!UICONTROL Assign To]** lista.
 
    >[!NOTE]
    >
-   >Medlemmarna/grupperna i det valda projektet är tillgängliga som godkännare i **[!UICONTROL Assign To]**-listan.
+   >Medlemmarna/grupperna i det valda projektet är tillgängliga som godkännare i **[!UICONTROL Assign To]** lista.
 
 1. Ange en beskrivning, uppgiftsprioritet och förfallodatum för granskningsaktiviteten.
 
    ![task_details-collection](assets/task_details-collection.png)
 
 1. Tryck/klicka på **[!UICONTROL Submit]** och tryck/klicka sedan på **[!UICONTROL Done]** för att stänga bekräftelsemeddelandet. Ett meddelande om den nya uppgiften skickas till godkännaren.
-1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till Assets-konsolen. Om du vill godkänna resurser trycker/klickar du på ikonen **[!UICONTROL Notifications]** och väljer sedan granskningsåtgärden i listan.
+1. Logga in på [!DNL Experience Manager Assets] som godkännare och navigera till Assets-konsolen. Godkänn resurser genom att trycka/klicka på **[!UICONTROL Notifications]** och välj sedan en granskningsåtgärd i listan.
 1. Granska informationen om granskningsuppgiften på sidan **[!UICONTROL Review Task]** och tryck/klicka sedan på **[!UICONTROL Review]**.
-1. Alla resurser i samlingen visas på granskningssidan. Markera resurserna och tryck/klicka på ikonen **[!UICONTROL Approve/Reject]** för att godkänna eller avvisa resurser.
+1. Alla resurser i samlingen visas på granskningssidan. Markera resurserna och tryck/klicka på **[!UICONTROL Approve/Reject]** -ikon för att godkänna eller avvisa resurser.
 
    ![review_task_collection](assets/review_task_collection.png)
 
-1. Tryck/klicka på ikonen **[!UICONTROL Complete]** i verktygsfältet. Skriv en kommentar i dialogrutan och tryck/klicka på **[!UICONTROL Complete]** för att bekräfta.
+1. Tryck/klicka på ikonen **[!UICONTROL Complete]** i verktygsfältet. Ange en kommentar i dialogrutan och tryck/klicka **[!UICONTROL Complete]** för att bekräfta.
 1. Navigera till samlingskonsolen och öppna samlingen. Ikonerna för godkännandestatus för resurserna visas både i kort- och listvyn.
 
    **Kortvy**

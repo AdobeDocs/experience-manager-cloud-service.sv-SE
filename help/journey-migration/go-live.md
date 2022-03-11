@@ -1,13 +1,13 @@
 ---
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
-source-git-commit: fe0261fa9708b2250b6f5e4931100a9fc006e55d
+exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '1319'
 ht-degree: 0%
 
 ---
-
 
 # GoLive {#go-live}
 

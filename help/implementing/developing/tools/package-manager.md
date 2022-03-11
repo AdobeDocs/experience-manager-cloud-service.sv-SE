@@ -3,13 +3,13 @@ title: Pakethanteraren
 description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering
 role: Admin
-source-git-commit: 108ebef7e2ea79323d873a126cc89aef26faae60
+exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '3584'
 ht-degree: 0%
 
 ---
-
 
 # Pakethanteraren {#working-with-packages}
 

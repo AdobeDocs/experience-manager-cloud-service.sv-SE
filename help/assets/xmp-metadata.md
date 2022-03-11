@@ -7,7 +7,7 @@ role: User,Admin
 exl-id: fd9af408-d2a3-4c7a-9423-c4b69166f873
 source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 16%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 16%
 
 XMP (Extensible Metadata Platform) är den metadatastandard som används av Experience Manager Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, innehåller XMP en omfattande [innehållsmodell](#xmp-core-concepts) och [stöds av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Assets] har en kraftfull plattform att bygga vidare på.
+Förutom universell metadatakodning som kan bäddas in i alla filformat har XMP [innehållsmodell](#xmp-core-concepts) och är [stöds av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Assets] har en kraftfull plattform att bygga vidare på.
 
 ## XMP översikt och ekosystem {#xmp-ecosystem}
 
 [!DNL Assets] stöder XMP metadatastandard. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
-Produktionsproffs kan t.ex. använda det inbyggda XMP-stödet i Adobe-program för att skicka information till flera filformat. Databasen [!DNL Assets] extraherar XMP metadata och använder den för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
+Produktionsproffs kan t.ex. använda det inbyggda XMP-stödet i Adobe-program för att skicka information till flera filformat. The [!DNL Assets] databasen extraherar XMP metadata och använder den för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
 
 XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillhandahålla en datamodell, en lagringsmodell och scheman. Alla dessa begrepp beskrivs i detta avsnitt.
 
@@ -47,16 +47,15 @@ XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassa
 
 >[!NOTE]
 >
->XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, till exempel miniatyrbilder, måste de kodas i ett XML-anpassat format som `Base64`.
+>XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, t.ex. miniatyrbilder, måste de kodas i ett XML-anpassat format, t.ex. `Base64`.
 
 ### XMP grundläggande begrepp {#xmp-core-concepts}
 
 **Namnutrymmen och scheman**
 
-Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller
-datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
+Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
 
-Egenskapen **Creator** i två oberoende utformade scheman kan till exempel betyda den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
+Till exempel **Skapare** i två oberoende utformade scheman kan betyda den person som skapade resursen eller det kan betyda programmet som skapade resursen (till exempel Adobe Photoshop).
 
 **XMP egenskaper och värden**
 
@@ -69,43 +68,43 @@ XMP kan innehålla egenskaper från ett eller flera av scheman. En vanlig delmä
 
 **Språkalternativ**
 
-XMP ger dig möjlighet att lägga till en `xml:lang`-egenskap i textegenskaper för att ange textens språk.
+XMP ger dig möjlighet att lägga till en `xml:lang` egenskapen till textegenskaper för att ange textens språk.
 
 ## XMP till återgivning {#xmp-writeback-to-renditions}
 
-Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen.
-När du ändrar metadata för en resurs från [!DNL Assets] eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin. Med återskrivningsfunktionen kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder namnutrymmet `jcr`, d.v.s. egenskapen `dc:title` skrivs tillbaka, men egenskapen `mytitle` skrivs inte tillbaka.
+Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] återger metadataändringarna i återgivningarna av den ursprungliga resursen.
+När du ändrar metadata för en resurs från [!DNL Assets] När du överför resursen lagras ändringarna först i metadatanoden i resurshierarkin. Med återskrivningsfunktionen kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder `jcr` namespace, d.v.s. en egenskap med namnet `dc:title` skrivs tillbaka men egenskapen heter `mytitle` inte.
 
-Tänk dig ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen `Classic Leather` till `Nylon`.
+Tänk dig ett scenario där du ändrar [!UICONTROL Title] egenskap för tillgången i namnet `Classic Leather` till `Nylon`.
 
 ![metadata](assets/metadata.png)
 
-I det här fallet sparar [!DNL Assets] ändringarna av egenskapen **[!UICONTROL Title]** i parametern `dc:title` för de metadata för resursen som lagras i resurshierarkin.
+I detta fall [!DNL Assets] sparar ändringarna i **[!UICONTROL Title]** -egenskapen i `dc:title` parameter för resursens metadata som lagras i resurshierarkin.
 
 ![metadata som lagras i resursnoden i databasen](assets/metadata_stored.png)
 
 >[!IMPORTANT]
 >
->Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur du [aktiverar tillbakaskrivning av metadata](#enable-xmp-writeback). MSM för digitala resurser fungerar inte när återkoppling av metadata är aktiverat. Vid tillbakaskrivning avbryts arvet.
+>Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur man [aktivera metadatatillbakaskrivning](#enable-xmp-writeback). MSM för digitala resurser fungerar inte när återkoppling av metadata är aktiverat. Vid tillbakaskrivning avbryts arvet.
 
 ### Aktivera XMP {#enable-xmp-writeback}
 
 [!UICONTROL DAM Metadata Writeback] arbetsflödet används för att skriva tillbaka metadata för en resurs. Om du vill aktivera tillbakaskrivning följer du någon av följande tre metoder:
 
 * Använd startprogram.
-* Starta `DAM MetaData Writeback`-arbetsflödet manuellt.
+* Starta manuellt `DAM MetaData Writeback` arbetsflöde.
 * Konfigurera arbetsflödet som en del av efterbearbetningen.
 
 Så här använder du Launcher:
 
-1. Som administratör ska du gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
-1. Markera [!UICONTROL Launcher] som **[!UICONTROL Workflow]**-kolumnen visar **[!UICONTROL DAM MetaData Writeback]**. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
+1. Som administratör får du åtkomst **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Launchers]**.
+1. Välj [!UICONTROL Launcher] som **[!UICONTROL Workflow]** kolumn visas **[!UICONTROL DAM MetaData Writeback]**. Klicka på **[!UICONTROL Properties]** i verktygsfältet.
 
    ![Välj DAM-metadataåterskrivningsstartaren för att ändra dess egenskaper och aktivera den](assets/launcher-properties-metadata-writeback1.png)
 
-1. Välj **[!UICONTROL Activate]** på sidan **[!UICONTROL Launcher Properties]**. Klicka på **[!UICONTROL Save & Close]**.
+1. Välj **[!UICONTROL Activate]** på **[!UICONTROL Launcher Properties]** sida. Klicka på **[!UICONTROL Save & Close]**.
 
-Om du vill använda arbetsflödet för en resurs manuellt bara en gång, använder du arbetsflödet [!UICONTROL DAM Metadata Writeback] från den vänstra listen.
+Om du bara vill tillämpa arbetsflödet på en resurs manuellt en gång använder du [!UICONTROL DAM Metadata Writeback] arbetsflöde från den vänstra listen.
 
 Om du vill använda arbetsflödet på alla överförda resurser lägger du till arbetsflödet i en efterbearbetningsprofil.
 

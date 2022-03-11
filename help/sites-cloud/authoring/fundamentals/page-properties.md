@@ -21,9 +21,9 @@ Egenskaperna fördelas på flera flikar.
 
 * **Titel och taggar**
 
-   * **Titel**  - Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyn **Platser** kort/lista.
+   * **Titel** - Sidans rubrik visas på olika platser. Till exempel **Webbplatser** tabblista och **Webbplatser** kort-/listvyer.
       * Detta är ett obligatoriskt fält.
-   * **Taggar**  - Här kan du lägga till eller ta bort taggar från sidan genom att uppdatera listan i markeringsrutan.
+   * **Taggar** - Här kan du lägga till eller ta bort taggar från sidan genom att uppdatera listan i valrutan.
       * När du har valt en tagg visas den under markeringsrutan. Du kan ta bort en tagg från den här listan med hjälp av x.
       * Du kan ange en helt ny tagg genom att skriva namnet i en tom markeringsruta.
          * Den nya taggen skapas när du trycker på Retur.
@@ -31,51 +31,51 @@ Egenskaperna fördelas på flera flikar.
       * Med den nedrullningsbara menyn kan du välja bland befintliga taggar.
       * Ett x-tecken visas när du för musen över en taggpost i markeringsrutan, som kan användas för att ta bort taggen för den här sidan.
       * Mer information om taggar finns i [Använda taggar](/help/sites-cloud/authoring/features/tags.md).
-   * **Dölj i navigering**  - Anger om sidan visas eller döljs i sidnavigeringen för den slutliga platsen.
+   * **Dölj i navigering** - Anger om sidan visas eller döljs i sidnavigeringen på den slutliga platsen.
 
 * **Varumärke**
 
-   Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+   Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Kärnkomponenter.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
-   * **Åsidosätt**  - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
-      * Värdet ärvs av alla underordnade sidor såvida inte deras **Åsidosätt**-värden har angetts.
-   * **Åsidosätt värde**  - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
+   * **Åsidosätt** - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
+      * Värdet ärvs av alla underordnade sidor såvida de inte också har sina **Åsidosätt** värden anges.
+   * **Åsidosätt värde** - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
       * Värdet läggs till i sidrubriken efter ett lodstreck som &quot;Cycling Tuscany&quot; | Alltid redo för WKND&quot;
 
-* **HTML-ID**
+* **HTML ID**
 
    * **ID** - HTML-ID som ska användas för komponenten.
 
 * **Fler rubriker och beskrivning**
 
-   * **Sidrubrik**  - En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom kommer **Title** att användas.
-   * **Navigeringsrubrik**  - Du kan ange en separat rubrik som ska användas i navigeringen (t.ex. om du vill ha något mer koncist). Om den är tom används **titeln**.
-   * **Underrubrik**  - En underrubrik som kan användas på sidan.
-   * **Beskrivning**  - Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
+   * **Sidrubrik** - En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom **Titel** kommer att användas.
+   * **Navigeringsrubrik** - Du kan ange en separat rubrik som ska användas i navigeringen (t.ex. om du vill ha något mer koncist). Om den är tom visas **Titel** kommer att användas.
+   * **Underrubrik** - En underrubrik som ska användas på sidan.
+   * **Beskrivning** - Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
 
 * **På/av-tid**
 
    >[!NOTE]
    >
-   > Mer information om hur du konfigurerar den relaterade automatiska replikeringen finns i [På- och Av-tider - Utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration).
+   > Se [På- och avaktiveringstider - utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration) om du vill ha mer information om hur du konfigurerar den relaterade automatiska replikeringen.
 
    >[!NOTE]
-   >Om **On Time** eller **Off Time** redan är aktiverat och automatisk replikering har konfigurerats, kommer den relevanta åtgärden att aktiveras omedelbart.
+   >Om någon av **I tid** eller **Fråntid** är tidigare och automatisk replikering har konfigurerats, kommer den relevanta åtgärden att utlösas omedelbart.
 
-   * **Tid**  - Det datum och den tidpunkt då den publicerade sidan visas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
+   * **I tid** - Det datum och den tidpunkt då den publicerade sidan ska synas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
 
-      * Om redan [har publicerats (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) kommer den här sidan att behållas vilande (dold) tills den återges vid den angivna tidpunkten.
+      * Om redan [publicerad (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) den här sidan behålls vilande (dold) tills den återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och konfigureras för automatisk replikering kommer den att publiceras automatiskt och sedan återges vid den angivna tidpunkten.
-      * Om sidan inte publiceras och inte är konfigurerad för automatisk replikering, kommer den inte att publiceras automatiskt. Därför visas 404 när du försöker komma åt sidan.
-   * **Fråntid**  - I likhet med och används ofta i kombination med  **På tid**, definierar detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
+      * Om sidan inte publiceras och inte är konfigurerad för automatisk replikering kommer den inte att publiceras automatiskt. Därför visas 404 när du försöker komma åt sidan.
+   * **Fråntid** - Liknar och används ofta i kombination med **I tid** definierar detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
 
-   * Lämna dessa fält (**På tid** och **Fråntid**) tomma för sidor som du vill publicera omedelbart och som är tillgängliga i publiceringsmiljön tills de inaktiveras (standardscenariot).
+   * Lämna dessa fält (**I tid** och **Fråntid**) är tom för sidor som du vill publicera omedelbart och som finns tillgängliga i publiceringsmiljön tills de har inaktiverats (standardscenariot).
 
 
 * **Vanity URL**
 
-   * Gör att du kan ange en fågel-URL för den här sidan, vilket kan ge dig en kortare och/eller mer uttrycksfull URL.
-   * Om Vanity-URL:en till exempel är inställd på `welcome` till den sida som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`, blir `http://example.com/welcome` vanity-URL:en `http://example.com/content/v1.0/startpage`
+   * Gör att du kan ange en egen URL för den här sidan, vilket kan göra att du kan ha en kortare och/eller mer uttrycksfull URL.
+   * Om Vanity-URL:en till exempel är inställd på `welcome` till sidan som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`sedan `http://example.com/welcome` skulle vara den vanligaste URL:en för `http://example.com/content/v1.0/startpage`
 
    >[!CAUTION]
    >
@@ -86,24 +86,24 @@ Egenskaperna fördelas på flera flikar.
    >* Ska inte anges till en befintlig sida.
 
 
-   * **Lägg till**  - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
+   * **Lägg till** - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
       * Tryck eller klicka igen för att lägga till flera.
-      * Tryck eller klicka på ikonen **Ta bort** för att ta bort fågel-URL:en.
-   * **Omdirigerings-URL**  för vanity - Anger om du vill att sidan ska använda standard-URL:en.
+      * Tryck eller klicka på **Ta bort** -ikonen för att ta bort fågel-URL:en.
+   * **URL för omdirigering** - Anger om du vill att sidan ska använda fågel-URL:en.
 
 
 ### Avancerat {#advanced}
 
 * **Inställningar**
 
-   * **Språk**  - sidspråket
-   * **Språkrot**  - Måste kontrolleras om sidan är roten för en språkkopia
-   * **Omdirigering**  - Anger den sida som den här sidan automatiskt ska omdirigeras till
-   * **Design**  - Anger om sidan visas eller döljs i sidnavigeringen på den slutliga webbplatsen
-   * **Alias**  - Anger ett alias som ska användas för den här sidan
-      * Om du till exempel definierar ett alias på `private` för sidan `/content/wknd/us/en/magazine/members-only` kan du även komma åt den här sidan via `/content/wknd/us/en/magazine/private`
-      * Om du skapar ett alias anges egenskapen `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
-      * Sidor som används av alias i redigeraren kan inte publiceras. [Publiceringsalternativen ](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+   * **Språk** - Sidspråket
+   * **Språkrot** - Måste kontrolleras om sidan är roten i en språkkopia
+   * **Omdirigering** - Anger den sida som den här sidan automatiskt ska omdirigeras till
+   * **Design** - Anger om sidan visas eller döljs i sidnavigeringen på den slutliga webbplatsen
+   * **Alias** - Anger ett alias som ska användas med den här sidan
+      * Om du till exempel definierar ett alias för `private` för sidan `/content/wknd/us/en/magazine/members-only`kan den här sidan också öppnas via `/content/wknd/us/en/magazine/private`
+      * När du skapar ett alias anges `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
+      * Sidor som används av alias i redigeraren kan inte publiceras. [Publiceringsalternativ](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
    <!--
   >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
@@ -111,40 +111,40 @@ Egenskaperna fördelas på flera flikar.
 
 * **Konfiguration**
 
-   * **Molnkonfiguration**  - Sökvägen till konfigurationen
+   * **Molnkonfiguration** - Sökvägen till konfigurationen
 
 * **Mallinställningar**
 
-   * **Tillåtna mallar**  -  [Definierar listan med mallar som ska vara ](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) tillgängliga i den här undergrenen
+   * **Tillåtna mallar** - [Definierar listan med mallar som ska vara tillgängliga](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) inom denna underavdelning
 
 * **Autentiseringskrav**
 
-   * **Aktivera**  - Aktivera användning av autentisering för att komma åt sidan
+   * **Aktivera** - Aktivera användning av autentisering för att komma åt sidan
 
       >[!NOTE]
       >
-      >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](#permissions)**.
+      >Stängda användargrupper för sidan definieras på **[Behörigheter](#permissions)** -fliken.
 
-   * **Inloggningssida**  - Den sida som ska användas för inloggning
+   * **Inloggningssida** - Den sida som ska användas för inloggning
 
 * **Exportera**
 
-   * **Exportkonfiguration**  - Anger en exportkonfiguration
+   * **Exportera konfiguration** - Anger en exportkonfiguration
 
 ### Miniatyrbild {#thumbnail}
 
 Konfigurera sidminiatyrbilden
 
-* **Generera förhandsvisning**  - Generera en förhandsvisning av sidan som ska användas som miniatyrbild
-* **Överför bild**  - Överför en bild som ska användas som miniatyrbild
-* **Välj bild** - Välj en befintlig resurs som du vill använda som miniatyrbild
-* **Återställ**  - Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
+* **Generera förhandsgranskning** - Generera en förhandsgranskning av sidan som ska användas som miniatyrbild
+* **Överför bild** - Överför en bild som ska användas som miniatyrbild
+* **Välj bild** - Välj en befintlig resurs som ska användas som miniatyrbild
+* **Återställ** - Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
 
 ### Sociala medier {#social-media}
 
 * **Delning i sociala medier**
 
-   Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Delningskärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/sharing.html).
+   Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Dela kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/sharing.html).
 
    * **Aktivera användardelning för Facebook**
    * **Aktivera användardelning för Pinterest**
@@ -153,7 +153,7 @@ Konfigurera sidminiatyrbilden
 
 ### Cloud Services {#cloud-services}
 
-* **Cloud Service Configurations**  - Definiera egenskaper för molntjänster
+* **Cloud Service Configurations** - Definiera egenskaper för molntjänster
 
    <!--Define properties for [cloud services](/help/sites-developing/extending-cloud-config.md).
   -->
@@ -162,14 +162,14 @@ Konfigurera sidminiatyrbilden
 
 * **ContextHub-konfigurationer**
 
-   * **ContextHub-sökväg**  - Definiera  [ContextHub-konfigurationen](/help/sites-cloud/authoring/personalization/contexthub.md)
-   * **Segmentbana**  - Definiera  [segmentbanan](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
+   * **ContextHub-sökväg** - Definiera [ContextHub-konfiguration](/help/sites-cloud/authoring/personalization/contexthub.md)
+   * **Segmentsökväg** - Definiera [Segmentbana](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
 
 * **Målkonfiguration**
 
-   * **Varumärke**  - Definierar ett  [varumärke för att ange ett omfång för målgruppsanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
+   * **Varumärke** - Definierar en [Varumärke som anger ett omfång för målanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
    >[!NOTE]
-   >Det här alternativet kräver att användarkontot finns i `Target Administrators`gruppen.
+   >Det här alternativet kräver att användarkontot finns i `Target Administrators`grupp.
 
 ### Behörigheter {#permissions}
 
@@ -187,18 +187,18 @@ Konfigurera sidminiatyrbilden
 
 ### Blueprint {#blueprint}
 
-Den här fliken visas bara för sidor som fungerar som utkast. Utformningar fungerar som bas för Live-kopior och ingår i [Multi Site Management.](/help/sites-cloud/administering/msm/overview.md)
+Den här fliken visas bara för sidor som fungerar som utkast. Kort text utgör grunden för Live-kopior som ingår i [Hantering av flera webbplatser.](/help/sites-cloud/administering/msm/overview.md)
 
-* **Aktuella Live-kopior**  - Visar en lista över sidor som är baserade på (dvs. är Live-kopior av) den här designsidan
+* **Aktuella Live-kopior** - Visar en lista över sidor som är baserade (d.v.s. live-kopior av) på den här översiktssidan
 
-* **Utrullningskonfigurationer**  - Styr under vilka omständigheter ändringar ska spridas till Live Copy
+* **Utrullningskonfigurationer** - Styr under vilka omständigheter ändringar ska spridas till Live Copy
 
 ### Live Copy {#live-copy}
 
-* **Synkronisera**  - Synkronisera Live Copy med utkast, med lokala ändringar
-* **Återställ**  - Återställ live-kopia till läget för utkast, ta bort lokala ändringar
-* **Gör uppehåll**  - Skjut upp Live Copy från ytterligare idriftsättningsändringar
-* **Frigör**  - Frigör Live-kopia från utkast
+* **Synkronisera** - Synkronisera Live Copy med utkast, med lokala ändringar
+* **Återställ** - Återställ live-kopia till blå text och ta bort lokala ändringar
+* **Gör uppehåll** - Skjut upp Live Copy från ytterligare ändringar
+* **Koppla loss** - Frigör Live Copy från utkast
 
 * **Källa**
 
@@ -210,9 +210,9 @@ Den här fliken visas bara för sidor som fungerar som utkast. Utformningar fung
 
 * **Konfiguration**
 
-   * **Live Copy-arv**  - Om det här alternativet är markerat gäller Live Copy-konfigurationen för alla underordnade
-   * **Ärv utrullningskonfigurationer från överordnad**  - Om det här alternativet är markerat ärvs rollout-konfigurationen från sidans överordnade objekt
-   * **Välj utrullningskonfiguration**  - Definierar under vilka omständigheter ändringar ska spridas från utkast och bara vara tillgängliga när  **Inherit Rollout Configs från** Parentis inte har valts
+   * **Live Copy-arv** - Om det här alternativet är markerat gäller konfigurationen för Live Copy för alla underordnade
+   * **Ärv utrullningskonfigurationer från överordnad** - Om det här alternativet är markerat ärvs utrullningskonfigurationen från sidans överordnade objekt
+   * **Välj utrullningskonfiguration** - Definierar under vilka omständigheter ändringar ska spridas från utkast och endast vara tillgängliga när **Ärv utrullningskonfigurationer från överordnad** är inte markerad
 
 ### Förhandsgranska {#preview}
 
@@ -222,9 +222,9 @@ När en förhandsvisningsmiljö är aktiverad ser du:
 
 ## Redigera sidegenskaper {#editing-page-properties-1}
 
-* Från konsolen **Platser**:
-   * [Skapa en ny sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page)  (en deluppsättning av egenskaperna)
-   * Klicka eller peka på **Egenskaper**
+* Från **Webbplatser** konsol:
+   * [Skapa en ny sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page) (en delmängd av egenskaperna)
+   * Klicka eller peka **Egenskaper**
       * För en enstaka sida
       * För flera sidor (endast en deluppsättning av egenskaperna är tillgängliga för redigering av en masse)
 * Från sidredigeraren:
@@ -232,10 +232,10 @@ När en förhandsvisningsmiljö är aktiverad ser du:
 
 ### Från webbplatskonsolen - en sida {#from-the-sites-console-single-page}
 
-Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
+Klicka eller peka **Egenskaper** för att definiera sidegenskaperna:
 
-1. Använd konsolen **Platser** för att navigera till platsen för sidan som du vill visa och redigera egenskaper för.
-1. Välj alternativet **Egenskaper** för den begärda sidan med hjälp av:
+1. Använda **Webbplatser** navigera till platsen för sidan som du vill visa och redigera egenskaper för.
+1. Välj **Egenskaper** för den önskade sidan med något av följande alternativ:
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
    * [Markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources)
    * Sidegenskaperna visas med rätt flikar.
@@ -247,11 +247,11 @@ Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 När du redigerar en sida kan du använda **Sidinformation** för att definiera sidegenskaperna:
 
 1. Öppna sidan som du vill redigera egenskaper för.
-1. Välj ikonen **Sidinformation** för att öppna markeringsmenyn:
+1. Välj **Sidinformation** -ikon för att öppna markeringsmenyn:
 1. Välj **Öppna egenskaper** så öppnas en dialogruta där du kan redigera egenskaperna. Följande knappar finns också till höger om verktygsfältet:
    * **Avbryt**
    * **Spara och stäng**
-1. Använd knappen **Spara och stäng** för att spara ändringarna.
+1. Använd **Spara och stäng** för att spara ändringarna.
 
 ### Från webbplatskonsolen - flera sidor {#from-the-sites-console-multiple-pages}
 
@@ -261,7 +261,7 @@ På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egen
 >
 >Det finns även massredigering av egenskaper för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i Redigera egenskaper för flera resurser.
 >
->Det finns också en gruppredigerare som du kan använda för att söka efter innehåll från flera sidor med GQL (Google Query Language) och sedan redigera innehållet direkt i gruppredigeraren innan du sparar ändringarna på originalsidorna.
+>Här finns också en gruppredigerare där du kan söka efter innehåll från flera sidor med GQL (Google Query Language) och sedan redigera innehållet direkt i gruppredigeraren innan du sparar ändringarna på originalsidorna.
 
 <!--
 >Bulk editing of properties is also available for Assets. It is very similar, but differs in a few points. See [Editing Properties of Multiple Assets](/help/assets/managing-multiple-assets.md) for details.
@@ -271,8 +271,8 @@ På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egen
 
 Du kan välja flera sidor för massredigering på olika sätt, bland annat:
 
-* När du bläddrar i konsolen **Platser**
-* När du har använt **Sök** för att hitta en uppsättning sidor
+* När du bläddrar **Webbplatser** konsol
+* Efter användning **Sök** för att hitta en uppsättning sidor
 
 När du har markerat sidorna och tryckt eller klickat på alternativet **Egenskaper**, visas massegenskaperna:
 
@@ -297,13 +297,13 @@ När du har valt Massredigering kan du:
       * Om du minskar sidmarkeringen till en sida visas alla egenskaper.
    * Vanliga egenskaper med ett gemensamt värde
       * Endast egenskaper med ett gemensamt värde visas i visningsläget.
-      * När fältet har flera värden (till exempel taggar) visas värden bara när *alla* är gemensamma. Om bara vissa är vanliga visas de bara när du redigerar.
+      * När fältet har flera värden (till exempel Taggar) visas värden endast när *alla* är vanliga. Om bara vissa är vanliga visas de bara när du redigerar.
       * När det inte finns några egenskaper med ett gemensamt värde visas ett meddelande.
 
 * **Redigera**
 
    * Du kan uppdatera värdena i de tillgängliga fälten.
-      * De nya värdena tillämpas på alla markerade sidor när du väljer **Klar**.
+      * De nya värdena tillämpas på alla markerade sidor när du markerar **Klar**.
       * När fältet har flera värden (till exempel Taggar) kan du antingen lägga till ett nytt värde eller ta bort ett gemensamt värde.
    * Fält som är gemensamma, men har olika värden på de olika sidorna, markeras med ett särskilt värde, t.ex. texten `<Mixed Entries>`. Du bör vara försiktig när du redigerar sådana fält för att förhindra dataförlust.
 

@@ -1,14 +1,13 @@
 ---
 title: Redigeringsbegrepp
 description: Begrepp att skapa i AEM
-translation-type: tm+mt
-source-git-commit: 92434d0dc29ac5fe1b395a2d34c8e48e2fdb7c97
+exl-id: ee9e4952-e075-4398-b31f-d7886153efff
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 1%
 
 ---
-
 
 # Redigeringsbegrepp {#authoring-concepts}
 
@@ -30,7 +29,7 @@ I redigeringsmiljön är AEM funktionalitet tillgänglig via AEM. För publiceri
 
 ## Författarmiljö {#author-environment}
 
-Författaren arbetar i **författarmiljön**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det kräver att författaren loggar in med ett konto som har tilldelats rätt åtkomstbehörighet.
+Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det kräver att författaren loggar in med ett konto som har tilldelats rätt åtkomstbehörighet.
 
 >[!NOTE]
 >
@@ -55,10 +54,10 @@ Det finns dessutom administrativa uppgifter som hjälper dig att hantera ditt in
 
 ## Publiceringsmiljö {#publish-environment}
 
-När det är klart publiceras webbplatsens innehåll i **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När det är klart publiceras webbplatsens innehåll på **publiceringsmiljö**. Här görs webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
-Mer information om att publicera och avpublicera sidor finns i dokumentet [Publicera sidor.](/help/sites-cloud/authoring/fundamentals/publishing-pages.md)
+Mer information om att publicera och avpublicera sidor finns i dokumentet [Publicerar sidor.](/help/sites-cloud/authoring/fundamentals/publishing-pages.md)
 
 ## Dispatcher {#dispatcher}
 
-**[dispatcher](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på webbplatsen.
+Om du vill optimera prestanda för besökare på webbplatsen kan du **[avsändare](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachning.

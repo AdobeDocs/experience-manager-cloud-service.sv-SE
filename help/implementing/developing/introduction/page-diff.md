@@ -1,14 +1,13 @@
 ---
 title: Developing and Page Diff
 description: Förstå hur funktionen för sidskillnader fungerar och hur den kan påverka en utvecklare
-translation-type: tm+mt
-source-git-commit: 57a9026dd944547196e53fecb1cf1213ed793af7
+exl-id: 03c08616-2203-4b90-bed6-4836266e2507
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
 
 ---
-
 
 # Developing and Page Diff {#developing-and-page-diff}
 
@@ -16,11 +15,11 @@ ht-degree: 0%
 
 Att skapa innehåll är en repetitiv process. Effektiv redigering kräver att man kan se vad som har ändrats från en iteration till en annan. Om du visar den ena sidversionen och den andra är ineffektiv och felbenägen kan uppstå. En författare vill kunna jämföra den aktuella sidan med en tidigare version sida vid sida med skillnaderna markerade.
 
-Med sidskillnader kan en användare jämföra den aktuella sidan med startsidor, tidigare versioner osv. Mer information om den här användarfunktionen finns i [Sidskillnad](/help/sites-cloud/authoring/features/page-diff.md).
+Med sidskillnader kan en användare jämföra den aktuella sidan med startsidor, tidigare versioner osv. Mer information om den här användarfunktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
 
-## Åtgärdsinformation {#operation-details}
+## Operationsinformation {#operation-details}
 
-När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta behövs för att kunna återge innehållet [för jämförelse sida vid sida](/help/sites-cloud/authoring/features/page-diff.md).
+När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta krävs för att innehållet ska kunna återges [för jämförelse sida vid sida](/help/sites-cloud/authoring/features/page-diff.md).
 
 Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRX DE Lite, skulle dock se dessa återskapade versioner i innehållsstrukturen.
 

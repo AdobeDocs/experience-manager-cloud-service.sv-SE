@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll kan du läsa vår [Site Translation Journey,](/help/journey-sites/translation/overview.md), där du vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 Sidor och resurser representeras som noder i JCR-databasen. Innehållet som extraheras är ett eller flera egenskapsvärden för noderna. Översättningsregler identifierar de egenskaper som innehåller innehållet som ska extraheras.
 
@@ -36,11 +36,11 @@ Reglerna innehåller följande information:
 * Namnen på nodegenskaperna som innehåller innehållet som ska översättas
    * Egenskapen kan vara specifik för en viss resurstyp eller för alla resurstyper.
 
-Du kan till exempel skapa en regel som översätter innehållet som författare lägger till i alla textkomponenter på sidorna. Regeln kan identifiera noden `/content` och egenskapen `text` för komponenten `core/wcm/components/text/v2/text`.
+Du kan till exempel skapa en regel som översätter innehållet som författare lägger till i alla textkomponenter på sidorna. Regeln kan identifiera `/content` noden och `text` -egenskapen för `core/wcm/components/text/v2/text` -komponenten.
 
 Det finns en [konsol](#translation-rules-ui) som har lagts till för att konfigurera översättningsregler. Definitionerna i användargränssnittet fyller i filen åt dig.
 
-En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](overview.md).
+En översikt över funktionerna för innehållsöversättning i AEM finns på [Översätta innehåll för flerspråkiga webbplatser](overview.md).
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ En översikt över funktionerna för översättning av innehåll i AEM finns i [
 
 ## Regelsyntax för sidor, komponenter och resurser {#rule-syntax-for-pages-components-and-assets}
 
-En regel är ett `node`-element med ett eller flera underordnade `property`-element och noll eller flera underordnade `node`-element:
+En regel är en `node` element med ett eller flera underordnade `property` element och noll eller fler underordnade `node` element:
 
 ```xml
 <node path="content path">
@@ -59,17 +59,17 @@ En regel är ett `node`-element med ett eller flera underordnade `property`-elem
 </node>
 ```
 
-Var och en av dessa `node`-element har följande egenskaper:
+Var och en av dessa `node` elementen har följande egenskaper:
 
-* Attributet `path` innehåller sökvägen till rotnoden för grenen som reglerna gäller för.
-* Underordnade `property`-element identifierar de nodegenskaper som ska översättas för alla resurstyper:
-   * Attributet `name` innehåller egenskapsnamnet.
-   * Det valfria attributet `translate` är lika med `false` om egenskapen inte är översatt. Som standard är värdet `true`. Det här attributet är användbart när du åsidosätter tidigare regler.
-* Underordnade `node`-element identifierar de nodegenskaper som ska översättas för specifika resurstyper:
-   * Attributet `resourceType` innehåller sökvägen som matchar komponenten som implementerar resurstypen.
-   * Underordnade `property`-element identifierar nodegenskapen som ska översättas. Använd den här noden på samma sätt som de underordnade `property`-elementen för nodregler.
+* The `path` -attributet innehåller sökvägen till rotnoden för grenen som reglerna gäller för.
+* Underordnad `property` element identifierar de nodegenskaper som ska översättas för alla resurstyper:
+   * The `name` -attributet innehåller egenskapsnamnet.
+   * Valfritt `translate` attribute equals `false` om egenskapen inte är översatt. Som standard är värdet `true`. Det här attributet är användbart när du åsidosätter tidigare regler.
+* Underordnad `node` element identifierar de nodegenskaper som ska översättas för specifika resurstyper:
+   * The `resourceType` -attributet innehåller sökvägen som matchar komponenten som implementerar resurstypen.
+   * Underordnad `property` element identifierar den nodegenskap som ska översättas. Använd den här noden på samma sätt som den underordnade noden `property` -element för nodregler.
 
-Följande exempelregel gör att innehållet i alla `text`-egenskaper översätts för alla sidor under noden `/content`. Regeln gäller för alla komponenter som lagrar innehåll i en `text`-egenskap, till exempel textkomponenten.
+Följande exempelregel orsakar innehållet i alla `text` egenskaper som ska översättas för alla sidor under `/content` nod. Regeln gäller för alla komponenter som lagrar innehåll i en `text` -egenskap, till exempel textkomponenten.
 
 ```xml
 <node path="/content">
@@ -77,7 +77,7 @@ Följande exempelregel gör att innehållet i alla `text`-egenskaper översätts
 </node>
 ```
 
-I följande exempel översätts innehållet i alla `text`-egenskaper och även andra egenskaper i bildkomponenten översätts. Om andra komponenter har egenskaper med samma namn gäller regeln inte för dem.
+I följande exempel översätts innehållet i alla `text` och översätter även andra egenskaper i bildkomponenten. Om andra komponenter har egenskaper med samma namn gäller regeln inte för dem.
 
 ```xml
 <node path="/content">
@@ -98,10 +98,10 @@ Använd följande regelsyntax för att inkludera resurser som är inbäddade i e
 <assetNode resourceType="path to component" assetReferenceAttribute="property that stores asset"/>
 ```
 
-Varje `assetNode`-element har följande egenskaper:
+Varje `assetNode` -elementet har följande egenskaper:
 
-* Ett `resourceType`-attribut som är lika med sökvägen som matchar komponenten
-* Ett `assetReferenceAttribute`-attribut som är lika med namnet på egenskapen som lagrar resursens binära (för inbäddade resurser) eller sökvägen till den refererade resursen
+* Ett `resourceType` attribut som är lika med sökvägen som matchar komponenten
+* Ett `assetReferenceAttribute` attribut som är lika med namnet på egenskapen som lagrar resursens binära (för inbäddade resurser) eller sökvägen till den refererade resursen
 
 I följande exempel extraheras bilder från bildkomponenten:
 
@@ -111,7 +111,7 @@ I följande exempel extraheras bilder från bildkomponenten:
 
 ## Åsidosätta regler {#overriding-rules}
 
-Filen `translation_rules.xml` består av ett `nodelist`-element med flera underordnade `node`-element. AEM läser nodlistan uppifrån och ned. När flera regler har samma nod som mål används den regel som är lägre i filen. Följande regler gör till exempel att allt innehåll i `text`-egenskaper översätts förutom för grenen `/content/mysite/en` sidor:
+The `translation_rules.xml` filen består av en `nodelist` element med flera underordnade `node` -element. AEM läser nodlistan uppifrån och ned. När flera regler har samma nod som mål används den regel som är lägre i filen. Följande regler skapar till exempel allt innehåll i `text` egenskaper som ska översättas förutom för `/content/mysite/en` sidförgrening:
 
 ```xml
 <nodelist>
@@ -126,9 +126,9 @@ Filen `translation_rules.xml` består av ett `nodelist`-element med flera undero
 
 ## Filteregenskaper {#filtering-properties}
 
-Du kan filtrera noder som har en viss egenskap med ett `filter`-element.
+Du kan filtrera noder som har en viss egenskap genom att använda en `filter` -element.
 
-Följande regler gör till exempel att allt innehåll i `text`-egenskaper översätts förutom de noder som har egenskapen `draft` inställd på `true`.
+Följande regler skapar till exempel allt innehåll i `text` egenskaper som ska översättas, förutom de noder som har egenskapen `draft` ange till `true`.
 
 ```xml
 <nodelist>
@@ -147,21 +147,21 @@ Det finns även en konsol för att konfigurera översättningsregler.
 
 Så här kommer du åt den:
 
-1. Navigera till **Verktyg** och **Allmänt**.
+1. Navigera till **verktyg** och sedan **Allmänt**.
 
 1. Välj **Översättningskonfiguration**.
 
 I översättningsregelgränssnittet kan du:
 
-1. **Lägg till kontext**, så att du kan lägga till en bana.
+1. **Lägg till kontext**, som gör att du kan lägga till en bana.
 
    ![Lägg till översättningskontext](../assets/add-translation-context.png)
 
-1. Använd sökvägsläsaren för att välja önskad kontext och tryck eller klicka på knappen **Bekräfta** för att spara.
+1. Använd sökvägsläsaren för att välja önskad kontext och tryck eller klicka på **Bekräfta** knappen som ska sparas.
 
    ![Välj kontext](../assets/select-context.png)
 
-1. Sedan måste du markera kontexten och sedan klicka på **Redigera**. Då öppnas redigeraren för översättningsregler.
+1. Sedan måste du markera kontexten och sedan klicka **Redigera**. Då öppnas redigeraren för översättningsregler.
 
    ![Redigerare för översättningsregler](../assets/translation-rules-editor.png)
 
@@ -176,13 +176,13 @@ Det finns fyra attribut som du kan ändra via gränssnittet:
 
 **`isDeep`**  används på nodfilter och är true som standard. Den kontrollerar om noden (eller dess överordnade noder) innehåller den egenskapen med det angivna egenskapsvärdet i filtret. Om värdet är false kontrolleras endast den aktuella noden.
 
-Underordnade noder läggs till i ett översättningsjobb även om den överordnade noden har egenskapen `draftOnly` inställd på true för att flagga utkastinnehåll. Här visas `isDeep` och kontrollerar om de överordnade noderna har egenskapen `draftOnly` som true och inte de underordnade noderna.
+Underordnade noder läggs till i ett översättningsjobb även om den överordnade noden har egenskapen `draftOnly` anges till true för att flagga utkastinnehåll. Här `isDeep` spelas upp och kontrollerar om de överordnade noderna har en egenskap `draftOnly` som true och exkluderar dessa underordnade noder.
 
-I redigeraren kan du kontrollera/avmarkera **Är lång** på fliken **Filter**.
+I redigeraren kan du markera/avmarkera **Är djup** i **Filter** -fliken.
 
 ![Filterregler](../assets/translation-rules-editor-filters.png)
 
-Här är ett exempel på den resulterande XML-filen när **är djup** inte är markerat i gränssnittet:
+Här är ett exempel på den resulterande XML-koden när **Är djup** är avmarkerad i användargränssnittet:
 
 ```xml
  <filter>
@@ -194,21 +194,21 @@ Här är ett exempel på den resulterande XML-filen när **är djup** inte är m
 
 **`inherit`** används för egenskaper. Som standard ärvs alla egenskaper, men om du vill att vissa egenskaper inte ska ärvas av den underordnade kan du markera den här egenskapen som false så att den bara tillämpas på den specifika noden.
 
-I användargränssnittet kan du kontrollera/avmarkera **Inherit** på fliken **Egenskaper**.
+I användargränssnittet kan du checka in/avmarkera **Inherit** i **Egenskaper** -fliken.
 
 ### translate {#translate}
 
 **`translate`** används bara för att ange om en egenskap ska översättas eller inte.
 
-I användargränssnittet kan du kontrollera/avmarkera **Translate** på fliken **Properties**.
+I användargränssnittet kan du checka in/avmarkera **Översätt** i **Egenskaper** -fliken.
 
 ### updateDestinationLanguage {#updatedestinationlanguage}
 
-**`updateDestinationLanguage`** används för egenskaper som t.ex. inte har text utan språkkoder  `jcr:language`. Användaren översätter inte text utan språkinställningen från källan till målet. Sådana egenskaper skickas inte för översättning.
+**`updateDestinationLanguage`** används för egenskaper som inte har text men språkkoder, till exempel `jcr:language`. Användaren översätter inte text utan språkinställningen från källan till målet. Sådana egenskaper skickas inte för översättning.
 
-I användargränssnittet kan du kontrollera/avmarkera **Översätt** på fliken **Egenskaper** om du vill ändra det här värdet, men för de specifika egenskaper som har språkkoder som värde.
+I användargränssnittet kan du checka in/avmarkera **Översätt** i **Egenskaper** om du vill ändra det här värdet, men för de specifika egenskaper som har språkkoder som värde.
 
-För att förtydliga skillnaden mellan `updateDestinationLanguage` och `translate` är det här ett enkelt exempel på en kontext med bara två regler:
+För att förtydliga skillnaden mellan `updateDestinationLanguage` och `translate`Här följer ett enkelt exempel på ett sammanhang med bara två regler:
 
 ![updateDestinationLanguage-exempel](../assets/translation-rules-updatedestinationlanguage.png)
 
@@ -221,9 +221,9 @@ Resultatet i xml kommer att se ut så här:
 
 ## Redigera regelfilen manuellt {#editing-the-rules-file-manually}
 
-Filen `translation_rules.xml` som installeras med AEM innehåller en standarduppsättning med översättningsregler. Du kan redigera filen så att den uppfyller översättningsprojektens krav. Du kan till exempel lägga till regler så att innehållet i dina anpassade komponenter översätts.
+The `translation_rules.xml` filen som installeras med AEM innehåller en standarduppsättning med översättningsregler. Du kan redigera filen så att den uppfyller översättningsprojektens krav. Du kan till exempel lägga till regler så att innehållet i dina anpassade komponenter översätts.
 
-Om du redigerar filen `translation_rules.xml` ska du spara en säkerhetskopia i ett innehållspaket. Om du installerar om vissa AEM kan den aktuella `translation_rules.xml`-filen ersättas med originalfilen. Om du vill återställa reglerna i den här situationen kan du installera det paket som innehåller säkerhetskopian.
+Om du redigerar `translation_rules.xml` sparar du en säkerhetskopia i ett innehållspaket. Om du installerar om vissa AEM-paket kan den aktuella `translation_rules.xml` med originalfilen. Om du vill återställa reglerna i den här situationen kan du installera det paket som innehåller säkerhetskopian.
 
 >[!NOTE]
 >

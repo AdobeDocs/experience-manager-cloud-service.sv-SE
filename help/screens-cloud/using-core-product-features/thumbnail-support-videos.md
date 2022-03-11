@@ -1,14 +1,14 @@
 ---
-title: Miniatyrbildsstöd för video på skärmar som Cloud Service
-description: På den här sidan beskrivs hur du lägger till stöd för miniatyrbilder för videoklipp på skärmar som en Cloud Service.
+title: Stöd för miniatyrbilder för videoklipp på skärmar as a Cloud Service
+description: På den här sidan beskrivs hur du lägger till stöd för miniatyrbilder för videoklipp på skärmar as a Cloud Service.
 index: true
-source-git-commit: e5dc848ca58e176b89861414d0e711866f96eb0e
+exl-id: 7b15d7cc-f089-4008-9039-5f48343a0f20
+source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 0%
 
 ---
-
 
 # Stöd för miniatyrbilder för videoklipp {#thumbnail-support-videos}
 
@@ -31,14 +31,14 @@ Med stöd för miniatyrbilder kan du:
 
 >[!IMPORTANT]
 >**Förutsättningar**
->Innan du lär dig hur du använder miniatyrer för videofilmer bör du lära dig hur du skapar videoåtergivningar för kanaler i skärmar som ett videoprojekt. Mer information finns i [här](/help/screens-cloud/configuring/creating-screens-video-renditions-cloud-service.md).
+>Innan du lär dig hur du använder miniatyrbilder för videofilmer bör du lära dig hur du skapar videoåtergivningar för kanaler i as a Cloud Service projekt för skärmar. Se [här](/help/screens-cloud/configuring/creating-screens-video-renditions-cloud-service.md) för mer information.
 
 Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 
 1. Navigera till en befintlig skärmkanal eller skapa en ny kanal.
 
    >[!NOTE]
-   >Mer information om hur du skapar en kanal och lägger till innehåll i en kanal finns i [Skapa och hantera en kanal på skärmar som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html?lang=en).
+   >Mer information om hur du skapar en kanal och lägger till innehåll i en kanal finns i [Skapa och hantera en kanal på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html?lang=en).
 
 1. Markera kanalen och klicka på **Redigera** i åtgärdsfältet för att öppna redigeraren.
 
@@ -48,15 +48,15 @@ Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 
    ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-2.png)
 
-1. Markera videon och klicka på ikonen *skiftnyckel* för att öppna videoegenskaperna.
+1. Markera videon och klicka på *wrench* -ikonen för att öppna videoegenskaperna.
 
    ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-3.png)
 
-1. Dialogrutan **Video** öppnas där du kan visa släppzonen **Miniatyrbild**.
+1. The **Video** öppnas där du kan se **Miniatyrbild** släppzon.
 
    ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-4.png)
 
-1. Dra och släpp en bild från resursväljaren till släppzonen **Miniatyrbild** och klicka på **Klar**.
+1. Dra och släpp en bild från resursväljaren till **Miniatyrbild** släppa zon och klicka på **Klar**.
 
    ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-5.png)
 

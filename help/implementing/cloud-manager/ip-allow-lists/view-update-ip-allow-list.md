@@ -1,14 +1,13 @@
 ---
 title: Visa och uppdatera - IP-Tillåtelselista i Cloud Manager
 description: Visa och uppdatera - IP-Tillåtelselista i Cloud Manager
-translation-type: tm+mt
-source-git-commit: 7fdfa626147a72f3d7fb98b89a19a871fc7a13ca
+exl-id: 9f9aebcd-b6d0-497a-b262-0a24b4938b45
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
 
 ---
-
 
 # Visa och uppdatera en IP-Tillåtelselista {#view-update}
 
@@ -19,7 +18,7 @@ Du kan visa och uppdatera IP-Tillåtelselista i följande scenarier:
    * IP-intervall i definitionen av regelnamnet
    * Eget namn på IP Tillåtelselista-regeln
 
-## Uppdatera IP-Tillåtelselista {#update-ip-allow-lists}
+## Uppdatera IP Tillåtelselista {#update-ip-allow-lists}
 
 
 En användare i rollen Business Owner eller Deployment Manager måste vara inloggad för att det ska gå att uppdatera ett IP-Tillåtelselista.
@@ -29,16 +28,16 @@ En användare i rollen Business Owner eller Deployment Manager måste vara inlog
 
 Följ stegen nedan för att uppdatera ett IP-Tillåtelselista:
 
-1. Navigera till sidan **IP Tillåtelselista** från skärmen **Environment**.
+1. Navigera till **IP-Tillåtelselista** sidan från **Miljö** skärm.
 1. Identifiera raden där IP Tillåtelselista-regeln som du vill visa/uppdatera finns.
-1. Välj **..**-menyn längst till höger på raden.
-1. Välj alternativet **Visa och uppdatera**.
+1. Välj **...** menyn längst till höger på raden.
+1. Välj **Visa och uppdatera** alternativ.
 1. Gör ändringar i namnet eller IP-adresserna och bekräfta ditt bidrag.
 
-## Viktigt att tänka på när du lägger till, uppdaterar eller tar bort IP-Tillåtelselista {#considerations}
+## Viktigt att tänka på när du lägger till, uppdaterar eller tar bort IP Tillåtelselista {#considerations}
 
 * Om du lägger till ett nytt IP-intervall till IP-Tillåtelselista används det automatiskt för alla motsvarande miljötjänster.
 * Om du tar bort ett IP-intervall från IP Tillåtelselista tas det automatiskt bort från alla motsvarande miljötjänster.
 * Det går inte att göra uppdateringar till IP-Tillåtelselista när en tidigare uppdatering pågår och inte har slutförts.
 * Det går inte att uppdatera ett IP-Tillåtelselista om det finns fel från en tidigare uppdatering. Alla fel måste rensas genom att du försöker uppdatera igen.
-Mer information finns i [Kontrollera IP Tillåtelselista-status](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md).
+Se [Kontrollerar IP Tillåtelselista-status](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md) om du vill veta mer.

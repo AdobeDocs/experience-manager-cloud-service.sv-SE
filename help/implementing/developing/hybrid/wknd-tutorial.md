@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# WKND SPA projekt {#wknd-spa-project}
+# WKND SPA Project {#wknd-spa-project}
 
 Utveckla SPA med denna självstudiekurs i flera delar, som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och programdirigering för att implementera din egen SPA.
 
@@ -20,4 +20,4 @@ Precis som den AEM WKND-självstudiekursen är den här SPA-fokuserade motsvarig
 * [Skapa din första Angular SPA i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [Skapa din första SPA i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
 
-Innan du påbörjar ett eget SPA för AEM kan du också granska [Utveckla SPA för AEM](developing.md)-dokumentet.
+Innan du påbörjar ett eget SPA för AEM kan du också granska [Utveckla SPA för AEM](developing.md) -dokument.

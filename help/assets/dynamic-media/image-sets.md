@@ -27,7 +27,7 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
 >[!NOTE]
 >
->For information on the Assets user interface, see [Manage assets with the Touch UI](/help/assets/manage-digital-assets.md).
+>Mer information om gränssnittet Resurser finns i [Hantera resurser med Touch-gränssnittet](/help/assets/manage-digital-assets.md).
 
 ## Snabbstart: Bilduppsättningar {#quick-start-image-sets}
 
@@ -222,12 +222,12 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel:
 
    * Om du vill ändra ordning på resurser drar du en bild till en ny plats (markera sorteringsikonen för att flytta objekt).
    * Om du vill sortera objekt i stigande eller fallande ordning klickar du på kolumnrubriken.
-   * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Add Asset]**. Navigate to an asset, select it, then select **[!UICONTROL Select]** near the upper-right corner of the page.
+   * Om du vill lägga till en resurs eller uppdatera en befintlig resurs klickar du på **[!UICONTROL Add Asset]**. Navigera till en resurs, markera den och välj **[!UICONTROL Select]** nära sidans övre högra hörn.
 
       >[!NOTE]
       >
       >Om du tar bort den bild som Experience Manager använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
-   * To delete an asset, select it and select **[!UICONTROL Delete Asset]**.
+   * Om du vill ta bort en resurs markerar du den och väljer **[!UICONTROL Delete Asset]**.
    * Om du vill använda en förinställning väljer du **[!UICONTROL Preset]** väljer du sedan en visningsförinställning.
    * Om du vill lägga till eller ändra en miniatyrbild markerar du miniatyrbildikonen bredvid resursens högra sida. Navigera till den nya miniatyrbilden eller färgruteresursen, markera den och markera sedan **[!UICONTROL Select]**.
    * Om du vill ta bort en hel bilduppsättning går du till bilduppsättningen, markerar den och markerar den **[!UICONTROL Delete]**.

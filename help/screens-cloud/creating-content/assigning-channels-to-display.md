@@ -1,15 +1,15 @@
 ---
-title: Tilldela kanal till en skärm på skärmar som en Cloud Service
-description: På den här sidan beskrivs hur du tilldelar en kanal till en skärm på skärmar som en Cloud Service.
-source-git-commit: b9b27c09b1f4a1799a8c974dfb846295664be998
+title: Tilldela kanal till en skärm på skärmar as a Cloud Service
+description: På den här sidan beskrivs hur du tilldelar en kanal till en skärm på as a Cloud Service Skärmar.
+exl-id: ba001c18-7b05-4ae2-aa7f-9ebb320fedd0
+source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
 
 ---
 
-
-# Tilldela kanal till en skärm på skärmar som en Cloud Service {#assign-channel-displays-screens-cloud}
+# Tilldela kanal till en skärm på skärmar as a Cloud Service {#assign-channel-displays-screens-cloud}
 
 När projektkonfigurationen är klar måste du tilldela kanalen till en skärm för att kunna visa innehållet.
 
@@ -28,13 +28,13 @@ Innan du utför stegen nedan för att tilldela en kanal till en skärm måste du
 
 Följ stegen nedan för att tilldela en kanal till en skärm:
 
-1. Navigera till Screens Services Provider och välj **Visar** i den vänstra navigeringspanelen.
+1. Navigera till Screens Services Provider och välj **Visar** från den vänstra navigeringspanelen.
 
-1. Klicka på **Tilldela kanal** till visningen.
+1. Klicka på **Tilldela kanal** på skärmen.
 
    ![bild](/help/screens-cloud/assets/display/assignchannel-1.png)
 
-1. Fyll i följande fält från dialogrutan **Tilldela en kanal**.
+1. Fyll i följande fält från **Tilldela en kanal** -dialogrutan.
 
    ![bild](/help/screens-cloud/assets/display/assignchannel-2.png)
 
@@ -45,7 +45,7 @@ Följ stegen nedan för att tilldela en kanal till en skärm:
       >Prioritet används för att ordna tilldelningarna om flera matchar uppspelningsvillkoren. Den som har det högsta värdet har alltid företräde framför de lägre värdena. Om det till exempel finns två kanaler A och B. A har prioriteten 1 och B har prioriteten 2, och sedan visas kanal B eftersom den har högre prioritet än A.
    1. Välj startdatum och slutdatum från **Aktivering**.
 
-1. Klicka på **+ Lägg till upprepning** för att lägga till ett upprepningsschema för kanalen.
+1. Klicka på **+ Lägg till upprepning** om du vill lägga till ett upprepningsschema för kanalen.
 
    ![bild](/help/screens-cloud/assets/create-content/recurrence-1.png)
 
@@ -56,16 +56,16 @@ Följ stegen nedan för att tilldela en kanal till en skärm:
 
    * **Namn**: Namn på ditt återkommande schema.
    * **Upprepa**: Välj om schemat ska köras varje dag, varje vecka, varje månad eller varje år.
-   * **Start**: Starttiden för ditt schema.
-   * **Slut**: Sluttiden för ditt schema. Du kan ställa in den efter tid eller varaktighet.
+   * **Starta**: Starttiden för ditt schema.
+   * **End**: Sluttiden för ditt schema. Du kan ställa in den efter tid eller varaktighet.
    * **Tid**: Schemat avslutas vid en angiven tidpunkt.
    * **Varaktighet**: Schemat körs för en viss tidsperiod i timmar eller minuter.
 
-1. Klicka på **Skapa** så ser du nu att en kanal har tilldelats för den visningen, vilket visas i bilden nedan.
+1. Klicka på **Skapa** och nu ser du att en kanal har tilldelats för den visningen, vilket visas i bilden nedan.
 
    ![bild](/help/screens-cloud/assets/display/assignchannel-3.png)
 
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har tilldelat kanalen till en skärm bör du fortsätta att använda Cloud Servicen som en skärmresa genom att nästa gång du granskar dokumentet [Installera och konfigurera skärmspelaren för AEM som en Cloud Service](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md).
+Nu när du har tilldelat kanalen till en skärm bör du fortsätta att arbeta as a Cloud Service med skärmar genom att nästa gång du granskar dokumentet [Installera och konfigurera skärmuppspelning för AEM as a Cloud Service](/help/screens-cloud/managing-players-registration/installing-screens-cloud-player.md).

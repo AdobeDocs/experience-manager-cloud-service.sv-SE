@@ -57,7 +57,7 @@ Om du aktiverar DPR-konfigurationen för smart bildåtergivning justeras den beg
 
 >[!NOTE]
 >
->* Du kan använda `dpr=on,dprValue` även om inställningen för DPR på företagsnivå är inaktiverad.
+>* Du kan använda `dpr=on,dprValue` även om företagets nivå DPR-inställning är avstängd.
 >* På grund av DPR-optimering identifieras alltid MaxPix-bredden när den resulterande bilden är större än Dynamic Media-inställningen MaxPix genom att bildens proportioner behålls.
 
 
@@ -90,11 +90,11 @@ Förbättringar i den senaste versionen av Smart Imaging:
 
 * Förbättrad Google SEO-rankning för webbsidor som använder den senaste Smart Imaging-funktionen.
 * Serverar optimerat innehåll direkt (vid körning).
-* Använder Adobe Sensei-teknik för att konvertera enligt den kvalitet (`qlt`) som anges i bildbegäran.
-* Smart Imaging kan inaktiveras med URL-parametern `bfc`.
+* Använder Adobe Sensei-teknik för att konvertera enligt kvalitet (`qlt`) som anges i bildbegäran.
+* Smart bildbehandling kan stängas av med `bfc` URL-parameter.
 * TTL-oberoende (Time To Live). Tidigare var en minsta TTL på 12 timmar obligatorisk för att Smart Imaging skulle fungera.
 * Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
-* Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslogs i [Lägg till ett anpassat rubrikvärde i bildsvaren|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
+* Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslås i [Lägg till ett anpassat rubrikvärde i bildsvaren|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
 
 ## Är det några licenskostnader kopplade till Smart Imaging? {#are-there-any-licensing-costs-associated-with-smart-imaging}
 
@@ -155,7 +155,7 @@ Smart Imaging fungerar sömlöst med dina befintliga bild-URL:er och bildförins
 
 Om du måste konfigurera en ny anpassad domän att använda Smart Imaging måste URL:erna uppdateras för att återspegla den anpassade domänen.
 
-Mer information om krav för smart bildbehandling finns i [Är jag berättigad att använda Smart bildbehandling?](#am-i-eligible-to-use-smart-imaging)
+Information om krav för smart bildbehandling finns i [Är jag berättigad att använda Smart Imaging?](#am-i-eligible-to-use-smart-imaging)
 
 <!-- OLD No. Smart Imaging works seamlessly with your existing image URLs and image presets. In addition, Smart Imaging does not require you to add any code on your website to detect a user's browser. All of this is handled automatically. -->
 
@@ -170,11 +170,11 @@ Smart Imaging fungerar med bilder som levereras via HTTP eller HTTPS. Dessutom f
 Om du vill använda Smart Imaging måste ditt företags Dynamic Media Classic- eller Dynamic Media-konto på Experience Manager uppfylla följande krav:
 
 * Använd det Adobe-paketerade CDN (Content Delivery Network) som en del av licensen.
-* Använd en dedikerad domän (till exempel `images.company.com` eller `mycompany.scene7.com`), inte en allmän domän (till exempel `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
+* Använd en dedikerad domän (till exempel `images.company.com` eller `mycompany.scene7.com`), inte en allmän domän (till exempel `s7d1.scene7.com`, `s7d2.scene7.com`, eller `s7d13.scene7.com`).
 
-Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
+Om du vill hitta dina domäner öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt eller dina företagskonton.
 
-Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän domän kan du begära att få gå över till din egen anpassade domän. Gör den här övergångsbegäran när du skickar in en teknisk supportanmälan.
+Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**. Leta efter fältet med etiketten **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän domän kan du begära att få gå över till din egen anpassade domän. Gör den här övergångsbegäran när du skickar in en teknisk supportanmälan.
 
 Din första anpassade domän kostar inget extra med en Dynamic Media-licens.
 
@@ -198,19 +198,19 @@ Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (ina
    1. Primärt kontaktnamn, e-postadress, telefon.
    1. Alla domäner som ska aktiveras för Smart Imaging (d.v.s. `images.company.com` eller `mycompany.scene7.com`).
 
-      Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
+      Om du vill hitta dina domäner öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt eller dina företagskonton.
 
       Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
 
-      Leta efter fältet **[!UICONTROL Published Server Name]**.
+      Leta efter fältet med etiketten **[!UICONTROL Published Server Name]**.
    1. Kontrollera att du använder CDN via Adobe och inte hanteras med en direkt relation.
-   1. Kontrollera att du använder en dedikerad domän som `images.company.com` eller `mycompany.scene7.com` och inte en allmän domän, som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
+   1. Verifiera att du använder en dedikerad domän som `images.company.com` eller `mycompany.scene7.com`och inte en allmän domän, som `s7d1.scene7.com`, `s7d2.scene7.com`, `s7d13.scene7.com`.
 
-      Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt eller dina företagskonton.
+      Om du vill hitta dina domäner öppnar du [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started)och logga sedan in på ditt eller dina företagskonton.
 
       Gå till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
 
-      Leta efter fältet **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
+      Leta efter fältet med etiketten **[!UICONTROL Published Server Name]**. Om du för närvarande använder en allmän Dynamic Media Classic-domän kan du begära att du flyttar över till din egen anpassade domän som en del av den här övergången.
    1. Ange om du vill att den ska fungera över HTTP/2.
 
 1. Adobe kundsupport lägger till dig i kundväntelistan för Smart Imaging baserat på i vilken ordning begäranden skickas.
@@ -219,8 +219,8 @@ Som standard är DPR för Smart Imaging och nätverksoptimering inaktiverat (ina
 1. Du meddelas när du är klar av kundsupporten.
 1. För att maximera prestandaförbättringarna av Smart Imaging rekommenderar Adobe att TTL (Time To Live) ställs in på 24 timmar eller längre. TTL-värdet definierar hur länge resurser cachas av CDN. Så här ändrar du den här inställningen:
 
-   1. Om du använder Dynamic Media Classic går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]**-värdet till 24 eller längre.
-   1. Om du använder Dynamic Media följer du [dessa instruktioner](config-dm.md). Ange **[!UICONTROL Expiration]**-värdet 24 timmar eller längre.
+   1. Om du använder Dynamic Media Classic går du till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**. Ange **[!UICONTROL Default Client Cache Time To Live]** värdet är 24 eller längre.
+   1. Om du använder Dynamic Media, följ [dessa instruktioner](config-dm.md). Ange **[!UICONTROL Expiration]** 24 timmar eller längre.
 
 ## När kan jag förvänta mig att mitt konto ska aktiveras med Smart Imaging? {#when-can-i-expect-my-account-to-be-enabled-with-smart-imaging}
 
@@ -243,8 +243,8 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 
 1. Kontrollera att cache är inaktiverat när utvecklingsverktygen är öppna.
 
-   * I Windows® navigerar du till inställningarna i rutan för utvecklarverktyget och markerar sedan kryssrutan **[!UICONTROL Disable cache (while devtools is open)]**.
-   * I macOS väljer du **[!UICONTROL disable cache]** i utvecklarfönstret under fliken **[!UICONTROL Network]**.
+   * I Windows® går du till inställningarna i rutan för utvecklarverktyget och väljer **[!UICONTROL Disable cache (while devtools is open)]** kryssruta.
+   * På macOS, i utvecklarfönstret, under **[!UICONTROL Network]** flik, välja **[!UICONTROL disable cache]**.
 
 1. Observera att innehållstypen har omvandlats till lämpligt format. På följande skärmbild visas en PNG-bild som konverteras dynamiskt till WebP i Chrome.
 1. Upprepa testet i olika webbläsare och under olika användarförhållanden.
@@ -257,7 +257,7 @@ Under den inledande övergången kommer de icke-cachelagrade bilderna direkt til
 
 ## Kan Smart Imaging stängas av på begäran?{#turning-off-smart-imaging}
 
-Ja. Du kan inaktivera Smart Imaging genom att lägga till modifieraren `bfc=off` i URL:en.
+Ja. Du kan inaktivera Smart Imaging genom att lägga till modifieraren `bfc=off` till webbadressen.
 
 ## Kan jag begära att DPR och nätverksoptimering stängs av på företagsnivå? {#dpr-companylevel-turnoff}
 
@@ -277,8 +277,8 @@ Smart bildbehandling avgör om konverteringen är bra eller inte. Den nya bilden
 
 Hur fungerar optimeringen av DPR för Smart Imaging med Adobe Experience Manager Sites-komponenter och Dynamic Media-visningsprogram?
 
-* Experience Manager Sites Core Components är konfigurerade som standard för DPR-optimering. För att undvika alltför stora bilder på grund av DPR-optimering på serversidan läggs `dpr=off` alltid till i Dynamic Media-bilder för Experience Manager Sites Core Components.
-* Eftersom Dynamic Media Foundation-komponenten är konfigurerad som standard för DPR-optimering, kommer `dpr=off` alltid att läggas till i Dynamic Media Foundation-komponentbilder för att undvika överdimensionerade bilder på grund av DPR-optimering på serversidan. Även om kunden avmarkerar DPR-optimering i DM Foundation Component får inte serversidan DPR fart. Sammanfattningsvis gäller DM Foundation-komponenten DPR-optimering endast baserat på DM Foundation-komponentnivåinställning.
+* Experience Manager Sites Core Components är konfigurerade som standard för DPR-optimering. För att undvika överdimensionerade bilder tack vare optimering av DPR på serversidan, `dpr=off` läggs alltid till i Dynamic Media-bilder för Experience Manager Sites Core Components.
+* Angiven Dynamic Media Foundation-komponent är konfigurerad som standard för DPR-optimering för att undvika överdimensionerade bilder tack vare DPR-optimering på serversidan. `dpr=off` läggs alltid till i Dynamic Media Foundation Component-bilder. Även om kunden avmarkerar DPR-optimering i DM Foundation Component får inte serversidan DPR fart. Sammanfattningsvis gäller DM Foundation-komponenten DPR-optimering endast baserat på DM Foundation-komponentnivåinställning.
 * DPR-optimering på visningsprogramsidan fungerar tillsammans med DPR-optimering på serversidan, och leder inte till alltför stora bilder. DPR-värdena på serversidan aktiveras alltså inte, oavsett var DPR hanteras av visningsprogrammet, t.ex. huvudvyn i ett zoomaktiverat visningsprogram. På samma sätt aktiveras DPR-värdet på serversidan när visningsprogramelementen, t.ex. färgrutor och miniatyrbilder, inte har någon DPR-hantering.
 
 Se även [När du arbetar med bilder](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md#when-working-with-images) och [När du arbetar med smart beskärning](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop).

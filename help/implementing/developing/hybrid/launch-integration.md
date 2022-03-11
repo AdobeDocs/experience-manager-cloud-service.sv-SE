@@ -1,14 +1,13 @@
 ---
 title: SPA och Adobe Experience Platform Launch Integration
 description: Adobe Experience Platform Launch rekommenderas för att implementera Analytics, Target och Audience Manager inom SPA.
-translation-type: tm+mt
-source-git-commit: cdd92032c627740c66de7b2f3836fa1dcd2ee2ca
+exl-id: 95008563-c1e5-4685-9c6d-5226d4a66c53
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
 
 ---
-
 
 # SPA och Adobe Experience Platform Launch Integration {#spa-and-adobe-experience-platform-launch-integration}
 
@@ -16,7 +15,7 @@ Adobe Experience Platform Launch rekommenderas för att implementera Analytics, 
 
 ## Självstudiekurs {#tutorial}
 
-Om du vill ha mer information om hur du integrerar SPA med Adobe Experience Platform Launch kan du läsa [den här kunskapsbasartikeln och självstudiekursen](https://helpx.adobe.com/experience-manager/kt/integration/using/launch-reference-architecture-SPA-tutorial-implement.html), som vägleder dig genom Launch-konfigurationen samt implementera Experience Cloud som skapats med Angular eller React.
+Om du vill veta mer om hur du integrerar dina SPA med Adobe Experience Platform Launch går du till [den här kunskapsbasartikeln och självstudiekursen](https://helpx.adobe.com/experience-manager/kt/integration/using/launch-reference-architecture-SPA-tutorial-implement.html), som vägleder dig genom Launch-installationen samt implementerar Experience Cloud som byggts med Angular eller React.
 
 >[!NOTE]
 >

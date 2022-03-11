@@ -21,7 +21,6 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 >* Kunskap om er webbplats och innehållsstruktur
 >* Förståelse av cachelagringsstrategier
 >* Support från ditt utvecklingsteam
-
 >
 >Innan du använder den här funktionen bör du diskutera detta med utvecklingsteamet för att definiera det bästa sättet att utnyttja den i ditt projekt.
 

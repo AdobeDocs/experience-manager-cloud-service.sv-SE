@@ -1,12 +1,12 @@
 ---
 title: Använda och underhålla Adobe Experience Manager as a Cloud Service
 description: Länkar till självhjälp och dokumentation om att använda och underhålla Adobe Experience Manager as a Cloud Service
-landing-page-description: Learn about the back-end operations of AEM as a Cloud Service, such as indexing and maintenance tasks.
+landing-page-description: Lär dig mer om backend-åtgärder för AEM as a Cloud Service, som indexering och underhållsuppgifter.
 exl-id: ad50434c-1b4c-4e04-be91-2556d773cfbd
 source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '372'
+ht-degree: 70%
 
 ---
 
@@ -34,7 +34,7 @@ På den här sidan visas självhjälp om att använda och underhålla Experience
 | [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med AEM kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i AEM som gör dig redo för ditt första headless-projekt. |
 | [Användarhandbok för anslutningar](/help/connectors/home.md) | Läs om hur ni integrerar anslutningar i Experience Manager as a Cloud Service. |
-| [Handbok för Commerce](/help/commerce-cloud/home.md) | Learn about Commerce Integration Framework on AEM as a Cloud Service. |
+| [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM as a Cloud Service. |
 
 ## Andra Experience Manager-resurser {#other-resources}
 

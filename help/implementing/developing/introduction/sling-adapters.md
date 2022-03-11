@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Använda Sling-adaptrar {#using-sling-adapters}
 
-[](https://sling.apache.org) Slingerbjuder ett  [adaptermönster ](https://sling.apache.org/site/adapters.html) för att enkelt översätta objekt som implementerar det  [](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) adapterbara gränssnittet. Det här gränssnittet innehåller en allmän [customiTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29)-metod som översätter objektet till den klasstyp som skickas som argument.
+[Sling](https://sling.apache.org) erbjuder [Adaptermönster](https://sling.apache.org/site/adapters.html) att enkelt översätta objekt som implementerar [Adaptiv](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) gränssnitt. Det här gränssnittet innehåller en allmän [customiTo()](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/Adaptable.html#adaptTo%28java.lang.Class%29) metod som översätter objektet till den klasstyp som skickas som argument.
 
 Om du till exempel vill översätta ett Resource-objekt till motsvarande Node-objekt kan du bara göra följande:
 
@@ -25,11 +25,11 @@ Det finns följande användningsområden:
 
 * Få implementeringsspecifika objekt.
 
-   En JCR-baserad implementering av det generiska [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html)-gränssnittet ger till exempel åtkomst till den underliggande JCR [`Node`](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).
+   En JCR-baserad implementering av den generiska [`Resource`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/Resource.html) -gränssnittet ger åtkomst till underliggande JCR [`Node`](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html).
 
-* Shortcut creation of objects that require internal context objects to be passed.
+* Skapa genvägar för objekt som kräver att interna kontextobjekt skickas.
 
-   Den JCR-baserade [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) innehåller till exempel en referens till förfrågningens [`JCR Session`](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html), som i sin tur behövs för många objekt som ska fungera baserat på den begärandesessionen, till exempel [`PageManager`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) eller [`UserManager`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/security/UserManager.html).
+   Till exempel den JCR-baserade [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) innehåller en referens till begäran [`JCR Session`](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html)som i sin tur behövs för många objekt som ska fungera baserat på den begärandesessionen, som [`PageManager`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) eller [`UserManager`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/security/UserManager.html).
 
 * Genväg till tjänster.
 
@@ -50,32 +50,32 @@ Det är viktigt att du hanterar skiftläget null på ett smidigt sätt. Vid jsp-
 
 ### Cachelagring {#caching}
 
-För att förbättra prestanda kan implementeringar cachelagra objektet som returneras från ett `obj.adaptTo()`-anrop. Om `obj` är samma är det returnerade objektet detsamma.
+För att förbättra prestanda kan implementeringar cachelagra objektet som returneras från en `obj.adaptTo()` ring. Om `obj` är samma, returnerade objekt är samma.
 
-Denna cachelagring utförs för alla `AdapterFactory`-baserade fall.
+Denna cachelagring utförs för alla `AdapterFactory` baserade fall.
 
-Det finns dock ingen allmän regel - objektet kan vara antingen en ny eller en befintlig instans. Det innebär att du inte kan förlita dig på något av beteendena. Hence it is important, especially inside `AdapterFactory`, that objects are reusable in this scenario.
+Det finns dock ingen allmän regel - objektet kan vara antingen en ny eller en befintlig instans. Det innebär att du inte kan förlita dig på något av beteendena. Därför är det viktigt, särskilt inom `AdapterFactory`att objekt kan återanvändas i det här scenariot.
 
 ### Så här fungerar det {#how-it-works}
 
-Det finns olika sätt att implementera `Adaptable.adaptTo()`:
+Det finns olika sätt att `Adaptable.adaptTo()` kan implementeras:
 
 * själva objektet, implementera själva metoden och mappa till vissa objekt.
-* Med ett [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html), som kan mappa godtyckliga objekt.
+* Av en [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html), som kan mappa godtyckliga objekt.
 
-   Objekten måste fortfarande implementera gränssnittet `Adaptable` och måste utöka [`SlingAdaptable`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (som skickar anropet `adaptTo` till en central adapterhanterare).
+   Objekten måste fortfarande implementera `Adaptable` gränssnitt och måste utöka [`SlingAdaptable`](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (som klarar `adaptTo` till en central adapterhanterare).
 
-   Detta tillåter kopplingar till `adaptTo`-mekanismen för befintliga klasser, som `Resource`.
+   Det gör att du kan lägga in kopplingar i `adaptTo` mekanism för befintliga klasser, som `Resource`.
 
 * En kombination av båda.
 
-I det första fallet kan javadocs ange vad `adaptTo-targets` är möjligt. Detta är dock ofta inte möjligt för vissa underklasser, t.ex. JCR-baserade resurser. I det senare fallet är implementeringar av `AdapterFactory` vanligtvis en del av de privata klasserna i ett paket och exponeras därför inte i ett klient-API och inte heller listas i javadocs. Teoretiskt sett skulle det vara möjligt att komma åt alla `AdapterFactory`-implementeringar från [OSGi](/help/implementing/deploying/configuring-osgi.md)-tjänstmiljön och titta på deras&quot;adaptable&quot; (sources and target)-konfigurationer, men inte att mappa dem till varandra. I slutändan beror detta på den interna logiken, som måste dokumenteras. Denna referens.
+I det första fallet kan javadocs visa vad `adaptTo-targets` är möjliga. Detta är dock ofta inte möjligt för vissa underklasser, t.ex. JCR-baserade resurser. I det senare fallet ska `AdapterFactory` är vanligtvis en del av de privata klasserna i ett paket och därför inte exponeras i ett klient-API, och inte heller listas i javadocs. Teoretiskt sett skulle det vara möjligt att få tillgång till alla `AdapterFactory` implementeringar från [OSGi](/help/implementing/deploying/configuring-osgi.md) runtime-modulen för tjänster och se hur deras&quot;adaptable&quot;-konfigurationer (källor och mål) ser ut, men inte för att mappa dem till varandra. I slutändan beror detta på den interna logiken, som måste dokumenteras. Denna referens.
 
 ## Referens {#reference}
 
 ### Sling {#sling}
 
-[****](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html) Resurserna anpassas till:
+[**Resurs**](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html) anpassar sig till:
 
 <table>
  <tbody>
@@ -97,15 +97,15 @@ I det första fallet kan javadocs ange vad `adaptTo-targets` är möjligt. Detta
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a></td>
-   <td>Returnerar en användbar karta över egenskaperna, om detta är en JCR-nodbaserad resurs (eller annan resurs som stöder värdekartor). Kan också uppnås (enklare) med <br /> <code><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ResourceUtil.html#getvaluemap%28org.apache.sling.api.resource.resource%29">ResourceUtil.getValueMap(Resource)</a></code> (hanterar null-skiftläge etc.).</td>
+   <td>Returnerar en användbar karta över egenskaperna, om detta är en JCR-nodbaserad resurs (eller annan resurs som stöder värdekartor). Kan också uppnås (enklare) genom att använda<br /> <code><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ResourceUtil.html#getvaluemap%28org.apache.sling.api.resource.resource%29">ResourceUtil.getValueMap(Resource)</a></code> (hanterar gemener, etc.).</td>
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/inherit/InheritanceValueMap.html">ArvValueMap</a></td>
-   <td>Extension of <a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a> which allows the hierarchy of resources to be taken into account when looking for properties.</td>
+   <td>Utökning av <a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a> som gör det möjligt att ta hänsyn till resurshierarkin när du söker efter egenskaper.</td>
   </tr>
   <tr>
-   <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ModifiableValueMap.html">ModifiableValueMap</a></td>
-   <td>Ett tillägg till <a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a> som gör att du kan ändra egenskaper på den noden.</td>
+   <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ModifiableValueMap.html">ModiitableValueMap</a></td>
+   <td>En förlängning av <a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ValueMap.html">ValueMap</a>, som gör att du kan ändra egenskaper på den noden.</td>
   </tr>
   <tr>
    <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td>
@@ -128,7 +128,7 @@ I det första fallet kan javadocs ange vad `adaptTo-targets` är möjligt. Detta
    <td>Om den här resursen är ett skript (t.ex. jsp-fil) för vilket en skriptmotor är registrerad med sling eller om det här är en serverresurs.</td>
   </tr>
   <tr>
-   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html"></a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html"></a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Long.html"></a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Double.html"></a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/util/Calendar.html"></a><br /> <a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Value.html"></a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html">StringBooleanLongDoubleCalendarValueString[]</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html">Boolean[]</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Long.html">Long[]</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/util/Calendar.html">Calendar[]</a><br /> <a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Value.html">Value[]</a></td>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html">Sträng</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html">Boolean</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Long.html">Lång</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Double.html">Dubbel</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/util/Calendar.html">Kalender</a><br /> <a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Value.html">Värde</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html">Sträng[]</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Boolean.html">Boolean[]</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/lang/Long.html">Long[]</a><br /> <a href="https://java.sun.com/j2se/1.5.0/docs/api/java/util/Calendar.html">Kalender[]</a><br /> <a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Value.html">Värde[]</a></td>
    <td>Returnerar värdet/värdena om detta är en JCR-egenskapsbaserad resurs (och värdet passar).</td>
   </tr>
   <tr>
@@ -141,7 +141,7 @@ I det första fallet kan javadocs ange vad `adaptTo-targets` är möjligt. Detta
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/components/Component.html">Komponent</a></td>
-   <td>Om detta är en <code>cq:Component</code>-nodresurs.</td>
+   <td>Om detta är en <code>cq:Component</code> nodresurs.</td>
   </tr>  
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/designer/Design.html">Design</a></td>
@@ -149,23 +149,23 @@ I det första fallet kan javadocs ange vad `adaptTo-targets` är möjligt. Detta
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Template.html">Mall</a></td>
-   <td>Om detta är en <code>cq:Template</code>-nodresurs.</td>
+   <td>Om detta är en <code>cq:Template</code> nodresurs.</td>
   </tr>  
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/msm/api/Blueprint.html">Blueprint</a></td>
-   <td>Om detta är en <code>cq:Template</code>-nodresurs.</td>
+   <td>Om detta är en <code>cq:Template</code> nodresurs.</td>
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/dam/api/Asset.html">Tillgång</a></td>
-   <td>If this is a dam:Asset node resource.</td>
+   <td>Om detta är en resurs för dam:Asset-noden.</td>
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/dam/api/Rendition.html">Återgivning</a></td>
-   <td>If this is a dam:Asset rendition (nt:file under the rendition folder of a dam:Assert)</td>
+   <td>Om det här är en dam:Asset-rendering (not:file under renderingsmappen för en dam:Assert)</td>
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/tagging/Tag.html">Tagg</a></td>
-   <td>Om detta är en <code>cq:Tag</code>-nodresurs.</td>
+   <td>Om detta är en <code>cq:Tag</code> nodresurs.</td>
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/security/UserManager.html">UserManager</a></td>
@@ -185,11 +185,11 @@ I det första fallet kan javadocs ange vad `adaptTo-targets` är möjligt. Detta
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/workflow/status/WorkflowStatus.html">WorkflowStatus</a></td>
-   <td>Workflow status for the given page/workflow payload node.</td>
+   <td>Arbetsflödesstatus för den angivna sidans/arbetsflödets nyttolastnod.</td>
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/replication/ReplicationStatus.html">ReplicationStatus</a></td>
-   <td>Replication status for the given resource or its jcr:content subnode (checked first).</td>
+   <td>Replikeringsstatus för den angivna resursen eller dess jcr:content-undernod (markerad först).</td>
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/connector/ConnectorResource.html">KopplingResurs</a></td>
@@ -197,16 +197,16 @@ I det första fallet kan javadocs ange vad `adaptTo-targets` är möjligt. Detta
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/contentsync/config/package-summary.html">Konfig</a></td>
-   <td>Om detta är en <code>cq:ContentSyncConfig</code>-nodresurs.</td>
+   <td>Om detta är en <code>cq:ContentSyncConfig</code> nodresurs.</td>
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/contentsync/config/package-summary.html">ConfigEntry</a></td>
-   <td>Om detta är under en <code>cq:ContentSyncConfig</code>-nodresurs.</td>
+   <td>Om detta är under en <code>cq:ContentSyncConfig</code> nodresurs.</td>
   </tr>
  </tbody>
 </table>
 
-[****](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ResourceResolver.html) ResourceResolveradapts till:
+[**ResursResolver**](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/ResourceResolver.html) anpassar sig till:
 
 <table>
  <tbody>
@@ -253,16 +253,16 @@ I det första fallet kan javadocs ange vad `adaptTo-targets` är möjligt. Detta
   </tr>
   <tr>
    <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html">Externalizer</a></td>
-   <td>För extern generering av absoluta URL:er, även med det begärda objektet.<br /> </td>
+   <td>För att göra absoluta URL:er externaliserade, även med objektet request.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-[****](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) SlingHttpServletRequestadapts till:
+[**SlingHttpServletRequest**](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/SlingHttpServletRequest.html) anpassar sig till:
 
 Inga mål ännu, men implementerar Adaptable och kan användas som källa i en anpassad AdapterFactory.
 
-[****](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/SlingHttpServletResponse.html) SlingHttpServletResponse anpassar sig till:
+[**SlingHttpServletResponse**](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/SlingHttpServletResponse.html) anpassar sig till:
 
 <table>
  <tbody>
@@ -275,20 +275,20 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 #### WCM {#wcm}
 
-**[](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)** Sidorna anpassas till:
+**[Sida](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)** anpassar sig till:
 
 <table>
  <tbody>
   <tr>
-   <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html">Resource</a><br /> </td>
-   <td>Resource of the page.</td>
+   <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html">Resurs</a><br /> </td>
+   <td>Sidans resurs.</td>
   </tr>
   <tr>
-   <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/LabeledResource.html">LabeledResource</a></td>
+   <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/LabeledResource.html">EtiketteradResurs</a></td>
    <td>Etiketterad resurs (== this).</td>
   </tr>
   <tr>
-   <td><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Node</a></td>
+   <td><a href="https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Nod</a></td>
    <td>Sidans nod.</td>
   </tr>
   <tr>
@@ -298,15 +298,15 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
  </tbody>
 </table>
 
-**[Component](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/components/Component.html)** adapts to:
+**[Komponent](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/components/Component.html)** anpassar sig till:
 
 | [Resurs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html) | Komponentens resurs. |
 |---|---|
-| [EtiketteradResurs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/LabeledResource.html) | Labeled resource (== this). |
-| [Nod](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Node of the component. |
-| ... | Everything that the component&#39;s resource can be adapted to. |
+| [EtiketteradResurs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/LabeledResource.html) | Etiketterad resurs (== this). |
+| [Nod](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Komponentens nod. |
+| ... | Allt som komponentens resurs kan anpassas till. |
 
-**[](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Template.html)** Mallar anpassar sig till:
+**[Mall](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Template.html)** anpassar sig till:
 
 <table>
  <tbody>
@@ -331,7 +331,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 #### Dokumentskydd {#security}
 
-**Authorizable**,  **** Userand  **** Groupes customize to:
+**Auktoriserbar**, **Användare** och **Grupp** anpassa till:
 
 | [Nod](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Returnerar hemnoden för användaren/gruppen. |
 |---|---|
@@ -339,7 +339,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 #### DAM {#dam}
 
-**** Tillgångar anpassas till:
+**Tillgång** anpassar sig till:
 
 | [Resurs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html) | Resurs för tillgången. |
 |---|---|
@@ -348,7 +348,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 #### Taggar {#tagging}
 
-**** Taggar anpassar sig till:
+**Tagg** anpassar sig till:
 
 | [Resurs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html) | Resurs för taggen. |
 |---|---|
@@ -357,4 +357,4 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 #### Annan {#other}
 
-Dessutom innehåller Sling/JCR/OCM också [`AdapterFactory`](https://sling.apache.org/site/adapters.html#Adapters-AdapterFactory) för anpassade OCM-objekt ([Objektinnehållsmappning](https://jackrabbit.apache.org/object-content-mapping.html)).
+Dessutom ger Sling/JCR/OCM [`AdapterFactory`](https://sling.apache.org/site/adapters.html#Adapters-AdapterFactory) för anpassad OCM ([Mappning av objektinnehåll](https://jackrabbit.apache.org/object-content-mapping.html)).

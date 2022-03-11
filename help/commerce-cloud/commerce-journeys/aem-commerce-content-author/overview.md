@@ -1,7 +1,8 @@
 ---
 title: AEM Commerce Content Author Journey
 description: Börja här för en guidad resa via AEM Commerce Authoring
-source-git-commit: ada7c256de5d050724781e4cbad6d877c1562c7b
+exl-id: 155a2534-746d-4237-b7e2-9212c36fac7f
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 1%

@@ -16,7 +16,7 @@ Hur du kan leverera dina Dynamic Media-resurser - både video och bilder - beror
 Med Dynamic Media har du flera alternativ:
 
 * Om webbplatsen finns på Adobe Experience Manager vill du lägga till Dynamic Media-resurserna direkt på sidan.
-* Om webbplatsen inte finns på Experience Manager kan du läsa [Leverera Dynamic Media Assets](/help/assets/dynamic-media/delivering-dynamic-media-assets.md) i det beröringskänsliga användargränssnittet.
+* Om din webbplats inte finns på Experience Manager kan du se [Leverera Dynamic Media Assets](/help/assets/dynamic-media/delivering-dynamic-media-assets.md) i det beröringskänsliga användargränssnittet.
 
 Mer information finns i följande avsnitt:
 

@@ -1,7 +1,8 @@
 ---
 title: REST API:er
 description: Skärmar as a Cloud Service har ett enkelt RESTful-API som följer Siren-specifikationen. Följ den här sidan om du vill lära dig hur du navigerar i innehållsstrukturen och skickar kommandon till enheter i miljön.
-source-git-commit: fc3c047c6ad08db6e992a2aedc58c9cc1478b99f
+exl-id: 2c52583f-0dd9-4fa3-880b-7671442989ae
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%

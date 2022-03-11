@@ -1,7 +1,6 @@
 ---
 title: Etablering av miljöer - vad som krävs
 description: Etablering av miljöer - vad som krävs
-translation-type: tm+mt
 source-git-commit: 2b7ee2b7b0ce351ed48aeb2f3135c947eafe7247
 workflow-type: tm+mt
 source-wordcount: '281'
@@ -10,9 +9,9 @@ ht-degree: 0%
 ---
 
 
-# Etablerade miljöer {#environments-provisioning}
+# Miljöer {#environments-provisioning}
 
-## Etablerar {#provisioning}
+## Provisionering {#provisioning}
 
 Alla AEM molnmiljöer som köpts av en kund etableras automatiskt av Adobe och länkas tillbaka till deras program i Cloud Manager. De här AEM molnmiljöerna ingår i alla Adobe Managed Services-prenumerationer och består vanligtvis av minst en produktionsmiljö, en scenmiljö och eventuellt en eller flera utvecklings- eller testmiljöer.
 
@@ -22,6 +21,6 @@ När miljön är klar får den utsedda kundadministratören ett välkomstmeddela
 
 ## Nästa steg {#next-steps}
 
-När du har fått välkomstmeddelandet kan du logga in som administratör i Cloud Manager med hjälp av dina IMS-autentiseringsuppgifter för Adobe. När du är inloggad kan du verifiera att din AEM molnproduktion och icke-produktionsmiljöer är tillgängliga och fungerar som de ska.
+När du har fått välkomstmeddelandet kan du logga in på Cloud Manager som administratör med dina Adobe IMS-inloggningsuppgifter. När du är inloggad kan du verifiera att din AEM molnproduktion och icke-produktionsmiljöer är tillgängliga och fungerar som de ska.
 
 De här AEM molnmiljöerna används av Cloud Manager för att köra CI/CD-flödet när du distribuerar koden, från Cloud Managers Git-databas, via staging Environment och upp till din AEM produktionsmiljö. Du kan även komma åt dina AEM molnmiljöer direkt från Cloud Manager när du är redo att börja skapa digitala upplevelser för dina webbegenskaper.

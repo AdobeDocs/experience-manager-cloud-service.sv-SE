@@ -1,18 +1,17 @@
 ---
 title: ContextHub Diagnostics
 description: ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket
-translation-type: tm+mt
-source-git-commit: 1c518830f0bc9d9c7e6b11bebd6c0abd668ce040
+exl-id: c8d4e160-ea02-49f3-9e31-119445ef5a68
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '440'
 ht-degree: 0%
 
 ---
 
-
 # ContextHub Diagnostics {#contexthub-diagnostics}
 
-ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket. Öppna sidan genom att gå till sidan `contexthub.diagnostics.html` i AEM författarinstans, till exempel:
+ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket. Öppna sidan genom att gå till `contexthub.diagnostics.html` sidan med AEM författarinstans, till exempel:
 
 `http://<host>:<port>/conf/<site>/settings/cloudsettings/default/contexthub.diagnostics.html`
 
@@ -20,29 +19,29 @@ På sidan ContextHub Diagnostics (ContextHub-diagnostik) finns information om de
 
 >[!NOTE]
 >
->Felsökningsläget måste vara aktiverat för att diagnostikinformation ska kunna returneras, annars är diagnostiksidan tom. Mer information om hur du aktiverar felsökningsläget finns i [det här dokumentet](configuring-contexthub.md#debugging-contexthub).
+>Felsökningsläget måste vara aktiverat för att diagnostikinformation ska kunna returneras, annars är diagnostiksidan tom. Se [det här dokumentet](configuring-contexthub.md#debugging-contexthub) om du vill ha mer information om hur du aktiverar felsökningsläget.
 
-## Lagrar {#stores}
+## Lager {#stores}
 
 I avsnittet Lager visas alla ContextHub-butiker som har konfigurerats. Varje post i listan består av följande information:
 
-* **Titel:** Den  [butikstyp ](sample-stores.md) som butiken baseras på.
+* **Titel:** The [butikstyp](sample-stores.md) som butiken baseras på.
 * **sökväg:** Sökvägen till databasnoden som innehåller konfigurationen.
-* **resourceType:** Sökvägen till databasnoden där lagringstypen definieras.
-* **clientlibs:** De kategorier i klientbiblioteken som är inlästa och som implementerar lagringstypen.
+* **resourceType:** Sökvägen till databasnoden där lagringstypen har definierats.
+* **clientlibs:** Kategorierna för de klientbibliotek som läses in och som implementerar lagringstypen.
 
 ## Moduler {#modules}
 
 I avsnittet Moduler visas alla ContextHub-gränssnittsmoduler som har konfigurerats. Varje post i listan består av följande information:
 
-* **Titel:** Den  [gränssnittsmodul-](sample-modules.md) typ som gränssnittsmodulen baseras på.
+* **Titel:** The [Modultyp för användargränssnitt](sample-modules.md) som användargränssnittsmodulen baseras på.
 * **sökväg:** Sökvägen till databasnoden som innehåller konfigurationen.
 * **resourceType:** Sökvägen till databasnoden där gränssnittsmodultypen definieras.
-* **clientlibs:** De kategorier i klientbiblioteken som är inlästa som implementerar gränssnittsmodultypen.
+* **clientlibs:** De kategorier av klientbiblioteken som är inlästa och som implementerar UI-modultypen.
 
 ## Clientlibs {#clientlibs}
 
-I Clientlibs-avsnittet visas alla [klientbiblioteksmappar](/help/implementing/developing/introduction/clientlibs.md) som ContextHub har läst in. Klientbiblioteken kategoriseras enligt följande:
+I avsnittet Klientlibs visas alla [biblioteksmappar](/help/implementing/developing/introduction/clientlibs.md) som ContextHub har läst in. Klientbiblioteken kategoriseras enligt följande:
 
 * **kernel.js:** Klientbibliotek som implementerar ContextHub-ramverket, segmentmotorn och lagringstyperna.
 * **ui.js:** Klientbibliotek som implementerar gränssnittstyperna ContextHub och UI.
@@ -52,9 +51,9 @@ I Clientlibs-avsnittet visas alla [klientbiblioteksmappar](/help/implementing/de
 
 Avsnittet URL:er innehåller länkar till ContextHub-funktioner:
 
-* **Konfigurationsredigerare:** Öppnar  [konfigurationssidan för ContextHub, där du kan ](configuring-contexthub.md) konfigurera arkiv, gränssnittslägen och gränssnittsmoduler.
-* **Konfiguration av ContextHub-moduler:** Öppnar  `/etc/cloudsettings/default/contexthub.config.kernel.js` filen som innehåller JavaScript-objektrepresentationen av ContextHub-lagringskonfigurationerna.
-* **Konfiguration av ContextHub-gränssnitt:** Öppnar  `/etc/cloudsettings/default/contexthub.config.ui.js` filen som innehåller JavaScript-objektrepresentationen av ContextHub-gränssnittskonfigurationerna.
-* **kernel.js:** Öppnar  `/etc/cloudsettings/default/contexthub.kernel.js` filen som innehåller källkoden för klientbiblioteken som implementerar ContextHub-ramverket, segmentmotorn och lagertyperna.
-* **ui.js:** Öppnar  `/etc/cloudsettings/default/contexthub.ui.js` filen som innehåller källkoden för klientbiblioteken som implementerar gränssnitts- och gränssnittsmodultyperna för ContextHub.
-* **style.css:** Öppnar  `/etc/cloudsettings/default/contexthub.styles.css` filen som innehåller CSS-formaten för ContextHub-gränssnittsmodulerna och UI.
+* **Konfigurationsredigerare:** Öppnar [Konfigurationssida för ContextHub](configuring-contexthub.md) där du kan konfigurera butiker, gränssnittslägen och gränssnittsmoduler.
+* **Konfiguration av ContextHub-moduler:** Öppnar `/etc/cloudsettings/default/contexthub.config.kernel.js` -filen, som innehåller Javascript-objektrepresentationen av ContextHub-lagringskonfigurationerna.
+* **Konfiguration av ContextHub-gränssnitt:** Öppnar `/etc/cloudsettings/default/contexthub.config.ui.js` -filen, som innehåller Javascript-objektrepresentationen av ContextHub-gränssnittskonfigurationerna.
+* **kernel.js:** Öppnar `/etc/cloudsettings/default/contexthub.kernel.js` -filen, som innehåller källkoden för de klientbibliotek som implementerar ContextHub-ramverket, segmentmotorn och lagringstyperna.
+* **ui.js:** Öppnar `/etc/cloudsettings/default/contexthub.ui.js` som innehåller källkoden för de klientbibliotek som implementerar gränssnittstyperna ContextHub och UI.
+* **style.css:** Öppnar `/etc/cloudsettings/default/contexthub.styles.css` som innehåller CSS-formaten för ContextHub-gränssnittsmodulerna.

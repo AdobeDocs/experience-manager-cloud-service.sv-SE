@@ -130,7 +130,7 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
    >[!NOTE]
    >
    >Om du väljer **[!UICONTROL Add to existing translation project]** kan du bara lägga till ditt översättningsprojekt i ett befintligt projekt om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
-1. Från **[!UICONTROL Existing translation project]** väljer du ett projekt som du vill lägga till resursen för översättning.
+1. Från **[!UICONTROL Existing translation project]** väljer du ett projekt för att lägga till resursen för översättning.
 1. Klicka/tryck på **[!UICONTROL Create]**. Resurserna som ska översättas läggs till i målmappen. Den uppdaterade mappen listas i avsnittet **[!UICONTROL Language Copies]**.
 1. Navigera till projektkonsolen och öppna det befintliga översättningsprojektet som du har lagt till i.
 1. Klicka/tryck på sidan med projektinformation för översättning.
@@ -163,7 +163,7 @@ Om du använder det här alternativet läggs resursuppsättningen till i ett bef
 1. Markera kryssrutan före **[!UICONTROL Language Copies]**, så markeras alla språkversioner. Avmarkera andra kopior än den språkkopia (kopior) som motsvarar det eller de språk som du vill översätta till.
 1. Klicka/tryck **[!UICONTROL Update language copies]** längst ned.
 1. Välj **[!UICONTROL Add to existing translation project]** i listan **[!UICONTROL Project]**.
-1. Från **[!UICONTROL Existing translation project]** väljer du ett projekt som du vill lägga till resursen för översättning.
+1. Från **[!UICONTROL Existing translation project]** väljer du ett projekt för att lägga till resursen för översättning.
 1. Klicka/tryck på **[!UICONTROL Start]**.
 1. Se steg 9-14 i [Lägg till i befintligt översättningsprojekt](#add-to-existing-translation-project) för att slutföra resten av proceduren.
 

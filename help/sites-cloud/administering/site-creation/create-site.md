@@ -3,13 +3,13 @@ title: Skapa en plats
 description: Lär dig hur du använder AEM för att skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
 feature: Administering
 role: Admin
-source-git-commit: 5e1a89743c5ac36635a139ada690849507813c30
+exl-id: 9c71c167-2934-4210-abd9-ab085b36593b
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en plats {#creating-site}
 

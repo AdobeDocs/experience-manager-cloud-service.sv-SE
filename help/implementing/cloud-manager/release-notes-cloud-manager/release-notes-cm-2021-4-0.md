@@ -1,21 +1,22 @@
 ---
-title: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.4.0
-description: Versionsinformation för Cloud Manager i AEM som Cloud Service version 2021.4.0
+title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.4.0
+description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.4.0
 feature: Release Information
-source-git-commit: a707968483dc1196628b737ad207bfefe63ca94b
+exl-id: a11ebe0e-2872-4fde-acc0-5babc6b01e1a
+source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation för Cloud Manager i Adobe Experience Manager som Cloud Service 2021.4.0 {#release-notes}
+# Versionsinformation för Cloud Manager i Adobe Experience Manager as a Cloud Service 2021.4.0 {#release-notes}
 
-På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM som en Cloud Service 2021.4.0.
+På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a Cloud Service 2021.4.0.
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager i AEM som Cloud Service 2021.4.0 är 8 april 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.4.0 är 8 april 2021.
 Nästa version är planerad till 6 maj 2021.
 
 ### Nyheter {#what-is-new-april}
@@ -24,9 +25,9 @@ Nästa version är planerad till 6 maj 2021.
 
 * En användare med nödvändig behörighet kan nu skicka slutpunkten för e-handeln via användargränssnittet.
 
-* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM version `2021.03.5104.20210328T185548Z` eller senare.
+* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM `2021.03.5104.20210328T185548Z` eller senare.
 
-* Knappen **Hantera Git** visas på pipelines-kortet även när inga rörledningar har konfigurerats.
+* The **Hantera Git** knappen visas på pipelines-kortet även när inga rörledningar har konfigurerats.
 
 * Den version av AEM projekttyp som används av Cloud Manager har uppdaterats till version 27.
 
@@ -38,14 +39,14 @@ Nästa version är planerad till 6 maj 2021.
 
 * Felmeddelandet när en pipeline startades när en miljö togs bort har klargjorts.
 
-* OSGi-paket som tillhandahålls av Eclipse-projekt undantas nu från regeln `CQBP-84--dependencies`.
+* OSGi-paket som tillhandahålls av Eclipse-projekt är nu undantagna från regeln `CQBP-84--dependencies`.
 
 ### Felkorrigeringar {#bug-fixes-cm-april}
 
-* När du redigerar Experience Audit-sidan för en pipeline kommer en indatasökväg som börjar med ett snedstreck `( / )` inte längre att resultera i att steget fastnar i väntande status.
+* När du redigerar Experience Audit-sidan för en pipeline ska du ange en indatasökväg som börjar med ett snedstreck `( / )` kommer inte längre att resultera i att steget fastnar i väntande status.
 
 * När en ny produktionspipeline skapas granskades inte standardstartsidan om användaren inte lägger till någon åsidosättning av innehållsgranskning.
 
-* Problem för `CloudServiceIncompatibleWorkflowProcess` hade fel allvarlighetsgrad i den hämtningsbara CSV-filen för utgåvan.
+* Problem med `CloudServiceIncompatibleWorkflowProcess` hade fel allvarlighetsgrad i CSV-filen för den hämtningsbara utgåvan.
 
-* `Runmode`-kontrollen genererade falskt positiva värden på noder som inte finns i mappen.
+* The `Runmode` kontrollen genererade falskt positiva värden på noder som inte finns i mappen.

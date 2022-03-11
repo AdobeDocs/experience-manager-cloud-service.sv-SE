@@ -1,14 +1,13 @@
 ---
 title: Förhandsgranska sidor med ContextHub-data
 description: Verktygsfältet ContextHub visar data från ContextHub-butiker och gör att du kan ändra lagringsdata. Det är användbart för förhandsgranskning av innehåll
-translation-type: tm+mt
-source-git-commit: e361f24b943eff68982a37ac0dc2597f92450026
+exl-id: 9c0536c5-900e-4814-9e31-f9fee5adc17c
+source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 2%
 
 ---
-
 
 # Förhandsgranska sidor med ContextHub-data  {#previewing-pages-using-contexthub-data}
 
@@ -19,9 +18,9 @@ Verktygsfältet består av en serie användargränssnittslägen som innehåller 
 * Gränssnittslägen är ikoner som visas till vänster i verktygsfältet. När du klickar på eller trycker på en ikon visas de gränssnittsmoduler som finns i verktygsfältet.
 * Gränssnittsmoduler visar data från en eller flera ContextHub-butiker. Vissa gränssnittsmoduler gör det även möjligt för dig att ändra lagrade data.
 
-ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din administratör kan ha [konfigurerat ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md) för att visa olika.
+ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Administratören kan ha [konfigurerad ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md) för att visa olika.
 
-## Visar ContextHub-verktygsfältet {#revealing-the-contexthub-toolbar}
+## Visa verktygsfältet ContextHub {#revealing-the-contexthub-toolbar}
 
 Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verktygsfältet är bara tillgängligt på författarinstanser och endast när administratören har aktiverat det.
 
@@ -35,11 +34,11 @@ Verktygsfältet ContextHub är tillgängligt i förhandsgranskningsläget. Verkt
 
    ![Knappen ContextHub](/help/sites-cloud/authoring/assets/contexthub-button.png)
 
-## Funktioner för användargränssnittsmodul {#ui-module-features}
+## Funktioner i gränssnittsmodul {#ui-module-features}
 
 Varje gränssnittsmodul innehåller olika uppsättningar funktioner, men följande typer av funktioner är vanliga. Eftersom gränssnittsmodulerna kan utökas kan utvecklaren implementera andra funktioner efter behov.
 
-### Verktygsfältsinnehåll {#toolbar-content}
+### Innehåll i verktygsfält {#toolbar-content}
 
 Gränssnittsmoduler kan visa data från en eller flera ContextHub-butiker i verktygsfältet. I gränssnittsmoduler används en ikon och en titel för att identifiera sig själva.
 
@@ -53,7 +52,7 @@ Vissa gränssnittsmoduler visar en popup-övertäckning när de klickas eller tr
 
 ### Popup Forms {#popup-forms}
 
-Popup-överlägget för en modul kan innehålla formulärelement som gör att du kan ändra data i ContextHub-arkivet. Om sidinnehållet bestäms av lagringsdata kan du använda formuläret och observera ändringar i sidinnehållet.
+Popup-överlägget för en modul kan innehålla formulärelement som gör att du kan ändra data i ContextHub-arkivet. Om sidinnehållet avgörs av lagringsdata kan du använda formuläret och observera ändringar i sidinnehållet.
 
 ### Helskärmsläge {#fullscreen-mode}
 

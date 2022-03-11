@@ -22,7 +22,6 @@ Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del A
 >
 >* Resurser REST API
 >* inklusive stöd för innehållsfragment
-
 >
 >Den aktuella implementeringen av Assets HTTP API baseras på [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) arkitekturstil.
 
@@ -148,7 +147,6 @@ Om REST API:t för Resurser används i en miljö utan särskilda autentiseringsk
 >
 >* [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 >* [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
-
 >
 
 
