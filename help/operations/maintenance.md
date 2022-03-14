@@ -2,9 +2,9 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Underhållsaktiviteter på AEM as a Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: 9177741a57bb16c36b51d1a042538b9cee20a0b8
+source-git-commit: cd48b78383974027d8980397632c395a5958edbf
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Underhållsåtgärder är processer som körs enligt ett schema för att optimer
 
 ## Konfigurera underhållsåtgärder
 
-I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet är inte längre tillgängligt för AEM as a Cloud Service, så konfigurationer bör implementeras för källkontroll och driftsättas med hjälp av Cloud Manager. Adobe hanterar underhållsåtgärder som inte kräver kundbeslut (t.ex. Datastore Garbage Collection) medan andra underhållsåtgärder kan konfigureras av kunden (se tabellen nedan).
+I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med underhållskortet (Verktyg > Åtgärder > Underhåll). Underhållskortet är inte längre tillgängligt för AEM as a Cloud Service, så konfigurationer bör implementeras för källkontroll och driftsättas med hjälp av Cloud Manager. Adobe hanterar underhållsuppgifter som har inställningar som inte kan konfigureras av kunder (t.ex. Datastore Skräpsamling, Rensa granskningslogg, Rensa version). Andra underhållsuppgifter kan konfigureras av kunder, vilket beskrivs i tabellen nedan.
 
 >[!CAUTION]
 >
@@ -56,14 +56,22 @@ Customers can schedule each of the Workflow Purge, Ad-hoc Task Purge and Project
   <tr>
     <td>Rensa version</td>
     <td>Adobe</td>
-    <td>Helägd av Adobe, men i framtiden kommer kunderna att kunna konfigurera vissa parametrar.</td>
+    <td>För att författarnivån ska kunna fortsätta att fungera måste äldre versioner av varje del av innehållet under <code>/content</code> databasens nod rensas enligt följande:<br><ol>
+  <li>Versioner som är äldre än 30 dagar tas bort</li>
+  <li>De senaste 5 versionerna de senaste 30 dagarna sparas</li>
+  <li>Oavsett reglerna ovan bevaras den senaste versionen.</li>
+</ol><br>OBS! det beteende som beskrivs ovan gäller för nya miljöer från och med den 14 mars 2022 och kommer att tillämpas för befintliga miljöer (de som skapades före den 14 mars 2022) den 21 april 2022.</td>
   </td>
   </tr>
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Adobe</td>
-    <td>Helägd av Adobe, men i framtiden kommer kunderna att kunna konfigurera vissa parametrar.</td>
-  </td>
+    <td>För att författarnivån ska fortsätta att fungera måste äldre granskningsloggar finnas under <code>/content</code> databasens nod rensas enligt följande:<br><ol>
+  <li>Granskningsloggar som är äldre än 3 dagar tas bort för replikeringsgranskning</li>
+  <li>För DAM-granskning (Assets) tas granskningsloggar som är äldre än 30 dagar bort</li>
+  <li>Vid sidgranskning tas loggar som är äldre än 3 dagar bort.<br></li>
+</ol><br>OBS! det beteende som beskrivs ovan gäller för nya miljöer från och med den 14 mars 2022 och kommer att tillämpas för befintliga miljöer (de som skapades före den 14 mars 2022) den 21 april 2022.</td>
+   </td>
   </tr>
   <tr>
     <td>Lucene Binaries Cleanup</td>
