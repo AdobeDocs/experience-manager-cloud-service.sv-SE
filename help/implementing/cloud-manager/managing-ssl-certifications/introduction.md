@@ -2,7 +2,7 @@
 title: Introduktion - Hantera SSL-certifikat
 description: Introduktion - Hantera SSL-certifikat
 exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
-source-git-commit: 828490e12d99bc8f4aefa0b41a886f86fee920b4
+source-git-commit: 09a2c24b848364954dc5621995d0d0dc24059011
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Med Cloud Manager kan kunderna själva installera SSL-certifikat via användargr
 
 * AEM as a Cloud Service godkänner SSL-jokertecken för en domän.
 
-* Molnhanteraren tillåter vid en given tidpunkt högst 20 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen. Ett certifikat kan vanligtvis omfatta flera domäner (upp till 100 SAN-nätverk). Överväg därför att gruppera flera domäner i samma certifikat för att hålla sig inom denna gräns.
+* Molnhanteraren tillåter vid en given tidpunkt högst 50 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen. Ett certifikat kan vanligtvis omfatta flera domäner (upp till 100 SAN-nätverk). Överväg därför att gruppera flera domäner i samma certifikat för att hålla sig inom denna gräns.
 
 Cloud Manager stöder följande SSL-certifikatkrav för kunder:
 
