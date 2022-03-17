@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 265999e5e92fc7b0f78f41bee4545ca6cee618a5
+source-git-commit: b490d581532576bc526f9bd166003df7f2489495
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1549'
 ht-degree: 1%
 
 ---
@@ -72,7 +72,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
    >Andra metoder, inklusive [AEM ACS Commons-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
 
    >[!NOTE]
-   >Observera att dispatchern fortfarande kan cachelagra innehåll enligt sina egna [regler för cachelagring](https://helpx.adobe.com/experience-manager/kb/find-out-which-requests-does-aem-dispatcher-cache.html). Om du vill göra innehållet helt privat bör du se till att det inte cachas av dispatchern.
+   >Observera att dispatchern fortfarande kan cachelagra innehåll enligt sina egna [regler för cachelagring](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17497.html). Om du vill göra innehållet helt privat bör du se till att det inte cachas av dispatchern.
 
 ### Klientbibliotek (js, css) {#client-side-libraries}
 
