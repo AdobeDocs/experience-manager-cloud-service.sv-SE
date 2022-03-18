@@ -2,9 +2,9 @@
 title: Navigera till Screens Services Provider
 description: Den här sidan beskriver hur du navigerar till Screens Services Provider.
 exl-id: 9eff6fe8-41d4-4cf3-b412-847850c4e09c
-source-git-commit: 9263c833edf092a4254b7692924c1638100b9f6d
+source-git-commit: 9e43db0fdd55e396de2cf737e1d79bd06a1835e4
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '264'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,8 @@ Följ stegen nedan för att konfigurera leverantören av skärmtjänster:
    ![bild](/help/screens-cloud/assets/configure/configure-screens0.png)
 
 3. Ange följande information i dialogrutan Redigera inställningar.
-o **Bas-URL** - AEM Publish URL o **Författar-URL** - AEM Author URL o **Sökväg för kanalleverantör** - /screens/channels.json
+   * **Publicera URL** - AEM publicerings-URL (t.ex. `https://publish-p12345-e12345.adobeaemcloud.com`)
+   * **Författar-URL** - AEM författarens URL (t.ex. `https://author-p12345-e12345.adobeaemcloud.com`)
 
    ![bild](/help/screens-cloud/assets/configure/configure-screens4.png)
 
