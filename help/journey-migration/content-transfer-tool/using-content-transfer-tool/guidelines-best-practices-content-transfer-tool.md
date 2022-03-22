@@ -2,10 +2,10 @@
 title: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 description: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 6f2a306f54295ec0ec78706fec4b34313e3000c7
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 25%
+source-wordcount: '1570'
+ht-degree: 24%
 
 ---
 
@@ -56,7 +56,9 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare på källinstansen och tillhöra den lokala AEM **administratörer** i den Cloud Service som du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
 
-* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** om du aktiverar det här alternativet tas hela den befintliga databasen bort och en ny databas skapas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Användaren måste läggas till på nytt i **administratörer** grupp för att hämta åtkomsttoken för CTT.
+* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** om du aktiverar det här alternativet tas hela den befintliga databasen bort och en ny databas skapas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Användaren måste läggas till på nytt i **administratörer** för att hämta åtkomsttoken för verktyget Innehållsöverföring.
+
+* Verktyget Innehållsöverföring stöder inte sammanfogning av innehåll från flera källor till målkällinstansen om Cloud Servicen från de två källorna flyttas till samma sökvägar på målet. Om du vill flytta innehåll från flera olika källor till en enda instans av målsökvägen måste du se till att det inte finns någon överlappning mellan innehållssökvägarna från Cloud Servicen.
 
 * Åtkomsttoken kan upphöra att gälla regelbundet antingen efter en viss tidsperiod eller efter att Cloud Servicens miljö har uppgraderats. Om åtkomsttoken har upphört att gälla kan du inte ansluta till Cloud Servicen och du måste hämta den nya åtkomsttoken. Statusikonen som är kopplad till en befintlig migreringsuppsättning ändras till ett rött moln och ett meddelande visas när du hovrar över den.
 
