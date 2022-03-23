@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: 3bf8764500d2b0068b808a42ecfd1400f78b1d13
+source-git-commit: 5f344682aa0427d46dc6ca75fe83b0071348ad83
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
 * Apache Maven 3.6.0 är installerad.
-* De Java-versioner som är installerade är Oraclena JDK 8u202, Azul Zulu 8u292, Oracle JDK 11.0.2 och Azul Zulu 11.0.11.
+* De Java-versioner som är installerade är Oracle JDK 8u202 och Oracle JDK 11.0.2.
 * Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_202`  som innehåller Oraclet JDK 8u202. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
 * Det finns ytterligare systempaket installerade som är nödvändiga.
 
@@ -90,15 +90,10 @@ De aktuella kombinationerna av leverantör/version är:
 | `sun` | `1.8` |
 | `sun` | `1.11` |
 | `sun` | `11` |
-| `azul` | `1.8` |
-| `azul` | `1.11` |
-| `azul` | `8` |
 
-#### Alternate Maven Execution JDK Version {#alternate-maven-jdk-version}
-
-Det går också att välja Azul 8 eller Azul 11 som JDK för hela Maven-exekveringen. Till skillnad från alternativen för verktygskedjor ändras det JDK som används för alla plugin-program, såvida inte konfigurationen för verktygskedjor också anges. I så fall tillämpas fortfarande konfigurationen för verktygskedjor för Maven-plugin-program som är medvetna om verktygskedjor. Resultatet blir att du kontrollerar och använder Java-versionen med [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) kommer att fungera.
-
-Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Den här filen kan ha antingen innehållet 11 eller 8. Alla andra värden ignoreras. Om 11 anges används Azul 11 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk-11.0.11`. Om 8 anges används Azul 8 och `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk-8.0.292`.
+>[!NOTE]
+>
+>Från och med april 2022 kommer Oracle-JDK att vara standard-JDK för utveckling och drift av AEM program. Molnhanterarens byggprocess växlar automatiskt till att använda Oracle-JDK, även om ett alternativ uttryckligen har valts i Maven-verktygskedjan. Mer information finns i versionsinformationen för april när den har publicerats.
 
 ## Miljövariabler {#environment-variables}
 
