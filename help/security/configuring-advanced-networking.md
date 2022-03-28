@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: a06f81d5ac7f5276acd34415843f084f58f04ba8
 workflow-type: tm+mt
-source-wordcount: '2982'
+source-wordcount: '2976'
 ht-degree: 0%
 
 ---
@@ -305,11 +305,7 @@ DriverManager.getConnection("jdbc:mysql://" + System.getenv("AEM_PROXY_HOST") + 
 </tbody>
 </table>
 
-## Äldre dedikerade gruppadresskunder {#legacy-dedicated-egress-address-customers}
-
-Om du har fått en dedikerad IP-adress för utgångar före 2021.09.30 kommer din dedikerade IP-funktion för utgångar att fungera enligt beskrivningen nedan.
-
-### Funktionsanvändning {#feature-usage}
+## Funktionsanvändning {#feature-usage}
 
 Funktionen är kompatibel med Java-kod eller bibliotek som resulterar i utgående trafik, förutsatt att de använder Java-standardegenskaper för proxykonfigurationer. I praktiken bör detta omfatta de vanligaste biblioteken.
 
@@ -351,11 +347,14 @@ public JSONObject getJsonObject(String relativePath, String queryString) throws 
 
 Samma dedikerade IP-adress används för alla kundprogram i Adobe och för alla miljöer i respektive program. Det gäller både författare och publiceringstjänster.
 
-Endast HTTP- och HTTPS-portar stöds. Detta inkluderar HTTP/1.1 och HTTP/2 vid kryptering.
-
 ### Felsökningsöverväganden {#debugging-considerations}
 
 Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. I annat fall kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/IP](https://ifconfig.me/IP), som returnerar den anropande IP-adressen.
+
+## Äldre dedikerade gruppadresskunder {#legacy-dedicated-egress-address-customers}
+
+Om du har etablerats med en dedikerad IP-adress före 2021.09.30, har din dedikerade IP-adressfunktion bara stöd för HTTP- och HTTPS-portar.
+Detta inkluderar HTTP/1.1 och HTTP/2 vid kryptering.
 
 ## VPN (Virtual Private Network) {#vpn}
 
