@@ -4,9 +4,9 @@ description: Lär dig hur du ogiltigförklarar det cachelagrade innehållet i CD
 feature: Asset Management
 role: Admin,User
 exl-id: c631079b-8082-4ff7-a122-dac1b20d8acd
-source-git-commit: c9944b1ac561b54ad2e2870ab0da967c005f105f
+source-git-commit: cf7d844acb0158b543d575368e35cd1c2fc72fba
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb lever
 >
 >Den här funktionen kräver att du använder det färdiga CDN som medföljer Adobe Experience Manager Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
 
-Se även [Cacheöversikt i Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html).
+<!-- REMOVED MARCH 28, 2022 BECAUSE OF 404; NO REDIRECT WAS PUT IN PLACE BY SUPPORT See also [Cache overview in Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html). -->
 
 **Så här gör du CDN-cachen ogiltig via Dynamic Media:**
 
