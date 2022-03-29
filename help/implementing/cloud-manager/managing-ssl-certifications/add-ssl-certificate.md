@@ -1,81 +1,98 @@
 ---
-title: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
-description: Lägga till ett SSL-certifikat - Hantera SSL-certifikat
+title: Lägga till ett SSL-certifikat
+description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: 828490e12d99bc8f4aefa0b41a886f86fee920b4
+source-git-commit: 2c87d5fb33b83ca77b97391e4b0baaf38f8dd026
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
 
 # Lägga till ett SSL-certifikat {#adding-an-ssl-certificate}
 
->[!NOTE]
->AEM as a Cloud Service godkänner endast certifikat som överensstämmer med OV- (Organization Validation) eller EV-principen (Extended Validation). DV-principen (Domain Validation) accepteras inte. Dessutom måste alla certifikat vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel. AEM as a Cloud Service godkänner SSL-jokertecken för en domän.
+Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 
-Ett certifikat tar några dagar att etablera och vi rekommenderar att certifikatet etableras även månader i förväg. Se [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md) för mer information.
+>[!TIP]
+>
+>Det kan ta några dagar innan ett certifikat etableras. Adobe rekommenderar därför att certifikatet tillhandahålls i god tid i förväg.
 
 ## Certifikatformat {#certificate-format}
 
-SSL-filer måste vara i PEM-format för att kunna installeras i Cloud Manager. Vanliga filtillägg i PEM-format är bland annat `.pem,` .`crt`, `.cer`och `.cert`.
+SSL-certifikatfiler måste vara i PEM-format för att kunna installeras med Cloud Manager. Vanliga filtillägg för PEM-formatet är bland annat `.pem,` .`crt`, `.cer`och `.cert`.
 
-Följ stegen nedan för att konvertera SSL-filernas format till PEM:
+Följande `openssl` -kommandon kan användas för att konvertera certifikat som inte är PEM-certifikat.
 
 * Konvertera PFX till PEM
 
-   `openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes`
+   ```shell
+   openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes
+   ```
 
 * Konvertera P7B till PEM
 
-   `openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer`
+   ```shell
+   openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer
+   ```
 
 * Konvertera DER till PEM
 
-   `openssl x509 -inform der -in certificate.cer -out certificate.pem`
-
-## Viktiga överväganden {#important-considerations}
-
-* En användare måste ha rollen Business Owner eller Deployment Manager för att kunna installera ett SSL-certifikat i Cloud Manager.
-
-* Molnhanteraren tillåter vid en given tidpunkt högst 10 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen. Ett certifikat kan vanligtvis omfatta flera domäner (upp till 100 SAN-nätverk). Överväg därför att gruppera flera domäner i samma certifikat för att hålla sig inom denna gräns.
-
+   ```shell
+   openssl x509 -inform der -in certificate.cer -out certificate.pem
+   ```
 
 ## Lägga till ett certifikat {#adding-a-cert}
 
-Följ stegen nedan för att lägga till ett certifikat:
+Följ de här stegen för att lägga till ett certifikat med hjälp av Cloud Manager.
 
-1. Logga in på Cloud Manager.
-1. Navigera till **Miljö** skärmbild från **Översikt** sida.
-1. Klicka på **SSL-certifikat** från den vänstra navigeringsmenyn. En tabell med information om eventuella befintliga SSL-certifikat visas på den här skärmen.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-   ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-1.png)
+1. Navigera till **Miljö** från **Översikt** sida.
+
+1. Klicka på **SSL-certifikat** från den vänstra navigeringspanelen. En tabell med information om eventuella befintliga SSL-certifikat visas på huvudskärmen.
+
+   ![Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-1.png)
 
 1. Klicka på **Lägg till SSL-certifikat** att öppna **Lägg till SSL-certifikat** -dialogrutan.
 
-   * Ange ett namn för ditt certifikat i **Certifikatnamn**. Det kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
-   * Klistra in **Certifikat**, **Privat nyckel** och **Certifikatkedja** till sina respektive fält. Använd ikonen Klistra in till höger om inmatningsrutan.
-Alla tre fälten är inte valfria och måste inkluderas.
+   * Ange ett namn för ditt certifikat i **Certifikatnamn**.
+      * Detta är endast avsett som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.
+   * Klistra in **Certifikat**, **Privat nyckel** och **Certifikatkedja** värden i sina respektive fält.
+      * Du kan använda ikonen Klistra in till höger om inmatningsrutan.
+      * Alla tre fälten är obligatoriska.
 
-      ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
+   ![Dialogrutan Lägg till SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-02.png)
+
+   * Alla fel som upptäcks visas.
+      * Du måste åtgärda alla fel innan certifikatet kan sparas.
+      * Se [Certifikatfel](#certificate-errors) om du vill veta mer om hur du åtgärdar vanliga fel.
 
 
-      >[!NOTE]
-      >Alla fel som upptäcks visas. Du måste åtgärda alla fel innan certifikatet kan sparas. Se [Certifikatfel](#certificate-errors) om du vill veta mer om hur du åtgärdar vanliga fel.
+1. Klicka **Spara** för att spara ditt certifikat.
 
-1. Klicka **Spara** för att skicka in ditt certifikat. Den visas som en ny rad i tabellen.
+När certifikatet har sparats visas det som en ny rad i tabellen.
 
-   ![](/help/implementing/cloud-manager/assets/ssl/ssl-cert-3.png)
+![Sparat SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-3.png)
+
+>[!NOTE]
+>
+>En användare måste vara medlem i **Företagsägare** eller **Distributionshanteraren** roll för att installera ett SSL-certifikat i Cloud Manager.
 
 ## Certifikatfel {#certificate-errors}
 
+Vissa fel kan uppstå om ett certifikat inte har installerats korrekt eller uppfyller kraven för Cloud Manager.
+
 ### Certifikatprofil {#certificate-policy}
 
-Om du ser felet &quot;Certifikatprincipen måste överensstämma med EV- eller OV-principen, och inte DV-principen&quot;, kontrollerar du certifikatets profil.
+Om följande fel visas kontrollerar du certifikatets policy.
 
-Vanligtvis identifieras certifikattyper av de OID-värden som är inbäddade i profiler. Dessa OID:n är unika och konverterar därför ett certifikat till ett textformulär. Om du söker efter OID:t bekräftas att certifikatet har en matchning.
+```text
+Certificate policy must conform with EV or OV, and not DV policy.
+```
 
-Du kan visa din certifikatinformation på följande sätt.
+Certifikatprofiler identifieras normalt av inbäddade OID-värden. Om du skriver ut ett certifikat till text och söker efter OID:t visas certifikatets profil.
+
+Du kan skriva ut din certifikatinformation som text med följande exempel som hjälp.
 
 ```text
 openssl x509 -in 9178c0f58cb8fccc.pem -text
@@ -94,15 +111,15 @@ certificate:
 ...
 ```
 
-Tabellen innehåller identifieringsmönster.
+OID-mönstret i texten definierar certifikatets principtyp.
 
-| Mönster | Certifikattyp | Godtagbart |
+| Mönster | Policy | Godtagbart i Cloud Manager |
 |---|---|---|
-| `2.23.140.1.2.1` | DV | Nej |
+| `2.23.140.1.1` | EV | Ja |
 | `2.23.140.1.2.2` | OV | Ja |
-| `2.23.140.1.2.3` and `TLS Web Server Authentication` | IV-certifikat med behörighet att använda för https | Ja |
+| `2.23.140.1.2.1` | DV | Nej |
 
-`grep`pinga efter mönstren, du kan bekräfta din certifikattyp.
+Av `grep`pinga efter OID-mönstren i utdatafältstexten, du kan bekräfta din certifikatprincip.
 
 ```shell
 # "EV Policy"
@@ -117,21 +134,30 @@ openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.1" -B5
 
 ### Korrigera certifikatordning {#correct-certificate-order}
 
-Den vanligaste orsaken till att en certifikatdistribution misslyckas är att de mellanliggande certifikaten eller kedjecertifikaten inte är i rätt ordning. De mellanliggande certifikatfilerna måste avslutas med det rotcertifikat eller certifikat som ligger närmast roten och vara i fallande ordning från `main/server` certifikat till roten.
+Den vanligaste orsaken till att en certifikatdistribution misslyckas är att de mellanliggande certifikaten eller kedjecertifikaten inte är i rätt ordning.
 
-Du kan bestämma ordningen för de mellanliggande filerna med följande kommando:
+Mellanliggande certifikatfiler måste avslutas med rotcertifikatet eller det certifikat som ligger närmast roten. De måste vara i fallande ordning från `main/server` certifikat till roten.
 
-`openssl crl2pkcs7 -nocrl -certfile $CERT_FILE | openssl pkcs7 -print_certs -noout`
+Du kan ange ordningen för de mellanliggande filerna med följande kommando.
 
-Du kan verifiera att den privata nyckeln och `main/server` certifikatmatchning med följande kommandon:
+```shell
+openssl crl2pkcs7 -nocrl -certfile $CERT_FILE | openssl pkcs7 -print_certs -noout
+```
 
-`openssl x509 -noout -modulus -in certificate.pem | openssl md5`
+Du kan verifiera att den privata nyckeln och `main/server` certifikatmatchning med följande kommandon.
 
-`openssl rsa -noout -modulus -in ssl.key | openssl md5`
+```shell
+openssl x509 -noout -modulus -in certificate.pem | openssl md5
+```
+
+```shell
+openssl rsa -noout -modulus -in ssl.key | openssl md5
+```
 
 >[!NOTE]
->Utdata för dessa två kommandon måste vara exakt likadana. Om du inte kan hitta en matchande privat nyckel till `main/server` måste du ange ett nytt certifikat genom att generera ett nytt CSR och/eller begära ett uppdaterat certifikat från din SSL-leverantör.
+>
+>Utdata för dessa två kommandon måste vara exakt likadana. Om du inte kan hitta någon matchande privat nyckel för `main/server` måste du ange ett nytt certifikat genom att generera ett nytt CSR och/eller begära ett uppdaterat certifikat från din SSL-leverantör.
 
 ### Giltighetsdatum för certifikat {#certificate-validity-dates}
 
-SSL-certifikatet förväntas vara giltigt i minst 90 dagar framöver. Du bör kontrollera certifikatkedjans giltighet.
+SSL-certifikatet förväntas vara giltigt i minst 90 dagar från dagens datum. Du bör kontrollera certifikatkedjans giltighet.

@@ -1,50 +1,76 @@
 ---
-title: Introduktion - Hantera SSL-certifikat
-description: Introduktion - Hantera SSL-certifikat
+title: Introduktion till hantering av SSL-certifikat
+description: Lär dig hur du får tillgång till självbetjäningsverktyg i Cloud Manager för att installera SSL-certifikat.
 exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
-source-git-commit: 09a2c24b848364954dc5621995d0d0dc24059011
+source-git-commit: 898f7bc46a3f1b0ac93ee43fbf7b60a11682a073
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
 
-# Introduktion {#introduction}
+
+# Introduktion till hantering av SSL-certifikat{#introduction}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_sslcert"
 >title="Hantera SSL-certifikat"
->abstract="Med Cloud Manager kan kunderna själva installera SSL-certifikat via användargränssnittet i Cloud Manager. Cloud Manager använder en TLS-tjänst för plattform för att hantera SSL-certifikat och privata nycklar som ägs av kunder och vanligtvis hämtas från tredjepartscertifikatutfärdare."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/view-update-replace-ssl-certificate.html" text="Visa, uppdatera och ersätta ett SSL-certifikat"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/check-status-ssl-certificate.html" text="Kontrollera status för ett SSL-certifikat"
+>abstract="Lär dig hur du får tillgång till självbetjäningsverktyg i Cloud Manager för att installera och hantera SSL-certifikat för att skydda webbplatsen för dina användare. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates.html" text="Visa, uppdatera och ersätta ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates.html" text="Kontrollera status för ett SSL-certifikat"
 
+Med Cloud Manager får du tillgång till självbetjäningsverktyg för att installera och hantera SSL-certifikat för att skydda din webbplats för användarna. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare, till exempel Let’s Encrypt.
 
-Med Cloud Manager kan kunderna själva installera SSL-certifikat via användargränssnittet i Cloud Manager. Cloud Manager använder en TLS-tjänst för plattform för att hantera SSL-certifikat och privata nycklar som ägs av kunder och vanligtvis hämtas från tredjepartscertifikatutfärdare, till exempel *Låt oss kryptera*.
+## Introduktion till certifikat {#certificates}
 
-## Viktiga överväganden {#important-considerations}
+Företag använder SSL-certifikat för att skydda sina webbplatser och låta sina kunder lita på dem. För att SSL-protokollet ska kunna användas måste ett SSL-certifikat användas på en webbserver.
 
-* Molnhanteraren tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste inhämtas från certifieringsmyndigheter från tredje part. Se [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md) om du vill veta mer.
+När en entitet begär ett certifikat från en certifikatutfärdare slutför certifikatutfärdaren en verifieringsprocess. Detta kan omfatta allt från verifiering av domännamnskontroll till insamling av registreringsdokument och prenumerationsavtal. När informationen för en entitet har verifierats signerar certifikatutfärdaren sin offentliga nyckel med certifikatutfärdarens privata nyckel. Eftersom alla viktiga certifikatutfärdare har rotcertifikat i webbläsare länkas entitetens certifikat via en *förtroendekedja* och webbläsaren kommer att känna igen det som ett pålitligt certifikat.
 
-* AEM as a Cloud Service stöder endast `https` webbplatser. Kunder med flera anpassade domäner vill inte överföra ett certifikat varje gång de lägger till en domän. Detta innebär att sådana kunder kan dra nytta av att få ett certifikat med flera domäner.
+>[!IMPORTANT]
+>
+>Molnhanteraren tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste hämtas från certifikatutfärdare.
 
-* AEM as a Cloud Service godkänner endast certifikat som överensstämmer med OV- (Organization Validation) eller EV-principen (Extended Validation). DV-principen (Domain Validation) accepteras inte. Dessutom måste alla certifikat vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
+## SSL-hanteringsfunktioner i molnhanteraren {#features}
 
-* AEM as a Cloud Service godkänner SSL-jokertecken för en domän.
+Cloud Manager stöder följande användningsalternativ för SSL-certifikat från kund.
 
-* Molnhanteraren tillåter vid en given tidpunkt högst 50 SSL-certifikat som kan kopplas till en eller flera miljöer i ditt program, även om ett certifikat har gått ut. Molnhanterarens användargränssnitt tillåter dock att upp till 50 SSL-certifikat installeras i programmet med den här begränsningen. Ett certifikat kan vanligtvis omfatta flera domäner (upp till 100 SAN-nätverk). Överväg därför att gruppera flera domäner i samma certifikat för att hålla sig inom denna gräns.
-
-Cloud Manager stöder följande SSL-certifikatkrav för kunder:
-
-* Ett SSL-certifikat kan användas i flera miljöer, det vill säga lägga till en gång och använda flera gånger.
+* Ett SSL-certifikat kan användas i flera miljöer. Det kan alltså läggas till en gång och användas flera gånger.
 * Varje Cloud Manager-miljö kan använda flera certifikat.
 * En privat nyckel kan utfärda flera SSL-certifikat.
 * Varje certifikat innehåller vanligtvis flera domäner.
-* Plattformens TLS-tjänst skickar förfrågningar till kundens CDN-tjänst baserat på det SSL-certifikat som används för att avsluta och den CDN-tjänst som är värd för domänen.
+* Plattformens TLS-tjänst skickar förfrågningar till kundens CDN-tjänst baserat på det SSL-certifikat som används för att avsluta och den CDN-tjänst som är värd för den domänen.
+* AEM as a Cloud Service godkänner SSL-jokertecken för en domän.
 
-Med hjälp av SSL-certifikat för användargränssnittet i Cloud Manager kan en användare med behörighet utföra flera åtgärder för att hantera SSL-certifikat för ett program:
+## Recommendations {#recommendations}
+
+AEM as a Cloud Service stöder endast `https` webbplatser.
+
+* Kunder med flera anpassade domäner vill inte överföra ett certifikat varje gång de lägger till en domän.
+* Sådana kunder tjänar på att skaffa ett certifikat med flera domäner.
+
+## Krav {#requirements}
+
+* AEM as a Cloud Service godkänner endast certifikat som överensstämmer med OV- (Organization Validation) eller EV-principen (Extended Validation).
+* Alla certifikat måste vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
+* DV-principen (Domain Validation) accepteras inte.
+* Självsignerade certifikat accepteras inte.
+
+OV- och EV-certifikat ger användarna extra, CA-validerad information som kan användas för att avgöra om ägaren till en webbplats, avsändaren av ett e-postmeddelande eller den digitala undertecknaren av körbar kod eller PDF-dokument är betrodd. DV-certifikat tillåter inte sådan ägarskapsverifiering.
+
+## Begränsningar {#limitations}
+
+Vid en given tidpunkt tillåter Cloud Manager att högst 50 SSL-certifikat installeras. Dessa kan kopplas till en eller flera miljöer i programmet och även omfatta certifikat som gått ut.
+
+Om du har nått gränsen kan du granska dina certifikat och överväga:
+
+* Tar bort certifikat som gått ut.
+* Gruppera flera domäner i samma certifikat eftersom ett certifikat kan omfatta flera domäner (upp till 100 SAN-nätverk).
+
+## Läs mer {#learn-more}
+
+En användare med nödvändig behörighet kan använda Cloud Manager för att hantera SSL-certifikat för ett program. Mer information om hur du använder dessa funktioner finns i följande dokument.
 
 * [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
-* [Visa, uppdatera eller ersätta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/view-update-replace-ssl-certificate.md)
-   >[!NOTE]
-   >Med de här åtgärderna kan du visa information eller ersätta ett certifikat som snart upphör att gälla.
-* [Ta bort ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/delete-ssl-certificate.md)
+* [Visa, uppdatera eller ersätta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
+* [Ta bort ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)

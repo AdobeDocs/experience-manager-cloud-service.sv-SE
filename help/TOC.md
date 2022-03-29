@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: c497424271ea960d22a30b4a6c66432935ec820d
+source-git-commit: 3c1012469db3e8a947634d5995eaee09a632e7f8
 workflow-type: tm+mt
-source-wordcount: '3434'
+source-wordcount: '3417'
 ht-degree: 23%
 
 ---
@@ -675,11 +675,8 @@ ht-degree: 23%
       + [Meddelanden](/help/implementing/cloud-manager/notifications.md)
       + Hantera SSL-certifikat {#manage-ssl-certificates}
          + [Introduktion](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
-         + [Hämta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/get-ssl-certificate.md)
          + [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
-         + [Visa och uppdatera och ersätta ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/view-update-replace-ssl-certificate.md)
-         + [Kontrollerar status för ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md)
-         + [Ta bort ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/delete-ssl-certificate.md)
+         + [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
       + Hantera anpassade domännamn {#custom-domain-names}
          + [Introduktion](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
          + [Hämta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/get-custom-domain-name.md)

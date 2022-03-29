@@ -2,7 +2,7 @@
 title: Versionsinformation för 2021.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: '"[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.3.0."'
 exl-id: 0c07364c-ba25-4081-8e35-3c1c84ed556f
-source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
+source-git-commit: 95539851590456b6b5ecbfeb0df8fc7bc7dde74b
 workflow-type: tm+mt
 source-wordcount: '1319'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Ability to select a root path. select if a minimum number of tags is required.
 
 Add a Boolean or radio widget type to metadata schema setup. -->
 
-* [!DNL Experience Manager] utökar funktionen för anslutna resurser så att den stöder användning av [!DNL Dynamic Media] bilder i de kärnkomponenter som stöds. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
+* [!DNL Experience Manager] utökar funktionerna för anslutna resurser så att de kan använda [!DNL Dynamic Media] bilder i de kärnkomponenter som stöds. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
 * Experience Manager-administratörer kan schemalägga inmatningar av gruppresurser vid ett visst datum eller en viss tidpunkt. Administratörer kan även schemalägga återkommande frågor baserat på datum och tid. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
 ### Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}
@@ -90,7 +90,7 @@ Nästa version är planerad till den 8 april 2021.
 
 ### Nyheter {#what-is-new-march}
 
-* Kunder med miljöer med befintliga konfigurationer av anpassade domännamn för [IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/check-status-ssl-certificate.md#pre-existing-cdn) och [Anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att få ett meddelande om sina tidigare konfigurationer och kan självbetjäna via användargränssnittet.
+* Kunder med miljöer med befintliga konfigurationer av anpassade domännamn för [IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md#pre-existing-cdn) och [Anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att få ett meddelande om sina tidigare konfigurationer och kan självbetjäna via användargränssnittet.
 
 * Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
 
