@@ -1,13 +1,13 @@
 ---
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
-source-git-commit: 95539851590456b6b5ecbfeb0df8fc7bc7dde74b
+exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
+source-git-commit: 6cc1620d139db3804325c118d0874c5f94cb23a4
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
-
 
 # Hantera SSL-certifikat {#managing-ssl-certificates}
 
@@ -57,7 +57,7 @@ Ett SSL-certifikat kan ersättas med följande steg som beskrivs i avsnittet [Up
 
 Att ta bort certifikat från Cloud Manager är en permanent åtgärd som inte kan ångras. Som en god praxis rekommenderar Adobe att du sparar SSL-filer lokalt innan du tar bort dem i Cloud Manager.
 
-I Cloud Manager kan du inte ta bort ett SSL-certifikat som har en eller flera domäner kopplade till sig. Alla associerade domäner måste tas bort innan SSL-certifikatet tas bort. Se dokumentet [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md) om du vill veta mer.
+I Cloud Manager kan du inte ta bort ett SSL-certifikat som har en eller flera domäner kopplade till sig. Alla associerade domäner måste tas bort innan SSL-certifikatet tas bort. Se dokumentet [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md) om du vill veta mer.
 
 Följ de här stegen för att ta bort ett SSL-certifikat.
 

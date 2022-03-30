@@ -1,53 +1,61 @@
 ---
 title: Kontrollerar domännamnsstatus
-description: Kontrollerar domännamnsstatus
+description: Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Manager.
 exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
-source-git-commit: 4533cbc689d69cbe126791b4426123f890754507
+source-git-commit: cc1b0d653706150c616ceafd002dc7594b6c7072
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
+
 # Kontrollerar domännamnsstatus {#check-status}
 
-Du kan ta reda på om ditt domännamn har verifierats genom att klicka på statusikonen för domännamnet i tabellen i Miljöer på sidan Domäninställningar.
+Du kan fastställa statusen för ditt anpassade domännamn i Cloud Manager.
 
->[!NOTE]
->Cloud Manager utlöser automatiskt en TXT-verifiering när du väljer Spara i verifieringssteget i guiden Lägg till anpassad domän. För efterföljande verifieringar måste du aktivt välja **verifiera igen** -ikonen bredvid statusen.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-Cloud Manager verifierar domänägarskap via TXT-värdet och visar ett av följande statusmeddelanden:
+1. Navigera till **Miljö** från **Översikt** sida.
 
-* **Domänverifieringen misslyckades**
-TXT-värdet saknas eller identifieras med fel. Följ instruktionerna och försök igen. När du är klar måste du välja 
-*verifiera igen* -ikonen bredvid statusen.
+1. Klicka på **Domäninställningar** i den vänstra navigeringspanelen.
 
-* **Domänverifiering pågår**
-Verifiering pågår. Den här statusen visas vanligtvis när du har valt 
-*verifiera igen* -ikonen bredvid statusen.
+1. Klicka på **Status** -ikon för domännamnet.
 
-* **Verifierad, distributionen misslyckades**
-TXT-verifieringen lyckades. CDN-distributionen misslyckades dock. Kontakta din Adobe-representant.
+Cloud Manager verifierar domänägarskap via TXT-värdet och visar ett av följande statusmeddelanden.
 
-* **Domänen har verifierats och distribuerats**
-Den här statusen anger att ditt anpassade domännamn är klart att användas.
-   >[!NOTE]
-   >Nu är ditt anpassade domännamn klart för testning och kan hänvisas till molnhanterarens domännamn. Se [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) om du vill veta mer.
+* **Domänverifieringen misslyckades** - TXT-värdet saknas eller har identifierats med fel.
 
-* **Tar bort**
-Det anpassade domännamnet tas bort.
+   * Följ instruktionerna för att lösa problemet.
+   * När du är klar måste du välja **Verifiera igen** -ikonen bredvid statusen.
 
-* **Borttagningen misslyckades**
-Det gick inte att ta bort det anpassade domännamnet. Du måste försöka igen. Se [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md) om du vill veta mer.
+* **Domänverifiering pågår** - Verifiering pågår.
 
+   * Den här statusen visas vanligtvis när du har valt **Verifiera igen** -ikonen bredvid statusen.
+
+* **Verifierad, distributionen misslyckades** - TXT-verifieringen lyckades, men CDN-distributionen misslyckades.
+
+   * Kontakta i så fall din Adobe-representant.
+
+* **Domänen har verifierats och distribuerats** - Den här statusen anger att ditt anpassade domännamn är klart att användas.
+
+   * Nu är ditt anpassade domännamn klart för testning och kan hänvisas till molnhanterarens domännamn.
+   * Se dokumentet [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) om du vill veta mer.
+
+* **Tar bort** - Borttagningen av ett anpassat domännamn pågår.
+
+* **Borttagningen misslyckades** - Det gick inte att ta bort det anpassade domännamnet. Du måste försöka igen.
+
+   * Se dokumentet [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md) om du vill veta mer.
+
+Cloud Manager utlöser automatiskt en TXT-verifiering när du väljer **Spara** om kontrollsteg för **Lägg till anpassad domän** guide. För efterföljande verifieringar måste du aktivt markera ikonen för att verifiera igen bredvid statusen.
 
 ## Tidigare CDN-konfigurationer för anpassade domännamn {#pre-existing-cdn}
 
-Kunder som har miljöer med befintliga CDN-konfigurationer för IP-Tillåtelselista, SSL-certifikat eller anpassade domännamn kommer att se följande meddelande i **IP Tillåtelselista** och **Miljö** informationssida. Meddelandet som visas i användargränssnittet försvinner när kunden har migrerat alla befintliga miljökonfigurationer via användargränssnittet och det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
+Om du har en befintlig CDN-konfiguration för dina anpassade domännamn visas ett informativt meddelande på **IP Tillåtelselista** och **Miljö** -sidor, som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de visas och kan konfigureras i Cloud Manager.
 
->[!NOTE]
->För att kunna se och hantera befintliga konfigurationer måste de läggas till via användargränssnittet. Se [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) för mer information.
+Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
-![](/help/implementing/cloud-manager/assets/ip-allow-list-message1.png)
+Se dokumentet [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) för mer information.
 
-![](/help/implementing/cloud-manager/assets/ip-allow-list-message2.png)
+![Redan befintligt CDN-konfigurationsmeddelande](/help/implementing/cloud-manager/assets/ip-allow-list-message1.png)

@@ -7,10 +7,10 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 3c1012469db3e8a947634d5995eaee09a632e7f8
+source-git-commit: 1530763a4817b9d6c17b55fb2d8db98304f1d433
 workflow-type: tm+mt
-source-wordcount: '3417'
-ht-degree: 23%
+source-wordcount: '3397'
+ht-degree: 24%
 
 ---
 
@@ -679,15 +679,12 @@ ht-degree: 23%
          + [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
       + Hantera anpassade domännamn {#custom-domain-names}
          + [Introduktion](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
-         + [Hämta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/get-custom-domain-name.md)
          + [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
          + [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md)
          + [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md)
          + [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md)
          + [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md)
-         + [Visa, uppdatera och ersätta ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md)
-         + [Uppdatera ett anpassat domännamns SSL-certifikat](/help/implementing/cloud-manager/custom-domain-names/update-cdn-ssl-certificate.md)
-         + [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+         + [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
       + Hantera IP-Tillåtelselista {#ip-allow-lists}
          + [Introduktion](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
          + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)

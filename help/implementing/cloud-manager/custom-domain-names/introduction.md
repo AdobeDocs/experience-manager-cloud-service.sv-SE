@@ -1,30 +1,62 @@
 ---
-title: Introduktion - Anpassade domännamn
-description: Introduktion - Anpassade domännamn
+title: Introduktion till anpassade domännamn
+description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: cc1b0d653706150c616ceafd002dc7594b6c7072
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 0%
+source-wordcount: '562'
+ht-degree: 2%
 
 ---
 
-# Introduktion {#introduction}
+
+# Introduktion till anpassade domännamn {#introduction}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_domains"
 >title="Hantera anpassade domännamn"
->abstract="Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Din Adobe Experience Manager as a Cloud Service etableras med ett standarddomännamn som slutar på *.adobeaemcloud.com. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen."
+>abstract="Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name.html" text="Lägga till ett anpassat domännamn"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.html" text="Visa och uppdatera anpassat domännamn"
 
-Med Cloud Manager kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn via användargränssnittet. Din Adobe Experience Manager as a Cloud Service etableras med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det här standarddomännamnet finns kvar, även efter att du har kopplat anpassade domännamn till webbplatsen.
+Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt. Adobe Experience Manager as a Cloud Service etableras med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det här standarddomännamnet kvarstår, även efter att du har associerat anpassade domännamn till webbplatsen.
 
->[!NOTE]
->Anpassade domännamn stöds endast i Cloud Manager för Sites Programs (Publiceringstjänst). Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö. AEM as a Cloud Service stöder inte jokerteckendomäner.
+## Vad är anpassade domännamn? {#what-are-custom-domain-names}
 
-Med hjälp av sidan Domäninställningar för användargränssnitt i Cloud Manager, eller sidan Miljöinformation, kan en användare med behörighet utföra flera åtgärder för att hantera anpassade domännamn för dina miljöer, bland annat:
+Varje webbplats har en unik, maskinläsbar, numerisk adress, som `184.33.123.64`. DNS (Domain Name System) är en DNS-server som gör att du kan koppla anpassade domäner till webbplatser genom att översätta numeriska adresser till minnesvärda adresser som `wknd.com`.
 
-* [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
-* [Visa eller uppdatera ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/view-update-replace-custom-domain-name.md) som gör det möjligt för en användare att visa information eller ersätta ett certifikat som snart upphör att gälla
-* [Ta bort ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/delete-custom-domain-name.md)
+Det är god praxis att ha ett domännamn för er webbplats som är minnesvärt för era kunder och som speglar ert varumärke.
+
+Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller en organisation som hanterar och säljer domännamn. Domännamnsregistrerare hanterar domännamn på DNS-servrar.
+
+>[!IMPORTANT]
+>
+>Cloud Manager är inte en domännamnsregistrator och tillhandahåller inga DNS-tjänster.
+
+## Begränsningar {#limitations}
+
+Det finns ett antal begränsningar för hur du använder anpassade domännamn med AEMaaCS.
+
+* Anpassade domännamn stöds i Cloud Manager för både publicerings- och förhandsgranskningstjänster för Sites-program. Anpassade domäner på författarsidan stöds inte.
+* Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö.
+* AEM as a Cloud Service stöder inte jokerteckendomäner.
+* Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet installeras för programmet. Mer information finns i Lägga till ett SSL-certifikat.
+* Det går inte att lägga till domännamn i miljöer när det finns en aktuell pågående pipeline som är kopplad till dessa miljöer.
+* Det går bara att lägga till ett domännamn åt gången.
+* Samma domännamn kan inte användas i mer än en miljö.
+
+## Arbetsflöde {#workflow}
+
+Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Manager interagera. På grund av detta krävs ett antal steg för att installera, konfigurera och verifiera anpassade domännamn. Följande tabell ger en översikt över de steg som krävs, inklusive vad som ska göras när vanliga fel inträffar.
+
+| Steg | Beskrivning | Ansvarsområde | Läs mer |
+|--- |--- |--- |---|
+| 1 | Lägg till SLL-certifikat i Cloud Manager | Kund | [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) |
+| 2 | Lägg till TXT-post för att verifiera domän | Kund | [Lägga till en TXT-post](/help/implementing/cloud-manager/custom-domain-names/add-text-record.md) |
+| 3 | Verifieringsstatus för domän | Kund | [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) |
+| 3a | Om domänverifieringen misslyckas med statusen `Domain Verification Failure` | Kund | [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) |
+| 3b | Om domänverifieringen misslyckas med statusen `Verified, Deployment Failed`, kontakta Adobe | Adobe kundtjänst | [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) |
+| 4 | Konfigurera DNS-inställningar genom att lägga till DNS CNAME- eller APEX-poster som pekar på AEM as a Cloud Service | Kund | [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) |
+| 5 | Kontrollera DNS-poststatus | Kund | [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
+| 5a | Om DNS-poststatus misslyckas med `DNS status not detected` | Kund | [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
+| 5b | Om DNS-poststatus misslyckas med `DNS resolves incorrectly` | Kund | [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
