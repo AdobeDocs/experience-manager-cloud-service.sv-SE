@@ -3,19 +3,23 @@ title: Databasläsare
 seo-title: Repository Browser
 description: Databasens webbläsare ger en skrivskyddad vy i databasen för alla miljöer på författar-, publicerings- och förhandsgranskningsnivåer.
 seo-description: The repository browser provides a read-only view into the repository for all environments on author, publish, and preview tiers.
-source-git-commit: 76e28ca5628fb985df21f53d1c3e9898985dc736
+exl-id: 22473a97-8f7b-4014-b885-1233116aeda6
+source-git-commit: db70857458722f870dad37ac2bee6a19ef54171e
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '814'
 ht-degree: 1%
 
 ---
-
 
 # Databasläsare {#repository-browser}
 
 >[!NOTE]
 >
 >Databasläsaren finns AEM version 6582 och senare.
+
+>[!INFO]
+>
+>Du kan också titta [det här klippet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/repository-browser.html) om du vill få en snabb videointroduktion om hur du använder Databasläsaren för att felsöka AEM as a Cloud Service.
 
 ## Introduktion {#introduction}
 
