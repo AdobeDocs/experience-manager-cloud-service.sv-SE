@@ -1,11 +1,11 @@
 ---
 title: Ta bort externa beroenden för befintliga installationer
-description: Installera [!DNL Workfront for Experience Manager enhanced connector]
+description: Ta bort externa beroenden för befintliga installationer
 feature: Integrations
 exl-id: 5b28ce97-2719-47b8-a386-77d4aaddbe81
-source-git-commit: d1f7b3ee9394751795273820c17e6feba84f7bf6
+source-git-commit: b71a78696d4b347c97b077d84b455f53a1747a07
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---

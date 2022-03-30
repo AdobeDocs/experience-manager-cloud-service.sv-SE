@@ -7,10 +7,10 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 1530763a4817b9d6c17b55fb2d8db98304f1d433
+source-git-commit: ac5984d9b5c8800287e11fe00e02d60d9727ed43
 workflow-type: tm+mt
-source-wordcount: '3397'
-ht-degree: 24%
+source-wordcount: '3407'
+ht-degree: 23%
 
 ---
 
@@ -383,10 +383,12 @@ ht-degree: 24%
       + [Flash-tittare som slutar svara](/help/assets/dynamic-media/flash-viewers-eol.md)
       + [DHTML-visningsprogram - slutdatum](/help/assets/dynamic-media/dhtml-viewer-endoflifefaqs.md)
    + Integrering med Adobe Workfront {#integrations}
+      + [Versionsinformation för Workfront för Experience Manager förbättrad anslutning](/help/assets/release-notes-enhanced-connector-workfront.md)
       + [Integrering med [!DNL Adobe Workfront]](/help/assets/workfront-integrations.md)
       + [Installera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-install.md)
       + [Ta bort externa beroenden för befintliga installationer](/help/assets/remove-external-dependencies.md)
       + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
+      + [Uppdatera [!DNL Workfront for Experience Manager enhanced connector]](/help/assets/update-workfront-enhanced-connector.md)
 + Forms {#forms}
    + [Introduktion](/help/forms/home.md)
    + [Viktiga funktioner](/help/forms/key-features.md)
