@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du skapar, ändrar och använder s
 feature: Search,Metadata
 role: User,Admin
 exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 8a9a3f60d6d52f6cc18a079f372a55d15bb60790
 workflow-type: tm+mt
-source-wordcount: '2247'
+source-wordcount: '2280'
 ht-degree: 17%
 
 ---
@@ -144,6 +144,11 @@ The `Tags` kan du göra taggbaserade sökningar efter resurser. Som standard [!D
 1. Navigera till sökpanelen. The **[!UICONTROL Tags]** predikatet läggs till på sökpanelen.
 1. Ange taggar baserat på vilka du vill söka efter resurser eller välj från listan med förslag.
 1. Välj **[!UICONTROL Match all]** om du vill söka efter matchningar som innehåller alla taggar som du anger.
+
+Du kan sortera taggstrukturen i stigande eller fallande ordning baserat på **[!UICONTROL Name]** (i alfabetisk ordning), **[!UICONTROL Created]** datum, eller **[!UICONTROL Modified]** datum. I följande bild sorteras taggstrukturen i bokstavsordning baserat på **[!UICONTROL Name]**.
+
+![add-tags](assets/add-tags-to-asset.png)
+
 
 ## Lägga till andra predikat {#adding-other-predicates}
 

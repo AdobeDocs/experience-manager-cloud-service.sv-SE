@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User, Architect, Admin
 exl-id: 691a0925-0061-4c62-85ac-8257b96dddf2
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: ca01102673211f17e58af36ef2a59d0e964022d5
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1351'
 ht-degree: 4%
 
 ---
@@ -61,10 +61,6 @@ Klicka på **[!UICONTROL Next]**. Baserat på urvalet **[!UICONTROL Scope]** -fl
 
 ### Lägg till innehåll {#add-content}
 
->[!NOTE]
->
->Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
-
 Publicera till [!DNL Experience Manager Assets] Med kan du lägga till mer innehåll (resurser och mappar) i publiceringslistan. Du kan lägga till fler resurser eller mappar i listan i alla databaser. Klicka på **[!UICONTROL Add Content]** för att lägga till mer innehåll.
 
 Du kan lägga till flera resurser från en mapp eller lägga till flera mappar samtidigt. Men du kan inte lägga till resurser från flera mappar samtidigt.
@@ -72,10 +68,6 @@ Du kan lägga till flera resurser från en mapp eller lägga till flera mappar s
 ![Lägg till innehåll](assets/manage-publication-add-content.png)
 
 ### Inkludera mappinställningar {#include-folder-settings}
-
->[!NOTE]
->
->Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 Som standard publicerar du en mapp till [!DNL Experience Manager Assets] publicerar alla resurser, undermappar och referenser till dem.
 

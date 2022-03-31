@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 632bcb3406fc4bc856e7fcf11cb9826a03e6a5d2
+source-git-commit: a1b9d3378a07b26638cd2535a9d54aed18e3a797
 workflow-type: tm+mt
-source-wordcount: '2328'
-ht-degree: 4%
+source-wordcount: '2359'
+ht-degree: 3%
 
 ---
 
@@ -118,7 +118,13 @@ Följ de här stegen för att skapa och utbilda en modell för dina företagsspe
 1. Skapa nödvändiga taggar och rätt taggstruktur. Överför relevanta bilder i DAM-databasen.
 1. I [!DNL Experience Manager] användargränssnitt, åtkomst **[!UICONTROL Assets]** > **[!UICONTROL Smart Tag Training]**.
 1. Klicka på **[!UICONTROL Create]**. Ange en **[!UICONTROL Title]**, **[!UICONTROL Description]**.
-1. Bläddra efter och markera taggarna i de befintliga taggarna i `cq:tags` som du vill utbilda modellen för. Klicka på **[!UICONTROL Next]**.
+1. Klicka på mappikonen i **[!UICONTROL Tags]** fält. Ett popup-fönster öppnas.
+1. Sök efter eller välj lämpliga taggar från de befintliga taggarna i `cq-tags` som du vill lägga till i modellen. Klicka på **[!UICONTROL Next]**.
+
+   >[!NOTE]
+   >
+   >Du kan sortera taggstrukturen i stigande eller fallande ordning baserat på **[!UICONTROL Name]** (i alfabetisk ordning), **[!UICONTROL Created]** datum, eller **[!UICONTROL Modified]** datum.
+
 1. I **[!UICONTROL Select Assets]** dialogruta, klicka **[!UICONTROL Add Assets]** mot varje tagg. Sök i DAM-databasen eller bläddra i databasen för att välja minst 10 och högst 50 bilder. Välj resurser och inte mappen. När du har markerat bilderna klickar du på **[!UICONTROL Select]**.
 
    ![Visa utbildningsstatus](assets/smart-tags-training-status.png)

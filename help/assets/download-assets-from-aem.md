@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: ddc79a163e328d560912550900242cc089df3958
+source-git-commit: cf6cfb38a43004c8ac0c1d1e99153335a47860a8
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -43,10 +43,6 @@ Som standard [!DNL Experience Manager] utlöser ett meddelande när hämtningsar
 
 
 ### Aktivera e-postmeddelanden för stora nedladdningar {#enable-emails-for-large-downloads}
-
->[!NOTE]
->
->Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 Asynkrona nedladdningar aktiveras i följande fall:
 

@@ -2,9 +2,9 @@
 title: Skapa en API-begäran - Headless-konfiguration
 description: Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment-innehåll och AEM Assets REST API för att hantera innehållsfragment.
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: e81b852dc90e3cc5abc8b9f218f48d0fc1cc66eb
+source-git-commit: d3c926216486c2971e498c2ea8a47f9c96935554
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '670'
 ht-degree: 0%
 
 ---
@@ -48,13 +48,16 @@ Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för 
 GraphiQL är en IDE som kan installeras i en AEM. Följ stegen på [Använda GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) för installation i AEM.
 
 1. Logga in AEM as a Cloud Service och gå till GraphiQL-gränssnittet:
-   * Till exempel: `https://<host>:<port>/content/graphiql.html`.
+   * Till exempel: `https://<host>:<port>/aem/graphiql.html`.
 
-1. GraphiQL IDE är en webbläsarredigerare för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem i headlessskick som JSON.
-   * I den vänstra panelen kan du skapa din fråga.
-   * Resultatet visas på den högra panelen.
+1. GraphiQL IDE är en webbläsarredigerare för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem i headlessläge som JSON.
+   * I den nedrullningsbara listrutan högst upp till höger kan du välja slutpunkten.
+   * I en panel längst till vänster visas de beständiga frågorna (om de är tillgängliga)
+   * På panelen i mitten till vänster kan du skapa din fråga.
+   * Resultaten visas på panelen i det mittersta högra hörnet.
    * Frågeredigeraren har funktioner för kodkomplettering och snabbtangenter för att enkelt köra frågan.
-      ![GraphiQL editor](../assets/graphiql.png)
+
+   ![GraphiQL editor](../assets/graphiql.png)
 
 1. Anta att modellen vi skapade anropades `person` med fält `firstName`, `lastName`och `position`kan vi skapa en enkel fråga för att hämta innehållet i vårt innehållsfragment.
 

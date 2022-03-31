@@ -1,18 +1,22 @@
 ---
 title: Beständiga GraphQL-frågor
-description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
+description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: dfcad7aab9dda7341de3dc4975eaba9bdfbd9780
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
 
 # Beständiga GraphQL-frågor {#persisted-queries-caching}
 
-Beständiga frågor är GraphQL-frågor som skapas och lagras på AEM. Standard GraphQL-frågor körs med POST-förfrågningar och svaret kan inte enkelt cachelagras. Beständiga frågor kan begäras med en GET-begäran från klientprogram. Svaret på en GET-begäran kan cachas i skikten dispatcher och CDN, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet.
+Beständiga frågor är GraphQL-frågor som skapas och lagras på den as a Cloud Service Adobe Experience Manager-servern (AEM). De kan begäras med en GET-begäran från klientprogram. Svaret på en GET-begäran kan cachas i skikten dispatcher och CDN, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med POST-begäranden där svaret inte enkelt kan cachas.
+
+The [GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) är tillgängligt i AEM (som standard) `dev-author`) så att du kan utveckla, testa och behålla GraphQL-frågor, innan [överföra till produktionsmiljön](#transfer-persisted-query-production). För ärenden som behöver anpassas (till exempel när [anpassa cachen](/help/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t, se det exempel som finns i [Bevara en GraphQL-fråga](#how-to-persist-query).
+
+## Beständiga frågor och slutpunkter {#persisted-queries-and-endpoints}
 
 Beständiga frågor måste alltid använda den slutpunkt som är relaterad till [lämplig platskonfiguration](graphql-endpoint.md); så att de kan använda antingen eller båda:
 
@@ -24,7 +28,7 @@ Om du till exempel vill skapa en beständig fråga specifikt för WKND-platskonf
 >
 >Se [Aktivera funktionen för innehållsfragment i konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) för mer information.
 >
->The **frågor om GraphQL-beständighet** måste aktiveras för rätt platskonfiguration.
+>The **Beständiga GraphQL-frågor** måste aktiveras för rätt platskonfiguration.
 
 Om det till exempel finns en viss fråga som heter `my-query`, som använder en modell `my-model` från platskonfigurationen `my-conf`:
 
@@ -39,9 +43,15 @@ Om det till exempel finns en viss fråga som heter `my-query`, som använder en 
 >
 >De råkar bara använda samma modell, men via olika slutpunkter.
 
-## Bevara en GraphQL-fråga
+## Bevara en GraphQL-fråga {#how-to-persist-query}
 
-Vi rekommenderar att du behåller frågor i en AEM redigeringsmiljö först och sedan [publicera frågan](#publish-persisted-query) till en AEM publiceringsmiljö. verktyg som [Postman](https://www.postman.com/) eller kommandoradsverktyg som [kurva](https://curl.se/) kan användas.
+Vi rekommenderar att du behåller frågor i en AEM redigeringsmiljö först och sedan [överför frågan](#transfer-persisted-query-production) till din produktion AEM publiceringsmiljö, som kan användas av program.
+
+Det finns olika metoder för beständiga frågor, bland annat:
+
+* GraphiQL IDE - se [Sparar beständiga frågor](/help/headless/graphql-api/graphiql-ide.md##saving-persisted-queries)
+* curl - se följande exempel
+* Andra verktyg, inklusive [Postman](https://www.postman.com/)
 
 Här följer de steg som krävs för att behålla en given fråga med **kurva** kommandoradsverktyg:
 
@@ -183,13 +193,23 @@ Här följer de steg som krävs för att behålla en given fråga med **kurva** 
        "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
    ```
 
-## Publicera en beständig fråga {#publish-persisted-query}
+## Överför en beständig fråga till produktionsmiljön  {#transfer-persisted-query-production}
 
-Beständiga frågor kan publiceras i en AEM-publiceringsmiljö där de kan begäras av klientprogram. Om du vill använda en beständig fråga vid publicering måste det relaterade beständiga trädet replikeras.
+I slutändan måste din beständiga fråga finnas i produktionsmiljön (av AEM as a Cloud Service), där den kan begäras av klientprogram. Om du vill använda en beständig fråga i produktionspubliceringsmiljön måste det beständiga trädet replikeras:
 
-Det finns flera sätt att publicera en beständig fråga:
+* till författaren för att validera nyskrivet innehåll med frågorna,
+* sedan publicera för direktkonsumtion
 
-* **Använda en POST för replikering**:
+Det finns flera sätt att överföra din beständiga fråga:
+
+1. Använda ett paket:
+   1. Skapa en ny paketdefinition.
+   1. Inkludera konfigurationen (till exempel `/conf/wknd/settings/graphql/persistentQueries`).
+   1. Bygg paketet.
+   1. Överför paketet (hämta/överföra eller replikera).
+   1. Installera paketet.
+
+1. Använda en POST för replikering:
 
    ```xml
    $ curl -X POST   http://localhost:4502/bin/replicate.json \
@@ -198,20 +218,16 @@ Det finns flera sätt att publicera en beständig fråga:
    -F cmd=activate
    ```
 
-* **Använda ett paket**:
-   1. Skapa en ny paketdefinition.
-   1. Inkludera konfigurationen (till exempel `/conf/wknd/settings/graphql/persistentQueries`).
-   1. Bygg paketet.
-   1. Replikera paketet.
+<!--
+1. Using replication/distribution tool:
+   1. Go to the Distribution tool.
+   1. Select tree activation for the configuration (for example, `/conf/wknd/settings/graphql/persistentQueries`).
 
-* **Använda replikerings-/distributionsverktyg**:
-   1. Gå till distributionsverktyget.
-   1. Välj trädaktivering för konfigurationen (till exempel `/conf/wknd/settings/graphql/persistentQueries`).
+* Using a workflow (via workflow launcher configuration):
+  1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
+-->
 
-* **Använda ett arbetsflöde (via konfiguration för att starta arbetsflöde)**:
-   1. Definiera en startregel för arbetsflöde för att köra en arbetsflödesmodell som skulle återge konfigurationen för olika händelser (till exempel skapa, ändra).
-
-När frågekonfigurationen publiceras gäller samma autentiseringsprinciper, bara med publiceringsslutpunkten.
+När frågekonfigurationen finns i publiceringsmiljön i produktion gäller samma autentiseringsprinciper, bara med publiceringsslutpunkten.
 
 >[!NOTE]
 >
@@ -219,13 +235,14 @@ När frågekonfigurationen publiceras gäller samma autentiseringsprinciper, bar
 >
 >Om så inte är fallet kommer det inte att kunna köras.
 
->[!NOTE]
->
->Alla semikolon (&quot;;&quot;) i URL:erna måste kodas.
->
->Som i begäran att köra en beständig fråga:
->
->
+## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
+
+Om du vill använda ett program måste alla semikolon (&quot;;&quot;) i URL-adresserna kodas.
+
+Som i begäran att köra en beständig fråga:
+
 ```xml
->curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
->```
+curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
+```
+
+Om du vill använda en beständig fråga i en klientapp bör AEM headless Client SDK användas [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js).

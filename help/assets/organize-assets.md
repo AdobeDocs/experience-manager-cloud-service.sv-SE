@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management, Search
 role: User
 exl-id: 6b3ce076-2dd9-47f6-9b68-4fa52bfedd42
-source-git-commit: 843d6660fc2a2048d138601b4b74ee9f2faa54c9
+source-git-commit: 54b83598a5d48832ecdea666c059e91b3dfa3ef9
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -74,14 +74,45 @@ Det mest grundläggande sättet att ordna resurser är att spara resurserna i ma
 
 ## Ordna resurser med taggar {#use-tags-to-organize-assets}
 
-Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda AI-algoritmer för resursidentifiering i Adobe Sensei.
+<!--
+Using tags, as a metadata, you can easily search assets, create collections using the search results, boost search ranking for some assets, and apply AI algorithms of Adobe Sensei for asset discovery.
 
-[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa mycket beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, artificiell intelligens och maskininlärningsmiljö, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser
+[!DNL Adobe Experience Manager Assets] uses a self-learning algorithm to create highly descriptive tags that allow you to find the right asset in just a few clicks. Smart tagging uses Adobe Sensei, artificial intelligence and machine learning framework, which can be trained to recognize and apply both standard and business-specific tags to imagery. Smart Tags can also identify content, individual words, or phrases and automatically apply descriptive tags to assets
+
+For more information, see the following articles:
+
+* [Edit asset metadata](meta-edit.md)
+* [Smart Tags in Assets](smart-tags.md)
+-->
+
+Om du lägger till taggar i resurser blir det enklare att hämta dem under en sökning, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda AI-algoritmer i Adobe Sensei för tillgångsidentifiering.
+
+[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa mycket beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, artificiell intelligens och maskininlärningsmiljö, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser.
+
+Så här lägger du till taggar i en resurs:
+
+1. Logga in på [!DNL Experience Manager Assets].
+1. Klicka **[!UICONTROL Assets]** > **[!UICONTROL Files]**, markera resursen och klicka på **[!UICONTROL Properties]** för att öppna resursegenskaperna.
+1. I **[!UICONTROL Basic]** klickar du på mappikonen i **[!UICONTROL Tags]** metadata. Ett popup-fönster öppnas.
+1. Sök efter eller välj lämpliga taggar från de befintliga taggarna i `cq-tags`. Du kan tilldela flera taggar till resursen.
+
+   Du kan sortera taggstrukturen i stigande eller fallande ordning baserat på **[!UICONTROL Name]** (i alfabetisk ordning), **[!UICONTROL Created]** datum, eller **[!UICONTROL Modified]** datum. I följande bild sorteras taggstrukturen i bokstavsordning baserat på **[!UICONTROL Name]**.
+
+   ![add-tags](assets/add-tags-to-asset.png)
+
+1. Klicka **Spara** om du vill uppdatera ändringar i metadata för resursen.
+
+>[!NOTE]
+>
+>Du kan sortera taggstrukturen när du skapar smarta taggar och när du använder sökfilter med hjälp av taggpredikatet.
+>
+>Funktionen för att sortera taggar är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 Mer information finns i följande artiklar:
 
 * [Redigera metadata för resurser](meta-edit.md)
 * [Smarta taggar i resurser](smart-tags.md)
+* [Lägga till taggar och predikat i sökpanelen](/help/assets/search-facets.md/#adding-a-tags-predicate)
 
 ## Ordna som samlingar {#organize-as-collections}
 
