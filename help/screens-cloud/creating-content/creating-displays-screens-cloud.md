@@ -2,10 +2,10 @@
 title: Skapa och hantera skärmar på as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar skärmar på as a Cloud Service.
 exl-id: 0f9faa4b-b50e-40f8-a8ed-280f8bd0a9b8
-source-git-commit: b56c7e5de41cf75f4442d8294ddfbe1a05cb3dee
+source-git-commit: 9e0ab778e97658bc8d7669b1f582f3bcddd47915
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 1%
+source-wordcount: '668'
+ht-degree: 2%
 
 ---
 
@@ -63,7 +63,7 @@ Du kan växla mapplisten från att visa alla mappar till specifika mappar:
 
 1. Mappens sidospår visas.
 
-![bild](/help/screens-cloud/assets/display/toggle-rail.png)
+   ![bild](/help/screens-cloud/assets/display/toggle-rail.png)
 
 1. Välj **Dölj mappar** för att stänga den igen.
 
@@ -74,13 +74,62 @@ Du kan skapa mappar för att bättre ordna dina bildskärmar.
 1. Navigera till lagervyn.
 1. Se till att du inte befinner dig i en mapp:
 
-![bild](/help/screens-cloud/assets/display/verify-view.png)
+   ![bild](/help/screens-cloud/assets/display/verify-view.png)
 
-Obs! **Alla bildskärmar** ska vara markerat i mappens sidospår och navigeringen i vägbeskrivningar ska endast visa **Visar**.
+   Obs! **Alla bildskärmar** ska vara markerat i mappens sidospår och navigeringen i vägbeskrivningar ska endast visa **Visar**.
 
-1. Klicka på knappen &quot;Skapa&quot; överst till höger och välj **Mapp** option
+1. Klicka på knappen &quot;Skapa&quot; överst till höger och välj **Mapp** alternativ.
+
+   ![bild](/help/screens-cloud/assets/display/Createfolder.png)
 
 1. Fyll i den nya mappens rubrik och klicka på **Skapa**.
+
+   ![bild](/help/screens-cloud/assets/display/Createfolder2.png)
+
+## Så här skapar du en ny kapslad mapp {#nested-folder}
+
+1. Navigera till lagervyn.
+
+1. Välj önskad överordnad mapp från mappsidofältet eller genom att bläddra i lagervyn.
+1. Kontrollera att den önskade överordnade mappen är markerad.
+
+   ![bild](/help/screens-cloud/assets/display/Nestedview.png)
+
+   * Mappen ska vara markerad i mappen side rail.
+   * Navigeringen i sidutrymmet bör visa det aktuella mappnamnet intill **Visar**.
+
+1. Klicka  **Skapa**  överst till höger och välj **Mapp** alternativ.
+
+   ![bild](/help/screens-cloud/assets/display/Createfolder.png)
+
+1. Fyll i den nya mappens rubrik och klicka på **Skapa**.
+
+   ![bild](/help/screens-cloud/assets/display/Createfolder2.png)
+
+## Flytta innehåll till en ny mapp {#move-folder}
+
+Du kan flytta innehåll till dina nya mappar för att ordna dina bildskärmar bättre.
+
+1. Navigera till lagervyn.
+
+1. Välj önskad överordnad mapp från mappsidospåret eller genom att välja från lagervyn.
+
+1. Kontrollera att du har valt den överordnade mappen.
+
+![bild](/help/screens-cloud/assets/display/movetofolder.png)
+
+**Anteckning**: Mappen ska vara markerad i mappen side rail. Dessutom bör navigeringen i den synliga sökvägen visa det aktuella mappnamnet bredvid **Visar**.
+
+## Ta bort innehåll från en mapp {#delete-folder}
+
+Alla mappåtgärder är tillgängliga via markeringsåtgärdsfältet i lagervyn.
+
+1. Navigera till den överordnade mappen eller markera den från sidospåret.
+
+1. I lagervyn markerar du den underordnade mapp som du vill ta bort och ser till att den är tom.
+
+1. Klicka på **Ta bort** i markeringsåtgärdsfältet. Åtgärden inaktiveras om mappen inte är tom.
+
 
 ## What&#39;s Next {#whats-next}
 

@@ -2,10 +2,10 @@
 title: Skapa och hantera kanaler på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: afcee8019c9b59f3eb1fdcabd569272eeea76dab
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 0%
+source-wordcount: '1116'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,7 @@ Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler
 
 * förstå hur du skapar kanaler för leverantörer av skärminnehåll
 * hantera och redigera innehåll i era kanaler
+* aktiveringsschema för era kanaler
 
 ## Steg för att skapa en ny sekvenskanal på skärmar-as a Cloud Service {#create-new-channel}
 
@@ -87,6 +88,89 @@ Följande mallar är tillgängliga när du använder **Skapa** kanalguide:
 | Sekvenskanal | Gör att du kan skapa en kanal som spelar upp komponenterna sekventiellt (en i taget i ett bildspel). |
 | Vänster eller höger L-streckkanal för delad skärm | Innehållsförfattare kan visa olika typer av resurser i zoner med lämplig storlek. |
 
+## Använd standardtilldelningsinformation för kanaler {#default-channels}
+
+Med den här funktionen kan du definiera ett standardaktiveringsschema för en kanal och använda det som standard för varje tilldelning för en visning. Detta innehåller en metod så att den krångliga schemadefinitionen inte behöver upprepas.
+
+### Skapa standardtilldelningsinformation för en kanal {#create-default}
+
+1. Navigera till informationssidan för kanalen som du vill konfigurera.
+1. Leta reda på **Standardinformation om tilldelning** på sidan.
+
+   ![bild](/help/screens-cloud/assets/display/Assignment1.png)
+
+1. Klicka **Ange standardinformation**.
+1. Konfigurera standardtilldelningsinformation, inklusive prioritet, start- och slutdatum samt återkommande mönster för kanalen, och klicka på **Tilldela**.
+
+   ![bild](/help/screens-cloud/assets/display/Assignments2.png)
+
+1. Observera att information om uppdraget visas i **Standardinformation om tilldelning** platta:
+
+   ![bild](/help/screens-cloud/assets/display/Assignments3.png)
+
+Den här rutan visar följande information:
+* Kanalens standardprioritet i visningen.
+* Start- och slutdatum för aktiveringen när kanalen är schemalagd att spelas upp.
+* Syntetisk vy över upprepningen (varje timme/dag/vecka/månad/år samt namn som angetts för upprepningen).
+
+### Använd standarduppdragsinformationen när du tilldelar till en skärm {#default-display}
+
+Kanaler som har standardtilldelningsinformation kan tilldelas till visar på samma sätt som vanliga kanaler, med alternativet att använda standardtilldelningsinformationen i stället för att manuellt definiera anpassade kanaler varje gång.
+
+1. Navigera till sidan med visningsinformation som du vill tilldela kanalen till och klicka på **Tilldela kanal**.
+Du kan också välja önskad visning i lagervyn och klicka på **Tilldela kanal**.
+1. Dialogrutan för kanaltilldelning öppnas.
+
+   ![bild](/help/screens-cloud/assets/display/Assignments4.png)
+
+1. Välj den kanal som har standardtilldelningsinformationen från kanalväljaren.
+1. Lägg märke till att dialogrutan för kanaltilldelning ändras så att du kan välja standardtilldelningsinformation, eller välja anpassade:
+
+   ![bild](/help/screens-cloud/assets/display/Assignments5.png)
+
+1. Klicka **Tilldela** för att slutföra uppdraget eller klicka på **Ange information om anpassad tilldelning** om du föredrar att åsidosätta standardvärdena med vissa andra värden i det aktuella visningssammanhanget.
+
+   ![bild](/help/screens-cloud/assets/display/Assignments6.png)
+
+1. Lägg märke till **Tilldelade kanaler** plattan uppdateras med det nya uppdraget:
+
+   ![bild](/help/screens-cloud/assets/display/Assignments7.png)
+
+1. Observera att kanalerna kommer att ha en annan ikon beroende på om de använder anpassade scheman (klockikonen) eller ärver standardinformationen (klockikonen). Om du klickar på dessa kommer schemaläggningsinformationen att visas.
+1. Observera också att de tillgängliga åtgärderna för varje typ kommer att vara olika.
+
+   ![bild](/help/screens-cloud/assets/display/Assignments8.png)
+
+**Obs!** En kanaltilldelning som utnyttjar standardtilldelningsinformationen kan inte redigeras i visningssammanhanget.
+
+* Om du behöver ändra det till ett anpassat uppdrag måste du först ta bort det och sedan lägga till det igen med **Ange information om anpassad tilldelning** alternativ.
+* Om du behöver ändra egenskaperna för standarduppdragsinformationen måste du göra det direkt från sidan med kanalinformation.
+
+### Ta bort information om standardtilldelning från en kanal {#remove-display}
+
+1. Navigera till informationssidan för kanalen som du vill ta bort standardtilldelningsinformationen för.
+1. Leta reda på **Standardinformation om tilldelning** sida vid sida
+1. Klicka på **Ta bort standard**.
+
+   ![bild](/help/screens-cloud/assets/display/Assignments9.png)
+
+1. En bekräftelsedialogruta visas och informationen kommer att överensstämma med ett av följande villkor:
+   **a.** Kanalen används inte i någon visning.
+
+   ![bild](/help/screens-cloud/assets/display/Assignments10.png)
+
+**b.** Kanalen används i en enda skärm.
+
+![bild](/help/screens-cloud/assets/display/Assignment11.png)
+
+**c.** Kanalen används på flera skärmar.
+
+![bild](/help/screens-cloud/assets/display/Assignments12.png)
+
+1. Klicka på *Ta bort* för att validera ändringen.
+
+**Obs!** Om du tar bort standardtilldelningsinformationen från en kanal tas matchande tilldelningar bort på alla skärmar som använder den.
+Detta kan leda till tomma skärmar om det inte finns något alternativt innehåll att spela upp på dessa skärmar.
 
 ## What&#39;s Next {#whats-next}
 
