@@ -3,7 +3,7 @@ title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2
 description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.3.0
 feature: Release Information
 exl-id: f826e0c6-3b1d-44f5-99a2-f792f5df3a55
-source-git-commit: 95539851590456b6b5ecbfeb0df8fc7bc7dde74b
+source-git-commit: 71647239fc5e740faa25524a01a8ef21ed2d7a3b
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.3.0 är 11 mars 20
 
 ### Nyheter {#what-is-new}
 
-* Kunder med miljöer med befintliga konfigurationer av anpassade domännamn för [IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/check-ip-allow-list-status.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md#pre-existing-cdn) och [Anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att få ett meddelande om sina tidigare konfigurationer och kan självbetjäna via användargränssnittet.
+* Kunder med miljöer med befintliga konfigurationer av anpassade domännamn för [IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md#pre-existing-cdn), [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md#pre-existing-cdn) och [Anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md#pre-existing-cdn) kommer att få ett meddelande om sina tidigare konfigurationer och kan självbetjäna via användargränssnittet.
 
 * Användare med nödvändig behörighet kan nu redigera ett program och göra följande på ett självbetjäningssätt:
    * Lägg till Sites-lösning i ett befintligt program med Assets eller vice versa.

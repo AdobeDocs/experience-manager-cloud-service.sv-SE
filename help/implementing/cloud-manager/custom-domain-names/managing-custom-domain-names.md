@@ -1,13 +1,13 @@
 ---
 title: Hantera anpassade domännamn
 description: Lär dig hur du använder Cloud Manager för att visa, uppdatera, ersätta och ta bort anpassade domännamn.
-source-git-commit: 4604b5fad59524a05dc7addf16c70246a14cfea1
+exl-id: 6cab8cf2-22c0-4f4b-9c54-a1425e74ddd0
+source-git-commit: 878381f9c5780864f218a00a272b1600d578dcca
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # Hantera anpassade domännamn {#managing-custom-domain-names}
 
@@ -52,7 +52,8 @@ En användare med **Företagsägare** eller **Distributionshanteraren** kan anv�
 1. Klicka på ellipsknappen längst till höger på raden.
 
 1. Välj **Ta bort**.
-   ![](/help/implementing/cloud-manager/assets/cdn/cdn-delete.png)
+
+   ![Tar bort anpassade domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-delete.png)
 
 1. Bekräfta ditt tävlingsbidrag.
 

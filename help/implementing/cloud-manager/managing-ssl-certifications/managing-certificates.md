@@ -2,7 +2,7 @@
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
-source-git-commit: 6cc1620d139db3804325c118d0874c5f94cb23a4
+source-git-commit: 878381f9c5780864f218a00a272b1600d578dcca
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -24,16 +24,6 @@ Statusen för dina SSL-certifikat kan snabbt förstås från SSL-certifikatsidan
    * Cloud Manager skickar regelbundna meddelanden i användargränssnittet för att informera dig om att certifikatet snart upphör att gälla.
 
 * **Röd** - Den här statusen anger att SSL-certifikatet har upphört att gälla.
-
-## Befintliga CDN-konfigurationer {#pre-existing-cdn}
-
-Om du har en befintlig CDN-konfiguration för ditt SSL-certifikat visas ett informationsmeddelande på **SSL-certifikat** som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
-
-Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
-
-Se dokumentet [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) för mer information.
-
-Ett liknande meddelande finns också på **IP Tillåtelselista** och **Miljö** sidor för miljöer som har befintliga CDN-konfigurationer för IP tillåtelselista eller anpassade domännamn.
 
 ## Uppdatera ett SSL-certifikat {#update-ssl-certificate}
 
@@ -70,3 +60,13 @@ Följ de här stegen för att ta bort ett SSL-certifikat.
 >[!NOTE]
 >
 >En användare måste vara medlem i **Företagsägare** eller **Distributionshanteraren** roll för att ta bort ett SSL-certifikat i Cloud Manager.
+
+## Befintliga CDN-konfigurationer {#pre-existing-cdn}
+
+Om du har en befintlig CDN-konfiguration för ditt SSL-certifikat visas ett informationsmeddelande på **SSL-certifikat** som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
+
+Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
+
+Se dokumentet [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) för mer information.
+
+Ett liknande meddelande finns också på **IP Tillåtelselista** och **Miljö** sidor för miljöer som har befintliga CDN-konfigurationer för IP tillåtelselista eller anpassade domännamn.

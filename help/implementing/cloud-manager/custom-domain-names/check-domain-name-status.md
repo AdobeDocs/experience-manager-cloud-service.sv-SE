@@ -2,9 +2,9 @@
 title: Kontrollerar domännamnsstatus
 description: Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Manager.
 exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
-source-git-commit: cc1b0d653706150c616ceafd002dc7594b6c7072
+source-git-commit: 878381f9c5780864f218a00a272b1600d578dcca
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -52,10 +52,8 @@ Cloud Manager utlöser automatiskt en TXT-verifiering när du väljer **Spara** 
 
 ## Tidigare CDN-konfigurationer för anpassade domännamn {#pre-existing-cdn}
 
-Om du har en befintlig CDN-konfiguration för dina anpassade domännamn visas ett informativt meddelande på **IP Tillåtelselista** och **Miljö** -sidor, som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de visas och kan konfigureras i Cloud Manager.
+Om du har en befintlig CDN-konfiguration för dina anpassade domännamn visas ett informativt meddelande på **Anpassade domännamn** och **Miljö** -sidor, som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de visas och kan konfigureras i Cloud Manager.
 
 Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
 Se dokumentet [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) för mer information.
-
-![Redan befintligt CDN-konfigurationsmeddelande](/help/implementing/cloud-manager/assets/ip-allow-list-message1.png)

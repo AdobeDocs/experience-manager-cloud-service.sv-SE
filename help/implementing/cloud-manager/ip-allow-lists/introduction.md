@@ -1,38 +1,32 @@
 ---
-title: Introduktion - IP-Tillåtelselista i Cloud Manager
-description: Introduktion - IP-Tillåtelselista i Cloud Manager
+title: Introduktion till IP Tillåtelselista
+description: Lär dig hur IP tillåtelselista kan begränsa från vilka adresser användare kan få åtkomst till dina AEM as a Cloud Service domäner.
 exl-id: 352fae8e-d116-40b0-ba54-d7f001f076e8
-source-git-commit: 1875920ae5180074dcad98fb5c10242b6baa76c7
+source-git-commit: 8d1680fa8dbaaefa297cf8c6698097b3c7acc48d
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
 
-# Introduktion {#introduction}
+
+# Introduktion till IP Tillåtelselista {#introduction}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_ipallowlist"
 >title="Hantera IP-Tillåtelselista"
->abstract="AEM som en molntjänst är öppen för Internet och säkerheten hanteras via användarautentisering och behörighet. Listan över tillåtna IP-adresser är en funktion i Cloud Manager som används för att begränsa och styra åtkomsten enbart till betrodda användare. Med den här funktionen kan användare med behörigheter skapa Tillåt-listor med betrodda IP-adresser som deras webbplatsanvändare kan komma åt sina AEM domäner från."
+>abstract="AEM som molntjänst är tillgänglig via Internet och skyddas genom användarautentisering och auktorisering. Cloud Managers IP-tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till betrodda IP-adresser. Användare av Cloud Manager med lämplig behörighet kan skapa tillåtelselista med betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/add-ip-allow-lists.html" text="Lägg till en IP-Tillåtelselista"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/view-update-ip-allow-list.html" text="Visa och uppdatera en IP-Tillåtelselista"
 
-AEM som en molntjänst är öppen för Internet och säkerheten hanteras via användarautentisering och behörighet. Listan över tillåtna IP-adresser är en funktion i Cloud Manager som används för att begränsa och styra åtkomsten enbart till betrodda användare. Med den här funktionen kan användare med behörigheter skapa Tillåt-listor med betrodda IP-adresser som deras webbplatsanvändare kan komma åt sina AEM domäner från.
+AEM som molntjänst är tillgänglig via Internet och skyddas genom användarautentisering och auktorisering. Cloud Managers IP-tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till betrodda IP-adresser. Användare av Cloud Manager med lämplig behörighet kan skapa tillåtelselista med betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner.
 
->[!NOTE]
->Det går att lägga till högst 50 IP-Tillåtelselista i programmet och högst 50 IP/CIDR-adresser kan läggas till i varje IP-Tillåtelselista.
+IP-tillåtelselista kan läggas till en gång och tillämpas/tas bort flera gånger som en enhet eller enhet till en författare och/eller utgivartjänst i en miljö.
 
-IP-Tillåtelselista kan läggas till en gång och tillämpas/tas bort flera gånger som en enhet eller enhet i en författare- och/eller utgivartjänst i en miljö.
+## Begränsningar {#limitations}
 
->[!NOTE]
->IP Tillåtelselista-namn stöds i Cloud Manager för författare och/eller publiceringstjänst i en miljö.
+Det finns ett antal begränsningar för IP-tillståndslistor att tänka på.
 
-Med hjälp av IP-Tillåtelselista-sidan för användargränssnittet i Cloud Manager eller miljöinformationssidan kan en användare med behörighet utföra flera åtgärder för att hantera IP-Tillåtelselista för dina miljöer, bland annat:
-
-* [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
-   >[!NOTE]
-   > Du kan lägga till en gång och återanvända eller tillämpa regeln hur många gånger som helst mellan olika tjänster i programmet.
-* [Visa eller uppdatera en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/view-update-ip-allow-list.md)
-* [Använda eller ta bort tillämpning av ett IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
-* [Ta bort en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/delete-ip-allow-list.md)
+* Du kan lägga till högst 50 IP-tillåtelselista i programmet
+* Högst 50 IP/CIDR-adresser kan läggas till i varje IP-tillåtelselista.
+* IP tillåtelselista-namn stöds i Cloud Manager för författare och/eller publiceringstjänst i en miljö.
