@@ -1,19 +1,22 @@
 ---
 title: Headless Content Delivery using Content Fragments with GraphQL
-description: Lär dig hur du använder AEM innehållsfragment med GraphQL för leverans av headless-innehåll.
-feature: Content Fragments
+description: Lär dig de grundläggande begreppen för att implementera ett AEM Headless CMS med Content Fragments med GraphQL för leverans av headless-innehåll.
+feature: Content Fragments, GraphQL API
+topic: Headless
 role: User
 exl-id: 4a3b030d-ed59-4920-bf94-e00a45f85b51
-source-git-commit: e592dd7a3a717259493f23943933fe3d0e71b7ab
+source-git-commit: f296e8cbc12c9426e0fefe6f5342374ba9b21291
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
 
 # Headless Content Delivery using Content Fragments with GraphQL {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-Med Adobe Experience Manager (AEM) as a Cloud Service kan du använda innehållsfragment tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard GraphQL) för att leverera strukturerat innehåll som ska användas i dina program. Möjligheten att anpassa en enda API-fråga gör att du kan hämta och leverera det specifika innehåll som du vill ha/behöver återge (som svar på en enskild API-fråga).
+Med Content Fragments och GraphQL API kan du använda Adobe Experience Manager (AEM) as a Cloud Service som ett Headless Content Management System (CMS).
+
+Detta uppnås med Content Fragments, tillsammans med det AEM GraphQL-API:t (en anpassad implementering som bygger på standard GraphQL), för att leverera strukturerat innehåll som ska användas i dina program. Möjligheten att anpassa en enda API-fråga gör att du kan hämta och leverera det specifika innehåll som du vill ha/behöver återge (som svar på en enskild API-fråga).
 
 >[!NOTE]
 >
