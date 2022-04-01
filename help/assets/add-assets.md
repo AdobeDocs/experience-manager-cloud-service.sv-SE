@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: ab3d31051c8de59010bb6dd93258daad70b1ca06
+source-git-commit: c4f6f5925f7c80bae756610eae9b3b7200e9e8f9
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2870'
 ht-degree: 0%
 
 ---
@@ -116,12 +116,12 @@ Bevara den duplicerade resursen i [!DNL Assets], klicka **[!UICONTROL Keep]**. O
 
 ### Hantering av filnamn och förbjudna tecken {#filename-handling}
 
-[!DNL Experience Manager Assets] försöker förhindra att du överför resurser med de förbjudna tecknen i filnamnen. Om du försöker överföra en resurs med ett filnamn som innehåller ett eller flera otillåtna tecken, [!DNL Assets] visar ett varningsmeddelande och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
+[!DNL Experience Manager Assets] förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med filnamn som innehåller ett otillåtet tecken eller mer, [!DNL Assets] visar ett varningsmeddelande och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
 
 Om du vill anpassa namngivningskonventionerna för din organisation kan du [!UICONTROL Upload Assets] I kan du ange långa namn för de filer som du överför. Följande (blankstegsavgränsad lista med) tecken stöds inte:
 
-* ogiltiga tecken för filnamn `* / : [ \\ ] | # % { } ? &`
-* ogiltiga tecken för resursmappens namn `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
+* Ogiltiga tecken för resursnamn: `* / : [ \\ ] | # % { } ? &`
+* Ogiltiga tecken för resursmappens namn: `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
 
 ## Överför resurser gruppvis {#bulk-upload}
 
@@ -147,7 +147,7 @@ Följande bild visar de olika faserna när du importerar resurser till Experienc
 
 ![Verktyget Massintag](assets/bulk-ingestion.png)
 
-#### Förutsättningar {#prerequisites-bulk-ingestion}
+**Förutsättningar**
 
 Det krävs ett externt lagringskonto eller en bucket från Azure eller AWS för att den här funktionen ska kunna användas.
 
@@ -155,7 +155,7 @@ Det krävs ett externt lagringskonto eller en bucket från Azure eller AWS för 
 >
 >Skapa lagringskontobehållaren eller lagringskassetten som privat och acceptera anslutningar endast från auktoriserade begäranden. Ytterligare begränsningar för inkommande nätverksanslutningar stöds dock inte.
 
-#### Konfigurera verktyget Massimport {#configure-bulk-ingestor-tool}
+### Konfigurera verktyget Massimport {#configure-bulk-ingestor-tool}
 
 Så här konfigurerar du verktyget för massimport:
 
@@ -187,31 +187,108 @@ Så här konfigurerar du verktyget för massimport:
 
 1. Klicka **[!UICONTROL Save]** för att spara konfigurationen.
 
-#### Hantera konfigurationen för verktyget Massimport {#manage-bulk-import-configuration}
+### Hantera konfigurationen för verktyget Massimport {#manage-bulk-import-configuration}
 
 När du har skapat konfigurationen för verktyget Massimport kan du utföra uppgifter för att utvärdera konfigurationen innan du gruppimporterar resurser till din Experience Manager-instans. Välj den konfiguration som är tillgänglig på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]** om du vill visa tillgängliga alternativ för att hantera konfigurationen av verktyget för massimport.
 
-##### Redigera konfigurationen {#edit-configuration}
+### Redigera konfigurationen {#edit-configuration}
 
 Välj konfigurationen och klicka på **[!UICONTROL Edit]** om du vill ändra konfigurationsinformationen. Du kan inte redigera titeln för konfigurationen och importdatakällan när du utför redigeringsåtgärden.
 
-##### Ta bort konfigurationen {#delete-configuration}
+### Ta bort konfigurationen {#delete-configuration}
 
 Välj konfigurationen och klicka på **[!UICONTROL Delete]** om du vill ta bort konfigurationen för massimport.
 
-##### Validera anslutningen till datakällan {#validate-connection}
+### Validera anslutningen till datakällan {#validate-connection}
 
 Välj konfigurationen och klicka på **[!UICONTROL check]** för att validera anslutningen till datakällan. Om anslutningen lyckas visas följande meddelande i Experience Manager:
 
 ![Meddelande om att gruppimporten lyckades](assets/bulk-import-success-message.png)
 
-##### Anropa en testkörning för massimportjobbet {#invoke-test-run-bulk-import}
+### Anropa en testkörning för massimportjobbet {#invoke-test-run-bulk-import}
 
 Välj konfigurationen och klicka på **[!UICONTROL Dry Run]** för att anropa en testkörning för massimportjobbet. Experience Manager visar följande information om massimportjobbet:
 
 ![Resultat för torr körning](assets/dry-assets-result.png)
 
-##### Schemalägg en engångs- eller återkommande bulkimport {#schedule-bulk-import}
+### Hantera filnamn vid bulkimport {#filename-handling-bulkimport}
+
+När du importerar resurser eller mappar i grupp, [!DNL Experience Manager Assets] importerar hela strukturen för det som finns i importkällan. [!DNL Experience Manager] följer de inbyggda reglerna för specialtecken i resurs- och mappnamnen, och därför måste dessa filnamn saneras. För både mappnamn och resursnamn ändras inte titeln som definieras av användaren och lagras i `jcr:title`.
+
+Vid bulkimport, [!DNL Experience Manager] leta efter de befintliga mapparna för att undvika att importera om resurserna och mapparna, och verifierar även rensningsreglerna som tillämpas i den överordnade mappen där importen sker. Om saneringsreglerna tillämpas i den överordnade mappen, tillämpas samma regler på importkällan. För ny import används följande saneringsregler för att hantera filnamnen på resurser och mappar.
+
+**Hantera resursnamn vid bulkimport**
+
+För filnamn på resurser sanitiseras JCR-namn&amp;sökvägen med API:t: `JcrUtil.escapeIllegalJcrChars`.
+
+* Behåll Unicode som det är
+* Ersätt specialtecknen med deras URL Escape-kod, till exempel `new*asset.png` uppdateras till `new%2Aasset.png`:
+
+   ```
+          URL escape code   
+   
+   "         %22
+   %         %25
+   '         %27
+   *         %2A
+   .         %2E
+   /         %2F
+   :         %3A
+   [         %5B
+   \n        %5Cn
+   \r        %5Cr
+   \t        %5Ct
+   ]         %5D
+   |         %7C
+   ```
+
+**Hantera mappnamn vid bulkimport**
+
+För mappfilnamn är JCR-namns&amp;sökvägen sanerad med API: `JcrUtil.createValidName`.
+
+* Konvertera versaler till gemener
+* Behåll Unicode som det är
+* Ersätt specialtecknen med bindestreck (&#39;-&#39;), till exempel `new*asset.png` uppdateras till `new-asset.png`:
+
+   ```
+   "                           
+   #                         
+   %                           
+   &                          
+   *                           
+   +                          
+   .                           
+   :                           
+   ;                          
+   ?                          
+   [                           
+   ]                           
+   ^                         
+   {                         
+   }                         
+   |                           
+   /      It is used for split folder in cloud storage and is pre-handled, no conversion here.
+   \      Not allowed in Azure, allowed in AWS.
+   \t                          
+   ```
+
+<!-- 
+[!DNL Experience Manager Assets] manages the forbidden characters in the filenames while you upload assets or folders. [!DNL Experience Manager] updates only the node names in the DAM repository. However, the `title` of the asset or folder remains unchanged.
+
+Following are the file naming conventions that are applied while uploading assets or folders in [!DNL Experience Manager Assets]:
+
+| Characters &Dagger; | When occurring in file names | When occurring in folder names | Example |
+|---|---|---|---|
+| `. / : [ ] | *` | Replaced with `-` (hyphen). | Replaced with `-` (hyphen). A `.` (dot) in the filename extension is retained as is. | Replaced with `-` (hyphen). | `myimage.jpg` remains as is and `my.image.jpg` changes to `my-image.jpg`. |
+| `% ; # , + ? ^ { } "` and whitespaces | Whitespaces are retained | Replaced with `-` (hyphen). | `My Folder.` changes to `my-folder-`. |
+| `# % { } ? & .` | Replaced with `-` (hyphen). | NA. | `#My New File.` changes to `-My New File-`. |
+| Uppercase characters | Casing is retained as is. | Changed to lowercase characters. | `My New Folder` changes to `my-new-folder`. |
+| Lppercase characters | Casing is retained as is. | Casing is retained as is. | NA. |
+
+&Dagger; The list of characters is a whitespace-separated list.
+-->
+
+#### Schemalägg en engångs- eller återkommande bulkimport {#schedule-bulk-import}
 
 Så här schemalägger du en enstaka eller återkommande bulkimport:
 
@@ -222,7 +299,7 @@ Så här schemalägger du en enstaka eller återkommande bulkimport:
    ![Schemalägg massinmatningsjobb](assets/bulk-ingest-schedule1.png)
 
 
-##### Visa målmappen Resurser {#view-assets-target-folder}
+#### Visa målmappen Resurser {#view-assets-target-folder}
 
 Välj konfigurationen och klicka på **[!UICONTROL View Assets]** om du vill visa målplatsen för resurser där resurserna importeras efter att du har kört jobbet för massimport.
 
