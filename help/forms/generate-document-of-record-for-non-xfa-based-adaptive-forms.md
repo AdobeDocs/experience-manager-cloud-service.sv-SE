@@ -2,9 +2,9 @@
 title: Generera arkivdokument för adaptiv Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: f75636c1b964c9edbc3e1dee937f3807e194c311
+source-git-commit: da30318fb965535ae12d09a8ef397431714f9109
 workflow-type: tm+mt
-source-wordcount: '3603'
+source-wordcount: '3583'
 ht-degree: 1%
 
 ---
@@ -403,10 +403,6 @@ Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. 
 * **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, exkluderas de från Postdokument om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd.
 
 ## Använda en anpassad XCI-fil
-
->[!NOTE]
->
-> Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a Cloud Service har en överordnad XCI-fil. Du kan använda en anpassad XCI-fil för att åsidosätta en eller flera standardegenskaper som anges i den överordnad XCI-filen. Du kan till exempel välja att bädda in ett teckensnitt i ett dokument eller aktivera taggad egenskap för alla dokument. Följande tabell anger XCI-alternativen:
 

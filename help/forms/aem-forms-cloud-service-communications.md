@@ -2,9 +2,9 @@
 title: AEM Forms as a Cloud Service - kommunikation
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: 6b546f551957212614e8b7a383c38797cc21fba1
+source-git-commit: fdbb927dbd7f6d640100d444431f931d95414ebc
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '657'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,9 @@ ht-degree: 0%
 
 # Använd synkron bearbetning {#sync-processing-introduction}
 
-Med kommunikation kan ni skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation som affärskontakter, dokument, kontoutdrag, kravbrev, förmånsbesked, kravbrev, månatliga räkningar och välkomstpaket. Du kan använda API:er för kommunikation för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i formaten PDF, PS, PCL, DPL, IPL och ZPL.
+Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskontakter, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga fakturor eller välkomstpaket.
 
-Tänk dig ett scenario där du har en eller flera mallar och flera poster med XML-data för varje mall. Du kan använda API:er för kommunikation för att generera ett utskriftsdokument för varje post. <!-- You can also combine the records into a single document. --> Resultatet är ett icke-interaktivt PDF-dokument. Ett icke-interaktivt PDF-dokument tillåter inte att användare anger data i sina fält.
-
+Funktionen ger API:er för att generera och hantera dokument. Du kan generera eller ändra ett dokument on demand eller skapa ett batchjobb för att generera flera dokument med definierade intervall.
 
 Kommunikationen tillhandahåller API:er för on demand- och schemalagd dokumentgenerering. Du kan använda synkrona API:er för on demand- och batch-API:er (asynkrona API:er) för schemalagd dokumentgenerering:
 
@@ -25,7 +24,7 @@ Kommunikationen tillhandahåller API:er för on demand- och schemalagd dokumentg
 
 ## Använd synkrona åtgärder {#batch-operations}
 
-En synkron åtgärd är en process där dokument genereras linjärt. Det stöder två typer av autentisering:
+En synkron åtgärd är en process där dokument genereras eller ändras linjärt. Det stöder två typer av autentisering:
 
 * **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och en base64-kodad sträng med användarnamn:password. Om du till exempel vill auktorisera som administratör/administratör skickar klienten Basic [base64-kodad stränganvändarnamn]: [base64-kodat stränglösenord].
 
@@ -41,9 +40,9 @@ En synkron åtgärd är en process där dokument genereras linjärt. Det stöder
    >
    >Adobe rekommenderar att du använder tokenbaserad autentisering i en produktionsmiljö.
 
-### Krav {#pre-requisites}
+### (Endast API:er för dokumentgenerering)Krav {#pre-requisites}
 
-Följande krävs för att använda synkrona API:er:
+Om du vill använda synkrona API:er för dokumentgenerering krävs följande:
 
 * PDF eller XDP-mallar
 * [Data som ska sammanfogas med mallar](#form-data)
@@ -73,4 +72,3 @@ The [API-referensdokumentation](https://www.adobe.io/experience-manager-forms-cl
 >[!NOTE]
 >
 >Endast medlemmar i gruppen med formuläranvändare har åtkomst till kommunikationsAPI:er.
-
