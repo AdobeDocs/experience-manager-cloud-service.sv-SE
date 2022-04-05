@@ -2,12 +2,13 @@
 title: Översätt innehåll (AEM utan rubrik)
 description: Använd översättningskopplingen och reglerna för att översätta ditt headless-innehåll.
 exl-id: 3bfbf186-d684-4742-8c5c-34c34ff3adb5
-source-git-commit: 4b76fbbb1b58324065b39d6928027759b0897246
+source-git-commit: a8293384cbe55921f7cfd2187330f66691206e2b
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
+
 
 # Översätta innehåll {#translate-content}
 
@@ -21,6 +22,10 @@ I det föregående dokumentet om den AEM översättningsresan utan headless [Kon
 * Du kan definiera egna översättningsregler.
 
 Nu när du har konfigurerat reglerna för anslutning och översättning tar den här artikeln dig igenom nästa steg när du översätter ditt headless-innehåll.
+
+>[!NOTE]
+>
+>Om du hoppade över [Konfigurera översättningsregler](translation-rules.md) eftersom du är AEM as a Cloud Service i förhandsversionen behöver du inte bekymra dig om översättningsreglerna som anges i det här dokumentet.
 
 ## Syfte {#objective}
 

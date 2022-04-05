@@ -2,9 +2,9 @@
 title: Konfigurera översättningsregler (AEM headless)
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
-source-git-commit: 4b76fbbb1b58324065b39d6928027759b0897246
+source-git-commit: a8293384cbe55921f7cfd2187330f66691206e2b
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,15 @@ I det föregående dokumentet om den AEM översättningsresan utan headless [Kon
 * Du kan skapa en egen anslutning till översättningstjänsten.
 
 Nu när du har konfigurerat din koppling tar den här artikeln dig igenom nästa steg för att identifiera vilket innehåll du behöver översätta.
+
+>[!CAUTION]
+>
+>Det här steget i dokumentationsresan är bara nödvändigt om du inte är med i förhandsversionen av AEM as a Cloud Service.
+>
+>* Om du är på betaversionskanalen går du vidare till nästa steg på resan [Översätt innehåll.](translate-content.md)
+>* Om du inte är med i prerelease-kanalen kan du fortsätta läsa det här dokumentet.
+>
+>Se [Avsnittet Ytterligare resurser](#additional-resources) för mer information om betaversionskanalen.
 
 ## Syfte {#objective}
 
@@ -99,3 +108,4 @@ Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless trans
 Vi rekommenderar att du går vidare till nästa del av den headless-översättningsresan genom att granska dokumentet [Översätta innehåll,](translate-content.md) Nedan följer ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den headless-resan.
 
 * [Identifiera innehåll som ska översättas](/help/sites-cloud/administering/translation/rules.md) - Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
+* [AEM as a Cloud Service prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) - Lär dig hur du väljer att använda betaversionskanalen i AEM as a Cloud Service för att testa nya och kommande funktioner.

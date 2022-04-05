@@ -2,9 +2,9 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: fdbb927dbd7f6d640100d444431f931d95414ebc
+source-git-commit: 09452aa799fc59bfc08c59d69820aa22daf07e9f
 workflow-type: tm+mt
-source-wordcount: '1120'
+source-wordcount: '1129'
 ht-degree: 1%
 
 ---
@@ -97,7 +97,7 @@ When such an interactive PDF document is flattened using the Communications APIs
 
 ## Dokumenthantering
 
-API:er för dokumentbearbetning i kommunikation hjälper dig att kombinera, ordna om och validera PDF-dokument. Vanligtvis skapar du en DX och skickar den till API:er för dokumentbearbetning för att montera eller ordna om ett dokument. DDX-dokumentet innehåller anvisningar om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds. Några exempel på dokumentbearbetning är:
+API:er för dokumentbearbetning i kommunikation hjälper dig att kombinera, ordna om och validera PDF-dokument. Vanligtvis skapar du en DX och skickar den till API:er för dokumentbearbetning för att montera eller ordna om ett dokument. The [DDX-dokument](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) innehåller instruktioner om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds. Några exempel på dokumentbearbetning är:
 
 ### Sammanställa dokument från PDF
 

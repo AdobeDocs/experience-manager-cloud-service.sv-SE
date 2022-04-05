@@ -2,9 +2,9 @@
 title: AEM Forms as a Cloud Service - kommunikation
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: fdbb927dbd7f6d640100d444431f931d95414ebc
+source-git-commit: a3c817dedbf20b21e609ad0e5bfd0d3c4fa9a431
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '735'
 ht-degree: 0%
 
 ---
@@ -12,9 +12,10 @@ ht-degree: 0%
 
 # Använd synkron bearbetning {#sync-processing-introduction}
 
-Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskontakter, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga fakturor eller välkomstpaket.
+Med kommunikation kan ni skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation som affärskontakter, dokument, kontoutdrag, kravbrev, förmånsbesked, kravbrev, månatliga räkningar och välkomstpaket. Du kan använda API:er för kommunikation för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i formaten PDF, PS, PCL, DPL, IPL och ZPL.
 
-Funktionen ger API:er för att generera och hantera dokument. Du kan generera eller ändra ett dokument on demand eller skapa ett batchjobb för att generera flera dokument med definierade intervall.
+Tänk dig ett scenario där du har en eller flera mallar och flera poster med XML-data för varje mall. Du kan använda API:er för kommunikation för att generera ett utskriftsdokument för varje post. <!-- You can also combine the records into a single document. --> Resultatet är ett icke-interaktivt PDF-dokument. Ett icke-interaktivt PDF-dokument tillåter inte att användare anger data i sina fält.
+
 
 Kommunikationen tillhandahåller API:er för on demand- och schemalagd dokumentgenerering. Du kan använda synkrona API:er för on demand- och batch-API:er (asynkrona API:er) för schemalagd dokumentgenerering:
 
@@ -24,7 +25,19 @@ Kommunikationen tillhandahåller API:er för on demand- och schemalagd dokumentg
 
 ## Använd synkrona åtgärder {#batch-operations}
 
-En synkron åtgärd är en process där dokument genereras eller ändras linjärt. Det stöder två typer av autentisering:
+En synkron åtgärd är en process där dokument genereras linjärt. Separata API:er är tillgängliga för:
+
+* Skapar ett PDF-dokument från en mall och sammanfogar data till den.
+* Skapa ett PostScript- (PS), Printer Command Language (PCL), Zebra Printing Language-dokument (ZPL) från en XDP-fil eller ett PDF-dokument.
+* Sammanställa dokument från PDF
+* Dela upp PDF-dokument
+* Konvertera ett dokument till PDF/A-kompatibelt dokument
+* Validera ett dokument som överensstämmer med PDF/A
+
+
+### Autentisera ett API-anrop
+
+Synkrona åtgärder har stöd för två typer av autentisering:
 
 * **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och en base64-kodad sträng med användarnamn:password. Om du till exempel vill auktorisera som administratör/administratör skickar klienten Basic [base64-kodad stränganvändarnamn]: [base64-kodat stränglösenord].
 
@@ -40,16 +53,17 @@ En synkron åtgärd är en process där dokument genereras eller ändras linjär
    >
    >Adobe rekommenderar att du använder tokenbaserad autentisering i en produktionsmiljö.
 
-### (Endast API:er för dokumentgenerering)Krav {#pre-requisites}
 
-Om du vill använda synkrona API:er för dokumentgenerering krävs följande:
+### (Endast för API:er för dokumentgenerering) Konfigurera resurser och behörigheter
+
+Följande krävs för att använda synkrona API:er:
 
 * PDF eller XDP-mallar
 * [Data som ska sammanfogas med mallar](#form-data)
 * Användare med administratörsbehörighet för Experience Manager
 * Överför mallar och annat material till Experience Manager Forms Cloud Service
 
-#### Överför mallar och andra resurser till din Experience Manager-instans
+### (Endast för API:er för dokumentgenerering) Överför mallar och andra resurser till din Experience Manager-instans
 
 En organisation har vanligtvis flera mallar. Till exempel en mall var för kreditkortskontoutdrag, förmånskontoutdrag och ansökningar. Överför alla sådana XDP- och PDF-mallar till din Experience Manager-instans. Så här överför du en mall:
 
@@ -58,14 +72,10 @@ En organisation har vanligtvis flera mallar. Till exempel en mall var för kredi
 1. Klicka på Skapa > Mapp och skapa en mapp. Öppna mappen.
 1. Klicka på Skapa > Filöverföring och överför mallarna.
 
-### Använd synkront API för att generera dokument
 
-Separata API:er är tillgängliga för:
+### Anropa ett API
 
-* Skapar ett PDF-dokument från en mall och sammanfogar data till den.
-* Skapa ett PostScript- (PS), Printer Command Language (PCL), Zebra Printing Language-dokument (ZPL) från en XDP-fil eller ett PDF-dokument.
-
-The [API-referensdokumentation](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/api/sync/#tag/Communications-Services) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan ladda ned .yaml för [synkrona API:er](assets/sync.yaml) och ladda upp det till postman för att kontrollera API:ernas funktionalitet.
+The [API-referensdokumentation](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/api/sync/#tag/Communications-Services) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen innehåller även API-definitionsfilen i .yaml-format. Du kan hämta .yaml-filen och överföra den till postman för att kontrollera API:ernas funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335771)
 

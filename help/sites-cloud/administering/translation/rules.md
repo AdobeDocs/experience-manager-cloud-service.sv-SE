@@ -4,9 +4,9 @@ description: Lär dig hur översättningsregler identifierar innehåll som behö
 feature: Language Copy
 role: Admin
 exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
-source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
+source-git-commit: 1363929c95f0615d14b31e0733d20130f4226de2
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1292'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,22 @@ ht-degree: 0%
 >[!TIP]
 >
 >Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+
+## Innehållsfragment och översättningsregler {#content-fragments}
+
+Översättningsreglerna som beskrivs i det här dokumentet gäller endast för innehållsfragment om **Aktivera fält för innehållsmodell för översättning** har inte aktiverats på [konfigurationsnivå för översättningsintegreringsramverk.](integration-framework.md#assets-configuration-properties)
+
+Om **Aktivera fält för innehållsmodell för översättning** är aktivt, AEM använder **Översättningsbar** fält på [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#properties) för att bestämma om fältet ska översättas. I detta fall [översättningsregler](rules.md) är ersatta.
+
+Om du vill använda översättningsregler för översättning av dina innehållsfragment, **Aktivera fält för innehållsmodell för översättning** -alternativet i konfigurationen för översättningsintegreringsramverket måste inaktiveras.
+
+>[!NOTE]
+>
+>Den här funktionen är tillgänglig i prerelease-kanalen.
+> 
+>Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
+
+## Översikt {#overview}
 
 Sidor och resurser representeras som noder i JCR-databasen. Innehållet som extraheras är ett eller flera egenskapsvärden för noderna. Översättningsregler identifierar de egenskaper som innehåller innehållet som ska extraheras.
 

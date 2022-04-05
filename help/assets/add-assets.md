@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: c4f6f5925f7c80bae756610eae9b3b7200e9e8f9
+source-git-commit: 1b68322b63fdbf8dab5a7dbd37dd1143f026c051
 workflow-type: tm+mt
-source-wordcount: '2870'
+source-wordcount: '2875'
 ht-degree: 0%
 
 ---
@@ -219,36 +219,37 @@ Vid bulkimport, [!DNL Experience Manager] leta efter de befintliga mapparna för
 
 **Hantera resursnamn vid bulkimport**
 
-För filnamn på resurser sanitiseras JCR-namn&amp;sökvägen med API:t: `JcrUtil.escapeIllegalJcrChars`.
+För filnamn på resurser saneras JCR-namnet och sökvägen med API:t: `JcrUtil.escapeIllegalJcrChars`.
 
-* Behåll Unicode som det är
-* Ersätt specialtecknen med deras URL Escape-kod, till exempel `new*asset.png` uppdateras till `new%2Aasset.png`:
+* Unicode-tecken ändras inte
+* Ersätt specialtecknen med deras URL Escape-kod, till exempel `new asset.png` uppdateras till `new%20asset.png`:
 
    ```
-          URL escape code   
+                   URL escape code   
    
-   "         %22
-   %         %25
-   '         %27
-   *         %2A
-   .         %2E
-   /         %2F
-   :         %3A
-   [         %5B
-   \n        %5Cn
-   \r        %5Cr
-   \t        %5Ct
-   ]         %5D
-   |         %7C
+   "               %22
+   %               %25
+   '               %27
+   *               %2A
+   .               %2E
+   /               %2F
+   :               %3A
+   [               %5B
+   \n              %5Cn
+   \r              %5Cr
+   \t              %5Ct
+   ]               %5D
+   |               %7C
+   space char      %20
    ```
 
 **Hantera mappnamn vid bulkimport**
 
-För mappfilnamn är JCR-namns&amp;sökvägen sanerad med API: `JcrUtil.createValidName`.
+För mappfilnamn sanpassas JCR-namnet och sökvägen med API:t: `JcrUtil.createValidName`.
 
-* Konvertera versaler till gemener
-* Behåll Unicode som det är
-* Ersätt specialtecknen med bindestreck (&#39;-&#39;), till exempel `new*asset.png` uppdateras till `new-asset.png`:
+* Versaler konverteras till gemener
+* Unicode-tecken ändras inte
+* Ersätt specialtecknen med bindestreck (&#39;-&#39;), till exempel `new asset.png` uppdateras till `new-asset.png`:
 
    ```
    "                           
@@ -267,9 +268,10 @@ För mappfilnamn är JCR-namns&amp;sökvägen sanerad med API: `JcrUtil.createVa
    {                         
    }                         
    |                           
-   /      It is used for split folder in cloud storage and is pre-handled, no conversion here.
-   \      Not allowed in Azure, allowed in AWS.
-   \t                          
+   /         It is used for split folder in cloud storage and is pre-handled, no conversion here.
+   \         Not allowed in Azure, allowed in AWS.
+   \t
+   space     It is the space character.
    ```
 
 <!-- 

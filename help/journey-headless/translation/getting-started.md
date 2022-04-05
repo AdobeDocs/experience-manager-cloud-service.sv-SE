@@ -2,9 +2,9 @@
 title: Kom igång med AEM headless translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 04ae2cd6-aba3-4785-9099-2f6ef24e1daf
-source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
+source-git-commit: d5a7138cd5e3e9f0febe20b7447589beadc45554
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1567'
 ht-degree: 0%
 
 ---
@@ -89,11 +89,14 @@ Eftersom innehållsmodellerna definierar innehållsstrukturen måste du veta vil
 1. Tryck eller klicka på ett av modellens fält. AEM markerar det och detaljerna för det fältet visas i den högra kolumnen.
    ![Information om Modellredigerare för innehållsfragment](assets/content-fragment-model-editor-detail.png)
 
-Notera fältet **Egenskapsnamn** för alla fält som måste översättas. Du kommer att behöva den här informationen senare under resan. Dessa **Egenskapsnamn** måste du informera AEM vilka fält i ditt innehåll som måste översättas.
-
 >[!TIP]
 >
->Innehållsarkitekten förser översättningsspecialisten med **Egenskapsnamn**&#x200B;är en del av alla fält som krävs för översättning. Dessa fältnamn behövs för att kunna användas senare under resan. De föregående stegen tillhandahålls för att förstå översättningsspecialisten.
+>Innehållsarkitekten ansvarar vanligtvis för att identifiera vilka fält som krävs för översättning. De föregående stegen tillhandahålls för att förstå översättningsspecialisten.
+
+Hur du hanterar översättningen av innehållsmodellfält beror på om du använder förhandsversionskanalen AEM as a Cloud Service. Se [Avsnittet Ytterligare resurser](#additional-resources) för mer information om betaversionskanalen.
+
+* **Om du använder betaversionskanalen** kan innehållsarkitekten **Översättningsbar** på alla fält i innehållsmodellen som behöver översättas.
+* **Om du inte använder betaversionskanalen** ger innehållsarkitekten **Egenskapsnamn** fält för alla fält som måste översättas. Du kommer att behöva den här informationen senare under resan. Dessa **Egenskapsnamn** måste du informera AEM vilka fält i ditt innehåll som måste översättas.
 
 ### Innehållsfragment {#content-fragments}
 
@@ -167,10 +170,10 @@ Du bör notera den specifika sökvägen för ditt innehåll, eftersom det krävs
 Nu när du förstår vad innehållsfragment är och vikten av innehållsstruktur kan vi titta på hur du översätter det här innehållet. Översättningsverktygen i AEM är mycket kraftfulla, men enkla att förstå på en hög nivå.
 
 * **Translation Connector** - Kopplingen är länken mellan AEM och översättningstjänsten som du använder.
-* **Översättningsregler** - Reglerna definierar vilket innehåll under särskilda sökvägar som ska översättas.
+* **Översättningsregler** - Reglerna definierar vilket innehåll under särskilda sökvägar som ska översättas. Regler behövs bara om du inte använder AEM prerelease-kanal.
 * **Översättningsprojekt** - Översättningsprojekt samlar in innehåll som ska hanteras som en enda översättningsåtgärd och spårar översättningens förlopp, interagerar med kopplingen för att överföra innehållet som ska översättas och tar emot det tillbaka från översättningstjänsten.
 
-Vanligtvis konfigurerar du bara anslutningen en gång för din instans och regler per headless-projekt. Sedan använder ni översättningsprojekt för att översätta innehållet och hålla översättningarna uppdaterade kontinuerligt.
+Vanligtvis konfigurerar du bara anslutningen en gång för din instans. Om regler krävs skapas de per headless-projekt. Sedan använder ni översättningsprojekt för att översätta innehållet och hålla översättningarna uppdaterade kontinuerligt.
 
 ## What&#39;s Next {#what-is-next}
 
@@ -190,3 +193,4 @@ Vi rekommenderar att du går vidare till nästa del av den headless-översättni
 * [Identifiera innehåll som ska översättas](/help/sites-cloud/administering/translation/rules.md) - Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
 * [Konfigurera översättningsintegreringsramverket](/help/sites-cloud/administering/translation/integration-framework.md) - Lär dig hur du konfigurerar TLF (Translation Integration Framework) för integrering med översättningstjänster från tredje part.
 * [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md) - Lär dig att skapa och hantera både maskinöversättning och mänsklig översättning i AEM.
+* [AEM as a Cloud Service prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) - Lär dig hur du väljer att använda betaversionskanalen i AEM as a Cloud Service för att testa nya och kommande funktioner.

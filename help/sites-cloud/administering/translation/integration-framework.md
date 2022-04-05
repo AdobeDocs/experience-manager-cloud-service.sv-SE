@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: 917f5790fb36fd1560ba43c67f8072616b605894
+source-git-commit: 5ef9ac087ec3feab9c68935b81882451c308daed
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -67,11 +67,7 @@ När du har konfigurerat ett ramverk för översättningsintegrering kan du [ass
 >
 >En översikt över funktionerna för innehållsöversättning i AEM finns på [Översätta innehåll för flerspråkiga webbplatser](overview.md).
 
-En enda konfiguration av ramverket styr hur sidinnehåll och resurser ska översättas.
-
-![Översättningskonfiguration](../assets/translation-configuration.png)
-
-Så här skapar du en ny översättningskonfiguration:
+En enda konfiguration av ramverket styr hur sidinnehåll och resurser översätts. Så här skapar du en ny översättningskonfiguration:
 
 1. I [global navigeringsmeny,](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) klicka eller trycka **Verktyg -> Cloud Services - och översättnings-Cloud Services**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på en viss webbplats eller kan vara globalt.
@@ -85,28 +81,41 @@ Så här skapar du en ny översättningskonfiguration:
 
 The **Webbplatser** -fliken styr hur sidinnehållet ska översättas.
 
+![Översättningskonfiguration för platser](../assets/translation-configuration.png)
+
 | Egenskap | Beskrivning |
 |---|---|
-| Översättningsarbetsflöde | Den här egenskapen definierar den översättningsmetod som ramverket utför för webbplatsinnehåll:<br>- Maskinöversättning: Översättningsprovidern utför översättningen med maskinöversättning i realtid.<br>- mänsklig översättning: Innehållet skickas till översättningsleverantören för översättning av översättare.<br>- Översätt inte: Innehåll skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet. |
+| Översättningsmetod | Den här egenskapen definierar den översättningsmetod som ramverket utför för webbplatsinnehåll:<br>- Maskinöversättning: Översättningsprovidern utför översättningen med maskinöversättning i realtid.<br>- mänsklig översättning: Innehållet skickas till översättningsleverantören för översättning av översättare.<br>- Översätt inte: Innehåll skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet. |
 | Översättningsprovider | This property define the translation provider to perform the translation. En provider visas i listan när dess motsvarande koppling är installerad. |
 | Innehållskategori | (Endast maskinöversättning) Den här egenskapen är en kategori som beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts. |
 | Översätt taggar | Det här alternativet aktiverar översättning av taggar som är kopplade till sidan. |
 | Översätt sidresurser | Den här egenskapen definierar hur resurser som läggs till i komponenter från filsystemet eller som refereras från resurser ska översättas:<br>- Översätt inte: Sidresurser översätts inte.<br>- Använda arbetsflöde för översättning av webbplatser: Resurserna hanteras enligt konfigurationsegenskaperna i **Webbplatser** -fliken.<br>- Använda arbetsflöde för översättning av resurser: Resurserna hanteras enligt de egenskaper som konfigurerats på **Resurser** -fliken. |
 | Automatisk översättning | Aktivera den här egenskapen för att köra översättningsjobb automatiskt efter att översättningsprojekt har skapats. Du har inte möjlighet att granska och omsluta översättningsjobbet när du väljer det här alternativet. |
+| Inaktivera översättning med endast uppdatering | När det här alternativet är markerat skickas alla översättningsbara fält för översättning när översättningsprojektet uppdateras, inte bara de som ändrats sedan den senaste översättningen. |
 
 ### Egenskaper för resurskonfiguration {#assets-configuration-properties}
 
 Resursegenskaperna styr hur resurser konfigureras. Mer information om översättning av resurser finns i [Skapa språkkopior för resurser](/help/assets/translate-assets.md).
 
+![Översättningskonfiguration för platser](../assets/translation-configuration-assets.png)
+
 | Egenskap | Beskrivning |
 |---|---|
-| Översättningsarbetsflöde | Den här egenskapen väljer typen av översättning som ramverket utför för resurser:<br>- Maskinöversättning: Översättningsprovidern utför översättningen omedelbart med maskinöversättning.<br>- mänsklig översättning: Innehållet skickas automatiskt till översättningsleverantören för manuell översättning.<br>-Do Not Translate: Resurser skickas inte för översättning. |
+| Översättningsmetod | Den här egenskapen väljer typen av översättning som ramverket utför för resurser:<br>- Maskinöversättning: Översättningsprovidern utför översättningen omedelbart med maskinöversättning.<br>- mänsklig översättning: Innehållet skickas automatiskt till översättningsleverantören för manuell översättning.<br>-Do Not Translate: Resurser skickas inte för översättning. |
 | Översättningsprovider | This property define the translation provider to perform the translation. En provider visas i listan när dess motsvarande koppling är installerad. |
 | Innehållskategori | (Endast maskinöversättning) Den här egenskapen beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts. |
 | Översätt resurser | Aktivera den här egenskapen för att inkludera resurser i översättningsprojektet. |
 | Översätt metadata | Aktivera den här egenskapen för att översätta metadata för resurser. |
 | Översätt taggar | Aktivera den här egenskapen för att översätta taggar som är kopplade till resursen. |
 | Automatisk översättning | Välj den här egenskapen om du vill köra översättningsjobb automatiskt efter att översättningsprojekt har skapats. Du har inte möjlighet att granska eller omsluta översättningsjobbet när du väljer det här alternativet. |
+| Inaktivera översättning med endast uppdatering | När det här alternativet är markerat skickas alla översättningsbara fält för översättning när översättningsprojektet uppdateras, inte bara de som ändrats sedan den senaste översättningen. |
+| Aktivera fält för innehållsmodell för översättning* | Om du aktiverar det här alternativet används **Översättningsbar** fält på [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#properties) för att avgöra om fältet är översatt. I detta fall [översättningsregler](rules.md) är ersatta. |
+
+>[!NOTE]
+>
+>*Den här funktionen är tillgänglig i prerelease-kanalen.
+> 
+>Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 ## Konfigurera sidor för översättning {#configuring-pages-for-translation}
 
