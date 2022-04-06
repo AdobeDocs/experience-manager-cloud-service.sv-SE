@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: a7555507f4fb0fb231e27d7c7a6413b4ec6b94e6
+source-git-commit: 05f9e9de0d5dbcc332466dc964e2d01569d16110
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -18,10 +18,6 @@ ht-degree: 0%
 >abstract="Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina program. Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium)."
 
 Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina program.
-
->[!NOTE]
-> Scen- och produktionsrörledningar som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs på den här sidan ska kunna användas.
-> Se [CI-CD-pipeline i Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) för information om pipeline-konfiguration.
 
 ## Översikt {#custom-ui-testing}
 
@@ -62,12 +58,9 @@ Ta med en `testing.properties` fil i build-artefakten, lägga till en `include` 
 
 >[!NOTE]
 >
->Om projektet inte innehåller den här raden måste du redigera filen för att kunna välja gränssnittstestning. Om det finns en rad i filen som talar om att den inte ska redigeras, ska du bortse från den råden.
-
->[!NOTE]
+>Om projektet inte innehåller den här raden måste du redigera filen för att kunna välja gränssnittstestning.
 >
->Produktionspipelinor som skapats före den 10 februari 2021 måste uppdateras för att de UI-tester som beskrivs i detta avsnitt ska kunna användas. Detta innebär att användaren måste redigera produktionsflödet och klicka på **Spara** från användargränssnittet även om inga ändringar gjorts.
->Se [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager) om du vill veta mer om pipelinekonfigurationen.
+>Filen kan innehålla en rad som anger att den inte ska redigeras. Detta beror på att det introducerades i ditt projekt innan gränssnittstestning för deltagande introducerades och att klienterna inte var avsedda att redigera filen. Detta kan ignoreras.
 
 ## Skapar gränssnittstester {#building-ui-tests}
 
@@ -177,7 +170,7 @@ Följande miljövariabler skickas till Docker-bilden vid körning.
 | Variabel | Exempel | Beskrivning |
 |---|---|---|
 | `SELENIUM_BASE_URL` | `http://my-ip:4444` | URL:en för Selenium-servern |
-| `SELENIUM_BROWSER` | `chrome`, `firefox` | Webbläsarimplementeringen som används av Selenium Server |
+| `SELENIUM_BROWSER` | `chrome` | Webbläsarimplementeringen som används av Selenium Server |
 | `AEM_AUTHOR_URL` | `http://my-ip:4502/context-path` | URL:en för AEM författarinstans |
 | `AEM_AUTHOR_USERNAME` | `admin` | Användarnamnet som ska loggas in till AEM författarinstans |
 | `AEM_AUTHOR_PASSWORD` | `admin` | Lösenordet för inloggning på AEM författarinstans |
@@ -198,7 +191,7 @@ När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
 
 ### Generera testrapporter {#generate-test-reports}
 
-Docker-bilden måste generera testrapporter i JUnit XML-format och spara dem i den sökväg som anges av systemvariabeln `REPORTS_PATH`. JUnit XML-formatet är ett vanligt format för rapportering av testresultat. Om Docker-bilden använder Java och Maven är båda [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) och [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/).
+Docker-bilden måste generera testrapporter i JUnit XML-format och spara dem i den sökväg som anges av systemvariabeln `REPORTS_PATH`. JUnit XML-formatet är ett vanligt format för rapportering av testresultat. Om Docker-bilden använder Java och Maven, standardtestmoduler som [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) och [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) kan generera sådana rapporter direkt.
 
 Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare bör du kontrollera i dokumentationen vilka verktyg som har valts för att skapa JUnit XML-rapporter.
 

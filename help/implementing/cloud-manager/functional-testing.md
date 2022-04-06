@@ -2,9 +2,9 @@
 title: Funktionstestning
 description: Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: 15de47e28e804fd84434d5e8e5d2fe8fe6797241
+source-git-commit: a936f056685f2233a272b4b3105d845f832d143c
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '898'
 ht-degree: 0%
 
 ---
@@ -27,27 +27,37 @@ Det finns tre olika typer av funktionstestning på AEM as a Cloud Service.
 * [Anpassad funktionstestning](#custom-functional-testing)
 * [Testning av anpassat användargränssnitt](#custom-ui-testing)
 
-För alla funktionstester kan detaljerade testresultat hämtas som `.zip` genom att använda **Hämta bygglogg** på skärmen som utgör en del av [distributionsprocessen.](/help/implementing/cloud-manager/deploy-code.md) Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen. För att få tillgång till loggarna, se dokumentet [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) för mer information.
+För alla funktionstester kan detaljerade testresultat hämtas som `.zip` genom att använda **Hämta bygglogg** på skärmen som utgör en del av [distributionsprocessen.](/help/implementing/cloud-manager/deploy-code.md)
+
+Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen. För att få tillgång till loggarna, se dokumentet [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) för mer information.
+
+Både produktfunktionstesterna och de anpassade funktionstesterna baseras på [AEM testar klienter.](https://github.com/adobe/aem-testing-clients)
 
 ## Funktionstestning av produkten {#product-functional-testing}
 
-Funktionstester för produkter är en uppsättning stabila HTTP-integrationstester (IT) av kärnfunktionalitet i AEM som redigerings- och replikeringsuppgifter. Dessa tester förhindrar att kundändringar i anpassad programkod distribueras om de bryter grundfunktionerna.
+Funktionstester för produkter är en uppsättning stabila HTTP-integrationstester (IT) av kärnfunktionalitet i AEM som redigerings- och replikeringsuppgifter. Dessa tester underhålls av Adobe och är avsedda att förhindra att ändringar i anpassad programkod driftsätts om kärnfunktionen bryts.
 
 Funktionstester för produkter körs automatiskt när du distribuerar ny kod till Cloud Manager och kan inte hoppas över.
 
-Se [funktionsprovningar av produkter](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) i GitHub för provtester.
+Funktionstester för produkter underhålls som ett öppen källkodsprojekt. Se [funktionsprovningar av produkter](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) i GitHub om du vill ha mer information.
 
 ## Anpassad funktionstestning {#custom-functional-testing}
 
-Anpassat funktionstestningssteg i pipeline finns alltid och kan inte hoppas över.
+Även om produktfunktionstestning definieras av Adobe kan du skriva egna kvalitetstester för ditt eget program. Detta utförs som en anpassad funktionstestning som en del av produktionsflödet för att säkerställa programmets kvalitet.
 
-Byggnaden bör producera antingen noll eller en test-JAR. Om inga JAR-testversioner skapas godkänns teststeget som standard. Om bygget skapar fler än en test-JAR är den JAR som är vald icke-deterministisk.
+Anpassad funktionstestning utförs både för anpassade koddistributioner och push-uppgraderingar, vilket gör det särskilt viktigt att skriva bra funktionstester som förhindrar att AEM kan knäcka programkoden. Det anpassade funktionsteststeget finns alltid och kan inte hoppas över.
 
-### Skriva funktionstester {#writing-functional-tests}
+### Skriva anpassade funktionstester {#writing-functional-tests}
+
+Samma verktyg som Adobe använder för att skriva produktfunktionstester kan användas för att skriva dina anpassade funktionstester. Använd [funktionsprovningar av produkter](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) i GitHub som ett exempel på hur du skriver dina tester.
+
+Koden för det anpassade funktionstestet är Java-kod som finns i `it.tests` projektmapp. Den ska producera en enda JAR med alla funktionstester. Om bygget skapar mer än en test-JAR är den JAR som är vald icke-deterministisk. Om inga JAR-testversioner skapas godkänns teststeget som standard. [Se AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/it.tests) för stickprov.
+
+Testerna körs på testinfrastruktur som underhålls i Adobe, inklusive minst två författarinstanser, två publiceringsinstanser och en dispatcherkonfiguration. Det innebär att dina anpassade funktionstester körs mot hela AEM.
 
 Anpassade funktionstester måste paketeras som en separat JAR-fil som skapas av samma Maven-bygge som de artefakter som ska distribueras till AEM. I allmänhet är detta en separat Maven-modul. Den resulterande JAR-filen måste innehålla alla nödvändiga beroenden och skulle vanligtvis skapas med `maven-assembly-plugin` med `jar-with-dependencies` beskrivning.
 
-Dessutom måste JAR ha `Cloud-Manager-TestType` manifest header inställd på `integration-test`. I framtiden förväntas ytterligare rubrikvärden stödjas.
+Dessutom måste JAR ha `Cloud-Manager-TestType` manifest header inställd på `integration-test`.
 
 Här följer ett exempel på konfiguration för `maven-assembly-plugin`.
 
@@ -92,6 +102,10 @@ Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad
 
 Se [`aem-testing-clients` GitHub-repo](https://github.com/adobe/aem-testing-clients) för mer information.
 
+>[!TIP]
+>
+>[Se videon](https://www.youtube.com/watch?v=yJX6r3xRLHU) om hur du kan använda anpassade funktionstester för att förbättra ditt förtroende för CI/CD-pipelines.
+
 ## Testning av anpassat användargränssnitt {#custom-ui-testing}
 
 Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina program. Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium).
@@ -100,7 +114,7 @@ Se dokumentet [Testning av anpassat användargränssnitt](/help/implementing/clo
 
 ## Lokal testkörning {#local-test-execution}
 
-Eftersom testklasser är JUnit-tester kan de köras från vanliga Java-IDE:er som Eclipse, IntelliJ, NetBeans och så vidare.
+Eftersom testklasser är JUnit-tester kan de köras från vanliga Java-IDE:er som Eclipse, IntelliJ, NetBeans och så vidare. Eftersom både produktfunktionstester och anpassade funktionstester baseras på samma teknik, kan båda köras lokalt genom att produkttesterna kopieras till dina anpassade tester.
 
 När du kör dessa tester måste du dock ange ett antal systemegenskaper som förväntas av `aem-testing-clients` (och det underliggande Sling Testing Clients) biblioteket.
 
