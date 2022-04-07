@@ -3,9 +3,9 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 9804d9b71f082c3d4788667fdc3993af3b673588
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
@@ -77,6 +77,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
+      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
    * **Pausa innan du distribuerar till produktion** - Det här alternativet pausar pipeline innan den distribueras till produktion.
 
@@ -104,6 +105,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
+      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
    * **Pausa innan du distribuerar till produktion** - Det här alternativet pausar pipeline innan den distribueras till produktion.
    * **Schemalagd** - Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen.
@@ -150,6 +152,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
+      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
       * För konfigurationspipelines på webbnivå är detta vanligtvis sökvägen som innehåller `conf.d`, `conf.dispatcher.d`och `opt-in` kataloger.
       * Om projektstrukturen till exempel genererades från [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) banan `/dispatcher/src`.

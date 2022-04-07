@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2022.3.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2022.3.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2022.4.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2022.4.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 0749099acf98b09d0f83bfe86c2cc4558261c029
+source-git-commit: e448ee4ee2928a136bdab382c67104bedce28732
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 1%
+source-wordcount: '398'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2022.3.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2022.4.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-Den här sidan dokumenterar versionsinformationen för Cloud Manager 2022.3.0 i AEM as a Cloud Service.
+På den här sidan visas versionsinformation för Cloud Manager 2022.4.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,15 +21,23 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager 2022.3.0 i 
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.3.0 i AEM as a Cloud Service 10 mars 2022. Nästa version är planerad till den 7 april 2022.
+Releasedatum för Cloud Manager version 2022.4.0 i AEM as a Cloud Service 7 april 2022. Nästa version är planerad till den 5 maj 2022.
 
 ## Nyheter {#what-is-new}
 
-* Åtkomst AEM miljöloggen kan göras med rollen Utvecklare.
+* Förbättringar av varaktigheten och framgångssiffran för stegen för att konstruera pipeline har implementerats och kommer att introduceras stegvis för alla kunder fram till april-månaden.
+* Nu kan du enkelt hitta en Git-gren genom att skriva de första tecknen i namnet i inmatningsfältet i guiden för att lägga till och redigera pipeline och välja mellan de föreslagna matchningarna för båda [produktion](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och [icke-produktion](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) rörledningar.
+* Kort efter aprilversionen kommer Indien att bli tillgängligt för urval när molnregionen definieras när miljön skapas.
+* The **Pipelines** Sidan har nu en sidnumrering som förbättrar användbarheten för program med ett stort antal rörledningar.
+   * 50 rader per sida visas i tabellen.
+* Versionen av [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som används av Cloud Manager har uppdaterats till version 36.
+* Oracle-JDK är nu standard-JDK för utveckling och drift av AEM program. Molnhanterarens byggprocess växlar automatiskt till att använda Oracle-JDK, även om ett alternativ uttryckligen har valts i Maven-verktygskedjan.
+   * Mer information om hur du byter till Oracle-JDK finns i [dokumentationen för byggmiljön.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support)
+   * Se [Java-supportpolicyn för Adobe Experience Manager - frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/Java_Policy_for_Adobe_Experience_Manager.pdf) om du vill ta upp vanliga frågor om den här ändringen.
+* Körningen av pipeline kommer nu att misslyckas snabbare genom att äldre AEM identifieras under valideringssteget. Användarna får ett meddelande i användargränssnittet som vägleder dem.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* En delmängd av Git-databaser som skapats manuellt hade ett felaktigt namnvärde, vilket hindrade återanvändningsfunktionen för build-felaktigheter från att vara effektiv. Namnen på dessa databaser har ändrats och användarna ser det korrigerade namnet i Cloud Manager API/UI.
-* Artefakter från rörledningar som inte är avsedda för produktion återanvänds på ett olämpligt sätt i rörledningar för hela produktionen.
-* När du lägger till eller redigerar en pipeline för kodkvalitet visas inte längre alternativen för att hantera måttfel.
-* En del oväntade pipelinevariabelkonfigurationer kan orsaka i byggsteget.
+* Loggen som skapades i gränssnittsteststeget är nu tillgänglig för hämtning via användargränssnittet.
+* Konfigurationspipelines på webbnivå kan nu bara återanvända paket från konfigurationskörningar på webbnivå.
+* Meddelandena i användargränssnittet innehåller mer tydlighet om hur du uppdaterar AEM i en föråldrad miljö.

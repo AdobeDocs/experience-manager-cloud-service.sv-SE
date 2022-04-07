@@ -2,9 +2,9 @@
 title: Vanliga frågor om Cloud Manager
 description: Hitta svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
-source-git-commit: 11ac22974524293ce3e4ceaa26e59fe75ea387e6
+source-git-commit: 5f4bbedaa5c4630d6f955bb0986e8b32444d6aa3
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -16,64 +16,56 @@ Det här dokumentet innehåller svar på de vanligaste frågorna om Cloud Manage
 
 ## Går det att använda Java 11 med Cloud Manager-byggen? {#java-11-cloud-manager}
 
-AEM Cloud Manager-bygget kan misslyckas när du försöker byta från Java 8 till 11. Problemet kan ha många orsaker och de vanligaste är beskrivna i det här avsnittet.
+Ja. Du måste lägga till `maven-toolchains-plugin` med rätt inställningar för Java 11.
 
-* Lägg till `maven-toolchains-plugin` med rätt inställningar för Java 11.
-   * Detta dokumenteras [här](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
-   * Se till exempel [projektets exempelprojektkod](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+* Detta dokumenteras [här](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
+* Se till exempel [projektets exempelprojektkod](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
-* Om följande fel uppstår måste du ta bort `maven-scr-plugin` och konvertera alla OSGi-anteckningar till OSGi R6-anteckningar.
-   * Instruktioner finns i [här.](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+## Mitt bygge misslyckas med ett fel om maven-scr-plugin efter byte från Java 8 till Java 11. Vad kan jag göra? {#build-fails-maven-scr-plugin}
 
-   ```text
-   [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
-   ```
+AEM Cloud Manager-bygget kan misslyckas när du försöker byta från Java 8 till 11. Om följande fel uppstår måste du ta bort `maven-scr-plugin` och konvertera alla OSGi-anteckningar till OSGi R6-anteckningar.
 
-* För Cloud Manager-byggen `maven-enforcer-plugin` misslyckas med fel `"[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion"`. Det här är ett känt fel som beror på att Cloud Manager använder en annan version av Java för att köra maven-kommandot jämfört med att kompilera kod. Utelämna för tillfället `requireJavaVersion` från `maven-enforcer-plugin` konfigurationer.
+```text
+[main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
+```
+
+Instruktioner om hur du tar bort det här plugin-programmet finns i [här.](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/)
+
+## Min version misslyckas med ett fel om RequireJavaVersion efter växling från Java 8 till Java 11. Vad kan jag göra? {#build-fails-requirejavaversion}
+
+För Cloud Manager-byggen `maven-enforcer-plugin` misslyckas med det här felet.
+
+```text
+"[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion".
+```
+
+Det här är ett känt fel som beror på att Cloud Manager använder en annan version av Java för att köra maven-kommandot jämfört med att kompilera kod. Bara utelämna `requireJavaVersion` från `maven-enforcer-plugin` konfigurationer.
 
 ## Kodkvalitetskontrollen misslyckades och distributionen stoppas. Finns det något sätt att kringgå den här kontrollen? {#deployment-stuck}
 
-Alla fel i kodkvalitetskontrollen utom säkerhetsklassificeringen är icke-kritiska mått, så de kan kringgås genom att objekten i resultatgränssnittet expanderas.
-
-En användare i [Distributionshanteraren, programhanteraren eller affärsägaren](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md) roll kan åsidosätta problemen, och i så fall fortsätter pipeline. Användningarna kan också acceptera problemen, och i så fall upphör pipeline med ett fel.
+Ja. Alla fel i kodkvalitetskontrollen utom säkerhetsklassificeringen är icke-kritiska mått, så de kan kringgås genom att objekten i resultatgränssnittet expanderas.
 
 Se dokumentet [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) för mer information.
 
-## Kan jag använda SNAPSHOT för versionen av Maven-projektet? Hur fungerar versionshantering av paketen och källfilerna för driftsättning av scener och produktion? {#snapshot-version}
+## Kan jag använda SNAPSHOT för versionen av Maven-projektet? {#use-snapshot}
 
-Följande scenarier gäller versionshantering av paket- och paketburar-filer för driftsättning av scener och produktion.
+Ja. Git-grenen för utvecklardistributioner `pom.xml` måste innehålla `-SNAPSHOT` i slutet av `<version>` värde.
 
-* Git-grenen för utvecklardistributioner `pom.xml` måste innehålla `-SNAPSHOT` i slutet av `<version>` värde.
-   * Detta gör att efterföljande distribution fortfarande kan installeras när versionen inte ändras. I utvecklingsmiljöer läggs ingen automatisk version till eller genereras för maven-bygget.
+Detta gör att efterföljande distribution fortfarande kan installeras när versionen inte ändras. I utvecklingsmiljöer läggs ingen automatisk version till eller genereras för maven-bygget.
 
-* I fas- och produktionsdistributioner genereras en automatisk version som [dokumenteras här.](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
+Du kan också ange versionen till `-SNAPSHOT` för byggen eller driftsättningarna av faser och produktion. Cloud Manager anger automatiskt rätt versionsnummer och skapar en tagg åt dig i Git. Om det behövs kan du hänvisa till den här taggen senare.
 
-* För anpassad versionshantering i scen- och produktionsinstallationer ställer du in en korrekt version med tre delar som `1.0.0`. Öka versionen varje gång du distribuerar till produktionen.
+## Hur fungerar paketering och paketversionshantering för driftsättning av scener och produktioner? {#snapshot-version}
 
-* Cloud Manager lägger automatiskt till sin version i scen- och produktionsbyggen och skapar en Git-gren. Ingen särskild konfiguration krävs. Om du inte ställer in en maven-version enligt beskrivningen ovan kommer distributionen fortfarande att lyckas och en version ställs in automatiskt.
+I fas- och produktionsdistributioner genereras en automatisk version som [dokumenteras här.](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
 
-* Du kan ställa in versionen på `-SNAPSHOT` för byggen och driftsättningar utan problem. Cloud Manager anger automatiskt rätt versionsnummer och skapar en tagg åt dig i Git. Om det behövs kan du hänvisa till den här taggen senare.
+För anpassad versionshantering i scen- och produktionsinstallationer ställer du in en korrekt version med tre delar som `1.0.0`. Öka versionen varje gång du distribuerar till produktionen.
 
-* Om du vill testa experimentell kod i en utvecklingsmiljö kan du skapa en ny Git-gren och ställa in pipeline så att den grenen används.
-   * Detta är användbart när distributioner misslyckas och du vill testa med äldre versioner av koden för att avgöra vilken ändring som orsakade felet.
-
-   * Git-kommandot nedan skapar en fjärrgren med namnet `testbranch1` baserat på den befintliga implementeringen `485548e4fbafbc83b11c3cb12b035c9d26b6532b`.  Den här grenen kan användas i Cloud Manager utan att påverka andra grenar.
-
-   ```shell
-   git push origin 485548e4fbafbc83b11c3cb12b035c9d26b6532b:refs/heads/testbranch1
-   ```
-
-   * Se [git-dokumentation](https://git-scm.com/book/en/v2/Git-Internals-Git-References) för mer information.
-
-   * Om du vill ta bort testgrenen senare använder du kommandot delete:
-
-   ```shell
-   git push origin --delete testbranch1
-   ```
+Cloud Manager lägger automatiskt till sin version i scen- och produktionsbyggen och skapar en Git-gren. Ingen särskild konfiguration krävs. Om du inte ställer in en maven-version enligt beskrivningen ovan kommer distributionen fortfarande att lyckas och en version ställs in automatiskt.
 
 ## Min maven-konstruktion misslyckas för distributioner av Cloud Manager, men den byggs lokalt utan fel. Vad är det för fel? {#maven-build-fail}
 
-Se [Git-resurs](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) för mer information.
+Se [den här Git-resursen](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) för mer information.
 
 ## Vad gör jag om en Cloud Manager-distribution misslyckas vid distributionssteget på AEM as a Cloud Service? {#cloud-manager-deployment-cloud-service}
 
@@ -88,7 +80,7 @@ Caused by: org.apache.sling.api.resource.PersistenceException: Unable to commit 
 Caused by: javax.jcr.AccessDeniedException: OakAccess0000: Access denied [EventAdminAsyncThread #7] org.apache.sling.distribution.journal.impl.publisher.DistributionPublisher [null] Error processing distribution package` `dstrpck-1583514457813-c81e7751-2da6-4d00-9814-434187f08d32. Retry attempts 344/infinite. Message: Error trying to extract package at path /etc/packages/com.myapp/myapp-base.ui.content-5.1.0-SNAPSHOT.
 ```
 
-I det här fallet `sling-distribution-importer` användaren behöver ytterligare behörigheter för innehållssökvägarna som definieras i `ui.content package`.  Det innebär vanligtvis att du måste lägga till behörigheter för båda `/conf` och `/var`.
+The `sling-distribution-importer` användaren behöver ytterligare behörigheter för innehållssökvägarna som definieras i `ui.content package`.  Det innebär vanligtvis att du måste lägga till behörigheter för båda `/conf` och `/var`.
 
 Lösningen är att lägga till en [RepositoryInitializer OSGi-konfiguration](/help/implementing/deploying/overview.md#repoint) skript i programdistributionspaketet för att lägga till åtkomstkontrollistor för `sling-distribution-importer` användare.
 
@@ -97,7 +89,9 @@ I föregående exempelfel är paketet `myapp-base.ui.content-*.zip` innehåller 
 Här är ett exempel [org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config](https://github.com/cqsupport/cloud-manager/blob/main/org.apache.sling.jcr.repoinit.RepositoryInitializer-distribution.config) av en sådan OSGi-konfiguration som lägger till ytterligare behörigheter för `sling-distribution-importer` användare.  Den här konfigurationen lägger till behörigheter under `/var`.  Den här XML-filen nedan [1] måste läggas till i programpaketet under `/apps/myapp/config` (där myapp är den mapp där programkoden lagras).
 org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config
 
-Om det inte gick att lösa felet genom att lägga till en OSGi-konfiguration för RepositoryInitializer kan det bero på något av dessa ytterligare problem.
+## Distributionen av min Cloud Manager misslyckas vid distributionssteget i AEM as a Cloud Service och jag har redan en RepositoryInitializer OSGi-konfiguration. Vad mer kan jag göra? {#build-failures}
+
+If [lägga till en RepositoryInitializer OSGi-konfiguration](##cloud-manager-deployment-cloud-service) inte löste felet, det kan bero på något av dessa ytterligare problem.
 
 * Distributionen kan misslyckas på grund av en felaktig OSGi-konfiguration som bryter en färdig tjänst.
    * Kontrollera loggarna under distributionen för att se om det finns några uppenbara fel.

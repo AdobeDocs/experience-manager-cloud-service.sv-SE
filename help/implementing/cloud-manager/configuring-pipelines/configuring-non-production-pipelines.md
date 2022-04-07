@@ -3,9 +3,9 @@ title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
-source-git-commit: 428bba062fcfb44ebfbbf3c1d05ce1a4634fb429
+source-git-commit: 9804d9b71f082c3d4788667fdc3993af3b673588
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1119'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
+      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
 
    ![Front-end-pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-front-end.png)
@@ -102,7 +103,8 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
-   * **Ignorera webbnivåkonfiguration** -
+      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
+   * **Ignorera webbnivåkonfiguration** - När du markerar det här alternativet distribueras inte webbnivåkonfigurationen.
 
    ![Pipeline i full hög](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-full-stack.png)
 
