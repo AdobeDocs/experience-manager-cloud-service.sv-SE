@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 372e40eb90d87d9ed366e08a3c0117068542680b
+source-git-commit: a96824cede31414963ff7e6f5ef1315bd35a51c1
 workflow-type: tm+mt
-source-wordcount: '1427'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
@@ -96,40 +96,7 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 ## Cloud Manager {#cloud-manager}
 
-### Releasedatum i februari {#release-date-cm-feb}
-
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.0 är 10 februari 2022. Nästa version är planerad till den 10 mars 2022.
-
-### Nyheter {#what-is-new-cm-feb}
-
-* Ny accelererad [Rörledningar för Web Tier Config](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) har introducerats för att exklusivt distribuera HTTPD/dispatcher-konfiguration.
-   * Du måste ha AEM version `2021.12.6151.20211217T120950Z` eller nyare och [välja det flexibla läget för dispatcherverktygen](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill använda den här funktionen.
-   * Den här funktionen kommer att introduceras stegvis under de två veckorna efter version 2022.02.0.
-* Molnhanterarens landningssida har uppdaterats för att ge förbättrad navigering, enkel växling mellan rutnät-/rutvyer och popup-fönster för snabb programsammanfattning.
-* Ett nytt tröskelvärde för misslyckande (`< D`) har lagts till i [tillförlitlighetsmått.](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules)
-   * Kunder med allvarliga kvalitetsproblem som påverkar systemstabiliteten, främst relaterade till ogiltiga index och arbetsflödesprocesser, kommer inte att kunna distribuera förrän dessa problem har lösts.
-* Allvarlighetsgraden i `BannedPath` [kvalitetsregel](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules) har ändrats från blockerare till kritiskt.
-* Pipeline-guiden informerar användaren om när en AEM behöver uppdateras innan du konfigurerar en [Rörledningar för Web Tier Config](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines) som är kopplade till den.
-
-### Felkorrigeringar {#bug-fixes-cm-feb}
-
-* Gamla Git-databaslösenord blir nu alltid ogiltiga när ett nytt lösenord skapas.
-* Uppdatering av miljövariabler via API:t stör inte längre en pipeline-körning i sällsynta fall.
-
-### Mars Releasedatum {#release-date-cm-march}
-
-Releasedatum för Cloud Manager version 2022.3.0 i AEM as a Cloud Service 10 mars 2022. Nästa version är planerad till den 7 april 2022.
-
-### Nyheter {#what-is-new-cm-march}
-
-* Åtkomst AEM miljöloggen kan göras med rollen Utvecklare.
-
-### Felkorrigeringar {#bug-fixes-cm-march}
-
-* En delmängd av Git-databaser som skapats manuellt hade ett felaktigt namnvärde, vilket hindrade återanvändningsfunktionen för build-felaktigheter från att vara effektiv. Namnen på dessa databaser har ändrats och användarna ser det korrigerade namnet i Cloud Manager API/UI.
-* Artefakter från rörledningar som inte är avsedda för produktion återanvänds på ett olämpligt sätt i rörledningar för hela produktionen.
-* När du lägger till eller redigerar en pipeline för kodkvalitet visas inte längre alternativen för att hantera måttfel.
-* En del oväntade pipelinevariabelkonfigurationer kan orsaka i byggsteget.
+Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md).
 
 ## Content Transfer Tool {#ctt-release}
 
