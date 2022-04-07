@@ -1,11 +1,11 @@
 ---
 title: Introduktion till [!DNL AEM Forms] as a Cloud Service
-description: Adobe Experience Manager Forms as a Cloud Service självhjälpsresurser och dokumentationslänkar
+description: Använd denna Platform-as-a-Service (PaaS) för att skapa, hantera och publicera digitala formulär och affärsprocesser i enterpriseklass samt koppla formulär till aktuella datakällor.
 landing-page-description: Lär dig hur du använder formulär på AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: 231e7446708cd0240be73ee74897d2c58b47ce22
+source-git-commit: fe2f0743d8efaaf9b3fcfc9e20264cca627db6c8
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '289'
 ht-degree: 1%
 
 ---
