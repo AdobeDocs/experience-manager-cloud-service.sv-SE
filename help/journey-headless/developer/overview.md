@@ -1,18 +1,18 @@
 ---
 title: AEM Headless Developer Journey
-description: AEM Headless CMS Documentation. Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
+description: Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Service när det används som ett Headless Content Management System (CMS). Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
 landing-page-description: Börja här för att få en guidad resa genom de headlessfunktionerna hos AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: 327344c3e075e7f63c3b533af77cf22135e646e5
+source-git-commit: 0c8cddd65ad3b297b58f8ee618ba176edcf51a45
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1277'
 ht-degree: 1%
 
 ---
 
 # AEM Headless Developer Journey {#aem-headless-developer-journey}
 
-Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all AEM Headless Documentation du behöver för att utveckla din första headless-applikation.
+Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Service när det används som ett Headless Content Management System (CMS). Lär dig mer om de kraftfulla och flexibla headless-funktionerna, deras funktioner och hur du kan utnyttja dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
 
 ## Introduktion {#introduction}
 
