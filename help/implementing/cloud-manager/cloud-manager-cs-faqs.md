@@ -2,9 +2,9 @@
 title: Vanliga frågor om Cloud Manager
 description: Hitta svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
-source-git-commit: 5f4bbedaa5c4630d6f955bb0986e8b32444d6aa3
+source-git-commit: 65632de3fbf81ef44d30994365e6365a6148b836
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,9 @@ Det här dokumentet innehåller svar på de vanligaste frågorna om Cloud Manage
 
 Ja. Du måste lägga till `maven-toolchains-plugin` med rätt inställningar för Java 11.
 
-* Detta dokumenteras [här](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
-* Se till exempel [projektets exempelprojektkod](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+Processen är dokumenterad [här](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
+
+Se till exempel [projektets exempelprojektkod](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
 ## Mitt bygge misslyckas med ett fel om maven-scr-plugin efter byte från Java 8 till Java 11. Vad kan jag göra? {#build-fails-maven-scr-plugin}
 
@@ -33,7 +34,7 @@ Instruktioner om hur du tar bort det här plugin-programmet finns i [här.](http
 
 ## Min version misslyckas med ett fel om RequireJavaVersion efter växling från Java 8 till Java 11. Vad kan jag göra? {#build-fails-requirejavaversion}
 
-För Cloud Manager-byggen `maven-enforcer-plugin` misslyckas med det här felet.
+För Cloud Manager-byggen `maven-enforcer-plugin` kan misslyckas med det här felet.
 
 ```text
 "[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion".
@@ -55,7 +56,9 @@ Detta gör att efterföljande distribution fortfarande kan installeras när vers
 
 Du kan också ange versionen till `-SNAPSHOT` för byggen eller driftsättningarna av faser och produktion. Cloud Manager anger automatiskt rätt versionsnummer och skapar en tagg åt dig i Git. Om det behövs kan du hänvisa till den här taggen senare.
 
-## Hur fungerar paketering och paketversionshantering för driftsättning av scener och produktioner? {#snapshot-version}
+Mer information om versionshantering finns i [dokumenteras här.](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
+
+## Hur fungerar paketering och paketversionshantering för driftsättning av faser och produktioner? {#snapshot-version}
 
 I fas- och produktionsdistributioner genereras en automatisk version som [dokumenteras här.](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
 
@@ -86,12 +89,11 @@ Lösningen är att lägga till en [RepositoryInitializer OSGi-konfiguration](/he
 
 I föregående exempelfel är paketet `myapp-base.ui.content-*.zip` innehåller innehåll under `/conf` och `/var/workflow`. Behörigheter för `sling-distribution-importer` under dessa banor behövs.
 
-Här är ett exempel [org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config](https://github.com/cqsupport/cloud-manager/blob/main/org.apache.sling.jcr.repoinit.RepositoryInitializer-distribution.config) av en sådan OSGi-konfiguration som lägger till ytterligare behörigheter för `sling-distribution-importer` användare.  Den här konfigurationen lägger till behörigheter under `/var`.  Den här XML-filen nedan [1] måste läggas till i programpaketet under `/apps/myapp/config` (där myapp är den mapp där programkoden lagras).
-org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config
+Här är ett exempel på en [`org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config`](https://github.com/cqsupport/cloud-manager/blob/main/org.apache.sling.jcr.repoinit.RepositoryInitializer-distribution.config) OSGi-konfiguration som lägger till ytterligare behörigheter för `sling-distribution-importer` användare.  Konfigurationen lägger till behörigheter under `/var`.  En sådan konfiguration måste läggas till i programpaketet under `/apps/myapp/config` (där myapp är den mapp där programkoden lagras).
 
-## Distributionen av min Cloud Manager misslyckas vid distributionssteget i AEM as a Cloud Service och jag har redan en RepositoryInitializer OSGi-konfiguration. Vad mer kan jag göra? {#build-failures}
+## Distributionen av min Cloud Manager misslyckas vid distributionssteget i AEM as a Cloud Service och jag har redan lagt till en OSGi-konfiguration för RepositoryInitializer. Vad mer kan jag göra? {#build-failures}
 
-If [lägga till en RepositoryInitializer OSGi-konfiguration](##cloud-manager-deployment-cloud-service) inte löste felet, det kan bero på något av dessa ytterligare problem.
+If [lägga till en RepositoryInitializer OSGi-konfiguration](#cloud-manager-deployment-cloud-service) inte löste felet, det kan bero på något av dessa ytterligare problem.
 
 * Distributionen kan misslyckas på grund av en felaktig OSGi-konfiguration som bryter en färdig tjänst.
    * Kontrollera loggarna under distributionen för att se om det finns några uppenbara fel.
@@ -127,6 +129,6 @@ setting variables... !
 Cannot set variables: https://cloudmanager.adobe.io/api/program/111/environment/222/variables (403 Forbidden)
 ```
 
-I det här fallet måste användaren som kör dessa kommandon läggas till i **Distributionshantering** i Admin Console.
+I det här fallet måste användaren som kör dessa kommandon läggas till i **Distributionshanteraren** i Admin Console.
 
 Se [API-behörigheter](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md) för mer information.
