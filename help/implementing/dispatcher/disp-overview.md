@@ -3,10 +3,10 @@ title: Dispatcher i molnet
 description: 'Dispatcher i molnet '
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: cebeabc56ad3f55bae4ca5d51c7a630480b40577
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ## Introduktion {#apache-and-dispatcher-configuration-and-testing}
 
-På den här sidan beskrivs dispatcherverktygen och hur du hämtar och extraherar dem, vilka cachemoduler som stöds och en översikt på hög nivå över de äldre och flexibla lägena. Dessutom finns det ytterligare referenser för validering och felsökning och migrering av Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
+På den här sidan beskrivs dispatcherverktygen och hur du hämtar och extraherar dem, vilka cachemoduler som stöds och en översikt på hög nivå över de äldre och flexibla lägena. Dessutom finns det ytterligare referenser för validering och felsökning och migrering av Dispatcher-konfigurationen från AMS till AEM as a Cloud Service. Se även [den här videon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-dispatcher-cloud.html) om du vill ha mer information om hur du distribuerar dispatcherfiler i en molntjänstmiljö.
 
 ## Dispatcher Tools {#dispatcher-sdk}
 
