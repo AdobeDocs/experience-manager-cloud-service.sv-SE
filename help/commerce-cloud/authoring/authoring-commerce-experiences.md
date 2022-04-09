@@ -2,9 +2,9 @@
 title: Redigering av handelsupplevelser
 description: Arbeta med e-handelsupplevelser
 exl-id: 45d697b7-ec96-4c26-be2a-3395b731d52d
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: b72565e45087a1237eb7e5fa5eb4706d1d534975
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,6 @@ Att använda Omnisearch är ett enkelt sätt för användarna att hitta AEM inne
 
 Resultatet grupperas efter typ.
 
-    >[!OBS!]
-    >
-    > Fulltextsökning i Omnissearch stöder inte associerade innehållsfragment. Använd SKU eller UID för att hitta associerade innehållsfragment.
+>[!NOTE]
+>
+> Fulltextsökning i Omnissearch stöder inte associerade innehållsfragment. Använd SKU eller UID för att hitta associerade innehållsfragment.
