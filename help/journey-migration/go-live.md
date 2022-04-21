@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 9a10348251fe7559ae5d3c4a203109f1f6623bce
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1644'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Innan du kan utföra produktionsmigreringen följer du stegen för implementerin
 Efter den första migreringen från produktionen måste du utföra stegvisa översikter för att se till att ditt innehåll är uppdaterat på molninstansen. Därför rekommenderar vi att du följer dessa bästa metoder:
 
 * Samla in data om mängden innehåll. Till exempel: en vecka, två veckor eller en månad.
-* Se till att planera de översta bilderna på ett sådant sätt att du undviker mer än 48 timmars extrahering och förtäring av innehåll. Detta rekommenderas så att de översta delarna av innehållet får plats i en helg.
+* Se till att planera de översta bilderna på ett sådant sätt att du undviker mer än 48 timmars extrahering och förtäring av innehåll. Detta rekommenderas så att de översta delarna av innehållet får plats i en heltalsram.
 * Planera antalet toppavhopp och använd dessa uppskattningar för att planera runt Go-Live-datumet.
 
 ## Identifiera tidslinjer för att migrera kod och innehåll för frysning {#code-content-freeze}
@@ -113,13 +113,45 @@ Båda ovanstående poster identifieras och rapporteras i [Best Practice Analyzer
 
 ## GoLive Checklist {#Go-Live-Checklist}
 
-Granska listan över aktiviteter nedan för att säkerställa att du kan genomföra en smidig och framgångsrik migrering:
+Granska den här listan över aktiviteter för att säkerställa att du utför en smidig och lyckad migrering.
 
-* Schemalägg en frysperiod för kod och innehåll. Se även [Tidslinjer för Kod- och Content Freeze för migrering](#code-content-freeze).
-* Utför den slutliga innehållsuppsättningen
-* Slutföra testiterationer
-* Köra prestanda- och säkerhetstester
-* Kom igång och utföra migreringen på produktionsinstansen
+* Köra en produktionsprocess från början till slut med funktions- och gränssnittstestning för att säkerställa en **alltid aktuell** AEM produktupplevelse. Se följande resurser.
+   * [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md)
+   * [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing)
+   * [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
+* Migrera innehåll till produktion och se till att det finns en relevant delmängd tillgänglig på testningen.
+   * Observera att de effektivaste strategierna för DevOps AEM innebär att koden går från utveckling till produktionsmiljö samtidigt som [innehållet rör sig nedåt från produktionsmiljöer.](/help/overview/enterprise-devops.md#code-movement)
+* Schemalägg en frysperiod för kod och innehåll.
+   * Se även avsnittet [Tidslinjer för Kod- och Content Freeze för migrering](#code-content-freeze)
+* Utför den slutliga innehållsuppsättningen.
+* Validera dispatcherkonfigurationer.
+   * Använd en lokal dispatchervaliderare som gör det lättare att konfigurera, validera och simulera avsändaren lokalt
+      * [Konfigurera de lokala dispatcherverktygen.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=en#prerequisites)
+   * Granska konfigurationen av det virtuella värdsystemet noggrant.
+      * Den enklaste (och standardlösningen) är att inkludera `ServerAlias *` i din virtuella värdfil i `/dispatcher/src/conf.d/available_vhostsfolder`.
+         * Detta gör att värdaliasen som används av produktfunktionstester, invalidering av dispatchercache och kloner kan fungera.
+      * Om `ServerAlias *` är inte acceptabelt, åtminstone följande `ServerAlias` poster måste tillåtas utöver dina anpassade domäner:
+         * `localhost`
+         * `*.local`
+         * `publish*.adobeaemcloud.net`
+         * `publish*.adobeaemcloud.com`
+* Konfigurera CDN, SSL och DNS.
+   * Om du använder ditt eget CDN anger du en supportanmälan för att konfigurera lämplig routning.
+      * Se avsnittet [Customer CDN points to AEM Managed CDN](/help/implementing/dispatcher/cdn.md#point-to-point-cdn) i CDN-dokumentationen för mer information.
+      * Du måste konfigurera SSL och DNS enligt dokumentationen från CDN-leverantören.
+   * Om du inte använder ytterligare ett CDN hanterar du SSL och DNS enligt följande dokumentation:
+      * Hantera SSL-certifikat
+         * [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
+         * [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
+      * Hantera anpassade domännamn (DNS)
+         * [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
+         * [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
+         * [Hantera eget domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
+   * Kom ihåg att validera TTL-inställningen för din DNS-post.
+      * TTL är den tid som en DNS-post finns kvar i ett cacheminne innan servern tillfrågas om en uppdatering.
+      * Om du har en mycket hög TTL tar det längre tid att sprida uppdateringar till DNS-posten.
+* Kör prestanda- och säkerhetstester som uppfyller dina affärskrav och mål.
+* Klipp ut och se till att den faktiska publiceringen utförs utan någon ny distribution eller uppdatering av innehållet.
 
 Du kan alltid referera till listan om du behöver kalibrera om dina uppgifter när du utför migreringen.
 
