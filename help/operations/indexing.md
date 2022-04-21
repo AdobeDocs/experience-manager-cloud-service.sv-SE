@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: e03e15c18e3013a309ee59678ec4024df072e839
+source-git-commit: a2a57b2a35bdfba0466c46d5f79995ffee121cb7
 workflow-type: tm+mt
-source-wordcount: '2366'
+source-wordcount: '2442'
 ht-degree: 1%
 
 ---
@@ -60,17 +60,19 @@ En indexdefinition kan vara:
 
 Observera att både anpassning av ett körklart index och helt anpassade index måste innehålla `-custom-`. Endast helt anpassade index får börja med ett prefix.
 
-### Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
+## Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
 
 >[!NOTE]
 >
->Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-6`, please copy the latest out-of-box index definition from a *Cloud Service* och lägger till dina anpassningar överst säkerställer detta att nödvändiga konfigurationer inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-6/tika` är en obligatorisk nod och ska ingå i ditt anpassade index och inte finnas i molnet-SDK.
+>Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-6`, please copy the latest out-of-box index definition from a *Cloud Service* utvecklingsmiljö med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt sedan namn på konfigurationen, till exempel för att `damAssetLucene-6-custom-1`och lägg till anpassningar överst. Detta säkerställer att nödvändiga konfigurationer inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-6/tika` krävs i det anpassade indexvärdet för molntjänsten. Den finns inte i molnet-SDK:n.
 
 Du måste förbereda ett nytt indexdefinitionspaket som innehåller den faktiska indexdefinitionen, enligt namnmönstret:
 
 `<indexName>[-<productVersion>]-custom-<customVersion>`
 
 som sedan måste gå under `ui.apps/src/main/content/jcr_root`. Underrotmappar stöds inte för närvarande.
+
+Filtret för paketet måste anges så att befintliga (ej låsta) index behålls. Det finns två sätt att göra detta: Antingen är filtret inställt på `<filter root="/oak:index/" mode="merge"/>` i filen `ui.apps/src/main/content/META-INF/vault/filter.xml`för varje anpassat (eller anpassat) index måste anges separat i filteravsnittet, till exempel som `<filter root="/oak:index/damAssetLucene-6-custom-1"/>`. Om det senare fallet inträffar måste filtret justeras varje gång som versionen ändras.
 
 Paketet från exemplet ovan byggs som `com.adobe.granite:new-index-content:zip:1.0.0-SNAPSHOT`.
 
@@ -80,7 +82,7 @@ Paketet från exemplet ovan byggs som `com.adobe.granite:new-index-content:zip:1
 >
 >`noIntermediateSaves=true`
 
-### Distribuera indexdefinitioner {#deploying-index-definitions}
+## Distribuera indexdefinitioner {#deploying-index-definitions}
 
 >[!NOTE]
 >
