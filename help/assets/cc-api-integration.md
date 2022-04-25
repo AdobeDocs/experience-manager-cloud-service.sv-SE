@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Upload,Asset Processing,Publishing,Asset Compute Microservices,Workflow
 role: User,Admin
 exl-id: 4cff355e-d12c-44c7-b519-4cc37f49e396
-source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
+source-git-commit: 30870502f0e6084991bdba79163651f43f15a99b
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,31 @@ Användare kan skapa bearbetningsprofiler för att automatisera följande kreati
 
    ![Ersätta objekt smart](/help/assets/assets/content-automation-objectreplace.png)
 
+## Aktivera innehållsautomatisering för AEM as a Cloud Service program {#enable-content-automation}
+
+Så här aktiverar du tillägget för innehållsautomatisering för AEM as a Cloud Service program med hjälp av Cloud Manager:
+
+1. Kontakta din kontorepresentant för att licensiera tillägget för innehållsautomatisering.
+1. Öppna Cloud Manager och byt till din organisation med hjälp av organisationsväljaren.
+1. Klicka **[!UICONTROL Add Program]** och ange ett programnamn.
+1. Klicka på **[!UICONTROL Continue]**.
+1. Expandera **[!UICONTROL Assets]** och markera **[!UICONTROL Content Automation]**.
+1. Klicka på **[!UICONTROL Create]**.
+1. Kör pipeline till [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
+
+Om du behöver lägga till tillägget för innehållsautomatisering i ett befintligt AEM as a Cloud Service program i Cloud Manager:
+
+1. Klicka ... på programkortet.
+
+1. Välj **[!UICONTROL Edit Program]** och sedan markera **[!UICONTROL Solutions & Add-ons]** -fliken.
+
+1. Expandera **[!UICONTROL Assets]** och markera **[!UICONTROL Content Automation]**.
+1. Klicka på **[!UICONTROL Update]**.
+1. Kör pipeline till [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
+
 ## Använd en bearbetningsprofil för att redigera flera kreativa resurser samtidigt {#process-assets}
 
 Så här använder du bearbetningsprofiler för att automatiskt skapa variationer:
-
-1. Kontakt [Adobe kundsupport](https://experienceleague.adobe.com/#support) för att få licensen.
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**.
 
