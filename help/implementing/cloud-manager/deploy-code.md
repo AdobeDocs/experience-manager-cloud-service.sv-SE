@@ -2,9 +2,9 @@
 title: Distribuera koden
 description: Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: a7555507f4fb0fb231e27d7c7a6413b4ec6b94e6
+source-git-commit: feee55b2d1814b14121030b2ec3c0cb286e87044
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -93,6 +93,19 @@ Produktionsinstallationer följer i allmänhet samma steg som tidigare, men på 
 Den här processen fortsätter tills distributionen har nått alla utgivare och utgivare i topologin.
 
 ![Produktionsdistributionsfas](assets/production-deployment.png)
+
+## Timeout {#timeouts}
+
+Följande steg gör timeout om du väntar på användarfeedback:
+
+| Steg | Timeout |
+|--- |--- |
+| Testning av kodkvalitet | 14 dagar |
+| Säkerhetstestning | 14 dagar |
+| Prestandatestning | 14 dagar |
+| Ansökan om godkännande | 14 dagar |
+| Schemalägg produktionsdistribution | 14 dagar |
+| Stöd för CSE | 14 dagar |
 
 ## Distributionsprocess {#deployment-process}
 
