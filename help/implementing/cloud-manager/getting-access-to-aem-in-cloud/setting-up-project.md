@@ -2,9 +2,9 @@
 title: Projektinställningar
 description: Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: a9303c659730022b7417fc9082dedd26d7cbccca
+source-git-commit: e0774c34ed81d23a5d7a897f65d50dcbf8f8af0d
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1415'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ För att byggas och driftsättas med Cloud Manager måste AEM följa dessa riktl
 
 I vissa begränsade fall kan du behöva ändra din byggprocess något när du kör i Cloud Manager i stället för när du kör på arbetsstationer för utvecklare. I dessa fall [Maven profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) kan användas för att definiera hur bygget ska vara olika i olika miljöer, inklusive Cloud Manager.
 
-Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att leta efter `CM_BUILD` [miljövariabel.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager-byggmiljön göras genom att leta efter denna variabel som saknas.
+Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att leta efter `CM_BUILD` [systemvariabel.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager-byggmiljön göras genom att leta efter denna variabel som saknas.
 
 Om du till exempel bara vill visa ett enkelt meddelande när bygget körs i Cloud Manager gör du det här.
 
@@ -280,7 +280,11 @@ The `content-package-maven-plugin` har en liknande konfiguration.
 
 I många fall distribueras samma kod till flera AEM miljöer. Om det är möjligt kommer Cloud Manager att undvika att återskapa kodbasen när det upptäcker att samma Git-implementering används i flera fullständiga pipeline-körningar.
 
-När en körning startas extraheras den aktuella HEAD-implementeringen för förgreningsflödet. Hash för implementeringen visas i användargränssnittet och via API:t. När byggsteget har slutförts lagras de resulterande artefakterna baserat på den implementeringshashen och kan återanvändas i efterföljande pipeline-körningar. När en återanvändning sker ersätts stegen för bygg- och kodkvalitet effektivt med resultaten från den ursprungliga körningen. Loggfilen för byggsteget innehåller artefakter och körningsinformation som användes för att skapa dem från början.
+När en körning startas extraheras den aktuella HEAD-implementeringen för förgreningsflödet. Hash för implementeringen visas i användargränssnittet och via API:t. När byggsteget har slutförts lagras de resulterande artefakterna baserat på den implementeringshashen och kan återanvändas i efterföljande pipeline-körningar.
+
+Paket återanvänds i alla rörledningar om de ingår i samma program. När du söker efter paket som kan återanvändas ignorerar AEM grenar och återanvänder artefakter över grenar.
+
+När en återanvändning sker ersätts stegen för bygg- och kodkvalitet effektivt med resultaten från den ursprungliga körningen. Loggfilen för byggsteget innehåller artefakter och körningsinformation som användes för att skapa dem från början.
 
 Här följer ett exempel på sådana loggutdata.
 
@@ -291,6 +295,34 @@ build/aem-guides-wknd.dispatcher.cloud-2021.1216.1101633.0000884042.zip (dispatc
 ```
 
 Loggen för kodkvalitetssteget innehåller liknande information.
+
+### Exempel {#example-reuse}
+
+#### Exempel 1 {#example-1}
+
+Tänk på att ditt program har två utvecklingspipelines:
+
+* Pipeline 1 på förgrening `foo`
+* Pipeline 2 på förgrening `bar`
+
+Båda grenarna har samma implementerings-ID.
+
+1. Om du kör pipeline 1 först byggs paketen normalt.
+1. När du sedan kör Pipeline 2 återanvänds paket som skapats med Pipeline 1.
+
+#### Exempel 2 {#example-2}
+
+Programmet har två grenar:
+
+* Gren `foo`
+* Gren `bar`
+
+Båda grenarna har samma implementerings-ID.
+
+1. En utvecklingsprocess bygger och verkställer `foo`.
+1. Därefter byggs och körs en produktionsprocess `bar`.
+
+I det här fallet är artefakten från `foo` kommer att återanvändas för produktionsflödet eftersom samma implementeringshash identifierades.
 
 ### Avmarkera {#opting-out}
 
@@ -306,6 +338,8 @@ Om du vill kan återanvändningsbeteendet inaktiveras för specifika rörledning
 
 ### Caveats {#caveats}
 
+* Skapa artefakter återanvänds inte i olika program, oavsett om implementeringshashen är identisk.
+* Artefakter återanvänds i samma program även om grenen och/eller pipeline är annorlunda.
 * [Hantering av versioner av Maven](/help/implementing/cloud-manager/managing-code/project-version-handling.md) ersätter endast projektversionen i produktionspipelines. Om samma implementering används både för en körning av en utvecklingsdistribution och en körning av en produktionspipeline och utvecklingsdistributionen körs först, distribueras versionerna till fas och produktion utan att ändras. I det här fallet kommer dock en tagg fortfarande att skapas.
 * Om hämtningen av de lagrade artefakterna inte lyckas kommer byggsteget att utföras som om inga artefakter hade lagrats.
 * Andra rörledningsvariabler än `CM_DISABLE_BUILD_REUSE` tas inte med i beräkningen när Cloud Manager bestämmer sig för att återanvända tidigare skapade byggartefakter.
