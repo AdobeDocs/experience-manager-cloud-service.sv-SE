@@ -2,9 +2,9 @@
 title: Redigera en extern SPA i AEM
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: af7d8229ee080852f3c5b542db97b5c223357cf0
 workflow-type: tm+mt
-source-wordcount: '2127'
+source-wordcount: '2401'
 ht-degree: 0%
 
 ---
@@ -257,6 +257,42 @@ Det finns ett antal krav på att lägga till virtuella bladkomponenter och vissa
 * Sökvägen till noden där en ny nod skapas måste vara giltig när den anges via `itemPath`.
    * I det här exemplet `root/responsivegrid` måste finnas så att den nya noden `text_20` kan skapas där.
 * Det går bara att skapa lövkomponenter. Virtuell behållare och sida stöds i framtida versioner.
+
+### Virtuella behållare {#virtual-containers}
+
+Möjligheten att lägga till behållare stöds, även om motsvarande behållare ännu inte har skapats i AEM. Konceptet och tillvägagångssättet liknar [virtuella lövkomponenter.](#virtual-leaf-components)
+
+Utvecklaren kan lägga till behållarkomponenterna på lämpliga platser i SPA och dessa komponenter visar platshållare när de öppnas i redigeraren i AEM. Författaren kan sedan lägga till komponenter och deras innehåll i behållaren, vilket skapar de nödvändiga noderna i JCR-strukturen.
+
+Om en behållare redan finns på `/root/responsivegrid` och utvecklaren vill lägga till en ny underordnad behållare:
+
+![Behållarplats](assets/container-location.png)
+
+`newContainer` finns ännu inte i AEM.
+
+När du redigerar sidan som innehåller den här komponenten i AEM visas en tom platshållare för en behållare där författaren kan lägga till innehåll.
+
+![Platshållare för behållare](assets/container-placeholder.png)
+
+![Behållarplats i JCR](assets/container-jcr-structure.png)
+
+När författaren lägger till en underordnad komponent i behållaren skapas den nya behållarnoden med motsvarande namn i JCR-strukturen.
+
+![Behållare med innehåll](assets/container-with-content.png)
+
+![Behållare med innehåll i JCR](assets/container-with-content-jcr.png)
+
+Fler komponenter och innehåll kan läggas till i behållaren nu när författaren kräver det och ändringarna bevaras.
+
+#### Krav och begränsningar {#container-limitations}
+
+Det finns ett antal krav på att lägga till virtuella behållare samt vissa begränsningar.
+
+* Principen för att bestämma vilka komponenter som kan läggas till ärvs från den överordnade behållaren.
+* Den omedelbara överordnade behållaren för den behållare som ska skapas måste redan finnas i AEM.
+   * Om behållaren `root/responsivegrid` finns redan i AEM, kan en ny behållare skapas genom att sökvägen anges `root/responsivegrid/newContainer`.
+   * Men `root/responsivegrid/newContainer/secondNewContainer` är inte möjligt.
+* Det går endast att skapa en ny komponentnivå åt gången.
 
 ## Ytterligare anpassningar {#additional-customizations}
 
