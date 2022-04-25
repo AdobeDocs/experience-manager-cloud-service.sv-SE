@@ -2,9 +2,9 @@
 title: Lägga till sidanteckningar
 description: Använd anteckningsläget för att lämna anteckningar och skisser på sidor på samma sätt som du använder anteckningar för att underlätta granskning av innehåll
 exl-id: a9cb9745-8140-4795-a5f9-fb3a1a299bd8
-source-git-commit: feee00bf5adae0821fe770c8882641994cee2dbf
+source-git-commit: 64d801b108229866394e993811a67f983be5df6c
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
