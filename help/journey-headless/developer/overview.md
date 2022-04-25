@@ -1,11 +1,11 @@
 ---
 title: AEM Headless Developer Journey
-description: Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Service när det används som ett Headless Content Management System (CMS). Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
+description: Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Service när den använder funktioner som Content Models, Content Fragments och GraphQL API för att driva headless-upplevelser som ett Headless Content Management System (CMS). Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
 landing-page-description: Börja här för att få en guidad resa genom de headlessfunktionerna hos AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: 0c8cddd65ad3b297b58f8ee618ba176edcf51a45
+source-git-commit: 21bd90fa61cfb1c567a7eea4b439206c38b49a5f
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1307'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Se
 
 ## Introduktion {#introduction}
 
-Den Headless-implementeringen förskjuter hantering av sidor och komponenter på samma sätt som traditionella lösningar med fullständiga stackar och fokuserar på att skapa kanalneutrala, återanvändbara fragment av innehåll och deras flerkanalsleverans. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av digitala upplevelser.
+Vid den Headless-implementeringen av AEM används Content Fragments-modeller och Content Fragments för att fokusera på att skapa strukturerade, kanalneutrala och återanvändbara fragment av innehåll och deras flerkanalsleverans. För att uppnå detta glömmer man att hantera sidor och komponenter på samma sätt som man gör i helstackslösningar. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av digitala upplevelser.
 
 Den här guiden leder dig igenom de mest rubrikfria implementeringsämnena i AEM så att du när du är klar:
 
