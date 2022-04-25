@@ -2,7 +2,7 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: 9a10348251fe7559ae5d3c4a203109f1f6623bce
+source-git-commit: cc90803ff1ccf109ca6a02f2b69aa54362fa867e
 workflow-type: tm+mt
 source-wordcount: '1644'
 ht-degree: 0%
@@ -120,7 +120,7 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
    * [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing)
    * [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
 * Migrera innehåll till produktion och se till att det finns en relevant delmängd tillgänglig på testningen.
-   * Observera att de effektivaste strategierna för DevOps AEM innebär att koden går från utveckling till produktionsmiljö samtidigt som [innehållet rör sig nedåt från produktionsmiljöer.](/help/overview/enterprise-devops.md#code-movement)
+   * Observera att de bästa sätten för DevOps för AEM innebär att koden går från utveckling till produktionsmiljö medan innehållet går ned från produktionsmiljöer.
 * Schemalägg en frysperiod för kod och innehåll.
    * Se även avsnittet [Tidslinjer för Kod- och Content Freeze för migrering](#code-content-freeze)
 * Utför den slutliga innehållsuppsättningen.
