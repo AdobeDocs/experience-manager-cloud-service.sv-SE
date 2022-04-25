@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 65b17f1b844ed444db2d44c282307aebb554887e
+source-git-commit: 1f249b413c9e3f76771fe85d7ecda67cec1386fb
 workflow-type: tm+mt
-source-wordcount: '2356'
+source-wordcount: '2444'
 ht-degree: 2%
 
 ---
@@ -225,15 +225,17 @@ Se [AEM 6.5-dokumentation](https://experienceleague.adobe.com/docs/experience-ma
 * SMTP-serverns värdnamn ska anges till $[env:AEM_PROXY_HOST;default=proxy.tunnel]
 * SMTP-serverporten ska anges till värdet för den ursprungliga proxyporten som angetts i parametern portForwards som används i API-anropet när avancerade nätverk konfigureras. Exempel: 30465 (i stället för 465)
 
-Vi rekommenderar även att om port 465 har begärts:
+SMTP-serverporten ska anges som `portDest` värdet som anges i parametern portForwards som används i API-anropet när avancerade nätverk konfigureras och `portOrig` ska vara ett meningsfullt värde som ligger inom intervallet 30000-30999. Om till exempel SMTP-serverporten är 465 bör port 30465 användas som `portOrig` värde.
 
-* set `smtp.port` till `465`
-* set `smtp.ssl` till `true`
+I det här fallet och under förutsättning att SSL måste aktiveras, i konfigurationen av **Day CQ Mail Service OSGI** tjänst:
 
-och om port 587 har begärts:
+* Ange `smtp.port` till `30465`
+* Ange `smtp.ssl` till `true`
 
-* set `smtp.port` till `587`
-* set `smtp.ssl` till `false`
+Om målporten är 587 kan du även `portOrig` Värdet 30587 bör användas. Om SSL ska vara inaktiverat, konfigureras tjänsten Dag CQ Mail Service OSGI:
+
+* Ange `smtp.port` till `30587`
+* Ange `smtp.ssl` till `false`
 
 The `smtp.starttls` egenskapen ställs automatiskt in av AEM as a Cloud Service vid körning till ett lämpligt värde. Om `smtp.ssl` är inställt på true, `smtp.startls` ignoreras. If `smtp.ssl` är inställt på false, `smtp.starttls` är inställt på true. Detta är oberoende av `smtp.starttls` värden som anges i OSGI-konfigurationen.
 
