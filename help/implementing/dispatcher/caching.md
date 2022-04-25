@@ -3,10 +3,10 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: b490d581532576bc526f9bd166003df7f2489495
+source-git-commit: 44fb07c7760a8faa3772430cef30fa264c7310ac
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 1%
+source-wordcount: '1878'
+ht-degree: 0%
 
 ---
 
@@ -31,14 +31,18 @@ Define DISABLE_DEFAULT_CACHING
 Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras (med ett värde som baseras på kalenderdag) eftersom sidhuvudet som standard är 0. Med det sagt, **var försiktig när du stänger av standardcachning.**
 
 * kan åsidosättas för allt HTML/Text-innehåll genom att definiera `EXPIRATION_TIME` variabel i `global.vars` med AEM as a Cloud Service SDK Dispatcher-verktyg.
-* kan åsidosättas på en mer detaljerad nivå med följande direktiv för apache mod_headers:
+* kan åsidosättas på en mer detaljerad nivå, inklusive kontroll av CDN och webbläsarcache separat, med följande direktiv för apache mod_headers:
 
    ```
    <LocationMatch "^/content/.*\.(html)$">
         Header set Cache-Control "max-age=200"
+        Header set Surrogate-Control "max-age=3600"
         Header set Age 0
    </LocationMatch>
    ```
+
+   >[!NOTE]
+   >Rubriken Surrogate-Control gäller för CDN som hanteras av Adobe. Om du använder en [kundhanterad CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=en#point-to-point-CDN), kan det krävas en annan rubrik beroende på din CDN-leverantör.
 
    Var försiktig när du anger rubriker för global cachekontroll eller rubriker som matchar ett brett område så att de inte tillämpas på innehåll som du kanske tänker behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM as a Cloud Service tar då bort cachehuvudet om det upptäcker att det har tillämpats på det som identifierats som otillgängligt av dispatchern, vilket beskrivs i dispatcherdokumentationen. Om du vill tvinga AEM att alltid använda cachelagringshuvuden kan du lägga till **alltid** enligt följande:
 
@@ -110,6 +114,73 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 * ingen standardcachelagring
 * standard kan inte anges med `EXPIRATION_TIME` variabel som används för filtyperna html/text
 * cacheminnets förfallotid kan anges med samma LocationMatch-strategi som beskrivs i avsnittet html/text genom att ange lämplig regex
+
+### Ytterligare optimeringar
+
+* Undvik att använda `User-Agent` som en del av `Vary` header. Äldre versioner av standardinställningen för dispatcher (före arkivtypsversion 28) innehöll detta och vi rekommenderar att du tar bort det genom att följa stegen nedan.
+   * Hitta värdfilerna i `<Project Root>/dispatcher/src/conf.d/available_vhosts/*.vhost`
+   * Ta bort eller kommentera raden: `Header append Vary User-Agent env=!dont-vary` från alla värdfiler, med undantag för default.vhost, som är skrivskyddad
+* Använd `Surrogate-Control` huvud för att styra CDN-cachning oberoende av webbläsarcachning
+* Överväg att tillämpa [`stale-while-revalidate`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-while-revalidate) och [`stale-if-error`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-if-error) Direktiv som tillåter bakgrundsuppdatering och undviker cachemissar, så att innehållet är snabbt och uppdaterat för användarna.
+   * Det finns många sätt att tillämpa dessa direktiv, men att lägga till en 30-minutersperiod `stale-while-revalidate` till alla rubriker för cachekontroll är en bra utgångspunkt.
+* Några exempel följer för olika innehållstyper, som kan användas som vägledning när du ställer in egna cachningsregler. Fundera noga över och testa dina specifika inställningar och krav:
+
+   * Cachelagra ändringsbara klientbiblioteksresurser för 12 timmar och bakgrundsuppdatering efter 12 timmar.
+
+      ```
+      <LocationMatch "^/etc\.clientlibs/.*\.(?i:json|png|gif|webp|jpe?g|svg)$">
+         Header set Cache-Control "max-age=43200,stale-while-revalidate=43200,stale-if-error=43200,public" "expr=%{REQUEST_STATUS} < 400"
+         Header set Age 0
+      </LocationMatch>
+      ```
+
+   * Cachelagra oföränderliga biblioteksresurser på lång sikt (30 dagar) med bakgrundsuppdatering för att undvika MISS.
+
+      ```
+      <LocationMatch "^/etc\.clientlibs/.*\.(?i:js|css|ttf|woff2)$">
+         Header set Cache-Control "max-age=2592000,stale-while-revalidate=43200,stale-if-error=43200,public,immutable" "expr=%{REQUEST_STATUS} < 400"
+         Header set Age 0
+      </LocationMatch>
+      ```
+
+   * Cachelagra HTML-sidor för 5 min med bakgrundsuppdatering 1 timme i webbläsaren och 12 timmar i CDN. Cache-Control-rubriker läggs alltid till så det är viktigt att se till att matchande HTML-sidor under /content/* är avsedda att vara offentliga. Om så inte är fallet bör du överväga att använda en mer specifik regex.
+
+      ```
+      <LocationMatch "^/content/.*\.html$">
+         Header unset Cache-Control
+         Header always set Cache-Control "max-age=300,stale-while-revalidate=3600" "expr=%{REQUEST_STATUS} < 400"
+         Header always set Surrogate-Control "stale-while-revalidate=43200,stale-if-error=43200" "expr=%{REQUEST_STATUS} < 400"
+         Header set Age 0
+      </LocationMatch>
+      ```
+
+   * Cachelagra innehållstjänster/Sling-modellexporterarens json-svar för 5 minuter med bakgrundsuppdatering 1 timme i webbläsaren och 12 timmar i CDN.
+
+      ```
+      <LocationMatch "^/content/.*\.model\.json$">
+         Header set Cache-Control "max-age=300,stale-while-revalidate=3600" "expr=%{REQUEST_STATUS} < 400"
+         Header set Surrogate-Control "stale-while-revalidate=43200,stale-if-error=43200" "expr=%{REQUEST_STATUS} < 400"
+         Header set Age 0
+      </LocationMatch>
+      ```
+
+   * Cachelagra oföränderliga URL:er från huvudbildkomponenten på lång sikt (30 dagar) med bakgrundsuppdatering för att undvika MISS.
+
+      ```
+      <LocationMatch "^/content/.*\.coreimg.*\.(?i:jpe?g|png|gif|svg)$">
+         Header set Cache-Control "max-age=2592000,stale-while-revalidate=43200,stale-if-error=43200,public,immutable" "expr=%{REQUEST_STATUS} < 400"
+         Header set Age 0
+      </LocationMatch>
+      ```
+
+   * Cachelagra ändringsbara resurser från DAM som bilder och video i 24 timmar och bakgrundsuppdatering efter 12 timmar för att undvika MISS
+
+      ```
+      <LocationMatch "^/content/dam/.*\.(?i:jpe?g|gif|js|mov|mp4|png|svg|txt|zip|ico|webp|pdf)$">
+         Header set Cache-Control "max-age=43200,stale-while-revalidate=43200,stale-if-error=43200" "expr=%{REQUEST_STATUS} < 400"
+         Header set Age 0
+      </LocationMatch>
+      ```
 
 ## Invalidering av Dispatcher-cache {#disp}
 
