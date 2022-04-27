@@ -4,9 +4,9 @@ description: Lär dig hur översättningsregler identifierar innehåll som behö
 feature: Language Copy
 role: Admin
 exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
-source-git-commit: 1363929c95f0615d14b31e0733d20130f4226de2
+source-git-commit: 0c75a367861c9e4c77ee537322fa49330c70db85
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1297'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,9 @@ ht-degree: 0%
 
 Översättningsreglerna som beskrivs i det här dokumentet gäller endast för innehållsfragment om **Aktivera fält för innehållsmodell för översättning** har inte aktiverats på [konfigurationsnivå för översättningsintegreringsramverk.](integration-framework.md#assets-configuration-properties)
 
-Om **Aktivera fält för innehållsmodell för översättning** är aktivt, AEM använder **Översättningsbar** fält på [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#properties) för att bestämma om fältet ska översättas. I detta fall [översättningsregler](rules.md) är ersatta.
+Om **Aktivera fält för innehållsmodell för översättning** är aktivt, AEM använder **Översättningsbar** fält på [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#properties) för att avgöra om fältet ska översättas och skapar automatiskt översättningsregler i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat och kräver inga åtgärder eller ytterligare steg.
 
-Om du vill använda översättningsregler för översättning av dina innehållsfragment, **Aktivera fält för innehållsmodell för översättning** -alternativet i konfigurationen för översättningsintegreringsramverket måste inaktiveras.
-
->[!NOTE]
->
->Den här funktionen är tillgänglig i prerelease-kanalen.
-> 
->Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
+Om du vill använda översättningsregler för översättning av dina innehållsfragment, **Aktivera fält för innehållsmodell för översättning** för konfiguration av översättningsintegreringsramverk måste vara inaktiverat och du måste följa stegen nedan för att skapa reglerna.
 
 ## Översikt {#overview}
 

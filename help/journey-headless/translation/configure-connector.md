@@ -1,10 +1,10 @@
 ---
-title: Konfigurera Translation Connector (AEM headless)
+title: Konfigurera Translation Connector för Headless-innehåll
 description: Lär dig hur du ansluter AEM till en översättningstjänst.
 exl-id: c91b2701-7ede-4d0b-93dd-3636c6638be2
-source-git-commit: a8293384cbe55921f7cfd2187330f66691206e2b
+source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -101,9 +101,6 @@ Så här skapar du en ny översättningskonfiguration:
    1. **Automatisk översättning** - Markera den här egenskapen om du vill att översättningar ska skickas automatiskt till översättningstjänsten.
    1. **Inaktivera översättning med endast uppdatering** - När det här alternativet är markerat skickas alla översättningsbara fält för översättning när du uppdaterar översättningsprojektet, inte bara de som ändrats sedan den senaste översättningen. Uppdateringen av ditt översättningsprojekt diskuteras senare under kundresan.
    1. **Aktivera fält för innehållsmodell för översättning** - Markera det här alternativet så att översättningskonfigurationen automatiskt känner igen fält i innehållsmodellerna baserat på **Översättningsbar** flagga.
-      * Om det är tillgängligt bör det här alternativet vara markerat för att förenkla översättningsprocessen.
-      * Det här alternativet är bara tillgängligt i prerelease-kanalen på AEM as a Cloud Service.
-      * Se [Avsnittet Ytterligare resurser](#additional-resources) för mer information om betaversionskanalen.
 
 1. Tryck eller klicka **Spara och stäng**.
 
@@ -135,7 +132,7 @@ Nu när du är klar med den här delen av den headless översättningsresan ska 
 * Förstå de viktiga parametrarna i översättningsintegreringsramverket i AEM.
 * Du kan skapa en egen anslutning till översättningstjänsten.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Konfigurera översättningsregler,](translation-rules.md) där du får lära dig att definiera vilket innehåll som ska översättas.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Översätta innehåll,](translation-rules.md) där du får lära dig hur du använder din konfiguration hittills för att faktiskt översätta ditt innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -143,4 +140,3 @@ Vi rekommenderar att du går vidare till nästa del av den headless-översättni
 
 * [Konfigurera översättningsintegreringsramverket](/help/sites-cloud/administering/translation/integration-framework.md) - Granska en lista över valda översättningskopplingar och lär dig hur du konfigurerar översättningsintegreringsramverket så att det integreras med översättningstjänster från tredje part.
 * [Ansluta till Microsoft Translator](/help/sites-cloud/administering/translation/connect-ms-translator.md) - AEM tillhandahåller en testversion av Microsoft Translation-kontot för testning.
-* [AEM as a Cloud Service prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) - Lär dig hur du väljer att använda betaversionskanalen i AEM as a Cloud Service för att testa nya och kommande funktioner.

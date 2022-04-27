@@ -1,10 +1,10 @@
 ---
-title: Lär dig mer om headless-innehåll och hur du översätter det i AEM
+title: Lär dig mer om Headless-innehåll och hur du översätter det i AEM
 description: Lär dig headless-koncept, hur de mappas till AEM och teorin om AEM översättning.
 exl-id: 72bb6646-e573-4576-8d17-49787d8c8c7f
-source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
+source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---

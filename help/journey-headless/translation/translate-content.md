@@ -1,35 +1,31 @@
 ---
-title: Översätt innehåll (AEM utan rubrik)
-description: Använd översättningskopplingen och reglerna för att översätta ditt headless-innehåll.
+title: Översätt rubrikfritt innehåll
+description: Använd översättningskopplingen för att översätta ditt headless-innehåll.
 exl-id: 3bfbf186-d684-4742-8c5c-34c34ff3adb5
-source-git-commit: a8293384cbe55921f7cfd2187330f66691206e2b
+source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
 workflow-type: tm+mt
-source-wordcount: '2215'
+source-wordcount: '2177'
 ht-degree: 0%
 
 ---
 
 
-# Översätta innehåll {#translate-content}
+# Översätt rubrikfritt innehåll {#translate-content}
 
-Använd översättningskopplingen och reglerna för att översätta ditt headless-innehåll.
+Använd översättningskopplingen för att översätta ditt headless-innehåll.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM översättningsresan utan headless [Konfigurera översättningsregler](translation-rules.md) du lärde dig att använda AEM översättningsregler för att identifiera översättningsinnehåll. Nu bör du:
+I det föregående dokumentet om den AEM översättningsresan utan headless [Konfigurera översättningsanslutning](configure-connector.md) du lärde dig om översättningsramverket i AEM. Nu bör du:
 
-* Förstå vad översättningsreglerna gör.
-* Du kan definiera egna översättningsregler.
+* Förstå de viktiga parametrarna i översättningsintegreringsramverket i AEM.
+* Du kan skapa en egen anslutning till översättningstjänsten.
 
-Nu när du har konfigurerat reglerna för anslutning och översättning tar den här artikeln dig igenom nästa steg när du översätter ditt headless-innehåll.
-
->[!NOTE]
->
->Om du hoppade över [Konfigurera översättningsregler](translation-rules.md) eftersom du är AEM as a Cloud Service i förhandsversionen behöver du inte bekymra dig om översättningsreglerna som anges i det här dokumentet.
+Nu när du har konfigurerat kontakten tar den här artikeln dig genom nästa steg i översättningen av ditt headless-innehåll.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du använder AEM översättningsprojekt tillsammans med kopplingen och dina översättningsregler för att översätta innehåll. När du har läst det här dokumentet bör du:
+Det här dokumentet hjälper dig att förstå hur du använder AEM översättningsprojekt tillsammans med kopplingen för att översätta innehåll. När du har läst det här dokumentet bör du:
 
 * Förstå vad ett översättningsprojekt är.
 * Skapa nya översättningsprojekt.
@@ -130,7 +126,7 @@ Hur du använder ett översättningsprojekt beror på hur det skapades: antingen
 
 ### Använda ett automatiskt skapat översättningsprojekt {#using-automatic-project}
 
-När du automatiskt skapar översättningsprojektet utvärderar AEM innehållet utan rubrik under den sökväg du valde baserat på översättningsreglerna som du tidigare definierade. Utifrån utvärderingen extraheras det innehåll som kräver översättning till ett nytt översättningsprojekt.
+När du automatiskt skapar översättningsprojektet utvärderar AEM innehållet utan rubrik under den sökväg du valde. Utifrån utvärderingen extraheras det innehåll som kräver översättning till ett nytt översättningsprojekt. Jag vet vilka fält som ska översättas baserat på de fält som flaggats som **Översättningsbar** av innehållsarkitekten.
 
 Om du vill se detaljerna om det headless-innehåll som ingår i projektet:
 

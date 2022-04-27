@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: 5ef9ac087ec3feab9c68935b81882451c308daed
+source-git-commit: 3c37b66b63ed19635854cf277aaf7d5f2a7c1fe8
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1522'
 ht-degree: 0%
 
 ---
@@ -39,8 +39,8 @@ Följande översättningsleverantörer tillhandahåller en implementering av AEM
 * [Molnord](https://exchange.adobe.com/experiencecloud.details.90019.html)
 * [XTM Cloud](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [Lingotek](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
+* [RWS](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108277.html)
 * [Smartling](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
-* [SDL](https://exchange.adobe.com/experiencecloud.details.100110.sdl-translation-management.html)
 * [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
 
 När du har installerat ett anslutningspaket kan du skapa en molnkonfiguration för anslutaren. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft Translator-anslutningen finns i [Integrera med Microsoft Translator](connect-ms-translator.md).
@@ -109,13 +109,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
 | Översätt taggar | Aktivera den här egenskapen för att översätta taggar som är kopplade till resursen. |
 | Automatisk översättning | Välj den här egenskapen om du vill köra översättningsjobb automatiskt efter att översättningsprojekt har skapats. Du har inte möjlighet att granska eller omsluta översättningsjobbet när du väljer det här alternativet. |
 | Inaktivera översättning med endast uppdatering | När det här alternativet är markerat skickas alla översättningsbara fält för översättning när översättningsprojektet uppdateras, inte bara de som ändrats sedan den senaste översättningen. |
-| Aktivera fält för innehållsmodell för översättning* | Om du aktiverar det här alternativet används **Översättningsbar** fält på [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#properties) för att avgöra om fältet är översatt. I detta fall [översättningsregler](rules.md) är ersatta. |
-
->[!NOTE]
->
->*Den här funktionen är tillgänglig i prerelease-kanalen.
-> 
->Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
+| Aktivera fält för innehållsmodell för översättning | Om du aktiverar det här alternativet används **Översättningsbar** fält på [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#properties) för att avgöra om fältet är översatt och automatiskt skapar [översättningsregler](rules.md) i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat. |
 
 ## Konfigurera sidor för översättning {#configuring-pages-for-translation}
 
