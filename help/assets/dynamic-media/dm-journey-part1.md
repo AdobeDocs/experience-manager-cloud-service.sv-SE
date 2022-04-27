@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media Journey
+title: Dynamic Media Journey, del I
 description: 'Dynamic Media Journey beskriver grunderna i Dynamic Media, hur det fungerar, vad det kan göra för dig och vilket värde det ger både ditt arbete och dina kunder. '
 contentOwner: Rick Brough
 products: Experience Manager as a Cloud Service
@@ -10,9 +10,9 @@ role: User, Admin
 mini-toc-levels: 4
 hide: false
 hidefromtoc: false
-source-git-commit: b830c6e2f86b92b03cb9c03e94ae2bb2e3bda444
+source-git-commit: dc290be237c938af59960834b32269a1f6c5bd97
 workflow-type: tm+mt
-source-wordcount: '3482'
+source-wordcount: '3484'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,8 @@ Denna unika leveransmetod säkerställer att enhetliga kvalitetsupplevelser skic
 
 <!-- As part of building and publishing assets with Dynamic Media, you visually configure the effects that you want to apply to assets. In so doing, you are literally building the URL that correctly tells the publish server how to deliver your primary asset to the screen.  -->
 
-![Adobe Dynamic Media levererar samma primära bild till olika medier i olika storlekar och format.](/help/assets/assets-dm/dm-oneasset-multioutput.png)
+![Adobe Dynamic Media levererar samma primära bild till olika medier i olika storlekar och format.](/help/assets/dynamic-media/assets/dm-oneasset-multioutput.png)
+
 *Adobe Dynamic Media ger enhetliga upplevelser av hög kvalitet för alla skärmar, oavsett storlek och bandbredd.*
 
 När du läser vidare kommer du att lära dig mer om varför konceptet&quot;en primär resursfil, oändliga möjligheter&quot; är viktigt.
@@ -104,7 +105,7 @@ Den här intelligensen minskar bildfilens storlek ytterligare baserat på webbl�
 
 Med smart bildbehandling kan du totalt sett förvänta dig en prestandaförbättring på 22 till 47 % beroende på dina befintliga förinställda bildinställningar och specifika egenskaper för slutanvändaren. Samtidigt som bildkvaliteten bibehålls som om den aldrig hade rörts.
 
-![Smart bildbehandling](/help/assets/assets-dm/dm-smart-imaging.png)
+![Smart bildbehandling](/help/assets/dynamic-media/assets/dm-smart-imaging.png)
 *Smart Imaging optimerar automatiskt bildens format och filstorlek baserat på kundens webbläsarkapacitet och nätverkshastighet.*
 
 Smart bildbehandling är inte aktiverat som standard eftersom det kräver en samordnad insats mellan dig och Adobe Dynamic Media tekniska support. För att du ska kunna aktivera Smart Imaging måste du dessutom rensa CDN-cachen fullständigt, som sedan fylls på med tid. Om du är intresserad av att använda Smart Imaging kan du med Adobe aktivera det genom att skicka in en teknisk supportanmälan. Teknisk support ger dig sedan en URL-parameter som gör att du kan testa smarta bilder i förväg. Du kan testa det på alla dina webbsidor eller bilder så att du kan se prestanda och besparingarna. Du kan sedan aktivera smart bildåtergivning för hela webbplatsen.
@@ -117,7 +118,7 @@ När det finns en video på en sida, eller en huvudsida, tenderar kunderna att i
 
 För att lösa problemet ger Dynamic Media dig möjlighet att skapa *Adaptiva videouppsättningar*.
 
-![Adaptiv videouppsättning](/help/assets/dynamic-media/assets/dm-adaptive-video.png)
+![Adaptiv videouppsättning](/help/assets/dynamic-media/assets/dm-smart-imaging.png)
 *En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format.*
 
 Du börjar med den ursprungliga primära videon som du överför till systemet. Dynamic Media storleksändras automatiskt, eller *transcodes*, videon till flera videor. När filmen levereras avgör den sedan på ett smart sätt vilken videoskärm, vilken kvalitet och vilket format som ska användas och skickar den till telefonen, surfplattan eller datorn.
