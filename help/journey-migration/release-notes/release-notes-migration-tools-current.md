@@ -1,44 +1,36 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.3.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.3.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.4.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.4.0
 feature: Release Information
-source-git-commit: c497424271ea960d22a30b4a6c66432935ec820d
+source-git-commit: 87e3291b4a72c24fc6cf8df488df305f1a078ea5
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 1%
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
+# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.4.0 {#release-notes}
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.3.0 {#release-notes}
-
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.3.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.4.0.
 
 ## Best Practices Analyzer {#bpa-release}
 
 ### Releasedatum {#release-date-bpa}
 
-Releasedatum för Best Practices Analyzer v2.1.26 är 16 mars 2022.
+Releasedatum för Best Practices Analyzer v2.1.28 är 22 april 2022.
 
 ### Nyheter {#what-is-new-bpa}
 
-* Möjlighet att upptäcka obearbetade resurser. Om obearbetade resurser upptäcks måste dessa resurser antingen ställas in på bearbetad eller tas bort från migreringsuppsättningen under innehållsöverföring för att undvika problem under innehållsimporten.
-* Möjlighet att identifiera om innehållet har fler än 1000 ogiltiga URL:er. Det är inte bra att använda ett stort antal användar-URL:er eftersom en belastning läggs på Dispatcher- och Publish-servrar.
-* Möjlighet att identifiera problem relaterade till indexdefinitioner för ekon och upptäcka inkompatibilitet med AEM as a Cloud Service.
-* Möjlighet att upptäcka och rapportera om användningen av Externalizer-konfigurationer. I AEM as a Cloud Service externaliserarkonfigurationer anges av Cloud Manager, och därför måste befintliga Externalizer-konfigurationer omfaktoriseras för att bibehålla kompatibiliteten.
+* Möjlighet att upptäcka och rapportera om användning av tillgångshanterarens API:er som inte stöds. Det finns fyra API:er som inte längre stöds i AEM as a Cloud Service. Kunderna bör se till att de inte längre använder dessa API:er och bör använda den nya metoden för överföring av resurser.
+
+* Möjlighet att upptäcka användning av mallar för innehållsfragment. Mallar för innehållsfragment stöds inte längre för att skapa nya innehållsfragment på AEM as a Cloud Service. Kunderna måste skapa innehållsfragmentmodeller för att ersätta innehållets fragmentmallar.
+
+* Möjlighet att identifiera resurser med fler än 100 underordnade under metadatanoden för resursen i databasen. Vi rekommenderar att du tar bort metadatanoder som inte behövs för att förbättra prestandan vid inläsning av mappar som består av sådana resurser.
+
+* Möjlighet att identifiera och rapportera vilken typ av datalager som används.
+
+* Mönstret har uppdaterats för AEM Form Portal.
 
 ### Felkorrigeringar {#bug-fixes-bpa}
 
-* I vissa scenarier gick det inte att köra BPA på grund av att FormsSelectiveFeaturesAnalysis genererade ett kontrollfel. Den här har åtgärdats.
-* BPA rapporterade fynd relaterade till WRK-mönstret som MAJOR i stället för CRITICAL. Den här har åtgärdats.
-* BPA rapporterade felaktigt resultat relaterade till OAK-indexdefinitioner i ui.apps som CRITICAL. Den här har åtgärdats.
-
-## Content Transfer Tool {#ctt-release}
-
-### Releasedatum {#release-date-ctt}
-
-Releasedatum för Content Transfer Tool v1.9.0 är 28 februari 2022.
-
-### Nyheter {#what-is-new-ctt}
-
-* Kontrollera storleksordrar - Funktionen Kontrollera storlek för verktyget Innehållsöverföring hjälper till att minska misslyckade innehållsöverföringar.  Med funktionen Kontrollera storlek kan användarna 1) avgöra om de har tillräckligt med diskutrymme i `crx-quickstart` underkatalog före extrahering och 2) beräkna storleken på migreringsuppsättningen och kontrollera om den stöds. Om en av eller båda dessa kontroller överträds visas varningar i användargränssnittet för aktuell tid. Med den här skyddsguiden kan du undvika innehållsöverföringsfel och proaktivt diskutera migreringsalternativ med Adobe kundtjänst. Se [Bestämma migreringsuppsättningens storlek och diskutrymme](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en#migration-set-size) för mer information.
+* BPA rapporterade resultat för kärnkomponenter i stället för att bara rapportera om kundkomponenter. Den här har åtgärdats.

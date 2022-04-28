@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 277da5aaf1703b549f5697fb708333abc9df1664
+source-git-commit: 3afac18e9173497961be27879ebaf5a7fc13316d
 workflow-type: tm+mt
-source-wordcount: '3433'
+source-wordcount: '3436'
 ht-degree: 23%
 
 ---
@@ -105,7 +105,8 @@ ht-degree: 23%
    + [Post Go Live](/help/journey-migration/post-go-live.md)
    + [Migreringshandbok till Experience Manager as a Cloud Service for Partners](/help/journey-migration/getting-started-partners.md)
    + Versionsinformation för migreringsverktyg {#release-notes-migration-tools}
-      + [Aktuell versionsinformation (2022.3.0)](/help/journey-migration/release-notes/release-notes-migration-tools-current.md)
+      + [Aktuell versionsinformation (2022.4.0)](/help/journey-migration/release-notes/release-notes-migration-tools-current.md)
+      + [Versionsinformation för 2022.3.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-03-0.md)
       + [Versionsinformation för 2022.2.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-02-0.md)
       + [Versionsinformation för 2022.1.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-01-0.md)
       + 2021 {#2021}
