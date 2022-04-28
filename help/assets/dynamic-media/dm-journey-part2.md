@@ -11,7 +11,7 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: 69d2121323d8a8ab54db3fb0a56195a1271e6112
+source-git-commit: af4c85686be5299433974c455f35c907bd6776fd
 workflow-type: tm+mt
 source-wordcount: '2799'
 ht-degree: 0%
@@ -83,7 +83,7 @@ Nu kan du föreställa dig att Creative Director tittar på bilderna och säger:
 
 _&quot;Jag ville verkligen ha den här bilden så att den stora handen pekar mot de fyra, och den lilla handen pekar mot 1 för att göra det lättare att se på den där klockan.&quot;_
 
-Alla dessa nya statiska bilder måste fotograferas igen.
+Alla nya statiska bilder måste fotograferas igen.
 
 Men om du har olika bildförinställningar i Dynamic Media kan du använda dessa bilder var du vill. Bildförinställningarna följer standarder.
 
@@ -224,3 +224,5 @@ _Dynamic Media självstudiekurser_
 _Dynamic Media-visningsprogram_
 
 * [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)
+
+<!-- Live as of April 28 2022. LEAVE IN HERE https://landing.adobe.com/en/na/dynamic-media/ctir-2755/index.html -->
