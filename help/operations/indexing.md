@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: a2a57b2a35bdfba0466c46d5f79995ffee121cb7
+source-git-commit: 3682426cc333414a9fd20000e4d021fc622ff3b5
 workflow-type: tm+mt
-source-wordcount: '2442'
+source-wordcount: '2420'
 ht-degree: 1%
 
 ---
@@ -72,7 +72,7 @@ Du måste förbereda ett nytt indexdefinitionspaket som innehåller den faktiska
 
 som sedan måste gå under `ui.apps/src/main/content/jcr_root`. Underrotmappar stöds inte för närvarande.
 
-Filtret för paketet måste anges så att befintliga (ej låsta) index behålls. Det finns två sätt att göra detta: Antingen är filtret inställt på `<filter root="/oak:index/" mode="merge"/>` i filen `ui.apps/src/main/content/META-INF/vault/filter.xml`för varje anpassat (eller anpassat) index måste anges separat i filteravsnittet, till exempel som `<filter root="/oak:index/damAssetLucene-6-custom-1"/>`. Om det senare fallet inträffar måste filtret justeras varje gång som versionen ändras.
+Filtret för paketet måste anges så att befintliga (ej låsta) index behålls. I filen `ui.apps/src/main/content/META-INF/vault/filter.xml`måste varje anpassat (eller anpassat) index listas, till exempel som `<filter root="/oak:index/damAssetLucene-6-custom-1"/>`. Om indexversionen ändras senare måste filtret justeras.
 
 Paketet från exemplet ovan byggs som `com.adobe.granite:new-index-content:zip:1.0.0-SNAPSHOT`.
 
