@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: 94d77e08e5df82f9bb432bb06c4f05301d119f9e
+source-git-commit: 69d2121323d8a8ab54db3fb0a56195a1271e6112
 workflow-type: tm+mt
-source-wordcount: '2787'
+source-wordcount: '2799'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Nu kan du föreställa dig att Creative Director tittar på bilderna och säger:
 
 _&quot;Jag ville verkligen ha den här bilden så att den stora handen pekar mot de fyra, och den lilla handen pekar mot 1 för att göra det lättare att se på den där klockan.&quot;_
 
-Alla nya statiska bilder måste fotograferas igen.
+Alla dessa nya statiska bilder måste fotograferas igen.
 
 Men om du har olika bildförinställningar i Dynamic Media kan du använda dessa bilder var du vill. Bildförinställningarna följer standarder.
 
@@ -220,3 +220,7 @@ _Dynamic Media självstudiekurser_
 
 * [Använd Dynamic Media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html)
 * [Adobe Experience Manager Content Library](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på _Dynamic Media_)
+
+_Dynamic Media-visningsprogram_
+
+* [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)
