@@ -2,9 +2,9 @@
 title: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
 description: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
 exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
-source-git-commit: ab81bca96bcf06b06357f900464e999163bb1bb2
+source-git-commit: 5c2fcb815e345a5c7fa88f02488d15ffb1a71435
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '822'
 ht-degree: 9%
 
 ---
@@ -34,7 +34,7 @@ De största skillnaderna finns i följande områden:
 
 * [/apps och /libs kan inte ändras under körning](#apps-libs-immutable)
 
-* [OSGi-paket och -inställningar måste vara databasbaserade](#osgi)
+* [OSGi-paket och -konfigurationer måste behandlas som kod](#osgi)
 
 * [Ändringar i publiceringsdatabasen tillåts inte](#changes-to-publish-repo)
 
@@ -54,7 +54,7 @@ Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddad. Funk
 
 * Inga ändringar i `/libs` tillåts överhuvudtaget.
    * Det här är inte en ny regel, men den har inte införts i tidigare lokala versioner av AEM.
-* Övertäckningar för områden i `/libs` som får överskridas fortfarande tillåts inom `/apps`.
+* Övertäckningar för områden i `/libs` som får överlappas fortfarande tillåts inom `/apps`.
    * Sådana övertäckningar måste komma från Git via CI/CD-pipeline.
 * Designinformation för statiska mallar som lagras i `/apps` kan inte redigeras via användargränssnittet.
    * Vi rekommenderar att du använder Redigerbara mallar i stället.
@@ -62,12 +62,14 @@ Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddad. Funk
 * MSM Blueprint och anpassade MSM roll-out-konfigurationer måste installeras från Git via CI/CD-pipeline.
 * I18n-översättningsändringar måste komma från Git via CI/CD-pipeline.
 
-## OSGi-paket och -inställningar måste vara databasbaserade {#osgi}
+## OSGi-paket och -konfigurationer måste behandlas som kod {#osgi}
 
-Webbkonsolen, som användes i tidigare versioner av AEM för att ändra OSGi-inställningarna, är inte tillgänglig i AEM Cloud Service. Därför måste ändringar av OSGi införas via CI/CD-ledningen.
+Ändringar av OSGi-paket och -konfigurationer måste införas via CI/CD-pipeline.
 
-* Ändringar av OSGi-inställningar kan bara göras via Git-beständighet som JCR-baserade OSGi-inställningar.
-* Nya eller uppdaterade OSGi-paket måste introduceras via Git som en del av CI/CD-produktionsprocessen.
+* Nya eller uppdaterade OSGi-paket måste introduceras via Git via CI/CD-pipeline.
+* Ändringar i OSGi-konfigurationer kan endast göras från Git via CI/CD-pipeline.
+
+Webbkonsolen, som användes i tidigare versioner av AEM för att ändra OSGi-paket och -konfigurationer, är inte tillgänglig i AEM Cloud Service.
 
 ## Ändringar i publiceringsdatabasen tillåts inte {#changes-to-publish-repo}
 
@@ -114,4 +116,4 @@ För projektövergångar från AMS eller en lokal installation rekommenderar Ado
 
 ## Hantering och leverans av tillgångar {#asset-handling}
 
-Överföring, bearbetning och nedladdning av resurser är optimerat i [!DNL Experience Manager Assets] som [!DNL Cloud Service]. [!DNL Assets] är nu mer effektivt, ger större skalbarhet och gör att du kan ladda upp och ned i mycket snabbare takt. Dessutom påverkas den befintliga anpassade koden och vissa åtgärder. För en lista över ändringar och för paritet med [!DNL Experience Manager] 6.5-funktioner, se [ändringar i [!DNL Assets]](/help/assets/assets-cloud-changes.md).
+Överföring, bearbetning och nedladdning av mediefiler är optimerade i [!DNL Experience Manager Assets] som [!DNL Cloud Service]. [!DNL Assets] är nu mer effektivt, ger större skalbarhet och gör att du kan ladda upp och ned i mycket snabbare takt. Dessutom påverkas den befintliga anpassade koden och vissa åtgärder. För en lista över ändringar och för paritet med [!DNL Experience Manager] 6.5-funktioner, se [ändringar i [!DNL Assets]](/help/assets/assets-cloud-changes.md).
