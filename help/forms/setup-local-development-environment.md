@@ -2,7 +2,7 @@
 title: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 131b17f53b364138d2cea7648d4c23a8480740bf
+source-git-commit: 921975034035f9b6a07ae2b76f433cef30f307a3
 workflow-type: tm+mt
 source-wordcount: '2641'
 ht-degree: 1%
@@ -55,7 +55,7 @@ Use a local development environment:
 
 You can use the local development environment to create and test Adaptive Forms without connecting to the service. Adobe provides a SDK for the local development to help test all the cloud-ready functionalities. When your forms and related assets are ready and tested on the local development environment, you can import these forms and related assets to an [!DNL AEM Forms] as a Cloud Service instance for publishing. 
 
-You can use the [development tools](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/dev-tools.html) to write custom code, customize or create new Adaptive Forms components, create a custom prefill service, or modify default configurations of an [!DNL AEM Forms] as a Cloud Service instance. 
+You can use the [development tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/dev-tools.html) to write custom code, customize or create new Adaptive Forms components, create a custom prefill service, or modify default configurations of an [!DNL AEM Forms] as a Cloud Service instance. 
 
 -->
 
@@ -67,10 +67,10 @@ Du behöver följande program för att konfigurera en lokal utvecklingsmiljö. L
 |---|---|---|
 | Adobe Experience Manager as a Cloud Service SDK | SDK innehåller [!DNL Adobe Experience Manager] Verktygen QuickStart och Dispatcher | Hämta senaste SDK från [Programvarudistribution](#software-distribution) |  |
 | Adobe Experience Manager Forms feature archive (AEM Forms add-on) | Verktyg för att skapa, formatera och optimera adaptiva Forms och andra Adobe Experience Manager Forms-funktioner | Hämta från [Programvarudistribution](#software-distribution) |
-| (Valfritt) Adobe Experience Manager Forms referensinnehåll | Verktyg för att skapa, formatera och optimera adaptiva Forms och andra Adobe Experience Manager Forms-funktioner | Hämta från [Programvarudistribution](#software-distribution) |
+| (Valfritt) Adobe Experience Manager Forms referensinnehåll | Tools to create, style, and optimize Adaptive Forms and other Adobe Experience Manager Formsfeatures | Hämta från [Programvarudistribution](#software-distribution) |
 | (Valfritt) Adobe Experience Manager Forms Designer | Verktyg för att skapa, formatera och optimera adaptiva Forms och andra Adobe Experience Manager Forms-funktioner | Hämta från [Programvarudistribution](#software-distribution) |
 
-### Ladda ned den senaste versionen av programvara från Software Distribution {#software-distribution}
+### Download the latest version of software from Software Distribution {#software-distribution}
 
 Om du vill hämta den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms add-on), formulärreferensresurser eller Forms Designer från [Snedvridning av programvara](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html):
 
@@ -131,10 +131,10 @@ Skapa användare som Form Developer och Form Practitioner och [lägga till dessa
 | Användartyp | AEM |
 |---|---|
 | Formuläradministratör / | [!DNL forms-users] (AEM Forms-användare), [!DNL template-authors], [!DNL workflow-users], [!DNL workflow-editors]och [!DNL fdm-authors] |
-| Formulärutvecklare | [!DNL forms-users] (AEM Forms-användare), [!DNL template-authors], [!DNL workflow-users], [!DNL workflow-editors]och [!DNL fdm-authors] |
+| Form developer | [!DNL forms-users] (AEM Forms Users), [!DNL template-authors], [!DNL workflow-users], [!DNL workflow-editors], and [!DNL fdm-authors] |
 | Customer Experience Lead eller UX Designer | [!DNL forms-users], [!DNL template-authors] |
 | AEM-administratör | [!DNL aem-administrators], [!DNL fd-administrators] |
-| Slutanvändare | När en användare måste logga in för att visa och skicka ett adaptivt formulär lägger du till sådana användare i [!DNL forms-users] grupp. </br> När ingen användarautentisering krävs för att få tillgång till Adaptiv Forms ska du inte tilldela någon grupp till sådana användare. |
+| End user | När en användare måste logga in för att visa och skicka ett adaptivt formulär lägger du till sådana användare i [!DNL forms-users] grupp. </br> När ingen användarautentisering krävs för att få tillgång till Adaptiv Forms ska du inte tilldela någon grupp till sådana användare. |
 
 <!--  
 
@@ -142,7 +142,7 @@ Skapa användare som Form Developer och Form Practitioner och [lägga till dessa
 
 Perform the following steps in the listed order to set up and configure your local development environment:
 
-1. **Set up an AEM author instance:** You require an author instance to create Adaptive Forms. Download and extract the latest AEM SDK archive. Run the quick start file in author run mode to set up an author instance. For detailed instructions, see [default local instance](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html).  
+1. **Set up an AEM author instance:** You require an author instance to create Adaptive Forms. Download and extract the latest AEM SDK archive. Run the quick start file in author run mode to set up an author instance. For detailed instructions, see [default local instance](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html).  
 
 1. **Install the latest [!DNL AEM Forms] add-on feature archive:** [!DNL AEM Forms] add-on feature archive provides tools to create, style, and optimize Adaptive Forms on the local development environment. Install the package to create an Adaptive Form and use various other features of [!DNL AEM Forms]. To install the package:
 
@@ -167,11 +167,11 @@ Perform the following steps in the listed order to set up and configure your loc
 
 Use this project to update configurations, create overlays, develop custom Adaptive Form components, and custom code using the local development environment. To set up the project:
 
-1. **Install and configure Maven and set up an AEM project based on Apache Maven:** Apache Maven is an open-source tool for managing software projects. It helps automate builds and provides quality project information. It is the recommended build management tool for AEM projects. For detailed instructions to set up an AEM project based on Apache Maven, see [How to Build AEM Projects using Apache Maven](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html).
+1. **Install and configure Maven and set up an AEM project based on Apache Maven:** Apache Maven is an open-source tool for managing software projects. It helps automate builds and provides quality project information. It is the recommended build management tool for AEM projects. For detailed instructions to set up an AEM project based on Apache Maven, see [How to Build AEM Projects using Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html).
 
-1. Configure the project to use [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/release-notes/service-pack/sp-release-notes.html#install-aem-forms-jee-installer) version 6.5.5 or later and [[!DNL AEM Forms] Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk/) version 6.0.160 or later.  
+1. Configure the project to use [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=en#install-aem-forms-jee-installer) version 6.5.5 or later and [[!DNL AEM Forms] Client SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/) version 6.0.160 or later.  
 
-1. **Set Up an Integrated Development Environment:**  Set up an IDE of your choice for development, see [Set Up an Integrated Development Environment](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#set-up-an-integrated-development-environment) for detailed instructions.
+1. **Set Up an Integrated Development Environment:**  Set up an IDE of your choice for development, see [Set Up an Integrated Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#set-up-an-integrated-development-environment) for detailed instructions.
  -->
 
 ## Konfigurera lokal utvecklingsmiljö för DoR (Document of Record){#docker-microservices}
@@ -180,7 +180,7 @@ AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utv
 
 1. Installera och konfigurera Docker:
 
-   * (För Microsoft Windows) Installera [Docker Desktop](https://www.docker.com/products/docker-desktop). Docker Engine och Docker-compose konfigureras på datorn.
+   * (For Microsoft Windows) Install [Docker Desktop](https://www.docker.com/products/docker-desktop). It configures Docker Engine and docker-compose on your machine.
 
    * (Apple macOS) Installera [Docker Desktop för Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac). Det innehåller Docker Engine, Docker CLI-klient, Docker Compose, Docker Content Trust, Kubernetes och Credential Helper.
 
@@ -190,7 +190,7 @@ AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utv
    > * För Apple macOS: vitlistmappar med lokala AEM Author-instanser.
    >
    > * Docker Desktop för Windows har stöd för två backends, Hyper-V
-      > (äldre) och WSL2 (modern). Fildelning sker automatiskt
+      > (äldre) och WSL2 (modern). File sharing is automatically
       > hanteras av Docker när WSL2 används (modern). Du måste
       > konfigurera fildelning explicit när Hyper-V används (äldre).
 
@@ -242,9 +242,9 @@ Så här ställer du in projektet:
 1. **Git-databasen för Cloud Manager på din lokala utvecklingsinstans:**  Din Cloud Manager Git-databas innehåller ett AEM. Den baseras på [AEM](https://github.com/adobe/aem-project-archetype/). Klona din Cloud Manager Git-databas med Git-kontohantering för självbetjäning från användargränssnittet i Cloud Manager för att få projektet i din lokala utvecklingsmiljö. Mer information om hur du kommer åt databasen finns i [Åtkomst till databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/accessing-repos.html).
 
 <!-- 1. 
-After the repository is cloned, [integrate your Git repo with Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)
+After the repository is cloned, [integrate your Git repo with Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html)
 
-**Make cloned AEM project compatible with [!DNL AEM Forms] as a Cloud Service:** Remove uber-jar and other non-cloud dependencies from the pom.xml files of the project. You can refer the pom.xml files of the [sample AEM project](assets/FaaCSample.zip) for the list of required dependencies and update your AEM project accordingly. You can also refer [AEM Project Structure](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) to learn changes required to make an AEM project compatible with AEM as a Cloud Service.  -->
+**Make cloned AEM project compatible with [!DNL AEM Forms] as a Cloud Service:** Remove uber-jar and other non-cloud dependencies from the pom.xml files of the project. You can refer the pom.xml files of the [sample AEM project](assets/FaaCSample.zip) for the list of required dependencies and update your AEM project accordingly. You can also refer [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html) to learn changes required to make an AEM project compatible with AEM as a Cloud Service.  -->
 
 1. **Skapa en [!DNL Experience Manager Forms] som [Cloud Service] projekt:** Skapa en [!DNL Experience Manager Forms] som [Cloud Service] projekt baserat på [AEM Archetype 32](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-32) eller senare. Med denna typ kan utvecklarna enkelt börja utveckla för [!DNL AEM Forms] as a Cloud Service. Den innehåller även några exempelteman och mallar som hjälper dig att snabbt komma igång.
 
@@ -256,7 +256,7 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
 
    Ändra också `appTitle`, `appId`och `groupId`, i ovanstående kommando för att återspegla din miljö.
 
-1. Distribuera projektet till din lokala utvecklingsmiljö. Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
+1. Deploy the project to your local development environment. Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
 
    `mvn -PautoInstallPackage clean install`
 
@@ -266,13 +266,13 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
 
 
 
-## Konfigurera lokala Dispatcher-verktyg {#setup-local-dispatcher-tools}
+## Set up local Dispatcher tools {#setup-local-dispatcher-tools}
 
-Dispatcher är en Apache HTTP-webbservermodul som tillhandahåller ett säkerhets- och prestandalager mellan CDN- och AEM-publiceringsnivån. Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön.
+Dispatcher is an Apache HTTP Web server module that provides a security and performance layer between the CDN and AEM Publish tier. Dispatcher is an integral part of the overall Experience Manager architecture and should be part of local development environment.
 
 Utför följande steg för att konfigurera lokal Dispatcher och lägg sedan till Forms-specifika regler i den:
 
-### Konfigurera lokal Dispatcher {#setup-local-dispatcher}
+### Set up local Dispatcher {#setup-local-dispatcher}
 
 The [!DNL Experience Manager] as a Cloud Service SDK innehåller den rekommenderade versionen av Dispatcher Tools, som gör det lättare att konfigurera, validera och simulera Dispatcher lokalt. Dispatcher Tools är Docker-baserade och har kommandoradsverktyg för att överföra konfigurationsfilerna för Apache HTTP Web Server och Dispatcher till ett kompatibelt format och distribuera dem till Dispatcher som körs i Docker-behållaren.
 
@@ -285,7 +285,7 @@ Detaljerade anvisningar om hur du konfigurerar Dispatcher finns i [Konfigurera l
 Så här konfigurerar du Dispatcher-cachen för Experience Manager Forms as a Cloud Service:
 
 1. Öppna AEM och gå till `\src\conf.dispatcher.d\available_farms`
-1. Skapa en kopia av `default.farm` -fil. Till exempel, `forms.farm`.
+1. Create a copy of the `default.farm` file. Till exempel, `forms.farm`.
 1. Öppna den nyskapade `forms.farm` -fil för redigering och ersättning av följande kod:
 
    ```json
@@ -316,8 +316,8 @@ Så här konfigurerar du Dispatcher-cachen för Experience Manager Forms as a Cl
 * Cachelagrar lokaliserade adaptiva Forms:
    * Använd URL-format `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
    * Alternativet Webbläsarspråk är inaktiverat som standard. Om du vill ändra språkinställningen för webbläsaren
-* När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`, och Använd webbläsarspråk i konfigurationshanteraren är inaktiverat, används den icke-lokaliserade versionen av det adaptiva formuläret. Det icke-lokaliserade språket är det språk som används vid utvecklingen av det adaptiva formuläret. Det språk som är konfigurerat för webbläsaren (webbläsarens språkområde) beaktas inte och en icke-lokaliserad version av det anpassade formuläret används.
-* När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`, och Använd webbläsarspråk i konfigurationshanteraren är aktiverat, kommer en lokaliserad version av det adaptiva formuläret att användas, om en sådan finns. Språket i det lokaliserade adaptiva formuläret baseras på det språk som är konfigurerat för webbläsaren (webbläsarens språkområde). Det kan leda till [cachelagra endast första instansen av ett adaptivt formulär]. Om du vill förhindra att ett problem inträffar på din instans kan du läsa [endast första instansen av ett adaptivt formulär cachelagras](troubleshooting-caching-performance.md) i felsökningsavsnittet.
+* När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`, och Använd webbläsarspråk i konfigurationshanteraren är inaktiverat, används den icke-lokaliserade versionen av det adaptiva formuläret. The non-localized language is the language used while developing the Adaptive Form. Det språk som är konfigurerat för webbläsaren (webbläsarens språkområde) beaktas inte och en icke-lokaliserad version av det anpassade formuläret används.
+* När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`, och Använd webbläsarspråk i konfigurationshanteraren är aktiverat, kommer en lokaliserad version av det adaptiva formuläret att användas, om en sådan finns. Språket i det lokaliserade adaptiva formuläret baseras på det språk som är konfigurerat för webbläsaren (webbläsarens språkområde). It can lead to [caching only first instance of an Adaptive Form]. Om du vill förhindra att ett problem inträffar på din instans kan du läsa [endast första instansen av ett adaptivt formulär cachelagras](troubleshooting-caching-performance.md) i felsökningsavsnittet.
 
 Din lokala utvecklingsmiljö är klar.
 
@@ -383,19 +383,19 @@ Säkerhetskopiera dina adaptiva Forms, mallar, formulärdatamodell, tema, konfig
 
 ### Importera säkerhetskopian till din nya SDK-miljö {#import-the-backup-to-your-new-SDK-environment}
 
-Importera adaptiva Forms, mallar, formulärdatamodell, tema, konfigurationer och anpassad kod till din nya miljö. Du kan utföra följande åtgärd för att importera säkerhetskopior:
+Importera adaptiva Forms, mallar, formulärdatamodell, tema, konfigurationer och anpassad kod till din nya miljö. You can perform the following action to import backup:
 
-1. [Importera](import-export-forms-templates.md#manage-forms-and-related-assets) Adaptiv Forms, teman och PDF forms till nya SDK-miljöer.
-1. Importera adaptiva formulärmallar till en ny SDK-miljö.
+1. [Import](import-export-forms-templates.md#manage-forms-and-related-assets) Adaptive Forms, themes, and PDF forms to new SDK environments.
+1. Import Adaptive Form templates to new SDK environment.
 
-1. Överför formulärdatamodeller till en ny SDK-miljö.
+1. Upload Form Data Models to new SDK environment.
 
 1. Importera redigerbara mallar, molnkonfigurationer och arbetsflödesmodell. Om du vill importera alla tidigare nämnda objekt till din nya SDK-miljö importerar du det CRX-paket som innehåller dessa objekt till din nya SDK-miljö.
 
-1. Importera e-postkonfigurationer, skicka och förifyll åtgärdskod från den lokala utvecklingsmiljön. Om du vill importera dessa inställningar och konfigurationer placerar du följande filer från ditt gamla Arketype-projekt i ditt nya Arketype-projekt:
+1. Importera e-postkonfigurationer, skicka och förifyll åtgärdskod från den lokala utvecklingsmiljön. To import these settings and configuration, place the following files from your old Archetype project to your new Archetype project:
 
    * `[Archetype Project in Cloud Service Git]/core/src/main/java/com/<program name>/core/service`
    * `[Archetype Project in Cloud Service Git] /core/src/main/java/com/<program name>/core/servlets/FileAttachmentServlet.java`
    * `[Archetype Project in Cloud Service Git]/ui.apps/src/main/content/jcr_root/apps/<program name>/config`
 
-Din nya miljö innehåller nu formulär och relaterade resurser från den gamla miljön.
+Your new environment now has forms and related assets of old environment.

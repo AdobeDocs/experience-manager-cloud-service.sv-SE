@@ -1,15 +1,11 @@
 ---
 title: Markera en användare eller grupp dynamiskt för AEM Forms-centrerade arbetsflödessteg
-seo-title: Dynamically select a user or group for AEM Forms-centric workflow steps
 description: 'Lär dig hur du väljer en användare eller grupp för en [!DNL AEM Forms] arbetsflöde vid körning. '
-seo-description: Learn how to select a user or group for an [!DNL AEM Forms] workflow at the runtime.
-uuid: 19dcbda4-61af-40b3-b10b-68a341373410
 content-type: troubleshooting
 topic-tags: publish
-discoiquuid: e6c9f3bb-8f20-4889-86f4-d30578fb1c51
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 3c2a66ac13ccee9eef87ed3c97288a7475ac64d0
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -116,9 +112,9 @@ function getAdobeSignRecipients() {
 
 ## Använd Java-gränssnittet för att dynamiskt välja en användare eller grupp {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-Du kan använda [RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java-gränssnittet för att dynamiskt välja en användare eller en grupp för [!DNL Adobe Sign] och Tilldela uppgiftssteg. Du kan skapa ett OSGi-paket som använder [RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java interface and deploy it to the [!DNL AEM Forms] server. Det gör alternativet tillgängligt för val i Tilldela uppgift och [!DNL Adobe Sign] komponenter i AEM.
+Du kan använda [RecipientInfoSpecifier](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java-gränssnittet för att dynamiskt välja en användare eller en grupp för [!DNL Adobe Sign] och Tilldela uppgiftssteg. Du kan skapa ett OSGi-paket som använder [RecipientInfoSpecifier](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java interface and deploy it to the [!DNL AEM Forms] server. Det gör alternativet tillgängligt för val i Tilldela uppgift och [!DNL Adobe Sign] komponenter i AEM.
 
-Du behöver [[!DNL AEM Forms] Klient-SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) jar och [granit burk](https://repo.adobe.com/nexus/content/groups/public/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) filer för att kompilera kodexemplet som anges nedan. Lägg till dessa jar-filer som externa beroenden i OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
+Du behöver [[!DNL AEM Forms] Klient-SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) jar och [granit burk](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) filer för att kompilera kodexemplet som anges nedan. Lägg till dessa jar-filer som externa beroenden i OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
 
 1. Öppna Eclipse IDE. Navigera till **[!UICONTROL File]**> **[!UICONTROL New Project]**.
 1. På skärmen Välj en guide väljer du **[!UICONTROL Maven Project]** och klicka **[!UICONTROL Next]**.
@@ -141,7 +137,7 @@ Du behöver [[!DNL AEM Forms] Klient-SDK](https://helpx.adobe.com/aem-forms/kb/a
            <repository>
                <id>adobe</id>
                <name>Adobe Public Repository</name>
-               <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+               <url>https://repo1.maven.org/maven2/com/adobe/</url>
                <layout>default</layout>
            </repository>
        </repositories>
@@ -149,7 +145,7 @@ Du behöver [[!DNL AEM Forms] Klient-SDK](https://helpx.adobe.com/aem-forms/kb/a
            <pluginRepository>
                <id>adobe</id>
                <name>Adobe Public Repository</name>
-               <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+               <url>https://repo1.maven.org/maven2/com/adobe/</url>
                <layout>default</layout>
            </pluginRepository>
        </pluginRepositories>
@@ -225,7 +221,7 @@ Du behöver [[!DNL AEM Forms] Klient-SDK](https://helpx.adobe.com/aem-forms/kb/a
    </project>
    ```
 
-1. Lägg till källkod som använder [RecipientInfoSpecifier](https://helpx.adobe.com/experience-manager/6-3/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java-gränssnittet för att dynamiskt välja en användare eller grupp för steget Tilldela uppgift. Exempelkod finns i [Exempel för dynamiskt val av användare eller grupp med Java-gränssnittet](#-sample-scripts-for).
+1. Lägg till källkod som använder [RecipientInfoSpecifier](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java-gränssnittet för att dynamiskt välja en användare eller grupp för steget Tilldela uppgift. Exempelkod finns i [Exempel för dynamiskt val av användare eller grupp med Java-gränssnittet](#-sample-scripts-for).
 1. Öppna en kommandotolk och navigera till katalogen som innehåller OSGi-paketprojektet. Använd följande kommando för att skapa OSGi-paketet:
 
    `mvn clean install`
@@ -349,4 +345,3 @@ public class DummyRecipientChoser implements RecipientInfoSpecifier {
 
 }
 ```
-
