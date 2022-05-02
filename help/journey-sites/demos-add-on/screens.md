@@ -2,9 +2,9 @@
 title: Aktivera AEM Screens för din demowebbplats
 description: Lär dig hur du aktiverar den fullständiga as a Cloud Service AEM Screens-upplevelsen på din demowebbplats.
 exl-id: 369eea9f-2e81-4b87-841c-188b67657bab
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: cdc60627bac17166c12ebdb77e7cf5b0ed92dc80
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '2671'
 ht-degree: 0%
 
 ---
@@ -296,7 +296,7 @@ Först måste du publicera ditt demoinnehåll för skärmar på AEM Screens as a
 
    ![Skapa visning](assets/create-display.png)
 
-1. När kanalen har skapats klickar du på den för att visa information. Visningen måste tilldelas en kanal som har synkroniserats från din demowebbplats. Klicka på **Tilldela kanal** längst upp till höger på skärmen.
+1. När visningen har skapats klickar du på visningsnamnet för att öppna skärmen med visningsinformation. Visningen måste tilldelas en kanal som har synkroniserats från din demowebbplats. Klicka på **Tilldela kanal** längst upp till höger på skärmen.
 
    ![Kanaldetaljer](assets/channel-detail.png)
 
