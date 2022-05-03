@@ -2,10 +2,10 @@
 title: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
 description: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
 exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
-source-git-commit: 5c2fcb815e345a5c7fa88f02488d15ffb1a71435
+source-git-commit: d3208a9a0785909e9b62d4033437a8ff44f7ba3e
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 9%
+source-wordcount: '846'
+ht-degree: 8%
 
 ---
 
@@ -40,7 +40,7 @@ De största skillnaderna finns i följande områden:
 
 * [Anpassade runmodes tillåts inte](#custom-runmodes)
 
-* [Borttagning av replikeringsagenter](#replication-agents)
+* [Borttagning av replikeringsagenter och relaterade ändringar](#replication-agents)
 
 * [Borttagning av Classic UI](#classic-ui)
 
@@ -96,13 +96,15 @@ Följande körningslägen är färdiga för AEM Cloud Service:
 
 Det går inte att använda ytterligare eller anpassade körningslägen i AEM Cloud Service.
 
-## Borttagning av replikeringsagenter {#replication-agents}
+## Borttagning av replikeringsagenter och relaterade ändringar {#replication-agents}
 
 I AEM Cloud Service publiceras innehåll med [Distribution av säljinnehåll](https://sling.apache.org/documentation/bundles/content-distribution.html). Replikeringsagenterna som användes i tidigare versioner av AEM används inte längre eller tillhandahålls, vilket kan påverka följande områden i befintliga AEM projekt:
 
 * Anpassade arbetsflöden som till exempel skickar innehåll till replikeringsagenter för förhandsgranskningsservrar.
 * Anpassning till replikeringsagenter för att omvandla innehåll
 * Använda omvänd replikering för att återföra innehåll från publicering till författaren
+
+Observera dessutom att knapparna för att pausa och inaktivera har tagits bort från administrationskonsolen för replikeringsagenten.
 
 ## Borttagning av Classic UI {#classic-ui}
 
