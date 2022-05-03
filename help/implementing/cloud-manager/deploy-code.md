@@ -2,9 +2,9 @@
 title: Distribuera koden
 description: Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: feee55b2d1814b14121030b2ec3c0cb286e87044
+source-git-commit: af1e682505d68a65a5e2b500d42f01f030e36ac1
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,18 @@ ht-degree: 0%
 
 # Distribuera koden {#deploy-your-code}
 
-Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
+Lär dig hur du distribuerar koden till Production med Cloud Manager-pipelines AEM as a Cloud Service.
+
+![Produktionspipeline](./assets/configure-pipeline/production-pipeline-diagram.png)
+
+Distribuera kod sömlöst till scenen och sedan till produktionen via en produktionsprocess. Körningen av produktionspipeline är uppdelad i två logiska faser.
+
+1. Distribution till scenmiljö
+   * Koden byggs och distribueras till scenmiljön för automatisk funktionstestning, UI-testning, upplevelsegranskning och UAT (User accept testing).
+1. Distribution till produktionsmiljö
+   * När bygget har validerats på scenen och godkänts för att befordras till produktion distribueras samma bygge-artefakt till produktionsmiljön.
+
+_Det är bara pipeline-typen Full Stack Code som har stöd för kodskanning, funktionstestning, gränssnittstestning och upplevelsegranskning._
 
 ## Distribuera din kod med Cloud Manager på AEM as a Cloud Service {#deploying-code-with-cloud-manager}
 
