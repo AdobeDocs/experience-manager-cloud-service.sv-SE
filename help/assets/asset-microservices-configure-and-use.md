@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Compute Microservices,Workflow,Asset Processing
 role: Architect,Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: 9645cf2ef95c41b8d319bb22eb4d69bd11525eca
+source-git-commit: 2478276c8f8a2c92a63e24e50520e8d81b9a4e26
 workflow-type: tm+mt
-source-wordcount: '2640'
+source-wordcount: '2835'
 ht-degree: 0%
 
 ---
@@ -185,7 +185,7 @@ Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade å
 
 I en situation där ytterligare bearbetning av resurser krävs som inte kan utföras med bearbetningsprofilerna, kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Med efterbearbetning kan du lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
 
-Efterbehandlingsarbetsflöden, om de är konfigurerade, körs automatiskt av [!DNL Experience Manager] när mikrotjänsterna har behandlats klart. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa arbetsflödena. Exemplen innehåller:
+Efterbehandlingsarbetsflöden, eller [Starta arbetsflödet automatiskt](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/auto-start-workflows.html), om detta är konfigurerat, körs automatiskt av [!DNL Experience Manager] när mikrotjänsterna har behandlats klart. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa arbetsflödena. Exemplen innehåller:
 
 * Anpassade arbetsflödessteg för att bearbeta resurser.
 * Integreringar för att lägga till metadata eller egenskaper i resurser från externa system, till exempel produkt- eller processinformation.
@@ -233,6 +233,32 @@ Du kan konfigurera den anpassade arbetsflödets körningstjänst för de avancer
 * Efterbehandlingsarbetsflöden efter uttryck (`postProcWorkflowsByExpression`): Flera arbetsflödesmodeller kan listas baserat på olika reguljära uttryck. Uttryck och modeller ska separeras med ett kolon. Det reguljära uttrycket ska peka direkt på resursnoden och inte på en av återgivningarna eller filerna. Till exempel: `/content/dam(/.*/)(marketing/seasonal)(/.*):/var/workflow/models/my-workflow`.
 
 Mer information om hur du distribuerar en OSGi-konfiguration finns i [distribuera till [!DNL Experience Manager]](/help/implementing/deploying/overview.md).
+
+#### Inaktivera arbetsflödeskörning efter bearbetning
+
+När efterbearbetning inte behövs skapar och använder du en tom arbetsflödesmodell i __Starta arbetsflödet automatiskt__ markering.
+
+##### Skapa arbetsflödesmodellen Inaktiverad autostart
+
+1. Navigera till __Verktyg > Arbetsflöde > Modeller__
+1. Välj __Skapa > Skapa modell__ från det övre åtgärdsfältet
+1. Ange en titel och ett namn för den nya arbetsflödesmodellen, till exempel:
+   * Titel: Inaktivera autostart av arbetsflöde
+   * Namn: disable-auto-start-workflow
+1. Välj __Klar__ för att skapa arbetsflödesmodellen
+1. __Välj__ och __Redigera__ den nyskapade arbetsflödesmodellen
+1. Välj __Steg 1__ från modelldefinitionen och ta bort den
+1. Öppna __Side Panel__ och markera __Steg__
+1. Dra __DAM-uppdateringsarbetsflödet för resurser har slutförts__ steg in i modelldefinitionen
+1. Välj __Sidinformation__ (bredvid __Side Panel__ växla) och markera __Öppna egenskaper__
+1. Under __Grundläggande__ flik, välja __Övergående arbetsflöde__
+1. Välj __Spara och stäng__ i det övre åtgärdsfältet
+1. Välj __Synkronisera__ i det övre åtgärdsfältet
+1. Stäng arbetsflödesmodellredigeraren
+
+##### Använda arbetsflödesmodellen Inaktiverad autostart
+
+Följ stegen som beskrivs i [använda en arbetsflödesmodell i en mapp](#apply-workflow-model-to-folder) och ange __Inaktivera autostart av arbetsflöde__ som __Starta arbetsflödet automatiskt__ för mappar kräver inte efterbearbetning av resurser.
 
 ## God praxis och begränsningar {#best-practices-limitations-tips}
 
