@@ -3,10 +3,10 @@ title: Versionsinformation om Cloud Manager 2022.5.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2022.5.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 48f645d43779a40aaa58b92bb3c8fd8020e32640
+source-git-commit: c48d6f553c6a973a200fb11c2112beaf9be16d1c
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 2%
+source-wordcount: '177'
+ht-degree: 1%
 
 ---
 
@@ -21,8 +21,17 @@ På den här sidan visas versionsinformation för Cloud Manager 2022.5.0 i AEM a
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.5.0 i AEM as a Cloud Service 5 maj 2022. Nästa version är planerad till den 9 juni 2022.
+Releasedatum för Cloud Manager version 2022.5.0 i AEM as a Cloud Service 5 maj 2022. Nästa version är planerad till 9 juni 2022.
 
 ## Nyheter {#what-is-new}
 
+* Miljösidan har en kolumn som visar AEM miljöversion.
+* Vid körning av pipeline visas nu fel på den översta nivån i användargränssnittet på körningsskärmen.
+* Kör produktionsdistributionssteget igen via användargränssnittet i Cloud Manager.
+* Återanvänd byggbilder för att återköra produktionsdistributionssteget.
+* Nytt API för att möjliggöra självbetjäningsborttagning av nätverksinfrastruktur.
+
 ## Felkorrigeringar {#bug-fixes}
+
+* Knappen Hämta loggar från loggarna för gränssnittets teststeg hämtade inte loggarna.
+* Vissa körningar fastnade i kontexten för att aktivera utlösare och avbryter godkännandesteget.
