@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: e51490a9422dab3cc4980eb1d2288d7c264343be
+source-git-commit: 66bc262b35f69b7877e4a01df9ab26395afd604d
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1791'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ När du har skapat och granskat ditt innehåll i författarmiljön är målet at
 Detta kallas att publicera en sida. När du vill ta bort en sida från publiceringsmiljön kallas det för att avpublicera. När sidan publiceras och avpubliceras är den fortfarande tillgänglig i redigeringsmiljön för ytterligare ändringar tills du tar bort den.
 
 Du kan publicera/avpublicera en sida direkt eller vid ett fördefinierat datum/tid i framtiden.
+
+>[!NOTE]
+>
+>När du publicerar ett Experience Fragment följer du i princip samma procedur som när du publicerar en sida, även om du väljer Experience Fragments-konsolen eller redigeraren.
 
 ## Terminologi {#terminology}
 

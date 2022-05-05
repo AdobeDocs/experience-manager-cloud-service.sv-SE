@@ -1,22 +1,17 @@
 ---
 title: IMS-konfiguration som ska användas vid integrering med Adobe Analytics
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Analytics
-source-git-commit: 7686329de2ef621f69899e07efa9af16e50a35f9
+exl-id: 12bd1573-373a-4001-be71-c8f155ef6896
+source-git-commit: 0030b0f6f17dd66229f681e9c513786de4fe10a2
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
 
 # IMS-konfiguration som ska användas vid integrering med Adobe Analytics {#ims-configuration-for-integration-with-adobe-analytics}
 
-Integrationen av Adobe Experience Manager as a Cloud Service (AEMaaCS) med Adobe Analytics via API:t för Analytics Standard kräver att du konfigurerar Adobe IMS (Identity Management System). Konfigurationen görs med Adobe Developer Console.
-
->[!NOTE]
-> 
->Den här funktionen är tillgänglig i prerelease-kanalen.
->
->Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
+Integrationen av Adobe Experience Manager as a Cloud Service (AEMaaCS) med Adobe Analytics via API:t för Analytics Standard kräver att du konfigurerar Adobe IMS (Identity Management System). Konfigurationen genomförs med Adobe Developer Console.
 
 >[!NOTE]
 >
@@ -70,7 +65,7 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
 ### Skapa projektet {#creating-the-project}
 
-Öppna Adobe Developer Console för att skapa ett projekt med Adobe Analytics som AEM ska använda:
+Öppna Adobe Developer Console och skapa ett projekt med Adobe Analytics som AEM ska använda:
 
 1. Öppna Adobe Developer Console for Projects:
 

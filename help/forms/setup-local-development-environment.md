@@ -2,9 +2,9 @@
 title: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 921975034035f9b6a07ae2b76f433cef30f307a3
+source-git-commit: c7b4907a2d4dbecf03ac5b51376fb534096f5212
 workflow-type: tm+mt
-source-wordcount: '2641'
+source-wordcount: '2698'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,13 @@ ht-degree: 1%
 
 När du konfigurerar och konfigurerar [!DNL  Adobe Experience Manager Forms] som [!DNL  Cloud Service] -miljö kan du konfigurera utvecklings-, staging- och produktionsmiljöer i molnet. Dessutom kan du konfigurera och konfigurera en lokal utvecklingsmiljö.
 
-Du kan använda den lokala utvecklingsmiljön för att skapa formulär och relaterade resurser (teman, mallar, anpassade överföringsåtgärder med mera) och [konvertera PDF forms till adaptiv Forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html) utan att logga in i molnutvecklingsmiljön. När ett adaptivt formulär eller relaterade resurser är klara på den lokala utvecklingsinstansen kan du exportera det adaptiva formuläret och tillhörande resurser från den lokala utvecklingsmiljön till en Cloud Service-miljö för ytterligare testning och publicering.
+Du kan använda den lokala utvecklingsmiljön för att utföra följande åtgärder utan att logga in i molnutvecklingsmiljön:
+
+* [Skapa formulär](creating-adaptive-form.md) och samhörande resurser (teman, mallar, anpassade överföringsåtgärder med mera)
+* [Konvertera PDF forms till adaptiv Forms](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)
+* Bygg applikationer som ska genereras [Kundkommunikation](aem-forms-cloud-service-communications-introduction.md) on demand eller i gruppläge.
+
+När ett adaptivt formulär eller relaterade resurser är klara för den lokala utvecklingsinstansen eller ett program att generera [Kundkommunikation] är klart kan du exportera Adaptive Form eller Customer Communications från den lokala utvecklingsmiljön till en Cloud Service-miljö för vidare testning eller gå över till produktionsmiljöer.
 
 Du kan också utveckla och testa anpassad kod som anpassade komponenter och förifyllningstjänst i den lokala utvecklingsmiljön. När den anpassade koden har testats och är klar kan du använda Git-databasen i Cloud Servicens utvecklingsmiljö för att distribuera den anpassade koden.
 
@@ -67,14 +73,14 @@ Du behöver följande program för att konfigurera en lokal utvecklingsmiljö. L
 |---|---|---|
 | Adobe Experience Manager as a Cloud Service SDK | SDK innehåller [!DNL Adobe Experience Manager] Verktygen QuickStart och Dispatcher | Hämta senaste SDK från [Programvarudistribution](#software-distribution) |  |
 | Adobe Experience Manager Forms feature archive (AEM Forms add-on) | Verktyg för att skapa, formatera och optimera adaptiva Forms och andra Adobe Experience Manager Forms-funktioner | Hämta från [Programvarudistribution](#software-distribution) |
-| (Valfritt) Adobe Experience Manager Forms referensinnehåll | Tools to create, style, and optimize Adaptive Forms and other Adobe Experience Manager Formsfeatures | Hämta från [Programvarudistribution](#software-distribution) |
+| (Valfritt) Adobe Experience Manager Forms referensinnehåll | Verktyg för att skapa, formatera och optimera adaptiva Forms och andra Adobe Experience Manager Forms-funktioner | Hämta från [Programvarudistribution](#software-distribution) |
 | (Valfritt) Adobe Experience Manager Forms Designer | Verktyg för att skapa, formatera och optimera adaptiva Forms och andra Adobe Experience Manager Forms-funktioner | Hämta från [Programvarudistribution](#software-distribution) |
 
-### Download the latest version of software from Software Distribution {#software-distribution}
+### Ladda ned den senaste versionen av programvara från Software Distribution {#software-distribution}
 
-Om du vill hämta den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms add-on), formulärreferensresurser eller Forms Designer från [Snedvridning av programvara](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html):
+Om du vill hämta den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms add-on), formulärreferensresurser eller Forms Designer från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html):
 
-1. Logga in på https://experience.adobe.com/#/downloads med din Adobe ID
+1. Logga in på <https://experience.adobe.com/#/downloads> med din Adobe ID
 
    >[!NOTE]
    >
@@ -131,10 +137,10 @@ Skapa användare som Form Developer och Form Practitioner och [lägga till dessa
 | Användartyp | AEM |
 |---|---|
 | Formuläradministratör / | [!DNL forms-users] (AEM Forms-användare), [!DNL template-authors], [!DNL workflow-users], [!DNL workflow-editors]och [!DNL fdm-authors] |
-| Form developer | [!DNL forms-users] (AEM Forms Users), [!DNL template-authors], [!DNL workflow-users], [!DNL workflow-editors], and [!DNL fdm-authors] |
+| Formulärutvecklare | [!DNL forms-users] (AEM Forms-användare), [!DNL template-authors], [!DNL workflow-users], [!DNL workflow-editors]och [!DNL fdm-authors] |
 | Customer Experience Lead eller UX Designer | [!DNL forms-users], [!DNL template-authors] |
 | AEM-administratör | [!DNL aem-administrators], [!DNL fd-administrators] |
-| End user | När en användare måste logga in för att visa och skicka ett adaptivt formulär lägger du till sådana användare i [!DNL forms-users] grupp. </br> När ingen användarautentisering krävs för att få tillgång till Adaptiv Forms ska du inte tilldela någon grupp till sådana användare. |
+| Slutanvändare | När en användare måste logga in för att visa och skicka ett adaptivt formulär lägger du till sådana användare i [!DNL forms-users] grupp. </br> När ingen användarautentisering krävs för att få tillgång till Adaptiv Forms ska du inte tilldela någon grupp till sådana användare. |
 
 <!--  
 
@@ -176,21 +182,21 @@ Use this project to update configurations, create overlays, develop custom Adapt
 
 ## Konfigurera lokal utvecklingsmiljö för DoR (Document of Record){#docker-microservices}
 
-AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utveckling av Document of Record och för användning av andra mikrotjänster. Du slipper konfigurera plattformsspecifika binärfiler och anpassningar manuellt. Så här installerar du miljön:
+AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utveckling av Document of Record och för användning av andra mikrotjänster. Du slipper konfigurera plattformsspecifika binärfiler och anpassningar manuellt. Så här konfigurerar du miljön:
 
 1. Installera och konfigurera Docker:
 
-   * (For Microsoft Windows) Install [Docker Desktop](https://www.docker.com/products/docker-desktop). It configures Docker Engine and docker-compose on your machine.
+   * (För Microsoft® Windows) Installera [Docker Desktop](https://www.docker.com/products/docker-desktop). Den konfigurerar `Docker Engine` och `docker-compose` på din dator.
 
    * (Apple macOS) Installera [Docker Desktop för Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac). Det innehåller Docker Engine, Docker CLI-klient, Docker Compose, Docker Content Trust, Kubernetes och Credential Helper.
 
-   * (För Linux) Installera [Dockningsmotor](https://docs.docker.com/engine/install/#server) och [Docker Compose](https://docs.docker.com/compose/install/) på din dator.
+   * (För Linux®) Installera [Dockningsmotor](https://docs.docker.com/engine/install/#server) och [Docker Compose](https://docs.docker.com/compose/install/) på din dator.
    >[!NOTE]
    >
-   > * För Apple macOS: vitlistmappar med lokala AEM Author-instanser.
+   > * För Apple macOS tillåtslista du mappar som innehåller lokala AEM Author-instanser.
    >
    > * Docker Desktop för Windows har stöd för två backends, Hyper-V
-      > (äldre) och WSL2 (modern). File sharing is automatically
+      > (äldre) och WSL2 (modern). Fildelning sker automatiskt
       > hanteras av Docker när WSL2 används (modern). Du måste
       > konfigurera fildelning explicit när Hyper-V används (äldre).
 
@@ -209,8 +215,8 @@ AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utv
 
 1. Kontrollera att din lokala AEM Author-instans är igång och körs. Kör följande kommando för att starta SDK:
 
-   * (i Microsoft Windows) `sdk.bat start`
-   * (i Linux eller Apple Mac OS) `AEM_HOME=[local AEM Author installation] ./sdk.sh start`
+   * (i Microsoft® Windows) `sdk.bat start`
+   * (i Linux® eller Apple macOS) `AEM_HOME=[local AEM Author installation] ./sdk.sh start`
 
    >[!NOTE]
    >
@@ -218,7 +224,7 @@ AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utv
 
    ![start-sdk-command](assets/start-sdk.png)
 
-Du kan nu använda den lokala utvecklingsmiljön för att återge arkivhandlingar. Testa genom att överföra en XDP-fil till miljön och återge den. http://localhost:4502/libs/xfaforms/profiles/default.print.pdf?template=crx:///content/dam/formsanddocuments/check-request.xdp konverterar till exempel XDP-filen till PDF-dokumentet.
+Du kan nu använda den lokala utvecklingsmiljön för att återge arkivhandlingar. Testa genom att överföra en XDP-fil till miljön och återge den. Till exempel: <http://localhost:4502/libs/xfaforms/profiles/default.print.pdf?template=crx:///content/dam/formsanddocuments/cheque-request.xdp> konverterar XDP-filen till PDF-dokumentet.
 
 ## Konfigurera ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen {#forms-cloud-service-local-development-environment}
 
@@ -226,7 +232,7 @@ Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurati
 
 | Teman | Mallar | Formulärdatamodeller |
 ---------|----------|---------
-| Arbetsyta 3.0 | Grundläggande | Microsoft Dynamics 365 |
+| Arbetsyta 3.0 | Grundläggande | Microsoft® Dynamics 365 |
 | Tranquil | Tom | Salesforce |
 | Urbane |  |  |
 | Ultramarin |  |  |
@@ -234,7 +240,7 @@ Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurati
 
 >[!NOTE]
 >
-> Installera AEM Archetype version 30 eller senare för att hämta och använda Microsoft Dynamics 365 och Salesforce Form Data Models med AEM Forms as a Cloud Service.
+> Installera AEM Archetype version 30 eller senare för att hämta och använda Microsoft® Dynamics 365 och Salesforce Form Data Models med AEM Forms as a Cloud Service.
 > Konfigurera AEM Archetype version 32 eller senare för att få tillgång till och använda temana Tranquil, Urbane och Ultramarine med AEM Forms as a Cloud Service.
 
 Så här ställer du in projektet:
@@ -248,15 +254,19 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
 
 1. **Skapa en [!DNL Experience Manager Forms] som [Cloud Service] projekt:** Skapa en [!DNL Experience Manager Forms] som [Cloud Service] projekt baserat på [AEM Archetype 32](https://github.com/adobe/aem-project-archetype/releases/tag/aem-project-archetype-32) eller senare. Med denna typ kan utvecklarna enkelt börja utveckla för [!DNL AEM Forms] as a Cloud Service. Den innehåller även några exempelteman och mallar som hjälper dig att snabbt komma igång.
 
-   Öppna kommandotolken och kör nedanstående kommando för att skapa en [!DNL Experience Manager Forms] as a Cloud Service projekt. Inkludera [!DNL Forms] specifika konfigurationer, teman och mallar, ange `includeFormsenrollment=y`.
+   Öppna kommandotolken och kör nedanstående kommando för att skapa en [!DNL Experience Manager Forms] as a Cloud Service projekt.
 
    ```shell
-   mvn -B archetype:generate -DarchetypeGroupId=com.adobe.aem -DarchetypeArtifactId=aem-project-archetype -DarchetypeVersion=32 -DaemVersion="cloud" -DappTitle="My Site" -DappId="mysite" -DgroupId="com.mysite" -DincludeFormsenrollment="y"
+   mvn -B archetype:generate -DarchetypeGroupId=com.adobe.aem -DarchetypeArtifactId=aem-project-archetype-DarchetypeVersion=32 -DaemVersion="cloud" -DappTitle="My Site" -DappId="mysite" -DgroupId="com.mysite" -DincludeFormsenrollment="y" -DincludeFormscommunications="y" -DincludeExamples="y"
    ```
 
-   Ändra också `appTitle`, `appId`och `groupId`, i ovanstående kommando för att återspegla din miljö.
+   Ändra `appTitle`, `appId`och `groupId` i ovanstående kommando för att återspegla din miljö.
 
-1. Deploy the project to your local development environment. Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
+   * Använd `includeFormsenrollment=y` om du vill inkludera Forms-specifika konfigurationer, teman, mallar, kärnkomponenter och beroenden som krävs för att skapa Adaptiv Forms. Om du använder Forms Portal anger du `includeExamples=y` alternativ. Forms Portal-komponenterna läggs till i projektet.
+
+   * Använd `includeFormscommunications=y` innehåller Forms Core-komponenter och beroenden som krävs för att inkludera funktionen för kundkommunikation.
+
+1. Distribuera projektet till din lokala utvecklingsmiljö. Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
 
    `mvn -PautoInstallPackage clean install`
 
@@ -264,15 +274,13 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
 
 1. [Distribuera koden till [!DNL AEM Forms] as a Cloud Service miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#customer-releases).
 
+## Konfigurera lokala Dispatcher-verktyg {#setup-local-dispatcher-tools}
 
-
-## Set up local Dispatcher tools {#setup-local-dispatcher-tools}
-
-Dispatcher is an Apache HTTP Web server module that provides a security and performance layer between the CDN and AEM Publish tier. Dispatcher is an integral part of the overall Experience Manager architecture and should be part of local development environment.
+Dispatcher är en Apache HTTP-webbservermodul som tillhandahåller ett säkerhets- och prestandalager mellan CDN- och AEM-publiceringsnivån. Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön.
 
 Utför följande steg för att konfigurera lokal Dispatcher och lägg sedan till Forms-specifika regler i den:
 
-### Set up local Dispatcher {#setup-local-dispatcher}
+### Konfigurera lokal Dispatcher {#setup-local-dispatcher}
 
 The [!DNL Experience Manager] as a Cloud Service SDK innehåller den rekommenderade versionen av Dispatcher Tools, som gör det lättare att konfigurera, validera och simulera Dispatcher lokalt. Dispatcher Tools är Docker-baserade och har kommandoradsverktyg för att överföra konfigurationsfilerna för Apache HTTP Web Server och Dispatcher till ett kompatibelt format och distribuera dem till Dispatcher som körs i Docker-behållaren.
 
@@ -285,7 +293,7 @@ Detaljerade anvisningar om hur du konfigurerar Dispatcher finns i [Konfigurera l
 Så här konfigurerar du Dispatcher-cachen för Experience Manager Forms as a Cloud Service:
 
 1. Öppna AEM och gå till `\src\conf.dispatcher.d\available_farms`
-1. Create a copy of the `default.farm` file. Till exempel, `forms.farm`.
+1. Skapa en kopia av `default.farm` -fil. Till exempel, `forms.farm`.
 1. Öppna den nyskapade `forms.farm` -fil för redigering och ersättning av följande kod:
 
    ```json
@@ -316,8 +324,8 @@ Så här konfigurerar du Dispatcher-cachen för Experience Manager Forms as a Cl
 * Cachelagrar lokaliserade adaptiva Forms:
    * Använd URL-format `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
    * Alternativet Webbläsarspråk är inaktiverat som standard. Om du vill ändra språkinställningen för webbläsaren
-* När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`, och Använd webbläsarspråk i konfigurationshanteraren är inaktiverat, används den icke-lokaliserade versionen av det adaptiva formuläret. The non-localized language is the language used while developing the Adaptive Form. Det språk som är konfigurerat för webbläsaren (webbläsarens språkområde) beaktas inte och en icke-lokaliserad version av det anpassade formuläret används.
-* När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`, och Använd webbläsarspråk i konfigurationshanteraren är aktiverat, kommer en lokaliserad version av det adaptiva formuläret att användas, om en sådan finns. Språket i det lokaliserade adaptiva formuläret baseras på det språk som är konfigurerat för webbläsaren (webbläsarens språkområde). It can lead to [caching only first instance of an Adaptive Form]. Om du vill förhindra att ett problem inträffar på din instans kan du läsa [endast första instansen av ett adaptivt formulär cachelagras](troubleshooting-caching-performance.md) i felsökningsavsnittet.
+* När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`, och Använd webbläsarspråk i konfigurationshanteraren är inaktiverat, används den icke-lokaliserade versionen av det adaptiva formuläret. Det icke-lokaliserade språket är det språk som används vid utvecklingen av det adaptiva formuläret. Det språk som är konfigurerat för webbläsaren (webbläsarens språkområde) beaktas inte och en icke-lokaliserad version av det anpassade formuläret används.
+* När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`, och Använd webbläsarspråk i konfigurationshanteraren är aktiverat, kommer en lokaliserad version av det adaptiva formuläret att användas, om en sådan finns. Språket i det lokaliserade adaptiva formuläret baseras på det språk som är konfigurerat för webbläsaren (webbläsarens språkområde). Det kan leda till [cachelagra endast första instansen av ett adaptivt formulär]. Om du vill förhindra att ett problem inträffar på din instans kan du läsa [endast första instansen av ett adaptivt formulär cachelagras](troubleshooting-caching-performance.md) i felsökningsavsnittet.
 
 Din lokala utvecklingsmiljö är klar.
 
@@ -383,19 +391,19 @@ Säkerhetskopiera dina adaptiva Forms, mallar, formulärdatamodell, tema, konfig
 
 ### Importera säkerhetskopian till din nya SDK-miljö {#import-the-backup-to-your-new-SDK-environment}
 
-Importera adaptiva Forms, mallar, formulärdatamodell, tema, konfigurationer och anpassad kod till din nya miljö. You can perform the following action to import backup:
+Importera adaptiva Forms, mallar, formulärdatamodell, tema, konfigurationer och anpassad kod till din nya miljö. Du kan utföra följande åtgärd för att importera säkerhetskopior:
 
-1. [Import](import-export-forms-templates.md#manage-forms-and-related-assets) Adaptive Forms, themes, and PDF forms to new SDK environments.
-1. Import Adaptive Form templates to new SDK environment.
+1. [Importera](import-export-forms-templates.md#manage-forms-and-related-assets) Adaptiv Forms, teman och PDF forms till nya SDK-miljöer.
+1. Importera adaptiva formulärmallar till en ny SDK-miljö.
 
-1. Upload Form Data Models to new SDK environment.
+1. Överför formulärdatamodeller till en ny SDK-miljö.
 
 1. Importera redigerbara mallar, molnkonfigurationer och arbetsflödesmodell. Om du vill importera alla tidigare nämnda objekt till din nya SDK-miljö importerar du det CRX-paket som innehåller dessa objekt till din nya SDK-miljö.
 
-1. Importera e-postkonfigurationer, skicka och förifyll åtgärdskod från den lokala utvecklingsmiljön. To import these settings and configuration, place the following files from your old Archetype project to your new Archetype project:
+1. Importera e-postkonfigurationer, skicka och förifyll åtgärdskod från den lokala utvecklingsmiljön. Om du vill importera dessa inställningar och konfigurationer placerar du följande filer från ditt gamla Arketype-projekt i ditt nya Arketype-projekt:
 
    * `[Archetype Project in Cloud Service Git]/core/src/main/java/com/<program name>/core/service`
    * `[Archetype Project in Cloud Service Git] /core/src/main/java/com/<program name>/core/servlets/FileAttachmentServlet.java`
    * `[Archetype Project in Cloud Service Git]/ui.apps/src/main/content/jcr_root/apps/<program name>/config`
 
-Your new environment now has forms and related assets of old environment.
+Din nya miljö innehåller nu formulär och relaterade resurser från den gamla miljön.

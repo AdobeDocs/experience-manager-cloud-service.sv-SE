@@ -2,9 +2,9 @@
 title: Förhandsgranska innehåll
 description: Lär dig hur du använder AEM förhandsvisningstjänst för att förhandsgranska innehåll innan du publicerar.
 exl-id: 6b4b57f6-2e66-4c83-94d9-bc1e0daab0f3
-source-git-commit: e70e6ee055c2542752e66e53aa70a9378b1bc5c0
+source-git-commit: 66bc262b35f69b7877e4a01df9ab26395afd604d
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ AEM erbjuder en tjänst för förhandsgranskning av webbplatser som gör att utv
 Det gör det lättare att förhandsgranska sidor som annars inte skulle vara synliga i redigeringsmiljön, som sidövergångar och annat innehåll på publiceringssidan.
 
 Mer information om förhandsvisningsmiljöerna finns i dokumentet [Hantera miljöer.](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
+
+>[!NOTE]
+>
+>När du publicerar ett Experience Fragment för förhandsgranskning följer du i princip samma procedur som för en sida, även om du väljer Experience Fragments-konsolen eller redigeraren.
 
 ## Publicera innehåll för förhandsgranskning {#publishing-content-to-preview}
 

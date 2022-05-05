@@ -2,16 +2,22 @@
 title: Få åtkomst till ditt innehåll via AEM-API:er
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du använder GraphQL-frågor för att komma åt innehållet i innehållsfragment.
 exl-id: 1adecc69-5f92-4007-8a2a-65bf1e960645
-source-git-commit: a2e36e296749c79040c9687bbd88288d8977086d
+source-git-commit: c44c58398da3d82be04e22a5e4293e79361a8def
 workflow-type: tm+mt
-source-wordcount: '1353'
-ht-degree: 1%
+source-wordcount: '1410'
+ht-degree: 0%
 
 ---
 
 # Få åtkomst till ditt innehåll via AEM-API:er {#access-your-content}
 
 I den här delen av [AEM Headless Developer Journey,](overview.md) du kan lära dig hur du använder GraphQL-frågor för att komma åt innehållet i dina innehållsfragment och skicka det till din app (headless delivery).
+
+>[!NOTE]
+>
+>En del av funktionaliteten i den här funktionen finns i prerelease-kanalen. Funktioner som rör beständiga frågor.
+> 
+>Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 ## Story hittills {#story-so-far}
 
@@ -242,7 +248,7 @@ It provides features such as syntax-highlighting, auto-complete, auto-suggest, t
 Innan du börjar med frågor om ditt innehåll måste du:
 
 * Aktivera slutpunkten
-   * Använd Verktyg -> Resurser -> GraphQL
+   * Använd Verktyg -> Allmänt -> GraphQL
    * [Aktivera GraphQL-slutpunkten](/help/headless/graphql-api/graphql-endpoint.md)
 
 * Installera GraphiQL (vid behov)
@@ -270,9 +276,10 @@ Fragmentmodellerna används:
 
 ### Var ska du testa dina frågor? {#where-to-test-your-queries}
 
-Frågorna kan anges i GraphiQL-gränssnittet, till exempel på:
+Frågorna kan anges i GraphiQL-gränssnittet. Du kan öppna frågeredigeraren från:
 
-* `http://localhost:4502/aem/graphiql.html`
+* **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
+* direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
 ![GraphiQL-gränssnitt](assets/graphiql-interface.png "GraphiQL-gränssnitt")
 

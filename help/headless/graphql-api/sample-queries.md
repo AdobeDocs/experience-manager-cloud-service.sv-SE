@@ -3,9 +3,9 @@ title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: a2e36e296749c79040c9687bbd88288d8977086d
+source-git-commit: c44c58398da3d82be04e22a5e4293e79361a8def
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1474'
 ht-degree: 2%
 
 ---
@@ -13,6 +13,12 @@ ht-degree: 2%
 # Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
 Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
+
+>[!NOTE]
+>
+>En del av funktionaliteten i den här funktionen finns i prerelease-kanalen. Funktioner som rör beständiga frågor.
+> 
+>Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 >[!NOTE]
 >
@@ -40,7 +46,11 @@ I de här exempelfrågorna finns illustrationer av hur du skapar frågor, tillsa
 >
 >Beroende på din instans kan du komma åt [GraphiQL-gränssnittet ingår i AEM GraphQL API](/help/headless/graphql-api/graphiql-ide.md) för att skicka och testa frågor.
 >
->Till exempel: `http://localhost:4502/aem/graphiql.html`
+>Du kan öppna frågeredigeraren från:
+>
+>* **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
+>* direkt, till exempel `http://localhost:4502/aem/graphiql.html`
+
 
 >[!NOTE]
 >

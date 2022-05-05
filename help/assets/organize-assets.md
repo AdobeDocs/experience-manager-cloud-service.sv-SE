@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management, Search
 role: User
 exl-id: 6b3ce076-2dd9-47f6-9b68-4fa52bfedd42
-source-git-commit: 5bf764c84d6676b575371bd865538a3f2c13a2ab
+source-git-commit: 333a0b0f6e0937a5ac6dc1a697c773f7bada45cc
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -90,12 +90,6 @@ Så här lägger du till taggar i en resurs:
    ![add-tags](assets/add-tags-to-asset.png)
 
 1. Klicka **Spara** om du vill uppdatera ändringar i metadata för resursen.
-
->[!NOTE]
->
->Du kan sortera taggstrukturen när du skapar smarta taggar och när du använder sökfilter med hjälp av taggpredikatet.
->
->Funktionen för att sortera taggar är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 Mer information finns i följande artiklar:
 

@@ -3,9 +3,9 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: a2e36e296749c79040c9687bbd88288d8977086d
+source-git-commit: 5f0221fad6086f8d5c5e9bd5164d05ea8d6e7d2c
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,10 @@ The **GraphiQL** kan du testa och felsöka GraphQL-frågor genom att aktivera:
 * se **Historik** av dina tidigare frågor
 * använder **Dokumentationsutforskaren** få tillgång till dokumentationen, hjälper dig att lära dig vilka metoder som finns tillgängliga.
 
-Till exempel:
+Du kan öppna frågeredigeraren från:
 
-* `http://localhost:4502/aem/graphiql.html`
+* **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
+* direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
 ![GraphiQL-gränssnitt](assets/cfm-graphiql-interface.png "GraphiQL-gränssnitt")
 

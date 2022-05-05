@@ -1,7 +1,7 @@
 ---
 title: Provisioneringsprocess - översikt
 description: Provisioneringsprocess - översikt
-source-git-commit: 2f40b11a20a4ebb3ff7d9d2835bbe56e91ddf96d
+source-git-commit: ffeda76f9c661117ddba50588ebea01d151ee8c3
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 7%
@@ -31,7 +31,7 @@ När automatisk etablering är klar:
 * Administratören kan lägga till användare och roller för ytterligare teammedlemmar via Admin Console
 * Granska rollbaserade behörigheter för användare för att fastställa behörighetstilldelningar i Cloud Manager
 
-> ![processurview.jpg](./assets/processOverview.jpg)
+![processurview.jpg](assets/processOverview.jpg)
 
 
 Mer information finns på [Anordnande av nyanställda på Experience Manager as a Cloud Service på Experience League](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=en)
@@ -49,7 +49,7 @@ Mer information finns på [Anordnande av nyanställda på Experience Manager as 
 
 ### 2. Anlita organisationer på Adobe Admin Console:
 
-![processurview2.jpg](./assets/processOverview2.jpg)
+![processurview2.jpg](assets/processOverview2.jpg)
 
 * Systemadministratör:
    * Tillhandahålla AEM program och miljöer.
@@ -62,7 +62,7 @@ Mer information finns på [Anordnande av nyanställda på Experience Manager as 
 
 ### 3. Anställ användare och hantera åtkomst i Admin Console:
 
-![processurview3.jpg](./assets/processOverview3.jpg)
+![processurview3.jpg](assets/processOverview3.jpg)
 
 Tre metoder att introducera användare, beroende på storlek och inställning:
 * Skapa användare i Admin Console manuellt

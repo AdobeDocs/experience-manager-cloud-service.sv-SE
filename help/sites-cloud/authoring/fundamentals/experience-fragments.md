@@ -2,9 +2,9 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 5c907a26a976b55f1e2850650057d907d358aa07
+source-git-commit: 66bc262b35f69b7877e4a01df9ab26395afd604d
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1560'
 ht-degree: 6%
 
 ---
@@ -354,6 +354,12 @@ Använda `.plain.` -väljaren i URL-adressen kan du komma åt den vanliga HTML-�
 >[!NOTE]
 >
 >Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att få tillgång till innehållet i Experience Fragment direkt, med endast URL:en](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
+
+## Publicera upplevelsefragment {#publishing-experience-fragments}
+
+Att publicera din upplevelsefragment är i stort sett detsamma som [publicera en sida](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) (dock från Experience Fragments-konsolen eller redigeraren).
+
+Du kan också [publicera till Förhandsgranska](/help/sites-cloud/authoring/fundamentals/previewing-content.md) (än en gång från Experience Fragments-konsolen eller -redigeraren).
 
 ## Exportera Experience Fragments {#exporting-experience-fragments}
 

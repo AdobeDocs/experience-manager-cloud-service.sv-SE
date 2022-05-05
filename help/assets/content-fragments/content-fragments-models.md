@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för ditt h
 feature: Content Fragments
 role: User
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: 0d964a981f7b9004e99768888f78558c57ae398a
+source-git-commit: 0030b0f6f17dd66229f681e9c513786de4fe10a2
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2892'
 ht-degree: 3%
 
 ---
@@ -58,7 +58,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    >[!NOTE]
    >
-   >När ett fält är **obligatoriskt** markeras den **etikett** som visas i den vänstra rutan med en asterisk (*****).
+   >När ett fält är **Obligatoriskt**, **Etikett** som anges i den vänstra rutan markeras med ett asterix (**&#42;**).
 
 ![egenskaper](assets/cfm-models-03.png)
 
@@ -74,8 +74,10 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
       * Skriva ett **Fältetikett** kommer att slutföra **Egenskapsnamn**  - om den är tom, och sedan kan den uppdateras manuellt.
 
          >[!CAUTION]
-         När egenskapen uppdateras manuellt **Egenskapsnamn** för en datatyp, observera att namn endast får innehålla latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
-         Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+         >
+         >När egenskapen uppdateras manuellt **Egenskapsnamn** för en datatyp, observera att namn endast får innehålla latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
+         >
+         >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
       Till exempel:
 
       ![fältegenskaper](assets/cfm-models-05.png)
@@ -130,7 +132,8 @@ Detta visas som en avgränsare i modellredigeraren, som avgränsar avsnitt i lis
 I fragmentredigeraren visas varje instans som en flik.
 
       >[!NOTE]
-      Den här datatypen används endast för formatering, den ignoreras av det AEM GraphQL-schemat.
+      >
+      >Den här datatypen används endast för formatering, den ignoreras av det AEM GraphQL-schemat.
 
 ## Egenskaper {#properties}
 
@@ -141,7 +144,8 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
    Observera följande namn när du uppdaterar den här egenskapen manuellt för en datatyp **måste** innehåller *endast* latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
 
    >[!CAUTION]
-   Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+   >
+   >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
 * **Återge som**
 De olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan ange om författaren ska se en enda instans av fältet eller om den ska kunna skapa flera instanser.
@@ -171,20 +175,18 @@ Innehållet (för det specifika fältet) måste vara unikt för alla innehållsf
    Till exempel en **Enkelradig text** fältet anropades `Country` i Content Fragment Model får inte ha värdet `Japan` i två beroende innehållsfragment. En varning kommer att skickas när ett försök görs att utföra den andra instansen.
 
    >[!NOTE]
-   Unikitet säkerställs per språkrot.
+   >
+   >Unikitet säkerställs per språkrot.
 
    >[!NOTE]
-   Variationer kan ha samma *unik* som variationer av samma fragment, men inte samma värde som används i andra variationer av fragment.
+   >
+   >Variationer kan ha samma *unik* som variationer av samma fragment, men inte samma värde som används i andra variationer av fragment.
 
 * Se **[Innehållsreferens](#content-reference)** om du vill ha mer information om den specifika datatypen och dess egenskaper.
 
 * Se **[Fragmentreferens (kapslade fragment)](#fragment-reference-nested-fragments)** om du vill ha mer information om den specifika datatypen och dess egenskaper.
 
 * **Översättningsbar**
-
-   >[!NOTE]
-   Den här funktionen är tillgänglig i prerelease-kanalen.
-   Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
    Kontrollerar **Översättningsbar** kryssrutan för ett fält i redigeraren för innehållsfragmentmodellen:
 
@@ -219,13 +221,19 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
    * Gör att du kan ta med/hämta strukturerade data.
 
       >[!NOTE]
-      Denna metod är av särskilt intresse i kombination med [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+      >
+      >Denna metod är av särskilt intresse i kombination med [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
 >[!NOTE]
-AEM har ett upprepningsskydd för:
-* Innehållsreferenser Detta förhindrar användaren från att lägga till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
-* Fragmentreferenser i GraphQL Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid första förekomsten.
+>
+>AEM har ett upprepningsskydd för:
+>
+>* Innehållsreferenser
+   >  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+>
+>* Fragmentreferenser i GraphQL
+   >  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 
 ### Innehållsreferens {#content-reference}
@@ -267,7 +275,8 @@ type CompanyModel {
 ```
 
 >[!NOTE]
-Detta är av särskilt intresse i kombination med [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+>
+>Detta är av särskilt intresse i kombination med [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
 
 Förutom standardegenskaper kan du definiera:
 
@@ -292,8 +301,10 @@ Detta anger en rotsökväg för alla fragment som refereras.
    ![Fragmentreferens](assets/cfm-fragment-reference.png)
 
 >[!NOTE]
-Det finns en mekanism för återkommande skydd. Användaren kan inte välja det aktuella innehållsfragmentet i fragmentreferensen. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
-Det finns också ett upprepningsskydd för fragmentreferenser i GraphQL. Om du skapar en djup fråga i två innehållsfragment som refererar till varandra returneras null.
+>
+>Det finns en mekanism för återkommande skydd. Användaren kan inte välja det aktuella innehållsfragmentet i fragmentreferensen. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+>
+>Det finns också ett upprepningsskydd för fragmentreferenser i GraphQL. Om du skapar en djup fråga i två innehållsfragment som refererar till varandra returneras null.
 
 ## Content Fragment Model - egenskaper {#content-fragment-model-properties}
 
@@ -351,7 +362,8 @@ Inaktivera en modell som är flaggad som **Aktiverad** du använder **Inaktivera
 Om du vill implementera innehållsstyrning kan du konfigurera **Profiler** i resursmappen för att kontrollera vilka innehållsfragmentmodeller som tillåts för att skapa fragment i den mappen.
 
 >[!NOTE]
-Mekanismen liknar [tillåta sidmallar](/help/sites-cloud/authoring/features/templates.md#allowing-a-template-author) för en sida och dess underordnade sidor i avancerade egenskaper för en sida.
+>
+>Mekanismen liknar [tillåta sidmallar](/help/sites-cloud/authoring/features/templates.md#allowing-a-template-author) för en sida och dess underordnade sidor i avancerade egenskaper för en sida.
 
 Så här konfigurerar du **Profiler** for **Tillåtna modeller för innehållsfragment**:
 
@@ -383,7 +395,8 @@ De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
 ## Ta bort en innehållsfragmentmodell {#deleting-a-content-fragment-model}
 
 >[!CAUTION]
-Om du tar bort en innehållsfragmentmodell kan det påverka beroende fragment.
+>
+>Om du tar bort en innehållsfragmentmodell kan det påverka beroende fragment.
 
 Så här tar du bort en innehållsfragmentmodell:
 
@@ -393,7 +406,8 @@ Så här tar du bort en innehållsfragmentmodell:
 1. Välj modell, följt av **Ta bort** i verktygsfältet.
 
    >[!NOTE]
-   Om det refereras till modellen visas en varning. Vidta lämpliga åtgärder.
+   >
+   >Om det refereras till modellen visas en varning. Vidta lämpliga åtgärder.
 
 ## Publicera en innehållsfragmentmodell {#publishing-a-content-fragment-model}
 
@@ -408,7 +422,8 @@ Så här publicerar du en innehållsfragmentmodell:
 Publiceringsstatusen anges i konsolen.
 
    >[!NOTE]
-   Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
+   >
+   >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 ## Avpublicera en innehållsfragmentmodell {#unpublishing-a-content-fragment-model}
 
@@ -495,6 +510,7 @@ Du kan hantera **Låst** modeller från antingen konsolen eller modellredigerare
       ![Redigera - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-edit.png)
 
       >[!NOTE]
-      Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
+      >
+      >Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
 
    * **Avbryt** kommer du tillbaka till konsolen.

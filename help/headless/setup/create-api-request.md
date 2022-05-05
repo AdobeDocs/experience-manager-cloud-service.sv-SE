@@ -2,9 +2,9 @@
 title: Skapa en API-begäran - Headless-konfiguration
 description: Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment-innehåll och AEM Assets REST API för att hantera innehållsfragment.
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: d3c926216486c2971e498c2ea8a47f9c96935554
+source-git-commit: c44c58398da3d82be04e22a5e4293e79361a8def
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,12 @@ ht-degree: 0%
 # Skapa en API-begäran - Headless-konfiguration {#accessing-delivering-content-fragments}
 
 Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment-innehåll och AEM Assets REST API för att hantera innehållsfragment.
+
+>[!NOTE]
+>
+>En del av funktionaliteten i den här funktionen finns i prerelease-kanalen. Funktioner som rör beständiga frågor.
+> 
+>Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 ## Vad är GraphQL och Assets REST API:er? {#what-are-the-apis}
 
@@ -27,7 +33,7 @@ Resten av guiden fokuserar på GraphQL-åtkomst och leverans av innehållsfragme
 
 Innan GraphQL API:er kan användas måste en GraphQL-slutpunkt skapas.
 
-1. Navigera till **verktyg**, **Resurser** väljer **GraphQL**.
+1. Navigera till **verktyg**, **Allmänt** väljer **GraphQL**.
 1. Välj **Skapa**.
 1. The **Skapa ny GraphQL-slutpunkt** öppnas. Här kan du ange:
    * **Namn**: Slutpunktens namn. du kan skriva vilken text som helst.
@@ -48,7 +54,11 @@ Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för 
 GraphiQL är en IDE som kan installeras i en AEM. Följ stegen på [Använda GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) för installation i AEM.
 
 1. Logga in AEM as a Cloud Service och gå till GraphiQL-gränssnittet:
-   * Till exempel: `https://<host>:<port>/aem/graphiql.html`.
+
+   Du kan öppna frågeredigeraren från:
+
+   * **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
+   * direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
 1. GraphiQL IDE är en webbläsarredigerare för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem i headlessläge som JSON.
    * I den nedrullningsbara listrutan högst upp till höger kan du välja slutpunkten.
