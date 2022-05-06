@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: c7b4907a2d4dbecf03ac5b51376fb534096f5212
+source-git-commit: 45db4869de68627f0ae76798481b96fb4a3e960a
 workflow-type: tm+mt
-source-wordcount: '3439'
+source-wordcount: '3447'
 ht-degree: 23%
 
 ---
@@ -462,6 +462,7 @@ ht-degree: 23%
    + [Integrera med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
    + [Integrera med webbplatser](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/aemform/v1/aemform)
    + [Integrera med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
+   + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
    + Skapa och använda arbetsflöden {#create-form-centric-workflows}
       + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
       + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
@@ -477,7 +478,7 @@ ht-degree: 23%
    + [Kända fel](/help/forms/known-issues.md)
    + Felsök {#troubleshooting-aem-forms-cloud-service}
       + [Installation och konfiguration](/help/forms/troubleshooting-installation-and-configuration.md)
-      + [Dispatcher och CDN-cachning ](/help/forms/troubleshooting-caching-performance.md)
+      + [Dispatcher och CDN-cachning](/help/forms/troubleshooting-caching-performance.md)
 + Skärmar {#screens-as-cloud-service}
    + [AEM Screens as a Cloud Service](/help/screens-cloud/home.md)
    + Översikt till as a Cloud Service skärmar {#overview}
