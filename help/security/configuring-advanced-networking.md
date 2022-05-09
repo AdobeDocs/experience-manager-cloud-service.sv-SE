@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 906c8aed146724c1bb18e8031e5dd97f4cf68d25
+source-git-commit: 3325a7a0f99c427040e868f9cafc5f9890d97d69
 workflow-type: tm+mt
-source-wordcount: '2976'
+source-wordcount: '2964'
 ht-degree: 0%
 
 ---
@@ -70,11 +70,11 @@ Portvidarebefordringsreglerna per miljö kan uppdateras genom att anropa `PUT /p
 
 ### Ta bort eller inaktivera flexibla portklasser {#deleting-disabling-flexible-port-egress-provision}
 
-Till **delete** nätverksinfrastrukturen för ett program, anropa *DELETE /program/{program-ID}/ nätverksinfrastruktur/{networkinfrastructureID}* Mer information finns i dokumentationen för Cloud Manager API.
+Till **delete** nätverksinfrastrukturen för ett program, anropa `DELETE /program/{program ID}/ networkinfrastructure/{networkinfrastructureID}`.
 
 För att **disable** flexibel portutgång från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
 
-Mer information finns i [API-dokumentation för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
+Mer information om API:erna finns i [API-dokumentation för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
 
 ### Trafikroutning {#flexible-port-egress-traffic-routing}
 
