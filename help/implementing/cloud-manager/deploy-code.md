@@ -2,9 +2,9 @@
 title: Distribuera koden
 description: Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: af1e682505d68a65a5e2b500d42f01f030e36ac1
+source-git-commit: c6e930f62cc5039e11f2067ea31882c72be18774
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -121,3 +121,72 @@ Följande steg gör timeout om du väntar på användarfeedback:
 ## Distributionsprocess {#deployment-process}
 
 Alla driftsättningar av Cloud Service följer en rullande process för att säkerställa noll driftavbrott. Se dokumentet [Hur rullande distributioner fungerar](/help/implementing/deploying/overview.md#how-rolling-deployments-work) om du vill veta mer.
+
+## Kör en produktionsdistribution igen {#Reexecute-Deployment}
+
+Omkörning av produktionsdistributionssteget stöds för körningar där produktionsdistributionssteget har slutförts. Typen av slutförande är inte viktig - distributionen kan avbrytas eller misslyckas. Detta innebär att det primära användningsexemplet förväntas vara fall där produktionsdistributionssteget misslyckades av tillfälliga orsaker. Omkörning skapar en ny körning med samma pipeline. Den här nya körningen består av tre steg:
+
+1. Valideringssteget - det här är i stort sett samma validering som sker under en normal pipeline-körning.
+1. Byggsteget - i samband med en omkörning kopierar byggsteget artefakter, och utför inte någon ny byggprocess.
+1. Produktionsdistributionssteget - detta använder samma konfiguration och alternativ som produktionsdistributionssteget i en normal pipeline-körning.
+
+Byggsteget kan ha en något annorlunda etikett i användargränssnittet för att reflektera att det är kopieringsartefakter, inte återskapande.
+
+![Återdistribuera](assets/Re-deploy.png)
+
+Begränsningar:
+
+* Det går bara att köra produktionsdistributionssteget igen vid den senaste körningen.
+* Omkörning är inte tillgängligt för push-uppdateringskörningar. Om den senaste körningen är en push-uppdateringskörning går det inte att utföra om.
+* Om den senaste körningen är en push-uppdateringskörning går det inte att utföra om.
+* Om den senaste körningen misslyckades någon gång före produktionsdistributionssteget går det inte att utföra om.
+
+### Kör API igen {#Reexecute-API}
+
+### Identifiera en körning på nytt
+
+För att identifiera om en körning är en körning på nytt kan utlösarfältet undersökas. Dess värde kommer att *RE_EXECUTE*.
+
+### Utlösa en ny körning
+
+För att utlösa en omkörning måste en PUT-begäran göras till HAL Link &lt;()<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> i produktionsdistributionssteget. Om den här länken finns kan körningen startas om från det steget. Om den inte finns kan inte körningen startas om från det steget. I den första versionen finns den här länken aldrig kvar i produktionsdistributionssteget, men framtida versioner kan ha stöd för att starta pipeline från andra steg. Exempel:
+
+```Javascript
+ {
+  "_links": {
+    "http://ns.adobe.com/adobecloud/rel/pipeline/logs": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530/logs",
+      "templated": false
+    },
+    "http://ns.adobe.com/adobecloud/rel/pipeline/reExecute": {
+      "href": "/api/program/4/pipeline/1/execution?stepId=2983530",
+      "templated": false
+    },
+    "http://ns.adobe.com/adobecloud/rel/pipeline/metrics": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530/metrics",
+      "templated": false
+    },
+    "self": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530",
+      "templated": false
+    }
+  },
+  "id": "6187842",
+  "stepId": "2983530",
+  "phaseId": "1575676",
+  "action": "deploy",
+  "environment": "weretail-global-b75-prod",
+  "environmentType": "prod",
+  "environmentId": "59254",
+  "startedAt": "2022-01-20T14:47:41.247+0000",
+  "finishedAt": "2022-01-20T15:06:19.885+0000",
+  "updatedAt": "2022-01-20T15:06:20.803+0000",
+  "details": {
+  },
+  "status": "FINISHED"
+```
+
+
+Syntaxen för HAL-länkens _href_  värdet ovan är inte avsett att användas som referenspunkt. Det faktiska värdet ska alltid läsas från HAL-länken och inte genereras.
+
+Skicka ett *PUT* begäran till den här slutpunkten resulterar i *201* om svaret lyckas och svarsorganet är representationen av den nya exekveringen. Det liknar att starta en vanlig körning via API:t.
