@@ -3,9 +3,9 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager as a Cloud Service.
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 924331ced6a3966a0705dae857f5e7e5af3c9664
+source-git-commit: 527c25ef61f9553a9e0012b8413a8bc6ccf4afdd
 workflow-type: tm+mt
-source-wordcount: '3217'
+source-wordcount: '3228'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 1. I Experience Manager as a Cloud Service väljer du den as a Cloud Service logotypen för Experience Manager för att komma åt den globala navigeringskonsolen.
 1. Till vänster om konsolen väljer du verktygsikonen och går till **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** (markera inte mappikonen till vänster om **[!UICONTROL global]**). Välj sedan **[!UICONTROL Create]**.
-1. På **[!UICONTROL Create Dynamic Media Configuration]** anger du en titel, e-postadress för Dynamic Media-kontot, lösenord och väljer sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundsupport om du inte fått det här mejlet.
+1. På **[!UICONTROL Create Dynamic Media Configuration]** Ange titel, e-postadress för Dynamic Media-konto och lösenord för företagsadministratören för Dynamic Media-kontot och välj sedan region. Den här informationen tillhandahålls av Adobe i e-postmeddelandet om etablering. Kontakta Adobe kundsupport om du inte fått det här mejlet.
 1. Välj **[!UICONTROL Connect to Dynamic Media]**.
 1. I **[!UICONTROL Change Password]** i **[!UICONTROL New Password]** anger du ett nytt lösenord som består av 8-25 tecken. Lösenordet måste innehålla minst ett av följande:
 
@@ -292,7 +292,7 @@ Se [Överför resurser](/help/assets/add-assets.md).
 
 #### Lägg till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
 
-Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience Manager Assets. Flytta MIME-typen före för att se till att alla nya noder som du lägger till i CRXDE Lite inte tas bort av Experience Manager `image_`. Se även till att dess aktiverade värde är inställt på **[!UICONTROL false]**.
+Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience Manager Assets. Flytta MIME-typen före för att se till att nya noder som du lägger till i CRXDE Lite inte tas bort av Experience Manager `image_`. Se även till att dess aktiverade värde är inställt på **[!UICONTROL false]**.
 
 **Så här lägger du till MIME-typer för format som inte stöds:**
 
