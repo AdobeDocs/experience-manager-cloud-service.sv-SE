@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 3325a7a0f99c427040e868f9cafc5f9890d97d69
+source-git-commit: d5d17c554cc0877ebe89710b3ea512355fec2a84
 workflow-type: tm+mt
-source-wordcount: '2964'
+source-wordcount: '2977'
 ht-degree: 0%
 
 ---
@@ -71,6 +71,10 @@ Portvidarebefordringsreglerna per miljö kan uppdateras genom att anropa `PUT /p
 ### Ta bort eller inaktivera flexibla portklasser {#deleting-disabling-flexible-port-egress-provision}
 
 Till **delete** nätverksinfrastrukturen för ett program, anropa `DELETE /program/{program ID}/ networkinfrastructure/{networkinfrastructureID}`.
+
+>[!NOTE]
+>
+> Borttagningen raderar inte infrastrukturen om den används i någon miljö.
 
 För att **disable** flexibel portutgång från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
 
