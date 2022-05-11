@@ -1,10 +1,10 @@
 ---
 title: Komma igång med migreringsresan till AEM as a Cloud Service
-description: Start your migration journey by familiarizing yourself on the basics of moving to AEM as a Cloud Service
+description: Börja din migreringsresa genom att bekanta dig med grunderna i att gå över till AEM as a Cloud Service
 exl-id: e1a79630-56c1-4648-aa11-3348c3b37541
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 595eff9c259208754ac62ea27dfc6be7d74b79d3
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '587'
 ht-degree: 7%
 
 ---
@@ -15,14 +15,14 @@ I den här delen av den AEM as a Cloud Service migreringsresan får du lära dig
 
 ## Syfte {#objective}
 
-This document helps you understand why you should use a cloud native version of AEM, as well as the different phases of migrating to AEM as a Cloud Service. Efter läsning bör du:
+Det här dokumentet hjälper dig att förstå varför du bör använda en molnbaserad version av AEM, samt de olika faserna för migrering till AEM as a Cloud Service. Efter läsning bör du:
 
 * Förstå fördelarna med att flytta AEM as a Cloud Service
 * Bekanta dig med de breda steg du måste ta för att gå över till molnet
 
 ## Fördelar med att flytta till AEM as a Cloud Service {#benefits-of-moving-to-aem-as-a-cloud-service}
 
-AEM as a Cloud Service provides a scalable, secure, and agile technology foundation for Experience Manager Assets, Forms, and Screens enabling marketers and IT professionals to focus on delivering impactful experiences at scale.
+AEM as a Cloud Service utgör en skalbar, säker och flexibel teknikgrund för Experience Manager Assets, Forms och skärmar som gör att marknadsförare och IT-personal kan fokusera på att leverera slagkraftiga upplevelser i stor skala.
 
 Med AEM as a Cloud Service kan era team fokusera på innovationer i stället för att planera för produktuppgraderingar. Nya produktfunktioner testas grundligt och skickas till era team utan avbrott så att de alltid har tillgång till den senaste versionen av AEM.
 
@@ -31,13 +31,17 @@ Med AEM as a Cloud Service kan era team fokusera på innovationer i stället fö
 Migreringsresan till Cloud Service omfattar följande faser:
 
 * Börja med att avgöra om distributionen är klar att flyttas till AEM as a Cloud Service med [Beredskapsfas](/help/journey-migration/readiness.md). I den här fasen bör du också bekanta dig med de ändringar som AEM as a Cloud Service har gjort
-* Next, make your code and content cloud ready with the [Implementation Phase](/help/journey-migration/implementation.md). I den här fasen kommer du att utforska de verktyg som Adobe tillhandahåller för att underlätta övergången till molnet
-* Once everything is in place, you can perform the migration with the [Go-Live Phase](/help/journey-migration/go-live.md)
+* Gör sedan koden och innehållet i molnet klart med [Implementeringsfas](/help/journey-migration/implementation.md). I den här fasen kommer du att utforska de verktyg som Adobe tillhandahåller för att underlätta övergången till molnet
+* När allt är på plats kan du utföra migreringen med [GoLive Phase](/help/journey-migration/go-live.md)
 * Slutligen bör du kontrollera om det finns problem och förbättra prestanda när migreringen är klar, i [Post GoLive Phase](/help/journey-migration/post-go-live.md).
 
-I bilden nedan visas en bild av den rekommenderade övergångsresan till AEM as a Cloud Service.
+I bilden nedan visas en högnivårepresentation av den rekommenderade övergångsresan till AEM as a Cloud Service.
 
 ![bild](/help/journey-migration/assets/move-aemcloud-process.png)
+
+Du kan även se bilden nedan för en mer detaljerad bild av migreringsresan.
+
+![bild](/help/journey-migration/assets/migration-process.png)
 
 ## Cloud Acceleration Manager {#cloud-acceleration-manager}
 

@@ -2,9 +2,9 @@
 title: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 description: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 exl-id: 9d5a72b8-06af-4b82-ab20-e65aea7903b3
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 595eff9c259208754ac62ea27dfc6be7d74b79d3
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2126'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,9 @@ Den här enpersonsmodellen visar det rekommenderade stegvisa tillvägagångssät
 * Developer Journey in Adobe Experience Manager as a Cloud Service
 * Moving to Adobe Experience Manager as a Cloud Service -->
 
-<br>
+Se bilden nedan för en allmän representation av migreringsresan.
+
+![bild](/help/journey-migration/assets/migration-process.png)
 
 ## Komma igång med Adobe Experience Manager as a Cloud Service {#getting-started}
 
@@ -113,7 +115,7 @@ Med Experience Manager as a Cloud Service kan era team fokusera på innovationer
 Övergången till Cloud Service omfattar tre faser – Planering, Körning och Efter publicering.
 För en lyckad och smidig övergång bör du säkerställa korrekt planering och följa bästa praxis som beskrivs i den här handboken.
 
-Bilden nedan visar en illustrativ representation av den rekommenderade övergångsprocessen till Cloud Service.
+I bilden nedan visas en högnivårepresentation av den rekommenderade övergången till Cloud Service.
 
 ![bild](/help/journey-migration/assets/home-img1.png)
 
