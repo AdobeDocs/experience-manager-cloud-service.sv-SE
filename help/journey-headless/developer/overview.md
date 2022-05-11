@@ -1,18 +1,18 @@
 ---
 title: AEM Headless Developer Journey
-description: Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Service när den använder funktioner som Content Models, Content Fragments och GraphQL API för att driva headless-upplevelser som ett Headless Content Management System (CMS). Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
-landing-page-description: Börja här för att få en guidad resa genom de headlessfunktionerna hos AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
+description: 'Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Service när det används som ett Headless Content Management System (CMS). Lär dig mer om de kraftfulla och flexibla headless-funktionerna, deras funktioner och hur du kan utnyttja dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all information du behöver för att utveckla din första headless-applikation. '
+landing-page-description: 'Få en förståelse för innehållsleverans och implementering utan problem. Läs mer om hur ni utvecklar er strategi inom ert företag. '
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: 21bd90fa61cfb1c567a7eea4b439206c38b49a5f
+source-git-commit: 2ec6b29800867462bbc2e88048c583d4e5eefa57
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1301'
 ht-degree: 1%
 
 ---
 
 # AEM Headless Developer Journey {#aem-headless-developer-journey}
 
-Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Service när det används som ett Headless Content Management System (CMS). Lär dig mer om de kraftfulla och flexibla headless-funktionerna, deras funktioner och hur du kan utnyttja dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
+Börja här för en guidad resa genom [!DNL Adobe Experience Manager as a Cloud Service] (AEM) när det används som ett CMS-system (Headless Content Management System). Lär dig mer om de kraftfulla och flexibla headless-funktionerna, deras funktioner och hur du kan utnyttja dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
 
 ## Introduktion {#introduction}
 
@@ -87,7 +87,7 @@ Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandah
 
 Som sådana resor är utformade för att stå på egen hand. Ett antal av dem kan dock vara relaterade till varandra. Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
 
-* [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Om du föredrar att lära dig genom att göra något och är teknikinriktad kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar att skapa och använda program som bygger på AEM Headless.
+* [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Om du föredrar att lära dig genom att göra något och är tekniskt inriktad kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar att skapa och använda program som bygger på AEM Headless.
 * [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
 * [Headless Authoring Journey](/help/journey-headless/author/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du modellerar ditt innehåll i ditt första headless-projekt.
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du skapar material för ditt projekt.

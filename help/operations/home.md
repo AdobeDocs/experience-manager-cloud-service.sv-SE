@@ -1,18 +1,18 @@
 ---
 title: Använda och underhålla Adobe Experience Manager as a Cloud Service
-description: Länkar till självhjälp och dokumentation om att använda och underhålla Adobe Experience Manager as a Cloud Service
-landing-page-description: Lär dig mer om backend-åtgärder för AEM as a Cloud Service, som indexering och underhållsuppgifter.
+description: 'Läs mer om backend-funktionerna i Experience Manager as a Cloud Service, som indexering och underhållsuppgifter, och få svar på dina frågor. '
+landing-page-description: Läs mer om backend-funktionerna i Experience Manager as a Cloud Service, som indexering och underhållsuppgifter, och få svar på dina frågor.
 exl-id: ad50434c-1b4c-4e04-be91-2556d773cfbd
-source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
+source-git-commit: 1bdebb3f9ffdc720c7172265571571d47df35610
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 70%
+source-wordcount: '398'
+ht-degree: 58%
 
 ---
 
 # Använda och underhålla Experience Manager as a Cloud Service {#aem-operations-guide}
 
-På den här sidan visas självhjälp om att använda och underhålla Experience Manager as a Cloud Service.
+Läs mer om backend-funktionerna i Experience Manager as a Cloud Service, som indexering och underhållsuppgifter, och få svar på dina frågor.
 
 ## Viktiga artiklar om användning {#key-articles}
 

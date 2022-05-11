@@ -1,18 +1,18 @@
 ---
 title: Regelefterlevnad
-description: På den här sidan visas självhjälpsresurser med information om efterlevnad på Experience Manager-as a Cloud Service.
+description: Få en översikt över regelefterlevnaden i Experience Manager as a Cloud Service.
 landing-page-description: Börja här om du vill få en översikt över hur AEM fungerar som en molntjänst, inklusive sekretess och tillgänglighet.
 exl-id: d7ef2875-a6d7-4f97-b14e-7e5a383cdee9
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 15ac9f0f72d01b999b0044d104ea80202cf44423
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 63%
+source-wordcount: '378'
+ht-degree: 64%
 
 ---
 
 # Efterlevnad av AEM as a Cloud Service {#aem-compliance}
 
-På den här sidan visas självhjälpsresurser med information om efterlevnad på Experience Manager-as a Cloud Service.
+Få en översikt över regelefterlevnaden i Experience Manager as a Cloud Service.
 
 ## Viktiga översiktsartiklar {#key-articles}
 

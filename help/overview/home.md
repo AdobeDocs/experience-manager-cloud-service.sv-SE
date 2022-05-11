@@ -1,17 +1,17 @@
 ---
-title: Översikt över Adobe Experience Manager as a Cloud Service
-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
+title: Komma igång med Experience Manager as a Cloud Service
+description: Läs om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 exl-id: d346ad01-af00-48a1-96a4-e742369defff
-source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
+source-git-commit: 15ac9f0f72d01b999b0044d104ea80202cf44423
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 78%
+source-wordcount: '360'
+ht-degree: 65%
 
 ---
 
 # Översikt över Experience Manager as a Cloud Service {#aem-overview-guide}
 
-På den här sidan visas självhjälp som introducerar och ger en översikt över Experience Manager as a Cloud Service.
+Börja här för att lära dig hur Experience Manager as a Cloud Service fungerar och vad programvaran kan göra för dig.
 
 ## Viktiga översiktsartiklar {#key-articles}
 

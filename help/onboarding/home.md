@@ -1,12 +1,12 @@
 ---
 title: Onboarding för Adobe Experience Manager as a Cloud Service
-description: Länkar till självhjälp och dokumentation om onboarding för Adobe Experience Manager as a Cloud Service
+description: 'Kom igång med Experience Manager, kom åt molnet och ta reda på hur du säkerhetskopierar dina data. '
 landing-page-description: Den här guiden innehåller en sammanfattning av hur du kommer igång med AEM as a Cloud Service, inklusive hur du får tillgång till och viktig dataskyddsinformation.
 exl-id: 24cc7ad9-3556-4462-89c7-5bc1fc18218a
-source-git-commit: a5b7b78eed96464681d325cb47ed5c6711a4ba34
+source-git-commit: 15ac9f0f72d01b999b0044d104ea80202cf44423
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 20%
+source-wordcount: '523'
+ht-degree: 18%
 
 ---
 

@@ -1,18 +1,18 @@
 ---
 title: Introduktion till [!DNL AEM Forms] as a Cloud Service
-description: Använd denna Platform-as-a-Service (PaaS) för att skapa, hantera och publicera digitala formulär och affärsprocesser i enterpriseklass samt koppla formulär till aktuella datakällor.
+description: Upptäck AEM Forms och lär dig hur du kan producera affärsklara dokument och formulärinnehåll. Lär dig mer om Platform-as-a-Service (PaaS) och hur du hanterar digitala formulär och affärsprocesser i företagsklass samt hur du kopplar Forms till aktuella datakällor.
 landing-page-description: Lär dig hur du använder formulär på AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: fe2f0743d8efaaf9b3fcfc9e20264cca627db6c8
+source-git-commit: e3f28ea68b3da415f46a98224e3f0b342417ee15
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '296'
 ht-degree: 1%
 
 ---
 
 # Introduktion {#introduction}
 
-Adobe Experience Manager Forms as a Cloud Service är en lösning för molnbaserad Platform as a Service (PaaS) som ger företag möjlighet att skapa, hantera, publicera och uppdatera komplexa digitala formulär samtidigt som inlämnade data integreras med bakomliggande processer, affärsregler och data sparas i ett externt datalager. Tjänsten är alltid aktuell, alltid tillgänglig och alltid tillgänglig.
+Adobe [!DNL Experience Manager Forms as a Cloud Service] erbjuder en molnbaserad lösning för Platform as a Service (PaaS) som ger företag möjlighet att skapa, hantera, publicera och uppdatera komplexa digitala formulär samtidigt som inlämnade data integreras med bakomliggande processer, affärsregler och data sparas i ett externt datalager. Tjänsten är alltid aktuell, alltid tillgänglig och alltid tillgänglig.
 
 Du kan använda tjänsten för att skapa och distribuera interaktiva och engagerande digitala formulär. Ta till exempel en organisation som vill digitalisera sin kundregistreringsresa. De har flera datakällor med befintliga kunddata. De vill förifylla formulär, lägga till e-signera formulär och arkivera ifyllda formulär som PDF-filer. Dessutom har man flera tryckta blanketter (PDF forms) som man också vill konvertera till digitala blanketter.
 
