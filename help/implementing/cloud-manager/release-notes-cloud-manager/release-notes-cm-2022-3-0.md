@@ -2,13 +2,13 @@
 title: Versionsinformation om Cloud Manager 2022.3.0 i Adobe Experience Manager as a Cloud Service
 description: Detta är versionsinformationen för Cloud Manager 2022.3.0 i AEM as a Cloud Service.
 feature: Release Information
-source-git-commit: 437be8c82a4dee6c9e56af09afa7e9048c8cb3c0
+exl-id: d09d48c5-6e0a-4a6a-85e9-1a60fdd6e5bf
+source-git-commit: 68586304724530f83649cffee76cefef3e1c8627
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # Versionsinformation om Cloud Manager 2022.3.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
@@ -20,7 +20,7 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager 2022.3.0 i 
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.3.0 i AEM as a Cloud Service 10 mars 2022. Nästa version är planerad till den 7 april 2022.
+Releasedatum för Cloud Manager version 2022.3.0 i AEM as a Cloud Service är 10 mars 2022. Nästa version är planerad till den 7 april 2022.
 
 ## Nyheter {#what-is-new}
 

@@ -2,9 +2,9 @@
 title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.12.0
 description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2021.12.0.
 feature: Release Information
-source-git-commit: e402578fc95fd97f808fde01a860d4c583af4c9b
+source-git-commit: bd31dc0ca5b0f4cd84314dba67c8a611f490d377
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ På den här sidan beskrivs versionsinformationen för Cloud Manager i AEM as a 
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager i AEM as a Cloud Service 2021.12.0 är 16 december 2021. Nästa version är planerad till januari 2022.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.12.0 är 16 december 2021. Nästa version är planerad till 20 januari 2022.
 
 ## Nyheter {#what-is-new}
 

@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 7ee2e43ab8a5726b2ecf7f157f67b5f3cc73fcff
+source-git-commit: 092338947ef7c8f34bda4604e1c901344e966be0
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -85,24 +85,6 @@ Vi rekommenderar starkt att du uppdaterar ditt maven-projekt med den senaste ver
 
 Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md).
 
-## Best Practices Analyzer {#bpa-release}
+## Migreringsverktyg {#migration-tools}
 
-### Releasedatum {#release-date-bpa}
-
-Releasedatum för Best Practices Analyzer v2.1.28 är 22 april 2022.
-
-### Nyheter {#what-is-new-bpa}
-
-* Möjlighet att upptäcka och rapportera om användning av tillgångshanterarens API:er som inte stöds. Det finns fyra API:er som inte längre stöds i AEM as a Cloud Service. Kunderna bör se till att de inte längre använder dessa API:er och bör använda den nya metoden för överföring av resurser.
-
-* Möjlighet att upptäcka användning av mallar för innehållsfragment. Mallar för innehållsfragment stöds inte längre för att skapa nya innehållsfragment på AEM as a Cloud Service. Kunderna måste skapa innehållsfragmentmodeller för att ersätta innehållets fragmentmallar.
-
-* Möjlighet att identifiera resurser med fler än 100 underordnade under metadatanoden för resursen i databasen. Vi rekommenderar att du tar bort metadatanoder som inte behövs för att förbättra prestandan vid inläsning av mappar som består av sådana resurser.
-
-* Möjlighet att identifiera och rapportera vilken typ av datalager som används.
-
-* Mönstret har uppdaterats för AEM Form Portal.
-
-### Felkorrigeringar {#bug-fixes-bpa}
-
-* BPA rapporterade resultat för kärnkomponenter i stället för att bara rapportera om kundkomponenter. Den här har åtgärdats.
+Du hittar en fullständig lista över versioner av migreringsverktyg [här](/help/journey-migration/release-notes/release-notes-migration-tools-current.md).

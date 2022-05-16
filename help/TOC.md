@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 45db4869de68627f0ae76798481b96fb4a3e960a
+source-git-commit: ee92bfcf4ed00d8b508f1b6f7d21f73fb4c9029e
 workflow-type: tm+mt
-source-wordcount: '3447'
+source-wordcount: '3454'
 ht-degree: 23%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 23%
    + [Dokumentationsresor](/help/journey-documentation/documentation-journeys.md)
 + Versionsinformation {#release-notes}
    + [Versionsinformation](/help/release-notes/home.md)
-   + Versionsinformation {#release-notes}
+   + Allmän information om AEMaaCS {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2022 {#2022}
          + [Versionsinformation för 2022.3.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-3-0.md)
@@ -59,6 +59,47 @@ ht-degree: 23%
          + [Versionsinformation för 2020.4.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-4-0.md)
          + [Versionsinformation för 2020.3.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-3-0.md)
          + [Versionsinformation för 2020.2.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-2-0.md)
+   + Versionsinformation för Cloud Manager {#cloud-manager}
+      + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md)
+      + 2022 {#2022}
+         + [Versionsinformation för 2022.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-2-0.md)
+         + [Versionsinformation för 2022.1.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-1-0.md)
+      + 2021 {#2021}
+         + [Versionsinformation för 2021.11.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-11-0.md)
+         + [Versionsinformation för 2021.10.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-10-0.md)
+         + [Versionsinformation för 2021.9.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-9-0.md)
+         + [Versionsinformation för 2021.8.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-8-0.md)
+         + [Versionsinformation för 2021.7.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-7-0.md)
+         + [Versionsinformation för 2021.6.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-6-0.md)
+         + [Versionsinformation för 2021.5.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-5-0.md)
+         + [Versionsinformation för 2021.4.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-4-0.md)
+         + [Versionsinformation för 2021.3.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-3-0.md)
+         + [Versionsinformation för 2021.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-2-0.md)
+         + [Versionsinformation för 2021.1.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-1-0.md)
+      + 2020 {#2020}
+         + [Versionsinformation för 2020.12.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-12-0.md)
+         + [Versionsinformation för 2020.11.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-11-0.md)
+         + [Versionsinformation för 2020.10.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-10-0.md)
+         + [Versionsinformation för 2020.9.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-9-0.md)
+         + [Versionsinformation för 2020.8.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-8-0.md)
+         + [Versionsinformation för 2020.7.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-7-0.md)
+         + [Versionsinformation för 2020.6.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-6-0.md)
+         + [Versionsinformation för 2020.5.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-5-0.md)
+         + [Versionsinformation för 2020.4.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-4-0.md)
+         + [Versionsinformation för 2020.3.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-3-0.md)
+         + [Versionsinformation för 2020.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-2-0.md)
+   + Versionsinformation för migreringsverktyg {#migration-tools}
+      + [Aktuell versionsinformation (2022.4.0)](/help/journey-migration/release-notes/release-notes-migration-tools-current.md)
+      + 2022 {#2022}
+         + [Versionsinformation för 2022.3.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-03-0.md)
+         + [Versionsinformation för 2022.2.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-02-0.md)
+         + [Versionsinformation för 2022.1.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-01-0.md)
+      + 2021 {#2021}
+         + [Versionsinformation för 2021.12.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-12-0.md)
+         + [Versionsinformation för 2021.11.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-11-0.md)
+         + [Versionsinformation för 2021.10.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-10-0.md)
+   + Versionsinformation för Workfront för Experience Manager förbättrad anslutning{#workfront}
+      + [Aktuell versionsinformation för Workfront för Experience Manager förbättrad anslutning](/help/assets/release-notes-enhanced-connector-workfront.md)
    + [Vad är Nytt?](/help/release-notes/what-is-new.md)
    + [Betydande förändringar i AEM Cloud Service](/help/release-notes/aem-cloud-changes.md)
    + [Kända fel](/help/release-notes/known-issues.md)
@@ -105,15 +146,6 @@ ht-degree: 23%
    + [Go Live](/help/journey-migration/go-live.md)
    + [Post Go Live](/help/journey-migration/post-go-live.md)
    + [Migreringshandbok till Experience Manager as a Cloud Service for Partners](/help/journey-migration/getting-started-partners.md)
-   + Versionsinformation för migreringsverktyg {#release-notes-migration-tools}
-      + [Aktuell versionsinformation (2022.4.0)](/help/journey-migration/release-notes/release-notes-migration-tools-current.md)
-      + [Versionsinformation för 2022.3.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-03-0.md)
-      + [Versionsinformation för 2022.2.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-02-0.md)
-      + [Versionsinformation för 2022.1.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-01-0.md)
-      + 2021 {#2021}
-         + [Versionsinformation för 2021.12.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-12-0.md)
-         + [Versionsinformation för 2021.11.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-11-0.md)
-         + [Versionsinformation för 2021.10.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-10-0.md)
    + Cloud Acceleration Manager {#cloud-acceleration-manager}
       + Introduktion till Cloud Acceleration Manager {#introduction-cam}
          + [Översikt](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md)
@@ -393,7 +425,6 @@ ht-degree: 23%
       + [Flash-tittare som slutar svara](/help/assets/dynamic-media/flash-viewers-eol.md)
       + [DHTML-visningsprogram - slutdatum](/help/assets/dynamic-media/dhtml-viewer-endoflifefaqs.md)
    + Integrering med Adobe Workfront {#integrations}
-      + [Versionsinformation för Workfront för Experience Manager förbättrad anslutning](/help/assets/release-notes-enhanced-connector-workfront.md)
       + [Integrering med [!DNL Adobe Workfront]](/help/assets/workfront-integrations.md)
       + [Installera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-install.md)
       + [Ta bort externa beroenden för befintliga installationer](/help/assets/remove-external-dependencies.md)
@@ -619,37 +650,6 @@ ht-degree: 23%
 + Implementera {#implementing}
    + [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
    + Använda Cloud Manager {#using-cloud-manager}
-      + Versionsinformation för Cloud Manager {#release-notes-cloud-manager}
-         + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md)
-         + 2022 {#2022}
-            + [Versionsinformation för 2022.4.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-4-0.md)
-            + [Versionsinformation för 2022.3.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-3-0.md)
-            + [Versionsinformation för 2022.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-2-0.md)
-            + [Versionsinformation för 2022.1.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-1-0.md)
-         + 2021 {#2021}
-            + [Versionsinformation för 2021.11.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-11-0.md)
-            + [Versionsinformation för 2021.10.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-10-0.md)
-            + [Versionsinformation för 2021.9.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-9-0.md)
-            + [Versionsinformation för 2021.8.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-8-0.md)
-            + [Versionsinformation för 2021.7.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-7-0.md)
-            + [Versionsinformation för 2021.6.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-6-0.md)
-            + [Versionsinformation för 2021.5.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-5-0.md)
-            + [Versionsinformation för 2021.4.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-4-0.md)
-            + [Versionsinformation för 2021.3.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-3-0.md)
-            + [Versionsinformation för 2021.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-2-0.md)
-            + [Versionsinformation för 2021.1.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2021-1-0.md)
-         + 2020 {#2020}
-            + [Versionsinformation för 2020.12.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-12-0.md)
-            + [Versionsinformation för 2020.11.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-11-0.md)
-            + [Versionsinformation för 2020.10.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-10-0.md)
-            + [Versionsinformation för 2020.9.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-9-0.md)
-            + [Versionsinformation för 2020.8.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-8-0.md)
-            + [Versionsinformation för 2020.7.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-7-0.md)
-            + [Versionsinformation för 2020.6.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-6-0.md)
-            + [Versionsinformation för 2020.5.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-5-0.md)
-            + [Versionsinformation för 2020.4.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-4-0.md)
-            + [Versionsinformation för 2020.3.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-3-0.md)
-            + [Versionsinformation för 2020.2.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2020-2-0.md)
       + Program {#programs}
          + [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
          + [Produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md)

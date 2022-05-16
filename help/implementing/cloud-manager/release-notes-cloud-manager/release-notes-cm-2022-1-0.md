@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2
 description: Det här är versionsinformationen för Cloud Manager i AEM as a Cloud Service release 2022.01.0.
 feature: Release Information
 exl-id: 2dfdc943-0518-40ea-8712-1dabb97eeaa9
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 6e394aaabcb123aea53fba49684aaade3e6c87a6
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
