@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 290f75af3da5fb10fadc578163568913be4878df
+source-git-commit: 4d9a56ebea84d6483a2bd052d62ee6eb8c0bd9d5
 workflow-type: tm+mt
-source-wordcount: '2981'
+source-wordcount: '3053'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,7 @@ Programnivåkonfigurationen kan uppdateras genom att anropa `PUT /api/program/<p
 
 Portvidarebefordringsreglerna per miljö kan uppdateras genom att anropa `PUT /program/{programId}/environment/{environmentId}/advancedNetworking` slutpunkt, se till att inkludera hela uppsättningen konfigurationsparametrar, i stället för en delmängd.
 
-### Ta bort eller inaktivera flexibla portklasser {#deleting-disabling-flexible-port-egress-provision}
-
-Till **delete** nätverksinfrastrukturen för ett program, anropa `DELETE /program/{program ID}/ networkinfrastructure/{networkinfrastructureID}`.
-
->[!NOTE]
->
-> Borttagningen raderar inte infrastrukturen om den används i någon miljö.
+### Inaktivera flexibla portadresser {#disabling-flexible-port-egress-provision}
 
 För att **disable** flexibel portutgång från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
 
@@ -206,6 +200,12 @@ Den största skillnaden är att trafiken alltid kommer att gå från en dedikera
 Förutom routningsreglerna som stöds av flexibel portutgång i `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkt, dedikerad IP-adress för utgångar har stöd för en `nonProxyHosts` parameter. Detta gör att du kan deklarera en uppsättning värdar som ska dirigeras genom ett delat IP-adressintervall i stället för den dedikerade IP-adressen, vilket kan vara användbart eftersom trafikutjämning via delade IP-adresser kan optimeras ytterligare. The `nonProxyHost` URL:er kan följa mönstren för `example.com` eller `*.example.com`, där jokertecknet bara stöds i början av domänen.
 
 När man ska välja mellan flexibel portutgång och dedikerad IP-adress för utgångar bör man välja flexibel portutgång om en viss IP-adress inte krävs, eftersom Adobe kan optimera prestanda för flexibel portutgångstrafik.
+
+### Inaktiverar dedikerad IP-adress för adressbok {#disabling-dedicated-egress-IP-address}
+
+För att **disable** Dedikerad Egress-IP-adress från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
+
+Mer information om API:erna finns i [API-dokumentation för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
 
 ### Trafikroutning {#dedcated-egress-ip-traffic-routing}
 
@@ -397,9 +397,7 @@ Observera att adressutrymmet inte kan ändras efter den första VPN-etableringen
 
 Cirkulationsregler per miljö kan uppdateras genom att anropa `PUT /program/{programId}/environment/{environmentId}/advancedNetworking` slutpunkt, se till att inkludera hela uppsättningen konfigurationsparameter, i stället för en delmängd. Miljöuppdateringar tar vanligtvis 5-10 minuter att installera.
 
-### Ta bort eller inaktivera VPN {#deleting-or-disabling-the-vpn}
-
-Om du vill ta bort nätverksinfrastrukturen skickar du en kundsupportanmälan med en beskrivning av vad som har skapats och varför det måste tas bort.
+### Inaktiverar VPN {#disabling-the-vpn}
 
 Om du vill inaktivera VPN för en viss miljö anropar du `DELETE /program/{programId}/environment/{environmentId}/advancedNetworking`. Mer information finns i [API-dokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
 
@@ -540,6 +538,25 @@ Allow from 192.168.0.1
 Header always set Cache-Control private
 ```
 
+## Ta bort ett programs nätverksinfrastruktur {#deleting-network-infrastructure}
+
+Till **delete** nätverksinfrastrukturen för ett program, anropa `DELETE /program/{program ID}/networkinfrastructure/{networkinfrastructureID}`.
+
+>[!NOTE]
+>
+> Borttagningen tar bara bort infrastrukturen om alla miljöer har sina avancerade nätverk inaktiverade.
+
 ## Övergång mellan avancerade nätverkstyper {#transitioning-between-advanced-networking-types}
 
-Sedan `kind` parametern kan inte ändras. Kontakta kundsupport om du behöver hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
+Du kan migrera mellan avancerade nätverkstyper genom att följa följande procedur:
+
+* inaktivera avancerade nätverk i alla miljöer
+* ta bort den avancerade nätverksinfrastrukturen
+* återskapa den avancerade nätverks-informationen med rätt värden
+* återaktivera avancerat nätverk på miljönivå
+
+>[!WARNING]
+>
+> Den här proceduren kommer att resultera i en driftstopp för avancerade nätverkstjänster mellan borttagning och återskapande
+
+Om driftsavbrott skulle få allvarliga konsekvenser för verksamheten kontaktar du kundsupport för att få hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
