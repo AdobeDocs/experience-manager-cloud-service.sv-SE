@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 092338947ef7c8f34bda4604e1c901344e966be0
+source-git-commit: 9857376cb196b8aaa9fac64636727b5ad20a0360
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,6 @@ Ta en titt på [Versionsöversikt april 2022](https://video.tv.adobe.com/v/34261
 
 * Nu kan du [sortera taggar](/help/assets/organize-assets.md#use-tags-to-organize-assets) i taggväljarfönstret i stigande eller fallande ordning baserat på taggnamn, skapandedatum eller ändringsdatum.
 
-
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
@@ -80,6 +79,14 @@ En ny analyserare har nyligen lagts till:
 * `content-packages-validation` - validerar för korrekt formaterad innehållssyntax och struktur för paket som ska installeras under distributionen
 
 Vi rekommenderar starkt att du uppdaterar ditt maven-projekt med den senaste versionen av analyseraren eller inkluderar analyseraren om du inte redan har gjort det. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html).
+
+## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation Security {#foundation-security}
+
+### Borttagning av TLS 1.0, 1.1
+
+Från och med den 30 juni 2022 kommer Experience Manager as a Cloud Service att kräva säkrare nätverkskommunikation och datautbyte med användarsystem. AEM använder enbart TLS (Transport Layer Security), 1.2-protokollet. Äldre TLS-versioner 1.0 och 1.1 kommer att bli inaktuella.
+
+Om du fortsätter att använda äldre versioner av TLS som 1.0, 1.1 kan du förlora åtkomsten till Experience Manager as a Cloud Service.
 
 ## Cloud Manager {#cloud-manager}
 
