@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: af4c85686be5299433974c455f35c907bd6776fd
+source-git-commit: e16d107dff1817e8b62de86e295590b13d853bf0
 workflow-type: tm+mt
-source-wordcount: '3582'
+source-wordcount: '3705'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Den målgrupp som bäst passar läsarna på den här resan är följande som är
 
 >[!TIP]
 >
->För bästa resultat rekommenderar Adobe att du läser och visar Dynamic Media Journey på en stationär dator.
+>För bästa resultat rekommenderar Adobe att du läser och visar den här Dynamic Media-resan på en stationär dator.
 
 ## Vad är Dynamic Media och hur kan det hjälpa dig? {#dm-journey-a}
 
@@ -249,44 +249,50 @@ När du har överfört resurser till Dynamic Media är det en god vana att _publ
 
 Förutom att publicera resurser manuellt kan du konfigurera Dynamic Media så att du omedelbart publicerar resurser - utan att behöva göra något - när överföringen görs.
 
-Efter överföring finns det olika sätt att förhandsgranska en resurs renderingar i Dynamic Media. Genom att förhandsgranska renderingar får du en uppfattning om vad en kund ser. En vanlig förhandsvisningsmetod är att välja en resurs och sedan visa återgivningarna genom att välja en *bildförinställning* enligt följande.
+Efter överföring finns det olika sätt att förhandsgranska en resurs renderingar i Dynamic Media. Genom att förhandsgranska renderingar får du en uppfattning om vad en kund ser. En vanlig förhandsvisningsmetod är att välja en resurs och sedan visa återgivningarna genom att välja en _bildförinställning_ enligt följande.
 
 ![Förhandsgranska en återgivning av en resurs baserat på förinställningen för stor bild](/help/assets/dynamic-media/assets/dm-image-preset-with-url.png)
 _Förhandsgranska en återgivning av en resurs baserat på den valda förinställningen för&quot;stor&quot; bild. Klicka på URL-knappen. Den resulterande URL-sökvägen innehåller förinställningsnamnet &quot;Large&quot; och kan användas på en webbsida._
 
 URL:en ovan är live! [Prova](http://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982?$Large$).
 
-Ett annat sätt att förhandsgranska en resurs är att välja bildresursen och sedan välja en *Tittare* förinställning enligt följande.
+Ett annat sätt att förhandsgranska en resurs är att välja bildresursen och sedan välja en _Tittare_ förinställning enligt följande.
 
 ![Förhandsgranska en resurs baserat på förinställningen för Zooma vertikalt ljus i visningsprogrammet](/help/assets/dynamic-media/assets/dm-viewer-preset.png)
 _Förhandsgranska en resurs baserat på den valda visningsförinställningen &quot;ZoomVertical_light&quot;. Muspekaren (`+`) flyttades över klockan för att zooma in. Lägg märke till knapparna URL och Bädda in._
 
 Återgivningen ovan är live! [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_28563982&amp;config=jpearldemo/ZoomVertical_light).
 
-Låt oss titta lite närmare på dessa URL:er så att du bättre kan förstå vad som pågår. Ta mig till [Dynamic Media Journey: Grunderna, del II](/help/assets/dynamic-media/dm-journey-part2.md#dm-journey-d).
+## Valfritt - Läs mer
 
-## Läs mer
+Del I av resan gick igenom grunderna för en rad olika Dynamic Media-ämnen. Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [What&#39;s next in this Dynamic Media Journey](#whats-next).
 
-_Dynamic Media_
+_Hjälpavsnitt för Dynamic Media_
 
-* [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md)
-* [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md)
-* [Adaptiva videouppsättningar](/help/assets/dynamic-media/video.md)
+* [Arbeta med Dynamic Media i Experience Manager](/help/assets/dynamic-media/dynamic-media.md)
+* [Om Smart Imaging](/help/assets/dynamic-media/imaging-faq.md)
+* [Skapa adaptiva videouppsättningar](/help/assets/dynamic-media/video.md)
 * [Bästa tillvägagångssätt för att optimera bildkvalitet](/help/assets/dynamic-media/best-practices-for-optimizing-the-quality-of-your-images.md)
-* [Överför resurser](/help/assets/add-assets.md#upload-assets)
+* [Så här överför du resurser](/help/assets/add-assets.md#upload-assets)
 * [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
 * [Förhandsgranska 3D-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)
-* [Leverera Dynamic Media Assets](/help/assets/dynamic-media/delivering-dynamic-media-assets.md)
+* [Så här levererar du Dynamic Media Assets](/help/assets/dynamic-media/delivering-dynamic-media-assets.md)
 * [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
 * [Arbeta med selektiv publicering i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md)
 
 _Dynamic Media självstudiekurser_
 
 * [Använd Dynamic Media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html)
-* [Adobe Experience Manager Content Library](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på *Dynamic Media*)
+* [Adobe Experience Manager Content Library](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på _Dynamic Media_)
 
 _Dynamic Media-visningsprogram_
 
-* [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)
+* [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html) för varje visningsprogram
+
+## What&#39;s next in this Dynamic Media Journey {#whats-next}
+
+I del II på den här resan kommer du att undersöka Dynamic Media URL:er lite närmare för att bättre förstå vad som händer när en mediefil levereras. Du får också lära dig mer om grunderna bakom hur du skapar bildförinställningar för att återge resurser, och om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar samt hur de skapas.
+
+Ta mig till [Dynamic Media Journey: Grunderna, del II](/help/assets/dynamic-media/dm-journey-part2.md#dm-journey-d).
 
 <!-- Live as of April 28 2022. LEAVE IN HERE https://landing.adobe.com/en/na/dynamic-media/ctir-2755/index.html -->

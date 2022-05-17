@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: af4c85686be5299433974c455f35c907bd6776fd
+source-git-commit: e16d107dff1817e8b62de86e295590b13d853bf0
 workflow-type: tm+mt
-source-wordcount: '2799'
+source-wordcount: '2847'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Se även [Dynamic Media Journey Grunderna, del I](/help/assets/dynamic-media/dm-
 
 >[!TIP]
 >
->För bästa resultat rekommenderar Adobe att du läser och visar Dynamic Media Journey på en stationär dator.
+>För bästa resultat rekommenderar Adobe att du läser och visar den här Dynamic Media-resan på en stationär dator.
 
 ## Anatomi av en Dynamic Media-URL och hur Dynamic Media levererar innehåll {#dm-journey-d}
 
@@ -43,7 +43,7 @@ Den första delen av URL:en i rött refererar till själva serverdomänen. I det
 
 Kontonamnet är delen i lila. I det här fallet anropas kontot `jpearldemo`.
 
-Tillgångs-ID eller namn. `AdobeStock_28563982` är i grönt. Observera att tillgången har *no* filtillägg som `.png` eller `.jpg`. När resurser hämtas till Dynamic Media tas filtillägget bort och en annan typ av fil skapas: en pyramid-TIFF-fil. Med pyramic-TIFF kan Dynamic Media snabbt skapa renderingar direkt.
+Tillgångs-ID eller namn. `AdobeStock_28563982` är i grönt. Observera att tillgången har _no_ filtillägg som `.png` eller `.jpg`. När resurser hämtas till Dynamic Media tas filtillägget bort och en annan typ av fil skapas: en pyramid-TIFF-fil. Med pyramic-TIFF kan Dynamic Media snabbt skapa renderingar direkt.
 
 Slutligen finns det några bildbehandlingsparametrar, `?wid=1000&fmt=jpeg&qlt=85`, visas i gult på slutet.
 
@@ -68,7 +68,7 @@ Prova att lägga till en rotationsparameter till den bevakade bilden. Och slutet
 
 Klockan är fortfarande något skev till vänster. Ändra rotationsvärdet för `90` till `92`och sedan trycka **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000&amp;rotate=9)
 
-Nu när du trycker **[!UICONTROL Enter]**, skapas en ny rendering av klockan nästan omedelbart. Du kan se vilken typ av prestanda du får, vilket förklarar varför Dynamic Media kan leverera över 800 000 bildförfrågningar, *per sekund*, på en helig helg eller på en stor semester.
+Nu när du trycker **[!UICONTROL Enter]**, skapas en ny rendering av klockan nästan omedelbart. Du kan se vilken typ av prestanda du får, vilket förklarar varför Dynamic Media kan leverera över 800 000 bildförfrågningar, _per sekund_, på en helig helg eller på en stor semester.
 
 Även om det går att ändra bildbehandlingsparametrar i en URL-adress bild för bild är det inte en effektiv metod, särskilt om du har tiotusentals bilder som utgör webbplatsen. Ett mycket bättre sätt är att använda bildförinställningar.
 
@@ -83,7 +83,7 @@ Nu kan du föreställa dig att Creative Director tittar på bilderna och säger:
 
 _&quot;Jag ville verkligen ha den här bilden så att den stora handen pekar mot de fyra, och den lilla handen pekar mot 1 för att göra det lättare att se på den där klockan.&quot;_
 
-Alla nya statiska bilder måste fotograferas igen.
+Alla dessa nya statiska bilder måste fotograferas igen.
 
 Men om du har olika bildförinställningar i Dynamic Media kan du använda dessa bilder var du vill. Bildförinställningarna följer standarder.
 
@@ -204,17 +204,19 @@ Du läser bara lite om bilduppsättningar och visningsprogram. Låt oss titta p�
 * `ZoomVertical_dark` visningsprogram som används på en bildresurs. [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_96311480&amp;config=jpearldemo/ZoomVertical_dark).
 * `Zoom_light` visningsprogram som används på en bild. [Prova](https://s7d1.scene7.com/s7viewers/html5/BasicZoomViewer.html?asset=jpearldemo/AdobeStock_38827423&amp;config=jpearldemo/Zoom_light).
 
-## Läs mer
+## Valfritt - Läs mer
 
-_Dynamic Media_
+Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars är din Dynamic Media Journey klar!
 
-* [Skapa bildförinställningar](/help/assets/dynamic-media/image-presets.md)
+_Hjälpavsnitt för Dynamic Media_
+
+* [Så här skapar du bildförinställningar](/help/assets/dynamic-media/image-presets.md)
 * En lista med [bildbearbetningsparametrar](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html) som du kan använda i fältet Bildmodifierare när du skapar en bildförinställning
 * [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
 * [Förhandsgranska 3D-resurser](/help/assets/dynamic-media/previewing-3d-assets.md)
-* [Bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
-* [Rotationsset](/help/assets/dynamic-media/spin-sets.md)
-* [Blandade medieuppsättningar](/help/assets/dynamic-media/mixed-media-sets.md)
+* [Så här skapar du bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
+* [Skapa snurra uppsättningar](/help/assets/dynamic-media/spin-sets.md)
+* [Så här skapar du blandade medieuppsättningar](/help/assets/dynamic-media/mixed-media-sets.md)
 
 _Dynamic Media självstudiekurser_
 
@@ -223,6 +225,6 @@ _Dynamic Media självstudiekurser_
 
 _Dynamic Media-visningsprogram_
 
-* [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)
+* [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html) för varje visningsprogram
 
 <!-- Live as of April 28 2022. LEAVE IN HERE https://landing.adobe.com/en/na/dynamic-media/ctir-2755/index.html -->
