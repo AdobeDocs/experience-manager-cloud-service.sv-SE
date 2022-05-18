@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 44fb07c7760a8faa3772430cef30fa264c7310ac
+source-git-commit: 75d1681ba4cb607f1958d9d54e49f5cc1e201392
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1960'
 ht-degree: 0%
 
 ---
@@ -181,6 +181,10 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
          Header set Age 0
       </LocationMatch>
       ```
+
+### HEAD beteende {#request-behavior}
+
+När en begäran från HEAD tas emot i CDN i Adobe för en resurs som är **not** cachelagras, begäran omformas och tas emot av dispatchern och/eller AEM som en GET-begäran. Om svaret är nåbart kommer efterföljande förfrågningar från HEAD att besvaras av CDN. Om svaret inte är tillgängligt kommer efterföljande HEAD-begäranden att skickas till dispatchern och/eller AEM-instansen under en tidsperiod som beror på `Cache-Control` TTL.
 
 ## Invalidering av Dispatcher-cache {#disp}
 
