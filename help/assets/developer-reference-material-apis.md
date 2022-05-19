@@ -5,9 +5,9 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: f5282d149e80328742ff9008441960f62cea6290
+source-git-commit: cbaf9faf6cc8c2079dc0abc0a775ff4a0e2cc762
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1790'
 ht-degree: 1%
 
 ---
@@ -167,6 +167,8 @@ När alla delar av en binär fil har överförts skickar du en begäran om HTTP-
 | `versionLabel` | Sträng | Valfritt | Om en ny version skapas är den etikett som är associerad med den nya versionen av en resurs . |
 | `versionComment` | Sträng | Valfritt | Om en ny version skapas, de kommentarer som är kopplade till versionen. |
 | `replace` | Boolesk | Valfritt | If `True` och det finns en resurs med det angivna namnet, [!DNL Experience Manager] tar bort resursen och återskapar den. |
+| `uploadDuration` | Siffra | Valfritt | Den totala tiden, i millisekunder, för att filen ska kunna överföras i sin helhet. Om det anges inkluderas överföringens varaktighet i systemets loggfiler för analys av överföringshastigheten. |
+| `fileSize` | Siffra | Valfritt | Filens storlek i byte. Om det anges inkluderas filstorleken i systemets loggfiler för analys av överföringshastighet. |
 
 >[!NOTE]
 Om tillgången finns och ingendera `createVersion` eller `replace` anges, sedan [!DNL Experience Manager] uppdaterar resursens aktuella version med den nya binärfilen.
