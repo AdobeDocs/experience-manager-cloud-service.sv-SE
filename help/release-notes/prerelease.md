@@ -2,9 +2,9 @@
 title: '"[!DNL Adobe Experience Manager] as a Cloud Service prerelease Channel"'
 description: '"[!DNL Adobe Experience Manager] as a Cloud Service prerelease Channel"'
 exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
-source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
+source-git-commit: c2f0b9c904374b5e59ce2b2f268fdd73dfdbfd21
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -29,28 +29,41 @@ Förhandsversionsfunktionerna kan användas på olika sätt:
 
 ### Molnmiljöer {#cloud-environments}
 
-Så här visar du nya funktioner i Sites-konsolen i molnmiljöer samt resultatet av eventuella projektanpassningar:
+Om du vill uppdatera en molnmiljö så att den använder förhandsversionen lägger du till en ny [miljövariabel](../implementing/cloud-manager/environment-variables.md) med hjälp av användargränssnittet för miljökonfiguration i Cloud Manager:
 
-* Använda [Slutpunkt för miljövariablerna i API:t för Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/api-reference.html#/Variables/patchEnvironmentVariables), ange **AEM_RELEASE_CHANNEL** miljövariabel till värdet **prerelease**.
+1. Navigera till **Program** > **Miljö** > **Miljökonfiguration** du vill uppdatera.
+1. Lägg till en ny [miljövariabel](../implementing/cloud-manager/environment-variables.md):
 
-```
-PATCH /program/{programId}/environment/{environmentId}/variables
-[
-        {
-                "name" : "AEM_RELEASE_CHANNEL",
-                "value" : "prerelease",
-                "type" : "string"
-        }
-]
-```
+   | Namn | Värde | Tjänsten används | Typ |
+   |------|-------|-----------------|------|
+   | `AEM_RELEASE_CHANNEL` | `prerelease` | Alla | Variabel |
 
-CLI:n för Cloud Manager kan även användas enligt instruktionerna på [https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)
-```aio cloudmanager:environment:set-variables <ENVIRONMENT_ID> --programId=<PROGRAM_ID> --variable AEM_RELEASE_CHANNEL “prerelease”```
+1. Spara ändringarna så uppdateras miljön med prerelease-funktionen aktiverad.
+
+   ![Ny miljövariabel](assets/env-configuration-prerelease.png)
 
 
-Variabeln kan tas bort eller återställas till ett annat värde om du vill att miljön ska återställas till det vanliga (ej prerelease) kanalens beteende
+**Alternativt** kan du använda Cloud Manager API och CLI för att uppdatera systemvariablerna:
 
-* Du kan också konfigurera miljövariabler från [Användargränssnitt för Cloud Manager](/help/implementing/cloud-manager/environment-variables.md).
+* Använd [Slutpunkt för miljövariablerna i API:t för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchEnvironmentVariables), ange **AEM_RELEASE_CHANNEL** miljövariabel till värdet **prerelease**.
+
+   ```
+   PATCH /program/{programId}/environment/{environmentId}/variables
+   [
+           {
+                   "name" : "AEM_RELEASE_CHANNEL",
+                   "value" : "prerelease",
+                   "type" : "string"
+           }
+   ]
+   ```
+
+* CLI:n för Cloud Manager kan även användas enligt instruktionerna på [https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid)
+
+   ```aio cloudmanager:environment:set-variables <ENVIRONMENT_ID> --programId=<PROGRAM_ID> --variable AEM_RELEASE_CHANNEL “prerelease”```
+
+
+Variabeln kan tas bort eller återställas till ett annat värde om du vill att miljön ska återställas till det vanliga (ej prerelease) kanalens beteende.
 
 ### Lokal SDK {#local-sdk}
 
