@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 75d1681ba4cb607f1958d9d54e49f5cc1e201392
+source-git-commit: 2df0c88d82554362879f6302e8f7c784cb96d2b8
 workflow-type: tm+mt
-source-wordcount: '1960'
+source-wordcount: '2183'
 ht-degree: 0%
 
 ---
@@ -83,31 +83,42 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 * genom att använda AEM biblioteksramverk på klientsidan, genereras JavaScript- och CSS-kod på ett sådant sätt att webbläsare kan cachelagra den i oändlighet, eftersom alla ändringar manifesteras som nya filer med en unik sökväg.  HTML som refererar till klientbiblioteken kommer med andra ord att produceras efter behov så att kunderna kan uppleva nytt innehåll när det publiceras. Cachekontrollen är inställd på&quot;oföränderlig&quot; eller 30 dagar för äldre webbläsare som inte respekterar det oföränderliga&quot; värdet.
 * se avsnittet [Bibliotek på klientsidan och versionskonsekvens](#content-consistency) om du vill ha mer information.
 
-### Bilder och allt innehåll som är tillräckligt stort för att lagras i blobben {#images}
+### Bilder och allt innehåll som är tillräckligt stort för att lagras i blob {#images}
 
-* som standard, inte cachelagrad
-* kan ställas in på en finare kornig nivå med följande apache `mod_headers` direktiv:
+Standardbeteendet för program som skapats efter mitten av maj 2022 (särskilt för program-ID som är högre än 65000) är att cachelagra som standard, samtidigt som autentiseringskontexten för begäran respekteras. Äldre program (program-ID som är lika med eller lägre än 65000) cache-lagrar inte blobbinnehåll som standard.
 
-   ```
-      <LocationMatch "^/content/.*\.(jpeg|jpg)$">
-        Header set Cache-Control "max-age=222"
-        Header set Age 0
-      </LocationMatch>
-   ```
+I båda fallen kan cachelagringshuvuden åsidosättas på en mer detaljerad nivå i lagret apache/dispatcher med hjälp av apache `mod_headers` direktiv, till exempel:
 
-   Se diskussionen i avsnittet html/text ovan för att vara försiktig så att du inte cachelagrar för mycket och även hur du tvingar AEM att alltid använda cachning med alternativet &quot;always&quot;.
+```
+   <LocationMatch "^/content/.*\.(jpeg|jpg)$">
+     Header set Cache-Control "max-age=222"
+     Header set Age 0
+   </LocationMatch>
+```
 
-   Det är nödvändigt att säkerställa att en fil i `src/conf.dispatcher.d/`cache har följande regel (som finns i standardkonfigurationen):
+Var försiktig så att du inte cachelagrar för mycket när du ändrar cachelagringshuvuden i dispatcherlagret. Mer information finns i avsnittet HTML/text. [ovan](#html-text)). Se även till att resurser som ska hållas privata (i stället för cachelagrade) inte ingår i `LocationMatch` -filter.
 
-   ```
-   /0000
-   { /glob "*" /type "allow" }
-   ```
+#### Nytt standardbeteende för cachelagring {#new-caching-behavior}
 
-   Kontrollera att resurser som ska hållas privata i stället för cachelagrade inte ingår i LocationMatch-direktivets filter.
+AEM kommer att ange cacherubriker beroende på om cachehuvudet redan har angetts och värdet för begärandetypen. Observera att om ingen cache-kontrollrubrik har angetts cachelagras offentligt innehåll och autentiserad trafik anges till privat. Om en cache-kontrollrubrik har angetts ändras inte cacherubrikerna.
 
-   >[!NOTE]
-   >Andra metoder, inklusive [AEM ACS Commons-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
+| Cachekontrollhuvud finns? | Typ av begäran | AEM anger cacherubriker till |
+|------------------------------|---------------|------------------------------------------------|
+| Nej | public | Cache-Control: public, max-age=600, oföränderlig |
+| Nej | autentiserad | Cache-Control: private, max-age=600, oföränderlig |
+| Ja | alla | oförändrad |
+
+Även om det inte rekommenderas går det att ändra det nya standardbeteendet så att det följer det äldre beteendet (program-ID som är lika med eller lägre än 65000) genom att ställa in miljövariabeln för Cloud Manager `AEM_BLOB_ENABLE_CACHING_HEADERS` till false.
+
+#### Äldre standardbeteende för cachelagring {#old-caching-behavior}
+
+Som standard cachelagras inte blobbinnehåll i AEM.
+
+>[!NOTE]
+>Vi rekommenderar att du ändrar det äldre standardbeteendet så att det överensstämmer med det nya beteendet (program-ID som är högre än 65000) genom att ange Cloud Managers miljövariabel AEM_BLOB_ENABLE_CACHING_HEADERS till true. Om programmet redan är öppet kontrollerar du att innehållet fungerar som du tänkt dig efter ändringarna.
+
+>[!NOTE]
+>Andra metoder, inklusive [AEM ACS Commons-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
 
 ### Andra innehållsfiltyper i nodarkivet {#other-content}
 
@@ -115,7 +126,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 * standard kan inte anges med `EXPIRATION_TIME` variabel som används för filtyperna html/text
 * cacheminnets förfallotid kan anges med samma LocationMatch-strategi som beskrivs i avsnittet html/text genom att ange lämplig regex
 
-### Ytterligare optimeringar
+### Ytterligare optimeringar {#further-optimizations}
 
 * Undvik att använda `User-Agent` som en del av `Vary` header. Äldre versioner av standardinställningen för dispatcher (före arkivtypsversion 28) innehöll detta och vi rekommenderar att du tar bort det genom att följa stegen nedan.
    * Hitta värdfilerna i `<Project Root>/dispatcher/src/conf.d/available_vhosts/*.vhost`
