@@ -2,7 +2,7 @@
 title: Projektinställningar
 description: Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: e0774c34ed81d23a5d7a897f65d50dcbf8f8af0d
+source-git-commit: 3bd3221676a3558225baa7a3b0c78174e21091be
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 1%
@@ -32,7 +32,7 @@ För att byggas och driftsättas med Cloud Manager måste AEM följa dessa riktl
 
 I vissa begränsade fall kan du behöva ändra din byggprocess något när du kör i Cloud Manager i stället för när du kör på arbetsstationer för utvecklare. I dessa fall [Maven profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) kan användas för att definiera hur bygget ska vara olika i olika miljöer, inklusive Cloud Manager.
 
-Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att leta efter `CM_BUILD` [systemvariabel.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager-byggmiljön göras genom att leta efter denna variabel som saknas.
+Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att leta efter `CM_BUILD` [miljövariabel.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager-byggmiljön göras genom att leta efter denna variabel som saknas.
 
 Om du till exempel bara vill visa ett enkelt meddelande när bygget körs i Cloud Manager gör du det här.
 
@@ -143,7 +143,7 @@ Låt oss till exempel säga att databasen är `https://repository.myco.com/maven
            <server>
                <id>myco-repository</id>
                <username>cloudmanager</username>
-              <password>${env.CUSTOM_MYCO_REPOSITORY_PASSWORD}</password>
+              <password>${secret.CUSTOM_MYCO_REPOSITORY_PASSWORD}</password>
            </server>
        </servers>
    </settings>

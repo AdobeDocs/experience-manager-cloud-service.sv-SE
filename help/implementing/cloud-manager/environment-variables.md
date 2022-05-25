@@ -2,12 +2,13 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: e03a209079b393d29e02977a2698f8d803a916cd
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
+
 
 # Miljövariabler för Cloud Manager {#environment-variables}
 
@@ -90,3 +91,14 @@ När du har skapat miljövariabler kan du uppdatera dem med **Lägg till/uppdate
 >[!TIP]
 >
 >Om du vill uppdatera flera variabler bör du använda **Miljökonfiguration** om du vill uppdatera alla nödvändiga variabler samtidigt innan du trycker eller klickar **Spara**. På så sätt kan du lägga till dem med en uppdatering i miljön.
+
+## Använda miljövariabler {#using}
+
+Miljövariabler kan göra `pom.xml` konfigurationer säkrare och flexiblare. Lösenord behöver till exempel inte vara hårdkodade och konfigurationen kan anpassas baserat på värdena i miljövariablerna.
+
+Du får åtkomst till miljövariabler och hemligheter via XML enligt följande.
+
+* `${env.VARIABLE_NAME}`
+* `${env.SECRET_NAME}`
+
+Se dokumentet [Konfigurera projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repository-support-password-protected-maven-repositories) som ett exempel på hur du använder båda variabeltyperna i en `pom.xml` -fil.
