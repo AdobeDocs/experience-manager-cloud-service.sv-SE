@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 2df0c88d82554362879f6302e8f7c784cb96d2b8
+source-git-commit: 58999e2aec2f9decaa55554c9488967b70701522
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ I båda fallen kan cachelagringshuvuden åsidosättas på en mer detaljerad niv�
    </LocationMatch>
 ```
 
-Var försiktig så att du inte cachelagrar för mycket när du ändrar cachelagringshuvuden i dispatcherlagret. Mer information finns i avsnittet HTML/text. [ovan](#html-text)). Se även till att resurser som ska hållas privata (i stället för cachelagrade) inte ingår i `LocationMatch` -filter.
+Var försiktig så att du inte cachelagrar för mycket när du ändrar cachelagringshuvuden i dispatcherlagret. Mer information finns i avsnittet HTML/text. [ovan](#html-text). Se även till att resurser som ska hållas privata (i stället för cachelagrade) inte ingår i `LocationMatch` -filter.
 
 #### Nytt standardbeteende för cachelagring {#new-caching-behavior}
 
