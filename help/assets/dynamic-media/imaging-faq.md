@@ -3,8 +3,9 @@ title: Smart bildbehandling
 description: Läs om hur Smart Imaging med Adobe Sensei AI använder varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang.
 feature: Asset Management,Renditions
 role: User
+mini-toc-levels: 3
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: e52e0d99bb9b19a74b938a703089159b5caaa3da
+source-git-commit: 70d472776b5530cbb1048b7284780408326df604
 workflow-type: tm+mt
 source-wordcount: '3427'
 ht-degree: 0%
