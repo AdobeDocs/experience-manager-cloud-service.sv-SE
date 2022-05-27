@@ -5,9 +5,9 @@ feature: Asset Management,Renditions
 role: User
 mini-toc-levels: 3
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: 86a223231aacb4c7159e695d3ce731ff35fc469d
+source-git-commit: 263808980a9542b1a333c59e68e59122cf43025d
 workflow-type: tm+mt
-source-wordcount: '3471'
+source-wordcount: '3472'
 ht-degree: 0%
 
 ---
@@ -125,7 +125,7 @@ Nej. Smart Imaging ingår i din befintliga licens. Den här regeln gäller antin
 
 ## Hur fungerar Smart Imaging? {#how-does-smart-imaging-work}
 
-När en bild efterfrågas av en konsument kontrollerar Smart Imaging användarens egenskaper och konverterar till rätt bildformat baserat på vilken webbläsare som används. Dessa formatkonverteringar görs på ett sätt som inte försämrar den visuella återgivningen. Smart bildbehandling konverterar automatiskt bilder till olika format baserat på webbläsarkapacitet på följande sätt.
+När en bild efterfrågas av en konsument kontrollerar Smart Imaging användarens egenskaper och konverterar den till rätt bildformat baserat på den webbläsare som används. Dessa formatkonverteringar görs på ett sätt som inte försämrar den visuella återgivningen. Smart bildbehandling konverterar automatiskt bilder till olika format baserat på webbläsarkapacitet på följande sätt.
 
 * Konvertera automatiskt till AVIF om webbläsaren stöder formatet
 * Konvertera automatiskt till WebP om AVIF-konverteringen inte var fördelaktig eller om webbläsaren inte stöder AVIF
