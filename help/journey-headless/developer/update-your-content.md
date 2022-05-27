@@ -2,9 +2,9 @@
 title: Så här uppdaterar du innehåll via AEM Assets API:er
 description: I den här delen av den AEM Headless Developer Journey kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
-source-git-commit: 335d7760886fe8dc489335a050d3cb6d0d2652a1
+source-git-commit: 83248913929f196b2f84913f0fe761f291f68d8f
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1071'
 ht-degree: 1%
 
 ---
@@ -318,7 +318,7 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 
-Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar dokumentet [Så här Live med ditt headless-program](go-live.md) där du faktiskt tar ditt AEM Headless-projekt till hands!
+Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar dokumentet [Så här sätter du samman allt - din app och ditt innehåll i AEM utan rubriker](put-it-all-together.md) där du kommer att bekanta dig med grunderna och verktygen för AEM arkitektur som du behöver för att sätta ihop programmen.
 
 ## Ytterligare resurser {#additional-resources}
 
