@@ -2,9 +2,9 @@
 title: Stöd för samma webbplats-cookie för Adobe Experience Manager as a Cloud Service
 description: Stöd för samma webbplats-cookie för Adobe Experience Manager as a Cloud Service
 exl-id: 2cec7202-4450-456f-8e62-b7ed3791505c
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: e1234e90e276a6274fc4dc9de0ae577219669ecf
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,15 @@ Standardvärdet för den här inställningen (`SameSite=Lax`) kan leda till att 
 
 För att komma runt detta måste du ange attributet SameSite cookie till `None` för inloggningstoken.
 
-Du kan göra detta genom att följa stegen nedan:
+>[!CAUTION]
+>
+>The `SameSite=None` inställningen används bara om protokollet är säkert (HTTPS).
+>
+>Om protokollet inte är säkert (HTTP) ignoreras inställningen och det här WARN-meddelandet visas på servern:
+>
+>`WARN com.day.crx.security.token.TokenCookie Skip 'SameSite=None'`
+
+Du kan lägga till inställningen genom att följa stegen nedan:
 
 1. Installera en version av AEM SDK Quickstart lokalt
 1. Gå till webbkonsolen på `http://serveraddress:serverport/system/console/configMgr`
