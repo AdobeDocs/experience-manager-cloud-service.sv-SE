@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 4bfd1c144642f5c2f3b2bf4cd7469b0a7ce8f8fe
+source-git-commit: 333653e42de895fdd2097ad52ed3904192c57437
 workflow-type: tm+mt
-source-wordcount: '3497'
+source-wordcount: '3502'
 ht-degree: 23%
 
 ---
@@ -437,6 +437,7 @@ ht-degree: 23%
    + [Introduktion](/help/forms/home.md)
    + [Viktiga funktioner](/help/forms/key-features.md)
    + [Betydande ändringar](/help/forms/notable-changes.md)
+   + [Arkitektur](/help/forms/aem-forms-cloud-service-architecture.md)
    + Konfigurera och konfigurera tjänsten {#setup-environment}
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
@@ -477,6 +478,7 @@ ht-degree: 23%
          + [Konfigurera omdirigeringssida](/help/forms/configuring-redirect-page.md)
          + [Konfigurera asynkron sändning för ett adaptivt formulär](/help/forms/asynchronous-submissions-adaptive-forms.md)
          + [Skapa en anpassad skickaåtgärd](/help/forms/custom-submit-action-form.md)
+      + [Förifyll adaptiva formulärfält](/help/forms/prepopulate-adaptive-form-fields.md)
       + [Generera postdokument](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
       + Lägga till eller förbättra metadata {#manage-metadata}
          + [Lägga till, ta bort eller redigera metadata i ett anpassat formulär](/help/forms/manage-form-metadata.md)

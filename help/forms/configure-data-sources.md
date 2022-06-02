@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: b6c654f5456e1a7778b453837f04cbed32a82a77
+source-git-commit: 983f1b815fd213863ddbcd83ac7e3f076c57d761
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,16 @@ ht-degree: 0%
 
 ![Dataintegrering](do-not-localize/data-integeration.png)
 
-[!DNL Experience Manager Forms] Med dataintegrering kan du konfigurera och ansluta till olika datakällor. Följande typer stöds inte. Men med liten anpassning kan ni också integrera andra datakällor.
+[!DNL Experience Manager Forms] Med dataintegrering kan du konfigurera och ansluta till olika datakällor. Följande typer stöds:
 
 <!-- * Relational databases - MySQL, [!DNL Microsoft SQL Server], [!DNL IBM DB2], and [!DNL Oracle RDBMS] 
 * [!DNL Experience Manager] user profile  -->
 * RESTful web services
 * SOAP-baserade webbtjänster
-* OData-tjänster
+* OData-tjänster (version 4.0)
+* Microsoft Dynamics
+* SalesForce
+* Microsoft Azure Blob Storage
 
 Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande autentisering och API Key som är färdiga och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. SOAP-baserade tjänster och OData-tjänster är konfigurerade i RESTful [!DNL Experience Manager] as a Cloud Service <!--, JDBC for relational databases --> och anslutning för [!DNL Experience Manager] användarprofilen är konfigurerad i [!DNL Experience Manager] webbkonsol.
 
@@ -110,7 +113,7 @@ Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 ## Konfigurera RESTful-webbtjänster {#configure-restful-web-services}
 
-RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/) i JSON- eller YAML-format i en [!DNL Swagger] definitionsfil. Konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service, se till att du har antingen [!DNL Swagger] på filsystemet eller den URL där filen finns.
+RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/v2/) i JSON- eller YAML-format i en [!DNL Swagger] definitionsfil. Konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service, se till att du har antingen [!DNL Swagger] fil ([Swagger version 2.0](https://swagger.io/specification/v2/)) i filsystemet eller den URL där filen finns.
 
 Gör följande för att konfigurera RESTful-tjänster:
 
@@ -139,6 +142,35 @@ Gör följande för att konfigurera RESTful-tjänster:
 ### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda {#fdm-http-client-configuration}
 
 [!DNL Experience Manager Forms] formulärdatamodell vid integrering med RESTful-webbtjänster som datakälla inkluderar HTTP-klientkonfigurationer för prestandaoptimering.
+
+Ange följande egenskaper för **[!UICONTROL Form Data Model HTTP Client Configuration for REST data source]** konfiguration som anger det reguljära uttrycket:
+
+* Använd `http.connection.max.per.route` egenskapen för att ange maximalt antal tillåtna anslutningar mellan formulärdatamodell och RESTful-webbtjänster. Standardvärdet är 20 anslutningar.
+
+* Använd `http.connection.max` egenskapen för att ange maximalt antal tillåtna anslutningar för varje flöde. Standardvärdet är 40 anslutningar.
+
+* Använd `http.connection.keep.alive.duration` egenskapen för att ange varaktigheten för vilken en beständig HTTP-anslutning hålls vid liv. Standardvärdet är 15 sekunder.
+
+* Använd `http.connection.timeout` egenskapen för att ange varaktigheten, för vilken [!DNL Experience Manager Forms] servern väntar på att en anslutning ska upprättas. Standardvärdet är 10 sekunder.
+
+* Använd `http.socket.timeout` för att ange den maximala tidsperioden för inaktivitet mellan två datapaket. Standardvärdet är 30 sekunder.
+
+I följande JSON-fil visas ett exempel:
+
+```json
+{   
+   "http.connection.keep.alive.duration":"15",   
+   "http.connection.max.per.route":"20",   
+   "http.connection.timeout":"10",   
+   "http.socket.timeout":"30",   
+   "http.connection.idle.connection.timeout":"15",   
+   "http.connection.max":"40" 
+} 
+```
+
+Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart)och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
+
+
 Utför följande steg för att konfigurera HTTP-klienten för formulärdatamodellen:
 
 1. Logga in på [!DNL Experience Manager Forms] Skapa instans som administratör och gå till [!DNL Experience Manager] webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
@@ -156,7 +188,6 @@ Utför följande steg för att konfigurera HTTP-klienten för formulärdatamodel
    * Ange varaktigheten som [!DNL Experience Manager Forms] servern väntar på att en anslutning ska upprättas i **[!UICONTROL Connection timeout]** fält. Standardvärdet är 10 sekunder.
 
    * Ange den maximala tidsperioden för inaktivitet mellan två datapaket i **[!UICONTROL Socket timeout]** fält. Standardvärdet är 30 sekunder.
-
 
 ## Konfigurera SOAP-webbtjänster {#configure-soap-web-services}
 

@@ -3,14 +3,11 @@ title: Förifyll adaptiva formulärfält
 seo-title: Prefill Adaptive Form fields
 description: Använd befintliga data för att förifylla fält i ett adaptivt formulär.
 seo-description: With Adaptive Forms, you users can prefill basic information in a form by logging in with their social profiles. This article describes how you can accomplish this.
-uuid: 574de83a-7b5b-4a1f-ad37-b9717e5c14f1
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
-discoiquuid: 7139a0e6-0e37-477c-9e0b-aa356991d040
-docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 6b3c0abbbd7a5b3c9a3790937b933699389b0cd2
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '1947'
 ht-degree: 0%
 
 ---
@@ -28,11 +25,11 @@ Ett adaptivt formulär kan innehålla en blandning av bundna och obundna fält. 
 
 Du kan förifylla både bundna och obundna fält i ett adaptivt formulär. Prefill-data innehåller avsnitten afBoundData och afUnBoundData för att förifylla både bundna och obundna fält i ett adaptivt formulär. The `afBoundData` -avsnittet innehåller förifyllda data för bundna fält och paneler. Dessa data måste vara kompatibla med det associerade formulärmodellschemat:
 
-* För Adaptiv Forms med [XFA-formulärmall](prepopulate-adaptive-form-fields.md)använder du den förifyllda XML-filen som är kompatibel med XFA-mallens dataschema.
-* För adaptiv Forms med [XML-schema](#xml-schema-af)använder du den förifyllda XML-filen som är kompatibel med XML-schemastrukturen.
-* För adaptiv Forms med [JSON-schema](#json-schema-based-adaptive-forms)använder du JSON-prefyllnad som är kompatibel med JSON-schemat.
-* För adaptiva Forms som använder FDM-schema använder du JSON-prefyllning som är kompatibel med FDM-schemat.
-* För adaptiv Forms med [ingen formulärmodell](#adaptive-form-with-no-form-model), finns det inga bundna data. Varje fält är ett obundet fält och är förifyllt med den obundna XML-koden.
+- För Adaptiv Forms med [XFA-formulärmall](#xfa-based-af)använder du den förifyllda XML-filen som är kompatibel med XFA-mallens dataschema.
+- För adaptiv Forms med [XML-schema](#xml-schema-af)använder du den förifyllda XML-filen som är kompatibel med XML-schemastrukturen.
+- För adaptiv Forms med [JSON-schema](#json-schema-based-adaptive-forms)använder du JSON-prefyllnad som är kompatibel med JSON-schemat.
+- För adaptiva Forms som använder FDM-schema använder du JSON-prefyllning som är kompatibel med FDM-schemat.
+- För adaptiv Forms med [ingen formulärmodell](#adaptive-form-with-no-form-model), finns det inga bundna data. Varje fält är ett obundet fält och är förifyllt med den obundna XML-koden.
 
 ### Exempel på XML-struktur för förifyllning {#sample-prefill-xml-structure}
 
@@ -51,8 +48,8 @@ Du kan förifylla både bundna och obundna fält i ett adaptivt formulär. Prefi
          .
          .
       <numericbox>12</numericbox>
-         . 
-         .              
+         .
+         .
     </data>
   </afUnboundData>
 </afData>
@@ -80,9 +77,9 @@ För bundna fält med samma bindref-fält eller obundna fält med samma namn fyl
 
 Strukturen för förifylld XML och inskickad XML för XFA-baserad Adaptive Forms är följande:
 
-* **XML-struktur för förifyllning**: XML-förifyllnad för XFA-baserad adaptiv form måste vara kompatibel med XFA-formulärmallens dataschema. Om du vill förifylla obundna fält omsluter du XML-strukturen för förifyllning i `/afData/afBoundData` -tagg.
+- **XML-struktur för förifyllning**: XML-förifyllnad för XFA-baserad adaptiv form måste vara kompatibel med XFA-formulärmallens dataschema. Om du vill förifylla obundna fält omsluter du XML-strukturen för förifyllning i `/afData/afBoundData` -tagg.
 
-* **Skickad XML-struktur**: När ingen förifylld XML används innehåller den skickade XML-filen data för både bundna och obundna fält i `afData` wrapper-tagg. Om du använder en XML-förifyllning har den skickade XML-filen samma struktur som XML-förifyllningen. Om XML-förifyllningen börjar med `afData` -taggen har XML-utdata också samma format. Om förifyllnings-XML inte har `afData/afBoundData`wrapper och i stället startar direkt från schemats rottagg som `employeeData`börjar den inskickade XML-filen också med `employeeData` -tagg.
+- **Skickad XML-struktur**: När ingen förifylld XML används innehåller den skickade XML-filen data för både bundna och obundna fält i `afData` wrapper-tagg. Om du använder en XML-förifyllning har den skickade XML-filen samma struktur som XML-förifyllningen. Om XML-förifyllningen börjar med `afData` -taggen har XML-utdata också samma format. Om förifyllnings-XML inte har `afData/afBoundData`wrapper och i stället startar direkt från schemats rottagg som `employeeData`börjar den inskickade XML-filen också med `employeeData` -tagg.
 
 Prefill-Submit-Data-ContentPackage.zip
 
@@ -93,17 +90,17 @@ Exempel som innehåller förifyllda data och inlämnade data
 
 Strukturen för förifylld XML och inskickad XML för Adaptive Forms baserat på XML-schema är följande:
 
-* **XML-struktur för förifyllning**: XML-förifyllningen måste vara kompatibel med tillhörande XML-schema. Om du vill förifylla obundna fält omsluter du XML-strukturen för förifyllning i taggen /afData/afBoundData.
-* **Skickad XML-struktur**: om ingen förifylld XML används innehåller den skickade XML-filen data för både bundna och obundna fält i `afData` wrapper-tagg. Om XML-förifyllning används har den skickade XML-filen samma struktur som XML-förifyllningen. Om XML-förifyllningen börjar med `afData` -taggen har XML-utdata samma format. Om förifyllnings-XML inte har `afData/afBoundData` wrapper och i stället börja direkt från schemats rottagg som `employeeData`börjar den inskickade XML-filen också med `employeeData` -tagg.
+- **XML-struktur för förifyllning**: XML-förifyllningen måste vara kompatibel med tillhörande XML-schema. Om du vill förifylla obundna fält omsluter du XML-strukturen för förifyllning i taggen /afData/afBoundData.
+- **Skickad XML-struktur**: om ingen förifylld XML används innehåller den skickade XML-filen data för både bundna och obundna fält i `afData` wrapper-tagg. Om XML-förifyllning används har den skickade XML-filen samma struktur som XML-förifyllningen. Om XML-förifyllningen börjar med `afData` -taggen har XML-utdata samma format. Om förifyllnings-XML inte har `afData/afBoundData` wrapper och i stället börja direkt från schemats rottagg som `employeeData`börjar den inskickade XML-filen också med `employeeData` -tagg.
 
 ```xml
-<?xml version="1.0" encoding="utf-8" ?> 
+<?xml version="1.0" encoding="utf-8" ?>
 <xs:schema targetNamespace="https://adobe.com/sample.xsd"
             xmlns="https://adobe.com/sample.xsd"
             xmlns:xs="https://www.w3.org/2001/XMLSchema">
- 
+
     <xs:element name="sample" type="SampleType"/>
-         
+
     <xs:complexType name="SampleType">
         <xs:sequence>
             <xs:element name="noOfProjectsAssigned" type="xs:string"/>
@@ -146,24 +143,28 @@ För fält vars modell är XML-schema är data förifyllda i `afBoundData` -tagg
 
 För Adaptiv Forms baserat på JSON-schema beskrivs strukturen för förifyll JSON och skickad JSON nedan. Mer information finns i [Skapa adaptiv Forms med JSON-schema](adaptive-form-json-schema-form-model.md).
 
-* **JSON-struktur för förifyllning**: JSON för förifyllning måste vara kompatibel med det associerade JSON-schemat. Alternativt kan den kapslas in i /afData/afBoundData-objektet om du även vill förifylla obundna fält.
-* **Skickad JSON-struktur**: Om ingen JSON för förifyllnad används innehåller den skickade JSON data för både bundna och obundna fält i afData-wrapper-taggen. Om JSON för förifyllning används har den inskickade JSON samma struktur som JSON för förifyllnad. Om JSON för förifyllning börjar med afData-rotobjektet har utdata-JSON samma format. Om JSON-funktionen för förifyllning inte har wrapper afData/afBoundData och i stället startar direkt från schemarotobjektet, till exempel användaren, börjar den skickade JSON-filen också med användarobjektet.
+- **JSON-struktur för förifyllning**: JSON för förifyllning måste vara kompatibel med det associerade JSON-schemat. Alternativt kan den kapslas in i /afData/afBoundData-objektet om du även vill förifylla obundna fält.
+- **Skickad JSON-struktur**: Om ingen JSON för förifyllnad används innehåller den skickade JSON data för både bundna och obundna fält i afData-wrapper-taggen. Om JSON för förifyllning används har den inskickade JSON samma struktur som JSON för förifyllnad. Om JSON för förifyllning börjar med afData-rotobjektet har utdata-JSON samma format. Om JSON-funktionen för förifyllning inte har wrapper afData/afBoundData och i stället startar direkt från schemarotobjektet, till exempel användaren, börjar den skickade JSON-filen också med användarobjektet.
 
 ```json
 {
-    "id": "https://some.site.somewhere/entry-schema#",
-    "$schema": "https://json-schema.org/draft-04/schema#",
-    "type": "object",
-    "properties": {
-        "address": {
-            "type": "object",
-            "properties": { 
-    "name": {
-     "type": "string"
-    },
-    "age": {
-     "type": "integer"
-}}}}}
+  "id": "https://some.site.somewhere/entry-schema#",
+  "$schema": "https://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}
 ```
 
 För fält som använder JSON-schemamodell är data förifyllda i afBoundData-objektet, vilket visas i exemplet på JSON nedan. Den kan användas för att förifylla ett adaptivt formulär med ett eller flera obundna textfält. Nedan visas ett exempel på data med `afData/afBoundData` wrapper:
@@ -187,16 +188,18 @@ Nedan visas ett exempel utan `afData/afBoundData` wrapper:
 
 ```json
 {
- "user": {
-  "address": {
-   "city": "Noida",
-   "country": "India"
-}}}
+  "user": {
+    "address": {
+      "city": "Noida",
+      "country": "India"
+    }
+  }
+}
 ```
 
 >[!NOTE]
 >
->Använda obundna fält i bundna paneler (paneler med icke-tomma bindRef som har skapats genom att dra komponenter från fliken Sidspark eller Datakällor) **not** rekommenderas eftersom det kan orsaka dataförlust i obundna fält. Du bör ha unika fältnamn i hela formuläret, särskilt för obundna fält.
+> Använda obundna fält i bundna paneler (paneler med icke-tomma bindRef som har skapats genom att dra komponenter från fliken Sidspark eller Datakällor) **not** rekommenderas eftersom det kan orsaka dataförlust i obundna fält. Du bör ha unika fältnamn i hela formuläret, särskilt för obundna fält.
 
 ### Adaptiv form utan formulärmodell {#adaptive-form-with-no-form-model}
 
@@ -225,45 +228,36 @@ XML-taggarna för användardata som skickas för olika fält genereras med fält
 </afData>
 ```
 
-## Konfigurera förifyllningstjänsten med Configuration Manager {#configuring-prefill-service-using-configuration-manager}
+## Konfigurera förifyllningstjänst {#configuring-prefill-service-using-configuration-manager}
 
-Om du vill aktivera förifyllningstjänsten anger du standardkonfigurationen för förifyllningstjänsten i AEM webbkonsolkonfiguration. Gör så här för att konfigurera förifyllningstjänsten:
+Använd `alloweddataFileLocations` egenskapen för **Standardkonfiguration för förifyllningstjänst** för att ange platsen för datafilerna eller en region (reguljärt uttryck) för datafilernas platser.
+
+I följande JSON-fil visas ett exempel:
+
+```JSON
+  {
+  "alloweddataFileLocations": "`file:///C:/Users/public/Document/Prefill/.*`"
+  }
+```
+
+Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
 
 >[!NOTE]
 >
->Konfiguration av förifyllningstjänsten kan användas för adaptiva Forms-, HTML5-formulär och HTML5-formuläruppsättningar.
+> - Som standard är förifyllning tillåtet via crx-filer för alla typer av adaptiva Forms (XSD, XDP, JSON, FDM och utan formulärmodellbaserad). Förifyll tillåts bara med JSON- och XML-filer.
+> - CRX-protokollet hanterar förfylld datasäkerhet och är därför tillåtet som standard. Förifyllnad via andra protokoll med generisk regex kan orsaka sårbarhet. I konfigurationen anger du en säker URL-konfiguration för att skydda dina data.
 
-1. Öppna **[!UICONTROL Adobe Experience Manager Web Console Configuration]** genom att använda URL:\
-   https://&lt;server>:&lt;port>/system/console/configMgr
-1. Söka och öppna **[!UICONTROL Default Prefill Service Configuration]**.
-
-   ![Konfiguration av föfyllnad](assets/prefill_config_new.png)
-
-1. Ange dataplatsen eller en region (reguljärt uttryck) för **Platser för datafiler**. Exempel på giltiga platser för datafiler är:
-
-   * `file:///C:/Users/public/Document/Prefill/.*`;
-   * `https://servername/somesamplexmlfile.xml`
-
-   >[!NOTE]
-   >
-   >Som standard är förifyllning tillåtet via crx-filer för alla typer av adaptiva Forms (XSD, XDP, JSON, FDM och utan formulärmodellbaserad). Förifyll tillåts bara med JSON- och XML-filer.
-
-1. Förifyllningstjänsten har nu konfigurerats för ditt formulär.
-
-   >[!NOTE]
-   >
-   >CRX-protokollet hanterar förfylld datasäkerhet och är därför tillåtet som standard. Förifyllnad via andra protokoll med generisk regex kan orsaka sårbarhet. I konfigurationen anger du en säker URL-konfiguration för att skydda dina data.
 
 ## Det nyfikna fallet med repeterbara paneler {#the-curious-case-of-repeatable-panels}
 
 Vanligtvis skapas bundna (formulärschema) och obundna fält i samma adaptiva form, men följande undantag görs om bindningen är repeterbar:
 
-* Obundna upprepningsbara paneler stöds inte för Adaptive Forms med XFA-formulärmallen, XSD-, JSON-schemat eller FDM-schemat.
-* Använd inte obundna fält i bundna repeterbara paneler.
+- Obundna upprepningsbara paneler stöds inte för Adaptive Forms med XFA-formulärmallen, XSD-, JSON-schemat eller FDM-schemat.
+- Använd inte obundna fält i bundna repeterbara paneler.
 
 >[!NOTE]
 >
->Som tumregel ska du inte blanda bundna och obundna fält om de korsas i data som fylls i av slutanvändaren i obundna fält. Om det är möjligt bör du ändra schemat eller XFA-formulärmallen och lägga till en post för obundna fält, så att den också blir bunden och dess data är tillgängliga som andra fält i skickade data.
+> Som tumregel ska du inte blanda bundna och obundna fält om de korsas i data som fylls i av slutanvändaren i obundna fält. Om det är möjligt bör du ändra schemat eller XFA-formulärmallen och lägga till en post för obundna fält, så att den också blir bunden och dess data är tillgängliga som andra fält i skickade data.
 
 ## Protokoll som stöds för förifyllning av användardata {#supported-protocols-for-prefilling-user-data}
 
@@ -298,12 +292,12 @@ https://`servername`/content/forms/af/xml.html?wcmmode=disabled&dataRef=https://
 https://`servername`/content/forms/af/abc.html?wcmmode=disabled&dataRef=service://[SERVICE_NAME]/[IDENTIFIER]
 ```
 
-* SERVICE_NAME refererar till namnet på OSGI-förifyllningstjänsten. Referens [Skapa och köra en förifyllningstjänst](prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service).
-* IDENTIFIER avser alla metadata som krävs av OSGI-förifyllningstjänsten för att hämta förifyllda data. En identifierare för den inloggade användaren är ett exempel på metadata som kan användas.
+- SERVICE_NAME refererar till namnet på OSGI-förifyllningstjänsten. Referens [Skapa och köra en förifyllningstjänst](prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service).
+- IDENTIFIER avser alla metadata som krävs av OSGI-förifyllningstjänsten för att hämta förifyllda data. En identifierare för den inloggade användaren är ett exempel på metadata som kan användas.
 
 >[!NOTE]
 >
->Det går inte att skicka autentiseringsparametrar.
+> Det går inte att skicka autentiseringsparametrar.
 
 ### Ställer in dataattribut i slingRequest {#setting-data-attribute-in-slingrequest}
 
@@ -344,10 +338,10 @@ Du kan använda en anpassad förifyllningstjänst för scenarierna, där du hela
 
 Förifyllningstjänsten är en OSGi-tjänst och paketeras via OSGi-paketet. Du skapar OSGi-paketet, överför det och installerar det i [!DNL AEM Forms] paket. Innan du börjar skapa paketet:
 
-* [Ladda ned [!DNL AEM Forms] Klient-SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
-* Hämta mallpaketet
+- [Ladda ned [!DNL AEM Forms] Klient-SDK](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
+- Hämta mallpaketet
 
-* Placera datafilen (förifyllda data) i crx-databasen. Du kan placera filen på valfri plats i mappen \contents i crx-database.
+- Placera datafilen (förifyllda data) i crx-databasen. Du kan placera filen på valfri plats i mappen \contents i crx-database.
 
 [Hämta fil](assets/prefill-sumbit-xmlsandcontentpackage.zip)
 
@@ -358,8 +352,8 @@ Mallpaketet (exempelpaketet för förifyllningstjänsten) innehåller exempel p�
 1. Öppna src\main\java\com\adobe\test\Prefill.java för redigering.
 1. I koden anger du värdet:
 
-   * `nodePath:` Nodsökvägsvariabeln som pekar på platsen för crx-databasen innehåller sökvägen till datafilen (prefill). Till exempel /content/prefilldata.xml
-   * `label:` Etikettparametern anger tjänstens visningsnamn. Exempel: Standardtjänst för förifyllnad
+   - `nodePath:` Nodsökvägsvariabeln som pekar på platsen för crx-databasen innehåller sökvägen till datafilen (prefill). Till exempel /content/prefilldata.xml
+   - `label:` Etikettparametern anger tjänstens visningsnamn. Exempel: Standardtjänst för förifyllnad
 
 1. Spara och stäng `Prefill.java` -fil.
 1. Lägg till `AEM Forms Client SDK` till byggsökvägen för standardprojektet.
@@ -373,20 +367,21 @@ Om du vill starta förifyllningstjänsten överför du JAR-filen till [!DNL AEM 
 1. Gå till egenskapskonsolen [!DNL AEM Forms] container > Basic > Prefill Service.
 1. Välj standardtjänsten för förifyllnad och klicka på **[!UICONTROL Save]**. Tjänsten är kopplad till formuläret.
 
-## Förifyll data på klienten {#prefill-at-client}
+<!-- ## Prepopulate data at client {#prefill-at-client}
 
-När du fyller i ett adaptivt formulär i förväg visas [!DNL AEM Forms] servern sammanfogar data med ett adaptivt formulär och skickar det ifyllda formuläret till dig. Som standard utförs datasammanfogningsåtgärden på servern.
+When you prefill an Adaptive Form, the [!DNL AEM Forms] server merges data with an Adaptive Form and delivers the filled form to you. By default, the data merge action takes place at the server.
 
-Du kan konfigurera [!DNL AEM Forms] server som utför datasammanfogningsåtgärden på klienten i stället för på servern. Den minskar avsevärt den tid som krävs för att förifylla och återge Adaptiv Forms. Som standard är funktionen inaktiverad. Du kan aktivera det från Configuration Manager eller kommandoraden.
+You can configure the [!DNL AEM Forms] server to perform the data merge action at the client instead of the server. It significantly reduces the time required to prefill and render Adaptive Forms. By default, the feature is disabled. You can enable it from the Configuration Manager or command line.
 
-* Så här aktiverar eller inaktiverar du konfigurationshanteraren:
-   1. Öppna AEM Configuration Manager.
-   1. Leta reda på och öppna Adaptive Form and Interactive Communication Web Channel Configuration
-   1. Aktivera alternativet Configuration.af.clientside.datamerge.enabled.name
-* Så här aktiverar eller inaktiverar du från kommandoraden:
-   * Aktivera genom att köra följande cURL-kommando:
-      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+* To enable or disable from configuration manager:
+  1. Open AEM Configuration Manager.
+  1. Locate and open the Adaptive Form and Interactive Communication Web Channel Configuration
+  1. Enable the Configuration.af.clientside.datamerge.enabled.name option
+* To enable or disable from the command line:
+  * To enable, run the following cURL command:
+    `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=true \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
 
-   * Om du vill inaktivera kör du följande cURL-kommando:
-      `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
-   Om du vill utnyttja de förifyllda data som finns på klienten ska du uppdatera förifyllningstjänsten så att den returneras [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) och [CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html)
+  * To disable, run the following cURL command:
+    `curl -u admin:admin -X POST -d apply=true \ -d propertylist=af.clientside.datamerge.enabled \ -d af.clientside.datamerge.enabled=false \ http://${crx.host}:${crx.port}/system/console/configMgr/Adaptive%20Form%20and%20Interactive%20Communication%20Web%20Channel%20Configuration`
+
+   To take full advantage of the prepopulate data at client option, update your prefill service to return [FileAttachmentMap](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) and [CustomContext](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/forms/common/service/PrefillData.html) -->
