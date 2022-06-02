@@ -1,7 +1,7 @@
 ---
 title: Experience Manager [!DNL AEM Forms] as a Cloud Service arkitektur
 description: Förstå arkitekturen i [!DNL AEM Forms] as a Cloud Service att lära sig om plattformens skalbarhet, flexibilitet och prestanda.
-source-git-commit: 494e37b24ab1c8432613d6a62a4c3a1d48d216ee
+source-git-commit: cb7b417b9b4898b0656e79d6f699e8d5cd611e76
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 0%
@@ -17,10 +17,13 @@ AEM Forms as a Cloud Service har stöd för två användningsområden: Digital r
 
 ## Arkitektur- och flödesdiagram
 
-|  |  |
-|---|---|
-| **Forms Digital Enrollment** | ![Forms-digital registrering](assets/forms-cloud-service-architecture-forms-digital-enrollment.svg) |
-| **Forms Communications** | ![Forms-kommunikation](assets/forms-cloud-service-architecture-forms-communications.svg) |
+**Forms Digital Enrollment**
+
+![Forms-digital registrering](assets/forms-cloud-service-architecture-forms-digital-enrollment.svg)
+
+**Forms Communications**
+
+![Forms-kommunikation](assets/forms-cloud-service-architecture-forms-communications.svg)
 
 ## Komponenter
 
