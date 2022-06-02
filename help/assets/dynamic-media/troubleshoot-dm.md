@@ -3,9 +3,9 @@ title: Felsöka Dynamic Media
 description: Felsökningstips när du använder Dynamic Media.
 role: Admin,User
 exl-id: 3e8a085f-57eb-4009-a5e8-1080b4835ae2
-source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
+source-git-commit: a7152785e8957dcc529d1e2138ffc8c895fa5c29
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1129'
 ht-degree: 0%
 
 ---
@@ -169,53 +169,71 @@ Om du har problem med video kan du läsa följande felsökningsguide.
 
 Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
 
-<table>
- <tbody>
-  <tr>
-   <td><strong>Problem</strong></td>
-   <td><strong>Felsöka</strong></td>
-   <td><strong>Lösning</strong></td>
-  </tr>
-  <tr>
-   <td>Visningsförinställningar publiceras inte</td>
-   <td><p>Gå till diagnostiksidan för provhanteraren: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></p> <p>Lägg märke till beräknade värden. När du arbetar korrekt ser du:</p> <p><code>_DMSAMPLE status: 0 unsyced assets - activation not necessary
-       _OOTB status: 0 unsyced assets - 0 unactivated assets</code></p> <p><strong>Anteckning</strong>: Det kan ta ca 10 minuter efter konfigureringen av Dynamic Media molninställningar för de visningsprogramresurser som ska synkroniseras.</p> <p>Om det finns oaktiverade resurser kvar väljer du något av <strong>Visa alla oaktiverade resurser</strong> för att se information.</p> </td>
-   <td>
-    <ol>
-     <li>Navigera till förinställningslistan för visningsprogrammet i administratörsverktygen: <code>https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code></li>
-     <li>Markera alla förinställningar för visningsprogram och välj sedan <strong>Publicera</strong>.</li>
-     <li>Navigera tillbaka till exempelhanteraren och observera att antalet oaktiverade resurser nu är noll.</li>
-    </ol> </td>
-  </tr>
-  <tr>
-   <td>Bilder med visningsförinställningar returnerar 404 från förhandsgranskningen i resursinformationen eller kopierar URL/inbäddningskod</td>
-   <td><p>Gör följande i CRXDE Lite:</p>
-    <ol>
-     <li>Navigera till <code>&lt;sync-folder&gt;/_CSS/_OOTB</code> i din Dynamic Media-synkroniseringsmapp (till exempel <code>/content/dam/_CSS/_OOTB</code>),</li>
-     <li>Hitta metadatanoden för den problematiska resursen (till exempel <code>&lt;sync-folder&gt;/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/</code>).</li>
-     <li>Kontrollera om det finns <code>dam:scene7*</code> egenskaper. Om resursen synkroniserades och publicerades korrekt visas <code>dam:scene7FileStatus</code> anges till <strong>PublishComplete</strong>.</li>
-     <li>Försök att begära teckningen direkt från Dynamic Media genom att sammanfoga värdena för följande egenskaper och stränglitteraler
-      <ul>
-       <li><code>dam:scene7Domain</code></li>
-       <li><code>"is/content"</code></li>
-       <li><code>dam:scene7Folder</code></li>
-       <li><code>&lt;asset-name&gt;</code></li>
-       <li>Exempel: <code>https://&lt;server&gt;/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png</code></li>
-      </ul> </li>
-    </ol> </td>
-   <td><p>Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet inte har synkroniserats eller publicerats startar du om hela kopierings-/synkroniseringsprocessen:</p>
-    <ol>
-     <li>Navigera till <code>/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html</code>
-     </li>
-     <li>Välj följande åtgärder i ordning:
-      <ol>
-       <li>Ta bort synkroniseringsmappar.</li>
-       <li>Ta bort förinställningsmapp (nedan) <code>/conf</code>).
-       <li>Utlös DM Setup Async Job.</li>
-      </ol> </li>
-     <li>Vänta på meddelande om att synkroniseringen har slutförts i Inkorgen för Experience Manager.
-     </li>
-    </ol> </td>
-  </tr>
- </tbody>
-</table>
+### Problem: Visningsförinställningar publiceras inte {#viewers-not-published}
+
+**Felsöka**
+
+1. Gå till diagnostiksidan för provhanteraren: `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html`.
+1. Lägg märke till beräknade värden. När du arbetar korrekt ser du följande: `_DMSAMPLE status: 0 unsyced assets - activation not necessary _OOTB status: 0 unsyced assets - 0 unactivated assets`.
+
+   >[!NOTE]
+   >
+   >Det kan ta ca 10 minuter efter konfigureringen av Dynamic Media molninställningar för de visningsprogramresurser som ska synkroniseras.
+
+1. Om det finns oaktiverade resurser kvar väljer du något av **Visa alla oaktiverade resurser** för att se information.
+
+**Lösning**
+
+1. Navigera till förinställningslistan för visningsprogrammet i administratörsverktygen: `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html`
+1. Markera alla förinställningar för visningsprogram och välj sedan **Publicera**.
+1. Navigera tillbaka till exempelhanteraren och observera att antalet oaktiverade resurser nu är noll.
+
+### Problem: En förinställd teckning i visningsprogrammet returnerar 404 från Förhandsgranska i resursinformation eller Kopiera URL/Bädda in kod {#viewer-preset-404}
+
+**Felsöka**
+
+Gör följande i CRXDE Lite:
+
+1. Navigera till `<sync-folder>/_CSS/_OOTB` i din Dynamic Media-synkroniseringsmapp (till exempel `/content/dam/_CSS/_OOTB`).
+1. Hitta metadatanoden för den problematiska resursen (till exempel `<sync-folder>/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/`).
+1. Kontrollera om det finns `dam:scene7*` egenskaper. Om resursen synkroniserades och publicerades korrekt visas `dam:scene7FileStatus` anges till **PublishComplete**.
+1. Försök att begära teckningen direkt från Dynasmic Media genom att sammanfoga värdena för följande egenskaper och stränglitteraler:
+
+   * `dam:scene7Domain`
+   * `"is/content"`
+   * `dam:scene7Folder`
+   * `<asset-name>`
+Exempel: 
+`https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
+
+**Lösning**
+
+Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet inte har synkroniserats eller publicerats startar du om hela kopierings-/synkroniseringsprocessen:
+
+1. Gå till CRXDE Lite.
+1. Ta bort `<sync-folder>/_CSS/_OOTB`.
+1. Navigera till CRX Package Manager: `https://localhost:4502/crx/packmgr/`.
+1. Sök efter visningsprogrampaket i listan; börjar med `cq-dam-scene7-viewers-content`.
+1. Välj **Installera om**.
+1. Gå till konfigurationssidan för Dynamic Media under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
+1. Gör inga ändringar, markera **Spara**.
+Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempelresurserna, CSS-förinställningen för visningsprogrammet och teckningen.
+
+### Problem: Bildförhandsvisningen läses inte in vid redigering av visningsförinställningar {#image-preview-not-loading}
+
+**Lösning**
+
+1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och navigerar sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. Navigera till mappen med exempelinnehåll på följande plats i den vänstra listen:
+
+   `/content/dam/_DMSAMPLE`
+
+1. Ta bort `_DMSAMPLE` mapp.
+1. Navigera till mappen Presets på följande plats i den vänstra listen:
+
+   `/conf/global/settings/dam/dm/presets/viewer`
+
+1. Ta bort `viewer` mapp.
+1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan väljer du **[!UICONTROL Save All]**.
+1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du **Tillbaka hem** ikon.
+1. Återskapa en [Dynamic Media Configuration in Cloud Services](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
