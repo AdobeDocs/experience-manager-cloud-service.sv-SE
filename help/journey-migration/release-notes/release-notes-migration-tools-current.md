@@ -1,36 +1,58 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.4.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.4.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.6.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.6.0
 feature: Release Information
-source-git-commit: 87e3291b4a72c24fc6cf8df488df305f1a078ea5
+source-git-commit: 717b2c851a18ef5171d64a462509ce08fb87a59c
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '399'
+ht-degree: 2%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.4.0 {#release-notes}
+# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.6.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.4.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.6.0.
 
 ## Best Practices Analyzer {#bpa-release}
 
 ### Releasedatum {#release-date-bpa}
 
-Releasedatum för Best Practices Analyzer v2.1.28 är 22 april 2022.
+Releasedatum för Best Practices Analyzer v2.1.30 är 1 juni 2022.
 
 ### Nyheter {#what-is-new-bpa}
 
-* Möjlighet att upptäcka och rapportera om användning av tillgångshanterarens API:er som inte stöds. Det finns fyra API:er som inte längre stöds i AEM as a Cloud Service. Kunderna bör se till att de inte längre använder dessa API:er och bör använda den nya metoden för överföring av resurser.
+* Möjlighet att identifiera och rapportera användning av anpassade dialogrutewidgetar med hjälp av CoralUI- och Classic-dialogrutewidgetar. Vi rekommenderar att du konverterar anpassade widgetar för klassisk dialog från ExtJS till CoralUI. Anpassade widgetar för Coral Dialog bör uppdateras till CoralUI3.
 
-* Möjlighet att upptäcka användning av mallar för innehållsfragment. Mallar för innehållsfragment stöds inte längre för att skapa nya innehållsfragment på AEM as a Cloud Service. Kunderna måste skapa innehållsfragmentmodeller för att ersätta innehållets fragmentmallar.
+* Möjlighet att identifiera och rapportera om användning och version av Assets Share Commons. Resursdelningskommentarer 1.x stöds inte på AEM as a Cloud Service och måste uppgraderas till 2.x.
 
-* Möjlighet att identifiera resurser med fler än 100 underordnade under metadatanoden för resursen i databasen. Vi rekommenderar att du tar bort metadatanoder som inte behövs för att förbättra prestandan vid inläsning av mappar som består av sådana resurser.
+* Möjlighet att upptäcka och rapportera antalet noder från versioner.
 
-* Möjlighet att identifiera och rapportera vilken typ av datalager som används.
-
-* Mönstret har uppdaterats för AEM Form Portal.
+* Möjlighet att identifiera och rapportera om anpassade replikeringsagenter eller replikeringsagenter som har ändrats.
 
 ### Felkorrigeringar {#bug-fixes-bpa}
 
-* BPA rapporterade resultat för kärnkomponenter i stället för att bara rapportera om kundkomponenter. Den här har åtgärdats.
+* BPA rapporterade NCC (ej kompatibla ändringar), UMI (Upgrade Misconfiguration Issue) och PCX (Page Complexity)-resultat som är falskt positiva. De här har åtgärdats.
+* BPA rapporterade fel när en nodnamnslängd överskred 150 byte. Detta har åtgärdats för att identifiera sådana fel endast när den överordnade noden är lika med eller större än 350 byte.
+
+## Content Transfer Tool {#ctt-release}
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för innehållsöverföringsverktyget v2.0.10 är 2 juni 2022.
+
+### Nyheter {#what-is-new-ctt}
+
+* Verktyget för innehållsöverföring (CTT) har utvecklats för att fungera ihop med Cloud Acceleration Manager för att effektivisera hela innehållsöverföringsprocessen. CTT fokuserar nu på att utföra innehållsextraheringar. CTT-tjänsten för förtäring är nu integrerad i Cloud Acceleration Manager. Fördelarna med den här utvecklingen är:
+   * Självbetjäning för att extrahera en migreringsuppsättning en gång och importera den i flera miljöer parallellt.
+   * Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsanvisningar och felhantering.
+   * Inmatningsloggarna sparas och är alltid tillgängliga för felsökning.
+
+## Cloud Acceleration Manager {#cam-release}
+
+### Releasedatum {#release-date-cam}
+
+Releasedatum för Cloud Acceleration Manager är 2 juni 2022.
+
+### Nyheter {#what-is-new-cam}
+
+* Med Cloud Acceleration Manager kan användare nu starta och hantera innehållsöverföringar för att flytta innehåll från en kunds AEM (lokala eller Adobe Managed Services) till AEM as a Cloud Service som en del av ett migreringsprojekt. Se [Använda innehållsöverföringskort](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-implementation-phase.html#content-transfer) för mer information.
