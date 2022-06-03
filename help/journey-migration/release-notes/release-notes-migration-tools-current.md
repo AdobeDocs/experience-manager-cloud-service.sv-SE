@@ -2,7 +2,7 @@
 title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.6.0
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.6.0
 feature: Release Information
-source-git-commit: 717b2c851a18ef5171d64a462509ce08fb87a59c
+source-git-commit: 666635fc951ceb10e1a4a9a90a042d60da9f463a
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 2%
@@ -22,11 +22,8 @@ Releasedatum för Best Practices Analyzer v2.1.30 är 1 juni 2022.
 ### Nyheter {#what-is-new-bpa}
 
 * Möjlighet att identifiera och rapportera användning av anpassade dialogrutewidgetar med hjälp av CoralUI- och Classic-dialogrutewidgetar. Vi rekommenderar att du konverterar anpassade widgetar för klassisk dialog från ExtJS till CoralUI. Anpassade widgetar för Coral Dialog bör uppdateras till CoralUI3.
-
 * Möjlighet att identifiera och rapportera om användning och version av Assets Share Commons. Resursdelningskommentarer 1.x stöds inte på AEM as a Cloud Service och måste uppgraderas till 2.x.
-
 * Möjlighet att upptäcka och rapportera antalet noder från versioner.
-
 * Möjlighet att identifiera och rapportera om anpassade replikeringsagenter eller replikeringsagenter som har ändrats.
 
 ### Felkorrigeringar {#bug-fixes-bpa}
