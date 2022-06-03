@@ -2,7 +2,7 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: f84806c1579f8ef163dd9454fcae4a57bf22a452
+source-git-commit: e7e3ec89d5e7b43b8c6dfb10f5dc966768ab0af1
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 7%
@@ -102,7 +102,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
 Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Manager måste du installera den senaste versionen av verktyget för innehållsöverföring på din Adobe Experience Manager-källinstans (AEM). Följ det här avsnittet för att lära dig hur du fyller i migreringsuppsättningen.
 
-1. När du har installerat den senaste versionen (Vxxx) av verktyget Innehållsöverföring på din Adobe Experience Manager-källinstans går du till **Åtgärder - innehållsmigrering**
+1. När du har installerat den senaste versionen (v2.0.10) av verktyget Innehållsöverföring på din Adobe Experience Manager-källinstans går du till **Åtgärder - innehållsmigrering**
 
 1. Klicka på **Skapa migreringsuppsättning**
 

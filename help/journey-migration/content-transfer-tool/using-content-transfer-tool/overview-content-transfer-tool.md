@@ -2,10 +2,10 @@
 title: Översikt över Content Transfer Tool
 description: Översikt över Content Transfer Tool
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: ab63e9af7b52429fea1e2b2981effc1356f0787f
+source-git-commit: 3bf12642e94076a67010e4701715a54138a490ee
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '630'
+ht-degree: 43%
 
 ---
 
@@ -36,7 +36,7 @@ Det finns en ny version av verktyget Innehållsöverföring som integrerar inneh
 * Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsräcken och felhantering
 * Inmatningsloggarna är beständiga och finns alltid tillgängliga för felsökning
 
-Börja använda den nya versionen (Vxx) <!-- update when version is available --> du måste avinstallera äldre versioner av verktyget Innehållsöverföring eftersom det har skett en stor förändring i arkitekturen.
+Så här börjar du använda den nya versionen (v2.0.10) <!-- update when version is available --> du måste avinstallera äldre versioner av verktyget Innehållsöverföring eftersom det har skett en stor förändring i arkitekturen.
 
 >[!NOTE]
 >

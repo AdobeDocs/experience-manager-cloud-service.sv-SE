@@ -2,10 +2,10 @@
 title: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 description: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: 9ee931223c3600643fbaeefd790f5f23827da367
+source-git-commit: 98b81d918d60722ddb3f1c7736bc5b3506e05f6f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1654'
+ht-degree: 21%
 
 ---
 
@@ -26,7 +26,7 @@ Det finns en ny version av verktyget Innehållsöverföring som integrerar inneh
 * Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsräcken och felhantering
 * Inmatningsloggarna är beständiga och finns alltid tillgängliga för felsökning
 
-Om du vill börja använda den nya versionen (Vxx) måste du avinstallera tidigare versioner av verktyget Innehållsöverföring. Detta behövs eftersom den nya versionen innehåller en stor arkitektoniska förändring. Med Vxx måste du skapa nya migreringsuppsättningar och köra extrahering och förtäring på nytt för de nya migreringsuppsättningarna. Om en migrering redan pågår kan du fortsätta använda den tidigare versionen av CTT tills migreringen är klar.
+Om du vill börja använda den nya versionen (v2.0.10) måste du avinstallera tidigare versioner av verktyget Innehållsöverföring. Detta behövs eftersom den nya versionen innehåller en stor arkitektoniska förändring. Med v2.0.10 måste du skapa nya migreringsuppsättningar och köra extraheringen och inmatningen på nytt för de nya migreringsuppsättningarna. Om en migrering redan pågår kan du fortsätta använda den tidigare versionen av CTT tills migreringen är klar.
 
 Följande riktlinjer och bästa praxis gäller för den nya versionen av verktyget Innehållsöverföring:
 
