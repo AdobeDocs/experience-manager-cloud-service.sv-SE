@@ -1,17 +1,17 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.6.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.6.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.5.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.5.0
 feature: Release Information
-source-git-commit: 666635fc951ceb10e1a4a9a90a042d60da9f463a
+source-git-commit: 48dd6b3184cdde06b902eae35fac42515f606e77
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 2%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.6.0 {#release-notes}
+# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.5.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.6.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.5.0.
 
 ## Best Practices Analyzer {#bpa-release}
 
