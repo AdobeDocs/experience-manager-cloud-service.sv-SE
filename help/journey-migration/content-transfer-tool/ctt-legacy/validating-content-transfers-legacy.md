@@ -1,15 +1,16 @@
 ---
-title: Verifierar innehållsöverföringar
+title: Validerar innehållsöverföringar (äldre)
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
-exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
-source-git-commit: b88277cda730d9499c7e2750026b6f415c2a8d0e
+hide: true
+hidefromtoc: true
+source-git-commit: 1fb4d0f2a3b3f9a27f5ab1228ec2d419149e0764
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
 
-# Verifierar innehållsöverföringar {#validating-content-transfers}
+# Validerar innehållsöverföringar (äldre) {#validating-content-transfers}
 
 ## Komma igång {#getting-started}
 
@@ -44,11 +45,11 @@ En illustration av detta finns i exemplen nedan:
 
 * **Extrahering (skriv över)**
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-01.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTTextractionoverwrite.png)
 
 * **Inmatning (svep)**
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-02.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTTingestionwipe.png)
 
 * **Anteckningar**
 
@@ -58,11 +59,11 @@ En illustration av detta finns i exemplen nedan:
 
 * **Extrahering**
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-03.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTTextraction.png)
 
 * **Inmatning**
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-04.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets/CTTingestion.png)
 
 * **Anteckningar**
 
@@ -127,10 +128,22 @@ Migration validation took 0 minutes
 
 Ovanstående felexempel uppnåddes genom att ett intag kördes och därefter kördes samma intag igen med rensning inaktiverat, så att inga noder berördes under intaget - allt fanns redan på målet.
 
-Förutom att den ingår i matningsloggen kan man även få tillgång till valideringsrapporten via **Inmatningsjobb** användargränssnitt i Cloud Acceleration Manager. Klicka på de tre punkterna (**...**) och klicka sedan på **Valideringsrapport** i listrutan för att visa valideringsrapporten.
+Förutom att den ingår i inmatningsloggen kan även valideringsrapporten nås via användargränssnittet i verktyget Innehållsöverföring. Välj en migreringsuppsättning och klicka på **Validera** från åtgärdsfältet:
 
 
-![bild](/help/journey-migration/content-transfer-tool/assets-ctt/CTTvalidationreportnew.png)
+![bild](/help/journey-migration/content-transfer-tool/assets/CTTvalidatebutton.png)
+
+Dialogrutan Valideringsloggar öppnas:
+
+![bild](/help/journey-migration/content-transfer-tool/assets/CTTvalidationlogs.png)
+
+Använd **Rapport om publicering/författare för validering** för att visa valideringsrapporten för det senaste intaget till den angivna nivån i målmiljön. Nedan finns ett exempel från ett litet publiceringsförslag:
+
+![bild](/help/journey-migration/content-transfer-tool/assets/CTTvalidationreport.png)
+
+>[!NOTE]
+>
+>The **Rapport om publicering/författare för validering** -länken visas när det är klart. Valideringsrapporterna är dessutom beständiga, så de upphör inte att gälla när intaget är slutfört, som i matningsloggarna.
 
 ## Felsökning {#troubleshooting}
 

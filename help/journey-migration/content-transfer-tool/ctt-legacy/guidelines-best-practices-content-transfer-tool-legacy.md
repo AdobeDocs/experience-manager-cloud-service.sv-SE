@@ -1,34 +1,20 @@
 ---
-title: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
+title: Riktlinjer och bästa praxis för användning av verktyget Innehållsöverföring (äldre)
 description: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
-exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: 9ee931223c3600643fbaeefd790f5f23827da367
+hide: true
+hidefromtoc: true
+source-git-commit: 1fb4d0f2a3b3f9a27f5ab1228ec2d419149e0764
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring {#guidelines}
+# Riktlinjer och bästa praxis för användning av verktyget Innehållsöverföring (äldre) {#guidelines}
 
 ## Riktlinjer och bästa praxis {#best-practices}
 
->[!CONTEXTUALHELP]
->id="aemcloud_ctt_guidelines"
->title="Riktlinjer och bästa praxis"
->abstract="Granska riktlinjer och metodtips om hur du använder verktyget Innehållsöverföring, t.ex. när det gäller att rensa bort ändringar, diskutrymme med mera."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#pre-reqs" text="Viktigt att tänka på när du använder verktyget Innehållsöverföring"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#important-considerations" text="Viktigt att tänka på när du använder verktyget för användarmappning"
-
-Det finns en ny version av verktyget Innehållsöverföring som integrerar innehållsöverföringsprocessen med Cloud Acceleration Manager. Vi rekommenderar att du går över till den nya versionen för att utnyttja alla fördelar den ger:
-
-* Självbetjäningssätt att extrahera en migreringsuppsättning en gång och importera den i flera miljöer parallellt
-* Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsräcken och felhantering
-* Inmatningsloggarna är beständiga och finns alltid tillgängliga för felsökning
-
-Om du vill börja använda den nya versionen (Vxx) måste du avinstallera tidigare versioner av verktyget Innehållsöverföring. Detta behövs eftersom den nya versionen innehåller en stor arkitektoniska förändring. Med Vxx måste du skapa nya migreringsuppsättningar och köra extrahering och förtäring på nytt för de nya migreringsuppsättningarna. Om en migrering redan pågår kan du fortsätta använda den tidigare versionen av CTT tills migreringen är klar.
-
-Följande riktlinjer och bästa praxis gäller för den nya versionen av verktyget Innehållsöverföring:
+Följ nedanstående avsnitt för att få information om riktlinjer och bästa praxis för att använda Content Transfer Tool:
 
 * Du bör köra [Revision Cleanup](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html) och [databasens konsekvenskontroller](https://helpx.adobe.com/experience-manager/kb/How-to-run-a-datastore-consistency-check-via-oak-run-AEM.html) på **källdatabasen** för att identifiera potentiella problem och minska databasens storlek.
 
@@ -46,7 +32,7 @@ Den allmänna formeln för att beräkna hur mycket ledigt diskutrymme som krävs
    * *noddatabasens storlek*: storlek på segmentdatabaskatalogen eller storlek på MongoDB-databasen.
 För en segmentdatabasstorlek på 20 GB krävs därför 94 GB ledigt diskutrymme.
 
-* En migreringsuppsättning måste bibehållas under hela innehållsöverföringsaktiviteten för att kunna stödja innehållsöverläggningar. Högst fem migreringsuppsättningar per projekt i Cloud Acceleration Manager kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten. Om det behövs fler än fem migreringsuppsättningar måste du skapa ett andra projekt i Cloud Acceleration Manager. Detta kräver dock ytterligare projekthantering och styrning utanför produkten för att undvika att flera användare skriver över innehåll på målet.
+* En migreringsuppsättning måste bibehållas under hela innehållsöverföringsaktiviteten för att kunna stödja innehållsöverläggningar. Eftersom maximalt tio migreringsuppsättningar kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten bör du dela upp innehållsdatabasen i enlighet med detta för att se till att du inte får slut på migreringsuppsättningar.
 
 ## Viktigt att tänka på innan du använder verktyget Innehållsöverföring {#important-considerations}
 
@@ -56,17 +42,19 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Java måste konfigureras i AEM-miljön så att `java` kommandot kan köras av den användare som startar AEM.
 
+* Vi rekommenderar att du avinstallerar äldre versioner av verktyget Innehållsöverföring när du installerar version 1.3.0 eftersom det har skett en stor förändring i arkitekturen i verktyget. Med 1.3.0 bör du också skapa nya migreringsuppsättningar och köra extrahering och förtäring på nytt för de nya migreringsuppsättningarna.
+
 * Verktyget Innehållsöverföring kan användas med följande typer av datalager: File Data Store, S3 Data Store, Shared S3 Data Store och Azure Blob Store Data Store.
 
 * Om du använder en *Sandlådemiljö*, se till att din miljö är aktuell och uppgraderad till den senaste versionen. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
-* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare på källinstansen och tillhöra den lokala AEM **administratörer** i den Cloud Service som du överför innehåll till. Obehöriga användare kan inte starta frågor.
+* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare på källinstansen och tillhöra den lokala AEM **administratörer** i den Cloud Service som du överför innehåll till. Obehöriga användare kan inte hämta åtkomsttoken för att använda Content Transfer Tool.
 
 * Om inställningen **Rensa befintligt innehåll i molninstansen före intag** om du aktiverar det här alternativet tas hela den befintliga databasen bort och en ny databas skapas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Användaren måste läggas till på nytt i **administratörer** för att hämta åtkomsttoken för verktyget Innehållsöverföring.
 
 * Verktyget Innehållsöverföring stöder inte sammanfogning av innehåll från flera källor till målkällinstansen om Cloud Servicen från de två källorna flyttas till samma sökvägar på målet. Om du vill flytta innehåll från flera olika källor till en enda instans av målsökvägen måste du se till att det inte finns någon överlappning mellan innehållssökvägarna från Cloud Servicen.
 
-* Extraheringsnyckeln gäller i 14 dagar från den tidpunkt den skapades/förnyades. Den kan förnyas när som helst. Om extraheringsnyckeln har gått ut kan du inte utföra en extrahering.
+* Åtkomsttoken kan upphöra att gälla regelbundet antingen efter en viss tidsperiod eller efter att Cloud Servicens miljö har uppgraderats. Om åtkomsttoken har upphört att gälla kan du inte ansluta till Cloud Servicen och du måste hämta den nya åtkomsttoken. Statusikonen som är kopplad till en befintlig migreringsuppsättning ändras till ett rött moln och ett meddelande visas när du hovrar över den.
 
 * Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer till exempel inte mellan publicerat och opublicerat innehåll när innehåll hämtas till en publiceringsmiljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. Användaren kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Vi rekommenderar att CTT installeras på källinstansen Author för att flytta innehåll till målinstansen Author när du flyttar innehåll till en Production-instans och att CTT på källinstansen av Publish installeras för att flytta innehåll till målpubliceringsinstansen. Se [Köra verktyget Innehållsöverföring på en publiceringsinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-ctt-on-publish) för mer information.
 

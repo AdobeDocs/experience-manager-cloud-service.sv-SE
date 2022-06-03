@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 333653e42de895fdd2097ad52ed3904192c57437
+source-git-commit: 689a9212d2b2a9c4459f1e0f9e5f580d8972b1d0
 workflow-type: tm+mt
-source-wordcount: '3502'
+source-wordcount: '3565'
 ht-degree: 23%
 
 ---
@@ -178,6 +178,19 @@ ht-degree: 23%
             + [Översikt](/help/journey-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md)
             + [Viktiga överväganden](/help/journey-migration/content-transfer-tool/user-mapping-tool/considerations-user-mapping-tool.md)
             + [Använda verktyget för användarmappning](/help/journey-migration/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.md)
+         + Äldre verktyg för innehållsöverföring {#legacy}
+            + [Översikt](/help/journey-migration/content-transfer-tool/ctt-legacy/overview-content-transfer-tool-legacy.md)
+            + [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/ctt-legacy/prerequisites-content-transfer-tool-legacy.md)
+            + [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/ctt-legacy/guidelines-best-practices-content-transfer-tool-legacy.md)
+            + [Komma igång med verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/ctt-legacy/getting-started-content-transfer-tool-legacy.md)
+            + [Verifierar innehållsöverföringar](/help/journey-migration/content-transfer-tool/ctt-legacy/validating-content-transfers-legacy.md)
+            + [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/ctt-legacy/handling-large-content-repositories-legacy.md)
+            + [Extraherar innehåll från källa](/help/journey-migration/content-transfer-tool/ctt-legacy/extracting-content-legacy.md)
+            + [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/ctt-legacy/ingesting-content-legacy.md)
+            + [Visa loggar för en migreringsuppsättning](/help/journey-migration/content-transfer-tool/ctt-legacy/viewing-logs-legacy.md)
+            + [Ta bort en migreringsuppsättning](/help/journey-migration/content-transfer-tool/ctt-legacy/deleting-migrationset-legacy.md)
+            + [Köra verktyget Innehållsöverföring på en publiceringsinstans](/help/journey-migration/content-transfer-tool/ctt-legacy/running-content-transfer-tool-publish-instance-legacy.md)
+            + [Felsöka verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/ctt-legacy/troubleshooting-content-transfer-tool-legacy.md)
    + Verktyg för omstrukturering av kod {#refactoring-tools}
       + [Enhetlig upplevelse](/help/journey-migration/unified-experience.md)
       + [Databasmodernisering](/help/journey-migration/refactoring-tools/repo-modernizer.md)

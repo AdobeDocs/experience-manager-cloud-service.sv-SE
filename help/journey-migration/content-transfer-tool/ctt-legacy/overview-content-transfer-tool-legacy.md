@@ -1,46 +1,20 @@
 ---
-title: Översikt över Content Transfer Tool
+title: Översikt över verktyget Innehållsöverföring (äldre)
 description: Översikt över Content Transfer Tool
-exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: ab63e9af7b52429fea1e2b2981effc1356f0787f
+hide: true
+hidefromtoc: true
+source-git-commit: 1fb4d0f2a3b3f9a27f5ab1228ec2d419149e0764
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '476'
+ht-degree: 62%
 
 ---
 
-# Översikt {#overview-content-transfer-tool}
-
-
->[!CONTEXTUALHELP]
->id="aemcloud_ctt_overview"
->title="Översikt"
->abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen. Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html?lang=en" text="Riktlinjer och bästa praxis"
-
-<!-- Alexandru: Old version of contextual help, keep for failover/debugging
->[!CONTEXTUALHELP]
->id="aemcloud_ctt_overview"
->title="Overview"
->abstract="Content Transfer Tool is a tool developed by Adobe that can be used to move existing content over from a source AEM instance (on-premise or AMS) to the target AEM Cloud Service instance. This tool also transfers principals (users or groups) automatically."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#extraction-process" text="Extraction Process"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#ingestion-process" text="Ingestion Process" -->
+# Översikt över verktyget Innehållsöverföring (äldre) {#overview-content-transfer-tool}
 
 Content Transfer Tool är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM-källinstans (On-premise eller AMS) till målinstansen av AEM Cloud Service.
 
 Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt.
-
-Det finns en ny version av verktyget Innehållsöverföring som integrerar innehållsöverföringsprocessen med Cloud Acceleration Manager. Vi rekommenderar att du går över till den nya versionen för att utnyttja alla fördelar den ger:
-
-* Självbetjäningssätt att extrahera en migreringsuppsättning en gång och importera den i flera miljöer parallellt
-* Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsräcken och felhantering
-* Inmatningsloggarna är beständiga och finns alltid tillgängliga för felsökning
-
-Börja använda den nya versionen (Vxx) <!-- update when version is available --> du måste avinstallera äldre versioner av verktyget Innehållsöverföring eftersom det har skett en stor förändring i arkitekturen.
-
->[!NOTE]
->
-> I situationer där en migrering redan pågår kan du fortsätta använda den tidigare versionen av CTT tills migreringen är klar. Dokumentation om föregående version av CTT finns i [äldre dokumentation](/help/journey-migration/content-transfer-tool/ctt-legacy/overview-content-transfer-tool-legacy.md).
 
 ## Phases in Content Transfer Tool {#phases-content-transfer-tool}
 
@@ -61,8 +35,11 @@ Det finns två faser som är associerade med innehållsöverföring:
 
 En migreringsuppsättning har följande attribut:
 
-* Med den nya versionen kan du skapa maximalt fem migreringsuppsättningar i ett projekt som skapats i Cloud Acceleration Manager.
+* Högst tio migreringsuppsättningar kan skapas och underhållas samtidigt under innehållsöverföringsaktiviteten.
 * Varje migreringsuppsättning ska ha ett unikt namn.
+* Om en migreringsuppsättning har varit inaktiv i mer än 30 dagar tas den bort automatiskt.
+* När du skapar en migreringsuppsättning kopplas den till en viss miljö. Du kan bara importera till en författar- eller en publiceringsinstans av samma miljö.
+
 
 Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 

@@ -1,7 +1,8 @@
 ---
-title: Köra verktyget Innehållsöverföring på en publiceringsinstans
+title: Köra verktyget Innehållsöverföring på en publiceringsinstans (äldre)
 description: Köra verktyget Innehållsöverföring på en publiceringsinstans
-exl-id: 01faab94-a939-4004-b094-e9eb8f67b96e
+hide: true
+hidefromtoc: true
 source-git-commit: 1fb4d0f2a3b3f9a27f5ab1228ec2d419149e0764
 workflow-type: tm+mt
 source-wordcount: '0'
@@ -9,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Köra verktyget Innehållsöverföring på en publiceringsinstans {#run-content-transfer-tool-publish-instance}
+# Köra verktyget Innehållsöverföring på en publiceringsinstans (äldre) {#run-content-transfer-tool-publish-instance}
 
 ## Introduktion {#introduction}
 
@@ -25,6 +26,8 @@ Följ de rekommenderade tillvägagångssätten som beskrivs nedan:
 * Använd samma version av verktyget Innehållsöverföring som användes på författarinstansen.
 
 * Endast en publiceringsnod behöver migreras. Den bör avlägsnas från belastningsutjämnaren innan extraheringen påbörjas.
+
+* När du skapar migreringsuppsättningen använder du URL:en för författaren AEM den as a Cloud Service miljön.
 
 * Publiceringsnivån skalas inte ned under publiceringsprocessen (till skillnad från författaren).
 

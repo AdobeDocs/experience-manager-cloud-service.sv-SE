@@ -2,9 +2,9 @@
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
 exl-id: e6ac88f0-4b3f-43a1-98bc-8c6608713784
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f2cad442ba85d1d889eda669502e120406a4380b
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '793'
 ht-degree: 2%
 
 ---
@@ -89,24 +89,32 @@ Följ det här avsnittet för att utforska AEM aktivitetskort för as a Cloud Se
 
 ## Använda innehållsöverföringskort {#content-transfer}
 
-Aktivitetskortet för innehållsöverföring innehåller riktlinjer och överväganden som bör granskas när du använder verktyget Innehållsöverföring för att flytta innehåll från den aktuella AEM till AEM as a Cloud Service.
+Med kortet för innehållsöverföring kan du starta och hantera innehållsöverföring från den aktuella AEM till AEM as a Cloud Service.
 
 Följ det här avsnittet för att utforska aktivitetskortet för innehållsöverföring:
 
-1. Klicka på **Visa** från **Innehållsöverföring** aktivitetskort.
+1. Klicka på **Granska** från **Innehållsöverföring** aktivitetskort.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/implementation-8.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-1.png)
 
-1. En innehållskarusell visar relevant information för den här fasen av migreringsresan.
+1. Om du vill starta en innehållsöverföring måste du skapa en migreringsuppsättning. Klicka på **Skapa migreringsuppsättning**. Med en migreringsuppsättning kan innehåll överföras till AEM as a Cloud Service.
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/content-transfertool-card.png)
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-2.png)
 
    >[!NOTE]
    >Granska [krav](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=en) och [bästa praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en) innan du använder verktyget Innehållsöverföring.
 
+1. Du måste hämta och installera verktyget för innehållsöverföring för att fylla i migreringsuppsättningen och slutföra extraheringsfasen av innehållsöverföringen. Granska [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en) om du vill lära dig hur du använder verktyget Innehållsöverföring.
+
+1. Om du vill importera innehåll från migreringsuppsättningen till en miljö på AEM as a Cloud Service måste du påbörja ett intag. Navigera till **Inmatningsjobb** och klicka på **Nytt intag**. Granska [Infoga innehåll i mål](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html?lang=en) om du vill lära dig hur du slutför överföringsfasen av innehåll.
+
+   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-3.png)
+
 ### Beräknar överföringstid för innehåll {#calculating}
 
-En ny verktygskalkylator för innehållsöverföring har tillhandahållits för att beräkna hur lång tid det kan ta att slutföra innehållsöverföringsaktiviteten. Du kan använda storleksreglaget för innehållsdatabas för att välja den storlek som gäller för ditt projekt. Överföringstiden varierar för extraherings- och intagsfaserna.
+En verktygskalkylator för innehållsöverföring har tillhandahållits för att beräkna hur lång tid det kan ta att slutföra innehållsöverföringsaktiviteten. Du kan använda storleksreglaget för innehållsdatabas för att välja den storlek som gäller för ditt projekt. Överföringstiden varierar för extraherings- och intagsfaserna.
+
+![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-4.png)
 
 >[!NOTE]
 >Dessa tider är bara uppskattningar. Faktor som nätverkshastigheter och tid att skala upp instanser har inte tagits med i dessa uppskattningar.
