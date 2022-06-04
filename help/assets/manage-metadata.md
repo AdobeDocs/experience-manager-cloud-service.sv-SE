@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Asset Management,Metadata
 role: User,Architect,Admin
 exl-id: 73a82bc2-1dda-4090-b7ee-29d1a632ba25
-source-git-commit: 4eb2beeb97d2aa2aed4af869897db470b732fd1f
+source-git-commit: 20d54ccdd116c3dbede8fb20f7169a17a223f7a1
 workflow-type: tm+mt
-source-wordcount: '1854'
+source-wordcount: '1940'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ Metadata är en samling med alla data som är tillgängliga för en resurs, men 
 * Namnet på mappen som den finns i.
 * Relaterade resurser eller tillämpade taggar.
 
-Ovanstående är de grundläggande metadataegenskaperna som [!DNL Experience Manager] kan hantera resurser, vilket gör att användarna kan se alla resurser. Det kan till exempel vara bra att beställa resurser efter det senaste ändringsdatumet när du försöker identifiera nyligen tillagda resurser.
+Ovanstående är de grundläggande metadataegenskaperna som [!DNL Experience Manager] kan hantera resurser, vilket gör att användarna kan se alla resurser. Det kan till exempel vara bra att beställa resurser efter senaste ändringsdatum när du försöker identifiera nyligen tillagda eller ändrade resurser.
 
 Du kan lägga till mer högnivådata till digitala resurser, till exempel:
 
@@ -67,6 +67,21 @@ Tekniska metadata är användbara för program som hanterar digitala resurser oc
 Beskrivande metadata är metadata som rör programdomänen, till exempel det företag som en resurs kommer från. Beskrivande metadata kan inte bestämmas automatiskt. Den skapas manuellt eller halvautomatiskt. En GPS-aktiverad kamera kan till exempel automatiskt spåra latitud och longitud och lägga till geotagga bilden.
 
 Kostnaden för att manuellt skapa beskrivande metadatainformation är hög. Därför har standarder upprättats för att underlätta utbyte av metadata mellan olika programsystem och organisationer. [!DNL Experience Manager Assets] stöder alla relevanta standarder för metadatahantering.
+
+## Metadata och senaste ändring {#last-modification}
+
+Det senast ändrade datumet för en resurs återspeglar den senaste gången som originalfilen för en resurs ändras. Därför ändras ändringsdatumet och användaren endast när:
+
+* En ny version av resursen överförs
+* En resurs bearbetas om
+
+Senaste ändringsdatum och användare ändras inte:
+
+* När en resurs flyttas eller byter namn
+* När en resurs är utcheckad, incheckad eller av en version
+* När en resurs publiceras eller avpubliceras
+* Vid metadatauppdateringar
+* Referens- eller samlingsuppdateringar
 
 ## Kodningsstandarder {#encoding-standards}
 
