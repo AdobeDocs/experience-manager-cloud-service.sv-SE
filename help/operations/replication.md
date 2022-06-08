@@ -2,7 +2,7 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 45a678be950e28942a5cbb075688585557911ce8
+source-git-commit: 50754c886c92a121c5bb20449561694f8e42b0ac
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 1%
@@ -58,7 +58,7 @@ Så här utför du en trädaktivering:
 
 För bästa prestanda bör du följa dessa riktlinjer när du använder den här funktionen:
 * Vi rekommenderar att du kopierar färre än 100 banor i taget, med en hård gräns på 500 sökvägar.
-* Det replikerade innehållets totala storlek måste vara mindre än 5 MB. Detta inkluderar bara noder och egenskaper, men inte binärfiler, som innehåller arbetsflödespaket och innehållspaket.
+* Det replikerade innehållets totala storlek måste vara mindre än 10 MB. Detta inkluderar bara noder och egenskaper, men inte binärfiler, som innehåller arbetsflödespaket och innehållspaket.
 
 ### Publicera arbetsflöde för innehållsträd {#publish-content-tree-workflow}
 
@@ -194,7 +194,7 @@ Det övergripande `ReplicationStatus` för en resurs ändras bara om replikering
 
 **Sökväg och storleksbegränsningar för replikerings-API**
 
-Vi rekommenderar att du kopierar färre än 100 sökvägar, där 500 är den hårda gränsen. Ovanför den hårda gränsen genereras ett ReplicationException. Om programlogiken inte kräver atomisk replikering kan den här gränsen övervinnas genom att ställa in värdet false för ReplicationOptions.setUseAtomicCall, som accepterar valfritt antal sökvägar, men internt skapa bucklor som ligger under denna gräns. Mängden innehåll som skickas per replikeringsanrop får inte överstiga 5 MB, vilket inkluderar noderna och egenskaperna, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binära).
+Vi rekommenderar att du kopierar färre än 100 sökvägar, där 500 är den hårda gränsen. Ovanför den hårda gränsen genereras ett ReplicationException. Om programlogiken inte kräver atomisk replikering kan den här gränsen övervinnas genom att ställa in värdet false för ReplicationOptions.setUseAtomicCall, som accepterar valfritt antal sökvägar, men internt skapa bucklor som ligger under denna gräns. Mängden innehåll som skickas per replikeringsanrop får inte överstiga 10 MB, vilket inkluderar noderna och egenskaperna, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binära).
 
 ## Felsökning {#troubleshooting}
 
