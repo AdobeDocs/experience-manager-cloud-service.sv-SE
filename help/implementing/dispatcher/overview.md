@@ -2,9 +2,9 @@
 title: Översikt över leveransflöde
 description: Översikt över leveransflöde
 exl-id: fe42fb9e-cdf4-43e1-b688-7cecf4124fa5
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 60fc1b8f93c93ca427507dbe56511342f285e6bc
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '207'
 ht-degree: 1%
 
 ---
@@ -29,6 +29,9 @@ Dataflödet är följande:
 
 Som standard förfaller innehållstypen HTML/text efter 300-talet (5 minuter) i dispatcherlagret, vilket är ett tröskelvärde som både dispatcher cache och CDN respekterar. Under omdistributioner av publiceringstjänsten rensas dispatchercachen och varnas därefter innan den nya publiceringsnoden tar emot trafik.
 
-Avsnitten nedan innehåller mer detaljerad information om innehållsleverans, inklusive CDN-konfiguration och cachning.
+I följande avsnitt finns mer information om innehållsleverans:
+* [CDN-konfiguration](/help/implementing/dispatcher/cdn.md)
+* [Cachelagring](/help/implementing/dispatcher/caching.md)
+
 
 Information om replikering från författartjänsten till publiceringstjänsten finns tillgänglig [här](/help/operations/replication.md).
