@@ -4,9 +4,9 @@ description: Introduktion till integrering mellan [!DNL Assets] och [!DNL Workfr
 role: Admin,Leader,Architect
 feature: Integrations
 exl-id: 365de3dc-51db-4dcf-94e2-104b5a5d33a8
-source-git-commit: b6e108296d6786166e482cd8bbd20caa36795f44
+source-git-commit: 1fce2eb37ebeaef966913e3ffdac59e9e126c788
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '947'
 ht-degree: 2%
 
 ---
@@ -29,11 +29,14 @@ Se plattformsstödet och [krav för den förbättrade anslutningen](https://one.
 
 >[!IMPORTANT]
 >
->Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
+>* Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
 >
->Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
+>* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
 >
->Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrad anslutning](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). För information om provet [Provguide](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
+>* Adobe har stöd för utökade anslutningsversioner 1.7.4 och senare. Information om hur du kontrollerar den förbättrade anslutningsversionen finns i steg 5 a i [installationsanvisningar för förbättrad anslutning](workfront-connector-install.md).
+>
+>* Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrad anslutning](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). För information om provet [Provguide](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
+
 
 ## Jämför olika integreringar mellan [!DNL Assets] och [!DNL Workfront] {#feature-parity-matrix}
 
