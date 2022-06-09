@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2022.5.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2022.5.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2022.6.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2022.6.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: c48d6f553c6a973a200fb11c2112beaf9be16d1c
+source-git-commit: af1ab1602506cc174e0226a7572ccb12d8ff527a
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 1%
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2022.5.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2022.6.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-På den här sidan visas versionsinformation för Cloud Manager 2022.5.0 i AEM as a Cloud Service.
+På den här sidan visas versionsinformation för Cloud Manager 2022.6.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,17 +21,20 @@ På den här sidan visas versionsinformation för Cloud Manager 2022.5.0 i AEM a
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.5.0 i AEM as a Cloud Service 5 maj 2022. Nästa version är planerad till 9 juni 2022.
+Releasedatum för Cloud Manager version 2022.6.0 i AEM as a Cloud Service juni 2022. Nästa version är planerad till 30 juni 2022.
 
 ## Nyheter {#what-is-new}
 
-* Miljösidan har en kolumn som visar AEM miljöversion.
-* Vid körning av pipeline visas nu fel på den översta nivån i användargränssnittet på körningsskärmen.
-* Kör produktionsdistributionssteget igen via användargränssnittet i Cloud Manager.
-* Återanvänd byggbilder för att återköra produktionsdistributionssteget.
-* Nytt API för att möjliggöra självbetjäningsborttagning av nätverksinfrastruktur.
+* Molnhanterarens gränssnitt tillåter nu [självbetjäning för innehållsåterställning](/help/operations/backup.md) till ett välkänt tillstånd i AEM molnmiljö.
+   * Den här funktionen kommer att introduceras stegvis under de veckor som följer efter version 2022.06.0.
+* Ett nytt välkomstkort på Cloud Managers landningssida ger användarna snabb tillgång till självstudiekurser och förloppsstatistik för klientorganisationen.
+   * Den här funktionen kommer att introduceras stegvis under veckan efter version 2022.06.0.
+* Användare med nödvändig behörighet kan komma åt en ny [Licenspanelen](/help/implementing/cloud-manager/license-dashboard.md) på landningssidan för Cloud Manager för att visa information om berättiganden som är tillgängliga för klientorganisationen.
+   * AEM Sites är den första lösningen för vilken tillgänglighet och användning levereras via kontrollpanelen Cloud Manage.
+   * Den här funktionen kommer att introduceras stegvis under de veckor som följer efter version 2022.06.0.
+* [New Relic subaccount and self-service user management](/help/implementing/cloud-manager/user-access-new-relic.md) är nu tillgängligt via användargränssnittet i Cloud Manager.
+   * Den här funktionen kommer att introduceras stegvis under de veckor som följer efter version 2022.06.0.
+* Nu finns det en ny Go Live-widget på startsidan i Cloud Service-produktionsprogrammen som är till hjälp när du vill skapa en lyckad upplevelse.
+* [Artefakter kan nu återanvändas](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) när Git-spegling används.
 
 ## Felkorrigeringar {#bug-fixes}
-
-* Knappen Hämta loggar från loggarna för gränssnittets teststeg hämtade inte loggarna.
-* Vissa körningar fastnade i kontexten för att aktivera utlösare och avbryter godkännandesteget.

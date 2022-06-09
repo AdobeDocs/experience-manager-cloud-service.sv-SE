@@ -2,9 +2,9 @@
 title: Redigeringsprogram
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: d805ed744af0e5c95863a1c67439b384cc5d11b2
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,13 @@ Följ de här stegen för att redigera ett program.
 
    ![Redigera programalternativ](assets/edit-program-overview.png)
 
-1. The **Redigera program** sidan visar två flikar: **Allmänt** och **Lösningar och tillägg**. Välj **Allmänt** för att redigera programnamnet och beskrivningen.
+1. The **Redigera program** sidan öppnas. På **Allmänt** redigerar du programnamnet och beskrivningen.
 
    * Minst en lösning måste väljas för ett program.
 
    ![Fliken Allmänt](assets/edit-program-prod1.png)
 
-1. Välj **Lösningar och tillägg** för att ändra lösningarna för programmet.
+1. På **Lösningar och tillägg** ändrar du lösningarna för programmet.
 
    ![Välj lösningar](assets/edit-prg.png)
 
@@ -46,9 +46,15 @@ Följ de här stegen för att redigera ett program.
 
    ![Redigera tillägg](assets/edit-program-add-on.png)
 
+1. På **Go live settings** ändrar du det planerade publiceringsdatumet för programmet.
+
+   ![Redigera inställningar för publicering](assets/edit-program-go-live.png)
+
+   * Detta datum är endast avsett som information och aktiverar Go Live-widgeten på programöversiktssidan för att tillhandahålla länkar till AEM as a Cloud Service best practice-dokumentation i rätt tid för att anpassa sig till den resa som leder till en lyckad och smidig Go Live-upplevelse.
+
 1. Klicka på **Uppdatera** för att spara ändringarna i programmet.
 
-När uppdateringarna är klara träder ändringarna i kraft efter nästa driftsättning om de valda lösningarna har ändrats.
+Varje gång ett program redigeras, som att lägga till eller ta bort en lösning eller ett tillägg, börjar ändringarna gälla efter nästa distribution.
 
 ## Tar bort sandlådeprogram {#delete-sandbox-program}
 

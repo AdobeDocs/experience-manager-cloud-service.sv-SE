@@ -2,9 +2,9 @@
 title: 'Skapa produktionsprogram '
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: cf6941759dfc1e50928009490c7c518a89ed093e
+source-git-commit: 3557ddbc76ff21bcfe4ac0338f116b02b5135f2c
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,11 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
    ![Startsida för molnhanterare](assets/first_timelogin1.png)
 
-1. Välj **Ställ in för produktion** i guiden Skapa program för att skapa ett produktionsprogram. Du kan godkänna standardprogramnamnet eller redigera det innan du väljer **Skapa**.
+1. Välj **Ställ in för produktion** i guiden Skapa program för att skapa ett produktionsprogram. Du kan godkänna standardprogramnamnet eller redigera det innan du klickar på **Fortsätt**.
 
    ![Skapar programguiden](assets/create-prod1.png)
 
-1. På nästa flik väljer du de lösningar som ska ingå i programmet.
+1. På **Lösningar och tillägg** väljer du de lösningar som ska ingå i programmet.
 
    ![Välj lösningar](assets/setup-prod-select.png)
 
@@ -46,7 +46,16 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
    ![Välj tillägg](assets/setup-prod-commerce.png)
 
-1. Med lösningar och tillägg markerade klickar du på **Skapa**.
+1. Med lösningar och tillägg markerade klickar du på **Fortsätt**.
+
+1. På **GoLive-datum** Ange det datum då du planerar att publicera ditt produktionsprogram.
+
+   ![Definiera planerat publiceringsdatum](assets/setup-go-live.png)
+
+   * Det här datumet kan redigeras när som helst.
+   * Detta datum är endast avsett som information och aktiverar Go Live-widgeten på programöversiktssidan för att tillhandahålla länkar till AEM as a Cloud Service best practice-dokumentation i rätt tid för att anpassa sig till den resa som leder till en lyckad och smidig Go Live-upplevelse.
+
+1. Klicka **Skapa**.
 
 Ditt program skapas av Cloud Manager och visas och kan väljas på landningssidan.
 
