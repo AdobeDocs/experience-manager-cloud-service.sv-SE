@@ -2,9 +2,9 @@
 title: Skapa modeller för innehållsfragment - Headless-konfiguration
 description: Definiera strukturen för det innehåll du skapar och använd AEM headless-funktioner med hjälp av Content Fragment-modeller.
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
-source-git-commit: e81b852dc90e3cc5abc8b9f218f48d0fc1cc66eb
+source-git-commit: c25bdab65a742e8ffc3a1579474f4589e04abce9
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Modeller för innehållsfragment definierar strukturen för data och innehåll s
 
 En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när nya modeller behövs. I den här guiden behöver vi bara skapa en modell.
 
-1. Logga in AEM as a Cloud Service och välj **Verktyg -> Resurser -> Modeller för innehållsfragment**.
+1. Logga in AEM as a Cloud Service och välj **verktyg**, **Allmänt**, **Modeller för innehållsfragment**.
 1. Tryck eller klicka på mappen som skapades när du skapade konfigurationen.
 
    ![Mappen Modeller](../assets/models-folder.png)

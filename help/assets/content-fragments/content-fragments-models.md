@@ -4,7 +4,7 @@ description: Lär dig hur Content Fragment Models fungerar som grund för ditt h
 feature: Content Fragments
 role: User
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: 0030b0f6f17dd66229f681e9c513786de4fe10a2
+source-git-commit: c25bdab65a742e8ffc3a1579474f4589e04abce9
 workflow-type: tm+mt
 source-wordcount: '2892'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Så här använder du modeller för innehållsfragment:
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 
-1. Navigera till **verktyg**, **Resurser**&#x200B;öppna **Modeller för innehållsfragment**.
+1. Navigera till **verktyg**, **Allmänt**&#x200B;öppna **Modeller för innehållsfragment**.
 1. Navigera till den mapp som passar dina [konfiguration](/help/assets/content-fragments/content-fragments-configuration-browser.md).
 1. Använd **Skapa** för att öppna guiden.
 
@@ -46,7 +46,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 >
 >Om du redigerar en befintlig innehållsfragmentmodell kan det påverka beroende fragment.
 
-1. Navigera till **verktyg**, **Resurser**&#x200B;öppna **Modeller för innehållsfragment**.
+1. Navigera till **verktyg**, **Allmänt**&#x200B;öppna **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
 1. Öppna den modell som krävs för **Redigera**; använd snabbåtgärden eller välj modell och sedan åtgärden från verktygsfältet.
@@ -400,7 +400,7 @@ De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
 
 Så här tar du bort en innehållsfragmentmodell:
 
-1. Navigera till **verktyg**, **Resurser**&#x200B;öppna **Modeller för innehållsfragment**.
+1. Navigera till **verktyg**, **Allmänt**&#x200B;öppna **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
 1. Välj modell, följt av **Ta bort** i verktygsfältet.
@@ -415,7 +415,7 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 
 Så här publicerar du en innehållsfragmentmodell:
 
-1. Navigera till **verktyg**, **Resurser**&#x200B;öppna **Modeller för innehållsfragment**.
+1. Navigera till **verktyg**, **Allmänt**&#x200B;öppna **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
 1. Välj modell, följt av **Publicera** i verktygsfältet.
@@ -431,7 +431,7 @@ Modeller för innehållsfragment kan avpubliceras om de inte refereras av några
 
 Så här avpublicerar du en innehållsfragmentmodell:
 
-1. Navigera till **verktyg**, **Resurser**&#x200B;öppna **Modeller för innehållsfragment**.
+1. Navigera till **verktyg**, **Allmänt**&#x200B;öppna **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
 1. Välj modell, följt av **Avpublicera** i verktygsfältet.

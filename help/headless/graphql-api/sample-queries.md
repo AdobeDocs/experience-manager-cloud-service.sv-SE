@@ -3,22 +3,16 @@ title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: c44c58398da3d82be04e22a5e4293e79361a8def
+source-git-commit: 0ff90afca3fb72ac6d0a79793a332c1c2172cd67
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
 Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
-
->[!NOTE]
->
->En del av funktionaliteten i den här funktionen finns i prerelease-kanalen. Funktioner som rör beständiga frågor.
-> 
->Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 >[!NOTE]
 >

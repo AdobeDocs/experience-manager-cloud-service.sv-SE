@@ -2,9 +2,9 @@
 title: Så här modellerar du innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f052183d-18fd-4615-a81e-e45db5928fc1
-source-git-commit: e592dd7a3a717259493f23943933fe3d0e71b7ab
+source-git-commit: c25bdab65a742e8ffc3a1579474f4589e04abce9
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -214,7 +214,7 @@ Först måste du aktivera Content Fragment Models för platsen. Detta görs i Co
 >
 >Se Ytterligare resurser - Innehållsfragment i Configuration Browser
 
-Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under Verktyg -> Resurser -> Modeller för innehållsfragment. Till exempel:
+Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan göras under **verktyg** -> **Allmänt** -> **Modeller för innehållsfragment**. Till exempel:
 
 ![Content Fragment Model](assets/cfm-model.png)
 

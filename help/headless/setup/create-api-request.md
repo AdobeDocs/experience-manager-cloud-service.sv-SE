@@ -2,9 +2,9 @@
 title: Skapa en API-begäran - Headless-konfiguration
 description: Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment-innehåll och AEM Assets REST API för att hantera innehållsfragment.
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: c44c58398da3d82be04e22a5e4293e79361a8def
+source-git-commit: 2ee21b507b5dcc9471063b890976a504539b7e10
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -12,12 +12,6 @@ ht-degree: 0%
 # Skapa en API-begäran - Headless-konfiguration {#accessing-delivering-content-fragments}
 
 Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment-innehåll och AEM Assets REST API för att hantera innehållsfragment.
-
->[!NOTE]
->
->En del av funktionaliteten i den här funktionen finns i prerelease-kanalen. Funktioner som rör beständiga frågor.
-> 
->Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 ## Vad är GraphQL och Assets REST API:er? {#what-are-the-apis}
 
@@ -29,7 +23,7 @@ Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment
 
 Resten av guiden fokuserar på GraphQL-åtkomst och leverans av innehållsfragment.
 
-## Aktivera GraphQL-slutpunkt
+## Aktivera GraphQL-slutpunkt {#enable-graphql-endpoint}
 
 Innan GraphQL API:er kan användas måste en GraphQL-slutpunkt skapas.
 
@@ -51,7 +45,7 @@ Mer information om aktivering [GraphQL-slutpunkter finns här](/help/headless/gr
 
 Informationsarkitekterna måste utforma frågor för sina kanalslutpunkter för att kunna leverera innehåll. Dessa frågor behöver i allmänhet bara övervägas en gång per slutpunkt och modell. I den här guiden behöver vi bara skapa en.
 
-GraphiQL är en IDE som kan installeras i en AEM. Följ stegen på [Använda GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) för installation i AEM.
+GraphiQL är en integrerad utvecklingsmiljö som ingår i AEM. den är tillgänglig/synlig efter att du har [konfigurera dina slutpunkter](#enable-graphql-endpoint).
 
 1. Logga in AEM as a Cloud Service och gå till GraphiQL-gränssnittet:
 

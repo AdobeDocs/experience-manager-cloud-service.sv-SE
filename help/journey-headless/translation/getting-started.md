@@ -2,7 +2,7 @@
 title: Kom igång med AEM Headless Translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 04ae2cd6-aba3-4785-9099-2f6ef24e1daf
-source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
+source-git-commit: c25bdab65a742e8ffc3a1579474f4589e04abce9
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Innehållsarkitekten arbetar tidigt i projektet för att definiera den här stru
 
 Eftersom innehållsmodellerna definierar innehållsstrukturen måste du veta vilka fält i modellerna som måste översättas. I allmänhet arbetar du med innehållsarkitekten för att definiera detta. Följ stegen nedan för att bläddra bland fälten i dina innehållsmodeller.
 
-1. Navigera till **verktyg** -> **Resurser** -> **Modeller för innehållsfragment**.
+1. Navigera till **verktyg** -> **Allmänt** -> **Modeller för innehållsfragment**.
 1. Modeller för innehållsfragment lagras vanligtvis i en mappstruktur. Tryck eller klicka på mappen för ditt projekt.
 1. Modellerna listas. Tryck eller klicka på modellen för att visa informationen.
    ![Modeller för innehållsfragment](assets/content-fragment-models.png)

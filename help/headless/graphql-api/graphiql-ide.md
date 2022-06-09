@@ -3,9 +3,9 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: 5f0221fad6086f8d5c5e9bd5164d05ea8d6e7d2c
+source-git-commit: 2ee21b507b5dcc9471063b890976a504539b7e10
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,9 @@ En implementering av standarden [GraphiQL](https://graphql.org/learn/serving-ove
 
 >[!NOTE]
 >
->En del av funktionaliteten i den här funktionen finns i prerelease-kanalen. Funktioner som rör beständiga frågor.
-> 
->Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
-
->[!NOTE]
+>GraphiQL ingår i alla miljöer med AEM (men är bara tillgängligt/synligt när du konfigurerar slutpunkterna).
 >
->GraphiQL ingår i AEM, men är som standard bara aktiverat på `dev-authors` miljöer.
+>I tidigare versioner behövdes ett paket för att installera GraphiQL IDE. Om du har installerat den kan den nu tas bort.
 
 >[!NOTE]
 >Du måste ha [konfigurerade dina slutpunkter](/help/headless/graphql-api/graphql-endpoint.md) i [konfigurationsläsare](/help/assets/content-fragments/content-fragments-configuration-browser.md) innan du använder GraphiQL IDE.
@@ -35,7 +31,7 @@ The **GraphiQL** kan du testa och felsöka GraphQL-frågor genom att aktivera:
 * köra dina frågor för att omedelbart se resultatet
 * hantera **Frågevariabler**
 * spara och hantera **Beständiga frågor**
-* publicera eller avpublicera, **Beständiga frågor** (till/från `dev-publish`)
+* publicera eller avpublicera, **Beständiga frågor** (till exempel till/från `dev-publish`)
 * se **Historik** av dina tidigare frågor
 * använder **Dokumentationsutforskaren** få tillgång till dokumentationen, hjälper dig att lära dig vilka metoder som finns tillgängliga.
 
@@ -46,7 +42,7 @@ Du kan öppna frågeredigeraren från:
 
 ![GraphiQL-gränssnitt](assets/cfm-graphiql-interface.png "GraphiQL-gränssnitt")
 
-Du kan använda GraphiQL i utvecklingsens utvecklingssystem så att det går att begära dem av ditt klientprogram med hjälp av GET-förfrågningar och publiceringsfrågor. För produktionsanvändning måste du då [flytta frågor till produktionsmiljön](/help/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production). Till att börja med måste produktionsförfattaren validera nyskrivet innehåll med frågorna och till sist publicera produktionen för direktkonsumtion.
+Du kan använda GraphiQL på datorn så att frågor kan begäras av klientprogrammet med hjälp av GET-förfrågningar och för publiceringsfrågor. För produktionsanvändning kan man sedan [flytta frågor till produktionsmiljön](/help/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production). Till att börja med måste produktionsförfattaren validera nyskrivet innehåll med frågorna och till sist publicera produktionen för direktkonsumtion.
 
 ## Markera slutpunkten {#selecting-endpoint}
 
@@ -100,9 +96,9 @@ Till exempel:
 
 ![GraphQL-variabler](assets/cfm-graphqlapi-03.png "GraphQL-variabler")
 
-## Publicera beständiga frågor (dev-publish) {#publishing-persisted-queries}
+## Publicera beständiga frågor {#publishing-persisted-queries}
 
-När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda **Publicera** och **Avpublicera** åtgärder. Detta aktiverar dem i din utvecklingspubliceringsmiljö (`dev-publish`) så att dina program enkelt kan komma åt dem när de testas.
+När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda **Publicera** och **Avpublicera** åtgärder. Detta aktiverar dem till din publiceringsmiljö (till exempel `dev-publish`) för enkel åtkomst av dina program vid testning.
 
 >[!NOTE]
 >

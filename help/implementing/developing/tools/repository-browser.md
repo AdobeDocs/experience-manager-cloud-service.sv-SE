@@ -4,10 +4,10 @@ seo-title: Repository Browser
 description: Databasens webbläsare ger en skrivskyddad vy i databasen för alla miljöer på författar-, publicerings- och förhandsgranskningsnivåer.
 seo-description: The repository browser provides a read-only view into the repository for all environments on author, publish, and preview tiers.
 exl-id: 22473a97-8f7b-4014-b885-1233116aeda6
-source-git-commit: db70857458722f870dad37ac2bee6a19ef54171e
+source-git-commit: b4d28a0c827fb07d6f731118078ecdf448e2f58b
 workflow-type: tm+mt
-source-wordcount: '814'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -65,6 +65,18 @@ Databaswebbläsaren kan startas genom att följa stegen nedan.
 Du kan använda den vänstra navigeringsrutan för att navigera i innehållshierarkin. Om du klickar på varje mapp eller nod visas dess underordnade objekt. Mappstrukturen återspeglar Sling Resource-trädet, som är en överordnad uppsättning till JCR-nodträdet.
 
 ![repobrowser3](/help/implementing/developing/tools/assets/repobrowser3.png)
+
+<!-- Alexandru: temporarily commenting this out, please don't delete. 
+
+Alternatively, you can navigate directly to a path by entering it in the **Path** field, as shown below. This will also expand its location in the content hierarcy view on the left.
+
+![repobrowser14](/help/implementing/developing/tools/assets/repobrowser14.png)
+
+Whenever you click a folder on the left, the Path field automatically populates with its location. This is useful for copying and pasting the value for later usage.
+
+Additionally, when you click on a folder, the URL is dynamically modified to include the path to that folder. This allows for bookmarkable URLs.
+
+-->
 
 Som standard visas bara publikt innehåll, vilket innebär att vissa mappar som `/conf` eller `/home` kommer inte att synas.
 

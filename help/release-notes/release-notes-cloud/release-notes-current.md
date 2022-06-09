@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 8c432f8902d005918c4fd4432d23c3140967c773
+source-git-commit: 036d8b590bc9ca9dcbe4dd3e34bc14cc2d8a79e1
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -25,60 +25,72 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.4.0) är 5 maj 2022.
-Nästa version (2022.5.0) är planerad till 9 juni 2022.
+Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.5.0) är 9 juni 2022.
+Nästa version (2022.6.0) är planerad till 30 juni 2022.
 
 ## Släpp video {#release-video}
 
-Ta en titt på [Versionsöversikt april 2022](https://video.tv.adobe.com/v/342612?quality=12) video med en sammanfattning av funktioner som lagts till i version 2022.4.0.
+Titta på videon om versionsöversikten från maj 2022 om du vill se en sammanfattning av funktioner som lagts till i version 202.5.0:
+
+>[!VIDEO](https://video.tv.adobe.com/v/343321/?quality=12)
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* Datatyperna för innehållsmodellen kan nu definieras som [översättningsbar](/help/assets/content-fragments/content-fragments-models.md#properties) med en enkel kryssruta i innehållsmodellens redigerare. Dessutom uppdateras AEM översättningsregler och -konfigurationer automatiskt.
+### Nya funktioner i [!DNL Sites] prerelease channel {#prerelease-features-sites}
+
+* Olika GraphQL-funktioner
+* En ny konsol som är optimerad för Headless-användning av Content Fragments
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* Nu kan du [sortera taggar](/help/assets/organize-assets.md#use-tags-to-organize-assets) i taggväljarfönstret i stigande eller fallande ordning baserat på taggnamn, skapandedatum eller ändringsdatum.
+* [Dynamic Media Smart Imaging](https://medium.com/adobetech/one-solution-fits-all-smart-imaging-with-aem-dynamic-media-be690b62df9f) har nu stöd för AVIF-filformat - ytterligare förbättring av Google Core Web Vital (Störst Contentful Paint), med AVIF som ger 20 % extra storleksminskning jämfört med WebP. Totalt ger AVIF upp till 41 % genomsnittlig storleksminskning över JPEG (i vissa bilder till och med upp till 76 %).
+
+* [!UICONTROL Experience Manager Assets Brand Portal] kör nu automatiska jobb var tolfte timme för att ta bort alla Brand Portal-resurser som publicerats till AEM. Därför behöver du inte ta bort resurserna i Contribute-mappen manuellt för att mappstorleken ska hållas under tröskelvärdet. Se [Nyheter i Experience Manager Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
+
+### Nya funktioner i [!DNL Assets] prerelease channel {#prerelease-features-assets}
+
+Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja på färger i en bild och använda dem som taggar automatiskt vid förtäring](../../assets/color-tag-images.md). Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition. Du kan konfigurera antalet färger, inom ett intervall av en till fyrtio, som är taggade till en bild så att du kan söka efter bilder baserade på dessa färger senare.
+
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
-### Nyheter i [!DNL Forms] {#what-is-new-forms}
+### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
-* **Kommunikation - Stöd för API:er för dokumenthantering i Forms as a Cloud Service SDK**: [API:er för dokumenthantering](/help/forms/aem-forms-cloud-service-communications.md) kan du kombinera, ordna om och validera PDF-dokument. Nu kan du använda Communications - Document Generation APIs i en lokal utvecklingsmiljö med hjälp av AEM Forms as a Cloud Service SDK.
+* **Integrera adaptiv Forms med Microsoft® Power Automate**: Nu kan du konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden.
 
-* **Använd anpassad XCI för att generera ett postdokument**: Nu kan du [använda en anpassad XCI-fil för att ange olika egenskaper för ett postdokument](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#use-a-custom-xci-file). Den åsidosätter det överordnad XCI med de anpassade ändringarna. Det ger bättre kontroll över genereringen av arkivhandlingar, ökar möjligheterna till personalisering och anpassning.
+* **Guide för att skapa ett adaptivt formulär**: Du kan använda en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden ger dig en snabb fliknavigering så att du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär.
 
-* **Använd osynlig CAPTCHA i ett adaptivt formulär**: Du kan använda [osynlig CAPTCHA för att visa CAPTCHA-utmaning endast vid misstänkt aktivitet](/help/forms/captcha-adaptive-forms.md). Om ingen misstänkt aktivitet hittas visas inte CAPTCHA-utmaningen. Det gör det lättare att bedöma om formulär ska fyllas i av människor utan att det behövs kryssrutor, minska anpassningsarbetet och förbättra slutanvändarens upplevelse.
-
-* **Konfigurationer av formulärdatamodell**: Nu kan du [återanvänd formulärdatamodellskonfigurationer i olika miljöer](/help/forms/create-form-data-models.md#runmode-specific-context-aware-config), förenklar dataintegreringar och minskar IT-kostnaderna.
+   ![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png)
 
 ## CIF-tillägg {#cloud-services-cif}
 
 ### Vad är nytt? {#what-is-new-cif}
 
-* Snabb åtkomst till produktcockpit: Få enkelt tillgång till detaljerad produktinformation med ett enda klick i Sites Editor
+* Ny egenskapssida för produktcockpit för bättre och enklare översikt
 
-   ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
+![översikt över egenskaper för produktcockpit](/help/assets/CIF/product_cockpit_properties_overview.png)
 
-* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett anrop till åtgärd för tillägg i varukorgen och tilläggslistan
+* Förbättrad kompatibilitet och tillförlitlighet för anslutningar från tredje part vid I/O-körning
 
-   ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
+* Förbättrat stöd för överskrivningar av GQL-klientkonfiguration (t.ex. ange anpassad cachelagring)
+
+### Felkorrigeringar {#bug-fixes-cif}
+
+* Produktväljarfältet för flera värden visar att andra och ytterligare produkter är ogiltiga
+
+* Produktväljaren döljs ibland bakom komponenter
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### SDK Build Analyzers {#sdk-build-analyzers}
+### Vad är nytt? {#what-is-new-foundation}
 
-Den AEM as a Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i ett maven-projekt, inklusive saknade beroenden. Det ger utvecklare möjlighet att upptäcka problem under den lokala utvecklingen, långt före distributionen till molnmiljöer med Cloud Manager.
+* Alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **Fliken Distribuera** som tidigare meddelats som utgått, kommer att tas bort den 20 juni 2022 eller snart därefter. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow).
 
-En ny analyserare har nyligen lagts till:
-
-* `content-packages-validation` - validerar för korrekt formaterad innehållssyntax och struktur för paket som ska installeras under distributionen
-
-Vi rekommenderar starkt att du uppdaterar ditt maven-projekt med den senaste versionen av analyseraren eller inkluderar analyseraren om du inte redan har gjort det. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html).
+* Användning av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) är föråldrat och kommer att tillämpas den 12 september 2022 eller snart därefter. Istället [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) måste användas för att replikera dessa stora innehållspaket. I juli visas ett varningsmeddelande på administratörsskärmen för replikeringsagenten **Fliken Distribuera** om du försöker replikera dessa stora innehållspaket och även i AEM fellogg när replikerings-API används för att replikera dessa stora innehållspaket. I september kommer varningar att ersättas av fel. Justera processerna därefter.
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation Security {#foundation-security}
 

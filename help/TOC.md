@@ -7,10 +7,10 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: d379c0fe84c566923682e058f212b805a03fb533
+source-git-commit: 4f0ba5de5d1e4c0163c411dd611cb0ca09798dba
 workflow-type: tm+mt
-source-wordcount: '3576'
-ht-degree: 23%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +24,7 @@ ht-degree: 23%
    + [Terminologi – nytt för molnet](/help/overview/terminology.md)
    + [En introduktion till arkitekturen i AEM as a Cloud Service](/help/overview/architecture.md)
    + [SEO- och URL-hantering](/help/overview/seo-and-url-management.md)
+   + [AEM as a Cloud Service on Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md)
    + [Utvärderar nyckeltal](/help/overview/assessing-kpis.md)
    + [Justera KPI:er](/help/overview/aligning-kpis.md)
    + [Välja rätt team](/help/overview/choose-right-team.md)
@@ -33,6 +34,7 @@ ht-degree: 23%
    + Allmän information om AEMaaCS {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2022 {#2022}
+         + [Versionsinformation för 2022.4.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-4-0.md)
          + [Versionsinformation för 2022.3.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-3-0.md)
          + [Versionsinformation för 2022.1.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-1-0.md)
       + 2021 {#2021}
@@ -358,6 +360,7 @@ ht-degree: 23%
       + [Digital Rights Management för tillgångar](/help/assets/drm.md)
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
       + [Bearbeta resurser med [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
+      + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
    + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
       + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
       + [Metadataschema för mapp](/help/assets/folder-metadata-schema.md)
@@ -612,6 +615,7 @@ ht-degree: 23%
       + [GraphQL-slutpunkt](/help/headless/setup/create-api-request.md)
    + Innehållsfragment {#content-fragments}
       + [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments.html)
+      + [Konsol för innehållsfragment](/help/headless/content-fragments/content-fragment-console.md)
       + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-models.html)
       + [Hantera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-managing.html)
       + Redigering{#authoring}
