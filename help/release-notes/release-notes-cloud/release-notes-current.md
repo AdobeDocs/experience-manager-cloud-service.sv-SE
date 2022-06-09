@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 036d8b590bc9ca9dcbe4dd3e34bc14cc2d8a79e1
+source-git-commit: a2cdc7c4e9d3dfd52ca76afcf951fa67b279918a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -35,8 +35,6 @@ Titta på videon om versionsöversikten från maj 2022 om du vill se en sammanfa
 >[!VIDEO](https://video.tv.adobe.com/v/343321/?quality=12)
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
-
-### Nya funktioner i [!DNL Sites] {#sites-features}
 
 ### Nya funktioner i [!DNL Sites] prerelease channel {#prerelease-features-sites}
 
