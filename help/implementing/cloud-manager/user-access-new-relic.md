@@ -2,9 +2,9 @@
 title: New Relic One
 description: Läs mer om tjänsten New Relic One Application Performance Monitoring (APM) för AEM as a Cloud Service och hur du kan komma åt den.
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
-source-git-commit: 09049213eaf92830dc0e0d4c0885017c69a5d56e
+source-git-commit: 8ae52afc366c6607cfc806f68bec2069a2e93f94
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,11 @@ Följ de här stegen för att definiera användare för ditt New Relic One-under
 
 1. Klicka på det program som du vill hantera dina New Relic One-användare för.
 
-1. Växla till **Miljö** från **Programöversikt** genom att klicka på **Miljö** överst på skärmen.
-
-1. På **Miljö** klickar du på ellipsknappen högst upp på skärmen bredvid **Lägg till miljö** -knappen.
-
-1. Klicka på **Hantera användare**.
+1. Längst ned på **Miljö** på programöversiktssidan klickar du på ellipsknappen och väljer **Hantera användare**.
 
    ![Hantera användare](assets/newrelic-manage-users.png)
+
+   * Du kan även komma åt **Hantera användare** via ellipsknappen längst upp på **Miljö** programskärmen.
 
 1. I **Hantera nya Relic-användare** anger du för- och efternamnet för användaren som du vill lägga till och klickar på **Lägg till** -knappen. Upprepa det här steget för alla användare som du vill lägga till.
 
@@ -98,11 +96,11 @@ Så här kommer du åt New Relic One via Cloud Manager:
 
 1. Klicka på det program som du vill öppna New Relic One för.
 
-1. Växla till **Miljö** från **Programöversikt** genom att klicka på **Miljö** överst på skärmen.
+1. Längst ned på **Miljö** på programöversiktssidan klickar du på ellipsknappen och väljer **Öppna ny Relic**.
 
-1. På **Miljö** klickar du på ellipsknappen högst upp på skärmen bredvid **Lägg till miljö** -knappen.
+   ![Hantera användare](assets/newrelic-access.png)
 
-1. Klicka på **Öppna ny Relic**.
+   * Du kan även öppna New Relic via ellipsknappen högst upp på **Miljö** programskärmen.
 
 1. Logga in på New Relic One på den nya fliken i webbläsaren som öppnas.
 
