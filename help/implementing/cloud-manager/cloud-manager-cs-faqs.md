@@ -2,9 +2,9 @@
 title: Vanliga frågor om Cloud Manager
 description: Hitta svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
-source-git-commit: 1a6ca2647cc185ed0cb60fa75d2f5752e72f5715
+source-git-commit: 8e02f470b474ad448a5fb80dd3b410d414d78a3b
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,9 @@ Det här är ett känt fel som beror på att Cloud Manager använder en annan ve
 
 Ja. Alla fel i kodkvalitetskontrollen utom säkerhetsklassificeringen är icke-kritiska mått, så de kan kringgås som en del av en distributionskanal genom att objekten i resultatgränssnittet expanderas.
 
-Se dokumenten [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) och [Konfigurera icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
+En användare med [Distributionshanteraren, Project Manager eller Business Owner](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md#cloud-manager-product-profiles) rollerna kan åsidosätta problemen. I så fall fortsätter pipelinen eller så kan de acceptera problemen. I så fall upphör pipeline med ett fel.
+
+Se dokumenten [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md#three-tiered-gate) och [Konfigurera icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#non-production-pipelines) för mer information.
 
 ## Kan jag använda SNAPSHOT för versionen av Maven-projektet? {#use-snapshot}
 
