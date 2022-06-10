@@ -4,9 +4,9 @@ description: Introduktion till integrering mellan [!DNL Assets] och [!DNL Workfr
 role: Admin,Leader,Architect
 feature: Integrations
 exl-id: 365de3dc-51db-4dcf-94e2-104b5a5d33a8
-source-git-commit: 1a0718d317f13924cd4da273f9184b4f165bbc7e
+source-git-commit: 8dd16d0ef18cba90417fe97bc51a1d3de899296f
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '956'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Se plattformsstödet och [krav för den förbättrade anslutningen](https://one.
 >
 >* Adobe har stöd för utökade anslutningsversioner 1.7.4 och senare. Tidigare förhandsversioner och anpassade versioner stöds inte. Information om hur du kontrollerar den förbättrade anslutningsversionen finns i steg 5 a i [installationsanvisningar för förbättrad anslutning](workfront-connector-install.md).
 >
->* Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrad anslutning](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). För information om provet [Provguide](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
+>* Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrad anslutning](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). Mer information om provet finns i [Provguide](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
 
 
 ## Jämför olika integreringar mellan [!DNL Assets] och [!DNL Workfront] {#feature-parity-matrix}
