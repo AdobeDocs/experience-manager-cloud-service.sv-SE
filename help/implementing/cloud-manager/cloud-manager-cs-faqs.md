@@ -2,9 +2,9 @@
 title: Vanliga frågor om Cloud Manager
 description: Hitta svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
-source-git-commit: 65632de3fbf81ef44d30994365e6365a6148b836
+source-git-commit: 1a6ca2647cc185ed0cb60fa75d2f5752e72f5715
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,9 @@ Det här är ett känt fel som beror på att Cloud Manager använder en annan ve
 
 ## Kodkvalitetskontrollen misslyckades och distributionen stoppas. Finns det något sätt att kringgå den här kontrollen? {#deployment-stuck}
 
-Ja. Alla fel i kodkvalitetskontrollen utom säkerhetsklassificeringen är icke-kritiska mått, så de kan kringgås genom att objekten i resultatgränssnittet expanderas.
+Ja. Alla fel i kodkvalitetskontrollen utom säkerhetsklassificeringen är icke-kritiska mått, så de kan kringgås som en del av en distributionskanal genom att objekten i resultatgränssnittet expanderas.
 
-Se dokumentet [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) för mer information.
+Se dokumenten [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) och [Konfigurera icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
 
 ## Kan jag använda SNAPSHOT för versionen av Maven-projektet? {#use-snapshot}
 
