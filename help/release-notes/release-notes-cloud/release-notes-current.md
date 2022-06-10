@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: a2cdc7c4e9d3dfd52ca76afcf951fa67b279918a
+source-git-commit: e5b0bee3e2e4a10b3015f115d5193c43a1e15c1b
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Titta på videon om versionsöversikten från maj 2022 om du vill se en sammanfa
 ### Nya funktioner i [!DNL Sites] prerelease channel {#prerelease-features-sites}
 
 * Olika GraphQL-funktioner
-* En ny konsol som är optimerad för Headless-användning av Content Fragments
+* A [ny konsol](/help/headless/content-fragments/content-fragment-console.md) optimerad för Headless-användning av Content Fragments
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
@@ -89,6 +89,10 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 * Alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **Fliken Distribuera** som tidigare meddelats som utgått, kommer att tas bort den 20 juni 2022 eller snart därefter. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow).
 
 * Användning av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) är föråldrat och kommer att tillämpas den 12 september 2022 eller snart därefter. Istället [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) måste användas för att replikera dessa stora innehållspaket. I juli visas ett varningsmeddelande på administratörsskärmen för replikeringsagenten **Fliken Distribuera** om du försöker replikera dessa stora innehållspaket och även i AEM fellogg när replikerings-API används för att replikera dessa stora innehållspaket. I september kommer varningar att ersättas av fel. Justera processerna därefter.
+
+### Nya funktioner i [!DNL Experience Manager] prerelease channel {#prerelease-features-foundation}
+
+* AEM as a Cloud Service är nu integrerat med Unified Shell för att förbättra användarupplevelsen och göra den enhetlig med alla andra Experience Cloud-program. Se [AEM as a Cloud Service on Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md) för mer information.
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation Security {#foundation-security}
 
