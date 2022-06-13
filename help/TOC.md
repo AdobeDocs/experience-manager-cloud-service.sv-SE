@@ -7,10 +7,10 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 4f0ba5de5d1e4c0163c411dd611cb0ca09798dba
+source-git-commit: d634c6f3707b0fef444e0e84945727b52d2ec2c6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3599'
+ht-degree: 23%
 
 ---
 
@@ -605,6 +605,7 @@ ht-degree: 0%
    + [Migrering](/help/commerce-cloud/migration.md)
    + [Vanliga frågor](/help/commerce-cloud/faq.md)
 + Headless {#headless}
+   + [Vad är ett headless CMS?](/help/headless/what-is-headless.md)
    + [Introduktion till AEM Headless](/help/headless/introduction.md)
    + Inställningar {#setup}
       + [Introduktion](/help/headless/setup/introduction.md)
