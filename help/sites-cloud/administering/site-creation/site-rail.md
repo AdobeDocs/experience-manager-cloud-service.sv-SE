@@ -4,7 +4,7 @@ description: Lär dig de kraftfulla funktionerna i webbplatsspåret för att enk
 feature: Administering
 role: Admin
 exl-id: 45785e5a-4fa2-4cf2-a300-f1865f6f5807
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 3e4c6fce54fe336c145d533c05e68e3a1f64c144
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Webbplatsfältet används för att hantera tema- och mallrelaterad information f
 >
 >Granska [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md) för att bekanta dig med verktyget för att skapa snabbwebbplatser och den rörliga produktionsprocessen för att enkelt anpassa webbplatstemat.
 
-##  Hämtar temakällor {#downloading-theme-sources}
+## Hämtar temakällor {#downloading-theme-sources}
 
 När du skapar en plats i AEM baserad på en [webbplatsmall,](site-templates.md) du kan ladda ned [webbplatstema](site-themes.md) med hjälp av platsspåret.
 
@@ -40,7 +40,7 @@ Markera platsens rot för att visa temainformation om platsen när webbplatsspå
 
 Tryck eller klicka **Hämta temakällor** för att ladda ned en lokal kopia av webbplatstemat som `.zip` för anpassning.
 
-##  Hämtar mallresurser {#downloading-template-resources}
+## Hämtar mallresurser {#downloading-template-resources}
 
 [Webbplatsmallar](site-templates.md) kan innehålla information utöver webbplatsens innehållsstruktur och [webbplatstema.](site-themes.md) Platsmallar kan till exempel innehålla trådramsdesign eller andra platsrelaterade filer.
 
