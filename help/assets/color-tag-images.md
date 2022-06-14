@@ -1,13 +1,13 @@
 ---
 title: Färgtaggar för bilder
 description: Med Experience Manager Assets kan du skilja mellan färger i en bild och använda dem som taggar automatiskt. Du kan sedan använda dessa taggar för att söka efter och filtrera bilder.
-source-git-commit: 74c13efe99b50ba08d9dc38c246de71482a536a0
+exl-id: 3afa949b-ea1b-4b8e-ac94-06566e2c7147
+source-git-commit: d8fb661be15a1505714e3def8a729a9c5c04616c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1124'
+ht-degree: 1%
 
 ---
-
 
 # Färgtaggar för bilder {#color-tag-images}
 
@@ -106,6 +106,24 @@ Så här lägger du till komponenten Smarta färgtaggar i Formulärredigeraren f
 
    >[!VIDEO](https://video.tv.adobe.com/v/340124)
 
+## Färgtaggar för befintliga bilder i DAM {#color-tags-existing-images}
+
+De bilder som redan finns i DAM färgläggs inte automatiskt. Du måste [!UICONTROL Reprocess Assets] manuellt för att generera färgtaggar för dem.
+
+Så här färgar du bilder eller mappar (inklusive undermappar) med resurser som redan finns i resurskatalogen:
+
+1. Välj [!DNL Adobe Experience Manager] logotypen och välj sedan resurser från [!UICONTROL Navigation] sida.
+
+1. Välj [!UICONTROL Files] för att visa gränssnittet Resurser.
+
+1. Navigera till mappen som du vill använda färgtaggar på.
+
+1. Markera hela mappen eller specifika bilder.
+
+1. Välj ![Ikon för att bearbeta resurser](assets/do-not-localize/reprocess-assets-icon.png) [!UICONTROL Reprocess Assets] -ikonen och välj [!UICONTROL Full Process] alternativ.
+
+När processen är klar går du till [!UICONTROL Properties] sida med alla bilder i mappen. De automatiskt tillagda taggarna visas i [!UICONTROL Smart Color Tags] avsnitt i [!UICONTROL Basic] -fliken.
+
 
 ## Visa smarta färgtaggar för bilder {#view-color-tags}
 
@@ -167,7 +185,3 @@ Så här söker du efter bilder baserat på färger:
    Du kan filtrera bilder baserat på valet av en färg. De bilder som har den valda färgen som en av de smarta färgtaggarna och ovanför [Tröskelvärde för täckning/dominans %](#manage-color-tagging-settings) visas i den högra rutan.
 
 1. Klicka på x i sökfältet för att ta bort filtret.
-
-
-
-
