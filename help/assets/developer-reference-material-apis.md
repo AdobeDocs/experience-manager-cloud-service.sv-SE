@@ -5,9 +5,9 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: cbaf9faf6cc8c2079dc0abc0a775ff4a0e2cc762
+source-git-commit: 57abdf0198e646719bbb818e2b70d772579ba548
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1806'
 ht-degree: 1%
 
 ---
@@ -183,6 +183,9 @@ Om du vill veta mer om överföringsalgoritmerna eller skapa egna överföringss
 
 * [Open-source aem-upload library](https://github.com/adobe/aem-upload).
 * [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem).
+
+>[!NOTE]
+Både aem-upload-biblioteket och kommandoradsverktyget använder [node-httptransfer library](https://github.com/adobe/node-httptransfer/)
 
 ### Inaktuella API:er för överföring av resurser {#deprecated-asset-upload-api}
 
