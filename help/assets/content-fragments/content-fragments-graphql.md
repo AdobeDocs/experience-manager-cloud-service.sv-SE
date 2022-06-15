@@ -5,9 +5,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless
 role: User
 exl-id: 4a3b030d-ed59-4920-bf94-e00a45f85b51
-source-git-commit: f296e8cbc12c9426e0fefe6f5342374ba9b21291
+source-git-commit: 4e64683598ced4b9811e957082932971f0ec0bb1
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,12 @@ Detta uppnås med Content Fragments, tillsammans med det AEM GraphQL-API:t (en a
 
 >[!NOTE]
 >
->Se [Headless och AEM](/help/headless/introduction.md) för en introduktion till Headless Development för AEM Sites as a Cloud Service.
+>Se även:
+>
+>* [Vad är Headless?](/help/headless/what-is-headless.md) för en introduktion till Headless-koncept och -terminologi.
+>
+>* [Headless och AEM](/help/headless/introduction.md) för en introduktion till Headless Development för AEM Sites as a Cloud Service.
+
 
 >[!NOTE]
 >
