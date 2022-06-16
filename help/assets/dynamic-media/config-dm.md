@@ -3,9 +3,9 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager as a Cloud Service.
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 527c25ef61f9553a9e0012b8413a8bc6ccf4afdd
+source-git-commit: 5512f5f22336916e66300b82aaff578df3e05b1d
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3316'
 ht-degree: 2%
 
 ---
@@ -270,7 +270,8 @@ Se [Överför resurser](/help/assets/add-assets.md).
 
 **Så här redigerar du MIME-typer för de format som stöds:**
 
-1. På Experience Manager as a Cloud Service väljer du den as a Cloud Service logotypen för Experience Manager för att komma åt den globala navigeringskonsolen och går sedan till **[!UICONTROL General > CRXDE Lite]**.
+1. Logga in på Experience Manager as a Cloud Service som produktadministratör.
+1. I Experience Manager as a Cloud Service väljer du den as a Cloud Service logotypen för Experience Manager för att komma åt den globala navigeringskonsolen och går sedan till **[!UICONTROL General > CRXDE Lite]**.
 1. Navigera till följande i den vänstra listen:
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -296,6 +297,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 **Så här lägger du till MIME-typer för format som inte stöds:**
 
+1. Logga in på Experience Manager as a Cloud Service som produktadministratör.
 1. Från Experience Manager as a Cloud Service, gå till **[!UICONTROL Tools > Operations > Web Console]**.
 
    ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
@@ -377,6 +379,10 @@ Se även [Lägga till MIME-typer för format som inte stöds](#adding-mime-types
 
 Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media bearbetar man video med **[!UICONTROL Dynamic Media Encode Video]** arbetsflöde.
 
+>[!NOTE]
+>
+>Du måste vara inloggad på Experience Manager as a Cloud Service som produktadministratör för att kunna slutföra den här uppgiften.
+
 **Så här uppdaterar du fördefinierade arbetsflödeskö (videoresurser) för Granite:**
 
 1. Navigera till `https://<server>/system/console/configMgr` och söka efter **Kö: Begränsa arbetsflödeskö**.
@@ -398,6 +404,10 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 #### Uppdatera fördefinierade Granska tillfälliga arbetsflödesköarbetstrådar {#update-granite-transient-workflow-queue-worker-threads-images}
 
 Kön för Bevilja övergång används för **[!UICONTROL DAM Update Asset]** arbetsflöde. I Dynamic Media används den för att ta in och bearbeta bilder och andra resurser.
+
+>[!NOTE]
+>
+>Du måste vara inloggad på Experience Manager as a Cloud Service som produktadministratör för att kunna slutföra den här uppgiften.
 
 **Så här uppdaterar du de fördefinierade Granska tillfälliga arbetsflödesköarbetstrådarna:**
 
@@ -423,6 +433,10 @@ Kön för Bevilja övergång används för **[!UICONTROL DAM Update Asset]** arb
 #### Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern (Scene7) {#update-max-s7-upload-connections}
 
 Inställningen Dynamic Media Classic (Scene7) Upload Connection synkroniserar Experience Manager-resurser till Dynamic Media Classic-servrar.
+
+>[!NOTE]
+>
+>Du måste vara inloggad på Experience Manager as a Cloud Service som produktadministratör för att kunna slutföra den här uppgiften.
 
 **Så här uppdaterar du de maximala överföringsanslutningarna till Dynamic Media Classic-servern (Scene7):**
 
