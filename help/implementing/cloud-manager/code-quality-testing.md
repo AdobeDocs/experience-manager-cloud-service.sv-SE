@@ -2,9 +2,9 @@
 title: Testning av kodkvalitet
 description: Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan förbättra kvaliteten på dina distributioner.
 exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
-source-git-commit: 15fb2823d231048885a140edfaa904527a026aae
+source-git-commit: 8eada48aaef62aa942b98981a3510a2c64ea582b
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1175'
 ht-degree: 1%
 
 ---
@@ -41,6 +41,12 @@ Problem som identifieras med kodkvalitetstestning tilldelas en av tre kategorier
 * **Viktigt** - Detta är problem som gör att pipeline försätts i pausläge. Distributionshanteraren, projektledaren eller företagsägaren kan antingen åsidosätta problemen, i vilket fall pipeline fortsätter, eller så kan de acceptera problemen. I så fall upphör pipeline med ett fel.
 
 * **Info** - Det rör sig om frågor som enbart lämnas i informationssyfte och som inte påverkar genomförandet av pipeline
+
+>[!NOTE]
+>
+>I en pipeline med enbart kodkvalitet kan viktiga fel i kodkvalitetsgaten inte åsidosättas eftersom teststeget för kodkvalitet är det sista steget i pipeline.
+
+### Klassificeringar {#ratings}
 
 Resultatet av det här steget levereras som **Klassificeringar**.
 
