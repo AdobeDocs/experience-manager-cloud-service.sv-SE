@@ -1,13 +1,13 @@
 ---
 title: AEM as a Cloud Service on Unified Shell
 description: AEM as a Cloud Service on Unified Shell
-source-git-commit: 09f4620ed871b012b4550bc05cfe7f4622f02833
+exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
+source-git-commit: 9ef6bda76667b08b5fb62b90acdc75002889d420
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '402'
+ht-degree: 1%
 
 ---
-
 
 # AEM as a Cloud Service on Unified Shell {#aem-as-a-cloud-service-on-unified-shell}
 
@@ -17,6 +17,9 @@ ht-degree: 0%
 >Detta är en introduktion till en ny funktion som kommer att bli allmänt tillgänglig i juni 2022-versionen.
 >
 >Se [Dokumentation för prerelease Channel](/help/release-notes/prerelease.md#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
+
+>[!INFO]
+>På grund av ett problem som nyligen upptäckts har integreringen med AEM as a Cloud Service inaktiverats tillfälligt. Den återaktiveras när problemet är åtgärdat. Tack för din förståelse.
 
 ## Översikt {#overview}
 
@@ -72,4 +75,3 @@ Du kommer åt AEM Inkorg genom att klicka på klockikonen i det enhetliga skalet
 Klicka på knappen Inkorg i popup-fönstret för att gå till AEM Inkorg:
 
 ![bild](/help/overview/assets/unifiedshell6.png)
-
