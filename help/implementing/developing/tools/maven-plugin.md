@@ -2,9 +2,9 @@
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
-source-git-commit: 278470482a582db7d88bfbe6f851eb3070afc0df
+source-git-commit: ba4e2427873fc9f5d91ee4f520df01018000a4c7
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1851'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,10 @@ I det här dokumentet beskrivs hur du använder Maven för att hantera dessa upp
 
 >[!NOTE]
 >
->Paketskapandet ägs nu av [Apache Jackrabbit FileVault Package Maven plugin](https://jackrabbit.apache.org/filevault-package-maven-plugin/). Distributionen av de konstruerade paketen till AEM utförs av plugin-programmet Maven för innehållspaket för Adobe enligt beskrivningen här.
+>Paket **skapa** ägs nu av [Apache Jackrabbit FileVault Package Maven plugin.](https://jackrabbit.apache.org/filevault-package-maven-plugin/)
+>* The `content-package-maven-plugin` stöder inte längre paketering från och med version 1.0.2.
+>* I den här artikeln beskrivs **distribution** av de tillverkade paketen som ska AEM utförs av pluginen för innehållspaketet Maven för Adobe.
+
 
 ## Paket och AEM projektstruktur {#aem-project-structure}
 
@@ -47,7 +50,7 @@ Om du vill använda plugin-programmet Content Package Maven lägger du till föl
 <plugin>
  <groupId>com.day.jcr.vault</groupId>
  <artifactId>content-package-maven-plugin</artifactId>
- <version>0.0.24</version>
+ <version>1.0.4</version>
  <configuration>
        <!-- parameters and values common to all goals, as required -->
  </configuration>

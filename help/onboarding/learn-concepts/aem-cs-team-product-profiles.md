@@ -2,7 +2,7 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Följ den här sidan för att lära dig mer om AEM as a Cloud Service team- och produktprofiler.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: 56ca8e80081e62ceb3f5fc2bf9c32aa3bcee12c6
+source-git-commit: fd23701414a2ae4142ea2a11cef92bc0cb202421
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 0%

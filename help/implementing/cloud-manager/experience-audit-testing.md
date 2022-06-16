@@ -2,7 +2,7 @@
 title: Testning av Experience Audit
 description: Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 exl-id: 8d31bc9c-d38d-4d5b-b2ae-b758e02b7073
-source-git-commit: 15de47e28e804fd84434d5e8e5d2fe8fe6797241
+source-git-commit: 1a7a9ee78d09a9360922a63dfa315ef9d106209e
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Experience Audit i Cloud Manager säkerställer att slutanvändarens upplevelse 
 
 Granskningsresultaten är informativa och gör det möjligt för distributionshanteraren att se poängen och ändringen mellan aktuella och tidigare poäng. Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
 
-Experience Audit drivs av Google Lighthuse, ett verktyg med öppen källkod från Googl, och är aktiverat i alla produktionspipelines i Cloud Manager.
+Experience Audit drivs av Google Lightroom, ett verktyg med öppen källkod från Google, och är aktiverat i alla produktionspipelines i Cloud Manager.
 
 ## Upplevelsegranskningsresultat {#understanding-experience-audit-results}
 

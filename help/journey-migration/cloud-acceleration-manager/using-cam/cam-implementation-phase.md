@@ -2,9 +2,9 @@
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
 exl-id: e6ac88f0-4b3f-43a1-98bc-8c6608713784
-source-git-commit: f2cad442ba85d1d889eda669502e120406a4380b
+source-git-commit: 24331b974ded34ef949cc3d6fb157b124c145dee
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '792'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ Följ det här avsnittet för att utforska aktivitetskortet för lokal utvecklin
 
 ## Använda omfaktoriseringskort {#code-refactoring}
 
-Aktivitetskortet Code Refactoring ger all relevant information och markerar de områden för kodomfaktorisering som du behöver granska och lösa när du går till AEM as a Cloud Service.
+Aktivitetskortet Code Refactoring innehåller all relevant information och markerar de områden för kodomfaktorisering som du behöver granska och lösa när du går till AEM as a Cloud Service.
 
 Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 
