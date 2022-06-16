@@ -4,10 +4,10 @@ description: Lär dig hur du aktiverar vissa Content Fragment-funktioner i Confi
 feature: Content Fragments
 role: User
 exl-id: 9fc911de-1d33-4811-8f58-ea21ce94bedb
-source-git-commit: e304b49b44cf871f3c47120fad7899407c573234
+source-git-commit: 78448aafa1b397f9131c12ab2afd74b05ae53e66
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 17%
+source-wordcount: '339'
+ht-degree: 15%
 
 ---
 
@@ -43,9 +43,20 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
 >
 >Mer information finns i [Konfigurationsläsaren:](/help/implementing/developing/introduction/configurations.md#using-configuration-browser).
 
->[!CAUTION]
+>[!NOTE]
 >
->Delkonfigurationer (en konfiguration som är kapslad i en konfiguration) stöds för användning med innehållsfragment, men kan inte användas för GraphQL-frågor.
+>[Delkonfigurationer](/help/implementing/developing/introduction/configurations.md#configuration-resolution) (en konfiguration som är kapslad i en annan konfiguration) stöds fullt ut för användning med Content Fragments, Content Fragment Models och GraphQL queries.
+>
+>Observera följande:
+>
+>
+>* När du har skapat modeller i en underkonfiguration är det INTE möjligt att flytta eller kopiera modellen till en annan underkonfiguration.
+>
+>* En GraphQL-slutpunkt kommer (fortfarande) att baseras på en överordnad (rot) konfiguration.
+>
+>* Beständiga frågor sparas (fortfarande) som är relevanta för den överordnade konfigurationen (roten).
+
+
 
 1. Navigera till **Verktyg**, **Allmänt** och öppna sedan **Konfigurationsläsaren**.
 
