@@ -3,10 +3,10 @@ title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 91361eb49eaf4ec3b89dbd816aecca3c5bfe029f
+source-git-commit: 4fcb2ff39f0634cfcdab5500b03441f6db0b474d
 workflow-type: tm+mt
-source-wordcount: '3360'
-ht-degree: 1%
+source-wordcount: '3358'
+ht-degree: 0%
 
 ---
 
@@ -143,7 +143,7 @@ Repoinit är att föredra för de här användningsområdena för innehållsänd
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Följ nedanstående procedur för att skapa repoinit-satser:
+Så här skapar du repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
@@ -206,7 +206,7 @@ Om det inte går att lagra paketet i en fjärrdatabas kan kunderna placera det i
 
 Alla inkluderade tredjepartspaket måste följa riktlinjerna för AEM as a Cloud Service Service-kodning och -paketering som beskrivs i den här artikeln, annars leder inkludering till ett distributionsfel.
 
-Följande XML-kodfragment för Maven POM visar hur paket från tredje part kan bäddas in i projektets behållarpaket, som vanligtvis kallas **&#39;all&#39;**, via Maven-pluginkonfigurationen **filevault-package-maven-plugin**.
+The following Maven `POM.xml` utdrag visar hur paket från tredje part kan bäddas in i projektets&quot;Behållarpaket&quot;, vanligtvis namngivna **&#39;all&#39;**, via **filevault-package-maven-plugin** Konfiguration av plugin-programmet Maven.
 
 ```
 ...
@@ -216,26 +216,18 @@ Följande XML-kodfragment för Maven POM visar hur paket från tredje part kan b
   <extensions>true</extensions>
   <configuration>
       ...
-      <subPackages>
-           
-          <!-- Include the application's ui.apps and ui.content packages -->
+      <embeddeds>
+
           ...
- 
-          <!-- Include any other extra packages such as AEM WCM Core Components -->
-          <!-- Set the version for all dependencies, including 3rd party packages, in the project's Reactor POM -->
-          <subPackage>
-              <groupId>com.adobe.cq</groupId>
-              <artifactId>core.wcm.components.all</artifactId>
-              <filter>true</filter>
-          </subPackage>
- 
- 
-          <subPackage>
-              <groupId>com.3rdparty.groupId</groupId>
-              <artifactId>core.3rdparty.artifactId</artifactId>
-              <filter>true</filter>
-          </subPackage>
-      <subPackages>
+
+          <!-- Include any other extra packages  -->
+          <embedded>
+              <groupId>com.vendor.x</groupId>
+              <artifactId>vendor.plug-in.all</artifactId>
+              <type>zip</type>
+              <target>/apps/vendor-packages/container/install</target>
+          </embedded>
+      <embeddeds>
   </configuration>
 </plugin>
 ...

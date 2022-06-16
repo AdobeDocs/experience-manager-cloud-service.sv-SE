@@ -2,7 +2,7 @@
 title: Arbeta med sidversioner
 description: Skapa, jämföra och återställa versioner av en sida
 exl-id: 33d8e43c-594d-4bba-9631-b2c42a1e910f
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 2d1b40b8d6f7b6ca5ce112331a7d389816739494
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 4%
@@ -193,9 +193,9 @@ Så här jämför du en tidigare version med den aktuella sidan:
 
 Timewarp är en funktion som simulerar *publicerad* en sidas status vid en viss tidpunkt tidigare.
 
->[!NOTE]
+>[!TIP]
 >
->[Timewarp kan även användas med Launches för att förhandsgranska framtiden](/help/sites-cloud/authoring/launches/preview.md).
+>[Timewarp kan även användas med Launches för att förhandsgranska framtiden.](/help/sites-cloud/authoring/launches/preview.md)
 
 Eftersom framtagning av innehåll är en pågående och samarbetsorienterad process är syftet med Timewarp att tillåta författare att spåra den publicerade webbplatsen över tid för att förstå hur innehållet har ändrats. Den här funktionen använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
 
