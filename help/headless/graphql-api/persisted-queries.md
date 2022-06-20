@@ -3,10 +3,10 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 368c2d537d740b2126aa7cce657ca54f7ad6b329
+source-git-commit: 8a9cdc451a5da09cef331ec0eaadd5d3a68b1985
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 1%
+source-wordcount: '1109'
+ht-degree: 0%
 
 ---
 
@@ -53,17 +53,17 @@ Vi rekommenderar att du behåller frågor i en AEM redigeringsmiljö först och 
 
 Det finns olika metoder för beständiga frågor, bland annat:
 
-* GraphiQL IDE - se [Sparar beständiga frågor](/help/headless/graphql-api/graphiql-ide.md##saving-persisted-queries)
+* GraphiQL IDE - se [Sparar beständiga frågor](/help/headless/graphql-api/graphiql-ide.md##saving-persisted-queries) (föredragen metod)
 * curl - se följande exempel
 * Andra verktyg, inklusive [Postman](https://www.postman.com/)
 
-Här följer de steg som krävs för att behålla en given fråga med **kurva** kommandoradsverktyg:
+GraphiQL IDE är **standard** metod för beständiga frågor. Bevara en given fråga med **kurva** kommandoradsverktyg:
 
 1. Förbered frågan genom att PUTing den till den nya slutpunkts-URL:en `/graphql/persist.json/<config>/<persisted-label>`.
 
    Skapa till exempel en beständig fråga:
 
-   ```xml
+   ```shell
    $ curl -X PUT \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
@@ -86,7 +86,7 @@ Här följer de steg som krävs för att behålla en given fråga med **kurva** 
 
    Kontrollera till exempel om åtgärden lyckades:
 
-   ```xml
+   ```json
    {
      "action": "create",
      "configurationName": "wknd",
@@ -100,7 +100,7 @@ Här följer de steg som krävs för att behålla en given fråga med **kurva** 
 
    Använd till exempel den beständiga frågan:
 
-   ```xml
+   ```shell
    $ curl -X GET \
        http://localhost:4502/graphql/execute.json/wknd/plain-article-query
    ```
@@ -109,7 +109,7 @@ Här följer de steg som krävs för att behålla en given fråga med **kurva** 
 
    Använd till exempel den beständiga frågan:
 
-   ```xml
+   ```shell
    $ curl -X POST \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
@@ -135,7 +135,7 @@ Här följer de steg som krävs för att behålla en given fråga med **kurva** 
 
    Till exempel:
 
-   ```xml
+   ```shell
    $ curl -X PUT \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
@@ -148,7 +148,7 @@ Här följer de steg som krävs för att behålla en given fråga med **kurva** 
 
    Till exempel:
 
-   ```xml
+   ```shell
    $ curl -X PUT \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
@@ -161,7 +161,7 @@ Här följer de steg som krävs för att behålla en given fråga med **kurva** 
 
    Till exempel:
 
-   ```xml
+   ```shell
    $ curl -X PUT \
        -H 'authorization: Basic YWRtaW46YWRtaW4=' \
        -H "Content-Type: application/json" \
@@ -183,44 +183,131 @@ Här följer de steg som krävs för att behålla en given fråga med **kurva** 
      }'
    ```
 
+
+## Så här kör du en fråga som är sparad {#execute-persisted-query}
+
+Om du vill köra en fråga som är permanent skapar ett klientprogram en GET-begäran med följande syntax:
+
+```
+GET <AEM_HOST>/graphql/execute.json/<PERSISTENT_PATH>
+```
+
+Plats `PERSISTENT_PATH` är en förkortad sökväg där den beständiga frågan sparas.
+
+1. Till exempel `wknd` är konfigurationsnamnet och `plain-article-query` är namnet på den beständiga frågan. Så här kör du frågan:
+
+   ```shell
+   $ curl -X GET \
+       https://publish-p123-e456.adobeaemcloud.com/graphql/execute.json/wknd/plain-article-query
+   ```
+
 1. Kör en fråga med parametrar.
+
+   >[!NOTE]
+   >
+   > Frågevariabler och -värden måste vara korrekta [kodad](#encoding-query-url) när en Persistent-fråga körs.
 
    Till exempel:
 
    ```xml
-   $ curl -X POST \
-       -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-       -H "Content-Type: application/json" \
-       "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-   
    $ curl -X GET \
-       "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters;apath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
+       "https://publish-p123-e456.adobeaemcloud.com/graphql/execute.json/wknd/plain-article-query-parameters%3Bapath%3D%2Fcontent%2Fdam%2Fwknd%2Fen%2Fmagazine%2Falaska-adventure%2Falaskan-adventures%3BwithReference%3Dfalse
    ```
+
+   Se använda [frågevariabler](#query-variables) för mer information.
+
+## Använda frågevariabler {#query-variables}
+
+Frågevariabler kan användas med beständiga frågor. Frågevariablerna läggs till i begäran med ett semikolon (`;`) med variabelnamnet och variabelvärdet. Flera variabler avgränsas med semikolon.
+
+Mönstret ser ut så här:
+
+```
+<AEM_HOST>/graphql/execute.json/<PERSISTENT_QUERY_PATH>;variable1=value1;variable2=value2
+```
+
+Följande fråga innehåller till exempel en variabel `activity` om du vill filtrera en lista baserat på ett aktivitetsvärde:
+
+```graphql
+query getAdventuresByActivity($activity: String!) {
+      adventureList (filter: {
+        adventureActivity: {
+          _expressions: [
+            {
+              value: $activity
+            }
+          ]
+        }
+      }){
+        items {
+          _path
+        adventureTitle
+        adventurePrice
+        adventureTripLength
+      }
+    }
+  }
+```
+
+Den här frågan kan sparas under en sökväg `wknd/adventures-by-activity`. Så här anropar du den beständiga frågan där `activity=Camping` begäran skulle se ut så här:
+
+```
+<AEM_HOST>/graphql/execute.json/wknd/adventures-by-activity%3Bactivity%3DCamping
+```
+
+Observera att `%3B` är UTF-8-kodning för `;` och `%3D` är kodningen för `=`. Frågevariablerna och eventuella specialtecken måste [korrekt kodad](#encoding-query-url) för den beständiga frågan som ska köras.
+
+## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
+
+Om det används av ett program används alla specialtecken som används för att skapa frågevariabler (t.ex. semikolon (`;`), likhetstecken (`=`), snedstreck `/`) måste konverteras till motsvarande UTF-8-kodning.
+
+Till exempel:
+
+```xml
+curl -X GET \ "https://publish-p123-e456.adobeaemcloud.com/graphql/execute.json/wknd/adventure-by-path%3BadventurePath%3D%2Fcontent%2Fdam%2Fwknd%2Fen%2Fadventures%2Fbali-surf-camp%2Fbali-surf-camp"
+```
+
+URL:en kan delas upp i följande delar:
+
+| URL-del | Beskrivning |
+|----------| -------------|
+| `/graphql/execute.json` | Beständig frågeslutpunkt |
+| `/wknd/adventure-by-path` | Sökväg för beständig fråga |
+| `%3B` | Kodning av `;` |
+| `adventurePath` | Frågevariabel |
+| `%3D` | Kodning av `=` |
+| `%2F` | Kodning av `/` |
+| `%2Fcontent%2Fdam...` | Kodad sökväg till innehållsfragmentet |
+
+I vanlig text ser URI:n för begäran ut så här:
+
+```plaintext
+/graphql/execute.json/wknd/adventure-by-path;adventurePath=/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp
+```
+
+Om du vill använda en beständig fråga i en klientapp bör AEM headless Client SDK användas för [JavaScript](https://github.com/adobe/aem-headless-client-js), [Java](https://github.com/adobe/aem-headless-client-java), eller [NodeJS](https://github.com/adobe/aem-headless-client-nodejs). SDK för den Headless-klienten kodar automatiskt alla frågevariabler som behövs i begäran.
 
 ## Överför en beständig fråga till produktionsmiljön  {#transfer-persisted-query-production}
 
-I slutändan måste din beständiga fråga finnas i produktionsmiljön (av AEM as a Cloud Service), där den kan begäras av klientprogram. Om du vill använda en beständig fråga i produktionspubliceringsmiljön måste det beständiga trädet replikeras:
+Beständiga frågor bör alltid skapas i en AEM Author-tjänst och sedan publiceras (replikeras) till en AEM Publish-tjänst. Vanligtvis skapas och testas beständiga frågor i miljöer som lokala miljöer och utvecklingsmiljöer. Det är sedan nödvändigt att befordra beständiga frågor till miljöer på högre nivå och i slutänden göra dem tillgängliga i en AEM Publish-produktionsmiljö så att klientapplikationerna kan använda dem.
 
-* till författaren för att validera nyskrivet innehåll med frågorna,
-* sedan publicera för direktkonsumtion
+### Paketera beständiga frågor
 
-Det finns flera sätt att överföra din beständiga fråga:
+Beständiga frågor kan byggas in i [AEM](/help/implementing/developing/tools/package-manager.md). AEM paket kan sedan laddas ned och installeras i olika miljöer. AEM kan också replikeras från en AEM Author-miljö till AEM Publish-miljöer.
 
-1. Använda ett paket:
-   1. Skapa en ny paketdefinition.
-   1. Inkludera konfigurationen (till exempel `/conf/wknd/settings/graphql/persistentQueries`).
-   1. Bygg paketet.
-   1. Överför paketet (hämta/överföra eller replikera).
-   1. Installera paketet.
+Så här skapar du ett paket:
 
-1. Använda en POST för replikering:
+1. Navigera till **verktyg** > **Distribution** > **Paket**.
+1. Skapa ett nytt paket genom att trycka **Skapa paket**. Då öppnas en dialogruta där du kan definiera paketet.
+1. I dialogrutan Paketdefinition, under **Allmänt** ange **Namn** som &quot;wknd-persistent-queries&quot;.
+1. Ange ett versionsnummer som &quot;1.0&quot;.
+1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. Till exempel `wknd` konfiguration den fullständiga sökvägen kommer att `/conf/wknd/settings/graphql/persistentQueries`.
+1. Tryck **Spara** för att spara den nya paketdefinitionen och stänga dialogrutan.
+1. Tryck på **Bygge** i den nyligen skapade paketdefinitionen.
 
-   ```xml
-   $ curl -X POST   http://localhost:4502/bin/replicate.json \
-   -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-   -F path=/conf/wknd/settings/graphql/persistentQueries/plain-article-query \
-   -F cmd=activate
-   ```
+När paketet har byggts kan du:
+* **Hämta** paketet och ladda upp det igen i en annan miljö.
+* **Replikera** paketet genom att trycka **Mer** > **Replikera**. Paketet kommer att replikeras till den anslutna AEM-publiceringsmiljön.
 
 <!--
 1. Using replication/distribution tool:
@@ -230,23 +317,3 @@ Det finns flera sätt att överföra din beständiga fråga:
 * Using a workflow (via workflow launcher configuration):
   1. Define a workflow launcher rule for executing a workflow model that would replicate the configuration on different events (for example, create, modify, amongst others).
 -->
-
-När frågekonfigurationen finns i publiceringsmiljön i produktion gäller samma autentiseringsprinciper, bara med publiceringsslutpunkten.
-
->[!NOTE]
->
->För anonym åtkomst förutsätter systemet att åtkomstkontrollistan tillåter &quot;alla&quot; att ha åtkomst till frågekonfigurationen.
->
->Om så inte är fallet kommer det inte att kunna köras.
-
-## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
-
-Om du vill använda ett program måste alla semikolon (&quot;;&quot;) i URL-adresserna kodas.
-
-Som i begäran att köra en beständig fråga:
-
-```xml
-curl -X GET \ "http://localhost:4502/graphql/execute.json/wknd/plain-article-query-parameters%3bapath=%2fcontent2fdam2fwknd2fen2fmagazine2falaska-adventure2falaskan-adventures;withReference=false"
-```
-
-Om du vill använda en beständig fråga i en klientapp bör AEM headless Client SDK användas [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js).
