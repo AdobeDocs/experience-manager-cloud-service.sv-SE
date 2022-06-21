@@ -3,7 +3,7 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 8a9cdc451a5da09cef331ec0eaadd5d3a68b1985
+source-git-commit: 6529b4b874cd7d284b92546996e2373e59075dfd
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%
@@ -306,6 +306,7 @@ Så här skapar du ett paket:
 1. Tryck på **Bygge** i den nyligen skapade paketdefinitionen.
 
 När paketet har byggts kan du:
+
 * **Hämta** paketet och ladda upp det igen i en annan miljö.
 * **Replikera** paketet genom att trycka **Mer** > **Replikera**. Paketet kommer att replikeras till den anslutna AEM-publiceringsmiljön.
 
