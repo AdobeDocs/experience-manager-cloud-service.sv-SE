@@ -4,9 +4,9 @@ description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller i
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: ee44aa9dd6b7977bfa5460ded4b02f1fcbc67096
+source-git-commit: 42298e0ff7d977a32c87e61e9e1f4b02a846f2c0
 workflow-type: tm+mt
-source-wordcount: '3088'
+source-wordcount: '3125'
 ht-degree: 5%
 
 ---
@@ -53,6 +53,14 @@ I **[!UICONTROL Unsharp Mask]** har du följande filtreringsalternativ:
 Skärpa beskrivs i [Skärpa bilder](/help/assets/dynamic-media/assets/sharpening_images.pdf).
 
 ## Beskärningsalternativ {#crop-options}
+
+När du implementerar Smart Crop på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
+
+| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| --- | --- | --- |
+| Antal smarta beskärningar per bild | 5 | 100 |
+
+Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.md).
 
 <!-- CQDOC-16069 for the paragraph directly below -->
 
