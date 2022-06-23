@@ -4,7 +4,7 @@ description: Lär dig hur du arbetar med snurruppsättningar i Dynamic Media.
 feature: Spin Sets
 role: User
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: 42298e0ff7d977a32c87e61e9e1f4b02a846f2c0
+source-git-commit: a2bbc64051214efa83d74d414e2e5f1407433127
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 8%
@@ -27,7 +27,7 @@ Snurra uppsättningar anges av en banderoll med ordet **[!UICONTROL SPINSET]**. 
 
 När du skapar en snurrsuppsättning rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
 | Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
 
@@ -119,7 +119,7 @@ I det här avsnittet beskrivs hur du skapar snurruppsättningar.
 
 När du skapar en snurrsuppsättning rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Implementerad gräns |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
 | Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
 

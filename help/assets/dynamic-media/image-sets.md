@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med bilduppsättningar i Dynamic Media.
 feature: Image Sets
 role: User
 exl-id: 2eb71f24-73d9-4b5c-8605-923a0e3d1505
-source-git-commit: 42298e0ff7d977a32c87e61e9e1f4b02a846f2c0
+source-git-commit: a2bbc64051214efa83d74d414e2e5f1407433127
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2068'
 ht-degree: 5%
 
 ---
@@ -31,10 +31,10 @@ Anta till exempel att du vill visa bilder med olika färgskalor; räkningarna ä
 
 När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
-| --- | --- | --- | --- |
-| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
-| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
 
 Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.md).
 
@@ -138,10 +138,10 @@ När du lägger till resurser i uppsättningen läggs de automatiskt till i alfa
 
 När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
-| Resurs - begränsningstyp | Bästa praxis | Implementerad gräns | Ändringar av begränsningen 31 december 2022 |
-| --- | --- | --- | --- |
-| **Bilduppsättning** - Antal dubblettresurser per uppsättning | Inga dubbletter | 100 | 20 |
-| **Bilduppsättning** - Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
+| Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
 
 Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.md).
 
