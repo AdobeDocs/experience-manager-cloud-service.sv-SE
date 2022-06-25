@@ -9,9 +9,9 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: a4d28786-cffa-42ab-98d3-90a15313e401
-source-git-commit: 42298e0ff7d977a32c87e61e9e1f4b02a846f2c0
+source-git-commit: ccd52d147b1739330c3cb5a7d1952a7e9eec71ad
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2334'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,7 @@ Du kan skapa mallar från Adobe® Photoshop®-filer, behålla lager, ange hur la
 
 ### PDF, flik {#pdf-tab}
 
-Det högsta antalet sidor för en PDF som ska övervägas för extrahering är 5000 för nya överföringar. Denna gräns kommer att ändras till 100 sidor den 31 december 2022. Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.md).
+Det högsta antalet sidor för en PDF som ska övervägas för extrahering är 5000 för nya överföringar. Denna gräns kommer att ändras till 100 sidor (för alla PDF) den 31 december 2022. Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.md).
 
 Du kan välja att rastrera filerna, extrahera sökord och länkar, ange upplösning och välja en färgrymd.
 
