@@ -3,9 +3,9 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager as a Cloud Service.
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 5512f5f22336916e66300b82aaff578df3e05b1d
+source-git-commit: fc07b12f7a35b4f772a0ac4f9e6b09a1287eec8b
 workflow-type: tm+mt
-source-wordcount: '3316'
+source-wordcount: '3353'
 ht-degree: 2%
 
 ---
@@ -272,6 +272,9 @@ Se [Överför resurser](/help/assets/add-assets.md).
 
 1. Logga in på Experience Manager as a Cloud Service som produktadministratör.
 1. I Experience Manager as a Cloud Service väljer du den as a Cloud Service logotypen för Experience Manager för att komma åt den globala navigeringskonsolen och går sedan till **[!UICONTROL General > CRXDE Lite]**.
+
+   Om du inte har tillgång till CRXDE Lite kan du läsa [Använda CRXDE Lite](/help/implementing/developing/tools/crxde.md).
+
 1. Navigera till följande i den vänstra listen:
 
    `/conf/global/settings/cloudconfigs/dmscene7/jcr:content/mimeTypes`
@@ -326,6 +329,8 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 1. Gå tillbaka till webbläsarfliken som har din öppna Experience Manager as a Cloud Service konsol.
 1. Från Experience Manager as a Cloud Service, gå till **[!UICONTROL Tools > General > CRXDE Lite]**.
+
+   Om du inte har tillgång till CRXDE Lite kan du läsa [Använda CRXDE Lite](/help/implementing/developing/tools/crxde.md).
 
    ![Verktyg > Allmänt > CRXDE Lite](assets/2019-08-02_16-55-41.png)
 
@@ -382,6 +387,8 @@ Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynam
 >[!NOTE]
 >
 >Du måste vara inloggad på Experience Manager as a Cloud Service som produktadministratör för att kunna slutföra den här uppgiften.
+
+Om du inte har tillgång till OSGi går du till [OSGi-konfiguration](/help/implementing/developing/components/overview.md#osgi-configuration).
 
 **Så här uppdaterar du fördefinierade arbetsflödeskö (videoresurser) för Granite:**
 
