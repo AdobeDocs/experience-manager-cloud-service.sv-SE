@@ -10,7 +10,7 @@ topic-tags: adaptive_forms, author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 exl-id: 3fdbe5a3-5c3c-474d-b701-e0182da4191a
-source-git-commit: 580ab2731bc277bcd53c4863b3b22f5e44dc8406
+source-git-commit: 0c303439c879605f1ab0927cf79b132dbb448af5
 workflow-type: tm+mt
 source-wordcount: '1341'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Så här använder du CAPTCHA i Adaptiv Forms:
 1. Från **[!UICONTROL Captcha service]** nedrullningsbar meny, välja **[!UICONTROL reCaptcha]** för att aktivera tjänsten reCAPTCHA om du har konfigurerat den enligt beskrivningen i [Tjänsten ReCAPTCHA från Google](#google-recaptcha). Välj en konfiguration i listrutan Inställningar.
 1. Välj typen som **[!UICONTROL Normal]** eller **[!UICONTROL Compact]** för widgeten reCAPTCHA. Du kan också välja **[!UICONTROL Invisible]** möjlighet att visa CAPTCHA-utmaningen endast i händelse av en misstänkt aktivitet. Varumärket protected by reCAPTCHA, som visas nedan, visas på de skyddade formulären.
 
-   ![Google bearbetat av reCAPTCHA-märke](assets/google-recaptcha-v2.png)
+   ![Google skyddat av reCAPTCHA-märke](assets/google-recaptcha-v2.png)
 
    >[!NOTE]
    >
