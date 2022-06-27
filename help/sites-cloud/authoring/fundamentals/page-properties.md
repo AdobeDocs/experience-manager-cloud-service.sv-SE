@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: e51490a9422dab3cc4980eb1d2288d7c264343be
+source-git-commit: 73adc2a9cad7f3e5dde723d1b3d695f8cec3ca69
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '1987'
 ht-degree: 5%
 
 ---
@@ -98,7 +98,8 @@ Egenskaperna fördelas på flera flikar.
 
    * **Språk** - Sidspråket
    * **Språkrot** - Måste kontrolleras om sidan är roten i en språkkopia
-   * **Omdirigering** - Anger den sida som den här sidan automatiskt ska omdirigeras till
+   * **Omdirigering** - Anger den sida som den här sidan automatiskt ska omdirigeras till med HTML `302 Found` status.
+      * **Permanent omdirigering** - När det här alternativet är markerat dirigeras sidan om till målsökvägen som medföljer HTML `301 Moved Permanently` status.
    * **Design** - Anger om sidan visas eller döljs i sidnavigeringen på den slutliga webbplatsen
    * **Alias** - Anger ett alias som ska användas med den här sidan
       * Om du till exempel definierar ett alias för `private` för sidan `/content/wknd/us/en/magazine/members-only`kan den här sidan också öppnas via `/content/wknd/us/en/magazine/private`
