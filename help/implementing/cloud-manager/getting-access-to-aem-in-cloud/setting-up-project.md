@@ -2,7 +2,7 @@
 title: Projektinställningar
 description: Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: 3bd3221676a3558225baa7a3b0c78174e21091be
+source-git-commit: 4b2ea300f61ad7d1218a984f7238365c5b170a8e
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 1%
@@ -143,7 +143,7 @@ Låt oss till exempel säga att databasen är `https://repository.myco.com/maven
            <server>
                <id>myco-repository</id>
                <username>cloudmanager</username>
-              <password>${secret.CUSTOM_MYCO_REPOSITORY_PASSWORD}</password>
+              <password>${env.CUSTOM_MYCO_REPOSITORY_PASSWORD}</password>
            </server>
        </servers>
    </settings>
