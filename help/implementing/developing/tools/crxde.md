@@ -2,7 +2,7 @@
 title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
-source-git-commit: ae79dbf490c5e8b819c287b3013bbd93cdb6a59f
+source-git-commit: a9c646d24378e67df84c00a4355c692cac85e50b
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
@@ -94,7 +94,7 @@ För att kunna se åtkomstkontrollsinformation måste användaren som är inlogg
 
 The **Fliken Replikering** visar den aktuella nodens replikeringsstatus. Du kan replikera och replikera borttagningen av den aktuella noden.
 
-###  Fliken Konsol {#console-tab}
+### Fliken Konsol {#console-tab}
 
 The **Fliken Konsol** visar loggmeddelanden. Du kan konfigurera loggnivån, rensa konsolen, fästa vid den valda rullningspositionen och aktivera/inaktivera visning av meddelanden.
 
