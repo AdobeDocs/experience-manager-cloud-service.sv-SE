@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 1b68322b63fdbf8dab5a7dbd37dd1143f026c051
+source-git-commit: a715594f74187ad61cdea566274723d170fd3783
 workflow-type: tm+mt
-source-wordcount: '2875'
+source-wordcount: '2956'
 ht-degree: 0%
 
 ---
@@ -155,6 +155,11 @@ Det krävs ett externt lagringskonto eller en bucket från Azure eller AWS för 
 >
 >Skapa lagringskontobehållaren eller lagringskassetten som privat och acceptera anslutningar endast från auktoriserade begäranden. Ytterligare begränsningar för inkommande nätverksanslutningar stöds dock inte.
 
+>[!NOTE]
+>
+>Externa lagringskonton kan ha andra fil-/mappnamnsregler än verktyget för massimport. Se [Hantera filnamn vid bulkimport](#filename-handling-bulkimport) om du vill ha mer information om ej tillåtna/escape-namn.
+
+
 ### Konfigurera verktyget Massimport {#configure-bulk-ingestor-tool}
 
 Så här konfigurerar du verktyget för massimport:
@@ -216,6 +221,15 @@ Välj konfigurationen och klicka på **[!UICONTROL Dry Run]** för att anropa en
 När du importerar resurser eller mappar i grupp, [!DNL Experience Manager Assets] importerar hela strukturen för det som finns i importkällan. [!DNL Experience Manager] följer de inbyggda reglerna för specialtecken i resurs- och mappnamnen, och därför måste dessa filnamn saneras. För både mappnamn och resursnamn ändras inte titeln som definieras av användaren och lagras i `jcr:title`.
 
 Vid bulkimport, [!DNL Experience Manager] leta efter de befintliga mapparna för att undvika att importera om resurserna och mapparna, och verifierar även rensningsreglerna som tillämpas i den överordnade mappen där importen sker. Om saneringsreglerna tillämpas i den överordnade mappen, tillämpas samma regler på importkällan. För ny import används följande saneringsregler för att hantera filnamnen på resurser och mappar.
+
+**Otillåtna namn vid bulkimport**
+
+Följande tecken tillåts inte i fil- och mappnamn:
+
+* Tecken för kontroll och privat användning (0x00 till 0x1F, \u0081, \uE000)
+* Fil- eller mappnamn som slutar med en punkt (.)
+
+Filer eller mappar med namn som matchar dessa villkor hoppas över under importprocessen och markeras som misslyckade.
 
 **Hantera resursnamn vid bulkimport**
 
