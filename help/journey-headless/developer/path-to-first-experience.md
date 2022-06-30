@@ -2,7 +2,7 @@
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
 exl-id: 172ad8d8-5067-4452-bf91-1eea9a39a7bc
-source-git-commit: e81b852dc90e3cc5abc8b9f218f48d0fc1cc66eb
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '2014'
 ht-degree: 0%
@@ -149,6 +149,6 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - Det här GitHub-projektet innehåller exempelprogram AEM GraphQL API:er.
 * [Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - En fullständig översikt över AEM
 * [Headless Setup](/help/headless/introduction.md#getting-started) - En snabb introduktion till AEM headless-funktioner för användare som redan är AEM.
-* [Skapa modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) - Teknisk dokumentation om modeller för innehållsfragment
-* [Skapa innehållsfragment](/help/assets/content-fragments/content-fragments.md) - Teknisk dokumentation om innehållsfragment
+* [Skapa modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md) - Teknisk dokumentation om modeller för innehållsfragment
+* [Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) - Teknisk dokumentation om innehållsfragment
 * [Fråga innehåll med GraphQL](/help/headless/graphql-api/content-fragments.md) - Teknisk dokumentation om GraphQL API

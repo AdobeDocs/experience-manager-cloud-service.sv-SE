@@ -2,7 +2,7 @@
 title: Valfritt - Så här skapar du enkelsidiga program (SPA) med AEM
 description: I den här valfria fortsättningen av den AEM Headless Developer Journey får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA.
 exl-id: d74848f2-683e-49e1-9374-32596ca5d7d7
-source-git-commit: 4a5967f682d122d20528b1d904590fb82f438fa7
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '1273'
 ht-degree: 0%
@@ -126,5 +126,5 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [SPA](/help/implementing/developing/hybrid/editor-overview.md) - Information om hur SPA redigeraren fungerar
 * [Återgivning på serversidan](/help/implementing/developing/hybrid/ssr.md) - Konfigurera SSR för AEM SPA
 * [SPA referensdokument](/help/implementing/developing/hybrid/reference-materials.md) - JavaScript API-referenser och länkar till AEM med öppen källkod SPA GitHub-projekt
-* [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) - Skapa innehållsfragment
+* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) - Skapa innehållsfragment
 * [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats

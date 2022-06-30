@@ -2,16 +2,16 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 624b202efd08243e91b36a35f3df7c8c0bd998a9
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1164'
 ht-degree: 3%
 
 ---
 
 # Innehållsfragment {#content-fragments}
 
-Innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service är [skapat och hanterat som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md).
+Innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service är [skapat och hanterat som sidoberoende resurser](/help/sites-cloud/administering/content-fragments/content-fragments.md).
 
 Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
@@ -28,7 +28,7 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 
 >[!CAUTION]
 >
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md) (och relaterade sidor) när det introducerar grundläggande terminologi och koncept, tillsammans med att skapa och hantera fragment.
+>Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) (och relaterade sidor) när det introducerar grundläggande terminologi och koncept, tillsammans med att skapa och hantera fragment.
 
 Innehållsfragmenten aktiverar:
 
@@ -105,7 +105,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 ### Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 
-Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikonen i komponentens verktygsfält. Då kan du [redigera och hantera innehållsfragmentet](/help/assets/content-fragments/content-fragments.md).
+Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikonen i komponentens verktygsfält. Då kan du [redigera och hantera innehållsfragmentet](/help/sites-cloud/administering/content-fragments/content-fragments.md).
 
 >[!CAUTION]
 >
@@ -115,7 +115,7 @@ Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikone
 
 När ett visst innehållsfragment läggs till på sidan finns det ett **Dra komponenter hit** platshållare mellan styckena HTML (och längst upp/längst ned) i fragmentet.
 
-Detta gör att du kan lägga till extra innehåll [in-between (dvs. in-between content)](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
+Detta gör att du kan lägga till extra innehåll [in-between (dvs. in-between content)](/help/sites-cloud/administering/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
 
 För mellanliggande innehåll kan du:
 
@@ -131,9 +131,9 @@ För mellanliggande innehåll kan du:
 
 >[!NOTE]
 >
->Du kan också [infoga visuella resurser (bilder) i själva fragmentet](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
+>Du kan också [infoga visuella resurser (bilder) i själva fragmentet](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
 >
->Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke. Om du behöver den här anslutningsnivån kan du lägga till bilden i fragmentet (som en [blandat mediefragment](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)).
+>Visuella resurser som infogats i själva fragmentet kopplas till föregående stycke i fragmentet. Det innebär att du inte kan placera innehåll mellan en visuell resurs och föregående stycke. Om du behöver den här anslutningsnivån kan du lägga till bilden i fragmentet (som en [blandat mediefragment](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets)).
 
 >[!CAUTION]
 >
@@ -149,11 +149,11 @@ För mellanliggande innehåll kan du:
 
 ### Använda associerat innehåll {#using-associated-content}
 
-Om du har [associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/assets/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](/help/assets/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments).
+Om du har [associerat innehåll](/help/sites-cloud/administering/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/sites-cloud/administering/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](/help/sites-cloud/administering/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments).
 
 >[!NOTE]
 >
->Det finns olika metoder att lägga till [visuella resurser (t.ex. bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder att lägga till [visuella resurser (t.ex. bilder)](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 >[!NOTE]
 >
@@ -167,7 +167,7 @@ Här kan du dra resurserna till önskad plats (antingen till en befintlig kompon
 
 ### Resurser som infogats i fragmentet {#assets-inserted-into-the-fragment}
 
-Om resurser (t.ex. bilder) har infogats i själva fragmentet (som [blandade mediefragment](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets)) är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
+Om resurser (t.ex. bilder) har infogats i själva fragmentet (som [blandade mediefragment](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets)) är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
 
 För en bild kan du till exempel
 
@@ -182,5 +182,5 @@ Andra ändringar, till exempel move, copy, delete, måste göras i fragmentredig
 
 Fragment måste publiceras så att de kan användas på dina publicerade webbsidor:
 
-* Ett fragment kan publiceras efter [skapa fragmentet i resurskonsolen](/help/assets/content-fragments/content-fragments-managing.md#publishing-and-referencing-a-fragment).
+* Ett fragment kan publiceras efter [skapa fragmentet i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#publishing-and-referencing-a-fragment).
 * Om en *opublicerat fragment* används på en sida som publiceras, kan fragmentet också publiceras just nu.

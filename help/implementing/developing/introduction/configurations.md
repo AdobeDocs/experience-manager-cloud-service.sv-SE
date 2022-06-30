@@ -2,7 +2,7 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 0%
@@ -34,7 +34,7 @@ AEM administratör och författare kan betrakta konfigurationer som arbetsytor. 
 Du kan skapa konfigurationer för många olika funktioner i AEM.
 
 * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
-* [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
 * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
 * olika molnkonfigurationer
 
@@ -80,7 +80,7 @@ Det är mycket enkelt att skapa en ny konfiguration i AEM med hjälp av Configur
       * Den kan vid behov justeras.
 1. Kontrollera vilken typ av konfigurationer du vill tillåta.
    * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
-   * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
+   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
    * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
    * olika molnkonfigurationer
 1. Tryck eller klicka **Skapa**.

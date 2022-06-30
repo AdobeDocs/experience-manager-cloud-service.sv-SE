@@ -2,7 +2,7 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
-source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '3659'
 ht-degree: 0%
@@ -474,4 +474,4 @@ Den här markeringen visas i dialogrutan [Komponentkonsol.](/help/sites-cloud/au
 
 ![README.md visible in the Components Console](assets/components-documentation-console.png)
 
-Den kod som stöds är densamma som den som [innehållsfragment.](/help/assets/content-fragments/content-fragments.md)
+Den kod som stöds är densamma som den som [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md).

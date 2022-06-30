@@ -2,7 +2,7 @@
 title: Skapa en resursmapp - Headless-konfiguration
 description: Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll.
 exl-id: 9a156a17-8403-40fc-9bd0-dd82fb7b2235
-source-git-commit: 131225c8303bdd8900a8e22ef51b545da2257f40
+source-git-commit: c0b48db0cbef6232f153dc59432ea7289b430538
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -50,8 +50,8 @@ Om du använder en lokaliserad platsstruktur kan du [skapa en språkrot](/help/a
 
 ## Nästa steg {#next-steps}
 
-Nu när du har skapat en mapp för dina innehållsfragment kan du gå vidare till den fjärde delen av guiden Komma igång och [skapa innehållsfragment.](create-content-fragment.md)
+Nu när du har skapat en mapp för dina innehållsfragment kan du gå vidare till den fjärde delen av guiden Komma igång och [skapa innehållsfragment](create-content-fragment.md).
 
 >[!TIP]
 >
->Fullständig information om hur du hanterar innehållsfragment finns i [Dokumentation för innehållsfragment](/help/assets/content-fragments/content-fragments.md)
+>Fullständig information om hur du hanterar innehållsfragment finns i [Dokumentation för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)

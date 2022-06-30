@@ -2,7 +2,7 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '1984'
 ht-degree: 0%
@@ -177,7 +177,7 @@ Nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), går djupare in 
 
    ![JSON på startsidan för WKND SPA Project](assets/wknd-json.png)
 
-   AEM SPA Editor använder [AEM Content Services](/help/assets/content-fragments/content-fragments.md) för att leverera hela sidans innehåll som en JSON-modell.
+   AEM SPA Editor använder [AEM Content Services](/help/sites-cloud/administering/content-fragments/content-fragments.md) för att leverera hela sidans innehåll som en JSON-modell.
 
    Genom att implementera specifika gränssnitt ger Sling Models den information som behövs för SPA. Leveransen av JSON-data delegeras nedåt till varje komponent (från sida, stycke, komponent osv.).
 

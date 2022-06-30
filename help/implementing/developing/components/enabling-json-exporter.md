@@ -2,9 +2,9 @@
 title: Aktivera JSON-export för en komponent
 description: Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
 exl-id: e9be5c0c-618e-4b56-a365-fcdd185ae808
-source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ Ett exempel finns i Sling Model-implementeringen av Image Core-komponenten och d
 
 Mer information finns i:
 
-* [Content Fragments in the Assets user guide](/help/assets/content-fragments/content-fragments.md)
-* [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
+* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

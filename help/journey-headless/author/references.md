@@ -2,7 +2,7 @@
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
 exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
-source-git-commit: e81b852dc90e3cc5abc8b9f218f48d0fc1cc66eb
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 1%
@@ -96,7 +96,7 @@ Använda **Strukturträd** på fliken i redigeraren för innehållsfragment kan 
 >
 >Med hjälp av vägbeskrivningarna på huvudpanelen kan du gå tillbaka till startpunkten.
 
-![Strukturträd för innehållsfragment](/help/assets/content-fragments/assets/cfm-structuretree-02.png)
+![Strukturträd för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cfm-structuretree-02.png)
 
 ## Ad hoc-referenser {#adhoc-references}
 
@@ -110,20 +110,20 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
+* [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
 
-   * [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)
+   * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md)
 
-      * [Använd konfigurationen i resursmappen](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
+      * [Använd konfigurationen i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
-      * [Skapa ett innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
-   * [Variationer - Skapa innehållsfragment](/help/assets/content-fragments/content-fragments-variations.md)
+      * [Skapa ett innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+   * [Variationer - Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md)
 
-   * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
+   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
 
-      * [Modeller för innehållsfragment - datatyper](/help/assets/content-fragments/content-fragments-models.md#data-types)
+      * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#data-types)
 
-      * [Modeller för innehållsfragment - egenskaper](/help/assets/content-fragments/content-fragments-models.md#properties)
+      * [Modeller för innehållsfragment - egenskaper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#properties)
 
 
 * Komma igång-guider

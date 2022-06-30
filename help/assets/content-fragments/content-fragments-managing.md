@@ -4,9 +4,9 @@ description: Lär dig hur du använder Resurskonsolen för att hantera AEM inneh
 feature: Content Fragments
 role: User
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: b1a1ef0021499872a712c1e4450af9765e46a1a9
+source-git-commit: bd589f689174f4da20e0f5e73a8786a3dee0f352
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1778'
 ht-degree: 7%
 
 ---
@@ -37,7 +37,7 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 
 >[!NOTE]
 >
->Innehållsfragment lagras som **Resurser**, så hanteras det främst från **Resurser** konsol.
+>Innehållsfragment lagras som **Resurser**. De hanteras nu främst med **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md)** konsolen, men de kan fortfarande hanteras från **Resurser** konsol. Detta avsnitt behandlar ledning från **Resurser** konsol.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 

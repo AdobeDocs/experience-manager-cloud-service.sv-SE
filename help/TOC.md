@@ -7,10 +7,10 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 0f6546d4a25a59a93090952f0ee58e27f0f0f838
+source-git-commit: 377747d6bbb945b1de9cf1fdcbabc077babd7aa9
 workflow-type: tm+mt
-source-wordcount: '3612'
-ht-degree: 22%
+source-wordcount: '3682'
+ht-degree: 23%
 
 ---
 
@@ -274,6 +274,20 @@ ht-degree: 22%
          + [Konfigurera segmentering med ContextHub](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
          + [Registrering, inloggning och användarprofil](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md)
    + Administratör {#administering}
+      + Innehållsfragment {#content-fragments}
+         + [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
+         + [Headless Delivery with Content Fragments and GraphQL](/help/sites-cloud/administering/content-fragments/content-fragments-graphql.md)
+         + [Aktivera funktionen för innehållsfragment för instansen](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md)
+         + [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+         + [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md)
+         + [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md)
+         + [Variationer – redigera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md)
+         + [Innehållsfragment med associerat innehåll](/help/sites-cloud/administering/content-fragments/content-fragments-assoc-content.md)
+         + [Metadata – fragmentegenskaper](/help/sites-cloud/administering/content-fragments/content-fragments-metadata.md)
+         + [Innehållsfragment – ta bort överväganden](/help/sites-cloud/administering/content-fragments/content-fragments-delete.md)
+         + [Markdown](/help/sites-cloud/administering/content-fragments/content-fragments-markdown.md)
+         + [Strukturträd](/help/sites-cloud/administering/content-fragments/content-fragments-structure-tree.md)
+         + [Förhandsgranska - JSON-representation](/help/sites-cloud/administering/content-fragments/content-fragments-json-preview.md)
       + Skapa webbplats {#site-creation}
          + [Skapa en ny plats](/help/sites-cloud/administering/site-creation/create-site.md)
          + [Aktivera frontpipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md)
@@ -393,7 +407,7 @@ ht-degree: 22%
       + [Innehållsfragment med associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md)
       + [Metadata – fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
       + [Innehållsfragment – ta bort överväganden](/help/assets/content-fragments/content-fragments-delete.md)
-      + [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
+      + [Markering](/help/assets/content-fragments/content-fragments-markdown.md)
       + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
       + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
    + Dynamic Media {#dynamicmedia}
@@ -619,18 +633,18 @@ ht-degree: 22%
       + [Innehållsfragment](/help/headless/setup/create-content-fragment.md)
       + [GraphQL-slutpunkt](/help/headless/setup/create-api-request.md)
    + Innehållsfragment {#content-fragments}
-      + [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments.html)
+      + [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments.html)
       + [Konsol för innehållsfragment](/help/headless/content-fragments/content-fragment-console.md)
-      + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-models.html)
-      + [Hantera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-managing.html)
+      + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-models.html)
+      + [Hantera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-managing.html)
       + Redigering{#authoring}
-         + [Redigering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-variations.html)
-         + [Textredigerare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-markdown.html)
-         + [Associerat innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-assoc-content.html)
-         + [Variationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-variations.html#managing-variations)
-      + [Metadata](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-metadata.html)
-      + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-structure-tree.html)
-      + [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-json-preview.html)
+         + [Redigering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-variations.html)
+         + [Textredigerare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-markdown.html)
+         + [Associerat innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-assoc-content.html)
+         + [Variationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-variations.html#managing-variations)
+      + [Metadata](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-metadata.html)
+      + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-structure-tree.html)
+      + [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-json-preview.html)
    + GraphQL API {#graphql-api}
       + [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md)
       + [Hantera GraphQL-slutpunkter](/help/headless/graphql-api/graphql-endpoint.md)

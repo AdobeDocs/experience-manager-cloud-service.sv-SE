@@ -2,7 +2,7 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: c4490690edb1ec0e2a6b8cca724fe9c290650bc8
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '3058'
 ht-degree: 0%
@@ -285,8 +285,8 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md) - Teknisk dokumentation om namngivningsbegränsningar för AEM
 * [Hanterare och översättning av flera webbplatser](/help/sites-cloud/administering/msm-and-translation.md) - Teknisk dokumentation om AEM kraftfulla översättningsfunktioner
 * [AEM](/help/sites-cloud/authoring/workflows/overview.md) - Teknisk dokumentation om hur man automatiserar arbetsflöden i AEM
-* [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) - Teknisk dokumentation för innehållsfragment.
-* [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) - Teknisk dokumentation för Content Fragment Models.
+* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) - Teknisk dokumentation för innehållsfragment.
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md) - Teknisk dokumentation för Content Fragment Models.
 * [GraphQL Technical Documentation](https://graphql.org) - GraphQL-definitionen (extern länk)
 * [GraphQL API](/help/headless/graphql-api/content-fragments.md) - Teknisk dokumentation som förklarar hur man skapar förfrågningar om åtkomst och leverans av innehållsfragment
 * [Resurser REST API](/help/assets/content-fragments/assets-api-content-fragments.md) - Teknisk dokumentation som förklarar hur du skapar och ändrar innehållsfragment (och andra resurser)

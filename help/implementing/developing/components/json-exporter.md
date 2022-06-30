@@ -2,9 +2,9 @@
 title: JSON-exporterare för innehållstjänster
 description: AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder.
 exl-id: d3ddffb7-cef9-4c86-aa31-175f13f9b4a5
-source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '404'
 ht-degree: 2%
 
 ---
@@ -80,7 +80,7 @@ Se även:
 
 Mer information finns i:
 
-* [Content Fragments in the Assets user guide](/help/assets/content-fragments/content-fragments.md)
-* [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
+* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

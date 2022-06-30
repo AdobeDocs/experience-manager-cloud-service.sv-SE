@@ -2,9 +2,9 @@
 title: Läs om hur du definierar metadata och taggar för innehållsfragment
 description: Läs om hur du definierar metadata och taggar för innehållsfragment
 exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
-source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
+source-git-commit: 0b953e0155fa1b90b5bccbf10b9ceaf1c1f63ae7
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '241'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Den här artikeln bygger på dessa så att du förstår hur du använder metadat
 
 Det finns tre metoder som du kan använda för att lägga till metadata och taggar:
 
-* När du först skapar fragmentet:
+* När du skapar fragmentet (från **Resurser** konsol):
 
    ![Skapa innehållsfragment - ange namn](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
 
@@ -44,8 +44,8 @@ Nu kan du använda och börja skapa innehållsfragment för ditt projekt.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Metadata – fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
+* [Metadata – fragmentegenskaper](/help/sites-cloud/administering/content-fragments/content-fragments-metadata.md)
 
 * [Använda taggar](/help/sites-cloud/authoring/features/tags.md)
 
-* [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen](/help/assets/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
+* [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)

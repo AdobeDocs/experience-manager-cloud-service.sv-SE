@@ -4,7 +4,7 @@ description: Lär dig hur översättningsregler identifierar innehåll som behö
 feature: Language Copy
 role: Admin
 exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
-source-git-commit: 0c75a367861c9e4c77ee537322fa49330c70db85
+source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Översättningsreglerna som beskrivs i det här dokumentet gäller endast för innehållsfragment om **Aktivera fält för innehållsmodell för översättning** har inte aktiverats på [konfigurationsnivå för översättningsintegreringsramverk.](integration-framework.md#assets-configuration-properties)
 
-Om **Aktivera fält för innehållsmodell för översättning** är aktivt, AEM använder **Översättningsbar** fält på [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#properties) för att avgöra om fältet ska översättas och skapar automatiskt översättningsregler i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat och kräver inga åtgärder eller ytterligare steg.
+Om **Aktivera fält för innehållsmodell för översättning** är aktivt, AEM använder **Översättningsbar** fält på [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#properties) för att avgöra om fältet ska översättas och skapar automatiskt översättningsregler i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat och kräver inga åtgärder eller ytterligare steg.
 
 Om du vill använda översättningsregler för översättning av dina innehållsfragment, **Aktivera fält för innehållsmodell för översättning** för konfiguration av översättningsintegreringsramverk måste vara inaktiverat och du måste följa stegen nedan för att skapa reglerna.
 
