@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2022.6.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2022.6.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2022.7.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2022.7.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 1a6ca2647cc185ed0cb60fa75d2f5752e72f5715
+source-git-commit: 5200ee315ad88dae4b52c0ea904489e73f62a8a0
 workflow-type: tm+mt
-source-wordcount: '348'
-ht-degree: 0%
+source-wordcount: '200'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2022.6.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2022.7.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-På den här sidan visas versionsinformation för Cloud Manager 2022.6.0 i AEM as a Cloud Service.
+På den här sidan visas versionsinformation för Cloud Manager 2022.7.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,25 +21,15 @@ På den här sidan visas versionsinformation för Cloud Manager 2022.6.0 i AEM a
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.6.0 i AEM as a Cloud Service är 9 juni 2022. Nästa version är planerad till 30 juni 2022.
+Releasedatum för Cloud Manager version 2022.7.0 i AEM as a Cloud Service är 30 juni 2022. Nästa version är planerad till den 11 augusti 2022.
 
 ## Nyheter {#what-is-new}
 
-* Molnhanterarens gränssnitt tillåter nu [självbetjäning för innehållsåterställning](/help/operations/backup.md) till ett välkänt tillstånd i AEM molnmiljö.
-   * Den här funktionen kommer att introduceras stegvis under de veckor som följer efter version 2022.06.0.
-* Ett nytt välkomstkort på Cloud Managers landningssida ger användarna snabb tillgång till självstudiekurser och förloppsstatistik för klientorganisationen.
-   * Den här funktionen kommer att introduceras stegvis under veckan efter version 2022.06.0.
-* Användare med nödvändig behörighet kan komma åt en ny [Licenspanelen](/help/implementing/cloud-manager/license-dashboard.md) på landningssidan för Cloud Manager för att visa information om berättiganden som är tillgängliga för klientorganisationen.
-   * AEM Sites är den första lösningen för vilken tillgänglighet och användning levereras via kontrollpanelen Cloud Manage.
-   * Den här funktionen kommer att introduceras stegvis under de veckor som följer efter version 2022.06.0.
-* [New Relic subaccount and self-service user management](/help/implementing/cloud-manager/user-access-new-relic.md) är nu tillgängligt via användargränssnittet i Cloud Manager.
-   * Den här funktionen kommer att introduceras stegvis under de veckor som följer efter version 2022.06.0.
-* Nu finns det en ny Go Live-widget på startsidan i Cloud Service-produktionsprogrammen som är till hjälp när du vill skapa en lyckad upplevelse.
-* [Artefakter kan nu återanvändas](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) när Git-spegling används.
+* Användare av Cloud Manager har nu tillgång till användbara videokurser från **Välkommen** på landningssidan när som helst.
+* Kraften på **[Återställ innehåll](/help/operations/backup.md)** på sidan med miljöinformation visas nu en praktisk lista med Git-kommandon som gör att användaren kan visa ändringar lokalt.
 
-## API-ändringar {#api-changes}
+## Felkorrigeringar {#bug-fixes}
 
-* The [`List Programs`](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getPrograms) API har tagits bort och [`List Programs for Tenant`](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getProgramsForTenant) ska användas istället.
-   * `List Programs` fortsätter att fungera, men användningen genererar varningsmeddelanden i loggar.
-   * Det kommer inte längre att stödjas efter tre månader.
-
+* Feedback-meddelanden i användargränssnittet som rör skapande av nytt Relic-underkonto när program skapas har förbättrats.
+* Användarna kan nu hämta anpassade gränssnittstestningsloggar från användargränssnittet i Cloud Manager.
+* Ett problem har korrigerats där inga anrop gjordes för att köra distributionssteget efter godkännandet av en frontpipeline.
