@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation för 2022.4.0-versionen av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.4.0-versionen av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 53d5dbd53ec1e2dcb20b2b91f0cb020e9e35659c
+exl-id: 6c86838a-cabf-4770-b1ae-618af70193a2
+source-git-commit: f42cf1b82f7cf42be2afd30d69d71354fe0afeb3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
-
 
 # Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
@@ -55,17 +55,6 @@ Ta en titt på [Versionsöversikt april 2022](https://video.tv.adobe.com/v/34261
 
 * **Konfigurationer av formulärdatamodell**: Nu kan du [återanvänd formulärdatamodellskonfigurationer i olika miljöer](/help/forms/create-form-data-models.md#runmode-specific-context-aware-config), förenklar dataintegreringar och minskar IT-kostnaderna.
 
-## CIF-tillägg {#cloud-services-cif}
-
-### Vad är nytt? {#what-is-new-cif}
-
-* Snabb åtkomst till produktcockpit: Få enkelt tillgång till detaljerad produktinformation med ett enda klick i Sites Editor
-
-   ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
-
-* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett anrop till åtgärd för tillägg i varukorgen och tilläggslistan
-
-   ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 

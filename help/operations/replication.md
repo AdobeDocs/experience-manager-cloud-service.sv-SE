@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 50754c886c92a121c5bb20449561694f8e42b0ac
+source-git-commit: 5791410fd5956cd8b82d4ed03f3920ade3bfedcb
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1216'
 ht-degree: 1%
 
 ---
@@ -40,25 +40,6 @@ Med Hantera publikation får du fler alternativ än Snabbpublicering, så att du
 Om du tar med en mapps underordnade objekt för alternativet Publicera senare, aktiveras arbetsflödet Publicera innehållsträd, som beskrivs i den här artikeln.
 
 Mer information om Hantera publikation finns i [Dokumentation för Publishing Fundamentals](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
-
-### Aktivering av träd {#tree-activation}
-
->[!NOTE]
->
->Denna metod bör anses vara föråldrad och kommer att tas bort den 30 september 2021 eller senare, eftersom den inte behåller status och är mindre skalbar än andra metoder. Adobe rekommenderar att publicerings- eller arbetsflödesmetoder används i stället
-
-Så här utför du en trädaktivering:
-
-1. Navigera AEM Start-menyn till **Verktyg > Distribution > Distribution**
-2. Välj kort **publicera**
-3. När webbkonsolens användargränssnitt har publicerats **välj Distribuera**
-
-   ![Distribuera](assets/publish-distribute.png "Distribuera")
-4. Markera sökvägen i sökvägsläsaren, välj att lägga till en nod, ett träd eller ta bort efter behov och markera **Skicka**
-
-För bästa prestanda bör du följa dessa riktlinjer när du använder den här funktionen:
-* Vi rekommenderar att du kopierar färre än 100 banor i taget, med en hård gräns på 500 sökvägar.
-* Det replikerade innehållets totala storlek måste vara mindre än 10 MB. Detta inkluderar bara noder och egenskaper, men inte binärfiler, som innehåller arbetsflödespaket och innehållspaket.
 
 ### Publicera arbetsflöde för innehållsträd {#publish-content-tree-workflow}
 
@@ -133,7 +114,7 @@ Arbetsflödet bearbetar innehåll i segment, som representerar en delmängd av d
 
 ### Replikerings-API {#replication-api}
 
-Du kan publicera innehåll med replikerings-API:t som finns i AEM as a Cloud Service.
+Du kan publicera innehåll med hjälp av replikerings-API:t på AEM as a Cloud Service.
 
 Mer information finns i [API-dokumentation](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/day/cq/replication/package-summary.html).
 
@@ -192,9 +173,12 @@ Om du inte anger ett sådant filter och bara använder agenten för publicering,
 Det övergripande `ReplicationStatus` för en resurs ändras bara om replikeringsåtgärden innehåller minst en agent som är aktiv som standard. I exemplet ovan är detta inte fallet eftersom replikeringen bara använder agenten för förhandsgranskning. Därför måste du använda den nya `getStatusForAgent()` -metod, som tillåter frågor om status för en viss agent. Den här metoden fungerar även för agenten&quot;publish&quot;. Det returnerar ett värde som inte är null om någon replikeringsåtgärd har utförts med den angivna agenten.
 
 
-**Sökväg och storleksbegränsningar för replikerings-API**
+**Kapacitetsbegränsningar för replikerings-API**
 
-Vi rekommenderar att du kopierar färre än 100 sökvägar, där 500 är den hårda gränsen. Ovanför den hårda gränsen genereras ett ReplicationException. Om programlogiken inte kräver atomisk replikering kan den här gränsen övervinnas genom att ställa in värdet false för ReplicationOptions.setUseAtomicCall, som accepterar valfritt antal sökvägar, men internt skapa bucklor som ligger under denna gräns. Mängden innehåll som skickas per replikeringsanrop får inte överstiga 10 MB, vilket inkluderar noderna och egenskaperna, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binära).
+Vi rekommenderar att du kopierar färre än 100 banor i taget, där 500 är den hårda gränsen. Ovanför den hårda gränsen finns en `ReplicationException` kommer att kastas.
+Om programlogiken inte kräver atomisk replikering kan den här gränsen överskridas genom att du anger `ReplicationOptions.setUseAtomicCalls` till false, vilket accepterar ett obegränsat antal banor, men internt skapar bucklor som ligger under denna gräns.
+
+Storleken på innehållet som skickas per replikeringsanrop får inte överskrida `10 MB`. Detta inkluderar noder och egenskaper, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binärfiler).
 
 ## Felsökning {#troubleshooting}
 

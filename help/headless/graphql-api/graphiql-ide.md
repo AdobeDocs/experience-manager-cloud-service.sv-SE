@@ -3,9 +3,9 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: 2ee21b507b5dcc9471063b890976a504539b7e10
+source-git-commit: 6beef4cc3eaa7cb562366d35f936c9a2fc5edda3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -96,6 +96,33 @@ Till exempel:
 
 ![GraphQL-variabler](assets/cfm-graphqlapi-03.png "GraphQL-variabler")
 
+## Hantera cache för dina beständiga frågor {#managing-cache}
+
+[Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) rekommenderas eftersom de kan cachelagras på dispatcher- och CDN-lagren, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Som standard blir cacheminnet för innehållsleveransnätverket (CDN) ogiltigt baserat på en TTL-standardinställning (Time To Live).
+
+Med GraphQL kan du konfigurera HTTP-cache-rubrikerna för att styra de här parametrarna för din individuella beständiga fråga.
+
+1. The **Sidhuvuden** är tillgängligt via de tre lodräta prickarna till höger om det beständiga frågenamnet (längst till vänster):
+
+   ![Beständiga frågans HTTP-cacherubriker](assets/cfm-graphqlapi-headers-01.png "Beständiga frågans HTTP-cacherubriker")
+
+1. Om du väljer det här alternativet öppnas **Cachekonfiguration** dialog:
+
+   ![Inställningar för HTTP-cache för beständig fråga](assets/cfm-graphqlapi-headers-02.png "Inställningar för HTTP-cache för beständig fråga")
+
+1. Välj lämplig parameter och justera sedan värdet efter behov:
+
+   * **cachekontroll** - **max-age**
+Cacheminnen kan lagra det här innehållet under ett visst antal sekunder. Vanligtvis är det webbläsar-TTL (Time To Live).
+   * **surrogatkontroll** - **s-maxage**
+Samma som max-age men gäller specifikt för proxy-cacheminnen.
+   * **surrogatkontroll** - **inaktuell-while-revalidate**
+Cacheminnen kan fortsätta att leverera ett cachelagrat svar efter att det blivit inaktuellt i upp till det angivna antalet sekunder.
+   * **surrogatkontroll** - **stale-if-error**
+Cacheminnen kan fortsätta att fungera som cachelagrat svar i händelse av ett fel eller ett ursprungsfel i upp till det angivna antalet sekunder.
+
+1. Välj **Spara** för att behålla ändringarna.
+
 ## Publicera beständiga frågor {#publishing-persisted-queries}
 
 När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda **Publicera** och **Avpublicera** åtgärder. Detta aktiverar dem till din publiceringsmiljö (till exempel `dev-publish`) för enkel åtkomst av dina program vid testning.
@@ -103,32 +130,6 @@ När du har valt din beständiga fråga i listan (den vänstra panelen) kan du a
 >[!NOTE]
 >
 >Definitionen av den beständiga frågans cache `Time To Live` {&quot;cache-control&quot;:&quot;parameter&quot;:value} har standardvärdet 2 timmar (7 200 sekunder).
-
-## Cachelagra beständiga frågor {#caching-persisted-queries}
-
-AEM gör CDN-cachen (Content Delivery Network) ogiltig baserat på en TTL-standard (Time To Live).
-
-Värdet är:
-
-* 7200 sekunder är standard för TTL för Dispatcher och CDN. också känd som *delade cacheminnen*
-   * standard: s-maxage=7200
-* 60 är klientens standardTTL (webbläsare)
-   * standard: maxage=60
-
-AEM GraphQL-frågor som sparats med GraphiQL-gränssnittet kommer att använda standardvärdet för TTL vid körning. Om du vill ändra TTL för GraphLQ-frågan måste frågan i stället behållas med API-metoden. Detta innebär att skicka frågan till AEM med CURL i kommandoradsgränssnittet.
-
-Exempel:
-
-```xml
-curl -X PUT \
-    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
-    -H "Content-Type: application/json" \
-    "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
-    -d \
-'{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
-```
-
-The `cache-control` kan anges vid skapande (PUT) eller senare (till exempel via en POST-förfrågan). Cachekontrollen är valfri när du skapar den beständiga frågan, eftersom AEM kan ange standardvärdet. Se [Bevara en GraphQL-fråga](/help/headless/graphql-api/persisted-queries.md#how-to-persist-query), om du vill ha ett exempel på beständig fråga med hjälp av curl.
 
 ## Kopiera URL för direktåtkomst till frågan {#copy-url}
 

@@ -2,9 +2,9 @@
 title: Kända fel
 description: Kända problem med Adobe Experience Manager as a Cloud Service
 exl-id: 897b944a-d320-4d21-91f4-2cd3da6179b1
-source-git-commit: 8ec0ce3425e7cade0a6774a4452d4f47ab971375
+source-git-commit: 755c0072148ad73486df2ccfed69248b9d73ec2a
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,16 @@ I den här artikeln listas kända problem med [!DNL Adobe Experience Manager] so
 
 <!-- 
 ## Platform {#platform}
+-->
 
 ## Sites {#sites}
--->
+
+Vissa kända fel i [!DNL Sites] är:
+
+* I GraphQL IDE kan du [hantera cacheminnet för dina beständiga frågor](/help/headless/graphql-api/graphiql-ide.md##managing-cache).
+   * När du sparar första gången anges värdena för rubrikerna till `0` (i stället för standardvärdena) - om användaren inte har ändrat dessa värden i dialogrutan.
+   * Värdena sparas korrekt när de sparas därefter.
+   * Därför måste användaren spara rubrikerna två gånger.
 
 ## [!DNL Assets] {#assets}
 

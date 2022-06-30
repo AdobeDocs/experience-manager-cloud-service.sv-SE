@@ -3,9 +3,9 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 6529b4b874cd7d284b92546996e2373e59075dfd
+source-git-commit: 6beef4cc3eaa7cb562366d35f936c9a2fc5edda3
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Vi rekommenderar att du behåller frågor i en AEM redigeringsmiljö först och 
 
 Det finns olika metoder för beständiga frågor, bland annat:
 
-* GraphiQL IDE - se [Sparar beständiga frågor](/help/headless/graphql-api/graphiql-ide.md##saving-persisted-queries) (föredragen metod)
+* GraphiQL IDE - se [Sparar beständiga frågor](/help/headless/graphql-api/graphiql-ide.md#saving-persisted-queries) (föredragen metod)
 * curl - se följande exempel
 * Andra verktyg, inklusive [Postman](https://www.postman.com/)
 
@@ -256,6 +256,45 @@ Den här frågan kan sparas under en sökväg `wknd/adventures-by-activity`. Så
 ```
 
 Observera att `%3B` är UTF-8-kodning för `;` och `%3D` är kodningen för `=`. Frågevariablerna och eventuella specialtecken måste [korrekt kodad](#encoding-query-url) för den beständiga frågan som ska köras.
+
+## Cachelagra beständiga frågor {#caching-persisted-queries}
+
+Beständiga frågor rekommenderas eftersom de kan cachelagras på dispatcher- och CDN-lagren, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet.
+
+Som standard blir cacheminnet för innehållsleveransnätverket (CDN) ogiltigt baserat på en TTL-standardinställning (Time To Live).
+
+Värdet är:
+
+* 7200 sekunder är standard för TTL för Dispatcher och CDN. också känd som *delade cacheminnen*
+   * standard: s-maxage=7200
+* 60 är klientens standardTTL (webbläsare)
+   * standard: maxage=60
+
+Om du vill ändra TTL för GraphLQ-frågan måste frågan vara:
+
+* beständig efter hantering av [HTTP-cacherubriker - från GraphQL IDE](#http-cache-headers)
+* beständig med [API-metod](#cache-api).
+
+### Hantera HTTP-cacherubriker i GraphQL  {#http-cache-headers-graphql}
+
+GraphiQL IDE - se [Sparar beständiga frågor](/help/headless/graphql-api/graphiql-ide.md#managing-cache)
+
+### Hantera cache från API {#cache-api}
+
+Detta innebär att skicka frågan till AEM med CURL i kommandoradsgränssnittet.
+
+Exempel:
+
+```xml
+curl -X PUT \
+    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+    -H "Content-Type: application/json" \
+    "https://publish-p123-e456.adobeaemcloud.com/graphql/persist.json/wknd/plain-article-query-max-age" \
+    -d \
+'{ "query": "{articleList { items { _path author main { json } referencearticle { _path } } } }", "cache-control": { "max-age": 300 }}'
+```
+
+The `cache-control` kan anges vid skapande (PUT) eller senare (till exempel via en POST-förfrågan). Cachekontrollen är valfri när du skapar den beständiga frågan, eftersom AEM kan ange standardvärdet. Se [Bevara en GraphQL-fråga](/help/headless/graphql-api/persisted-queries.md#how-to-persist-query), om du vill ha ett exempel på beständig fråga med hjälp av curl.
 
 ## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
 
