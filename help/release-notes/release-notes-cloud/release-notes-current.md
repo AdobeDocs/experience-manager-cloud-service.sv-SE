@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 9c76ff2e0b789894ef5492ee940ce79cddb47e11
+source-git-commit: 88506fd4538c55a880904ea37055eb97d4ae05b3
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -95,8 +95,6 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
 ### Vad är nytt? {#what-is-new-foundation}
-
-* AEM as a Cloud Service är nu integrerat med Unified Shell för att förbättra användarupplevelsen och göra den enhetlig med alla andra Experience Cloud-program. Se [AEM as a Cloud Service on Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md) för mer information.
 
 * Som nämndes i versionsinformationen från maj (2022.5.0) finns alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **Distribuera** har tagits bort. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Publicera innehållsträd](/help/operations/replication.md#manage-publication#publish-content-tree-workflow) arbetsflöde.
 
