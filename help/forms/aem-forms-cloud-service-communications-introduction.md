@@ -2,9 +2,9 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 09452aa799fc59bfc08c59d69820aa22daf07e9f
+source-git-commit: 22018450f6d4383f3df6a9f5382a0ad6b4058480
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1128'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Du kan skapa ett kreditkortsutdrag med API:er för kommunikation. Det här exemp
 
 ## Dokumentgenerering
 
-API:er för generering av kommunikationsdokument hjälper till att kombinera en mall (XFA eller PDF) med kunddata ([XML-data](#form-data)) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder [PDF och XFA-mallar](#supported-document-types) med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument on demand eller flera dokument med hjälp av ett batchjobb.
+API:er för dokumentgenerering för kommunikation hjälper dig att kombinera en mall (XFA eller PDF) med kunddata (XML) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder PDF- och XFA-mallar med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument on demand eller flera dokument med hjälp av ett batchjobb.
 
 Vanligtvis skapar du en mall med [Designer](use-forms-designer.md) och använda API:er för kommunikation för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
 
@@ -101,7 +101,7 @@ API:er för dokumentbearbetning i kommunikation hjälper dig att kombinera, ordn
 
 ### Sammanställa dokument från PDF
 
-Du kan använda API:erna för dokumentframställning för att samla ihop två eller flera PDF- eller XDP-dokument till ett enda PDF-dokument eller PDF Portfolio. Här är några sätt att sammanställa PDF-dokument:
+Du kan använda API:erna för dokumentmanipulering för att sammanfoga två eller flera PDF- eller XDP-dokument till ett enda PDF-dokument eller PDF Portfolio. Här är några sätt att sammanställa PDF-dokument:
 
 * Sammanställa ett enkelt PDF-dokument
 * Skapa en PDF Portfolio
@@ -114,7 +114,7 @@ Bild: Sammanställa ett enkelt PDF-dokument från flera PDF-dokument
 
 ### Dela upp PDF-dokument
 
-Du kan använda API:erna för dokumentframställning för att demontera ett PDF-dokument. API:erna kan extrahera sidor från källdokumentet eller dela upp ett källdokument baserat på bokmärken. Vanligtvis är den här uppgiften användbar om PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser.
+Du kan använda API:erna för dokumentbearbetning för att demontera ett PDF-dokument. API:erna kan extrahera sidor från källdokumentet eller dela upp ett källdokument baserat på bokmärken. Vanligtvis är den här uppgiften användbar om PDF-dokumentet ursprungligen skapades från många enskilda dokument, till exempel en samling programsatser.
 
 * Extrahera sidor från ett källdokument
 * Dela upp ett källdokument baserat på bokmärken
@@ -124,7 +124,7 @@ Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
 
 ### Konvertera till och validera dokument som följer PDF/A
 
-Du kan använda API:erna för dokumentproduktion för att konvertera ett PDF-dokument till ett PDF/A-kompatibelt dokument och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
+Du kan använda API:erna för dokumentbearbetning för att konvertera ett PDF-dokument till ett PDF/A-kompatibelt dokument och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
 
 ## Typer av API:er för kommunikation
 
