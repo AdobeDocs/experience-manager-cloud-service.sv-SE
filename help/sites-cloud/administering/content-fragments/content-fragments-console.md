@@ -2,7 +2,7 @@
 title: Konsol för innehållsfragment
 description: Lär dig hur du hanterar innehållsfragment från konsolen Innehållsfragment.
 landing-page-description: Lär dig hur du hanterar innehållsfragment från konsolen Innehållsfragment som fokuserar på användning av innehållsfragment i stora volymer för Headless-fall, men som även används vid redigering av sidor.
-source-git-commit: 19ec74f98bf0dedb768db5c4ec7eb6063779b03c
+source-git-commit: 8c44ecf0237c7a3660ef9fa97f46cc400e4bd30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Konsol för innehållsfragment  {#content-fragments-console}
 
-Lär dig hur konsolen Innehållsfragment optimerar åtkomsten till dina innehållsfragment så att du kan skapa, söka efter och hantera dem genom att vidta administratörsåtgärder som publicera, avpublicera, kopiera.
+Lär dig hur konsolen Innehållsfragment optimerar åtkomsten till dina innehållsfragment så att du kan skapa, söka efter och hantera dem genom att vidta administrativa åtgärder som publicera, avpublicera, kopiera.
 
 Konsolen Innehållsfragment är avsedd för hantering, sökning och skapande av innehållsfragment. Den har optimerats för användning i ett Headless-sammanhang, men används även när innehållsfragment skapas för att användas vid sidredigering.
 
