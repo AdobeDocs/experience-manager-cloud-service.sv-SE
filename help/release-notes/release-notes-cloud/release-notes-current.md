@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 88506fd4538c55a880904ea37055eb97d4ae05b3
+source-git-commit: d6038920a5866c19a94980cc14fa46dec48daf51
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Titta på videon med versionsöversikten för juni 2022 om du vill se en sammanf
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* En ny [användargränssnitt](/help/headless/content-fragments/content-fragment-console.md) är nu tillgängligt för innehållsadministratörer och innehållsförfattare att effektivt hantera (vidta åtgärder som att publicera, avpublicera, kopiera, flytta osv.), söka/filtrera och skapa innehållsfragment för Headless-fall.
+* En ny [användargränssnitt](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) är nu tillgängligt för innehållsadministratörer och innehållsförfattare att effektivt hantera (vidta åtgärder som att publicera, avpublicera, kopiera, flytta osv.), söka/filtrera och skapa innehållsfragment för Headless-fall.
 
    ![Konsol för innehållsfragment](/help/release-notes/assets/cf-ui.png)
 
