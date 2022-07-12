@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 4d9a56ebea84d6483a2bd052d62ee6eb8c0bd9d5
+source-git-commit: e34759aeea2e3819cf76a8bba433b96ae201c16f
 workflow-type: tm+mt
-source-wordcount: '3053'
+source-wordcount: '3006'
 ht-degree: 0%
 
 ---
@@ -209,29 +209,7 @@ Mer information om API:erna finns i [API-dokumentation för Cloud Manager](https
 
 ### Trafikroutning {#dedcated-egress-ip-traffic-routing}
 
-Http- eller https-trafik som går till mål via port 80 eller 443 kommer att gå via en förkonfigurerad proxy, förutsatt att Java-standardbiblioteket används. För http- och https-trafik som går genom andra portar bör en proxy konfigureras med följande egenskaper.
-
-```
-AEM_HTTP_PROXY_HOST / AEM_HTTPS_PROXY_HOST
-AEM_HTTP_PROXY_PORT / AEM_HTTPS_PROXY_PORT
-```
-
-Här följer till exempel exempelkoden som du kan skicka en begäran till `www.example.com:8443`:
-
-```java
-String url = "www.example.com:8443"
-String proxyHost = System.getenv("AEM_HTTPS_PROXY_HOST");
-int proxyPort = Integer.parseInt(System.getenv("AEM_HTTPS_PROXY_PORT"));
-
-HttpClient client = HttpClient.newBuilder()
-      .proxy(ProxySelector.of(new InetSocketAddress(proxyHost, proxyPort)))
-      .build();
- 
-HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).build();
-HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-```
-
-Om du använder Java-nätverksbibliotek som inte är standard ska du konfigurera proxies med egenskaperna ovan för all trafik.
+Http- och https-trafik går genom en förkonfigurerad proxy, förutsatt att de använder Java-standardegenskaper för proxykonfigurationer.
 
 Ej http/s-trafik med destinationer via portar som deklarerats i `portForwards` parametern ska referera till en egenskap som kallas `AEM_PROXY_HOST`, tillsammans med den mappade porten. Till exempel:
 
