@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 778a3687447c1e07605fdb95b3934b10d22483e8
+source-git-commit: 698ea704d821d26067e29a89b562388d7517772e
 workflow-type: tm+mt
-source-wordcount: '3691'
+source-wordcount: '3674'
 ht-degree: 23%
 
 ---
@@ -123,24 +123,19 @@ ht-degree: 23%
    + [Stöd för samma webbplats-cookie AEM as a Cloud Service](/help/security/same-site-cookie-support.md)
    + [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md)
 + Introduktion till {#onboarding}
-   + [Onboarding för AEM as a Cloud Service](/help/onboarding/home.md)
-   + Lär dig om introduktionskoncept {#onboarding-concepts}
-      + [Systemadministratör](/help/onboarding/learn-concepts/system-administrator.md)
-      + [Admin Console](/help/onboarding/learn-concepts/admin-console.md)
-      + [Adobe Identity Management System](/help/onboarding/learn-concepts/ims.md)
-      + [Adobe ID](/help/onboarding/learn-concepts/adobe-id.md)
-      + [Introduktion till Cloud Manager](/help/onboarding/learn-concepts/cloud-manager-introduction.md)
-      + [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/learn-concepts/aem-cs-team-product-profiles.md)
-      + [Stöd för Adobe](/help/onboarding/learn-concepts/onboarding-help-resources.md)
+   + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)
    + Onboarding Journey {#journey}
-      + [Onboarding Journey](/help/journey-onboarding/home.md)
-      + [Översikt över introduktionsresan](/help/journey-onboarding/sysadmin/onboarding-journey-overview.md)
-      + [Komma igång med introduktionsprocessen](/help/journey-onboarding/sysadmin/get-started-onboarding-journey.md)
-      + [Tilldela teammedlemmar till Cloud Manager-produktprofiler](/help/journey-onboarding/sysadmin/assign-team-members-cloud-manager.md)
-      + [Konfigurera molnresurser via Cloud Manager](/help/journey-onboarding/sysadmin/setup-cloud-resources-via-cloud-manager.md)
-      + [Tilldela teammedlemmar till AEM as a Cloud Service produktprofiler](/help/journey-onboarding/sysadmin/assign-team-members-aem-cloud-service.md)
-      + [Utbildningsväg för utvecklare och distributionschefer](/help/journey-onboarding/sysadmin/learning-path-developers-deploymentmanagers.md)
-      + [Utbildningsväg för AEM](/help/journey-onboarding/sysadmin/learning-path-aem-users.md)
+      + [Översikt över introduktionsresan](/help/journey-onboarding/overview.md)
+      + [Förberedelse för introduktion](/help/journey-onboarding/preparation.md)
+      + [AEM as a Cloud Service terminologi](/help/journey-onboarding/terminology.md)
+      + [Admin Console](/help/journey-onboarding/admin-console.md)
+      + [Tilldela Cloud Manager-produktprofiler](/help/journey-onboarding/assign-profiles-cloud-manager.md)
+      + [Access Cloud Manager](/help/journey-onboarding/cloud-manager.md)
+      + [Skapa ett program](/help/journey-onboarding/create-program.md)
+      + [Skapa miljöer](/help/journey-onboarding/create-environments.md)
+      + [Tilldela AEM produktprofiler](/help/journey-onboarding/assign-profiles-aem.md)
+      + [Uppgifter för utvecklare och distributionsansvarig](/help/journey-onboarding/developers.md)
+      + [AEM användaruppgifter](/help/journey-onboarding/aem-users.md)
    + AEM Reference Demos Add-On Journey {#demo-add-on}
       + [Översikt](/help/journey-sites/demos-add-on/overview.md)
       + [Installation](/help/journey-sites/demos-add-on/installation.md)
@@ -148,6 +143,9 @@ ht-degree: 23%
       + [Skapa demowebbplats](/help/journey-sites/demos-add-on/create-site.md)
       + [Aktivera skärmar](/help/journey-sites/demos-add-on/screens.md)
       + [Hantera din demowebbplats](/help/journey-sites/demos-add-on/manage.md)
+   + Andra introduktionskoncept {#concepts}
+      + [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md)
+      + [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md)
 + AEM as a Cloud Service migreringsresa {#migration-journey}
    + [Komma igång med att flytta AEM as a Cloud Service](/help/journey-migration/getting-started.md)
    + [Beredskapsfas](/help/journey-migration/readiness.md)
@@ -750,7 +748,7 @@ ht-degree: 23%
          + [Använda och inte använda IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
          + [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md)
       + [Licenspanelen](/help/implementing/cloud-manager/license-dashboard.md)
-      + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/cloud-manager-cs-faqs.md)
+      + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/faqs.md)
    + Utveckla för AEM as a Cloud Service {#developing}
       + [AEM-projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
       + [Strukturpaket för AEM-projektdatabas](/help/implementing/developing/introduction/repository-structure-package.md)

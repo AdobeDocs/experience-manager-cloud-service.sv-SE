@@ -3,7 +3,7 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 94e37ae6aef64ec61e633e4c034ceefe5e75c7c8
+source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar produktionsledningarna för att skapa och distribuera koden till produktionsmiljöer. En produktionspipeline distribuerar koden först till scenmiljön och när den godkänns distribueras samma kod till produktionsmiljön.
 
-En användare måste ha **[Distributionshanteraren](/help/onboarding/learn-concepts/cloud-manager-introduction.md#role-based-permissions)** roll för att konfigurera produktionspipelinor.
+En användare måste ha **[Distributionshanteraren](/help/onboarding/cloud-manager-introduction.md#role-based-permissions)** roll för att konfigurera produktionspipelinor.
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
-   * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
+   * **Kodplats** - Det här alternativet definierar sökvägen i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
    * **Pausa innan du distribuerar till produktion** - Det här alternativet pausar pipeline innan den distribueras till produktion.
    * **Schemalagd** - Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen.
 

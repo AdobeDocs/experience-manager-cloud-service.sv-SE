@@ -2,9 +2,9 @@
 title: Beredskapsfas
 description: Lär dig mer om vad du behöver göra för att se till att AEM är redo att flyttas till molnet
 exl-id: 3bc8c037-d82a-4455-bce6-3c80c359a4ae
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2079'
 ht-degree: 6%
 
 ---
@@ -220,4 +220,4 @@ När du förstår omfattningen av de ändringar som krävs för att gå AEM as a
 * [AEM as a Cloud Service: Introduktion, arkitektur och annat tänkande](https://experienceleague.adobe.com/?launch=ExperienceManager-D-1-2021.1.migration&amp;recommended=ExperienceManager-D-1-2021.1.migration&amp;lang=en#dashboard/learning)
 * [AEM en Cloud Service - startsida](/help/overview/home.md) - Börja här om du vill se en översikt över den as a Cloud Service dokumentationen för Experience Manager.
 * [AEM as a Cloud Service Översikt](/help/overview/home.md) - Den här guiden ger en översikt över Experience Manager som en molntjänst, inklusive en introduktion, terminologi och arkitektur.
-* [Onboarding](/help/onboarding/home.md)- Den här guiden ger dig en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och konfigurerar ditt team
+* [Onboarding Journey](/help/journey-onboarding/overview.md)- Den här guiden ger dig en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och konfigurerar ditt team

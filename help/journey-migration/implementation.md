@@ -2,10 +2,10 @@
 title: Implementeringsfas
 description: Kontrollera att koden och innehållet är klara för migrering till molnet
 exl-id: d124f9a5-a754-4ed0-a839-f2968c7c8faa
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
-source-wordcount: '2422'
-ht-degree: 9%
+source-wordcount: '2416'
+ht-degree: 8%
 
 ---
 
@@ -35,7 +35,7 @@ Med Cloud Manager kan organisationer själva hantera AEM i molnet. Det innehåll
 
 Du kan bekanta dig med Cloud Manager genom att läsa resurserna nedan:
 
-* [Onboarding för Experience Manager as a Cloud Service](/help/onboarding/home.md) för att förstå självhjälpsresurser om onboarding för Experience Manager as a Cloud Service.
+* [Onboarding Journey](/help/journey-onboarding/overview.md) för att förstå självhjälpsresurser om hur man kommer igång på Experience Manager as a Cloud Service.
 
 * [Integrera Git med Adobe Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md) för att lära dig mer om hur du använder en enstaka Git-databas för att driftsätta kod.
 

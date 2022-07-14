@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: 7665bc1a27eec6474c1f21c61ac9cf444cf3d443
+source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 81%
+source-wordcount: '1904'
+ht-degree: 80%
 
 ---
 
@@ -125,10 +125,6 @@ Cloud Manager skapar miljöer i datacentraler i många geografiska regioner, vil
 
 ## Onboarding {#onboarding}
 
->[!NOTE]
->
->Mer information finns i [Onboarding](/help/onboarding/home.md).
-
 Att starta och hantera ett AEM-projekt är enkelt när du använder AEM as a Cloud Service eftersom Adobe ansvarar för många aspekter:
 
 * AEM-baslinjebilder optimeras för specifika användningsområden.
@@ -150,6 +146,10 @@ En annan viktig skillnad är att det nu finns:
    * Koduppdateringar, alla kundprogram som utvecklats för en tidigare version av AEM måste granskas och eventuellt uppdateras.
 
    * Migrering av innehåll
+
+>[!TIP]
+>
+>En fullständig översikt över introduktionsprocessen finns i [Startresa.](/help/journey-onboarding/overview.md)
 
 ## Utveckling {#developing}
 
@@ -273,6 +273,6 @@ Mer information finns i:
 
 >[!TIP]
 >
->När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboarding Journey.](/help/journey-onboarding/home.md)
+>När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboarding Journey.](/help/journey-onboarding/overview.md)
 >
 >Är du redan upptagen eller redo att dyka upp i testning AEM funktioner? Installera [AEM Reference Demos Add-on](/help/journey-sites/demos-add-on/overview.md) att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.

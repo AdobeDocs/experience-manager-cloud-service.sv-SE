@@ -2,7 +2,7 @@
 title: Driftsätt ditt anpassade tema
 description: Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.
 exl-id: fe065972-39db-4074-a802-85895c701efd
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -114,7 +114,7 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [webbpaket](https://webpack.js.org) - AEM teman som används för att snabbt bygga sajter bygger på webbpaket.
 * [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) - Den här guiden beskriver hur du hanterar sidor på din AEM webbplats om du vill anpassa den ytterligare efter att du har skapat den från mallen.
 * [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md) - Med paket kan du importera och exportera databasinnehåll. I det här dokumentet förklaras hur du arbetar med paket i AEM 6.5, som även gäller för AEMaaCS.
-* [Onboarding Journey](/help/journey-onboarding/home.md) - Den här guiden fungerar som en startpunkt för att säkerställa att era team är konfigurerade och har tillgång till AEM as a Cloud Service.
+* [Onboarding Journey](/help/journey-onboarding/overview.md) - Den här guiden fungerar som en startpunkt för att säkerställa att era team är konfigurerade och har tillgång till AEM as a Cloud Service.
 * [Dokumentation för Adobe Experience Manager Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) - Utforska Cloud Manager-dokumentationen för att få fullständig information om dess funktioner.
 * [Dokumentation för webbplatsadministration](/help/sites-cloud/administering/site-creation/create-site.md) - Läs de tekniska dokumenten om hur du skapar webbplatser för mer information om funktionerna i verktyget Skapa snabbwebbplats.
 * [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) - I det här dokumentet beskrivs några överväganden som du bör vara medveten om för att få ut mesta möjliga av utvecklingsprocessen med hjälp av frontförsäljningsförloppet.

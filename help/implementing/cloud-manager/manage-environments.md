@@ -2,7 +2,7 @@
 title: Hantera miljöer
 description: Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 71647239fc5e740faa25524a01a8ef21ed2d7a3b
+source-git-commit: 7174b398040acbf9b18b5ac2aa20fdba4f98ca78
 workflow-type: tm+mt
 source-wordcount: '1745'
 ht-degree: 0%

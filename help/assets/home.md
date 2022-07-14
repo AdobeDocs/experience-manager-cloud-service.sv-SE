@@ -5,9 +5,9 @@ landing-page-description: Läs om hur du använder och administrerar Experience 
 feature: Asset Management
 role: User,Leader
 exl-id: 315a1091-780f-4eca-ac77-a07d8fb634bf
-source-git-commit: e3f28ea68b3da415f46a98224e3f0b342417ee15
+source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '294'
 ht-degree: 24%
 
 ---
@@ -30,7 +30,7 @@ Läs mer om [!DNL AEM Assets as a Cloud Service] och få information om nyheter.
 | [Översikt](/help/overview/home.md) | Introduktionöversikt och ordlista för [!DNL Experience Manager] som [!DNL Cloud Service]. |
 | [Versionsinformation](/help/release-notes/home.md) | Versionsinformation, nyheter, inaktuella och borttagna funktioner samt kända fel. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor om [!DNL Experience Manager] som [!DNL Cloud Service]. |
-| [Onboarding](/help/onboarding/home.md) | Kom igång med [!DNL Experience Manager] som [!DNL Cloud Service] - få åtkomst till och skydda viktiga data. |
+| [Onboarding Journey](/help/journey-onboarding/overview.md) | Kom igång med [!DNL Experience Manager] som [!DNL Cloud Service] - få åtkomst till och skydda viktiga data. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Förstå hur man redigerar och administrerar [!DNL Experience Manager Sites] som [!DNL Cloud Service]. |
 | [Användarhandbok för implementering](/help/implementing/home.md) | Förstå hur ni bygger och anpassar upplevelser med hjälp av Experience Manager kraftfulla funktioner genom att utforska dessa ämnen för utveckling och driftsättning. |
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | Utforska den här guidade resan genom de kraftfulla och flexibla headless-funktionerna i Experience Manager som gör dig redo för ditt första headless-projekt. |
