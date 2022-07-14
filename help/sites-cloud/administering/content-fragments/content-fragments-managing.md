@@ -1,9 +1,9 @@
 ---
 title: Hantera innehållsfragment
 description: Lär dig hur du använder konsolen Innehållsfragment för att hantera AEM innehållsfragment. för framtagning av sidor, eller som bas för ditt headless-innehåll.
-source-git-commit: 60ddcb3f2fd2219b0b1672791703582920825e81
+source-git-commit: 9de8becfd69ea2a65a847cba88468c94e2fdf484
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '2047'
 ht-degree: 1%
 
 ---
@@ -63,6 +63,21 @@ Så här skapar du ett innehållsfragment:
    ![Dialogrutan Nytt innehållsfragment](assets/cfm-managing-new-cf-01.png)
 
 1. Välj **Skapa**, eller **Skapa och öppna** för att behålla din definition.
+
+## Status för innehållsfragment {#statuses-content-fragments}
+
+Under dess existens kan ett innehållsfragment ha flera statusvärden, vilket visas i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md):
+
+* **Nytt**
+Ett nytt innehållsfragment har skapats, men varken redigerats eller öppnats i redigeraren för innehållsfragment.
+* **Utkast**
+Någon har antingen redigerat eller öppnat (nytt) innehållsfragment i Content Fragment Editor - men det har ännu inte publicerats.
+* **Publicerad**
+Innehållsfragmentet har publicerats.
+* **Ändrad**
+Innehållsfragmentet har redigerats efter att det publicerades (men innan ändringen publicerades).
+* **Opublicerad**
+Innehållsfragmentet har avpublicerats.
 
 ## Åtgärder för ett innehållsfragment i konsolen för innehållsfragment {#actions-content-fragment-console}
 
