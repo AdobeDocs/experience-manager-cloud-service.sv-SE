@@ -1,9 +1,9 @@
 ---
 title: Modeller för innehållsfragment
 description: Lär dig hur Content Fragment Models fungerar som grund för dina Content Fragments i AEM. Med dessa kan du skapa strukturerat innehåll som kan användas för rubrikfri leverans eller för att skapa sidor.
-source-git-commit: a06024b4d4b6e5e750ed4c1e27f55283513b78a2
+source-git-commit: a5a5ec2211fe51bb04a1016f34fdac2f25cfe4e1
 workflow-type: tm+mt
-source-wordcount: '2908'
+source-wordcount: '2904'
 ht-degree: 3%
 
 ---
@@ -72,7 +72,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
          >[!CAUTION]
          >
-         >När egenskapen uppdateras manuellt **Egenskapsnamn** för en datatyp, observera att namn endast får innehålla latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
+         >När egenskapen uppdateras manuellt **Egenskapsnamn** för en datatyp, observera att namn bara får innehålla A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
          >
          >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
       Till exempel:
@@ -138,7 +138,7 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
 
 * **Egenskapsnamn**
 
-   Observera följande namn när du uppdaterar den här egenskapen manuellt för en datatyp **måste** innehåller *endast* latinska tecken, numeriska siffror och understreck&quot;_&quot; som specialtecken.
+   Observera följande namn när du uppdaterar den här egenskapen manuellt för en datatyp **måste** innehåller *endast* A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
 
    >[!CAUTION]
    >
