@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: 4f81a315d637b567fc6a6038b192f048bb462b4d
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2708'
 ht-degree: 0%
 
 ---
@@ -346,6 +346,10 @@ The `_variations` -fältet har implementerats för att förenkla frågor om vari
 
 Se [Exempelfråga - Alla städer med en namngiven variant](/help/headless/graphql-api/sample-queries.md#sample-cities-named-variation).
 
+>[!NOTE]
+>
+>Om den angivna varianten inte finns för ett innehållsfragment returneras den överordnad varianten som ett (fallback) standardvärde.
+
 <!--
 ## Security Considerations {#security-considerations}
 -->
@@ -450,42 +454,47 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
 
 * Om du förväntar dig en resultatlista:
    * add `List` till modellnamnet, till exempel  `cityList`
-   * Se [Exempelfråga - All information om alla städer](#sample-all-information-all-cities)
+   * Se [Exempelfråga - All information om alla städer](/help/headless/graphql-api/sample-queries.md#sample-all-information-all-cities)
 
 * Om du vill använda ett logiskt OR:
    * use ` _logOp: OR`
-   * Se [Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot;](#sample-all-persons-jobs-smith)
+   * Se [Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot;](/help/headless/graphql-api/sample-queries.md#sample-all-persons-jobs-smith)
 
 * Logiskt AND finns också, men är (ofta) implicit
 
 * Du kan fråga efter fältnamn som motsvarar fälten i innehållsfragmentmodellen
-   * Se [Exempelfråga - Fullständig information om företagets VD och anställda](#sample-full-details-company-ceos-employees)
+   * Se [Exempelfråga - Fullständig information om företagets VD och anställda](/help/headless/graphql-api/sample-queries.md#sample-full-details-company-ceos-employees)
 
 * Förutom fälten från modellen finns det vissa systemgenererade fält (föregås av understreck):
 
    * För innehåll:
 
       * `_locale` : för att avslöja språket, baserat på Language Manager
-         * Se [Exempelfråga för flera innehållsfragment för en viss språkinställning](#sample-wknd-multiple-fragments-given-locale)
+         * Se [Exempelfråga för flera innehållsfragment för en viss språkinställning](/help/headless/graphql-api/sample-queries.md#sample-wknd-multiple-fragments-given-locale)
       * `_metadata` : för att visa metadata för ditt fragment
-         * Se [Exempelfråga för metadata - Ange metadata för utmärkelserna med namnet GB](#sample-metadata-awards-gb)
+         * Se [Exempelfråga för metadata - Ange metadata för utmärkelserna med namnet GB](/help/headless/graphql-api/sample-queries.md#sample-metadata-awards-gb)
       * `_model` : tillåt frågor för en innehållsfragmentmodell (sökväg och rubrik)
-         * Se [Exempelfråga för en innehållsfragmentmodell från en modell](#sample-wknd-content-fragment-model-from-model)
+         * Se [Exempelfråga för en innehållsfragmentmodell från en modell](/help/headless/graphql-api/sample-queries.md#sample-wknd-content-fragment-model-from-model)
       * `_path` : sökvägen till ditt innehållsfragment i databasen
-         * Se [Exempelfråga - Ett enskilt specifikt stadsfragment](#sample-single-specific-city-fragment)
+         * Se [Exempelfråga - Ett enskilt specifikt stadsfragment](/help/headless/graphql-api/sample-queries.md#sample-single-specific-city-fragment)
       * `_reference` : avslöja referenser, inkludera textbundna referenser i RTF-redigeraren
-         * Se [Exempelfråga för flera innehållsfragment med förhämtade referenser](#sample-wknd-multiple-fragments-prefetched-references)
+         * Se [Exempelfråga för flera innehållsfragment med förhämtade referenser](/help/headless/graphql-api/sample-queries.md#sample-wknd-multiple-fragments-prefetched-references)
       * `_variation` : för att visa specifika variationer i ditt innehållsfragment
+
+         >[!NOTE]
+         >
+         >Om den angivna varianten inte finns för ett innehållsfragment returneras den överordnad varianten som ett (fallback) standardvärde.
+
          * Se [Exempelfråga - Alla städer med en namngiven variant](#sample-cities-named-variation)
    * Och åtgärder:
 
       * `_operator` : tillämpa särskilda operatörer, `EQUALS`, `EQUALS_NOT`, `GREATER_EQUAL`, `LOWER`, `CONTAINS`, `STARTS_WITH`
-         * Se [Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot;](#sample-all-persons-not-jobs)
-         * Se [Exempelfråga - Alla annonser där `_path` börjar med ett visst prefix](#sample-wknd-all-adventures-cycling-path-filter)
+         * Se [Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot;](/help/headless/graphql-api/sample-queries.md#sample-all-persons-not-jobs)
+         * Se [Exempelfråga - Alla annonser där `_path` börjar med ett visst prefix](/help/headless/graphql-api/sample-queries.md#sample-wknd-all-adventures-cycling-path-filter)
       * `_apply` : tillämpa särskilda villkor, till exempel  `AT_LEAST_ONCE`
-         * Se [Exempelfråga - Filtrera en array med ett objekt som måste förekomma minst en gång](#sample-array-item-occur-at-least-once)
+         * Se [Exempelfråga - Filtrera en array med ett objekt som måste förekomma minst en gång](/help/headless/graphql-api/sample-queries.md#sample-array-item-occur-at-least-once)
       * `_ignoreCase` : för att ignorera skiftläget vid fråga
-         * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](#sample-all-cities-san-ignore-case)
+         * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](/help/headless/graphql-api/sample-queries.md#sample-all-cities-san-ignore-case)
 
 
 
@@ -498,7 +507,7 @@ Den grundläggande åtgärden för frågor med GraphQL för AEM följer standard
 * Det finns stöd för unionstyper för GraphQL:
 
    * use `... on`
-      * Se [Exempelfråga för ett innehållsfragment för en viss modell med en innehållsreferens](#sample-wknd-fragment-specific-model-content-reference)
+      * Se [Exempelfråga för ett innehållsfragment för en viss modell med en innehållsreferens](/help/headless/graphql-api/sample-queries.md#sample-wknd-fragment-specific-model-content-reference)
 
 * Reservation vid fråga om kapslade fragment:
 
