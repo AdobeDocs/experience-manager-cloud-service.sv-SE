@@ -2,10 +2,10 @@
 title: Färgtaggar för bilder
 description: Med Experience Manager Assets kan du skilja mellan färger i en bild och använda dem som taggar automatiskt. Du kan sedan använda dessa taggar för att söka efter och filtrera bilder.
 exl-id: 3afa949b-ea1b-4b8e-ac94-06566e2c7147
-source-git-commit: d8fb661be15a1505714e3def8a729a9c5c04616c
+source-git-commit: 2859fa68713b46083314d207abc4dec2e088a173
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 1%
+source-wordcount: '1094'
+ht-degree: 2%
 
 ---
 
@@ -16,10 +16,6 @@ ht-degree: 1%
 Experience Manager Assets använder Adobe Sensei AI-funktioner för att skilja mellan färger i en bild och tillämpa dem som taggar automatiskt vid intag. Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition.
 
 Du kan konfigurera antalet färger, inom ett intervall av en till fyrtio, som är taggade till en bild så att du kan söka efter bilder baserade på dessa färger senare. Experience Manager Assets använder märkorden baserat på färgmängden i en bild. Du kan också konfigurera visningsformatet för en färgtagg.
-
->[!NOTE]
->
->Den här funktionen är tillgänglig i betaversionskanalen. Se [Dokumentation för prerelease Channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#enable-prerelease) om du vill ha information om hur du aktiverar funktionen för din miljö.
 
 I följande bild visas de åtgärder du utför för att konfigurera och hantera färgtaggning för bilder i Experience Manager Assets:
 
