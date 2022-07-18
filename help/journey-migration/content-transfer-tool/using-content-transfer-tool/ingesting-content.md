@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 05765bdaa681502b60fc5a7c943e2265c09764ec
+source-git-commit: 0a5b74427bedfa7b1e802a91632b0765adfb8248
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '908'
+ht-degree: 12%
 
 ---
 
@@ -44,8 +44,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    >[!IMPORTANT]
    >
-   >Du kommer bara att kunna starta upp ett intag till målmiljön om du tillhör den lokala **AEM administratörer** i den Cloud Service som du överför innehåll. Om du inte tillhör gruppen AEM administratörer visas ett felmeddelande enligt nedan när du försöker starta ett intag.
-   >![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam21.png)
+   >Du kommer bara att kunna starta upp ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
 
    >[!IMPORTANT]
    >
@@ -103,7 +102,25 @@ Du kan göra detta genom att skapa ett nytt intag-jobb och se till att **Svep** 
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam24.png)
 
+## Felsökning {#troubleshooting}
 
+### CAM kan inte hämta migreringstoken {#cam-unable-to-retrieve-the-migration-token}
+
+Den automatiska hämtningen av migreringstoken kan misslyckas av olika orsaker, inklusive dig [konfigurera ett IP-tillåtelselista via Cloud Manager](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) i målmiljön för Cloud Service.  I sådana fall visas följande dialogruta när du försöker starta ett intag:
+
+![bild](/help/journey-migration/content-transfer-tool/assets-ctt/troubleshooting-token.png)
+
+Du måste hämta migreringstoken manuellt genom att klicka på länken Hämta token i dialogrutan. Då öppnas en annan flik som visar variabeln. Du kan sedan kopiera token och klistra in den i **Indata för migreringstoken** fält. Nu borde du kunna påbörja intaget.
+
+>[!NOTE]
+>
+>Token är tillgänglig för användare som tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst.
+
+### Det går inte att starta matning {#unable-to-start-ingestion}
+
+Du kommer bara att kunna starta upp ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte tillhör gruppen AEM administratörer visas ett felmeddelande enligt nedan när du försöker starta ett intag. Du kan antingen be administratören att lägga till dig på den lokala **AEM administratörer** eller fråga efter själva variabeln som du sedan kan klistra in i **Indata för migreringstoken** fält.
+
+![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_nonadmin_ingestion.png)
 
 ## What&#39;s Next {#whats-next}
 
