@@ -3,10 +3,10 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 91a88cb02192defdd651ecb6d108d4540186d06e
+source-git-commit: ff78e359cf79afcb4818e0599dca5468b4e6c754
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2591'
+ht-degree: 1%
 
 ---
 
@@ -205,36 +205,232 @@ I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i ställe
 
 Precis som i tidigare versioner av AEM rensas innehållet från dispatcherns cache när du publicerar eller avpublicerar sidor. Om ett problem med cachelagring misstänks bör kunderna publicera om sidorna i fråga och se till att det finns en virtuell värd som matchar den lokala värden för ServerAlias, vilket krävs för att inaktivera dispatchercachen.
 
-
 När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess dispatcher. Den uppdaterade sökvägen tas bort från dispatchercachen, tillsammans med dess överordnade, upp till en nivå (du kan konfigurera den med [statusfilernivå](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level)).
 
-### Cacheogiltigförklaring av explicit dispatcher {#explicit-invalidation}
+## Explicit ogiltigförklaring av dispatchercachen {#explicit-invalidation}
 
-I allmänhet behöver du inte göra innehåll i dispatchern ogiltigt manuellt, men det är möjligt om det behövs.
+Adobe rekommenderar att du förlitar dig på standardcache-huvuden för att styra innehållets leveranslivscykel. Om det behövs kan du emellertid göra innehållet ogiltigt direkt i dispatchern.
+
+Följande lista innehåller scenarier där du kanske vill göra cachen ogiltig (men avlyssna när ogiltigförklaringen har slutförts):
+
+* Efter publicering av innehåll som upplevelsefragment eller innehållsfragment blir publicerat och cachelagrat innehåll som refererar till dessa element ogiltigt.
+* Meddela ett externt system när refererade sidor har ogiltigförklarats.
+
+Det finns två sätt att göra cacheminnet explicit ogiltigt:
+
+* Det bästa sättet är att använda Sling Content Distribution (SCD) från författaren.
+* Genom att använda replikerings-API:t för att anropa agenten för tömning av publiceringsdispatcher.
+
+Metoderna skiljer sig åt när det gäller tillgång till nivån, möjlighet att deduplicera händelser och händelsebearbetningsgaranti. Tabellen nedan sammanfattar dessa alternativ:
+
+<table style="table-layout:auto">
+ <tbody>
+  <tr>
+    <th>Ej tillämpligt</th>
+    <th>Tillgång till nivån</th>
+    <th>Deduplicering </th>
+    <th>Garanti </th>
+    <th>Åtgärd </th>
+    <th>Effekt </th>
+    <th>Beskrivning </th>
+  </tr>  
+  <tr>
+    <td>Sling Content Distribution (SCD) API</td>
+    <td>Författare</td>
+    <td>Möjligt med antingen Discovery API eller genom att aktivera <a href="https://github.com/apache/sling-org-apache-sling-distribution-journal/blob/e18f2bd36e8b43814520e87bd4999d3ca77ce8ca/src/main/java/org/apache/sling/distribution/journal/impl/publisher/DistributedEventNotifierManager.java#L146-L149">dedupliceringsläge</a>.</td>
+    <td>Minst en gång.</td>
+    <td>
+     <ol>
+       <li>LÄGG TILL</li>
+       <li>DELETE</li>
+       <li>OGILTIG</li>
+     </ol>
+     </td>
+    <td>
+     <ol>
+       <li>Hierarkisk/stationär nivå</li>
+       <li>Hierarkisk/stationär nivå</li>
+       <li>Endast nivå-resurs</li>
+     </ol>
+     </td>
+    <td>
+     <ol>
+       <li>Publicerar innehåll och gör cachen ogiltig.</li>
+       <li>Tar bort innehåll och gör cachen ogiltig.</li>
+       <li>Gör innehållet ogiltigt utan att publicera det.</li>
+     </ol>
+     </td>
+  </tr>
+  <tr>
+    <td>Replikerings-API</td>
+    <td>Publicera</td>
+    <td>Inte möjligt, händelse som aktiveras för varje publiceringsinstans.</td>
+    <td>Bästa försök.</td>
+    <td>
+     <ol>
+       <li>AKTIVERA</li>
+       <li>INAKTIVERA</li>
+       <li>DELETE</li>
+     </ol>
+     </td>
+    <td>
+     <ol>
+       <li>Hierarkisk/stationär nivå</li>
+       <li>Hierarkisk/stationär nivå</li>
+       <li>Hierarkisk/stationär nivå</li>
+     </ol>
+     </td>
+    <td>
+     <ol>
+       <li>Publicerar innehåll och gör cachen ogiltig.</li>
+       <li>Från författar-/publiceringsnivå - Tar bort innehåll och gör cachen ogiltig.</li>
+       <li><p><strong>Från författarnivå</strong> - Tar bort innehåll och gör cachen ogiltig (om den aktiveras från AEM Author-nivån i Publish Agent).</p>
+           <p><strong>Från publiceringsnivå</strong> - Gör endast cacheminnet (om det aktiveras från AEM-publiceringsnivån på agenten för tömning eller tömning endast av resurser) ogiltigt.</p>
+       </li>
+     </ol>
+     </td>
+  </tr>
+  </tbody>
+</table>
+
+Observera att de två åtgärder som är direkt relaterade till cacheogiltigförklaring är Sling Content Distribution (SCD) API Invalidate och Replication API Deactivate.
+
+Vi kan också se följande från tabellen:
+
+* SCD API behövs när varje händelse måste garanteras, till exempel synkronisering med ett externt system som kräver korrekt kunskap. Observera, att om det finns en händelse för publiceringsnivåuppskalning vid tidpunkten för ogiltigförklaringsanropet, kommer en extra händelse att utlösas när varje ny publiceringsprocess bearbetar ogiltigförklaringen.
+
+* Att använda replikerings-API är inte vanligt, men bör användas i fall där utlösaren för att göra cachen ogiltig kommer från publiceringsnivån och inte från författarnivån. Det här kan vara användbart om TTL för dispatcher har konfigurerats.
+
+Sammanfattningsvis, om du vill göra dispatchercachen ogiltig, rekommenderar vi att du använder SCD API-åtgärden Ovalidate från författare. Dessutom kan du lyssna efter händelsen så att du kan utlösa fler efterföljande åtgärder.
+
+### Sling Content Distribution (SCD) {#sling-distribution}
 
 >[!NOTE]
->Före AEM as a Cloud Service fanns det två sätt att göra Dispatcher-cachen ogiltig.
->
->1. Anropa replikeringsagenten och ange agenten för rensning av publiceringsutgivaren
->2. Anropa `invalidate.cache` API (till exempel `POST /dispatcher/invalidate.cache`)
+>När du använder instruktionerna nedan bör du vara medveten om att du bör testa den anpassade koden i en AEM Cloud Service Dev-miljö och inte lokalt.
 
->
->Avsändaren `invalidate.cache` API-metoden stöds inte längre eftersom den bara riktar sig till en viss dispatchernod. AEM as a Cloud Service arbetar på tjänstenivå, inte på den enskilda nodnivån, och därmed görs ogiltighetsinstruktionerna i [Invaliderar cachelagrade sidor från AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html) sidan är inte längre giltig för AEM as a Cloud Service.
+När du använder SCD-åtgärden från författaren är implementeringsmönstret följande:
 
-Replikeringsrensningsagenten ska användas. Detta kan du göra med [Replikerings-API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/replication/Replicator.html). Slutpunkten för rensningsagenten är inte konfigurerbar, men förkonfigurerad att peka mot dispatchern, matchad med publiceringstjänsten som kör rensningsagenten. Flush-agenten kan oftast aktiveras av OSGi-händelser eller arbetsflöden.
+1. Skriv egen kod från författaren för att anropa distributionen av försäljningsinnehåll [API](https://sling.apache.org/documentation/bundles/content-distribution.html), skickar åtgärden invalidate med en lista över sökvägar:
+
+```
+@Reference
+private Distributor distributor;
+
+ResourceResolver resolver = ...; // the resource resolver used for authorizing the request
+String agentName = "publish";    // the name of the agent used to distribute the request
+
+String pathToInvalidate = "/content/to/invalidate";
+DistributionRequest distributionRequest = new SimpleDistributionRequest(DistributionRequestType.INVALIDATE, false, pathToInvalidate);
+distributor.distribute(agentName, resolver, distributionRequest);
+```
+
+* (Valfritt) Lyssna efter en händelse som återger den resurs som ogiltigförklaras för alla dispatcherinstanser:
+
+
+```
+package org.apache.sling.distribution.journal.shared;
+
+import org.apache.sling.discovery.DiscoveryService;
+import org.apache.sling.distribution.journal.impl.event.DistributionEvent;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.osgi.service.event.Event;
+import org.osgi.service.event.EventHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import static org.apache.sling.distribution.DistributionRequestType.INVALIDATE;
+import static org.apache.sling.distribution.event.DistributionEventProperties.DISTRIBUTION_PATHS;
+import static org.apache.sling.distribution.event.DistributionEventProperties.DISTRIBUTION_TYPE;
+import static org.apache.sling.distribution.event.DistributionEventTopics.AGENT_PACKAGE_DISTRIBUTED;
+import static org.osgi.service.event.EventConstants.EVENT_TOPIC;
+
+@Component(immediate = true, service = EventHandler.class, property = {
+        EVENT_TOPIC + "=" + AGENT_PACKAGE_DISTRIBUTED
+})
+public class InvalidatedHandler implements EventHandler {
+    private static final Logger LOG = LoggerFactory.getLogger(InvalidatedHandler.class);
+
+    @Reference
+    private DiscoveryService discoveryService;
+
+    @Override
+    public void handleEvent(Event event) {
+
+        String distributionType = (String) event.getProperty(DISTRIBUTION_TYPE);
+
+        if (INVALIDATE.name().equals(distributionType)) {
+            boolean isLeader = discoveryService.getTopology().getLocalInstance().isLeader();
+            // process the OSGi event on the leader author instance
+            if (isLeader) {
+                String[] paths = (String[]) event.getProperty(DISTRIBUTION_PATHS);
+                String packageId = (String) event.getProperty(DistributionEvent.PACKAGE_ID);
+                invalidated(paths, packageId);
+            }
+        }
+    }
+
+    private void invalidated(String[] paths, String packageId) {
+        // custom logic
+        LOG.info("Successfully applied package with id {}, paths {}", packageId, paths);
+    }
+}
+```
+
+<!-- Optionally, instead of using the isLeader approach, one could add an OSGi configuration for the PID org.apache.sling.distribution.journal.impl.publisher.DistributedEventNotifierManager and property deduplicateEvent=true. But we'll stick with just one strategy and not mention it (double-check this).**review this**-->
+
+* (Valfritt) Kör affärslogik i `invalidated(String[] paths, String packageId)` ovanstående metod.
+
+>[!NOTE]
+>
+>CDN i Adobe rensas inte när avsändaren ogiltigförklaras. CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas.
+
+### Replikerings-API {#replication-api}
+
+Nedan visas implementeringsmönstret när åtgärden för inaktivering av replikerings-API används:
+
+1. Anropa replikerings-API:t på publiceringsnivån för att utlösa replikeringsagenten för tömning av publiceringsdispatcher.
+
+Slutpunkten för rensningsagenten kan inte konfigureras utan är i stället förkonfigurerad så att den pekar på dispatcher, matchad med publiceringstjänsten som körs tillsammans med tömningsagenten.
+
+Flush-agenten kan oftast aktiveras av anpassad kod som baseras på OSGi-händelser eller arbetsflöden.
+
+```
+String[] paths = …
+ReplicationOptions options = new ReplicationOptions();
+options.setSynchronous(true);
+options.setFilter( new AgentFilter {
+  public boolean isIncluded (Agent agent) {
+   return agent.getId().equals(“flush”);
+  }
+});
+
+Replicator.replicate (session,ReplicationActionType.DELETE,paths, options);
+```
+
+<!-- In general, it will not be necessary to manually invalidate content in the dispatcher, but it is possible if needed.
+
+>[!NOTE]
+>Prior to AEM as a Cloud Service, there were two ways of invalidating the dispatcher cache.
+>
+>1. Invoke the replication agent, specifying the publish dispatcher flush agent
+>2. Directly calling the `invalidate.cache` API (for example, `POST /dispatcher/invalidate.cache`)
+>
+>The dispatcher's `invalidate.cache` API approach will no longer be supported since it addresses only a specific dispatcher node. AEM as a Cloud Service operates at the service level, not the individual node level and so the invalidation instructions in the [Invalidating Cached Pages From AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html) page are not longer valid for AEM as a Cloud Service.
+
+The replication flush agent should be used. This can be done using the [Replication API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/replication/Replicator.html). The flush agent endpoint is not configurable but pre-configured to point to the dispatcher, matched with the publish service running the flush agent. The flush agent can typically be triggered by OSGi events or workflows.
 
 <!-- Need to find a new link and/or example -->
 <!-- 
 and for an example of flushing the cache, see the [API example page](https://helpx.adobe.com/experience-manager/using/aem64_replication_api.html) (specifically the `CustomStep` example issuing a replication action of type ACTIVATE to all available agents). 
--->
 
-Bilden nedan visar detta.
+The diagram presented below illustrates this.
 
 ![CDN](assets/cdnd.png "CDN")
 
-Om det finns oro för att dispatchercachen inte rensas kontaktar du [kundsupport](https://helpx.adobe.com/support.ec.html) som vid behov kan tömma dispatchercachen.
+If there is a concern that the dispatcher cache isn't clearing, contact [customer support](https://helpx.adobe.com/support.ec.html) who can flush the dispatcher cache if necessary.
 
-CDN som hanteras av Adobe respekterar TTL:er och behöver därför inte tömmas. Om ett problem misstänks, [kontakta kundsupport](https://helpx.adobe.com/support.ec.html) som kan tömma ett CDN-cache som hanteras av Adobe efter behov.
+The Adobe-managed CDN respects TTLs and thus there is no need fo it to be flushed. If an issue is suspected, [contact customer support](https://helpx.adobe.com/support.ec.html) support who can flush an Adobe-managed CDN cache as necessary. -->
 
 ## Bibliotek på klientsidan och versionskonsekvens {#content-consistency}
 

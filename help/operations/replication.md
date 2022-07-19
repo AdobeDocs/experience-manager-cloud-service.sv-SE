@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 5791410fd5956cd8b82d4ed03f3920ade3bfedcb
+source-git-commit: b79752c43cd9907236b511aa1be60b5b2256a7b8
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1259'
 ht-degree: 1%
 
 ---
@@ -172,6 +172,9 @@ Om du inte anger ett sådant filter och bara använder agenten för publicering,
 
 Det övergripande `ReplicationStatus` för en resurs ändras bara om replikeringsåtgärden innehåller minst en agent som är aktiv som standard. I exemplet ovan är detta inte fallet eftersom replikeringen bara använder agenten för förhandsgranskning. Därför måste du använda den nya `getStatusForAgent()` -metod, som tillåter frågor om status för en viss agent. Den här metoden fungerar även för agenten&quot;publish&quot;. Det returnerar ett värde som inte är null om någon replikeringsåtgärd har utförts med den angivna agenten.
 
+### Metoder för att verifiera innehåll {#invalidating-content}
+
+Du kan göra innehåll ogiltigt direkt genom att antingen använda Sling Content Invalidation (SCD) från författaren (den föredragna metoden) eller genom att använda replikerings-API:t för att anropa agenten för push-tömning av publiceringsutgivaren. Se [Cachelagring](/help/implementing/dispatcher/caching.md) sida för mer information.
 
 **Kapacitetsbegränsningar för replikerings-API**
 
@@ -179,6 +182,7 @@ Vi rekommenderar att du kopierar färre än 100 banor i taget, där 500 är den 
 Om programlogiken inte kräver atomisk replikering kan den här gränsen överskridas genom att du anger `ReplicationOptions.setUseAtomicCalls` till false, vilket accepterar ett obegränsat antal banor, men internt skapar bucklor som ligger under denna gräns.
 
 Storleken på innehållet som skickas per replikeringsanrop får inte överskrida `10 MB`. Detta inkluderar noder och egenskaper, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binärfiler).
+
 
 ## Felsökning {#troubleshooting}
 
