@@ -2,7 +2,8 @@
 title: 'Hur tilldelar man ett arbetsflöde till en annan användare, skickar e-post, använder Adobe Sign i ett arbetsflöde? '
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
-source-git-commit: 211724e8031c6b83ca202739d2bc56007243d3d5
+google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
+source-git-commit: 69d86454c9d3dd869a69c7f720bce077b0149860
 workflow-type: tm+mt
 source-wordcount: '4939'
 ht-degree: 0%
@@ -166,7 +167,7 @@ E-poststeget har följande egenskaper:
 * **[!UICONTROL Workflow Metadata]**: Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. När du har valt alternativet anger du metadataegenskapens namn i den tomma textrutan under alternativet Metadata för arbetsflöde. Till exempel emailAddress.
 
 <!-- * **[!UICONTROL Asset URL]**: Use the option to embed a web link of an interactive communication to the email. After selecting the option, browse and choose the interactive communication to embed. The asset can reside on the author or the publish server. -->
-* **[!UICONTROL Image]**: Använd alternativet för att bädda in en bild i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer bilden. Bildalternativet är bara tillgängligt för de bildtaggar (&lt;img src=&quot;*&quot; />) som är tillgängliga i e-postmallen.
+* **[!UICONTROL Image]**: Använd alternativet för att bädda in en bild i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer bilden. Bildalternativet är bara tillgängligt för de bildtaggar (&lt;img src=&quot;&lt;span id=&quot; translate=&quot;no&quot; />&quot;/>) som är tillgängliga i e-postmallen.&#42;
 
 **[!UICONTROL Sender’s / Recipient's Email Address]**: Välj **[!UICONTROL Literal]** om du vill ange en e-postadress manuellt eller välja **[!UICONTROL Retrieve from Workflow metadata]** alternativ för att hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsmatriser för metadata för **[!UICONTROL Retrieve from Workflow metadata]** alternativ. Välj **[!UICONTROL Variable]** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
 

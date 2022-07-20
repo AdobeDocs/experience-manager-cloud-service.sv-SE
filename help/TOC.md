@@ -7,9 +7,9 @@ feature: Release Information
 user-guide-description: Länkar till självhjälp och dokumentation i form av en översikt över Adobe Experience Manager as a Cloud Service
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: f84327096951772e1bed8656334841e1292d6bcf
+source-git-commit: 0ee8f080c0e712e4a34086a75cbd8750a7d08b74
 workflow-type: tm+mt
-source-wordcount: '3677'
+source-wordcount: '3680'
 ht-degree: 23%
 
 ---
@@ -500,6 +500,7 @@ ht-degree: 23%
       + Lägga till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
          + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
          + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+         + [Använd klottrar signatur](/help/forms/signing-forms-using-scribble.md)
       + Konfigurera layout och tillämpa format på ett anpassat formulär{#configure-layout-of-an-adaptive-form}
          + [Ange layout för ett adaptivt formulär](/help/forms/layout-capabilities-adaptive-forms.md)
          + [Använd layoutläget för att ändra storlek på komponenter](/help/forms/resize-using-layout-mode.md)
