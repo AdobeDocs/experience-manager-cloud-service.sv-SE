@@ -2,10 +2,10 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: e7e3ec89d5e7b43b8c6dfb10f5dc966768ab0af1
+source-git-commit: 7bebdff5095786005d5c4c91b7b699d71f9813a7
 workflow-type: tm+mt
-source-wordcount: '1242'
-ht-degree: 7%
+source-wordcount: '1341'
+ht-degree: 6%
 
 ---
 
@@ -44,6 +44,18 @@ Om du vill testa anslutningen till AEM as a Cloud Service målmiljön skickar du
 
 >[!NOTE]
 >Om en `HTTP/2 200` har tagits emot har en anslutning till AEM as a Cloud Service upprättats.
+
+### Aktivera SSL-loggning {#enable-ssl-logging}
+
+Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsöka anslutningsproblem under en extraheringsprocess kan du aktivera SSL-loggning via systemkonsolen i AEM genom att följa dessa steg:
+
+1. Navigera till Adobe Experience Manager Web Console i källinstansen genom att gå till **Verktyg - Åtgärder - Webbkonsol** eller direkt till URL:en på *https://serveraddress:serverport/system/console/configMgr*
+1. Sök efter **Konfiguration av extraheringstjänst för innehållsöverföringsverktyg**
+1. Använd pennikonknappen för att redigera dess konfigurationsvärden
+1. Aktivera **Aktivera SSL-loggning för extrahering** ställa in och sedan trycka **Spara**:
+
+   ![bild](/help/journey-migration/content-transfer-tool/assets/enable_ssl_logging.png)
+
 
 ## Köra Content Transfer Tool {#running-tool}
 
