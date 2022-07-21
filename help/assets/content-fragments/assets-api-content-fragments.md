@@ -3,9 +3,9 @@ title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments 
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: ad51218652d3e7fbe90abb1fc02cce7212394c21
+source-git-commit: cf8c8353d83e4446f52235a2ea1a322a84786b61
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1761'
 ht-degree: 1%
 
 ---
@@ -255,47 +255,6 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 >[!NOTE]
 >
 >Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). I synnerhet [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
-
-### Läsning/leverans {#read-delivery}
-
-Användning sker via:
-
-`GET /{cfParentPath}/{cfName}.json`
-
-Till exempel:
-
-`http://<host>/api/assets/wknd/en/adventures/cycling-tuscany.json`
-
-Svaret är serialiserat JSON med innehållet strukturerat som i innehållsfragmentet. Referenser levereras som referens-URL:er.
-
-Det finns två typer av läsåtgärder:
-
-* När du läser ett visst innehållsfragment efter sökväg, returneras JSON-representationen av innehållsfragmentet.
-* Läsa en mapp med innehållsfragment efter sökväg: returnerar JSON-representationerna för alla innehållsfragment i mappen.
-
-### Skapa {#create}
-
-Användning sker via:
-
-`POST /{cfParentPath}/{cfName}`
-
-Brödtexten måste innehålla en JSON-representation av det innehållsfragment som ska skapas, inklusive allt ursprungligt innehåll som ska anges för elementen i innehållsfragmentet. Det är obligatoriskt att ange `cq:model` och måste peka på en giltig innehållsfragmentmodell. Om du inte gör det uppstår ett fel. Du måste också lägga till en rubrik `Content-Type` som är inställd på `application/json`.
-
-### Uppdatera {#update}
-
-Användning sker via
-
-`PUT /{cfParentPath}/{cfName}`
-
-Brödtexten måste innehålla en JSON-representation av vad som ska uppdateras för det angivna innehållsfragmentet.
-
-Detta kan helt enkelt vara titeln eller beskrivningen av ett innehållsfragment, ett enskilt element eller alla elementvärden och/eller metadata.
-
-### Ta bort {#delete}
-
-Användning sker via:
-
-`DELETE /{cfParentPath}/{cfName}`
 
 ## Begränsningar {#limitations}
 
