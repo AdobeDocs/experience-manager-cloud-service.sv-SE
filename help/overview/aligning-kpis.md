@@ -2,14 +2,14 @@
 title: Justera KPI:er
 description: Justera KPI:er
 exl-id: d338a7bd-adfe-486a-badf-348acd6018d0
-source-git-commit: 41afc50b2c5feebb086e78ba2065f59e874d37fc
+source-git-commit: 8bd001f6f70ce1aa9a63623b3ad68793fa355c9a
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
-# Börja med era affärsmål för att välja rätt nyckeltal
+# Börja med era affärsmål för att välja rätt nyckeltal {#choose-the-right-kpis}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_alignkpis"
