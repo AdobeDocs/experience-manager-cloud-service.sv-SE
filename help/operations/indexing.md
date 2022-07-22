@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 21c5de77ca5e5ca2b6541212ff50e747bbd00100
+source-git-commit: 1544358f9a706574d8944fa92422240c46d62d2f
 workflow-type: tm+mt
-source-wordcount: '2251'
+source-wordcount: '2253'
 ht-degree: 1%
 
 ---
@@ -280,7 +280,8 @@ Om ett index ska tas bort i en senare version av programmet kan du definiera ett
 
 Om det inte längre behövs någon anpassning av ett index som inte finns i kartongen måste du kopiera indexdefinitionen som finns i kartongen. Om du till exempel redan har distribuerat `damAssetLucene-8-custom-3`, men behöver inte längre anpassningar och vill växla tillbaka till standardinställningen `damAssetLucene-8` index, måste du lägga till ett index `damAssetLucene-8-custom-4` som innehåller indexdefinitionen för `damAssetLucene-8`.
 
-## Optimering av index och frågor {#index-query-optimizations}
+## Optimeringar av index och frågor {#index-query-optimizations}
 
 Apache Jackrabbit Oak möjliggör flexibla indexkonfigurationer för att effektivt hantera sökfrågor. Index är särskilt viktiga för större databaser. Se till att alla frågor backas upp av ett lämpligt index. Frågor utan lämpligt index kan läsa tusentals noder, som sedan loggas som en varning.
-Se [den här sidan](best-practices-for-querying-and-indexing.md) om hur frågor och index kan optimeras.
+
+Se [det här dokumentet](query-and-indexing-best-practices.md) för information om hur frågor och index kan optimeras.
