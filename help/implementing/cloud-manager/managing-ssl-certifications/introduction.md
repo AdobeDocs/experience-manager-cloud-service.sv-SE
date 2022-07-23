@@ -2,9 +2,9 @@
 title: Introduktion till hantering av SSL-certifikat
 description: Lär dig hur du får tillgång till självbetjäningsverktyg i Cloud Manager för att installera SSL-certifikat.
 exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
-source-git-commit: 898f7bc46a3f1b0ac93ee43fbf7b60a11682a073
+source-git-commit: f69a26c6156c1f9038d612a00b16cac0e51e17ca
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -16,8 +16,8 @@ ht-degree: 0%
 >id="aemcloud_golive_sslcert"
 >title="Hantera SSL-certifikat"
 >abstract="Lär dig hur du får tillgång till självbetjäningsverktyg i Cloud Manager för att installera och hantera SSL-certifikat för att skydda webbplatsen för dina användare. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates.html" text="Visa, uppdatera och ersätta ett SSL-certifikat"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates.html" text="Kontrollera status för ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates.html" text="Visa, uppdatera och ersätta ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates.html" text="Kontrollera status för ett SSL-certifikat"
 
 Med Cloud Manager får du tillgång till självbetjäningsverktyg för att installera och hantera SSL-certifikat för att skydda din webbplats för användarna. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare, till exempel Let’s Encrypt.
 
