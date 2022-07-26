@@ -2,7 +2,7 @@
 title: Skapa en konfiguration - Headless Setup
 description: Skapa en konfiguration som ett första steg för att komma igång med headless på AEM as a Cloud Service.
 exl-id: 48801599-f279-4e55-8033-9c418d2af5bb
-source-git-commit: e81b852dc90e3cc5abc8b9f218f48d0fc1cc66eb
+source-git-commit: 9bfb5bc4b340439fcc34e97f4e87d711805c0d82
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -33,7 +33,7 @@ En administratör behöver bara skapa en konfiguration en gång, eller mycket s�
       * Den kan vid behov justeras.
 1. Markera följande alternativ:
    * **Modeller för innehållsfragment**
-   * **Beständiga GraphQL-frågor**
+   * **GraphQL-beständiga frågor**
 
    ![Skapa konfiguration](../assets/create-configuration.png)
 
@@ -43,7 +43,7 @@ Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också ka
 
 >[!NOTE]
 >
->Konfigurationsalternativ utöver **Modeller för innehållsfragment** och **Beständiga GraphQL-frågor** kan vara nödvändigt beroende på implementeringskraven.
+>Konfigurationsalternativ utöver **Modeller för innehållsfragment** och **GraphQL-beständiga frågor** kan vara nödvändigt beroende på implementeringskraven.
 
 ## Nästa steg {#next-steps}
 

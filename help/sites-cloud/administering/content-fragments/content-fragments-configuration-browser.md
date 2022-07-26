@@ -1,10 +1,11 @@
 ---
 title: Content Fragments - Configuration Browser
 description: Lär dig hur du aktiverar vissa funktioner för innehållsfragment i konfigurationsläsaren.
-source-git-commit: a06024b4d4b6e5e750ed4c1e27f55283513b78a2
+exl-id: 55d442ae-ae06-4dfa-8e4e-b415385ccea5
+source-git-commit: 9bfb5bc4b340439fcc34e97f4e87d711805c0d82
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 15%
+source-wordcount: '358'
+ht-degree: 14%
 
 ---
 
@@ -17,7 +18,7 @@ Lär dig hur du aktiverar vissa funktioner för innehållsfragment i konfigurati
 Innan du använder innehållsfragment måste du använda **Konfigurationsläsaren** för att aktivera:
 
 * **Modeller för innehållsfragment** - obligatoriskt
-* **Beständiga GraphQL-frågor** - valfritt
+* **GraphQL-beständiga frågor** - valfritt
 
 >[!CAUTION]
 >
@@ -60,9 +61,12 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
 1. Använd **Skapa** för att öppna dialogrutan där du:
 
    1. Ange en **Titel**.
+   1. The **Namn** blir nodnamnet i databasen.
+      * Det genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+      * Du kan justera den om det behövs.
    1. Om du vill aktivera deras användning väljer du
       * **Modeller för innehållsfragment**
-      * **Beständiga GraphQL-frågor**
+      * **GraphQL-beständiga frågor**
 
       ![Definiera konfiguration](assets/cfm-conf-01.png)
 

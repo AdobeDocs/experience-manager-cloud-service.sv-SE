@@ -3,7 +3,7 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 377747d6bbb945b1de9cf1fdcbabc077babd7aa9
+source-git-commit: 9bfb5bc4b340439fcc34e97f4e87d711805c0d82
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Om du till exempel vill skapa en beständig fråga specifikt för WKND-platskonf
 >
 >Se [Aktivera funktionen för innehållsfragment i konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md#enable-content-fragment-functionality-in-configuration-browser) för mer information.
 >
->The **Beständiga GraphQL-frågor** måste aktiveras för rätt platskonfiguration.
+>The **GraphQL-beständiga frågor** måste aktiveras för rätt platskonfiguration.
 
 Om det till exempel finns en viss fråga som heter `my-query`, som använder en modell `my-model` från platskonfigurationen `my-conf`:
 
@@ -205,7 +205,7 @@ Plats `PERSISTENT_PATH` är en förkortad sökväg där den beständiga frågan 
 
    >[!NOTE]
    >
-   > Frågevariabler och -värden måste vara korrekta [kodad](#encoding-query-url) när en Persistent-fråga körs.
+   > Frågevariabler och -värden måste vara korrekta [kodad](#encoding-query-url) när en fråga som är sparad körs.
 
    Till exempel:
 
