@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: d6038920a5866c19a94980cc14fa46dec48daf51
+source-git-commit: 75621ba378d59bd36146b15995823c43c458d349
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 0%
@@ -27,7 +27,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.6.0) är 30 juni 2022.
 
-Nästa version (2022.7.0) är planerad till 28 juli 2022.
+Nästa version (2022.7.0) är planerad till 8 augusti 2022.
 
 ## Släpp video {#release-video}
 
