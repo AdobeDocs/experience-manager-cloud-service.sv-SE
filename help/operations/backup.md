@@ -2,9 +2,9 @@
 title: Innehållsåterställning i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
 exl-id: 469fb1a1-7426-4379-9fe3-f5b0ebf64d74
-source-git-commit: 09049213eaf92830dc0e0d4c0885017c69a5d56e
+source-git-commit: a61eaa8f13c96c87f45f4074ebd15e1dc8597c2c
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -27,10 +27,15 @@ Cloud Managers självbetjäningsåterställningsprocess kopierar data från säk
 
 Det finns två typer av säkerhetskopior i Cloud Manager som du kan återställa innehåll från.
 
-* **PIT (Point In Time):** Den här typen återställer från systemsäkerhetskopieringar från de senaste 24 timmarna från den aktuella tiden.
+* **PIT (Point In Time):** Den här typen återställer från kontinuerlig systemsäkerhetskopiering de senaste 24 timmarna från den aktuella tiden.
 * **Förra veckan:** Den här typen återställer från systemsäkerhetskopieringar de senaste sju dagarna, exklusive de senaste 24 timmarna.
 
 I båda fallen ändras inte versionen av den anpassade koden och AEM.
+
+Prestandamätningarna för att återställa innehåll i AEM som en ContentService refererar till de standardiserade prestandatesterna:
+
+* **Mål för återställningstid (RTO):** Målet för återställningstiden varierar beroende på databasens storlek, men som tumregel bör det ta ca 30 minuter när återställningssekvensen börjar.
+* **Återställningspunktens mål (RPO):** Målet för återställningspunkten är högst 24 timmar
 
 >[!TIP]
 >
