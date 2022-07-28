@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
+source-git-commit: 154fb4bf9bea187a2f733c35cc720f3da99755bb
 workflow-type: tm+mt
-source-wordcount: '3863'
+source-wordcount: '3920'
 ht-degree: 0%
 
 ---
@@ -178,6 +178,11 @@ Manuella redigeringar av översatt innehåll kan synkroniseras tillbaka till öv
 ![Jämför ändringar av översättningsminne](../assets/update-translation-memory-compare.png)
 
 AEM skickar tillbaka de markerade strängarna till översättningshanteringssystemet.
+
+* Åtgärden uppdaterar översättningen av befintliga strängar i översättningsminnet för konfigurerade översättningshanteringssystem (TMS).
+* Det skapar inte nya översättningsjobb.
+* Det skickar värdeparen för strängar och deras översättningar tillbaka till TMS via AEM översättnings-API.
+* Den här funktionen kräver att ett översättningshanteringssystem har konfigurerats för användning med AEM.
 
 ### Kontrollera översättningsstatus för en sida {#check-translation-status}
 
