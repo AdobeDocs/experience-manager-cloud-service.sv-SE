@@ -2,9 +2,10 @@
 title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.7.0
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.7.0
 feature: Release Information
-source-git-commit: f84327096951772e1bed8656334841e1292d6bcf
+exl-id: 2f787321-f156-480d-bbe8-1a6d04f110c5
+source-git-commit: ad9edf7bc164ea7e03496680dff8df6d1ebe266a
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '430'
 ht-degree: 2%
 
 ---
@@ -12,6 +13,22 @@ ht-degree: 2%
 # Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.7.0 {#release-notes}
 
 Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.7.0.
+
+## Best Practices Analyzer {#bpa-release}
+
+### Releasedatum {#release-date-bpa}
+
+Releasedatum för Best Practices Analyzer v2.1.30 är 27 juli 2022.
+
+### Nyheter {#what-is-new-bpa}
+
+* BPA kan nu identifiera och rapportera den totala flyttbara Lucene-indexstorleken som är Total Lucene-index exklusive `/oak:index/lucene` och `/oak:index/damAssetLucene`.
+* Ett nytt mönster har lagts till i BPA för att identifiera och rapportera användningen av den anpassade i18n-ordlistan. Translator.html är inte tillgängligt i AEM as a Cloud Service och anpassade i18n-ordlistor måste distribueras från Git via Cloud Managers CI/CD-pipeline.
+
+### Felkorrigeringar {#bug-fixes-bpa}
+
+* BPA rapporterade om saknade ursprungliga återgivningar för innehållsfragment. Eftersom innehållsfragment inte har några återgivningar hoppas den här kontrollen över innehållsfragment.
+* Alternativet att filtrera ACS Commons-resultat saknades i BPA-gränssnittet. Den här har åtgärdats.
 
 ## Content Transfer Tool {#ctt-release}
 
@@ -44,4 +61,3 @@ Releasedatum för Cloud Acceleration Manager är 15 juli 2022.
 
 * Molnaccelerationshanteraren ger nu användare möjlighet att hämta migreringstoken manuellt för att kunna påbörja ett intag när automatisk hämtning misslyckas. Automatisk hämtning kan misslyckas om kunderna har konfigurerat en IP-lista som blockerar CAM eller om en icke-admin-användare försöker starta ett intag. Se [Felsökning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#troubleshooting) för mer information.
 * Långa tabeller på sidan Migreringskomplexitet är nu komprimerbara för att underlätta användningen.
-
