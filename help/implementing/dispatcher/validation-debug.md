@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 4dff6bf09fe9337c70adb654d3eff27f5b45f518
+source-git-commit: d90a279840d85437efc7db40c68ea66da8fe2d90
 workflow-type: tm+mt
-source-wordcount: '2512'
+source-wordcount: '2536'
 ht-degree: 1%
 
 ---
@@ -78,6 +78,10 @@ Följande filer kan anpassas och överförs till din molninstans vid distributio
 * `conf.d/available_vhosts/<CUSTOMER_CHOICE>.vhost`
 
 Du kan ha en eller flera av dessa filer. De innehåller `<VirtualHost>` poster som matchar värdnamn och som tillåter att Apache hanterar varje domäntrafik med olika regler. Filerna skapas i `available_vhosts` och aktiveras med en symbolisk länk i `enabled_vhosts` katalog. Från `.vhost` filer, andra filer som omskrivningar och variabler inkluderas.
+
+>[!NOTE]
+>
+>I det flexibla läget bör du använda relativa sökvägar i stället för absoluta sökvägar.
 
 * `conf.d/rewrites/rewrite.rules`
 
@@ -481,11 +485,15 @@ $ docker exec d75fbd23b29 httpd-test
 Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstrukturer med [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) eller högre, som innehåller filen **opt-in/USE_SOURCES_DIRECTLY**. Detta tar bort tidigare begränsningar i [äldre läge](/help/implementing/dispatcher/validation-debug-legacy.md) runt antalet och storleken på filer, vilket även gör att SDK och runtime-modulen validerar och distribuerar konfigurationen på ett förbättrat sätt. Om din dispatcherkonfiguration inte har den här filen rekommenderar vi att du migrerar. Följ de här stegen för att säkerställa en säker övergång:
 
 1. **Lokal testning.** Lägg till mappen och filen med de senaste SDK-distributionsverktygen `opt-in/USE_SOURCES_DIRECTLY`. Följ instruktionerna för lokal validering i den här artikeln för att testa att dispatchern fungerar lokalt.
-2. **Molnutvecklingstestning:**
+1. **Molnutvecklingstestning:**
    * Verkställ filen `opt-in/USE_SOURCES_DIRECTLY` till en Git-gren som distribueras av icke-produktionsflödet till en molnutvecklingsmiljö.
    * Använd Cloud Manager för att distribuera till en molnutvecklingsmiljö.
    * Testa noggrant. Det är viktigt att du kontrollerar att konfigurationen för din cache och dispatcher fungerar som du förväntar dig innan du distribuerar ändringar i högre miljöer. Kontrollera alla beteenden som hör till din anpassade konfiguration! Registrera en kundsupportanmälan om du tror att den distribuerade dispatcherkonfigurationen inte återspeglar din anpassade konfiguration.
-3. **Distribuera till produktion:**
+
+   >[!NOTE]
+   >
+   >I det flexibla läget bör du använda relativa sökvägar i stället för absoluta sökvägar.
+1. **Distribuera till produktion:**
    * Verkställ filen `opt-in/USE_SOURCES_DIRECTLY` till en Git-gren som distribueras via produktionsflödet till molnscenen och produktionsmiljöerna.
    * Använd Cloud Manager för att distribuera till testmiljöer.
    * Testa noggrant. Det är viktigt att du kontrollerar att konfigurationen för din cache och dispatcher fungerar som du förväntar dig innan du distribuerar ändringar i högre miljöer. Kontrollera alla beteenden som hör till din anpassade konfiguration! Registrera en kundsupportanmälan om du tror att den distribuerade dispatcherkonfigurationen inte återspeglar din anpassade konfiguration.
