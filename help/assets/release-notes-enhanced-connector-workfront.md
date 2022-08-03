@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: d763bacb0844a438ebea6ef206dfa184a49993fe
+source-git-commit: f49ac67b7a90d638e266b9f7f5bf5ac9d7f78e3a
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -15,23 +15,19 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.1 av [!DNL Workfront for Experience Manager enhanced connector] är 1 juli 2022.
+Releasedatum för den senaste versionen, 1.9.2 av [!DNL Workfront for Experience Manager enhanced connector] är 3 augusti 2022.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande förbättringar och felkorrigeringar:
 
-* Stöd för autentisering mellan Experience Manager- och Workfront-program har lagts till med Workfront API-nyckel för instanser som migreras till Adobe IMS.
+* The **[!UICONTROL Upload Document]** arbetsflödessteget kan inte bifoga ett dokument till Workfront.
 
-* När du länkar externa filer eller mappar visas `SERVER_ERROR` felmeddelande. Felmeddelandet refererar till ett otillåtet undantag på grund av en felmatchning i API-nycklar.
-
-* När du kör ett arbetsflöde för Skapa uppgift för en resurs visas undantaget Null-pekare i loggmeddelandena.
-
-* När du aktiverar `Replace Spaces with DASH` konfigurationsalternativet under Avancerade inställningar i Experience Manager resulterar i att en dubblett av mapparna skapas i Workfront.
+* The **[!UICONTROL Upload Document]** arbetsflödessteget kan inte bifoga ett dokument till uppgifter och ärenden i Workfront. Arbetsflödessteget kopplar ett dokument till projekt.
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [uppgradera till den senaste 1.9.1-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar att du [uppgradera till den senaste 1.9.2-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -40,6 +36,18 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** listrutan samt **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i den nya Workfront-upplevelsen.
 
 ## Tidigare versioner {#previous-releases}
+
+### juliversion 2022 {#july-2022-release}
+
+[!DNL Workfront for Experience Manager enhanced connector] version 1.9.1 innehåller följande uppdateringar:
+
+* Stöd för autentisering mellan Experience Manager- och Workfront-program har lagts till med Workfront API-nyckel för instanser som migreras till Adobe IMS.
+
+* När du länkar externa filer eller mappar visas `SERVER_ERROR` felmeddelande. Felmeddelandet refererar till ett otillåtet undantag på grund av en felmatchning i API-nycklar.
+
+* När du kör ett arbetsflöde för Skapa uppgift för en resurs visas undantaget Null-pekare i loggmeddelandena.
+
+* När du aktiverar `Replace Spaces with DASH` konfigurationsalternativet under Avancerade inställningar i Experience Manager resulterar i att en dubblett av mapparna skapas i Workfront.
 
 ### Juniversion 2022 {#june-2022-release}
 
