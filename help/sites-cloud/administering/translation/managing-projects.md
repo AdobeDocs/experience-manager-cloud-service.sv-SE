@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: 154fb4bf9bea187a2f733c35cc720f3da99755bb
+source-git-commit: 998b71903f3ea0c3c1082ecc800331811c2af8cf
 workflow-type: tm+mt
-source-wordcount: '3920'
+source-wordcount: '3992'
 ht-degree: 0%
 
 ---
@@ -177,12 +177,20 @@ Manuella redigeringar av översatt innehåll kan synkroniseras tillbaka till öv
 
 ![Jämför ändringar av översättningsminne](../assets/update-translation-memory-compare.png)
 
-AEM skickar tillbaka de markerade strängarna till översättningshanteringssystemet.
+AEM uppdaterar översättningen av de befintliga strängarna i översättningsminnet för den konfigurerade TMS:en.
 
-* Åtgärden uppdaterar översättningen av befintliga strängar i översättningsminnet för konfigurerade översättningshanteringssystem (TMS).
+* Åtgärden uppdaterar översättningen av befintliga strängar i översättningsminnet för den konfigurerade TMS:en.
 * Det skapar inte nya översättningsjobb.
-* Det skickar värdeparen för strängar och deras översättningar tillbaka till TMS via AEM översättnings-API.
-* Den här funktionen kräver att ett översättningshanteringssystem har konfigurerats för användning med AEM.
+* Det skickar översättningarna tillbaka till TMS via AEM översättnings-API (se nedan).
+
+Så här använder du den här funktionen:
+
+* En TMS måste konfigureras för användning med AEM.
+* Kopplingen måste implementera metoden [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html).
+   * Koden i den här metoden avgör vad som händer med uppdateringsbegäran för översättningsminnet.
+   * Det AEM översättningsramverket skickar strängvärdepar (original och uppdaterad översättning) tillbaka till TMS via den här metodimplementeringen.
+
+Uppdateringarna av översättningsminnet kan fångas upp och skickas till en anpassad destination, i de fall där ett tillverkarspecifikt översättningsminne används.
 
 ### Kontrollera översättningsstatus för en sida {#check-translation-status}
 
