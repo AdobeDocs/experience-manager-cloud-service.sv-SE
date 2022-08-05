@@ -3,7 +3,7 @@ title: Versionsinformation om Cloud Manager 2022.7.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2022.7.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 5200ee315ad88dae4b52c0ea904489e73f62a8a0
+source-git-commit: 9f76f77365c0e9b2986e9bb3560bc039e0ca7961
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 1%
@@ -21,7 +21,7 @@ På den här sidan visas versionsinformation för Cloud Manager 2022.7.0 i AEM a
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.7.0 i AEM as a Cloud Service är 30 juni 2022. Nästa version är planerad till den 11 augusti 2022.
+Releasedatum för Cloud Manager version 2022.7.0 i AEM as a Cloud Service är 8 augusti 2022. Nästa version är planerad till den 11 augusti 2022.
 
 ## Nyheter {#what-is-new}
 
