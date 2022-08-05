@@ -3,9 +3,9 @@ title: AEM Headless Developer Journey
 description: 'Börja här för en guidad resa via Adobe Experience Manager (AEM) as a Cloud Service när det används som ett Headless Content Management System (CMS). Lär dig mer om de kraftfulla och flexibla headless-funktionerna, deras funktioner och hur du kan utnyttja dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all information du behöver för att utveckla din första headless-applikation. '
 landing-page-description: 'Få en förståelse för innehållsleverans och implementering utan problem. Läs mer om hur ni utvecklar er strategi inom ert företag. '
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: 2ec6b29800867462bbc2e88048c583d4e5eefa57
+source-git-commit: 1424c604e175cce0728f49f548d0bebec76043f4
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1300'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Den här guiden leder dig igenom de mest rubrikfria implementeringsämnena i AEM
 
 [En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar att man löser problem med headless business case med AEM, [AEM Headless Journeys](/help/journey-documentation/documentation-journeys.md) var du ska börja.
 
@@ -49,7 +49,7 @@ Följande personer interagerar på den här resan.
 | Administratör | Hanterar AEM grundinställningar och konfiguration | Utvecklaren arbetar tillsammans med administratören för att göra de konfigurationsändringar som behövs för utvecklingen. |
 | Innehållsarkitekt | Analyserar kraven för de data som måste levereras utan huvud och definierar strukturen för dessa data | Utvecklarna arbetar tillsammans med innehållsarkitekten för att förstå datastrukturen och kraven för att kunna leverera den utan problem. |
 
-Information under denna resa kan förstås vara användbar för alla personer, men viss information kan vara överflödig för vissa roller. Stanna kvar på [kommande resor som omfattar ytterligare roller.](/help/journey-documentation/documentation-journeys.md#journeys)
+Information i den här resan kan vara användbar för alla personer, men viss information kanske inte behövs för vissa roller. Stanna kvar på [kommande resor som omfattar ytterligare roller.](/help/journey-documentation/documentation-journeys.md#journeys)
 
 ## The Headless Developer Journey {#the-journey}
 
