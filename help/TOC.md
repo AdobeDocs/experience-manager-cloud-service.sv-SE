@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 3fc0a6626fdf0addfdc572560c01eac3296c5012
+source-git-commit: a324bcc64842ff3c3d04dc5164d21b47c14ac94e
 workflow-type: tm+mt
-source-wordcount: '3709'
+source-wordcount: '3714'
 ht-degree: 22%
 
 ---
@@ -340,6 +340,7 @@ ht-degree: 22%
       + [Integrera med Adobe Analytics](/help/sites-cloud/integrating/integrating-adobe-analytics.md)
       + [Integrering med Adobe Analytics Automated Setup](/help/sites-cloud/integrating/adobe-analytics-exc-setup-automation.md)
       + [IMS-konfiguration som ska användas vid integrering med Adobe Analytics](/help/sites-cloud/integrating/integration-adobe-analytics-ims.md)
+      + [Integrera med Adobe Learning Manager](/help/sites-cloud/integrating/integrating-adobe-learning-manager.md)
       + [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md)
       + [IMS-konfiguration som ska användas vid integrering med Adobe Target](/help/sites-cloud/integrating/integration-adobe-target-ims.md)
       + [Exportera Experience Fragments till Adobe Target](/help/sites-cloud/integrating/experience-fragments-target.md)
