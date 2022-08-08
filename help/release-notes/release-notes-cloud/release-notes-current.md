@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 75621ba378d59bd36146b15995823c43c458d349
+source-git-commit: 2340c9416d90f7973109ba57c1769ae892049026
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
@@ -25,78 +25,92 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.6.0) är 30 juni 2022.
+Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.7.0) är 8 augusti 2022.
 
-Nästa version (2022.7.0) är planerad till 8 augusti 2022.
+Nästa version (2022.8.0) är planerad till den 25 augusti 2022.
 
 ## Släpp video {#release-video}
 
-Titta på videon med versionsöversikten för juni 2022 om du vill se en sammanfattning av funktioner som lagts till i version 202.6.0:
+Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanfattning av funktioner som lagts till i version 202.7.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/344308/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/345409/?quality=12)
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* En ny [användargränssnitt](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) är nu tillgängligt för innehållsadministratörer och innehållsförfattare att effektivt hantera (vidta åtgärder som att publicera, avpublicera, kopiera, flytta osv.), söka/filtrera och skapa innehållsfragment för Headless-fall.
+* The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) har nu stöd för kortkommandon.
 
-   ![Konsol för innehållsfragment](/help/release-notes/assets/cf-ui.png)
+* AEM som Cloud Service [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ger möjlighet att avsevärt förbättra sidhastigheten genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. Alla versioner av [Core Image Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan du använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
 
-* Den nya [Innehållsförteckningskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/tableofcontents.html) fungerar inte bara med kärnkomponenterna utan med alla komponenter, vilket automatiskt återger ToCS på innehållssidorna. Och eftersom den renderas på serversidan och cachas fullständigt av dispatchern är det också effektivt att läsa in den.
+* AEM kan nu utnyttja upplevelsefragment i stället för våra gamla erbjudanden. Den här funktionen:
+   * möjliggör en migreringsväg där AEM innehåll skulle främja upplevelsefragmenterbjudanden i stället för äldre bibliotekserbjudanden för att tillhandahålla lämpligt formaterat innehåll som passar personaliseringen i stor skala framåt.
+   * förhindrar att innehållsförfattare av misstag skickar oformaterat innehåll till sin webbplats.
+   * gör att målinriktningsläge för alla komponenter kan konverteras till ett upplevelsefragment (både JSON- och HTML-typer) som använder redigerbara mallar.
+
+>[!NOTE]
+>
+>Befintliga personaliseringsaktiviteter som redan använder äldre erbjudanden kan fortsätta att göra det, men nya personaliseringsaktiviteter bör skapas som upplevelsefragment eftersom det är det rekommenderade tillvägagångssättet.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i [!DNL Assets] {#assets-features}
+### Nya funktioner i [!DNL Assets] prerelease channel {#prerelease-features-assets}
 
-Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja på färger i en bild och använda dem som taggar automatiskt vid förtäring](../../assets/color-tag-images.md). Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition. Du kan konfigurera antalet färger, inom ett intervall av en till fyrtio, som är taggade till en bild så att du kan söka efter bilder baserade på dessa färger senare.
+Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen](/help/assets/configure-asset-upload-restrictions.md).
+
+![Begränsningar för överföring av tillgångar](/help/assets/assets/asset-upload-restrictions.png)
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
 ### Nya funktioner i [!DNL Forms] {#forms-features}
 
-* **[Integrera adaptiv Forms med Microsoft® Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)**: Nu kan du konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden.
+* **Stöd för tangentbordsinmatning med Scribble-signaturer**: Adaptiv Forms används i allt större utsträckning på pekenheter, och ett vanligt krav är att stödja signaturer. Att signera dokument på pekenheter har blivit ett accepterat sätt att signera formulär. Adaptiv Forms har inbyggt stöd för Scribble Signatures och Adobe Sign för sådana användningsområden. Nu kan du, tillsammans med andra alternativ som redan stöds, även använda tangentbordet för att göra signaturer smarta i ett adaptivt formulär. Det förbättrar också tillgängligheten.
 
-* **Guide för att skapa ett adaptivt formulär**: Du kan använda en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden ger dig en snabb fliknavigering så att du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär.
+![Stöd för tangentbordsinmatning för klottersignaturer på iphone](/help/release-notes/assets/scribble-keyboard-mobile.png)
 
-   ![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png)
+* **Använd guiden Adaptiv Forms på det lokala språket**: Du kan använda guiden på valfritt språk. Det har nu stöd för alla språk som stöds av Adobe Experience Manager.
+
+### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
+
+<!-- * **[Launch Adaptive Form creation wizard from embed form component](/help/forms/using/embed-adaptive-form-aem-sites.md)**: You can now launch Adaptive Form creation wizard from embed form component. It helps improve content and forms authoring workflows for Sites and Forms practitioners trying to add enrollment experiences to a web page. 
+
+![Keyboard input support for Scribble signatures on iphone](/help/release-notes/assets/froms-container.png) -->
+
+* **Anropa - ett AEM arbetsflödessteg**: Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX-dokument är mallar för dokumenten och beskriver önskade egenskaper för källdokument som ska visas i resulterande dokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget Anropa och AEM arbetsflöde för att utföra olika åtgärder, t.ex. att samla ihop dokument, skapa och ändra Acrobat och XFA Forms samt andra åtgärder som beskrivs i [DDX-referens](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) dokumentation.
+
+* **Konvertera till PDF/A - ett AEM arbetsflödessteg**: PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt. Alla teckensnitt bäddas in och filen är okomprimerad. Nu kan du använda steget Konvertera till PDF/A och AEM arbetsflöde för att konvertera dina dokument eller filer i valfritt format till PDF/A-format.
+
 
 ## CIF-tillägg {#cloud-services-cif}
 
 ### Vad är nytt? {#what-is-new-cif}
 
-* Ny egenskapssida för produktcockpit för bättre och enklare översikt
+* Produktkatalogsberikning har nu stöd för AEM sidor. Detta gör att författare kan hantera sida - produktassociation.
 
-![översikt över egenskaper för produktcockpit](/help/assets/CIF/product_cockpit_properties_overview.png)
-
-* Förbättrad kompatibilitet och tillförlitlighet för anslutningar från tredje part vid I/O-körning
-
-* Förbättrat stöd för överskrivningar av GQL-klientkonfiguration (t.ex. ange anpassad cachelagring)
-
-* Flera slutpunkter för e-handel stöds nu direkt och kan konfigureras via Cloud Manager. Information finns i CIF-bloggen [här](https://medium.com/adobetech/use-aem-as-a-cloud-service-with-multiple-adobe-commerce-systems-9295612a9554).
-
+* Olika förbättringar av CIF-kärnkomponenten
 
 ### Felkorrigeringar {#bug-fixes-cif}
 
-* Produktväljarfältet för flera värden visar att andra och ytterligare produkter är ogiltiga
+* Lägg till inloggningstoken till prishämtning på klientsidan
 
-* Produktväljaren döljs ibland bakom komponenter
-
-## Tillägget Referensdemonstrationer {#cloud-services-demos}
-
-### Vad är nytt? {#what-is-new-demos}
-
-* Ny WKND Content &amp; Commerce-mall som utökar WKND med en E2E-shoppingupplevelse med produktkatalog, kundvagn, utcheckning och mitt konto. Den här mallen använder CIF och dess CIF Core-komponenter, och därför måste du även installera CIF-tillägget. Information finns i CIF-bloggen [här](https://medium.com/adobetech/learn-how-to-create-a-shoppable-experience-with-the-new-wknd-reference-site-and-cif-b3b2c161f67e).
-
-![WKND](/help/assets/CIF/wknd_shop.png)
-
-![WKND-pdp](/help/assets/CIF/wknd_pdp.png)
+* Fel sidkomponent i datalagret
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
 ### Vad är nytt? {#what-is-new-foundation}
 
-* Som nämndes i versionsinformationen från maj (2022.5.0) finns alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **Distribuera** har tagits bort. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Publicera innehållsträd](/help/operations/replication.md#manage-publication#publish-content-tree-workflow) arbetsflöde.
+* The [Databasläsare](/help/implementing/developing/tools/repository-browser.md) har nu ett sökvägsinmatningsfält, vilket gör det möjligt att hoppa direkt till en viss mapp i databashierarkin
+* Sling Content Distribution (SCD) har nu stöd för en explicit&quot;invalidation&quot;-åtgärd för att göra innehåll ogiltigt utan att innehållet publiceras. Se [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md#explicit-invalidation) sida för mer information.
+* mod_macro finns nu i AEM as a Cloud Service. Se [det här registret](/help/implementing/dispatcher/disp-overview.md) för en lista över Apache-moduler som stöds.
+
+### Förbättringar i AEM as a Cloud Service SDK Dispatcher Tools {#dispatcher-tools-enhancements}
+
+* Apache kan startas med `update_sdk.sh` som automatiskt läser in och validerar alla efterföljande ändringar i cache- och dispatcherkonfigurationen, vilket förbättrar utvecklarhastigheten. Stöds endast för flyttarverktygens flexibla läge. Se även [Felsöka konfigurationen av Apache och Dispatcher](/help/implementing/dispatcher/validation-debug.md#automatic-loading) om du vill ha mer information om automatisk inläsning och validering.
+* Lokal konfiguration av cache/dispatcher spårar förändringar i molnmiljöer närmare, vilket ökar pariteten mellan de två miljöerna.
+
+### Nya funktioner i [!DNL Experience Manager] prerelease channel {#prerelease-features-foundation}
+
+* AEM as a Cloud Service är nu integrerat med Unified Shell för att förbättra användarupplevelsen och göra den enhetlig med alla andra Experience Cloud-program. Se [AEM as a Cloud Service on Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md) för mer information.
 
 ## Cloud Manager {#cloud-manager}
 

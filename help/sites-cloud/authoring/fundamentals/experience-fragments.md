@@ -2,9 +2,9 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 66bc262b35f69b7877e4a01df9ab26395afd604d
+source-git-commit: 0199291bf4c0bb938072e601a9d1cc6d2940d4f0
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1566'
 ht-degree: 6%
 
 ---
@@ -346,6 +346,10 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn** vi
       * **Pinterest board**
    * **Referenser**
       * En lista med referenser
+   * **Personanpassning**
+      * **ContextHub-sökväg**
+      * **Segmentsökväg**
+      * **Varumärke**
 
 ## The Plain HTML Rendition {#the-plain-html-rendition}
 

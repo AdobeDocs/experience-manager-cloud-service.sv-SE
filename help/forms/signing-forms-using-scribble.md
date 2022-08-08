@@ -9,21 +9,43 @@ topic-tags: author
 discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-source-git-commit: 73953a3d71f3328def3bd4c1f03516b4839695ea
+exl-id: dc89ecb1-2d9e-4d1d-b85b-af90c550e7d8
+source-git-commit: 76f13cb4236b8c7eb515d647a1cede6fa2cf4799
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
-
 
 # Använda elektroniska signaturer i ett formulär med hjälp av klottersignaturer{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
 
 Du kan använda **Klottersignatur** komponenter och **Signatursteg** -komponent för att rita (Klottra) signatur i ett adaptivt formulär. Underskriftsstegkomponenten visar en PDF-version av det adaptiva formuläret. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserad adaptiv Forms för att kunna använda signaturstegskomponenten.
 
-Båda komponenterna har ett fönster som visas nedan för att signera ett formulär. Du kan också klicka på ikonen för geopositionering ![aem_6_3_geolocation](assets/aem_6_3_geolocation.png) för att lägga till geopositionering till signaturen.
-
 ![Dialogrutan Klottra signering](assets/scribble-signature.png)
+
+## Olika alternativ i signaturfönstret
+
+* **S:** Klicka på **Målarpensel** för att rita din signatur på arbetsytan.
+* **B:** Klicka på **Rensa** -ikonen för att rensa signaturen på arbetsytan.
+* **C:** Klicka på **Geolokalisering** -ikon för att lägga till geopositionering tillsammans med signaturen.
+* **D:** Klicka på **Tangentbord** om du vill skriva ditt namn på arbetsytan.
+
+När du har tryckt på Klar ![aem_forms_save](assets/aem_forms_save.png) -ikonen i fönstret Klottsignatur kan du inte redigera signaturen. Om du vill redigera signaturen måste du bortse från den aktuella signaturen och signera igen med alternativet Målningspensel/Tangentbord ovan.
+
+Du kan trycka på **Konfigurera** ![](assets/configure.png) -ikonen för att ange proportioner för arbetsytan Skrivbar signatur.
+* När proportionerna för arbetsytan Klottra signatur är mindre än 1 läggs platsinformationen till längst ned på arbetsytan Klottra signatur.
+
+
+* När proportionerna för arbetsytan Klottra signatur är större än 1 läggs platsinformationen till till höger på arbetsytan Klottra signatur.
+
+
+![klottra signature-bottom](assets/scribble-signature-aspectratio.PNG)
+
+
+
+>[!NOTE]
+>
+>Signaturer sparas alltid i PNG-format.
 
 ## Konfigurera ett anpassat formulär för att använda skriptsignatur {#configure-an-adaptive-form-to-use-scribble-signature}
 
@@ -36,7 +58,7 @@ Båda komponenterna har ett fönster som visas nedan för att signera ett formul
    >
    >Komponenten Signatursteg får full bredd som är tillgänglig för formuläret. Vi rekommenderar att du inte har någon annan komponent i avsnittet som innehåller komponenten Signatursteg.
 
-1. Tryck på **Formulärbehållare** och trycker på **Konfigurera** ![](assets/configure.png) ikon. Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas. Navigera till **Adaptiv formulärbehållare** > **Elektronisk signatur** och avmarkera **Aktivera Adobe Sign** alternativ. Tryck på Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) om du vill spara ändringarna.
+1. Tryck på **Formulärbehållare** och trycker på **Konfigurera** ![](assets/configure.png) ikon. Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas. Navigera till **Adaptiv formulärbehållare** > **Elektronisk signatur** och avmarkera **Aktivera Adobe Sign** alternativ. Tryck på Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna.
 
    >[!NOTE]
    >
@@ -52,7 +74,7 @@ Båda komponenterna har ett fönster som visas nedan för att signera ett formul
 
    * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om det finns någon. Det rekommenderas att använda [teman](themes.md) och [infogade format](inline-style-adaptive-forms.md) i stället för CSS-klassen.
 
-   Tryck på Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) om du vill spara ändringarna. Signaturen har konfigurerats.
+   Tryck på Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna. Signaturen har konfigurerats.
 
    När du fyller i ett formulär visas nu en PDF-version av det adaptiva formuläret och alternativ för att signera PDF-dokumentet finns. Mer information finns i [Signera ett anpassat formulär med klottrar signatur](signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature).
 
@@ -62,13 +84,12 @@ Båda komponenterna har ett fönster som visas nedan för att signera ett formul
 
    ![Signaturskärm för EchoSign-sida](assets/esignscribblesign.jpg)
 
-1. Klicka på **[!UICONTROL Sign]**. Dialogrutan för klottersignering visas. Signera formuläret och klicka på Klar ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png) -ikonen för att spara signaturen.
+1. Klicka på **[!UICONTROL Sign]**. Dialogrutan för klottersignering visas. Signera formuläret och klicka på Klar ![aem_forms_save](assets/aem_forms_save.png) -ikonen för att spara signaturen.
 
-   ![Dialogrutan Klottra signering](assets/scribblewidget.jpg)
+   ![Dialogrutan Klottra signering](assets/scribblewidget.png)
 
 1. Klicka på Slutför för att slutföra signeringsprocessen.
 
    ![Slutför signeringsprocessen](assets/scribblecomplete.jpg)
 
 Signaturerna läggs till i formuläret och formulärkontrollen flyttas till nästa panel.
-

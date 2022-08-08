@@ -3,9 +3,9 @@ title: 'Hur tilldelar man ett arbetsflöde till en annan användare, skickar e-p
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-source-git-commit: 69d86454c9d3dd869a69c7f720bce077b0149860
+source-git-commit: 447dd15cfa7e414b56fe09f2affb5f720bcd734e
 workflow-type: tm+mt
-source-wordcount: '4939'
+source-wordcount: '5523'
 ht-degree: 0%
 
 ---
@@ -140,6 +140,23 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 >
 >Alternativen för att spara steget Tilldela uppgift som utkast och för att hämta historiken för steget Tilldela uppgift inaktiveras när du konfigurerar en AEM arbetsflödesmodell för extern datalagring. I Inkorgen är dessutom alternativet att spara inaktiverat.
 
+## Konvertera till PDF/A-steg {#convert-pdfa}
+
+PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt genom att teckensnitten bäddas in och filen dekomprimeras. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Du kan använda ***Konvertera till PDF/A*** i ett AEM arbetsflöde för att konvertera dina PDF-dokument till PDF/A-format.
+
+Konvertera till PDF/A-steget har följande egenskaper:
+
+**[!UICONTROL Input Document]**: Indatadokumentet kan vara relativt till nyttolasten, ha en absolut sökväg, kan anges som nyttolast eller lagras i en variabel med datatypen Document.
+
+**[!UICONTROL Conversion Options]**: Med den här egenskapen anges inställningar för konvertering av PDF-dokument till PDF/A-dokument. De olika alternativ som är tillgängliga under den här fliken är:
+* **[!UICONTROL Compliance]**: Anger de standarder som utdata-PDF/A-dokumentet måste uppfylla.
+* **[!UICONTROL Result Level]**: Anger resultatnivån som PassFail, Summary eller Detailed för konverteringsutdata.
+* **[!UICONTROL Color Space]**: Anger den fördefinierade färgrymd som används för utdata i PDF/A-filer.
+* **[!UICONTROL Optional Content]**: Tillåter att specifika grafiska objekt och/eller anteckningar visas i utdata i PDF/A-dokument, endast när en angiven uppsättning villkor uppfylls.
+
+**[!UICONTROL Output Documents]**: Anger platsen där utdatafilen ska sparas. Utdatafilen kan sparas på en plats som är relativ till nyttolasten, skriver över nyttolasten, om nyttolasten är en fil eller i en variabel av dokumentdatatypen.
+
+
 ## Skicka e-poststeg {#send-email-step}
 
 Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett postdokument, en länk till ett anpassat formulär <!-- , link of an interactive communication-->eller med ett bifogat PDF-dokument. Skicka e-poststeg som stöds [HTML email](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en HTML-e-postmall för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
@@ -197,6 +214,31 @@ Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer so
 **[!UICONTROL Save Generated Document of Record using below options]**: Ange platsen för att behålla en postdokumentfil. Du kan välja att skriva över nyttolastmappen, placera postdokumentet på en plats i nyttolastkatalogen eller lagra postdokumentet i en variabel av dokumentdatatypen.
 
 **[!UICONTROL Locale]**: Ange språk för dokumentdokumentet. Välj **[!UICONTROL Literal]** för att välja språkinställning i en nedrullningsbar lista eller välja **[!UICONTROL Variable]** för att hämta språkinställningen från värdet som lagras i en variabel av strängdatatyp. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
+
+## Anropa DDX-steg {#invokeddx}
+
+Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX definierar en uppsättning åtgärder som kan tillämpas på ett eller flera indatadokument för att generera ett eller flera utdatadokument.  Ett enda DX kan användas med ett antal olika källdokument. Du kan använda ***Anropa DDX-steg*** i ett AEM arbetsflöde för att utföra olika åtgärder, t.ex. sammansättning av disassemblerande dokument, Skapa och ändra Acrobat och XFA Forms, samt annat som beskrivs i [DDX-referensdokumentation](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf).
+
+Anropa DDX-steget har följande egenskaper:
+
+**[!UICONTROL Input Documents]**: Används för att ange egenskaper för ett inmatningsdokument. De olika alternativ som är tillgängliga under den här fliken är:
+* **[!UICONTROL Specify DDX Using]**: Anger indatadokumenten i förhållande till nyttolasten, har en absolut sökväg, kan anges som nyttolast eller lagras i en variabel av dokumentdatatypen.
+* **[!UICONTROL Create Map from Payload]**: Lägger till alla dokument under nyttolastmappen i Input Document Map för invoke API i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
+* **[!UICONTROL Input Document’s Map]**: Alternativet används för att lägga till flera poster med **[!UICONTROL ADD]** -knappen. Varje post representerar dokumentets nyckel på kartan och dokumentets källa.
+
+**[!UICONTROL Environment Options]**: Det här alternativet används för att ange bearbetningsinställningar för anrop av API. De olika alternativ som är tillgängliga under den här fliken är:
+* **[!UICONTROL Validate Only]**: Kontrollerar giltigheten för indata-DDX-dokumentet.
+* **[!UICONTROL Fail on Error]**: Kontrollerar om anrop-API-tjänsten misslyckas om ett fel uppstår. Som standard är värdet Falskt.
+* **[!UICONTROL First Bates Number]**: Anger talet, som ökar automatiskt. Det här självökande numret visas automatiskt på varje sida i följd.
+* **[!UICONTROL Default Style]**: Anger standardformatet för utdatafilen.
+
+>[!NOTE]
+>
+>Miljöalternativen hålls synkroniserade med HTTP-API:er.
+
+**[!UICONTROL Output Documents]**: Anger platsen där utdatafilen ska sparas. De olika alternativ som är tillgängliga under den här fliken är:
+* **[!UICONTROL Save Output in Payload]**: Sparar utdatadokument under nyttolastmappen, eller skriver över nyttolasten om nyttolasten är en fil.
+* **[!UICONTROL Output Document’s Map]**: Anger platsen där varje dokumentfil ska sparas explicit genom att en post per dokument läggs till. Varje post representerar dokumentet och platsen där det ska sparas. Om det finns flera utdatadokument används det här alternativet.
 
 ## Anropa tjänststeg för formulärdatamodell {#invoke-form-data-model-service-step}
 

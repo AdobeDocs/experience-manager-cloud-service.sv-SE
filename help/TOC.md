@@ -8,10 +8,10 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: d0e2dda682a45483964336aac2c0d3f87b4ca833
+source-git-commit: 3fc0a6626fdf0addfdc572560c01eac3296c5012
 workflow-type: tm+mt
-source-wordcount: '3697'
-ht-degree: 23%
+source-wordcount: '3709'
+ht-degree: 22%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 23%
    + Allmän information om AEMaaCS {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2022 {#2022}
+         + [Versionsinformation för 2022.6.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-6-0.md)
          + [Versionsinformation för 2022.5.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-5-0.md)
          + [Versionsinformation för 2022.4.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-4-0.md)
          + [Versionsinformation för 2022.3.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-3-0.md)
@@ -290,6 +291,7 @@ ht-degree: 23%
          + [Markdown](/help/sites-cloud/administering/content-fragments/content-fragments-markdown.md)
          + [Strukturträd](/help/sites-cloud/administering/content-fragments/content-fragments-structure-tree.md)
          + [Förhandsgranska - JSON-representation](/help/sites-cloud/administering/content-fragments/content-fragments-json-preview.md)
+         + [Console för innehållsfragment - kortkommandon](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md)
       + Skapa webbplats {#site-creation}
          + [Skapa en ny plats](/help/sites-cloud/administering/site-creation/create-site.md)
          + [Aktivera frontpipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md)
@@ -396,6 +398,7 @@ ht-degree: 23%
       + [XMP-metadata](/help/assets/xmp-metadata.md)
       + [MediaLibrary-funktioner](/help/assets/medialibrary.md)
       + [Importera och exportera metadata för material](/help/assets/metadata-import-export.md)
+      + [Konfigurera överföringsbegränsningar för resurser](/help/assets/configure-asset-upload-restrictions.md)
    + Dela och driftsätta resurser {#brand-portal}
       + [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](/help/assets/configure-aem-assets-with-brand-portal.md)
       + [Publicera resurser på [!DNL Brand Portal]](/help/assets/publish-to-brand-portal.md)

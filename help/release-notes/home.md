@@ -2,10 +2,10 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: 57e1f39394f501b8fc2ab8ff5f7d12f6365016e9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 31%
 
 ---
 
@@ -13,16 +13,16 @@ ht-degree: 0%
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2022.6.0 |
+| Version | 2022.7.0 |
 | Typ | Kontinuerliga uppdateringar |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 
 ## Förbereda för en release {#how-to-prepare}
 
-Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager] as a Cloud Service uppdateras programmet automatiskt fortlöpande. Det finns två typer av uppdateringar, funktionsreleaser och viktiga uppdateringar:
+Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager] as a Cloud Service uppdateras programmet automatiskt fortlöpande. Det finns två typer av uppdateringar, funktionsreleaser och underhållsreleaser:
 
 * Funktionsreleaser görs med en förutsägbar månadsfrekvens och fokuserar på nya funktioner och produktinnovationer.
-* Viktiga uppdateringar görs ofta och fokuseras på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta säkerställer att [!DNL Adobe Experience Manager] as a Cloud Service är alltid uppdaterad med alla viktiga korrigeringar.
+* Underhållsreleaser görs ofta och fokuserar på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta säkerställer att [!DNL Adobe Experience Manager] as a Cloud Service är alltid uppdaterad med alla viktiga korrigeringar.
 
 Förutom innovationshastigheten [!DNL Adobe Experience Manager] as a Cloud Service ger också möjlighet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna långt i förväg.
 

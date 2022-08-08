@@ -2,16 +2,16 @@
 title: Kortkommandon för sidredigering
 description: Det finns olika kortkommandon i hela AEM, bland annat för sidredigering
 exl-id: 6c501897-48f9-478a-b143-d3ad19643b8c
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 7c9a8765c1d193a880ad4352f20660249effa881
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '237'
 ht-degree: 2%
 
 ---
 
 # Kortkommandon för sidredigering {#keyboard-shortcuts-when-editing-pages}
 
-Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, andra för [användning av konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, andra för [användning av konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md), och vissa särskilt [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 >
 >När användaren börjar interagera med sidan i förhandsgranskningsläget `Ctrl-Shift-m` kortkommandot är inte längre tillgängligt. Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
 
-Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md).
+Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md), och vissa särskilt [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
