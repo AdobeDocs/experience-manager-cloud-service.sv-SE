@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: d90a279840d85437efc7db40c68ea66da8fe2d90
+source-git-commit: 6f80c6d32d3eca1b0ef2977c740ef043529fab96
 workflow-type: tm+mt
-source-wordcount: '2536'
+source-wordcount: '2653'
 ht-degree: 1%
 
 ---
@@ -229,6 +229,10 @@ Skriptet har följande tre faser:
 
 Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också att utföras och eventuella fel kommer att inkluderas i Cloud Manager `Build Images step failure` log.
 
+>[!NOTE]
+>
+>Se [Automatisk inläsning och validering](#automatic-loading) för ett effektivt alternativ till att köra `validate.sh` efter varje konfigurationsändring.
+
 ### Fas 1 {#first-phase}
 
 Om ett direktiv inte är tillåtslista loggas ett fel och en avslutningskod som inte är noll returneras. Dessutom genomsöks alla filer ytterligare med mönstret `conf.dispatcher.d/enabled_farms/*.farm` och kontrollerar att
@@ -418,6 +422,42 @@ Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `R
 När du kör Dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh src docker.for.mac.localhost:4503 8080`.
 
 Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
+
+### Automatisk inläsning och validering {#automatic-loading}
+
+>[!NOTE]
+>
+>På grund av en Windows-begränsning är den här funktionen bara tillgänglig för Linux-användare.
+
+Istället för att köra lokal validering (`validate.sh`) och starta dockningsbehållaren (`docker_run.sh`) varje gång konfigurationen ändras kan du köra `docker_run_hot_reload.sh` skript.  Skriptet söker efter ändringar i konfigurationen och läser automatiskt in den igen och kör valideringen igen. Genom att använda det här alternativet kan du spara mycket tid vid felsökning.
+
+Du kan köra skriptet med följande kommando: `./bin/docker_run_hot_reload.sh src/dispatcher host.docker.internal:4503 8080`
+
+Observera att de första utdataraderna ser ut ungefär som de skulle köras för `docker_run.sh`, till exempel:
+
+```
+~ bin/docker_run_hot_reload.sh src host.docker.internal:8081 8082
+opt-in USE_SOURCES_DIRECTLY marker file detected
+Running script /docker_entrypoint.d/10-check-environment.sh
+Running script /docker_entrypoint.d/15-check-pod-name.sh
+Running script /docker_entrypoint.d/20-create-docroots.sh
+Running script /docker_entrypoint.d/30-wait-for-backend.sh
+Waiting until host.docker.internal is available
+host.docker.internal resolves to 192.168.65.2
+Running script /docker_entrypoint.d/40-generate-allowed-clients.sh
+Running script /docker_entrypoint.d/50-check-expiration.sh
+Running script /docker_entrypoint.d/60-check-loglevel.sh
+Running script /docker_entrypoint.d/70-check-forwarded-host-secret.sh
+Running script /docker_entrypoint.d/80-frontend-domain.sh
+Running script /docker_entrypoint.d/zzz-import-sdk-config.sh
+WARN Mon Jul  4 09:53:54 UTC 2022: Pseudo symlink conf.d seems to point to a non-existing file!
+INFO Mon Jul  4 09:53:55 UTC 2022: Copied customer configuration to /etc/httpd.
+INFO Mon Jul  4 09:53:55 UTC 2022: Start testing
+Cloud manager validator 2.0.43
+2022/07/04 09:53:55 No issues found
+INFO Mon Jul  4 09:53:55 UTC 2022: Testing with fresh base configuration files.
+INFO Mon Jul  4 09:53:55 UTC 2022: Apache httpd informationServer version: Apache/2.4.54 (Unix)
+```
 
 ## Olika Dispatcher-konfigurationer per miljö {#different-dispatcher-configurations-per-environment}
 
