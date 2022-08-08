@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 2340c9416d90f7973109ba57c1769ae892049026
+source-git-commit: 0ae79facb4233988db4a649b8e79ca3041832584
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -111,6 +111,11 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 ### Nya funktioner i [!DNL Experience Manager] prerelease channel {#prerelease-features-foundation}
 
 * AEM as a Cloud Service är nu integrerat med Unified Shell för att förbättra användarupplevelsen och göra den enhetlig med alla andra Experience Cloud-program. Se [AEM as a Cloud Service on Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md) för mer information.
+
+## Adobe Learning Manager Connectors {#learn-manage}
+
+* Nya Adobe Learning Manager har kopplingar till Adobe Experience Manager Sites, Marketo Engage och Adobe Commerce. Mer information finns i: [Användarhandbok för Adobe Learning Manager](https://helpx.adobe.com/learning-manager/user-guide.html).
+
 
 ## Cloud Manager {#cloud-manager}
 
