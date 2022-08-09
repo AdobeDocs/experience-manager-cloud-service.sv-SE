@@ -3,7 +3,7 @@ title: 'Hur tilldelar man ett arbetsflöde till en annan användare, skickar e-p
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-source-git-commit: 447dd15cfa7e414b56fe09f2affb5f720bcd734e
+source-git-commit: ebd7942cfaa7717d68ad039f3e0301cb52cbcec7
 workflow-type: tm+mt
 source-wordcount: '5523'
 ht-degree: 0%
@@ -54,18 +54,25 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **[!UICONTROL Time-out after Due Date]**: Välj det här alternativet om du vill aktivera markeringsfältet för Timeout-hanteraren.
 * **[!UICONTROL Timeout Handler]**: Välj det skript som ska köras när tilldelningssteget överskrider förfallodatumet. Skript i CRX-databasen på [appar]/fd/dashboard/scripts/timeoutHandler är tillgängliga för val. Den angivna sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används.
 * **[!UICONTROL Highlight the action and comment from the last task in Task Details]**: Välj det här alternativet om du vill visa den senaste åtgärden som utfördes och kommentaren som togs emot i aktivitetsinformationsavsnittet för en uppgift.
-* **[!UICONTROL Type]**: Välj vilken typ av dokument som ska fyllas när arbetsflödet startas. Du kan välja ett adaptivt formulär, ett skrivskyddat adaptivt formulär, ett icke-interaktivt PDF-dokument. <!-- , Interactive Communication Agent UI, or Interactive Communication Web Channel Document. -->
+* **[!UICONTROL Type]**: Välj vilken typ av dokument som ska fyllas när arbetsflödet startas. Du kan välja ett adaptivt formulär, ett skrivskyddat adaptivt formulär, ett icke-interaktivt PDF-dokument.
+
+<!-- , Interactive Communication Agent UI, or Interactive Communication Web Channel Document. -->
+
+
 * **[!UICONTROL Use Adaptive Form]**: Ange den metod som ska användas för att hitta indata i adaptiv form. Det här alternativet är tillgängligt om du väljer Adaptivt formulär eller Skrivskyddat anpassat formulär i listrutan Typ. Du kan använda det adaptiva formulär som skickas till arbetsflödet, som finns på en absolut sökväg eller som finns på en sökväg i en variabel. Du kan använda en variabel av typen String för att ange sökvägen.\
    Du kan koppla flera adaptiva Forms till ett arbetsflöde. Det innebär att du kan ange ett adaptivt formulär i körningsmiljön med hjälp av de tillgängliga indatametoderna.
 
 <!-- 
+
 * **[!UICONTROL Use Interactive Communication]**: Specify the method to locate the input interactive communication. You can use the interactive communication submitted to the workflow, available at an absolute path, or available at a path in a variable. You can use a variable of type String to specify the path. This option is available if you select Interactive Communication Agent UI or Interactive Communication Web Channel Document from the Type drop-down list. 
 
 > [!NOTE]
 >
->You must have cm-agent-users and workflow-users group assignments to access Interactive Communications Agent UI in AEM inbox.  -->
+>You must have cm-agent-users and workflow-users group assignments to access Interactive Communications Agent UI in AEM inbox.  
 
-* **[!UICONTROL Adaptive Form Path]**: Ange sökvägen för det adaptiva formuläret.<!--  or Interactive Communication.--> Du kan använda det adaptiva formuläret <!-- or interactive communication --> som skickas till arbetsflödet, finns på en absolut sökväg eller hämtar det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
+-->
+
+* **[!UICONTROL Adaptive Form Path]**: Ange sökvägen för det adaptiva formuläret. Du kan använda det adaptiva formulär som skickas till arbetsflödet, finns på en absolut sökväg eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
 * **[!UICONTROL Select input PDF using]**: Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i textfältet. Du kan markera indata PDF med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av datatypen Document. Till exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna använda alternativet PDF-sökväg.
 * **[!UICONTROL For completed task, render the Adaptive Form as]**: När en åtgärd har markerats som slutförd kan du återge det adaptiva formuläret som ett skrivskyddat anpassat formulär eller ett PDF-dokument. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna återge det adaptiva formuläret som Dokument för post.
 * **[!UICONTROL Pre-populated]**: Följande fält i listan nedan fungerar som indata för uppgiften:
@@ -73,14 +80,23 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
    * **[!UICONTROL Select input data file using]**: Sökväg till indatafil (.json, .xml, .doc eller formulärdatamodell). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som har skickats för formuläret via ett AEM Inkorgsprogram. En exempelsökväg är [Payload_Directory]/workflow/data.
    * **[!UICONTROL Select input attachments using]**: Bifogade filer som är tillgängliga på platsen bifogas till formuläret som är kopplat till uppgiften. Sökvägen kan vara relativ till nyttolasten eller hämta den bifogade filen som lagras i en variabel i ett dokument. En exempelsökväg är [Payload_Directory]/attachments/. Du kan ange bifogade filer som placeras i förhållande till nyttolasten eller använda en dokumenttypsvariabel (Array list > Document) för att ange en bifogad indatafil för det adaptiva formuläret.
 
-   <!-- * **[!UICONTROL Choose input JSON]**: Select an input JSON file using a path that is relative to payload or stored in a variable of Document, JSON, or Form Data Model data type. This option is available if you select Interactive Communication Agent UI or Interactive Communication Web Channel Document from the Type drop-down list.
+   <!-- 
+    
+    * **[!UICONTROL Choose input JSON]**: Select an input JSON file using a path that is relative to payload or stored in a variable of Document, JSON, or Form Data Model data type. This option is available if you select Interactive Communication Agent UI or Interactive Communication Web Channel Document from the Type drop-down list.
 
     * **[!UICONTROL Choose a custom prefill service]**: Select the prefill service to retrieve the data and prefill the Interactive Communication Web channel document or the Agent UI.  
     
-    * **[!UICONTROL Use the prefill service of the interactive communication selected above]**: Use this option to use the prefill service of the Interactive Communication defined in the Use Interactive Communication drop-down list. -->
+    * **[!UICONTROL Use the prefill service of the interactive communication selected above]**: Use this option to use the prefill service of the Interactive Communication defined in the Use Interactive Communication drop-down list. 
+    
+    -->
+
    * **[!UICONTROL Request Attribute Mapping]**: Använd avsnittet Mappning av attribut för begäran för att definiera [namn och värde för attributet request](work-with-form-data-model.md#bindargument). Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.
 
-   <!--  The prefill service and request attribute mapping options are available only if you select Interactive Communication Agent UI or Interactive Communication Web Channel Document from the Type drop-down list. -->
+   <!--  
+     
+     The prefill service and request attribute mapping options are available only if you select Interactive Communication Agent UI or Interactive Communication Web Channel Document from the Type drop-down list. 
+     
+     -->
 
 * **[!UICONTROL Submitted information]**: Följande fält i listan nedan fungerar som utdataplatser för uppgiften:
 
@@ -88,9 +104,13 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
    * **[!UICONTROL Save attachments using]**: Spara formulärbilagorna som ingår i en uppgift. Du kan spara de bifogade filerna med en sökväg som är relativ till nyttolasten eller lagra den i en variabel i arraylistan med dokumentdatatypen.
    * **[!UICONTROL Save Document of Record using]**: Sökväg för att spara en postdokumentfil. Till exempel: [Payload_Directory]/DocumentofRecord/credit-card.pdf. Du kan spara postdokumentet med en sökväg som är relativ till nyttolasten eller lagra det i en variabel av dokumentdatatypen. Om du väljer **[!UICONTROL Relative to Payload]** om sökvägsfältet lämnas tomt, genereras inte dokumentdokumentet. Det här alternativet är bara tillgängligt om du väljer Adaptivt formulär i listrutan Typ.
 
-   <!-- * **[!UICONTROL Save Web Channel data using]**: Save the Web Channel data file using a path that is relative to the payload or store it in a variable of Document, JSON, or Form Data Model data type. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list. c
+   <!-- 
+    
+    * **[!UICONTROL Save Web Channel data using]**: Save the Web Channel data file using a path that is relative to the payload or store it in a variable of Document, JSON, or Form Data Model data type. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list. c
     * **[!UICONTROL Save PDF document using]**: Save the PDF document using a path that is relative to the payload or store it in a variable of Document data type. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list.
-    <!-- * **[!UICONTROL Save layout template using]**: Save the layout template using a path that is relative to the payload or store it in a variable of Document data type. The [layout template](layout-design-details.md) refers to an XDP file that you create using Forms Designer. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list. -->
+    <!-- * **[!UICONTROL Save layout template using]**: Save the layout template using a path that is relative to the payload or store it in a variable of Document data type. The [layout template](layout-design-details.md) refers to an XDP file that you create using Forms Designer. This option is available only if you select Interactive Communication Agent UI from the Type drop-down list. 
+    
+    -->
 
 * **[!UICONTROL Assignee]** > **[!UICONTROL Assign options]**: Ange vilken metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM användare eller grupp.
 * **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när **[!UICONTROL Dynamically to a user or group]** är markerat i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Tilldela användare ett arbetsflöde dynamiskt](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&amp;CID=RedirectAEMCommunityKautuk)
@@ -183,7 +203,12 @@ E-poststeget har följande egenskaper:
 
 * **[!UICONTROL Workflow Metadata]**: Använd alternativet när värdet som ska användas sparas i en arbetsflödets metadataegenskap. När du har valt alternativet anger du metadataegenskapens namn i den tomma textrutan under alternativet Metadata för arbetsflöde. Till exempel emailAddress.
 
-<!-- * **[!UICONTROL Asset URL]**: Use the option to embed a web link of an interactive communication to the email. After selecting the option, browse and choose the interactive communication to embed. The asset can reside on the author or the publish server. -->
+<!-- 
+
+* **[!UICONTROL Asset URL]**: Use the option to embed a web link of an interactive communication to the email. After selecting the option, browse and choose the interactive communication to embed. The asset can reside on the author or the publish server. 
+
+-->
+
 * **[!UICONTROL Image]**: Använd alternativet för att bädda in en bild i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer bilden. Bildalternativet är bara tillgängligt för de bildtaggar (&lt;img src=&quot;&lt;span id=&quot; translate=&quot;no&quot; />&quot;/>) som är tillgängliga i e-postmallen.&#42;
 
 **[!UICONTROL Sender’s / Recipient's Email Address]**: Välj **[!UICONTROL Literal]** om du vill ange en e-postadress manuellt eller välja **[!UICONTROL Retrieve from Workflow metadata]** alternativ för att hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsmatriser för metadata för **[!UICONTROL Retrieve from Workflow metadata]** alternativ. Välj **[!UICONTROL Variable]** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
@@ -367,7 +392,9 @@ Stegen Signera dokument har följande egenskaper:
 * **[!UICONTROL Script or service to select signers]**: Alternativet är bara tillgängligt om alternativet Dynamiskt är markerat i fältet Välj signerare. Du kan ange ett ECMAScript eller en tjänst för att välja signerare och verifieringsalternativ för ett dokument.
 * **[!UICONTROL Signer Details]**: Alternativet är bara tillgängligt om alternativet Manuellt är markerat i fältet Välj signerare. Ange e-postadress och välj en valfri verifieringsmekanism. Kontrollera att motsvarande verifieringsalternativ är aktiverat för den konfigurerade [!DNL Adobe Sign] konto. Du kan använda en variabel av datatypen String för att definiera värden för fälten E-post, Landskod och Telefonnummer. Fälten Landskod och Telefonnummer visas endast om du väljer Telefonverifiering i den 2-stegsvisa verifieringslistan.
 
-<!-- ## Document Services steps {#document-services-steps}
+<!-- 
+
+## Document Services steps {#document-services-steps}
 
 AEM Document services are a set of services for creating, assembling, and securing PDF Documents. [!DNL AEM Forms] provides a separate AEM Workflow step for each document service.
 
@@ -519,4 +546,6 @@ The Generate Printed Output step has the following properties:
 * **[!UICONTROL Duplex Printing]**:  A Pagination value that specifies whether to use two-sided or single-sided printing. Printers that support PostScript and PCL use this value.If you provide a literal value, select one of these values:
     * **[!UICONTROL Duplex Long Edge]**: Use two-sided printing and print using long-edge pagination. 
     * **[!UICONTROL Duplex Short Edge]**: Use two-sided printing and print using short-edge pagination. 
-    * **[!UICONTROL Simplex]**: Use single-sided printing.-->
+    * **[!UICONTROL Simplex]**: Use single-sided printing.
+    
+    -->

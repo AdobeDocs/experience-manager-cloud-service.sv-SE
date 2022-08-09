@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: a3e18349c3cf2240cc68275a3862abeb75ea372a
+source-git-commit: f947a328897387d37e2092580e6992f14a344eb2
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 ### Nya funktioner i [!DNL Forms] {#forms-features}
 
-* **Stöd för tangentbordsinmatning med Scribble-signaturer**: Adaptiv Forms används i allt större utsträckning på pekenheter, och ett vanligt krav är att stödja signaturer. Att signera dokument på pekenheter har blivit ett accepterat sätt att signera formulär. Adaptiv Forms har inbyggt stöd för Scribble Signatures och Adobe Sign för sådana användningsområden. Nu kan du, tillsammans med andra alternativ som redan stöds, även använda tangentbordet för att göra signaturer smarta i ett adaptivt formulär. Det förbättrar också tillgängligheten.
+* **[Stöd för tangentbordsinmatning med Scribble-signaturer](/help/forms/signing-forms-using-scribble.md)**: Adaptiv Forms används i allt större utsträckning på pekenheter, och ett vanligt krav är att stödja signaturer. Att signera dokument på pekenheter har blivit ett accepterat sätt att signera formulär. Adaptiv Forms har inbyggt stöd för Scribble Signatures och Adobe Sign för sådana användningsområden. Nu kan du, tillsammans med andra alternativ som redan stöds, även använda tangentbordet för att göra signaturer smarta i ett adaptivt formulär. Det förbättrar också tillgängligheten.
 
 ![Stöd för tangentbordsinmatning för klottersignaturer på iphone](/help/release-notes/assets/scribble-keyboard-mobile.png)
 
@@ -72,13 +72,17 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
-<!-- * **[Launch Adaptive Form creation wizard from embed form component](/help/forms/using/embed-adaptive-form-aem-sites.md)**: You can now launch Adaptive Form creation wizard from embed form component. It helps improve content and forms authoring workflows for Sites and Forms practitioners trying to add enrollment experiences to a web page. 
+<!-- 
 
-![Keyboard input support for Scribble signatures on iphone](/help/release-notes/assets/froms-container.png) -->
+* **[Launch Adaptive Form creation wizard from embed form component](/help/forms/using/embed-adaptive-form-aem-sites.md)**: You can now launch Adaptive Form creation wizard from embed form component. It helps improve content and forms authoring workflows for Sites and Forms practitioners trying to add enrollment experiences to a web page. 
 
-* **Anropa - ett AEM arbetsflödessteg**: Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX-dokument är mallar för dokumenten och beskriver önskade egenskaper för källdokument som ska visas i resulterande dokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget Anropa och AEM arbetsflöde för att utföra olika åtgärder, t.ex. att samla ihop dokument, skapa och ändra Acrobat och XFA Forms samt andra åtgärder som beskrivs i [DDX-referens](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) dokumentation.
+![Keyboard input support for Scribble signatures on iphone](/help/release-notes/assets/froms-container.png) 
 
-* **Konvertera till PDF/A - ett AEM arbetsflödessteg**: PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt. Alla teckensnitt bäddas in och filen är okomprimerad. Nu kan du använda steget Konvertera till PDF/A och AEM arbetsflöde för att konvertera dina dokument eller filer i valfritt format till PDF/A-format.
+-->
+
+* **[Anropa DDX - ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md#invokeddx)**: Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX-dokument är mallar för dokumenten och beskriver önskade egenskaper för källdokument som ska visas i resulterande dokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget Anropa och AEM arbetsflöde för att utföra olika åtgärder, t.ex. att samla ihop dokument, skapa och ändra Acrobat och XFA Forms samt andra åtgärder som beskrivs i [DDX-referens](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) dokumentation.
+
+* **[Konvertera till PDF/A - ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md##convert-pdfa)**: PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt. Alla teckensnitt bäddas in och filen är okomprimerad. Nu kan du använda steget Konvertera till PDF/A och AEM arbetsflöde för att konvertera dina dokument eller filer i valfritt format till PDF/A-format.
 
 
 ## CIF-tillägg {#cloud-services-cif}
