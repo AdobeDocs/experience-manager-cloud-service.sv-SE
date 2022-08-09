@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 0ae79facb4233988db4a649b8e79ca3041832584
+source-git-commit: a3e18349c3cf2240cc68275a3862abeb75ea372a
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanf
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) har nu stöd för kortkommandon.
+* The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) nu har stöd för [kortkommandon](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md).
 
 * AEM som Cloud Service [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ger möjlighet att avsevärt förbättra sidhastigheten genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. Alla versioner av [Core Image Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan du använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
 
