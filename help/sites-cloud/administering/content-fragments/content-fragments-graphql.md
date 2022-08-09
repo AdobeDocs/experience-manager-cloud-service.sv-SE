@@ -1,9 +1,10 @@
 ---
 title: Headless Content Delivery using Content Fragments with GraphQL
 description: Lär dig de grundläggande begreppen för att implementera ett AEM Headless CMS med Content Fragments med GraphQL för leverans av headless-innehåll.
-source-git-commit: a06024b4d4b6e5e750ed4c1e27f55283513b78a2
+exl-id: ef48f737-a5b3-4913-9f37-6b9f681bc048
+source-git-commit: 5663b1224dddcb2db9e0ca139bb8cf6b43787fab
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
@@ -33,11 +34,7 @@ Detta uppnås med Content Fragments, tillsammans med det AEM GraphQL-API:t (en a
 
 ## Headless CMS {#headless-cms}
 
-Ett CMS-system (Headless Content Management System) är:
-
-* &quot;*Ett headless innehållshanteringssystem, eller headless CMS, är ett CMS-system (back-end only content management system) som byggs från grunden som ett innehållsarkiv som gör innehållet tillgängligt via ett API för visning på vilken enhet som helst.*
-
-   Se [Wikipedia](https://en.wikipedia.org/wiki/Headless_content_management_system).
+Ett Headless Content Management System (CMS) är ett innehållshanteringssystem som bara fungerar i bakgrunden och som utformats och byggts explicit som ett innehållsarkiv som gör innehåll tillgängligt via ett API för visning på alla enheter.
 
 När det gäller utveckling av innehållsfragment i AEM innebär detta att:
 

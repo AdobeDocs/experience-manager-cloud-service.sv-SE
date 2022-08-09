@@ -1,13 +1,13 @@
 ---
 title: Vad är ett headless CMS?
 description: Läs om Headless CMS. Hur fungerar de? Vilka är alternativen och skillnaderna? Varför vill du använda ett headless CMS?
-source-git-commit: 35064ef7d9a4a3f2368667be02b11840b29d56f0
+exl-id: 53f24f69-ad49-4b8e-9a91-36cd64c1f2b9
+source-git-commit: 5663b1224dddcb2db9e0ca139bb8cf6b43787fab
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
-
 
 # Vad är ett headless CMS? {#what-is-a-headless-cms}
 
@@ -31,11 +31,7 @@ Mycket kraftfullt, vilket ger dig full kontroll över innehåll och formatering,
 
 Med ett headless content management-system är serverdelen och klientdelen nu frikopplade.
 
-Den headless delen är innehållets serverdel.
-
-* &quot;*Ett headless innehållshanteringssystem, eller headless CMS, är ett CMS-system (back-end only content management system) som byggs från grunden som ett innehållsarkiv som gör innehållet tillgängligt via ett API för visning på vilken enhet som helst.*
-
-   Se [Wikipedia](https://en.wikipedia.org/wiki/Headless_content_management_system).
+Den headless delen är innehållets serverdel, eftersom ett headless Content Management System (CMS) är ett innehållshanteringssystem som endast fungerar som back-end-system och som utformats och byggts explicit som ett innehållsarkiv som gör innehåll tillgängligt via ett API, för visning på alla enheter.
 
 FrontLine, som utvecklas och underhålls oberoende av varandra, hämtar innehåll från den headless-delen med ett Content Delivery API, vanligtvis i JSON-format. Detta kan till exempel vara ett React- eller Angular-program (Single Page Application (SPA)).
 
