@@ -3,9 +3,9 @@ title: 'Hur tilldelar man ett arbetsflöde till en annan användare, skickar e-p
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-source-git-commit: ebd7942cfaa7717d68ad039f3e0301cb52cbcec7
+source-git-commit: a8dae80f79e32117341519b31c389f8fc30b5957
 workflow-type: tm+mt
-source-wordcount: '5523'
+source-wordcount: '5557'
 ht-degree: 0%
 
 ---
@@ -168,11 +168,11 @@ Konvertera till PDF/A-steget har följande egenskaper:
 
 **[!UICONTROL Input Document]**: Indatadokumentet kan vara relativt till nyttolasten, ha en absolut sökväg, kan anges som nyttolast eller lagras i en variabel med datatypen Document.
 
-**[!UICONTROL Conversion Options]**: Med den här egenskapen anges inställningar för konvertering av PDF-dokument till PDF/A-dokument. De olika alternativ som är tillgängliga under den här fliken är:
-* **[!UICONTROL Compliance]**: Anger de standarder som utdata-PDF/A-dokumentet måste uppfylla.
+**[!UICONTROL Conversion Options]**: Med den här egenskapen anges inställningarna för konvertering av PDF-dokument till PDF/A-dokument. De olika alternativ som är tillgängliga under den här fliken är:
+* **[!UICONTROL Compliance]**: Anger den standard som PDF/A-utdatadokumentet måste uppfylla. Det stöder olika PDF-standarder som PDF/A-1b, PDF/A-2b eller PDF/A-3b.
 * **[!UICONTROL Result Level]**: Anger resultatnivån som PassFail, Summary eller Detailed för konverteringsutdata.
-* **[!UICONTROL Color Space]**: Anger den fördefinierade färgrymd som används för utdata i PDF/A-filer.
-* **[!UICONTROL Optional Content]**: Tillåter att specifika grafiska objekt och/eller anteckningar visas i utdata i PDF/A-dokument, endast när en angiven uppsättning villkor uppfylls.
+* **[!UICONTROL Color Space]**: Anger den fördefinierade färgrymden som S_RGB, COATED_FOGRA27, JAPAN_COLOR_COATED eller SWOP, som kan användas för utdata i PDF/A-filer.
+* **[!UICONTROL Optional Content]**: Tillåt att specifika grafiska objekt och/eller anteckningar visas i utdata i PDF/A-dokument, endast när en angiven uppsättning villkor uppfylls.
 
 **[!UICONTROL Output Documents]**: Anger platsen där utdatafilen ska sparas. Utdatafilen kan sparas på en plats som är relativ till nyttolasten, skriver över nyttolasten, om nyttolasten är en fil eller i en variabel av dokumentdatatypen.
 
@@ -247,13 +247,13 @@ Document Description XML (DDX) är ett deklarativt kodspråk vars element repres
 Anropa DDX-steget har följande egenskaper:
 
 **[!UICONTROL Input Documents]**: Används för att ange egenskaper för ett inmatningsdokument. De olika alternativ som är tillgängliga under den här fliken är:
-* **[!UICONTROL Specify DDX Using]**: Anger indatadokumenten i förhållande till nyttolasten, har en absolut sökväg, kan anges som nyttolast eller lagras i en variabel av dokumentdatatypen.
-* **[!UICONTROL Create Map from Payload]**: Lägger till alla dokument under nyttolastmappen i Input Document Map för invoke API i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
+* **[!UICONTROL Specify DDX Using]**: Anger indatadokumentet i förhållande till nyttolasten, har en absolut sökväg, kan anges som nyttolast eller lagras i en variabel av dokumentdatatypen.
+* **[!UICONTROL Create Map from Payload]**: Lägg till alla dokument under nyttolastmappen i Input Document Map för invoke API i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
 * **[!UICONTROL Input Document’s Map]**: Alternativet används för att lägga till flera poster med **[!UICONTROL ADD]** -knappen. Varje post representerar dokumentets nyckel på kartan och dokumentets källa.
 
 **[!UICONTROL Environment Options]**: Det här alternativet används för att ange bearbetningsinställningar för anrop av API. De olika alternativ som är tillgängliga under den här fliken är:
 * **[!UICONTROL Validate Only]**: Kontrollerar giltigheten för indata-DDX-dokumentet.
-* **[!UICONTROL Fail on Error]**: Kontrollerar om anrop-API-tjänsten misslyckas om ett fel uppstår. Som standard är värdet Falskt.
+* **[!UICONTROL Fail on Error]**: Booleskt värde för att ange om API-anropstjänsten misslyckas om ett fel uppstår eller inte. Som standard är värdet Falskt.
 * **[!UICONTROL First Bates Number]**: Anger talet, som ökar automatiskt. Det här självökande numret visas automatiskt på varje sida i följd.
 * **[!UICONTROL Default Style]**: Anger standardformatet för utdatafilen.
 
