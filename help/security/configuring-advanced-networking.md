@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: e34759aeea2e3819cf76a8bba433b96ae201c16f
+source-git-commit: b8a827e73d8eba9184be352d0aa4705dfb24b642
 workflow-type: tm+mt
-source-wordcount: '3006'
+source-wordcount: '3016'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter inn
 
 Om konfigurationen för flexibel portutgångar som omfattar programmet är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` Slutpunkten måste anropas per miljö för att nätverk på miljönivå ska kunna aktiveras och för att eventuella regler för portvidarebefordran ska kunna deklareras. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
 
-Reglerna för portvidarebefordran bör deklareras för alla portar utom 80/443 genom att ange uppsättningen målvärdar (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
+Regler för portvidarebefordran ska deklareras för alla andra målportar än 80/443, men bara om inte http- eller https-protokoll används, genom att ange uppsättningen målvärddatorer (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
 
 API:t bör svara på bara några sekunder, vilket anger uppdateringsstatus och efter cirka 10 minuter, slutpunktens `GET` -metoden ska ange att avancerade nätverk är aktiverade.
 
