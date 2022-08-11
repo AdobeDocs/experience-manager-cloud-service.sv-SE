@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2022.7.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2022.7.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2022.8.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2022.8.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 9f76f77365c0e9b2986e9bb3560bc039e0ca7961
+source-git-commit: 0476fda614ce693222ae2e2fb62ea2f84243f80c
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '187'
 ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2022.7.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2022.8.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-På den här sidan visas versionsinformation för Cloud Manager 2022.7.0 i AEM as a Cloud Service.
+På den här sidan visas versionsinformation för Cloud Manager 2022.8.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,15 +21,16 @@ På den här sidan visas versionsinformation för Cloud Manager 2022.7.0 i AEM a
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.7.0 i AEM as a Cloud Service är 8 augusti 2022. Nästa version är planerad till den 11 augusti 2022.
+Releasedatum för Cloud Manager version 2022.8.0 i AEM as a Cloud Service är 11 augusti 2022. Nästa version är planerad till den 9 september 2022.
 
 ## Nyheter {#what-is-new}
 
-* Användare av Cloud Manager har nu tillgång till användbara videokurser från **Välkommen** på landningssidan när som helst.
-* Kraften på **[Återställ innehåll](/help/operations/backup.md)** på sidan med miljöinformation visas nu en praktisk lista med Git-kommandon som gör att användaren kan visa ändringar lokalt.
+* Det finns en uppdaterad användargränssnittsupplevelse i [lägg till arbetsflöde för miljö.](/help/implementing/cloud-manager/manage-environments.md)
+* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som ingår i Cloud Manager uppdaterades till version 37.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* Feedback-meddelanden i användargränssnittet som rör skapande av nytt Relic-underkonto när program skapas har förbättrats.
-* Användarna kan nu hämta anpassade gränssnittstestningsloggar från användargränssnittet i Cloud Manager.
-* Ett problem har korrigerats där inga anrop gjordes för att köra distributionssteget efter godkännandet av en frontpipeline.
+* Fall där New Relic-användare inte skapades eller togs bort i användargränssnittet för Cloud Manager korrigerades.
+* Vissa fall av ovanliga fel vid skapande av databaser har gjorts mer flexibla.
+* Sällsynta förekomster av fel vid konfiguration av VSTS-organisation har minskat på grund av nya försök.
+* Förbättrad validering när nya Relic-underkonton skapas förhindrar nu vissa fel.
