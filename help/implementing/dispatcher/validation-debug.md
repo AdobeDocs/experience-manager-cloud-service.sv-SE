@@ -3,7 +3,7 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 6f80c6d32d3eca1b0ef2977c740ef043529fab96
+source-git-commit: 2766a40f67edd08f25177fb0651773cd1547cedc
 workflow-type: tm+mt
 source-wordcount: '2653'
 ht-degree: 1%
@@ -231,7 +231,7 @@ Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också
 
 >[!NOTE]
 >
->Se [Automatisk inläsning och validering](#automatic-loading) för ett effektivt alternativ till att köra `validate.sh` efter varje konfigurationsändring.
+>Se [Automatisk omladdning och validering](#automatic-loading) för ett effektivt alternativ till att köra `validate.sh` efter varje konfigurationsändring.
 
 ### Fas 1 {#first-phase}
 
@@ -423,7 +423,7 @@ När du kör Dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Of
 
 Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 
-### Automatisk inläsning och validering {#automatic-loading}
+### Automatisk omladdning och validering {#automatic-reloading}
 
 >[!NOTE]
 >

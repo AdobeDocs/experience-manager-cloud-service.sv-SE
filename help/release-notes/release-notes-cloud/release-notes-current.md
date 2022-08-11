@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: f947a328897387d37e2092580e6992f14a344eb2
+source-git-commit: 2766a40f67edd08f25177fb0651773cd1547cedc
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 0%
@@ -109,7 +109,7 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 ### Förbättringar i AEM as a Cloud Service SDK Dispatcher Tools {#dispatcher-tools-enhancements}
 
-* Apache kan startas med `update_sdk.sh` som automatiskt läser in och validerar alla efterföljande ändringar i cache- och dispatcherkonfigurationen, vilket förbättrar utvecklarhastigheten. Stöds endast för flyttarverktygens flexibla läge. Se även [Felsöka konfigurationen av Apache och Dispatcher](/help/implementing/dispatcher/validation-debug.md#automatic-loading) om du vill ha mer information om automatisk inläsning och validering.
+* Apache kan startas med `docker_run_hot_reload.sh` som automatiskt läser in och validerar alla efterföljande ändringar i cache- och dispatcherkonfigurationen, vilket förbättrar utvecklarhastigheten. Stöds endast för flyttarverktygens flexibla läge. Se även [Felsöka konfigurationen av Apache och Dispatcher](/help/implementing/dispatcher/validation-debug.md#automatic-reloading) om du vill ha mer information om automatisk omladdning och validering.
 * Lokal konfiguration av cache/dispatcher spårar förändringar i molnmiljöer närmare, vilket ökar pariteten mellan de två miljöerna.
 
 ### Nya funktioner i [!DNL Experience Manager] prerelease channel {#prerelease-features-foundation}
