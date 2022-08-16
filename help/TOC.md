@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 2d84e6f2cc8345598af64f5b33ef88b26faa15fa
+source-git-commit: 5e8f70da6de27bf59e4a89e196a016820245a068
 workflow-type: tm+mt
-source-wordcount: '3717'
+source-wordcount: '3709'
 ht-degree: 22%
 
 ---
@@ -503,7 +503,6 @@ ht-degree: 22%
       + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
          + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
          + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
-         + [Utforma ett XML-schema för ett adaptivt formulär](/help/forms/adaptive-form-xml-schema-form-model.md)
          + [Använd Forms Designer](/help/forms/use-forms-designer.md)
          + [Förbättra prestanda för stora formulär med lat inläsningsverktyg](/help/forms/lazy-loading-adaptive-forms.md)
       + Lägga till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}

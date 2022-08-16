@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 38ca5eea-793b-420b-ae60-3a0bd83caf00
-source-git-commit: b29d11550ee8b7671059a1f04de37c7b79658a60
+source-git-commit: 5e8f70da6de27bf59e4a89e196a016820245a068
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ Adaptive Forms allow you to create forms that are engaging, responsive, dynamic,
 
 Du behöver följande för att skapa ett adaptivt formulär:
 
-* En anpassad formulärmall: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när en adaptiv form skickas in. Du kan till exempel skicka insamlade data till en datakälla. Du kan [skapa en ny mall](template-editor.md) eller importera en befintlig mall. Du kan också distribuera [senaste arketype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en#:~:text=The%20AEM%20Archetype%20is%20made%20up%20of%20modules%3A,and%20request%20filters.%20it.tests%3A%20are%20Java-based%20integration%20tests.) för vissa exempelmallar.
-* Ett adaptivt formulärtema: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Du kan [skapa ett nytt tema](themes.md), [importera ett befintligt tema](import-export-forms-templates.md#uploading-a-theme)eller hämta och importera [exempelteman](https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:2779f80e-16ba-4cd1-a96f-8e2b53f3be25). Du kan också distribuera [senaste arketype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en#:~:text=The%20AEM%20Archetype%20is%20made%20up%20of%20modules%3A,and%20request%20filters.%20it.tests%3A%20are%20Java-based%20integration%20tests.) för vissa exempelteman.
-* Lägg till dina användare i [!DNL forms-users] för att ge dem behörighet att skapa ett adaptivt formulär. En detaljerad lista över formulärspecifika användargrupper finns i [Grupper och behörigheter](forms-groups-privileges-tasks.md).
+* **En anpassad formulärmall**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när en adaptiv form skickas in. Du kan till exempel skicka insamlade data till en datakälla. Du kan [skapa en ny mall](template-editor.md) eller importera en befintlig mall. Du kan också distribuera [senaste arketype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en#:~:text=The%20AEM%20Archetype%20is%20made%20up%20of%20modules%3A,and%20request%20filters.%20it.tests%3A%20are%20Java-based%20integration%20tests.) för vissa exempelmallar.
+* **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Du kan [skapa ett nytt tema](themes.md), [importera ett befintligt tema](import-export-forms-templates.md#uploading-a-theme)eller hämta och importera [exempelteman](https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:2779f80e-16ba-4cd1-a96f-8e2b53f3be25). Du kan också distribuera [senaste arketype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en#:~:text=The%20AEM%20Archetype%20is%20made%20up%20of%20modules%3A,and%20request%20filters.%20it.tests%3A%20are%20Java-based%20integration%20tests.) för vissa exempelteman.
+* **Behörigheter**: Lägg till dina användare i [!DNL forms-users] för att ge dem behörighet att skapa ett adaptivt formulär. En detaljerad lista över formulärspecifika användargrupper finns i [Grupper och behörigheter](forms-groups-privileges-tasks.md).
 
 ## Skapa ett adaptivt formulär {#strong-create-an-adaptive-form-strong}
 
@@ -61,25 +61,25 @@ Följ de här stegen för att skapa ett adaptivt formulär.
 
 1. Tryck på **[!UICONTROL Create]**  > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
 1. Välj en mall på fliken Källa:
-   * När du väljer en mall markeras automatiskt ett tema och en skicka-åtgärd som anges i mallen och knappen Skapa aktiveras. Du kan gå till flikarna Stil eller Skicka för att välja ett annat tema eller Skicka-åtgärd.
-   * Om den valda mallen inte anger något tema förblir knappen Skapa inaktiverad. Du kan gå till fliken Format och välja ett tema manuellt.
+   * När du väljer en mall väljs automatiskt ett tema och en skicka-åtgärd som anges i mallen, och **[!UICONTROL Create]** knappen är aktiverad. Du kan gå till **[!UICONTROL Style]** eller **[!UICONTROL Submission]** för att välja ett annat tema eller skicka-åtgärd.
+   * Om den valda mallen inte anger något tema förblir knappen Skapa inaktiverad. Du kan gå till **[!UICONTROL Styles]** om du vill välja ett tema manuellt.
 1. Välj ett tema på fliken Format:
-   * När den valda mallen anger ett tema väljs det automatiskt i guiden. Du kan välja ett annat tema på fliken Format.
-   * Om den valda mallen inte anger något tema kan du använda fliken Format för att välja ett tema. Knappen Skapa aktiveras när du har valt ett tema.
+   * När den valda mallen anger ett tema väljs temat automatiskt i guiden. Du kan också välja ett annat tema på fliken Format.
+   * Om den valda mallen inte anger något tema kan du använda fliken Format för att välja ett tema. The **[!UICONTROL Create]** knappen aktiveras först när ett tema har valts.
 1. (Valfritt) Välj en datamodell på fliken Data:
-   * Formulärdatamodell: A [Formulärdatamodell](data-integration.md) Med kan ni integrera enheter och tjänster från olika datakällor i ett adaptivt formulär. Välj Formulärdatamodell om det adaptiva formulär du skapar inbegriper att hämta och skriva data från och till flera datakällor.
-   * JSON-schema: JSON-scheman representerar den struktur i vilken data produceras eller förbrukas av det bakomliggande systemet i din organisation. Du kan koppla schemat till ett adaptivt formulär och använda dess element för att lägga till dynamiskt innehåll i det adaptiva formuläret. Elementen i schemat är tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar Adaptiv Forms och alla fält läggs även till i det nya adaptiva formuläret.
-1. Välj en Skicka-åtgärd på fliken Skicka:
-   * När du väljer en mall markeras åtgärden Skicka som anges i mallen automatiskt. Du kan välja en annan Skicka-åtgärd på fliken. På fliken Skicka visas alla tillgängliga skicka-åtgärder.
-   * När den valda mallen inte anger någon Skicka-åtgärd kan du använda fliken Skicka för att välja en skicka-åtgärd
+   * **Formulärdatamodell**: A [Formulärdatamodell](data-integration.md) Med kan ni integrera enheter och tjänster från olika datakällor i ett adaptivt formulär. Välj Formulärdatamodell om det adaptiva formulär du skapar inbegriper att hämta och skriva data från och till flera datakällor.
+   * **JSON-schema**: [JSON-schema](adaptive-form-json-schema-form-model.md) representerar den struktur i vilken data produceras eller används av det bakomliggande systemet i din organisation. Du kan koppla schemat till ett adaptivt formulär och använda dess element för att lägga till dynamiskt innehåll i det adaptiva formuläret. Elementen i schemat är tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar Adaptiv Forms och alla fält läggs även till i det nya adaptiva formuläret.
+1. Välj en sändningsåtgärd på fliken Skicka:
+   * När du väljer en mall markeras åtgärden Skicka som anges i mallen automatiskt. Du kan välja en annan skickaåtgärd på fliken Skicka. The **[!UICONTROL  Submission]** på -fliken visas alla tillgängliga skicka-åtgärder.
+   * När den valda mallen inte anger någon skicka-åtgärd kan du använda **[!UICONTROL  Submission]** flik för att välja en skicka-åtgärd
 
 1. (Valfritt) På fliken Leverans kan du ange ett publicerings- eller avpubliceringsdatum för ett adaptivt formulär.
 
-1. Tryck på Skapa. En dialogruta där du kan ange namn, namn och plats för att spara det anpassade formuläret visas:
+1. Tryck på **[!UICONTROL Create]**. En dialogruta med namn, namn och plats för att spara det anpassade formuläret visas:
 
    * **[!UICONTROL Title:]** Anger formulärets visningsnamn. Titeln hjälper dig att identifiera formuläret i [!DNL Experience Manager Forms] användargränssnitt.
    * **[!UICONTROL Name:]** Anger formulärets namn. En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
-   * **[!UICONTROL Path:]** Anger platsen där det adaptiva formuläret ska sparas. Du kan spara det anpassade formuläret direkt på `/content/dam/formsanddocuments` eller skapa en mapp som `/content/dam/formsanddocuments/adaptiveforms` för att spara ett anpassat formulär. Se till att du skapar mappen innan du använder den i sökvägen. Fältet Sökväg skapar inte en mapp automatiskt.
+   * **[!UICONTROL Path:]** Anger platsen där det adaptiva formuläret ska sparas. Du kan spara det anpassade formuläret direkt på `/content/dam/formsanddocuments` eller skapa en mapp som `/content/dam/formsanddocuments/adaptiveforms` för att spara ett anpassat formulär. Se till att du skapar mappen innan du använder den i sökvägen. The **[!UICONTROL Path:]** skapas ingen mapp automatiskt.
 
 1. Tryck på **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen. Här visas också sidlisten där du kan anpassa det nya formuläret efter behov.
 
