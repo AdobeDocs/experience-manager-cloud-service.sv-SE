@@ -2,7 +2,7 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 43fe6bdc8534cdc6c9d1b8afee90c647c447bfe1
 workflow-type: tm+mt
 source-wordcount: '1585'
 ht-degree: 4%
@@ -244,13 +244,13 @@ Alla dessa åtgärder kan utlösas av:
 
    Sedan, beroende på vad du gör:
 
-   * Kopiera:
+   * [Kopiera](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#copying-and-pasting-a-page):
 
       * Du måste sedan navigera till den nya platsen och klistra in.
-   * Flytta:
+   * [Flytta](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#moving-or-renaming-a-page):
 
       * Guiden öppnas och samlar in den information som behövs för att flytta sidan. Följ instruktionerna på skärmen.
-   * Ta bort:
+   * [Ta bort](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#deleting-a-page):
 
       * Du ombeds bekräfta åtgärden.
    >[!NOTE]
