@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 2766a40f67edd08f25177fb0651773cd1547cedc
+source-git-commit: 6b0fffb599d46a36270e98e0d818f33d5f97e955
 workflow-type: tm+mt
-source-wordcount: '2653'
+source-wordcount: '2655'
 ht-degree: 1%
 
 ---
@@ -427,7 +427,7 @@ Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
 
 >[!NOTE]
 >
->På grund av en Windows-begränsning är den här funktionen bara tillgänglig för Linux-användare.
+>På grund av en Windows-begränsning är den här funktionen bara tillgänglig för macOS- och Linux-användare.
 
 Istället för att köra lokal validering (`validate.sh`) och starta dockningsbehållaren (`docker_run.sh`) varje gång konfigurationen ändras kan du köra `docker_run_hot_reload.sh` skript.  Skriptet söker efter ändringar i konfigurationen och läser automatiskt in den igen och kör valideringen igen. Genom att använda det här alternativet kan du spara mycket tid vid felsökning.
 
