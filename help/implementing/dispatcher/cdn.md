@@ -3,9 +3,9 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: 472a4311372ce9a01730f7ced6d4b26018aae4b9
+source-git-commit: 9ac5426c71c2ed794b9e72c1eacd936b9aa8d70c
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1042'
 ht-degree: 8%
 
 ---
@@ -70,6 +70,8 @@ Konfigurationsinstruktioner:
    * Detta behövs för att CDN-nätverket i Adobe ska kunna validera källan för förfrågningarna och skicka `X-Forwarded-*` rubriker i AEM. Till exempel:`X-Forwarded-For` används för att fastställa klientens IP-adress. Det blir alltså den betrodda uppringarens (dvs. kundhanterade CDN) ansvar att se till att `X-Forwarded-*` rubriker (se anteckningen nedan).
    * Åtkomst till Adobe CDN-ingången kan blockeras om en `X-AEM-Edge-Key` finns inte. Informera Adobe om du behöver direktåtkomst till Adobe CDN:s ingress (som ska blockeras).
 
+Se [Exempel på CDN-leverantörskonfigurationer](#sample-configurations) för exempel på konfiguration från ledande CDN-leverantörer.
+
 Innan du godkänner direkttrafik bör du validera med Adobe kundsupport att hela trafikflödet fungerar korrekt.
 
 När du har fått `X-AEM-Edge-Key`kan du testa att begäran dirigeras korrekt enligt följande.
@@ -99,6 +101,25 @@ Observera att när du använder ditt eget CDN behöver du inte installera domän
 Prestandan kan bli liten på grund av det extra hoppet, även om hoppet från kundens CDN till det AEM hanterade CDN sannolikt är effektivt.
 
 Observera att den här kundens CDN-konfiguration stöds för publiceringsnivån, men inte framför författarnivån.
+
+### Exempel på CDN-leverantörskonfigurationer {#sample-configurations}
+
+Nedan visas flera konfigurationsexempel från ett antal ledande CDN-leverantörer.
+
+**Akamai**
+
+![Akamai1](assets/akamai1.png "Akamai")
+![Akamai2](assets/akamai2.png "Akamai")
+
+**Amazon CloudFront**
+
+![CloudFront1](assets/cloudfront1.png "Amazon CloudFront")
+![CloudFront2](assets/cloudfront2.png "Amazon CloudFront")
+
+**Cloudflare**
+
+![Cloudflare1](assets/cloudflare1.png "Cloudflare")
+![Cloudflare2](assets/cloudflare2.png "Cloudflare")
 
 ## Geolocation-rubriker {#geo-headers}
 
