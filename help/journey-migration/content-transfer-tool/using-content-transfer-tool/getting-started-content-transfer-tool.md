@@ -2,7 +2,7 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: 7bebdff5095786005d5c4c91b7b699d71f9813a7
+source-git-commit: 8e1cc042da37fd246a5048e67fc04cbacfa69775
 workflow-type: tm+mt
 source-wordcount: '1341'
 ht-degree: 6%
@@ -35,7 +35,7 @@ Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Di
 Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. För att en extrahering ska kunna köras måste följande slutpunkter vara tillgängliga från den instans som körs AEM:
 
 * Målet AEM den as a Cloud Service miljön: `author-p<program_id>-e<env_id>.adobeaemcloud.com`
-* Azure-blobblagringstjänsten: `*.blob.core.windows.net`
+* Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
 * I/O-slutpunkten för användarmappning: `usermanagement.adobe.io`
 
 Om du vill testa anslutningen till AEM as a Cloud Service målmiljön skickar du följande cURL-kommando från skalet för källinstansen (ersätt `program_id`, `environment_id`och `migration_token`):
