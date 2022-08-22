@@ -2,7 +2,7 @@
 title: Extraherar innehåll från källa
 description: Extraherar innehåll från källa
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
-source-git-commit: 5075482f48bf9aaf2c7386af74c14a50b4469840
+source-git-commit: e9af2bee0867b6787cd25f4af80cf8bf6a4d706a
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 19%
@@ -32,19 +32,20 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam12.png)
 
-   >!![IMPORTANT]
-   Kontrollera att Extraheringsnyckeln är giltig och att den inte ligger nära utgångsdatumet. Om den ligger nära sitt förfallodatum kan du förnya extraheringsnyckeln genom att markera migreringsuppsättningen och klicka på Egenskaper. Klicka på **Förnya**. Då kommer du till Cloud Acceleration Manager där du kan klicka på **Kopiera extraheringsnyckel**. Varje gång du klickar på **Kopiera extraheringsnyckel**skapas en ny extraheringsnyckel som är giltig i 14 dagar från det att den skapades.
-   [!bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam13.png)
+   >[!IMPORTANT]
+   >
+   >Kontrollera att Extraheringsnyckeln är giltig och att den inte ligger nära utgångsdatumet. Om den ligger nära sitt förfallodatum kan du förnya extraheringsnyckeln genom att markera migreringsuppsättningen och klicka på Egenskaper. Klicka på **Förnya**. Då kommer du till Cloud Acceleration Manager där du kan klicka på **Kopiera extraheringsnyckel**. Varje gång du klickar på **Kopiera extraheringsnyckel**skapas en ny extraheringsnyckel som är giltig i 14 dagar från det att den skapades.
+   >[!bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam13.png)
 
 1. Då öppnas dialogrutan Extrahering. Klicka på **Extract** för att starta extraheringsfasen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam14.png)
 
    >[!NOTE]
-Du kan skriva över mellanlagringsbehållaren under extraheringsfasen. If **Skriv över mellanlagringsbehållare** är inaktiverat kan det snabba upp extraheringar för efterföljande migreringar där innehållssökvägarna eller inkluderingsversionsinställningarna inte har ändrats. Om innehållssökvägarna eller inkluderingsversionsinställningarna har ändrats **Skriv över mellanlagringsbehållare** ska vara aktiverat.
+   >Du kan skriva över mellanlagringsbehållaren under extraheringsfasen. If **Skriv över mellanlagringsbehållare** är inaktiverat kan det snabba upp extraheringar för efterföljande migreringar där innehållssökvägarna eller inkluderingsversionsinställningarna inte har ändrats. Om innehållssökvägarna eller inkluderingsversionsinställningarna har ändrats **Skriv över mellanlagringsbehållare** ska vara aktiverat.
 
    >[!IMPORTANT]
-Om Användarmappning inte har körts på den här migreringsuppsättningen innan innehåll extraheras från källan visas en varning om att steget Användarmappning väntar, vilket visas i bilden ovan. Klicka på **Mappa användare** för att köra verktyget för användarmappning.
+   >Om Användarmappning inte har körts på den här migreringsuppsättningen innan innehåll extraheras från källan visas en varning om att steget Användarmappning väntar, vilket visas i bilden ovan. Klicka på **Mappa användare** för att köra verktyget för användarmappning.
 
 1. The **Extrahering** fältet visas nu **KÖRS** status för att ange att extraheringen pågår.
 
@@ -68,8 +69,8 @@ Om Användarmappning inte har körts på den här migreringsuppsättningen innan
 Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
 >[!NOTE]
-Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt förkopieringssteget för den första fullständiga extraheringen kan du hoppa över förkopieringen för efterföljande extraheringar i den övre delen (om den översta migreringsuppsättningsstorleken är mindre än 200 GB) eftersom det kan göra hela processen tidsödande.
-Dessutom är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen av den övre delen körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
+>Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt förkopieringssteget för den första fullständiga extraheringen kan du hoppa över förkopieringen för efterföljande extraheringar i den övre delen (om den översta migreringsuppsättningsstorleken är mindre än 200 GB) eftersom det kan göra hela processen tidsödande.
+>Dessutom är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen av den övre delen körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
 
 När extraheringen är klar kan du överföra delta-innehåll med extraheringsmetoden för uppdateringar.
 
@@ -82,8 +83,8 @@ Följ stegen nedan:
 1. The **Extrahering av migreringsuppsättning** visas. Klicka på **Extract**.
 
    >[!IMPORTANT]
-Du bör inaktivera alternativet **Overwrite staging container during extraction**.
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam20.png)
+   >Du bör inaktivera alternativet **Overwrite staging container during extraction**.
+   >![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam20.png)
 
 
 ## What&#39;s Next {#whats-next}
