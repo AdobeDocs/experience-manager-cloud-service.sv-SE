@@ -3,12 +3,12 @@ title: Användning av CIF-produkt- och kategoriväljare
 description: Lär dig hur du använder CIF-produkt- och kategoriväljare i dina kundhandelskomponenter för att hjälpa författare och marknadsförare att arbeta effektivt med e-handelsprodukter och katalogdata.
 sub-product: Commerce
 topics: Development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 feature: Commerce Integration Framework
 exl-id: 30f1f263-1b78-46ae-99ed-61861c488b2a
-source-git-commit: 2e0a2b543fe0b6302a5dd62055f89a8f30427e6b
+source-git-commit: f5e465d90477f1b49e4ff1c5ca9dd47cc5d539bb
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
