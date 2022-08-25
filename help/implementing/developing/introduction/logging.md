@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för de enskilda tjänsterna eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 47bd338469a1d47b8f9863b8454e2074657c9fe8
+source-git-commit: 690939074570fb5285f242fe8d782380cfa5abc1
 workflow-type: tm+mt
-source-wordcount: '2316'
+source-wordcount: '2324'
 ht-degree: 2%
 
 ---
@@ -549,7 +549,7 @@ Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas
 
 I supportärendet ska man ange
 
-* Splunk HEC-slutpunktsadress
+* Splunk HEC-slutpunktsadress. Den här slutpunkten måste ha ett giltigt SSL-certifikat
 * Splunk-indexvärdet
 * Splunk-porten
 * Splunk HEC-token. Se [den här sidan](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples) för mer information.
