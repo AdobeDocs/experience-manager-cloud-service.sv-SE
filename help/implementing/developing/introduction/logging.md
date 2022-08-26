@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för de enskilda tjänsterna eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 690939074570fb5285f242fe8d782380cfa5abc1
+source-git-commit: 197bff164df83788b4b8b16ba4c7a82021f86002
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2334'
 ht-degree: 2%
 
 ---
@@ -560,7 +560,7 @@ Egenskaperna ovan bör anges för varje relevant kombination av program- och mil
 >
 >Skräppostvidarebefordran för sandlådeprogrammiljöer stöds inte.
 
-Du bör se till att den ursprungliga begäran innehåller all utvecklingsmiljö som ska aktiveras, utöver stage/prod-miljöerna.
+Du bör se till att den ursprungliga begäran innehåller all utvecklingsmiljö som ska aktiveras, utöver stage/prod-miljöerna. Splunk måste ha ett SSL-certifikat och vara offentlig.
 
 Om nya utvecklingsmiljöer som skapas efter den ursprungliga begäran ska ha Splunk-vidarebefordran, men inte har det aktiverat, bör ytterligare en begäran göras.
 
