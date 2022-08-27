@@ -3,7 +3,7 @@ title: Cache i AEM as a Cloud Service
 description: 'Cache i AEM as a Cloud Service '
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: a624b4f1999238adae2f6a03c2169cb30de9f730
+source-git-commit: 42c1d4fcfef4487aca6225821c16304ccf4deb04
 workflow-type: tm+mt
 source-wordcount: '2591'
 ht-degree: 1%
@@ -196,19 +196,6 @@ Som standard cachelagras inte blobbinnehåll i AEM.
 ### HEAD beteende {#request-behavior}
 
 När en begäran från HEAD tas emot i CDN i Adobe för en resurs som är **not** cachelagras, begäran omformas och tas emot av dispatchern och/eller AEM som en GET-begäran. Om svaret är nåbart kommer efterföljande förfrågningar från HEAD att besvaras av CDN. Om svaret inte är tillgängligt kommer efterföljande HEAD-begäranden att skickas till dispatchern och/eller AEM-instansen under en tidsperiod som beror på `Cache-Control` TTL.
-
-<!---### Marketing campaign parameters {#marketing-parameters}
-
-Marketing campaign parameters are added to a website to track different marketing campaigns but rarely have impact on how the website should look like. That's why in the dispatcher they can mostly be ignored for dispatcher caching decisions. This can be achieved by setting the [ignoreUrlParams](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters) parameter.
-Adobe maintains a list of commonly used marketing query parameters in the file `conf.dispatcher.d/cache/marketing_query_parameters.any`. Uncomment the lines that are used by the websites marketing campaigns and uncomment the `/ignoreUrlParams` section in the enabled farm.
-
-```
-/ignoreUrlParams {
- 	/0001 { /glob "*" /type "deny" }
- 	$include "../cache/marketing_query_parameters.any"
-}
-```
--->
 
 ## Invalidering av Dispatcher-cache {#disp}
 
