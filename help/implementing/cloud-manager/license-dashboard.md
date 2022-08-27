@@ -2,9 +2,9 @@
 title: Licenspanelen
 description: Med Cloud Manager får du en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller klientorganisation.
 exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
-source-git-commit: 5bf65238ce4d1f619507d9a5f8b7574e58352d51
+source-git-commit: 28036cd047404babddbb1365c80327adc5b6fa71
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -67,35 +67,21 @@ Innehållsförfrågningar spåras på AEM as a Cloud Service edge-servrar. Urspr
 
 AEM har också regler för att utesluta välkända organ, inklusive välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst.
 
-Nedan följer en icke uttömmande lista över exempel på undantagna välkända tjänster.
-
-* LäggTillSökpunkt
-* AhrefsBot
-* Applebot
-* Fråga Jeeves Corporate Spider
-* Bingbot
-* BingPreview
-* BLEXBot
-* BuiltWith
-* Bytespider
-* CrawlerKengo
-* FacebookexternFoto
-* Google AdsBot
-* Google AdsBot Mobile
-
 ### Varför visar min analysrapport andra resultat än AEM innehållsförfrågningar? {#why-are-reports-different}
 
 Innehållsförfrågningar kommer att innehålla avvikelser med en organisations analysrapporteringsverktyg som sammanfattas i den här tabellen.
 
 | Orsak till avvikelse | Förklaring |
 |---|---|
-| Taggar | Alla sidor som spåras som AEM innehållsförfrågningar kan taggas med Analytics-spårning eller inte.<br>Alla API-anrop som spåras som AEM kommer inte att taggas av en organisations analysverktyg.<br>Sidor eller API-anrop kan taggas för att spåra åtgärder i stället för vyer. |
+| Taggar | Alla sidor som spåras som AEM innehållsförfrågningar kan taggas med Analytics-spårning eller inte. Alla API-anrop som spåras som AEM kommer inte att taggas av en organisations analysverktyg.<br>Sidor eller API-anrop kan taggas för att spåra åtgärder eller bara unika sidvyer i stället för alla vyer. |
 | Tag Management Rules | Regelinställningar för tagghantering kan resultera i olika konfigurationer för datainsamling på en sida, vilket resulterar i en kombination av avvikelser med spårning av innehållsbegäran. |
 | Bots | Okända botar som inte har föridentifierats och tagits bort av AEM kan orsaka spårningsavvikelser. |
 | Rapportsviter | Sidor som ingår i samma AEM och domän kan skicka data till olika rapportsviter i Analytics. |
 | Övervaknings- och säkerhetsverktyg från tredje part | Övervaknings- och säkerhetssökningsverktygen kan generera innehållsförfrågningar för AEM som inte spåras i analysrapporter. |
 | Förhämtningsbegäranden | Om du använder en förhämtningstjänst för att förhandsladda sidor för att öka hastigheten kan det medföra att trafiken för innehållsförfrågningar ökar avsevärt. |
-| DOS | Adobe gör sitt yttersta för att automatiskt upptäcka och filtrera bort trafik från DDOS-attacker, men det finns ingen garanti för att alla möjliga DDOS-attacker identifieras. |
+| DOS | Adobe gör sitt yttersta för att automatiskt upptäcka och filtrera bort trafik från DDOS-attacker, men det finns ingen garanti för att alla möjliga DDOS-attacker identifieras |
+| Trafikblockerare | Om du använder en spårningsblockerare i en webbläsare kan det hända att vissa begäranden inte spåras. |
+| Brandväggar | Brandväggar kan blockera Analytics-spårning. Detta är vanligare med brandväggar. |
 
 ### Vad händer om jag använder mitt eget CDN? {#using-own-cdn}
 
