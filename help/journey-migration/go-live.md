@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: cc90803ff1ccf109ca6a02f2b69aa54362fa867e
+source-git-commit: 9ffde71af0c24c0592ef9ca008ddeaf9ce70599e
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -144,6 +144,7 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
          * [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
          * [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
       * Hantera anpassade domännamn (DNS)
+         * För att vara säker på att DNS-rensningen inte kommer att orsaka oväntade problem är det bäst att skapa en testunderdomän för att ansluta din produktionsinstans till innan du publicerar och göra en omgång av UAT-testning. Om din domän är example.com kan du skapa en subdomain test.example.com och använda den i produktionen. Under UAT-testningen av domänen ska du söka efter saker som rätt länkomdirigering, cachelagring och dispatcherkonfigurationer.
          * [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
          * [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
          * [Hantera eget domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
