@@ -3,7 +3,7 @@ title: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2
 description: Versionsinformation för Cloud Manager i AEM as a Cloud Service version 2021.3.0
 feature: Release Information
 exl-id: f826e0c6-3b1d-44f5-99a2-f792f5df3a55
-source-git-commit: 71647239fc5e740faa25524a01a8ef21ed2d7a3b
+source-git-commit: 575be022704e998e63162f19c37ece877efef627
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.3.0 är 11 mars 20
    * Ta bort platser eller resurser från ett befintligt program med både platser och resurser.
    * Lägg till andra, outnyttjade lösningsberättigande antingen till ett befintligt program eller som ett nytt program.
 
-* **Uppdatera AEM** etiketten visas nu både för Pipeline Execution och Activity screens.
+* **AEM** etiketten visas nu både för Pipeline Execution och Activity screens.
 
 * Om en miljö är i viloläge men det även finns en AEM uppdatering tillgänglig, visas **Viloläge** status har företräde framför **Uppdatering tillgänglig**.
 

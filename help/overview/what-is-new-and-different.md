@@ -2,9 +2,9 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: 575be022704e998e63162f19c37ece877efef627
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1903'
 ht-degree: 80%
 
 ---
@@ -67,26 +67,27 @@ Det möjliggör automatisk skalning för olika användningsmönster:
 
 ## AEM {#aem-updates}
 
->[!NOTE]
->Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
-
-AEM as a Cloud Service använder nu Continuous Integration och Continuous Delivery (CI/CD) för att säkerställa att dina projekt har den senaste AEM versionen. Det innebär att instanser av Production och Stage uppdateras till den senaste AEM utan att tjänsten avbryts för användarna.
+AEM as a Cloud Service använder nu kontinuerlig integrering och kontinuerlig leverans (CI/CD) för att säkerställa att dina projekt har den senaste AEM versionen. Detta innebär att produktions- och mellanlagringsinstanser uppdateras till den senaste AEM utan avbrott i användarens service.
 
 >[!NOTE]
-> Om uppdateringen till produktionsmiljön misslyckas kommer Cloud Manager automatiskt att återställa scenmiljön. Detta görs automatiskt för att säkerställa att både fas- och produktionsmiljöer har samma AEM när uppdateringen är klar.
+>
+>Om uppdateringen till produktionsmiljön misslyckas kommer Cloud Manager automatiskt att återställa testmiljön. Detta görs automatiskt för att säkerställa att både testnings- och produktionsmiljöerna har samma AEM när uppdateringen är klar.
 
-AEM versionsuppdateringar är av två typer:
+Det finns två typer AEM versionsuppdateringar:
 
-* **AEM Push-uppdateringar**
+* **AEM underhållsuppdateringar**
 
    * Kan släppas dagligen.
-   * Mest underhållet, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
-
-      Eftersom ändringarna utförs regelbundet blir effekten inkrementell vilket minskar påverkan på tjänsten.
+   * Är främst avsedda för underhåll, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
+   * Påverkar inte särskilt mycket eftersom ändringarna tillämpas regelbundet.
 
 * **Nya funktionsuppdateringar**
 
-   * Frisläppt via ett förutsägbart månadsschema.
+   * släpps enligt ett förutsägbart månadsschema.
+
+>[!TIP]
+>
+>Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
 
 ## Cloud Manager {#cloud-manager}
 
