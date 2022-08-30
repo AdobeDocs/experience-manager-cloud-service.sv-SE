@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: c138f0be15550df85a2ec23b6b551ccba07996c8
+source-git-commit: 0e1fbef77cb42dd8bb280bb971dc0643019901a3
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
@@ -84,12 +84,12 @@ De aktuella kombinationerna av leverantör/version är:
 
 | Leverantör | Version |
 |---|---|
-| `oracle` | `1.8` |
-| `oracle` | `1.11` |
+| `oracle` | `8` |
 | `oracle` | `11` |
-| `sun` | `1.8` |
-| `sun` | `1.11` |
+| `sun` | `8` |
 | `sun` | `11` |
+
+Tabellen hänvisar till produktversionsnummer. Java-build-nummer eller installationssökvägar kan återspegla gamla Java-versionskonventioner som 1.8 för Java 8.
 
 >[!NOTE]
 >
