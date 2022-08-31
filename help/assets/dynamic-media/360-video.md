@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i D
 feature: 360 VR Video
 role: User
 exl-id: ffd092d3-2188-47b0-a475-8bfa660c03c1
-source-git-commit: fa6de4e383b4de628938fce455f321911cad452c
+source-git-commit: 033692b82ee366b70f69ca35d55bfac59da3157f
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managin
 
 ## 360 Video in action {#video-in-action}
 
-Välj [Space Station 360](https://mobiletest.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
+Välj [Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
 
 ![360 videoexempel](assets/6_5_360videoiss_simplified.png)
 *Videobildruta från Space Station 360*
@@ -63,7 +63,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
       * Width=auto; Höjd=720; Bithastighet=2 500 kbit/s
       * Width=auto; Höjd=1080; Bithastighet=5000 kbit/s
       * Width=auto; Höjd=1440; Bithastighet=6600 kbit/s
-   * Bearbeta 360-videoinnehåll i en mapp som är exklusivt dedikerad till 360-videoresurser.
+   * Bearbeta 360-videomaterial i en mapp som är exklusivt dedikerad till 360-videomaterial.
 
    Detta tillvägagångssätt ställer större krav på slutanvändarens nätverk och processor.
 
@@ -108,7 +108,7 @@ Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/addin
 
    ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
 
-   Om du vill förhandsgranska videon väljer du 360-videoresursen.
+   Om du vill förhandsgranska videon väljer du resursen med 360 videoklipp.
 
 1. Markera listrutan på förhandsvisningssidan, i det övre vänstra hörnet på sidan, och välj sedan **[!UICONTROL Viewers]**.
 
