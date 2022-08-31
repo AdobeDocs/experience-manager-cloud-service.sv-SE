@@ -2,9 +2,9 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: 4b2ea300f61ad7d1218a984f7238365c5b170a8e
+source-git-commit: abce1369b3b97a1e9ff7d0c8434b671cc7c5f8c2
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,10 @@ Exempel på vanliga användningsområden för miljövariabler är:
 * När det finns flera utvecklingsmiljöer i ett program och en del konfigurationer skiljer sig från en miljö till nästa
 
 ## Lägga till miljövariabler {#add-variables}
+
+>[!NOTE]
+>
+>Du måste vara medlem i [**Distributionshanteraren** roll](/help/onboarding/cloud-manager-introduction.md#role-based-premissions) för att lägga till eller ändra miljövariabler.
 
 1. Logga in på Adobe Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
 1. Cloud Manager visar de olika tillgängliga programmen. Välj den du vill hantera.

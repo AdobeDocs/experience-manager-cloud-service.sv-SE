@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Lär dig hur AEM as a Cloud Service team och produktprofiler och ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: 2d793f22e554c2a4bde8831b5053d1640ba07c70
+source-git-commit: d54c25791cbb06232ff6e24bb7b8005b366a2144
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Cloud Manager har förkonfigurerade produktprofiler som kan ses som rollbaserade
 
 Var och en av produktprofilerna har särskilda behörigheter kopplade till sig.
 
-* **Företagsägare** - I den här rollen har du behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö, lägga till/redigera/ta bort/köra pipelines, distribuera kod AEM miljön eller utföra kodkvalitetskontroller.
+* **Företagsägare** - I den här rollen har du behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö, distribuera kod AEM miljön eller utföra kvalitetskontroller av kod.
 * **Distributionshanteraren** - I den här rollen har du behörighet att lägga till eller uppdatera en miljö, köra valfri pipeline och distribuera kod till AEM eller utföra kodkvalitetskontroller.
 * **Utvecklare** - I den här rollen har du behörighet att skapa personliga åtkomsttoken för åtkomst till Git.
 * **Programhanteraren** - I den här rollen har du behörighet att schemalägga rörledningar, åsidosätta de tre skiktens kvalitetsgates och ge produktionsgodkännande.
