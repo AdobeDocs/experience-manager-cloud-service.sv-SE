@@ -2,7 +2,7 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: 758e3df9e11b5728c3df6a83baefe6409bef67f9
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '2930'
 ht-degree: 12%
@@ -79,7 +79,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
 
 ### Innehållspaket
 
-+ The `ui.content` paketet innehåller allt innehåll och all konfiguration. The Content Package contains all the node definitions not in the `ui.apps` or `ui.config` packages, or in other words, anything not in `/apps` or `/oak:index`. Common elements of the `ui.content` package include, but are not limited to:
++ The `ui.content` paketet innehåller allt innehåll och all konfiguration. Innehållspaketet innehåller alla noddefinitioner som inte finns i `ui.apps` eller `ui.config` paket, med andra ord, ingenting i `/apps` eller `/oak:index`. Vanliga element i `ui.content` paketet innehåller, men är inte begränsat till:
    + Kontextmedvetna konfigurationer
       + `/conf`
    + Nödvändiga, komplexa innehållsstrukturer (t.ex. Innehållsbygge som bygger på och sträcker sig förbi innehållsstrukturer för baslinjen som definierats i Repo Init.)
@@ -144,12 +144,12 @@ Ett AEM projekt som innehåller 2 AEM program kan se ut så här:
 
 Paket ska märkas med sin deklarerade pakettyp. Pakettyper gör det lättare att klargöra syftet med och distributionen av ett paket.
 
-+ Behållarpaket måste ange sina `packageType` till `container`. Behållarpaket får inte innehålla vanliga noder. Endast OSGi-paket, konfigurationer och underpaket tillåts. Behållare i AEM as a Cloud Service får inte användas [installera kopplingar](http://jackrabbit.apache.org/filevault/installhooks.html).
++ Behållarpaket måste ange sina `packageType` till `container`. Behållarpaket får inte innehålla vanliga noder. Endast OSGi-paket, konfigurationer och underpaket tillåts. Behållare i AEM as a Cloud Service får inte användas [installera kopplingar](https://jackrabbit.apache.org/filevault/installhooks.html).
 + Kodpaket (ej ändringsbara) måste ange sina `packageType` till `application`.
 + Innehållspaket (mutable) måste ange sina `packageType` till `content`.
 
 
-Mer information finns i [Apache Jackrabbit FileVault - dokumentation för Plugin-programmet Package Maven](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType), [Pakettyper för Apache Jackrabbit](http://jackrabbit.apache.org/filevault/packagetypes.html)och [FileVault Maven-konfigurationsfragment](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
+Mer information finns i [Apache Jackrabbit FileVault - dokumentation för Plugin-programmet Package Maven](https://jackrabbit.apache.org/filevault-package-maven-plugin/package-mojo.html#packageType), [Pakettyper för Apache Jackrabbit](https://jackrabbit.apache.org/filevault/packagetypes.html)och [FileVault Maven-konfigurationsfragment](#marking-packages-for-deployment-by-adoube-cloud-manager) nedan.
 
 >[!TIP]
 >
@@ -167,9 +167,9 @@ Som standard hämtar Adobe Cloud Manager alla paket som skapas av Maven-bygget, 
 
 Repo Init innehåller instruktioner, eller skript, som definierar JCR-strukturer, från vanliga nodstrukturer som mappträd till användare, tjänstanvändare, grupper och ACL-definition.
 
-The key benefits of Repo Init are they have implicit permissions to perform all actions defined by their scripts, and are invoked early in the deployment lifecycle ensuring all requisite JCR structures exist by the time code is executed.
+De viktigaste fördelarna med Repo Init är att de har implicit behörighet att utföra alla åtgärder som definieras av deras skript, och att de anropas tidigt under distributionens livscykel för att säkerställa att alla nödvändiga JCR-strukturer finns när koden körs.
 
-While Repo Init scripts themselves live in the `ui.config` project as scripts, they can, and should, be used to define the following mutable structures:
+Medan Repo Init-skripten finns i `ui.config` -projekt som skript, kan och bör användas för att definiera följande muterbara strukturer:
 
 + Baslinjeinnehållsstrukturer
 + Tjänstanvändare
@@ -239,8 +239,8 @@ Bryter ned mappstrukturen:
    `application`, `content` eller `container`
    + The `application` mapp innehåller kodpaket
    + The `content` mapp innehåller innehållspaket
-   + The `container` folder holds any [extra application packages](#extra-application-packages) that might be included by the AEM application.
-This folder name corresponds to the [package types](#package-types) of the packages it contains.
+   + The `container` mappen innehåller alla [extra programpaket](#extra-application-packages) som kan ingå i AEM.
+Mappnamnet motsvarar [pakettyper](#package-types) av de paket den innehåller.
 + Mappen på den fjärde nivån innehåller underpaketen och måste vara någon av:
    + `install` för installation på **både** AEM-redigerare och AEM-publicering
    + `install.author` för installation **endast** på AEM-redigerare
@@ -249,7 +249,7 @@ This folder name corresponds to the [package types](#package-types) of the packa
 En distribution som innehåller AEM författare och publicerar specifika paket kan till exempel se ut så här:
 
 + `all` Behållarpaket bäddar in följande paket för att skapa en enda distributionsartefakt
-   + `ui.apps` embedded in `/apps/my-app-packages/application/install` deploys code to both AEM author and AEM publish
+   + `ui.apps` inbäddad i `/apps/my-app-packages/application/install` distribuerar kod till både AEM författare och AEM publicera
    + `ui.apps.author` inbäddad i `/apps/my-app-packages/application/install.author` distribuerar kod till endast AEM författare
    + `ui.content` inbäddad i `/apps/my-app-packages/content/install` distribuerar innehåll och konfiguration till både AEM författare och AEM publicera
    + `ui.content.publish` inbäddad i `/apps/my-app-packages/content/install.publish` distribuerar innehåll och konfiguration till endast AEM publicera
@@ -325,15 +325,15 @@ De projektstrukturer och den organisation som beskrivs i den här artikeln är *
 
 Följande är Maven `pom.xml` konfigurationsksnuttar som kan läggas till i Maven-projekt för att anpassas till ovanstående rekommendationer.
 
-### Package Types {#xml-package-types}
+### Pakettyper {#xml-package-types}
 
 Kod- och innehållspaket, som distribueras som underpaket, måste deklarera pakettypen **application** eller **content**, beroende på vad de innehåller.
 
-#### Container Package Types {#container-package-types}
+#### Behållarpakettyper {#container-package-types}
 
-The container `all/pom.xml` project **does not** declare a `<packageType>`.
+Behållaren `all/pom.xml` projekt **inte** deklarera `<packageType>`.
 
-#### Code (Immutable) Package Types {#immutable-package-types}
+#### Kodpakettyper (ej ändringsbara) {#immutable-package-types}
 
 Kodpaket måste ange sina `packageType` till `application`.
 
@@ -360,11 +360,11 @@ I `ui.apps/pom.xml`, `<packageType>application</packageType>` bygg konfiguration
     ...
 ```
 
-#### Content (Mutable) Package Types {#mutable-package-types}
+#### Pakettyper för innehåll (ändringsbart) {#mutable-package-types}
 
 Innehållspaket måste ange sina `packageType` till `content`.
 
-In the `ui.content/pom.xml`, the `<packageType>content</packageType>` build configuration directive of the `filevault-package-maven-plugin` plugin declaration declares its package type.
+I `ui.content/pom.xml`, `<packageType>content</packageType>` byggkonfigurationsdirektivet för `filevault-package-maven-plugin` plugin-deklarationen deklarerar pakettypen.
 
 ```xml
 ...
@@ -389,7 +389,7 @@ In the `ui.content/pom.xml`, the `<packageType>content</packageType>` build conf
 
 ### Markera paket för distribution av Adobe Cloud Manager {#cloud-manager-target}
 
-I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`), lägger du till `<cloudManagerTarget>none</cloudManagerTarget>` i `<properties>`-konfigurationen för plugin-deklarationen `filevault-package-maven-plugin` för att vara säker på att de **inte** distribueras av Adobe Cloud Manager. The container (`all`) package should be the singular package deployed via Cloud Manager, which in turn embeds all required code and content packages.
+I alla projekt som genererar ett paket, **utom** för behållarprojektet (`all`), lägger du till `<cloudManagerTarget>none</cloudManagerTarget>` i `<properties>`-konfigurationen för plugin-deklarationen `filevault-package-maven-plugin` för att vara säker på att de **inte** distribueras av Adobe Cloud Manager. Behållaren (`all`) ska vara det fristående paket som distribueras via Cloud Manager, som i sin tur bäddar in all kod och alla innehållspaket som krävs.
 
 ```xml
 ...
@@ -625,4 +625,4 @@ I `all/pom.xml` lägg till `maven-clean-plugin` plugin-program som rensar målka
 ## Ytterligare resurser {#additional-resources}
 
 + [Hantera paket med Maven](/help/implementing/developing/tools/maven-plugin.md)
-+ [Plugin-programmet FileVault Content Package Maven](http://jackrabbit.apache.org/filevault-package-maven-plugin/)
++ [Plugin-programmet FileVault Content Package Maven](https://jackrabbit.apache.org/filevault-package-maven-plugin/)

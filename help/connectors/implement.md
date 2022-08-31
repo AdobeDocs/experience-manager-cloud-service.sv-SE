@@ -2,7 +2,7 @@
 title: Implementera en AEM-anslutning
 description: Implementera en AEM-anslutning
 exl-id: 70024424-8c52-493e-bbc9-03d238b8a5f5
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 7%
@@ -37,7 +37,7 @@ Användbar dokumentation
 
 Experience Manager as a Cloud Service [dokumentation](../overview/introduction.md) ger värdefulla insikter i utvecklingen av AEM. Nedan finns några specifika tekniska ämnen och referenser som du kan använda när du implementerar en AEM-anslutning:
 
-* Adobe konsulttjänster (ACS) [AEM](http://adobe-consulting-services.github.io/acs-aem-samples/) för kommenterad kod som hjälper AEM att utbilda utvecklare
+* Adobe konsulttjänster (ACS) [AEM](https://adobe-consulting-services.github.io/acs-aem-samples/) för kommenterad kod som hjälper AEM att utbilda utvecklare
 * De olika dokumentationslänkarna i avsnittet Vanliga integreringsmönster i den här artikeln
 
 Community-resurser
@@ -45,9 +45,9 @@ Community-resurser
 
 Förutom den statiska dokumentationen ovan erbjuder Adobe och AEM resurser för att få ut en kontakt på marknaden:
 
-* The Adobe Community&#39;s [AEM](http://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) är en aktiv webbplats där dina kollegor ställer och svarar på frågor
+* The Adobe Community&#39;s [AEM](https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.html) är en aktiv webbplats där dina kollegor ställer och svarar på frågor
 * Ytterligare tekniska resurser för Adobe finns tillgängliga på vissa partnernivåer. Läs mer om [Adobe Exchange Program](https://partners.adobe.com/exchangeprogram/experiencecloud).
-* Om er organisation vill ha hjälp med implementeringen kan ni överväga Adobes [Professional Services](http://www.adobe.com/se/marketing-cloud/service-support/professional-consulting-training.html)-team eller visa en lista över Adobes partners över hela världen i [Solution Partner Finder](https://solutionpartners.adobe.com/home/partnerFinder.html)
+* Om er organisation vill ha hjälp med implementeringen kan ni överväga Adobes [Professional Services](https://www.adobe.com/marketing-cloud/service-support/professional-consulting-training.html)-team eller visa en lista över Adobes partners över hela världen i [Solution Partner Finder](https://solutionpartners.adobe.com/home/partnerFinder.html)
 
 Strukturregler för paket
 -----------------------

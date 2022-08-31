@@ -2,7 +2,7 @@
 title: 'Registrering, inloggning och användarprofil '
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
-source-git-commit: c49a70b4048acc4e925c69b7ebbedbf8779bbbc0
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Inloggning kan implementeras med följande två metoder:
 Kunderna kan skriva egna komponenter. Om du vill veta mer kan du kanske börja lära dig mer om:
 
 * The [Sling Authentication Framework](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html)
-* Och fundera [fråga AEM Community Experts session](http://bit.ly/ATACEFeb15) om inloggning.
+* Och fundera [fråga AEM Community Experts session](https://bit.ly/ATACEFeb15) om inloggning.
 
 ### Integrering med en identitetsleverantör {#integration-with-an-idp}
 

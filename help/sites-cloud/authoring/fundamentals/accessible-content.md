@@ -2,7 +2,7 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: e9c1ec6807f86ab00f89ef292a89a0c8efdf802b
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '14050'
 ht-degree: 5%
@@ -80,7 +80,7 @@ För statisk grafik är det grundläggande kravet att tillhandahålla ett motsva
 >
 >När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
-AEM kräver **Alternativ text** fält som ska fyllas i som standard. If the image is purely decorative and alternative text would be unnecessary, the **Image is decorative** option can be checked.
+AEM kräver **Alternativ text** fält som ska fyllas i som standard. Om bilden bara är dekorativ och alternativ text inte behövs, kan **Bilden är dekorativ** kan markeras.
 
 #### Skapa bra textalternativ {#creating-good-text-alternatives}
 
@@ -564,7 +564,7 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 >
 >* [Px to Em Calculater - Omni](https://www.omnicalculator.com/conversion/px-to-em)
 >* [Konvertering av teckenstorlek: pixel-point-em-rem-percent](https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/)
->* [PMtoEM.com: Konvertering från PX till EM på ett enkelt sätt](http://pxtoem.com)
+>* [PMtoEM.com: Konvertering från PX till EM på ett enkelt sätt](https://pxtoem.com)
 
 
 Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyser](https://www.paciellogroup.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://www.webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
@@ -595,7 +595,7 @@ Förutom att följa riktlinjerna enligt [Så här uppfyller du kriterierna 1.4.4
 #### Mer information - Ändra textstorlek (1.4.4) {#more-information-resize-text}
 
 * [Förstå villkor för framgång 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html)
-* [How to Meet Success Criteria 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text)
+* [Så här uppfyller du kriterierna 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text)
 
 ### Bilder av text (1.4.5) {#images-of-text}
 
@@ -642,13 +642,13 @@ Det handlar om att se till att användarna har tillgång till alla funktioner vi
 
 Syftet med detta villkor är att se till att innehåll, när det är möjligt, kan köras via ett tangentbord eller tangentbord (så att ett alternativt tangentbord kan användas). När innehåll kan användas via ett tangentbord eller alternativt tangentbord kan det hanteras av personer som inte har någon syn (som inte kan använda enheter som möss som kräver ögonkoordinering) samt av personer som måste använda alternativa tangentbord eller inmatningsenheter som fungerar som tangentbordsemulatorer. Emulatorer för tangentbord omfattar talinmatningsprogram, klipp-och-knapp-program, tangentbord på skärmen, skanningsprogram samt en mängd hjälpmedelstekniker och alternativa tangentbord. Individer med nedsatt syn kan också ha problem med att spåra en pekare och upptäcka att programvaran är mycket enklare (eller endast möjligt) om de kan styra den via tangentbordet.
 
-#### How to Meet - Keyboard (2.1.1) {#how-to-meet-keyboard}
+#### Så här möts du - tangentbord (2.1.1) {#how-to-meet-keyboard}
 
-Follow the guidelines under [How to Meet Success Criteria 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard).
+Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard).
 
 #### Mer information - Tangentbord (2.1.1) {#more-information-keyboard}
 
-* [Understanding Success Criteria 2.1.1](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
+* [Om villkor för att lyckas 2.1.1](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
 * [Så här uppfyller du kriterierna för framgång 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard)
 
 ### Ingen tangentbordssvällning (2.1.2)  {#no-keyboard-trap}
@@ -657,9 +657,9 @@ Follow the guidelines under [How to Meet Success Criteria 2.1.1](https://www.w3.
 * Nivå A
 * Ingen tangentbordssvällning: Om tangentbordsfokus kan flyttas till en komponent på sidan med hjälp av ett tangentbordsgränssnitt, kan fokus flyttas bort från den komponenten med bara ett tangentbordsgränssnitt. Om det kräver mer än oförändrad pil- eller tabbtangent eller andra standardmetoder för att avsluta, informeras användaren om metoden för att flytta fokus bort.
 
-#### Purpose - No Keyboard Trap (2.1.2) {#purpose-no-keyboard-trap}
+#### Syfte - Ingen tangentbordssvällning (2.1.2) {#purpose-no-keyboard-trap}
 
-Syftet med detta villkor är att se till att innehållet inte *svällning* tangentbordsfokus i underavsnitt av innehållet på en webbsida. This is a common problem when multiple formats are combined within a page and rendered using plug-ins or embedded applications.
+Syftet med detta villkor är att se till att innehållet inte *svällning* tangentbordsfokus i underavsnitt av innehållet på en webbsida. Detta är ett vanligt problem när flera format kombineras på en sida och återges med plugin-program eller inbäddade program.
 
 Det kan finnas tillfällen då webbsidans funktioner begränsar fokus till ett underavsnitt av innehållet (till exempel en modal dialogruta). I sådana fall bör du ange en metod som gör att en användare kan lämna det underavsnittet av innehållet (ESC-tangenten stänger den modala dialogrutan eller en stängningsknapp stänger den modala dialogrutan).
 
@@ -667,7 +667,7 @@ Det kan finnas tillfällen då webbsidans funktioner begränsar fokus till ett u
 
 Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap).
 
-#### More information - No Keyboard Trap (2.1.2) {#more-information-no-keyboard-trap}
+#### Mer information - Ingen tangentbordssvällning (2.1.2) {#more-information-no-keyboard-trap}
 
 * [Om villkor för att lyckas 2.1.2](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
 * [Så här uppfyller du kriterierna för framgång 2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap)
@@ -775,7 +775,7 @@ Det handlar om att säkerställa att innehållet är enkelt och enkelt att navig
 
 #### Syfte - Kringgå block (2.4.1) {#purpose-bypass-blocks}
 
-Syftet med detta villkor är att personer som navigerar sekventiellt genom innehållet ska få mer direkt åtkomst till det primära innehållet på webbsidan. Webbsidor och program har ofta innehåll som visas på andra sidor eller skärmar. Exempel på upprepade innehållsblock är bland annat navigeringslänkar, rubrikgrafik, menyer och reklamramar, men är inte begränsade till dem. Small repeated sections such as individual words, phrases or single links are not considered blocks for the purposes of this provision.
+Syftet med detta villkor är att personer som navigerar sekventiellt genom innehållet ska få mer direkt åtkomst till det primära innehållet på webbsidan. Webbsidor och program har ofta innehåll som visas på andra sidor eller skärmar. Exempel på upprepade innehållsblock är bland annat navigeringslänkar, rubrikgrafik, menyer och reklamramar, men är inte begränsade till dem. Små upprepade avsnitt, t.ex. enskilda ord, fraser eller enstaka länkar, anses inte utgöra block i denna bestämmelse.
 
 #### Så här möts du - kringgå block (2.4.1) {#how-to-meet-bypass-blocks}
 
@@ -783,7 +783,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.4.1](ht
 
 #### Mer information - Kringgå block (2.4.1) {#more-information-bypass-blocks}
 
-* [Understanding Success Criteria 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
+* [Om villkor för att lyckas 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
 * [Så här uppfyller du kriterierna för framgång 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks)
 
 ### Sida med rubriker (2.4.2)  {#page-titled}
@@ -829,7 +829,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.4.3](ht
 ### Länksyfte (i sitt sammanhang) (2.4.4)  {#link-purpose-in-context}
 
 * Villkor för lyckat resultat 2.4.4
-* Level A
+* Nivå A
 * Länksyfte (i sammanhang): Syftet med varje länk kan avgöras av länktexten fristående eller av länktexten tillsammans med dess programmatiskt fastställda länkkontext, utom när länkens syfte skulle vara tvetydigt för användarna i allmänhet.
 
 #### Syfte - Länksyfte (i sammanhang) (2.4.4) {#purpose-link-purpose-in-context}
@@ -984,19 +984,19 @@ För att uppfylla det här kriteriet kan standardspråket på en webbsida identi
 * En sida som skall återges på spanska bör anta följande standard:
    `<html lang = “es”>`
 
-In AEM, the default language of your page is set when creating the page, but may also be changed when editing [Page Properties](/help/sites-cloud/authoring/fundamentals/page-properties.md).
+I AEM anges sidans standardspråk när du skapar sidan, men det kan också ändras när du redigerar [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
 
 >[!NOTE]
 >
->AEM provides further fine-tuning for variations of a root language; for example, American Engish - en-us, British English - en-gb, and Canadian English - en-ca. Denna detaljnivå är ofta överflödig för hjälpmedelstekniker, men kan användas för regionala variationer av sidinnehåll.
+>AEM erbjuder ytterligare finjusteringar för variationer av ett rotspråk. till exempel amerikansk engelska - en-us, brittisk engelska - en-gb och kanadensisk engelska - en-ca. Denna detaljnivå är ofta överflödig för hjälpmedelstekniker, men kan användas för regionala variationer av sidinnehåll.
 
 #### Mer information - Sidans språk (3.1.1) {#more-information-language-of-page}
 
 * [Om villkor för att lyckas 3.1.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
 * [Hur man uppfyller kriterierna för framgång 3.1.1](https://www.w3.org/WAI/WCAG21/quickref/#language-of-page)
-* Koderna baseras på ISO 639-1. A more extensive list of codes for each language can be found at the [W3 Schools site](https://www.w3schools.com/tags/ref_language_codes.asp).
+* Koderna baseras på ISO 639-1. En mer omfattande lista över koder för varje språk finns på [W3 Schools site](https://www.w3schools.com/tags/ref_language_codes.asp).
 
-### Language of Parts (3.1.2)  {#language-of-parts}
+### Delarnas språk (3.1.2)  {#language-of-parts}
 
 * Villkor för lyckat resultat 3.1.2
 * Nivå AA

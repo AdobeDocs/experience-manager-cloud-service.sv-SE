@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 848f6a29-2e0f-4976-8ed7-6b7f69408c1b
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#beta-features-forms}
 
-* **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/aem-forms-cloud-service-communications.html) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
+* **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera dokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
    * Generera PDF-filer från ett XFA-formulär PDF och Adobe Acrobat-formulär.
@@ -134,11 +134,11 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 * Taggar med samma namn men olika namnutrymmen kunde inte skapas tidigare.
 
-## XML-dokumentation för Experience Manager as a Cloud Service {#xml-documentation}
+## XML Documentation för Experience Manager as a Cloud Service {#xml-documentation}
 
 ### Vad är nytt? {#what-is-new-xml-documentation}
 
-XML-dokumentation för Experience Manager as a Cloud Service finns vanligtvis tillgänglig. Med programmet kan Experience Manager as a Cloud Service kunder köpa in XML-dokumentation och lägga till, importera, skapa, hantera och leverera tekniskt innehåll i flera kanaler, inklusive Experience Manager Sites.
+XML Documentation för Experience Manager as a Cloud Service finns i allmänhet att tillgå. Med programmet kan Experience Manager as a Cloud Service kunder köpa XML Documentation-tillägg för att importera, skapa, hantera och leverera tekniskt innehåll i flera kanaler, inklusive Experience Manager Sites.
 
 ## Cloud Manager {#cloud-manager}
 

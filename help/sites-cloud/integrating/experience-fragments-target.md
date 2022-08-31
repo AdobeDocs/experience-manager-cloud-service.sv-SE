@@ -2,7 +2,7 @@
 title: Exportera Experience Fragments till Adobe Target
 description: Exportera Experience Fragments till Adobe Target
 exl-id: 752d91f9-13a6-40c2-9425-7d18dafe9205
-source-git-commit: 8e13f671ada67e4e22b66094ad23bf5a0508ccba
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '2259'
 ht-degree: 0%
@@ -51,7 +51,7 @@ Upplevelsefragment kan exporteras till standardarbetsytan i Adobe Target eller t
 >
 >Mer information finns även i:
 >
->* [Utveckling av Adobe Target](http://developers.adobetarget.com/)
+>* [Utveckling av Adobe Target](https://developers.adobetarget.com/)
 >* [Kärnkomponenter - Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 >* [Adobe Target - Hur använder jag Adobe Experience Manager (AEM) Experience Fragments?](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=en)
 >* [AEM 6.5 - Konfigurera integrationen med Adobe Target manuellt - Skapa en målmolnkonfiguration](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/target-configuring.html#creating-a-target-cloud-configuration)
@@ -95,7 +95,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp och/el
 
    >[!NOTE]
    >
-   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur dess egenskaper ska exporteras i komponentens Sling Model.
+   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
    >
    >Se kärnkomponenten: [Kärnkomponenter - Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html)
 

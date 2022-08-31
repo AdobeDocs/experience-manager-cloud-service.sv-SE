@@ -3,7 +3,7 @@ title: Distribuera till AEM as a Cloud Service
 description: 'Distribuera till AEM as a Cloud Service '
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 4fcb2ff39f0634cfcdab5500b03441f6db0b474d
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '3358'
 ht-degree: 0%
@@ -67,7 +67,7 @@ När programändringar på grund av det blå-gröna distributionsmönstret aktiv
 
 För kunder med befintliga kodbaser är det viktigt att gå igenom den databasomstrukturering som beskrivs i AEM dokumentation för att se till att innehåll som tidigare fanns under /etc flyttas till rätt plats.
 
-Vissa ytterligare begränsningar gäller för dessa kodpaket, till exempel [installera kopplingar](http://jackrabbit.apache.org/filevault/installhooks.html) stöds inte.
+Vissa ytterligare begränsningar gäller för dessa kodpaket, till exempel [installera kopplingar](https://jackrabbit.apache.org/filevault/installhooks.html) stöds inte.
 
 ## OSGI-konfiguration {#osgi-configuration}
 
@@ -104,7 +104,7 @@ Efter övergång till en ny version av programmet:
    * Mappar (lägg till, ändra, ta bort)
    * Redigerbara mallar (lägg till, ändra, ta bort)
    * Kontextmedveten konfiguration (allt under `/conf`) (lägg till, ändra, ta bort)
-   * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbits dokumentation om filevault](http://jackrabbit.incubator.apache.org/filevault/installhooks.html) om att installera kopplingar. Observera att AEM CS för närvarande använder Flash version 3.4.0, som begränsar möjligheten att installera kopplingar till administratörer, systemanvändare och medlemmar i administratörsgruppen).
+   * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbits dokumentation om filevault](https://jackrabbit.incubator.apache.org/filevault/installhooks.html) om att installera kopplingar. Observera att AEM CS för närvarande använder Flash version 3.4.0, som begränsar möjligheten att installera kopplingar till administratörer, systemanvändare och medlemmar i administratörsgruppen).
 
 Det går att begränsa installationer av muterbart innehåll till författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna uppdelning gjordes i AEM 6.5 och närmare information om den rekommenderade projektomstruktureringen finns i [AEM 6.5-dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
@@ -143,7 +143,7 @@ Repoinit är att föredra för de här användningsområdena för innehållsänd
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Så här skapar du repoinit-satser:
+Följ nedanstående procedur för att skapa repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.

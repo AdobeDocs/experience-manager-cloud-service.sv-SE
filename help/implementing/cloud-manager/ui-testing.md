@@ -2,7 +2,7 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 05f9e9de0d5dbcc332466dc964e2d01569d16110
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -79,7 +79,7 @@ För att skapa en Docker-byggkontext behöver du en Maven-modul som:
 * Skapar ett arkiv som innehåller en `Dockerfile` och alla andra filer som behövs för att bygga Docker-bilden med testerna.
 * Taggar arkivet med `ui-test-docker-context` klassificerare.
 
-Det enklaste sättet att göra detta är att konfigurera [Maven Assembly Plugin](http://maven.apache.org/plugins/maven-assembly-plugin/) för att skapa kontextarkivet för Docker-bygget och tilldela rätt klassificerare till det.
+Det enklaste sättet att göra detta är att konfigurera [Maven Assembly Plugin](https://maven.apache.org/plugins/maven-assembly-plugin/) för att skapa kontextarkivet för Docker-bygget och tilldela rätt klassificerare till det.
 
 Du kan skapa gränssnittstester med olika tekniker och ramverk, men i det här avsnittet förutsätts att ditt projekt är utformat på ett sätt som liknar följande.
 
@@ -184,7 +184,7 @@ Följande miljövariabler skickas till Docker-bilden vid körning.
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
 1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
@@ -199,7 +199,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 
 Testerna ibland måste överföra filer till det program som testas. För att driftsättningen av Selenium ska vara flexibel i förhållande till dina tester är det inte möjligt att ladda upp en resurs direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
 
-1. Överför filen på den URL som anges av `UPLOAD_URL` miljövariabel.
+1. Överför filen på den URL som anges av `UPLOAD_URL` systemvariabel.
    * Överföringen måste utföras i en POST med ett multipart-formulär.
    * Multipart-formuläret måste ha ett enda filfält.
    * Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`.

@@ -2,7 +2,7 @@
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: IMS-stöd för Adobe Experience Manager as a Cloud Service
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
-source-git-commit: 5fa6809a9b4cdfa230ea3ebb3b0c9964807e0230
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 90%
@@ -229,7 +229,7 @@ Läs Rolldefinitioner om du vill veta mer om roller för användare som styr til
    ![ACL3](/help/security/assets/ims22.png)
 
 
-1. När du har lagts till i rätt profil bör du ha tillgång till respektive klientorganisation i Cloud Manager via [Adobe Experience Cloud](http://my.cloudmanager.adobe.com) i det övre högra hörnet i användargränssnittet.
+1. När du har lagts till i rätt profil bör du ha tillgång till respektive klientorganisation i Cloud Manager via [Adobe Experience Cloud](https://my.cloudmanager.adobe.com) i det övre högra hörnet i användargränssnittet.
 
 
 ### Få tillgång till Experience Manager as a Cloud Service {#accessing-instance-cloud-service}

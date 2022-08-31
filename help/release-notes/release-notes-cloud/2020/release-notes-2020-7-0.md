@@ -2,7 +2,7 @@
 title: Versionsinformation om 2020.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: '"[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.7.0."'
 exl-id: 75d354a3-6987-4de0-aec8-24043461c516
-source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Se [Komma igång med AEM Commerce as a Cloud Service](https://experienceleague.a
 
 Version 2.11.0 av [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) ingår nu som en del av AEM Sites:
 
-* Introduktion till en ny [PDF Viewer Component](https://aemcomponents.dev/content/core-components-examples/library/page-authoring/pdf-viewer.html).
+* Introduktion till en ny [PDF Viewer Component](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/pdf-viewer.html).
 
 * Stöd för AMP (Accelerated Mobile Pages) för kärnkomponenter finns nu. Det hjälper till att skapa snabbare kundupplevelser genom att göra sidövergången direkt när du kommer in på webbplatsen från ett mobilsökresultat från Google, vilket förbättrar användarengagemanget och SEO.
 Se [AMP-stöd för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/amp.html) för mer information.

@@ -6,7 +6,7 @@ mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: ec4b5b391cb3ba2d13c67a6da30eea59674cf072
+source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
 workflow-type: tm+mt
 source-wordcount: '3651'
 ht-degree: 15%
@@ -162,7 +162,7 @@ Konfigurera [!DNL Dynamic Media] på [!DNL Assets] och [!DNL Sites] distribution
    * På lokal [!DNL Sites], i **[!UICONTROL Publish Assets]** alternativ, markera **[!UICONTROL Selective Publish]**. Markera inte **[!UICONTROL Sync All Content]**.
    * På fjärrkontrollen [!DNL Assets] distribution, in [!UICONTROL Dynamic Media sync mode], markera **[!UICONTROL Enabled by default]**.
 
-1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Den här funktionen aktiverar standardinställningen [Bildkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html) att visa [!DNL Dynamic Media] bilder när [!DNL Dynamic Media] bilder används av författare på webbsidor på lokala [!DNL Sites] distribution.
+1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Den här funktionen aktiverar standardinställningen [Bildkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html) att visa [!DNL Dynamic Media] bilder när [!DNL Dynamic Media] bilder används av författare på webbsidor på lokala [!DNL Sites] distribution.
 
 ## Använda fjärresurser {#use-remote-assets}
 
