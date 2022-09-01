@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 0b453290cd0e7dc5ec319e8ddbfa085f109717df
+source-git-commit: 118945f407dab8ccad1ec018b588b64972fb5f12
 workflow-type: tm+mt
-source-wordcount: '3709'
+source-wordcount: '3713'
 ht-degree: 22%
 
 ---
@@ -619,6 +619,7 @@ ht-degree: 22%
          + [Recommendations](/help/commerce-cloud/authoring/product-recommendations.md)
       + Administratör {#administering}
          + [Installation i flera butiker](/help/commerce-cloud/configuring/multi-store-setup.md)
+         + [Installation av flera Commerce Systems](/help/commerce-cloud/configuring/multiple-commerce-systems-setup.md)
          + [Konfigurera URL:er för SEO](/help/commerce-cloud/configuring/advanced-url-configuration.md)
          + [Cachealternativ](/help/commerce-cloud/configuring/caching.md)
          + [Anpassade HTTP-huvuden](/help/commerce-cloud/configuring/custom-http-headers.md)
