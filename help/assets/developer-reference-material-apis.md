@@ -5,9 +5,9 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 57abdf0198e646719bbb818e2b70d772579ba548
+source-git-commit: 153cc482047c3235b0f62bb94051c884b4cf29d4
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1864'
 ht-degree: 1%
 
 ---
@@ -84,6 +84,8 @@ Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser.
 
 >[!NOTE]
 Se klientkoden för att implementera den här metoden i öppen källkod [aem-upload library](https://github.com/adobe/aem-upload).
+[!IMPORTANT]
+Under vissa omständigheter är det inte säkert att ändringarna till fullo kan spridas mellan begäranden till Experience Manager på grund av att lagringsutrymmet i Cloud Service så småningom är konsekvent. Detta leder till 404 svar på initiering eller slutförande av överföringsanrop på grund av att de nödvändiga mappprojekten inte sprids. Kunderna bör förvänta sig 404 svar och hantera dem genom att implementera ett nytt försök med en strategi för backoff.
 
 ### Initiera överföring {#initiate-upload}
 
