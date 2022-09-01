@@ -2,9 +2,9 @@
 title: Testning av kodkvalitet
 description: Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan förbättra kvaliteten på dina distributioner.
 exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
-source-git-commit: 8eada48aaef62aa942b98981a3510a2c64ea582b
+source-git-commit: d60659f443d130a195fd81cfe4773cd87df28264
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1174'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ I följande tabell sammanfattas klassificerings- och feltrösklarna för var och
 
 >[!NOTE]
 >
->Se [SonarQube måttdefinitioner](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) för mer detaljerade definitioner.
+>Se [SonarQube&#39;s Metric Definition](https://docs.sonarqube.org/latest/user-guide/metric-definitions/) för mer detaljerade definitioner.
 
 >[!NOTE]
 >

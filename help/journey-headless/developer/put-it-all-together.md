@@ -2,9 +2,9 @@
 title: Så här sätter du samman allt - din app och ditt innehåll i AEM utan rubriker
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du tar ditt AEM-projekt, inklusive innehållsfragment, dina GraphQL-anrop, dina REST API-anrop och programmet, och förbereder det för publicering.
 exl-id: bece84ad-4c8c-410c-847e-9ef3f79970cb
-source-git-commit: 270eb35023e34eed2cd17674372794c6c2cc7757
+source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,11 @@ AEM SDK används för att skapa och distribuera anpassad kod. Det är det verkty
 
 AEM skiljer sig från AEM SDK **Headless SDK** är en uppsättning bibliotek som kunder kan använda för att snabbt och enkelt interagera med AEM Headless API:er via HTTP.
 
-Mer information om AEM Headless SDK finns i [dokumentation här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/how-to/aem-headless-sdk.html?lang=en).
+Mer information om AEM Headless SDK finns i [dokumentation här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html).
 
 ## Ytterligare utvecklingsverktyg {#additional-development-tools}
 
-Förutom AEM SDK behöver du ytterligare verktyg som underlättar utveckling och testning av kod och innehåll lokalt:
+Förutom AEM SDK behöver du ytterligare verktyg som gör det lättare att utveckla och testa kod och innehåll lokalt:
 
 * Java™
 * Git
@@ -54,7 +54,7 @@ Förutom AEM SDK behöver du ytterligare verktyg som underlättar utveckling och
 
 Eftersom AEM är ett Java™-program måste du installera Java™ och Java™ SDK för att stödja utvecklingen av AEM as a Cloud Service.
 
-Git är det ni kommer att använda för att hantera källkontrollen och för att checka in ändringarna i Cloud Manager och sedan distribuera dem till en produktionsinstans.
+Git är det ni använder för att hantera källkontrollen och för att checka in ändringarna i Cloud Manager och sedan distribuera dem till en produktionsinstans.
 
 AEM använder Apache Maven för att bygga projekt som genererats från AEM Maven Project-arkitypen. Alla större utvecklingsmiljöer har stöd för integrering av Maven.
 
@@ -62,7 +62,7 @@ Node.js är en JavaScript-körningsmiljö som används för att arbeta med de vi
 
 ## Lathund för komponenterna i ett AEM system {#components-of-an-aem-system-at-a-glance}
 
-Nu ska vi titta på de olika delarna i en AEM.
+Nu tittar vi på komponenterna i en AEM.
 
 En komplett AEM består av en författare, en publiceringsversion och en utskicksare. Samma komponenter är tillgängliga i den lokala utvecklingsmiljön för att göra det enklare för dig att förhandsgranska koden och innehållet innan du publicerar.
 
@@ -76,7 +76,7 @@ En komplett AEM består av en författare, en publiceringsversion och en utskick
 
 Det lokala utvecklingsprojektet bygger på Apache Maven och använder Git för källkontroll. För att kunna uppdatera projektet kan utvecklarna använda den integrerade utvecklingsmiljö de föredrar, till exempel Eclipse, Visual Studio Code eller IntelliJ.
 
-Om du vill testa kod- eller innehållsuppdateringar som ska importeras av ditt headless-program måste du distribuera uppdateringarna till den lokala AEM, som innehåller lokala instanser av AEM författare och publiceringstjänster.
+Om du vill testa kod- eller innehållsuppdateringar som hämtas av ditt headless-program måste du distribuera uppdateringarna till den lokala AEM-miljön, som innehåller lokala instanser av AEM författare och publiceringstjänster.
 
 Observera skillnaden mellan de olika komponenterna i den lokala AEM, eftersom det är viktigt att testa uppdateringarna där de är som viktigast. Testa till exempel innehållsuppdateringar på författaren eller testa ny kod på publiceringsinstansen.
 
@@ -90,13 +90,13 @@ För att göra det måste ni sätta ihop allt: kod, innehåll och konfiguration,
 
 Den lokala utvecklingsmiljön består av tre huvudområden:
 
-1. Det AEM projektet - det innehåller all kod, konfiguration och innehåll som AEM utvecklare kommer att arbeta med
-1. Local AEM Runtime - lokala versioner av AEM författare och publiceringstjänster som ska användas för att distribuera kod från det AEM projektet
+1. Det AEM projektet - det här projektet innehåller all anpassad kod, konfiguration och innehåll som AEM utvecklare kommer att arbeta med
+1. Local AEM Runtime - lokala versioner av AEM författare och publiceringstjänster som används för att distribuera kod från det AEM projektet
 1. Local Dispatcher Runtime - en lokal version av Apache htttpd-webbservern som innehåller Dispatcher-modulen
 
 När den lokala utvecklingsmiljön har konfigurerats kan du simulera innehåll som skickas till React-appen genom att distribuera en statisk nodserver lokalt.
 
-Om du vill få en mer ingående genomgång av hur du konfigurerar en lokal utvecklingsmiljö och alla beroenden som behövs för förhandsgranskning av innehåll kan du läsa [Produktionsdistributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/production-deployment.html?lang=en#prerequisites).
+<!-- THIS TOPIC IS 404. IT DOES NOT APPEAR IN THE TOC OR ANYWHERE ELSE To get a more in-depth look at setting up a local development environment and all dependencies needed for content preview, see [Production Deployment documentation](https://experienceleague.adobe.com/docs/experience-manager-learn/headless-tutorial/graphql/multi-step/production-deployment.html). -->
 
 ## What&#39;s Next {#whats-next}
 
@@ -105,7 +105,7 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 * Lär känna AEM utvecklingsverktyg
 * Förstå arbetsflödet för lokal utveckling
 
-Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar dokumentet [Så här Live med ditt headless-program](/help/journey-headless/developer/go-live.md) där du faktiskt tar ditt AEM Headless-projekt till hands!
+Fortsätt den AEM resan utan trassel genom att granska dokumentet nästa gång [Så här Live med ditt headless-program](/help/journey-headless/developer/go-live.md) där du faktiskt tar ditt AEM Headless-projekt till hands!
 
 ## Ytterligare resurser {#additional-resources}
 

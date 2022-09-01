@@ -2,9 +2,9 @@
 title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: 05a412519a2d2d0cba0a36c658b8fed95e59a0f7
+source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ Adobe har antagit Adobe Commerce GraphQL API:er som sitt officiella e-handels-AP
 
 ## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce Admin? Hur kan resurser från Dynamic Media förbrukas?
 
-Det finns ingen officiell integrering med AEM Assets - Adobe Commerce. Det finns en partnerkoppling på [marknadsplats](https://marketplace.magento.com/bounteous-dam.html).
+Det finns ingen officiell integrering med AEM Assets - Adobe Commerce. Det finns en partnerkoppling på [marknadsplats](https://marketplace.magento.com) <!-- THIS IS THE OLD URL THAT WAS USED. IT WAS 404 (https://marketplace.magento.com/bounteous-dam.html) -->
 
-Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL:er manuellt i Adobe Commerce. Dynamic Media är nu en del av AEM Assets och kommer att fungera på samma sätt.
+Som en tillfällig lösning kan du lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL-adresser manuellt i Adobe Commerce. Dynamic Media är nu en del av AEM Assets och fungerar på samma sätt.
 
 ## 3. Spelar det någon roll var e-handelslösningen används? (Lokalt eller i molnet)
 
-Nej, det spelar ingen roll var er handelslösning är installerad. CIF och den AEM butiken fungerar oavsett distributionsmodell. Om lösningen distribueras med den rekommenderade E2E-referensarkitekturen kan E2E-tester köras mot nyckeltal för prestanda som representerar en typisk företagsprofil. Detta kommer att ge ytterligare information som kan användas som riktmärke.
+Nej, det spelar ingen roll var er handelslösning är installerad. CIF och AEM fungerar oavsett distributionsmodell. Om lösningen distribueras med den rekommenderade E2E-referensarkitekturen kan E2E-tester köras mot nyckeltal för prestanda som representerar en typisk företagsprofil. Denna metod ger ytterligare information som kan användas som riktmärke.
 
 ## 4. Hur skapas katalogsidor eller produktsidor i AEM? Hur kvarstår de i AEM?
 
@@ -35,7 +35,7 @@ Det CIF-tillägg som används med AEM Cloud Service gör att data kan flöda fr�
 
 ## 6. Vilken katalogstorlek AEM med CIF-stöd?
 
-Detta beror på några ytterligare aspekter du måste tänka på. Hur stor är cachekvoten för katalogdata och sidor? Hur många samtidiga förfrågningar förväntar du dig under högtider? Hur skalbar är API:erna för era e-handelslösningar?
+Detta beror på några andra aspekter som du måste tänka på. Hur stor är cachekvoten för katalogdata och sidor? Hur många samtidiga förfrågningar förväntar du dig under högtider? Hur skalbar är API:erna för era e-handelslösningar?
 
 ## 7. Hur spelar PIM in i detta ramverk?
 
@@ -47,11 +47,11 @@ Dynamiska data som pris eller lager cachelagras inte i Dispatcher. Dynamiska dat
 
 ## 9. Hur fungerar cacheminnet för AEM Dispatcher med AEM och e-handel?
 
-Vi rekommenderar att du konfigurerar en TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar vi att du återger data på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [AEM Dispatcher](https://helpx.adobe.com/experience-manager/kb/optimizing-the-dispatcher-cache.html)
+Vi rekommenderar att du konfigurerar en TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar vi att du återger data på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [Optimera Dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html) och [Optimering av AEM](https://experienceleague.adobe.com/docs/commerce-operations/deliver-commerce-at-scale/performance.html).
 
 ## 10. Finns det någon rekommendation om enhetlig sökning i allt AEM innehåll med Commerce?
 
-En referensimplementering av produktsökningar tillhandahålls, men ingen enhetlig sökning med innehåll. Den här funktionen är vanligtvis mycket kundspecifik och bättre på en projektspecifik nivå.
+En referensimplementering av produktsökningar tillhandahålls, men ingen enhetlig sökning med innehåll. Den här funktionen är kundspecifik och bättre på projektspecifik nivå.
 
 ## 11. Hur fungerar sökningen med AEM och e-handel med CIF?
 
@@ -59,7 +59,7 @@ CIF innehåller komponenterna Sökfält och Sökresultat. Sökfältskomponenten 
 
 ## 12. Hur kan produktdata användas i MSM eller översättningar?
 
-Produktdata är vanligtvis redan översatta i PIM eller Adobe Commerce. AEM - Adobe Commerce Integration har stöd för anslutning till flera Adobe Commerce butiker och butiksvyer. I en MSM-konfiguration är vanligtvis en AEM länkad till en Adobe Commerce Store-vy.
+Produktdata är redan översatta i PIM eller Adobe Commerce. AEM - Adobe Commerce Integration har stöd för anslutning till flera Adobe Commerce butiker och butiksvyer. I en MSM-konfiguration är vanligtvis en AEM plats länkad till en Adobe Commerce-butiksvy.
 
 ## 13. Finns det något sätt att förbättra produktdata med kommersiell text? Var gör du det här? I AEM eller i e-handelslösningen?
 
