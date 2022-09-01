@@ -2,9 +2,9 @@
 title: Generera arkivdokument för adaptiv Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: da30318fb965535ae12d09a8ef397431714f9109
+source-git-commit: e9f235f4e4a1d314370a423ee8a2ef997346a794
 workflow-type: tm+mt
-source-wordcount: '3583'
+source-wordcount: '3602'
 ht-degree: 1%
 
 ---
@@ -400,7 +400,7 @@ Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. 
 **Inställningar för formulärnivå**
 
 * **Inkludera obundna fält i DoR:** När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
-* **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, exkluderas de från Postdokument om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd.
+* **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, exkluderas de från Postdokument om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd. Inställning [Återvalidera på servern](/help/forms/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) egenskapen true identifierar de dolda fälten som ska uteslutas från postdokumentet på serversidan.
 
 ## Använda en anpassad XCI-fil
 

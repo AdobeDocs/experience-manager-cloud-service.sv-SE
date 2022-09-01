@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 118945f407dab8ccad1ec018b588b64972fb5f12
+source-git-commit: 962b027521e6ca2d1da8e8d2f98c6227ea496743
 workflow-type: tm+mt
-source-wordcount: '3713'
+source-wordcount: '3716'
 ht-degree: 22%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 22%
    + Allmän information om AEMaaCS {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2022 {#2022}
+         + [Versionsinformation för 2022.7.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-7-0.md)
          + [Versionsinformation för 2022.6.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-6-0.md)
          + [Versionsinformation för 2022.5.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-5-0.md)
          + [Versionsinformation för 2022.4.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-4-0.md)

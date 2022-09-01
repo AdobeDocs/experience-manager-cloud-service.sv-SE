@@ -1,9 +1,10 @@
 ---
 title: Hantera innehållsfragment
 description: Lär dig hur du använder konsolen Innehållsfragment för att hantera AEM innehållsfragment. för framtagning av sidor, eller som bas för ditt headless-innehåll.
-source-git-commit: 9de8becfd69ea2a65a847cba88468c94e2fdf484
+exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
+source-git-commit: 28a3e8fe6ca16d20f5b4264e386154e95b55dc77
 workflow-type: tm+mt
-source-wordcount: '2047'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,20 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 >[!NOTE]
 >
 >Innehållsfragment lagras som **Resurser**. De hanteras huvudsakligen från **Innehållsfragment** konsolen, men kan även hanteras från **Resurser** konsol.
+
+## Konsolen Innehållsfragment {#content-fragments-console}
+
+Konsolen för innehållsfragment ger direktåtkomst till dina fragment och relaterade uppgifter. Mer information finns i:
+
+* [Grundläggande struktur och hantering av konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#basic-structure-handling-content-fragments-console)
+
+* [Information om dina innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#information-content-fragments)
+
+* [Åtgärder för ett innehållsfragment i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#actions-selected-content-fragment)
+
+* [Anpassa de kolumner som är tillgängliga i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#select-available-columns)
+
+* [Söka och filtrera i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#filtering-fragments)
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -78,61 +93,6 @@ Innehållsfragmentet har publicerats.
 Innehållsfragmentet har redigerats efter att det publicerades (men innan ändringen publicerades).
 * **Opublicerad**
 Innehållsfragmentet har avpublicerats.
-
-## Åtgärder för ett innehållsfragment i konsolen för innehållsfragment {#actions-content-fragment-console}
-
-I **Innehållsfragment** konsol: en rad åtgärder är tillgängliga för dina innehållsfragment från verktygsfältet:
-
-![Konsolåtgärder](assets/cfm-managing-cf-console-01.png)
-
-* **Öppna i resurser**
-* **Skapa**
-* The **Refererad av** Kolumnen innehåller också en direkt länk för att visa alla överordnade referenser till det fragmentet. inklusive referenser till innehållsfragment, upplevelsefragment och sidor.
-* Vid hovring över mappnamnet visas JCR-sökvägen.
-
-När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
-
-![Konsolåtgärder - valt fragment](assets/cfm-managing-cf-console-selected-01.png)
-
-* **Öppna**
-* **Publicera** (och **Avpublicera**)
-* **Kopiera**
-* **Flytta**
-* **Byt namn på**
-* **Ta bort**
-
->[!NOTE]
->
->Åtgärder som Publicera, Avpublicera, Ta bort, Flytta, Byt namn, Kopiera, utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via gränssnittet AEM asynkrona jobb.
-
-## Anpassa vyn i konsolen för innehållsfragment {#viewing-content-fragment-console}
-
-Konsolen visar information om innehållsfragmenten - i den aktuella mappen och i alla underordnade mappar.
-
-Du kan anpassa informationen som visas med **Anpassa tabell** ikon:
-
-![Anpassa tabellikon](assets/cfm-managing-cf-console-customize-table-icon.png)
-
-Detta öppnar **Anpassa tabell** där du kan markera/avmarkera de tillgängliga kolumnerna:
-
-![Anpassa tabell](assets/cfm-managing-cf-console-customize-table.png)
-
-## Söka och filtrera i konsolen för innehållsfragment {#search-filter-content-fragment-console}
-
-Du kan söka efter och/eller filtrera de innehållsfragment som ska visas i konsolen.
-
-Du kan:
-
-* välj önskad mapp
-* välj filter med **Visa filter** och använd sökrutan parallellt:
-
-![Anpassa tabellikon](assets/cfm-managing-cf-console-filter-search-01.png)
-
-Det finns ett urval av filter:
-
-![Filtrera och söka](assets/cfm-managing-cf-console-filter-search-02.png)
-
-Du kan också spara filter och sökkombinationer för senare referens.
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -284,7 +244,7 @@ Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publ
 
 Innehållsfragment måste publiceras för användning i publiceringsmiljön. Detta görs med hjälp av standardfunktionen Resurser
 
-* Från **Publicera** i verktygsfältet i [Konsol för innehållsfragment](#actions-content-fragment-console)
+* Från **Publicera** i verktygsfältet i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#actions-selected-content-fragment)
    * **Nu** - När fragmentet har bekräftats publiceras det omedelbart
    * **Schema** - du kan välja datum och tid när fragmentet ska publiceras
 
@@ -325,6 +285,14 @@ Så här tar du bort ett fragment:
 
    >[!CAUTION]
    Om fragmentet redan refereras från ett annat fragment, eller från en sida, visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med ett **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
+
+## Söka efter överordnade referenser för ditt fragment {#parent-references-fragment}
+
+Information om överordnade referenser finns i **Referenser** kolumn i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#information-content-fragments).
+
+## Hitta språkkopior av fragmentet {#language-copies-fragment}
+
+Information om språkkopior finns på **Språk** kolumn i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#information-content-fragments).
 
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
@@ -406,4 +374,3 @@ Du kan återgå till en viss version av fragmentet:
    Välj önskad version och sedan **Återgå till den här versionen** åtgärd.
 
 * while [jämföra en version med den aktuella versionen](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#comparing-fragment-versions) du kan **Återställ** till den valda versionen.
-
