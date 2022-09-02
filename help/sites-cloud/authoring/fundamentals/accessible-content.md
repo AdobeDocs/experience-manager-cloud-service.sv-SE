@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
+source-git-commit: 13885fbb3ed35c43ccfff03d47e4dc3ced2bc327
 workflow-type: tm+mt
-source-wordcount: '14054'
+source-wordcount: '14053'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägst), Niv
 
 * **Nivå A:** Webbplatsen har en grundläggande, lägsta tillgänglighetsnivå. För att den här nivån ska uppnås måste alla kriterier på nivå A uppfyllas.
 * **Nivå AA:** Detta är en idealisk nivå av hjälpmedel att eftersträva, där din webbplats når en grundläggande nivå av tillgänglighet, så att den är tillgänglig för de flesta människor i de flesta situationer som använder de flesta tekniker. För att den här nivån ska uppnås måste alla kriterier nivå A och nivå AA uppfyllas.
-* **Nivå AAA:** Webbplatsen har mycket hög tillgänglighet. För att den här nivån ska uppnås måste alla kriterier på nivå A, nivå AA och nivå AAA uppfyllas.
+* **Nivå AAA:** Webbplatsen har hög tillgänglighet. För att uppnå den här nivån uppfylls alla kriterier för lyckade resultat på nivå A, nivå AA och nivå AAA.
 
 När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
@@ -40,7 +40,7 @@ I följande avsnitt presenteras [lager i WCAG 2.1-riktlinjerna](https://www.w3.o
 
 >[!NOTE]
 >
->I det här dokumentet använder vi:
+>I det här dokumentet använder vi följande:
 >
 >* The [korta namn för WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance).
 >* The [numrering som används i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#numbering-in-wcag-2-1) för att underlätta korsreferenser med WCAG:s webbplats.
@@ -62,7 +62,7 @@ I följande avsnitt presenteras [lager i WCAG 2.1-riktlinjerna](https://www.w3.o
 
 #### Syfte - Innehåll som inte är text (1.1.1) {#purpose-non-text-content}
 
-Information på en webbsida kan tillhandahållas i många olika format som inte är text, till exempel bilder, videor, animeringar, diagram och diagram. Personer som är blinda eller har svårt nedsatt syn kan inte se icke-textbaserat innehåll, men de kan få åtkomst till textinnehåll genom att låta det läsas av skärmläsaren eller presenteras i taktisk form av en blindskriftsvisningsenhet. Genom att tillhandahålla textalternativ för innehåll i grafiskt format kan alltså de som inte kan se det grafiska innehållet få tillgång till en motsvarande version av den information som innehållet ger.
+Information på en webbsida kan finnas i många olika format som inte är text, till exempel bilder, videor, animeringar, diagram och diagram. Personer som är blinda eller har svårt nedsatt syn kan inte se icke-textbaserat innehåll, men de kan få åtkomst till textinnehåll genom att låta det läsas av skärmläsaren eller presenteras i taktisk form av en blindskriftsvisningsenhet. Genom att tillhandahålla textalternativ för innehåll i grafiskt format kan alltså de som inte kan se det grafiska innehållet få tillgång till en motsvarande version av den information som innehållet ger.
 
 En annan fördel är att textalternativ gör det möjligt att indexera icke-textinnehåll med sökmotorteknik.
 
@@ -74,17 +74,17 @@ För statisk grafik är det grundläggande kravet att tillhandahålla ett motsva
 >
 >Vissa färdiga kärnkomponenter, som **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)** tillhandahåller inte **Alternativ text** fält för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns **Etikett** fält (**[Tillgänglighet](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** för hela komponenten.
 >
->När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut).
+>När du implementerar versioner av dessa för din AEM måste ditt utvecklingsteam konfigurera sådana komponenter så att de stöder `alt` så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut).
 >
 >Vissa färdiga kärnkomponenter, som **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html)** tillhandahåller inte **Alternativ text** fält för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns **Etikett** fält (**[Tillgänglighet](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html#accessibility-tab)** för hela komponenten.
 >
->När versioner av dessa implementeras för er AEM-instans måste ert utvecklingsteam konfigurera dessa komponenter så att de stöder attributet `alt`[, så att författare kan lägga till det i innehållet (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+>När du implementerar versioner av dessa för din AEM måste ditt utvecklingsteam konfigurera sådana komponenter så att de stöder `alt` så att författare kan lägga till det i innehållet (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
 AEM kräver **Alternativ text** fält som ska fyllas i som standard. Om bilden bara är dekorativ och alternativ text inte behövs, kan **Bilden är dekorativ** kan markeras.
 
 #### Skapa bra textalternativ {#creating-good-text-alternatives}
 
-Det finns olika former av innehåll som inte är text, så textalternativets värde beror på vilken roll bilden spelar på webbsidan. Några allmänna regler för tummen som ska följas är:
+Det finns olika former av innehåll som inte är text, så textalternativets värde beror på vilken roll bilden spelar på webbsidan. Några allmänna regler som du tycker är bra kan vara:
 
 * Textalternativen bör vara kortfattade men ändå tydligt återge den viktiga information som icke-textinnehållet ger.
 * För långa beskrivningar (över 100 tecken) bör undvikas. Om ett textalternativ kräver mer information:
@@ -258,7 +258,7 @@ Följ anvisningarna i [Bildtexter (inspelade i förväg)](#captions-prerecorded)
 
 Detaljerade instruktioner ligger utanför det här dokumentets räckvidd, men med följande resurser får du användbar information:
 
-* [WebAIM: Bildtext i realtid](https://www.webaim.org/techniques/captions/realtime.php)
+* [WebAIM: Bildtext i realtid](https://webaim.org/techniques/captions/realtime.php)
 
 * [AccessComputing project (University of Washington): Kan bildtexter genereras automatiskt med taligenkänning?](https://www.washington.edu/accesscomputing/can-captions-be-generated-automatically-using-speech-recognition)
 
@@ -567,7 +567,7 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 >* [PMtoEM.com: Konvertering från PX till EM på ett enkelt sätt](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
 
 
-Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyser](https://www.paciellogroup.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://www.webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
+Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyser](https://www.tpgi.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
 
 Om du inte är lika orolig för hur sidan ska se ut kan du välja att inte ange färg för bakgrunds- och förgrundstext. Ingen kontrastkontroll krävs eftersom användarens webbläsare bestämmer färgerna för texten och bakgrunden.
 
