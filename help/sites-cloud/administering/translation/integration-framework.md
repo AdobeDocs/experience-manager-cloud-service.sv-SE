@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: 294743b3ca309cc0de3295cb55679e647bb10756
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1523'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Följande översättningsleverantörer tillhandahåller en implementering av AEM
 * [XTM Cloud](https://exchange.adobe.com/experiencecloud.details.105037.xtm-connect-for-adobe-experience-manager.html)
 * [Lingotek](https://exchange.adobe.com/experiencecloud.details.90088.lingotek-collaborative-translation-platform.html)
 * [RWS](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108277.html)
-* [Smartling](https://exchange.adobe.com/experiencecloud.details.90101.smartling-connector-for-adobe-experience-manager.html)
+* [Smartling](https://www.smartling.com/software/integrations/adobe-experience-manager/)
 * [Systran](https://exchange.adobe.com/experiencecloud.details.90233.systran-for-adobe-experience-manager.html)
 
 När du har installerat ett anslutningspaket kan du skapa en molnkonfiguration för anslutaren. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft Translator-anslutningen finns i [Integrera med Microsoft Translator](connect-ms-translator.md).
