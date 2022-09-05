@@ -2,7 +2,7 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 0199291bf4c0bb938072e601a9d1cc6d2940d4f0
+source-git-commit: 456b754fad3dc2d8f684f344b69d57d47b823b03
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 6%
@@ -313,7 +313,7 @@ När du redigerar ett Experience Fragment visas tillgängliga byggblock på flik
 Information om ditt fragment kan ses:
 
 1. Navigera till platsen för dina Experience Fragments (navigera inte längre till variationerna i fragmentet).
-Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn** visar även information om export till Target: <!--Details are shown in all views of the **Experience Fragments** console, with the **List View** including details of an [export to Target](/help/sites-administering/experience-fragments-target.md):-->
+Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn**[ visar även information om export till Target](/help/sites-cloud/integrating/integrating-adobe-target.md):
 
    ![Information om Experience Fragment](/help/sites-cloud/authoring/assets/xf-15.png)
 
