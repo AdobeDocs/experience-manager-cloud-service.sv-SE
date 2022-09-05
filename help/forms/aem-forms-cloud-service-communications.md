@@ -2,9 +2,9 @@
 title: AEM Forms as a Cloud Service - kommunikation
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: a3c817dedbf20b21e609ad0e5bfd0d3c4fa9a431
+source-git-commit: 07b9118b8cfc27bc9e2bfa134fbb57c7ae2728ad
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ En organisation har vanligtvis flera mallar. Till exempel en mall var för kredi
 
 ### Anropa ett API
 
-The [API-referensdokumentation](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/api/sync/#tag/Communications-Services) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen innehåller även API-definitionsfilen i .yaml-format. Du kan hämta .yaml-filen och överföra den till postman för att kontrollera API:ernas funktioner.
+The [API-referensdokumentation](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen innehåller även API-definitionsfilen i .yaml-format. Du kan hämta .yaml-filen och överföra den till postman för att kontrollera API:ernas funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335771)
 
