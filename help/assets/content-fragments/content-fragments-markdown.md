@@ -1,17 +1,17 @@
 ---
-title: Markdown
+title: Markering (resurser - innehållsfragment)
 description: Förstå hur Content Fragment Editor använder markeringssyntax för att enkelt skapa rubrikfritt innehåll.
 feature: Content Fragments
 role: User
 exl-id: 7a6d4a63-faf8-4e1c-95da-90db2027a2dd
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 21ee6ec3ffef602bfbac7d89bb6c3454869deda9
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '525'
 ht-degree: 4%
 
 ---
 
-# Markering {#markdown}
+# Markdown {#markdown}
 
 När du [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva headless-innehåll:
 
@@ -165,7 +165,7 @@ Du kan fet text enligt följande:
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-Om du vill ange ett kodomfång omsluter du det med citattecken (&amp;grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
+Om du vill ange ett kodomfång omsluter du det med citattecken (&grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
 
 Till exempel:
 

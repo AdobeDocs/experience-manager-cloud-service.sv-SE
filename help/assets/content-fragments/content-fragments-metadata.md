@@ -1,13 +1,13 @@
 ---
-title: Metadata – fragmentegenskaper
+title: Metadata - Fragmentegenskaper (resurser - innehållsfragment)
 description: Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment i AEM för att justera rubrikfritt innehåll.
 feature: Content Fragments
 role: User
 exl-id: bc67480d-a1e4-4ef9-b811-8bd110f70369
-source-git-commit: 4d20b83c3324e5c082c26e2fa700f03763da2d19
+source-git-commit: 21ee6ec3ffef602bfbac7d89bb6c3454869deda9
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 4%
+source-wordcount: '209'
+ht-degree: 3%
 
 ---
 

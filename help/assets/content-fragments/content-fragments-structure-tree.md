@@ -1,12 +1,12 @@
 ---
-title: Strukturträd för innehållsfragment
+title: Strukturträd för innehållsfragment (resurser - innehållsfragment)
 description: Använd funktionen Strukturträd i Content Fragment Editor i AEM för att bättre förstå rubriklöst innehåll.
 feature: Content Fragments
 role: User
 exl-id: 4a134f04-e580-4f69-9d11-0a2fc83a4b3a
-source-git-commit: b1047d5ced2db2027ef23f3ac9a4bece23c11435
+source-git-commit: 21ee6ec3ffef602bfbac7d89bb6c3454869deda9
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
