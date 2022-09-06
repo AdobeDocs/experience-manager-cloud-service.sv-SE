@@ -2,9 +2,9 @@
 title: Förhandsgranska innehåll
 description: Lär dig hur du använder AEM förhandsvisningstjänst för att förhandsgranska innehåll innan du publicerar.
 exl-id: 6b4b57f6-2e66-4c83-94d9-bc1e0daab0f3
-source-git-commit: 66bc262b35f69b7877e4a01df9ab26395afd604d
+source-git-commit: 5a804895013e19592f918341bbc7921261b26945
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,12 @@ https://preview-p<programID>-e>environmentID>.adobeaemcloud.com/<pathtopage>.htm
 Se dokumentet [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill ha mer information om hur du hämtar URL:er för dina miljöer.
 
 Innehåll kan också publiceras för förhandsgranskning med en [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) med `agentId` parametern inställd på `preview` eller genom att använda [replikerings-API](/help/operations/replication.md#replication-api) med `AgentFilter` konfigurerad för förhandsgranskning.
+
+## Avpublicera innehåll från förhandsgranskning {#unpublishing-content-from-preview}
+
+Avpublicera innehåll från **Förhandsgranska** miljön är i stort sett samma process som [avpublicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#unpublishing-pages) från **Publicera** miljö.
+
+Den enda skillnaden är att du kan välja **Mål** att **Förhandsgranska**.
 
 ## Konfigurera OSGi-inställningar för förhandsgranskningsnivån {#configuring-osgi-settings-for-the-preview-tier}
 

@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 66bc262b35f69b7877e4a01df9ab26395afd604d
+source-git-commit: 5a804895013e19592f918341bbc7921261b26945
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1811'
 ht-degree: 5%
 
 ---
@@ -215,9 +215,9 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
 ## Avpublicerar sidor {#unpublishing-pages}
 
-Om du avpublicerar en sida tas den bort från publiceringsmiljön så att den inte längre är tillgänglig för läsarna.
+Om du avpublicerar en sida tas den bort från publiceringen, eller [förhandsgranska](/help/sites-cloud/authoring/fundamentals/previewing-content.md), så att den inte längre är tillgänglig för läsarna.
 
-I en [liknande publiceringssätt](#publishing-pages), en eller flera sidor kan avpubliceras:
+I en [liknande publiceringssätt](#publishing-pages), en eller flera sidor kan avpubliceras från det önskade målet:
 
 * [Från sidredigeraren](#unpublishing-from-the-editor)
 * [Från webbplatskonsolen](#unpublishing-from-the-console)
@@ -244,6 +244,9 @@ Precis som du [publicera med alternativet Hantera publikation](#manage-publicati
    >[!NOTE]
    >
    >Om du vill avbryta en publicering/avpublicering senare går du till [Arbetsflödeskonsol](/help/sites-cloud/administering/workflows-administering.md#suspending-resuming-and-terminating-a-workflow-instance) för att avsluta motsvarande arbetsflöde.
+
+   >[!NOTE]
+   >Om du har en [Förhandsgranska](/help/sites-cloud/authoring/fundamentals/previewing-content.md) -miljö kan du välja **Mål** under Hantera publicering.
 
 1. Slutför borttagningen genom att fortsätta med guiden på samma sätt som du gör [publicera sidan](#manage-publication).
 
