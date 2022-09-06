@@ -2,9 +2,9 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 14671264f1605552b2262a3139d4005e6dd90cb5
 workflow-type: tm+mt
-source-wordcount: '2974'
+source-wordcount: '2992'
 ht-degree: 6%
 
 ---
@@ -466,7 +466,7 @@ När konsolvyn är låst uppdateras informationen och när du redigerar en låss
 
 >[!CAUTION]
 >
->Du kan låsa en sida när du personifierar en användare. En sida som är låst på det här sättet kan bara låsas upp av den användare som är imiterad eller av administratörsanvändaren.
+>Du kan låsa en sida när du personifierar en användare. En sida som är låst på det här sättet kan bara låsas upp av den användare som personifierats eller av en användare med administratörsbehörighet (som är medlem i AEM IMS-administratörsprofil).
 >
 >Sidorna kan inte låsas upp genom att den användare som låste sidan personifieras.
 <!--
@@ -483,7 +483,7 @@ På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen p�
 
 >[!CAUTION]
 >
->Du kan låsa en sida när du personifierar en användare. En sida som är låst på det här sättet kan bara låsas upp av den användare som är imiterad eller av administratörsanvändaren.
+>Du kan låsa en sida när du personifierar en användare. En sida som är låst på det här sättet kan bara låsas upp av den användare som personifierats eller av en användare med administratörsbehörighet (som är medlem i AEM IMS-administratörsprofil).
 >
 >Sidorna kan inte låsas upp genom att den användare som låste sidan personifieras.
 <!--
