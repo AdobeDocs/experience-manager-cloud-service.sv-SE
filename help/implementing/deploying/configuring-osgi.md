@@ -1,11 +1,11 @@
 ---
 title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
-description: 'OSGi-konfiguration med hemliga värden och miljöspecifika värden '
+description: OSGi-konfiguration med hemliga värden och miljöspecifika värden
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
+source-git-commit: 339030fc5edd22f81f977046185b53649869cc83
 workflow-type: tm+mt
-source-wordcount: '3216'
+source-wordcount: '3285'
 ht-degree: 0%
 
 ---
@@ -295,6 +295,14 @@ Vi rekommenderar att du skriver ett enkelt basskript som anger de systemvariable
 Värdena för hemligheter läses från filer. Därför måste en textfil med det hemliga värdet skapas för varje platshållare som använder en hemlighet.
 
 Exempel: `$[secret:server_password]` används, en textfil med namnet **server_password** måste skapas. Alla dessa hemliga filer måste lagras i samma katalog och ramverksegenskapen `org.apache.felix.configadmin.plugin.interpolation.secretsdir` måste konfigureras med den lokala katalogen.
+
+The `org.apache.felix.configadmin.plugin.interpolation.secretsdir` är en Sling-ramverksegenskap, så den här egenskapen ställs inte in i felix-konsolen (/system/console), men ställs in i den sling.properties-fil som används när systemet startas. Den här filen finns i /conf-undermappen i den extraherade JAR/install-mappen (crx-quickstart/conf).
+
+exempel: lägg till den här raden i slutet av crx-quickstart/conf/sling.properties-filen för att konfigurera crx-quickstart/secretsdir som en hemlig mapp:
+
+```
+org.apache.felix.configadmin.plugin.interpolation.secretsdir=${sling.home}/secretsdir
+```
 
 ### Författare jämfört med Publiceringskonfiguration {#author-vs-publish-configuration}
 
