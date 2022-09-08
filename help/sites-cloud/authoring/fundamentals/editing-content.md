@@ -2,9 +2,9 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: 14671264f1605552b2262a3139d4005e6dd90cb5
+source-git-commit: 2bfabfc2c12faf6f813ecd5b11b289117724d9ec
 workflow-type: tm+mt
-source-wordcount: '2992'
+source-wordcount: '3019'
 ht-degree: 6%
 
 ---
@@ -466,12 +466,11 @@ När konsolvyn är låst uppdateras informationen och när du redigerar en låss
 
 >[!CAUTION]
 >
->Du kan låsa en sida när du personifierar en användare. En sida som är låst på det här sättet kan bara låsas upp av den användare som personifierats eller av en användare med administratörsbehörighet (som är medlem i AEM IMS-administratörsprofil).
+>Du kan låsa en sida när du personifierar en användare. En sida som är låst på det här sättet kan bara låsas upp (av kunder) med den användare som personifierats.
 >
 >Sidorna kan inte låsas upp genom att den användare som låste sidan personifieras.
-<!--
->Locking a page can be performed when [impersonating a user](/help/sites-administering/security.md#impersonating-another-user). However a page locked in this way can only then be unlocked by the user who was impersonated or by the admin user.
--->
+>
+>Om användaren som låste sidan inte kan låsa upp sidan kan du kontakta kundsupport för att utvärdera alternativen för att ta bort låset.
 
 ## Låsa upp en sida {#unlocking-a-page}
 
@@ -483,9 +482,20 @@ På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen p�
 
 >[!CAUTION]
 >
->Du kan låsa en sida när du personifierar en användare. En sida som är låst på det här sättet kan bara låsas upp av den användare som personifierats eller av en användare med administratörsbehörighet (som är medlem i AEM IMS-administratörsprofil).
+>Du kan låsa en sida när du personifierar en användare. En sida som är låst på det här sättet kan bara låsas upp (av kunder) med den användare som personifierats.
 >
 >Sidorna kan inte låsas upp genom att den användare som låste sidan personifieras.
+>
+>Om användaren som låste sidan inte kan låsa upp sidan kan du kontakta kundsupport för att utvärdera alternativen för att ta bort låset.
+
+<!--
+>[!CAUTION]
+>
+>Locking a page can be performed when impersonating a user. However a page locked in this way can only then be unlocked by the user who was impersonated, or by a user with admin rights (a member of AEM Administrator IMS profile).
+>
+>Pages can not be unlocked by impersonating the user who locked the page.
+-->
+
 <!--
 >Locking a page can be performed when [impersonating a user](/help/sites-administering/security.md#impersonating-another-user). However a page locked in this way can only then be unlocked by the user who was impersonated or by the admin user.
 -->
