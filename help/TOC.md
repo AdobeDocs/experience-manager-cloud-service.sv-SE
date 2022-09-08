@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 962b027521e6ca2d1da8e8d2f98c6227ea496743
+source-git-commit: ee9b8339f6f64693fd1b227b0d2b40fb8094af8c
 workflow-type: tm+mt
-source-wordcount: '3716'
+source-wordcount: '3718'
 ht-degree: 22%
 
 ---
@@ -141,6 +141,7 @@ ht-degree: 22%
       + [Tilldela AEM produktprofiler](/help/journey-onboarding/assign-profiles-aem.md)
       + [Uppgifter för utvecklare och distributionsansvarig](/help/journey-onboarding/developers.md)
       + [AEM användaruppgifter](/help/journey-onboarding/aem-users.md)
+      + [Användargrupper](/help/journey-onboarding/user-groups.md)
    + AEM Reference Demos Add-On Journey {#demo-add-on}
       + [Översikt](/help/journey-sites/demos-add-on/overview.md)
       + [Installation](/help/journey-sites/demos-add-on/installation.md)
