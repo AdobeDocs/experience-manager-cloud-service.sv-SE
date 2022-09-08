@@ -2,13 +2,13 @@
 title: Skapa ett program
 description: Lär dig hur du använder Cloud Manager för att skapa ditt första program.
 role: Admin, User, Developer
-source-git-commit: 709a80683357b0d56280ff14aa5f4ba6bf2c6b23
+exl-id: ade4bb43-5f48-4938-ac75-118009f0a73b
+source-git-commit: fbf1e0b7cefb1dc981d7ee106283280fb2225007
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett program {#create-program}
 
@@ -38,6 +38,10 @@ Det finns två olika typer av program:
 * A **sandlådeprogram** skapas vanligtvis för utbildning, löpande demonstrationer, aktivering, POC eller dokumentation.
 
 Eftersom de har olika syften har de olika miljöerna olika alternativ. Processen att skapa dem liknar dock den du gör. För den här introduktionsresan ska vi skapa en sandlådemiljö.
+
+>[!NOTE]
+>
+>Som standard har en användare som har åtkomst till en AEM även användarrollen Cloud >Manager. Den här rollen i och för sig själv är inte tillräcklig för att ge användaren åtkomst till vyn för programinformation. En sådan användare med endast användarrollen Cloud Manager kan navigera via programmenyalternativen till URL:en för AEM (om det finns miljöer). Dessa användare måste kontakta sin administratör om de vill ha åtkomst på programnivå.
 
 ## Skapa ett sandlådeprogram {#create-sandbox}
 

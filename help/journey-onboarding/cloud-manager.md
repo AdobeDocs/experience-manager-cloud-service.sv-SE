@@ -2,13 +2,13 @@
 title: Access Cloud Manager
 description: Lär dig hur du får åtkomst till Cloud Manager så att du kan konfigurera dina projektresurser.
 role: Admin, User, Developer
-source-git-commit: 709a80683357b0d56280ff14aa5f4ba6bf2c6b23
+exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
+source-git-commit: fbf1e0b7cefb1dc981d7ee106283280fb2225007
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
-
 
 # Access Cloud Manager {#cloud-resources}
 
@@ -32,6 +32,10 @@ Cloud Manager är en viktig komponent i AEM as a Cloud Service och fungerar som 
 Vanligtvis är en teammedlem tilldelad till **Företagsägare** produktprofilen ansvarar för att lägga till molnresurser som program och miljöer. Den här personen förstår affärsbehoven och vem som slutför den ursprungliga installationen av Cloud Manager.
 
 Som systemadministratör har du redan tilldelat dig själv till **Företagsägare** produktprofil och konfigurerar molnresurserna. Beroende på de faktiska projektkraven kan det hända att företagsägarna inte är samma som systemadministratören.
+
+>[!NOTE]
+>
+>Som standard har en användare som har åtkomst till en AEM även användarrollen Cloud >Manager. Den här rollen i och för sig själv är inte tillräcklig för att ge användaren åtkomst till vyn för programinformation. En sådan användare med endast användarrollen Cloud Manager kan navigera via programmenyalternativen till URL:en för AEM (om det finns miljöer). Dessa användare måste kontakta sin administratör om de vill ha åtkomst på programnivå.
 
 ## Använd Cloud Manager som systemadministratör och företagsägare {#access-sysadmin-bo}
 
