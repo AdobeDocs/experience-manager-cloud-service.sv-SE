@@ -3,7 +3,7 @@ title: Användargrupper för meddelanden
 description: Lär dig hur du skapar en användargrupp i Admin Console för att hantera mottagning av viktiga e-postmeddelanden.
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: a663e21d100953f87c012a1d7962fb0e88e6a7f2
+source-git-commit: 93a5e1b8851353f368a01ea6b50265ec3f2de836
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%
@@ -49,17 +49,17 @@ För att kunna ställa in mottagning av meddelanden måste du skapa två använd
 
    ![Skapa användargrupp](assets/cloud_manager_profiles.png)
 
-1. Klicka på Ny profil och ange följande information:
+1. Klicka **Ny profil** och presentera följande information:
 
-* Produktprofilnamn: Incidentmeddelande - Cloud Service
-* Visningsnamn: Incidentmeddelande - Cloud Service
-* Beskrivning: Cloud Manager-profil för de användare som ska få meddelanden under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem i din AEM as a Cloud Service miljö.
+   * Produktprofilnamn: Incidentmeddelande - Cloud Service
+   * Visningsnamn: Incidentmeddelande - Cloud Service
+   * Beskrivning: Cloud Manager-profil för de användare som ska få meddelanden under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem i din AEM as a Cloud Service miljö.
 
-1. Klicka på Spara och upprepa steg 4 med följande information:
+1. Klicka **Spara** och upprepa steg 5 med följande information:
 
-* Produktprofilnamn: Proaktiv avisering - Cloud Service
-* Visningsnamn: Proaktiv avisering - Cloud Service
-* Beskrivning: Cloud Manager-profil för de användare som får meddelanden när en medlem i Adobe support vill ge vägledning om en eventuell optimering eller rekommendationer som ska utföras med din AEM as a Cloud Service miljökonfiguration.
+   * Produktprofilnamn: Proaktiv avisering - Cloud Service
+   * Visningsnamn: Proaktiv avisering - Cloud Service
+   * Beskrivning: Cloud Manager-profil för de användare som får meddelanden när en medlem i Adobe support vill ge vägledning om en eventuell optimering eller rekommendationer som ska utföras med din AEM as a Cloud Service miljökonfiguration.
 
 >[!NOTE]
 >
@@ -83,10 +83,10 @@ Nu när grupperna har skapats måste du tilldela rätt användare. Du kan göra 
 
 ![Användare](assets/cloud_manager_add_user.png)
 
-1. I dialogrutan Lägg till användare i ditt team anger du e-post-ID för den användare som du vill lägga till.
+1. I **Lägg till användare i ditt team** anger du e-post-ID för den användare som du vill lägga till.
 
-* Om ditt gruppmedlems-ID inte har konfigurerats ännu väljer du Adobe ID som ID-typ.
-* Om användaren redan finns, se steg 7.
+   * Om ditt gruppmedlems-ID inte har konfigurerats ännu väljer du Adobe ID som ID-typ.
+   * Om användaren redan finns, se steg 9.
 
 1. Klicka på plusknappen under **Välj produkter** rubrik för att börja produktval och välja **Adobe Experience Manager as a Cloud Service** och tilldela **Incidentmeddelande - Cloud Service** eller **Proaktiv avisering - Cloud Service** eller både och till användaren.
 
@@ -96,7 +96,7 @@ Nu när grupperna har skapats måste du tilldela rätt användare. Du kan göra 
 
 1. Om användaren redan finns söker du efter användarens namn och:
 
-* Klicka på användarens namn.
-* I **Produkter** avsnitt, klicka **Redigera**.
-* Klicka på pennknappen **Välj produkter** rubrik för att börja produktval och välja **Adobe Experience Manager as a Cloud Service** och tilldela **Incidentmeddelande - Cloud Service** eller **Proaktiv avisering - Cloud Service** eller både och till användaren.
-* Klicka **Spara** och ett välkomstmeddelande skickas till användaren som du har lagt till. Den inbjudna användaren får nu meddelanden.
+   * Klicka på användarens namn.
+   * I **Produkter** avsnitt, klicka **Redigera**.
+   * Klicka på pennknappen **Välj produkter** rubrik för att börja produktval och välja **Adobe Experience Manager as a Cloud Service** och tilldela **Incidentmeddelande - Cloud Service** eller **Proaktiv avisering - Cloud Service** eller både och till användaren.
+   * Klicka **Spara** och ett välkomstmeddelande skickas till användaren som du har lagt till. Den inbjudna användaren får nu meddelanden.
