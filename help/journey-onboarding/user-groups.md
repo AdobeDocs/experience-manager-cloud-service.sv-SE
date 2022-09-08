@@ -3,7 +3,7 @@ title: Användargrupper för meddelanden
 description: Lär dig hur du skapar en användargrupp i Admin Console för att hantera mottagning av viktiga e-postmeddelanden.
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 93a5e1b8851353f368a01ea6b50265ec3f2de836
+source-git-commit: 532184edca597452e76fdf763e7377d5e835bebc
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Nu när grupperna har skapats måste du tilldela rätt användare. Du kan göra 
 
 1. Välj **Användare** i den övre navigeringen och sedan väljer **Lägg till användare**.
 
-![Användare](assets/cloud_manager_add_user.png)
+   ![Användare](assets/cloud_manager_add_user.png)
 
 1. I **Lägg till användare i ditt team** anger du e-post-ID för den användare som du vill lägga till.
 
