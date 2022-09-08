@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: 9ffde71af0c24c0592ef9ca008ddeaf9ce70599e
+source-git-commit: 6e5743a1b31cf4992e6477050e434a651153fad1
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -153,6 +153,7 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
       * Om du har en mycket hög TTL tar det längre tid att sprida uppdateringar till DNS-posten.
 * Kör prestanda- och säkerhetstester som uppfyller dina affärskrav och mål.
 * Klipp ut och se till att den faktiska publiceringen utförs utan någon ny distribution eller uppdatering av innehållet.
+* Skapa meddelandegrupper för Admin Console. Se [Användargrupper för meddelanden](/help/journey-onboarding/user-groups.md)
 
 Du kan alltid referera till listan om du behöver kalibrera om dina uppgifter när du utför migreringen.
 
