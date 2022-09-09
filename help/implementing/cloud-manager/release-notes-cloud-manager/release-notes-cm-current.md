@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2022.9.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2022.9.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: f7f4f1c81b1dd611b723514b8c06aad6909a73c1
+source-git-commit: 4c04ab85f8760b9f72f7540b991edc7691995f66
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Releasedatum för Cloud Manager version 2022.9.0 i AEM as a Cloud Service är 8 
 
 * AEM Guides kan nu konfigureras på ett självbetjäningssätt i sandlådeprogram.
 * Kunder som inte har någon Cloud Manager-roll kommer inte att kunna komma åt programinformation. De kan dock navigera till Author end points från landningssidorna för Cloud Manager.
-* Kunder kan konfigurera **Incident och proaktiv avisering** grupper som kan få information från Adobe om incidenter eller rekommendationer i samband med deras AEMaaCS-program.
+* Kunder kan konfigurera **Incident och proaktiv avisering** grupper som kan få information från Adobe om incidenter eller rekommendationer i samband med deras AEMaaCS-program. Se [Användargrupp för meddelanden](/help/journey-onboarding/user-groups.md) för mer information.
 * Om du lägger till programersättning i användargränssnittet visas verktygstips på ett konsekvent sätt när det är inaktiverat på grund av behörighet eller berättiganderelaterade orsaker.
 
 ## Felkorrigeringar {#bug-fixes}
