@@ -2,7 +2,8 @@
 title: Använd smart bildbehandling med enhetspixelproportioner på klientsidan
 description: Lär dig hur du använder pixelproportioner för enheter på klientsidan med Smart Imaging i Adobe Experience Manager as a Cloud Service med Dynamic Media.
 role: Admin,User
-source-git-commit: 089b32e044c53bee40e5b92456c57412553934a0
+exl-id: 556710c7-133c-487a-8cd9-009a5912e94c
+source-git-commit: 1dae0459073e84eee4382b4b7ec864b3ef55a5bd
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -71,3 +72,4 @@ Följande JavaScript-filer i nedladdningen finns endast som exempelreferens. Om 
 >[!MORELIKETHIS]
 >
 >* [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md)
+

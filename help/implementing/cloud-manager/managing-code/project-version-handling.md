@@ -1,6 +1,6 @@
 ---
 title: Versionshantering för Maven Project
-description: 'För testnings- och produktionsdistributioner av AEM as a Cloud Service genererar Cloud Manager en unik, stegvis version. '
+description: För testnings- och produktionsdistributioner av AEM as a Cloud Service genererar Cloud Manager en unik, stegvis version.
 exl-id: 658bcbed-0733-45da-a3e3-9a5f817099c5
 source-git-commit: 21607fadf33dac038c7f794b933b92f60b8e20a9
 workflow-type: tm+mt

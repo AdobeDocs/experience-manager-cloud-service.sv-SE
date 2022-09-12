@@ -1,7 +1,7 @@
 ---
 title: Skapa och hantera granskningar av resurser i formulär
 seo-title: Creating and managing reviews for assets in forms
-description: 'En granskning är en mekanism som gör att en eller flera granskare kan kommentera en resurs som är tillgänglig i ett formulär. '
+description: En granskning är en mekanism som gör att en eller flera granskare kan kommentera en resurs som är tillgänglig i ett formulär.
 seo-description: A Review is a mechanism that allows one or more reviewers to comment on an asset that is available in a form.
 uuid: 45c7ff56-3fa8-4a0f-8597-05404e547282
 content-type: reference

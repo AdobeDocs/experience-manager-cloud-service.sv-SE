@@ -501,8 +501,8 @@ Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläs
 
    * Definiera format för hela tabellen (finns under **[!UICONTROL Table properties]**):
 
-      * **Name** `tableStyles`
-      * **Type** `cq:WidgetCollection`
+      * **Namn** `tableStyles`
+      * **Typ** `cq:WidgetCollection`
    * Definiera format för enskilda celler (finns under **[!UICONTROL Cell properties]**),
 
       * **Namn** `cellStyles`
@@ -590,7 +590,7 @@ Med RTE kan författare ångra eller göra om några sista redigeringar. Som sta
 
    * **Namn** `maxUndoSteps`
    * **Typ** `Long`
-   * **Värde** antalet ångra-steg som du vill spara i historiken. Standardvärdet är 50. Use `0` to completely disable undo/redo.
+   * **Värde** antalet ångra-steg som du vill spara i historiken. Standardvärdet är 50. Använd `0` för att helt inaktivera ångra/gör om.
 
 1. Spara ändringarna.
 
@@ -672,15 +672,15 @@ När länkar läggs till i [!DNL Experience Manager]kan du definiera vilka CSS-f
       * **Värde** namnet på CSS-klassen (utan föregående &#39;.&#39;); till exempel `cssClass` i stället för `.cssClass`)
    * Giltig matris **[!UICONTROL protocols]** inkluderar `https://`, `https://`, `file://`, `mailto:`och andra,
 
-      * **Name** `protocols`
+      * **Namn** `protocols`
       * **Typ** `String[]`
-      * **Value**(s) one, or more, protocols
+      * **Värde**(s) ett eller flera protokoll
    * **defaultProtocol** (egenskap av typ **Sträng**): Protokoll som ska användas om användaren inte uttryckligen angav ett.
 
-      * **Name** `defaultProtocol`
+      * **Namn** `defaultProtocol`
       * **Typ** `String`
       * **Värde**(s) ett eller flera standardprotokoll
-   * Definition av hur målattributet för en länk ska hanteras. Create a node:
+   * Definition av hur målattributet för en länk ska hanteras. Skapa en nod:
 
       * **Namn** `targetConfig`
       * **Typ** `nt:unstructured`

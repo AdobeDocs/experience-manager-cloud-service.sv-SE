@@ -1,7 +1,8 @@
 ---
 title: Konfigurera metadatamappning mellan Workfront och Experience Manager Assets
 description: Mappa metadatafälten för resurser mellan as a Cloud Service Adobe Workfront- och Experience Manager-program. När du skickar en resurs från Workfront till Experience Manager Assets kan du mappa metadata för resursen i Experience Manager Assets genom att mappa metadatafält.
-source-git-commit: 212ecb5330de739b2e479d36462953ce33697c1c
+exl-id: 71400769-b2bc-4f5d-8b6b-a73598e837b4
+source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 1%
@@ -127,6 +128,3 @@ Så här använder du metadatainställningar för bildmappen:
 1. Välj målmappen som [bilden skickas från Adobe Workfront-programmet](#send-image-workfront-assets) och klicka **[!UICONTROL Apply]**.
 
 Du kan navigera till bilden i Experience Manager Assets och visa de metadata som är associerade med bilden. Markera bilden och klicka på **[!UICONTROL Properties]** för att visa bildens metadata.
-
-
-

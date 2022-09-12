@@ -2,13 +2,13 @@
 title: Skapa miljöer
 description: Lär dig hur du använder Cloud Manager för att skapa dina första miljöer.
 role: Admin, User, Developer
-source-git-commit: 709a80683357b0d56280ff14aa5f4ba6bf2c6b23
+exl-id: 31940e1e-fe27-4c5f-b67f-41affebea63a
+source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
 
 ---
-
 
 # Skapa miljöer {#create-environments}
 

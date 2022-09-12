@@ -1,6 +1,6 @@
 ---
 title: Distribuera till AEM as a Cloud Service
-description: 'Distribuera till AEM as a Cloud Service '
+description: Distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
 source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c

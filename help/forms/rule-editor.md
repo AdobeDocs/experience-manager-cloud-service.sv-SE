@@ -7,7 +7,7 @@ level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
 source-git-commit: e64e15c9096f837daa7fff5c64b8394736297579
 workflow-type: tm+mt
-source-wordcount: '6152'
+source-wordcount: '6147'
 ht-degree: 0%
 
 ---
@@ -628,7 +628,7 @@ Om du vill öppna ett formulär i redigeringsläge markerar du ett formulär och
 1. Markera den numeriska rutan och tryck på ![edit-rules](assets/edit-rules-icon.svg) för att öppna regelredigeraren.
 1. Tryck på **[!UICONTROL Create Rule]**. Använd alternativen som visas nedan för att skapa en regel som sparar indatavärdet i fyrkantiga värden i formulärutdatafältet.
 
-[![Använda anpassade funktioner för att skapa en regel](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)
+   [![Skapa en regel med anpassade funktioner](assets/add_custom_rule_new.png)](assets/add-custom-rule.png)
 
 1. Tryck på **[!UICONTROL Done]**. Din anpassade funktion har lagts till.
 

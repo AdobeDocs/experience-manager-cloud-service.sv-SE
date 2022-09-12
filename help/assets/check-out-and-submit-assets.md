@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # Checka in och checka ut filer i [!DNL Experience Manager] DAM {#check-in-and-check-out-files-in-assets}
 
-[!DNL Adobe Experience Manager Assets] Med kan du checka ut resurser för redigering och checka in dem igen när du har gjort ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen igen på [!DNL Assets]. However, they can still change the metadata for the locked asset.
+[!DNL Adobe Experience Manager Assets] Med kan du checka ut resurser för redigering och checka in dem igen när du har gjort ändringarna. När du har checkat ut en resurs kan bara du redigera, kommentera, publicera, flytta eller ta bort resursen. När du checkar ut en resurs låses den. Andra användare kan inte utföra någon av dessa åtgärder på resursen förrän du checkar in resursen igen på [!DNL Assets]. De kan dock fortfarande ändra metadata för den låsta resursen.
 
-To be able to check out/in assets, you require Write access on them.
+Om du vill kunna checka ut/in resurser måste du ha skrivbehörighet för dem.
 
-This feature helps prevent other users from overriding the changes made by an author where multiple users collaborate on editing workflows across teams.
+Den här funktionen förhindrar att andra användare åsidosätter ändringar som gjorts av en författare där flera användare samarbetar i redigeringsarbetsflöden mellan team.
 
-## Check out assets {#checking-out-assets}
+## Checka ut resurser {#checking-out-assets}
 
 1. Från [!DNL Assets] väljer du den resurs du vill checka ut i användargränssnittet. Du kan också välja flera resurser att checka ut.
 
@@ -29,17 +29,17 @@ Logga in som en annan användare om du vill kontrollera om andra användare kan 
 
    ![utcheckningsikon i kortvyn](assets/checkout-icon-card-view.png)
 
-   Select the asset. Observera att verktygsfältet inte visar några alternativ som gör att du kan redigera, kommentera, publicera eller ta bort resursen.
+   Markera resursen. Observera att verktygsfältet inte visar några alternativ som gör att du kan redigera, kommentera, publicera eller ta bort resursen.
 
    ![chlimage_1-472](assets/checkout-asset-toolbar-options.png)
 
    Om du vill redigera metadata för den låsta resursen klickar du på **[!UICONTROL View Properties]**.
 
-1. Click **[!UICONTROL Edit]** to open the asset in edit mode.
+1. Klicka **[!UICONTROL Edit]** om du vill öppna resursen i redigeringsläge.
 
-1. Edit the asset and save the changes. Beskär till exempel bilden och spara. You can also choose to annotate or publish the asset.
+1. Redigera resursen och spara ändringarna. Beskär till exempel bilden och spara. Du kan också välja att anteckna eller publicera resursen.
 
-1. Select the edited asset from the [!DNL Assets] interface, and click **[!UICONTROL Checkin]** from the toolbar. The modified asset is checked in to [!DNL Assets] and is available to other users for editing.
+1. Välj den redigerade resursen i [!DNL Assets] och klicka **[!UICONTROL Checkin]** i verktygsfältet. Den ändrade resursen checkas in i [!DNL Assets] och är tillgänglig för andra användare för redigering.
 
 ## Tvingad incheckning {#forced-check-in}
 
@@ -50,9 +50,9 @@ Administratörer kan checka in resurser som är utcheckade av andra användare.
 
    ![chlimage_1-476](assets/chlimage_1-476.png)
 
-1. Klicka på **[!UICONTROL Release Lock]** i verktygsfältet. The asset is checked back in and available for edit to other users.
+1. Klicka på **[!UICONTROL Release Lock]** i verktygsfältet. Resursen checkas in igen och är tillgänglig för redigering för andra användare.
 
-## Best practices and limitations {#tips-limitations}
+## God praxis och begränsningar {#tips-limitations}
 
 * Du kan ta bort en *mapp* som innehåller utcheckade resursfiler. Innan du tar bort en mapp kontrollerar du att inga digitala resurser är utcheckade av användarna.
 

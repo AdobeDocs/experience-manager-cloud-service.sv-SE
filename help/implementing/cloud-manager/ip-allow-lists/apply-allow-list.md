@@ -1,5 +1,5 @@
 ---
-title: 'Använda och inte använda IP-Tillåtelselista '
+title: Använda och inte använda IP-Tillåtelselista
 description: Lär dig hur du använder och tar bort tillämpning av IP-tillåtelselista i miljöer.
 exl-id: 7158496c-b0c4-4228-a306-71dc51003c57
 source-git-commit: 7632a9fef71e95238d149ec5318903757bb2a326

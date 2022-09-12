@@ -1,5 +1,5 @@
 ---
-title: 'Importera och exportera resurser '
+title: Importera och exportera resurser
 seo-title: Import and export assets to [!DNL AEM Forms]
 description: Du kan importera och exportera adaptiv Forms och relaterade resurser till en AEM. Detta gör det enklare att migrera formulär eller flytta dem mellan olika system.
 seo-description: You can import and export Adaptive Forms and templates from and in to AEM instances. This helps in migrating forms or moving them across systems.

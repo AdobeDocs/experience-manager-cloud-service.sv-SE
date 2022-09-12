@@ -1,6 +1,6 @@
 ---
 title: Adobe Developer Console for App Builder
-description: Läs mer om Adobe Developer Console och App Builder-projekt.
+description: Läs om Adobe Developer Console- och App Builder-projekt.
 version: Cloud Service
 feature: App Builder
 topic: Integrations, Development
@@ -30,7 +30,7 @@ Lär dig vad Adobe Developer Console är och hur du kommer åt och navigerar i d
 
 ## Arbeta med projekt och mallar
 
-Lär dig hur du skapar ett App Builder-projekt med hjälp av Adobe Developer Console App Builder-mallen.
+Lär dig hur du skapar ett App Builder-projekt med Adobe Developer Console App Builder-mallen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/339163/?quality=12&learn=on)
 

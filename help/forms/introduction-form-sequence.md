@@ -1,6 +1,6 @@
 ---
 title: Hur skapar man en formulärsekvens i flera steg?
-description: 'Med [!DNL Experience Manager Forms]kan du definiera en sekvens med formulärpaneler så att användarna kan navigera och fylla i ett anpassat formulär. Gå ett steg längre genom att använda fallbaserad metod som exempel för att skapa formulärsekvenser i flera steg. '
+description: Med [!DNL Experience Manager Forms]kan du definiera en sekvens med formulärpaneler så att användarna kan navigera och fylla i ett anpassat formulär. Gå ett steg längre genom att använda fallbaserad metod som exempel för att skapa formulärsekvenser i flera steg.
 feature: Adaptive Forms
 role: User
 level: Intermediate

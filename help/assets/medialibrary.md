@@ -1,6 +1,6 @@
 ---
 title: Använd Media Library för grundläggande hantering av digitala resurser
-description: '"[!DNL Experience Manager Assets] och Media Library för filhantering."'
+description: "[!DNL Experience Manager Assets] och Media Library för filhantering."
 contentOwner: AG
 feature: Asset Management,Publishing
 role: User,Architect,Leader

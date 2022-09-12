@@ -10,13 +10,13 @@ contentOwner: Vishabh Gupta
 topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
-source-git-commit: feef8159a01393baebe11c014ae6093b79df72d1
+exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
+source-git-commit: 4edf66127696ce91466811e2ffdcfbbd73f7cc2c
 workflow-type: tm+mt
 source-wordcount: '1603'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera transkription i [!DNL Experience Manager Assets] {#configure-transcription-service}
 
@@ -166,6 +166,3 @@ Följande ljud- och videofilformat stöds för transkription:
 ## Felsökningstips {#troubleshooting}
 
 Logga in på [!DNL Azure Media Services] konto med samma inloggningsuppgifter (som du har använt för konfigurationen) för att verifiera status för begäran. Kontakt [!DNL Azure] om din begäran inte kan behandlas.
-
-
-

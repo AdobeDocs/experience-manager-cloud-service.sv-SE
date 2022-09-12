@@ -1,7 +1,8 @@
 ---
 title: Variationer – redigera innehållsfragment
 description: Förstå hur variationer gör att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte. Detta ger större flexibilitet för både headless-leverans och redigering av sidor.
-source-git-commit: a06024b4d4b6e5e750ed4c1e27f55283513b78a2
+exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
+source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
 workflow-type: tm+mt
 source-wordcount: '2287'
 ht-degree: 11%

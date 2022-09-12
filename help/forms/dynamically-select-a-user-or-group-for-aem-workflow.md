@@ -1,6 +1,6 @@
 ---
 title: Markera en användare eller grupp dynamiskt för AEM Forms-centrerade arbetsflödessteg
-description: 'Lär dig hur du väljer en användare eller grupp för en [!DNL AEM Forms] arbetsflöde vid körning. '
+description: Lär dig hur du väljer en användare eller grupp för en [!DNL AEM Forms] arbetsflöde vid körning.
 content-type: troubleshooting
 topic-tags: publish
 source-git-commit: 3c2a66ac13ccee9eef87ed3c97288a7475ac64d0

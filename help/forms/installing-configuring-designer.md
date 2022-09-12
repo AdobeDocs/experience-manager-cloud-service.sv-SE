@@ -1,5 +1,5 @@
 ---
-title: 'Hur laddar man ned och installerar Forms Designer för att skapa dokumentmallar?  '
+title: Hur laddar man ned och installerar Forms Designer för att skapa dokumentmallar?
 description: Du kan använda Forms Designer för att skapa XDP- och PDF-formulärmallar som fungerar som mall för ett dokument för registrering. Designer är tillgängligt med [!DNL AEM Forms] licens.
 exl-id: d6f1cb21-c48b-406d-8d47-482d7a1b4cc3
 source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4

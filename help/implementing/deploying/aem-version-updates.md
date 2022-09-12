@@ -1,6 +1,6 @@
 ---
 title: AEM versionsuppdateringar
-description: 'AEM versionsuppdateringar '
+description: AEM versionsuppdateringar
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
 source-git-commit: 575be022704e998e63162f19c37ece877efef627

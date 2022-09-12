@@ -117,7 +117,7 @@ A **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda 
 | Titel | Härlett namn |
 |---|---|
 | Schön | `schoen.html` |
-| SC%&amp;*ç+ | `sc---c-.html` |
+| SC%&amp;&#42;ç+ | `sc---c-.html` |
 
 #### Namn {#name}
 

@@ -3,10 +3,11 @@ title: Komma igång med verktyget Innehållsöverföring (äldre)
 description: Komma igång med verktyget Innehållsöverföring
 hide: true
 hidefromtoc: true
-source-git-commit: 1fb4d0f2a3b3f9a27f5ab1228ec2d419149e0764
+exl-id: a6ee6996-510e-42d7-9a7c-f64732764f97
+source-git-commit: 22bbf15e33ab3d5608dc01ed293bb04b07cb6c8c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '966'
+ht-degree: 20%
 
 ---
 

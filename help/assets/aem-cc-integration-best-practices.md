@@ -133,7 +133,7 @@ Resurser från Adobe Stock som licensierats och sparats i Experience Manager bli
 
 För att skapa ett effektivt arbetsflöde mellan kreatörer och marknadsförare/branschspecifika team (LOB) och välja de bästa supportfunktionerna är det viktigt att förstå när och varför resurser lagras i DAM.
 
-### Why assets are stored in DAM {#why-assets-are-stored-in-dam}
+### Varför resurser lagras i DAM {#why-assets-are-stored-in-dam}
 
 Genom att lagra resurser i DAM blir de enkelt tillgängliga och sökbara. Det ser till att resurserna kan utnyttjas av många användare i organisationen eller ekosystemet, bland annat partners, kunder och så vidare.
 
@@ -217,7 +217,7 @@ Du kan behöva överföra ett större antal filer till DAM samtidigt i vissa sce
 
 Observera att den här beskrivningen avser att överföra filer operativt (till exempel varje vecka eller med varje fotografering), som en normal del av datoranvändarens arbetsflöde. Stora resursmigreringar beskrivs inte här.
 
-You can leverage the following upload capabilities:
+Du kan använda följande överföringsfunktioner:
 
 * Om du vill överföra stora/hierarkiska mappar i grupp använder du Experience Manager-datorprogrammet som innehåller [mappöverföring](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#bulk-upload-assets) funktionalitet. Du kan också överföra hierarkiska mappstrukturer. Resurserna överförs i bakgrunden och är därför inte knutna till en webbläsarsession
 * Om du vill överföra några filer från en enda mapp drar du filerna direkt till webbgränssnittet eller använder alternativet Skapa i Experience Manager Assets webbgränssnitt.

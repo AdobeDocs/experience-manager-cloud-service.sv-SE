@@ -1,5 +1,5 @@
 ---
-title: 'Felsöka installation och konfiguration  '
+title: Felsöka installation och konfiguration
 seo-title: Troubleshooting installation and configuration
 description: Felsöka installation och konfiguration
 seo-description: Troubleshooting installation and configuration

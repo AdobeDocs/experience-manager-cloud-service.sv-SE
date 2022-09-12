@@ -81,7 +81,7 @@ Gör följande för att ange svars-URL för registrerad [!DNL Microsoft Dynamics
 
 ## Konfigurera OAuth-klient på AD FS-dator {#configure-oauth-client-on-ad-fs-machine}
 
-Do the following to register an OAuth client on Active Directory Federation Services (AD FS) machine and grant access on AD FS machine:
+Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Directory Federation Services) och bevilja åtkomst på AD FS-datorn:
 
 >[!NOTE]
 >

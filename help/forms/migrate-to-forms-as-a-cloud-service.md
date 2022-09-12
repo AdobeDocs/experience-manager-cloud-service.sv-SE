@@ -7,9 +7,9 @@ role: User, Developer
 level: Intermediate
 topic: Migration
 exl-id: 090e77ff-62ec-40cb-8263-58720f3b7558
-source-git-commit: ed46b0be25dabcea69be29e54000a4eab55e2836
+source-git-commit: 8e28cff5b964005278858b6c8dd8a0f5f8156eaa
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1145'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Du kan migrera dina adaptiva Forms, teman, mallar och molnkonfigurationer från 
 
 * Tjänsten hjälper dig att migrera innehåll endast från [!DNL AEM Forms] i OSGi-miljöer. Migrera innehåll från [!DNL AEM Forms] JEE till en Cloud Service-miljö stöds inte.
 
-* (Endast för AEM 6.3 Forms eller en tidigare version som uppgraderats till AEM 6.4 Forms eller AEM 6.5 Forms) Adaptiv Forms baserad på färdiga mallar och teman som finns i AEM 6.3 Forms eller tidigare versioner stöds inte i [!DNL [!DNL AEM Forms]] as a Cloud Service.
+* (Endast för AEM 6.3 Forms eller en tidigare version som uppgraderats till AEM 6.4 Forms eller AEM 6.5 Forms) Adaptiv Forms baserad på färdiga mallar och teman som finns i AEM 6.3 Forms eller tidigare versioner stöds inte i [!DNL AEM Forms] as a Cloud Service.
 
 ## Förutsättningar {#prerequisites}
 

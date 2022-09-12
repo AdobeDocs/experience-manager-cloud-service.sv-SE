@@ -1,7 +1,8 @@
 ---
 title: Konfigurera överföringsbegränsningar för resurser
-description: 'Konfigurera Adobe Experience Manager Assets för att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen. Det förhindrar oavsiktliga överföringar av oönskade format och skadliga filer. '
-source-git-commit: 3be29e4f76b53b4be7815e50ec42c627fec84b68
+description: Konfigurera Adobe Experience Manager Assets för att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen. Det förhindrar oavsiktliga överföringar av oönskade format och skadliga filer.
+exl-id: 094c31f3-f2e9-4b44-9995-c76fb78ca458
+source-git-commit: 472b670623e77957ff9a366359ebef8c6c0604ae
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 1%
@@ -49,7 +50,3 @@ Om du vill lägga till särskilda bildformat i de tillåtna MIME-typerna och beg
 ![Resursbegränsningar](assets/asset-restrictions.png)
 
 Baserat på de inställningar som avbildas i bilden kan du överföra bilder i formaten .JPG, .PNG och .GIF till Experience Manager Assets.
-
-
-
-

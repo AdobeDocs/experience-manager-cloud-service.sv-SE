@@ -1,5 +1,5 @@
 ---
-title: 'Konfigurera en [!DNL AEM Forms] as a Cloud Service miljö? '
+title: Konfigurera en [!DNL AEM Forms] as a Cloud Service miljö?
 description: Lär dig konfigurera och konfigurera [!DNL AEM Forms] as a Cloud Service miljö
 exl-id: 42f53662-fbcf-4676-9859-bf187ee9e4af
 source-git-commit: 4d91808aa46cf34772a88a2864c1e3acf27102f7

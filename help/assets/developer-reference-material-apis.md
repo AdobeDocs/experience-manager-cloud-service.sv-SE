@@ -1,6 +1,6 @@
 ---
 title: Utvecklarreferenser för [!DNL Assets]
-description: '"[!DNL Assets] Med API:er och referensinnehåll för utvecklare kan du hantera resurser, inklusive binära filer, metadata, återgivningar, kommentarer och [!DNL Content Fragments]."'
+description: "[!DNL Assets] Med API:er och referensinnehåll för utvecklare kan du hantera resurser, inklusive binära filer, metadata, återgivningar, kommentarer och [!DNL Content Fragments]."
 contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin

@@ -1,5 +1,5 @@
 ---
-title: 'Ansluta en databas till [!DNL AEM Forms] as a Cloud Service? '
+title: Ansluta en databas till [!DNL AEM Forms] as a Cloud Service?
 seo-title: AEM Forms Data Integration
 description: Du kan hämta och spara data till en RESTful-webbtjänst, SOAP-baserade webbtjänster och OData-tjänster från [!DNL AEM Forms] as a Cloud Service. Tjänsten tillhandahåller ett dedikerat verktyg för att hämta, testa, validera och skicka data till olika typer av datakällor.
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3

@@ -56,7 +56,7 @@ Du kan aktivera Brand Portal när du skapar miljöer för Experience Manager Ass
 >
 >Brand Portal måste aktiveras i samma IMS-organisation som Experience Manager Assets som en [!DNL Cloud Service] -instans.
 >
->Om du har en befintlig Brand Portal molnkonfiguration ([konfigureras manuellt med hjälp av Adobe Developer Console](#manual-configuration)) för en IMS-organisation (org1-existing) och din Experience Manager Assets som en [!DNL Cloud Service] -instansen är konfigurerad för en annan IMS-organisation (org2-new), och när du aktiverar Brand Portal från Cloud Manager återställs Brand Portal IMS-organisation till `org2-new`. Även om den manuellt konfigurerade molnkonfigurationen är på `org1-existing` visas i Experience Manager Assets-författarinstansen, men kommer inte längre att användas när Brand Portal har aktiverats från Cloud Manager.
+>Om du har en befintlig Brand Portal molnkonfiguration ([konfigureras manuellt med Adobe Developer Console](#manual-configuration)) för en IMS-organisation (org1-existing) och din Experience Manager Assets som en [!DNL Cloud Service] -instansen är konfigurerad för en annan IMS-organisation (org2-new), och när du aktiverar Brand Portal från Cloud Manager återställs Brand Portal IMS-organisation till `org2-new`. Även om den manuellt konfigurerade molnkonfigurationen är på `org1-existing` visas i Experience Manager Assets-författarinstansen, men kommer inte längre att användas när Brand Portal har aktiverats från Cloud Manager.
 >
 >Om Brand Portal befintliga molnkonfiguration och Experience Manager Assets är [!DNL Cloud Service] om du använder samma IMS-organisation (org1) behöver du bara aktivera Brand Portal från Cloud Manager.
 >
@@ -185,7 +185,7 @@ tillsammans med automatiseringsarbetsflödet för att aktivera Brand Portal på 
 
 I följande avsnitt beskrivs hur du konfigurerar Experience Manager Assets manuellt som en [!DNL Cloud Service] med Brand Portal via Adobe Developer Console.
 
-Tidigare var Experience Manager Assets en [!DNL Cloud Service] konfigurerades manuellt med Brand Portal via Adobe Developer Console, som anskaffar en kontotoken för Adobe Identity Management Services (IMS) för auktorisering av Brand Portal-klienten. Det kräver konfigurationer i både Experience Manager Assets och Adobe Developer Console.
+Tidigare var Experience Manager Assets en [!DNL Cloud Service] konfigurerades manuellt med Brand Portal via Adobe Developer Console, som köper en kontotoken för Adobe Identity Management Services (IMS) för auktorisering av Brand Portal-klienten. Det kräver konfigurationer i både Experience Manager Assets och Adobe Developer Console.
 
 1. Skapa ett IMS-konto och generera en offentlig nyckel (certifikat) i Experience Manager Assets.
 1. Skapa ett projekt för din Brand Portal-klient (organisation) i Adobe Developer Console.
@@ -252,7 +252,7 @@ Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Develope
 
 ### Skapa JWT-anslutning (Service Account) {#createnewintegration}
 
-I Adobe Developer Console konfigureras projekt och API:er på Brand Portal tenant-nivå (organisationsnivå). När du konfigurerar ett API skapas en JWT-anslutning (Service Account). Det finns två metoder för att konfigurera API, genom att generera ett nyckelpar (privata och offentliga nycklar) eller genom att överföra en offentlig nyckel. Om du vill konfigurera Experience Manager Assets med Brand Portal måste du skapa en offentlig nyckel (certifikat) i Experience Manager Assets och skapa autentiseringsuppgifter i Adobe Developer Console genom att överföra den offentliga nyckeln. Dessa autentiseringsuppgifter krävs för att konfigurera IMS-kontot i Experience Manager Assets. När IMS-kontot har konfigurerats kan du konfigurera Brand Portal molntjänst i Experience Manager Assets.
+I Adobe Developer Console konfigureras projekt och API:er på Brand Portal klientnivå (organisationsnivå). När du konfigurerar ett API skapas en JWT-anslutning (Service Account). Det finns två metoder för att konfigurera API, genom att generera ett nyckelpar (privata och offentliga nycklar) eller genom att överföra en offentlig nyckel. Om du vill konfigurera Experience Manager Assets med Brand Portal måste du skapa en offentlig nyckel (certifikat) i Experience Manager Assets och skapa autentiseringsuppgifter i Adobe Developer Console genom att överföra den offentliga nyckeln. Dessa autentiseringsuppgifter krävs för att konfigurera IMS-kontot i Experience Manager Assets. När IMS-kontot har konfigurerats kan du konfigurera Brand Portal molntjänst i Experience Manager Assets.
 
 Utför följande steg för att generera autentiseringsuppgifter för tjänstkontot och JWT-nyttolast:
 

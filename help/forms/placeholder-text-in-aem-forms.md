@@ -1,5 +1,5 @@
 ---
-title: 'Platshållartext i [!DNL AEM Forms] '
+title: Platshållartext i [!DNL AEM Forms]
 description: Platshållartext är avsedd att hjälpa användaren med datainmatning när kontrollen inte har något värde. Det kan vara ett exempelvärde eller en kort beskrivning av det förväntade formatet.
 source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
 workflow-type: tm+mt

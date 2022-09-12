@@ -122,9 +122,9 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
 
-## Information lagrad för integreringsprojektet i Adobe Developer Console {#details-stored-for-the-ims-integration-project}
+## Information lagrad för Adobe Developer Console Integration Project {#details-stored-for-the-ims-integration-project}
 
-På Adobe Developer Console - Projekt kan du se en lista över alla dina integrationsprojekt:
+I Adobe Developer Console - Projekt kan du se en lista över alla dina integreringsprojekt:
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 

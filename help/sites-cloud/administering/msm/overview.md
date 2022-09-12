@@ -38,7 +38,7 @@ Det finns många användningsområden för MSM och Live-kopior. Exempel:
 
    Ett typiskt användningsfall som MSM stöder är att återanvända innehåll på flera multinationella webbplatser på samma språk. Detta gör det möjligt att återanvända kärninnehållet, samtidigt som nationella variationer tillåts.
 
-   For example, the English section of the [WKND tutorial sample](/help/implementing/developing/introduction/develop-wknd-tutorial.md) is created for customers in the USA. Det mesta av innehållet på denna webbplats kan också användas för andra WKND-webbplatser som passar för engelsktalande kunder i olika länder och kulturer. Kärninnehållet är detsamma på alla webbplatser, och regionala justeringar kan göras.
+   Den engelska delen av [Exempel på WKND-självstudiekurs](/help/implementing/developing/introduction/develop-wknd-tutorial.md) skapas för kunder i USA. Det mesta av innehållet på denna webbplats kan också användas för andra WKND-webbplatser som passar för engelsktalande kunder i olika länder och kulturer. Kärninnehållet är detsamma på alla webbplatser, och regionala justeringar kan göras.
 
    Följande struktur kan användas för webbplatser för USA och Kanada. Anteckna hur `language-masters` noden behåller den överordnad kopian av inte bara engelskt utan även annat språkinnehåll. Innehållet kan användas som bas för ytterligare regionalt språkinnehåll vid sidan av engelska.
 
@@ -66,7 +66,7 @@ Det finns många användningsområden för MSM och Live-kopior. Exempel:
 
 * **Nationell myndighet - chef för de regionala avdelningarna**
 
-   Alternatively a company with a network of dealers might want separate websites for its individual dealerships, each being a variation of the main site provided by the head-office. This might be for a single company with multiple regional offices, or a national franchise system comprised of a central franchisor and multiple local franchisees.
+   Ett företag med ett nätverk av återförsäljare kan också vilja ha separata webbplatser för sina enskilda återförsäljare, som var och en är en variation av huvudföretagets huvudwebbplats. Detta kan gälla ett enskilt företag med flera regionala kontor eller ett nationellt franchisystem som består av en central franchisor och flera lokala franchisetagare.
 
    Huvudkontoret kan tillhandahålla viktig information, medan de regionala enheterna kan lägga till lokal information, som kontaktuppgifter, öppettider och händelser.
 
@@ -154,10 +154,10 @@ Som en introduktion ger följande tabell en översikt över de viktigaste termer
 | Konfiguration av Live Copy | Definition av konfigurationsinformation för en Live-kopia |  |
 | Live-relation | Effektiv definition av arvet för en given resurs, dvs. anslutningen/anslutningarna mellan källan och Live-kopior | Ser till att ändringar i källan kan synkroniseras med Live Copy |
 | Blueprint | Synonym med källa | Kan definieras med en ritningskonfiguration |
-| Konfiguration av utkast | Predefined configuration specifying a source path | When a blueprint page is referenced in a blueprint configuration the Rollout command becomes available |
+| Konfiguration av utkast | Fördefinierad konfiguration som anger en källsökväg | När en ritningssida refereras i en ritningskonfiguration blir kommandot Överrullning tillgängligt |
 | Kapitel | De avsnitt i planen som ska ingå i Live Copy | Dessa är vanligtvis undersidor till roten |
-| Synkronisering | The generic term for the synchronization of content between the source and the Live Copies (by both **Rollout** and **Synchronize** options) |  |
-| Utrullning | Synkroniserar från källan till Live Copy | Can be triggered by an author (on a blueprint page) or by a system event (as defined by the rollout configuration) |
+| Synkronisering | Den generiska termen för synkronisering av innehåll mellan källan och Live-kopior (av både **Utrullning** och **Synkronisera** alternativ) |  |
+| Utrullning | Synkroniserar från källan till Live Copy | Kan utlösas av en författare (på en ritningssida) eller av en systemhändelse (som definieras av utrullningskonfigurationen) |
 | Konfiguration av utrullning | Regler som bestämmer vilka egenskaper som ska synkroniseras, hur och när |  |
 | Synkronisera | Manuell begäran om synkronisering, gjord från Live Copy-sidorna |  |
 | Arv | En Live Copy-sida/-komponent ärver innehåll från sin källsida/källkomponent när synkronisering sker |  |
@@ -219,9 +219,9 @@ Det grundläggande formuläret i Live Copy har:
 När du skapar en Live-kopia i AEM kan du se och navigera genom grenen Live-kopia och använda de normala AEM funktionerna i grenen Live-kopia. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti Live-kopian. t.ex. en produkt för en viss region eller ett visst land.
 
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
-* Scenarier kan inträffa som MSM hanterar som specialfall. For example, when you (or a process) create a page with the same position and name in both the source/blueprint and Live Copy branches. For such situations see [MSM Rollout Conflicts](rollout-conflicts.md) for more information.
+* Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både käll-/ritytan och Live-kopieringsgrenarna. För sådana situationer finns [MSM-utrullningskonflikter](rollout-conflicts.md) för mer information.
 
-![Live Copy with non-Live Copy pages](../assets/live-copy-with-non-live-copy-pages.png)
+![Live Copy med icke-Live Copy-sidor](../assets/live-copy-with-non-live-copy-pages.png)
 
 #### Kapslade Live-kopior {#nested-live-copies}
 

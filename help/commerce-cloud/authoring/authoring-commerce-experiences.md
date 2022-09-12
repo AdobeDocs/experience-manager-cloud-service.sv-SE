@@ -43,7 +43,7 @@ Den här väljaren gör att du kan bläddra i katalogstrukturen för att hitta k
 
 ![Kategoriväljaren](../assets/authoring/category-picker.png)
 
-**Exempel: karusell**
+**Exempel på karusell**
 
 ![Carousel-komponent utan markering](../assets/authoring/carousel_component_without_selection.png)
 

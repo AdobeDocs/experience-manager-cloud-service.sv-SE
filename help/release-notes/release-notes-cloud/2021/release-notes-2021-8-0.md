@@ -24,9 +24,9 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 ## Releasedatum {#release-date}
 
 Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.8.0) är 26 augusti 2021.
-The following release (2021.9.0) is on October 6, 2021.
+Följande version (2021.9.0) är den 6 oktober 2021.
 
-## Release Video {#release-video}
+## Släpp video {#release-video}
 
 Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336277) video med en sammanfattning av tillagda funktioner.
 
@@ -36,7 +36,7 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 
 * När användarna delar digitala resurser som en länk kan de kopiera URL:en till Urklipp direkt. Förbättringen gör att du kan dela resurser snabbare och bekvämare. Den här funktionen gör det möjligt att dela material snabbare och smidigt.
 
-   ![Copy URL option when sharing an asset as a link](/help/assets/assets/link-share-copy-URL-option.png)
+   ![Alternativet Kopiera URL när du delar en resurs som en länk](/help/assets/assets/link-share-copy-URL-option.png)
    *Bild: När du delar en resurs som en länk kan du nu kopiera URL-adressen och dela den separat.*
 
 * När du överför TXT-filer genererar resursens mikrotjänster automatiskt en miniatyrbild. PNG-miniatyrbilden är en återgivning av TXT-filen som gör det lättare för användare att identifiera innehållet eller filerna i viss utsträckning, utan att öppna filerna. Den här funktionen kräver ingen konfiguration och fungerar som standard.
@@ -44,7 +44,7 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
    ![En återgivning av en TXT-fil genereras automatiskt av [!DNL Assets] i PNG-format](/help/assets/assets/thumbnail-rendition-txt-file.png)
    *Bild: En återgivning av en TXT-fil genereras automatiskt så att du lättare kan identifiera filen utan att öppna den.*
 
-### New feature in the [!DNL Assets] prerelease channel {#assets-prerelease-features}
+### Ny funktion i [!DNL Assets] prerelease channel {#assets-prerelease-features}
 
 * Användarna kan nu sortera de resurser som visas i sökresultaten i kolumn- och kortvyn. Sorteringen fungerar på kolumnerna Namn, Skapad, Ändrad eller Ingen.
 
@@ -54,9 +54,9 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 ### Fel som har åtgärdats i [!DNL Assets] {#assets-bugs-fixed}
 
 * När en medlem i medverkargruppen navigerar till [!DNL Assets] Konsol, en extra `POST` begäran genereras för att försöka skapa en samling. Denna begäran är inte obligatorisk, den misslyckas på grund av behörighetsproblem och skapar många fel i loggarna. (CQ-4328856)
-* When users view an asset and select the [!UICONTROL Timeline] from the popup menu in the left panel, an error is displayed. I loggarna loggas många varningar på grund av en felaktig fråga. (CQ-4328919)
+* När användare visar en resurs och väljer [!UICONTROL Timeline] på popup-menyn i den vänstra panelen visas ett fel. I loggarna loggas många varningar på grund av en felaktig fråga. (CQ-4328919)
 
-## [!DNL Experience Manager Forms] as a [!DNL Cloud Service] {#forms}
+## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
@@ -68,7 +68,7 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
-* **Use Adobe Sign roles in an Adaptive Form**: Adobe Sign for business and enterprise service levels have the option to expand the roles for Agreement recipients, beyond just the Signer, to better match their workflow requirements. You can now enable each recipient of agreement to configure their role in an Adaptive Form, with Signer being the default role.
+* **Använda Adobe Sign-roller i ett adaptivt formulär**: Adobe Sign för företags- och företagsnivåer har möjlighet att utöka rollerna för avtalsmottagare, utöver bara signeraren, så att de bättre motsvarar deras arbetsflödesbehov. Nu kan du göra det möjligt för alla mottagare av avtal att konfigurera sin roll i ett adaptivt formulär, med signerare som standardroll.
 
 * **Analytics för Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
@@ -90,7 +90,7 @@ I det här avsnittet beskrivs versionsinformationen för Cloud Manager i AEM as 
 
 ## Releasedatum {#release-date-cm-aug}
 
-The Release Date for Cloud Manager in AEM as a Cloud Service 2021.8.0 is August 12, 2021.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.8.0 är 12 augusti 2021.
 Nästa version är planerad till 9 september 2021.
 
 ### Nyheter {#what-is-new-aug}
@@ -98,7 +98,7 @@ Nästa version är planerad till 9 september 2021.
 * Cloud Service kan nu visa serviceavtalsrapporter (SLA) i Cloud Manager. Detta kommer att göras tillgängligt stegvis under de närmaste månaderna.
 Se [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sla-reporting.html) om du vill veta mer.
 
-* The type and severity of the IndexType and `IndexDamAssetLucene` quality rules has been changed. Nu finns båda Bugs of Blocker *serverity*.
+* Typ och allvarlighetsgrad för IndexType och `IndexDamAssetLucene` kvalitetsreglerna har ändrats. Nu finns båda Bugs of Blocker *serverity*.
 
 * Nya kvalitetsregler för Oak-index har införts för att omfatta asynkrona konfigurationer och kodkonfigurationer.
 

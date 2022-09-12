@@ -1,7 +1,8 @@
 ---
 title: IMS-konfiguration som ska användas vid integrering med Adobe Target
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Target
-source-git-commit: 444673c443d048db16e6ebc196b1498f553ef07b
+exl-id: b5474b70-bedc-4cc9-ad47-89dcb2415e3a
+source-git-commit: b591b0fd24267ae0036b26f137927d5588a28316
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 1%
@@ -10,7 +11,7 @@ ht-degree: 1%
 
 # IMS-konfiguration som ska användas vid integrering med Adobe Target{#ims-configuration-for-integration-with-adobe-target}
 
-Integreringen av AEM med Adobe Target via Target Standard API kräver att Adobe IMS (Identity Management System) konfigureras. Konfigurationen görs med Adobe Developer Console.
+Integreringen av AEM med Adobe Target via Target Standard API kräver att Adobe IMS (Identity Management System) konfigureras. Konfigurationen genomförs med Adobe Developer Console.
 
 >[!NOTE]
 >
@@ -62,7 +63,7 @@ Adobe Developer Console Project (integration) med Adobe Target som AEM ska anvä
 
 ### Skapa projektet {#creating-the-project}
 
-Öppna Adobe Developer Console för att skapa ett projekt med Adobe Target som AEM ska använda:
+Öppna Adobe Developer Console och skapa ett projekt med Adobe Target som AEM ska använda:
 
 1. Öppna Adobe Developer Console for Projects:
 
@@ -131,9 +132,9 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
 
-## Information lagrad för integreringsprojektet i Adobe Developer Console {#details-stored-for-the-ims-integration-project}
+## Information lagrad för Adobe Developer Console Integration Project {#details-stored-for-the-ims-integration-project}
 
-På projektkonsolen i Adobe Developer Console kan du se en lista över alla dina integreringsprojekt:
+På Adobe Developer Console Projects-konsolen kan du se en lista över alla dina integreringsprojekt:
 
 * [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 

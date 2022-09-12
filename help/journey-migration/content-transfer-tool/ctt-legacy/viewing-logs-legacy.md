@@ -3,7 +3,8 @@ title: Visa loggar för en migreringsuppsättning i verktyget Innehållsöverfö
 description: Visa loggar för en migreringsuppsättning i verktyget Innehållsöverföring
 hide: true
 hidefromtoc: true
-source-git-commit: 1fb4d0f2a3b3f9a27f5ab1228ec2d419149e0764
+exl-id: 01c8afd3-c594-4a41-b905-8c3a2d74db6f
+source-git-commit: 22bbf15e33ab3d5608dc01ed293bb04b07cb6c8c
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 64%

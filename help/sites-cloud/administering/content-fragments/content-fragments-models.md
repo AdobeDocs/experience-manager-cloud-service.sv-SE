@@ -1,7 +1,8 @@
 ---
 title: Modeller för innehållsfragment
 description: Lär dig hur Content Fragment Models fungerar som grund för dina Content Fragments i AEM. Med dessa kan du skapa strukturerat innehåll som kan användas för rubrikfri leverans eller för att skapa sidor.
-source-git-commit: a5a5ec2211fe51bb04a1016f34fdac2f25cfe4e1
+exl-id: 24b1806f-2e8c-49ec-8cb7-a66a3cbe91cd
+source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
 workflow-type: tm+mt
 source-wordcount: '2904'
 ht-degree: 3%

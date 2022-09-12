@@ -1,5 +1,5 @@
 ---
-title: 'Strukturpaket för AEM-projektdatabas  '
+title: Strukturpaket för AEM-projektdatabas
 description: Adobe Experience Manager as a Cloud Service Maven-projekt kräver en definition av underpaketet Databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets Code-underpaket distribueras till.
 exl-id: dec08410-d109-493d-bf9d-90e5556d18f0
 source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
