@@ -2,9 +2,9 @@
 title: Skapa en Forms Portal på en Experience Manager Sites-sida
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 05bdc24974d2b82c1350bf6f75873cd7027f7d4a
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1684'
 ht-degree: 0%
 
 ---
@@ -59,9 +59,7 @@ Så här importerar du färdiga Forms Portal-komponenter på AEM Forms as a Clou
 
    Ändra också `appTitle`, `appId`och `groupId`, i ovanstående kommando för att återspegla din miljö.
 
-1. **Utför följande steg i förhandsversionen när du vill använda komponenterna i Forms Portal:**
-   * [Aktivera betaversionskanalen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en).
-   * Ersätt `core-forms-components-*` version med önskad prerelease-version (till exempel 1.0.4-PRERELEASE-20211223) i `Cloud Manager/AEM Archetype` genom att uppdatera `<core.forms.components.version>x.y.z</core.forms.components.version>` på den översta nivån `pom.xml` av Arketype-projektet.
+   När projektet är klart uppdaterar du `<core.forms.components.version>x.y.z</core.forms.components.version>` på den översta nivån `pom.xml` av Arketype-projektet för att återspegla den senaste versionen av [core-forms-components](https://github.com/adobe/aem-core-forms-components) i `AEM Archetype` projekt.
 
 1. **Distribuera projektet till din lokala utvecklingsmiljö:** Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
 
