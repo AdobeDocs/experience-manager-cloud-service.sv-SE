@@ -2,9 +2,9 @@
 title: Skapa och hantera erbjudanden (Erbjudandekonsol)
 description: Använd offertkonsolen för att skapa erbjudanden som du kan använda i aktivitetsupplevelser
 exl-id: 81d2fda2-06a9-48f6-820a-dd9e11d94fcc
-source-git-commit: 9274496200af93708d5fd95666f969afc71125a6
+source-git-commit: ca389013fd1e703e7decd1aae968589b12a43489
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1393'
 ht-degree: 0%
 
 ---
@@ -88,6 +88,23 @@ Lägg till taggar, om det behövs.
 1. Bekräfta med **Klar**.
 
    Om du nu navigerar till **Experience Fragment-erbjudanden** kommer du att se ditt nya upplevelsefragment tillsammans med tillhörande varianter.
+
+### Målinriktad med erbjudandemallen {#targeting-offers-template}
+
+>[!CAUTION]
+>
+>Det här alternativet är endast tillgängligt för kunder som har tidigare erbjudanden.
+>
+>Som med **Erbjudanden** konsolen är inte längre tillgänglig:
+>
+>* när det senaste äldre erbjudandet har konverterats till Experience Fragments
+>* när äldre erbjudanden är inaktuella (i framtiden)
+>
+>Därför rekommenderar vi att du använder Experience Fragments, inte det här alternativet.
+
+För kunder med tidigare erbjudanden **Använd erbjudandemall** alternativen visas när komponenter som är **not** Upplevelsefragment:
+
+![Dialogrutan Konvertera till upplevelsefragmentvariationer](/help/sites-cloud/authoring/assets/offers-legacy-target-non-experience-fragment.png)
 
 ## Erbjudandekonsolen {#offers-console}
 
