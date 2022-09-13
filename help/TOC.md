@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 4e18d2e075833bd455087aca149a12c0dc2a9245
+source-git-commit: b423aaad1857e8b8016b4d61fe71360ead88c65f
 workflow-type: tm+mt
-source-wordcount: '3721'
+source-wordcount: '3723'
 ht-degree: 22%
 
 ---
@@ -274,7 +274,7 @@ ht-degree: 22%
          + [Så här struktureras hantering av flera webbplatser för riktat innehåll](/help/sites-cloud/authoring/personalization/multisite-structure.md)
          + [Hantera aktiviteter](/help/sites-cloud/authoring/personalization/activities.md)
          + [Hantera målgrupper](/help/sites-cloud/authoring/personalization/audiences.md)
-         + [Skapa och hantera erbjudanden](/help/sites-cloud/authoring/personalization/offers.md)
+         + [Skapa och hantera erbjudanden (Erbjudandekonsol)](/help/sites-cloud/authoring/personalization/offers.md)
          + [Förstå segmentering](/help/sites-cloud/authoring/personalization/segmentation.md)
          + [Konfigurera segmentering med ContextHub](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
          + [Registrering, inloggning och användarprofil](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md)

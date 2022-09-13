@@ -2,9 +2,9 @@
 title: Personalisering och målgruppsanpassning av innehåll
 description: Lär dig hur AEM kan skapa personaliserat innehåll
 exl-id: b9b5dbf6-d491-48a6-99b1-19bc1b651b8c
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 8b741b64db43369bf0ca3bfbe947fb58ef5ec05a
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,11 @@ Ett erbjudande är innehåll som visas på en plats på en sida för en upplevel
 
 Kvinnans sida på en exempelwebbplats kan t.ex. använda erbjudanden som den suddgummibild som visas högst upp på sidan. Ett annat erbjudande används som teaser för upplevelsen kvinna över 30 och för kvinna under 30.
 
-Använd [Erbjuder konsol](/help/sites-cloud/authoring/personalization/offers.md) för att skapa erbjudanden som ni kan använda i olika upplevelser. Skapa engångserbjudanden eller lägg till erbjudanden från ett erbjudandebibliotek när [skapa riktat innehåll](/help/sites-cloud/authoring/personalization/targeted-content.md).
+Använd [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md#personalization-experience-fragment) för att skapa erbjudanden som ni kan använda i olika upplevelser. Skapa engångserbjudanden eller lägg till erbjudanden från ett erbjudandebibliotek när [skapa riktat innehåll](/help/sites-cloud/authoring/personalization/targeted-content.md).
+
+<!--
+Use the [Offers console](/help/sites-cloud/authoring/personalization/offers.md) to create offers that you can use in multiple experiences. Create single-use offers or add offers from an offer library when [authoring targeted content](/help/sites-cloud/authoring/personalization/targeted-content.md).
+-->
 
 ## Målmotor {#targeting-engine}
 
