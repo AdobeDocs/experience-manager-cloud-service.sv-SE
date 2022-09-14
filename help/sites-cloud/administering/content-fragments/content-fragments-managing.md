@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment
 description: Lär dig hur du använder konsolen Innehållsfragment för att hantera AEM innehållsfragment. för framtagning av sidor, eller som bas för ditt headless-innehåll.
 exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
-source-git-commit: 28a3e8fe6ca16d20f5b4264e386154e95b55dc77
+source-git-commit: 3260cd8c9c0e121048b4403217b68500be37ddda
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1947'
 ht-degree: 1%
 
 ---
@@ -52,6 +52,11 @@ Konsolen för innehållsfragment ger direktåtkomst till dina fragment och relat
 * [Söka och filtrera i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#filtering-fragments)
 
 ## Skapa innehållsfragment {#creating-content-fragments}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_create_content"
+>title="Skapa nytt innehåll"
+>abstract="Med hjälp av modellerna som du skapade i modul 1 får du lära dig hur du skapar innehåll som kan användas för att skapa sidor, eller som bas för rubrikfritt innehåll."
 
 ### Skapa en innehållsmodell {#creating-a-content-model}
 
