@@ -3,9 +3,9 @@ title: AEM versionsuppdateringar
 description: AEM versionsuppdateringar
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
-source-git-commit: 575be022704e998e63162f19c37ece877efef627
+source-git-commit: becc07c0042cdfb5de86dc8895801c00c882f8a1
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '399'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalidering
 
 >[!NOTE]
 >
->Om anpassad kod publicerades till mellanlagring och sedan avvisades av dig, kommer nästa AEM att ta bort dessa ändringar för att återspegla Git-taggen för den senaste lyckade kundreleasen till produktionen.
+>Om anpassad kod flyttades till staging och inte till produktion, kommer nästa AEM att ta bort dessa ändringar för att återspegla Git-taggen för den senaste lyckade kundreleasen till produktion. Därför måste den anpassade koden som bara var tillgänglig för mellanlagring distribueras igen.
 
 ## Sammansatt nodarkiv {#composite-node-store}
 
