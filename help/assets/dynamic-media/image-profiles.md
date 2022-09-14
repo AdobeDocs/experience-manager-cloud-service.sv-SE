@@ -4,9 +4,9 @@ description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller i
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: a2bbc64051214efa83d74d414e2e5f1407433127
+source-git-commit: 28dbb0afa6c63efd64d409f8df0ef837bc10f5d9
 workflow-type: tm+mt
-source-wordcount: '3131'
+source-wordcount: '3187'
 ht-degree: 5%
 
 ---
@@ -84,6 +84,10 @@ Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att a
 ### Bildfilformat som stöds för Smart Beskärning och Färgrutor
 
 Den maximala upplösningen för indatafilens storlek som stöds är 16 kB.
+
+>[!NOTE]
+>
+>Upplösningen 16K är en skärmupplösning med ungefär 16 000 pixlar vågrätt. Den vanligaste 16K-upplösningen är 1 5360 × 8 640, vilket fördubblar pixelantalet för 8K UHD i varje dimension, vilket ger totalt fyra gånger så många pixlar. Upplösningen har 132,7 megapixlar, 16 gånger så många pixlar som upplösningen 4K och 64 gånger så många pixlar som upplösningen 1080p.
 
 | Bildformat | Skiftlägesokänsligt filtillägg | MIME-typ | Färgrymd för indata som stöds | Största tillåtna indatafilstorlek | Bildformat som stöds? |
 | --- | --- | --- | --- | --- | --- |

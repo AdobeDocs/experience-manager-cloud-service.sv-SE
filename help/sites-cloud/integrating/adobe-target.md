@@ -2,7 +2,7 @@
 title: Integrera med Adobe Target
 description: Integrera med Adobe Target
 exl-id: 2b4cf35e-2b75-4303-8d09-f6644ad99274
-source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
+source-git-commit: e6fc31a5c4b3bb62f7d6e639eae7e1f222b2f5ed
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 1%
@@ -72,8 +72,8 @@ När integreringen är klar kan du [skapa riktat innehåll](https://experiencele
 Att integrera AEM as a Cloud Service med Adobe Target kräver kunskaper om Adobe Target, AEM och AEM. Du bör känna till följande information:
 
 * Adobe Target (se [Adobe Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/target-home.html)).
-* Konsolen AEM aktiviteter (se [Hantera aktiviteter](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/activitylib.html).
-* AEM målgrupper (se [Hantera målgrupper](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/managing-audiences.html).
+* Konsolen AEM aktiviteter (se [Hantera aktiviteter](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/activitylib.html)).
+* AEM målgrupper (se [Hantera målgrupper](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/managing-audiences.html)).
 
 >[!NOTE]
 >
