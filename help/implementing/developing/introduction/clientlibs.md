@@ -2,9 +2,9 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: 014b53dfd35103660772d273dbf49d2388f6d000
 workflow-type: tm+mt
-source-wordcount: '2561'
+source-wordcount: '2565'
 ht-degree: 0%
 
 ---
@@ -211,7 +211,7 @@ Inbäddning av kod är användbart för att ge åtkomst till bibliotek som lagra
 
 #### Appspecifika klientbiblioteksmappar {#app-specific-client-library-folders}
 
-Det är en god vana att behålla alla programrelaterade filer i programmappen nedan `/app`. Det är också en god vana att neka åtkomst för webbplatsbesökare till `/app` mapp. Skapa en klientbiblioteksmapp under `/etc` mapp som bäddar in klientbiblioteket som finns under `/app`.
+Det är en god vana att behålla alla programrelaterade filer i programmappen under /apps. Det är också en god vana att neka åtkomst för webbplatsbesökare till mappen /apps. Om du vill följa båda de bästa metoderna skapar du en klientbiblioteksmapp under mappen /etc som bäddar in klientbiblioteket som finns under /apps.
 
 Använd egenskapen categories för att identifiera klientbiblioteksmappen som ska bäddas in. Om du vill bädda in biblioteket lägger du till en egenskap i inbäddningen `cq:ClientLibraryFolder` nod, med följande egenskapsattribut:
 
