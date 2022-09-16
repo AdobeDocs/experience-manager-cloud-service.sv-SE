@@ -3,9 +3,9 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: 9ac5426c71c2ed794b9e72c1eacd936b9aa8d70c
+source-git-commit: a5d26c5cf07f60c65405afb2a25c903e97dc59aa
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1056'
 ht-degree: 8%
 
 ---
@@ -98,7 +98,7 @@ Observera att när du använder ditt eget CDN behöver du inte installera domän
 >
 >Sandlådeprogrammiljöer har inte stöd för ett CDN som kunden tillhandahåller.
 
-Prestandan kan bli liten på grund av det extra hoppet, även om hoppet från kundens CDN till det AEM hanterade CDN sannolikt är effektivt.
+Det extra hoppet mellan kundens CDN och det AEM CDN behövs bara om ett cache-minne saknas. Genom att använda de strategier för cacheoptimering som beskrivs i den här artikeln bör tillägget av en kund-CDN endast medföra försumbar fördröjning.
 
 Observera att den här kundens CDN-konfiguration stöds för publiceringsnivån, men inte framför författarnivån.
 
