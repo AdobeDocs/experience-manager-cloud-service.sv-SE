@@ -2,7 +2,7 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 590ee3f855051e212570c624e31ca3164938122c
+source-git-commit: 14b779c476b88ff1ee9d2798296add14f337dbfa
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * Det går inte att överföra en fil som är större än 8 GB.
 * Problem vid automatisk publicering av resurser som skickas från Workfront till AEM.
 * Fältet Rotsökväg är inte tillgängligt för fältet Taggar när du redigerar ett standardformulär för metadataschema.
-* Problem vid tillägg av nya versioner i Workfront med AEM arbetsflöden
+* Problem med att lägga till nya versioner i Workfront med AEM arbetsflöden.
 * När du utför en AEM sökning efter resurser som är tillgängliga i Workfront visas ett felmeddelande i AEM.
 * När du skapar ett AEM arbetsflöde för att skapa uppgifter från en resurs och inte definierar något överordnat aktivitetsnamn, skapas inte uppgiften i Workfront.
 
