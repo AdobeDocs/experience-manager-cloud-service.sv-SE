@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: f49ac67b7a90d638e266b9f7f5bf5ac9d7f78e3a
+source-git-commit: 590ee3f855051e212570c624e31ca3164938122c
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,24 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.2 av [!DNL Workfront for Experience Manager enhanced connector] är 3 augusti 2022.
+Releasedatum för den senaste versionen, 1.9.3 av [!DNL Workfront for Experience Manager enhanced connector] är 16 september 2022.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande förbättringar och felkorrigeringar:
 
-* The **[!UICONTROL Upload Document]** arbetsflödessteget kan inte bifoga ett dokument till Workfront.
+* Det går inte att överföra en fil som är större än 8 GB.
+* Problem vid automatisk publicering av resurser som skickas från Workfront till AEM.
+* Fältet Rotsökväg är inte tillgängligt för fältet Taggar när du redigerar ett standardformulär för metadataschema.
+* Problem vid tillägg av nya versioner i Workfront med AEM arbetsflöden
+* När du utför en AEM sökning efter resurser som är tillgängliga i Workfront visas ett felmeddelande i AEM.
+* När du skapar ett AEM arbetsflöde för att skapa uppgifter från en resurs och inte definierar något överordnat aktivitetsnamn, skapas inte uppgiften i Workfront.
 
-* The **[!UICONTROL Upload Document]** arbetsflödessteget kan inte bifoga ett dokument till uppgifter och ärenden i Workfront. Arbetsflödessteget kopplar ett dokument till projekt.
+
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [uppgradera till den senaste 1.9.2-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar att du [uppgradera till den senaste 1.9.3-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -35,7 +40,17 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** listrutan samt **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i den nya Workfront-upplevelsen.
 
+* Workfront visar en `SERVER_ERROR` när dokument länkas till AEM efter uppgradering till version 8316. Lös problemet genom att tilldela `rep:readProperties` till `content/dam/collections` for `wf-workfront-user` AEM användargrupp.
+
 ## Tidigare versioner {#previous-releases}
+
+### Version från augusti 2022 {#august-2022-release}
+
+[!DNL Workfront for Experience Manager enhanced connector] version 1.9.2, släppt den 3 augusti, innehåller följande uppdateringar:
+
+* The **[!UICONTROL Upload Document]** arbetsflödessteget kan inte bifoga ett dokument till Workfront.
+
+* The **[!UICONTROL Upload Document]** arbetsflödessteget kan inte bifoga ett dokument till uppgifter och ärenden i Workfront. Arbetsflödessteget kopplar ett dokument till projekt.
 
 ### juliversion 2022 {#july-2022-release}
 
