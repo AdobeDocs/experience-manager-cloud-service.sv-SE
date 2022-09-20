@@ -3,10 +3,10 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: a5d26c5cf07f60c65405afb2a25c903e97dc59aa
+source-git-commit: 2e0846ba3addf2ecc7d075d4da85620d7d9e9e2f
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 8%
+source-wordcount: '1093'
+ht-degree: 7%
 
 ---
 
@@ -127,6 +127,10 @@ Den AEM hanterade CDN lägger till rubriker i varje begäran med:
 
 * landskod: `x-aem-client-country`
 * Kontinentalkod: `x-aem-client-continent`
+
+>[!NOTE]
+>
+>Vid kundhanterad CDN återspeglar dessa huvuden kundens CDN-proxyserver snarare än den faktiska klienten.  För kundhanterad CDN bör därför rubriker i geopositionering hanteras av kundens CDN.
 
 Värdena för landskoderna är de Alpha-2-koder som beskrivs [här](https://en.wikipedia.org/wiki/ISO_3166-1).
 
