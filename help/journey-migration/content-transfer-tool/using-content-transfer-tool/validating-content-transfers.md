@@ -2,9 +2,9 @@
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
-source-git-commit: b88277cda730d9499c7e2750026b6f415c2a8d0e
+source-git-commit: 015f3b0232861ac961922245650cb02db44daf77
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Komma igång {#getting-started}
 
-Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats av verktyget Innehållsöverföring har importerats till målinstansen. Den här valideringsfunktionen fungerar genom att jämföra en sammanfattning av de noder som berördes under extraheringen med en sammanfattning av noder som berördes vid förtäringen. Om det finns några nodsökvägar i extraheringssammanfattningen som saknas i importen, anses valideringen ha misslyckats och ytterligare manuell validering kan vara nödvändig.
+Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats av verktyget Innehållsöverföring har importerats till målinstansen. Den här valideringsfunktionen fungerar genom att jämföra en sammanfattning av sökvägarna för alla noder som berördes under extraheringen med en sammanfattning av sökvägarna för alla noder som berördes vid förtäringen. Om det finns några nodsökvägar i extraheringssammanfattningen som saknas i importen, anses valideringen ha misslyckats och ytterligare manuell validering kan vara nödvändig.
 
 >[!INFO]
 >
