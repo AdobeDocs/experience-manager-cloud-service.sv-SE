@@ -4,10 +4,10 @@ description: Validera och felsöka med Dispatcher Tools (äldre)
 feature: Dispatcher
 hidefromtoc: true
 exl-id: dc04d035-f002-42ef-9c2e-77602910c2ec
-source-git-commit: 97279969981d6abacbf4d15eb2002cce577d8fc9
+source-git-commit: 377a577616d7e804c7dfe9e9c68fed15350bdb4f
 workflow-type: tm+mt
-source-wordcount: '2304'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -309,6 +309,10 @@ De inkluderade filerna måste ha följande namn:
 |-----------|---------------------------------|
 | Skriver om | `conf.d/rewrites/rewrite.rules` |
 | Variabler | `conf.d/variables/custom.vars` |
+
+>[!TIP]
+>
+>Om du vill kunna inkludera fler filer på ett mycket mindre begränsat sätt kanske du vill växla till det flexibla konfigurationsläget för dispatcher. Se dokumentet [Validera och felsöka med Dispatcher Tools](/help/implementing/dispatcher/validation-debug.md) för mer information om flexibelt läge.
 
 Du kan även inkludera **standard** version av omskrivningsreglerna, vars namn är `conf.d/rewrites/default_rewrite.rules`.
 Observera att det inte finns någon standardversion av variabelfilerna.

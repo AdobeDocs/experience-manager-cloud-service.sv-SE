@@ -3,10 +3,10 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 6b0fffb599d46a36270e98e0d818f33d5f97e955
+source-git-commit: c1889a6d905be6fd84e75416839a85e67a5f048a
 workflow-type: tm+mt
-source-wordcount: '2655'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -313,13 +313,26 @@ Den här programsatsen är avsedd att tillåta begäranden för `css` -filer, me
 
 **den inkluderade filen (..) matchar ingen känd fil**
 
-Det finns två typer av filer i din virtuella värdkonfiguration för Apache som kan anges enligt följande: skriver om och variabler.
-De inkluderade filerna måste ha följande namn:
+Som standard kan två typer av filer i din virtuella värdkonfiguration för Apache anges enligt följande: skriver om och variabler.
 
 | Typ | Inkludera filnamn |
 |-----------|---------------------------------|
 | Skriver om | `conf.d/rewrites/rewrite.rules` |
 | Variabler | `conf.d/variables/custom.vars` |
+
+I flexibelt läge kan även andra filer inkluderas, förutsatt att de finns i underkataloger (på alla nivåer) av `conf.d` katalog med följande prefix.
+
+| Inkludera filens övre katalogprefix |
+|-------------------------------------|
+| `conf.d/includes` |
+| `conf.d/modsec` |
+| `conf.d/rewrites` |
+
+Du kan t.ex. inkludera en fil i vissa nyligen skapade kataloger under `conf.d/includes` katalog enligt följande:
+
+```
+Include conf.d/includes/mynewdirectory/myincludefile.conf
+```
 
 Du kan även inkludera **standard** version av omskrivningsreglerna, vars namn är `conf.d/rewrites/default_rewrite.rules`.
 Observera att det inte finns någon standardversion av variabelfilerna.
