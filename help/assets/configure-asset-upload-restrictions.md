@@ -2,9 +2,9 @@
 title: Konfigurera överföringsbegränsningar för resurser
 description: Konfigurera Adobe Experience Manager Assets för att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen. Det förhindrar oavsiktliga överföringar av oönskade format och skadliga filer.
 exl-id: 094c31f3-f2e9-4b44-9995-c76fb78ca458
-source-git-commit: 472b670623e77957ff9a366359ebef8c6c0604ae
+source-git-commit: d2d0d8b0d484d2e5cd2bf44449e7d71d3da98eea
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,12 @@ Om du vill tillåta överföring av bilder i alla format och PDF till Experience
 ![Begränsningar för överföring av tillgångar](assets/asset-upload-restrictions.png)
 
 `image/*` som MIME-typen tillåter överföring av bilder i alla format. `application/pdf` som MIME-typen tillåter överföring av PDF-filer till Experience Manager Assets.
+
+Om du försöker överföra en fil som inte finns med i listan över tillåtna MIME-typer visas följande felmeddelande i Experience Manager Assets:
+
+![Begränsade filer](assets/asset-upload-restricted-files.png)
+
+`Screen Recording 2022-08-31 at 3.36.09 PM.mov` refererar till ett filnamn som inte ingår i de tillåtna MIME-typerna.
 
 **Exempel 2: Tillåt överföring av specifika bildformat till Experience Manager Assets**
 
