@@ -2,9 +2,9 @@
 title: SPA- och serveråtergivning
 description: Om du använder SSR-återgivning (server side rendering) i SPA kan det snabba upp den initiala inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
 exl-id: be409559-c7ce-4bc2-87cf-77132d7c2da1
-source-git-commit: 4965bd30c02536efb81a26fff8da6e5f75dbfae4
+source-git-commit: cc50520d7ee2bb3e7d1491154d531aa84ac9e956
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ SSR ger vanligtvis ett visst värde när det finns ett tydligt&quot;ja&quot; til
 * **SEO:** Krävs det fortfarande SSR för att webbplatsen ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
 * **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
 
-Endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot; för ditt projekt rekommenderar Adobe att SSR implementeras. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime.
+Endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot; för ditt projekt rekommenderar Adobe att SSR implementeras. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime, som ingår i [App Builder](https://developer.adobe.com/app-builder).
 
 ## Adobe I/O Runtime {#adobe-i-o-runtime}
 
@@ -34,8 +34,9 @@ Om du [är säkra på att ditt projekt kräver SSR-implementering](#when-to-use-
 
 Mer information om Adobe I/O Runtime finns på
 
-* [https://www.adobe.io/apis/experienceplatform/runtime.html](https://www.adobe.io/apis/experienceplatform/runtime.html) - för en översikt över tjänsten
-* [https://www.adobe.io/apis/experienceplatform/runtime/docs.html](https://www.adobe.io/apis/experienceplatform/runtime/docs.html) - för detaljerad dokumentation om plattformen
+* [https://developer.adobe.com/runtime](https://developer.adobe.com/runtime) - för en översikt över runtime-funktionen i App Builder
+* [https://developer.adobe.com/app-builder](https://developer.adobe.com/app-builder) - för mer information om den fullständiga App Builder-produkten
+* [https://developer.adobe.com/runtime/docs/](https://developer.adobe.com/runtime/docs) - för detaljerad dokumentation
 
 I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implementera SSR för dina SPA i två olika modeller:
 
@@ -44,7 +45,7 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 
 >[!NOTE]
 >
->Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (scen, prod, testning osv.). Detta möjliggör typiska mönster för systemutvecklingens livscykel (SDLC) med olika versioner av ett enda program som distribueras till olika miljöer. Se dokumentet [CI/CD för Project Fire Applications](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/guides/ci_cd_for_firefly_apps.md) för mer information.
+>Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (scen, prod, testning osv.). Detta möjliggör typiska mönster för systemutvecklingens livscykel (SDLC) med olika versioner av ett enda program som distribueras till olika miljöer.  Se dokumentet [CI/CD för App Builder-program](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/) för mer information.
 >
 >En separat arbetsyta behövs inte per instans (författare, publicering) såvida det inte finns skillnader i körtidsimplementeringen per instanstyp.
 
