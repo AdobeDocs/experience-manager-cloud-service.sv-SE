@@ -2,43 +2,92 @@
 title: Meddelanden
 description: Lär dig hur du får information om pipeline-distributioner med hjälp av Adobe Experience Cloud meddelandesystem.
 exl-id: c1c740b0-c873-45a8-9518-a856db2be75b
-source-git-commit: 42d4e3bb38e3a7ecb4507d15e2307ed08d752b5c
+source-git-commit: 0de041211c8257d920bcf354593b3caa2db43572
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
 
+
 # Meddelanden {#notifications}
 
-[!UICONTROL Cloud Manager] gör att användaren kan ta emot meddelanden när produktionsflödet startar och slutförs (utan fel eller slutförs) under en produktionsdistribution.
+Lär dig hur Cloud Manager meddelar dig om viktiga händelser.
 
-Dessa meddelanden skickas via Adobe [!UICONTROL Experience Cloud] meddelandesystem till användare med roller **Företagsägare**, **Programhanteraren** och **Distributionshanteraren**.
+## Meddelanden i Cloud Manager {#cloud-manager-notifications}
 
-Meddelandena visas i den högra änden av menyraden i dialogrutan [!UICONTROL Cloud Manager] Användargränssnitt och Adobe [!UICONTROL Experience Cloud].
+[!UICONTROL Cloud Manager] skickar meddelanden till dig när en produktionspipeline startar och slutförs (utan fel eller slutförs) i början av en produktionsdistribution.
 
-![Ikonen Meddelanden i menyraden](assets/notify-1.png)
+Dessa meddelanden skickas via [!UICONTROL Experience Cloud] meddelandesystem till användare i **Företagsägare**, **Programhanteraren** och **Distributionshanteraren** roller.
 
-Klockikonen visas inte när det finns nya meddelanden. Klicka på den för att öppna en panel för att visa meddelandena.
+Meddelandena visas i ett sidofält i [!UICONTROL Cloud Manager] och Adobe [!UICONTROL Experience Cloud]. Klockikonen i sidhuvudet visas när du har nya meddelanden.
 
-![Visa meddelanden](assets/notify-2.png)
+![Ikonen Meddelanden](assets/notifications-bell-badged.png)
 
-Panelen visar bara de senaste meddelandena. Klicka **Visa alla** längst ned på panelen för att se alla meddelanden.
+Klicka på klockikonen för att öppna sidofältet och visa meddelandena. The **Meddelanden** I sidlisten visas de senaste meddelandena, till exempel distributionsbekräftelser. Meddelanden gäller dina miljöer.
 
-## E-postmeddelanden {#email-notifications}
+![Sidofältet Meddelanden](assets/notifications-activities.png)
 
-Som standard är meddelanden tillgängliga i användargränssnittet i Adobe [!UICONTROL Experience Cloud] lösningar. Enskilda användare kan också välja att dessa meddelanden ska skickas via e-post genom att följa dessa steg.
+The **Meddelanden** -fliken innehåller produktinformation för Adobe. Meddelanden gäller produkten.
 
-1. Klicka på klockikonen för att visa meddelandena.
-1. Klicka på **Redigera inställningar** -ikon (formad som ett kugghjul) högst upp på meddelandepanelen.
-1. I det fönster som öppnas klickar du på **Meddelanden** i den vänstra navigeringen.
-   ![Redigera inställningsfönstret](assets/notification-preferences.png)
-1. Bläddra nedåt till **E-post** rubrik.
-   ![E-postalternativ](assets/email-preferences.png)
-1. Välj hur du vill få e-postmeddelanden.
-   * Skicka inte e-post (standard)
-   * Snabbmeddelanden
-   * Daglig sammandrag
-   * Veckosammandrag
+![Sidofältet Meddelanden](assets/notificaitons-announcements.png)
 
-När du har gjort ditt val sparas ditt val automatiskt utan att du behöver klicka på en Spara- eller Verkställ-knapp.
+Klicka på ett meddelande eller meddelande för att visa information om det. Meddelanden som är kopplade till aktiviteter som pipeline-distributioner tar dig till detaljerna för den aktiviteten, som till exempel körningsfönstret för pipeline.
+
+Klicka på **Visa alla** längst ned på panelen för att visa alla meddelanden i inkorgen.
+
+Klicka på **Markera alla som lästa** längst ned på panelen för att markera alla olästa meddelanden som lästa och ta bort klockikonens märkning.
+
+## Meddelandekonfiguration {#configuration}
+
+Du kan anpassa hur du tar emot meddelanden och vilka meddelanden du får.
+
+Klicka på kugghjulsikonen högst upp i sidofältet för meddelanden.
+
+![Ikon för meddelandeinställningar](assets/notifications-configuration.png)
+
+Då öppnas **Inställningar för Experience Cloud** fönster, där du kan definiera dina meddelandeprenumerationer och hur du får dina meddelanden.
+
+### Prenumerationer {#subscriptions}
+
+Prenumerationer definierar för vilka produkter du får meddelanden och vilka meddelanden.
+
+![Meddelandeprenumerationer](assets/notifications-subscriptions.png)
+
+Som standard får du alla meddelanden för alla produkter. Klicka på **Anpassa** bredvid en produkt för att definiera de typer av meddelanden du får för den produkten.
+
+![Anpassa prenumerationer på meddelanden](assets/notifications-subscriptions-customize.png)
+
+### Prioritet {#priority}
+
+Prioritetsaviseringar markeras med en **HÖG** -taggen och kan konfigureras så att den endast tas emot som aviseringar. I **Prioritet** kan du definiera vilka kategorier som kvalificerar som prioritetsmeddelanden.
+
+![Meddelandeprioritet](assets/notifications-priority.png)
+
+Använd listrutan för att lägga till i listan över kategorier som kvalificerar sig som prioritet. Klicka på X bredvid kategorinamnen för att ta bort dem.
+
+### Varningar {#alerts}
+
+Varningar visas i fönstrets övre högra hörn under några sekunder. Använd **Varningar** för att definiera för vilka meddelanden du får aviseringar.
+
+![Meddelandeaviseringar](assets/notifications-alerts.png)
+
+Du kan definiera hur varningarna ska fungera.
+
+* **Visa aviseringar för** - Definierar de typer av meddelanden som utlöser varningar
+* **Varningar bör stanna kvar på skärmen tills jag stänger dem** - Anger om varningarna ska finnas kvar om du inte aktivt stänger dem
+* **Varaktighet** - Definierar hur länge varningen ska finnas kvar på skärmen om du inte har valt att de ska stanna på skärmen.
+
+## E-post {#emails}
+
+Meddelanden finns i webbanvändargränssnittet i Adobe [!UICONTROL Experience Cloud] lösningar. Du kan också välja att dessa meddelanden ska skickas via e-post i **E-post** -avsnitt.
+
+![E-postmeddelanden](assets/notifications-emails.png)
+
+Inga e-postmeddelanden skickas som standard. Du kan välja att få e-post som:
+
+* Direkt
+* Dagligen
+* Vecka
+
+När **Snabbmeddelanden** väljs skickas e-postmeddelanden omedelbart för varje meddelande. För **Daglig sammandrag** och **Veckosammandrag** du kan välja när din dagliga digest ska skickas och på vilken dag och när din veckosammanfattning ska skickas.
