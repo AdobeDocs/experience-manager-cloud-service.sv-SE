@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: b8a827e73d8eba9184be352d0aa4705dfb24b642
+source-git-commit: 9c9cc0139d6351f99c60828ee0a9d4630224f87c
 workflow-type: tm+mt
-source-wordcount: '3016'
+source-wordcount: '3036'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Det rekommenderas att du väljer Flexibel portutgång om du inte behöver VPN oc
 
 ### Konfiguration {#configuring-flexible-port-egress-provision}
 
-En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas, bara värdet för `flexiblePortEgress` för `kind` parameter och region. Slutpunkten svarar med `network_id`, samt annan information, inklusive status. Alla parametrar och den exakta syntaxen bör refereras i API-dokumenten.
+En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas, bara värdet för `flexiblePortEgress` för `kind` parameter och region. Slutpunkten svarar med `network_id`, samt annan information, inklusive status. Den fullständiga uppsättningen med parametrar och exakt syntax, liksom viktig information som vilka parametrar som inte kan ändras senare. [kan refereras i API-dokumenten.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure)
 
 När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter innan den etableras. Ett anrop till Cloud Managers [slutpunkt för GET av nätverksinfrastruktur](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) skulle visa statusen&quot;ready&quot;.
 
