@@ -2,9 +2,9 @@
 title: Meddelanden
 description: Lär dig hur du får information om pipeline-distributioner med hjälp av Adobe Experience Cloud meddelandesystem.
 exl-id: c1c740b0-c873-45a8-9518-a856db2be75b
-source-git-commit: 0de041211c8257d920bcf354593b3caa2db43572
+source-git-commit: 451b5a089645004c58c2674fd1fb13afbe1201cf
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Du kan definiera hur varningarna ska fungera.
 * **Varningar bör stanna kvar på skärmen tills jag stänger dem** - Anger om varningarna ska finnas kvar om du inte aktivt stänger dem
 * **Varaktighet** - Definierar hur länge varningen ska finnas kvar på skärmen om du inte har valt att de ska stanna på skärmen.
 
-## E-post {#emails}
+### E-post {#emails}
 
 Meddelanden finns i webbanvändargränssnittet i Adobe [!UICONTROL Experience Cloud] lösningar. Du kan också välja att dessa meddelanden ska skickas via e-post i **E-post** -avsnitt.
 
