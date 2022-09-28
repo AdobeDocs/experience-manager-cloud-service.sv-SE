@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 9c9cc0139d6351f99c60828ee0a9d4630224f87c
+source-git-commit: dde06fb7b678de8bf07aae54ee411aab7208ab2c
 workflow-type: tm+mt
-source-wordcount: '3036'
+source-wordcount: '3053'
 ht-degree: 0%
 
 ---
@@ -336,7 +336,7 @@ Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att va
 ## Äldre dedikerade gruppadresskunder {#legacy-dedicated-egress-address-customers}
 
 Om du har etablerats med en dedikerad IP-adress före 2021.09.30, har din dedikerade IP-adressfunktion bara stöd för HTTP- och HTTPS-portar.
-Detta inkluderar HTTP/1.1 och HTTP/2 vid kryptering.
+Detta inkluderar HTTP/1.1 och HTTP/2 vid kryptering. Dessutom kan en dedikerad utgående slutpunkt bara prata med valfritt mål via HTTP/HTTPS på port 80/443.
 
 ## VPN (Virtual Private Network) {#vpn}
 
