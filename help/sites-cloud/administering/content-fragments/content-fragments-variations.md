@@ -1,10 +1,12 @@
 ---
 title: Variationer – redigera innehållsfragment
 description: Förstå hur variationer gör att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte. Detta ger större flexibilitet för både headless-leverans och redigering av sidor.
+feature: Content Fragments
+role: User
 exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
-source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
+source-git-commit: 3e08f725cfa0ba06b18da9e435978ba41eb4dbde
 workflow-type: tm+mt
-source-wordcount: '2287'
+source-wordcount: '2306'
 ht-degree: 11%
 
 ---
@@ -367,6 +369,12 @@ Det finns olika metoder att lägga till [bilder](/help/sites-cloud/administering
 
 
 ## Hantera variationer {#managing-variations}
+
+[!CONTEXTUALHELP]
+id="aemcloud_sites_contentfragments_variations"
+title="Hantera variationer"
+abstract="Lär dig hur du skapar variationer av innehåll som ska användas med specifika kanaler."
+additional-url="https://video.tv.adobe.com/v/333295" text="Variationer för innehållsfragment"
 
 ### Skapa en variant {#creating-a-variation}
 
