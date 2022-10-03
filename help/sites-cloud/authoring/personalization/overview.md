@@ -2,7 +2,7 @@
 title: Personalisering och målgruppsanpassning av innehåll
 description: Lär dig hur du kan skapa personaliserat, målinriktat innehåll med AEM
 exl-id: b9b5dbf6-d491-48a6-99b1-19bc1b651b8c
-source-git-commit: 635a9e577f03c865cdb31f539598fb8fe034d7b7
+source-git-commit: d2975ec84745f9520ead89588ab727af8e43b740
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 0%
@@ -38,9 +38,6 @@ När du skapar sidor definierar du flera upplevelser, där varje upplevelse blir
 
 ### Erbjudande {#offer}
 
-<!-- not clear - needs clarification -->
-<!-- is an offer a personalized experience, or an activity? -->
-
 Ett erbjudande är en personaliserad upplevelse som ofta är tillgänglig under en begränsad tidsperiod.
 
 En sida från en exempelwebbplats kan t.ex. använda erbjudanden som en teaserbild som visas högst upp på sidan. En person över 30 och en person under 30 kommer att se olika erbjudanden som upplevelseteraren.
@@ -62,8 +59,6 @@ En aktivitet:
 * definierar mappningen av en viss målgrupp (ett visst segment) med en viss upplevelse
 * definierar den tidsperiod för vilken målinriktningen tillämpas
 * identifierar [målmotor](#targeting-engine) som dina sidor använder
-
-<!-- an example for each of the two types would be good -->
 
 Aktiviteten kan antingen vara en personaliseringsaktivitet eller en A/B-testaktivitet (för arbetsflödet AEM och Adobe Target personalisering).
 
