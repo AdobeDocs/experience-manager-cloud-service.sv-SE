@@ -2,9 +2,9 @@
 title: Distribuera koden
 description: Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: cb08fcbd6c1060466ca9e6b4639774d43b70c83c
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,10 @@ Följande steg gör timeout om du väntar på användarfeedback:
 ## Distributionsprocess {#deployment-process}
 
 Alla driftsättningar av Cloud Service följer en rullande process för att säkerställa noll driftavbrott. Se dokumentet [Hur rullande distributioner fungerar](/help/implementing/deploying/overview.md#how-rolling-deployments-work) om du vill veta mer.
+
+>[!NOTE]
+>
+>Dispatcher-cachen rensas bort för varje distribution. Den värms upp senare innan de nya publiceringsnoderna accepterar trafik.
 
 ## Kör en produktionsdistribution igen {#Reexecute-Deployment}
 
