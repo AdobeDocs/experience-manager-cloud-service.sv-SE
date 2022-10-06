@@ -2,7 +2,7 @@
 title: Extraherar innehåll från källa
 description: Extraherar innehåll från källa
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
-source-git-commit: a2e14d73fd6b8138799799c6408a0846224cd8c9
+source-git-commit: 509715eb6324a370e28d681111ee0fd3fa2a7b44
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 19%
@@ -35,7 +35,7 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
    >[!IMPORTANT]
    >
    >Kontrollera att Extraheringsnyckeln är giltig och att den inte ligger nära utgångsdatumet. Om den ligger nära sitt förfallodatum kan du förnya extraheringsnyckeln genom att markera migreringsuppsättningen och klicka på Egenskaper. Klicka på **Förnya**. Då kommer du till Cloud Acceleration Manager där du kan klicka på **Kopiera extraheringsnyckel**. Varje gång du klickar på **Kopiera extraheringsnyckel**skapas en ny extraheringsnyckel som är giltig i 14 dagar från det att den skapades.
-   >[!bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam13.png)
+   >![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam13.png)
 
 1. Då öppnas dialogrutan Extrahering. Klicka på **Extract** för att starta extraheringsfasen.
 
