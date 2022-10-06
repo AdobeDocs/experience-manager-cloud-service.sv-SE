@@ -3,9 +3,9 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: 2e0846ba3addf2ecc7d075d4da85620d7d9e9e2f
+source-git-commit: 95dfcdbc434e4c65bbcae84d6cb45ecd1601f14a
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1139'
 ht-degree: 7%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_cdn"
 >title="CDN i AEM as a Cloud Service"
->abstract="AEM när Cloud Servicen levereras med ett inbyggt CDN. Det huvudsakliga syftet är att minska fördröjningen genom att leverera tillgängligt innehåll från CDN-noderna i kanten, nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program."
+>abstract="AEM när Cloud Servicen levereras med ett inbyggt CDN. Det huvudsakliga syftet är att minska fördröjningen genom att leverera tillgängligt innehåll från CDN-noderna vid kanten, nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program."
 
 AEM när Cloud Servicen levereras med ett inbyggt CDN. Dess huvudsakliga syfte är att minska latensen genom att leverera tillgängligt innehåll från CDN-noder nära webbläsaren. Det är helt managerat och konfigurerat för optimal prestanda i AEM-program.
 
@@ -25,7 +25,7 @@ Se även följande videofilmer [Cloud 5 AEM CDN del 1](https://experienceleague.
 
 ## AEM hanterat CDN  {#aem-managed-cdn}
 
-Följ avsnitten nedan för att använda självbetjäningsgränssnittet för Cloud Manager för att förbereda innehållsleverans med hjälp av AEM färdiga CDN:
+Följ avsnitten nedan om du vill använda självbetjäningsgränssnittet för Cloud Manager för att förbereda innehållsleveransen genom att använda det medföljande CDN-nätverket:
 
 1. [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
 1. [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
@@ -38,7 +38,7 @@ Se [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists
 
 >[!CAUTION]
 >
->Endast förfrågningar från tillåtna IP-adresser hanteras av AEM hanterade CDN. Om du pekar ditt eget CDN mot det AEM hanterade CDN måste du se till att IP-adresserna för ditt CDN ingår i tillåtelselista.
+>Endast begäranden från tillåtna IP-adresser hanteras av AEM hanterade CDN. Om du pekar ditt eget CDN mot det AEM hanterade CDN måste du se till att IP-adresserna för ditt CDN ingår i tillåtelselista.
 
 ## Customer CDN points to AEM Managed CDN {#point-to-point-CDN}
 
@@ -120,6 +120,19 @@ Nedan visas flera konfigurationsexempel från ett antal ledande CDN-leverantöre
 
 ![Cloudflare1](assets/cloudflare1.png "Cloudflare")
 ![Cloudflare2](assets/cloudflare2.png "Cloudflare")
+
+## Disposition av innehåll {#content-disposition}
+
+För publiceringsskiktet är standardinställningen för att visa blober som en bifogad fil. Detta kan åsidosättas med hjälp av standarden [dispositionshuvud för innehåll](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) i dispatchern.
+
+Nedan visas ett exempel på hur konfigurationen ska se ut:
+
+```
+<LocationMatch "^\/content\/dam.*\.(pdf).*">
+ Header unset Content-Disposition
+ Header set Content-Disposition inline
+</LocationMatch>
+```
 
 ## Geolocation-rubriker {#geo-headers}
 
