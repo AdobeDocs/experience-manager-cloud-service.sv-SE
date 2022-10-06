@@ -2,9 +2,9 @@
 title: Licenspanelen
 description: Med Cloud Manager får du en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller klientorganisation.
 exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
-source-git-commit: 28036cd047404babddbb1365c80327adc5b6fa71
+source-git-commit: b5078c849c9fa088546f5df1fcbef1dec59f3cdb
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,10 @@ Innehållsförfrågningar kommer att innehålla avvikelser med en organisations 
 | Trafikblockerare | Om du använder en spårningsblockerare i en webbläsare kan det hända att vissa begäranden inte spåras. |
 | Brandväggar | Brandväggar kan blockera Analytics-spårning. Detta är vanligare med brandväggar. |
 
+### Vad gör jag om jag vill veta mer om min innehållsförfrågningsvolym? {#current-request-volumes}
+
+Om du vill ha ytterligare insikter om hur många innehållsförfrågningar som visas på License Dashboard kan ditt Adobe-team tillhandahålla en rapport som visar de viktigaste volymdrivrutinerna för innehållsförfrågningar. Kontakta ditt Adobe-team eller Adobe kundtjänst om du vill ha en rapport över de viktigaste användningsområdena.
+
 ### Vad händer om jag använder mitt eget CDN? {#using-own-cdn}
 
-Kontrollpanelen för innehållsbegäran i Cloud Manager visar inte spårning för ditt eget CDN.
+Licensinstrumentpanelen visar endast data som spåras av Cloud Servicens CDN.  Om du väljer att ta med ditt eget CDN (BYOCDN) kommer du att rapportera din innehållsbegärandevolym till Adobe på årsbasis, vilket framgår av ditt avtal.

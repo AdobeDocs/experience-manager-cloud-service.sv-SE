@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2022.9.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2022.9.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2022.10.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2022.10.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 4c04ab85f8760b9f72f7540b991edc7691995f66
+source-git-commit: a873b23f7dac8742820300ef154b94a72e4b8a23
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2022.9.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2022.10.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-På den här sidan visas versionsinformation för Cloud Manager 2022.9.0 i AEM as a Cloud Service.
+Den här sidan dokumenterar versionsinformationen för Cloud Manager 2022.10.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,16 +21,15 @@ På den här sidan visas versionsinformation för Cloud Manager 2022.9.0 i AEM a
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.9.0 i AEM as a Cloud Service är 8 september 2022. Nästa version är planerad till den 6 oktober 2022.
+Releasedatum för Cloud Manager version 2022.9.0 i AEM as a Cloud Service är 6 oktober 2022. Nästa version är planerad till den 3 november 2022.
 
 ## Nyheter {#what-is-new}
 
-* AEM Guides kan nu konfigureras på ett självbetjäningssätt i sandlådeprogram.
-* Kunder som inte har någon Cloud Manager-roll kommer inte att kunna komma åt programinformation. De kan dock navigera till Author end points från landningssidorna för Cloud Manager.
-* Kunder kan konfigurera **Incident och proaktiv avisering** grupper som kan få information från Adobe om incidenter eller rekommendationer i samband med deras AEMaaCS-program. Se [Användargrupp för meddelanden](/help/journey-onboarding/user-groups.md) för mer information.
-* Om du lägger till programersättning i användargränssnittet visas verktygstips på ett konsekvent sätt när det är inaktiverat på grund av behörighet eller berättiganderelaterade orsaker.
+* Versionen av [AEM projekttyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som används av Cloud Manager har uppdaterats till version 39.
+* Användargränssnittet för kontrollpanelen för licenser kommer nu att informera användare om ett platsprogram har konfigurerats med ett CDN AEM as a Cloud Service.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* Arbetsflödet för miljötillägg innehåller ytterligare valideringar för att säkerställa ett lyckat resultat.
-* Förbättrad feedback från kunder AEM appbygge när många stöter på anslutningsproblem med privata rapporter.
+* En situation har korrigerats där användare med versaler i e-postadressen inte kunde läggas till i ett nytt Relic-underkonto i Cloud Manager.
+* Skärmlösningen visas nu om det finns flera lösningar i programmet.
+* En situation har korrigerats där körningen av pipeline i frontend inte skulle starta när miljön hade statusen UPDATING.
