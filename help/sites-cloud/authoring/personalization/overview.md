@@ -2,9 +2,9 @@
 title: Personalisering och målgruppsanpassning av innehåll
 description: Lär dig hur du kan skapa personaliserat, målinriktat innehåll med AEM
 exl-id: b9b5dbf6-d491-48a6-99b1-19bc1b651b8c
-source-git-commit: d2975ec84745f9520ead89588ab727af8e43b740
+source-git-commit: f2466cb5cda759f0c97cd69810d208d47fb73b98
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
@@ -111,29 +111,32 @@ För närvarande kan AEM använda:
 
 ### AEM ContextHub {#aem-contexthub}
 
-AEM tillhandahåller den inbyggda målmotorn ContextHub som hanterar sidförfrågningar och avgör vilket innehåll som ska visas. När ni använder den AEM målgruppsmotorn begränsas ni till att använda segment som skapas i AEM för att definiera målgrupperna för era upplevelser.
+AEM har den inbyggda målgruppsmotorn [ContextHub](/help/implementing/developing/personalization/contexthub.md) som bearbetar sidförfrågningar och avgör vilket innehåll som ska visas. När ni använder den AEM målgruppsmotorn begränsas ni till att använda segment som skapas i AEM för att definiera målgrupperna för era upplevelser.
 
 ### Adobe Target {#adobe-target}
 
-Adobe Target målgruppsmotor spårar information som samlats in från sidbesök i Adobe Target.
+The [Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md) med målmotorn spåras information som samlats in från sidbesök i Adobe Target.
 
 * När ni använder den här målgruppsmotorn använder ni de segment ni importerar från Adobe Target för att definiera målgrupperna för era upplevelser.
 * Aktiviteter som använder Adobe Target-motorn är [synkroniserat med mål](/help/sites-cloud/authoring/personalization/activities.md#synchronizing-activities-with-adobe-target).
 
-Du kan använda den här motorn när du har [integrerat med Adobe Target](/help/sites-cloud/integrating/integration-adobe-target-ims.md).
+Du kan använda den här motorn när du har [integrerat med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
 
 ## Konfigurera ditt personaliserade innehåll {#how-to-setup-personalized-content}
 
 Det finns olika steg och definitioner som krävs för att leverera ditt personaliserade innehåll:
 
-1. Integrera AEM med målmotorn.
+1. Konfigurera målmotorn genom att antingen:
+
+   1. Konfigurerar [ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md)
+   1. Integrera med [Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md)
 
 1. Konfigurera målgrupperna.
 
-   1. Definiera målgruppen eller segmentet, tillsammans med reglerna, beroende på vilken målgruppsmotor du arbetar med.
+   1. Ange [Målgrupper](https://experienceleague.adobe.com/docs/target/using/audiences/target.html) eller [ContextHub-segment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md), tillsammans med reglerna.
 
-1. Skapa ditt varumärke och dina aktiviteter.
+1. Skapa [Varumärke och verksamhet](/help/sites-cloud/authoring/personalization/activities.md).
 
 1. Skapa det urval av upplevelser som du vill visa för olika målgrupper.
 
-1. Anpassa upplevelserna genom att rikta dem till specifika målgrupper (segment).
+1. personalisera upplevelserna med [mål](/help/sites-cloud/authoring/personalization/targeted-content.md) dem till specifika målgrupper (segment).
