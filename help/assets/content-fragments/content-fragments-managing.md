@@ -1,10 +1,8 @@
 ---
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
-feature: Content Fragments
-role: User
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: 21ee6ec3ffef602bfbac7d89bb6c3454869deda9
+source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
 workflow-type: tm+mt
 source-wordcount: '1781'
 ht-degree: 6%

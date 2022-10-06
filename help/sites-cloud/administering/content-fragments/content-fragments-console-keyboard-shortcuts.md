@@ -1,8 +1,10 @@
 ---
 title: Kortkommandon för konsolen Innehållsfragment
 description: Olika kortkommandon finns i hela AEM, bland annat för hantering av innehållsfragment
+feature: Content Fragments
+role: User
 exl-id: fe6ea615-43aa-41cd-a21c-50d855084154
-source-git-commit: 472b670623e77957ff9a366359ebef8c6c0604ae
+source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%

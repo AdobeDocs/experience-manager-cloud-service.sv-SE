@@ -1,11 +1,13 @@
 ---
 title: Konsol för innehållsfragment
 description: Lär dig hur du hanterar innehållsfragment från konsolen Innehållsfragment.
-landing-page-description: Lär dig hur du hanterar innehållsfragment från konsolen Innehållsfragment som fokuserar på användning av innehållsfragment i stora volymer för Headless-fall, men som även används vid redigering av sidor.
+landing-page-description: Lär dig hur du hanterar innehållsfragment från konsolen Innehållsfragment som fokuserar på användningen av innehållsfragment i stora volymer för rubrikfria användningsfall, men som även används vid redigering av sidor.
+feature: Content Fragments
+role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: 3e47ebad94e51379d909384f7e3ec407fba47b4d
+source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---

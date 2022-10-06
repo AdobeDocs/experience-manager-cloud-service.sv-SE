@@ -1,10 +1,12 @@
 ---
 title: Förhandsgranska - JSON-representation
-description: Lär dig hur du enkelt förhandsgranskar JSON-representationen av dina innehållsfragment när du implementerar AEM headless-lösning.
+description: Lär dig hur du enkelt förhandsgranskar en JSON-representation av dina innehållsfragment när du implementerar AEM headless-lösning.
+feature: Content Fragments
+role: User
 exl-id: bffc13e5-586b-4598-98fb-b1688d9716c5
-source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
+source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '114'
 ht-degree: 1%
 
 ---

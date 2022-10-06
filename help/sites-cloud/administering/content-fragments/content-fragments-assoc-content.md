@@ -1,10 +1,12 @@
 ---
 title: Associerat innehåll
-description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida, vilket ger ytterligare flexibilitet vid både sidredigering och leverans av rubrikfritt innehåll.
+description: Förstå hur den associerade innehållsfunktionen för innehållsfragment skapar anslutningen för resurser som (valfritt) ska användas med fragmentet, vilket ger ytterligare flexibilitet vid både sidredigering och leverans av rubrikfritt innehåll.
+feature: Content Fragments
+role: User
 exl-id: eb524872-1403-42d1-b735-eaab382cf313
-source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
+source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '243'
 ht-degree: 4%
 
 ---
