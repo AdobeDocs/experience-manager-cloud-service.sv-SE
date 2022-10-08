@@ -2,9 +2,9 @@
 title: Bygga in märkord i AEM
 description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM
 exl-id: a106dce1-5d51-406a-a563-4dea83987343
-source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Tag tag = tagManager.resolve("my/tag"); // for existing tags
 Tag tag = tagManager.createTag("my/tag"); // for new tags
 ```
 
-För den JCR-baserade implementeringen, som mappar `Tags` på JCR `Nodes`kan du direkt använda Sling `adaptTo` om du har resursen (t.ex. `/content/cq:tags/default/my/tag`):
+För den JCR-baserade implementeringen, som mappar `Tags` på JCR `Nodes`kan du direkt använda Sling `adaptTo` om du har resursen (till exempel `/content/cq:tags/default/my/tag`):
 
 ```java
 Tag tag = resource.adaptTo(Tag.class);
@@ -121,7 +121,7 @@ replicator.replicate(session, replicationActionType, tagPath);
 
 ## Taggskräpinsamlaren {#the-tag-garbage-collector}
 
-Taggskräpinsamlaren är en bakgrundstjänst som rensar de dolda och oanvända taggarna. Dolda och oanvända taggar anges nedan `/content/cq:tags` som har `cq:movedTo` och används inte på en innehållsnod. De har ett antal nollor. Genom att använda den här lazy delete-processen kan innehållsnoden (dvs. `cq:tags` ) behöver inte uppdateras som en del av flytt- eller sammanfogningsåtgärden. Referenserna i `cq:tags` -egenskapen uppdateras automatiskt när `cq:tags` egenskapen uppdateras, t.ex. via dialogrutan för sidegenskaper.
+Taggskräpinsamlaren är en bakgrundstjänst som rensar de dolda och oanvända taggarna. Dolda och oanvända taggar anges nedan `/content/cq:tags` som har `cq:movedTo` och används inte på en innehållsnod. De har ett antal nollor. Genom att använda den här lazy delete-processen kan innehållsnoden (dvs. `cq:tags` ) behöver inte uppdateras som en del av flytt- eller sammanfogningsåtgärden. Referenserna i `cq:tags` -egenskapen uppdateras automatiskt när `cq:tags` egenskapen uppdateras till exempel via dialogrutan för sidegenskaper.
 
 Taggskräpinsamlaren körs som standard en gång om dagen. Detta kan konfigureras på:
 
@@ -136,7 +136,7 @@ Sökningen efter taggar och tagglistan fungerar enligt följande:
 
 ## Taggar på olika språk {#tags-in-different-languages}
 
-En tagg `title` kan definieras på olika språk. Sedan läggs en språkkänslig egenskap till i taggnoden. Den här egenskapen har formatet `jcr:title.<locale>`, t.ex. `jcr:title.fr` för den franska översättningen. `<locale>` måste vara en ISO-språksträng med gemener och använda understreck (`_`) i stället för bindestreck/streck (`-`), till exempel: `de_ch`.
+En tagg `title` kan definieras på olika språk. Sedan läggs en språkkänslig egenskap till i taggnoden. Den här egenskapen har formatet `jcr:title.<locale>`, till exempel `jcr:title.fr` för den franska översättningen. `<locale>` måste vara en ISO-språksträng med gemener och använda understreck (`_`) i stället för bindestreck/streck (`-`), till exempel: `de_ch`.
 
 Till exempel när **Djur** -taggen läggs till i **Produkter** sida, värdet `stockphotography:animals` läggs till i egenskapen `cq:tags` av noden `/content/wknd/en/products/jcr:content`. Översättningen refereras från taggnoden.
 
@@ -159,7 +159,7 @@ För taggning beror lokaliseringen på sammanhanget som tagg `titles` kan visas 
 
 ### Lägga till ett nytt språk i dialogrutan Redigera tagg {#adding-a-new-language-to-the-edit-tag-dialog}
 
-I proceduren nedan beskrivs hur du lägger till ett nytt språk (t.ex. finska) i **Redigera tagg** dialog:
+I proceduren nedan beskrivs hur du lägger till ett nytt språk (till exempel finska) i **Redigera tagg** dialog:
 
 1. I **CRXDE**, redigera egenskapen för flera värden `languages` av noden `/content/cq:tags`.
 1. Lägg till `fi_fi`, som representerar den finska språkinställningen, och spara ändringarna.

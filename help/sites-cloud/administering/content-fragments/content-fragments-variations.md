@@ -4,9 +4,9 @@ description: Förstå hur variationer gör att du kan skapa innehåll för fragm
 feature: Content Fragments
 role: User
 exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
-source-git-commit: 3e08f725cfa0ba06b18da9e435978ba41eb4dbde
+source-git-commit: 14395cf97b23896e929e215e7e0b9e33620637eb
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2308'
 ht-degree: 11%
 
 ---
@@ -307,7 +307,7 @@ De läggs till i fragmentets styckesekvens utan formatering. formatering kan gö
 
 >[!CAUTION]
 Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
-Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
+Formatering av resursen (till exempel storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
 
 >[!NOTE]
 Det finns olika metoder att lägga till [bilder](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
@@ -343,7 +343,7 @@ Det här alternativet är tillgängligt när **Flerradstext** är konfigurerad m
 
 >[!CAUTION]
 Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
-Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
+Formatering av resursen (till exempel storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
 
 >[!NOTE]
 Det finns olika metoder att lägga till [bilder](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.

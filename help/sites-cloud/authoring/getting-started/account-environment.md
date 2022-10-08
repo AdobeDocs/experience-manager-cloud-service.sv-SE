@@ -2,9 +2,9 @@
 title: Konfigurerar din kontomiljö
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
 exl-id: 1b948f0b-85b9-478a-8b7e-61495c1d57b6
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '490'
 ht-degree: 4%
 
 ---
@@ -67,7 +67,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Relativ datumpresentation**
 
-   För att förbättra läsbarheten kommer AEM att återge datum inom de senaste sju dagarna som relativa datum (t.ex. för tre dagar sedan) och äldre datum som exakta datum (t.ex. den 20 mars 2017).
+   För att förbättra läsbarheten kommer AEM att återge datum inom de senaste sju dagarna som relativa datum (till exempel för tre dagar sedan) och äldre datum som exakta datum (till exempel den 20 mars 2017).
 
    Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
 

@@ -2,9 +2,9 @@
 title: Redigera en extern SPA i AEM
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
-source-git-commit: af7d8229ee080852f3c5b542db97b5c223357cf0
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2401'
+source-wordcount: '2402'
 ht-degree: 0%
 
 ---
@@ -188,7 +188,7 @@ The `AEMText` -komponenten är nu AEM.
 ### AEM sidor {#aem-authorable-pages}
 
 1. Identifiera en sida som ska läggas till för redigering i SPA. Det här exemplet använder `/content/wknd-spa-react/us/en/home.html`.
-1. Skapa en ny fil (t.ex. `Page.js`) för den redigerbara sidkomponenten. Här kan vi återanvända sidkomponenten som anges i `@adobe/cq-react-editable-components`.
+1. Skapa en ny fil (till exempel `Page.js`) för den redigerbara sidkomponenten. Här kan vi återanvända sidkomponenten som anges i `@adobe/cq-react-editable-components`.
 1. Upprepa steg fyra i avsnittet [AEM skrivbara komponenter.](#authorable-leaf-components) Använda funktionen wrapper `withMappable` på komponenten.
 1. Använd `MapTo` till AEM för alla underordnade komponenter på sidan.
 

@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -216,7 +216,7 @@ Det grundläggande formuläret i Live Copy har:
 
 #### Live-kopia med icke-Live-Copy-sidor {#live-copy-with-non-live-copy-pages}
 
-När du skapar en Live-kopia i AEM kan du se och navigera genom grenen Live-kopia och använda de normala AEM funktionerna i grenen Live-kopia. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti Live-kopian. t.ex. en produkt för en viss region eller ett visst land.
+När du skapar en Live-kopia i AEM kan du se och navigera genom grenen Live-kopia och använda de normala AEM funktionerna i grenen Live-kopia. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti Live-kopian. Exempel: en produkt för en viss region eller ett visst land.
 
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
 * Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både käll-/ritytan och Live-kopieringsgrenarna. För sådana situationer finns [MSM-utrullningskonflikter](rollout-conflicts.md) för mer information.

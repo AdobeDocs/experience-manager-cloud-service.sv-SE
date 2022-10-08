@@ -1,10 +1,10 @@
 ---
 title: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
 description: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
-source-git-commit: 42c25579e66ed2a98ded1cca403292fd1843e9af
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 99%
+source-wordcount: '1342'
+ht-degree: 95%
 
 ---
 
@@ -36,7 +36,7 @@ I det här avsnittet finns stegvisa instruktioner för hur du konverterar en AMS
 
 1. Ta bort eller kommentera virtuell värd-sektioner som inte refererar till port 80
 
-   Om du fortfarande har avsnitt i dina virtuell värd-filer som endast refererar till andra portar än port 80, t.ex.
+   Om du fortfarande har avsnitt i dina virtuella värdfiler som endast refererar till andra portar än port 80, till exempel
 
    `<VirtualHost *:443>`
    `...`
@@ -89,7 +89,7 @@ Om felmeddelanden om saknade inkluderingsfiler visas, ska du kontrollera om du h
 
 1. **Byta namn på servergruppsfiler**
 
-   Alla grupper i conf.dispatcher.d/enabled_farms måste byta namn så att de matchar mönstret *.farm, och t.ex. en servergruppsfil med namnet customerX_farm.any bör byta namn till customerX.farm.
+   Alla grupper i conf.dispatcher.d/enabled_farm måste byta namn så att de matchar mönstret *.farm, så till exempel ska en servergruppsfil med namnet customerX_farm.any ha namnet customerX.farm.
 
 1. **Kontrollera cache**
 

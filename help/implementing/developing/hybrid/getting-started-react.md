@@ -2,9 +2,9 @@
 title: Komma igång med SPA i AEM med React
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
 exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Det här är en standardanvändning av den här funktionen, som inte är unik f�
 
 #### Statisk instansiering {#static-instantiation}
 
-När komponenten instansieras statiskt med komponentmallen (t.ex. JSX), måste värdet skickas från modellen till komponentens egenskaper.
+När komponenten instansieras statiskt med komponentmallen (till exempel JSX), måste värdet skickas från modellen till komponentens egenskaper.
 
 ### App.js {#app-js}
 

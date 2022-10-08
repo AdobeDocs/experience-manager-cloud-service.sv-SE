@@ -2,10 +2,10 @@
 title: Enterprise DevOps
 description: Läs om processer, metoder och kommunikation som krävs för att underlätta driftsättning och samarbete.
 exl-id: c8da1fd7-fe3e-4c7b-8fe7-1f7faf02769c
-source-git-commit: 98eaa1390e499f48bb1a615e21b2dfb7a0523c57
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 100%
+source-wordcount: '1002'
+ht-degree: 97%
 
 ---
 
@@ -108,7 +108,7 @@ Kod ska alltid spridas nedifrån och upp:
 * testas sedan på nytt i mellanlagringsmiljöer
 * endast därefter får koden driftsättas till produktionsmiljöerna
 
-Koden (t.ex. anpassade webbprogramfunktioner och designmallar) överförs vanligtvis genom att paket exporteras och importeras mellan olika innehållsdatabaser. Om det behövs kan den här replikeringen konfigureras som en automatisk process.
+Koden (till exempel anpassade webbprogramfunktioner och designmallar) överförs vanligtvis genom att paket exporteras och importeras mellan olika innehållsdatabaser. Om det behövs kan den här replikeringen konfigureras som en automatisk process.
 
 AEM as a Cloud Service-projekt utlöser ofta koddriftsättning:
 

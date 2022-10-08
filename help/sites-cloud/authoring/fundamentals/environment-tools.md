@@ -2,10 +2,10 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: f9a122f27ab1e2dc8ba429ce9048e3eab0509db9
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 12%
+source-wordcount: '2157'
+ht-degree: 11%
 
 ---
 
@@ -58,7 +58,7 @@ När du öppnar sidopanelen öppnas den från vänster sida (välj **Komponenter
 
 Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
-* **Mobil enhet (t.ex. iPad)**
+* **Mobil enhet (till exempel iPad)**
 
    Komponentwebbläsaren täcker hela sidan som redigeras.
 
@@ -95,7 +95,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 >[!NOTE]
 >
->En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan även vara fallet för ett litet skrivbordsfönster.
+>En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan också vara fallet för ett litet skrivbordsfönster.
 
 ## Resursläsaren {#assets-browser}
 
@@ -282,7 +282,7 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Beroende på sidans egenskaper kanske vissa lägen inte är tillgängliga.
 >* Åtkomst till vissa lägen kräver lämplig behörighet/behörighet.
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
->* Det finns ett [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) (`Ctrl-Shift-M`) som du kan använda för att växla mellan **förhandsvisning** och det aktuella läget (t.ex. **Redigera** eller **Layout**).
+>* Det finns en [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) ( `Ctrl-Shift-M`) för att växla mellan **Förhandsgranska** och det valda läget (till exempel **Redigera**, **Layout**, etc).
 >
 
 

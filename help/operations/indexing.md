@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2253'
+source-wordcount: '2255'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ En indexdefinition kan vara:
 
 1. Ett körklart index. Ett exempel är `/oak:index/cqPageLucene-2`.
 1. En anpassning av ett körklart index. Sådana anpassningar definieras av kunden. Ett exempel är `/oak:index/cqPageLucene-2-custom-1`.
-1. Ett helt anpassat index. Ett exempel är `/oak:index/acme.product-1-custom-2`. För att undvika namnkonflikter kräver vi att helt anpassade index har ett prefix, t.ex. `acme.`
+1. Ett helt anpassat index. Ett exempel är `/oak:index/acme.product-1-custom-2`. För att undvika namnkonflikter kräver vi att helt anpassade index har ett prefix, till exempel `acme.`
 
 Observera att både anpassning av ett körklart index och helt anpassade index måste innehålla `-custom-`. Endast helt anpassade index får börja med ett prefix.
 
@@ -88,7 +88,7 @@ Indexdefinitioner markeras som anpassade och versionsindelade:
 
 * Själva indexdefinitionen (till exempel `/oak:index/ntBaseLucene-custom-1`)
 
-Om du vill distribuera ett anpassat eller anpassat index, indexdefinitionen (`/oak:index/definitionname`) måste levereras via `ui.apps` via Git och Cloud Manager-distributionsprocessen. I FileVault-filtret, t.ex. `ui.apps/src/main/content/META-INF/vault/filter.xml`, lista varje anpassat och anpassat index individuellt, till exempel `<filter root="/oak:index/damAssetLucene-7-custom-1"/>`. Själva den anpassade/anpassade indexdefinitionen sparas sedan i filen `ui.apps/src/main/content/jcr_root/_oak_index/damAssetLucene-7-custom-1/.content.xml`, enligt följande:
+Om du vill distribuera ett anpassat eller anpassat index, indexdefinitionen (`/oak:index/definitionname`) måste levereras via `ui.apps` via Git och Cloud Manager-distributionsprocessen. I filtret FileVault, till exempel, `ui.apps/src/main/content/META-INF/vault/filter.xml`, lista varje anpassat och anpassat index individuellt, till exempel `<filter root="/oak:index/damAssetLucene-7-custom-1"/>`. Själva den anpassade/anpassade indexdefinitionen sparas sedan i filen `ui.apps/src/main/content/jcr_root/_oak_index/damAssetLucene-7-custom-1/.content.xml`, enligt följande:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

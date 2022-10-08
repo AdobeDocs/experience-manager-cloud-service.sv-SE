@@ -2,9 +2,9 @@
 title: Query Builder API
 description: Funktionerna i Asset Share Query Builder visas via Java API och REST API.
 exl-id: d5f22422-c9da-4c9d-b81c-ffa5ea7cdc87
-source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2040'
 ht-degree: 0%
 
 ---
@@ -279,7 +279,7 @@ property.3_value=Whistler Mountain Biking
 
 ## Förfina vad som returneras {#refining-what-is-returned}
 
-Som standard returnerar JSON-servern för QueryBuilder en standarduppsättning med egenskaper för varje nod i sökresultatet (t.ex. sökväg, namn, titel). För att få kontroll över vilka egenskaper som returneras kan du göra något av följande:
+Som standard returnerar JSON-servern för QueryBuilder en standarduppsättning med egenskaper för varje nod i sökresultatet (till exempel sökväg, namn, titel etc.). För att få kontroll över vilka egenskaper som returneras kan du göra något av följande:
 
 Ange
 

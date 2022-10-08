@@ -2,9 +2,9 @@
 title: Använda Dölj villkor
 description: Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte.
 exl-id: 2a96f246-fb0f-4298-899e-ebbf9fc1c96f
-source-git-commit: ac64ca485391d843c0ebefcf86e80b4015b72b2f
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ${cqDesign.property1 == 'someText' && cqDesign.property2 || cqDesign.property3 !
 
 När du definierar ditt dolda uttryck ska du tänka på:
 
-* För att vara giltig måste det omfång i vilket egenskapen hittas uttryckas (t.ex. `cqDesign.myProperty`).
+* För att vara giltig måste omfånget som egenskapen hittas uttryckas (till exempel `cqDesign.myProperty`).
 * Värdena är skrivskyddade.
 * Funktioner (om det behövs) bör begränsas till en viss uppsättning som tillhandahålls av tjänsten.
 

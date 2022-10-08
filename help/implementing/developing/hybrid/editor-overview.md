@@ -2,9 +2,9 @@
 title: SPA
 description: Den här artikeln innehåller en omfattande översikt över SPA Editor och hur den fungerar. Den innehåller detaljerade arbetsflöden för interaktion med SPA Editor i AEM.
 exl-id: 9814d86e-8d87-4f7f-84ba-6943fe6da22f
-source-git-commit: c7759e390d9ea6c2196c9f6c895232c4e75c6d23
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1636'
 ht-degree: 0%
 
 ---
@@ -171,7 +171,7 @@ Ytterligare anpassade väljare kan definieras och användas som en del av en SPA
 Om du vill använda redigeraren i stället för en textkomponent som skapats i SPA måste du konfigurera ytterligare.
 
 1. Ange ett attribut (det kan vara valfritt) för behållarelementet som innehåller texten HTML. För WKND SPA Project är det en `<div>` -elementet och väljaren som har använts är `data-rte-editelement`.
-1. Ange konfigurationen `editElementQuery` på motsvarande AEM `cq:InplaceEditingConfig` som pekar på den väljaren, t.ex. `data-rte-editelement`. På så sätt kan redigeraren veta vilket HTML-element som radbryter HTML-texten.
+1. Ange konfigurationen `editElementQuery` på motsvarande AEM `cq:InplaceEditingConfig` som pekar på den väljaren, till exempel `data-rte-editelement`. På så sätt kan redigeraren veta vilket HTML-element som radbryter HTML-texten.
 
 Mer information om `editElementQuery` -egenskapen och konfigurationen för RTF-redigeraren finns i [Konfigurera RTF-redigeraren.](/help/implementing/developing/extending/rich-text-editor.md)
 

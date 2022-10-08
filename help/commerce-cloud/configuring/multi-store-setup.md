@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 3046
 thumbnail: 28952.jpg
 exl-id: 4385c9e5-2b25-4f95-952f-72349431cf94,7f6e04a2-89e9-4613-8ea8-9dac1acea30b
-source-git-commit: f5e465d90477f1b49e4ff1c5ca9dd47cc5d539bb
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF Core Components så
 4. Tilldela den underordnade konfigurationen till en AEM plats
 
    * Gå till AEM Sites Console
-   * Navigera till regionen eller språkroten i platsstrukturen, t.ex. /content/venia/us _eller_ /content/venia/us/en för exempelsidan Venia
+   * Navigera till regionen eller språkroten i platsstrukturen, till exempel /content/venia/us _eller_ /content/venia/us/en för exempelsidan Venia
    * Markera sidan och öppna sidegenskaper
    * Välj fliken Avancerat
    * I `Configuration` väljer du konfigurationen som du skapade i steg 3

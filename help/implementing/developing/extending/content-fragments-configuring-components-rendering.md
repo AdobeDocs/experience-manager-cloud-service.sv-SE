@@ -2,10 +2,10 @@
 title: Content Fragments – konfigurera komponenter för återgivning
 description: Content Fragments – konfigurera komponenter för återgivning
 exl-id: 6606dc3b-f1b8-4941-8fd0-f69cbd414afa
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 5%
+source-wordcount: '522'
+ht-degree: 4%
 
 ---
 
@@ -73,22 +73,22 @@ OSGi-konfigurationen är:
   <tr>
    <td><strong>Resurstyp</strong></td>
    <td><code>dam.cfm.component.resourceType</code></td>
-   <td>Resurstypen som ska registreras. t.ex. <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
+   <td>Resurstypen som ska registreras. till exempel <br /> <p><span class="cmp-examples-demo__property-value"><code>core/wcm/components/contentfragment/v1/contentfragment</code></code></p> </td>
   </tr>
   <tr>
    <td><strong>Referensegenskap</strong></td>
    <td><code>dam.cfm.component.fileReferenceProp</code></td>
-   <td>Namnet på den egenskap som innehåller referensen till fragmentet. t.ex. <code>fragmentPath</code> eller <code>fileReference</code></td>
+   <td>Namnet på den egenskap som innehåller referensen till fragmentet. till exempel <code>fragmentPath</code> eller <code>fileReference</code></td>
   </tr>
   <tr>
    <td><strong>Elementegenskap(er)</strong></td>
    <td><code>dam.cfm.component.elementsProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnen på de element som ska återges. t.ex.<code>elementName</code></td>
+   <td>Namnet på den egenskap som innehåller namnen på de element som ska återges. till exempel<code>elementName</code></td>
   </tr>
   <tr>
    <td><strong>Variationsegenskap</strong><br /> </td>
    <td><code>dam.cfm.component.variationProp</code></td>
-   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges. t.ex.<code>variationName</code></td>
+   <td>Namnet på den egenskap som innehåller namnet på variationen som ska återges. till exempel<code>variationName</code></td>
   </tr>
  </tbody>
 </table>

@@ -2,9 +2,9 @@
 title: ContextHub Javascript API-referens
 description: ContextHub Javascript-API:t är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
 exl-id: ec35bef5-610c-4e85-a43a-d4201b5eb03e
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '4621'
+source-wordcount: '4622'
 ht-degree: 3%
 
 ---
@@ -58,7 +58,7 @@ I följande tabell visas namnen på händelser som inträffar för användargrä
 | `ContextHub.Constants.EVENT_UI_CONTAINER_OPENED` | Utlöses när ContextHub-gränssnittet öppnas | `ui-container-opened` |
 | `ContextHub.Constants.EVENT_UI_CONTAINER_CLOSED` | Utlöses när gränssnittet för ContextHub är komprimerat | `ui-container-closed` |
 | `ContextHub.Constants.EVENT_UI_PROPERTY_MODIFIED` | Utlöses när en egenskap ändras | `ui-property-modified` |
-| `ContextHub.Constants.EVENT_UI_RENDERED` | Utlöses varje gång ContextHub-gränssnittet återges (t.ex. efter en egenskapsändring) | `ui-rendered` |
+| `ContextHub.Constants.EVENT_UI_RENDERED` | Utlöses varje gång ContextHub-gränssnittet återges (till exempel efter en egenskapsändring) | `ui-rendered` |
 | `ContextHub.Constants.EVENT_UI_INITIALIZED` | Utlöses när gränssnittsbehållaren initieras | `ui-initialized` |
 | `ContextHub.Constants.ACTIVE_UI_MODE` | Anger aktivt användargränssnittsläge | `/_/active-ui-mode` |
 

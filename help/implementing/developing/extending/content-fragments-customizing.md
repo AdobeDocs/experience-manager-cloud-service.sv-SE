@@ -2,9 +2,9 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -63,9 +63,9 @@ Innehållsfragment, som baseras på en innehållsfragmentmodell, mappas till en 
    * Elementdata lagras under den överordnad undernoden:
       `jcr:content/data/master`
 
-   * Variationer lagras under en undernod som har variantens namn: t.ex. `jcr:content/data/myvariation`
+   * Variationer lagras under en undernod som har variantens namn: till exempel `jcr:content/data/myvariation`
 
-   * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet: t.ex. elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
+   * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet: till exempel elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
 * Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`
 Förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på 
@@ -180,7 +180,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
    Gränssnittet ger dig möjlighet att
 
-   * Hantera grundläggande data (t.ex. get name;) get/set title/description)
+   * Hantera grundläggande data (till exempel get name;) get/set title/description)
    * Åtkomst till metadata
    * Åtkomstelement:
 

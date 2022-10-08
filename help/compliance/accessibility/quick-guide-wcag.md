@@ -2,10 +2,10 @@
 title: En snabbguide till WCAG 2.1
 description: En snabbguide till WCAG 2.1
 exl-id: 56aa834b-cd07-41c5-88f2-915bc0596e48
-source-git-commit: e4527b155179c50e1e423e7e835b3fcde3a4f2af
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 100%
+source-wordcount: '1776'
+ht-degree: 98%
 
 ---
 
@@ -104,7 +104,7 @@ Techniques for WCAG 2.1 finns på sidan [Techniques for WCAG 2.1](https://www.w3
 
 **Tekniker** utgör nivån under framgångskriterierna i WCAG 2.1-hierarkin. De klassas av WAI som informativa, inte normativa. En specifik teknik behöver alltså inte följas för att en resurs ska uppfylla kraven i WCAG 2.1.
 
-Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknologi eller innehållstyp (t.ex. HTML eller video) eller en situation (t.ex. e-handel eller e-utbildningsprogramvara). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
+Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknik eller innehållstyp (till exempel HTML eller video), eller en situation (till exempel e-handel eller e-utbildningsprogram). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
 
 Du kan komma åt tekniker:
 

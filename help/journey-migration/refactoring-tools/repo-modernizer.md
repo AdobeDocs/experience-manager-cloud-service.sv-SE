@@ -2,9 +2,9 @@
 title: Databasmodernisering
 description: Databasmodernisering
 exl-id: cd9d212e-e720-4209-8b5a-659883cc1d95
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service
 
 * `ui.apps` paket distribuerar till `/apps` och innehåller all kod
 
-* `ui.content` paket distribuerar till områden som kan skrivas under körning (t.ex. `/content`, `/conf`, `/home`eller något som inte `/apps`) och innehåller allt innehåll och all konfiguration.
+* `ui.content` paket distribuerar till områden som kan skrivas under körning (till exempel `/content`, `/conf`, `/home`eller något som inte `/apps`) och innehåller allt innehåll och all konfiguration.
 
 * `all` paketet är ett behållarpaket som innehåller underpaketen `ui.apps` och `ui.content`.
 

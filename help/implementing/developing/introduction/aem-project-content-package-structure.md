@@ -2,10 +2,10 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2930'
-ht-degree: 12%
+source-wordcount: '2931'
+ht-degree: 11%
 
 ---
 
@@ -19,7 +19,7 @@ I den här artikeln beskrivs de ändringar som krävs för Adobe Experience Mana
 
 AEM programdistributioner måste bestå av ett enda AEM. Paketet ska i sin tur innehålla underpaket som innehåller allt som programmet behöver för att fungera, inklusive kod, konfiguration och eventuellt baslinjeinnehåll som stöds.
 
-AEM kräver att **innehåll** och **kod** skiljs åt, vilket innebär att ett innehållspaket **inte** kan distribueras till **både** `/apps` och områden som är skrivbara vid körning (som `/content`, `/conf`, `/home`eller allt som inte är `/apps`) i databasen. Programmet måste i stället separera kod och innehåll i separata paket för distribution till AEM.
+AEM kräver separation av **innehåll** och **kod**, vilket innebär ett enda innehållspaket **inte** distribuera till **båda** `/apps` och körningssäkra områden (t.ex. `/content`, `/conf`, `/home`eller något som inte `/apps`) för databasen. Programmet måste i stället separera kod och innehåll i separata paket för distribution till AEM.
 
 Den paketstruktur som beskrivs i det här dokumentet är kompatibel med **både** lokala utvecklingsdistributioner och AEM Cloud Service-distributioner.
 

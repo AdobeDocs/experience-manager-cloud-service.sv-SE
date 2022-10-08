@@ -2,9 +2,9 @@
 title: Implementera en anpassad predikatutvärderare för Query Builder
 description: AEM i Query Builder är ett enkelt och anpassningsbart sätt att fråga innehållsdatabasen
 exl-id: 8c2f8c22-1851-4313-a1c9-10d6d9b65824
-source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Ett anpassat predikat kan även utföra andra saker som inte är direkt möjliga
 
 En predikatutvärderare hanterar utvärderingen av vissa predikat, vilket är definieringsbegränsningarna för en fråga.
 
-Det mappar en sökbegränsning på högre nivå (till exempel `width>200`) till en specifik JCR-fråga som passar den faktiska innehållsmodellen (t.ex. `metadata/@width > 200`). Det kan också filtrera noder manuellt och kontrollera deras begränsningar.
+Det mappar en sökbegränsning på högre nivå (till exempel `width>200`) till en specifik JCR-fråga som passar den faktiska innehållsmodellen (till exempel `metadata/@width > 200`). Det kan också filtrera noder manuellt och kontrollera deras begränsningar.
 
 >[!TIP]
 >
@@ -60,7 +60,7 @@ I det här avsnittet beskrivs hur du skapar en anpassad predikatutvärderare som
 
 * `cq:lastReplicated` som lagrar datumet för den senaste replikeringsåtgärden
 * `cq:lastReplicatedBy` som lagrar ID för den användare som utlöste den senaste replikeringsåtgärden
-* `cq:lastReplicationAction` som lagrar den senaste replikeringsåtgärden (t.ex. aktivering, inaktivering)
+* `cq:lastReplicationAction` som lagrar den senaste replikeringsåtgärden (till exempel Aktivering, Inaktivering)
 
 #### Frågar efter replikeringsmetadata med standardpredikatutvärderare {#querying-replication-metadata-with-default-predicate-evaluators}
 

@@ -2,9 +2,9 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: 014b53dfd35103660772d273dbf49d2388f6d000
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2566'
 ht-degree: 0%
 
 ---
@@ -348,5 +348,5 @@ YUI anges som standardminifierare i AEM. Följ de här stegen för att ändra de
 1. Sök och redigera **Bibliotekshanteraren Adobe Granite HTML**.
 1. Aktivera **Minify** (om det inte redan är aktiverat).
 1. Ange värdet **Standardkonfigurationer för JS-processor** till `min:gcc`.
-   * Alternativ kan skickas om de avgränsas med ett semikolon, t.ex. `min:gcc;obfuscate=true`.
+   * Alternativ kan skickas om de avgränsas med ett semikolon, till exempel `min:gcc;obfuscate=true`.
 1. Klicka **Spara** för att spara ändringarna.

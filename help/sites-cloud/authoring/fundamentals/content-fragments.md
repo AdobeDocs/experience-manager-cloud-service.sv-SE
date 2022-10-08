@@ -2,9 +2,9 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: 624b202efd08243e91b36a35f3df7c8c0bd998a9
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1166'
 ht-degree: 3%
 
 ---
@@ -153,7 +153,7 @@ Om du har [associerat innehåll](/help/sites-cloud/administering/content-fragmen
 
 >[!NOTE]
 >
->Det finns olika metoder att lägga till [visuella resurser (t.ex. bilder)](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder att lägga till [visuella resurser (till exempel bilder)](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
 
 >[!NOTE]
 >
@@ -167,7 +167,7 @@ Här kan du dra resurserna till önskad plats (antingen till en befintlig kompon
 
 ### Resurser som infogats i fragmentet {#assets-inserted-into-the-fragment}
 
-Om resurser (t.ex. bilder) har infogats i själva fragmentet (som [blandade mediefragment](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets)) är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
+Om resurser (till exempel bilder) har infogats i själva fragmentet (som [blandade mediefragment](/help/sites-cloud/administering/content-fragments/content-fragments.md#fragments-with-visual-assets)) är alternativen för att redigera dessa resurser i sidredigeraren begränsade.
 
 För en bild kan du till exempel
 

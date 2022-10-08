@@ -4,9 +4,9 @@ description: Lär dig de bästa arbetssätten som skapats av tekniker och konsul
 feature: Multi Site Manager
 role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 MSM är ett konfigurerbart ramverk för automatisering av innehållsdistribution. Implementeringar omfattar ofta större delar av en webbplats och omfattar organisationer och geografiska områden. Vi rekommenderar därför att du planerar MSM-implementeringar lika noggrant som du planerar din webbplats:
 
 * Försiktigt **planstruktur och innehållsflöden** innan implementeringen startas.
-* **Anpassa så mycket som behövs, men så lite som möjligt.** MSM har stöd för en hög grad av anpassning (t.ex. utrullningskonfigurationer), men oftast är det bästa sättet att använda webbplatsens prestanda, tillförlitlighet och uppgraderingsbarhet att minimera anpassningar.
+* **Anpassa så mycket som behövs, men så lite som möjligt.** MSM har stöd för en hög grad av anpassning (till exempel utrullningskonfigurationer), men oftast är det bästa sättet att använda webbplatsens prestanda, tillförlitlighet och uppgraderingsbarhet att minimera anpassningar.
 * Upprätta en **styrning** modellera tidigt och utbilda användare därefter för att säkerställa framgång. Ett bra tillvägagångssätt från styrningssynpunkt är att **minimera den auktoritet som lokala innehållsproducenter har** om du vill tilldela/koppla innehåll till andra lokala användare och deras respektive Live-kopior. Detta beror på att icke-styrda, kedjade arv kan öka komplexiteten i en MSM-struktur avsevärt och påverka dess prestanda och tillförlitlighet.
 * När det finns en plan för er struktur, innehållsflöden, automatisering och styrning **skapa prototyper och testa systemet noggrant** innan en aktiv implementering startas.
 * Kom ihåg att **Adobe Consulting och ledande systemintegratörer** har omfattande erfarenhet av att planera och implementera innehållsautomatisering med MSM, så att ni kan hjälpa er att komma igång med ert MSM-projekt och under hela dess implementering.

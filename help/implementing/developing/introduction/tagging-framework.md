@@ -2,9 +2,9 @@
 title: AEM Taggningsramverk
 description: Tagga innehåll och utnyttja infrastrukturen för AEM taggar för att kategorisera och organisera det.
 exl-id: 25418d44-aace-4e73-be1a-4b1902f40403
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Så här taggar du innehåll och använder infrastrukturen för AEM taggar:
 
 Deklarationen för en tagg hämtas i databasen i en nod av typen `cq:Tag.`
 
-* En tagg kan vara ett enkelt ord (t.ex. `sky`) eller representerar en hierarkisk taxonomi (t.ex. `fruit/apple`, vilket innebär både den generiska frukten och det mer specifika äpplet).
+* En tagg kan vara ett enkelt ord (till exempel `sky`) eller representerar en hierarkisk taxonomi (till exempel `fruit/apple`, vilket innebär både den generiska frukten och det mer specifika äpplet).
 * Taggar identifieras av ett unikt `TagID`.
 * En tagg har valfri metainformation, t.ex. en titel, lokaliserade titlar och en beskrivning. Titeln ska visas i användargränssnitt i stället för i `TagID`, om det finns.
 
@@ -64,7 +64,7 @@ I AEM är bassökvägen `/content/cq:tags` och rotnoden är av typen `cq:Folder`
 
 ### Namnutrymme för tagg {#tag-namespace}
 
-Med namnutrymmen kan du gruppera saker. Det vanligaste användningsfallet är att ha ett namnutrymme per plats (till exempel public kontra internal) eller per större program (till exempel platser eller resurser), men namnutrymmen kan användas för olika andra behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen taggar (d.v.s. taggar för ett visst namnutrymme) som är tillämpliga för det aktuella innehållet.
+Med namnutrymmen kan du gruppera saker. Det vanligaste användningsfallet är att ha ett namnutrymme per plats (till exempel public kontra internal) eller per större program (till exempel Sites eller Assets), men namnutrymmen kan användas för olika andra behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen taggar (d.v.s. taggar för ett visst namnutrymme) som är tillämpliga för det aktuella innehållet.
 
 Taggens namnutrymme är den första nivån i taxonomiunderträdet, som är noden direkt under [taxonomirotnod.](#taxonomy-root-node) Ett namnutrymme är en nod av typen `cq:Tag` vars överordnade inte är en `cq:Tag` nodtyp.
 

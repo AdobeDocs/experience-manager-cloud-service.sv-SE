@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 3455
 thumbnail: 28969.jpg
 exl-id: 06417775-1a0b-4487-86f3-83f2fe12458e,8c611756-5719-488d-a519-a12c5c90c614
-source-git-commit: f5e465d90477f1b49e4ff1c5ca9dd47cc5d539bb
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Den här funktionen fungerar endast för butiker som är baserade på CIF (t.ex. Venia).
+> Den här funktionen fungerar bara för butiker som baseras på CIF (till exempel Venia).
 
 [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) ger innehållsförfattare möjlighet att skapa ytterligare kategori- och produktsidor. Dessa sidor kan berikas med ytterligare marknadsföringsmaterial och konfigureras för specifika kategorier och produkter. I följande videofilm visas hur du konfigurerar den här funktionen.
 

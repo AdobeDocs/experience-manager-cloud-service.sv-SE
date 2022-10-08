@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Utvecklingsriktlinjer för AEM as a Cloud Service
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 1f249b413c9e3f76771fe85d7ecda67cec1386fb
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2444'
+source-wordcount: '2445'
 ht-degree: 2%
 
 ---
@@ -206,7 +206,7 @@ Avsnitten nedan beskriver hur du begär, konfigurerar och skickar e-post.
 
 ### Aktivera utgående e-post {#enabling-outbound-email}
 
-Portar som används för att skicka e-post är som standard inaktiverade. Om du vill aktivera en port konfigurerar du [avancerat nätverk](/help/security/configuring-advanced-networking.md)och se till att för varje nödvändig miljö ställa in `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunktens regler för portvidarebefordran, som mappar den avsedda porten (t.ex. 465 eller 587) till en proxyport.
+Portar som används för att skicka e-post är som standard inaktiverade. Om du vill aktivera en port konfigurerar du [avancerat nätverk](/help/security/configuring-advanced-networking.md)och se till att för varje nödvändig miljö ställa in `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunktens regler för portvidarebefordran, som mappar den avsedda porten (till exempel 465 eller 587) till en proxyport.
 
 Vi rekommenderar att du konfigurerar avancerade nätverk med `kind` parametern inställd på `flexiblePortEgress` eftersom Adobe kan optimera prestandan för flexibel trafik i hamnutgångar. Om en unik IP-adress för utgångar krävs väljer du en `kind` parameter för `dedicatedEgressIp`. Om du redan har konfigurerat VPN av andra skäl kan du även använda den unika IP-adressen som den avancerade nätverksvarianten ger.
 

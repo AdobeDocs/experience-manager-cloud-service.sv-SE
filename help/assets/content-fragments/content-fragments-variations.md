@@ -2,9 +2,9 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: d720d403cab4e51dd89a58aae5b4e29ca9da7f1c
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2288'
 ht-degree: 11%
 
 ---
@@ -305,7 +305,7 @@ De läggs till i fragmentets styckesekvens utan formatering. formatering kan gö
 
 >[!CAUTION]
 Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
-Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
+Formatering av resursen (till exempel storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
 
 >[!NOTE]
 Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
@@ -341,7 +341,7 @@ Det här alternativet är tillgängligt när **Flerradstext** är konfigurerad m
 
 >[!CAUTION]
 Dessa resurser kan inte flyttas eller tas bort på en referenssida. Detta måste göras i fragmentredigeraren.
-Formatering av resursen (t.ex. storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
+Formatering av resursen (till exempel storlek) måste dock göras i [sidredigerare](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Representationen av resursen i fragmentredigeraren är endast till för att skapa innehållsflödet.
 
 >[!NOTE]
 Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.

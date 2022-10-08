@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna som sammanställts av 
 feature: Language Copy
 role: Admin
 exl-id: 51b98c24-5566-4088-9010-bd39841a1633
-source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---

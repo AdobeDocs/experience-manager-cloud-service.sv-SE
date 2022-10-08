@@ -4,10 +4,10 @@ description: Validera och felsöka med Dispatcher Tools (äldre)
 feature: Dispatcher
 hidefromtoc: true
 exl-id: dc04d035-f002-42ef-9c2e-77602910c2ec
-source-git-commit: 377a577616d7e804c7dfe9e9c68fed15350bdb4f
+source-git-commit: 58f36799f65988eddf0c82dc10b0e62621be5a7c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2345'
+ht-degree: 1%
 
 ---
 
@@ -271,11 +271,11 @@ Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera din e
 | `/rules` | `../cache/rules.any` |
 | `/virtualhosts` | `../virtualhosts/virtualhosts.any` |
 
-Du kan också inkludera **standardversionen** av de filerna, vars namn börjar med ordet `default_`, t.ex. `../filters/default_filters.any`.
+Du kan även inkludera **standard** version av dessa filer, vars namn föregås av ordet `default_`, till exempel `../filters/default_filters.any`.
 
 **include-sats på (..), utanför känd plats: ...**
 
-Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda `$include` -programsats, t.ex. följande skulle generera detta fel:
+Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda `$include` följande skulle till exempel generera detta fel:
 
 ```
 /invalidate {
@@ -290,7 +290,7 @@ Det här felet genereras när du inte anger något inkluderingsalternativ för `
 
 **filtret får inte använda glob-mönster för att tillåta förfrågningar**
 
-Det är inte säkert att tillåta begäranden med `/glob` formatregel, som matchas mot den fullständiga raden i begäran, t.ex.
+Det är inte säkert att tillåta begäranden med `/glob` formatregel, som matchas mot den fullständiga förfrågningsraden, till exempel
 
 ```
 /0100 {

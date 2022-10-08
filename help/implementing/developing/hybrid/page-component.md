@@ -2,9 +2,9 @@
 title: SPA
 description: I en SPA tillhandahåller inte sidkomponenten elementen HTML i de underordnade komponenterna, utan delegerar i stället detta till det SPA ramverket. Det här dokumentet förklarar hur det gör sidkomponenten i ett SPA unik.
 exl-id: 41b56a60-ebb8-499d-a0ab-a2e920f26227
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Meta-resursegenskaperna som beskriver SPA innehåll:
 
 ## Metaegenskaper {#meta-properties}
 
-* `cq:wcmmode`: Redigerarnas WCM-läge (t.ex. sida, mall)
+* `cq:wcmmode`: Redigerarnas WCM-läge (till exempel sida, mall)
 * `cq:pagemodel_root_url`: URL för appens rotmodell. Viktigt vid direkt åtkomst till en underordnad sida eftersom den underordnade sidmodellen är ett fragment av appens rotmodell. The `PageModelManager` disponerar sedan systematiskt om den inledande programmodellen när den anger programmet från dess rotstartpunkt.
 * `cq:pagemodel_router`: Aktivera eller inaktivera [`ModelRouter`](routing.md) i `PageModelManager` bibliotek
 * `cq:pagemodel_route_filters`: Kommaseparerad lista eller reguljära uttryck som tillhandahåller vägar i [`ModelRouter`](routing.md) måste ignorera.

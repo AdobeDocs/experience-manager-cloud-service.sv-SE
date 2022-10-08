@@ -2,9 +2,9 @@
 title: Introduktion till sandlådeprogram
 description: Lär dig vilka sandlådeprogram som skiljer sig från produktionsprogram.
 exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
-source-git-commit: 05cba12cdd14c2e29f6a471047ce95fcf720abc4
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Anpassade domäner och IP-tillåtelselista är inte tillgängliga i sandlådepro
 
 ### Inget avancerat nätverk {#advanced-networking}
 
-[Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (t.ex. självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar osv.) är inte tillgängliga i sandlådeprogram.
+[Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (till exempel självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar osv.) är inte tillgängliga i sandlådeprogram.
 
 ### Manuella AEM {#updates}
 

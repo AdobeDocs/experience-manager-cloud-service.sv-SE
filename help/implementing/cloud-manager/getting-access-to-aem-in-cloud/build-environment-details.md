@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: 0e1fbef77cb42dd8bb280bb971dc0643019901a3
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
@@ -220,7 +220,7 @@ Vissa byggen kräver att ytterligare systempaket installeras för att fungera he
         </profile>
 ```
 
-Samma teknik kan användas för att installera språkspecifika paket, t.ex. med `gem` för RubyGems eller `pip` för Python Packages.
+Samma teknik kan användas för att installera språkspecifika paket, till exempel med `gem` för RubyGems eller `pip` för Python Packages.
 
 >[!NOTE]
 >

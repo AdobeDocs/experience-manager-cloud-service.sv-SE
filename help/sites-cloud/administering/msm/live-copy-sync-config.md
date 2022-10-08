@@ -4,9 +4,9 @@ description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy oc
 feature: Multi Site Manager
 role: Admin
 exl-id: 0c97652c-edac-436e-9b5b-58000bccf534
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2337'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ If the installed rollout configuration actions do not meet your requirements, yo
 | Aktivera vid aktivering av utkast | Publicerar Live-kopian när källan publiceras | Vid aktivering | `targetActivate` |
 | Inaktivera vid inaktivering av utkast | Inaktiverar Live-kopian när källan inaktiveras | Vid inaktivering | `targetDeactivate` |
 | Skjut vid ändring | Flyttar innehållet till Live-kopian när källan ändras<br>Använd den här utrullningskonfigurationen sparsamt när den använder utlösaren Vid ändring. | Vid ändring | `contentUpdate`<br>`contentCopy`<br>`contentDelete`<br>`referencesUpdate`<br>`orderChildren` |
-| Skjut på ändring (grund) | Flyttar innehåll till Live Copy när ritningssidan ändras, utan att uppdatera referenser (t.ex. för ytliga kopior)<br>Använd den här utrullningskonfigurationen sparsamt när den använder utlösaren Vid ändring. | Vid ändring | `contentUpdate`<br>`contentCopy`<br>`contentDelete`<br>`orderChildren` |
+| Skjut på ändring (grund) | Flyttar innehåll till Live Copy när sidan med utkast ändras, utan att referenser uppdateras (t.ex. för ytliga kopior)<br>Använd den här utrullningskonfigurationen sparsamt när den använder utlösaren Vid ändring. | Vid ändring | `contentUpdate`<br>`contentCopy`<br>`contentDelete`<br>`orderChildren` |
 | Promote Launch | Standardutrullningskonfiguration för att marknadsföra startsidor. | Vid utrullning | `contentUpdate`<br>`contentCopy`<br>`contentDelete`<br>`referencesUpdate`<br>`orderChildren`<br>`markLiveRelationship` |
 
 ### Synkroniseringsåtgärder {#synchronization-actions}

@@ -2,9 +2,9 @@
 title: Kortkommandon för sidredigering
 description: Det finns olika kortkommandon i hela AEM, bland annat för sidredigering
 exl-id: 6c501897-48f9-478a-b143-d3ad19643b8c
-source-git-commit: 7c9a8765c1d193a880ad4352f20660249effa881
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '238'
 ht-degree: 2%
 
 ---

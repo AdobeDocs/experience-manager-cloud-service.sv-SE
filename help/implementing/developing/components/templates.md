@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '3296'
+source-wordcount: '3297'
 ht-degree: 0%
 
 ---
@@ -188,7 +188,7 @@ Om du vill skapa en ny mapp kan du göra det här:
    * Typ: `String`
    * Värde: Den rubrik (för mappen) som du vill ska visas i **Mallar** konsol.
 
-1. Förutom de vanliga redigeringsbehörigheterna och -behörigheterna (t.ex. `content-authors`) måste du nu tilldela grupper och definiera de åtkomstbehörigheter som krävs för att författarna ska kunna skapa mallar i den nya mappen.
+1. Förutom de vanliga redigeringsbehörigheterna och -behörigheterna (till exempel `content-authors`) måste du nu tilldela grupper och definiera de åtkomstbehörigheter som krävs för att författarna ska kunna skapa mallar i den nya mappen.
 
    The `template-authors` grupp är standardgruppen som måste tilldelas. Se avsnittet [Behörighetslistor och grupper](#acls-and-groups) för mer information.
 

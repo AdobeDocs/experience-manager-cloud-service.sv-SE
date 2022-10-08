@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: 13885fbb3ed35c43ccfff03d47e4dc3ced2bc327
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '14053'
+source-wordcount: '14061'
 ht-degree: 5%
 
 ---
@@ -436,7 +436,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna 1.3.2](https://www.w3.or
 
 Designers fokuserar ofta på visuella designfunktioner som färg, form, textstil eller innehållets absoluta eller relativa position när de presenterar information. Dessa kan vara mycket kraftfulla designtekniker för att förmedla information (och kan förbättra den övergripande tillgängligheten för synskadade med behov av kognitiv hjälpmedel), men personer med nedsatt syn eller blindhet kanske inte har tillgång till information som kräver visuell identifiering av attribut som position, färg eller form.
 
-På samma sätt kommer information som kräver att man skiljer mellan olika ljud (t.ex. manligt eller kvinnligt talt innehåll) att medföra tillgänglighetshinder för personer med nedsatt hörsel, om den inte återspeglas i något textalternativ för ljudinnehållet.
+På samma sätt kommer information som kräver att man skiljer mellan olika ljud (till exempel manligt eller kvinnligt tal) att medföra tillgänglighetshinder för personer med nedsatt hörsel, om den inte återspeglas i något textalternativ för ljudinnehållet.
 
 >[!NOTE]
 >
@@ -447,7 +447,7 @@ På samma sätt kommer information som kräver att man skiljer mellan olika ljud
 Se till att all information som bygger på visuella egenskaper för sidinnehåll också presenteras i ett alternativt format.
 
 * Förlita dig inte på visuell position för att ge information. Om du till exempel vill hänvisa användare till en meny till höger på sidan för att få tillgång till mer information, ska du inte hänvisa till *menyn till höger*; I stället ger du menyn ett namn (t.ex. via en rubrik) och refererar till namnet i texten.
-* Förlita dig inte på att textformat (t.ex. fet eller kursiv text) är det enda sättet att förmedla information.
+* Förlita dig inte på att textformatering (till exempel fet eller kursiv text) är det enda sättet att förmedla information.
 
 >[!NOTE]
 >
@@ -488,7 +488,7 @@ Kontrollera att det finns information om färgen, oavsett var den används för 
 
 Kontrollera till exempel att information som anges av färg också finns explicit i texten.
 
-Om färg används som en referenspunkt för att ge information bör du ange ytterligare en visuell referenspunkt, som att ändra formatet (t.ex. fet, kursiv) eller teckensnitt. Detta hjälper personer med nedsatt syn eller som har nedsatt färgseende att identifiera informationen. Den kan dock inte användas helt eftersom den inte hjälper personer som inte kan se sidan alls. Därför är det (ibland) användbart att tillhandahålla dold text eller att använda programmatiska lösningar som [ARIA-paket (Accessible Rich Internet Applications) med webbstandarder](https://www.w3.org/WAI/standards-guidelines/aria/), för att förmedla denna information till icke-synkade användare.
+Om färg används som en referenspunkt för att ge information bör du ange ytterligare en visuell referenspunkt, som att ändra formatet (till exempel fet, kursiv) eller teckensnitt. Detta hjälper personer med nedsatt syn eller som har nedsatt färgseende att identifiera informationen. Den kan dock inte användas helt eftersom den inte hjälper personer som inte kan se sidan alls. Därför är det (ibland) användbart att tillhandahålla dold text eller att använda programmatiska lösningar som [ARIA-paket (Accessible Rich Internet Applications) med webbstandarder](https://www.w3.org/WAI/standards-guidelines/aria/), för att förmedla denna information till icke-synkade användare.
 
 #### Mer information - Färganvändning (1.4.1) {#more-information-use-of-color}
 
@@ -1063,7 +1063,7 @@ Syftet med detta kriterium är att säkerställa att funktionaliteten är förut
 * nya fönster öppnas när en komponent får fokus,
 * fokus ändras till en annan komponent när den komponenten får fokus,
 
-Fokus kan flyttas till en kontroll antingen via tangentbordet (t.ex. genom att Tabb till en kontroll) eller med musen (t.ex. genom att klicka på ett textfält). Om du flyttar musen över en kontroll flyttas inte fokus om inte skriptet implementerar det här beteendet. Observera att för vissa typer av kontroller kan det även vara möjligt att aktivera kontrollen genom att klicka på en kontroll (t.ex. knapp), som i sin tur kan starta en ändring i sammanhanget.
+Fokus kan flyttas till en kontroll antingen via tangentbordet (t.ex. genom att tabba till en kontroll) eller med musen (t.ex. genom att klicka på ett textfält). Om du flyttar musen över en kontroll flyttas inte fokus om inte skriptet implementerar det här beteendet. Observera att för vissa typer av kontroller kan det även vara bra att klicka på en kontroll (till exempel knapp), som i sin tur kan aktivera en ändring i sammanhanget.
 
 #### Så här möts du - i fokus (3.2.1) {#how-to-meet-on-focus}
 

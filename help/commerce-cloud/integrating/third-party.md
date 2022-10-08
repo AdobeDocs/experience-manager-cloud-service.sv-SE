@@ -3,9 +3,9 @@ title: AEM och tredjeparts Commerce Integration med Commerce Integration Framewo
 description: Företag kan behöva ytterligare e-handelslösningar från tredje part för att göra sin butik tillgänglig. Commerce Integration Framework (CIF) kan användas i sådana integreringsscenarier för att ansluta en tredjepartslösning för e-handel till Adobe Experience Manager med hjälp av I/O Runtime.
 thumbnail: cif-third-party-architecture.jpg
 exl-id: 3ebdb8eb-65ba-46be-aca3-6c06c8d1600c,42dd8922-540d-4a93-9e45-b5e83dc11e16
-source-git-commit: a53ef07cd9da636c8d938c711de6defb9eb8e05f
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Vi rekommenderar att du använder [Adobe I/O Runtime](https://www.adobe.io/apis/
 
 The [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference) är en bra startpunkt för att bygga integreringen i e-handelslösningen. Även om det har stöd för GraphQL kan det även integreras med andra typer av API som REST.
 
-Det här integreringslagret är inte nödvändigt om ett lager från tredje part är tillgängligt (t.ex. Mulesoft) eller om integreringen byggs ovanpå tredjepartslösningen.
+Det här integreringslagret är inte nödvändigt om ett lager från tredje part är tillgängligt (till exempel Mulesoft) eller om integreringen byggs ovanpå en lösning från tredje part.
 
 ## Fördefinierade anslutningar {#connectors}
 

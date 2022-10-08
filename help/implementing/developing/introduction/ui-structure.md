@@ -2,9 +2,9 @@
 title: Struktur för AEM
 description: Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement
 exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '916'
 ht-degree: 0%
 
 ---
@@ -158,7 +158,7 @@ Lagerväljaren är tillgänglig som en listruta från verktygsfältet (längst u
 
 ### Komponentverktygsfältet {#component-toolbar}
 
-Varje instans av en komponent visar verktygsfältet när användaren klickar på det (antingen en gång eller med ett långsamt dubbelklick). Verktygsfältet innehåller de specifika åtgärder (t.ex. kopiera, klistra in, öppna redigeringsprogram) som är tillgängliga för komponentinstansen på sidan.
+Varje instans av en komponent visar verktygsfältet när användaren klickar på det (antingen en gång eller med ett långsamt dubbelklick). Verktygsfältet innehåller de specifika åtgärder (till exempel kopiera, klistra in, öppna redigerare) som är tillgängliga för komponentinstansen på sidan.
 
 Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygsfält i det övre, eller nedre, högra hörnet av respektive komponent.
 

@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 5a804895013e19592f918341bbc7921261b26945
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1812'
 ht-degree: 5%
 
 ---
@@ -32,7 +32,7 @@ Du kan stöta på olika termer om publicering när du arbetar med Adobe Experien
    * Dessa termer är synonyma med publicera/avpublicera.
    * Dessa termer användes i tidigare versioner av AEM.
 * **Replikering/replikering**
-   * Detta är de tekniska termer som beskriver hur data flyttas (t.ex. sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan när du publicerar en sida.
+   * Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan när du publicerar en sida.
    * Dessa termer används främst av utvecklare.
 
 ## Publicera sidor {#publishing-pages-1}

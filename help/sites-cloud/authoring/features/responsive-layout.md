@@ -2,9 +2,9 @@
 title: Responsiv layout
 description: AEM gör att du kan förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '1765'
+source-wordcount: '1766'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter 
 Layoutbehållaren:
 
 * Tillhandahåller vågrät fäst mot rutnät, tillsammans med möjligheten att placera komponenter i rutnätet sida vid sida och definiera när de ska komprimeras/omformas.
-* Använder fördefinierade brytpunkter (t.ex. för telefon, surfplatta osv.) så att du kan definiera vad som krävs för innehåll för relaterade enheter/orientering.
+* Använder fördefinierade brytpunkter (t.ex. för telefon, surfplatta) så att du kan definiera vad som krävs för innehåll för relaterade enheter/orientering.
    * Du kan till exempel anpassa komponentstorleken eller om komponenten kan visas på särskilda enheter.
 * Kan kapslas så att kolumnkontroll tillåts.
 

@@ -4,9 +4,9 @@ description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering
 role: Admin
 exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '3584'
+source-wordcount: '3585'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Innehållspaket som skapas för AEM as a Cloud Service program måste ha en ren 
 
 >[!NOTE]
 >
->Paket kan bara innehålla innehåll. Alla funktioner (t.ex. innehåll som lagras under `/apps`) måste vara [distribueras med hjälp av CI/CD-pipeline i Cloud Manager.](/help/implementing/cloud-manager/deploy-code.md)
+>Paket kan bara innehålla innehåll. Alla funktioner (till exempel innehåll som lagras under `/apps`) måste vara [distribueras med hjälp av CI/CD-pipeline i Cloud Manager.](/help/implementing/cloud-manager/deploy-code.md)
 
 >[!IMPORTANT]
 >

@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: f5e465d90477f1b49e4ff1c5ca9dd47cc5d539bb
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2043'
 ht-degree: 3%
 
 ---
@@ -51,9 +51,9 @@ När det gäller [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-g
 
 * `{{page}}` ersätts med `/content/venia/us/en/products/product-page`
 * `{{sku}}` ersätts med produktens sku, t.ex. `VP09`
-* `{{url_key}}` ersätts av produktens `url_key` egenskap, t.ex. `lenora-crochet-shorts`
-* `{{url_path}}` ersätts av produktens `url_path`, t.ex. `venia-bottoms/venia-pants/lenora-crochet-shorts`
-* `{{variant_sku}}` ersätts med den aktuella varianten, t.ex. `VP09-KH-S`
+* `{{url_key}}` ersätts av produktens `url_key` egenskap, till exempel `lenora-crochet-shorts`
+* `{{url_path}}` ersätts av produktens `url_path`, till exempel `venia-bottoms/venia-pants/lenora-crochet-shorts`
+* `{{variant_sku}}` ersätts med den markerade varianten, till exempel `VP09-KH-S`
 
 Sedan `url_path` eftersom de fördefinierade produkt-URL-formaten är inaktuella används en produkts `url_rewrites` och välja den med de flesta bansegment som alternativ om `url_path` är inte tillgängligt.
 
@@ -61,7 +61,7 @@ Med exempeldata ovan ser en produktvariant-URL som är formaterad med standardfo
 
 ### URL-format för kategorisida {#product-list}
 
-Detta konfigurerar URL:erna för kategori- eller produktlistsidorna och stöder följande alternativ:
+Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder följande alternativ:
 
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`

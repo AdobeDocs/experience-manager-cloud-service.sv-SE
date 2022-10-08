@@ -2,9 +2,9 @@
 title: Predikatreferens för Query Builder
 description: Predikatreferens för Query Builder API.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
-source-git-commit: c08e442e58a4ff36e89a213aa7b297b538ae3bab
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2221'
 ht-degree: 1%
 
 ---
@@ -265,7 +265,7 @@ Det har stöd för facetextrahering och innehåller bucket för varje unikt egen
    * `equals` för exakt matchning (standard)
    * `unequals` för jämförelser av olikhet
    * `like` för att använda `jcr:like` xpath-funktion (valfri)
-   * `not` för ingen matchning (t.ex. `not(@prop)` in xpath, value param will be ignore)
+   * `not` för ingen matchning (till exempel `not(@prop)` in xpath, value param will be ignore)
    * `exists` för existenskontroll
       * `true` egenskapen måste finnas
       * `false` är samma som `not` och är standard
@@ -275,7 +275,7 @@ Det har stöd för facetextrahering och innehåller bucket för varje unikt egen
 
 Detta predikat matchar en JCR-egenskap mot ett intervall. Detta gäller egenskaper med linjär typ som `LONG`, `DOUBLE` och `DECIMAL`. För `DATE` se [`daterange`](#daterange) som har optimerade indata för datumformat.
 
-Du kan definiera en nedre gräns, en övre gräns eller båda. Operationen (t.ex. mindre än eller lika med) kan också anges individuellt för nedre och övre gräns.
+Du kan definiera en nedre gräns, en övre gräns eller båda. Åtgärden (t.ex. mindre än eller lika med) kan också anges separat för den nedre och övre gränsen.
 
 Det stöder inte facetextrahering.
 
@@ -370,7 +370,7 @@ Det stöder inte facetextrahering.
 
 * **`tagsearch`** - nyckelord att söka efter i taggtitlar
 * **`property`** - egenskap (eller relativ sökväg till egenskap) som ska övervägas (standard) `cq:tags`)
-* **`lang`** - om du bara vill söka i en viss lokaliserad taggtitel (t.ex. `de`)
+* **`lang`** - om du bara vill söka i en viss lokaliserad taggtitel (till exempel `de`)
 * **`all`** - booleskt värde om du vill söka efter hela taggens fulltext, dvs. alla titlar, beskrivning osv. (har företräde framför `lang`)
 
 ### type {#type}

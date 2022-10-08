@@ -2,9 +2,9 @@
 title: Dataskydd och dataintegritet - Adobe Experience Manager as a Cloud Service beredskap
 description: Läs mer om Adobe Experience Manager as a Cloud Service stöd för de olika dataskydds- och dataintegritetsreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
 exl-id: 5dfa353b-84c5-4b07-bfcd-b03c2d361553
-source-git-commit: e9c1ec6807f86ab00f89ef292a89a0c8efdf802b
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
@@ -91,7 +91,7 @@ Se [AEM Sites beredskap för dataskydd och dataintegritet.](/help/compliance/dat
 
 ## Adobe Experience Manager as a Cloud Service-integrering med Adobe Target och Adobe Analytics {#aem-integration-with-adobe-target-adobe-analytics}
 
-Dessa Adobe Experience Manager as a Cloud Service-integreringar är anpassade för dataskydd och sekretess (t.ex. GDPR). Inga personuppgifter från Adobe Target eller Adobe Analytics lagras i AEM för integreringarna.
+Dessa Adobe Experience Manager as a Cloud Service-integreringar är anpassade för dataskydd och sekretess (till exempel GDPR). Inga personuppgifter från Adobe Target eller Adobe Analytics lagras i AEM för integreringarna.
 Mer information finns i:
 
 * [Adobe Target - sekretessöversikt](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/privacy.html)

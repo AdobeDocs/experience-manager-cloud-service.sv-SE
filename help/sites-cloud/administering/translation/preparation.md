@@ -4,7 +4,7 @@ description: Lär dig hur du förbereder innehåll för översättning.
 feature: Language Copy
 role: Admin
 exl-id: afc577a2-2791-481a-ac77-468011e4302e
-source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Om du vill skapa språkroten skapar du en sida och använder en ISO-språkkod so
 * `<language-code>` - Den språkkod som stöds är en kod med två bokstäver som definieras av ISO-639-1, till exempel `en`.
 * `<language-code>_<country-code>` eller `<language-code>-<country-code>` - Den landskod som stöds är en kod med två bokstäver i gemener eller versaler enligt ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
 
-Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen.  Rotsidan för den franska språkkopian av WKND-webbplatsen har `fr` som **Namn** -egenskap. Observera att **Namn** används som namn på sidnoden i databasen och därför bestäms sidans sökväg (`http://<host>:<4502>/content/wknd/language-masters/fr.html`).
+Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen. Rotsidan för den franska språkkopian av WKND-webbplatsen har `fr` som **Namn** -egenskap. Observera att **Namn** används som namn på sidnoden i databasen och därför bestäms sidans sökväg (`http://<host>:<4502>/content/wknd/language-masters/fr.html`).
 
 1. Navigera till webbplatser.
 1. Klicka på eller tryck på den webbplats där du vill skapa en språkkopia.

@@ -4,9 +4,9 @@ description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as
 feature: Content Fragments
 role: User
 exl-id: d12b1dda-85ce-4665-b8b1-915b74231bb8
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: d720d403cab4e51dd89a58aae5b4e29ca9da7f1c
 workflow-type: tm+mt
-source-wordcount: '2107'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -63,8 +63,8 @@ Om du vill ha hjälp med det här kan du förhandsvisa [Strukturträd](/help/sit
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som
 
-* Fysisk kanal. t.ex. dator, mobil.
-* Leveranssätt i fysisk kanal. t.ex.&quot;produktinformationssida&quot;,&quot;produktkategorisida&quot; för datorer eller&quot;mobilwebben&quot;,&quot;mobilapp&quot; för mobiler.
+* Fysisk kanal. till exempel dator, mobil.
+* Leveranssätt i fysisk kanal. till exempel&quot;produktinformationssida&quot;,&quot;produktkategorisida&quot; för datorer eller&quot;mobilwebben&quot;,&quot;mobilapp&quot; för mobiler.
 
 Men du vill (förmodligen) inte använda exakt samma innehåll för alla kanaler - du måste optimera innehållet utifrån den specifika kanalen.
 

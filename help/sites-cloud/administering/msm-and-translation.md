@@ -4,9 +4,9 @@ description: Lär dig hur du återanvänder innehåll i hela projektet och hante
 feature: Administering
 role: Admin
 exl-id: a3d48884-081e-44f8-8055-ee3657757bfd
-source-git-commit: 04054e04d24b5dde093ed3f14ca5987aa11f5b0e
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Vanligtvis skapar du en överordnad webbplats på ett språk och för ett visst 
 >
 >Begränsa användningen av Multi Site Manager till innehåll på ett språk.
 >
->Använd t.ex. den engelska överordnad för att skapa den engelska versionen av sidor för USA, Kanada, Storbritannien osv. och använder den franska överordnad för att skapa den franska versionen av sidor för Frankrike, Schweiz, Kanada osv.
+>Använd till exempel den engelska överordnad för att skapa den engelska versionen av sidor för USA, Kanada, Storbritannien osv. och använder den franska överordnad för att skapa den franska versionen av sidor för Frankrike, Schweiz, Kanada osv.
 
 I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/element som berörs):
 

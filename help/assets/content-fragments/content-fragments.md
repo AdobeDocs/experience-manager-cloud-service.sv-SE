@@ -2,9 +2,9 @@
 title: Arbeta med innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: d720d403cab4e51dd89a58aae5b4e29ca9da7f1c
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '2075'
 ht-degree: 3%
 
 ---
@@ -60,8 +60,8 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som
 
-* Fysisk kanal. t.ex. dator, mobil.
-* Leveranssätt i fysisk kanal. t.ex.&quot;produktinformationssida&quot;,&quot;produktkategorisida&quot; för datorer eller&quot;mobilwebben&quot;,&quot;mobilapp&quot; för mobiler.
+* Fysisk kanal. till exempel dator, mobil.
+* Leveranssätt i fysisk kanal. till exempel&quot;produktinformationssida&quot;,&quot;produktkategorisida&quot; för datorer eller&quot;mobilwebben&quot;,&quot;mobilapp&quot; för mobiler.
 
 Men du vill (förmodligen) inte använda exakt samma innehåll för alla kanaler - du måste optimera innehållet utifrån den specifika kanalen.
 

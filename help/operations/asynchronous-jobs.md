@@ -2,10 +2,10 @@
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestandan genom att asynkront slutföra vissa resurskrävande uppgifter.
 exl-id: 9c5c4604-1290-4dea-a14d-08f3ab3ef829
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 100%
+source-wordcount: '795'
+ht-degree: 97%
 
 ---
 
@@ -101,7 +101,7 @@ Om antalet resurser eller mappar som ska tas bort överstiger gränsvärdet utf�
 
    ![Gränsvärde för borttagning av resurser](assets/async-delete-threshold.png)
 
-1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Exempel: lyckades eller misslyckades.
+1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. till exempel om det lyckades, misslyckades.
 1. Spara ändringarna.
 
 ### Konfigurera asynkrona åtgärder för att flytta resurser {#configuring-asynchronous-move-operations}
@@ -114,7 +114,7 @@ Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsv�
 
    ![Gränsvärde för resursflyttning](assets/async-move-threshold.png)
 
-1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Exempel: lyckades eller misslyckades.
+1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Till exempel misslyckades.
 1. Spara ändringarna.
 
 ### Konfigurera asynkrona åtgärder för att flytta sidor {#configuring-asynchronous-page-move-operations}
@@ -127,14 +127,14 @@ Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet ut
 
    ![Tröskelvärde för att flytta sidor](assets/async-page-move.png)
 
-1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Exempel: lyckades eller misslyckades.
+1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Till exempel misslyckades.
 1. Spara ändringarna.
 
 ### Konfigurera asynkrona MSM-åtgärder {#configuring-asynchronous-msm-operations}
 
 1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i Global Navigation.
 1. Öppna **[!UICONTROL Async Page Move Operation Job Processing Configuration.]** via webbkonsolen
-1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Exempel: lyckades eller misslyckades.
+1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Till exempel misslyckades.
 
    ![MSM-konfiguration](assets/async-msm.png)
 

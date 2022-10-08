@@ -2,9 +2,9 @@
 title: Skapa och ordna sidor
 description: Skapa och ordna sidor med AEM
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: 93e0eac6e329c7a0c54cf592b097014d39a8eb17
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2561'
 ht-degree: 5%
 
 ---
@@ -90,7 +90,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >När du definierar ett sidnamn är en bra tumregel att hålla sidnamnet så kort, men så uttrycksfullt och minnesvärt som möjligt så att det blir lätt att förstå för läsaren. Se [Stödlinje för W3C-format](https://www.w3.org/Provider/Style/TITLE.html) för `title` för mer information.
 >
->Tänk också på att vissa webbläsare (t.ex. äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
+>Tänk också på att vissa webbläsare (till exempel äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
 AEM skapar en ny sida [validera sidnamnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) AEM och JCR.
 

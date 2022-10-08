@@ -2,9 +2,9 @@
 title: AEM Technical Foundations
 description: En översikt över den tekniska grunden för AEM, inklusive hur AEM är strukturerad och grundläggande tekniker som JCR, Sling och OSGi.
 exl-id: ab6e7fe9-a25d-4351-a005-f4466cc0f40e
-source-git-commit: 08559417c8047c592f2db54321afe68836b75bd1
+source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
 workflow-type: tm+mt
-source-wordcount: '2186'
+source-wordcount: '2191'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ I följande diagram förklaras alla dolda, men kraftfulla, frågeparametrar som 
 Sling är *innehållscentrerad*. Detta innebär att bearbetningen är inriktad på innehållet eftersom varje HTTP-begäran mappas till innehåll i form av en JCR-resurs (en databasnod):
 
 * Det första målet är den resurs (JCR-nod) som innehåller innehållet
-* För det andra finns representationen, eller skriptet, från resursegenskaperna i kombination med vissa delar av begäran (t.ex. väljare och/eller tillägg)
+* För det andra finns representationen, eller skriptet, från resursegenskaperna i kombination med vissa delar av begäran (till exempel väljare och/eller tillägg)
 
 ### RESTful Sling {#restful-sling}
 
@@ -123,8 +123,8 @@ Med Sling anger du vilket skript som ska återge en viss enhet (genom att ange `
 
 Begäran har delats upp och nödvändig information har extraherats. Databasen genomsöks efter den begärda resursen (innehållsnod):
 
-* First Sling kontrollerar om det finns en nod på den plats som anges i begäran. t.ex. `../content/corporate/jobs/developer.html`
-* Om ingen nod hittas tas tillägget bort och sökningen upprepas. t.ex. `../content/corporate/jobs/developer`
+* First Sling kontrollerar om det finns en nod på den plats som anges i begäran. till exempel `../content/corporate/jobs/developer.html`
+* Om ingen nod hittas tas tillägget bort och sökningen upprepas. till exempel `../content/corporate/jobs/developer`
 * Om ingen nod hittas returnerar Sling http-koden 404 (Hittades inte).
 
 Med Sling kan även andra saker än JCR-noder vara resurser, men det här är en avancerad funktion.
@@ -146,7 +146,7 @@ Alla Sling-skript lagras i undermappar till båda `/apps` (mutable, user scripts
 
 Några andra punkter att notera är:
 
-* När metoden (GET, POST) krävs, specificeras den med versaler enligt HTTP-specifikationen, t.ex. `jobs.POST.esp`
+* När metoden (GET, POST) krävs, specificeras den med versaler enligt till exempel HTTP-specifikationen, `jobs.POST.esp`
 * Olika skriptmotorer stöds, men de vanliga, rekommenderade skripten är HTML och JavaScript.
 
 Listan över skriptmotorer som stöds av den angivna AEM finns på Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
