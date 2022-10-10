@@ -2,12 +2,13 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 51933d1ed509117f1ed0488900807b74f55ef46b
 workflow-type: tm+mt
-source-wordcount: '2566'
+source-wordcount: '2568'
 ht-degree: 0%
 
 ---
+
 
 # Använda bibliotek på klientsidan på AEM as a Cloud Service {#using-client-side-libraries}
 
@@ -55,7 +56,7 @@ En biblioteksmapp på klientsidan är en databasnod av typen `cq:ClientLibraryFo
 
 Varje `cq:ClientLibraryFolder` innehåller en uppsättning JS- och/eller CSS-filer, tillsammans med några stödfiler (se nedan). Viktiga egenskaper för `cq:ClientLibraryFolder` är konfigurerade enligt följande:
 
-* `allowProxy`: Eftersom alla klientlibs måste lagras under `apps`, tillåter den här egenskapen åtkomst till klientbibliotek via proxyservrar. Se [Hitta en klientbiblioteksmapp och använda servern för proxyklientbibliotek](#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) nedan.
+* `allowProxy`: Eftersom alla klientlibs måste lagras under `apps`, tillåter den här egenskapen åtkomst till klientbibliotek via proxyservrar. Se avsnittet [Hitta en klientbiblioteksmapp och använda servern för proxyklientbibliotek](#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) nedan.
 * `categories`: Identifierar de kategorier i vilka uppsättningen JS- och/eller CSS-filer i den här `cq:ClientLibraryFolder` höst. The `categories` eftersom en biblioteksmapp är flervärdesdel kan den ingå i mer än en kategori (se nedan hur detta kan vara användbart).
 
 Om klientbiblioteksmappen innehåller en eller flera källfiler som sammanfogas till en enda JS- och/eller CSS-fil vid körning. Den genererade filens namn är nodnamnet med antingen `.js` eller `.css` filnamnstillägg. Biblioteksnoden med namnet `cq.jquery` resultat i den genererade filen med namnet `cq.jquery.js` eller `cq.jquery.css`.
@@ -87,7 +88,7 @@ I ordning för klientbiblioteken under `/apps` För att vara tillgänglig använ
    * Typ: Boolean
    * Värde: `true`
 1. Om du behöver hantera statiska resurser skapar du en undermapp med namnet `resources` nedanför klientbiblioteksmappen.
-   * Om du lagrar statiska resurser under mappen `resources`kan de inte refereras till i en publiceringsinstans.
+   * Om du lagrar statiska resurser var som helst utom under mappen `resources`kan de inte refereras till i en publiceringsinstans.
 1. Lägg till källfiler i biblioteksmappen.
    * Detta görs vanligtvis i den inledande byggprocessen för [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)
    * Du kan ordna källfiler i undermappar om du vill.
@@ -211,7 +212,7 @@ Inbäddning av kod är användbart för att ge åtkomst till bibliotek som lagra
 
 #### Appspecifika klientbiblioteksmappar {#app-specific-client-library-folders}
 
-Det är en god vana att behålla alla programrelaterade filer i programmappen under /apps. Det är också en god vana att neka åtkomst för webbplatsbesökare till mappen /apps. Om du vill följa båda de bästa metoderna skapar du en klientbiblioteksmapp under mappen /etc som bäddar in klientbiblioteket som finns under /apps.
+Det är en god vana att behålla alla programrelaterade filer i programmappen nedan `/apps`. Det är också en god vana att neka åtkomst för webbplatsbesökare till `/apps` mapp. Skapa en klientbiblioteksmapp under `/etc` mapp som bäddar in klientbiblioteket som finns under `/apps`.
 
 Använd egenskapen categories för att identifiera klientbiblioteksmappen som ska bäddas in. Om du vill bädda in biblioteket lägger du till en egenskap i inbäddningen `cq:ClientLibraryFolder` nod, med följande egenskapsattribut:
 
