@@ -6,10 +6,10 @@ mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: 01d54ba56ccab372396829a012c4da8ef4a57fe2
 workflow-type: tm+mt
-source-wordcount: '3651'
-ht-degree: 15%
+source-wordcount: '3685'
+ht-degree: 14%
 
 ---
 
@@ -66,7 +66,9 @@ De olika roller som är involverade i konfigureringen och funktionen och deras m
 
 ### Arkitektur för anslutna resurser {#connected-assets-architecture}
 
-Med Experience Manager kan du ansluta en fjärrdistribution av DAM som en källa till flera Experience Manager [!DNL Sites] distributioner. Du kan ansluta högst fyra [!DNL Sites] distributioner till en fjärr-DAM. Du kan dock ansluta en [!DNL Sites] driftsättning med endast en fjärrdistribution av DAM.
+Med Experience Manager kan du ansluta en fjärrdistribution av DAM som en källa till flera Experience Manager [!DNL Sites] distributioner. Du kan dock ansluta en [!DNL Sites] driftsättning med endast en fjärrdistribution av DAM.
+
+Utvärdera det optimala antalet Sites-instanser som ska anslutas till en fjärr-DAM-distribution. Adobe rekommenderar att du stegvis ansluter platsinstanser till distributionen och testar att det inte finns någon prestandapåverkan på fjärr-DAM, eftersom varje ansluten platsinstans bidrar till datatrafiken på fjärr-DAM.
 
 Följande diagram visar vilka scenarier som stöds:
 
@@ -261,9 +263,9 @@ Konfigurera bara funktionen för anslutna resurser när du behöver använda res
 
 +++
 
-+++**Hur många [!DNL Sites] kan du ansluta till en fjärr-DAM-distribution efter att ha konfigurerat anslutna resurser?**
++++**Kan ansluta flera [!DNL Sites] distributioner till en fjärr-DAM-distribution efter konfigurering av anslutna resurser?**
 
-Du kan ansluta högst fyra [!DNL Sites] distributioner till en fjärr-DAM-distribution efter konfigurering av anslutna resurser. Mer information finns i [Arkitektur för anslutna resurser](#connected-assets-architecture).
+Ja, du kan ansluta flera [!DNL Sites] distributioner till en fjärr-DAM-distribution efter konfigurering av anslutna resurser. Mer information finns i [Arkitektur för anslutna resurser](#connected-assets-architecture).
 
 +++
 
