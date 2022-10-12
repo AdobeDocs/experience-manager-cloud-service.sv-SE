@@ -10,9 +10,9 @@ role: Architect, Developer
 level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
-source-git-commit: 4d8bb08b8791dcc576f1566f480519594ed2e9d4
+source-git-commit: 2ebe9ddccd0b657b8aaeaf005c0ecb5b16079dee
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '2010'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 The [Commerce Integration Framework (CIF)](https://github.com/adobe/aem-core-cif-components) grundkomponenterna ger smidig integration med [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-overview.html?lang=en) att vidarebefordra butikshändelser och deras data från interaktioner på klientsidan, som __lägg till i kundvagn__.
 
-The [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) project innehåller ett JavaScript-bibliotek som kallas [Experience Platform Connector](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för att samla in händelsedata från din Commerce Store. Dessa händelsedata skickas till Experience Platform där de används i andra Adobe Experience Cloud-produkter, som Adobe Analytics och Adobe Target, för att skapa en helhetsprofil som täcker en kundresa. Genom att ansluta Commerce-data till andra produkter i Adobe Experience Cloud kan ni utföra uppgifter som att analysera användarbeteende på er webbplats, utföra AB-tester och skapa personaliserade kampanjer.
+The [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) project innehåller ett JavaScript-bibliotek som kallas [Adobe Experience Platform Connector for Adobe Commerce](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för att samla in händelsedata från din Commerce Store. Dessa händelsedata skickas till Experience Platform där de används i andra Adobe Experience Cloud-produkter, som Adobe Analytics och Adobe Target, för att skapa en helhetsprofil som täcker en kundresa. Genom att ansluta Commerce-data till andra produkter i Adobe Experience Cloud kan ni utföra uppgifter som att analysera användarbeteende på er webbplats, utföra AB-tester och skapa personaliserade kampanjer.
 
 Läs mer om [Experience Platform datainsamling](https://experienceleague.adobe.com/docs/experience-platform/collection/home.html) en serie teknologier som gör att ni kan samla in kundupplevelsedata från källor på kundsidan.
 
