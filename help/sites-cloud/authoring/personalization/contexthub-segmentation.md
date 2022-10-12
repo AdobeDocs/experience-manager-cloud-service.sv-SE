@@ -2,9 +2,9 @@
 title: Konfigurera segmentering med ContextHub
 description: Lär dig hur du konfigurerar segmentering med ContextHub.
 exl-id: fbc38611-dbee-426e-b823-df64b6730c45
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 43f0c3611f63b3e1ea9085d828d5daab7b361a8e
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1697'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ AEM gör att ni enkelt kan personalisera användarnas upplevelser. Du kan även 
 
 The [Målgrupper](audiences.md) Console används för att hantera segment för ContextHub samt målgrupper för ditt Adobe Target-konto. I den här dokumentationen beskrivs hur du hanterar segment för ContextHub.
 
-Om du vill komma åt dina segment väljer du **Navigering > Personalisering > Publiker**.
+Om du vill komma åt dina segment väljer du **Navigering > Personalisering > Publiker**. Välj din konfiguration (till exempel WKND-plats) för att visa dina segment:
 
 ![Hantera målgrupper](../assets/contexthub-segmentation-audiences.png)
 
@@ -86,7 +86,7 @@ Följande referenser är tillgängliga när du vill länka direkt till ett skrip
 
 Så här definierar du det nya segmentet:
 
-1. Efter [komma åt segment](#accessing-segments), [navigera till mappen](#organizing-segments) där du vill skapa segmentet eller lämna det i roten.
+1. Efter [komma åt segment](#accessing-segments), [navigera till mappen](#organizing-segments) där du vill skapa segmentet.
 
 1. Tryck eller klicka på **Skapa** och markera **Skapa ContextHub-segment**.
 
