@@ -2,10 +2,10 @@
 title: Introduktion till anpassade domännamn
 description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
-source-git-commit: cc1b0d653706150c616ceafd002dc7594b6c7072
+source-git-commit: fe08925c86a82a600eabd5a7d4ad6e38b3e76dfe
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 2%
+source-wordcount: '606'
+ht-degree: 1%
 
 ---
 
@@ -44,6 +44,10 @@ Det finns ett antal begränsningar för hur du använder anpassade domännamn me
 * Det går inte att lägga till domännamn i miljöer när det finns en aktuell pågående pipeline som är kopplad till dessa miljöer.
 * Det går bara att lägga till ett domännamn åt gången.
 * Samma domännamn kan inte användas i mer än en miljö.
+
+>[!NOTE]
+>
+>Anpassade domäner stöds i Cloud Manager **endast** om du använder det AEM hanterade CDN. Om du har ett eget CDN och [peka på det AEM hanterade CDN](/help/implementing/dispatcher/cdn.md) du måste använda det specifika CDN för att hantera domäner, inte Cloud Manager.
 
 ## Arbetsflöde {#workflow}
 

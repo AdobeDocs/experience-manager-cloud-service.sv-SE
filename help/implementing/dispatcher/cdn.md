@@ -3,9 +3,9 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: 95dfcdbc434e4c65bbcae84d6cb45ecd1601f14a
+source-git-commit: fe08925c86a82a600eabd5a7d4ad6e38b3e76dfe
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1163'
 ht-degree: 7%
 
 ---
@@ -29,6 +29,10 @@ Följ avsnitten nedan om du vill använda självbetjäningsgränssnittet för Cl
 
 1. [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
 1. [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
+
+>[!NOTE]
+>
+>Anpassade domäner stöds i Cloud Manager **endast** om du använder det AEM hanterade CDN. Om du har ett eget CDN och [peka på det AEM hanterade CDN](/help/implementing/dispatcher/cdn.md) du måste använda det specifika CDN för att hantera domäner, inte Cloud Manager.
 
 **Begränsa trafik**
 
@@ -54,10 +58,6 @@ Om en kund måste använda sitt befintliga CDN kan de hantera det och peka det m
 * Kunden måste kunna konfigurera CDN så att det fungerar med AEM as a Cloud Service - se konfigurationsinstruktionerna nedan.
 * Kunden måste ha tekniska CDN-experter som är i drift om det uppstår problem.
 * Kunden måste utföra och klara ett lasttest innan han/hon kan börja producera.
-
->[!NOTE]
->
->CDN för Adobe är inte valfritt. Kunder som har ett eget CDN måste peka det mot det AEM hanterade CDN.
 
 Konfigurationsinstruktioner:
 
@@ -88,7 +88,9 @@ I Windows:
 curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com --header "X-Forwarded-Host: example.com" --header "X-AEM-Edge-Key: <PROVIDED_EDGE_KEY>"
 ```
 
-Observera att när du använder ditt eget CDN behöver du inte installera domänerna och certifikaten i Cloud Manager. Cirkulationen i Adobe CDN görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
+>[!NOTE]
+>
+>När du använder ditt eget CDN behöver du inte installera domänerna och certifikaten i Cloud Manager. Cirkulationen i CDN i Adobe görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 
 >[!NOTE]
 >
