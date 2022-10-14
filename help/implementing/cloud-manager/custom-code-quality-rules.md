@@ -1,8 +1,8 @@
 ---
 title: Anpassade regler för kodkvalitet
-description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av [kodkvalitetstestning. De bygger på god praxis från AEM Engineering.
+description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från AEM Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
+source-git-commit: d7509556e4ae7a377498f2de2bae57f3557522ac
 workflow-type: tm+mt
 source-wordcount: '3493'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 >title="Anpassade regler för kodkvalitet"
 >abstract="Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från AEM Engineering."
 
-Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av [kodkvalitetstestning.](/help/implementing/cloud-manager/code-quality-testing.md) De bygger på god praxis från AEM Engineering.
+Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av [kodkvalitetstestning](/help/implementing/cloud-manager/code-quality-testing.md). De bygger på god praxis från AEM Engineering.
 
 >[!NOTE]
 >
