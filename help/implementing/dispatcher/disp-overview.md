@@ -3,9 +3,9 @@ title: Dispatcher i molnet
 description: Dispatcher i molnet
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
-source-git-commit: 90a49312d4609c2de992a93926a329bf50861801
+source-git-commit: 69cb9b9015ed3a7acdcc42c7e25fb45b479a7f4e
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '998'
 ht-degree: 1%
 
 ---
@@ -56,6 +56,19 @@ Dispatcher-verktygen används för att validera och felsöka projektets Dispatch
 
 Mer information om hur du migrerar från den äldre konfigurationsmodellen till den mer flexibla, finns i AEM 28 och framåt. [den här dokumentationen](/help/implementing/dispatcher/validation-debug.md#migrating).
 
+## Disposition av innehåll {#content-disposition}
+
+För publiceringsskiktet är standardinställningen för att visa blober som en bifogad fil. Detta kan åsidosättas med hjälp av standarden [dispositionshuvud för innehåll](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) i dispatchern.
+
+Nedan visas ett exempel på hur konfigurationen ska se ut:
+
+```
+<LocationMatch "^\/content\/dam.*\.(pdf).*">
+ Header unset Content-Disposition
+ Header set Content-Disposition inline
+</LocationMatch>
+```
+
 ## Apache-moduler som stöds {#supported-directives}
 
 Tabellen nedan visar vilka cachemoduler som stöds:
@@ -89,7 +102,7 @@ Tabellen nedan visar vilka cachemoduler som stöds:
 | `mod_macro` | [https://httpd.apache.org/docs/2.4/mod/mod_macro.html](https://httpd.apache.org/docs/2.4/mod/mod_macro.html) |
 
 
-Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för framtida införande. Kunderna hittar listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens tillåtelselista-kommando i SDK:n.
+Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för framtida införande. Kunder kan hitta listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens tillåtslista-kommando i SDK:n.
 
 De direktiv som är tillåtna i Apache-konfigurationsfiler kan listas genom att köra validerarens tillåtelselista-kommando:
 
