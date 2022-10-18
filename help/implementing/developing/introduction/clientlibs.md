@@ -2,9 +2,9 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: 51933d1ed509117f1ed0488900807b74f55ef46b
+source-git-commit: b93ec12616742910e35a3dac4224b690cd2c7116
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2567'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ När klientbiblioteksmappen är [konfigurerad efter behov,](#creating-clientlib-
 
 The `allowProxy` kan du begära:
 
-* Klientlib via j`/etc.clientlibs/myprojects/clientlibs/foo.js`
+* Klientlib via `/etc.clientlibs/myprojects/clientlibs/foo.js`
 * Den statiska bilden via `/etc.clientlibs/myprojects/clientlibs/foo/resources/icon.png`
 
 ### Läser in klientbibliotek via HTML {#loading-via-htl}
