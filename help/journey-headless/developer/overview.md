@@ -1,11 +1,11 @@
 ---
 title: AEM Headless Developer Journey
-description: Lär dig utveckla projekt för headless content delivery med Adobe Experience Manager (AEM) som Headless CMS. Lär dig hur du använder funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API för att skapa headless-upplevelser.
+description: Läs om headless-utveckling med Adobe Experience Manager (AEM) som Headless CMS. Lär dig hur du använder funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API för att leverera headless-innehåll.
 landing-page-description: Få en förståelse för innehållsleverans och implementering utan problem. Läs mer om hur ni utvecklar er strategi inom ert företag.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: 2d0856b7370b6b50935378ad26c7361e95820f4d
+source-git-commit: 8932a8f158fe478d23457ac24afdd17f05a048f5
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1268'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Den här guiden leder dig igenom de mest rubrikfria implementeringsämnena i AEM
 
 [En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar att man löser problem med headless business case med AEM, [AEM Headless Journeys](/help/journey-documentation/documentation-journeys.md) var du ska börja.
 
