@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service on Unified Shell
 description: AEM as a Cloud Service on Unified Shell
 exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
-source-git-commit: c3b72395504b9e32178182d0a79db804d19fbcf3
+source-git-commit: 51ecb21bf479cfaacb01a9c99c88d7f112f6ff95
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '370'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Fördelarna med detta är:
 * Smidig växling mellan företag eller övergång till ett annat program
 * Bättre produkthjälp
 * Knapp för enkel feedback i produkten för att rapportera problem eller utbyta idéer med Adobe
-* Tillgång till globala produktmeddelanden och meddelanden utöver meddelanden som är specifika AEM as a Cloud Service
+* Tillgång till globala produktmeddelanden och meddelanden utöver meddelanden som är specifika för AEM as a Cloud Service
 
 ## Inaktiverar enhetligt gränssnitt {#disabling-unified-shell}
 
@@ -49,7 +49,7 @@ AEM as a Cloud Service har ett enhetligt skal aktiverat. Om den övre rubriken h
 
    ![bild](/help/overview/assets/unifiedshell3.png)
 
-## Ändra till mörkt tema {#chaning-to-dark-theme}
+## Ändra till mörkt tema {#changing-to-dark-theme}
 
 Om du vill ändra till det mörka temat klickar du på din profilikon. Då visas ett popup-fönster enligt nedan. Du kan använda växlingsknappen för att växla till ett mörkt tema för det enhetliga skalet.
 
