@@ -2,9 +2,9 @@
 title: Innehållsåterställning i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
 exl-id: 469fb1a1-7426-4379-9fe3-f5b0ebf64d74
-source-git-commit: e816bd55b8b5febb19566f3d6009e6f5e823b22e
+source-git-commit: 564be5a7bcbcab95b1bbf824b01f80e018aae2a2
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
@@ -36,12 +36,14 @@ Det finns två typer av säkerhetskopior i Cloud Manager som du kan återställa
 * **PIT (Point In Time):** Den här typen återställer från kontinuerlig systemsäkerhetskopiering de senaste 24 timmarna från den aktuella tiden.
 * **Förra veckan:** Den här typen återställer från systemsäkerhetskopieringar de senaste sju dagarna, exklusive de senaste 24 timmarna.
 
-I båda fallen ändras inte versionen av den anpassade koden och AEM.
+I båda fallen ändras inte versionen av den anpassade koden och den AEM versionen.
 
 Prestandamätningarna för att återställa innehåll i AEM som en ContentService refererar till de standardiserade prestandatesterna:
 
 * **Mål för återställningstid (RTO):** Målet för återställningstiden varierar beroende på databasens storlek, men som tumregel bör det ta ca 30 minuter när återställningssekvensen börjar.
-* **Återställningspunktens mål (RPO):** Målet för återställningspunkten är högst 24 timmar
+* **Återställningspunktens mål (RPO):** Målet för återställningspunkten beror på hur länge instansen har körts:
+   * under de första 24 timmarna av verksamhet: en tidpunkt under dessa 24 timmar.
+   * efter de första 24 timmarna: högst 12 timmar för de föregående sex dagarna.
 
 >[!TIP]
 >
@@ -112,7 +114,7 @@ När återställningen har slutförts kommer miljön att:
 
 ## Välja rätt säkerhetskopia {#choosing-backup}
 
-Återställer endast innehåll som ska AEM. Av den anledningen måste du noggrant överväga kodändringar som gjorts mellan den önskade återställningspunkten och den aktuella tidpunkten genom att granska implementeringshistoriken mellan det aktuella implementerings-ID:t och det som återställs.
+Återställer endast innehåll som ska AEM. Därför måste du noga överväga kodändringar som gjorts mellan den önskade återställningspunkten och den aktuella tidpunkten genom att granska implementeringshistoriken mellan det aktuella implementerings-ID:t och det som återställs.
 
 Det finns flera scenarier.
 
