@@ -2,9 +2,9 @@
 title: Innehållsåterställning i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
 exl-id: 469fb1a1-7426-4379-9fe3-f5b0ebf64d74
-source-git-commit: 564be5a7bcbcab95b1bbf824b01f80e018aae2a2
+source-git-commit: a32b8d94be8119854e21fc89456474ac554082a3
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1262'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ I båda fallen ändras inte versionen av den anpassade koden och den AEM version
 Prestandamätningarna för att återställa innehåll i AEM som en ContentService refererar till de standardiserade prestandatesterna:
 
 * **Mål för återställningstid (RTO):** Målet för återställningstiden varierar beroende på databasens storlek, men som tumregel bör det ta ca 30 minuter när återställningssekvensen börjar.
-* **Återställningspunktens mål (RPO):** Målet för återställningspunkten beror på hur länge instansen har körts:
+* **Återställningspunktens mål (RPO):** Målet för återställningspunkten beror på hur långt den valda återställningstiden har passerat:
    * under de första 24 timmarna av verksamhet: en tidpunkt under dessa 24 timmar.
    * efter de första 24 timmarna: högst 12 timmar för de föregående sex dagarna.
 
