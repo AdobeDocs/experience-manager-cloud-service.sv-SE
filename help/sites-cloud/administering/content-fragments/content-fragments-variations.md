@@ -4,9 +4,9 @@ description: Förstå hur variationer gör att du kan skapa innehåll för fragm
 feature: Content Fragments
 role: User
 exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
-source-git-commit: 14395cf97b23896e929e215e7e0b9e33620637eb
+source-git-commit: d52372e69af2800703e20f36407a9b381db6264e
 workflow-type: tm+mt
-source-wordcount: '2308'
+source-wordcount: '2310'
 ht-degree: 11%
 
 ---
@@ -372,7 +372,7 @@ Det finns olika metoder att lägga till [bilder](/help/sites-cloud/administering
 
 [!CONTEXTUALHELP]
 id="aemcloud_sites_contentfragments_variations"
-title="Hantera variationer"
+title="Variationer – redigera innehållsfragment"
 abstract="Lär dig hur du skapar variationer av innehåll som ska användas med specifika kanaler."
 additional-url="https://video.tv.adobe.com/v/333295" text="Variationer för innehållsfragment"
 
