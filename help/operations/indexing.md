@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: ac7e4f7d7b771c392d8f67bd0751dfeede970a5f
+source-git-commit: 82f959a8a4f02486c1b3431b40534cdb95853dd6
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2289'
 ht-degree: 1%
 
 ---
@@ -34,11 +34,6 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 1. På en hög nivå på AEM as a Cloud Service, med införandet av [Blå-grön distributionsmodell](#index-management-using-blue-green-deployments) två uppsättningar index kommer att finnas: en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
 
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
-
-1. Begränsningar:
-* För närvarande stöds indexhantering på AEM as a Cloud Service bara för index av typen `lucene`.
-* Endast standardanalysatorer stöds (dvs. de som levereras tillsammans med produkten). Anpassade analysatorer stöds inte.
-* Internt kan andra index konfigureras och användas för frågor. Till exempel frågor som skrivs mot `damAssetLucene` index kan på Skyline faktiskt köras mot en Elasticsearch-version av detta index. Skillnaden är vanligtvis inte synlig för programmet och användaren, men vissa verktyg som `explain` funktionen rapporterar ett annat index. Skillnader mellan Lucene-index och Elastic Index finns i [den elastiska dokumentationen i Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/elastic.html). Kunderna behöver inte, och kan inte, konfigurera Elasticsearch-index direkt.
 
 ## Användning {#how-to-use}
 
@@ -221,7 +216,11 @@ När Adobe ändrar ett index som inte finns med i kartongen som &quot;damAssetLu
 
 ### Aktuella begränsningar {#current-limitations}
 
-Indexhantering stöds för närvarande bara för index av typen `lucene`. Internt kan andra index konfigureras och användas för frågor, till exempel elastiska index.
+Indexhantering stöds för närvarande bara för index av typen `lucene`, med `compatVersion` ange till `2`. Internt kan andra index konfigureras och användas för frågor, till exempel Elasticsearch-index. Frågor som skrivs mot `damAssetLucene` på AEM as a Cloud Service kan indexet faktiskt köras mot en Elasticsearch-version av detta index. Skillnaden är osynlig för programslutanvändaren, men vissa verktyg, som `explain` funktionen rapporterar ett annat index. Skillnader mellan indexen Lucene och Elasticsearch finns i [Elasticsearch dokumentation i Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/elastic.html). Kunder kan inte och behöver inte konfigurera Elasticsearch-index direkt.
+
+Endast inbyggda analysatorer stöds (dvs. de som levereras tillsammans med produkten). Anpassade analysatorer stöds inte.
+
+För bästa prestanda bör index inte vara alltför stora. Den totala storleken på alla index kan användas som vägledning: Om detta ökar med mer än 100 % efter att anpassade index har lagts till och standardindex har justerats i en utvecklingsmiljö, bör anpassade indexdefinitioner justeras. AEM as a Cloud Service kan förhindra användning av index som skulle påverka systemets stabilitet och prestanda negativt.
 
 ### Lägga till ett index {#adding-an-index}
 
