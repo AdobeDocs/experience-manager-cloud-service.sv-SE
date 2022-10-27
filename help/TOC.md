@@ -8,7 +8,7 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 4d8bb08b8791dcc576f1566f480519594ed2e9d4
+source-git-commit: 2e0aef129333eb99933bc0adfc8a753069bd656f
 workflow-type: tm+mt
 source-wordcount: '3731'
 ht-degree: 22%
@@ -478,11 +478,11 @@ ht-degree: 22%
       + [DHTML-visningsprogram - slutdatum](/help/assets/dynamic-media/dhtml-viewer-endoflifefaqs.md)
    + Integrering med Adobe Workfront {#integrations}
       + [Integrering med [!DNL Adobe Workfront]](/help/assets/workfront-integrations.md)
+      + [Konfigurera metadatamappning för resurser](/help/assets/configure-asset-metadata-mapping.md)
       + [Installera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-install.md)
       + [Ta bort externa beroenden för befintliga installationer](/help/assets/remove-external-dependencies.md)
       + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
       + [Uppdatera [!DNL Workfront for Experience Manager enhanced connector]](/help/assets/update-workfront-enhanced-connector.md)
-      + [Konfigurera metadatamappning för resurser](/help/assets/configure-asset-metadata-mapping.md)
 + Forms {#forms}
    + [Introduktion](/help/forms/home.md)
    + [Viktiga funktioner](/help/forms/key-features.md)
