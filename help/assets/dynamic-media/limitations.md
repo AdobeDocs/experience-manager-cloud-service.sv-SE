@@ -1,16 +1,16 @@
 ---
 title: Dynamic Media begränsningar
-description: Lär dig mer om de effektivaste strategierna och de tvingande gränserna när du skapar en bilduppsättning eller en snurruppsättning, eller överför en PDF. Läs också om webbläsarkombinationer och operativsystemkombinationer som inte stöds för Dynamic Media Viewer.
+description: Lär dig mer om de effektivaste strategierna och de tvingande gränserna när du skapar en bilduppsättning eller en snurruppsättning, eller överför en PDF. Läs också om webbläsarkombinationer och operativsystemkombinationer som inte stöds för Dynamic Media.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/Dynamic-Media-Classic
 geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
-feature: Dynamic Media Classic,Asset Management,Viewers,Image Sets,Spin Sets,eCatalog
+feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: fb63e2d4-2c8c-48dd-a0dc-fdfbbfb57b30
-source-git-commit: 479349d2dad841a782519de3302993ea2a9f5162
+source-git-commit: e669fc821402f84fae58f457d5d9d1680c39ffaf
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '278'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ I följande avsnitt beskrivs begränsningar i Dynamic Media.
 Det här avsnittet innehåller följande avsnitt:
 
 * [Dynamic Media bästa praxis och tvingande begränsningar för tillgångstyper](#best-practice-enforced-limits)
-* [Webbläsare- och operativsystemskombinationer som inte stöds för Dynamic Media Viewer](#unsupported-browser-os)
+* [Webbläsare och operativsystem som inte stöds för Dynamic Media](#unsupported-browser-os)
 
 ## Dynamic Media bästa praxis och tvingande begränsningar för tillgångstyper {#best-practice-enforced-limits}
 
@@ -38,9 +38,9 @@ När du skapar en snurra uppsättning eller en bilduppsättning, eller överför
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
-## Webbläsare- och operativsystemskombinationer som inte stöds för Dynamic Media Viewer {#unsupported-browser-os}
+## Webbläsare och operativsystem som inte stöds för Dynamic Media {#unsupported-browser-os}
 
-Dynamic Media Viewer stöder inte följande kombinationer av webbläsare och operativsystem.
+Dynamic Media stöder inte följande kombinationer av webbläsare och operativsystem.
 
 * Internet Explorer 11 + Windows 7
 * Internet Explorer 11 + Windows 8.1
@@ -56,7 +56,7 @@ Dynamic Media Viewer stöder inte följande kombinationer av webbläsare och ope
 
 <!-- CQDOC-19433 -->
 
-Från och med 30 september 2022 upphör stödet för Dynamic Media-visningsprogram för Adobe att
+Från och med den 30 september 2022 upphör stödet för följande i Adobe Dynamic Media:
 
 * TLS (Transport Layer Security) 1.0 och 1.1
 * Följande svaga lärare i TLS 1.2:
