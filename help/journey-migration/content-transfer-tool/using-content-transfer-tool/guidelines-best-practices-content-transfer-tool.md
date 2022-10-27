@@ -2,10 +2,10 @@
 title: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 description: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: 98b81d918d60722ddb3f1c7736bc5b3506e05f6f
+source-git-commit: c6a27c996458259904b6532c69a1bd33e2f725c6
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 21%
+source-wordcount: '1597'
+ht-degree: 19%
 
 ---
 
@@ -26,13 +26,11 @@ Det finns en ny version av verktyget Innehållsöverföring som integrerar inneh
 * Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsräcken och felhantering
 * Inmatningsloggarna är beständiga och finns alltid tillgängliga för felsökning
 
-Om du vill börja använda den nya versionen (v2.0.10) måste du avinstallera tidigare versioner av verktyget Innehållsöverföring. Detta behövs eftersom den nya versionen innehåller en stor arkitektoniska förändring. Med v2.0.10 måste du skapa nya migreringsuppsättningar och köra extraheringen och inmatningen på nytt för de nya migreringsuppsättningarna. Om en migrering redan pågår kan du fortsätta använda den tidigare versionen av CTT tills migreringen är klar.
+Om du vill börja använda den nya versionen måste du avinstallera tidigare versioner av verktyget Innehållsöverföring. Detta behövs eftersom den nya versionen innehåller en stor arkitektoniska förändring. Med v2.0.10 måste du skapa nya migreringsuppsättningar och köra extraheringen och inmatningen på nytt för de nya migreringsuppsättningarna. Om en migrering redan pågår kan du fortsätta använda den tidigare versionen av CTT tills migreringen är klar.
 
 Följande riktlinjer och bästa praxis gäller för den nya versionen av verktyget Innehållsöverföring:
 
 * Du bör köra [Revision Cleanup](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html) och [databasens konsekvenskontroller](https://helpx.adobe.com/experience-manager/kb/How-to-run-a-datastore-consistency-check-via-oak-run-AEM.html) på **källdatabasen** för att identifiera potentiella problem och minska databasens storlek.
-
-* Om konfigurationen för AEM Cloud Author Content Delivery Network (CDN) har en vitlista över IP-adresser måste du se till att IP-adresserna för källmiljön läggs till i den tillåtna listan så att källmiljön och AEM Cloud-miljön kan kommunicera med varandra.
 
 * I inmatningsfasen rekommenderas att du kör inmatningen med *wipe*-läget aktiverat där den befintliga databasen (Author eller Publish) i AEM Cloud Service-miljön tas bort helt och sedan uppdateras med migreringsuppsättningsdata. Det här läget är mycket snabbare än non-wipe-läget, där migreringsuppsättningen tillämpas ovanpå det aktuella innehållet.
 
@@ -60,11 +58,11 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Om du använder en *Sandlådemiljö*, se till att din miljö är aktuell och uppgraderad till den senaste versionen. Om du använder en *produktionsmiljö* uppdateras den automatiskt.
 
-* Om du vill använda verktyget Innehållsöverföring måste du vara en adminanvändare på källinstansen och tillhöra den lokala AEM **administratörer** i den Cloud Service som du överför innehåll till. Obehöriga användare kan inte starta frågor.
+* För att påbörja ett intag måste du tillhöra den lokala AEM **administratörer** i den Cloud Service som du överför innehåll till. Obehöriga användare kommer inte att kunna starta frågor utan att behöva ange migreringstoken manuellt.
 
 * Om inställningen **Rensa befintligt innehåll i molninstansen före intag** om du aktiverar det här alternativet tas hela den befintliga databasen bort och en ny databas skapas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Användaren måste läggas till på nytt i **administratörer** för att hämta åtkomsttoken för verktyget Innehållsöverföring.
 
-* Verktyget Innehållsöverföring stöder inte sammanfogning av innehåll från flera källor till målkällinstansen om Cloud Servicen från de två källorna flyttas till samma sökvägar på målet. Om du vill flytta innehåll från flera olika källor till en enda instans av målsökvägen måste du se till att det inte finns någon överlappning mellan innehållssökvägarna från Cloud Servicen.
+* Det finns inga funktioner för att sammanfoga innehåll från flera källor till målkällinstansen om Cloud Servicen från de två källorna flyttas till samma sökvägar i målet. Om du vill flytta innehåll från flera olika källor till en enda instans av målsökvägen måste du se till att det inte finns någon överlappning mellan innehållssökvägarna från Cloud Servicen.
 
 * Extraheringsnyckeln gäller i 14 dagar från den tidpunkt den skapades/förnyades. Den kan förnyas när som helst. Om extraheringsnyckeln har gått ut kan du inte utföra en extrahering.
 

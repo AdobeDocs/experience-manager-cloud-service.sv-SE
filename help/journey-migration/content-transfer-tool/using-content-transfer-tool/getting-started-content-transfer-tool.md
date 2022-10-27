@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: 501441717f541439ac8d914f1e419491399e6667
+source-git-commit: c6a27c996458259904b6532c69a1bd33e2f725c6
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1292'
 ht-degree: 6%
 
 ---
@@ -34,16 +34,8 @@ Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Di
 
 Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. För att en extrahering ska kunna köras måste följande slutpunkter vara tillgängliga från den instans som körs AEM:
 
-* Målet AEM den as a Cloud Service miljön: `author-p<program_id>-e<env_id>.adobeaemcloud.com`
 * Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
 * I/O-slutpunkten för användarmappning: `usermanagement.adobe.io`
-
-Om du vill testa anslutningen till AEM as a Cloud Service målmiljön skickar du följande cURL-kommando från skalet för källinstansen (ersätt `program_id`, `environment_id`och `migration_token`):
-
-`curl -i https://author-p<program_id>-e<environment_id>.adobeaemcloud.com/api/migration/migrationSet -H "Authorization: Bearer <migration_token>"`
-
->[!NOTE]
->Om en `HTTP/2 200` har tagits emot har en anslutning till AEM as a Cloud Service upprättats.
 
 ### Aktivera SSL-loggning {#enable-ssl-logging}
 
@@ -111,7 +103,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
 Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Manager måste du installera den senaste versionen av verktyget för innehållsöverföring på din Adobe Experience Manager-källinstans (AEM). Följ det här avsnittet för att lära dig hur du fyller i migreringsuppsättningen.
 
-1. När du har installerat den senaste versionen (v2.0.10) av verktyget Innehållsöverföring på din Adobe Experience Manager-källinstans går du till **Åtgärder - innehållsmigrering**
+1. När du har installerat den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen går du till **Åtgärder - innehållsmigrering**
 
 1. Klicka på **Skapa migreringsuppsättning**
 
