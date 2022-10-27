@@ -2,9 +2,9 @@
 title: Predikatreferens för Query Builder
 description: Predikatreferens för Query Builder API.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 3c7e6d2213e059b1b8a90feea4672a4436873a01
 workflow-type: tm+mt
-source-wordcount: '2221'
+source-wordcount: '2268'
 ht-degree: 1%
 
 ---
@@ -244,10 +244,12 @@ Det stöder inte facetextrahering.
 * **`path`** - Detta definierar banmönstret.
    * Beroende på `exact` egenskapen matchar antingen hela underträdet (som att lägga till `//*` i xpath, men observera att detta inte inkluderar basbanan) eller bara en exakt sökvägsmatchning, som kan innehålla jokertecken (`*`).
       * Standardvärdet är `true`
-   * Om `self`egenskapen är inställd söks hela underträdet inklusive basnoden.
+
+<!---   * If the `self`property is set, the entire subtree including the base node will be searched.--->
 * **`exact`** - if `exact` är `true`måste den exakta sökvägen matcha, men den kan innehålla enkla jokertecken (`*`), som matchar namn, men inte `/`; om det `false` (standard) alla underordnade inkluderas (valfritt)
 * **`flat`** - söker endast efter direkt underordnade (som att lägga till `/*` in xpath) (används endast om `exact` är inte true, valfritt)
-* **`self`** - söker i underträdet men inkluderar basnoden som angetts som sökväg (inga jokertecken)
+* **`self`** - söker i underträdet men inkluderar basnoden som angetts som sökväg (inga jokertecken).
+   * *Viktigt*: Ett problem har identifierats med `self` -egenskapen i den aktuella implementeringen av querybuilder och användningen av den i frågor kanske inte ger rätt sökresultat. Ändra den aktuella implementeringen av `self` Egenskapen är inte heller möjlig eftersom den kan bryta mot befintliga program som förlitar sig på den. På grund av detta `self` egenskapen har tagits bort och du bör undvika att använda den.
 
 ### property {#property}
 
