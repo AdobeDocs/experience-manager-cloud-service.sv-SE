@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 2e0aef129333eb99933bc0adfc8a753069bd656f
+source-git-commit: 733a4e6a4b4d485a36bcc2b9f043bd6295920bb9
 workflow-type: tm+mt
-source-wordcount: '3731'
+source-wordcount: '3725'
 ht-degree: 22%
 
 ---
@@ -280,8 +280,6 @@ ht-degree: 22%
          + [Förstå segmentering](/help/sites-cloud/authoring/personalization/segmentation.md)
          + [Konfigurera segmentering med ContextHub](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
          + [Registrering, inloggning och användarprofil](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md)
-      + Campaign {#campaign}
-         + [Skapa nyhetsbrev med AEM](/help/sites-cloud/authoring/campaign/creating-newsletters.md)
    + Administratör {#administering}
       + Innehållsfragment {#content-fragments}
          + [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
@@ -350,7 +348,7 @@ ht-degree: 22%
       + [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md)
       + [IMS-konfiguration som ska användas vid integrering med Adobe Target](/help/sites-cloud/integrating/integration-adobe-target-ims.md)
       + [Exportera Experience Fragments till Adobe Target](/help/sites-cloud/integrating/experience-fragments-target.md)
-      + [Integrera med Adobe Campaign Classic](/help/sites-cloud/integrating/integrating-campaign-classic.md)
+      + [Integrera med Adobe Campaign](/help/sites-cloud/integrating/campaign.md)
 + Assets {#assets}
    + [[!DNL Assets] som [!DNL Cloud Service]](/help/assets/home.md)
    + [Översikt och nyheter](/help/assets/overview.md)
