@@ -3,7 +3,8 @@ title: Forms as a Cloud Service - frågor och svar
 description: Forms as a Cloud Service - frågor och svar
 contentOwner: khsingh
 exl-id: 0b14b680-7da5-4e0b-bd6a-c379d148f9d7
-source-git-commit: a5cd8a49a74eb8372d1d363ff859e1aef921859b
+index: false
+source-git-commit: 6355a6241c5b53585b80b2c2bc00556297766b49
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -92,4 +93,34 @@ Forms Portal, [!DNL AEM Forms] app, integrering med Adobe Analytics och integrer
 
 * **Jag har designat en [JSON-schema för att skapa ett anpassat formulär](adaptive-form-json-schema-form-model.md). JSON-schemat definierar händelser för vissa komponenter i adaptiva formulär. Stöder AEM Forms as a Cloud Service event?**
 Skapa det adaptiva formuläret baserat på JSON-schemat i Forms-miljön Experience Manager 6.5 och använd [Migreringsverktyg](migrate-to-forms-as-a-cloud-service.md) för att migrera sådana adaptiva Forms till AEM Forms as a Cloud Service. Verktyget konverterar sådana händelser till klientbibliotek och du kan fortsätta använda Adaptive Forms med händelser i en Cloud Service-miljö.
+
+<!-- 
+
+* **Is there any AEM Forms as a Cloud Service connector for Microsoft Power Automate?**
+
+  Yes, Adobe provides an Adobe Experience Manager connector to access [Adobe Experience Manager Forms - Communication capabilities](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications-introduction.html) through Microsoft Power Automate. You can create a PDF document that is based on a form design and XML form data or create PostScript (PS), Printer Command Language (PCL), Zebra Printing Language (ZPL) and other Printer Definition Language documents. 
+
+  You can get started with Adobe Experience Manager easily with just a few steps:
+
+  1. Generate the Service credentials: Use Adobe Experience Manager Developer Console to [generate](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?#generate-service-credentials) the service credentials.  
+  
+  1. Setup your connection: Add your service credentials to the Adobe Experience Manager Connector. You can get crdential from service credential JSON and copy these credential details to your one-time connection setup:
+
+    * AEM Server
+    * Organization ID 
+    * Client ID
+    * Client Secret
+    * Technical Account ID
+    * Meta Scopes
+    * Private Key - base64 encoded keys are accepted
+    * Adobe IMS Host URL
+
+    <br> 
+    
+    ![Use your Service Credential JSON for credential details](assets/forms-aem-pa-connector-connection.png)
+
+    A sample Service Credential JSON file fields mapped to Adobe Experience Manager connector for Microsoft Power Automate.
+
+    -->
+
 
