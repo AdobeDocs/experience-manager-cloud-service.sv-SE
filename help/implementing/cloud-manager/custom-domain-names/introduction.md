@@ -2,9 +2,9 @@
 title: Introduktion till anpassade domännamn
 description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
-source-git-commit: fe08925c86a82a600eabd5a7d4ad6e38b3e76dfe
+source-git-commit: d22d657361ea6c4885babd76e6b4c10f88378994
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '665'
 ht-degree: 1%
 
 ---
@@ -64,3 +64,7 @@ Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Ma
 | 5 | Kontrollera DNS-poststatus | Kund | [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
 | 5a | Om DNS-poststatus misslyckas med `DNS status not detected` | Kund | [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
 | 5b | Om DNS-poststatus misslyckas med `DNS resolves incorrectly` | Kund | [Kontrollerar DNS-poststatus](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
+
+>[!TIP]
+>
+>Att konfigurera anpassade domännamn med AEM som en molntjänst är vanligtvis en enkel process. Det kan dock ibland uppstå domändelegeringsproblem som kan ta 1-2 arbetsdagar att lösa. Därför rekommenderar vi att du installerar domänerna långt innan de publiceras. Se dokumentet [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) för mer information.
