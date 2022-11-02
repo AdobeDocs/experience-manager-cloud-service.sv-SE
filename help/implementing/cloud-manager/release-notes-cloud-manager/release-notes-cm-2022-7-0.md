@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2022.7.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2022.7.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: c19e4efb-69d6-4915-9e63-c47cd91e941b
-source-git-commit: 1ec1b3f58f7614140d584d3bc7fc113527d6511d
+source-git-commit: e05c2fa2cfb035ed363e2c80d4aac33b022bd435
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '173'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,6 @@ Releasedatum för Cloud Manager version 2022.7.0 i AEM as a Cloud Service är 8 
 ## Nyheter {#what-is-new}
 
 * Användare av Cloud Manager har nu tillgång till användbara videokurser från **Välkommen** på landningssidan när som helst.
-* Kraften på **[Återställ innehåll](/help/operations/backup.md)** på sidan med miljöinformation visas nu en praktisk lista med Git-kommandon som gör att användaren kan visa ändringar lokalt.
 
 ## Felkorrigeringar {#bug-fixes}
 

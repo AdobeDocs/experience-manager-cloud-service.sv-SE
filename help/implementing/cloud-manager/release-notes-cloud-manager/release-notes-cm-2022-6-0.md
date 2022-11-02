@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2022.6.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2022.6.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 0a348836-74cd-4fd4-aef4-6ffbd6483c24
-source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
+source-git-commit: e05c2fa2cfb035ed363e2c80d4aac33b022bd435
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,6 @@ Releasedatum för Cloud Manager version 2022.6.0 i AEM as a Cloud Service är 9 
 
 ## Nyheter {#what-is-new}
 
-* Molnhanterarens gränssnitt tillåter nu [självbetjäning för innehållsåterställning](/help/operations/backup.md) till ett välkänt tillstånd i AEM molnmiljö.
-   * Den här funktionen kommer att introduceras stegvis under de veckor som följer efter version 2022.06.0.
 * Ett nytt välkomstkort på Cloud Managers landningssida ger användarna snabb tillgång till självstudiekurser och förloppsstatistik för klientorganisationen.
    * Den här funktionen kommer att introduceras stegvis under veckan efter version 2022.06.0.
 * Användare med nödvändig behörighet kan komma åt en ny [Licenspanelen](/help/implementing/cloud-manager/license-dashboard.md) på landningssidan för Cloud Manager för att visa information om berättiganden som är tillgängliga för klientorganisationen.
