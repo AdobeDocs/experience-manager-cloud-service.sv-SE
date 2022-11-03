@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 733a4e6a4b4d485a36bcc2b9f043bd6295920bb9
+source-git-commit: 435d42e750f868970bed8f6b3f30a2762c5ce395
 workflow-type: tm+mt
-source-wordcount: '3725'
+source-wordcount: '3728'
 ht-degree: 22%
 
 ---
@@ -68,6 +68,7 @@ ht-degree: 22%
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md)
       + 2022 {#2022}
+         + [Versionsinformation för 2022.10.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-10-0.md)
          + [Versionsinformation för 2022.9.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-9-0.md)
          + [Versionsinformation för 2022.8.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-8-0.md)
          + [Versionsinformation för 2022.7.0](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-2022-7-0.md)

@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2022.10.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2022.10.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2022.11.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2022.11.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: a873b23f7dac8742820300ef154b94a72e4b8a23
+source-git-commit: b0d57f0ccfb80c8071026a53cab594cfced13497
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 0%
+source-wordcount: '191'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2022.10.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2022.11.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-Den här sidan dokumenterar versionsinformationen för Cloud Manager 2022.10.0 i AEM as a Cloud Service.
+Den här sidan dokumenterar versionsinformationen för Cloud Manager 2022.11.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,15 +21,14 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager 2022.10.0 i
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2022.9.0 i AEM as a Cloud Service är 6 oktober 2022. Nästa version är planerad till den 3 november 2022.
+Releasedatum för Cloud Manager version 2022.11.0 i AEM as a Cloud Service är 3 november 2022. Nästa version är planerad till den 29 november 2022.
 
 ## Nyheter {#what-is-new}
 
-* Versionen av [AEM projekttyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som används av Cloud Manager har uppdaterats till version 39.
-* Användargränssnittet för kontrollpanelen för licenser kommer nu att informera användare om ett platsprogram har konfigurerats med ett CDN AEM as a Cloud Service.
+* På kontrollpanelen för licenser för AEM Sites-lösningen visas nu avtalsinformation, inklusive om klientorganisationen ingår i prenumerationen eller inte.
+* När en miljö som är associerad med en pipeline har en status som inte tillåter att pipeline körs, inaktiveras körningsåtgärden med ett förklarande verktygstips.
+* Ett förbättrat meddelande skickades till användargränssnittet när **Lägg till program** har inaktiverats på grund av otillräckliga berättiganden för innehavaren.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* En situation har korrigerats där användare med versaler i e-postadressen inte kunde läggas till i ett nytt Relic-underkonto i Cloud Manager.
-* Skärmlösningen visas nu om det finns flera lösningar i programmet.
-* En situation har korrigerats där körningen av pipeline i frontend inte skulle starta när miljön hade statusen UPDATING.
+* Feedback under redigeringsprocessen har förbättrats för att fånga upp enstaka förekomster av en eller flera miljöer som saknas.
