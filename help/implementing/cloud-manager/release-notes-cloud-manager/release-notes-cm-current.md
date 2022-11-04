@@ -3,7 +3,7 @@ title: Versionsinformation om Cloud Manager 2022.11.0 i Adobe Experience Manager
 description: Detta är versionsinformationen för Cloud Manager 2022.11.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: b0d57f0ccfb80c8071026a53cab594cfced13497
+source-git-commit: 0b60b0954c98c5d10227b4db002e3c70f47b6901
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 1%
@@ -27,7 +27,7 @@ Releasedatum för Cloud Manager version 2022.11.0 i AEM as a Cloud Service är 3
 
 * På kontrollpanelen för licenser för AEM Sites-lösningen visas nu avtalsinformation, inklusive om klientorganisationen ingår i prenumerationen eller inte.
 * När en miljö som är associerad med en pipeline har en status som inte tillåter att pipeline körs, inaktiveras körningsåtgärden med ett förklarande verktygstips.
-* Ett förbättrat meddelande skickades till användargränssnittet när **Lägg till program** har inaktiverats på grund av otillräckliga berättiganden för innehavaren.
+* Ett förbättrat meddelande lades till i användargränssnittet när **Lägg till program** har inaktiverats på grund av otillräckliga berättiganden för innehavaren.
 
 ## Felkorrigeringar {#bug-fixes}
 
