@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 73adc2a9cad7f3e5dde723d1b3d695f8cec3ca69
+source-git-commit: 6e4919e73ef3efdfc64174a1babab084596aba48
 workflow-type: tm+mt
-source-wordcount: '1987'
+source-wordcount: '1975'
 ht-degree: 5%
 
 ---
@@ -306,7 +306,7 @@ När du har valt Massredigering kan du:
    * Du kan uppdatera värdena i de tillgängliga fälten.
       * De nya värdena tillämpas på alla markerade sidor när du markerar **Klar**.
       * När fältet har flera värden (till exempel Taggar) kan du antingen lägga till ett nytt värde eller ta bort ett gemensamt värde.
-   * Fält som är gemensamma, men har olika värden på de olika sidorna, markeras med ett särskilt värde, t.ex. texten `<Mixed Entries>`. Du bör vara försiktig när du redigerar sådana fält för att förhindra dataförlust.
+   * Fält som är gemensamma, men har olika värden på de olika sidorna, markeras med ett särskilt värde, t.ex. texten `<Mixed Entries>`.
 
 >[!NOTE]
 >
