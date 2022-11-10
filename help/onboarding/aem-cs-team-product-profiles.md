@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Lär dig hur AEM as a Cloud Service team och produktprofiler och ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: d54c25791cbb06232ff6e24bb7b8005b366a2144
+source-git-commit: d4786b5d527092027e8e825d0a2475a8be6a710a
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,9 @@ Dina AEM as a Cloud Service teammedlemmar läggs till och tilldelas en eller fle
 
 >[!TIP]
 >
->Mer information om introduktionsprocessen finns i [Startresa.](/help/journey-onboarding/overview.md)
+>* Läs mer om AEM produktprofiler i dokumentet [Tilldela AEM produktprofiler.](/help/journey-onboarding/assign-profiles-aem.md)
+>* Mer information om introduktionsprocessen finns i [Startresa.](/help/journey-onboarding/overview.md)
+
 
 ## Produktprofiler för Cloud Manager {#cloud-manager-product-profiles}
 
@@ -63,3 +65,9 @@ Ditt Cloud Manager-team kommer att innehålla minst:
 >[!NOTE]
 >
 >För att få åtkomst till AEM as a Cloud Service måste användarna tillhöra en av två produktprofiler: `AEM Users` eller `AEM Administrators`. Behörigheter att administrera Cloud Manager räcker inte.
+
+>[!TIP]
+>
+>* Läs mer om produktprofiler för Cloud Manager i dokumentet [Tilldela teammedlemmar till Cloud Manager-produktprofiler.](/help/journey-onboarding/assign-profiles-cloud-manager.md)
+>* Mer information om introduktionsprocessen finns i [Startresa.](/help/journey-onboarding/overview.md)
+
