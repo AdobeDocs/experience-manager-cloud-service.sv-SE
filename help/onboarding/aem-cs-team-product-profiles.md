@@ -1,17 +1,17 @@
 ---
 title: AEM as a Cloud Service team- och produktprofiler
-description: Lär dig hur AEM as a Cloud Service team och produktprofiler och ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
+description: Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: d4786b5d527092027e8e825d0a2475a8be6a710a
+source-git-commit: 69ac8e444a0f22649b48ec25b549ad60858f8b1b
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
 
 # AEM as a Cloud Service team- och produktprofiler {#product-profiles}
 
-Lär dig hur AEM as a Cloud Service team och produktprofiler och ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
+Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 
 ## Produktprofiler {#profiles}
 
@@ -31,7 +31,9 @@ Dina AEM as a Cloud Service teammedlemmar läggs till och tilldelas en eller fle
 
 >[!NOTE]
 >
->Alla användare som tilldelats en AEM as a Cloud Service produktprofil har (skrivskyddad) åtkomst till Cloud Manager.
+>Alla användare som tilldelats en AEM as a Cloud Service produktprofil har skrivskyddad åtkomst till Cloud Manager via **Cloud Manager-användare** roll.
+>
+>Användare med endast **Cloud Manager-användare** kan du logga in i Cloud Manager och navigera till AEM (om det finns någon) med hjälp av **Program** menyalternativ. The **Cloud Manager-användare** rollen räcker inte för att komma åt programinformationen. Om sådan åtkomst behövs måste användarna tilldelas ytterligare roller av systemadministratören.
 
 >[!TIP]
 >

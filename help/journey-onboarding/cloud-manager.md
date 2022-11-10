@@ -3,9 +3,9 @@ title: Access Cloud Manager
 description: Lär dig hur du får åtkomst till Cloud Manager så att du kan konfigurera dina projektresurser.
 role: Admin, User, Developer
 exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
-source-git-commit: fbf1e0b7cefb1dc981d7ee106283280fb2225007
+source-git-commit: 69ac8e444a0f22649b48ec25b549ad60858f8b1b
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1055'
 ht-degree: 0%
 
 ---
@@ -32,10 +32,6 @@ Cloud Manager är en viktig komponent i AEM as a Cloud Service och fungerar som 
 Vanligtvis är en teammedlem tilldelad till **Företagsägare** produktprofilen ansvarar för att lägga till molnresurser som program och miljöer. Den här personen förstår affärsbehoven och vem som slutför den ursprungliga installationen av Cloud Manager.
 
 Som systemadministratör har du redan tilldelat dig själv till **Företagsägare** produktprofil och konfigurerar molnresurserna. Beroende på de faktiska projektkraven kan det hända att företagsägarna inte är samma som systemadministratören.
-
->[!NOTE]
->
->Som standard har en användare som har åtkomst till en AEM även användarrollen Cloud >Manager. Den här rollen i och för sig själv är inte tillräcklig för att ge användaren åtkomst till vyn för programinformation. En sådan användare med endast användarrollen Cloud Manager kan navigera via programmenyalternativen till URL:en för AEM (om det finns miljöer). Dessa användare måste kontakta sin administratör om de vill ha åtkomst på programnivå.
 
 ## Använd Cloud Manager som systemadministratör och företagsägare {#access-sysadmin-bo}
 
@@ -137,3 +133,4 @@ Du bör fortsätta din introduktionsresa genom att granska dokumentet nästa gå
 Följ de andra resurserna för att lära dig mer om:
 
 * [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md) - Lär dig mer om Cloud Manager, Cloud Manager-program och miljöer.
+* [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) - Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.

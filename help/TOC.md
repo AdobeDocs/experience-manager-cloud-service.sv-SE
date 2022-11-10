@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 28c64256c64bf3f7f2e38e1f52a615ff8ca457bb
+source-git-commit: d310b48d3abe8ffba2f25a27899cd042a186db84
 workflow-type: tm+mt
-source-wordcount: '3738'
+source-wordcount: '3739'
 ht-degree: 22%
 
 ---
@@ -145,7 +145,6 @@ ht-degree: 22%
       + [Tilldela AEM produktprofiler](/help/journey-onboarding/assign-profiles-aem.md)
       + [Uppgifter för utvecklare och distributionsansvarig](/help/journey-onboarding/developers.md)
       + [AEM användaruppgifter](/help/journey-onboarding/aem-users.md)
-      + [Användargrupper](/help/journey-onboarding/user-groups.md)
    + AEM Reference Demos Add-On Journey {#demo-add-on}
       + [Översikt](/help/journey-sites/demos-add-on/overview.md)
       + [Installation](/help/journey-sites/demos-add-on/installation.md)
@@ -156,6 +155,7 @@ ht-degree: 22%
    + Andra introduktionskoncept {#concepts}
       + [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md)
       + [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md)
+      + [Användargrupper för meddelanden](/help/journey-onboarding/user-groups.md)
 + AEM as a Cloud Service migreringsresa {#migration-journey}
    + [Komma igång med att flytta AEM as a Cloud Service](/help/journey-migration/getting-started.md)
    + [Beredskapsfas](/help/journey-migration/readiness.md)

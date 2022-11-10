@@ -3,9 +3,9 @@ title: Skapa ett program
 description: Lär dig hur du använder Cloud Manager för att skapa ditt första program.
 role: Admin, User, Developer
 exl-id: ade4bb43-5f48-4938-ac75-118009f0a73b
-source-git-commit: fbf1e0b7cefb1dc981d7ee106283280fb2225007
+source-git-commit: 69ac8e444a0f22649b48ec25b549ad60858f8b1b
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
@@ -39,10 +39,6 @@ Det finns två olika typer av program:
 
 Eftersom de har olika syften har de olika miljöerna olika alternativ. Processen att skapa dem liknar dock den du gör. För den här introduktionsresan ska vi skapa en sandlådemiljö.
 
->[!NOTE]
->
->Som standard har en användare som har åtkomst till en AEM även användarrollen Cloud >Manager. Den här rollen i och för sig själv är inte tillräcklig för att ge användaren åtkomst till vyn för programinformation. En sådan användare med endast användarrollen Cloud Manager kan navigera via programmenyalternativen till URL:en för AEM (om det finns miljöer). Dessa användare måste kontakta sin administratör om de vill ha åtkomst på programnivå.
-
 ## Skapa ett sandlådeprogram {#create-sandbox}
 
 Följ de här stegen för att skapa ett sandlådeprogram.
@@ -75,3 +71,4 @@ Följ de andra resurserna för att lära dig mer om:
 * [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md) - Lär dig hur du använder Cloud Manager för att skapa ett eget sandlådeprogram för utbildning, demo, POC eller andra icke-produktionssyften.
 * [Skapa produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md) - Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 * [Använda Adobe Cloud Manager - Program](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html) - Cloud Manager-program representerar uppsättningar AEM miljöer som stöder logiska uppsättningar av affärsinitiativ, vilket vanligtvis motsvarar ett köpt servicenivåavtal (SLA).
+* [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) - Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
