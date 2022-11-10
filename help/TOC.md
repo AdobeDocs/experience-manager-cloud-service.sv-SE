@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 435d42e750f868970bed8f6b3f30a2762c5ce395
+source-git-commit: 28c64256c64bf3f7f2e38e1f52a615ff8ca457bb
 workflow-type: tm+mt
-source-wordcount: '3728'
+source-wordcount: '3738'
 ht-degree: 22%
 
 ---
@@ -899,6 +899,7 @@ ht-degree: 22%
    + [Använda och underhålla AEM as a Cloud Service](/help/operations/home.md)
    + [Innehållssökning och indexering](/help/operations/indexing.md)
    + [Tjänsten Innehållsreplikering](/help/operations/replication.md)
+   + [Infrastruktur- och serviceövervakning på AEM as a Cloud Service](/help/operations/monitoring.md)
    + [Underhållsåtgärder](/help/operations/maintenance.md)
    + [Säkerhetskopiering och återställning](/help/operations/backup.md)
    + [Asynkrona jobb](/help/operations/asynchronous-jobs.md)
