@@ -2,9 +2,9 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 0a5b74427bedfa7b1e802a91632b0765adfb8248
+source-git-commit: e8b4fe047c9656aa592fc851279dc6a189144023
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '916'
 ht-degree: 12%
 
 ---
@@ -54,7 +54,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam22.png)
 
-1. Du kan sedan övervaka matningsfasen från listvyn Inmatningsjobb
+1. Du kan sedan övervaka matningsfasen från listvyn Ingessionsjobb och använda matningsens åtgärdsmeny för att visa loggen allt eftersom matningen fortskrider.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam23.png)
 
@@ -124,4 +124,4 @@ Du kommer bara att kunna starta upp ett intag till målmiljön om du tillhör de
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig Inkludera innehåll i mål i verktyget för innehållsöverföring kan du visa loggar när varje steg har slutförts (extrahering och förtäring) och leta efter fel. Se [Visa loggar för en migreringsuppsättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/viewing-logs.html?lang=en) om du vill veta mer.
+När du har slutfört Inkludering av innehåll i Target kan du visa loggar för varje steg (extrahering och förtäring) och leta efter fel. Se [Visa loggar för en migreringsuppsättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/viewing-logs.html?lang=en) om du vill veta mer.
