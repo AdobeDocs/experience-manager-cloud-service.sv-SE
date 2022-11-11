@@ -4,9 +4,9 @@ description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller i
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 28dbb0afa6c63efd64d409f8df0ef837bc10f5d9
+source-git-commit: 7ab618893ab18dde6dbbceaf098fe7334b503d07
 workflow-type: tm+mt
-source-wordcount: '3187'
+source-wordcount: '3205'
 ht-degree: 5%
 
 ---
@@ -17,15 +17,15 @@ När du överför bilder kan du beskära bilden automatiskt vid överföring gen
 
 >[!IMPORTANT]
 >
->Bildprofiler kan inte användas för PDF-, animerade GIF- eller INDD-filer (Adobe InDesign).
+>・ CMYK-bildformatet stöds inte med smart beskärning.
+・ Bildprofiler kan inte användas för PDF-, animerade GIF- eller INDD-filer (Adobe InDesign).
 
 ## Oskarp mask, alternativ {#unsharp-mask}
 
 När du skapar en bildprofil kan du använda **[!UICONTROL Unsharp mask]** om du vill finjustera en skärpefiltereffekt på den slutliga nedsamplade bilden. Du kan styra intensiteten för effekten, radien för effekten (mätt i pixlar) och ett tröskelvärde för kontrast som ignoreras. Effekten har samma alternativ som filtret Oskarp mask i Adobe Photoshop.
 
 >[!NOTE]
->
->Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i bilden inte påverkas av oskarp mask. Mindre renderingar, till exempel miniatyrbilder, ändras (och visar den oskarpa masken).
+Oskarp mask används endast för nedskalade återgivningar i PTIFF (pyramidformade gånger) som nedsamplas till mer än 50 %. Det innebär att de största återgivningarna i bilden inte påverkas av oskarp mask. Mindre renderingar, till exempel miniatyrbilder, ändras (och visar den oskarpa masken).
 
 I **[!UICONTROL Unsharp Mask]** har du följande filtreringsalternativ:
 
@@ -71,8 +71,7 @@ Varje generering av Smart Crop som du skapar kräver extra bearbetning. Om du ti
 Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
 
 >[!IMPORTANT]
->
->Adobe rekommenderar att du granskar alla genererade beskärningar och färgrutor för att se till att de är lämpliga och relevanta för ert varumärke och era värden.
+Adobe rekommenderar att du granskar alla genererade beskärningar och färgrutor för att se till att de är lämpliga och relevanta för ert varumärke och era värden.
 
 | Alternativ | När ska användas | Beskrivning |
 | --- | --- | --- |
@@ -85,9 +84,10 @@ Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att a
 
 Den maximala upplösningen för indatafilens storlek som stöds är 16 kB.
 
+CMYK-bildformatet stöds inte med smart beskärning.
+
 >[!NOTE]
->
->Upplösningen 16K är en skärmupplösning med ungefär 16 000 pixlar vågrätt. Den vanligaste 16K-upplösningen är 1 5360 × 8 640, vilket fördubblar pixelantalet för 8K UHD i varje dimension, vilket ger totalt fyra gånger så många pixlar. Upplösningen har 132,7 megapixlar, 16 gånger så många pixlar som upplösningen 4K och 64 gånger så många pixlar som upplösningen 1080p.
+Upplösningen 16K är en skärmupplösning med ungefär 16 000 pixlar vågrätt. Den vanligaste 16K-upplösningen är 1 5360 × 8 640, vilket fördubblar pixelantalet för 8K UHD i varje dimension, vilket ger totalt fyra gånger så många pixlar. Upplösningen har 132,7 megapixlar, 16 gånger så många pixlar som upplösningen 4K och 64 gånger så många pixlar som upplösningen 1080p.
 
 | Bildformat | Skiftlägesokänsligt filtillägg | MIME-typ | Färgrymd för indata som stöds | Största tillåtna indatafilstorlek | Bildformat som stöds? |
 | --- | --- | --- | --- | --- | --- |
@@ -200,17 +200,15 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 ## Redigera smart beskärning eller smarta färgrutor för en enskild bild {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!IMPORTANT]
->
->Adobe rekommenderar att du granskar alla genererade smarta beskärningar och smarta färgrutor för att se till att de är lämpliga och relevanta för ert varumärke och era värden.
+Adobe rekommenderar att du granskar alla genererade smarta beskärningar och smarta färgrutor för att se till att de är lämpliga och relevanta för ert varumärke och era värden.
 
 Du kan justera eller ändra storlek på bildens smarta beskärningsfönster manuellt för att ytterligare förfina fokalpunkten.
 
 När du har redigerat en smart beskärning och sparat sprids ändringen överallt där du använder beskärningen för de specifika bilderna.
 
 >[!IMPORTANT]
->
->När du manuellt justerar eller ändrar storlek på det smarta beskärningsfönstret för en resurs bevaras och bevaras redigeringen, även om du senare bestämmer dig för att bearbeta resursen. Om du däremot redigerar bredden, höjden eller både och i **[!UICONTROL Responsive Image Crop]** i bildprofilen. Resursen bearbetas.
->Se [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+När du manuellt justerar eller ändrar storlek på det smarta beskärningsfönstret för en resurs bevaras och bevaras redigeringen, även om du senare bestämmer dig för att bearbeta resursen. Om du däremot redigerar bredden, höjden eller både och i **[!UICONTROL Responsive Image Crop]** i bildprofilen. Resursen bearbetas.
+Se [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
 Du kan vid behov köra smart beskärning igen för att generera ytterligare beskärningar.
 
@@ -240,9 +238,8 @@ När du har tillämpat en bildprofil - som innehåller smart beskärning - på e
 När du har redigerat en smart beskärning och sparat sprids ändringen överallt där du använder beskärningen för de specifika bilderna.
 
 >[!IMPORTANT]
->
->När du manuellt justerar om eller ändrar storlek på det smarta beskärningsfönstret för flera resurser bevaras och bevaras redigeringarna, även om du senare bestämmer dig för att bearbeta om dessa resurser. Om du däremot redigerar bredden, höjden eller både och i **[!UICONTROL Responsive Image Crop]** i bildprofilen, bearbetas dessa resurser.
->Se [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+När du manuellt justerar om eller ändrar storlek på det smarta beskärningsfönstret för flera resurser bevaras och bevaras redigeringarna, även om du senare bestämmer dig för att bearbeta om dessa resurser. Om du däremot redigerar bredden, höjden eller både och i **[!UICONTROL Responsive Image Crop]** i bildprofilen, bearbetas dessa resurser.
+Se [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
 Du kan vid behov köra smart beskärning igen för att generera ytterligare beskärningar.
 
