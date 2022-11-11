@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 8bcfcae211b2203915e7facc361188a0f5739547
+source-git-commit: 31198a1279e07d0a1afe41100d3cfe59d02fd686
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
          `200` eftersom svarskoden innebär att felaktiga händelseprenumerationer tas bort.
    >[!NOTE]
    >
-   >Om du redan har tagit bort fel händelseprenumerationer innan du utför de steg som beskrivs i den här proceduren kan du hoppa över steg 4.
+   >Om du redan har tagit bort fel händelseprenumerationer innan du utför de steg som beskrivs i den här proceduren kan du hoppa över det sista steget i den här proceduren.
 
 
 >[!IMPORTANT]
