@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 1509afad94208e62d5222f4c95c98d90f95be30e
+source-git-commit: 8bcfcae211b2203915e7facc361188a0f5739547
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,54 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.4 av [!DNL Workfront for Experience Manager enhanced connector] är 7 oktober 2022.
+Releasedatum för den senaste versionen, 1.9.5 av [!DNL Workfront for Experience Manager enhanced connector] är 11 november 2022.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande förbättringar och felkorrigeringar:
 
-* Det går inte att visa fliken Händelseprenumerationer på den utökade konfigurationssidan för anslutningsprogrammet på grund av ett stort antal händelser.
+* När du bara definierar ett värde för ett fält med flera värden i Workfront mappas fältvärdet inte korrekt till Experience Manager.
 
-* Workfront kan inte hämta listan över befintliga mappar i ett projekt, vilket resulterar i att dubblettmappar skapas.
+* Experience Manager visar `SERVER_ERROR` på **[!UICONTROL Link External Files and Folders]** skärm vid åtkomst av resursmappar på grund av ogiltiga behörigheter på `/content/dam/collections`.
+
+* Aktivera **[!UICONTROL Publish Assets to Brand Portal]** på konfigurationssidan för Workfront Enhanced Connector skapar en felaktig händelse. Händelsen tas inte bort även efter att alternativet har inaktiverats.
+
+   Så här löser du problemet:
+
+   1. Uppgradera till version 1.9.5 av den förbättrade anslutningen.
+
+   1. Inaktivera **[!UICONTROL Publish Assets to Brand Portal]** under avancerade inställningar.
+
+   1. Aktivera **[!UICONTROL Publish Assets to Brand Portal]** alternativ.
+
+   1. Ta bort fel händelseprenumerationer.
+
+      1. Utför GET samtal till `/attask/eventsubscription/api/v1/subscriptions?page=<page-number>`
+
+         Kör ett API-anrop för varje sidnummer.
+
+      1. Sök efter följande text för att hitta händelseprenumerationer som matchar följande URL och som inte har någon `objId`:
+
+         ```
+              "objId": "",
+             "url": "<your-aem-domain>/bin/workfront-tools/events/linkedfolderprojectupdate<your-aem-domain>/
+         ```
+
+         Se till att innehållet mellan `"objId": "",` och `"url"` matchar JSON-svaret. Den rekommenderade metoden är att kopiera från en Event-prenumeration som har en `objId` och ta sedan bort numret.
+
+      1. Observera händelsens prenumerations-ID.
+
+      1. Ta bort fel händelseprenumeration. Gör ett Delete API-anrop till `<your-aem-domain>/attask/eventsubscription/api/v1/subscriptions/<event-subscription-ID-from-previous-step>`
+
+         `200` eftersom svarskoden innebär att felaktiga händelseprenumerationer tas bort.
+   >[!NOTE]
+   >
+   >Om du redan har tagit bort fel händelseprenumerationer innan du utför de steg som beskrivs i den här proceduren kan du hoppa över steg 4.
+
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [uppgradera till den senaste 1.9.4-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar att du [uppgradera till den senaste 1.9.5-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -35,9 +70,15 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** listrutan samt **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i den nya Workfront-upplevelsen.
 
-* Workfront visar en `SERVER_ERROR` när dokument länkas till AEM efter uppgradering till version 8316. Lös problemet genom att tilldela `rep:readProperties` till `content/dam/collections` for `wf-workfront-user` AEM användargrupp.
-
 ## Tidigare versioner {#previous-releases}
+
+### Oktober 2022-versionen {#october-2022-release}
+
+[!DNL Workfront for Experience Manager enhanced connector] version 1.9.4, släppt i oktober 2007, innehåller följande uppdateringar:
+
+* Det går inte att visa fliken Händelseprenumerationer på den utökade konfigurationssidan för anslutningsprogrammet på grund av ett stort antal händelser.
+
+* Workfront kan inte hämta listan över befintliga mappar i ett projekt, vilket resulterar i att dubblettmappar skapas.
 
 ### September 2022-utgåvan {#september-2022-release}
 
