@@ -9,9 +9,9 @@ topic-tags: author, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 434071de17d6ff56ede561735f7214d96f98cfa0
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2394'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 0%
 
 Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. [!DNL AEM Forms] har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med Adaptive Forms. Du kan välja att skapa ett adaptivt formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett adaptivt formulär:
 
-<!-- * **Using a form data model**
-  [Data integration](data-integration.md) lets you integrate entities and services from disparate data sources in to a Form Data Model that you can use to create Adaptive Forms. Choose Form Data Model if the Adaptive Form you are creating involves fetching and write data from and to multiple data source. -->
+* **Använda en formulärdatamodell**
+   [Dataintegrering](data-integration.md) Med kan du integrera enheter och tjänster från olika datakällor i en formulärdatamodell som du kan använda för att skapa adaptiv Forms. Välj Formulärdatamodell om det adaptiva formulär du skapar inbegriper hämtning och skrivning av data från och till flera datakällor.
 
 * **Använda en XDP-formulärmall**
 Det är en idealisk formulärmodell om du har investeringar i XFA- eller XDP-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till Adaptive Forms. Alla befintliga XFA-regler behålls i tillhörande Adaptive Forms. Det adaptiva Forms-formatet stöder XFA-konstruktioner, t.ex. valideringar, händelser, egenskaper och mönster.
@@ -35,7 +35,11 @@ XML- och JSON-scheman representerar den struktur i vilken data produceras eller 
 * **Använda ingen eller utan en formulärmodell**
 Adaptiv Forms som skapats med det här alternativet använder ingen formulärmodell. Data-XML som genereras från sådana formulär har en platt struktur med fält och motsvarande värden.
 
-<!--  For more information about creating an Adaptive Form, see [Creating an Adaptive Form](creating-adaptive-form.md). -->
+   >[!NOTE]
+   >
+   > Du kan ändra egenskaperna för formulärmodellen i den adaptiva formulärredigeraren eller den adaptiva formulärmallsredigeraren. Mer information finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](/help/forms/creating-adaptive-form.md#edit-form-model-properties-of-an-adaptive-form-edit-form-model).
+
+Information om hur du skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär](creating-adaptive-form.md).
 
 ## Gränssnitt för redigering av adaptiva formulär {#adaptive-form-authoring-ui}
 

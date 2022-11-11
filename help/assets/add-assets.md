@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 1ef60a024d6ffe704ef48df97ca998af3cd6b8a8
+source-git-commit: ad5bc4b1ae80421bc843d323c214c64334609de6
 workflow-type: tm+mt
-source-wordcount: '2956'
+source-wordcount: '2991'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Medan du kan överföra och hantera binära filer i [!DNL Experience Manager], h
 
 Du kan också välja att utföra ytterligare bearbetning av de överförda resurserna. Ett antal resursbearbetningsprofiler kan konfigureras för mappen, till vilken resurserna överförs, för att lägga till specifika metadata, återgivningar eller bildbehandlingstjänster. Se [bearbeta resurser när de överförs](#process-when-uploaded).
 
-[!DNL Assets] innehåller följande överföringsmetoder. Adobe rekommenderar att du förstår hur du använder ett överföringsalternativ innan du använder det.
+[!DNL Assets] tillhandahåller följande överföringsmetoder. Adobe rekommenderar att du förstår hur du använder ett överföringsalternativ innan du använder det.
 
 | Överföringsmetod | När ska du använda? | Primär persona |
 |---------------------|----------------|-----------------|
@@ -118,7 +118,7 @@ Bevara den duplicerade resursen i [!DNL Assets], klicka **[!UICONTROL Keep]**. O
 
 [!DNL Experience Manager Assets] förhindrar att du överför resurser med förbjudna tecken i filnamn. Om du försöker överföra en resurs med filnamn som innehåller ett otillåtet tecken eller mer, [!DNL Assets] visar ett varningsmeddelande och stoppar överföringen tills du tar bort dessa tecken eller överför med ett tillåtet namn.
 
-Om du vill anpassa namngivningskonventionerna för din organisation kan du [!UICONTROL Upload Assets] I kan du ange långa namn för de filer som du överför. Följande (blankstegsavgränsad lista med) tecken stöds inte:
+Om du vill anpassa namngivningskonventionerna för din organisation väljer du [!UICONTROL Upload Assets] I kan du ange långa namn för de filer som du överför. Följande (blankstegsavgränsad lista med) tecken stöds inte:
 
 * Ogiltiga tecken för resursnamn: `* / : [ \\ ] | # % { } ? &`
 * Ogiltiga tecken för resursmappens namn: `* / : [ \\ ] | # % { } ? \" . ^ ; + & \t`
@@ -139,7 +139,7 @@ Om du vill överföra fler filer använder du någon av följande metoder. Se ä
 
 ### Verktyget Importera flera resurser {#asset-bulk-ingestor}
 
-Verktyget tillhandahålls bara till administratörsgruppen som kan användas för storskalig förtäring av resurser från Azure- eller S3-datalager. Se en video som visar hur konfigurationen och intagandet fungerar.
+Verktyget tillhandahålls endast administratörsgruppen som kan användas för storskalig förtäring av resurser från Azure- eller S3-datalager. Se en video som visar hur konfigurationen och intagandet fungerar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/329680/?quality=12&learn=on)
 
@@ -171,6 +171,8 @@ Så här konfigurerar du verktyget för massimport:
 1. Välj typ av datakälla på menyn **[!UICONTROL Import Source]** listruta.
 
 1. Ange värdena för att skapa en anslutning till datakällan. Om du till exempel väljer **Azure Blob Storage** som datakälla anger du värdena för Azure-lagringskontot, Azure-blobbehållaren och Azure-åtkomstnyckeln.
+
+1. Välj önskat autentiseringsläge i listrutan. **Azure Access Key** ger fullständig åtkomst till Azure-lagringskontot, medan **Azure SAS-token** låter administratören begränsa möjligheterna för token med hjälp av behörigheter och utgångsprofiler.
 
 1. Ange namnet på rotmappen som innehåller resurser i datakällan i **[!UICONTROL Source Folder]** fält.
 

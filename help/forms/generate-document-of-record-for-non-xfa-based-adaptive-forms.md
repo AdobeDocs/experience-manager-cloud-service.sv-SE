@@ -2,9 +2,9 @@
 title: Generera arkivdokument för adaptiv Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: 21db238b0808d6131c2a22de3d47ba7f7bd2f48b
+source-git-commit: 434071de17d6ff56ede561735f7214d96f98cfa0
 workflow-type: tm+mt
-source-wordcount: '3584'
+source-wordcount: '3960'
 ht-degree: 1%
 
 ---
@@ -330,27 +330,35 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 1. Markera en panel (rotpanelen) i postdokumentet och tryck sedan på ![konfigurera](assets/configure.png).
 1. Tryck ![dortab](assets/dortab.png). Fliken Dokument för post visas.
 1. Välj antingen standardmallen eller en anpassad mall för återgivning av postdokumentet. Om du väljer standardmallen visas en miniatyrförhandsvisning av postdokumentet under listrutan Mall.
+1. Beroende på om du väljer en standardmall eller en anpassad mall visas några eller alla följande egenskaper på fliken Dokument för post. Ange nedanstående egenskaper för att definiera utseendet på postdokumentet:
 
-   ![brandingtemplate](assets/brandingtemplate.png)
+   1. **Grundläggande egenskaper**:
+      * **Mall**: Om du väljer en egen mall bläddrar du till en XDP-fil på [!DNL AEM Forms] server. Om du vill använda en mall som inte redan finns i [!DNL AEM Forms] ska du först överföra XDP-filen till din [!DNL AEM Forms] server.
+      * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i dokumentet eller posten PDF.
+      * **Teckensnittsfamilj**: Teckensnittsfamilj för texten i PDF för dokumentreferens.
+      * **Inkludera formulärobjekt som inte är bundna till datamodell**: När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet.
+      * **Uteslut dolda fält från postdokumentet**: När du ställer in egenskapen identifieras dolda fält för uteslutning från postdokumentet.
+      * **Dölj beskrivning av paneler**: Om du anger egenskapen utesluts beskrivningen av panelen/tabellen från Postdokument. Gäller för panel och tabell.
 
-   Om du väljer en egen mall bläddrar du till en XDP-fil på [!DNL AEM Forms] server. Om du vill använda en mall som inte redan finns i [!DNL AEM Forms] ska du först överföra XDP-filen till din [!DNL AEM Forms] server.
+      ![Grundläggande egenskaper](/help/forms/assets/basicpropertiesdor.png)
 
-1. Beroende på om du väljer en standardmall eller en anpassad mall visas några eller alla följande egenskaper på fliken Dokument för post. Ange dessa korrekt:
+   1. **Egenskaper för formulärfält**:
+      * **Visa endast de valda värdena för komponenterna Kryssruta och Alternativknapp**: När du anger egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
+      * **Avgränsare för flera värden**: Du kan välja valfri avgränsare, t.ex. komma eller radbrytning, om du vill visa flera värden.
+      * **Justering av alternativ**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas på [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Ställa in egenskaperna från [!UICONTROL Form Field Properties] av DoR skriver över egenskaperna som anges i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär. Om du vill kan du välja [!UICONTROL Same as Aaptive form] -alternativet används justeringen som den har konfigurerats i en instans av adaptiv formulärförfattare för [!UICONTROL Document of Record] fält.
+      * **Antal alternativ för vågrät justering**:Du kan ange hur många alternativ som ska visas i postdokumentet för den vågräta justeringen.
 
-   * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
-   * **Formulärtitel**
-   * **Sidhuvudstext**
-   * **Ansvarsfriskrivning**
-   * **Ansvarsfriskrivning**
-   * **Ansvarsfriskrivning**
-   * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i dokumentet eller posten PDF
-   * **Teckensnittsfamilj**: Teckensnittsfamilj för texten i PDF i dokumentet
-   * **Visa endast de valda värdena för komponenterna Kryssruta och Alternativknapp**
-   * **Avgränsare för flera markerade värden**
-   * **Inkludera formulärobjekt som inte är bundna till datamodell**
-   * **Uteslut dolda fält från postdokumentet**
-   * **Dölj beskrivning av paneler**
+      ![Egenskaper för formulärfält](/help/forms/assets/formfieldpropertiesdor.png)
 
+   1. **Överordnad sidegenskaper**:
+      * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
+      * **Formulärtitel**: Titel på DoR.
+      * **Sidhuvudstext**: Text som visas i rubrikavsnittet i postdokumentet.
+      * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
+      * **Ansvarsfriskrivning**: Text som anger omfattningen av rättigheter och skyldigheter i registreringsdokumentet.
+      * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
+
+      ![Överordnad sidegenskaper](/help/forms/assets/masterpagepropertiesdor.png)
    >[!NOTE]
    >
    >Om du använder en mall för adaptiva formulär som skapats med en tidigare version av Designer än 6.3, för att egenskaperna för dekorfärg och teckensnittsfamilj ska fungera, kontrollerar du att följande finns i mallen för adaptiva formulär under rotdelformuläret:
@@ -367,7 +375,30 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
    </proto>
    ```
 
-1. Om du vill spara varumärkeändringen trycker du på Klar.
+1. Om du vill spara ändringarna för varumärket trycker du **[!UICONTROL Done]**.
+
+## Dokumentstöd i anpassad formulärredigerare {#dor-support-in-adaptiveform}
+
+Du kan konfigurera [!UICONTROL Document of Record] direkt från redigeraren för adaptiva formulär eller redigeraren för adaptiva formulärmallar.
+
+Utför följande steg från författarinstansen av redigeraren för adaptiva formulär:
+
+1. Välj **[!UICONTROL Adaptive Form container (Root)]** -komponenten.
+1. Klicka ![Konfigurera ikon](/help/forms/assets/configure-icon.svg) -ikonen för att öppna **[!UICONTROL Properties]** i behållaren för adaptiv form.
+1. Öppna **[!UICONTROL Document of Record Template]** och välj bland följande alternativ:
+   * **[!UICONTROL None]**: När det här alternativet är markerat är [!UICONTROL Document of Record] mall skapad för ditt adaptiva formulär.
+
+   * **[!UICONTROL Associate Form Template as Document of Record Template]**:När det här alternativet är markerat används XFA-formulär som mall för postdokument.
+
+   * **[!UICONTROL Generate Document of Record]**: När det här alternativet är markerat visas [!UICONTROL Document of Record] -mallen genereras automatiskt för ditt adaptiva formulär.
+
+1. Tryck ![Spara](/help/forms/assets/check-button.png) för att spara egenskaperna.
+
+![Stöd för arkivmallar](/help/forms/assets/dor-templatesupport.png)
+
+>[!NOTE]
+>
+>När [!UICONTROL Document of Record] mallen skapas med en redigerare för adaptiv formulärmall, och endast två alternativ är tillgängliga under [!UICONTROL Document of Record Template] tabbas som [!UICONTROL None] och [!UICONTROL Generate Document of Record].
 
 ## Tabell- och kolumnlayouter för paneler i dokumentformat {#table-and-column-layouts-for-panels-in-document-of-record}
 
@@ -400,7 +431,7 @@ Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. 
 **Inställningar för formulärnivå**
 
 * **Inkludera obundna fält i DoR:** När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
-* **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, exkluderas de från Postdokument om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd. Inställning [Återvalidera på servern](/help/forms/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) egenskapen true identifierar de dolda fälten som ska uteslutas från postdokumentet på serversidan.
+* **Uteslut fält från DoR om de är dolda:** Om du ställer in egenskapen åsidosätts beteendet för fältnivåegenskapen Exkludera från dokument för post när det inte är sant. Om fälten är dolda när formuläret skickas, exkluderas de från Postdokument om egenskapen är true, förutsatt att egenskapen Exkludera från postdokument inte är inställd. Inställning [Återvalidera på servern](/help/forms/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form) egenskapen true identifierar de dolda fälten för uteslutning från postdokumentet på serversidan.
 
 ## Använda en anpassad XCI-fil
 

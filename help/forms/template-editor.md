@@ -2,9 +2,9 @@
 title: Hur skapar man en anpassad formulärmall?
 description: Skapa adaptiva formulärmallar för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 exl-id: a882cba2-c621-4ff7-a972-c504641b5639
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 434071de17d6ff56ede561735f7214d96f98cfa0
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1757'
 ht-degree: 0%
 
 ---
@@ -153,9 +153,17 @@ När du skapar ett adaptivt formulär kan du se mallen som visas när du ombeds 
 
 Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar ftocorm till en annan [!DNL AEM Forms] -instansen importeras den utan sin mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från `/conf` nod i `https://<server>:<port>/crx/packmgr`och lägga in den i [!DNL AEM Forms] instans där du vill överföra formuläret. Du kan också [Skapa en mall med AEM Archeype och distribuera den till din Cloud Services](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html#prerequisites).
 
+>[!NOTE]
+>
+> * Du kan associera en [!UICONTROL Form Data Model Schema] till en adaptiv formulärmall i en mallredigerare. Se [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md#edit-form-model-properties-of-an-adaptive-form-edit-form-model) för mer information.
+> * Du kan även konfigurera [!UICONTROL Document of Record] direkt från redigeraren för adaptiva formulär eller redigeraren för adaptiva formulärmallar. Mer information finns i [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform).
+
+
+
 ## Skapa ett anpassat formulär med hjälp av mallen {#creating-an-adaptive-form-using-the-template}
 
 När du har skapat och aktiverat en mall är den tillgänglig i formulärhanteraren när du skapar ett anpassat formulär. Information om hur du använder en mall och skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär](creating-adaptive-form.md).
+
 
 <!--
 ## Change display option of out of the box templates  {#change-display-option-of-out-of-the-box-templates}

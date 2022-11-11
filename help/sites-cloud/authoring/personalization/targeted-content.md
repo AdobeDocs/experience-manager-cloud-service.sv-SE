@@ -2,9 +2,9 @@
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 exl-id: 8d80d867-2d0f-4ddb-8a06-f9441e6d85ce
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: f619cc2b1fcc697ebe7af7370b6839fe5ce40419
 workflow-type: tm+mt
-source-wordcount: '5342'
+source-wordcount: '5414'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,25 @@ Skapa riktat innehåll med målläget AEM. Målinriktningsläget och Target-komp
 * Simulera användarupplevelsen.
 * Konfigurera Target-komponenten om du vill ha mer anpassning.
 
-Du kan använda antingen AEM eller Adobe Target som målmotor (du måste ha ett giltigt Adobe Target-konto för att kunna använda Adobe Target). Om du använder Adobe Target måste du först konfigurera integreringen. Se instruktionerna för integrering med Adobe Target. <!--See the[instructions for integrating with Adobe Target](/help/sites-administering/target.md).-->
+>[!NOTE]
+>
+>Målläget är tillgängligt både i sidredigeraren och i Experience Fragment Editor.
+>
+>Följande dokumentation gäller för båda (eftersom de båda fungerar på samma grunder) även om den är skriven för sidredigeraren.
+
+>[!CAUTION]
+>
+>Vid målanpassning i sidredigeraren kan bara Experience Fragment-komponenter användas som mål.
+>
+>Andra komponenttyper kan konverteras till ett Experience Fragment med **Konvertera till upplevelsefragmentvariation** -ikonen i komponentens verktygsfält.
+
+<!--
+>Other component types can be converted to an Experience Fragment using the **Convert to experience fragment variation** icon on the component toolbar:
+>
+>![Converting component to Experience Fragment](/help/sites-cloud/authoring/assets/offers-convert-legacy-icon.png)
+-->
+
+Du kan använda antingen AEM eller Adobe Target som målmotor (du måste ha ett giltigt Adobe Target-konto för att kunna använda Adobe Target). Om du använder Adobe Target måste du först konfigurera integreringen. Se [anvisningar för integrering med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
 
 ![Riktat innehåll](../assets/targeted-content.png)
 

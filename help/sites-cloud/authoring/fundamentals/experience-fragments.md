@@ -2,10 +2,10 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 456b754fad3dc2d8f684f344b69d57d47b823b03
+source-git-commit: ccf5cdf56867ca077d7ff71bfb2f1f4af1b32bd9
 workflow-type: tm+mt
-source-wordcount: '1566'
-ht-degree: 6%
+source-wordcount: '1971'
+ht-degree: 5%
 
 ---
 
@@ -308,6 +308,62 @@ När du redigerar ett Experience Fragment visas tillgängliga byggblock på flik
 
 ![Markera byggblock](/help/sites-cloud/authoring/assets/xf-14.png)
 
+## Personalisering på ert Experience Fragment {#personalization-experience-fragment}
+
+Personalisering på ert Experience Fragment gör att ni som marknadsförare kan definiera målgrupper för Experience Fragment bara en gång och sedan återanvända fragmentet på vilken sida som helst. Det:
+
+* eliminerar behovet av att ange önskade variationer för varje målgrupp varje gång fragmentet används
+* behåller sin formatering i alla erbjudanden
+
+Du kan skapa en Experience Fragment med flera komponenter grupperade inuti det här enskilda fragmentet. Ni kan också skapa variationer av fragmentet för varje specifikt målgruppssegment och sedan återanvända dessa Experience Fragments i alla kanaler som behövs.
+
+Personalisering uppnås genom att definiera **Personalisering** egenskaper på antingen Experience Fragment eller variation, eller den mapp som innehåller fragmenten, det innebär att arv kan åsidosätta personaliseringsegenskaper.
+
+När du konfigurerar dessa egenskaper aktiveras även **Målinriktning** i Experience Fragment-redigeraren.
+
+### Definiera personalisering för ert Experience Fragment {#defining-personalization-experience-fragment}
+
+Så här anpassar du fragment:
+
+1. Navigera till önskad plats i **Upplevelsefragment** konsol.
+
+1. Välj antingen en mapp eller ditt fragment och **Egenskaper** i verktygsfältet.
+
+   >[!NOTE]
+   >
+   >Personaliseringsegenskaper som definieras för en mapp ärvs av alla underordnade mappar nedåt via underträdet och Experience Fragments (och varianter) i det underträdet. De kan åsidosättas genom att arvet bryts.
+
+1. Öppna **Personalisering** för att definiera och spara inställningarna. Exempel:
+
+   ![Experience Fragment - personaliseringsegenskaper](/help/sites-cloud/authoring/assets/xf-personalization-properties.png)
+
+   >[!CAUTION]
+   >
+   >När ett fragment är inbäddat på en Sites-sida, och **Personalisering** har konfigurerats, används endast sidans personaliseringsversion vid sidåtergivning.
+   >
+   >För att målanpassning som utförs på komponenterna i ett fragment ska fungera vid sidåtergivning måste följande villkor vara uppfyllda:
+   >
+   >The **ContextHub-sökväg** markerat i **Personalisering** -fliken måste vara antingen:
+   >
+   >* samma sökväg som den som konfigurerats för sidan där fragmentet ska återges
+      >Eller:
+   >* en sökväg som innehåller en delmängd av de butiker som definieras i ContextHub som konfigurerats för sidan
+
+   >
+   > 
+The **Segmentsökväg** markerat i **Personalisering** -fliken måste vara antingen:
+   * samma sökväg som den som konfigurerats för sidan där fragmentet ska återges, eller
+   * en sökväg som innehåller en delmängd av segmenten som konfigurerats för sidan
+
+
+### Definiera målanpassning för ert upplevelsefragment {#defining-targeting-experience-fragment}
+
+När personaliseringsegenskaperna har konfigurerats är målläget tillgängligt när fragmentet öppnas för redigering.
+
+![Experience Fragment Editor - målläge](/help/sites-cloud/authoring/assets/xf-targeting-mode.png)
+
+Det här läget fungerar på samma sätt som för sidredigering. Se [Målläge för sidredigeraren](/help/sites-cloud/authoring/personalization/targeted-content.md) för mer information.
+
 ## Information om ert Experience Fragment {#details-of-your-experience-fragment}
 
 Information om ditt fragment kan ses:
@@ -324,10 +380,8 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn**[ v
    Egenskaperna är tillgängliga på olika flikar:
 
    >[!CAUTION]
-   >
-   >De här flikarna visas när du öppnar **Egenskaper** från Experience Fragments-konsolen.
-   >
-   >Om du **öppnar egenskaperna** när du redigerar ett upplevelsefragment visas rätt [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
+   De här flikarna visas när du öppnar **Egenskaper** från Experience Fragments-konsolen.
+   Om du **öppnar egenskaperna** när du redigerar ett upplevelsefragment visas rätt [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
 
    ![Experience Fragment-egenskaper](/help/sites-cloud/authoring/assets/xf-17.png)
 
@@ -356,8 +410,7 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn**[ v
 Använda `.plain.` -väljaren i URL-adressen kan du komma åt den vanliga HTML-återgivningen från webbläsaren.
 
 >[!NOTE]
->
->Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att få tillgång till innehållet i Experience Fragment direkt, med endast URL:en](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
+Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att få tillgång till innehållet i Experience Fragment direkt, med endast URL:en](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
 
 ## Publicera upplevelsefragment {#publishing-experience-fragments}
 

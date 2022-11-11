@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 38ca5eea-793b-420b-ae60-3a0bd83caf00
-source-git-commit: bcd9f3cfe6c22a6db51a9e6f96576bb8cdde7d0c
+source-git-commit: 434071de17d6ff56ede561735f7214d96f98cfa0
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,11 @@ Du behöver följande för att skapa ett adaptivt formulär:
 1. Välj en mall på fliken Källa:
 
    * När du väljer en redigerbar mall markeras automatiskt ett tema och en skicka-åtgärd som anges i mallen och **[!UICONTROL Create]** knappen är aktiverad. Du kan gå till **[!UICONTROL Style]** eller **[!UICONTROL Submission]** för att välja ett annat tema eller skicka-åtgärd. Om den valda redigerbara mallen inte anger något tema är knappen Skapa inaktiverad. Du kan gå till **[!UICONTROL Styles]** om du vill välja ett tema manuellt.
+
+      >[!NOTE]
+      >
+      > Du kan också skapa [!UICONTROL Document of Record] mall med en Apadtive Form-redigerare. Mer information finns i [Dokumentstöd i anpassad formulärredigerare](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform).
+
    * När du väljer en statisk mall är alternativen för data, format, sändning, leverans och förhandsgranskning inte tillgängliga. När du skapar ett nytt adaptivt formulär bör du använda en redigerbar mall.
 
 1. Välj ett tema på fliken Format:
@@ -159,3 +164,15 @@ Du kan ändra formulärmodellen för ett adaptivt formulär (JSON-baserat eller 
    * Om det adaptiva formuläret är baserat på en formulärmodell kan du välja ett annat <!-- form template, --> XML- eller JSON-schema eller formulärdatamodell för samma formulärmodell.
 
 1. Tryck **[!UICONTROL Save]** för att spara egenskaperna.
+
+Du kan också ändra formulärmodellens egenskaper i den adaptiva formulärredigeraren eller i den adaptiva formulärmallsredigeraren.
+
+1. Välj **[!UICONTROL Adaptive Form container (Root)]** -komponenten.
+1. Klicka ![Konfigurera ikon](/help/forms/assets/configure-icon.svg) -ikonen för att öppna **[!UICONTROL Properties]** i behållaren för adaptiv form.
+1. Välj **[!UICONTROL Data Model]** och gör något av följande:
+
+   * Om det adaptiva formuläret inte har någon formulärmodell kan du välja en formulärmodell och därefter välja <!-- a form template, --> XML- eller JSON-schema eller formulärdatamodell.
+   * Om det anpassade formuläret är baserat på en formulärmodell kan du inte ändra formulärmodellen. Du kan välja ett annat <!-- form template, --> XML- eller JSON-schema eller formulärdatamodell för samma formulärmodell som är tillämplig.
+1. Tryck ![Spara](/help/forms/assets/check-button.png) för att spara egenskaperna.
+
+![FDM-Schema-support](/help/forms/assets/fdmsupport.png)

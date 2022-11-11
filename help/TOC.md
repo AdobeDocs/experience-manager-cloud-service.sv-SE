@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: d310b48d3abe8ffba2f25a27899cd042a186db84
+source-git-commit: 50b2859dc2a8a83a007bfef30d5c0959e92aa212
 workflow-type: tm+mt
-source-wordcount: '3739'
+source-wordcount: '3759'
 ht-degree: 22%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 22%
    + Allmän information om AEMaaCS {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2022 {#2022}
+         + [Versionsinformation för 2022.8.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-8-0.md)
          + [Versionsinformation för 2022.7.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-7-0.md)
          + [Versionsinformation för 2022.6.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-6-0.md)
          + [Versionsinformation för 2022.5.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-5-0.md)
@@ -388,6 +389,7 @@ ht-degree: 22%
       + [Vattenstämpelresurser](/help/assets/watermark-assets.md)
       + [Bearbeta resurser med [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
       + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
+      + [Hantera PDF-dokument](/help/assets/manage-pdf-documents.md)
    + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
       + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
       + [Metadataschema för mapp](/help/assets/folder-metadata-schema.md)
@@ -501,6 +503,7 @@ ht-degree: 22%
       + [Granska och korrigera konverterade formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/review-correct-ui-edited.html#welcome-to-review-and-correct-editor)
    + Skapa och publicera ett adaptivt formulär {#create-an-adaptive-form}
       + Innan du startar {#before-you-start}
+         + [Introduktion till framtagning av en adaptiv Forms](/help/forms/introduction-forms-authoring.md)
          + [Skapa en mall](/help/forms/template-editor.md)
          + [Skapa ett tema](/help/forms/themes.md)
          + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
@@ -535,19 +538,21 @@ ht-degree: 22%
       + Förbättra tillgängligheten för ett adaptivt formulär {#accessible-adaptive-forms}
          + [Skapa ett tillgängligt adaptivt formulär](/help/forms/creating-accessible-adaptive-forms.md)
       + [Konfigurera Forms Portal](/help/forms/configure-forms-portal.md)
-   + Integrera ett formulär med en eller flera datakällor {#use-form-data-model}
-      + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
-      + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
-      + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
-      + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
-      + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
+   + Integrera {#integrate}
+      + Integrera ett formulär med en eller flera datakällor {#use-form-data-model}
+         + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
+         + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
+         + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
+         + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
+         + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
       + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
       + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
-   + [Integrera med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
-   + [Integrera med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
-   + [Integrera med webbplatser](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/aemform/v1/aemform)
-   + [Integrera med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
-   + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
+      + [Integrera med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
+      + [Integrera med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
+      + [Integrera med webbplatser](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/aemform/v1/aemform)
+      + [Integrera med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
+      + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
+      + [Bädda in adaptiv Forms i AEM Sites](/help/forms/embed-adaptive-form-aem-sites.md)
    + Skapa och använda arbetsflöden {#create-form-centric-workflows}
       + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
       + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
