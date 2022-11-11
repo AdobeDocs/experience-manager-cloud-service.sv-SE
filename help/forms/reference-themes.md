@@ -4,35 +4,39 @@ seo-title: Reference Themes
 description: AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär.
 seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
 discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
-source-git-commit: ad1035e9d8f3a40d6211c9396e2a052ad54817e5
+source-git-commit: 3ca1996ac3a19151c0c05bd972f0aec07edabf69
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
 
-# Referensteman{#reference-themes}
 
-[Teman](/help/forms/themes.md) gör att du kan formatera formulär utan djupare kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en):
+# Referensresurser för Forms as a Cloud Service {#reference-themes}
+
+Du kan hämta referensteman, mallar och formulärdatamodeller genom att installera [Referensresurspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.0.0.zip). Det hjälper dig att snabbt komma igång och snabba upp utvecklingen av adaptiva Forms. Du kan använda [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html) för att distribuera det här paketet till din AEM Forms as a Cloud Service miljö.
+
+Referenstillgångarna i paketet är:
+
+## Teman {#themes}
+
+[Teman](/help/forms/themes.md) gör att du kan formatera formulär utan djupare kunskaper om CSS. Följande teman ingår:
 
 * Beryl
-* Kör
-* Exec-Light
-* Frihet
+* Tranquil
 * Ultramarin
 * Urbane
-* U.S. Web Design Standards
-* Tranquil
+* Canva
 
-Varje tema innehåller en unik och elegant stil som du kan använda för att skapa snygga, anpassningsbara formulär för användarna. Den innehåller en unik formatering för väljare som panel, textruta, numerisk ruta, alternativknapp, tabell och switch. Stilar i dessa teman baseras på krav. I ett visst scenario behöver du till exempel ett minimalistiskt tema med rena teckensnitt. Med Frihetstemat kan du få den där looken.
+Varje tema innehåller en unik och elegant stil som du kan använda för att skapa snygga, anpassningsbara formulär för användarna. Den innehåller en unik formatering för väljare som panel, textruta, numerisk ruta, alternativknapp, tabell och switch. Stilar i dessa teman baseras på krav. I ett visst scenario behöver du till exempel ett minimalistiskt tema med rena teckensnitt. Med Urbane-temat kan du få den där looken.
 
 ![Referensteman](/help/forms/assets/ref-themes.png)
 
-Teman som ingår i det här paketet är responsiva, och stilen i dessa teman definieras för mobila och stationära skärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
+Teman som ingår i det här paketet är responsiva, och format i dessa teman definieras för mobila och stationära skärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
 
 Mer information om hur du installerar paketet finns i [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md).
 
-## Beryl {#beryl}
+### Beryl {#beryl}
 
 Beryltemat används av den anpassade formen We.Gov och betonar användningen av bakgrundsbilder, genomskinlighet och stora, platta ikoner. På skärmbilden nedan ser du hur Beryl-temat ser ut och hur det kan förbättra formateringen av ditt formulär.
 
@@ -42,66 +46,87 @@ Beryltemat används av den anpassade formen We.Gov och betonar användningen av 
 
 ](assets/beryl-1.png)-->
 
-## Kör {#exec}
+<!-- ## Exec {#exec}
 
-Exec-temat undviker heltäckande bakgrundsfyllningar för att framhäva formulärkomponenter. Om du markerar och klickar på komponenter ändras teckenfärgerna. Jämfört med standardtemat för arbetsytan ändras teckenfärgen för texten på den valda fliken till mörkblå. Lägg märke till hur navigerings- och skickaknapparna skiljer sig från Beryl-temat.
+Exec theme avoids solid background fills to emphasize form components. Selecting and clicking components changes font colors. In comparison to the default Canvas theme, font color of the text in the selected tab changes to dark blue. Notice how the navigation and submit buttons are different from the Beryl theme.
 
-![Exektionstema](/help/forms/assets/exec.png)
+![Exec theme](/help/forms/assets/exec.png) -->
 
 <!--[Click to enlarge
 
 ](assets/exec-1.png)-->
 
-## Exec Light {#exec-light}
+<!-- ## Exec Light {#exec-light}
 
-Exec Light-temat använder tomrum för att skapa en sömlös upplevelse. Knapparna Nästa och Skicka ger en heltäckande fyllning och 3D-skugga. De markerade flikarna till vänster får en pil i stället för dubbelbockmarkeringar.
+Exec Light theme uses white space to create a seamless experience. The Next and Submit buttons get a solid fill and 3D shadow. Selected tabs on the left get an arrow instead of double-check marks.
 
-![Exakt ljustema](/help/forms/assets/exec-light.png)
+![Exec light theme](/help/forms/assets/exec-light.png) -->
 
 <!--[Click to enlarge
 
 ](assets/exec-light-1.png)-->
 
-## Frihet {#liberty}
+<!-- ## Liberty {#liberty}
 
-Frihetstemat använder en minimalistisk strategi för att lyfta fram det viktiga. Teckensnittsfärgen på den besökta fliken ändras till exempel till grön. Du kan bara se textrutans nedre kontur, som emulerar utseendet på ett pappersbaserat formulär med linjer. Den aktiva textrutan har en svart underkant kontur medan andra får ljusgrå underkontur.
+Liberty theme uses a minimalist approach to highlight the important. For example, the font color of the visited tab changes to green. You can only see the bottom-outline of the text box which emulates the look of a paper-based form with lines. The active text box has a black bottom-outline while others get light gray bottom-outline.
 
-![Frihetstema](/help/forms/assets/liberty.png)
-<!--[Click to enlarge
+![Liberty theme](/help/forms/assets/liberty.png) -->
+<!--[Click to enlarge](assets/liberty-1.png)-->
 
-](assets/liberty-1.png)-->
-
-## Tranquil {#tranquil}
+### Tranquil {#tranquil}
 
 Med det tillfälliga temat får du ljusa och mörka nyanser av det Tranquil-färgschemat för att framhäva olika komponenter i ett formulär. Alternativknappar, paneler och flikar får till exempel en annan grön ton.
 
 ![Löpande tema](/help/forms/assets/tranquil.png)
 
-<!--[Click to enlarge
+<!--[Click to enlarge](assets/tranquil-1.png)-->
 
-](assets/tranquil-1.png)-->
-
-## Ultramarin {#ultramarine}
+### Ultramarin {#ultramarine}
 
 Ultramarintemat använder djupa blå skuggor för att framhäva komponenter som tabbar, paneler, textrutor och knappar.
 
 ![Ultramarintema](/help/forms/assets/ultramarine.png)
 <!--[Click to enlarge](assets/ultramarine-1.png)-->
 
-## Urbane {#urbane}
+### Urbane {#urbane}
 
 Urbane-temat betonar ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
 
 ![Urbantema](/help/forms/assets/urbane.png)
-<!--[Click to enlarge
+<!--[Click to enlarge](assets/urbane-1.png)-->
 
-](assets/urbane-1.png)-->
+<!-- ## U.S. Web Design Standards {#u-s-web-design-standards}
 
-## U.S. Web Design Standards {#u-s-web-design-standards}
+U.S. Web Design Standards theme, as the name suggests, uses typefaces and styles described in the Draft U.S. Web Design Standards site. The web standard is used by federal organizations to create consistent web experiences across federal government websites.
 
-I temat U.S. Web Design Standards, som namnet antyder, används teckensnitt och format som beskrivs på webbplatsen Draft U.S. Web Design Standards. Webbstandarden används av federala organisationer för att skapa enhetliga webbupplevelser på statliga webbplatser.
+![U.S. Web Design Standards Theme](/help/forms/assets/us-web-standards.png) -->
+<!--[Click to enlarge](assets/usgov.png)-->
 
-![U.S. Web Design Standards Theme](/help/forms/assets/us-web-standards.png)
-<!--[Click to enlarge
 
-](assets/usgov.png)-->
+## Mallar
+
+Med mallar kan du dra och släppa komponenter för att definiera den inledande strukturen i ett anpassat formulär. Följande tillgångar ingår:
+
+### Grundläggande {#basic}
+
+Med den grundläggande mallen kan du snabbt skapa ett registreringsformulär.
+
+![Grundläggande tema](/help/forms/assets/exec.png)
+
+### Tom {#blank}
+
+Grundmallen innehåller en tom arbetsyta som du kan använda för att skapa en inledande struktur för adaptiva formulär för din organisation.
+
+## Formulärdatamodeller
+
+### Microsoft® Dynamics 365
+
+Datamodellen för Microsoft Dynamics 365 hjälper dig att använda Microsoft Dynamics 365 som datakälla. Det innehåller också exempeltjänster för att läsa, uppdatera, ta bort och lägga till data i datakällan för Microsoft Dynamics 365.
+
+![Microsoft® Dynamics 365 Form Data Model](/help/forms/assets/microsoft-dynamic-fdm.png)
+
+### Salesforce
+
+Salesforce-datamodellen hjälper dig att använda Salesforce som datakälla. Det innehåller också exempeltjänster för att läsa, uppdatera, ta bort och lägga till data i Salesforce.
+
+![Salesforce-formulärdatamodell](/help/forms/assets/salesforce-fdm.png)
