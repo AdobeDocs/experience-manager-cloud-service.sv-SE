@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: dce60b09a93ddf09b6b9285b832de91f6233bdae
+source-git-commit: 5d4da55a8485f9b1793dc0b997be40244188b052
 workflow-type: tm+mt
-source-wordcount: '3770'
+source-wordcount: '3766'
 ht-degree: 22%
 
 ---
@@ -489,8 +489,6 @@ ht-degree: 22%
    + [Viktiga funktioner](/help/forms/key-features.md)
    + [Betydande ändringar](/help/forms/notable-changes.md)
    + [Arkitektur](/help/forms/aem-forms-cloud-service-architecture.md)
-   + AEM Forms Reference Collaterals {#formsreference-themes}
-      + [Referensteman](/help/forms/reference-themes.md)
    + Konfigurera och konfigurera tjänsten {#setup-environment}
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
@@ -509,6 +507,7 @@ ht-degree: 22%
          + [Skapa en mall](/help/forms/template-editor.md)
          + [Skapa ett tema](/help/forms/themes.md)
          + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
+         + [Referensresurser](/help/forms/reference-assets.md)
       + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
          + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
          + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
