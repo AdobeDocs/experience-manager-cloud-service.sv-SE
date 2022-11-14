@@ -2,9 +2,9 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Underhållsaktiviteter på AEM as a Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 4e820caa043eeba22d14894d6943c957ea0bf80a
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
@@ -44,23 +44,23 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
   <tr>
     <td>Rensa version</td>
     <td>Adobe</td>
-    <td>För att författarnivån ska kunna fortsätta att fungera måste äldre versioner av varje del av innehållet under <code>/content</code> databasens nod rensas enligt följande:<br><br> <!--Alexandru: please leave the two line breaks in place, otherwise spacing won't render properly-->
+    <td>För befintliga miljöer (de som skapats före 1 mars 2023) är rensning inaktiverat och kommer inte att aktiveras i framtiden såvida inte kunden uttryckligen aktiverar det, då de även kan konfigurera det med anpassade värden.<br><br> <!--Alexandru: please leave the two line breaks in place, otherwise spacing won't render properly-->Nya miljöer (de som skapats från och med 1 mars 2023) har rensning aktiverat som standard med värdena nedan, och kunderna kan konfigurera med anpassade värden.
      <ol>
        <li>Versioner som är äldre än 30 dagar tas bort</li>
        <li>De senaste 5 versionerna de senaste 30 dagarna sparas</li>
        <li>Oavsett reglerna ovan bevaras den senaste versionen.</li>
-     </ol><br>OBS! beteendet som beskrivs ovan används som standard för nya miljöer som skapas efter den 14 mars 2022. Skicka in en kundsupportanmälan om du behöver andra inställningar.</td>
+     </ol></td>
   </td>
   </tr>
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Adobe</td>
-    <td>För att författarnivån ska fortsätta att fungera måste äldre granskningsloggar finnas under <code>/content</code> databasens nod rensas enligt följande:<br><br> <!-- See above for the two line breaks -->
+    <td>För befintliga miljöer (de som skapats före 1 mars 2023) är rensning inaktiverat och kommer inte att aktiveras i framtiden såvida inte kunden uttryckligen aktiverar det, då de även kan konfigurera det med anpassade värden.<br><br> <!-- See above for the two line breaks -->I nya miljöer (som skapats från och med 1 mars 2023) är rensning aktiverat som standard under <code>/content</code> databasens nod enligt följande:
      <ol>
        <li>Granskningsloggar som är äldre än 3 dagar tas bort för replikeringsgranskning</li>
        <li>För DAM-granskning (Assets) tas granskningsloggar som är äldre än 30 dagar bort</li>
        <li>Vid sidgranskning tas loggar som är äldre än 3 dagar bort.</li>
-     </ol><br>OBS! beteendet som beskrivs ovan används som standard för nya miljöer som skapas efter den 14 mars 2022. Skicka in en kundsupportanmälan om du behöver andra inställningar.</td>
+     </ol></td>
    </td>
   </tr>
   <tr>
