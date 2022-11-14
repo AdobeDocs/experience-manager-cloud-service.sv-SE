@@ -4,9 +4,9 @@ seo-title: Reference Themes
 description: AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär.
 seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
 discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
-source-git-commit: 5d4da55a8485f9b1793dc0b997be40244188b052
+source-git-commit: 094e90050747d5412f34b79cd5a11b8f5e05e6eb
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,7 @@ ht-degree: 0%
 
 # Referensresurser för Forms as a Cloud Service {#reference-themes}
 
-Du kan hämta referensteman, mallar och formulärdatamodeller genom att installera [Referensresurspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.0.0.zip). Det hjälper dig att snabbt komma igång och snabba upp utvecklingen av adaptiva Forms. Du kan använda [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html) för att distribuera det här paketet till din AEM Forms as a Cloud Service miljö.
-
+Du kan hämta referensteman, mallar och formulärdatamodeller genom att installera [Referensresurspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.0.0.zip). Det hjälper dig att snabbt komma igång och snabba upp utvecklingen av adaptiva Forms. Du kan använda [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html) för att distribuera det här paketet till din Forms as a Cloud Service miljö.
 Referenstillgångarna i paketet är:
 
 ## Teman {#themes}

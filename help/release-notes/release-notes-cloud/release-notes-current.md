@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: ac209259b8e8ac7c1734c0662dd640809b4e2932
+source-git-commit: 094e90050747d5412f34b79cd5a11b8f5e05e6eb
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -75,6 +75,18 @@ Titta på videon med versionsöversikten för oktober 2022 om du vill se en samm
 * Experience Manager Assets nu [stöder SAS-token](/help/assets/add-assets.md#asset-bulk-ingestor) utöver åtkomstnyckeln för autentisering vid anslutning till Azure Blob Storage-datakällan för inmatning av resurser med verktyget för massimport.
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
+
+### Nya funktioner i [!DNL Forms] kanal {#new-features-available-in-channel}
+
+* [Adaptiv Forms-guide](/help/forms/creating-adaptive-form.md): AEM Forms har en användarvänlig guide för att snabbt skapa Adaptive Forms. Guiden har en snabb fliknavigering där du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär. Den här versionen innehåller följande förbättringar av guiden:
+
+   * Markera eller avmarkera fält: Med guiden kan du skapa ett adaptivt formulär baserat på scheman för JSON och Formulärdatamodell. Nu kan du markera delmängder av fält i ett schema som ska inkluderas i ett anpassat formulär. De markerade fälten konverteras till motsvarande komponenter för datainhämtning från adaptiva formulär för att snabbt skapa de anpassade formulären.
+
+   * Använd statiska mallar: Kunder som har investerat i statiska mallar kan fortsätta använda molnet genom att använda statiska mallar i guiden för att skapa anpassade formulär. Detta ger kunderna ytterligare tid att migrera gamla statiska mallar till moderna redigerbara mallar.
+
+* [Ta bort dolda fält från ett DoR-dokument (Document of Record) vid bearbetning på serversidan](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md): Du kan generera dokumentet med posten PDF för slutanvändare som bara innehåller de fält som var synliga för dem under datainhämtningen. När formuläret skickas validerar servern vilka fält som dolts för slutanvändaren baserat på inskickade data och utesluter att dokumentet är enhetligt.
+
+
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
