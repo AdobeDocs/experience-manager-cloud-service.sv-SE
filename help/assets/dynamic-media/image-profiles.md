@@ -4,9 +4,9 @@ description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller i
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 7ab618893ab18dde6dbbceaf098fe7334b503d07
+source-git-commit: ce14d830db2f3e163102d748f5fbaa2de4da17b5
 workflow-type: tm+mt
-source-wordcount: '3205'
+source-wordcount: '3198'
 ht-degree: 5%
 
 ---
@@ -84,14 +84,13 @@ Adobe rekommenderar att du granskar alla genererade beskärningar och färgrutor
 
 Den maximala upplösningen för indatafilens storlek som stöds är 16 kB.
 
-CMYK-bildformatet stöds inte med smart beskärning.
-
 >[!NOTE]
 Upplösningen 16K är en skärmupplösning med ungefär 16 000 pixlar vågrätt. Den vanligaste 16K-upplösningen är 1 5360 × 8 640, vilket fördubblar pixelantalet för 8K UHD i varje dimension, vilket ger totalt fyra gånger så många pixlar. Upplösningen har 132,7 megapixlar, 16 gånger så många pixlar som upplösningen 4K och 64 gånger så många pixlar som upplösningen 1080p.
 
 | Bildformat | Skiftlägesokänsligt filtillägg | MIME-typ | Färgrymd för indata som stöds | Största tillåtna indatafilstorlek | Bildformat som stöds? |
 | --- | --- | --- | --- | --- | --- |
 | BMP | `.bmp` | image/bmp | sRGB | 4 GB | Ja |
+| CMYK |  |  |  |  | Nej |
 | EPS |  |  |  |  | Nej |
 | GIF | `.gif` | image/gif | sRGB | 15 GB | Ja, den första bildrutan i det animerade GIF används för återgivningen. Du kan inte konfigurera eller ändra den första bildrutan. |
 | JPEG | `.jpg` and `.jpeg` | image/jpeg | sRGB | 15 GB | Ja |
