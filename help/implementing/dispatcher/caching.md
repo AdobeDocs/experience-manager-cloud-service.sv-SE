@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: Cache i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: e354443e4f21cd1bc61593b95f718fbb1126ea5a
+source-git-commit: 18f8a0737dbcce643a5949fb5f942e73f066fa59
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2666'
 ht-degree: 1%
 
 ---
@@ -199,9 +199,9 @@ När en begäran från HEAD tas emot i CDN i Adobe för en resurs som är **not*
 
 ### Parametrar för marknadsföringskampanjer {#marketing-parameters}
 
-Webbplatsadresser innehåller ofta marknadsföringskampanjparametrar som används för att spåra en kampanjs framgång. Om du vill använda dispatcherns cache effektivt bör du konfigurera dispatcherkonfigurationens `ignoreUrlParams` egenskap som [dokumenterad](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters).
+Webbplatsadresser innehåller ofta marknadsföringskampanjparametrar som används för att spåra en kampanjs framgång. Om du vill använda dispatchercachen effektivt bör du konfigurera dispatcherkonfigurationens `ignoreUrlParams` egenskap som [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters).
 
-The `ignoreUrlParams` -avsnittet måste vara okommenterat och referera till filen `conf.dispatcher.d/cache/marketing_query_parameters.any`, som kan ändras genom att raderna som motsvarar de parametrar som är relevanta för era marknadsföringskanaler tas bort. Du kan även lägga till andra parametrar.
+The `ignoreUrlParams` -avsnittet måste vara okommenterat och referera till filen `conf.dispatcher.d/cache/marketing_query_parameters.any`. Filen kan ändras genom att raderna som motsvarar de parametrar som är relevanta för marknadsföringskanalerna avkommenteras. Du kan även lägga till andra parametrar.
 
 ```
 /ignoreUrlParams {
