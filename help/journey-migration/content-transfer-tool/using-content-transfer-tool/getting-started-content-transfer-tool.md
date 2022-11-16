@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: c6a27c996458259904b6532c69a1bd33e2f725c6
+source-git-commit: 1dfef0f1157ead7f1240e9a41794436197136daa
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1327'
 ht-degree: 6%
 
 ---
@@ -36,6 +36,9 @@ Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa
 
 * Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
 * I/O-slutpunkten för användarmappning: `usermanagement.adobe.io`
+
+>[!NOTE]
+>Om extraheringen misslyckas på grund av följande fel: &quot;javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: Det gick inte att skapa PKIX-sökväg: sun.security.provider.certpath.SunCertPathBuilderException: det går inte att hitta en giltig certifieringssökväg till det begärda målet. Detta kan åtgärdas genom att det aktuella certifikatutfärdarcertifikatet importeras.
 
 ### Aktivera SSL-loggning {#enable-ssl-logging}
 
