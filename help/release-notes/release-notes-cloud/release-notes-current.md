@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 6446f5e334c3802505d6a41035b6d2ab3ad2b72c
+source-git-commit: 272225bbeea4443bf97349d11805dbb3386fd2cc
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -25,14 +25,13 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!CAUTION]
 >
->**Uteslutningsperiod för Black Friday- och Julunderhållsplaner**
+>**Planerad period för undantag för underhåll**
 >
 > Inget automatiskt AEMaaCS-underhåll kommer att utföras under följande tidsramar med början och slut vid midnatt (00:00) CET:
 >
 >* Måndag, 21 november till måndag, 5 december
 >* Måndag, 19 december till tisdag, 3 januari
->
-> Dessa perioder omfattar Black Friday, Cyber Monday, julafton och New Year.
+
 
 ## Releasedatum {#release-date}
 
