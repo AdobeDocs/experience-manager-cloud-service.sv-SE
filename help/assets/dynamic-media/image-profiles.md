@@ -4,10 +4,10 @@ description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller i
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: ce14d830db2f3e163102d748f5fbaa2de4da17b5
+source-git-commit: 568109e90df20aae3181975b1b83fd0dd1857eb3
 workflow-type: tm+mt
-source-wordcount: '3198'
-ht-degree: 5%
+source-wordcount: '3244'
+ht-degree: 4%
 
 ---
 
@@ -56,9 +56,9 @@ Skärpa beskrivs i [Skärpa bilder](/help/assets/dynamic-media/assets/sharpening
 
 När du implementerar Smart Crop på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Begränsning har införts | Ändring till begränsning den 31 december 2022 |
-| --- | --- | --- | --- |
-| Antal smarta beskärningar per bild | 5 | 100 | 20 |
+| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| --- | --- | --- |
+| Antal smarta beskärningar per bild | 5 | 100 |
 
 Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.md).
 
@@ -71,7 +71,8 @@ Varje generering av Smart Crop som du skapar kräver extra bearbetning. Om du ti
 Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
 
 >[!IMPORTANT]
-Adobe rekommenderar att du granskar alla genererade beskärningar och färgrutor för att se till att de är lämpliga och relevanta för ert varumärke och era värden.
+・ Adobe rekommenderar att ni granskar alla genererade grödor och färgrutor för att säkerställa att de är lämpliga och relevanta för ert varumärke och era värden.
+・ CMYK-bildformatet stöds inte med smart beskärning.
 
 | Alternativ | När ska användas | Beskrivning |
 | --- | --- | --- |
@@ -199,7 +200,8 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 ## Redigera smart beskärning eller smarta färgrutor för en enskild bild {#editing-the-smart-crop-or-smart-swatch-of-a-single-image}
 
 >[!IMPORTANT]
-Adobe rekommenderar att du granskar alla genererade smarta beskärningar och smarta färgrutor för att se till att de är lämpliga och relevanta för ert varumärke och era värden.
+・ Adobe rekommenderar att du granskar alla genererade smarta beskärningar och smarta färgrutor för att säkerställa att de är lämpliga och relevanta för ert varumärke och era värderingar.
+・ CMYK-bildformatet stöds inte med smart beskärning.
 
 Du kan justera eller ändra storlek på bildens smarta beskärningsfönster manuellt för att ytterligare förfina fokalpunkten.
 
@@ -231,6 +233,10 @@ Se även [Redigera smart beskärning eller smart färgruta för flera bilder](#e
 1. I sidans övre högra hörn väljer du **[!UICONTROL Save]** väljer **[!UICONTROL Close]** för att återgå till resursmappen.
 
 ## Redigera smart beskärning eller smart färgruta för flera bilder {#editing-the-smart-crop-or-smart-swatch-of-multiple-images}
+
+>[!IMPORTANT]
+・ Adobe rekommenderar att du granskar alla genererade smarta beskärningar och smarta färgrutor för att säkerställa att de är lämpliga och relevanta för ert varumärke och era värderingar.
+・ CMYK-bildformatet stöds inte med smart beskärning.
 
 När du har tillämpat en bildprofil - som innehåller smart beskärning - på en mapp tillämpas en beskärning på alla bilder i den mappen. Om du vill kan du *manuellt* justera om eller ändra storlek på det smarta beskärningsfönstret i flera bilder för att ytterligare förfina fokalpunkten.
 
