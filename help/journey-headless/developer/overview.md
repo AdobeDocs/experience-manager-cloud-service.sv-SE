@@ -3,9 +3,9 @@ title: AEM Headless CMS Developer Journey
 description: Läs om headless-utveckling med Adobe Experience Manager (AEM) som Headless CMS. Lär dig hur du använder funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API för att leverera headless-innehåll.
 landing-page-description: Få en förståelse för innehållsleverans och implementering utan problem. Läs mer om hur ni utvecklar er strategi inom ert företag.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: 06aec2fa43db2393416dd5efab886d9c301ffdb2
+source-git-commit: 64862456bfbffe1799a3f0b6ea3353f45e60c52f
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1051'
 ht-degree: 1%
 
 ---
@@ -61,6 +61,8 @@ Vi kommer att ta upp många ämnen på den här resan, som kommer att ge dig gru
 | 7 | [Sammanställ allt - appen och ditt innehåll i AEM Headless](put-it-all-together.md) | Lär dig hur du tar ditt AEM och förbereder det för publicering med AEM Headless SDK. |
 | 8 | [Så här lever du med ditt headless-program](go-live.md) | Lär dig hur du distribuerar programmet live och tar din lokala kod i Git och flyttar den till Cloud Manager Git för CI/CD-pipeline. |
 | 9 | [Valfritt - Så här skapar du enkelsidiga program (SPA) med AEM](create-spa.md) | Lär dig hur du kombinerar headful och headless-leverans och hur du kan skapa redigerbara SPA med hjälp AEM SPA Editor. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## What&#39;s Next {#what-is-next}
 
