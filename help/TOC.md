@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 5d4da55a8485f9b1793dc0b997be40244188b052
+source-git-commit: 6d5ca58e8545da89dc424304586bc8a1afc07540
 workflow-type: tm+mt
-source-wordcount: '3766'
+source-wordcount: '3786'
 ht-degree: 22%
 
 ---
@@ -645,6 +645,7 @@ ht-degree: 22%
 + Headless {#headless}
    + [Vad är ett headless CMS?](/help/headless/what-is-headless.md)
    + [Introduktion till AEM Headless](/help/headless/introduction.md)
+   + [Developer Portal (Additional Resources)](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
    + Inställningar {#setup}
       + [Introduktion](/help/headless/setup/introduction.md)
       + [Konfiguration](/help/headless/setup/create-configuration.md)
@@ -692,6 +693,7 @@ ht-degree: 22%
          + [Hur man sammanför allt](/help/journey-headless/developer/put-it-all-together.md)
          + [Så här lever du med ditt headless-program](/help/journey-headless/developer/go-live.md)
          + [Valfritt - Så här skapar du enkelsidiga program med AEM](/help/journey-headless/developer/create-spa.md)
+         + [Developer Portal (Additional Resources)](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
       + Headless Content Architect Journey {#architect}
          + [AEM Headless Content Architect Journey Overview](/help/journey-headless/architect/overview.md)
          + [Innehållsmodellering för Headless med AEM - en introduktion](/help/journey-headless/architect/introduction.md)
