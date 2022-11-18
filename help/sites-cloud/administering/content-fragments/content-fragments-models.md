@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för dina C
 feature: Content Fragments
 role: User
 exl-id: 24b1806f-2e8c-49ec-8cb7-a66a3cbe91cd
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: 17705b698915d4fac1e60ad06396d40f2e19ebd5
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2898'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ Så här använder du modeller för innehållsfragment:
 
 1. [Aktivera funktionen Content Fragment Model för instansen](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md)
 1. [Skapa](#creating-a-content-fragment-model)och [konfigurera](#defining-your-content-fragment-model), era modeller för innehållsfragment
-1. [Aktivera modeller för innehållsfragment](#enabling-disabling-a-content-fragment-model) för användning när du skapar innehållsfragment för användning när du skapar innehållsfragment
+1. [Aktivera modeller för innehållsfragment](#enabling-disabling-a-content-fragment-model) för användning när du skapar innehållsfragment
 1. [Tillåt dina modeller för innehållsfragment i de resursmappar som krävs](#allowing-content-fragment-models-assets-folder) efter konfiguration **Profiler**.
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
