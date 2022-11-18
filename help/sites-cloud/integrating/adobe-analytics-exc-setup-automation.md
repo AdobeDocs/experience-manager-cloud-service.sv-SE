@@ -1,10 +1,10 @@
 ---
 title: Integrera Adobe Analytics med Experience Cloud Setup Automation
-description: Experience Cloud Setup Automation är ett enkelt och automatiserat sätt att integrera och instrumentera Experience Manager Sites med Experience Platform Launch och Adobe Analytics med ett enkelt gränssnitt. Lär dig hur du använder den automatiska konfigurationen med din egen webbplats.
+description: Experience Cloud Setup Automation är ett enkelt och automatiserat sätt att integrera och instrumentera Experience Manager Sites med Experience Platform Tags och Adobe Analytics med ett enkelt gränssnitt. Lär dig hur du använder den automatiska konfigurationen med din egen webbplats.
 feature: Administering
 role: Admin
 exl-id: 351ead2c-7b0d-4bd9-a020-47516948d467
-source-git-commit: 8b8811decee087291b74fa0e3839991f6a7f3850
+source-git-commit: 539d3947964652dd92620ce0b0b057754742be96
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Integrera Adobe Analytics med Experience Cloud Setup Automation {#integrate-adobe-analytics-automation-setup}
 
-Experience Cloud Setup Automation är ett enkelt och automatiserat sätt att integrera och instrumentera Experience Manager Sites med Experience Platform Launch och Adobe Analytics med ett enkelt gränssnitt.
+Experience Cloud Setup Automation är ett enkelt och automatiserat sätt att integrera och instrumentera Experience Manager Sites med Experience Platform Tags och Adobe Analytics med ett enkelt gränssnitt.
 
 Det har aldrig varit enklare att integrera Adobe Analytics med AEM Sites. Med Experience Cloud Setup Automation kan du konfigurera, integrera och instrumentera din webbplats för att få en inblick i hur väl era kunder engagerar och konverterar med bara några klick.
 
-I den här videon utforskas hur en AEM sajt integreras med Experience Platform Launch och Analytics med Experience Cloud Setup Automation:
+I den här videon utforskas hur en AEM är integrerad med Experience Platform Tags and Analytics med Experience Cloud Setup Automation:
 
 >[!VIDEO](https://video.tv.adobe.com/v/345372/?quality=12)
 
@@ -57,7 +57,7 @@ Miljön bör nu vara redo för Experience Cloud Setup Automation.
    Automatiseringsinställningarna görs asynkront. The **Kontrollera integreringsstatus** visar integreringens aktuella status.
 
    * **Pågår** - anger att jobbet körs.
-   * **Integreringen är klar** - anger att jobbet har slutfört integreringen av Analytics och Launch, konfigureringen av Launch-tillägg och Launch-regler samt skapandet av nya Report Suite i Adobe Analytics.
+   * **Integreringen är klar** - anger att jobbet har slutfört integreringen av analys och taggar, konfigureringen av taggtillägg och taggar samt skapandet av nya Report Suite i Adobe Analytics.
    * **Fel** - anger att det automatiska jobbet inte kunde slutföras. Kontrollera loggfilerna för det här jobbet genom att klicka på länken Loggar.
 
 ## Validera AEM
@@ -66,7 +66,7 @@ När automatiseringen är klar validerar du att webbplatsen nu kör Analytics-h�
 
 1. Öppna en sida på webbplatsen med **Webbplatsredigeraren**.
 1. Använd **Visa som publicerad** om du vill läsa in en publicerad version av sidan.
-1. Använd webbläsarens utvecklarverktyg för att inspektera nätverkstrafiken och att **Starta** och `AppMeasurement.js` filer läses nu in.
+1. Använd webbläsarens utvecklarverktyg för att inspektera nätverkstrafiken och att **Taggar** och `AppMeasurement.js` filer läses nu in.
 1. Inspect är webbläsarens konsol för att se att händelser på sid- och komponentnivå utlöses och samlas in av Adobe Client Data Layer.
 
 ## Validera Analytics-konfiguration
