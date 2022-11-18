@@ -4,7 +4,7 @@ description: Lär dig hur du ogiltigförklarar det cachelagrade innehållet i CD
 feature: Asset Management
 role: Admin,User
 exl-id: c631079b-8082-4ff7-a122-dac1b20d8acd
-source-git-commit: 5c8e3a7ea87b70707b2613ffc7b4f51341303614
+source-git-commit: 532d32334456b4b791e3a5ffe17a780f378dd1cc
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 0%
@@ -23,11 +23,11 @@ Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb lever
 
 Om du har aktiverat [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md) på ditt konto och du använder det Adobe-paketerade CDN, kan du rensa alla URL:er med olika frågesträngar genom att rensa den enda bas-URL:en.
 
-Inaktivera `https://weekendsite.scene7.com/is/image/grundfos/image`blir även följande URL:er ogiltiga:
+Inaktivera `https://weekendsite.scene7.com/is/image/<CUSTOMER-NAME>/image`blir även följande URL:er ogiltiga:
 
-* `https://weekendsite.scene7.com/is/image/grundfos/image`
-* `https://weekendsite.scene7.com/is/image/grundfos/image?wid=300`
-* `https://weekendsite.scene7.com/is/image/grundfos/image?$PLP$`
+* `https://weekendsite.scene7.com/is/image/<CUSTOMER-NAME>/image`
+* `https://weekendsite.scene7.com/is/image/<CUSTOMER-NAME>/image?wid=300`
+* `https://weekendsite.scene7.com/is/image/<CUSTOMER-NAME>/image?$PLP$`
 * och så vidare.
 
 Detta ogiltigförklarande gäller dock inte för generiska domäner som saknar stöd för Smart Imaging, som `s7d1.scene7.com`. Sådana domäner behöver fortfarande den fullständiga URL:en för att ogiltigförklaras.

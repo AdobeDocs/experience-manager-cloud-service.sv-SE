@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: e8b4fe047c9656aa592fc851279dc6a189144023
+source-git-commit: 4b716f3a41e431b47c8f439d4d24610b79f22736
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 12%
+source-wordcount: '956'
+ht-degree: 11%
 
 ---
 
@@ -26,6 +26,11 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 1. Gå till Cloud Acceleration Manager. Klicka på ditt projektkort och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och klicka på **Nytt intag**
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-01.png)
+
+
+1. Granska checklistan för konsumtion och se till att alla steg har slutförts. Detta är nödvändiga steg för att säkerställa ett lyckat intag. Du kan fortsätta till **Nästa** endast om checklistan har slutförts.
+
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/Ingestion-checklist.png)
 
 1. Ange nödvändig information för att skapa ett nytt intag.
 
