@@ -2,9 +2,9 @@
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
 exl-id: e6ac88f0-4b3f-43a1-98bc-8c6608713784
-source-git-commit: 24331b974ded34ef949cc3d6fb157b124c145dee
+source-git-commit: dbf01e5bd9ee83e378b4297d2f3d341d548f9238
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '683'
 ht-degree: 2%
 
 ---
@@ -110,18 +110,18 @@ Följ det här avsnittet för att utforska aktivitetskortet för innehållsöver
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-3.png)
 
-### Beräknar överföringstid för innehåll {#calculating}
+<!--### Estimating Content Transfer Time {#calculating}
 
-En verktygskalkylator för innehållsöverföring har tillhandahållits för att beräkna hur lång tid det kan ta att slutföra innehållsöverföringsaktiviteten. Du kan använda storleksreglaget för innehållsdatabas för att välja den storlek som gäller för ditt projekt. Överföringstiden varierar för extraherings- och intagsfaserna.
+A Content Transfer Tool calculator has been provided to estimate how long it could take to complete the content transfer activity. You can use the content repository size slider to select the size that applies to your project. The transfer times vary for the extraction and ingestion phases. 
 
-![bild](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-4.png)
+   ![image](/help/journey-migration/cloud-acceleration-manager/assets/contenttransfer-4.png)
 
->[!NOTE]
->Dessa tider är bara uppskattningar. Faktor som nätverkshastigheter och tid att skala upp instanser har inte tagits med i dessa uppskattningar.
+   >[!NOTE]
+   >These times are estimates only. Factor such as network speeds and time to scale up instances have not been accounted for in these estimates.
 
-Om du vill beräkna storleken på AEM kan du köra rapporten Diskanvändning under `http://HOST:PORT/etc/reports/diskusage.html`.
+To estimate the size of the AEM Repository, you can run the Disk Usage report under `http://HOST:PORT/etc/reports/diskusage.html`. 
 
-Du kan också beräkna storleken på specifika databassökvägar med hjälp av `path` parameter, till exempel `http://HOST:PORT/etc/reports/diskusage.html?path=/content/dam`.
+You can also estimate the size of specific repository paths by using the `path` parameter, for example, `http://HOST:PORT/etc/reports/diskusage.html?path=/content/dam`. -->
 
 ## What&#39;s Next {#whats-next}
 
