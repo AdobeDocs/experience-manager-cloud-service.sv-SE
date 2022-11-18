@@ -3,9 +3,9 @@ title: Dispatcher i molnet
 description: Dispatcher i molnet
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
-source-git-commit: 69cb9b9015ed3a7acdcc42c7e25fb45b479a7f4e
+source-git-commit: 10da82c572682156534f7a897715d703ba3bde3d
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1010'
 ht-degree: 1%
 
 ---
@@ -100,6 +100,7 @@ Tabellen nedan visar vilka cachemoduler som stöds:
 | `mod_substitute` | [https://httpd.apache.org/docs/2.4/mod/mod_substitute.html](https://httpd.apache.org/docs/2.4/mod/mod_substitute.html) |
 | `mod_userdir` | [https://httpd.apache.org/docs/2.4/mod/mod_userdir.html](https://httpd.apache.org/docs/2.4/mod/mod_userdir.html) |
 | `mod_macro` | [https://httpd.apache.org/docs/2.4/mod/mod_macro.html](https://httpd.apache.org/docs/2.4/mod/mod_macro.html) |
+| `mod_include (no directives supported)` | [https://httpd.apache.org/docs/2.4/mod/mod_include.html](https://httpd.apache.org/docs/2.4/mod/mod_include.html) |
 
 
 Kunder kan inte lägga till godtyckliga moduler, men ytterligare moduler kan övervägas för framtida införande. Kunder kan hitta listan över direktiv som är tillgängliga för en viss Dispatcher-version genom att köra validerarens tillåtslista-kommando i SDK:n.
