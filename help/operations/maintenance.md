@@ -2,9 +2,9 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Underhållsaktiviteter på AEM as a Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: 4e820caa043eeba22d14894d6943c957ea0bf80a
+source-git-commit: 174e9b2410745ec766dbcd071a3508a509b8367a
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
     <td>Kund</td>
     <td>
     <p>Måste göras i git. Åsidosätt den färdiga konfigurationsnoden för underhållsperioden under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code> eller <code>granite_daily</code>.</p>
-    <p>Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den) <code>granite_TaskPurgeTask</code>) med lämpliga egenskaper. Konfigurera OSGI-egenskaperna.</p>
+    <p>Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan. Ge den ett namn <code>granite_TaskPurgeTask</code>, med attribut <code>sling:resourceType</code> ange till <code>granite/operations/components/maintenance/task</code> och-attribut <code>granite.maintenance.name</code> ange till <code>TaskPurge</code>. Konfigurera OSGI-egenskaperna, se <code>com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask</code> för listan med egenskaper.</p>
   </td>
   </tr>
     <tr>
