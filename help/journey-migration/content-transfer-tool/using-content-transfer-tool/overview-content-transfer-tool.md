@@ -2,7 +2,7 @@
 title: Översikt över Content Transfer Tool
 description: Översikt över Content Transfer Tool
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: c6a27c996458259904b6532c69a1bd33e2f725c6
+source-git-commit: 99ecf1309b9fa7613bfb9c99de9677700082f128
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 43%
@@ -34,7 +34,7 @@ Det finns en ny version av verktyget Innehållsöverföring som integrerar inneh
 
 * Självbetjäningssätt att extrahera en migreringsuppsättning en gång och importera den i flera miljöer parallellt
 * Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsräcken och felhantering
-* Inmatningsloggarna är beständiga och finns alltid tillgängliga för felsökning
+* Inmatningsloggarna är beständiga och är alltid tillgängliga för felsökning
 
 Om du vill börja använda den nya versionen måste du avinstallera tidigare versioner av verktyget Innehållsöverföring eftersom det har skett en stor arkitektoniska förändring i verktyget.
 

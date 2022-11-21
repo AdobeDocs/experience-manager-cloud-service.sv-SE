@@ -2,9 +2,9 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 4b716f3a41e431b47c8f439d4d24610b79f22736
+source-git-commit: 319a9bc2aa6d82d0fb322cd1f2ca37e95c33e97d
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1029'
 ht-degree: 11%
 
 ---
@@ -40,6 +40,10 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
    >[!NOTE]
    >
    >Om källan var författare rekommenderar vi att du importerar den till nivån Författare på målet. Om källan var Publish ska även målet vara Publish.
+
+   >[!NOTE]
+   >
+   >Om målnivån är `Author`, kommer författarinstansen att stängas under den tid som inmatningen pågår och kommer inte att vara tillgänglig för användare (till exempel författare eller alla som utför underhåll). Detta är för att skydda systemet och förhindra ändringar som antingen kan gå förlorade eller orsaka en ingiftskonflikt. Se till att ditt team är medvetna om detta. Observera också att miljön kommer att visas i viloläge under författarintaget.
 
    >[!NOTE]
    >

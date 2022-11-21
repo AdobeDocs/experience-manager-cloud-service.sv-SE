@@ -2,7 +2,7 @@
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
-source-git-commit: 015f3b0232861ac961922245650cb02db44daf77
+source-git-commit: 99ecf1309b9fa7613bfb9c99de9677700082f128
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 1%
@@ -136,7 +136,7 @@ Förutom att den ingår i matningsloggen kan man även få tillgång till valide
 
 ### Valideringen misslyckades. Vad händer nu? {#validation-fail}
 
-Det första steget är att avgöra om intag verkligen misslyckades eller om det extraherade innehållet redan finns i målmiljön. Detta kan inträffa om ett intag upprepas med **Rensa befintligt innehåll i molninstansen före intag** Alternativet är inaktiverat.
+Det första steget är att avgöra om intag verkligen misslyckades eller om det extraherade innehållet redan finns i målmiljön. Detta kan inträffa om ett intag upprepas med **Rensa befintligt innehåll i molninstansen före intag** inaktiverat alternativ.
 
 Verifiera genom att välja en sökväg i valideringsrapporten och kontrollera om den finns i målmiljön. Om det här är en publiceringsmiljö kan du vara begränsad till att kontrollera sidor och resurser direkt. Öppna en biljett hos Kundtjänst om du behöver hjälp med det här steget.
 
