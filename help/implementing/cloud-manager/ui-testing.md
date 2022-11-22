@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: 31e84b7383cd9774b0eaf8ee0f2fe39bcd77fa15
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Ta med en `testing.properties` fil i build-artefakten, lägga till en `include` 
 <includes>
     <include>Dockerfile</include>
     <include>wait-for-grid.sh</include>
-    <include>testing.properties</include> <!- opt-in test module in Cloud Manager -->
+    <include>testing.properties</include> <!-- opt-in test module in Cloud Manager -->
 </includes>
 [...]
 ```
@@ -195,11 +195,29 @@ Docker-bilden måste generera testrapporter i JUnit XML-format och spara dem i d
 
 Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare bör du kontrollera i dokumentationen vilka verktyg som har valts för att skapa JUnit XML-rapporter.
 
+### Hämta skärmbilder och video {#capture-screenshots}
+
+Docker-bilden kan generera ytterligare testutdata (t.ex. skärmbilder, videor) och spara dem i den sökväg som anges av systemvariabeln `REPORTS_PATH`. Alla filer som finns under `REPORTS_PATH` ingår i testresultatarkivet.
+
+Om ett testresultatarkiv har skapats under en UI-testkörning innehåller testloggfilen i slutet en referens till platsen för testresultatarkivet.
+
+```
+[...]
+
+===============================================================
+The detailed test results can be downloaded from the URL below.
+Note: the link will expire after 60 days
+
+    https://results-host/test-results.zip
+
+===============================================================
+```
+
 ### Överför filer {#upload-files}
 
 Testerna ibland måste överföra filer till det program som testas. För att driftsättningen av Selenium ska vara flexibel i förhållande till dina tester är det inte möjligt att ladda upp en resurs direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
 
-1. Överför filen på den URL som anges av `UPLOAD_URL` systemvariabel.
+1. Överför filen på den URL som anges av `UPLOAD_URL` miljövariabel.
    * Överföringen måste utföras i en POST med ett multipart-formulär.
    * Multipart-formuläret måste ha ett enda filfält.
    * Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`.
