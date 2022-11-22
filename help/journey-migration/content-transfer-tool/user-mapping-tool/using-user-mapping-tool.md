@@ -2,9 +2,9 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 exl-id: dcb750c4-0f81-4d11-ac6c-0592162b683d
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 68ade018185892528854a9438953ee7eb4b90f27
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '753'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Följ stegen nedan för att konfigurera detta:
 1. Navigera till [Adobe Developer Console](https://console.adobe.io) med din Adobe ID.
 1. Skapa ett nytt projekt eller öppna ett befintligt projekt.
 1. Lägg till ett API - klicka **Lägg till i projekt** och markera **API**
-1. Välj API för användarhantering.  Du kanske måste få behörighet för att kunna använda det här alternativet.
+1. Välj API för användarhantering.  Du måste ha behörighet som systemadministratör för att det här alternativet ska vara tillgängligt.
 1. Skapa en JWT-autentiseringsuppgift.
 1. Skapa ett nyckelpar eller Överför en offentlig nyckel (rsa är inte bra).  Det finns en knapp, **Generera ett offentligt/privat nyckelpar**, som kommer att göra det här åt dig.  Se till att du sparar både offentliga och privata nycklar.
 1. Navigera till API:t för användarhantering.
