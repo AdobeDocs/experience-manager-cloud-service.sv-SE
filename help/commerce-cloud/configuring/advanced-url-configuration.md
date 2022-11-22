@@ -10,9 +10,9 @@ feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: fbd2fdcb61bcbae49f07c3da26b14d56d50b1cab
 workflow-type: tm+mt
-source-wordcount: '2043'
+source-wordcount: '2214'
 ht-degree: 3%
 
 ---
@@ -61,7 +61,7 @@ Med exempeldata ovan ser en produktvariant-URL som är formaterad med standardfo
 
 ### URL-format för kategorisida {#product-list}
 
-Detta konfigurerar URL:erna för kategorierna eller produktlistsidorna och stöder följande alternativ:
+Detta konfigurerar URL:erna för kategori- eller produktlistsidorna och stöder följande alternativ:
 
 * `{{page}}.html/{{url_path}}.html` (standard)
 * `{{page}}.html/{{url_key}}.html`
@@ -183,6 +183,18 @@ The `UrlProvider` är förkonfigurerat för att generera djupa länkar till spec
 
 Vid publiceringsskiktsinstanser bör katalogsidans URL-adresser hållas stabila så att de inte förlorar vinster på t.ex. sökmotorrankningar. På grund av detta kommer instanser av publiceringsnivån inte att återge djuplänkar till specifika katalogsidor per standard. Om du vill ändra det här beteendet _CIF URL Provider Specific Page Strategy_ kan konfigureras för att alltid generera särskilda sidadresser.
 
+### Flera katalogsidor {#multiple-product-pages}
+
+När redaktörer vill ha fullständig kontroll över navigeringen på den översta nivån på en plats kanske det inte är önskvärt att använda en enda katalogsida för att återge kategorierna på den översta nivån i en katalog. I stället kan redigerare skapa flera katalogsidor, en för varje kategori i katalogen som de vill inkludera i navigeringen på den översta nivån.
+
+I det fallet kan varje katalogsida ha en referens till en produkt- och kategorisida som är specifik för den kategori som har konfigurerats för katalogsidan. The `UrlProvider` använder dessa för att skapa länkar för sidorna och kategorierna i den konfigurerade kategorin. Av prestandaskäl beaktas dock endast de underordnade katalogsidorna för en webbplats navigeringsrot/landningssida.
+
+Vi rekommenderar att produkt- och kategorisidorna för en katalogsida är underordnade den katalogsidan, annars kanske inte komponenter som Navigation eller Breadcrumb fungerar som de ska.
+
+>[!NOTE]
+>
+> Fullt stöd för flera katalogsidor kräver [CIF Core Components 2.10.0](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) eller nyare.
+
 ## Anpassningar {#customization}
 
 ### Anpassade URL-format {#custom-url-format}
@@ -221,7 +233,7 @@ Dessutom kan du använda [Samlingsmappningar](#sling-mapping) för att kombinera
 
 ### Migrera till ett nytt URL-format {#migrate-url-formats}
 
-Många av de förvalda URL-formaten är på något sätt kompatibla med varandra, vilket innebär att URL:er som formaterats av en kan tolkas av en annan. Det gör det lättare att migrera mellan olika URL-format.
+Många av de förvalda URL-formaten är på något sätt kompatibla med varandra, vilket innebär att URL:er som är formaterade av en kan tolkas av en annan. Det gör det lättare att migrera mellan olika URL-format.
 
 Å andra sidan behöver sökmotorer lite tid för att kunna crawla alla katalogsidor med det nya URL-formatet. För att stödja den här processen och även för att förbättra slutanvändarupplevelsen bör du tillhandahålla omdirigeringar som vidarebefordrar användaren från de gamla URL:erna till de nya.
 
