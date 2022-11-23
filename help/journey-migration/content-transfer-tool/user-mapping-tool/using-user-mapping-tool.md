@@ -2,9 +2,9 @@
 title: Använda verktyget för användarmappning
 description: Använda verktyget för användarmappning
 exl-id: dcb750c4-0f81-4d11-ac6c-0592162b683d
-source-git-commit: 68ade018185892528854a9438953ee7eb4b90f27
+source-git-commit: a9e30f6a15bbc9fc830849e05e1814a2cdd50fd5
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '816'
 ht-degree: 3%
 
 ---
@@ -14,6 +14,8 @@ ht-degree: 3%
 Användarmappningsverktyget använder ett API som gör att det kan slå upp IMS-användare (Adobe Identity Management System) via e-post och returnera sina IMS-ID:n. Denna API kräver att användaren skapar ett klient-ID för sin organisation, en klienthemlighet och en Access- eller Bearer-token.
 
 ## Konfigurera verktyget för användarmappning {#setting-up-user-mapping}
+
+**Krav:** Användarmappning kräver att varje användare mappas till sitt IMS-ID har en e-postadress i profilen i AEM och i IMS.  Observera att även om användaren använder en e-postadress som användar-ID för inloggning, fungerar inte mappningen för den användaren om inte e-postadressen också finns i profilen, och även i IMS.
 
 Följ stegen nedan för att konfigurera detta:
 
