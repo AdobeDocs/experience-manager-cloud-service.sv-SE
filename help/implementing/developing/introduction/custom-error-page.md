@@ -2,9 +2,9 @@
 title: Anpassade felsidor
 description: AEM har en standardfelhanterare för hantering av HTTP-fel, som kan anpassas.
 exl-id: b74c65d1-8ef5-4ad4-8255-8187f3b1d84c
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: db997127c6cbba434b86990852d1ba590d5f12a5
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,12 @@ Av [anpassa de sidor som visas i felhanteraren](#how-to-customize-pages-shown-by
 Annars är svarskoden inställd på 500, men `500.jsp` skriptet körs inte.
 
 Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsamma som undantagsklassen (eller superklassen). Om du vill hantera alla sådana undantag kan du skapa ett skript `/apps/sling/servlet/errorhandler/Throwable.jsp` eller `/apps/sling/servlet/errorhandler/Exception.jsp`.
+
+>[!NOTE]
+>
+>I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. För att det faktiska svaret från backend ska kunna gå igenom måste du lägga till följande rubrik i svaret:
+>`x-aem-error-pass: true`
+>Detta fungerar endast för svar som kommer från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
 
 >[!CAUTION]
 >
