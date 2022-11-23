@@ -2,9 +2,9 @@
 title: Anpassade felsidor
 description: AEM har en standardfelhanterare för hantering av HTTP-fel, som kan anpassas.
 exl-id: b74c65d1-8ef5-4ad4-8255-8187f3b1d84c
-source-git-commit: db997127c6cbba434b86990852d1ba590d5f12a5
+source-git-commit: 570e7d71fc8b3db33e93394d0aa53cb159636fb7
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -70,9 +70,9 @@ Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsam
 
 >[!NOTE]
 >
->I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. För att det faktiska svaret från backend ska kunna gå igenom måste du lägga till följande rubrik i svaret:
->`x-aem-error-pass: true`
->Detta fungerar endast för svar som kommer från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
+>I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. För att det faktiska svaret från backend ska kunna gå igenom måste du lägga till följande rubrik i svaret: `x-aem-error-pass: true`.
+>
+>Detta fungerar bara för svar som kommer från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
 
 >[!CAUTION]
 >
