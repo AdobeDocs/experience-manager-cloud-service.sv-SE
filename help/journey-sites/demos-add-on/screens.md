@@ -2,9 +2,9 @@
 title: Aktivera AEM Screens för din demowebbplats
 description: Lär dig hur du aktiverar den fullständiga as a Cloud Service AEM Screens-upplevelsen på din demowebbplats.
 exl-id: 369eea9f-2e81-4b87-841c-188b67657bab
-source-git-commit: cdc60627bac17166c12ebdb77e7cf5b0ed92dc80
+source-git-commit: 71e318f93b6edab5d2ae685d8603c3d0040f72a3
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2699'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Aktivera AEM Screens för din demowebbplats {#enable-screens}
 
 Lär dig hur du aktiverar den fullständiga as a Cloud Service AEM Screens-upplevelsen på din demowebbplats.
+
+>[!NOTE]
+>
+>AEM Screens Demo kräver att skärmtillägget läggs till i Cloud Manager-programmet. Lär dig [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/adding-screens-addon/add-on-new-program-screens-cloud.html) hur du lägger till det.
 
 ## Story hittills {#story-so-far}
 
