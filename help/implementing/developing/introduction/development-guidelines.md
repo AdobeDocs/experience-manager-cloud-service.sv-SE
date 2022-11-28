@@ -1,11 +1,11 @@
 ---
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
-description: Utvecklingsriktlinjer för AEM as a Cloud Service
+description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 88d7728758927f16ed0807de8d261ca1b4b8b104
 workflow-type: tm+mt
-source-wordcount: '2445'
-ht-degree: 2%
+source-wordcount: '2590'
+ht-degree: 1%
 
 ---
 
@@ -14,18 +14,16 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="development_guidelines"
 >title="Utvecklingsriktlinjer för AEM as a Cloud Service"
->abstract="På den här fliken kan du visa de rekommenderade bästa metoderna för kodning på AEM as a Cloud Service. Kodning kan skilja sig avsevärt från AMS- och On-Prem-driftsättningar."
+>abstract="Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS."
 >additional-url="https://video.tv.adobe.com/v/330555/" text="Demo av paketstruktur"
+
+I det här dokumentet presenteras riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
+
+## Koden måste vara klustermedveten {#cluster-aware}
 
 Kod som körs AEM as a Cloud Service måste vara medveten om att den alltid körs i ett kluster. Det innebär att fler än en instans alltid körs. Koden måste vara flexibel, särskilt eftersom en instans kan stoppas när som helst.
 
 Under uppdateringen av AEM as a Cloud Service kommer det att finnas instanser där gammal och ny kod körs parallellt. Därför får gammal kod inte bryta med innehåll som skapas av ny kod och ny kod måste kunna hantera gammalt innehåll.
-<!--
-
->[!NOTE]
-> All of the best practices mentioned here hold true for on-premise deployments of AEM, if not stated otherwise. An instance can always stop due to various reasons. However, with Skyline it is more likely to happen therefore an instance stopping is the rule not an exception.
-
--->
 
 Om det finns ett behov av att identifiera det primära klustret kan API:t för identifiering av Apache Sling användas för att identifiera det.
 
@@ -262,7 +260,24 @@ The `smtp.starttls` egenskapen ställs automatiskt in av AEM as a Cloud Service 
 
 SMTP-servervärden ska vara samma som e-postservern.
 
+## Undvik stora flervärdesegenskaper {#avoid-large-mvps}
+
+Databasen för ekinnehåll som ligger till grund för AEM as a Cloud Service är inte avsedd att användas med ett stort antal flervärdesegenskaper (MVP). En tumregel är att hålla de privata leverantörerna under 1000. Den faktiska prestandan beror dock på många faktorer.
+
+Varningar loggas som standard efter att ha överstigit 1000. De liknar följande.
+
+```text
+org.apache.jackrabbit.oak.jcr.session.NodeImpl Large multi valued property [/path/to/property] detected (1029 values). 
+```
+
+Stora MVP kan leda till fel på grund av att MongoDB-dokumentet överskrider 16 MB, vilket kan leda till fel som liknar följande.
+
+```text
+Caused by: com.mongodb.MongoWriteException: Resulting document after update is larger than 16777216
+```
+
+Se [Apache Oak-dokumentation](https://jackrabbit.apache.org/oak/docs/dos_and_donts.html#Large_Multi_Value_Property) för mer information.
 
 ## [!DNL Assets] riktlinjer för utveckling och användningsfall {#use-cases-assets}
 
-Mer information om användningsfall, rekommendationer och referensmaterial för Assets as a Cloud Service finns i [Utvecklarreferenser för Assets](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis).
+Mer information om användningsfall, rekommendationer och referensmaterial för Assets as a Cloud Service finns i [Utvecklarreferenser för Assets.](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis)
