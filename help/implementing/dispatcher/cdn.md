@@ -3,9 +3,9 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: 69cb9b9015ed3a7acdcc42c7e25fb45b479a7f4e
+source-git-commit: 093a83b7e76167b1962639b245332e515df2447b
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1145'
 ht-degree: 7%
 
 ---
@@ -90,7 +90,8 @@ curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com --header "X-Forwa
 
 >[!NOTE]
 >
->När du använder ditt eget CDN behöver du inte installera domänerna och certifikaten i Cloud Manager. Cirkulationen i CDN i Adobe görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
+>När du använder ditt eget CDN behöver du inte installera domäner och certifikat i Cloud Manager. Cirkulationen i CDN i Adobe görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com` som ska skickas i begäran `Host` header. Skriva över begäran `Host` huvud med ett anpassat domännamn kan göra så att begäran inte dirigeras korrekt av CDN:n i Adobe.
+
 
 >[!NOTE]
 >
