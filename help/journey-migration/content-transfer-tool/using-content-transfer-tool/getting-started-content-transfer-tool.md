@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: 1dfef0f1157ead7f1240e9a41794436197136daa
+source-git-commit: 4c2a02bb7ea981f78e51afc6ee20a3a936dfd666
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1326'
 ht-degree: 6%
 
 ---
@@ -101,7 +101,8 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_populate_migrationset"
->title="Fyll i migreringsuppsättning&quot; abstract=&quot;När du har skapat en migreringsuppsättning måste den fyllas i med innehållet från källinstansen som måste flyttas till den AEM as a Cloud Service miljön. För att göra detta måste verktyget Innehållsöverföring vara installerat på källinstansen."
+>title="Fyll i migreringsuppsättning"
+>abstract="När du har skapat en migreringsuppsättning måste den fyllas i med innehållet från källinstansen som måste flyttas till den AEM as a Cloud Service miljön. För att göra detta måste verktyget Innehållsöverföring vara installerat på källinstansen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content.html" text="Extraherar innehåll"
 
 Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Manager måste du installera den senaste versionen av verktyget för innehållsöverföring på din Adobe Experience Manager-källinstans (AEM). Följ det här avsnittet för att lära dig hur du fyller i migreringsuppsättningen.

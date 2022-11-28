@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 319a9bc2aa6d82d0fb322cd1f2ca37e95c33e97d
+source-git-commit: 71370cf59bd1f65db78c2818c118e7d9ec2c9196
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 11%
+source-wordcount: '1072'
+ht-degree: 10%
 
 ---
 
@@ -22,6 +22,9 @@ ht-degree: 11%
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 >[!NOTE]
 >Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intagningsfasen. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Se [Ingesting with AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#ingesting-azcopy) för mer information.
+
+>[!NOTE]
+>Kom du ihåg att logga en supportbiljett för det här intaget? Se [Viktigt att tänka på innan du använder verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html#important-considerations) och andra överväganden för att underlätta intag.
 
 1. Gå till Cloud Acceleration Manager. Klicka på ditt projektkort och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och klicka på **Nytt intag**
 
@@ -96,7 +99,8 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 ## Uppdatera inmatning {#top-up-ingestion-process}
 
 >[!CONTEXTUALHELP]
->id="aemcloud_ctt_ingestion_topup" title="Top Up Ingestion"
+>id="aemcloud_ctt_ingestion_topup"
+>title="Uppdatera inmatning"
 >abstract="Använd den övre funktionen för att flytta ändrat innehåll sedan föregående innehållsöverföringsaktivitet. Kontrollera loggarna efter eventuella fel/varningar när du har slutfört Ingestition. Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att kontakta Adobe kundtjänst."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs.html?lang=en" text="Visa loggar"
 
