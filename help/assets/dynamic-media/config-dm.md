@@ -3,9 +3,9 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager as a Cloud Service.
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 58aee2ad24b38fd8abc197961adda524832d2614
+source-git-commit: 50a7db14a378f99eeadc3f9cb91f228ea4139ff4
 workflow-type: tm+mt
-source-wordcount: '3375'
+source-wordcount: '3559'
 ht-degree: 2%
 
 ---
@@ -96,7 +96,7 @@ To migrate any custom viewer presets and configurations that you have created fr
    | Företagets rotmappsökväg | Företagets rotmappsökväg. |
    | Publicera resurser | Du kan välja mellan följande tre alternativ:<br>**[!UICONTROL Immediately]**- När resurser överförs importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.<br>**[!UICONTROL On Activation]** - Du måste publicera resursen explicit innan en URL/Embed-länk anges.<br>**[!UICONTROL Selective Publish]**- Resurserna publiceras automatiskt för säker förhandsgranskning. De kan också uttryckligen publiceras på Experience Manager as a Cloud Service utan att publiceras till DMS7 för att levereras offentligt. I framtiden avser detta alternativ att publicera resurser på Experience Manager as a Cloud Service och publicera resurser på Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Eller så kan du publicera resurser exklusivt i Experience Manager as a Cloud Service för förhandsgranskning. samma resurser inte publiceras i DMS7 för att distribueras offentligt. |
    | Secure Preview Server | Här kan du ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det vill säga, när återgivningarna har skapats kan Experience Manager as a Cloud Service på ett säkert sätt komma åt och förhandsgranska Dynamic Media fjärråtergivningar (inga binärfiler skickas tillbaka till den as a Cloud Service instansen i Experience Manager).<br>Om du inte har en särskild lösning för att använda ditt företags server eller en speciell server rekommenderar Adobe att du låter den här inställningen vara angiven. |
-   | Synkronisera allt innehåll | Markerad som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till Dynamic Media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för Dynamic Media:<br>**[!UICONTROL Dynamic Media sync mode]**<br>**[!UICONTROL Enable by default]**- Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad.<!-- you can then deselect the folders that you do not want the configuration applied to.--><br>**[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.<br>Om du vill markera en markerad mapp för synkronisering till Dynamic Media väljer du en resursmapp och väljer sedan i verktygsfältet **[!UICONTROL Properties]**. På **[!UICONTROL Details]** -fliken, i **[!UICONTROL Dynamic Media sync mode]** i den nedrullningsbara listan väljer du mellan följande tre alternativ. När du är klar väljer du **[!UICONTROL Save]**. *Kom ihåg: dessa tre alternativ är inte tillgängliga om du har valt **Synkronisera allt innehåll**tidigare.* Se även [Arbeta med selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).<br>**[!UICONTROL Inherited]**- Det finns inget explicit synkroniseringsvärde i mappen. I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.<br>**[!UICONTROL Enable for subfolders]** - Inkludera allt i det här underträdet för synkronisering med Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.<br>**[!UICONTROL Disabled for subfolders]**- Uteslut allt i det här underträdet från synkronisering till Dynamic Media. |
+   | Synkronisera allt innehåll | Markerad som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till Dynamic Media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för Dynamic Media:<br>**[!UICONTROL Dynamic Media sync mode]**<br>**[!UICONTROL Enable by default]**- Konfigurationen används som standard på alla mappar såvida du inte markerar en mapp som är exkluderad.<!-- you can then deselect the folders that you do not want the configuration applied to.--><br>**[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.<br>Om du vill markera en markerad mapp för synkronisering till Dynamic Media väljer du en resursmapp och väljer sedan i verktygsfältet **[!UICONTROL Properties]**. På **[!UICONTROL Details]** -fliken, i **[!UICONTROL Dynamic Media sync mode]** i den nedrullningsbara listan väljer du mellan följande tre alternativ. När du är klar väljer du **[!UICONTROL Save]**. _Kom ihåg: dessa tre alternativ är inte tillgängliga om du har valt **Synkronisera allt innehåll**tidigare._ Se även [Arbeta med selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).<br>**[!UICONTROL Inherited]**- Det finns inget explicit synkroniseringsvärde i mappen. I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.<br>**[!UICONTROL Enable for subfolders]** - Inkludera allt i det här underträdet för synkronisering med Dynamic Media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.<br>**[!UICONTROL Disabled for subfolders]**- Uteslut allt i det här underträdet från synkronisering till Dynamic Media. |
 
    >[!NOTE]
    >
@@ -129,7 +129,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 Du är nu klar med den grundläggande konfigurationen; är du redo att använda Dynamic Media.
 
-Om du vill anpassa konfigurationen ytterligare kan du utföra alla uppgifter under [Konfigurera avancerade inställningar i Dynamic Media](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
+Om du vill anpassa konfigurationen ytterligare, t.ex. aktivera åtkomstkontrollistor (ACL), kan du utföra någon av uppgifterna under [Konfigurera avancerade inställningar i Dynamic Media](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 ### Felsöka en ny Dynamic Media-konfiguration {#troubleshoot-dm-config}
 
@@ -185,8 +185,9 @@ Det ändrade lösenordet sparas när du väljer **[!UICONTROL Save]** i det övr
 
 ## (Valfritt) Konfigurera avancerade inställningar i Dynamic Media{#optional-configuring-advanced-settings-in-dynamic-media-scene-mode}
 
-Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media ytterligare, eller optimera prestandan, kan du slutföra ett eller flera av följande *valfri* uppgifter:
+Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media ytterligare, eller optimera prestandan, kan du slutföra ett eller flera av följande _valfri_ uppgifter:
 
+* [(Valfritt) Aktivera ACL-behörigheter i Dynamic Media](#optional-enable-acl)
 * [(Valfritt) Konfigurera och konfigurera Dynamic Media-inställningar](#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings)
 * [(Valfritt) Justera prestanda för Dynamic Media](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
@@ -195,6 +196,33 @@ Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media ytterlig
 * [(Optional) Filtering assets for replication](#optional-filtering-assets-for-replication)
 
 -->
+
+### (Valfritt) Aktivera behörigheter i åtkomstkontrollistan i Dynamic Media {#optional-enable-acl}
+
+När du kör Dynamic Media på AEM vidarebefordras det för närvarande `/is/image` begäranden om att skydda förhandsvisningsbildservern utan att kontrollera ACL-behörigheter (Access Control List) på PlatformServerServlet. Du kan dock _enable_ ACL-behörigheter. Vidarebefordra de behöriga `/is/image` förfrågningar. Om en användare inte har behörighet att komma åt resursen visas felet&quot;403 - Ej tillåtet&quot;.
+
+**Så här aktiverar du ACL-behörigheter i Dynamic Media:**
+
+1. Navigera från Experience Manager till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+
+   ![2019-08-02_16-13-14](assets/2019-08-02_16-13-14.png)
+
+1. En ny flik i webbläsaren öppnas **[!UICONTROL Adobe Experience Manager Web Console Configuration]** sida.
+
+   ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
+
+1. Bläddra till namnet på sidan _Adobe CQ Scene7 PlatformServer_.
+
+1. Till höger om namnet väljer du pennikonen (**[!UICONTROL Edit the configuration values]**).
+
+1. På **com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.name** markerar du kryssrutan för följande två inställningar:
+
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.cache.enable.name` - När den här inställningen är aktiverad cachelagras behörighetsresultatet i två minuter (standard) för att spara.
+   * `com.adobe.cq.dam.s7imaging.impl.ps.PlatformServerServlet.validate.userAccess.name` - När den här inställningen är aktiverad valideras användarens åtkomst medan användaren förhandsgranskar resurser via Dynamic Media Image Server.
+
+   ![Aktivera inställningar för åtkomstkontrollistan i Dynamic Media - Scene7-läge](/help/assets/dynamic-media/assets/acl.png)
+
+1. I det nedre högra hörnet av sidan väljer du **[!UICONTROL Save]**.
 
 ### (Valfritt) Konfigurera och konfigurera Dynamic Media-inställningar {#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings}
 
