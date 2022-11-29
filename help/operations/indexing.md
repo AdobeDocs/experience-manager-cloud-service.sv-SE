@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 82f959a8a4f02486c1b3431b40534cdb95853dd6
+source-git-commit: 7e32c997a69feb8447609bf984ba731008489095
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2498'
 ht-degree: 1%
 
 ---
@@ -18,22 +18,20 @@ Med AEM as a Cloud Service går Adobe från en AEM instanscentrerad modell till 
 Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och tidigare versioner:
 
 1. Användare har inte längre åtkomst till indexhanteraren för en enskild AEM för att felsöka, konfigurera eller underhålla indexering. Det används endast för lokal utveckling och lokal driftsättning.
-
 1. Användare ändrar inte index för en enskild AEM och behöver inte längre bekymra sig om konsekvenskontroller eller omindexering.
-
 1. I allmänhet inleds indexändringar innan produktionen påbörjas för att inte kringgå kvalitetsgatewayer i Cloud Managers CI/CD-pipelines och inte påverka affärs-KPI:er i produktionen.
-
 1. Alla relaterade mätvärden, inklusive sökresultat i produktion, kommer att vara tillgängliga för kunder vid körning för att ge en helhetsbild av ämnen som sökning och indexering handlar om.
-
 1. Kunderna kan skapa varningar efter behov.
-
 1. SRE övervakar systemets hälsa dygnet runt, alla dagar i veckan och kommer att vidta åtgärder efter behov och så tidigt som möjligt.
-
 1. Indexkonfigurationen ändras via distributioner. Ändringar av indexdefinitioner konfigureras på samma sätt som andra innehållsändringar.
-
 1. På en hög nivå på AEM as a Cloud Service, med införandet av [Blå-grön distributionsmodell](#index-management-using-blue-green-deployments) två uppsättningar index kommer att finnas: en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
-
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
+
+Begränsningar:
+
+* För närvarande stöds indexhantering på AEM as a Cloud Service bara för index av typen `lucene`.
+* Endast standardanalysatorer stöds (dvs. de som levereras tillsammans med produkten). Anpassade analysatorer stöds inte.
+* Internt kan andra index konfigureras och användas för frågor. Till exempel frågor som skrivs mot `damAssetLucene` index kan på Skyline faktiskt köras mot en Elasticsearch-version av detta index. Skillnaden är vanligtvis inte synlig för programmet och användaren, men vissa verktyg som `explain` funktionen rapporterar ett annat index. Skillnader mellan Lucene-index och Elastic Index finns i [den elastiska dokumentationen i Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/elastic.html). Kunderna behöver inte, och kan inte, konfigurera Elasticsearch-index direkt.
 
 ## Användning {#how-to-use}
 
@@ -146,6 +144,64 @@ I `ui.apps.structure/pom.xml`, `filters` -avsnittet för det här plugin-program
 ```
 
 När den nya indexdefinitionen har lagts till måste det nya programmet distribueras via Cloud Manager. När distributionen är klar startas två jobb som ansvarar för att lägga till (och sammanfoga vid behov) indexdefinitionerna i MongoDB och Azure Segment Store för författare respektive publicering. De underliggande databaserna omindexeras med de nya indexdefinitionerna, innan den blå-gröna växlingen äger rum.
+
+### ANMÄRKNING
+
+Om du observerar följande fel i felvalideringen <br>
+`[ERROR] ValidationViolation: "jackrabbit-nodetypes: Mandatory child node missing: jcr:content [nt:base] inside node with types [nt:file]"` <br>
+Därefter kan du åtgärda problemet genom att följa något av följande steg: <br>
+1. Nedgradera filnivå till version 1.0.4 och lägg till följande i det övre rummet:
+
+```xml
+<allowIndexDefinitions>true</allowIndexDefinitions>
+```
+
+Nedan visas ett exempel på var ovanstående konfiguration ska placeras i rummet.
+
+```xml
+<plugin>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>filevault-package-maven-plugin</artifactId>
+    <configuration>
+        <properties>
+        ...
+        </properties>
+        ...
+        <allowIndexDefinitions>true</allowIndexDefinitions>
+        <repositoryStructurePackages>
+        ...
+        </repositoryStructurePackages>
+        <dependencies>
+        ...
+        </dependencies>
+    </configuration>
+</plugin>
+```
+
+1. Inaktivera validering av nodtyp. Ange följande egenskap i avsnittet jackrabbit-nodetypes i konfigurationen av plugin-programmet filevault:
+
+```xml
+<isDisabled>true</isDisabled>
+```
+
+Nedan visas ett exempel på var ovanstående konfiguration ska placeras i rummet.
+
+```xml
+<plugin>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>filevault-package-maven-plugin</artifactId>
+    ...
+    <configuration>
+    ...
+        <validatorsSettings>
+        ...
+            <jackrabbit-nodetypes>
+                <isDisabled>true</isDisabled>
+            </jackrabbit-nodetypes>
+        </validatorsSettings>
+    </configuration>
+</plugin>
+```
 
 >[!TIP]
 >
@@ -276,7 +332,7 @@ Om ett index ska tas bort i en senare version av programmet kan du definiera ett
                 </properties>
             </rep:root>
         </indexRules>
-    </acme.product-custom-3>
+</acme.product-custom-3>
 ```
 
 Om det inte längre behövs någon anpassning av ett index som inte finns i kartongen måste du kopiera indexdefinitionen som finns i kartongen. Om du till exempel redan har distribuerat `damAssetLucene-8-custom-3`, men behöver inte längre anpassningar och vill växla tillbaka till standardinställningen `damAssetLucene-8` index, måste du lägga till ett index `damAssetLucene-8-custom-4` som innehåller indexdefinitionen för `damAssetLucene-8`.
