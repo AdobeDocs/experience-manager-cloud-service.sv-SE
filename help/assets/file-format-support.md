@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 77cba988368c07438835148d08f1e8cc6e469b7b
+source-git-commit: 93e25fcbe07d3262d924f97551e19661ea80a034
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '987'
 ht-degree: 4%
 
 ---
@@ -118,27 +118,27 @@ Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/ass
 
 Följande dokumentformat stöds för filhanteringsfunktioner.
 
-| Filformat | Generering av miniatyrbilder | Extrahering av fulltext | Bredd/höjd | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) |
-| ----------- | -------------------- | ------------------- | ------------ | ------------------- | ---------------- |
-| DOC | - | - | - | ✓ | ✓ |
-| DOCX | ✓ | ✓ | ✓ | ✓ | ✓ |
-| ePub | - | ✓ | - | - | - |
-| HTML | - | ✓ | - | ✓ | ✓ |
-| ODF | ✓ | ✓ | ✓ | - | - |
-| ODM | ✓ | ✓ | ✓ | - | - |
-| ODP | ✓ | ✓ | ✓ | - | - |
-| ODS | ✓ | ✓ | ✓ | - | - |
-| ODT | ✓ | ✓ | ✓ | ✓ | ✓ |
-| OFG | ✓ | ✓ | ✓ | - | - |
-| PDF | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PPT | - | - | - | ✓ | ✓ |
-| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ |
-| PS | - | - | ✓ | - | - |
-| RTF | - | ✓ | - | ✓ | ✓ |
-| TXT | ✓ | ✓ | - | ✓ | ✓ |
-| XLS | - | - | - | ✓ | ✓ |
-| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ |
-| XML | - | ✓ | - | - | - |
+| Filformat | Generering av miniatyrbilder | Extrahering av fulltext | Bredd/höjd | Metadatahantering | [Anslutna resurser](use-assets-across-connected-assets-instances.md) | Fullständig förhandsgranskning av dokument |
+| ----------- | -------------------- | ------------------- | ------------ | ------------------- | ---------------- |--------|
+| DOC | - | - | - | ✓ | ✓ | ✓ |
+| DOCX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| ePub | - | ✓ | - | - | - | - |
+| HTML | - | ✓ | - | ✓ | ✓ | - |
+| ODF | ✓ | ✓ | ✓ | - | - | - |
+| ODM | ✓ | ✓ | ✓ | - | - | - |
+| ODP | ✓ | ✓ | ✓ | - | - | - |
+| ODS | ✓ | ✓ | ✓ | - | - | - |
+| ODT | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| OFG | ✓ | ✓ | ✓ | - | - | - |
+| PDF | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PPT | - | - | - | ✓ | ✓ | ✓ |
+| PPTX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PS | - | - | ✓ | - | - | - |
+| RTF | - | ✓ | - | ✓ | ✓ | ✓ |
+| TXT | ✓ | ✓ | - | ✓ | ✓ | ✓ |
+| XLS | - | - | - | ✓ | ✓ | ✓ |
+| XLSX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| XML | - | ✓ | - | - | - | - |
 
 ## Videoformat {#video-formats}
 
