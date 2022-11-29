@@ -10,13 +10,13 @@ role: Architect, Developer
 level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
-source-git-commit: 2ebe9ddccd0b657b8aaeaf005c0ecb5b16079dee
+exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
+source-git-commit: c2fd3d33eb02ea671d9811ad527bf167a279ff01
 workflow-type: tm+mt
-source-wordcount: '2010'
+source-wordcount: '2080'
 ht-degree: 0%
 
 ---
-
 
 # AEM-CIF-komponenter och integrering med Adobe Experience Platform {#aem-cif-aep-integration}
 
@@ -471,10 +471,31 @@ Med PWA Studio-projektet kan du skapa Progressive Web Application (PWA) butiker 
 
 Från och med nu stöds följande händelser:
 
-- addToCart
-- pageView
-- customUrl
-- referrerUrl
+__Upplev XDM-händelser:__
+
+1. Lägg i kundvagnen (AEM)
+1. Visa sida (AEM)
+1. Visa produkt (AEM)
+1. Skickad sökbegäran (AEM)
+1. Söklösningen togs emot (AEM)
+
+När [Peregringskomponenter](https://developer.adobe.com/commerce/pwa-studio/guides/packages/peregrine/) återanvänds i AEM Commerce-projektet:
+
+__Upplev XDM-händelser:__
+
+1. Ta bort från kundvagnen
+1. Open Cart
+1. Visa kundvagn
+1. Direktköp
+1. Starta utcheckning
+1. Fullständig utcheckning
+
+__Profil-XDM-händelser:__
+
+1. Logga in
+1. Skapa konto
+1. Redigera konto
+
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -482,5 +503,5 @@ Mer information finns i följande resurser:
 
 - [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/)
 - [Experience Platform-anslutning - översikt](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/overview.html)
+- [Experience Platform Connector Events](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/event-forwarding/events.html)
 - [Adobe Experience Platform - översikt](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html)
-
