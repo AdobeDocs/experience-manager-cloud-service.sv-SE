@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: Cache i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 18f8a0737dbcce643a5949fb5f942e73f066fa59
+source-git-commit: 6c2baf7fde73abc831db906c7a6471751be3572d
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '2753'
 ht-degree: 1%
 
 ---
@@ -72,6 +72,8 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
      </LocationMatch>
    ```
 
+* HTML-innehåll som är inställt på private cachelagras inte vid CDN, men det kan cachas vid dispatchern om [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html) är konfigurerad och säkerställer att endast behöriga användare kan få tillgång till innehållet.
+
    >[!NOTE]
    >Andra metoder, inklusive [AEM ACS Commons-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
 
@@ -80,7 +82,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
 
 ### Klientbibliotek (js, css) {#client-side-libraries}
 
-* genom att använda AEM biblioteksramverk på klientsidan, genereras JavaScript- och CSS-kod på ett sådant sätt att webbläsare kan cachelagra den i oändlighet, eftersom alla ändringar manifesteras som nya filer med en unik sökväg.  HTML som refererar till klientbiblioteken kommer med andra ord att produceras efter behov så att kunderna kan uppleva nytt innehåll när det publiceras. Cachekontrollen är inställd på&quot;oföränderlig&quot; eller 30 dagar för äldre webbläsare som inte respekterar det oföränderliga&quot; värdet.
+* När du använder AEM biblioteksramverk på klientsidan genereras JavaScript- och CSS-kod på ett sådant sätt att webbläsare kan cachelagra den i oändlighet, eftersom alla ändringar manifesteras som nya filer med en unik sökväg.  HTML som refererar till klientbiblioteken kommer med andra ord att produceras efter behov så att kunderna kan uppleva nytt innehåll när det publiceras. Cachekontrollen är inställd på&quot;oföränderlig&quot; eller 30 dagar för äldre webbläsare som inte respekterar det oföränderliga&quot; värdet.
 * se avsnittet [Bibliotek på klientsidan och versionskonsekvens](#content-consistency) om du vill ha mer information.
 
 ### Bilder och allt innehåll som är tillräckligt stort för att lagras i blob {#images}
@@ -116,6 +118,8 @@ Som standard cachelagras inte blobbinnehåll i AEM.
 
 >[!NOTE]
 >Vi rekommenderar att du ändrar det äldre standardbeteendet så att det överensstämmer med det nya beteendet (program-ID som är högre än 65000) genom att ange Cloud Managers miljövariabel AEM_BLOB_ENABLE_CACHING_HEADERS till true. Om programmet redan är öppet kontrollerar du att innehållet fungerar som du tänkt dig efter ändringarna.
+
+För närvarande kan inte bilder i bloblagring som markerats som privata cachelagras av dispatchern med [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html). Bilden efterfrågas alltid från AEM ursprung och hanteras om användaren är behörig.
 
 >[!NOTE]
 >Andra metoder, inklusive [AEM ACS Commons-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
