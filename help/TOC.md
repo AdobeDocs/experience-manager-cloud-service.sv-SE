@@ -8,9 +8,9 @@ user-guide-description: Länkar till självhjälp och dokumentation i form av en
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: ce2866c90353a086cd9288c0209bf624c597922d
+source-git-commit: f1e1e12d9a19afd6c98029fc5b7a7b73ebf41686
 workflow-type: tm+mt
-source-wordcount: '3789'
+source-wordcount: '3816'
 ht-degree: 22%
 
 ---
@@ -158,6 +158,12 @@ ht-degree: 22%
       + [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md)
       + [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md)
       + [Användargrupper för meddelanden](/help/journey-onboarding/user-groups.md)
++ AEMaaCS - testversioner {#trials}
+   + Provversioner utan rubriker {#headless}
+      + [Anpassa innehåll i en exempelapp](/help/trials/headless/customize-app.md)
+      + [Skapa innehållsstrukturen för din app](/help/trials/headless/content-structure.md)
+      + [Skapa rubrikfritt innehåll](/help/trials/headless/create-content.md)
+      + [Extrahera innehåll via GraphQL API](/help/trials/headless/extract-content.md)
 + AEM as a Cloud Service migreringsresa {#migration-journey}
    + [Komma igång med att flytta AEM as a Cloud Service](/help/journey-migration/getting-started.md)
    + [Beredskapsfas](/help/journey-migration/readiness.md)
