@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 9260e3cfffdbff3469e92847af8d12c2eb52f5b1
+source-git-commit: b40c46ff5d4399e6feff0ccaf37bdf0336c88016
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1374'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,14 @@ Adobe Experience Manager as a Cloud Service använder [Distribution av säljinne
 >Läs [Distribution](/help/overview/architecture.md#content-distribution) för mer information.
 
 ## Metoder för publicering av innehåll {#methods-of-publishing-content}
+
+>[!NOTE]
+>
+>Om du är intresserad av masspublicering kan du använda [Publicera arbetsflöde för innehållsträd](#publish-content-tree-workflow).
+>Det här arbetsflödessteget är särskilt utformat för Cloud Service och kan effektivt hantera stora nyttolaster.
+>Vi rekommenderar inte att du skapar en egen anpassad masspubliceringskod.
+>Om du behöver anpassa av någon anledning kan du utlösa det här arbetsflödes-/arbetsflödessteget genom att använda befintliga arbetsflödes-API:er.
+>Även om det alltid är en god vana att bara publicera innehåll som behöver publiceras och vara försiktig med att inte försöka publicera ett stort antal innehåll om det inte är nödvändigt, finns det inga gränser för hur mycket innehåll du kan skicka via arbetsflödet Publicera innehållsträd.
 
 ### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
 
