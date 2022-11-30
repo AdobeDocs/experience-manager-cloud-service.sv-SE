@@ -4,9 +4,9 @@ description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller i
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 568109e90df20aae3181975b1b83fd0dd1857eb3
+source-git-commit: 08b523fe66b86867f65c794e843fc55fe0faa050
 workflow-type: tm+mt
-source-wordcount: '3244'
+source-wordcount: '3378'
 ht-degree: 4%
 
 ---
@@ -54,7 +54,7 @@ Skärpa beskrivs i [Skärpa bilder](/help/assets/dynamic-media/assets/sharpening
 
 ## Beskärningsalternativ {#crop-options}
 
-När du implementerar Smart Crop på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
+När du implementerar smart beskärning på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
 | Begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
@@ -64,9 +64,18 @@ Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.m
 
 <!-- CQDOC-16069 for the paragraph directly below -->
 
-Koordinaterna för smart beskärning är proportionella. För inställningarna för smart beskärning i en bildprofil skickas samma proportioner till Dynamic Media om proportionerna är desamma för de tillagda dimensionerna i bildprofilen. Adobe rekommenderar att du använder samma beskärningsområde. Om du gör det ser du till att de olika måtten som används i bildprofilen inte påverkas.
+Smarta beskärningskoordinater är proportionella. Om proportionerna är desamma för de nya måtten i bildprofilen för inställningarna för smart beskärning i en bildprofil skickas samma proportioner till Dynamic Media. Adobe rekommenderar att du använder samma beskärningsområde. Om du gör det ser du till att de olika måtten som används i bildprofilen inte påverkas.
 
-Varje generering av Smart Crop som du skapar kräver extra bearbetning. Om du till exempel lägger till fler än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du använder det på mappar *endast* där det behövs.
+Varje smart beskärningsgenerering som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom du kan använda SmartCrop på mappnivå rekommenderar Adobe att du använder det på mappar *endast* där det behövs.
+
+**Riktlinjer för att definiera smart beskärning i en bildprofil**
+För att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar rekommenderar Adobe följande riktlinjer och tips:
+
+* Undvik att skapa duplicerade smarta beskärningsprofiler med samma bredd- och höjdvärden.
+* Namnge smarta beskärningar baserat på beskärningsdimensioner, inte på slutanvändning. På så sätt kan du optimera för dubbletter där en enda dimension används på flera sidor.
+* Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
+* En bildprofil som du använder för undermappar åsidosätter en bildprofil som används för mappen.
+* Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
 
 Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
 
