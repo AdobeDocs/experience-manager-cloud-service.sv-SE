@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 3255e988c5ec9a0de33660061aeb21d91c3bc4d3
+source-git-commit: 54057d6b5563de3455dddb7866c7c93a3b0294ec
 workflow-type: tm+mt
-source-wordcount: '2307'
+source-wordcount: '2278'
 ht-degree: 11%
 
 ---
@@ -29,11 +29,11 @@ Du behöver följande för att aktivera Brand Portal på din Experience Manager 
 
 >[!NOTE]
 >
->En Experience Manager Assets som [!DNL Cloud Service] -instansen har bara rätt att ansluta till en Brand Portal-klient. Du kan ha flera miljöer (utveckling, produktion och scen) för din Experience Manager Assets som [!DNL Cloud Service] där Brand Portal är aktiverat i en och samma miljö.
+>En konfigurerad produktionsmiljö krävs för en Experience Manager Assets som [!DNL Cloud Service] -instans för att ansluta till Brand Portal tenant.
 
 **Steg för att aktivera Brand Portal**
 
-Du kan aktivera Brand Portal när du skapar miljöer för din Experience Manager Assets som en [!DNL Cloud Service] eller separat. Låt oss anta att miljöerna redan har skapats, och du måste nu aktivera Brand Portal.
+Du kan aktivera Brand Portal när du skapar produktionsmiljöer för din Experience Manager Assets som en [!DNL Cloud Service] eller separat. Låt oss anta att miljön redan har skapats, och du måste nu aktivera Brand Portal.
 
 1. Logga in på Adobe Cloud Manager och gå till **[!UICONTROL Environments]**.
 
@@ -403,7 +403,7 @@ Du kan nu testa konfigurationen genom att kontrollera distributionsagenten och p
 
 Perform the following steps to validate the configuration:
 
-1. Log in to AEM Assets.
+1. Login to AEM Assets.
 
 1. From the **Tools** panel, navigate to **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]**.
 
