@@ -4,7 +4,7 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: ad5bc4b1ae80421bc843d323c214c64334609de6
+source-git-commit: bc46064093c22d8902a673e76fdb53c626a5cbb0
 workflow-type: tm+mt
 source-wordcount: '2991'
 ht-degree: 0%
@@ -238,7 +238,7 @@ Filer eller mappar med namn som matchar dessa villkor hoppas över under importp
 För filnamn på resurser saneras JCR-namnet och sökvägen med API:t: `JcrUtil.escapeIllegalJcrChars`.
 
 * Unicode-tecken ändras inte
-* Ersätt specialtecknen med deras URL Escape-kod, till exempel `new asset.png` uppdateras till `new%20asset.png`:
+* Ersätt specialtecknen med deras URL Escape-kod, till exempel `new%asset.png` uppdateras till `new%25asset.png`:
 
    ```
                    URL escape code   
@@ -247,16 +247,14 @@ För filnamn på resurser saneras JCR-namnet och sökvägen med API:t: `JcrUtil.
    %               %25
    '               %27
    *               %2A
-   .               %2E
    /               %2F
    :               %3A
    [               %5B
-   \n              %5Cn
-   \r              %5Cr
-   \t              %5Ct
+   \n              %0A
+   \r              %0D
+   \t              %09
    ]               %5D
    |               %7C
-   space char      %20
    ```
 
 **Hantera mappnamn vid bulkimport**
