@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: e16d107dff1817e8b62de86e295590b13d853bf0
+source-git-commit: aea668753222e981a7f2c8bd71bc6c790aa32a15
 workflow-type: tm+mt
-source-wordcount: '3705'
+source-wordcount: '3707'
 ht-degree: 0%
 
 ---
@@ -261,7 +261,7 @@ Ett annat sätt att förhandsgranska en resurs är att välja bildresursen och s
 ![Förhandsgranska en resurs baserat på förinställningen för Zooma vertikalt ljus i visningsprogrammet](/help/assets/dynamic-media/assets/dm-viewer-preset.png)
 _Förhandsgranska en resurs baserat på den valda visningsförinställningen &quot;ZoomVertical_light&quot;. Muspekaren (`+`) flyttades över klockan för att zooma in. Lägg märke till knapparna URL och Bädda in._
 
-Återgivningen ovan är live! [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_28563982&amp;config=jpearldemo/ZoomVertical_light).
+Återgivningen ovan är live! [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_28563982&amp;config=jpearldemo/ZoomVertical_light){target=&quot;_blank&quot;}.
 
 ## Valfritt - Läs mer
 
