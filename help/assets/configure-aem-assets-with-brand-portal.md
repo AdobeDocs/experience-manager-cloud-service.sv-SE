@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 54057d6b5563de3455dddb7866c7c93a3b0294ec
+source-git-commit: 85de154adbd0bc09aa9960665826c36af05b3a56
 workflow-type: tm+mt
-source-wordcount: '2278'
+source-wordcount: '2336'
 ht-degree: 11%
 
 ---
@@ -397,6 +397,16 @@ Så här konfigurerar du molntjänsten i Brand Portal:
    Din Experience Manager Assets som [!DNL Cloud Service] -instansen har nu konfigurerats med Brand Portal-klientorganisationen.
 
 Du kan nu testa konfigurationen genom att kontrollera distributionsagenten och publicera resurser på Brand Portal.
+
+**Tillåtslista IP-adresser i SPS om säker förhandsvisning är aktiverat**
+Om du använder Dynamic Media-Scene7 med [säker förhandsvisning aktiverad](#https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=en) för ett företag) rekommenderar vi att Scene7 företagsadministratör [tillåtslista IP-adresserna till utgångarna](#https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=en#testing-the-secure-testing-service) för respektive region som använder användargränssnittet SPS (Scene7 Publishing System) flash.
+IP-adresserna för utgångar är följande:
+
+| **Län** | **IP-adress för ägg** |
+|--- |--- |
+| NA | 130.248.160.68, 20.94.203.130 |
+| EMEA | 185.34.189.3, 51.132.146.75 |
+| APAC | 63.140.44.54 |
 
 <!--
 ### Test configuration {#test-configuration}
