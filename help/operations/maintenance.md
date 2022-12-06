@@ -2,7 +2,7 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Underhållsaktiviteter på AEM as a Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: 0e33ef91ce3668e7ce6aff98053c9f798b940dfd
+source-git-commit: e52d44015c040c1739152263d88ae436bd83d414
 workflow-type: tm+mt
 source-wordcount: '1068'
 ht-degree: 0%
@@ -49,7 +49,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
        <li>Versioner som är äldre än 30 dagar tas bort</li>
        <li>De senaste 5 versionerna de senaste 30 dagarna sparas</li>
        <li>Oavsett reglerna ovan bevaras den senaste versionen.</li>
-       <li>Vi rekommenderar att kunder som har lagstadgade krav på att återge webbsidor exakt som de såg ut vid ett visst datum integreras med specialiserade externa tjänster.<li>
+       <br>Vi rekommenderar att kunder som har lagstadgade krav på att återge webbplatssidor exakt som de såg ut på ett visst datum integreras med specialiserade externa tjänster.
      </ol></td>
   </td>
   </tr>
@@ -61,7 +61,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
        <li>Granskningsloggar som är äldre än 3 dagar tas bort för replikeringsgranskning</li>
        <li>För DAM-granskning (Assets) tas granskningsloggar som är äldre än 30 dagar bort</li>
        <li>Vid sidgranskning tas loggar som är äldre än 3 dagar bort.</li>
-       <li>Vi rekommenderar att kunder som har lagstadgade krav på att skapa icke redigerbara granskningsloggar integreras med specialiserade externa tjänster.<li>
+       <br>Vi rekommenderar att kunder som har lagstadgade krav på att ta fram redigerbara granskningsloggar integreras med specialiserade externa tjänster.
      </ol></td>
    </td>
   </tr>
