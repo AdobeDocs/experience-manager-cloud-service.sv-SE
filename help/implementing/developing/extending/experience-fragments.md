@@ -2,9 +2,9 @@
 title: Översikt över Experience Fragments
 description: Bygg ut Adobe Experience Manager as a Cloud Service Experience Fragments.
 exl-id: bd4ea763-d17c-40a6-9a86-a24d7600229e
-source-git-commit: 4b76fbbb1b58324065b39d6928027759b0897246
+source-git-commit: 912ecb02f0f38fc2766a81445c448f869964f94a
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1651'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,19 @@ Till exempel:
 Väljaren för ren återgivning använder en transformator i stället för ytterligare skript. den [Sling Rewriter](https://sling.apache.org/documentation/bundles/output-rewriting-pipelines-org-apache-sling-rewriter.html) används som transformator. Detta är konfigurerat på
 
 * `/libs/experience-fragments/config/rewriter/experiencefragments`
+
+### Konfigurera generering av HTML-återgivning {#configuring-html-rendition-generation}
+
+Återgivningen av HTML genereras med Sling Rewriter-pipelines. Rörledningen definieras på `/libs/experience-fragments/config/rewriter/experiencefragments`. Transformatorn HTML stöder följande alternativ:
+
+* `allowedCssClasses`
+   * Ett RegEx-uttryck som matchar CSS-klasserna som ska lämnas i den slutliga återgivningen.
+   * Detta är användbart om kunden vill ta bort vissa specifika CSS-klasser
+* `allowedTags`
+   * En lista över HTML-taggar som ska tillåtas i den slutliga återgivningen.
+   * Som standard är följande taggar tillåtna (ingen konfiguration behövs): html, head, title, body, img, p, span, ul, li, a, b, i, em, strong, h1, h2, h3, h4, h5, h6, br, noscript, div, link och script
+
+Vi rekommenderar att du konfigurerar omskrivaren med en övertäckning. Se [Övertäckningar i AEM as a Cloud Service](/help/implementing/developing/introduction/overlays.md)
 
 ## Mallar för Experience Fragments {#templates-for-experience-fragments}
 
