@@ -2,25 +2,25 @@
 title: Komma igång med Experience Manager as a Cloud Service
 description: Läs om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 exl-id: d346ad01-af00-48a1-96a4-e742369defff
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: 76eb13cc1efeb8617b48b7e6134bdf1c7d324e27
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 65%
+source-wordcount: '360'
+ht-degree: 59%
 
 ---
 
-# Översikt över Experience Manager as a Cloud Service {#aem-overview-guide}
+# as a Cloud Service dokumentation för Experience Manager {#aem-overview-guide}
 
 Börja här för att lära dig hur Experience Manager as a Cloud Service fungerar och vad programvaran kan göra för dig.
 
-## Viktiga översiktsartiklar {#key-articles}
+## Viktiga artiklar {#key-articles}
 
 * [Introduktion](introduction.md)
 * [Terminologi](terminology.md)
 * [Vad är nytt och annorlunda?](what-is-new-and-different.md)
 * [Introduktion till arkitekturen](architecture.md)
 
-## Handböcker om Experience Manager as a Cloud Service {#aem-guides}
+## as a Cloud Service stödlinjer för Experience Manager {#aem-guides}
 
 | Användarhandbok | Beskrivning |
 |---|---|
@@ -36,7 +36,7 @@ Börja här för att lära dig hur Experience Manager as a Cloud Service fungera
 | [Användarhandbok för åtgärder](/help/operations/home.md) | Läs om backend-funktionerna i Experience Manager as a Cloud Service, till exempel indexerings- och underhållsåtgärder. |
 | [Handbok för Commerce](/help/commerce-cloud/home.md) | Läs mer om Commerce Integration Framework på AEM as a Cloud Service. |
 
-## Andra Experience Manager-resurser {#other-resources}
+## Andra hjälpresurser för Experience Manager {#other-resources}
 
 * [Senaste dokumentationsuppdateringarna](https://helpx.adobe.com/experience-manager/documentation-updates.html#AEMasaCloudService)
 * [Dispatcher-dokumentation](/help/implementing/dispatcher/overview.md)
