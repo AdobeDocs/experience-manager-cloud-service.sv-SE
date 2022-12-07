@@ -2,9 +2,9 @@
 title: Skapa produktionsprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: 3557ddbc76ff21bcfe4ac0338f116b02b5135f2c
+source-git-commit: c68d4240fb70cc1d533c5fad6472c6c192085603
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -32,13 +32,26 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
 1. Klicka på **Lägg till program** från skärmens övre högra hörn.
 
-   ![Startsida för molnhanterare](assets/first_timelogin1.png)
+   ![Startsida för molnhanterare](assets/log-in.png)
 
-1. Välj **Ställ in för produktion** i guiden Skapa program för att skapa ett produktionsprogram. Du kan godkänna standardprogramnamnet eller redigera det innan du klickar på **Fortsätt**.
+1. Välj **Ställ in för produktion** i guiden Skapa program för att skapa ett produktionsprogram.
 
-   ![Skapar programguiden](assets/create-prod1.png)
+   1. Du kan godkänna standardprogramnamnet eller redigera det.
+   1. Du kan också dra och släppa en miniatyrbild för att identifiera programmet.
+   1. Tryck eller klicka **Fortsätt**.
+
+   ![Skapar programguiden](assets/create-production-program.png)
+
+1. Om du har utökade säkerhetsrättigheter **Förbättrat skydd** kan du välja att **Aktivera förbättrat skydd** för produktionsprogrammet. Om det behövs markerar du alternativet för att aktivera förbättrat skydd och trycker eller klickar på **Fortsätt**.
+
+   * Förbättrat skydd kan inte aktiveras eller inaktiveras efter att programmet har skapats.
+   * [Läs mer](https://www.adobe.com/go/hipaa-ready) om implementering av Adobe HIPAA-klar lösning.
+
+   ![Förbättrat skydd, alternativ](assets/create-production-program-enhanced.png)
 
 1. På **Lösningar och tillägg** väljer du de lösningar som ska ingå i programmet.
+
+   * Om du valde **Aktivera förbättrat skydd** tidigare får du bara välja så många lösningar som det finns tillgängliga HIPAA-berättiganden för.
 
    ![Välj lösningar](assets/setup-prod-select.png)
 

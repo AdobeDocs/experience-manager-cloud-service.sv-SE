@@ -3,9 +3,9 @@ title: Skapa ett program
 description: Lär dig hur du använder Cloud Manager för att skapa ditt första program.
 role: Admin, User, Developer
 exl-id: ade4bb43-5f48-4938-ac75-118009f0a73b
-source-git-commit: 69ac8e444a0f22649b48ec25b549ad60858f8b1b
+source-git-commit: 228330465b6266590a5badbfa84644b3d1329033
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,10 @@ Det finns två olika typer av program:
 * A **sandlådeprogram** skapas vanligtvis för utbildning, löpande demonstrationer, aktivering, POC eller dokumentation.
 
 Eftersom de har olika syften har de olika miljöerna olika alternativ. Processen att skapa dem liknar dock den du gör. För den här introduktionsresan ska vi skapa en sandlådemiljö.
+
+>[!TIP]
+>
+>Om du behöver skapa ett produktionsprogram kan du läsa [Ytterligare resurser](#additional-resources) för en länk till dokumentation som beskriver programmen i detalj.
 
 ## Skapa ett sandlådeprogram {#create-sandbox}
 

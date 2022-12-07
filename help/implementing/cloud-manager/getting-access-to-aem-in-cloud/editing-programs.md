@@ -2,9 +2,9 @@
 title: Redigeringsprogram
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: d805ed744af0e5c95863a1c67439b384cc5d11b2
+source-git-commit: b56b8b448060cd446c6f17689882bc0515e27d25
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,12 @@ Följ de här stegen för att redigera ett program.
 1. Klicka på **Uppdatera** för att spara ändringarna i programmet.
 
 Varje gång ett program redigeras, som att lägga till eller ta bort en lösning eller ett tillägg, börjar ändringarna gälla efter nästa distribution.
+
+Om ditt produktionsprogram hade förbättrat säkerheten aktiverat, ytterligare **Förbättrat skydd** finns på **Redigera program** för att bekräfta att funktionen är aktiv för programmet.
+
+![Förbättrat skydd aktivt för ett program](assets/edit-program-enhanced.png)
+
+Den här inställningen kan inte ändras när programmet har skapats. Mer information om förbättrat säkerhetsalternativ finns i [Skapa produktionsprogram](creating-production-programs.md) -dokument.
 
 ## Tar bort sandlådeprogram {#delete-sandbox-program}
 
