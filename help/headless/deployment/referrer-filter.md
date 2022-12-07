@@ -3,16 +3,21 @@ title: Referensfilterkonfiguration med AEM Headless
 description: Adobe Experience Manager referensfilter ger åtkomst från tredjepartsvärdar. En OSGi-konfiguration för referensfiltret krävs för att aktivera åtkomst till GraphQL-slutpunkten för headless-program.
 feature: GraphQL API
 exl-id: e2e3d2dc-b839-4811-b5d1-38ed8ec2cc87
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: d8cc024fa5128e4b27098d1bff92588487fe101a
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
 # Referensfilter {#referrer-filter}
 
-Adobe Experience Manager referensfilter ger åtkomst från tredjepartsvärdar. En OSGi-konfiguration för referensfiltret krävs för att aktivera åtkomst till GraphQL-slutpunkten för headless-program.
+Adobe Experience Manager referensfilter ger åtkomst från tredjepartsvärdar.
+
+En OSGi-konfiguration för referensfiltret behövs för att aktivera åtkomst till GraphQL-slutpunkten för headless-program via HTTP-POST. När du använder AEM Headless Persisted Queries som öppnar AEM via HTTP-GET behövs ingen konfiguration av referensfiltret.
+
+>[!WARNING]
+> AEM refererarfilter är inte en OSGi-konfigurationsfabrik, vilket innebär att endast en konfiguration är aktiv i en AEM åt gången. Undvik när det är möjligt att lägga till anpassade inställningar för referensfilter, eftersom detta skriver över AEM systemspecifika konfigurationer och kan störa produktfunktionerna.
 
 Detta gör du genom att lägga till en lämplig OSGi-konfiguration för referensfiltret som:
 
@@ -25,21 +30,21 @@ Om du till exempel vill ge åtkomst för begäranden med referenten `my.domain` 
 
 ```xml
 {
-    "allow.empty":false,
-    "allow.hosts":[
+    "allow.empty": false,
+    "allow.hosts": [
       "my.domain"
     ],
-    "allow.hosts.regexp":[
+    "allow.hosts.regexp": [
       ""
     ],
-    "filter.methods":[
+    "filter.methods": [
       "POST",
       "PUT",
       "DELETE",
       "COPY",
       "MOVE"
     ],
-    "exclude.agents.regexp":[
+    "exclude.agents.regexp": [
       ""
     ]
 }
