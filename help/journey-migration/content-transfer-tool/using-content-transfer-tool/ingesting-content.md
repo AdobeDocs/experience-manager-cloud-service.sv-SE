@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 71370cf59bd1f65db78c2818c118e7d9ec2c9196
+source-git-commit: ee2240eac76d4df372d94152a7c17b6e449ef7c8
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 10%
+source-wordcount: '1181'
+ht-degree: 9%
 
 ---
 
@@ -119,7 +119,7 @@ Du kan göra detta genom att skapa ett nytt intag-jobb och se till att **Svep** 
 
 ### CAM kan inte hämta migreringstoken {#cam-unable-to-retrieve-the-migration-token}
 
-Den automatiska hämtningen av migreringstoken kan misslyckas av olika orsaker, inklusive dig [konfigurera ett IP-tillåtelselista via Cloud Manager](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) i målmiljön för Cloud Service.  I sådana fall visas följande dialogruta när du försöker starta ett intag:
+Den automatiska hämtningen av migreringstoken kan misslyckas av olika orsaker, inklusive dig [konfigurera ett IP-tillåtelselista via Cloud Manager](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) i målmiljön för Cloud Service. I sådana fall visas följande dialogruta när du försöker starta ett intag:
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/troubleshooting-token.png)
 
@@ -134,6 +134,14 @@ Du måste hämta migreringstoken manuellt genom att klicka på länken Hämta to
 Du kommer bara att kunna starta upp ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte tillhör gruppen AEM administratörer visas ett felmeddelande enligt nedan när du försöker starta ett intag. Du kan antingen be administratören att lägga till dig på den lokala **AEM administratörer** eller fråga efter själva variabeln som du sedan kan klistra in i **Indata för migreringstoken** fält.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_nonadmin_ingestion.png)
+
+### Automatiska uppdateringar via Release Orchestrator är fortfarande aktiverat
+
+Frisläpp Orchestrator håller automatiskt miljön uppdaterad genom att uppdatera automatiskt. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön. Detta är en av orsakerna till att en supportanmälan bör loggas innan ett förtäring påbörjas (se &quot;Anteckning&quot; ovan), så att det går att schemalägga tillfällig inaktivering av Release Orchestrator.
+
+Om Frisläpp Orchestrator fortfarande körs när ett intag startas visas det här felmeddelandet. Du kan välja att fortsätta i alla fall och ta risken genom att markera fältet och trycka på knappen igen.
+
+![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_ingestion.png)
 
 ## What&#39;s Next {#whats-next}
 
