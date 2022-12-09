@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 31198a1279e07d0a1afe41100d3cfe59d02fd686
+source-git-commit: f98704357c38f61e8e7d36b33ad32e9154c611e6
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,43 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.5 av [!DNL Workfront for Experience Manager enhanced connector] är 11 november 2022.
+Releasedatum för den senaste versionen, 1.9.6 av [!DNL Workfront for Experience Manager enhanced connector] är 9 december 2022.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande förbättringar och felkorrigeringar:
+
+**Förbättring**
+
+<!--
+
+* Workfront enhanced connector now allows you to use new search parameters to be more specific while defining folder names on large repositories.
+
+-->
+
+* Workfront förbättrade anslutning stöder nu fulltextsökning av resurser och mappar.
+
+**Felkorrigeringar**
+
+* Metadata för dokumentversion synkroniseras inte korrekt mellan Workfront och Experience Manager.
+* Problem vid skapande av en mapp som är länkad till Experience Manager i Workfront när mappen använder ett schema som saknar definition i den globala konfigurationen.
+* Formuläret för metadataschemats svarar inte när du klickar på ett fält på grund av en inläsningstid som är längre än förväntat. Specifik OSGi-konfiguration för anpassade formulär har lagts till för att lösa problemet. Namnen på de anpassade formulär som du lägger till i metadataschemats är tillgängliga i loggarna.
+
+>[!IMPORTANT]
+>
+>Adobe rekommenderar att du [uppgradera till den senaste 1.9.6-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
+
+## Kända fel {#known-issues}
+
+* När projektlänkade mappar konfigureras med AEM 6.4 sparar Experience Manager inte värdena för **[!UICONTROL sub-folders]** och **[!UICONTROL Create linked folder in projects with portfolio]** fält. Värdet för **[!UICONTROL sub-folders]** fältuppdateringar till **[!UICONTROL undefined]** och värdet för **[!UICONTROL Create linked folder in projects with portfolio]** fältuppdateringar till **[!UICONTROL Default Portfolio]** automatiskt när konfigurationen har sparats.
+
+* När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** listrutan samt **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i den nya Workfront-upplevelsen.
+
+## Tidigare versioner {#previous-releases}
+
+### November 2022-utgåvan {#november-2022-release}
+
+[!DNL Workfront for Experience Manager enhanced connector] version 1.9.5, släppt den 11 november, innehåller följande uppdateringar:
 
 * När du bara definierar ett värde för ett fält med flera värden i Workfront mappas fältvärdet inte korrekt till Experience Manager.
 
@@ -58,19 +90,6 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
    >[!NOTE]
    >
    >Om du redan har tagit bort fel händelseprenumerationer innan du utför de steg som beskrivs i den här proceduren kan du hoppa över det sista steget i den här proceduren.
-
-
->[!IMPORTANT]
->
->Adobe rekommenderar att du [uppgradera till den senaste 1.9.5-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
-
-## Kända fel {#known-issues}
-
-* När projektlänkade mappar konfigureras med AEM 6.4 sparar Experience Manager inte värdena för **[!UICONTROL sub-folders]** och **[!UICONTROL Create linked folder in projects with portfolio]** fält. Värdet för **[!UICONTROL sub-folders]** fältuppdateringar till **[!UICONTROL undefined]** och värdet för **[!UICONTROL Create linked folder in projects with portfolio]** fältuppdateringar till **[!UICONTROL Default Portfolio]** automatiskt när konfigurationen har sparats.
-
-* När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** listrutan samt **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i den nya Workfront-upplevelsen.
-
-## Tidigare versioner {#previous-releases}
 
 ### Oktober 2022-versionen {#october-2022-release}
 
