@@ -3,9 +3,9 @@ title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: e90b400d37cb380476a941c526fdadcd615c118a
+source-git-commit: 31bd142b6748f2367f136975ead583982aab1b6e
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1540'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ Mer information finns i:
 
 * A [exempel på struktur för innehållsfragment](#content-fragment-structure-graphql)
 
-* Och några [sampla GraphQL-frågor](#graphql-sample-queries), baserat på exempelstrukturen för innehållsfragment (modeller för innehållsfragment och relaterade innehållsfragment).
+* Och några [exempelfrågor om GraphQL](#graphql-sample-queries), baserat på exempelstrukturen för innehållsfragment (modeller för innehållsfragment och relaterade innehållsfragment).
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_headless_graphql_sample"
@@ -1116,12 +1116,6 @@ Dessa exempelfrågor är baserade på WKND-projektet. Detta har:
 >
 >Eftersom resultaten kan bli omfattande återges de inte här.
 
->[!NOTE]
->
->Olika frågor refererar till variationen `variation1`. Detta finns inte i WKND-standardpaketet. Den måste skapas för testning.
->
->If `variation1` finns inte, sedan `master`som standard.
-
 ### Exempelfråga för alla innehållsfragment i en viss modell med de angivna egenskaperna {#sample-wknd-all-model-properties}
 
 Detta exempel på frågor intervjuar:
@@ -1471,27 +1465,19 @@ Den här frågan förhör:
 Den här frågan förhör:
 
 * för ett enda innehållsfragment av typen `article` vid en viss sökväg
-   * inom detta, de uppgifter som avser variationen: `variation1`
+   * inom detta, de uppgifter som avser variationen: `another`
 
 **Exempelfråga**
 
 ```graphql
 {
-  articleByPath(_path: "/content/dam/wknd-shared/en/magazine/alaska-adventure/alaskan-adventures", variation: "variation1") {
+  authorByPath(_path: "/content/dam/wknd-shared/en/contributors/ian-provo", variation: "another") {
     item {
-      authorFragment {
         _path
         _variation
         firstName
         lastName
         birthDay
-      }
-      main {
-        html
-        markdown
-        plaintext
-        json
-      }
     }
   }
 }
@@ -1501,29 +1487,23 @@ Den här frågan förhör:
 
 Den här frågan förhör:
 
-* för innehållsfragment av typen `article` med en specifik variation: `variation1`
+* för innehållsfragment av typen `article` med en specifik variation: `another`
+
+>[!NOTE]
+>
+>Detta visar återfall för innehållsfragment som inte har en [Variation](/help/headless/graphql-api/content-fragments.md#variations) för det angivna namnet.
 
 **Exempelfråga**
 
 ```graphql
 {
-  articleList(variation: "variation1") {
+  authorList(variation: "another") {
     items {
-      _path
-      _variation
-      authorFragment {
         _path
         _variation
         firstName
         lastName
         birthDay
-      }
-      main {
-        html
-        markdown
-        plaintext
-        json
-      }
     }
   }
 }
