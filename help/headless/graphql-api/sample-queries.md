@@ -3,7 +3,7 @@ title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: 31bd142b6748f2367f136975ead583982aab1b6e
+source-git-commit: df1bccc632b3287c73a926bc5f9c6b63d51d8de6
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 2%
@@ -29,7 +29,7 @@ Mer information finns i:
 
 * A [exempel på struktur för innehållsfragment](#content-fragment-structure-graphql)
 
-* Och några [exempelfrågor om GraphQL](#graphql-sample-queries), baserat på exempelstrukturen för innehållsfragment (modeller för innehållsfragment och relaterade innehållsfragment).
+* Och några [sampla GraphQL-frågor](#graphql-sample-queries), baserat på exempelstrukturen för innehållsfragment (modeller för innehållsfragment och relaterade innehållsfragment).
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_headless_graphql_sample"
@@ -1464,7 +1464,7 @@ Den här frågan förhör:
 
 Den här frågan förhör:
 
-* för ett enda innehållsfragment av typen `article` vid en viss sökväg
+* för ett enda innehållsfragment av typen `author` vid en viss sökväg
    * inom detta, de uppgifter som avser variationen: `another`
 
 **Exempelfråga**
@@ -1487,7 +1487,7 @@ Den här frågan förhör:
 
 Den här frågan förhör:
 
-* för innehållsfragment av typen `article` med en specifik variation: `another`
+* för innehållsfragment av typen `author` med en specifik variation: `another`
 
 >[!NOTE]
 >
@@ -1592,7 +1592,7 @@ Den här frågan förhör:
 
 Exempelfrågorna baseras på följande struktur som använder:
 
-* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - utgör grunden för GraphQL-scheman
+* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - grundvalen för GraphQL-scheman
 
 * [Exempel på innehållsfragment](#sample-content-fragments) baserat på ovanstående modeller
 
