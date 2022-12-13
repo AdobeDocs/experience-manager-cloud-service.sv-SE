@@ -4,9 +4,9 @@ description: Lär dig hur du skapar en struktur som fungerar som grund för allt
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: 02112c4db42fe1108bd398229a159a7763ec9a0c
+source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1149'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,21 @@ ht-degree: 0%
 Med Content Fragments kan du utforma, skapa, strukturera och publicera sidoberoende innehåll. Med hjälp av dem kan ni förbereda innehåll som är klart att användas på flera platser och i flera kanaler, vilket är idealiskt för headless-leverans. Modeller för innehållsfragment används för att definiera innehållets struktur och är det första du behöver skapa för att kunna hantera ditt headless-innehåll.
 
 För att du ska få en bättre förståelse för hur detta görs går den här modulen AEM igenom processen med en snabb, interaktiv genomgång där du först skapar modellen och sedan lägger till dess struktur. Det här dokumentet utgör ett komplement till produktdemon, som omfattar samma steg och länkar till ytterligare resurser där så är lämpligt.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_overview_guide_br_test"
+>title="Starta modellredigeraren"
+>abstract="Skapandet av en modell för innehållsfragment börjar med att skapa ett modellobjekt i modelladministrationsarbetsflödet och sedan lägga till strukturelement i den med hjälp av modellredigeraren för innehållsfragment.<br><br>Klicka nedan för att starta funktionen på en ny flik och följ det här utbildningsdokumentet för att skapa ditt första innehållsfragment."
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_overview_guide_newline_test"
+>title="Starta modellredigeraren"
+>abstract="Skapandet av en modell för innehållsfragment börjar med att skapa ett modellobjekt i modelladministrationsarbetsflödet och sedan lägga till strukturelement i den med hjälp av modellredigeraren för innehållsfragment.\n\nKlicka nedan för att starta funktionen på en ny flik och följ det här utbildningsdokumentet för att skapa ditt första innehållsfragment."
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_overview"
+>title="Skapa innehållsstrukturen för din app"
+>abstract="När du följer vår serie med interaktiva guider lär du dig att skapa strukturen (även kallad innehållsfragmentmodellen) som fungerar som grund för allt ditt headless-innehåll."
 
 ## Modellkonsolen för innehållsfragment {#content-fragment-model-console}
 

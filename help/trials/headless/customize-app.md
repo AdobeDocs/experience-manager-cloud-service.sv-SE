@@ -4,9 +4,9 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: 02112c4db42fe1108bd398229a159a7763ec9a0c
+source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1400'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,11 @@ ht-degree: 0%
 AEM testversioner för headless levereras med en enkel React-app som visar headless-innehåll. I den här modulen får du lära dig hur du förhandsgranskar appen och ändrar dess innehåll genom att byta ut en bild och skapa en köpbar stund för den.
 
 Själva programmet baseras på strukturen för innehållsfragment. Med hjälp av redigeraren för innehållsfragment i AEM kan du ändra appinnehåll. För att du ska få en bättre förståelse för hur du gör på det här sättet går du igenom processen med hjälp av den här modulen med AEM. Det här dokumentet är ett komplement till den interaktiva rundturen, som omfattar samma steg och länkar till ytterligare resurser där så är lämpligt.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_react_app"
+>title="Anpassa innehåll i en exempelapp för React"
+>abstract="Vi har skapat en modern React-app som du kan använda för att lära dig hur du anpassar innehåll med hjälp av den headless-funktionsuppsättningen."
 
 ## Innehållsfragmentsredigerare {#fragment-editor}
 

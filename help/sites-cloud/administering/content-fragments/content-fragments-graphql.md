@@ -1,21 +1,21 @@
 ---
 title: Headless Content Delivery using Content Fragments with GraphQL
-description: Lär dig de grundläggande begreppen för att implementera ett AEM Headless CMS med Content Fragments med GraphQL för leverans av headless-innehåll.
+description: Lär dig de grundläggande begreppen för att implementera ett AEM Headless CMS med hjälp av Content Fragments med GraphQL för leverans av headless-innehåll.
 feature: Content Fragments, GraphQL API
 role: User
 exl-id: ef48f737-a5b3-4913-9f37-6b9f681bc048
-source-git-commit: bdbd78f0fdb14113d0eddccf4faba499849d48fe
+source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
 
 # Headless Content Delivery using Content Fragments with GraphQL {#headless-content-delivery-using-content-fragments-with-graphQL}
 
-Med Content Fragments och GraphQL API kan du använda Adobe Experience Manager (AEM) as a Cloud Service som ett Headless Content Management System (CMS).
+Med Content Fragments och GraphQL API kan du använda Adobe Experience Manager (AEM) as a Cloud Service som Headless Content Management System (CMS).
 
-Detta uppnås med Content Fragments, tillsammans med det AEM GraphQL-API:t (en anpassad implementering som bygger på standard GraphQL), för att leverera strukturerat innehåll som ska användas i dina program. Möjligheten att anpassa en enda API-fråga gör att du kan hämta och leverera det specifika innehåll som du vill ha/behöver återge (som svar på en enskild API-fråga).
+Detta uppnås med hjälp av innehållsfragment och det AEM GraphQL-API:t (en anpassad implementering som baseras på GraphQL-standard) för att enkelt kunna leverera strukturerat innehåll som ska användas i dina program. Möjligheten att anpassa en enda API-fråga gör att du kan hämta och leverera det specifika innehåll som du vill ha/behöver återge (som svar på en enskild API-fråga).
 
 >[!NOTE]
 >
@@ -33,11 +33,6 @@ Detta uppnås med Content Fragments, tillsammans med det AEM GraphQL-API:t (en a
 >* [AEM Commerce använder data från en e-handelsplattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
 >* [AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som bygger på standard GraphQL) för att leverera strukturerat innehåll som kan användas i dina program](/help/headless/graphql-api/content-fragments.md).
 
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_graphql"
->title="Extrahera innehåll med GraphQL API"
->abstract="I den här modulen får du lära dig hur du kan använda innehållsfragment och GraphQL API som ett Headless Content Management System."
 
 ## Headless CMS {#headless-cms}
 
@@ -63,7 +58,7 @@ The [AEM GraphQL API](#aem-graphql-api) gör att du kan utföra (komplexa) fråg
 
 För Adobe Experience som Cloud Experience har en anpassad implementering av standard-API:t GraphQL utvecklats. Se [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md) för mer information.
 
-Implementeringen av AEM GraphQL API baseras på [GraphQL Java-bibliotek](https://graphql.org/code/#java).
+Den AEM API-implementeringen i GraphQL baseras på [GraphQL Java-bibliotek](https://graphql.org/code/#java).
 
 ## Innehållsfragment för användning med AEM GraphQL API {#content-fragments-use-with-aem-graphql-api}
 
@@ -73,7 +68,7 @@ Implementeringen av AEM GraphQL API baseras på [GraphQL Java-bibliotek](https:/
 * The [Modeller för innehållsfragment](#content-fragments-models) tillhandahålla den struktur som krävs med hjälp av definierade datatyper.
 * The [Fragmentreferens](#fragment-references), som är tillgängligt när du definierar en modell, kan användas för att definiera ytterligare lager av strukturen.
 
-![Innehållsfragment för användning med GraphQL](assets/cfm-nested-01.png "Innehållsfragment för användning med GraphQL")
+![Content Fragments for use with GraphQL](assets/cfm-nested-01.png "Content Fragments for use with GraphQL")
 
 ### Innehållsfragment {#content-fragments}
 
@@ -113,8 +108,8 @@ Om du vill ha hjälp med att utforma och utveckla dina modeller för innehållsf
 
 ## Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
-Se [Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor](/help/headless/graphql-api/sample-queries.md) för en introduktion till att använda AEM GraphQL API.
+Se [Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor](/help/headless/graphql-api/sample-queries.md) om du vill få en introduktion till hur du använder AEM GraphQL API.
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL
 
-Söker du en praktisk självstudiekurs? Checka ut [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Checka ut [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) en komplett självstudiekurs som visar hur man bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app, i ett headless CMS-scenario.

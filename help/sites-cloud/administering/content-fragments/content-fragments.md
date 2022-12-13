@@ -4,9 +4,9 @@ description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as
 feature: Content Fragments
 role: User
 exl-id: d12b1dda-85ce-4665-b8b1-915b74231bb8
-source-git-commit: d720d403cab4e51dd89a58aae5b4e29ca9da7f1c
+source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2070'
 ht-degree: 3%
 
 ---
@@ -88,11 +88,6 @@ Dessa innehållsfragment kan sedan samlas ihop för att ge upplevelser över en 
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
 >Mer information finns även i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_overview"
->title="Skapa innehållsstrukturen för din app"
->abstract="När du följer vår serie med interaktiva guider lär du dig att skapa strukturen (även kallad innehållsfragmentmodellen) som fungerar som grund för allt ditt headless-innehåll."
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 

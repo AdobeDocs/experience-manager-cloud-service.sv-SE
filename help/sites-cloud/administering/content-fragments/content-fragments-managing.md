@@ -4,9 +4,9 @@ description: Lär dig hur du använder konsolen Innehållsfragment för att hant
 feature: Content Fragments
 role: User
 exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1915'
 ht-degree: 1%
 
 ---
@@ -54,11 +54,6 @@ Konsolen för innehållsfragment ger direktåtkomst till dina fragment och relat
 * [Söka och filtrera i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#filtering-fragments)
 
 ## Skapa innehållsfragment {#creating-content-fragments}
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_create_content"
->title="Skapa nytt innehåll"
->abstract="Med hjälp av modellerna som du skapade i modul 1 får du lära dig hur du skapar innehåll som kan användas för att skapa sidor, eller som bas för rubrikfritt innehåll."
 
 ### Skapa en innehållsmodell {#creating-a-content-model}
 

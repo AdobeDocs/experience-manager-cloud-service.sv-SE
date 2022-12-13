@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: 02112c4db42fe1108bd398229a159a7763ec9a0c
+source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,11 @@ ht-degree: 0%
 # Skapa rubrikfritt innehåll {#create-content}
 
 Lär dig använda genom att följa produktutbildningsmodulen [de innehållsfragmentsmodeller du skapat tidigare](content-structure.md) för att skapa innehåll som kan användas för att skapa sidor, eller som bas för rubrikfritt innehåll. Det här dokumentet är ett komplement till den interaktiva rundturen, som omfattar samma steg och länkar till ytterligare resurser där så är lämpligt.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_create_content"
+>title="Skapa nytt innehåll"
+>abstract="Med hjälp av modellerna som du skapade i modul 1 får du lära dig hur du skapar innehåll som kan användas för att skapa sidor, eller som bas för rubrikfritt innehåll."
 
 ## Innehållsfragment {#introduction}
 

@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: 02112c4db42fe1108bd398229a159a7763ec9a0c
+source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,24 @@ ht-degree: 0%
 
 Hittills i AEM för headless har du [har skapat egna Content Fragment-modeller](content-structure.md) har också skapat ett eget headless-innehåll [Innehållsfragment.](create-content.md) Nu kan du lära dig att använda innehållsfragment och GraphQL API som ett headless-system för innehållshantering för att leverera ditt innehåll.
 
-GraphQL har ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll de behöver med ett enda API-anrop.
+GraphQL innehåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs med ett enda API-anrop.
 
 Först får du lära dig att köra två olika typer av frågor: **list** och **byPath** frågor. Sedan får du lära dig hur du hämtar innehåll från det innehållsfragment som du skapade tidigare. Det här dokumentet är ett komplement till den interaktiva rundturen, som omfattar samma steg och länkar till ytterligare resurser där så är lämpligt.
 
 >[!TIP]
 >
->Om du vill ha mer information om GraphQL API kan du läsa [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för API-guiden för GraphQL.
+>Om du vill ha mer information om GraphQL API kan du läsa [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för GraphQL API-guiden.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_graphql"
+>title="Extrahera innehåll med GraphQL API"
+>abstract="I den här modulen får du lära dig hur du kan använda innehållsfragment och GraphQL API som rubriklöst innehållshanteringssystem."
 
 ## GraphQL Explorer {#graphql-explorer}
 
 Du börjar med GraphQL Explorer. Här kan du skapa och köra frågor mot ditt headless-innehåll.
 
-![GraphQL Query Editor](assets/extract-content/query-editor.png)
+![Frågeredigeraren för GraphQL](assets/extract-content/query-editor.png)
 
 Om du vill navigera till GraphQL Utforskaren själv utanför vägledningen i appen visas den med ikonen Adobe längst upp till vänster på sidan. Då öppnas den globala navigeringen för AEM. Här väljer du **verktyg** och sedan **Allmänt** -> **GraphQL Query Editor**.
 
@@ -43,7 +48,7 @@ Välj **AEM demoresurser** slutpunkt från **Slutpunkt** nedrullningsbar meny l�
 
 ## Kopiera och köra en listfråga {#list-query}
 
-Börja med en enkel listfråga för att orientera dig efter hur AEM as a Cloud Service GraphQL API:er fungerar. Det här frågeexemplet returnerar en lista med allt innehåll som använder en viss Content Fragment-modell. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
+Börja med en enkel listfråga för att kunna orientera dig AEM hur as a Cloud Service GraphQL API:er fungerar. Det här frågeexemplet returnerar en lista med allt innehåll som använder en viss Content Fragment-modell. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
 
 1. Kopiera följande kodfragment.
 
