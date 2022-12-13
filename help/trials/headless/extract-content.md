@@ -3,33 +3,33 @@ title: Extrahera innehåll via GraphQL API
 description: Lär dig hur du använder innehållsfragment och GraphQL API som ett headless-system för innehållshantering.
 hidefromtoc: true
 index: false
-source-git-commit: a832ed1d81866a6470b47d8e30f5c242b10d1422
+exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
+source-git-commit: 02112c4db42fe1108bd398229a159a7763ec9a0c
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 0%
 
 ---
 
-
 # Extrahera innehåll via GraphQL API {#extract-content}
 
 Hittills i AEM för headless har du [har skapat egna Content Fragment-modeller](content-structure.md) har också skapat ett eget headless-innehåll [Innehållsfragment.](create-content.md) Nu kan du lära dig att använda innehållsfragment och GraphQL API som ett headless-system för innehållshantering för att leverera ditt innehåll.
 
-GraphQL innehåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs med ett enda API-anrop.
+GraphQL har ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll de behöver med ett enda API-anrop.
 
 Först får du lära dig att köra två olika typer av frågor: **list** och **byPath** frågor. Sedan får du lära dig hur du hämtar innehåll från det innehållsfragment som du skapade tidigare. Det här dokumentet är ett komplement till den interaktiva rundturen, som omfattar samma steg och länkar till ytterligare resurser där så är lämpligt.
 
 >[!TIP]
 >
->Mer information om GraphQL API finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för API-guiden för GraphQL.
+>Om du vill ha mer information om GraphQL API kan du läsa [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för API-guiden för GraphQL.
 
 ## GraphQL Explorer {#graphql-explorer}
 
-Du startar i GraphQL Explorer. Här kan du skapa och köra frågor mot ditt headless-innehåll.
+Du börjar med GraphQL Explorer. Här kan du skapa och köra frågor mot ditt headless-innehåll.
 
-![Frågeredigeraren för GraphQL](assets/extract-content/query-editor.png)
+![GraphQL Query Editor](assets/extract-content/query-editor.png)
 
-Om du vill navigera till GraphQL Explorer själv utanför vägledningen i appen visas den med ikonen Adobe längst upp till vänster på sidan. Då öppnas den globala navigeringen för AEM. Här väljer du **verktyg** och sedan **Allmänt** -> **GraphQL Query Editor**.
+Om du vill navigera till GraphQL Utforskaren själv utanför vägledningen i appen visas den med ikonen Adobe längst upp till vänster på sidan. Då öppnas den globala navigeringen för AEM. Här väljer du **verktyg** och sedan **Allmänt** -> **GraphQL Query Editor**.
 
 >[!TIP]
 >
@@ -161,7 +161,7 @@ Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler. 
 
 ## Du har lärt dig att fråga innehåll! {#conclusion}
 
-Bra jobbat! Du har lärt dig mer om de två grundläggande typerna av frågor och hur du ställer frågor till ditt eget innehåll. Se till att du checkar ut [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och lära dig mer om GraphQL API.
+Bra jobbat! Du har lärt dig mer om de två grundläggande typerna av frågor och hur du ställer frågor till ditt eget innehåll. Se till att du checkar ut [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och se hur mycket mer du kan göra med GraphQL API.
 
 Om du vill veta hur extraherat innehåll sedan används i en anpassad React-app ska du kontrollera modulen [Anpassa innehåll i en exempelapp.](customize-app.md)
 
@@ -173,6 +173,6 @@ Du kan gå tillbaka till startskärmen för testversionen genom att klicka på *
 
 Mer information om innehållsfragment och AEM finns i den här extra dokumentationen.
 
-* [API-handboken för GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html)
+* [GraphQL API-guide](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html)
 * [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - Dokumentation om hur du navigerar och använder AEM för nya användare
 * [Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)

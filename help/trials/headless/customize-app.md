@@ -3,13 +3,13 @@ title: Anpassa innehåll i en exempelapp
 description: Använd en React-exempelapp för att lära dig hur du anpassar innehåll med hjälp av den headless-funktion som finns i AEM as a Cloud Service.
 hidefromtoc: true
 index: false
-source-git-commit: 62c8be81d0d46e69b44cc803419fafcce2e93d33
+exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
+source-git-commit: 02112c4db42fe1108bd398229a159a7763ec9a0c
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 0%
 
 ---
-
 
 # Anpassa innehåll i en exempelapp {#customize-app}
 

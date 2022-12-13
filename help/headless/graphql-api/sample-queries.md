@@ -3,7 +3,7 @@ title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: dba0223fd05956934fe5a3405f21fcd099637726
+source-git-commit: e90b400d37cb380476a941c526fdadcd615c118a
 workflow-type: tm+mt
 source-wordcount: '1554'
 ht-degree: 2%
@@ -29,7 +29,7 @@ Mer information finns i:
 
 * A [exempel på struktur för innehållsfragment](#content-fragment-structure-graphql)
 
-* Och några [exempelfrågor om GraphQL](#graphql-sample-queries), baserat på fragmentstrukturen för exempelinnehåll (modeller för innehållsfragment och relaterade innehållsfragment).
+* Och några [sampla GraphQL-frågor](#graphql-sample-queries), baserat på exempelstrukturen för innehållsfragment (modeller för innehållsfragment och relaterade innehållsfragment).
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_headless_graphql_sample"

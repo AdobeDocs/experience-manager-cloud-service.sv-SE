@@ -2,7 +2,7 @@
 title: Skapa produktionsprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: c68d4240fb70cc1d533c5fad6472c6c192085603
+source-git-commit: bfa1b56e5c066557c1b369b5f13335080a965055
 workflow-type: tm+mt
 source-wordcount: '541'
 ht-degree: 0%

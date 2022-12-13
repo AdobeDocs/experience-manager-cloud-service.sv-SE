@@ -2,7 +2,7 @@
 title: New Relic One
 description: Läs mer om tjänsten New Relic One Application Performance Monitoring (APM) för AEM as a Cloud Service och hur du kan komma åt den.
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
-source-git-commit: 9089c66a2fdb5a05eb888e2af736862aff1b7a11
+source-git-commit: abc3be85679724fd4a8ce1ddcbd2ac5cca151953
 workflow-type: tm+mt
 source-wordcount: '1607'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Läs mer om New Relic One APM-tjänst (Application Performance Monitoring) för 
 
 Adobe lägger stor vikt vid övervakning, tillgänglighet och prestanda för programmet. AEM as a Cloud Service ger tillgång till en anpassad New Relic One-övervakningssvit som en del av standardprodukterbjudandet för att säkerställa att era team får största möjliga insyn i era AEM as a Cloud Service system- och miljöprestandamätningar.
 
-I det här dokumentet beskrivs hur du hanterar åtkomsten till de nya APM-funktionerna (New Relic One application performance monitoring) som är aktiverade i dina AEM as a Cloud Service miljöer för att ge bättre prestanda och få ut så mycket som möjligt av AEM as a Cloud Service.
+I det här dokumentet beskrivs hur du hanterar åtkomst till New Relic One APM-funktioner (application performance monitoring) som är aktiverade i dina AEM as a Cloud Service miljöer för att ge bättre prestanda och få ut så mycket som möjligt av AEM as a Cloud Service.
 
 När ett nytt produktionsprogram skapas skapas automatiskt det New Relic One-underkonto som är kopplat till ditt AEM as a Cloud Service program.
 
@@ -66,15 +66,15 @@ När användarna har definierats skickar New Relic ett bekräftelsemeddelande vi
 >
 >Om du hanterar New Relic One-användare måste du också lägga till dig själv som användare för att få tillgång till dem. Att vara **Företagsägare** eller **Distributionshanteraren** inte ger tillgång till New Relic One. Du måste också skapa dig själv som användare.
 
-## Aktivera ditt nya Relic One-användarkonto {#activate-account}
+## Aktivera ditt New Relic One-användarkonto {#activate-account}
 
-När ett New Relic One-användarkonto har skapats, vilket beskrivs i förhandsvisningsavsnittet [Hantera New Relic One-användare](#manage-users)skickar New Relic ett bekräftelsemeddelande till den angivna adressen. För att kunna använda dessa konton måste användarna först aktivera sina konton hos New Relic genom att återställa sina lösenord.
+När ett New Relic One-användarkonto har skapats, vilket beskrivs i förhandsvisningsavsnittet [Hantera New Relic One-användare](#manage-users), skickar New Relic en bekräftelse till den angivna adressen via e-post. För att kunna använda dessa konton måste användarna först aktivera sina konton hos New Relic genom att återställa sina lösenord.
 
 Följ de här stegen för att aktivera ditt konto som New Relic-användare.
 
 1. Klicka på länken i e-postmeddelandet från New Relic. Då öppnas webbläsaren för inloggningssidan New Relic.
 
-1. På New Relic inloggningssida väljer du **Har du glömt lösenordet?**.
+1. På inloggningssidan New Relic väljer du **Har du glömt lösenordet?**.
 
    ![New Relic-inloggning](/help/implementing/cloud-manager/assets/new-relic/newrelic-1.png)
 
@@ -86,9 +86,9 @@ Följ de här stegen för att aktivera ditt konto som New Relic-användare.
 
 Om du inte får något bekräftelsemeddelande från New Relic kan du läsa [felsökningsavsnitt.](#troubshooting)
 
-## Åtkomst till New Relic One {#accessing-new-relic}
+## Använder New Relic One {#accessing-new-relic}
 
-När du har [aktiverade ditt New Relic-konto,](#activate-account) du har tillgång till New Relic One via Cloud Manager eller direkt.
+När du har [har aktiverat ditt New Relic-konto,](#activate-account) du har tillgång till New Relic One via Cloud Manager eller direkt.
 
 Så här kommer du åt New Relic One via Cloud Manager:
 
@@ -100,7 +100,7 @@ Så här kommer du åt New Relic One via Cloud Manager:
 
    ![Hantera användare](assets/newrelic-access.png)
 
-   * Du kan även öppna New Relic via ellipsknappen högst upp i **Miljö** programskärmen.
+   * Du kan även öppna New Relic via ellipsknappen högst upp på **Miljö** programskärmen.
 
 1. Logga in på New Relic One på den nya webbläsarfliken som öppnas.
 
@@ -122,7 +122,7 @@ Om du behöver mer hjälp kan du öppna ett supportärende via [AEM supportporta
 
 Om du har lagts till som New Relic One-användare enligt beskrivningen i avsnittet [Hantera New Relic One-användare](#manage-users) och kan inte hitta det ursprungliga e-postmeddelandet med kontobekräftelsen genom att följa dessa steg.
 
-1. Gå till inloggningssidan för New Relic på [`login.newrelic.com/login`](https://login.newrelic.com/login).
+1. Gå till New Relic inloggningssida på [`login.newrelic.com/login`](https://login.newrelic.com/login).
 
 1. Välj **Har du glömt lösenordet?**.
 
@@ -132,7 +132,7 @@ Om du har lagts till som New Relic One-användare enligt beskrivningen i avsnitt
 
    ![Ange e-postadress](/help/implementing/cloud-manager/assets/new-relic/newrelic-2.png)
 
-1. New Relic skickar ett e-postmeddelande till dig med en länk för att bekräfta kontot.
+1. New Relic skickar ett mejl med en länk som bekräftar kontot.
 
 Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden via e-post eller lösenord loggar du en supportanmälan via [Admin Console.](https://adminconsole.adobe.com/)
 
@@ -147,7 +147,7 @@ Om du inte får något e-postmeddelande från New Relic:
 Följande begränsningar gäller när du lägger till användare i New Relic One:
 
 * Högst 25 användare kan läggas till. Om det maximala antalet användare har uppnåtts tar du bort användare för att kunna lägga till nya användare.
-* Användare som läggs till i New Relic är av samma typ **Begränsad** referera till [I New Relic-dokumentationen finns mer information.](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change)%20any%20New%20Relic%20features.)
+* Användare som läggs till i New Relic är av typen **Begränsad** referera till [I New Relic-dokumentationen finns mer information.](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change)%20any%20New%20Relic%20features.)
 * AEM as a Cloud Service har bara New Relic One APM-lösning och har inte stöd för varningar, loggning eller API-integreringar.
 
 Om du vill ha mer hjälp eller mer information om New Relic One erbjudanden för ditt AEM as a Cloud Service program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).

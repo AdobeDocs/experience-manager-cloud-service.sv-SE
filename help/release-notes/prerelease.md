@@ -2,7 +2,7 @@
 title: Adobe Experience Manager as a Cloud Service Prerelease Channel
 description: Lär dig hur du använder betaversionskanalen för att få en förhandsvisning av kommande funktioner som AEM as a Cloud Service.
 exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
-source-git-commit: 5b38e7d0ad97cdf8b7d0d5da79cf3d6721fa618a
+source-git-commit: 9a76a1c2b5e3b7986654b0843842b015811679a2
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%

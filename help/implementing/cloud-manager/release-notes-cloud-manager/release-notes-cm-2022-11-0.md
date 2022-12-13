@@ -2,13 +2,13 @@
 title: Versionsinformation om Cloud Manager 2022.11.0 i Adobe Experience Manager as a Cloud Service
 description: Detta är versionsinformationen för Cloud Manager 2022.11.0 i AEM as a Cloud Service.
 feature: Release Information
-source-git-commit: 1fce3525a0c48a68f268634e52f3872a49b7545f
+exl-id: 1014efb5-dddb-4997-8cef-afe6dfa61462
+source-git-commit: 5d9cd24ad11d03f61fa1a84227423d833e00841a
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation om Cloud Manager 2022.11.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
