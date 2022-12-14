@@ -3,7 +3,7 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: e90b400d37cb380476a941c526fdadcd615c118a
+source-git-commit: 666125abe28ed71e85fdcf4a3b44f26e61c7795f
 workflow-type: tm+mt
 source-wordcount: '4174'
 ht-degree: 0%
@@ -39,7 +39,7 @@ GraphQL är:
 
    Se [GraphQL.org](https://graphql.org)
 
-* &quot;*...en öppen specifikation för ett flexibelt API-lager. Placera GraphQL över era befintliga bakgrunder för att skapa produkter snabbare än någonsin ....*&quot;.
+* &quot;*...en öppen specifikation för ett flexibelt API-lager. Flytta GraphQL över dina befintliga bakgrunder för att skapa produkter snabbare än någonsin....*&quot;.
 
    Se [Utforska GraphQL](https://www.graphql.com).
 
@@ -67,7 +67,7 @@ Mer information om GraphQL API finns i följande avsnitt (bland många andra res
 
    * [Fallstudier](https://www.graphql.com/case-studies/)
 
-GraphQL för AEM är baserad på standardbiblioteket GraphQL Java Library. Se:
+Implementeringen av GraphQL för AEM baseras på GraphQL Java Library. Se:
 
 * [graphQL.org - Java](https://graphql.org/code/#java)
 
@@ -93,7 +93,7 @@ GraphQL använder följande:
 
 Se [(GraphQL.org) Introduktion till GraphQL](https://graphql.org/learn/) för utförlig information, inklusive [Bästa praxis](https://graphql.org/learn/best-practices/).
 
-### GraphQL-frågetyper {#graphql-query-types}
+### GraphQL Query Types {#graphql-query-types}
 
 Med GraphQL kan du utföra frågor för att returnera:
 
@@ -183,15 +183,15 @@ Om en användare till exempel har skapat en innehållsfragmentmodell som kallas 
 
    * De andra fälten lades till automatiskt av AEM och representerar användbara metoder för att tillhandahålla information om ett visst innehållsfragment. i det här exemplet [hjälpfält](#helper-fields)) `_path`, `_metadata`, `_variations`.
 
-1. När en användare har skapat ett innehållsfragment baserat på artikelmodellen kan det sedan förhöras via GraphQL. Mer information finns i [Exempelfrågor](/help/headless/graphql-api/sample-queries.md#graphql-sample-queries) (baserat på [sampla innehållsfragmentstruktur för användning med GraphQL](/help/headless/graphql-api/sample-queries.md#content-fragment-structure-graphql)).
+1. När en användare har skapat ett innehållsfragment baserat på artikelmodellen kan det sedan förhöras via GraphQL. Mer information finns i [Exempelfrågor](/help/headless/graphql-api/sample-queries.md#graphql-sample-queries) (baserat på [exempelstruktur för innehållsfragment för användning med GraphQL](/help/headless/graphql-api/sample-queries.md#content-fragment-structure-graphql)).
 
-Schemat är flexibelt i GraphQL för AEM. Det innebär att den genereras automatiskt varje gång en innehållsfragmentmodell skapas, uppdateras eller tas bort. Cacheminnen för dataschemat uppdateras också när du uppdaterar en innehållsfragmentmodell.
+I GraphQL for AEM är schemat flexibelt. Det innebär att den genereras automatiskt varje gång en innehållsfragmentmodell skapas, uppdateras eller tas bort. Cacheminnen för dataschemat uppdateras också när du uppdaterar en innehållsfragmentmodell.
 
 <!-- move the following to a separate "in depth" page -->
 
 Cacheminnen för dataschemat uppdateras också när du uppdaterar en innehållsfragmentmodell.
 
-Tjänsten Sites GraphQL avlyssnar (i bakgrunden) alla ändringar som görs i en innehållsfragmentmodell. När uppdateringar upptäcks återskapas endast den delen av schemat. Denna optimering sparar tid och ger stabilitet.
+Tjänsten Sites GraphQL lyssnar (i bakgrunden) efter ändringar som gjorts i en innehållsfragmentmodell. När uppdateringar upptäcks återskapas endast den delen av schemat. Denna optimering sparar tid och ger stabilitet.
 
 Om du till exempel:
 
@@ -201,7 +201,7 @@ Om du till exempel:
 
 1. Ändra sedan `Content-Fragment-Model-2`:
 
-   1. Endast `Model-2` GraphQL Type kommer att uppdateras.
+   1. Endast `Model-2` GraphQL-typen uppdateras.
 
    1. med beaktande av följande: `Model-1` kommer att förbli desamma.
 
@@ -209,7 +209,7 @@ Om du till exempel:
 >
 >Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
-Schemat hanteras via samma slutpunkt som GraphQL-frågorna, där klienthanteraren anger att schemat anropas med tillägget `GQLschema`. Du kan till exempel utföra en enkel `GET` begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
+Schemat hanteras via samma slutpunkt som GraphQL-frågorna, där klienthanteraren hanterar det faktum att schemat anropas med tillägget `GQLschema`. Du kan till exempel utföra en enkel `GET` begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
 
 <!-- move through to here to a separate "in depth" page -->
 
@@ -233,19 +233,19 @@ Inom schemat finns det enskilda fält av två baskategorier:
 
    * Det finns också **Återge som** inställning som ska beaktas, eftersom användare kan konfigurera vissa datatyper. Ett textfält med en rad kan till exempel konfigureras att innehålla flera textrader genom att välja `multifield` i listrutan.
 
-* GraphQL for AEM genererar också ett antal [hjälpfält](#helper-fields).
+* GraphQL för AEM genererar även ett antal [hjälpfält](#helper-fields).
 
 ### Datatyper {#data-types}
 
-GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-datatyper som stöds och motsvarande GraphQL-typer visas:
+GraphQL för AEM stöder en lista med typer. Alla Content Fragment Model-datatyper som stöds och motsvarande GraphQL-typer visas:
 
-| Content Fragment Model - datatyp | GraphQL Type | Beskrivning |
+| Content Fragment Model - datatyp | GraphQL-typ | Beskrivning |
 |--- |--- |--- |
 | Enkelradig text | String, [Sträng] |  Används för enkla strängar som författarnamn, platsnamn osv. |
 | Flerradstext | String, [Sträng] |  Används för att skriva ut text, t.ex. brödtexten i en artikel |
 | Siffra |  Float, [Float] | Används för att visa flyttal och reguljära tal |
 | Boolesk |  Boolesk |  Används för att visa kryssrutor → enkla sant/falskt-satser |
-| Datum och tid | Kalender |  Används för att visa datum och tid i ett ISO 8086-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
+| Datum och tid | Kalender |  Används för att visa datum och tid i ett ISO 8601-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
 | Uppräkning |  Sträng |  Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
 |  Taggar |  [Sträng] |  Används för att visa en lista över strängar som representerar taggar som används i AEM |
 | Innehållsreferens |  String, [Sträng] |  Används för att visa sökvägen till en annan resurs i AEM |
@@ -425,7 +425,7 @@ query($variation: String!) {
 
 ## GraphQL-direktiv {#graphql-directives}
 
-I GraphQL finns en möjlighet att ändra frågan baserat på variabler, så kallade GraphQL-direktiv.
+I GraphQL finns det en möjlighet att ändra frågan baserat på variabler, så kallade GraphQL-direktiv.
 
 Du kan till exempel inkludera `adventurePrice` fält i en fråga för alla `AdventureModels`, baserat på en variabel `includePrice`.
 
@@ -454,7 +454,7 @@ query GetAdventureByType($includePrice: Boolean!) {
 
 ## Filtrering {#filtering}
 
-Du kan också använda filtrering i dina GraphQL-frågor för att returnera specifika data.
+Du kan också använda filtrering i GraphQL-frågor för att returnera specifika data.
 
 Vid filtrering används en syntax som baseras på logiska operatorer och uttryck.
 
@@ -699,7 +699,7 @@ query {
 >* På grund av interna tekniska begränsningar försämras prestanda om sortering och filtrering tillämpas på kapslade fält. Därför bör du använda filter-/sorteringsfält som lagras på rotnivå. Detta är också det rekommenderade sättet om du vill fråga stora sidnumrerade resultatuppsättningar.
 
 
-## GraphQL for AEM - i korthet {#graphql-extensions}
+## GraphQL för AEM - Sammanfattning av tillägg {#graphql-extensions}
 
 Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL standardspecifikation. För GraphQL-frågor med AEM finns det några tillägg:
 
@@ -807,4 +807,4 @@ AEM planerar att investera i det AEM GraphQL-API:t.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Checka ut [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Checka ut [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) en komplett självstudiekurs som visar hur man bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app, i ett headless CMS-scenario.
