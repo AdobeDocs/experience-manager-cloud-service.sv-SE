@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: Cache i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: df892e49307a5c125016f3b21e4b5551020eb2b6
+source-git-commit: 762c30f83a15aba24b56a8d4a6059b371b87aae2
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2833'
 ht-degree: 1%
 
 ---
@@ -220,7 +220,10 @@ I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i ställe
 
 ### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
 
-Precis som i tidigare versioner av AEM rensas innehållet från Dispatcher-cachen när du publicerar eller avpublicerar sidor. Om ett problem med cachelagring misstänks bör kunderna publicera om sidorna i fråga och se till att det finns ett virtuellt värdsystem som matchar `ServerAlias` localhost, vilket krävs för invalidering av Dispatcher-cache.
+Precis som i tidigare versioner av AEM rensas innehållet från Dispatcher-cachen när du publicerar eller avpublicerar sidor. Om ett problem med cachelagring misstänks bör du publicera om sidorna och se till att det finns ett virtuellt värdsystem som matchar `ServerAlias` localhost, vilket krävs för invalidering av Dispatcher-cache.
+
+>[!NOTE]
+>För att få en korrekt invalidering av dispatcher måste du se till att alla förfrågningar från &quot;127.0.0.1&quot;, &quot;localhost&quot;, &quot;.local&quot;, &quot;.adobeaemcloud.com&quot; och &quot;.adobeaemcloud.net&quot; matchas och hanteras av en värdkonfiguration så att dessa förfrågningar kan hanteras. Du kan göra detta genom att antingen globalt matcha &quot;*&quot; i en konfiguration som fångar upp alla värden enligt mönstret i referensen [AEM](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.d/available_vhosts/default.vhost) eller genom att se till att den tidigare nämnda förteckningen fångas av någon av värdarna.
 
 När publiceringsinstansen tar emot en ny version av en sida eller resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess Dispatcher. Den uppdaterade sökvägen tas bort från Dispatcher-cachen, tillsammans med överordnade sökvägar, upp till en nivå (du kan konfigurera detta med [statusfilernivå](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level)).
 
