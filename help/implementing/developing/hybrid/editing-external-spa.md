@@ -2,9 +2,9 @@
 title: Redigera en extern SPA i AEM
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: b06e734fd6874946323cdc71073ecb1c50945845
 workflow-type: tm+mt
-source-wordcount: '2402'
+source-wordcount: '2456'
 ht-degree: 0%
 
 ---
@@ -358,6 +358,10 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
 1. Verifiera redigering av sidan i AEM.
 
    * Distribuera projektet till AEM och navigera till det nyskapade projektet `test` sida. Sidinnehållet återges nu och AEM kan redigeras.
+
+## Rambegränsningar {#framework-limitations}
+
+RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som den [hittades här.](https://github.com/shellscape/webpack-manifest-plugin) RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
 
 ## Ytterligare resurser {#additional-resources}
 
