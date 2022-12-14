@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: f5aa9229ff06fdcff5474594269ebcf9daf09e41
 workflow-type: tm+mt
-source-wordcount: '3297'
+source-wordcount: '3300'
 ht-degree: 0%
 
 ---
@@ -357,7 +357,7 @@ Om du har skapat en mall som kan användas som bas för andra mallar kan du kopi
 1. Skapa en mall på samma sätt som vilken sidmall som helst [dokumenteras här](/help/sites-cloud/authoring/features/templates.md#creating-a-new-template-template-author), som kommer att fungera som bas för din malltyp.
 1. Kopiera den nya mallen från CRXDE Lite med hjälp av `templates` nod till `template-types` noden under [mallmapp](#template-folders).
 1. Ta bort mallen från `templates` noden under [mallmapp](#template-folders).
-1. I kopian av mallen som finns under `template-types` nod, ta bort alla `cq:template` och `cq:templateType` `jcr:content` egenskaper.
+1. I kopian av mallen som finns under `template-types` nod, ta bort alla `cq:template` och `cq:templateType` egenskaper från alla `jcr:content` noder.
 
 Du kan också utveckla en egen malltyp med en exempelredigerbar mall som bas, som finns på GitHub.
 
