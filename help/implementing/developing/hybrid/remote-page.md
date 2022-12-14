@@ -2,9 +2,9 @@
 title: RemotePage-komponenten
 description: RemotePage-komponenten är en anpassad sidkomponent för redigering av SPA för fjärreaktion i AEM.
 exl-id: d3465592-0392-49b0-b49d-de93983c1d6e
-source-git-commit: eaa59b6ecfa50c4a6b4e316e5e305e48cb3d5676
+source-git-commit: d213dd0788e66015237d241caf0f3b5737ce725c
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Se artikeln [Redigera en extern SPA i AEM](editing-external-spa.md) om du vill h
 
 ## Begränsningar {#limitations}
 
-* Den aktuella implementeringen av RemotePage-komponenten stöder endast fjärreaktionsprogram.
+* RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som den [hittades här.](https://github.com/shellscape/webpack-manifest-plugin) RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
 * Intern CSS som är definierad i programmets rotfil och infogad CSS på DOM-rotnoden är inte tillgänglig vid fjärråtergivning i AEM.
 
 ## Teknisk information {#technical-details}
