@@ -2,9 +2,9 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: f201e8bf8a44db6b408edec5b77cc814c7e87abb
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '2076'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,18 @@ I den här artikeln introduceras de grundläggande begreppen för SPA innan läs
 
 Målet med den här introduktionen och genomgången är att visa AEM utvecklare varför SPA är relevanta, hur de i allmänhet fungerar, hur en SPA hanteras av AEM SPA Editor och hur det skiljer sig från ett AEM standardprogram.
 
-Genomgången baseras på AEM och exempelappen WKND SPA Project. Följ gärna med [hämta och installera exempelappen WKND SPA Project från GitHub här.](https://github.com/adobe/aem-guides-wknd-spa)
+## Krav {#requirements}
+
+Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följa med i den här genomgången måste du ha följande till hands.
+
+* [Senaste SDK för utveckling av AEMaaCS](/help/release-notes/release-notes-cloud/release-notes-current.md)
+   * Den bör köras som en lokal utvecklingsmiljö.
+   * Du måste ha administratörsbehörighet för systemet.
+* [Exempelappen WKND SPA Project som finns på GitHub](https://github.com/adobe/aem-guides-wknd-spa)
+   * Ladda ned [senaste utgåvan av React-appen](https://github.com/adobe/aem-guides-wknd-spa/releases) namngiven som liknar `wknd-spa-react.all-X.Y.Z-SNAPSHOT.zip`.
+   * Ladda ned [de senaste exempelbilderna för appen](https://github.com/adobe/aem-guides-wknd-spa/releases) namngiven som liknar `wknd-spa-sample-images-X.Y.Z.zip`.
+   * [Använd pakethanteraren](/help/implementing/developing/tools/package-manager.md) om du vill installera båda paketen på samma sätt som andra paket i AEM.
+   * Appen behöver inte installeras med Maven för den här genomgången.
 
 >[!CAUTION]
 >
