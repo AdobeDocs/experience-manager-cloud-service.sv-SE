@@ -8,9 +8,9 @@ user-guide-description: Läs om hur Experience Manager as a Cloud Service funger
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 4a5e5f6a105db8f010fb7d49810e2ff2656f253a
+source-git-commit: 91d3e2ea02f34963688dd9ee44aed17f55752587
 workflow-type: tm+mt
-source-wordcount: '3820'
+source-wordcount: '3823'
 ht-degree: 21%
 
 ---
@@ -108,6 +108,7 @@ ht-degree: 21%
    + Versionsinformation för migreringsverktyg {#migration-tools}
       + [Aktuell versionsinformation](/help/journey-migration/release-notes/release-notes-migration-tools-current.md)
       + 2022 {#2022}
+         + [Versionsinformation för 2022.9.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-09-0.md)
          + [Versionsinformation för 2022.7.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-07-0.md)
          + [Versionsinformation för 2022.5.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-05-0.md)
          + [Versionsinformation för 2022.4.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-04-0.md)
@@ -428,7 +429,7 @@ ht-degree: 21%
       + [Innehållsfragment med associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md)
       + [Metadata – fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
       + [Innehållsfragment – ta bort överväganden](/help/assets/content-fragments/content-fragments-delete.md)
-      + [Markering](/help/assets/content-fragments/content-fragments-markdown.md)
+      + [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
       + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
       + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
    + Dynamic Media {#dynamicmedia}
