@@ -2,9 +2,9 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 22018450f6d4383f3df6a9f5382a0ad6b4058480
+source-git-commit: 20e54ff697c0dc7ab9faa504d9f9e0e6ee585464
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1433'
 ht-degree: 1%
 
 ---
@@ -126,13 +126,37 @@ Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
 
 Du kan använda API:erna för dokumentbearbetning för att konvertera ett PDF-dokument till ett PDF/A-kompatibelt dokument och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
 
+## Dokumentverktyg
+
+Med synkrona API:er för dokumentverktyg kan du konvertera dokument mellan filformaten PDF och XDP, samt skicka frågor om dokument i PDF. Du kan till exempel ange om ett PDF-dokument innehåller kommentarer eller bilagor.
+
+### Hämta dokumentegenskaper för PDF
+
+Du kan [fråga ett PDF-dokument](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/pdf-utility-sync/#tag/Document-Extraction/) för följande information:
+
+* Är ett PDF-dokument: Kontrollera om källdokumentet är ett PDF-dokument.
+* Är ett ifyllbart formulär: Kontrollera om PDF-källdokumentet är ett ifyllbart formulär.
+* Formulärtyp: Hämta dokumentets formulärtyp.
+* Kontrollera om det finns bifogade filer: Kontrollera om PDF-källdokumentet har några bilagor.
+* Sök efter kommentarer: Kontrollera om PDF-källdokumentet innehåller granskningskommentarer.
+* Är ett PDF-paket: Kontrollera om dokumentet är ett PDF-paket.
+* Hämta PDF-versionen: Hämta [PDF-dokumentets version](https://en.wikipedia.org/wiki/History_of_PDF).
+* Rekommenderad version av Acrobat: Hämta den version av Acrobat (Reader) som krävs för att öppna PDF-dokumentet.
+* Är ett XFA-dokument: Kontrollera om PDF-källdokumentet är ett XFA-baserat PDF-dokument.
+* Är Shell PDF: Kontrollera om PDF-källdokumentet är PDF med skal. Ett skal PDF innehåller bara en XFA-ström, teckensnitt och bildresurser, och en sida som antingen är tom eller innehåller en varning om att dokumentet måste öppnas med Acrobat eller Adobe Reader. Gränssnittet PDF används med PDF-omformning för att optimera leveransen av PDF-formuläromformningar.
+* Hämta XFA-versionen: Hämta [XFA-version för ett XFA-baserat PDF-dokument](https://en.wikipedia.org/wiki/XFA#XFA_versions).
+
+### Konvertera PDF-dokument till XDP-dokument
+
+The [PDF till XDP API](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/pdf-utility-sync/#tag/Document-Conversion) konverterar ett PDF-dokument till en XDP-fil. För att ett PDF-dokument ska kunna konverteras till en XDP-fil måste PDF-dokumentet innehålla en XFA-ström i ordlistan.
+
 ## Typer av API:er för kommunikation
 
 Kommunikationen tillhandahåller HTTP-API:er för on demand- och batchdokumentgenerering:
 
-* **[Synkrona API:er](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/)** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
+* **[Synkrona API:er](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)** lämpar sig för dokumentgenerering on-demand, låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
 
-* **[Batch-API:er (asynkrona API:er)](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
+* **[Batch-API:er (asynkrona API:er)](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)** är lämpliga för schemalagda, höga genomströmningsscenarier och flera dokumentgenereringsscenarier. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
 
 ## Onboarding
 

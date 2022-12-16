@@ -3,7 +3,7 @@ title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: df1bccc632b3287c73a926bc5f9c6b63d51d8de6
+source-git-commit: 20e54ff697c0dc7ab9faa504d9f9e0e6ee585464
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 2%
@@ -52,7 +52,7 @@ I de här exempelfrågorna finns illustrationer av hur du skapar frågor, tillsa
 
 >[!NOTE]
 >
->Exempelfrågorna baseras på [Exempel på struktur för innehållsfragment som ska användas med GraphQL](#content-fragment-structure-graphql)
+>Exempelfrågorna baseras på [Exempel på struktur för innehållsfragment som kan användas med GraphQL](#content-fragment-structure-graphql)
 
 ### Exempelfråga - Alla tillgängliga scheman och datatyper {#sample-all-schemes-datatypes}
 
@@ -1592,7 +1592,7 @@ Den här frågan förhör:
 
 Exempelfrågorna baseras på följande struktur som använder:
 
-* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - grundvalen för GraphQL-scheman
+* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - utgör grunden för GraphQL-scheman
 
 * [Exempel på innehållsfragment](#sample-content-fragments) baserat på ovanstående modeller
 
@@ -1655,29 +1655,29 @@ Följande fragment används för rätt modell.
 | Företag | VD | Anställda |
 |--- |--- |--- |
 | Apple | Steve Jobs | Duke Marsh<br>Max. textfält |
-|  Little Pony Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
+| Little Pony Inc. | Adam Smith | Lara Croft<br>Cutter Slade |
 | NextStep Inc. | Steve Jobs | Joe Smith<br>Abe Lincoln |
 
 #### Person {#fragment-person}
 
 | Namn | Förnamn | Utmärkelser |
 |--- |--- |--- |
-| Lincoln |  Adobe |  |
-| Smith | Adam |   |
-| Slade |  Rensare |  Gameblitz<br>Gamestar |
-| Marmor |  Duke |   |   |
-|  Smith |  Joe |   |
-| Beskär |  Lara | Gamestar |
-| Caulfield |  Max |  Gameblitz |
-|  Jobb |  Steve |   |
+| Lincoln | Adobe |  |
+| Smith | Adam |  |
+| Slade | Rensare | Gameblitz<br>Gamestar |
+| Marmor | Duke |  |
+| Smith | Joe |  |
+| Beskär | Lara | Gamestar |
+| Caulfield | Max | Gameblitz |
+| Jobb | Steve |  |
 
 #### Utmärkelse {#fragment-award}
 
 | Genväg/ID | Titel |
 |--- |--- |
 | GB | Gameblitz |
-|  GS | Gamestar |
-|  OSC | Oscar |
+| GS | Gamestar |
+| OSC | Oscar |
 
 #### Ort {#fragment-city}
 
@@ -1685,8 +1685,8 @@ Följande fragment används för rätt modell.
 |--- |--- |--- |--- |
 | Basel | Schweiz | 172258 | stad:emea |
 | Berlin | Tyskland | 3669491 | stad:huvudstad<br>stad:emea |
-| Bucharest | Rumänien | 1821000 |  stad:huvudstad<br>stad:emea |
-| San Francisco |  USA |  883306 |  stad:strand<br>stad:na |
-| San Jose |  USA |  102635 |  stad:na |
-| Stuttgart |  Tyskland |  634830 |  stad:emea |
-|  Zürich |  Schweiz |  415367 |  stad:huvudstad<br>stad:emea |
+| Bucharest | Rumänien | 1821000 | stad:huvudstad<br>stad:emea |
+| San Francisco | USA | 883306 | stad:strand<br>stad:na |
+| San Jose | USA | 102635 | stad:na |
+| Stuttgart | Tyskland | 634830 | stad:emea |
+| Zürich | Schweiz | 415367 | stad:huvudstad<br>stad:emea |
