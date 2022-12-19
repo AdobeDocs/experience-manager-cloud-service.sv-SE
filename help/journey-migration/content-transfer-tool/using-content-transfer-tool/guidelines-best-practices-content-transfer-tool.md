@@ -2,9 +2,9 @@
 title: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 description: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: c6a27c996458259904b6532c69a1bd33e2f725c6
+source-git-commit: b0d219f712b1dbbfa70d66ac14c0a66dc89ebbab
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1595'
 ht-degree: 19%
 
 ---
@@ -68,7 +68,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer till exempel inte mellan publicerat och opublicerat innehåll när innehåll hämtas till en publiceringsmiljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. Användaren kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Vi rekommenderar att CTT installeras på källinstansen Author för att flytta innehåll till målinstansen Author när du flyttar innehåll till en Production-instans och att CTT på källinstansen av Publish installeras för att flytta innehåll till målpubliceringsinstansen. Se [Köra verktyget Innehållsöverföring på en publiceringsinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-ctt-on-publish) för mer information.
 
-* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. The *Extrahering* processen kopierar hela `/home` till migreringsuppsättningen och *Inmatning* process kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna. Om du vill mappa befintliga användare och grupper automatiskt till deras IMS-ID:n läser du [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration).
+* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. The *Extrahering* processen kopierar hela `/home` till migreringsuppsättningen och *Inmatning* process kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna. Om du vill mappa befintliga användare till deras IMS-ID automatiskt, se [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=en#cloud-migration).
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 
