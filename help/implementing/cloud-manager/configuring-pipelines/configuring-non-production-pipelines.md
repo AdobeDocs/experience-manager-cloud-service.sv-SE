@@ -3,12 +3,13 @@ title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
-source-git-commit: 9804d9b71f082c3d4788667fdc3993af3b673588
+source-git-commit: 3348662e3da4dad75b851d7af7251d456321a3ec
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurera icke-produktionsförlopp {#configuring-non-production-pipelines}
 
@@ -75,7 +76,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
-   * **Kodplats** - Det här alternativet definierar sökvägen i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
+   * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
 
    ![Front-end-pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-front-end.png)
 
@@ -132,7 +133,7 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
-   * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
+   * **Kodplats** - Det här alternativet definierar sökvägen i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
       * För konfigurationspipelines på webbnivå är detta vanligtvis sökvägen som innehåller `conf.d`, `conf.dispatcher.d`och `opt-in` kataloger.
       * Om projektstrukturen till exempel genererades från [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) banan `/dispatcher/src`.
 
@@ -145,6 +146,12 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
 >Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
 
 Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
+
+## Developing Sites with the Front-End Pipeline {#developing-with-front-end-pipeline}
+
+Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
+
+Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) för hur denna process fungerar tillsammans med vissa överväganden som måste beaktas för att man ska få ut mesta möjliga av denna process.
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 

@@ -1,13 +1,14 @@
 ---
 title: Developing Sites with the Front-End Pipeline
-description: Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan bli betydligt snabbare.
+description: Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan bli betydligt snabbare. I det här dokumentet beskrivs några särskilda aspekter av den inledande konstruktionsprocessen som bör anges.
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 868382c37c3744642e96353aecfc4369105a42ec
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
+
 
 # Developing Sites with the Front-End Pipeline {#developing-site-with-front-end-pipeline}
 
@@ -16,6 +17,20 @@ ht-degree: 0%
 >[!TIP]
 >
 >Om du inte känner till hur du använder frontendriet och vilka fördelar det kan ge kan du titta på [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md) som ett exempel på hur du snabbt distribuerar en ny webbplats och anpassar dess tema helt oberoende av serverutvecklingen.
+
+## Front-End Build Contract {#front-end-build-contract}
+
+Liknar [byggmiljö i full hög,](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) den främre rörledningen har en egen miljö. Utvecklarna har viss flexibilitet i den här pipeline så länge som följande frontavtal gäller.
+
+För frontendpipeline krävs att front-end-Node.js-projektet använder `build` skriptdirektiv för att generera det bygge som ska distribueras av frontendpipeline. I.e.e. Cloud Manager använder kommandot `npm run build` för att generera ett driftsättningsbart projekt till `dist` mapp.
+
+Innehållet i `dist` är den mapp som distribueras till AEM as a Cloud Service från molnhanterarens pipeline.
+
+### Nodversioner {#node-versions}
+
+Som standard används nod 14 i den främre pipelinen, men 16 och 16 är också tillgängliga.
+
+Du kan använda `CM_CUSTOM_VAR_NODE_VERSION` systemvariabel för att ange önskad version.
 
 ## En källa för sanning {#single-source-of-truth}
 

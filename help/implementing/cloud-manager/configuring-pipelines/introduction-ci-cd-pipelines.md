@@ -3,12 +3,13 @@ title: CI/CD-rör
 description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
-source-git-commit: 6c246444f48440c64af0951e75f2071c00e477fa
+source-git-commit: 3348662e3da4dad75b851d7af7251d456321a3ec
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
+
 
 # Cloud Manager CI/CD Pipelines {#intro-cicd}
 
@@ -120,9 +121,9 @@ Med rörledningar kan era team effektivisera design- och utvecklingsprocessen ge
 >
 >En användare med **Distributionshanteraren** kan skapa och köra flera rörledningar samtidigt.
 >
->Det finns dock en högsta gräns på 300 rörledningar per program (för alla typer). Dessa kan vara frontkodens eller frontendens pipelines för driftsättning.
+>Det finns dock en högsta gräns på 300 rörledningar per program (för alla typer).
 
-Frontrörledningar kan vara pipelines med kodkvalitet eller driftsättning.
+Frontrörledningar kan vara pipelines med kodkvalitet eller distributionsrörledningar.
 
 ### Innan du konfigurerar frontmatriser {#before-start}
 

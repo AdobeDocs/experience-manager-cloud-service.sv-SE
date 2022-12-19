@@ -3,12 +3,13 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: 3348662e3da4dad75b851d7af7251d456321a3ec
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1516'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurera en produktionspipeline {#configure-production-pipeline}
 
@@ -168,6 +169,12 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 >Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
 
 Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
+
+## Developing Sites with the Front-End Pipeline {#developing-with-front-end-pipeline}
+
+Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
+
+Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) för hur denna process fungerar tillsammans med vissa överväganden som måste beaktas för att man ska få ut mesta möjliga av denna process.
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 
