@@ -4,9 +4,9 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
+source-git-commit: 1456891dc3b13b3d79fa8ee9f3ded37e92cfbc85
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,13 @@ Själva programmet baseras på strukturen för innehållsfragment. Med hjälp av
 >id="aemcloud_sites_trial_admin_content_fragments_react_app"
 >title="Anpassa innehåll i en exempelapp för React"
 >abstract="Vi har skapat en modern React-app som du kan använda för att lära dig hur du anpassar innehåll med hjälp av den headless-funktionsuppsättningen."
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_react_app_guide"
+>title="Starta redigeraren för innehållsfragment"
+>abstract="AEM testversioner för headless levereras med en enkel React-app som visar headless-innehåll. Appen baseras på strukturen för innehållsfragment. Med hjälp av redigeraren för innehållsfragment i AEM kan du ändra appens innehåll.<br><br>Starta funktionen på en ny flik genom att klicka nedan och följ sedan den här guiden."
+>additional-url="https://video.tv.adobe.com/v/328618" text="Platshållare för inledande video"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home_c1.png" text="Videominiatyr: Ändra appinnehåll på ett ögonblick"
 
 ## Innehållsfragmentsredigerare {#fragment-editor}
 

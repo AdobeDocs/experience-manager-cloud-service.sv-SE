@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
+source-git-commit: 1456891dc3b13b3d79fa8ee9f3ded37e92cfbc85
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,13 @@ Lär dig använda genom att följa produktutbildningsmodulen [de innehållsfragm
 >id="aemcloud_sites_trial_admin_content_fragments_create_content"
 >title="Skapa nytt innehåll"
 >abstract="Med hjälp av modellerna som du skapade i modul 1 får du lära dig hur du skapar innehåll som kan användas för att skapa sidor, eller som bas för rubrikfritt innehåll."
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_create_content_guide"
+>title="Starta konsolen för innehållsfragment"
+>abstract="I AEM headless CMS är&quot;innehållsfragment&quot; alla innehållsdelar som passar i den fördefinierade strukturen, en&quot;innehållsfragmentmodell&quot;. I den här genomgången får du lära dig hur du skapar innehåll för innehållsfragmentmodellen.<br><br>Klicka nedan för att starta funktionen på en ny flik och följ det här utbildningsdokumentet för att skapa ditt första innehållsfragment."
+>additional-url="https://video.tv.adobe.com/v/328618" text="Platshållare för inledande video"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home_c1.png" text="Videominiatyr: Lägga till innehåll - det vinnande receptet"
 
 ## Innehållsfragment {#introduction}
 
