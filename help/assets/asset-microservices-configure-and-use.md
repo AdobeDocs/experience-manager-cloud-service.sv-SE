@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Compute Microservices,Workflow,Asset Processing
 role: Architect,Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: 2478276c8f8a2c92a63e24e50520e8d81b9a4e26
+source-git-commit: 5545cd1739db41dbabf06cff916811123e7e09be
 workflow-type: tm+mt
-source-wordcount: '2835'
+source-wordcount: '2838'
 ht-degree: 0%
 
 ---
@@ -111,10 +111,10 @@ Det kan omvandla bild, video, dokument och andra filformat till olika renderinga
 
 Utvecklare kan använda [!DNL Asset Compute Service] till [skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html) för de användningsfall som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsområden när externa tjänster anropas:
 
-* Använd [!DNL Adobe Photoshop]&#39;s [ImageCutout API](https://github.com/AdobeDocs/photoshop-api-docs-pre-release#imagecutout) och spara resultatet som rendering.
+* Använd [!DNL Adobe Photoshop]&#39;s [ImageCutout API](https://developer.adobe.com/photoshop/photoshop-api-docs/) och spara resultatet som rendering.
 * Anropa tredjepartssystem för att uppdatera data, till exempel ett PIM-system.
 * Använd [!DNL Photoshop] API för att generera olika renderingar baserat på Photoshop-mall.
-* Använd [Adobe Lightroom API](https://github.com/AdobeDocs/lightroom-api-docs#supported-features) för att optimera inkapslade resurser och spara dem som återgivningar.
+* Använd [Adobe Lightroom API](https://developer.adobe.com/photoshop/photoshop-api-docs/) för att optimera inkapslade resurser och spara dem som återgivningar.
 
 >[!NOTE]
 >
@@ -129,17 +129,17 @@ Så här skapar du en anpassad profil:
 1. Ange följande information.
 
    * Filnamn för varje återgivning och ett filtillägg som stöds.
-   * [Slutpunkts-URL för en standardanpassad app](https://experienceleague.adobe.com/docs/asset-compute/using/extend/deploy-custom-application.html). Appen måste komma från samma organisation som Experience Manager-kontot.
+   * [Slutpunkts-URL för en anpassad app i App Builder](https://experienceleague.adobe.com/docs/asset-compute/using/extend/deploy-custom-application.html). Appen måste komma från samma organisation som Experience Manager-kontot.
    * Lägg till tjänstparametrar i [skicka extra information eller parametrar till det anpassade programmet](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#extend).
    * Inkluderade och exkluderade MIME-typer för att begränsa bearbetningen till ett fåtal specifika filformat.
 
    Klicka på **[!UICONTROL Save]**.
 
-De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs/project-firefly) appar. Anpassat program får alla angivna filer om de är konfigurerade med en bearbetningsprofil. Programmet måste filtrera filerna.
+De anpassade programmen är headless [Project App Builder](https://developer.adobe.com/app-builder/docs/overview/) appar. Ditt anpassade program får alla angivna filer om de är konfigurerade med en bearbetningsprofil. Programmet måste filtrera filerna.
 
 >[!CAUTION]
 >
->Om appen Firefly och [!DNL Experience Manager] kontot inte kommer från samma organisation, integreringen fungerar inte.
+>Om appen App Builder och [!DNL Experience Manager] kontot inte kommer från samma organisation, integreringen fungerar inte.
 
 ### Ett exempel på en anpassad profil {#custom-profile-example}
 
