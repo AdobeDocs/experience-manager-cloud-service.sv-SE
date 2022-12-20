@@ -2,9 +2,9 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 20e54ff697c0dc7ab9faa504d9f9e0e6ee585464
+source-git-commit: 33e59ce272223e081710294a2e2508edb92eba52
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1127'
 ht-degree: 1%
 
 ---
@@ -126,29 +126,31 @@ Bild: Dela upp ett källdokument baserat på bokmärken i flera dokument
 
 Du kan använda API:erna för dokumentbearbetning för att konvertera ett PDF-dokument till ett PDF/A-kompatibelt dokument och för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
 
-## Dokumentverktyg
+<!-- 
 
-Med synkrona API:er för dokumentverktyg kan du konvertera dokument mellan filformaten PDF och XDP, samt skicka frågor om dokument i PDF. Du kan till exempel ange om ett PDF-dokument innehåller kommentarer eller bilagor.
+## Document utilities
 
-### Hämta dokumentegenskaper för PDF
+Document utilities synchronous APIs helps you convert documents between PDF and XDP file formats, and query information about a PDF document. For example, you can determine whether a PDF document contains comments or attachments. 
 
-Du kan [fråga ett PDF-dokument](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/pdf-utility-sync/#tag/Document-Extraction/) för följande information:
+### Retrieve PDF document properties
 
-* Är ett PDF-dokument: Kontrollera om källdokumentet är ett PDF-dokument.
-* Är ett ifyllbart formulär: Kontrollera om PDF-källdokumentet är ett ifyllbart formulär.
-* Formulärtyp: Hämta dokumentets formulärtyp.
-* Kontrollera om det finns bifogade filer: Kontrollera om PDF-källdokumentet har några bilagor.
-* Sök efter kommentarer: Kontrollera om PDF-källdokumentet innehåller granskningskommentarer.
-* Är ett PDF-paket: Kontrollera om dokumentet är ett PDF-paket.
-* Hämta PDF-versionen: Hämta [PDF-dokumentets version](https://en.wikipedia.org/wiki/History_of_PDF).
-* Rekommenderad version av Acrobat: Hämta den version av Acrobat (Reader) som krävs för att öppna PDF-dokumentet.
-* Är ett XFA-dokument: Kontrollera om PDF-källdokumentet är ett XFA-baserat PDF-dokument.
-* Är Shell PDF: Kontrollera om PDF-källdokumentet är PDF med skal. Ett skal PDF innehåller bara en XFA-ström, teckensnitt och bildresurser, och en sida som antingen är tom eller innehåller en varning om att dokumentet måste öppnas med Acrobat eller Adobe Reader. Gränssnittet PDF används med PDF-omformning för att optimera leveransen av PDF-formuläromformningar.
-* Hämta XFA-versionen: Hämta [XFA-version för ett XFA-baserat PDF-dokument](https://en.wikipedia.org/wiki/XFA#XFA_versions).
+You can [query a PDF document](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/pdf-utility-sync/#tag/Document-Extraction/) for the following information:
 
-### Konvertera PDF-dokument till XDP-dokument
+* Is a PDF Document: Check whether the source document is a PDF document.
+* Is a fillable form: Check whether the source PDF document is a fillable form.
+* Form Type: Retrieve the form type of the document.
+* Check for Attachments: Check whether the source PDF document has any attachments.
+* Check for Comments: Check whether the source PDF document has any review comments.
+* Is a PDF Package: Check whether the document is a PDF package.
+* Get the PDF Version: Retrieve the [version of the PDF document](https://en.wikipedia.org/wiki/History_of_PDF).
+* Recommended Acrobat Version: Retrieve the required version of Acrobat (Reader) to open the PDF document.
+* Is an XFA Document: Check whether the source PDF document is an XFA-based PDF document.
+* Is Shell PDF: Check whether the source PDF document is shell PDF. A shell PDF contains only an XFA stream, font and image resources, and one page that is either blank or contains a warning that the document must be opened using Acrobat or Adobe Reader. The shell PDF is used with PDF transformation to optimize delivery of PDFForm transformations only.
+* Get the XFA Version: Retrieve the [XFA Version for an XFA-based PDF document](https://en.wikipedia.org/wiki/XFA#XFA_versions).
 
-The [PDF till XDP API](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/pdf-utility-sync/#tag/Document-Conversion) konverterar ett PDF-dokument till en XDP-fil. För att ett PDF-dokument ska kunna konverteras till en XDP-fil måste PDF-dokumentet innehålla en XFA-ström i ordlistan.
+### Convert PDF Documents into XDP Documents
+
+The [PDF to XDP API](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/pdf-utility-sync/#tag/Document-Conversion) converts a PDF document to an XDP file. For a PDF document to be successfully converted to an XDP file, the PDF document must contain an XFA stream in the dictionary. -->
 
 ## Typer av API:er för kommunikation
 

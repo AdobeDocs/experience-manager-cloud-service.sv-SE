@@ -2,10 +2,10 @@
 title: AEM Forms as a Cloud Service - kommunikation
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: 20e54ff697c0dc7ab9faa504d9f9e0e6ee585464
+source-git-commit: 33e59ce272223e081710294a2e2508edb92eba52
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 1%
+source-wordcount: '684'
+ht-degree: 0%
 
 ---
 
@@ -31,9 +31,11 @@ En synkron åtgärd är en process där dokument genereras linjärt. Dessa API:e
 * API:er för dokumentgenerering
 * API:er för dokumentbearbetning
 
-### API:er för flera innehavare
+<!-- 
+### Multi-tenant APIs
 
-* API:er för dokumentverktyg
+* Document utility APIs -->
+
 
 ### Autentisera ett single-tenant-API
 
@@ -53,47 +55,52 @@ API-åtgärder för en innehavare har stöd för två typer av autentisering:
    >
    >Adobe rekommenderar att du använder tokenbaserad autentisering i en produktionsmiljö.
 
-### Autentisera ett multi-tenant-API
+<!-- 
 
-#### Autentiseringshuvuden
+### Authenticate a multi-tenant API
 
-Alla inkommande HTTP API-anrop till Cloud Manager API måste innehålla följande tre rubriker:
+#### Authentication Headers
+
+Every inbound HTTP API call to the multi-tenant API must contain these three headers:
+
 
 * `x-api-key`
 * `x-gw-ims-org-id`
 * `Authorization`
 
-Värdena som ska skickas i `x-api-key` och `x-gw-ims-org-id` rubriker finns på skärmen Information om autentiseringsuppgifter i [Adobe Developer Console](https://developer.adobe.com/console). Värdet för `x-api-key` är klient-ID och värdet för `x-gw-ims-org-id` är organisationsnumret.
+The values which should be sent in the `x-api-key` and `x-gw-ims-org-id` headers are provided in the Credentials details screen in the [Adobe Developer Console](https://developer.adobe.com/console). The value of the `x-api-key` header is the Client ID and the value for the `x-gw-ims-org-id` header is the Organization ID.
 
-#### Konfigurera Adobe Developer-konsolen för att generera en åtkomsttoken
+#### Configure Adobe Developer console to generate an access token
 
-Om du vill konfigurera autentiserings-API:er skapar du ett projekt i Adobe Developer Console och lägger till kommunikations-API:er i projektet på Adobe Developer Console. Integreringen genererar API-nyckel, klienthemlighet, nyttolast (JWT):
+To set up authentication APIs, create a project in Adobe Developer Console and add Communication APIs to the project on Adobe Developer Console. The integration generates API Key, Client Secret, Payload (JWT):
 
-1. Kontakta Adobe Developer Console-administratören. Be administratören lägga till som utvecklare.
-1. Logga in på `https://developer.adobe.com/console/`. Använd ditt utvecklarkonto som administratören har etablerat för att logga in på Adobe Developer Console.
-1. Välj organisation i det övre högra hörnet. Kontakta administratören om du inte känner till din organisation.
-1. Tryck på **[!UICONTROL Create new project]**. En skärm för att komma igång med ditt nya projekt visas. Tryck på **[!UICONTROL Add API]**. En skärm med en lista över alla API:er som är aktiverade för ditt konto visas.
-1. Välj **[!UICONTROL AEM Forms - Communications]** och trycka **[!UICONTROL Next]**. En skärm som konfigurerar API:t visas.
-1. Välj **[!UICONTROL OPTION 1 Generate a key pair]** och trycka **[!UICONTROL Generate keypair]**. Konfigurationsfilen skapas och hämtas. Den hämtade konfigurationsfilen innehåller alla programinställningar tillsammans med den enda kopian av din privata nyckel. Adobe spelar inte in din privata nyckel. Spara den hämtade filen på ett säkert sätt. Tryck på **[!UICONTROL Next]**.
-1. Välj **[!UICONTROL Integrations - Cloud Service]** och trycka **[!UICONTROL Save configured API]**. Tryck **[!UICONTROL Service Account (JWT)]** om du vill visa API-nyckeln, klienthemligheten och annan information som krävs för att komma åt API:erna. Du anger att du ska använda token för att komma åt API:erna.
+1. Contact you Adobe Developer Console administrator. Ask the administrator to add as a developer.
+1. Log in to `https://developer.adobe.com/console/`. Use your developer account that your administrator has provisioned to log in to Adobe Developer Console.
+1. Select your organization from the top-right corner. If you do not know your organization, contact your administrator.
+1. Tap **[!UICONTROL Create new project]**. A screen to get started with your new project appears. Tap **[!UICONTROL Add API]**. A screen with list of all the APIs enabled for your account appears.
+1. Select **[!UICONTROL AEM Forms - Communications]** and tap **[!UICONTROL Next]**. A screen to configure the API appears.
+1. Select **[!UICONTROL OPTION 1 Generate a key pair]** and tap **[!UICONTROL Generate keypair]**. It creates and downloads the configuration file. The downloaded configuration file contains all your app settings, along with the only copy of your private key. Adobe does not record your private key, make sure to securely store the downloaded file. Tap **[!UICONTROL Next]**.
+1. Select **[!UICONTROL Integrations - Cloud Service]** and tap **[!UICONTROL Save configured API]**. Tap **[!UICONTROL Service Account (JWT)]** to view the API Key, Client Secret, and other information required to access the APIs. You set to use the token to access the APIs.
 
-#### Generera och använd en åtkomsttoken
+#### Programmatically generate and use an access token
 
-Generera en åtkomsttoken genom programmering genom att generera en JSON Web Token (JWT) och byta ut den mot Adobe Identity Management-tjänsten (IMS) för en åtkomsttoken.
+To programmatically generate an access token, generate a JSON Web Token (JWT) and exchange it with the Adobe Identity Management Service (IMS) for an access token.
 
-Använd följande tangenter, som kallas anspråk, för att konstruera JSON-objekt för JWT:
+Use the following keys, referred to as claims, to construct JWT JSON object:
 
-* `exp`- begärt förfallodatum för åtkomsttoken, uttryckt i antal sekunder sedan 1 januari 1970 GMT. I de flesta fall är detta ett relativt litet värde. I fem minuter från och med nu bör värdet vara 1670923791.
-* `iss` - Organisations-ID:t från Adobe Developer Console-projektet i formatet org_ident@AdobeOrg.
-* `sub` - ID:t för det tekniska kontot från Adobe Developer Console-integreringen, i följande format: id@techacct.adobe.com.
-* `aud` - klient-ID från Adobe Developer Console-integrering som föregås av `https://ims-na1.adobelogin.com/c/`.
-* `https://ims-na1-stg1.adobelogin.com/s/ent_aemforms_docprocessing` - anges till det literala värdet `true`
 
-Det här JSON-objektet måste sedan vara base64-kodat och signerat med den privata nyckeln för projektet. Slutligen skickas det kodade värdet i brödtexten för en POST-begäran till `https://ims-na1.adobelogin.com/ims/exchange/jwt` tillsammans med klient-ID och klienthemlighet för projektet.
+* `exp`- the requested expiration of the access token, expressed as a number of seconds since January 1, 1970 GMT. For most use cases, this is a relatively small value. For example, 5 minutes, for five minutes from now, this value should be 1670923791.
+* `iss` - the Organization ID from the Adobe Developer Console project, in the format org_ident@AdobeOrg.
+* `sub` - the Technical Account ID from the Adobe Developer Console integration, in the format: id@techacct.adobe.com.
+* `aud` - the Client ID from the Adobe Developer Console integration prepended with `https://ims-na1.adobelogin.com/c/`.
+* `https://ims-na1-stg1.adobelogin.com/s/ent_aemforms_docprocessing` - set to the literal value `true`
 
-##### Exempel
+This JSON object must be then base64 encoded and signed using the private key for the project. Finally, the encoded value is sent in the body of a POST request to `https://ims-na1.adobelogin.com/ims/exchange/jwt` along with the Client ID and Client Secret for the project.
+
+##### Example
 
 ```JSON
+
     ========================= REQUEST ==========================
     POST https://ims-na1.adobelogin.com/ims/exchange/jwt
     -------------------------- body ----------------------------
@@ -101,11 +108,14 @@ Det här JSON-objektet måste sedan vara base64-kodat och signerat med den priva
     ------------------------- headers --------------------------
     Content-Type: application/x-www-form-urlencoded
     Cache-Control: no-cache
+
 ```
 
-#### Språkstöd för JWT
+#### Language Support for JWT
 
-Även om det går att skapa och utbyta hela JWT-processen i anpassad kod är det vanligare att använda ett bibliotek på högre nivå för att göra det. Ett antal sådana bibliotek visas på [Adobe I/O JWT-dokumentation](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/).
+While it is possible to do the entire JWT generation and exchange process in custom code, it is more common to use a higher-level library to do so. A number of such libraries are listed on the [Adobe I/O JWT Documentation](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/).
+
+-->
 
 ### (Endast för API:er för dokumentgenerering) Konfigurera resurser och behörigheter
 
