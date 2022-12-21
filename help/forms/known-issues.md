@@ -6,9 +6,9 @@ role: User, Developer
 level: Intermediate
 topic: Administration
 exl-id: 871f294d-f251-4966-a021-39df65b613f0
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 94825e3b60d970fec5bf696d932ca66bb83fd2f3
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Innan du börjar använda [!DNL AEM Forms] as a Cloud Service kan du läsa om f�
 * När du skickar ett adaptivt formulär som innehåller ett standardfält för överföring av HTML från en Apple iOS-enhet skickas inte filens innehåll och en 0 byte-fil tas emot i den andra änden. Problemet inträffar då och då endast när synkron överföring används. Det här är en [känt problem](https://feedbackassistant.apple.com/feedback/9117687) i Apple iOS.
 
 * När du skickar ett formulär som innehåller ett standardfält för överföring av HTML från en Apple iOS-enhet skickas ibland inte filens innehåll och en 0 byte-fil tas emot i den andra änden. Detta är ett känt problem i Apple iOS. [FB9117687](https://feedbackassistant.apple.com/feedback/9117687)
+
+* AEM Forms as a Cloud Service genererar inte miniatyrbilder för XDP- och JSON-schemafiler. I tjänsten visas standardikoner i stället för miniatyrbilder.
+
+   ![Problem med Forms-miniatyrbild](/help/forms/assets/forms-tumbnail-known-issue.png)
 
 
 ## Begränsningar {#limitations}
