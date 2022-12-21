@@ -4,9 +4,9 @@ description: Lär dig hur du skapar en struktur som fungerar som grund för allt
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: 1456891dc3b13b3d79fa8ee9f3ded37e92cfbc85
+source-git-commit: 4269bc9650f197ae33fcef40a847f8b200097e45
 workflow-type: tm+mt
-source-wordcount: '1120'
+source-wordcount: '1104'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,6 @@ För att du ska få en bättre förståelse för hur detta görs går den här m
 >title="Starta modellredigeraren"
 >abstract="Skapandet av en modell för innehållsfragment börjar med att skapa ett modellobjekt i modelladministrationsarbetsflödet och sedan lägga till strukturelement i den med hjälp av modellredigeraren för innehållsfragment.<br><br>Klicka nedan för att starta funktionen på en ny flik och följ det här utbildningsdokumentet för att skapa din första innehållsfragmentmodell."
 >additional-url="https://video.tv.adobe.com/v/328618" text="Platshållare för inledande video"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home_c1.png" text="Videominiatyr: Byggstenarna AEM Headless"
 
 ## Modellkonsolen för innehållsfragment {#content-fragment-model-console}
 

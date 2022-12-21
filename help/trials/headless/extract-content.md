@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: 1456891dc3b13b3d79fa8ee9f3ded37e92cfbc85
+source-git-commit: 4269bc9650f197ae33fcef40a847f8b200097e45
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1287'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Hittills i AEM för headless har du [har skapat egna Content Fragment-modeller](content-structure.md) har också skapat ett eget headless-innehåll [Innehållsfragment.](create-content.md) Nu kan du lära dig att använda innehållsfragment och GraphQL API som ett headless-system för innehållshantering för att leverera ditt innehåll.
 
-GraphQL har ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll de behöver med ett enda API-anrop.
+GraphQL innehåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs med ett enda API-anrop.
 
 Först får du lära dig att köra två olika typer av frågor: **list** och **byPath** frågor. Sedan får du lära dig hur du hämtar innehåll från det innehållsfragment som du skapade tidigare. Det här dokumentet är ett komplement till den interaktiva rundturen, som omfattar samma steg och länkar till ytterligare resurser där så är lämpligt.
 
 >[!TIP]
 >
->Mer information om GraphQL API finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för API-guiden för GraphQL.
+>Om du vill ha mer information om GraphQL API kan du läsa [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för GraphQL API-guiden.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_graphql"
@@ -33,11 +33,10 @@ Först får du lära dig att köra två olika typer av frågor: **list** och **b
 >title="Starta GraphQL Explorer"
 >abstract="GraphQL tillhandahåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs, med hjälp av ett enda API-anrop. Följ den här vägledningen när du vill lära dig hur du kör två olika typer av frågor och sedan hämtar innehåll från innehållsfragmentet som du skapade i en tidigare modul.<br><br>Starta funktionen på en ny flik genom att klicka nedan."
 >additional-url="https://video.tv.adobe.com/v/328618" text="Platshållare för inledande video"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home_c1.png" text="Videominiatyr: GraphQL snabbextrahering"
 
 ## GraphQL Explorer {#graphql-explorer}
 
-Du börjar med GraphQL Explorer. Här kan du skapa och köra frågor mot ditt headless-innehåll.
+Du startar i GraphQL Explorer. Här kan du skapa och köra frågor mot ditt headless-innehåll.
 
 ![GraphQL Query Editor](assets/extract-content/query-editor.png)
 
@@ -169,7 +168,7 @@ Nu när du har kört de två primära typerna av frågor är du redo att konfigu
 
    ![Resultat av din egen fråga](assets/extract-content/custom-query-results.png)
 
-Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler. Se [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och se hur mycket mer du kan göra med GraphQL API.
+Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler. Se [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och lära dig mer om GraphQL API.
 
 ## Du har lärt dig att fråga innehåll! {#conclusion}
 
