@@ -3,7 +3,7 @@ title: AEM Headless CMS Developer Journey
 description: Läs om headless-utveckling med Adobe Experience Manager (AEM) som Headless CMS. Lär dig hur du använder funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API för att leverera headless-innehåll.
 landing-page-description: Få en förståelse för innehållsleverans och implementering utan problem. Läs mer om hur ni utvecklar er strategi inom ert företag.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: 64862456bfbffe1799a3f0b6ea3353f45e60c52f
+source-git-commit: b3a3fbaf9a18e15cfba4f240b6f3abdd9aed077c
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 1%

@@ -47,7 +47,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 * Använd dina innehållsfragment:
 
    * [för att skapa sidor](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
-   * [tillsammans med GraphQL, för headless-leverans till programmen](/help/sites-cloud/administering/content-fragments/content-fragments-graphql.md).
+   * [tillsammans med GraphQL, för leverans utan extra kostnad till applikationerna](/help/sites-cloud/administering/content-fragments/content-fragments-graphql.md).
 Om du vill ha hjälp med det här kan du förhandsvisa [Strukturträd](/help/sites-cloud/administering/content-fragments/content-fragments-structure-tree.md) och [JSON-utdata](/help/sites-cloud/administering/content-fragments/content-fragments-json-preview.md).
 
 >[!NOTE]

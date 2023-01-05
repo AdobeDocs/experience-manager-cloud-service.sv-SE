@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Hittills i AEM för headless har du [har skapat egna Content Fragment-modeller](content-structure.md) har också skapat ett eget headless-innehåll [Innehållsfragment.](create-content.md) Nu kan du lära dig att använda innehållsfragment och GraphQL API som ett headless-system för innehållshantering för att leverera ditt innehåll.
 
-GraphQL innehåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs med ett enda API-anrop.
+GraphQL har ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll de behöver med ett enda API-anrop.
 
 Först får du lära dig att köra två olika typer av frågor: **list** och **byPath** frågor. Sedan får du lära dig hur du hämtar innehåll från det innehållsfragment som du skapade tidigare. Det här dokumentet är ett komplement till den interaktiva rundturen, som omfattar samma steg och länkar till ytterligare resurser där så är lämpligt.
 
 >[!TIP]
 >
->Om du vill ha mer information om GraphQL API kan du läsa [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för GraphQL API-guiden.
+>Mer information om GraphQL API finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för GraphQL API-guiden.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_graphql"
@@ -168,11 +168,11 @@ Nu när du har kört de två primära typerna av frågor är du redo att konfigu
 
    ![Resultat av din egen fråga](assets/extract-content/custom-query-results.png)
 
-Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler. Se [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och lära dig mer om GraphQL API.
+Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler. Se [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och se hur mycket mer du kan göra med GraphQL API.
 
 ## Du har lärt dig att fråga innehåll! {#conclusion}
 
-Bra jobbat! Du har lärt dig mer om de två grundläggande typerna av frågor och hur du ställer frågor till ditt eget innehåll. Se till att du checkar ut [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och se hur mycket mer du kan göra med GraphQL API.
+Bra jobbat! Du har lärt dig mer om de två grundläggande typerna av frågor och hur du ställer frågor till ditt eget innehåll. Se till att du checkar ut [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och lära dig mer om GraphQL API.
 
 Om du vill veta hur extraherat innehåll sedan används i en anpassad React-app ska du kontrollera modulen [Anpassa innehåll i en exempelapp.](customize-app.md)
 

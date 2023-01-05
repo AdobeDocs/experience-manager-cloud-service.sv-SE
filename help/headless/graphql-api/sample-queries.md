@@ -29,7 +29,7 @@ Mer information finns i:
 
 * A [exempel på struktur för innehållsfragment](#content-fragment-structure-graphql)
 
-* Och några [sampla GraphQL-frågor](#graphql-sample-queries), baserat på exempelstrukturen för innehållsfragment (modeller för innehållsfragment och relaterade innehållsfragment).
+* Och några [exempelfrågor om GraphQL](#graphql-sample-queries), baserat på exempelstrukturen för innehållsfragment (modeller för innehållsfragment och relaterade innehållsfragment).
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_headless_graphql_sample"

@@ -107,7 +107,7 @@ Upplösningen 16K är en skärmupplösning med ungefär 16 000 pixlar vågrätt.
 | PNG | `.png` | bild/png | sRGB | 15 GB | Ja |
 | PSD | `.psd` | image/vnd.adobe.photoshop | sRGB<br>CMYK | 2 GB | Ja |
 | SVG |  |  |  |  | Nej |
-| TIFF | `.tif` och `.tiff` | bild/tiff | sRGB<br>CMYK | 4 GB | Ja |
+| TIFF | `.tif` and `.tiff` | bild/tiff | sRGB<br>CMYK | 4 GB | Ja |
 | WebP/Animerad WebP |  |  |  |  | Nej |
 
 ## Skapa Dynamic Media-bildprofiler {#creating-image-profiles}

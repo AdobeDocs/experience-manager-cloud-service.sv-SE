@@ -2,7 +2,7 @@
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: 17705b698915d4fac1e60ad06396d40f2e19ebd5
+source-git-commit: f1a97c4bbb07accb33aa449a07ced0c0ac255b9e
 workflow-type: tm+mt
 source-wordcount: '2887'
 ht-degree: 3%
@@ -122,7 +122,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 * **JSON-objekt**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
       * För att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
-      * JSON skickas och skrivs ut som JSON i GraphQL.
+      * JSON skickas vidare och skrivs ut som JSON i GraphQL.
       * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i innehållsfragmentredigeraren.
 * **Platshållare för flik**
    * Tillåter introduktion av flikar som kan användas när innehållet i innehållsfragmentet redigeras.
@@ -457,7 +457,7 @@ Den här funktionen tillhandahåller styrning för publicerade modeller för inn
 
 * Problem kan uppstå när modeller för innehållsfragment ändras, eller med andra ord redigeras. Det innebär att schemat ändras, vilket i sin tur kan påverka befintliga GraphQL-frågor.
 
-* Att lägga till nya fält i en innehållsfragmentmodell bör (vanligtvis) inte ha några skadliga effekter. Om du ändrar befintliga datafält (till exempel namn) eller tar bort fältdefinitioner bryts befintliga GraphQL-frågor när de begär dessa fält.
+* Att lägga till nya fält i en innehållsfragmentmodell bör (vanligtvis) inte ha några skadliga effekter. Om du ändrar befintliga datafält (t.ex. namn) eller tar bort fältdefinitioner kommer befintliga GraphQL-frågor att brytas när de begär dessa fält.
 
 ### Krav {#the-requirements}
 

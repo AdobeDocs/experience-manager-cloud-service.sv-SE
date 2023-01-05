@@ -31,7 +31,7 @@ Detta uppnås med hjälp av innehållsfragment och det AEM GraphQL-API:t (en anp
 >GraphQL används för närvarande i två (separata) scenarier i Adobe Experience Manager (AEM) as a Cloud Service:
 >
 >* [AEM Commerce använder data från en e-handelsplattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
->* [AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som bygger på standard GraphQL) för att leverera strukturerat innehåll som kan användas i dina program](/help/headless/graphql-api/content-fragments.md).
+>* [AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard-GraphQL) för att leverera strukturerat innehåll som kan användas i dina program](/help/headless/graphql-api/content-fragments.md).
 
 
 ## Headless CMS {#headless-cms}
@@ -56,13 +56,13 @@ The [AEM GraphQL API](#aem-graphql-api) gör att du kan utföra (komplexa) fråg
 
 ## AEM GraphQL API {#aem-graphql-api}
 
-För Adobe Experience som Cloud Experience har en anpassad implementering av standard-API:t GraphQL utvecklats. Se [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md) för mer information.
+För Adobe Experience som Cloud Experience har en anpassad implementering av GraphQL-API:t utvecklats. Se [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md) för mer information.
 
 Den AEM API-implementeringen i GraphQL baseras på [GraphQL Java-bibliotek](https://graphql.org/code/#java).
 
 ## Innehållsfragment för användning med AEM GraphQL API {#content-fragments-use-with-aem-graphql-api}
 
-[Innehållsfragment](#content-fragments) kan användas som bas för GraphQL för AEM frågor som:
+[Innehållsfragment](#content-fragments) kan användas som bas för GraphQL AEM frågor som:
 
 * Med dem kan du utforma, skapa, strukturera och publicera sidoberoende innehåll.
 * The [Modeller för innehållsfragment](#content-fragments-models) tillhandahålla den struktur som krävs med hjälp av definierade datatyper.

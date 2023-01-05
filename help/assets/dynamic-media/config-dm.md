@@ -3,7 +3,7 @@ title: Konfigurera Dynamic Media Cloud Service
 description: Lär dig hur du konfigurerar Dynamic Media i Adobe Experience Manager as a Cloud Service.
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 50a7db14a378f99eeadc3f9cb91f228ea4139ff4
+source-git-commit: 8066d24193822a79d88f564a2db26b3acbb4e918
 workflow-type: tm+mt
 source-wordcount: '3559'
 ht-degree: 2%
@@ -105,7 +105,7 @@ To migrate any custom viewer presets and configurations that you have created fr
    >
    >När en mediefil har aktiverats publiceras uppdateringar direkt till S7 Delivery.
 
-   ![dynamicmediaconfiguration2uppdaterad](/help/assets/assets-dm/dynamicmediaconfigurationupdated.png)
+   ![dynamicmediaconfiguration2updated](/help/assets/assets-dm/dynamicmediaconfigurationupdated.png)
 
 1. Välj **[!UICONTROL Save]**. Det nya lösenordet och den nya konfigurationen för Dynamic Media sparas. Om du valde **[!UICONTROL Cancel]** i stället görs ingen lösenordsuppdatering.
 1. I **[!UICONTROL Configuring Dynamic Media]** väljer **[!UICONTROL OK]** för att starta konfigurationen.

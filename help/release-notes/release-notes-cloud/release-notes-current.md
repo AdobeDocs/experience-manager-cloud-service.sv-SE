@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 218dd65d1969f92317ae1d9877e2e37bb201ea6a
+source-git-commit: 33bf3dbf6118a9d93e0fe021736b74079100a214
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 0%
