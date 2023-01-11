@@ -2,9 +2,9 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: abce1369b3b97a1e9ff7d0c8434b671cc7c5f8c2
+source-git-commit: 6c2d5c4c1dd9ca56cf3ab5487d9a8794f4fbd97b
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
@@ -107,3 +107,29 @@ Du får åtkomst till miljövariabler och hemligheter via XML enligt följande.
 Se dokumentet [Konfigurera projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repository-support-password-protected-maven-repositories) som ett exempel på hur du använder båda variabeltyperna i en `pom.xml` -fil.
 
 Se [officiell dokumentation för Maven](https://maven.apache.org/settings.html#quick-overview) för mer information.
+
+## Miljövariabel tillgänglighet {#availability}
+
+Miljövariabler kan användas på flera ställen.
+
+### Skapa, förhandsgranska och publicera {#author-preview-publish}
+
+Både vanliga miljövariabler och hemligheter kan användas i redigerings-, förhandsgransknings- och publiceringsmiljöer.
+
+### Dispatcher {#dispatcher}
+
+Endast reguljära miljövariabler kan användas i dispatchern. Hemligheter kan inte användas.
+
+Miljövariabler kan dock inte användas i `IfDefine` direktiv.
+
+>[!TIP]
+>
+>Du bör validera din användning av miljövariabler med [avsändare lokalt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) före distribution.
+
+### OSGi-konfigurationer {#osgi}
+
+Både vanliga miljövariabler och hemligheter kan användas i OSGi-konfigurationer.
+
+### Rörledningsvariabler {#pipeline}
+
+Förutom miljövariabler finns det även variabler för pipeline som exponeras under byggfasen. [Läs mer om pipeline-variabler här.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#pipeline-variables)
