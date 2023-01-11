@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service on Unified Shell
 description: AEM as a Cloud Service on Unified Shell
 exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
-source-git-commit: 76b7fb1d354664ec9fa773623ea4dee09164bec8
+source-git-commit: aeb8244b4da17a0675b86a69727807abf45ca84a
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '399'
 ht-degree: 2%
 
 ---
@@ -52,6 +52,11 @@ Om du vill ändra till det mörka temat klickar du på din profilikon. Då visas
 
 ![bild](/help/overview/assets/unifiedshell4.png)
 
+## Identifiera AEM as a Cloud Service miljö {#identify-aemaacs-environment}
+
+AEM as a Cloud Service innehåller tre typer av miljöer: Produktion, scen och utveckling. Se [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en) för mer information. I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
+
+![bild](/help/overview/assets/unifiedshell_header_label.png)
 
 ## Åtkomst till AEM Inkorg {#accessing-the-aem-inbox}
 
