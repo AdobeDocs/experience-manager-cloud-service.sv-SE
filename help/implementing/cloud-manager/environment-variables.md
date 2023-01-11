@@ -2,9 +2,9 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: 6c2d5c4c1dd9ca56cf3ab5487d9a8794f4fbd97b
+source-git-commit: a8a7bd1f892c7c6eeb1753c8a55f884a33b397d4
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ Både vanliga miljövariabler och hemligheter kan användas i redigerings-, för
 
 ### Dispatcher {#dispatcher}
 
-Endast reguljära miljövariabler kan användas i dispatchern. Hemligheter kan inte användas.
+Endast vanliga miljövariabler kan användas med [avsändaren.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) Hemligheter kan inte användas.
 
 Miljövariabler kan dock inte användas i `IfDefine` direktiv.
 
@@ -128,7 +128,7 @@ Miljövariabler kan dock inte användas i `IfDefine` direktiv.
 
 ### OSGi-konfigurationer {#osgi}
 
-Både vanliga miljövariabler och hemligheter kan användas i OSGi-konfigurationer.
+Både vanliga miljövariabler och hemligheter kan användas i [OSGi-konfigurationer.](/help/implementing/deploying/configuring-osgi.md)
 
 ### Rörledningsvariabler {#pipeline}
 
