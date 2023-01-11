@@ -4,7 +4,7 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: a01a9e34fed9182c6c1e7325b2035c63acf875dd
+source-git-commit: 55e117bba7037d44eaadab8bd2de7164e23b47fa
 workflow-type: tm+mt
 source-wordcount: '2991'
 ht-degree: 0%
@@ -259,11 +259,11 @@ För filnamn på resurser saneras JCR-namnet och sökvägen med API:t: `JcrUtil.
 
 **Hantera mappnamn vid bulkimport**
 
-För mappfilnamn sanpassas JCR-namnet och sökvägen med API:t: `JcrUtil.createValidName`.
+För mappfilnamn sanpassas JCR-namnet och sökvägen med API:t: `DamUtil.getSanitizedFolderName`.
 
 * Versaler konverteras till gemener
 * Unicode-tecken ändras inte
-* Ersätt specialtecknen med bindestreck (&#39;-&#39;), till exempel `new asset.png` uppdateras till `new-asset.png`:
+* Ersätt specialtecknen med bindestreck (&#39;-&#39;), till exempel `new folder` uppdateras till `new-folder`:
 
    ```
    "                           
