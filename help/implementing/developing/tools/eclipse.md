@@ -2,9 +2,9 @@
 title: AEM Developer Tools for Eclipse
 description: AEM Developer Tools for Eclipse
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 3af790d9b42eb2f685258eb18352ec4cd752efcc
 workflow-type: tm+mt
-source-wordcount: '1183'
+source-wordcount: '1179'
 ht-degree: 1%
 
 ---
@@ -196,7 +196,7 @@ När du är klar bör du låta paketet köras på din instans, och när du spara
 
 Om du vill återskapa ett paket från ditt projekt högerklickar du på `PROJECT.ui.apps` eller `PROJECT.ui.content` och välja **Kör som** -> **Maven Install**.
 
-Nu har du en målmapp som har skapats med ditt paket (som till exempel anropas) `PROJECT.ui.apps-0.0.1-SNAPSHOT.zip`).
+Nu har du en målmapp som skapats med ditt paket inuti (anropas till exempel `PROJECT.ui.apps-0.0.1-SNAPSHOT.zip`).
 
 ## Felsökning {#troubleshooting}
 
@@ -216,7 +216,7 @@ Eclipse hämtar nödvändiga beroenden. Det här kan ta en stund.
 
 Den officiella versionen av Apache Sling IDE-verktygen för Eclipse-webbplatsen innehåller användbar information:
 
-* The [**Apache Sling IDE-verktyg för Eclipse** Användarhandbok](https://sling.apache.org/documentation/development/ide-tooling.html)guidar den här dokumentationen dig igenom de övergripande begreppen, serverintegrering och driftsättningsfunktioner som stöds av AEM utvecklingsverktyg.
+* The [**Apache Sling IDE-verktyg för Eclipse** Användarhandbok](https://sling.apache.org/documentation/development/ide-tooling.html)I den här dokumentationen får du hjälp med de övergripande begreppen, serverintegrering och driftsättningsfunktioner som AEM utvecklingsverktyg stöder.
 * The [Felsökningsavsnitt](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting).
 * The [Lista över kända fel](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues).
 
