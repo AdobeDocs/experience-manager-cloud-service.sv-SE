@@ -2,9 +2,9 @@
 title: AEM Developer Tools for Eclipse
 description: AEM Developer Tools for Eclipse
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
-source-git-commit: 3af790d9b42eb2f685258eb18352ec4cd752efcc
+source-git-commit: cac6692e10da4b271610edd495d4cb38507a726b
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1182'
 ht-degree: 1%
 
 ---
@@ -40,11 +40,11 @@ Innan du använder AEM Developer Tools måste du:
 
 När du har uppfyllt [krav](#requirements) ovan kan du installera plugin-programmet på följande sätt:
 
-1. Öppna [AEM Developer Tools Web Site](https://eclipse.adobe.com/aem/dev-tools/).
+1. Öppna [AEM Developer Tools Web Site](https://eclipse.adobe.com/aem/dev-tools/). <!-- RB: This URL is generating a 404 error in the experience-manager-cloud-service.en LinkCheckExl report . The website appears to be dead; no redirects at all. Clicking "Installation Link" does not do anything. Only the link "Download archive" works. The "Online Documentation" link just takes you to the AEM Docs home page. Not sure if this topic is still needed?? -->
 
 1. Kopiera **Installationslänk**.
 
-   Observera att du kan hämta ett arkiv i stället för att använda installationslänken. Detta tillåter offlineinstallation men du kommer att sakna automatiska uppdateringsmeddelanden på det här sättet.
+   Observera att du kan hämta ett arkiv i stället för att använda installationslänken. Den här metoden tillåter offlineinstallation, men du får inga meddelanden om automatiska uppdateringar på det här sättet.
 
 1. Öppna **Hjälp** -menyn.
 1. Klicka **Installera ny programvara**.

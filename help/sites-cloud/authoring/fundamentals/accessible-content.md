@@ -2,10 +2,10 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 48ac0566409f74d3ffa389e5016af0d14419dc3a
 workflow-type: tm+mt
-source-wordcount: '14061'
-ht-degree: 5%
+source-wordcount: '14056'
+ht-degree: 4%
 
 ---
 
@@ -104,12 +104,12 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 * Illustrativa foton: Det här är bilder på människor, objekt eller platser. Det är viktigt att tänka på fotots roll på sidan och att det i allmänhet rekommenderas att beskriva bildinnehållet, eftersom hjälpmedlet meddelar elementtypen (till exempel `graphic` eller `image`). kan göra det klarare att använda `screenshot` eller `illustration` i de alternativa textbeskrivningarna, men detta beror på sammanhanget. Enhetlighet är en stor faktor, ett beslut bör fattas för ett helt redigeringsteam och det ska tillämpas i hela användarupplevelsen.
 * Ikoner: Det är små bildspel (grafik) som förmedlar specifik information. De måste användas konsekvent på en sida och en webbplats. Alla förekomster av ikonen på en sida eller på en webbplats bör ha samma korta och koncisa textalternativ, såvida inte detta leder till onödig duplicering av intilliggande text.
 * Diagram och diagram: Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av **Beskrivning** i **Avancerat** fliken bildegenskaper. Dessutom kan du tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
-* Kartor, diagram, flödesscheman: För grafik som tillhandahåller spatiala data (till exempel för att ge stöd för att beskriva relationer mellan objekt eller en process) måste du se till att nyckelmeddelandet tillhandahålls i textformat och att textinformationen placeras nära varje associerad datapunkt. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta rätt väg till en viss plats, kan kartbildens alternativa text kortfattat ange *karta över X* och sedan ge anvisningar till den platsen i text någon annanstans på sidan eller i fältet **Beskrivning** på fliken **Avancerat** i **bildkomponenten**.
+* Kartor, diagram, flödesscheman: För grafik som tillhandahåller spatiala data (till exempel för att ge stöd för att beskriva relationer mellan objekt eller en process) måste du se till att nyckelmeddelandet tillhandahålls i textformat och att textinformationen placeras nära varje associerad datapunkt. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta till en viss plats, kan kartbildens alternativa text kortfattat ange *Karta över X* anger du sedan en beskrivning av den platsen i text någon annanstans på sidan eller genom **Beskrivning** i **Avancerat** -fliken i **Bild** -komponenten.
 * CAPTCHA: En CAPTCHA är en *Helt automatiserat offentligt kurstest för att skilja datorer och människor åt*. Det är en säkerhetskontroll som används på webbsidor för att skilja människor från skadliga program, men som kan orsaka tillgänglighetshinder. Det är bilder som kräver att användarna beskriver vad de ser för att klara ett säkerhetstest. Det är uppenbart att det inte går att ange ett textalternativ för bilden, så du måste istället överväga alternativa icke-grafiska lösningar. W3C ger ett antal förslag, t.ex.: Alla dessa metoder har sina egna fördelar och nackdelar.
    * Logikpussel
    * Användning av ljudutdata i stället för bilder
    * Begränsade användningskonton och skräppostfilter.
-* Bakgrundsbilder: Dessa uppnås med CSS (Cascading Style Sheets) i stället för HTML. Det innebär att det inte går att ange ett alternativt textvärde. Därför bör bakgrundsbilder inte innehålla viktig textinformation - om de gör det måste den informationen också anges i sidans text. Det är dock viktigt att en alternativ bakgrund visas när bilden inte kan visas.
+* Bakgrundsbilder: Dessa uppnås med CSS (Cascading Style Sheets) i stället för HTML. Det innebär att det inte går att ange ett alternativt textvärde. Därför bör bakgrundsbilder inte innehålla viktig textinformation. Om de gör det måste den här informationen också anges i sidans text. Det är dock viktigt att en alternativ bakgrund visas när bilden inte kan visas.
 
 >[!NOTE]
 >
@@ -560,11 +560,11 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 
 >[!NOTE]
 >
->Följande sajter kan vara till hjälp vid konvertering till andra enheter:
+>Följande verktyg kan hjälpa dig att konvertera till andra enheter:
 >
->* [Px to Em Calculater - Omni](https://www.omnicalculator.com/conversion/px-to-em)
->* [Konvertering av teckenstorlek: pixel-point-em-rem-percent](https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/)
->* [PMtoEM.com: Konvertering från PX till EM på ett enkelt sätt](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
+>* [Px to Em Calculator](https://www.omnicalculator.com/conversion/px-to-em)
+>* [Konvertering av teckenstorlek: pixel-point-em-rem-percent](https://websemantics.uk/tools/)
+>* [Pixel to EM Converter](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
 
 
 Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyser](https://www.tpgi.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
@@ -864,7 +864,7 @@ Om länkankarpunkten innehåller text som beskriver länkens syfte förutom bild
 ```xml
 <a href="publications.html">
 <img src = "bookshelf.jpg" alt = "" />
-John Smith’s publications
+John Smith's publications
 </a>
 ```
 
@@ -979,10 +979,10 @@ Syftet med detta kriterium är att säkerställa att text och annat språkligt i
 För att uppfylla det här kriteriet kan standardspråket på en webbsida identifieras med `lang` i `<html>` -element överst på sidan. Till exempel:
 
 * Om en sida är skriven på engelska är `<html>` -elementet ska vara:
-   `<html lang = “en”>`
+   `<html lang = "en">`
 
 * En sida som skall återges på spanska bör anta följande standard:
-   `<html lang = “es”>`
+   `<html lang = "es">`
 
 I AEM anges sidans standardspråk när du skapar sidan, men det kan också ändras när du redigerar [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
 
@@ -1029,7 +1029,7 @@ Tthe `lang` kan användas för att identifiera ändringar i innehållsspråket. 
 På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig fras korrekt om `span` -elementet används enligt följande:
 
 ```xml
-<p>The only French phrase I know is <span lang = “fr”>je ne sais quoi</code>.</p>
+<p>The only French phrase I know is <span lang = "fr">je ne sais quoi</code>.</p>
 ```
 
 >[!NOTE]
