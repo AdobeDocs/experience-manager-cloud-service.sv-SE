@@ -4,59 +4,45 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: 4269bc9650f197ae33fcef40a847f8b200097e45
+source-git-commit: bcab02cbd84955ecdc239d4166ae38e5f79b3264
 workflow-type: tm+mt
-source-wordcount: '1287'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
 
+
 # Extrahera innehåll via GraphQL API {#extract-content}
-
-Hittills i AEM för headless har du [har skapat egna Content Fragment-modeller](content-structure.md) har också skapat ett eget headless-innehåll [Innehållsfragment.](create-content.md) Nu kan du lära dig att använda innehållsfragment och GraphQL API som ett headless-system för innehållshantering för att leverera ditt innehåll.
-
-GraphQL har ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll de behöver med ett enda API-anrop.
-
-Först får du lära dig att köra två olika typer av frågor: **list** och **byPath** frågor. Sedan får du lära dig hur du hämtar innehåll från det innehållsfragment som du skapade tidigare. Det här dokumentet är ett komplement till den interaktiva rundturen, som omfattar samma steg och länkar till ytterligare resurser där så är lämpligt.
-
->[!TIP]
->
->Mer information om GraphQL API finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av den här modulen för GraphQL API-guiden.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_graphql"
 >title="Extrahera innehåll med GraphQL API"
->abstract="I den här modulen får du lära dig hur du kan använda innehållsfragment och GraphQL API som rubriklöst innehållshanteringssystem."
+>abstract="I den här modulen får du lära dig hur du kan använda innehållsfragment och GraphQL API som ett headless-system för innehållshantering."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_graphql_guide"
 >title="Starta GraphQL Explorer"
->abstract="GraphQL tillhandahåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs, med hjälp av ett enda API-anrop. Följ den här vägledningen när du vill lära dig hur du kör två olika typer av frågor och sedan hämtar innehåll från innehållsfragmentet som du skapade i en tidigare modul.<br><br>Starta funktionen på en ny flik genom att klicka nedan."
->additional-url="https://video.tv.adobe.com/v/328618" text="Platshållare för inledande video"
+>abstract="GraphQL tillhandahåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs, med hjälp av ett enda API-anrop. Följ den här modulen för att lära dig hur du kör två olika typer av frågor. Lär dig sedan hur du hämtar innehållet från det innehållsfragment som du skapade i föregående modul.<br><br>Starta den här modulen på en ny flik genom att klicka nedan."
+>additional-url="https://video.tv.adobe.com/v/328618" text="Extrahera innehåll i video"
 
-## GraphQL Explorer {#graphql-explorer}
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_graphql_guide_footer"
+>title="Snyggt jobbat! Du har lärt dig mer om de två grundläggande typerna av frågor och hur du ställer frågor till ditt eget innehåll. Du förstår nu hur du använder AEM GraphQL API för att skapa effektiva frågor som levererar innehåll i ett format som du förväntar dig av appen."
+>abstract=""
 
-Du startar i GraphQL Explorer. Här kan du skapa och köra frågor mot ditt headless-innehåll.
+## Fråga efter en lista med exempelinnehåll {#list-query}
+
+Klicka på **Starta GraphQL Explorer** klickar du på knappen ovan öppnas Utforskaren i GraphQL på en ny flik.
 
 ![GraphQL Query Editor](assets/extract-content/query-editor.png)
 
-Om du vill navigera till GraphQL Utforskaren själv utanför vägledningen i appen visas den med ikonen Adobe längst upp till vänster på sidan. Då öppnas den globala navigeringen för AEM. Här väljer du **verktyg** och sedan **Allmänt** -> **GraphQL Query Editor**.
+Med Utforskaren i GraphQL kan du skapa och validera frågor mot ditt headless-innehåll innan du använder dem för att styra innehållet i din app eller på din webbplats. Låt oss se hur det går till!
 
->[!TIP]
->
->Om du vill veta mer om navigering i AEM kan du läsa [Avsnittet Ytterligare resurser](#additional-resources) för mer information om AEM grundläggande hantering.
+1. Din AEM headless-testversion innehåller en förinläst slutpunkt med innehållsfragment som du kan extrahera innehåll från för testning. Välj **AEM demoresurser** slutpunkt från **Slutpunkt** nedrullningsbar meny längst upp till höger i redigeraren.
 
-AEM testversioner innehåller en färdig slutpunkt med innehåll som du kan extrahera innehåll från i testsyfte.
+   ![Markera slutpunkt](assets/extract-content/select-endpoint.png)
 
-![Markera slutpunkt](assets/extract-content/select-endpoint.png)
-
-Välj **AEM demoresurser** slutpunkt från **Slutpunkt** nedrullningsbar meny längst upp till höger i redigeraren, om den inte redan är det.
-
-## Kopiera och köra en listfråga {#list-query}
-
-Börja med en enkel listfråga för att kunna orientera dig AEM hur as a Cloud Service GraphQL API:er fungerar. Det här frågeexemplet returnerar en lista med allt innehåll som använder en viss Content Fragment-modell. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
-
-1. Kopiera följande kodfragment.
+1. Kopiera följande kodfragment för en listfråga för den förinlästa **AEM demoresurser** slutpunkt. En listfråga returnerar en lista med allt innehåll som använder en viss modell för innehållsfragment. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
 
    ```text
    {
@@ -79,25 +65,23 @@ Börja med en enkel listfråga för att kunna orientera dig AEM hur as a Cloud S
     }
    ```
 
-1. Ersätt sedan det befintliga innehållet i frågeredigeraren genom att klistra in den kopierade koden.
+1. Ersätt det befintliga innehållet i frågeredigeraren genom att klistra in den kopierade koden.
 
    ![Listfråga](assets/extract-content/list-query.png)
 
 1. När du har klistrat in klickar du på **Spela upp** längst upp till vänster i frågeredigeraren för att köra frågan.
 
-1. När frågan har körts visas resultatet i den högra panelen bredvid frågeredigeraren. Om frågan är felaktig visas ett fel på den högra panelen.
+1. Resultatet visas i den högra panelen bredvid frågeredigeraren. Om frågan är felaktig visas ett fel på den högra panelen.
 
    ![Listfrågeresultat](assets/extract-content/list-query-results.png)
 
 Du har just validerat en listfråga för en fullständig lista över alla innehållsfragment. Den här processen bidrar till att säkerställa att svaret blir vad din app förväntar sig, med resultat som visar hur dina appar och webbplatser kommer att hämta innehåll som skapas i AEM.
 
-De olika kanaler och plattformar där innehållet ska visas kan nu använda den här frågan eller liknande för att hämta ditt headless-innehåll.
+## Fråga efter en viss del av exempelinnehållet {#bypath-query}
 
-## Kopiera och köra en byPath-fråga {#bypath-query}
+Genom att köra en byPath-fråga kan du hämta innehåll för ett visst innehållsfragment. Produktinformationssidor och sidor som fokuserar på en viss uppsättning innehåll kräver vanligtvis den här typen av fråga. Låt oss se hur det fungerar!
 
-Genom att köra en byPath-fråga kan du hämta resurser för ett visst innehållsfragment. Produktinformationssidor och sidor som fokuserar på en viss uppsättning innehåll kräver vanligtvis den här typen av fråga.
-
-1. Kopiera följande kodfragment.
+1. Kopiera följande kodfragment för en byPath-fråga för den förinlästa **AEM demoresurser** slutpunkt.
 
    ```text
     {
@@ -122,39 +106,35 @@ Genom att köra en byPath-fråga kan du hämta resurser för ett visst innehåll
    }
    ```
 
-1. Ersätt sedan det befintliga innehållet i frågeredigeraren genom att klistra in den kopierade koden.
+1. Ersätt det befintliga innehållet i frågeredigeraren genom att klistra in den kopierade koden.
 
    ![byPath-fråga](assets/extract-content/bypath-query.png)
 
 1. När du har klistrat in klickar du på **Spela upp** längst upp till vänster i frågeredigeraren för att köra frågan.
 
-1. När frågan har körts visas resultatet i den högra panelen bredvid frågeredigeraren. Om frågan är felaktig visas ett fel på den högra panelen.
-
-1. När frågan har körts visas resultatet i den högra panelen bredvid frågeredigeraren. Om frågan är felaktig visas ett fel på den högra panelen.
+1. Resultatet visas i den högra panelen bredvid frågeredigeraren. Om frågan är felaktig visas ett fel på den högra panelen.
 
    ![byPath-frågeresultat](assets/extract-content/bypath-query-results.png)
 
-Du har just validerat en listfråga för en fullständig lista över alla innehållsfragment. Den här processen bidrar till att säkerställa att svaret blir vad din app förväntar sig, med resultat som visar hur dina appar och webbplatser kommer att hämta innehåll som skapas i AEM.
+Du har precis validerat en byPath-fråga för att hämta ett specifikt innehållsfragment som identifieras av sökvägen för det fragmentet.
 
-De olika kanaler och plattformar där innehållet ska visas kan nu använda den här frågan eller liknande för att hämta ditt headless-innehåll.
+## Fråga ditt eget innehåll {#own-queries}
 
-## Kör frågor på ditt eget innehåll {#own-queries}
-
-Nu när du har kört de två primära typerna av frågor är du redo att konfigurera och köra frågor för innehåll som du själv har skapat.
+Nu när du har kört de två primära typerna av frågor kan du fråga efter ditt eget innehåll!
 
 1. Om du vill köra frågor mot dina egna innehållsfragment ändrar du slutpunkten från **AEM demoresurser** mapp till **Ditt projekt** mapp.
 
    ![Välj en egen slutpunkt](assets/extract-content/select-endpoint.png)
 
-1. Börja med att markera och ta bort allt befintligt innehåll i frågeredigeraren. Skriv sedan inledande hakparentes `{` och tryck på Ctrl+Blanksteg eller Alt+Blanksteg om du vill visa en lista över de modeller som definierats i modellen för innehållsfragment automatiskt. Välj den modell som du skapade och som slutar i `List` från listan.
+1. Ta bort allt befintligt innehåll i frågeredigeraren. Skriv sedan inledande hakparentes `{` och tryck på Ctrl+Blanksteg eller Alt+Blanksteg om du vill visa en lista över de modeller som definierats i slutpunkten automatiskt. Välj den modell som du skapade och som slutar i `List` från alternativen.
 
    ![Komplettera automatiskt modeller i frågeredigeraren](assets/extract-content/auto-complete-models.png)
 
-1. Definiera de objekt som frågan ska innehålla för innehållsfragmentmodellen som du valde. Igen, skriv den öppna klammerparentesen `{`och trycker sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att visa en lista som fylls i automatiskt. Välj `items` från listan.
+1. Definiera de objekt som frågan ska innehålla för den valda innehållsfragmentmodellen. Igen, skriv den öppna klammerparentesen `{`och trycker sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att visa en lista som fylls i automatiskt. Välj `items` från alternativen.
 
    ![Fyll i objekt automatiskt i frågeredigeraren](assets/extract-content/auto-complete-items.png)
 
-1. Definiera fälten som frågan ska innehålla för innehållsfragmentmodellen som du valde. Igen, skriv den öppna klammerparentesen `{`Tryck sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att få en lista över tillgängliga fält i modellen för innehållsfragment automatiskt. Välj fält som du vill använda från modellen i listan.
+1. Definiera fälten som frågan ska innehålla för innehållsfragmentmodellen som du valde. Ännu en gång: skriv den öppna hakparentesen `{`Tryck sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att få en lista över tillgängliga fält i modellen för innehållsfragment automatiskt. Välj fält som du vill använda från modellen i listan.
 
    ![Fyll i fält automatiskt i frågeredigeraren](assets/extract-content/auto-complete-fields.png)
 
@@ -168,22 +148,6 @@ Nu när du har kört de två primära typerna av frågor är du redo att konfigu
 
    ![Resultat av din egen fråga](assets/extract-content/custom-query-results.png)
 
-Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler. Se [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och se hur mycket mer du kan göra med GraphQL API.
+1. Resultatet visas i den högra panelen bredvid frågeredigeraren.
 
-## Du har lärt dig att fråga innehåll! {#conclusion}
-
-Bra jobbat! Du har lärt dig mer om de två grundläggande typerna av frågor och hur du ställer frågor till ditt eget innehåll. Se till att du checkar ut [Avsnittet Ytterligare resurser](#additional-resources) om du vill ha fler exempelfrågor och lära dig mer om GraphQL API.
-
-Om du vill veta hur extraherat innehåll sedan används i en anpassad React-app ska du kontrollera modulen [Anpassa innehåll i en exempelapp.](customize-app.md)
-
-Du kan gå tillbaka till startskärmen för testversionen genom att klicka på **Lösningar** knappen längst upp till höger i navigeringsfältet och markera **Experience Manager**.
-
-![Navigera hem](assets/extract-content/home.png)
-
-## Ytterligare resurser {#additional-resources}
-
-Mer information om innehållsfragment och AEM finns i den här extra dokumentationen.
-
-* [GraphQL API-guide](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html)
-* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - Dokumentation om hur du navigerar och använder AEM för nya användare
-* [Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html)
+Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler.
