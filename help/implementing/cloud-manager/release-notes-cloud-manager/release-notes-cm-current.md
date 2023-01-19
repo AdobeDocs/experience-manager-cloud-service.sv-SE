@@ -3,10 +3,10 @@ title: Versionsinformation om Cloud Manager 2023.1.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2024.1.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 5aabdf22a040a031a3fa2a1a9f70247cf2e38f2e
+source-git-commit: 26a2ed4ee613b77c192652ae9afa99d5a86f72ce
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 1%
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
@@ -26,6 +26,8 @@ Releasedatum för Cloud Manager version 2023.1.0 i AEM as a Cloud Service är 19
 ## Nyheter {#what-is-new}
 
 * Användbarhetsförbättringarna var att uppdatera markörstilar som skiljer mellan var användarna kan vidta åtgärder och standardpekaren.
+
+* I listor över miljöer och pipeline-körningar kan du nu komma åt information genom att klicka på den enskilda raden.
 
 * Testrapporter för anpassat användargränssnitt kopieras nu till molnhanterarens lagringsutrymme och kan nås via API-anrop till molnhanteraren.
 
