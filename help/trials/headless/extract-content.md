@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: bcab02cbd84955ecdc239d4166ae38e5f79b3264
+source-git-commit: 741fadcffc496cb1c32d1943f7759e8d70cf92ff
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,9 @@ ht-degree: 0%
 
 ## Fråga efter en lista med exempelinnehåll {#list-query}
 
-Klicka på **Starta GraphQL Explorer** klickar du på knappen ovan öppnas Utforskaren i GraphQL på en ny flik.
+Du börjar med GraphQL Explorer på en ny flik. Här kan du skapa och validera frågor mot ditt headless-innehåll innan du använder dem för att styra innehållet i din app eller på din webbplats.
 
-![GraphQL Query Editor](assets/extract-content/query-editor.png)
-
-Med Utforskaren i GraphQL kan du skapa och validera frågor mot ditt headless-innehåll innan du använder dem för att styra innehållet i din app eller på din webbplats. Låt oss se hur det går till!
-
-1. Din AEM headless-testversion innehåller en förinläst slutpunkt med innehållsfragment som du kan extrahera innehåll från för testning. Välj **AEM demoresurser** slutpunkt från **Slutpunkt** nedrullningsbar meny längst upp till höger i redigeraren.
-
-   ![Markera slutpunkt](assets/extract-content/select-endpoint.png)
+1. Din AEM headless-testversion innehåller en förinläst slutpunkt med innehållsfragment som du kan extrahera innehåll från för testning. Se till att **AEM demoresurser** slutpunkten är markerad i **Slutpunkt** nedrullningsbar meny längst upp till höger i redigeraren.
 
 1. Kopiera följande kodfragment för en listfråga för den förinlästa **AEM demoresurser** slutpunkt. En listfråga returnerar en lista med allt innehåll som använder en viss modell för innehållsfragment. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
 
@@ -67,19 +61,17 @@ Med Utforskaren i GraphQL kan du skapa och validera frågor mot ditt headless-in
 
 1. Ersätt det befintliga innehållet i frågeredigeraren genom att klistra in den kopierade koden.
 
-   ![Listfråga](assets/extract-content/list-query.png)
-
 1. När du har klistrat in klickar du på **Spela upp** längst upp till vänster i frågeredigeraren för att köra frågan.
 
 1. Resultatet visas i den högra panelen bredvid frågeredigeraren. Om frågan är felaktig visas ett fel på den högra panelen.
 
-   ![Listfrågeresultat](assets/extract-content/list-query-results.png)
+   ![Listfråga](assets/do-not-localize/list-query-1-3-4-5.png)
 
 Du har just validerat en listfråga för en fullständig lista över alla innehållsfragment. Den här processen bidrar till att säkerställa att svaret blir vad din app förväntar sig, med resultat som visar hur dina appar och webbplatser kommer att hämta innehåll som skapas i AEM.
 
 ## Fråga efter en viss del av exempelinnehållet {#bypath-query}
 
-Genom att köra en byPath-fråga kan du hämta innehåll för ett visst innehållsfragment. Produktinformationssidor och sidor som fokuserar på en viss uppsättning innehåll kräver vanligtvis den här typen av fråga. Låt oss se hur det fungerar!
+Genom att köra en byPath-fråga kan du hämta innehåll för ett visst innehållsfragment. Produktinformationssidor och sidor som fokuserar på en viss uppsättning innehåll kräver vanligtvis den här typen av fråga.
 
 1. Kopiera följande kodfragment för en byPath-fråga för den förinlästa **AEM demoresurser** slutpunkt.
 
@@ -90,11 +82,11 @@ Genom att köra en byPath-fråga kan du hämta innehåll för ett visst innehål
      ) {
        item {
          _path
-         adventureTitle
-         adventureDescription {
+         title
+         description {
            json
          }
-         adventurePrimaryImage {
+         primaryImage {
            ... on ImageRef {
              _path
              width
@@ -108,46 +100,32 @@ Genom att köra en byPath-fråga kan du hämta innehåll för ett visst innehål
 
 1. Ersätt det befintliga innehållet i frågeredigeraren genom att klistra in den kopierade koden.
 
-   ![byPath-fråga](assets/extract-content/bypath-query.png)
-
 1. När du har klistrat in klickar du på **Spela upp** längst upp till vänster i frågeredigeraren för att köra frågan.
 
 1. Resultatet visas i den högra panelen bredvid frågeredigeraren. Om frågan är felaktig visas ett fel på den högra panelen.
 
-   ![byPath-frågeresultat](assets/extract-content/bypath-query-results.png)
+   ![byPath-frågeresultat](assets/do-not-localize/bypath-query-2-3-4.png)
 
 Du har precis validerat en byPath-fråga för att hämta ett specifikt innehållsfragment som identifieras av sökvägen för det fragmentet.
 
 ## Fråga ditt eget innehåll {#own-queries}
 
-Nu när du har kört de två primära typerna av frågor kan du fråga efter ditt eget innehåll!
+Nu när du har kört de två primära typerna av frågor kan du fråga efter ditt eget innehåll.
 
 1. Om du vill köra frågor mot dina egna innehållsfragment ändrar du slutpunkten från **AEM demoresurser** mapp till **Ditt projekt** mapp.
 
-   ![Välj en egen slutpunkt](assets/extract-content/select-endpoint.png)
-
 1. Ta bort allt befintligt innehåll i frågeredigeraren. Skriv sedan inledande hakparentes `{` och tryck på Ctrl+Blanksteg eller Alt+Blanksteg om du vill visa en lista över de modeller som definierats i slutpunkten automatiskt. Välj den modell som du skapade och som slutar i `List` från alternativen.
 
-   ![Komplettera automatiskt modeller i frågeredigeraren](assets/extract-content/auto-complete-models.png)
+   ![Starta anpassad fråga](assets/do-not-localize/custom-query-1-2.png)
 
 1. Definiera de objekt som frågan ska innehålla för den valda innehållsfragmentmodellen. Igen, skriv den öppna klammerparentesen `{`och trycker sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att visa en lista som fylls i automatiskt. Välj `items` från alternativen.
 
-   ![Fyll i objekt automatiskt i frågeredigeraren](assets/extract-content/auto-complete-items.png)
+1. Tryck eller klicka på **Förtifiera** för att automatiskt formatera koden så att den blir lättare att läsa.
 
-1. Definiera fälten som frågan ska innehålla för innehållsfragmentmodellen som du valde. Ännu en gång: skriv den öppna hakparentesen `{`Tryck sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att få en lista över tillgängliga fält i modellen för innehållsfragment automatiskt. Välj fält som du vill använda från modellen i listan.
-
-   ![Fyll i fält automatiskt i frågeredigeraren](assets/extract-content/auto-complete-fields.png)
-
-1. Avgränsa flera fält med kommatecken (`,`) eller blanksteg och tryck på Ctrl+Blanksteg eller Alt+Blanksteg igen för att markera ytterligare fält.
-
-1. När du arbetar kan du trycka eller klicka på **Förtifiera** för att automatiskt formatera koden så att den blir lättare att läsa.
-
-   ![Förtifiera](assets/extract-content/prettify.png)
-
-1. När du är klar trycker du på eller klickar på **Spela upp** längst upp till vänster i redigeraren för att köra frågan.
-
-   ![Resultat av din egen fråga](assets/extract-content/custom-query-results.png)
+1. När du är klar trycker du på eller klickar på **Spela upp** längst upp till vänster i redigeraren för att köra frågan. Redigeraren fyller i `items` och frågan körs.
 
 1. Resultatet visas i den högra panelen bredvid frågeredigeraren.
+
+   ![Kör anpassad fråga](assets/do-not-localize/custom-query-3-4-5-6.png)
 
 Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler.

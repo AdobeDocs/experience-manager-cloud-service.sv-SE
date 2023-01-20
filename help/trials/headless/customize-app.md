@@ -4,9 +4,9 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: bcab02cbd84955ecdc239d4166ae38e5f79b3264
+source-git-commit: 741fadcffc496cb1c32d1943f7759e8d70cf92ff
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1035'
 ht-degree: 0%
 
 ---
@@ -32,19 +32,15 @@ ht-degree: 0%
 
 ## Förhandsgranska appen {#preview}
 
-Klicka på **Starta redigeraren för innehållsfragment** knappen ovan öppnar redigeraren för innehållsfragment på en ny flik.
-
-![Redigera innehållsfragment](assets/customize-app/content-fragment-editor.png)
-
-Exempelappen som medföljer din AEM headless-testversion drivs av innehållsfragment som levereras via GraphQL. Använd Content Fragment-redigeraren för att bekanta dig med innehållet genom att förhandsgranska exemplet.
+Du börjar i Content Fragment-redigeraren med exempelappen som medföljer AEM Headless-testversion redan inläst. Exempelappen drivs av innehållsfragment som levereras via GraphQL. Använd Content Fragment-redigeraren för att bekanta dig med redigeraren genom att förhandsgranska exempelappen.
 
 1. Tryck eller klicka på **Förhandsgranska** längst upp till höger på redigeringsskärmen.
 
 1. Demonstrationsappen öppnas på en ny flik. Appen är till för WKND:s påhittade livsstilsmärke. Klicka runt för att navigera i exempelinnehållet.
 
-   ![Förhandsgranskning av demoapp](assets/customize-app/preview-demo-app.png)
-
 1. Gå tillbaka till webbläsarfliken i Content Fragment-redigeraren för att fortsätta.
+
+![Förhandsgranska appen](assets/do-not-localize/preview-app-1.png)
 
 ## Redigera ett sidhuvud i appen {#edit-app}
 
@@ -52,25 +48,19 @@ Innehållsfragmentsredigeraren visar programmets grundläggande layout som ett s
 
 1. Tryck eller klicka **Mtn Biker i Canyon** i **Paneler** -avsnitt.
 
-   ![Tryck på Mtn Biker i Canyon-fragment](assets/customize-app/mtn-biker-in-canyon.png)
+   ![Markera textpanelen](assets/do-not-localize/edit-header-1.png)
 
 1. Redigeraren öppnar programmets rubrikpanel för bergsbudgivaren. Varje panel består av lager som representerar olika bilder och text som utgör upplevelsen.
 
-   ![Paneler](assets/customize-app/panels.png)
+1. Markera textlagret **Mtn Biker i Canyon Text Layer** om du vill öppna detaljerna för lagret i redigeraren. Lagret består av flera innehållsfragment som styr texten som visas på den här panelen i programmet.
 
-1. Markera textlagret **Mtn Biker i Canyon Text Layer**. Då öppnas detaljerna för lagret i redigeraren. Lagret består av flera innehållsfragment som styr texten som visas på den här panelen i programmet.
-
-   ![Välj Mtn Biker i Canyon Title](assets/customize-app/mtn-biker-in-canyon-text-layer.png)
-
-1. Välj **Mtn Biker in Canyon Title** textobjekt. Då öppnas Content Fragment-redigeraren.
-
-   ![Välj Mtn Biker i textobjektet för cellanimering](assets/customize-app/mtn-biker-in-canyon-title.png)
+1. Välj **Mtn Biker in Canyon Title** textobjekt. Då öppnas Content Fragment-redigeraren som visar innehållet i det här fragmentet och där du kan ändra det.
 
 1. Ändra texten från `Your next great adventure is calling` till `Choose your own adventure`. Ändringen sparas automatiskt av redigeraren.
 
 1. Tryck eller klicka **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik.
 
-   ![Förhandsgranskning av demoapp](assets/customize-app/preview-demo-app-text.png)
+   ![Förhandsgranskning av demoapp](assets/do-not-localize/edit-header-5-6.png)
 
 Så enkelt är det att uppdatera innehåll i en React-app när den är integrerad i AEM headless CMS.
 
@@ -78,19 +68,17 @@ Så enkelt är det att uppdatera innehåll i en React-app när den är integrera
 
 Nu när du har ändrat en rubrik i appen kan du prova att ändra en bild.
 
-1. Gå tillbaka till fliken Webbläsare i redigeraren för innehållsfragment.
+1. Gå tillbaka till fliken för webbläsaren i redigeraren för innehållsfragment från förhandsgranskningen.
 
 1. Du måste gå tillbaka till rätt plats i Content Fragment-redigeraren. Bröderna högst upp till vänster i redigeraren visar var du befinner dig i innehållshierarkin. Tryck eller klicka **Mtn Biker i Canyon** i vägbeskrivningarna för att återgå till den sidan.
 
-   ![Breadcrumbs](assets/customize-app/breadcrumbs.png)
+   ![Breadcrumbs](assets/do-not-localize/swap-image-2.png)
 
 1. Välj **Mtn Biking - Biker** bildlager. Då öppnas Content Fragment-redigeraren
 
-   ![Redigera bildfragment](assets/customize-app/mtn-biking-biker.png)
-
 1. Tryck eller klicka på **X** om du vill ta bort den större bilden. Bilden försvinner och redigeraren visar ett fel eftersom bilden krävs för den här modellen för innehållsfragment.
 
-   ![Bild borttagen från fragment](assets/customize-app/mtn-biking-biker-no-image.png)
+   ![Ta bort bild från fragment](assets/do-not-localize/swap-image-4.png)
 
 1. Tryck eller klicka **Lägg till resurs**.
 
@@ -98,11 +86,7 @@ Nu när du har ändrat en rubrik i appen kan du prova att ändra en bild.
 
 1. Markera bilden `biker-yellow.png` och sedan trycka eller klicka **Välj**.
 
-   ![Välj resurs](assets/customize-app/select-asset.png)
-
 1. Bilden på den här färgväljaren ersätts med den valda bilden. Redigeraren sparar ändringarna automatiskt.
-
-   ![Redigerat fragment av budgivarbild](assets/customize-app/mtn-biking-biker-edited.png)
 
 1. Tryck eller klicka **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik. Klicka på Uppdatera i webbläsaren så ser du din nya bikerbild med gula kortkommandon i appen.
 
@@ -112,44 +96,39 @@ Det är så enkelt att uppdatera bilder och resurser i apparna med AEM headless 
 
 Nu när du har uppdaterat bilden av budgivaren ska vi gå igenom hur man lägger till nytt innehåll i en app genom att skapa och referera till ett nytt innehållsfragment. Du kommer att lägga till ett produktsamtal som hanteras av innehållsfragmentet&quot;köpbart ögonblick&quot; på den andra panelen i programmet.
 
-![Exempel på en köpbar stund](assets/customize-app/example-shoppable-moment.png)
+![Exempel på en köpbar stund](assets/do-not-localize/example-shoppable-moment.png)
 
-1. Gå tillbaka till fliken Webbläsare i redigeraren för innehållsfragment.
+1. Gå tillbaka till fliken Webbläsare i redigeraren för innehållsfragment på fliken Förhandsgranska.
 
 1. Du måste gå tillbaka till rätt plats i Content Fragment-redigeraren. Bröderna högst upp till vänster i redigeraren visar var du befinner dig i innehållshierarkin. Tryck eller klicka **WKND - startsida** i vägbeskrivningarna för att återgå till den sidan.
 
-   ![Gå tillbaka till layoutskärmen](assets/customize-app/breadcrumbs-2.png)
-
 1. Välj **Mtn Biker på WKND Gul** -panelen.
-
-   ![Skapa en shoppingupplevelse](assets/customize-app/mtn-biker-on-wknd-yellow.png)
 
 1. Välj **Mtn Biking - köpbar** lager.
 
-   ![Markera köpbart snabblager](assets/customize-app/mtn-biking-shoppable.png)
-
 1. Om du vill skapa en ny utlysning på den här panelen måste du skapa en ny Content Fragment som kan köpas. Tryck eller klicka på **+ Skapa nytt fragment** -knappen.
 
-   ![Lägg till en köpbar stund](assets/customize-app/create-new-fragment.png)
+   ![Lägg till en köpbar stund](assets/do-not-localize/add-reference-1-5.png)
 
 1. Du måste först välja en modell som det nya innehållsfragmentet ska baseras på. Välj **Moment som kan köpas** modell från **Modell för innehållsfragment** nedrullningsbar meny.
 
 1. Ge Content Fragment ett namn. Skriv till exempel `Shorts` till **Namn** fält.
 
-   ![Ge kunderna ett namn](assets/customize-app/new-content-fragment.png)
-
 1. Tryck eller klicka **Skapa och öppna**.
+
+   ![Ge kunderna ett namn](assets/do-not-localize/add-reference-6-7-8.png)
 
 1. Redigeraren öppnas för ditt nya innehållsfragment.
 
 1. Ge shoppingstunden ett namn i **Text** fält som `Yellow shorts`.
 
 1. Ange värden för **X** och **Y**. Här ska denna utlysning läggas över panelen. Ändringar i avsnittet sparas automatiskt av redigeraren
-   * **X**: `-18`
-   * **Y**: `-28`
 
-   ![Redigera shoppingögonblicket](assets/customize-app/edit-shoppable-moment.png)
+   * **X**: `-5`
+   * **Y**: `-10`
 
 1. Tryck eller klicka **Förhandsgranska** i fönstrets övre högra hörn för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik. Klicka på Uppdatera i webbläsaren för att testa placeringen och göra de justeringar som behövs i redigeraren.
+
+   ![Förhandsgranska](assets/do-not-localize/add-reference-10-11-12.png)
 
 Nu förstår du hur du kan skapa nytt innehåll och referera till det som ett innehållsfragment i appen utan några utvecklingscykler.

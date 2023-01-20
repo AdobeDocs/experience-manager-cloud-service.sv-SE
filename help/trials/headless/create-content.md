@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: bcab02cbd84955ecdc239d4166ae38e5f79b3264
+source-git-commit: 741fadcffc496cb1c32d1943f7759e8d70cf92ff
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -32,17 +32,11 @@ ht-degree: 0%
 
 ## Skapa ett innehållsfragment {#create-fragment}
 
-Klicka på **Starta konsolen för innehållsfragment** knappen ovan öppnar konsolen för innehållsfragment på en ny flik.
-
-![Redigera innehållet i fragmentet](assets/create-content/content-fragment-console.png)
-
-Innehållsfragment representerar ditt headless-innehåll och baseras på fördefinierade strukturer, som kallas modeller för innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga. Konsolen börjar tom, så vi skapar ett nytt fragment!
+Innehållsfragment representerar ditt headless-innehåll och baseras på fördefinierade strukturer, som kallas modeller för innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
 
 1. Tryck eller klicka på **Skapa** längst upp till höger på konsolen.
 
 1. The **Nytt innehållsfragment** öppnas där du kan börja skapa ett nytt innehållsfragment. **Plats** fylls automatiskt i med var det nya innehållet sparas.
-
-   ![Dialogrutan Skapa innehållsfragment](assets/create-content/create-content-fragment.png)
 
 1. I **Modell för innehållsfragment** väljer du den modell för innehållsfragment som du skapade tidigare.
 
@@ -50,26 +44,24 @@ Innehållsfragment representerar ditt headless-innehåll och baseras på fördef
 
 1. Tryck eller klicka **Skapa och öppna**.
 
+![Skapa ett nytt innehållsfragment](assets/do-not-localize/create-content-3-4-5.png)
+
 ## Lägg till innehåll i ditt innehållsfragment {#add-content}
 
 När du har sparat och öppnat ditt nya innehållsfragment öppnas redigeraren för innehållsfragment på en ny flik. Här kan du lägga till innehållet i det nya fragmentet.
 
 1. Innehållsfragmentsredigeraren visar de fält som du har definierat i den valda modellen. Här kan du lägga till innehåll i varje fält för att slutföra innehållsfragmentet. Förloppet sparas automatiskt.
 
-   ![Redigera innehållsfragment](assets/create-content/content-fragment-editor.png)
-
 1. När du är klar med att lägga till innehåll trycker du på eller klickar på **Publicera** längst upp till höger i redigeraren. Detta gör att ditt innehållsfragment blir tillgängligt för konsumtion i externa appar.
 
 1. Välj **Nu** i listrutan. Du kan också schemalägga publiceringen vid ett senare tillfälle.
 
-   ![Knappen Publicera](assets/create-content/publish.png)
+   ![Skapa innehåll](assets/do-not-localize/add-content-1-2.png)
 
 1. The **Publicera innehållsfragment** visas. AEM utför automatiskt en referenskontroll för att se till att alla nödvändiga resurser publiceras för ditt innehållsfragment. I det här fallet måste du även publicera modellen som du skapade. Tryck eller klicka **Publicera**.
 
-   ![Referenskontroll](assets/create-content/references.png)
+   ![Publicerings- och referenskontroll](assets/do-not-localize/publish-4.png)
 
 1. Publiceringen bekräftas i en banderoll.
-
-   ![Bekräftelse på offentliggörande](assets/create-content/publish-confirm.png)
 
 Ditt innehåll publiceras och kan levereras till din app eller webbplats som ett innehållsfragment.

@@ -4,9 +4,9 @@ description: Lär dig hur du skapar en struktur som fungerar som grund för allt
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: bcab02cbd84955ecdc239d4166ae38e5f79b3264
+source-git-commit: 741fadcffc496cb1c32d1943f7759e8d70cf92ff
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -32,45 +32,31 @@ ht-degree: 0%
 
 ## Skapa en modell {#create-model}
 
-Klicka på **Starta modellkonsolen** ovan öppnar konsolen för modeller av innehållsfragment på en ny flik.
+Modellkonsolen för innehållsfragment öppnas på en ny flik. Tänk på modellkonsolen Content Fragment som ditt modellbibliotek, där du skapar nya modeller och hanterar befintliga modeller.
 
-![Modellkonsolen för innehållsfragment](assets/content-structure/content-fragment-model-console.png)
+1. Klicka på **Skapa** längst upp till höger på skärmen för att börja skapa en modell för innehållsfragment.
 
-Tänk på modellkonsolen Content Fragment som ditt modellbibliotek, där du skapar nya modeller och hanterar befintliga modeller. Konsolen börjar tom, så vi skapar en ny modell!
-
-1. I modellkonsolen för innehållsfragment klickar du på **Skapa** längst upp till höger på skärmen för att börja skapa en modell för innehållsfragment.
-
-1. Guiden Skapa modell startar.
-
-   ![Modellguide för innehållsfragment](assets/content-structure/model-wizard.png)
-
-   Ange den obligatoriska informationen.
+1. Guiden Skapa modell startar. Ange den obligatoriska informationen.
 
    * **Modelltitel** - Detta är en kort beskrivning av modellen och anger vanligtvis syftet med modellen.
    * **Aktivera modell** - Det här alternativet är markerat som standard och måste markeras för att det ska gå att skapa innehållsfragment baserat på den här modellen.
 
 1. När de obligatoriska fälten har fyllts i klickar du på **Skapa** längst upp till vänster för att skapa modellen.
 
-1. The **Lyckades** bekräftar att modellen skapades.
+1. The **Lyckades** bekräftar att modellen skapades. Klicka **Öppna** i dialogrutan för att öppna den nya innehållsfragmentmodellen i redigeraren på en ny flik. Fortsätt sedan till nästa steg för att lägga till datafält i modellen.
 
-   ![Dialogrutan Slutfört för att skapa en ny modell för innehållsfragment](assets/content-structure/success.png)
+![Steg 2 och 3 av att skapa en modell för innehållsfragment](assets/do-not-localize/create-model-2-3.png)
 
 ## Lägg till fält i modellen {#configure-model}
 
-Innan du kan använda modellen måste du definiera datastrukturen.
-
-1. Klicka **Öppna** i **Lyckades** i föregående steg för att öppna den nya modellen i modellredigeraren för innehållsfragment där du kan definiera dess fält.
+Innan du kan använda modellen måste du definiera datastrukturen. I redigeraren för innehållsfragmentmodellen konfigurerar du de datatyper och egenskaper som definierar innehållet i modellen.
 
 1. Dra ett fält från **Datatyper** till höger om redigeraren och släpp den i modellen för innehållsfragment.
 
-   ![Lägg till en datatyp](assets/content-structure/drop-fields.png)
-
 1. När en datatyp har placerats ut **Datatyper** kolumnen ändras automatiskt till **Egenskaper** där du kan definiera information om den datatyp du just placerat.
-
-   ![Fliken Egenskaper för datafältet](assets/content-structure/data-type-properties.png)
 
 1. När du har lagt till alla fält som behövs för modellen för innehållsfragment klickar du på **Spara** längst upp till höger i fönstret.
 
-Modellen sparas och du återgår till modellkonsolen för innehållsfragment där du kan lägga till fler modeller om det behövs.
+1. Modellen sparas och du återgår till modellkonsolen för innehållsfragment.
 
-![Modulen är klar](assets/content-structure/content-fragment-model-console-populated.png)
+![Steg ett, två och tre av de fält som läggs till i modellen](assets/do-not-localize/define-model-fields-1-2-3.png)
