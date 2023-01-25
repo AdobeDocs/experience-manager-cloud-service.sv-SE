@@ -3,7 +3,7 @@ title: Stöd för nya språk för lokalisering av adaptiva formulär
 seo-title: Supporting new locales for adaptive forms localization
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. Engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR) språk.
 seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. We support 10 locales out of the box curently, as  "en","fr","de","ja","pt-br","zh-cn","zh-tw","ko-kr","it","es".
-source-git-commit: f8bbc6605e77cf2858c69dae96e9ab32698d1f16
+source-git-commit: eb722054f6a51320a7772bf666f656418f8392cd
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -34,8 +34,8 @@ Så här lägger du till stöd för en ny språkinställning i Adaptive Forms ru
 1. [Klona din databas](#1-clone-the-repository-clone-the-repository)
 1. [Lägg till en språkinställning i tjänsten GuideLocalizationService](#1-add-a-locale-to-the-guide-localization-service-add-a-locale-to-the-guide-localization-service-br)
 1. [Lägg till språknamnsspecifik mapp](#3-add-locale-name-specific-folder-add-locale-name-specific-folder)
-1. [Lägg till XFA-klientbibliotek för en språkinställning](#3-add-xfa-client-library-for-a-locale)
-1. [Lägg till klientbibliotek för adaptiva formulär för en språkinställning](#4-add-adaptive-form-client-library-for-a-locale-add-adaptive-form-client-library-for-a-locale-br)
+3.1 [Lägg till XFA-klientbibliotek för en språkinställning](#3-add-xfa-client-library-for-a-locale)
+3.2 [Lägg till klientbibliotek för adaptiva formulär för en språkinställning](#4-add-adaptive-form-client-library-for-a-locale-add-adaptive-form-client-library-for-a-locale-br)
 1. [Lägg till språkstöd för ordlistan](#5-add-locale-support-for-the-dictionary-add-locale-support-for-the-dictionary-br)
 1. [Genomför ändringarna i databasen och distribuera pipeline](#7-commit-the-changes-in-the-repository-and-deploy-the-pipeline-commit-changes-in-repo-deploy-pipeline)
 
