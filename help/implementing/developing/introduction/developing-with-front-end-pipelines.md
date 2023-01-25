@@ -2,7 +2,7 @@
 title: Developing Sites with the Front-End Pipeline
 description: Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan bli betydligt snabbare. I det här dokumentet beskrivs några särskilda aspekter av den inledande konstruktionsprocessen som bör anges.
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
-source-git-commit: 868382c37c3744642e96353aecfc4369105a42ec
+source-git-commit: 2afdd0682d1baf39d737ee7a5721657e639739a7
 workflow-type: tm+mt
 source-wordcount: '1157'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Innehållet i `dist` är den mapp som distribueras till AEM as a Cloud Service f
 
 ### Nodversioner {#node-versions}
 
-Som standard används nod 14 i den främre pipelinen, men 16 och 16 är också tillgängliga.
+Som standard används nod 14 i den främre pipelinen, men 12 och 16 är också tillgängliga.
 
 Du kan använda `CM_CUSTOM_VAR_NODE_VERSION` systemvariabel för att ange önskad version.
 
