@@ -3,7 +3,7 @@ title: Stöd för nya språk för lokalisering av adaptiva formulär
 seo-title: Supporting new locales for adaptive forms localization
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. Engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR) språk.
 seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. We support 10 locales out of the box curently, as  "en","fr","de","ja","pt-br","zh-cn","zh-tw","ko-kr","it","es".
-source-git-commit: eb722054f6a51320a7772bf666f656418f8392cd
+source-git-commit: 848c6a4ea403f644408407aed0a7e06c3524d942
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -34,8 +34,8 @@ Så här lägger du till stöd för en ny språkinställning i Adaptive Forms ru
 1. [Klona din databas](#1-clone-the-repository-clone-the-repository)
 1. [Lägg till en språkinställning i tjänsten GuideLocalizationService](#1-add-a-locale-to-the-guide-localization-service-add-a-locale-to-the-guide-localization-service-br)
 1. [Lägg till språknamnsspecifik mapp](#3-add-locale-name-specific-folder-add-locale-name-specific-folder)
-3.1 [Lägg till XFA-klientbibliotek för en språkinställning](#3-add-xfa-client-library-for-a-locale)
-3.2 [Lägg till klientbibliotek för adaptiva formulär för en språkinställning](#4-add-adaptive-form-client-library-for-a-locale-add-adaptive-form-client-library-for-a-locale-br)
+   * [Lägg till XFA-klientbibliotek för en språkinställning](#3-add-xfa-client-library-for-a-locale)
+   * [Lägg till klientbibliotek för adaptiva formulär för en språkinställning](#4-add-adaptive-form-client-library-for-a-locale-add-adaptive-form-client-library-for-a-locale-br)
 1. [Lägg till språkstöd för ordlistan](#5-add-locale-support-for-the-dictionary-add-locale-support-for-the-dictionary-br)
 1. [Genomför ändringarna i databasen och distribuera pipeline](#7-commit-the-changes-in-the-repository-and-deploy-the-pipeline-commit-changes-in-repo-deploy-pipeline)
 
@@ -63,9 +63,9 @@ Så här lägger du till stöd för en ny språkinställning i Adaptive Forms ru
 #### 3.1 Lägg till XFA-klientbibliotek för en språkinställning i mappen locale name
 
 1. Skapa en nod med namnet som `[locale-name]_xfa` och skriv som `cq:ClientLibraryFolder` under `etc/clientlibs/locale_name`, med kategori `xfaforms.I18N.<locale>`och lägg till följande filer:
-* **I18N.js** definiera `xfalib.locale.Strings` för `<locale>` enligt definition i `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`.
-* **js.txt** som innehåller följande:
-   */libs/fd/xfaforms/clientlibs/I18N/Namespace.js I18N.js /etc/clientlibs/fd/xfaforms/I18N/LogMessages.js*
+   * **I18N.js** definiera `xfalib.locale.Strings` för `<locale>` enligt definition i `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`.
+   * **js.txt** som innehåller följande:
+      */libs/fd/xfaforms/clientlibs/I18N/Namespace.js I18N.js /etc/clientlibs/fd/xfaforms/I18N/LogMessages.js*
 
 #### 3.2. Lägg till klientbibliotek för adaptiv form för en språknamnsmapp {#add-adaptive-form-client-library-for-a-locale-br}
 
@@ -77,9 +77,9 @@ Så här lägger du till stöd för en ny språkinställning i Adaptive Forms ru
 
 1. Lägg till **js.txt** som innehåller följande:
 
-   ```text
+   ```
      i18n.js
-       LogMessages.js
+     LogMessages.js
    ```
 
 ### 4. Lägg till språkstöd för ordlistan {#add-locale-support-for-the-dictionary-br}
@@ -143,7 +143,7 @@ Om det inte finns någon språkinformation levereras Adaptiv form på formuläre
 
 Hämta [exempelklientbibliotek](/help/forms/assets/locale-support-sample.zip) för att lägga till stöd för nya språk. Du måste ändra innehållet i mappen på det språk som krävs.
 
-### De bästa sätten att stödja ny lokalisering {#best-practices}
+## De bästa sätten att stödja ny lokalisering {#best-practices}
 
 * Adobe rekommenderar att du skapar ett översättningsprojekt när du har skapat ett adaptivt formulär.
 
