@@ -4,9 +4,9 @@ description: Lär dig hur du arbetar med 360- och VR-video (Virtual Reality) i D
 feature: 360 VR Video
 role: User
 exl-id: ffd092d3-2188-47b0-a475-8bfa660c03c1
-source-git-commit: 033692b82ee366b70f69ca35d55bfac59da3157f
+source-git-commit: 419ec6604ee8c93510cb8bf4e1d46bc9b9c9383a
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Se även [Hantera visningsförinställningar](/help/assets/dynamic-media/managin
 
 Välj [Space Station 360](https://s7d1.scene7.com/s7viewers/html5/Video360Viewer.html?asset=Viewers/space_station_360-AVS) för att öppna ett webbläsarfönster och titta på en 360-gradersvideo. Under videouppspelningen drar du pekaren till en ny plats för att ändra visningsvinkeln.
 
-![360 videoexempel](assets/6_5_360videoiss_simplified.png)
+![Videobildruta från Space Station 360-video](assets/6_5_360videoiss_simplified.png)
 *Videobildruta från Space Station 360*
 
 ## 360/VR Video och Adobe Premiere Pro {#vr-video-and-adobe-premiere-pro}
@@ -42,7 +42,7 @@ Se [Redigera 360/VR-video](https://helpx.adobe.com/premiere-pro/how-to/edit-360-
 
 360 videomaterial som överförs till [!DNL Experience Manager] är märkta som **Multimedia** på en Assets-sida, ungefär som i en vanlig videoresurs.
 
-![6_5_360video-select-opreview](assets/6_5_360video-selecttopreview.png)
+![En överförd 360-videoresurs som visas i kortvyn](assets/6_5_360video-selecttopreview.png)
 *En överförd 360-videoresurs som visas i kortvyn. Resursen är märkt som Multimedia.*
 
 **Ladda upp material som ska användas med 360-videovisningsprogrammet:**
@@ -106,25 +106,25 @@ Se [Lägga till Dynamic Media Assets på sidor](/help/assets/dynamic-media/addin
 
 1. I **[!UICONTROL Assets]** navigera till en befintlig 360-video som du har skapat. Om du vill öppna den i förhandsgranskningsläge väljer du videouppsättningen 360.
 
-   ![6_5_360video-selecttopreview-1](assets/6_5_360video-selecttopreview-1.png)
+   ![Skärmbild av ett överfört 360-videomaterial som det visas i kortvyn i Experience Manager.](assets/6_5_360video-selecttopreview-1.png)
 
    Om du vill förhandsgranska videon väljer du resursen med 360 videoklipp.
 
 1. Markera listrutan på förhandsvisningssidan, i det övre vänstra hörnet på sidan, och välj sedan **[!UICONTROL Viewers]**.
 
-   ![6_5_360video-preview-viewers](assets/6_5_360video-preview-viewers.png)
+   ![Skärmbild som visar hur du väljer visningsprogram för att visa en lista över tillgängliga videovisningsprogram.](assets/6_5_360video-preview-viewers.png)
 
    I visningslistan väljer du **[!UICONTROL Video360_social]** gör du något av följande:
 
    * Om du vill ändra visningsvinkeln för den statiska scenen drar du pekaren över videon.
    * Välj videons **[!UICONTROL Play]** -knappen. När videon spelas upp drar du pekaren över videon för att ändra visningsvinkeln.
 
-   ![6_5_360video-preview-video360-social ](assets/6_5_360video-preview-video360-social.png)*En 360-videobildbild.*
+   ![Skärmbild av en användare som väljer Video360_Social-visningsprogrammet för att förhandsgranska en 360-gradersvideo.](assets/6_5_360video-preview-video360-social.png)*En 360-videobildbild.*
 
    * I visningslistan väljer du **[!UICONTROL Video360VR]**.
 
       VR-video (Virtual Reality) är engagerande videomaterial som nås via virtuella verklighetshuvuden. Precis som med vanliga videor skapar du VR-videor i början när en video spelas in eller spelas in med 360-graderskameror.
-   ![6_5_360video-preview-video360vr](assets/6_5_360video-preview-video360vr.png)
+   ![Skärmbild av en användare som håller muspekaren över alternativet Video360VR Viewer.](assets/6_5_360video-preview-video360vr.png)
    *En 360 VR-videobildskärm.*
 
 1. Välj i det övre högra hörnet på förhandsvisningssidan **[!UICONTROL Close]**.
