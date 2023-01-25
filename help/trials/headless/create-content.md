@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: 741fadcffc496cb1c32d1943f7759e8d70cf92ff
+source-git-commit: 4a99ce530f3ca13f52648ffc0782d62cd5ebf395
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content_guide"
 >title="Starta konsolen för innehållsfragment"
->abstract="Att skapa enhetligt, högkvalitativt innehåll som fungerar smidigt i alla era appar och webbplatser leder till enastående kundupplevelser. I den här modulen får du hjälp med att skapa ditt första innehållsfragment som visar hur du får det att fungera. Se videon för att förstå varför detta är ett viktigt steg.<br><br>Starta den här modulen på en ny flik genom att klicka på knappen nedan och följ sedan den här guiden."
->additional-url="https://video.tv.adobe.com/v/328618" text="Skapa nytt innehåll i video"
+>abstract="Att skapa enhetligt, högkvalitativt innehåll som fungerar smidigt i alla era appar och webbplatser leder till enastående kundupplevelser. I den här modulen får du hjälp med att skapa ditt första innehållsfragment som visar hur du får det att fungera.<br><br>Starta den här modulen på en ny flik genom att klicka på knappen nedan och följ sedan den här guiden."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content_guide_footer"
