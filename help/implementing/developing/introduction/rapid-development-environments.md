@@ -2,9 +2,9 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 hidefromtoc: true
-source-git-commit: 755e24ab8add432bf399e2674870d781f532302f
+source-git-commit: c8cb222cdba805652123df852410ffed8b047ceb
 workflow-type: tm+mt
-source-wordcount: '2396'
+source-wordcount: '2446'
 ht-degree: 0%
 
 ---
@@ -390,6 +390,20 @@ Du kan också återställa den lokala redigeringsmiljön med hjälp av ellipskna
 ![Återställ RDE från miljökort](/help/implementing/cloud-manager/assets/rde-reset-environments-card.png)
 
 Mer information om hur du använder Cloud Manager för att hantera dina miljöer finns i [Cloud Manager-dokumentationen.](/help/implementing/cloud-manager/manage-environments.md)
+
+## Runmodes {#runmodes}
+
+RDE-specifik OSGI-konfiguration kan användas med suffix i mappnamnet, som i exemplen nedan:
+
+* `config.rde`
+* `config.author.rde`
+* `config.publish.rde`
+
+Se [dokumentation för runmode](/help/implementing/deploying/overview.md#runmodes) för allmän information om körningslägen.
+
+>[!NOTE]
+>
+>RDE OSGI-konfigurationen är unik eftersom den ärver värdena för alla OSGI-egenskaper som deklarerats av paketets `dev` körningsläge.
 
 ## Loggning {#logging}
 
