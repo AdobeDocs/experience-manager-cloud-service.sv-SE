@@ -1,10 +1,11 @@
 ---
 title: Karusellbanner
 description: Lär dig hur du arbetar med Carousel Banners i Dynamic Media.
+contentOwner: Rick Brough
 feature: Carousel Banners
 role: User
 exl-id: 34541302-6610-4f5e-af93-c95328dda910
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
 workflow-type: tm+mt
 source-wordcount: '4449'
 ht-degree: 1%

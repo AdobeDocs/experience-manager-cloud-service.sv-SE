@@ -1,10 +1,11 @@
 ---
 title: Hantera förinställningar för visningsprogram
 description: Lär dig hur du skapar och hanterar visningsförinställningar i Dynamic Media.
+contentOwner: Rick Brough
 feature: Viewer Presets,Viewers
 role: User
 exl-id: da2e1a10-f54b-440e-b70c-f04ad4caeac1
-source-git-commit: 1b9864c4532d15068b6edbd187a78a0ee0fdcfb4
+source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
 workflow-type: tm+mt
 source-wordcount: '4084'
 ht-degree: 8%
@@ -69,7 +70,7 @@ Alla färdiga visningsförinställningar som medföljer Dynamic Media är helt k
 * Android™ Smartphone
 * Android™ Tablet PC
 
-<!-- OUTDATED 2/25/22 * For video, extra support for MP4 playback is provided for [BlackBerry®](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) and [Windows® Phone](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs). -->
+<!-- OUTDATED 2/25/22 * For video, extra support for MP4 playback is provided for [BlackBerry&reg;](https://developer.blackberry.com/devzone/develop/supported_media/bb_media_support_at_a_glance.html#kba1328730952678) and [Windows&reg; Phone](https://docs.microsoft.com/en-us/windows/uwp/audio-video-camera/supported-codecs). -->
 
 ### Multimedietyper för visningsförinställningar {#rich-media-types-for-viewer-presets}
 

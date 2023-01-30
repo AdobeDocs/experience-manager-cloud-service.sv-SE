@@ -1,10 +1,11 @@
 ---
 title: Förhandsgranska resurser
 description: Lär dig hur du förhandsgranskar resurser i Dynamic Media.
+contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 3928798d-352a-42a8-a544-7104fc9b3cf1
-source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
+source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 1%

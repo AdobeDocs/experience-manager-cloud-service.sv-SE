@@ -1,9 +1,10 @@
 ---
 title: Arbeta med Dynamic Media
 description: Lär dig hur du använder Dynamic Media för att leverera mediefiler för webben, mobiler och sociala medier.
+contentOwner: Rick Brough
 role: Admin,User
 exl-id: 3ec3cb85-88ce-4277-a45c-30e52c75ed42
-source-git-commit: fa6de4e383b4de628938fce455f321911cad452c
+source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 5%
@@ -37,7 +38,7 @@ Dynamic Media har följande funktioner:
 * [Video](video.md)
 * [Leverera Dynamic Media Assets](delivering-dynamic-media-assets.md)
 * [Hantera resurser](managing-assets.md)
-* [Använda snabbvyer för att skapa anpassade popup-fönster®](custom-pop-ups.md)
+* [Använda snabbvyer för att skapa anpassade popup-fönster](custom-pop-ups.md)
 
 Se även [Konfigurera Dynamic Media](administering-dynamic-media.md).
 

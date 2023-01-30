@@ -1,7 +1,8 @@
 ---
 title: Arbeta med Dynamic Media
 description: Dynamic Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk
-source-git-commit: fa6de4e383b4de628938fce455f321911cad452c
+contentOwner: Rick Brough
+source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%

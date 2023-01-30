@@ -1,10 +1,11 @@
 ---
 title: Integrera Dynamic Media-visningsprogram med taggar från Adobe Analytics och Experience Platform
 description: Läs mer om Dynamic Media Viewer-tillägget för Experience Platform Tags och Dynamic Media Viewer 5.13. Det gör att kunder som använder Adobe Analytics- och plattformstaggar kan använda händelser och data som är specifika för Dynamic Media-visningsprogram i sina taggar för Experience Platform.
+contentOwner: Rick Brough
 feature: Asset Reports
 role: Admin,User
 exl-id: a71fef45-c9a4-4091-8af1-c3c173324b7a
-source-git-commit: 3060b6b411c3ce2f0b70e08628bccfece3e1fd49
+source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
 workflow-type: tm+mt
 source-wordcount: '6287'
 ht-degree: 8%
