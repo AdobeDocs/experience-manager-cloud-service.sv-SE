@@ -3,9 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: Distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
+source-git-commit: 8e9ff8f77ac4920f87adcba0258cfccb15f9a5b9
 workflow-type: tm+mt
-source-wordcount: '3346'
+source-wordcount: '3415'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Läs mer om OSGI-konfiguration på [Konfigurera OSGi för AEM as a Cloud Service
 
 I vissa fall kan det vara användbart att förbereda innehållsändringar i källkontrollen så att den kan distribueras av Cloud Manager när en miljö har uppdaterats. Det kan till exempel vara rimligt att skapa startvärden för vissa rotmappsstrukturer eller att göra ändringar i redigerbara mallar för att aktivera principer i de för komponenter som uppdaterades i programdistributionen.
 
-Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
+Det finns två strategier för att beskriva innehållet som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och poinit-satser.
 
 ### Innehållspaket som kan ändras {#mutable-content-packages}
 
@@ -143,7 +143,7 @@ Repoinit är att föredra för de här användningsområdena för innehållsänd
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Följ nedanstående procedur för att skapa repoinit-satser:
+Så här skapar du repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
@@ -171,6 +171,7 @@ above appears to be internal, to confirm with Brian -->
 >id="aemcloud_packagemanager"
 >title="Pakethanteraren - migrerar paket med ändringsbart innehåll"
 >abstract="Utforska användningen av pakethanteraren i användningsfall där ett innehållspaket ska installeras som en engångslösning, vilket inkluderar import av specifikt innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer och mycket mer."
+>abstract="Utforska användningen av pakethanteraren i användningsfall där ett innehållspaket ska installeras som en engångslösning, vilket inkluderar import av visst innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer med mera."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en#cloud-migration" text="Content Transfer Tool"
 
 I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. För dessa scenarier [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) kan användas i AEM as a Cloud Service miljöer.
@@ -281,11 +282,11 @@ Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att
 
 ## Runmodes {#runmodes}
 
-I befintliga AEM kan kunderna köra instanser med godtyckliga körningslägen och använda OSGI-konfiguration eller installera OSGI-paket för dessa specifika instanser. Körningslägen som är definierade inkluderar *service* (författare och publicera) och miljön (dev, stage, prod).
+I befintliga AEM kan kunderna köra instanser med godtyckliga körningslägen och använda OSGI-konfiguration eller installera OSGI-paket för dessa specifika instanser. Körningslägen som är definierade inkluderar *service* (författare och publicera) och miljön (rde, dev, stage, prod).
 
 AEM as a Cloud Service å andra sidan är mer övertygande om vilka körlägen som finns tillgängliga och hur OSGI-paket och OSGI-konfigurationer kan mappas till dem:
 
-* OSGI-konfigurationens körningslägen måste referera till dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa måste användas i denna särskilda ordning (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` som inte längre innehåller `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md).
+* OSGI-konfigurationens körningslägen måste referera till RDE, dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa måste användas i denna särskilda ordning (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` som inte längre innehåller `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md).
 * Körningslägena för OSGI-paket är begränsade till tjänsten (författare, publicera). OSGI-paket per körning ska installeras i innehållspaketet under antingen `install/author` eller `install/publish`.
 
 Precis som de befintliga AEM finns det inget sätt att använda körningslägen för att installera enbart innehåll för specifika miljöer eller tjänster. Om man ville skapa en egen utvecklarmiljö med data eller HTML som inte finns på scenen eller i produktionen, kunde man använda pakethanteraren.
@@ -295,13 +296,16 @@ De runmode-konfigurationer som stöds är:
 * **config** (*Standardvärdet gäller för alla AEM*)
 * **config.author** (*Gäller alla AEM Author-tjänster*)
 * **config.author.dev** (*Gäller för AEM Dev Author Service*)
+* **config.author.rde** (*Gäller AEM RDE Author Service*)
 * **config.author.stage** (*Gäller för AEM mellanlagringsförfattartjänst*)
 * **config.author.prod** (*Gäller för tjänsten AEM Production Author*)
 * **config.publish** (*Gäller AEM Publish Service*)
 * **config.publish.dev** (*Gäller för AEM Dev Publish Service*)
+* **config.publish.rde** (*Gäller AEM RDE-publiceringstjänsten*)
 * **config.publish.stage** (*Gäller för AEM mellanlagringspubliceringstjänst*)
 * **config.publish.prod** (*Gäller AEM produktionspubliceringstjänst*)
 * **config.dev** (*Gäller för AEM Dev-tjänster*)
+* **config.rde** (*Gäller RDE-tjänster*)
 * **config.stage** (*Gäller för AEM mellanlagringstjänster*)
 * **config.prod** (*Gäller AEM produktionstjänster*)
 
