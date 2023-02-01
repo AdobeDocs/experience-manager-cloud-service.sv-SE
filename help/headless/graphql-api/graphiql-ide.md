@@ -3,16 +3,16 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: 377747d6bbb945b1de9cf1fdcbabc077babd7aa9
+source-git-commit: 6e6bdc539f07fd15649a4f99d491f0486a511bdc
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
 
 # Använda GraphiQL IDE {#graphiql-ide}
 
-En implementering av standarden [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE finns för användning med GraphQL API för Adobe Experience Manager (AEM) as a Cloud Service.
+En implementering av standarden [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE kan användas med GraphQL API för Adobe Experience Manager (AEM) as a Cloud Service.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ En implementering av standarden [GraphiQL](https://graphql.org/learn/serving-ove
 >Du måste ha [konfigurerade dina slutpunkter](/help/headless/graphql-api/graphql-endpoint.md) i [konfigurationsläsare](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md) innan du använder GraphiQL IDE.
 
 
-The **GraphiQL** kan du testa och felsöka GraphQL-frågor genom att aktivera:
+The **GraphiQL** kan du testa och felsöka dina GraphQL-frågor genom att aktivera:
 * välj **Slutpunkt** lämplig för platskonfigurationen som du vill använda för dina frågor
 * direkt mata in nya frågor
 * skapa och få tillgång till **[Beständiga frågor](/help/headless/graphql-api/persisted-queries.md)**
@@ -94,13 +94,19 @@ Med GraphiQL IDE kan du också hantera [Frågevariabler](/help/headless/graphql-
 
 Till exempel:
 
-![GraphQL-variabler](assets/cfm-graphqlapi-03.png "GraphQL-variabler")
+![GraphQL Variables](assets/cfm-graphqlapi-03.png "GraphQL Variables")
 
 ## Hantera cache för dina beständiga frågor {#managing-cache}
 
 [Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) rekommenderas eftersom de kan cachelagras på dispatcher- och CDN-lagren, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Som standard blir cacheminnet för innehållsleveransnätverket (CDN) ogiltigt baserat på en TTL-standardinställning (Time To Live).
 
-Med GraphQL kan du konfigurera HTTP-cache-rubrikerna för att styra de här parametrarna för din individuella beständiga fråga.
+>[!NOTE]
+>
+>Anpassade omskrivningsregler för Dispatcher kan åsidosätta standardvärden från AEM publicering.
+>
+>Om du skickar TTL-baserade headers för cachekontroll från dispatchern, baserat på ett matchningsmönster för plats, kan du vid behov utelämna `/graphql/execute.json/*` från matcherna.
+
+Med GraphQL kan du konfigurera HTTP-cache-rubrikerna för att styra de här parametrarna för din enskilda beständiga fråga.
 
 1. The **Sidhuvuden** är tillgängligt via de tre lodräta prickarna till höger om det beständiga frågenamnet (längst till vänster):
 
