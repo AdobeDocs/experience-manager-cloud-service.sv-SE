@@ -2,9 +2,9 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 hidefromtoc: true
-source-git-commit: 966644ae0027264f25a3aaf3b2f777fb3e97c556
+source-git-commit: ca6e0fa5a4f34c84a523821a6615f4c70e457fcf
 workflow-type: tm+mt
-source-wordcount: '2446'
+source-wordcount: '2476'
 ht-degree: 0%
 
 ---
@@ -202,6 +202,8 @@ Svaret för en lyckad distribution liknar följande:
 Du kan även referera till en fjärrdatabas:
 
 `aio aem:rde:install 'https://repo1.maven.org/maven2/com/adobe/aem/guides/aem-guides-wknd.all/2.1.0/aem-guides-wknd.all-2.1.0.zip'`
+
+Som standard distribueras artefakter till både författar- och publiceringsnivåer, men flaggan&quot;-s&quot; kan användas för att ange ett specifikt skikt som mål.
 
 <u>Distribuera en OSGI-konfiguration</u>
 
@@ -415,9 +417,10 @@ Loggnivåer kan ställas in genom att ändra OSGi-konfigurationer. Kontrollera [
 
 Därför rekommenderar vi att du distribuerar koden till en Cloud Development Environment via icke-produktionsflödet när du har validerat koden i en RDE-miljö. Testa slutligen koden innan du distribuerar med produktionsflödet.
 
-Observera även följande lösningsspecifika överväganden:
+Observera även följande:
 
 * De lokala lagringsenheterna har för närvarande inte stöd för visning och felsökning av frontkod som distribuerats med molnhanteraren Front-End Pipeline.
+* De lokala redigeringssystemen stöder för närvarande inte prerelease-kanalen.
 
 
 ## Hur många skrivbord behöver jag? {#how-many-rds-do-i-need}
