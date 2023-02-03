@@ -8,9 +8,9 @@ user-guide-description: Läs om hur Experience Manager as a Cloud Service funger
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 592810c45c89d569644263c01b843d51761ebe8d
+source-git-commit: edb6e23341289308837509eef444a8642b903bb7
 workflow-type: tm+mt
-source-wordcount: '3849'
+source-wordcount: '3857'
 ht-degree: 21%
 
 ---
@@ -66,6 +66,8 @@ ht-degree: 21%
          + [Versionsinformation för 2020.4.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-4-0.md)
          + [Versionsinformation för 2020.3.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-3-0.md)
          + [Versionsinformation för 2020.2.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-2-0.md)
+   + Maintenance AEMaaCS versionsinformation {#maintenance}
+      + [Senaste underhållsinformation](/help/release-notes/maintenance/latest.md)
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md)
       + 2022 {#2022}
@@ -663,7 +665,7 @@ ht-degree: 21%
       + [Content Fragment Model](/help/headless/setup/create-content-model.md)
       + [Resursmapp](/help/headless/setup/create-assets-folder.md)
       + [Innehållsfragment](/help/headless/setup/create-content-fragment.md)
-      + [GraphQL-slutpunkt](/help/headless/setup/create-api-request.md)
+      + [GraphQL Endpoint](/help/headless/setup/create-api-request.md)
    + Innehållsfragment {#content-fragments}
       + [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments.html)
       + [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html)
@@ -681,7 +683,7 @@ ht-degree: 21%
       + [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md)
       + [Hantera GraphQL-slutpunkter](/help/headless/graphql-api/graphql-endpoint.md)
       + [GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md)
-      + [Exempelfrågor för GraphQL](/help/headless/graphql-api/sample-queries.md)
+      + [Exempel på GraphQL-frågor](/help/headless/graphql-api/sample-queries.md)
       + [Beständiga GraphQL-frågor](/help/headless/graphql-api/persisted-queries.md)
    + [Innehållsfragment REST API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
    + Dokumentskydd {#security}
