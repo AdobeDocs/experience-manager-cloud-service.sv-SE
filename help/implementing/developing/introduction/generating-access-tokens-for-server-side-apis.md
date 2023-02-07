@@ -2,18 +2,14 @@
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM as a Cloud Service genom att generera en säker JWT-token
 exl-id: 20deaf8f-328e-4cbf-ac68-0a6dd4ebf0c9
-source-git-commit: 41458eb1fba12e8ef45a32d3bb6fc5dd732f78ec
+source-git-commit: 9f7157be1a9e7b635b9c7d0f0c653646e6f1b43b
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2132'
 ht-degree: 0%
 
 ---
 
 # Genererar åtkomsttoken för API:er på serversidan {#generating-access-tokens-for-server-side-apis}
-
->[!AVAILABILITY]
->
->Adobe håller på att gradvis lansera de nya spärrfunktionerna för flera autentiseringsuppgifter och autentiseringsuppgifter som beskrivs i den här artikeln. Om du, när du kontrollerar integreringsfliken i din organisations AEM utvecklarkonsol, märker att skärmen ser annorlunda ut än skärmbilderna nedan betyder det att de nya ändringarna ännu inte har introducerats i din organisation. Om så är fallet, se [äldre dokumentation](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis-legacy.md).
 
 Vissa arkitekturer förlitar sig på att ringa för att AEM as a Cloud Service från ett program som finns på en server utanför AEM infrastruktur. Ett mobilprogram som anropar en server, som sedan gör API-begäranden till AEM as a Cloud Service.
 
