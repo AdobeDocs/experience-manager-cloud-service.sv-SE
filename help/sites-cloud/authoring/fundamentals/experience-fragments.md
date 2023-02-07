@@ -2,14 +2,14 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: ccf5cdf56867ca077d7ff71bfb2f1f4af1b32bd9
+source-git-commit: 6d7bef4a2d11adc54e148146d79aa77c9de1d7e7
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '2064'
 ht-degree: 5%
 
 ---
 
-# Upplevelsefragment {#experience-fragments}
+# Experience Fragments {#experience-fragments}
 
 Inom Adobe Experience Manager as a Cloud Service, en Experience Fragment:
 
@@ -38,6 +38,16 @@ Utan Experience Fragments måste författaren kopiera och klistra in det fragmen
 Upplevelsefragment eliminerar behovet av att kopiera/klistra in.
 * För att stödja headless CMS-fallstudier.
 Författare vill bara använda AEM för att skapa, men inte för att leverera till kunden. Ett system/kontaktyta från tredje part skulle förbruka upplevelsen och sedan leverera till slutanvändaren.
+
+>[!NOTE]
+>
+>**[Innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)** och **Upplevelsefragment** har olika funktioner i AEM:
+>* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att få tillgång till strukturerade data, bland annat texter, siffror och datum.
+>* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
+>
+>Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
+>
+>Mer information finns även i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!NOTE]
 >
