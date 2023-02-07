@@ -2,9 +2,9 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 6d7bef4a2d11adc54e148146d79aa77c9de1d7e7
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1200'
 ht-degree: 3%
 
 ---
@@ -20,11 +20,12 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 >[!NOTE]
 >
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** har olika funktioner i AEM:
->
->* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
->* **Upplevelsefragment** är helt utformat för innehåll och därmed delar av en webbsida.
+>* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att få tillgång till strukturerade data, bland annat texter, siffror och datum.
+>* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
+>
+>Mer information finns även i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!CAUTION]
 >
