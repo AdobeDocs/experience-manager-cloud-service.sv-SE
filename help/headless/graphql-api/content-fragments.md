@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 24dda46f8a3ac5179ae3bc95fba38c5d1f0660ca
+source-git-commit: 17b0604cb192a375c3097255812c89caa8580d5b
 workflow-type: tm+mt
-source-wordcount: '4174'
+source-wordcount: '4173'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,8 @@ Genom att använda GraphQL API i AEM kan du effektivt leverera innehållsfragmen
 >
 >GraphQL används för närvarande i två (separata) scenarier i Adobe Experience Manager (AEM) as a Cloud Service:
 >
->* [AEM Commerce använder data från en handelsplattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
->* AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard GraphQL) för att leverera strukturerat innehåll som kan användas i dina program.
+>* [AEM Commerce använder data från en Commerce-plattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
+>* AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard-GraphQL) för att leverera strukturerat innehåll som kan användas i dina program.
 
 
 ## GraphQL API {#graphql-api}
@@ -39,7 +39,7 @@ GraphQL är:
 
    Se [GraphQL.org](https://graphql.org)
 
-* &quot;*...en öppen specifikation för ett flexibelt API-lager. Flytta GraphQL över dina befintliga bakgrunder för att skapa produkter snabbare än någonsin....*&quot;.
+* &quot;*...en öppen specifikation för ett flexibelt API-lager. Placera GraphQL över era befintliga bakgrunder för att skapa produkter snabbare än någonsin ....*&quot;.
 
    Se [Utforska GraphQL](https://www.graphql.com).
 
@@ -63,7 +63,7 @@ Mer information om GraphQL API finns i följande avsnitt (bland annat på engels
 
    * [Stödlinjer](https://www.graphql.com/guides/)
 
-   * [Tutorials](https://www.graphql.com/tutorials/)
+   * [Självstudiekurser](https://www.graphql.com/tutorials/)
 
    * [Fallstudier](https://www.graphql.com/case-studies/)
 
@@ -86,10 +86,10 @@ GraphQL använder följande:
 
 * **[Fält](https://graphql.org/learn/queries/#fields)**
 
-* **[GraphQL-slutpunkt](graphql-endpoint.md)**
+* **[GraphQL Endpoint](graphql-endpoint.md)**
    * Sökvägen i AEM som svarar på GraphQL-frågor och ger åtkomst till GraphQL-scheman.
 
-   * Se [Aktivera GraphQL-slutpunkten](graphql-endpoint.md) för mer information.
+   * Se [Aktivera din GraphQL-slutpunkt](graphql-endpoint.md) för mer information.
 
 Se [(GraphQL.org) Introduktion till GraphQL](https://graphql.org/learn/) för utförlig information, inklusive [Bästa praxis](https://graphql.org/learn/best-practices/).
 
@@ -183,7 +183,7 @@ Om en användare till exempel har skapat en innehållsfragmentmodell som kallas 
 
    * De andra fälten lades till automatiskt av AEM och representerar användbara metoder för att tillhandahålla information om ett visst innehållsfragment. i det här exemplet [hjälpfält](#helper-fields)) `_path`, `_metadata`, `_variations`.
 
-1. När en användare har skapat ett innehållsfragment baserat på artikelmodellen kan det sedan förfrågas via GraphQL. Mer information finns i [Exempelfrågor](/help/headless/graphql-api/sample-queries.md#graphql-sample-queries) (baserat på [exempelstruktur för innehållsfragment för användning med GraphQL](/help/headless/graphql-api/sample-queries.md#content-fragment-structure-graphql)).
+1. När en användare har skapat ett innehållsfragment baserat på artikelmodellen kan det sedan förhöras via GraphQL. Mer information finns i [Exempelfrågor](/help/headless/graphql-api/sample-queries.md#graphql-sample-queries) (baserat på [exempelstruktur för innehållsfragment för användning med GraphQL](/help/headless/graphql-api/sample-queries.md#content-fragment-structure-graphql)).
 
 I GraphQL for AEM är schemat flexibelt. Det innebär att den genereras automatiskt varje gång en innehållsfragmentmodell skapas, uppdateras eller tas bort. Cacheminnen för dataschemat uppdateras också när du uppdaterar en innehållsfragmentmodell.
 
@@ -239,13 +239,13 @@ Inom schemat finns det enskilda fält av två baskategorier:
 
 GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-datatyper som stöds och motsvarande GraphQL-typer visas:
 
-| Content Fragment Model - datatyp | GraphQL-typ | Beskrivning |
+| Content Fragment Model - datatyp | GraphQL Type | Beskrivning |
 |--- |--- |--- |
 | Enkelradig text | String, [Sträng] | Används för enkla strängar som författarnamn, platsnamn osv. |
 | Flerradstext | String, [Sträng] | Används för att skriva ut text, t.ex. brödtexten i en artikel |
 | Siffra | Float, [Float] | Används för att visa flyttal och reguljära tal |
 | Boolesk | Boolesk | Används för att visa kryssrutor → enkla sant/falskt-satser |
-| Datum och tid | Kalender | Används för att visa datum och tid i ett ISO 8601-format. Beroende på vilken typ som valts finns det tre olika varianter att använda i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
+| Datum och tid | Kalender | Används för att visa datum och tid i ett ISO 8601-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
 | Uppräkning | Sträng | Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
 | Taggar | [Sträng] | Används för att visa en lista över strängar som representerar taggar som används i AEM |
 | Innehållsreferens | String, [Sträng] | Används för att visa sökvägen till en annan resurs i AEM |
@@ -371,7 +371,7 @@ Se [Exempelfråga - Alla städer med en namngiven variant](/help/headless/graphq
 ## Security Considerations {#security-considerations}
 -->
 
-## GraphQL-variabler {#graphql-variables}
+## GraphQL Variables {#graphql-variables}
 
 GraphQL tillåter att variabler placeras i frågan. Mer information finns i [GraphQL-dokumentation för variabler](https://graphql.org/learn/queries/#variables).
 
@@ -454,7 +454,7 @@ query GetAdventureByType($includePrice: Boolean!) {
 
 ## Filtrering {#filtering}
 
-Du kan också använda filtrering i GraphQL-frågor för att returnera specifika data.
+Du kan också använda filtrering i dina GraphQL-frågor för att returnera specifika data.
 
 Vid filtrering används en syntax som baseras på logiska operatorer och uttryck.
 
@@ -470,8 +470,6 @@ Ta t ex följande uttryck
 ```
 
 skulle jämföra innehållet i fältet med värdet `some text` och lyckas om innehållet är lika med värdet. Annars misslyckas uttrycket.
-
-The
 
 Följande operatorer kan användas för att jämföra fält med ett visst värde:
 
@@ -701,7 +699,7 @@ query {
 
 ## GraphQL for AEM - i korthet {#graphql-extensions}
 
-Den grundläggande åtgärden för frågor med GraphQL för AEM följer standarden GraphQL-specifikation. För GraphQL-frågor med AEM finns det några tillägg:
+Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL standardspecifikation. För GraphQL-frågor med AEM finns det några tillägg:
 
 * Om du förväntar dig en resultatlista:
    * add `List` till modellnamnet, till exempel  `cityList`
@@ -794,7 +792,7 @@ Om du vill komma åt GraphQL-slutpunkten från en extern webbplats måste du kon
 
 ## Autentisering {#authentication}
 
-Se [Autentisering för AEM GraphQL-frågor om innehållsfragment](/help/headless/security/authentication.md).
+Se [Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](/help/headless/security/authentication.md).
 
 ## Vanliga frågor {#faqs}
 
@@ -803,8 +801,8 @@ Frågor som har uppstått:
 1. **Q**: &quot;*Hur skiljer sig GraphQL API för AEM från Query Builder API?*&quot;
 
    * **A**: &quot;*AEM GraphQL API ger total kontroll över JSON-utdata och är en branschstandard för att fråga efter innehåll.
-AEM planerar att investera i det AEM GraphQL-API:t.*&quot;
+AEM planerar att investera i det AEM GraphQL API:t.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Checka ut [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Checka ut [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) en komplett självstudiekurs som visar hur man bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app, i ett headless CMS-scenario.
