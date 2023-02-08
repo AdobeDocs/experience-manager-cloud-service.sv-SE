@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: Cache i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 762c30f83a15aba24b56a8d4a6059b371b87aae2
+source-git-commit: b0db2224e3dd7af01bf61fe29e8e24793ab33c5b
 workflow-type: tm+mt
-source-wordcount: '2833'
+source-wordcount: '2832'
 ht-degree: 1%
 
 ---
@@ -72,7 +72,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
      </LocationMatch>
    ```
 
-* HTML-innehåll som är inställt på private cachelagras inte vid CDN, men det kan cachas vid dispatchern om [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html) är konfigurerad och säkerställer att endast behöriga användare kan få tillgång till innehållet.
+* HTML-innehåll som är inställt på private cachelagras inte vid CDN, men det kan cachas vid dispatchern om [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html) är konfigurerat så att endast behöriga användare kan hanteras av innehållet.
 
    >[!NOTE]
    >Andra metoder, inklusive [AEM ACS Commons-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), kommer inte att åsidosätta värdena.
