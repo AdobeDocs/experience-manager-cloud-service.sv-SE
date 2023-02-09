@@ -1,10 +1,9 @@
 ---
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
-hidefromtoc: true
-source-git-commit: 10d74413ece591de52b7dbebd59191cace81e238
+source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2903'
 ht-degree: 0%
 
 ---
@@ -450,3 +449,20 @@ Hur många skrivbord som behövs beror på en organisations sammansättning och 
 Å andra sidan kan ett team med en enda RDE använda interna processer för att samordna vilken utvecklare som kan använda miljön vid en viss tidpunkt. Detta kan vara möjligt när en utvecklare har nått en milstolpe för mellanliggande funktioner och är redo att validera i en molnmiljö där de snabbt kan göra de ändringar de behöver.
 
 En mellanliggande modell är en modell där en organisation köper ett antal olika lagringssystem, vilket innebär att det är större sannolikhet att det finns en oanvänd lagringsmodell tillgänglig. En strategi kan vara att tilldela en RDE per team eller större funktion. Interna processer kan användas för att samordna användningen av miljöerna.
+
+## Hur skiljer sig en AEM Forms Cloud Service Rapid Development Environment (RDE) från andra miljöer? {#how-are-forms-rds-different-from-cloud-development-environments}
+
+Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environment för att snabbt utveckla adaptiva Forms, arbetsflöden och anpassningar som att anpassa kärnkomponenter, integreringar med tredjepartssystem med mera. AEM Forms Cloud Service Rapid Development Environment (RDE) saknar stöd för funktioner som kräver Document of Record, som att generera ett dokument om ett adaptivt formulär skickas. Funktionerna nedan använder arkivhandlingar. Dessa finns inte för en snabb utvecklingsmiljö (RDE):
+
+* Konfigurera ett postdokument för ett adaptivt formulär
+* Generera ett registreringsdokument när ett adaptivt formulär skickas eller när ett arbetsflödessteg tas
+* Skicka postdokument som en bifogad fil med åtgärden Skicka via e-post eller med steget E-post i ett arbetsflöde
+* Använda Adobe Sign i ett adaptivt formulär eller i ett arbetsflödessteg
+* Kommunikations-API:er
+
+Du får felmeddelanden om hur du använder en funktion som kräver ett dokument med poster.
+
+>[!NOTE]
+>
+> Gränssnittet i Rapid Development Environment (RDE) och andra Cloud Service för Forms förändras inte. Alla alternativ som är relaterade till Dokumentformat, som att välja ett dokument med en postmall för ett anpassat formulär, fortsätter att visas i användargränssnittet. De här miljöerna har inga funktioner för dokumentarkivering för att testa sådana alternativ. När du väljer ett dokumentalternativ utförs ingen åtgärd och ett felmeddelande visas eller returneras.
+

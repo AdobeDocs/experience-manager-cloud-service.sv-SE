@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Reports,Asset Management
 role: Admin,User
 exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: ede33e43bdfd4b6aa4670fe74c2133a7a3b54b75
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '841'
 ht-degree: 6%
 
 ---
@@ -29,6 +29,7 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 [!DNL Experience Manager Assets] genererar följande standardrapporter:
 
 * Överför
+* Hämta
 * Förfaller
 * Ändring
 * Publicera
@@ -60,7 +61,7 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
 
    ![Välj rapporttyp](assets/choose_report.png)
 
-1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg i CRX-databasen där rapporten lagras. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg.
+1. Konfigurera rapportinformation som titel, beskrivning, miniatyrbild och mappsökväg. Som standard är mappsökvägen `/content/dam`. Du kan ange en annan sökväg för att köra rapporten på en viss mapp.
 
    ![Sida för att lägga till rapportinformation](assets/report_configuration.png)
 
@@ -104,6 +105,10 @@ När en rapport skapas meddelas du via <!-- through an email (optional) and --> 
    ![En genererad rapport](assets/report_page.png)
 
    Klicka **[!UICONTROL Download]** i verktygsfältet för att hämta rapporten i CSV-format.
+
+   >[!NOTE]
+   >
+   >Du kan generera rapporter baserat på händelser som har genererats under de senaste 360 dagarna. Experience Manager behåller användar-ID-data i 30 dagar.
 
 ## Lägga till anpassade kolumner i rapporter {#add-custom-columns}
 

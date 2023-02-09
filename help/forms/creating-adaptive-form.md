@@ -5,17 +5,22 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 38ca5eea-793b-420b-ae60-3a0bd83caf00
-source-git-commit: 434071de17d6ff56ede561735f7214d96f98cfa0
+source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
 
-# Skapa ett adaptivt formulär {#creating-an-adaptive-form}
+# Skapa ett adaptivt formulär (grundkomponenter) {#creating-an-adaptive-form}
 
 
 Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. AEM Forms har en användarvänlig guide för att snabbt skapa Adaptive Forms. Guiden har en snabb fliknavigering där du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett adaptivt formulär.
+
+>[!NOTE]
+>
+> I den här artikeln beskrivs ett gammalt sätt att skapa ett adaptivt formulär. Information om hur du skapar adaptiva Forms utifrån den senaste metoden finns i [Skapa en adaptiv form (kärnkomponenter)](creating-adaptive-form.md).
+
 
 <!-- 
 
@@ -39,7 +44,7 @@ Adaptive Forms allow you to create forms that are engaging, responsive, dynamic,
    XML and JSON schemas represent the structure in which data is produced or consumed by the back-end system in your organization. You can associate the schema to an Adaptive Form and use its elements to add dynamic content to the Adaptive Form. The elements of the schema will be available for use in the Data Model Objects tab of the Content browser when authoring Adaptive Forms.
 
 * **Using none or without a form model**
-   Adaptive Forms created with this option don’t use any form model. The data XML generated from such forms has flat structure with fields and corresponding values. -->
+   Adaptive Forms created with this option don't use any form model. The data XML generated from such forms has flat structure with fields and corresponding values. -->
 
 ## Krav
 
@@ -54,6 +59,8 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 * **Behörigheter**: Lägg till dina användare i [!DNL forms-users] för att ge dem behörighet att skapa ett adaptivt formulär. En detaljerad lista över formulärspecifika användargrupper finns i [Grupper och behörigheter](forms-groups-privileges-tasks.md).
 
+## Skapa ett adaptivt formulär (grundkomponenter) {#create-an-adaptive-form-foundation-components}
+
 1. Åtkomst [!DNL Experience Manager Forms] Författarinstans. Det kan vara en molninstans eller en lokal utvecklingsinstans.
 
 1. Ange dina uppgifter på inloggningssidan för Experience Manager.
@@ -67,15 +74,19 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
       >[!NOTE]
       >
-      > Du kan också skapa [!UICONTROL Document of Record] mall med en Apadtive Form-redigerare. Mer information finns i [Dokumentstöd i anpassad formulärredigerare](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform).
+      > Du kan också skapa [!UICONTROL Document of Record] -mall med en adaptiv Forms-redigerare. Mer information finns i [Dokumentstöd i anpassad formulärredigerare](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform).
 
    * När du väljer en statisk mall är alternativen för data, format, sändning, leverans och förhandsgranskning inte tillgängliga. När du skapar ett nytt adaptivt formulär bör du använda en redigerbar mall.
 
-1. Välj ett tema på fliken Format:
+1. I **[!UICONTROL Style]** väljer du ett tema:
+
    * När den valda mallen anger ett tema väljs temat automatiskt i guiden. Du kan också välja ett annat tema på fliken Format.
    * Om den valda mallen inte anger något tema kan du använda fliken Format för att välja ett tema. The **[!UICONTROL Create]** knappen aktiveras först när ett tema har valts.
-1. (Valfritt) Välj en datamodell på fliken Data:
+
+1. (Valfritt) I dialogrutan **[!UICONTROL Data]** väljer du en datamodell:
+
    * **Formulärdatamodell**: A [Formulärdatamodell](data-integration.md) Med kan ni integrera enheter och tjänster från olika datakällor i ett adaptivt formulär. Välj Formulärdatamodell om det adaptiva formulär du skapar inbegriper att hämta och skriva data från och till flera datakällor.
+
    * **JSON-schema**: [JSON-schema](adaptive-form-json-schema-form-model.md) representerar den struktur i vilken data produceras eller används av det bakomliggande systemet i din organisation. Du kan koppla schemat till ett adaptivt formulär och använda dess element för att lägga till dynamiskt innehåll i det adaptiva formuläret. Elementen i schemat är tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar Adaptiv Forms och alla fält läggs även till i det nya adaptiva formuläret.
 
    Som standard markeras alla fält i datamodellen. När du skapar det adaptiva formuläret konverteras alla markerade datamodellfält till motsvarande adaptiva formulärkomponenter. Guiden innehåller kryssrutor som du kan använda för att markera endast de fält som ska ingå i det adaptiva formuläret.
@@ -86,7 +97,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
    
    -->
 
-1. Välj en sändningsåtgärd på fliken Skicka:
+1. I **[!UICONTROL Submission]** väljer du en Skicka-åtgärd:
 
    * När du väljer en mall markeras åtgärden Skicka som anges i mallen automatiskt. Du kan välja en annan skickaåtgärd på fliken Skicka. The **[!UICONTROL  Submission]** på -fliken visas alla tillgängliga skicka-åtgärder.
 
@@ -176,3 +187,7 @@ Du kan också ändra formulärmodellens egenskaper i den adaptiva formulärredig
 1. Tryck ![Spara](/help/forms/assets/check-button.png) för att spara egenskaperna.
 
 ![FDM-Schema-support](/help/forms/assets/fdmsupport.png)
+
+>[!NOTE]
+>
+> Du kan också spara ett tilläggsformulär som en mall. Mer information finns i [Skapa en mall med ett adaptivt formulär](/help/forms/template-editor.md#saving-an-adaptive-form-as-template-saving-adaptive-form-as-template).

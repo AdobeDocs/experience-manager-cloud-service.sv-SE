@@ -2,10 +2,10 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: 78c0ea75affc2d2f691ef983385b188b35c10120
+source-git-commit: fda4fdd3a28caa0a35014fbf4b0bbac8800e343c
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 31%
+ht-degree: 34%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 31%
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2022.10.0 |
+| Version | 2023.1.0 |
 | Typ | Kontinuerliga uppdateringar |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 
@@ -21,8 +21,8 @@ ht-degree: 31%
 
 Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager] as a Cloud Service uppdateras programmet automatiskt fortlöpande. Det finns två typer av uppdateringar, funktionsreleaser och underhållsreleaser:
 
-* Funktionsreleaser görs med en förutsägbar månadsfrekvens och fokuserar på nya funktioner och produktinnovationer.
-* Underhållsreleaser görs ofta och fokuserar på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta säkerställer att [!DNL Adobe Experience Manager] as a Cloud Service är alltid uppdaterad med alla viktiga korrigeringar.
+* [Funktioner](/help/release-notes/release-notes-cloud/release-notes-current.md) görs med en förutsägbar månadsfrekvens och fokuserar på nya funktioner och produktinnovationer.
+* [Underhållsreleaser](/help/release-notes/maintenance/latest.md) görs ofta och fokuseras på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta säkerställer att [!DNL Adobe Experience Manager] as a Cloud Service är alltid uppdaterad med alla viktiga korrigeringar.
 
 Förutom innovationshastigheten [!DNL Adobe Experience Manager] as a Cloud Service ger också möjlighet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna långt i förväg.
 

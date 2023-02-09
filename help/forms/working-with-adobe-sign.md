@@ -6,21 +6,15 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2903'
 ht-degree: 0%
 
 ---
 
 
 # Använda [!DNL Adobe Sign] i adaptiv form {#using-adobe-sign-in-an-adaptive-form}
-
-
->[!NOTE]
->
->Funktionen för att använda Adobe Sign-roller i ett adaptivt formulär finns i Prerelease Channel i augusti 2021. Funktionen kommer att vara allmänt tillgänglig i versionen från september 2021.
-
 
 [!DNL Adobe Sign] möjliggör e-signaturarbetsflöden för Adaptive Forms. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och andra områden.
 

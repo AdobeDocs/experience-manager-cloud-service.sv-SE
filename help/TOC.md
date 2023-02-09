@@ -4,13 +4,13 @@ product: Adobe Experience Manager
 sub-product: Adobe Experience Manager as a Cloud Service
 solution-title: Experience Cloud
 feature: Release Information
-user-guide-description: Läs om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
+user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: edb6e23341289308837509eef444a8642b903bb7
+source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
 workflow-type: tm+mt
-source-wordcount: '3857'
+source-wordcount: '3918'
 ht-degree: 21%
 
 ---
@@ -32,9 +32,10 @@ ht-degree: 21%
    + [Dokumentationsresor](/help/journey-documentation/documentation-journeys.md)
 + Versionsinformation {#release-notes}
    + [Versionsinformation](/help/release-notes/home.md)
-   + Allmän information om AEMaaCS {#release-notes}
+   + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2022 {#2022}
+         + [Versionsinformation för 2022.10.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-10-0.md)
          + [Versionsinformation för 2022.8.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-8-0.md)
          + [Versionsinformation för 2022.7.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-7-0.md)
          + [Versionsinformation för 2022.6.0](/help/release-notes/release-notes-cloud/2022/release-notes-2022-6-0.md)
@@ -66,7 +67,7 @@ ht-degree: 21%
          + [Versionsinformation för 2020.4.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-4-0.md)
          + [Versionsinformation för 2020.3.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-3-0.md)
          + [Versionsinformation för 2020.2.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-2-0.md)
-   + Maintenance AEMaaCS versionsinformation {#maintenance}
+   + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Senaste underhållsinformation](/help/release-notes/maintenance/latest.md)
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md)
@@ -496,91 +497,101 @@ ht-degree: 21%
       + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
       + [Uppdatera [!DNL Workfront for Experience Manager enhanced connector]](/help/assets/update-workfront-enhanced-connector.md)
 + Forms {#forms}
-   + [Introduktion](/help/forms/home.md)
-   + [Viktiga funktioner](/help/forms/key-features.md)
-   + [Betydande ändringar](/help/forms/notable-changes.md)
-   + [Arkitektur](/help/forms/aem-forms-cloud-service-architecture.md)
-   + Konfigurera och konfigurera tjänsten {#setup-environment}
+   + Översikt {#forms-overview}
+      + [Introduktion](/help/forms/home.md)
+      + [Viktiga funktioner](/help/forms/key-features.md)
+      + [Betydande ändringar](/help/forms/notable-changes.md)
+      + [Arkitektur](/help/forms/aem-forms-cloud-service-architecture.md)
+      + [Vanliga frågor](/help/forms/faq.md)
+      + [Kända fel](/help/forms/known-issues.md)
+   + Inställningar {#setup-environment}
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
       + [Installera och konfigurera Forms Designer](/help/forms/installing-configuring-designer.md)
       + [Konfigurera anslutning för enhetlig lagring](/help/forms/configure-unified-storage-connector.md)
-   + Hantera användargrupper, formulär och relaterade resurser {#manage-forms-and-related-assets}
+   + Migrerar {#setup-environment}
+      + [Migrera till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
+   + Administratör {#administering}
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
-   + Konvertera PDF forms till adaptiv Forms {#afcs}
-      + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)
-      + [Konvertera ett befintligt PDF-formulär till ett anpassat formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)
-      + [Granska och korrigera konverterade formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/review-correct-ui-edited.html#welcome-to-review-and-correct-editor)
-   + Skapa och publicera ett adaptivt formulär {#create-an-adaptive-form}
-      + Innan du startar {#before-you-start}
-         + [Introduktion till framtagning av en adaptiv Forms](/help/forms/introduction-forms-authoring.md)
-         + [Skapa en mall](/help/forms/template-editor.md)
-         + [Skapa ett tema](/help/forms/themes.md)
-         + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
-         + [Referensresurser](/help/forms/reference-assets.md)
-      + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
-         + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
-         + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
-         + [Använd Forms Designer](/help/forms/use-forms-designer.md)
-         + [Förbättra prestanda för stora formulär med lat inläsningsverktyg](/help/forms/lazy-loading-adaptive-forms.md)
-      + Lägga till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
-         + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
-         + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-         + [Använd klottrar signatur](/help/forms/signing-forms-using-scribble.md)
-         + [Stöd för språklokalisering](/help/forms/supporting-new-language-localization.md)
-         + [Lägga till en tabell i ett anpassat formulär](/help/forms/adaptive-forms-tables.md)
-      + Konfigurera layout och tillämpa format på ett anpassat formulär{#configure-layout-of-an-adaptive-form}
-         + [Ange layout för ett adaptivt formulär](/help/forms/layout-capabilities-adaptive-forms.md)
-         + [Använd layoutläget för att ändra storlek på komponenter](/help/forms/resize-using-layout-mode.md)
-         + [Skapa datainhämtning i flera steg](/help/forms/introduction-form-sequence.md)
-         + [Använda infogade CSS-format på enskilda adaptiva formulärkomponenter](/help/forms/inline-style-adaptive-forms.md)
-      + Lägga till regler och använda uttryck i ett adaptivt formulär {#add-rules-and-use-expressions-in-an-adaptive-form}
-         + [Lägga till regler i ett adaptivt formulär](/help/forms/rule-editor.md)
-      + Använd [!DNL Adobe Sign] {#use-adobe-sign}
-         + [Använd Adobe Sign för att e-signera ett adaptivt formulär](/help/forms/working-with-adobe-sign.md)
-      + Konfigurera Skicka-åtgärder och metadataöverföring {#configure-submit-actions-and-metadata-submission}
-         + [Ange åtgärden Skicka för ett anpassat formulär](/help/forms/configuring-submit-actions.md)
-         + [Konfigurera omdirigeringssida](/help/forms/configuring-redirect-page.md)
-         + [Konfigurera asynkron sändning för ett adaptivt formulär](/help/forms/asynchronous-submissions-adaptive-forms.md)
-         + [Skapa en anpassad skickaåtgärd](/help/forms/custom-submit-action-form.md)
-      + [Förifyll adaptiva formulärfält](/help/forms/prepopulate-adaptive-form-fields.md)
-      + [Generera postdokument](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
-      + Lägga till eller förbättra metadata {#manage-metadata}
-         + [Lägga till, ta bort eller redigera metadata i ett anpassat formulär](/help/forms/manage-form-metadata.md)
-         + [Återanvända metadataegenskaper i ett adaptivt formulär](/help/forms/reusing-adaptive-forms.md)
-      + Förbättra tillgängligheten för ett adaptivt formulär {#accessible-adaptive-forms}
-         + [Skapa ett tillgängligt adaptivt formulär](/help/forms/creating-accessible-adaptive-forms.md)
-      + [Konfigurera Forms Portal](/help/forms/configure-forms-portal.md)
    + Integrera {#integrate}
-      + Integrera ett formulär med en eller flera datakällor {#use-form-data-model}
+      + [Integrera AEM Forms as a Cloud Service med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
+      + [Integrera AEM Forms as a Cloud Service med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
+      + [Integrera AEM Forms as a Cloud Service med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
+      + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
+      + [Bädda in en adaptiv Forms på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
+   + Adaptiv Forms {#adaptive-forms-authoring}
+      + Skapa adaptiv Forms - kärnkomponenter {#authoring-adaptive-forms-core-components}
+         + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
+            + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
+            + [Skapa teman för ett adaptivt formulär - kärnkomponenter](/help/forms/using-themes-in-core-components.md)
+            + [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-core-components.md)
+      + Skapa adaptiv Forms - grundkomponenter {#authoring-adaptive-forms-foundation-components}
+         + Konvertera PDF forms till Adaptiv Forms {#afcs}
+            + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)
+            + [Konvertera ett befintligt PDF-formulär till ett anpassat formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)
+            + [Granska och korrigera konverterade formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/review-correct-ui-edited.html#welcome-to-review-and-correct-editor)
+         + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
+            + [Introduktion till framtagning av en adaptiv Forms](/help/forms/introduction-forms-authoring.md)
+            + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
+            + [Skapa en mall](/help/forms/template-editor.md)
+            + [Skapa ett tema](/help/forms/themes.md)
+            + [Referensresurser](/help/forms/reference-assets.md)
+            + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
+            + [Använd Forms Designer](/help/forms/use-forms-designer.md)
+            + [Förbättra prestanda för stora formulär med lat inläsningsverktyg](/help/forms/lazy-loading-adaptive-forms.md)
+         + Lägga till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
+            + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
+            + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+            + [Använd klottrar signatur](/help/forms/signing-forms-using-scribble.md)
+            + [Lägga till en tabell i ett anpassat formulär](/help/forms/adaptive-forms-tables.md)
+            + [Stöd för att lägga till fotnoter i ett anpassat formulär](/help/forms/footnotes-richtextsupport.md)
+         + Konfigurera layout och tillämpa format på ett anpassat formulär{#configure-layout-of-an-adaptive-form}
+            + [Ange layout för ett adaptivt formulär](/help/forms/layout-capabilities-adaptive-forms.md)
+            + [Använd layoutläget för att ändra storlek på komponenter](/help/forms/resize-using-layout-mode.md)
+            + [Skapa datainhämtning i flera steg](/help/forms/introduction-form-sequence.md)
+            + [Använda infogade CSS-format på enskilda adaptiva formulärkomponenter](/help/forms/inline-style-adaptive-forms.md)
+         + Lägga till regler och använda uttryck i ett adaptivt formulär {#add-rules-and-use-expressions-in-an-adaptive-form}
+            + [Lägga till regler i ett adaptivt formulär](/help/forms/rule-editor.md)
+         + Använd [!DNL Adobe Sign] {#use-adobe-sign}
+            + [Använd Adobe Sign för att e-signera ett adaptivt formulär](/help/forms/working-with-adobe-sign.md)
+         + Konfigurera Skicka-åtgärder och metadataöverföring {#configure-submit-actions-and-metadata-submission}
+            + [Ange åtgärden Skicka för ett anpassat formulär](/help/forms/configuring-submit-actions.md)
+            + [Konfigurera omdirigeringssida](/help/forms/configuring-redirect-page.md)
+            + [Konfigurera asynkron sändning för ett adaptivt formulär](/help/forms/asynchronous-submissions-adaptive-forms.md)
+            + [Skapa en anpassad skickaåtgärd](/help/forms/custom-submit-action-form.md)
+         + [Förifyll adaptiva formulärfält](/help/forms/prepopulate-adaptive-form-fields.md)
+         + [Generera postdokument](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
+         + Lägga till eller förbättra metadata {#manage-metadata}
+            + [Lägga till, ta bort eller redigera metadata i ett anpassat formulär](/help/forms/manage-form-metadata.md)
+            + [Återanvända metadataegenskaper i ett adaptivt formulär](/help/forms/reusing-adaptive-forms.md)
+         + Förbättra tillgängligheten för ett adaptivt formulär {#accessible-adaptive-forms}
+            + [Skapa ett tillgängligt adaptivt formulär](/help/forms/creating-accessible-adaptive-forms.md)
+         + [Konfigurera Forms Portal](/help/forms/configure-forms-portal.md)
+      + Formulärdatamodell {#use-form-data-model}
+         + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
          + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
          + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
          + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
          + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
          + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
-      + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
-      + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
-      + [Integrera med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
-      + [Integrera med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
-      + [Integrera med webbplatser](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/aemform/v1/aemform)
-      + [Integrera med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
-      + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
-      + [Bädda in adaptiv Forms i AEM Sites](/help/forms/embed-adaptive-form-aem-sites.md)
-   + Skapa och använda arbetsflöden {#create-form-centric-workflows}
-      + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
-      + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
-      + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
-   + Använda kommunikation {#using-communications}
+         + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
+         + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
+      + Forms Centric Workflows {#create-form-centric-workflows}
+         + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
+         + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
+         + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
+   + Använda kommunikations-API:er {#using-communications}
       + [Introduktion till kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)
       + [Kommunikations-API:er - synkron bearbetning](/help/forms/aem-forms-cloud-service-communications.md)
       + [Kommunikations-API:er - gruppbearbetning](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
       + [Använda anpassade teckensnitt i PDF-dokument](/help/forms/use-custom-fonts.md)
       + [Kända fel, bästa praxis och vanliga frågor](/help/forms/communications-known-issues-limitations.md)
-   + [Migrera till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
-   + [Vanliga frågor](/help/forms/faq.md)
-   + [Kända fel](/help/forms/known-issues.md)
-   + Felsök {#troubleshooting-aem-forms-cloud-service}
+      + API-referens för utvecklare {#aem-forms-developer-api-reference}
+      + [API-referens för AEM Forms Cloud Service Communications](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)
+      + [API-referens för AEM Forms Cloud Service JavaScript](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/jsdoc/aem-forms-cloud-service-jsdoc/index.html)
+      + [AEM Forms Cloud Service Java API Reference](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/aem-forms-cloud-service-javadoc/index.html)
+   + Felsökning {#troubleshooting-aem-forms-cloud-service}
       + [Installation och konfiguration](/help/forms/troubleshooting-installation-and-configuration.md)
       + [Dispatcher och CDN-cachning](/help/forms/troubleshooting-caching-performance.md)
 + Skärmar {#screens-as-cloud-service}
@@ -619,7 +630,7 @@ ht-degree: 21%
       + [Utveckla en anpassad komponent för skärmar as a Cloud Service](/help/screens-cloud/developing/developing-custom-components-tutorial.md)
    + [Vanliga frågor och svar om skärmar](/help/screens-cloud/screens-cloud-faqs.md)
 + Innehåll och handel {#content-and-commerce}
-   + [AEM innehåll och handel](/help/commerce-cloud/home.md)
+   + [AEM Content and Commerce](/help/commerce-cloud/home.md)
    + [Betydande förändringar AEM innehåll och handel as a Cloud Service](/help/commerce-cloud/changes.md)
    + [Introduktion och översikt](/help/commerce-cloud/introduction.md)
    + Commerce Journeys {#journeys}

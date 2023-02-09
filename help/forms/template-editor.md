@@ -2,9 +2,9 @@
 title: Hur skapar man en anpassad formulärmall?
 description: Skapa adaptiva formulärmallar för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 exl-id: a882cba2-c621-4ff7-a972-c504641b5639
-source-git-commit: 434071de17d6ff56ede561735f7214d96f98cfa0
+source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1864'
 ht-degree: 0%
 
 ---
@@ -184,6 +184,23 @@ Perform the following steps to show and hide templates:
     * To show or hide out of the box Adaptive Form templates that were added in AEM 6.0 Forms or AEM 6.1 Forms releases but are now deprecated, check or uncheck the **Include AEM 6.0 AF Templates** option. If this option is checked, in order to take effect, it requires the **Include Out of the box AF and AD Templates** configuration to be enabled.
 
 1. Click **Save**. The display options for the out of the box templates are changed. -->
+
+## Spara ett anpassat formulär som en mall {#saving-adaptive-form-as-template}
+
+Du kan också spara ett anpassat formulär som en mall för framtida bruk. Så här sparar du ett anpassat formulär som en mall:
+
+1. Välj ett anpassat formulär för att spara det som en mall.
+1. Klicka på **[!UICONTROL Save as Template]**. En dialogruta visas.
+1. Ange **[!UICONTROL Title]** (obligatoriskt fält), **[!UICONTROL Location]** (obligatoriskt fält) och **[!UICONTROL Description]** (valfritt fält) för mallen.
+1. Klicka på **[!UICONTROL Create]**.
+
+   ![Spara som formulär som mall](/help/forms/assets/saveformastemplate.png)
+
+
+
+>[!NOTE]
+>
+>Om du vill använda samma behållarprofil som för det adaptiva källformuläret bör du spara mallen i samma mapp som källformuläret. Om mallen sparas i en annan mapp än den som skapas använder en standardbehållarprincip.
 
 ## Recommendations {#recommendations}
 
