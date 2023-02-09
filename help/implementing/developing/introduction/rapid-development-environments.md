@@ -2,9 +2,9 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 hidefromtoc: true
-source-git-commit: 6751a14ba38d038b006b8499feb517b7ae2d00bd
+source-git-commit: 10d74413ece591de52b7dbebd59191cace81e238
 workflow-type: tm+mt
-source-wordcount: '2634'
+source-wordcount: '2664'
 ht-degree: 0%
 
 ---
@@ -201,9 +201,13 @@ Svaret för en lyckad distribution liknar följande:
 
 Du kan även referera till en fjärrdatabas:
 
-`aio aem:rde:install 'https://repo1.maven.org/maven2/com/adobe/aem/guides/aem-guides-wknd.all/2.1.0/aem-guides-wknd.all-2.1.0.zip'`
+`aio aem:rde:install -t content-package "https://repo1.maven.org/maven2/com/adobe/aem/guides/aem-guides-wknd.all/2.1.0/aem-guides-wknd.all-2.1.0.zip"`
 
 Som standard distribueras artefakter till både författar- och publiceringsnivåer, men flaggan&quot;-s&quot; kan användas för att ange ett specifikt skikt som mål.
+
+>[!IMPORTANT]
+>
+>Dispatcher-konfigurationen för WKND-projektet distribueras inte via installationen av innehållspaketet ovan. Du måste distribuera den separat enligt stegen&quot;Distribuera en Apache/Dispatcher-konfiguration&quot;.
 
 <u>Distribuera en OSGI-konfiguration</u>
 
