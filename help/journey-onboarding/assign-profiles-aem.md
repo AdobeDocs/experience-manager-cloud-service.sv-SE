@@ -4,9 +4,9 @@ description: När du har konfigurerat dina molnresurser måste du ge ditt team �
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: c00f5d28-85af-4bd3-a50c-913d1342241c
-source-git-commit: 709a80683357b0d56280ff14aa5f4ba6bf2c6b23
+source-git-commit: 050e5966728e157bf2ae51f99a31f68a1d347e4b
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Om du vill använda AEM måste teammedlemmarna tilldelas till minst en AEM produ
 * `AEM Administrators` - Den här gruppen innehåller användare som ansvarar för avancerade funktioner eller AEM.
 
 Alla användare som tilldelats en AEM produktprofil får även skrivskyddad åtkomst till Cloud Manager. Skrivåtkomst till Cloud Manager kan beviljas via andra produktprofiler.
+
+>[!CAUTION]
+>
+>Redigera eller ta inte bort produktprofilerna AEM administratörer eller AEM användare. Om du redigerar profilnamnen kan inloggningen till AEM molninstans brytas.
 
 ## Förutsättningar {#prerequisites}
 
