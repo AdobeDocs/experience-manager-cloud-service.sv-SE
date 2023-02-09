@@ -2,9 +2,9 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 hidefromtoc: true
-source-git-commit: ca6e0fa5a4f34c84a523821a6615f4c70e457fcf
+source-git-commit: 6751a14ba38d038b006b8499feb517b7ae2d00bd
 workflow-type: tm+mt
-source-wordcount: '2476'
+source-wordcount: '2634'
 ht-degree: 0%
 
 ---
@@ -393,7 +393,7 @@ Du kan också återställa den lokala redigeringsmiljön med hjälp av ellipskna
 
 Mer information om hur du använder Cloud Manager för att hantera dina miljöer finns i [Cloud Manager-dokumentationen.](/help/implementing/cloud-manager/manage-environments.md)
 
-## Runmodes {#runmodes}
+## Körningslägen {#runmodes}
 
 RDE-specifik OSGI-konfiguration kan användas med suffix i mappnamnet, som i exemplen nedan:
 
@@ -406,6 +406,20 @@ Se [dokumentation för runmode](/help/implementing/deploying/overview.md#runmode
 >[!NOTE]
 >
 >RDE OSGI-konfigurationen är unik eftersom den ärver värdena för alla OSGI-egenskaper som deklarerats av paketets `dev` körningsläge.
+
+RDE skiljer sig från andra miljöer där innehåll kan installeras i en install.rde-mapp (eller install.author.rde eller install.publish.rde) under /apps. På så sätt kan du implementera innehåll för att Git och leverera det till RDE med kommandoradsverktygen.
+
+## Fylla med innehåll {#populating-content}
+
+När en RDE återställs tas allt innehåll bort, och om så önskas måste en explicit åtgärd vidtas för att lägga till innehåll. Ett tips är att du bör överväga att sätta ihop en uppsättning innehåll som ska användas som testinnehåll för validering och felsökning i den lokala redigeringsmiljön. Det finns flera möjliga strategier för att fylla i den regionala utvecklingsmiljön med det innehållet:
+
+1. Synkronisera innehållspaketet explicit till RDE med kommandoradsverktygen
+
+1. Placera och implementera exempelinnehållet i Git i en install.rde-mapp under /apps och synka sedan det övergripande innehållspaketet till RDE med kommandoradsverktygen.
+
+1. Använd pakethanteraren
+
+Observera att du är begränsad till 1 GB när du synkroniserar innehållspaket.
 
 ## Loggning {#logging}
 
