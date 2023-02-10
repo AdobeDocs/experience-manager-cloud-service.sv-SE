@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
+source-git-commit: ef617b38c8dec355a0fa8ca72af652f37d6668a4
 workflow-type: tm+mt
-source-wordcount: '3932'
+source-wordcount: '3931'
 ht-degree: 21%
 
 ---
@@ -504,22 +504,30 @@ ht-degree: 21%
       + [Arkitektur](/help/forms/aem-forms-cloud-service-architecture.md)
       + [Vanliga frågor](/help/forms/faq.md)
       + [Kända fel](/help/forms/known-issues.md)
-   + Inställningar {#setup-environment}
+   + Konfigurera och migrera {#setup-configure-migrate}
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
       + [Installera och konfigurera Forms Designer](/help/forms/installing-configuring-designer.md)
       + [Konfigurera anslutning för enhetlig lagring](/help/forms/configure-unified-storage-connector.md)
-   + Migrera {#setup-environment}
       + [Migrera till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
-   + Konfigurera och administrera {#administering}
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
    + Integrera {#integrate}
-      + [Integrera AEM Forms as a Cloud Service med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
-      + [Integrera AEM Forms as a Cloud Service med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
-      + [Integrera AEM Forms as a Cloud Service med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
-      + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
-      + [Bädda in en adaptiv Forms på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
+      + Tjänster {#services}
+         + [Integrera AEM Forms as a Cloud Service med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
+         + [Integrera AEM Forms as a Cloud Service med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
+         + [Integrera AEM Forms as a Cloud Service med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
+         + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
+         + [Bädda in en adaptiv Forms på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
+      + Formulärdatamodell {#use-form-data-model}
+         + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
+         + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
+         + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
+         + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
+         + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
+         + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
+         + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
+         + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
    + Adaptiv Forms {#adaptive-forms-authoring}
       + Skapa adaptiv Forms - kärnkomponenter {#authoring-adaptive-forms-core-components}
          + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
@@ -570,15 +578,6 @@ ht-degree: 21%
             + [Skapa ett tillgängligt adaptivt formulär](/help/forms/creating-accessible-adaptive-forms.md)
          + [Konfigurera Forms Portal](/help/forms/configure-forms-portal.md)
          + [Skapa och hantera granskningar](/help/forms/create-reviews-forms.md)
-   + Formulärdatamodell {#use-form-data-model}
-      + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
-      + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
-      + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
-      + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
-      + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
-      + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
-      + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
-      + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
    + Forms Centric Workflows {#create-form-centric-workflows}
       + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
       + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
@@ -589,7 +588,7 @@ ht-degree: 21%
       + [Kommunikations-API:er - gruppbearbetning](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
       + [Använda anpassade teckensnitt i PDF-dokument](/help/forms/use-custom-fonts.md)
       + [Kända fel, bästa praxis och vanliga frågor](/help/forms/communications-known-issues-limitations.md)
-      + API-referens för utvecklare {#aem-forms-developer-api-reference}
+   + API-referens för utvecklare {#aem-forms-developer-api-reference}
       + [API-referens för AEM Forms Cloud Service Communications](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)
       + [API-referens för AEM Forms Cloud Service JavaScript](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/jsdoc/aem-forms-cloud-service-jsdoc/index.html)
       + [AEM Forms Cloud Service Java API Reference](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/aem-forms-cloud-service-javadoc/index.html)
