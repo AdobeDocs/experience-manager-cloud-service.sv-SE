@@ -1,9 +1,9 @@
 ---
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
-source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
+source-git-commit: 1d34834af35451b072afde536ee8aaa5155c58b3
 workflow-type: tm+mt
-source-wordcount: '2898'
+source-wordcount: '3062'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,8 @@ När ändringarna har testats i en RDE kan de distribueras till en vanlig molnut
 RDE kan användas för konfigurationer av kod, innehåll och Apache eller Dispatcher. Till skillnad från vanliga Cloud Development-miljöer kan utvecklare använda lokala kommandoradsverktyg för att synkronisera kod som skapats lokalt till en RDE.
 
 Alla program tillhandahålls med en RDE. När det gäller sandlådekonton kommer de att försättas i viloläge efter några timmars icke-användning.
+
+När de skapas ställs de virtuella skrivborden in på den senast tillgängliga AEM. En RDE-återställning, som kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
 
 Vanligtvis används en RDE av en enskild utvecklare vid en viss tidpunkt för att testa och felsöka en viss funktion. När utvecklingssessionen är klar kan den återställas till ett standardläge för nästa användning.
 
@@ -64,6 +66,8 @@ Följ de här stegen för att använda Cloud Manager för att skapa en RDE för 
 1. Klicka **Spara** för att lägga till den angivna miljön.
 
 The **Översikt** visas nu din nya miljö i **Miljö** kort.
+
+När de skapas ställs de virtuella skrivborden in på den senast tillgängliga AEM. En RDE-återställning, som även kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
 
 Mer information om hur du använder Cloud Manager för att skapa miljöer, hantera vem som har åtkomst till dem och tilldela anpassade domäner finns i [Cloud Manager-dokumentationen.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
 
@@ -141,7 +145,12 @@ Adobe rekommenderar följande arbetsflöde för att utveckla en ny funktion:
 
 * När en mellanliggande milstolpe har nåtts och validerats lokalt med den AEM as a Cloud Service SDK:n, bör koden implementeras på en Git-funktionsgren som ännu inte är en del av huvudraden, även om det är valfritt att binda sig för Git. Vad som utgör en&quot;mellanmilstolpe&quot; varierar beroende på teamets vanor. Exempel är några nya kodrader, en halv arbetsdag eller en underfunktion.
 
-* Återställ RDE om den har använts av en annan funktion och du vill [återställa till standardläge](#reset-rde). <!-- Alexandru: hiding for now, please don't delete This can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart.
+* Återställ RDE om den har använts av en annan funktion och du vill [återställa till standardläge](#reset-rde). <!-- Alexandru: hiding for now, please don't delete This can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart. Den nya versionen av AEM kommer att användas.
+
+   >[!IMPORTANT]
+   >
+   > Om din testnings- och produktionsmiljö inte får automatiska AEM och ligger långt efter den senaste versionen av AEM bör du tänka på att koden som körs på den lokala utvecklingsmiljön kanske inte stämmer överens med hur koden fungerar i testversionerna och produktionen. I så fall är det särskilt viktigt att utföra grundliga tester av koden på mellanlagring innan den distribueras till produktion.
+
 
 * Synkronisera lokal kod med RDE-kommandoradsgränssnittet. Du kan installera ett innehållspaket, ett specifikt paket, en OSGI-konfigurationsfil, en innehållsfil och en zip-fil för en Apache/Dispatcher-konfiguration. Det går också att referera till ett fjärrinnehållspaket. Se [Verktyg för RDE-kommandorad](#rde-cli-commands) för mer information. Du kan använda statuskommandot för att validera att distributionen lyckades. Du kan också använda Package Manager för att installera innehållspaket.
 
@@ -337,6 +346,8 @@ aio aem:rde:delete com.adobe.granite.csrf.impl.CSRFFilter
 ## Återställ {#reset-rde}
 
 Om du återställer RDE tas all anpassad kod, konfigurationer och innehåll bort från både författaren och publiceringsinstansen. Detta kan vara användbart om RDE har använts för att testa en viss funktion och du vill återställa den till ett standardläge för att testa en annan funktion.
+
+En återställning anger att den senaste tillgängliga AEM är RDE.
 
 <!-- Alexandru: hiding for now, please don't delete
 
