@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 7174b398040acbf9b18b5ac2aa20fdba4f98ca78
+source-git-commit: 2af14814a4e8af22cfdc1caa2ff656020c79ce77
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1826'
 ht-degree: 0%
 
 ---
@@ -17,12 +17,13 @@ Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för 
 
 En användare med nödvändig behörighet kan skapa följande miljötyper (inom gränserna för vad som är tillgängligt för den specifika klientorganisationen).
 
-* **Produktion och fas** - Produktions- och testmiljöer finns som par och används för produktions- respektive testningsändamål.
+* **Production + Stage** - Produktions- och testmiljöer finns som par och används för produktions- respektive testningsändamål.
 
 * **Utveckling** - En utvecklingsmiljö kan skapas för såväl utvecklings- som testningsändamål och kan endast kopplas till rörledningar som inte är avsedda för produktion.
 
+* **Snabb utveckling** - Med en snabb utvecklingsmiljö (RDE) kan utvecklare snabbt driftsätta och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som är beprövade i en lokal utvecklingsmiljö. Se [dokumentation för snabb utvecklingsmiljö](/help/implementing/developing/introduction/rapid-development-environments.md) om du vill ha mer information om hur du använder en RDE.
 
-Funktionerna i de enskilda miljöerna beror på vilka lösningar som finns i [program.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
+De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) av miljön.
 
 * [Sites](/help/sites-cloud/home.md)
 * [Assets](/help/assets/home.md)
@@ -51,13 +52,14 @@ Funktionerna i de enskilda miljöerna beror på vilka lösningar som finns i [pr
 
 1. I **Lägg till miljö** som visas:
 
-   * Välj en **Miljötyp**.
-      * Antalet tillgängliga/använda miljöer visas inom parentes bakom typen av utvecklingsmiljö.
-   * Ange en **Miljönamn**.
-   * Ange en **Miljöbeskrivning**.
-   * Välj en **Molnregion**.
-
-   ![Dialogrutan Lägg till miljö](assets/add-environment2.png)
+   * Välj en [**miljötyp**.](#environment-types)
+      * Antalet tillgängliga/använda miljöer visas inom parentes bakom miljötypsnamnet.
+   * Tillhandahålla en miljö **Namn**.
+   * Tillhandahålla en miljö **Beskrivning**.
+   * Välj en **Primär region** i listrutan.
+      * Observera att detta inte kan ändras när det har skapats.
+   * Om du lägger till en **Production + Stage** måste du ange ett miljönamn och en beskrivning för både din produktions- och staging-miljö.
+      ![Dialogrutan Lägg till miljö](assets/add-environment2.png)
 
 1. Klicka **Spara** för att lägga till den angivna miljön.
 
@@ -101,7 +103,7 @@ När förhandsvisningstjänsten skapas används en IP-tillåtelselista som stand
 
 ![Förhandsgranskningstjänst och tillåtelselista](assets/preview-ip-allow.png)
 
-En användare med nödvändig behörighet måste slutföra stegen i följande alternativ innan du kan dela URL:en för förhandsgranskningstjänsten med något av dina team för att kunna säkerställa åtkomst till URL:en för förhandsgranskning.
+En användare med nödvändig behörighet måste utföra följande steg innan han eller hon kan dela URL:en för förhandsvisningstjänsten för att se till att den är tillgänglig.
 
 1. Skapa en lämplig IP-tillåtelselista, använd den för förhandsgranskningstjänsten och ta omedelbart bort tillämpningen av `Preview Default [<envId>]` tillåtelselista.
 
@@ -115,7 +117,7 @@ När det är aktiverat kan du publicera innehåll till förhandsgranskningstjän
 
 >[!NOTE]
 >
->Miljön måste vara i AEM version `2021.05.5368.20210529T101701Z` eller nyare. Kontrollera att en uppdateringspipeline har körts korrekt i din miljö för att göra detta.
+>Miljön måste vara i AEM version `2021.05.5368.20210529T101701Z` eller nyare för att använda förhandsgranskningstjänsten. Kontrollera att en uppdateringspipeline har körts korrekt i din miljö för att göra detta.
 
 ## Uppdaterar miljöer {#updating-dev-environment}
 
