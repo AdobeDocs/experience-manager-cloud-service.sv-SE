@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: e353fd386d2dfbc39c76a0ab56b50c44f3c54afc
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '1965'
 ht-degree: 0%
 
 ---
@@ -18,14 +18,13 @@ ht-degree: 0%
 
 [!DNL Experience Manager Forms] Med dataintegrering kan du konfigurera och ansluta till olika datakällor. Följande typer stöds:
 
-<!-- * Relational databases - MySQL, [!DNL Microsoft SQL Server], [!DNL IBM DB2], and [!DNL Oracle RDBMS] 
-* [!DNL Experience Manager] user profile  -->
+* Relationsdatabaser - MySQL, [!DNL Microsoft SQL Server], [!DNL IBM DB2]och [!DNL Oracle RDBMS]
 * RESTful web services
 * SOAP-baserade webbtjänster
 * OData-tjänster (version 4.0)
-* Microsoft Dynamics
+* Microsoft® Dynamics
 * SalesForce
-* Microsoft Azure Blob Storage
+* Microsoft® Azure Blob Storage
 
 Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande autentisering och API Key som är färdiga och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. SOAP-baserade tjänster och OData-tjänster är konfigurerade i RESTful [!DNL Experience Manager] as a Cloud Service <!--, JDBC for relational databases --> och anslutning för [!DNL Experience Manager] användarprofilen är konfigurerad i [!DNL Experience Manager] webbkonsol.
 
@@ -35,9 +34,12 @@ Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande au
 
 ## Konfigurera relationsdatabas {#configure-relational-database}
 
-### Förutsättning
+### Förutsättningar
 
-Innan du konfigurerar relationsdatabaser med [!DNL Experience Manager] Konfiguration av webbkonsol, det är obligatoriskt att [aktivera avancerat nätverk via molnhanterings-API](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html), eftersom portar är inaktiverade som standard.
+Innan du konfigurerar relationsdatabaser med [!DNL Experience Manager] Konfiguration av webbkonsol, det är obligatoriskt att:
+* [Aktivera avancerade nätverk via molnhanterings-API](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html), eftersom portar är inaktiverade som standard.
+* [Lägg till JDBC-drivrutinsberoenden i Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=en#mysql-driver-dependencies).
+
 
 ### Steg för att konfigurera relationsdatabas
 
@@ -45,27 +47,30 @@ Du kan konfigurera relationsdatabaser med [!DNL Experience Manager] Konfiguratio
 
 1. Gå till [!DNL Experience Manager] webbkonsol på `https://server:host/system/console/configMgr`.
 1. Sök **[!UICONTROL Day Commons JDBC Connections Pools]** konfiguration. Tryck för att öppna konfigurationen i redigeringsläge.
-<br>
 
-![JDBC Connector Pool](/help/forms/assets/jdbc_connector.png)
-<br>
+   ![JDBC Connector Pool](/help/forms/assets/jdbc_connector.png)
+
 1. I konfigurationsdialogrutan anger du information för den databas som du vill konfigurera, till exempel:
 
-   * Java-klassnamn för JDBC-drivrutinen
+   * Java™-klassnamn för JDBC-drivrutinen
    * URI för JDBC-anslutning
    * Användarnamn och lösenord för anslutning till JDBC-drivrutinen
    * Ange en SQL SELECT-fråga i **[!UICONTROL Validation Query]** fält för att validera anslutningar från poolen. Frågan måste returnera minst en rad. Baserat på din databas anger du något av följande:
       * SELECT 1 (MySQL och MS SQL)
       * VÄLJ 1 från dubbla (Oracle)
-   * Välj **Skrivskyddad som standard** så att den inte kan ändras.
-   * Välj **Genomför automatiskt som standard** om du vill genomföra ändringarna automatiskt.
-   * Ange poolstorlek och poolens väntetid i millisekunder.
    * Datakällans namn
-   * Egenskapen för datakälltjänst som lagrar datakällans namn
+
+   Exempelsträngar för konfiguration av relationsdatabas:
+
+   ```text
+      "datasource.name": "sqldatasourcename-mysql",
+      "jdbc.driver.class": "com.mysql.jdbc.Driver",
+      "jdbc.connection.uri": "jdbc:mysql://$[env:AEM_PROXY_HOST;default=proxy.tunnel]:30001/sqldatasourcename"
+   ```
 
    >[!NOTE]
    >
-   > Referens [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html#mysql-driver-dependencies) för mer detaljerad information.
+   > Referens [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html) för mer detaljerad information.
 
 1. Tryck **[!UICONTROL Save]** för att spara konfigurationen.
 
@@ -111,14 +116,14 @@ Så här konfigurerar du mappen för molntjänstkonfigurationer:
    1. Tryck **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
 
 1. I **[!UICONTROL Configuration Browser]**, trycka **[!UICONTROL Create]**.
-1. I **[!UICONTROL Create Configuration]** dialogruta, ange en rubrik för mappen och aktivera **[!UICONTROL Cloud Configurations]**.
+1. I **[!UICONTROL Create Configuration]** anger du en rubrik för mappen och aktiverar **[!UICONTROL Cloud Configurations]**.
 1. Tryck **[!UICONTROL Create]** för att skapa en mapp som är aktiverad för molntjänstkonfigurationer.
 
 ## Konfigurera RESTful-webbtjänster {#configure-restful-web-services}
 
 RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/v2/) i JSON- eller YAML-format i en [!DNL Swagger] definitionsfil. Konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service, se till att du har antingen [!DNL Swagger] fil ([Swagger version 2.0](https://swagger.io/specification/v2/)) eller [!DNL Swagger] fil ([Swagger version 3.0](https://swagger.io/specification/v3/)) i filsystemet eller den URL där filen finns.
 
-### Konfigurera RESTful-tjänster för Open API Specification version 2.0 {#configure-restful-services-swagger-version2.0}
+### Konfigurera RESTful-tjänster för Open API Specification version 2.0 {#configure-restful-services-open-api-2.0}
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
@@ -142,7 +147,7 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
 
 1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för RESTful-tjänsten.
 
-### Konfigurera RESTful services Open API Specification version 2.0 {#configure-restful-services-swagger-version3.0}
+### Konfigurera RESTful-tjänster för Open API Specification version 3.0 {#configure-restful-services-open-api-3.0}
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
@@ -152,7 +157,7 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
 1. Ange följande information för RESTful-tjänsten:
 
    * Välj URL eller fil på menyn [!UICONTROL Swagger Source] och ange [!DNL Swagger 3.0 URL] till[!DNL  Swagger] definitionsfil eller ladda upp [!DNL Swagger] från det lokala filsystemet.
-   * Baserat på[!DNL  Swagger] Källindata, servernamnet visas automatiskt.
+   * Baserat på[!DNL  Swagger] Källindata, anslutningsinformationen med målservern visas.
    * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering, API-nyckel eller Anpassad autentisering - för att få åtkomst till RESTful-tjänsten och ange därefter information för autentisering.
 
    Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
@@ -161,10 +166,11 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
 
 1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för RESTful-tjänsten.
 
-En del åtgärder som inte stöds av RESTful services Swagger version 3.0 är:
+En del åtgärder som inte stöds av RESTful services Open API Specification version 3.0 är:
 * Återanrop
 * en/något av
 * Fjärrreferens
+* Länkar
 * Olika begärande organ för olika MIME-typer för en enda operation
 
 Du kan referera till [OpenAPI 3.0-specifikation](https://swagger.io/specification/v3/) för detaljerad information.
@@ -187,6 +193,7 @@ Ange följande egenskaper för **[!UICONTROL Form Data Model HTTP Client Configu
 
 I följande JSON-fil visas ett exempel:
 
+
 ```json
 {   
    "http.connection.keep.alive.duration":"15",   
@@ -198,20 +205,13 @@ I följande JSON-fil visas ett exempel:
 } 
 ```
 
-Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart)och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
-
-
-Utför följande steg för att konfigurera HTTP-klienten för formulärdatamodellen:
-
-1. Logga in på [!DNL Experience Manager Forms] Skapa instans som administratör och gå till [!DNL Experience Manager] webbkonsolpaket. Standardwebbadressen är [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr).
-
 1. Tryck på **[!UICONTROL Form Data Model HTTP Client Configuration for REST data source]**.
 
 1. I [!UICONTROL Form Data Model HTTP Client Configuration for REST data source] dialog:
 
    * Ange maximalt antal tillåtna anslutningar mellan formulärdatamodell och RESTful-webbtjänster i dialogrutan **[!UICONTROL Connection limit in total]** fält. Standardvärdet är 20 anslutningar.
 
-   * Ange maximalt antal tillåtna anslutningar för varje flöde i dialogrutan **[!UICONTROL Connection limit on per route basis]** fält. Standardvärdet är 2 anslutningar.
+   * Ange maximalt antal tillåtna anslutningar för varje flöde i dialogrutan **[!UICONTROL Connection limit on per route basis]** fält. Standardvärdet är två anslutningar.
 
    * Ange hur länge en beständig HTTP-anslutning ska vara aktiv i **[!UICONTROL Keep alive]** fält. Standardvärdet är 15 sekunder.
 
@@ -249,11 +249,13 @@ Du kan ange ett reguljärt uttryck som fungerar som filter för absoluta URL:er 
 
 Ange `importAllowlistPattern` egenskapen för **[!UICONTROL Form Data Model SOAP Web Services Import Allowlist]** -konfiguration för att ange det reguljära uttrycket. I följande JSON-fil visas ett exempel:
 
+
 ```json
 {
   "importAllowlistPattern": ".*"
 }
 ```
+
 
 Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart)och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
 
@@ -264,7 +266,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 >[!NOTE]
 >
 > Formulärdatamodellen stöder [OData version 4](https://www.odata.org/documentation/).
->Om du vill konfigurera steg-för-steg-guiden [!DNL Microsoft Dynamics 365], online eller lokalt, se [[!DNL Microsoft Dynamics] OData-konfiguration](ms-dynamics-odata-configuration.md).
+>Om du vill konfigurera steg-för-steg-guiden [!DNL Microsoft® Dynamics 365], online eller lokalt, se [[!DNL Microsoft® Dynamics] OData-konfiguration](ms-dynamics-odata-configuration.md).
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
@@ -280,7 +282,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 
    >[!NOTE]
    >
-   >Du måste välja autentiseringstypen OAuth 2.0 för att kunna ansluta med [!DNL Microsoft Dynamics] tjänster där OData-slutpunkten används som tjänstrot.
+   >Du måste välja autentiseringstypen OAuth 2.0 för att kunna ansluta med [!DNL Microsoft® Dynamics] tjänster där OData-slutpunkten används som tjänstrot.
 
 1. Tryck **[!UICONTROL Create]** för att skapa molnkonfigurationen för OData-tjänsten.
 
@@ -299,4 +301,4 @@ When you enable mutual authentication for form data model, both the data source 
 
 ## Nästa steg {#next-steps}
 
-Du har konfigurerat datakällorna. Därefter kan du skapa en formulärdatamodell eller, om du redan har skapat en formulärdatamodell utan en datakälla, associera den med de datakällor du just konfigurerade. Se [Skapa formulärdatamodell](create-form-data-models.md) för mer information.
+Du har konfigurerat datakällorna. Därefter kan du skapa en formulärdatamodell eller, om du redan har skapat en formulärdatamodell utan en datakälla, associera den med de datakällor du konfigurerade. Se [Skapa formulärdatamodell](create-form-data-models.md) för mer information.
