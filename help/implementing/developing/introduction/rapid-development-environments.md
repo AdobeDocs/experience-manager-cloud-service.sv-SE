@@ -1,9 +1,9 @@
 ---
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
 workflow-type: tm+mt
-source-wordcount: '2903'
+source-wordcount: '2898'
 ht-degree: 0%
 
 ---
@@ -452,7 +452,7 @@ En mellanliggande modell är en modell där en organisation köper ett antal oli
 
 ## Hur skiljer sig en AEM Forms Cloud Service Rapid Development Environment (RDE) från andra miljöer? {#how-are-forms-rds-different-from-cloud-development-environments}
 
-Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environment för att snabbt utveckla adaptiva Forms, arbetsflöden och anpassningar som att anpassa kärnkomponenter, integreringar med tredjepartssystem med mera. AEM Forms Cloud Service Rapid Development Environment (RDE) saknar stöd för funktioner som kräver Document of Record, som att generera ett dokument om ett adaptivt formulär skickas. Funktionerna nedan använder arkivhandlingar. Dessa finns inte för en snabb utvecklingsmiljö (RDE):
+Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environment för att snabbt utveckla adaptiva Forms, arbetsflöden och anpassningar som att anpassa kärnkomponenter, integreringar med tredjepartssystem med mera. AEM Forms Cloud Service Rapid Development Environment (RDE) saknar stöd för kommunikations-API:er och för funktioner som kräver ett arkivdokument, som att generera ett arkivdokument när ett adaptivt formulär skickas. Följande AEM Forms-funktioner är inte tillgängliga i en Rapid Development Environment (RDE):
 
 * Konfigurera ett postdokument för ett adaptivt formulär
 * Generera ett registreringsdokument när ett adaptivt formulär skickas eller när ett arbetsflödessteg tas
@@ -460,9 +460,7 @@ Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environm
 * Använda Adobe Sign i ett adaptivt formulär eller i ett arbetsflödessteg
 * Kommunikations-API:er
 
-Du får felmeddelanden om hur du använder en funktion som kräver ett dokument med poster.
-
 >[!NOTE]
 >
-> Gränssnittet i Rapid Development Environment (RDE) och andra Cloud Service för Forms förändras inte. Alla alternativ som är relaterade till Dokumentformat, som att välja ett dokument med en postmall för ett anpassat formulär, fortsätter att visas i användargränssnittet. De här miljöerna har inga funktioner för dokumentarkivering för att testa sådana alternativ. När du väljer ett dokumentalternativ utförs ingen åtgärd och ett felmeddelande visas eller returneras.
+> Gränssnittet i Rapid Development Environment (RDE) och andra Cloud Service för Forms förändras inte. Alla alternativ som är relaterade till Dokumentformat, som att välja ett dokument med en postmall för ett anpassat formulär, fortsätter att visas i användargränssnittet. De här miljöerna har inga kommunikations-API:er och dokumentfunktioner för att testa sådana alternativ. När du väljer ett alternativ som kräver funktioner för kommunikations-API:er eller dokument med post utförs ingen åtgärd och ett felmeddelande visas eller returneras.
 

@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
 workflow-type: tm+mt
-source-wordcount: '3918'
+source-wordcount: '3932'
 ht-degree: 21%
 
 ---
@@ -509,9 +509,9 @@ ht-degree: 21%
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
       + [Installera och konfigurera Forms Designer](/help/forms/installing-configuring-designer.md)
       + [Konfigurera anslutning för enhetlig lagring](/help/forms/configure-unified-storage-connector.md)
-   + Migrerar {#setup-environment}
+   + Migrera {#setup-environment}
       + [Migrera till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
-   + Administratör {#administering}
+   + Konfigurera och administrera {#administering}
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
    + Integrera {#integrate}
@@ -562,26 +562,28 @@ ht-degree: 21%
             + [Skapa en anpassad skickaåtgärd](/help/forms/custom-submit-action-form.md)
          + [Förifyll adaptiva formulärfält](/help/forms/prepopulate-adaptive-form-fields.md)
          + [Generera postdokument](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
+         + [Lägga till stöd för nya språkområden i ett anpassat formulär](/help/forms/supporting-new-language-localization.md)
          + Lägga till eller förbättra metadata {#manage-metadata}
             + [Lägga till, ta bort eller redigera metadata i ett anpassat formulär](/help/forms/manage-form-metadata.md)
             + [Återanvända metadataegenskaper i ett adaptivt formulär](/help/forms/reusing-adaptive-forms.md)
          + Förbättra tillgängligheten för ett adaptivt formulär {#accessible-adaptive-forms}
             + [Skapa ett tillgängligt adaptivt formulär](/help/forms/creating-accessible-adaptive-forms.md)
          + [Konfigurera Forms Portal](/help/forms/configure-forms-portal.md)
-      + Formulärdatamodell {#use-form-data-model}
-         + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
-         + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
-         + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
-         + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
-         + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
-         + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
-         + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
-         + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
-      + Forms Centric Workflows {#create-form-centric-workflows}
-         + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
-         + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
-         + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
-   + Använda kommunikations-API:er {#using-communications}
+         + [Skapa och hantera granskningar](/help/forms/create-reviews-forms.md)
+   + Formulärdatamodell {#use-form-data-model}
+      + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
+      + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
+      + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
+      + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
+      + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
+      + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
+      + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
+      + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
+   + Forms Centric Workflows {#create-form-centric-workflows}
+      + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
+      + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
+      + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
+   + Kommunikations-API:er {#using-communications}
       + [Introduktion till kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)
       + [Kommunikations-API:er - synkron bearbetning](/help/forms/aem-forms-cloud-service-communications.md)
       + [Kommunikations-API:er - gruppbearbetning](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)

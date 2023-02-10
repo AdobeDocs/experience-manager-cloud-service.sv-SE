@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 mini-toc-levels: 1
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -66,17 +66,18 @@ Titta på videon med versionsöversikten från januari 2023 om du vill se en sam
 
 ### Nya funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
 
-* **[Använd kärnkomponenterna för datainhämtning för att bygga adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md)**: Använd adaptiv Forms-editor för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
+* **[Använd kärnkomponenterna för datainhämtning för att bygga adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en)**: [Använda adaptiv Forms-redigerare](/help/forms/creating-adaptive-form-core-components.md) för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
 * **[Stöd för Frontend-pipeline för styling core Component-baserad Adaptive Forms](/help/forms/using-themes-in-core-components.md)**: Använd enkelt anpassningsbara BEM-baserade teman för Core Components-baserade Adaptive Forms genom att använda dem med Frontend Deployment Pipeline för att förbättra utseendet och känslan i era formulär.
 * **[Generera arkivdokument för centrala komponentbaserade adaptiva Forms](/help/forms/generate-document-of-record-core-components.md)**: Skapa en post för centrala komponentbaserade adaptiva formulär när de skickas för långtidsarkivering, i tryck eller i dokumentformat.
 
-![](/help/forms/assets/sample-core-components-based-adaptive-form.png)
+![https://www.aemcomponents.dev/](/help/forms/assets/sample-core-components-based-adaptive-form.png)
 
-* **Dela ett adaptivt formulär för granskning**: Använd den adaptiva Forms granskningsfunktionen för att låta en eller flera granskare granska formuläret.
 * **[Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/configuring-submit-actions.md)**: Effektivisera inlämningen av data med möjlighet att skicka data direkt till både Microsoft SharePoint och Microsoft OneDrive. Du kan skicka både schemabaserade och schemafria data. Dessa Skicka-åtgärder är utöver de som redan finns tillgängliga.
 * **[Skapa formulär effektivt med funktionen Spara ett anpassat formulär som mall](/help/forms/template-editor.md#save-an-adaptive-form-as-template-saving-adaptive-form-as-template)**: Effektivisera formulärbyggandet genom att spara ett adaptivt formulär som en mall och återanvända mallarna för nästa adaptiva formulär.
-* **[Koppla Forms datamodell till databaser som stöder JDBC](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html)**: Anslut AEM Forms as a Cloud Service till en databas som stöder JDBC för att läsa och skriva data till sådana databaser.
-* **Koppla formulärdatamodellen till REST-slutpunkter som stöder Open API-specifikationen version 3.0**: Koppla AEM Forms as a Cloud Service till REST-slutpunkter som stöder Open API-specifikationen version 3.0 för att skicka och ta emot data.
+* **[Ansluta AEM Forms till JDBC-databaser](/help/forms/configure-data-sources.md#configure-relational-database-configure-relational-database)**: Koppla enkelt din AEM Forms datamodell till databaser som stöder JDBC, så att du kan läsa och skriva data sömlöst.
+* **[Integrera med REST-slutpunkter med Open API 3.0](/help/forms/configure-data-sources.md#configure-restful-services-open-api-specification-version-20-configure-restful-services-swagger-version30)**: Koppla samman AEM Forms as a Cloud Service Form Data Models till REST-slutpunkter med stöd för Open API-specifikationen version 3.0, så att du enkelt kan skicka och ta emot data.
+* **[Dela ett adaptivt formulär för granskning](/help/forms/create-reviews-forms.md)**: Använd den adaptiva Forms granskningsfunktionen för att låta en eller flera granskare granska formuläret.
+
 
 ## CIF-tillägg {#cloud-services-cif}
 

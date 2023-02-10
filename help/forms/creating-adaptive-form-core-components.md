@@ -4,9 +4,9 @@ description: Lär dig hur du skapar ett adaptivt formulär med [!DNL Experience 
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Skapa en adaptiv form (kärnkomponenter) {#creating-an-adaptive-form-core-components}
 
-Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. AEM Forms har en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden har en snabb fliknavigering där du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett adaptivt formulär. Adaptiv Forms har två typer av komponenter:
+Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. AEM Forms har en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden har en snabb fliknavigering där du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett adaptivt formulär.
 
-* Adaptiva Forms Core-komponenter är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. Utvecklare kan enkelt anpassa dessa komponenter. Adobe rekommenderar att man utnyttjar dessa moderna och utbyggbara komponenter för att utveckla Adaptiv Forms.
+Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan använda:
 
-* Adaptiva Forms Foundation-komponenter är klassiska (gamla) datainhämtningskomponenter.
+* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en): Dessa är standardiserade komponenter för datainhämtning. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Adobe rekommenderar att man utnyttjar dessa moderna och utbyggbara komponenter för att utveckla Adaptiv Forms.
 
-I den här artikeln beskrivs det senaste sättet att skapa ett adaptivt formulär. Information om hur du skapar adaptiva Forms utifrån äldre metoder finns i [Skapa ett adaptivt formulär (grundkomponenter)](creating-adaptive-form.md)
+* [Adaptiva Forms Foundation-komponenter](creating-adaptive-form.md): Dessa är klassiska (gamla) datainhämtningskomponenter. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar nya formulär rekommenderar Adobe att du använder  [Adaptiva Forms Core-komponenter](creating-adaptive-form-core-components.md) för att skapa en adaptiv Forms.
 
 ![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png)
 
@@ -89,30 +89,7 @@ Nu kan du dra och släppa de adaptiva Forms Core-komponenterna till den adaptiva
 
 ## Tillgängliga adaptiva Forms Core-komponenter
 
-Adaptiva Forms Core-komponenter är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. Följande kärnkomponenter är tillgängliga direkt:
-
-* Adaptivt Forms-dragspel: Med dragspelsfunktionen kan användaren visa och dölja avsnitt av relaterat innehåll i en adaptiv form.
-
-* Adaptiv Forms-knapp
-* Adaptiv Forms-kryssrutegrupp
-* Anpassad datumväljare för Forms
-* Adaptiv Forms-nedrullningsbar lista
-* Anpassad e-postinmatning från Forms
-* Adaptiva Forms-filbilagor
-* Anpassningsbara vågräta Forms-flikar
-* Adaptiv Forms-bild
-* Adaptiv inmatning av Forms-nummer
-* Adaptiv Forms-panel
-* Adaptiv Forms-alternativknapp
-* Knapp för återställning av adaptiv Forms
-* Adaptiv Forms-sändningsknapp
-* Adaptiv telefoninmatning från Forms
-* Adaptiv Forms-text
-* Adaptiv Forms-textruta
-* Adaptiv Forms-titel
-* Adaptiv Forms-guidelayout
-* Sidhuvud
-* Sidfot
+Adaptiva Forms Core-komponenter är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, hjälper till att minska utvecklingstiden och sänker underhållskostnaderna för era digitala registreringsupplevelser. [Dokumentation för adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en) innehåller en detaljerad lista över tillgängliga komponenter tillsammans med detaljerad information om funktionerna för varje komponent. Du kan också besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) för att se hur de tillgängliga kärnkomponenterna fungerar i praktiken.
 
 ## Redigera formulärmodellegenskaper för ett adaptivt formulär {#edit-form-model}
 
