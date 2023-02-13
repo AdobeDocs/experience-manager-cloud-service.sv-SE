@@ -2,10 +2,10 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 01087aa2ec621d6bebd4d62edbc320df8122f71d
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 82%
+source-wordcount: '1797'
+ht-degree: 81%
 
 ---
 
@@ -79,6 +79,8 @@ Det finns tre typer av miljöer med AEM as a Cloud Service:
 
    Se [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#using-cloud-manager) för mer information.
 
+* **Snabb utvecklingsmiljö**: möjliggör snabb utveckling av iterationer för felsökning av ny eller befintlig kod.
+
 ## Program {#programs}
 
 Alla nya AEM-projekt är alltid bundna till en specifik kodbas där du kan lagra både konfiguration och anpassad kod för ditt projekt. Den här informationen lagras i en koddatabas som du kan nå via de vanliga Git-klienterna när nya program skapas.
@@ -90,7 +92,7 @@ Ett AEM-program är den behållare som innehåller:
 | Koddatabas (Git) |  1 |
 | Baslinjebild (Sites eller Assets) |  1 |
 | 1:1-förhållande mellan scen- och produktionsmiljö  | 0 eller 1 |
-| Icke-produktionsmiljöer (utveckling eller demonstration) | 0 till N |
+| Icke-produktionsmiljöer (RDE, utveckling eller demonstration) | 0 till N |
 | Pipeline för varje miljö | 0 eller 1 |
 
 Två typer av program är inledningsvis tillgängliga för AEM as a Cloud Service:

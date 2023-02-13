@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: e305f9fa7d1c485362bddb8fcd7c9e3e2edefe10
+source-git-commit: 01087aa2ec621d6bebd4d62edbc320df8122f71d
 workflow-type: tm+mt
-source-wordcount: '2590'
+source-wordcount: '2591'
 ht-degree: 1%
 
 ---
@@ -162,7 +162,7 @@ Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas e
 
 I stället kan databasläsaren startas från utvecklarkonsolen, vilket ger en skrivskyddad vy i databasen för alla miljöer med författare, publicering och förhandsgranskningsnivåer. Läs mer om Databasläsaren [här](/help/implementing/developing/tools/repository-browser.md).
 
-En uppsättning verktyg för felsökning AEM as a Cloud Service utvecklingsmiljöer finns på Developer Console för dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
+En uppsättning verktyg för felsökning AEM as a Cloud Service utvecklingsmiljöer finns i Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
 `https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
 

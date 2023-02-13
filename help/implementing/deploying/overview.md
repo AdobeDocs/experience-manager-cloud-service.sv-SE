@@ -3,9 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: Distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 8e9ff8f77ac4920f87adcba0258cfccb15f9a5b9
+source-git-commit: 0481267958fe8ac4b28b2742924d2bc2c337eebc
 workflow-type: tm+mt
-source-wordcount: '3415'
+source-wordcount: '3497'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-De grundläggande funktionerna för kodutveckling liknar de i AEM as a Cloud Service jämfört med AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till AEM as a Cloud Service miljöer. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för Managed Services, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM as a Cloud Service miljöer.
+De grundläggande funktionerna för kodutveckling liknar de i AEM as a Cloud Service jämfört med AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till AEM as a Cloud Service miljöer. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för Managed Services, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM as a Cloud Service miljö för utveckling, scener och produktion. För snabb funktionsvalidering och felsökning innan du driftsätter dessa miljöer kan koden synkroniseras från en lokal miljö till en [Rapid Development Environment](/help/implementing/developing/introduction/rapid-development-environments.md).
 
 Uppdateringen av [AEM](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse från att trycka [egen kod](#customer-releases). Om den visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som kommer att distribueras högst upp. AEM versionsuppdateringar som görs därefter, som kommer att vara vanliga och automatiskt tillämpas. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
 
@@ -82,7 +82,7 @@ Läs mer om OSGI-konfiguration på [Konfigurera OSGi för AEM as a Cloud Service
 
 I vissa fall kan det vara användbart att förbereda innehållsändringar i källkontrollen så att den kan distribueras av Cloud Manager när en miljö har uppdaterats. Det kan till exempel vara rimligt att skapa startvärden för vissa rotmappsstrukturer eller att göra ändringar i redigerbara mallar för att aktivera principer i de för komponenter som uppdaterades i programdistributionen.
 
-Det finns två strategier för att beskriva innehållet som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och poinit-satser.
+Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
 
 ### Innehållspaket som kan ändras {#mutable-content-packages}
 
@@ -170,7 +170,6 @@ above appears to be internal, to confirm with Brian -->
 >[!CONTEXTUALHELP]
 >id="aemcloud_packagemanager"
 >title="Pakethanteraren - migrerar paket med ändringsbart innehåll"
->abstract="Utforska användningen av pakethanteraren i användningsfall där ett innehållspaket ska installeras som en engångslösning, vilket inkluderar import av specifikt innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer och mycket mer."
 >abstract="Utforska användningen av pakethanteraren i användningsfall där ett innehållspaket ska installeras som en engångslösning, vilket inkluderar import av visst innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer med mera."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en#cloud-migration" text="Content Transfer Tool"
 
@@ -279,6 +278,12 @@ Om ändringar görs i index är det viktigt att den blå versionen fortsätter a
 ### Konservativ kodning för återställningar {#conservative-coding-for-rollbacks}
 
 Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att en återställning till den blå versionen krävs. Det är klokt att se till att den blå koden är kompatibel med alla nya strukturer som skapas av den gröna versionen eftersom de nya strukturerna (allt innehåll som kan ändras) inte återställs. Om den gamla koden inte är kompatibel måste korrigeringar tillämpas i efterföljande kundreleaser.
+
+## Rapid Development Environment (RDE) {#rde}
+
+[Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md) (eller RDE i korthet) gör det möjligt för utvecklare att snabbt driftsätta och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som redan har befunnits fungera i en lokal utvecklingsmiljö.
+
+Till skillnad från vanliga utvecklingsmiljöer, som distribuerar kod via molnhanterarens pipeline, använder utvecklare kommandoradsverktyg för att synkronisera kod från en lokal utvecklingsmiljö till den lokala utvecklingsmiljön. När ändringarna har testats korrekt i en RDE bör de distribueras till en vanlig Cloud Development-miljö via Cloud Manager-pipelinen, som lägger koden genom lämpliga kvalitetsportar.
 
 ## Runmodes {#runmodes}
 
