@@ -2,7 +2,7 @@
 title: Hur skapar man en anpassad formulärmall?
 description: Skapa adaptiva formulärmallar för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 exl-id: a882cba2-c621-4ff7-a972-c504641b5639
-source-git-commit: fce9900a1979875fc725318a6cd735341d0b6275
+source-git-commit: b4cc89f32dcdddf93f12f087a20395e055ea85bb
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 0%
@@ -158,7 +158,7 @@ Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som 
 
 
 
-### Koppla ett formulärdatamodellschema till en mall {#associating-form-data-model-schema-in-template}
+## Koppla ett formulärdatamodellschema till en mall {#associating-form-data-model-schema-in-template}
 
 Författare kan associera en [!UICONTROL Form Data Model Schema] till en adaptiv formulärmall i mallredigeraren. Det gör att författare kan välja ett schema i mallredigeraren. När du kopplar ett schema till en mall och en formulärförfattare skapar ett formulär baserat på mallen, markeras schemat automatiskt för formuläret. Det hjälper formulärförfattare att reglera användningen av scheman och sparar tid även för formulärförfattare. Så här väljer du ett formulärdatamodellschema i mallredigeraren:
 
