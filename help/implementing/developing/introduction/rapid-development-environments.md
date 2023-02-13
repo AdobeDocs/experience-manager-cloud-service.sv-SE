@@ -1,9 +1,9 @@
 ---
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
-source-git-commit: 1d34834af35451b072afde536ee8aaa5155c58b3
+source-git-commit: 79f58c14625ed3e7a9d684006b3abbc97334ceeb
 workflow-type: tm+mt
-source-wordcount: '3062'
+source-wordcount: '3069'
 ht-degree: 0%
 
 ---
@@ -447,6 +447,7 @@ Därför rekommenderar vi att du distribuerar koden till en Cloud Development En
 
 Observera även följande:
 
+* De lokala redigeringssystemen innehåller inte någon förhandsgranskningsnivå
 * De lokala lagringsenheterna har för närvarande inte stöd för visning och felsökning av frontkod som distribuerats med molnhanteraren Front-End Pipeline.
 * De lokala redigeringssystemen stöder för närvarande inte prerelease-kanalen.
 
