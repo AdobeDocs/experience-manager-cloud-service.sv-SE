@@ -2,9 +2,9 @@
 title: Anpassa webbplatstemat
 description: Lär dig hur webbplatstemat byggs, hur du anpassar och hur du testar med AEM.
 exl-id: b561bee0-3a64-4dd3-acb8-996f0ca5bfab
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 9f5930fce8c2a7768cad696746a7c9fa3d8c2f9e
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,10 @@ När du känner dig trygg med temaprojektets struktur kan du starta den lokala p
 1. När proxyservern startas öppnas automatiskt en webbläsare för att `http://localhost:7001/`. Tryck eller klicka **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)** och logga in med de autentiseringsuppgifter för proxyanvändare som du får av AEM.
 
    ![Logga in lokalt](assets/sign-in-locally.png)
+
+   >[!TIP]
+   >
+   >Om du inte har dessa autentiseringsuppgifter kan du kontakta administratören och hänvisa till [Konfigurera avsnittet Proxyanvändare i artikeln Skapa webbplats från mall](/help/journey-sites/quick-site/create-site.md#proxy-user) på den här resan.
 
 1. När du är inloggad ändrar du URL:en i webbläsaren så att den pekar på sökvägen till exempelinnehållet som AEM har gett dig.
 
