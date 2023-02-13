@@ -2,9 +2,9 @@
 title: Generera arkivdokument för adaptiv Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: 90a10fd4e414f3457fa9658a50ccd0cf935fdb69
 workflow-type: tm+mt
-source-wordcount: '3112'
+source-wordcount: '3070'
 ht-degree: 1%
 
 ---
@@ -116,11 +116,16 @@ Efter att ha använt mallen ett tag bestämmer sig organisationen för att byta 
 
 ![Uppdaterad mall](assets/we-retail-new-invoice.png)
 
-Utvecklaren överför och tillämpar på den uppdaterade mallen på det adaptiva formuläret. Det adaptiva formuläret identifierar och visar automatiskt en lista med fält där bindningen har ändrats.
+<!--
 
-![Bindningsfel](assets/we-retail-binding-error.png)
+The developer uploads and applies to the updated template to the adaptive form. The adaptive form automatically detects and displays list of fields where binding has changed.
 
-Formulärutvecklaren binder adaptiva Forms-fält med motsvarande dokumentmall.
+![Binding Error](assets/we-retail-binding-error.png)
+
+The form developer binds Adaptive Forms fields with corresponding Document of Record template.
+
+-->
+
 >[!VIDEO](assets/we-retail-binding.mp4)
 
 När det adaptiva formuläret skickas genereras nu ett uppdaterat arkivdokument.
