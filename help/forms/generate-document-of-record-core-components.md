@@ -2,9 +2,9 @@
 title: Generera arkivdokument för adaptiv Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: 90a10fd4e414f3457fa9658a50ccd0cf935fdb69
+source-git-commit: b0e49296344a4f52a07699a308eb0cbeef897bb9
 workflow-type: tm+mt
-source-wordcount: '3070'
+source-wordcount: '3007'
 ht-degree: 1%
 
 ---
@@ -326,8 +326,10 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Mall**: Om du vill välja en anpassad mall bläddrar du och väljer en XDP-fil på [!DNL AEM Forms] server. Om du vill använda en mall som inte är tillgänglig på din [!DNL AEM Forms] ska du först överföra XDP-filen till din [!DNL AEM Forms] server.
       * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i postdokumentet PDF.
       * **Teckensnittsfamilj**: Teckensnittsfamilj för texten i PDF för dokumentreferens.
+
       * **Inkludera formulärobjekt som inte är bundna till datamodell**: När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet.
-      * **Uteslut dolda fält från postdokumentet**: När du ställer in egenskapen identifieras dolda fält för uteslutning från postdokumentet.
+      <!-- **Exclude hidden fields from the Document of Record**: Setting the property identifies the hidden fields for exclusion from Document of Record.-->
+
       * **Dölj beskrivning av paneler**: Om du ställer in egenskapen utesluts beskrivningen av panelen/tabellen från postdokumentet. Gäller för panel och tabell.
    1. **Egenskaper för formulärfält**:
       * **Visa endast de valda värdena för komponenterna Kryssruta och Alternativknapp**: När du anger egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
@@ -341,7 +343,6 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
       * **Ansvarsfriskrivning**: Text som anger omfattningen av rättigheter och skyldigheter i registreringsdokumentet.
       * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
-
       ![Överordnad sidegenskaper](/help/forms/assets/dorpropertiesimg.png)
    >[!NOTE]
    >
@@ -394,4 +395,4 @@ Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. 
 **Inställningar för formulärnivå**
 
 * **Inkludera obundna fält i DoR:** När du anger egenskapen inkluderas obundna fält från schemabaserade adaptiva formulär i postdokumentet. Som standard är det sant.
-* **Uteslut fält från DoR om de är dolda:** Ställ in egenskapen så att dolda fält utesluts från postdokument när formuläret skickas. När du aktiverar [Återvalidera på servern](/help/forms/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form)beräknar servern om de dolda fälten innan de utesluts från postdokumentet.
+<!-- **Exclude fields from DoR if hidden:** Set the property to exclude the hidden fields from Document of Record at form submission. When you enable [Revalidate on server](/help/forms/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form), the server recomputes the hidden fields before excluding those fields from the Document of Record.->>
