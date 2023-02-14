@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: 998b71903f3ea0c3c1082ecc800331811c2af8cf
+source-git-commit: c9d901db6873965643f5ababe544be3aa635a8e4
 workflow-type: tm+mt
-source-wordcount: '3992'
+source-wordcount: '4086'
 ht-degree: 0%
 
 ---
@@ -445,6 +445,16 @@ Så här jämför du språkkopior med överordnad:
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
    * Mer information om hur du använder funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
+
+## Flytta eller byta namn på en källsida {#move-source}
+
+Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#moving-or-renaming-a-page)om du översätter sidan igen efter flytten skapas en ny språkkopia baserad på det nya sidnamnet/den nya platsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där.
+
+Det bästa sättet i detta scenario är att följa denna procedur:
+1. Avpublicera de språkkopior som är associerade med den källsida som du vill flytta.
+1. Ta bort dem.
+1. Skapa nya språkkopior från den nyligen flyttade källsidan.
+1. Publicera de nya språkkopiorna.
 
 ## Importera och exportera översättningsjobb {#import-export}
 
