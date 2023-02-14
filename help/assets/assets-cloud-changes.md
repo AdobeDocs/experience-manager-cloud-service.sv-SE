@@ -4,9 +4,9 @@ description: Betydande ändringar i [!DNL Adobe Experience Manager Assets] in [!
 feature: Release Information
 role: User,Leader,Architect,Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: fe662a515a52bcf4648585366422064edce1a7fd
+source-git-commit: 2e4f57f86346074432996901985671939bcafeb0
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '997'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,6 @@ Om du vill göra en komplett validering av koden och processen, inklusive tillg�
 | Extrahera resurser från ZIP-arkiv | Stöds inte | Se [ZIP-extrahering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html#extractzip). |
 | Värderingar av tillgångar | Stöds inte | Värderingswidgeten i metadataramedigeraren stöds inte. |
 | filtret Innehållsdisposition | Stöds inte | Ett vanligt användningsexempel `ContentDispositionFilter` ska låta administratörer konfigurera [!DNL Experience Manager] för att skicka HTML-filer och öppna PDF i stället för att ladda ned dem. På Publish-instanserna kan du hantera dispositionen med Dispatcher-konfigurationen. På författarinstanserna rekommenderar Adobe inte att du ändrar Content Disposition-huvudet. Se [Innehållsdispositionsfilter i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/content-disposition-filter.html). |
-| [Hämta rapport](/help/assets/asset-reports.md) | Stöds inte | För tillfället är den hämtningsrapport som innehåller information om resursanvändning inte tillgänglig. Se [ladda ned rapport i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html). |
 | Produktfotografimall | Stöds inte | Se [produktfotofotografimall i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/managing-product-information.html). |
 | Smart översättning | Stöds inte | [Smart översättning](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/translation/smart-translation-search-feature-video-use.html) stöds inte i [!DNL Experience Manager] som [!DNL Cloud Service]. |
 | WebDAV | Stöds inte | Information om alternativ finns i [[!DNL Creative Cloud] integration](/help/assets/aem-cc-integration-best-practices.md) eller [Referensmaterial för utvecklare](/help/assets/developer-reference-material-apis.md). |
