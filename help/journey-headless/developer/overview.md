@@ -3,9 +3,9 @@ title: AEM Headless CMS Developer Journey
 description: Läs om headless-utveckling med Adobe Experience Manager (AEM) som Headless CMS. Lär dig hur du använder funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API för att leverera headless-innehåll.
 landing-page-description: Få en förståelse för innehållsleverans och implementering utan problem. Läs mer om hur ni utvecklar er strategi inom ert företag.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: b3a3fbaf9a18e15cfba4f240b6f3abdd9aed077c
+source-git-commit: 39a8b505ebf323ea18d014d9603356239dc39646
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1086'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 1%
 Välkommen till dokumentationen för utvecklare som inte använder Adobe Experience Manager headless CMS!
 
 Lär dig mer om de kraftfulla och flexibla headless-funktionerna, deras funktioner och hur du kan utnyttja dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_headless_developer_resources"
+>title="AEM resurser för utvecklare utan headless samt avancerad dokumentation"
+>abstract="Allt ni behöver för att lära er om AEM headless CMS och skapa och leverera bättre applikationer och snabbare upplevelser."
+>additional-url="https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html" text="AEM Headless developer resources"
 
 ## Introduktion {#introduction}
 
@@ -56,7 +62,7 @@ Vi kommer att ta upp många ämnen på den här resan, som kommer att ge dig gru
 | 2 | [Komma igång med AEM Headless as a Cloud Service](getting-started.md) | Läs om AEM Headless-krav |
 | 3 | [Vägen till din första upplevelse med AEM Headless](path-to-first-experience.md) | Konfigurera utvecklingsmiljön och lär dig hur du integrerar en enkel app med AEM Headless |
 | 4 | [Så här modellerar du innehåll](model-your-content.md) | Lär dig modellera innehållsstrukturen. |
-| 5 | [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) | Lär dig hur du använder GraphQL-frågor för att komma åt innehållet i innehållsfragment. |
+| 5 | [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) | Lär dig hur du använder GraphQL-frågor för att komma åt innehåll i innehållsfragment. |
 | 6 | [Så här uppdaterar du innehåll via AEM Assets API:er](update-your-content.md) | Lär dig hur du använder REST API för att komma åt och uppdatera innehåll i innehållsfragment. |
 | 7 | [Sammanställ allt - appen och ditt innehåll i AEM Headless](put-it-all-together.md) | Lär dig hur du tar ditt AEM och förbereder det för publicering med AEM Headless SDK. |
 | 8 | [Så här lever du med ditt headless-program](go-live.md) | Lär dig hur du distribuerar programmet live och tar din lokala kod i Git och flyttar den till Cloud Manager Git för CI/CD-pipeline. |
