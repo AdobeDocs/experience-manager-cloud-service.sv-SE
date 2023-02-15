@@ -1,9 +1,9 @@
 ---
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
-source-git-commit: 79f58c14625ed3e7a9d684006b3abbc97334ceeb
+source-git-commit: e5a9f497e753f328ff14487f4985541c1c77ae0e
 workflow-type: tm+mt
-source-wordcount: '3069'
+source-wordcount: '3259'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,11 @@ För att kunna driftsätta ändringar kräver de aktuella utvecklingsmiljöerna 
 Tack vare de lokala redigeringssystemen kan utvecklare snabbt driftsätta och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som är beprövade i en lokal utvecklingsmiljö.
 
 När ändringarna har testats i en RDE kan de distribueras till en vanlig molnutvecklingsmiljö via Cloud Managers pipeline.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3415582/?quality=12&learn=on)
+
+
+Du kan titta på ytterligare videofilmer som visar [konfigurera](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html), [hur man använder den](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html)och [utvecklingslivscykel](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/development-life-cycle.html) med RDE.
 
 ## Introduktion {#introduction}
 
@@ -138,6 +143,7 @@ När du har lagt till en RDE för ditt program med Cloud Manager kan du interage
    >aio plugins:install @adobe/aio-cli-plugin-cloudmanager
    >```
 
+Mer information och demonstrationer finns i [konfigurera en RDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html) videosjälvstudiekurs.
 
 ## Använda RDE under utvecklingen av en ny funktion {#using-rde-while-developing-a-new-feature}
 
@@ -256,13 +262,23 @@ där svaret för en lyckad distribution liknar följande:
 
 <u>Distribuera en Apache/Dispatcher-konfiguration</u>
 
-Hela mappstrukturen måste vara i form av en ZIP-fil för den här typen av konfiguration. Du kan komprimera den genom att köra det här kommandot från roten i en dispatcherkonfigurationsmapp:
+Hela mappstrukturen måste vara i form av en ZIP-fil för den här typen av konfiguration.
 
-`zip -y -r dispatcher.zip`
+Från `dispathcer` i ett AEM projekt kan du zippa upp dispatcherkonfigurationen genom att köra kommandot nedan maven:
+
+`mvn clean package`
+
+eller använda zip-kommandot nedan från `src` katalogen `dispatcher` modul:
+
+`zip -y -r dispatcher.zip .`
 
 distribuera sedan konfigurationen med det här kommandot:
 
-`aio aem:rde:install -t dispatcher-config dispatcher-wknd-2.1.0.zip`
+`aio aem:rde:install target/aem-guides-wknd.dispatcher.cloud-X.X.X-SNAPSHOT.zip`
+
+>[!TIP]
+>
+>Kommandot ovan förutsätter att du distribuerar [WKND](https://github.com/adobe/aem-guides-wknd) projektets dispatcherkonfigurationer. Se till att ersätta `X.X.X` med motsvarande WKND-projektversionsnummer eller projektspecifikt versionsnummer när du distribuerar projektets dispatcherkonfiguration.
 
 En lyckad distribution genererar ett svar som liknar följande:
 
@@ -342,6 +358,8 @@ aio aem:rde:delete com.adobe.granite.csrf.impl.CSRFFilter
 #13: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on author - done by karl at 2022-09-12T22:01:01.955Z
 #14: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on publish - done by karl at 2022-09-12T22:01:12.979Z
 ```
+
+Mer information och demonstrationer finns i [använda RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html) videosjälvstudiekurs.
 
 ## Återställ {#reset-rde}
 
@@ -464,7 +482,7 @@ En mellanliggande modell är en modell där en organisation köper ett antal oli
 
 ## Hur skiljer sig en AEM Forms Cloud Service Rapid Development Environment (RDE) från andra miljöer? {#how-are-forms-rds-different-from-cloud-development-environments}
 
-Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environment för att snabbt utveckla adaptiva Forms, arbetsflöden och anpassningar som att anpassa kärnkomponenter, integreringar med tredjepartssystem med mera. AEM Forms Cloud Service Rapid Development Environment (RDE) saknar stöd för kommunikations-API:er och för funktioner som kräver ett arkivdokument, som att generera ett arkivdokument när ett adaptivt formulär skickas. Följande AEM Forms-funktioner är inte tillgängliga i en Rapid Development Environment (RDE):
+Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environment för att snabbt utveckla adaptiva Forms, arbetsflöden och anpassningar som att anpassa kärnkomponenter, integreringar med tredjepartssystem med mera. AEM Forms Cloud Service Rapid Development Environment (RDE) saknar stöd för kommunikations-API:er och för funktioner som kräver ett dokument för registrering, som att generera ett dokument för registrering när ett adaptivt formulär skickas. Följande AEM Forms-funktioner är inte tillgängliga i en Rapid Development Environment (RDE):
 
 * Konfigurera ett postdokument för ett adaptivt formulär
 * Generera ett registreringsdokument när ett adaptivt formulär skickas eller när ett arbetsflödessteg tas
@@ -474,5 +492,9 @@ Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environm
 
 >[!NOTE]
 >
-> Gränssnittet i Rapid Development Environment (RDE) och andra Cloud Service för Forms förändras inte. Alla alternativ som är relaterade till Dokumentformat, som att välja ett dokument med en postmall för ett anpassat formulär, fortsätter att visas i användargränssnittet. De här miljöerna har inga kommunikations-API:er och dokumentfunktioner för att testa sådana alternativ. När du väljer ett alternativ som kräver funktioner för kommunikations-API:er eller dokument med post utförs ingen åtgärd och ett felmeddelande visas eller returneras.
+> Det är ingen skillnad på användargränssnittet i Rapid Development Environment (RDE) och andra Cloud Service för Forms. Alla alternativ som är relaterade till Dokumentformat, som att välja ett dokument med en postmall för ett anpassat formulär, fortsätter att visas i användargränssnittet. De här miljöerna har inga kommunikations-API:er och dokumentfunktioner för att testa sådana alternativ. När du väljer ett alternativ som kräver funktioner för kommunikations-API:er eller dokument med post utförs ingen åtgärd och ett felmeddelande visas eller returneras.
+
+## RDE, genomgång
+
+Om du vill veta mer om RDE på AEM as a Cloud Service kan du läsa [videosjälvstudiekurs som visar hur du konfigurerar den, hur du använder den och utvecklingscykeln](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
 
