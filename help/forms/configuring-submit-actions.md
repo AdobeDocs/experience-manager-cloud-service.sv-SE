@@ -2,9 +2,9 @@
 title: Konfigurera en Skicka-åtgärd för ett anpassat formulär
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: 6a124b476b4dd18ea38d35438866a07958918461
 workflow-type: tm+mt
-source-wordcount: '2891'
+source-wordcount: '2957'
 ht-degree: 0%
 
 ---
@@ -185,6 +185,10 @@ Så här ansluter du AEM Forms till din Microsoft Sharepoint-lagring:
    * Lägg till API-behörigheter `offline_access` och `Sites.Manage.All` för att ge läs- och skrivbehörigheter.
    * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft Azure-portalen.
 
+   >[!NOTE]
+   >
+   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program har konfigurerats att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
+
 1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning visas `Connection Successful` visas.
 
 1. Välj nu **SharePoint Site** > **Dokumentbibliotek** > **SharePoint-mapp**, för att spara data.
@@ -239,6 +243,10 @@ Så här ansluter du AEM Forms till din Microsoft OneDrive-lagring:
    * Lägg till omdirigerings-URI som i Microsoft Azure-portalen som `https://[author-instance]/libs/cq/onedrive/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
    * Lägg till API-behörigheter `offline_access` och `Files.ReadWrite.All` för att ge läs- och skrivbehörigheter.
    * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft Azure-portalen.
+
+   >[!NOTE]
+   >
+   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program har konfigurerats att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
 
 1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning visas `Connection Successful` visas.
 
