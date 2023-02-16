@@ -2,7 +2,7 @@
 title: Krav för verktyget Innehållsöverföring
 description: Krav för verktyget Innehållsöverföring
 exl-id: 41a9cff1-4d89-480c-b9fc-5e8efc2a0705
-source-git-commit: 4ccebe19d38f1ece58ea7170344ef2fd86a513d2
+source-git-commit: 048f358ed125e3627896aeeb86242340e2db9272
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Läs alla överväganden som anges nedan:
 | Överväganden | Vad stöds för närvarande? |
 |--- |--- |
 | AEM | Verktyget Innehållsöverföring kan endast köras i AEM 6.3 eller senare. |
-| Storlek på segmentlager | En befintlig databas som har mindre än 55 miljoner JCR-noder och upp till 83 GB (komprimerad storlek online) på *Upphovsman* och 50 GB på *Publicera* stöds för närvarande. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för segmentbutikens storlek över dessa gränser. |
+| Storlek på segmentlager | En befintlig databas som har mindre än 55 miljoner JCR-noder och upp till 250 GB (komprimerad storlek online) på *Upphovsman* och 50 GB på *Publicera* stöds för närvarande. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för segmentbutikens storlek över dessa gränser. |
 | Total storlek på innehållsdatabas <br>*(segmentbutik + datalager)* | Verktyget Innehållsöverföring är utformat för att överföra innehåll upp till 20 TB för datalagringstypen. Allt som är större än 20 TB stöds för närvarande inte. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för innehåll som är större än 20 TB. <br>Om du vill snabba upp innehållsöverföringsprocessen avsevärt för stora databaser kan du välja [förkopia](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en#setting-up-pre-copy-step) kan användas. Detta gäller för datalagrets fildatalager, Amazon S3 och Azure Data Store-typer. För Amazon S3 och Azure Data Store stöds databasstorlekar större än 20 TB. |
 | Total Lucene-indexstorlek | Total Lucene-indexstorlek på högst 25 GB, exklusive `/oak:index/lucene` och `/oak:index/damAssetLucene` stöds för närvarande. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för indexstorlek över denna gräns. |
 | Nodnamnslängd | Längden på ett nodnamn måste vara 150 byte eller mindre när nodens överordnade sökväg är >= (lika med eller större än) 350 byte. Dessa nodnamn måste förkortas till &lt;= 150 byte för att det ska gå att använda dokumentnodarkivet på AEM as a Cloud Service. Inställningarna misslyckas om de långa nodnamnen inte är fasta. |
