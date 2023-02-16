@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation för 2022.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 6a4e9015e18556c04a71cba0dfa6c7f688c36cb6
+exl-id: 0eff8100-5990-4553-8373-445fb7e6fb27
+source-git-commit: 7b21a8af886c8e1f209e3b7cc5d94de5c58be1ac
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 0%
 
 ---
-
 
 # Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
@@ -78,7 +78,7 @@ Titta på videon Augusti 2022 Release Overview om du vill se en sammanfattning a
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md).
+Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här.](/help/implementing/cloud-manager/release-notes/current.md)
 
 ## Migreringsverktyg {#migration-tools}
 

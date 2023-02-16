@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 761f1605-c421-4f3a-8f90-af23f4f047b1
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 7b21a8af886c8e1f209e3b7cc5d94de5c58be1ac
 workflow-type: tm+mt
 source-wordcount: '1153'
 ht-degree: 0%
@@ -95,7 +95,7 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
    ![repoblästeranteckningar](/help/release-notes/assets/repobrowserrelnotes.png)
 
-* Autentiseringsuppgifterna som används för att autentisera API-anrop från server till server (t.ex. för GraphQL API-begäranden) kan nu uppdateras på ett självbetjäningssätt från utvecklarkonsolen innan de förfaller. Se [dokumentation](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) för mer information.
+* Autentiseringsuppgifterna som används för att autentisera API-anrop från server till server (t.ex. för GraphQL API-begäranden) kan nu uppdateras på ett självbetjäningssätt från Developer Console innan de går ut. Se [dokumentation](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) för mer information.
 
 * Underhållsuppgifter för rensning av versioner och granskningslogg som inte tidigare aktiverats kommer att aktiveras för nya miljöer. Se de associerade värdena i [Underhållsaktivitet](/help/operations/maintenance.md) artikel.
 
@@ -103,7 +103,7 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md).
+Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här.](/help/implementing/cloud-manager/release-notes/current.md)
 
 ## Content Transfer Tool {#ctt-release}
 

@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: b1c4706d2d148c136eed66b0bff6f792a89e9d8c
+exl-id: b339ab48-e836-4589-a573-9c50917b9280
+source-git-commit: 7b21a8af886c8e1f209e3b7cc5d94de5c58be1ac
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 0%
 
 ---
-
 
 # Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
@@ -120,7 +120,7 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md).
+Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här.](/help/implementing/cloud-manager/release-notes/current.md)
 
 ## Migreringsverktyg {#migration-tools}
 

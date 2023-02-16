@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1b867582-e34c-435b-b8f8-fc71dddcaccb
-source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
+source-git-commit: 7b21a8af886c8e1f209e3b7cc5d94de5c58be1ac
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 0%
@@ -97,7 +97,7 @@ Om du fortsätter att använda äldre versioner av TLS som 1.0, 1.1 kan du förl
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes-cloud-manager/release-notes-cm-current.md).
+Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här.](/help/implementing/cloud-manager/release-notes/current.md)
 
 ## Migreringsverktyg {#migration-tools}
 
