@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: eacd418ead2cc754a055449a99037b6541f55f6a
+source-git-commit: d07a4fd0a335295d399057ea1eef567e757e2d92
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1343'
 ht-degree: 6%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 6%
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
 
 Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns i [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+
+Endast version 2.0.0 och senare stöds, och du bör använda den senaste versionen.
 
 >[!NOTE]
 >Hämta Content Transfer Tool från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-portalen.

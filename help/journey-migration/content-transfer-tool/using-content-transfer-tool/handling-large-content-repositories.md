@@ -2,9 +2,9 @@
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
 exl-id: 21bada73-07f3-4743-aae6-2e37565ebe08
-source-git-commit: 1a2ff747361bb0def718bee2e8eb0a1055b8efcf
+source-git-commit: d07a4fd0a335295d399057ea1eef567e757e2d92
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1771'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ Kort och gott: du vill troligen hämta binärfilen för Linux x86-64 från [AzCo
 
 Stöd för AzCopy för Amazon S3, Azure Blob Storage och File Data Store ingår i den senaste CTT-versionen.
 Du kan hämta den senaste versionen av CTT från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) portal.
-
+Observera att endast version 2.0.0 och senare stöds, och det är lämpligt att använda den senaste versionen.
 
 ### 3. Konfigurera en azcopy.config-fil {#configure-azcopy-config-file}
 
