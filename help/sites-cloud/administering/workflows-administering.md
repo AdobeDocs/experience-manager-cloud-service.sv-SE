@@ -4,9 +4,9 @@ description: Lär dig hur du administrerar arbetsflödesinstanser
 feature: Administering
 role: Admin
 exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
-source-git-commit: c03959a9acc22a119b2a4c8c473abc84b0b9bf0d
+source-git-commit: 594efd18c7358505c859ca7e6269a3fc5e517926
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,12 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
    ![wf-97-1](/help/sites-cloud/administering/assets/wf-97-1.png)
 
+   >[!NOTE]
+   >
+   >
+   >För att ett arbetsflöde ska kunna avslutas eller avbrytas måste det vara i ett läge där användaren väntar på att göra något, t.ex. i ett deltagarsteg. Om du försöker avbryta ett arbetsflöde som för närvarande kör jobb (aktiva trådar som körs) kanske inte resultatet blir som du förväntar dig.
+
+
 ## Visa arkiverade arbetsflöden {#viewing-archived-workflows}
 
 1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
@@ -76,6 +82,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    >
    >* användning av **Avsluta** åtgärd
    >* när en sida, som är underställd ett arbetsflöde, tas bort (framtvingar), avslutas arbetsflödet
+
 
 
 1. Markera ett specifikt objekt och sedan **Öppna historik** för mer information:
