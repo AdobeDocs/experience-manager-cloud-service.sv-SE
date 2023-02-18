@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: d711057024e62aab00d76f40a729ee59590bbb59
+source-git-commit: 1fb28674df6ea45589d3b44237edfb51ef167756
 workflow-type: tm+mt
 source-wordcount: '9893'
 ht-degree: 3%
@@ -1409,8 +1409,7 @@ dependency>
 </dependency> 
 ```
 
-+++
-**Exempel på serverlet**
++++**Exempel på serverlet**
 
 ```java
 @Component
@@ -1487,8 +1486,7 @@ public class ManifestServlet extends HttpServlet {
 
 +++
 
-+++
-**Svarsklass för serverlet**
++++**Svarsklass för serverlet**
 
 ```java
 public class ManifestUrl extends VideoResponse { 
@@ -1516,9 +1514,7 @@ public abstract class VideoResponse {
 
 +++
 
-
-+++
-**Konstanter som serverleten refererar till**
++++**Konstanter som serverleten refererar till**
 
 ```java
 public final class Constants { 
@@ -1535,8 +1531,7 @@ public final class Constants {
 
 +++
 
-+++
-**ServletContext**
++++**ServletContext**
 
 Montera ovanstående servett med en `servletContext`. Följande är ett exempel på `servletContext`.
 
