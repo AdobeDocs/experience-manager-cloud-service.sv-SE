@@ -5,16 +5,16 @@ contentOwner: Rick Brough
 feature: Asset Management,Video Profiles,Renditions
 role: User
 exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b35455652bd16b6c56c0bd75ee87acfb50473f1c
 workflow-type: tm+mt
-source-wordcount: '3479'
+source-wordcount: '3528'
 ht-degree: 6%
 
 ---
 
 # Videoprofiler för Dynamic Media{#video-profiles}
 
-Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. När du kodar dina primära källvideofilmer med den adaptiva videokodningsprofilen justeras videospelaren automatiskt i videoströmmens kvalitet under uppspelningen baserat på internetanslutningshastigheten hos dina kunder. Den här åtgärden kallas adaptiv direktuppspelning.
+Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. När du kodar dina primära källvideofilmer med den adaptiva videokodningsprofilen justeras videospelaren automatiskt i videoströmmens kvalitet vid uppspelning baserat på internetanslutningshastigheten hos dina kunder. Den här åtgärden kallas adaptiv direktuppspelning.
 
 Följande är andra faktorer som avgör kvaliteten på videoklipp:
 
@@ -45,7 +45,7 @@ Se även [Profiler för bearbetning av metadata, bilder och video](/help/assets/
 
 ## Förinställningar för adaptiv videokodning {#adaptive-video-encoding-presets}
 
-I följande tabell visas kodningsprofiler med bästa praxis för adaptiv videoströmning till mobiler, surfplattor och stationära datorer. Du kan använda de här förinställningarna för video med alla proportioner.
+I följande tabell visas de effektivaste strategierna för kodning av profiler för adaptiv videoströmning till mobiler, surfplattor och stationära datorer. Du kan använda de här förinställningarna för video med alla proportioner.
 
 <table>
  <tbody>
@@ -104,7 +104,7 @@ Den största videofilstorleken som stöds för smart beskärning är följande k
 * 30 bildrutor per sekund (FPS).
 * Filstorleken är 300 MB.
 
-Adobe Sensei är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s. Om videon har en högre bildrutefrekvens minskar den maximala videouppspelningstiden. Exempelvis måste en 60 bildrutevideo vara två och en halv minut lång för att kunna hanteras av Adobe Sensei och smart beskärning.
+Adobe Sensei är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s. Om videon har en högre bildrutefrekvens minskar den maximala längden för videon. Exempelvis måste en 60 bildrutevideo vara två och en halv minut lång för att kunna hanteras av Adobe Sensei och smart beskärning.
 
 ![Smart Crop for Video](assets/smart-crop-video.png)
 
@@ -112,7 +112,7 @@ Adobe Sensei är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s
 >
 >För att smart beskärning av video ska fungera måste du inkludera en eller flera förinställningar för videokodning med din videoprofil.
 
-Om du vill använda smart beskärning för video skapar du en adaptiv eller progressiv videokodningsprofil. Som en del av din profil använder du **[!UICONTROL Smart Crop Ratio]** för att markera fördefinierade proportioner. När du har definierat dina förinställningar för videokodning kan du till exempel lägga till en&quot;Mobile Landscape&quot;-definition med proportionerna 16x9 och en&quot;Mobile Portrait&quot;-definition med proportionerna 9x16. Andra proportioner eller beskärningsproportioner som du kan välja mellan är 1x1, 4x3 och 4x5.
+Om du vill använda smart beskärning för video skapar du en adaptiv eller progressiv videokodningsprofil. Som en del av din profil använder du **[!UICONTROL Smart Crop Ratio]** för att markera fördefinierade proportioner. När du har definierat dina förinställningar för videokodning kan du till exempel lägga till en&quot;Mobile Landscape&quot;-definition med proportionerna 16x9 och en&quot;Mobile Portrait&quot;-definition med proportionerna 9x16. Andra proportioner eller beskärningsproportioner från vilka du kan välja att inkludera 1x1, 4x3 och 4x5.
 
 ![Redigera en videokodningsprofil med smart beskärning](assets/edit-smart-crop-video2.png)
 
@@ -243,7 +243,7 @@ Nu kan du använda profilen för mappar som innehåller videoklipp. Se [Tillämp
 
 ## Använda egna parametrar för videokodning {#using-custom-added-video-encoding-parameters}
 
-Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerade videokodningsparametrar som inte finns i användargränssnittet när du skapar eller redigerar en videoprofil i Experience Manager. Du kan lägga till en eller flera avancerade parametrar, till exempel minBitrate och maxBitrate, i den befintliga profilen.
+Du kan redigera en befintlig kodningsprofil för video för att dra nytta av avancerade videokodningsparametrar som inte finns i användargränssnittet när du skapar eller redigerar en videoprofil i Experience Manager. Du kan lägga till en eller flera avancerade parametrar, till exempel minBitrate och maxBitrate, i den befintliga profilen.
 
 **Så här använder du anpassade kodningsparametrar för video:**
 
@@ -274,7 +274,7 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
    <td><code>keyframe</code></td>
    <td>Målantalet bildrutor mellan nyckelbildrutor. Beräkna det här värdet så att du kan generera en nyckelbildruta var 2:10:e sekund. Exempel: vid 30 bildrutor per sekund är nyckelbildruteintervallet 60-300.<br /> <br /> Lägre intervall för nyckelrutor förbättrar strömsöknings- och strömbrytningsbeteendet för adaptiv videokodning och kan även förbättra kvaliteten för videoklipp som har mycket rörelse. Men eftersom nyckelrutor ökar filstorleken resulterar ett lägre nyckelruteintervall vanligtvis i en lägre total videokvalitet med en viss bithastighet.</td>
    <td><code>String</code></td>
-   <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS (HTTP Live Streaming) är 60-90.</p> </td>
+   <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS eller DASH (adaptive streaming) är 60-90. (Om du vill visa eller använda DASH måste det först aktiveras av Adobe tekniska support på ditt konto. Se <a href="/help/assets/dynamic-media/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> </td>
   </tr>
   <tr>
    <td><code>minBitrate</code></td>
@@ -292,7 +292,7 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
    <td><code>audioBitrateCustom</code></td>
    <td>Ange värde till <code>true</code> för att tvinga fram en konstant bithastighet för ljudströmmen, om detta stöds av ljudkodeken.</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>/<code>false</code></p> <p>Standard är <code>false</code>.</p> <p>Rekommenderat värde för HLS (HTTP Live Streaming) är <code>false</code>.</p> <p> </p> </td>
+   <td><p><code>true</code>/<code>false</code></p> <p>Standard är <code>false</code>.</p> <p>Rekommenderat värde för HLS eller DASH är <code>false</code>. (Om du vill visa eller använda DASH måste det först aktiveras av Adobe tekniska support på ditt konto. Se <a href="/help/assets/dynamic-media/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>

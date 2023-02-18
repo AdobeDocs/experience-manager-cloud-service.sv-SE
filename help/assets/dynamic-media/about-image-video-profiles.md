@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Video Profiles
 role: Admin,User
 exl-id: 8c8f0a57-13f5-4903-8d76-bfb6ee83323c
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: 8b878a26653874c94a671a404d9b35740e43a514
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1324'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Se även [Bästa metoderna för att ordna dina digitala resurser så att du kan 
 
 Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat.
 
-Anta att du har skapat en Dynamic Media-bildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att nu ha markerat och laddat upp resurserna till mappen igen kör du bara *Scene7: Bearbeta resurser igen* arbetsflöde.
+Anta att du har skapat en Dynamic Media-bildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att behöva välja och ladda upp resurserna till mappen igen kör du bara *Scene7: Bearbeta resurser igen* arbetsflöde.
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bildprofil eller videoprofil, eller redan har använt en bildprofil eller videoprofil, kan du köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 

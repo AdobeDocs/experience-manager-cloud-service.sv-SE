@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Viewer Presets,Viewers
 role: User
 exl-id: da2e1a10-f54b-440e-b70c-f04ad4caeac1
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b35455652bd16b6c56c0bd75ee87acfb50473f1c
 workflow-type: tm+mt
-source-wordcount: '4084'
+source-wordcount: '4252'
 ht-degree: 8%
 
 ---
@@ -440,6 +440,19 @@ Se [Specialöverväganden när du skapar en Carousel Banner Viewer-förinställn
 
 1. (Valfritt) I början av sidan Redigera visningsförinställning väljer du **[!UICONTROL Desktop]**, **[!UICONTROL Tablet]**, eller **[!UICONTROL Phone]** för att unikt definiera visuella format för olika enhets- och skärmtyper.
 1. På sidan Redigerare för visningsförinställning väljer du **[!UICONTROL Behavior]** -fliken. Du kan också markera ett visuellt element i visningsprogrammet och välja det för konfiguration.
+För *VideoPlayer* text, under **[!UICONTROL Modifiers]** > **[!UICONTROL Playback]** kan du välja mellan tre alternativ för adaptiv direktuppspelning:
+
+   * **[!UICONTROL dash]** - Videorna spelas endast upp med bindestreck.
+   * **[!UICONTROL hls]** - Videoströmmar endast som hls.
+   * **[!UICONTROL auto]** - Bästa praxis. Skapandet av DASH- och HLS-strömmar är lagringsoptimerat. Därför rekommenderar Adobe att du alltid väljer **[!UICONTROL auto]** som uppspelningstyp. Videoklipp direktuppspelas som streck, hls eller progressiv, som i följande:
+      * Om webbläsaren stöder DASH används DASH-direktuppspelning först.
+      * Om webbläsaren inte stöder DASH används HLS-direktuppspelning, andra gången.
+      * Om webbläsaren inte stöder DASH eller HLS används den progressiva uppspelningen sist.
+
+   >[!NOTE]
+   >
+   >Så här visar och använder du **[!UICONTROL dash]** måste den först aktiveras av Adobe tekniska support på ditt konto. Se [Aktivera DASH på ditt konto](/help/assets/dynamic-media/video.md#enable-dash).
+
 1. Välj en komponent vars beteenden du vill ändra i listrutan **[!UICONTROL Selected Type]**.
 
    Många komponenter i den visuella redigeraren har en detaljerad beskrivning. Dessa beskrivningar visas i blå rutor när du expanderar en komponent för att visa dess associerade parametrar.
@@ -454,9 +467,13 @@ Se [Specialöverväganden när du skapar en Carousel Banner Viewer-förinställn
    >När du har skrivit ett värde i textfältet kan du markera någon annanstans i användargränssnittet för att skicka ändringen och stänga det virtuella tangentbordet. Om du väljer **[!UICONTROL Enter]**, utförs ingen åtgärd.
 
 1. I sidans övre högra hörn väljer du **[!UICONTROL Save]**.
-1. Publicera din nya visningsförinställning. Du måste publicera förinställningen innan du kan använda den på webbplatsen.
+1. Publicera din nya visningsförinställning. Du måste publicera förinställningen så att du kan använda den URL som skapas på webbplatsen.
 
    Se [Förinställningar för publiceringsvisningsprogram](#publishing-viewer-presets).
+
+   >[!IMPORTANT]
+   >
+   >För gamla videor som använder en adaptiv direktuppspelningsprofil fortsätter URL-adressen att spelas som vanligt - med HLS-direktuppspelning - tills du [bearbeta om videoresurserna](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets). Efter ombearbetningen fortsätter samma URL-adress att fungera, men nu med *båda* DASH- och HLS-strömning är aktiverad.
 
 ### Specialöverväganden när du skapar en interaktiv visningsförinställning {#special-considerations-for-creating-an-interactive-viewer-preset}
 
@@ -481,7 +498,7 @@ När du skapar eller redigerar en förinställning för Interactive Video Viewer
  </tbody>
 </table>
 
-**Om beteendet för automatisk rullning i det interaktiva visningsprogrammet:**
+**Om automatisk rullning i Interactive Video Viewer:**
 
 Funktionen för automatisk rullning för miniatyrbilder i det interaktiva visningsprogrammet fungerar oberoende av det visningsläge du väljer.
 
