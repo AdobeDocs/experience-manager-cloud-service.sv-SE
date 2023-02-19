@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Asset Management,Video Profiles,Renditions
 role: User
 exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
-source-git-commit: b35455652bd16b6c56c0bd75ee87acfb50473f1c
+source-git-commit: 41e17fdae57244d83c8ee715326a0ee41488ba60
 workflow-type: tm+mt
-source-wordcount: '3528'
+source-wordcount: '3530'
 ht-degree: 6%
 
 ---
@@ -274,7 +274,7 @@ Du kan redigera en befintlig kodningsprofil för video för att dra nytta av ava
    <td><code>keyframe</code></td>
    <td>Målantalet bildrutor mellan nyckelbildrutor. Beräkna det här värdet så att du kan generera en nyckelbildruta var 2:10:e sekund. Exempel: vid 30 bildrutor per sekund är nyckelbildruteintervallet 60-300.<br /> <br /> Lägre intervall för nyckelrutor förbättrar strömsöknings- och strömbrytningsbeteendet för adaptiv videokodning och kan även förbättra kvaliteten för videoklipp som har mycket rörelse. Men eftersom nyckelrutor ökar filstorleken resulterar ett lägre nyckelruteintervall vanligtvis i en lägre total videokvalitet med en viss bithastighet.</td>
    <td><code>String</code></td>
-   <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS eller DASH (adaptive streaming) är 60-90. (Om du vill visa eller använda DASH måste det först aktiveras av Adobe tekniska support på ditt konto. Se <a href="/help/assets/dynamic-media/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> </td>
+   <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS eller DASH (adaptive streaming) är 60-90. (Om du vill använda DASH för dina videor måste det först aktiveras av Adobe tekniska support på ditt konto. Se <a href="/help/assets/dynamic-media/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> </td>
   </tr>
   <tr>
    <td><code>minBitrate</code></td>
@@ -292,7 +292,7 @@ Du kan redigera en befintlig kodningsprofil för video för att dra nytta av ava
    <td><code>audioBitrateCustom</code></td>
    <td>Ange värde till <code>true</code> för att tvinga fram en konstant bithastighet för ljudströmmen, om detta stöds av ljudkodeken.</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>/<code>false</code></p> <p>Standard är <code>false</code>.</p> <p>Rekommenderat värde för HLS eller DASH är <code>false</code>. (Om du vill visa eller använda DASH måste det först aktiveras av Adobe tekniska support på ditt konto. Se <a href="/help/assets/dynamic-media/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> <p> </p> </td>
+   <td><p><code>true</code>/<code>false</code></p> <p>Standard är <code>false</code>.</p> <p>Rekommenderat värde för HLS eller DASH är <code>false</code>. (Om du vill använda DASH för dina videor måste det först aktiveras av Adobe tekniska support på ditt konto. Se <a href="/help/assets/dynamic-media/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>
