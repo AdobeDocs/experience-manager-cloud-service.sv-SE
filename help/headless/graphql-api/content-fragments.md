@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 17b0604cb192a375c3097255812c89caa8580d5b
+source-git-commit: e156ed7348815e02c942cb8feace70c675956752
 workflow-type: tm+mt
-source-wordcount: '4173'
+source-wordcount: '4203'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ Om du till exempel:
 
 >[!NOTE]
 >
->Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
+>Detta är viktigt att notera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
 Schemat hanteras via samma slutpunkt som GraphQL-frågorna, där klienthanteraren hanterar det faktum att schemat anropas med tillägget `GQLschema`. Du kan till exempel utföra en enkel `GET` begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
 
@@ -556,6 +556,10 @@ Ytterligare exempel finns i:
 
 ## Sortering {#sorting}
 
+>[!NOTE]
+>
+>För bästa prestanda bör du tänka på [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-paging-sorting-content-update.md).
+
 Med den här funktionen kan du sortera frågeresultaten efter ett angivet fält.
 
 Sorteringskriterierna:
@@ -593,8 +597,6 @@ Och dessutom:
 }
 ```
 
-<!-- to be included? -->
-
 Du kan även sortera ett fält i ett kapslat fragment med formatet `nestedFragmentname.fieldname`.
 
 >[!NOTE]
@@ -620,6 +622,10 @@ query {
 ```
 
 ## Sidindelning {#paging}
+
+>[!NOTE]
+>
+>För bästa prestanda bör du tänka på [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-paging-sorting-content-update.md).
 
 Med den här funktionen kan du utföra sidindelning på frågetyper som returnerar en lista. Det finns två metoder:
 
