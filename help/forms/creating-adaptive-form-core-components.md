@@ -4,9 +4,9 @@ description: Lär dig hur du skapar ett adaptivt formulär med [!DNL Experience 
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
-source-git-commit: e3eb2fb6e48b8821199fa5e81ce63d54ae4d82b7
+source-git-commit: 0d158082973cd0f0745f5e3f0391119e585fc743
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1423'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,8 @@ Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan
 
 Du behöver följande för att skapa ett adaptivt formulär:
 
-* **Aktivera adaptiva Forms Core-komponenter för din miljö**: Om du använder AEM Archetype version 40 eller senare, aktiveras Core Components automatiskt för din miljö. Information om hur du aktiverar adaptiva Forms Core-komponenter för din as a Cloud Service AEM Forms-miljö baserat på äldre versioner av Archetype finns i [Aktivera adaptiva Forms Core-komponenter för din miljö](setup-local-development-environment.md#enable-adaptive-forms-core-components-for-an-existing-aem-archetype-based-project)
+* **Aktivera adaptiva Forms Core-komponenter för din miljö**: När du skapar ett nytt program är de adaptiva Forms Core-komponenterna redan aktiverade för din miljö. Om du har en as a Cloud Service Forms-miljö baserad på Archetype 39 eller tidigare, [Aktivera adaptiva Forms Core-komponenter för din miljö](setup-local-development-environment.md#enable-adaptive-forms-core-components-for-an-existing-aem-archetype-based-project). När du aktiverar kärnkomponenterna för din miljö, **Adaptiv Forms (kärnkomponent)** mall- och arbetsytetemat läggs till i din miljö.
+
 * **En anpassad formulärmall**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när ett adaptivt formulär skickas in. Du kan till exempel skicka insamlade data till en datakälla. Molntjänsten tillhandahåller en OOTB-mall med namnet blank:
 
    * The `blank` -mallar ingår i alla nya as a Cloud Service AEM Forms-program.
@@ -55,6 +56,11 @@ Du behöver följande för att skapa ett adaptivt formulär:
    ![Kärnkomponentmall](/help/forms/assets/core-components-template.png)
 
    När du väljer en mall väljs automatiskt ett tema och en skicka-åtgärd som anges i mallen, och **[!UICONTROL Create]** knappen är aktiverad. Du kan gå till **[!UICONTROL Style]** eller **[!UICONTROL Submission]** för att välja ett annat tema eller skicka-åtgärd. Om den valda mallen inte anger något tema förblir knappen Skapa inaktiverad. Du kan gå till **[!UICONTROL Styles]** om du vill välja ett tema manuellt.
+
+   >[!NOTE]
+   >
+   >
+   > Om du inte har det, **Adaptiv Forms (kärnkomponent)** mallar i din miljö, [Aktivera adaptiva Forms Core-komponenter för din miljö](setup-local-development-environment.md#enable-adaptive-forms-core-components-for-an-existing-aem-archetype-based-project). När du aktiverar kärnkomponenterna för din miljö, **Adaptiv Forms (kärnkomponent)** -mallen läggs till i din miljö.
 
 1. I **[!UICONTROL Style]** väljer du ett tema:
 
