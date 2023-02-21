@@ -1,19 +1,19 @@
 ---
-title: Introduktion till AEM Headless
-description: Lär dig mer om Adobe Experience Manager (AEM) som headless CMS med en kombination av detaljerad dokumentation och resor utan huvud. Lär dig hur funktioner som innehållsmodeller, innehållsfragment och ett GraphQL API används för att skapa headless-upplevelser.
-landing-page-description: Lär dig hur du använder och administrerar Experience Manager Headless as a Cloud Service.
+title: Introduktion till Headless för AEM
+description: Läs mer om Headless i Adobe Experience Manager (AEM) med en kombination av detaljerad dokumentation och resor utan huvud. Lär dig hur funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API används för att skapa Headless-upplevelser.
+landing-page-description: Lär dig hur du använder och administrerar Headless i Adobe Experience Manager as a Cloud Service.
 exl-id: 24300499-ae9c-49d0-aa25-f51e14d9cf79
-source-git-commit: 4e64683598ced4b9811e957082932971f0ec0bb1
+source-git-commit: 58a7886e32664dddfd3ca9c888717452ed5d362a
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 0%
+source-wordcount: '675'
+ht-degree: 3%
 
 ---
 
 
 # Introduktion till Adobe Experience Manager som headless CMS {#introduction-aem-headless}
 
-Lär dig hur du använder Adobe Experience Manager (AEM) som ett headless CMS med funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API som ger en kraftfull, skalbar upplevelse.
+Lär dig hur du använder Adobe Experience Manager (AEM) som ett headless CMS-system med funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API som ger dig en kraftfull, skalbar upplevelse.
 
 Du kan läsa detaljerad dokumentation om de olika funktionerna och/eller följa valet av [Headless Journeys för att få en översikt över de första stegen](#first-steps).
 
@@ -29,7 +29,7 @@ Den Headless-implementeringen förskjuter hantering av sidor och komponenter på
 
 ![AEM implementeringsmodeller](assets/aem-implementation-models.png)
 
-## Funktioner för AEM Headless {#aem-headless-features}
+## Funktioner {#aem-headless-features}
 
 AEM as a Cloud Service är ett flexibelt verktyg för den headless-implementeringsmodellen med tre kraftfulla funktioner:
 
@@ -42,11 +42,11 @@ AEM as a Cloud Service är ett flexibelt verktyg för den headless-implementerin
    * Skapas av innehållsförfattare med AEM Content Fragment editor.
    * Innehållsfragment lagras i AEM Assets och hanteras i gränssnittet Resurser Admin.
 1. **Innehålls-API för leverans**
-   * AEM GraphQL API har stöd för leverans av innehållsfragment.
+   * AEM GraphQL API stöder leverans av innehållsfragment.
    * AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.
    * Direktleverans av innehåll är också möjligt med [JSON-export av kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
 
-## Dina första steg med AEM headless {#first-steps}
+## Dina första steg {#first-steps}
 
 Det finns flera tillgängliga resurser för att komma igång med AEM headless-funktioner. Varje guide är skräddarsydd för olika användningsområden och målgrupper.
 
