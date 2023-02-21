@@ -1,7 +1,7 @@
 ---
 title: Optimera GraphQL-frågor
 description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, sidlägger och sorterar innehållsfragment i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
-source-git-commit: e156ed7348815e02c942cb8feace70c675956752
+source-git-commit: 0fe0bd301fb09cdc631878926f2e40df51a2cc23
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Innan optimeringsrekommendationerna tillämpas bör du överväga [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-paging-sorting-content-update.md) för bästa prestanda.
+>Innan optimeringsrekommendationerna tillämpas bör du överväga [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md) för bästa prestanda.
 
 I en AEM med ett stort antal innehållsfragment som delar samma modell kan GraphQL listfrågor bli dyra (i form av resurser).
 

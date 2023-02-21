@@ -3,7 +3,7 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: e156ed7348815e02c942cb8feace70c675956752
+source-git-commit: 0fe0bd301fb09cdc631878926f2e40df51a2cc23
 workflow-type: tm+mt
 source-wordcount: '4203'
 ht-degree: 0%
@@ -558,7 +558,7 @@ Ytterligare exempel finns i:
 
 >[!NOTE]
 >
->För bästa prestanda bör du tänka på [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-paging-sorting-content-update.md).
+>För bästa prestanda bör du tänka på [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
 Med den här funktionen kan du sortera frågeresultaten efter ett angivet fält.
 
@@ -625,7 +625,7 @@ query {
 
 >[!NOTE]
 >
->För bästa prestanda bör du tänka på [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-paging-sorting-content-update.md).
+>För bästa prestanda bör du tänka på [Uppdatera dina innehållsfragment för sidindelning och sortering i GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md).
 
 Med den här funktionen kan du utföra sidindelning på frågetyper som returnerar en lista. Det finns två metoder:
 
