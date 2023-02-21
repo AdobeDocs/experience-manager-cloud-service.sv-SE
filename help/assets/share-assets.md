@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 86bf6ba711740bd4c39070c2fa600d23f201ee7e
+source-git-commit: 0d4db4fc19180cff5e15d58c4506933597ca7cce
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1251'
 ht-degree: 0%
 
 ---
@@ -245,7 +245,7 @@ Se [konfigurera [!DNL Assets] för att använda den med [!DNL Adobe Asset Link]]
 ## Bästa praxis och felsökning {#bestpractices}
 
 * Resursmappar eller samlingar som innehåller ett tomt utrymme i namnet kanske inte delas.
-* Om användarna inte kan hämta de delade resurserna, bör du fråga Experience Manager-administratören om [hämtningsgränser](#maxdatasize) är.
+* Om användarna inte kan hämta de delade resurserna, bör du fråga Experience Manager-administratören om hämtningsgränserna. Standardvärdet är 100 MB.
 * För att en användare ska kunna förhandsgranska en video som delas via länkdelning måste videon ha en statisk videoåtergivning tillgänglig på `/jcr:content/renditions` plats i videons nod i databasen. Förhandsgranskningen är inte beroende av om en [!DNL Dynamic Media] återgivning.
 * När du hämtar en videoresurs via en länkresurs visas [!DNL Dynamic Media] renderingar ingår inte i det hämtade arkivet.
 
