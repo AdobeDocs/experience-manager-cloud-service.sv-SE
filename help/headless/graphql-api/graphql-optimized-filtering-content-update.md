@@ -1,7 +1,7 @@
 ---
 title: Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering
 description: Lär dig hur du uppdaterar innehållsfragment för optimerad GraphQL-filtrering i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
-source-git-commit: 1561668046909e88c283145205c16b167c04ca8c
+source-git-commit: 7c6dcf4548972740803d64e21a74e885caf8b487
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 5%
@@ -158,7 +158,7 @@ Så här kör du proceduren:
 
    När uppdateringsproceduren har körts återställer du molnmiljövariabeln `CF_MIGRATION_ENABLED` till &#39;0&#39;, för att utlösa återvinning av alla poder.
 
-   <table>
+   <table style="table-layout:auto">
     <tbody>
      <tr>
       <th> </th>
