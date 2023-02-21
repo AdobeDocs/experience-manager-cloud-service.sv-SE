@@ -1,7 +1,7 @@
 ---
 title: Uppdatera dina innehållsfragment för sidindelning och sortering
 description: Lär dig hur du uppdaterar innehållsfragment för sidindelning och sortering i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
-source-git-commit: 130f653a1b0db55ea6d49a87be1215001223bf78
+source-git-commit: d12e2c3c23b5c0eebe35038c6c461c7f05dedc55
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 4%
@@ -32,7 +32,7 @@ Så här kör du proceduren:
 
    De tillgängliga variablerna är:
 
-   <table>
+   <table style="table-layout:auto">
     <tbody>
      <tr>
       <th> </th>
