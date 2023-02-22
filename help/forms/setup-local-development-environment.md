@@ -2,9 +2,9 @@
 title: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: e3eb2fb6e48b8821199fa5e81ce63d54ae4d82b7
+source-git-commit: 55a53f23ee81877bd3a6ba3b9b0a1c3c98edb764
 workflow-type: tm+mt
-source-wordcount: '2968'
+source-wordcount: '2954'
 ht-degree: 1%
 
 ---
@@ -257,7 +257,7 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
    Öppna kommandotolken och kör nedanstående kommando för att skapa en [!DNL Experience Manager Forms] as a Cloud Service projekt.
 
    ```shell
-   mvn -B archetype:generate -DarchetypeGroupId=com.adobe.aem -DarchetypeArtifactId=aem-project-archetype-DarchetypeVersion=32 -DaemVersion="cloud" -DappTitle="My Site" -DappId="mysite" -DgroupId="com.mysite" -DincludeFormsenrollment="y" -DincludeFormscommunications="y" -DincludeExamples="y" includeFormsheadless="y"    
+   mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=40 -D aemVersion="cloud" -D appTitle="Borgo AEM Forms" -D appId="bgaemforms" -D groupId="com.bgaemforms" -D includeFormsenrollment="y" -D includeFormscommunications="y" -D includeExamples="y" -D 
    ```
 
    Ändra `appTitle`, `appId`och `groupId` i ovanstående kommando för att återspegla din miljö. Ange också ett värde för includeFormsenrollment, includeFormsCommunications och includeFormsheadless till `y` eller `n` beroende på licens och krav. IncludeFormsheadless är obligatoriskt för att skapa Adaptiv Forms baserat på kärnkomponenter.
@@ -265,8 +265,6 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
    * Använd `includeFormsenrollment=y` om du vill inkludera Forms-specifika konfigurationer, teman, mallar, kärnkomponenter och beroenden som krävs för att skapa Adaptiv Forms. Om du använder Forms Portal anger du `includeExamples=y` alternativ. Dessutom läggs kärnkomponenterna i Forms Portal till i projektet.
 
    * Använd `includeFormscommunications=y` möjlighet att inkludera Forms Core-komponenter och beroenden som krävs för att inkludera funktionen för kundkommunikation.
-
-   * Använd `includeFormsheadless` för att lägga till artefakter och bibliotek som krävs för att skapa Headless Adaptive Forms.
 
 1. Distribuera projektet till din lokala utvecklingsmiljö. Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
 
