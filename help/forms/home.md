@@ -3,10 +3,10 @@ title: Introduktion till [!DNL AEM Forms] as a Cloud Service
 description: Upptäck AEM Forms och lär dig hur du kan producera affärsklara dokument och formulärinnehåll. Lär dig mer om Platform-as-a-Service (PaaS) och hur du hanterar digitala formulär och affärsprocesser i storföretagsklass, samt hur du kopplar Forms till aktuella datakällor.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: 95e1981faf9532aa56cc8a2e18166d08f35ecf29
+source-git-commit: e28eb4340f9beb2d350620d635dc00de11c6e32b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1158'
+ht-degree: 4%
 
 ---
 
@@ -44,11 +44,9 @@ The service provides OOTB support to connect with Adobe Analytics. Connecting fo
 
 >[!ENDTABS] -->
 
-
-| Adaptiv Forms | Tjänsten Automated forms conversion | Kommunikations-API:er | Integreringar | Formers Workflow |
-|---|---|---|---|---|
-| Med adaptiv Forms kan företag skapa och hantera interaktiva, datadrivna formulär för sina webbplatser och andra digitala kanaler, responsiva och mobilvänliga formulär. | Med Automated forms conversion Service kan man konvertera blanketter från PDF till interaktiva, digitala blanketter som enkelt kan hanteras och distribueras online. | Kommunikations-API:er är en uppsättning RESTful-API:er (Application Programming Interfaces) som gör att företag kan automatisera skapandet, hanteringen och leveransen av personaliserad, datadriven kommunikation. | Plattformen kan integreras med Adobe Sign och DocuSign, vilket gör det enkelt för användare att skicka och spåra förfrågningar om digitala signaturer direkt från sina adaptiva formulär. </br></br>Dessutom kan plattformen integreras med Adobe Analytics så att man får värdefulla insikter om användarbeteende och -preferenser. </br></br> Slutligen kan man med AEM Forms Cloud Service bädda in anpassningsbara formulär direkt på AEM Sites sidor, vilket ger en smidig användarupplevelse | Forms-orienterade arbetsflöden i Adobe Experience Manager (AEM) Forms är utformade för att automatisera affärsprocesser som innefattar blanketter. Dessa arbetsflöden automatiserar cirkulering, granskning och godkännande av blanketter när de går igenom olika faser i en affärsprocess. Forms-centrerade arbetsflöden kan skapas visuellt med AEM Forms Workflow Designer och kan integreras med AEM Forms för att starta arbetsflöden när ett formulär skickas. Arbetsflöden kan konfigureras för att dirigera formulär till olika användare eller grupper baserat på specifika kriterier och kan innehålla automatiska meddelanden och påminnelser för att säkerställa att formulären behandlas i tid. Generellt sett hjälper blankettbaserade arbetsflöden i AEM Forms företag att effektivisera sina affärsprocesser, förbättra effektiviteten och minska antalet fel. |
-
+| Adaptiv Forms | Tjänsten Automated forms conversion | Kommunikations-API:er | Formers Workflow | E-signera | Forms Analytics |
+|---|---|---|---|---|---|
+| Med adaptiv Forms kan företag skapa och hantera interaktiva, datadrivna formulär för sina webbplatser och andra digitala kanaler, responsiva och mobilvänliga formulär. | Med Automated forms conversion Service kan man konvertera blanketter från PDF till interaktiva, digitala blanketter som enkelt kan hanteras och distribueras online. | Kommunikations-API:er är en uppsättning RESTful-API:er (Application Programming Interfaces) som gör att företag kan automatisera skapandet, hanteringen och leveransen av personaliserad, datadriven kommunikation. | Forms-orienterade arbetsflöden är utformade för att automatisera affärsprocesser som innefattar formulär och dokumenttjänster. Dessa arbetsflöden automatiserar cirkulering, granskning och godkännande av blanketter och dokumentgenerering när de rör sig genom olika steg i en affärsprocess. | Plattformen kan integreras med Adobe Analytics så att man får värdefulla insikter om användarbeteende och -preferenser. | Plattformen är direkt integrerad med Adobe Sign. Du kan även integrera det med och DocuSign, vilket gör det enkelt för användare att skicka Forms för e-signering. |
 
 <!--
 | | |
