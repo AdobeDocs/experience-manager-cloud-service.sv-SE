@@ -1,7 +1,7 @@
 ---
 title: Skapa och använda teman
 description: Du kan använda teman för att stilisera och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
-source-git-commit: 0205ffeabcb422ad70fd9439a1af246f438c52d5
+source-git-commit: 1357b36dc3d14d2ceceb6761cb005b592472890a
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 0%
@@ -86,7 +86,7 @@ The `src/components` -mappen har JavaScript- och CSS-filer som är specifika fö
 
 Om du vill anpassa temat kan du starta den lokala proxyservern och se temaanpassningarna i realtid baserat på det faktiska AEM innehållet.
 
-### 4. Ändra namn i temat package.json och package_lock.json för arbetsytan {#changename-packagelock-packagelockjson}
+### 3. Ändra namn i temat package.json och package_lock.json för arbetsytan {#changename-packagelock-packagelockjson}
 
 Uppdatera namnet på och versionen av Canvas-temat i `package.json` och `package_lock.json` filer.
 
@@ -96,7 +96,7 @@ Uppdatera namnet på och versionen av Canvas-temat i `package.json` och `package
 
 ![Arbetsytans temabild](/help/forms/assets/changename_canvastheme.png)
 
-### 3. Skapa .env-filen i en temamapp {#creating-env-file-theme-folder}
+### 4. Skapa .env-filen i en temamapp {#creating-env-file-theme-folder}
 
 Skapa en `.env` i temamappen och lägg till följande parametrar:
 
@@ -112,7 +112,7 @@ AEM_PROXY_PORT=7000
 
 ![Arbetsytans temastruktur](/help/forms/assets/env-file-canvas-theme.png)
 
-### 4. Starta en lokal proxyserver {#starting-a-local-proxy-server}
+### 5. Starta en lokal proxyserver {#starting-a-local-proxy-server}
 
 1. Navigera från kommandoraden till temats rot på din lokala dator.
 1. Kör `npm install` och npm hämtar beroenden och installerar projektet.
@@ -139,7 +139,7 @@ AEM_PROXY_PORT=7000
 
 Navigera till ett adaptivt formulär och se arbetsytans tema som används i ett adaptivt formulär.
 
-### 5. Anpassa temat {#customize-theme}
+### 6. Anpassa temat {#customize-theme}
 
 1. Öppna filen i redigeraren `<your-theme-sources>/src/site/_variables.scss`.
 
@@ -173,7 +173,7 @@ Temadesigner förhandsgranskar ändringarna på den lokala proxyservern och anpa
 
 Innan du implementerar ändringarna i AEM Git-databasen måste du få åtkomst till [Git-databasinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
 
-### 6. Verkställ ändringarna {#committing-the-changes}
+### 7. Verkställ ändringarna {#committing-the-changes}
 
 När du har ändrat temat och testat det med en lokal proxyserver implementerar du ändringarna i Git-databasen för din AEM Forms-Cloud Service. Det gör det anpassade temat tillgängligt i Forms Cloud Service-miljön så att designers av Adaptive Forms kan använda det.
 
@@ -216,7 +216,7 @@ Använd till exempel det här kommandot
 Dina anpassningar lagras nu säkert i Git-databasen.
 
 
-### 7. Kör frontpipeline {#deploy-pipeline}
+### 8. Kör frontpipeline {#deploy-pipeline}
 
 1. Skapa frontendpipeline för att distribuera det anpassade temat. Lär dig [hur du ställer in en pipeline för första raden för att distribuera anpassat tema](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline).
 1. Kör den skapade frontend-pipelinen för att distribuera en anpassad temamapp under **[!UICONTROL Style]** i en guide för att skapa adaptiva formulär.
