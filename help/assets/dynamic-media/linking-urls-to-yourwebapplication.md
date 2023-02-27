@@ -4,9 +4,9 @@ description: Lär dig hur du länkar URL-adresser till webbprogram i Dynamic Med
 contentOwner: Rick Brough
 role: User
 exl-id: 3cd3f4d5-ebf0-4318-9a0d-1ea69453d57b
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: 223d37e036194b6a7174f4ef551065285b930eb7
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1212'
 ht-degree: 5%
 
 ---
@@ -152,7 +152,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    Den här sökvägen är den fullständiga video-URL:en för en publicerad videoåtergivning.
 
-## Hämta en video-URL för adaptiv strömning (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
+## Hämta en video-URL för strömning med adaptiv bithastighet (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
 1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
 1. På **[!UICONTROL Cloud Services]** sida, bläddra nedåt till **[!UICONTROL Dynamic Media Cloud Services]** rubrik, markera **[!UICONTROL Show Configurations]**.

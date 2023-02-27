@@ -5,16 +5,16 @@ contentOwner: Rick Brough
 feature: Asset Management,Video Profiles,Renditions
 role: User
 exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
-source-git-commit: 73b23ec17c987b1dbcbc868143e2b7159cf21408
+source-git-commit: 223d37e036194b6a7174f4ef551065285b930eb7
 workflow-type: tm+mt
-source-wordcount: '3530'
+source-wordcount: '3539'
 ht-degree: 6%
 
 ---
 
 # Videoprofiler för Dynamic Media{#video-profiles}
 
-Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. När du kodar dina primära källvideofilmer med den adaptiva videokodningsprofilen justeras videospelaren automatiskt i videoströmmens kvalitet vid uppspelning baserat på internetanslutningshastigheten hos dina kunder. Den här åtgärden kallas adaptiv direktuppspelning.
+Dynamic Media har redan en fördefinierad adaptiv videokodningsprofil. Inställningarna i den här färdiga profilen är optimerade för att ge kunderna bästa möjliga visningsupplevelse. När du kodar dina primära källvideofilmer med den adaptiva videokodningsprofilen justeras videospelaren automatiskt i videoströmmens kvalitet vid uppspelning baserat på internetanslutningshastigheten hos dina kunder. Den här åtgärden kallas för strömning med adaptiv bithastighet.
 
 Följande är andra faktorer som avgör kvaliteten på videoklipp:
 
@@ -124,7 +124,7 @@ Se [Använd videoprofiler på specifika mappar](#applying-video-profiles-to-spec
 
 Se även [Smart beskärning för bilder](image-profiles.md).
 
-## Skapa en videoprofil för adaptiv strömning {#creating-a-video-encoding-profile-for-adaptive-streaming}
+## Skapa en videoprofil för strömning med adaptiv bithastighet {#creating-a-video-encoding-profile-for-adaptive-streaming}
 
 Dynamic Media har redan en fördefinierad Adaptive Video Encoding-profil - en grupp inställningar för videoöverföring för MP4 H.264 - som är optimerade för bästa möjliga visningsupplevelse. Du kan använda den här profilen när du överför videoklipp.
 
@@ -132,7 +132,7 @@ Om den här fördefinierade profilen inte uppfyller dina behov kan du välja att
 
 När du skapar videokodningsprofilen ser du att de flesta kodningsalternativen är förifyllda med rekommenderade standardinställningar. Om du väljer ett annat värde än det rekommenderade kan det emellertid ge sämre videokvalitet vid uppspelning och andra prestandaproblem.
 
-För alla kodningsförinställningar för MP4 H.264-video i profilen valideras följande värden för att säkerställa att de är desamma i alla enskilda kodningsförinställningar i profilen, vilket gör adaptiv strömning möjlig:
+För alla MP4 H.264-videokodningsförinställningar i profilen valideras följande värden för att säkerställa att de är desamma i alla enskilda kodningsförinställningar i profilen, vilket gör det möjligt att strömma med adaptiv bithastighet:
 
 * Videoformatkodek - MP4 H.264 (.mp4)
 * Ljudkodek
@@ -143,7 +143,7 @@ För alla kodningsförinställningar för MP4 H.264-video i profilen valideras f
 * H264-profil
 * Samplingsfrekvens för ljud
 
-Om värdena inte är desamma kan du fortsätta skapa profilen som den är. Anpassad direktuppspelning är dock inte möjlig. I stället får användarna direktuppspelning med en bithastighet. Vi rekommenderar att du redigerar kodningsinställningarna så att samma värden används för de enskilda kodningsförinställningarna i profilen. (Videoprofils-/förinställningsredigeraren tillämpar paritet för de adaptiva videokodningsinställningarna om &quot;Koda för adaptiv strömning&quot; är aktiverat.)
+Om värdena inte är desamma kan du fortsätta skapa profilen som den är. Däremot går det inte att strömma med adaptiv bithastighet. I stället får användarna direktuppspelning med en bithastighet. Vi rekommenderar att du redigerar kodningsinställningarna så att samma värden används för de enskilda kodningsförinställningarna i profilen. (Videoprofils-/förinställningsredigeraren tillämpar paritet för de adaptiva videokodningsinställningarna om &quot;Koda för adaptiv strömning&quot; är aktiverat.)
 
 Se även [Skapa en videokodningsprofil för progressiv direktuppspelning](#creating-a-video-encoding-profile-for-progressive-streaming).
 
@@ -151,7 +151,7 @@ Se även [Bästa tillvägagångssätt för videokodning](/help/assets/dynamic-me
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera tillgångsbearbetning](/help/assets/dynamic-media/config-dm.md#configuring-asset-processing).
 
-**Skapa en videoprofil för adaptiv direktuppspelning**,
+**Skapa en videoprofil för strömning med adaptiv bithastighet**,
 
 1. Markera logotypen för Experience Manager och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]**.
 1. Välj **[!UICONTROL Create]**.
@@ -194,7 +194,7 @@ Om du väljer att inte använda alternativet **[!UICONTROL Encode for adaptive s
 
 Videoformatets kodekar som stöds är H.264 (.mp4) och WebM.
 
-Se även [Skapa en videokodningsprofil för adaptiv strömning](#creating-a-video-encoding-profile-for-adaptive-streaming).
+Se även [Skapa en videokodningsprofil för strömning med adaptiv bithastighet](#creating-a-video-encoding-profile-for-adaptive-streaming).
 
 Se även [Bästa tillvägagångssätt för videokodning](/help/assets/dynamic-media/video.md#best-practices-for-encoding-videos).
 
@@ -274,7 +274,7 @@ Du kan redigera en befintlig kodningsprofil för video för att dra nytta av ava
    <td><code>keyframe</code></td>
    <td>Målantalet bildrutor mellan nyckelbildrutor. Beräkna det här värdet så att du kan generera en nyckelbildruta var 2:10:e sekund. Exempel: vid 30 bildrutor per sekund är nyckelbildruteintervallet 60-300.<br /> <br /> Lägre intervall för nyckelrutor förbättrar strömsöknings- och strömbrytningsbeteendet för adaptiv videokodning och kan även förbättra kvaliteten för videoklipp som har mycket rörelse. Men eftersom nyckelrutor ökar filstorleken resulterar ett lägre nyckelruteintervall vanligtvis i en lägre total videokvalitet med en viss bithastighet.</td>
    <td><code>String</code></td>
-   <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS eller DASH (adaptive streaming) är 60-90. (Om du vill använda DASH för dina videor måste det först aktiveras av Adobe tekniska support på ditt konto. Se <a href="/help/assets/dynamic-media/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> </td>
+   <td><p>Positivt nummer.</p> <p>Standardvärdet är 300.</p> <p>Rekommenderat värde för HLS eller DASH (adaptiv bithastighetsströmning) är 60-90. (Om du vill använda DASH för dina videor måste det först aktiveras av Adobe tekniska support på ditt konto. Se <a href="/help/assets/dynamic-media/video.md#enable-dash">Aktivera DASH på ditt konto</a>.)</p> </td>
   </tr>
   <tr>
    <td><code>minBitrate</code></td>
@@ -324,7 +324,7 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 1. I verktygsfältet väljer du **[!UICONTROL Edit]**.
 1. Redigera namn och beskrivning på sidan Video Encoding Profile.
 1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive streaming]** är markerad.
-Välj informationsikonen om du vill ha en beskrivning av adaptiv direktuppspelning. (Om du redigerar en progressiv videoprofil ska du inte markera den här kryssrutan.)
+Välj informationsikonen för en beskrivning av strömning med adaptiv bithastighet. (Om du redigerar en progressiv videoprofil ska du inte markera den här kryssrutan.)
 1. Under rubriken Förinställningar för videokodning lägger du till, redigerar eller tar bort förinställningar för videokodning som utgör profilen.
 
    Välj informationsikonen bredvid varje alternativ på **[!UICONTROL Basic]** och **[!UICONTROL Advanced]** om du vill ha mer beskrivningar eller rekommenderade inställningar baserat på den valda videoformatskoden.
@@ -337,7 +337,7 @@ Välj informationsikonen om du vill ha en beskrivning av adaptiv direktuppspelni
 1. Markera ett namn på videoprofilen på sidan Videoprofiler.
 1. I verktygsfältet väljer du **[!UICONTROL Copy]**.
 1. Ange ett nytt namn för profilen på sidan Video Encoding Profile.
-1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive streaming]** är markerad. Välj informationsikonen om du vill ha en beskrivning av adaptiv direktuppspelning. (Om du kopierar en progressiv videoprofil ska du inte markera kryssrutan.)
+1. Det är en god idé att se till att kryssrutan **[!UICONTROL Encode for adaptive streaming]** är markerad. Välj informationsikonen för en beskrivning av strömning med adaptiv bithastighet. (Om du kopierar en progressiv videoprofil ska du inte markera kryssrutan.)
 
    I Dynamic Media - hybrid-läge, om en WebM-videoförinställning är en del av videoprofilen, **[!UICONTROL Encode for adaptive streaming]** är inte möjligt eftersom alla förinställningar måste vara MP4.
 1. Under rubriken Förinställningar för videokodning lägger du till, redigerar eller tar bort förinställningar för videokodning som utgör profilen.

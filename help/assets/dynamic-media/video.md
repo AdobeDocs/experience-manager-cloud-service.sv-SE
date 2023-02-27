@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 572e8ed320dcfb9619110b42229ef81adb726790
+source-git-commit: 223d37e036194b6a7174f4ef551065285b930eb7
 workflow-type: tm+mt
-source-wordcount: '9731'
+source-wordcount: '9750'
 ht-degree: 3%
 
 ---
@@ -151,7 +151,7 @@ Se även [Tittare för Experience Manager Assets och Dynamic Media Classic](http
 
 ## Bästa praxis: Använda videovisningsprogrammet för HTML5 {#best-practice-using-the-html-video-viewer}
 
-Förinställningarna för videovisningsprogrammet i Dynamic Media HTML 5 är robusta videospelare. Du kan använda dem för att undvika många vanliga problem som är kopplade till HTML5-videouppspelning och problem som är kopplade till mobila enheter. Exempel: brist på adaptiv strömning och begränsad webbläsarräckvidd.
+Förinställningarna för videovisningsprogrammet i Dynamic Media HTML 5 är robusta videospelare. Du kan använda dem för att undvika många vanliga problem som är kopplade till HTML5-videouppspelning och problem som är kopplade till mobila enheter. Exempel: brist på strömmande bithastighet och begränsad webbläsarräckvidd.
 
 På designsidan av spelaren kan du utforma videospelarens funktioner med standardverktyg för webbutveckling. Du kan till exempel utforma knapparna, kontrollerna och den anpassade bakgrunden för förhandsvisningsbilder med HTML5 och CSS så att du kan nå dina kunder med ett anpassat utseende.
 
@@ -179,7 +179,7 @@ Därför returnerar
 * Om du har en HTTPS-webbplats med HTTPS-videoströmning går det bra att strömma.
 * Om du har en HTTP-webbplats med HTTPS-videoströmning går det bra att strömma och det finns inga blandade innehållsproblem i webbläsaren.
 
-HLS är en Apple-standard för adaptiv videoströmning som automatiskt anpassar uppspelningen baserat på nätverkets bandbreddskapacitet. Man kan också &quot;söka&quot; till valfri punkt i videon utan att behöva vänta på att resten av videon ska laddas ned.
+DASH är den internationella standarden och HLS är en Apple-standard. Båda används för adaptiv videoströmning. Och båda teknikerna justerar automatiskt uppspelningen baserat på bandbreddskapaciteten i nätverket. Man kan också &quot;söka&quot; till valfri punkt i videon utan att behöva vänta på att resten av videon ska laddas ned.
 
 Progressiv video levereras genom att videon hämtas och lagras lokalt på en användares dator eller mobila enhet.
 
@@ -210,17 +210,17 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Skrivbord</td>
    <td>Firefox 45 eller senare</td>
-   <td>HLS- eller DASH*-adaptiv strömning</td>
+   <td>HLS- eller DASH*-strömning med adaptiv bithastighet</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
    <td>Krom</td>
-   <td>HLS- eller DASH*-adaptiv strömning</td>
+   <td>HLS- eller DASH*-strömning med adaptiv bithastighet</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
    <td>Safari (Mac)</td>
-   <td>HLS adaptiv strömning</td>
+   <td>HLS adaptiv bithastighetsströmning</td>
   </tr>
   <tr>
    <td>Mobil</td>
@@ -230,7 +230,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Mobil</td>
    <td>Chrome (Android™ 7 eller senare)</td>
-   <td>HLS eller DASH* adaptiv strömning/td&gt;
+   <td>HLS- eller DASH* adaptive bitrate streaming/td&gt;
   </tr>
   <tr>
    <td>Mobil</td>
@@ -240,12 +240,12 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Mobil</td>
    <td>Safari (iOS)</td>
-   <td>HLS adaptiv strömning</td>
+   <td>HLS adaptiv bithastighetsströmning</td>
   </tr>
   <tr>
    <td>Mobil</td>
    <td>Chrome (iOS)</td>
-   <td>HLS adaptiv strömning</td>
+   <td>HLS adaptiv bithastighetsströmning</td>
   </tr>
  </tbody>
 </table>
@@ -418,7 +418,7 @@ DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden f
 
 Några viktiga fördelar med att aktivera DASH på ditt konto är följande:
 
-* Paketera DASH-strömvideo för adaptiv strömning. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.
+* Paketera DASH-strömvideo för strömning med adaptiv bithastighet. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.
 * Webbläsaroptimerad direktuppspelning med Dynamic Media-spelare växlar mellan HLS- och DASH-strömning för att säkerställa bästa möjliga servicekvalitet. Videospelaren växlar automatiskt till HLS när en Safari-webbläsare används.
 * Du kan konfigurera den direktuppspelningsmetod (HLS eller DASH) som du föredrar genom att redigera visningsförinställningen för videon.
 * Optimerad videokodning säkerställer att ingen ytterligare lagring används samtidigt som DASH-funktionen aktiveras. En enda uppsättning videokodningar skapas för både HLS och DASH för att optimera lagringskostnaderna för video.
