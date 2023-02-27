@@ -1,9 +1,9 @@
 ---
 title: Vad har ändrats mellan AEM 6.5 Forms och AEM Cloud Services
 description: Använder du Experience Manager Forms och vill uppgradera till Adobe Experience Manager Forms as a Cloud Service? Lär dig de mest framträdande förändringarna innan du uppgraderar eller migrerar till Cloud Servicen.
-contentOwner: khsingh
 exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
-source-git-commit: d77b8d389be4b5c0ffa262ad6f1ff8b4d899e82b
+contentOwner: khsingh
+source-git-commit: da53f453b0f2def98d92aae0e3e92d13eb748dab
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 0%
@@ -16,39 +16,39 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 
 | Funktion/kapacitet | [!DNL AEM Forms] as a Cloud Service | AEM 6.5 Forms |
 |---|---|---|
-| Molnbaserad arkitektur | ☑ | ☒ |
-| Automatisk skalning baserad på inläsning | ☑ | ☒ |
-| Ingen driftstopp för uppgraderingar | ☑ | ☒ |
+| Molnbaserad arkitektur | ✅ | ⛌ |
+| Automatisk skalning baserad på inläsning | ✅ | ⛌ |
+| Ingen driftstopp för uppgraderingar | ✅ | ⛌ |
 | Frekvens för utrullning av funktioner | Agile* | Kvartalsvis |
-| CDN (content delivery network) ingår | ☑ | ☒ |
-| Topologier som optimerats för maximal flexibilitet och effektivitet | ☑ | ☒ |
-| Molnbaserad utvecklingsmiljö | ☑ | ☒ |
-| Självbetjäning via Cloud Manager | ☑ | ☒ |
-| Automatiserade uppgraderingar med Continuous Integration och Continuous Delivery (CI/CD) | ☑ | ☒ |
-| Integration med [!DNL Micosoft Power Automate] | ☑ | ☒ |
-| Integration med [!DNL DocuSign] | ☑ | ☒ |
-| Enkel anslutning till Microsoft Dynamics och Salesforce | ☑ | ☒ |
-| Enkel anslutning till Microsoft Azure-datalager | ☑ | ☒ |
-| Tydligare regelredigerare | ☑ | ☒ |
-| Guiden Skapa formulär | ☑ | ☒ |
-| Anpassat XCI-stöd för arkivhandlingar | ☑ | ☒ |
-| Adaptiv Forms <sup>1</sup> | ☑ | ☑ |
-| Dataintegrering med flera datakällor | ☑ | ☑ |
-| Kommunikations-API:er (Document Services) <sup>2,3</sup> | ☑ | ☑ |
-| Tjänsten Automated forms conversion <sup>4</sup> | ☑ | ☑ |
-| Integration med [!DNL Adobe Sign] | ☑ | ☑ |
-| Integration med [!DNL AEM Sites] | ☑ | ☑ |
-| Integration med [!DNL Adobe Launch] | ☑ | ☑ |
-| Integration med [!DNL Adobe Analytics] | ☑ | ☑ |
-| Forms Portal <sup>5</sup> | ☑ | ☑ |
-| AEM | ☑ | ☑ |
-| Dokument | ☑ | ☑ |
-| Osynlig Captcha | ☑ | ☑ |
-| Återanvändbara konfigurationer av formulärdatamodell | ☑ | ☑ |
-| Acroform-based Document of Record | ☑ | ☑ |
-| Myndighets-ID-baserad identitetsautentisering för Adobe Sign-aktiverad Adaptive Forms | ☑ | ☑ |
-| HTML5 <sup>6</sup> | ☒ | ☑ |
-| Dokumentsäkerhet | ☒ | ☑ |
+| CDN (content delivery network) ingår | ✅ | ⛌ |
+| Topologier som optimerats för maximal flexibilitet och effektivitet | ✅ | ⛌ |
+| Molnbaserad utvecklingsmiljö | ✅ | ⛌ |
+| Självbetjäning via Cloud Manager | ✅ | ⛌ |
+| Automatiserade uppgraderingar med Continuous Integration och Continuous Delivery (CI/CD) | ✅ | ⛌ |
+| Integration med [!DNL Micosoft Power Automate] | ✅ | ⛌ |
+| Integration med [!DNL DocuSign] | ✅ | ⛌ |
+| Enkel anslutning till Microsoft Dynamics och Salesforce | ✅ | ⛌ |
+| Enkel anslutning till Microsoft Azure-datalager | ✅ | ⛌ |
+| Tydligare regelredigerare | ✅ | ⛌ |
+| Guiden Skapa formulär | ✅ | ⛌ |
+| Anpassat XCI-stöd för arkivhandlingar | ✅ | ⛌ |
+| Adaptiv Forms <sup>1</sup> | ✅ | ✅ |
+| Dataintegrering med flera datakällor | ✅ | ✅ |
+| Kommunikations-API:er (Document Services) <sup>2,3</sup> | ✅ | ✅ |
+| Tjänsten Automated forms conversion <sup>4</sup> | ✅ | ✅ |
+| Integration med [!DNL Adobe Sign] | ✅ | ✅ |
+| Integration med [!DNL AEM Sites] | ✅ | ✅ |
+| Integration med [!DNL Adobe Launch] | ✅ | ✅ |
+| Integration med [!DNL Adobe Analytics] | ✅ | ✅ |
+| Forms Portal <sup>5</sup> | ✅ | ✅ |
+| AEM | ✅ | ✅ |
+| Dokument | ✅ | ✅ |
+| Osynlig Captcha | ✅ | ✅ |
+| Återanvändbara konfigurationer av formulärdatamodell | ✅ | ✅ |
+| Acroform-based Document of Record | ✅ | ✅ |
+| Myndighets-ID-baserad identitetsautentisering för Adobe Sign-aktiverad Adaptive Forms | ✅ | ✅ |
+| HTML5 <sup>6</sup> | ⛌ | ✅ |
+| Dokumentsäkerhet | ⛌ | ✅ |
 
 Innan du fortsätter med tjänsten bör du ta hänsyn till följande exceptionella fall:
 
