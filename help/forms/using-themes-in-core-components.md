@@ -1,9 +1,9 @@
 ---
 title: Skapa och använda teman
 description: Du kan använda teman för att stilisera och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: e3fa30d5be29b4070a09873e8ca20036a788486a
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1657'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,7 @@ Om du vill anpassa ett tema
 Så här anpassar du ett Canvas-tema:
 1. [Klona arbetsytans tema](#1-download-canvas-theme-download-canvas-theme)
 1. [Förstå temats struktur](#2-understand-structure-of-the-canvas-theme-structure-of-canvas-theme)
+1. [Ändra namn i package.json och package_lock.json](#changename-packagelock-packagelockjson)
 1. [Skapa ](#3-create-the-env-file-in-a-theme-folder-creating-env-file-theme-folder)
 1. [Starta den lokala proxyservern](#4-start-a-local-proxy-server-starting-a-local-proxy-server)
 1. [Anpassa temat](#customize-the-theme-customizing-theme)
@@ -67,7 +68,7 @@ git clone https://github.com/adobe/aem-forms-theme-canvas
 
 >[!NOTE]
 >
-> Fliken Format i guiden Skapa formulär visar samma temanamn som package.json .
+> Fliken Format i guiden Skapa formulär visar samma temanamn som i filen package.json.
 
 ### 2. Förstå temats struktur {#structure-of-canvas-theme}
 
@@ -85,12 +86,22 @@ The `src/components` -mappen har JavaScript- och CSS-filer som är specifika fö
 
 Om du vill anpassa temat kan du starta den lokala proxyservern och se temaanpassningarna i realtid baserat på det faktiska AEM innehållet.
 
+### 4. Ändra namn i temat package.json och package_lock.json för arbetsytan {#changename-packagelock-packagelockjson}
+
+Uppdatera namnet på och versionen av Canvas-temat i `package.json` och `package_lock.json` filer.
+
+>[!NOTE]
+>
+> Namn får inte ha `@aemforms` -tagg. Det ska vara enkel text som användardefinierat namn.
+
+![Arbetsytans temabild](/help/forms/assets/changename_canvastheme.png)
+
 ### 3. Skapa .env-filen i en temamapp {#creating-env-file-theme-folder}
 
 Skapa en `.env` i temamappen och lägg till följande parametrar:
 
 * **AEM url**
-AEM_URL=https://[author-instance] eller http://localhost:[port]/
+AEM_URL=https://[author-instance]
 
 * **AEM webbplatsnamn**
 AEM_ADAPTIVE_FORM=Form_name
@@ -109,7 +120,7 @@ AEM_PROXY_PORT=7000
 
    ![npm run live](/help/forms/assets/theme_proxy.png)
 
-1. När proxyservern startas öppnas automatiskt en webbläsare för att `http://localhost:[port]/`.
+
 1. Tryck eller klicka **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)** och logga in med de autentiseringsuppgifter för proxyanvändare som du har fått från AEM.
 
    ![Logga in lokalt](/help/forms/assets/local_signin.png)
@@ -166,20 +177,35 @@ Innan du implementerar ändringarna i AEM Git-databasen måste du få åtkomst t
 
 När du har ändrat temat och testat det med en lokal proxyserver implementerar du ändringarna i Git-databasen för din AEM Forms-Cloud Service. Det gör det anpassade temat tillgängligt i Forms Cloud Service-miljön så att designers av Adaptive Forms kan använda det.
 
-Innan du implementerar ändringar i Git-databasen för din AEM Forms-Cloud Service måste du klona databasen på den lokala datorn. Så här klonar du databasen:
+Innan du implementerar ändringar i Git-databasen för din AEM Forms-Cloud Service måste du klona databasen på din lokala dator. Så här klonar du databasen:
 
-1. Öppna kommandotolken och kör nedanstående kommando när du har ersatt [min-org] och [mitt program] med värden från AEM. Du kan även hitta information i [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git):
+1. Skapa en ny temabasera genom att klicka på **[!UICONTROL Repositories]** alternativ.
+
+   ![skapa ny temarapport](/help/forms/assets/createrepo_canvastheme.png)
+
+1. Klicka **[!UICONTROL Add Repository]** och ange **Databasnamn** i **Lägg till databas** -dialogrutan. Klicka på **[!UICONTROL Save]**.
+
+   ![Lägg till upprepning av arbetsytans tema](/help/forms/assets/addcanvasthemerepo.png)
+
+1. Klicka **[!UICONTROL Copy Repository URL]** för att kopiera URL:en för den skapade databasen.
+
+   ![Tema-URL för arbetsyta](/help/forms/assets/copyurl_canvastheme.png)
+
+1. Öppna kommandotolken och klona den molndatabas som skapats ovan.
 
    ```
-   git clone https://git.cloudmanager.adobe.com/[my-org]/[my-org]/
+   git clone https://git.cloudmanager.adobe.com/aemforms/Canvasthemerepo/
    ```
-1. Flytta temaprojektet som du redigerade till det klonade svaret med ett kommando som liknar `mv <theme-sources> <cloned-repo>`.
-1. Gör önskade ändringar i temakomponentmapparna genom att ändra dess CSS-fil.
-1. I katalogen för den klonade databasen implementerar du de temafiler som du just har flyttat till med följande kommandon.
+
+1. Flytta filerna i den temalagringsplats som du redigerar till molndatabasen med ett kommando som liknar
+   `cp -r [source-theme-folder]/* [destination-cloud-repo]`
+Använd till exempel det här kommandot 
+`cp -r [C:/cloned-git-canvas/*] [C:/cloned-repo]`
+1. I molndatabasens katalog implementerar du de temafiler du flyttade till med följande kommandon.
 
    ```text
-   git add <theme-file-name>
-   git commit -m "Adding theme sources"
+   git add .
+   git commit -a -m "Adding theme files"
    git push
    ```
 
@@ -190,10 +216,10 @@ Innan du implementerar ändringar i Git-databasen för din AEM Forms-Cloud Servi
 Dina anpassningar lagras nu säkert i Git-databasen.
 
 
-### 7. Distribuera frontpipeline {#deploy-pipeline}
+### 7. Kör frontpipeline {#deploy-pipeline}
 
-Driftsätt ditt anpassade tema med hjälp av frontendriet. Lär dig [hur du ställer in en pipeline för första raden för att distribuera anpassat tema](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline).
-
+1. Skapa frontendpipeline för att distribuera det anpassade temat. Lär dig [hur du ställer in en pipeline för första raden för att distribuera anpassat tema](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline).
+1. Kör den skapade frontend-pipelinen för att distribuera en anpassad temamapp under **[!UICONTROL Style]** i en guide för att skapa adaptiva formulär.
 
 >[!NOTE]
 >
@@ -205,15 +231,15 @@ Driftsätt ditt anpassade tema med hjälp av frontendriet. Lär dig [hur du stä
 1. Öppna ett adaptivt formulär som skapats med kärnkomponenter.
 1. Starta den lokala proxyservern med kommandotolken och klicka på **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)**.
 1. När du har loggat in omdirigeras du till webbläsaren och ser det aktuella temat.
-1. Hämta Canvas-temat och extrahera den hämtade zip-mappen.
+1. Ladda ned [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas) och extrahera den hämtade zip-mappen.
 1. Öppna den extraherade zip-mappen i det redigeringsprogram du föredrar.
 1. Skapa en `.env` i temamappen och lägg till parametrar: **AEM URL**, **AEM_ADAPTIVE_FORM** och **AEM_PROXY_PORT**.
 1. Öppna CSS-filen för textrutan i temamappen för arbetsytan och ändra kantfärgen till `red` och spara ändringarna.
 1. Öppna webbläsaren igen och du ser ändringarna direkt i ett adaptivt formulär.
 1. Flytta temamappen för arbetsytan i din klonade databas.
-1. Verkställ ändringarna och distribuera frontendriet.
+1. Verkställ ändringarna och kör frontpipeline.
 
-När du har kört pipeline är temat tillgängligt under fliken Format.
+När du har kört pipeline är temat tillgängligt på fliken Format.
 
 ## God praxis {#best-practices}
 
