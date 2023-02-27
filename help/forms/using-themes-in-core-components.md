@@ -1,15 +1,15 @@
 ---
 title: Skapa och använda teman
 description: Du kan använda teman för att stilisera och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
-source-git-commit: e3fa30d5be29b4070a09873e8ca20036a788486a
+source-git-commit: 0205ffeabcb422ad70fd9439a1af246f438c52d5
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
 
 
-# Introduktion till teman för adaptiva formulär med hjälp av kärnkomponenter {#introduction-to-themes-for-af-using-core-components}
+# Teman i Adaptiv Forms (kärnkomponenter) {#themes-for-af-using-core-components}
 
 Du kan skapa och använda teman för att stilisera ett adaptivt formulär med hjälp av kärnkomponenterna. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Temat hanteras oberoende av varandra utan referens till ett adaptivt formulär.
 
