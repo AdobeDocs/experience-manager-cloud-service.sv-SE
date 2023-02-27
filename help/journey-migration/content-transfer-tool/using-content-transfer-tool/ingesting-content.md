@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: acddd68b61173ab956cafcc7168fd7f898973638
+source-git-commit: 3ccc225a665392552621c78615a31917eb44f1fd
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 8%
+source-wordcount: '1660'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 8%
 >id="aemcloud_ctt_ingestion"
 >title="Innehållsintag"
 >abstract="Inmatning avser att hämta innehåll från migreringsuppsättningen till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#top-up-ingestion-process" text="Uppdatera inmatning"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#top-up-ingestion-process" text="Uppdatera inmatning"
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 >[!NOTE]
@@ -135,11 +135,28 @@ Du kommer bara att kunna starta upp ett intag till målmiljön om du tillhör de
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_nonadmin_ingestion.png)
 
+### Det gick inte att nå migreringstjänsten {#unable-to-reach-migration-service}
+
+Efter att en fråga om att få ta emot ett inlägg har skickats ett meddelande som följande till användaren: &quot;Migreringstjänsten på målmiljön är för närvarande inte tillgänglig. Försök igen senare eller kontakta Adobe support.&quot;
+
+![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_cannot_reach_migser.png)
+
+Detta indikerar att Cloud Acceleration Manager inte kunde nå målmiljöns migreringstjänst för att starta intaget. Det här kan hända av flera orsaker.
+
+>[!NOTE]
+> 
+> Fältet &quot;Migreringstoken&quot; visas eftersom det i ett fåtal fall inte är tillåtet att hämta denna token. Genom att tillåta manuell inmatning kan användaren snabbt påbörja intagningen utan ytterligare hjälp. Om variabeln anges och meddelandet fortfarande visas är det inte problemet att hämta variabeln.
+
+* AEM as a Cloud Service bevarar miljötillståndet och kan ibland behöva starta om migreringstjänsten av ett antal vanliga orsaker. Om tjänsten startas om går den inte att nå, men kommer snart att vara tillgänglig.
+* Det är möjligt att en annan process körs på instansen. Om till exempel Release Orchestrator tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. Därför, och risken för att scenen eller produktionsinstansen skadas, är det mycket viktigt att du pausar uppdateringarna under ett intag.
+* Om en [IP-Tillåtelselista har tillämpats](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) via Cloud Manager blockeras Cloud Acceleration Manager från att nå migreringstjänsten. Det går inte att lägga till en IP-adress för frågor eftersom adressen är mycket dynamisk. För närvarande är den enda lösningen att inaktivera IP-tillåtelselista när intaget körs.
+* Det kan finnas andra skäl till att en utredning behöver göras. Kontakta Adobe kundtjänst om ditt intag fortfarande misslyckas.
+
 ### Automatiska uppdateringar via Release Orchestrator är fortfarande aktiverat
 
 Frisläpp Orchestrator håller automatiskt miljön uppdaterad genom att uppdatera automatiskt. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön. Detta är en av orsakerna till att en supportanmälan bör loggas innan ett förtäring påbörjas (se &quot;Anteckning&quot; ovan), så att det går att schemalägga tillfällig inaktivering av Release Orchestrator.
 
-Om Frisläpp Orchestrator fortfarande körs när ett intag startas visas det här felmeddelandet. Du kan välja att fortsätta i alla fall och ta risken genom att markera fältet och trycka på knappen igen.
+Om Frisläpp Orchestrator fortfarande körs när ett intag startas visas det här meddelandet. Du kan välja att fortsätta i alla fall och ta risken genom att markera fältet och trycka på knappen igen.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_ingestion.png)
 
