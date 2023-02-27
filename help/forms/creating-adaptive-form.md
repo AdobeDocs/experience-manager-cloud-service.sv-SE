@@ -5,7 +5,7 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 38ca5eea-793b-420b-ae60-3a0bd83caf00
-source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
+source-git-commit: 37274b28ab2343fd3cdfb4747c9dee701c699b46
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 0%
@@ -55,8 +55,8 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 * **En anpassad formulärmall**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när ett adaptivt formulär skickas in. Du kan till exempel skicka insamlade data till en datakälla. Molntjänsten har stöd för två typer av mallar:
 
-   * **Redigerbar mall**: Du kan [skapa en ny](template-editor.md) eller [importera en befintlig redigerbar mall](migrate-to-forms-as-a-cloud-service.md). Du kan också distribuera [senaste arketype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en#:~:text=The%20AEM%20Archetype%20is%20made%20up%20of%20modules%3A,and%20request%20filters.%20it.tests%3A%20are%20Java-based%20integration%20tests.) om du vill ha några exempel på redigerbara mallar.
-   * **Statisk mall**: Det här är äldre mallar och rekommenderas endast för kunder som migrerar från Adobe Managed Services (AMS) och lokala AEM Forms-installationer (AEM 6.5 Forms eller tidigare). På så sätt kan du fortsätta att utnyttja din befintliga investering i statiska mallar. När du skapar ett nytt adaptivt formulär bör du använda en redigerbar mall.
+* **Redigerbar mall**: Du kan [skapa en ny](template-editor.md) eller [importera en befintlig redigerbar mall](migrate-to-forms-as-a-cloud-service.md). Du kan också distribuera [senaste arketype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en#:~:text=The%20AEM%20Archetype%20is%20made%20up%20of%20modules%3A,and%20request%20filters.%20it.tests%3A%20are%20Java-based%20integration%20tests.) om du vill ha några exempel på redigerbara mallar.
+* **Statisk mall**: Det här är äldre mallar och rekommenderas endast för kunder som migrerar från Adobe Managed Services (AMS) och lokala AEM Forms-installationer (AEM 6.5 Forms eller tidigare). På så sätt kan du fortsätta att utnyttja din befintliga investering i statiska mallar. När du skapar ett nytt adaptivt formulär bör du använda en redigerbar mall.
 
 * **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Du kan [skapa ett nytt tema](themes.md) eller [importera ett befintligt tema](import-export-forms-templates.md#uploading-a-theme). Du kan också distribuera [senaste arketype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#create-project) för vissa exempelteman.
 

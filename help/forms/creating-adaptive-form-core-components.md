@@ -4,7 +4,7 @@ description: Lär dig hur du skapar ett adaptivt formulär med [!DNL Experience 
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
-source-git-commit: 0d158082973cd0f0745f5e3f0391119e585fc743
+source-git-commit: 37274b28ab2343fd3cdfb4747c9dee701c699b46
 workflow-type: tm+mt
 source-wordcount: '1423'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 * **En anpassad formulärmall**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när ett adaptivt formulär skickas in. Du kan till exempel skicka insamlade data till en datakälla. Molntjänsten tillhandahåller en OOTB-mall med namnet blank:
 
    * The `blank` -mallar ingår i alla nya as a Cloud Service AEM Forms-program.
-   * Du kan installera referenspaketet via pakethanteraren för att lägga till `blank` till ditt as a Cloud Service AEM Forms-program.
+   * Du kan installera referenspaketet via Package Manager för att lägga till `blank` till ditt as a Cloud Service AEM Forms-program.
    * Du kan också [skapa en ny adaptiv Forms-mall (kärnkomponenter)](template-editor.md) från scratch.
 
 * **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter.  The `Canvas` -mallar ingår i alla nya as a Cloud Service AEM Forms-program.
