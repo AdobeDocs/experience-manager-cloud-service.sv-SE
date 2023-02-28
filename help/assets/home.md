@@ -1,6 +1,6 @@
 ---
 title: as a Cloud Service guide för resurser
-description: Lär dig mer om Assets as a Cloud Service och få uppdateringar om nyheter.
+description: Lär dig mer om Assets as a Cloud Service och få nyhetsuppdateringar.
 landing-page-description: Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service.
 feature: Asset Management
 role: User,Leader
@@ -8,7 +8,7 @@ exl-id: 315a1091-780f-4eca-ac77-a07d8fb634bf
 source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
 source-wordcount: '294'
-ht-degree: 24%
+ht-degree: 28%
 
 ---
 

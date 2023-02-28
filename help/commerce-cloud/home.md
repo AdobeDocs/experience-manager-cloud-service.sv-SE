@@ -1,16 +1,16 @@
 ---
-title: AEM innehåll och handel
+title: AEM Content and Commerce
 description: Lär dig hur du använder och administrerar Experience Manager Content and Commerce as a Cloud Service.
 landing-page-description: Lär dig hur du använder och administrerar Experience Manager Content and Commerce as a Cloud Service.
 exl-id: 7f7ece35-f78b-4c66-8a0b-38d248430d85
 source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
 source-wordcount: '367'
-ht-degree: 52%
+ht-degree: 66%
 
 ---
 
-# AEM innehåll och handel {#commerce-guide}
+# AEM Content and Commerce {#commerce-guide}
 
 Lär dig hur du använder och administrerar Experience Manager Content and Commerce as a Cloud Service.
 

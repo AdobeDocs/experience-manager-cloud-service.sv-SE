@@ -1,12 +1,12 @@
 ---
 title: Supportresurser för as a Cloud Service webbplatser i Experience Manager
-description: Få en fullständig lista över alla våra supportresurser för AEM Cloud-tjänster. Hitta svar på dina AEM Sites som Cloud Service.
+description: Få en fullständig lista över alla våra supportresurser för AEM Cloud Services. Hitta svar på dina frågor om AEM Sites as a Cloud Service.
 landing-page-description: Förstå hur du redigerar och administrerar AEM Sites as a Cloud Service.
 exl-id: 0fedbd4b-9d6b-40d9-88b7-e7469db420fc
 source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 61%
+ht-degree: 69%
 
 ---
 
