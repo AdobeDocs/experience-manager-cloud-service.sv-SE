@@ -3,7 +3,7 @@ title: Introduktion till [!DNL AEM Forms] as a Cloud Service
 description: Upptäck AEM Forms och lär dig hur du kan producera affärsklara dokument och formulärinnehåll. Lär dig mer om Platform-as-a-Service (PaaS) och hur du hanterar digitala formulär och affärsprocesser i storföretagsklass, samt hur du kopplar Forms till aktuella datakällor.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: 6861f83b292dfb8a8e62e685830289e3a2eded2d
+source-git-commit: c51aa20a37e27252a8c1e6a72d4bc6ffacea46f7
 workflow-type: tm+mt
 source-wordcount: '940'
 ht-degree: 5%
@@ -20,7 +20,7 @@ Du kan använda tjänsten för att skapa och distribuera interaktiva och engager
 
 Organisationen kan använda [!DNL AEM Forms] as a Cloud Service att skapa digitala formulär, koppla ihop formulär med befintliga datakällor, integrera formulär med [!DNL Adobe Sign] för att lägga till e-signaturer i formulär och generera DoR (Document of Record) för att arkivera inskickade formulär som PDF-filer. Man kan också använda tjänsten för att konvertera PDF forms till digitala blanketter.
 
-![Datainsamling - responsiv formulärdesign](/help/forms/assets/data-collection.jpeg)
+![Datainsamling - responsiv formulärdesign](/help/forms/assets/data-collection.jpeg){width="40%"}
 Responsiv formulärdesign
 
 I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och kunna upptäckas. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till formulär de behöver via både webben och mobila kanaler.
@@ -34,7 +34,7 @@ Med AEM Forms kan man skapa övertygande personaliserade användarupplevelser ge
 Personaliserade dokument som kvitton, kvitton, välkomstpaket och programsatser kan enkelt genereras. Organisationer kan driva trafik till personaliserade webbportaler, vilket leder till registrering eller inköp av ytterligare tjänster.
 
 
-![Personaliserad kommunikation - responsiv design](/help/forms/assets/personalized-communication.jpeg)
+![Personaliserad kommunikation - responsiv design](/help/forms/assets/personalized-communication.jpeg){width="40%"}
 Personlig faktura
 
 Tjänsten är alltid aktuell, alltid tillgänglig och alltid tillgänglig. Organisationer kan använda [!DNL AEM Forms] as a Cloud Service och få alla dessa funktioner i molnet utan att behöva någon lokal infrastruktur. Tjänsten befriar också organisationer från komplexa uppgraderingscykler eftersom den alltid är uppdaterad med de senaste funktionerna.
