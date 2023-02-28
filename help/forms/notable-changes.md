@@ -3,9 +3,9 @@ title: Vad har ändrats mellan AEM 6.5 Forms och AEM Cloud Services
 description: Använder du Experience Manager Forms och vill uppgradera till Adobe Experience Manager Forms as a Cloud Service? Lär dig de mest framträdande förändringarna innan du uppgraderar eller migrerar till Cloud Servicen.
 exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
 contentOwner: khsingh
-source-git-commit: da53f453b0f2def98d92aae0e3e92d13eb748dab
+source-git-commit: 7c157cbeb530627c1b888379896ddffda3f3efb3
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -103,14 +103,18 @@ Stöd för anonym användning av Forms-portalen finns inte tillgängligt direkt 
 
 +++ 6. HTML5 Forms (Mobile Forms)
 
-Tjänsten stöder inte HTML5 Forms (Mobile Forms). Om du återger dina XDP-baserade formulär som HTML5 Forms kan du fortsätta använda funktionen i AEM 6.5 Forms.
+* Tjänsten stöder inte HTML5 Forms (Mobile Forms). Om du återger dina XDP-baserade formulär som HTML5 Forms kan du fortsätta använda funktionen i AEM 6.5 Forms.
+
+* Om du har en funktion för att hämta in data offline och synkronisera dem nästa gång du återgår till onlineläge kan du fortsätta med [AEM Forms Workspace](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-aem-forms-workspace/introduction-html-workspace.html) på AEM 6.5 Forms.
 
 +++
 
 
 +++ 7. Formulärdatamodell
 
-Forms datamodell stöder endast HTTP- och HTTP-slutpunkter för att skicka data. Tjänsten stöder inte ömsesidig SSL för REST-anslutning och x509-certifikatbaserad autentisering för SOAP-datakällor. * Forms as a Cloud Service tillåter att Microsoft Azure Blob, Microsoft Sharepoint, Microsoft OneDrive och tjänster som stöder allmänna CRUD-åtgärder (Skapa, Läs, Uppdatera och Ta bort) används som datalager. Både Open API-specifikation 2.0 och Open API-specifikation stöds. Tjänsten stöder även JDBC-anslutning.
+* Forms datamodell stöder endast HTTP- och HTTP-slutpunkter för att skicka data. Tjänsten stöder inte ömsesidig SSL för REST-anslutning och x509-certifikatbaserad autentisering för SOAP-datakällor.
+
+* Forms as a Cloud Service tillåter att Microsoft Azure Blob, Microsoft Sharepoint, Microsoft OneDrive och tjänster som stöder allmänna CRUD-åtgärder (Skapa, Läs, Uppdatera och Ta bort) används som datalager. Både Open API-specifikation 2.0 och Open API-specifikation stöds. Tjänsten stöder även JDBC-anslutning.
 
 +++
 
