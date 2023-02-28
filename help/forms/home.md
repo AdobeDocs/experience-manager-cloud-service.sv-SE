@@ -1,12 +1,12 @@
 ---
 title: Introduktion till [!DNL AEM Forms] as a Cloud Service
-description: Upptäck AEM Forms och lär dig hur du kan producera affärsklara dokument och formulärinnehåll. Lär dig mer om Platform-as-a-Service (PaaS) och hur du hanterar digitala formulär och affärsprocesser i storföretagsklass, samt hur du kopplar Forms till aktuella datakällor.
+description: Upptäck AEM Forms och lär dig hur man kan ta fram blanketter och dokument som är klara för verksamheten. Lär dig mer om Platform-as-a-Service (PaaS) och hur du hanterar digitala formulär och affärsprocesser i företagsklass, samt hur du kopplar Forms till Adobe Sign och aktuella datakällor.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: 3b6bf70ffefeb067620d6071b339384c53820ab5
+source-git-commit: f44a789984c38f6d34eb5c7d6999d5148b15aec8
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 5%
+source-wordcount: '1108'
+ht-degree: 1%
 
 ---
 
@@ -14,34 +14,57 @@ ht-degree: 5%
 
 Adobe [!DNL Experience Manager Forms as a Cloud Service] erbjuder en molnbaserad lösning för Platform as a Service (PaaS) som ger företag möjlighet att skapa, hantera, publicera och uppdatera komplexa digitala formulär samtidigt som inlämnade data integreras med bakomliggande processer, affärsregler och data sparas i ett externt datalager.
 
+Tjänsten är alltid aktuell, alltid tillgänglig och alltid tillgänglig. Organisationer kan använda [!DNL AEM Forms] as a Cloud Service och få alla dessa funktioner i molnet utan att behöva någon lokal infrastruktur. Tjänsten befriar också organisationer från komplexa uppgraderingscykler eftersom den alltid är uppdaterad med de senaste funktionerna.
+
+Adobe [!DNL Experience Manager Forms as a Cloud Service] är en kundcentrerad lösning som stöder varje steg på resan:
+
+
+![](/help/forms/assets/customer-journey.png)
+
+
+
+
+
+## Enklare åtkomst till blanketter för ökad medvetenhet
+
+I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och lätt att hitta. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till formulär de behöver via både webben och mobila kanaler.
+
+Du kan anpassa utseendet, varumärkesprofileringen och logotyperna i Forms Portal så att de passar organisationens specifika behov.
+
 ## Digitalisera och effektivisera registreringen och introduktionsupplevelsen
 
 Du kan använda tjänsten för att skapa och distribuera interaktiva och engagerande digitala formulär. Ta till exempel en organisation som vill digitalisera sin kundregistreringsresa. De har flera datakällor med befintliga kunddata. De vill förifylla formulär, lägga till e-signera formulär och arkivera ifyllda formulär som PDF-filer. Dessutom har man flera tryckta blanketter (PDF forms) som man också vill konvertera till digitala blanketter.
 
 Organisationen kan använda [!DNL AEM Forms] as a Cloud Service att skapa digitala formulär, koppla ihop formulär med befintliga datakällor, integrera formulär med [!DNL Adobe Sign] för att lägga till e-signaturer i formulär och generera DoR (Document of Record) för att arkivera inskickade formulär som PDF-filer. Man kan också använda tjänsten för att konvertera PDF forms till digitala blanketter.
 
-![Datainsamling - responsiv formulärdesign](/help/forms/assets/data-collection.jpeg "Adaptiva Forms-upplevelser för olika enheter"){width="70%" align="center"}
+![Responsiv formulärdesign](/help/forms/assets/data-collection.jpeg "Adaptiva Forms-upplevelser för olika enheter"){width="70%" align="center"}
 
-Responsiv formulärdesign
 
-I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och kunna upptäckas. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till formulär de behöver via både webben och mobila kanaler.
+## Automatisera arbetsflöden
 
-## Personlig kommunikation
+Använd blankettbaserade arbetsflöden för att automatisera bearbetning och vidarebefordran av blankettdata till olika intressenter, t.ex. chefer och avdelningar, för granskning, godkännande eller vidare bearbetning.
+
+Dessa arbetsflöden hjälper er att minimera riskerna och upprätthålla regelefterlevnaden genom att säkerställa en konsekvent och kontrollerbar behandling av formulärdata, automatisera manuella uppgifter, tillhandahålla rollbaserad åtkomstkontroll och uppfylla myndigheternas krav.
+
+
+## Leverera personaliserad kommunikation
 
 En viktig komponent i en effektiv självbetjäningsdigital upplevelse är att förmedla skräddarsydd information som användarna kommer åt var de än är och på vilken enhet de vill. Personlig kommunikation i rätt tid kan förbättra både konverteringsgraden och användarnöjdheten.
 
-Med AEM Forms kan man skapa övertygande personaliserade användarupplevelser genom att anpassa dokumentmallar och lägga in information från bakomliggande processer till mallarna. En uppsättning med olika API:er hjälper företag att ange regler som bestämmer när ett meddelande ska genereras baserat på en förfrågan, eller med regelbundna intervall i grupper.
+Med AEM Forms kan man skapa övertygande personaliserade användarupplevelser genom att anpassa dokumentmallar och lägga in information från bakomliggande processer till mallarna. En uppsättning intuitiva API:er hjälper företag att ange regler som bestämmer när ett meddelande ska skapas baserat på en förfrågan eller med regelbundna intervall i grupper.
 
-Personaliserade dokument som kvitton, kvitton, välkomstpaket och programsatser kan enkelt genereras. Organisationer kan driva trafik till personaliserade webbportaler, vilket leder till registrering eller inköp av ytterligare tjänster.
+Personaliserade dokument som kvitton, kvitton, välkomstpaket och kontoutdrag kan enkelt genereras. Organisationer kan driva trafik till personaliserade webbportaler, vilket leder till registrering eller inköp av ytterligare tjänster.
 
 
-![Personaliserad kommunikation - responsiv design](/help/forms/assets/personalized-communication.jpeg "Personaliserade PDF-fakturor som genereras på begäran"){width="70%" align="center"}
+![Personlig faktura](/help/forms/assets/personalized-communication.jpeg "Personaliserade PDF-fakturor som genereras på begäran"){width="70%" align="center"}
 
-Personlig faktura
 
-Tjänsten är alltid aktuell, alltid tillgänglig och alltid tillgänglig. Organisationer kan använda [!DNL AEM Forms] as a Cloud Service och få alla dessa funktioner i molnet utan att behöva någon lokal infrastruktur. Tjänsten befriar också organisationer från komplexa uppgraderingscykler eftersom den alltid är uppdaterad med de senaste funktionerna.
+## Optimera formulärprestanda
 
-## Viktiga funktioner {#key-features}
+Tjänsten integreras med Adobe Analytics så att ni kan hämta in och spåra prestandamått för era publicerade formulär. Syftet med att analysera dessa värden är att fatta välgrundade beslut baserat på uppgifter om de ändringar som krävs för att göra formulär eller dokument mer användbara. Du kan använda Adobe Analytics för att upptäcka interaktionsmönster och problem som användare stöter på när de använder adaptiva formulär.
+
+
+## Kom igång {#key-features}
 
 |  |  |
 |---|---|
@@ -51,6 +74,6 @@ Tjänsten är alltid aktuell, alltid tillgänglig och alltid tillgänglig. Organ
 | Formers Workflow | Automatisera affärsprocesser som innefattar blanketter och dokumenttjänster. Tilldela, dirigera, granska och godkänn blanketter och dokument när de rör sig genom olika steg i en affärsprocess. Kom igång genom att granska följande:  <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-reviews-forms.html">Skicka ett formulär eller dokument för granskning</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference.html?#assign-task-step">Skapa ett arbetsflöde för avvisande av godkännande</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference.html?#generate-document-of-record-step">Lägg till postdokument </a> eller <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference.html?#sign-document-step"> e-signera </a> steg till ett affärsarbetsflöde</a></li></ul> |
 | E-signaturer | Integrera med Adobe Sign och DocuSign för att enkelt skicka Forms och dokument till användare för e-signering. <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/use-adobe-sign/working-with-adobe-sign.html">E-signera ett adaptivt formulär med Adobe Sign </a></li><li></a> <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-docusign-adaptive-forms.html">E-signera ett adaptivt formulär med DocuSign </a></li></ul> |
 | Forms Analytics | Använd Adobe Analytics för att få värdefulla insikter om användarbeteende och -preferenser. <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-aem-forms-with-adobe-analytics.html?lang=en">Ansluta ett adaptivt formulär till Adobe Analytics</a></li></ul> |
-| Datakällor | Koppla enkelt era formulär och dokument till externa datakällor för att hämta in och skicka data. <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html?lang=en">Anslut till en RDBMS- eller återställningsslutpunkt</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en">Anslut till molntjänsten Microsoft Dynamics 365 eller Salesforce</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html?lang=en">Anslut till Microsoft Azure Blob Storage</a></li></ul> |
+| Datakällor | Koppla enkelt formulär och dokument till externa datakällor för att hämta och skicka data. <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html?lang=en">Anslut till en RDBMS- eller återställningsslutpunkt</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en">Anslut till molntjänsten Microsoft Dynamics 365 eller Salesforce</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html?lang=en">Anslut till Microsoft Azure Blob Storage</a></li></ul> |
 
 

@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: b1eacc8432a73f015529975e6960afbe9dee7565
+source-git-commit: 3e31b065999d36717b81253d2773e41b76949954
 workflow-type: tm+mt
-source-wordcount: '2143'
+source-wordcount: '2141'
 ht-degree: 0%
 
 ---
@@ -221,13 +221,13 @@ Följande miljövariabler skickas till Docker-bilden vid körning.
 Provexemplen från Adobe ger hjälpfunktioner för att komma åt konfigurationsparametrarna:
 
 * JavaScript: Se [lib/config.js](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/test-module/lib/config.js) modul
-* Java: Se [Konfig](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Config.java) class
+* Java: Se [Konfig](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Config.java) class
 
 ### Väntar på att Selenium ska vara klart {#waiting-for-selenium}
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
 1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
@@ -255,21 +255,9 @@ Testexemplen från Adobe skapar som standard skärmbilder för misslyckade teste
 Du kan använda hjälpfunktionerna för att skapa skärmbilder genom testerna.
 
 * JavaScript: [kommandot takeScreenshot](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/test-module/lib/commons.js)
-* Java: [Kommandon](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Commands.java)
+* Java: [Kommandon](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Commands.java)
 
-Om ett testresultatarkiv skapas under en UI-testkörning innehåller testloggfilen en referens till platsen för testresultatarkivet i slutet.
-
-```
-[...]
-
-===============================================================
-The detailed test results can be downloaded from the URL below.
-Note: the link will expire after 60 days
-
-    https://results-host/test-results.zip
-
-===============================================================
-```
+Om ett testresultatarkiv skapas under en UI-testkörning kan du hämta det från Cloud Manager med `Download Details` knappen under [**Testning av anpassat användargränssnitt** steg.](/help/implementing/cloud-manager/deploy-code.md)
 
 ### Överför filer {#upload-files}
 
@@ -282,7 +270,7 @@ Testerna ibland måste överföra filer till det program som testas. För att dr
    * Läs dokumentationen och biblioteken för programmeringsspråket som används i Docker-bilden för att få reda på hur en sådan HTTP-begäran ska utföras.
    * Testexemplen från Adobe innehåller hjälpfunktioner för att överföra filer:
       * JavaScript: Se [getFileHandleForUpload](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/test-module/lib/wdio.commands.js) -kommando.
-      * Java: Se [FileHandler](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/FileHandler.java) klassen.
+      * Java: Se [FileHandler](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/FileHandler.java) klassen.
 1. Om överföringen lyckas returnerar begäran en `200 OK` typsvar `text/plain`.
    * Svarets innehåll är ett ogenomskinligt filhandtag.
    * Du kan använda det här handtaget i stället för en filsökväg i en `<input>` -element för att testa filöverföringar i programmet.
@@ -344,4 +332,4 @@ Om du kör gränssnittstesterna från den lokala datorn skapar du en användare 
 >
 >* Loggfilerna sparas i `target/reports` -mapp i din databas.
 >
->Mer information finns i [AEM Test Samples.](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver/README.MD)
+>Mer information finns i [AEM Test Samples.](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/README.md)

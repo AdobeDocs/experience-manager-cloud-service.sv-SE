@@ -3,9 +3,9 @@ title: Vad har ändrats mellan AEM 6.5 Forms och AEM Cloud Services
 description: Använder du Experience Manager Forms och vill uppgradera till Adobe Experience Manager Forms as a Cloud Service? Lär dig de mest framträdande förändringarna innan du uppgraderar eller migrerar till Cloud Servicen.
 exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
 contentOwner: khsingh
-source-git-commit: 7c157cbeb530627c1b888379896ddffda3f3efb3
+source-git-commit: f44a789984c38f6d34eb5c7d6999d5148b15aec8
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1179'
 ht-degree: 0%
 
 ---
@@ -33,21 +33,11 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 | Guiden Skapa formulär | ✅ | ⛌ |
 | Anpassat XCI-stöd för arkivhandlingar | ✅ | ⛌ |
 | Adaptiv Forms <sup>1</sup> | ✅ | ✅ |
-| Dataintegrering med flera datakällor | ✅ | ✅ |
 | Kommunikations-API:er (Document Services) <sup>2,3</sup> | ✅ | ✅ |
 | Tjänsten Automated forms conversion <sup>4</sup> | ✅ | ✅ |
-| Integration med [!DNL Adobe Sign] | ✅ | ✅ |
-| Integration med [!DNL AEM Sites] | ✅ | ✅ |
-| Integration med [!DNL Adobe Launch] | ✅ | ✅ |
-| Integration med [!DNL Adobe Analytics] | ✅ | ✅ |
 | Forms Portal <sup>5</sup> | ✅ | ✅ |
-| AEM | ✅ | ✅ |
-| Dokument | ✅ | ✅ |
-| Osynlig Captcha | ✅ | ✅ |
-| Återanvändbara konfigurationer av formulärdatamodell | ✅ | ✅ |
-| Acroform-based Document of Record | ✅ | ✅ |
-| Myndighets-ID-baserad identitetsautentisering för Adobe Sign-aktiverad Adaptive Forms | ✅ | ✅ |
-| HTML5 <sup>6</sup> | ⛌ | ✅ |
+| Forms datamodell <sup>6</sup> | ✅ | ✅ |
+| HTML5 Forms <sup>7</sup> | ⛌ | ✅ |
 | Dokumentsäkerhet | ⛌ | ✅ |
 
 Innan du fortsätter med tjänsten bör du ta hänsyn till följande exceptionella fall:
@@ -94,29 +84,31 @@ Tjänsten tillhandahåller inte metamodell för Automated forms conversion Servi
 
 +++
 
-+++ 5. Forms portal
++++ 5. Forms Portal
 
-Stöd för anonym användning av Forms-portalen finns inte tillgängligt direkt (OOTB). Du kan anpassa formulärportalen för att aktivera visning av formulär för användare som inte är inloggade.
-
-+++
-
-
-+++ 6. HTML5 Forms (Mobile Forms)
-
-* Tjänsten stöder inte HTML5 Forms (Mobile Forms). Om du återger dina XDP-baserade formulär som HTML5 Forms kan du fortsätta använda funktionen i AEM 6.5 Forms.
-
-* Om du har en funktion för att hämta in data offline och synkronisera dem nästa gång du återgår till onlineläge kan du fortsätta med [AEM Forms Workspace](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-aem-forms-workspace/introduction-html-workspace.html) på AEM 6.5 Forms.
+Stöd för anonym användning av Forms Portal finns inte tillgängligt direkt (OOTB). Du kan anpassa Forms Portal för att aktivera visning av formulär för användare som inte är inloggade.
 
 +++
 
-
-+++ 7. Formulärdatamodell
++++ 6. Formulärdatamodell
 
 * Forms datamodell stöder endast HTTP- och HTTP-slutpunkter för att skicka data. Tjänsten stöder inte ömsesidig SSL för REST-anslutning och x509-certifikatbaserad autentisering för SOAP-datakällor.
 
 * Forms as a Cloud Service tillåter att Microsoft Azure Blob, Microsoft Sharepoint, Microsoft OneDrive och tjänster som stöder allmänna CRUD-åtgärder (Skapa, Läs, Uppdatera och Ta bort) används som datalager. Både Open API-specifikation 2.0 och Open API-specifikation stöds. Tjänsten stöder även JDBC-anslutning.
 
 +++
+
+
++++ 7. HTML5 Forms (Mobile Forms)
+
+* Tjänsten stöder inte HTML5 Forms (Mobile Forms). Om du återger dina XDP-baserade formulär som HTML5 Forms kan du fortsätta använda funktionen i AEM 6.5 Forms.
+
+* Om du har ett användningsexempel för att hämta in data offline och synkronisera dem nästa gång du återgår online kan du fortsätta använda [AEM Forms Workspace](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-aem-forms-workspace/introduction-html-workspace.html) på AEM 6.5 Forms.
+
++++
+
+
+
 
 
 +++ 8. Utvecklarmiljö

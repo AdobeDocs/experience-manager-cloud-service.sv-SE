@@ -1,10 +1,10 @@
 ---
-title: De senaste innovationerna i Adobe Experience Manager (AEM) Forms as a Cloud Service
+title: Upptäck de senaste innovationerna inom Adobe Experience Manager Forms as a Cloud Service.
 description: "Upptäck de senaste funktionerna i [!DNL AEM Forms] as a Cloud Service att skapa, hantera och publicera blanketter och affärsprocesser i enterpriseklass."
 exl-id: 3a90b0aa-369a-4350-9904-79ef656b0f9a
-source-git-commit: da53f453b0f2def98d92aae0e3e92d13eb748dab
+source-git-commit: f44a789984c38f6d34eb5c7d6999d5148b15aec8
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '682'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ An organization can sign up for [!DNL AEM Forms] as a Cloud Service and start us
 
 Några av de senaste innovationerna i AEM Forms as a Cloud Service är:
 
-|  |  |
+| Funktion | Information |
 |---|---|
 | Headless Adaptive Forms | Skapa och hantera [Headless Adaptive Forms](https://experienceleague.corp.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) inom Adobe Experience Manager. Ge utvecklarna möjlighet att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. <br/> <br/> Blanketterna ska skickas in utan att man behöver ha ett traditionellt HTML-gränssnitt. Med andra ord kan du skicka formulärdata via programmering via en API eller backend-kod utan att behöva använda några synliga formulärelement i början. <br/> ![](https://experienceleague.corp.adobe.com/docs/experience-manager-headless-adaptive-forms/assets/how-headless-adaprive-forms-work.png?)<br/> Headless-formulär är användbara i olika scenarier, t.ex. när du skapar enkelsidiga program, progressiva webbprogram eller mobilprogram, där ett traditionellt HTML-formulärgränssnitt kanske inte är nödvändigt eller praktiskt. Genom att utvecklarna kan skicka in formulärdata direkt via API:er eller backend-kod kan headless-formulär effektivisera arbetsflödena och förbättra webbprogrammens övergripande prestanda. |
 | Kärnkomponenter | The [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) är en uppsättning med 24 BEM-kompatibla komponenter med öppen källkod som bygger på grundvalen för Adobe Experience Manager WCM Core Components. De är särskilt utformade för att användas för att skapa Adaptiv Forms, som är formulär som anpassar sig efter användarens enhet, webbläsare och skärmstorlek. <br/> <br/> Dessa komponenter kan användas för att skapa enastående datainhämtnings- och registreringsupplevelser genom ett stort antal alternativ för formulärfält, inklusive textfält, kryssrutor, listrutor med mera. De innehåller även funktioner som validering, villkorsstyrd logik och responsiv design, som kan användas för att skapa formulär som är användarvänliga och enkla att använda. <br/> ![](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/assets/sample-core-components-based-adaptive-form.png?)<br/>  Eftersom dessa komponenter är öppen källkod kan utvecklare dessutom enkelt anpassa och utöka komponenterna så att de passar organisationens specifika behov. Och dessa komponenter bygger på BEM-metoder som ser till att de är skalbara och underhållbara. |
