@@ -2,9 +2,9 @@
 title: Konfigurera en Skicka-åtgärd för ett anpassat formulär
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: 6a124b476b4dd18ea38d35438866a07958918461
+source-git-commit: 7a608304dc93e53815b488de4087f26e346be4b5
 workflow-type: tm+mt
-source-wordcount: '2957'
+source-wordcount: '2959'
 ht-degree: 0%
 
 ---
@@ -165,29 +165,29 @@ Innan du använder **[!UICONTROL Invoke an AEM Workflow]** Skicka åtgärd konfi
 
 ## Skicka till SharePoint {#submit-to-sharedrive}
 
-The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft Sharepoint-lagringsplatsen. Så här använder du **[!UICONTROL Submit to SharePoint]** Skicka åtgärd i anpassad form:
+The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen. Så här använder du **[!UICONTROL Submit to SharePoint]** Skicka åtgärd i anpassad form:
 
-1. [Skapa en SharePoint-konfiguration](#create-a-sharepoint-configuration-create-sharepoint-configuration): Den kopplar AEM Forms till din Microsoft Sharepoint-lagring.
-2. [Använda Skicka till SharePoint-åtgärden i ett anpassat formulär](#use-sharepoint-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft SharePoint.
+1. [Skapa en SharePoint-konfiguration](#create-a-sharepoint-configuration-create-sharepoint-configuration): Den kopplar AEM Forms till din Microsoft® Sharepoint-lagring.
+2. [Använda Skicka till SharePoint-åtgärden i ett anpassat formulär](#use-sharepoint-configuartion-in-af): Den kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
 
 ### Skapa en SharePoint-konfiguration {#create-sharepoint-configuration}
 
-Så här ansluter du AEM Forms till din Microsoft Sharepoint-lagring:
+Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lagring:
 
-1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft SharePoint]**.
-1. När du har valt **[!UICONTROL Microsoft SharePoint]** omdirigeras du till **[!UICONTROL SharePoint Browser]**.
+1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
+1. När du har valt **[!UICONTROL Microsoft® SharePoint]** omdirigeras du till **[!UICONTROL SharePoint Browser]**.
 1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
 1. Klicka på **[!UICONTROL Create]**. Konfigurationsguiden för SharePoint visas.
    ![SharePoint-konfiguration](/help/forms/assets/sharepoint_configuration.png)
-1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
-   * Du kan hämta `Client ID` och `Client Secret` från Microsoft Azure-portalen.
-   * Lägg till omdirigerings-URI som i Microsoft Azure-portalen som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
+1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
+   * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
+   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
    * Lägg till API-behörigheter `offline_access` och `Sites.Manage.All` för att ge läs- och skrivbehörigheter.
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft Azure-portalen.
+   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
 
    >[!NOTE]
    >
-   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program har konfigurerats att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
+   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program är konfigurerat att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
 
 1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning visas `Connection Successful` visas.
 
@@ -217,36 +217,36 @@ Du kan använda den skapade SharePoint-konfigurationen i ett adaptivt formulär 
 1. Välj **[!UICONTROL Storage Configuration]**, där du vill spara dina data.
 1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
 
-När du skickar formuläret sparas data i den angivna Microsoft Sharepoint-lagringsplatsen.
+När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-lagringsplatsen.
 Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
 
 ## Skicka till OneDrive {#submit-to-onedrive}
 
-The **[!UICONTROL Submit to OneDrive]** Skicka åtgärd kopplar ett anpassat formulär till en Microsoft OneDrive. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till den anslutna Microsoft OneDrive-lagringsplatsen. Så här använder du [!UICONTROL Submit to OneDrive] Skicka åtgärd i anpassad form:
+The **[!UICONTROL Submit to OneDrive]** Skicka åtgärd kopplar ett anpassat formulär till en Microsoft® OneDrive. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till den anslutna Microsoft® OneDrive-lagringsplatsen. Så här använder du [!UICONTROL Submit to OneDrive] Skicka åtgärd i anpassad form:
 
-1. [Skapa en OneDrive-konfiguration](#create-a-onedrive-configuration-create-onedrive-configuration): Den ansluter AEM Forms till din Microsoft OneDrive-lagring.
-2. [Använd Skicka till OneDrive-åtgärden i ett anpassat formulär](#use-onedrive-configuration-in-an-adaptive-form-use-onedrive-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft OneDrive.
+1. [Skapa en OneDrive-konfiguration](#create-a-onedrive-configuration-create-onedrive-configuration): Den ansluter AEM Forms till din Microsoft® OneDrive-lagring.
+2. [Använd Skicka till OneDrive-åtgärden i ett anpassat formulär](#use-onedrive-configuration-in-an-adaptive-form-use-onedrive-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® OneDrive.
 
 ### Skapa en OneDrive-konfiguration {#create-onedrice-configuration}
 
-Så här ansluter du AEM Forms till din Microsoft OneDrive-lagring:
+Så här ansluter du AEM Forms till din Microsoft® OneDrive-lagring:
 
-1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft OneDrive]**.
-1. När du har valt **[!UICONTROL Microsoft OneDrive]** omdirigeras du till **[!UICONTROL OneDrive Browser]**.
+1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® OneDrive]**.
+1. När du har valt **[!UICONTROL Microsoft® OneDrive]** omdirigeras du till **[!UICONTROL OneDrive Browser]**.
 1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
 1. Klicka på **[!UICONTROL Create]**. Konfigurationsguiden för OneDrive visas.
 
    ![Konfigurationsskärm för OneDrive](/help/forms/assets/onedrive-configuration.png)
 
-1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
-   * Du kan hämta `Client ID` och `Client Secret` från Microsoft Azure-portalen.
-   * Lägg till omdirigerings-URI som i Microsoft Azure-portalen som `https://[author-instance]/libs/cq/onedrive/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
+1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
+   * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
+   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/onedrive/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
    * Lägg till API-behörigheter `offline_access` och `Files.ReadWrite.All` för att ge läs- och skrivbehörigheter.
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft Azure-portalen.
+   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
 
    >[!NOTE]
    >
-   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program har konfigurerats att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
+   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program är konfigurerat att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
 
 1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning visas `Connection Successful` visas.
 
@@ -276,12 +276,12 @@ Du kan använda den skapade OneDrive-lagringskonfigurationen i ett adaptivt form
 1. Välj **[!UICONTROL Storage Configuration]**, där du vill spara dina data.
 1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
 
-När du skickar formuläret sparas data i den angivna Microsoft OneDrive-lagringsplatsen.
+När du skickar formuläret sparas data i den angivna Microsoft® OneDrive-lagringsplatsen.
 Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
 
 ## Skicka till Azure Blob Storage {#submit-to-azure-blob-storage}
 
-The **[!UICONTROL Submit to Azure Blob Storage]**  Skicka åtgärd kopplar ett anpassat formulär till en Microsoft Azure-portal. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till de anslutna Azure Storage-behållarna. Så här använder du åtgärden Skicka för Azure Blob Storage:
+The **[!UICONTROL Submit to Azure Blob Storage]**  Skicka åtgärd kopplar ett anpassat formulär till en Microsoft® Azure-portal. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till de anslutna Azure Storage-behållarna. Så här använder du åtgärden Skicka för Azure Blob Storage:
 
 1. [Skapa en Azure Blob Storage-behållare](#create-a-azure-blob-storage-container-create-azure-configuration): Den ansluter AEM Forms till Azure Storage-behållare.
 2. [Använd Azure Storage-konfigurationen i ett adaptivt formulär ](#use-azure-storage-configuration-in-an-adaptive-form-use-azure-storage-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Azure-lagringsbehållare.
@@ -298,7 +298,7 @@ Så här ansluter du AEM Forms till dina Azure-lagringsbehållare:
 
 1. Ange **[!UICONTROL Title]**, **[!UICONTROL Azure Storage Account]** och **[!UICONTROL Azure Access key]**.
 
-   * Du kan hämta `Azure Storage Account` namn och `Azure Access key` från lagringskonton i Microsoft Azure-portalen.
+   * Du kan hämta `Azure Storage Account` namn och `Azure Access key` från lagringskonton i Microsoft® Azure-portalen.
 
 1. Klicka på **[!UICONTROL Save]**.
 
