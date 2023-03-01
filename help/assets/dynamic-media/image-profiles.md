@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: 59392c3a3dd7481d63ed0a79a018a4d6878011ed
 workflow-type: tm+mt
-source-wordcount: '3342'
+source-wordcount: '3344'
 ht-degree: 4%
 
 ---
@@ -57,9 +57,9 @@ Skärpa beskrivs i [Skärpa bilder](/help/assets/dynamic-media/assets/sharpening
 
 När du implementerar smart beskärning på bilder rekommenderar Adobe följande bästa praxis och tillämpar följande gräns:
 
-| Begränsningstyp | Bästa praxis | Begränsning har införts |
+| Resurs - begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
-| Antal smarta beskärningar per bild | 5 | 100 |
+| **Bild** - Antal smarta beskärningar per bild | 5 | 100 |
 
 Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.md).
 
