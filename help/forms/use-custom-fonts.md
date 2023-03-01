@@ -2,7 +2,7 @@
 title: Använda anpassade teckensnitt
 description: Använda anpassade teckensnitt
 exl-id: 88214d36-fb97-4d46-a9fe-71dbc7826eb1
-source-git-commit: d60659f443d130a195fd81cfe4773cd87df28264
+source-git-commit: 7b562dfc23678c39ec7c2b418b0e9ff505c4a08f
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -47,7 +47,6 @@ Så här lägger du till anpassade teckensnitt i Cloud Servicen:
        </configuration>
    </plugin>
    ```
-
 
 1. Lägg till `<Font-Archive-Version>` manifest entry the .pom file and set value of version to 1:
 

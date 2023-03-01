@@ -3,7 +3,7 @@ title: Cache i AEM as a Cloud Service
 description: Cache i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: b0db2224e3dd7af01bf61fe29e8e24793ab33c5b
+source-git-commit: 7b562dfc23678c39ec7c2b418b0e9ff505c4a08f
 workflow-type: tm+mt
 source-wordcount: '2832'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Detta kan vara användbart när din affärslogik kräver att sidhuvudet justeras
       <LocationMatch "/content/secure/.*\.(html)$">.  // replace with the right regex
       Header unset Cache-Control
       Header unset Expires
-      Header always set Cache-Control “private”
+      Header always set Cache-Control "private"
      </LocationMatch>
    ```
 
@@ -421,7 +421,7 @@ ReplicationOptions options = new ReplicationOptions();
 options.setSynchronous(true);
 options.setFilter( new AgentFilter {
   public boolean isIncluded (Agent agent) {
-   return agent.getId().equals(“flush”);
+   return agent.getId().equals("flush");
   }
 });
 

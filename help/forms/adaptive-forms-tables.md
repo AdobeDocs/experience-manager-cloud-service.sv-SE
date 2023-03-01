@@ -5,7 +5,7 @@ description: Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva 
 seo-description: The Table component in AEM Forms lets you create tables in adaptive forms that are responsive to mobile layouts, and also allows using XDP table components.
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Adaptive Forms
-source-git-commit: c9cfaff7f155dc85b2f2ee4e2851e3eb59f5871d
+source-git-commit: 7b562dfc23678c39ec7c2b418b0e9ff505c4a08f
 workflow-type: tm+mt
 source-wordcount: '2404'
 ht-degree: 0%
@@ -53,6 +53,7 @@ Du kan lägga till och ta bort en rad eller kolumn och flytta en rad uppåt och 
 #### Lägga till, ta bort eller flytta en rad
 
 Om du vill lägga till, ta bort eller flytta raden klickar du på en cell i raden. öppna innehållsläsaren ![Content Browser](/help/forms/assets/Smock_Layers_18_N.svg) och markerar motsvarande rad markeras den markerade raden med verktygsfältsalternativet där du kan lägga till, ta bort eller flytta raden uppåt eller nedåt.
+
 * The **[!UICONTROL Move Up]** och **[!UICONTROL Move Down]** flyttar den markerade raden uppåt och nedåt.
 
 * The **[!UICONTROL Add Column]** läggs en rad till nedanför den markerade raden.
