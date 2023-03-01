@@ -4,7 +4,7 @@ description: Lär dig hur du skapar en struktur som fungerar som grund för allt
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: 741fadcffc496cb1c32d1943f7759e8d70cf92ff
+source-git-commit: fa36470e50abdf6dd019a91665945ff6e68e40c2
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## Skapa en modell {#create-model}
 
-Modellkonsolen för innehållsfragment öppnas på en ny flik. Tänk på modellkonsolen Content Fragment som ditt modellbibliotek, där du skapar nya modeller och hanterar befintliga modeller.
+Modellkonsolen för innehållsfragment öppnas på en ny flik. Tänk på modellkonsolen för innehållsfragment som ditt bibliotek med modeller, där du skapar nya modeller och hanterar befintliga modeller.
 
 1. Klicka på **Skapa** längst upp till höger på skärmen för att börja skapa en modell för innehållsfragment.
 
