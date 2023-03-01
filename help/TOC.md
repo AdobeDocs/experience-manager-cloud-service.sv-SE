@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: da53f453b0f2def98d92aae0e3e92d13eb748dab
+source-git-commit: 4416c43b408f576a547590796141a6b551e25681
 workflow-type: tm+mt
-source-wordcount: '3946'
+source-wordcount: '3952'
 ht-degree: 21%
 
 ---
@@ -509,9 +509,8 @@ ht-degree: 21%
    + Konfigurera och migrera {#setup-configure-migrate}
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
-      + [Installera och konfigurera Forms Designer](/help/forms/installing-configuring-designer.md)
       + [Konfigurera anslutning för enhetlig lagring](/help/forms/configure-unified-storage-connector.md)
-      + [Migrera till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
+      + [Migrera från [!DNL AEM 6.5 Forms] eller tidigare till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
    + Integrera {#integrate}
@@ -548,7 +547,6 @@ ht-degree: 21%
             + [Skapa ett tema](/help/forms/themes.md)
             + [Referensresurser](/help/forms/reference-assets.md)
             + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
-            + [Använd Forms Designer](/help/forms/use-forms-designer.md)
             + [Förbättra prestanda för stora formulär med lat inläsningsverktyg](/help/forms/lazy-loading-adaptive-forms.md)
          + Lägga till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
             + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
@@ -588,6 +586,8 @@ ht-degree: 21%
       + [Introduktion till kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)
       + [Kommunikations-API:er - synkron bearbetning](/help/forms/aem-forms-cloud-service-communications.md)
       + [Kommunikations-API:er - gruppbearbetning](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+      + [Installera och konfigurera Forms Designer](/help/forms/installing-configuring-designer.md)
+      + [Använd Forms Designer för att skapa mallar](/help/forms/use-forms-designer.md)
       + [Använda anpassade teckensnitt i PDF-dokument](/help/forms/use-custom-fonts.md)
       + [Kända fel, bästa praxis och vanliga frågor](/help/forms/communications-known-issues-limitations.md)
    + API-referens för utvecklare {#aem-forms-developer-api-reference}
