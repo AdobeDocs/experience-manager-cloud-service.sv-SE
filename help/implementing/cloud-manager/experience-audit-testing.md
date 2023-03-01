@@ -2,9 +2,9 @@
 title: Testning av Experience Audit
 description: Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 exl-id: 8d31bc9c-d38d-4d5b-b2ae-b758e02b7073
-source-git-commit: 1a7a9ee78d09a9360922a63dfa315ef9d106209e
+source-git-commit: fe9d76362f7d2bd7d0ebe89d5161f0c1868e80a3
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Granskningsresultaten är informativa och gör det möjligt för distributionsha
 
 Experience Audit drivs av Google Lightroom, ett verktyg med öppen källkod från Google, och är aktiverat i alla produktionspipelines i Cloud Manager.
 
+>[!TIP]
+>
+>Du konfigurerar vilka sidor som ska ingå i Experience Audit när du [konfigurera din pipeline.](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#full-stack-code)
+
 ## Upplevelsegranskningsresultat {#understanding-experience-audit-results}
 
 Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via [körningssida för produktionsflöde.](/help/implementing/cloud-manager/deploy-code.md)
@@ -59,7 +63,6 @@ Det finns en sammanställd nivå för varje testtyp, som prestanda, tillgänglig
 * **Ej tillämpligt** - Det fanns inga tidigare poäng att jämföra.
 
 ![Resultat av granskning](/help/implementing/cloud-manager/assets/exp-audit-1.png)
-
 
 ### Poäng på sidnivå {#page-level-scores}
 
