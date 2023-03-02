@@ -5,9 +5,9 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: b20ec4fb6068fe0ecfe74a6d1bff8038f330ff38
+source-git-commit: db81eac064d4616cb6b1beae85abc0c55a993fce
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Här ser du att det finns tre huvudområden:
             * Visa information om referenser
             * Visa information om språkversioner av fragmentet
          * Du kan [markera ett eller flera innehållsfragment för att visa tillgängliga åtgärder](#actions-selected-content-fragment)
-      * Du kan välja en kolumnrubrik för att sortera tabellen efter den kolumnen; välj igen för att växla mellan stigande och fallande
+      * Du kan välja en kolumnrubrik för att sortera tabellen efter den kolumnen; välj igen om du vill växla mellan stigande och fallande. För närvarande stöds sortering på **Titel**, **Ändrad** och **Ändrad av** kolumner.
    * **[Skapa](#creating-new-content-fragment)** ett nytt innehållsfragment
    * [Filter](#filtering-fragments) innehållsfragment enligt ett urval predikatmallar och spara filtret för framtida bruk
    * [Sök](#searching-fragments) innehållsfragment
