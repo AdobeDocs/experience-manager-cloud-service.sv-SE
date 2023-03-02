@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 4c93b448-ff8b-4c63-9c9b-dca53cd1af20
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b81ac7529e7757fbd9f9fbc48e47e740ab9ecbf3
 workflow-type: tm+mt
 source-wordcount: '1050'
 ht-degree: 0%
@@ -52,7 +52,7 @@ I det här arkiverade nyhetsbrevet hittar du värdefulla resurser för att bygga
    * Titta på on-demand-webbinariet SKill Builder för Dynamic Media Classic.
    * Se Dynamic Media sessioner från Online Adobe Summit 2020.
    * Läs mer om Adobe kostnadsfria Dynamic Media Classic-revisioner.
-   * Möt `John Monroe`, Senior Program Manager for Customer Success Services.
+   * Möt `John Monroe`, Senior Program Manager for Adobe Account Team.
 
 * **[Februari 2020, utgåva 2](https://experienceleague.adobe.com/tools/dynamic-media-demo/newsletter/Dynamic_Media_Newsletter_02_2020_Feb.html)**
 
