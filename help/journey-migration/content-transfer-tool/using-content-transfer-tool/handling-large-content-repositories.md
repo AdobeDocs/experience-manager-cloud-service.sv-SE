@@ -2,9 +2,9 @@
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
 exl-id: 21bada73-07f3-4743-aae6-2e37565ebe08
-source-git-commit: d07a4fd0a335295d399057ea1eef567e757e2d92
+source-git-commit: 5043caa54c3ba4553245a948758ee7da40c1e227
 workflow-type: tm+mt
-source-wordcount: '1771'
+source-wordcount: '1878'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >id="aemcloud_ctt_precopy"
 >title="Hantera stora innehållsdatabaser"
 >abstract="För att påskynda extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten avsevärt så att innehåll flyttas till AEM as a Cloud Service kan CTT utnyttja AzCopy som ett valfritt förkopieringssteg. När det här försteget är konfigurerat kopierar AzCopy i extraheringsfasen blober från Amazon S3 eller Azure Blob Storage till migreringsuppsättningens blobbutik. Under själva intaget kopierar AzCopy blober från migreringsuppsättningens blobbutik till AEM as a Cloud Service blobbutik."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en#setting-up-pre-copy-step" text="Komma igång med AzCopy som ett steg före kopiering"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html#setting-up-pre-copy-step" text="Komma igång med AzCopy som ett steg före kopiering"
 
 Det kan ta flera dagar att kopiera ett stort antal bloggar med innehållsöverföringsverktyget (CTT).
 För att avsevärt snabba upp extraherings- och intagsfaserna i innehållsöverföringsaktiviteten så att innehållet flyttas till AEM as a Cloud Service kan CTT utnyttja [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) som ett valfritt förkopieringssteg. Detta förkopieringssteg kan användas när AEM är konfigurerad att använda ett Amazon S3-, Azure Blob Storage-datalager eller ett File Data Store. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Vi rekommenderar dock inte att du använder pre-copy för efterföljande översta filer (om den översta storleken är mindre än 200 GB) eftersom det kan göra hela processen tidsödande. När det här försteget är konfigurerat kopierar AzCopy i extraheringsfasen blober från Amazon S3, Azure Blob Storage eller File data store till migreringsuppsättningens blobbutik. Under själva intaget kopierar AzCopy blober från migreringsuppsättningens blobbutik till AEM as a Cloud Service blobbutik.
@@ -26,19 +26,20 @@ För att avsevärt snabba upp extraherings- och intagsfaserna i innehållsöverf
 
 Följ avsnittet nedan för att förstå viktiga aspekter innan du börjar:
 
+* Från och med version 2.0.16 av CTT görs precopy-installationen automatiskt när paketet installeras. Om migreringsuppsättningens storlek är större än 200 GB används dessutom funktionen för prekopia automatiskt i extraheringsprocessen. Filen azcopy.config skapas i katalogen crx-quickstart/cloud-migration/. Du behöver inte konfigurera prekopian manuellt om du använder CTT version 2.0.16 eller senare.
+
 * AEM måste vara 6.3-6.5.
 
-* AEM är konfigurerat att använda Amazon S3 eller Azure Blob Storage. Mer information finns i [Konfigurera nodarkiv och datalager i AEM 6](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/data-store-config.html?lang=en).
+* AEM är konfigurerat att använda Amazon S3 eller Azure Blob Storage. Mer information finns i [Konfigurera nodarkiv och datalager i AEM 6](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/data-store-config.html).
 
 * Varje migreringsuppsättning kopierar hela datalagret, så bara en migreringsuppsättning ska användas.
 
 * Du måste ha tillgång till installationen [AzCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) på den instans (eller VM) som kör AEM.
 
-* Skräpinsamlingen för datalagret har körts inom de senaste 7 dagarna på källan. Mer information finns i [Skräpinsamling för datalager](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/data-store-config.html?lang=en#data-store-garbage-collection).
+* Skräpinsamlingen för datalagret har körts inom de senaste 7 dagarna på källan. Mer information finns i [Skräpinsamling för datalager](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/data-store-config.html#data-store-garbage-collection).
 
-### Ytterligare överväganden när du använder AzCopy
-
-Förkopiering med AzCopy stöds för närvarande inte i Windows vid CTT-extrahering.
+>[!NOTE]
+>För närvarande fungerar inte textrenderingar korrekt på Windows-datorer och detta är ett känt fel. Vi kommer dock att åtgärda problemet i den kommande versionen och åtgärda det.
 
 ### Ytterligare överväganden om AEM är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage Data Store {#additional-considerations-amazons3-azure}
 
@@ -55,6 +56,9 @@ Förkopiering med AzCopy stöds för närvarande inte i Windows vid CTT-extraher
 * När AzCopy har använts för att kopiera över det befintliga datalagret kan du inaktivera det för delta- eller top-up-extraheringar.
 
 ## Konfigurera för att använda AzCopy som ett förkopieringssteg {#setting-up-pre-copy-step}
+
+>[!NOTE]
+>Från och med version 2.0.16 av CTT görs precopy-installationen automatiskt när paketet installeras. Om migreringsuppsättningens storlek är större än 200 GB används dessutom funktionen för prekopia automatiskt i extraheringsprocessen. Filen azcopy.config skapas i katalogen crx-quickstart/cloud-migration/. Om du vill uppdatera filens konfiguration manuellt kan du läsa avsnitten nedan.
 
 Följ det här avsnittet för att lära dig hur du konfigurerar att använda AzCopy som ett förkopieringssteg med verktyget Innehållsöverföring för att migrera innehållet till AEM as a Cloud Service:
 
@@ -161,7 +165,7 @@ När ovanstående konfigurationsfil är på plats körs AzCopy-förkopieringsfas
 >Om AzCopy inte är korrekt konfigurerad visas det här meddelandet i loggarna:
 >`INFO c.a.g.s.m.c.a.AzCopyCloudBlobPreCopy - Blob pre-copy is not supported`.
 
-1. Starta en extrahering från CTT-gränssnittet. Se [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=en) och [Extraheringsprocess](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/extracting-content.html?lang=en) för mer information.
+1. Starta en extrahering från CTT-gränssnittet. Se [Komma igång med verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/getting-started-content-transfer-tool.md) och [Extraheringsprocess](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md) för mer information.
 
 1. Bekräfta att följande rad skrivs ut i extraheringsloggen:
 
@@ -197,7 +201,7 @@ När AzCopy körs för källfilens dataStore bör du se meddelanden som dessa i 
 
 ### 5. Ingesting with AzCopy {#ingesting-azcopy}
 
-Se [Infoga innehåll i mål](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html)
+Se [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md)
 om du vill ha allmän information om hur du importerar innehåll till målet från CAM-hanteraren (Cloud Acceleration Manager), inklusive anvisningar om hur du använder AzCopy (pre-copy) eller inte, i dialogrutan Nytt intag.
 
 För att du ska kunna utnyttja AzCopy under importen måste du ha en AEM as a Cloud Service version som är minst version 2021.6.5561.
