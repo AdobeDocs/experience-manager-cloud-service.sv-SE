@@ -2,9 +2,9 @@
 title: Kortkommandon för konsoler
 description: Spara tid när du redigerar med dessa kortkommandon
 exl-id: 68508d05-a98d-483a-aa6d-f743ee29c284
-source-git-commit: 7c9a8765c1d193a880ad4352f20660249effa881
+source-git-commit: 1698b78c3d58714c6e1d354143964741ee17d60e
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '376'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 |  | `Left Arrow` | Navigera uppåt i trädstrukturen/komprimera trädnod |
 |  | `Down Arrow` | Flytta ned en lista med sidor på samma nivå |
 |  | `Up Arrow` | Flytta upp en lista med sidor på samma nivå |
-| Konsol - kolumnvy | `Shift-Up/Down Arrow` | Flytta upp en lista med sidor på samma nivå |
+| Konsol - kolumnvy | `Shift-Up/Down Arrow` | Flytta upp/ned och markera en lista med sidor på samma nivå |
 |  | `Esc` | Flytta upp en lista med sidor på samma nivå |
 | Konsoler | `?` | Hjälp för kortkommandon |
 |  | `/` | Anropa [sök](/help/sites-cloud/authoring/getting-started/search.md) |
