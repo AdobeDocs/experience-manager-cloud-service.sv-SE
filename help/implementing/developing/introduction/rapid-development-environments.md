@@ -1,9 +1,9 @@
 ---
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
-source-git-commit: e5a9f497e753f328ff14487f4985541c1c77ae0e
+source-git-commit: 74ccf3a22043bfc7ac47e8fa1c9d064ad88a886e
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3293'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Den här funktionen är planerad att gradvis lanseras för kunder under februari-månaden.
+>Den här funktionen är avsedd att gradvis lanseras för kunderna.
 
 För att kunna driftsätta ändringar kräver de aktuella utvecklingsmiljöerna i molnet en process som använder omfattande regler för kodssäkerhet och -kvalitet som kallas CI/CD-pipeline. I situationer där snabba och iterativa förändringar behövs har Adobe infört snabba utvecklingsmiljöer (RDE) för kort tid.
 
@@ -264,7 +264,7 @@ där svaret för en lyckad distribution liknar följande:
 
 Hela mappstrukturen måste vara i form av en ZIP-fil för den här typen av konfiguration.
 
-Från `dispathcer` i ett AEM projekt kan du zippa upp dispatcherkonfigurationen genom att köra kommandot nedan maven:
+Från `dispatcher` i ett AEM projekt kan du zippa upp dispatcherkonfigurationen genom att köra kommandot nedan maven:
 
 `mvn clean package`
 
@@ -279,6 +279,10 @@ distribuera sedan konfigurationen med det här kommandot:
 >[!TIP]
 >
 >Kommandot ovan förutsätter att du distribuerar [WKND](https://github.com/adobe/aem-guides-wknd) projektets dispatcherkonfigurationer. Se till att ersätta `X.X.X` med motsvarande WKND-projektversionsnummer eller projektspecifikt versionsnummer när du distribuerar projektets dispatcherkonfiguration.
+
+>[!NOTE]
+>
+>RDE har stöd för dispatcherkonfigurationen för&quot;flexibelt läge&quot;, men inte för dispatcherkonfigurationen för&quot;äldre läge&quot;. Se [dokumentation för avsändare](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill ha information om de två lägena. Du kan även läsa dokumentationen om [migrera till flexibelt läge](/help/implementing/dispatcher/validation-debug.md#migrating), om du inte redan har gjort det.
 
 En lyckad distribution genererar ett svar som liknar följande:
 
