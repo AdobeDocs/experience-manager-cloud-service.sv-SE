@@ -2,7 +2,7 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för de enskilda tjänsterna eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: d720d403cab4e51dd89a58aae5b4e29ca9da7f1c
+source-git-commit: 37c948b8906bcf6dd7ee3acdc6c6b7d211a33058
 workflow-type: tm+mt
 source-wordcount: '2351'
 ht-degree: 2%
@@ -396,23 +396,23 @@ Fri Jul 17 02:29:34.517189 2020 [mpm_worker:notice] [pid 1:tid 140293638175624] 
 
 Loggnivåerna mod_rewrite definieras av variabeln REWRITE_LOG_LEVEL i filen `conf.d/variables/global.var`.
 
-Den kan anges till Error, Warn, Info, Debug och Trace1 - Trace8, med standardvärdet Warn. Om du vill felsöka RewriteRules rekommenderar vi att du höjer loggnivån till Trace2.
+Den kan ställas in på error, warn, info, debug och trace1 - trace8, med standardvärdet warn. Om du vill felsöka RewriteRules rekommenderar vi att du höjer loggnivån till trace2.
 
 Se [mod_rewrite-moduldokumentation](https://httpd.apache.org/docs/current/mod/mod_rewrite.html#logging) för mer information.
 
 Om du vill ange loggnivån per miljö använder du lämplig villkorsgren i filen global.var enligt beskrivningen nedan:
 
 ```
-Define REWRITE_LOG_LEVEL Debug
+Define REWRITE_LOG_LEVEL debug
   
 <IfDefine ENVIRONMENT_STAGE>
   ...
-  Define REWRITE_LOG_LEVEL Warn
+  Define REWRITE_LOG_LEVEL warn
   ...
 </IfDefine>
 <IfDefine ENVIRONMENT_PROD>
   ...
-  Define REWRITE_LOG_LEVEL Error
+  Define REWRITE_LOG_LEVEL error
   ...
 </IfDefine>
 ```
@@ -474,23 +474,23 @@ Define REWRITE_LOG_LEVEL Debug
 
 Loggnivåer för dispatcher definieras av variabeln DISP_LOG_LEVEL i filen `conf.d/variables/global.var`.
 
-Den kan anges till Error, Warn, Info, Debug och Trace1 med standardvärdet Warn.
+Den kan ställas in på error, warn, info, debug och trace1, med standardvärdet warn.
 
 Även om Dispatcher-loggning stöder flera andra nivåer av loggningsgranularitet rekommenderar AEM as a Cloud Service att du använder de nivåer som beskrivs nedan.
 
 Om du vill ange loggnivån per miljö använder du lämplig villkorlig gren i `global.var` fil enligt beskrivningen nedan:
 
 ```
-Define DISP_LOG_LEVEL Debug
+Define DISP_LOG_LEVEL debug
   
 <IfDefine ENVIRONMENT_STAGE>
   ...
-  Define DISP_LOG_LEVEL Warn
+  Define DISP_LOG_LEVEL warn
   ...
 </IfDefine>
 <IfDefine ENVIRONMENT_PROD>
   ...
-  Define DISP_LOG_LEVEL Error
+  Define DISP_LOG_LEVEL error
   ...
 </IfDefine>
 ```
