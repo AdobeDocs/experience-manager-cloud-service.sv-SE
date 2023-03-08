@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: d07a4fd0a335295d399057ea1eef567e757e2d92
+source-git-commit: b36756395cc516ab4e4725f718ed6de77d9872f8
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1328'
 ht-degree: 6%
 
 ---
@@ -37,7 +37,6 @@ Endast version 2.0.0 och senare stöds, och du bör använda den senaste version
 Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. För att en extrahering ska kunna köras måste följande slutpunkter vara tillgängliga från den instans som körs AEM:
 
 * Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
-* I/O-slutpunkten för användarmappning: `usermanagement.adobe.io`
 
 >[!NOTE]
 >Om extraheringen misslyckas på grund av följande fel: &quot;javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: Det gick inte att skapa PKIX-sökväg: sun.security.provider.certpath.SunCertPathBuilderException: det går inte att hitta en giltig certifieringssökväg till det begärda målet. Detta kan åtgärdas genom att det aktuella certifikatutfärdarcertifikatet importeras.
@@ -195,4 +194,4 @@ Följ stegen nedan för att göra en storlekskontroll:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du skapar en migreringsuppsättning kan du nu lära dig mer om extraherings- och inmatningsprocesser i verktyget Innehållsöverföring. Innan du lär dig dessa processer måste du granska [Hantera stora innehållsdatabaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) för att avsevärt snabba upp extraherings- och intagsfaserna i innehållsöverföringsaktiviteten för att flytta innehåll till AEM as a Cloud Service.
+När du har lärt dig hur du skapar en migreringsuppsättning kan du nu lära dig mer om extraherings- och inmatningsprocesser i verktyget Innehållsöverföring. Innan du lär dig dessa processer måste du granska [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för att avsevärt snabba upp extraherings- och intagsfaserna i innehållsöverföringsaktiviteten för att flytta innehåll till AEM as a Cloud Service.

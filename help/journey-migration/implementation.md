@@ -2,9 +2,9 @@
 title: Implementeringsfas
 description: Kontrollera att koden och innehållet är klara för migrering till molnet
 exl-id: d124f9a5-a754-4ed0-a839-f2968c7c8faa
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: fedaa9b8a7baf707c71acd0535ad890254b6793a
 workflow-type: tm+mt
-source-wordcount: '2416'
+source-wordcount: '2353'
 ht-degree: 8%
 
 ---
@@ -160,7 +160,12 @@ Genom att samla in data kan du planera migreringsaktiviteterna och tillhörande 
 * Total tid som tagits för uppräkning [extrahering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process)
 * Total tid som tagits för uppräkning [förtäring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process)
 
-En annan viktig datapunkt är hur lång tid det tar att slutföra [användarmappning](/help/journey-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md), om detta är kopplat till innehållsmigreringen. Du kan ta den här datapunkten i beaktande för mer realistiska uppskattningar, eftersom den kommer att läggas till i den övergripande extraheringstidslinjen och det kanske inte krävs att den körs under de övre uppdateringarna.
+
+<!-- Alexandru: hiding this for now
+
+One more important datapoint is the amount of time it takes to complete the [user mapping](/help/journey-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md), if this is coupled with the content migration. You can take this data point into consideration for more realistic estimates, since it will be added to the overall extraction timeline and it may not be required to run it during top-ups.
+
+-->
 
 Dessa datapunkter kan även hjälpa dig [Fastställa KPI:er](/help/journey-migration/readiness.md#establish-kpis) och andra migreringsrelaterade uppgifter.
 
@@ -238,7 +243,7 @@ I följande avsnitt visas viktiga steg och tillhörande uppgifter som kan använ
    * Klonar författare och publicering - en nod var om det är ett kluster eller en publiceringsgrupp
 * Välj en delmängd av innehållet som ska migreras så att:
    * Det är en blandning av alla tillgängliga innehållstyper
-   * Innehåller alla användare och grupper om det finns [användarmappning](/help/journey-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md) krävs
+   * Innehåller alla användare och grupper
 * Inkluderar antingen 25 % av innehållet eller upp till 1 TB av innehållet, beroende på vilket som är lägst.
 * Kör minst en full och [uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) migration, från produktionsklonen till den AEM as a Cloud Service icke-produktionsmiljön,
 * Lös eventuella problem som:

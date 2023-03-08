@@ -2,10 +2,10 @@
 title: Extraherar innehåll från källa
 description: Extraherar innehåll från källa
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
-source-git-commit: 509715eb6324a370e28d681111ee0fd3fa2a7b44
+source-git-commit: 5a4592531377109fba88b5cdc9df027803feca7a
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 19%
+source-wordcount: '676'
+ht-degree: 22%
 
 ---
 
@@ -17,16 +17,13 @@ ht-degree: 19%
 >id="aemcloud_ctt_extraction"
 >title="Innehållsextrahering"
 >abstract="Extrahering avser att extrahera innehåll från AEM till ett temporärt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#top-up-extraction-process" text="Extrahering uppifrån"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#top-up-extraction-process" text="Extrahering uppifrån"
 
 
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 
 >[!NOTE]
->Om Amazon S3, Azure Data Store eller File Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp extraheringsfasen. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Om du vill göra det måste du konfigurera en `azcopy.config` filen innan extraheringen körs. Se [Hantera stora innehållsdatabaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) för mer information.
-
->[!IMPORTANT]
->Du bör köra verktyget för användarmappning innan du extraherar innehåll från källan. Se [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/user-mapping-tool/using-user-mapping-tool.html?lang=en) för mer information.
+>Om Amazon S3, Azure Data Store eller File Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp extraheringsfasen. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Om du vill göra det måste du konfigurera en `azcopy.config` filen innan extraheringen körs. Se [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för mer information.
 
 1. Välj en migreringsuppsättning från **Innehållsöverföring** guide och klicka **Extract** för att påbörja extraheringen.
 
@@ -43,9 +40,6 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 
    >[!NOTE]
    >Du kan skriva över mellanlagringsbehållaren under extraheringsfasen. If **Skriv över mellanlagringsbehållare** är inaktiverat kan det snabba upp extraheringar för efterföljande migreringar där innehållssökvägarna eller inkluderingsversionsinställningarna inte har ändrats. Om innehållssökvägarna eller inkluderingsversionsinställningarna har ändrats **Skriv över mellanlagringsbehållare** ska vara aktiverat.
-
-   >[!IMPORTANT]
-   >Om Användarmappning inte har körts på den här migreringsuppsättningen innan innehåll extraheras från källan visas en varning om att steget Användarmappning väntar, vilket visas i bilden ovan. Klicka på **Mappa användare** för att köra verktyget för användarmappning.
 
 1. The **Extrahering** fältet visas nu **KÖRS** status för att ange att extraheringen pågår.
 
