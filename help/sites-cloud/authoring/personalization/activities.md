@@ -2,9 +2,9 @@
 title: Hantera aktiviteter
 description: Med aktivitetskonsolen kan ni skapa, organisera och hantera marknadsföringsaktiviteter för era varumärken
 exl-id: e7cab16d-7678-472d-b75f-7f67b303ba8d
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 56a7f214a4a1a3a58c56f1e06e3a98532054ffee
 workflow-type: tm+mt
-source-wordcount: '2002'
+source-wordcount: '2019'
 ht-degree: 18%
 
 ---
@@ -81,6 +81,10 @@ Lägg till en aktivitet eller redigera en befintlig aktivitet för att fokusera 
 * **Varaktighet:** Tidsperioden då aktiviteten används.
 * **Prioritet:** Aktivitetens relativa prioritet. När aktiviteter tillhandahåller innehåll för samma användarsegment har aktiviteten med högre prioritet företräde.
 * **Målmått:** Om du väljer Adobe Target som målinriktningsmotor kan du lägga till framgångsmått för aktiviteten. Ett framgångsmått krävs.
+
+>[!NOTE]
+>
+>För att kunna **Välj en målkonfiguration** du måste vara i **Författare av målaktivitet** grupp.
 
 >[!NOTE]
 >
