@@ -3,9 +3,9 @@ title: Hur tilldelar man ett arbetsflöde till en annan användare, skickar e-po
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: 3c8035e4db5729f58bae29136a32a0b9944d6a2f
 workflow-type: tm+mt
-source-wordcount: '6561'
+source-wordcount: '6541'
 ht-degree: 0%
 
 ---
@@ -181,7 +181,7 @@ Konvertera till PDF/A-steget har följande egenskaper:
 
 Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett postdokument, en länk till ett anpassat formulär <!-- , link of an interactive communication-->eller med ett bifogat PDF-dokument. Skicka e-poststeg som stöds [HTML email](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en HTML-e-postmall för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
 
-I e-poststeget används Day CQ Mail Service för att skicka e-post. Kontrollera att e-posttjänsten är konfigurerad innan du använder e-poststeget. E-poststöd är som standard bara för HTTP- och HTTP-protokoll. [Kontakta supportteamet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email) för att aktivera portar för att skicka e-post och för att aktivera SMTP-protokoll för din miljö. Begränsningen bidrar till att förbättra plattformens säkerhet.
+I e-poststeget används Day CQ Mail Service för att skicka e-post. Kontrollera att e-posttjänsten är konfigurerad innan du använder e-poststeget. E-poststöd är som standard bara för HTTP- och HTTP-protokoll. [Kontakta supportteamet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=en#sending-email) för att aktivera portar för att skicka e-post och för att aktivera SMTP-protokoll för din miljö. Begränsningen bidrar till att förbättra plattformens säkerhet.
 
 E-poststeget har följande egenskaper:
 
@@ -211,7 +211,7 @@ E-poststeget har följande egenskaper:
 
 * **[!UICONTROL Image]**: Använd alternativet för att bädda in en bild i e-postmeddelandet. När du har valt alternativet bläddrar du och väljer bilden. Bildalternativet är bara tillgängligt för de bildtaggar (&lt;img src=&quot;&lt;span id=&quot; translate=&quot;no&quot; />&quot;/>) som är tillgängliga i e-postmallen.&#42;
 
-**[!UICONTROL Sender’s / Recipient's Email Address]**: Välj **[!UICONTROL Literal]** om du vill ange en e-postadress manuellt eller välja **[!UICONTROL Retrieve from Workflow metadata]** alternativ för att hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsmatriser för metadata för **[!UICONTROL Retrieve from Workflow metadata]** alternativ. Välj **[!UICONTROL Variable]** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
+**[!UICONTROL Sender's / Recipient's Email Address]**: Välj **[!UICONTROL Literal]** om du vill ange en e-postadress manuellt eller välja **[!UICONTROL Retrieve from Workflow metadata]** alternativ för att hämta e-postadressen från en metadataegenskap. Du kan också ange en lista med egenskapsmatriser för metadata för **[!UICONTROL Retrieve from Workflow metadata]** alternativ. Välj **[!UICONTROL Variable]** om du vill hämta e-postadressen från värdet som lagras i en variabel av strängdatatyp.
 
 * **[!UICONTROL File Attachment]**: Den tillgängliga resursen på den angivna platsen är kopplad till e-postmeddelandet. Resursens sökväg kan vara relativ till nyttolasten eller den absoluta sökvägen. En exempelsökväg är [Payload_Directory]/attachments/.
 
@@ -238,22 +238,22 @@ Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer so
 
 **[!UICONTROL Save Generated Document of Record using below options]**: Ange platsen för att behålla en postdokumentfil. Du kan välja att skriva över nyttolastmappen, placera postdokumentet på en plats i nyttolastkatalogen eller lagra postdokumentet i en variabel av dokumentdatatypen.
 
-**[!UICONTROL Locale]**: Ange språk för dokumentdokumentet. Välj **[!UICONTROL Literal]** för att välja språkinställning i en nedrullningsbar lista eller välja **[!UICONTROL Variable]** för att hämta språkinställningen från värdet som lagras i en variabel av strängdatatyp. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
+**[!UICONTROL Locale]**: Ange språk för dokumentdokumentet. Välj **[!UICONTROL Literal]** för att välja språkinställning i en nedrullningsbar lista eller välja **[!UICONTROL Variable]** för att hämta språkinställningen från värdet som lagras i en variabel av strängdatatyp. Definiera språkkoden medan värdet för språkinställningen lagras i en variabel. Ange till exempel **en_US** för engelska och **fr_FR** för franska.
 
 ## Anropa DDX-steg {#invokeddx}
 
-Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX definierar en uppsättning åtgärder som kan tillämpas på ett eller flera indatadokument för att generera ett eller flera utdatadokument.  Ett enda DX kan användas med ett antal olika källdokument. Du kan använda ***Anropa DDX-steg*** i ett AEM arbetsflöde för att utföra olika åtgärder, t.ex. sammansättning av disassemblerande dokument, Skapa och ändra Acrobat och XFA Forms, samt annat som beskrivs i [DDX-referensdokumentation](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf).
+Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX definierar en uppsättning åtgärder som kan tillämpas på ett eller flera indatadokument för att generera ett eller flera utdatadokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda ***Anropa DDX-steg*** i ett AEM arbetsflöde för att utföra olika åtgärder, t.ex. sammansättning av disassemblerande dokument, Skapa och ändra Acrobat och XFA Forms, samt annat som beskrivs i [DDX-referensdokumentation](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf).
 
 Anropa DDX-steget har följande egenskaper:
 
 **[!UICONTROL Input Documents]**: Används för att ange egenskaper för ett inmatningsdokument. De olika alternativ som är tillgängliga under den här fliken är:
 * **[!UICONTROL Specify DDX Using]**: Anger indatadokumentet i förhållande till nyttolasten, har en absolut sökväg, kan anges som nyttolast eller lagras i en variabel av dokumentdatatypen.
 * **[!UICONTROL Create Map from Payload]**: Lägg till alla dokument under nyttolastmappen i Input Document Map för invoke API i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
-* **[!UICONTROL Input Document’s Map]**: Alternativet används för att lägga till flera poster med **[!UICONTROL ADD]** -knappen. Varje post representerar dokumentets nyckel på kartan och dokumentets källa.
+* **[!UICONTROL Input Document's Map]**: Alternativet används för att lägga till flera poster med **[!UICONTROL ADD]** -knappen. Varje post representerar dokumentets nyckel på kartan och dokumentets källa.
 
 **[!UICONTROL Environment Options]**: Det här alternativet används för att ange bearbetningsinställningar för anrop av API. De olika alternativ som är tillgängliga under den här fliken är:
 * **[!UICONTROL Validate Only]**: Kontrollerar giltigheten för indata-DDX-dokumentet.
-* **[!UICONTROL Fail on Error]**: Booleskt värde för att ange om API-anropstjänsten misslyckas om ett fel uppstår eller inte. Som standard är värdet Falskt.
+* **[!UICONTROL Fail on Error]**: Booleskt värde för att ange om API-anropstjänsten misslyckas, om ett fel uppstår eller inte. Som standard är värdet Falskt.
 * **[!UICONTROL First Bates Number]**: Anger talet, som ökar automatiskt. Det här självökande numret visas automatiskt på varje sida i följd.
 * **[!UICONTROL Default Style]**: Anger standardformatet för utdatafilen.
 
@@ -263,7 +263,7 @@ Anropa DDX-steget har följande egenskaper:
 
 **[!UICONTROL Output Documents]**: Anger platsen där utdatafilen ska sparas. De olika alternativ som är tillgängliga under den här fliken är:
 * **[!UICONTROL Save Output in Payload]**: Sparar utdatadokument under nyttolastmappen, eller skriver över nyttolasten om nyttolasten är en fil.
-* **[!UICONTROL Output Document’s Map]**: Anger platsen där varje dokumentfil ska sparas explicit genom att en post per dokument läggs till. Varje post representerar dokumentet och platsen där det ska sparas. Om det finns flera utdatadokument används det här alternativet.
+* **[!UICONTROL Output Document's Map]**: Anger platsen där varje dokumentfil ska sparas explicit genom att en post per dokument läggs till. Varje post representerar dokumentet och platsen där det ska sparas. Om det finns flera utdatadokument används det här alternativet.
 
 ## Anropa tjänststeg för formulärdatamodell {#invoke-form-data-model-service-step}
 
@@ -485,12 +485,12 @@ Encrypt, Sign, and certify a document. [!DNL AEM Forms] supports both password b
 Send a document directly to a printer. It supports the following printing access mechanisms:
 
 * **[!UICONTROL Direct accessible printer]**: A printer that is installed on the same computer is called a direct accessible printer, and the computer is named printer host. This type of printer can be a local printer that is connected to the computer directly.
-* **[!UICONTROL Indirect accessible printer]**: The printer that is installed on a print server is accessed from other computers. Technologies such as the common UNIX® printing system (CUPS) and the Line Printer Daemon (LPD) protocol are available to connect to a network printer. To access an indirect accessible printer, specify the print server’s IP or host name. Using this mechanism, you can send a document to an LPD URI when the network has an LPD running. The mechanism lets you route the document to any printer that is connected to the network that has an LPD running.
+* **[!UICONTROL Indirect accessible printer]**: The printer that is installed on a print server is accessed from other computers. Technologies such as the common UNIX&reg; printing system (CUPS) and the Line Printer Daemon (LPD) protocol are available to connect to a network printer. To access an indirect accessible printer, specify the print server's IP or host name. Using this mechanism, you can send a document to an LPD URI when the network has an LPD running. The mechanism lets you route the document to any printer that is connected to the network that has an LPD running.
     -->
 
 ## Generera utskriftssteg {#generatePrintedOutput}
 
-Steget genererar ett PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata baserat på en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. De utdata som genereras i det här steget kan skickas direkt till en skrivare eller sparas som en fil. Vi rekommenderar att du använder det här steget när du vill använda formulärdesigner eller data från ett program. Om dina formulärdesigner eller formulärdesigner finns i nätverket, det lokala filsystemet eller på HTTP-platsen använder du åtgärden generatePrintedOutput.
+Steget genererar ett PCL-, PostScript-, ZPL-, IPL-, TPCL- eller DPL-utdata baserat på en formulärdesign och datafil. Datafilen sammanfogas med formulärdesignen och formateras för utskrift. De utdata som genereras i det här steget kan skickas direkt till en skrivare eller sparas som en fil. Vi rekommenderar att du använder det här steget när du vill använda formulärdesigner eller data från ett program. Om formulärdesignerna finns i nätverket, det lokala filsystemet eller på HTTP-platsen använder du åtgärden generatePrintedOutput.
 
 Programmet kräver till exempel att du sammanfogar en formulärdesign med en datafil. Informationen innehåller hundratals poster. Dessutom krävs att utdata skickas till en skrivare som stöder ZPL. Formulärdesignen och dina indata finns i ett program. Använd åtgärden generatePrintedOutput för att sammanfoga varje post med en formulärdesign och skicka utdata till en skrivare som stöder ZPL.
 
@@ -524,20 +524,20 @@ Stegen Generera utskrift har följande egenskaper:
 
 **[!UICONTROL Advanced Properties]**
 
-* **[!UICONTROL Select Content Root location using]**: Innehållsroten är ett strängvärde som anger URI, absolut referens eller plats i databasen för att hämta relativa resurser som används i formulärdesignen. Om formulärdesignen till exempel refererar till en bild relativt, som ../myImage.gif, måste myImage.gif finnas på repository://. Standardvärdet är repository://, som pekar på databasens rotnivå.
+* **[!UICONTROL Select Content Root location using]**: Innehållsroten är ett strängvärde som anger URI, absolut referens eller plats i databasen för att hämta relativa resurser som används i formulärdesignen. Om formulärdesignen till exempel refererar till en bild relativt, som `../myImage.gif`, `myImage.gif` måste vara på `repository://`. Standardvärdet är `repository://`, som pekar på databasens rotnivå.
 
-   När du väljer en resurs från ditt program måste innehållsrots-URI-sökvägen ha rätt struktur. Om ett formulär till exempel hämtas från ett program med namnet SampleApp och placeras på SampleApp/1.0/forms/Test.xdp, måste innehållets rot-URI anges som repository://administrator@password/Applications/SampleApp/1.0/forms/, eller databasen:/Applications/SampleApp/1.0/forms/ (när behörigheten är null). När innehållets rot-URI anges på det här sättet kommer sökvägarna för alla refererade resurser i formuläret att matchas mot denna URI.
+   När du väljer en resurs från ditt program måste innehållsrots-URI-sökvägen ha rätt struktur. Om ett formulär till exempel hämtas från ett program med namnet SampleApp och placeras på `SampleApp/1.0/forms/Test.xdp`måste innehållets rot-URI anges som `repository://administrator@password/Applications/SampleApp/1.0/forms/`, eller `repository:/Applications/SampleApp/1.0/forms/` (när behörigheten är null). När innehållets rot-URI anges på det här sättet kommer sökvägarna för alla refererade resurser i formuläret att matchas mot denna URI.
 
 * **[!UICONTROL Select XCI file using]**: XCI-filer används för att beskriva teckensnitt och andra egenskaper som används för formulärdesignelement. Du kan behålla en XCI-fil i förhållande till nyttolasten, på en absolut sökväg eller med en variabel av dokumentdatatypen.
 
 * **[!UICONTROL Locale]**: Anger vilket språk som ska användas för att generera PDF-dokumentet. Om du anger ett literalt värde väljer du ett språk i listan eller något av dessa värden:
-   * **[!UICONTROL To use server default]**: (Standard) Använd språkinställningen som är konfigurerad på [!DNL AEM Forms] Server. Inställningen Språk konfigureras med administrationskonsolen. (Se [Designer - hjälp](http://www.adobe.com/go/learn_aemforms_designer_65).)
+   * **[!UICONTROL To use server default]**: (Standard) Använd språkinställningen som är konfigurerad på [!DNL AEM Forms] Server. Inställningen Språk konfigureras med administrationskonsolen. (Se [Designer - hjälp](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf).)
 
-   * **[!UICONTROL To use custom value]**: Skriv språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html.
+   * **[!UICONTROL To use custom value]**: Skriv språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på https://docs.oracle.com/javase/1.5.0/docs/guide/intl/locale.doc.html.
 
 * **[!UICONTROL Copies]**: Ett heltalsvärde som anger antalet kopior som ska genereras för utdata. Standardvärdet är 1.
 
-* **[!UICONTROL Duplex Printing]**: Ett sidnumreringsvärde som anger om dubbelsidig eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet.Om du anger ett literalt värde väljer du något av följande värden:
+* **[!UICONTROL Duplex Printing]**: Ett sidnumreringsvärde som anger om dubbelsidig eller enkelsidig utskrift ska användas. Skrivare som stöder PostScript och PCL använder det här värdet. Om du anger ett literalt värde väljer du något av följande värden:
    * **[!UICONTROL Duplex Long Edge]**: Använd dubbelsidig utskrift och utskrift med sidnumrering i långkant.
    * **[!UICONTROL Duplex Short Edge]**: Använd dubbelsidig utskrift och utskrift med hjälp av sidnumrering med kort kant.
    * **[!UICONTROL Simplex]**: Använd enkelsidig utskrift.
