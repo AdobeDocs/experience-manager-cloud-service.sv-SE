@@ -3,10 +3,10 @@ title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service versi
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.03.0
 feature: Release Information
 exl-id: 2f787321-f156-480d-bbe8-1a6d04f110c5
-source-git-commit: 5815dacd2806cc7886aa0c7c5c9fd329306b3e1b
+source-git-commit: b2681113f5565e4f63c76abeaf46d5f4b1a8a8ea
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 1%
+source-wordcount: '320'
+ht-degree: 2%
 
 ---
 
@@ -28,3 +28,19 @@ Releasedatum för Best Practices Analyzer v2.1.40 är 3 mars 2023.
 ### Felkorrigeringar {#bug-fixes-bpa}
 
 * BPA rapporterade falsk positiv information om `grouprendercondition`. Den här har åtgärdats.
+
+## Content Transfer Tool {#ctt-release}
+
+### Releasedatum {#release-date-ctt}
+
+Releasedatum för Content Transfer Tool v 2.0.16 är 8 mars 2022.
+
+### Nyheter {#what-is-new-ctt}
+
+* Användarmappningen har effektiviserats och integrerats i innehållsextraheringssteget. Ingen konfiguration behövs, och som standard görs användarmappningen automatiskt när användaren startar innehållsextraheringen. Användaren har möjlighet att inaktivera användarmappning vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/user-mapping-and-migration.html?lang=en#user-mapping-detail)
+* Förkopieringssteget med [AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) har integrerats med verktyget Innehållsöverföring för att avsevärt snabba upp extraheringen. Precopy konfigureras och installeras automatiskt när den här versionen av CTT installeras. När extraheringen initieras körs som standard precopy automatiskt för migreringsuppsättningar som är större än 200 GB. Användaren har möjlighet att inaktivera det vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en)
+* CTT kan nu användas på Windows-servrar.
+
+### Felkorrigeringar {#bug-fixes-ctt}
+
+* Flera felkorrigeringar som förbättrar innehållsextraheringens flexibilitet.
