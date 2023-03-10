@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: 3c8035e4db5729f58bae29136a32a0b9944d6a2f
+source-git-commit: eadcf71aa96298383b05e61251dfeb5f345df6b9
 workflow-type: tm+mt
-source-wordcount: '13853'
+source-wordcount: '13870'
 ht-degree: 3%
 
 ---
@@ -197,10 +197,10 @@ Om du måste använda öppna bildtexter bäddar du in texten i videospåret. Det
 * [Förstå villkor 1.2.2](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html)
 * [Så här uppfyller du kriterierna 1.2.2](https://www.w3.org/WAI/WCAG21/quickref/#captions-prerecorded)
 
-<!--
-* [W3C: Synchronized Multimedia](https://www.w3.org/AudioVideo/)
-* [Captions, Transcripts, and Audio Descriptions - by WebAIM](https://webaim.org/techniques/captions/)
--->
+c
+* [W3C: Synkroniserad multimedia](https://www.w3.org/AudioVideo/)
+* [Bildtexter, uppslag och ljudbeskrivningar - från WebAIM](https://webaim.org/techniques/captions/)
+—>
 
 ### Ljudbeskrivning eller mediaalternativ (inspelat i förväg) (1.2.3) {#audio-description-or-media-alternative-prerecorded}
 
@@ -538,13 +538,13 @@ Tänk på att teckensnitt kan skilja sig åt när det gäller hur de återger mo
 Använd god vana vid och felen när det gäller läsbarhet och användbarhet när du väljer lämpliga teckensnitt och storlek för webbinnehåll.
 
 >[!NOTE]
-Följande verktyg kan hjälpa dig att konvertera till andra enheter:
-* [Px to Em Calculator](https://www.omnicalculator.com/conversion/px-to-em)
-* [Konvertering av teckenstorlek: pixel-point-em-rem-percent](https://www.websemantics.uk/tools/)
-* [Pixel to EM Converter](https://www.w3schools.com/tags/ref_pxtoemconversion.asp)
+Gör en webbsökning på följande fraser för att hitta verktyg som kan hjälpa dig att konvertera till andra enheter:
+* Px to Em Calculator <!--  (https://www.omnicalculator.com/conversion/px-to-em) -->
+* Konvertering av teckenstorlek: pixel-point-em-rem-percent <!-- CAUSES 404 ERROR DESPITE URL BEING CORRECT https://www.websemantics.uk/tools/ -->
+* Pixel to EM Converter <!-- (https://www.w3schools.com/tags/ref_pxtoemconversion.asp) -->
 
 
-Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyser](https://www.tpgi.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
+Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyzer](https://www.tpgi.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
 
 Om du inte är lika orolig för hur sidan ska se ut kan du välja att inte ange färg för bakgrunds- och förgrundstext. Ingen kontrastkontroll krävs eftersom användarens webbläsare bestämmer färgerna för texten och bakgrunden.
 
@@ -809,7 +809,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.4.3](ht
 
 #### Syfte - Länksyfte (i sammanhang) (2.4.4) {#purpose-link-purpose-in-context}
 
-För alla användare är det viktigt att tydligt ange riktningen på en länk genom lämplig länktext, oavsett om det finns någon försämring. Detta hjälper användarna att avgöra om de faktiskt vill följa en länk. För synkade användare är meningsfull länktext användbar när det finns flera länkar på en sida (särskilt om sidan är texttung), eftersom meningsfull länktext ger en tydligare indikation på målsidans funktion. Användare av vissa hjälpmedelstekniker, som kan generera en lista över alla länkar på en sida, kan enklare förstå länktexten ur sitt sammanhang om länktexten är både unik och informativ. Synkroniserade individer med kognitiva funktionshinder kan dock bli förvirrade om en länk inte ger tillräckligt med information för att korrekt beskriva var länken tar dem.
+För alla användare är det viktigt att tydligt ange riktningen på en länk genom lämplig länktext, oavsett om det finns någon försämring. Detta hjälper användarna att avgöra om de faktiskt vill följa en länk. För synkade användare är meningsfull länktext användbar när det finns flera länkar på en sida (särskilt om sidan är tjock), eftersom meningsfull länktext ger en tydligare indikation på målsidans funktion. Användare av vissa hjälpmedelstekniker, som kan generera en lista över alla länkar på en sida, kan enklare förstå länktexten ur sitt sammanhang om länktexten är både unik och informativ. Synkroniserade individer med kognitiva funktionshinder kan dock bli förvirrade om en länk inte ger tillräckligt med information för att korrekt beskriva var länken tar dem.
 
 #### Så här möts - länksyfte (i sammanhang) (2.4.4) {#how-to-meet-link-purpose-in-context}
 
@@ -846,7 +846,7 @@ John Smith's publications
 >[!NOTE]
 Ovanstående kodutdrag är en illustration, du bör använda **Bild** -komponenten.
 
-Även om det är tillrådligt att ange länktext som identifierar länkens syfte utan att behöva ha ytterligare kontext, är det inte alltid möjligt. Kontextfria länkar kan användas i följande fall, varav exempel på HTML finns i [Hur man uppfyller kriterierna för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
+Vi rekommenderar att du anger länktext som identifierar länkens syfte utan att behöva ytterligare kontext, men det är inte alltid möjligt. Kontextfria länkar kan användas i följande fall, varav exempel på HTML finns i [Hur man uppfyller kriterierna för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
 
 * Där länktexten är en del av en lista med närbesläktade länkar och när listobjektet som omger länken ger tillräckligt med kontext.
 * Om syftet med en länk tydligt framgår av *föregående* (inte följande) stycketext.
