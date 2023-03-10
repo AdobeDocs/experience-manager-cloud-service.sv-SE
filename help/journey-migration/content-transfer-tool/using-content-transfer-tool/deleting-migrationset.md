@@ -2,10 +2,10 @@
 title: Ta bort en migreringsuppsättning i verktyget Innehållsöverföring
 description: Ta bort en migreringsuppsättning i verktyget Innehållsöverföring
 exl-id: 7ec1c5ca-bac7-4617-8068-78569d7cb503
-source-git-commit: b10fab405ae3afad36c727c91dd52ad3b8cee5f6
+source-git-commit: c61407d70fb65a7fdc72174881b23db4deca556a
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_delete_migrationset"
->title="Ta bort en migreringsuppsättning"
+>title="Borttagning av en migreringsuppsättning"
 >abstract="Lär dig hur du tar bort en migreringsuppsättning."
 
 Migreringsuppsättningar kan tas bort från Cloud Acceleration Manager.

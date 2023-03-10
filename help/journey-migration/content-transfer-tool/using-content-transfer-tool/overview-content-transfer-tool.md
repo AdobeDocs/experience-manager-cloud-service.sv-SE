@@ -2,10 +2,10 @@
 title: Översikt över verktyget för innehållsöverföring
 description: Översikt över Content Transfer Tool
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: 5a4592531377109fba88b5cdc9df027803feca7a
+source-git-commit: ac35bbe5ad78e07cc5292e089f3d71c6a8ed6ccc
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 47%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -63,6 +63,25 @@ Content Transfer Tool har en funktion för differentiell innehållsuppdatering s
 I extraheringsfasen måste alternativet för ***overwrite*** vara inaktiverat för att en befintlig migreringsuppsättning ska kunna *uppdateras*. Mer information finns i [Extrahering av ändringar](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process).
 
 För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet måste alternativet *wipe* vara inaktiverat i inmatningsfasen. Mer information finns i [Uppdatera inmatning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process).
+
+## Förfallotid för migreringsuppsättning {#migration-set-expiry}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_ctt_migrationset_expiry"
+>title="Förfallodatum för en migreringsuppsättning"
+>abstract="Lär dig mer om när en migreringsuppsättning upphör att gälla."
+
+Alla migreringsuppsättningar upphör så småningom efter en längre inaktivitetsperiod på ungefär 90 dagar. När indikatorerna visas på projektkortet och migreringsjobbtabellraderna under en tidsperiod, kommer migreringsuppsättningen att upphöra att gälla och dess data kommer inte längre att vara tillgängliga. Utgångsdatumet kan enkelt förlängas genom att du agerar på migreringsuppsättningen genom att:
+
+* redigera sin beskrivning
+* hämta extraheringsnyckeln
+* utföra extrahering
+* utföra ett intag från den
+
+En migreringsuppsättnings förfallodatum kan övervakas på raden Migreringsuppsättning. En användbar visuell indikator på att en migreringsuppsättning närmar sig förfallodatumet har även lagt till projektets kort.
+
+![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam29.png)
+
 
 ## What&#39;s Next {#whats-next}
 

@@ -2,10 +2,10 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: b36756395cc516ab4e4725f718ed6de77d9872f8
+source-git-commit: 8264aef85a1d76db1cc04e0a01839089ee5f4b66
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +60,7 @@ Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsök
 >title="Verktyget Innehållsöverföring körs"
 >abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehållet till AEM as a Cloud Service (Författare/Publicera)."
 >additional-url="https://video.tv.adobe.com/v/35460/?quality=12&amp;learn=on" text=" Se demo"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=en#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
 Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverföring. Följ det här avsnittet för att lära dig hur du använder verktyget Innehållsöverföring för att migrera innehåll till AEM as a Cloud Service:
 
@@ -69,8 +69,8 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_extraction_setup"
 >title="Installationsfas för extrahering"
->abstract="Lär dig hur du skapar en migreringsuppsättning och kopierar extraheringsnyckeln."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=en#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
+>abstract="Lär dig hur du skapar och hanterar en migreringsuppsättning och hur du kopierar extraheringsnyckeln."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
 <!-- Contextualhelp id "aemcloud_ctt_extraction_setup" needs to be added here -->
 
@@ -84,9 +84,11 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    >[!NOTE]
    >
-   >Högst fem migreringsuppsättningar kan skapas per projekt i Cloud Acceleration Manager.
+   >Högst fem migreringsuppsättningar, inklusive utgångna uppsättningar, kan skapas per projekt i Cloud Acceleration Manager.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam2.png)
+
+   Följande dialogruta visas. Observera att ett migreringsuppsättning upphör att gälla efter en längre inaktivitetsperiod. När varningar visas på projektkortet och migreringsjobbtabellsraderna under en tidsperiod, kommer migreringsuppsättningen att upphöra och dess data kommer inte längre att vara tillgängliga. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam3.png)
 
