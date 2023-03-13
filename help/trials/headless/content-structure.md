@@ -4,7 +4,7 @@ description: Lär dig hur du skapar en struktur som fungerar som grund för allt
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: fa36470e50abdf6dd019a91665945ff6e68e40c2
+source-git-commit: 6464b90e607d3de87d103c744b8e7c0ba9ed2178
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%

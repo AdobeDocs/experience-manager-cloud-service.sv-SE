@@ -2,7 +2,7 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 3e31b065999d36717b81253d2773e41b76949954
+source-git-commit: 6de0b7c961083d9be00837439757da95326a96da
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 0%
@@ -227,7 +227,7 @@ Provexemplen från Adobe ger hjälpfunktioner för att komma åt konfigurationsp
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
 1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
@@ -263,7 +263,7 @@ Om ett testresultatarkiv skapas under en UI-testkörning kan du hämta det från
 
 Testerna ibland måste överföra filer till det program som testas. För att driftsättningen av Selenium ska vara flexibel i förhållande till dina tester är det inte möjligt att ladda upp en resurs direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
 
-1. Överför filen på den URL som anges av `UPLOAD_URL` systemvariabel.
+1. Överför filen på den URL som anges av `UPLOAD_URL` miljövariabel.
    * Överföringen måste utföras i en POST med ett multipart-formulär.
    * Multipart-formuläret måste ha ett enda filfält.
    * Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`.

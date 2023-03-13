@@ -4,8 +4,8 @@ description: Extraherar innehåll från källa
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
 source-git-commit: 614b2d9e0b3c34bdef854115dce91effed0b36f8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '663'
+ht-degree: 22%
 
 ---
 

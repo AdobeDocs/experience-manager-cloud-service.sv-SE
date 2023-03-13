@@ -4,8 +4,8 @@ description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 source-git-commit: 7e5a966693b139efa42111d8b6d675674516cfc6
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1693'
+ht-degree: 7%
 
 ---
 

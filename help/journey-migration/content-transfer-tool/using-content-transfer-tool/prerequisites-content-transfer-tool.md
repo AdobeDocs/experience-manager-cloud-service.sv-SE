@@ -4,8 +4,8 @@ description: Krav för verktyget Innehållsöverföring
 exl-id: 41a9cff1-4d89-480c-b9fc-5e8efc2a0705
 source-git-commit: fac037b59753ba1de960df47311c1febc2059d27
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '549'
+ht-degree: 1%
 
 ---
 

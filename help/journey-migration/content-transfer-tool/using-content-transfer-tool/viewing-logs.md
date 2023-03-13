@@ -4,8 +4,8 @@ description: Visa loggar för en migreringsuppsättning i verktyget Innehållsö
 exl-id: aed1ac83-a2fb-425e-aca4-39cd0bb42fd3
 source-git-commit: fac037b59753ba1de960df47311c1febc2059d27
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '249'
+ht-degree: 11%
 
 ---
 
