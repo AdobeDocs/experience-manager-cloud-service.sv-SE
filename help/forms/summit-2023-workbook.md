@@ -5,9 +5,10 @@ description: Bygg engagerande Forms med kärnkomponenter och headless
 seo-description: Build Engaging Forms Using Core Components and Headless
 topic-tags: develop
 hide: true
-source-git-commit: 8f3ffc72507be1d28bc437041579578d6a479e23
+hidefromtoc: true
+source-git-commit: b68902ef4f7c61f77aa0d03ad718d5bf3023dea0
 workflow-type: tm+mt
-source-wordcount: '2453'
+source-wordcount: '2465'
 ht-degree: 0%
 
 ---
@@ -242,8 +243,6 @@ Konfigurera lokal databas för temat:
 
    ![](/help/forms/assets/screenshot2028116429.png)
 
-   ![](/help/forms/assets/screenshot20228116569.png)
-
 
 1. Kör följande kommando i kommandotolken:
 
@@ -271,8 +270,7 @@ Konfigurera lokal databas för temat:
 
    >[!NOTE]
    >
-   >Om du får en tom skärm i webbläsaren när du har kört `npm run live` kommando, ändra `localhost` i webbläsarens URL till 127.0.0.1 och tryck **Retur**.
-
+   >Om du får en tom skärm i webbläsaren när du har kört `npm run live` i mer än 3-4 minuter, ändra `localhost` i webbläsarens URL till 127.0.0.1 och tryck **Retur**.
 
 
    ![](/help/forms/assets/screenshot2028115129.png)
@@ -381,7 +379,8 @@ Så här återger du formuläret som finns i molntjänstens publiceringsmiljö:
 
    >[!NOTE]
    >
-   >Om du får en tom skärm i webbläsaren när du har kört `npm start` kommando, ändra `localhost` i webbläsarens URL till 127.0.0.1 och tryck **Retur**.
+   > 
+   > Om du får en tom skärm i webbläsaren när du har kört `npm start` i mer än 3-4 minuter, ändra `localhost` i webbläsarens URL till 127.0.0.1 och tryck **Retur**.
 
    ![](/help/forms/assets/screenshot2028118229.png)
 
@@ -529,7 +528,7 @@ Så här återger du formuläret som finns i molntjänstens publiceringsmiljö:
 
    >[!NOTE]
    >
-   >Om du får en tom skärm i webbläsaren när du har kört `npm start` kommando, ändra `localhost` i webbläsarens URL till 127.0.0.1 och tryck **Retur**.
+   >Om du får en tom skärm i webbläsaren när du har kört `npm start` i mer än 3-4 minuter, ändra `localhost` i webbläsarens URL till 127.0.0.1 och tryck **Retur**.
 
    ![](/help/forms/assets/screenshot2028127229.png)
 
