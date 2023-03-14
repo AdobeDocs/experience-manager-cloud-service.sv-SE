@@ -13,7 +13,7 @@ hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
 source-git-commit: 803c4dc44189d58ddbd2669b00dd8107b2a926ae
 workflow-type: tm+mt
-source-wordcount: '3709'
+source-wordcount: '3705'
 ht-degree: 0%
 
 ---
@@ -254,14 +254,14 @@ Efter överföring finns det olika sätt att förhandsgranska en resurs renderin
 ![Förhandsgranska en återgivning av en resurs baserat på förinställningen för stor bild](/help/assets/dynamic-media/assets/dm-image-preset-with-url.png)
 _Förhandsgranska en återgivning av en resurs baserat på den valda förinställningen för&quot;stor&quot; bild. Klicka på URL-knappen. Den resulterande URL-sökvägen innehåller förinställningsnamnet &quot;Large&quot; och kan användas på en webbsida._
 
-URL:en ovan är live! [Prova](http://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982?$Large$){target=&quot;_blank&quot;}.
+URL:en ovan är live! [Prova](http://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982?$Large$){target="_blank"}.
 
 Ett annat sätt att förhandsgranska en resurs är att välja bildresursen och sedan välja en _Tittare_ förinställning enligt följande.
 
 ![Förhandsgranska en resurs baserat på förinställningen för Zooma vertikalt ljus i visningsprogrammet](/help/assets/dynamic-media/assets/dm-viewer-preset.png)
 _Förhandsgranska en resurs baserat på den valda visningsförinställningen &quot;ZoomVertical_light&quot;. Muspekaren (`+`) flyttades över klockan för att zooma in. Lägg märke till knapparna URL och Bädda in._
 
-Återgivningen ovan är live! [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_28563982&amp;config=jpearldemo/ZoomVertical_light){target=&quot;_blank&quot;}.
+Återgivningen ovan är live! [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_28563982&amp;config=jpearldemo/ZoomVertical_light){target="_blank"}.
 
 ## Valfritt - Läs mer
 

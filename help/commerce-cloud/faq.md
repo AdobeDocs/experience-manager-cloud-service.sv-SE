@@ -2,7 +2,7 @@
 title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
+source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
 workflow-type: tm+mt
 source-wordcount: '969'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 
-## 1. Används CIF GraphQL endast för handel eller kommer det att vara tillgängligt för frågor som har skapats i AEM JCR?
+## 1. Används CIF GraphQL endast för e-handel eller kommer det att finnas tillgängligt för frågor som författas AEM JCR?
 
-Adobe har antagit Adobe Commerce GraphQL API:er som sitt officiella e-handels-API för alla e-handelsrelaterade data. Därför använder AEM GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Detta GraphQL-API är oberoende av AEM GraphQL-API för åtkomst till innehållsfragment.
+Adobe har antagit Adobe Commerce GraphQL API:er som sin officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av AEM GraphQL-API:t för att komma åt innehållsfragment.
 
 ## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce Admin? Hur kan resurser från Dynamic Media förbrukas?
 
@@ -39,7 +39,7 @@ Detta beror på några andra aspekter som du måste tänka på. Hur stor är cac
 
 ## 7. Hur spelar PIM in i detta ramverk?
 
-PIM-data exponeras för AEM och klienter via GraphQL-begäranden. Vi rekommenderar att PIM integreras med e-handelsmotorn (Adobe Commerce eller andra) så att PIM-data kan hämtas från e-handelsmotorn.
+PIM-data exponeras för AEM och kunder via GraphQL-förfrågningar. Vi rekommenderar att PIM integreras med e-handelsmotorn (Adobe Commerce eller andra) så att PIM-data kan hämtas från e-handelsmotorn.
 
 ## 8. Cachelagra även priser och andra data via Dispatcher. Blir det ofta en cachedomål?
 
@@ -55,7 +55,7 @@ En referensimplementering av produktsökningar tillhandahålls, men ingen enhetl
 
 ## 11. Hur fungerar sökningen med AEM och e-handel med CIF?
 
-CIF innehåller komponenterna Sökfält och Sökresultat. Sökfältskomponenten skickar en GraphQL-begäran med söktermen till e-handelslösningen som sedan returnerar en produktlista som innehåller produktnamn, pris, SLUG osv. Sökresultatkomponenten visar sedan sökresultaten i en gallerivy på en sökresultatsida som skapats i AEM. Sökfunktionen stöder grundläggande textsökning. Vi använder SLUG/url-tangenten för att skapa en referens till PDP.
+CIF innehåller komponenterna Sökfält och Sökresultat. Sökfältskomponenten skickar en GraphQL-begäran med söktermen till e-handelslösningen som sedan returnerar en produktlista som innehåller produktnamn, pris, SLUG och så vidare. Sökresultatkomponenten visar sedan sökresultaten i en gallerivy på en sökresultatsida som skapats i AEM. Sökfunktionen stöder grundläggande textsökning. Vi använder SLUG/url-tangenten för att skapa en referens till PDP.
 
 ## 12. Hur kan produktdata användas i MSM eller översättningar?
 

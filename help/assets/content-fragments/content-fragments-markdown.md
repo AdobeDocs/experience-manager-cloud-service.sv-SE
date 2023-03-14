@@ -4,7 +4,7 @@ description: Förstå hur Content Fragment Editor använder markeringssyntax fö
 feature: Content Fragments
 role: User
 exl-id: 7a6d4a63-faf8-4e1c-95da-90db2027a2dd
-source-git-commit: 21ee6ec3ffef602bfbac7d89bb6c3454869deda9
+source-git-commit: c15ef1cc9b14466105e5565c8ccc15120346f0f2
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 4%

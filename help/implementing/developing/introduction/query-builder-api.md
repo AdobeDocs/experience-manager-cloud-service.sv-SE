@@ -2,7 +2,7 @@
 title: Query Builder API
 description: Funktionerna i Asset Share Query Builder visas via Java API och REST API.
 exl-id: d5f22422-c9da-4c9d-b81c-ffa5ea7cdc87
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 0%

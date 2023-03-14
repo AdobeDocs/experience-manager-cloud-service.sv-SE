@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Interactive Images
 role: User
 exl-id: 89eef5e6-d508-4f33-b54e-24d4df49f8c3
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
 source-wordcount: '4142'
 ht-degree: 1%

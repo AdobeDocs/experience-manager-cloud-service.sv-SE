@@ -210,7 +210,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
          Detta anger noden (som i `/libs`) som den aktuella noden ska placeras före:
 
          * typ: `String`
-         * värde: `<before-SiblingName>`
+         * value: `<before-SiblingName>`
 
 ### Anropa Sling Resource Merger från koden {#invoking-the-sling-resource-merger-from-your-code}
 
@@ -235,7 +235,7 @@ Sling Resource Merger innehåller två anpassade resursprovidrar - en för över
 
    * syfte: sammanfoga resurser baserat på deras supertyp
    * monteringspunkt: `/mnt/overide`
-   * användning: `mount point + absolute path`
+   * usage: `mount point + absolute path`
    * exempel:
 
       * `getResource('/mnt/override' + '<absolute-path-to-resource>');`

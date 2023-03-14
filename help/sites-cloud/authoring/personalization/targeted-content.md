@@ -2,7 +2,7 @@
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 exl-id: 8d80d867-2d0f-4ddb-8a06-f9441e6d85ce
-source-git-commit: f619cc2b1fcc697ebe7af7370b6839fe5ce40419
+source-git-commit: 41027653bffb064b3c313d6512b0314336f6c8dc
 workflow-type: tm+mt
 source-wordcount: '5414'
 ht-degree: 5%

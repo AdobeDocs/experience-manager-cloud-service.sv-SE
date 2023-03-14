@@ -4,7 +4,7 @@ description: Lär dig hur du länkar URL-adresser till webbprogram i Dynamic Med
 contentOwner: Rick Brough
 role: User
 exl-id: 3cd3f4d5-ebf0-4318-9a0d-1ea69453d57b
-source-git-commit: 223d37e036194b6a7174f4ef551065285b930eb7
+source-git-commit: 2009e549eadd97d4d2bfcccd728ece17ecfeede5
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 5%

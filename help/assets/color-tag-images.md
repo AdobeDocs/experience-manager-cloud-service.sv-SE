@@ -25,11 +25,11 @@ I följande bild visas de åtgärder du utför för att konfigurera och hantera 
 
 | Filformat | Tillägg | MIME-typ | Indatafärgrymd | Största tillåtna källfilsstorlek | Maximal filstorlek som stöds |
 |---|---|---|---|---|---|
-| JPEG | .jpg, .jpeg | image/jpeg | sRGB | 15 GB | 20000px X 20000px |
-| PNG | .png | bild/png | sRGB | 15 GB | 20000px X 20000px |
+| JPEG | .jpg, .jpeg | image/jpeg | sRGB | 15GB | 20000px X 20000px |
+| PNG | .png | bild/png | sRGB | 15GB | 20000px X 20000px |
 | TIFF | .tif, .tiff | bild/tiff | sRGB | 4 GB (begränsat av formatspecifikationer | 20000px X 20000px |
 | PSD | .psd | image/vnd.adobe.photoshop | sRGB | 2 GB (begränsat av formatspecifikationer) | 20000px X 20000px |
-| GIF | .gif | image/gif | sRGB | 15 GB | 20000px X 20000px |
+| GIF | .gif | image/gif | sRGB | 15GB | 20000px X 20000px |
 | BMP | .bmp | image/bmp | sRGB | 4 GB (begränsat av formatspecifikationer) | 20000px X 20000px |
 
 ## Hantera egenskaper för färgtaggning {#manage-color-tagging-properties}

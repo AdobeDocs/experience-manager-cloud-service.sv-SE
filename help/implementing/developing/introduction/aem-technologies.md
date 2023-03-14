@@ -2,7 +2,7 @@
 title: AEM Technical Foundations
 description: En översikt över den tekniska grunden för AEM, inklusive hur AEM är strukturerad och grundläggande tekniker som JCR, Sling och OSGi.
 exl-id: ab6e7fe9-a25d-4351-a005-f4466cc0f40e
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '2191'
 ht-degree: 0%

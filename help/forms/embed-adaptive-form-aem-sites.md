@@ -3,7 +3,8 @@ title: Bädda in ett anpassat formulär på AEM Sites-sidan
 seo-title: Hwo to add an Adaptive Form to an AEM Sites page?
 description: Du kan använda AEM Forms Container-komponenten för att lägga till eller bädda in adaptiv Forms på en AEM Sites-sida för att fylla i och skicka ett formulär utan att lämna AEM Sites-sidorna.
 feature: Adaptive Forms
-source-git-commit: 434071de17d6ff56ede561735f7214d96f98cfa0
+exl-id: 359b05e8-d8c1-4a77-9e70-6f6b6e668560
+source-git-commit: 041f0fb62b1bca79cdf4b47f971c060deb77d28f
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 0%

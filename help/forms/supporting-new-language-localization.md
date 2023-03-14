@@ -3,7 +3,7 @@ title: Lägga till stöd för nya språkområden i ett anpassat formulär
 seo-title: Learn to add support for new locales to your adaptive forms
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. Engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR) språk.
 seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. We support 10 locales out of the box curently, as  "en","fr","de","ja","pt-br","zh-cn","zh-tw","ko-kr","it","es".
-source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
+source-git-commit: 659484f80d1f31794512af5e4d190b04a9f3e4e8
 workflow-type: tm+mt
 source-wordcount: '1180'
 ht-degree: 0%

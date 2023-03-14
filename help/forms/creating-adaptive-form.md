@@ -5,7 +5,7 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 38ca5eea-793b-420b-ae60-3a0bd83caf00
-source-git-commit: 37274b28ab2343fd3cdfb4747c9dee701c699b46
+source-git-commit: ae208e9ac35c3c464d9beeaa3bc2bddc0ecf52bb
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 0%

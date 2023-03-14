@@ -2,7 +2,7 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: 2bfabfc2c12faf6f813ecd5b11b289117724d9ec
+source-git-commit: 81d58f25af8b023774ce8653154597d92a7ac70b
 workflow-type: tm+mt
 source-wordcount: '3019'
 ht-degree: 6%
@@ -541,5 +541,5 @@ Du kan använda Ångra och Gör om för följande typer av sidändringar:
 >* Särskilda behörigheter krävs för att ångra och göra om ändringar i filer och bilder.
 >* Historiken för ändringar av filer och bilder varar i minst tio timmar. Efter den här gången kan du dock inte ångra ändringarna. Administratören kan ändra standardtiden på tio timmar.
 >* Systemadministratören kan konfigurera olika aspekter av funktionerna Ångra/Gör om enligt kraven för din instans.
+   <!--* Your system administrator can [configure various aspects of the Undo/Redo features](/help/sites-administering/config-undo.md) according to the requirements for your instance.-->
 
-<!--* Your system administrator can [configure various aspects of the Undo/Redo features](/help/sites-administering/config-undo.md) according to the requirements for your instance.-->

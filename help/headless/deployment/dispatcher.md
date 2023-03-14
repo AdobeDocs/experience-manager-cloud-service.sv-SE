@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Dispatcher-konfiguration med AEM Headless
 
-The [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Flera konfigurationer ingår som standard för att öppna GraphQL-slutpunkter till headless-program.
+The [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Flera konfigurationer ingår som standard för att öppna GraphQL-slutpunkter för headless-program.
 
 >[!NOTE]
 >
 >Detaljerad dokumentation om Dispatcher finns i [Dispatcher Guide](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
 
-Som en del av ett AEM-projekt inkluderas en dispatchermodul som innehåller konfigurationer för dispatchern. Nyligen genererade projekt från [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller [filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?#defining-a-filter) som aktiverar GraphQL-slutpunkter.
+Som en del av ett AEM-projekt inkluderas en dispatchermodul som innehåller konfigurationer för dispatchern. Nyligen genererade projekt från [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller [filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?#defining-a-filter) som möjliggör slutpunkter från GraphQL.
 
 ## GraphQL-slutpunkt(er)
 
-Som en del av standardfiltren [GraphQL-slutpunkter](/help/headless/graphql-api/graphql-endpoint.md) öppnas med följande regel:
+Som en del av standardfiltren [GraphQL slutpunkter](/help/headless/graphql-api/graphql-endpoint.md) öppnas med följande regel:
 
 ```
 /0060 { /type "allow" /method '(POST|OPTIONS)' /url "/content/_cq_graphql/*/endpoint.json" }
@@ -30,7 +30,7 @@ Som en del av standardfiltren [GraphQL-slutpunkter](/help/headless/graphql-api/g
 
 The `*` jokertecken öppnar flera slutpunkter på AEM. Fråga med en GraphQL-slutpunkt görs med `POST` och svaret **not** cachelagras.
 
-## GraphQL-beständiga frågor
+## GraphQL Beständiga frågor
 
 Begäran om beständiga frågor görs mot en annan slutpunkt. Som en del av standardfilterkonfigurationen, URL:en för [Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) öppnas med följande regel:
 

@@ -2,7 +2,7 @@
 title: Förhandsgranska - JSON-representation (resurser - innehållsfragment)
 description: Lär dig hur du enkelt förhandsgranskar en JSON-representation av dina innehållsfragment när du implementerar AEM headless-lösning.
 exl-id: e5f3f3ee-c191-4b7b-8a29-67524bb68a8e
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 1%

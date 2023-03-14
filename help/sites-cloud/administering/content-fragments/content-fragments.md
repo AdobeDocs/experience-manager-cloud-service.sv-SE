@@ -4,7 +4,7 @@ description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as
 feature: Content Fragments
 role: User
 exl-id: d12b1dda-85ce-4665-b8b1-915b74231bb8
-source-git-commit: 6d7bef4a2d11adc54e148146d79aa77c9de1d7e7
+source-git-commit: 9c3153efe4aacd1666663cd5eb718f75329202af
 workflow-type: tm+mt
 source-wordcount: '2066'
 ht-degree: 3%

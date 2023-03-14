@@ -2,7 +2,7 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 6e4919e73ef3efdfc64174a1babab084596aba48
+source-git-commit: d0a698a8f8685b1e5957a9d93d805ca3f825354a
 workflow-type: tm+mt
 source-wordcount: '1975'
 ht-degree: 5%

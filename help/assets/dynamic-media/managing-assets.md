@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Asset Management
 role: Admin,User
 exl-id: 0dc6d577-a8ee-4dd5-8643-28862bb1394c
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 7%

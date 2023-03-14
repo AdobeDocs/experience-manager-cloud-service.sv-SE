@@ -11,7 +11,7 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
-source-git-commit: f5e465d90477f1b49e4ff1c5ca9dd47cc5d539bb
+source-git-commit: d054f960f13b7308dbf42556ef60a971e880197e
 workflow-type: tm+mt
 source-wordcount: '2598'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Anpassa AEM CIF-kärnkomponenter {#customize-cif-components}
 
-The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen kommer du att utöka [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du får också lära dig mer om GraphQL-integreringen mellan AEM och Adobe Commerce och de tilläggskopplingar som finns i CIF Core Components.
+The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en referenskodbas för att använda [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components). I den här självstudiekursen kommer du att utöka [Product Teaser](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser) om du vill visa ett anpassat attribut från Adobe Commerce. Du får också lära dig mer om GraphQL integrering mellan AEM och Adobe Commerce och de förlängningskopplingar som CIF Core Components tillhandahåller.
 
 >[!TIP]
 >
@@ -28,7 +28,7 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 ## Vad du ska bygga
 
-Varumärket Venia började nyligen tillverka vissa produkter med hjälp av hållbara material och företaget skulle vilja visa en **Miljövänlig** som en del av Product Teaser. Ett nytt anpassat attribut skapas i Adobe Commerce för att ange om en produkt använder **Miljövänlig** material. Det här anpassade attributet läggs sedan till som en del av GraphQL-frågan och visas i Product Teaser för angivna produkter.
+Varumärket Venia började nyligen tillverka vissa produkter med hjälp av hållbara material och företaget skulle vilja visa en **Miljövänlig** som en del av Product Teaser. Ett nytt anpassat attribut skapas i Adobe Commerce för att ange om en produkt använder **Miljövänlig** material. Det anpassade attributet läggs sedan till som en del av GraphQL-frågan och visas i Product Teaser för angivna produkter.
 
 ![Slutlig implementering av miljöanpassade märken](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
@@ -36,7 +36,7 @@ Varumärket Venia började nyligen tillverka vissa produkter med hjälp av håll
 
 Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudiekursen. Detta inkluderar en instans av AEM som körs och som är konfigurerad och ansluten till en Adobe Commerce-instans. Granska kraven och stegen för [konfigurera en lokal utveckling med AEM as a Cloud Service SDK](../develop.md). Om du vill följa självstudiekursen fullständigt måste du ha behörighet att lägga till [Attribut till en produkt](https://docs.magento.com/user-guide/catalog/product-attributes-add.html) i Adobe Commerce.
 
-Du behöver också GraphQL IDE, till exempel [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det går att ange begäranrubriker. På Google Chrome [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) är ett tillägg som kan utföra jobbet.
+Du behöver också GraphQL IDE som [GraphiQL](https://github.com/graphql/graphiql) eller ett webbläsartillägg för att köra kodexempel och självstudiekurser. Om du installerar ett webbläsartillägg måste du se till att det går att ange begäranrubriker. På Google Chrome [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja) är ett tillägg som kan utföra jobbet.
 
 ## Klona Veniaprojektet {#clone-venia-project}
 
@@ -135,11 +135,11 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
    >
    > Mer information om [Cachehantering finns i användarhandboken för Adobe Commerce](https://docs.magento.com/user-guide/system/cache-management.html).
 
-## Använd en GraphQL IDE för att verifiera attribut {#use-graphql-ide}
+## Använd en GraphQL-utvecklingsmiljö för att verifiera attribut {#use-graphql-ide}
 
-Innan du börjar använda AEM kod är det praktiskt att utforska [GraphQL - översikt](https://devdocs.magento.com/guides/v2.4/graphql/) med GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF Core-komponenterna.
+Innan du börjar använda AEM kod är det praktiskt att utforska [GraphQL - översikt](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF Core-komponenterna.
 
-Använd sedan en GraphQL IDE för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
+Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
 
 1. Öppna GraphQL IDE och ange URL:en `http://<commerce-server>/graphql` i URL-fältet för den utvecklingsmiljö eller det tillägg du använder.
 2. Lägg till följande [produktfråga](https://devdocs.magento.com/guides/v2.4/graphql/queries/products.html) där `YOUR_SKU` är **SKU** av den produkt som använts i föregående undersökning:
@@ -261,7 +261,7 @@ Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/
 
    The `@PostConstruct` annoteringsfunktionen ser till att den här metoden anropas så snart som Sling-modellen initieras.
 
-   Observera att produktfrågan GraphQL redan har utökats med `extendProductQueryWith` metod för att hämta ytterligare `created_at` -attribut. Det här attributet används senare som en del av `isShowBadge()` -metod.
+   Observera att GraphQL-frågan redan har utökats med `extendProductQueryWith` metod för att hämta ytterligare `created_at` -attribut. Det här attributet används senare som en del av `isShowBadge()` -metod.
 
 1. Uppdatera GraphQL-frågan så att den innehåller `eco_friendly` attribut i den partiella frågan:
 
@@ -324,7 +324,7 @@ Använd [den utvecklingsmiljö du vill](https://experienceleague.adobe.com/docs/
    }
    ```
 
-   I ovanstående metod `productRetriever` används för att hämta produkten och `getAsInteger()` -metoden används för att hämta värdet för `eco_friendly` -attribut. Baserat på GraphQL-frågor som vi arbetade med tidigare vet vi att det förväntade värdet när `eco_friendly` attribute is set to &quot;**Ja**&quot; är i själva verket ett heltal av **1**.
+   I ovanstående metod `productRetriever` används för att hämta produkten och `getAsInteger()` -metoden används för att hämta värdet för `eco_friendly` -attribut. Baserat på de GraphQL-frågor vi körde tidigare vet vi att det förväntade värdet när `eco_friendly` attribute is set to &quot;**Ja**&quot; är i själva verket ett heltal av **1**.
 
    Nu när delningsmodellen har uppdaterats måste komponentkoden uppdateras för att visa en indikator på **Miljövänlig** baserat på Sling-modellen.
 

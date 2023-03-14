@@ -59,9 +59,9 @@ Bestäm vilka funktioner som ska användas
 | Upptäck - sök efter resurser | Ja | Experience Manager webbgränssnitt + skrivbordsåtgärder |  |
 | Använd - öppen resurs | Ja | Ja - för alla appar | [Öppna från webbgränssnitt](/help/assets/manage-digital-assets.md#previewing-assets) eller från Finder |
 | Använd - placera objekt från Experience Manager i ett dokument | Ja - inbäddning | Ja - länkning eller inbäddning | Experience Manager ger åtkomst till resurser som filer i det lokala filsystemet. De här länkarna i de ursprungliga programmen representeras av lokala sökvägar. |
-| Redigera - öppna för redigering | Ja - utcheckningsåtgärd | Ja - Öppna åtgärd (i nätverksresursen) | [Checka ut i AAL](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html) sparar resursen till användarens Creative Cloud-lagringskonto (synkroniserat med appen Creative Cloud) som standard. |
+| Redigera - öppna för redigering | Ja - utcheckningsåtgärd | Ja - Öppna åtgärd (i nätverksresursen) | [Checka ut i AAL](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) sparar resursen till användarens Creative Cloud-lagringskonto (synkroniserat med appen Creative Cloud) som standard. |
 | Redigera - pågående arbete utanför Experience Manager | Ja - Tillgångar som är tillgängliga i användarens Creative Cloud-lagringskonto synkroniserade med skrivbordet. | Ja |  |
-| Redigera - ladda upp ändringar | Ja - [Incheckningsåtgärd](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html) med valfri kommentar | Ja |  |
+| Redigera - ladda upp ändringar | Ja - [Incheckningsåtgärd](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) med valfri kommentar | Ja |  |
 | Överför - en fil | Ja - överför aktuellt aktivt dokument | Ja | [Överför via webbgränssnitt](/help/assets/manage-digital-assets.md#uploading-assets) |
 | Överför - flera filer/hierarkiska mappstrukturer | Nej | Ja | [Överför via webbgränssnitt](/help/assets/manage-digital-assets.md#uploading-assets); Anpassade skript eller verktyg |
 | Diverse - användare och inloggning | Creative Cloud-användare som är inloggad på Creative Cloud datorprogram känns igen (SSO) | Experience Manager-användare/inloggning | Användare av båda lösningarna räknas av mot användarkvoten för Experience Manager. |

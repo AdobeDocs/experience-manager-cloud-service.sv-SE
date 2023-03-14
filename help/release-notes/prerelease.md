@@ -194,7 +194,7 @@ När du har testat de nya funktionerna i betaversionskanalen och har bestämt di
 Adobe Experience League erbjuder massor av resurser för att lära sig AEMaaCS.
 
 * [AEMaaCS-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
-* [Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html)
+* [Självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html)
 * [Översikt över månadsreleasen](/help/release-notes/release-notes-cloud/release-notes-current.md#release-video) i versionsinformationen
 
 ## Överväganden {#considerations}

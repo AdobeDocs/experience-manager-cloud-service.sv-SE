@@ -2,7 +2,7 @@
 title: ContextHub Javascript API-referens
 description: ContextHub Javascript-API:t är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
 exl-id: ec35bef5-610c-4e85-a43a-d4201b5eb03e
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '4622'
 ht-degree: 3%

@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: c9d901db6873965643f5ababe544be3aa635a8e4
+source-git-commit: 05723d602362fd8fe8ed2318d42a669f00f79f87
 workflow-type: tm+mt
 source-wordcount: '4086'
 ht-degree: 0%

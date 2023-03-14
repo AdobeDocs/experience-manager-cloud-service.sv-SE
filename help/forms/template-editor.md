@@ -2,7 +2,7 @@
 title: Hur skapar man en anpassad formulärmall?
 description: Skapa adaptiva formulärmallar för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 exl-id: a882cba2-c621-4ff7-a972-c504641b5639
-source-git-commit: b4cc89f32dcdddf93f12f087a20395e055ea85bb
+source-git-commit: c101ed97388b06dc71edfc9e13fac8a3e889c249
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 0%
@@ -48,8 +48,7 @@ Innehåller följande alternativ:
 
    * **Växla sidopanel**: Här kan du visa eller dölja sidofältet.
    * **Sidinformation**: Här kan du ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
-
-   <!-- * **Emulator**: Lets you simulate and customize the look for different devices.-->
+      <!-- * **Emulator**: Lets you simulate and customize the look for different devices.-->
    * **Lägesväljare:** Här kan du ändra läge.Du kan välja **[!UICONTROL Structure]** läge, **[!UICONTROL Initial Content]**, **[!UICONTROL Layout Control]** läge. I strukturläget kan du lägga till och anpassa sidhuvud och sidfot. Med det inledande innehållsläget kan du anpassa formulärinnehållet.
    * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningsläge.
 * **Sidofält:** Tillhandahåller webbläsarna Innehåll, Egenskaper, Resurser och Komponenter.

@@ -1,7 +1,7 @@
 ---
 title: Stöd för fotnoter
 description: RTE-stöd för fotnoter.
-source-git-commit: 6f6cf5657bf745a2e392a8bfd02572aa864cc69c
+source-git-commit: 3d713304512065819ed16bbc9604f2cf9d1cf43f
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 0%

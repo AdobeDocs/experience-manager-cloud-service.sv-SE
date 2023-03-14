@@ -15,7 +15,7 @@ I den här delen av [AEM Headless Developer Journey,](overview.md) Lär dig hur 
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM resan utan headless [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) har du lärt dig hur du får tillgång till ditt headless-innehåll i AEM via AEM GraphQL API och du bör nu:
+I det föregående dokumentet om den AEM resan utan headless [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) har du lärt dig hur du får tillgång till ditt headless-innehåll i AEM via det AEM GraphQL API:t, och du bör nu:
 
 * Lär dig mer om GraphQL.
 * Förstå hur AEM GraphQL API fungerar.
@@ -37,7 +37,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 ## Varför behöver du Assets HTTP API för innehållsfragment {#why-http-api}
 
-I det föregående steget i Headless Journey lärde du dig att använda API:t AEM GraphQL för att hämta ditt innehåll med hjälp av frågor.
+I det föregående steget i Headless Journey lärde du dig att använda AEM GraphQL API för att hämta ditt innehåll med hjälp av frågor.
 
 Varför behövs en annan API?
 
@@ -327,6 +327,6 @@ Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar
    * [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html)
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
-* [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Grundläggande komponenter i AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)

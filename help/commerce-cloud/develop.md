@@ -8,7 +8,7 @@ doc-type: tutorial
 kt: 5826
 thumbnail: 39476.jpg
 exl-id: 6f28a52b-52f8-4b30-95cd-0f9cb521de62
-source-git-commit: f5e465d90477f1b49e4ff1c5ca9dd47cc5d539bb
+source-git-commit: d054f960f13b7308dbf42556ef60a971e880197e
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 4%
@@ -68,7 +68,7 @@ För lokal utveckling av CIF-tillägg med AEM as a Cloud Service SDK:
 
    CIF-tilläggsfilen för zip-filen innehåller två Sling-funktionsarkiv `.far` filer. Se till att använda rätt för AEM Author eller AEM Publish, beroende på hur du tänker köra den lokala AEM as a Cloud Service SDK:n.
 
-1. Skapa en lokal systemmiljövariabel med namnet `COMMERCE_ENDPOINT` håller Adobe Commerce GraphQL-slutpunkten.
+1. Skapa en lokal systemmiljövariabel med namnet `COMMERCE_ENDPOINT` håller slutpunkten för Adobe Commerce GraphQL.
 
    Exempel på Mac OSX:
 

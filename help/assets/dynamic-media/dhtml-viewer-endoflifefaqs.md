@@ -4,7 +4,7 @@ description: Från och med den 31 januari 2014 är DHTML-visningsprogramplattfor
 contentOwner: Rick Brough
 role: Admin,User
 exl-id: f1595962-6da3-441d-838e-c1140745c088
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%

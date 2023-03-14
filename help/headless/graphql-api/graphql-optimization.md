@@ -1,7 +1,7 @@
 ---
 title: Optimera GraphQL-frågor
 description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, sidlägger och sorterar innehållsfragment i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
-source-git-commit: 0fe0bd301fb09cdc631878926f2e40df51a2cc23
+source-git-commit: cda6d7e382b090fd726b27e565da08c8b1c80008
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%

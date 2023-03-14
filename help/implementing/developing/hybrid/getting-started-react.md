@@ -2,7 +2,7 @@
 title: Komma igång med SPA i AEM med React
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
 exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '1144'
 ht-degree: 0%

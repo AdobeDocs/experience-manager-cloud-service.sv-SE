@@ -133,7 +133,7 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
-   * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
+   * **Kodplats** - Det här alternativet definierar sökvägen i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
       * För konfigurationspipelines på webbnivå är detta vanligtvis sökvägen som innehåller `conf.d`, `conf.dispatcher.d`och `opt-in` kataloger.
       * Om projektstrukturen till exempel genererades från [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) banan `/dispatcher/src`.
 

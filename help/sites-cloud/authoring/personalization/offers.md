@@ -2,7 +2,7 @@
 title: Skapa och hantera erbjudanden (Erbjudandekonsol)
 description: Använd offertkonsolen för att skapa erbjudanden som du kan använda i aktivitetsupplevelser
 exl-id: 81d2fda2-06a9-48f6-820a-dd9e11d94fcc
-source-git-commit: ca389013fd1e703e7decd1aae968589b12a43489
+source-git-commit: c27870c39da80d664f208d658994eec83a19589f
 workflow-type: tm+mt
 source-wordcount: '1393'
 ht-degree: 0%

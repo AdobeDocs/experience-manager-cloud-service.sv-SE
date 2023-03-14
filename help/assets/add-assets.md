@@ -4,7 +4,7 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 55e117bba7037d44eaadab8bd2de7164e23b47fa
+source-git-commit: 64cb0bb946cb8d1f7348323285d1a13fbe0acdd4
 workflow-type: tm+mt
 source-wordcount: '2991'
 ht-degree: 0%

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Inställning av kundvagn och utskicksare
 
-[AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) levereras med ett kort [kundvagn](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/minicart/v1/minicart) som återger ett kundvagn- och utcheckningsformulär. Kundvagnen kräver en [AEM Dispatcher med GraphQL](https://github.com/adobe/aem-core-cif-components/blob/master/dispatcher) konfiguration av routning. I följande video visas en lokal konfiguration och konfiguration med en Docker-bild.
+[AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) levereras med ett kort [kundvagn](https://github.com/adobe/aem-core-cif-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/minicart/v1/minicart) som återger ett kundvagn- och utcheckningsformulär. Kundvagnen kräver en [AEM Dispatcher with GraphQL](https://github.com/adobe/aem-core-cif-components/blob/master/dispatcher) konfiguration av routning. I följande video visas en lokal konfiguration och konfiguration med en Docker-bild.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29656/?quality=12)
 

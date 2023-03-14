@@ -2,7 +2,7 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: 69ac8e444a0f22649b48ec25b549ad60858f8b1b
+source-git-commit: 225b34f081a942d67dfc1f6faeb09763ea9fde03
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%

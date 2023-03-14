@@ -2,7 +2,7 @@
 title: Introduktion till sandlådeprogram
 description: Lär dig vilka sandlådeprogram som skiljer sig från produktionsprogram.
 exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%

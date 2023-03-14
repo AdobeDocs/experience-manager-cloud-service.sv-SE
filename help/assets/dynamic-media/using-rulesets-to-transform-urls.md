@@ -4,7 +4,7 @@ description: Lär dig hur du distribuerar regeluppsättningar i Dynamic Media f�
 contentOwner: Rick Brough
 role: User
 exl-id: f8010125-ba89-406a-bede-f6aa2f858c70
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%

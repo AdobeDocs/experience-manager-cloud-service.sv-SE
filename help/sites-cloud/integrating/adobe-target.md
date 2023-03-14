@@ -2,7 +2,7 @@
 title: Integrera med Adobe Target
 description: Integrera med Adobe Target
 exl-id: 2b4cf35e-2b75-4303-8d09-f6644ad99274
-source-git-commit: e6fc31a5c4b3bb62f7d6e639eae7e1f222b2f5ed
+source-git-commit: f40a2db6616aeaaf13f8ae19ab429a7301e6c05a
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 1%

@@ -2,7 +2,7 @@
 title: Metadata - Fragmentegenskaper (resurser - innehållsfragment)
 description: Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment.
 exl-id: bc67480d-a1e4-4ef9-b811-8bd110f70369
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 3%

@@ -9,13 +9,13 @@ topic-tags: author, introduction
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
-source-git-commit: 434071de17d6ff56ede561735f7214d96f98cfa0
+exl-id: 16f86dae-86fb-481b-8978-b8898705ed7e
+source-git-commit: 041f0fb62b1bca79cdf4b47f971c060deb77d28f
 workflow-type: tm+mt
 source-wordcount: '2394'
 ht-degree: 0%
 
 ---
-
 
 # Adaptiv Forms-redigerare {#introduction-to-authoring-adaptive-forms}
 

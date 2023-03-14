@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 0d4db4fc19180cff5e15d58c4506933597ca7cce
+source-git-commit: fbcbc27000a93c00a11c985697ad493791f72ef7
 workflow-type: tm+mt
 source-wordcount: '1251'
 ht-degree: 0%

@@ -145,9 +145,9 @@ Innehållsmodellens struktur är:
 
 >[!NOTE]
 >
->Modellerna för innehållsfragment används också som bas för AEM GraphQL-scheman, som används för att hämta ditt innehåll - mer om det i en senare session.
+>Modellerna för innehållsfragment används också som bas för de AEM GraphQL-scheman som används för att hämta ditt innehåll - mer om det i en senare session.
 
-Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av standard-API:t GraphQL. Med AEM GraphQL API kan du utföra (komplexa) frågor på dina innehållsfragment, där varje fråga anpassas efter en viss modelltyp.
+Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av GraphQL standard-API. Med AEM GraphQL API kan du utföra (komplexa) frågor på dina innehållsfragment, där varje fråga anpassas efter en viss modelltyp.
 
 Det returnerade innehållet kan sedan användas av dina program.
 
@@ -266,7 +266,7 @@ En grundläggande struktur som exempel finns i Struktur för exempelinnehållsfr
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig att utforma strukturen och skapa innehåll som är beroende av den, är nästa steg att [Lär dig hur du använder GraphQL-frågor för att komma åt och hämta innehåll i innehållsfragment](access-your-content.md). Detta kommer att presentera och diskutera GraphQL och sedan titta på några exempelfrågor för att se hur saker och ting fungerar i praktiken.
+Nu när du har lärt dig att utforma strukturen och skapa innehåll som är beroende av den, är nästa steg att [Lär dig hur du använder GraphQL-frågor för att komma åt och hämta innehåll i innehållsfragment](access-your-content.md). Här kommer GraphQL att introduceras och diskuteras, och sedan titta på några exempelfrågor för att se hur det fungerar i praktiken.
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -274,7 +274,7 @@ Nu när du har lärt dig att utforma strukturen och skapa innehåll som är bero
    * [Innehållsfragment i konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md) - aktivera funktionen för innehållsfragment i konfigurationsläsaren
    * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md) - skapa och redigera modeller för innehållsfragment
    * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md) - skapa och skriva innehållsfragment, den här sidan leder dig till andra detaljerade avsnitt
-* [AEM GraphQL-scheman](access-your-content.md) - hur GraphQL realiserar modeller
+* [AEM GraphQL Schemas](access-your-content.md) - hur GraphQL realiserar modeller
 * [Strukturen för exempelinnehållsfragment](/help/headless/graphql-api/sample-queries.md#content-fragment-structure-graphql)
 * [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - En kort videosjälvstudiekurs med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL
-   * [Grundläggande om GraphQL-modellering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html) - Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för GraphQL.
+   * [Grundläggande om GraphQL-modellering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html) - Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för användning med GraphQL.

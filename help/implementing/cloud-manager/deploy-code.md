@@ -2,7 +2,7 @@
 title: Distribuera koden
 description: Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: 14395cf97b23896e929e215e7e0b9e33620637eb
+source-git-commit: 63e38485e2f15c6947c7fba1848d47eda4cc900e
 workflow-type: tm+mt
 source-wordcount: '1221'
 ht-degree: 0%

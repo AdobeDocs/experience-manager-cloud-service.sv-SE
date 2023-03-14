@@ -6,7 +6,7 @@ mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 01d54ba56ccab372396829a012c4da8ef4a57fe2
+source-git-commit: 9dfb52a1e3b0d1aa8b7bc741c8631aed58e5e7af
 workflow-type: tm+mt
 source-wordcount: '3685'
 ht-degree: 14%

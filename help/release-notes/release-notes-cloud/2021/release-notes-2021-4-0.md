@@ -2,7 +2,7 @@
 title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 775332b5-24ce-430e-97a2-6eeb80877c64
-source-git-commit: 8f4b504898b1332c21f3cb82ab9bbf663c9dc312
+source-git-commit: a2c844d6f72c22ed085690ff98572a52e97de40d
 workflow-type: tm+mt
 source-wordcount: '1535'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 ### Nyheter i [!DNL Sites] {#what-is-new-sites}
 
-* GraphQL-slutpunkter - det är nu möjligt att aktivera det AEM GraphQL-API:t för enskilda AEM Sites-konfigurationer och att skapa anpassade GraphQL-slutpunkter för dessa konfigurationer med ett nytt GraphQL-konsolgränssnitt. Gränssnittet tillåter även hantering av GraphQL-slutpunkter.
+* GraphQL Endpoints - det är nu möjligt att aktivera det AEM GraphQL-API:t för enskilda AEM Sites-konfigurationer och att skapa anpassade GraphQL-slutpunkter för dessa konfigurationer med hjälp av ett nytt användargränssnitt för GraphQL Console. Gränssnittet gör det även möjligt att hantera slutpunkter från GraphQL.
 
 * Innehållsmodeller, förbättrad datatyp för datum och tid - det är nu möjligt att konfigurera datumtypen Datum och tid så att endast datum-, tid- eller datum- och tidsinformation kan redigeras.
 

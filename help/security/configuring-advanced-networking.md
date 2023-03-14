@@ -2,7 +2,7 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 9efa730f7a8bdc01d19511100e611f9f15c64f19
+source-git-commit: 8ca2340bf6d39248ed3596828f27745dcaff2c75
 workflow-type: tm+mt
 source-wordcount: '3053'
 ht-degree: 0%

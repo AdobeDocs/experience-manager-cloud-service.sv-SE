@@ -4,7 +4,7 @@ description: Lär dig hur du använder Dynamic Media för att leverera mediefile
 contentOwner: Rick Brough
 role: Admin,User
 exl-id: 3ec3cb85-88ce-4277-a45c-30e52c75ed42
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 5%

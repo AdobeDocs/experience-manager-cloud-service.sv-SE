@@ -4,7 +4,7 @@ description: Integrera med Adobe Target
 feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: 9df5c3326d80e1a6c1726395722d86556af1ee29
+source-git-commit: c69f0b838638b4a2c2ea9f54836954f72710594f
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 1%

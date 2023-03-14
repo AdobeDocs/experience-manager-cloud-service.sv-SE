@@ -2,7 +2,7 @@
 title: Migrering till tillägget AEM Commerce Integration Framework (CIF)
 description: Så här migrerar du till CIF-tillägget (AEM Commerce Integration Framework) från en gammal version
 exl-id: 0db03a05-f527-4853-b52f-f113bce929cf
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Den tidigare tillgängliga CIF-kopplingen kan inte installeras längre. Kod som 
 Lär dig [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) och egenskaperna hos AEM as a Cloud Service. Anpassa projektinställningarna till den AEM as a Cloud Service layouten.
 Jämfört med AEM 6.5-distributioner finns det två huvudsakliga skillnader här:
 
-* OSGI-paketet för GraphQL-klienten **får inte** längre inkluderas i AEM, distribueras det via CIF-tillägget
+* GraphQL-klientens OSGI-paket **får inte** längre inkluderas i AEM, distribueras det via CIF-tillägget
 * OSGI-konfigurationer för GraphQL-klient och Graphql Data Service **får inte** längre ingå i AEM
 
 >[!TIP]

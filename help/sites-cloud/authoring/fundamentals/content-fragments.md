@@ -2,7 +2,7 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: 6d7bef4a2d11adc54e148146d79aa77c9de1d7e7
+source-git-commit: 9c3153efe4aacd1666663cd5eb718f75329202af
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 3%

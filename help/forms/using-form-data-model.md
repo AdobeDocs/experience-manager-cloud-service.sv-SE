@@ -27,7 +27,7 @@ En formulärdatamodell är ett tillägg till JSON-schema som du kan använda fö
 
 * [Skapa adaptiva Forms och fragment](#create-af)
 
-<!--* [Create interactive communications and building blocks like text, list, and condition fragments](#create-ic)-->
+   <!--* [Create interactive communications and building blocks like text, list, and condition fragments](#create-ic)-->
 * [Förhandsgranska med exempeldata](#preview-ic)
 * [använder datamodelltjänst för formulär](#prefill)
 * [Skriv data i anpassat formulär tillbaka till datakällor](#write-af)

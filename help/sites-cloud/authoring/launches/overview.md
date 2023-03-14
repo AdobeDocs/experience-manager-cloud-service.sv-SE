@@ -9,7 +9,7 @@ ht-degree: 5%
 
 ---
 
-# Startar {#launches}
+# Launches {#launches}
 
 Med lanseringar kan du effektivt utveckla innehåll för en framtida release.
 

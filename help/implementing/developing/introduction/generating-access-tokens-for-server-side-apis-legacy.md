@@ -2,7 +2,7 @@
 title: Genererar åtkomsttoken för API:er på serversidan (äldre)
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM as a Cloud Service genom att generera en säker JWT-token
 hidefromtoc: true
-source-git-commit: aad1033828e400aaf4d9418f8e57afb61f05eecc
+source-git-commit: 75eb7919c437fe21ceeba934f264c653597aace5
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%

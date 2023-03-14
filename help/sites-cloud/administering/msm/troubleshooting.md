@@ -4,7 +4,7 @@ description: Ta reda på hur du felsöker de vanligaste MSM-relaterade problemen
 feature: Multi Site Manager
 role: Admin
 exl-id: 50f02f4f-a347-4619-ac90-b3136a7b1782
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 0%

@@ -2,7 +2,7 @@
 title: Versionsinformation för version 2020.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.10.0."
 exl-id: ac741744-5b47-47a4-b5af-e1089e92c3f0
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: cc6565121a76f70b958aa9050485e0553371f3a3
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 ### Felkorrigeringar {#bug-fixes-commerce}
 
-* GraphQL-begäranden som fanns i produktkonsolen och väljarna gjordes via HTTP-POST. Problemet har åtgärdats för att säkerställa att Apollo GraphQL-klienten respekterar inställningen i GraphQL-klientens OSGi-konfiguration för att stödja GET-begäranden om detta har konfigurerats.
+* GraphQL-begäranden som fanns i produktkonsolen och väljarna gjordes via HTTP-POST. Problemet har åtgärdats för att säkerställa att Apollo GraphQL-klienten respekterar inställningen i GraphQL klient-OSGi-konfigurationen för att stödja GET-begäranden om de är konfigurerade.
 
 * CIF Cloud-konfigurationsgränssnittet visade knapparna Spara och stäng för konfigurationer i /lib och /apps/. Gränssnitten är skrivskyddade och därför är användargränssnittet fast att bara visa stängningsknappen.
 

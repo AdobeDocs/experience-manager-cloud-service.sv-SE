@@ -17,7 +17,7 @@ För att få bättre kontroll över sin serverdel kan författare konfigurera an
 
 >[!NOTE]
 >
->Utvecklare kan alltid konfigurera anpassade HTTP-huvuden med GraphQL-klientkonfigurationen.
+>Utvecklare kan alltid konfigurera anpassade HTTP-huvuden med hjälp av GraphQL klientkonfiguration.
 
 ## Konfiguration {#configuration}
 
@@ -29,7 +29,7 @@ Du kan konfigurera värdena för HTTP-rubrikerna på Cloud Servicens konfigurati
 1. Öppna en befintlig konfiguration eller skapa en ny
 1. Gå till fliken &quot;Avancerat&quot; och leta upp det anpassade fältet för HTTP-rubriker. Du kan markera rubrikerna som du definierade tidigare och tilldela dem värden.
 
-Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-huvuden med varje GraphQL-begäran.
+Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-huvuden med alla GraphQL-förfrågningar.
 
 ## Begränsningar {#restrictions}
 

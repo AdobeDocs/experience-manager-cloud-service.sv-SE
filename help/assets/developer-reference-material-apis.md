@@ -5,7 +5,7 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 153cc482047c3235b0f62bb94051c884b4cf29d4
+source-git-commit: 627befb2fb1463ed2e3aad02f5e37b43f869b17c
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 1%
@@ -27,15 +27,15 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 | Supportnivå | Beskrivning |
 | ------------- | --------------------------- |
 | ✓ | Stöds |
-| x | Stöds inte. Skall ej användas. |
+| × | Stöds inte. Skall ej användas. |
 | - | Inte tillgängligt |
 
 | Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [Experience Manager / Sling / JCR](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) Java API:er | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html) servlets | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) |
 | ----------------|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Ursprunglig binär** |  |  |  |  |  |  |
-| Skapa original | ✓ | x | - | x | x | - |
-| Läs original | - | x | ✓ | ✓ | ✓ | - |
-| Uppdatera original | ✓ | x | ✓ | x | x | - |
+| Skapa original | ✓ | × | - | × | × | - |
+| Läs original | - | × | ✓ | ✓ | ✓ | - |
+| Uppdatera original | ✓ | × | ✓ | × | × | - |
 | Ta bort original | - | ✓ | - | ✓ | ✓ | - |
 | Kopiera original | - | ✓ | - | ✓ | ✓ | - |
 | Flytta original | - | ✓ | - | ✓ | ✓ | - |

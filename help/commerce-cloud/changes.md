@@ -2,7 +2,7 @@
 title: Betydande ändringar av tillägget Commerce Integration Framework (CIF)
 description: Betydande ändringar av Commerce Integration Framework (CIF) jämfört med tidigare CIF-versioner.
 exl-id: 5a526960-96a1-421e-9fb0-0825e7df8f32
-source-git-commit: b81ac7529e7757fbd9f9fbc48e47e740ab9ecbf3
+source-git-commit: 6c9a44940ea9e52bd27a233c7aa24e320a24076c
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%

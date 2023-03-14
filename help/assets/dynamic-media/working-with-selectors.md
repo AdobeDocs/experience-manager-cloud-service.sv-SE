@@ -4,7 +4,7 @@ description: Lär dig mer om metoder du kan använda för att välja resurser f�
 contentOwner: Rick Brough
 role: User
 exl-id: a6f366ab-41b8-4909-b815-e6c4b938bf77
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 3%

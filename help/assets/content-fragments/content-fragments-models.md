@@ -324,7 +324,7 @@ När en modell har skapats måste den aktiveras så att den:
 
 * Kan markeras när du skapar ett nytt innehållsfragment.
 * Kan refereras inifrån en Content Fragment-modell.
-* Finns för GraphQL, så att schemat genereras.
+* är tillgängligt för GraphQL, så att schemat genereras.
 
 Så här aktiverar du en modell som har flaggats som antingen:
 
@@ -344,9 +344,9 @@ En modell kan också inaktiveras så att:
 
 * Modellen är inte längre tillgänglig som grund för att skapa *new* Innehållsfragment.
 * Men:
-   * GraphQL-schemat genereras och är fortfarande frågningsbart (för att inte påverka JSON API).
-   * Alla innehållsfragment som är baserade på modellen kan fortfarande efterfrågas och returneras från GraphQL-slutpunkten.
-* Det går inte att referera till modellen längre, men befintliga referenser behålls orörda och kan fortfarande frågas och returneras från GraphQL-slutpunkten.
+   * GraphQL-schemat fortsätter att genereras och är fortfarande frågningsbart (för att inte påverka JSON API).
+   * Alla innehållsfragment som är baserade på modellen kan fortfarande efterfrågas och returneras från GraphQL slutpunkt.
+* Det går inte att referera till modellen längre, men befintliga referenser behålls orörda och kan fortfarande läsas och returneras från GraphQL-slutpunkten.
 
 Inaktivera en modell som är flaggad som **Aktiverad** du använder **Inaktivera** från antingen
 
@@ -451,7 +451,7 @@ Den här funktionen tillhandahåller styrning för publicerade modeller för inn
 
 * Content Fragment Models bestämmer schemat för GraphQL-frågor i AEM.
 
-   * AEM GraphQL-scheman skapas så snart en Content Fragment Model skapas, och de kan finnas både i författar- och publiceringsmiljöer.
+   * AEM GraphQL-scheman skapas så snart en innehållsfragmentmodell skapas, och de kan finnas både i författar- och publiceringsmiljöer.
 
    * Publiceringsscheman är de viktigaste eftersom de utgör grunden för leverans av innehåll i innehållsfragment i JSON-format.
 

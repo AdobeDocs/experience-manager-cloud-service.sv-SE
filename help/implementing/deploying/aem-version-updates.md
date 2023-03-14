@@ -3,10 +3,10 @@ title: AEM versionsuppdateringar
 description: AEM versionsuppdateringar
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
-source-git-commit: c3e1559923699d300d78a71195bd5658c3323331
+source-git-commit: f977c6d8fa3ebd4b082e48da8b248178f9a2f34b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '399'
+ht-degree: 2%
 
 ---
 

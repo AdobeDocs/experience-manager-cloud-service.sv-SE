@@ -79,7 +79,7 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 ### Felkorrigeringar {#bug-fixes-commerce}
 
-* GraphQL-klientkonfigurationen lästes inte korrekt när konfigurationen inte anges direkt i Sling CA-konfigurationen, men i en av de överordnade konfigurationerna. Den här har åtgärdats.
+* GraphQL-klientkonfigurationen lästes inte in korrekt när konfigurationen inte anges direkt i Sling CA-konfigurationen, men i en av de överordnade konfigurationerna. Den här har åtgärdats.
 
 ## Cloud Manager {#cloud-manager}
 

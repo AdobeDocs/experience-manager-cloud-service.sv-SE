@@ -4,7 +4,7 @@ description: Installera [!DNL Workfront for Experience Manager enhanced connecto
 role: Admin
 feature: Integrations
 exl-id: 2907a3b2-e28c-4194-afa8-47eadec6e39a
-source-git-commit: 68f84de83873029f7cd16cb9ed70f916170cb566
+source-git-commit: 648f0d4899237484f24faa003a796bdd1f508cb2
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 0%

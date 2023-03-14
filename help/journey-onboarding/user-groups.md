@@ -3,13 +3,13 @@ title: Användargrupper för meddelanden
 description: Lär dig hur du skapar en användargrupp i Admin Console för att hantera mottagning av viktiga e-postmeddelanden.
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: b56bb15f8330deefc11d19e784e36590ef674dd8
+exl-id: 4edecfcd-6301-4a46-98c7-eb5665f48995
+source-git-commit: 57477a041c51b3e1fe120ec94e1420b49af56f12
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 0%
 
 ---
-
 
 # Användargrupper för meddelanden {#user-groups}
 

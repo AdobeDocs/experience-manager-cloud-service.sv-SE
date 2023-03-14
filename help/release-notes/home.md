@@ -2,7 +2,7 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: 554912f0e08fdf699b16ab9bf0b12ee84e8a682b
+source-git-commit: 71a691a6fea3cd43545eaa01113823d54f7c70b1
 workflow-type: tm+mt
 source-wordcount: '642'
 ht-degree: 33%

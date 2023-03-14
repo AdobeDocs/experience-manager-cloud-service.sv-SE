@@ -1,10 +1,10 @@
 ---
 title: Content Fragments - Configuration Browser
-description: Lär dig hur du aktiverar funktionerna för innehållsfragment och GraphQL i Configuration Browser för att utnyttja AEM headless-leveransfunktioner.
+description: Lär dig hur du aktiverar funktionerna för innehållsfragment och GraphQL i Configuration Browser för att utnyttja AEM headless delivery features.
 feature: Content Fragments
 role: User
 exl-id: 55d442ae-ae06-4dfa-8e4e-b415385ccea5
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 14%
@@ -20,7 +20,7 @@ Lär dig hur du aktiverar vissa funktioner för innehållsfragment i konfigurati
 Innan du använder innehållsfragment måste du använda **Konfigurationsläsaren** för att aktivera:
 
 * **Modeller för innehållsfragment** - obligatoriskt
-* **GraphQL-beständiga frågor** - valfritt
+* **GraphQL Beständiga frågor** - valfritt
 
 >[!CAUTION]
 >
@@ -68,7 +68,7 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
       * Du kan justera den om det behövs.
    1. Om du vill aktivera deras användning väljer du
       * **Modeller för innehållsfragment**
-      * **GraphQL-beständiga frågor**
+      * **GraphQL Beständiga frågor**
 
       ![Definiera konfiguration](assets/cfm-conf-01.png)
 

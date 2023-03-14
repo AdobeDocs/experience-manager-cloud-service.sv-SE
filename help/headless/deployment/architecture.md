@@ -36,7 +36,7 @@ Diagrammet ovan visar det här vanliga distributionsmönstret.
 1. The **Innehållsförfattare** och andra interna användare kan förhandsgranska innehållet direkt i författartjänsten. Du kan konfigurera en förhandsgranskningsversion av programmet som ansluter till författartjänsten.
 1. När innehållet har godkänts kan det publiceras till AEM Publish-tjänsten.
 1. The **Dispatcher** är ett lager framför **Publicera** som kan cachelagra vissa förfrågningar och tillhandahålla ett säkerhetslager.
-1. Slutanvändarna interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten via Dispatcher och använder GraphQL-API:erna för att begära och använda innehåll.
+1. Slutanvändarna interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten via Dispatcher och använder GraphQL API:er för att begära och använda innehåll.
 
 ## Publiceringsdistribution för förhandsgranskning av författare
 
@@ -48,4 +48,4 @@ Ett annat alternativ för headless-driftsättningar är att införliva en **AEM*
 1. Innehållet publiceras först till AEM.
 1. Du kan konfigurera en förhandsgranskningsversion av programmet som ansluter till förhandsgranskningstjänsten.
 1. När innehållet har granskats och godkänts kan det publiceras till AEM Publish-tjänsten.
-1. Slutanvändarna interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten via Dispatcher och använder GraphQL-API:erna för att begära och använda innehåll.
+1. Slutanvändarna interagerar med programmets produktionsversion. Produktionsprogrammet ansluter till publiceringstjänsten via Dispatcher och använder GraphQL API:er för att begära och använda innehåll.

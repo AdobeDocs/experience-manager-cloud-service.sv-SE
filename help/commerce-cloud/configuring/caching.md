@@ -1,6 +1,6 @@
 ---
 title: Cachelagring och prestanda
-description: Lär dig mer om de olika konfigurationer som är tillgängliga för att aktivera GraphQL och innehållscachning för att optimera prestanda för implementeringen av din e-handel.
+description: Lär dig mer om de olika konfigurationer som är tillgängliga för att aktivera GraphQL- och innehållscachning för att optimera prestanda för implementeringen av din e-handel.
 exl-id: 21ccdab8-4a2d-49ce-8700-2cbe129debc6,8b969821-5073-4540-a997-95c74a11e4f0
 source-git-commit: 05a412519a2d2d0cba0a36c658b8fed95e59a0f7
 workflow-type: tm+mt
@@ -11,19 +11,19 @@ ht-degree: 0%
 
 # Cachelagring och prestanda {#caching}
 
-## Cachelagring av komponent- och GraphQL-svar {#graphql}
+## Cachelagring av komponenter och GraphQL-svar {#graphql}
 
-AEM CIF Core Components har redan inbyggt stöd för cachelagring av GraphQL-svar för enskilda komponenter. Den här funktionen kan användas för att minska antalet GraphQL-anrop med stor faktor. Effektiv cachelagring kan utföras särskilt för upprepade frågor, som att hämta kategoriträdet för en navigeringskomponent eller hämta alla tillgängliga aggregations-/facets-värden som visas på produktsöknings- och kategorisidorna.
+AEM CIF Core Components har redan inbyggt stöd för cachelagring av GraphQL-svar för enskilda komponenter. Den här funktionen kan användas för att minska antalet GraphQL backend-anrop med stor faktor. Effektiv cachelagring kan utföras särskilt för upprepade frågor, som att hämta kategoriträdet för en navigeringskomponent eller hämta alla tillgängliga aggregations-/facets-värden som visas på produktsöknings- och kategorisidorna.
 
-För AEM CIF Core Components konfigureras cachelagring på komponentbasis, så det är möjligt att kontrollera om (och hur länge) GraphQL-begäranden/svar cachelagras för varje komponent. Det går också att definiera cachelagring för OSGi-tjänster med GraphQL-klienten.
+För de AEM CIF Core-komponenterna konfigureras cachelagring på komponentbasis, så det är möjligt att kontrollera om (och hur länge) GraphQL-begäranden/svar cachelagras för varje komponent. Det går också att definiera cachelagring för OSGi-tjänster med GraphQL-klienten.
 
 ### Konfiguration {#configuration}
 
-När cachen har konfigurerats för en viss komponent börjar GraphQL-frågor och svar sparas enligt varje cachekonfigurationspost. Storleken på cacheminnet och cachelagringstiden för varje post ska definieras på projektbasis, beroende t.ex. på hur ofta katalogdata kan ändras, hur viktigt det är att en komponent alltid visar de senaste möjliga data, osv. Observera att det inte finns någon cacheogiltigförklaring, så var försiktig när du anger varaktigheten för cachen.
+När cachen har konfigurerats för en viss komponent börjar den lagra GraphQL-frågor och svar enligt varje cachekonfigurationspost. Storleken på cacheminnet och cachelagringstiden för varje post ska definieras på projektbasis, beroende t.ex. på hur ofta katalogdata kan ändras, hur viktigt det är att en komponent alltid visar de senaste möjliga data, osv. Observera att det inte finns någon cacheogiltigförklaring, så var försiktig när du anger varaktigheten för cachen.
 
 När cachelagring konfigureras för komponenter måste cachenamnet vara namnet på **proxy** komponenter som du definierar i ditt projekt.
 
-Innan klienten skickar en GraphQL-begäran kommer den att kontrollera om det **exakt** samma GraphQL-begäran är redan cachelagrad och returnerar eventuellt det cachelagrade svaret. För att matcha måste GraphQL-begäran matcha exakt, d.v.s. frågan, åtgärdsnamnet (om det finns något), variablerna (om sådana finns) MÅSTE alla vara lika med den cachelagrade begäran, och alla anpassade HTTP-rubriker som kan anges MÅSTE också vara desamma. Adobe Commerce `Store` sidhuvudet MÅSTE matcha.
+Innan klienten skickar en GraphQL-begäran kommer den att kontrollera om det **exakt** samma GraphQL-begäran har redan cache-lagrats och returnerar eventuellt det cachelagrade svaret. För att matcha måste GraphQL-begäran matcha exakt, dvs. frågan, åtgärdsnamnet (om det finns något), variablerna (om sådana finns) MÅSTE alla vara lika med den cachelagrade begäran och alla anpassade HTTP-rubriker som kan anges MÅSTE också vara desamma. Adobe Commerce `Store` sidhuvudet MÅSTE matcha.
 
 ### Exempel {#examples}
 
@@ -35,7 +35,7 @@ Detta konfigureras vanligtvis med följande cachepost:
 com.adobe.cq.commerce.core.search.services.SearchFilterService:true:10:3600
 ```
 
-Ett annat exempel där cachningsfunktionen GraphQl rekommenderas att användas är navigeringskomponenten eftersom den skickar samma GraphQL-fråga på alla sidor. I det här fallet är cacheposten vanligtvis inställd på:
+Ett annat exempel där cachningsfunktionen GraphQl bör användas är navigeringskomponenten eftersom den skickar samma GraphQL-fråga på alla sidor. I det här fallet är cacheposten vanligtvis inställd på:
 
 ```
 venia/components/structure/navigation:true:10:600
@@ -62,5 +62,5 @@ Med TTL-baserad cachning definierar en utvecklare vanligtvis en eller flera cach
 ## Ytterligare resurser {#additional}
 
 - [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-- [Konfiguration för GraphQL-cachelagring](https://github.com/adobe/commerce-cif-graphql-client#caching)
+- [Konfiguration av GraphQL-cachning](https://github.com/adobe/commerce-cif-graphql-client#caching)
 - [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

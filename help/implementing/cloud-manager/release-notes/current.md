@@ -3,7 +3,7 @@ title: Versionsinformation om Cloud Manager 2023.2.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2023.2.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 9fe49df47c985f94e45d60673f6742788c8014d5
+source-git-commit: a38eb247fd90197f23bfaea59b8fc734ff9e4942
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%

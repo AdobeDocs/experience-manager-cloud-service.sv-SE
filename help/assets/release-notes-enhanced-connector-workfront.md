@@ -2,7 +2,7 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 8ce5b0a163c8ddf7f9c9672eff6d752a58c464bb
+source-git-commit: fd625274fd205ffd0604f95e1e80304185b6d014
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 0%

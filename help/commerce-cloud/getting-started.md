@@ -8,7 +8,7 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: 118945f407dab8ccad1ec018b588b64972fb5f12
+source-git-commit: aa7b9daba4242965baf20a77af356952cd7bc279
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 0%
@@ -34,14 +34,14 @@ Det andra steget är självbetjäning för varje AEM as a Cloud Service miljö. 
 
 ## Ansluta AEM till en Commerce Solution {#solution}
 
-Ansluta CIF-tillägget och [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange URL:en för GraphQL-slutpunkten via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
+Ansluta CIF-tillägget och [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange GraphQL slutpunkts-URL via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
 
 Miljövariabeln används på två ställen:
 
-- GraphQL-anrop från AEM till e-handelsbackend via en gemensam delbar GraphQl-klient som används av AEM CIF Core Components och kundprojektskomponenter.
-- Konfigurera en GraphQL-proxy-URL för varje AEM som variabeln är inställd på `/api/graphql`. Detta används av AEM utvecklingsverktyg (CIF-tillägg) och CIF-komponenter på klientsidan.
+- GraphQL anropar från AEM till e-handelskunderna via en gemensam Sharable GraphQl-klient som används av AEM CIF Core Components och kundprojektskomponenter.
+- Konfigurera en proxywebbadress för GraphQL för varje AEM som variabeln är inställd på `/api/graphql`. Detta används av AEM utvecklingsverktyg (CIF-tillägg) och CIF-komponenter på klientsidan.
 
-En annan URL för GraphQL-slutpunkt kan användas för varje AEM as a Cloud Service miljö. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara offentligt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Ett autentiseringshuvud kan anges om du vill använda ytterligare CIF-funktioner som kräver autentisering.
+En annan GraphQL-slutpunkts-URL kan användas för varje AEM as a Cloud Service miljö. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara allmänt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Ett autentiseringshuvud kan anges om du vill använda ytterligare CIF-funktioner som kräver autentisering.
 
 Tillägget CIF kan användas endast för Adobe Commerce Enterprise/Cloud med stöd för användning av testade katalogdata för AEM. Detta kräver att du konfigurerar en auktoriseringshuvud. Den här rubriken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
 
@@ -81,7 +81,7 @@ Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/
 
    Se [CLI-dokument](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) för mer information.
 
-   Slutpunktens URL för Commerce GraphQL måste peka på e-handelns GraphQl-tjänst och använda en säker HTTPS-anslutning. Till exempel: `https://<yourcommercesystem>/graphql`.
+   GraphQL slutpunkts-URL för handel måste peka på e-handelns GraphQl-tjänst och använda en säker HTTPS-anslutning. Till exempel: `https://<yourcommercesystem>/graphql`.
 
 4. Aktivera mellanlagrade katalogfunktioner som kräver autentisering (valfritt)
 
@@ -117,13 +117,13 @@ Den här konfigurationen kan justeras för projektet via CIF-Cloud Servicens kon
 
 Följande egenskaper kan konfigureras:
 
-- GraphQL-klient - Välj den konfigurerade GraphQL-klienten för e-handel med serverdelskommunikation. Detta bör normalt vara kvar som standard.
+- GraphQL Client - Välj den konfigurerade GraphQL-klienten för e-handelskommunikation. Detta bör normalt vara kvar som standard.
 - Butiksvy - butiksvyns identifierare. Om den är tom används standardbutiksvyn.
-- Proxysökväg för GraphQL - URL-sökvägen för GraphQL-proxy som används AEM proxybegäranden till GraphQL-slutpunkten för handel.
+- GraphQL Proxy Path - den URL-sökväg som GraphQL Proxy AEM använder för proxybegäranden till GraphQL-slutpunkt för e-handel.
    >[!NOTE]
    >
    > I de flesta inställningar är standardvärdet `/api/graphql` får inte ändras. Endast avancerade inställningar som inte använder den angivna GraphQL-proxyn bör ändra den här inställningen.
-- Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsbackend-GraphQL-anropen.
+- Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsserverdelens GraphQL-anrop.
    >[!NOTE]
    >
    > Stöd för UID introducerades i Adobe Commerce 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.

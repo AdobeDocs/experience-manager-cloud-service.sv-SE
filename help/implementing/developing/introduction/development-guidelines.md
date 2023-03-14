@@ -2,7 +2,7 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 01087aa2ec621d6bebd4d62edbc320df8122f71d
+source-git-commit: 5a8d66c2ca2bed664d127579a8fdbdf3aa45c910
 workflow-type: tm+mt
 source-wordcount: '2591'
 ht-degree: 1%

@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 59392c3a3dd7481d63ed0a79a018a4d6878011ed
+source-git-commit: 54865fd1be61861b9bed79b1227c6ce209f7e690
 workflow-type: tm+mt
 source-wordcount: '3344'
 ht-degree: 4%

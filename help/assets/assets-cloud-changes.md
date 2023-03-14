@@ -4,7 +4,7 @@ description: Betydande ändringar i [!DNL Adobe Experience Manager Assets] in [!
 feature: Release Information
 role: User,Leader,Architect,Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: 2e4f57f86346074432996901985671939bcafeb0
+source-git-commit: 86941606cba81ebff21e3db70967f862eabf7515
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%

@@ -2,7 +2,7 @@
 title: Exportera Experience Fragments till Adobe Target
 description: Exportera Experience Fragments till Adobe Target
 exl-id: 752d91f9-13a6-40c2-9425-7d18dafe9205
-source-git-commit: d3b2b779b2b435309255e7a4f7957a94be520b34
+source-git-commit: 6127d86ad174979506f36bb345129e4a130d35c8
 workflow-type: tm+mt
 source-wordcount: '2249'
 ht-degree: 0%
@@ -95,7 +95,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp och/el
 
    >[!NOTE]
    >
-   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur dess egenskaper ska exporteras i komponentens Sling Model.
+   >JSON-formatet i ett Experience Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en Customer Experience Fragment-komponent och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
    >
    >Se kärnkomponenten: [Kärnkomponenter - Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html)
 

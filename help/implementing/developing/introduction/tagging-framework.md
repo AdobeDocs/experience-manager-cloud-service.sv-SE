@@ -2,7 +2,7 @@
 title: AEM Taggningsramverk
 description: Tagga innehåll och utnyttja infrastrukturen för AEM taggar för att kategorisera och organisera det.
 exl-id: 25418d44-aace-4e73-be1a-4b1902f40403
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 0%

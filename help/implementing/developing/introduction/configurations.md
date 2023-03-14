@@ -2,7 +2,7 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
-source-git-commit: 8f94d7ee3cfe436b5d41f2428b901ee1a5002993
+source-git-commit: 3be936be09f205a73dd053ac28df936d58e50919
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 0%

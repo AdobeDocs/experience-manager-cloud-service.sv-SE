@@ -1,5 +1,5 @@
 ---
-title: Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor
+title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
@@ -10,7 +10,7 @@ ht-degree: 2%
 
 ---
 
-# Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
+# Lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
 Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 
@@ -33,7 +33,7 @@ Mer information finns i:
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_headless_graphql_sample"
->title="Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor"
+>title="Lära sig använda GraphQL med AEM - exempelinnehåll och frågor"
 >abstract="Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor."
 
 ## GraphQL - Exempelfrågor med strukturen för exempelinnehållsfragment {#graphql-sample-queries-sample-content-fragment-structure}
@@ -1592,7 +1592,7 @@ Den här frågan förhör:
 
 Exempelfrågorna baseras på följande struktur som använder:
 
-* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - utgör grunden för GraphQL-scheman
+* en eller flera, [Exempel på modeller för innehållsfragment](#sample-content-fragment-models-schemas) - grundvalen för GraphQL-scheman
 
 * [Exempel på innehållsfragment](#sample-content-fragments) baserat på ovanstående modeller
 

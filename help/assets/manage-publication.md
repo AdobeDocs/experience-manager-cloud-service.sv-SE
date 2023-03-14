@@ -103,8 +103,8 @@ I följande tabell förklaras hur publiceringen sker beroende på den definierad
 | [!UICONTROL Destination] | [!UICONTROL Dynamic Media Publish mode] | [!UICONTROL Publish Target] | Tillåtet innehåll |
 | --- | --- | --- | --- |
 | Publicera | Selektiv publicering | `AEM` | Resurser och(eller) mappar |
-| Publicera | Omedelbar | `AEM` och `Dynamic Media` | Resurser och(eller) mappar |
-| Publicera | Vid aktivering | `AEM` och `Dynamic Media` | Resurser och(eller) mappar |
+| Publicera | Omedelbar | `AEM` and `Dynamic Media` | Resurser och(eller) mappar |
+| Publicera | Vid aktivering | `AEM` and `Dynamic Media` | Resurser och(eller) mappar |
 | Dynamic Media | Selektiv publicering | `Dynamic Media` | Assets |
 | Dynamic Media | Omedelbar | `None` | Det går inte att publicera resurserna |
 | Dynamic Media | Vid aktivering | `None` | Det går inte att publicera resurserna |

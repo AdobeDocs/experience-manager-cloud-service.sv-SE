@@ -139,7 +139,7 @@ Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Beroende på v
 
 Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-cloud/authoring/projects/workflows.md)
 
-### Startar {#launches}
+### Launches {#launches}
 
 Panelen Launches (Starta) visar alla starter som har begärts med en [Begär startarbetsflöde.](/help/sites-cloud/authoring/projects/workflows.md)
 

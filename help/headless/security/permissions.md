@@ -62,7 +62,7 @@ Möjlighet att ändra **Modeller för innehållsfragment** ska lämnas till admi
 
 >[!CAUTION]
 >
->Modifieringar av modeller för innehållsfragment ändrar det underliggande GraphQL-API som headless-program förlitar sig på.
+>Ändringar av modeller för innehållsfragment ändrar det underliggande GraphQL-API som headless-program är beroende av.
 
 Om du vill skapa en grupp som hanterar modeller för innehållsfragment men inte fullständig administratörsåtkomst, kan du skapa en grupp med följande åtkomstkontrollposter:
 
@@ -73,20 +73,20 @@ Om du vill skapa en grupp som hanterar modeller för innehållsfragment men inte
 
 ## Publicera tjänstbehörigheter
 
-Publiceringstjänsten betraktas som&quot;live&quot;-miljö och är vanligtvis vad GraphQL-API-användare interagerar med. Innehåll som har redigerats och godkänts av författartjänsten publiceras till publiceringstjänsten. Det headless-programmet använder sedan det godkända innehållet från publiceringstjänsten via GraphQL API:er.
+Publiceringstjänsten betraktas som&quot;live&quot;-miljö och är vanligtvis det GraphQL API-användare interagerar med. Innehåll som har redigerats och godkänts av författartjänsten publiceras till publiceringstjänsten. Det headless-programmet använder sedan det godkända innehållet från publiceringstjänsten via GraphQL API:er.
 
-Som standard är innehåll som visas via GraphQL-slutpunkterna i tjänsten AEM Publish tillgängligt för alla, inklusive oautentiserade användare.
+Som standard är innehåll som visas via AEM Publish-tjänstens GraphQL-slutpunkter tillgängliga för alla, inklusive oautentiserade användare.
 
 ### Innehållsbehörigheter
 
-Innehåll som exponeras via AEM GraphQL API:er kan begränsas med [Stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/closed-user-groups.html) ange för resursmappar, som anger vilka AEM användargrupper (och deras medlemmar) som kan komma åt innehållet i resursmapparna.
+Innehåll som exponeras via GraphQL API:er kan begränsas med [Stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/closed-user-groups.html) ange för resursmappar, som anger vilka AEM användargrupper (och deras medlemmar) som kan komma åt innehållet i resursmapparna.
 
 Assets CUGs jobbar med:
 
 * Först nekas all åtkomst till mappen och undermapparna
 * Ge sedan läsåtkomst till mappen och undermapparna för alla AEM användargrupper som är listade i CUG-listan
 
-CUG-grupper kan ställas in för resursmappar som innehåller innehåll som exponeras via GraphQL API:er. Åtkomsten till resursmappar i AEM Publish bör styras via Användargrupper, i stället för direkt från användaren. Skapa (eller återanvänd) en AEM användargrupp som ger åtkomst till resursmappar som innehåller innehåll som exponeras av GraphQL API:er.
+CUG-grupper kan konfigureras för resursmappar som innehåller innehåll som exponeras via GraphQL API:er. Åtkomsten till resursmappar i AEM Publish bör styras via Användargrupper, i stället för direkt från användaren. Skapa (eller återanvänd) en AEM användargrupp som ger åtkomst till resursmappar som innehåller innehåll som exponeras av GraphQL API:er.
 
 #### Välj autentiseringsschema{#publish-permissions-users}
 
@@ -95,6 +95,6 @@ The [AEM Headless SDK](https://github.com/adobe/aem-headless-client-js#create-ae
 * [Tokenbaserad autentisering](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md) med inloggningsuppgifter bundna till ett enda tekniskt konto.
 * Grundläggande autentisering med AEM användare.
 
-### Åtkomst till GraphQL API
+### Få åtkomst till GraphQL API
 
 HTTP-begäranden som ger [lämpliga autentiseringsuppgifter](https://github.com/adobe/aem-headless-client-js#create-aemheadless-client) till AEM Publish-tjänstens GraphQL API-slutpunkter innehåller innehåll som inloggningsuppgifterna har behörighet att läsa och anonymt tillgängligt innehåll. Andra användare av GraphQL API kan inte läsa innehållet i de CUG-skyddade mapparna.

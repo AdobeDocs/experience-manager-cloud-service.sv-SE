@@ -23,7 +23,7 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 ### Headless Content Management {#headless}
 
-* **[GraphQL API för leverans av innehållsfragment](/help/headless/graphql-api/content-fragments.md)**: Möjlighet att söka efter innehållsfragment med GraphQL-syntax och scheman baserade på Content Fragment-modeller, för utdata i JSON-format.
+* **[GraphQL API för leverans av innehållsfragment](/help/headless/graphql-api/content-fragments.md)**: Möjlighet att söka efter innehållsfragment med GraphQL-syntax och scheman baserade på Content Fragment-modeller för JSON-format.
 
 * **[Autentiseringsstöd för GraphQL API-begäranden](/help/headless/security/authentication.md)**: Möjlighet att autentisera GraphQL API-begäranden med åtkomsttoken för API:er på serversidan.
 
@@ -31,7 +31,7 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 * **[Redigera en extern SPA i AEM](/help/implementing/developing/hybrid/editing-external-spa.md)**: Lagt till möjlighet att ladda upp ett fristående enkelsidigt program till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 
-* Förbättrade JSON-utdata från GraphQL API, inklusive möjligheten att skriva ut RTF i JSON-format och -språk.
+* Förbättrade JSON-utdata från GraphQL API, bland annat möjligheten att skapa RTF-text i JSON-format och -språk.
 
 * Stöd för att kapsla modeller för innehållsfragment så att kapslade strukturer för innehållsfragment kan skapas, via särskilda datatyper för Content Fragment Reference eller textbundna referenser för innehållsfragment i flerradiga textfält.
 

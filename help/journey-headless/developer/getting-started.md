@@ -97,7 +97,7 @@ Låt oss anta att ditt grundläggande krav är åtminstone att leverera innehål
 
 #### Nivå 1: Integrering av innehållsfragment - traditionell Headless-modell {#level-1}
 
-Den här integreringsnivån är den traditionella headless-modellen och gör det möjligt för innehållsförfattarna att skapa innehåll i AEM och leverera det helhjärtat till valfritt antal externa tjänster med GraphQL eller redigera dem från externa tjänster med Assets API. Ingen kodning krävs i AEM.
+Den här integreringsnivån är den traditionella headless-modellen och gör det möjligt för innehållsförfattare att skapa innehåll i AEM och leverera det helhjärtat till valfritt antal externa tjänster med GraphQL eller redigera dem från externa tjänster med Assets API. Ingen kodning krävs i AEM.
 
 I den här modellen används AEM bara för att skapa och leverera innehåll med AEM innehållsfragment. Återgivning och interaktion med innehållet delegeras till det uppladdande externa programmet, ofta ett ensidigt program (SPA).
 
@@ -220,11 +220,11 @@ Ett användbart sätt att definiera modeller för innehållsfragment är att ska
 
 Eftersom innehållsförfattarna interagerar med modellerna kontinuerligt när de skapar nytt innehåll kan man genom att anpassa modellerna till användargränssnittet visualisera den digitala upplevelsen. Om du går ett steg längre kan du tilldela ikoner till de modeller för innehållsfragment som representerar UX-elementet så att författarna intuitivt kan välja rätt modell baserat på visuella tecken.
 
-#### Utvecklare {#developer}
+#### Developer {#developer}
 
 Utvecklarna ansvarar för att sammanfoga det material som skapas direkt AEM till konsumenten, som ofta kan vara ett ensidigt program (SPA), ett progressivt webbprogram (PWA), en webbshop eller en annan tjänst som inte är AEM.
 
-GraphQL fungerar som ett&quot;glimt&quot; mellan AEM och konsumenterna av headless-innehåll. GraphQL är det språk som AEM efter nödvändigt innehåll.
+GraphQL fungerar som ett&quot;glimt&quot; mellan AEM och konsumenterna av headless-innehåll. GraphQL är det språk som AEM efter det nödvändiga innehållet.
 
 Utvecklare bör tänka på några grundläggande rekommendationer när de planerar sina frågor:
 
@@ -232,7 +232,7 @@ Utvecklare bör tänka på några grundläggande rekommendationer när de planer
    * [Innehållsförfattare har fullständig kontroll över hierarkin för innehållsfragment](#content-hierarchy) och skulle kunna göra ändringar som skulle kunna göra att en sådan fråga skulle brytas.
    * Frågor ska i stället välja om innehållsfragmentmodellreferenser med dynamiska frågeparametrar ska filtrera resultaten för att generera önskad nyttolast.
 * Använd alltid beständiga frågor i AEM för bästa frågeprestanda. Dessa diskuteras senare under resan.
-* GraphQL är deklarativ och följer motto&quot;Fråga efter exakt det du behöver och få exakt det&quot;. Det innebär att när du skapar GraphQL-frågor ska du alltid undvika `select *`-typfrågor som du kan skapa i en relationsdatabas.
+* GraphQL är deklarativt efter motto&quot;Fråga efter exakt vad du behöver och få exakt det&quot;. Det innebär att när du skapar GraphQL-frågor ska du alltid undvika `select *`-typfrågor som du kan skapa i en relationsdatabas.
 
 För [typisk headless implementering med AEM,](#level-1) utvecklaren inte behöver ha någon kunskap om AEM.
 
@@ -278,7 +278,7 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
 * [En introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Förstå AEM as a Cloud Service struktur
 * [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd dessa praktiska självstudiekurser för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja vad som passar dig bäst.
-* [Headless Content Management Using GraphQL APIs](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) - Följ den här kursen för en översikt över GraphQL API som implementeras i AEM. Autentisering via AdobeID krävs.
+* [Headless Content Management Using GraphQL APIs](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) - Följ den här kursen för att få en översikt över GraphQL API som implementerats i AEM. Autentisering via AdobeID krävs.
 * [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - Det här GitHub-projektet innehåller exempelprogram AEM GraphQL API:er.
 * [Authoring Concepts](/help/sites-cloud/authoring/getting-started/concepts.md) - Teknisk dokumentation för redigeringsmiljön i AEM inklusive information om författarpubliceringskonfigurationen
 * [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) - Teknisk dokumentation för publicering av AEM
@@ -287,7 +287,7 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [AEM](/help/sites-cloud/authoring/workflows/overview.md) - Teknisk dokumentation om hur man automatiserar arbetsflöden i AEM
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) - Teknisk dokumentation för innehållsfragment.
 * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md) - Teknisk dokumentation för Content Fragment Models.
-* [GraphQL Technical Documentation](https://graphql.org) - GraphQL-definitionen (extern länk)
+* [GraphQL tekniska dokumentation](https://graphql.org) - GraphQL-definitionen (extern länk)
 * [GraphQL API](/help/headless/graphql-api/content-fragments.md) - Teknisk dokumentation som förklarar hur man skapar förfrågningar om åtkomst och leverans av innehållsfragment
 * [Resurser REST API](/help/assets/content-fragments/assets-api-content-fragments.md) - Teknisk dokumentation som förklarar hur du skapar och ändrar innehållsfragment (och andra resurser)
 * [Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) - Teknisk dokumentation om beständiga frågor i AEM

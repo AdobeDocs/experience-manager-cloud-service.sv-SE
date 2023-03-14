@@ -2,7 +2,7 @@
 title: Projektinställningar
 description: Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: cc6565121a76f70b958aa9050485e0553371f3a3
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 1%

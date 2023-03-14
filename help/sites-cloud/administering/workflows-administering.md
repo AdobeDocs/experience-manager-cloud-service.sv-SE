@@ -4,7 +4,7 @@ description: Lär dig hur du administrerar arbetsflödesinstanser
 feature: Administering
 role: Admin
 exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
-source-git-commit: 594efd18c7358505c859ca7e6269a3fc5e517926
+source-git-commit: 0a87842923298be1a801a85519ac85fae5ef7933
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 0%

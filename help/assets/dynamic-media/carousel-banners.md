@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Carousel Banners
 role: User
 exl-id: 34541302-6610-4f5e-af93-c95328dda910
-source-git-commit: 35caac30887f17077d82f3370f1948e33d7f1530
+source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
 source-wordcount: '4449'
 ht-degree: 1%

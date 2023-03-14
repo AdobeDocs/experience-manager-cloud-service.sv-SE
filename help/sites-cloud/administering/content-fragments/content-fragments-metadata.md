@@ -4,10 +4,10 @@ description: Lär dig hur du kan visa och redigera metadataegenskaperna i AEM in
 feature: Content Fragments
 role: User
 exl-id: c1b90118-4501-4f93-bd2d-6552e0d17aee
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 

@@ -106,9 +106,9 @@ The **[Fragmentreferens](/help/sites-cloud/administering/content-fragments/conte
 
 Om du vill ha hjälp med att utforma och utveckla dina modeller för innehållsfragment kan du förhandsgranska [JSON-utdata](/help/sites-cloud/administering/content-fragments/content-fragments-json-preview.md).
 
-## Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
+## Lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
-Se [Att lära sig använda GraphQL med AEM - exempelinnehåll och frågor](/help/headless/graphql-api/sample-queries.md) om du vill få en introduktion till hur du använder AEM GraphQL API.
+Se [Lära sig använda GraphQL med AEM - exempelinnehåll och frågor](/help/headless/graphql-api/sample-queries.md) om du vill få en introduktion till hur du använder AEM GraphQL API.
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL
 

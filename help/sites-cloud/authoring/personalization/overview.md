@@ -2,7 +2,7 @@
 title: Personalisering och målgruppsanpassning av innehåll
 description: Lär dig hur du kan skapa personaliserat, målinriktat innehåll med AEM
 exl-id: b9b5dbf6-d491-48a6-99b1-19bc1b651b8c
-source-git-commit: f2466cb5cda759f0c97cd69810d208d47fb73b98
+source-git-commit: 566cd449c536de4179e32c94df90b46d61e0103a
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 0%

@@ -4,7 +4,7 @@ seo-title: Creating and managing reviews in forms
 description: En granskning är en mekanism som gör att en eller flera granskare kan kommentera en resurs som är tillgänglig i ett formulär.
 seo-description: A Review is a mechanism that allows one or more reviewers to comment on an asset that is available in a form.
 topic-tags: forms-manager
-source-git-commit: 400e9fa0263b3e9bdae10dc80d524b291f99496d
+source-git-commit: 659484f80d1f31794512af5e4d190b04a9f3e4e8
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 0%

@@ -2,7 +2,7 @@
 title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som ni kan använda för ert digitala upplevelseprojekt.
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: cc6565121a76f70b958aa9050485e0553371f3a3
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 3%
@@ -66,7 +66,7 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 | [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md) | Generera JSON-export av komponentinnehåll baserat på ett modellramverk |
 | [Resurs-API](/help/assets/mac-api-assets.md) | Möjliggör åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se AEM Assets HTTP API |
 | [HTTP API för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md) | Få åtkomst till innehåll i innehållsfragment direkt via HTTP API via CRUD-åtgärder |
-| [Content Fragment GraphQL API](/help/headless/graphql-api/content-fragments.md) | Möjliggör effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementationer |
+| [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md) | Möjliggör effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementationer |
 | [Content Fragments Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
 
 ## SPA-specifika API:er {#spa-apis}

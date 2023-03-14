@@ -1,13 +1,13 @@
 ---
 title: Infrastruktur- och serviceövervakning på AEM as a Cloud Service
 description: Infrastruktur- och serviceövervakning på AEM as a Cloud Service
-source-git-commit: 8121d2e9cd98b4cc6e848f6cd6c3fa4359988053
+exl-id: 82432c11-37ec-48ac-a52b-487abdc859fa
+source-git-commit: eb4c49b8d173d1d402d22824bc98e4713ab54c31
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 0%
 
 ---
-
 
 # Infrastruktur- och serviceövervakning på AEM as a Cloud Service {#monitoring-in-aem-as-a-cloud-service}
 
@@ -49,10 +49,10 @@ Ytterligare kontroller läggs till i miljöer som tillhandahålls för Forms. T�
 
 ## Kundobserverbarhet {#customer-observability}
 
-Kunderna kan använda [Prestandaövervakning för nya Relic-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html) en programsvit som innehåller realtidsprestandadata som samlats in och diagram för analys och felsökning. Genom att använda övervakningssviten kan kunderna direkt observera olika mätvärden som: Prestandamätningar för JVM, transaktionstid för Java, externa bakgrundsanrop och databasanrop.
+Kunderna kan använda [Prestandaövervakning för New Relic-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html) en programsvit som innehåller realtidsprestandadata som samlats in och diagram för analys och felsökning. Genom att använda övervakningssviten kan kunderna direkt observera olika mätvärden som: Prestandamätningar för JVM, transaktionstid för Java, externa bakgrundsanrop och databasanrop.
 
 ## Ytterligare resurser {#resources}
 
-* [Prestandaövervakning för nya Relic-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html)
+* [Prestandaövervakning för New Relic-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html)
 * [Loggning för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html)
 * [Övervakningsmiljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html)

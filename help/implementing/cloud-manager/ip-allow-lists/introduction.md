@@ -2,7 +2,7 @@
 title: Introduktion till IP Tillåtelselista
 description: Lär dig hur IP tillåtelselista kan begränsa från vilka adresser användare kan få åtkomst till dina AEM as a Cloud Service domäner.
 exl-id: 352fae8e-d116-40b0-ba54-d7f001f076e8
-source-git-commit: 18ecf3394ff575213756fced84a3b08795188240
+source-git-commit: 286bc8e206b7a54cc1869e3965e55852cf62946d
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%

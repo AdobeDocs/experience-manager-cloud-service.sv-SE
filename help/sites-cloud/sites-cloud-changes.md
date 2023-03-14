@@ -2,10 +2,10 @@
 title: Viktiga ändringar av AEM Sites i AEM Cloud Service
 description: Viktiga ändringar av AEM Sites i AEM Cloud Service
 exl-id: 60b1aec4-75a0-459f-bf77-8d8c1af757ce
-source-git-commit: 7becee73a64fbfd2b4f89c307f63868461b0e853
+source-git-commit: 8e06dff01e06ced62686a4784619278f29345082
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '534'
+ht-degree: 15%
 
 ---
 

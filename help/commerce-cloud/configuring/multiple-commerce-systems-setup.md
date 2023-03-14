@@ -11,13 +11,13 @@ role: Admin, Architect, Developer
 level: Beginner
 kt: 10529
 thumbnail: 346811.jpeg
-source-git-commit: 6105e16dad66fc196b0d1045ed764950c37072ef
+exl-id: 5328fe30-79ca-4496-8ebd-f1ef51ccfccf
+source-git-commit: 57477a041c51b3e1fe120ec94e1420b49af56f12
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera flera e-handelssystem
 

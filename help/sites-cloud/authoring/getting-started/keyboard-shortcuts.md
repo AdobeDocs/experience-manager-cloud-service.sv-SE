@@ -2,7 +2,7 @@
 title: Kortkommandon för konsoler
 description: Spara tid när du redigerar med dessa kortkommandon
 exl-id: 68508d05-a98d-483a-aa6d-f743ee29c284
-source-git-commit: 1698b78c3d58714c6e1d354143964741ee17d60e
+source-git-commit: bdefc8ccdb44bec7a72d9223614b3a6ba5c65225
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 2%

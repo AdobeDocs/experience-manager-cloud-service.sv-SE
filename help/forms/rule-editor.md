@@ -573,7 +573,7 @@ Lägger till information om funktionen, till exempel dess mål.
 
    1. string
    1. tal
-   1. boolesk
+   1. boolean
 
    Alla andra returtyper kategoriseras under en av ovanstående. Ingen stöds inte. Välj en av typerna ovan. Returtyperna är inte skiftlägeskänsliga.
 

@@ -2,7 +2,7 @@
 title: Licenspanelen
 description: Med Cloud Manager får du en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller klientorganisation.
 exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
-source-git-commit: b5078c849c9fa088546f5df1fcbef1dec59f3cdb
+source-git-commit: d5e0ca924dee50d7dd4f9057010b1a39780b4352
 workflow-type: tm+mt
 source-wordcount: '876'
 ht-degree: 0%

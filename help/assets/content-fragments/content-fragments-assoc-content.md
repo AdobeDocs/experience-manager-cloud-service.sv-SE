@@ -2,7 +2,7 @@
 title: Associerat innehåll (resurser - innehållsfragment)
 description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet.
 exl-id: 8c8ad768-a210-4d34-bb47-2347599bcac9
-source-git-commit: d720d403cab4e51dd89a58aae5b4e29ca9da7f1c
+source-git-commit: 737d4d56312b763a50c2dfad0ea51feb9dbf4dde
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 4%

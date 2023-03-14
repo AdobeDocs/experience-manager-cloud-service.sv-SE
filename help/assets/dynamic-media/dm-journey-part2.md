@@ -13,7 +13,7 @@ hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
 source-git-commit: 9202cf44595070c98ca3d21887dff257bcd88b87
 workflow-type: tm+mt
-source-wordcount: '2872'
+source-wordcount: '2848'
 ht-degree: 0%
 
 ---
@@ -47,26 +47,26 @@ Tillgångs-ID eller namn. `AdobeStock_28563982` är i grönt. Observera att till
 
 Slutligen finns det några bildbehandlingsparametrar, `?wid=1000&fmt=jpeg&qlt=85`, visas i gult på slutet.
 
-Hela URL-sökvägen är aktiv. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982?wid=1000&amp;fmt=jpeg&amp;qlt=85){target=&quot;_blank&quot;}.
+Hela URL-sökvägen är aktiv. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982?wid=1000&amp;fmt=jpeg&amp;qlt=85){target="_blank"}.
 
 Låt webbläsarfönstret fortfarande vara öppet för Dynamic Media URL och den bevakade bilden. Vi tittar närmare på hur du kan skapa återgivningar av bilden bara genom att ändra URL:en.
 
 ### Återge den bevakade bilden via URL:en
 
-Börja med att manuellt ta bort endast bildbearbetningsreglerna i URL-sökvägen, lämna servernamnet, kontonamnet och resurs-ID:t eller bildnamnet. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982){target=&quot;_blank&quot;}.
+Börja med att manuellt ta bort endast bildbearbetningsreglerna i URL-sökvägen, lämna servernamnet, kontonamnet och resurs-ID:t eller bildnamnet. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982){target="_blank"}.
 
-Lägg nu till en bildbehandlingsparameter i slutet av URL:en. Skriv i URL-fältet till höger om bildnamnet `?wid=500`och sedan trycka **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=500){target=&quot;_blank&quot;}.
+Lägg nu till en bildbehandlingsparameter i slutet av URL:en. Skriv i URL-fältet till höger om bildnamnet `?wid=500`och sedan trycka **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=500){target="_blank"}.
 
 Observera att en ny återgivning av bevakningen genereras. En viktig fördel med detta enkla arbete med att ändra bildens bredd är att bilden som visas genereras 100 % dynamiskt.
 
-Ändra breddvärdet för `500` pixlar till `1000` pixlar och tryck sedan på **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000){target=&quot;_blank}.
+Ändra breddvärdet för `500` pixlar till `1000` pixlar och tryck sedan på **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000){target="_blank}.
 Det ögonblick du trycker **[!UICONTROL Enter]** går webbläsaren tillbaka till Dynamic Media Image Server. Den genererar en helt ny återgivning av klockan, baserat på det nya breddvärdet du just angav, skickar sedan tillbaka den nya bilden till webbläsaren och cachelagrar den.
 
 Dynamic Media har många bildbehandlingsparametrar som du kan använda för att finjustera bildresurser på webbsidor. Du kan [se en lista över dem här](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en).
 
-Prova att lägga till en rotationsparameter till den bevakade bilden. Och slutet på URL-sökvägen, omedelbart efter `wid=1000`, typ `&rotate=90`och sedan trycka **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000&amp;rotate=90){target=&quot;_blank&quot;}.
+Prova att lägga till en rotationsparameter till den bevakade bilden. Och slutet på URL-sökvägen, omedelbart efter `wid=1000`, typ `&rotate=90`och sedan trycka **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000&amp;rotate=90){target="_blank"}.
 
-Klockan är fortfarande något skev till vänster. Ändra rotationsvärdet för `90` till `92`och sedan trycka **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000&amp;rotate=9){target=&quot;_blank&quot;}.
+Klockan är fortfarande något skev till vänster. Ändra rotationsvärdet för `90` till `92`och sedan trycka **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000&amp;rotate=9){target="_blank"}.
 
 Nu när du trycker **[!UICONTROL Enter]**, skapas en ny rendering av klockan nästan omedelbart. Du kan se vilken typ av prestanda du får, vilket förklarar varför Dynamic Media kan leverera över 800 000 bildförfrågningar, _per sekund_, på en helig helg eller på en stor semester.
 
@@ -83,7 +83,7 @@ Nu kan du föreställa dig att Creative Director tittar på bilderna och säger:
 
 _&quot;Jag ville verkligen ha den här bilden så att den stora handen pekar mot de fyra, och den lilla handen pekar mot 1 för att göra det lättare att se på den där klockan.&quot;_
 
-Alla dessa nya statiska bilder måste fotograferas igen.
+Alla nya statiska bilder måste fotograferas igen.
 
 Men om du har olika bildförinställningar i Dynamic Media kan du använda dessa bilder var du vill. Bildförinställningarna följer standarder.
 
@@ -128,7 +128,7 @@ När du är klar sparar du förinställningen och nu är den tillgänglig för a
 ![Använda bildförinställningen *Medel* för att generera en återgivning av en bild](/help/assets/dynamic-media/assets/dm-medium-image-preset.png)
 _Använda bildförinställningen Medium för att generera en återgivning av en bild._
 
-Du kopierar URL-adressen och klistrar sedan in den i webbläsaren för att kontrollera bildens utseende. [Prova](http://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_74043302?$Medium$){target=&quot;_blank&quot;}.
+Du kopierar URL-adressen och klistrar sedan in den i webbläsaren för att kontrollera bildens utseende. [Prova](http://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_74043302?$Medium$){target="_blank"}.
 
 Lägg märke till namnet på bildförinställningen i webbläsaren _Medel_ i den fullständiga URL-sökvägen.
 
@@ -161,7 +161,7 @@ _Början på att skapa en bilduppsättning._
 
 Om du vill skapa bilduppsättningen väljer du **[!UICONTROL Image Set]** från **[!UICONTROL Create]** nedrullningsbar meny. Observera på menyn att det också finns alternativ för att skapa en **[!UICONTROL Mixed Media Set]**, a **[!UICONTROL Spin Set]** och en **[!UICONTROL Carousel Set]**. Du skapar uppsättningarna på ungefär samma sätt som en bilduppsättning.
 
-En uppsättning med blandade media kan innehålla bilder, färgruteuppsättningar, snurruppsättningar, videor och adaptiva videouppsättningar. [Prova](https://s7d9.scene7.com/s7viewers/html5/MixedMediaViewer.html?asset=Scene7SharedAssets/Mixed_Media_Set_Sample). En snurra simulerar hur det verkliga händer att ett objekt testas. Med snurruppsättningar kan du visa viktiga visuella detaljer från alla vinklar. [Prova](https://s7d9.scene7.com/s7viewers/html5/SpinViewer.html?asset=Scene7SharedAssets/SpinSet_Sample&amp;stagesize=500,400){target=&quot;_blank&quot;}.
+En uppsättning med blandade media kan innehålla bilder, färgruteuppsättningar, snurruppsättningar, videor och adaptiva videouppsättningar. [Prova](https://s7d9.scene7.com/s7viewers/html5/MixedMediaViewer.html?asset=Scene7SharedAssets/Mixed_Media_Set_Sample). En snurra simulerar hur det verkliga händer att ett objekt testas. Med snurruppsättningar kan du visa viktiga visuella detaljer från alla vinklar. [Prova](https://s7d9.scene7.com/s7viewers/html5/SpinViewer.html?asset=Scene7SharedAssets/SpinSet_Sample&amp;stagesize=500,400){target="_blank"}.
 
 Det är enkelt att skapa en bilduppsättning. Du lägger bara till de bildresurser som du vill inkludera i uppsättningen.
 
@@ -187,13 +187,13 @@ Observera i förhandsgranskningen att du kan välja de körbara färgrutorna och
 ![Den bild som körs när visningsprogrammet för utfällbara bilder används](/help/assets/dynamic-media/assets/dm-image-set-flyout-viewer.png)
 _The `Running` Bilduppsättningen med visningsprogrammet för utfällbara bilder._
 
-I det här fallet `Flyout` visningsprogrammet har valts. Nu kan du förhandsvisa bilduppsättningen i visningsprogrammet. Men det är bäst att se det i webbläsaren, precis som kunden ser det. Du väljer **[!UICONTROL URL]** i det nedre vänstra hörnet kopierar du webbadressen och klistrar in den i webbläsaren. [Prova](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running&amp;config=jpearldemo/Flyout){target=&quot;_blank&quot;}.
+I det här fallet `Flyout` visningsprogrammet har valts. Nu kan du förhandsvisa bilduppsättningen i visningsprogrammet. Men det är bäst att se det i webbläsaren, precis som kunden ser det. Du väljer **[!UICONTROL URL]** i det nedre vänstra hörnet kopierar du webbadressen och klistrar in den i webbläsaren. [Prova](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running&amp;config=jpearldemo/Flyout){target="_blank"}.
 
 Med en enda URL kan du använda bilduppsättningen och visningsprogrammet där du behöver dem på webbplatsen. I föregående exempel kan du ha lagt märke till att **[!UICONTROL Embed]** finns till höger om knappen URL. Genom att välja **[!UICONTROL Embed]** kan du kopiera koden för den här bilduppsättningen/visningsprogrammet och lägga till den på en webbsida eller i en Experience Manager Sites-komponent.
 
 Utfällbara visningsprogram är ett standardvisningsprogram som inte kan öppnas och vars egenskaper du kan redigera. Eller, precis som när du skapar en bildförinställning, kan du skapa ett eget anpassat visningsprogram.
 
-Anta att ert sälj- och marknadsföringsteam inte gillar visningsprogrammet. De gillar zoomfunktionen men vill att kunderna ska se zoomeffekten direkt över skorna. I så fall tillämpar du bara InlineZoom-visningsprogrammet på bilduppsättningen och kopierar och klistrar in URL-adressen i webbläsaren för att se hur den fungerar. [Prova](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running&amp;config=jpearldemo/InlineZoom){target=&quot;_blank&quot;}.
+Anta att ert sälj- och marknadsföringsteam inte gillar visningsprogrammet. De gillar zoomfunktionen men vill att kunderna ska se zoomeffekten direkt över skorna. I så fall tillämpar du bara InlineZoom-visningsprogrammet på bilduppsättningen och kopierar och klistrar in URL-adressen i webbläsaren för att se hur den fungerar. [Prova](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running&amp;config=jpearldemo/InlineZoom){target="_blank"}.
 
 När du flyttar muspekaren över skon zoomar du in den bilden och du ser fler detaljer när du flyttar pekaren. Orsaken till det är bara storleken på bilden som ursprungligen överfördes till Dynamic Media.
 
@@ -203,8 +203,8 @@ Du läser bara lite om bilduppsättningar och visningsprogram. Låt oss titta p�
 
 <!-- LEAVE THIS HIDDEN PATH IN THE DOCUMENTATION FOR DEMO PURPOSES [Flyout viewer with image set](http://www.partycity.com/girls-little-old-lady-costume-P750948.html) -->
 
-* `ZoomVertical_dark` visningsprogram som används på en bildresurs. [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_96311480&amp;config=jpearldemo/ZoomVertical_dark){target=&quot;_blank&quot;}.
-* `Zoom_light` visningsprogram som används på en bild. [Prova](https://s7d1.scene7.com/s7viewers/html5/BasicZoomViewer.html?asset=jpearldemo/AdobeStock_38827423&amp;config=jpearldemo/Zoom_light){target=&quot;_blank&quot;}.
+* `ZoomVertical_dark` visningsprogram som används på en bildresurs. [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_96311480&amp;config=jpearldemo/ZoomVertical_dark){target="_blank"}.
+* `Zoom_light` visningsprogram som används på en bild. [Prova](https://s7d1.scene7.com/s7viewers/html5/BasicZoomViewer.html?asset=jpearldemo/AdobeStock_38827423&amp;config=jpearldemo/Zoom_light){target="_blank"}.
 
 ## Valfritt - Läs mer
 

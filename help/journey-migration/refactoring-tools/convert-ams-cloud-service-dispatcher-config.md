@@ -1,7 +1,7 @@
 ---
 title: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
 description: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 95%

@@ -2,7 +2,7 @@
 title: Dataskydd och dataintegritet - Adobe Experience Manager as a Cloud Service beredskap
 description: Läs mer om Adobe Experience Manager as a Cloud Service stöd för de olika dataskydds- och dataintegritetsreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
 exl-id: 5dfa353b-84c5-4b07-bfcd-b03c2d361553
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 1%

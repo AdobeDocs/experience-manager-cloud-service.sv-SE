@@ -2,7 +2,7 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 1%

@@ -2,7 +2,7 @@
 title: SPA
 description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 exl-id: 1186b64e-11f8-43a6-bc75-450c4d7587ec
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%

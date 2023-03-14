@@ -4,14 +4,14 @@ description: Förstå hur Content Fragment Editor använder markeringssyntax fö
 feature: Content Fragments
 role: User
 exl-id: 4e9b076e-7429-466b-bb53-2164da379650
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 4%
 
 ---
 
-# Markering {#markdown}
+# Markdown {#markdown}
 
 När du [redigering](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva innehåll för både sidredigering och headless-leverans:
 

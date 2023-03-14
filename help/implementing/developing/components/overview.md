@@ -42,7 +42,7 @@ Varje AEM:
 * Är en samling skript som helt och hållet realiserar en viss funktion.
 * Kan fungera fristående, vilket betyder antingen AEM eller en portal.
 
-## AEM kärnkomponenter {#aem-core-components}
+## Grundläggande komponenter i AEM {#aem-core-components}
 
 [De AEM kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 

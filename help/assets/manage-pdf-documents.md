@@ -3,7 +3,8 @@ title: Hantera dina PDF-dokument i [!DNL Adobe Experience Manager].
 description: Hantera PDF-dokument i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 feature: Asset Management
 role: User,Admin
-source-git-commit: 9a600fb744c7064274fb4d849a5e01de2b83f575
+exl-id: 29660869-6902-4093-845b-cd629be59d4d
+source-git-commit: 041f0fb62b1bca79cdf4b47f971c060deb77d28f
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 0%
@@ -124,5 +125,5 @@ Utför följande steg för att förhandsgranska flera sidor i andra dokumentform
 > ANMÄRKNING
 > * Den maximala storleken för en resurs som du kan förhandsgranska är upp till 100 MB.
 > * Den maximala storleken på XLS- eller XLSX-filer som kan förhandsgranskas är 20 MB.
-> 
+>
 

@@ -3,7 +3,7 @@ title: Distribuera till AEM as a Cloud Service
 description: Distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 0481267958fe8ac4b28b2742924d2bc2c337eebc
+source-git-commit: 0d586bf7e9ad6653f9a45c2fe9f0f8a156de5133
 workflow-type: tm+mt
 source-wordcount: '3497'
 ht-degree: 0%
@@ -82,7 +82,7 @@ Läs mer om OSGI-konfiguration på [Konfigurera OSGi för AEM as a Cloud Service
 
 I vissa fall kan det vara användbart att förbereda innehållsändringar i källkontrollen så att den kan distribueras av Cloud Manager när en miljö har uppdaterats. Det kan till exempel vara rimligt att skapa startvärden för vissa rotmappsstrukturer eller att göra ändringar i redigerbara mallar för att aktivera principer i de för komponenter som uppdaterades i programdistributionen.
 
-Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
+Det finns två strategier för att beskriva innehållet som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och poinit-satser.
 
 ### Innehållspaket som kan ändras {#mutable-content-packages}
 
@@ -143,7 +143,7 @@ Repoinit är att föredra för de här användningsområdena för innehållsänd
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Så här skapar du repoinit-satser:
+Följ nedanstående procedur för att skapa repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.

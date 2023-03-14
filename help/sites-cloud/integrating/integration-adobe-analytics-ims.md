@@ -2,7 +2,7 @@
 title: IMS-konfiguration som ska användas vid integrering med Adobe Analytics
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Analytics
 exl-id: 12bd1573-373a-4001-be71-c8f155ef6896
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 1%

@@ -2,7 +2,7 @@
 title: WKND SPA Project
 description: Utveckla SPA med denna självstudiekurs i flera delar, som leder dig genom projektinställningar, komponentmappning, utvecklingsverktyg i gränssnittet och programdirigering för att implementera dina egna SPA med både React och Angular.
 exl-id: 3e4445b7-6215-4126-aefa-bdba1ee1398d
-source-git-commit: 173f6cd2c07ddc3a3a343696b166af88bc2631ed
+source-git-commit: f9ebd60892ae2cdaf844b7978f53a76b6e5cb137
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%

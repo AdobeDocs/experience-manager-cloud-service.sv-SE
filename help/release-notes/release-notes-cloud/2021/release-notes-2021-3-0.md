@@ -45,7 +45,7 @@ Ability to select a root path. select if a minimum number of tags is required.
 
 Add a Boolean or radio widget type to metadata schema setup. -->
 
-* [!DNL Experience Manager] utökar funktionerna för anslutna resurser så att de kan använda [!DNL Dynamic Media] bilder i de kärnkomponenter som stöds. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
+* [!DNL Experience Manager] utökar funktionen för anslutna resurser så att den stöder användning av [!DNL Dynamic Media] bilder i de kärnkomponenter som stöds. Se [använd anslutna resurser](/help/assets/use-assets-across-connected-assets-instances.md).
 * Experience Manager-administratörer kan schemalägga inmatningar av gruppresurser vid ett visst datum eller en viss tidpunkt. Administratörer kan även schemalägga återkommande frågor baserat på datum och tid. Se [massmaterialinmatning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
 ### Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}

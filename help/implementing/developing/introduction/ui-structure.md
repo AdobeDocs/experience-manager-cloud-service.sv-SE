@@ -2,7 +2,7 @@
 title: Struktur för AEM
 description: Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement
 exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%

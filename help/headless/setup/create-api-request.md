@@ -21,9 +21,9 @@ Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment
    * Om du vill använda det här [slutpunkter måste definieras och aktiveras i AEM](/help/headless/graphql-api/graphql-endpoint.md)och, om det behövs, [GraphiQL-gränssnittet är installerat](/help/headless/graphql-api/graphiql-ide.md).
 * [Resursens REST API](/help/assets/content-fragments/assets-api-content-fragments.md) I kan du skapa och ändra innehållsfragment (och andra resurser).
 
-Resten av guiden fokuserar på GraphQL-åtkomst och leverans av innehållsfragment.
+Resten av guiden fokuserar på GraphQL åtkomst och leverans av innehållsfragment.
 
-## Aktivera GraphQL-slutpunkt {#enable-graphql-endpoint}
+## Aktivera GraphQL Endpoint {#enable-graphql-endpoint}
 
 Innan GraphQL API:er kan användas måste en GraphQL-slutpunkt skapas.
 
@@ -33,7 +33,7 @@ Innan GraphQL API:er kan användas måste en GraphQL-slutpunkt skapas.
    * **Namn**: Slutpunktens namn. du kan skriva vilken text som helst.
    * **Använd GraphQL-schema från**: Använd listrutan för att välja önskad konfiguration.
 1. Bekräfta med **Skapa**.
-1. I konsolen finns en **Bana** kommer nu att visas baserat på den konfiguration som skapades tidigare. Det här är sökvägen som används för att köra GraphQL-frågor.
+1. I konsolen finns en **Bana** kommer nu att visas baserat på den konfiguration som skapades tidigare. Detta är sökvägen som används för att köra GraphQL-frågor.
 
    ```
    /content/cq:graphql/<configuration-name>/endpoint
@@ -54,7 +54,7 @@ GraphiQL är en integrerad utvecklingsmiljö som ingår i AEM. den är tillgäng
    * **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
    * direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
-1. GraphiQL IDE är en webbläsarredigerare för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem i headlessläge som JSON.
+1. GraphiQL IDE är en frågeredigerare i webbläsaren för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem i headlessläge som JSON.
    * I den nedrullningsbara listrutan högst upp till höger kan du välja slutpunkten.
    * I en panel längst till vänster visas de beständiga frågorna (om de är tillgängliga)
    * På panelen i mitten till vänster kan du skapa din fråga.
@@ -88,9 +88,9 @@ GraphiQL är en integrerad utvecklingsmiljö som ingår i AEM. den är tillgäng
 1. Klicka på **Dokument** på sidans övre högra hörn för att visa sammanhangsberoende dokumentation som hjälper dig att skapa frågor som anpassar sig till dina egna modeller.
    ![GraphiQL-dokumentation](../assets/graphiql-documentation.png)
 
-GraphQL möjliggör strukturerade frågor som inte bara kan ha specifika datauppsättningar eller enskilda dataobjekt som mål, utan också kan leverera specifika element i objekten, kapslade resultat, har stöd för frågevariabler och mycket annat.
+GraphQL möjliggör strukturerade frågor som inte bara kan rikta sig till specifika datauppsättningar eller enskilda dataobjekt, utan också kan leverera specifika element i objekten, kapslade resultat, har stöd för frågevariabler och mycket annat.
 
-GraphQL kan undvika både iterativa API-begäranden och överleverans, och i stället möjliggör massleverans av exakt det som behövs för återgivning som svar på en enda API-fråga. Den resulterande JSON kan användas för att leverera data till andra webbplatser eller appar.
+GraphQL kan undvika både iterativa API-begäranden och överleverans, och i stället tillåter massleverans av exakt det som behövs för återgivning som svar på en enda API-fråga. Den resulterande JSON kan användas för att leverera data till andra webbplatser eller appar.
 
 ## Nästa steg {#next-steps}
 

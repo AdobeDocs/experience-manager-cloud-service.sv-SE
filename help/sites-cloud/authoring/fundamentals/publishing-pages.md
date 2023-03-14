@@ -2,7 +2,7 @@
 title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 5%

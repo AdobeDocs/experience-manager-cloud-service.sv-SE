@@ -23,7 +23,7 @@ MSM-funktionalitet (Multi Site Manager) i [!DNL Adobe Experience Manager] gör a
 
 ## Förstå fördelarna med och begreppen i MSM {#concepts}
 
-### Hur det fungerar och fördelarna {#how-it-works-and-the-benefits}
+### Så fungerar det och fördelarna {#how-it-works-and-the-benefits}
 
 Om du vill veta mer om användningsscenarierna för återanvändning av samma innehåll (text och resurser) på flera webbplatser kan du läsa [möjliga MSM-scenarier](/help/sites-cloud/administering/msm/overview.md). [!DNL Experience Manager] behåller en länk mellan den ursprungliga resursen och dess länkade kopior, som kallas live-kopior. Tack vare den bevarade länken kan centraliserade ändringar skickas till många aktiva kopior. Detta ger snabbare uppdateringar och eliminerar samtidigt begränsningarna med att hantera duplicerade kopior. Spridningen av ändringar är felfri och centraliserad. Funktionen ger utrymme för uppdateringar som är begränsade till valda kopior. Användare kan koppla loss länken, d.v.s. bryta arv, och göra lokala redigeringar som inte skrivs över nästa gång den primära kopian uppdateras och ändringarna introduceras. Frånkopplingen kan göras för ett fåtal metadatafält eller för en hel resurs. Det ger flexibilitet att lokalt uppdatera resurser som ursprungligen ärvts från en primär kopia.
 

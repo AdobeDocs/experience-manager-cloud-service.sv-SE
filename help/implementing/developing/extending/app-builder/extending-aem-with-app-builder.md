@@ -2,7 +2,7 @@
 title: Utöka [!DNL Adobe Experience Manager] as a Cloud Service med Adobe Developer App Builder.
 description: Utöka [!DNL Adobe Experience Manager] as a Cloud Service med Adobe Developer App Builder.
 exl-id: 50d82745-5deb-4bfa-961b-714842403601
-source-git-commit: 430179bf13c1fff077c515eed0676430e9e7f341
+source-git-commit: cc6565121a76f70b958aa9050485e0553371f3a3
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%

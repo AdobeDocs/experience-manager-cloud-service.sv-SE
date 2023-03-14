@@ -56,7 +56,7 @@ Självbetjäningsdemoverktyg innehåller ett antal verktyg.
 * **Cache för primär författare** - Detta hämtar flera resurser i Adobe Experience Manager-instansen och snabbar upp hämtningstiden. Det kan ta flera sekunder.
 * **Android-app** - Verktyg för att installera och starta demonstrationsappen för Android. Skapa en webbplats baserat på **WKND-app för en sida** för att fylla i den här sidan. Använd från en Android-enhet, emulator eller Bluestacks.
 * **Användarinställningar** - Inaktivera dialogrutor för självstudiekurser.
-* **Konfigurera GraphQL** - Konfigurera snabbt den globala GraphQL-slutpunkten.
+* **Konfigurera GraphQL** - Konfigurera snabbt GraphQL globala slutpunkt.
 
 ## Ta bort demowebbplatser och mallar {#deleting}
 

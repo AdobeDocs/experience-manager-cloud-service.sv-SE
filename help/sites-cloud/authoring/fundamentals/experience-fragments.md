@@ -2,7 +2,7 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 6d7bef4a2d11adc54e148146d79aa77c9de1d7e7
+source-git-commit: 9c3153efe4aacd1666663cd5eb718f75329202af
 workflow-type: tm+mt
 source-wordcount: '2064'
 ht-degree: 5%

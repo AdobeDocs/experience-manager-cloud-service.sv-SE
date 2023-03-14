@@ -77,7 +77,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 ### Vad är nytt? {#what-is-new-cif}
 
-* CIF-tillägget stöder den senaste Commerce v2.4.3 med nya GraphQL API:er och scheman
+* CIF-tillägget stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
 
 * Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF-ikon har lagts till i verktygsfältet för textredigering som öppnar väljarna för att snabbt söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
 

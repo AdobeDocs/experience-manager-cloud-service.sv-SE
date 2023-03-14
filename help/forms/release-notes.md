@@ -61,7 +61,6 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 ### Betafunktioner i [!DNL Forms] {#sep-what-is-new-forms-prerelease}
 
 - **Enhetlig lagringsanslutning:** Använd Unified Storage Connector för att externalisera processdata i kundhanterade databaser. Du kan t.ex. lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
-
    <!--* Enable Forms Portal’s save and resume functionality and store adaptive forms drafts in a customer-managed data repository.-->
 
 - **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](aem-forms-cloud-service-communications.md) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:

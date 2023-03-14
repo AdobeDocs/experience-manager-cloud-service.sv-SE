@@ -43,9 +43,9 @@ Innehållsmodellens struktur är:
 
 >[!NOTE]
 >
->Modellerna för innehållsfragment används också som bas för AEM GraphQL-scheman, som används för att hämta ditt innehåll - mer om det på Developer Journey.
+>Modellerna för innehållsfragment används också som bas för de AEM GraphQL-scheman som används för att hämta ditt innehåll - mer om det på Developer Journey.
 
-Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av standard-API:t GraphQL. Med AEM GraphQL API kan program utföra (komplexa) frågor på dina innehållsfragment, där varje fråga följer en viss modelltyp.
+Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av GraphQL standard-API. Med AEM GraphQL API kan program utföra (komplexa) frågor på dina innehållsfragment, där varje fråga anpassas efter en viss modelltyp.
 
 Det returnerade innehållet kan sedan användas av dina program.
 

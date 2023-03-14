@@ -23,11 +23,11 @@ Följande version (2021.2.0) kommer att vara den 25 februari 2021.
 
 * **[HTTP-API för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md)**: Lägg till/uppdatera och ta bort Content Fragment-varianter med HTTP API.
 
-* **[GraphQL API för leverans av innehållsfragment](/help/headless/graphql-api/content-fragments.md)**: Möjlighet att söka efter innehållsfragment med GraphQL-syntax och scheman baserade på Content Fragment-modeller, för utdata i JSON-format.
+* **[GraphQL API för leverans av innehållsfragment](/help/headless/graphql-api/content-fragments.md)**: Möjlighet att söka efter innehållsfragment med GraphQL-syntax och scheman baserade på Content Fragment-modeller för JSON-format.
 
 * **[Autentiseringsstöd för GraphQL API-begäranden](/help/headless/security/authentication.md)**: Möjlighet att autentisera GraphQL API-begäranden med åtkomsttoken för API:er på serversidan.
 
-* Förbättrade JSON-utdata från GraphQL API, inklusive möjligheten att skriva ut RTF i JSON-format och -språk.
+* Förbättrade JSON-utdata från GraphQL API, bland annat möjligheten att skapa RTF-text i JSON-format och -språk.
 
 * Stöd för att kapsla modeller för innehållsfragment så att kapslade strukturer för innehållsfragment kan skapas, via särskilda datatyper för Content Fragment Reference eller textbundna referenser för innehållsfragment i flerradiga textfält.
 

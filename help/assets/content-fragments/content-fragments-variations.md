@@ -2,7 +2,7 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: d720d403cab4e51dd89a58aae5b4e29ca9da7f1c
+source-git-commit: 737d4d56312b763a50c2dfad0ea51feb9dbf4dde
 workflow-type: tm+mt
 source-wordcount: '2288'
 ht-degree: 11%
@@ -129,7 +129,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markering {#markdown}
+### Markdown {#markdown}
 
 >[!NOTE]
 >

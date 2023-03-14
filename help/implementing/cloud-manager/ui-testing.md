@@ -227,7 +227,7 @@ Provexemplen från Adobe ger hjälpfunktioner för att komma åt konfigurationsp
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
 1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
@@ -263,7 +263,7 @@ Om ett testresultatarkiv skapas under en UI-testkörning kan du hämta det från
 
 Testerna ibland måste överföra filer till det program som testas. För att driftsättningen av Selenium ska vara flexibel i förhållande till dina tester är det inte möjligt att ladda upp en resurs direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
 
-1. Överför filen på den URL som anges av `UPLOAD_URL` miljövariabel.
+1. Överför filen på den URL som anges av `UPLOAD_URL` systemvariabel.
    * Överföringen måste utföras i en POST med ett multipart-formulär.
    * Multipart-formuläret måste ha ett enda filfält.
    * Detta motsvarar `curl -X POST ${UPLOAD_URL} -F "data=@file.txt"`.

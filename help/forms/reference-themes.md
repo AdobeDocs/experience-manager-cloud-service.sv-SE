@@ -4,13 +4,13 @@ seo-title: Reference Themes
 description: AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär.
 seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
 discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
-source-git-commit: 3ca1996ac3a19151c0c05bd972f0aec07edabf69
+exl-id: 03305b4a-d82d-4b8d-8804-249b10bdd358
+source-git-commit: 50d4be07b9563fb5047e9b313ae604cd7633a0e2
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
 
 ---
-
 
 # Referensresurser för Forms as a Cloud Service {#reference-themes}
 

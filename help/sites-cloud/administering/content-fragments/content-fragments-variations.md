@@ -4,7 +4,7 @@ description: Förstå hur variationer gör att du kan skapa innehåll för fragm
 feature: Content Fragments
 role: User
 exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
-source-git-commit: d52372e69af2800703e20f36407a9b381db6264e
+source-git-commit: 0361ae6e7de7b92f8c3ebbf531e9382df44c246f
 workflow-type: tm+mt
 source-wordcount: '2310'
 ht-degree: 11%
@@ -131,7 +131,7 @@ Med oformaterad text kan du snabbt lägga in innehåll utan formaterings- eller 
 >
 >Om du väljer **Oformaterad text** kan du förlora formatering, markdown-kod och/eller resurser som du har infogat i **RTF** eller **Markdown-kod**.
 
-### Markering {#markdown}
+### Markdown {#markdown}
 
 >[!NOTE]
 >

@@ -2,7 +2,7 @@
 title: Hantera anpassade domännamn
 description: Lär dig hur du använder Cloud Manager för att visa, uppdatera, ersätta och ta bort anpassade domännamn.
 exl-id: 6cab8cf2-22c0-4f4b-9c54-a1425e74ddd0
-source-git-commit: 955f4bb55434eeb1a429a1972714b71c5370de1e
+source-git-commit: c8599d4a0c3093bf3cff630745ada95e64124fef
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%

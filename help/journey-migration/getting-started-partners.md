@@ -2,7 +2,7 @@
 title: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 description: Migreringshandbok till Experience Manager as a Cloud Service for Partners
 exl-id: 9d5a72b8-06af-4b82-ab20-e65aea7903b3
-source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
+source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
 workflow-type: tm+mt
 source-wordcount: '2122'
 ht-degree: 6%

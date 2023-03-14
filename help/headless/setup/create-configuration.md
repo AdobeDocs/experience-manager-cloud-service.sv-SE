@@ -33,7 +33,7 @@ En administratör behöver bara skapa en konfiguration en gång, eller mycket s�
       * Den kan vid behov justeras.
 1. Markera följande alternativ:
    * **Modeller för innehållsfragment**
-   * **GraphQL-beständiga frågor**
+   * **GraphQL Beständiga frågor**
 
    ![Skapa konfiguration](../assets/create-configuration.png)
 
@@ -43,7 +43,7 @@ Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också ka
 
 >[!NOTE]
 >
->Konfigurationsalternativ utöver **Modeller för innehållsfragment** och **GraphQL-beständiga frågor** kan vara nödvändigt beroende på implementeringskraven.
+>Konfigurationsalternativ utöver **Modeller för innehållsfragment** och **GraphQL Beständiga frågor** kan vara nödvändigt beroende på implementeringskraven.
 
 ## Nästa steg {#next-steps}
 

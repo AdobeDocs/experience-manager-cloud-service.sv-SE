@@ -4,7 +4,7 @@ description: Lär dig hur du enkelt förhandsgranskar en JSON-representation av 
 feature: Content Fragments
 role: User
 exl-id: bffc13e5-586b-4598-98fb-b1688d9716c5
-source-git-commit: 944665bc7cac1f00811187a508a18800c3d73f2a
+source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 1%

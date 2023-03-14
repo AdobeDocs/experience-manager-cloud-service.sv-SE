@@ -3,7 +3,7 @@ title: Cache i AEM as a Cloud Service
 description: Cache i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 7b562dfc23678c39ec7c2b418b0e9ff505c4a08f
+source-git-commit: 6bca307dcf41b138b5b724a8eb198ac35e2d906e
 workflow-type: tm+mt
 source-wordcount: '2832'
 ht-degree: 1%

@@ -2,7 +2,7 @@
 title: Funktionstestning
 description: Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: 73a73f2f6c56386f3058d89e66b036e8f5e5a17b
+source-git-commit: 1e75a9a8ba4eff030d079d4b7adf7fc8588b8cc1
 workflow-type: tm+mt
 source-wordcount: '1101'
 ht-degree: 0%

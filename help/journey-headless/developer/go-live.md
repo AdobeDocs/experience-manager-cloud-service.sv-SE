@@ -35,10 +35,10 @@ Följ de bästa metoderna nedan för att göra ditt AEM headless-program klart f
 
 ## Säkra och skala ditt Headless-program innan det startas {#secure-and-scale-before-launch}
 
-1. Konfigurera [Tokenbaserad autentisering](/help/headless/security/authentication.md) med GraphQL-begäranden
+1. Konfigurera [Tokenbaserad autentisering](/help/headless/security/authentication.md) med dina GraphQL-förfrågningar
 1. Konfigurera [Cachelagring](/help/implementing/dispatcher/caching.md).
 
-## Modellstruktur jämfört med GraphQL-utdata {#structure-vs-output}
+## Modellstruktur jämfört med GraphQL Output {#structure-vs-output}
 
 * Undvik att skapa frågor som genererar mer än 15 kB JSON (gzip-komprimerad). Långa JSON-filer är resurskrävande för att klientprogrammet ska kunna analysera.
 * Undvik fler än fem kapslade nivåer av fragmenthierarkier. Ytterligare nivåer gör det svårt för innehållsförfattare att ta hänsyn till effekten av deras ändringar.
@@ -46,7 +46,7 @@ Följ de bästa metoderna nedan för att göra ditt AEM headless-program klart f
 
 ## Maximera CDN-cacheträffrekvens {#maximize-cdn}
 
-* Använd inte direkta GraphQL-frågor, såvida du inte begär direktinnehåll från ytan.
+* Använd inte direkta GraphQL-frågor om du inte begär direktinnehåll från ytan.
    * Använd beständiga frågor när det är möjligt.
    * Tillhandahåll CDN TTL över 600 sekunder för att CDN ska cachelagra dem.
    * AEM kan beräkna effekten av en modelländring av befintliga frågor.
@@ -97,7 +97,7 @@ Följ dessa metodtips som ett allmänt tillvägagångssätt vid felsökning:
 * Validera funktionalitet och prestanda med programmets produktionsversion
 * Validera med JSON-förhandsvisningen i Content Fragment Editor
 * Inspect JSON i klientprogrammet för att kontrollera om det finns problem med klientprogram eller leverans
-* Inspect JSON använder GraphQL för att kontrollera om det finns problem med cachelagrat innehåll eller AEM
+* Inspect the JSON using GraphQL to check for the presence of issues related to cached content or AEM
 
 ### Logga ett fel med support {#logging-a-bug-with-support}
 

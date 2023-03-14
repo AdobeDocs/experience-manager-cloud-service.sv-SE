@@ -68,7 +68,7 @@ Det här är mer av en detalj - men det kan intressera dig, bara för att slutf�
 
 När du har skapat modellerna för innehållsfragment, och dina författare har använt dem för att generera innehållet, måste de headless-program ha tillgång till det här innehållet.
 
-Adobe Experience Manager (AEM) as a Cloud Service kan selektivt komma åt dina innehållsfragment med AEM GraphQL API, och returnera endast det innehåll som behövs. Med API:t kan en utvecklare formulera frågor som markerar specifikt innehåll. Den här urvalsprocessen baseras på *din* Modeller för innehållsfragment.
+Adobe Experience Manager (AEM) as a Cloud Service kan selektivt komma åt dina innehållsfragment med hjälp av det AEM GraphQL-API:t och returnera endast det innehåll som behövs. Med API:t kan en utvecklare formulera frågor som markerar specifikt innehåll. Den här urvalsprocessen baseras på *din* Modeller för innehållsfragment.
 
 Detta innebär att projektet kan leverera strukturerat material utan extra kostnad för användning i dina program.
 

@@ -2,7 +2,7 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: ca849bd76e5ac40bc76cf497619a82b238d898fa
+source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
 workflow-type: tm+mt
 source-wordcount: '2994'
 ht-degree: 4%
@@ -450,7 +450,7 @@ De här alternativen är tillgängliga via markören bredvid **Kommentar** fält
 
 **Referenser** visar alla anslutningar till den valda resursen. I **Webbplatser** konsol [referenser](/help/sites-cloud/authoring/fundamentals/environment-tools.md#references) för sidor:
 
-* [Startar](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)
+* [Launches](/help/sites-cloud/authoring/launches/overview.md#launches-in-references-sites-console)
 * [Live-kopior](/help/sites-cloud/administering/msm/overview.md#openingthelivecopyoverviewfromreferences)
 * [Språkversioner](/help/sites-cloud/administering/translation/preparation.md#seeing-the-status-of-language-roots)
 * Innehållsreferenser:

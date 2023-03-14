@@ -1,6 +1,6 @@
 ---
 title: Hantera GraphQL-slutpunkter i AEM
-description: Lär dig hur du hanterar GraphQL-slutpunkter i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
+description: Lär dig hur du hanterar GraphQL slutpunkter i Adobe Experience Manager as a Cloud Service för leverans av headless-material.
 feature: Content Fragments,GraphQL API
 exl-id: f7164ae3-4074-4db7-8c43-a79cc2ef00b1
 source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Hantera GraphQL-slutpunkter i AEM {#graphql-aem-endpoint}
 
-Slutpunkten är den bana som används för att komma åt GraphQL för AEM. Med den här sökvägen kan du (eller din app):
+Slutpunkten är den sökväg som används för att komma åt GraphQL för AEM. Med den här sökvägen kan du (eller din app):
 
-* få tillgång till GraphQL-schemat,
-* skicka GraphQL-frågor,
-* ta emot svar (på GraphQL-frågor).
+* tillgång till GraphQL schema,
+* skicka dina GraphQL-frågor,
+* ta emot svaren (på dina GraphQL-frågor).
 
 Det finns två typer av slutpunkter i AEM:
 
@@ -37,7 +37,7 @@ Det finns två typer av slutpunkter i AEM:
 >
 >Innehållsförfattaren bör kontrollera detta scenario; Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under konfigurationen för globala platser.
 
-Databassökvägen för GraphQL för AEM globala slutpunkten är:
+Databassökvägen för den globala slutpunkten för GraphQL AEM är:
 
 `/content/cq:graphql/global/endpoint`
 
@@ -47,10 +47,10 @@ För vilken ditt program kan använda följande sökväg i URL:en för begäran:
 
 Om du vill aktivera en slutpunkt för GraphQL för AEM måste du:
 
-* [Aktivera GraphQL-slutpunkten](#enabling-graphql-endpoint)
+* [Aktivera din GraphQL-slutpunkt](#enabling-graphql-endpoint)
 * [Publicera din GraphQL-slutpunkt](#publishing-graphql-endpoint)
 
-## Aktivera GraphQL-slutpunkten {#enabling-graphql-endpoint}
+## Aktivera din GraphQL-slutpunkt {#enabling-graphql-endpoint}
 
 Om du vill aktivera en GraphQL-slutpunkt måste du först ha en lämplig konfiguration. Se [Content Fragments - Configuration Browser](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md).
 
@@ -70,7 +70,7 @@ Så här aktiverar du motsvarande slutpunkt:
    >
    >Följande varning visas i dialogrutan:
    >
-   >* *GraphQL-slutpunkter kan medföra problem med datasäkerhet och prestanda om de inte hanteras varsamt. Kontrollera att du har angett rätt behörigheter när du har skapat en slutpunkt.*
+   >* *GraphQL slutpunkter kan medföra problem med datasäkerhet och prestanda om de inte hanteras varsamt. Kontrollera att du har angett rätt behörigheter när du har skapat en slutpunkt.*
 
 
 1. Bekräfta med **Skapa**.
@@ -78,11 +78,11 @@ Så här aktiverar du motsvarande slutpunkt:
 
    >[!CAUTION]
    >
-   >Slutpunkten är tillgänglig för alla. Detta kan - särskilt när det gäller publiceringsinstanser - utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan medföra en stor belastning på servern.
+   >Slutpunkten är tillgänglig för alla. Detta kan - särskilt när det gäller publiceringsinstanser - utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan belasta servern mycket.
    >
    >Du kan ställa in åtkomstkontrollistor, som passar ditt användningsfall, på slutpunkten.
 
-## Publicera GraphQL-slutpunkten {#publishing-graphql-endpoint}
+## Publicera din GraphQL-slutpunkt {#publishing-graphql-endpoint}
 
 Markera den nya slutpunkten och **Publicera** för att göra den helt tillgänglig i alla miljöer.
 

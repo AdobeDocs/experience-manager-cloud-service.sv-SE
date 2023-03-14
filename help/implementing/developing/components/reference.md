@@ -2,7 +2,7 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
-source-git-commit: 421ad8506435e8538be9c83df0b78ad8f222df0c
+source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
 workflow-type: tm+mt
 source-wordcount: '3659'
 ht-degree: 0%
