@@ -3,9 +3,9 @@ title: Introduktion till [!DNL AEM Forms] as a Cloud Service
 description: Upptäck AEM Forms och lär dig hur du kan producera affärsklara formulär och dokument. Läs mer om Platform-as-a-Service (PaaS) och hur du hanterar digitala formulär och affärsprocesser i storföretagsklass, samt hur du kopplar Forms till Adobe Sign och aktuella datakällor.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: fa8629fefe3ad29f70213b15bb31623a2f7d5420
+source-git-commit: 8f3ffc72507be1d28bc437041579578d6a479e23
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1092'
 ht-degree: 5%
 
 ---
@@ -25,9 +25,6 @@ Du kan använda tjänsten för att skapa och distribuera interaktiva och engager
 
 Organisationen kan använda [!DNL AEM Forms] as a Cloud Service att skapa digitala formulär, koppla ihop formulär med befintliga datakällor, integrera formulär med [!DNL Adobe Sign] för att lägga till e-signaturer i formulär och generera DoR (Document of Record) för att arkivera inskickade formulär som PDF-filer. Man kan också använda tjänsten för att konvertera PDF forms till digitala blanketter.
 
-![Responsiv formulärdesign](/help/forms/assets/data-collection.jpeg "Adaptiva Forms-upplevelser för olika enheter"){width="70%" align="center"}
-
-
 I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och lätt att hitta. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till formulär de behöver via både webben och mobila kanaler. Du kan anpassa utseendet, varumärkesprofileringen och logotyperna i Forms Portal så att de passar organisationens specifika behov.
 
 ## Leverera personaliserad kommunikation
@@ -36,16 +33,13 @@ En viktig komponent i en effektiv självbetjäningsdigital upplevelse är att f�
 
 Med AEM Forms kan man skapa övertygande personaliserade användarupplevelser genom att anpassa dokumentmallar och lägga in information från bakomliggande processer till mallarna. En uppsättning intuitiva API:er hjälper företag att ange regler som bestämmer när ett meddelande ska skapas baserat på en förfrågan eller med regelbundna intervall i grupper.
 
-![Personlig faktura](/help/forms/assets/personalized-communication.jpeg "Personaliserade PDF-fakturor som genereras på begäran"){width="70%" align="center"}
 
 Personaliserade dokument som kvitton, kvitton, välkomstpaket och kontoutdrag kan enkelt genereras. Organisationer kan driva trafik till personaliserade webbportaler, vilket leder till registrering eller inköp av ytterligare tjänster.
 
 
 ## Automatisera arbetsflöden
 
-Använd blankettbaserade arbetsflöden för att automatisera bearbetning och vidarebefordran av blankettdata till olika intressenter, t.ex. chefer och avdelningar, för granskning, godkännande eller vidare bearbetning.
-
-Dessa arbetsflöden hjälper er att minimera riskerna och upprätthålla regelefterlevnaden genom att säkerställa en konsekvent och kontrollerbar behandling av formulärdata, automatisera manuella uppgifter, tillhandahålla rollbaserad åtkomstkontroll och uppfylla myndigheternas krav.
+Använd blankettbaserade arbetsflöden för att automatisera bearbetning och vidarebefordran av blankettdata till olika intressenter, t.ex. chefer och avdelningar, för granskning, godkännande eller vidare bearbetning. Dessa arbetsflöden hjälper er att minimera riskerna och upprätthålla regelefterlevnaden genom att säkerställa en konsekvent och kontrollerbar behandling av formulärdata, automatisera manuella uppgifter, tillhandahålla rollbaserad åtkomstkontroll och uppfylla myndigheternas krav.
 
 
 ## Optimera formulärprestanda
