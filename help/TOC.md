@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: d6d7fefce814063476aae8cdafc9cc6b084361a3
+source-git-commit: 4c5c5eed984dcc9361ae2316ce466b4a73c0bf19
 workflow-type: tm+mt
-source-wordcount: '3967'
+source-wordcount: '3969'
 ht-degree: 21%
 
 ---
@@ -941,6 +941,7 @@ ht-degree: 21%
    + [Underhålla en AEM-anslutning](/help/connectors/maintain.md)
 + Användning {#operations}
    + [Använda och underhålla AEM as a Cloud Service](/help/operations/home.md)
+   + [Notiscenter](/help/operations/notification-center.md)
    + [Innehållssökning och indexering](/help/operations/indexing.md)
    + [Tjänsten Innehållsreplikering](/help/operations/replication.md)
    + [Infrastruktur- och serviceövervakning på AEM as a Cloud Service](/help/operations/monitoring.md)
