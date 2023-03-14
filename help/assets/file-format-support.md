@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 614d15838665306d01140048e35fc265b9f7b5e1
+source-git-commit: 8cacd31d6db387b3525b17649a93047acad81ee3
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '988'
 ht-degree: 4%
 
 ---
@@ -66,6 +66,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 | SGI | ✓ | ✓ | ✓ | ✓ |
 | SVG | ✓ | - | ✓ | ✓ |
 | TIFF | ✓ | ✓ | ✓ | - |
+| WebP | ✓ | ✓ | ✓ | ✓ |
 
 ## 3D-format {#support-3d-formats}
 
