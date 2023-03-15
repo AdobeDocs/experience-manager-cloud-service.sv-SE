@@ -9,18 +9,14 @@ level: Beginner
 kt: 9456, 9475, 9476, 9477
 thumbnail: 327313.jpg
 exl-id: f1a67f80-7366-4337-8bcd-062a3412acc9
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: a14ee350b3fdc3ac197b703aa36957d1d1dd7355
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
 # Åtgärder i App Builder
-
->[!IMPORTANT]
->
-> _Adobe Project Fire heter nu App Builder, vilket nämns i videoklippen i den här serien_
 
 ## Inledning till åtgärder
 
