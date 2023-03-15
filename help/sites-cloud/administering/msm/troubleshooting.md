@@ -4,9 +4,9 @@ description: Ta reda på hur du felsöker de vanligaste MSM-relaterade problemen
 feature: Multi Site Manager
 role: Admin
 exl-id: 50f02f4f-a347-4619-ac90-b3136a7b1782
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 7c0be1a7bdc9ccb788ba41eb6ee83b89df94f500
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,13 @@ MSM registrerar flera servrar som kan begäras med väljare på resurs-URL:erna.
 
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * Använd detta på en ritningssida för att hämta listan över alla Live-kopior som är länkade till den, med ytterligare statusinformation för Live Copy.
+   * till exempel:
+      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
+
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * Använd detta på Live Copy-sidor för att hämta avancerad information om deras anslutning till deras ritningssidor. Om sidan inte är en Live-kopia returneras ingenting.
+   * till exempel:
+      `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 Dessa servrar genererar felsökningsloggmeddelanden via `com.day.cq.wcm.msm` loggare som också kan vara till hjälp.
 
