@@ -2,7 +2,7 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
-source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
+source-git-commit: 36d42ec1a273e4b910340ca0cd15ac6ffc57454e
 workflow-type: tm+mt
 source-wordcount: '3659'
 ht-degree: 0%
@@ -360,7 +360,7 @@ Den underordnade noden av typen `cq:DropTargetConfig` definierar ett släppmål 
 
 ### lokal redigering - cq:inplaceEditing {#cq-inplaceediting}
 
-Med en lokal redigerare kan användaren redigera innehåll direkt i innehållsflödet utan att behöva öppna någon dialogruta. Standardvärdet **Text** och **Titel** -komponenter har båda en redigerare på insidan.
+Med en lokal redigerare kan användaren redigera innehåll direkt i innehållsflödet utan att behöva öppna någon dialogruta. Standardvärdet **Text** och **Titel** har båda en redigerare på plats.
 
 En redigerare på plats är inte nödvändig/meningsfull för varje komponenttyp.
 
@@ -372,7 +372,7 @@ The `cq:inplaceEditing` nod (nodtyp) `cq:InplaceEditingConfig`) definierar en re
 | `configPath` | `String` | Sökväg till redigerarkonfigurationen, som kan anges av en konfigurationsnod |
 | `editorType` | `String` | De tillgängliga typerna är: `plaintext` för innehåll som inte är HTML, `title` konverterar grafiska titlar till en vanlig text innan redigeringen börjar, och `text` använder RTF-redigeraren |
 
-Följande konfiguration aktiverar redigering på komponentens avstånd och definierar `plaintext` som redigeringstyp:
+Följande konfiguration aktiverar redigering på plats av komponenten och definierar `plaintext` som redigeringstyp:
 
 ```text
     <cq:inplaceEditing
