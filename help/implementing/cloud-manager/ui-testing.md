@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 6de0b7c961083d9be00837439757da95326a96da
+source-git-commit: a2507c65df5d42ac53fcbb0a81cc2fb897438f44
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2147'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ AEM innehåller en integrerad svit med [Kvalitetsportar för Cloud Manager](/hel
 
 Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Dessutom kan ett UI-testprojekt enkelt genereras med [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 
-Gränssnittstester utförs som en del av en viss kvalitetsgrind för varje Cloud Manager-pipeline med en [dedikerad **Testning av anpassat användargränssnitt** steg.](/help/implementing/cloud-manager/deploy-code.md) Alla gränssnittstester, inklusive regression och nya funktioner, gör att fel kan upptäckas och rapporteras.
+Gränssnittstester utförs som en del av en viss kvalitetsgrind för varje Cloud Manager-pipeline med en [**Testning av anpassat användargränssnitt** steg](/help/implementing/cloud-manager/deploy-code.md) in [produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) eller valfritt [rörledningar för icke-produktion.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) Alla gränssnittstester, inklusive regression och nya funktioner, gör att fel kan upptäckas och rapporteras.
 
 Till skillnad från anpassade funktionstester, som är HTTP-tester skrivna i Java, kan gränssnittstester vara en dockningsbild med tester skrivna på vilket språk som helst, förutsatt att de följer konventionerna som definieras i avsnittet [Bygger gränssnittstester.](#building-ui-tests)
 

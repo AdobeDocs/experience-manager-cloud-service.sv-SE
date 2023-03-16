@@ -3,9 +3,9 @@ title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
-source-git-commit: 3348662e3da4dad75b851d7af7251d456321a3ec
+source-git-commit: aac397310babe1aa1e950c176459beaf665b72ce
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1369'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,10 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
 
    ![Lägg till icke-produktionsflöde](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add1.png)
 
-1. På **Konfiguration** -fliken i **Lägg till icke-produktionsförlopp** väljer du vilken typ av icke-produktionsflöde du ska lägga till, antingen **Kodkvalitetspipeline** eller **Distributionsförlopp**.
+1. På **Konfiguration** -fliken i **Lägg till icke-produktionsförlopp** väljer du vilken typ av icke-produktionsflöde du ska lägga till.
+
+   * **Kodkvalitetspipeline** - Skapa en pipeline som bygger din kod, kör enhetstester och utvärderar kodkvaliteten, men distribuerar INTE.
+   * **Distributionsförlopp** - Skapa en pipeline som bygger din kod, kör enhetstester, utvärderar kodkvaliteten och distribuerar till en miljö.
 
    ![Dialogrutan Lägg till icke-produktionsförlopp](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-config.png)
 
@@ -48,6 +51,12 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
 
       * **Manuell** - Använd det här alternativet om du vill starta pipelinen manuellt.
       * **Vid Git-ändringar** - Detta alternativ startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Med det här alternativet kan du fortfarande starta pipelinen manuellt efter behov.
+
+1. Om du väljer att skapa en **Distributionsförlopp** Du måste också definiera **Beteende vid viktiga måttfel**.
+
+   * **Fråga varje gång** - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
+   * **Misslyckas omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
+   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
 1. Klicka **Fortsätt**.
 
@@ -107,6 +116,12 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
    * **Ignorera webbnivåkonfiguration** - När du markerar det här alternativet distribueras inte webbnivåkonfigurationen.
 
+   * **Pipeline** - Om din pipeline är en distributionsprocess kan du välja att köra en testfas. Markera de alternativ du vill aktivera i den här fasen. Om inget av alternativen är markerat visas inte testfasen under pipeline-körningen.
+
+      * **Funktionstestning av produkten** - Kör [funktionsprovningar av produkter](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) mot utvecklingsmiljön.
+      * **Anpassad funktionstestning** - Kör [anpassade funktionstester](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) mot utvecklingsmiljön.
+      * **Testning av anpassat användargränssnitt** - Kör [anpassade gränssnittstester](/help/implementing/cloud-manager/ui-testing.md) för anpassade program.
+
    ![Pipeline i full hög](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-full-stack.png)
 
 1. Klicka **Spara**.
@@ -133,7 +148,7 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
-   * **Kodplats** - Det här alternativet definierar sökvägen i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
+   * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
       * För konfigurationspipelines på webbnivå är detta vanligtvis sökvägen som innehåller `conf.d`, `conf.dispatcher.d`och `opt-in` kataloger.
       * Om projektstrukturen till exempel genererades från [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) banan `/dispatcher/src`.
 

@@ -2,9 +2,9 @@
 title: Funktionstestning
 description: Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: 1e75a9a8ba4eff030d079d4b7adf7fc8588b8cc1
+source-git-commit: cd0b40ffa54eac0d7488b23329c4d2666c992da7
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -37,13 +37,14 @@ Både produktfunktionstesterna och de anpassade funktionstesterna baseras på [A
 
 Funktionstester för produkter är en uppsättning stabila HTTP-integrationstester (IT) av kärnfunktionalitet i AEM som redigerings- och replikeringsuppgifter. Dessa tester underhålls av Adobe och är avsedda att förhindra att ändringar i anpassad programkod driftsätts om kärnfunktionen bryts.
 
-Funktionstester för produkter körs automatiskt när du distribuerar ny kod till Cloud Manager och kan inte hoppas över.
+* [Produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md): Funktionstester för produkter körs automatiskt när du distribuerar ny kod till Cloud Manager och kan inte hoppas över.
+* [Icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md): Du kan välja att produktfunktionstester ska köras varje gång du utför en icke-produktionsprocess.
 
 Funktionstester av produkter underhålls som ett öppen källkodsprojekt. Se [funktionsprovningar av produkter](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) i GitHub om du vill ha mer information.
 
 ### Anpassad funktionstestning {#custom-functional-testing}
 
-Även om produktfunktionstestning definieras av Adobe kan du skriva egna kvalitetstester för ditt eget program. Detta utförs som en anpassad funktionstestning som en del av produktionsflödet för att säkerställa programmets kvalitet.
+Även om produktfunktionstestning definieras av Adobe kan du skriva egna kvalitetstester för ditt eget program. Detta kommer att utföras som anpassad funktionstestning som en del av [produktionsflöde](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) eller valfritt [rörledning för icke-produktion](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för att säkerställa programmets kvalitet.
 
 Anpassad funktionstestning utförs både för anpassade koddistributioner och push-uppgraderingar, vilket gör det särskilt viktigt att skriva bra funktionstester som förhindrar att AEM kan knäcka programkoden. Det anpassade funktionsteststeget finns alltid och kan inte hoppas över.
 
