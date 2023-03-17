@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 628a95d7b7d0e84bfc8edecaaf127dd83ce1e578
+source-git-commit: ba1f2b7f1f61f7ba094047171e42e3cc8811a1b6
 workflow-type: tm+mt
-source-wordcount: '2428'
+source-wordcount: '2387'
 ht-degree: 4%
 
 ---
@@ -168,17 +168,6 @@ Egenskaperna fördelas på flera flikar.
    * **Välj bild** - Välj en befintlig resurs som ska användas som miniatyrbild
    * **Återställ** - Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
 
-### Sociala medier {#social-media}
-
-* **Delning i sociala medier**
-
-   Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Dela kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/sharing.html).
-
-   * **Aktivera användardelning för Facebook**
-   * **Aktivera användardelning för Pinterest**
-   * **Önskad XF-variation**
-      * Definiera variant av upplevelsefragment som används för att generera metadata för sidan
-
 ### Cloud Services {#cloud-services}
 
 * **Cloud Service Configurations** - Definiera egenskaper för molntjänster
@@ -208,7 +197,7 @@ Egenskaperna fördelas på flera flikar.
 
 ### Blueprint {#blueprint}
 
-Den här fliken visas bara för sidor som fungerar som utkast. Kort text utgör grunden för Live-kopior som ingår i [Hantering av flera webbplatser.](/help/sites-cloud/administering/msm/overview.md)
+Den här fliken visas bara för sidor som fungerar som utkast. Kort text är grunden för Live-kopior och ingår i [Hantering av flera webbplatser.](/help/sites-cloud/administering/msm/overview.md)
 
 * **Aktuella Live-kopior** - Visar en lista över sidor som är baserade (d.v.s. live-kopior av) på den här översiktssidan
 
@@ -216,7 +205,7 @@ Den här fliken visas bara för sidor som fungerar som utkast. Kort text utgör 
 
 ### Live Copy {#live-copy}
 
-Den här fliken visas bara för sidor som har konfigurerats som live-kopior.
+Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Live-kopior är en del av [Hantering av flera webbplatser.](/help/sites-cloud/administering/msm/overview.md).
 
 * **Synkronisera** - Synkronisera Live Copy med utkast, med lokala ändringar
 * **Återställ** - Återställ live-kopia till blå text och ta bort lokala ändringar
