@@ -2,10 +2,10 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: d0a698a8f8685b1e5957a9d93d805ca3f825354a
+source-git-commit: 628a95d7b7d0e84bfc8edecaaf127dd83ce1e578
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 5%
+source-wordcount: '2428'
+ht-degree: 4%
 
 ---
 
@@ -37,10 +37,12 @@ Egenskaperna fördelas på flera flikar.
 
    Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Kärnkomponenter.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
-   * **Åsidosätt** - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
-      * Värdet ärvs av alla underordnade sidor såvida de inte också har sina **Åsidosätt** värden anges.
-   * **Åsidosätt värde** - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
-      * Värdet läggs till i sidrubriken efter ett lodstreck som &quot;Cycling Tuscany&quot; | Alltid redo för WKND&quot;
+   * **Varumärkesinstruktionsmarginal**
+
+      * **Åsidosätt** - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
+         * Värdet ärvs av alla underordnade sidor såvida de inte också har sina **Åsidosätt** värden anges.
+      * **Åsidosätt värde** - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
+         * Värdet läggs till i sidrubriken efter ett lodstreck som &quot;Cycling Tuscany&quot; | Alltid redo för WKND&quot;
 
 * **HTML ID**
 
@@ -105,14 +107,13 @@ Egenskaperna fördelas på flera flikar.
       * Om du till exempel definierar ett alias för `private` för sidan `/content/wknd/us/en/magazine/members-only`kan den här sidan också öppnas via `/content/wknd/us/en/magazine/private`
       * När du skapar ett alias anges `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
       * Sidor som används av alias i redigeraren kan inte publiceras. [Publiceringsalternativ](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
-
-   <!--
-  >For further details see [Localized page names under SEO and URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
-  -->
+      * Mer information finns i [Lokaliserade sidnamn under SEO och URL Management Best Practices](/help/overview/seo-and-url-management.md#localized-page-names).
 
 * **Konfiguration**
 
-   * **Molnkonfiguration** - Sökvägen till konfigurationen
+   * **Ärvs från &lt;path>** - aktivera/inaktivera arv, växlar tillgänglighet för **Molnkonfiguration** för markering
+
+   * **Molnkonfiguration** - Sökvägen till den valda konfigurationen
 
 * **Mallinställningar**
 
@@ -132,14 +133,40 @@ Egenskaperna fördelas på flera flikar.
 
    * **Exportera konfiguration** - Anger en exportkonfiguration
 
-### Miniatyrbild {#thumbnail}
+* **SEO**
 
-Konfigurera sidminiatyrbilden
+   * **Kanonisk URL** - kan användas för att skriva över sidans kanoniska URL, om den lämnas tom blir sidans URL dess kanoniska URL
 
-* **Generera förhandsgranskning** - Generera en förhandsgranskning av sidan som ska användas som miniatyrbild
-* **Överför bild** - Överför en bild som ska användas som miniatyrbild
-* **Välj bild** - Välj en befintlig resurs som ska användas som miniatyrbild
-* **Återställ** - Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
+   * **Robots-taggar** - välj robottaggarna för att styra beteendet för sökmotorcrawler.
+
+      >[!NOTE]
+      >
+      >Vissa av alternativen står i konflikt med varandra. Om en konflikt uppstår har det mer tillåtna alternativet företräde.
+
+   * **Generera platskarta** - När du väljer det här alternativet genereras en sitemap.xml för den här sidan och dess underordnade
+
+### Bilder {#images}
+
+* **Aktuell bild**
+
+   Markera och konfigurera den bild som ska visas. Detta används i komponenter som refererar till sidan; till exempel teasers, page lists, etc.
+
+   * **Bild**
+
+      Du kan **Välj** en resurs, eller bläddra efter en fil som ska överföras, och sedan **Redigera**, eller **Rensa**.
+
+   * **Alternativ text** - en text som används för att representera bildens betydelse och/eller funktion, till exempel för skärmläsare.
+
+   * **Ärv - värde som tagits från DAM-resursen** - om det här alternativet är markerat fylls den alternativa texten i med värdet för `dc:description`metadata i DAM
+
+* **Miniatyrbild**
+
+   Konfigurera sidminiatyrbilden
+
+   * **Generera förhandsgranskning** - Generera en förhandsgranskning av sidan som ska användas som miniatyrbild
+   * **Överför bild** - Överför en bild som ska användas som miniatyrbild
+   * **Välj bild** - Välj en befintlig resurs som ska användas som miniatyrbild
+   * **Återställ** - Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
 
 ### Sociala medier {#social-media}
 
@@ -156,12 +183,11 @@ Konfigurera sidminiatyrbilden
 
 * **Cloud Service Configurations** - Definiera egenskaper för molntjänster
 
-   <!--Define properties for [cloud services](/help/sites-developing/extending-cloud-config.md).
-  -->
-
 ### Personanpassning {#personalization}
 
 * **ContextHub-konfigurationer**
+
+   * **Ärvs från &lt;path>** - aktivera/inaktivera arv, växlar tillgänglighet för **ContextHub-bana** och **Segmentsökväg** för markering
 
    * **ContextHub-sökväg** - Definiera [ContextHub-konfiguration](/help/sites-cloud/authoring/personalization/contexthub.md)
    * **Segmentsökväg** - Definiera [Segmentbana](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
@@ -176,15 +202,9 @@ Konfigurera sidminiatyrbilden
 
 * **Behörigheter**
 
-   * Lägg till behörigheter
-   * Redigera stängd användargrupp
-   * Visa gällande behörigheter
-
-   <!--[Add Permissions](/help/sites-administering/user-group-ac-admin.md) -->
-
-   <!-- [Edit Closed User Group](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)-->
-
-   <!-- View the [Effective Permissions](/help/sites-administering/user-group-ac-admin.md)-->
+   * **Lägg till behörigheter**
+   * **Redigera stängd användargrupp**
+   * Visa **Effektiva behörigheter**
 
 ### Blueprint {#blueprint}
 
@@ -195,6 +215,8 @@ Den här fliken visas bara för sidor som fungerar som utkast. Kort text utgör 
 * **Utrullningskonfigurationer** - Styr under vilka omständigheter ändringar ska spridas till Live Copy
 
 ### Live Copy {#live-copy}
+
+Den här fliken visas bara för sidor som har konfigurerats som live-kopior.
 
 * **Synkronisera** - Synkronisera Live Copy med utkast, med lokala ändringar
 * **Återställ** - Återställ live-kopia till blå text och ta bort lokala ändringar
@@ -220,6 +242,33 @@ Den här fliken visas bara för sidor som fungerar som utkast. Kort text utgör 
 När en förhandsvisningsmiljö är aktiverad ser du:
 
 * URL för förhandsgranskning - den URL som används för att komma åt innehållet i förhandsvisningsmiljön
+
+### Progressiv webbapp {#progressive-web-app}
+
+Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiva webbprogramfunktioner (PWA) för upplevelser som skapats i AEM Sites.
+
+>[!NOTE]
+>
+>Mer information finns i [Aktivera progressiva webbprogramfunktioner](/help/sites-cloud/authoring/features/enable-pwa.md).
+
+* **Konfigurera installerbar upplevelse**
+
+   * **Aktivera PWA** - aktivera/inaktivera funktionen, tillåter användare att installera webbplatsen som PWA
+   * **StartURL** - önskad start-URL
+   * **Visningsläge** - hur webbläsaren ska döljas eller på annat sätt visas för användaren på den lokala enheten
+   * **Skärmorientering** - hur PWA ska hantera enhetsorienteringar
+   * **Temafärg** - färgen på appen som påverkar hur den lokala användarens operativsystem visar det inbyggda verktygsfältet och navigeringskontrollerna
+   * **Bakgrundsfärg** - appens bakgrundsfärg, som visas när appen läses in
+   * **Ikon** - ikonen som representerar appen på användarens enhet
+
+* **Cachehantering (avancerat)**
+
+   * **Cachelagringsstrategi och uppdateringsfrekvens för innehåll** - definierar cachningsmodellen för PWA
+   * **Filer som ska cachas för offlineanvändning**
+      * **Filförcachelagring (teknisk förhandsgranskning)** - filer som lagras på AEM sparas i den lokala webbläsarcachen när servicearbetaren installeras och innan den används
+      * **Bibliotek på klientsidan** - bibliotek på klientsidan för att cachelagra offlineupplevelsen
+      * **Inkluderingar av banor** - nätverksbegäranden för de definierade sökvägarna fångas upp och cachelagrat innehåll returneras i enlighet med den konfigurerade cachelagringsstrategin och frekvensen för innehållsuppdatering
+      * **Undantag för sökväg** - dessa filer kommer aldrig att cachelagras oavsett inställningarna under Filförcachelagring och Sökvägsinkluderingar
 
 ## Redigera sidegenskaper {#editing-page-properties-1}
 
