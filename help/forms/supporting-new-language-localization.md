@@ -3,9 +3,9 @@ title: Lägga till stöd för nya språkområden i ett anpassat formulär
 seo-title: Learn to add support for new locales to your adaptive forms
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. Engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR) språk.
 seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. We support 10 locales out of the box curently, as  "en","fr","de","ja","pt-br","zh-cn","zh-tw","ko-kr","it","es".
-source-git-commit: 659484f80d1f31794512af5e4d190b04a9f3e4e8
+source-git-commit: 00fcdb3530a441bde2f7f91515aaaec341615a3f
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1188'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN).
 
-## Förstå språkordlistor {#about-locale-dictionaries}
+## Om språkordlistor {#about-locale-dictionaries}
 
 Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordlistor:
 
-* **Formulärspecifik ordlista** Innehåller strängar som används i adaptiva formulär. Till exempel etiketter, fältnamn, felmeddelanden, hjälpbeskrivningar och så vidare. Den hanteras som en uppsättning XLIFF-filer för varje språkområde och du kan komma åt den på `[author-instance]/libs/cq/i18n/gui/translator.html`.
+* **Formulärspecifik ordlista** Innehåller strängar som används i adaptiva formulär. Till exempel etiketter, fältnamn, felmeddelanden och hjälpbeskrivningar. Den hanteras som en uppsättning XLIFF-filer för varje språkområde och du kan komma åt den på `[author-instance]/libs/cq/i18n/gui/translator.html`.
 
 * **Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, AEM klientbiblioteket. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Du hittar de här ordlistorna på `[author-instance]/libs/fd/xfaforms/clientlibs/I18N`. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor inte uppdateras så ofta kan olika JavaScript-filer för varje språkområde användas för att cachelagra dem och minska användningen av nätverksbandbredd vid åtkomst av olika adaptiva formulär på samma server.
 
@@ -26,8 +26,8 @@ Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordli
 
 Gör följande för att lägga till stöd för en ny språkinställning:
 
-1. [Lägg till lokaliseringsstöd för språk som inte stöds](#add-localization-support-for-non-supported-locales-add-localization-support-for-non-supported-locales)
-1. [Använd tillagda språk i Adaptiv Forms](#use-added-locale-in-adaptive-forms-use-added-locale-in-af)
+1. [Lägg till lokaliseringsstöd för språk som inte stöds](#add-localization-support-for-non-supported-locales)
+1. [Använd tillagda språk i Adaptiv Forms](#use-added-locale-in-af)
 
 ### Lägg till lokaliseringsstöd för språk som inte stöds {#add-localization-support-for-non-supported-locales}
 
@@ -35,11 +35,11 @@ AEM Forms har för närvarande stöd för lokalisering av Adaptivt Forms-innehå
 
 Så här lägger du till stöd för en ny språkinställning i Adaptive Forms runtime:
 
-1. [Klona din databas](#1-clone-the-repository-clone-the-repository)
-1. [Lägg till en språkinställning i tjänsten GuideLocalizationService](#2-add-a-locale-to-the-guide-localization-service-add-a-locale-to-the-guide-localization-service-br)
-1. [Lägg till språknamnsspecifik mapp](#3-add-locale-name-specific-folder-client-library-add-locale-name-specific-folder)
-1. [Lägg till språkstöd för ordlistan](#about-locale-dictionaries-about-locale-dictionaries)
-1. [Genomför ändringarna i databasen och distribuera pipeline](#5-commit-the-changes-in-the-repository-and-deploy-the-pipeline-commit-chnages-in-repo-deploy-pipeline)
+1. [Klona din databas](#clone-the-repository)
+1. [Lägg till en språkinställning i tjänsten GuideLocalizationService](#add-a-locale-to-the-guide-localization-service)
+1. [Lägg till språknamnsspecifik mapp](#add-locale-name-specific-folder)
+1. [Lägg till språkstöd för ordlistan](#add-locale-support-for-the-dictionary)
+1. [Genomför ändringarna i databasen och distribuera pipeline](#commit-changes-in-repo-deploy-pipeline)
 
 #### 1. Klona databasen {#clone-the-repository}
 
@@ -48,14 +48,13 @@ Så här lägger du till stöd för en ny språkinställning i Adaptive Forms ru
 1. Använd Git-användarnamnet och -lösenordet för att klona databasen.
 1. Öppna den klonade Forms Cloud Service-databasmappen i det redigeringsprogram du föredrar.
 
-#### 2. Lägga till en språkinställning i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service-br}
+#### 2. Lägga till en språkinställning i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service}
 
 1. Leta reda på `Guide Localization Service.cfg.json` och lägg till det språkområde som du vill lägga till i listan över språkområden som stöds.
 
    >[!NOTE]
    >
-   >* Skapa en fil med namnet som `Guide Localization Service.cfg.json` om filen inte finns.
-
+   > Skapa en fil med namnet som `Guide Localization Service.cfg.json` om filen inte finns.
 
 #### 3. Lägg till språknamnsspecifikt mappklientbibliotek {#add-locale-name-specific-folder}
 
@@ -70,7 +69,7 @@ Skapa en nod med namnet som `[locale-name]_xfa` och skriv som `cq:ClientLibraryF
 * **js.txt** som innehåller följande:
    */libs/fd/xfaforms/clientlibs/I18N/Namespace.js I18N.js /etc/clientlibs/fd/xfaforms/I18N/LogMessages.js*
 
-##### 3.2. Lägg till klientbibliotek för adaptiv form för en språknamnsmapp {#add-adaptive-form-client-library-for-a-locale-br}
+##### 3.2. Lägg till klientbibliotek för adaptiv form för en språknamnsmapp
 
 1. Skapa en nod med namnet som `[locale-name]_af` och skriv som `cq:ClientLibraryFolder` under `etc/clientlibs/locale_name`, med kategorin som `guides.I18N.<locale>` och beroenden som `xfaforms.3rdparty`, `xfaforms.I18N.<locale>` och `guide.common`.
 1. Skapa en mapp med namnet som `javascript` och lägga till följande filer:
@@ -85,7 +84,7 @@ Skapa en nod med namnet som `[locale-name]_xfa` och skriv som `cq:ClientLibraryF
      LogMessages.js
    ```
 
-#### 4. Lägg till språkstöd för ordlistan {#add-locale-support-for-the-dictionary-br}
+#### 4. Lägg till språkstöd för ordlistan {#add-locale-support-for-the-dictionary}
 
 Utför endast det här steget om `<locale>` du lägger till är inte bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`.
 
@@ -95,20 +94,18 @@ Utför endast det här steget om `<locale>` du lägger till är inte bland `en`,
 1. Lägg till `<locale-name>` standardvärden för nationella inställningar `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`, om det inte redan finns.
 
 1. Lägg till `<locale>` till värdena för `languages` egenskap för `/etc/languages`.
+1. Lägg till de nya mapparna i `filter.xml` under etc/META-INF/[mapphierarki] as:
 
-
-```text
-Add the newly created folders in the `filter.xml` under etc/META-INF/[folder hierarchy] as:
-<filter root="/etc/clientlibs/[locale-name]"/>
-<filter root="/etc/languages"/>
-```
+   ```
+   <filter root="/etc/clientlibs/[locale-name]"/>
+   <filter root="/etc/languages"/>
+   ```
 
 Innan du implementerar ändringarna i AEM Git-databasen måste du få åtkomst till [Git-databasinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
 
-#### 5. Genomför ändringarna i databasen och distribuera pipeline {#commit-chnages-in-repo-deploy-pipeline}
+#### 5. Genomför ändringarna i databasen och distribuera pipeline {#commit-changes-in-repo-deploy-pipeline}
 
 Genomför ändringarna i GIT-databasen när du har lagt till ett nytt språkstöd. Distribuera koden med hela stackpipeline. Lär dig [konfigurera en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
-
 När pipeline är klar visas den nya språkinställningen i AEM.
 
 ### Använd tillagda nationella inställningar i Adaptiv Forms {#use-added-locale-in-af}
@@ -128,7 +125,7 @@ Det finns två metoder för att identifiera språkområdet i en adaptiv form. N�
 
 * Hämtar `[local]` väljaren i den anpassningsbara formulärets URL. URL-formatet är `http://host:[port]/content/forms/af/[afName].[locale].html?wcmmode=disabled`. Använda `[local]` -väljaren tillåter cachelagring av ett adaptivt formulär.
 
-* Hämtar följande parametrar i den angivna ordningen:
+* Hämtar följande parametrar i listordningen:
 
    * Begäranparameter `afAcceptLang`
 Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka 
