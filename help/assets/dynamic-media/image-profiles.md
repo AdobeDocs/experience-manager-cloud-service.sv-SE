@@ -5,10 +5,10 @@ contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 17d2ca1405903a0a83fe36cc57036d9ebd2abd3a
+source-git-commit: fa29504ba4abf68131d96a5a8ecbd62b7a9299f9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3390'
+ht-degree: 3%
 
 ---
 
@@ -72,12 +72,21 @@ Varje smart beskärningsgenerering som du skapar kräver extra bearbetning. Om d
 **Riktlinjer för att definiera smart beskärning i en bildprofil**
 För att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar rekommenderar Adobe följande riktlinjer och tips:
 
-* Bildresurser som ska ha en smart beskärning måste vara minst 50 x 50 pixlar eller större. <!-- CQDOC-20087 -->
-* En bildprofil som innehåller duplicerade smarta beskärningsdimensioner tillåts inte. <!-- CQDOC-20087 -->
-* Det är inte tillåtet att duplicera namngivna bildprofiler med smarta beskärningsalternativ. <!-- CQDOC-20087 -->
+* Undvik att skapa duplicerade smarta beskärningsprofiler med samma bredd- och höjdvärden.
+* Namnge smarta beskärningar baserat på beskärningsdimensioner, inte på slutanvändning. På så sätt kan du optimera för dubbletter där en enda dimension används på flera sidor.
+* Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
+* En bildprofil som du använder för undermappar åsidosätter en bildprofil som används för mappen.
 * Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
 * En bildprofil som du tillämpar på undermappar åsidosätter en bildprofil som tillämpas på mappen.
 * Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
+
+<!--
+* Image assets that are going to have a smart crop applied to them must be a minimum of 50 x 50 pixels or larger. CQDOC-20087
+* An Image Profile that contains duplicate smart crop dimensions is not permitted. CQDOC-20087
+* Duplicate named Image Profiles that have smart crop options set are not permitted. CQDOC-20087
+* Create page-wise/asset type-wise Image Profiles for specific folders and subfolders instead of a common smart crop profile that is applied to all folders or all assets.
+* An Image Profile that you apply to subfolders overrides an Image Profile that is applied to the folder.
+* Ideally, have 10-15 smart crops per image to optimize for screen ratios and processing time. -->
 <!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
 * Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
 
@@ -108,11 +117,11 @@ Den maximala upplösningen för indatafilens storlek som stöds är 16 kB.
 | CMYK |  |  |  |  | Ja |
 | EPS |  |  |  |  | Nej |
 | GIF | `.gif` | image/gif | sRGB | 15 GB | Ja, den första bildrutan i det animerade GIF används för återgivningen. Du kan inte konfigurera eller ändra den första bildrutan. |
-| JPEG | `.jpg` and `.jpeg` | image/jpeg | sRGB | 15 GB | Ja |
+| JPEG | `.jpg` och `.jpeg` | image/jpeg | sRGB | 15 GB | Ja |
 | PNG | `.png` | bild/png | sRGB | 15 GB | Ja |
 | PSD | `.psd` | image/vnd.adobe.photoshop | sRGB<br>CMYK | 2 GB | Ja |
 | SVG |  |  |  |  | Nej |
-| TIFF | `.tif` and `.tiff` | bild/tiff | sRGB<br>CMYK | 4 GB | Ja |
+| TIFF | `.tif` och `.tiff` | bild/tiff | sRGB<br>CMYK | 4 GB | Ja |
 | WebP/Animerad WebP |  |  |  |  | Nej |
 
 ## Skapa Dynamic Media-bildprofiler {#creating-image-profiles}
