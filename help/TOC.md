@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 050491bb8d2e9387719bea35a3869a0fb9a7f726
+source-git-commit: c37c1c3eca0ae9d457f422efdaf5e29be03e6014
 workflow-type: tm+mt
-source-wordcount: '3978'
+source-wordcount: '4006'
 ht-degree: 21%
 
 ---
@@ -961,3 +961,10 @@ ht-degree: 21%
    + Tillgänglighet {#accessibility}
       + [AEM as a Cloud Service och riktlinjerna för webbtillgänglighet](/help/compliance/accessibility/web-accessibility.md)
       + [En snabbguide till WCAG 2.1](/help/compliance/accessibility/quick-guide-wcag.md)
++ Universal Editor {#universal-editor}
+   + [Introduktion till Universal Editor](/help/implementing/universal-editor/introduction.md)
+   + [Skapa innehåll med den universella redigeraren](/help/implementing/universal-editor/authoring.md)
+   + [Komma igång med Universal Editor i AEM](/help/implementing/universal-editor/getting-started.md)
+   + [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md)
+   + [Attribut och typer](/help/implementing/universal-editor/attributes-types.md)
+   + [Autentisering av universell redigerare](/help/implementing/universal-editor/authentication.md)
