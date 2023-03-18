@@ -2,9 +2,9 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Underhållsaktiviteter på AEM as a Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: f1d1009db31585ff82c02080a6ab7ea7ca5bf66b
+source-git-commit: 8209faed876f5ab37a0332d72327aad76228063b
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
   <tr>
     <td>Rensa version</td>
     <td>Adobe</td>
-    <td>För befintliga miljöer (de som skapats före 1 mars 2023) är rensning inaktiverat och kommer inte att aktiveras i framtiden såvida inte kunden uttryckligen aktiverar det, då de även kan konfigurera det med anpassade värden.<br><br> <!--Alexandru: please leave the two line breaks in place, otherwise spacing won't render properly-->Nya miljöer (de som skapats från och med 1 mars 2023) har rensning aktiverat som standard med värdena nedan, och kunderna kan konfigurera med anpassade värden.
+    <td>För befintliga miljöer (de som skapats före 1 juni 2023) är rensning inaktiverat och kommer inte att aktiveras i framtiden såvida inte kunden uttryckligen aktiverar det, då de även kan konfigurera det med anpassade värden.<br><br> <!--Alexandru: please leave the two line breaks in place, otherwise spacing won't render properly-->Nya miljöer (de som skapats från och med 1 juni 2023) har rensning aktiverat som standard med värdena nedan, och kunderna kan konfigurera med anpassade värden.
      <ol>
        <li>Versioner som är äldre än 30 dagar tas bort</li>
        <li>De senaste 5 versionerna de senaste 30 dagarna sparas</li>
@@ -56,7 +56,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Adobe</td>
-    <td>För befintliga miljöer (de som skapats före 1 mars 2023) är rensning inaktiverat och kommer inte att aktiveras i framtiden såvida inte kunden uttryckligen aktiverar det, då de även kan konfigurera det med anpassade värden.<br><br> <!-- See above for the two line breaks -->I nya miljöer (som skapats från och med 1 mars 2023) är rensning aktiverat som standard under <code>/content</code> databasens nod enligt följande:
+    <td>För befintliga miljöer (de som skapats före 1 juni 2023) är rensning inaktiverat och kommer inte att aktiveras i framtiden såvida inte kunden uttryckligen aktiverar det, då de även kan konfigurera det med anpassade värden.<br><br> <!-- See above for the two line breaks -->I nya miljöer (de som skapas från och med 1 juni 2023) är rensning aktiverat som standard under <code>/content</code> databasens nod enligt följande:
      <ol>
        <li>Granskningsloggar som är äldre än 3 dagar tas bort för replikeringsgranskning</li>
        <li>För DAM-granskning (Assets) tas granskningsloggar som är äldre än 30 dagar bort</li>
@@ -92,7 +92,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
     <td>Kund</td>
     <td>
     <p>Måste göras i git. Åsidosätt den färdiga konfigurationsnoden för underhållsperioden under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code> eller <code>granite_daily</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
-    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den) <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Konfigurera OSGI-egenskaperna.</p>
+    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den) <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över OSGI-egenskaper under"Adobe Projects Purge Configuration".</p>
   </td>
   </tr>
   </tbody>
