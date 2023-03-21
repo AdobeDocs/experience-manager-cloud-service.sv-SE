@@ -3,9 +3,9 @@ title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
 description: OSGi-konfiguration med hemliga värden och miljöspecifika värden
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: 3a6e46e99ca205bca405660fc83c7037a00140b6
+source-git-commit: 26ca2addb14f62588035323ce886ae890919b759
 workflow-type: tm+mt
-source-wordcount: '3311'
+source-wordcount: '3312'
 ht-degree: 0%
 
 ---
@@ -165,7 +165,7 @@ Adobe Experience Manager as a Cloud Service kräver användning av miljöspecifi
 
 Använd hemliga miljöspecifika konfigurationer för att lagra värdet för hemligheter i alla Adobe Experience Manager as a Cloud Service-miljöer, inklusive Stage och Production.
 
-## Skapa OSGi-konfigurationer {#creating-sogi-configurations}
+## Skapa OSGi-konfigurationer {#creating-osgi-configurations}
 
 Det finns två sätt att skapa OSGi-konfigurationer enligt beskrivningen nedan. Den tidigare metoden används vanligtvis för att konfigurera anpassade OSGi-komponenter som har välkända OSGi-egenskaper och -värden av utvecklaren, och den senare för AEM OSGi-komponenter.
 
@@ -189,8 +189,8 @@ AEM SDK Quickstart Jars AEM Web Console kan användas för att konfigurera OSGi-
 >
 >Konfigurationsgränssnittet för AEM-webbkonsolen skriver `.cfg.json` till databasen. Därför bör du vara medveten om detta för att undvika oväntade beteenden under lokal utveckling, när de AEM projektdefinierade OSGi-konfigurationerna kan skilja sig från de genererade konfigurationerna.
 
-1. Logga in på AEM SDK Quickstart Jars AEM Web console som admin-användare
-1. Navigera till OSGi > Konfiguration
+1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare
+1. Navigera till **OSGi** > **Konfiguration**
 1. Om du vill konfigurera letar du reda på OSGi-komponenten och trycker på dess titel för att redigera
    ![OSGi-konfiguration](./assets/configuring-osgi/configuration.png)
 1. Redigera OSGi-konfigurationens egenskapsvärden via webbgränssnittet efter behov

@@ -1,17 +1,17 @@
 ---
 title: Asynkrona jobb
-description: Adobe Experience Manager optimerar prestandan genom att asynkront slutföra vissa resurskrävande uppgifter.
+description: Adobe Experience Manager optimerar prestanda genom att asynkront slutföra vissa resurskrävande uppgifter som bakgrundsåtgärder.
 exl-id: 9c5c4604-1290-4dea-a14d-08f3ab3ef829
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 26ca2addb14f62588035323ce886ae890919b759
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 97%
+source-wordcount: '905'
+ht-degree: 71%
 
 ---
 
 # Asynkrona åtgärder {#asynchronous-operations}
 
-För att reducera negativ inverkan på prestandan bearbetar Adobe Experience Manager vissa långvariga och resurskrävande åtgärder asynkront. Asynkron bearbetning innebär att flera olika jobb ställs på kö och att de sedan körs seriellt beroende på om det finns systemresurser tillgängliga.
+För att minska den negativa inverkan på prestanda behandlar Adobe Experience Manager vissa långvariga och resurskrävande åtgärder asynkront som bakgrundsåtgärder. Asynkron bearbetning innebär att flera olika jobb ställs på kö och att de sedan körs seriellt beroende på om det finns systemresurser tillgängliga.
 
 Dessa åtgärder omfattar:
 
@@ -22,7 +22,7 @@ Dessa åtgärder omfattar:
 * Att flytta sidor.
 * Att öppna Live-kopior.
 
-Du kan se statusen för asynkrona jobb på **[!UICONTROL Async Job Status]** instrumentpanelen via **Global Navigation** -> **Tools** -> **Operations** -> **Jobs**.
+Du kan visa status för asynkrona jobb från **[!UICONTROL Background Operations]** instrumentpanel på **Global navigering** -> **verktyg** -> **Allmänt** -> **Jobb**.
 
 >[!NOTE]
 >
@@ -34,11 +34,11 @@ Du kan se statusen för asynkrona jobb på **[!UICONTROL Async Job Status]** ins
 
 När AEM bearbetar en åtgärd asynkront får du ett meddelande i din [inkorg](/help/sites-cloud/authoring/getting-started/inbox.md) och via e-post (om den är aktiverad).
 
-Gå till sidan **[!UICONTROL Async Job Status]** för att se detaljerad status gällande asynkrona åtgärder.
+Gå till sidan **[!UICONTROL Background Operations]** för att se detaljerad status gällande asynkrona åtgärder.
 
-1. Klicka på **[!UICONTROL Operations]** > **[!UICONTROL Jobs]** i Experience Managers gränssnitt.
+1. I gränssnittet Experience Manager väljer du **Global navigering** -> **verktyg** -> **Allmänt** -> **Jobb**.
 
-1. Granska informationen om åtgärderna på sidan **[!UICONTROL Async Job Status]**.
+1. Granska informationen om åtgärderna på sidan **[!UICONTROL Background Operations]**.
 
    ![Status och information om asynkrona åtgärder](assets/async-operation-status.png)
 
@@ -70,13 +70,22 @@ Gå till sidan **[!UICONTROL Async Job Status]** för att se detaljerad status g
    >
    >Om ett jobbs status är **Active** eller **Queued** kan det inte tas bort.
 
-## Rensa slutförda jobb {#purging-completed-jobs}
+## Konfigurera asynkrona alternativ för jobbbearbetning {#configure}
 
-AEM utför en rensning varje dag klockan 01:00 för att ta bort slutförda asynkrona jobb som är mer än en dag gamla.
+Det finns ett antal alternativ runt asynkrona jobb som kan konfigureras. I följande exempel visas hur detta kan göras med konfigurationshanteraren på ett lokalt utvecklingssystem.
+
+>[!NOTE]
+>
+>[OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md#creating-osgi-configurations) anses ha muterbart innehåll och sådana konfigurationer måste distribueras som ett innehållspaket för en produktionsmiljö.
+
+### Rensa slutförda jobb {#purging-completed-jobs}
+
+AEM kör ett rensningsjobb varje dag klockan 01:00 för att ta bort slutförda asynkrona jobb som är mer än en dag gamla.
 
 Du kan ändra schemat för rensningen och hur länge information om slutförda jobb behålls innan den tas bort. Du kan också konfigurera det maximala antalet slutförda jobb för vilka information sparas vid någon tidpunkt.
 
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i Global Navigation.
+1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Navigera till **OSGi** > **Konfiguration**
 1. Öppna jobbet **[!UICONTROL Adobe Granite Async Jobs Purge Scheduled Job]**.
 1. Ange:
    * Gränsvärdet för antal dagar efter vilka slutförda jobb tas bort.
@@ -87,15 +96,12 @@ Du kan ändra schemat för rensningen och hur länge information om slutförda j
 
 1. Spara ändringarna.
 
-## Konfigurera asynkron bearbetning {#configuring-asynchronous-processing}
-
-Du kan konfigurera gränsvärdet för antal resurser, sidor eller referenser vilket låter AEM bearbeta en viss åtgärd asynkront samt skicka e-postmeddelanden när jobben bearbetas.
-
 ### Konfigurera asynkrona åtgärder för att ta bort resurser {#configuring-synchronous-delete-operations}
 
 Om antalet resurser eller mappar som ska tas bort överstiger gränsvärdet utförs borttagningen asynkront.
 
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i Global Navigation.
+1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Navigera till **OSGi** > **Konfiguration**
 1. Öppna **[!UICONTROL Async Process Default Queue Configuration.]** via webbkonsolen
 1. I rutan **[!UICONTROL Threshold number of assets]** ska du ange gränsvärdet för antal resurser/mappar gällande asynkron bearbetning av borttagningar.
 
@@ -108,7 +114,8 @@ Om antalet resurser eller mappar som ska tas bort överstiger gränsvärdet utf�
 
 Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsvärdet utförs flytten asynkront.
 
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i Global Navigation.
+1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Navigera till **OSGi** > **Konfiguration**
 1. Öppna **[!UICONTROL Async Move Operation Job Processing Configuration.]** via webbkonsolen
 1. I rutan **[!UICONTROL Threshold number of assets/references]** ska du ange gränsvärdet för antal resurser/mappar eller referenser gällande asynkron bearbetning av flyttningar.
 
@@ -121,7 +128,8 @@ Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsv�
 
 Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet utförs flytten asynkront.
 
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i Global Navigation.
+1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Navigera till **OSGi** > **Konfiguration**
 1. Öppna **[!UICONTROL Async Page Move Operation Job Processing Configuration.]** via webbkonsolen
 1. I fältet **[!UICONTROL Threshold number of references]** ska du ange gränsvärdet för antal referenser gällande asynkron bearbetning för att flytta sidor.
 
@@ -132,7 +140,8 @@ Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet ut
 
 ### Konfigurera asynkrona MSM-åtgärder {#configuring-asynchronous-msm-operations}
 
-1. Klicka på **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]** i Global Navigation.
+1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Navigera till **OSGi** > **Konfiguration**
 1. Öppna **[!UICONTROL Async Page Move Operation Job Processing Configuration.]** via webbkonsolen
 1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Till exempel misslyckades.
 

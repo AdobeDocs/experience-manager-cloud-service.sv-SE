@@ -3,9 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: Distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 0d586bf7e9ad6653f9a45c2fe9f0f8a156de5133
+source-git-commit: 4eb7b1a32f0e266f12f67fdd2d12935698eeac95
 workflow-type: tm+mt
-source-wordcount: '3497'
+source-wordcount: '3509'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Läs mer om OSGI-konfiguration på [Konfigurera OSGi för AEM as a Cloud Service
 
 I vissa fall kan det vara användbart att förbereda innehållsändringar i källkontrollen så att den kan distribueras av Cloud Manager när en miljö har uppdaterats. Det kan till exempel vara rimligt att skapa startvärden för vissa rotmappsstrukturer eller att göra ändringar i redigerbara mallar för att aktivera principer i de för komponenter som uppdaterades i programdistributionen.
 
-Det finns två strategier för att beskriva innehållet som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och poinit-satser.
+Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
 
 ### Innehållspaket som kan ändras {#mutable-content-packages}
 
@@ -104,7 +104,7 @@ Efter övergång till en ny version av programmet:
    * Mappar (lägg till, ändra, ta bort)
    * Redigerbara mallar (lägg till, ändra, ta bort)
    * Kontextmedveten konfiguration (allt under `/conf`) (lägg till, ändra, ta bort)
-   * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. <!-- MISDIRECTED REQUEST, 421 ERROR, CAN'T FIND CORRECT PATH See the [Jackrabbit filevault documentation](https://jackrabbit.incubator.apache.org/filevault/installhooks.html) about install hooks. --> Observera att AEM CS för närvarande använder Flash version 3.4.0, som begränsar möjligheten att installera kopplingar till administratörer, systemanvändare och medlemmar i administratörsgruppen).
+   * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbits dokumentation om filevault](https://jackrabbit.apache.org/filevault/installhooks.html) om att installera kopplingar. Observera att AEM CS för närvarande använder Flash version 3.4.0, som begränsar möjligheten att installera kopplingar till administratörer, systemanvändare och medlemmar i administratörsgruppen).
 
 Det går att begränsa installationer av muterbart innehåll till författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna uppdelning gjordes i AEM 6.5 och närmare information om den rekommenderade projektomstruktureringen finns i [AEM 6.5-dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html)
 
@@ -143,7 +143,7 @@ Repoinit är att föredra för de här användningsområdena för innehållsänd
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Följ nedanstående procedur för att skapa repoinit-satser:
+Så här skapar du repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
@@ -285,16 +285,16 @@ Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att
 
 Till skillnad från vanliga utvecklingsmiljöer, som distribuerar kod via molnhanterarens pipeline, använder utvecklare kommandoradsverktyg för att synkronisera kod från en lokal utvecklingsmiljö till den lokala utvecklingsmiljön. När ändringarna har testats korrekt i en RDE bör de distribueras till en vanlig Cloud Development-miljö via Cloud Manager-pipelinen, som lägger koden genom lämpliga kvalitetsportar.
 
-## Runmodes {#runmodes}
+## Körningslägen {#runmodes}
 
 I befintliga AEM kan kunderna köra instanser med godtyckliga körningslägen och använda OSGI-konfiguration eller installera OSGI-paket för dessa specifika instanser. Körningslägen som är definierade inkluderar *service* (författare och publicera) och miljön (rde, dev, stage, prod).
 
 AEM as a Cloud Service å andra sidan är mer övertygande om vilka körlägen som finns tillgängliga och hur OSGI-paket och OSGI-konfigurationer kan mappas till dem:
 
 * OSGI-konfigurationens körningslägen måste referera till RDE, dev, stage, prod för miljön eller författaren, publicera för tjänsten. En kombination av `<service>.<environment_type>` stöds, medan dessa måste användas i denna särskilda ordning (till exempel `author.dev` eller `publish.prod`). OSGI-tokens ska refereras direkt från koden i stället för att använda `getRunModes` som inte längre innehåller `environment_type` vid körning. Mer information finns i [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md).
-* Körningslägena för OSGI-paket är begränsade till tjänsten (författare, publicera). OSGI-paket per körning ska installeras i innehållspaketet under antingen `install/author` eller `install/publish`.
+* Körningslägena för OSGI-paket är begränsade till tjänsten (författare, publicera). OSGI-paket per körning ska installeras i innehållspaketet under antingen `install.author` eller `install.publish`.
 
-Precis som de befintliga AEM finns det inget sätt att använda körningslägen för att installera enbart innehåll för specifika miljöer eller tjänster. Om man ville skapa en egen utvecklarmiljö med data eller HTML som inte finns på scenen eller i produktionen, kunde man använda pakethanteraren.
+AEM as a Cloud Service tillåter inte att körningslägen används för att installera innehåll för specifika miljöer eller tjänster. Om en utvecklingsmiljö måste förses med data eller HTML som inte finns i mellanlagrings- eller produktionsmiljöerna kan pakethanteraren användas.
 
 De runmode-konfigurationer som stöds är:
 
