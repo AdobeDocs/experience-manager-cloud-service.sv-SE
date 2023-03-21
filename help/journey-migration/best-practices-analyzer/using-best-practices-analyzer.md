@@ -2,7 +2,7 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: e11cb3215dc005bfd38959f3ceaaad25becad65c
 workflow-type: tm+mt
 source-wordcount: '2490'
 ht-degree: 41%
@@ -69,7 +69,6 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic3.png)
 
-
 1. När BPA-rapporten har genererats visas en sammanfattning och antalet resultat i tabellformat, ordnade efter typ av fynd och prioritetsnivå. Om du vill ha mer information om en viss sökning kan du klicka på talet som motsvarar sökningstypen i tabellen.
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic4.png)
@@ -92,8 +91,6 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic8.png)
 
-
-
 #### Använda filter i rapporten Best Practices Analyzer {#bpa-filters}
 
 Filtrera bort resultat som är relaterade till [ACS-kommandon](https://adobe-consulting-services.github.io/acs-aem-commons/)följer du stegen nedan:
@@ -111,7 +108,6 @@ Filtrera bort resultat som är relaterade till [ACS-kommandon](https://adobe-con
 
    >[!NOTE]
    > ACS Commons-resultaten ska inte ignoreras. Se [dokumentation](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility) för att fastställa kompatibiliteten med AEM as a Cloud Service.
-
 
 <!--
 ### Adobe Experience Manager 6.2 and 6.1 {#aem-specific-versions}
@@ -158,7 +154,6 @@ Läs tabellen nedan för mer information om viktighetsgrad:
 | ADVISORY | Resultatet kan innebära ett uppgraderingsproblem. Ytterligare undersökningar rekommenderas. |
 | MAJOR | Detta resultat innebär sannolikt ett uppgraderingsproblem som bör åtgärdas. |
 | CRITICAL | Detta resultat innebär sannolikt ett uppgraderingsproblem som måste åtgärdas för att förhindra funktions- eller prestandaproblem. |
-
 
 ## Tolka CSV-rapporten för Best Practices Analyzer {#cra-csv-report}
 
