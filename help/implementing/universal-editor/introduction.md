@@ -1,17 +1,17 @@
 ---
-title: Introduktion till Universal Editor
-description: Se hur den universella redigeraren kan redigera alla delar av innehållet i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och ge en toppmodern utvecklarupplevelse.
-source-git-commit: f454475b65da8f410812bbbe30ca5fc393be410a
+title: Introduktion till Universal Visual Editor
+description: Se hur den universella Visual Editor (alias. Universal Editor) möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
+source-git-commit: f242abbd7f53c523667d1d56a0f5b913bb26dee0
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
 
 
-# Introduktion till Universal Editor {#introduction}
+# Introduktion till Universal Visual Editor {#introduction}
 
-Se hur den universella redigeraren kan redigera alla delar av innehållet i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och ge en toppmodern utvecklarupplevelse.
+Se hur den universella Visual Editor (alias. Universal Editor) möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 
 ## Bakgrund {#background}
 
@@ -42,17 +42,14 @@ Kraven för att implementeringen ska kunna utnyttja den universella redigeraren 
 En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som den AEM sidredigeraren. Men med den universella redigeraren kan skribenterna redigera **alla** innehåll visuellt och i sitt sammanhang och har stöd för
 
 * **AEM sidstrukturer** - Kapslad `cq:Components` av `cq:Pages`, inklusive Experience Fragments
-* **AEM innehållsfragment** - Redigera innehåll från innehållsfragment när de visas i sitt sammanhang
-* **Dokument** - Word, Excel, Google Docs, Markdown eller t.o.m. normal HTML beständig, t.ex. på GitHub
-* **Innehåll från tredje part** - Ett plugin-system gör att det går att redigera externa innehållskällor.
+* **AEM innehållsfragment** - Redigera innehåll från innehållsfragment så som de visas i sitt sammanhang.
+* **Dokument** - Konceptkorrektur har visat att Word-, Excel-, Google Docs- och Markdown-dokument också kan redigeras på samma sätt (detta är Pågående arbete).
 
 ### Alla proportioner {#any-aspect}
 
 Innehållet handlar inte bara om informationen som finns, utan även om hur det återges och tas emot. Innehållet innehåller ytterligare metadata och instrumenteringsregler som den universella redigeraren kan förstå och redigera, inklusive:
 
-* **Använda layout och format** - Genom att använda ett formatsystem kan marknadsförare och innehållsförfattare tillämpa olika format på sitt innehåll och skapa olika layouter som kolumner, bildspel, flikar, dragspel osv.
-* **Utföra experiment** - Genom att publicera en ny innehållsversion som utmanar det befintliga innehållet kan marknadsföraren experimentera med innehållsförbättringar och mäta effekten.
-* **Anpassa variationer** - Genom att skapa och hantera innehållsvariationer som är specifika för en viss målgrupp kan marknadsförare personalisera det innehåll som levereras.
+* **Använda layout och format** - Genom att använda ett formatsystem kan marknadsförare och innehållsförfattare tillämpa olika format på sitt innehåll och skapa olika layouter för innehåll som kolumner, karuseller, flikar, dragspel osv.
 
 ## Värde {#value}
 
@@ -64,9 +61,9 @@ Genom att frikoppla redigeringsupplevelsen från ett visst innehållsleveranssys
 * **Öka innehållshastigheten** - För att effektivisera yrkesutövarnas arbetsflöde tillåter den universella redigeraren redigering av innehåll i förhandsgranskningen som vägledning för användarna genom att endast visa de alternativ som är relevanta för det sammanhanget och som gör arbetsflödet oberoende av innehållskällorna.
 * **Avancerad utvecklarupplevelse** - För att stödja heterogena applikationslandskap i verkligheten är den universella redigeraren helt fristående och teknikberoende, vilket gör att utvecklare kan använda den teknologi de föredrar för att implementera upplevelsen.
 
-## Universal Editor och Content Fragment Editor {#universal-editor-content-fragment-editor}
+## Universal Visual Editor och Content Fragment Editor {#universal-editor-content-fragment-editor}
 
-Vid första anblicken kan det verka som den universella redigeraren och Content Fragment Editor har liknande redigeringsfunktioner. Men de här redigerarna har mycket olika funktioner och de utför olika arbetsuppgifter för marknadsföringsavdelningen.
+Vid första anblicken kan det verka som den universella visuella redigeraren och Content Fragment Editor har liknande redigeringsfunktioner. Men de här redigerarna har mycket olika funktioner och de utför olika arbetsuppgifter för marknadsföringsavdelningen.
 
 ### Innehållsfragmentsredigerare {#content-fragment-editor}
 
@@ -74,7 +71,7 @@ En marknadsförare vill skapa innehåll utan att behöva bry sig om layouten, s�
 
 * Det underliggande jobbet är att skala innehållsstrategin.
 
-### Universal Editor {#universal-editor}
+### Universal Visual Editor {#universal-editor}
 
 En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i ett visst sammanhang för att leverera en exceptionell upplevelse.
 
@@ -82,9 +79,9 @@ En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i e
 
 ## Vägkarta {#road-map}
 
-Det är viktigt att komma ihåg att den universella redigeraren är ett pågående arbete och att funktionerna i det här dokumentet är en vision för den slutliga redigeraren och inte nödvändigtvis dess nuvarande funktioner.
+Det är viktigt att komma ihåg att den universella redigeraren är ett pågående arbete och en del av funktionerna som beskrivs i det här dokumentet är en vision för den slutliga redigeraren och inte nödvändigtvis en representation av dess nuvarande funktioner.
 
-Kontakta din Adobe-kontakt för mer information om kommande funktioner som planeras för den universella redigeraren
+Kontakta din Adobe-kontakt för mer information om kommande funktioner som planeras för den universella redigeraren.
 
 ## Ytterligare resurser {#additional-resources}
 
