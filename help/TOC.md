@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: c37c1c3eca0ae9d457f422efdaf5e29be03e6014
+source-git-commit: 5f664b92d9e5ff31e90ce8a5d7c35db683c4ef03
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4005'
 ht-degree: 21%
 
 ---
@@ -168,7 +168,7 @@ ht-degree: 21%
    + Andra introduktionskoncept {#concepts}
       + [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md)
       + [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md)
-      + [Användargrupper för meddelanden](/help/journey-onboarding/user-groups.md)
+      + [Meddelandeprofiler](/help/journey-onboarding/notification-profiles.md)
 + AEMaaCS - testversioner {#trials}
    + Provversioner utan rubriker {#headless}
       + [Anpassa innehåll i en exempelapp](/help/trials/headless/customize-app.md)

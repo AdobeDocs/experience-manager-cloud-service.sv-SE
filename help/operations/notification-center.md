@@ -2,7 +2,7 @@
 title: Notiscenter
 description: Utnyttja Notiscenter för att enkelt vidta åtgärder i samband med incidenter och annan viktig information
 hidefromtoc: true
-source-git-commit: a5977c667d831c47d41cd86b68e9196fbe726899
+source-git-commit: 55ecd685afa28226974f3415b550bd2e8d05e2e6
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
@@ -34,7 +34,7 @@ På skärmen Notiscenter kan du välja ett specifikt program och en viss miljö,
 
 Följ stegen nedan för att konfigurera mottagningsmeddelanden:
 
-1. Skapa följande produktprofiler enligt beskrivningen [i den här artikeln](/help/journey-onboarding/user-groups.md), och tilldela rätt Adobe-ID från din organisation till dessa profiler.
+1. Skapa följande produktprofiler enligt beskrivningen [i den här artikeln](/help/journey-onboarding/notification-profiles.md), och tilldela rätt Adobe-ID från din organisation till dessa profiler.
 1. Kontrollera inställningarna för meddelandekonfigurationen. [På den här sidan](https://experience.adobe.com/preferences/notification-section)kontrollerar du att prenumerationen på Experience Manager är aktiverad och att **Övriga** är markerad. Vi rekommenderar dessutom att avsnittet E-post är inställt på **Snabbmeddelanden** så att du får meddelanden omedelbart efter att en incident har inträffat.
 
 >[!NOTE]
