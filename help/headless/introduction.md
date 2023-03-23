@@ -1,19 +1,19 @@
 ---
 title: Introduktion till Headless för AEM
-description: Läs mer om Headless i Adobe Experience Manager (AEM) med en kombination av detaljerad dokumentation och headless-resor. Lär dig hur funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API används för att skapa Headless-upplevelser.
+description: Läs mer om Headless i Adobe Experience Manager (AEM) med en kombination av detaljerad dokumentation och headless-resor. Lär dig hur funktioner som Content Fragment Models, Content Fragments och GraphQL API används för att skapa headless-upplevelser.
 landing-page-description: Lär dig hur du använder och administrerar Headless i Adobe Experience Manager as a Cloud Service.
 exl-id: 24300499-ae9c-49d0-aa25-f51e14d9cf79
-source-git-commit: 597bb3b92159c685d3692f11359e13f8642a0857
+source-git-commit: 6d8d75cd0b01154f420dd3d5f14589bb8a2b8297
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Introduktion till Adobe Experience Manager som headless CMS {#introduction-aem-headless}
 
-Lär dig hur du använder Adobe Experience Manager (AEM) som ett headless CMS-system med funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API som ger dig en kraftfull, skalbar upplevelse.
+Lär dig hur du använder Adobe Experience Manager (AEM) som ett headless CMS (Content Management System) med funktioner som Content Fragment Models, Content Fragments och ett GraphQL-API som tillsammans ger en kraftfull, skalbar upplevelse.
 
 Du kan läsa detaljerad dokumentation om de olika funktionerna och/eller följa valet av [Headless Journeys för att få en översikt över de första stegen](#first-steps).
 
@@ -25,7 +25,7 @@ Du kan läsa detaljerad dokumentation om de olika funktionerna och/eller följa 
 
 AEM Headless är en CMS-lösning från Experience Manager som gör att strukturerat innehåll (innehållsfragment) i AEM kan användas av alla appar via HTTP med GraphQL. Headless-implementationer gör det möjligt att leverera upplevelser för olika plattformar och kanaler i stor skala.
 
-Den Headless-implementeringen förskjuter hantering av sidor och komponenter på samma sätt som traditionella lösningar med kompletta stackar och hybridlösningar och fokuserar på att skapa kanalneutrala, återanvändbara fragment av innehåll och deras flerkanalsleverans. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av webbupplevelser.
+Den Headless-implementeringen förskjuter hantering av sidor och komponenter, vilket är vanligt i kompletta stacklösningar och hybridlösningar. I stället fokuserar det på att skapa kanalneutrala, återanvändbara fragment av innehåll och deras flerkanalsleverans. Det är ett modernt och dynamiskt utvecklingsmönster för implementering av webbupplevelser.
 
 ![AEM implementeringsmodeller](assets/aem-implementation-models.png)
 
@@ -33,14 +33,14 @@ Den Headless-implementeringen förskjuter hantering av sidor och komponenter på
 
 AEM as a Cloud Service är ett flexibelt verktyg för den headless-implementeringsmodellen med tre kraftfulla funktioner:
 
-1. **Innehållsmodeller**
-   * Innehållsmodeller är strukturerade representationer av innehåll.
-   * Innehållsmodeller definieras av informationsarkitekter i AEM Content Fragment Model Editor.
-   * Innehållsmodeller fungerar som bas för innehållsfragment.
+1. **Modeller för innehållsfragment**
+   * Content Fragment Models är strukturerade representationer av innehåll.
+   * Content Fragment Models definieras av informationsarkitekter i AEM Content Fragment Model Editor.
+   * Content Fragment Models fungerar som bas för Content Fragments.
 1. **Innehållsfragment**
-   * Innehållsfragment skapas baserat på en innehållsmodell.
-   * Skapas av innehållsförfattare med AEM Content Fragment editor.
-   * Innehållsfragment lagras i AEM Assets och hanteras i gränssnittet Resurser Admin.
+   * Ett innehållsfragment skapas baserat på en innehållsfragmentmodell.
+   * Innehållsfragment skapas av innehållsförfattare med hjälp av AEM Content Fragment Editor.
+   * Innehållsfragment lagras som AEM Assets, men kan hanteras via Resurskonsolen eller [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md).
 1. **Innehålls-API för leverans**
    * AEM GraphQL API stöder leverans av innehållsfragment.
    * AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.
@@ -50,7 +50,7 @@ AEM as a Cloud Service är ett flexibelt verktyg för den headless-implementerin
 
 Det finns flera tillgängliga resurser för att komma igång med AEM headless-funktioner. Varje guide är skräddarsydd för olika användningsområden och målgrupper.
 
-| Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Time |
+| Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Tid |
 |---|---|---|---|---|
 | [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För utvecklare som inte är AEM och utan headless** börjar du här för att få en omfattande introduktion till AEM och dess headless-funktioner från teorin om headless genom att publicera ditt första headless-projekt. | Användarhandbok | Utvecklare **nya i AEM och utan huvud** | 1 timme |
 | [Headless Setup](/help/headless/setup/introduction.md) | **För erfarna AEM** som behöver en kort sammanfattning av de viktigaste AEM rubrikfria funktionerna, se den här snabbstartsöversikten. | Referensinställningar | Utvecklare, administratörer **med AEM** | 20 minuter |
