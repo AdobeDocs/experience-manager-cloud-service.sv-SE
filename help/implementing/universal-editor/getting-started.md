@@ -1,9 +1,9 @@
 ---
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
-source-git-commit: acafa752c354781e41b11e46ac31a59feb8d94e7
+source-git-commit: 0e66c379e10d275610d85a699da272dc0c32a9a8
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ import "@adobe/universal-editor-cors";
 
 ### Alternativ för appar som inte kan reagera {#alternative}
 
-Om du inte implementerar ett React-program och/eller kräver serveråtergivning och alternativ metod är att inkludera följande i dokumentets brödtext.
+Om du inte implementerar ett React-program och/eller kräver serveråtergivning är en alternativ metod att inkludera följande i dokumentets brödtext.
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/adobe/universal-editor-cors/dist/universal-editor-embedded.js" async></script>
@@ -157,50 +157,6 @@ itemid="urn:<referenceName>:<resource>"
 </html>
 ```
 
-### Översättningstjänst för Universal Editor {#translation}
-
-Den universella redigeraren utför översättning baserat på instrumenteringens metadata.
-
-#### Grundläggande översättningsprincip {#principle}
-
-Titta på följande markering från föregående exempel.
-
-```html
-<meta name="urn:auecon:aemconnection" content="aem:https://localhost:4502">
-<ul itemscope itemid="urn:aemconnection:/content/example/list" itemtype="urn:fcs:type/list">
-```
-
-Redigeraren utför ersättningar och internt `itemid` kommer att skrivas om till följande:
-
-```html
-itemid="urn:aem:https://localhost:4502/content/example/list"
-```
-
-Detta resulterar i termen `aemconnection` ersätts med innehållet i `<meta>` -tagg.
-
-#### Frågeväljare {#query-selector}
-
-Ersättningen resulterar i följande frågesträng för John Smith.
-
-```html
-<ul itemscope itemid="urn:aemconnection:/content/example/list" itemtype="urn:fcs:type/list">
-  <li itemscope itemid="urn:fcsconnection:/documents/mytext" itemtype="urn:fcs:type/fragment">.  
-    <p itemprop="name" itemtype="text">John Smith</p>
-    <p itemid="urn:aemconnection/content/example/another-source" itemprop="title" itemtype="text">Photographer</p>
-    <img itemprop="avatar" src="urn:fcs:missing" itemtype="image" alt="avatar"/>
-  </li>
-```
-
-`[itemid="urn:fcs:https://example.franklin.adobe.com/345fcdd/content/example/list][itemprop="name"]`
-
-Om du vill ändra panelen med Sven Svensson är väljaren följande.
-
-`[itemid="urn:aem:https://localhost:4502/content/example/another-source"][itemprop="title"]`
-
-Istället för arv av `itemid`Universal Editor arbetar med omfång och resurser. Ett omfång kan definieras på en nodnivå och ärvas av hela understrukturen.
-
-Om ett annat omfång krävs för en understruktur inom strukturen eller en definierad ledighet, ska en annan `itemid` kan definieras.
-
 ## Du är redo att använda den universella redigeraren {#youre-ready}
 
 Din app är nu instrumenterad för att använda den universella redigeraren!
@@ -213,6 +169,7 @@ Mer information om Universal Editor finns i de här dokumenten.
 
 * [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och leverera en toppmodern utvecklarupplevelse.
 * [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.

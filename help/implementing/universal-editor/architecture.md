@@ -1,9 +1,9 @@
 ---
 title: Universal Editor Architecture
 description: Läs mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
-source-git-commit: f454475b65da8f410812bbbe30ca5fc393be410a
+source-git-commit: 0e66c379e10d275610d85a699da272dc0c32a9a8
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,7 @@ Mer information om Universal Editor finns i de här dokumenten.
 
 * [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och leverera en toppmodern utvecklarupplevelse.
 * [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.

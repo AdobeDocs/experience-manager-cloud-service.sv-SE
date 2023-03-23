@@ -1,9 +1,9 @@
 ---
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
-source-git-commit: f454475b65da8f410812bbbe30ca5fc393be410a
+source-git-commit: 0e66c379e10d275610d85a699da272dc0c32a9a8
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1152'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ För att göra detta får skribenterna ett intuitivt användargränssnitt som kr
 
 >[!NOTE]
 >
->Den universella redigeraren är fortfarande under utveckling och kan för närvarande bara skapa text.
+>Den universella redigeraren är fortfarande under utveckling och kan för närvarande inte redigera alla innehållstyper.
 
 ## Förbered appen {#prepare-app}
 
@@ -106,11 +106,11 @@ Hamburgermenyn är inte implementerad än.
 
 ![Hambuger-menyn](assets/hamburger-menu.png)
 
-#### Adressfält {#address-bar}
+#### Platsfält {#Location-bar}
 
-Adressfältet visar platsen för sidan som du redigerar. Tryck eller klicka för att ange adressen till en annan sida som ska redigeras.
+Platsfältet visar adressen till sidan som du redigerar. Tryck eller klicka för att ange adressen till en annan sida som ska redigeras.
 
-![Adressfält](assets/address-bar.png)
+![Platsfält](assets/address-bar.png)
 
 >[!TIP]
 >
@@ -119,12 +119,6 @@ Adressfältet visar platsen för sidan som du redigerar. Tryck eller klicka för
 >[!NOTE]
 >
 >Alla sidor som du vill redigera med Universal Editor måste vara [som har stöd för Universal Editor.](getting-started.md)
-
-#### Indikator för samarbete {#collaboration}
-
-Om det finns andra författare med samma sida inlästa i Universal Editor, visas bilderna för dessa författare. Håll muspekaren över en bild för att se hela användarnamnet
-
-![Samarbetsindikator](assets/collaboration.png)
 
 #### Öppna programförhandsgranskning {#open-app-preview}
 
@@ -141,6 +135,10 @@ Tryck eller klicka på ikonen för att öppna appförhandsgranskning för att ö
 Tryck eller klicka på publiceringsknappen för att publicera ändringarna av innehållet live för läsning.
 
 ![Knappen Publicera](assets/publish.png)
+
+>[!TIP]
+>
+>Se dokumentet [Publicera innehåll med den universella visuella redigeraren](publishing.md) för mer information om publicering med Universal Editor.
 
 ### The Rail {#rail}
 
@@ -195,6 +193,7 @@ Observera att när du trycker eller klickar på ett innehåll i förhandsgranskn
 Mer information om Universal Editor finns i de här dokumenten.
 
 * [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och leverera en toppmodern utvecklarupplevelse.
+* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 * [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.

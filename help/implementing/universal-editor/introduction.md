@@ -1,9 +1,9 @@
 ---
 title: Introduktion till Universal Visual Editor
 description: Se hur den universella Visual Editor (alias. Universal Editor) möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
-source-git-commit: f242abbd7f53c523667d1d56a0f5b913bb26dee0
+source-git-commit: 0e66c379e10d275610d85a699da272dc0c32a9a8
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -88,6 +88,7 @@ Kontakta din Adobe-kontakt för mer information om kommande funktioner som plane
 Mer information om Universal Editor finns i de här dokumenten.
 
 * [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 * [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.

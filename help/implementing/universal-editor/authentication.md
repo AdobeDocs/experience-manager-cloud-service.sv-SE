@@ -1,9 +1,9 @@
 ---
 title: Autentisering av universell redigerare
 description: Lär dig hur den universella redigeraren autentiseras.
-source-git-commit: f454475b65da8f410812bbbe30ca5fc393be410a
+source-git-commit: 0e66c379e10d275610d85a699da272dc0c32a9a8
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,6 @@ Lär dig hur den universella redigeraren autentiseras.
 Universal Editor använder Adobe Identity Management System-autentisering (IMS), som tillhandahålls via det enhetliga gränssnittet.
 
 Alla program/fjärrsidor ansvarar för autentisering till de backend-system som krävs. Tjänsten Universal Editor behöver denna autentisering för backend-system för att kunna utföra CRUD-åtgärder som fristående tjänster.
-
-Beroende på hur du använder den universella redigeraren finns det olika implementeringsalternativ.
-
-* [Standardflöde](#standard-flow) - För AEM as a Cloud Service eller AMS som använder IMS
-* [Flöde från tredje part](#third-party-flow) - För AEM på plats eller AMS utan IMS
 
 ## Standardflöde {#standard-flow}
 
@@ -40,6 +35,7 @@ Mer information om Universal Editor finns i de här dokumenten.
 
 * [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och leverera en toppmodern utvecklarupplevelse.
 * [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 * [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
