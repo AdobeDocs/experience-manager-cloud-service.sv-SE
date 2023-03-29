@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management
 role: User,Leader,Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: efc0f317cf4540db49b6caf7bb9f6fd31b311583
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Företag behöver stöd för en mängd olika filformat och innehållsupplösning
 
 Börja med att förstå [fördelarna med ett molnbaserat erbjudande](#solution-benefits). Se vad som står på notable [ändringar av Experience Manager som [!DNL Cloud Service]](/help/release-notes/aem-cloud-changes.md) som också påverkade Experience Manager Assets och som följde upp [ändringar i tillgångar](/help/assets/assets-cloud-changes.md).
 
-Läs vidare för att lära dig mer om [information om de nya Assets-funktionerna](#whats-new-assets) och [kända problem](/help/release-notes/known-issues.md). Se en lista med [borttagna eller inaktuella funktioner](/help/release-notes/deprecated-removed-features.md) om du vill veta vad som har tagits bort i den här versionen och se det här [lista över kommande funktioner](/help/release-notes/known-issues.md#upcoming-assets-capabilities) för att veta vad som kommer inom kort. Slutligen, förstå Experience Manager villkoren med hjälp av detta [ordlista](/help/overview/terminology.md).
+Läs vidare för att lära dig mer om [information om de nya Assets-funktionerna](#whats-new-assets) och [kända problem](/help/release-notes/maintenance/latest.md). Se en lista med [borttagna eller inaktuella funktioner](/help/release-notes/deprecated-removed-features.md) om du vill veta vad som tas bort i den här versionen. Slutligen, förstå Experience Manager villkoren med hjälp av detta [ordlista](/help/overview/terminology.md).
 
 ## Lösningsfördelar {#solution-benefits}
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Manager as a Cloud Service Prerelease Channel
 description: Lär dig hur du använder betaversionskanalen för att få en förhandsvisning av kommande funktioner som AEM as a Cloud Service.
 exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
-source-git-commit: 9a76a1c2b5e3b7986654b0843842b015811679a2
+source-git-commit: a66814c0f7f8dbdf794ff1867c7a4d7fdc2956cf
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
@@ -16,22 +16,22 @@ Lär dig hur du använder betaversionskanalen för att få en förhandsvisning a
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager as a Cloud Service har nya funktioner på månadsbasis, enligt [Experience Manager släpper vägkartan.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
+Adobe Experience Manager as a Cloud Service har nya funktioner på ett regelbundet cadence, enligt [Experience Manager släpper vägkartan.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
 
-Om du vill bekanta dig med de funktioner som kommer att bli tillgängliga nästa månad kan du prenumerera på betaversionskanalen, som du kommer åt genom att konfigurera dina utvecklingsmiljöer eller andra sandlådemiljöer. Du kan förhandsgranska ändringar som är tillgängliga via det AEM användargränssnittet samt skapa kod mot nya förhandsversioner-API:er.
+Om du vill bekanta dig med de funktioner som är schemalagda att användas i följande funktionsrelease kan du prenumerera på betaversionskanalen, som du kommer åt genom att konfigurera dina utvecklingsmiljöer eller andra sandlådemiljöer. Du kan förhandsgranska ändringar som är tillgängliga via det AEM användargränssnittet samt skapa kod mot nya förhandsversioner-API:er.
 
-Listan över förhandsversionsfunktioner för en viss månad publiceras i [månadsvisa versionsinformation.](/help/release-notes/release-notes-cloud/release-notes-current.md)
+Listan över förhandsversionsfunktioner för en viss funktionsrelease finns i [versionsinformation.](/help/release-notes/release-notes-cloud/release-notes-current.md)
 
 ## AEM as a Cloud Service releaser {#releases}
 
 AEM as a Cloud Service har två typer av releaser.
 
-* **Månatliga releaser** lägga till funktioner och funktioner i AEM as a Cloud Service
-* **Viktiga uppdateringar** lägga till säkerhetsuppdateringar, prestandaförbättringar och felkorrigeringar och tillämpas dagligen.
+* **Funktionsreleaser** lägga till funktioner och funktioner AEM as a Cloud Service, vid aktivering
+* **Underhållsreleaser** lägga till säkerhetsuppdateringar, prestandaförbättringar och felkorrigeringar och tillämpas regelbundet och ofta.
 
 Det här mönstret säkerställer kontinuerliga releaser utan avbrott i tjänsten.
 
-Med betaversionskanalen kan du förhandsgranska funktioner som är schemalagda för den kommande månadsversionen för att utvärdera kommande funktioner och planera för en eventuell implementering för dina egna projekt. Du kan planera i förväg för nästa månadsrelease.
+Med betaversionskanalen kan du förhandsgranska funktioner som är schemalagda för den kommande funktionsversionen för att utvärdera kommande funktioner och planera för en eventuell implementering för dina egna projekt. Du kan planera i förväg för nästa funktionsversion.
 
 Om det till exempel är maj och du prenumererar på betaversionskanalen kan du utvärdera funktionerna i den kommande versionen från juni.
 
@@ -48,7 +48,7 @@ För att utnyttja prerelease-kanalen effektivt krävs fyra steg.
 
 ## Markera dina kalendrar {#mark-calendars}
 
-Månadsreleaser är schemalagda långt i förväg och releasedatum publiceras den [Adobe Experience League.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
+Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen publiceras på [Adobe Experience League.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
 
 Notera releasedatumen så att du kan planera tiden för granskning och test av kommande funktioner.
 
@@ -58,7 +58,7 @@ När du har markerat releasedatum i kalendern ska du kontrollera [Adobe Experien
 
 Varje release åtföljs av en versionsinformation som visar att det inte bara är det som är nytt i den versionen, utan även de funktioner som är tillgängliga för förhandsversionsutvärdering. Lär känna dig i förväg och planera för att utnyttja de senaste funktionerna i AEMaaCS!
 
-Du kan också [kontrollera kända fel](/help/release-notes/known-issues.md) som publiceras tillsammans med varje release så att du också kan vara medveten om tekniska problem som kan utgöra en utmaning för din utvärdering eller ett eventuellt antagande av nya funktioner.
+Du kan också [kontrollera kända fel](/help/release-notes/maintenance/latest.md) som publiceras tillsammans med varje release så att du också kan vara medveten om tekniska problem som kan utgöra en utmaning för din utvärdering eller ett eventuellt antagande av nya funktioner.
 
 ## Aktivera förhandsversionskanalen för att få åtkomst och testa nya funktioner {#new-features}
 

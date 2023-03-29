@@ -1,48 +1,45 @@
 ---
-title: Senaste underhållsinformation [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Senaste underhållsinformation [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: edb8949b532b80a55106e706a49e2ada68722a67
+title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
+source-git-commit: 7e66c9f26211bd92119c74f311f3e9b3195a8d98
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 2%
+source-wordcount: '265'
+ht-degree: 1%
 
 ---
 
 
 # Versionsinformation om underhåll {#maintenance-release-notes}
 
-I följande avsnitt beskrivs de tekniska releasefoterna för den senaste underhållsutgåvan av Experience Manager as a Cloud Service.
+I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 11289 {#release-11289}
+## Utgåva 11382 {#release-11382}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 11289, som offentliggjordes den 7 mars 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 10912.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 11382, som offentliggjordes den 28 mars 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 11289.
 
 Funktionsaktiveringen för den här underhållsversionen ger dig den fullständiga funktionsuppsättningen. Se [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för fullständig information.
 
-### Kända fel {#known-issues}
-
-Uppgradera inte om du använder CORS. Ett problem som påverkar GraphQL innehållsleveransfunktion identifierades i den här versionen. En ändring i standardkonfigurationen AEM dispatcher vad gäller hur beständiga GraphQL-frågor cachelagras kan störa leveransen av GraphQL-innehåll i sådana frågor. Problemet kommer att åtgärdas i nästa underhållsrelease.
-
 ### Åtgärdade problem {#fixed-issues}
+
+- ASSETS-21023 - Fast Smart Crop-återgivning, där kunderna kunde observera ett Null-pekarundantag i Publisher-instansen för alla AEM miljöer när de försökte få åtkomst till dessa återgivningar via API:t.
+- SKYOPS-49280 - När du installerar en konfigurations- eller paketuppdatering med RDE i Publicera kanske resultatet inte blir observerbart eftersom publiceringsdispatcherns cache inte är ogiltig
 
 #### Sites {#sites-issues}
 
-- SITES-11584 Korrigerat problem med Live-kopior som inte kunde skapas för sidor med anteckningar
-- SITES-11683 Inaktiverade MSM Live-kopior med delvis brutet arv
+- SITES-7796 - Möjlighet för innehållsförfattare att publicera det Överordnad innehållsfragmentet och dess respektive variationer vid export till målgruppen
 
 #### Assets {#assets-issues}
 
-- ASSETS-20879 Korrigerad regression som förhindrar att gränssnittet för tillgångsrapporter fungerar korrekt och resulterade i felaktiga resultat i genererade rapporter.
-- ASSETS-21020 Åtgärdat problem med hämtning av brutna resurser - Bildprofilen finns inte efter att resursen har flyttats
-- ASSETS-21023 Ett problem med bildåtergivningar i Dynamic Media som förhindrar åtkomst via API har korrigerats
+- ASSETS-20076 - Lägg till stöd för videovattenstämplar som matchar det aktuella stödet för bildvattenstämplar
+- ASSETS-21428 - tillägg av undantag för CSS-ändringar
 
 #### Forms {#forms-issues}
 
-- Inget
+- CQ-4351502 - Uppdaterar användarmappningen för tjänsten så att läsåtkomst tillåts på webbplatser
 
 #### Plattform {#platform-issues}
 
-- GRANITE-44467 - Korrigerat problem som medförde att importen misslyckades, när en befintlig nod uppdaterades, bevarade inte Filevault under vissa instanser blandningstyper och underordnade noder
+- SITES-11040 - Villkorlig aktivering av GraphQL beständig frågecachelagring i dispatcher
 
 ### Inbäddade tekniker {#embedded-tech}
 
