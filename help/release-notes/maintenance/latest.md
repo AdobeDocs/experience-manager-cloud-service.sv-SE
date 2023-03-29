@@ -1,9 +1,9 @@
 ---
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 7e66c9f26211bd92119c74f311f3e9b3195a8d98
+source-git-commit: c6acdd922c052d0db5bf1f05bc03329fbc44ca33
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '306'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,11 @@ Funktionsaktiveringen för den här underhållsversionen ger dig den fullständi
 #### Sites {#sites-issues}
 
 - SITES-7796 - Möjlighet för innehållsförfattare att publicera det Överordnad innehållsfragmentet och dess respektive variationer vid export till målgruppen
+- SITES-97 - GraphQL: Sidnumrering och sortering, hybridfiltrering
+
+>[!NOTE]
+>
+> I SITES-97 har vissa förbättringar gjorts i GraphQL-implementeringen som kan orsaka oväntat beteende. Se [AEM GraphQL ändringar gällande hantering av null-värden](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-21792.html) för mer information.
 
 #### Assets {#assets-issues}
 
