@@ -3,9 +3,9 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: 68b16052bd050d881e82be4ef57b9623f6021a89
+source-git-commit: 4f2b5fa59d3c68dd1244fa5b2a8dc30d848ba4a4
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -88,8 +88,6 @@ I båda fallen är frågan som visas på redigeringspanelen den fråga som komme
 
 ## Frågevariabler {#query-variables}
 
-<!-- more details needed here? -->
-
 Med GraphiQL IDE kan du också hantera [Frågevariabler](/help/headless/graphql-api/content-fragments.md#graphql-variables).
 
 Till exempel:
@@ -99,6 +97,10 @@ Till exempel:
 ## Hantera cache för dina beständiga frågor {#managing-cache}
 
 [Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) rekommenderas eftersom de kan cachelagras på dispatcher- och CDN-lagren, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Som standard blir cacheminnet för innehållsleveransnätverket (CDN) ogiltigt baserat på en TTL-standardinställning (Time To Live).
+
+>[!NOTE]
+>
+>Mer information finns i [Cachelagra beständiga frågor](/help/headless/graphql-api/persisted-queries.md#caching-persisted-queries).
 
 >[!NOTE]
 >
