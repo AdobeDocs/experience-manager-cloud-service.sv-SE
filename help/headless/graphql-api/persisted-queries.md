@@ -3,7 +3,7 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 872fe7a96f58df0e1e9cce29367cc71778fedb78
+source-git-commit: 0cac51564468c414866d29c8f0be82f77625eaeb
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 1%
@@ -270,6 +270,8 @@ Som standard blir cachen ogiltig AEM baserat på en TTL-definition (Time To Live
 | CDN | `stale-while-revalidate` | `surrogate-control : stale-while-revalidate ` | `surrogateControlStaleWhileRevalidate` | `graphqlStaleWhileRevalidate` |
 | CDN | `stale-if-error` | `surrogate-control : stale-if-error` | `surrogateControlStaleIfError` | `graphqlStaleIfError` |
 
+{style="table-layout:auto"}
+
 ### Författarinstanser {#author-instances}
 
 För författarinstanser är standardvärdena:
@@ -343,6 +345,8 @@ The `cache-control` kan anges vid skapande (PUT) eller senare (till exempel via 
 | `graphqlStaleIfError` | 86400 | *efter behov* | *efter behov* |
 | `graphqlSurrogateControl` | 600 | *efter behov* | *efter behov* |
 
+{style="table-layout:auto"}
+
 ### Hantera cache med en OSGi-konfiguration {#cache-osgi-configration}
 
 Om du vill hantera cachen globalt kan du [konfigurera OSGi-inställningarna](/help/implementing/deploying/configuring-osgi.md) för **Konfiguration av beständig frågetjänst**.
@@ -361,6 +365,8 @@ Standardkonfigurationen för OSGi för publiceringsinstanser:
    | `surrogateControlMaxAge` | läsningar | `graphqlSurrogateControl` |
    | `surrogateControlStaleWhileRevalidate` | läsningar | `graphqlStaleWhileRevalidate` |
    | `surrogateControlStaleIfError` | läsningar | `graphqlStaleIfError` |
+
+   {style="table-layout:auto"}
 
 * Om den inte är tillgänglig använder OSGi-konfigurationen [standardvärden för publiceringsinstanser](#publish-instances).
 
