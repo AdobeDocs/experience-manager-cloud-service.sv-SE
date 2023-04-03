@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: 6bca307dcf41b138b5b724a8eb198ac35e2d906e
+source-git-commit: 936aa33ca334523aa84300f540bde9543eb7ffb4
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,7 @@ ht-degree: 0%
 * SalesForce
 * Microsoft® Azure Blob Storage
 
-Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande autentisering och API Key som är färdiga och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. SOAP-baserade tjänster och OData-tjänster är konfigurerade i RESTful [!DNL Experience Manager] as a Cloud Service <!--, JDBC for relational databases --> och anslutning för [!DNL Experience Manager] användarprofilen är konfigurerad i [!DNL Experience Manager] webbkonsol.
-
->[!NOTE]
->
->[!UICONTROL Experience Manager Forms] stöder inte relationsdatabaser.
+Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande autentisering och API Key som är färdiga och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. SOAP-baserade tjänster och OData-tjänster är konfigurerade i RESTful [!DNL Experience Manager] as a Cloud Service, JDBC för relationsdatabaser och anslutningsprogram för [!DNL Experience Manager] användarprofilen är konfigurerad i [!DNL Experience Manager] webbkonsol.
 
 ## Konfigurera relationsdatabas {#configure-relational-database}
 
