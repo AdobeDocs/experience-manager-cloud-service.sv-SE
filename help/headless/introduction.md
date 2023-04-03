@@ -1,12 +1,12 @@
 ---
 title: Introduktion till Headless för AEM
-description: Läs mer om Headless i Adobe Experience Manager (AEM) med en kombination av detaljerad dokumentation och headless-resor. Lär dig hur funktioner som Content Fragment Models, Content Fragments och GraphQL API används för att skapa headless-upplevelser.
+description: Läs mer om Headless i Adobe Experience Manager (AEM) med en kombination av detaljerad dokumentation och headless-resor. Lär dig hur funktioner som modeller för innehållsfragment, innehållsfragment och ett GraphQL-API används för att driva Headless-upplevelser.
 landing-page-description: Lär dig hur du använder och administrerar Headless i Adobe Experience Manager as a Cloud Service.
 exl-id: 24300499-ae9c-49d0-aa25-f51e14d9cf79
 source-git-commit: 6d8d75cd0b01154f420dd3d5f14589bb8a2b8297
 workflow-type: tm+mt
 source-wordcount: '699'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
