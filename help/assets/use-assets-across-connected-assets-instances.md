@@ -6,9 +6,9 @@ mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 9dfb52a1e3b0d1aa8b7bc741c8631aed58e5e7af
+source-git-commit: a7545f0f2143983a052f272992d5e27b78f271a1
 workflow-type: tm+mt
-source-wordcount: '3685'
+source-wordcount: '3656'
 ht-degree: 14%
 
 ---
@@ -58,7 +58,7 @@ De olika roller som är involverade i konfigureringen och funktionen och deras m
 |------|--------|-----------|----------|
 | [!DNL Sites] administratör | Lokalt | [!DNL Experience Manager] `administrators` | Konfigurera [!DNL Experience Manager] och konfigurera integrering med fjärrkontrollen [!DNL Assets] distribution. |
 | DAM-användare | Lokalt | `Authors` | Används för att visa och duplicera de hämtade resurserna i `/content/DAM/connectedassets/`. |
-| [!DNL Sites] author | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst på lokal [!DNL Sites]) </li> <li>`dam-users` på lokal [!DNL Sites]</li></ul> | Slutanvändarna är [!DNL Sites] författare som använder den här integreringen för att förbättra innehållets hastighet. Författare kan söka efter och bläddra bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som behövs på lokala webbsidor. |
+| [!DNL Sites] författare | Lokalt | <ul><li>`Authors` (med läsåtkomst på fjärr-DAM och författaråtkomst på lokal [!DNL Sites]) </li> <li>`dam-users` på lokal [!DNL Sites]</li></ul> | Slutanvändarna är [!DNL Sites] författare som använder den här integreringen för att förbättra innehållets hastighet. Författare kan söka efter och bläddra bland resurser i fjärr-DAM med [!UICONTROL Content Finder] och använda de bilder som behövs på lokala webbsidor. |
 | [!DNL Assets] administratör | Fjärr | [!DNL Experience Manager] `administrators` | Konfigurerar CORS (Cross-Origin Resource Sharing). |
 | DAM-användare | Fjärr | `Authors` | Författare roll på fjärrkontrollen [!DNL Experience Manager] distribution. Söker efter och bläddrar bland resurser i Connected Assets med hjälp av [!UICONTROL Content Finder]. |
 | DAM-distributör (teknisk användare) | Fjärr | <ul> <li> [!DNL Sites] `Authors`</li> <li> `connectedassets-assets-techaccts` </li> </ul> | Den här användaren som finns på fjärrdistributionen används av [!DNL Experience Manager] lokal server (inte [!DNL Sites] författarroll) för att hämta fjärrresurserna, för [!DNL Sites] författare. |
@@ -244,10 +244,6 @@ Du kan också uppdatera metadataegenskaperna för en resurs på en fjärr-DAM oc
 Webbplatsförfattare kan förhandsgranska de tillgängliga uppdateringarna i webbplatsdistributionen och sedan publicera ändringarna igen för att göra dem tillgängliga på den AEM publiceringsinstansen.
 
 Experience Manager visar en `expired` statusindikator på resurser i innehållets sökare för fjärrresurser för att hindra webbplatsförfattare från att använda resursen på en platssida. Om du använder en resurs med en `expired` på en Sites-sida visas inte resursen i Experience Manager-publiceringsinstansen.
-
->[!NOTE]
->
->Uppdateringarna av resurser i fjärr-DAM är bara tillgängliga för Sites-distributionen om fjärr-DAM- och Sites-distributioner är på Experience Manager-as a Cloud Service.
 
 ## Vanliga frågor {#frequently-asked-questions}
 
