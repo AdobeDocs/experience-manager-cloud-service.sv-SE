@@ -8,10 +8,10 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 196a2f221c637d58ea6642177f530f158888efe0
+source-git-commit: a1830db797a88e43e17d73a2e8cbc979084f6328
 workflow-type: tm+mt
-source-wordcount: '4015'
-ht-degree: 21%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -517,7 +517,6 @@ ht-degree: 21%
       + [Migrera från [!DNL AEM 6.5 Forms] eller tidigare till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
-      + [Referera till teman, mallar och datamodeller](/help/forms/reference-themes-templates-data-models.md)
    + Integrera {#integrate}
       + Tjänster {#services}
          + [Integrera AEM Forms as a Cloud Service med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
@@ -549,9 +548,9 @@ ht-degree: 21%
          + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
             + [Introduktion till framtagning av en adaptiv Forms](/help/forms/introduction-forms-authoring.md)
             + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
+            + [Referera till teman, mallar och datamodeller](/help/forms/reference-themes-templates-data-models.md)
             + [Skapa en mall](/help/forms/template-editor.md)
             + [Skapa ett tema](/help/forms/themes.md)
-            + [Referensresurser](/help/forms/reference-assets.md)
             + [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)
             + [Förbättra prestanda för stora formulär med lat inläsningsverktyg](/help/forms/lazy-loading-adaptive-forms.md)
          + Lägga till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
