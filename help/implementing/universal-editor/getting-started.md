@@ -1,9 +1,9 @@
 ---
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
-source-git-commit: 0e66c379e10d275610d85a699da272dc0c32a9a8
+source-git-commit: 7389e20ba73e84c2320ea8a834b381f415ad3983
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,13 @@ Det här dokumentet vägleder dig genom dessa steg.
 
 ## Begär åtkomst till den universella redigeraren {#request-access}
 
-Du måste först begära åtkomst till Universal Editor. Gå till [https://experience.adobe.com/#/aem/editor](https://experience.adobe.com/#/aem/editor) och validera om du har tillgång till den universella redigeraren.
+Du måste först begära åtkomst till Universal Editor. Gå till [https://experience.adobe.com/#/aem/editor,](https://experience.adobe.com/#/aem/editor) logga in och validera om du har tillgång till den universella redigeraren.
 
 Om du inte har åtkomst kan du begära det via ett formulär som är länkat på samma sida.
+
+![Begär åtkomst till Universal Editor](assets/request-access.png)
+
+Klicka **Begär åtkomst** och en representant för Adobe kommer att granska din begäran och nå ut för att diskutera ditt användningsfall.
 
 ## Include the Universal Editor Core Library {#core-library}
 
