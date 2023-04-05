@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: 30fca14949e379fb427252f43d9f31d062e7e445
+source-git-commit: 09396211b428884f4d522fbcc2dd13086af51dfd
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,10 @@ ht-degree: 0%
 Du börjar med GraphQL Explorer på en ny flik. Här kan du skapa och validera frågor mot ditt headless-innehåll innan du använder dem för att styra innehållet i din app eller på din webbplats.
 
 1. Din AEM headless-testversion innehåller en förinläst slutpunkt med innehållsfragment som du kan extrahera innehåll från för testning. Se till att **AEM demoresurser** slutpunkten är markerad i **Slutpunkt** nedrullningsbar meny längst upp till höger i redigeraren.
+
+1. Känt fel: om **AEM demoresurser** slutpunkten finns inte i listrutan, navigera till Pakethanteraren (`/crx/packmgr` sökväg i AEM) och installera om `aem-demo-assets.ui.content-{VERSION}.zip` paket:
+
+   ![Installera om paket](assets/do-not-localize/reinstall-aem-demo-assets-package.png)
 
 1. Kopiera följande kodfragment för en listfråga för den förinlästa **AEM demoresurser** slutpunkt. En listfråga returnerar en lista med allt innehåll som använder en viss modell för innehållsfragment. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
 
