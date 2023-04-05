@@ -1,10 +1,10 @@
 ---
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: c6acdd922c052d0db5bf1f05bc03329fbc44ca33
+source-git-commit: c56ed1878b89a1f31c5b7b44696511d51cfa5351
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 1%
+source-wordcount: '342'
+ht-degree: 2%
 
 ---
 
@@ -19,12 +19,16 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 113
 
 Funktionsaktiveringen för den här underhållsversionen ger dig den fullständiga funktionsuppsättningen. Se [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för fullständig information.
 
-### Åtgärdade problem {#fixed-issues}
+### Kända fel {#known-issues-11382}
+
+- SITES-12573 - GraphQL-frågor som använder variabler i ett filter misslyckas om ingen variabel anges. Please do not update to this release shall you use GraphQL with AEM as a Cloud Service.
+
+### Åtgärdade problem {#fixed-issues-11382}
 
 - ASSETS-21023 - Fast Smart Crop-återgivning, där kunderna kunde observera ett Null-pekarundantag i Publisher-instansen för alla AEM miljöer när de försökte få åtkomst till dessa återgivningar via API:t.
 - SKYOPS-49280 - När du installerar en konfigurations- eller paketuppdatering med RDE i Publicera kanske resultatet inte blir observerbart eftersom publiceringsdispatcherns cache inte är ogiltig
 
-#### Sites {#sites-issues}
+#### Sites {#sites-issues-11382}
 
 - SITES-7796 - Möjlighet för innehållsförfattare att publicera det Överordnad innehållsfragmentet och dess respektive variationer vid export till målgruppen
 - SITES-97 - GraphQL: Sidnumrering och sortering, hybridfiltrering
@@ -33,20 +37,20 @@ Funktionsaktiveringen för den här underhållsversionen ger dig den fullständi
 >
 > I SITES-97 har vissa förbättringar gjorts i GraphQL-implementeringen som kan orsaka oväntat beteende. Se [AEM GraphQL ändringar gällande hantering av null-värden](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-21792.html) för mer information.
 
-#### Assets {#assets-issues}
+#### Assets {#assets-issues-11382}
 
 - ASSETS-20076 - Lägg till stöd för videovattenstämplar som matchar det aktuella stödet för bildvattenstämplar
 - ASSETS-21428 - tillägg av undantag för CSS-ändringar
 
-#### Forms {#forms-issues}
+#### Forms {#forms-issues-11382}
 
 - CQ-4351502 - Uppdaterar användarmappningen för tjänsten så att läsåtkomst tillåts på webbplatser
 
-#### Plattform {#platform-issues}
+#### Plattform {#platform-issues-11382}
 
 - SITES-11040 - Villkorlig aktivering av GraphQL beständig frågecachelagring i dispatcher
 
-### Inbäddade tekniker {#embedded-tech}
+### Inbäddade tekniker {#embedded-tech-11382}
 
 | Teknik | Version | Länk |
 |---|---|---|
