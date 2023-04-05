@@ -1,9 +1,9 @@
 ---
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
-source-git-commit: f4b9aafc3f805a8f19f35b8a8447cae6c537076a
+source-git-commit: 95787669581c906a9cdc35a0ac450adf17b0b402
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3314'
 ht-degree: 0%
 
 ---
@@ -218,6 +218,8 @@ Du kan även referera till en fjärrdatabas:
 `aio aem:rde:install -t content-package "https://repo1.maven.org/maven2/com/adobe/aem/guides/aem-guides-wknd.all/2.1.0/aem-guides-wknd.all-2.1.0.zip"`
 
 Som standard distribueras artefakter till både författar- och publiceringsnivåer, men flaggan&quot;-s&quot; kan användas för att ange ett specifikt skikt som mål.
+
+Alla AEM kan distribueras, till exempel paket med kod, innehåll eller en [behållarpaket](/help/implementing/developing/introduction/aem-project-content-package-structure.md#container-packages) (kallas även&quot;all&quot;-paketet).
 
 >[!IMPORTANT]
 >
