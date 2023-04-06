@@ -9,9 +9,9 @@ feature: Image Profiles
 role: User, Admin
 mini-toc-levels: 4
 exl-id: b0891095-e4a9-4dd5-8dfd-a576bc47d082
-source-git-commit: 1730efd1fddd119f2b7950a0e7638ba5624fbb44
+source-git-commit: 26f697dab03e0a3387669304b7f7f14dc2182a6d
 workflow-type: tm+mt
-source-wordcount: '3213'
+source-wordcount: '3240'
 ht-degree: 0%
 
 ---
@@ -86,16 +86,16 @@ De här inställningarna gäller standardutseendet för bilder.
 
 | Inställning | Beskrivning |
 | --- | --- |
-| **[!UICONTROL Reply image size limit]** | Krävs.<br>Endast för nya Dynamic Media-konton anges standardstorleksgränsen automatiskt till Bredd: `3000` och höjd: `3000` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Anger den maximala svarsbildens bredd och höjd som returneras till klienten. Servern returnerar ett fel om en begäran orsakar en svarsbild vars bredd, höjd eller båda är större än den här inställningen.<br>Se även [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Reply image size limit]** | Obligatoriskt.<br>Endast för nya Dynamic Media-konton anges standardstorleksgränsen automatiskt till Bredd: `3000` och höjd: `3000` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Anger den maximala svarsbildens bredd och höjd som returneras till klienten. Servern returnerar ett fel om en begäran orsakar en svarsbild vars bredd, höjd eller båda är större än den här inställningen.<br>Se även [MaxPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-maxpix.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Request obfuscation mode]** | Aktivera om du vill att base64-kodning ska användas på giltiga begäranden.<br>Se även [RequestObfuscation](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestobfuscation.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Request locking mode]** | Aktivera om du vill att ett enkelt hash-lås ska inkluderas i begäranden.<br>Se även [RequestLock](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-requestlock.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Default Request Attributes]** |  |
-| **[!UICONTROL Default image file suffix]** | Krävs.<br>Standarddatafiltillägg som läggs till i fältvärdena katalogsökväg och MaskPath om sökvägen inte innehåller något filsuffix.<br>Se även [DefaultExt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default image file suffix]** | Obligatoriskt.<br>Standarddatafiltillägg som läggs till i fältvärdena katalogsökväg och MaskPath om sökvägen inte innehåller något filsuffix.<br>Se även [DefaultExt](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultext.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Default font face name]** | Anger vilket teckensnitt som ska användas om inget teckensnitt anges i en textlagerbegäran. Om du anger det måste det vara ett giltigt teckensnittsnamnvärde i teckensnittskartan för den här bildkatalogen eller i teckensnittskartan för standardkatalogen.<br>Se även [DefaultFont](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultfont.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Default image]** | Tillhandahåller en standardbild som returneras som svar på en begäran där den begärda bilden inte hittas.<br>Se även [DefaultImage](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-is-cat-defaultimage.html) i referenshandboken för Dynamic Media Viewer.<br>**ANMÄRKNING**: Om ditt Dynamic Media Classic-konto redan har en **[!UICONTROL Default image]** markerat (enligt **[!UICONTROL Setup]** > **[!UICONTROL Application]** > **[!UICONTROL Publish setup]**, under **[!UICONTROL Default Request Attributes]** (grupp), ditt Dynamic Media-konto på Experience Manager hämtar filen från Dynamic Media Classic. Filen lagras och blir tillgänglig i det här fältet när du öppnar **[!UICONTROL Dynamic Media Publish Setup]** för första gången. |
 | **[!UICONTROL Default image mode]** | När skjutreglaget är aktiverat (skjutreglage till höger) visas **[!UICONTROL Default image]** ersätter varje lager som saknas i källbilden med standardbilden och returnerar den sammansatta bilden som vanligt. När skjutreglaget är inaktiverat (skjutreglage till vänster) ersätter standardbilden hela den sammansatta bilden, även om den saknade bilden bara är ett av flera lager.<br>Se även [DefaultImageMode](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultimagemode.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default view size]** | Krävs.<br>Endast för nya Dynamic Media-konton anges standardvisningsstorleken automatiskt till Bredd: `1280` och höjd: `1280` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Servern begränsar svarsbilderna till att inte vara större än den här bredden och höjden om begäran inte uttryckligen anger visningsstorleken med `wid=`, `hei=`, eller `scl=`.<br>Se även [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) i referenshandboken för Dynamic Media Viewer. |
-| **[!UICONTROL Default thumbnail size]** | Krävs.<br>Används i stället för attribut **[!UICONTROL Default view size]** för miniatyrbegäranden (`req=tmb`). Servern begränsar svarsbilderna så att de inte är större än den här bredden och höjden, om en miniatyrbildsbegäran (`req=tmb`) anger inte storleken explicit med `wid=`, `hei=`, eller `scl=`.<br>Se även [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default view size]** | Obligatoriskt.<br>Endast för nya Dynamic Media-konton anges standardvisningsstorleken automatiskt till Bredd: `1280` och höjd: `1280` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Servern begränsar svarsbilderna till att inte vara större än den här bredden och höjden om begäran inte uttryckligen anger visningsstorleken med `wid=`, `hei=`, eller `scl=`.<br>Se även [DefaultPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultpix.html) i referenshandboken för Dynamic Media Viewer. |
+| **[!UICONTROL Default thumbnail size]** | Obligatoriskt.<br>Används i stället för attribut **[!UICONTROL Default view size]** för miniatyrbegäranden (`req=tmb`). Servern begränsar svarsbilderna så att de inte är större än den här bredden och höjden, om en miniatyrbildsbegäran (`req=tmb`) anger inte storleken explicit med `wid=`, `hei=`, eller `scl=`.<br>Se även [DefaultThumbPix](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-defaultthumbpix.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL Default background color]** | Anger RGB som används för att fylla i områden i en svarsbild som inte innehåller verkliga bilddata.<br>Se även [BkgColor](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-bkgcolor.html) i referenshandboken för Dynamic Media Viewer. |
 | **[!UICONTROL JPEG Encoding Attributes]** |  |
 | **[!UICONTROL Quality]** | <br>Anger standardattributen för svarsbilder i JPEG.<br>Endast för nya Dynamic Media-konton finns **[!UICONTROL Quality]** standardvärdet anges automatiskt till `80` för båda **[!UICONTROL Image Serving]** och **[!UICONTROL Test Image Serving]**.<br>Det här fältet definieras i intervallet 1-100.<br>Se även [JpegQuality](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/attributes/r-jpegquality.html) i referenshandboken för Dynamic Media Viewer. |
@@ -195,9 +195,13 @@ Följande tillgångstyper och funktioner stöds för närvarande inte:
 * Webb-till-tryck
 * UGC-tjänster (användargenererat innehåll)
 
->[!IMPORTANT]
->
->Stöd för nya eller befintliga UGC-vektorbildresurser i Adobe Dynamic Media upphörde den 30 september 2021.
+   >[!IMPORTANT]
+   >
+   >Från och med 1 maj 2023 kommer UGC-resurser i Dynamic Media att vara tillgängliga för användning upp till 60 dagar från överföringsdatumet. Efter 60 dagar tas resurserna bort.
+
+   >[!NOTE]
+   >
+   >Stöd för nya eller befintliga UGC-vektorbildresurser i Adobe Dynamic Media upphörde den 30 september 2021.
 
 ### Testa tjänsten för säker testning {#test-secure-testing-service}
 
