@@ -2,7 +2,7 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: 55ecd685afa28226974f3415b550bd2e8d05e2e6
+source-git-commit: 30acb844ee4021b3e14011b548825c864de8903d
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%
@@ -107,7 +107,7 @@ Ta hänsyn till att hela intaget misslyckas om någon av följande begränsninga
 Jämfört med avsnittet ovanför intaget **inte** misslyckas på grund av följande problem med tillgångar. Vi rekommenderar dock att du vidtar lämpliga åtgärder i följande situationer:
 
 * Alla resurser som har den ursprungliga återgivningen saknas
-* Alla mappar som saknas `jcr:content` nod
+* Alla mappar som saknas `jcr:content` nod.
 
 Båda ovanstående poster identifieras och rapporteras i [Best Practice Analyzer](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md) rapport.
 
