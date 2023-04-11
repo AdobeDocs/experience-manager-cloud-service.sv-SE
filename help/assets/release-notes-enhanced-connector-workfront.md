@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: fd625274fd205ffd0604f95e1e80304185b6d014
+source-git-commit: a65f736f922bcb58c09773ff9c6d6f7104b6157d
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,22 +15,21 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.8 av [!DNL Workfront for Experience Manager enhanced connector] är 3 mars 2023.
+Releasedatum för den senaste versionen, 1.9.9 av [!DNL Workfront for Experience Manager enhanced connector] är 10 april 2023.
 
 ## Frigör högdagrar {#release-highlights}
 
-Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande uppdateringar:
+Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller uppdateringarna:
 
-* Prestandaförbättringar i Experience Manager när länkade projektmappar skapas i Workfront.
+* Experience Manager visar en `DateTimeParseException` undantagsfel när det tar emot det senaste ändringsdatumet från Workfront när en länkad mapp skapas.
 
-* Kommentarsborttagningar i Workfront visas nu i Experience Manager.
+* Problem vid skapande av flera länkade projektmappar på kort tid.
 
-* Möjlighet att hantera blockerande nya kunder på Experience Manager as a Cloud Service från att konfigurera anslutningen.
-
+* Det går inte att konfigurera en tröskelgräns för antalet nya uppsättningar av projektlänkade mappar.
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [uppgradera till den senaste 1.9.8-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar att du [uppgradera till den senaste 1.9.9-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -40,7 +39,18 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 ## Tidigare versioner {#previous-releases}
 
-### Januariversion 2022 {#january-2022-release}
+### Mars 2023-utgåvan {#march-2023-release}
+
+[!DNL Workfront for Experience Manager enhanced connector] version 1.9.8, släppt 2023-03-03 innehåller följande uppdateringar:
+
+* Prestandaförbättringar i Experience Manager när länkade projektmappar skapas i Workfront.
+
+* Kommentarsborttagningar i Workfront visas nu i Experience Manager.
+
+* Möjlighet att hantera blockerande nya kunder på Experience Manager as a Cloud Service från att konfigurera anslutningen.
+
+
+### Januariversion 2023 {#january-2022-release}
 
 [!DNL Workfront for Experience Manager enhanced connector] version 1.9.7, släppt 2023-02-02 innehåller följande uppdateringar:
 
