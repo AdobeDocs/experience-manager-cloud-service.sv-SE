@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: a2507c65df5d42ac53fcbb0a81cc2fb897438f44
+source-git-commit: 53f1a6bb83e4ad52d00f9899db0a87c3cb3e2653
 workflow-type: tm+mt
-source-wordcount: '2147'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,15 +23,15 @@ Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa o
 
 AEM innehåller en integrerad svit med [Kvalitetsportar för Cloud Manager](/help/implementing/cloud-manager/custom-code-quality-rules.md) för smidiga uppdateringar av anpassade program. I synnerhet har IT-testportar redan stöd för att skapa och automatisera anpassade tester med AEM API:er.
 
-Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Dessutom kan ett UI-testprojekt enkelt genereras med [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium). Dessutom kan ett UI-testprojekt enkelt genereras med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
-Gränssnittstester utförs som en del av en viss kvalitetsgrind för varje Cloud Manager-pipeline med en [**Testning av anpassat användargränssnitt** steg](/help/implementing/cloud-manager/deploy-code.md) in [produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) eller valfritt [rörledningar för icke-produktion.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) Alla gränssnittstester, inklusive regression och nya funktioner, gör att fel kan upptäckas och rapporteras.
+Gränssnittstester utförs som en del av en viss kvalitetsgrind för varje Cloud Manager-pipeline med en [**Testning av anpassat användargränssnitt** steg](/help/implementing/cloud-manager/deploy-code.md) in [produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) eller valfritt [rörledningar för icke-produktion](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md). Alla gränssnittstester, inklusive regression och nya funktioner, gör att fel kan upptäckas och rapporteras.
 
-Till skillnad från anpassade funktionstester, som är HTTP-tester skrivna i Java, kan gränssnittstester vara en dockningsbild med tester skrivna på vilket språk som helst, förutsatt att de följer konventionerna som definieras i avsnittet [Bygger gränssnittstester.](#building-ui-tests)
+Till skillnad från anpassade funktionstester, som är HTTP-tester skrivna i Java, kan gränssnittstester vara en dockningsbild med tester skrivna på vilket språk som helst, förutsatt att de följer konventionerna som definieras i avsnittet [Skapar gränssnittstester](#building-ui-tests).
 
 >[!TIP]
 >
->Adobe rekommenderar att du följer strukturen och språket (JavaScript och WDIO) i [AEM Project Archetype.](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests)
+>Adobe rekommenderar att du följer strukturen och språket (JavaScript och WDIO) i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests).
 >
 >Adobe tillhandahåller också ett exempel på en gränssnittstestmodul som baseras på Java och WebDriver. Se [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver) för mer information.
 
@@ -45,15 +45,15 @@ I det här avsnittet beskrivs stegen som krävs för att konfigurera gränssnitt
 
       >[!NOTE]
       >
-      >Om din databas skapades innan Cloud Manager skapades automatiskt `it.tests` kan du även generera den senaste versionen med [AEM Project Archetype.](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/it.tests)
+      >Om din databas skapades innan Cloud Manager skapades automatiskt `it.tests` kan du även generera den senaste versionen med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/it.tests).
 
-   * För Java och WebDriver använder du exempelkoden i [AEM Test Samples.](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver)
+   * För Java och WebDriver använder du exempelkoden i [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver).
 
    * För andra programmeringsspråk, se avsnittet [Skapar gränssnittstester](#building-ui-tests) i det här dokumentet för att konfigurera testprojektet.
 
 1. Kontrollera att gränssnittstestning är aktiverat enligt avsnittet [Kundens deltagande](#customer-opt-in) i det här dokumentet.
 
-1. Utveckla testfall och [köra testerna lokalt.](#run-ui-tests-locally)
+1. Utveckla testfall och [köra testerna lokalt](#run-ui-tests-locally).
 
 1. Implementera koden i molnhanterarens databas och kör en Cloud Manager-pipeline.
 
@@ -257,7 +257,7 @@ Du kan använda hjälpfunktionerna för att skapa skärmbilder genom testerna.
 * JavaScript: [kommandot takeScreenshot](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/test-module/lib/commons.js)
 * Java: [Kommandon](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Commands.java)
 
-Om ett testresultatarkiv skapas under en UI-testkörning kan du hämta det från Cloud Manager med `Download Details` knappen under [**Testning av anpassat användargränssnitt** steg.](/help/implementing/cloud-manager/deploy-code.md)
+Om ett testresultatarkiv skapas under en UI-testkörning kan du hämta det från Cloud Manager med `Download Details` knappen under [**Testning av anpassat användargränssnitt** steg](/help/implementing/cloud-manager/deploy-code.md).
 
 ### Överför filer {#upload-files}
 
@@ -309,7 +309,7 @@ Om du kör gränssnittstesterna från den lokala datorn skapar du en användare 
 >* Loggfilerna lagras i `target/reports` mapp i din databas
 >* Du måste se till att du har den senaste Chrome-versionen när testet hämtar den senaste versionen av ChromeDriver automatiskt för testning.
 >
->Mer information finns i [AEM Project Archetype-databas.](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/README.md)
+>Mer information finns i [AEM Project Archetype-databas](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/README.md).
 
 ### Java Test Sample {#java-sample}
 
@@ -332,4 +332,4 @@ Om du kör gränssnittstesterna från den lokala datorn skapar du en användare 
 >
 >* Loggfilerna sparas i `target/reports` -mapp i din databas.
 >
->Mer information finns i [AEM Test Samples.](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/README.md)
+>Mer information finns i [AEM Test Samples](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/README.md).
