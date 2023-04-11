@@ -65,7 +65,7 @@ Konfigurationsinstruktioner:
 1. SNI måste också ställas in på Adobe CDN:s ingress.
 1. Ange värdhuvudet som den ursprungliga domänen. Till exempel: `Host:publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ange `X-Forwarded-Host` header med domännamnet så att AEM kan avgöra värdhuvudet. Till exempel: `X-Forwarded-Host:example.com`.
-1. Uppsättning `X-AEM-Edge-Key`. Värdet ska komma från Adobe.
+1. Ange `X-AEM-Edge-Key`. Värdet ska komma från Adobe.
 
    * Detta behövs för att CDN-nätverket i Adobe ska kunna validera källan för förfrågningarna och skicka `X-Forwarded-*` rubriker i AEM. Till exempel:`X-Forwarded-For` används för att fastställa klientens IP-adress. Det blir alltså den betrodda uppringarens (dvs. kundhanterade CDN) ansvar att se till att `X-Forwarded-*` rubriker (se anteckningen nedan).
    * Åtkomst till Adobe CDN-ingången kan blockeras om en `X-AEM-Edge-Key` finns inte. Informera Adobe om du behöver direktåtkomst till Adobe CDN:s ingress (som ska blockeras).
