@@ -5,7 +5,7 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: 13e75e8b0f08463f5fd941263497f5cf0a31129c
+source-git-commit: 449e189b117aca58b960e802f8b3b11e7a5ea523
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Här ser du att det finns tre huvudområden:
    * **[Skapa](#creating-new-content-fragment)** ett nytt innehållsfragment
    * [Filter](#filtering-fragments) innehållsfragment enligt ett urval predikatmallar och spara filtret för framtida bruk
    * [Sök](#searching-fragments) innehållsfragment
-   * [Anpassa tabellvyn så att markerade informationskolumner visas](#selectuse-available-columns)
+   * [Anpassa tabellvyn så att markerade informationskolumner visas](#select-available-columns)
    * Använd **Öppna i resurser** om du vill öppna den aktuella platsen direkt i **Resurser** konsol
 
       >[!NOTE]
@@ -90,7 +90,7 @@ Om du väljer ett visst fragment öppnas ett verktygsfält som fokuserar på de 
 * **Publicera** (och **Avpublicera**)
 * **Kopiera**
 * **Flytta**
-* **Byt namn på**
+* **Byt namn**
 * **Ta bort**
 
 >[!NOTE]
@@ -124,7 +124,7 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 
       ![Konsolen Innehållsfragment - dialogrutan Referenser](assets/cfc-console-references-dialog.png)
 
-* **Språk:**
+* **Språk**
 
    * Anger språket för innehållsfragmentet tillsammans med det totala antalet språk/språkkopior som är associerade med innehållsfragmentet.
 

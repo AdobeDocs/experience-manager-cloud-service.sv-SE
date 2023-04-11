@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
+source-git-commit: 449e189b117aca58b960e802f8b3b11e7a5ea523
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1761'
 ht-degree: 6%
 
 ---
@@ -67,7 +67,7 @@ Metoden för att skapa ett innehållsfragment är:
 
          Fragmenttiteln.
 
-         Obligatorisk.
+         Obligatoriskt.
 
       * **Beskrivning**
 
@@ -131,10 +131,6 @@ Så här öppnar du fragmentet för redigering:
 >[!CAUTION]
 >
 >Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
-
->[!CAUTION]
->
->Om du vill redigera ett innehållsfragment måste du ha rätt behörighet. Kontakta systemadministratören om du har problem.
 
 1. Använd **Resurser** konsol för att navigera till platsen för ditt innehållsfragment.
 1. Öppna fragmentet för redigering, antingen genom att:
