@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 7e5a966693b139efa42111d8b6d675674516cfc6
+source-git-commit: 5475f9995513d09e61bd8f52242b3e74b8d4694c
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +39,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    * Välj den migreringsuppsättning som innehåller extraherade data som källa.
       * Migreringsuppsättningar kommer att upphöra efter en längre inaktivitetsperiod, så det förväntas att intaget sker relativt snart efter att extraktionen har utförts. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
-   * Välj målmiljö. Det är här som migreringsuppsättningens innehåll importeras. Välj nivån. (Författare/Publicera).
+   * Välj målmiljö. Det är här som migreringsuppsättningens innehåll importeras. Välj nivån. (Författare/Publicera). Snabba utvecklingsmiljöer stöds inte.
 
    >[!NOTE]
    >
@@ -55,9 +55,13 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
    > 
    >Om du använder inmatning med förkopia (för S3 eller Azure Data Store) bör du endast köra Author-intagning. Detta snabbar upp inläsningen av publiceringen när den körs senare.
 
+   >[!NOTE]
+   >
+   >Inställningarna stöder inte en Rapid Development Environment-destination (RDE). De visas inte som ett möjligt målalternativ, även om användaren har åtkomst till det.
+
    >[!IMPORTANT]
    >
-   >Du kommer bara att kunna starta upp ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
+   >Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
 
    >[!IMPORTANT]
    >
@@ -71,7 +75,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam23.png)
 
-1. När du har slutfört intag klickar du på (i) knappen längst upp till höger på skärmen för att få mer information om intagsjobbet.
+1. När du har slutfört intag klickar du på (i) knappen i det övre högra hörnet av skärmen för att få mer information om intagsjobbet.
 
 <!-- Alexandru: hiding temporarily, until it's reviewed 
 
@@ -103,7 +107,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 >id="aemcloud_ctt_ingestion_topup"
 >title="Uppdatera inmatning"
 >abstract="Använd den övre funktionen för att flytta ändrat innehåll sedan föregående innehållsöverföringsaktivitet. Kontrollera loggarna efter eventuella fel/varningar när du har slutfört Ingestition. Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att kontakta Adobe kundtjänst."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs.html?lang=en" text="Visa loggar"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs.html" text="Visa loggar"
 
 Content Transfer Tool har en funktion för differentiell *innehållsuppdatering* som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
@@ -132,7 +136,7 @@ Du måste hämta migreringstoken manuellt genom att klicka på länken Hämta to
 
 ### Det går inte att starta matning {#unable-to-start-ingestion}
 
-Du kommer bara att kunna starta upp ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte tillhör gruppen AEM administratörer visas ett felmeddelande enligt nedan när du försöker starta ett intag. Du kan antingen be administratören att lägga till dig på den lokala **AEM administratörer** eller fråga efter själva variabeln som du sedan kan klistra in i **Indata för migreringstoken** fält.
+Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte tillhör gruppen AEM administratörer visas ett felmeddelande enligt nedan när du försöker starta ett intag. Du kan antingen be administratören att lägga till dig på den lokala **AEM administratörer** eller fråga efter själva variabeln som du sedan kan klistra in i **Indata för migreringstoken** fält.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_nonadmin_ingestion.png)
 
@@ -175,4 +179,4 @@ Den här konflikten måste lösas manuellt. Någon som är bekant med innehålle
 
 ## What&#39;s Next {#whats-next}
 
-När du har slutfört Inkludering av innehåll i Target kan du visa loggar för varje steg (extrahering och förtäring) och leta efter fel. Se [Visa loggar för en migreringsuppsättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/viewing-logs.html?lang=en) om du vill veta mer.
+När du har slutfört Inkludering av innehåll i Target kan du visa loggar för varje steg (extrahering och förtäring) och leta efter fel. Se [Visa loggar för en migreringsuppsättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/viewing-logs.html) om du vill veta mer.

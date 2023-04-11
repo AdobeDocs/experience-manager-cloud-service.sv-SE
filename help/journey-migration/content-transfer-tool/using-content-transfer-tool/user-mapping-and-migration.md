@@ -1,9 +1,9 @@
 ---
 title: Användarmappning och huvudmigrering
 description: Översikt över användarmappning och huvudmigrering
-source-git-commit: aeb8f633b45908a87f15f9feeb3723f90470be92
+source-git-commit: 5475f9995513d09e61bd8f52242b3e74b8d4694c
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '757'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 Som en del av övergången till Adobe Experience Manager (AEM) as a Cloud Service måste du flytta användare och grupper från ditt befintliga AEM till AEM as a Cloud Service. Detta görs med verktyget Innehållsöverföring.
 
-En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön. Detta kräver att [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) för hantering av användare och användargrupper. Användarprofilsinformationen är centraliserad i Adobe Identity Management System (IMS) som möjliggör enkel inloggning i alla Adobe-molnprogram. Mer information finns i [Identity Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/what-is-new-and-different.html?lang=en#identity-management). På grund av den här ändringen måste befintliga användare mappas till sina IMS-ID:n för att undvika dubbletter av användare i Cloud Servicens författarinstans. Eftersom grupper i traditionella AEM i grunden skiljer sig från grupper i IMS, mappas inte grupper, men de två uppsättningarna grupper måste förenas när migreringen är klar.
+En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön. Detta kräver att [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) för hantering av användare och användargrupper. Användarprofilsinformationen är centraliserad i Adobe Identity Management System (IMS) som möjliggör enkel inloggning i alla Adobe-molnprogram. Mer information finns i [Identity Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/what-is-new-and-different.html#identity-management). På grund av den här ändringen måste befintliga användare mappas till sina IMS-ID:n för att undvika dubbletter av användare i Cloud Servicens författarinstans. Eftersom grupper i traditionella AEM i grunden skiljer sig från grupper i IMS, mappas inte grupper, men de två uppsättningarna grupper måste förenas när migreringen är klar.
 
 ## Information om användarmappning och migrering {#user-mapping-detail}
 
@@ -49,6 +49,6 @@ Följande specialfall loggas:
 
 ## Ytterligare överväganden {#additional-considerations}
 
-* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** är inställt kommer redan överförda användare i Cloud Servicen att tas bort tillsammans med hela den befintliga databasen och en ny databas kommer att skapas för att importera innehåll till. Detta återställer även alla inställningar inklusive behörigheter för målanvändarinstansen och gäller för en Cloud Service som lagts till i **administratörer** grupp. Administratörsanvändaren måste läsas till **administratörer** grupp för att hämta åtkomsttoken för CTT.
+* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** är inställt kommer redan överförda användare i Cloud Servicen att tas bort tillsammans med hela den befintliga databasen och en ny databas kommer att skapas för att importera innehåll till. Detta återställer även alla inställningar inklusive behörigheter för målanvändarinstansen och gäller för en Cloud Service som lagts till i **administratörer** grupp. Administratörsanvändaren måste läggas till på nytt i **administratörer** grupp för att hämta åtkomsttoken för CTT.
 * När innehållsöverläggningar utförs och innehållet inte överförs eftersom det inte har ändrats sedan den tidigare överföringen, överförs inte heller användare och grupper som är kopplade till det innehållet, även om användare och grupper har ändrats under tiden. Detta beror på att användare och grupper migreras tillsammans med det innehåll de är kopplade till.
 * Om målinstansen av AEM Cloud Service har en användare med ett annat användarnamn men samma e-postadress som en av användarna i AEM och användarmappning är aktiverat, skrivs ett felmeddelande i loggarna och AEM-användaren inte överförs, eftersom endast en användare med en angiven e-postadress tillåts i målsystemet.

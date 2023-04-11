@@ -2,10 +2,10 @@
 title: Krav för verktyget Innehållsöverföring
 description: Krav för verktyget Innehållsöverföring
 exl-id: 41a9cff1-4d89-480c-b9fc-5e8efc2a0705
-source-git-commit: fac037b59753ba1de960df47311c1febc2059d27
+source-git-commit: 5475f9995513d09e61bd8f52242b3e74b8d4694c
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_prereqs"
 >title="Viktigt att tänka på när du använder verktyget Innehållsöverföring"
->abstract="Granska viktiga aspekter av att använda verktyget för innehållsöverföring, inklusive Java- och AEM-versioner, datastortyper som stöds, användargrupper med mera."
+>abstract="Läs igenom viktiga aspekter av att använda verktyget för innehållsöverföring, inklusive Java- och AEM-versioner, datastortyper som stöds, användargrupper med mera."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#pre-reqs" text="Viktigt att tänka på när du använder Content Transfer Tool"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html#best-practices" text="God praxis och riktlinjer"
 
@@ -23,7 +23,7 @@ I följande tabell sammanfattas förutsättningarna för att använda verktyget 
 Läs alla överväganden som anges nedan:
 
 | Överväganden | Vad stöds för närvarande? |
-|--- |--- |
+|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AEM | Verktyget Innehållsöverföring kan endast köras i AEM 6.3 eller senare. |
 | Storlek på segmentlager | En befintlig databas som har mindre än 55 miljoner JCR-noder och upp till 250 GB (komprimerad storlek online) på *Upphovsman* och 50 GB på *Publicera* stöds för närvarande. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för segmentbutikens storlek över dessa gränser. |
 | Total storlek på innehållsdatabas <br>*(segmentbutik + datalager)* | Verktyget Innehållsöverföring är utformat för att överföra innehåll upp till 20 TB för datalagringstypen. Allt som är större än 20 TB stöds för närvarande inte. Skapa en supportanmälan med Adobe kundtjänst för att diskutera alternativ för innehåll som är större än 20 TB. <br>Om du vill snabba upp innehållsöverföringsprocessen avsevärt för stora databaser kan du välja [förkopia](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html#setting-up-pre-copy-step) kan användas. Detta gäller för datalagrets fildatalager, Amazon S3 och Azure Data Store-typer. För Amazon S3 och Azure Data Store stöds databasstorlekar större än 20 TB. |
@@ -34,4 +34,4 @@ Läs alla överväganden som anges nedan:
 
 ## What&#39;s Next {#whats-next}
 
-När du har granskat kraven och har fastställt om du kan använda verktyget för innehållsöverföring i ditt migreringsprojekt, se [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html?lang=en).
+När du har granskat kraven och har fastställt om du kan använda verktyget för innehållsöverföring i ditt migreringsprojekt, se [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html).
