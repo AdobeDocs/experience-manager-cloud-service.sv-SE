@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 5475f9995513d09e61bd8f52242b3e74b8d4694c
+source-git-commit: 7854a0217c5d2e7d260a6fbe893aef1e6d4a4c72
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,8 +20,6 @@ ht-degree: 6%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#top-up-ingestion-process" text="Uppdatera inmatning"
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
->[!NOTE]
->Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intagningsfasen. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Se [Ingesting with AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#ingesting-azcopy) för mer information.
 
 >[!NOTE]
 >Kom du ihåg att logga en supportbiljett för det här intaget? Se [Viktigt att tänka på innan du använder verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html#important-considerations) och andra överväganden för att underlätta intag.
@@ -29,7 +27,6 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 1. Gå till Cloud Acceleration Manager. Klicka på ditt projektkort och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och klicka på **Nytt intag**
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-01.png)
-
 
 1. Granska checklistan för konsumtion och se till att alla steg har slutförts. Detta är nödvändiga steg för att säkerställa ett lyckat intag. Du kan fortsätta till **Nästa** endast om checklistan har slutförts.
 
