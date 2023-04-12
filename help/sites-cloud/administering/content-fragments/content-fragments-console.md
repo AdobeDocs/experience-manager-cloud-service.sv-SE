@@ -5,9 +5,9 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: 449e189b117aca58b960e802f8b3b11e7a5ea523
+source-git-commit: d02bfc6fc6502a96e270e87ea8567d7a55e33b3a
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,7 @@ Här ser du att det finns tre huvudområden:
 * Den vänstra panelen
    * Här kan du dölja, eller visa, mappträdet
    * Du kan välja en viss gren av trädet
+   * Storleken kan ändras så att kapslade mappar visas
 * Panelen main/right - härifrån kan du:
    * Se listan med alla innehållsfragment i den markerade grenen i trädet:
       * Platsen anges av vägbeskrivningarna. dessa kan också användas för att ändra platsen
@@ -64,8 +65,10 @@ Här ser du att det finns tre huvudområden:
             * Öppna rätt fragment i redigeraren
             * Visa information om referenser
             * Visa information om språkversioner av fragmentet
-         * Du kan [markera ett eller flera innehållsfragment för att visa tillgängliga åtgärder](#actions-selected-content-fragment)
-      * Du kan välja en kolumnrubrik för att sortera tabellen efter den kolumnen; välj igen om du vill växla mellan stigande och fallande. För närvarande stöds sortering på **Titel**, **Ändrad** och **Ändrad av** kolumner.
+      * Genom att använda musen på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du:
+         * Sortera - välj lämplig åtgärd för antingen stigande eller fallande Detta sorterar hela tabellen efter den kolumnen. Sortering är bara tillgängligt för lämpliga kolumner.
+         * Ändra storlek på kolumnen med antingen funktionsmakrot eller breddreglagen
+      * Du kan [markera ett eller flera innehållsfragment för att visa tillgängliga åtgärder](#actions-selected-content-fragment)
    * **[Skapa](#creating-new-content-fragment)** ett nytt innehållsfragment
    * [Filter](#filtering-fragments) innehållsfragment enligt ett urval predikatmallar och spara filtret för framtida bruk
    * [Sök](#searching-fragments) innehållsfragment
@@ -154,7 +157,7 @@ Markera **Skapa** öppnar komprimeringen **Nytt innehållsfragment** dialog:
 
 På panelen Filter finns:
 
-* ett urval av predikat som kan markeras och kombineras
+* Ett urval av prediater. ett eller flera predikat kan markeras och kombineras för att skapa filtret
 * möjlighet att **Spara** din konfiguration
 * alternativet att hämta ett sparat sökfilter för återanvändning
 
