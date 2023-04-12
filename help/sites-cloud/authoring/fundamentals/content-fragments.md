@@ -2,9 +2,9 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: 9c3153efe4aacd1666663cd5eb718f75329202af
+source-git-commit: 7ce05d282d553c5552cd828d08aaf6b7b5fb4e05
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1227'
 ht-degree: 3%
 
 ---
@@ -185,3 +185,10 @@ Fragment måste publiceras så att de kan användas på dina publicerade webbsid
 
 * Ett fragment kan publiceras efter [skapa fragmentet i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#publishing-and-referencing-a-fragment).
 * Om en *opublicerat fragment* används på en sida som publiceras, kan fragmentet också publiceras just nu.
+
+## Exportera innehållsfragment {#exporting-content-fragments}
+
+Vid export till Adobe Target kan JSON användas för att leverera fragmentet. Se:
+
+* [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md)
+* [Exportera innehållsfragment till Adobe Target](/help/sites-cloud/integrating/content-fragments-target.md)

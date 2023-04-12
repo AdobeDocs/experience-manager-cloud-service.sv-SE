@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: cda6d7e382b090fd726b27e565da08c8b1c80008
+source-git-commit: 32f14d94e2eb9e9ec9e6d04b663733bf5087a736
 workflow-type: tm+mt
-source-wordcount: '4203'
+source-wordcount: '4768'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ Om du till exempel:
 
 >[!NOTE]
 >
->Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
+>Detta är viktigt att notera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
 Schemat hanteras via samma slutpunkt som GraphQL-frågorna, där klienthanteraren hanterar det faktum att schemat anropas med tillägget `GQLschema`. Du kan till exempel utföra en enkel `GET` begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
 
@@ -223,7 +223,7 @@ När innehållsfragment är kapslade kan det hända att en överordnad Content F
 
 När detta inträffar genererar AEM en *ofullständig* Schema för den överordnade innehållsfragmentmodellen. Det innebär att fragmentreferensen, som är beroende av den opublicerade modellen, tas bort från schemat.
 
-## fält {#fields}
+## Fält {#fields}
 
 Inom schemat finns det enskilda fält av två baskategorier:
 
@@ -244,7 +244,7 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 | Enkelradig text | String, [Sträng] | Används för enkla strängar som författarnamn, platsnamn osv. |
 | Flerradstext | String, [Sträng] | Används för att skriva ut text, t.ex. brödtexten i en artikel |
 | Siffra | Float, [Float] | Används för att visa flyttal och reguljära tal |
-| Boolesk | Boolesk | Används för att visa kryssrutor → enkla sant/falskt-satser |
+| Boolean | Boolean | Används för att visa kryssrutor → enkla sant/falskt-satser |
 | Datum och tid | Kalender | Används för att visa datum och tid i ett ISO 8601-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
 | Uppräkning | Sträng | Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
 | Taggar | [Sträng] | Används för att visa en lista över strängar som representerar taggar som används i AEM |
@@ -460,7 +460,7 @@ Vid filtrering används en syntax som baseras på logiska operatorer och uttryck
 
 Den mest atomiska delen är ett enstaka uttryck som kan tillämpas på innehållet i ett visst fält. Innehållet i fältet jämförs med ett givet konstantvärde.
 
-Ta t ex följande uttryck
+Uttrycket
 
 ```graphql
 {
@@ -671,7 +671,7 @@ The `...Paginated` frågetypen återanvänder de flesta `...List` frågetypsfunk
 
 * `first`: The `n` de första objekten som ska returneras.
 Standardvärdet är `50`.
-Max antal är `100`.
+Maxvärdet är `100`.
 * `after`: Den markör som bestämmer början på den begärda sidan. Observera att det objekt som markören representerar inte ingår i resultatuppsättningen. markören för ett objekt bestäms av `cursor` fält för `edges` struktur.
 
 Du kan till exempel skriva ut en resultatsida som innehåller upp till fem äventyr, med början från det angivna markörobjektet i *complete* resultatlista:
@@ -702,6 +702,208 @@ query {
 >
 >* På grund av interna tekniska begränsningar försämras prestanda om sortering och filtrering tillämpas på kapslade fält. Därför bör du använda filter-/sorteringsfält som lagras på rotnivå. Detta är också det rekommenderade sättet om du vill fråga stora sidnumrerade resultatuppsättningar.
 
+
+## Webboptimerad bildleverans i GraphQL-frågor {#web-optimized-image-delivery-in-graphql-queries}
+
+Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
+
+* Begär en URL till en AEM
+
+* Skicka parametrar med frågan så att en viss återgivning av bilden genereras och returneras automatiskt
+
+   >[!NOTE]
+   >
+   >Den angivna återgivningen lagras inte i AEM Assets. Återgivningen genereras och sparas i cache-minnet under en kort period.
+
+* Returnera URL:en som en del av JSON-leveransen
+
+Du kan använda AEM för att:
+
+* Pass [Webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) till GraphQL-frågor.
+
+Det innebär att kommandona tillämpas under frågekörningen, på samma sätt som URL-parametrar vid GET-begäranden för dessa bilder.
+
+På så sätt kan du dynamiskt skapa bildåtergivningar för JSON-leverans, vilket innebär att du slipper skapa och lagra dessa återgivningar manuellt i databasen.
+
+Med GraphQL kan man
+
+* use `_dynamicUrl` på `ImageRef` referens
+
+* add `_assetTransform` till listrubriken där filtren har definierats
+
+### Omformningsbegärans struktur {#structure-transformation-request}
+
+`AssetTransform` (`_assetTransform`) används för att göra URL-omvandlingsbegäranden.
+
+Strukturen och syntaxen är:
+
+* `format`: en uppräkning med alla format som stöds av tillägget: GIF, PNG, PNG8, JPG, PJPG, BJPG, WEBP, WEBPLL eller WEBPLY
+* `seoName`: en sträng som ska användas som filnamn i stället för nodnamnet
+* `crop`: en understruktur för en bildruta, om bredd eller höjd utelämnas, används höjden eller bredden som samma värde
+   * `xOrigin`: bildrutans x-ursprung och är obligatoriskt
+   * `yOrigin`: ramens y-ursprung och är obligatoriskt
+   * `width`: ramens bredd
+   * `height`: ramens höjd
+* `size`: en dimensionsunderstruktur, om bredd eller höjd utelämnas, används höjden eller bredden som samma värde
+   * `width`: dimensionens bredd
+   * `height`: dimensionens höjd
+* `rotation`: en uppräkning av alla rotationer som stöds: R90, R180, R270
+* `flip`: en uppräkning av HORIZONTAL, VERTICAL, HORIZONTAL_AND_VERTICAL
+* `quality`: ett heltal mellan 1 och 100 som anger procentvärdet för bildkvaliteten
+* `width`: ett heltal som definierar bredden på utdatabilden men ignoreras av Image Generator
+* `preferWebp`: ett booleskt värde som anger om webben är att föredra (standardvärdet är false)
+
+URL-omformningen är tillgänglig för alla frågetyper: efter sökväg, lista eller sidnumrering.
+
+### Webboptimerad bildleverans med fullständiga parametrar {#web-optimized-image-delivery-full-parameters}
+
+Här följer ett exempel på en fråga med en fullständig uppsättning parametrar:
+
+```graphql
+{
+  articleList(
+    _assetTransform: {
+      format:GIF
+      seoName:"test"
+      crop:{
+        xOrigin:10
+        yOrigin:20
+        width:50
+        height:45
+      }
+      size:{
+        height:100
+        width:200
+      }
+      rotation:R90
+      flip:HORIZONTAL_AND_VERTICAL
+      quality:55
+      width:123
+      preferWebp:true
+    }
+  ) {
+    items {
+      _path
+      featuredImage {
+        ... on ImageRef {
+          _dynamicUrl
+        }
+      }
+    }
+  }
+}
+```
+
+### Webboptimerad bildleverans med en enda frågevariabel {#web-optimized-image-delivery-single-query-variable}
+
+I följande exempel visas användningen av en enda frågevariabel:
+
+```graphql
+query ($seoName: String!) {
+  articleList(
+    _assetTransform: {
+      format:GIF
+      seoName:$seoName
+      crop:{
+        xOrigin:10
+        yOrigin:20
+        width:50
+        height:45
+      }
+      size:{
+        height:100
+        width:200
+      }
+      rotation:R90
+      flip:HORIZONTAL_AND_VERTICAL
+      quality:55
+      width:123
+      preferWebp:true
+    }
+  ) {
+    items {
+      _path
+      featuredImage {
+        ... on ImageRef {
+          _dynamicUrl
+        }
+      }
+    }
+  }
+}
+```
+
+### Webboptimerad bildleverans med flera frågevariabler {#web-optimized-image-delivery-multiple-query-variables}
+
+I följande exempel visas hur flera frågevariabler används:
+
+```graphql
+query ($seoName: String!, $format: AssetTransformFormat!) {
+  articleList(
+    _assetTransform: {
+      format:$format
+      seoName:$seoName
+      crop:{
+        xOrigin:10
+        yOrigin:20
+        width:50
+        height:45
+      }
+      size:{
+        height:100
+        width:200
+      }
+      rotation:R90
+      flip:HORIZONTAL_AND_VERTICAL
+      quality:55
+      width:123
+      preferWebp:true
+    }
+  ) {
+    items {
+      _path
+      featuredImage {
+        ... on ImageRef {
+          _dynamicUrl
+        }
+      }
+    }
+  }
+}
+```
+
+### Webboptimerad begäran om bildleverans via URL {#web-optimized-image-delivery-request-url}
+
+Om du sparar frågan som en beständig fråga (till exempel med namnet `dynamic-url-x`) kan du [köra den beständiga frågan direkt](/help/headless/graphql-api/persisted-queries.md#execute-persisted-query).
+
+Om du till exempel vill köra de tidigare exemplen direkt (sparade som beständiga frågor) använder du följande URL:er:
+
+* [En parameter](#dynamic-image-delivery-single-specified-parameter); Beständig fråga med namnet `dynamic-url-x`
+
+   * `http://localhost:4502/graphql/execute.json/wknd-shared/dynamic-url-x;seoName=xxx`
+
+      Svaret ser ut så här:
+
+      ![Bildleverans med parametrar](assets/cfm-graphiql-sample-image-delivery.png "Bildleverans med parametrar")
+
+* [Flera parametrar](#dynamic-image-delivery-multiple-specified-parameters); Beständig fråga med namnet `dynamic`
+
+   * `http://localhost:4502/graphql/execute.json/wknd-shared/dynamic;seoName=billiboy;format=GIF;`
+
+      >[!CAUTION]
+      >
+      >Efterföljande `;`är obligatoriskt för att utan problem avsluta parameterlistan.
+
+### Begränsningar för bildleverans {#image-delivery-limitations}
+
+Följande begränsningar finns:
+
+* Modifierare som används för alla bilder i frågan (globala parametrar)
+
+* Cachelagra rubriker
+
+   * Ingen cachelagring av författare
+   * Cachelagring vid publicering - max 10 minuters ålder (kan inte ändras av klienten)
 
 ## GraphQL for AEM - i korthet {#graphql-extensions}
 
@@ -761,7 +963,18 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
          >
          >Om den angivna varianten inte finns för ett innehållsfragment returneras den överordnad varianten som ett (fallback) standardvärde.
 
-         * Se [Exempelfråga - Alla städer med en namngiven variant](#sample-cities-named-variation)
+         * Se [Exempelfråga - Alla städer med en namngiven variant](/help/headless/graphql-api/sample-queries.md#sample-cities-named-variation)
+   * För [bildleverans](#image-delivery):
+
+      * `_dynamicUrl`: på `ImageRef` referens
+
+      * `_assetTransform`: i listrubriken där filtren har definierats
+
+      * Se:
+
+         * [Exempelfråga för bildleverans med fullständiga parametrar](#image-delivery-full-parameters)
+
+         * [Exempelfråga för bildleverans med en enda angiven parameter](#image-delivery-single-specified-parameter)
    * Och åtgärder:
 
       * `_operator` : tillämpa särskilda operatörer, `EQUALS`, `EQUALS_NOT`, `GREATER_EQUAL`, `LOWER`, `CONTAINS`, `STARTS_WITH`
@@ -771,6 +984,7 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
          * Se [Exempelfråga - Filtrera en array med ett objekt som måste förekomma minst en gång](/help/headless/graphql-api/sample-queries.md#sample-array-item-occur-at-least-once)
       * `_ignoreCase` : för att ignorera skiftläget vid fråga
          * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](/help/headless/graphql-api/sample-queries.md#sample-all-cities-san-ignore-case)
+
 
 
 
