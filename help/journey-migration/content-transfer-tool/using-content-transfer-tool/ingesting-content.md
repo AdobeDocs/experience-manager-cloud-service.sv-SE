@@ -2,7 +2,7 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: b0723faa23d77ac6b747f189e0643db59ddb2802
+source-git-commit: cab182a7998be6a569cf16e4000184f7235082da
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 6%
@@ -40,18 +40,16 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    >[!NOTE]
    >Följande anmärkningar gäller inhämtning av innehåll:
-   * Om källan var författare rekommenderar vi att du importerar den till nivån Författare på målet. Om källan var Publish ska även målet vara Publish.
-   * Om målnivån är `Author`, kommer författarinstansen att stängas under den tid som inmatningen pågår och kommer inte att vara tillgänglig för användare (till exempel författare eller alla som utför underhåll). Detta är för att skydda systemet och förhindra ändringar som antingen kan gå förlorade eller orsaka en ingiftskonflikt. Se till att ditt team är medvetna om detta. Observera också att miljön kommer att visas i viloläge under författarintaget.
-   * Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intagningsfasen. Se [Ingesting with AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#ingesting-azcopy) för mer information.
-   * Om du använder inmatning med förkopia (för S3 eller Azure Data Store) bör du endast köra Author-intagning. Detta snabbar upp inläsningen av publiceringen när den körs senare.
-   * Inställningarna stöder inte en Rapid Development Environment-destination (RDE). De visas inte som ett möjligt målalternativ, även om användaren har åtkomst till det.
+   > Om källan var författare rekommenderar vi att du importerar den till nivån Författare på målet. Om källan var Publish ska även målet vara Publish.
+   > Om målnivån är `Author`, kommer författarinstansen att stängas under den tid som inmatningen pågår och kommer inte att vara tillgänglig för användare (till exempel författare eller alla som utför underhåll). Detta är för att skydda systemet och förhindra ändringar som antingen kan gå förlorade eller orsaka en ingiftskonflikt. Se till att ditt team är medvetna om detta. Observera också att miljön kommer att visas i viloläge under författarintaget.
+   > Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intagningsfasen. Se [Ingesting with AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#ingesting-azcopy) för mer information.
+   > Om du använder inmatning med förkopia (för S3 eller Azure Data Store) bör du endast köra Author-intagning. Detta snabbar upp inläsningen av publiceringen när den körs senare.
+   > Inställningarna stöder inte en Rapid Development Environment-destination (RDE). De visas inte som ett möjligt målalternativ, även om användaren har åtkomst till det.
 
    >[!IMPORTANT]
    > Följande viktiga meddelanden gäller inhämtning av innehåll:
-   * Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
-   * Om inställningen **Svep** är aktiverat före inmatning, tar bort hela den befintliga databasen och skapar en ny databas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Du måste läggas till igen i administratörsgruppen för att kunna påbörja ett intag.
-
-
+   > Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
+   > Om inställningen **Svep** är aktiverat före inmatning, tar bort hela den befintliga databasen och skapar en ny databas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Du måste läggas till igen i administratörsgruppen för att kunna påbörja ett intag.
 
 1. Klicka på **Ingest**
 
