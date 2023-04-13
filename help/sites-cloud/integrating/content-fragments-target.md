@@ -1,9 +1,9 @@
 ---
 title: Exportera innehållsfragment till Adobe Target
 description: Exportera innehållsfragment till Adobe Target
-source-git-commit: 78840c83d91d6e4f35ec7ca8d14f52024d3535ff
+source-git-commit: 61266ca2caf4cbc02b79a14349c73dced456b5a3
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -321,7 +321,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 1. Navigera till ditt innehållsfragment i **Resurser** konsol.
 1. Markera det innehållsfragment som du vill exportera till mål.
 
-1. Tryck/klicka **Exportera till Adobe Target**.
+1. Tryck/klicka **Exportera till Adobe Target-erbjudanden**.
 
    ![Exportera till Adobe Target](assets/cfm-export-target-01.png)
 
@@ -339,7 +339,13 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
    >[!NOTE]
    >
-   >Markera **Publicera** publicerar innehållsfragmentet direkt och skickar det till Target.
+   >Vilka åtgärder som visas beror på fragmentets status och relaterade resurser.
+   >
+   >Om allt redan har publicerats och inget har ändrats sedan dess, kommer det här steget att skickas vidare.
+
+   >[!NOTE]
+   >
+   >Markera **Publicera** publicerar innehållsfragmentet omedelbart och skickar det till Target.
 
 1. Tryck/klicka **OK** i bekräftelsedialogrutan.
 
