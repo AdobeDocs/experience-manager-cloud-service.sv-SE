@@ -5,9 +5,9 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: d02bfc6fc6502a96e270e87ea8567d7a55e33b3a
+source-git-commit: 6c15a4dc408d96a6532da67c1736bc3e96824321
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -162,6 +162,22 @@ På panelen Filter finns:
 * alternativet att hämta ett sparat sökfilter för återanvändning
 
 ![Konsol för innehållsfragment - filtrering](assets/cfc-console-filter.png)
+
+### Snabb filtrering {#fast-filtering}
+
+Du kan också välja ett predikat genom att klicka på ett visst kolumnvärde i listan. Du kan välja ett eller flera värden för att kombinera predikat.
+
+Välj till exempel **Publicerad** i **Status** kolumn:
+
+>[!NOTE]
+>
+>Snabb filtrering stöds bara för **Modell**, **Status**, **Ändrad av** och **Publicerat av** kolumner.
+
+![Konsol för innehållsfragment - filtrering](assets/cfc-console-fast-filter-01.png)
+
+När du har valt det här alternativet visas det som ett filterpredikat och listan filtreras därefter:
+
+![Konsol för innehållsfragment - filtrering](assets/cfc-console-fast-filter-02.png)
 
 ## Söka efter fragment {#searching-fragments}
 
