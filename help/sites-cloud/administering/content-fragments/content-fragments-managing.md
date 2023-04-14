@@ -4,9 +4,9 @@ description: Lär dig hur du använder konsolen Innehållsfragment för att hant
 feature: Content Fragments
 role: User
 exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
-source-git-commit: 6204830f30c28daba3ff87ba60acd0150847b523
+source-git-commit: b351582a405f5c419f3aa386faddccd6ecef3a43
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1907'
 ht-degree: 1%
 
 ---
@@ -244,7 +244,7 @@ Du kan visa och redigera egenskaperna för ett fragment med [Metadata](/help/sit
 Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
 Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
-Innehållsfragment måste publiceras för användning i publiceringsmiljön. Detta görs med hjälp av standardfunktionen Resurser
+Innehållsfragment måste publiceras för användning i publiceringsmiljön.
 
 * Från **Publicera** i verktygsfältet i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#actions-selected-content-fragment)
    * **Nu** - När fragmentet har bekräftats publiceras det omedelbart
