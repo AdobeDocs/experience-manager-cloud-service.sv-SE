@@ -1,10 +1,10 @@
 ---
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: fb9b735c44dddda9572d3a1f90d49452c6ddc094
+source-git-commit: 3378322c16f12c5ec4a741b912bbe0833f68d8e4
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,6 +29,7 @@ Funktionsaktiveringen för den här underhållsversionen ger dig den fullständi
 - SITES-12573 - GraphQL-frågor som använder variabler i ett filter misslyckas om ingen variabel anges. Please do not update to this release shall you use GraphQL with AEM as a Cloud Service.
 - SKYOPS-51970 - Identifierad regression för den FACT-version som används i buildImage-steget, vilket leder till att användarmappningen inte matchar.
 - GRANITE-44542 - Problem har rapporterats för kunder som inte angav en paketnodtyp (genom att tillhandahålla en .content.xml med jcr:primaryType) för mappar som ingår i paketfiltret. Detta gjorde att mapparna behandlades som not:folder, vilket i olika fall orsakade problem.
+- SKYOPS-56928 - Apache HTTPD-regression kan orsaka 404 fel. Om du får dessa problem av säkerhetsskäl bör du återställa till den tidigare versionen och undvika att rörledningar körs under den tidsperioden.
 
 ### Åtgärdade problem {#fixed-issues-11382}
 
