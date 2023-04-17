@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: ca28ed2b9d566015bd62e54d27e69629650f9e82
+source-git-commit: 968cf51b3c13ecba7230a222edf695fdef69450d
 workflow-type: tm+mt
-source-wordcount: '4038'
+source-wordcount: '4047'
 ht-degree: 21%
 
 ---
@@ -933,6 +933,8 @@ ht-degree: 21%
    + Författarnivå {#author-tier}
       + [Åtkomst till författarnivån](/help/implementing/author-tier/accessing-the-author-tier.md)
       + [Skydda författarnivån](/help/implementing/author-tier/securing-the-author-tier.md)
+   + Förhandsgranskningsnivå {#preview-tier}
+      + [Konfigurera OSGi-inställningar för förhandsgranskningsnivån](/help/implementing/preview-tier/preview-tier-configuring-osgi.md)
    + Översikt över innehållsleverans {#content-delivery}
       + [Flöde för innehållsleverans](/help/implementing/dispatcher/overview.md)
       + [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md)

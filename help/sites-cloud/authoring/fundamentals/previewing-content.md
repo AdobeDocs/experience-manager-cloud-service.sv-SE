@@ -2,9 +2,9 @@
 title: Förhandsgranska innehåll
 description: Lär dig hur du använder AEM förhandsvisningstjänst för att förhandsgranska innehåll innan du publicerar.
 exl-id: 6b4b57f6-2e66-4c83-94d9-bc1e0daab0f3
-source-git-commit: dc55bd43641c03dd022a891c8b85569d9be28ebe
+source-git-commit: 7b56bb05e31d7a61d7a8fb13e2bd0ff6e4fb301d
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,7 @@ AEM erbjuder en tjänst för förhandsgranskning av webbplatser som gör att utv
 
 Det gör det lättare att förhandsgranska sidor som annars inte skulle vara synliga i redigeringsmiljön, som sidövergångar och annat innehåll på publiceringssidan.
 
-Mer information om förhandsvisningsmiljöerna finns i dokumentet [Hantera miljöer.](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
-
->[!NOTE]
->
->När du publicerar ett Experience Fragment för förhandsgranskning följer du i princip samma procedur som för en sida, även om du väljer Experience Fragments-konsolen eller redigeraren.
+Mer information om förhandsvisningsmiljöerna finns i dokumentet [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
 
 ## Publicera innehåll för förhandsgranskning {#publishing-content-to-preview}
 
@@ -52,26 +48,10 @@ Avpublicera innehåll från **Förhandsgranska** miljön är i stort sett samma 
 
 Den enda skillnaden är att du kan välja **Mål** att **Förhandsgranska**.
 
-## Konfigurera OSGi-inställningar för förhandsgranskningsnivån {#configuring-osgi-settings-for-the-preview-tier}
+## Ytterligare information {#further-information}
 
-OSGi-egenskapsvärdena för förhandsvisningsskiktet ärvs från publiceringsskiktet. Värdena för förhandsvisningsskiktet kan dock skilja sig från publiceringsskiktet genom att ställa in `service` parameter till värdet `preview`. Följande exempel på en OSGi-egenskap avgör URL:en för en integreringsslutpunkt.
+Se även:
 
-```
-[
-{
-"name":"INTEGRATION_URL",
-"type":"string",
-"value":"http://s2.integrationvendor.com",
-"service": "preview"
-}
-]
-```
+* [Konfigurera OSGi-inställningar för förhandsgranskningsnivån](/help/implementing/preview-tier/preview-tier-configuring-osgi.md#configuring-osgi-settings-for-the-preview-tier)
 
-Mer information finns i [det här avsnittet](/help/implementing/deploying/configuring-osgi.md#author-vs-publish-configuration) i OSGi-konfigurationsdokumentationen.
-
-## Förhandsvisa felsökning med Developer Console {#debugging-preview-using-the-developer-console}
-
-Följ de här stegen för att felsöka förhandsvisningsnivån med hjälp av utvecklarkonsolen:
-
-* I [Developer Console](/help/implementing/developing/introduction/development-guidelines.md#aem-as-a-cloud-service-development-tools), välj antingen **— All Preview —** eller en produktionsmiljö som innehåller **föregående** i namnet
-* Generera relevant information för förhandsvisningsinstansen Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill ha mer information om hur du hämtar URL:er för dina miljöer.
+* [Förhandsvisa felsökning med Developer Console](/help/implementing/preview-tier/preview-tier-configuring-osgi.md#debugging-preview-using-the-developer-console)
