@@ -2,9 +2,9 @@
 title: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: dea6c266e5c10135a320f923dc77d0fd2050988e
+source-git-commit: a4fd268cb143c1356de3db9d55b16ccb58b67d4b
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '3014'
 ht-degree: 1%
 
 ---
@@ -333,7 +333,7 @@ Din lokala utvecklingsmiljö är klar.
 
 ## Aktivera adaptiva Forms Core-komponenter för ett befintligt AEM Archetype-baserat projekt {#enable-adaptive-forms-core-components-for-an-existing-aem-archetype-based-project}
 
-Om du använder AEM Arketype version 40 eller senare för AEM Forms as a Cloud Service aktiveras Core Components automatiskt för din miljö.
+Om du använder AEM Arketype version 40 eller senare för AEM Forms as a Cloud Service aktiveras Core Components automatiskt för din miljö. När du aktiverar kärnkomponenterna för din miljö, **Adaptiv Forms (kärnkomponent)** mall- och arbetsytetemat läggs till i din miljö. Om din AEM SDK-version är äldre än 2023.02.0, [se till att du har `prerelease` flagga aktiverad i din miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features) som adaptiva Forms Core Components ingick i förleasingen före version 2023.02.0.
 
 Om du vill aktivera adaptiva Forms Core-komponenter för din as a Cloud Service AEM Forms-miljö baserat på äldre versioner av Archetype bäddar du in både WCM Core Component Examples-artefakter och Forms Core Component-artefakter (inklusive exempel) i ditt projekt:
 
