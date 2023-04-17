@@ -2,7 +2,7 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 8ca2340bf6d39248ed3596828f27745dcaff2c75
+source-git-commit: 67e801cc22adfbe517b769e829e534eadb1806f5
 workflow-type: tm+mt
 source-wordcount: '3053'
 ht-degree: 0%
@@ -494,7 +494,7 @@ Bilden nedan visar en visuell representation av en uppsättning domäner och ass
     <td>VPN-gatewayens IP på AEM. En kunds nätverksteam kan använda detta för att endast tillåta VPN-anslutningar till sin VPN-gateway från en viss IP-adress. </td>
   </tr>
   <tr>
-    <td><code>p{PROGRAM_ID}.inner.adobeaemcloud.net</code></td>
+    <td><code>p{PROGRAM_ID}.{REGION}.inner.adobeaemcloud.net</code></td>
     <td>IP-adressen för trafik från VPN:s AEM till kundsidan. Detta kan tillåtslista i kundens konfiguration för att säkerställa att anslutningar bara kan göras från AEM.</td>
     <td>Om kunden vill tillåta VPN-åtkomst till AEM bör de konfigurera DNS-poster för CNAME så att de mappar sin anpassade domän och/eller <code>author-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> och/eller <code>publish-p{PROGRAM_ID}-e{ENVIRONMENT_ID}.adobeaemcloud.com</code> till detta.</td>
   </tr>
