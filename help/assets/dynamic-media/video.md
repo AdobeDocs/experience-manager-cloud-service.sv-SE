@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 57666d474cd2ae41048e2d30eb27b0719a447005
+source-git-commit: 13a1915e9aca812024e8eb27c131500cdc8e01b2
 workflow-type: tm+mt
-source-wordcount: '5858'
+source-wordcount: '5846'
 ht-degree: 1%
 
 ---
@@ -95,7 +95,6 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * Integrera video med inbäddad kod på webbsidan:
          [Bädda in videovisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
-   * [Publicera videor på YouTube](#publishing-videos-to-youtube).
    * [Generera videorapporter](#viewing-video-reports).
 
    * [Lägga till bildtexter i video](#adding-captions-to-video).
@@ -273,7 +272,7 @@ Följande bild visar det övergripande arbetsflödet för redigering av videokli
 
 ## Bästa tillvägagångssätt för att koda videofilmer {#best-practices-for-encoding-videos}
 
-The **Dynamic Media Encode Video** arbetsflödet kodar video om du har aktiverat Dynamic Media och konfigurerat videoCloud Services. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress). Om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video, **[!UICONTROL Dynamic Media Encode Video]** arbetsflödet aktiveras automatiskt när du överför en video. (Om du inte använder Dynamic Media **[!UICONTROL DAM Update Asset]** arbetsflödet börjar gälla.)
+The **Dynamic Media Encode Video** arbetsflödet kodar video om du har aktiverat Dynamic Media och konfigurerat videoCloud Services. Det här arbetsflödet innehåller information om arbetsflödets processhistorik och fel. Om du har aktiverat Dynamic Media och konfigurerat Cloud Services för video, **[!UICONTROL Dynamic Media Encode Video]** arbetsflödet aktiveras automatiskt när du överför en video. (Om du inte använder Dynamic Media **[!UICONTROL DAM Update Asset]** arbetsflödet börjar gälla.)
 
 Nedan följer några tips om hur du kodar källvideofiler.
 
