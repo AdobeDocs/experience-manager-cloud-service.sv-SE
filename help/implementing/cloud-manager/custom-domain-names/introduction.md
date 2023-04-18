@@ -2,9 +2,9 @@
 title: Introduktion till anpassade domännamn
 description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
-source-git-commit: 5649f083c55cd84296f38acbff3f395e77a7e422
+source-git-commit: cc6910bad0d0a62232bd66e0080b6802b9a1110b
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '673'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Det finns ett antal begränsningar för hur du använder anpassade domännamn me
 * Det går inte att lägga till domännamn i miljöer när det finns en aktuell pågående pipeline som är kopplad till dessa miljöer.
 * Samma domännamn kan inte användas i mer än en miljö.
 * Det går bara att lägga till ett domännamn åt gången.
-* AEM as a Cloud Service stöder inte jokerteckendomäner som den `*.example.com`.
+* AEM as a Cloud Service stöder inte jokerdomäner som `*.example.com`.
 * Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet (jokerteckenscertifikat är giltiga) installeras för programmet. Se [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) om du vill veta mer.
 
 >[!NOTE]
