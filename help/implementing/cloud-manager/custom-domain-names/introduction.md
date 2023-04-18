@@ -2,9 +2,9 @@
 title: Introduktion till anpassade domännamn
 description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
-source-git-commit: 01ff58fee9d309de75afcb556726e1cf32b9f70a
+source-git-commit: 5649f083c55cd84296f38acbff3f395e77a7e422
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '672'
 ht-degree: 1%
 
 ---
@@ -37,13 +37,13 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 
 Det finns ett antal begränsningar för hur du använder anpassade domännamn med AEMaaCS.
 
-* Anpassade domännamn stöds i Cloud Manager för både publicerings- och förhandsgranskningstjänster för Sites-program. Anpassade domäner på författarsidan stöds inte.
+* Anpassade domännamn stöds i Cloud Manager för både publicerings- och förhandsgranskningstjänster för Sites-program. Anpassade domäner för författartjänster stöds inte.
 * Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö.
-* AEM as a Cloud Service stöder inte jokerteckendomäner.
-* Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet installeras för programmet. Mer information finns i Lägga till ett SSL-certifikat.
 * Det går inte att lägga till domännamn i miljöer när det finns en aktuell pågående pipeline som är kopplad till dessa miljöer.
-* Det går bara att lägga till ett domännamn åt gången.
 * Samma domännamn kan inte användas i mer än en miljö.
+* Det går bara att lägga till ett domännamn åt gången.
+* AEM as a Cloud Service stöder inte jokerteckendomäner som den `*.example.com`.
+* Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet (jokerteckenscertifikat är giltiga) installeras för programmet. Se [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) om du vill veta mer.
 
 >[!NOTE]
 >
