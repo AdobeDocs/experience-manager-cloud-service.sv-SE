@@ -5,9 +5,9 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: 6c15a4dc408d96a6532da67c1736bc3e96824321
+source-git-commit: cdc86e5661ec90f96f670e777a9c98b3dcd4a7ac
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1051'
 ht-degree: 0%
 
 ---
@@ -68,22 +68,33 @@ Här ser du att det finns tre huvudområden:
       * Genom att använda musen på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du:
          * Sortera - välj lämplig åtgärd för antingen stigande eller fallande Detta sorterar hela tabellen efter den kolumnen. Sortering är bara tillgängligt för lämpliga kolumner.
          * Ändra storlek på kolumnen med antingen funktionsmakrot eller breddreglagen
-      * Du kan [markera ett eller flera innehållsfragment för att visa tillgängliga åtgärder](#actions-selected-content-fragment)
-   * **[Skapa](#creating-new-content-fragment)** ett nytt innehållsfragment
-   * [Filter](#filtering-fragments) innehållsfragment enligt ett urval predikatmallar och spara filtret för framtida bruk
-   * [Sök](#searching-fragments) innehållsfragment
-   * [Anpassa tabellvyn så att markerade informationskolumner visas](#select-available-columns)
-   * Använd **Öppna i resurser** om du vill öppna den aktuella platsen direkt i **Resurser** konsol
 
-      >[!NOTE]
-      >
-      >The **Resurser** konsolen används för att komma åt resurser, som bilder, videor osv.  Konsolen kan nås:
-      >
-      >* med **Öppna i resurser** link (in the Content Fragments console)
-      >* direkt från den globala navigeringsrutan
+## Åtgärder {#actions}
+
+I konsolen finns ett antal åtgärder som du kan använda, antingen direkt eller efter att du har valt ett visst fragment:
+
+* Olika åtgärder är direkt [tillgänglig från konsolen](#available-actions)
+* Du kan [markera ett eller flera innehållsfragment för att visa lämpliga åtgärder](#actions-selected-content-fragment)
+
+### Åtgärder (omarkerade) {#actions-unselected}
+
+Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja ett visst innehållsfragment:
+
+* **[Skapa](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#creating-a-content-fragment)** ett nytt innehållsfragment
+* [Filter](#filtering-fragments) innehållsfragment enligt ett urval predikatmallar och spara filtret för framtida bruk
+* [Sök](#searching-fragments) innehållsfragment
+* [Anpassa tabellvyn så att markerade informationskolumner visas](#select-available-columns)
+* Använd **Öppna i resurser** om du vill öppna den aktuella platsen direkt i **Resurser** konsol
+
+   >[!NOTE]
+   >
+   >The **Resurser** konsolen används för att komma åt resurser, som bilder, videor osv.  Konsolen kan nås:
+   >
+   >* med **Öppna i resurser** link (in the Content Fragments console)
+   >* direkt från den globala navigeringsrutan
 
 
-## Åtgärder för ett (markerat) innehållsfragment {#actions-selected-content-fragment}
+### Åtgärder för ett (markerat) innehållsfragment {#actions-selected-content-fragment}
 
 Om du väljer ett visst fragment öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för det fragmentet. Du kan också markera flera fragment. Markeringen av funktionsmakron justeras därefter.
 
@@ -146,12 +157,6 @@ Precis som med andra konsoler kan du konfigurera de kolumner som är synliga och
 Här visas en lista med kolumner som du kan dölja eller visa:
 
 ![Konsol för innehållsfragment - kolumnkonfiguration](assets/cfc-console-column-selection.png)
-
-## Skapa ett nytt innehållsfragment {#creating-new-content-fragment}
-
-Markera **Skapa** öppnar komprimeringen **Nytt innehållsfragment** dialog:
-
-![Konsol för innehållsfragment - Skapa ett nytt fragment](assets/cfc-console-create.png)
 
 ## Filtrera fragment {#filtering-fragments}
 
