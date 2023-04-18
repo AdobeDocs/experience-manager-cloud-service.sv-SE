@@ -2,9 +2,9 @@
 title: Introduktion till sandlådeprogram
 description: Lär dig vilka sandlådeprogram som skiljer sig från produktionsprogram.
 exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 18c5d2ba77a97413d0d83235ad2baec9fe4b0238
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -69,3 +69,9 @@ Miljöer i ett sandlådeprogram försätts automatiskt i viloläge efter 8 timma
 Sandlådeprogram tas bort efter sex månader eftersom de är i viloläge, och därefter kan de återskapas.
 
 Se [Viloläge och avvänjningsmiljöer för sandlådor](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md) för mer information.
+
+### Ingen teknisk support {#no-support}
+
+Eftersom ett sandlådeprogram vanligtvis skapas för att användas i utbildningssyfte, för att köra demonstrationer, aktivering eller konceptbevis (POC), är teknisk support inte tillgänglig för problem som uppstår i ett sandlådeprogram.
+
+Om du får problem med att skapa och hantera dina sandlådeprogram omfattas detta fortfarande av den tekniska supporten.
