@@ -2,9 +2,9 @@
 title: Introduktion till sandlådeprogram
 description: Lär dig vilka sandlådeprogram som skiljer sig från produktionsprogram.
 exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
-source-git-commit: 18c5d2ba77a97413d0d83235ad2baec9fe4b0238
+source-git-commit: e43dd379169b4048347ecce6d10652e9f8835333
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -64,9 +64,13 @@ Se dokumentet [Uppdaterar miljö](/help/implementing/cloud-manager/manage-enviro
 
 ### Viloläge och borttagning {#hibernation}
 
-Miljöer i ett sandlådeprogram försätts automatiskt i viloläge efter 8 timmars inaktivitet. När de har tagits i viloläge kan de tas bort manuellt.
+Miljöer i ett sandlådeprogram försätts automatiskt i viloläge efter åtta timmars inaktivitet. När de har tagits i viloläge kan de tas bort manuellt.
 
-Sandlådeprogram tas bort efter sex månader eftersom de är i viloläge, och därefter kan de återskapas.
+Sandlådemiljöer tas bort efter sex sammanhängande månader i viloläget, och därefter kan de återskapas.
+
+>[!NOTE]
+>
+>Endast sandlådemiljöer tas bort automatiskt efter sex månaders kontinuerlig viloläge. Sandlådeprogrammet med dess databas och kod behålls.
 
 Se [Viloläge och avvänjningsmiljöer för sandlådor](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md) för mer information.
 
