@@ -3,9 +3,9 @@ title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
-source-git-commit: aac397310babe1aa1e950c176459beaf665b72ce
+source-git-commit: 0dd1cfba81eb8dfab3e002333868ec79ebc5e96c
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -94,6 +94,12 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
 
 ### Fullständig stackkod {#full-stack-code}
+
+>[!NOTE]
+>
+>* Den här funktionen är ännu inte allmänt tillgänglig. Den förväntas släppas i juni 2023.
+>* Om du vill prova den här funktionen och lämna feedback för att förbättra den kontaktar du Adobe.
+
 
 En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationen. Se dokumentet [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#full-stack-pipeline) om du vill ha mer information om den här typen av pipeline.
 
