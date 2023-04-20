@@ -2,9 +2,9 @@
 title: Redigeringsbegrepp
 description: Begrepp att skapa i AEM
 exl-id: ee9e4952-e075-4398-b31f-d7886153efff
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: b407765438086bb2f7fb720fb7f1dd05699cb48f
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
@@ -51,6 +51,12 @@ Det finns dessutom administrativa uppgifter som hjälper dig att hantera ditt in
 >[!NOTE]
 >
 >AEM administreras också från författarmiljön.
+
+## Förhandsgranska innehåll {#previewing-content}
+
+AEM erbjuder även en förhandsvisningstjänst för webbplatser som gör att utvecklare och innehållsförfattare kan förhandsgranska webbplatsens slutliga upplevelse innan den når publiceringsmiljön och är tillgänglig för allmänheten.
+
+Se [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/previewing-content.md) för mer information.
 
 ## Publiceringsmiljö {#publish-environment}
 
