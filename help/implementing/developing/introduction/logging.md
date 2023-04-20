@@ -2,10 +2,10 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för de enskilda tjänsterna eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 33dfe795140f2780f7f2cf876f3ebc725310214d
+source-git-commit: 9e67b4f68fe450e80249c3959e3517c6cba3275d
 workflow-type: tm+mt
-source-wordcount: '2351'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -220,7 +220,7 @@ Nyckeln till att förstå den här loggen är att mappa HTTP-par för begäran o
 <td>POST</td>
 </tr>
 <tr>
-<td>Webbadress</td>
+<td>URL</td>
 <td>/conf/global/settings/dam/adminui-extension/metadataprofile/</td>
 </tr>
 <tr>
@@ -259,7 +259,7 @@ cm-p1234-e26813-aem-author-59555cb5b8-8kgr2 - example@adobe.com 30/Apr/2020:17:3
 | Användare | myuser@adobe.com |
 | Datum och tid | 30 april 2020:17:37:14 +0000 |
 | HTTP-metod | GET |
-| Webbadress | `/libs/granite/ui/references/clientlibs/references.lc-5188e85840c529149e6cd29d94e74ad5-lc.min.css` |
+| URL | `/libs/granite/ui/references/clientlibs/references.lc-5188e85840c529149e6cd29d94e74ad5-lc.min.css` |
 | Protokoll | HTTP/1.1 |
 | HTTP-svarsstatus | 200 |
 | Svarstextens storlek i byte | 1141 |
@@ -321,7 +321,7 @@ cm-p1234-e5678-aem-publish-b86c6b466-qpfvp - - 17/Jul/2020:09:14:42 +0000  "GET 
 <td>GET</td>
 </tr>
 <tr>
-<td>Webbadress</td>
+<td>URL</td>
 <td>/content/example.html</td>
 </tr>
 <tr>
@@ -444,7 +444,7 @@ Define REWRITE_LOG_LEVEL debug
 <td>GET</td>
 </tr>
 <tr>
-<td>Webbadress</td>
+<td>URL</td>
 <td>/content/experience-fragments/wknd/language-masters/en/contributors/sofia-sjoeberg/master/_jcr_content/root/responsivegrid/image.coreimg.100.500.jpeg/1572236359031/ayo-ogunseinde-237739.jpeg</td>
 </tr>
 <tr>
@@ -494,6 +494,10 @@ Define DISP_LOG_LEVEL debug
   ...
 </IfDefine>
 ```
+
+>[!NOTE]
+>
+>I AEM as a Cloud Service miljöer är felsökning den högsta nivån för vertikal intensitet. Spårningsloggsnivån stöds inte, så du bör undvika att ange den när du arbetar i molnmiljöer.
 
 ## Åtkomst till loggar {#how-to-access-logs}
 
