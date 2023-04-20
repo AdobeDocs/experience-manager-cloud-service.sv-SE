@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 33dfe795140f2780f7f2cf876f3ebc725310214d
+source-git-commit: 614834961c23348cd97e367074db0a767d31bba9
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -267,7 +267,7 @@ Det finns två avsnitt i servergruppskonfigurationen som **måste** inkludera en
 }
 ```
 
-and:
+och:
 
 ```
 /allowedClients {
@@ -277,7 +277,7 @@ and:
 
 **filen finns på okänd plats: ...**
 
-Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera din egen fil: `/clientheaders`, `filters`, `/rules` in `/cache` och `/virtualhosts`. De inkluderade filerna måste ha följande namn:
+Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera egna filer: `/clientheaders`, `filters`, `/rules` in `/cache` och `/virtualhosts`. De inkluderade filerna måste ha följande namn:
 
 | Avsnitt | Inkludera filnamn |
 |------------------|--------------------------------------|
@@ -439,6 +439,10 @@ Loggnivåer för dessa moduler definieras av variablerna `DISP_LOG_LEVEL` och `R
 När du kör Dispatcher lokalt skrivs loggarna ut direkt till terminalutdata. Oftast vill du att de här loggarna ska vara i felsökningsversionen, vilket du kan göra genom att skicka felsökningsnivån som en parameter när du kör Docker. Till exempel: `DISP_LOG_LEVEL=Debug ./bin/docker_run.sh src docker.for.mac.localhost:4503 8080`.
 
 Loggar för molnmiljöer visas via loggningstjänsten i Cloud Manager.
+
+>[!NOTE]
+>
+>I AEM as a Cloud Service miljöer är felsökning den högsta nivån för vertikal intensitet. Spårningsloggsnivån stöds inte, så du bör undvika att ange den när du arbetar i molnmiljöer.
 
 ### Automatisk omladdning och validering {#automatic-reloading}
 
