@@ -4,14 +4,14 @@ description: Använda verktyget för användarmappning (äldre)
 exl-id: dcb750c4-0f81-4d11-ac6c-0592162b683d
 hide: true
 hidefromtoc: true
-source-git-commit: fb961ee6c369f5488deb794892caf9785d6b3068
+source-git-commit: f7be351c85b8db6d11033c7cf064529a46c2802a
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Använda verktyget för användarmappning {#using-user-mapping-tool}
+# Använda verktyget för användarmappning (äldre) {#using-user-mapping-tool}
 
 Användarmappningsverktyget använder ett API som gör att det kan slå upp IMS-användare (Adobe Identity Management System) via e-post och returnera sina IMS-ID:n. Denna API kräver att användaren skapar ett klient-ID för sin organisation, en klienthemlighet och en Access- eller Bearer-token.
 

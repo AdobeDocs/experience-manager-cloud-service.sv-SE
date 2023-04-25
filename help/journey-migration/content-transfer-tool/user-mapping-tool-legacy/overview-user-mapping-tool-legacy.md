@@ -4,14 +4,14 @@ description: Översikt över verktyget Användarmappning (äldre)
 exl-id: 17ed5721-093e-4491-b8c4-3dadcaa6598b
 hide: true
 hidefromtoc: true
-source-git-commit: 69dfe7f98628ab67cc3a994c32b1530550ec6a01
+source-git-commit: f7be351c85b8db6d11033c7cf064529a46c2802a
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '283'
 ht-degree: 9%
 
 ---
 
-# Översikt över verktyget Mappning av användare {#overview-user-mapping-tool}
+# Översikt över verktyget Användarmappning (äldre) {#overview-user-mapping-tool}
 
 
 <!-- Alexandru: drafting this for now
