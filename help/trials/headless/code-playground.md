@@ -1,47 +1,57 @@
 ---
-title: Hämta JSON-innehåll med JavaScript
-description: Upptäck hur du hämtar JSON-innehåll från testmiljön med en CodePen-app och den AEM Headless Client för JavaScript.
+title: Återge ditt innehåll i en enkel app
+description: Upptäck hur du hämtar JSON-innehåll från testmiljön med exempelappen CodePen och den AEM Headless Client för JavaScript.
 hidefromtoc: true
 index: false
-source-git-commit: 3aff5ef2fb9ecdd815f0bc1a813d3a3982b4e0ed
+exl-id: b7dc70f2-74a2-49f7-ae7e-776eab9845ae
+source-git-commit: 3bfecf4d577c8cb81b1c1cf02b1f9299277fbc8b
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '1004'
 ht-degree: 0%
 
 ---
 
 
-# Hämta JSON-innehåll med JavaScript {#fetch-json}
+# Återge ditt innehåll i en enkel app {#render-content-simple-app}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_fetch_json_with_javascript"
->title="Hämta JSON-innehåll med JavaScript"
->abstract="Upptäck hur du hämtar JSON-innehåll från testmiljön med en CodePen-app och den AEM Headless Client för JavaScript."
+>title="Återge ditt innehåll i en enkel app"
+>abstract="Upptäck hur du hämtar JSON-innehåll från testmiljön med exempelappen CodePen och den AEM Headless Client för JavaScript."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_fetch_json_with_javascript_guide"
 >title="Starta exempelappen CodePen"
->abstract="Vi har skapat en minimal CodePen-app för att införa hämtning av JSON-data från testmiljön med hjälp av GraphQL beständiga frågor.<br><br>Starta CodePen-exemplet genom att klicka nedan och följ sedan den här guiden för mer information."
+>abstract="Den här guiden går igenom frågor om JSON-data från testmiljön till en grundläggande JavaScript-webbapp. Vi kommer att använda de innehållsavsnitt du modellerade och skapade i de tidigare utbildningsmodulerna, så gå igenom dessa handledningar innan du går in i den här.<br><br>För att visa hur innehåll kan hämtas från ett JavaScript-webbprogram har vi skapat en CodePen som du kan använda som den är, eller förgrena till ditt eget konto för att anpassa ytterligare."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_fetch_json_with_javascript_guide_footer"
 >title="I den här modulen lärde du dig att använda den AEM Headless Client för JavaScript för att hämta JSON-data från testmiljön med GraphQL beständiga frågor.<br><br>Nu förstår ni hur ni kan använda den här klienten för att förbruka data från ert eget webbprogram."
 >abstract=""
 
-## Introduktion {#intro}
+## CodePen-app {#codepen-app}
 
-Du börjar i CodePen-appen, som fungerar som ett minimalt exempel på hur du hämtar JSON-data med [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js). Exempelappen är utformad för att återge allt JSON-innehåll som returneras, oavsett strukturen för den underliggande innehållsfragmentmodellen. CodePen-appen försöker vara detaljerad med eventuella fel som påträffas, så du kan se följande felmeddelande som skrivs ut i appens nedre del:
+CodePen är en kodredigerare och en lekplats för webbutveckling. Du kan skriva HTML, CSS och JavaScript-kod i webbläsaren och se resultatet nästan direkt. Du kan också spara ditt arbete och dela det med andra. Vi har skapat en CodePen-app som du kan använda för att hämta JSON-data från testmiljön med [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js). Du kan använda den här appen som den är eller fördela den till ditt eget CodePen-konto för att anpassa den ytterligare.
+
+När du klickar på knappen &quot;Starta&quot; ovan kommer du till CodePen-appen, som fungerar som ett minimalt exempel på hämtning av JSON-data med JavaScript. Exempelappen är utformad för att återge allt JSON-innehåll som returneras, oavsett strukturen för den underliggande modellen för innehållsfragment. Programmet hämtar data från en `aem-demo-assets` Beständig fråga som ingår i testmiljön. Du bör se ett JSON-svar som liknar följande:
 
 ```
 {
-  "status": "Failed to fetch persisted query: your-project/USE-YOUR-QUERY-HERE from publishHost: https://publish-p00000-e12345.adobeaemcloud.com",
-  "message": "[AEMHeadless:REQUEST_ERROR] General Request error: Failed to fetch."
-}
+  "data": {
+    "adventureList": {
+      "items": [
+        {
+          "_path": "/content/dam/aem-demo-assets/en/adventures/bali-surf-camp/bali-surf-camp",
+          "title": "Bali Surf Camp",
+          "price": "$5000 USD",
+          ...
 ```
 
-Detta fel förväntas eftersom programmet ännu inte har konfigurerats för att använda den beständiga fråga som du sparade och publicerade i en tidigare modul. Du konfigurerar appen att hämta data från din specifika fråga i följande steg.
+Om du får ett felmeddelande i stället kan du kontrollera om webbläsarkonsolen innehåller mer information eller kontakta oss [på Slack](https://adobe-dx-support.slack.com).
 
-## Genomgång av CodePen {#code-walkthrough}
+Därefter konfigurerar du appen så att den hämtar data från den beständiga fråga som du skapade i en tidigare modul.
+
+## Genomgång av JavaScript-kod {#code-walkthrough}
 
 JS-rutan (Javascript) på CodePen innehåller hjärnan i exempelappen. Från och med rad 2 importerar vi den AEM Headless Client för JavaScript från Skypack CDN. Skypack används för att underlätta utvecklingen utan ett steg, men du kan även använda AEM Headless Client med NPM eller Garn i dina egna projekt. Läs användningsinstruktionerna i [README](https://github.com/adobe/aem-headless-client-js#aem-headless-client-for-javascript) för mer information.
 
@@ -67,28 +77,28 @@ Funktionen `fetchJsonFromGraphQL()` används för att utföra hämtningsbegäran
 
 ## Hämta data från din beständiga fråga {#use-persisted-query}
 
-På rad 25 anger vi vilken GraphQL-fråga som appen ska hämta data från. Namnet på den beständiga frågan är en kombination av namnet på projektet (dvs. `your-project`), följt av ett snedstreck och därefter frågans namn.
+På rad 25 anger vi vilken GraphQL-fråga som appen ska hämta data från. Det beständiga frågenamnet är en kombination av slutpunktens namn (dvs. `your-project` eller `aem-demo-assets`), följt av ett snedstreck och därefter frågans namn. Om du följde instruktionerna från den tidigare modulen exakt, kommer den beständiga fråga du skapade att finnas i `your-project` slutpunkt.
 
-Uppdatera `persistedQueryName` variabeln för att använda den beständiga frågan som du skapade i föregående modul. Om du följde namnförslaget exakt skulle du ha skapat en beständig fråga med namnet `adventures` i `your-project` -projektet och du ställer in `persistedQueryName` variabel till `your-project/adventures`:
+1. Uppdatera `persistedQueryName` variabeln för att använda den beständiga frågan som du skapade i föregående modul. Om du följde namnförslaget skulle du ha skapat en beständig fråga med namnet `adventure-list` i `your-project` slutpunkt, och du anger `persistedQueryName` variabel till `your-project/adventure-list`:
 
-```
+```javascript
 //
 // TODO: Use your persisted query here
 //
-persistedQueryName = 'your-project/adventures';
+persistedQueryName = 'your-project/adventure-list';
 ```
 
-När den här ändringen har gjorts bör programmet uppdatera automatiskt och skriva ut det råa JSON-svaret från din beständiga fråga till `#output` div. Om du ser ett felmeddelande bör du kontrollera konsolen för mer information.
+1. När den här ändringen har gjorts bör programmet uppdatera automatiskt och skriva ut det råa JSON-svaret från din beständiga fråga till `#output` div. Om du ser ett felmeddelande bör du kontrollera konsolen för mer information. Nå ut till oss [på Slack](https://adobe-dx-support.slack.com) om du fortfarande har problem med det här steget.
 
-Innehåller denna JSON exakt de egenskaper som din app behöver? Om inte, gå tillbaka till AEM Author Environment, Tools, GraphQL Query Editor (eller gå till `/aem/graphiql.html` sökvägar) och gör ändringar i den beständiga frågan. Glöm inte att spara och publicera frågan när du är klar.
+1. Innehåller denna JSON exakt de egenskaper som din app behöver? Om inte, gå tillbaka till [Extrahera innehåll med GraphQL API](https://experience.adobe.com/experiencemanager/learn/extract_content_using_graphql) utbildningsguide för att göra ändringar. Glöm inte att spara och publicera frågan när du är klar.
 
 ## Ändra JSON-återgivning {#change-rendering}
 
 För närvarande återges JSON som i en `pre` -tagg, som inte är särskilt kreativ. Vi kan byta CodePen för att använda `resultToDom()` i stället för att visa hur JSON-svaret kan itereras över för att skapa ett mer intressant resultat.
 
-Gör den här ändringen genom att kommentera rad 37 och ta bort kommentaren från rad 40:
+1. Gör den här ändringen genom att kommentera rad 37 och ta bort kommentaren från rad 40:
 
-```
+```javascript
 // Output the results to a pre tag
 //resultToPreTag(queryResult);
 
@@ -96,7 +106,7 @@ Gör den här ändringen genom att kommentera rad 37 och ta bort kommentaren fr�
 resultToDom(queryResult);
 ```
 
-Den här funktionen återger även alla bilder som ingår i JSON-svaret som `img` -tagg. Om de&quot;Adventure&quot;-innehållsfragment som du har skapat inte innehåller några bilder kan du försöka med att växla till `aem-demo-assets/adventures-all` beständig fråga genom att ändra rad 25:
+1. Den här funktionen återger även alla bilder som ingår i JSON-svaret som `img` -tagg. Om de&quot;Adventure&quot;-innehållsfragment som du har skapat inte innehåller några bilder kan du försöka med att växla till `aem-demo-assets/adventures-all` beständig fråga genom att ändra rad 25:
 
 ```
 persistedQueryName = 'aem-demo-assets/adventures-all';
@@ -105,3 +115,5 @@ persistedQueryName = 'aem-demo-assets/adventures-all';
 Den här frågan ger ett JSON-svar som innehåller bilder och `resultToDom()` funktionen återger dem textbundet.
 
 ![Resultat av frågan adventures-all och renderingsfunktionen resultToDom](assets/do-not-localize/adventures-all-query-result.png)
+
+Nu när du har gjort jobbet med att skapa modeller och frågor kan ditt innehållsteam enkelt ta över. Vi visar innehållsförfattarflödet i nästa modul.
