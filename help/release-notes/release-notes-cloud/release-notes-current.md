@@ -2,13 +2,13 @@
 title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
-source-git-commit: 34313a984b8ddb76211ed97dd11c437cbefa90c2
+exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
+source-git-commit: eb42c39af65f1e10417d855e5ad476cafc97da45
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 0%
 
 ---
-
 
 # Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
@@ -26,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för den aktu
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.2.0) är 12 april 2023. Nästa version (2023.4.0) är planerad till 4 maj 2023.
+Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.2.0) är 12 april 2023. Nästa version av funktionen (2023.4.0) är planerad till 18 maj 2023.
 
 ## Släpp video {#release-video}
 
