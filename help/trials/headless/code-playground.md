@@ -4,9 +4,9 @@ description: Upptäck hur du hämtar JSON-innehåll från testmiljön med exempe
 hidefromtoc: true
 index: false
 exl-id: b7dc70f2-74a2-49f7-ae7e-776eab9845ae
-source-git-commit: 3bfecf4d577c8cb81b1c1cf02b1f9299277fbc8b
+source-git-commit: 3b64b909996674bcbe36f746bcfd15e1422a8a4b
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,13 @@ ht-degree: 0%
 >title="I den här modulen lärde du dig att använda den AEM Headless Client för JavaScript för att hämta JSON-data från testmiljön med GraphQL beständiga frågor.<br><br>Nu förstår ni hur ni kan använda den här klienten för att förbruka data från ert eget webbprogram."
 >abstract=""
 
-## CodePen-app {#codepen-app}
+## CodePen {#codepen}
 
-CodePen är en kodredigerare och en lekplats för webbutveckling. Du kan skriva HTML, CSS och JavaScript-kod i webbläsaren och se resultatet nästan direkt. Du kan också spara ditt arbete och dela det med andra. Vi har skapat en CodePen-app som du kan använda för att hämta JSON-data från testmiljön med [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js). Du kan använda den här appen som den är eller fördela den till ditt eget CodePen-konto för att anpassa den ytterligare.
+CodePen är en kodredigerare och en lekplats för webbutveckling. Du kan skriva HTML, CSS och JavaScript-kod i webbläsaren och se resultatet nästan direkt. Du kan också spara ditt arbete och dela det med andra. Vi har skapat en app i CodePen som du kan använda för att hämta JSON-data från testmiljön med [AEM Headless Client for JavaScript](https://github.com/adobe/aem-headless-client-js). Du kan använda den här appen som den är eller fördela den till ditt eget CodePen-konto för att anpassa den ytterligare.
 
-När du klickar på knappen &quot;Starta&quot; ovan kommer du till CodePen-appen, som fungerar som ett minimalt exempel på hämtning av JSON-data med JavaScript. Exempelappen är utformad för att återge allt JSON-innehåll som returneras, oavsett strukturen för den underliggande modellen för innehållsfragment. Programmet hämtar data från en `aem-demo-assets` Beständig fråga som ingår i testmiljön. Du bör se ett JSON-svar som liknar följande:
+Klicka på **Starta exempelappen CodePen** från testversionen kommer du till programmet i CodePen. Appen fungerar som ett minimalt exempel på hämtning av JSON-data med JavaScript. Exempelappen är utformad för att återge allt JSON-innehåll som returneras, oavsett strukturen för den underliggande modellen för innehållsfragment. Programmet hämtar data direkt från en `aem-demo-assets` beständig fråga som ingår i testmiljön. Du bör se ett JSON-svar som liknar följande:
 
-```
+```json
 {
   "data": {
     "adventureList": {
@@ -47,15 +47,15 @@ När du klickar på knappen &quot;Starta&quot; ovan kommer du till CodePen-appen
           ...
 ```
 
-Om du får ett felmeddelande i stället kan du kontrollera om webbläsarkonsolen innehåller mer information eller kontakta oss [på Slack](https://adobe-dx-support.slack.com).
+Om du får ett felmeddelande i stället bör du kontrollera webbläsarkonsolen för mer information eller kontakta [på Slack](https://adobe-dx-support.slack.com).
 
-Därefter konfigurerar du appen så att den hämtar data från den beständiga fråga som du skapade i en tidigare modul.
+Nu när du känner till lite om CodePen konfigurerar du appen så att den hämtar data från den beständiga fråga du skapade i en tidigare modul.
 
-## Genomgång av JavaScript-kod {#code-walkthrough}
+## JavaScript-kod, genomgång {#code-walkthrough}
 
-JS-rutan (Javascript) på CodePen innehåller hjärnan i exempelappen. Från och med rad 2 importerar vi den AEM Headless Client för JavaScript från Skypack CDN. Skypack används för att underlätta utvecklingen utan ett steg, men du kan även använda AEM Headless Client med NPM eller Garn i dina egna projekt. Läs användningsinstruktionerna i [README](https://github.com/adobe/aem-headless-client-js#aem-headless-client-for-javascript) för mer information.
+The **JS** till höger i CodePen innehåller Javascript för exempelappen. Från och med rad 2 importerar vi den AEM Headless Client för JavaScript från Skypack CDN. Skypack används för att underlätta utvecklingen utan ett steg, men du kan även använda AEM Headless Client med NPM eller Garn i dina egna projekt. Läs användningsinstruktionerna i [README](https://github.com/adobe/aem-headless-client-js#aem-headless-client-for-javascript) för mer information.
 
-```
+```javascript
 import AdobeAemHeadlessClientJs from 'https://cdn.skypack.dev/@adobe/aem-headless-client-js@v3.2.0';
 ```
 
@@ -63,7 +63,7 @@ På rad 6 läser vi informationen om din publiceringsvärd från `publishHost` f
 
 Vi konfigurerar den AEM Headless Client på rad 12 att använda en proxy-Adobe IO-körningsfunktion för att undvika CORS-problem. Detta krävs inte för dina egna projekt, men det krävs för att CodePen-appen ska fungera med din testmiljö. Proxyfunktionen är konfigurerad att använda `publishHost` värdet som angavs i frågeparametern.
 
-```
+```javascript
 const aemHeadlessClient = new AdobeAemHeadlessClientJs({
   // Use a proxy to avoid CORS issues
   serviceURL: 'https://102588-505tanocelot.adobeioruntime.net/api/v1/web/aem/proxy',
@@ -73,7 +73,7 @@ const aemHeadlessClient = new AdobeAemHeadlessClientJs({
 });
 ```
 
-Funktionen `fetchJsonFromGraphQL()` används för att utföra hämtningsbegäran med AEM Headless Client. Den anropas varje gång koden ändras eller kan aktiveras genom att du trycker på länken &quot;Uppdatera&quot;. Den faktiska `aemHeadlessClient.runPersistedQuery(..)` samtal inträffar på rad 34. Vi ändrar lite senare hur dessa JSON-data återges, men för tillfället skriver vi bara ut dem på `#output` div med `resultToPreTag(queryResult)` funktion.
+Funktionen `fetchJsonFromGraphQL()` används för att utföra hämtningsbegäran med AEM Headless Client. Den anropas varje gång koden ändras eller kan aktiveras genom att du klickar på **Uppdatera** länk. Den faktiska `aemHeadlessClient.runPersistedQuery(..)` samtal inträffar på rad 34. Vi ändrar lite senare hur dessa JSON-data återges, men för tillfället skriver vi bara ut dem på `#output` div med `resultToPreTag(queryResult)` funktion.
 
 ## Hämta data från din beständiga fråga {#use-persisted-query}
 
@@ -81,36 +81,36 @@ På rad 25 anger vi vilken GraphQL-fråga som appen ska hämta data från. Det b
 
 1. Uppdatera `persistedQueryName` variabeln för att använda den beständiga frågan som du skapade i föregående modul. Om du följde namnförslaget skulle du ha skapat en beständig fråga med namnet `adventure-list` i `your-project` slutpunkt, och du anger `persistedQueryName` variabel till `your-project/adventure-list`:
 
-```javascript
-//
-// TODO: Use your persisted query here
-//
-persistedQueryName = 'your-project/adventure-list';
-```
+   ```javascript
+   //
+   // TODO: Use your persisted query here
+   //
+   persistedQueryName = 'your-project/adventure-list';
+   ```
 
-1. När den här ändringen har gjorts bör programmet uppdatera automatiskt och skriva ut det råa JSON-svaret från din beständiga fråga till `#output` div. Om du ser ett felmeddelande bör du kontrollera konsolen för mer information. Nå ut till oss [på Slack](https://adobe-dx-support.slack.com) om du fortfarande har problem med det här steget.
+1. När den här ändringen har gjorts bör programmet uppdatera automatiskt och skriva ut det råa JSON-svaret från din beständiga fråga till `#output` div. Om du ser ett felmeddelande bör du kontrollera konsolen för mer information. Nå ut [på Slack](https://adobe-dx-support.slack.com) om du fortfarande har problem med det här steget.
 
 1. Innehåller denna JSON exakt de egenskaper som din app behöver? Om inte, gå tillbaka till [Extrahera innehåll med GraphQL API](https://experience.adobe.com/experiencemanager/learn/extract_content_using_graphql) utbildningsguide för att göra ändringar. Glöm inte att spara och publicera frågan när du är klar.
 
 ## Ändra JSON-återgivning {#change-rendering}
 
-För närvarande återges JSON som i en `pre` -tagg, som inte är särskilt kreativ. Vi kan byta CodePen för att använda `resultToDom()` i stället för att visa hur JSON-svaret kan itereras över för att skapa ett mer intressant resultat.
+JSON återges som i en `pre` -tagg, som inte är särskilt kreativ. Vi kan byta CodePen för att använda `resultToDom()` i stället för att visa hur JSON-svaret kan itereras över för att skapa ett mer intressant resultat.
 
 1. Gör den här ändringen genom att kommentera rad 37 och ta bort kommentaren från rad 40:
 
-```javascript
-// Output the results to a pre tag
-//resultToPreTag(queryResult);
+   ```javascript
+   // Output the results to a pre tag
+   //resultToPreTag(queryResult);
+   
+   // Alternatively, build a colorful div structure with the JSON results and render images inline
+   resultToDom(queryResult);
+   ```
 
-// Alternatively, build a colorful div structure with the JSON results and render images inline
-resultToDom(queryResult);
-```
+1. Den här funktionen återger även alla bilder som ingår i JSON-svaret som `img` -tagg. Om **Adventure** innehållsfragment som du har skapat innehåller inga bilder, du kan försöka växla till `aem-demo-assets/adventures-all` beständig fråga genom att ändra rad 25:
 
-1. Den här funktionen återger även alla bilder som ingår i JSON-svaret som `img` -tagg. Om de&quot;Adventure&quot;-innehållsfragment som du har skapat inte innehåller några bilder kan du försöka med att växla till `aem-demo-assets/adventures-all` beständig fråga genom att ändra rad 25:
-
-```
-persistedQueryName = 'aem-demo-assets/adventures-all';
-```
+   ```javascript
+   persistedQueryName = 'aem-demo-assets/adventures-all';
+   ```
 
 Den här frågan ger ett JSON-svar som innehåller bilder och `resultToDom()` funktionen återger dem textbundet.
 
