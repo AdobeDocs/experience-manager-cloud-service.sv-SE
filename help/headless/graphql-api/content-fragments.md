@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 32f14d94e2eb9e9ec9e6d04b663733bf5087a736
+source-git-commit: 1d7cbec55c5f3fcfbc217bf53d006a56bdf37f4e
 workflow-type: tm+mt
-source-wordcount: '4768'
+source-wordcount: '4746'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ Om du till exempel:
 
 >[!NOTE]
 >
->Detta är viktigt att notera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
+>Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
 Schemat hanteras via samma slutpunkt som GraphQL-frågorna, där klienthanteraren hanterar det faktum att schemat anropas med tillägget `GQLschema`. Du kan till exempel utföra en enkel `GET` begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
 
@@ -698,7 +698,7 @@ query {
 
 >[!NOTE]
 >
->* Som standard för sidindelning använder du UUID för databasnoden som representerar fragmentet för att säkerställa att resultatordningen alltid är densamma. När `sort` används UUID implicit för att säkerställa en unik sortering, även för två objekt med identiska sorteringsnycklar.
+>* Vid sidindelning används som standard UUID för databasnoden som representerar fragmentet för att säkerställa att resultatordningen alltid är densamma. När `sort` används UUID implicit för att säkerställa en unik sortering, även för två objekt med identiska sorteringsnycklar.
 >
 >* På grund av interna tekniska begränsningar försämras prestanda om sortering och filtrering tillämpas på kapslade fält. Därför bör du använda filter-/sorteringsfält som lagras på rotnivå. Detta är också det rekommenderade sättet om du vill fråga stora sidnumrerade resultatuppsättningar.
 
@@ -909,6 +909,9 @@ Följande begränsningar finns:
 
 Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL standardspecifikation. För GraphQL-frågor med AEM finns det några tillägg:
 
+* Om du behöver ett enda resultat:
+   * använda modellnamnet, eg stad
+
 * Om du förväntar dig en resultatlista:
    * add `List` till modellnamnet, till exempel  `cityList`
    * Se [Exempelfråga - All information om alla städer](/help/headless/graphql-api/sample-queries.md#sample-all-information-all-cities)
@@ -926,13 +929,6 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
    * Se [Exempelfråga - All information om alla städer](/help/headless/graphql-api/sample-queries.md#sample-all-information-all-cities)
 
 
-
-* Om du behöver ett enda resultat:
-   * använda modellnamnet, eg stad
-
-* Om du förväntar dig en resultatlista:
-   * add `List` till modellnamnet, till exempel  `cityList`
-   * Se [Exempelfråga - All information om alla städer](/help/headless/graphql-api/sample-queries.md#sample-all-information-all-cities)
 
 * Om du vill använda ett logiskt OR:
    * use ` _logOp: OR`
