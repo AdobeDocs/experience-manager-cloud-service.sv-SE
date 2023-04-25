@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: 436356aabb9d4849f255bf521b35db5dab0c01b5
+source-git-commit: 73ff4edc591e64e797e14d00d6f87759e3f1301a
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -31,19 +31,25 @@ ht-degree: 0%
 
 ## Skapa ett innehållsfragment {#create-fragment}
 
-Innehållsfragment representerar ditt headless-innehåll och baseras på fördefinierade strukturer, som kallas modeller för innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
+Innehållsfragment representerar ditt headless-innehåll och baseras på fördefinierade strukturer, som kallas modeller för innehållsfragment. Du har redan skapat en modell i en tidigare modul.
+
+I den här modulen skapar du ett nytt innehållsfragment baserat på den modellen med konsolen Innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
 
 1. Tryck eller klicka på **Skapa** längst upp till höger på konsolen.
 
 1. The **Nytt innehållsfragment** öppnas där du kan börja skapa ett nytt innehållsfragment. **Plats** fylls automatiskt i med var det nya innehållet sparas.
 
-1. I **Modell för innehållsfragment** väljer du den modell för innehållsfragment som du skapade tidigare.
+1. I **Modell för innehållsfragment** väljer du **Adventure** Modell för innehållsfragment som du skapade tidigare.
 
-1. Lägg till en **Titel** för innehållsfragmentet.
+1. Lägg till `Tuscany` som en beskrivande **Titel** för innehållsfragmentet. Detta är för att identifiera ditt fragment i konsolen.
 
 1. Tryck eller klicka **Skapa och öppna**.
 
-![Skapa ett nytt innehållsfragment](assets/do-not-localize/create-content-3-4-5.png)
+![Skapa ett nytt innehållsfragment](assets/do-not-localize/create-content.png)
+
+>[!TIP]
+>
+>Beroende på inställningarna för webbläsaren kan den nya fliken i webbläsaren vara inaktiverad av en blockerare för popup-fönster. Om ditt nya fragment inte öppnas efter att du klickat **Skapa och öppna**, kontrollera webbläsarens inställningar.
 
 ## Lägg till innehåll i ditt innehållsfragment {#add-content}
 
@@ -51,15 +57,39 @@ När du har sparat och öppnat ditt nya innehållsfragment öppnas redigeraren f
 
 1. Innehållsfragmentsredigeraren visar de fält som du har definierat i den valda modellen. Här kan du lägga till innehåll i varje fält för att slutföra innehållsfragmentet. Förloppet sparas automatiskt.
 
-1. När du är klar med att lägga till innehåll trycker du på eller klickar på **Publicera** längst upp till höger i redigeraren. Detta gör att ditt innehållsfragment blir tillgängligt för konsumtion i externa appar.
+1. Ange en **Titel** för ditt fragment genom att ange `Tuscan adventure`.
 
-1. Välj **Nu** i listrutan. Du kan också schemalägga publiceringen vid ett senare tillfälle.
+1. Ange en **Beskrivning** för fragmentet genom att klistra in i följande text.
 
-   ![Skapa innehåll](assets/do-not-localize/add-content-1-2.png)
+   ```text
+   Visiting Tuscany on a bicycle is about experiencing the old world charm of Italy on your own terms. Your efforts on the climbs of Italy's rolling hills during this tour will be rewarded with sunny Mediterranean landscapes and unmatched Italian hospitality.  Tuscany’s natural wonders have always been a well of inspiration for arts and culture. Find out why as you explore the Italian countryside and coastline on bicycle.
+   ```
+
+1. Ange en **Pris** för ditt fragment genom att ange `$700`.
+
+1. Ange en **Bild** som representerar resan genom att trycka eller klicka **Lägg till resurs** i **Bild** fält.
+
+1. Tryck eller klicka på i popup-fönstret för resurser **Bläddra bland resurser** för att välja från en befintlig resurs i resursbiblioteket.
+
+   ![Lägg till resurs](assets/do-not-localize/add-asset.png)
+
+1. The **Välj resurs** öppnas. Navigera med trädnavigatorn i den vänstra panelen till **Alla resurser** > **aem-demo-assets** > **en** > **äventyr** > **cykling-tuscany**.
+
+1. Innehållet i **cykling-tuscany** visas till höger. Markera bilden `ADOBESTOCK_141786166.JPEG`.
+
+1. Tryck eller klicka **Välj**.
+
+   ![Välj resurs](assets/do-not-localize/select-asset.png)
+
+1. Den valda bilden visas i innehållsfragmentet. Redigeraren sparar ändringarna automatiskt.
+
+1. När du är klar med att lägga till innehåll trycker du på eller klickar på **Publicera** längst upp till höger i redigeraren. Detta gör att ditt innehållsfragment blir tillgängligt för konsumtion i externa appar. Välj sedan **Nu** i listrutan. Du kan också schemalägga publiceringen vid ett senare tillfälle.
+
+   ![Publicera innehåll](assets/do-not-localize/publish.png)
 
 1. The **Publicera innehållsfragment** visas. AEM utför automatiskt en referenskontroll för att se till att alla nödvändiga resurser publiceras för ditt innehållsfragment. I det här fallet måste du även publicera modellen som du skapade. Tryck eller klicka **Publicera**.
 
-   ![Publicerings- och referenskontroll](assets/do-not-localize/publish-4.png)
+   ![Publicerings- och referenskontroll](assets/do-not-localize/publish-confirm.png)
 
 1. Publiceringen bekräftas i en banderoll.
 

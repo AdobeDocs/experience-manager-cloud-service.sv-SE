@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: 09396211b428884f4d522fbcc2dd13086af51dfd
+source-git-commit: 2f4e38ba9bb2e0aab4dc126719a922fc983f8711
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,6 @@ ht-degree: 0%
 Du börjar med GraphQL Explorer på en ny flik. Här kan du skapa och validera frågor mot ditt headless-innehåll innan du använder dem för att styra innehållet i din app eller på din webbplats.
 
 1. Din AEM headless-testversion innehåller en förinläst slutpunkt med innehållsfragment som du kan extrahera innehåll från för testning. Se till att **AEM demoresurser** slutpunkten är markerad i **Slutpunkt** nedrullningsbar meny längst upp till höger i redigeraren.
-
-1. Känt fel: om **AEM demoresurser** slutpunkten finns inte i listrutan, navigera till Pakethanteraren (`/crx/packmgr` sökväg i AEM) och installera om `aem-demo-assets.ui.content-{VERSION}.zip` paket:
-
-   ![Installera om paket](assets/do-not-localize/reinstall-aem-demo-assets-package.png)
 
 1. Kopiera följande kodfragment för en listfråga för den förinlästa **AEM demoresurser** slutpunkt. En listfråga returnerar en lista med allt innehåll som använder en viss modell för innehållsfragment. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
 
@@ -71,6 +67,10 @@ Du börjar med GraphQL Explorer på en ny flik. Här kan du skapa och validera f
    ![Listfråga](assets/do-not-localize/list-query-1-3-4-5.png)
 
 Du har just validerat en listfråga för en fullständig lista över alla innehållsfragment. Den här processen bidrar till att säkerställa att svaret blir vad din app förväntar sig, med resultat som visar hur dina appar och webbplatser kommer att hämta innehåll som skapas i AEM.
+
+>[!NOTE]
+>
+>Om du inte kan välja **AEM demoresurser** från listrutan, kontakta Adobe kundtjänst eller kontakta [AEM testversioner Slack channel.](https://adobe-dx-support.slack.com/)
 
 ## Fråga efter en viss del av exempelinnehållet {#bypath-query}
 
@@ -132,3 +132,64 @@ Nu när du har kört de två primära typerna av frågor kan du fråga efter dit
    ![Kör anpassad fråga](assets/do-not-localize/custom-query-3-4-5-6.png)
 
 Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler.
+
+## Beständiga frågor {#persisted-queries}
+
+Beständiga frågor är det bästa sättet att exponera GraphQL API för klientprogram. När en fråga har sparats kan den begäras med hjälp av en GET-begäran och cachas för snabb hämtning.
+
+Du skapar en beständig fråga som innehåller data som du vill använda från klientprogrammet.
+
+1. Du kommer att använda de data som du skapade som ett innehållsfragment tidigare, så se till att **Ditt projekt** slutpunkten är markerad i **Slutpunkt** nedrullningsbar meny längst upp till höger i redigeraren.
+
+1. Kopiera följande kodfragment.
+
+   ```text
+      {
+      adventureList {
+       items {
+         title
+         description {
+           plaintext
+         }
+         title
+         price
+         image {
+           ... on ImageRef {
+             _publishUrl
+             mimeType
+           }
+         }
+       }
+     }
+   }
+   ```
+
+1. Ersätt det befintliga innehållet i frågeredigeraren genom att klistra in den kopierade koden.
+
+   >[!NOTE]
+   >
+   >Om du inte använde samma fältbeskrivningar som beskrivs i de tidigare modulerna måste du uppdatera fältnamnen i den här frågan.
+   >
+   >Använd funktionen Komplettera automatiskt (Ctrl+Blanksteg eller Alt+Blanksteg) i GraphQL så som beskrivs ovan för att identifiera de tillgängliga egenskaperna.
+
+1. När du har klistrat in klickar du på **Spela upp** längst upp till vänster i frågeredigeraren för att köra frågan.
+
+1. Resultatet visas i den högra panelen bredvid frågeredigeraren. Om frågan är felaktig visas ett fel på den högra panelen.
+
+   ![Skapa egen fråga](assets/do-not-localize/own-query.png)
+
+1. När du är nöjd med frågan klickar du på **Spara som** längst upp i frågeredigeraren för att behålla frågan.
+
+1. I **Frågenamn** popup-fönster, ge frågan namnet `adventure-list`.
+
+1. Tryck eller klicka **Spara som**.
+
+   ![Beständig fråga](assets/do-not-localize/persist-query.png)
+
+1. Frågan bevaras så som den bekräftas av ett banderollmeddelande längst ned på skärmen. Frågan visas även i den vänstra panelen med beständiga frågor i fönstret.
+
+1. För att den beständiga frågan ska vara tillgänglig för allmänheten måste den publiceras, ungefär som hur dina innehållsfragment måste publiceras. Klicka på **Publicera** längst upp till höger i frågeredigeraren för att publicera frågan.
+
+1. Publiceringen bekräftas av ett banderollmeddelande.
+
+Nu har du en ny beständig fråga som bara innehåller de specifika egenskaper och format som du har definierat.

@@ -4,7 +4,7 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: f3f7102496e846705718a65d69f59e110fbecae9
+source-git-commit: 2f4e38ba9bb2e0aab4dc126719a922fc983f8711
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Du börjar i Content Fragment-redigeraren med exempelappen som medföljer AEM He
 
 ![Förhandsgranska appen](assets/do-not-localize/preview-app-1.png)
 
-## Redigera ett sidhuvud i appen {#edit-app}
+## Redigera en rubrik i appen {#edit-app}
 
 Innehållsfragmentsredigeraren visar programmets grundläggande layout som ett sidinnehållsfragment. The **Paneler** representerar olika sidor i programmet, som var och en är sin egen innehållsfragment. Genom att ändra dessa fragment kan du ändra innehållet i appen.
 
@@ -91,7 +91,7 @@ Nu när du har ändrat en rubrik i appen kan du prova att ändra en bild.
 
 Det är så enkelt att uppdatera bilder och resurser i apparna med AEM headless CMS.
 
-## Lägga till en referens till ett nytt innehållsfragment i appen {#create-moment}
+## Lägg till en referens till ett nytt innehållsfragment i appen {#create-moment}
 
 Nu när du har uppdaterat bilden av budgivaren ska vi gå igenom hur man lägger till nytt innehåll i en app genom att skapa och referera till ett nytt innehållsfragment. Du kommer att lägga till ett produktsamtal som hanteras av innehållsfragmentet&quot;köpbart ögonblick&quot; på den andra panelen i programmet.
 
