@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 1d7cbec55c5f3fcfbc217bf53d006a56bdf37f4e
+source-git-commit: 9c4d416b37be684aae37d42a02cc86dfa87fbc2f
 workflow-type: tm+mt
-source-wordcount: '4746'
+source-wordcount: '4769'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ Om du till exempel:
 
 >[!NOTE]
 >
->Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
+>Detta är viktigt att notera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
 Schemat hanteras via samma slutpunkt som GraphQL-frågorna, där klienthanteraren hanterar det faktum att schemat anropas med tillägget `GQLschema`. Du kan till exempel utföra en enkel `GET` begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
 
@@ -241,15 +241,17 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 
 | Content Fragment Model - datatyp | GraphQL Type | Beskrivning |
 |--- |--- |--- |
-| Enkelradig text | String, [Sträng] | Används för enkla strängar som författarnamn, platsnamn osv. |
-| Flerradstext | String, [Sträng] | Används för att skriva ut text, t.ex. brödtexten i en artikel |
-| Siffra | Float, [Float] | Används för att visa flyttal och reguljära tal |
-| Boolean | Boolean | Används för att visa kryssrutor → enkla sant/falskt-satser |
-| Datum och tid | Kalender | Används för att visa datum och tid i ett ISO 8601-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
-| Uppräkning | Sträng | Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
-| Taggar | [Sträng] | Används för att visa en lista över strängar som representerar taggar som används i AEM |
-| Innehållsreferens | String, [Sträng] | Används för att visa sökvägen till en annan resurs i AEM |
-| Fragmentreferens | *En modelltyp* | Används för att referera till ett annat innehållsfragment av en viss modelltyp, som definieras när modellen skapades |
+| Enkelradig text | `String`, `[String]` | Används för enkla strängar som författarnamn, platsnamn osv. |
+| Flerradstext | `String`, `[String]` | Används för att skriva ut text, t.ex. brödtexten i en artikel |
+| Siffra | `Float`, `[Float]` | Används för att visa flyttal och reguljära tal |
+| Boolean | `Boolean` | Används för att visa kryssrutor → enkla sant/falskt-satser |
+| Datum och tid | `Calendar` | Används för att visa datum och tid i ett ISO 8601-format. Beroende på vilken typ som valts finns det tre aromer som kan användas i AEM GraphQL: `onlyDate`, `onlyTime`, `dateTime` |
+| Uppräkning | `String` | Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
+| Taggar | `[String]` | Används för att visa en lista över strängar som representerar taggar som används i AEM |
+| Innehållsreferens | `String`, `[String]` | Används för att visa sökvägen till en annan resurs i AEM |
+| Fragmentreferens |  *En modelltyp* <br><br>Ett fält: `Model` - Modelltyp, refereras direkt <br><br>Multifält, med en referenstyp: `[Model]` - Array av typen `Model`, som refereras direkt från en array <br><br>Multifält, med flera refererade typer: `[AllFragmentModels]` - Array med alla modelltyper, refererad från array med unionstyp |  Används för att referera till en eller flera innehållsfragment av vissa modelltyper, som definieras när modellen skapades |
+
+{style="table-layout:auto"}
 
 ### Hjälpfält {#helper-fields}
 
