@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 614834961c23348cd97e367074db0a767d31bba9
+source-git-commit: a56b0ed1efff7b8d04e65921ee9dd25ae7030dbd
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2865'
 ht-degree: 0%
 
 ---
@@ -86,6 +86,27 @@ Du kan ha en eller flera av dessa filer. De innehåller `<VirtualHost>` poster s
 >
 >I det flexibla läget bör du använda relativa sökvägar i stället för absoluta sökvägar.
 
+Kontrollera att det alltid finns minst en virtuell värd som matchar ServerAlias `\*.local`, `localhost` och `127.0.0.1` som behövs för att göra avsändaren ogiltig. Serveralias `*.adobeaemcloud.net` och `*.adobeaemcloud.com` krävs också i minst en värdkonfiguration och behövs för interna Adobe-processer.
+
+Om du vill matcha den exakta värden eftersom du har flera värdfiler kan du följa exemplet nedan:
+
+```
+<VirtualHost *:80>
+	ServerName	"example.com"
+	# Put names of which domains are used for your published site/content here
+	ServerAlias	 "*example.com" "\*.local" "localhost" "127.0.0.1" "*.adobeaemcloud.net" "*.adobeaemcloud.com"
+	# Use a document root that matches the one in conf.dispatcher.d/default.farm
+	DocumentRoot "${DOCROOT}"
+	# URI dereferencing algorithm is applied at Sling's level, do not decode parameters here
+	AllowEncodedSlashes NoDecode
+	# Add header breadcrumbs for help in troubleshooting which vhost file is chosen
+	<IfModule mod_headers.c>
+		Header add X-Vhost "publish-example-com"
+	</IfModule>
+  ...
+</VirtualHost>
+```
+
 * `conf.d/rewrites/rewrite.rules`
 
 Den här filen ingår i `.vhost` filer. Den har en uppsättning regler för omskrivning av `mod_rewrite`.
@@ -135,7 +156,7 @@ Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer 
 Innehåller ett exempel på en virtuell värd. Skapa en kopia av den här filen för din egen virtuella värd, anpassa den, gå till `conf.d/enabled_vhosts` och skapa en symbolisk länk till en egen kopia.
 Kopiera inte filen default.vhost direkt till `conf.d/enabled_vhosts`.
 
-Kontrollera att det alltid finns ett virtuellt värdsystem som matchar ServerAlias `\*.local` och även localhost, som behövs för interna Adobe-processer.
+Kontrollera att det alltid finns ett virtuellt värdsystem som matchar ServerAlias `\*.local`, `localhost` och `127.0.0.1` som behövs för att göra avsändaren ogiltig. Serveralias `*.adobeaemcloud.net` och `*.adobeaemcloud.com` behövs för interna Adobe-processer.
 
 * `conf.d/dispatcher_vhost.conf`
 
@@ -229,7 +250,7 @@ Skriptet har följande tre faser:
 
 1. Den kör valideraren. Om konfigurationen inte är giltig misslyckas skriptet.
 2. Det kör `httpd -t` för att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution.
-3. Kontrollerar att delmängden av Dispatcher SDK-konfigurationsfilerna, som är avsedda att vara oföränderliga enligt beskrivningen i [Filstruktursektion](##flexible-mode-file-structure), har inte ändrats.
+3. Kontrollerar att delmängden av Dispatcher SDK-konfigurationsfilerna, som är avsedda att vara oföränderliga enligt beskrivningen i [Filstruktursektion](##flexible-mode-file-structure), har inte ändrats och matchar den aktuella SDK-versionen.
 
 Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också att utföras och eventuella fel kommer att inkluderas i Cloud Manager `Build Images step failure` log.
 
@@ -371,11 +392,12 @@ Undvik det här felet genom att kopiera och klistra in sökvägen från Utforska
 
 ### Fas 2 {#second-phase}
 
-Den här fasen kontrollerar apachesyntaxen genom att starta Docker i en bild. Docker måste installeras lokalt, men observera att AEM inte behöver köras.
+Den här fasen kontrollerar apachesyntaxen genom att starta Apache HTTPD i en dockningsbehållare. Docker måste installeras lokalt, men observera att AEM inte behöver köras.
 
 >[!NOTE]
 >
 >Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta är en förutsättning för att du ska kunna köra och felsöka Dispatcher på en lokal dator.
+>För både Windows och macOS rekommenderar vi att du använder Docker Desktop.
 
 Denna fas kan också köras oberoende av varandra `bin/docker_run.sh src/dispatcher host.docker.internal:4503 8080`.
 
@@ -403,6 +425,8 @@ immutable file 'conf.dispatcher.d/clientheaders/default_clientheaders.any' has b
 ```
 
 Denna fas kan också köras oberoende av varandra `bin/docker_immutability_check.sh src/dispatcher`.
+
+Dina lokala oföränderliga filer kan uppdateras genom att köra `bin/update_maven.sh src/dispatcher` skript i din dispatcher-mapp, där `src/dispatcher` är din konfigurationskatalog för dispatcher. Detta uppdaterar även alla pom.xml-filer i den överordnade katalogen så att även Maven immutability-kontrollerna uppdateras.
 
 ## Felsöka konfigurationen av Apache och Dispatcher {#debugging-apache-and-dispatcher-configuration}
 

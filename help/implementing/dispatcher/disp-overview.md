@@ -3,9 +3,9 @@ title: Dispatcher i molnet
 description: Dispatcher i molnet
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
-source-git-commit: 6ea869b3067d168c661ea925e112857c4bbd70e9
+source-git-commit: c61cd92acd416b1c463f5359f66be8199acf08c3
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1009'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Dispatcher-verktygen är en del av den övergripande AEM as a Cloud Service SDK:
 
 Dispatcher Tools, en del av [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md), kan laddas ned från en zip-fil i [Programvarudistribution](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/aemcloud.html) portal. Alla nya konfigurationer som är tillgängliga i den nya versionen av Dispatcher Tools kan användas för att distribuera till molnmiljöer som kör den versionen av AEM i molnet eller senare.
 
-Zippa upp SDK, som innehåller Dispatcher Tools för både macOS, Linux och Windows.
+Zippa upp SDK, som innehåller Dispatcher Tools för macOS, Linux och Windows.
 
 **För macOS/Linux**, gör att artefakten för verktyget Dispatcher kan köras. Dispatcher Tools-filerna extraheras automatiskt under den katalog som du lagrade dem i (var `version` är versionen av Dispatcher Tools).
 
