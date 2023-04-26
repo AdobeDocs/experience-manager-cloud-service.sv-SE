@@ -4,9 +4,9 @@ description: Lär dig hur du använder AEM Content Fragment-modeller för att sk
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: 49301c21e3b97b4bdf29fdccc53339149ac5a63b
+source-git-commit: 7134951a588eae3ee0c7c11abea17a34eac21474
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -68,11 +68,9 @@ I redigeraren för innehållsfragmentmodellen konfigurerar du de datatyper och e
 
 1. När du har definierat egenskaperna för fältet kan du växla tillbaka till **Datatyper** i den högra panelen och lägga till ytterligare fält genom att dra och släppa.
 
-1. Tryck eller klicka **Spara** för att spara modellen.
-
 På så sätt kan du lägga till så många fält som behövs i modellen för att stödja den typ av datastruktur du behöver. Typerna av datafält varierar, men processen att lägga till dem i modellen är densamma.
 
-Fortsätt till nästa avsnitt för att lägga till de fält som krävs för att slutföra **Adventure** modell.
+Fortsätt till nästa avsnitt för att lägga till de fält som krävs för att slutföra och spara **Adventure** modell
 
 ![Steg ett, två och tre av de fält som läggs till i modellen](assets/do-not-localize/define-model-fields.png)
 
@@ -104,4 +102,3 @@ Följ samma steg som ovan för att lägga till dessa ytterligare fält. Den enda
 1. När du har lagt till alla fält som behövs för modellen för innehållsfragment klickar du på **Spara** längst upp till höger i fönstret.
 
 1. Modellen sparas och du återgår till modellkonsolen för innehållsfragment.
-

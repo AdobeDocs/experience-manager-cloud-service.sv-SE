@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: 2f4e38ba9bb2e0aab4dc126719a922fc983f8711
+source-git-commit: a2064dcbec1c171b0a6de57b4197f4921d234428
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -117,19 +117,19 @@ Nu när du har kört de två primära typerna av frågor kan du fråga efter dit
 
 1. Om du vill köra frågor mot dina egna innehållsfragment ändrar du slutpunkten från **AEM demoresurser** mapp till **Ditt projekt** mapp.
 
-1. Ta bort allt befintligt innehåll i frågeredigeraren. Skriv sedan inledande hakparentes `{` och tryck på Ctrl+Blanksteg eller Alt+Blanksteg om du vill visa en lista över de modeller som definierats i slutpunkten automatiskt. Välj den modell som du skapade och som slutar i `List` från alternativen.
+1. Ta bort allt befintligt innehåll i frågeredigeraren. Skriv sedan inledande hakparentes `{` och tryck på Ctrl+Blanksteg eller Alt+Blanksteg om du vill visa en lista över de modeller som definierats i slutpunkten automatiskt. Välj den modell som du skapade och som slutar i `List` från alternativen. Om du följde exemplen i de tidigare modulerna bör du hitta `adventureList` i listan Komplettera automatiskt.
 
-   ![Starta anpassad fråga](assets/do-not-localize/custom-query-1-2.png)
+   ![Starta anpassad fråga](assets/do-not-localize/custom-query-1.png)
 
 1. Definiera de objekt som frågan ska innehålla för den valda innehållsfragmentmodellen. Igen, skriv den öppna klammerparentesen `{`och trycker sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att visa en lista som fylls i automatiskt. Välj `items` från alternativen.
 
 1. Tryck eller klicka på **Förtifiera** för att automatiskt formatera koden så att den blir lättare att läsa.
 
-1. När du är klar trycker du på eller klickar på **Spela upp** längst upp till vänster i redigeraren för att köra frågan. Redigeraren fyller i `items` och frågan körs.
+1. När du är klar trycker du på eller klickar på **Spela upp** längst upp till vänster i redigeraren för att köra frågan. Redigeraren fyller i `items`, som kortfattat markeras med gult och frågan körs.
 
 1. Resultatet visas i den högra panelen bredvid frågeredigeraren.
 
-   ![Kör anpassad fråga](assets/do-not-localize/custom-query-3-4-5-6.png)
+   ![Kör anpassad fråga](assets/do-not-localize/custom-query-2.png)
 
 Så här kan ert innehåll levereras till digitala upplevelser i flera kanaler.
 
@@ -151,7 +151,6 @@ Du skapar en beständig fråga som innehåller data som du vill använda från k
          description {
            plaintext
          }
-         title
          price
          image {
            ... on ImageRef {
