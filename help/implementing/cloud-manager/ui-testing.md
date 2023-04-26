@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 53f1a6bb83e4ad52d00f9899db0a87c3cb3e2653
+source-git-commit: 24796bd7d9c5e726cda13885bc4bd7e4155610dc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2238'
 ht-degree: 0%
 
 ---
@@ -227,7 +227,7 @@ Provexemplen från Adobe ger hjälpfunktioner för att komma åt konfigurationsp
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
 1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
@@ -275,15 +275,32 @@ Testerna ibland måste överföra filer till det program som testas. För att dr
    * Svarets innehåll är ett ogenomskinligt filhandtag.
    * Du kan använda det här handtaget i stället för en filsökväg i en `<input>` -element för att testa filöverföringar i programmet.
 
-## Köra gränssnittstester lokalt {#run-ui-tests-locally}
-
-Innan gränssnittstester aktiveras i en Cloud Manager-pipeline rekommenderar vi att du kör UI-testerna lokalt mot [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) eller i en faktisk AEM as a Cloud Service instans.
-
 ### Förutsättningar {#prerequisites}
 
-Testerna i Cloud Manager körs med en teknisk administratörsanvändare.
+1. Testerna i Cloud Manager körs med en teknisk administratörsanvändare.
 
-Om du kör gränssnittstesterna från den lokala datorn skapar du en användare med administratörsliknande behörigheter för att uppnå samma beteende.
+>[!NOTE]
+>
+>Om du vill köra funktionstester från den lokala datorn skapar du en användare med administratörsliknande behörigheter för att uppnå samma beteende.
+
+1. Den inneslutna infrastruktur som omfattar funktionstestning begränsas av följande gränser:
+
+| Typ | Värde | Beskrivning |
+|----------------------|-------|--------------------------------------------------------------------|
+| CPU | 2.0 | Den CPU-tid som reserverats per testkörning |
+| Minne | 1Gi | Mängd minne som tilldelats testet, värde i gibibyte |
+| Timeout | 30m | Den varaktighet efter vilken testet avslutas. |
+| Rekommenderad varaktighet | 15m | Vi rekommenderar att du skriver testerna så att de inte tar längre tid än så här. |
+
+>[!NOTE]
+>
+> Om du behöver mer resurser skapar du ett kundvårdsärende och beskriver ditt användningsfall. vårt team granskar din förfrågan och ger lämplig hjälp.
+
+
+## Köra gränssnittstester lokalt {#run-ui-tests-locally}
+
+Innan gränssnittstester aktiveras i en Cloud Manager-pipeline bör gränssnittstester köras lokalt mot [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
+eller mot en faktisk AEM as a Cloud Service instans.
 
 ### JavaScript-testexempel {#javascript-sample}
 
