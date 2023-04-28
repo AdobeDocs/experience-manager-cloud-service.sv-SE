@@ -2,43 +2,45 @@
 title: Notiscenter
 description: Utnyttja Notiscenter för att enkelt vidta åtgärder i samband med incidenter och annan viktig information
 hidefromtoc: true
-source-git-commit: 55ecd685afa28226974f3415b550bd2e8d05e2e6
+exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
+source-git-commit: b72d22e8788c04ab4faa3616a4a0ce5e6d8ce991
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '798'
 ht-degree: 0%
 
 ---
-
 
 # Notiscenter {#notification-center}
 
 >[!NOTE]
 >Den här funktionen har inte släppts.
 
-När konfigurationen är klar skickar AEM som Cloud Service meddelanden om viktig information som kunderna ska vidta åtgärder för. Exempel på meddelanden är till exempel en blockerad kö eller en uppsättning uppgifter som förfaller. Den fullständiga uppsättningen meddelandetyper kan visas i [tabellen nedan](#current-notification-types)och kommer att byggas ut med tiden. Meddelanden tas emot via både e-post och som en ny post under meddelandewidgeten, som du kommer åt genom att klicka på klockikonen i det övre högra hörnet i hela Adobe Experience Cloud. Meddelandeinställningar kan konfigureras.
+AEM som Cloud Service skickar meddelanden när allvarliga incidenter inträffar som kräver omedelbara åtgärder, samt proaktiva rekommendationer för optimering. Exempel är en blockerad kö eller en uppsättning uppgifter som förfaller. hela uppsättningen meddelandetyper kan visas i [tabellen nedan](#supported-notification-types), som kommer att byggas ut med tiden.
 
-När ett meddelande tas emot kan du klicka på det för att öppna AEM as a Cloud Service Notiscenter med en popup som visar ytterligare kontext som förklarar den rekommenderade åtgärden som en kund ska vidta.
+Dessa meddelanden kan konfigureras att tas emot både via e-post och under meddelandewidgeten, som du kommer åt genom att klicka på klockikonen i det övre högra hörnet i Adobe Experience Cloud.
+
+När ett meddelande tas emot kan du klicka på det för att öppna AEM as a Cloud Service Notiscenter med en popup som visar ytterligare kontext som förklarar vilken åtgärd en kund ska vidta.
 
 Förutom att visa information om det meddelande du just klickade på fungerar Notiscenter som ett nav där du kan visa och hantera den aktuella och äldre meddelandeuppsättningen. <!-- It can be accessed directly at the url TBD (Alexandru: I'm intentionally keeping it TBD for now so customers don't find it) -->
 
-Det finns två meddelandekategorier på hög nivå:
+Det finns två högnivåkategorier med meddelanden som visas i Notiscenter:
 
-1. Incidenter - en händelse har inträffat, som vanligtvis kräver snabb lösning. Du kan till exempel lösa en blockerad kö
-1. Proaktiv - Adobe har en rekommendation om en åtgärd som en kund ska vidta inom den närmaste framtiden. Om du till exempel vill sluta referera till ett föråldrat användargränssnitt.
+1. Driftsincidenter - en händelse har inträffat, som vanligtvis kräver snabb lösning. Du kan till exempel lösa en blockerad kö.
+1. Förebyggande rekommendationer - Adobe har en rekommendation om en åtgärd som en kund ska vidta inom den närmaste framtiden. Om du till exempel vill sluta referera till ett föråldrat användargränssnitt.
 
-Se [tabellen nedan](#current-notification-types) för de meddelanden som stöds.
+Se [tabellen nedan](#supported-notification-types) för de meddelanden som stöds.
 
-På skärmen Notiscenter kan du välja ett specifikt program och en viss miljö, vilket filtrerar för det omfånget.
+I Notiscenter kan du välja ett specifikt program och en viss miljö, vilket filtrerar för det omfånget.
 
 ## Konfiguration {#configuration}
 
 Följ stegen nedan för att konfigurera mottagningsmeddelanden:
 
-1. Skapa följande produktprofiler enligt beskrivningen [i den här artikeln](/help/journey-onboarding/notification-profiles.md), och tilldela rätt Adobe-ID från din organisation till dessa profiler.
-1. Kontrollera inställningarna för meddelandekonfigurationen. [På den här sidan](https://experience.adobe.com/preferences/notification-section)kontrollerar du att prenumerationen på Experience Manager är aktiverad och att **Övriga** är markerad. Vi rekommenderar dessutom att avsnittet E-post är inställt på **Snabbmeddelanden** så att du får meddelanden omedelbart efter att en incident har inträffat.
+1. Skapa följande produktprofiler enligt beskrivningen [i den här artikeln](/help/journey-onboarding/notification-profiles.md)och du kan även tilldela rätt Adobe-ID från din organisation till dessa profiler. Detta gör att en administratör kan avgöra vilka användare som är kvalificerade att ta emot dessa meddelanden.
+1. Varje tilldelad användare som tilldelats i föregående steg kan konfigurera hur de vill få sina meddelanden. På [Experience Cloud inställningssida](https://experience.adobe.com/preferences/notification-section)kontrollerar du att prenumerationen på Experience Manager är aktiverad och att **Driftincidenter** och **Förebyggande rekommendationer** är markerade. Vi rekommenderar dessutom att avsnittet E-post är inställt på **Snabbmeddelanden** så att meddelanden tas emot omedelbart när en incident inträffar.
 
 >[!NOTE]
->Prenumerationer fungerar på organisationsnivå så att prenumeranterna får meddelanden om alla program och miljöer i dessa program.
+>Meddelanden fungerar på organisationsnivå så att prenumeranterna får meddelanden om alla program och miljöer i dessa program.
 
 ## Detaljerat användarflöde {#detailed-user-flow}
 
@@ -62,11 +64,22 @@ Precis som alla supportärenden visas de i [Fliken Adobe Admin Console Supportä
 
 ![Stöd för Admin Console](/help/operations/assets/admin-console-support.png)
 
-## Aktuella meddelandetyper {#current-notification-types}
+## Vilka meddelanden visas? {#which-notification}
 
-Tabellen nedan visar de meddelandetyper som stöds
+AEM as a Cloud Service har flera typer av meddelanden, men bara en delmängd visas i Notiscenter, enligt tabellen nedan.
+
+| Meddelandetyp | Beskrivning | Konfigurera | Visas i Notiscenter |
+|---|---|---|---|
+| Driftincidenter | Kritiska incidenter som kräver omedelbara åtgärder | Användare tilldelad produktprofilen&quot;Incidentmeddelande - Cloud Service&quot;, kryssrutan&quot;Driftincidenter&quot; markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences) | X |
+| Förebyggande rekommendationer | Optimeringar som ska planeras | Användare tilldelad produktprofilen &quot;Proaktiv avisering - Cloud Service&quot;, kryssrutan &quot;Proaktiva rekommendationer&quot; markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences) | X |
+| Molnhanterarens pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan &quot;Others&quot; (Övriga) markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences) |  |
+
+## Meddelandetyper som stöds {#supported-notification-types}
+
+I följande tabell visas de meddelandetyper som stöds för närvarande.
 
 | Meddelandetyp | Relaterad produktprofil | Korrigeringsåtgärd |
 |---|---|---|
 | Blockerad replikeringskö | Incident | Avblockera kön genom att följa instruktionerna i [Replikeringsdokumentation](/help/operations/replication.md#troubleshooting) |
 | S2S-certifikatet förfaller | Proaktiv | Lär dig hur du uppdaterar en autentiseringsuppgift i dialogrutan [Genererar åtkomsttoken för dokumentation för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) |
+
