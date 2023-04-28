@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 464a97ce-da3e-47b5-9879-fafaf2f2378c
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 8%
+source-wordcount: '445'
+ht-degree: 9%
 
 ---
 
@@ -53,3 +53,18 @@ Du kan lägga till egna namnutrymmen i Experience Manager. Precis som det finns 
 
 1. Om du vill lägga till ett namnutrymme klickar du på eller trycker **[!UICONTROL New]** längst ned.
 1. Ange ett anpassat namnutrymme i XML-namnutrymmeskonventionen (ange id:t i form av en URI och ett associerat prefix för id:t) och klicka eller tryck **[!UICONTROL Save]**.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

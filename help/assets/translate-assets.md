@@ -1,26 +1,26 @@
 ---
-title: Skapa och hantera digitala resurser på flera språk
-description: Lär dig automatisera arbetsflöden för översättning av resurser, inklusive binära filer, metadata och taggar till flera språk.
+title: Hur översätter ni resurser i AEM?
+description: Lär dig hur du automatiserar arbetsflöden för att översätta resurser i AEM, inklusive binärfiler, metadata och taggar till flera språk.
 contentOwner: AG
 feature: Asset Management,Translation
 role: Admin,User
 exl-id: 98df1412-a957-48a3-81c2-7dfe1d5e6d31
-source-git-commit: cf3273af030a8352044dcf4f88539121249b73e7
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '2437'
+source-wordcount: '2473'
 ht-degree: 19%
 
 ---
 
-# Flerspråkiga resurser {#multilingual-assets}
+# Översätt resurser i AEM {#multilingual-assets}
 
-Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt. Med Adobe Experience Manager Assets kan du automatisera arbetsflöden för översättning av resurser (inklusive binärfiler, metadata och taggar) för att generera resurser på andra språk för användning i flerspråkiga projekt.
+Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt. Med Adobe Experience Manager Assets kan ni automatisera arbetsflöden för att översätta resurser (inklusive binärfiler, metadata och taggar) och generera resurser på andra språk för användning i flerspråkiga projekt.
 
-Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med Experience Manager och skapar projekt för översättning av resurser till flera språk. Experience Manager har stöd för arbetsflöden för översättning mellan människor och datorer.
+Om du vill automatisera AEM översättning av resurser integrerar du översättningstjänstleverantörer med Experience Manager och skapar projekt för översättning av resurser till flera språk. Experience Manager har stöd för arbetsflöden för översättning mellan människor och datorer.
 
-Översättning: De översatta resurserna returneras och importeras till Experience Manager. När översättningsleverantören är integrerad med Experience Manager skickas resurser automatiskt mellan Experience Manager och översättningsleverantören.
+Personalöversättning i AEM: De översatta resurserna returneras och importeras till Experience Manager. När översättningsleverantören är integrerad med Experience Manager skickas resurser automatiskt mellan Experience Manager och översättningsleverantören.
 
-Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart metadata och taggar för resurser.
+Maskinresursöversättning i AEM: Maskinöversättningstjänsten översätter omedelbart metadata och taggar för resurser.
 
 <!--
 We have multiple articles around translation of assets. For now, dumping all content in this article to remove others and create only ONE UBER article.
@@ -48,7 +48,7 @@ Also see, [Creating translation projects for content fragments](creating-transla
 
 -->
 
-## Förbered resurser för översättning {#prepare-assets-for-translation}
+## Förbered för att översätta resurser {#prepare-to-translate-assets}
 
 Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt.
 
@@ -70,7 +70,7 @@ Språkkopian som du ursprungligen lade till resurser för är det primära språ
         |- zh
 ```
 
-Utför följande steg för att förbereda dina resurser för översättning:
+Utför följande steg för att förbereda översättning av resurser:
 
 1. Skapa språkroten för det primära språket. Språkroten för den engelska språkkopian i exempelmapphierarkin är till exempel `/content/dam/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](#create-a-language-root).
 
@@ -276,3 +276,17 @@ Du kan använda en anpassad koppling för de översättningstjänster som du vil
 1. Kör ett översättningsarbetsflöde som beskrivs i Skapa översättningsprojekt när du har använt den anpassade kopplingen. Kontrollera informationen om kopplingen i rutan **[!UICONTROL Translation Summary]** för översättningsprojektets på konsolen **[!UICONTROL Projects]**.
 
    ![chlimage_1-220](assets/chlimage_1-220.png)
+
+**Se även**
+
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

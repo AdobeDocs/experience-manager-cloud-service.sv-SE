@@ -4,10 +4,10 @@ description: Betydande ändringar i [!DNL Adobe Experience Manager Assets] in [!
 feature: Release Information
 role: User,Leader,Architect,Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: 86941606cba81ebff21e3db70967f862eabf7515
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 0%
+source-wordcount: '1027'
+ht-degree: 1%
 
 ---
 
@@ -66,6 +66,21 @@ Om du vill göra en komplett validering av koden och processen, inklusive tillg�
 | Smart översättning | Stöds inte | [Smart översättning](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/translation/smart-translation-search-feature-video-use.html) stöds inte i [!DNL Experience Manager] som [!DNL Cloud Service]. |
 | WebDAV | Stöds inte | Information om alternativ finns i [[!DNL Creative Cloud] integration](/help/assets/aem-cc-integration-best-practices.md) eller [Referensmaterial för utvecklare](/help/assets/developer-reference-material-apis.md). |
 | Klassiskt användargränssnitt | Stöds inte | Endast det Touch-aktiverade användargränssnittet är tillgängligt. |
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >

@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Collections,Asset Management
 role: User
 exl-id: b0798adc-56a4-4577-b4ee-8d1fca3bff09
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '2244'
+source-wordcount: '2272'
 ht-degree: 18%
 
 ---
@@ -254,6 +254,20 @@ Du kan köra ett arbetsflöde för resurserna i en samling. Om samlingen innehå
 1. I **[!UICONTROL Start Workflow]** väljer du en arbetsflödesmodell i listan. Välj till exempel **[!UICONTROL DAM Update Asset]** modell.
 1. Ange en titel för arbetsflödet och tryck/klicka **[!UICONTROL Start]**.
 1. Tryck/klicka i dialogrutan **[!UICONTROL Proceed]**. Arbetsflödet körs på alla resurser i samlingen.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >

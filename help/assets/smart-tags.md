@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 5bf764c84d6676b575371bd865538a3f2c13a2ab
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '2359'
-ht-degree: 3%
+source-wordcount: '2389'
+ht-degree: 4%
 
 ---
 
@@ -252,6 +252,21 @@ Om du vill söka efter filer med smarta taggar (vanliga eller förbättrade) anv
 >
 >Möjligheten att använda smarta taggar för att utbilda dig på dina taggar och använda dem på andra bilder beror på kvaliteten på de bilder du använder i utbildningen.
 >För bästa resultat rekommenderar Adobe att du använder visuellt liknande bilder för att utbilda tjänsten för varje tagg.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >

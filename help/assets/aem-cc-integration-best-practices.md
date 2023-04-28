@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Collaboration,Adobe Asset Link,Desktop App
 role: Architect,User,Admin
 exl-id: cbed0d62-5148-45eb-b6a0-9fd164060fdc
-source-git-commit: 0d0a3247e42e0f4a9b2965104814fe6bcd8e6128
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '3443'
+source-wordcount: '3473'
 ht-degree: 14%
 
 ---
@@ -228,3 +228,18 @@ Du kan använda följande överföringsfunktioner:
 Om du använder Network File Shares för att hantera digitala resurser kan du se att bara den nätverksresurs som är mappad av Experience Manager-datorprogrammet används som ett praktiskt alternativ. När du övergår från filresurser i nätverket har Experience Manager webbgränssnitt en mängd funktioner för hantering av digitala resurser som går mycket längre än vad som är möjligt på en nätverksresurs (sökning, samlingar, metadata, samarbete, förhandsvisningar och så vidare), och skrivbordsappen Experience Manager tillhandahåller en praktisk länk för att ansluta DAM-databasen på serversidan med datorarbetet.
 
 Undvik att använda Experience Manager-datorprogrammet för att hantera resurser direkt i Experience Manager Assets nätverksresurs. Undvik till exempel att använda datorprogrammet Experience Manager för att flytta/kopiera flera filer. Använd i stället Experience Manager Assets webbgränssnitt för att dra mappar från Finder/Utforskaren till nätverksresursen eller använd funktionen Experience Manager Assets mappöverföring.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

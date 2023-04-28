@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: c86760ed-169d-40f7-91a4-8aee449b286c
-source-git-commit: 7ea0e6c2d277199fc5216aab70e587bd23ac6baa
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 5%
+source-wordcount: '1032'
+ht-degree: 6%
 
 ---
 
@@ -81,7 +81,7 @@ The **[!UICONTROL Build Form]** På fliken visas formulärobjekt som du använde
    <td><p> Lägg till en sifferkomponent.</p> </td>
   </tr>
   <tr>
-   <td><p>Date</p> </td>
+   <td><p>Datum</p> </td>
    <td><p> Lägg till en datumkomponent.</p> </td>
   </tr>
   <tr>
@@ -172,3 +172,18 @@ Du kan tilldela ett mappmetadatchema när du skapar en mapp. Om det finns minst 
 Ange metadatavärden i de olika fälten och tryck/klicka **[!UICONTROL Save]** för att lagra värdena. De värden du anger lagras i mappnoden i CRX-databasen.
 
 ![folder_metadata_properties-1](assets/folder_metadata_properties-1.png)
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

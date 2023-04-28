@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '4848'
+source-wordcount: '4876'
 ht-degree: 5%
 
 ---
@@ -154,7 +154,7 @@ Du kan söka efter resurser baserat på exakta värden för metadatafält, som t
 | Metadatafält | Fasettvärde och -användning |
 |---|---|
 | Titel | title:John |
-| Originalformat | skapare:John |
+| Skapare | skapare:John |
 | Plats | plats:NA |
 | Beskrivning | description:&quot;Sample Image&quot; |
 | Skapare | creatortool:&quot;Adobe Photoshop&quot; |
@@ -389,7 +389,7 @@ Du kan söka efter digitala resurser baserat på en eller flera av följande ege
 | Publiceringsstatus | Publicerad eller opublicerad. |
 | Godkänd status | Godkänd eller Avvisad. |
 | Orientering | Vågrät, Lodrät eller Fyrkant. |
-| Format | Färg eller Svartvitt. |
+| Stil | Färg eller Svartvitt. |
 | Videohöjd | Anges som lägsta och högsta värde. Värdet lagras endast i metadata för videoåtergivningar. |
 | Videobredd | Anges som lägsta och högsta värde. Värdet lagras endast i metadata för videoåtergivningar. |
 | Videoformat | DVI, Flash, MPEG4, MPEG, OGG Theora, QuickTime, Windows Media. Värdet lagras i källvideons metadata och eventuella återgivningar. |
@@ -463,6 +463,20 @@ Du kan skapa smarta samlingar baserat på sökvillkoren. På panelen **[!UICONTR
 | När du söker efter visuellt liknande bilder saknas en förväntad bild. | <ul><li>Bilden är inte tillgänglig i [!DNL Experience Manager].</li><li>Bilden är inte indexerad. Vanligtvis när den nyligen har överförts.</li><li>Bilden är inte smart taggad.</li></ul> | <ul><li>Lägg till bilden i [!DNL Assets].</li><li>Kontakta administratören om du vill indexera om databasen. Se även till att du använder rätt index.</li><li>Kontakta administratören om du vill tagga de relevanta resurserna på ett smart sätt.</li></ul> |
 | När du söker efter visuellt liknande bilder visas en irrelevant bild. | Visuell sökfunktion. | [!DNL Experience Manager] visar så många potentiellt relevanta tillgångar som möjligt. Mindre relevanta bilder, om sådana finns, läggs till i resultatet men med en lägre sökrankning. Kvaliteten på matchningarna och relevansen hos de sökda resurserna minskar när du bläddrar nedåt i sökresultaten. |
 | När du väljer och arbetar med sökresultat utförs inte alla sökbara resurser. | The [!UICONTROL Select All] väljer bara de första 100 sökresultaten i kortvyn och de första 200 sökresultaten i listvyn. |  |
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >

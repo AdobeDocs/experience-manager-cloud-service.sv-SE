@@ -6,10 +6,10 @@ mini-toc-levels: 1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User, Architect, Admin
 exl-id: 691a0925-0061-4c62-85ac-8257b96dddf2
-source-git-commit: ca01102673211f17e58af36ef2a59d0e964022d5
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 4%
+source-wordcount: '1381'
+ht-degree: 5%
 
 ---
 
@@ -78,7 +78,7 @@ Om du vill filtrera mappinnehållet som du vill publicera klickar du på **[!UIC
    * Aktiverad: Alla resurser i den valda mappen, undermappar (inklusive alla resurser i undermapparna) och referenser publiceras.
    * Inaktiverad: Endast den markerade mappen (tom) och referenser publiceras. Resurserna i den valda mappen publiceras inte.
 
-* `Include folder contents` and `Include only immediate folder contents`
+* `Include folder contents` och `Include only immediate folder contents`
 
    Om båda alternativen är markerade publiceras alla resurser i den markerade mappen, undermapparna (tomma) och referenserna. Undermapparnas resurser publiceras inte.
 
@@ -96,15 +96,15 @@ När du har använt filtren klickar du på **[!UICONTROL OK]** och klicka sedan 
 
 I bilden ovan kan du se olika värden för **[!UICONTROL Publish Target]** -attribut. Låt oss komma ihåg att du har valt att publicera till [!DNL Experience Manager Assets] (`Destination: Publish`). Varför visar det då att bara en mapp och en resurs publiceras till `AEM`, och de andra två resurserna publiceras till båda `AEM` och `Dynamic Media`?
 
-Här måste du känna till mappegenskapernas roll. En mapps **[!UICONTROL Dynamic Media Publishing mode]** egenskapen spelar en viktig roll i publikationen. Om du vill visa en mapps egenskaper markerar du en mapp och klickar på **[!UICONTROL Properties]** i verktygsfältet. Information om en resurs finns i egenskaperna för dess överordnade mapp.
+Här måste du känna till mappegenskapernas roll. En mapp **[!UICONTROL Dynamic Media Publishing mode]** egenskapen spelar en viktig roll i publikationen. Om du vill visa egenskaperna för en mapp markerar du en mapp och klickar på **[!UICONTROL Properties]** i verktygsfältet. Information om en resurs finns i egenskaperna för dess överordnade mapp.
 
 I följande tabell förklaras hur publiceringen sker beroende på den definierade **[!UICONTROL Destination]** och **[!UICONTROL Dynamic Media Publish mode]**:
 
 | [!UICONTROL Destination] | [!UICONTROL Dynamic Media Publish mode] | [!UICONTROL Publish Target] | Tillåtet innehåll |
 | --- | --- | --- | --- |
 | Publicera | Selektiv publicering | `AEM` | Resurser och(eller) mappar |
-| Publicera | Omedelbar | `AEM` and `Dynamic Media` | Resurser och(eller) mappar |
-| Publicera | Vid aktivering | `AEM` and `Dynamic Media` | Resurser och(eller) mappar |
+| Publicera | Omedelbar | `AEM` och `Dynamic Media` | Resurser och(eller) mappar |
+| Publicera | Vid aktivering | `AEM` och `Dynamic Media` | Resurser och(eller) mappar |
 | Dynamic Media | Selektiv publicering | `Dynamic Media` | Assets |
 | Dynamic Media | Omedelbar | `None` | Det går inte att publicera resurserna |
 | Dynamic Media | Vid aktivering | `None` | Det går inte att publicera resurserna |
@@ -183,3 +183,18 @@ Du kan publicera resurser, mappar och samlingar i [!DNL Experience Manager Asset
 * Tomma mappar publiceras inte.
 * Om du publicerar en resurs som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Vänta tills bearbetningen är klar och publicera eller publicera om resursen när bearbetningen är klar.
 * När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom de kan refereras av andra publicerade resurser.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

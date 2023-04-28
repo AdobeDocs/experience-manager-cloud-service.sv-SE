@@ -4,10 +4,10 @@ description: Experience Manager lägger automatiskt till kontextuella och beskri
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: b59043c5-5df3-49a7-b4fc-da34c03649d7
-source-git-commit: a2c2a1f4ef4a8f0cf1afbba001d24782a6a2a24e
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 0%
+source-wordcount: '1172'
+ht-degree: 1%
 
 ---
 
@@ -133,6 +133,21 @@ Lägga till OSGI-konfiguration med konfidensgrad i projektet som distribueras ti
 * Endast videoklipp som är mindre än 300 MB i filstorlek taggas automatiskt. The [!DNL Adobe Sensei] hoppar över videofiler som är större.
 
 * Endast videoklipp i de filformat och kodekar som stöds som omnämns i [Smarta taggar](/help/assets/smart-tags.md#smart-tags-supported-file-formats) är taggade.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >

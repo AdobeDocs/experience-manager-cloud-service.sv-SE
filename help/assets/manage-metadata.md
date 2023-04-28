@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Asset Management,Metadata
 role: User,Architect,Admin
 exl-id: 73a82bc2-1dda-4090-b7ee-29d1a632ba25
-source-git-commit: 20d54ccdd116c3dbede8fb20f7169a17a223f7a1
+source-git-commit: 91af800c8b2f83e689e057f304a8e144ae4cc5ed
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1968'
 ht-degree: 3%
 
 ---
@@ -220,7 +220,7 @@ Programspecifika metadata innehåller tekniska och beskrivande metadata. Om du a
 
 * Exif - Teknisk information från kameran, inklusive GPS-position.
 * CRS - [!DNL Camera Raw] schema.
-* `iptc4xmpCore` and `iptc4xmpExt`.
+* `iptc4xmpCore` och `iptc4xmpExt`.
 * TIFF - bildmetadata (inte bara för TIFF).
 
 ### Utskriftsspecifika metadata {#print-specific-metadata}
@@ -242,6 +242,20 @@ Genom att skapa metadatadrivna arbetsflöden kan du automatisera vissa processer
 * Arbetsflödet kan kontrollera om en bild har en titel eller inte. Om så inte är fallet meddelas systemet om att en titel ska läggas till.
 * Arbetsflödet kan kontrollera om ett copyrightmeddelande för en mediefil tillåter distribution eller inte. Systemet skickar alltså resursen till den ena servern eller den andra.
 * Ett arbetsflöde kan söka efter resurser utan fördefinierade, obligatoriska metadata eller resurser med *ogiltig* metadata.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >

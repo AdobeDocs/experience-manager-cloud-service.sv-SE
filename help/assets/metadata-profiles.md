@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: eef90c6a-b354-4342-8b97-21d067ae2979
-source-git-commit: cec07dad7a62439e26d9657459964b01ce6e3dba
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1305'
 ht-degree: 18%
 
 ---
@@ -45,7 +45,7 @@ Redigera följande egenskaper för **[!UICONTROL Description]** komponent:
 | Enkelradstext | Fältetikett, Mappa till egenskap, Standardvärde |
 | Flervärdestext | Fältetikett, Mappa till egenskap, Standardvärde |
 | Siffra | Fältetikett, Mappa till egenskap, Standardvärde |
-| Date | Fältetikett, Mappa till egenskap, Standardvärde |
+| Datum | Fältetikett, Mappa till egenskap, Standardvärde |
 | Standardtaggar | Fältetikett, Mappa till egenskap, Standardvärde, Beskrivning |
 
 1. Klicka på **[!UICONTROL Done]**. Metadataprofilen läggs till i listan över profiler i **[!UICONTROL Metadata Profiles]** sida.
@@ -124,3 +124,18 @@ Du kan ta bort en metadataprofil från en mapp från menyn **Verktyg** eller, om
 1. Klicka på Experience Manager logotyp och navigera **[!UICONTROL Assets]** och sedan till mappen som du vill ta bort en metadataprofil från.
 1. Markera mappen genom att klicka på bockmarkeringen och klicka sedan på **[!UICONTROL Properties]**.
 1. Välj fliken **[!UICONTROL Metadata Profiles]**, välj **[!UICONTROL None]** i listrutan och klicka på **[!UICONTROL Save]**. För mappar som redan har tilldelats en profil visas profilens namn direkt under mappnamnet.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

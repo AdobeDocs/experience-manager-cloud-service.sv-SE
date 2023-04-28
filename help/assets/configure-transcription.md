@@ -11,9 +11,9 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: 4edf66127696ce91466811e2ffdcfbbd73f7cc2c
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1633'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Transkription är processen att översätta ljudet från en ljud- eller videofil
 
 Transcript är textversioner av talt innehåll. Ett exempel är en film som du tittar på på en OTT-plattform som ofta innehåller bildtexter eller undertexter som hjälper till med tillgängligheten eller som konsumerar innehållet på andra språk. Eller alla ljud- och videofiler som används i marknadsförings-, utbildnings- eller underhållningssyfte. De här upplevelserna börjar med en transkription som sedan formateras eller översätts på lämpligt sätt. Att transkribera ljud eller video är en tidskrävande och felbenägen process när den utförs manuellt. Det är också en utmaning att skala den manuella processen, med tanke på det ständigt ökande behovet av ljud- och videoinnehåll. [!DNL Experience Manager Assets] använder Azure:s AI-baserade transkription, som tillåter storskalig bearbetning av ljud- och videoresurser och genererar texttranskriberingarna (.vtt-filer) tillsammans med tidsstämpelsinformationen. Utöver Assets stöds även transkriberingsfunktionen i Dynamic Media.
 
-transkriberingsfunktionen är tillgänglig utan kostnad i [!DNL Experience Manager Assets]. Administratörerna kräver dock att användarens Azure-autentiseringsuppgifter konfigurerar transkriberingstjänsten i [!DNL Experience Manager Assets]. Du kan också [hämta autentiseringsuppgifter för testversionen](https://azure.microsoft.com/en-us/pricing/details/media-services/) direkt från Microsoft® och upplev ljud- och videomaterial i Assets.
+transkriberingsfunktionen är tillgänglig utan kostnad i [!DNL Experience Manager Assets]. Administratörerna kräver dock användarens Azure-autentiseringsuppgifter för att konfigurera transkriberingstjänsten i [!DNL Experience Manager Assets]. Du kan också [hämta autentiseringsuppgifter för testversionen](https://azure.microsoft.com/en-us/pricing/details/media-services/) direkt från Microsoft® och upplev ljud- och videomaterial i Assets.
 
 ## Förutsättningar för transkribering {#prerequisites}
 
@@ -166,3 +166,18 @@ Följande ljud- och videofilformat stöds för transkription:
 ## Felsökningstips {#troubleshooting}
 
 Logga in på [!DNL Azure Media Services] konto med samma inloggningsuppgifter (som du har använt för konfigurationen) för att verifiera status för begäran. Kontakt [!DNL Azure] om din begäran inte kan behandlas.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

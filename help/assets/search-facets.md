@@ -4,10 +4,10 @@ description: I den här artikeln beskrivs hur du skapar, ändrar och använder s
 feature: Search,Metadata
 role: User,Admin
 exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
-source-git-commit: 8a9a3f60d6d52f6cc18a079f372a55d15bb60790
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '2280'
-ht-degree: 17%
+source-wordcount: '2308'
+ht-degree: 16%
 
 ---
 
@@ -236,7 +236,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
     </ul> </td>
   </tr>
   <tr>
-   <td><p>Date</p> </td>
+   <td><p>Datum</p> </td>
    <td><p>Sökpredikatet för en skjutreglagebaserad sökning efter resurser baserat på en date-egenskap.</p> </td>
    <td>
     <ul>
@@ -322,6 +322,20 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 | Redigera | Läsa och skriva behörigheter på `/apps` nod i CRX. |
 | Ta bort | Läsa, skriva och ta bort behörigheter på `/apps` nod i CRX. |
 | Förhandsgranska | Läsa, skriva och ta bort behörigheter på `/var/dam/content` nod i CRX. Dessutom kan du läsa och skriva behörigheter på `/apps` nod. |
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >

@@ -2,9 +2,9 @@
 title: Färgtaggar för bilder
 description: Med Experience Manager Assets kan du skilja mellan färger i en bild och använda dem som taggar automatiskt. Du kan sedan använda dessa taggar för att söka efter och filtrera bilder.
 exl-id: 3afa949b-ea1b-4b8e-ac94-06566e2c7147
-source-git-commit: 2859fa68713b46083314d207abc4dec2e088a173
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1124'
 ht-degree: 2%
 
 ---
@@ -176,8 +176,23 @@ Så här söker du efter bilder baserat på färger:
 
 1. Välj lämplig färg genom att dra färgväljaren. Den valda färgen visas i det skrivskyddade fältet under färgväljaren. Du kan välja RGB eller HEX som visningsformat för färgen.
 
-   ![Färgväljare](assets/color-picker-color-tags.png)
+   ![Färgväljaren](assets/color-picker-color-tags.png)
 
    Du kan filtrera bilder baserat på valet av en färg. De bilder som har den valda färgen som en av de smarta färgtaggarna och ovanför [Tröskelvärde för täckning/dominans %](#manage-color-tagging-settings) visas i den högra rutan.
 
 1. Klicka på x i sökfältet för att ta bort filtret.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

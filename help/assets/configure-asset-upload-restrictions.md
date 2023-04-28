@@ -2,10 +2,10 @@
 title: Konfigurera överföringsbegränsningar för resurser
 description: Konfigurera Adobe Experience Manager Assets för att begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen. Det förhindrar oavsiktliga överföringar av oönskade format och skadliga filer.
 exl-id: 094c31f3-f2e9-4b44-9995-c76fb78ca458
-source-git-commit: 37de66c2b359018c76e7e76c58b1a5700ba7215e
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 1%
+source-wordcount: '354'
+ht-degree: 4%
 
 ---
 
@@ -56,3 +56,18 @@ Om du vill lägga till särskilda bildformat i de tillåtna MIME-typerna och beg
 ![Resursbegränsningar](assets/asset-restrictions.png)
 
 Baserat på de inställningar som avbildas i bilden kan du överföra bilder i formaten .JPG, .PNG och .GIF till Experience Manager Assets.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)

@@ -5,9 +5,9 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 627befb2fb1463ed2e3aad02f5e37b43f869b17c
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1894'
 ht-degree: 1%
 
 ---
@@ -93,8 +93,8 @@ Skicka en begäran om HTTP-POST till den önskade mappen. Resurser skapas eller 
 
 Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält:
 
-* `(string) fileName`: Krävs. Namnet på resursen så som den visas i [!DNL Experience Manager].
-* `(number) fileSize`: Krävs. Filstorleken, i byte, för resursen som överförs.
+* `(string) fileName`: Obligatoriskt. Namnet på resursen så som den visas i [!DNL Experience Manager].
+* `(number) fileSize`: Obligatoriskt. Filstorleken, i byte, för resursen som överförs.
 
 En enda begäran kan användas för att initiera överföringar för flera binärfiler, förutsatt att varje binärfil innehåller de obligatoriska fälten. Om det lyckas svarar begäran med en `201` statuskod och brödtext som innehåller JSON-data i följande format:
 
@@ -160,15 +160,15 @@ Mer information om överföringsalgoritmen finns i [officiell funktionsdokumenta
 
 När alla delar av en binär fil har överförts skickar du en begäran om HTTP-POST till den fullständiga URI som anges av initieringsdata. Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält.
 
-| fält | Typ | Obligatoriskt eller inte | Beskrivning |
+| Fält | Typ | Obligatoriskt eller inte | Beskrivning |
 |---|---|---|---|
-| `fileName` | Sträng | Krävs | Namnet på resursen, enligt initieringsdata. |
-| `mimeType` | Sträng | Krävs | HTTP-innehållstypen för binärfilen, som angavs i initieringsdata. |
-| `uploadToken` | Sträng | Krävs | Överför token för binärfilen enligt initieringsdata. |
-| `createVersion` | Boolesk | Valfritt | If `True` och det finns en resurs med det angivna namnet [!DNL Experience Manager] skapar en ny version av resursen. |
+| `fileName` | Sträng | Obligatoriskt | Namnet på resursen, enligt initieringsdata. |
+| `mimeType` | Sträng | Obligatoriskt | HTTP-innehållstypen för binärfilen, som angavs i initieringsdata. |
+| `uploadToken` | Sträng | Obligatoriskt | Överför token för binärfilen enligt initieringsdata. |
+| `createVersion` | Boolean | Valfritt | If `True` och det finns en resurs med det angivna namnet [!DNL Experience Manager] skapar en ny version av resursen. |
 | `versionLabel` | Sträng | Valfritt | Om en ny version skapas är den etikett som är associerad med den nya versionen av en resurs . |
 | `versionComment` | Sträng | Valfritt | Om en ny version skapas, de kommentarer som är kopplade till versionen. |
-| `replace` | Boolesk | Valfritt | If `True` och det finns en resurs med det angivna namnet, [!DNL Experience Manager] tar bort resursen och återskapar den. |
+| `replace` | Boolean | Valfritt | If `True` och det finns en resurs med det angivna namnet, [!DNL Experience Manager] tar bort resursen och återskapar den. |
 | `uploadDuration` | Siffra | Valfritt | Den totala tiden, i millisekunder, för att filen ska kunna överföras i sin helhet. Om det anges inkluderas överföringens varaktighet i systemets loggfiler för analys av överföringshastigheten. |
 | `fileSize` | Siffra | Valfritt | Filens storlek i byte. Om det anges inkluderas filstorleken i systemets loggfiler för analys av överföringshastighet. |
 
@@ -289,6 +289,21 @@ Följande tekniska arbetsflödesmodeller ersätts av resursmikrotjänster eller 
 <!-- PPTX source: slide in add-assets.md - overview of direct binary upload section of
 https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestaccess.aspx?guestaccesstoken=jexDC5ZnepXSt6dTPciH66TzckS1BPEfdaZuSgHugL8%3D&docid=2_1ec37f0bd4cc74354b4f481cd420e07fc&rev=1&e=CdgElS
 -->
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 * [[!DNL Experience Cloud] as a [!DNL Cloud Service] SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).

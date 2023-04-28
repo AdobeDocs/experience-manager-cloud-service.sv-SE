@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Accessibility,Asset Management
 role: User,Architect,Leader
 exl-id: a6d24ba6-3cb1-42cb-9942-f78572c93358
-source-git-commit: 3130f374859c1bb67f6311d2decfdd537eabf14f
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1924'
 ht-degree: 1%
 
 ---
@@ -216,6 +216,21 @@ Följande funktioner förbättrar tillgängligheten när du delar resurser:
 * Bilder och illustrationer har alternativ text tillgänglig.
 * Tangentbordsnavigering är möjlig.
 * Kontrastförhållanden hjälper till att lyfta fram vissa delar av dokumentationswebbplatsen.
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 ## Ge feedback {#a11y-feedback}
 

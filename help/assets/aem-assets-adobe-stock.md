@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Search,Adobe Stock
 role: Admin,User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: 3761d399de29645ec62cabf50bf6b26a64f3c7be
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2316'
 ht-degree: 3%
 
 ---
@@ -154,7 +154,7 @@ Så här genererar du tjänstkontots autentiseringsuppgifter och JWT-nyttolast:
 
 1. I **[!UICONTROL Project overview]** flik, klicka **[!UICONTROL Add API]**.
 
-1. I **[!UICONTROL Add an API window]**, markera **[!UICONTROL Adobe Stock]**. Klicka **[!UICONTROL Next]**.
+1. I **[!UICONTROL Add an API window]**, markera **[!UICONTROL Adobe Stock]**. Klicka på **[!UICONTROL Next]**.
 
 1. I **[!UICONTROL Configure API]** fönster, markera **[!UICONTROL Service Account (JWT)]** autentisering. Klicka på **[!UICONTROL Next]**.
 
@@ -451,6 +451,21 @@ Users can see the properties for both, licensed and unlicensed assets.
 
 * **Reference fields and metadata are not synced**: When a user updates a license reference field, the license reference information is updated in [!DNL Experience Manager] but not on the [!DNL Adobe Stock] website. Similarly, if the user updates the reference fields on the [!DNL Adobe Stock] website, the updates are not synchronized in [!DNL Experience Manager].
 -->
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
 >

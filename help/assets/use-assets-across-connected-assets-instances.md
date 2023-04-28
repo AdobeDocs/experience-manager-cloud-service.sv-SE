@@ -6,10 +6,10 @@ mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: a7545f0f2143983a052f272992d5e27b78f271a1
+source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
 workflow-type: tm+mt
-source-wordcount: '3656'
-ht-degree: 14%
+source-wordcount: '3684'
+ht-degree: 15%
 
 ---
 
@@ -355,3 +355,17 @@ Följ de här stegen för att felsöka vanliga fel:
 * Om fjärrreferenser inte hämtas och leder till ett felmeddelande, kontrollerar du om [!DNL Sites] är tillgänglig och kontrollerar om det finns problem med nätverksanslutningen. Försök igen senare för att kontrollera. [!DNL Assets] distributionsförsök två gånger för att upprätta en anslutning med [!DNL Sites] och rapporterar sedan ett fel.
 
    ![det gick inte att hämta resursfjärrreferenser](assets/reference-report-failure.png)
+
+**Se även**
+
+* [Översätt resurser](translate-assets.md)
+* [HTTP API för Assets](mac-api-assets.md)
+* [Resurser som stöds i filformat](file-format-support.md)
+* [Söka efter resurser](search-assets.md)
+* [Materialrapporter](asset-reports.md)
+* [Metadata-scheman](metadata-schemas.md)
+* [Hämta resurser](download-assets-from-aem.md)
+* [Hantera metadata](manage-metadata.md)
+* [Söka efter fasetter](search-facets.md)
+* [Hantera samlingar](manage-collections.md)
+* [Import av massmetadata](metadata-import-export.md)
