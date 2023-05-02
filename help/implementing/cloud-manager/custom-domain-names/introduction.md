@@ -2,10 +2,10 @@
 title: Introduktion till anpassade domännamn
 description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
-source-git-commit: cc6910bad0d0a62232bd66e0080b6802b9a1110b
+source-git-commit: 1862ae2d0d60ac9ed89a4ba3da82dcf8f032ee65
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -33,21 +33,16 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 >
 >Cloud Manager är inte en domännamnsregistrator och tillhandahåller inga DNS-tjänster.
 
-## Begränsningar {#limitations}
+## Anpassade domännamn och CDN för BYO {#byo-cdn}
 
-Det finns ett antal begränsningar för hur du använder anpassade domännamn med AEMaaCS.
+AEM as a Cloud Service har ett inbyggt leveransnätverk (CDN), men du kan även hämta ditt eget CDN (BYO) för användning med AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
 
-* Anpassade domännamn stöds i Cloud Manager för både publicerings- och förhandsgranskningstjänster för Sites-program. Anpassade domäner för författartjänster stöds inte.
-* Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö.
-* Det går inte att lägga till domännamn i miljöer när det finns en aktuell pågående pipeline som är kopplad till dessa miljöer.
-* Samma domännamn kan inte användas i mer än en miljö.
-* Det går bara att lägga till ett domännamn åt gången.
-* AEM as a Cloud Service stöder inte jokerdomäner som `*.example.com`.
-* Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet (jokerteckenscertifikat är giltiga) installeras för programmet. Se [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) om du vill veta mer.
+* Anpassade domännamn (och certifikat) som är installerade i det AEM hanterade CDN hanteras via Cloud Manager.
+* Anpassade domännamn (och certifikat) som är installerade i ditt eget CDN hanteras i det specifika CDN.
 
->[!NOTE]
->
->Anpassade domäner stöds i Cloud Manager **endast** om du använder det AEM hanterade CDN. Om du har ett eget CDN och [peka på det AEM hanterade CDN](/help/implementing/dispatcher/cdn.md) du måste använda det specifika CDN för att hantera domäner, inte Cloud Manager.
+Domäner som hanteras i ditt eget CDN behöver inte installeras via Cloud Manager. De blir tillgängliga för AEM via X-Forwarded-Host och matchar de värdar som definierats i dispatchern. [Mer information finns i CDN-dokumentationen.](/help/implementing/dispatcher/cdn.md)
+
+I en och samma miljö kan du ha båda domänerna installerade i det AEM CDN:et och installerade i ditt eget CDN.
 
 ## Arbetsflöde {#workflow}
 
@@ -68,3 +63,15 @@ Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Ma
 >[!TIP]
 >
 >Att konfigurera anpassade domännamn med AEM som en molntjänst är vanligtvis en enkel process. Det kan dock ibland uppstå domändelegeringsproblem som kan ta 1-2 arbetsdagar att lösa. Därför rekommenderar vi att du installerar domänerna långt innan de publiceras. Se dokumentet [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) för mer information.
+
+## Begränsningar {#limitations}
+
+Det finns ett antal begränsningar för hur du använder anpassade domännamn med AEMaaCS.
+
+* Anpassade domännamn stöds i Cloud Manager för både publicerings- och förhandsgranskningstjänster för Sites-program. Anpassade domäner för författartjänster stöds inte.
+* Varje Cloud Manager-miljö har plats för upp till 500 anpassade domäner per miljö.
+* Det går inte att lägga till domännamn i miljöer när det finns en aktuell pågående pipeline som är kopplad till dessa miljöer.
+* Samma domännamn kan inte användas i mer än en miljö.
+* Det går bara att lägga till ett domännamn åt gången.
+* AEM as a Cloud Service stöder inte jokerdomäner som `*.example.com`.
+* Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet (jokerteckenscertifikat är giltiga) installeras för programmet. Se [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) om du vill veta mer.

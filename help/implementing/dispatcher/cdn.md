@@ -3,9 +3,9 @@ title: CDN i AEM as a Cloud Service
 description: CDN i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: c419da88ccfe97cf8b80e68ddd402196c2ec58e3
+source-git-commit: 49ffc9ff848a5cca960263d6bcce5c4b6383a6d0
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1101'
 ht-degree: 7%
 
 ---
@@ -29,10 +29,6 @@ Följ avsnitten nedan om du vill använda självbetjäningsgränssnittet för Cl
 
 1. [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
 1. [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
-
->[!NOTE]
->
->Anpassade domäner stöds i Cloud Manager **endast** om du använder det AEM hanterade CDN. Om du har ett eget CDN och [peka på det AEM hanterade CDN](#point-to-point-CDN) du måste använda det specifika CDN för att hantera domäner, inte Cloud Manager.
 
 **Begränsa trafik**
 
