@@ -2,9 +2,9 @@
 title: Viloläge och avvänjningsmiljöer för sandlådor
 description: Lär dig hur miljöer i ett sandlådeprogram automatiskt övergår i viloläge och hur du kan avviloläge.
 exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
-source-git-commit: 5cb58b082323293409aad08d4e5dd9289283e0a6
+source-git-commit: 2ad5bdc886f3c47b6ee600e69c6e40f1df071cbc
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '691'
 ht-degree: 0%
 
 ---
@@ -114,5 +114,9 @@ I miljöer med viloläge går det fortfarande att driftsätta och uppgradera man
 
 * Miljöer i ett sandlådeprogram försätts automatiskt i viloläge efter åtta timmars inaktivitet.
    * Inaktivitet definieras som varken författartjänsten, förhandsgransknings- eller publiceringstjänstens mottagningsbegäranden.
-   * När de har tagits i viloläge kan de tas bort manuellt.
+   * När de väl är i viloläge kan de [avviloläge manuellt.](#de-hibernation-introduction)
 * Sandlådeprogram tas bort efter sex månader när de är i viloläge, och därefter kan de återskapas.
+
+>[!NOTE]
+>
+>Endast sandlådemiljöer tas bort automatiskt efter sex månaders kontinuerlig viloläge. Sandlådeprogrammet med dess databas och kod behålls.
