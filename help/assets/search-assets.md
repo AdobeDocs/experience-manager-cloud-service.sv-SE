@@ -1,25 +1,25 @@
 ---
-title: Sök efter digitala resurser och bilder i [!DNL Adobe Experience Manager]
-description: Lär dig hur du hittar de resurser du behöver i [!DNL Adobe Experience Manager] genom att använda panelen Filter och hur du använder resurser som visas i sökningen.
+title: Hur söker du efter resurser i AEM?
+description: Lär dig hur du söker efter resurser i AEM med hjälp av panelen Filter och hur du använder resultaten som visas vid resurssökning.
 contentOwner: AG
 mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: bb067222423ba70c412a80e210bd79d0f72b7ccb
 workflow-type: tm+mt
-source-wordcount: '4876'
+source-wordcount: '4882'
 ht-degree: 5%
 
 ---
 
-# Sök resurser i [!DNL Adobe Experience Manager] {#search-assets-in-aem}
+# Sök efter resurser i AEM {#search-assets-in-aem}
 
-[!DNL Adobe Experience Manager Assets] har robusta metoder för resursidentifiering som hjälper dig att få högre innehållshastighet. Teamen kan korta time-to-market med smidiga, intelligenta sökfunktioner som är körklara och anpassade metoder. Att söka resurser är centralt för användningen av ett digitalt resurshanteringssystem - oavsett om det är avsett för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer. Enkla, avancerade och anpassade sökningar som du kan utföra via [!DNL Assets] användargränssnittet eller andra appar och ytor hjälper till att uppfylla de här användningsexemplen.
+[!DNL Adobe Experience Manager Assets] har robusta metoder för resurssökning som hjälper dig att få högre innehållshastighet. Teamen kan korta time-to-market med smidig och intelligent sökfunktion med hjälp av färdiga funktioner och anpassade metoder. Funktionen för att söka resurser är central för användningen av ett digitalt resurshanteringssystem - vare sig det är till för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer. Enkla, avancerade och anpassade sökningar som du kan utföra via [!DNL Assets] användargränssnittet eller andra appar och ytor hjälper till att uppfylla de här användningsexemplen.
 
-[!DNL Experience Manager Assets] har stöd för följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsfall.
+[!DNL Experience Manager Assets] har stöd för följande användningsfall för att söka efter resurser och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsfall.
 
-| Sök efter resurser | Konfigurera och administrera sökfunktioner | Arbeta med sökresultat |
+| Söka efter resurser | Konfigurera och administrera sökfunktioner | Arbeta med resurssökningsresultat |
 |---|---|---|
 | [Grundläggande sökningar](#searchbasics) | [Sökindex](#searchindex) | [Sortera resultat](#sort) |
 | [Förstå sökgränssnittet](#searchui) | [Textextrahering](#extracttextupload) | [Kontrollera egenskaper och metadata för en resurs](#checkinfo) |

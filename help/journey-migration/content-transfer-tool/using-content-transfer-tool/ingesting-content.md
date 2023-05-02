@@ -2,9 +2,9 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: cab182a7998be6a569cf16e4000184f7235082da
+source-git-commit: 79f5133e681261fa8f7604f1fc9c3fbf5c6a5f59
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1722'
 ht-degree: 6%
 
 ---
@@ -146,6 +146,10 @@ Detta indikerar att Cloud Acceleration Manager inte kunde nå målmiljöns migre
 Frisläpp Orchestrator håller automatiskt miljön uppdaterad genom att uppdatera automatiskt. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön. Detta är en av orsakerna till att en supportanmälan bör loggas innan ett förtäring påbörjas (se &quot;Anteckning&quot; ovan), så att det går att schemalägga tillfällig inaktivering av Release Orchestrator.
 
 Om Frisläpp Orchestrator fortfarande körs när ett intag startas visas det här meddelandet. Du kan välja att fortsätta i alla fall och ta risken genom att markera fältet och trycka på knappen igen.
+
+>[!NOTE]
+>
+> Utgåva av Orchestrator distribueras nu till utvecklingsmiljöer, så det bör även göras pausande uppdateringar för dessa miljöer.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_ingestion.png)
 
