@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: bb067222423ba70c412a80e210bd79d0f72b7ccb
+source-git-commit: 33baeea93c1fa2b74946699e53d2f428e77aee77
 workflow-type: tm+mt
-source-wordcount: '4882'
+source-wordcount: '4885'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!DNL Adobe Experience Manager Assets] har robusta metoder för resurssökning som hjälper dig att få högre innehållshastighet. Teamen kan korta time-to-market med smidig och intelligent sökfunktion med hjälp av färdiga funktioner och anpassade metoder. Funktionen för att söka resurser är central för användningen av ett digitalt resurshanteringssystem - vare sig det är till för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer. Enkla, avancerade och anpassade sökningar som du kan utföra via [!DNL Assets] användargränssnittet eller andra appar och ytor hjälper till att uppfylla de här användningsexemplen.
 
-[!DNL Experience Manager Assets] har stöd för följande användningsfall för att söka efter resurser och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsfall.
+Resurssökning i AEM stöder följande användningsfall och den här artikeln beskriver användning, begrepp, konfigurationer, begränsningar och felsökning för dessa användningsfall.
 
 | Söka efter resurser | Konfigurera och administrera sökfunktioner | Arbeta med resurssökningsresultat |
 |---|---|---|
@@ -38,9 +38,9 @@ Använd **[!UICONTROL Filters]** för att söka efter resurser, mappar, taggar o
 
 [!DNL Experience Manager] sökfunktionen stöder sökning efter samlingar och sökning efter resurser i en samling. Se [söksamlingar](/help/assets/manage-collections.md).
 
-## Förstå sökgränssnittet {#searchui}
+## Förstå gränssnittet för resurssökning {#searchui}
 
-Bekanta dig med sökgränssnittet och de tillgängliga åtgärderna.
+Bekanta dig med gränssnittet för resurssökning och de tillgängliga åtgärderna.
 
 ![Experience Manager Assets sökresultatgränssnitt](assets/aem_search_results.png)
 
