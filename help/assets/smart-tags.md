@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: 9abafe051672de65f042332314445b239f95852b
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2371'
 ht-degree: 4%
 
 ---
@@ -236,7 +236,7 @@ Förbättrad smart taggning bygger på inlärningsmodeller för bilder och tagga
 
 * Oförmåga att identifiera små skillnader i bilder. Exempel: skjortor som inte passar lika bra som vanliga.
 * Oförmåga att identifiera taggar baserat på små mönster eller delar av en bild. Till exempel logotyper på skjortor.
-* Taggning stöds på de språk som [!DNL Experience Manager] stöder. En lista med språk finns på [Versionsinformation för tjänsten Smart Content](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/smart-content-service-release-notes.html#languages).
+* Taggning stöds på de språk som [!DNL Experience Manager] stöder.
 * De taggar som inte hanteras gäller:
 
    * Icke-visuella, abstrakta aspekter. Exempel: år eller säsong då en produkt släpps, stämning eller känslor som en bild ger upphov till samt en subjektiv nyans av en video.

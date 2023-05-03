@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet
 description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: 0b71e15c956cd39907440be319347bd1a749eb0b
+source-git-commit: eb633db8fe64a62661c094b88f0ce8d9950ed6d7
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3473'
 ht-degree: 1%
 
 ---
@@ -757,7 +757,7 @@ Liknar [Paket får inte innehålla en dubblettregel för OSGi-konfigurationer,](
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
-OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definierar standardredigeringsläget i Experience Manager. För [det klassiska användargränssnittet har tagits bort sedan Experience Manager 6.4](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html)uppstår nu ett problem när standardredigeringsläget är konfigurerat till Classic UI.
+OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definierar standardredigeringsläget i Experience Manager. Eftersom det klassiska användargränssnittet har tagits bort sedan Experience Manager 6.4, uppstår nu ett problem när standardredigeringsläget är konfigurerat till Classic UI.
 
 ### Komponenter med dialogrutor bör ha dialogrutor med pekskärmsgränssnitt {#oakpal-components-dialogs}
 
@@ -860,7 +860,7 @@ Migrering från statiska till redigerbara mallar kan till stor del automatiseras
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-De äldre Foundation Components (dvs. komponenter under `/libs/foundation`) har [borttagen för flera Experience Manager-versioner](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html) till förmån för kärnkomponenterna. Användning av Foundation Components som grund för anpassade komponenter (oavsett om de är övertäckningar eller arv) rekommenderas inte och bör konverteras till motsvarande Core Components.
+De äldre Foundation Components (dvs. komponenter under `/libs/foundation`) har ersatts av flera Experience Manager-versioner till förmån för kärnkomponenterna. Användning av Foundation Components som grund för anpassade komponenter (oavsett om de är övertäckningar eller arv) rekommenderas inte och bör konverteras till motsvarande Core Components.
 
 Den här konverteringen kan underlättas av [Moderniseringsverktyg för Experience Manager.](https://opensource.adobe.com/aem-modernize-tools/)
 
