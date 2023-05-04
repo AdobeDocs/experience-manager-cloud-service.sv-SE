@@ -2,7 +2,7 @@
 title: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 2a2becb12b7724720821f895b0631d8d82e4cd79
+source-git-commit: a1b186fec2d6de0934ffebc96967d36a967c044e
 workflow-type: tm+mt
 source-wordcount: '3036'
 ht-degree: 1%
@@ -523,7 +523,7 @@ Om du vill aktivera adaptiva Forms Core-komponenter för din as a Cloud Service 
    `<artifactId>core-forms-components-core</artifactId>`
    `</dependency>`
 
-1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html). Efter den lyckade pipeline-körningen aktiveras adaptiva Forms Core-komponenter för din miljö. Dessutom läggs den adaptiva Forms-mallen (Core Componets) och Canvas-temat till i Forms as a Cloud Service miljö.
+1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html). Efter den lyckade pipeline-körningen aktiveras adaptiva Forms Core-komponenter för din miljö. Dessutom läggs den adaptiva Forms-mallen (Core Components) och Canvas-temat till i Forms as a Cloud Service miljö.
 
 
 ## Uppgradera din lokala utvecklingsmiljö {#upgrade-your-local-development-environment}
