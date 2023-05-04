@@ -4,9 +4,9 @@ description: Upptäck hur du hämtar JSON-innehåll från testmiljön med exempe
 hidefromtoc: true
 index: false
 exl-id: b7dc70f2-74a2-49f7-ae7e-776eab9845ae
-source-git-commit: 3b64b909996674bcbe36f746bcfd15e1422a8a4b
+source-git-commit: 1949ee211b4f816e05aa779deb9e287347f006ad
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_fetch_json_with_javascript_guide"
 >title="Starta exempelappen CodePen"
->abstract="Den här guiden går igenom frågor om JSON-data från testmiljön till en grundläggande JavaScript-webbapp. Vi kommer att använda de innehållsavsnitt du modellerade och skapade i de tidigare utbildningsmodulerna, så gå igenom dessa handledningar innan du går in i den här.<br><br>För att visa hur innehåll kan hämtas från ett JavaScript-webbprogram har vi skapat en CodePen som du kan använda som den är, eller förgrena till ditt eget konto för att anpassa ytterligare."
+>abstract="Den här guiden går igenom frågor om JSON-data från testmiljön till en grundläggande JavaScript-webbapp. Vi kommer att använda de innehållsavsnitt du modellerade och skapade i de tidigare utbildningsmodulerna, så gå igenom dessa handledningar innan du går in i den här."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_fetch_json_with_javascript_guide_footer"
@@ -61,7 +61,7 @@ import AdobeAemHeadlessClientJs from 'https://cdn.skypack.dev/@adobe/aem-headles
 
 På rad 6 läser vi informationen om din publiceringsvärd från `publishHost` frågeparameter. Det här är värddatorn som AEM Headless Client hämtar data från. Detta kodas vanligtvis i din app, men vi använder en frågeparameter för att göra det enklare för CodePen-appen att arbeta i olika miljöer.
 
-Vi konfigurerar den AEM Headless Client på rad 12 att använda en proxy-Adobe IO-körningsfunktion för att undvika CORS-problem. Detta krävs inte för dina egna projekt, men det krävs för att CodePen-appen ska fungera med din testmiljö. Proxyfunktionen är konfigurerad att använda `publishHost` värdet som angavs i frågeparametern.
+Vi konfigurerar AEM Headless Client på rad 12:
 
 ```javascript
 const aemHeadlessClient = new AdobeAemHeadlessClientJs({
@@ -72,6 +72,10 @@ const aemHeadlessClient = new AdobeAemHeadlessClientJs({
   }
 });
 ```
+
+>[!NOTE]
+>
+>The **serviceURL** är inställt på att använda en proxyfunktion för Adobe IO-körning för att undvika CORS-problem. Detta krävs inte för dina egna projekt, men det krävs för att CodePen-appen ska fungera med din testmiljö. Proxyfunktionen är konfigurerad att använda **publishHost** värdet som angavs i frågeparametern.
 
 Funktionen `fetchJsonFromGraphQL()` används för att utföra hämtningsbegäran med AEM Headless Client. Den anropas varje gång koden ändras eller kan aktiveras genom att du klickar på **Uppdatera** länk. Den faktiska `aemHeadlessClient.runPersistedQuery(..)` samtal inträffar på rad 34. Vi ändrar lite senare hur dessa JSON-data återges, men för tillfället skriver vi bara ut dem på `#output` div med `resultToPreTag(queryResult)` funktion.
 
