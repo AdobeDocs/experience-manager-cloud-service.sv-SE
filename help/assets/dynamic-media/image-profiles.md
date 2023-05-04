@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Renditions
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: fa29504ba4abf68131d96a5a8ecbd62b7a9299f9
+source-git-commit: c15486fb3de73773fa7e255809ffaa36715cea05
 workflow-type: tm+mt
-source-wordcount: '3390'
+source-wordcount: '3383'
 ht-degree: 3%
 
 ---
@@ -72,25 +72,15 @@ Varje smart beskärningsgenerering som du skapar kräver extra bearbetning. Om d
 **Riktlinjer för att definiera smart beskärning i en bildprofil**
 För att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar rekommenderar Adobe följande riktlinjer och tips:
 
-* Undvik att skapa duplicerade smarta beskärningsprofiler med samma bredd- och höjdvärden.
+* Bildresurser som ska ha en smart beskärning måste vara minst 50 x 50 pixlar eller större.
+* Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
 * Namnge smarta beskärningar baserat på beskärningsdimensioner, inte på slutanvändning. På så sätt kan du optimera för dubbletter där en enda dimension används på flera sidor.
 * Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
 * En bildprofil som du använder för undermappar åsidosätter en bildprofil som används för mappen.
-* Skapa sidvisa/resurstypsvisa bildprofiler för specifika mappar och undermappar i stället för en gemensam smart beskärningsprofil som tillämpas på alla mappar eller alla resurser.
-* En bildprofil som du tillämpar på undermappar åsidosätter en bildprofil som tillämpas på mappen.
-* Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
+* En bildprofil som innehåller duplicerade smarta beskärningsdimensioner tillåts inte.
+* Det är inte tillåtet att duplicera namngivna bildprofiler med smarta beskärningsalternativ.
 
-<!--
-* Image assets that are going to have a smart crop applied to them must be a minimum of 50 x 50 pixels or larger. CQDOC-20087
-* An Image Profile that contains duplicate smart crop dimensions is not permitted. CQDOC-20087
-* Duplicate named Image Profiles that have smart crop options set are not permitted. CQDOC-20087
-* Create page-wise/asset type-wise Image Profiles for specific folders and subfolders instead of a common smart crop profile that is applied to all folders or all assets.
-* An Image Profile that you apply to subfolders overrides an Image Profile that is applied to the folder.
-* Ideally, have 10-15 smart crops per image to optimize for screen ratios and processing time. -->
-<!-- * Avoid creating duplicate smart crop profiles that have the same width and height values. 
-* Name smart crops based on crop dimensions, not on end usage. Doing so helps to optimize for duplicates where a single dimension is used on multiple pages. -->
-
-Du kan välja mellan två bildbeskärningsalternativ. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
+Du kan välja mellan två bildbeskärningsalternativ: Pixelbeskärning och Smart beskärning. Du kan också välja att automatisera skapandet av färg- och bildfärgrutor eller bevara beskärningsinnehållet i olika upplösningar.
 
 >[!IMPORTANT]
 >
@@ -188,7 +178,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
 #### Använd Dynamic Media-bildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
 
-1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]**.
+1. Tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Assets]**.
 1. Navigera till en *mapp* (inte en resurs) som du vill använda en bildprofil på.
 1. Beroende på vilken vy du befinner dig i gör du något av följande:
    * Håll pekaren över mappen i kortvyn och markera den sedan.
