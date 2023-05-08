@@ -4,9 +4,9 @@ description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as
 feature: Content Fragments
 role: User
 exl-id: d12b1dda-85ce-4665-b8b1-915b74231bb8
-source-git-commit: 9c3153efe4aacd1666663cd5eb718f75329202af
+source-git-commit: 448851bdbcdf626ef1b8cf2765ba54bb0576bec8
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2058'
 ht-degree: 3%
 
 ---
@@ -108,10 +108,6 @@ Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta struktu
 >[!NOTE]
 >
 >Se [Headless och AEM](/help/headless/introduction.md) för en introduktion till Headless Development för AEM Sites as a Cloud Service.
-
->[!NOTE]
->
->AEM har också stöd för översättning av fragmentinnehåll.
 
 >[!NOTE]
 >
