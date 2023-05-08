@@ -2,9 +2,9 @@
 title: Arbeta med innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
-source-git-commit: 3c287425441db2eac19149a3080df333afff0e86
+source-git-commit: ca41657057211cb0736a866771253b166fa139b4
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2063'
 ht-degree: 3%
 
 ---
@@ -105,10 +105,6 @@ Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta struktu
 >[!NOTE]
 >
 >Se [Headless och AEM](/help/headless/introduction.md) för en introduktion till Headless Development för AEM Sites as a Cloud Service.
-
->[!NOTE]
->
->AEM har också stöd för översättning av fragmentinnehåll.
 
 >[!NOTE]
 >
