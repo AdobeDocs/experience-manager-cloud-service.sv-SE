@@ -1,32 +1,41 @@
 ---
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 4aa4954f214545dcd768fdf955f1fc2f776da939
+exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
+source-git-commit: ea3a476f7f2d7d97a2428c6facf61b746dba7a23
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 1%
+source-wordcount: '208'
+ht-degree: 2%
 
 ---
-
 
 # Versionsinformation om underhåll {#maintenance-release-notes}
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 11835 {#release-11835}
+## Utgåva 11873 {#release-11873}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 11835, som offentliggjordes den 19 april 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 11382.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 11873, som offentliggjordes den 3 maj 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 11835.
 
 Funktionsaktiveringen för den här underhållsversionen ger dig den fullständiga funktionsuppsättningen. Se [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för fullständig information.
 
-### Åtgärdade problem {#fixed-issues-11835}
+### Förbättringar {#enhancements}
 
-- SITES-12573 - GraphQL-frågor som använder variabler i ett filter misslyckas om ingen variabel anges. Please do not update to this release shall you use GraphQL with AEM as a Cloud Service.
-- SKYOPS-51970 - Identifierad regression för den FACT-version som används i buildImage-steget, vilket leder till att användarmappningen inte matchar.
-- GRANITE-44542 - Problem har rapporterats för kunder som inte angav en paketnodtyp (genom att tillhandahålla en .content.xml med jcr:primaryType) för mappar som ingår i paketfiltret. Detta gjorde att mapparna behandlades som not:folder, vilket i olika fall orsakade problem.
-- SKYOPS-56928 - Apache HTTPD-regression kan orsaka 404 fel. Om du får dessa problem av säkerhetsskäl bör du återställa till den tidigare versionen och undvika att rörledningar körs under den tidsperioden.
+- SITES-1200 - Förbättringar i sök-API med taggbaserad filtrering
+- GRANITE-42939 - Lägg till borttagningsanteckningar och varningar i oauth-serverkod
 
-### Inbäddade tekniker {#embedded-tech-11835}
+### Kända fel {#known-issues-11873}
+
+Ingen.
+
+### Åtgärdade problem {#fixed-issues-11873}
+
+- SKYSI-19884/SKYOPS-53745 - Korrigerat problem med PublishPageRenderingErrorsHigh
+- GRANITE-4388 - Korrigerade dataflödesförsämring efter ett stort antal DAM-resursskrivningar på Mongo
+- SITES-11922 - Korrigerat problem med avpublicering från förhandsgranskning som inte tog bort synkroniseringsstatus
+- ASSETS-21648 - Korrigerat behörighetsproblem med tillgångsrelaterade funktioner
+
+### Inbäddade tekniker {#embedded-tech-11873}
 
 | Teknik | Version | Länk |
 |---|---|---|
