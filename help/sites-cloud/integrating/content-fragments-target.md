@@ -1,9 +1,10 @@
 ---
 title: Exportera innehållsfragment till Adobe Target
 description: Exportera innehållsfragment till Adobe Target
-source-git-commit: 61266ca2caf4cbc02b79a14349c73dced456b5a3
+exl-id: 760e0a39-0805-498e-a2c9-038fd1e1058d
+source-git-commit: acd80887d71a528604d37fa2787bca3c3a48d7c4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2229'
 ht-degree: 0%
 
 ---
@@ -193,7 +194,7 @@ Nu kan du välja den nya konfigurationen för redigering.
 
       >[!NOTE]
       >
-      >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program.
+      >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och ensidiga program.
       >
       >mbox.js har tagits bort och kommer att tas bort i ett senare skede.
       >

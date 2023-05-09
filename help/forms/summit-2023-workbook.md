@@ -6,13 +6,13 @@ seo-description: Build Engaging Forms Using Core Components and Headless
 topic-tags: develop
 hide: true
 hidefromtoc: true
-source-git-commit: f65c5241e1e61e5a0bd9981778939caa313de76a
+exl-id: e1eb0812-c92e-4a18-aabb-5a70b9e6fc7d
+source-git-commit: 4279b4a880429f535cf341d35ac38c9b4dc55ae2
 workflow-type: tm+mt
-source-wordcount: '3412'
+source-wordcount: '3360'
 ht-degree: 3%
 
 ---
-
 
 # Bygg engagerande Forms med kärnkomponenter och headless
 
@@ -60,8 +60,7 @@ I den här lektionen lär du dig att bekanta dig med AEM Forms as a Cloud Servic
 
 ### Utövning
 
-1. Öppna webbläsaren och ange webbadressen till Cloud Servicens författarmiljö. Till exempel:
-   [https://author-p105303-e986623.adobeaemcloud.com/ui#/aem/aem/start.html](https://author-p105303-e986623.adobeaemcloud.com/ui%23/aem/aem/start.html)
+1. Öppna webbläsaren och ange webbadressen till Cloud Servicens författarmiljö.
 
 1. Logga in i Cloud Servicens redigeringsmiljö. Inloggningsuppgifterna för din författarmiljö delas med dig under labbet.
 
@@ -407,8 +406,8 @@ Låt oss kontrollera hur reglerna verkställs i den här rubrikfria formen:
 
 Låt oss göra ändringar i formuläret på servern som företagsanvändare och automatiskt se ändringarna som återspeglas i det headless-formuläret.
 
-1. Öppna AEM Forms gränssnitt i webbläsaren. Till exempel: [https://author-p105303-e986623.adobeaemcloud.com/ui#/aem/aem/forms.html/content/dam/formsanddocuments](https://author-p105303-e986623.adobeaemcloud.com/ui%23/aem/aem/forms.html/content/dam/formsanddocuments).
-
+1. Öppna AEM Forms gränssnitt i webbläsaren.
+\
 1. Välj **registrering** formulär och klicka **Redigera.** Formuläret öppnas i redigeraren för anpassade formulär.
 
    ![](/help/forms/assets/screenshot2028118529.png)
@@ -513,7 +512,7 @@ Så här återger du formuläret som finns i molntjänstens publiceringsmiljö:
 
 1. Ange följande värden för variablerna i .env-filen. Spara filen när du har uppdaterat variablerna. Använd **CTRL + S** växla kombination för att spara filen.
 
-   * **AEM_URL**: Ange URL:en för molntjänstens publiceringsmiljö. Till exempel: [https://publish-p105303-e986623.adobeaemcloud.com](https://publish-p105303-e986623.adobeaemcloud.com/)
+   * **AEM_URL**: Ange URL:en för molntjänstens publiceringsmiljö.
 
    * **AEM_FORM_PATH**: Ange sökvägen till det anpassade formulär som skapades i föregående lektion. Till exempel /content/forms/af/registration/
 
@@ -639,12 +638,10 @@ Nu när ni har lärt er att skapa anpassningsbara formulär och leverera dem til
 
 * [Introduktion av komponenter i adaptiva Form Core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)
 
-* [Skapa anpassningsbara formulär med hjälp av kärnkomponenter](https://experienceleague.corp.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html)
+* [Skapa anpassningsbara formulär med hjälp av kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html)
 
 * [Uppdatera format för grundkomponentbaserad AF](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html?lang=en)
 
 * [Headless adaptive forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=en)
 
 * [Använda startkit för Headless React](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/get-started/create-and-publish-a-headless-form.html?lang=en)
-
-

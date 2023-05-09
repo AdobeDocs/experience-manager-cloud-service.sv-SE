@@ -5,7 +5,7 @@ description: Granskning är en mekanism som gör att granskare kan utföra olika
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: 2a487654c3af2d2ec3aa43481caed5e1d4fc77a2
+source-git-commit: daeb407e27b9f1d390fe40151ca16ec0196712e6
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -29,8 +29,8 @@ Använda [Tilldela steg](https://experienceleague.adobe.com/docs/experience-mana
 1. Tryck ![settings_icon](assets/settings_icon.png) i åtgärdsfältet. The **[!UICONTROL Assign Task]** öppnas.
 1. Öppna [!UICONTROL Form and Document] flik och öppna [!UICONTROL Pre-populated] och ange:
 
-* Välj indatafil med
-* Välj indatabilagor med
+   * Välj indatafil med
+   * Välj indatabilagor med
 
    ![Granskningssteg](/help/forms/assets/assigntask-review1.gif)
 

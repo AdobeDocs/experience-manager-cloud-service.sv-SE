@@ -1,10 +1,10 @@
 ---
-title: Skapa och använda teman
+title: Skapa och använd teman för att utforma ett adaptivt formulär
 description: Du kan använda teman för att anpassa och ge en visuell identitet till ett adaptivt formulär. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 4279b4a880429f535cf341d35ac38c9b4dc55ae2
 workflow-type: tm+mt
-source-wordcount: '5357'
+source-wordcount: '5362'
 ht-degree: 0%
 
 ---
@@ -384,7 +384,7 @@ Alternativen för att anpassa lägesformat varierar för olika komponenter.
  <tbody>
   <tr>
    <td><strong>Egenskap</strong></td>
-   <td><strong>Användning</strong></td>
+   <td><strong>Använd</strong></td>
   </tr>
   <tr>
    <td><p>Dimensioner och position</p> </td>
@@ -399,7 +399,7 @@ Alternativen för att anpassa lägesformat varierar för olika komponenter.
    <td><p>Gör att du kan fylla komponentens bakgrund med en bild eller en färg. </p> </td>
   </tr>
   <tr>
-   <td><p>Kantlinje</p> </td>
+   <td><p>Kant</p> </td>
    <td><p>Här kan du välja hur kanten för komponenten ska se ut. Du vill till exempel att textrutan ska ha en djup röd, tjock kant med en prickad linje. </p> <p>Du kan välja mellan bredd, stil, radie och färg för ramen.</p> </td>
   </tr>
   <tr>

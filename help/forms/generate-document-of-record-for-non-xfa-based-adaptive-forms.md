@@ -1,10 +1,11 @@
 ---
-title: Generera arkivdokument för adaptiv Forms
+title: Generera ett urkunder för Adaptive Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
-source-git-commit: 3d713304512065819ed16bbc9604f2cf9d1cf43f
+exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
+source-git-commit: 4279b4a880429f535cf341d35ac38c9b4dc55ae2
 workflow-type: tm+mt
-source-wordcount: '3925'
-ht-degree: 1%
+source-wordcount: '3926'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +26,7 @@ Du kan:
 * [Generera ett Acrobat-baserat (Acrobat Form PDF) arkivdokument](#generate-an-Acroform-based-document-of-record)
 * [Generera ett postdokument automatiskt](#auto-generate-a-document-of-record)
 
-## Innan du startar {#components-to-automatically-generate-a-document-of-record}
+## Innan du börjar {#components-to-automatically-generate-a-document-of-record}
 
 Innan du börjar lära dig mer och förbereder de resurser som krävs för ett dokument:
 
@@ -154,7 +155,7 @@ When you select a form model, configure Document of Record using options availab
 
 I följande tabell beskrivs adaptiva formulärkomponenter och motsvarande XFA-komponenter, och om de visas i ett dokument med poster.
 
-### fält {#fields}
+### Fält {#fields}
 
 <table>
  <tbody>
@@ -178,7 +179,7 @@ I följande tabell beskrivs adaptiva formulärkomponenter och motsvarande XFA-ko
   </tr>
   <tr>
    <td>Datumväljaren</td>
-   <td>Datum-/tidfält</td>
+   <td>Datum-/tidsfält</td>
    <td>true</td>
    <td> </td>
   </tr>
@@ -220,13 +221,13 @@ I följande tabell beskrivs adaptiva formulärkomponenter och motsvarande XFA-ko
   </tr>
   <tr>
    <td>Knappen Återställ</td>
-   <td>Återställningsknapp</td>
+   <td>Återställ knapp</td>
    <td>false</td>
    <td> </td>
   </tr>
   <tr>
    <td>Skicka-knapp</td>
-   <td><p>Skicka-knapp för e-post</p> <p>Skicka-knapp (HTTP)</p> </td>
+   <td><p>E-postknapp</p> <p>HTTP-sändningsknapp</p> </td>
    <td>false</td>
    <td> </td>
   </tr>
