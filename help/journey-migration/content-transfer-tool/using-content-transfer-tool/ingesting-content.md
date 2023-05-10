@@ -2,9 +2,9 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 79f5133e681261fa8f7604f1fc9c3fbf5c6a5f59
+source-git-commit: addfa18ed8fa45b1cfc17d4e35cbdde47b491507
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1753'
 ht-degree: 6%
 
 ---
@@ -59,7 +59,9 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam23.png)
 
-1. När du har slutfört intag klickar du på (i) knappen i det övre högra hörnet av skärmen för att få mer information om intagsjobbet.
+1. Klicka på **(i)** om du vill ha mer information om intagsjobbet. Du kan se hur länge varje steg i Ingrediktionen varar när den körs eller slutförs genom att klicka på **...** och sedan **Visa varaktighet**. Informationen från extraheringen visar också på vad som förtärs.
+
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam23b.png)
 
 <!-- Alexandru: hiding temporarily, until it's reviewed 
 

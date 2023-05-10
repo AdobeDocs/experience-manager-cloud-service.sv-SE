@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: 5475f9995513d09e61bd8f52242b3e74b8d4694c
+source-git-commit: b31fe77cd43362b6ad768e8a2b258c23ae84466c
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1406'
 ht-degree: 6%
 
 ---
@@ -91,6 +91,10 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
    Följande dialogruta visas. Observera att ett migreringsuppsättning upphör att gälla efter en längre inaktivitetsperiod. När varningar visas på projektkortet och migreringsjobbtabellsraderna under en tidsperiod, kommer migreringsuppsättningen att upphöra och dess data kommer inte längre att vara tillgängliga. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam3.png)
+
+   >[!NOTE]
+   >
+   >Namnet måste följa samma konventioner som en AEM nod så det får inte innehålla något av följande tecken: . / : [ ] | *
 
 1. Nu bör du se din migreringslista i listvyn. Klicka på symbolen med tre punkter (**...**) för att öppna listrutan och klicka på **Kopiera extraheringsnyckel**. Du behöver den här nyckeln under extraheringsfasen. Kopiera den här extraheringsnyckeln.
 

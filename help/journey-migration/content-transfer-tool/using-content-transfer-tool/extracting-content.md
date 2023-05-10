@@ -2,10 +2,10 @@
 title: Extraherar innehåll från källa
 description: Extraherar innehåll från källa
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
-source-git-commit: 614b2d9e0b3c34bdef854115dce91effed0b36f8
+source-git-commit: b31fe77cd43362b6ad768e8a2b258c23ae84466c
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 22%
+source-wordcount: '701'
+ht-degree: 21%
 
 ---
 
@@ -49,13 +49,13 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam16.png)
 
-   Du kan också övervaka extraheringsfasens förlopp från Cloud Acceleration Manager genom att gå till sidan Innehållsöverföring.
+   Du kan också övervaka extraheringsfasens förlopp från Cloud Acceleration Manager genom att gå till sidan Innehållsöverföring och se den mer i detalj genom att klicka på **...** och sedan **Visa detaljer**.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam17.png)
 
-1. När extraheringen är klar kan du granska de andra kolumnerna som **Källa** och **Banor** för information om den migreringsuppsättning som du fyllde i genom att klicka på **...** och sedan **Visa detaljer**.
+1. När extraheringen är klar kan du granska de andra kolumnerna som **Källa** och **Banor** för information om den migreringsuppsättning som du fyllde i genom att klicka på **...** och sedan **Visa detaljer** för att se detaljer, inklusive varaktigheten för varje steg i extraktionen. Visa den här dialogrutan under extraheringen för att se hur stegen fortskrider.
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam18.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam18b.png)
 
 
 ## Uppdateringsextrahering {#top-up-extraction-process}
