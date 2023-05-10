@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet
 description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: eb633db8fe64a62661c094b88f0ce8d9950ed6d7
+source-git-commit: 288faf39a86411bb96d781a320abfa47538b2066
 workflow-type: tm+mt
-source-wordcount: '3473'
+source-wordcount: '3508'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 1%
 >abstract="Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering."
 
 Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av [kodkvalitetstestning](/help/implementing/cloud-manager/code-quality-testing.md). De bygger på god praxis från Experience Manager Engineering.
+
+>[!NOTE]
+>
+>Fullständiga SonarQube-regler kan inte laddas ned på grund av Adobe egna information. Du kan hämta den fullständiga listan med regler [med den här länken.](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx) Fortsätt läsa det här dokumentet för beskrivningar och exempel på reglerna.
 
 >[!NOTE]
 >
