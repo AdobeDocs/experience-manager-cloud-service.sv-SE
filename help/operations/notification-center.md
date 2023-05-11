@@ -3,9 +3,9 @@ title: Notiscenter
 description: Utnyttja Notiscenter för att enkelt vidta åtgärder i samband med incidenter och annan viktig information
 hidefromtoc: true
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
-source-git-commit: b72d22e8788c04ab4faa3616a4a0ce5e6d8ce991
+source-git-commit: 283493187142e1aeaaf272818bb9b7921841ed67
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,9 @@ I Notiscenter kan du välja ett specifikt program och en viss miljö, vilket fil
 Följ stegen nedan för att konfigurera mottagningsmeddelanden:
 
 1. Skapa följande produktprofiler enligt beskrivningen [i den här artikeln](/help/journey-onboarding/notification-profiles.md)och du kan även tilldela rätt Adobe-ID från din organisation till dessa profiler. Detta gör att en administratör kan avgöra vilka användare som är kvalificerade att ta emot dessa meddelanden.
-1. Varje tilldelad användare som tilldelats i föregående steg kan konfigurera hur de vill få sina meddelanden. På [Experience Cloud inställningssida](https://experience.adobe.com/preferences/notification-section)kontrollerar du att prenumerationen på Experience Manager är aktiverad och att **Driftincidenter** och **Förebyggande rekommendationer** är markerade. Vi rekommenderar dessutom att avsnittet E-post är inställt på **Snabbmeddelanden** så att meddelanden tas emot omedelbart när en incident inträffar.
+1. Varje tilldelad användare som tilldelats i föregående steg kan konfigurera hur de vill få sina meddelanden. På [Experience Cloud inställningssida](https://experience.adobe.com/preferences/notification-section)kontrollerar du att prenumerationen på Experience Manager är aktiverad och att **Driftincidenter** och **Förebyggande rekommendationer** kryssrutor är markerade för både in-app- och e-postkolumner (se bilden nedan). Vi rekommenderar dessutom att avsnittet E-post är inställt på **Snabbmeddelanden** så att meddelanden tas emot omedelbart när en incident inträffar.
+
+![Konfigurera prenumerationer](/help/operations/assets/configure-subscriptions.png)
 
 >[!NOTE]
 >Meddelanden fungerar på organisationsnivå så att prenumeranterna får meddelanden om alla program och miljöer i dessa program.
