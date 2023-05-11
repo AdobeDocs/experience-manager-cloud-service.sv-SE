@@ -3,9 +3,9 @@ title: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experi
 description: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] as a Cloud Service.
 contentOwner: AG
 exl-id: 1f0ff800-5e95-429a-97f2-221db0668170
-source-git-commit: f5f2c7c4dfacc113994c380e8caa37508030ee92
+source-git-commit: e6ab7ba91b52d3479a85870e8ffa8e8d2f1e303e
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1876'
 ht-degree: 0%
 
 ---
@@ -95,19 +95,19 @@ I följande tabell visas de aktuella plugin-programmen:
 | Plug-in-ID | funktioner | Beskrivning |
 |--- |--- |--- |
 | redigera | `cut`, `copy`, `paste-default`, `paste-plaintext`, `paste-wordhtml` | [Klipp ut, kopiera och, de tre inklistringslägena](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
-| [findreplace](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FindReplacePlugin) | `find`, `replace` | Sök och ersätt. |
-| [format](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.FormatPlugin) | `bold`, `italic`, `underline` | [Grundläggande textformatering](configure-rich-text-editor-plug-ins.md#textstyles). |
-| [bild](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ImagePlugin) | `image` | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
-| [tangenter](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.KeyPlugin) | - | Information om hur du definierar det här värdet finns i [tabbstorlek](configure-rich-text-editor-plug-ins.md#tabsize). |
-| [justera](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.JustifyPlugin) | `justifyleft`, `justifycenter`, `justifyright` | Styckejustering. |
-| [länkar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.LinkPlugin) | `modifylink`, `unlink`, `anchor` | [Hyperlänkar och ankarpunkter](configure-rich-text-editor-plug-ins.md#linkstyles). |
-| [listor](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.ListPlugin) | `ordered`, `unordered`, `indent`, `outdent` | Detta plugin-program kontrollerar båda [indrag och listor](configure-rich-text-editor-plug-ins.md#indentmargin); inklusive kapslade listor. |
-| [felverktyg](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html?class=CQ.form.rte.plugins.MiscToolsPlugin) | `specialchars`, `sourceedit` | Med andra verktyg kan man skriva [specialtecken](configure-rich-text-editor-plug-ins.md#spchar) eller redigera HTML-källan. Du kan också lägga till en [intervall med specialtecken](configure-rich-text-editor-plug-ins.md#definerangechar) om du vill definiera en egen lista. |
+| findreplace | `find`, `replace` | Sök och ersätt. |
+| format | `bold`, `italic`, `underline` | [Grundläggande textformatering](configure-rich-text-editor-plug-ins.md#textstyles). |
+| bild | `image` | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
+| tangenter | - | Information om hur du definierar det här värdet finns i [tabbstorlek](configure-rich-text-editor-plug-ins.md#tabsize). |
+| justera | `justifyleft`, `justifycenter`, `justifyright` | Styckejustering. |
+| länkar | `modifylink`, `unlink`, `anchor` | [Hyperlänkar och ankarpunkter](configure-rich-text-editor-plug-ins.md#linkstyles). |
+| listor | `ordered`, `unordered`, `indent`, `outdent` | Detta plugin-program kontrollerar båda [indrag och listor](configure-rich-text-editor-plug-ins.md#indentmargin); inklusive kapslade listor. |
+| felverktyg | `specialchars`, `sourceedit` | Med andra verktyg kan man skriva [specialtecken](configure-rich-text-editor-plug-ins.md#spchar) eller redigera HTML-källan. Du kan också lägga till en [intervall med specialtecken](configure-rich-text-editor-plug-ins.md#definerangechar) om du vill definiera en egen lista. |
 | Paraformat | `paraformat` | Standardstyckeformaten är Stycke, Rubrik 1, Rubrik 2 och Rubrik 3 (`<p>`, `<h1>`, `<h2>`och `<h3>`). Du kan [lägga till fler styckeformat](configure-rich-text-editor-plug-ins.md#paraformats) eller utöka listan. |
 | stavningskontroll | `checktext` | [Språkmedveten stavningskontroll](configure-rich-text-editor-plug-ins.md#adddict). |
 | stilar | `styles` | Stöd för formatering med en CSS-klass. [Lägga till nya textformat](configure-rich-text-editor-plug-ins.md#textstyles) om du vill lägga till (eller utöka) egna format för användning med text. |
 | nedsänkt | `subscript`, `superscript` | Tillägg till de grundläggande formaten, med underskript och superskript. |
-| tabell | `table`, `removetable`, `insertrow`, `removerow`, `insertcolumn`, `removecolumn`, `cellprops`, `mergecells`, `splitcell`, `selectrow`, `selectcolumns` | Se [konfigurera tabellformat](configure-rich-text-editor-plug-ins.md#tablestyles) om du vill lägga till egna format för hela tabeller eller enskilda celler. |
+| table | `table`, `removetable`, `insertrow`, `removerow`, `insertcolumn`, `removecolumn`, `cellprops`, `mergecells`, `splitcell`, `selectrow`, `selectcolumns` | Se [konfigurera tabellformat](configure-rich-text-editor-plug-ins.md#tablestyles) om du vill lägga till egna format för hela tabeller eller enskilda celler. |
 | ångra | `undo`, `redo` | Historikstorlek för [ångra och göra om](configure-rich-text-editor-plug-ins.md#undohistory) åtgärder. |
 
 >[!NOTE]
