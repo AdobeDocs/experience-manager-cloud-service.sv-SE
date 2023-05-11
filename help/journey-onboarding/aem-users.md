@@ -4,9 +4,9 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 86700cce-139f-451e-9c21-b38b6332f773
-source-git-commit: 709a80683357b0d56280ff14aa5f4ba6bf2c6b23
+source-git-commit: 77ae5d79ecb8a11a230cee461f247ffe0e9891a5
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -80,6 +80,8 @@ Om du är intresserad av hur utvecklare och distributionsansvariga skapar och ha
 >Nu när du är ombord kan du [lära dig hur du enkelt lägger till tillägget AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) till en sandlådemiljö med minimal AEM och möjlighet att testa de kraftfulla funktionerna i AEM med omfattande exempel baserade på bästa praxis.
 
 ## Ytterligare resurser {#additional-resources}
+
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
 [Snabbstartsguide till framtagning av sidor](/help/sites-cloud/authoring/getting-started/quick-start.md) - Börja här för att få en snabb översikt över grunderna i AEM.
 [Headless Authoring Journey](/help/journey-headless/author/overview.md) - Följ den här introduktionen om du vill skapa rubrikfritt innehåll.

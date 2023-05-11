@@ -4,9 +4,9 @@ description: När du har konfigurerat dina molnresurser måste du ge ditt team �
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: c00f5d28-85af-4bd3-a50c-913d1342241c
-source-git-commit: fd0716a95d66908e215ed44bc773ed3c26e0382b
+source-git-commit: 77ae5d79ecb8a11a230cee461f247ffe0e9891a5
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,8 @@ Men om du bättre vill förstå hur författare och utvecklare använder systeme
 * [AEM användaruppgifter](aem-users.md) - Där får du lära dig hur du kommer åt AEM där du kan börja skapa innehåll.
 
 ## Ytterligare resurser {#additional-resources}
+
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
 * [Hantera produkter och användaråtkomst i Admin Console](/help/security/ims-support.md#managing-products-and-user-access-in-admin-console) - Lär dig hur du använder Admin Console för att hantera åtkomsten.
 * [Konfigurera åtkomst till AEM genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html?lang=en) - Kolla in den här förkortade genomgången om du vill veta mer om hur du konfigurerar Adobe IMS-användare, användargrupper och produktprofiler i Admin Console.

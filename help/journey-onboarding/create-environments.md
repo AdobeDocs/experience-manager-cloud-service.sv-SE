@@ -3,9 +3,9 @@ title: Skapa miljöer
 description: Lär dig hur du använder Cloud Manager för att skapa dina första miljöer.
 role: Admin, User, Developer
 exl-id: 31940e1e-fe27-4c5f-b67f-41affebea63a
-source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
+source-git-commit: 5c5db0d133adfbbb678930ef27d8ade10fd0c3be
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,13 @@ Miljöer finns under program i Cloud Managers hierarki. Med program kan du organ
 
 Om du kommer ihåg exemplet med WKND Travel and Adventure Enterprises, som är en hyresgäst som fokuserar på reserelaterade medier, kan de ha två program: ett Sites-program för divisionen WKND Magazine och ett Assets-program för divisionen WKND Media. Varje program skulle förmodligen ha ett par miljöer, till exempel en produktionsmiljö som betjänar den faktiska trafiken på platsen och en utvecklingsmiljö för att testa ny programkod.
 
-Det finns tre olika typer av miljöer:
+Det finns fyra olika typer av miljöer:
 
 * **Produktion och fas** - Produktions- och testmiljöer finns som par och används för produktions- respektive testningsändamål.
 * **Utveckling** - En utvecklingsmiljö kan skapas för såväl utvecklings- som testningsändamål och kan endast kopplas till rörledningar som inte är avsedda för produktion.
+* **Snabb utveckling** - Med en snabb utvecklingsmiljö (RDE) kan utvecklare snabbt driftsätta och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som är beprövade i en lokal utvecklingsmiljö.
 
-För den här introduktionsresan skapar du en utvecklingsmiljö.
+För den här introduktionsresan kommer du att skapa en utvecklingsmiljö som du kan använda för att utforska AEM as a Cloud Service funktioner.
 
 ## Skapa miljöer {#creating-environments}
 
@@ -81,7 +82,9 @@ Därför bör du fortsätta din introduktionsresa genom att granska dokumentet n
 
 ## Ytterligare resurser {#additional-resources}
 
-Följ de andra resurserna för att lära dig mer om:
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
 * [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) - Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt
 * [Använda Adobe Cloud Manager - miljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html) - Cloud Manager-miljöer består av AEM tjänster för redigering, publicering och utskickning. Lär dig hur olika miljöer stöder roller och kan användas med olika CI/CD-pipeline.
+* [AEM Champion Tips and Tricks - Cloud Manager Environment Types](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/environment-types.md) - I den här videon visas en översikt över olika miljötyper i Cloud Manager från en AEM.
+* [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md) - Läs den här dokumentationen för mer information om hur du använder en RDE

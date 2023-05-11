@@ -4,9 +4,9 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: f57a856b-0932-4e8f-be59-a19fe692e2ab
-source-git-commit: 709a80683357b0d56280ff14aa5f4ba6bf2c6b23
+source-git-commit: 77ae5d79ecb8a11a230cee461f247ffe0e9891a5
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,8 @@ Om du är intresserad av hur innehållsförfattare får tillgång till och anvä
 >Nu när du är ombord kan du [lära dig hur du enkelt lägger till tillägget AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) till en sandlådemiljö med minimal AEM och möjlighet att testa de kraftfulla funktionerna i AEM med omfattande exempel baserade på bästa praxis.
 
 ## Ytterligare resurser {#additional-resources}
+
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
 * [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md) - Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering via självbetjäning från Cloud Manager.
 * [Använda Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md) - Lär dig hur du använder Cloud Managers Git-databaser och hur du integrerar din egen kundhanterade Git-databas med Cloud Manager.

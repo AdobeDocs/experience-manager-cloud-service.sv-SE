@@ -3,9 +3,9 @@ title: Access Cloud Manager
 description: Lär dig hur du får åtkomst till Cloud Manager så att du kan konfigurera dina projektresurser.
 role: Admin, User, Developer
 exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
-source-git-commit: 225b34f081a942d67dfc1f6faeb09763ea9fde03
+source-git-commit: 5c5db0d133adfbbb678930ef27d8ade10fd0c3be
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,8 @@ Du bör fortsätta din introduktionsresa genom att granska dokumentet nästa gå
 
 ## Ytterligare resurser {#additional-resources}
 
-Följ de andra resurserna för att lära dig mer om:
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
 * [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md) - Lär dig mer om Cloud Manager, Cloud Manager-program och miljöer.
 * [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) - Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
+* [AEM Champion Tips and Tricks - Cloud Manager UI](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/cloud-manager-ui.md) - I den här videon visas en översikt över användargränssnittet i Cloud Manager från en AEM.

@@ -2,9 +2,9 @@
 title: Åtkomst till Admin Console
 description: När du har förstått de förberedelser som krävs för att komma igång och grunderna i AEMaaCS-strukturen är du redo att logga in på Admin Console för första gången.
 exl-id: 0ccce328-a356-4ba9-b7fe-f67abc25b924
-source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
+source-git-commit: 77ae5d79ecb8a11a230cee461f247ffe0e9891a5
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1111'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,8 @@ Nu när du har läst det här dokumentet bör du:
 Du är redo att fortsätta din introduktionsresa genom att lära dig hur [tilldela teammedlemmar till produktprofiler för Cloud Manager](assign-profiles-cloud-manager.md) så att dina kollegor också kan komma åt AEMaaCS.
 
 ## Ytterligare resurser {#additional-resources}
+
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
 * [Översikt över Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) - En omfattande översikt över Admin Console
 * [Skapa eller uppdatera din Adobe ID](https://helpx.adobe.com/ca/manage-account/using/create-update-adobe-id.html#HowtocreateorupdateyourAdobeID) - Lär dig hur du skapar en Adobe ID, ändrar den och hanterar flera Adobe ID:n.

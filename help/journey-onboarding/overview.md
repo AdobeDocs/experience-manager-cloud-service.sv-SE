@@ -2,10 +2,10 @@
 title: Introduktion till as a Cloud Service onboarding-resa
 description: Börja här för en översikt över den guidade resan genom introduktionsprocessen till AEM as a Cloud Service.
 exl-id: 892577db-05dc-49ff-bb2c-203efdb89c8c
-source-git-commit: 75c0e8cbaa409fa48750e794c27ace98eda107d0
+source-git-commit: 5c5db0d133adfbbb678930ef27d8ade10fd0c3be
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1228'
+ht-degree: 2%
 
 ---
 
@@ -95,3 +95,9 @@ Du är nu redo att påbörja din AEM as a Cloud Service introduktionsresa. Vi re
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar att ditt team kommer in i ditt nya AEM as a Cloud Service program är det här du börjar!
+
+## Ytterligare resurser {#additional-resources}
+
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
+
+* [AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/onboarding-playbook.md) - Titta på den här videon om du vill lära dig tips och tricks om hur Creative Manager kan komma igång av en AEM.
