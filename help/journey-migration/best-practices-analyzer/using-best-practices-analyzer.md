@@ -2,7 +2,7 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: e11cb3215dc005bfd38959f3ceaaad25becad65c
+source-git-commit: df1fdbe0f3590708e1da44864b6e08075a521b51
 workflow-type: tm+mt
 source-wordcount: '2490'
 ht-degree: 41%
@@ -28,7 +28,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best 
 * BPA stöds på AEM med version 6.1 och senare.
 
    >[!NOTE]
-   > Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
+   >Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
 
 * BPA kan köras i alla miljöer, men det är bäst att det körs på en *Scen* miljö.
 
@@ -100,14 +100,14 @@ Filtrera bort resultat som är relaterade till [ACS-kommandon](https://adobe-con
    ![bild](/help/journey-migration/best-practices-analyzer/assets/report_filter_1.png)
 
    >[!NOTE]
-   > Ikonen för vänster spår visas bara om BPA upptäcker att ACS Commons används.
+   >Ikonen för vänster spår visas bara om BPA upptäcker att ACS Commons används.
 
 1. Avmarkera rutan om du vill filtrera bort alla resultat som rör ACS-kommandon. Du borde se en **Antal filtrerade sökningar** på rapporten enligt bilden nedan. Filtret används också i rapporten när den exporteras i ett CSV-format (kommaavgränsat värde).
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/report_filter_2.png)
 
    >[!NOTE]
-   > ACS Commons-resultaten ska inte ignoreras. Se [dokumentation](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility) för att fastställa kompatibiliteten med AEM as a Cloud Service.
+   >ACS Commons-resultaten ska inte ignoreras. Se [dokumentation](https://adobe-consulting-services.github.io/acs-aem-commons/pages/compatibility.html#aem-as-a-cloud-service-feature-incompatibility) för att fastställa kompatibiliteten med AEM as a Cloud Service.
 
 <!--
 ### Adobe Experience Manager 6.2 and 6.1 {#aem-specific-versions}
