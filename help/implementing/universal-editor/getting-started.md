@@ -1,13 +1,13 @@
 ---
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
-source-git-commit: 031117db4154dc605ae8b0c95f87b829bb5cacd8
+exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
+source-git-commit: a933073346e6b7c3b4256269f5796a64a6dfbfa8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med Universal Editor i AEM {#getting-started}
 
@@ -109,7 +109,7 @@ De instrumentattribut som läggs till på sidan består huvudsakligen av [HTML M
 Anslutningar som används i appen lagras som `<meta>` taggar på sidans `<head>`.
 
 ```html
-<meta name="urn:auecon:<referenceName>" content="<protocol>:<url>">
+<meta name="urn:adobe:aem:editor:<referenceName>" content="<protocol>:<url>">
 ```
 
 * `<referenceName>` - Det här är ett kort namn som återanvänds i dokumentet för att identifiera anslutningen. T.ex. `aemconnection`
