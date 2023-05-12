@@ -2,9 +2,9 @@
 title: Redigeringsprogram
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: 3e2635ff34f66c9f7504799204091ef921ccd860
+source-git-commit: b916bf5b252045120659600293e004fc34b96e7a
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,7 @@ Följ de här stegen för att redigera ett program.
    ![Redigera inställningar för publicering](assets/edit-program-go-live.png)
 
    * Detta datum är endast avsett som information och aktiverar Go Live-widgeten på programöversiktssidan för att tillhandahålla länkar till AEM as a Cloud Service best practice-dokumentation i rätt tid för att anpassa sig till den resa som leder till en lyckad och smidig Go Live-upplevelse.
+   * Den här fliken är inte tillgänglig för sandlådeprogram.
 
 1. Klicka på **Uppdatera** för att spara ändringarna i programmet.
 

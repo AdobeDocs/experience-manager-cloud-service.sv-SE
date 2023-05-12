@@ -2,9 +2,9 @@
 title: Skapa produktionsprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: bfa1b56e5c066557c1b369b5f13335080a965055
+source-git-commit: b916bf5b252045120659600293e004fc34b96e7a
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -16,14 +16,6 @@ Ett produktionsprogram är avsett för en användare som är bekant med AEM och 
 
 Läs mer om programtyper i dokumentet [Program- och programtyper.](program-types.md)
 
-## Video Tutorials {#video-tutorials}
-
-Du kan titta på dessa två självstudiekurser för att lära dig hur du skapar ett program i Cloud Manager eller [Följ våra dokumenterade anvisningar.](#create)
-
->[!VIDEO](https://video.tv.adobe.com/v/334953)
-
->[!VIDEO](https://video.tv.adobe.com/v/334954)
-
 ## Skapa ett produktionsprogram {#create}
 
 Följ de här stegen för att skapa ett produktionsprogram.
@@ -34,13 +26,11 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
    ![Startsida för molnhanterare](assets/log-in.png)
 
-1. Välj **Ställ in för produktion** i guiden Skapa program för att skapa ett produktionsprogram.
-
-   1. Du kan godkänna standardprogramnamnet eller redigera det.
-   1. Du kan också dra och släppa en miniatyrbild för att identifiera programmet.
-   1. Tryck eller klicka **Fortsätt**.
+1. Välj **Ställ in för produktion** i guiden Skapa program för att skapa ett produktionsprogram och ange ett programnamn.
 
    ![Skapar programguiden](assets/create-production-program.png)
+
+1. Du kan också lägga till en bild i programmet genom att dra och släppa en bildfil i **Lägg till en programavbildning** markera eller klicka på en bild i en filläsare. Tryck eller klicka **Fortsätt**.
 
 1. Om du har utökade säkerhetsrättigheter **Förbättrat skydd** kan du välja att **Aktivera förbättrat skydd** för produktionsprogrammet. Om det behövs markerar du alternativet för att aktivera förbättrat skydd och trycker eller klickar på **Fortsätt**.
 
@@ -51,6 +41,7 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
 1. På **Lösningar och tillägg** väljer du de lösningar som ska ingå i programmet.
 
+   * Om du är osäker på om du behöver ett eller flera program för de olika lösningar du har tillgängliga väljer du det som intresserar dig mest. Du kan aktivera ytterligare lösningar genom att [redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) senare. Se [Introduktion till produktionsprogramdokument](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för fler rekommendationer för programkonfiguration.
    * Om du valde **Aktivera förbättrat skydd** tidigare får du bara välja så många lösningar som det finns tillgängliga HIPAA-berättiganden för.
 
    ![Välj lösningar](assets/setup-prod-select.png)

@@ -3,9 +3,9 @@ title: Skapa ett program
 description: Lär dig hur du använder Cloud Manager för att skapa ditt första program.
 role: Admin, User, Developer
 exl-id: ade4bb43-5f48-4938-ac75-118009f0a73b
-source-git-commit: 77ae5d79ecb8a11a230cee461f247ffe0e9891a5
+source-git-commit: b916bf5b252045120659600293e004fc34b96e7a
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
@@ -51,11 +51,15 @@ Följ de här stegen för att skapa ett sandlådeprogram.
 
 1. Klicka på **Lägg till program** i skärmens övre högra hörn.
 
-   ![Startsida för Cloud Manager](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin1.png)
+   ![Startsida för Cloud Manager](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/cloud-manager-my-programs.png)
 
-1. Välj **Konfigurera en sandlåda**, ange ett programnamn och klicka sedan på **Skapa**.
+1. Välj **Konfigurera en sandlåda** och ange ett programnamn och tryck eller klicka **Fortsätt**.
 
    ![Skapa programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/create-sandbox.png)
+
+1. I **Konfigurera din sandlåda** kan du välja vilka lösningar du vill aktivera i ditt sandlådeprogram. The **Webbplatser** och **Resurser** -lösningar ingår alltid i sandlådeprogram och väljs automatiskt. Detta är tillräckligt för vårt exempel på introduktion. Klicka **Skapa**.
+
+   ![Välj lösning](assets/set-up-sandbox-onboarding.png)
 
 Du ser ett nytt sandlådeprogramkort på landningssidan med en statusindikator allt eftersom installationsprocessen fortskrider.
 

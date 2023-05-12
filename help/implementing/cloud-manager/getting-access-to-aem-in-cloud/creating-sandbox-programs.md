@@ -2,9 +2,9 @@
 title: Skapa sandlådeprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget sandlådeprogram för utbildning, demo, POC eller andra icke-produktionssyften.
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
-source-git-commit: cf6941759dfc1e50928009490c7c518a89ed093e
+source-git-commit: b916bf5b252045120659600293e004fc34b96e7a
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,31 @@ Följ de här stegen för att skapa ett sandlådeprogram.
 
 1. Klicka på **Lägg till program** i skärmens övre högra hörn.
 
-   ![Startsida för Cloud Manager](assets/first_timelogin1.png)
+   ![Startsida för Cloud Manager](assets/cloud-manager-my-programs.png)
 
-1. Välj **Konfigurera en sandlåda**, ange ett programnamn och klicka sedan på **Skapa**.
+1. Välj **Konfigurera en sandlåda** och ange ett programnamn.
 
    ![Skapa programtyper](assets/create-sandbox.png)
 
+1. Du kan också lägga till en bild i programmet genom att dra och släppa en bildfil i **Lägg till en programavbildning** markera eller klicka på en bild i en filläsare. Tryck eller klicka **Fortsätt**.
+
+   * Bilden fungerar bara som plattan i programöversiktsfönstret och hjälper till att identifiera programmet.
+
+1. I **Konfigurera din sandlåda** väljer du vilka lösningar du vill aktivera i ditt sandlådeprogram genom att markera alternativen i **Lösningar och tillägg** tabell.
+
+   * Använd ändringarna bredvid lösningsnamnen för att visa ytterligare valfria tillägg för lösningarna.
+
+   * The **Webbplatser** och **Resurser** -lösningar ingår alltid i sandlådeprogram och kan inte avmarkeras.
+
+   ![Välja lösningar och tillägg för en sandlåda](assets/sandbox-solutions-add-ons.png)
+
+1. När du har valt lösningar och tillägg för sandlådeprogrammet trycker du på **Skapa**.
+
 Du ser ett nytt sandlådeprogramkort på landningssidan med en statusindikator allt eftersom installationsprocessen fortskrider.
 
-![Skapa sandlåda från översiktssida](assets/program-create-setupdemo2.png)
+![Skapa sandlåda från översiktssida](assets/sandbox-setup.png)
 
-## Använd din sandlåda {#access}
+## Sandlådeåtkomst {#access}
 
 Du kan visa information om sandlådekonfigurationen och få tillgång till miljön (när den är tillgänglig) genom att visa programöversiktssidan.
 
