@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: ea3a476f7f2d7d97a2428c6facf61b746dba7a23
+source-git-commit: 3823b9369c612058998e265346b3f727001aef4b
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '238'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,10 @@ Funktionsaktiveringen för den här underhållsversionen ger dig den fullständi
 
 ### Kända fel {#known-issues-11873}
 
-Ingen.
+- SITES-13253 - RecursionTooDeepException in Core Components v2.22.6
+- SITES-13256 - Core WCM Teaser konfigurerad med särskild sidåtergivning för URL-brytningar
+- GRANITE-45462 - Konfiguration för meddelandeklient med flera regioner
+- GRANITE-45562 - Problem med bildkombination som returnerar 200 i stället för 404
 
 ### Åtgärdade problem {#fixed-issues-11873}
 
