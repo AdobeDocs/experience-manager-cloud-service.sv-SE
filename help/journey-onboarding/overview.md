@@ -2,9 +2,9 @@
 title: Introduktion till as a Cloud Service onboarding-resa
 description: Börja här för en översikt över den guidade resan genom introduktionsprocessen till AEM as a Cloud Service.
 exl-id: 892577db-05dc-49ff-bb2c-203efdb89c8c
-source-git-commit: 5c5db0d133adfbbb678930ef27d8ade10fd0c3be
+source-git-commit: 98eff568686c72c626d2bf77d82e8c3f224eda42
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1172'
 ht-degree: 2%
 
 ---
@@ -16,40 +16,40 @@ Grattis till AEM as a Cloud Service! Det här dokumentet är utgångspunkten fö
 
 ## Introduktion {#introduction}
 
-Onboarding är den process under vilken en utsedd systemadministratör konfigurerar AEM as a Cloud Service för din organisation. Detta inkluderar inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Det innebär att varje medlem kan logga in och komma åt sina AEM as a Cloud Service resurser.
+Onboarding är den process under vilken en utsedd systemadministratör konfigurerar AEM as a Cloud Service för din organisation. I den här processen ingår inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Det innebär att varje medlem kan logga in och komma åt sin resurs på AEM as a Cloud Service.
 
 ![Startresan](/help/journey-onboarding/assets/onboarding-journey.png)
 
-Den här guiden leder dig igenom de viktigaste startämnena så att du när allt är klart får:
+Den här guiden leder dig igenom de viktigaste startämnena så att du har följande när du är klar:
 
 * Full förståelse för de olika villkoren, tjänsterna och användarna som deltar i introduktionsprocessen.
 * Gör det möjligt för teamet att komma igång och ta de första stegen mot att lära sig att skapa och utveckla innehåll för ditt AEM as a Cloud Service program.
 
 Resultatet blir:
 
-* Ditt team kommer att konfigureras och ha tillgång till molnresurser.
-* AEM får tillgång till AEM as a Cloud Service och kan börja skapa innehåll.
-* AEM utvecklare och distributionsansvariga får tillgång till AEM as a Cloud Service och kan börja skapa och distribuera anpassade program.
+* Ditt team är konfigurerat och har tillgång till molnresurser.
+* AEM författare har tillgång till AEM as a Cloud Service och kan börja skapa innehåll.
+* AEM utvecklare och distributionsansvariga har tillgång till AEM as a Cloud Service och kan börja skapa och distribuera anpassade program.
 
 ## Koncept och mål {#concepts}
 
 Även om det kan verka finnas mycket att lära sig när man börjar med AEM as a Cloud Service finns det bara några få logiska delar.
 
 * **Kontraktet** - Du måste känna till ditt Adobe-kontrakt eftersom det definierar aspekter av introduktionsprocessen.
-* **Admin Console** - Här hanteras användare och roller tilldelas.
-* **Cloud Manager** - Det här verktyget används för att konfigurera resurser som program och miljöer. Det är också där du får åtkomst till Git och skapar rörledningar för att hantera och distribuera din anpassade kod.
+* **Admin Console** - Där användare hanteras och roller tilldelas.
+* **Cloud Manager** - Verktyget för att ställa in resurser som program och miljöer. Det är också där du får åtkomst till Git och skapar rörledningar för att hantera och distribuera din anpassade kod.
 
-Dessa begrepp kommer att beskrivas i detalj i denna introduktionsresa. Målet är att du när resan är över:
+Dessa begrepp beskrivs i detalj i den här introduktionsresan. Målet är att du när resan är över:
 
-* Har gett användarna åtkomst till AEMaaCS
-* Har konfigurerat de första molnresurserna för ditt projekt
+* Har beviljat den nödvändiga användaren åtkomst till AEM as a Cloud Service.
+* Har konfigurerat de första molnresurserna för ditt projekt.
 * Lär dig hur du distribuerar din första kod och skapar ditt första innehåll.
 
-I princip kommer du att komma igång med ditt nya AEM as a Cloud Service projekt!
+I stort sett igång med ditt nya AEM as a Cloud Service projekt!
 
 ## Målgrupp {#audience}
 
-Startresan är särskilt skriven för **systemadministratör** av kundens nya AEM as a Cloud Service och AEM i allmänhet. Systemadministratören är den person som först kontaktas av Adobe efter att ditt AEM as a Cloud Service kontrakt har undertecknats, och det är vanligtvis den första personen som får tillgång till och ställer in dina AEM as a Cloud Service resurser. Om du läser detta är det troligtvis du som är systemadministratör.
+Startresan är särskilt skriven för **systemadministratör** av kundens nya AEM as a Cloud Service och AEM i allmänhet. Systemadministratören är den person som först kontaktas av Adobe efter att ditt AEM as a Cloud Service kontrakt har undertecknats. De är oftast den första personen som får tillgång till och ställer in dina resurser på AEM as a Cloud Service. Om du läser det här avsnittet är det troligtvis du som är systemadministratör.
 
 Systemadministratören hanterar alla aspekter av organisationens AEMaaCS-användare, från åtkomst till behörigheter. Systemadministratören måste dock interagera med andra profiler på vägen.
 
@@ -64,11 +64,11 @@ Den här introduktionsguiden visar den fullständiga processen för att komma ig
 
 >[!TIP]
 >
->Om du inte AEM as a Cloud Service tidigare, men redan är bekant med AEM och migrerar från Adobes hanterade tjänster på plats, ska du kolla in [AEM as a Cloud Service migreringsresa.](/help/journey-migration/getting-started.md)
+>Om du inte AEM as a Cloud Service och bekant med AEM och migrerar från lokala eller Adobe Managed Services ska du ta en titt på [AEM as a Cloud Service migreringsresa](/help/journey-migration/getting-started.md).
 
 ## Översikt över introduktionsresan {#overview}
 
-I följande artiklar beskrivs grundbegreppen för introduktion och du får grundläggande kunskaper i AEM as a Cloud Service. Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Därför rekommenderar vi att du startar i början och fortsätter sekventiellt om du inte är nybörjare.
+I följande artiklar beskrivs grundbegreppen för introduktion och du får grundläggande kunskaper i AEM as a Cloud Service. Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte är van vid att komma igång rekommenderar Adobe att du startar i början och fortsätter sekventiellt.
 
 | # | Artikel | Beskrivning | Målgrupp |
 |---|---|---|---|
@@ -80,24 +80,27 @@ I följande artiklar beskrivs grundbegreppen för introduktion och du får grund
 | 5 | [Access Cloud Manager](cloud-manager.md) | Lär dig hur du får tillgång till Cloud Manager så att du kan konfigurera dina projektresurser. | Systemadministratör |
 | 6 | [Skapa ett program](create-program.md) | Lär dig hur du skapar ett program med Cloud Manager. | Systemadministratör |
 | 7 | [Skapa miljöer](create-environments.md) | Lär dig hur du skapar en miljö med hjälp av Cloud Manager. | Systemadministratör |
-| 8 | [Tilldela AEM produktprofiler](assign-profiles-aem.md) | Lär dig hur systemadministratören tilldelar teammedlemmar AEM as a Cloud Service produktprofiler. | Systemadministratör |
-| 9 | [Uppgifter för utvecklare och distributionsansvarig](developers.md) | Valfritt - Lär dig hur du som utvecklare kan komma åt och hantera Cloud Manager Git och hur du som distributionshanterare kan konfigurera pipelines och distribuera kod i Cloud Manager. | Utvecklare och driftsättningschefer |
-| 10 | [AEM användaruppgifter](aem-users.md) | Valfritt - Lär dig hur du som AEM kan komma åt AEM as a Cloud Service instansen och bekanta dig med redigeringsinnehåll för AEM as a Cloud Service. | AEM |
+| 8 | [Tilldela AEM produktprofiler](assign-profiles-aem.md) | Läs om hur systemadministratören tilldelar teammedlemmar produktprofiler på AEM as a Cloud Service. | Systemadministratör |
+| 9 | [Uppgifter för utvecklare och distributionsansvarig](developers.md) | Som utvecklare kan du läsa om hur du kan få åtkomst till och hantera Cloud Manager Git och hur du som distributionshanterare kan konfigurera pipelines och distribuera kod i Cloud Manager. | Utvecklare och driftsättningschefer |
+| 10 | [AEM användaruppgifter](aem-users.md) | Valfritt - Som AEM kan du lära dig hur du kan komma åt AEM as a Cloud Service instansen och lära dig hur du redigerar innehåll för AEM as a Cloud Service. | AEM |
 
 ## What&#39;s Next {#what-is-next}
 
-Du är nu redo att påbörja din AEM as a Cloud Service introduktionsresa. Vi rekommenderar att du fortsätter till nästa del av resan och läser artikeln [Förberedelse för introduktion](preparation.md)
+Du är nu redo att påbörja din AEM as a Cloud Service introduktionsresa. Du uppmanas att fortsätta till nästa del av resan och läsa artikeln [Förberedelse för introduktion](preparation.md)
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika, komplicerade ämnen och funktioner. Den innehåller en berättarröst som hjälper en läsare som är nybörjare att AEM förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
-Om du vill veta hur Adobe rekommenderar att ditt team kommer in i ditt nya AEM as a Cloud Service program är det här du börjar!
+Om du vill veta vad Adobe rekommenderar om hur du ska få ditt team att komma in i ditt nya AEM as a Cloud Service program kan du börja här!
 
-## Ytterligare resurser {#additional-resources}
+<!-- ERROR: Not Found (HTTP error 404)
+## Additional Resources {#additional-resources}
 
-Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
+The following are additional, optional resources if you would like to go beyond the content of the onboarding journey.
 
-* [AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/onboarding-playbook.md) - Titta på den här videon om du vill lära dig tips och tricks om hur Creative Manager kan komma igång av en AEM.
+* [AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/onboarding-playbook.md) - Watch this video to learn Cloud Manager onboarding tips and trick from an AEM champion. -->
+
+
