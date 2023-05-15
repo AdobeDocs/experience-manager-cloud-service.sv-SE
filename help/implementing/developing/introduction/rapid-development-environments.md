@@ -1,13 +1,13 @@
 ---
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
-source-git-commit: 2de6e2b6357f6cd03be2736d09cb4687ff337450
+exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
+source-git-commit: 0095cb1fff99a52f5a048833b3d5a65643c1056d
 workflow-type: tm+mt
-source-wordcount: '3304'
+source-wordcount: '3325'
 ht-degree: 0%
 
 ---
-
 
 # Snabba utvecklingsmiljöer {#rapid-development-environments}
 
@@ -451,6 +451,8 @@ När en RDE återställs tas allt innehåll bort, och om så önskas måste en e
 
 1. Placera och implementera exempelinnehållet i Git i en install.rde-mapp under /apps och synka sedan det övergripande innehållspaketet till RDE med kommandoradsverktygen.
 
+1. Använd [innehållskopia, verktyg](/help/implementing/developing/tools/content-copy.md) om du vill kopiera en definierad innehållsuppsättning från produkter, scener eller dev-miljöer, eller från en annan RDE.
+
 1. Använd pakethanteraren
 
 Observera att du är begränsad till 1 GB när du synkroniserar innehållspaket.
@@ -499,4 +501,3 @@ Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environm
 ## RDE, genomgång
 
 Om du vill veta mer om RDE på AEM as a Cloud Service kan du läsa [videosjälvstudiekurs som visar hur du konfigurerar den, hur du använder den och utvecklingscykeln](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
-
