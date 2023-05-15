@@ -4,7 +4,7 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: 73ff4edc591e64e797e14d00d6f87759e3f1301a
+source-git-commit: ac94981e477e1fe8b883460ed9be009b4c1c088d
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -57,7 +57,7 @@ När du har sparat och öppnat ditt nya innehållsfragment öppnas redigeraren f
 
 1. Innehållsfragmentsredigeraren visar de fält som du har definierat i den valda modellen. Här kan du lägga till innehåll i varje fält för att slutföra innehållsfragmentet. Förloppet sparas automatiskt.
 
-1. Ange en **Titel** för ditt fragment genom att ange `Tuscan adventure`.
+1. Ange en **Titel** för ditt fragment genom att ange `Tuscan Adventure`.
 
 1. Ange en **Beskrivning** för fragmentet genom att klistra in i följande text.
 

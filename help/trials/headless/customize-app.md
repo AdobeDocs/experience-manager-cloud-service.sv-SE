@@ -4,9 +4,9 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: 2f4e38ba9bb2e0aab4dc126719a922fc983f8711
+source-git-commit: ac94981e477e1fe8b883460ed9be009b4c1c088d
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app_guide"
 >title="Starta redigeraren för innehållsfragment"
->abstract="Din AEM headless-testversion är integrerad med en React-app så att du kan se hur enkelt det är för alla att hantera innehåll utan utvecklingstid.<br><br>Starta den här modulen på en ny flik genom att klicka nedan och följ sedan den här guiden."
+>abstract="Nu ska vi utforska hur headless content authoring fungerar. Din AEM headless-testversion är integrerad med en React-app så att du kan se hur enkelt det är för alla att hantera innehåll utan utvecklingstid.<br><br>Starta den här modulen på en ny flik genom att klicka nedan och följ sedan den här guiden."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app_guide_footer"

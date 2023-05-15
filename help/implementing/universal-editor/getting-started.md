@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: a933073346e6b7c3b4256269f5796a64a6dfbfa8
+source-git-commit: 1a98abc3baffe2de63a6030d9d65b7137603bec5
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ Anslutningar som används i appen lagras som `<meta>` taggar på sidans `<head>`
 * `<protocol>` - Detta anger vilket beständighets-plugin-program för Universal Editor Persistence Service som ska användas. T.ex. `aem`
 * `<url>` - Detta är URL:en till det system där ändringarna ska kvarstå. T.ex. `http://localhost:4502`
 
-Den korta identifieraren `auecon` står för Adobe Universal Editor Connection.
+Identifieraren `adobe:aem:editor:aemconnection` representerar anslutningen för Adobe Universal Editor.
 
 `itemid`s kommer att använda `urn` för att förkorta identifieraren.
 
@@ -136,8 +136,8 @@ itemid="urn:<referenceName>:<resource>"
 ```html
 <html>
 <head>
-    <meta name="urn:auecon:aemconnection" content="aem:https://localhost:4502">
-    <meta name="urn:auecon:fcsconnection" content="fcs:https://example.franklin.adobe.com/345fcdd">
+    <meta name="urn:adobe:aem:editor:aemconnection:aemconnection" content="aem:https://localhost:4502">
+    <meta name="urn:adobe:aem:editor:aemconnection:fcsconnection" content="fcs:https://example.franklin.adobe.com/345fcdd">
 </head>
 <body>
         <aside>

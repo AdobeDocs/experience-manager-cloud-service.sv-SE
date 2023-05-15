@@ -4,9 +4,9 @@ description: Lär dig hur du använder AEM Content Fragment-modeller för att sk
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: 7134951a588eae3ee0c7c11abea17a34eac21474
+source-git-commit: ac94981e477e1fe8b883460ed9be009b4c1c088d
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_overview_guide"
 >title="Starta modellkonsolen"
->abstract="Låt oss utforska hur du skapar ett återanvändbart schema, som kallas Content Fragment-modell, för ditt innehåll i Adobe Experience Manager as a Cloud Service. Se videon för att förstå varför detta är ett viktigt steg. <br><br>I den här utbildningsmodulen ska vi använda en resewebbplats som exempel och gå igenom hur vi skapar en modell som representerar en resa. Vi kommer att hänvisa till den här modellen i senare moduler, så se till att du följer namnschemat som angetts.<br><br>Starta den här modulen på en ny flik genom att klicka på knappen nedan och sedan följa den här guiden."
+>abstract="Låt oss utforska hur du skapar ett återanvändbart schema, som kallas Content Fragment-modell, för ditt innehåll i Adobe Experience Manager as a Cloud Service. Se videon för att förstå varför detta är ett viktigt steg. <br><br>I den här utbildningsmodulen ska vi använda en resewebbplats som exempel och gå igenom hur vi skapar en modell som representerar en resa.<br><br>Starta den här modulen på en ny flik genom att klicka på knappen nedan och sedan följa den här guiden."
 >additional-url="https://video.tv.adobe.com/v/3413261" text="Innehållsstruktur i video"
 
 >[!CONTEXTUALHELP]
@@ -34,13 +34,13 @@ ht-degree: 0%
 
 Modellkonsolen för innehållsfragment öppnas på en ny flik. Tänk på modellkonsolen för innehållsfragment som ditt bibliotek med modeller, där du skapar nya modeller och hanterar befintliga modeller.
 
-Vi kommer till exempel att skapa en modell som representerar datastrukturen för en resa som visas på en resewebbplats. Vi kommer att beteckna en resa i den här modellen som en **Äventyr.**
+Vi kommer till exempel att skapa en modell som representerar datastrukturen för en resa som visas på en resewebbplats. Vi kommer att använda den här modellen som en resa **Adventure**.
 
 1. Klicka på **Skapa** längst upp till höger på skärmen för att börja skapa en modell för innehållsfragment.
 
 1. Guiden Skapa modell startar, som vägleder dig genom att skapa din modell. Ange den obligatoriska informationen.
 
-   * **Modelltitel** - Detta är en kort beskrivning av modellen och anger vanligtvis syftet med modellen. Vi kallar vår nya modell `Adventure`.
+   * **Modelltitel** - Detta är en kort etikett på modellen och anger vanligtvis syftet med modellen. Vi kallar vår nya modell `Adventure`.
    * **Aktivera modell** - Det här alternativet är markerat som standard och måste markeras för att det ska gå att skapa innehållsfragment baserat på den här modellen.
 
 1. När de obligatoriska fälten har fyllts i klickar du på **Skapa** längst upp till vänster för att skapa modellen.
@@ -51,13 +51,13 @@ Vi kommer till exempel att skapa en modell som representerar datastrukturen för
 
 ## Använda modellredigeraren {#configure-model}
 
-Vi har nu en modell som heter **Adventure** för att representera resor på en resewebbplats, men den har inga detaljer som längd, destination, aktiviteter osv. Innan du kan använda modellen måste du definiera datastrukturen.
+Vi har nu en modell som heter **Adventure**, men har inga detaljer som varaktighet, destination, aktiviteter osv. Innan du kan använda modellen måste du definiera datastrukturen.
 
 I redigeraren för innehållsfragmentmodellen konfigurerar du de datatyper och egenskaper som definierar innehållet i modellen.
 
 >[!TIP]
 >
->Vi ska lägga till några viktiga fält för **Adventure**. I senare moduler kommer vi att använda och lägga till i modellen, så följ namnschemat enligt vad som anges.
+>Det är viktigt att du följer namngivningsscheman i följande instruktioner eftersom vi kommer att referera till dessa specifika namn i senare moduler.
 
 1. Dra en **Enkelradig text** fält från **Datatyper** till höger om redigeraren och släpp den i modellen för innehållsfragment.
 
@@ -76,11 +76,11 @@ Fortsätt till nästa avsnitt för att lägga till de fält som krävs för att 
 
 ## Lägg till fält i modellen {#additional-fields}
 
-Du har redan ett fält för titeln på äventyret. Nu behöver du lägga till fält för att fånga upp beskrivning, pris och en representativ bild av resan.
+Du har redan ett fält för titeln på äventyret. Nu behöver du lägga till fält för att fånga beskrivningen, priset och en representativ bild av äventyret.
 
 >[!TIP]
 >
->The **Adventure** Modellen baseras på WKND-exempelwebbplatsen för AEM. Du kan [besök webbplatsen här](https://wknd.site/us/en/adventures/yosemite-backpacking.html) om du vill ha mer information om det, men det är inte nödvändigt att känna till det för dessa utbildningsmoduler.
+>The **Adventure** Modellen baseras på WKND-exempelwebbplatsen för AEM. Du kan [besök webbplatsen här](https://wknd.site/us/en/adventures/yosemite-backpacking.html) för att se innehåll som använder **Adventure** modell.
 
 Följ samma steg som ovan för att lägga till dessa ytterligare fält. Den enda skillnaden är de egenskaper som du måste ange.
 
