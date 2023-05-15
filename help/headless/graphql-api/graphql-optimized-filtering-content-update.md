@@ -2,9 +2,9 @@
 title: Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering
 description: Lär dig hur du uppdaterar innehållsfragment för optimerad GraphQL-filtrering i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 211f079e-d129-4905-a56a-4fddc11551cc
-source-git-commit: 02e27a8eee18893e0183b3ace056b396a9084b12
+source-git-commit: a18742abdd4693ab1e97d7db3ed6854b735bc0f9
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '913'
 ht-degree: 2%
 
 ---
@@ -50,18 +50,9 @@ Så här kör du proceduren:
       <th>Typ</th>
       <th>Anteckningar</th>
      </tr>
-     <tr>
+
+   <tr>
       <td>1</td>
-      <td>`AEM_RELEASE_CHANNEL` </td>
-      <td>"prerelease" </td>
-      <td> </td>
-      <td>Alla </td>
-      <td> </td>
-      <td>Variabel </td>
-      <td>Krävs för att aktivera funktionen. </td>
-     </tr>
-     <tr>
-      <td>2</td>
       <td>"CF_MIGRATION_ENABLED" </td>
       <td>`1` </td>
       <td>`0` </td>
@@ -71,7 +62,7 @@ Så här kör du proceduren:
       <td>Enables(!=0) eller inaktiverar(0) som utlöser migreringsjobb för innehållsfragment. </td>
      </tr>
      <tr>
-      <td>3</td>
+      <td>2</td>
       <td>`CF_MIGRATION_ENFORCE` </td>
       <td>`1` </td>
       <td>`0` </td>
@@ -81,7 +72,7 @@ Så här kör du proceduren:
       <td>Tvinga (!=0) ommigrering av innehållsfragment.<br>Om flaggan anges till 0 utförs en stegvis migrering av CF:er. Detta innebär, om jobbet avslutas av någon anledning, att nästa körning av jobbet startar migreringen från den punkt där det avslutades. Observera att den allra första migreringen rekommenderas (value=1). </td>
      </tr>
      <tr>
-      <td>4</td>
+      <td>3</td>
       <td>"CF_MIGRATION_BATCH" </td>
       <td>`50` </td>
       <td>`50` </td>
@@ -91,7 +82,7 @@ Så här kör du proceduren:
       <td>Storlek på gruppen för att spara antal innehållsfragment efter migrering.<br>Detta gäller hur många CF:er som ska sparas i databasen i en batch och kan användas för att optimera antalet skrivningar i databasen. </td>
      </tr>
      <tr>
-      <td>5</td>
+      <td>4</td>
       <td>"CF_MIGRATION_LIMIT" </td>
       <td>`1000` </td>
       <td>`1000` </td>
@@ -101,7 +92,7 @@ Så här kör du proceduren:
       <td>Maximalt antal innehållsfragment som ska bearbetas samtidigt.<br>Se även anmärkningarna för "CF_MIGRATION_INTERVAL". </td>
      </tr>
      <tr>
-      <td>6</td>
+      <td>5</td>
       <td>"CF_MIGRATION_INTERVAL" </td>
       <td>`60` </td>
       <td>`600` </td>
