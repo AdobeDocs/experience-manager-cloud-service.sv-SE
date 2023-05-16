@@ -2,10 +2,10 @@
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: IMS-stöd för Adobe Experience Manager as a Cloud Service
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
-source-git-commit: cc6565121a76f70b958aa9050485e0553371f3a3
+source-git-commit: 1e3130578b7e36e5ffd5ad7b04cc7981a95bb291
 workflow-type: tm+mt
-source-wordcount: '2022'
-ht-degree: 90%
+source-wordcount: '2054'
+ht-degree: 87%
 
 ---
 
@@ -142,11 +142,15 @@ En lista med befintliga instanser visas:
 
 Under varje instans av produktkontext kommer det att finnas instanser som sträcker sig över redigerings- eller publiceringstjänsterna i produktions-, scen- eller utvecklingsmiljöer. Varje instans kommer att kopplas till produktprofiler eller Cloud Manager-roller. De här produktprofilerna används för att tilldela användare och grupper behörighet.
 
-Profilen **Administrator_xxx** används för att ge administratörsbehörighet i den associerade AEM-instansen medan profilen **User_xxx** används för att lägga till vanliga användare.
+The **AEM administratörer_xxx** profilen kommer att användas för att ge administratörsbehörighet i den associerade AEM instansen medan **AEM Users_xxx** används för att lägga till vanliga användare.
 
 Alla användare och grupper som läggs till under den här produktprofilen kan logga in på den aktuella instansen enligt exemplet nedan:
 
 ![Produktprofil](/help/security/assets/ims8.png)
+
+>[!WARNING]
+>
+>The **AEM administratörer** produktprofilens namn får inte ändras. Ändra namnet på **AEM administratörer** produktprofilen tar bort administratörsrättigheter för alla användare som har tilldelats den profilen.
 
 ### Logga in på Adobe Experience Manager as a Cloud Service {#logging-in-to-aem}
 
