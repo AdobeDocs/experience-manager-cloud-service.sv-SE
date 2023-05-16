@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: ba1f2b7f1f61f7ba094047171e42e3cc8811a1b6
+source-git-commit: 5a43b6db8a5743b87d6eafdad31418e6cb45d22b
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2363'
 ht-degree: 4%
 
 ---
@@ -345,11 +345,3 @@ När du har valt Massredigering kan du:
       * De nya värdena tillämpas på alla markerade sidor när du markerar **Klar**.
       * När fältet har flera värden (till exempel Taggar) kan du antingen lägga till ett nytt värde eller ta bort ett gemensamt värde.
    * Fält som är gemensamma, men har olika värden på de olika sidorna, markeras med ett särskilt värde, t.ex. texten `<Mixed Entries>`.
-
->[!NOTE]
->
->Sidkomponenten kan konfigureras för att ange de fält som är tillgängliga för massredigering. Se Konfigurera sidan för massredigering av sidegenskaper.
-
-<!--
->The page component can be configured to specify the fields available for bulk editing. See [Configuring your page for bulk editing of page properties](/help/sites-developing/bulk-editing.md).
--->
