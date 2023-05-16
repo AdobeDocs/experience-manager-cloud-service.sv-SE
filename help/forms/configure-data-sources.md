@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: 936aa33ca334523aa84300f540bde9543eb7ffb4
+source-git-commit: 8d1a19f62d58bc9087991fb861adc6e8205e92d2
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1964'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 * SalesForce
 * Microsoft® Azure Blob Storage
 
-Dataintegrering har stöd för autentiseringstyperna OAuth2.0, Grundläggande autentisering och API Key som är färdiga och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. SOAP-baserade tjänster och OData-tjänster är konfigurerade i RESTful [!DNL Experience Manager] as a Cloud Service, JDBC för relationsdatabaser och anslutningsprogram för [!DNL Experience Manager] användarprofilen är konfigurerad i [!DNL Experience Manager] webbkonsol.
+Dataintegrering stöder OAuth2.0<!--([Authorization Code](https://oauth.net/2/grant-types/authorization-code/), [Client Credentials](https://oauth.net/2/grant-types/client-credentials/))-->, Grundläggande autentisering och API-nyckelautentisering är körklara och gör det möjligt att implementera anpassad autentisering för åtkomst till webbtjänster. SOAP-baserade tjänster och OData-tjänster är konfigurerade i RESTful [!DNL Experience Manager] as a Cloud Service, JDBC för relationsdatabaser och anslutningsprogram för [!DNL Experience Manager] användarprofilen är konfigurerad i [!DNL Experience Manager] webbkonsol.
 
 ## Konfigurera relationsdatabas {#configure-relational-database}
 
@@ -135,7 +135,7 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
       * Grundsökväg: URL-prefixet för alla API-sökvägar. Det är ett valfritt fält.\
          Om det behövs kan du redigera de förifyllda värdena för dessa fält.
-   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering, API-nyckel eller Anpassad autentisering - för att få åtkomst till RESTful-tjänsten och ange därefter information för autentisering.
+   * Välj autentiseringstyp - Ingen, OAuth2.0<!--([Authorization Code](https://oauth.net/2/grant-types/authorization-code/), [Client Credentials](https://oauth.net/2/grant-types/client-credentials/))-->, Basic Authentication, API Key eller Custom Authentication - för att få åtkomst till RESTful-tjänsten, och anger därmed information för autentisering.
 
    Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
 
@@ -154,7 +154,7 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
 
    * Välj URL eller fil på menyn [!UICONTROL Swagger Source] och ange [!DNL Swagger 3.0 URL] till[!DNL  Swagger] definitionsfil eller ladda upp [!DNL Swagger] från det lokala filsystemet.
    * Baserat på[!DNL  Swagger] Källindata, anslutningsinformationen med målservern visas.
-   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering, API-nyckel eller Anpassad autentisering - för att få åtkomst till RESTful-tjänsten och ange därefter information för autentisering.
+   * Välj autentiseringstyp - Ingen, OAuth2.0<!--([Authorization Code](https://oauth.net/2/grant-types/authorization-code/), [Client Credentials](https://oauth.net/2/grant-types/client-credentials/))-->, Basic Authentication, API Key eller Custom Authentication - för att få åtkomst till RESTful-tjänsten, och anger därmed information för autentisering.
 
    Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
 
@@ -230,7 +230,7 @@ Konfigurera SOAP-baserad webbtjänst i [!DNL Experience Manager] as a Cloud Serv
 
    * WSDL-URL för webbtjänsten.
    * Tjänstslutpunkt. Ange ett värde i det här fältet om du vill åsidosätta tjänstslutpunkten som anges i WSDL.
-   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering eller Anpassad autentisering - för att få åtkomst till SOAP-tjänsten och ange därefter information för autentisering.
+   * Välj autentiseringstyp - Ingen, OAuth2.0<!--([Authorization Code](https://oauth.net/2/grant-types/authorization-code/), [Client Credentials](https://oauth.net/2/grant-types/client-credentials/))-->, Grundläggande autentisering eller Anpassad autentisering - för att få åtkomst till SOAP-tjänsten, och ange därefter information för autentisering.
 
       <!--If you select **[!UICONTROL X509 Token]** as the Authentication type, configure the X509 certificate. For more information, see [Set up certificates](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).-->
       <!--Specify the KeyStore alias for the X509 certificate in the **[!UICONTROL Key Alias]** field. Specify the time, in seconds, until the authentication request remains valid, in the **[!UICONTROL Time To Live]** field. Optionally, select to sign the message body or timestamp header or both.-->
@@ -272,7 +272,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 1. Ange följande information för OData-tjänsten:
 
    * Tjänstens rot-URL för OData-tjänsten som ska konfigureras.
-   * Välj autentiseringstyp - Ingen, OAuth2.0, Grundläggande autentisering, API-nyckel eller Anpassad autentisering - för att få åtkomst till OData-tjänsten och ange därefter autentiseringsinformationen.
+   * Välj autentiseringstyp - Ingen, OAuth2.0<!--([Authorization Code](https://oauth.net/2/grant-types/authorization-code/), [Client Credentials](https://oauth.net/2/grant-types/client-credentials/))-->, Basic Authentication, API Key eller Custom Authentication - för att få åtkomst till OData-tjänsten och därmed ge information om autentisering.
 
    Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
 

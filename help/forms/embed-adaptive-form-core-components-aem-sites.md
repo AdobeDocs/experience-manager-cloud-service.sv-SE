@@ -5,9 +5,10 @@ description: Du kan använda Adaptiv form (Core Components) på en AEM Sites-sid
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: 2a487654c3af2d2ec3aa43481caed5e1d4fc77a2
+exl-id: 1046231f-787c-4e49-9ba0-e7dd59e41bce
+source-git-commit: 0d21b4ba2e7ce7592e3f2c57e4d320adc0af1008
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2084'
 ht-degree: 0%
 
 ---
@@ -22,22 +23,16 @@ Du kan välja någon av följande metoder för att skapa eller bädda in ett ada
 
 * **Skapa ett anpassat formulär genom att dra och släppa formulärkomponenter i den adaptiva Forms Container-komponenten**: Använd [Adaptiv Forms-behållare](#af-container-component) om du vill skapa ett utrymme på webbsidan som innehåller det adaptiva formuläret. Du kan skapa ett formulär genom att dra och släppa adaptiva formulärkomponenter i det här området. Se till exempel videon nedan för att lära dig hur du skapar ett adaptivt formulär med [!UICONTROL Adaptive Forms Container] komponent:
 
->[!VIDEO](/help/forms/assets/formcreationbyadaptiveformcontainer.mp4)
-
 The [Adaptiv formulärbehållare](#af-container-component) kan ni skapa digitala registreringsupplevelser genom att använda adaptiva Forms-komponenter direkt i AEM Sites redigerare. Integreringen ger en smidig upplevelse för de som skapar AEM Sites och vill skapa och hantera formulär på sina AEM Sites-sidor.
 
-* **Bädda in ett befintligt anpassat formulär**: The [Adaptiv Forms - Bädda in](#embed-existing-af) kan du enkelt lägga in ett befintligt adaptivt formulär på en sida i AEM Sites. Bädda in ett anpassat formulär med [!UICONTROL Adaptive Forms - Embed] -komponenten på webbplatsens sida, som i följande video:
-
->[!VIDEO](/help/forms/assets/embednewform_embed.mp4)
+* **Bädda in ett befintligt anpassat formulär**: The [Adaptiv Forms - Embed(V2)](#embed-existing-af) kan du enkelt lägga in ett befintligt adaptivt formulär på en sida i AEM Sites. Bädda in ett anpassat formulär med [!UICONTROL Adaptive Forms - Embed] -komponenten på webbplatsens sida, som i följande video:
 
 Den här funktionen gör det enklare att anpassa och återanvända Adaptive Forms. Integreringen är ett bekvämt sätt för kunder att återanvända adaptiva Forms som de redan har skapat.
 
 * **Använd Adaptiv Forms-guide för att skapa ett formulär**:
 
-   Använd [Adaptiv Forms - Bädda in](#embed-new-af) för att skapa ett adaptivt formulär i AEM Sites-redigeraren med hjälp av guiden Skapa formulär. Formuläret sparas som en extern entitet. Du kan även återanvända det här formuläret på andra webbplatssidor och i fristående formulär.
+   Använd [Adaptiv Forms - Embed(v2)](#embed-new-af) för att skapa ett adaptivt formulär i AEM Sites-redigeraren med hjälp av guiden Skapa formulär. Formuläret sparas som en extern entitet. Du kan även återanvända det här formuläret på andra webbplatssidor och i fristående formulär.
 Se till exempel videon nedan om du vill lära dig hur du skapar och bäddar in ett nyskapat adaptivt formulär med [!UICONTROL Adaptive Forms - Embed] -komponenten på webbplatsens sida.
-
->[!VIDEO](/help/forms/assets/createnewform_embed.mp4)
 
 ### Övervägande {#considerations}
 
@@ -52,11 +47,12 @@ The [!UICONTROL Adaptive Form Container] kan man skapa digitala registreringsupp
 +++ Aktivera **[!UICONTROL Adaptive Forms Container]** -komponenten i den associerade mallens policy.
 
 Aktivera [!UICONTROL Adaptive Forms Container] utför följande steg i mallens policy:
-1. Gå till [!UICONTROL Page Information] > [!UICONTROL Edit Template]
-1. Klicka på [!UICONTROL Policy] och väljer **Exempel på kärnkomponenter - Adaptiv form** kryssrutan.
-1. Klicka på [!UICONTROL Done].
 
->[!VIDEO](/help/forms/assets/adaptiveformcontainer.mp4)
+1. Gå till [!UICONTROL Page Information] > [!UICONTROL Edit Template]
+1. Klicka på [!UICONTROL Policy] och väljer **[!UICONTROL Adaptive Forms Container]**  kryssrutan under **[AEM Archetype Project Name] - Adaptiv form**.
+1. Klicka på **[!UICONTROL Done]**.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3419370?quality=12&learn=on)
 
 +++
 
@@ -104,7 +100,7 @@ Skapa ett adaptivt formulär med [!UICONTROL Adaptive Forms Container] komponent
 1. Skapa ett adaptivt formulär med de adaptiva Forms-komponenterna.
 1. Spara inställningarna.
 
->[!VIDEO](/help/forms/assets/af-container.mp4)
+>[!VIDEO](https://video.tv.adobe.com/v/3419284?quality=12&learn=on)
 
 Formuläret är klart. När du publicerar AEM Sites-sidan publiceras automatiskt ett adaptivt formulär och tillhörande refererade resurser.
 
@@ -148,11 +144,11 @@ I [!UICONTROL Edit Adaptive Forms Container] kan du ange följande:
 * **Visa meddelande**
    * **Meddelandeinnehåll**: Skriv ett meddelande med RTF-redigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
 
-## Bädda in ett befintligt anpassat formulär  {#aem-container-component}
+## Bädda in ett anpassat formulär  {#aem-container-component}
 
-Använda **[!UICONTROL Adaptive Forms - Embed]** kan du antingen bädda in ett nytt adaptivt formulär eller bädda in ett befintligt adaptivt formulär på webbplatsens sida. The [!UICONTROL Adaptive Forms - Embed] kan du göra följande:
+Använda **[!UICONTROL Adaptive Forms - Embed (V2)]** kan du antingen bädda in ett nytt adaptivt formulär eller bädda in ett befintligt adaptivt formulär på webbplatsens sida. The [!UICONTROL Adaptive Forms - Embed] kan du göra följande:
 
-* [Bädda in ett befintligt adaptivt formulär](#embed-new-af)
+* [Bädda in ett befintligt anpassat formulär](#embed-new-af)
 
 * [Skapa och bädda in ett nytt adaptivt formulär](#embed-existing-af)
 
@@ -160,12 +156,14 @@ Använda **[!UICONTROL Adaptive Forms - Embed]** kan du antingen bädda in ett n
 
 +++ Aktivera **Adaptiv Forms - Bädda in** -komponenten i den associerade mallens policy.
 
-Aktivera [!UICONTROL Adaptive Forms - Embed] utför följande steg i mallens policy:
-1. Gå till [!UICONTROL Page Information] > [!UICONTROL Edit Template]
-1. Klicka på [!UICONTROL Policy] och väljer **Kärninnehåll** kryssrutan.
-1. Klicka på [!UICONTROL Done].
+Aktivera [!UICONTROL Adaptive Forms - Embed(v2)] utför följande steg i mallens policy:
 
->[!VIDEO](/help/forms/assets/enableadaptiveform-embedtemplate.mp4)
+1. Gå till [!UICONTROL Page Information] > [!UICONTROL Edit Template]
+
+1. Klicka på [!UICONTROL Policy] och väljer **[!UICONTROL Adaptive Form - Embed (v2)]** kryssrutan under **[!UICONTROL [AEM Archetype Project Name] - Forms]** grupp .
+1. Klicka på **[!UICONTROL Done]**.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3419369?quality=12&learn=on)
 
 +++
 
@@ -212,7 +210,7 @@ Om du vill använda adaptiva Forms-komponenter på en AEM Sites-sida inkluderar 
 ### Bädda in nytt anpassat formulär {#embed-new-af}
 
 1. Öppna AEM Sites-sidan i redigeringsläge.
-1. Dra och släpp komponentens [!UICONTROL Adaptive Forms - Embed] på sidan.
+1. Dra och släpp komponentens [!UICONTROL Adaptive Forms - Embed(v2)] på sidan.
 1. Klicka på **Plus** och du omdirigeras till guiden för att skapa formulär.
 
    ![Adaptiv Forms - Bädda in komponent](/help/forms/assets/aemformcontainer.png)
@@ -220,6 +218,8 @@ Om du vill använda adaptiva Forms-komponenter på en AEM Sites-sida inkluderar 
 1. Skapa ett nytt adaptivt formulär från [!UICONTROL Form Creation] guide.
 1. The [!UICONTROL Asset Path] innehåller redan sökvägen till ett skapat adaptivt formulär
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat på sidan.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3419366/adaptive-form-aem-forms?quality=12&learn=on)
 
 ### Bädda in befintligt anpassat formulär {#embed-existing-af}
 
@@ -229,9 +229,12 @@ Om du vill använda adaptiva Forms-komponenter på en AEM Sites-sida inkluderar 
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i [!UICONTROL Asset Path].
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat på sidan.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3419368?quality=12&learn=on)
+
 #### Konfigurera anpassad form _ Bädda in egenskaper
 
-Du kan anpassa de avancerade inställningarna för [!UICONTROL Adaptive Form - Embed] -komponenten. I [!UICONTROL Edit Adaptive Forms - Embed] kan du ange följande:
+Du kan anpassa de avancerade inställningarna för [!UICONTROL Adaptive Form - Embed(v2)] -komponenten. I [!UICONTROL Edit Adaptive Forms - Embed(v2)] kan du ange följande:
+
 * **Resurssökväg**: Bläddra och välj det adaptiva formulär som ska bäddas in. Den fylls i automatiskt om du släppte den från Assets-webbläsaren.
 * **Efterbeställning** : Välj den åtgärd som ska utlösas när formulär skickas. Du kan välja att visa ett tackmeddelande eller en tacksida.
    * **Visa tackmeddelande**: Skriv ett meddelande med RTF-redigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
@@ -272,4 +275,3 @@ Om du vill ändra någon konfiguration eller egenskap för det inbäddade adapti
 ![Stöd för AF-layout](/help/forms/assets/afsite-layoutsupport.gif)
 
 Sidan AEM webbplatser innehåller en referens till det adaptiva formuläret. När du översätter en AEM Sites-sida översätts automatiskt ett adaptivt formulär och tillhörande refererade resurser med hjälp av [översättningsprojekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/managing-projects.html?lang=en#adding-pages-assets-to-a-translation-job) till andra språk.
-
