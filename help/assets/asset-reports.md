@@ -5,14 +5,19 @@ contentOwner: AG
 feature: Asset Reports,Asset Management
 role: Admin,User
 exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '891'
 ht-degree: 7%
 
 ---
 
 # Materialrapporter {#asset-reports}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=en) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Med tillgångsrapportering kan du bedöma hur användbar din [!DNL Adobe Experience Manager Assets] distribution. Med [!DNL Assets]kan du generera olika rapporter för dina digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användarna interagerar med resurser och vilka resurser som används <!-- downloaded and --> delade.
 

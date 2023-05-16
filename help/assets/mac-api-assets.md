@@ -5,14 +5,19 @@ contentOwner: AG
 feature: Assets HTTP API,APIs
 role: Developer,Architect,Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
 workflow-type: tm+mt
-source-wordcount: '1536'
-ht-degree: 0%
+source-wordcount: '1558'
+ht-degree: 1%
 
 ---
 
 # [!DNL Adobe Experience Manager Assets] HTTP-API {#assets-http-api}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=en) |
+| AEM as a Cloud Service | Den här artikeln |
 
 ## Översikt {#overview}
 

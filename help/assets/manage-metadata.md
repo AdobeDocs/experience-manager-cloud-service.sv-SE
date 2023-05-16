@@ -6,14 +6,19 @@ mini-toc-levels: 1
 feature: Asset Management,Metadata
 role: User,Architect,Admin
 exl-id: 73a82bc2-1dda-4090-b7ee-29d1a632ba25
-source-git-commit: 91af800c8b2f83e689e057f304a8e144ae4cc5ed
+source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1990'
 ht-degree: 3%
 
 ---
 
 # Hantera metadata för dina digitala resurser {#managing-metadata-for-digital-assets}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html?lang=en) |
+| AEM as a Cloud Service | Den här artikeln |
 
 [!DNL Adobe Experience Manager Assets] sparar metadata för varje resurs. Det gör det enklare att kategorisera och ordna resurser och det hjälper personer som letar efter en viss resurs. Med möjlighet att extrahera metadata från filer som överförts till [!DNL Experience Manager Assets], integreras metadatahanteringen med det kreativa arbetsflödet. Med möjligheten att behålla och hantera metadata med dina resurser kan du automatiskt ordna och bearbeta resurser baserat på deras metadata.
 
