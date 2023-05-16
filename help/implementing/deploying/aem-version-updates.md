@@ -3,7 +3,7 @@ title: AEM versionsuppdateringar
 description: Lär dig hur AEM as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla projekten uppdaterade med den senaste versionen.
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
-source-git-commit: 58ad2e4dec1c55426846f16918b3de13846ac03d
+source-git-commit: 59bc2b5af22ef23775195f098517cec40d98d66b
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 1%
@@ -51,6 +51,6 @@ Om uppdateringen till produktionsmiljön misslyckas kommer Cloud Manager automat
 
 Uppdateringar medför i de flesta fall inga driftavbrott, inklusive för redigeringsinstansen, som är ett kluster med noder. Rullande uppdateringar är möjliga på grund av [funktionen för lagring av sammansatta noder i Oak.](https://jackrabbit.apache.org/oak/docs/nodestore/compositens.html)
 
-Med den här funktionen kan AEM referera till flera databaser samtidigt. I rullar [blågrön driftsättning,](/help/operations/indexing.md#what-is-blue-green-deployment) den nya gröna AEM-versionen innehåller en egen `/libs` (den tjärMK-baserade oföränderliga databasen), som skiljer sig från den äldre blå AEM-versionen, även om båda refererar till en delad DocumentMK-baserad mutable-databas som innehåller områden som `/content` , `/conf` , `/etc` och andra.
+Med den här funktionen kan AEM referera till flera databaser samtidigt. I rullar [blågrön driftsättning,](/help/implementing/deploying/overview.md#index-management-using-blue-green-deployments) den nya gröna AEM-versionen innehåller en egen `/libs` (den tjärMK-baserade oföränderliga databasen), som skiljer sig från den äldre blå AEM-versionen, även om båda refererar till en delad DocumentMK-baserad mutable-databas som innehåller områden som `/content` , `/conf` , `/etc` och andra.
 
 Eftersom både den blå och den gröna har sina egna versioner av `/libs`kan de båda vara aktiva under den rullande uppdateringen, som båda tar på trafik tills det blå ersätts helt av det gröna.
