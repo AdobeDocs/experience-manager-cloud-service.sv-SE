@@ -6,9 +6,9 @@ feature: Asset Management,Renditions
 role: User
 mini-toc-levels: 3
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 5cc750b3ea9a911355220f8b95f769000be9f41a
 workflow-type: tm+mt
-source-wordcount: '3472'
+source-wordcount: '3577'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,17 @@ Och nu får du en bättre Google Core Web Vital-poäng för LCP (Störst Content
 >
 >Smart Imaging kräver att du använder det färdiga CDN (Content Delivery Network) som medföljer Adobe Experience Manager - Dynamic Media. Eventuellt annat anpassat CDN stöds inte med den här funktionen.
 
+>[!TIP]
+>
+>Prova och upptäck fördelarna med Dynamic Media bildmodifierare och Smart Imaging med Dynamic Media [_Ögonblicksbild_](https://snapshot.scene7.com/).
+>
+> Ögonblicksbild är ett visuellt demonstrationsverktyg som är utformat för att illustrera styrkan hos Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller Dynamic Media-URL:er för att visuellt se resultatet av olika bildmodifierare i Dynamic Media och optimera smarta bilder för följande:
+>* Filstorlek (med WebP- och AVIF-leverans)
+>* Nätverksbandbredd
+>* DPR (Device Pixel Ratio)
+>
+>Om du vill veta hur enkelt det är att använda Snapshot spelar du [Utbildningsvideo om ögonblicksbild](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html?lang=en) (3 minuter och 17 sekunder).
+
 Smart Imaging drar nytta av den ökade prestandaförbättringen genom att vara helt integrerad med Adobe förstklassiga CDN-tjänst (Content Delivery Network). Den här tjänsten hittar den optimala Internet-vägen mellan servrar, nätverk och peering-punkter. Den hittar en väg som har lägst latens och lägst paketförlustfrekvens i stället för att använda standardvägen på Internet.
 
 I följande bildresursexempel visas den nya optimeringen av smarta bilder:
@@ -40,7 +51,7 @@ På samma sätt som ovan utförde Adobe också ett test med en större exempelup
 
 Jämför WebP och AVIF med PNG, du kan se en storleksminskning på 84 % med WebP och 87 % med AVIF. Och eftersom både WebP- och AVIF-formaten stöder genomskinlighet och flera bildanimeringar är det en bra ersättning för genomskinliga PNG- och GIF-filer.
 
-Se även [Bildoptimering med nästa generations bildformat (WebP och AVIF)](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
+Se även [Bildoptimering med nästa generations bildformat (WebP och AVIF)](https://blog.developer.adobe.com/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
 
 <!-- HIDDEN ON MAY 19, 2022 BASED ON CQDOC-19280 On the mobile web, the challenges are compounded by two factors:
 
@@ -73,7 +84,7 @@ Se även [bfc](https://experienceleague.adobe.com/docs/dynamic-media-developer-r
 
 Enhetens pixelproportioner (DPR) - även kallat CSS-pixelproportioner - är relationen mellan en enhets fysiska pixlar och logiska pixlar. I synnerhet med nya retinaskärmar växer pixelupplösningen i moderna mobilenheter i snabb takt.
 
-Om du aktiverar optimering av enhetspixelproportioner återges bilden med skärmens ursprungliga upplösning, vilket gör att den ser skarp ut.
+Om du aktiverar optimering av enhetspixelproportioner återges bilden med skärmens ursprungliga upplösning, vilket gör den skarp.
 
 För närvarande kommer pixeldensiteten för visningen från Akamai CDN-rubrikvärden.
 
@@ -152,7 +163,7 @@ För bildfilsformat som stöder genomskinlighet som PNG kan du konfigurera Smart
 
 Smart Imaging fungerar med dina befintliga bildförinställningar och alla bildinställningar registreras. Vilka ändringar som görs är bildformatet, kvalitetsinställningen eller båda. Vid formatkonvertering bevarar Smart Imaging den fullständiga visuella återgivningen enligt inställningarna för bildförinställningarna, men med en mindre filstorlek.
 
-Anta till exempel att en bildförinställning har definierats med formatet JPEG, storleken 500 x 500, kvaliteten=85 och den oskarpa masken=0.1,1,5. När Smart Imaging upptäcker att en användare använder en Chrome-webbläsare konverteras bilden till WebP-format med storleken 500 x 500 och oskarp mask=0,1,1,5 med en WebP-kvalitet som matchar en JPEG-kvalitet på 85 så nära som möjligt. Den WebP-konverteringen tar stor plats jämfört med JPEG, och den mindre av båda returneras.
+Anta till exempel att en bildförinställning har definierats med formatet JPEG, storleken 500 x 500, kvaliteten=85 och den oskarpa masken=0.1,1,5. När Smart Imaging upptäcker att en användare använder en Chrome-webbläsare konverteras bilden till WebP-format med storleken 500 x 500. Oskarp mask=0.1,1,5 är i WebP-kvalitet som överensstämmer med JPEG-kvaliteten på 85 så nära som möjligt. Den WebP-konverteringen tar stor plats jämfört med JPEG, och den mindre av båda returneras.
 
 ## Måste jag ändra URL:er, bildförinställningar eller distribuera ny kod för Smart Imaging på min webbplats? {#will-i-have-to-change-any-urls-image-presets-or-deploy-any-new-code-on-my-site-for-smart-imaging}
 
