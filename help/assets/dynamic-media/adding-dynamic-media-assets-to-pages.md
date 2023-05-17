@@ -5,16 +5,16 @@ contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
-source-git-commit: da4174929e1eb8e15447f936dc89a67391c72209
+source-git-commit: ec3939e34028d1dbadbd2b855796ca63e049b814
 workflow-type: tm+mt
-source-wordcount: '3052'
-ht-degree: 5%
+source-wordcount: '3054'
+ht-degree: 4%
 
 ---
 
 # Lägga till Dynamic Media Assets på sidor{#adding-dynamic-media-assets-to-pages}
 
-Om du vill lägga till Dynamic Media-funktionen i resurser som används på era webbplatser kan du lägga till komponenten **dynamiska medier**, **interaktiva medier**, **panoramamedier** eller **360-videomedier** direkt på sidan. Du aktiverar layoutläget och Dynamic Media-komponenterna. Sedan lägger du till de här komponenterna på sidan och lägger till resurser i komponenten. Dynamic Media-komponenterna är smarta – de känner av om du lägger till en bild eller en video och konfigurationsalternativen ändras i enlighet med detta.
+Om du vill lägga till Dynamic Media-funktionalitet i resurser som du använder på dina webbplatser kan du lägga till **Dynamic Media**, **Interaktiva media**, **Panoramabilder**, eller **Video 360 Media** direkt på sidan. Du aktiverar layoutläget och Dynamic Media-komponenterna. Sedan lägger du till de här komponenterna på sidan och lägger till resurser i komponenten. Dynamic Media-komponenterna är smarta – de känner av om du lägger till en bild eller en video och konfigurationsalternativen ändras i enlighet med detta.
 
 Du lägger till Dynamic Media-resurser direkt på sidan om du använder [!DNL Adobe Experience Manager] som din WCM. Om du använder en tredje part för ditt WCM-system, kan du antingen [link](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller [embed](/help/assets/dynamic-media/embed-code.md) dina resurser. En responsiv tredjepartswebbplats finns på [leverera optimerade bilder till en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md).
 
@@ -221,7 +221,7 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
 Använd Dynamic Media-komponenten för att lägga till bildresurser för Smart beskärning på dina webbsidor. När du redigerar komponenten kan du välja att använda en fördefinierad videovisningsförinställning för att spela upp videon på sidan.
 
-Se [Använda Smart Crop med Experience Manager Assets Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html#dynamic-media)
+Se [Använda Smart Crop med Experience Manager Assets Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use.html)
 
 Se även [Bildprofiler](/help/assets/dynamic-media/image-profiles.md).
 
@@ -356,10 +356,10 @@ Se [HTTP2-leverans av innehåll](/help/assets/dynamic-media/http2faq.md) om du v
 
 >[!MORELIKETHIS]
 >
->* [Använda videospelaren i Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-video-player-feature-video-use.html#dynamic-media)
->* [Använd interaktiv video med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-interactive-video-feature-video-use.html#dynamic-media)
->* [Förstå resursvisningsprogrammet med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-feature-video-understand.html#dynamic-media)
->* [Använd anpassad videominiatyr med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-video-thumbnails-feature-video-use.html#dynamic-media)
->* [Förstå färghantering med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-color-management-technical-video-setup.html#dynamic-media)
->* [Använd bildskärpa med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-image-sharpening-feature-video-use.html#dynamic-media)
+>* [Använda videospelaren i Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-player-feature-video-use.html)
+>* [Använd interaktiv video med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-interactive-video-feature-video-use.html)
+>* [Förstå resursvisningsprogrammet med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/viewers/dynamic-media-viewer-feature-video-understand.html)
+>* [Använd anpassad videominiatyr med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-thumbnails-feature-video-use.html)
+>* [Förstå färghantering med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-color-management-technical-video-setup.html#dynamic-media)
+>* [Använd bildskärpa med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use.html)
 
