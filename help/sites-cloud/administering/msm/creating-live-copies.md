@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och synkroniserar Live-kopior för att åter
 feature: Multi Site Manager
 role: Admin
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: 17d828f7813657aaeca49bfc87447c2bc24e712d
 workflow-type: tm+mt
-source-wordcount: '4274'
+source-wordcount: '4322'
 ht-degree: 0%
 
 ---
@@ -136,6 +136,10 @@ Så här skapar du en Live-kopia:
 
 1. (Valfritt) Använd kommandot **Utrullningskonfigurationer** för att markera dem. Markerade konfigurationer visas under den nedrullningsbara väljaren.
 1. Klicka eller tryck **Skapa**. Ett bekräftelsemeddelande visas. Här kan du välja **Öppna** eller **Klar**.
+
+   >[!NOTE]
+   >
+   >Ett felmeddelande kan visas med meddelandet&quot;Det gick inte att skicka formuläret&quot;. Detta inträffar på grund av en timeout i nätverket. Processen att skapa den aktiva kopian körs emellertid i bakgrunden. Vänta några minuter och kontrollera att sidorna i live-kopian har skapats korrekt.
 
 ### Skapa en Live-kopia av en plats från en designkonfiguration {#creating-a-live-copy-of-a-site-from-a-blueprint-configuration}
 
