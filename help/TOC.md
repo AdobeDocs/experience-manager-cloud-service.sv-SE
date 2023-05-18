@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: a29ef2aa19d37a56e521524b931818a08cf0cb75
+source-git-commit: cf927f5cc1fca3720716349b1758a47c7b395218
 workflow-type: tm+mt
-source-wordcount: '4071'
+source-wordcount: '4074'
 ht-degree: 21%
 
 ---
@@ -386,6 +386,7 @@ ht-degree: 21%
    + [Översikt över mikrotjänster för material](/help/assets/asset-microservices-overview.md)
    + [Tillgänglighet i [!DNL Assets]](/help/assets/accessibility.md)
    + Hantera digitala resurser {#manage}
+      + [Mikrofrontsväljare för mediefiler](/help/assets/asset-selector.md)
       + [Dela resurser](/help/assets/share-assets.md)
       + [Övervaka aktiviteter och DAM-uppgifter](/help/assets/assets-activity-history.md)
       + [Komma igång med mikrotjänster för material](/help/assets/asset-microservices-configure-and-use.md)
