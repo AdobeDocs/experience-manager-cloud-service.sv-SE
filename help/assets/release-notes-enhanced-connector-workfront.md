@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: eb633db8fe64a62661c094b88f0ce8d9950ed6d7
+source-git-commit: 3a00faaf285be693243e3fb55159149520293610
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
@@ -15,21 +15,18 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.9 av [!DNL Workfront for Experience Manager enhanced connector] är 10 april 2023.
+Releasedatum för den senaste versionen, 1.9.10 av [!DNL Workfront for Experience Manager enhanced connector] är 18 maj 2023.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande uppdateringar:
 
-* Experience Manager visar en `DateTimeParseException` undantagsfel när det tar emot det senaste ändringsdatumet från Workfront när en länkad mapp skapas.
+* Workfront returnerar ett 409 HTTP-svar för dubblerade händelseprenumerationer baserat på ett REST-anrop från Experience Manager till Workfront, vilket leder till ett null-pekarundantag.
 
-* Problem vid skapande av flera länkade projektmappar på kort tid.
-
-* Det går inte att konfigurera en tröskelgräns för antalet nya uppsättningar av projektlänkade mappar.
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [uppgradera till den senaste 1.9.9-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar att du [uppgradera till den senaste 1.9.10-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -38,6 +35,16 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** listrutan samt **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i den nya Workfront-upplevelsen.
 
 ## Tidigare versioner {#previous-releases}
+
+### April 2023-utgåvan {#april-2023-release}
+
+[!DNL Workfront for Experience Manager enhanced connector] version 1.9.9, släppt 10 april 2023 innehåller följande uppdateringar:
+
+* Experience Manager visar en `DateTimeParseException` undantagsfel när det tar emot det senaste ändringsdatumet från Workfront när en länkad mapp skapas.
+
+* Problem vid skapande av flera länkade projektmappar på kort tid.
+
+* Det går inte att konfigurera en tröskelgräns för antalet nya uppsättningar av projektlänkade mappar.
 
 ### Mars 2023-utgåvan {#march-2023-release}
 
