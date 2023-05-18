@@ -2,10 +2,10 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 1a42cfaa1010686279bc11ca92f50afc75d89e9d
+source-git-commit: 6b2ce7a4fb355e9ce78fbd7e0efee65c09fed932
 workflow-type: tm+mt
-source-wordcount: '1374'
-ht-degree: 1%
+source-wordcount: '1381'
+ht-degree: 0%
 
 ---
 
@@ -70,7 +70,7 @@ Du kan även uppnå detta genom att skapa en arbetsflödesmodell som använder `
    ![Processsteg](/help/operations/assets/processstep.png)
 
 1. Klicka på steget Process i flödet och välj **Konfigurera** genom att trycka på skiftnyckelsikonen
-1. Klicka på **Process** och markera `Publish Content Tree` från listrutan
+1. Klicka på **Process** och markera `Publish Content Tree` i listrutan och markera sedan **Avancerad hanterare** kryssruta
 
    ![Reaktivering](/help/operations/assets/newstep.png)
 
