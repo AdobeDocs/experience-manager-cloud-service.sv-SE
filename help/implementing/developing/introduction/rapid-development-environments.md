@@ -2,7 +2,7 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
-source-git-commit: 0095cb1fff99a52f5a048833b3d5a65643c1056d
+source-git-commit: 5bfa5a1df940b8903acd08f4c3cb7443adb897d8
 workflow-type: tm+mt
 source-wordcount: '3325'
 ht-degree: 0%
@@ -118,13 +118,7 @@ När du har lagt till en RDE för ditt program med Cloud Manager kan du interage
    3. Workspace: <no workspace selected>
    ```
 
-1. Verifiera att inloggningen slutfördes genom att köra
-
-   `aio cloudmanager:list-programs`
-
-   Detta bör visa alla program i din konfigurerade organisation.
-
-   Observera att ovanstående kräver att du är medlem i Cloud Manager **Utvecklare - Cloud Service** Produktprofil. Se [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer) för mer information.
+   Observera att det här steget kräver att du är medlem i Cloud Manager **Utvecklare - Cloud Service** Produktprofil. Se [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer) för mer information.
 
    Du kan också bekräfta att du har den här utvecklarrollen om du kan logga in på utvecklarkonsolen med det här kommandot:
 
@@ -138,6 +132,13 @@ När du har lagt till en RDE för ditt program med Cloud Manager kan du interage
    ```
    >aio plugins:install @adobe/aio-cli-plugin-cloudmanager
    >```
+
+1. Verifiera att inloggningen slutfördes genom att köra
+
+   `aio cloudmanager:list-programs`
+
+   Detta bör visa alla program i din konfigurerade organisation.
+
 
 Mer information och demonstrationer finns i [konfigurera en RDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html) videosjälvstudiekurs.
 
