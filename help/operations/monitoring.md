@@ -2,9 +2,9 @@
 title: Infrastruktur- och serviceövervakning på AEM as a Cloud Service
 description: Infrastruktur- och serviceövervakning på AEM as a Cloud Service
 exl-id: 82432c11-37ec-48ac-a52b-487abdc859fa
-source-git-commit: eb4c49b8d173d1d402d22824bc98e4713ab54c31
+source-git-commit: 34fed4e64b49ab32e7025c9654d930e3fa362a52
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,10 @@ Alla dina AEM as a Cloud Service miljöer övervakas med avseende på tillgängl
 ### Anpassad övervakning {#custom-monitoring}
 
 Med anpassad övervakning har kunderna möjlighet att ange upp till fem olika URL:er för webbegenskaper före [live](/help/journey-migration/go-live.md). Dessa URL:er ska vara giltiga och returnera en HTTP 200-svarskod. Dessa skärmar ger stöd åt kunder som [egen CDN](/help/implementing/dispatcher/cdn.md#point-to-point-CDN) framför CDN i Adobe och eventuell extern trafikledning som är anställd framför AEM as a Cloud Service och som inte står under Adobe:s kontroll. Varningar från anpassade övervakningskontroller kommer att engagera Adobe stödgrupper och processer.
+
+>[!NOTE]
+>
+> Den här funktionaliteten erbjuds endast kunder med avancerad molnsupport. Om du har några frågor kontaktar du supportärendet via Admin Console.
 
 ## Intern modulövervakning {#module-monitoring}
 
