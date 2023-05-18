@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 96d11aad425ba7c78a685b3509cd96749d938229
+source-git-commit: 124b363fe341199fdc9b25d25bbf2a9bc8f87d87
 workflow-type: tm+mt
-source-wordcount: '5846'
+source-wordcount: '5827'
 ht-degree: 1%
 
 ---
@@ -424,10 +424,6 @@ Några viktiga fördelar med att aktivera DASH på ditt konto är följande:
 * Gör videomaterialet mer tillgängligt för kunderna.
 * Hämta URL:en för direktuppspelning via API:er också.
 
-   >[!IMPORTANT]
-   >
-   >Det går för närvarande bara att aktivera DASH på ditt konto i Asien-Stillahavsområdet och Nordamerika. kommer snart i Europa-Mellanöstern-Afrika.
-
 Du startar en begäran om att använda DASH; det aktiveras inte automatiskt på ditt konto.
 
 Om du vill aktivera DASH på ditt konto skapar du ett kundsupportärende enligt beskrivningen nedan. I ditt supportärende anger du att du vill aktivera DASH på ditt Dynamic Media-konto och på Experience Manager.
@@ -435,7 +431,7 @@ Om du vill aktivera DASH på ditt konto skapar du ett kundsupportärende enligt 
 **Så här aktiverar du DASH på ditt konto:**
 
 1. [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
-1. Följ instruktionerna för att skapa ett supportärende och försäkra dig om att du anger följande information:
+1. Om du vill skapa ett supportärende följer du instruktionerna och ser till att du anger följande information:
 
    * Primärt kontaktnamn, e-postadress, telefon.
    * Namn på ditt Dynamic Media-konto.
