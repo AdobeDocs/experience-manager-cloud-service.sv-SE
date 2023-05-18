@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 371a8a0af731c1d9c139d08e4c773c0654dafd4e
+source-git-commit: d202b0543020b277de982e3965475074a71b286d
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Titta på videon med versionsöversikten från februari 2023 om du vill se en sa
    * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
    * Finns i NA, att aktiveras via supportanmälan, kommer snart i APAC, EMEA
 
-* Stöd för WebP-bilder som automatiskt extraherar metadata, genererar miniatyrbilder och anpassade renderingar. Funktioner för smarta taggar och smart beskärning stöds nu även för dessa filer.
+* Stöd för WebP-bilder som automatiskt extraherar metadata, genererar miniatyrbilder och anpassade renderingar. Funktionen för smarta taggar stöds nu även för dessa filer.
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
