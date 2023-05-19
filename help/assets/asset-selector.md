@@ -3,9 +3,9 @@ title: Resursväljare för [!DNL Adobe Experience Manager] som [!DNL Cloud Servi
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 contentOwner: Adobe
 role: Admin,User
-source-git-commit: 22d2a2235c8696fce76369d3ffe369bcbaa3f6f2
+source-git-commit: af36101d8fecd7fab2300f93d40bba4c92f8eafe
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2366'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,8 @@ Resursväljaren har många fördelar, till exempel:
 * Möjlighet att växla databaser inom en IMS-organisation för val av resurser.
 
 * Möjlighet att sortera resurser efter namn, dimensioner och storlek och visa dem i List-, Grid-, Gallery- eller Waterfall-vyn.
+
+Artikelns omfattning är att visa hur du använder resursväljaren med en [!DNL Adobe] program under Unified Shell eller när du redan har en imsToken genererad för autentisering. Dessa arbetsflöden kallas icke-SUSI-flöde i den här artikeln.
 
 Utför följande uppgifter för att integrera och använda resursväljaren med [!DNL Experience Manager Assets as a Cloud Service] databas:
 
@@ -361,8 +363,8 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 |---|---|---|---|---|
 | *järnväg* | boolesk | Nej | false | Om markerad `true`, kommer resursväljaren att återges i den vänstra vyn. Om den är markerad `false`, kommer resursväljaren att återges i modal vy. |
 | *imsOrg* | string | Ja |  | IMS-ID (Adobe Identity Management System) som tilldelas vid etablering [!DNL Adobe Experience Manager] som [!DNL Cloud Service] för er organisation. The `imsOrg` Nyckeln krävs för att verifiera om den organisation som du använder är under Adobe IMS eller inte. |
-| *imsToken* | string | Nej |  | IMS-innehavartoken används för autentisering. `imsToken` är inte nödvändigt om du använder SUSI-flödet. Det är dock nödvändigt om du använder ett icke-SUSI-flöde. |
-| *apiKey* | string | Nej |  | API-nyckel som används för åtkomst till AEM. `apiKey` är inte nödvändigt om du använder SUSI-flödet. Det krävs dock i icke-SUSI-flöden. |
+| *imsToken* | string | Nej |  | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett icke-SUSI-flöde. |
+| *apiKey* | string | Nej |  | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder ett icke-SUSI-flöde. |
 | *rootPath* | string | Nej | /content/dam/ | Mappsökväg där resursväljaren visar dina resurser. `rootPath` kan också användas i form av inkapsling. Med följande sökväg, till exempel `/content/dam/marketing/subfolder/`kan du inte bläddra igenom någon överordnad mapp, utan bara visa de underordnade mapparna. |
 | *bana* | string | Nej |  | Sökväg som används för att navigera till en viss katalog med resurser när resursväljaren återges. |
 | *filterSchema* | array | Nej |  | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
