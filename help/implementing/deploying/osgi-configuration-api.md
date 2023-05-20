@@ -44,7 +44,7 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
    * `org.apache.felix.eventadmin.RequireTopic`
       * Typ: boolesk
    * `org.apache.felix.eventadmin.IgnoreTimeout`
-      * Krävs
+      * Obligatoriskt
       * Typ: array med strängar
       * Obligatoriskt intervall: Måste innehålla minst alla `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*`
    * `org.apache.felix.eventadmin.IgnoreTopic`
@@ -117,7 +117,7 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
       * Typ: heltal
       * Obligatoriskt intervall: >= 2048
    * `org.apache.sling.scripting.cache.additional_extensions`
-      * Krävs
+      * Obligatoriskt
       * Typ: array med strängar
       * Obligatoriskt intervall: måste innehålla js
 * **`com.day.cq.mailer.DefaultMailService`** (Anmälningsdatum: 2021-04-30: 7/31/2021)

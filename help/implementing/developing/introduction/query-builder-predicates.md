@@ -5,7 +5,7 @@ exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
 source-git-commit: 14aafcb6c4acc798b0f0e0c51ecb0726f8d567aa
 workflow-type: tm+mt
 source-wordcount: '2283'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -174,7 +174,7 @@ Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökinde
 
 * **`hasPermission`** - kommaavgränsade JCR-behörigheter som den aktuella användarsessionen måste ha för noden i fråga. till exempel `jcr:write`, `jcr:modifyAccessControl`
 
-### language {#language}
+### språk {#language}
 
 Det här predikatet hittar AEM sidor på ett visst språk. Det här tittar både på sidspråksegenskapen och sidsökvägen, som ofta innehåller språket eller språket i en webbplatsstruktur på den översta nivån.
 
@@ -233,7 +233,7 @@ Det stöder extrahering av ansikten på samma sätt som [`daterange`](#daterange
 * **`notexpired`** - boolesk, `true` för ännu ej utgången (datum i framtiden eller lika med), `false` för utgången (tidigare datum) (obligatoriskt)
 * **`property`** - relativ sökväg till `DATE` egenskap som ska kontrolleras (obligatoriskt)
 
-### path {#path}
+### bana {#path}
 
 Det här predikatet söker i en angiven sökväg.
 

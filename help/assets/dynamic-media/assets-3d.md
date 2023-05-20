@@ -193,7 +193,7 @@ Se även [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-med
 
    ![3d-media-component-add](/help/assets/dynamic-media/assets/3d-media-component-edita.png)
 
-1. I verktygsfältet väljer du ikonen för panelen Sida för att växla eller aktivera visningen av panelen.
+1. I verktygsfältet väljer du ikonen Side Panel (Side Panel) för att växla eller aktivera visningen av panelen.
 
 1. I sidopanelen väljer du plustecknet för att öppna **[!UICONTROL Components]** lista.
 

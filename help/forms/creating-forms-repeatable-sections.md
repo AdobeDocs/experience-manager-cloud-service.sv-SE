@@ -10,7 +10,7 @@ discoiquuid: 01724ca0-6901-45e7-b045-f44814ed574e
 source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
 workflow-type: tm+mt
 source-wordcount: '1112'
-ht-degree: 16%
+ht-degree: 0%
 
 ---
 
@@ -108,14 +108,14 @@ På en panel finns olika layoutalternativ. Alternativet Layout för dragspelsdes
 
 Upprepningsbart delformulär liknar de repeterbara panelerna i Adaptiv Forms. I [!DNL AEM Forms] Designer gör följande för att skapa ett upprepande delformulär:
 
-1. Välj överordnat delformulär till det delformulär du vill repetera på paletten Hierarki.
-1. Välj Flödat i listan Innehåll på fliken Delformulär på paletten Objekt.
-1. Välj det delformulär som skall repeteras.
-1. Välj antingen Placerat eller Flödat i listan Innehåll på fliken Delformulär på paletten Objekt.
-1. Klicka på bindningsfliken och välj att upprepa delformulär för varje dataobjekt.
-1. Om du vill ange ett minsta antal upprepningar väljer du Minsta antal och skriver ett tal i tillhörande ruta. Om detta alternativ är 0, och inga data har angetts för objekten i delformuläret vid sammanslagningen, placeras delformuläret inte ut när formuläret återges.
-1. Om du vill ange ett maximalt antal upprepningar väljer du Max antal och skriver ett tal i tillhörande ruta. Om du inte anger något värde i rutan Max är antalet delformulärrepetitioner obegränsat.
-1. Om du vill ange ett visst antal upprepningar av delformuläret, oavsett datamängd, markerar du alternativet Startvärde och anger ett tal i rutan. Om detta alternativ valts och inga data eller färre data än det specificerade startvärdet finns, placeras ändå de tomma instanserna av delformuläret i formuläret.
+1. Markera det överordnade delformuläret för det delformulär som du vill upprepa på paletten Hierarki.
+1. Klicka på fliken Delformulär på paletten Objekt och välj Flödat i listan Innehåll.
+1. Markera delformuläret som ska upprepas.
+1. Klicka på fliken Delformulär på paletten Objekt och välj antingen Placerat eller Flödat i listan Innehåll.
+1. Klicka på fliken Bindning och välj Upprepa delformulär för varje dataobjekt.
+1. Om du vill ange det minsta antalet upprepningar väljer du Minsta antal och skriver ett tal i den associerade rutan. Om det här alternativet är inställt på 0 och inga data anges för objekten i delformuläret vid datasammanfogning, placeras inte delformuläret när formuläret återges.
+1. Om du vill ange maximalt antal upprepningar av delformulär väljer du Max och skriver ett tal i den tillhörande rutan. Om du inte anger något värde i rutan Max är antalet delformulärrepetitioner obegränsat.
+1. Om du vill ange ett visst antal upprepningar av delformulär, oavsett datamängd, väljer du Antal initialer och skriver ett tal i den tillhörande rutan. Om du väljer det här alternativet och antingen inga data är tillgängliga eller det finns färre data än det angivna värdet för antal initialer, placeras tomma instanser av delformuläret fortfarande i formuläret.
 1. Lägg till två knappar i det överordnade delformuläret - en för att lägga till en instans och en för att ta bort en instans av det repeterbara delformuläret. Detaljerade anvisningar finns i [Bygg en åtgärd](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2).
 1. Länka formulärmallen till det anpassade formuläret. Detaljerade anvisningar finns i [Skapa ett anpassat formulär baserat på en mall](creating-adaptive-form.md#create-an-adaptive-form-based-on-a-template).
 1. Använd knapparna i steg 9 för att lägga till och ta bort delformulär.

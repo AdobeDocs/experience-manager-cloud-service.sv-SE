@@ -112,11 +112,11 @@ I det första fallet kan javadocs visa vad `adaptTo-targets` är möjliga. Detta
    <td>Returnerar det binära innehållet i en filresurs (om detta är en JCR-nodbaserad resurs och nodtypen är <code>nt:file</code> eller <code>nt:resource</code>; om detta är en paketresurs, filinnehåll om det är en filsystemresurs) eller data för en binär JCR-egenskapsresurs.</td>
   </tr>
   <tr>
-   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/net/URL.html">Webbadress</a></td>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/net/URL.html">URL</a></td>
    <td>Returnerar en URL till resursen (databas-URL för den här noden om detta är en JCR-nodbaserad resurs; jar bundle URL om detta är en paketresurs, fil-URL om detta är en filsystemresurs).</td>
   </tr>
   <tr>
-   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html">Arkiv</a></td>
+   <td><a href="https://java.sun.com/j2se/1.5.0/docs/api/java/io/File.html">Fil</a></td>
    <td>Om detta är en filsystemresurs.</td>
   </tr>
   <tr>
@@ -136,7 +136,7 @@ I det första fallet kan javadocs visa vad `adaptTo-targets` är möjliga. Detta
    <td>Om detta är en JCR-nodbaserad resurs.</td>
   </tr>
   <tr>
-   <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html">Sidan</a></td>
+   <td><a href="https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html">Sida</a></td>
    <td>Om detta är en JCR-nodbaserad resurs och noden är en <code>cq:Page</code> (eller <code>cq:PseudoPage</code>).</td>
   </tr>
   <tr>
@@ -355,6 +355,6 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 | [Nod](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Taggens nod. |
 | ... | Allt som taggens resurs kan anpassas till. |
 
-#### Annan {#other}
+#### Övriga {#other}
 
 Dessutom ger Sling/JCR/OCM [`AdapterFactory`](https://sling.apache.org/site/adapters.html#Adapters-AdapterFactory) för anpassad OCM ([Mappning av objektinnehåll](https://jackrabbit.apache.org/object-content-mapping.html)).

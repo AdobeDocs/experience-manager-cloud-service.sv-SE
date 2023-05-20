@@ -346,7 +346,7 @@ Med funktionen för omvalidering på serversidan kan du även köra de validerin
 
 Alla valideringar av ett adaptivt formulär som körs på servern i fältet OOTB (OOTB) är:
 
-* Krävs
+* Obligatoriskt
 * Valideringsbildsats
 * Valideringsuttryck
 

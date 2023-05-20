@@ -4,7 +4,7 @@ description: Roller och ansvarsområden
 source-git-commit: 09d5d125840abb6d6cc5443816f3b2fe6602459f
 workflow-type: tm+mt
 source-wordcount: '500'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 

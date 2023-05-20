@@ -279,7 +279,7 @@ AEM Screens-komponenter återges annorlunda i redigeringsläget jämfört med i 
 
 1. Lägg till följande egenskaper i det delade klientbiblioteket:
 
-   * `allowProxy` | Boolesk | `true`
+   * `allowProxy` | Boolean | `true`
 
    * `categories`| Sträng[] | `cq.screens.components`
 

@@ -8,7 +8,7 @@ exl-id: da2e1a10-f54b-440e-b70c-f04ad4caeac1
 source-git-commit: 2009e549eadd97d4d2bfcccd728ece17ecfeede5
 workflow-type: tm+mt
 source-wordcount: '4266'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -143,7 +143,7 @@ Administratörer kan lägga till och anpassa följande typer av multimedia när 
     </ul> </td>
   </tr>
   <tr>
-   <td><strong>Zoomning</strong></td>
+   <td><strong>Zooma</strong></td>
    <td>Låter användarna zooma in i området genom att markera det. Användare kan välja kontroller för att zooma in, zooma ut och återställa bilden till standardstorleken.</td>
   </tr>
  </tbody>
@@ -291,12 +291,12 @@ Se&quot;Viewer release notes&quot; i innehållsförteckningen i [Referenshandbok
   </tr>
   <tr>
    <td>Zoom_dark<br /> </td>
-   <td>Zoomning<br /> </td>
+   <td>Zooma<br /> </td>
    <td><code>html5_basiczoomviewer_dark.css</code></td>
   </tr>
   <tr>
    <td>Zoom_light<br /> </td>
-   <td>Zoomning</td>
+   <td>Zooma</td>
    <td><code>html5_basiczoomviewer_light.css</code></td>
   </tr>
   <tr>
@@ -321,7 +321,7 @@ Följande tabell visar vilka mobilvisningsgester som stöds på enheter med iOS,
   <tr>
    <td><strong>Gesture</strong></td>
    <td><strong>Utfällbar zoom</strong></td>
-   <td><strong>Zoomning</strong></td>
+   <td><strong>Zooma</strong></td>
    <td><strong>Snurra</strong></td>
   </tr>
   <tr>

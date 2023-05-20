@@ -278,7 +278,7 @@ Följande tabell visar vilka behörigheter som krävs för mallredigering.
   </tr>
   <tr>
    <td>Anonym webbanvändare</td>
-   <td>inga</td>
+   <td>ingen</td>
    <td>En anonym webbanvändare får inte komma åt malltyperna</td>
   </tr>
  </tbody>

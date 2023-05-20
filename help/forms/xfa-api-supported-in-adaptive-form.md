@@ -11,7 +11,7 @@ docset: aem65
 source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
 workflow-type: tm+mt
 source-wordcount: '683'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ I den här artikeln listas XFA-händelser, egenskaper och valideringar som stöd
 
 ## XFA-element som stöds och deras mappning i Adaptive Forms {#supported-xfa-elements-and-their-mapping-in-adaptive-forms-br}
 
-### fält {#fields}
+### Fält {#fields}
 
 När ett adaptivt formulär skapas med en XDP-fil kan du dra och släppa ett XFA-fält på det adaptiva formuläret. I följande tabell visas hur XFA-fält mappas till fält med adaptiva formulär.
 
@@ -55,7 +55,7 @@ När ett adaptivt formulär skapas med en XDP-fil kan du dra och släppa ett XFA
    <td><p>Nedrullningsbar lista</p> </td>
   </tr>
   <tr>
-   <td><p>Datum-/tidfält </p> </td>
+   <td><p>Datum-/tidsfält </p> </td>
    <td><p>Datumväljaren</p> </td>
   </tr>
   <tr>
@@ -116,11 +116,11 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till egenskapen Bind reference (bindRef) i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>presence </p> </td>
+   <td><p>närvaro </p> </td>
    <td><p>Mappas till egenskapen visible i adaptiv form. Du kan åsidosätta den med synlighetsuttrycket.</p> </td>
   </tr>
   <tr>
-   <td><p>access </p> </td>
+   <td><p>åtkomst </p> </td>
    <td><p>Mappas till egenskapen enabled i Adaptiv form. Du kan åsidosätta den med Access-uttrycket.</p> </td>
   </tr>
   <tr>
@@ -193,11 +193,11 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filen fungerar 
    <td><p>Det här skriptet körs under körning och kan inte åsidosättas i Adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>calculate</p> </td>
+   <td><p>beräkna</p> </td>
    <td><p>Mappad till beräkningsuttrycket i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>validate </p> </td>
+   <td><p>validera </p> </td>
    <td><p>Mappas till valideringsuttrycket i adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -205,7 +205,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filen fungerar 
    <td><p>Det här skriptet körs under körning och kan inte åsidosättas i Adaptiv form.<br /> </p> </td>
   </tr>
   <tr>
-   <td><p>exit </p> </td>
+   <td><p>avsluta </p> </td>
    <td><p>Det här skriptet körs under körning och kan inte åsidosättas i Adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -247,7 +247,7 @@ Följande tabell visar hur XFA-valideringar mappas till valideringar i Adaptive 
   </tr>
   <tr>
    <td><p>Obligatoriskt (nullTest)</p> </td>
-   <td><p>mandatory </p> </td>
+   <td><p>obligatoriskt </p> </td>
   </tr>
   <tr>
    <td><p>Tomt meddelande (nullTestMessage) </p> </td>

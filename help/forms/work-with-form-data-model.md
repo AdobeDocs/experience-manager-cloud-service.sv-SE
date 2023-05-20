@@ -446,7 +446,7 @@ I följande tabell visas begränsningarna för indata baserat på datakällan:
    <td>Indatakälla</td> 
   </tr> 
   <tr> 
-   <td>required</td> 
+   <td>obligatoriskt</td> 
    <td>Om true måste parametern inkluderas i indata.</td> 
    <td>Swagger, WSDL och databas</td> 
   </tr> 
@@ -486,7 +486,7 @@ I följande tabell visas begränsningarna för indata baserat på datakällan:
    <td>Swagger, WSDL, Odata och databas</td> 
   </tr> 
   <tr> 
-   <td>pattern</td> 
+   <td>mönster</td> 
    <td>Anger en fast teckensekvens. Indatasträngen valideras bara om tecknen överensstämmer med det angivna mönstret.</td> 
    <td>Swagger</td> 
   </tr> 

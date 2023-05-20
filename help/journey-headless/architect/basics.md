@@ -5,7 +5,7 @@ exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
 source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
 workflow-type: tm+mt
 source-wordcount: '905'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -80,7 +80,7 @@ AEM innehåller följande datatyper som du kan använda för att modellera ditt 
 * Enkelradig text
 * Flerradstext
 * Siffra
-* Boolesk
+* Boolean
 * Datum och tid
 * Uppräkning
 * Taggar

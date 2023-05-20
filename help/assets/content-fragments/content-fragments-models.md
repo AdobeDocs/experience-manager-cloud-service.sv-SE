@@ -5,7 +5,7 @@ exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 source-git-commit: f1a97c4bbb07accb33aa449a07ced0c0ac255b9e
 workflow-type: tm+mt
 source-wordcount: '2887'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -85,11 +85,11 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    Markera det obligatoriska fältet och klicka/tryck sedan på papperskorgsikonen. Du ombeds bekräfta åtgärden.
 
-   ![remove](assets/cfm-models-06.png)
+   ![ta bort](assets/cfm-models-06.png)
 
 1. Lägg till alla obligatoriska fält och definiera de relaterade egenskaperna efter behov. Till exempel:
 
-   ![save](assets/cfm-models-07.png)
+   ![spara](assets/cfm-models-07.png)
 
 1. Välj **Spara** för att behålla definitionen.
 
@@ -103,7 +103,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Ett textområde som kan vara RTF, Oformaterad text eller Markering
 * **Siffra**
    * Lägg till ett eller flera numeriska fält
-* **Boolesk**
+* **Boolean**
    * Lägg till en boolesk kryssruta
 * **Datum och tid**
    * Lägg till ett datum och/eller en tid
@@ -157,7 +157,7 @@ Grundläggande validering är tillgängligt via funktioner som **Obligatoriskt**
 
 * För datatypen **Flerradig text** går det att definiera **standardtypen** som endera:
 
-   * **RTF-text**
+   * **RTF**
    * **Markdown**
    * **Oformaterad text**
 

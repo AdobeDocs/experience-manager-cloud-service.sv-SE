@@ -5,7 +5,7 @@ exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
 source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
 workflow-type: tm+mt
 source-wordcount: '4596'
-ht-degree: 11%
+ht-degree: 10%
 
 ---
 
@@ -276,7 +276,7 @@ Med hjälp av [layouten](#editing-a-template-layout-template-author) kan du för
 
 [Sidprofiler](#page-policies) kan koppla fördefinierade sidprofiler till sidan. Dessa sidprofiler definierar de olika designkonfigurationerna.
 
-#### Format {#template-styles}
+#### Stilar {#template-styles}
 
 The [Formatsystem](/help/sites-cloud/authoring/features/style-system.md) gör att en mallskapare kan definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 

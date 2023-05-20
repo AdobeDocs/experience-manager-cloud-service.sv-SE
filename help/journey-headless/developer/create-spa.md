@@ -49,7 +49,7 @@ Det finns ett antal krav innan du börjar arbeta med SPA i AEM.
 * Grundläggande AEM att skapa innehållsfragment och använda redigeraren
 * Var noga med att granska dokumentet [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md) för att förstå de olika graden av SPA.
 
-### Verktyg {#tools}
+### verktyg {#tools}
 
 * Sandlådeåtkomst för testning av driftsättning av ditt projekt
 * Lokal utvecklingsinstans för datamodellering och -testning

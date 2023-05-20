@@ -196,7 +196,7 @@ Du kan aktivera autentisering för formulär som du vill att valda användare sk
 Så här aktiverar du autentisering för dina formulär:
 
 1. Öppna configMgr i publiceringsinstansen i webbläsaren.\
-   Webbadress: `https://<hostname>:<PublishPort>/system/console/configMgr`
+   URL: `https://<hostname>:<PublishPort>/system/console/configMgr`
 
 1. Klicka på Adobe Experience Manager Web Console **Autentiseringstjänst för Apache Sling** för att konfigurera den.
 1. I dialogrutan Apache Sling Authentication Service som visas använder du **+** för att lägga till banor.\

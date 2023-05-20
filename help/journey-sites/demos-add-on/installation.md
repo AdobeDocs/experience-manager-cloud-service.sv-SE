@@ -43,7 +43,7 @@ Det finns minimala krav att lära sig om och börja använda tillägget Referens
 
 * Grundläggande kunskaper i Cloud Manager
 
-### Verktyg {#tools}
+### verktyg {#tools}
 
 * Bli medlem i **Företagsägare** roll i Cloud Manager för din organisation
 

@@ -8,7 +8,7 @@ exl-id: a53f40ab-0e27-45f8-9142-781c077a04cc
 source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
 workflow-type: tm+mt
 source-wordcount: '3499'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
@@ -69,7 +69,7 @@ Delresurserna skapas av `Create Sub Asset process` -komponenten inom det övergr
 
 Du kan visa delresurserna eller sidorna när du öppnar resursen, välja Innehåll-menyn och välja **[!UICONTROL Subassets]** eller **[!UICONTROL Pages]**. Deltillgångarna är verkliga tillgångar. PDF sidor extraheras med andra ord av `Create Sub Asset` arbetsflödeskomponent. De lagras sedan som `page1.pdf`, `page2.pdf`och så vidare, under huvudtillgången. När de är lagrade `DAM Update Asset` arbetsflödet behandlar dem.
 
-Om du vill använda Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-, EPS- eller PDF-filer måste du utföra följande åtgärder:
+Om du vill använda Dynamic Media för att förhandsgranska och generera dynamiska renderingar för AI-, EPS- eller PDF-filer måste du utföra följande steg:
 
 1. I `DAM Update Asset` arbetsflöde, `Rasterize PDF/AI Image Preview Rendition` processkomponenten rastrerar den första sidan i den ursprungliga resursen - med den konfigurerade upplösningen - till en `cqdam.preview.png` återgivning.
 
@@ -99,8 +99,8 @@ Argument för att rastrera arbetsflödet för PDF eller AI
 | Processargument | Standardinställning | Beskrivning |
 |---|---|---|
 | Mime-typer | application/pdf<br>application/postscript<br>program/illustrator | Lista över dokumentMIME-typer som anses vara PDF- eller Illustrator-dokument. |
-| Maxbredd | 2048 | Maximal bredd i pixlar för den genererade förhandsvisningsåtergivningen. |
-| Maxhöjd | 2048 | Maximal höjd för den genererade förhandsvisningsåtergivningen, i pixlar. |
+| Maximal bredd | 2048 | Maximal bredd i pixlar för den genererade förhandsvisningsåtergivningen. |
+| Maximal höjd | 2048 | Maximal höjd för den genererade förhandsvisningsåtergivningen, i pixlar. |
 | Upplösning | 72 | Upplösning för att rastrera den första sidan, i ppi (pixlar per tum). |
 
 Med standardprocessargumenten rastreras den första sidan i ett PDF/AI-dokument med 72 ppi och den genererade förhandsvisningsbilden med storleken 2 048 x 2 048 pixlar. För en vanlig driftsättning kan du öka upplösningen till minst 150 ppi. Ett dokument med US-teckenstorlek på 300 ppi kräver t.ex. en maximal bredd och höjd på 2 550 x 3 300 pixlar.

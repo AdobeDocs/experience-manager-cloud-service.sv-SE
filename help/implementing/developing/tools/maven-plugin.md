@@ -5,7 +5,7 @@ exl-id: d631d6df-7507-4752-862b-9094af9759a0
 source-git-commit: ba4e2427873fc9f5d91ee4f520df01018000a4c7
 workflow-type: tm+mt
 source-wordcount: '1851'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -87,7 +87,7 @@ Mål där proxies används för AEM använder den första giltiga proxykonfigura
 
 Parametrarna i följande tabell är gemensamma för alla mål utom när de anges i **Mål** kolumn.
 
-| Namn | Typ | Krävs | Standardvärde | Beskrivning | Mål |
+| Namn | Typ | Obligatoriskt | Standardvärde | Beskrivning | Mål |
 |---|---|---|---|---|---|
 | `failOnError` | `boolean` | Nej | `false` | Värdet för `true` gör att bygget misslyckas när ett fel inträffar. Värdet för `false` gör att bygget ignorerar felet. | Alla mål utom `package` |
 | `name` | `String` | `build`: Ja, `install`: Nej, `rm`: Ja | `build`: Ingen standard, `install`: Värdet för `artifactId` Maven-projektets egendom | Namnet på paketet som ska användas | Alla mål utom `ls` |
@@ -119,11 +119,11 @@ Installerar ett paket i databasen. För att detta mål ska kunna uppnås krävs 
 
 Förutom följande parametrar finns beskrivningarna i [Gemensamma parametrar](#common-parameters) -avsnitt.
 
-| Namn | Typ | Krävs | Standardvärde | Beskrivning |
+| Namn | Typ | Obligatoriskt | Standardvärde | Beskrivning |
 |---|---|---|---|---|
 | `artifact` | `String` | Nej | Värdet för `artifactId` Maven-projektets egendom | En sträng i formuläret `groupId:artifactId:version[:packaging]` |
-| `artifactId` | `String` | Nej | Inget | ID för den artefakt som ska installeras |
-| `groupId` | `String` | Nej | Inget | The `groupId` av den artefakt som ska installeras |
+| `artifactId` | `String` | Nej | Ingen | ID för den artefakt som ska installeras |
+| `groupId` | `String` | Nej | Ingen | The `groupId` av den artefakt som ska installeras |
 | `install` | `boolean` | Nej | `true` | Avgör om paketet ska packas upp automatiskt när det överförs |
 | `localRepository` | `org.apache.maven.artifact.repository.ArtifactRepository` | Nej | Värdet för `localRepository` systemvariabel | Den lokala Maven-databasen som inte kan konfigureras med plugin-konfigurationen eftersom systemegenskapen alltid används |
 | `packageFile` | `java.io.File` | Nej | Den primära artefakten som definieras för projektet Maven | Namnet på den paketfil som ska installeras |
@@ -131,8 +131,8 @@ Förutom följande parametrar finns beskrivningarna i [Gemensamma parametrar](#c
 | `pomRemoteRepositories` | `java.util.List` | Ja | Värdet för `remoteArtifactRepositories` egenskap som är definierad för projektet Maven | Det här värdet kan inte konfigureras med plugin-konfigurationen och måste anges i projektet. |
 | `project` | `org.apache.maven.project.MavenProject` | Ja | Projektet som plugin-programmet är konfigurerat för | Maven-projektet som är implicit eftersom projektet innehåller plugin-konfigurationen |
 | `repositoryId` (POM), `repoID` (kommandorad) | `String` | Nej | `temp` | ID för databasen som artefakten hämtas från |
-| `repositoryUrl` (POM), `repoURL` (kommandorad) | `String` | Nej | Inget | URL:en för databasen som artefakten hämtas från |
-| version | Sträng | Nej | Inget | Den version av artefakten som ska installeras |
+| `repositoryUrl` (POM), `repoURL` (kommandorad) | `String` | Nej | Ingen | URL:en för databasen som artefakten hämtas från |
+| version | Sträng | Nej | Ingen | Den version av artefakten som ska installeras |
 
 ### ls {#ls}
 
@@ -166,24 +166,24 @@ Skapar ett innehållspaket. Standardkonfigurationen för paketmålet omfattar in
 
 Förutom följande parametrar finns mer information i beskrivningen av `name` -parametern i [Gemensamma parametrar](#common-parameters) -avsnitt.
 
-| Namn | Typ | Krävs | Standardvärde | Beskrivning |
+| Namn | Typ | Obligatoriskt | Standardvärde | Beskrivning |
 |---|---|---|---|---|
-| `archive` | `org.apache.maven.archiver.MavenArchiveConfiguration` | Nej | Inget | Den arkivkonfiguration som ska användas |
+| `archive` | `org.apache.maven.archiver.MavenArchiveConfiguration` | Nej | Ingen | Den arkivkonfiguration som ska användas |
 | `builtContentDirectory` | `java.io.File` | Ja | Värdet på utdatakatalogen för Maven-bygget | Katalogen som innehåller innehållet som ska inkluderas i paketet |
-| `dependencies` | `java.util.List` | Nej | Inget |  |
-| `embeddedTarget` | `java.lang.String` | Nej | Inget |  |
-| `embeddeds` | `java.util.List` | Nej | Inget |  |
+| `dependencies` | `java.util.List` | Nej | Ingen |  |
+| `embeddedTarget` | `java.lang.String` | Nej | Ingen |  |
+| `embeddeds` | `java.util.List` | Nej | Ingen |  |
 | `failOnMissingEmbed` | `boolean` | Ja | `false` | Värdet för `true` gör att bygget misslyckas när en inbäddad artefakt inte hittas i projektberoendena. Värdet för `false` gör att sådana fel ignoreras. |
-| `filterSource` | `java.io.File` | Nej | Inget | Den här parametern definierar en fil som anger källan för arbetsytefiltret. Filtren som anges i konfigurationen och injiceras via inbäddade eller underpaket sammanfogas med filinnehållet. |
-| `filters` | `com.day.jcr.vault.maven.pack.impl.DefaultWorkspaceFilter` | Nej | Inget | Den här parametern innehåller filterelement som definierar paketinnehållet. När de körs inkluderas filtren i `filter.xml` -fil. Se [Använda filter](#using-filters) nedan. |
+| `filterSource` | `java.io.File` | Nej | Ingen | Den här parametern definierar en fil som anger källan för arbetsytefiltret. Filtren som anges i konfigurationen och injiceras via inbäddade eller underpaket sammanfogas med filinnehållet. |
+| `filters` | `com.day.jcr.vault.maven.pack.impl.DefaultWorkspaceFilter` | Nej | Ingen | Den här parametern innehåller filterelement som definierar paketinnehållet. När de körs inkluderas filtren i `filter.xml` -fil. Se [Använda filter](#using-filters) nedan. |
 | `finalName` | `java.lang.String` | Ja | The `finalName` definieras i Maven-projektet (byggfasen) | Namnet på den genererade paketets ZIP-fil, utan `.zip` filtillägg |
 | `group` | `java.lang.String` | Ja | The `groupID` definieras i projektet Maven | The `groupId` av det genererade innehållspaketet som är en del av målinstallationssökvägen för innehållspaketet |
 | `outputDirectory` | `java.io.File` | Ja | Byggkatalogen som definieras i projektet Maven | Den lokala katalog där innehållspaketet sparas |
-| `prefix` | `java.lang.String` | Nej | Inget |  |
-| `project` | `org.apache.maven.project.MavenProject` | Ja | Inget | The Maven project |
-| `properties` | `java.util.Map` | Nej | Inget | Dessa parametrar definierar ytterligare egenskaper som du kan ange i `properties.xml` -fil. Dessa egenskaper kan inte skriva över följande fördefinierade egenskaper: `group` (använd `group` parameter att ställa in), `name` (använd `name` parameter att ställa in), `version` (använd `version` parameter att ställa in), `description` (anges från projektbeskrivningen), `groupId` (`groupId` av projektbeskrivningen för Maven), `artifactId` (`artifactId` av projektbeskrivningen för Maven), `dependencies` (använd `dependencies` parameter att ställa in), `createdBy` (värdet på `user.name` system property), `created` (aktuell systemtid), `requiresRoot` (använd `requiresRoot` parameter att ställa in), `packagePath` (genereras automatiskt från grupp- och paketnamnet) |
+| `prefix` | `java.lang.String` | Nej | Ingen |  |
+| `project` | `org.apache.maven.project.MavenProject` | Ja | Ingen | The Maven project |
+| `properties` | `java.util.Map` | Nej | Ingen | Dessa parametrar definierar ytterligare egenskaper som du kan ange i `properties.xml` -fil. Dessa egenskaper kan inte skriva över följande fördefinierade egenskaper: `group` (använd `group` parameter att ställa in), `name` (använd `name` parameter att ställa in), `version` (använd `version` parameter att ställa in), `description` (anges från projektbeskrivningen), `groupId` (`groupId` av projektbeskrivningen för Maven), `artifactId` (`artifactId` av projektbeskrivningen för Maven), `dependencies` (använd `dependencies` parameter att ställa in), `createdBy` (värdet på `user.name` system property), `created` (aktuell systemtid), `requiresRoot` (använd `requiresRoot` parameter att ställa in), `packagePath` (genereras automatiskt från grupp- och paketnamnet) |
 | `requiresRoot` | `boolean` | Ja | false | Definierar om paketet kräver en rot. Det här kommer att bli `requiresRoot` egenskapen för `properties.xml` -fil. |
-| `subPackages` | `java.util.List` | Nej | Inget |  |
+| `subPackages` | `java.util.List` | Nej | Ingen |  |
 | `version` | `java.lang.String` | Ja | Versionen som definierats i Maven-projektet | Innehållspaketets version |
 | `workDirectory` | `java.io.File` | Ja | Den katalog som definieras i Maven-projektet (byggfasen) | Katalogen som innehåller innehållet som ska inkluderas i paketet |
 
@@ -221,10 +221,10 @@ När filtret inte innehåller `mode` element, standardvärdet för `replace` anv
 
 #### Parametrar {#parameters-6}
 
-| Namn | Typ | Krävs | Standardvärde | Beskrivning |
+| Namn | Typ | Obligatoriskt | Standardvärde | Beskrivning |
 |---|---|---|---|---|
 | `detail` | `boolean` | Nej | `false` | Avgör om alla inställningsbara egenskaper ska visas för varje mål |
-| `goal` | `String` | Nej | Inget | Parametrarna definierar namnet på målet som hjälpen ska visas för. Om inget värde anges visas hjälpen för alla mål. |
+| `goal` | `String` | Nej | Ingen | Parametrarna definierar namnet på målet som hjälpen ska visas för. Om inget värde anges visas hjälpen för alla mål. |
 | `indentSize` | `int` | Nej | `2` | Antalet blanksteg som ska användas för indrag för varje nivå (måste vara positivt om det är definierat) |
 | `lineLength` | `int` | Nej | `80` | Den maximala längden för en visningsrad (måste vara positiv om den har definierats) |
 

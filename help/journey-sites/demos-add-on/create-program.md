@@ -82,7 +82,7 @@ När du har loggat in på Cloud Manager kan du skapa ett nytt sandlådeprogram f
 
 1. Tillägget är nu aktiverat som ett alternativ, men innehållet måste distribueras för att AEM ska vara tillgängligt. Gå tillbaka till programöversikten, tryck eller klicka **Starta** för att starta pipeline för att distribuera tilläggsinnehållet till AEM.
 
-   ![Start](assets/deploy.png)
+   ![Starta](assets/deploy.png)
 
 1. Pipelinen börjar och du dirigeras till en sida med information om distributionsförloppet. Du kan navigera bort från den här skärmen när programmet skapas och returnera det senare om det behövs.
 

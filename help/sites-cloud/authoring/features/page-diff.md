@@ -5,7 +5,7 @@ exl-id: 6e5c7f14-c980-48e3-8bdd-a7ec10a9e680
 source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
 workflow-type: tm+mt
 source-wordcount: '622'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 >
 >Se [Developing and Page Diff](/help/implementing/developing/introduction/page-diff.md#operation-details) om du vill ha mer teknisk information om den här funktionen.
 
-## Användning {#use}
+## Använd {#use}
 
 Diff:en sida vid sida kan jämföra:
 

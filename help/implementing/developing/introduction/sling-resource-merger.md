@@ -183,7 +183,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
    1. Skapa en egenskap `sling:hideResource`
 
       * typ: `Boolean`
-      * value: `true`
+      * värde: `true`
 
 * **Dölj underordnade noder för en nod (samtidigt som nodens egenskaper behålls)**
 
@@ -210,7 +210,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
          Detta anger noden (som i `/libs`) som den aktuella noden ska placeras före:
 
          * typ: `String`
-         * value: `<before-SiblingName>`
+         * värde: `<before-SiblingName>`
 
 ### Anropa Sling Resource Merger från koden {#invoking-the-sling-resource-merger-from-your-code}
 
@@ -226,7 +226,7 @@ Sling Resource Merger innehåller två anpassade resursprovidrar - en för över
 
    * syfte: sammanfoga resurser baserat på sökvägar
    * monteringspunkt: `/mnt/overlay`
-   * usage: `mount point + relative path`
+   * användning: `mount point + relative path`
    * exempel:
 
       * `getResource('/mnt/overlay' + '<relative-path-to-resource>');`
@@ -235,7 +235,7 @@ Sling Resource Merger innehåller två anpassade resursprovidrar - en för över
 
    * syfte: sammanfoga resurser baserat på deras supertyp
    * monteringspunkt: `/mnt/overide`
-   * usage: `mount point + absolute path`
+   * användning: `mount point + absolute path`
    * exempel:
 
       * `getResource('/mnt/override' + '<absolute-path-to-resource>');`

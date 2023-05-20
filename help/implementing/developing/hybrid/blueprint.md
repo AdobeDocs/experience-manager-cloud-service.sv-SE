@@ -140,7 +140,7 @@ En behållare är en komponent som ska innehålla och återge underordnade kompo
 
 Behållaren hämtar de underordnade komponenterna dynamiskt från arkivet i [`ComponentMapping`](#componentmapping) bibliotek. Behållaren utökar sedan den underordnade komponenten med modellproviderfunktionerna och instansierar den till slut.
 
-### Sidan {#page}
+### Sida {#page}
 
 The `Page` -komponenten utökar `Container` -komponenten. En behållare är en komponent som är avsedd att innehålla och återge underordnade komponenter, inklusive underordnade sidor. För att göra det upprepas behållaren över `:itemsOrder`, `:items`och `:children` modellens egenskaper. The `Page` hämtar dynamiskt de underordnade komponenterna från arkivet för [`ComponentMapping`](#componentmapping) bibliotek. The `Page` är ansvarig för att instansiera underordnade komponenter.
 

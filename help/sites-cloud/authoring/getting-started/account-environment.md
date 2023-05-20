@@ -38,7 +38,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 ![Mina inställningar](/help/sites-cloud/authoring/assets/user-preferences.png)
 
-* **Språk:**
+* **Språk**
 
    Detta definierar vilket språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
 

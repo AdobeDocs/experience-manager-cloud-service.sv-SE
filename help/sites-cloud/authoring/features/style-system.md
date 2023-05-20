@@ -54,7 +54,7 @@ Följande diagram visar arkitekturen i Style System.
 
 ![aem-style-system](/help/sites-cloud/authoring/assets/style-system-architecture.png)
 
-## Användning {#use}
+## Använd {#use}
 
 För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)implementering av kärnkomponentens [titelkomponent](https://www.adobe.com/go/aem_cmp_title_v2) som ett exempel.
 

@@ -10,7 +10,7 @@ exl-id: a5a2df68-be13-45a6-ad80-09fbd2fea8f2
 source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
 workflow-type: tm+mt
 source-wordcount: '2544'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -240,11 +240,11 @@ Du kan också använda de här kryssrutorna med **[!UICONTROL Publish]** sökpre
    | Inställningen Publicera resurser i Dynamic Media Configuration | Markerad åtgärd | Publicera mål |
    | --- | --- | --- |
    | Omedelbart eller <br>Vid aktivering | Publicera | Experience Manager och Dynamic Media |
-   | Omedelbart eller <br>Vid aktivering | Publicera till Dynamic Media | Inget |
+   | Omedelbart eller <br>Vid aktivering | Publicera till Dynamic Media | Ingen |
    | Selektiv publicering | Publicera | Experience Manager |
    | Selektiv publicering | Publicera till Dynamic Media | Dynamic Media |
    | Omedelbart eller <br>Vid aktivering | Avpublicera | Experience Manager och Dynamic Media |
-   | Omedelbart eller <br>Vid aktivering | Avpublicera från Dynamic Media | Inget |
+   | Omedelbart eller <br>Vid aktivering | Avpublicera från Dynamic Media | Ingen |
    | Selektiv publicering | Avpublicera | Experience Manager |
    | Selektiv publicering | Avpublicera från Dynamic Media | Dynamic Media |
 

@@ -13,7 +13,7 @@ exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0
 source-git-commit: 9c25d9991b41a5a714df3f07e84946162e5495c0
 workflow-type: tm+mt
 source-wordcount: '2211'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -163,11 +163,11 @@ Specifika produktsidor väljs antingen av produktens sku eller kategori. Den sen
 
 | URL-format | av sku | per kategori |
 | ----------------------------------------------------- | ------ | ---------------- |
-| `{{page}}.html/{{url_key}}.html` | nej | nej |
-| `{{page}}.html/{{category}}/{{url_key}}.html` | nej | endast exakt matchning |
-| `{{page}}.html/{{url_path}}.html` | nej | ja |
-| `{{page}}.html/{{sku}}.html` | ja | nej |
-| `{{page}}.html/{{sku}}/{{url_key}}.html` | ja | nej |
+| `{{page}}.html/{{url_key}}.html` | no | no |
+| `{{page}}.html/{{category}}/{{url_key}}.html` | no | endast exakt matchning |
+| `{{page}}.html/{{url_path}}.html` | no | ja |
+| `{{page}}.html/{{sku}}.html` | ja | no |
+| `{{page}}.html/{{sku}}/{{url_key}}.html` | ja | no |
 | `{{page}}.html/{{sku}}/{{category}}/{{url_key}}.html` | ja | endast exakt matchning |
 | `{{page}}.html/{{sku}}/{{url_path}}.html` | ja | ja |
 

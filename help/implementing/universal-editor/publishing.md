@@ -1,13 +1,13 @@
 ---
 title: Publicera innehåll med den universella visuella redigeraren
 description: Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
-source-git-commit: 7eeebade0255263a240476bc32f9530574495751
+exl-id: aee34469-37c2-4571-806b-06c439a7524a
+source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
 
 ---
-
 
 # Publicera innehåll med den universella visuella redigeraren {#publishing}
 

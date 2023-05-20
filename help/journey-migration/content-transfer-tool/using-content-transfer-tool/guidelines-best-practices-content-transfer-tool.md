@@ -4,8 +4,8 @@ description: Riktlinjer och bästa metoder för att använda verktyget Innehåll
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
 source-git-commit: 5475f9995513d09e61bd8f52242b3e74b8d4694c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1552'
+ht-degree: 18%
 
 ---
 

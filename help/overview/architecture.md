@@ -4,8 +4,8 @@ description: Introduktion till arkitekturen i Adobe Experience Manager as a Clou
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
 source-git-commit: c67be5b7f5dc454511753faa16bc46b10e72dde4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1807'
+ht-degree: 77%
 
 ---
 

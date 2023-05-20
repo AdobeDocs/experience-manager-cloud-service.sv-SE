@@ -7,7 +7,7 @@ exl-id: dc04d035-f002-42ef-9c2e-77602910c2ec
 source-git-commit: 33dfe795140f2780f7f2cf876f3ebc725310214d
 workflow-type: tm+mt
 source-wordcount: '2345'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -253,7 +253,7 @@ Det finns två avsnitt i servergruppskonfigurationen som **måste** inkludera en
 }
 ```
 
-and:
+och:
 
 ```
 /allowedClients {

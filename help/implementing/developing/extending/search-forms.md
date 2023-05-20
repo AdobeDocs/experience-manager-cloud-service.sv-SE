@@ -31,7 +31,7 @@ Använda **Sök i Forms** kan du anpassa och utöka dessa paneler efter dina spe
 
 The **Sök i Forms** gör att du kan välja [predikat](#predicates-and-their-settings) som du kan kombinera och definiera. The [dialogrutor för att konfigurera dessa formulär](#configuring-your-search-forms) kan nås via:
 
-* **Verktyg**
+* **verktyg**
    * **Allmänt**
       * **Sökformulär**
 

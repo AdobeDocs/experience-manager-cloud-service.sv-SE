@@ -1,13 +1,13 @@
 ---
 title: Versionsinformation om 2023.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2023.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: e0f3f876ce8bc4245f7118f8ae7553907bc0567e
+exl-id: f134fdbc-224b-404c-b20f-44cae8bad681
+source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 0%
 
 ---
-
 
 # Versionsinformation 2023.1.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 

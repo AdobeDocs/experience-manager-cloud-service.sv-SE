@@ -137,7 +137,7 @@ The **Knappen Klistra in** klistrar in den kopierade noden under den markerade n
 
 The **Flytta-knapp** flyttar den markerade noden till den nod som anges i dialogrutan.
 
-### Byt namn på {#rename-button}
+### Byt namn {#rename-button}
 
 The **Byt namn på knapp** byter namn på den markerade noden.
 
@@ -145,7 +145,7 @@ The **Byt namn på knapp** byter namn på den markerade noden.
 
 The **Knappen Blandningar** gör att du kan lägga till blandningstyper i nodtypen. Blandningstyperna används oftast för att lägga till avancerade funktioner.
 
-### Verktyg {#tools-button}
+### verktyg {#tools-button}
 
 The **Verktygsknapp** är en rullgardinsmeny med följande verktyg tillgängliga:
 

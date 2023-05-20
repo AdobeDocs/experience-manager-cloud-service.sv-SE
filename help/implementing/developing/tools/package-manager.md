@@ -190,7 +190,7 @@ Paketfilter definieras oftast först [skapa paketet.](#creating-a-new-package) D
 | Fält | Beskrivning | Exempel/detaljer |
 |---|---|---|
 | Namn | Namnet på paketets leverantör | `WKND Media Group` |
-| Webbadress | URL för providern | `https://wknd.site` |
+| URL | URL för providern | `https://wknd.site` |
 | Länk | Paketspecifik länk till en providersida | `https://wknd.site/package/` |
 | Kräver | Definierar om det finns några begränsningar när paketet installeras | **Administratör** - Paketet får bara installeras med administratörsbehörighet <br>**Starta om** - AEM måste startas om efter att paketet har installerats |
 | AC-hantering | Anger hur åtkomstkontrollsinformationen som definieras i paketet hanteras när paketet importeras | **Ignorera** - Bevara åtkomstkontrollistor i databasen <br>**Skriv över** - Skriv över åtkomstkontrollistor i databasen <br>**Sammanfoga** - Sammanfoga båda uppsättningar åtkomstkontrollistor <br>**MergePreserve** - Lägg samman åtkomstkontrollen i innehållet med den som ingår i paketet genom att lägga till åtkomstkontrollposter för objekt som inte finns i innehållet <br>**Rensa** - Rensa åtkomstkontrollistor |

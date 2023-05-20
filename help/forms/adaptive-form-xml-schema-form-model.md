@@ -8,7 +8,7 @@ exl-id: 5b8ad9a8-77d4-4234-a4d7-c8964b975e96
 source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
 workflow-type: tm+mt
 source-wordcount: '965'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -214,7 +214,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
   </tr>
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
-   <td><p>Boolesk</p> </td>
+   <td><p>Boolean</p> </td>
    <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än det numeriska värdet eller datumet som anges för egenskapen maximum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än eller lika med det numeriska värdet eller datumet som anges för egenskapen maximum.</p> </td>
    <td>
     <ul>
@@ -225,7 +225,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
   </tr>
   <tr>
    <td><p><code>exclusiveMinimum</code></p> </td>
-   <td><p>Boolesk</p> </td>
+   <td><p>Boolean</p> </td>
    <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara större än det numeriska värdet eller datumet som anges för egenskapen minimum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara större än eller lika med det numeriska värdet eller datumet som anges för egenskapen minimum.</p> </td>
    <td>
     <ul>

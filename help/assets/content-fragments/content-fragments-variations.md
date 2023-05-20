@@ -5,7 +5,7 @@ exl-id: af05aae6-d535-4007-ba81-7f41213ff152
 source-git-commit: 737d4d56312b763a50c2dfad0ea51feb9dbf4dde
 workflow-type: tm+mt
 source-wordcount: '2288'
-ht-degree: 11%
+ht-degree: 10%
 
 ---
 
@@ -90,19 +90,19 @@ Följande åtgärder är också tillgängliga (för alla [format](#formats)) nä
 
 Vilka alternativ du kan använda för att redigera text med flera rader beror på vilket format du har valt:
 
-* [RTF-text](#rich-text)
+* [RTF](#rich-text)
 * [Oformaterad text](#plain-text)
 * [Markdown](#markdown)
 
 Formatet kan väljas när helskärmsredigeraren används.
 
-### RTF-text {#rich-text}
+### RTF {#rich-text}
 
 Med textredigering kan du formatera:
 
 * Fet
 * Kursiv
-* Understrykning
+* Understruken
 * Justering: vänster, mitten, höger
 * Punktlista
 * Numrerad lista

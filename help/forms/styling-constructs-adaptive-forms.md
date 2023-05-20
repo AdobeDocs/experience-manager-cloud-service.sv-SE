@@ -11,7 +11,7 @@ docset: aem65
 source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
 workflow-type: tm+mt
 source-wordcount: '2308'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -354,7 +354,7 @@ Villkor (TnC) `` ``) kan du ange villkor. Du kan anpassa widgeten med hjälp av 
 Knappar är också widgetar. Men deras format skiljer sig något från widgetarna. I Adaptive Forms utgör något av följande en knapp:
 
 * input[type = text]
-* button
+* knapp
 * element med klass .button
 
 HTML-kod för knapp:

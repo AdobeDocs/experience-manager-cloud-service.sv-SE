@@ -89,7 +89,7 @@ När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
 * **Publicera** (och **Avpublicera**)
 * **Kopiera**
 * **Flytta**
-* **Byt namn på**
+* **Byt namn**
 * **Ta bort**
 
 >[!NOTE]

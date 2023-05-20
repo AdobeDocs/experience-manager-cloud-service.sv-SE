@@ -55,7 +55,7 @@ Strukturregler för paket
 För att stödja rullande driftsättningar har AEM as a Cloud Service paket, av vilka kopplingar är exempel, en strikt separation mellan&quot;oföränderligt&quot; och&quot;muterbart&quot; innehåll. Paketen ska separeras på ett tydligt sätt mellan dem som innehåller:
 
 * `/apps`
-* `/content` and `/conf`
+* `/content` och `/conf`
 
 Kopplingarna ska följa dessa riktlinjer för förpackningen som beskrivs i [den här artikeln](/help/implementing/developing/introduction/aem-project-content-package-structure.md). Befintliga kopplingar bör även omfaktoriseras för att anpassas.
 

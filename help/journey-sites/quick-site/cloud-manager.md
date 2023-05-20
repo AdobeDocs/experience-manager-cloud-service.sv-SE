@@ -52,7 +52,7 @@ Det är viktigt att förstå att det inte krävs någon AEM eller kunskap för d
 
 För den som utvecklar fronten behövs ingen AEM kunskap.
 
-### Verktyg {#tools}
+### verktyg {#tools}
 
 | Verktyg | Roll |
 |---|---|

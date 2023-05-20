@@ -90,8 +90,8 @@ I följande tabell visas några exempel `TagID`s, deras element och hur `TagID` 
 |---|---|---|---|---|---|
 | `dam:fruit/apple/braeburn` | `dam` | `fruit/apple/braeburn` | `fruit`,`apple` | `braeburn` | `content/cq:tags/dam/fruit/apple/braeburn` |
 | `color/red` | `default` | `color/red` | `color` | `red` | `/content/cq:tags/default/color/red` |
-| `sky` | `default` | `sky` | (inga) | `sky` | `/content/cq:tags/default/sky` |
-| `dam:` | `dam` | (inga) | (inga) | (inga) | `/content/cq:tags/dam` |
+| `sky` | `default` | `sky` | (ingen) | `sky` | `/content/cq:tags/default/sky` |
+| `dam:` | `dam` | (ingen) | (ingen) | (ingen) | `/content/cq:tags/dam` |
 | `content/cq:tags/category/car` | `category` | `car` | `car` | `car` | `content/cq:tags/category/car` |
 
 ### Lokalisering av taggtitel {#localization-of-tag-title}

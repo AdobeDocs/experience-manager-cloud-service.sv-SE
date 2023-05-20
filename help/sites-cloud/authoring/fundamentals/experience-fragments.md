@@ -302,7 +302,7 @@ Så här skapar du ett nytt byggblock:
 Byggblocket visas i **Byggblock** -fliken. Följande åtgärder är tillgängliga för varje block:
 
 * **Gå till överordnad**: öppna rotsidvarianten på en ny flik
-* **Byt namn på**
+* **Byt namn**
 * **Ta bort**
 
 ![Hantera byggblock](/help/sites-cloud/authoring/assets/xf-13.png)

@@ -127,7 +127,7 @@ Det finns ett antal krav innan du börjar AEM headless-projektet.
 * Utvecklingserfarenhet som skapar SPA med React- eller Angular-ramverk
 * Grundläggande AEM att skapa innehållsfragment och använda redigeraren
 
-### Verktyg {#tools}
+### verktyg {#tools}
 
 * Sandlådeåtkomst för testning av driftsättning av ditt projekt
 * Lokal utvecklingsinstans för datamodellering och -testning

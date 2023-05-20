@@ -1,13 +1,13 @@
 ---
 title: Attribut och typer
 description: Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
-source-git-commit: 0e66c379e10d275610d85a699da272dc0c32a9a8
+exl-id: 02795a31-244a-42b4-8297-2649125d7777
+source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 3%
 
 ---
-
 
 # Attribut och typer {#attributes-types}
 

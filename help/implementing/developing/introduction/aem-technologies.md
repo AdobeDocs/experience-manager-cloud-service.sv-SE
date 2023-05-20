@@ -94,7 +94,7 @@ https://myhost/tools/spy.printable.a4.html/a/b?x=12
 
 Vi kan dela upp det i dess sammansatta delar:
 
-| protocol | host |  | innehållsbana | väljare | extension |  | suffix |  | param(er) |
+| protocol | värd |  | innehållsbana | väljare | extension |  | suffix |  | param(er) |
 |---|---|---|---|---|---|---|---|---|---|
 | `https://` | `myhost` | `/` | `tools/spy` | `.printable.a4.` | `html` | `/` | `a/b` | `?` | `x=12` |
 
@@ -273,7 +273,7 @@ Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Slin
 Detta gör att du kan utföra följande åtgärder på något av paketen i din installation:
 
 * Installera
-* Start
+* Starta
 * Stoppa
 * Uppdatera
 * Avinstallera

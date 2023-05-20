@@ -10,7 +10,7 @@ discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
 source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
 workflow-type: tm+mt
 source-wordcount: '208'
-ht-degree: 14%
+ht-degree: 0%
 
 ---
 
@@ -27,7 +27,7 @@ Adaptiva Forms-nyckelord är fördefinierade, reserverade identifierare som har 
    <td><p>minOccur</p> </td>
   </tr>
   <tr>
-   <td><p>validate</p> </td>
+   <td><p>validera</p> </td>
    <td><p>setGuideState</p> </td>
    <td><p>maxOccur</p> </td>
   </tr>
@@ -102,7 +102,7 @@ Adaptiva Forms-nyckelord är fördefinierade, reserverade identifierare som har 
    <td><p>name</p> </td>
   </tr>
   <tr>
-   <td><p>mandatory</p> </td>
+   <td><p>obligatoriskt</p> </td>
    <td><p>panel</p> </td>
    <td><p>templateId</p> </td>
   </tr>
@@ -118,7 +118,7 @@ Adaptiva Forms-nyckelord är fördefinierade, reserverade identifierare som har 
   </tr>
   <tr>
    <td><p>validatePictureClauseMessage</p> </td>
-   <td><p>items</p> </td>
+   <td><p>objekt</p> </td>
    <td><p>nonLocalizedTitle</p> </td>
   </tr>
   <tr>
@@ -197,7 +197,7 @@ Adaptiva Forms-nyckelord är fördefinierade, reserverade identifierare som har 
    <td><p>activePart</p> </td>
   </tr>
   <tr>
-   <td><p>toolbar</p> </td>
+   <td><p>verktygsfält</p> </td>
    <td><p>completeBeforeMessage</p> </td>
    <td><p>isLastPart</p> </td>
   </tr>

@@ -186,7 +186,7 @@ Det finns flera metoder för att lägga till fältvalidering i ett adaptivt form
 
 Du kan lägga till valideringar i ett fält på följande sätt:
 
-### Krävs {#required}
+### Obligatoriskt {#required}
 
 Göra en komponent obligatorisk i **Redigera** -komponenten kan du välja alternativ **Titel och text > Obligatoriskt**. Du kan också lägga till rätt meddelande (valfritt). .
 

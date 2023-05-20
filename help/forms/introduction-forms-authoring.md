@@ -316,7 +316,7 @@ E. **Infoga**: Gör att du kan infoga en komponent ovanför den markerade kompon
 
 F. **Klistra in**: Gör att du kan klistra in komponenten som du klipper ut eller kopierar med alternativen som beskrivs ovan.
 
-G. **Redigera regler**: Gör att du kan öppna regelredigeraren. Mer information, <!-- see [Rule Editor](rule-editor.md). -->
+G. **Redigera regler**: Gör att du kan öppna regelredigeraren. Mer information finns i <!-- see [Rule Editor](rule-editor.md). -->
 
 H. **Grupp**: Gör att du kan markera flera komponenter om du vill klippa ut, kopiera eller klistra in mer än en komponent tillsammans.
 

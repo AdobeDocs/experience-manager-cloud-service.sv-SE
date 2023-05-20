@@ -8,7 +8,7 @@ exl-id: 07bfd353-c105-4677-a094-b70c1098fb7f
 source-git-commit: 2009e549eadd97d4d2bfcccd728ece17ecfeede5
 workflow-type: tm+mt
 source-wordcount: '3539'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -61,7 +61,7 @@ I följande tabell visas de effektivaste strategierna för kodning av profiler f
   </tr>
   <tr>
    <td><p>MP4 H.264 (mp4)</p> </td>
-   <td>autom.</td>
+   <td>auto</td>
    <td>360</td>
    <td>Ja</td>
    <td>730</td>
@@ -71,7 +71,7 @@ I följande tabell visas de effektivaste strategierna för kodning av profiler f
   </tr>
   <tr>
    <td><p>MP4 H.264 (mp4)</p> </td>
-   <td>autom.</td>
+   <td>auto</td>
    <td>540</td>
    <td>Ja</td>
    <td>2000<br /> </td>
@@ -81,7 +81,7 @@ I följande tabell visas de effektivaste strategierna för kodning av profiler f
   </tr>
   <tr>
    <td><p>MP4 H.264 (mp4)</p> </td>
-   <td>autom.</td>
+   <td>auto</td>
    <td>720<br /> </td>
    <td>Ja</td>
    <td>3000<br /> </td>

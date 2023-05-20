@@ -181,7 +181,7 @@ AEM innehåller följande datatyper som du kan använda för att modellera ditt 
 * Enkelradig text
 * Flerradstext
 * Siffra
-* Boolesk
+* Boolean
 * Datum och tid
 * Uppräkning
 * Taggar

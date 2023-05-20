@@ -3,7 +3,8 @@ title: Referensteman, mallar och formulärdatamodeller
 seo-title: Reference Themes, Templates, and Form Data models
 description: AEM Forms tillhandahåller adaptiva formulärteman, mallar och formulärdatamodeller som du kan hämta från Software Distribution
 seo-description: AEM Forms provides adaptive forms themes, templates, and form data models that you can get from Software Distribution
-source-git-commit: 196a2f221c637d58ea6642177f530f158888efe0
+exl-id: 81588759-22da-4123-92fe-5ca97e97f1e4
+source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
 workflow-type: tm+mt
 source-wordcount: '779'
 ht-degree: 0%
@@ -119,9 +120,3 @@ Du kan hämta följande formulärdatamodeller genom att installera [Referensinne
 * Salesforce
 
 Mer information om hur du använder dessa modeller finns i [Konfigurera molntjänsterna Microsoft Dynamics 365 och Salesforce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en#configure-dynamics-cloud-service)
-
-
-
-
-
-

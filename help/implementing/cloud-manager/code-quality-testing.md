@@ -5,7 +5,7 @@ exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
 source-git-commit: ae586cc2f576aa4aee4cc611b5184e2bbda6696c
 workflow-type: tm+mt
 source-wordcount: '1174'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -58,10 +58,10 @@ I följande tabell sammanfattas klassificerings- och feltrösklarna för var och
 | Tillförlitlighetsklassificering | A = Inga buggar <br/>B = Minst ett mindre fel <br/>C = Minst ett större fel <br/>D = Minst ett kritiskt fel<br>E = Minst 1 fel i blockering | Kritisk | &lt; D |
 | Underhållbarhetsklassificering | Definieras av den utestående reparationskostnaden för koden och luktar som en procentandel av tiden som redan har gått in i programmet<br/><ul><li>A = &lt;=5%</li><li>B = 6-10 %</li><li>C = 11-20 %</li><li>D = 21-50 %</li><li>E = >50 %</li></ul> | Viktigt | &lt; A |
 | Täckning | Definieras av en blandning av radens täckning och villkorstäckning med hjälp av formeln: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <ul><li>`CT` = Villkor som har utvärderats som `true` minst en gång under pågående enhetstester</li><li>`CF` = Villkor som har utvärderats som `false` minst en gång under pågående enhetstester</li><li>`LC` = Täckta rader = lines_to_cover - uncover_lines</li><li>`B` = totalt antal villkor</li><li>`EL` = totalt antal körbara rader (lines_to_cover)</li></ul> | Viktigt | &lt; 50% |
-| Överhoppade enhetstester | Antal överhoppade enhetstester | Information | > 1 |
-| Öppna ärenden | Generella problemtyper - sårbarheter, fel och kodmellanslag | Information | > 0 |
-| Duplicerade rader | Definieras som antalet rader som ingår i duplicerade block. Ett kodblock anses duplicerat under följande villkor.<br>Icke-Java-projekt:<ul><li>Det ska finnas minst 100 efterföljande och duplicerade tokens.</li><li>Dessa variabler bör spridas över åtminstone </li><li>30 kodrader för COBOL </li><li>20 kodrader för ABAP </li><li>10 kodrader för andra språk</li></ul>Java-projekt:<ul></li><li> Det ska finnas minst 10 efterföljande och duplicerade satser oavsett antalet tokens och rader.</li></ul>Skillnader i indrag och i stränglitteraler ignoreras när dubbletter identifieras. | Information | > 1% |
-| Cloud Service-kompatibilitet | Antal identifierade kompatibilitetsproblem med molntjänster | Information | > 0 |
+| Överhoppade enhetstester | Antal överhoppade enhetstester | Info | > 1 |
+| Öppna ärenden | Generella problemtyper - sårbarheter, fel och kodmellanslag | Info | > 0 |
+| Duplicerade rader | Definieras som antalet rader som ingår i duplicerade block. Ett kodblock anses duplicerat under följande villkor.<br>Icke-Java-projekt:<ul><li>Det ska finnas minst 100 efterföljande och duplicerade tokens.</li><li>Dessa variabler bör spridas över åtminstone </li><li>30 kodrader för COBOL </li><li>20 kodrader för ABAP </li><li>10 kodrader för andra språk</li></ul>Java-projekt:<ul></li><li> Det ska finnas minst 10 efterföljande och duplicerade satser oavsett antalet tokens och rader.</li></ul>Skillnader i indrag och i stränglitteraler ignoreras när dubbletter identifieras. | Info | > 1% |
+| Cloud Service-kompatibilitet | Antal identifierade kompatibilitetsproblem med molntjänster | Info | > 0 |
 
 >[!NOTE]
 >

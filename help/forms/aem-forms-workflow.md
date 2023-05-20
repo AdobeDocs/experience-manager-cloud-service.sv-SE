@@ -40,7 +40,7 @@ I följande diagram visas hela proceduren för att skapa, köra och övervaka et
 
 ![introduction-to-aem-forms-workflow](assets/introduction-to-aem-forms-workflow.jpg)
 
-## Innan du startar {#before-you-start}
+## Innan du börjar {#before-you-start}
 
 * Ett arbetsflöde är en representation av en affärsprocess i verkligheten. Håll er verkliga affärsprocess och lista över deltagarna i affärsprocessen klar. Ha också materialet (Adaptive Forms, PDF Documents med flera) klart innan du börjar skapa ett arbetsflöde.
 * Ett arbetsflöde kan ha flera steg. De här stegen visas i AEM Inkorg och hjälper till att rapportera arbetsflödets förlopp. Dela upp affärsprocessen i logiska steg.
