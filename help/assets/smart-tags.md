@@ -1,19 +1,19 @@
 ---
-title: Märk resurser automatiskt med [!DNL Adobe Sensei] smart tjänst
-description: Tagga tillgångar med en artificiellt intelligent tjänst som använder kontextuella och beskrivande affärstaggar.
+title: Hur lägger jag till smarta taggar till resurser i AEM?
+description: Lägg in smarta taggar i AEM med en artificiellt intelligent tjänst som lägger in kontextuella och beskrivande taggar.
 contentOwner: AG
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: f8535b9d1b8334bede817714eab469fbb1fcbb03
 workflow-type: tm+mt
-source-wordcount: '2393'
+source-wordcount: '2410'
 ht-degree: 4%
 
 ---
 
 
-# Lägg till smarta taggar i dina resurser och förbättra sökupplevelsen {#smart-tag-assets-for-faster-search}
+# Lägga till smarta taggar till resurser i AEM {#smart-tags-assets-aem}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -24,13 +24,13 @@ Organisationer som hanterar digitalt material använder i allt högre grad taxon
 
 Jämfört med naturliga språkordsuttryck hjälper taggning som baseras på företagstaxonomi till att anpassa tillgångarna till företagets verksamhet och säkerställer att de mest relevanta resurserna visas i sökningar. En biltillverkare kan t.ex. märka bilderna med modellnamn så att endast relevanta bilder visas när de genomsöks för att utforma en kampanj.
 
-I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/why-adobe/experience-cloud-artificial-intelligence.html) om du vill utbilda bildigenkänningsalgoritmen i taggstrukturen och företagsklonomin. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
+I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/why-adobe/experience-cloud-artificial-intelligence.html) om du vill utbilda bildigenkänningsalgoritmen i taggstrukturen och företagsklonomin. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. AEM använder automatiskt smarta taggar på överförda resurser som standard.
 
 <!-- TBD: Create a flowchart for how training works in CS.
 ![flowchart](assets/flowchart.gif) 
 -->
 
-## Tillgångstyper som stöds {#smart-tags-supported-file-formats}
+## Resurstyper som stöds för smarta taggar i AEM {#smart-tags-supported-file-formats}
 
 Du kan tagga följande typer av resurser:
 
@@ -59,7 +59,7 @@ Du kan tagga följande typer av resurser:
 | image/psd |  |  |
 | image/vnd.adobe.photoshop |  |  |
 
-[!DNL Experience Manager] lägger automatiskt till smarta taggar i textbaserade resurser och i videoklipp som standard. Om du vill lägga till smarta taggar automatiskt till bilder utför du följande åtgärder.
+AEM lägger automatiskt till smarta taggar i textbaserade resurser och i videoklipp som standard. Om du vill lägga till smarta taggar automatiskt till bilder utför du följande åtgärder.
 
 * [Förstå taggmodeller och riktlinjer](#understand-tag-models-guidelines).
 * [Tåg modellen](#train-model).
@@ -189,9 +189,9 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 [!DNL Experience Manager] can automatically tag the assets that users upload to DAM. To do so, administrators configure a workflow to add an available step that tags assets. See [how to enable Smart Tags for uploaded assets](/help/assets/smart-tags-configuration.md#enable-smart-tagging-for-uploaded-assets).
 -->
 
-## Tagga resurser med smarta taggar {#tag-assets}
+## Tagga resurser med smarta taggar i AEM {#tag-assets}
 
-Alla typer av resurser som stöds taggas automatiskt av [!DNL Experience Manager Assets] vid överföring. Taggning är aktiverat och fungerar som standard. [!DNL Experience Manager] använder lämpliga taggar i nära realtid. <!-- TBD: You can also apply the tagging workflow on-demand. The workflow applies to both, assets and folders. -->
+Alla typer av resurser som stöds taggas automatiskt av [!DNL Experience Manager Assets] vid överföring. Taggning är aktiverat och fungerar som standard. AEM använder rätt smarta taggar i nära realtid. <!-- TBD: You can also apply the tagging workflow on-demand. The workflow applies to both, assets and folders. -->
 
 * För bilder och videoklipp baseras smarta taggar på vissa visuella aspekter.
 
