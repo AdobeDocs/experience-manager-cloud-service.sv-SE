@@ -2,9 +2,9 @@
 title: Översikt över verktyget för innehållsöverföring
 description: Översikt över Content Transfer Tool
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: ac35bbe5ad78e07cc5292e089f3d71c6a8ed6ccc
+source-git-commit: 25bfcd521e9bbc54bff3b87d17cdeb0f99a68511
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '717'
 ht-degree: 38%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 38%
 
 Content Transfer Tool är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM-källinstans (On-premise eller AMS) till målinstansen av AEM Cloud Service.
 
-Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt.
+Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt.  Se [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md) för mer information.
 
 Det finns en ny version av verktyget Innehållsöverföring som integrerar innehållsöverföringsprocessen med Cloud Acceleration Manager. Vi rekommenderar att du går över till den nya versionen för att utnyttja alla fördelar den ger:
 

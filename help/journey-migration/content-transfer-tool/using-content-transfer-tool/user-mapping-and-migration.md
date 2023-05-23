@@ -2,9 +2,9 @@
 title: Användarmappning och huvudmigrering
 description: Översikt över användarmappning och huvudmigrering
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: 25bfcd521e9bbc54bff3b87d17cdeb0f99a68511
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '788'
 ht-degree: 3%
 
 ---
@@ -53,3 +53,7 @@ Följande specialfall loggas:
 * Om inställningen **Rensa befintligt innehåll i molninstansen före intag** är inställt kommer redan överförda användare i Cloud Servicen att tas bort tillsammans med hela den befintliga databasen och en ny databas kommer att skapas för att importera innehåll till. Detta återställer även alla inställningar inklusive behörigheter för målanvändarinstansen och gäller för en Cloud Service som lagts till i **administratörer** grupp. Administratörsanvändaren måste läggas till på nytt i **administratörer** grupp för att hämta åtkomsttoken för CTT.
 * När innehållsöverläggningar utförs och innehållet inte överförs eftersom det inte har ändrats sedan den tidigare överföringen, överförs inte heller användare och grupper som är kopplade till det innehållet, även om användare och grupper har ändrats under tiden. Detta beror på att användare och grupper migreras tillsammans med det innehåll de är kopplade till.
 * Om målinstansen av AEM Cloud Service har en användare med ett annat användarnamn men samma e-postadress som en av användarna i AEM och användarmappning är aktiverat, skrivs ett felmeddelande i loggarna och AEM-användaren inte överförs, eftersom endast en användare med en angiven e-postadress tillåts i målsystemet.
+
+## Slutlig sammanfattning och rapport {#final-report}
+
+När extraheringen och intaget har slutförts genereras en rapport med information om huvudmigreringen. Se [Validera huvudmigreringen](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/validating-content-transfers.md#how-to-validate-principal-migration) om du vill ha mer information.

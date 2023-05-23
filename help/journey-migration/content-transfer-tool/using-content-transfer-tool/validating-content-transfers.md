@@ -2,9 +2,9 @@
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
-source-git-commit: b6c9d7411e84b18926aa525efe25296002c2d3d2
+source-git-commit: c1f60a1ead466b47694b8918e5b39011041c5f25
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '1070'
 ht-degree: 1%
 
 ---
@@ -77,7 +77,7 @@ Inmatningsloggens överkant innehåller en post som påminner om `aem-ethos/tool
 När intaget är klart och valideringen börjar, kommer följande loggpost att registreras i matningsloggen:
 
 ```
-Gathering artifacts for migration validation...  
+Gathering artifacts for migration validation...
 ```
 
 Utförlig information om valideringen följer efter den här posten. Hitta ett exempel från en stor migrering nedan:
@@ -131,6 +131,24 @@ Förutom att den ingår i matningsloggen kan man även få tillgång till valide
 
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/CTTvalidationreportnew.png)
+
+## Validera huvudmigreringen {#how-to-validate-principal-migration}
+
+Se [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md) för att läsa information om huvudmigrering och varför det är nödvändigt.
+
+När extraheringen och intaget har slutförts kommer en sammanfattning och rapport om den huvudsakliga migreringen att finnas tillgänglig. Den här informationen kan användas för att validera vilka användare och grupper som migrerats och, kanske, för att avgöra varför vissa inte gjorde det.
+
+Om du vill visa den här informationen går du till Cloud Acceleration Manager. Klicka på ditt projektkort och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och hitta det intag du vill verifiera. Klicka på de tre punkterna (**...**) för det intrycket och klicka sedan på **Visa huvudsammanfattning** i listrutan.
+
+![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-action.png)
+
+En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Klicka på **Hämta rapport** om du vill hämta den fullständiga kommaavgränsade (CSV) rapporten.
+
+![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-dialog.png)
+
+>[!NOTE]
+>
+>Om användarmappning är inaktiverad visas en annan variant av den här dialogrutan. Det indikerar att användarmappningen har inaktiverats och inte visar de tre fälten som ger värden för användarmappning.
 
 ## Felsökning {#troubleshooting}
 
