@@ -2,16 +2,16 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 6b2ce7a4fb355e9ce78fbd7e0efee65c09fed932
+source-git-commit: 91a13f8b23136298e0ccf494e51fccf94fa1e0b4
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
 
 # Replikering {#replication}
 
-Adobe Experience Manager as a Cloud Service använder [Distribution av säljinnehåll](https://sling.apache.org/documentation/bundles/content-distribution.html) möjlighet att flytta det innehåll som ska replikeras till en pipeline-tjänst som körs på Adobe I/O som ligger utanför AEM.
+Adobe Experience Manager as a Cloud Service använder [Distribution av säljinnehåll](https://sling.apache.org/documentation/bundles/content-distribution.html) möjlighet att flytta det innehåll som ska replikeras till en pipeline-tjänst som körs på Adobe Developer och som ligger utanför AEM.
 
 >[!NOTE]
 >
@@ -21,15 +21,15 @@ Adobe Experience Manager as a Cloud Service använder [Distribution av säljinne
 
 >[!NOTE]
 >
->Om du är intresserad av masspublicering kan du använda [Publicera arbetsflöde för innehållsträd](#publish-content-tree-workflow).
+>Om du är intresserad av att publicera satsvis kan du använda [Publicera arbetsflöde för innehållsträd](#publish-content-tree-workflow).
 >Det här arbetsflödessteget är särskilt utformat för Cloud Service och kan effektivt hantera stora nyttolaster.
 >Vi rekommenderar inte att du skapar en egen anpassad masspubliceringskod.
->Om du behöver anpassa av någon anledning kan du utlösa det här arbetsflödes-/arbetsflödessteget genom att använda befintliga arbetsflödes-API:er.
->Även om det alltid är en god vana att bara publicera innehåll som behöver publiceras och vara försiktig med att inte försöka publicera ett stort antal innehåll om det inte är nödvändigt, finns det inga gränser för hur mycket innehåll du kan skicka via arbetsflödet Publicera innehållsträd.
+>Om du måste anpassa av någon anledning kan du utlösa det här arbetsflödes-/arbetsflödessteget med befintliga arbetsflödes-API:er.
+>Det är alltid en god vana att bara publicera innehåll som måste publiceras. Och var försiktig med att inte försöka publicera stora mängder innehåll, om det inte är nödvändigt. Det finns dock inga gränser för hur mycket innehåll du kan skicka via arbetsflödet Publicera innehållsträd.
 
 ### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
 
-På så sätt kan du publicera de markerade sidorna direkt, utan de ytterligare alternativ som är möjliga via Hantera publikation.
+Med den här funktionen kan du publicera de valda sidorna direkt, utan de ytterligare alternativ som är möjliga via Hantera publikation.
 
 Mer information finns i [Hantera publikation](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
 
@@ -37,15 +37,15 @@ Mer information finns i [Hantera publikation](/help/sites-cloud/authoring/fundam
 
 Ytterligare möjligheter **I tid** och **Fråntid** är tillgängliga från [Fliken Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#basic).
 
-Om du vill genomföra den automatiska replikeringen måste du aktivera **Automatisk replikering** i [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md) **Konfiguration av utlösare vid avstängning**:
+Aktivera om du vill genomföra den automatiska replikeringen för den här funktionen **Automatisk replikering** i [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md) **Konfiguration av utlösare vid avstängning**:
 
 ![Konfiguration av OSGi på av utlösare](/help/operations/assets/replication-on-off-trigger.png)
 
 ### Hantera publikation {#manage-publication}
 
-Med Hantera publikation får du fler alternativ än Snabbpublicering, så att du kan inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden samt erbjuda möjlighet att publicera vid ett senare tillfälle.
+Med Hantera publikation får du fler alternativ än Snabbpublicering, så att du kan inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden och erbjuda möjlighet att publicera senare.
 
-Om du tar med en mapps underordnade objekt för alternativet Publicera senare, aktiveras arbetsflödet Publicera innehållsträd, som beskrivs i den här artikeln.
+Om du tar med en mapps underordnade objekt för alternativet Publicera senare, anropas arbetsflödet Publicera innehållsträd, som beskrivs i den här artikeln.
 
 Mer information om Hantera publikation finns i [Dokumentation för Publishing Fundamentals](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#manage-publication).
 
@@ -59,22 +59,22 @@ Du kan aktivera en trädreplikering genom att välja **Verktyg - Arbetsflöde - 
 
 Precis som med alla arbetsflöden kan den också anropas via API. Mer information finns i [Interagera med arbetsflöden programmatiskt](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-program-interaction.html?lang=en#extending-aem).
 
-Du kan även uppnå detta genom att skapa en arbetsflödesmodell som använder `Publish Content Tree` processteg:
+Du kan också skapa en arbetsflödesmodell som använder `Publish Content Tree` processteg:
 
-1. Från den AEM as a Cloud Service hemsidan går du till **Verktyg - Arbetsflöde - Modeller**
-1. På sidan Arbetsflödesmodeller trycker du på **Skapa** i skärmens övre högra hörn
-1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html)
+1. Från den AEM as a Cloud Service hemsidan går du till **Verktyg - Arbetsflöde - Modeller**.
+1. På sidan Arbetsflödesmodeller trycker du på **Skapa** i skärmens övre högra hörn.
+1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 1. Markera den nya modellen i listan och tryck på **Redigera**
 1. I följande fönster drar och släpper du Processsteg till det aktuella modellflödet:
 
    ![Processsteg](/help/operations/assets/processstep.png)
 
-1. Klicka på steget Process i flödet och välj **Konfigurera** genom att trycka på skiftnyckelsikonen
-1. Klicka på **Process** och markera `Publish Content Tree` i listrutan och markera sedan **Avancerad hanterare** kryssruta
+1. Markera processteget i flödet och välj **Konfigurera** genom att trycka på skiftnyckelsikonen.
+1. Välj **Process** och markera `Publish Content Tree` i listrutan och markera sedan **Avancerad hanterare** kryssruta
 
    ![Reaktivering](/help/operations/assets/newstep.png)
 
-1. Ange eventuella ytterligare parametrar i dialogrutan **Argument** fält. Flera kommaavgränsade argument kan vara sammanfogade. Till exempel:
+1. Ange eventuella ytterligare parametrar i dialogrutan **Argument** fält. Flera kommaavgränsade argument kan sammanfogas. Till exempel:
 
    `enableVersion=true,agentId=publish,includeChildren=true`
 
@@ -87,26 +87,26 @@ Du kan även uppnå detta genom att skapa en arbetsflödesmodell som använder `
 
 **Parametrar**
 
-* `includeChildren` (booleskt värde, standard: `false`). false betyder att bara sökvägen publiceras. true betyder att barn också publiceras.
+* `includeChildren` (booleskt värde, standard: `false`). Värdet `false` innebär att endast banan offentliggörs, `true` innebär att även barn publiceras.
 * `replicateAsParticipant` (booleskt värde, standard: `false`). Om konfigurerad som `true`används `userid` av huvudmannen som utförde deltagarsteget.
 * `enableVersion` (booleskt värde, standard: `true`). Den här parametern avgör om en ny version skapas vid replikering.
-* `agentId` (strängvärde, standard betyder att endast agenter för publicering används). Vi rekommenderar att du uttryckligen anger agentId; Om du till exempel anger värdet: publicera. Ange att agenten ska `preview` publicerar till förhandsgranskningstjänsten
-* `filters` (strängvärde, standard innebär att alla sökvägar aktiveras). Tillgängliga värden är:
+* `agentId` (strängvärde, standard betyder att endast agenter för publicering används). Vi rekommenderar att du uttryckligen anger agentId; Om du till exempel anger värdet: publicera. Ange att agenten ska `preview` publicerar till förhandsgranskningstjänsten.
+* `filters` (strängvärde, standard betyder att alla sökvägar aktiveras). Tillgängliga värden är:
    * `onlyActivated` - aktivera endast sidor som har (redan) aktiverats. Fungerar som en form av omaktivering.
    * `onlyModified` - aktivera endast sökvägar som redan är aktiverade och som har ett ändringsdatum efter aktiveringsdatumet.
    * Ovanstående kan vara ORed med vertikalstreck (|). Till exempel, `onlyActivated|onlyModified`.
 
 **Loggning**
 
-När arbetsflödessteget för trädaktivering startar loggas konfigurationsparametrarna på INFO-loggnivån. När sökvägar aktiveras loggas även en INFO-sats.
+När arbetsflödessteget för trädaktivering startar loggas dess konfigurationsparametrar på INFO-loggnivån. När sökvägar aktiveras loggas även en INFO-sats.
 
-En slutgiltig INFO-sats loggas sedan när arbetsflödessteget har replikerat alla sökvägar.
+En slutgiltig INFO-sats loggas när arbetsflödessteget har replikerat alla sökvägar.
 
-Du kan dessutom öka loggningsnivån nedan `com.day.cq.wcm.workflow.process.impl` till DEBUG/TRACE för att få ännu mer logginformation.
+Du kan även öka loggningsnivån nedan `com.day.cq.wcm.workflow.process.impl` till DEBUG/TRACE för att få ännu mer logginformation.
 
-Om fel uppstår avslutas arbetsflödessteget med ett `WorkflowException`, som omsluter det underliggande undantaget.
+Om det finns fel avslutas arbetsflödessteget med ett `WorkflowException`, som omsluter det underliggande undantaget.
 
-Här nedan hittar du exempel på loggar som genereras under ett arbetsflöde för publiceringsinnehåll:
+Här följer exempel på loggar som genereras under ett exempel på arbetsflöde för publiceringsinnehåll:
 
 ```
 21.04.2021 19:14:55.566 [cm-p123-e456-aem-author-797aaaf-wkkqt] *INFO* [JobHandler: /var/workflow/instances/server60/2021-04-20/brian-tree-replication-test-2_1:/content/wknd/us/en/adventures] com.day.cq.wcm.workflow.process.impl.treeactivation.TreeActivationWorkflowProcess TreeActivation options: replicateAsParticipant=false(userid=workflow-process-service), agentId=publish, chunkSize=100, filter=, enableVersion=false
@@ -118,7 +118,7 @@ Här nedan hittar du exempel på loggar som genereras under ett arbetsflöde fö
 
 **Återuppta support**
 
-Arbetsflödet bearbetar innehåll i segment, som representerar en delmängd av det fullständiga innehåll som ska publiceras. Om arbetsflödet stoppas av systemet kommer det att starta om och bearbeta segmentet som ännu inte bearbetats. En loggsats anger att innehållet har återupptagits från en viss sökväg.
+Arbetsflödet bearbetar innehåll i segment, som representerar en delmängd av det fullständiga innehåll som ska publiceras. Om arbetsflödet stoppas av systemet startas det om och bearbetar det segment som ännu inte bearbetats. En loggsats anger att innehållet återupptogs från en viss sökväg.
 
 ### Replikerings-API {#replication-api}
 
@@ -151,11 +151,11 @@ Map<String,ReplicationStatus> allStatus = replicationStatusProvider.getBatchRepl
 
 **Replikering med specifika agenter**
 
-När resurser replikeras som i exemplet ovan kommer endast de agenter som är aktiva som standard att användas. På AEM as a Cloud Service blir detta bara agenten&quot;publish&quot;, som kopplar författaren till publiceringsnivån.
+Vid replikering av resurser, som i exemplet ovan, används bara de agenter som är aktiva som standard. På AEM as a Cloud Service betyder det bara agenten&quot;publish&quot;, som kopplar författaren till publiceringsnivån.
 
 En ny agent med namnet&quot;preview&quot; har lagts till som stöd för förhandsvisningsfunktionen, som inte är aktiv som standard. Den här agenten används för att ansluta författaren till förhandsgranskningsnivån. Om du bara vill replikera via förhandsgranskningsagenten måste du uttryckligen välja den här förhandsgranskningsagenten via en `AgentFilter`.
 
-Se exemplet nedan om hur du gör detta:
+Se följande exempel:
 
 ```
 private static final String PREVIEW_AGENT = "preview";
@@ -178,18 +178,18 @@ ReplicationStatus previewStatus = afterStatus.getStatusForAgent(PREVIEW_AGENT); 
 
 Om du inte anger ett sådant filter och bara använder agenten för publicering, används inte agenten för förhandsgranskning och replikeringsåtgärden påverkar inte förhandsgranskningsnivån.
 
-Det övergripande `ReplicationStatus` för en resurs ändras bara om replikeringsåtgärden innehåller minst en agent som är aktiv som standard. I exemplet ovan är detta inte fallet eftersom replikeringen bara använder agenten för förhandsgranskning. Därför måste du använda den nya `getStatusForAgent()` -metod, som tillåter frågor om status för en viss agent. Den här metoden fungerar även för agenten&quot;publish&quot;. Det returnerar ett värde som inte är null om någon replikeringsåtgärd har utförts med den angivna agenten.
+Det övergripande `ReplicationStatus` för en resurs ändras bara om replikeringsåtgärden innehåller minst en agent som är aktiv som standard. I exemplet ovan var detta inte fallet. Replikeringen använde just agenten för förhandsgranskning. Därför måste du använda den nya `getStatusForAgent()` -metod, som tillåter frågor om status för en viss agent. Den här metoden fungerar även för agenten&quot;publish&quot;. Det returnerar ett värde som inte är null om någon replikeringsåtgärd har utförts med den angivna agenten.
 
 ### Metoder för att verifiera innehåll {#invalidating-content}
 
-Du kan göra innehåll ogiltigt direkt genom att antingen använda Sling Content Invalidation (SCD) från författaren (den föredragna metoden) eller genom att använda replikerings-API:t för att anropa agenten för push-tömning av publiceringsutgivaren. Se [Cachelagring](/help/implementing/dispatcher/caching.md) sida för mer information.
+Du kan göra innehåll ogiltigt direkt genom att antingen använda Sling Content Invalidation (SCD) från författaren (den föredragna metoden) eller genom att använda replikerings-API:t för att anropa replikeringsagenten för publiceringsrensningen för Dispatcher. Se [Cachelagring](/help/implementing/dispatcher/caching.md) sida för mer information.
 
 **Kapacitetsbegränsningar för replikerings-API**
 
-Vi rekommenderar att du kopierar färre än 100 banor i taget, där 500 är den hårda gränsen. Ovanför den hårda gränsen finns en `ReplicationException` kommer att kastas.
-Om programlogiken inte kräver atomisk replikering kan den här gränsen överskridas genom att du anger `ReplicationOptions.setUseAtomicCalls` till false, vilket accepterar ett obegränsat antal banor, men internt skapar bucklor som ligger under denna gräns.
+Replikera färre än 100 banor i taget, med 500 som gräns. Ovanför gränsen är `ReplicationException` kastas.
+Om programlogiken inte kräver atomisk replikering kan den här gränsen överskridas genom att du anger `ReplicationOptions.setUseAtomicCalls` till false, vilket accepterar valfritt antal banor, men internt skapar buketter som ligger under denna gräns.
 
-Storleken på innehållet som skickas per replikeringsanrop får inte överskrida `10 MB`. Detta inkluderar noder och egenskaper, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binärfiler).
+Storleken på innehållet som skickas per replikeringsanrop får inte överskrida `10 MB`. Den här regeln omfattar noder och egenskaper, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binärfiler).
 
 
 ## Felsökning {#troubleshooting}
@@ -206,4 +206,4 @@ Om du vill felsöka replikering går du till replikeringsköerna i webbgränssni
 ![Loggar](assets/publish-logs.png "Loggar")
 
 Om innehållet inte kunde publiceras återställs hela publikationen från AEM Publish Service.
-I så fall visas den huvudsakliga, redigerbara kön med röd status och bör granskas för att identifiera vilka objekt som orsakade att publiceringen avbröts. Genom att klicka på den kön visas de väntande objekten, från vilka ett eller alla objekt kan rensas vid behov.
+I så fall visar den huvudsakliga, redigerbara kön en röd status och bör granskas för att identifiera vilka objekt som gjorde att publiceringen avbröts. Genom att klicka på den kön visas de väntande objekten, från vilka ett eller alla objekt kan rensas vid behov.
