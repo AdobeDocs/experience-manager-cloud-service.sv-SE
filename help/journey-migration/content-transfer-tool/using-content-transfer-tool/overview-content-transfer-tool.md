@@ -2,10 +2,10 @@
 title: Översikt över verktyget för innehållsöverföring
 description: Översikt över Content Transfer Tool
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: 25bfcd521e9bbc54bff3b87d17cdeb0f99a68511
+source-git-commit: 8197b4f4e5cda21532c3660c2f0ec4855ba53a6a
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 38%
+source-wordcount: '648'
+ht-degree: 37%
 
 ---
 
@@ -14,24 +14,19 @@ ht-degree: 38%
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_overview"
 >title="Översikt"
->abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen. Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt."
+>abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen. Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html" text="Riktlinjer och bästa praxis"
 
-Content Transfer Tool är ett verktyg som utvecklats av Adobe och som kan användas för att flytta befintligt innehåll från en AEM-källinstans (On-premise eller AMS) till målinstansen av AEM Cloud Service.
+Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen.
 
 Med det här verktyget överförs även huvudkonton (användare eller grupper) automatiskt.  Se [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md) för mer information.
 
-Det finns en ny version av verktyget Innehållsöverföring som integrerar innehållsöverföringsprocessen med Cloud Acceleration Manager. Vi rekommenderar att du går över till den nya versionen för att utnyttja alla fördelar den ger:
+Innehållsöverföringsverktyget integrerar innehållsöverföringsprocessen med Cloud Acceleration Manager. Detta ger användaren alla fördelar den ger:
 
 * Självbetjäningssätt att extrahera en migreringsuppsättning en gång och importera den i flera miljöer parallellt
 * Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsräcken och felhantering
 * Inmatningsloggarna är beständiga och är alltid tillgängliga för felsökning
-
-Om du vill börja använda den nya versionen måste du avinstallera tidigare versioner av verktyget Innehållsöverföring eftersom det har skett en stor arkitektoniska förändring i verktyget.
-
->[!NOTE]
->
-> I situationer där en migrering redan pågår kan du fortsätta använda den tidigare versionen av CTT tills migreringen är klar. Dokumentation om föregående version av CTT finns i [äldre dokumentation](/help/journey-migration/content-transfer-tool/ctt-legacy/overview-content-transfer-tool-legacy.md).
+* Validerings- och huvudmigreringsrapporter finns tillgängliga för validering
 
 ## Phases in Content Transfer Tool {#phases-content-transfer-tool}
 
