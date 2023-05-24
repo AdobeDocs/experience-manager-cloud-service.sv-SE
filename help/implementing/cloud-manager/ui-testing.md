@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: bf3b7286bbf77f5a45884d4d3a40c020fe42411f
+source-git-commit: 84b2648fe06b556534b53023769abaa69ef1ec2b
 workflow-type: tm+mt
-source-wordcount: '2305'
+source-wordcount: '2411'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa o
 
 AEM innehåller en integrerad svit med [Kvalitetsportar för Cloud Manager](/help/implementing/cloud-manager/custom-code-quality-rules.md) för smidiga uppdateringar av anpassade program. I synnerhet har IT-testportar redan stöd för att skapa och automatisera anpassade tester med AEM API:er.
 
-Användargränssnittstester är förpackade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress.IO, Selenium, Java och Maven samt Javascript). Dessutom kan ett UI-testprojekt enkelt genereras med [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+Användargränssnittstester paketeras i en Docker-bild för att ge ett brett val i språk och miljöer (t.ex. Cypress, Selenium, Java och Maven samt JavaScript). Dessutom kan ett UI-testprojekt enkelt genereras med [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 
-Adobe uppmuntrar användningen av Cypress.IO, eftersom det ger realtidsladdning och automatisk väntetid, vilket sparar tid och förbättrar produktiviteten under testningen. Cypress.IO har också en enkel och intuitiv syntax som gör det enkelt att lära sig och använda, även för dem som inte har testat tidigare.
+Adobe uppmuntrar användningen av Cypress eftersom det ger realtidsladdning och automatisk väntetid, vilket sparar tid och förbättrar produktiviteten under testningen. Cypress har också en enkel och intuitiv syntax som gör det enkelt att lära sig och använda, även för dem som inte har testat tidigare.
 
 Gränssnittstester utförs som en del av en viss kvalitetsgrind för varje Cloud Manager-pipeline med en [**Testning av anpassat användargränssnitt** steg](/help/implementing/cloud-manager/deploy-code.md) in [produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) eller valfritt [rörledningar för icke-produktion](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md). Alla gränssnittstester, inklusive regression och nya funktioner, gör att fel kan upptäckas och rapporteras.
 
@@ -33,9 +33,9 @@ Till skillnad från anpassade funktionstester, som är HTTP-tester skrivna i Jav
 
 >[!TIP]
 >
->Adobe rekommenderar att du följer strukturen och språket (JavaScript och WDIO) i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests).
->
->Adobe tillhandahåller också ett exempel på en gränssnittstestmodul som baseras på Java och WebDriver. Se [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver) för mer information.
+>Adobe rekommenderar att du använder Cypress för UI-testning enligt koden i [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-cypress).
+> 
+>Adobe innehåller även exempel på gränssnittstestmoduler baserade på JavaScript med WebdriverIO (se [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests)) och Java med WebDriver (se [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver)).
 
 ## Kom igång med gränssnittstester {#get-started-ui-tests}
 
@@ -43,11 +43,13 @@ I det här avsnittet beskrivs stegen som krävs för att konfigurera gränssnitt
 
 1. Bestäm vilket programmeringsspråk du vill använda.
 
+   * För Cypress använder du exempelkoden från [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-cypress).
+
    * För JavaScript och WDIO använder du exempelkoden som automatiskt genereras i `ui.tests` i din Cloud Manager-databas.
 
       >[!NOTE]
       >
-      >Om din databas skapades innan Cloud Manager skapades automatiskt `it.tests` kan du även generera den senaste versionen med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/it.tests).
+      >Om din databas skapades innan Cloud Manager skapades automatiskt `ui.tests` kan du även generera den senaste versionen med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests).
 
    * För Java och WebDriver använder du exempelkoden i [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver).
 
@@ -197,7 +199,7 @@ Om du använder exemplen från Adobe:
    fi
    ```
 
-* De angivna Java-testexemplen har redan flaggan opt-in.
+* Testexemplen av Cypress och Java Selenium som tillhandahålls av Adobe har redan flaggan opt-in.
 
 ## Skriver gränssnittstester {#writing-ui-tests}
 
@@ -222,27 +224,13 @@ Följande miljövariabler skickas till Docker-bilden vid körning, beroende på 
 
 Provexemplen från Adobe ger hjälpfunktioner för att komma åt konfigurationsparametrarna:
 
+* Cypress: använder standardfunktionen `Cypress.env('VARIABLE_NAME')`
 * JavaScript: Se [lib/config.js](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/test-module/lib/config.js) modul
 * Java: Se [Konfig](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/test-module/src/main/java/com/adobe/cq/cloud/testing/ui/java/ui/tests/lib/Config.java) class
 
-### Väntar på att Selenium ska vara klart {#waiting-for-selenium}
-
->[!NOTE]
->
->Detta avsnitt gäller endast när Selenium är den valda testinfrastrukturen.
-
-Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
-
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
-1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
-
-När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
-
-Adobe-gränssnittstestexemplen hanterar detta med skriptet `wait-for-grid.sh`, som körs när Docker startar och startar den faktiska testkörningen först när rutnätet är klart.
-
 ### Generera testrapporter {#generate-test-reports}
 
-Docker-bilden måste generera testrapporter i JUnit XML-format och spara dem i den sökväg som anges av systemvariabeln `REPORTS_PATH`. JUnit XML-formatet är ett vanligt format för rapportering av testresultat. Om Docker-bilden använder Java och Maven, standardtestmoduler som [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) och [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) kan generera sådana rapporter direkt.
+Docker-bilden måste generera testrapporter i JUnit XML-format och spara dem i den sökväg som anges av systemvariabeln `REPORTS_PATH`. JUnit XML-formatet är ett format som ofta används för att rapportera testresultat. Om Docker-bilden använder Java och Maven, standardtestmoduler som [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) och [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) kan generera sådana rapporter direkt.
 
 Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare bör du kontrollera i dokumentationen vilka verktyg som har valts för att skapa JUnit XML-rapporter.
 
@@ -252,9 +240,47 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 >
 >Använd kontroller i stället för att bara logga ett fel till STDERR eller returnera en avslutningskod som inte är noll, annars kan distributionsflödet fortsätta normalt.
 
+### Förutsättningar {#prerequisites}
+
+* Testerna i Cloud Manager körs med en teknisk administratörsanvändare.
+
+>[!NOTE]
+>
+>Om du vill köra funktionstester från den lokala datorn skapar du en användare med administratörsliknande behörigheter för att uppnå samma beteende.
+
+* Den inneslutna infrastruktur som omfattar funktionstestning begränsas av följande gränser:
+
+| Typ | Värde | Beskrivning |
+|----------------------|-------|-----------------------------------------------------------------------|
+| CPU | 2.0 | Den CPU-tid som reserverats per testkörning |
+| Minne | 1Gi | Mängd minne som tilldelats testet, värde i gibibyte |
+| Timeout | 30m | Den varaktighet efter vilken testet avslutas. |
+| Rekommenderad varaktighet | 15m | Adobe rekommenderar att testet inte tar längre tid än så här. |
+
+>[!NOTE]
+>
+> Om du behöver mer resurser skapar du ett kundvårdsärende och beskriver ditt användningsfall. Adobe kommer att granska din begäran och ge lämplig hjälp.
+
+## Selenspecifik information
+
+>[!NOTE]
+>
+>Detta avsnitt gäller endast när Selenium är den valda testinfrastrukturen.
+
+### Väntar på att Selenium ska vara klart {#waiting-for-selenium}
+
+Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
+
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
+1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
+
+När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
+
+Adobe-gränssnittstestexemplen hanterar detta med skriptet `wait-for-grid.sh`, som körs när Docker startar och startar den faktiska testkörningen först när rutnätet är klart.
+
 ### Hämta skärmbilder och video {#capture-screenshots}
 
-Docker-bilden kan generera ytterligare testutdata (t.ex. skärmbilder eller videofilmer) och spara dem i den sökväg som anges av systemvariabeln `REPORTS_PATH`. Alla filer som finns under `REPORTS_PATH` ingår i testresultatarkivet.
+Docker-bilden kan generera ytterligare testutdata (till exempel skärmbilder eller videoklipp) och spara dem i den sökväg som anges av systemvariabeln `REPORTS_PATH`. Alla filer som finns under `REPORTS_PATH` ingår i testresultatarkivet.
 
 Testexemplen från Adobe skapar som standard skärmbilder för misslyckade tester.
 
@@ -267,7 +293,7 @@ Om ett testresultatarkiv skapas under en UI-testkörning kan du hämta det från
 
 ### Överför filer {#upload-files}
 
-Testerna ibland måste överföra filer till det program som testas. För att driftsättningen av Selenium ska vara flexibel i förhållande till dina tester är det inte möjligt att ladda upp en resurs direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
+Testerna ibland måste överföra filer till det program som testas. För att driftsättningen av Selenium ska vara flexibel i förhållande till dina tester går det inte att överföra en resurs direkt till Selenium. Om du vill överföra en fil måste du i stället utföra följande steg.
 
 1. Överför filen på den URL som anges av `UPLOAD_URL` systemvariabel.
    * Överföringen måste utföras i en POST med ett multipart-formulär.
@@ -281,34 +307,47 @@ Testerna ibland måste överföra filer till det program som testas. För att dr
    * Svarets innehåll är ett ogenomskinligt filhandtag.
    * Du kan använda det här handtaget i stället för en filsökväg i en `<input>` -element för att testa filöverföringar i programmet.
 
-### Förutsättningar {#prerequisites}
-
-1. Testerna i Cloud Manager körs med en teknisk administratörsanvändare.
-
->[!NOTE]
->
->Om du vill köra funktionstester från den lokala datorn skapar du en användare med administratörsliknande behörigheter för att uppnå samma beteende.
-
-1. Den inneslutna infrastruktur som omfattar funktionstestning begränsas av följande gränser:
-
-| Typ | Värde | Beskrivning |
-|----------------------|-------|--------------------------------------------------------------------|
-| CPU | 2.0 | Den CPU-tid som reserverats per testkörning |
-| Minne | 1Gi | Mängd minne som tilldelats testet, värde i gibibyte |
-| Timeout | 30m | Den varaktighet efter vilken testet avslutas. |
-| Rekommenderad varaktighet | 15m | Vi rekommenderar att du skriver testerna så att de inte tar längre tid än så här. |
-
->[!NOTE]
->
-> Om du behöver mer resurser skapar du ett kundvårdsärende och beskriver ditt användningsfall. vårt team granskar din förfrågan och ger lämplig hjälp.
-
-
 ## Köra gränssnittstester lokalt {#run-ui-tests-locally}
 
-Innan gränssnittstester aktiveras i en Cloud Manager-pipeline bör gränssnittstester köras lokalt mot [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
-eller mot en faktisk AEM as a Cloud Service instans.
+Innan gränssnittstester aktiveras i en Cloud Manager-pipeline bör gränssnittstester köras lokalt mot [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) eller mot en faktisk AEM as a Cloud Service instans.
 
-### JavaScript-testexempel {#javascript-sample}
+### Prov av Cypress-test {#cypress-sample}
+
+1. Öppna ett skal och navigera till `ui.tests/test-module` mapp i din databas
+
+1. Installera Cypress och andra krav
+
+   ```shell
+   npm install
+   ```
+
+1. Ange de systemvariabler som krävs för testkörning
+
+   ```shell
+   export AEM_AUTHOR_URL=https://author-<program-id>-<environment-id>.adobeaemcloud.com
+   export AEM_AUTHOR_USERNAME=<user>
+   export AEM_AUTHOR_PASSWORD=<password>
+   export AEM_PUBLISH_URL=https://publish-<program-id>-<environment-id>.adobeaemcloud.com
+   export AEM_PUBLISH_USERNAME=<user>
+   export AEM_PUBLISH_PASSWORD=<password>
+   export REPORTS_PATH=target/
+   ```
+
+1. Köra tester med något av följande kommandon
+
+   ```shell
+   npm test              # Using default Cypress browser
+   npm run test-chrome   # Using Google Chrome browser
+   npm run test-firefox  # Using Firefox browser
+   ```
+
+>[!NOTE]
+>
+>Loggfilerna sparas i `target/` -mapp i din databas.
+>
+>Mer information finns i [AEM Test Samples](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/README.md).
+
+### JavaScript WebdriverIO-testexempel {#javascript-sample}
 
 1. Öppna ett skal och navigera till `ui.tests` mapp i din databas
 
@@ -321,22 +360,22 @@ eller mot en faktisk AEM as a Cloud Service instans.
     -DAEM_AUTHOR_PASSWORD=<password> \
     -DAEM_PUBLISH_URL=https://publish-<program-id>-<environment-id>.adobeaemcloud.com \
     -DAEM_PUBLISH_USERNAME=<user> \
-    -DAEM_PUBLISH_PASSWORD=<password> \
+    -DAEM_PUBLISH_PASSWORD=<password>
    ```
 
 >[!NOTE]
 >
->* Detta startar en fristående seleninstans och utför testerna mot den.
+>* Detta startar en fristående seleninstans och kör testerna mot den.
 >* Loggfilerna lagras i `target/reports` mapp i din databas
->* Du måste se till att du har den senaste Chrome-versionen när testet hämtar den senaste versionen av ChromeDriver automatiskt för testning.
+>* Du måste se till att datorn kör den senaste Chrome-versionen när testet hämtar den senaste versionen av ChromeDriver automatiskt för testning.
 >
 >Mer information finns i [AEM Project Archetype-databas](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/ui.tests/README.md).
 
-### Java Test Sample {#java-sample}
+### Java Selenium WebDriver Test Sample {#java-sample}
 
 1. Öppna ett skal och navigera till `ui.tests/test-module` mapp i din databas
 
-1. Kör nedanstående kommando för att starta testerna med Maven
+1. Kör nedanstående kommandon för att starta testerna med Maven
 
    ```shell
    # Start selenium docker image (for x64 CPUs)
@@ -346,11 +385,11 @@ eller mot en faktisk AEM as a Cloud Service instans.
    docker run -d -p 4444:4444 seleniarm/standalone-chromium
    
    # Run the tests using the previously started Selenium instance
-   mvn verify -Pui-tests-local-execution -DSELENIUM_BASE_URL=http://<server>:<port>
+   mvn verify -Pui-tests-local-execution -DSELENIUM_BASE_URL=http://<server>:4444
    ```
 
 >[!NOTE]
 >
->* Loggfilerna sparas i `target/reports` -mapp i din databas.
+>Loggfilerna sparas i `target/reports` -mapp i din databas.
 >
 >Mer information finns i [AEM Test Samples](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/README.md).
