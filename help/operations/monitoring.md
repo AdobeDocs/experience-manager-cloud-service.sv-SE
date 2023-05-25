@@ -2,9 +2,9 @@
 title: Infrastruktur- och serviceövervakning på AEM as a Cloud Service
 description: Infrastruktur- och serviceövervakning på AEM as a Cloud Service
 exl-id: 82432c11-37ec-48ac-a52b-487abdc859fa
-source-git-commit: 91a13f8b23136298e0ccf494e51fccf94fa1e0b4
+source-git-commit: a95c914502fbb279bd44abd6d5d4d141707e9a59
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Med anpassad övervakning kan kunderna välja att tillhandahålla upp till fem o
 
 >[!NOTE]
 >
-> Den här funktionaliteten erbjuds endast kunder med [Avancerad molnsupport.](https://experienceleague.adobe.com/docs/support-resources/data-sheets/overview.html#support-add-ons) Om du har några frågor, ta upp ett supportärende via Admin Console.
+> Den här funktionaliteten erbjuds endast kunder med [Avancerad molnsupport.](https://experienceleague.adobe.com/docs/support-resources/data-sheets/overview.html#support-add-ons) Om du har några frågor kan du kontakta ditt Adobe-kontoteam.
 
 ## Intern modulövervakning {#module-monitoring}
 
