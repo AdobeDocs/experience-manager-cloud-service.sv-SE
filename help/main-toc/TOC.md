@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 69d230a989724fa8a9fe96ff7d8e050dc207af12
+source-git-commit: b4aa3495538eebc2e87383e1490bc60403025fb0
 workflow-type: tm+mt
-source-wordcount: '4011'
+source-wordcount: '4012'
 ht-degree: 21%
 
 ---
@@ -462,7 +462,7 @@ ht-degree: 21%
       + [Förinställningar för gruppuppsättning](/help/assets/dynamic-media/batch-set-presets-dm.md)
       + [Invalidera CDN-cachen med Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md)
       + [Invalidera CDN-cachen med Dynamic Media Classic](/help/assets/dynamic-media/invalidate-cdn-cache-dm-classic.md)
-      + [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md)
+      + [Vanliga frågor om smarta bilder](/help/assets/dynamic-media/imaging-faq.md)
       + [Smart bildbehandling med enhetspixelproportioner på klientsidan](/help/assets/dynamic-media/client-side-dpr.md)
       + [Leverera Dynamic Media-material](/help/assets/dynamic-media/delivering-dynamic-media-assets.md)
       + [Aktivera hotlink-skydd i Dynamic Media](/help/assets/dynamic-media/hotlink-protection.md)
