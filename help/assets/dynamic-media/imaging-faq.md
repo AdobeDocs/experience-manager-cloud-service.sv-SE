@@ -1,21 +1,21 @@
 ---
-title: Vanliga frågor om smarta bilder
+title: Smart bildbehandling
 description: Läs om hur Smart Imaging med Adobe Sensei AI använder varje användares unika visningsegenskaper för att automatiskt leverera rätt bilder som är optimerade för sin upplevelse, vilket ger bättre prestanda och engagemang.
 contentOwner: Rick Brough
 feature: Asset Management,Renditions
 role: User
 mini-toc-levels: null
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: b5c887d6a6ad1db5094609a8bc1b738c9ba5e8d6
+source-git-commit: fca1da512c4015e77c1a982a551db354a0b1cace
 workflow-type: tm+mt
-source-wordcount: '3488'
+source-wordcount: '3478'
 ht-degree: 0%
 
 ---
 
 # Vanliga frågor om smarta bilder {#smart-imaging}
 
-+++**Vad är&quot;Smart Imaging&quot;?**
+## Om Smart Imaging
 
 Smart Imaging-tekniken tillämpar Adobe Sensei AI-funktioner och fungerar med befintliga&quot;bildförinställningar&quot;. Det förbättrar bildleveransen genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens funktioner.
 
@@ -60,9 +60,7 @@ Se även [Bildoptimering med nästa generations bildformat (WebP och AVIF)](http
 
 In terms of images, the goal is to serve the best quality images as efficiently as possible. -->
 
-+++
-
-+++**Vilka är de viktigaste fördelarna med den senaste Smart Imaging?**
+**Fördelar med Smart Imaging**
 
 Smart Imaging ger bättre prestanda vid bildleverans genom att automatiskt optimera bildfilens storlek baserat på vilken webbläsare som används, enhetens visning och nätverksförhållanden. Eftersom bilder utgör det mesta av en sidas laddningstid kan alla prestandaförbättringar ha en genomgripande effekt på nyckeltal som högre konverteringsgrader, tidsåtgång på en webbplats och lägre avhoppsfrekvens.
 
@@ -70,11 +68,11 @@ De senaste fördelarna med den senaste funktionen för smart bildbehandling är 
 
 * Stöd för nästa generations AVIF-format.
 * PNG till WebP och AVIF har nu stöd för förlustkonvertering. Eftersom PNG är ett icke-förstörande format levererades tidigare WebP och AVIF utan dataförlust.
-* Konvertering av webbläsarformat (`bfc`)
-* Enhetens pixelproportioner (`dpr`)
-* Nätverksbandbredd (`network`)
+* [Konvertering av webbläsarformat](#bfc)
+* [Enhetens pixelproportioner](#dpr)
+* [Nätverksbandbredd](#bandwidth)
 
-**Om konvertering av webbläsarformat (bfc)**
+### Om konvertering av webbläsarformat {#bfc}
 
 Aktivera konvertering av webbläsarformat genom att lägga till `bfc=on` till bild-URL:en konverterar automatiskt JPEG och PNG till förstörande AVIF, förstörande WebP, förstörande JPEGXR, förstörande JPEG2000 för olika webbläsare. För webbläsare som inte stöder dessa format fortsätter Smart Imaging att fungera som JPEG eller PNG. Tillsammans med formatet beräknas kvaliteten på det nya formatet om med Smart Imaging.
 
@@ -82,7 +80,7 @@ Smart bildbehandling kan även stängas av genom att lägga till `bfc=off` till 
 
 Se även [bfc](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc.html?lang=en) i Dynamic Media Image Serving and Rendering API.
 
-**Om Device Pixel Ratio (dpr)** optimering
+### Om optimering av enhetspixelproportioner** {#dpr}
 
 Enhetens pixelproportioner (DPR) - även kallat CSS-pixelproportioner - är relationen mellan en enhets fysiska pixlar och logiska pixlar. I synnerhet med nya retinaskärmar växer pixelupplösningen i moderna mobilenheter i snabb takt.
 
@@ -108,7 +106,7 @@ För närvarande kommer pixeldensiteten för visningen från Akamai CDN-rubrikv�
 
 Se även [När du arbetar med bilder](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md#when-working-with-images) och [När du arbetar med smart beskärning](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md#when-working-with-smart-crop).
 
-**Om optimering av nätverksbandbredd**
+### Om optimering av nätverksbandbredd {#bandwidth}
 
 Om du aktiverar nätverksbandbredd justeras den bildkvalitet som hanteras automatiskt baserat på den faktiska nätverksbandbredden. För dålig nätverksbandbredd inaktiveras DPR-optimering (Device Pixel Ratio) automatiskt, även om den redan är aktiverad.
 
@@ -128,8 +126,6 @@ DPR- och nätverksbandbreddsvärdena baseras på de värden som identifierats p�
 * TTL-oberoende (Time To Live). Tidigare var en minsta TTL på 12 timmar obligatorisk för att Smart Imaging skulle fungera.
 * Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
 * Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslås i [Lägg till ett anpassat rubrikvärde i bildsvaren|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
-
-+++
 
 +++**Kostar licensieringen av Smart Imaging?**
 
@@ -153,6 +149,26 @@ När en bild efterfrågas av en konsument kontrollerar Smart Imaging användaren
 * För webbläsare som inte stöder dessa format används det bildformat som ursprungligen begärdes.
 
 Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
+
++++
+
++++**Kan Smart Imaging stängas av på begäran?**
+
+Ja. Du kan inaktivera Smart bildbehandling genom att lägga till någon av följande modifierare:
+
+* `bfc=off` om du vill inaktivera konvertering av webbläsarformat. Se även [Konvertering av webbläsarformat](#bfc).
+* `dpr=off` för att inaktivera Device Pixel Ratio. Se även [Enhetens pixelproportioner](#dpr).
+* `network=off` för att stänga av nätverksbandbredd. Se även [Nätverksbandbredd](#network).
+
++++
+
++++**Är det möjligt att&quot;justera&quot; Smart Imaging?**
+
+Ja. Smart bildbehandling har tre alternativ som du kan aktivera eller inaktivera.
+
+* [Konvertering av webbläsarformat](#bfc)
+* [Enhetens pixelproportioner](#dpr)
+* [Nätverksbandbredd](#network)
 
 +++
 
@@ -338,26 +354,6 @@ Den här rubriken innehåller följande information:
 +++**Kan jag inaktivera AVIF-optimering i Smart Imaging?**
 
 Ja. Om du vill växla tillbaka till att använda WebP som standard skapar du ett supportärende för det. Som vanligt kan du inaktivera Smart Imaging genom att lägga till parametern `bfc=off` till bildens URL. Du kan dock inte välja WebP eller AVIF i URL-modifieraren för Smart Imaging. Den här möjligheten bibehålls på kontonivån.
-
-+++
-
-+++**Kan Smart Imaging stängas av på begäran?**
-
-Ja. Du kan inaktivera Smart bildbehandling genom att lägga till någon av följande modifierare:
-
-* `bfc=off` om du vill inaktivera konvertering av webbläsarformat. Se även [Konvertering av webbläsarformat](#bfc).
-* `dpr=off` för att inaktivera Device Pixel Ratio. Se även [Enhetens pixelproportioner](#dpr).
-* `network=off` för att stänga av nätverksbandbredd. Se även [Nätverksbandbredd](#network).
-
-+++
-
-+++**Är det möjligt att&quot;justera&quot; Smart Imaging?**
-
-Ja. Smart bildbehandling har tre alternativ som du kan aktivera eller inaktivera.
-
-* [Konvertering av webbläsarformat](#bfc)
-* [Enhetens pixelproportioner](#dpr)
-* [Nätverksbandbredd](#network)
 
 +++
 
