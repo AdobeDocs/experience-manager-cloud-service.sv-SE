@@ -4,14 +4,19 @@ description: Konfigurera [!DNL Workfront for Experience Manager enhanced connect
 role: Admin
 feature: Integrations
 exl-id: d4e1247a-342c-4bc4-83bf-4e4902468fb3
-source-git-commit: 109f07c7273cc9a4890e41bf29a1509f738d130b
+source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
 workflow-type: tm+mt
-source-wordcount: '1587'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
 
 # Konfigurera [!DNL Workfront for Experience Manager enhanced connector] {#assets-integration-overview}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-configure.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som [!DNL Cloud Service] konfigurerar den utökade anslutningen efter installation. Anvisningar om hur du installerar finns i [Installera anslutningsprogrammet](/help/assets/workfront-integrations.md).
 
@@ -124,14 +129,14 @@ I det här arbetsflödessteget kan en användare mappa en egenskap till en [!DNL
    * En AEM. Den här referensen ska vara relativ till arbetsflödets nyttolast.
    * Ett namngivet värde. Dessa bör omges av hakparenteser.
    * En sammanfogning av de tre ovanstående objekten. Ange det med `{+}`.
-   * En ändring av de tre ovanstående objekten genom att omge värdet med `{replace(<value>,”old-char”,”new-char”)}`.
+   * En ändring av de tre ovanstående objekten genom att omge värdet med `{replace(<value>,"old-char","new-char")}`.
 
 * Några exempel är:
 
    * `status="INP"`
    * `DE:Asset Type=jcr:content/metadata/assetType`
    * `DE:Path={path}`
-   * `URL=”https://my-aem-author/assets.html”{+}{path}`
+   * `URL="https://my-aem-author/assets.html"{+}{path}`
 
 ![Konfiguration för att mappa egenskap](/help/assets/assets/wf-map-property-config.png)
 
