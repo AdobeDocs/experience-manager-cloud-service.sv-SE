@@ -4,11 +4,11 @@ description: Läs om hur Smart Imaging med Adobe Sensei AI använder varje anvä
 contentOwner: Rick Brough
 feature: Asset Management,Renditions
 role: User
-mini-toc-levels: null
+mini-toc-levels: 2
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: fca1da512c4015e77c1a982a551db354a0b1cace
+source-git-commit: c7555ef31d7657b4a90764224f4c8c58a6228157
 workflow-type: tm+mt
-source-wordcount: '3478'
+source-wordcount: '3486'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Smart bildbehandling kan även stängas av genom att lägga till `bfc=off` till 
 
 Se även [bfc](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc.html?lang=en) i Dynamic Media Image Serving and Rendering API.
 
-### Om optimering av enhetspixelproportioner** {#dpr}
+### Om optimering av enhetspixelproportioner {#dpr}
 
 Enhetens pixelproportioner (DPR) - även kallat CSS-pixelproportioner - är relationen mellan en enhets fysiska pixlar och logiska pixlar. I synnerhet med nya retinaskärmar växer pixelupplösningen i moderna mobilenheter i snabb takt.
 
@@ -127,17 +127,7 @@ DPR- och nätverksbandbreddsvärdena baseras på de värden som identifierats p�
 * Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
 * Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslås i [Lägg till ett anpassat rubrikvärde i bildsvaren|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
 
-+++**Kostar licensieringen av Smart Imaging?**
-
-Nej. Smart Imaging ingår i din befintliga licens. Den här regeln gäller antingen Dynamic Media Classic eller Experience Manager - Dynamic Media (On-prem, AMS och Experience Manager as a Cloud Service).
-
->[!IMPORTANT]
->
->Smart Imaging är inte tillgängligt för Dynamic Media - Hybrid-kunder.
-
-+++
-
-+++**Hur fungerar Smart Imaging?**
+## Hur Smart Imaging fungerar**
 
 När en bild efterfrågas av en konsument kontrollerar Smart Imaging användarens egenskaper och konverterar den till rätt bildformat baserat på den webbläsare som används. Dessa formatkonverteringar görs på ett sätt som inte försämrar den visuella återgivningen. Smart bildbehandling konverterar automatiskt bilder till olika format baserat på webbläsarkapacitet på följande sätt.
 
@@ -149,6 +139,30 @@ När en bild efterfrågas av en konsument kontrollerar Smart Imaging användaren
 * För webbläsare som inte stöder dessa format används det bildformat som ursprungligen begärdes.
 
 Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
+
+## Bildformat som stöds i Smart Imaging
+
+Följande bildformat stöds för Smart Imaging:
+
+* JPEG
+* PNG
+
+För bildfilformatet JPEG beräknas kvaliteten på det nya formatet om med Smart Imaging.
+
+För bildfilsformat som stöder genomskinlighet som PNG kan du konfigurera Smart Imaging så att AVIF och WebP blir förstörande. För konvertering av förlustgivande format använder Smart Imaging den kvalitet som anges i bildens URL, eller i annat fall den kvalitet som konfigurerats i Dynamic Media företagskonto.
+
+## Kommandon för bildvisning som ignoreras och stöds av Smart Imaging
+
+De enda kommandon för bildbehandling som ignoreras av Smart bildbehandling är `fmt` och `qlt`. Alla återstående kommandon stöds.
+
+
++++**Kostar licensieringen av Smart Imaging?**
+
+Nej. Smart Imaging ingår i din befintliga licens. Den här regeln gäller antingen Dynamic Media Classic eller Experience Manager - Dynamic Media (On-prem, AMS och Experience Manager as a Cloud Service).
+
+>[!IMPORTANT]
+>
+>Smart Imaging är inte tillgängligt för Dynamic Media - Hybrid-kunder.
 
 +++
 
@@ -169,19 +183,6 @@ Ja. Smart bildbehandling har tre alternativ som du kan aktivera eller inaktivera
 * [Konvertering av webbläsarformat](#bfc)
 * [Enhetens pixelproportioner](#dpr)
 * [Nätverksbandbredd](#network)
-
-+++
-
-+++**Vilka bildformat stöds?**
-
-Följande bildformat stöds för Smart Imaging:
-
-* JPEG
-* PNG
-
-För bildfilformatet JPEG beräknas kvaliteten på det nya formatet om med Smart Imaging.
-
-För bildfilsformat som stöder genomskinlighet som PNG kan du konfigurera Smart Imaging så att AVIF och WebP blir förstörande. För konvertering av förlustgivande format använder Smart Imaging den kvalitet som anges i bildens URL, eller i annat fall den kvalitet som konfigurerats i Dynamic Media företagskonto.
 
 +++
 
@@ -390,12 +391,6 @@ Nej. Det finns för närvarande ingen sådan etablering.
 +++**Justerar Smart Imaging inställningen för procentkvalitet?**
 
 Ja. Smart Imaging justerar automatiskt kvalitetsprocenten. Kvalitetsprocenten bestäms med hjälp av en maskininlärningsalgoritm som utvecklats av Adobe. Den här procentandelen är inte intervallspecifik.
-
-+++
-
-+++**Vilka kommandon för bildvisning stöds eller ignoreras?**
-
-De enda kommandon som ignoreras är `fmt` och `qlt`. Alla återstående kommandon stöds.
 
 +++
 
