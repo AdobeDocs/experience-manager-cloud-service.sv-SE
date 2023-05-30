@@ -2,7 +2,7 @@
 title: Om du skriver för AEM som ett headless CMS - en introduktion
 description: En introduktion till hur du använder funktionerna i Adobe Experience Manager as a Cloud Service som Headless CMS för att skapa innehåll för ditt projekt.
 exl-id: 065b00cb-a82d-4bcb-b2c9-44542cee6303
-source-git-commit: 00ec09f327bc2f382d263970e690ed067aaa1355
+source-git-commit: e03c067f4337bbf0e98cb4015b9be4fc99fc17c1
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 1%
@@ -12,6 +12,8 @@ ht-degree: 1%
 # Om du skriver för AEM som ett headless CMS - en introduktion {#author-headless-introduction}
 
 I den här delen av [AEM Headless Content Author Journey](overview.md)kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du skapar innehåll när du använder Adobe Experience Manager (AEM) as a Cloud Service som ett headless CMS. Det handlar om att strukturera och skapa innehåll för leverans av headless-innehåll.
+
+{{headless-trials-promotion}}
 
 ## Syfte {#objective}
 
