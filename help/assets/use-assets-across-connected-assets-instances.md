@@ -6,9 +6,9 @@ mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: dbc6b5c0f11e52b45981cab36381258edcf6c167
 workflow-type: tm+mt
-source-wordcount: '3704'
+source-wordcount: '3717'
 ht-degree: 15%
 
 ---
@@ -316,6 +316,7 @@ Du kan lägga till resurser i [!DNL Sites] distribution, men dessa resurser kan 
 ## Begränsningar och bästa metoder {#tip-and-limitations}
 
 * Konfigurera [Assets Insight](/help/assets/assets-insights.md) på [!DNL Sites] -instans.
+* Användning av sökvägsläsare i redigeringskomponenter stöds inte i anslutna resurser.
 
 ### Tillstånd och resurshantering {#permissions-and-managing-assets}
 
