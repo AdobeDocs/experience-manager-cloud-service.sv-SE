@@ -6,16 +6,16 @@ feature: Asset Management,Renditions
 role: User
 mini-toc-levels: 2
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: c48885dc11b0162f0288962a53e1d95574a3d406
+source-git-commit: 6f9ddcf31a1869bb8bebb566d05c371e996fe354
 workflow-type: tm+mt
-source-wordcount: '3483'
+source-wordcount: '3482'
 ht-degree: 0%
 
 ---
 
-# Vanliga frågor om smarta bilder {#smart-imaging}
+# Smart bildbehandling {#smart-imaging}
 
-## Om Smart Imaging
+## Om Smart Imaging{#about-smart-imaging}
 
 Smart Imaging-tekniken tillämpar Adobe Sensei AI-funktioner och fungerar med befintliga&quot;bildförinställningar&quot;. Det förbättrar bildleveransen genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens funktioner.
 
@@ -127,7 +127,7 @@ DPR- och nätverksbandbreddsvärdena baseras på de värden som identifierats p�
 * Tidigare cachelagrades både original- och härledda bilder, och det var en tvåstegsprocess att göra cacheminnet ogiltigt. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
 * Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot;,&quot;X-Robot&quot; som föreslås i [Lägg till ett anpassat rubrikvärde i bildsvaren|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
 
-## Så fungerar Smart Imaging
+## Så fungerar Smart Imaging{#how-smart-imaging-works}
 
 När en bild efterfrågas av en konsument kontrollerar Smart Imaging användarens egenskaper och konverterar den till rätt bildformat baserat på den webbläsare som används. Dessa formatkonverteringar görs på ett sätt som inte försämrar den visuella återgivningen. Smart bildbehandling konverterar automatiskt bilder till olika format baserat på webbläsarkapacitet på följande sätt.
 
@@ -140,7 +140,7 @@ När en bild efterfrågas av en konsument kontrollerar Smart Imaging användaren
 
 Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.
 
-## Stöd för bildformat i Smart Imaging
+## Stöd för bildformat i Smart Imaging{#image-format-support}
 
 Följande bildformat stöds för Smart Imaging:
 
@@ -151,11 +151,11 @@ För bildfilformatet JPEG beräknas kvaliteten på det nya formatet om med Smart
 
 För bildfilsformat som stöder genomskinlighet som PNG kan du konfigurera Smart Imaging så att AVIF och WebP blir förstörande. För konvertering av förlustgivande format använder Smart Imaging den kvalitet som anges i bildens URL, eller i annat fall den kvalitet som konfigurerats i Dynamic Media företagskonto.
 
-## Stöd för kommandovisning i Smart Imaging
+## Stöd för kommandovisning i Smart Imaging{#imaging-serving-command-support}
 
 Kommandona Bild `fmt` och `qlt` stöds inte, alla återstående kommandon stöds.
 
-## Frågor och svar om Smart Imaging
+## Frågor och svar om Smart Imaging{#smart-imaging-faq}
 
 +++**Kostar licensieringen av Smart Imaging?**
 
