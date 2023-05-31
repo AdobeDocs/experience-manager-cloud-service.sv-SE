@@ -2,7 +2,7 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 4b86e35efb11aca16f0d69c7a9b82b53bdb867a5
+source-git-commit: 66c77dd90fb220993e113fb3c4cfbaec879c1dee
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 11983 {#release-12142}
+## Utgåva 12142 {#release-12142}
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 12142, som offentliggjordes den 31 maj 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 1983.
 
