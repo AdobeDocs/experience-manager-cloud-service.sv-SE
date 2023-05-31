@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: eef90c6a-b354-4342-8b97-21d067ae2979
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: 948b671965cf438e2c93dea0371331cb3a02b6ca
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 18%
@@ -106,7 +106,7 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig metadataprofil som
 
 **Om du vill använda en metadataprofil globalt gör du något av följande**
 
-* Navigera till `https://[aem_server]/mnt/overlay/dam/gui/content/assets/foldersharewizard.html/content/dam` och använda rätt profil och klicka på **[!UICONTROL Save]**.
+* Navigera till `https://[aem_server]/mnt/overlay/dam/gui/content/assets/v2/foldersharewizard.html/content/dam` och använda rätt profil och klicka på **[!UICONTROL Save]**.
 
 * Navigera till CRXDE Lite till följande nod: `/content/dam/jcr:content`. Lägg till egenskapen `metadataProfile:/etc/dam/metadata/dynamicmedia/<name of metadata profile>`. Klicka **Spara alla**.
 
