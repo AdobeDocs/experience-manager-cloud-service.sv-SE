@@ -4,14 +4,19 @@ description: När du har konfigurerat dina molnresurser måste du ge ditt team �
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: c00f5d28-85af-4bd3-a50c-913d1342241c
-source-git-commit: 77ae5d79ecb8a11a230cee461f247ffe0e9891a5
+source-git-commit: fd14d9f88fed4ef0f90b5dd0c92c53b1a298bd76
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
 
 # Tilldela AEM produktprofiler {#assign-profiles-aem}
+
+>[!CONTEXTUALHELP]
+>id="assets_user_entitlements"
+>title="Tilldela AEM produktprofiler"
+>abstract="Du har inte rätt att använda Experience Manager Assets. Kontakta administratören."
 
 I den här delen av [startresan,](overview.md) du får lära dig att ge ditt team tillgång till AEM med hjälp av AEM produktprofiler.
 
