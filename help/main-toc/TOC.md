@@ -8,10 +8,10 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: f9e05b8d8fa6286c121f32e1e1f390a149471921
+source-git-commit: 7dc36220c1f12177037aaa79d864c1ec2209a301
 workflow-type: tm+mt
-source-wordcount: '4011'
-ht-degree: 21%
+source-wordcount: '4027'
+ht-degree: 20%
 
 ---
 
@@ -509,6 +509,7 @@ ht-degree: 21%
    + Konfigurera och migrera {#setup-configure-migrate}
       + [Anmäl dig till Cloud Servicen](/help/forms/setup-forms-cloud-service.md)
       + [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
+      + [Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö](/help/forms/enable-adaptive-forms-core-components.md)
       + [Konfigurera anslutning för enhetlig lagring](/help/forms/configure-unified-storage-connector.md)
       + [Migrera från [!DNL AEM 6.5 Forms] eller tidigare till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
@@ -970,3 +971,4 @@ ht-degree: 21%
    + [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md)
    + [Attribut och typer](/help/implementing/universal-editor/attributes-types.md)
    + [Autentisering av universell redigerare](/help/implementing/universal-editor/authentication.md)
+
