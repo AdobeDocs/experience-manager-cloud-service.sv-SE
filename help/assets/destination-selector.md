@@ -2,9 +2,8 @@
 title: Målväljare för AEM as a Cloud Service
 description: Använd AEM målväljare för att visa och välja resurser som du kan använda som en kopia av den ursprungliga resursen.
 contentOwner: Adobe
-feature: destination selector
 role: Admin,User
-source-git-commit: fc156b95ebbdb0546f9fb334b0cb6f599f5f2692
+source-git-commit: d6ea74834f73ad90f5df929a2806cd1ed53af0aa
 workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 0%
