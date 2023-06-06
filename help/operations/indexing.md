@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 6fd5f8e7a9699f60457e232bb3cfa011f34880e9
+source-git-commit: 34189fd264d3ba2c1b0b22c527c2c5ac710fba21
 workflow-type: tm+mt
-source-wordcount: '2498'
+source-wordcount: '2491'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 1. Kunderna kan skapa varningar efter behov.
 1. SRE övervakar systemets hälsa dygnet runt, alla dagar i veckan och kommer att vidta åtgärder efter behov och så tidigt som möjligt.
 1. Indexkonfigurationen ändras via distributioner. Ändringar av indexdefinitioner konfigureras på samma sätt som andra innehållsändringar.
-1. På en hög nivå på AEM as a Cloud Service, med införandet av [Blå-grön distributionsmodell](#index-management-using-blue-green-deployments) två uppsättningar index kommer att finnas: en uppsättning för den gamla versionen (blå) och en uppsättning för den nya versionen (grön).
+1. På en hög nivå på AEM as a Cloud Service, med införandet av [driftsättningsmodell](#index-management-using-rolling-deployments) två uppsättningar index kommer att finnas: en uppsättning för den gamla versionen och en uppsättning för den nya versionen.
 1. Kunderna kan se om indexeringsjobbet är klart på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
 Begränsningar:
@@ -143,7 +143,7 @@ I `ui.apps.structure/pom.xml`, `filters` -avsnittet för det här plugin-program
 <filter><root>/oak:index</root></filter>
 ```
 
-När den nya indexdefinitionen har lagts till måste det nya programmet distribueras via Cloud Manager. När distributionen är klar startas två jobb som ansvarar för att lägga till (och sammanfoga vid behov) indexdefinitionerna i MongoDB och Azure Segment Store för författare respektive publicering. De underliggande databaserna omindexeras med de nya indexdefinitionerna, innan den blå-gröna växlingen äger rum.
+När den nya indexdefinitionen har lagts till måste det nya programmet distribueras via Cloud Manager. Vid distributionen startas två jobb som ansvarar för att lägga till (och sammanfoga vid behov) indexdefinitionerna i MongoDB och Azure Segment Store för författare respektive publicering. De underliggande databaserna omindexeras med de nya indexdefinitionerna, innan växlingen äger rum.
 
 ### ANMÄRKNING
 
@@ -207,19 +207,19 @@ Nedan visas ett exempel på var ovanstående konfiguration ska placeras i rummet
 >
 >Mer information om den paketstruktur som krävs för AEM as a Cloud Service finns i dokumentet [AEM projektstruktur.](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
 
-## Indexhantering med användning av blå-gröna distributioner {#index-management-using-blue-green-deployments}
+## Indexhantering med rullande distributioner {#index-management-using-rolling-deployments}
 
 ### Vad är indexhantering? {#what-is-index-management}
 
 Indexhantering handlar om att lägga till, ta bort och ändra index. Ändra *definition* för ett index är snabbt, men det tar lång tid att tillämpa ändringen (kallas ofta&quot;skapa ett index&quot; eller&quot;omindexering&quot; för befintliga index). Det är inte omedelbart: databasen måste genomsökas för att data ska kunna indexeras.
 
-### Vad är Blue-Green Deployment? {#what-is-blue-green-deployment}
+### Vad är rullande distributioner? {#what-are-rolling-deployments}
 
-Blue-Green-driftsättning kan minska driftstoppen. Det ger även inga driftavbrott och ger snabba återställningar. Den gamla versionen av programmet (blå) körs samtidigt som den nya versionen av programmet (grön).
+En rullande driftsättning kan minska driftstoppen. Det ger även inga driftavbrott och ger snabba återställningar. Den gamla versionen av programmet körs samtidigt som den nya versionen av programmet.
 
 ### Skrivskyddade och skrivskyddade områden {#read-only-and-read-write-areas}
 
-Vissa delar av databasen (skrivskyddade delar av databasen) kan vara olika i den gamla (blå) och den nya (gröna) versionen av programmet. De skrivskyddade områdena i databasen är vanligtvis`/app`&quot; och &quot;`/libs`&quot;. I följande exempel används kursiv för att markera skrivskyddade områden, medan fetstil används för skrivskyddade områden.
+Vissa delar av databasen (skrivskyddade delar av databasen) kan vara olika i den gamla och den nya versionen av programmet. De skrivskyddade områdena i databasen är vanligtvis `/app` och `/libs`. I följande exempel används kursiv för att markera skrivskyddade områden, medan fetstil används för skrivskyddade områden.
 
 * **/**
 * */apps (skrivskyddad)*
@@ -233,13 +233,13 @@ Vissa delar av databasen (skrivskyddade delar av databasen) kan vara olika i den
 
 Databasens läs- och skrivområden delas mellan alla programversioner, medan det för varje programversion finns en specifik uppsättning `/apps` och `/libs`.
 
-### Indexhantering utan blå-grön driftsättning {#index-management-without-blue-green-deployment}
+### Indexhantering utan rullande distributioner {#index-management-without-rolling-deployments}
 
 Under utvecklingen, eller vid användning av lokala installationer, kan index läggas till, tas bort eller ändras under körningen. Index används så snart de är tillgängliga. Om ett index inte ska användas i den gamla versionen av programmet än, skapas indexet vanligtvis under en schemalagd driftstopp. Samma sak händer när du tar bort ett index eller ändrar ett befintligt index. När du tar bort ett index blir det otillgängligt så fort det tas bort.
 
-### Indexhantering med blå-grön driftsättning {#index-management-with-blue-green-deployment}
+### Indexhantering med rullande distributioner {#index-management-with-rolling-deployments}
 
-Med blågröna installationer blir det inga driftstopp. Under en uppgradering körs både den gamla versionen (till exempel version 1) av programmet och den nya versionen (version 2) samtidigt mot samma databas. Om version 1 kräver att ett visst index är tillgängligt får detta index inte tas bort i version 2: indexet bör tas bort senare, till exempel i version 3, där det garanteras att version 1 av programmet inte längre körs. Dessutom bör program skrivas så att version 1 fungerar bra, även om version 2 körs, och om det finns index för version 2.
+Med rullande driftsättningar sker inga driftavbrott. Under en uppdatering körs både den gamla versionen (till exempel version 1) av programmet och den nya versionen (version 2) samtidigt mot samma databas. Om version 1 kräver att ett visst index är tillgängligt får detta index inte tas bort i version 2. Indexet bör tas bort senare, t.ex. i version 3, där det är garanterat att version 1 av programmet inte längre körs. Dessutom bör program skrivas så att version 1 fungerar bra, även om version 2 körs, och om det finns index för version 2.
 
 När uppgraderingen till den nya versionen är klar kan gamla index samlas in av systemet. De gamla indexen kan fortfarande finnas kvar en tid för att påskynda återställningen (om en återställning behövs).
 
