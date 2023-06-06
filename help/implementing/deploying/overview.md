@@ -3,9 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: Distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 4eb7b1a32f0e266f12f67fdd2d12935698eeac95
+source-git-commit: a70bd2ffddcfb729812620743ead7f57860457f3
 workflow-type: tm+mt
-source-wordcount: '3509'
+source-wordcount: '3541'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ I följande video visas en översikt på hög nivå över hur du distribuerar ko
 
 ### Distributioner via Cloud Manager {#deployments-via-cloud-manager}
 
+<!-- Alexandru: temporarily commenting this out, until I get some clarification from Brian 
+
+![image](https://git.corp.adobe.com/storage/user/9001/files/e91b880e-226c-4d5a-93e0-ae5c3d6685c8) -->
+
 Kunder distribuerar anpassad kod till molnmiljöer via Cloud Manager. Det bör noteras att Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling-funktionsmodellen, vilket är hur ett AEM as a Cloud Service program beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) i molnmiljöer kommer namnet att innehålla &quot;cp2fm&quot; och de transformerade paketen har alla metadata borttagna. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Detaljerad dokumentation om konverteraren kan [hittades här](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
 
 Innehållspaket som skrivits för AEM as a Cloud Service program måste ha en ren separation mellan oföränderligt och muterbart innehåll och Cloud Manager installerar bara det muterbara innehållet, och ett meddelande som:
@@ -63,7 +67,7 @@ Resten av detta avsnitt beskriver kompositionen och konsekvenserna av oförände
 
 Allt innehåll och all kod som lagras i den oföränderliga databasen måste checkas in i Git och distribueras via Cloud Manager. Kod distribueras med andra ord aldrig direkt till en AEM som körs, till skillnad från den aktuella AEM. Detta garanterar att koden som körs för en viss release i en molnmiljö är identisk, vilket eliminerar risken för oavsiktlig kodvariation i produktionen. Som ett exempel bör OSGI-konfigurationen implementeras för källkontroll i stället för att hanteras vid körning via AEM webbkonsols konfigurationshanterare.
 
-När programändringar på grund av det blå-gröna distributionsmönstret aktiveras av en växel kan de inte vara beroende av ändringar i den ändringsbara databasen, med undantag för tjänstanvändare, deras åtkomstkontrollistor, nodtyper och indexdefinitionsändringar.
+När programändringar på grund av distributionsmönstret aktiveras av en växel kan de inte vara beroende av ändringar i den ändringsbara databasen, med undantag för tjänstanvändare, deras åtkomstkontrollistor, nodtyper och indexdefinitionsändringar.
 
 För kunder med befintliga kodbaser är det viktigt att gå igenom den databasomstrukturering som beskrivs i AEM dokumentation för att se till att innehåll som tidigare fanns under /etc flyttas till rätt plats.
 
@@ -143,7 +147,7 @@ Repoinit är att föredra för de här användningsområdena för innehållsänd
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Så här skapar du repoinit-satser:
+Följ nedanstående procedur för att skapa repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
@@ -235,23 +239,23 @@ The following Maven `POM.xml` utdrag visar hur paket från tredje part kan bädd
 
 ## Hur rullande distributioner fungerar {#how-rolling-deployments-work}
 
-Precis som AEM uppdateringar distribueras kundreleaser med hjälp av en strategi för rullande driftsättning för att eliminera driftavbrott i utvecklarklustret under rätt omständigheter. Den allmänna händelsesekvensen beskrivs nedan, där **Blå** är den gamla versionen av kundkoden och **Grön** är den nya versionen. Både blått och grönt körs i samma version AEM koden.
+Precis som AEM uppdateringar distribueras kundreleaser med hjälp av en strategi för rullande driftsättning för att eliminera driftavbrott i utvecklarklustret under rätt omständigheter. Den allmänna händelsesekvensen beskrivs nedan, där noder med både den gamla och den nya versionen av kundkoden körs i samma version AEM koden.
 
-* Den blå versionen är aktiv och en release-kandidat för Green är inbyggd och tillgänglig
-* Om det finns nya eller uppdaterade indexdefinitioner bearbetas motsvarande index. Observera att den blå distributionen alltid använder de gamla indexen, medan den gröna alltid använder de nya indexen.
-* Grönt startar medan Blue fortfarande serverar
-* Blue is running and service while Green is being checking by health checks
-* Gröna noder som är klara att ta emot trafik och ersätta blå noder, som tas ned
-* Med tiden ersätts blå noder av gröna noder tills endast grönt finns kvar, vilket slutför distributionen
-* Allt nytt eller ändrat ändringsbart innehåll distribueras
+* Noder med den gamla versionen är aktiva och en release som kan användas för den nya versionen har skapats och blir tillgängliga.
+* Om det finns nya eller uppdaterade indexdefinitioner bearbetas motsvarande index. Observera att noder med den gamla versionen alltid använder de gamla indexen, medan noder med den nya versionen alltid använder de nya indexen.
+* Noder med den nya versionen startar medan äldre versioner fortfarande betjänar trafiken.
+* Noder med den gamla versionen körs och fortsätter att fungera medan noder med den nya versionen kontrolleras för beredskap via hälsokontroller.
+* Noder med den nya versionen som är klar tar emot trafik och ersätter noderna med den gamla versionen som nu visas.
+* Med tiden ersätts noderna med den gamla versionen av noderna med den nya versionen tills endast noder med nya versioner finns kvar, vilket slutför distributionen.
+* Allt nytt eller ändrat ändringsbart innehåll distribueras sedan.
 
 ## Index {#indexes}
 
-Nya eller ändrade index kommer att orsaka ytterligare ett indexerings- eller omindexeringssteg innan den nya (gröna) versionen kan ta över trafiken. Information om indexhantering i AEM as a Cloud Service finns i [den här artikeln](/help/operations/indexing.md). Du kan kontrollera statusen för indexeringsjobbet på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
+Nya eller ändrade index kommer att orsaka ytterligare ett indexerings- eller omindexeringssteg innan den nya versionen kan ta över trafik. Information om indexhantering i AEM as a Cloud Service finns i [den här artikeln](/help/operations/indexing.md). Du kan kontrollera statusen för indexeringsjobbet på Cloud Managers byggsida och får ett meddelande när den nya versionen är klar att börja trafikera.
 
 >[!NOTE]
 >
->Den tid som krävs för en rullande distribution varierar beroende på indexets storlek, eftersom den gröna versionen inte kan ta emot trafik förrän det nya indexet har genererats.
+>Den tid som krävs för en rullande distribution varierar beroende på indexets storlek, eftersom den nya versionen inte kan ta emot trafik förrän det nya indexet har genererats.
 
 För närvarande fungerar inte AEM as a Cloud Service med indexhanteringsverktyg som ACS Commons Sörja för läckage.
 
@@ -269,15 +273,15 @@ Dessutom bör den gamla versionen testas för kompatibilitet med nya ändringsba
 
 ### Tjänstanvändare och ACL-ändringar {#service-users-and-acl-changes}
 
-Ändring av tjänstanvändare eller åtkomstkontrollistor som behövs för att få tillgång till innehåll eller kod kan leda till fel i de äldre AEM versionerna, vilket ger åtkomst till innehållet eller koden för inaktuella tjänstanvändare. För att åtgärda detta är det en rekommendation att göra ändringar spridda över minst två versioner, där den första versionen fungerar som en brygga innan den rensas i den efterföljande versionen.
+Ändring av tjänstanvändare eller åtkomstkontrollistor som behövs för att få tillgång till innehåll eller kod kan leda till fel i de äldre AEM versionerna, vilket ger åtkomst till innehållet eller koden för inaktuella tjänstanvändare. Rekommendationen är att göra ändringar spridda över minst två versioner, där den första versionen fungerar som en brygga innan den rensas i den efterföljande versionen.
 
 ### Indexändringar {#index-changes}
 
-Om ändringar görs i index är det viktigt att den blå versionen fortsätter att använda sina index tills den avslutas, medan den gröna versionen använder sin egen ändrade indexuppsättning. Utvecklaren bör följa de tekniker för indexhantering som beskrivs [i den här artikeln](/help/operations/indexing.md).
+Om ändringar görs i index är det viktigt att den nya versionen fortsätter att använda sina index tills den avslutas, medan den gamla versionen använder sin egen ändrade indexuppsättning. Utvecklaren bör följa de tekniker för indexhantering som beskrivs [i den här artikeln](/help/operations/indexing.md).
 
 ### Konservativ kodning för återställningar {#conservative-coding-for-rollbacks}
 
-Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att en återställning till den blå versionen krävs. Det är klokt att se till att den blå koden är kompatibel med alla nya strukturer som skapas av den gröna versionen eftersom de nya strukturerna (allt innehåll som kan ändras) inte återställs. Om den gamla koden inte är kompatibel måste korrigeringar tillämpas i efterföljande kundreleaser.
+Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att en återställning till den gamla versionen krävs. Vi rekommenderar att du ser till att den nya koden är kompatibel med alla nya strukturer som skapas av den nya versionen eftersom de nya strukturerna (allt innehåll som kan ändras) inte återställs. Om den gamla koden inte är kompatibel måste korrigeringar tillämpas i efterföljande kundreleaser.
 
 ## Rapid Development Environment (RDE) {#rde}
 
