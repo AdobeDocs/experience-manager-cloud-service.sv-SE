@@ -4,7 +4,7 @@ description: Utnyttja åtgärdscentret för att enkelt vidta åtgärder i samban
 hidefromtoc: true
 hide: true
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
-source-git-commit: ca7cad567a5f83cd1edc14def6d961b8ba3b7f1f
+source-git-commit: 9302220536e7a541d44d96626c65de94ee5d64c3
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Om du vill konfigurera mottagning av e-postmeddelanden från Åtgärdscenter ska
 
 ## Detaljerat användarflöde {#detailed-user-flow}
 
-Om du klickar på e-postmeddelandet kommer du till Notiscenter, med en popup som visar sammanhanget för det meddelande du klickade på och i vissa fall länkar till ytterligare information som beskriver hur du ska vidta korrigerande åtgärder.
+Om du klickar på e-postmeddelandet kommer du till Åtgärdscenter, med en popup-meny som visar kontexten för det meddelande du klickade på och i vissa fall länkar till ytterligare information som beskriver hur du ska vidta korrigerande åtgärder.
 
 ![Incidentinformation](/help/operations/assets/incident-details.png)
 
@@ -64,7 +64,7 @@ Precis som alla supportärenden visas de i [Fliken Adobe Admin Console Supportä
 
 AEM as a Cloud Service har flera typer av meddelanden, men bara en delmängd visas i Åtgärdscenter, vilket framgår av tabellen nedan.
 
-| Meddelandetyp | Beskrivning | Konfigurera | Visas i Notiscenter |
+| Meddelandetyp | Beskrivning | Konfigurera | Visas i Åtgärdscenter |
 |---|---|---|---|
 | Driftincidenter | Kritiska incidenter som kräver omedelbara åtgärder | Användare tilldelad produktprofilen&quot;Incident Notification - Cloud Service&quot; | X |
 | Förebyggande rekommendationer | Optimeringar som ska planeras | Användare som är tilldelad produktprofilen &quot;Proactive Notification - Cloud Service&quot; | X |
