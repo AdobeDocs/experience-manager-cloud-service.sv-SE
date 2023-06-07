@@ -4,9 +4,9 @@ description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as
 feature: Content Fragments
 role: User
 exl-id: d12b1dda-85ce-4665-b8b1-915b74231bb8
-source-git-commit: 448851bdbcdf626ef1b8cf2765ba54bb0576bec8
+source-git-commit: e99522cb6221285b5b4de5f026dcc4d925035ec1
 workflow-type: tm+mt
-source-wordcount: '2058'
+source-wordcount: '2127'
 ht-degree: 3%
 
 ---
@@ -59,6 +59,7 @@ Om du vill ha hjälp med det här kan du förhandsvisa [Strukturträd](/help/sit
 >* [Content Fragments – konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
 >* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
+>* [Återanvänd innehållsfragment med MSM för resurser](/help/assets/reuse-assets-using-msm.md) (endast tillgängligt via **Resurser** konsol)
 
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som
@@ -112,6 +113,16 @@ Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta struktu
 >[!NOTE]
 >
 >AEM har också stöd för översättning av fragmentinnehåll. Se [Översätta resurser](/help/assets/translate-assets.md) för ytterligare information.
+
+## Publicera och förhandsgranska {#publish-and-preview}
+
+Precis som med allt innehåll vill du till slut publicera dina innehållsfragment på **[Publiceringstjänst](/help/overview/architecture.md#runtime-architecture)**.
+
+Innan dess kan du även förhandsgranska en upplevelse som levereras med innehållsfragment genom att [publicera dina innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md##publishing-and-previewing-a-fragment) till AEM **[Förhandsgranskningstjänst](/help/overview/architecture.md#runtime-architecture)**.
+
+>[!CAUTION]
+>
+>Publicera på **Förhandsgranskningstjänst** är bara tillgängligt från **Innehållsfragment** konsol.
 
 ## Innehållstyp {#content-type}
 

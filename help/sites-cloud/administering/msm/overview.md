@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: e99522cb6221285b5b4de5f026dcc4d925035ec1
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '2710'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,10 @@ Den här sidan ger en översikt över återanvändning av innehåll med MSM. Fö
 * [Konfigurera Live Copy-synkronisering](live-copy-sync-config.md)
 * [MSM-utrullningskonflikter](rollout-conflicts.md)
 * [MSM Best Practices](best-practices.md)
+
+>[!NOTE]
+>
+>MSM kan också användas för resurser, inklusive innehållsfragment. Mer information finns i [Återanvänd innehållsfragment med MSM för resurser](/help/assets/reuse-assets-using-msm.md) (endast tillgängligt via Resurskonsolen).
 
 ## Möjliga scenarier {#possible-scenarios}
 

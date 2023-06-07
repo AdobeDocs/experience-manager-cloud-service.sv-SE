@@ -4,9 +4,9 @@ description: Lär dig hur du använder konsolen Innehållsfragment för att hant
 feature: Content Fragments
 role: User
 exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
-source-git-commit: b351582a405f5c419f3aa386faddccd6ecef3a43
+source-git-commit: 6063c587c1d65587c44e551f3a5c2f3c34ced011
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '2071'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 
 >[!NOTE]
 >
->Innehållsfragment lagras som **Resurser**. De hanteras huvudsakligen från **Innehållsfragment** konsolen, men kan även hanteras från **Resurser** konsol.
+>Innehållsfragment lagras som **Resurser**. De hanteras huvudsakligen från **Innehållsfragment** konsolen, men kan även hanteras från [Resurser](/help/assets/content-fragments/content-fragments-managing.md) konsol.
 
 ## Konsolen Innehållsfragment {#content-fragments-console}
 
@@ -166,8 +166,8 @@ Vissa funktioner i det övre verktygsfältet finns i flera lägen:
 * De tre punkterna (**...**) ger åtkomst till ytterligare åtgärder:
    * **Uppdatera sidreferenser**
       * Detta uppdaterar eventuella sidreferenser.
-   * **[Snabbpublicering](#publishing-and-referencing-a-fragment)**
-   * **[Hantera publikation](#publishing-and-referencing-a-fragment)**
+   * **[Snabbpublicering](/help/assets/manage-publication.md#quick-publish)**
+   * **[Hantera publikation](/help/assets/manage-publication.md#manage-publication)**
 
 <!--
 This updates any page references and ensures that the Dispatcher is flushed as required. -->
@@ -238,36 +238,62 @@ Du kan också [associera innehåll](/help/sites-cloud/administering/content-frag
 
 Du kan visa och redigera egenskaperna för ett fragment med [Metadata](/help/sites-cloud/administering/content-fragments/content-fragments-metadata.md) -fliken.
 
-## Publicera och referera till ett fragment {#publishing-and-referencing-a-fragment}
+## Publicera och förhandsgranska ett fragment {#publishing-and-previewing-a-fragment}
+
+Du kan publicera dina innehållsfragment till:
+
+* den **[Publiceringstjänst](/help/overview/architecture.md#runtime-architecture)** - för fullständig, offentlig åtkomst
+
+* den **[Förhandsgranskningstjänst](/help/overview/architecture.md#runtime-architecture)** - förhandsgranska innehållet innan det är fullständigt tillgängligt
+
+   >[!CAUTION]
+   Publicera innehållsfragment till **Förhandsgranskningstjänst** är bara tillgängligt från [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md); med **Publicera** åtgärd.
+
+   >[!NOTE]
+   Mer information om förhandsvisningsmiljöerna finns i:
+   * [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#access-preview-service)
+   * [Konfigurera OSGi-inställningar för förhandsgranskningsnivån](/help/implementing/preview-tier/preview-tier-configuring-osgi.md#configuring-osgi-settings-for-the-preview-tier)
+   * [Förhandsvisa felsökning med Developer Console](/help/implementing/preview-tier/preview-tier-configuring-osgi.md#debugging-preview-using-the-developer-console)
+
+
+Publicera dina innehållsfragment med **Publicera** i verktygsfältet i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#actions-selected-content-fragment):
 
 >[!CAUTION]
 Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
 Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
-Innehållsfragment måste publiceras för användning i publiceringsmiljön.
+1. Markera ett eller flera av fragmenten i listan.
 
-* Från **Publicera** i verktygsfältet i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#actions-selected-content-fragment)
-   * **Nu** - När fragmentet har bekräftats publiceras det omedelbart
-   * **Schema** - du kan välja datum och tid när fragmentet ska publiceras
+1. Välj **Publicera** och sedan något av följande för att öppna rätt dialogruta:
 
-   När det behövs måste du ange **Aktiveringsdatum** och vilka referenser som ska publiceras. Till exempel:
+   * **Nu** - välj antingen **Publiceringstjänst** eller **Förhandsgranskningstjänst**; efter bekräftelse publiceras fragmentet omedelbart
+   * **Schema** - förutom den obligatoriska tjänsten kan du även välja datum och tid då fragmentet ska publiceras
+
+   Vid behov måste du ange vilka referenser som ska publiceras. Som standard publiceras referenser även till förhandsgranskningstjänsten för att säkerställa att det inte finns någon brytning i innehållet.
+För en schemalagd publiceringsbegäran:
    ![Dialogrutan Publicera](assets/cfm-publish-01.png)
 
-* Från [Innehållsfragmentsredigerare](#toolbar-actions-in-the-content-fragment-editor)
-   * [**Snabbpublicering**](/help/assets/manage-publication.md#quick-publish)
-   * [**Hantera publikation**](/help/assets/manage-publication.md#manage-publication)
+1. Bekräfta publiceringsåtgärden.
 
-Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
+Du kan även publicera på **Publiceringstjänst** från [Innehållsfragmentsredigerare](#toolbar-actions-in-the-content-fragment-editor) med:
+* **Snabbpublicering**
+* **Hantera publikation**
+
+>[!NOTE]
+Efter [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
 
 >[!CAUTION]
 När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i avsnittet även påverkar de refererade sidorna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 
-Om du vill avpublicera innehållsfragment markerar du ett eller flera fragment och sedan **Avpublicera**.
+Om du vill avpublicera innehållsfragment markerar du ett eller flera fragment och sedan **Avpublicera** i verktygsfältet i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#actions-selected-content-fragment). Du kan välja **Nu** eller **Schemalagd**.
+
+När dialogrutan öppnas kan du välja rätt tjänst:
+![Dialogrutan Avpublicera](assets/cfm-unpublish-01.png)
 
 >[!NOTE]
-The **Avpublicera** åtgärden visas när publicerade fragment är tillgängliga.
+The **Avpublicera** åtgärden visas bara när publicerade fragment är tillgängliga.
 
 >[!CAUTION]
 Om fragmentet redan refereras från ett annat fragment, eller från en sida, visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta.

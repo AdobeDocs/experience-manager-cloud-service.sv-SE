@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: ca58b4df232dc658d7843ede2386710c4da43fcb
 workflow-type: tm+mt
-source-wordcount: '4905'
+source-wordcount: '5037'
 ht-degree: 5%
 
 ---
@@ -411,6 +411,10 @@ Du kan göra följande med de resurser du har sökt i [!DNL Experience Manager]:
 * Hämta en eller flera resurser.
 * Använd Skrivbordsåtgärder för att öppna resurserna i skrivbordsappen.
 * Skapa smarta samlingar.
+* Skapa en version
+* Starta ett arbetsflöde
+* Relatera eller inte relatera tillgångar
+* Använd filter på panelen Filter som visas automatiskt när sökningen har slutförts för att begränsa sökresultaten.
 
 ### Sortera sökresultat {#sort}
 
@@ -450,6 +454,18 @@ En samling är en ordnad uppsättning resurser som kan innehålla resurser från
 * En dynamisk lista (smart samling) som fyller i resurser i samlingen baserat på sökvillkor.
 
 Du kan skapa smarta samlingar baserat på sökvillkoren. På panelen **[!UICONTROL Filters]** väljer du **[!UICONTROL Files]** och klickar på **[!UICONTROL Save Smart Collection]**. Läs mer i [Hantera samlingar](/help/assets/manage-collections.md).
+
+### Skapa en version {#create-version}
+
+Skapa en version för resurserna som visas i sökresultaten. Markera resursen och klicka på **[!UICONTROL Create]** > **[!UICONTROL Version]**. Lägg till en valfri etikett eller kommentar och klicka på **[!UICONTROL Create]**. Du kan också välja flera resurser och skapa versioner för dem samtidigt.
+
+### Skapa ett arbetsflöde {#create-workflow}
+
+På samma sätt som när du skapar en version kan du också skapa ett arbetsflöde för resurserna som visas i sökresultaten. Markera resursen/resurserna och klicka på **[!UICONTROL Create]** > **[!UICONTROL Workflow]**. Välj arbetsflödesmodell, ange en rubrik för arbetsflödet och klicka på **[!UICONTROL Start]**.
+
+### Relatera och inte relatera tillgångar {#relate-unrelate-assets}
+
+Relatera och dela upp resurser som visas i sökresultaten. Markera resursen/resurserna och klicka på **[!UICONTROL Relate]** eller **[!UICONTROL Unrelate]**.
 
 ## Oväntade sökresultat och problem {#unexpected-results}
 

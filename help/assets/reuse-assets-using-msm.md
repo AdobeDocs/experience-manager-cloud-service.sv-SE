@@ -6,9 +6,9 @@ mini-toc-levels: 1
 role: User, Admin, Architect
 feature: Asset Management,Multi Site Manager
 exl-id: a71aebdf-8e46-4c2d-8960-d188b14aaae9
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: ca58b4df232dc658d7843ede2386710c4da43fcb
 workflow-type: tm+mt
-source-wordcount: '3162'
+source-wordcount: '3291'
 ht-degree: 10%
 
 ---
@@ -25,6 +25,16 @@ MSM-funktionalitet (Multi Site Manager) i [!DNL Adobe Experience Manager] gör a
 * Skapa resurser en gång och gör sedan kopior av dessa resurser för återanvändning i andra delar av webbplatsen.
 * Håll flera kopior synkroniserade och uppdatera originalkopian en gång för att överföra ändringarna till de underordnade kopiorna.
 * Gör lokala ändringar genom att tillfälligt eller permanent avbryta länkningen mellan överordnade och underordnade resurser.
+
+>[!NOTE]
+>
+>MSM för [!DNL Assets] innehåller innehållsfragment som lagras som [!DNL Assets] (även om det betraktas som en webbplatsfunktion).
+
+>[!CAUTION]
+>
+>MSM för innehållsfragment är bara tillgängligt när du använder innehållsfragment via **[!UICONTROL Assets]** konsol.
+>
+>MSM-funktionaliteten är *not* är tillgängliga när du använder **[!UICONTROL Content Fragments]** konsol.
 
 ## Förstå fördelarna med och begreppen i MSM {#concepts}
 
@@ -43,7 +53,7 @@ MSM upprätthåller en aktiv relation mellan källresursen och dess livekopior s
 
 **Live copy:** Kopian av källresurserna/källmapparna som är synkroniserad med källan. Live-kopior kan vara en källa till fler live-kopior. Se hur du skapar LC:er.
 
-**Arv:** En länk/referens mellan en resurs/mapp för en live-kopia och dess källa som systemet använder för att komma ihåg var uppdateringarna ska skickas. Arv finns på detaljnivå för metadatafält. Arv kan tas bort för selektiva metadatafält samtidigt som den aktiva relationen mellan källan och dess aktiva kopia bevaras.
+**Arv:** En länk/referens mellan en resurs/mapp för en live-kopia och dess källa som systemet använder för att komma ihåg var uppdateringarna ska skickas. Arv finns på detaljnivå för metadatafält, även varianter och fält för innehållsfragment. Arv kan tas bort för markerade objekt samtidigt som den aktiva relationen mellan källan och dess aktiva kopia bevaras.
 
 **Utrullning:** En åtgärd som knuffar ändringar som gjorts i källan nedåt till dess aktiva kopior. Det går att uppdatera en eller flera live-kopior på en gång med en utrullningsåtgärd. Se utrullning.
 
@@ -66,7 +76,7 @@ Om du vill skapa en live-kopia av en eller flera källresurser eller mappar gör
 * Metod 1: Välj källresurserna och klicka på **[!UICONTROL Create]** > **[!UICONTROL Live Copy]** i verktygsfältet högst upp.
 * Metod 2: I [!DNL Experience Manager] användargränssnitt, klicka **[!UICONTROL Create]** > **[!UICONTROL Live Copy]** i gränssnittets övre högra hörn.
 
-Du kan skapa live-kopior av en resurs eller en mapp åt gången. Du kan skapa live-kopior som är härledda från en resurs eller en mapp som är en live-kopia. Content Fragments (CF) stöds inte för användningsfallet. När de försöker skapa sina live-kopior kopieras CF-filer som de är utan någon relation. De kopierade CF:erna är en ögonblicksbild i tid och uppdateras inte när ursprungliga CF:er uppdateras.
+Du kan skapa live-kopior av en resurs eller en mapp åt gången. Du kan skapa live-kopior som är härledda från en resurs eller en mapp som är en live-kopia.
 
 Så här skapar du live-kopior med den första metoden:
 
@@ -233,6 +243,38 @@ Om du vill se status och information om en synkroniseringsåtgärd läser du [In
 >
 >Om relationen är inaktiverad är synkroniseringsåtgärden inte tillgänglig i verktygsfältet. Synkroniseringsåtgärden är tillgänglig i referensfältet, men ändringarna sprids inte ens när en lyckad utrullning har slutförts.
 
+## Avbryta och återaktivera arv för enskilda objekt {#canceling-reenabling-inheritance-individual-items}
+
+Du kan avbryta Live Copy-arvet för en:
+
+* metadatafält
+* Variation i innehållsfragment
+* Datafält för innehållsfragment
+
+Det innebär att objektet inte längre är synkroniserat med källkomponenten. Du kan aktivera arv vid ett senare tillfälle om det behövs.
+
+### Avbryt arv {#cancel-inheritance}
+
+Så här avbryter du arv:
+
+1. Välj **Avbryt arv** -ikon, bredvid önskat objekt:
+
+   ![Synkroniseringsåtgärden hämtar de ändringar som gjorts i källan](assets/cancel-inheritance-icon.png)
+
+1. Bekräfta åtgärden med Ja i dialogrutan Avbryt arv.
+
+### Återaktivera arv {#reenable-inheritance}
+
+Så här återaktiverar du arv:
+
+1. Om du vill aktivera arv för ett objekt väljer du **Återaktivera arv** -ikon bredvid önskat objekt:
+
+   ![Synkroniseringsåtgärden hämtar de ändringar som gjorts i källan](assets/re-enable-inheritance-icon.png)
+
+   >[!NOTE]
+   >
+   >När du återaktiverar arv synkroniseras inte objektet automatiskt med källan. Du kan begära en synkronisering manuellt om det behövs.
+
 ## Pausa och återuppta relation {#suspend-resume}
 
 Du kan tillfälligt inaktivera relationen för att förhindra att en live-kopia tar emot ändringar som gjorts i källresursen eller källmappen. Relationen kan även återupptas för live-kopiering för att börja ta emot ändringarna från källan.
@@ -319,11 +361,13 @@ I fler scenarier, MSM för [!DNL Assets] matchar MSM för Sites-funktionaliteten
 * Det går inte att konfigurera MSM-lås på sidegenskaper i MSM för [!DNL Assets].
 * För MSM för [!DNL Assets], använd bara **[!UICONTROL Standard rollout config]**. Övriga utrullningskonfigurationer är inte tillgängliga för MSM för [!DNL Assets].
 
+>[!NOTE]
+>
+>Kom ihåg att MSM för innehållsfragment (nås via **[!UICONTROL Assets]** console) använder Assets-funktionen, Detta beror på att de lagras som resurser (även om de betraktas som en webbplatsfunktion).
+
 ## Begränsningar och kända problem med MSM för [!DNL Assets] {#limitations}
 
 Följande begränsningar gäller för MSM för [!DNL Assets].
-
-* Innehållsfragment stöds inte. När du försöker skapa live-kopior kopieras innehållsfragment som de är utan någon relation. De kopierade innehållsfragmenten är en ögonblicksbild i tid och uppdateras inte när du uppdaterar de ursprungliga innehållsfragmenten.
 
 * MSM fungerar inte när återkoppling av metadata är aktiverat. Vid tillbakaskrivning avbryts arvet.
 
@@ -341,3 +385,4 @@ Följande begränsningar gäller för MSM för [!DNL Assets].
 * [Söka efter fasetter](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
+* [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)

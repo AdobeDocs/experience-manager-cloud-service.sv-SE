@@ -3,9 +3,9 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: 0cac51564468c414866d29c8f0be82f77625eaeb
+source-git-commit: c3d7cd591bce282bb4d3b5b5d0ee2e22fd337a83
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1687'
 ht-degree: 1%
 
 ---
@@ -353,7 +353,11 @@ Om du vill hantera cachen globalt kan du [konfigurera OSGi-inställningarna](/he
 
 >[!NOTE]
 >
->OSGi-konfigurationen passar bara för publiceringsinstanser. Konfigurationen finns på författarinstanser, men ignoreras.
+>För cachekontroll är OSGi-konfigurationen endast lämplig för publiceringsinstanser. Konfigurationen finns på författarinstanser, men ignoreras.
+
+>[!NOTE]
+>
+>The **Konfiguration av beständig frågetjänst** används också för [konfigurera frågesvarskoden](#configuring-query-response-code).
 
 Standardkonfigurationen för OSGi för publiceringsinstanser:
 
@@ -369,6 +373,26 @@ Standardkonfigurationen för OSGi för publiceringsinstanser:
    {style="table-layout:auto"}
 
 * Om den inte är tillgänglig använder OSGi-konfigurationen [standardvärden för publiceringsinstanser](#publish-instances).
+
+## Konfigurera frågesvarskoden {#configuring-query-response-code}
+
+Som standard är `PersistedQueryServlet` skickar en `200` svar när den kör en fråga, oavsett det faktiska resultatet.
+
+Du kan [konfigurera OSGi-inställningarna](/help/implementing/deploying/configuring-osgi.md) för **Konfiguration av beständig frågetjänst** för att kontrollera vilken statuskod som returneras av `/execute.json/persisted-query` slutpunkten, om det finns ett fel i den beständiga frågan.
+
+>[!NOTE]
+>
+>The **Konfiguration av beständig frågetjänst** används också för [hantera cache](#cache-osgi-configration).
+
+Fältet `Respond with application/graphql-response+json` (`responseContentTypeGraphQLResponseJson`) kan definieras enligt behov:
+
+* `false` (standardvärde): Det spelar ingen roll om den beständiga frågan lyckas eller inte. The `/execute.json/persisted-query` returnerar statuskoden `200` och `Content-Type` returnerad rubrik `application/json`.
+
+* `true`: Slutpunkten returnerar `400` eller `500` om det finns någon form av fel när den beständiga frågan körs. Även den returnerade `Content-Type` kommer att `application/graphql-response+json`.
+
+   >[!NOTE]
+   >
+   >Mer information finns på https://graphql.github.io/graphql-over-http/draft/#sec-Status-Codes
 
 ## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
 

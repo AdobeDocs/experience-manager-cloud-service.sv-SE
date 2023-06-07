@@ -2,10 +2,10 @@
 title: Arbeta med innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
-source-git-commit: ca41657057211cb0736a866771253b166fa139b4
+source-git-commit: d452690b03ed32701030476572c5db9ddb1fbc2c
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 3%
+source-wordcount: '2135'
+ht-degree: 2%
 
 ---
 
@@ -46,6 +46,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 * [Använda associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) - lägga till associerat innehåll
 * [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md) - visa och redigera fragmentegenskaperna
 * Använd [Content Fragments, tillsammans med GraphQL, för att leverera innehåll](/help/assets/content-fragments/content-fragments-graphql.md) för användning i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
+* [Återanvänd innehållsfragment med MSM för resurser](#reusing-content-fragments-with-msm-assets)
 
 >[!NOTE]
 >
@@ -109,6 +110,16 @@ Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta struktu
 >[!NOTE]
 >
 >AEM har också stöd för översättning av fragmentinnehåll. Se [Översätta resurser](/help/assets/translate-assets.md) för ytterligare information.
+
+## Återanvända innehållsfragment med MSM för resurser {#reusing-content-fragments-with-msm-assets}
+
+Vid åtkomst via **Resurser** kan du använda MSM och skapa Live-kopior för dina fragment.
+
+Mer information finns i [Återanvänd innehållsfragment med MSM för resurser](/help/assets/reuse-assets-using-msm.md).
+
+>[!CAUTION]
+>
+>Om du vill använda MSM (som skapar kopior av innehållsfragment) kan du använda **Unik** begränsningar bör tas bort från alla datatyper som används i respektive [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md).
 
 ## Innehållstyp {#content-type}
 

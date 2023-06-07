@@ -4,9 +4,9 @@ description: Lär dig hur Content Fragment Models fungerar som grund för dina C
 feature: Content Fragments
 role: User
 exl-id: 24b1806f-2e8c-49ec-8cb7-a66a3cbe91cd
-source-git-commit: f1a97c4bbb07accb33aa449a07ced0c0ac255b9e
+source-git-commit: d452690b03ed32701030476572c5db9ddb1fbc2c
 workflow-type: tm+mt
-source-wordcount: '2898'
+source-wordcount: '2939'
 ht-degree: 2%
 
 ---
@@ -181,6 +181,10 @@ Innehållet (för det specifika fältet) måste vara unikt för alla innehållsf
    >[!NOTE]
    >
    >Variationer kan ha samma *unik* som variationer av samma fragment, men inte samma värde som används i andra variationer av fragment.
+
+   >[!CAUTION]
+   >
+   >Om du vill använda MSM (som skapar kopior av innehållsfragment) kan du använda **Unik** begränsningar ska tas bort från alla datatyper som används i respektive Content Fragment Models. MSM för innehållsfragment är bara tillgängligt från **Resurser** konsol.
 
 * Se **[Innehållsreferens](#content-reference)** om du vill ha mer information om den specifika datatypen och dess egenskaper.
 

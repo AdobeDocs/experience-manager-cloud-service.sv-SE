@@ -1,21 +1,20 @@
 ---
 title: Hantera publikation
 description: Publicera eller avpublicera material på Experience Manager Assets, Dynamic Media och Brand Portal
-contentOwner: Vishabh Gupta
 mini-toc-levels: 1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User, Architect, Admin
 exl-id: 691a0925-0061-4c62-85ac-8257b96dddf2
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: 8466595f988d3a10806d4654885c14a622d14057
 workflow-type: tm+mt
-source-wordcount: '1381'
-ht-degree: 5%
+source-wordcount: '1548'
+ht-degree: 2%
 
 ---
 
 # Hantera publicering i Experience Manager Assets {#manage-publication-in-aem}
 
-Som en [!DNL Adobe Experience Manager Assets] kan du publicera resurser och mappar som innehåller resurser från författarinstansen till [!DNL Experience Manager Assets], [!DNL Dynamic Media]och [!DNL Brand Portal]. Du kan även schemalägga publiceringsarbetsflödet för en resurs eller mapp till ett senare datum eller en senare tid. När de har publicerats kan användarna komma åt och distribuera resurserna vidare till andra användare. Som standard kan du publicera resurser och mappar till [!DNL Experience Manager Assets]. Du kan dock konfigurera [!DNL Experience Manager Assets] för att aktivera publicering till [[!DNL Dynamic Media]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm.html) och [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html).
+Som en [!DNL Adobe Experience Manager Assets] kan du publicera resurser och mappar som innehåller resurser från författarinstansen till [!DNL Experience Manager Assets], [!DNL Dynamic Media]och [!DNL Brand Portal]. Du kan även schemalägga publicering av en resurs eller mapp vid ett senare datum eller tid. När de har publicerats kan användarna komma åt och distribuera resurserna vidare till andra användare. Som standard kan du publicera resurser och mappar till [!DNL Experience Manager Assets]. Du kan dock konfigurera [!DNL Experience Manager Assets] för att aktivera publicering till [[!DNL Dynamic Media]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm.html) och [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html).
 
 Du kan publicera eller avpublicera resurser på resurs- eller mappnivå med antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]** finns i [!DNL Experience Manager Assets] gränssnitt. Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL Experience Manager Assets]återspeglas inte ändringarna i publiceringsinstansen förrän du publicerar om från [!DNL Experience Manager Assets]. Det ser till att ändringar som pågår inte är tillgängliga i publiceringsinstansen. Endast godkända ändringar som publiceras av en administratör är tillgängliga i publiceringsinstansen.
 
@@ -24,6 +23,7 @@ Du kan publicera eller avpublicera resurser på resurs- eller mappnivå med anti
 * [Publicera resurser senare](#publish-assets-later)
 * [Publicera material i Dynamic Media](#publish-assets-to-dynamic-media)
 * [Publicera resurser på varumärkesportalen](#publish-assets-to-brand-portal)
+* [Begär publikation](#request-publication)
 * [Begränsningar och tips](#limitations-and-tips)
 
 ## Publicera resurser med Snabbpublicering {#quick-publish}
@@ -61,7 +61,7 @@ Klicka på **[!UICONTROL Next]**. Baserat på urvalet **[!UICONTROL Scope]** -fl
 
 ### Lägg till innehåll {#add-content}
 
-Publicera till [!DNL Experience Manager Assets] Med kan du lägga till mer innehåll (resurser och mappar) i publiceringslistan. Du kan lägga till fler resurser eller mappar i listan i alla databaser. Klicka på **[!UICONTROL Add Content]** för att lägga till mer innehåll.
+Publicera till [!DNL Experience Manager Assets] Med kan du lägga till mer innehåll (resurser och mappar) i publiceringslistan. Du kan lägga till fler resurser eller mappar i listan i alla databaser. Klicka **[!UICONTROL Add Content]** för att lägga till mer innehåll.
 
 Du kan lägga till flera resurser från en mapp eller lägga till flera mappar samtidigt. Men du kan inte lägga till resurser från flera mappar samtidigt.
 
@@ -96,7 +96,7 @@ När du har använt filtren klickar du på **[!UICONTROL OK]** och klicka sedan 
 
 I bilden ovan kan du se olika värden för **[!UICONTROL Publish Target]** -attribut. Låt oss komma ihåg att du har valt att publicera till [!DNL Experience Manager Assets] (`Destination: Publish`). Varför visar det då att bara en mapp och en resurs publiceras till `AEM`, och de andra två resurserna publiceras till båda `AEM` och `Dynamic Media`?
 
-Här måste du känna till mappegenskapernas roll. En mapp **[!UICONTROL Dynamic Media Publishing mode]** egenskapen spelar en viktig roll i publikationen. Om du vill visa egenskaperna för en mapp markerar du en mapp och klickar på **[!UICONTROL Properties]** i verktygsfältet. Information om en resurs finns i egenskaperna för dess överordnade mapp.
+Här måste du känna till mappegenskapernas roll. En mapps **[!UICONTROL Dynamic Media Publishing mode]** egenskapen spelar en viktig roll i publikationen. Om du vill visa en mapps egenskaper markerar du en mapp och klickar på **[!UICONTROL Properties]** i verktygsfältet. Information om en resurs finns i egenskaperna för dess överordnade mapp.
 
 I följande tabell förklaras hur publiceringen sker beroende på den definierade **[!UICONTROL Destination]** och **[!UICONTROL Dynamic Media Publish mode]**:
 
@@ -177,24 +177,27 @@ Du kan publicera resurser, mappar och samlingar i [!DNL Experience Manager Asset
 * [Publicera mappar på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/publish-to-brand-portal.html?lang=en#publish-folders-to-brand-portal)
 * [Publicera samlingar på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/publish-to-brand-portal.html?lang=en#publish-collections-to-brand-portal)
 
+## Begär publikation {#request-publication}
+
+The `Request Publication` hjälper till att autentisera resursarbetsflöden innan de publiceras på [!DNL AEM] Resursmiljö. [!DNL AEM] ger olika behörighetsnivåer för olika användare. Du kan vara en *medverkande* som överför resurser men inte kan publicera dem förrän överföringarna har verifierats. Dessutom är *Administratör* kan du hantera arbetsflöden för att läsa och skriva resurser.
+
+Publiceringsalternativet för begäran är tillgängligt för följande användare:
+* **Medarbetare:** Om du är en användare som kan bidra till [!DNL AEM] Resurser, sedan har du begränsad tillgång till [!DNL AEM] Arbetsflöde för resurser. `Manage publication` knappen är dold för dig. Som deltagare kan du bara bidra genom att lägga till resurser, men du kan inte publicera dem eller ha läsåtkomst till arbetsflödet.
+
+* **Arbetsflödesanvändare:** Den här användaren kan inte publicera resurser men har läsåtkomst till arbetsflödet. Som arbetsflödesanvändare kan du:
+   * begära publicering
+   * visa `Manage publication` knapp
+   * schemalägga arbetsflödet och se alternativen `schedule now` och `schedule later`
+
+* **Administratör:** Som en administratörstyp kan du hantera övergripande arbetsflödessteg för resurserna. `Manage publication` knappen är synlig för dig. Om målet `publish` är markerat kan du schemalägga en resurs senare för arbetsflödessteget.
+
+>[!NOTE]
+>
+>If [!DNL Dynamic Media] är markerat som mål och arbetsflödessteget är inaktiverat för **arbetsflödesanvändare** och **admin** -användare.
+
 ## Begränsningar och tips {#limitations-and-tips}
 
-* Alternativet att [!UICONTROL Manage Publication] är bara tillgängligt för användarkonton som har replikeringsbehörigheter.
+* `Manage publication` är tillgängligt för användare som har minst läsbehörighet till arbetsflödet.
 * Tomma mappar publiceras inte.
 * Om du publicerar en resurs som bearbetas publiceras bara det ursprungliga innehållet. Återgivningarna saknas. Vänta tills bearbetningen är klar och publicera eller publicera om resursen när bearbetningen är klar.
 * När du avpublicerar en komplex resurs avpublicerar du bara resursen. Undvik att avpublicera referenserna eftersom de kan refereras av andra publicerade resurser.
-
-**Se även**
-
-* [Översätt resurser](translate-assets.md)
-* [HTTP API för Assets](mac-api-assets.md)
-* [Resurser som stöds i filformat](file-format-support.md)
-* [Söka efter resurser](search-assets.md)
-* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Materialrapporter](asset-reports.md)
-* [Metadata-scheman](metadata-schemas.md)
-* [Hämta resurser](download-assets-from-aem.md)
-* [Hantera metadata](manage-metadata.md)
-* [Söka efter fasetter](search-facets.md)
-* [Hantera samlingar](manage-collections.md)
-* [Import av massmetadata](metadata-import-export.md)

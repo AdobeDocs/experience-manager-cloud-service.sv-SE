@@ -5,9 +5,9 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: cdc86e5661ec90f96f670e777a9c98b3dcd4a7ac
+source-git-commit: b6205858f3129cb7488b55192088ec0442a28716
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -101,11 +101,11 @@ Om du väljer ett visst fragment öppnas ett verktygsfält som fokuserar på de 
 ![Konsol för innehållsfragment - verktygsfält för ett valt fragment](assets/cfc-fragment-toolbar.png)
 
 * **Öppna**
-* **Publicera** (och **Avpublicera**)
+* **[Publicera](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#publishing-and-previewing-a-fragment)** (och **[Avpublicera](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#unpublishing-a-fragment)**)
 * **Kopiera**
 * **Flytta**
 * **Byt namn**
-* **Ta bort**
+* **[Ta bort](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#deleting-a-fragment)**
 
 >[!NOTE]
 >
@@ -124,6 +124,11 @@ Huvudpanelen/den högra panelen (tabellvyn) i konsolen innehåller en rad inform
 Vid hovring över mappnamnet visas JCR-sökvägen.
 * **Status**
    * Endast information
+* **Förhandsgranska**
+   * Endast information:
+      * **Synkroniserad**: Innehållsfragmentet är synkroniserat på **Upphovsman** och **Förhandsgranska** tjänster.
+      * **Slut på synkronisering**: Innehållsfragmentet är inte synkroniserat på **Upphovsman** och ****Förhandsgranska** tjänster. Du måste **Publicera** till **Förhandsgranska** för att säkerställa att de två instanserna återgår till att vara synkroniserade.
+      * blank: Innehållsfragmentet finns inte på **Förhandsgranska** service.
 * **Ändrad**
    * Endast information
 * **Ändrad av**

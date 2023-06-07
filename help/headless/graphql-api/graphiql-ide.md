@@ -3,9 +3,9 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: 4f2b5fa59d3c68dd1244fa5b2a8dc30d848ba4a4
+source-git-commit: 6063c587c1d65587c44e551f3a5c2f3c34ced011
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,6 @@ En implementering av standarden [GraphiQL](https://graphql.org/learn/serving-ove
 >[!NOTE]
 >Du måste ha [konfigurerade dina slutpunkter](/help/headless/graphql-api/graphql-endpoint.md) i [konfigurationsläsare](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md) innan du använder GraphiQL IDE.
 
-
 The **GraphiQL** kan du testa och felsöka dina GraphQL-frågor genom att aktivera:
 * välj **Slutpunkt** lämplig för platskonfigurationen som du vill använda för dina frågor
 * direkt mata in nya frågor
@@ -31,7 +30,7 @@ The **GraphiQL** kan du testa och felsöka dina GraphQL-frågor genom att aktive
 * köra dina frågor för att omedelbart se resultatet
 * hantera **Frågevariabler**
 * spara och hantera **Beständiga frågor**
-* publicera eller avpublicera, **Beständiga frågor** (till exempel till/från `dev-publish`)
+* publicera eller avpublicera, **Beständiga frågor**, antingen **Publicera** eller **Förhandsgranska** Service. till exempel till/från `dev-publish`
 * se **Historik** av dina tidigare frågor
 * använder **Dokumentationsutforskaren** få tillgång till dokumentationen, hjälper dig att lära dig vilka metoder som finns tillgängliga.
 
@@ -131,13 +130,27 @@ Cacheminnen kan fortsätta att fungera som cachelagrat svar i händelse av ett f
 
 1. Välj **Spara** för att behålla ändringarna.
 
-## Publicera beständiga frågor {#publishing-persisted-queries}
+## Publicera och förhandsgranska beständiga frågor {#publishing-previewing-persisted-queries}
 
-När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda **Publicera** och **Avpublicera** åtgärder. Detta aktiverar dem till din publiceringsmiljö (till exempel `dev-publish`) för enkel åtkomst av dina program vid testning.
+När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda **Publicera** åtgärd.
+
+Detta aktiverar frågan till den miljö du väljer. Du kan välja **Publicera** miljö (till exempel `dev-publish`) eller **Förhandsgranska** -miljö för enkel åtkomst av dina program vid testning.
+
+![GraphiQL -Published Persisted Query](assets/cfm-graphiql-publish.png "GraphiQL - Publicera beständig fråga")
 
 >[!NOTE]
 >
 >Definitionen av den beständiga frågans cache `Time To Live` {&quot;cache-control&quot;:&quot;parameter&quot;:value} har standardvärdet 2 timmar (7 200 sekunder).
+
+## Avpublicerar beständiga frågor {#unpublishing-persisted-queries}
+
+När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda **Avpublicera** åtgärd.
+
+Detta inaktiverar frågan från den miljö du väljer; antingen **Publicera** eller **Förhandsgranska** miljö.
+
+>[!NOTE]
+>
+>Du bör också se till att du har gjort nödvändiga ändringar i klientprogrammet för att undvika potentiella problem.
 
 ## Kopiera URL för direktåtkomst till frågan {#copy-url}
 

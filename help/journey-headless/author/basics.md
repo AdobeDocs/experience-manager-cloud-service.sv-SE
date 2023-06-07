@@ -2,9 +2,9 @@
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
-source-git-commit: 60ddcb3f2fd2219b0b1672791703582920825e81
+source-git-commit: 37a2afca3131acceebbd7732844fa5953a7fd4fc
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1711'
 ht-degree: 1%
 
 ---
@@ -28,16 +28,19 @@ Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du s
 
 Innan du får grepp om innehållsfragment finns det en (mycket) snabb introduktion till att använda AEM...men ingenting ersätter faktiskt upplevelsen av att logga in och försöka använda systemet.
 
-### Skapa och publicera {#author-preview-publish}
+### Skapa, förhandsgranska och publicera {#author-preview-publish}
 
-En AEM består vanligtvis av minst två miljöer:
+En AEM brukar bestå av tre miljöer:
 
 * Författare
 * Publicera
+* Förhandsgranska
 
 Du loggar in på och använder redigeringsmiljön för att generera ditt innehåll. När det är klart publicerar du sedan innehållet så att det blir allmänt tillgängligt. För hemlösa är detta för andra program, för webbsidor är det för läsare på webben.
 
 Mer information finns i Authoring Concepts.
+
+Från **Innehållsfragment** konsolen kan du även publicera på **Förhandsgranskningstjänst**, för testning och förhandsgranskning, före publicering. Se Publicera och förhandsgranska ett fragment.
 
 ### Loggar in {#signing-in}
 
@@ -263,9 +266,13 @@ Modeller för innehållsfragment är faktiskt viktiga för dina innehållsfragme
 
 När du är klar med fragmentet kan du **Publicera** så att den blir tillgänglig för headless-applikationer.
 
-Publiceringsåtgärderna är tillgängliga i redigeraren (eller från verktygsfältet i **Innehållsfragment** konsolen eller **Resurser** konsol):
+Publiceringsåtgärderna är tillgängliga i redigeraren:
 
 ![Content Fragment Editor - My Fragment](/help/journey-headless/author/assets/headless-journey-author-content-fragment-06.png)
+
+>[!NOTE]
+>
+>Du kan även publicera ditt fragment från **Resurser** eller **Innehållsfragment** konsol.
 
 ## What&#39;s Next {#whats-next}
 
@@ -289,21 +296,26 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
 
    * [Järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector)
 
-   * Publicering
-
-      * [Snabbpublicering](/help/assets/manage-publication.md#quick-publish)
-
-      * [Hantera publikation](/help/assets/manage-publication.md#manage-publication)
-
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
 
    * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md)
 
-      * [Använd konfigurationen i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
+   * [Använd konfigurationen i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
-      * [Skapa ett innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+   * [Skapa ett innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+
    * [Variationer - Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md)
 
+   * Publicering
+
+      * från redigeraren, eller **Resurser** konsol
+
+         * [Snabbpublicering](/help/assets/manage-publication.md#quick-publish)
+
+         * [Hantera publikation](/help/assets/manage-publication.md#manage-publication)
+      * Från **Innehållsfragment** Konsol
+
+         * [Publicera och förhandsgranska ett innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#publishing-and-previewing-a-fragment)
    * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
 
       * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#data-types)
@@ -311,6 +323,7 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
       * [Modeller för innehållsfragment - egenskaper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#properties)
 
       * [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
+
 
 
 * Komma igång-guider
