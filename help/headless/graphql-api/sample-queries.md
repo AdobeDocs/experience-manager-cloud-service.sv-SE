@@ -3,10 +3,10 @@ title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: 12df921d7a6dbc46ee9effcdabe948a692eb64d9
+source-git-commit: 063d8a23c0634de7c5c25b4e617cc536c2dc3a3b
 workflow-type: tm+mt
-source-wordcount: '1596'
-ht-degree: 1%
+source-wordcount: '1760'
+ht-degree: 0%
 
 ---
 
@@ -356,6 +356,58 @@ Om du skapar en ny variant som heter &quot;Berlin Center&quot; (`berlin_centre`)
           "categories": [
             "city:capital",
             "city:emea"
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Exempelfråga - namn på alla städer som taggats som stadbrytningar {#sample-names-all-cities-tagged-city-breaks}
+
+Om du:
+
+* skapa en mängd olika taggar, namngivna `Tourism` : `Business`, `City Break`, `Holiday`
+* och tilldela dessa till den Överordnad variationen av `City` instanser
+
+Sedan kan du använda en fråga för att returnera information om `name` och `tags`av alla poster som är taggade som Citybrytningar i `city`schema.
+
+**Exempelfråga**
+
+```xml
+query {
+  cityList(
+    includeVariations: true,
+    filter: {_tags: {_expressions: [{value: "tourism:city-break", _operator: CONTAINS}]}}
+  ){
+    items {
+      name,
+      _tags
+    }
+  }
+}
+```
+
+**Exempelresultat**
+
+```xml
+{
+  "data": {
+    "cityList": {
+      "items": [
+        {
+          "name": "Berlin",
+          "_tags": [
+            "tourism:city-break",
+            "tourism:business"
+          ]
+        },
+        {
+          "name": "Zurich",
+          "_tags": [
+            "tourism:city-break",
+            "tourism:business"
           ]
         }
       ]
@@ -1533,6 +1585,62 @@ Den här frågan förhör:
 }
 ```
 
+### Exempelfråga för flera innehållsfragment, och deras variationer, för en given modell {#sample-wknd-multiple-fragment-variations-given-model}
+
+Den här frågan förhör:
+
+* för innehållsfragment av typen `article` och alla variationer
+
+**Exempelfråga**
+
+```xml
+query {
+  articleList(
+    includeVariations: true  ){
+    items {
+      _variation
+      _path
+      _tags
+      _metadata {
+        stringArrayMetadata {
+          name
+          value
+        }
+      }
+    }
+  }
+}
+```
+
+### Exempelfråga för innehållsfragmentvariationer för en viss modell som har en specifik tagg bifogad{#sample-wknd-fragment-variations-given-model-specific-tag}
+
+Den här frågan förhör:
+
+* för innehållsfragment av typen `article` med en eller flera variationer som har taggen `WKND : Activity / Hiking`
+
+**Exempelfråga**
+
+```xml
+{
+  articleList(
+    includeVariations: true,
+    filter: {_tags: {_expressions: [{value: "wknd:activity/hiking", _operator: CONTAINS}]}}
+  ){
+    items {
+      _variation
+      _path
+      _tags
+      _metadata {
+        stringArrayMetadata {
+          name
+          value
+        }
+      }
+    }
+  }
+}
+```
+
 ### Exempelfråga för flera innehållsfragment för en viss språkinställning {#sample-wknd-multiple-fragments-given-locale}
 
 Den här frågan förhör:
@@ -1610,6 +1718,84 @@ Den här frågan förhör:
         }
     }
 }
+```
+
+### Exempelfråga med filtrering efter _tagg-ID och exklusive variationer {#sample-filtering-tag-not-variations}
+
+Den här frågan förhör:
+
+* för innehållsfragment av typen `vehicle` med taggen `big-block`
+* utom variationer
+
+**Exempelfråga**
+
+```graphql
+query {
+  vehicleList(
+    filter: {
+    _tags: {
+      _expressions: [
+        {
+          value: "vehicles:big-block"
+          _operator: CONTAINS
+        }
+      ]
+    }
+  }) {
+    items {
+      _variation
+      _path
+      type
+      name
+      model
+      fuel
+      _tags
+    }
+  }
+} 
+```
+
+### Exempelfråga med filtrering efter _tagg-ID och inklusive variationer {#sample-filtering-tag-with-variations}
+
+Den här frågan förhör:
+
+* för innehållsfragment av typen `vehicle` med taggen `big-block`
+* inklusive variationer
+
+**Exempelfråga**
+
+```graphql
+{
+  enginePaginated(after: "SjkKNmVkODFmMGQtNTQyYy00NmQ4LTljMzktMjhlNzQwZTY1YWI2Cmo5", first: 9 ,includeVariations:true, sort: "name",
+    filter: {
+    _tags: {
+      _expressions: [
+        {
+          value: "vehicles:big-block"
+          _operator: CONTAINS
+        }
+      ]
+    }
+  }) {
+    edges{
+    node {
+        _variation
+        _path
+        name
+        type
+        size
+        _tags
+        _metadata {
+          stringArrayMetadata {
+            name
+            value
+          }
+        }
+    }
+      cursor
+    }
+  }
+} 
 ```
 
 ## Exempel på struktur för innehållsfragment (används med GraphQL) {#content-fragment-structure-graphql}

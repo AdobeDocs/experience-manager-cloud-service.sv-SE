@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 9c4d416b37be684aae37d42a02cc86dfa87fbc2f
+source-git-commit: 7e6a42f5804ddef918df859811ba48f27ebbf19a
 workflow-type: tm+mt
-source-wordcount: '4769'
+source-wordcount: '4934'
 ht-degree: 0%
 
 ---
@@ -134,12 +134,16 @@ GraphQL-frågor som använder förfrågningar om POST rekommenderas inte efterso
 
 Du kan testa och felsöka GraphQL-frågor med [GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md).
 
-## Användningsexempel för skribent- och publiceringsmiljöer {#use-cases-author-publish-environments}
+## Använd exempel för författare, förhandsgranskning och publicering {#use-cases-author-preview-publish}
 
 Användningsexemplen kan bero på vilken typ av AEM as a Cloud Service miljö det är:
 
 * Publiceringsmiljö. används för att:
    * Frågedata för JS-program (standardfall)
+
+* Förhandsvisningsmiljö; används för att:
+   * Förhandsgranska frågor innan de distribueras i publiceringsmiljön
+      * Frågedata för JS-program (standardfall)
 
 * Författarmiljö; används för att:
    * Fråga efter data för&quot;innehållshanteringssyften&quot;:
@@ -207,7 +211,7 @@ Om du till exempel:
 
 >[!NOTE]
 >
->Detta är viktigt att notera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
+>Detta är viktigt att observera om du vill göra satsvisa uppdateringar på modeller för innehållsfragment via REST-API:t, eller på annat sätt.
 
 Schemat hanteras via samma slutpunkt som GraphQL-frågorna, där klienthanteraren hanterar det faktum att schemat anropas med tillägget `GQLschema`. Du kan till exempel utföra en enkel `GET` begäran på `/content/cq:graphql/global/endpoint.GQLschema` resulterar i utdata från schemat med innehållstypen: `text/x-graphql-schema;charset=iso-8859-1`.
 
@@ -932,6 +936,13 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
 
 
+
+* Filtret `includeVariations` ingår i `List` och `Paginated` frågetyper.  Om du vill hämta variationer för innehållsfragment i frågeresultaten väljer du `includeVariations` filter måste anges till `true`.
+
+   * Se [Exempelfråga för flera innehållsfragment, och deras variationer, för en given modell](/help/headless/graphql-api/sample-queries.md#sample-wknd-multiple-fragment-variations-given-model)
+   >[!CAUTION]
+   >Filtret `includeVariations` och det systemgenererade fältet `_variation` kan inte användas tillsammans i samma frågedefinition.
+
 * Om du vill använda ett logiskt OR:
    * use ` _logOp: OR`
    * Se [Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot;](/help/headless/graphql-api/sample-queries.md#sample-all-persons-jobs-smith)
@@ -961,6 +972,10 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
          >
          >Om den angivna varianten inte finns för ett innehållsfragment returneras den överordnad varianten som ett (fallback) standardvärde.
 
+         >[!CAUTION]
+         >
+         >Det systemgenererade fältet `_variation` kan inte användas tillsammans med filtret `includeVariations`.
+
          * Se [Exempelfråga - Alla städer med en namngiven variant](/help/headless/graphql-api/sample-queries.md#sample-cities-named-variation)
    * För [bildleverans](#image-delivery):
 
@@ -973,6 +988,17 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
          * [Exempelfråga för bildleverans med fullständiga parametrar](#image-delivery-full-parameters)
 
          * [Exempelfråga för bildleverans med en enda angiven parameter](#image-delivery-single-specified-parameter)
+   * `_tags` : visa ID:n för innehållsfragment eller variationer som innehåller taggar, this is an array of `cq:tags` identifierare.
+
+      * Se [Exempelfråga - namn på alla städer som taggats som stadbrytningar](/help/headless/graphql-api/sample-queries.md#sample-names-all-cities-tagged-city-breaks)
+      * Se [Exempelfråga för innehållsfragmentvariationer för en viss modell som har en specifik tagg bifogad](/help/headless/graphql-api/sample-queries.md#sample-wknd-fragment-variations-given-model-specific-tag)
+      * Se [Exempelfråga med filtrering efter _tagg-ID och exklusive variationer](/help/headless/graphql-api/sample-queries.md#sample-filtering-tag-not-variations)
+      * Se [Exempelfråga med filtrering efter _tagg-ID och inklusive variationer](/help/headless/graphql-api/sample-queries.md#sample-filtering-tag-with-variations)
+
+      >[!NOTE]
+      >
+      >Taggar kan också efterfrågas genom att en lista med metadata för ett innehållsfragment visas.
+
    * Och åtgärder:
 
       * `_operator` : tillämpa särskilda operatörer, `EQUALS`, `EQUALS_NOT`, `GREATER_EQUAL`, `LOWER`, `CONTAINS`, `STARTS_WITH`
@@ -982,6 +1008,7 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
          * Se [Exempelfråga - Filtrera en array med ett objekt som måste förekomma minst en gång](/help/headless/graphql-api/sample-queries.md#sample-array-item-occur-at-least-once)
       * `_ignoreCase` : för att ignorera skiftläget vid fråga
          * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](/help/headless/graphql-api/sample-queries.md#sample-all-cities-san-ignore-case)
+
 
 
 

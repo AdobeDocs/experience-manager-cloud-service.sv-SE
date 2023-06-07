@@ -2,10 +2,10 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: 737d4d56312b763a50c2dfad0ea51feb9dbf4dde
+source-git-commit: 344d04eb18c100835b78fe59c909d92c1e42111b
 workflow-type: tm+mt
-source-wordcount: '2288'
-ht-degree: 10%
+source-wordcount: '2455'
+ht-degree: 9%
 
 ---
 
@@ -43,19 +43,32 @@ När du öppnar ditt innehållsfragment för redigering visas **Variationer** so
 Till exempel:
 
 ![helskärmsredigerare](assets/cfm-variations-02.png)
+
 Du kan:
 
-* gör redigeringar direkt i **Variationer** tab
+* Redigera direkt i **Variationer** tab; varje datatyp innehåller olika redigeringsalternativ, till exempel:
 
-   * varje datatyp har olika redigeringsalternativ
+   * for **Flerradstext** fält som du också kan öppna [helskärmsredigerare](#full-screen-editor) till:
 
-* for **Flerradstext** fält som du också kan öppna [helskärmsredigerare](#full-screen-editor) till:
+      * välj [Format](#formats)
+      * se fler redigeringsalternativ (för [RTF](#rich-text) format)
+      * få tillgång till ett antal [funktionsmakron](#actions)
+   * För **Fragmentreferens** fälten [Redigera innehållsfragment](#fragment-references-edit-content-fragment) kan vara tillgängligt, beroende på modelldefinitionen.
 
-   * välj [Format](#formats)
-   * se fler redigeringsalternativ (för [RTF](#rich-text) format)
-   * få tillgång till ett antal [funktionsmakron](#actions)
 
-* För **Fragmentreferens** fälten **[Redigera innehållsfragment](#fragment-references-edit-content-fragment)** kan vara tillgängligt, beroende på modelldefinitionen.
+* Tilldela **Taggar** till den aktuella variationen, taggarna kan läggas till, uppdateras och tas bort
+
+   * [Taggar](/help/sites-cloud/authoring/features/tags.md) är särskilt kraftfulla när du organiserar dina fragment eftersom de kan användas för innehållsklassificering och taxonomi. Taggar kan användas för att hitta innehåll (med taggar) och tillämpa gruppåtgärder.
+
+      * Sökningar efter en tagg returnerar fragmentet med den taggade varianten markerad.
+      * Variationstaggar kan också användas för att gruppera variationer för en viss CDN-profil (Content Delivery Network) (för CDN-cache) i stället för att använda variantnamnet.
+
+      Du kan till exempel tagga relevanta fragment som&quot;Julstart&quot; så att du bara kan bläddra bland dem som en delmängd, eller kopiera dem för användning med en annan framtida start i en ny mapp.
+   >[!NOTE]
+   >
+   >**Taggar** kan också läggas till (i **Överordnad** som en del av [Metadata](/help/assets/content-fragments/content-fragments-metadata.md)
+
+* [Skapa och hantera variationer](#managing-variations) i **Överordnad** innehåll.
 
 ### Helskärmsredigerare {#full-screen-editor}
 
@@ -383,6 +396,9 @@ Så här skapar du en ny variant:
    >[!NOTE]
    När du skapar en ny variant är det alltid **Överordnad** som kopieras, inte varianten som är öppen.
 
+   >[!NOTE]
+   När du skapar en ny variant är alla **Taggar** som för närvarande är tilldelad **Överordnad** ändras till din nya variant.
+
 ### Redigera en variant {#editing-a-variation}
 
 Du kan ändra variantinnehållet efter antingen:
@@ -452,4 +468,4 @@ Du kan inte överföra ändringar *från en variant till **mastern***.
 
    ![synkronisera med överordnad](assets/cfm-variations-11c.png)
 
-1. Välj **Synkronisera** uppdateras och visas variationen.
+1. Välj **Synkronisera**, uppdateras och visas variationen.

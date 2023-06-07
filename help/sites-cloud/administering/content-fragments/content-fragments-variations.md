@@ -4,10 +4,10 @@ description: Förstå hur variationer gör att du kan skapa innehåll för fragm
 feature: Content Fragments
 role: User
 exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
-source-git-commit: 0361ae6e7de7b92f8c3ebbf531e9382df44c246f
+source-git-commit: 344d04eb18c100835b78fe59c909d92c1e42111b
 workflow-type: tm+mt
-source-wordcount: '2310'
-ht-degree: 10%
+source-wordcount: '2480'
+ht-degree: 9%
 
 ---
 
@@ -45,19 +45,32 @@ När du öppnar ditt innehållsfragment för redigering visas **Variationer** so
 Till exempel:
 
 ![helskärmsredigerare](assets/cfm-variations-02.png)
+
 Du kan:
 
-* gör redigeringar direkt i **Variationer** tab
+* Redigera direkt i **Variationer** tab; varje datatyp innehåller olika redigeringsalternativ, till exempel:
 
-   * varje datatyp har olika redigeringsalternativ
+   * for **Flerradstext** fält som du också kan öppna [helskärmsredigerare](#full-screen-editor) till:
 
-* for **Flerradstext** fält som du också kan öppna [helskärmsredigerare](#full-screen-editor) till:
+      * välj [Format](#formats)
+      * se fler redigeringsalternativ (för [RTF](#rich-text) format)
+      * få tillgång till ett antal [funktionsmakron](#actions)
+   * För **Fragmentreferens** fälten [Redigera innehållsfragment](#fragment-references-edit-content-fragment) kan vara tillgängligt, beroende på modelldefinitionen.
 
-   * välj [Format](#formats)
-   * se fler redigeringsalternativ (för [RTF](#rich-text) format)
-   * få tillgång till ett antal [funktionsmakron](#actions)
 
-* För **Fragmentreferens** fälten **[Redigera innehållsfragment](#fragment-references-edit-content-fragment)** kan vara tillgängligt, beroende på modelldefinitionen.
+* Tilldela **Taggar** till den aktuella variationen, taggarna kan läggas till, uppdateras och tas bort
+
+   * [Taggar](/help/sites-cloud/authoring/features/tags.md) är särskilt kraftfulla när du organiserar dina fragment eftersom de kan användas för innehållsklassificering och taxonomi. Taggar kan användas för att hitta innehåll (med taggar) och tillämpa gruppåtgärder.
+
+      * Sökningar efter en tagg returnerar fragmentet med den taggade varianten markerad.
+      * Variationstaggar kan också användas för att gruppera variationer för en viss CDN-profil (Content Delivery Network) (för CDN-cache) i stället för att använda variantnamnet.
+
+      Du kan till exempel tagga relevanta fragment som&quot;Julstart&quot; så att du bara kan bläddra bland dem som en delmängd, eller kopiera dem för användning med en annan framtida start i en ny mapp.
+   >[!NOTE]
+   >
+   >**Taggar** kan också läggas till (i **Överordnad** som en del av [Metadata](/help/sites-cloud/administering/content-fragments/content-fragments-metadata.md)
+
+* [Skapa och hantera variationer](#managing-variations) i **Överordnad** innehåll.
 
 ### Helskärmsredigerare {#full-screen-editor}
 
@@ -391,6 +404,10 @@ Så här skapar du en ny variant:
    >[!NOTE]
    När du skapar en ny variant är det alltid **Överordnad** som kopieras, inte varianten som är öppen.
 
+
+   >[!NOTE]
+   När du skapar en ny variant är alla **Taggar** som för närvarande är tilldelad **Överordnad** ändras till din nya variant.
+
 ### Redigera en variant {#editing-a-variation}
 
 Du kan ändra variantinnehållet efter antingen:
@@ -437,7 +454,7 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 >[!CAUTION]
 Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 Endast det aktuella elementet i variationen kommer att synkroniseras.
-Synkronisering fungerar bara på datatypen **Flerradig text**.
+Synkronisering fungerar bara på **Flerradstext** datatyp.
 Du kan inte överföra ändringar *från en variant till **mastern***.
 
 1. Öppna ditt innehållsfragment i fragmentredigeraren. Se till att **Överordnad** har redigerats.
@@ -460,4 +477,4 @@ Du kan inte överföra ändringar *från en variant till **mastern***.
 
    ![synkronisera med överordnad](assets/cfm-variations-11c.png)
 
-1. Välj **Synkronisera** uppdateras och visas variationen.
+1. Välj **Synkronisera**, uppdateras och visas variationen.

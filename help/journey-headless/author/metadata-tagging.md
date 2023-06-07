@@ -2,9 +2,9 @@
 title: Läs om hur du definierar metadata och taggar för innehållsfragment
 description: Läs om hur du definierar metadata och taggar för innehållsfragment
 exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
-source-git-commit: 0b953e0155fa1b90b5bccbf10b9ceaf1c1f63ae7
+source-git-commit: 1486a330e7931ab679f37464c3e22a27ea0d5876
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '263'
 ht-degree: 2%
 
 ---
@@ -31,6 +31,10 @@ Det finns tre metoder som du kan använda för att lägga till metadata och tagg
 * När du skapar fragmentet (från **Resurser** konsol):
 
    ![Skapa innehållsfragment - ange namn](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
+
+* The **Variationer** kan du lägga till fördefinierade **Taggar** från ditt projekt:
+
+   ![Content Fragment Editor - Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
 * The **Metadata** kan du lägga till olika metadatafält och fördefinierade **Taggar** från ditt projekt:
 
