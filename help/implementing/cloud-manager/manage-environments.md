@@ -2,12 +2,13 @@
 title: Hantera miljöer
 description: Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 4631ab86ae1b4405e31d8bb8eae8edbbe2272c2c
+source-git-commit: ecc15501b6187380c2039afdf68cbef909c54721
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '2302'
 ht-degree: 0%
 
 ---
+
 
 # Hantera miljöer {#managing-environments}
 
@@ -56,14 +57,67 @@ De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [progra
       * Antalet tillgängliga/använda miljöer visas inom parentes bakom miljötypsnamnet.
    * Tillhandahålla en miljö **Namn**.
    * Tillhandahålla en miljö **Beskrivning**.
+   * Om du lägger till en **Production + Stage** måste du ange ett miljönamn och en beskrivning för både din produktions- och staging-miljö.
    * Välj en **Primär region** i listrutan.
       * Observera att detta inte kan ändras när det har skapats.
-   * Om du lägger till en **Production + Stage** måste du ange ett miljönamn och en beskrivning för både din produktions- och staging-miljö.
-      ![Dialogrutan Lägg till miljö](assets/add-environment2.png)
+      * Beroende på vilka rättigheter du har kan du kanske konfigurera [flera regioner.](#multiple-regions)
+
+   ![Dialogrutan Lägg till miljö](assets/add-environment2.png)
 
 1. Klicka **Spara** för att lägga till den angivna miljön.
 
 The **Översikt** visas nu din nya miljö i **Miljö** kort. Nu kan du ställa in rörledningar för din nya miljö.
+
+## Flera publiceringsområden {#multiple-regions}
+
+En användare med **Företagsägare** kan konfigurera prod- och staging-miljöer så att de omfattar ytterligare tre publiceringsregioner förutom den primära regionen. Ytterligare publiceringsregioner kan förbättra tillgängligheten. Se [Ytterligare dokumentation för publiceringsregioner](/help/operations/additional-publish-regions.md) för mer information.
+
+>[!TIP]
+>
+>Du kan använda [API för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) för att fråga en aktuell lista över tillgängliga regioner.
+
+### Lägga till flera publiceringsregioner i en ny miljö {#add-regions}
+
+När du lägger till en ny miljö kan du välja att konfigurera ytterligare regioner utöver den primära regionen.
+
+1. Välj **Primär region**.
+   * Observera att detta inte kan ändras när miljön har skapats.
+1. Välj alternativet **Lägg till ytterligare publiceringsregioner** och en ny **Ytterligare publiceringsregioner** visas.
+1. I **Ytterligare publiceringsregioner** väljer du ytterligare en region.
+1. Det markerade området läggs till under listrutan för att ange dess val.
+   * Tryck eller klicka på X bredvid det markerade området för att avmarkera det.
+1. Välj ett annat område på menyn **Ytterligare publiceringsregioner** för att lägga till en annan region.
+1. Tryck eller klicka **Spara** när du är redo att skapa din miljö.
+
+![Markera flera områden](assets/select-multiple-regions.png)
+
+De valda regionerna gäller både produktions- och stagningsmiljöer.
+
+Om du inte anger några ytterligare regioner [kan du göra det senare när du har skapat miljöerna.](#edit-regions)
+
+Om du vill etablera dig [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet bör du göra detta innan du lägger till ytterligare publiceringsregioner i miljöerna med hjälp av Cloud Manager API. I annat fall kommer trafiken i de extra publiceringsregionerna att gå via den primära regionens proxy.
+
+### Redigera flera publiceringsområden {#edit-regions}
+
+Om du inte angav några ytterligare regioner från början kan du göra det efter att miljöerna har skapats om du har de tillstånd som krävs.
+
+Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga till eller ta bort regioner i en transaktion. Om du behöver lägga till ett område och ta bort ett område, ska du först lägga till, spara ändringen och sedan ta bort (eller tvärtom).
+
+1. Klicka på ellipsknappen för produktionsmiljön i programöversiktskonsolen och välj **Redigera** på menyn.
+
+   ![Redigeringsmiljö](assets/select-edit-environment.png)
+
+1. I **Redigera produktionsmiljö** gör de ändringar som behövs i de ytterligare publiceringsregionerna.
+   * Använd **Ytterligare publiceringsregioner** för att välja ytterligare regioner.
+   * Klicka på krysset bredvid de valda ytterligare publiceringsregionerna för att avmarkera dem.
+
+   ![Redigeringsmiljö](assets/edit-environment.png)
+
+1. Tryck eller klicka **Spara** för att spara ändringarna.
+
+De ändringar som görs i produktionsmiljön gäller både produktions- och stagningsmiljöer. Ändringar i flera publiceringsregioner kan bara redigeras i produktionsmiljön.
+
+Om du vill etablera dig [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet bör du göra detta innan du lägger till ytterligare publiceringsregioner i miljöerna. I annat fall kommer trafiken i de extra publiceringsregionerna att gå via den primära regionens proxy.
 
 ## Miljöinformation {#viewing-environment}
 

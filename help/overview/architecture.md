@@ -2,10 +2,10 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: c67be5b7f5dc454511753faa16bc46b10e72dde4
+source-git-commit: 1e9ca4f18c3698dbf4bbc0f104559e14f429e28e
 workflow-type: tm+mt
-source-wordcount: '1807'
-ht-degree: 77%
+source-wordcount: '1827'
+ht-degree: 75%
 
 ---
 
@@ -124,7 +124,15 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
       * En dedikerad resurshanteringstjänst används för integrering och bearbetning av resurser.
    * Förhandsgranskningsnivån består av en enda förhandsvisningsnod. Detta används för kvalitetssäkring av innehåll innan det publiceras på publiceringsnivån.
 
-   * Publiceringsnivån består av två eller flera noder i en enda publiceringsgrupp: de kan fungera oberoende av varandra. Varje nod består av en AEM-utgivare och en webbserver utrustad med modulen AEM Dispatcher. Den skalas automatiskt efter webbplatsens trafik.
+   * Publiceringsnivån består av två eller flera noder i en enda publiceringsgrupp.
+
+      * Noderna kan fungera oberoende av varandra.
+
+      * Varje nod består av en AEM-utgivare och en webbserver utrustad med modulen AEM Dispatcher.
+
+      * Den skalas automatiskt efter webbplatsens trafik.
+
+      * Som standard finns det en enda publiceringsgrupp i den primära regionen [ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) får licensieras.
 
       * Slutanvändare, eller besökare, besöker webbplatsen via AEM Publish Service.
 
