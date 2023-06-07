@@ -2,9 +2,9 @@
 title: Användarmappning och huvudmigrering
 description: Översikt över användarmappning och huvudmigrering
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: 91a13f8b23136298e0ccf494e51fccf94fa1e0b4
+source-git-commit: caa04391077d594a828a42a1a5a6a03daa107168
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '832'
 ht-degree: 3%
 
 ---
@@ -25,9 +25,13 @@ Som en del av övergången till Adobe Experience Manager (AEM) as a Cloud Servic
 
 En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön. Den här processen kräver att [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) för hantering av användare och användargrupper. Användarprofilinformationen är centraliserad i Adobe Identity Management System (IMS) som gör att du kan logga in på alla molnprogram i Adobe. Mer information finns i [Identity Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/what-is-new-and-different.html#identity-management). På grund av den här ändringen måste befintliga användare mappas till sina IMS-ID:n för att undvika dubbletter av användare i Cloud Servicens författarinstans. Eftersom grupper i traditionella AEM i grunden skiljer sig från grupper i IMS, mappas inte grupper, men de två uppsättningarna grupper måste förenas när migreringen är klar.
 
-## Information om användarmappning och migrering {#user-mapping-detail}
+## Information om användarmigrering {#user-migration-detail}
 
-Verktyget Innehållsöverföring och Cloud Acceleration Manager migrerar alla användare som är kopplade till det innehåll som migreras. Mappningen görs automatiskt och om den görs kan styras med en växlingsknapp innan extraheringen startas. Växlingens standardinställning kan åsidosättas av användaren när extraheringen startas.
+Verktyget Innehållsöverföring och Cloud Acceleration Manager migrerar alla användare som är kopplade till det innehåll som migreras till molnsystemet.
+
+## Information om användarmappning {#user-mapping-detail}
+
+AEM användare kan mappas till motsvarande Adobe IMS-användare med samma e-postadress.  Denna mappning kan göras automatiskt i CTT, och om den görs kan styras med en växlingsknapp innan extraheringen startas. Växlingens standardinställning kan åsidosättas av användaren när extraheringen startas.
 
 * Om källsystemet är en författarinstans är standardalternativet att utföra mappningen _på_, eftersom det är den rekommenderade processen.
 * Om källsystemet är en publiceringsinstans är alternativet att utföra mappningen som standard _av_, eftersom användare normalt inte migreras eller används i publiceringsinstanser.
