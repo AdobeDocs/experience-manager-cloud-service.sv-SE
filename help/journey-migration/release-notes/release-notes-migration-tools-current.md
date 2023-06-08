@@ -1,46 +1,29 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.03.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.03.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.06.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.06.0
 feature: Release Information
 exl-id: 2f787321-f156-480d-bbe8-1a6d04f110c5
-source-git-commit: 586fbc136b866be149db1d4fcdd6ea2ef18a97b1
+source-git-commit: a1597e4102589dfc9b5bdb8c2a54e8e9ec3392b7
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '237'
 ht-degree: 2%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.03.0 {#release-notes}
+# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.06.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.03.0.
-
-## Best Practices Analyzer {#bpa-release}
-
-### Releasedatum {#release-date-bpa}
-
-Releasedatum för Best Practices Analyzer v2.1.40 är 3 mars 2023.
-
-### Nyheter {#what-is-new-bpa}
-
-* BPA kan nu identifiera och rapportera om noder som är i konflikt - noder med samma `jcr:uuid`. Sådana upptäckter flaggas som kritiska eftersom det kan leda till innehållsproblem när innehåll flyttas till AEM as a Cloud Service.
-* BPA kan nu identifiera och rapportera om användningen av händelseavlyssnare. Vi rekommenderar att du justerar den här typen av händelsehanteringsmekanism till snedningsjobb när du går till AEM as a Cloud Service.
-
-### Felkorrigeringar {#bug-fixes-bpa}
-
-* BPA rapporterade falsk positiv information om `grouprendercondition`. Den här har åtgärdats.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.06.0.
 
 ## Content Transfer Tool {#ctt-release}
 
 ### Releasedatum {#release-date-ctt}
 
-Releasedatum för Content Transfer Tool v 2.0.16 är 8 mars 2022.
+Releasedatum för Content Transfer Tool v 2.0.20 är 8 juni 2023.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Användarmappningen har effektiviserats och integrerats i innehållsextraheringssteget. Ingen konfiguration behövs, och som standard görs användarmappningen automatiskt när användaren startar innehållsextraheringen. Användaren har möjlighet att inaktivera användarmappning vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/user-mapping-and-migration.html?lang=en#user-mapping-detail)
-* Förkopieringssteget med [AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) har integrerats med verktyget Innehållsöverföring för att avsevärt snabba upp extraheringen. Precopy konfigureras och installeras automatiskt när den här versionen av CTT installeras. När extraheringen initieras körs som standard precopy automatiskt för migreringsuppsättningar som är större än 200 GB. Användaren har möjlighet att inaktivera det vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en)
-* CTT kan nu användas på Windows-servrar.
-
-### Felkorrigeringar {#bug-fixes-ctt}
-
-* Flera felkorrigeringar som förbättrar innehållsextraheringens flexibilitet.
+* Ett nytt migreringsverktyg - Content Transformer (CT) har integrerats med Content Transfer Tool (CTT) i den här versionen. Innehållstransformeraren kan automatiskt identifiera och åtgärda innehållsrelaterade problem som rapporterats av [Best Practices Analyzer (BPA)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=en) innan du migrerar innehåll från den aktuella AEM-implementeringen (lokal eller Managed Services) till AEM as a Cloud Service.
+Fördelarna med Content Transformer är:
+   * Felsäker: ett paket skapas av innehållstreraren varje gång den gör ändringar i databasen för att åtgärda problem. Om det behövs kan du återgå till det tidigare läget genom att installera paketet.
+   * Lättanvänt: Content Transformer har integrerats med Content Transfer Tool och har ett enkelt, intuitivt användargränssnitt.
+   * Sparar tid: När du har ett stort antal innehållsproblem som faller under en mönsterkategori kan du lösa alla med bara ett par klick med hjälp av Innehållsomvandlaren, vilket minskar tiden och komplexiteten vid migrering avsevärt.
