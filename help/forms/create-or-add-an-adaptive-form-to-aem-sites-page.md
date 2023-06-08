@@ -4,15 +4,18 @@ description: Upptäck hur du enkelt kan skapa och lägga till anpassade formulä
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: 6b38601e9bd29c71e5f70b46d2fa55a928851adc
+source-git-commit: 4d32a1768a97505ec2e7288904dde0c9120041a7
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '3134'
 ht-degree: 0%
 
 ---
 
 
 # Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan {#create-or-add-an-adaptive-form-to-aem-sites-page}
+
+|Varning|[!BADGE dokumentation för förhandsversion]{type=Caution tooltip="Gul status"}
+<span class="preview"> Dokumentationen kan komma att ändras i förväg.</span>
 
 Med AEM Forms kan du smidigt lägga in anpassningsbara formulär på webbsidorna. På så sätt kan besökarna enkelt fylla i och skicka in formulär utan att lämna den sida de är på. På så sätt kan de enkelt hålla kontakten med andra element på webbplatsen samtidigt som de interagerar aktivt med formuläret.
 
@@ -44,7 +47,7 @@ Du kan utnyttja den här funktionen till fullo genom att använda följande alte
 
 * **Lägg till ett anpassat anpassat formulär i ett Experience Fragments:** Nå ut bättre med formulären genom att lägga till dem i AEM Experience Fragments, vilket möjliggör smidig återanvändning på flera sidor eller webbplatser.
 
-* **Lägga till flera formulär på en AEM Sites-sida eller Experience Fragment:**  Lägg till flera formulär på en sida för att ge användarna flera alternativ baserat på deras önskemål och önskemål. Dessa kan vara en kombination av helt nya formulär från grunden och befintliga formulär.
+* **Lägga till flera formulär på en AEM Sites-sida eller Experience Fragment:**  Lägg till flera formulär på en sida för att ge användarna olika alternativ beroende på vilka önskemål och önskemål de har. Dessa kan vara en kombination av helt nya formulär från grunden och befintliga formulär.
 
 * **Konvertera ett anpassat formulär till Experience Fragment:** Konvertera ett anpassat formulär som lagts till på en AEM Sites-sida till ett Experience Fragment för återanvändning av formuläret på flera AEM Sites-sidor.
 
@@ -122,7 +125,7 @@ Om du vill aktivera alla funktioner för den adaptiva Forms-behållarkomponenten
 
 +++
 
-+++ Aktivera **[!UICONTROL Adaptive Forms Container]
++++ Aktivera anpassad Forms-behållare
 
 Aktivera [!UICONTROL Adaptive Forms Container] utför följande steg i mallens policy:
 
@@ -246,7 +249,7 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
 
 ### Använd tjänsten Forms Portal Draft Prefill {#forms-portal-prefill-service}
 
-Du kan använda tjänsten Forms Portal Draft Prefill för att fylla i fält i ett formulär i förväg med hjälp av ett utkast av det sparade adaptiva formuläret. Innan du använder tjänsten Forms Portal Draft Prefill bör du kontrollera [Adaptiva Forms Portal-komponenter är aktiverade och konfigurerade ](configure-forms-portal.md#configure-azure-storage-for-adaptive-forms-configure-azure-storage-adaptive-forms) för din miljö.
+Du kan använda tjänsten Forms Portal Draft Prefill för att fylla i fält i ett formulär i förväg med hjälp av ett utkast av det sparade adaptiva formuläret. Innan du använder tjänsten Forms Portal Draft Prefill bör du kontrollera att [Adaptiva Forms Portal-komponenter är aktiverade och konfigurerade](configure-forms-portal.md#configure-azure-storage-for-adaptive-forms-configure-azure-storage-adaptive-forms) för din miljö.
 
 1. Öppna AEM Sites sidredigerare eller Experience Fragment som innehåller det adaptiva formuläret.
 1. Öppna sidans egenskaper och konfigurera molnkonfigurationen.
@@ -267,7 +270,7 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
 1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
 1. Öppna **[!UICONTROL Submission]** -fliken.
 
-   * Om du vill konfigurera en omdirigerings-URL, för alternativet Skicka, markerar du alternativet Omdirigera till URL och anger en absolut adress eller en omdirigerings-URL eller relativ sökväg till en AEM Sites-sida.
+   * Om du vill konfigurera en omdirigerings-URL, för alternativet Skicka, markerar du alternativet Omdirigera till URL och anger en absolut adress eller en omdirigerings-URL eller relativ sökväg för en AEM Sites-sida.
 
    * Om du vill konfigurera ett anpassat meddelande eller ett tackmeddelande för alternativet Skicka, markerar du alternativet Visa meddelande och anger ett meddelande i rutan Meddelandeinnehåll. Det är en RTF-ruta som du kan använda helskärmsalternativet för att visa alla tillgängliga RTF-objekt.
 
