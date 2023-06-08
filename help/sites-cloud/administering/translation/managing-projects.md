@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: 05723d602362fd8fe8ed2318d42a669f00f79f87
+source-git-commit: d3194e646b326009dc204838ac74fc880952f286
 workflow-type: tm+mt
 source-wordcount: '4086'
 ht-degree: 0%
@@ -311,7 +311,7 @@ I följande tabell beskrivs varje status som ett jobb eller ett objekt i jobbet 
 
 | Status | Beskrivning |
 |---|---|
-| **Utkast** | Översättningsjobbet har inte startats. Översättningsjobb finns i **Utkast**** när de skapas. |
+| **Utkast** | Översättningsjobbet har inte startats. Översättningsjobb finns i **Utkast** när de skapas. |
 | **Skickat** | Filer i översättningsjobbet har den här statusen när de har skickats till översättningstjänsten. Den här statusen kan inträffa efter **Begär omfång** eller **Starta** kommandot är utfärdat. |
 | **Begärt omfång** | Filerna i jobbet har skickats till översättningsleverantören för omfång för det mänskliga översättningsarbetsflödet. Den här statusen visas efter **Begär omfång** kommandot är utfärdat. |
 | **Omfånget har slutförts** | Leverantören har omfattat översättningsjobbet. |
