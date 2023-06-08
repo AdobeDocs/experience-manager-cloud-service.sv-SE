@@ -3,10 +3,9 @@ title: Administrera arbetsflödesinstanser
 description: Lär dig hur du administrerar arbetsflödesinstanser
 feature: Administering
 role: Admin
-exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
-source-git-commit: 0a87842923298be1a801a85519ac85fae5ef7933
+source-git-commit: 5801063c9c4c1c6b9f9e7f55ad4d66bb563e0eef
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -27,10 +26,19 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 ## Övervaka status för arbetsflödesinstanser {#monitoring-the-status-of-workflow-instances}
 
 1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
-1. Välj **Instanser** om du vill visa en lista över pågående arbetsflödesinstanser.
+1. Välj **Instanser** för att visa en lista över pågående arbetsflödesinstanser.
+1. På den övre listen i det högra hörnet visas arbetsflödesinstanserna **Köra arbetsflöden**, **Status** och **Detaljer**.
+1. **Köra arbetsflöden** visar antalet arbetsflöden som körs och deras status. I de angivna bilderna visas till exempel antalet **Köra arbetsflöden** och **Status** AEM.
+   ![status-hälsosam](/help/sites-cloud/administering/assets/status-healthy.png)
+   ![status-ohälsosam](/help/sites-cloud/administering/assets/status-unhealthy.png)
+1. För **Statusinformation** av arbetsflödesinstanser klickar du på **Detaljer** för att visa **antal arbetsflödesinstanser som körs**, **slutförda arbetsflödesinstanser**, **avbrutna arbetsflödesinstanser**, **misslyckade arbetsflödesinstanser** och så vidare. nedan visas till exempel de bilder som visas **Statusinformation** med **Status: Hälsosam** och **Status: Ohälsosam**.
+   ![status-details-good](/help/sites-cloud/administering/assets/status-details-healthy.png)
 
-   ![wf-97](/help/sites-cloud/administering/assets/wf-97.png)
+   ![status-details-unsafe](/help/sites-cloud/administering/assets/status-details-unhealthy.png)
 
+   >[!NOTE]
+   >
+   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis på [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflöden](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html?lang=en).
 
 ## Sök efter arbetsflödesinstanser {#search-workflow-instances}
 
@@ -45,7 +53,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    * Arbetsflödesmodell: Välj en arbetsflödesmodell
    * Uppdragare: Välj en arbetsflödestilldelare
    * Typ: Aktivitet, arbetsflödesobjekt eller arbetsflödesfel
-   * Aktivitetsstatus: Aktiv, fullständig eller avslutad
+   * Aktivitetsstatus: Aktiv, Fullständig eller Avbruten
    * Var jag är: Ägare OCH tilldelad, endast ägare, endast tilldelad
    * Startdatum: Startdatum före eller efter ett angivet datum
    * Slutdatum: Slutdatum före eller efter ett angivet datum
@@ -66,7 +74,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    >[!NOTE]
    >
    >
-   >För att ett arbetsflöde ska kunna avslutas eller avbrytas måste det vara i ett läge där användaren väntar på att göra något, t.ex. i ett deltagarsteg. Om du försöker avbryta ett arbetsflöde som för närvarande kör jobb (aktiva trådar som körs) kanske inte resultatet blir som du förväntar dig.
+   >Om du vill avsluta eller avbryta ett arbetsflöde måste det vara i ett läge där användaren väntar på att göra något, till exempel i ett deltagarsteg. Om du försöker avbryta ett arbetsflöde som för närvarande kör jobb (aktiva trådar som körs) kanske inte resultatet blir som du förväntar dig.
 
 
 ## Visa arkiverade arbetsflöden {#viewing-archived-workflows}
@@ -75,14 +83,15 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
 1. Välj **Arkiv** om du vill visa en lista över arbetsflödesinstanser som har slutförts.
 
-   ![wf-98](/help/sites-cloud/administering/assets/wf-98.png)
+   ![arkiverade instanser](/help/sites-cloud/administering/assets/archived-instances.png)
 
    >[!NOTE]
+   >
+   >
    >Avbruten status betraktas som en avslutad åtgärd eftersom den inträffar till följd av en användaråtgärd. till exempel:
    >
    >* användning av **Avsluta** åtgärd
-   >* när en sida, som är underställd ett arbetsflöde, tas bort (framtvingar), avslutas arbetsflödet
-
+   >* När en sida, som är underställd ett arbetsflöde, (framtvingas) tas bort, avslutas arbetsflödet.
 
 
 1. Markera ett specifikt objekt och sedan **Öppna historik** för mer information:
@@ -95,14 +104,14 @@ När ett arbetsflöde misslyckas, innehåller AEM **Fel** så att du kan unders�
 
 * **Felinformation**
 Öppnar ett fönster för att visa 
-**Felmeddelande**, **Steg** och **Felstapel**.
+**Felmeddelande**, **Step och **Felstapel**.
 
 * **Öppna historik**
 Visar information om arbetsflödeshistoriken.
 
 * **Försök igen** Kör komponentinstansen Script Step igen. Använd kommandot Försök igen när du har åtgärdat orsaken till det ursprungliga felet. Du kan till exempel försöka utföra steget igen när du har åtgärdat ett fel i skriptet som utförs av processteget.
 * **Avsluta** Avsluta arbetsflödet om felet har orsakat en oförenlig situation för arbetsflödet. Arbetsflödet kan t.ex. förlita sig på miljöförhållanden som information i databasen som inte längre är giltig för arbetsflödesinstansen.
-* **Avsluta och försök igen** Liknar **Avsluta** förutom att en ny arbetsflödesinstans startas med den ursprungliga nyttolasten, titeln och beskrivningen.
+* **Avsluta och försök igen** liknar **Avsluta** förutom att en ny arbetsflödesinstans startas med den ursprungliga nyttolasten, titeln och beskrivningen.
 
 Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflödet:
 
@@ -111,7 +120,7 @@ Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflöde
 1. Välj **Fel** för att visa en lista över arbetsflödesinstanser som inte har slutförts korrekt.
 1. Välj ett specifikt objekt och sedan lämplig åtgärd:
 
-   ![wf-47](/help/sites-cloud/administering/assets/wf-47.png)
+![arbetsflödesfel](/help/sites-cloud/administering/assets/workflow-failure.png)
 
 ## Vanlig tömning av arbetsflödesinstanser {#regular-purging-of-workflow-instances}
 
@@ -119,7 +128,7 @@ Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns presta
 
 Konfigurera **Rensa arbetsflöde för Adobe Granite** för att rensa arbetsflödesinstanser utifrån deras ålder och status. Du kan också rensa arbetsflödesinstanser av alla modeller eller av en viss modell.
 
-Du kan också skapa flera konfigurationer av tjänsten för att rensa arbetsflödesinstanser som uppfyller olika villkor. Skapa till exempel en konfiguration som tömmer instanser av en viss arbetsflödesmodell när de körs mycket längre än förväntat. Skapa en annan konfiguration som tömmer alla slutförda arbetsflöden efter ett visst antal dagar för att minimera databasens storlek.
+Du kan också skapa flera konfigurationer av tjänsten för att rensa arbetsflödesinstanser som uppfyller olika villkor. Skapa till exempel en konfiguration som tömmer instanser av en viss arbetsflödesmodell när de körs mycket längre än förväntat. Skapa en annan konfiguration som tömmer alla slutförda arbetsflöden efter några dagar för att minimera databasens storlek.
 
 Om du vill konfigurera tjänsten kan du konfigurera OSGi-konfigurationsfilerna på [OSGi-konfigurationsfiler](/help/implementing/deploying/configuring-osgi.md). I följande tabell beskrivs de egenskaper som du behöver för båda metoderna.
 
@@ -177,7 +186,7 @@ Du kan ange den maximala storleken för inkorgen genom att konfigurera **Adobe G
 
 ## Använda arbetsflödesvariabler för kundägda datalager {#using-workflow-variables-customer-datastore}
 
-Data som bearbetas av arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som tillhandahålls av Adobe. I dessa avsnitt beskrivs hur du konfigurerar dessa variabler för extern lagring.
+Data som bearbetas av arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som Adobe tillhandahåller. I dessa avsnitt beskrivs hur du ställer in dessa variabler för extern lagring.
 
 ### Ange modellen för extern lagring av metadata {#set-model-for-external-storage}
 
@@ -191,7 +200,7 @@ Bilden nedan måste ange flaggan i ett arbetsflöde.
 
 ### API:er för metadata i extern lagring {#apis-for-metadata-external-storage}
 
-För att kunna lagra variablerna externt måste du implementera de API:er som arbetsflödet visar.
+Om du vill lagra variablerna externt måste du implementera de API:er som arbetsflödet visar.
 
 UserMetaDataPersistenceContext
 
