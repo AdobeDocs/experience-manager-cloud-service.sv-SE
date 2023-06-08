@@ -2,7 +2,7 @@
 title: Skapa en Forms Portal på en Experience Manager Sites-sida
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: a243664302c75fcb3125d68838353bd87cf24de3
+source-git-commit: f22554450d2eb1f4948f749ba00f78b568ee308f
 workflow-type: tm+mt
 source-wordcount: '1684'
 ht-degree: 0%
@@ -39,8 +39,11 @@ AEM Forms tillhandahåller följande portalkomponenter direkt:
 * Länk: Med den här komponenten kan du skapa en länk till ett formulär var som helst på sidan.
 
 Du kan [importera färdiga Forms Portal-komponenter](#import-forms-portal-components-aem-archetype) från AEM Project Archetype. Utför följande konfigurationer efter importen:
+
 * [Konfigurera en extern lagring](#configure-azure-storage-adaptive-forms)
+
 * [Aktivera komponenterna i Forms Portal](#enable-forms-portal-components)
+
 * [Konfigurera komponenterna i Forms Portal](#configure-forms-portal-components)
 
 ## Importera Forms Portal-komponenter {#import-forms-portal-components-aem-archetype}

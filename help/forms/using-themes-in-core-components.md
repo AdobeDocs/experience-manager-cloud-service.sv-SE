@@ -2,7 +2,7 @@
 title: Skapa och använda teman
 description: Du kan använda teman för att stilisera och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: f22554450d2eb1f4948f749ba00f78b568ee308f
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 0%
@@ -49,6 +49,7 @@ Om du vill anpassa ett tema
 * Du borde ha en [grundläggande kunskaper i Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git) och Cloud Service Git-databaser.
 
 Så här anpassar du ett Canvas-tema:
+
 1. [Klona arbetsytans tema](#1-download-canvas-theme-download-canvas-theme)
 1. [Förstå temats struktur](#2-understand-structure-of-the-canvas-theme-structure-of-canvas-theme)
 1. [Ändra namn i package.json och package_lock.json](#changename-packagelock-packagelockjson)
