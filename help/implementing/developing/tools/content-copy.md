@@ -1,13 +1,13 @@
 ---
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från AEM as a Cloud Service produktionsmiljöer till lägre miljöer för teständamål.
-source-git-commit: 4a5470ae8fe5a8e7f615009bf5f6b180aee4669b
+exl-id: f060821d-d559-45d2-b3b1-1b2277694ec4
+source-git-commit: d056ad0f29cfd2448164e3e866f2cedbe1bf6fc2
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1227'
 ht-degree: 0%
 
 ---
-
 
 # Verktyget Innehållskopia {#content-copy}
 
@@ -102,6 +102,9 @@ Observera att när du redigerar din innehållsuppsättning kan du behöva utöka
 
 När en innehållsuppsättning har skapats kan du använda den för att kopiera innehåll. Följ de här stegen för att kopiera innehåll.
 
+>[!NOTE]
+> Innehållskopia bör inte initieras i en miljö som [innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md) -åtgärden körs i den miljön.
+
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
 1. Navigera till **Miljö** från **Översikt** sida.
@@ -159,7 +162,7 @@ När du börjar kopiera innehåll kan processen ha någon av följande statusar.
 | Slutförd | Innehållskopieringen har slutförts |
 | Avbruten | Användaren avbryter en innehållskopia när den har startats |
 
-### Avbryta en kopieringsprocess {#cancelling}
+### Avbryta en kopieringsprocess {#canceling}
 
 Om du behöver avbryta en innehållskopia efter att du har startat den kan du avbryta den.
 
@@ -182,7 +185,7 @@ Verktyget för innehållskopiering har följande begränsningar.
 * Det går inte att kopiera innehåll mellan program.
 * Det går inte att köra samtidiga kopieringsåtgärder för innehåll i samma miljö.
 * Upp till femtio sökvägar kan anges per innehållsuppsättning. Det finns ingen begränsning för uteslutna banor.
-* Verktyget för innehållskopia bör inte användas som kloning eller spegling eftersom det inte kan spåra flyttat eller borttaget innehåll i källan.
+* Verktyget för innehållskopia bör inte användas som kloning eller spegling eftersom det inte går att spåra flyttat eller borttaget innehåll i källan.
 * Verktyget för innehållskopiering har ingen versionshantering och kan inte automatiskt identifiera ändrat innehåll eller nyligen skapat innehåll i källmiljön i en innehållsuppsättning sedan den senaste kopieringsåtgärden.
    * Om du bara vill uppdatera målmiljön med innehållsändringar sedan den senaste kopieringsåtgärden, måste du skapa en innehållsuppsättning och ange sökvägarna i källinstansen där ändringar har gjorts sedan den senaste kopieringsåtgärden.
 * Versionsinformation ingår inte i en innehållskopia.
