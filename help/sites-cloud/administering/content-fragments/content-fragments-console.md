@@ -5,7 +5,7 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: b6205858f3129cb7488b55192088ec0442a28716
+source-git-commit: 54efcf5fb486e7ecce66d8eb498625e447446e5d
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 * **Förhandsgranska**
    * Endast information:
       * **Synkroniserad**: Innehållsfragmentet är synkroniserat på **Upphovsman** och **Förhandsgranska** tjänster.
-      * **Slut på synkronisering**: Innehållsfragmentet är inte synkroniserat på **Upphovsman** och ****Förhandsgranska** tjänster. Du måste **Publicera** till **Förhandsgranska** för att säkerställa att de två instanserna återgår till att vara synkroniserade.
+      * **Slut på synkronisering**: Innehållsfragmentet är inte synkroniserat på **Upphovsman** och **Förhandsgranska** tjänster. Du måste **Publicera** till **Förhandsgranska** för att säkerställa att de två instanserna återgår till att vara synkroniserade.
       * blank: Innehållsfragmentet finns inte på **Förhandsgranska** service.
 * **Ändrad**
    * Endast information
