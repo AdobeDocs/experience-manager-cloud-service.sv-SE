@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 3a17f02b6544669e07adabfd4f50905eb6afd51e
+source-git-commit: 6b38601e9bd29c71e5f70b46d2fa55a928851adc
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
@@ -74,26 +74,23 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 * **[Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/configuring-submit-actions.md)**: Förbättra affärsanvändarnas möjligheter att snabbt öppna nya formulär och lagra inlämnade data i vardagliga verktyg som de använder som Microsoft SharePoint webbplats eller OneDrive-mapp.
 
-![Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/assets/onedrive-and-sharepoint.jpg)
-
-
 ### Funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
 
-* Förbättrad integrering och efterlevnad av Adobe Acrobat Sign: AEM Forms kan nu integreras med Adobe Acrobat Sign for Government, vilket ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inlämning av adaptiva blanketter för myndighetskonton (myndigheter och myndigheter).
+* [Förbättrad integrering och efterlevnad av Adobe Acrobat Sign](/help/forms/adobe-sign-integration-adaptive-forms.md): AEM Forms kan nu integreras med Adobe Acrobat Sign for Government, vilket ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inlämning av adaptiva blanketter för myndighetskonton (myndigheter och myndigheter).
 
-Integreringen med Adobe Acrobat Sign for Government gör det möjligt för våra partners och myndigheter att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate och ger våra myndighetskunder sinnesro.
+   Integreringen med Adobe Acrobat Sign for Government gör det möjligt för våra partners och myndigheter att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate och ger våra myndighetskunder sinnesro.
 
-* Adaptiv Forms i AEM Sites Editor: Nu kan du använda AEM Sites Editor för att snabbt skapa och lägga till flera formulär på webbplatsens sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsmöjligheter på webbplatssidor med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan:
+* [Adaptiv Forms i AEM Sites Editor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md): Nu kan du använda AEM Sites Editor för att snabbt skapa och lägga till flera formulär på webbplatsens sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsmöjligheter på webbplatssidor med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan:
 
-   * Skapa ett adaptivt formulär genom att dra och släppa formulärkomponenter till den adaptiva Forms Container-komponenten i AEM Sites Editor.
+   * Skapa ett anpassat formulär genom att dra och släppa formulärkomponenter i den adaptiva Forms Container-komponenten i AEM Sites Editor eller Experience Fragments.
    * Använd Adaptive Forms Wizard i AEM Sites Editor för att skapa formulär oberoende av webbplatssidor, vilket ger dig frihet att återanvända sådana formulär på flera sidor.
    * Lägg till flera formulär på en webbplatssida, effektivisera användarupplevelsen och ge större flexibilitet.
 
-   >[!VIDEO](https://video.tv.adobe.com/v/3419284?quality=12&learn=on)
+      >[!VIDEO](https://video.tv.adobe.com/v/3419284?quality=12&learn=on)
 
 * Förbättra felhanteringen med anpassade felhanterare i regelredigeraren: Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändare eller vidta specifika åtgärder för fel som returnerats av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
 
-Detta förbättrar den övergripande felhanteringen genom att införa standardbaserade felsvar som är bakåtkompatibla med OOTB-felhanterare, med större flexibilitet och kontroll.
+   Detta förbättrar den övergripande felhanteringen genom att införa standardbaserade felsvar som är bakåtkompatibla med OOTB-felhanterare, med större flexibilitet och kontroll.
 
 ## Headless Adaptive Forms early adopter {#forms-early-adopter}
 

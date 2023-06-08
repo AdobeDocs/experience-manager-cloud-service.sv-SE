@@ -4,9 +4,9 @@ description: Upptäck hur du enkelt kan skapa och lägga till anpassade formulä
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: f22554450d2eb1f4948f749ba00f78b568ee308f
+source-git-commit: 6b38601e9bd29c71e5f70b46d2fa55a928851adc
 workflow-type: tm+mt
-source-wordcount: '3121'
+source-wordcount: '3117'
 ht-degree: 0%
 
 ---
@@ -277,4 +277,4 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
 * [Stila dina huvudkomponentbaserade adaptiva Forms](using-themes-in-core-components.md)
 * [Använda regelredigeraren för att lägga till dynamiskt beteende i Adaptiv Forms](rule-editor.md)
 * [Ändra layout för ett anpassat formulär](/help/sites-cloud/authoring/features/responsive-layout.md)
-* [Generera postdokument](generate-document-of-record-core-components.md)
+

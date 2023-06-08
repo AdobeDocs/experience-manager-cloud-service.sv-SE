@@ -5,9 +5,9 @@ topic-tags: develop
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: 5801063c9c4c1c6b9f9e7f55ad4d66bb563e0eef
+source-git-commit: 6b38601e9bd29c71e5f70b46d2fa55a928851adc
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2928'
 ht-degree: 0%
 
 ---
@@ -194,11 +194,7 @@ Du kan ha en eller flera mottagare för ett Adobe Sign-avtal. När du lägger ti
       >
       >Kontrollera att e-postadressen för den första mottagaren eller den enda mottagaren (om det finns en enda mottagare) inte är identisk med [!DNL Adobe Sign] konto som används för att konfigurera AEM Cloud-tjänster.
 
-   * **[!UICONTROL Recipient Authentication Method]:** Ange metoden för att autentisera en mottagare innan du öppnar Adobe Sign-avtalet. Du kan välja mellan telefon, kunskapsbas, social ID-baserad autentisering och [Offentlig sektor](https://helpx.adobe.com/sign/using/adobesign-authentication-government-id.html) for [!DNL Adobe Acrobat Sign].
-
-      <!-- 
-      For [!DNL Adobe Acrobat Sign for Government] you can choose between phone and knowledge-based authentication.
-      -->
+   * **[!UICONTROL Recipient Authentication Method]:** Ange metoden för att autentisera en mottagare innan du öppnar Adobe Sign-avtalet. Du kan välja mellan telefon, kunskapsbas, social ID-baserad autentisering och [Offentlig sektor](https://helpx.adobe.com/sign/using/adobesign-authentication-government-id.html) for [!DNL Adobe Acrobat Sign]. För [!DNL Adobe Acrobat Sign for Government] du kan välja mellan telefon- och kunskapsbaserad autentisering.
    >[!NOTE]
    >
    >    * Som standard har den sociala identitetsbaserade autentiseringen ett alternativ för att autentisera med Facebook, Google och LinkedIn. Du kan kontakta [!DNL Adobe Sign] stöd för att aktivera andra leverantörer av social autentisering.
@@ -314,11 +310,9 @@ Efter [redigera adaptiva formuläregenskaper för Adobe Sign](working-with-adobe
    * Molnsignaturer: Signera med en [digitalt ID](https://helpx.adobe.com/sign/kb/digital-certificate-providers.html) som hanteras av en betrodd tjänsteleverantör.
    * Adobe Acrobat eller Reader: Hämta och öppna dokumentet med Adobe Acrobat eller Reader för att signera med ett smartkort, en USB-token eller ett filbaserat digitalt ID.
 
-      <!-- 
       >[!NOTE]
       >
-      > * [!DNL Adobe Acrobat Sign for Government] can use Digitial Signature but can not use Cloud Signatures in the current version.
-      -->
+      > Digital signatur gäller även för [!DNL Adobe Acrobat Sign for Government] men du kan inte använda det med molnsignaturer.
    När du har lagt till fältet för molnsignatur i det adaptiva formuläret utför du följande steg för att slutföra konfigurationsprocessen:
 
    * [Aktivera Adobe Sign för ett adaptivt formulär](#enableadobsignforanadaptiveform)
