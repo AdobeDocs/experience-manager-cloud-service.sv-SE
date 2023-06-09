@@ -4,33 +4,33 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: 2b597707a26726eec26541c04914ac36e8909fc5
 workflow-type: tm+mt
-source-wordcount: '3021'
+source-wordcount: '3084'
 ht-degree: 0%
 
 ---
 
 # Lägg till digitala resurser i [!DNL Adobe Experience Manager] som [!DNL Cloud Service] [!DNL Assets] {#add-assets-to-experience-manager}
 
-[!DNL Adobe Experience Manager Assets] kan hantera många typer av digitala resurser från många olika källor. Det lagrar binärfiler och skapade renderingar, kan bearbeta resurser i ett antal olika arbetsflöden och [!DNL Adobe Sensei] -tjänster, möjliggör distribution via många kanaler över många ytor.
+[!DNL Adobe Experience Manager Assets] kan hantera många typer av digitala resurser från många olika källor. Den lagrar binärfilerna och skapar renderingar, kan hantera resurser med olika arbetsflöden och [!DNL Adobe Sensei] -tjänster, möjliggör distribution via många kanaler över många ytor.
 
 [!DNL Adobe Experience Manager] berikar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, renderingar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
 
-Förutom den vanligaste webbläsaröverföringen kan du använda andra metoder för att lägga till resurser i [!DNL Experience Manager] det finns en databas, inklusive skrivbordsklienter som Adobe Asset Link eller [!DNL Experience Manager] skrivbordsapp, uppladdnings- och inmatningsskript som kunderna skapar samt automatiserade inmatningsintegreringar som [!DNL Experience Manager] tillägg.
+Förutom den vanligaste webbläsaröverföringen kan du använda andra metoder för att lägga till resurser i [!DNL Experience Manager] databasen finns. Dessa andra metoder är skrivbordsklienter, som Adobe Asset Link eller [!DNL Experience Manager] skrivbordsapp, uppladdnings- och inmatningsskript som kunderna skapar samt automatiserade inmatningsintegreringar som [!DNL Experience Manager] tillägg.
 
 Medan du kan överföra och hantera binära filer i [!DNL Experience Manager], har de vanligaste filformaten stöd för ytterligare tjänster, som extrahering av metadata eller generering av förhandsgranskning/återgivning. Se [filformat som stöds](file-format-support.md) för mer information.
 
-Du kan också välja att utföra ytterligare bearbetning av de överförda resurserna. Ett antal resursbearbetningsprofiler kan konfigureras för mappen, till vilken resurserna överförs, för att lägga till specifika metadata, återgivningar eller bildbehandlingstjänster. Se [bearbeta resurser när de överförs](#process-when-uploaded).
+Du kan också välja att utföra ytterligare bearbetning av de överförda resurserna. Flera resursbearbetningsprofiler kan konfigureras för mappen, till vilken resurser överförs, för att lägga till specifika metadata, återgivningar eller bildbehandlingstjänster. Se [bearbeta resurser när de överförs](#process-when-uploaded).
 
 [!DNL Assets] tillhandahåller följande överföringsmetoder. Adobe rekommenderar att du förstår hur du använder ett överföringsalternativ innan du använder det.
 
 | Överföringsmetod | När ska du använda? | Primär persona |
 |---------------------|----------------|-----------------|
-| [Användargränssnittet i Resurskonsolen](#upload-assets) | Tillfällig uppladdning, enkel nedladdning och dragning, uppladdning av sökare. Använd inte för att överföra ett stort antal resurser. | Alla användare |
+| [Användargränssnittet i Resurskonsolen](#upload-assets) | Tillfällig uppladdning, enkel nedladdning och dragning, uppladdning av sökare. Använd inte för att överföra många resurser. | Alla användare |
 | [Överför API](#upload-using-apis) | För dynamiska beslut under överföring. | Developer |
 | [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | Intag av resurser med låg volym, men inte för migrering. | Administratör, marknadsförare |
-| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html) | Användbar när kreatörer och marknadsförare arbetar med mediefiler inifrån de [!DNL Creative Cloud] datorprogram. | Kreativ, Marketer |
+| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Användbar när kreatörer och marknadsförare arbetar med mediefiler inifrån de [!DNL Creative Cloud] datorprogram. | Kreativ, Marketer |
 | [Massinhämtning av resurser](#asset-bulk-ingestor) | Rekommenderas för storskalig migrering och ibland även för bulkimport. Endast för datalager som stöds. | Administratör, utvecklare |
 
 ## Överför resurser {#upload-assets}
@@ -59,6 +59,13 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 -->
 
 Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet.
+
+>[!IMPORTANT]
+>
+>Resurser som du överför till Experience Manager och som har ett filnamn som är längre än 100 tecken får ett kortare namn när de används i Dynamic Media.
+>
+>De första 100 tecknen i filnamnet används som de är; återstående tecken ersätts med en alfanumerisk sträng. Den här namnbytesmetoden ger ett unikt namn när resursen används i Dynamic Media. Den är också avsedd att rymma den maximala längden för filnamn i Dynamic Media.
+
 
 1. I [!DNL Assets] -användargränssnittet, navigera till den plats där du vill lägga till digitala resurser.
 1. Gör något av följande om du vill överföra resurserna:
@@ -99,15 +106,15 @@ If you upload many assets to [!DNL Experience Manager], the I/O requests to serv
 >Streaming upload is disabled for [!DNL Experience Manager] running on JEE server with servlet-api version lower than 3.1.
 -->
 
-### Hantera överföringar när det redan finns en resurs {#handling-upload-existing-file}
+### Hantera överföringar för befintliga resurser {#handling-upload-existing-file}
 
-Du kan överföra en resurs med samma sökväg (samma namn och plats) som en befintlig resurs. En varningsdialogruta med följande alternativ visas:
+Du kan överföra en resurs med samma sökväg (samma namn och samma plats) som en befintlig resurs. En varningsdialogruta med följande alternativ visas:
 
-* Ersätt befintlig resurs: Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar, beskärning och så vidare) som du har gjort för den befintliga resursen bort.
+* Ersätt befintlig resurs: Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar och beskärning) som du har gjort i den befintliga resursen bort.
 
-   >[!NOTE]
-   >
-   >Alternativet att ersätta resurser är inte tillgängligt om resursen är låst eller utcheckad.
+  >[!NOTE]
+  >
+  >Alternativet att ersätta resurser är inte tillgängligt om resursen är låst eller utcheckad.
 
 * Skapa en ny version: En ny version av den befintliga resursen skapas i databasen. Du kan visa de två versionerna i [!UICONTROL Timeline] och kan vid behov återgå till den tidigare versionen.
 * Behåll båda: Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn.
@@ -125,11 +132,11 @@ Om du vill anpassa namngivningskonventionerna för din organisation väljer du [
 
 ## Överför resurser gruppvis {#bulk-upload}
 
-Inspelaren av massresurser kan hantera mycket stora mängder resurser effektivt. Men ett storskaligt intag är inte bara en stor fildump eller en tillfällig migrering. För att ett storskaligt intag ska bli ett meningsfullt projekt som passar ert företag och är effektivt, måste ni planera migreringen och strukturera resursorganisationen. Alla förslag skiljer sig åt, i stället för att generalisera, vilket spelar en avgörande roll för den nya databassammansättningen och affärsbehoven. Nedan följer några övergripande förslag på hur du kan planera och utföra ett massintagande:
+Inspelaren av gruppresurser kan hantera många resurser effektivt. Men ett storskaligt intag är inte bara en stor fildump eller en tillfällig migrering. För att ett storskaligt intag ska bli ett meningsfullt projekt som passar ert företag och är effektivt, måste ni planera migreringen och strukturera resursorganisationen. Alla förslag skiljer sig åt, i stället för att generalisera, vilket spelar en avgörande roll för den nya databassammansättningen och affärsbehoven. Nedan följer några övergripande förslag på hur du kan planera och utföra ett massintagande:
 
-* Kuratresurser: Ta bort resurser som inte behövs i DAM. Överväg att ta bort oanvända, föråldrade eller duplicerade resurser. Detta minskar antalet överförda data och insamlade resurser, vilket leder till snabbare frågor.
+* Kuratresurser: Ta bort resurser som inte behövs i DAM. Överväg att ta bort oanvända, föråldrade eller duplicerade resurser. Sådan hushållning minskar överförda data och insamlade resurser, vilket leder till snabbare frågor.
 * Ordna resurser: Överväg att ordna innehållet i någon logisk ordning, t.ex. efter filstorlek, filformat, skiftläge eller prioritet. I allmänhet kräver stora komplexa filer mer bearbetning. Du kan också överväga att importera stora filer separat med hjälp av filstorleksfiltreringsalternativet (som beskrivs nedan).
-* Större frågor: Överväg att dela upp ditt intag i flera massintagningsprojekt. Detta gör att du kan se innehållet snabbare och uppdatera ditt intag efter behov. Du kan t.ex. importera bearbetningsintensiva resurser under icke-toppade timmar eller gradvis i flera segment. Du kan emellertid importera mindre och enklare resurser som inte kräver mycket bearbetning på en gång.
+* Större frågor: Överväg att dela upp ditt intag i flera massintagningsprojekt. q gör att du kan se innehållet snabbare och uppdatera ditt intag efter behov. Du kan t.ex. importera bearbetningsintensiva resurser under icke-toppade timmar eller gradvis i flera segment. Du kan emellertid importera mindre och enklare resurser som inte kräver mycket bearbetning på en gång.
 
 Om du vill överföra fler filer använder du någon av följande metoder. Se även [användningsfall och -metoder](#upload-methods-comparison)
 
@@ -188,19 +195,19 @@ Så här konfigurerar du verktyget för massimport:
 
 1. Välj **[!UICONTROL Import Mode]**. Välj **Hoppa över**, **Ersätt**, eller **Skapa version**. Hoppa över är standardläget och i det här läget hoppar användaren över att importera en resurs om den redan finns. Se innebörden i [ersätta och skapa versionsalternativ](#handling-upload-existing-file).
 
-1. Ange en sökväg för att definiera en plats i DAM där resurser ska importeras med **[!UICONTROL Assets Target Folder]** fält. Till exempel, `/content/dam/imported_assets`.
+1. Definiera en plats i DAM där resurser ska importeras med **[!UICONTROL Assets Target Folder]** anger du en sökväg. Till exempel, `/content/dam/imported_assets`.
 
-1. (Valfritt) Ange den metadatafil som ska importeras, som finns i CSV-format, i **[!UICONTROL Metadata File]** fält. Ange CSV-filen på blobbplatsen för källan och referera till sökvägen när verktyget för massimport konfigureras. CSV-filformatet som refereras i det här fältet är detsamma som CSV-filformatet när du [Importera och exportera metadata för resurser i grupp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/metadata-import-export.html). Om du väljer **Ta bort källfil efter import** -alternativ, filtrera CSV-filer med **Exkludera** eller **Inkludera MIME-typ** eller **Filtrera efter sökväg/fil** fält. Du kan använda ett reguljärt uttryck för att filtrera CSV-filer i dessa fält.
+1. (Valfritt) Ange den metadatafil som ska importeras, som finns i CSV-format, i **[!UICONTROL Metadata File]** fält. Ange CSV-filen på blobbplatsen för källan och referera till sökvägen när verktyget för massimport konfigureras. CSV-filformatet som refereras i det här fältet är samma som CSV-filformatet när du [Importera och exportera metadata för resurser i grupp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/metadata-import-export.html). Om du väljer **Ta bort källfil efter import** -alternativ, filtrera CSV-filer med **Exkludera** eller **Inkludera MIME-typ** eller **Filtrera efter sökväg/fil** fält. Du kan använda ett reguljärt uttryck för att filtrera CSV-filer i dessa fält.
 
 1. Klicka **[!UICONTROL Save]** för att spara konfigurationen.
 
 ### Hantera konfigurationen för verktyget Massimport {#manage-bulk-import-configuration}
 
-När du har skapat konfigurationen för verktyget Massimport kan du utföra uppgifter för att utvärdera konfigurationen innan du gruppimporterar resurser till din Experience Manager-instans. Välj den konfiguration som är tillgänglig på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]** om du vill visa tillgängliga alternativ för att hantera konfigurationen av verktyget för massimport.
+När du har skapat konfigurationen för verktyget Massimport kan du utföra uppgifter för att utvärdera konfigurationen innan du gruppimporterar resurser till din Experience Manager-instans. Om du vill visa de tillgängliga alternativen för att hantera konfigurationen av verktyget för bulkimport markerar du konfigurationen som finns på **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]**.
 
 ### Redigera konfigurationen {#edit-configuration}
 
-Välj konfigurationen och klicka på **[!UICONTROL Edit]** om du vill ändra konfigurationsinformationen. Du kan inte redigera titeln för konfigurationen och importdatakällan när du utför redigeringsåtgärden.
+Om du vill redigera konfigurationsinformationen markerar du konfigurationen och klickar sedan på **[!UICONTROL Edit]**. Du kan inte redigera titeln för konfigurationen och importdatakällan när du utför redigeringsåtgärden.
 
 ### Ta bort konfigurationen {#delete-configuration}
 
@@ -208,7 +215,7 @@ Välj konfigurationen och klicka på **[!UICONTROL Delete]** om du vill ta bort 
 
 ### Validera anslutningen till datakällan {#validate-connection}
 
-Välj konfigurationen och klicka på **[!UICONTROL check]** för att validera anslutningen till datakällan. Om anslutningen lyckas visas följande meddelande i Experience Manager:
+Om du vill validera anslutningen till datakällan markerar du konfigurationen och klickar sedan på **[!UICONTROL check]**. Om anslutningen lyckas visas följande meddelande i Experience Manager:
 
 ![Meddelande om att gruppimporten lyckades](assets/bulk-import-success-message.png)
 
@@ -240,22 +247,22 @@ För filnamn på resurser saneras JCR-namnet och sökvägen med API:t: `JcrUtil.
 * Unicode-tecken ändras inte
 * Ersätt specialtecknen med deras URL Escape-kod, till exempel `new%asset.png` uppdateras till `new%25asset.png`:
 
-   ```
-                   URL escape code   
-   
-   "               %22
-   %               %25
-   '               %27
-   *               %2A
-   /               %2F
-   :               %3A
-   [               %5B
-   \n              %0A
-   \r              %0D
-   \t              %09
-   ]               %5D
-   |               %7C
-   ```
+  ```
+                  URL escape code   
+  
+  "               %22
+  %               %25
+  '               %27
+  *               %2A
+  /               %2F
+  :               %3A
+  [               %5B
+  \n              %0A
+  \r              %0D
+  \t              %09
+  ]               %5D
+  |               %7C
+  ```
 
 **Hantera mappnamn vid bulkimport**
 
@@ -265,28 +272,28 @@ För mappfilnamn sanpassas JCR-namnet och sökvägen med API:t: `DamUtil.getSani
 * Unicode-tecken ändras inte
 * Ersätt specialtecknen med bindestreck (&#39;-&#39;), till exempel `new folder` uppdateras till `new-folder`:
 
-   ```
-   "                           
-   #                         
-   %                           
-   &                          
-   *                           
-   +                          
-   .                           
-   :                           
-   ;                          
-   ?                          
-   [                           
-   ]                           
-   ^                         
-   {                         
-   }                         
-   |                           
-   /         It is used for split folder in cloud storage and is pre-handled, no conversion here.
-   \         Not allowed in Azure, allowed in AWS.
-   \t
-   space     It is the space character.
-   ```
+  ```
+  "                           
+  #                         
+  %                           
+  &                          
+  *                           
+  +                          
+  .                           
+  :                           
+  ;                          
+  ?                          
+  [                           
+  ]                           
+  ^                         
+  {                         
+  }                         
+  |                           
+  /         It is used for split folder in cloud storage and is pre-handled, no conversion here.
+  \         Not allowed in Azure, allowed in AWS.
+  \t
+  space     It is the space character.
+  ```
 
 <!-- 
 [!DNL Experience Manager Assets] manages the forbidden characters in the filenames while you upload assets or folders. [!DNL Experience Manager] updates only the node names in the DAM repository. However, the `title` of the asset or folder remains unchanged.
@@ -317,21 +324,21 @@ Så här schemalägger du en enstaka eller återkommande bulkimport:
 
 #### Visa målmappen Resurser {#view-assets-target-folder}
 
-Välj konfigurationen och klicka på **[!UICONTROL View Assets]** om du vill visa målplatsen för resurser där resurserna importeras efter att du har kört jobbet för massimport.
+Om du vill visa målplatsen för resurserna där resurserna importeras efter att du har kört massimportjobbet, markerar du konfigurationen och klickar sedan på **[!UICONTROL View Assets]**.
 
 #### Kör verktyget Massimport {#run-bulk-import-tool}
 
 Efter [konfigurera verktyget Massimport](#configure-bulk-ingestor-tool) och valfritt [hantera konfigurationen för verktyget Massimport](#manage-bulk-import-configuration)kan du köra konfigurationsjobbet för att starta massinmatningen av resurser.
 
-Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]** väljer du [Konfiguration av massimport](#configure-bulk-ingestor-tool) och klicka **[!UICONTROL Run]** för att starta processen för massimport. Klicka **[!UICONTROL Run]** igen för att bekräfta.
+Om du vill starta processen för massimport går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]** väljer du [Konfiguration av massimport](#configure-bulk-ingestor-tool)och klicka sedan på **[!UICONTROL Run]**. Klicka **[!UICONTROL Run]** igen för att bekräfta.
 
-Experience Manager uppdaterar jobbets status till **Bearbetar** och till **Slutförd** när jobbet har slutförts. Klicka **Visa resurser** om du vill visa de importerade resurserna i Experience Manager.
+Experience Manager uppdaterar jobbets status till **Bearbetar** och till **Slutförd** när jobbet har slutförts. Om du vill visa de importerade resurserna i Experience Manager klickar du på **Visa resurser**.
 
 När jobbet pågår kan du även välja konfigurationen och klicka på **Stoppa** för att stoppa massintagsprocessen. Klicka **Kör** för att återuppta processen. Du kan också klicka **Torr körning** för att få information om de resurser som fortfarande väntar på import.
 
 #### Hantera jobb efter körning {#manage-jobs-after-execution}
 
-Med Experience Manager kan du se historiken för massimportjobben. Jobbhistoriken omfattar jobbstatus, jobbskapare, loggar och annan information, t.ex. startdatum och starttid, datum och tid för när jobbet skapades samt slutdatum och sluttid.
+Med Experience Manager kan du se historiken för massimportjobben. Jobbhistoriken omfattar jobbstatus, jobbskapare, loggar och annan information, t.ex. startdatum och starttid, datum och tid för att skapa samt slutdatum och sluttid.
 
 Om du vill komma åt jobbhistoriken för en konfiguration väljer du konfigurationen och klickar på **[!UICONTROL Job History]**. Välj ett jobb och klicka på **Öppna**.
 
@@ -345,11 +352,11 @@ Experience Manager visar jobbhistoriken. På historiksidan för massimportjobb k
 Förutom webbläsarens användargränssnitt kan [!DNL Experience Manager] har stöd för andra klienter på datorn. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
 * [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] i Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link inifrån dessa datorprogram.
-* [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) gör det enklare att arbeta med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är särskilt användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
+* [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) gör det enklare att arbeta med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Bearbeta resurser när de överförs {#process-when-uploaded}
 
-För att kunna utföra ytterligare bearbetning av de överförda resurserna kan du använda bearbetningsprofiler på överförda mappar. Profilerna finns i **[!UICONTROL Properties]** sida i en mapp i [!DNL Assets]. En digital resurs utan ett tillägg eller med ett felaktigt tillägg bearbetas inte som du vill. När du till exempel överför sådana resurser händer ingenting eller så kan en felaktig bearbetningsprofil gälla för resursen. Användarna kan fortfarande lagra de binära filerna i DAM.
+Om du vill utföra ytterligare bearbetning på de överförda resurserna kan du använda bearbetningsprofiler på överförda mappar. Profilerna finns i **[!UICONTROL Properties]** sida i en mapp i [!DNL Assets]. En digital resurs utan ett tillägg eller med ett felaktigt tillägg bearbetas inte som du vill. När du till exempel överför sådana resurser händer ingenting eller så kan en felaktig bearbetningsprofil gälla för resursen. Användarna kan fortfarande lagra de binära filerna i DAM.
 
 ![Egenskaper för en resursmapp med alternativ för att lägga till en bearbetningsprofil](assets/assets-folder-properties.png)
 
@@ -358,7 +365,7 @@ Följande flikar är tillgängliga:
 * [Metadataprofiler](metadata-profiles.md) gör att du kan använda standardmetadataegenskaper för resurser som överförs till den mappen.
 * [Bearbetar profiler](asset-microservices-configure-and-use.md) gör att du kan generera fler återgivningar än vad som är möjligt som standard.
 
-Dessutom, om [!DNL Dynamic Media] är aktiverat för din distribution, finns följande flikar tillgängliga:
+Om [!DNL Dynamic Media] är aktiverat för din distribution, finns följande flikar tillgängliga:
 
 * [[!DNL Dynamic Media] Bildprofiler](dynamic-media/image-profiles.md) gör att du kan tillämpa en viss beskärning (**[!UICONTROL Smart Cropping]** och pixelbeskärning) och skärpekonfiguration för de överförda resurserna.
 * [[!DNL Dynamic Media] Videoprofiler](dynamic-media/video-profiles.md) gör att du kan använda särskilda videokodningsprofiler (upplösning, format, parametrar).
@@ -412,4 +419,3 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 >* [Om [!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
 >* [[!DNL Adobe Asset Link] dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [Teknisk referens för överföring av tillgångar](developer-reference-material-apis.md#asset-upload)
-
