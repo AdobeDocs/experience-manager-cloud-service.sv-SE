@@ -2,9 +2,9 @@
 title: Åtkomst till databaser
 description: Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering för självbetjäning från Cloud Manager.
 exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
-source-git-commit: 4729574eb31e01077f0d2a35efcef6d134f6aa5c
+source-git-commit: 9ec45753f56d0576e75f148ca0165c0ccd621f23
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Med Cloud Manager är det enkelt att hämta databasinformation med **Åtkomst ti
    * Git-användarnamn.
    * Git-lösenordet, vars värde visas när **Generera lösenord** klickas på knappen.
 
-   ![](/help/implementing/cloud-manager/assets/repos/access-repo-create.png)
+   ![Vyn Repo Info](/help/implementing/cloud-manager/assets/repos/access-repo-create.png)
 
 Med hjälp av dessa inloggningsuppgifter kan användaren klona en lokal kopia av databasen och göra ändringar i den lokala databasen, och när den är klar kan han eller hon spara kodändringar i fjärrkoddatabasen i Cloud Manager.
 

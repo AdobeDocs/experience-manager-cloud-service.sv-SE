@@ -3,9 +3,9 @@ title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
 description: OSGi-konfiguration med hemliga värden och miljöspecifika värden
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: 26ca2addb14f62588035323ce886ae890919b759
+source-git-commit: 9ec45753f56d0576e75f148ca0165c0ccd621f23
 workflow-type: tm+mt
-source-wordcount: '3312'
+source-wordcount: '3323'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,7 @@ Det finns tre sorters OSGi-konfigurationsvärden som kan användas med Adobe Exp
 
 I det vanliga fallet för OSGi används inline OSGi-konfigurationsvärden. Miljöspecifika konfigurationer används endast för specifika användningsområden där värdet skiljer sig mellan olika utvecklingsmiljöer.
 
-![](assets/choose-configuration-value-type_res1.png)
+![Beslutsträd om hur du använder rätt typ av konfigurationsvärde](assets/choose-configuration-value-type_res1.png)
 
 Miljöspecifika konfigurationer utökar de traditionella, statiskt definierade OSGi-konfigurationer som innehåller infogade värden, vilket ger möjlighet att hantera OSGi-konfigurationsvärden externt via Cloud Manager API. Det är viktigt att förstå när den vanliga och traditionella metoden för att definiera textbundna värden och lagra dem i Git ska användas, jämfört med att abstrahera värdena till miljöspecifika konfigurationer.
 
@@ -265,8 +265,7 @@ Värdena för variablerna får inte överstiga 2 048 tecken.
 >1. Kunderna får inte referera till variabler som är prefix med `INTERNAL_` eller `ADOBE_` antingen.
 >
 >1. Miljövariabler med prefix `AEM_` definieras av produkten som publikt API som ska användas och anges av kunderna.
-   >   När kunderna kan använda och ange miljövariabler som börjar med prefixet `AEM_` de ska inte definiera sina egna variabler med det här prefixet.
-
+>   När kunderna kan använda och ange miljövariabler som börjar med prefixet `AEM_` de ska inte definiera sina egna variabler med det här prefixet.
 
 ### Standardvärden {#default-values}
 
@@ -317,7 +316,7 @@ Om en OSGi-egenskap kräver olika värden för författare jämfört med publice
 * Separat `config.author` och `config.publish` OSGi-mappar måste användas enligt beskrivningen i [Avsnittet Upplösning i körläge](#runmode-resolution).
 * Det finns två alternativ för att skapa de oberoende variabelnamnen som ska användas:
    * det första alternativet som rekommenderas: i alla OSGi-mappar (som `config.author` och `config.publish`) som deklarerats för att definiera olika värden, använd samma variabelnamn. Till exempel
-      `$[env:ENV_VAR_NAME;default=<value>]`, där standardvärdet motsvarar standardvärdet för den nivån (författare eller publicering). När miljövariabeln ställs in via [API för Cloud Manager](#cloud-manager-api-format-for-setting-properties) eller via en klient, differentiera mellan nivåerna med hjälp av parametern &quot;service&quot; som beskrivs i detta [API-referensdokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/api-reference/). Parametern service binder variabelns värde till rätt OSGi-nivå. Det kan vara&quot;författare&quot;,&quot;publicera&quot; eller&quot;förhandsgranska&quot;.
+     `$[env:ENV_VAR_NAME;default=<value>]`, där standardvärdet motsvarar standardvärdet för den nivån (författare eller publicering). När miljövariabeln ställs in via [API för Cloud Manager](#cloud-manager-api-format-for-setting-properties) eller via en klient, differentiera mellan nivåerna med hjälp av parametern &quot;service&quot; som beskrivs i detta [API-referensdokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/api-reference/). Parametern service binder variabelns värde till rätt OSGi-nivå. Det kan vara&quot;författare&quot;,&quot;publicera&quot; eller&quot;förhandsgranska&quot;.
    * det andra alternativet, som är att deklarera distinkta variabler med ett prefix som `author_<samevariablename>` och `publish_<samevariablename>`
 
 ### Konfigurationsexempel {#configuration-examples}

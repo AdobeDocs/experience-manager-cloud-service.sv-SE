@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 91a13f8b23136298e0ccf494e51fccf94fa1e0b4
+source-git-commit: 9ec45753f56d0576e75f148ca0165c0ccd621f23
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1341'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Mer information om Hantera publikation finns i [Dokumentation för Publishing Fu
 
 Du kan aktivera en trädreplikering genom att välja **Verktyg - Arbetsflöde - Modeller** och kopiera **Publicera innehållsträd** körklar arbetsflödesmodell, enligt nedan:
 
-![](/help/operations/assets/publishcontenttreeworkflow.png)
+![Arbetsflödeskortet för publiceringsinnehållsträdet](/help/operations/assets/publishcontenttreeworkflow.png)
 
 Ändra inte och anropa inte den ursprungliga modellen. I stället måste du först kopiera modellen och sedan ändra eller anropa kopian.
 

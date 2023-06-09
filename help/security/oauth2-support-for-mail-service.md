@@ -2,9 +2,9 @@
 title: OAuth2-stöd för e-posttjänsten
 description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: 4997c506e1cd467255fe11cb596fb64d74a511af
+source-git-commit: 9ec45753f56d0576e75f148ca0165c0ccd621f23
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Mer information om AEM as a Cloud Service Mail Service finns i [Skickar e-post](
 1. Sök efter **Azure Active Directory** i sökfältet och klicka på resultatet. Du kan även bläddra direkt till [https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 1. Klicka på **Appregistrering** - **Ny registrering**
 
-   ![](assets/oauth-outlook1.png)
+   ![Starta appregistreringsprocessen](assets/oauth-outlook1.png)
 
 1. Fyll i informationen enligt dina krav och klicka sedan på **Registrera**
 1. Gå till den nya appen och välj **API-behörigheter**
@@ -135,8 +135,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
    * `email`
    * `profile`
 1. Skapa en OSGI-egenskapsfil `called com.day.cq.mailer.DefaultMailService.cfg.json`
-under 
-`/apps/<my-project>/osgiconfig/config`  med följande syntax:
+under `/apps/<my-project>/osgiconfig/config`  med följande syntax:
 
    ```
    {
