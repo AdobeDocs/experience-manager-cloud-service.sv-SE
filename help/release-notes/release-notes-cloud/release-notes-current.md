@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 3209b3098544275bd31ee19842bef0eb2e7a29d8
+source-git-commit: d4d44f452406e452372e409c6594ef4a256b9682
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för den aktu
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2021, 2022 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
 >Ta en titt på [Roadmap för lansering av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om de kommande funktionsaktiviteterna för [!DNL Experience Manager] as a Cloud Service.
 
@@ -54,43 +54,47 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 * [Förbättrade sökupplevelser](/help/assets/search-assets.md#aftersearch) - Du kan nu snabbt utföra följande åtgärder på resurserna som visas i sökresultaten:
 
    * Skapa ett arbetsflöde
-   * Skapa en ny version
+   * Skapa en version
    * Relatera eller inte relatera tillgångar
 
      Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
 
 * Förbättrad användbarhet för färgsökningsaspekten - Indatafältet för färgvärden kan nu redigeras och sökresultaten uppdateras endast när du avslutar färgväljaren.
 
-* Stöd för nytt protokoll (DASH - Dynamic Adaptive Streaming over HTTP) har startats för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
+* Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
    * Adaptiv direktuppspelning (DASH/HLS) ger en bättre visningsupplevelse för videor
    * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
    * Tillgängligt i alla regioner, för att aktiveras via supportanmälan
 
-* Dynamic Media _Ögonblicksbild_ - Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare och optimering av Smart Imaging för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och Device Pixel Ratio. Se [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
+* Dynamic Media _Ögonblicksbild_ - Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare och utvärdera smarta bildoptimeringar för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och Device Pixel Ratio. Se [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
+
+### Funktion i [!DNL Assets] prerelease {#prerelease-feature-assets}
+
+* Dynamic Media - Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html?lang=en#crop-options).
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
 ### Nya funktioner i [!DNL Forms] {#new-features-available-in-channel}
 
-* **[Skicka anpassningsbara Forms till Microsoft SharePoint och Microsoft OneDrive](/help/forms/configuring-submit-actions.md)**: Förbättra affärsanvändarnas möjligheter att snabbt öppna nya formulär och lagra inlämnade data i vardagliga verktyg som de använder som Microsoft SharePoint webbplats eller OneDrive-mapp.
+* **[Skicka anpassningsbara Forms till Microsoft® SharePoint och Microsoft® OneDrive](/help/forms/configuring-submit-actions.md)**: Öka användarflexibiliteten så att ni snabbt kan starta nya formulär och lagra inlämnade data i vardagliga verktyg som Microsoft® SharePoint eller OneDrive.
 
 ### Funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
 
 * [Adaptiv Forms i AEM Page Editor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md): Nu kan du använda AEM Page Editor för att snabbt skapa och lägga till flera formulär på webbplatsens sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsmöjligheter på webbplatssidor med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan:
 
    * Skapa ett anpassat formulär genom att dra och släppa formulärkomponenter i den adaptiva Forms Container-komponenten i AEM Sites Editor eller Experience Fragments.
-   * Använd Adaptive Forms Wizard i AEM Sites Editor för att skapa formulär oberoende av webbplatssidor, vilket ger dig frihet att återanvända sådana formulär på flera sidor.
+   * Använd Adaptive Forms Wizard i AEM Sites Editor för att skapa formulär oberoende av sajtsidor, vilket ger dig frihet att återanvända sådana formulär på flera sidor.
    * Lägg till flera formulär på en webbplatssida, effektivisera användarupplevelsen och ge större flexibilitet.
 
      >[!VIDEO](https://video.tv.adobe.com/v/3419284?quality=12&learn=on)
 
-* [Förbättrad integrering och efterlevnad av Adobe Acrobat Sign](/help/forms/adobe-sign-integration-adaptive-forms.md): AEM Forms kan nu integreras med Adobe Acrobat Sign for Government, vilket ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inlämning av adaptiva blanketter för myndighetskonton (myndigheter och myndigheter).
+* [Förbättrad integrering och efterlevnad av Adobe Acrobat Sign](/help/forms/adobe-sign-integration-adaptive-forms.md): AEM Forms kan nu integreras med Adobe Acrobat Sign för myndigheter. Integreringen ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inskickade adaptiva formulär för myndighetskonton (myndigheter och myndigheter).
 
-  Integreringen med Adobe Acrobat Sign for Government gör det möjligt för våra partners och myndigheter att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate och ger våra myndighetskunder sinnesro.
+  Integrationen med Adobe Acrobat Sign for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
 
-* Förbättra felhanteringen med anpassade felhanterare i regelredigeraren: Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändare eller vidta specifika åtgärder för fel som returnerats av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
+* Förbättrad felhantering med anpassade felhanterare i regelredigeraren. Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
 
-  Detta förbättrar den övergripande felhanteringen genom att införa standardbaserade felsvar som är bakåtkompatibla med OOTB-felhanterare, med större flexibilitet och kontroll.
+  Den här funktionen förbättrar den övergripande felhanteringskapaciteten genom att införa standardbaserade felsvar som är bakåtkompatibla med OOTB-felhanterare, med större flexibilitet och kontroll.
 
 ### Headless Adaptive Forms early adopter {#forms-early-adopter}
 
@@ -99,7 +103,7 @@ Med Headless Adaptive Forms kan utvecklarna skapa, publicera och hantera interak
 * bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
 * integrera formulär direkt i era datorprogram och mobilappar, webbplatser och chattapplikationer
 * återanvända era egna gränssnittskomponenter med blankettapplikationer
-* utnyttja kraften i Adobe Experience Manager Forms
+* använder kraften i Adobe Experience Manager Forms
 
 Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från ditt officiella e-post-ID till att gå med i det tidiga adopterprogrammet.
 
