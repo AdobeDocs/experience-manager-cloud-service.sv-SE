@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lär dig hur du lägger till ett anpassat domännamn med hjälp av Cloud Manager.
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: 0febf4b4a59617e6cc4f8414963c4a91fcf8765e
+source-git-commit: 21496a52fbe3caa08c606ddaeb85481a9d416b3d
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -82,11 +82,11 @@ Följ de här stegen för att lägga till ett eget domännamn från **Miljö** s
    1. Välj SSL-certifikatet som är associerat med det här namnet i listrutan.
    1. Klicka på **+Lägg till**.
 
-   ![](/help/implementing/cloud-manager/assets/cdn/cdn-create3.png)
+   ![Lägg till anpassat domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create3.png)
 
 1. Kontrollera de värden som är markerade i dialogrutan **Lägg till domännamn** och klicka **Fortsätt**.
 
-   ![](/help/implementing/cloud-manager/assets/cdn/cdn-create5.png)
+   ![Domännamnsfönster](/help/implementing/cloud-manager/assets/cdn/cdn-create5.png)
 
    >[!NOTE]
    >

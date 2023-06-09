@@ -2,9 +2,9 @@
 title: IMS-konfiguration som ska användas vid integrering med Adobe Target
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Target
 exl-id: b5474b70-bedc-4cc9-ad47-89dcb2415e3a
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 21496a52fbe3caa08c606ddaeb85481a9d416b3d
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '863'
 ht-degree: 1%
 
 ---
@@ -72,9 +72,9 @@ Adobe Developer Console Project (integration) med Adobe Target som AEM ska anvä
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
    * Om du inte har något projekt än **Skapa nytt projekt** kommer att vara i mitten, nederst.
-      ![Skapa nytt projekt - första projektet](assets/integration-target-ims-02.png)
+     ![Skapa nytt projekt - första projektet](assets/integration-target-ims-02.png)
    * Om du redan har befintliga projekt listas dessa och **Skapa nytt projekt** kommer att vara överst till höger.
-      ![Skapa nytt projekt - flera projekt](assets/integration-target-ims-03.png)
+     ![Skapa nytt projekt - flera projekt](assets/integration-target-ims-03.png)
 
 
 1. Välj **Lägg till i projekt** följt av **API**:
@@ -87,7 +87,7 @@ Adobe Developer Console Project (integration) med Adobe Target som AEM ska anvä
    >
    >Om du prenumererar på Adobe Target, men inte ser det i listan, bör du kontrollera [Förutsättningar](#prerequisites).
 
-   ![](assets/integration-target-ims-12.png)
+   ![Välj Adobe Target](assets/integration-target-ims-12.png)
 
 1. **Överför din offentliga nyckel** och när det är klart fortsätter du med **Nästa**:
 
@@ -105,7 +105,6 @@ Adobe Developer Console Project (integration) med Adobe Target som AEM ska anvä
    >
    >* Adobe Target Standard - endast **Standardarbetsyta** är tillgänglig
    >* Adobe Target Premium - alla tillgängliga arbetsytor visas i listan enligt nedan
-
 
    ![Välj produktprofiler och spara det konfigurerade API:t](assets/integration-target-ims-16.png)
 
@@ -185,7 +184,6 @@ Så här bekräftar du att konfigurationen fungerar som förväntat:
    Till exempel:
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
-
 
 1. Välj din konfiguration.
 1. Välj **Kontrollera hälsa** i verktygsfältet, följt av **Kontrollera**.
