@@ -4,9 +4,9 @@ description: Upptäck hur du enkelt kan skapa och lägga till anpassade formulä
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: d9c5934c03b9c5aa91bafa09569d441fc7868937
+source-git-commit: 3209b3098544275bd31ee19842bef0eb2e7a29d8
 workflow-type: tm+mt
-source-wordcount: '2999'
+source-wordcount: '3011'
 ht-degree: 0%
 
 ---
@@ -136,14 +136,15 @@ Aktivera [!UICONTROL Adaptive Forms Container] utför följande steg i mallens p
 
 ## Skapa ett adaptivt formulär {#create-an-adaptive-form-in-sites-editor-or-experience-fragment}
 
-Du kan skapa ett helt nytt formulär från grunden och anpassa det specifikt efter dina krav och designönskemål, direkt på en AEM webbplatssida eller i Experience Fragment. För enstaka formulär rekommenderas direktredigering till en AEM webbplats, medan Experience Fragments är idealiskt för formulär som behöver återanvändas på flera sidor på webbplatsen.
+Du kan skapa ett helt nytt formulär från grunden och anpassa det specifikt efter dina krav och designönskemål, direkt på en AEM Sites-sida eller i Experience Fragment. För enstaka formulär rekommenderar vi direktredigering till en AEM Sites-sida, medan Experience Fragments är idealiskt för formulär som behöver återanvändas på flera sidor på webbplatsen.
 
 * [Skapa ett formulär på en AEM Sites-sida](#create-an-adaptive-form-in-sites-editor)
 * [Skapa ett formulär i ett Experience Fragment](#create-an-adaptive-form-in-experience-fragment)
+* [Konvertera ett anpassat formulär på en AEM Sites-sida till ett Experience Fragment](#convert-an-adaptive-form-in-sites-page-to-an-experience-fragment)
 
 ### Skapa ett formulär på en AEM Sites-sida {#create-an-adaptive-form-in-sites-editor}
 
-Du kan använda komponenten Adaptiv formulärbehållare i AEM Sites Editor för att skapa ett anpassat formulär. Med komponenten kan du skapa ett formulär genom att dra och släppa formulärkomponenterna. Formulärkomponenterna är baserade på kärnkomponenter. Du kan enkelt anpassa dessa efter organisationens behov.
+Du kan använda komponenten Adaptiv formulärbehållare AEM sidredigeraren för att skapa ett anpassat formulär. Med komponenten kan du skapa ett formulär genom att dra och släppa formulärkomponenterna. Formulärkomponenterna är baserade på kärnkomponenter. Du kan enkelt anpassa dessa efter organisationens behov.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419284?quality=12&learn=on)
 
@@ -169,7 +170,7 @@ Så här skapar du ett anpassat formulär i ett Experience Fragment:
 
 Nästa [ange åtgärden Skicka](#configure-submit-action-for-form) och avancerade egenskaper.
 
-### Konvertera ett anpassat formulär på en AEM Sites-sida till ett Experience Fragment
+### Konvertera ett anpassat formulär på en AEM Sites-sida till ett Experience Fragment {#convert-an-adaptive-form-in-sites-page-to-an-experience-fragment}
 
 Du kan konvertera ett befintligt adaptivt formulär i en webbplatssidredigerare till ett Experience Fragment för att återanvända formuläret på flera sidor eller webbplatser.
 
