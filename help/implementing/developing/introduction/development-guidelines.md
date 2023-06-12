@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 5a8d66c2ca2bed664d127579a8fdbdf3aa45c910
+source-git-commit: 6a26006a20ed2f1d18ff376863b3c8b149de1157
 workflow-type: tm+mt
-source-wordcount: '2591'
+source-wordcount: '2602'
 ht-degree: 1%
 
 ---
@@ -71,9 +71,11 @@ Förutom att tillhandahålla timeout bör även en korrekt hantering av sådana 
 
 AEM as a Cloud Service stöder bara Touch-gränssnittet för kundkod från tredje part. Klassiskt användargränssnitt är inte tillgängligt för anpassning.
 
-## Undvik inbyggda binärfiler {#avoid-native-binaries}
+## Inga inbyggda binärfiler eller inbyggda bibliotek {#avoid-native-binaries}
 
-Koden kommer inte att kunna hämta binärfiler vid körning och inte heller ändra dem. Den kan t.ex. inte packa upp `jar` eller `tar` filer.
+Inbyggda binära filer och bibliotek får inte distribueras till eller installeras i molnmiljöer.
+
+Koden bör inte heller försöka hämta inbyggda binära filer eller inbyggda Java-tillägg (t.ex. JNI) vid körning.
 
 ## Inga bindningar för direktuppspelning via AEM as a Cloud Service {#no-streaming-binaries}
 
@@ -128,7 +130,11 @@ Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom detta 
 
 Du kan ange diskreta loggnivåer för olika AEM miljöer med hjälp av OSGi-konfigurationsinriktning som baseras på körningsläge om det är önskvärt att alltid logga in `DEBUG` under utvecklingen. Till exempel:
 
-| Miljö | OSGi-konfigurationsplats via körningsläge | `org.apache.sling.commons.log.level` egenskapsvärde | | - | - | - | | Utveckling | /apps/example/config/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | FELSÖKNING | | Scen | /apps/example/config.stage/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | VARNING | | Produktion | /apps/example/config.prod/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | FEL |
+| Miljö | OSGi-konfigurationsplats via körningsläge | `org.apache.sling.commons.log.level` egenskapsvärde |
+| - | - | - |
+| Utveckling | /apps/example/config/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | FELSÖKNING |
+| Scen | /apps/example/config.stage/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | VARNING |
+| Produktion | /apps/example/config.prod/org.apache.sling.Commons.log.LogManager.factory.config~example.cfg.json | FEL |
 
 En rad i felsökningsfilen börjar oftast med DEBUG och anger sedan loggnivån, installationsåtgärden och loggmeddelandet. Till exempel:
 
