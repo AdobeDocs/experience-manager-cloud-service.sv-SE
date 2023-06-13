@@ -1,24 +1,30 @@
 ---
-title: Integrera med Adobe Campaign
+title: Integrera AEM as a Cloud Service med Adobe Campaign
 description: Läs om AEM as a Cloud Service stöd för integrering med Adobe Campaign.
 feature: Administering
 role: Admin
 exl-id: 23874955-bdf3-41be-8a06-53d2afdd7f2b
-source-git-commit: b107d66803fea2422a681763314bcfaed4a729db
+source-git-commit: 6d391ea86a950a3777311543492b5b89813ae377
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 2%
+source-wordcount: '176'
+ht-degree: 1%
 
 ---
 
 
-# Integrera med Adobe Campaign {#integrating-campaign}
+# Integrera AEM as a Cloud Service med Adobe Campaign {#integrating-campaign}
 
 Läs om AEM as a Cloud Service stöd för integrering med Adobe Campaign.
 
+>[!NOTE]
+>
+>I det här dokumentet beskrivs hur du integrerar Adobe Campaign med AEM as a Cloud Service, den AEM molnbaserade lösningen.
+>
+>Mer information om hur du integrerar Adobe Campaign med AEM 6.5, AEM på plats eller AMS-värd, finns i [se det här dokumentet.](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/campaign.html)
+
 ## Integrera med Adobe Campaign Classic {#acc}
 
-Det finns ett antal Adobe Campaign Classic-versioner (ACC). Stödet för integrering med AEMaaCS beror på vilken ACC-version du har implementerat.
+Det finns ett antal Adobe Campaign Classic-versioner (ACC). Stödet för integrering med AEM as a Cloud Service beror på vilken ACC-version du har implementerat.
 
 | ACC-version | Integrering med AEMaaCS |
 |---|---|
@@ -30,4 +36,4 @@ Det finns ett antal Adobe Campaign Classic-versioner (ACC). Stödet för integre
 
 ## Integrera med Adobe Campaign Standard {#acs}
 
-AEM as a Cloud Service stöder inte integrering med Adobe Campaign Standard (ACS).
+AEM as a Cloud Service stöder inte integrering med [Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard.html) (ACS).
