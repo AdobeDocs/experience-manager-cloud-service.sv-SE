@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: b104c7ddd102b3600384bf7472b166131e334c35
+source-git-commit: 663dae5785c13d74524054287869310d1fce5bd6
 workflow-type: tm+mt
-source-wordcount: '4064'
+source-wordcount: '4079'
 ht-degree: 20%
 
 ---
@@ -73,6 +73,7 @@ ht-degree: 20%
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
       + 2023 {#2023}
+         + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023.4.0.md)
          + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023.2.0.md)
          + [Versionsinformation om underhåll för 2023.1.0](/help/release-notes/maintenance/2023/2023.1.0.md)
    + Versionsinformation för Cloud Manager {#cloud-manager}
@@ -546,6 +547,7 @@ ht-degree: 20%
             + [Skapa teman för ett adaptivt formulär - kärnkomponenter](/help/forms/using-themes-in-core-components.md)
             + [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-core-components.md)
             + [Skapa en adaptiv Forms - kärnkomponenter på en AEM Sites-sida](/help/forms/embed-adaptive-form-core-components-aem-sites.md)
+            + [Använd maskinöversättning eller mänsklig översättning för att översätta ett adaptivt formulär](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
             + [Konfigurera omdirigeringssida eller tackmeddelande](/help/forms/configure-redirect-page-or-thank-you-message.md)
       + Skapa adaptiv Forms - grundkomponenter {#authoring-adaptive-forms-foundation-components}
          + Konvertera PDF forms till Adaptiv Forms {#afcs}
