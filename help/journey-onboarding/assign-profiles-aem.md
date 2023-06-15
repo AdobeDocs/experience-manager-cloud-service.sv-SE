@@ -4,9 +4,9 @@ description: När du har konfigurerat dina molnresurser måste du ge ditt team �
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: c00f5d28-85af-4bd3-a50c-913d1342241c
-source-git-commit: fd14d9f88fed4ef0f90b5dd0c92c53b1a298bd76
+source-git-commit: e5142052423abee7a2e2ed64affb2b04a93bf0d1
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,12 @@ Om du vill använda AEM måste teammedlemmarna tilldelas till minst en AEM produ
 * `AEM Users` - Den här gruppen innehåller vanliga användare som arbetar med vardagsarbete med innehåll.
 * `AEM Administrators` - Den här gruppen innehåller användare som ansvarar för avancerade funktioner eller AEM.
 
-Alla användare som tilldelats en AEM produktprofil får även skrivskyddad åtkomst till Cloud Manager. Skrivåtkomst till Cloud Manager kan beviljas via andra produktprofiler.
+>[!NOTE]
+>
+>Alla användare som tilldelats en AEM as a Cloud Service produktprofil har skrivskyddad åtkomst till Cloud Manager via **Cloud Manager-användare** roll.
+>
+>Användare med **Cloud Manager** Användarrollen kan bara logga in i Cloud Manager och navigera till AEM författarmiljöer (om sådana finns) med hjälp av alternativen på menyn Program. The **Cloud Manager-användare** rollen räcker inte för att komma åt programinformationen. Om sådan åtkomst behövs måste användarna tilldelas ytterligare roller av systemadministratören.
+>Se [Avsnittet Ytterligare resurser nedan](#additional-resources) om du vill ha mer information om användarroller i Cloud Manager.
 
 >[!CAUTION]
 >
@@ -108,6 +113,7 @@ Men om du bättre vill förstå hur författare och utvecklare använder systeme
 
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
+* [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) - Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 * [Hantera produkter och användaråtkomst i Admin Console](/help/security/ims-support.md#managing-products-and-user-access-in-admin-console) - Lär dig hur du använder Admin Console för att hantera åtkomsten.
-* [Konfigurera åtkomst till AEM genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html?lang=en) - Kolla in den här förkortade genomgången om du vill veta mer om hur du konfigurerar Adobe IMS-användare, användargrupper och produktprofiler i Admin Console.
+* [Konfigurera åtkomst till AEM genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html) - Kolla in den här förkortade genomgången om du vill veta mer om hur du konfigurerar Adobe IMS-användare, användargrupper och produktprofiler i Admin Console.
 

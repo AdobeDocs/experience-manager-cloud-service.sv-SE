@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: ecc15501b6187380c2039afdf68cbef909c54721
+source-git-commit: e5142052423abee7a2e2ed64affb2b04a93bf0d1
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2336'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [progra
 
    * The **Lägg till miljö** finns även på **Miljö** -fliken.
 
-      ![Fliken Miljö](assets/environments-tab.png)
+     ![Fliken Miljö](assets/environments-tab.png)
 
    * The **Lägg till miljö** kan vara inaktiverat på grund av bristande behörighet eller beroende på vilka licensierade resurser som används.
 
@@ -129,7 +129,7 @@ Du kan använda **Miljö** på översiktssidan för att få tillgång till milj�
 
    * Du kan även klicka på **Visa alla** på **Miljö** för att gå direkt till **Miljö** -fliken.
 
-      ![Visa alla, alternativ](assets/environment-showall.png)
+     ![Visa alla, alternativ](assets/environment-showall.png)
 
 1. The **Miljö** öppnar och visar alla miljöer för programmet.
 
@@ -231,12 +231,15 @@ Alternativet Ta bort är också tillgängligt från **Miljö** -fliken i **Över
 >* Produktions- och mellanlagringsmiljöer som skapats i ett produktionsprogram kan inte tas bort.
 >* Produktions- och mellanlagringsmiljöer i ett sandlådeprogram kan tas bort.
 
-
 ## Hantera åtkomst {#managing-access}
 
 Välj **Hantera åtkomst** på menyn ellips i miljön på **Miljö** kort. Du kan navigera till författarinstansen direkt och hantera åtkomsten för din miljö.
 
 ![Hantera åtkomstalternativ](assets/environ-access.png)
+
+>[!TIP]
+>
+>Se dokumentet [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) om du vill veta hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
 
 ## Åtkomst till Developer Console {#accessing-developer-console}
 
