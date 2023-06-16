@@ -4,9 +4,9 @@ description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering
 role: Admin
 exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: e6b6dd3dcccfa73893d224ccbd5ead0d910072a8
 workflow-type: tm+mt
-source-wordcount: '3585'
+source-wordcount: '3788'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,37 @@ Innehållspaket som skapas för AEM as a Cloud Service program måste ha en ren 
 >Försök inte installera igen om du ser ett sådant fel. Installationen fortsätter korrekt i bakgrunden. Om du startar om installationen kan vissa konflikter uppstå vid flera samtidiga importprocesser.
 
 Mer information om hur du hanterar paket för AEMaaCS finns i dokumentet [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md) i användarhandboken för distribution.
+
+## Paketstorlek {#package-size}
+
+Adobe rekommenderar att du inte skapar stora paket. Detta för att undvika timeoutproblem vid överföring och hämtning av paket.
+
+Som regel bör ett paket skickas i sin helhet inom 60 sekunder. Detta ger följande formel som vägledning.
+
+```text
+MaxPackageSize (in MB) = ConnectionSpeed (in MB/s) * 60 s
+```
+
+Eftersom nätverkstrafiken varierar och alltid är mindre än det annonserade maximala teoretiska värdet kan du testa med ett hastighetstest online.
+
+Internet-hastigheter är nästan alltid olika för överföringar och nedladdningar. Förutsatt att du behöver både överföra och hämta paket bör du använda det lägre värdet (vanligen överföringshastigheten) i beräkningen.
+
+### Exempel {#example}
+
+Med ett testverktyg för Internet-hastighet ser jag att min nuvarande överföringshastighet är cirka 100 Mbit/s.
+
+```text
+100 Mbps = 12.5 MB/s
+12.5 MB/s * 60 s = 750 MB
+```
+
+Alla paket jag skapar bör därför vara mindre än 750 MB.
+
+>[!NOTE]
+>
+>Nätverkshastigheterna regleras av aktuella lokala villkor. Även om du nyligen har gjort ett hastighetstest kan det faktiska dataflödet variera.
+>
+>Formeln är därför bara en riktlinje och din maximala rekommenderade paketstorlek kan variera.
 
 ## Pakethanteraren {#package-manager}
 
@@ -237,6 +268,10 @@ Det finns många åtgärder som kan utföras på ett paket.
 
 Det är inte obligatoriskt att omedelbart skapa paketet efter att det har skapats. Ett obyggt paket innehåller inget innehåll och består endast av filterdata och andra metadata för paketet.
 
+>[!TIP]
+>
+>För att undvika timeout rekommenderar Adobe [inte för att skapa stora paket.](#package-size)
+
 ### Bygga ett paket {#building-a-package}
 
 Ett paket skapas ofta samtidigt som du [skapa paketet](#creating-a-new-package), men du kan gå tillbaka vid ett senare tillfälle för att antingen skapa eller återskapa paketet. Detta kan vara användbart om innehållet i databasen har ändrats eller om paketfiltren har ändrats.
@@ -248,6 +283,10 @@ Ett paket skapas ofta samtidigt som du [skapa paketet](#creating-a-new-package),
 1. Klicka **Bygge**. En dialogruta där du uppmanas bekräfta att du vill skapa paketet eftersom allt befintligt paketinnehåll skrivs över.
 
 1. Klicka **OK**. AEM skapar paketet och visar allt innehåll som lagts till i paketet på samma sätt som i aktivitetslistan. När AEM är klar visas en bekräftelse på att paketet har skapats och (när du stänger dialogrutan) information om paketlistan uppdateras.
+
+>[!TIP]
+>
+>För att undvika timeout rekommenderar Adobe [inte för att skapa stora paket.](#package-size)
 
 ### Redigera ett paket {#edit-package}
 
@@ -313,6 +352,10 @@ När du har skapat ett paket kan du visa innehållet.
 
 1. AEM hämtar paketet till datorn.
 
+>[!TIP]
+>
+>För att undvika timeout rekommenderar Adobe [inte för att skapa stora paket.](#package-size)
+
 ### Överför paket från filsystemet {#uploading-packages-from-your-file-system}
 
 1. [Access Package Manager.](#accessing)
@@ -331,6 +374,10 @@ När du har skapat ett paket kan du visa innehållet.
 1. Klicka **OK** och det valda paketet överförs och paketlistan uppdateras därefter.
 
 Paketinnehållet finns nu på AEM, men för att göra innehållet tillgängligt för användning måste du [installera paketet](#installing-packages).
+
+>[!TIP]
+>
+>För att undvika timeout rekommenderar Adobe [inte för att skapa stora paket.](#package-size)
 
 ### Verifierar paket {#validating-packages}
 
