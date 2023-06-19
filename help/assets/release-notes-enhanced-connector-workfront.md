@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 3a00faaf285be693243e3fb55159149520293610
+source-git-commit: 0cc57a144b69799cfabc8baae2051e9ac8701d49
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -15,18 +15,22 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.10 av [!DNL Workfront for Experience Manager enhanced connector] är 18 maj 2023.
+Releasedatum för den senaste versionen, 1.9.11 av [!DNL Workfront for Experience Manager enhanced connector] är 19 juni 2023.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande uppdateringar:
 
-* Workfront returnerar ett 409 HTTP-svar för dubblerade händelseprenumerationer baserat på ett REST-anrop från Experience Manager till Workfront, vilket leder till ett null-pekarundantag.
+* När du har konfigurerat avancerade nätverk kan det uppstå problem när du skickar innehåll från Adobe Workfront till AEM as a Cloud Service.
+
+>[!NOTE]
+>
+>AEM 6.4 har nått slutet på det utökade stödet. Mer information finns i [teknisk supportperiod](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=en).
 
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [uppgradera till den senaste 1.9.10-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar att du [uppgradera till den senaste 1.9.11-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -35,6 +39,10 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** listrutan samt **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i den nya Workfront-upplevelsen.
 
 ## Tidigare versioner {#previous-releases}
+
+### Version från maj 2023 {#may-2023-release}
+
+* Workfront returnerar ett 409 HTTP-svar för dubblerade händelseprenumerationer baserat på ett REST-anrop från Experience Manager till Workfront, vilket leder till ett null-pekarundantag.
 
 ### April 2023-utgåvan {#april-2023-release}
 
@@ -95,7 +103,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 * Aktivera **[!UICONTROL Publish Assets to Brand Portal]** på konfigurationssidan för Workfront Enhanced Connector skapar en felaktig händelse. Händelsen tas inte bort även efter att alternativet har inaktiverats.
 
-   Så här löser du problemet:
+  Så här löser du problemet:
 
    1. Uppgradera till version 1.9.5 av den förbättrade anslutningen.
 
@@ -123,9 +131,9 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
       1. Ta bort fel händelseprenumeration. Gör ett Delete API-anrop till `<your-aem-domain>/attask/eventsubscription/api/v1/subscriptions/<event-subscription-ID-from-previous-step>`
 
          `200` eftersom svarskoden innebär att felaktiga händelseprenumerationer tas bort.
-   >[!NOTE]
-   >
-   >Om du redan har tagit bort fel händelseprenumerationer innan du utför de steg som beskrivs i den här proceduren kan du hoppa över det sista steget i den här proceduren.
+  >[!NOTE]
+  >
+  >Om du redan har tagit bort fel händelseprenumerationer innan du utför de steg som beskrivs i den här proceduren kan du hoppa över det sista steget i den här proceduren.
 
 ### Oktober 2022-versionen {#october-2022-release}
 
@@ -189,4 +197,3 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 >[!MORELIKETHIS]
 >
 >* [Integrera [!DNL Workfront for Experience Manager enhanced connector] med Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-integrations.html?lang=en)
-
