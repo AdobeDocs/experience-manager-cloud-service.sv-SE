@@ -4,9 +4,9 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: ac94981e477e1fe8b883460ed9be009b4c1c088d
+source-git-commit: 469ebc7c3cae6dbfc38077e841db3c61ca16c680
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Du börjar i Content Fragment-redigeraren med exempelappen som medföljer AEM He
 
 1. Tryck eller klicka på **Förhandsgranska** längst upp till höger på redigeringsskärmen.
 
-1. Demonstrationsappen öppnas på en ny flik. Appen är till för WKND:s påhittade livsstilsmärke. Klicka runt för att navigera i exempelinnehållet.
+1. Demonstrationsappen öppnas på en ny flik. Appen är till för WKND:s påhittade livsstilsmärke. Bläddra nedåt på sidan för att navigera i exempelinnehållet.
 
 1. Gå tillbaka till webbläsarfliken i Content Fragment-redigeraren för att fortsätta.
 
