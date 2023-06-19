@@ -2,9 +2,9 @@
 title: OAuth2-stöd för e-posttjänsten
 description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: 9ec45753f56d0576e75f148ca0165c0ccd621f23
+source-git-commit: 57667c1dda50b2a6a4ac2fccc428f5ccb252563c
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -135,15 +135,15 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
    * `email`
    * `profile`
 1. Skapa en OSGI-egenskapsfil `called com.day.cq.mailer.DefaultMailService.cfg.json`
-under `/apps/<my-project>/osgiconfig/config`  med följande syntax:
+under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. Observera att värdena smtp.host och smtp.port reflekterar avancerad nätverkskonfiguration, vilket beskrivs i [Självstudiekurs om e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html?lang=en).
 
    ```
    {
-    "smtp.host": "<smtp hostname>"
+    "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.user": "<user account that logged into get the oauth tokens>",
     "smtp.password": "value not used",
-    "smtp.port": 587,
-    "from.address": "<from address used for sending>"
+    "smtp.port": 30465,
+    "from.address": "<from address used for sending>",
     "smtp.ssl": false,
     "smtp.starttls": true,
     "smtp.requiretls": true,
