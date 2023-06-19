@@ -4,10 +4,10 @@ description: Installera [!DNL Workfront for Experience Manager enhanced connecto
 role: Admin
 feature: Integrations
 exl-id: 2907a3b2-e28c-4194-afa8-47eadec6e39a
-source-git-commit: 21f33c0b8710dd9d9db30543defff7dae9942c06
+source-git-commit: aa183901e80ba414fc3db5af01fbc49d082af7b6
 workflow-type: tm+mt
-source-wordcount: '630'
-ht-degree: 1%
+source-wordcount: '754'
+ht-degree: 0%
 
 ---
 
@@ -30,14 +30,28 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som 
 >
 >* Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrad anslutning](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). Mer information om provet finns i [Provguide](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
 
-
 Innan du installerar anslutningsprogrammet följer du de här förinstallationsstegen:
 
-1. [Konfigurera brandväggen](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html). Så här känner du IP-klustret i [!DNL Workfront], navigera till [!UICONTROL Setup] > [!UICONTROL System] > [!UICONTROL Customer Info].
+1. Om ditt AEM as a Cloud Service program har konfigurerat Advanced Networking och aktiverat IP Allow-Listing måste du lägga till Workfront IP-adresser i denna allow-list för att tillåta att händelseprenumerationer och olika API-anrop skickas till AEM.
 
-1. Tillåt HTTP-huvuden med namnet i dispatchern `authorization`, `username`och `apikey`. Tillåt `GET`, `POST`och `PUT` förfrågningar till `/bin/workfront-tools`.
+   * [IP-adresser för Workfront-kluster](https://experienceleague.adobe.com/docs/workfront/using/administration-and-setup/get-started-administration/configure-your-firewall.html?lang=en#ip-addresses-to-allow-for-clusters-1-2-3-5-7-8-and-9). Så här känner du IP-klustret i [!DNL Workfront], navigera till **[!UICONTROL Setup]** > **[!UICONTROL System]** > **[!UICONTROL Customer Info]**.
 
-1. Kontrollera att följande sökvägar inte finns i [!DNL Experience Manager] databas:
+   * [API:er för Workfront Event Subscription](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html)
+
+   >[!IMPORTANT]
+   >
+   >* Om du har konfigurerat Advanced Networking för ditt program och använder IP Allow Listing, måste du på grund av en begränsning i den förbättrade Workfront Connector-arkitekturen lägga till programmets IP-adress i listan över tillåtna användare i Cloud Manager.
+   >
+   >* p{PROGRAM_ID}.external.adobeaemcloud.com
+   >
+   >* Om du vill hitta programmets IP-adress öppnar du ett terminalfönster och kör ett kommando, till exempel:
+   >
+   >    ```TXT
+   >    dscacheutil -q host -a name p{PROGRAM_ID}.external.adobeaemcloud.com
+   >
+   >    ```
+
+1. Kontrollera att följande övertäckningar inte finns i [!DNL Experience Manager] databas. Om du har befintliga övertäckningar på de här banorna måste du antingen ta bort övertäckningarna eller sammanfoga ändringarna mellan dem:
 
    * `/apps/dam/gui/coral/components/admin/schemaforms/formbuilder`
    * `/apps/dam/gui/coral/components/admin/folderschemaforms/formbuilder`
