@@ -147,7 +147,7 @@ Repoinit är att föredra för de här användningsområdena för innehållsänd
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Följ nedanstående procedur för att skapa repoinit-satser:
+Så här skapar du repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
