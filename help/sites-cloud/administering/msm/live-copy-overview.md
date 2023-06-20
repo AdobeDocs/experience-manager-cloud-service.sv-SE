@@ -1,12 +1,12 @@
 ---
 title: Översiktskonsol för Live Copy
-description: Lär dig mer om grunderna i Live Copy Overview Console där du snabbt kan förstå statusen för dina Live-kopior för att kunna synkronisera innehåll.
+description: Lär dig grunderna i Live Copy Overview Console för att snabbt förstå statusen för dina Live-kopior för att synkronisera innehåll.
 feature: Multi Site Manager
 role: Admin
 exl-id: 3ef7fbce-10a1-4b21-8486-d3c3706e537c
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---

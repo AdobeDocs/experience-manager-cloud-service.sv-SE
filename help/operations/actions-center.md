@@ -4,9 +4,9 @@ description: Utnyttja åtgärdscentret för att enkelt vidta åtgärder i samban
 hidefromtoc: true
 hide: true
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
-source-git-commit: 9302220536e7a541d44d96626c65de94ee5d64c3
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Om du klickar på e-postmeddelandet kommer du till Åtgärdscenter, med en popup
 
 Klicka på **Läs mer** link navigerar användaren till den här artikeln, där meddelandetypen kan refereras i [tabell med meddelandetyper som stöds](#supported-notification-types) nedan, som ger vägledning om vilka åtgärder som ska vidtas.
 
-I Åtgärdscenter kan du se en lista med andra senaste meddelanden. Vi rekommenderar att du i åtgärdslistan bekräftar ett meddelande för att informera Adobe om att din organisation känner till uppgiften och att senare lösa meddelandet när en korrigeringsåtgärd har vidtagits.
+I Åtgärdscenter kan du se en lista med andra senaste meddelanden. Vi rekommenderar att du i listan Åtgärder bekräftar ett meddelande som signalerar till Adobe att din organisation känner till uppgiften och senare löser meddelandet när en korrigeringsåtgärd har vidtagits.
 
 ![Meddelandelista](/help/operations/assets/notification-list.png)
 
@@ -68,7 +68,7 @@ AEM as a Cloud Service har flera typer av meddelanden, men bara en delmängd vis
 |---|---|---|---|
 | Driftincidenter | Kritiska incidenter som kräver omedelbara åtgärder | Användare tilldelad produktprofilen&quot;Incident Notification - Cloud Service&quot; | X |
 | Förebyggande rekommendationer | Optimeringar som ska planeras | Användare som är tilldelad produktprofilen &quot;Proactive Notification - Cloud Service&quot; | X |
-| Molnhanterarens pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan &quot;Others&quot; (Övriga) markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences), som [beskrivs här](/help/implementing/cloud-manager/notifications.md). |  |
+| Molnhanterarens pipeline-status | Information om tillståndet för dina rörledningar | Användare med Business Owner, Program Manager eller Deployment Manager-roller, kryssrutan &quot;Others&quot; (Övriga) markerad i [Inställningar för Experience Cloud](https://experience.adobe.com/preferences), som [beskrivs här](/help/implementing/cloud-manager/notifications.md). |   |
 
 ## Meddelandetyper som stöds {#supported-notification-types}
 

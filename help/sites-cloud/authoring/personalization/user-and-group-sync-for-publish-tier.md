@@ -2,9 +2,9 @@
 title: Registrering, inloggning och användarprofil
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
-source-git-commit: cc6565121a76f70b958aa9050485e0553371f3a3
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ The `com.adobe.granite.auth.oauth.provider` -gränssnittet kan implementeras med
 
 ### Anteckningssessioner och inkapslade token {#sticky-sessions-and-encapsulated-tokens}
 
-AEM as a Cloud Service har aktiverat cookie-baserade klistersessioner, vilket ser till att slutanvändaren dirigeras till samma publiceringsnod vid varje begäran. För att förbättra prestanda är den inkapslade tokenfunktionen aktiverad som standard, så användarposten i databasen behöver inte refereras till vid varje begäran. Om den publiceringsnod som en slutanvändare har en tillhörighet att ersätta, är användar-id-posten tillgänglig på den nya publiceringsnoden, vilket beskrivs i avsnittet Datasynkronisering nedan.
+AEM as a Cloud Service har aktiverat cookie-baserade klistersessioner, vilket ser till att slutanvändaren dirigeras till samma publiceringsnod vid varje begäran. För att öka prestanda är den inkapslade tokenfunktionen aktiverad som standard, så användarposten i databasen behöver inte refereras till vid varje begäran. Om den publiceringsnod som en slutanvändare har en tillhörighet att ersätta, är användar-id-posten tillgänglig på den nya publiceringsnoden, vilket beskrivs i avsnittet Datasynkronisering nedan.
 
 ## Användarprofil {#user-profile}
 
@@ -104,7 +104,7 @@ Slutanvändardata kan skickas till tredjepartsleverantörer som CRM och hämtas 
 
 ## Behörigheter (stängda användargrupper) {#permissions-closed-user-groups}
 
-Åtkomstprinciper på publiceringsnivå, som även kallas stängda användargrupper, definieras i AEM författare som [beskrivs här](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=en#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, ska du tillämpa användargränssnitten efter behov med hjälp av AEM författare, enligt beskrivningen här, och replikera dem till publiceringsnivån.
+Åtkomstprinciper på publiceringsnivå, som även kallas stängda användargrupper, definieras i AEM författare som [beskrivs här](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=en#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du de CUG-grupper som behövs med hjälp av AEM författare enligt beskrivningen här och replikerar dem till publiceringsnivån.
 
 * Om användare loggar in genom att autentisera med en identitetsleverantör (IdP) med SAML, identifierar autentiseringshanteraren användarens gruppmedlemskap (som ska matcha användargrupperna på publiceringsnivån) och behåller kopplingen mellan användaren och gruppen via en databaspost
 * Om inloggning sker utan IdP-integrering kan anpassad kod använda samma databasstrukturrelationer.

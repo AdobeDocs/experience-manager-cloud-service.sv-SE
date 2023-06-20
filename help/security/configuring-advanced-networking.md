@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 7d74772bf716e4a818633a18fa17412db5a47199
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3595'
+source-wordcount: '3579'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutp
 
 När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter innan den etableras. Ett anrop till Cloud Managers [slutpunkt för GET av nätverksinfrastruktur](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) skulle visa statusen&quot;ready&quot;.
 
-Om konfigurationen för flexibel portutgångar som omfattar programmet är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` Slutpunkten måste anropas per miljö för att nätverk på miljönivå ska kunna aktiveras och för att eventuella regler för portvidarebefordran ska kunna deklareras. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
+Om konfigurationen för flexibel portutgångar som omfattar programmet är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` Slutpunkten måste anropas per miljö för att nätverk på miljönivå ska kunna aktiveras och för att eventuella regler för portvidarebefordran ska kunna deklareras. Parametrar kan konfigureras per miljö för att ge flexibilitet.
 
 Regler för portvidarebefordran ska deklareras för alla andra målportar än 80/443, men bara om inte http- eller https-protokoll används, genom att ange uppsättningen målvärddatorer (namn eller IP och med portar). För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
 
@@ -70,7 +70,7 @@ Portvidarebefordringsreglerna per miljö kan uppdateras genom att anropa `PUT /p
 
 ### Inaktivera flexibla portadresser {#disabling-flexible-port-egress-provision}
 
-För att **disable** flexibel portutgång från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
+Till **disable** flexibel portutgång från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
 
 Mer information om API:erna finns i [API-dokumentation för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
 
@@ -203,7 +203,7 @@ När man ska välja mellan flexibel portutgång och dedikerad IP-adress för utg
 
 ### Inaktiverar dedikerad IP-adress för adressbok {#disabling-dedicated-egress-IP-address}
 
-För att **disable** Dedikerad Egress-IP-adress från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
+Till **disable** Dedikerad Egress-IP-adress från en viss miljö, anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetworking]()`.
 
 Mer information om API:erna finns i [API-dokumentation för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/disableEnvironmentAdvancedNetworkingConfiguration).
 
@@ -331,7 +331,7 @@ Samma dedikerade IP-adress används för alla kundprogram i Adobe och för alla 
 
 ### Felsökningsöverväganden {#debugging-considerations}
 
-Kontrollera loggarna i destinationstjänsten om de är tillgängliga för att validera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. I annat fall kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/IP](https://ifconfig.me/IP), som returnerar den anropande IP-adressen.
+Kontrollera loggarna i måltjänsten om de är tillgängliga för att verifiera att trafiken faktiskt är utgående från den förväntade dedikerade IP-adressen. I annat fall kan det vara praktiskt att ringa ut till en felsökningstjänst som [https://ifconfig.me/IP](https://ifconfig.me/IP), som returnerar den anropande IP-adressen.
 
 ## Äldre dedikerade gruppadresskunder {#legacy-dedicated-egress-address-customers}
 
@@ -357,7 +357,7 @@ En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutp
 
 När det anropas tar det normalt mellan 45 och 60 minuter innan nätverksinfrastrukturen etableras. API:ts GET-metod kan anropas för att returnera den aktuella statusen, som så småningom kommer att vändas från `creating` till `ready`. Läs API-dokumentationen för alla lägen.
 
-Om den programomfattande VPN-konfigurationen är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkten måste anropas per miljö för att aktivera nätverk på miljönivå och för att deklarera regler för portvidarebefordran. Parametrar kan konfigureras per miljö för att erbjuda flexibilitet.
+Om den programomfattande VPN-konfigurationen är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` slutpunkten måste anropas per miljö för att aktivera nätverk på miljönivå och för att deklarera regler för portvidarebefordran. Parametrar kan konfigureras per miljö för att ge flexibilitet.
 
 Se [API-dokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) för mer information.
 
@@ -420,7 +420,7 @@ Tabellen nedan beskriver trafikdirigering.
     <td>Om IP-värdet faller inom <i>VPN-gateway-adress</i> utrymme och genom http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
     <td>Alla</td>
     <td>Via VPN</td>
-    <td><code>10.0.0.1:443</code>Det kan också vara ett värdnamn.</td>
+    <td><code>10.0.0.1:443</code><br>Det kan också vara ett värdnamn.</td>
   </tr>
   <tr>
     <td></td>
@@ -449,7 +449,7 @@ Tabellen nedan beskriver trafikdirigering.
     <td>Om IP-värdet faller inom <i>Adressutrymme för VPN-gateway</i> och klienten ansluter till <code>AEM_PROXY_HOST</code> env-variabel med en <code>portOrig</code> deklareras i <code>portForwards</code> API-parameter</td>
     <td>Alla</td>
     <td>Via VPN</td>
-    <td><code>10.0.0.1:3306</code>Det kan också vara ett värdnamn.</td>
+    <td><code>10.0.0.1:3306</code><br>Det kan också vara ett värdnamn.</td>
   </tr>
   <tr>
     <td></td>
@@ -523,6 +523,7 @@ Till **delete** nätverksinfrastrukturen för ett program, anropa `DELETE /progr
 >[!NOTE]
 >
 > Borttagningen tar bara bort infrastrukturen om alla miljöer har sina avancerade nätverk inaktiverade.
+> 
 
 ## Övergång mellan avancerade nätverkstyper {#transitioning-between-advanced-networking-types}
 
@@ -536,12 +537,13 @@ Du kan migrera mellan avancerade nätverkstyper genom att följa följande proce
 >[!WARNING]
 >
 > Den här proceduren kommer att resultera i en driftstopp för avancerade nätverkstjänster mellan borttagning och återskapande
+> 
 
 Om driftsavbrott skulle få allvarliga konsekvenser för verksamheten kontaktar du kundsupport för att få hjälp med att beskriva vad som redan har skapats och orsaken till ändringen.
 
 ## Avancerad nätverkskonfiguration för ytterligare publiceringsregioner {#advanced-networking-configuration-for-additional-publish-regions}
 
-När ytterligare en region läggs till i en miljö som redan har avancerade nätverk konfigurerade, dirigeras trafik från den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard via den primära regionen. Om den primära regionen blir otillgänglig kommer den avancerade nätverkstrafiken att tas bort om avancerade nätverk inte har aktiverats i den extra regionen. Om du vill optimera fördröjningen och öka tillgängligheten om någon av regionerna skulle drabbas av ett driftstopp är det nödvändigt att aktivera avancerade nätverk för ytterligare publiceringsregioner. Två olika scenarier beskrivs i följande avsnitt.
+När ytterligare en region läggs till i en miljö som redan har avancerade nätverk konfigurerade, dirigeras trafik från den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard genom den primära regionen. Om den primära regionen blir otillgänglig tas emellertid den avancerade nätverkstrafiken bort om avancerade nätverk inte har aktiverats i den extra regionen. Om du vill optimera fördröjningen och öka tillgängligheten om någon av regionerna skulle drabbas av ett driftstopp är det nödvändigt att aktivera avancerade nätverk för ytterligare publiceringsregioner. Två olika scenarier beskrivs i följande avsnitt.
 
 >[!NOTE]
 >
@@ -553,7 +555,7 @@ När ytterligare en region läggs till i en miljö som redan har avancerade nät
 
 Om en avancerad nätverkskonfiguration redan är aktiverad i den primära regionen gör du så här:
 
-1. Om du har låst din infrastruktur så att den dedikerade IP-adressen för AEM är tillåten, bör du tillfälligt inaktivera eventuella spärrregler i den infrastrukturen. Om detta inte görs kommer det att finnas en kort period då förfrågningar från den nya regionens IP-adresser kommer att nekas av din egen infrastruktur. Observera att detta inte är nödvändigt om du har låst din infrastruktur via fullständigt kvalificerat domännamn (FQDN), (`p1234.external.adobeaemcloud.com`, till exempel) eftersom alla AEM regioner utlöser avancerad nätverkstrafik från samma FQDN
+1. Om du har låst din infrastruktur så att den dedikerade IP-adressen för AEM är tillåten, bör du tillfälligt inaktivera eventuella spärrregler i den infrastrukturen. Om detta inte görs finns det en kort period då förfrågningar från den nya regionens IP-adresser nekas av din egen infrastruktur. Observera att detta inte är nödvändigt om du har låst din infrastruktur via fullständigt kvalificerat domännamn (FQDN), (`p1234.external.adobeaemcloud.com`, till exempel) eftersom alla AEM regioner utlöser avancerad nätverkstrafik från samma FQDN
 1. Skapa en nätverksinfrastruktur som omfattar programmet för den sekundära regionen genom ett POST-anrop till API:t för att skapa nätverksinfrastruktur i Cloud Manager, vilket beskrivs i avancerad nätverksdokumentation. Den enda skillnaden i nyttolastens JSON-konfiguration i förhållande till den primära regionen är egenskapen region
 1. Om din infrastruktur måste låsas av IP för att tillåta AEM trafik lägger du till IP-adresser som matchar `p1234.external.adobeaemcloud.com`. Det ska finnas en per region.
 

@@ -2,10 +2,10 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: df1fdbe0f3590708e1da44864b6e08075a521b51
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2490'
-ht-degree: 41%
+source-wordcount: '2479'
+ht-degree: 38%
 
 ---
 
@@ -27,13 +27,13 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best 
 
 * BPA stöds på AEM med version 6.1 och senare.
 
-   >[!NOTE]
-   >Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
+  >[!NOTE]
+  >Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
 
 * BPA kan köras i alla miljöer, men det är bäst att det körs på en *Scen* miljö.
 
-   >[!NOTE]
-   >För att undvika att affärskritiska instanser påverkas rekommenderar vi att du kör BPA på en *Upphovsman* miljö som är så nära *Produktion* miljö när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
+  >[!NOTE]
+  >Du bör köra BPA på en *Upphovsman* miljö som är så nära *Produktion* miljö när det gäller anpassningar, konfigurationer, innehåll och användarprogram. Alternativt kan det köras på en klon av *författarmiljön* i produktion.
 
 * Det kan ta lång tid att generera BPA-rapportinnehåll, från flera minuter till några timmar. Hur lång tid som krävs beror i hög grad på storlek och typ av AEM-databasinnehåll, AEM-version och andra faktorer.
 
@@ -157,9 +157,9 @@ Läs tabellen nedan för mer information om viktighetsgrad:
 
 ## Tolka CSV-rapporten för Best Practices Analyzer {#cra-csv-report}
 
-När du klickar på **CSV** CSV-formatet i Best Practices Analyzer-rapporten byggs från innehållscachen och returneras till din webbläsare. Beroende på inställningarna i webbläsaren hämtas rapporten automatiskt som en fil med standardnamnet `results.csv`.
+När du klickar på **CSV** CSV-formatet i Best Practices Analyzer-rapporten byggs från innehållscachen och returneras till din webbläsare. Den här rapporten hämtas automatiskt som en fil med standardnamnet `results.csv`.
 
-Om cacheminnet har gått ut genereras rapporten på nytt innan CSV-filen skapas och hämtas.
+Om cacheminnet har upphört att gälla genereras rapporten om innan CSV-filen skapas och hämtas.
 
 Rapporten i CSV-format innehåller information som genereras med utdata från Pattern Detector och som sorteras och organiseras efter kategorityp, undertyp och viktighetsgrad. Formatet är lämpligt för visning och redigering i program som Microsoft Excel. Avsikten är att ge information om alla resultat i ett upprepningsbart format som kan användas för att jämföra rapporter från olika tidpunkter för att mäta framsteg.
 
@@ -209,8 +209,8 @@ Följande HTTP-frågeparametrar är praktiska när det är svårt att använda H
 
 * `max-age` (tal, valfritt): Anger livstid för cachefrihet i sekunder. Siffran måste vara 0 eller större. Standardlivstiden för färskhet är 86400 sekunder. Utan den här parametern eller motsvarande rubrik används ett nytt cacheminne för att hantera begäranden i 24 timmar, och då måste cacheminnet genereras om. Använda `max-age=0` kommer att tvinga cachen att rensas och initiera en omgenerering av rapporten med hjälp av den tidigare icke-nollvaraktigheten för det nyligen genererade cacheminnet.
 * `respond-async` (boolesk, valfritt): Anger att svaret ska anges asynkront. Använda `respond-async=true` när cacheminnet är inaktuellt returnerar servern ett svar på `202 Accepted` utan att vänta på att cachen ska uppdateras och att rapporten ska genereras. Om cacheminnet är uppdaterat har den här parametern ingen effekt. Standardvärdet är `false`. Utan den här parametern eller motsvarande rubrik kommer servern att svara synkront, vilket kan kräva mycket tid och en justering av den maximala svarstiden för HTTP-klienten.
-* `may-refresh-cache` (boolesk, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. If `may-refresh-cache=true`, eller om den inte anges, kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. If `may-refresh-cache=false` kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha gjorts om cachen är tom eller inaktuell, och då kommer rapporten att vara tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
-* `return-minimal` (boolesk, valfritt): Anger att svaret från servern endast ska innehålla statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. If `return-minimal=true`, kommer svarstexten att begränsas till statusobjektet. If `return-minimal=false`, eller om det inte anges, kommer ett fullständigt svar att ges.
+* `may-refresh-cache` (boolesk, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. If `may-refresh-cache=true`, eller om den inte anges, kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. If `may-refresh-cache=false` kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha gjorts om cachen är tom eller inaktuell, och då är rapporten tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
+* `return-minimal` (boolesk, valfritt): Anger att svaret från servern endast ska innehålla statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. If `return-minimal=true`, begränsas svarstexten till statusobjektet. If `return-minimal=false`, eller om det inte anges, ges ett fullständigt svar.
 * `log-findings` (boolesk, valfritt): Anger att servern ska logga innehållet i cachen när den skapas eller uppdateras för första gången. Varje sökning från cachen loggas som en JSON-sträng. Denna loggning sker endast om `log-findings=true` och begäran genererar ett nytt cacheminne.
 
 När det finns både ett HTTP-sidhuvud och motsvarande frågeparameter har frågeparametern företräde.
@@ -235,7 +235,7 @@ Följande svarsvärden är möjliga:
 
 ### Justera cacheminnets livslängd {#cache-adjustment}
 
-Standardlivstiden för BPA-cache är 24 timmar. Med alternativet att uppdatera en rapport och återskapa cachen, både i AEM och HTTP-gränssnittet, är det här standardvärdet troligtvis lämpligt för de flesta användningsområden för BPA. Om rapportgenereringstiden är särskilt lång för AEM-instansen kanske du bör justera cachelivslängden för att minimera genereringen av rapporter.
+Standardlivstiden för BPA-cache är 24 timmar. Med alternativet att uppdatera en rapport och återskapa cachen, både i AEM och HTTP-gränssnittet, är det här standardvärdet troligtvis lämpligt för de flesta användningsområden för BPA. Om rapportgenereringstiden är särskilt lång för AEM kan det vara bra att justera cachelivstiden för att minimera omgenereringen av rapporten.
 
 Livslängdsvärdet för cacheminnet lagras som egenskapen `maxCacheAge` på följande databasnod:
 `/apps/best-practices-analyzer/content/BestPracticesReport/jcr:content`

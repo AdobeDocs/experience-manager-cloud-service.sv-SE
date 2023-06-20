@@ -2,9 +2,9 @@
 title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Med Trädnavigeringsfilter (ikonen för kikaren) kan du filtrera noderna i datab
 
 ### Redigeringsruta {#edit-pane}
 
-The **Redigeringsruta** I kan du visa innehållet i den markerade filen i databasen. Varje fil som öppnas visas som en egen flik i rutan.
+The **Redigeringsruta** I kan du visa innehållet i den markerade filen i databasen. Varje fil som öppnas representeras som en egen flik i rutan.
 
 The **Startsida** Med -fliken kan du söka efter innehåll och/eller dokumentation och få tillgång till utvecklardokumentation och stöd för Adobe.
 
@@ -88,6 +88,7 @@ Behörigheterna är indelade i följande kategorier.
 * **Effektiva åtkomstkontrollprinciper** - De aktuella principer som används för den aktuella markeringen, som kan anges lokalt eller ärvs från överordnade noder
 
 >[!NOTE]
+>
 För att kunna se åtkomstkontrollsinformation måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa ACL-poster.
 
 ### Fliken Replikering {#replication-tab}
@@ -108,7 +109,7 @@ The **Knappen Uppdatera** uppdaterar den aktuella markeringen. Ändringar från 
 
 ### Spara alla, knapp {#save-all-button}
 
-The **Spara alla, knapp** sparar alla ändringar du har gjort. Tills du väljer att spara är ändringarna tillfälliga och försvinner när du avslutar konsolen.
+The **Spara alla, knapp** sparar alla ändringar du har gjort. Ändringarna är tillfälliga tills du väljer att spara och försvinner när du avslutar konsolen.
 
 * **Återställ** - Ignorerar alla ändringar som du har gjort på den valda noden sedan den senaste Spara-åtgärden och läser sedan in databasens aktuella status för den valda noden igen
 * **Återställ alla** - Ignorerar alla ändringar som du har gjort i hela databasen sedan den senaste sparåtgärden och läser sedan in databasens aktuella läge igen
@@ -188,7 +189,9 @@ Så här skapar du en nod med CRXDE Lite:
 Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa nya noder.
 
 >[!NOTE]
+>
 De flesta redigeringsåtgärderna, inklusive **Skapa nod** sparar alla ändringar i minnet och lagrar dem endast i databasen när de sparas (med [**Spara alla, knapp**](#save-all-button)). Vissa åtgärder, till exempel move, sparas dock automatiskt.
+>
 Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs även av databasen när ändringar sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa en `nt:unstructured` nod som underordnad till `nt:folder` nod).
 
 ## Skapa en egenskap {#creating-a-property}

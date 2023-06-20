@@ -2,9 +2,9 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
-source-git-commit: 3be936be09f205a73dd053ac28df936d58e50919
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1492'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Med Configuration Browser kan en administratör enkelt skapa, hantera och konfig
 
 >[!NOTE]
 >
->Det går bara att skapa konfigurationer med hjälp av Konfigurationsläsaren om användaren har `admin` rättigheter. `admin` Rättigheter krävs också för att tilldela behörighet till konfigurationen eller på annat sätt ändra en konfiguration.
+>Det går bara att skapa konfigurationer med hjälp av Konfigurationsläsaren om användaren har `admin` rättigheter. `admin` behörighet krävs också för att tilldela behörighet till konfigurationen eller på annat sätt ändra en konfiguration.
 
 #### Skapa en konfiguration {#creating-a-configuration}
 
@@ -76,7 +76,7 @@ Det är mycket enkelt att skapa en ny konfiguration i AEM med hjälp av Configur
 
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
-      * Det genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](naming-conventions.md)
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](naming-conventions.md)
       * Den kan vid behov justeras.
 1. Kontrollera vilken typ av konfigurationer du vill tillåta.
    * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
@@ -91,7 +91,7 @@ Det är mycket enkelt att skapa en ny konfiguration i AEM med hjälp av Configur
 
 #### Redigera konfigurationer och deras åtkomsträttigheter {#access-rights}
 
-Om du tänker på konfigurationer som arbetsytor kan åtkomsträttigheter anges för dessa konfigurationer för att framtvinga vem som får och inte får komma åt dessa arbetsytor.
+Om du tänker på konfigurationer som arbetsytor kan åtkomsträttigheter anges för dessa konfigurationer för att framtvinga vem som får och inte får tillgång till dessa arbetsytor.
 
 1. Logga in AEM as a Cloud Service och välj **verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
 1. Välj den konfiguration som du vill ändra och tryck eller klicka sedan på **Egenskaper** i verktygsfältet.

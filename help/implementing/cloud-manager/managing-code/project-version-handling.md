@@ -2,10 +2,10 @@
 title: Versionshantering för Maven Project
 description: För testnings- och produktionsdistributioner av AEM as a Cloud Service genererar Cloud Manager en unik, stegvis version.
 exl-id: 658bcbed-0733-45da-a3e3-9a5f817099c5
-source-git-commit: 21607fadf33dac038c7f794b933b92f60b8e20a9
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 2%
+source-wordcount: '266'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,7 @@ Om den ursprungliga projektversionen uppfyller vissa kriterier kommer den uppdat
 >
 >Detta ursprungliga projektversionsvärde måste anges statiskt i `<version>` element på den översta nivån `pom.xml` i Git-databasgrenen.
 
-Om originalversionen uppfyller dessa villkor läggs den genererade versionen till i originalversionen som ett nytt versionssegment. Den genererade versionen kommer också att ändras något för att inkludera korrekt sortering och versionshantering. Anta till exempel att en genererad version av `2019.926.121356.0000020490` skulle få följande resultat.
+Om den ursprungliga versionen uppfyller dessa villkor läggs den genererade versionen till i den ursprungliga versionen som ett nytt versionssegment. Den genererade versionen kommer också att ändras något för att inkludera korrekt sortering och versionshantering. Anta till exempel att en genererad version av `2019.926.121356.0000020490` skulle få följande resultat.
 
 | Version | Version in `pom.xml` | Kommentar |
 |---|---|---|

@@ -2,9 +2,9 @@
 title: Developing and Page Diff
 description: Förstå hur funktionen för sidskillnader fungerar och hur den kan påverka en utvecklare
 exl-id: 03c08616-2203-4b90-bed6-4836266e2507
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---

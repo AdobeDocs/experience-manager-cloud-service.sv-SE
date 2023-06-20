@@ -2,9 +2,9 @@
 title: Skapa demowebbplats
 description: Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mallar.
 exl-id: e76fd283-12b2-4139-9e71-2e145b9620b1
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ När pipeline har distribuerat tillägget för referensdemo kan du komma åt AEM
 
    ![Guiden Skapa webbplats](assets/site-creation-wizard.png)
 
-1. På nästa skärm anger du en rubrik för webbplatsen eller skärmsprojektet. Ett platsnamn kan anges eller genereras från titeln om det utelämnas. Tryck eller klicka **Skapa**.
+1. På nästa skärm anger du en rubrik för webbplatsen eller skärmsprojektet. Om det utelämnas kan du ange eller generera ett platsnamn från titeln. Tryck eller klicka **Skapa**.
 
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.

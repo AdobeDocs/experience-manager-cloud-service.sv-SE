@@ -4,9 +4,9 @@ description: Lär dig hur översättningsregler identifierar innehåll som behö
 feature: Language Copy
 role: Admin
 exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1294'
 ht-degree: 0%
 
 ---
@@ -125,11 +125,11 @@ The `translation_rules.xml` filen består av en `nodelist` element med flera und
 
 ```xml
 <nodelist>
-     <node path="/content”>
+     <node path="/content">
            <property name="text" />
      </node>
-     <node path=“/content/mysite/en”>
-          <property name=“text” translate=“false" />
+     <node path="/content/mysite/en">
+          <property name="text" translate="false" />
      </node>
 <nodelist>
 ```
@@ -142,7 +142,7 @@ Följande regler skapar till exempel allt innehåll i `text` egenskaper som ska 
 
 ```xml
 <nodelist>
-    <node path="/content”>
+    <node path="/content">
      <filter>
    <node containsProperty="draft" propertyValue="true" />
      </filter>
@@ -163,7 +163,7 @@ Så här kommer du åt den:
 
 I översättningsregelgränssnittet kan du:
 
-1. **Lägg till kontext**, som gör att du kan lägga till en bana.
+1. **Lägg till kontext** så att du kan lägga till en bana.
 
    ![Lägg till översättningskontext](../assets/add-translation-context.png)
 
@@ -186,7 +186,7 @@ Det finns fyra attribut som du kan ändra via gränssnittet:
 
 **`isDeep`**  används på nodfilter och är true som standard. Den kontrollerar om noden (eller dess överordnade noder) innehåller den egenskapen med det angivna egenskapsvärdet i filtret. Om värdet är false kontrolleras endast den aktuella noden.
 
-Underordnade noder läggs till i ett översättningsjobb även om den överordnade noden har egenskapen `draftOnly` anges till true för att flagga utkastinnehåll. Här `isDeep` spelas upp och kontrollerar om de överordnade noderna har en egenskap `draftOnly` som true och exkluderar dessa underordnade noder.
+Underordnade noder läggs till i ett översättningsjobb även om den överordnade noden har egenskapen `draftOnly` inställd på true för att flagga utkastinnehåll. Här `isDeep` spelas upp och kontrollerar om de överordnade noderna har en egenskap `draftOnly` som true och exkluderar dessa underordnade noder.
 
 I redigeraren kan du markera/avmarkera **Är djup** i **Filter** -fliken.
 

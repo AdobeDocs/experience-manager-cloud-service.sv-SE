@@ -10,9 +10,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 exl-id: 16f86dae-86fb-481b-8978-b8898705ed7e
-source-git-commit: 041f0fb62b1bca79cdf4b47f971c060deb77d28f
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2394'
+source-wordcount: '2393'
 ht-degree: 0%
 
 ---
@@ -24,20 +24,20 @@ ht-degree: 0%
 Med adaptiva Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. [!DNL AEM Forms] har ett intuitivt användargränssnitt och färdiga komponenter för att skapa och arbeta med Adaptive Forms. Du kan välja att skapa ett adaptivt formulär baserat på en formulärmodell eller ett schema eller utan en formulärmodell. Det är viktigt att du noga väljer den formulärmodell som inte bara passar dina behov, utan som utökar dina befintliga infrastrukturinvesteringar och resurser. Du kan välja mellan följande alternativ för att skapa ett adaptivt formulär:
 
 * **Använda en formulärdatamodell**
-   [Dataintegrering](data-integration.md) Med kan du integrera enheter och tjänster från olika datakällor i en formulärdatamodell som du kan använda för att skapa adaptiv Forms. Välj Formulärdatamodell om det adaptiva formulär du skapar inbegriper hämtning och skrivning av data från och till flera datakällor.
+  [Dataintegrering](data-integration.md) Med kan du integrera enheter och tjänster från olika datakällor i en formulärdatamodell som du kan använda för att skapa adaptiv Forms. Välj Formulärdatamodell om det adaptiva formulär du skapar inbegriper hämtning och skrivning av data från och till flera datakällor.
 
 * **Använda en XDP-formulärmall**
 Det är en idealisk formulärmodell om du har investeringar i XFA- eller XDP-formulär. Det är ett direkt sätt att konvertera XFA-baserade formulär till Adaptive Forms. Alla befintliga XFA-regler behålls i tillhörande Adaptive Forms. Det adaptiva Forms-formatet stöder XFA-konstruktioner, t.ex. valideringar, händelser, egenskaper och mönster.
 
 * **Använda en XSD (XML Schema Definition) eller ett JSON-schema**
-XML- och JSON-scheman representerar den struktur i vilken data produceras eller förbrukas av organisationens serversystem. Du kan koppla schemat till ett adaptivt formulär och använda dess element för att lägga till dynamiskt innehåll i det adaptiva formuläret. Elementen i schemat kommer att vara tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar Adaptiv Forms.
+XML- och JSON-scheman representerar den struktur i vilken data produceras eller förbrukas av organisationens serversystem. Du kan koppla schemat till ett adaptivt formulär och använda dess element för att lägga till dynamiskt innehåll i det adaptiva formuläret. Elementen i schemat är tillgängliga för användning på fliken Datamodellobjekt i innehållsläsaren när du redigerar Adaptiv Forms.
 
 * **Använda ingen eller utan en formulärmodell**
 Adaptiv Forms som skapats med det här alternativet använder ingen formulärmodell. Data-XML som genereras från sådana formulär har en platt struktur med fält och motsvarande värden.
 
-   >[!NOTE]
-   >
-   > Du kan ändra egenskaperna för formulärmodellen i den adaptiva formulärredigeraren eller den adaptiva formulärmallsredigeraren. Mer information finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](/help/forms/creating-adaptive-form.md#edit-form-model-properties-of-an-adaptive-form-edit-form-model).
+  >[!NOTE]
+  >
+  > Du kan ändra egenskaperna för formulärmodellen i den adaptiva formulärredigeraren eller den adaptiva formulärmallsredigeraren. Mer information finns i [Redigera formulärmodellegenskaper för ett adaptivt formulär](/help/forms/creating-adaptive-form.md#edit-form-model-properties-of-an-adaptive-form-edit-form-model).
 
 Information om hur du skapar ett adaptivt formulär finns i [Skapa ett adaptivt formulär](creating-adaptive-form.md).
 
@@ -91,17 +91,17 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
 
 * **Egenskapswebbläsaren**
 
-   Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras enligt en komponent. Så här visar du egenskaper för behållaren för adaptiva formulär:
+  Gör att du kan redigera egenskaperna för en komponent. Egenskaperna ändras enligt en komponent. Så här visar du egenskaper för behållaren för adaptiva formulär:
 
-   Markera en komponent och tryck sedan på ![fältnivå](assets/Smock_SelectContainer_18_N.svg) > **[!UICONTROL Adaptive Form Container]** och sedan trycka ![egenskaper](assets/Smock_Wrench_18_N.svg).
+  Markera en komponent och tryck sedan på ![fältnivå](assets/Smock_SelectContainer_18_N.svg) > **[!UICONTROL Adaptive Form Container]** och sedan trycka ![egenskaper](assets/Smock_Wrench_18_N.svg).
 
 * **Resursläsaren**
 
-   Segmenterar olika typer av innehåll, t.ex. bilder, dokument, sidor, filmer och så vidare.
+  Segmenterar olika typer av innehåll, t.ex. bilder, dokument, sidor, filmer och så vidare.
 
 * **Komponentwebbläsare**
 
-   Innehåller komponenter som du kan använda för att skapa ett adaptivt formulär. Du kan dra komponenter från till det adaptiva formuläret för att lägga till formulärelement och konfigurera tillagda element enligt kraven. I följande tabell beskrivs komponenterna i komponentwebbläsaren.
+  Innehåller komponenter som du kan använda för att skapa ett adaptivt formulär. Du kan dra komponenter från till det adaptiva formuläret för att lägga till formulärelement och konfigurera tillagda element enligt kraven. I följande tabell beskrivs komponenterna i komponentwebbläsaren.
 
 <table>
  <tbody>
@@ -151,7 +151,7 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
   </tr>
   <tr>
    <td>E-post</td>
-   <td><p>Lägger till ett fält för att hämta e-postadressen. E-postkomponenten validerar som standard e-postadresser med följande reguljära uttryck.</p> <p><code>^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
+   <td><p>Lägger till ett fält för att hämta e-postadressen. E-postkomponenten validerar som standard e-postadresser med följande reguljära uttryck.</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
   </tr>
   <tr>
    <td>Bifogad fil</td>
@@ -191,7 +191,7 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
   </tr>
   <tr>
    <td>Panel</td>
-   <td><p>Lägger till en panel eller underpanel.</p> <p>Du kan också lägga till en panelkomponent från den överordnade panelens verktygsfält med hjälp av <span class="uicontrol">Lägg till underordnad panel</code> -knappen. På samma sätt kan du lägga till ett panelspecifikt verktygsfält med <span class="uicontrol">Verktygsfältet Lägg till panel</code> -knappen. Du kan konfigurera placeringen av panelens verktygsfält med hjälp av dialogrutan Redigera panel.</code></code></p> </td>
+   <td><p>Lägger till en panel eller underpanel.</p> <p>Du kan också lägga till en panelkomponent från den överordnade panelens verktygsfält med hjälp av <span class="uicontrol">Lägg till underordnad panel</code> -knappen. På samma sätt kan du lägga till ett panelspecifikt verktygsfält med <span class="uicontrol">Verktygsfältet Lägg till panel</code> -knappen. Du kan konfigurera placeringen av panelens verktygsfält med hjälp av dialogrutan Redigera panel.</p> </td>
   </tr>
   <tr>
    <td>Lösenordsruta</td>

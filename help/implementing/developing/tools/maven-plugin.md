@@ -2,9 +2,9 @@
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
-source-git-commit: ba4e2427873fc9f5d91ee4f520df01018000a4c7
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1851'
+source-wordcount: '1847'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,6 @@ I det här dokumentet beskrivs hur du använder Maven för att hantera dessa upp
 >Paket **skapa** ägs nu av [Apache Jackrabbit FileVault Package Maven plugin.](https://jackrabbit.apache.org/filevault-package-maven-plugin/)
 >* The `content-package-maven-plugin` stöder inte längre paketering från och med version 1.0.2.
 >* I den här artikeln beskrivs **distribution** av de tillverkade paketen som ska AEM utförs av pluginen för innehållspaketet Maven för Adobe.
-
 
 ## Paket och AEM projektstruktur {#aem-project-structure}
 
@@ -182,7 +181,7 @@ Förutom följande parametrar finns mer information i beskrivningen av `name` -p
 | `prefix` | `java.lang.String` | Nej | Ingen |  |
 | `project` | `org.apache.maven.project.MavenProject` | Ja | Ingen | The Maven project |
 | `properties` | `java.util.Map` | Nej | Ingen | Dessa parametrar definierar ytterligare egenskaper som du kan ange i `properties.xml` -fil. Dessa egenskaper kan inte skriva över följande fördefinierade egenskaper: `group` (använd `group` parameter att ställa in), `name` (använd `name` parameter att ställa in), `version` (använd `version` parameter att ställa in), `description` (anges från projektbeskrivningen), `groupId` (`groupId` av projektbeskrivningen för Maven), `artifactId` (`artifactId` av projektbeskrivningen för Maven), `dependencies` (använd `dependencies` parameter att ställa in), `createdBy` (värdet på `user.name` system property), `created` (aktuell systemtid), `requiresRoot` (använd `requiresRoot` parameter att ställa in), `packagePath` (genereras automatiskt från grupp- och paketnamnet) |
-| `requiresRoot` | `boolean` | Ja | false | Definierar om paketet kräver en rot. Det här kommer att bli `requiresRoot` egenskapen för `properties.xml` -fil. |
+| `requiresRoot` | `boolean` | Ja | false | Definierar om paketet kräver en rot. Bli `requiresRoot` egenskapen för `properties.xml` -fil. |
 | `subPackages` | `java.util.List` | Nej | Ingen |  |
 | `version` | `java.lang.String` | Ja | Versionen som definierats i Maven-projektet | Innehållspaketets version |
 | `workDirectory` | `java.io.File` | Ja | Den katalog som definieras i Maven-projektet (byggfasen) | Katalogen som innehåller innehållet som ska inkluderas i paketet |

@@ -2,9 +2,9 @@
 title: Anpassade felsidor
 description: AEM har en standardfelhanterare för hantering av HTTP-fel, som kan anpassas.
 exl-id: b74c65d1-8ef5-4ad4-8255-8187f3b1d84c
-source-git-commit: b20d40a9f5f4bda51c67cda1164d0c4d74943aa1
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ För att svara på fel finns AEM en `404.jsp` skript under `/libs/sling/servlet/
 
 ## Anpassa sidor som visas av felhanteraren {#how-to-customize-pages-shown-by-the-error-handler}
 
-Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren när ett fel inträffar. För att göra detta kommer du att [AEM standardövertäckningsmekanism](/help/implementing/developing/introduction/overlays.md) så att dina anpassade sidor skapas under `/apps` och täcka över standardsidorna under `/libs`.
+Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren när ett fel inträffar. För att göra detta använder du [AEM standardövertäckningsmekanism](/help/implementing/developing/introduction/overlays.md) så att dina anpassade sidor skapas under `/apps` och täcka över standardsidorna under `/libs`.
 
 1. Kopiera standardskripten i databasen:
 
@@ -70,7 +70,7 @@ Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsam
 
 >[!NOTE]
 >
->I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. För att det faktiska svaret från backend ska kunna gå igenom måste du lägga till följande rubrik i svaret: `x-aem-error-pass: true`.
+>I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. Om du vill att det faktiska svaret från backend ska gå igenom måste du lägga till följande rubrik i svaret: `x-aem-error-pass: true`.
 >Detta fungerar bara för svar som kommer från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
 
 >[!CAUTION]

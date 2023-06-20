@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 555688e5-f937-462c-9fcc-b90685f1882b
-source-git-commit: 709a80683357b0d56280ff14aa5f4ba6bf2c6b23
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -166,7 +166,7 @@ Dina **Distributionshanteraren** har tilldelats och har nu åtkomst till Cloud M
 
 Dina **Utvecklare** har tilldelats och har nu åtkomst till Cloud Manager. Beroende på ditt framtida ansvar kan du behöva utse dig själv som systemadministratör till **Utvecklare** profil.
 
-## What’s Next {#whats-next}
+## What&#39;s Next {#whats-next}
 
 Grattis! Ditt nybildade Cloud Manager-team (inklusive dig själv som är tilldelad till **Företagsägare** profil) har konfigurerats. I rollen **Företagsägare**&#x200B;är du nu bara ett steg ifrån att logga in i Cloud Manager och skapa dina molnresurser.
 
@@ -185,5 +185,5 @@ Vi rekommenderar att du fortsätter med introduktionsresan enligt beskrivningen 
 
 * [Introduktion till Cloud Manager](/help/onboarding/cloud-manager-introduction.md) - Lär dig mer om Cloud Manager, Cloud Manager-program och miljöer.
 * [Produktprofiler för Cloud Manager](/help/onboarding/aem-cs-team-product-profiles.md) - Läs mer om AEM as a Cloud Service team- och produktprofiler.
-* [Identitetstyper på Adobe Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html) - Adobe:s identitetshanteringssystem hjälper administratörer att skapa och hantera användarnas tillgång till program och tjänster. Adobe erbjuder dessa identitetstyper eller konton för att autentisera och auktorisera användare.
+* [Identitetstyper på Adobe Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html) - Adobe identitetshanteringssystem hjälper administratörer att skapa och hantera användarnas åtkomst till program och tjänster. Adobe erbjuder dessa identitetstyper eller konton för att autentisera och auktorisera användare.
 

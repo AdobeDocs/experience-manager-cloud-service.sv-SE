@@ -2,9 +2,9 @@
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
-source-git-commit: 878381f9c5780864f218a00a272b1600d578dcca
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '634'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Statusen för dina SSL-certifikat kan snabbt förstås från SSL-certifikatsidan
 * **Grön** - Den här statusen anger att ditt certifikat är giltigt i minst 60 dagar från dagens datum.
 
 * **Orange** - Den här statusen anger att ditt certifikat upphör att gälla om mindre än 60 dagar.
-   * Det är dags att se till att du har en plan för att förnya ditt certifikat och ersätta det via användargränssnittet i Cloud Manager för att undvika eventuell webbplatsåtkomst eller avbrott.
+   * Det är dags att se till att du har en plan för att förnya certifikatet och ersätta det med användargränssnittet i Cloud Manager för att undvika eventuell webbplatsåtkomst eller avbrott.
    * Cloud Manager skickar regelbundna meddelanden i användargränssnittet för att informera dig om att certifikatet snart upphör att gälla.
 
 * **Röd** - Den här statusen anger att SSL-certifikatet har upphört att gälla.
@@ -63,7 +63,7 @@ Följ de här stegen för att ta bort ett SSL-certifikat.
 
 ## Befintliga CDN-konfigurationer {#pre-existing-cdn}
 
-Om du har en befintlig CDN-konfiguration för ditt SSL-certifikat visas ett informationsmeddelande på **SSL-certifikat** som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
+Om du har en befintlig CDN-konfiguration för ditt SSL-certifikat finns det ett informationsmeddelande på **SSL-certifikat** som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
 
 Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 

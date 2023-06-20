@@ -2,9 +2,9 @@
 title: Så här sätter du samman allt - din app och ditt innehåll i AEM utan rubriker
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du tar ditt AEM-projekt, inklusive innehållsfragment, dina GraphQL-samtal, dina REST API-anrop och programmet, och förbereder det för publicering.
 exl-id: bece84ad-4c8c-410c-847e-9ef3f79970cb
-source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1065'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Den här artikeln hjälper dig att förstå hur du sätter ihop AEM headless-pro
 
 ## AEM SDK {#the-aem-sdk}
 
-AEM SDK används för att skapa och distribuera anpassad kod. Det är det verktyg du behöver för att utveckla och testa din headless-applikation innan du publicerar den. Den innehåller följande artefakter:
+AEM SDK används för att skapa och distribuera anpassad kod. Det är huvudverktyget som du behöver så att du kan utveckla och testa programmet utan huvud innan du publicerar det. Den innehåller följande artefakter:
 
 * Quickstart jar - en körbar jar-fil som kan användas för att ställa in både en författare och en publiceringsinstans
 * Dispatcher-verktyg - Dispatcher-modulen och dess beroenden för Windows- och UNIX®-baserade system
@@ -64,7 +64,7 @@ Node.js är en JavaScript-körningsmiljö som används för att arbeta med de vi
 
 Nu tittar vi på komponenterna i en AEM.
 
-En komplett AEM består av en författare, en publiceringsversion och en utskicksare. Samma komponenter är tillgängliga i den lokala utvecklingsmiljön för att göra det enklare för dig att förhandsgranska koden och innehållet innan du publicerar.
+En komplett AEM består av en författare, en publiceringsversion och en utskicksare. Samma komponenter är tillgängliga i den lokala utvecklingsmiljön så att du kan göra det enklare för dig att förhandsgranska kod och innehåll innan du publicerar.
 
 * **Författartjänsten** är den plats där interna användare skapar, hanterar och förhandsgranskar innehåll.
 
@@ -74,7 +74,7 @@ En komplett AEM består av en författare, en publiceringsversion och en utskick
 
 ## Arbetsflödet för lokal utveckling {#the-local-development-workflow}
 
-Det lokala utvecklingsprojektet bygger på Apache Maven och använder Git för källkontroll. För att kunna uppdatera projektet kan utvecklarna använda den integrerade utvecklingsmiljö de föredrar, till exempel Eclipse, Visual Studio Code eller IntelliJ.
+Det lokala utvecklingsprojektet bygger på Apache Maven och använder Git för källkontroll. För att uppdatera projektet kan utvecklarna använda den integrerade utvecklingsmiljö de föredrar, till exempel Eclipse, Visual Studio Code eller IntelliJ.
 
 Om du vill testa kod- eller innehållsuppdateringar som hämtas av ditt headless-program måste du distribuera uppdateringarna till den lokala AEM-miljön, som innehåller lokala instanser av AEM författare och publiceringstjänster.
 
@@ -84,7 +84,7 @@ I ett produktionssystem placeras Dispatcher och en http Apache-server alltid fra
 
 ## Förhandsgranska kod och innehåll lokalt med den lokala utvecklingsmiljön {#previewing-your-code-and-content-locally-with-the-local-development-environment}
 
-För att kunna förbereda AEM headless-projekt för lansering måste du se till att alla delar av projektet fungerar bra.
+För att förbereda AEM headless-projekt för lansering måste du se till att alla delar av projektet fungerar bra.
 
 För att göra det måste ni sätta ihop allt: kod, innehåll och konfiguration, och testa det i en lokal utvecklingsmiljö för live-beredskap.
 

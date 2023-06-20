@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: d3194e646b326009dc204838ac74fc880952f286
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '4086'
+source-wordcount: '4085'
 ht-degree: 0%
 
 ---
@@ -374,7 +374,7 @@ Du kan också starta alla översättningsjobb för ett projekt.
 
 1. Välj översättningsprojektet i projektkonsolen.
 1. Tryck eller klicka i verktygsfältet **Starta översättningsjobb**.
-1. Granska listan över jobb som ska startas och bekräfta sedan med **Starta** eller avbryta med **Avbryt**.
+1. Granska listan över jobb som har startats i dialogrutan och bekräfta sedan med **Starta** eller avbryta med **Avbryt**.
 
 ### Avbryta ett översättningsjobb {#canceling-a-translation-job}
 

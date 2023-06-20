@@ -2,16 +2,16 @@
 title: OAuth2-stöd för e-posttjänsten
 description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: 57667c1dda50b2a6a4ac2fccc428f5ccb252563c
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
 
 # OAuth2-stöd för e-posttjänsten {#oauth2-support-for-the-mail-service}
 
-AEM as a Cloud Service erbjuder OAuth2-stöd för sin integrerade e-posttjänst, så att organisationer kan följa e-postkraven.
+AEM as a Cloud Service erbjuder OAuth2-stöd för den integrerade e-posttjänsten så att organisationer kan följa e-postkraven.
 
 Du kan konfigurera OAuth för flera e-postleverantörer. Nedan visas steg-för-steg-instruktioner för hur du konfigurerar AEM Mail Service för att autentisera via OAuth2 med Microsoft Office 365 Outlook. Andra leverantörer kan konfigureras på liknande sätt.
 
@@ -46,15 +46,15 @@ Mer information om AEM as a Cloud Service Mail Service finns i [Skickar e-post](
 
 För att komma tillbaka behöver du följande information för att konfigurera OAuth2 för e-posttjänsten på AEM sida:
 
-* Autentiserings-URL:en som skapas med klientorganisations-ID:t. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
-* Token URL, som skapas med klient-ID. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
+* Autentiserings-URL:en, som skapas med klient-ID:t. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
+* Token-URL, som skapas med klient-ID. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
 * Uppdaterings-URL:en som skapas med klient-ID:t. Den kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
 * Klient-ID
 * Klienthemlighet
 
 ### Genererar uppdateringstoken {#generating-the-refresh-token}
 
-Därefter måste du generera uppdateringstoken, som kommer att ingå i OSGi-konfigurationen i ett senare steg.
+Därefter måste du generera uppdateringstoken, som är en del av OSGi-konfigurationen i ett senare steg.
 
 Så här gör du:
 

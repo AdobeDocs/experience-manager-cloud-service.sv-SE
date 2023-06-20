@@ -3,9 +3,9 @@ title: Administrera arbetsflödesinstanser
 description: Lär dig hur du administrerar arbetsflödesinstanser
 feature: Administering
 role: Admin
-source-git-commit: 5801063c9c4c1c6b9f9e7f55ad4d66bb563e0eef
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,6 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    ![status-ohälsosam](/help/sites-cloud/administering/assets/status-unhealthy.png)
 1. För **Statusinformation** av arbetsflödesinstanser klickar du på **Detaljer** för att visa **antal arbetsflödesinstanser som körs**, **slutförda arbetsflödesinstanser**, **avbrutna arbetsflödesinstanser**, **misslyckade arbetsflödesinstanser** och så vidare. nedan visas till exempel de bilder som visas **Statusinformation** med **Status: Hälsosam** och **Status: Ohälsosam**.
    ![status-details-good](/help/sites-cloud/administering/assets/status-details-healthy.png)
-
    ![status-details-unsafe](/help/sites-cloud/administering/assets/status-details-unhealthy.png)
 
    >[!NOTE]
@@ -93,7 +92,6 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    >* användning av **Avsluta** åtgärd
    >* När en sida, som är underställd ett arbetsflöde, (framtvingas) tas bort, avslutas arbetsflödet.
 
-
 1. Markera ett specifikt objekt och sedan **Öppna historik** för mer information:
 
    ![wf-99](/help/sites-cloud/administering/assets/wf-99.png)
@@ -103,8 +101,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 När ett arbetsflöde misslyckas, innehåller AEM **Fel** så att du kan undersöka och vidta lämpliga åtgärder när originalorsaken har hanterats:
 
 * **Felinformation**
-Öppnar ett fönster för att visa 
-**Felmeddelande**, **Step och **Felstapel**.
+Öppnar ett fönster för att visa **Felmeddelande**, **Step och **Felstapel**.
 
 * **Öppna historik**
 Visar information om arbetsflödeshistoriken.

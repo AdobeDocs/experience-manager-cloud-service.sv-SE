@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: 6c06df453a2c9116889c25b1d1198df2dbf26f88
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1903'
-ht-degree: 80%
+source-wordcount: '1899'
+ht-degree: 77%
 
 ---
 
@@ -192,7 +192,7 @@ På grund av den tydliga åtskillnaden mellan kod och innehåll kan utvecklare a
 
 ### Lokal utveckling {#aem-as-a-cloud-service-developing-local-development}
 
-För att stödja snabba iterationer och utveckling är det också möjligt att utveckla AEM-program utanför AEM as a Cloud Service. För detta ändamål finns följande artefakter tillgängliga för utvecklare:
+För att stödja snabba iterationer och utveckling är det också möjligt att utveckla AEM program utanför den AEM as a Cloud Service kontexten. För detta ändamål finns följande artefakter tillgängliga för utvecklare:
 
 * Snabbstart för AEM as a Cloud Service: ett `.jar`-baserat, fristående installationsprogram för den senaste AEM-kodbasen med samma funktionalitet och API-område.
 
@@ -242,7 +242,7 @@ Det kombinerar fördelarna med:
 >
 >Mer information finns till att börja med i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md).
 
-De grundläggande principerna i redigeringsgränssnittet för Sites och Assets är välbekanta för alla som har använt AEM tidigare.
+De grundläggande principerna för användargränssnittet, för både Sites och Assets, är välkända för alla som tidigare har använt AEM.
 
 Den största skillnaden är att användargränssnittet är helt pekskärmskompatibelt och det klassiska användargränssnittet inte längre är tillgängligt. I övrigt är grunderna oförändrade med endast små synliga ändringar.
 

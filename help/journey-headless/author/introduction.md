@@ -2,9 +2,9 @@
 title: Om du skriver för AEM som ett headless CMS - en introduktion
 description: En introduktion till hur du använder funktionerna i Adobe Experience Manager as a Cloud Service som Headless CMS för att skapa innehåll för ditt projekt.
 exl-id: 065b00cb-a82d-4bcb-b2c9-44542cee6303
-source-git-commit: e03c067f4337bbf0e98cb4015b9be4fc99fc17c1
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '664'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ Det innebär att innehållet kan nå ut till en mängd olika enheter, i en mäng
 (Och som en dubbelpanorering kan dessa fragment också användas när du skapar AEM webbsidor - om du vill.)
 
 * &quot;Traditionell&quot; CMS
-   * Innehåll skapas för webbsidor med hjälp av en rad komponenter som anger hur innehållet ska återges på webbplatsen. Även här är AEM extremt flexibla eftersom projektteamet kan utveckla anpassade komponenter.
+   * Innehåll skapas för webbsidor med hjälp av en rad komponenter som definierar hur innehållet återges på webbplatsen. Även här är AEM extremt flexibla eftersom projektteamet kan utveckla anpassade komponenter.
 
 ## Innehållsmodellering {#content-modeling}
 

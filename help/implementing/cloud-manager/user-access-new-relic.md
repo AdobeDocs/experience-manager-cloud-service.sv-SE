@@ -2,9 +2,9 @@
 title: New Relic One
 description: Läs mer om New Relic One APM-tjänst (Application Performance Monitoring) för AEM as a Cloud Service och hur du kan komma åt den.
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
-source-git-commit: 6a633881be57b79ee167c3a16d514b903bc460ad
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ När användarna har definierats skickar New Relic ett bekräftelsemeddelande vi
 
 >[!NOTE]
 >
->Om du hanterar New Relic One-användare måste du också lägga till dig själv som användare för att få tillgång till dem. Att vara **Företagsägare** eller **Distributionshanteraren** inte ger tillgång till New Relic One. Du måste också skapa dig själv som användare.
+>Om du hanterar New Relic One-användare måste du även lägga till dig själv som användare för att få tillgång till dem. Att vara **Företagsägare** eller **Distributionshanteraren** inte ger tillgång till New Relic One. Du måste också skapa dig själv som användare.
 
 ## Aktivera ditt New Relic One-användarkonto {#activate-account}
 
@@ -147,7 +147,7 @@ Om du inte får något e-postmeddelande från New Relic:
 Följande begränsningar gäller när du lägger till användare i New Relic One:
 
 * Högst 30 användare kan läggas till. Om det maximala antalet användare har uppnåtts tar du bort användare för att kunna lägga till nya användare.
-* Användare som läggs till i New Relic är av samma typ **Begränsad** referera till [Mer information finns i New Relic-dokumentationen.](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change)
+* Användare som läggs till i New Relic är av samma typ **Begränsad**, se [Mer information finns i New Relic-dokumentationen.](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change)
 * AEM as a Cloud Service har bara New Relic One APM-lösning och har inte stöd för varningar, loggning eller API-integreringar.
 
 Om du vill ha mer hjälp eller mer information om New Relic One erbjudanden för ditt AEM as a Cloud Service program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
@@ -172,7 +172,7 @@ Observera:
 
 ### Vem har åtkomst till New Relic One molntjänstdata? {#access-new-relic-cloud}
 
-Fullständig läsbehörighet ges för upp till 30 medlemmar i ditt team. Läsåtkomst inkluderar alla APM-värden som samlas in av New Relic One-agenten.
+Upp till 30 medlemmar i ditt team har full läsbehörighet. Läsåtkomst inkluderar alla APM-värden som samlas in av New Relic One-agenten.
 
 ### Stöds anpassad SSO-konfiguration? {#custom-sso}
 
@@ -184,7 +184,7 @@ New Relic One är den nya plattformen för observerbarhet från New Relic och g�
 
 New Relic One ger användarna möjlighet att söka på alla konton där de har tillgång till och kan visualisera data från alla tjänster och värdar i en och samma vy.
 
-Medan supporten i Adobe övervakar den AEM as a Cloud Service applikationen med New Relic One och andra interna verktyg som en del av din tjänst kan era team fortsätta att utnyttja New Relic för lokala värdtjänster och infrastruktur. De kommer att kunna se data både från Adobe New Relic One-konton och kundhanterade New Relic-konton.
+Medan supporten i Adobe övervakar den AEM as a Cloud Service applikationen med New Relic One och andra interna verktyg som en del av din tjänst kan era team fortsätta att använda New Relic för lokala värdtjänster och infrastruktur. De kan visualisera data från både Adobe New Relic One-konto och kundhanterade New Relic-konton.
 
 >[!NOTE]
 >

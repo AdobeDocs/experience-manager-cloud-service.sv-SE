@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den 
 
 ## Introduktion {#introduction}
 
-Med den universella redigeraren kan du redigera alla delar av innehållet i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
+Med den universella redigeraren kan du redigera alla delar av innehållet i alla implementeringar så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
 
 För att göra detta får skribenterna ett intuitivt användargränssnitt som kräver minimal utbildning för att man ska kunna börja redigera innehåll.
 
@@ -29,7 +29,7 @@ För att göra detta får skribenterna ett intuitivt användargränssnitt som kr
 
 ## Förbered appen {#prepare-app}
 
-För att kunna skapa innehåll för ett program med den universella redigeraren måste programmet vara instrumenterat av en utvecklare som stöder redigeraren.
+Om du vill skapa innehåll för ett program med den universella redigeraren måste appen vara instrumenterad av en utvecklare för att stödja redigeraren.
 
 >[!TIP]
 >
@@ -39,7 +39,7 @@ För att kunna skapa innehåll för ett program med den universella redigeraren 
 
 När appen har instrumenterats för att fungera med den universella redigeraren måste du logga in i den universella redigeraren. Du behöver en Adobe ID för att logga in och [har tillgång till den universella redigeraren.](getting-started.md#request-access)
 
-När du är inloggad anger du URL-adressen till sidan som du vill redigera i dialogrutan [adressfält.](#address-bar) för att kunna börja [redigera innehållet.](#edit-content)
+När du har loggat in anger du URL-adressen till sidan som du vill redigera i dialogrutan [adressfält.](#address-bar) så att du kan börja [redigera innehållet.](#edit-content)
 
 ## Förstå användargränssnittet {#ui}
 
@@ -84,7 +84,7 @@ Hjälpikonen ger snabb åtkomst till utbildningsresurser och supportresurser.
 
 #### Meddelanden {#notifications}
 
-Den här ikonen kommer att märkas med antalet tilldelade ofullständiga [meddelanden.](/help/implementing/cloud-manager/notifications.md)
+Den här ikonen är märkt med antalet tilldelade ofullständiga [meddelanden.](/help/implementing/cloud-manager/notifications.md)
 
 ![Meddelanden](assets/notifications.png)
 
@@ -132,7 +132,7 @@ Tryck eller klicka på ikonen för att öppna appförhandsgranskning för att ö
 
 #### Publicera {#publish}
 
-Tryck eller klicka på publiceringsknappen för att publicera ändringarna av innehållet live för läsning.
+Tryck eller klicka på publiceringsknappen så att du kan publicera ändringarna i innehållet live för läsning.
 
 ![Knappen Publicera](assets/publish.png)
 
@@ -192,7 +192,7 @@ Observera att när du trycker eller klickar på ett innehåll i förhandsgranskn
 
 Mer information om Universal Editor finns i de här dokumenten.
 
-* [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och leverera en toppmodern utvecklarupplevelse.
+* [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar, så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
 * [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 * [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.

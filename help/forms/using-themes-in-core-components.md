@@ -2,9 +2,9 @@
 title: Skapa och använda teman
 description: Du kan använda teman för att stilisera och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: f22554450d2eb1f4948f749ba00f78b568ee308f
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ När du [skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md) me
 
 >[!NOTE]
 >
->Ett anpassat formulärtema får inte blandas ihop med [Adaptiva formulärmallar.](/help/forms/template-editor.md) Adaptiva formulärteman innehåller bara formatinformation för ett adaptivt formulär. Anpassningsbara blankettmallar definierar formulärstrukturen och det ursprungliga innehållet och innehåller ett tema som gör det möjligt att skapa nya [Adaptiv form.](/help/forms/creating-adaptive-form.md)
+>Ett anpassat formulärtema får inte blandas ihop med [Adaptiva formulärmallar.](/help/forms/template-editor.md) Adaptiva formulärteman innehåller bara formatinformation för ett adaptivt formulär. Anpassade formulärmallar definierar formulärstrukturen och det ursprungliga innehållet och innehåller ett tema som gör det möjligt att skapa nya [Adaptiv form.](/help/forms/creating-adaptive-form.md)
 
 ## Använda Canvas-temat i Adaptive Forms med hjälp av kärnkomponenter {#using-theme-in-adaptive-form}
 
@@ -131,7 +131,6 @@ AEM_PROXY_PORT=7000
    > * Skapa en lokal användare som kan logga in lokalt. Ange deltagarroll för temadesigner.
    > * Om du anger AEM URL som `http://localhost:[port]/` i `.env` -filen med Canvas-temat omdirigeras du direkt till webbläsaren.
 
-
 1. När du är inloggad ändrar du URL:en i webbläsaren så att den pekar på sökvägen till exempelinnehållet som AEM har gett dig.
 
    * Om den angivna sökvägen till exempel `/content/formname.html?wcmmode=disabled`, ändra URL:en till `http://localhost:[port]/content/forms/af/formname.html?wcmmode=disabled`
@@ -200,8 +199,7 @@ Innan du implementerar ändringar i Git-databasen för din AEM Forms-Cloud Servi
 
 1. Flytta filerna i den temalagringsplats som du redigerar till molndatabasen med ett kommando som liknar
    `cp -r [source-theme-folder]/* [destination-cloud-repo]`
-Använd till exempel det här kommandot 
-`cp -r [C:/cloned-git-canvas/*] [C:/cloned-repo]`
+Använd till exempel det här kommandot `cp -r [C:/cloned-git-canvas/*] [C:/cloned-repo]`
 1. I molndatabasens katalog implementerar du de temafiler du flyttade till med följande kommandon.
 
    ```text
@@ -246,15 +244,15 @@ När du har kört pipeline är temat tillgängligt på fliken Format.
 
 * **Undvika resurser från ett annat tema**
 
-   När du redigerar ett tema kan du bläddra bland och lägga till resurser (till exempel bilder) från andra teman. Du redigerar till exempel bakgrunden på en sida. Om du till exempel väljer **[!UICONTROL Page]** ![edit-button](assets/edit-button.png)> **[!UICONTROL Background]** > **[!UICONTROL Add]** > **[!UICONTROL Image]** visas en dialogruta där du kan bläddra bland och lägga till bilder i andra teman.
+  När du redigerar ett tema kan du bläddra bland och lägga till resurser (till exempel bilder) från andra teman. Du redigerar till exempel bakgrunden på en sida. Om du till exempel väljer **[!UICONTROL Page]** ![edit-button](assets/edit-button.png)> **[!UICONTROL Background]** > **[!UICONTROL Add]** > **[!UICONTROL Image]** visas en dialogruta där du kan bläddra bland och lägga till bilder i andra teman.
 
-   Du kan stöta på problem med det aktuella temat om en resurs läggs till från ett annat tema och det andra temat flyttas eller tas bort. Du bör undvika att bläddra bland och lägga till resurser från andra teman.
+  Du kan stöta på problem med det aktuella temat om en resurs läggs till från ett annat tema och det andra temat flyttas eller tas bort. Du bör undvika att bläddra bland och lägga till resurser från andra teman.
 
 * **Ändra layoutbredd för behållarpanelen**
 
-   Du bör inte ändra bredden på behållarpanelens layout. När du anger bredden på en behållarpanel blir den statisk och anpassas inte till olika skärmar.
+  Du bör inte ändra bredden på behållarpanelens layout. När du anger bredden på en behållarpanel blir den statisk och anpassas inte till olika skärmar.
 
 * **Använda formulärredigeraren eller temaredigeraren för att arbeta med sidhuvud och sidfot**
 
-   Använd temaredigeraren om du vill formatera sidhuvud och sidfot med formatalternativ som teckensnittsformat, bakgrund och genomskinlighet.
+  Använd temaredigeraren om du vill formatera sidhuvud och sidfot med formatalternativ som teckensnittsformat, bakgrund och genomskinlighet.
 Om du vill ange information som logotypbild, företagsnamn i sidhuvud och copyrightinformation i sidfoten använder du alternativen för formulärredigeraren.

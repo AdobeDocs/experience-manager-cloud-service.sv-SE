@@ -1,10 +1,10 @@
 ---
 title: Beredskapsfas
-description: Lär dig mer om vad du behöver göra för att se till att AEM är redo att flyttas till molnet
+description: Lär dig mer om de steg du behöver utföra så att du kan vara säker på att AEM är redo att flyttas till molnet
 exl-id: 3bc8c037-d82a-4455-bce6-3c80c359a4ae
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2074'
 ht-degree: 6%
 
 ---
@@ -21,11 +21,11 @@ I den här fasen av den AEM as a Cloud Service migreringsresan kommer du att bek
 
 ## Story hittills {#story-so-far}
 
-Det föregående dokumentet, [Komma igång med att gå till AEM as a Cloud Service](/help/journey-migration/getting-started.md), innehåller en lista med faser som du behöver genomgå för att migrera till AEM as a Cloud Service, samt fördelarna med att göra det.
+Det föregående dokumentet, [Komma igång med att gå till AEM as a Cloud Service](/help/journey-migration/getting-started.md)innehåller en lista med faser som du behöver genomgå så att du kan migrera till AEM as a Cloud Service, samt fördelarna med att göra det.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå vilka faktorer du måste tänka på för att se till att AEM är redo att flyttas till molnet:
+Det här dokumentet hjälper dig att förstå vilka faktorer du måste tänka på så att du kan se till att AEM är redo att flyttas till molnet:
 
 * Läs om märkbara ändringar och borttagna funktioner
 * Förstå hur du planerar för migrering till AEM as a Cloud Service
@@ -150,7 +150,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   <tr>
     <td>Ändringar i autentisering</td>
     <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=en">IMS-stöd för AEM as a Cloud Service</td>
-    <td>Om du tidigare har använt SAML 2.0-integrering på både författare och publicering innan du går till Cloud Service är den största förändringen att AEM as a Cloud Service Author bara kan integreras med Adobe IMS. AEM as a Cloud Service Publish-nivå kan dock fortfarande utnyttja SAML eller andra autentiseringsintegreringar. AEM as a Cloud Service har bara stöd för IMS-autentisering för författare, administratörer och utvecklare. IMS-autentiseringen ger inte stöd för externa slutanvändare på kundsajter som webbplatsbesökare.</td>
+    <td>Om du tidigare har använt SAML 2.0-integrering på både författare och publicering innan du går till Cloud Service är den största förändringen att AEM as a Cloud Service Author bara kan integreras med Adobe IMS. AEM as a Cloud Service Publish-nivå kan dock fortfarande använda SAML eller andra autentiseringsintegreringar. AEM as a Cloud Service har bara stöd för IMS-autentisering för författare, administratörer och utvecklare. IMS-autentiseringen ger inte stöd för externa slutanvändare på kundsajter som webbplatsbesökare.</td>
   </tr>
 </tbody>
 </table>
@@ -163,7 +163,7 @@ Vi rekommenderar att du läser [Föråldrade funktioner](https://experienceleagu
 
 ## Planera för en granskning av AEM {#review-planning}
 
-När du har vant dig vid de ändringar som har gjorts med AEM as a Cloud Service är det dags att börja planera för en granskning av din befintliga installation, för att mäta den nivå av ändringar som krävs för att kunna flytta den till molnet.
+När du har vant dig vid de ändringar som gjorts med AEM as a Cloud Service är det dags att börja planera för en granskning av din befintliga installation. Om du gör det blir det lättare att mäta nivån på de ändringar som krävs för att flytta den till molnet.
 
 I följande bild visas de viktigaste stegen under granskningsfasen:
 
@@ -173,7 +173,7 @@ Därefter ska vi gå igenom vad varje steg innebär i detalj.
 
 ### Utvärderar beredskap för Cloud Service {#assess-cloud-readiness}
 
-Det första steget är att bedöma om du är redo att gå över från den befintliga AEM till Cloud Service och avgöra vilka områden som behöver omfaktoriseras för att vara kompatibla med AEM as a Cloud Service.
+Det första steget är att utvärdera om du är redo att gå över från den befintliga AEM till Cloud Service och avgöra vilka områden som behöver omfaktorisering för att vara kompatibel med AEM as a Cloud Service.
 
 Du måste göra en omfattande utvärdering av den aktuella AEM källkoden mot de märkbara ändringarna och de borttagna funktionerna för att avgöra hur stor insats som förväntas under övergångsresan.
 
@@ -198,7 +198,7 @@ En vanlig rapport ska innehålla följande indata:
 
 **Socialisera rapporten**
 
-När Best Practices Analyzer-rapporterna är klara kan du dela dem med relevanta team för att bekräfta dina resultat och planera för dina nästa steg. Beroende på inställningarna kan du även distribuera en utskriven version av rapporten med hjälp av [Förhandsgranska utskrift](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-readiness-phase.md#print-preview-cam).
+När Best Practices Analyzer-rapporterna är klara kan du dela dem med relevanta team så att ni kan bekräfta era resultat och planera för nästa steg. Beroende på inställningarna kan du även distribuera en utskriven version av rapporten med hjälp av [Förhandsgranska utskrift](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-readiness-phase.md#print-preview-cam).
 
 ### Granska resursplanering {#review-resource-planning}
 

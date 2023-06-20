@@ -2,9 +2,9 @@
 title: Använda Git med Cloud Manager
 description: Lär dig hur du använder Cloud Managers Git-databaser och hur du integrerar din egen kundhanterade Git-databas med Cloud Manager.
 exl-id: 57e71b8a-4546-4d7f-825c-a1637d08e608
-source-git-commit: a9303c659730022b7417fc9082dedd26d7cbccca
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Förbered kod för en produktionsrelease i en kundhanterad Git-databas och synkr
 
 ## Synkroniserar versionstaggar {#sync-tags}
 
-Synkronisera versionstaggar från en Cloud Manager Git-databas i en kundhanterad Git-databas för att ge synlighet för vilken kod som har distribuerats till staging- och produktionsmiljöer.
+Synkronisera versionstaggar från en Cloud Manager Git-databas i en kundhanterad Git-databas för att se vilken kod som har distribuerats till staging- och produktionsmiljöer.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12)
 

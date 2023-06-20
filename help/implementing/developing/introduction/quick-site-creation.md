@@ -2,9 +2,9 @@
 title: Skapa snabbt webbplatser och anpassa gränssnittet
 description: Läs om hur verktyget för att skapa snabbwebbplatser använder webbplatsmallar, teman och produktionsflödet för att snabbt kunna driftsätta nya webbplatser och skapa en fristående utveckling.
 exl-id: 9ec5126b-bee4-445a-a4bb-0c27c1a93d3f
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ En fullständig översikt över hur verktyget Skapa snabbwebbplats fungerar och 
 
 ## Ytterligare resurser {#additional-resources}
 
-Eftersom verktyget Skapa snabbwebbplats använder många AEM funktioner kan dessa extraresurser vara användbara.
+Eftersom många AEM funktioner används i verktyget Skapa snabbwebbplats kan dessa extraresurser vara användbara.
 
 * [Webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md) - Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatsstrukturen och det ursprungliga innehållet så att du snabbt kan skapa nya webbplatser.
 * [Webbplatsteman](/help/sites-cloud/administering/site-creation/site-themes.md) - Lär dig hur AEM teman kan användas för att anpassa webbplatsens stil och design.

@@ -2,9 +2,9 @@
 title: Skapa och hantera kanaler på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
-source-git-commit: 9db22dca0fd6debaff0d93e1958e59536efabad8
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1104'
 ht-degree: 1%
 
 ---
@@ -115,7 +115,7 @@ Den här rutan visar följande information:
 
 ### Använd standarduppdragsinformationen när du tilldelar till en skärm {#default-display}
 
-Kanaler som har standardtilldelningsinformation kan tilldelas till visar på samma sätt som vanliga kanaler, med alternativet att använda standardtilldelningsinformationen i stället för att manuellt definiera anpassade kanaler varje gång.
+Kanaler som har standardtilldelningsinformation kan tilldelas till visar på samma sätt som vanliga kanaler, med alternativet att lägga till som standardtilldelningsinformation i stället för att manuellt definiera anpassade kanaler varje gång.
 
 1. Navigera till sidan med visningsinformation som du vill tilldela kanalen till och klicka på **Tilldela kanal**.
 Du kan också välja önskad visning i lagervyn och klicka på **Tilldela kanal**.
@@ -141,7 +141,7 @@ Du kan också välja önskad visning i lagervyn och klicka på **Tilldela kanal*
 
    ![bild](/help/screens-cloud/assets/display/Assignments8.png)
 
-**Obs!** En kanaltilldelning som utnyttjar standardtilldelningsinformationen kan inte redigeras i visningssammanhanget.
+**Obs!** En kanaltilldelning som använder standardtilldelningsinformationen kan inte redigeras i visningssammanhanget.
 
 * Om du behöver ändra det till ett anpassat uppdrag måste du först ta bort det och sedan lägga till det igen med **Ange information om anpassad tilldelning** alternativ.
 * Om du behöver ändra egenskaperna för standarduppdragsinformationen måste du göra det direkt från sidan med kanalinformation.
@@ -154,7 +154,7 @@ Du kan också välja önskad visning i lagervyn och klicka på **Tilldela kanal*
 
    ![bild](/help/screens-cloud/assets/display/Assignments9.png)
 
-1. En bekräftelsedialogruta visas och informationen kommer att överensstämma med ett av följande villkor:
+1. En bekräftelsedialogruta visas och informationen matchar något av följande villkor:
    **a.** Kanalen används inte i någon visning.
 
    ![bild](/help/screens-cloud/assets/display/Assignments10.png)

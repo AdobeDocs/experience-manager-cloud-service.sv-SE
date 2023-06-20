@@ -2,9 +2,9 @@
 title: Utveckla en anpassad komponent för skärmar as a Cloud Service
 description: I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
-source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2115'
+source-wordcount: '2106'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Källkoden för ett skärmsprojekt hanteras vanligtvis som ett Maven-projekt med
 
    Representation av ui.apps-koden i CRXDE Lite
 
-   The **helig** är för närvarande bara en platshållare. Under kursen kommer funktioner att läggas till som gör det möjligt för en författare att uppdatera det meddelande som visas av komponenten.
+   The **helig** är för närvarande bara en platshållare. Under kursen har funktioner lagts till som gör att en författare kan uppdatera det meddelande som visas av komponenten.
 
 1. The **screens-weretail-run.ui.content** paketet installerar kod under:
 
@@ -184,7 +184,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
 
    Ovanför finns redigeringskoden för Hello World-komponenten. Det första blocket visar en redigeringsversion av komponenten om dialogmeddelandet har fyllts i.
 
-   Det andra blocket återges om inget dialogrutemeddelande har angetts. The `cq-placeholder` och `data-emptytext` återge etiketten ***Hello World*** som platshållare i det fallet. Strängen för etiketten kan internationaliseras med i18n för att ge stöd för redigering i flera språkområden.
+   Det andra blocket återges om inget dialogrutemeddelande har angetts. The `cq-placeholder` och `data-emptytext` återge etiketten ***Hello World*** som platshållare i det fallet. Strängen för etiketten kan internationaliseras med i18n som stöd för redigering på flera språk.
 
 1. **Copy Sscreens Image Dialog to be used for the Hello World component.**
 
@@ -242,7 +242,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
                                    jcr:primaryType="nt:unstructured"
                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                    defaultValue=""
-                                   fieldDescription="Amount of time the image will be shown in the sequence, in milliseconds"
+                                   fieldDescription="Amount of time the image is shown in the sequence, in milliseconds"
                                    fieldLabel="Duration (ms)"
                                    min="0"
                                    name="./duration"/>
@@ -265,7 +265,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
 
 Med bibliotek på klientsidan kan du ordna och hantera CSS- och JavaScript-filer som behövs för en AEM implementering.
 
-AEM Screens-komponenter återges annorlunda i redigeringsläget jämfört med i förhandsgransknings-/produktionsläget. Två klientbibliotek skapas, ett för redigeringsläget och ett för Förhandsgranska/Produktion.
+AEM Screens-komponenter återges annorlunda i redigeringsläge jämfört med förhandsgransknings-/produktionsläge. Två klientbibliotek skapas: en för redigeringsläget och en för förhandsgranskning/produktion.
 
 1. Skapa en mapp för klientbibliotek för Hello World-komponenten.
 
@@ -411,6 +411,7 @@ Komponenten Hello World är avsedd att användas på en sekvenskanal. Om du vill
 1. Mallsteg - välj **Sekvenskanal**
 
    1. Egenskapssteg
+
    * Fliken Grundläggande > Titel = **Inaktiv kanal**
    * Kanalflik > kontrollera **Gör kanalen online**
 

@@ -1,17 +1,17 @@
 ---
 title: Snabba utvecklingsmiljöer
-description: Lär dig hur du utnyttjar miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
+description: Lär dig använda miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
-source-git-commit: 5bfa5a1df940b8903acd08f4c3cb7443adb897d8
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3325'
+source-wordcount: '3317'
 ht-degree: 0%
 
 ---
 
 # Snabba utvecklingsmiljöer {#rapid-development-environments}
 
-För att kunna driftsätta ändringar kräver de aktuella utvecklingsmiljöerna i molnet en process som använder omfattande regler för kodssäkerhet och -kvalitet som kallas CI/CD-pipeline. I situationer där snabba och iterativa förändringar behövs har Adobe infört snabba utvecklingsmiljöer (RDE) för kort tid.
+För att kunna driftsätta ändringar kräver de aktuella utvecklingsmiljöerna i molnet en process som använder omfattande kodsäkerhet och kvalitetsregler som kallas CI/CD-pipeline. I situationer där snabba och iterativa förändringar behövs har Adobe infört snabba utvecklingsmiljöer (RDE) för kort tid.
 
 Tack vare de lokala redigeringssystemen kan utvecklare snabbt driftsätta och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som är beprövade i en lokal utvecklingsmiljö.
 
@@ -26,7 +26,7 @@ Du kan titta på ytterligare videofilmer som visar [konfigurera](https://experie
 
 RDE kan användas för konfigurationer av kod, innehåll och Apache eller Dispatcher. Till skillnad från vanliga Cloud Development-miljöer kan utvecklare använda lokala kommandoradsverktyg för att synkronisera kod som skapats lokalt till en RDE.
 
-Alla program tillhandahålls med en RDE. När det gäller sandlådekonton kommer de att försättas i viloläge efter några timmars icke-användning.
+Alla program tillhandahålls med en RDE. När det gäller sandlådekonton är de i viloläge efter några timmars icke-användning.
 
 När de skapas ställs de virtuella skrivborden in på den senast tillgängliga AEM. En RDE-återställning, som kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
 
@@ -50,7 +50,7 @@ Följ de här stegen för att använda Cloud Manager för att skapa en RDE för 
 
    * The **Lägg till miljö** finns även på **Miljö** -fliken.
 
-      ![Fliken Miljö](/help/implementing/cloud-manager/assets/environments-tab.png)
+     ![Fliken Miljö](/help/implementing/cloud-manager/assets/environments-tab.png)
 
    * The **Lägg till miljö** kan vara inaktiverat på grund av bristande behörighet eller beroende på vilka licensierade resurser som används.
 
@@ -128,8 +128,7 @@ När du har lagt till en RDE för ditt program med Cloud Manager kan du interage
    >
    >Om du ser `Warning: cloudmanager:list-programs is not a aio command.` måste du installera [aio-cli-plugin-cloud-manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) genom att köra kommandot nedan:
    >
-   >
-   ```
+   >```
    >aio plugins:install @adobe/aio-cli-plugin-cloudmanager
    >```
 
@@ -150,9 +149,9 @@ Adobe rekommenderar följande arbetsflöde för att utveckla en ny funktion:
 
 * Återställ RDE om den har använts av en annan funktion och du vill [återställa till standardläge](#reset-rde). <!-- Alexandru: hiding for now, please don't delete This can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart. Den nya versionen av AEM kommer att användas.
 
-   >[!IMPORTANT]
-   >
-   > Om din testnings- och produktionsmiljö inte får automatiska AEM och ligger långt efter den senaste versionen av AEM bör du tänka på att koden som körs på den lokala utvecklingsmiljön kanske inte stämmer överens med hur koden fungerar i testversionerna och produktionen. I så fall är det särskilt viktigt att utföra grundliga tester av koden på mellanlagring innan den distribueras till produktion.
+  >[!IMPORTANT]
+  >
+  > Om din testnings- och produktionsmiljö inte får automatiska AEM och ligger långt efter den senaste versionen av AEM bör du tänka på att koden som körs på den lokala utvecklingsmiljön kanske inte stämmer överens med hur koden fungerar i testversionerna och produktionen. I så fall är det särskilt viktigt att utföra grundliga tester av koden på mellanlagring innan den distribueras till produktion.
 
 
 * Synkronisera lokal kod med RDE-kommandoradsgränssnittet. Du kan installera ett innehållspaket, ett specifikt paket, en OSGI-konfigurationsfil, en innehållsfil och en zip-fil för en Apache/Dispatcher-konfiguration. Det går också att referera till ett fjärrinnehållspaket. Se [Verktyg för RDE-kommandorad](#rde-cli-commands) för mer information. Du kan använda statuskommandot för att validera att distributionen lyckades. Du kan också använda Package Manager för att installera innehållspaket.
@@ -185,11 +184,11 @@ Med noggrann samordning kan dock fler än en utvecklare validera en viss funktio
 
 * Om du vill visa en lista med kommandon skriver du:
 
-   `aio aem:rde`
+  `aio aem:rde`
 
 * Om du vill ha mer information om ett kommando skriver du:
 
-   `aio aem rde <command> --help`
+  `aio aem rde <command> --help`
 
 ### Distribuera till RDE {#deploying-to-rde}
 
@@ -352,7 +351,7 @@ Du kan ta bort konfigurationer och paket som tidigare har distribuerats till RDE
 
 Om `com.adobe.granite.demo.MyServlet.cfg.json` har installerats, `bsn` är bara `com.adobe.granite.demo.MyServlet`, utan **cfg.json** suffix.
 
-Det går inte att ta bort innehållspaket eller innehållsfiler. Om du vill ta bort dem bör du återställa den skrivskyddade miljön så att den återställs till standardläge.
+Det går inte att ta bort innehållspaket eller innehållsfiler. Om du vill ta bort dem bör du återställa den skrivskyddade miljön, vilket innebär att den återställs till standardläget.
 
 Se exemplet nedan för mer information:
 
@@ -366,17 +365,17 @@ Mer information och demonstrationer finns i [använda RDE-kommandon](https://exp
 
 ## Återställ {#reset-rde}
 
-Om du återställer RDE tas all anpassad kod, konfigurationer och innehåll bort från både författaren och publiceringsinstansen. Detta kan vara användbart om RDE har använts för att testa en viss funktion och du vill återställa den till ett standardläge för att testa en annan funktion.
+Om du återställer RDE tas all anpassad kod, konfigurationer och innehåll bort från både författaren och publiceringsinstansen. Den här återställningen är användbar om den aktuella miljön har använts för att testa en viss funktion och du vill återställa den till ett standardläge så att du kan testa en annan funktion.
 
 En återställning anger att den senaste tillgängliga AEM är RDE.
 
 <!-- Alexandru: hiding for now, please don't delete
 
-Resetting can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). Resetting takes a few minutes and all existing content and code will be deleted from the RDE.
+Resetting can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). Resetting takes a few minutes and all existing content and code is deleted from the RDE.
 
 >[NOTE!]
 >
->You must be assigned the Cloud Manager Developer role in order to be able to use the reset feature. If not, a reset action will result in an error.
+>You must be assigned the Cloud Manager Developer role to use the reset feature. If not, a reset action results in an error.
 
 ### Reset the RDE via Command Line {#reset-the-rde-command-line}
 
@@ -400,7 +399,7 @@ Du kan använda Cloud Manager för att återställa din RDE genom att följa ste
 
    * Du kan även klicka på **Visa alla** på **Miljö** för att gå direkt till **Miljö** -fliken.
 
-      ![Visa alla, alternativ](/help/implementing/cloud-manager/assets/environment-showall.png)
+     ![Visa alla, alternativ](/help/implementing/cloud-manager/assets/environment-showall.png)
 
 1. The **Miljö** öppnas och alla miljöer för programmet visas.
 

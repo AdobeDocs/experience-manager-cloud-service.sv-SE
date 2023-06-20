@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: e99522cb6221285b5b4de5f026dcc4d925035ec1
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2710'
+source-wordcount: '2705'
 ht-degree: 0%
 
 ---
@@ -40,74 +40,73 @@ Det finns många användningsområden för MSM och Live-kopior. Exempel:
 
 * **Multinationals - Global till lokalt företag**
 
-   Ett typiskt användningsfall som MSM stöder är att återanvända innehåll på flera multinationella webbplatser på samma språk. Detta gör det möjligt att återanvända kärninnehållet, samtidigt som nationella variationer tillåts.
+  Ett typiskt användningsfall som MSM stöder är att återanvända innehåll på flera multinationella webbplatser på samma språk. Detta gör det möjligt att återanvända kärninnehållet, samtidigt som nationella variationer tillåts.
 
-   Den engelska delen av [Exempel på WKND-självstudiekurs](/help/implementing/developing/introduction/develop-wknd-tutorial.md) skapas för kunder i USA. Det mesta av innehållet på denna webbplats kan också användas för andra WKND-webbplatser som passar för engelsktalande kunder i olika länder och kulturer. Kärninnehållet är detsamma på alla webbplatser, och regionala justeringar kan göras.
+  Den engelska delen av [Exempel på WKND-självstudiekurs](/help/implementing/developing/introduction/develop-wknd-tutorial.md) skapas för kunder i USA. Det mesta av innehållet på denna webbplats kan också användas för andra WKND-webbplatser som passar för engelsktalande kunder i olika länder och kulturer. Kärninnehållet är detsamma på alla webbplatser, och regionala justeringar kan göras.
 
-   Följande struktur kan användas för webbplatser för USA och Kanada. Anteckna hur `language-masters` noden behåller den överordnad kopian av inte bara engelskt utan även annat språkinnehåll. Innehållet kan användas som bas för ytterligare regionalt språkinnehåll vid sidan av engelska.
+  Följande struktur kan användas för webbplatser för USA och Kanada. Anteckna hur `language-masters` noden behåller den överordnad kopian av inte bara engelskt utan även annat språkinnehåll. Innehållet kan användas som bas för ytterligare regionalt språkinnehåll vid sidan av engelska.
 
-   ```xml
-   /content
-       |- wknd
-           |- language-masters
-               |- en
-               |- es
-               |- fr
-           |- us
-               |- en
-               |- es
-           |- ca
-               |- en
-               |- fr
-   ```
+  ```xml
+  /content
+      |- wknd
+          |- language-masters
+              |- en
+              |- es
+              |- fr
+          |- us
+              |- en
+              |- es
+          |- ca
+              |- en
+              |- fr
+  ```
 
-   >[!NOTE]
-   >
-   >MSM översätter inte innehållet. Den används för att skapa den struktur som krävs och distribuera innehållet.
-   >
-   >
-   >Se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md) för ett sådant exempel.
+  >[!NOTE]
+  >
+  >MSM översätter inte innehållet. Den används för att skapa den struktur som krävs och distribuera innehållet.
+  >
+  >
+  >Se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md) för ett sådant exempel.
 
 * **Nationell myndighet - chef för de regionala avdelningarna**
 
-   Ett företag med ett nätverk av återförsäljare kan också vilja ha separata webbplatser för sina enskilda återförsäljare, som var och en är en variation av huvudföretagets huvudwebbplats. Detta kan gälla ett enskilt företag med flera regionala kontor eller ett nationellt franchisystem som består av en central franchisor och flera lokala franchisetagare.
+  Ett företag med ett nätverk av återförsäljare kan också vilja ha separata webbplatser för sina enskilda återförsäljare, som var och en är en variation av huvudföretagets huvudwebbplats. Detta kan gälla ett enskilt företag med flera regionala kontor eller ett nationellt franchisystem som består av en central franchisor och flera lokala franchisetagare.
 
-   Huvudkontoret kan tillhandahålla viktig information, medan de regionala enheterna kan lägga till lokal information, som kontaktuppgifter, öppettider och händelser.
+  Huvudkontoret kan tillhandahålla viktig information, medan de regionala enheterna kan lägga till lokal information, som kontaktuppgifter, öppettider och händelser.
 
-   ```xml
-   /content
-       |- head-office-berlin
-       |- branch-hamburg
-       |- branch-stuttgart
-       |- branch-munich
-       |- branch-frankfurt
-   ```
+  ```xml
+  /content
+      |- head-office-berlin
+      |- branch-hamburg
+      |- branch-stuttgart
+      |- branch-munich
+      |- branch-frankfurt
+  ```
 
 * **Flera versioner**
 
-   MSM kan skapa versioner av en viss underavdelning. En supportunderwebbplats kan t.ex. innehålla information om olika versioner av en viss produkt, där basinformationen är konstant och endast de uppdaterade funktionerna behöver ändras:
+  MSM kan skapa versioner av en viss underavdelning. En supportunderwebbplats kan t.ex. innehålla information om olika versioner av en viss produkt, där basinformationen är konstant och endast de uppdaterade funktionerna behöver ändras:
 
-   ```xml
-   /content
-       |- game-support
-           |- polybius
-               |- v5.0
-               |- v4.0
-               |- v3.0
-               |- v2.0
-               |- v1.0
-   ```
+  ```xml
+  /content
+      |- game-support
+          |- polybius
+              |- v5.0
+              |- v4.0
+              |- v3.0
+              |- v2.0
+              |- v1.0
+  ```
 
-   >[!TIP]
-   >
-   >I ett sådant scenario är detta frågan om huruvida en enkel kopia ska skapas eller om Live-kopior ska användas, vilket är en balans mellan:
-   >
-   >* Hur mycket av det centrala innehållet behöver uppdateras över flera versioner.
-   >
-   >Mot:
-   >
-   >* Hur mycket av de enskilda kopiorna behöver justeras.
-
+  >[!TIP]
+  >
+  >I ett sådant scenario är detta frågan om huruvida en enkel kopia ska skapas eller om Live-kopior ska användas, vilket är en balans mellan:
+  >
+  >* Hur mycket av det centrala innehållet behöver uppdateras över flera versioner.
+  >
+  >Mot:
+  >
+  >* Hur mycket av de enskilda kopiorna behöver justeras.
 
 ## MSM från användargränssnittet {#msm-from-the-ui}
 
@@ -234,13 +233,13 @@ Skapa en [ny sida i en befintlig Live Copy](#live-copy-with-non-live-copy-pages)
 * En djup utrullning som utlöses för Live Copy på den översta nivån kan fortsätta till den kapslade Live Copy.
 * Alla länkar mellan källorna skrivs om i Live-kopior.
 
-Till exempel skrivs länkar som pekar från den andra till den första utkast om som länkar från den kapslade/andra Live-kopian till den första Live-kopian.
+Till exempel skrivs länkar som pekar från den andra till den första utkast om som länkar som pekar från den kapslade/andra Live-kopian till den första Live-kopian.
 
 ![Kapslade Live-kopior](../assets/live-copy-nested.png)
 
 >[!NOTE]
 >
->Om du flyttar eller byter namn på en sida i Live Copy-grenen behandlas detta som en kapslad Live Copy så att AEM kan spåra relationerna.
+>Om du flyttar eller byter namn på en sida inom Live Copy-grenen behandlas den som en kapslad Live Copy så att AEM kan spåra relationerna.
 
 #### Skiktade Live-kopior {#stacked-live-copies}
 
@@ -269,12 +268,12 @@ En utrullning är den centrala MSM-åtgärden som synkroniserar Live-kopior med 
 * När du skapar en ritningssida kan du använda **[Utrullning](creating-live-copies.md#rolling-out-a-blueprint)** om du vill göra ändringar i Live Copy.
    * The **Utrullning** -kommandot är tillgängligt på en ritningssida som en ritningskonfiguration refererar till.
 
-   ![Utrullning](../assets/live-copy-rollout.png)
+  ![Utrullning](../assets/live-copy-rollout.png)
 
 * När du skapar en Live Copy-sida kan du använda **[Synkronisera](creating-live-copies.md#synchronizing-a-live-copy)** om du vill dra ändringar från källan till Live Copy.
    * The **Synkronisera** -kommandot är alltid tillgängligt på Live Copy-sidan oavsett om käll-/ritningssidan omfattas av en ritningskonfiguration eller inte.
 
-   ![Synkronisera](../assets/live-copy-synchronize.png)
+  ![Synkronisera](../assets/live-copy-synchronize.png)
 
 ### Konfigurationer för utrullning {#rollout-configurations}
 

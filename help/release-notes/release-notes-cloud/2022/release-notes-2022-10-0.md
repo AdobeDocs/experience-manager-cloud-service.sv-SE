@@ -2,9 +2,9 @@
 title: Versionsinformation för version 2022.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för version 2022.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 8fce7c50-f322-4bcf-bd76-390faedfd5b7
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -48,16 +48,16 @@ Titta på videon med versionsöversikten för oktober 2022 om du vill se en samm
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* Nu kan du överföra dokument i andra format som stöds i Experience Manager Assets och[ förhandsgranska dem med det medföljande Document Cloud-visningsprogrammet](/help/assets/manage-pdf-documents.md). De formattyper som stöds är TXT, RTF, DOC, DOCX, PPT, PPTX, XLS och XLSX.
+* Nu kan du överföra dokument i andra format som stöds i Experience Manager Assets och[förhandsgranska dem med det medföljande Document Cloud-visningsprogrammet](/help/assets/manage-pdf-documents.md). De formattyper som stöds är TXT, RTF, DOC, DOCX, PPT, PPTX, XLS och XLSX.
 
-   ![PDF-återgivning för andra format](/help/release-notes/assets/multi-page-other-formats.png)
+  ![PDF-återgivning för andra format](/help/release-notes/assets/multi-page-other-formats.png)
 
 
 ### Nya funktioner i [!DNL Assets] prerelease {#prerelease-features-assets}
 
 * Experience Manager Assets använder nu ett förbättrat ramverk för artificiell intelligens för smarta taggar i bilder. Den här innehållsintelligensen ger bättre relevans och precision för smarta taggar som är tillgängliga för alla bildresurser vid förtäring. Dessutom fylls orienteringsinformationen i `cq:tags`, vilket ger bättre sökresultat med Orientation-filtret.
 
-   Om du är intresserad av att delta i betaversionen, [fyll i det här formuläret](https://forms.office.com/pages/responsepage.aspx?id=Wht7-jR7h0OUrtLBeN7O4epXZrTVKKdJkUiHeolccf9UNEwyNEpHVEFaODdBNFZQSlFDREZQOVRRTy4u) senast 14 november.
+  Om du är intresserad av att delta i betaversionen, [fyll i det här formuläret](https://forms.office.com/pages/responsepage.aspx?id=Wht7-jR7h0OUrtLBeN7O4epXZrTVKKdJkUiHeolccf9UNEwyNEpHVEFaODdBNFZQSlFDREZQOVRRTy4u) senast 14 november.
 
 * Experience Manager Assets nu [stöder SAS-token](/help/assets/add-assets.md#asset-bulk-ingestor) utöver åtkomstnyckeln för autentisering vid anslutning till Azure Blob Storage-datakällan för inmatning av resurser med verktyget för massimport.
 
@@ -87,7 +87,7 @@ Titta på videon med versionsöversikten för oktober 2022 om du vill se en samm
 
 * AEM as a Cloud Service (Author Service) är nu integrerat med Unified Shell för att förbättra användarupplevelsen och sammanföra den med alla andra Experience Cloud-program. Se AEM som en [Cloud Service i enhetligt gränssnitt](/help/overview/aem-cloud-service-on-unified-shell.md) för mer information.
 
-* Som tidigare nämnts i versionsinformationen är användningen av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) föråldrat och kommer att tillämpas under de kommande dagarna. Se [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) för de föreslagna metoderna för att replikera dessa stora innehållspaket.
+* Som tidigare nämnts i versionsinformationen är nu användningen av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) föråldrat och påtvingat. Se [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) för förslag på metoder för att replikera dessa stora innehållspaket.
 
 * Dispatcher-konfigurationen refererar nu till en fil som listar vanliga frågeparametrar för marknadsföringskampanjer. Kunderna kan välja att avkommentera de parametrar som är relevanta för dem, vilket ger bättre cachning. Se [Parametrar för marknadsföringskampanjer](/help/implementing/dispatcher/caching.md#marketing-parameters) för mer information.
 

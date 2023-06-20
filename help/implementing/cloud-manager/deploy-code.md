@@ -2,9 +2,9 @@
 title: Distribuera koden
 description: Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: 63e38485e2f15c6947c7fba1848d47eda4cc900e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ The **Scentestning** dessa steg.
 * **Experience Audit** - Det här steget i pipeline körs alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna.
    * De konfigurerade sidorna skickas till tjänsten och utvärderas.
    * Resultaten är informativa och visar poängen och förändringen mellan aktuella och tidigare poäng.
-   * Den här insikten är värdefull för att avgöra om det finns en regression som kommer att introduceras i den aktuella distributionen.
+   * Den här insikten är värdefull för att avgöra om det finns en regression som introduceras i den aktuella distributionen.
    * Se dokumentet [Upplevelsegranskningsresultat](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
 
 ![Scentestning](assets/stage-testing.png)
@@ -149,7 +149,7 @@ Begränsningar:
 
 ### Identifiera en körning på nytt
 
-För att identifiera om en körning är en körning på nytt kan utlösarfältet undersökas. Dess värde kommer att *RE_EXECUTE*.
+För att identifiera om en körning är en körning på nytt kan utlösarfältet undersökas. Dess värde är *RE_EXECUTE*.
 
 ### Utlösa en ny körning
 
@@ -193,4 +193,4 @@ För att utlösa en omkörning måste en PUT-begäran göras till HAL Link &lt;(
 
 Syntaxen för HAL-länkens _href_  värdet ovan är inte avsett att användas som referenspunkt. Det faktiska värdet ska alltid läsas från HAL-länken och inte genereras.
 
-Skicka ett *PUT* begäran till den här slutpunkten resulterar i *201* om svaret lyckas och svarsorganet är representationen av den nya exekveringen. Det liknar att starta en vanlig körning via API:t.
+Skicka ett *PUT* begäran till den här slutpunkten resulterar i en *201* om det lyckas, och svarsdelen är representationen av den nya körningen. Det liknar att starta en vanlig körning via API:t.

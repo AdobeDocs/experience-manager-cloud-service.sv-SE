@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 84b2648fe06b556534b53023769abaa69ef1ec2b
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2411'
+source-wordcount: '2401'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa o
 
 AEM innehåller en integrerad svit med [Kvalitetsportar för Cloud Manager](/help/implementing/cloud-manager/custom-code-quality-rules.md) för smidiga uppdateringar av anpassade program. I synnerhet har IT-testportar redan stöd för att skapa och automatisera anpassade tester med AEM API:er.
 
-Användargränssnittstester paketeras i en Docker-bild för att ge ett brett val i språk och miljöer (t.ex. Cypress, Selenium, Java och Maven samt JavaScript). Dessutom kan ett UI-testprojekt enkelt genereras med [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett val i språk och miljöer (som Cypress, Selenium, Java och Maven samt JavaScript). Dessutom kan ett UI-testprojekt enkelt genereras med [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
 
 Adobe uppmuntrar användningen av Cypress eftersom det ger realtidsladdning och automatisk väntetid, vilket sparar tid och förbättrar produktiviteten under testningen. Cypress har också en enkel och intuitiv syntax som gör det enkelt att lära sig och använda, även för dem som inte har testat tidigare.
 
@@ -47,9 +47,9 @@ I det här avsnittet beskrivs stegen som krävs för att konfigurera gränssnitt
 
    * För JavaScript och WDIO använder du exempelkoden som automatiskt genereras i `ui.tests` i din Cloud Manager-databas.
 
-      >[!NOTE]
-      >
-      >Om din databas skapades innan Cloud Manager skapades automatiskt `ui.tests` kan du även generera den senaste versionen med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests).
+     >[!NOTE]
+     >
+     >Om din databas skapades innan Cloud Manager skapades automatiskt `ui.tests` kan du även generera den senaste versionen med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests).
 
    * För Java och WebDriver använder du exempelkoden i [AEM Test Samples](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-selenium-webdriver).
 
@@ -191,13 +191,13 @@ Om du använder exemplen från Adobe:
 
 * För JavaScript-baserade `ui.tests` mapp som genererats baserat på [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/master/src/main/archetype/ui.tests)kan du köra nedanstående kommando för att lägga till den konfiguration som krävs.
 
-   ```shell
-   echo "ui-tests.version=1" > testing.properties
-   
-   if ! grep -q "testing.properties" "assembly-ui-test-docker-context.xml"; then
-     awk -v line='                <include>testing.properties</include>' '/<include>wait-for-grid.sh<\/include>/ { printf "%s\n%s\n", $0, line; next }; 1' assembly-ui-test-docker-context.xml > assembly-ui-test-docker-context.xml.new && mv assembly-ui-test-docker-context.xml.new assembly-ui-test-docker-context.xml
-   fi
-   ```
+  ```shell
+  echo "ui-tests.version=1" > testing.properties
+  
+  if ! grep -q "testing.properties" "assembly-ui-test-docker-context.xml"; then
+    awk -v line='                <include>testing.properties</include>' '/<include>wait-for-grid.sh<\/include>/ { printf "%s\n%s\n", $0, line; next }; 1' assembly-ui-test-docker-context.xml > assembly-ui-test-docker-context.xml.new && mv assembly-ui-test-docker-context.xml.new assembly-ui-test-docker-context.xml
+  fi
+  ```
 
 * Testexemplen av Cypress och Java Selenium som tillhandahålls av Adobe har redan flaggan opt-in.
 
@@ -207,7 +207,7 @@ I det här avsnittet beskrivs de konventioner som Docker-bilden med dina gränss
 
 ### Miljövariabler {#environment-variables}
 
-Följande miljövariabler skickas till Docker-bilden vid körning, beroende på ramverket.
+Följande miljövariabler skickas till din Docker-bild vid körning, beroende på ditt ramverk.
 
 | Variabel | Exempel | Beskrivning | Testramverk |
 |---|---|---|---|
@@ -220,7 +220,7 @@ Följande miljövariabler skickas till Docker-bilden vid körning, beroende på 
 | `AEM_PUBLISH_USERNAME` | `admin` | Användarnamnet som ska loggas in på AEM publiceringsinstans | Alla |
 | `AEM_PUBLISH_PASSWORD` | `admin` | Lösenordet för att logga in på AEM publiceringsinstans | Alla |
 | `REPORTS_PATH` | `/usr/src/app/reports` | Sökvägen där XML-rapporten för testresultaten måste sparas | Alla |
-| `UPLOAD_URL` | `http://upload-host:9090/upload` | Den URL dit filen måste överföras för att göra den tillgänglig för testramverket | Alla |
+| `UPLOAD_URL` | `http://upload-host:9090/upload` | Den URL till vilken filen måste överföras för att göra den tillgänglig för testramverket | Alla |
 
 Provexemplen från Adobe ger hjälpfunktioner för att komma åt konfigurationsparametrarna:
 
@@ -254,7 +254,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 |----------------------|-------|-----------------------------------------------------------------------|
 | CPU | 2.0 | Den CPU-tid som reserverats per testkörning |
 | Minne | 1Gi | Mängd minne som tilldelats testet, värde i gibibyte |
-| Timeout | 30m | Den varaktighet efter vilken testet avslutas. |
+| Timeout | 30m | Den varaktighet efter vilken provningen avslutas. |
 | Rekommenderad varaktighet | 15m | Adobe rekommenderar att testet inte tar längre tid än så här. |
 
 >[!NOTE]
@@ -271,7 +271,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
 1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.
@@ -343,7 +343,7 @@ Innan gränssnittstester aktiveras i en Cloud Manager-pipeline bör gränssnitts
 
 >[!NOTE]
 >
->Loggfilerna sparas i `target/` -mapp i din databas.
+>Loggfilerna lagras i `target/` -mapp i din databas.
 >
 >Mer information finns i [AEM Test Samples](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-cypress/test-module/README.md).
 
@@ -390,6 +390,6 @@ Innan gränssnittstester aktiveras i en Cloud Manager-pipeline bör gränssnitts
 
 >[!NOTE]
 >
->Loggfilerna sparas i `target/reports` -mapp i din databas.
+>Loggfilerna lagras i `target/reports` -mapp i din databas.
 >
 >Mer information finns i [AEM Test Samples](https://github.com/adobe/aem-test-samples/blob/aem-cloud/ui-selenium-webdriver/README.md).

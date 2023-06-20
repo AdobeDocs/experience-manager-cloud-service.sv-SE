@@ -2,9 +2,9 @@
 title: Query Builder API
 description: Funktionerna i Asset Share Query Builder visas via Java API och REST API.
 exl-id: d5f22422-c9da-4c9d-b81c-ffa5ea7cdc87
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -133,7 +133,7 @@ Gränssnittet kan till exempel anpassa följande metod:
    * `total=43`, `more=false` - Anger att det totala antalet träffar är 43. Gränssnittet kan visa upp till tio resultat som en del av den första sidan och ge sidnumrering för de kommande tre sidorna. Du kan också använda den här implementeringen för att visa en beskrivande text som **&quot;43 resultat hittades&quot;**.
    * `total=100`, `more=true` - Anger att det totala antalet träffar är större än 100 och att det exakta antalet inte är känt. Gränssnittet kan visas upp till tio som en del av den första sidan och sidnumreringen kan göras för de kommande tio sidorna. Du kan också använda den här för att visa text som **&quot;fler än 100 resultat hittades&quot;**. När användaren går till nästa sida kommer ett anrop till Query Builder att öka gränsen för `guessTotal` och `offset` och `limit` parametrar.
 
-`guessTotal` bör också användas i de fall där användargränssnittet behöver använda oändlig rullning för att undvika att frågeverktyget avgör det exakta träffantalet.
+`guessTotal` ska också användas i de fall där användargränssnittet behöver använda oändlig rullning för att undvika att frågeverktyget avgör det exakta träffantalet.
 
 ### Sök efter burkfiler och beställ dem, Senaste först {#find-jar-files-and-order-them-newest-first}
 
@@ -279,7 +279,7 @@ property.3_value=Whistler Mountain Biking
 
 ## Förfina vad som returneras {#refining-what-is-returned}
 
-Som standard returnerar JSON-servern för QueryBuilder en standarduppsättning med egenskaper för varje nod i sökresultatet (till exempel sökväg, namn, titel etc.). För att få kontroll över vilka egenskaper som returneras kan du göra något av följande:
+Som standard returnerar JSON-servern för QueryBuilder en standarduppsättning med egenskaper för varje nod i sökresultatet (till exempel sökväg, namn och titel). Du kan kontrollera vilka egenskaper som returneras genom att göra något av följande:
 
 Ange
 
@@ -320,7 +320,7 @@ p.hits=selective
 p.properties=sling:resourceType jcr:primaryType
 ```
 
-En annan sak du kan göra är att inkludera underordnade noder i svaret i Query Builder. För att kunna göra detta måste du ange
+En annan sak du kan göra är att inkludera underordnade noder i svaret i Query Builder. För att göra detta måste du ange
 
 ```xml
 p.nodedepth=n

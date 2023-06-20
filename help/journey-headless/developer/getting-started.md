@@ -2,9 +2,9 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: 28ed228d02e09f273fa8713bad0f7194e1e25cf0
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3090'
+source-wordcount: '3087'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ AEM stöder både den fullständiga headless-modellen och den traditionella full
 
 För att du ska få en förståelse för headless-koncept fokuserar den här AEM Headless Developer Journey på den rena headless-modellen så att du kommer igång så fort som möjligt utan att behöva skriva någon kod i AEM.
 
-Du bör dock vara medveten om de extra hybridmöjligheterna som är öppna för dig när du väl förstår AEM headless-funktioner. Dessa fall beskrivs nedan för att du ska vara medveten om dem. I slutet av resan kommer du att få en mer detaljerad introduktion till dessa koncept om en sådan flexibilitet krävs för ditt projekt.
+Du bör dock vara medveten om de extra hybridmöjligheterna som är öppna för dig när du väl förstår AEM headless-funktioner. Dessa fall beskrivs nedan för att du ska vara medveten om dem. I slutet av resan introduceras dessa koncept i detalj om en sådan flexibilitet krävs för ditt projekt.
 
 ### Du har redan en extern förbrukning av headless-innehåll som ett program på en sida (SPA). {#already-have-a-spa}
 
@@ -179,7 +179,7 @@ Skapa en plan för vilken innehållsöversättning du behöver.
 * Behöver ni olika språk eller språk för att anpassa er till regionala särdrag?
 * Behöver multimediematerial som bilder och videor vara olika för olika språkområden?
 
-Var tydlig med arbetsflödet för innehållsuppdatering. Vilken godkännandeprocess måste systemet stödja? Kan AEM arbetsflöden utnyttjas för att automatisera denna process?
+Var tydlig med arbetsflödet för innehållsuppdatering. Vilken godkännandeprocess måste systemet stödja? Kan AEM arbetsflöden användas för att automatisera den här processen?
 
 Observera att [innehållshierarki](#content-hierarchy) kan användas för att underlätta översättning.
 
@@ -199,7 +199,7 @@ Mappar kan även begränsas till att endast tillåta vissa typer av innehåll (b
 * Förhindrar att innehållsförfattare skapar innehåll som inte tillhör mappen.
 * Optimerar processen för att skapa innehåll genom att filtrera de innehållstyper som tillåts i mappen under skapandet så att endast giltiga typer av innehåll visas.
 
-Genom att skapa en lämplig innehållsstruktur blir det enklare att samordna redigering av headless-innehåll i olika kanaler för att maximera återanvändningen av innehållet. Genom att utnyttja innehåll i flera kanaler blir innehållsproduktionen effektivare och ändringshanteringen effektivare.
+Genom att skapa en lämplig innehållsstruktur blir det enklare att samordna redigering av headless-innehåll i alla kanaler så att ni kan maximera återanvändningen av innehåll. Genom att utnyttja innehåll i flera kanaler blir innehållsproduktionen effektivare och ändringshanteringen effektivare.
 
 ##### Upprätta praktiska namnkonventioner {#naming-conventions}
 

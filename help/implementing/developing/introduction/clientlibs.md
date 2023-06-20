@@ -2,9 +2,9 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: 906fbefdbd100a7874b6f58ef23b7aaa46ac4ba3
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2567'
+source-wordcount: '2562'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Klientbiblioteksmappar innehåller följande objekt:
 
 ## Skapa biblioteksmappar på klientsidan {#creating-clientlib-folders}
 
-Klientbibliotek måste finnas under `/apps`. Detta för att bättre isolera kod från innehåll och konfiguration.
+Klientbibliotek måste finnas under `/apps`. Den här regeln är nödvändig för att kunna isolera kod från innehåll och konfiguration på ett bättre sätt.
 
 I ordning för klientbiblioteken under `/apps` För att vara tillgänglig används en proxyserver. Åtkomstkontrollistorna används fortfarande i klientbiblioteksmappen, men med den kan innehållet läsas via `/etc.clientlibs/` om `allowProxy` egenskapen är inställd på `true`.
 
@@ -184,8 +184,8 @@ Ytterligare inställningar för klientbibliotek kan styras via **Bibliotekshante
 
 Ytterligare mappegenskaper kan styra beroenden och inbäddningar, men behövs vanligtvis inte längre och användningen bör därför inte användas:
 
-* `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Anges till exempel två `cq:ClientLibraryFolder` noder `F` och `G`, om det finns en fil i `F` kräver en annan fil i `G` för att fungera på rätt sätt måste minst en av `categories` av `G` ska vara bland `dependencies` av `F`.
-* `embed`: Används för att bädda in kod från andra bibliotek. Om nod `F` bäddar in noder `G` och `H`blir det resulterande HTML en sammanfogning av innehåll från noder `G` och `H`.
+* `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Anges till exempel två `cq:ClientLibraryFolder` noder `F` och `G`, om det finns en fil i `F` kräver en annan fil i `G` för att fungera som den ska `categories` av `G` ska vara bland `dependencies` av `F`.
+* `embed`: Används för att bädda in kod från andra bibliotek. Om nod `F` bäddar in noder `G` och `H`blir HTML en sammanfogning av innehåll från noder `G` och `H`.
 
 ### Länka till beroenden {#linking-to-dependencies}
 

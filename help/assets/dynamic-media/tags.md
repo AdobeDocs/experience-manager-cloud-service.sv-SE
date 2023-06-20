@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Asset Reports
 role: Admin,User
 exl-id: a71fef45-c9a4-4091-8af1-c3c173324b7a
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '6287'
+source-wordcount: '6274'
 ht-degree: 8%
 
 ---
@@ -292,7 +292,7 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
    <td><code>%event.detail.dm.timeStamp%</code></td>
   </tr>
   <tr>
-   <td><code>BANNER</code> </td>
+   <td><code>BANNER</code><br /> </td>
    <td><code>%event.detail.dm.BANNER.asset%</code></td>
   </tr>
   <tr>
@@ -420,7 +420,7 @@ Som en del av konfigurationen bör du kontrollera att du har tillgång till ett 
 
 ## Konfigurera Adobe Analytics för integreringen {#configuring-adobe-analytics-for-the-integration}
 
-När du har konfigurerat Adobe Analytics kommer följande att konfigureras för integreringen:
+När du har konfigurerat Adobe Analytics konfigureras följande för integreringen:
 
 * En rapportsvit finns på plats och har valts.
 * Analysvariabler är tillgängliga för att ta emot spårningsdata.
@@ -460,7 +460,7 @@ Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.c
 
    Se [Översikt över utkast och eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html#vars).
 
-   I den här dokumentationen kommer endast en anpassad trafikvariabel (props) att användas eftersom de blir tillgängliga i en analysrapport inom några minuter efter att en åtgärd har utförts på en webbsida.
+   I den här dokumentationen används endast en anpassad trafikvariabel (props) eftersom de blir tillgängliga i en analysrapport inom några minuter efter att en åtgärd har utförts på en webbsida.
 
    Om du vill aktivera en ny anpassad trafikvariabel går du till Adobe Analytics i verktygsfältet på **[!UICONTROL Admin]** > **[!UICONTROL Report Suites]**.
 
@@ -487,7 +487,7 @@ Se även [Implementeringshandbok för analyser](https://experienceleague.adobe.c
 
 ## Konfigurera Experience Platform-taggar för integreringen {#configuring-adobe-launch-for-the-integration}
 
-När du har konfigurerat Experience Platform-taggar kommer följande att konfigureras för integreringen:
+När du har konfigurerat Experience Platform-taggar ställs följande in för integreringen:
 
 * Skapandet av en ny egenskap som håller ihop alla dina konfigurationer.
 * Installation och installation av tillägg. Klientkoden för alla tillägg som är installerade i egenskapen kompileras tillsammans till ett bibliotek. Det här biblioteket används av webbsidan senare.
@@ -748,7 +748,7 @@ Konfigurationen av Experience Manager består av följande två stora steg:
    * **[!UICONTROL Title]** - Ange en beskrivande kontotitel.
    * **[!UICONTROL Authorization Server]** - Gå tillbaka till sidan Integreringsinformation som du öppnade tidigare. Välj **[!UICONTROL JWT]** -fliken. Kopiera servernamnet - utan sökvägen - enligt markeringen nedan.
 
-(exempelservernamnet är endast avsett för förklaringar)   Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
+   Gå tillbaka till sidan **[!UICONTROL Account]** och klistra sedan in namnet i respektive fält.
 Till exempel: `https://ims-na1.adobelogin.com/`
 (exempelservernamnet är endast avsett för förklaringar)
 

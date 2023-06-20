@@ -2,9 +2,9 @@
 title: Redigera Launches
 description: När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 exl-id: d3cd3383-e0a0-4019-9f97-8baa3be99e6e
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '553'
 ht-degree: 17%
 
 ---
@@ -27,7 +27,6 @@ När du redigerar sidan visas en indikation i det övre verktygsfältet tillsamm
 >Du får inte flytta en sida inom en start. Om du försöker utföra den här åtgärden utlöses ett varningsmeddelande:
 >
 >* Varning: Den här sidan är startkällan. Det är inte tillåtet att flytta sidan.
-
 
 ### Redigera startsidor som är beroende av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
 

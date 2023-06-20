@@ -2,9 +2,9 @@
 title: AEM Reference Demos Add-On Journey
 description: Börja här för en guidad resa genom hur du enkelt lägger till tillägget AEM Reference Demos i en sandlådemiljö med minimal AEM och kan testa de kraftfulla funktionerna i AEM med detaljerade exempel baserade på bästa praxis.
 exl-id: 8a6d4abf-0832-40e8-9ba6-1ad4ba794ffa
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '852'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Börja här för en guidad resa genom hur du enkelt lägger till tillägget AEM 
 
 ## Introduktion {#introduction}
 
-AEM är en kraftfull verktygsuppsättning för att skapa och hantera digitala upplevelser. Innehållsförfattare kan enkelt skapa digitala upplevelser med hjälp av webbplatsredigeraren och ordna innehållet med hjälp av webbplatskonsolen, samtidigt som de kan se innehållet live som det kommer att levereras av AEM till era målgrupper i alla kanaler.
+AEM är en kraftfull verktygsuppsättning för att skapa och hantera digitala upplevelser. Innehållsförfattare kan enkelt skapa digitala upplevelser med hjälp av webbplatsredigeraren och ordna innehållet med hjälp av webbplatskonsolen, samtidigt som de kan se innehållet live som det levereras av AEM till era målgrupper i alla kanaler.
 
 Utan exempelinnehåll och konfiguration kan det vara svårt att testa de kraftfulla funktionerna i AEM för både nya och erfarna kunder. Med AEM Reference Demos Add-On kan du enkelt skapa sandlådemiljöer som är förinlästa med exempelinnehåll och förkonfigurerade med hjälp av de senaste Adobe-riktlinjerna för bästa praxis. Med tillägget kan du enkelt utvärdera AEM Sites- och AEM Screens-funktioner i sitt sammanhang och utan att behöva göra någon konfiguration alls.
 
@@ -28,13 +28,13 @@ Oavsett vad du behöver kan du konfigurera en sandlåda med AEM Reference Demo A
 
 [En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar hur man löser webbplatsaffärsärenden med AEM, är AEM Sites Journeys där man ska börja.
 
 ## Målgrupp {#audience}
 
-Den här resan innehåller krav, steg och tillvägagångssätt för att skapa ett nytt program och skapa en AEM sandlåda med AEM Reference Demos Add-On, inklusive demoinnehåll för webbplatser och/eller skärmar. Dess främsta målgrupp är **systemadministratör** vem som har tilldelats rollen **Företagsägare** i Cloud Manager. Detta är vanligtvis samma person som ansvarar för miljöhanteringen. När tillägget Referensdemonstrationer har installerats kan administratören ge andra användare åtkomst till AEM för att testa de funktioner som har aktiverats av tillägget.
+Den här resan innehåller krav, steg och tillvägagångssätt för att skapa ett nytt program och skapa en AEM sandlåda med AEM Reference Demos Add-On, inklusive demoinnehåll för webbplatser och/eller skärmar. Dess främsta målgrupp är **systemadministratör** vem som har tilldelats rollen **Företagsägare** i Cloud Manager. Detta är vanligtvis samma person som ansvarar för miljöhanteringen. När tillägget för referensdemonstrationer har installerats kan administratören ge andra användare åtkomst till AEM för att testa funktioner som har aktiverats av tillägget.
 
 ## AEM Reference Demo Add-on Journey {#the-journey}
 

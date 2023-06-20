@@ -2,7 +2,7 @@
 title: IMS-konfiguration som ska användas vid integrering med Adobe Analytics
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Analytics
 exl-id: 12bd1573-373a-4001-be71-c8f155ef6896
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 1%
@@ -74,9 +74,9 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
    * Om du inte har något projekt än **Skapa nytt projekt** kommer att vara i mitten, nederst.
-      ![Skapa nytt projekt - första projektet](assets/integration-analytics-ims-02.png)
+     ![Skapa nytt projekt - första projektet](assets/integration-analytics-ims-02.png)
    * Om du redan har befintliga projekt listas dessa och **Skapa nytt projekt** kommer att vara överst till höger.
-      ![Skapa nytt projekt - flera projekt](assets/integration-analytics-ims-03.png)
+     ![Skapa nytt projekt - flera projekt](assets/integration-analytics-ims-03.png)
 
 
 1. Välj **Lägg till i projekt** följt av **API**:
@@ -176,7 +176,6 @@ Så här bekräftar du att konfigurationen fungerar som förväntat:
 
    * `https://localhost:4502/libs/cq/adobeims-configuration/content/configurations.html`
 
-
 1. Välj din konfiguration.
 1. Välj **Kontrollera hälsa** i verktygsfältet, följt av **Kontrollera**.
 
@@ -198,7 +197,7 @@ The configuration can now be referenced for a Cloud Service to use the Analytics
 
    The **Create Configuration** dialog will open.
 
-1. Enter a **Title** and, if you want, a **Name** (if left blank this will be generated from the title).
+1. Enter a **Title** and, if you want, a **Name** (if left blank, it is generated from the title).
 
    You can also select the required template (if more than one is available).
 

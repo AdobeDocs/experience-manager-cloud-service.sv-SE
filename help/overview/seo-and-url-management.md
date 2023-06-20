@@ -2,10 +2,10 @@
 title: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 description: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 exl-id: abe3f088-95ff-4093-95a1-cfc610d4b9e9
-source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3714'
-ht-degree: 55%
+source-wordcount: '3709'
+ht-degree: 54%
 
 ---
 
@@ -46,9 +46,8 @@ Här följer några allmänna tips om hur du skapar URL:er för SEO:
    * När du använder väljare på en sida är det bäst att använda väljare som har ett semantiskt värde.
    * Om en användare inte kan läsa URL:en kan inte en sökmotor heller göra det.
    * Till exempel:
-      `mybrand.com/products/product-detail.product-category.product-name.html`
-är att föredra framför 
-`mybrand.com/products/product-detail.1234.html`
+     `mybrand.com/products/product-detail.product-category.product-name.html`
+är att föredra framför `mybrand.com/products/product-detail.1234.html`
 
 * Undvik underdomäner när det är möjligt, eftersom sökmotorer behandlar dem som olika enheter och fragmenterar SEO-värdet för webbplatsen.
 
@@ -78,7 +77,7 @@ Här följer några allmänna tips om hur du skapar URL:er för SEO:
 
 * Se till att varje sida bara hanteras från ett protokoll.
 
-   * Ibland hanteras webbplatser över `http` tills en användare når en sida med t.ex. ett utchecknings- eller inloggningsformulär, då sidan växlar till `https`. Vid länkning från den här sidan, om användaren kan återgå till `http` sidor och få tillgång till dem via `https`spårar sökmotorn dessa som två separata sidor.
+   * Ibland serveras webbplatser `http` tills en användare når en sida med t.ex. ett formulär för utcheckning eller inloggning, då den växlar till `https`. Vid länkning från den här sidan, om användaren kan återgå till `http` sidor och få tillgång till dem via `https`spårar sökmotorn dessa som två separata sidor.
 
    * Google föredrar för närvarande `https`-sidor framför `http`-sidor. Därför gör det ofta att allas liv blir lättare att betjäna hela webbplatsen `https`.
 
@@ -151,7 +150,7 @@ Med **Sling**-servletar kan du registrera en servlet på motsatt sätt. I ställ
 SCR-anteckningen för den här typen av servlet skulle se ut ungefär så här:
 
 ```
-@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json”, methods=”GET”)
+@SlingServlet(resourceTypes = "myBrand/components/pages/myPageType", selectors = "myRenderer", extensions = "json", methods="GET")
 ```
 
 I det här fallet är den resurs som URL:en adresserar (en instans av resursen `myPageType`) automatiskt tillgänglig i servleten. För att få åtkomst till den ska du anropa:
@@ -186,20 +185,20 @@ Om en författare vill att en sida ska vara tillgänglig från en andra plats i 
 Du kanske vill visa lokaliserade sidnamn för användare av översatt innehåll. Till exempel:
 
 * I stället för att en spansk användare går till:
-   `www.mydomain.com/es/home.html`
+  `www.mydomain.com/es/home.html`
 
 * Vore det bättre om URL:en var:
-   `www.mydomain.com/es/casa.html`.
+  `www.mydomain.com/es/casa.html`.
 
-Utmaningen med att lokalisera sidans namn är att många av de lokaliseringsverktyg som är tillgängliga på AEM-plattformen kräver att sidnamnen matchar för alla språk för att innehållet ska kunna synkroniseras.
+Utmaningen med att lokalisera sidans namn är att många av de lokaliseringsverktyg som finns på den AEM plattformen kräver att sidnamnen matchar olika språk för att innehållet ska vara synkroniserat.
 
 Egenskapen `sling:alias` gör att du både kan äta kakan och ha den kvar. Du kan lägga till `sling:alias` som en egenskap för alla resurser för att tillåta att ett aliasnamn används för resursen. I föregående exempel skulle du få:
 
 * En sida i JCR:
-   `…/es/home`
+  `…/es/home`
 
 * Lägg sedan till en egenskap till den:
-   `sling:alias` = `casa`
+  `sling:alias` = `casa`
 
 På så sätt kan AEM-översättningsverktyg som Multi Site Manager fortsätta att upprätthålla relationen mellan:
 
@@ -218,12 +217,11 @@ Samtidigt som slutanvändarna kan visa sidnamnen på olika språk.
 I en vanlig AEM-installation:
 
 * för OSGi-konfigurationen
-   **Apache Sling Resource Resolver Factory**
-( 
-`org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`)
+  **Apache Sling Resource Resolver Factory**
+( `org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl`)
 
 * egenskapen
-   **Mappningsplats** ( `resource.resolver.map.location`)
+  **Mappningsplats** ( `resource.resolver.map.location`)
 
 * blir som standard `/etc/map`.
 
@@ -252,8 +250,8 @@ Det finns dock ett enklare sätt att hantera det här på:
    Du kan konfigurera Sling Resource Resolver med webbkonsolen (till exempel localhost:4502/system/console/configMgr):
 
    * **Apache Sling Resource Resolver Factory**
+     `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`.
 
-      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`.
    Vi rekommenderar att du skapar de mappningar som krävs för att korta ned URL:er som reguljära uttryck och sedan definierar konfigurationerna under en OSGi-konfigurationsnod, `config.publish`, som ingår i bygget.
 
    I stället för att definiera mappningarna i `/etc/map` kan de tilldelas direkt till egenskapen **URL-mappningar** ( `resource.resolver.mapping`):
@@ -315,7 +313,7 @@ Exempel:
 Båda skulle använda följande tagg i sidans sidhuvud:
 
 ```xml
-<link rel=”canonical” href=”my-brand/my-page.html”/>
+<link rel="canonical" href="my-brand/my-page.html"/>
 ```
 
 `href` kan vara relativt eller absolut. Koden bör inkluderas i sidmarkeringen för att fastställa sidans kanoniska URL och returnera den här taggen.
@@ -373,7 +371,7 @@ Ta till exempel en plats som definierar en platskarta på den översta nivån p�
 
 I standardkonfigurationen finns ett alternativ i dialogrutan Sidegenskaper för att markera en sida som en platskarta och på så sätt generera en platskarta för sig själv och dess underordnade. Detta beteende implementeras av implementeringar av `SitemapGenerator` gränssnitt och kan utökas genom att man lägger till alternativa implementeringar. Men eftersom hur ofta XML-webbplatskartorna ska genereras om beror på arbetsflödena och arbetsbelastningarna för att skapa innehåll, levereras inte produkten `SitemapScheduler` konfiguration. Detta gör att funktionen effektivt kan välja att delta.
 
-För att aktivera bakgrundsjobbet som genererar XML-platskartorna är `SitemapScheduler` måste konfigureras. Om du vill göra det skapar du en OSGI-konfiguration för PID `org.apache.sling.sitemap.impl.SitemapScheduler`. Schemaläggarens uttryck `0 0 0 * * ?` kan användas som utgångspunkt för att generera om alla XML-webbplatskartor en gång om dagen vid midnatt.
+Aktivera bakgrundsjobbet som genererar XML-platskartorna på en `SitemapScheduler` måste konfigureras. Om du vill göra det skapar du en OSGI-konfiguration för PID `org.apache.sling.sitemap.impl.SitemapScheduler`. Schemaläggarens uttryck `0 0 0 * * ?` kan användas som utgångspunkt för att generera om alla XML-webbplatskartor en gång om dagen vid midnatt.
 
 ![Apache Sling Sitemap - Schemaläggare](assets/sling-sitemap-scheduler.png)
 

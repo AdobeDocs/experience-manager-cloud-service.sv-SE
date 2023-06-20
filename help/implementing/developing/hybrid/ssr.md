@@ -2,9 +2,9 @@
 title: SPA- och serveråtergivning
 description: Om du använder SSR-återgivning (server side rendering) i SPA kan det snabba upp den initiala inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
 exl-id: be409559-c7ce-4bc2-87cf-77132d7c2da1
-source-git-commit: a9eb03d4db478a4db8e6d2436bd06dcde70a3eeb
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1498'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Detta görs via **RemoteContentRenderer - Configuration Factory OSGi-tjänst**. 
 
 Följande fält är tillgängliga för konfigurationen:
 
-* **Mönster för innehållsbana** - Reguljära uttryck för att matcha en del av innehållet, om det behövs
+* **Mönster för innehållsbana** - Reguljärt uttryck som matchar en del av innehållet, om det behövs
 * **URL för fjärrslutpunkt** - URL för slutpunkten som ansvarar för att generera innehållet
    * Använd det säkra HTTPS-protokollet om det inte finns i det lokala nätverket.
 * **Ytterligare begäranderubriker** - Ytterligare rubriker som ska läggas till i begäran som skickas till fjärrslutpunkten
@@ -72,7 +72,7 @@ Följande fält är tillgängliga för konfigurationen:
 
 >[!NOTE]
 >
->Den här konfigurationen utnyttjar [Remote Content Renderer,](#remote-content-renderer) som har ytterligare alternativ för tillägg och anpassning.
+>Den här konfigurationen använder [Remote Content Renderer,](#remote-content-renderer) som har ytterligare alternativ för tillägg och anpassning.
 
 ## AEM kommunikationsflöde {#aem-driven-communication-flow}
 
@@ -130,15 +130,15 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
 
 ## Planering för SSR {#planning-for-ssr}
 
-I allmänhet behöver bara en del av ett program återges på serversidan. Det vanliga exemplet är det innehåll som ska visas ovanför vikningen vid den första inläsningen av sidan återges på serversidan. Detta sparar tid genom att leverera till klienten, som redan har återgett innehåll. När användaren interagerar med SPA återges det extra innehållet av klienten.
+I allmänhet behöver bara en del av ett program återges på serversidan. Det vanliga exemplet är det innehåll som visas ovanför vikningen vid den första inläsningen av sidan återges på serversidan. Detta sparar tid genom att leverera till klienten, som redan har återgett innehåll. När användaren interagerar med SPA återges det extra innehållet av klienten.
 
 När du funderar på att implementera serversidesåtergivning för SPA måste du kontrollera vilka delar av programmet som det är nödvändigt.
 
 ## Utveckla en SPA med SSR {#developing-an-spa-using-ssr}
 
-SPA kan återges av klienten (i webbläsaren) eller serversidan. Webbläsaregenskaper som fönsterstorlek och plats finns inte på den återgivna serversidan. SPA bör därför vara isomorfa, utan att man vet var de kommer att återges.
+SPA kan återges av klienten (i webbläsaren) eller serversidan. Webbläsaregenskaper som fönsterstorlek och plats finns inte på den återgivna serversidan. SPA bör därför vara isomorfa, utan att man vet var de återges.
 
-Om du vill använda SSR måste du distribuera koden i AEM och på Adobe I/O Runtime, som ansvarar för återgivningen på serversidan. Den mesta koden blir densamma, men serverspecifika åtgärder skiljer sig åt.
+Om du vill använda SSR måste du distribuera koden i AEM och på Adobe I/O Runtime, som ansvarar för återgivningen på serversidan. Den mesta koden är densamma, men serverspecifika åtgärder skiljer sig åt.
 
 ## SSR för SPA i AEM {#ssr-for-spas-in-aem}
 
@@ -160,7 +160,7 @@ Den här tjänsten används internt av [RemoteContentRendererRequestHandlerServl
 
 ### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
 
-The `RemoteContentRendererRequestHandlerServlet` kan användas för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer för att mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
+The `RemoteContentRendererRequestHandlerServlet` kan användas för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer så att du kan mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
 
 Implementera `RemoteContentRendererRequestHandler` gränssnitt. Var noga med att ange `Constants.SERVICE_RANKING` egenskapen component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
 

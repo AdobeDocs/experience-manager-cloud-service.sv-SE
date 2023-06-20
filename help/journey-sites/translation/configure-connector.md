@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: d1a3eb42-e9e4-4118-9ff7-7aab5519cf0d
-source-git-commit: 4b76fbbb1b58324065b39d6928027759b0897246
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Om du väljer en annan provider måste administratören installera kopplingspake
 >
 >Om du väljer att använda Microsoft Translator-anslutningen för testning behöver du inte utföra stegen i de följande två avsnitten: [Skapa en konfiguration för översättningsintegrering](#create-config) och [Associera konfigurationen med ditt innehåll.](#associate) Du bör dock läsa dem så att du vet hur du gör när du behöver konfigurera den önskade anslutningen.
 >
->Testversionen av Microsoft Translator Connector är inte avsedd för produktion och om du bestämmer dig för att licensiera den måste systemadministratören följa stegen som beskrivs i [Ytterligare resurser](#additional-resources) i slutet av dokumentet för att konfigurera licensen.
+>Testversionen av Microsoft Translator Connector är inte avsedd för produktion och om du bestämmer dig för att licensiera den måste systemadministratören följa stegen som beskrivs i [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet för att konfigurera licensen.
 
 ## Skapa en konfiguration för översättningsintegrering {#create-config}
 

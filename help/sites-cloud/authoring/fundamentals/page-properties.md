@@ -2,10 +2,10 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 5a43b6db8a5743b87d6eafdad31418e6cb45d22b
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2363'
-ht-degree: 4%
+source-wordcount: '2357'
+ht-degree: 3%
 
 ---
 
@@ -35,7 +35,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Varumärke**
 
-   Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Kärnkomponenter.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+  Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Kärnkomponenter.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
    * **Varumärkesinstruktionsmarginal**
 
@@ -57,42 +57,40 @@ Egenskaperna fördelas på flera flikar.
 
 * **På/av-tid**
 
-   >[!NOTE]
-   >
-   > Se [På- och avaktiveringstider - utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration) om du vill ha mer information om hur du konfigurerar den relaterade automatiska replikeringen.
+  >[!NOTE]
+  >
+  > Se [På- och avaktiveringstider - utlösarkonfiguration](/help/operations/replication.md#on-and-off-times-trigger-configuration) om du vill ha mer information om hur du konfigurerar den relaterade automatiska replikeringen.
 
-   >[!NOTE]
-   >Om någon av **I tid** eller **Fråntid** är tidigare och automatisk replikering har konfigurerats, kommer den relevanta åtgärden att utlösas omedelbart.
+  >[!NOTE]
+  >Om någon av **I tid** eller **Fråntid** är tidigare och automatisk replikering har konfigurerats, kommer den relevanta åtgärden att utlösas omedelbart.
 
    * **I tid** - Det datum och den tidpunkt då den publicerade sidan ska synas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
 
       * Om redan [publicerad (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) den här sidan behålls vilande (dold) tills den återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och konfigureras för automatisk replikering kommer den att publiceras automatiskt och sedan återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och inte är konfigurerad för automatisk replikering kommer den inte att publiceras automatiskt. Därför visas 404 när du försöker komma åt sidan.
+
    * **Fråntid** - Liknar och används ofta i kombination med **I tid** definierar detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
 
    * Lämna dessa fält (**I tid** och **Fråntid**) är tom för sidor som du vill publicera omedelbart och som finns tillgängliga i publiceringsmiljön tills de har inaktiverats (standardscenariot).
-
 
 * **Vanity URL**
 
    * Gör att du kan ange en egen URL för den här sidan, vilket kan göra att du kan ha en kortare och/eller mer uttrycksfull URL.
    * Om Vanity-URL:en till exempel är inställd på `welcome` till sidan som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`sedan `http://example.com/welcome` skulle vara den vanligaste URL:en för `http://example.com/content/v1.0/startpage`
 
-   >[!CAUTION]
-   >
-   >Alternativa URL:er:
-   >
-   >* Måste vara unikt så du bör vara försiktig med att värdet inte redan används av en annan sida.
-   >* Använd inte regex-mönster.
-   >* Ska inte anges till en befintlig sida.
-
+  >[!CAUTION]
+  >
+  >Alternativa URL:er:
+  >
+  >* Måste vara unikt så du bör vara försiktig med att värdet inte redan används av en annan sida.
+  >* Använd inte regex-mönster.
+  >* Ska inte anges till en befintlig sida.
 
    * **Lägg till** - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
       * Tryck eller klicka igen för att lägga till flera.
       * Tryck eller klicka på **Ta bort** -ikonen för att ta bort fågel-URL:en.
    * **URL för omdirigering** - Anger om du vill att sidan ska använda fågel-URL:en.
-
 
 ### Avancerat {#advanced}
 
@@ -123,9 +121,9 @@ Egenskaperna fördelas på flera flikar.
 
    * **Aktivera** - Aktivera användning av autentisering för att komma åt sidan
 
-      >[!NOTE]
-      >
-      >Stängda användargrupper för sidan definieras på **[Behörigheter](#permissions)** -fliken.
+     >[!NOTE]
+     >
+     >Stängda användargrupper för sidan definieras på **[Behörigheter](#permissions)** -fliken.
 
    * **Inloggningssida** - Den sida som ska användas för inloggning
 
@@ -139,9 +137,9 @@ Egenskaperna fördelas på flera flikar.
 
    * **Robots-taggar** - välj robottaggarna för att styra beteendet för sökmotorcrawler.
 
-      >[!NOTE]
-      >
-      >Vissa av alternativen står i konflikt med varandra. Om en konflikt uppstår har det mer tillåtna alternativet företräde.
+     >[!NOTE]
+     >
+     >Vissa av alternativen står i konflikt med varandra. Om en konflikt uppstår har det mer tillåtna alternativet företräde.
 
    * **Generera platskarta** - När du väljer det här alternativet genereras en sitemap.xml för den här sidan och dess underordnade
 
@@ -149,11 +147,11 @@ Egenskaperna fördelas på flera flikar.
 
 * **Aktuell bild**
 
-   Markera och konfigurera den bild som ska visas. Detta används i komponenter som refererar till sidan; till exempel teasers, page lists, etc.
+  Markera och konfigurera den bild som ska visas. Detta används i komponenter som refererar till sidan; till exempel teasers, page lists, etc.
 
    * **Bild**
 
-      Du kan **Välj** en resurs, eller bläddra efter en fil som ska överföras, och sedan **Redigera**, eller **Rensa**.
+     Du kan **Välj** en resurs, eller bläddra efter en fil som ska överföras, och sedan **Redigera**, eller **Rensa**.
 
    * **Alternativ text** - en text som används för att representera bildens betydelse och/eller funktion, till exempel för skärmläsare.
 
@@ -161,7 +159,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Miniatyrbild**
 
-   Konfigurera sidminiatyrbilden
+  Konfigurera sidminiatyrbilden
 
    * **Generera förhandsgranskning** - Generera en förhandsgranskning av sidan som ska användas som miniatyrbild
    * **Överför bild** - Överför en bild som ska användas som miniatyrbild
@@ -184,8 +182,9 @@ Egenskaperna fördelas på flera flikar.
 * **Målkonfiguration**
 
    * **Varumärke** - Definierar en [Varumärke som anger ett omfång för målanpassning](/help/sites-cloud/authoring/personalization/targeted-content.md).
-   >[!NOTE]
-   >Det här alternativet kräver att användarkontot finns i `Target Administrators`grupp.
+
+  >[!NOTE]
+  >Det här alternativet kräver att användarkontot finns i `Target Administrators`grupp.
 
 ### Behörigheter {#permissions}
 
@@ -224,7 +223,7 @@ Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Liv
 
    * **Live Copy-arv** - Om det här alternativet är markerat gäller konfigurationen för Live Copy för alla underordnade
    * **Ärv utrullningskonfigurationer från överordnad** - Om det här alternativet är markerat ärvs utrullningskonfigurationen från sidans överordnade objekt
-   * **Välj utrullningskonfiguration** - Definierar under vilka omständigheter ändringar ska spridas från utkast och endast vara tillgängliga när **Ärv utrullningskonfigurationer från överordnad** är inte markerad
+   * **Välj utrullningskonfiguration** - Definierar de omständigheter under vilka ändringar sprids från utkast och endast är tillgängliga när **Ärv utrullningskonfigurationer från överordnad** är inte markerad
 
 ### Förhandsgranska {#preview}
 
@@ -313,7 +312,7 @@ Du kan välja flera sidor för massredigering på olika sätt, bland annat:
 * När du bläddrar **Webbplatser** konsol
 * Efter användning **Sök** för att hitta en uppsättning sidor
 
-När du har markerat sidorna och tryckt eller klickat på alternativet **Egenskaper**, visas massegenskaperna:
+När du har markerat sidorna och sedan klickat eller tryckt på **Egenskaper, alternativ**, visas bulkegenskaperna:
 
 ![Redigera sidegenskaper gruppvis](/help/sites-cloud/authoring/assets/page-properties-bulk-edit.png)
 
@@ -344,4 +343,4 @@ När du har valt Massredigering kan du:
    * Du kan uppdatera värdena i de tillgängliga fälten.
       * De nya värdena tillämpas på alla markerade sidor när du markerar **Klar**.
       * När fältet har flera värden (till exempel Taggar) kan du antingen lägga till ett nytt värde eller ta bort ett gemensamt värde.
-   * Fält som är gemensamma, men har olika värden på de olika sidorna, markeras med ett särskilt värde, t.ex. texten `<Mixed Entries>`.
+   * Fält som är gemensamma men har olika värden på de olika sidorna anges med ett särskilt värde, t.ex. text `<Mixed Entries>`.

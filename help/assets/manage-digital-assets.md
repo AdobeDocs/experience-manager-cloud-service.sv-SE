@@ -6,9 +6,9 @@ mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '4221'
+source-wordcount: '4220'
 ht-degree: 10%
 
 ---
@@ -30,7 +30,6 @@ När du organiserar en samling resurser, till exempel, alla `Nature` kan du skap
 >
 >* Dela en resursmapp av typen `sling:OrderedFolder`, stöds inte vid delning till Experience Cloud. Om du vill dela en mapp ska du inte markera [!UICONTROL Ordered] när du skapar en mapp.
 >* Experience Manager tillåter inte att `subassets` ord som namnet på en mapp. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser
-
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp. Klicka på **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
 1. I **[!UICONTROL Title]** anger du ett mappnamn. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
@@ -184,11 +183,11 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    * Ange namnet på resursen när den har flyttats. Tryck sedan på/klicka **[!UICONTROL Next]** för att fortsätta.
 
    * Tryck/klicka **[!UICONTROL Cancel]** för att stoppa processen.
+
    >[!NOTE]
    >
    >* Du kan ange samma namn för resursen om det inte finns någon resurs med det namnet på den nya platsen. Du bör emellertid använda ett annat namn om du flyttar resursen till en plats där det finns en resurs med samma namn. Om du använder samma namn genereras automatiskt en variant av namnet. Om resursen till exempel har namnet Fyrkant, genereras namnet Fyrkant1 för kopian.
    >* När namnet ändras tillåts inte tomt utrymme i filnamnet.
-
 
 1. På **[!UICONTROL Select Destination]** gör du något av följande:
 

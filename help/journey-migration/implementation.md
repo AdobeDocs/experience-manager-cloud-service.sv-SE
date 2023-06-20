@@ -2,9 +2,9 @@
 title: Implementeringsfas
 description: Kontrollera att koden och innehållet är klara för migrering till molnet
 exl-id: d124f9a5-a754-4ed0-a839-f2968c7c8faa
-source-git-commit: fedaa9b8a7baf707c71acd0535ad890254b6793a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2353'
+source-wordcount: '2337'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,7 @@ Syftet med detta dokument är att
 
 * Vi presenterar dig för Cloud Manager, AEM kontinuerlig integrering och leveransramverk som används för att distribuera kod till AEM as a Cloud Service
 * Kom igång snabbt med verktyget för innehållsöverföring
-* Beskriv de verktyg för kodomfaktorisering som du måste använda för att uppdatera koden för AEM as a Cloud Service
+* Beskriv de kodomfaktoriseringsverktyg du måste använda så att du kan uppdatera koden för AEM as a Cloud Service
 
 ## Använda Cloud Manager {#using-cloud-manager}
 
@@ -49,7 +49,7 @@ I följande bild visas de huvudsakliga stegen som ingår i fasen, som innefattar
 
 ![bild](/help/journey-migration/assets/exec-image1.png)
 
-Vi börjar med att gå igenom de verktyg du behöver för att uppnå detta i kapitlen nedan.
+Vi börjar med att gå igenom de verktyg du måste använda så att du kan göra det i kapitlen nedan.
 
 ## Innehållsmigrering {#content-migration}
 
@@ -67,7 +67,7 @@ En fullständig beskrivning av hur verktyget fungerar och hur vi rekommenderar a
 
 Det är dags att börja omfaktorisera de befintliga funktionerna så att de blir kompatibla med Cloud Services.
 
-För att göra detta måste du ta en titt på dokumentationen som beskriver de grundläggande verktygen du behöver för att börja omfaktorisera koden:
+Börja med att titta på dokumentationen som beskriver de grundläggande verktygen och börja omfaktorisera koden:
 
 
 * Under planeringen är det en god idé att ha en lista över områden som måste omarbetas för att vara kompatibla med AEM as a Cloud Service. Du kan granska [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) om du vill ha mer information om hur du kan omforma och optimera kod för Cloud Service.
@@ -79,11 +79,11 @@ Dessutom kan du:
 
 * I den här videon får du veta hur du installerar Dispatcher SDK lokalt:
 
-   >[!VIDEO](https://video.tv.adobe.com/v/30601)
+  >[!VIDEO](https://video.tv.adobe.com/v/30601)
 
 * I den här videon ser du hur du konfigurerar Dispatcher SDK:
 
-   >[!VIDEO](https://video.tv.adobe.com/v/30602)
+  >[!VIDEO](https://video.tv.adobe.com/v/30602)
 
 ### En förändring i sinneset {#a-change-in-mindset}
 
@@ -163,7 +163,7 @@ Genom att samla in data kan du planera migreringsaktiviteterna och tillhörande 
 
 <!-- Alexandru: hiding this for now
 
-One more important datapoint is the amount of time it takes to complete the [user mapping](/help/journey-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md), if this is coupled with the content migration. You can take this data point into consideration for more realistic estimates, since it will be added to the overall extraction timeline and it may not be required to run it during top-ups.
+One more important datapoint is the amount of time it takes to complete the [user mapping](/help/journey-migration/content-transfer-tool/user-mapping-tool/overview-user-mapping-tool.md), if this is coupled with the content migration. You can take this data point into consideration for more realistic estimates, because it is added to the overall extraction timeline and it may not be required to run it during top-ups.
 
 -->
 
@@ -177,8 +177,8 @@ I följande tabell visas en typisk migreringsplan:
 
 | Migreringsiteration | Startdatum | Beräknat slutdatum | Beroenden | Beräknad varaktighet (i dagar) | Ytterligare information/åtgärdsobjekt |
 |---|---|---|---|---|---|
-| PRDCLONE-AUTHOR-INITIAL-USRMAP-SSTAGE-AUTHOR |  |  |  |  |  |
-| PRDCLONE-PUBLISH-TOPUP-CSSTAGE-AUTHOR |  |  |  |  |  |
+| PRDCLONE-AUTHOR-INITIAL-USRMAP-SSTAGE-AUTHOR |   |   |   |   |   |
+| PRDCLONE-PUBLISH-TOPUP-CSSTAGE-AUTHOR |   |   |   |   |   |
 
 Som du kan se i tabellen ovan är det praktiskt att följa ett specifikt namnformat för att identifiera migreringsiterationerna, till exempel: **PRDCLONE** för AEM källmiljö, **FÖRFATTARE/PUBLICERARE** för AEM as a Cloud Service miljö, **CSSTAGE-AUTHOR** för den AEM as a Cloud Service instansen och så vidare.
 
@@ -209,7 +209,7 @@ I följande tabell visas en funktionell flyttningsspårare:
 
 | Källa (miljö/instans/URL) | Mål (miljö/instans/URL) | Namn på migreringsuppsättning, typ (inledande eller övre) | Storlek på migreringsuppsättning (MB) | Användarmappning (Ja/Nej) | Varaktighet för extrahering (start, slut, tid) | Inmatningstid (start, slut, tid) | Problem / lösningar / Detaljer |
 |---|---|---|---|---|---|---|---|
-|  |  |  |  |  |  |  |  |
+|   |   |   |   |   |   |   |   |
 
 ## Strategi för innehållsmigrering och tidslinje {#content-strategyand-timeline}
 
@@ -241,7 +241,7 @@ I följande avsnitt visas viktiga steg och tillhörande uppgifter som kan använ
    * Finns i samma nätverkszon
    * Tillhandahåller produktionsinnehåll som användare och grupper
    * Klonar författare och publicering - en nod var om det är ett kluster eller en publiceringsgrupp
-* Välj en delmängd av innehållet som ska migreras så att:
+* Välj en delmängd av innehållet som migreras så att:
    * Det är en blandning av alla tillgängliga innehållstyper
    * Innehåller alla användare och grupper
 * Inkluderar antingen 25 % av innehållet eller upp till 1 TB av innehållet, beroende på vilket som är lägst.

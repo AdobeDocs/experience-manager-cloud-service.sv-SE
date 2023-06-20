@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1b867582-e34c-435b-b8f8-fc71dddcaccb
-source-git-commit: 599f924465552b2ef43827da8e139c239e47baed
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 * **Guide för att skapa ett adaptivt formulär**: Du kan använda en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden ger dig en snabb fliknavigering så att du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär.
 
-   ![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png)
+  ![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png)
 
 ## CIF-tillägg {#cloud-services-cif}
 
@@ -68,20 +68,20 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 * Snabb åtkomst till produktcockpit: Få enkelt tillgång till detaljerad produktinformation med ett enda klick i Sites Editor
 
-   ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
+  ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
 
 * Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett anrop till åtgärd för tillägg i varukorgen och tilläggslistan
 
-   ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
+  ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
 ### Vad är nytt? {#what-is-new-foundation}
 
-* Alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **Fliken Distribuera** som tidigare meddelats som utgått, kommer att tas bort den 20 juni 2022 eller snart därefter. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow).
+* Alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **Fliken Distribuera**, som tidigare meddelats som borttagen, togs bort den 20 juni 2022 eller snart därefter. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow).
 
-* Användning av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) är föråldrat och kommer att tillämpas den 12 september 2022 eller snart därefter. Istället [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) måste användas för att replikera dessa stora innehållspaket. I juli visas ett varningsmeddelande på administratörsskärmen för replikeringsagenten **Fliken Distribuera** om du försöker replikera dessa stora innehållspaket och även i AEM fellogg när replikerings-API används för att replikera dessa stora innehållspaket. I september kommer varningar att ersättas av fel. Justera processerna därefter.
+* Användning av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) är föråldrat och verkställt den 12 september 2022 eller snart därefter. Istället [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) måste användas för att replikera dessa stora innehållspaket. I juli visas ett varningsmeddelande på administratörsskärmen för replikeringsagenten **Fliken Distribuera** om du försöker replikera dessa stora innehållspaket och även i AEM fellogg när replikerings-API används för att replikera dessa stora innehållspaket. I september ersattes varningarna av fel. Anpassa processerna därefter.
 
 ### Nya funktioner i [!DNL Experience Manager] prerelease channel {#prerelease-features-foundation}
 
@@ -91,7 +91,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 ### Borttagning av TLS 1.0, 1.1
 
-Från och med den 30 juni 2022 kommer Experience Manager as a Cloud Service att kräva säkrare nätverkskommunikation och datautbyte med användarsystem. AEM använder enbart TLS (Transport Layer Security), 1.2-protokollet. Äldre TLS-versioner 1.0 och 1.1 kommer att bli inaktuella.
+Från och med den 30 juni 2022 kommer Experience Manager as a Cloud Service att kräva säkrare nätverkskommunikation och datautbyte med användarsystem. AEM använder enbart TLS (Transport Layer Security), 1.2-protokollet. Äldre TLS-versionerna 1.0 och 1.1 är nu inaktuella.
 
 Om du fortsätter att använda äldre versioner av TLS som 1.0, 1.1 kan du förlora åtkomsten till Experience Manager as a Cloud Service.
 

@@ -2,9 +2,9 @@
 title: Komma igång med CIF-redigering
 description: Komma igång med CIF-redigering
 exl-id: 0bef4d8c-0ad3-4ec8-ab08-8c83203b3b68
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ De återstående flikarna visar allt AEM som är kopplat till produkten. Vi komm
 Att använda Omnissearch är ett enkelt sätt att hitta AEM med hjälp av fulltextsökning. CIF utökar Omnissearch med fulltextsökning av produktkataloger med tillhörande AEM.
 ![e-postmenyalternativ](assets/omnisearch.png)
 
-Omnissearch kommer att göra en fulltextsökning i e-handelsservern för att hitta alla relaterade produkter. Resultatet visas under **Visa alla produkter**. Omnissearch söker även efter AEM som är kopplad till den sökda produkten. Resultaten listas under respektive AEM. I det här exemplet är ett innehållsfragment relaterat till produkten.
+Omnissearch kommer att göra en fulltextsökning i e-handelsservern för att hitta alla relaterade produkter. Resultatet visas under **Visa alla produkter**. Omnissearch söker även efter AEM som är kopplad till den sökda produkten. Resultaten anges i respektive AEM. I det här exemplet är ett innehållsfragment relaterat till produkten.
 
 ## What&#39;s Next {#what-is-next}
 

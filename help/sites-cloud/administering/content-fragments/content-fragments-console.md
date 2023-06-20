@@ -5,9 +5,9 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: 54efcf5fb486e7ecce66d8eb498625e447446e5d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,6 @@ Konsolen Innehållsfragment är avsedd för hantering, sökning och skapande av 
 >
 >* this **Innehållsfragment** konsol
 >* den **Resurser** konsol - se [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)
-
 
 >[!NOTE]
 >
@@ -60,12 +59,12 @@ Här ser du att det finns tre huvudområden:
 * Panelen main/right - härifrån kan du:
    * Se listan med alla innehållsfragment i den markerade grenen i trädet:
       * Platsen anges av vägbeskrivningarna. dessa kan också användas för att ändra platsen
-      * Innehållsfragment från den markerade mappen och alla underordnade mappar visas:
+      * Innehållsfragment från den valda mappen och alla underordnade mappar visas:
          * [Olika informationsområden](#selectuse-available-columns) om ett innehållsfragment som innehåller länkar, Beroende på vilket fält det gäller kan dessa:
             * Öppna rätt fragment i redigeraren
             * Visa information om referenser
             * Visa information om språkversioner av fragmentet
-      * Genom att använda musen på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du:
+      * Genom att använda musen på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du göra följande:
          * Sortera - välj lämplig åtgärd för antingen stigande eller fallande Detta sorterar hela tabellen efter den kolumnen. Sortering är bara tillgängligt för lämpliga kolumner.
          * Ändra storlek på kolumnen med antingen funktionsmakrot eller breddreglagen
 
@@ -86,17 +85,16 @@ Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja 
 * [Anpassa tabellvyn så att markerade informationskolumner visas](#select-available-columns)
 * Använd **Öppna i resurser** om du vill öppna den aktuella platsen direkt i **Resurser** konsol
 
-   >[!NOTE]
-   >
-   >The **Resurser** konsolen används för att komma åt resurser, som bilder, videor osv.  Konsolen kan nås:
-   >
-   >* med **Öppna i resurser** link (in the Content Fragments console)
-   >* direkt från den globala navigeringsrutan
-
+  >[!NOTE]
+  >
+  >The **Resurser** konsolen används för att komma åt resurser, som bilder, videor osv.  Konsolen kan nås:
+  >
+  >* med **Öppna i resurser** link (in the Content Fragments console)
+  >* direkt från den globala navigeringsrutan
 
 ### Åtgärder för ett (markerat) innehållsfragment {#actions-selected-content-fragment}
 
-Om du väljer ett visst fragment öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för det fragmentet. Du kan också markera flera fragment. Markeringen av funktionsmakron justeras därefter.
+Om du väljer ett visst fragment öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för det fragmentet. Du kan också markera flera fragment - markeringen av funktionsmakron justeras därefter.
 
 ![Konsol för innehållsfragment - verktygsfält för ett valt fragment](assets/cfc-fragment-toolbar.png)
 
@@ -141,17 +139,17 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 
    * Tillhandahåller en länk som öppnar en dialogruta med alla överordnade referenser till det fragmentet. inklusive referenser till innehållsfragment, upplevelsefragment och sidor. Om du vill öppna en viss referens klickar du på **Titel** i dialogrutan.
 
-      ![Konsolen Innehållsfragment - dialogrutan Referenser](assets/cfc-console-references-dialog.png)
+     ![Konsolen Innehållsfragment - dialogrutan Referenser](assets/cfc-console-references-dialog.png)
 
 * **Språk**
 
    * Anger språket för innehållsfragmentet tillsammans med det totala antalet språk/språkkopior som är associerade med innehållsfragmentet.
 
-      ![Konsol för innehållsfragment - språkindikator](assets/cfc-console-language-indicator.png)
+     ![Konsol för innehållsfragment - språkindikator](assets/cfc-console-language-indicator.png)
 
       * Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
 
-         ![Konsol för innehållsfragment - språkdialogruta](assets/cfc-console-languages-dialog.png)
+        ![Konsol för innehållsfragment - språkdialogruta](assets/cfc-console-languages-dialog.png)
 
 ## Välj tillgängliga kolumner {#select-available-columns}
 
@@ -185,7 +183,7 @@ Välj till exempel **Publicerad** i **Status** kolumn:
 
 ![Konsol för innehållsfragment - filtrering](assets/cfc-console-fast-filter-01.png)
 
-När du har valt det här alternativet visas det som ett filterpredikat och listan filtreras därefter:
+Efter markeringen visas den som ett filterpredikat och listan filtreras därefter:
 
 ![Konsol för innehållsfragment - filtrering](assets/cfc-console-fast-filter-02.png)
 

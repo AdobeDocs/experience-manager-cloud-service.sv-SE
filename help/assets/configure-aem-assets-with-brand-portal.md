@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 42927eec458553121f70b74a54f0f26eb616a13e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2388'
+source-wordcount: '2387'
 ht-degree: 11%
 
 ---
@@ -61,7 +61,7 @@ Du kan aktivera Brand Portal när du skapar produktionsmiljöer för din Experie
 >
 >Brand Portal måste aktiveras i samma IMS-organisation som Experience Manager Assets som [!DNL Cloud Service] -instans.
 >
->Om du har en befintlig Brand Portal molnkonfiguration ([konfigureras manuellt med Adobe Developer Console](#manual-configuration)) för en IMS-organisation (org1-existing) och din Experience Manager Assets som [!DNL Cloud Service] -instansen är konfigurerad för en annan IMS-organisation (org2-new), och när du aktiverar Brand Portal från Cloud Manager återställs Brand Portal IMS-organisation till `org2-new`. Även om den manuellt konfigurerade molnkonfigurationen är på `org1-existing` kommer att visas i Experience Manager Assets-författarinstansen, men kommer inte längre att användas när Brand Portal har aktiverats från Cloud Manager.
+>Om du har en befintlig Brand Portal molnkonfiguration ([konfigureras manuellt med Adobe Developer Console](#manual-configuration)) för en IMS-organisation (org1-existing) och din Experience Manager Assets som [!DNL Cloud Service] -instansen är konfigurerad för en annan IMS-organisation (org2-new), och när du aktiverar Brand Portal från Cloud Manager återställs Brand Portal IMS-organisation till `org2-new`. Även om den manuellt konfigurerade molnkonfigurationen är på `org1-existing` är synligt i Experience Manager Assets författarinstans, men kommer inte längre att användas när Brand Portal har aktiverats från Cloud Manager.
 >
 >Om den befintliga molnkonfigurationen för Brand Portal och Experience Manager Assets som [!DNL Cloud Service] om du använder samma IMS-organisation (org1) behöver du bara aktivera Brand Portal från Cloud Manager.
 >
@@ -116,6 +116,7 @@ Följ de här stegen för att validera anslutningen mellan din Experience Manage
    * **processing-queue**: för distribution av resurser till varumärkesportalen.
 
    * **error-queue**: för resurser där distributionen misslyckades.
+
    >[!NOTE]
    >
    >Vi rekommenderar att du regelbundet granskar felen och rensar **error-queue**.
@@ -339,7 +340,7 @@ Du kan nu använda klient-ID (API-nyckel), klienthemlighet och JWT-nyttolast fö
 
 1. Navigate to **[!UICONTROL JWT]** tab, and copy the **[!UICONTROL JWT payload]**.
 
-   The API Key, Client Secret key, and JWT payload information will be used to create IMS account configuration.
+   The API Key, Client Secret key, and JWT payload information is used to create IMS account configuration.
 
 -->
 

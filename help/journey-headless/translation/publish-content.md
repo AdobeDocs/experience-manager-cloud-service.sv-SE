@@ -2,9 +2,9 @@
 title: Publicera översatt rubrikfritt innehåll
 description: Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna när innehållet uppdateras.
 exl-id: eb8d1152-ed37-47ca-86a8-6a66c010ee62
-source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '1391'
+source-wordcount: '1392'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Ditt översatta headless-innehåll publiceras nu! Den kan nu nås och användas 
 
 >[!TIP]
 >
->Du kan markera flera objekt (d.v.s. flera språkmappar) när du publicerar för att kunna publicera flera översättningar samtidigt.
+>Du kan markera flera objekt (d.v.s. flera språkmappar) när du publicerar, så att du kan publicera flera översättningar samtidigt.
 
 Det finns ytterligare alternativ när du publicerar innehåll, till exempel schemaläggning av en publiceringstid, som ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) i slutet av dokumentet om du vill ha mer information.
 

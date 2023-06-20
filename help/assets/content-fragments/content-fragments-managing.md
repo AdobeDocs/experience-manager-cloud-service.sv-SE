@@ -2,10 +2,10 @@
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: 449e189b117aca58b960e802f8b3b11e7a5ea523
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1761'
-ht-degree: 6%
+source-wordcount: '1754'
+ht-degree: 5%
 
 ---
 
@@ -31,7 +31,6 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 >
 >* vid framtagning av sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 >* for [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
-
 
 >[!NOTE]
 >
@@ -65,21 +64,21 @@ Metoden för att skapa ett innehållsfragment är:
 
       * **Titel**
 
-         Fragmenttiteln.
+        Fragmenttiteln.
 
-         Obligatoriskt.
+        Obligatoriskt.
 
       * **Beskrivning**
 
       * **Taggar**
+
    * **Avancerat**
 
       * **Namn**
 
-         Namnet; används för att skapa URL:en.
+        Namnet; används för att skapa URL:en.
 
-         Obligatoriskt. hämtas automatiskt från titeln, men kan uppdateras.
-
+        Obligatoriskt. hämtas automatiskt från titeln, men kan uppdateras.
 
 1. Välj **Skapa** för att slutföra åtgärden och **Öppna** sedan fragmentet för redigering eller gå tillbaka till konsolen med **Klar**.
 
@@ -216,23 +215,23 @@ Redigeraren har olika alternativ:
    * **Spara** sparar de senaste ändringarna och finns kvar i redigeraren.
    * **Spara och stäng** sparar de senaste ändringarna och avslutar redigeraren.
 
-   >[!CAUTION]
-   >
-   >Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
+  >[!CAUTION]
+  >
+  >Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
-   >[!NOTE]
-   >
-   >Du kan vara kvar i redigeraren och göra en serie ändringar innan du sparar.
+  >[!NOTE]
+  >
+  >Du kan vara kvar i redigeraren och göra en serie ändringar innan du sparar.
 
-   >[!CAUTION]
-   >
-   >Förutom att bara spara ändringarna uppdaterar åtgärderna alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
-   >
-   >Tänk på detta när du använder **Spara och stäng** och sedan snabbt ange fragmentredigeraren igen för att göra och spara ytterligare ändringar.
+  >[!CAUTION]
+  >
+  >Förutom att bara spara ändringarna uppdaterar åtgärderna alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
+  >
+  >Tänk på detta när du använder **Spara och stäng** och sedan snabbt ange fragmentredigeraren igen för att göra och spara ytterligare ändringar.
 
 * **Stäng**
 
-   Avslutar redigeraren utan att spara de senaste ändringarna (d.v.s. gjorda sedan den senaste **Spara**).
+  Avslutar redigeraren utan att spara de senaste ändringarna (d.v.s. gjorda sedan den senaste **Spara**).
 
 När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du avbryter ändringarna (med **Stäng** utan att spara):
 
@@ -289,16 +288,18 @@ Förutom standardalternativen [Tidslinje](/help/assets/manage-digital-assets.md#
    * **Ta bort**
 
 >[!NOTE]
+>
 Kommentarerna är:
+>
 * Standardfunktionalitet för alla resurser
 * Skapat i tidslinjen
 * Relaterat till fragmentresursen
 >
 Anteckningar (för innehållsfragment) är:
+>
 * Anges i fragmentredigeraren
 * Specifik för ett markerat textsegment i fragmentet
 >
-
 
 Till exempel:
 
@@ -327,6 +328,7 @@ De visas sida vid sida, där:
 * **Klar** kommer du tillbaka till konsolen
 
 >[!NOTE]
+>
 Du kan inte redigera fragmentinnehållet när du jämför fragment.
 
 ![jämföra](assets/cfm-managing-06.png)
@@ -337,14 +339,16 @@ Du kan återgå till en viss version av fragmentet:
 
 * Direkt från [Tidslinje](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments).
 
-   Välj önskad version och sedan **Återgå till den här versionen** åtgärd.
+  Välj önskad version och sedan **Återgå till den här versionen** åtgärd.
 
 * while [jämföra en version med den aktuella versionen](/help/assets/content-fragments/content-fragments-managing.md#comparing-fragment-versions) du kan **Återställ** till den valda versionen.
 
 ## Publicera och referera till ett fragment {#publishing-and-referencing-a-fragment}
 
 >[!CAUTION]
+>
 Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/assets/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
+>
 Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 Innehållsfragment måste publiceras för användning i publiceringsmiljön. Detta görs med standardfunktionaliteten Resurser:
@@ -357,9 +361,10 @@ Du kan få åtkomst till detta:
 * Efter skapande; använda [åtgärder som är tillgängliga i resurskonsolen](#actions-for-a-content-fragment-assets-console).
 * Från [Innehållsfragmentsredigerare](#toolbar-actions-in-the-content-fragment-editor).
 
-Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
+Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet visas i sidreferenserna.
 
 >[!CAUTION]
+>
 När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i avsnittet även påverkar de refererade sidorna.
 
 ## Ta bort ett fragment {#deleting-a-fragment}
@@ -370,10 +375,12 @@ Så här tar du bort ett fragment:
 2. Markera fragmentet.
 
    >[!NOTE]
+   >
    The **Ta bort** åtgärden är inte tillgänglig som en snabbåtgärd.
 
 3. Välj **Ta bort** i verktygsfältet.
 4. Bekräfta **Ta bort** åtgärd.
 
    >[!CAUTION]
-   Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
+   >
+   Om fragmentet redan finns på en sida visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponent fragment, tas bort från alla innehållssidor.

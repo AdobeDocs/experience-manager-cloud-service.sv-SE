@@ -4,9 +4,9 @@ description: Lär dig hur du använder AEM för att skapa en webbplats med hjäl
 feature: Administering
 role: Admin
 exl-id: 9c71c167-2934-4210-abd9-ab085b36593b
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    ![Välj en mall](../assets/select-site-template.png)
 
-1. Ange en titel för din webbplats. Ett platsnamn kan anges eller genereras från titeln om det utelämnas.
+1. Ange en titel för din webbplats. Om det utelämnas kan du ange eller generera ett platsnamn från titeln.
 
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.

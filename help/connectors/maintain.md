@@ -2,9 +2,9 @@
 title: Underhålla en AEM-anslutning
 description: Underhålla en AEM-anslutning
 exl-id: 8122a8c8-6577-4907-8f6e-52711eed3970
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '162'
 ht-degree: 20%
 
 ---

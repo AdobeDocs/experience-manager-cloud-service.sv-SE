@@ -2,9 +2,9 @@
 title: Din inkorg
 description: Hantera dina uppgifter med inkorgen
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '909'
 ht-degree: 15%
 
 ---
@@ -30,7 +30,6 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 >* [Projekt](/help/sites-cloud/authoring/projects/overview.md)
 >* [Projekt - arbeta med uppgifter](/help/sites-cloud/authoring/projects/tasks.md)
 >* [Arbetsflöden](/help/sites-cloud/authoring/workflows/overview.md)
-
 
 ## Inkorgen i sidhuvudet {#inbox-in-the-header}
 
@@ -86,26 +85,26 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Kalendervy**
 
-   För **Kalendervy** du kan konfigurera:
+  För **Kalendervy** du kan konfigurera:
 
    * **Gruppera efter**
    * **Schema** eller **Ingen**
    * **Kortstorlek**
 
-   ![Visningsinställningar för inkorgskalender](/help/sites-cloud/authoring/assets/inbox-calendar-settings.png)
+  ![Visningsinställningar för inkorgskalender](/help/sites-cloud/authoring/assets/inbox-calendar-settings.png)
 
 * **Listvy**
 
-   För **Listvy** du kan konfigurera sorteringsmekanismen:
+  För **Listvy** du kan konfigurera sorteringsmekanismen:
 
    * **Sortera efter**
    * **Sorteringsordning**
 
-   ![Visningsinställningar för inkorgslista](/help/sites-cloud/authoring/assets/inbox-list-settings.png)
+  ![Visningsinställningar för inkorgslista](/help/sites-cloud/authoring/assets/inbox-list-settings.png)
 
-   Du kan även delegera din kalender till andra användare samt begära delegering från andra användare och hantera dina delegeringar.
+  Du kan även delegera din kalender till andra användare samt begära delegering från andra användare och hantera dina delegeringar.
 
-   ![Visningsdelegeringsinställningar för inkorgslista](/help/sites-cloud/authoring/assets/inbox-delegation.png)
+  ![Visningsdelegeringsinställningar för inkorgslista](/help/sites-cloud/authoring/assets/inbox-delegation.png)
 
 ## Vidta åtgärder för ett objekt {#taking-action-on-an-item}
 
@@ -126,6 +125,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
       * Visa objektegenskaper
       * Öppna en lämplig kontrollpanel eller guide för ytterligare åtgärder
       * Öppna relaterad dokumentation
+
    * **Stega bakåt** till ett föregående steg
    * Visa nyttolasten för ett arbetsflöde
    * Skapa ett projekt från artikeln
@@ -135,7 +135,6 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    >Mer information finns i:
    >
    >* Arbetsflödesobjekt - [Delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
-
 
 2. Beroende på vilket objekt som är markerat startas en åtgärd, till exempel:
 
@@ -152,7 +151,6 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    * Bekräfta lämplig åtgärd, t.ex. omtilldelning.
    * Avbryt åtgärden
    * Välj bakåtpilen för att återgå till inkorgen, t.ex. om en åtgärdsguide eller dokumentationssida har öppnats, kan du gå tillbaka till Inkorgen.
-
 
 ## Skapa en uppgift {#creating-a-task}
 
@@ -176,7 +174,7 @@ I inkorgen kan du skapa uppgifter:
 
    * **Avancerat**
 
-      * **Namn**:Detta kommer att användas för att skapa URL:en och om den är tom kommer den att baseras på **Titel**.
+      * **Namn**: Används för att skapa URL-adressen och om den är tom baseras den på **Titel**.
 
    ![Inkorgen lägger till avancerade alternativ för uppgifter](/help/sites-cloud/authoring/assets/inbox-add-task-advanced.png)
 
@@ -205,9 +203,11 @@ För vissa uppgifter kan du skapa en [Projekt](/help/sites-cloud/authoring/proje
       * **Startdatum**
       * **Förfallodatum**
       * **Användare** och roll
+
    * **Avancerat**
 
       * **Namn**
+
    >[!NOTE]
    >
    >Se [Skapa ett projekt](/help/sites-cloud/authoring/projects/managing.md#creating-a-project) för fullständig information.

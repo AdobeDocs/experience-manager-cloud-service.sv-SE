@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat
 description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: d0d4b22cdca02d81ca755e4045ffccb110739303
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -25,21 +25,21 @@ Följande `openssl` -kommandon kan användas för att konvertera certifikat som 
 
 * Konvertera PFX till PEM
 
-   ```shell
-   openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes
-   ```
+  ```shell
+  openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes
+  ```
 
 * Konvertera P7B till PEM
 
-   ```shell
-   openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer
-   ```
+  ```shell
+  openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer
+  ```
 
 * Konvertera DER till PEM
 
-   ```shell
-   openssl x509 -inform der -in certificate.cer -out certificate.pem
-   ```
+  ```shell
+  openssl x509 -inform der -in certificate.cer -out certificate.pem
+  ```
 
 ## Lägga till ett certifikat {#adding-a-cert}
 
@@ -64,7 +64,6 @@ Följ de här stegen för att lägga till ett certifikat med hjälp av Cloud Man
    * Alla fel som upptäcks visas.
       * Du måste åtgärda alla fel innan certifikatet kan sparas.
       * Se [Certifikatfel](#certificate-errors) om du vill veta mer om hur du åtgärdar vanliga fel.
-
 
 1. Klicka **Spara** för att spara ditt certifikat.
 

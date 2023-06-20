@@ -10,10 +10,10 @@ audience: developer
 feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
-exl-id: 521c1bb8-7326-4ee8-aba3-f386727e2b34,75df606f-b22f-4f7e-bd8a-576d215f72bc
-source-git-commit: d054f960f13b7308dbf42556ef60a971e880197e
+exl-id: 521c1bb8-7326-4ee8-aba3-f386727e2b34
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2544'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 ## Vad du ska bygga
 
-I den här självstudiekursen kommer en ny stil att implementeras för Product Teaser-komponenten som liknar ett kort. Lektioner som du lär dig i självstudiekursen kan användas på andra CIF-kärnkomponenter.
+I den här självstudiekursen implementeras en ny stil för Product Teaser-komponenten som liknar ett kort. Lektioner som du lär dig i självstudiekursen kan användas på andra CIF-kärnkomponenter.
 
 ![Vad du ska bygga](../assets/style-cif-component/what-you-will-build.png)
 
@@ -192,7 +192,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    >[!NOTE]
    >
-   > Endast basbiblioteken är&quot;hårdkodade&quot; som en del av sidskripten. `venia.site` tas inte med i de här filerna utan inkluderas i sidmallen för större flexibilitet. Detta kommer att inspekteras senare.
+   > Endast basbiblioteken är&quot;hårdkodade&quot; som en del av sidskripten. `venia.site` tas inte med i de här filerna utan inkluderas i sidmallen för större flexibilitet. Den här processen granskas senare.
 
 1. Bygg och distribuera hela projektet till en lokal instans av AEM:
 
@@ -277,14 +277,14 @@ Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrolle
 
    ![Sidprofil - landningssida](../assets/style-cif-component/page-policy-properties.png)
 
-   Till höger ser du en lista över klientbibliotek **kategorier** som kommer att inkluderas på alla sidor som använder den här mallen.
+   Till höger ser du en lista över klientbibliotek **kategorier** som finns på alla sidor som använder den här mallen.
 
    * `venia.dependencies` - Tillhandahåller eventuella leverantörsbibliotek som `venia.site` beroende av.
    * `venia.site` - Det här är kategorin för `clientlib-site` som `ui.frontend` modulen genererar.
 
    Observera att samma policy används för andra mallar, **Innehållssida**, **Landningssida**, osv.. Genom att återanvända samma policy kan vi se till att samma klientbibliotek inkluderas på alla sidor.
 
-   Fördelen med att använda mallar och sidprofiler för att hantera inkludering av klientbibliotek är att du kan ändra principen per mall. Du kanske hanterar två olika varumärken inom samma AEM. Varje varumärke har sin egen stil eller *tema* men basbiblioteken och koden blir desamma. Om du har ett större klientbibliotek som du bara vill visa på vissa sidor kan du skapa en unik sidprofil för just den mallen.
+   Fördelen med att använda mallar och sidprofiler för att hantera inkludering av klientbibliotek är att du kan ändra principen per mall. Du kanske hanterar två olika varumärken inom samma AEM. Varje varumärke har sin egen stil eller *tema* men basbiblioteken och koden är desamma. Om du har ett större klientbibliotek som du bara vill visa på vissa sidor kan du skapa en unik sidprofil för just den mallen.
 
 ## Utveckling av lokala webbpaket {#local-webpack-development}
 
@@ -317,7 +317,7 @@ Webbpack-dev-server-proxies bilder och en del CSS/JavaScript från den lokala in
    </body>
    ```
 
-   Dessa tas bort eftersom de representerar den kompilerade versionen av CSS och JavaScript som genereras av `ui.frontend` -modul. Lämna kvar de andra klientbiblioteken så att de proxideras från den AEM som körs.
+   Dessa tas bort eftersom de representerar den kompilerade versionen av CSS och JavaScript som genereras av `ui.frontend` -modul. Lämna kvar de andra klientbiblioteken som de kommer att proxideras från den AEM som körs.
 
 1. Öppna ett nytt terminalfönster och navigera till `ui.frontend` mapp. Kör kommandot `npm start`:
 
@@ -336,7 +336,7 @@ Webbpack-dev-server-proxies bilder och en del CSS/JavaScript från den lokala in
 
    ![Webbpaketets dev-server på port 80](../assets/style-cif-component/webpack-dev-server-port80.png)
 
-   Låt webbpack-dev-server vara igång. Det kommer att användas i nästa övning.
+   Låt webbpack-dev-server vara igång. Det används i nästa övning.
 
 ## Implementera kortstil för Product Teaser {#update-css-product-teaser}
 
@@ -455,7 +455,7 @@ När koden för projektet har distribuerats till AEM bör vi nu kunna se ändrin
 
    ![Uppdaterad Product Teaser-stil](../assets/style-cif-component/product-teaser-new-style.png)
 
-1. Experimentera genom att lägga till ytterligare produktutbildningar. Använd layoutläget om du vill ändra komponenternas bredd och förskjutning för att visa flera scener på en rad.
+1. Experimentera genom att lägga till ytterligare produktutbildningar. Använd layoutläget om du vill ändra komponenternas bredd och förskjutning så att flera scener visas på en rad.
 
    ![Flera produkttekniker](../assets/style-cif-component/multiple-teasers-final.png)
 

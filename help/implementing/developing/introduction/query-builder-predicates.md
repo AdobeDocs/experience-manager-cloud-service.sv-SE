@@ -2,9 +2,9 @@
 title: Predikatreferens för Query Builder
 description: Predikatreferens för Query Builder API.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
-source-git-commit: 14aafcb6c4acc798b0f0e0c51ecb0726f8d567aa
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2280'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Namnet &quot;root&quot; används aldrig i en fråga, det är underförstått.
 * **`p.hits`** - (endast för JSON-servern) väljer du hur träffar skrivs som JSON, med dessa standardinställningar (utbyggbara via ResultHitWriter-tjänsten):
    * **`simple`** - minimala objekt som `path`, `title`, `lastmodified`, `excerpt` (om angivet)
    * **`full`** - sling JSON rendering av noden, med `jcr:path` som anger träffens sökväg: som standard visas bara de direkta egenskaperna för noden, inklusive ett djupare träd med `p.nodedepth=N`, med 0 avses hela det oändliga underträdet, add `p.acls=true` för att inkludera JCR-behörigheterna för den aktuella sessionen för det angivna resultatobjektet (mappningar: `create` = `add_node`, `modify` = `set_property`, `delete` = `remove`)
-   * **`selective`** - endast egenskaper angivna i `p.properties`, som är ett blanksteg (använd `+` i URL:er) lista över relativa sökvägar, om den relativa sökvägen har ett djup `>1` dessa kommer att representeras som underordnade objekt, specialerbjudandet `jcr:path` egenskapen innehåller sökvägen till träffen
+   * **`selective`** - endast egenskaper angivna i `p.properties`, som är ett blanksteg (använd `+` i URL:er) lista över relativa sökvägar, om den relativa sökvägen har ett djup `>1` dessa representeras som underordnade objekt, specialerbjudandet `jcr:path` egenskapen innehåller sökvägen till träffen
 
 ### grupp {#group}
 
@@ -108,7 +108,7 @@ Detta predikat begränsar resultatet till innehållsfragment.
 
 Detta predikat jämför två JCR-datumegenskaper med varandra. Kan testa om de är lika, olika, större än eller större än eller lika med.
 
-Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
+Detta är ett predikat som bara kan filtreras och det går inte att använda ett sökindex.
 
 #### Egenskaper {#properties-2}
 
@@ -143,7 +143,7 @@ Det stöder inte filtrering.
 
 Detta predikat utesluter noder från resultatet där deras sökväg matchar ett reguljärt uttryck.
 
-Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
+Detta är ett predikat som bara kan filtreras och det går inte att använda ett sökindex.
 
 Det stöder inte facetextrahering.
 
@@ -168,7 +168,7 @@ Det stöder inte facetextrahering.
 
 Detta predikat begränsar resultatet till objekt där den aktuella sessionen har den angivna [JCR-behörighet.](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
 
-Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex. Det stöder inte facetextrahering.
+Detta är ett predikat som bara kan filtreras och det går inte att använda ett sökindex. Det stöder inte facetextrahering.
 
 #### Egenskaper {#properties-7}
 
@@ -178,7 +178,7 @@ Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökinde
 
 Det här predikatet hittar AEM sidor på ett visst språk. Det här tittar både på sidspråksegenskapen och sidsökvägen, som ofta innehåller språket eller språket i en webbplatsstruktur på den översta nivån.
 
-Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
+Detta är ett predikat som bara kan filtreras och det går inte att använda ett sökindex.
 
 Programmet har stöd för facetextrahering och innehåller hinkar för varje unik språkkod.
 
@@ -190,7 +190,7 @@ Programmet har stöd för facetextrahering och innehåller hinkar för varje uni
 
 Detta predikat kontrollerar om en nod är en DAM-huvudresurs och inte en underresurs. Detta är i stort sett alla noder som inte finns i en underresursnod. Observera att detta inte kontrollerar `dam:Asset` nodtyp. Om du vill använda det här predikatet anger du bara `mainasset=true` eller `mainasset=false`. Det finns inga fler egenskaper.
 
-Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
+Detta är ett predikat som bara kan filtreras och det går inte att använda ett sökindex.
 
 Det stöder facet-extrahering och erbjuder två buffertar för huvud- och delresurser.
 
@@ -202,7 +202,7 @@ Det stöder facet-extrahering och erbjuder två buffertar för huvud- och delres
 
 Det här predikatet hittar objekt som är medlemmar av en viss [resursinsamling för sling](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/resource/collection/ResourceCollection.html).
 
-Detta är ett predikat som bara kan filtreras och kan inte utnyttja ett sökindex.
+Detta är ett predikat som bara kan filtreras och det går inte att använda ett sökindex.
 
 Det stöder inte facetextrahering.
 
@@ -244,8 +244,7 @@ Det stöder inte facetextrahering.
 * **`path`** - Detta definierar banmönstret.
    * Beroende på `exact` egenskapen matchar antingen hela underträdet (som att lägga till `//*` i xpath, men observera att detta inte inkluderar basbanan) eller bara en exakt sökvägsmatchning, som kan innehålla jokertecken (`*`).
       * Standardvärdet är `true`
-&lt;!>— * Om 
-`self`är inställd söks hela underträdet inklusive basnoden igenom.—>
+&lt;!>— * Om `self`egenskapen är inställd söks hela underträdet inklusive basnoden igenom.—>
 * **`exact`** - if `exact` är `true`måste den exakta sökvägen matcha, men den kan innehålla enkla jokertecken (`*`), som matchar namn, men inte `/`; om det `false` (standard) alla underordnade inkluderas (valfritt)
 * **`flat`** - söker endast efter direkt underordnade (som att lägga till `/*` in xpath) (används endast om `exact` är inte true, valfritt)
 * **`self`** - söker i underträdet men inkluderar basnoden som angetts som sökväg (inga jokertecken).
@@ -267,7 +266,7 @@ Det har stöd för facetextrahering och innehåller bucket för varje unikt egen
    * `equals` för exakt matchning (standard)
    * `unequals` för jämförelser av olikhet
    * `like` för att använda `jcr:like` xpath-funktion (valfri)
-   * `not` för ingen matchning (till exempel `not(@prop)` in xpath, value param will be ignore)
+   * `not` för ingen matchning (till exempel `not(@prop)` in xpath, value param is ignore)
    * `exists` för existenskontroll
       * `true` egenskapen måste finnas
       * `false` är samma som `not` och är standard

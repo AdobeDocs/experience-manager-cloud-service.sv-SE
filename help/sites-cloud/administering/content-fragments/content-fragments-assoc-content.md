@@ -4,9 +4,9 @@ description: Förstå hur den associerade innehållsfunktionen för innehållsfr
 feature: Content Fragments
 role: User
 exl-id: eb524872-1403-42d1-b735-eaab382cf313
-source-git-commit: 737d4d56312b763a50c2dfad0ea51feb9dbf4dde
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '240'
 ht-degree: 4%
 
 ---
@@ -29,7 +29,7 @@ För att kunna skapa associationen måste du först [lägga till mediefiler i en
 
 1. Beroende på om några samlingar redan har associerats eller inte väljer du antingen:
 
-   * **Associera innehåll** - det här blir den första associerade samlingen
+   * **Associera innehåll** - den första associerade samlingen
    * **Associera samling** - associerade samlingar har redan konfigurerats
 
 1. Välj önskad samling.
@@ -38,7 +38,7 @@ För att kunna skapa associationen måste du först [lägga till mediefiler i en
 
    ![Välj samling](assets/cfm-assoc-content-02.png)
 
-1. Bekräfta (med **Välj**). Samlingen listas som associerad.
+1. Bekräfta (med **Välj**). Samlingen visas som associerad.
 
    ![cfm-6420-05](assets/cfm-assoc-content-03.png)
 

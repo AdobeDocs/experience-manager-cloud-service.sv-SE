@@ -2,9 +2,9 @@
 title: Använda Sling Resource Merger i Adobe Experience Manager as a Cloud Service
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
 exl-id: 5b6e5cb5-4c6c-4246-ba67-6b9f752867f5
-source-git-commit: ac760e782f80ee82a9b0604ef64721405fc44ee4
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1158'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Målet med Sling Resource Merger i AEM är att
 * se till att anpassningar inte görs i `/libs`.
 * minska strukturen som replikeras från `/libs`.
 
-   När du använder Samling Resource Merger bör du inte kopiera hela strukturen från `/libs` eftersom detta skulle resultera i att för mycket information sparas i anpassningen (vanligen `/apps`). Om du duplicerar information i onödan ökar risken för problem när systemet uppgraderas på något sätt.
+  När du använder Samling Resource Merger bör du inte kopiera hela strukturen från `/libs` eftersom detta skulle resultera i att för mycket information sparas i anpassningen (vanligen `/apps`). Om du duplicerar information i onödan ökar risken för problem när systemet uppgraderas på något sätt.
 
 >[!CAUTION]
 >
@@ -56,23 +56,23 @@ Resurskoncentrationen har följande egenskaper:
 
 * `sling:hideProperties` ( `String` eller `String[]`)
 
-   Anger den egenskap, eller lista med egenskaper, som ska döljas.
+  Anger den egenskap, eller lista med egenskaper, som ska döljas.
 
-   Jokertecknet `*` döljer alla.
+  Jokertecknet `*` döljer alla.
 
 * `sling:hideResource` ( `Boolean`)
 
-   Anger om resurserna ska vara helt dolda, inklusive dess underordnade.
+  Anger om resurserna ska vara helt dolda, inklusive dess underordnade.
 
 * `sling:hideChildren` ( `String` eller `String[]`)
 
-   Innehåller den underordnade noden, eller listan med underordnade noder, som ska döljas. Egenskaperna för noden bevaras.
+  Innehåller den underordnade noden, eller listan med underordnade noder, som ska döljas. Egenskaperna för noden bevaras.
 
-   Jokertecknet `*` döljer alla.
+  Jokertecknet `*` döljer alla.
 
 * `sling:orderBefore` ( `String`)
 
-   Innehåller namnet på noden på samma nivå som den aktuella noden ska placeras framför.
+  Innehåller namnet på noden på samma nivå som den aktuella noden ska placeras framför.
 
 Dessa egenskaper påverkar hur motsvarande/ursprungliga resurser/egenskaper (från `/libs`) används av övertäckningen/åsidosättningen (ofta i `/apps`).
 
@@ -84,23 +84,23 @@ Om du vill skapa en övertäckning eller åsidosättning måste du återskapa de
 
    * Definitionen av navigeringsposten för Sites-konsolen, som visas i järnvägen, definieras på:
 
-      `/libs/cq/core/content/nav/sites/jcr:title`
+     `/libs/cq/core/content/nav/sites/jcr:title`
 
    * Om du vill täcka över det här skapar du följande nod:
 
-      `/apps/cq/core/content/nav/sites`
+     `/apps/cq/core/content/nav/sites`
 
-      Uppdatera sedan egenskapen `jcr:title` efter behov.
+     Uppdatera sedan egenskapen `jcr:title` efter behov.
 
 * Åsidosätt
 
    * Definitionen av den beröringsaktiverade dialogrutan för textkonsolen definieras på:
 
-      `/libs/foundation/components/text/cq:dialog`
+     `/libs/foundation/components/text/cq:dialog`
 
    * Om du vill åsidosätta detta skapar du följande nod, till exempel:
 
-      `/apps/the-project/components/text/cq:dialog`
+     `/apps/the-project/components/text/cq:dialog`
 
 Om du vill skapa någon av dessa behöver du bara återskapa skelettstrukturen. För att förenkla återskapandet av strukturen kan alla mellanliggande noder vara av typen `nt:unstructured` (De behöver inte återspegla den ursprungliga nodtypen. till exempel i `/libs`).
 
@@ -125,14 +125,14 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
 * **Lägg till en egenskap**
 
-   Egenskapen finns inte i `/libs` definition, men krävs i `/apps` överlägg/åsidosätt.
+  Egenskapen finns inte i `/libs` definition, men krävs i `/apps` överlägg/åsidosätt.
 
    1. Skapa motsvarande nod i `/apps`
    1. Skapa den nya egenskapen på den här noden &quot;
 
 * **Omdefiniera en egenskap (inte automatiskt skapade egenskaper)**
 
-   Egenskapen definieras i `/libs`, men ett nytt värde krävs i `/apps` överlägg/åsidosätt.
+  Egenskapen definieras i `/libs`, men ett nytt värde krävs i `/apps` överlägg/åsidosätt.
 
    1. Skapa motsvarande nod i `/apps`
    1. Skapa matchande egenskap på den här noden (under / `apps`)
@@ -140,14 +140,15 @@ Dessa tillsammans med standardfunktioner gör att du kan:
       * Egenskapen får en prioritet baserat på konfigurationen för Sling Resource Resolver.
       * Det går att ändra egenskapstypen.
 
-         Om du använder en annan egenskapstyp än den som används i `/libs`används egenskapstypen som du definierar.
-   >[!NOTE]
-   >
-   >Det går att ändra egenskapstypen.
+        Om du använder en annan egenskapstyp än den som används i `/libs`används egenskapstypen som du definierar.
+
+  >[!NOTE]
+  >
+  >Det går att ändra egenskapstypen.
 
 * **Omdefiniera en egenskap som har skapats automatiskt**
 
-   Som standard skapas automatiskt egenskaper (till exempel `jcr:primaryType`) är inte föremål för en övertäckning/åsidosättning för att säkerställa att den nodtyp som finns under `/libs` respekteras. Om du vill använda en övertäckning/åsidosättning måste du återskapa noden i `/apps`, döljer egenskapen explicit och definierar om den:
+  Som standard skapas automatiskt egenskaper (till exempel `jcr:primaryType`) är inte föremål för en övertäckning/åsidosättning för att säkerställa att den nodtyp som finns under `/libs` respekteras. Om du vill använda en övertäckning/åsidosättning måste du återskapa noden i `/apps`, döljer egenskapen explicit och definierar om den:
 
    1. Skapa motsvarande nod under `/apps` med önskat `jcr:primaryType`
    1. Skapa egenskapen `sling:hideProperties` på den noden, med värdet inställt på värdet för den automatiskt skapade egenskapen, till exempel `jcr:primaryType`
@@ -156,7 +157,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
 * **Definiera om en nod och dess underordnade noder**
 
-   Noden och dess underordnade noder definieras i `/libs`, men en ny konfiguration krävs i `/apps` överlägg/åsidosätt.
+  Noden och dess underordnade noder definieras i `/libs`, men en ny konfiguration krävs i `/apps` överlägg/åsidosätt.
 
    1. Kombinera åtgärder från:
 
@@ -165,7 +166,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
 * **Dölj en egenskap**
 
-   Egenskapen definieras i `/libs`, men krävs inte i `/apps` överlägg/åsidosätt.
+  Egenskapen definieras i `/libs`, men krävs inte i `/apps` överlägg/åsidosätt.
 
    1. Skapa motsvarande nod i `/apps`
    1. Skapa en egenskap `sling:hideProperties` av typen `String` eller `String[]`. Använd den här inställningen för att ange vilka egenskaper som ska döljas/ignoreras. Du kan också använda jokertecken. Till exempel:
@@ -177,7 +178,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
 * **Dölja en nod och dess underordnade noder**
 
-   Noden och dess underordnade noder definieras i `/libs`, men krävs inte i `/apps` överlägg/åsidosätt.
+  Noden och dess underordnade noder definieras i `/libs`, men krävs inte i `/apps` överlägg/åsidosätt.
 
    1. Skapa motsvarande nod under /apps
    1. Skapa en egenskap `sling:hideResource`
@@ -187,7 +188,7 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
 * **Dölj underordnade noder för en nod (samtidigt som nodens egenskaper behålls)**
 
-   Noden, dess egenskaper och underordnade noder definieras i `/libs`. Noden och dess egenskaper krävs i `/apps` överlägg/åsidosätt, men vissa eller alla underordnade noder krävs inte i `/apps` överlägg/åsidosätt.
+  Noden, dess egenskaper och underordnade noder definieras i `/libs`. Noden och dess egenskaper krävs i `/apps` överlägg/åsidosätt, men vissa eller alla underordnade noder krävs inte i `/apps` överlägg/åsidosätt.
 
    1. Skapa motsvarande nod under `/apps`
    1. Skapa egenskapen `sling:hideChildren`:
@@ -197,10 +198,9 @@ Dessa tillsammans med standardfunktioner gör att du kan:
 
       Jokertecknet &amp;ast; kan användas för att dölja/ignorera alla underordnade noder.
 
-
 * **Ändra ordning på noder**
 
-   Noden och dess jämställda noder definieras i `/libs`. En ny position krävs så att noden återskapas i `/apps` överlägg/åsidosätt, där den nya positionen definieras i referens till lämplig nod på samma nivå i `/libs`.
+  Noden och dess jämställda noder definieras i `/libs`. En ny position krävs så att noden återskapas i `/apps` överlägg/åsidosätt, där den nya positionen definieras i referens till lämplig nod på samma nivå i `/libs`.
 
    * Använd `sling:orderBefore` egenskap:
 

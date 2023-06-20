@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: b339ab48-e836-4589-a573-9c50917b9280
-source-git-commit: 599f924465552b2ef43827da8e139c239e47baed
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -39,9 +39,9 @@ Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanf
 
 * The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) nu har stöd för [kortkommandon](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md).
 
-* AEM som Cloud Service [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ger möjlighet att avsevärt förbättra sidhastigheten genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. Alla versioner av [Core Image Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan du använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
+* AEM som Cloud Servicens [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ger möjlighet att avsevärt förbättra sidhastigheten genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. Alla versioner av [Core Image Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
 
-* AEM kan nu utnyttja upplevelsefragment i stället för våra gamla erbjudanden. Den här funktionen:
+* AEM personaliseringsaktiviteter kan nu använda upplevelsefragment i stället för våra gamla erbjudanden. Den här funktionen:
    * möjliggör en migreringsväg där AEM innehåll skulle främja upplevelsefragmenterbjudanden i stället för äldre bibliotekserbjudanden för att tillhandahålla lämpligt formaterat innehåll som passar personaliseringen i stor skala framåt.
    * förhindrar att innehållsförfattare av misstag skickar oformaterat innehåll till sin webbplats.
    * gör att målinriktningsläge för alla komponenter kan konverteras till ett upplevelsefragment (både JSON- och HTML-typer) som använder redigerbara mallar.
@@ -102,7 +102,7 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 ### Vad är nytt? {#what-is-new-foundation}
 
 * The [Databasläsare](/help/implementing/developing/tools/repository-browser.md) har nu ett sökvägsinmatningsfält, vilket gör det möjligt att hoppa direkt till en viss mapp i databashierarkin
-* Sling Content Distribution (SCD) har nu stöd för en explicit&quot;invalidation&quot;-åtgärd för att göra innehåll ogiltigt utan att innehållet publiceras. Se [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md#explicit-invalidation) sida för mer information.
+* Sling Content Distribution (SCD) har nu stöd för en explicit&quot;invalidation&quot;-åtgärd som gör innehållet ogiltigt utan att det publiceras. Se [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md#explicit-invalidation) sida för mer information.
 * mod_macro finns nu i AEM as a Cloud Service. Se [det här registret](/help/implementing/dispatcher/disp-overview.md) för en lista över Apache-moduler som stöds.
 
 ### Förbättringar i AEM as a Cloud Service SDK Dispatcher Tools {#dispatcher-tools-enhancements}

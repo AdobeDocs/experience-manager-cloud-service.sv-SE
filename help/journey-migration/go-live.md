@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: 30acb844ee4021b3e14011b548825c864de8903d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1720'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Som tidigare nämnts måste du schemalägga en frysperiod för kod och innehåll
 * Hur länge måste jag frysa redigeringsaktiviteterna?
 * Hur länge ska jag be mitt leveransteam sluta lägga till nya funktioner?
 
-Som svar på den första frågan bör du fundera över hur lång tid det har tagit att genomföra testkörningar i icke-produktionsmiljöer. För att svara på den andra frågan behöver du ha ett nära samarbete mellan teamet som lägger till nya funktioner och teamet som omstrukturerar koden. Målet bör vara att se till att all kod som läggs till i den befintliga distributionen också läggs till, testas och distribueras till molntjänstgrenen. I allmänhet innebär detta att mängden fryst kod blir lägre.
+Som svar på den första frågan bör du fundera över hur lång tid det har tagit att genomföra testkörningar i icke-produktionsmiljöer. För att svara på den andra frågan behöver du ha ett nära samarbete mellan teamet som lägger till nya funktioner och teamet som omstrukturerar koden. Målet är att se till att all kod som läggs till i den befintliga distributionen också läggs till, testas och distribueras till molntjänstgrenen. Vanligtvis innebär det att mängden fryst kod är lägre.
 
 Dessutom måste du planera för en frysning av innehållet när den slutliga innehållsuppdateringen är schemalagd.
 
@@ -81,12 +81,12 @@ Se till att du kör innehållsmigreringen i produktion i stället för en klon n
 
 När du utför produktionsmigreringen bör du undvika att köra verktyget Innehållsöverföring från en klon eftersom:
 
-* Om en kund kräver att innehållsversioner migreras under en översta migrering migreras inte versionerna när innehållsöverföringsverktyget körs från en klon. Även om klonen ofta återskapas från en live-författare återställs de kontrollpunkter som ska användas av verktyget Innehållsöverföring för att beräkna deltarna varje gång en klon skapas.
+* Om en kund kräver att innehållsversioner migreras under en översta migrering migreras inte versionerna när innehållsöverföringsverktyget körs från en klon. Även om klonen ofta återskapas från en live-författare återställs de kontrollpunkter som används av verktyget Innehållsöverföring för att beräkna deltarna varje gång en klon skapas.
 * Eftersom en klon inte kan uppdateras som helhet måste ACL-frågepaketet användas för att paketera och installera det innehåll som läggs till eller redigeras från produktion till kloning. Problemet med den här metoden är att allt borttaget innehåll i källinstansen aldrig kommer till klonen om det inte tas bort manuellt från både källan och klonen. Detta introducerar möjligheten att det borttagna innehållet i produktionen inte tas bort på klonen och AEM as a Cloud Service.
 
 **Optimera belastningen på AEM när innehållsmigreringen utförs**
 
-Kom ihåg att belastningen på AEM blir större under extraheringsfasen. Du bör vara medveten om att
+Kom ihåg att belastningen på AEM är större under extraheringsfasen. Du bör vara medveten om att
 
 * Innehållsöverföringsverktyget är en extern Java-process som använder en JVM-heap på 4 GB
 * Icke-AzCopy-versionen hämtar binärfiler, lagrar dem på ett temporärt utrymme på AEM, förbrukar disk-I/O och överför dem sedan till Azure-behållaren som förbrukar nätverksbandbredd

@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar och löser flera sammanslagningskonflikter
 feature: Multi Site Manager
 role: Admin
 exl-id: 733e9411-50a7-42a5-a5a8-4629f6153f10
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ När det finns sidor som är i konflikt (i grenarna utkast och Live Copy) kan du
 För att säkerställa att utrullningen inte blockeras kan möjliga definitioner omfatta:
 
 * Vilken sida (utkast eller Live Copy) som ska ha prioritet vid utrullning
-* Vilka sidor som ska namnändras (och hur)
+* Vilka sidor som får nya namn och hur
 * Hur detta påverkar publicerat innehåll
 
 Standardbeteendet för AEM är att publicerat innehåll inte påverkas. Om en sida som skapades manuellt i Live Copy-grenen har publicerats kommer det innehållet fortfarande att publiceras efter konflikthanteringen och utrullningen.
@@ -35,11 +35,11 @@ I följande avsnitt använder vi exemplet på en ny sida `b`, som har skapats b�
 
 * skiss: `/b`
 
-   En överordnad sida med 1 underordnad sida, `bp-level-1`
+  En överordnad sida med 1 underordnad sida, `bp-level-1`
 
 * Live Copy: `/b`
 
-   En sida som skapats manuellt i Live Copy-grenen med en underordnad sida, `lc-level-1`
+  En sida som skapats manuellt i Live Copy-grenen med en underordnad sida, `lc-level-1`
 
    * Aktiverat vid publicering som `/b`tillsammans med den underordnade sidan
 
@@ -83,13 +83,13 @@ Den här konflikthanteraren ger prioritet åt ritningen. Till exempel sidan Live
 
 * Live Copy: `/b`
 
-   Flyttas inom Live Copy till `/b_msm_moved`. Detta fungerar som en säkerhetskopia och säkerställer att inget innehåll går förlorat.
+  Flyttas inom Live Copy till `/b_msm_moved`. Detta fungerar som en säkerhetskopia och säkerställer att inget innehåll går förlorat.
 
    * `lc-level-1` flyttas inte.
 
 * Blå: `/b`
 
-   Är utrullad till sidan Live Copy `/b`.
+  Är utrullad till sidan Live Copy `/b`.
 
    * `bp-level-1` i till Live Copy.
 
@@ -127,11 +127,11 @@ I det här fallet har Live Copy företräde. Planeringssidan `/b` kopieras inte 
 
 * Blå: `/b`
 
-   Kopieras inte alls, men ignoreras.
+  Kopieras inte alls, men ignoreras.
 
 * Live Copy: `/b`
 
-   Står detsamma.
+  Står detsamma.
 
 #### Efter utrullning {#after-rollout-no-conflict}
 

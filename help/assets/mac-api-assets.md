@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Assets HTTP API,APIs
 role: Developer,Architect,Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1556'
 ht-degree: 1%
 
 ---
@@ -123,7 +123,7 @@ Hämtar en siren-representation av en befintlig mapp och av dess underordnade en
 * 404 - HITTADES INTE - mappen finns inte eller är inte tillgänglig.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
 
-**Svar**: Klassen för enheten som returneras är en resurs eller en mapp. Egenskaperna för enheter som ingår är en deluppsättning av alla egenskaper för varje enhet. För att få en fullständig representation av enheten bör kunderna hämta innehållet i den URL som länken pekar på med en `rel` av `self`.
+**Svar**: Klassen för enheten som returneras är en resurs eller en mapp. Egenskaperna för enheter som ingår är en deluppsättning av alla egenskaper för varje enhet. För att få en fullständig representation av enheten ska klienterna hämta innehållet i den URL som länken pekar på med en `rel` av `self`.
 
 ## Skapa en mapp {#create-a-folder}
 
@@ -294,4 +294,3 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 >[!MORELIKETHIS]
 >
 >* [Referensdokument för utvecklare för [!DNL Assets]](/help/assets/developer-reference-material-apis.md)
-

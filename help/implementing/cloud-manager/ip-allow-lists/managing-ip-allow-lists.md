@@ -2,9 +2,9 @@
 title: Hantera IP-Tillåtelselista
 description: Lär dig hur du visar, redigerar, tar bort och kontrollerar status för din IP-tillåtelselista i Cloud Manager.
 exl-id: 6efabe53-3f45-47d4-ac1f-979cae0ab33e
-source-git-commit: 3080427529bb65e27721e05069012b33579fdd73
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---

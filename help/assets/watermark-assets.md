@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management,Publishing
 role: User,Admin
 exl-id: 210f8925-bd15-4b4a-8714-5a1486eeb49e
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 7%
@@ -42,7 +42,7 @@ Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
    >Om du har konfigurerat systemprofilen för vattenstämplar med `com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json` konfigurationsfilen (OSGi-konfiguration) kan du fortsätta att använda den, men Adobe rekommenderar att du använder den nya metoden.
 
 
-1. [Skapa en bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-custom-profile) för att utnyttja tillgångsmikrotjänster för att använda vattenstämpeln.
+1. [Skapa en bearbetningsprofil](/help/assets/asset-microservices-configure-and-use.md#create-custom-profile) om du vill använda resursmikrotjänster för att använda vattenstämpeln.
 
    ![Resursbearbetningsprofil för att skapa vattenstämpel](assets/watermark-processing-profile.png)
 
@@ -75,4 +75,3 @@ Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
 >
 >* [Resursmikrotjänster - översikt](/help/assets/asset-microservices-overview.md).
 >* [Använda resursmikrotjänster med bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).
-

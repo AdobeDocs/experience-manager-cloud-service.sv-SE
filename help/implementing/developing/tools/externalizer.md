@@ -2,9 +2,9 @@
 title: Extern URL
 description: Externalizer är en OSGi-tjänst som gör att du kan omvandla en resurssökväg programmatiskt till en extern och absolut URL.
 exl-id: 06efb40f-6344-4831-8ed9-9fc49f2c7a3f
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,8 @@ Så här definierar du en domänmappning för tjänsten Externalizer:
    * **`scheme`** är vanligtvis http eller https, men kan vara ett annat protokoll.
 
       * Vi rekommenderar att du använder https för att framtvinga https-länkar.
-      * Den används om klientkoden inte åsidosätter schemat när en URL-adress ska utgöras.
+      * Det används om klientkoden inte åsidosätter schemat när en URL-adress ska utgöras.
+
    * **`server`** är värdnamnet (antingen ett domännamn eller en IP-adress).
    * **`port`** (valfritt) är portnumret.
    * **`contextpath`** (valfritt) anges bara om AEM har installerats som ett webbprogram under en annan kontextsökväg.
@@ -102,11 +103,11 @@ I det här avsnittet visas några exempel på hur Externalizer-tjänsten kan anv
 
 * **Så här gör du en extern sökväg med domänen &#39;publish&#39;:**
 
-   ```java
-   String myExternalizedUrl = externalizer.publishLink(resolver, "/my/page") + ".html";
-   ```
+  ```java
+  String myExternalizedUrl = externalizer.publishLink(resolver, "/my/page") + ".html";
+  ```
 
-   Anta domänmappningen:
+  Anta domänmappningen:
 
    * `publish https://www.website.com`
 
@@ -116,11 +117,11 @@ I det här avsnittet visas några exempel på hur Externalizer-tjänsten kan anv
 
 * **Så här gör du en extern sökväg med domänen &#39;författare&#39;:**
 
-   ```java
-   String myExternalizedUrl = externalizer.authorLink(resolver, "/my/page") + ".html";
-   ```
+  ```java
+  String myExternalizedUrl = externalizer.authorLink(resolver, "/my/page") + ".html";
+  ```
 
-   Anta domänmappningen:
+  Anta domänmappningen:
 
    * `author https://author.website.com`
 
@@ -130,11 +131,11 @@ I det här avsnittet visas några exempel på hur Externalizer-tjänsten kan anv
 
 * **Så här externaliserar du en sökväg med domänen&quot;local&quot;:**
 
-   ```java
-   String myExternalizedUrl = externalizer.externalLink(resolver, Externalizer.LOCAL, "/my/page") + ".html";
-   ```
+  ```java
+  String myExternalizedUrl = externalizer.externalLink(resolver, Externalizer.LOCAL, "/my/page") + ".html";
+  ```
 
-   Anta domänmappningen:
+  Anta domänmappningen:
 
    * `local https://publish-3.internal`
 

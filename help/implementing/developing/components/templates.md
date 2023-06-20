@@ -1,10 +1,10 @@
 ---
 title: Sidmallar
-description: Sidmallar används när du skapar en sida som ska användas som bas för den nya sidan
+description: Sidmallar används när du skapar en sida som används som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: f5aa9229ff06fdcff5474594269ebcf9daf09e41
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3300'
+source-wordcount: '3293'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,7 @@ När du skapar en ny redigerbar mall:
    * Innehållsprinciperna definierar designegenskaperna för en komponent.
 
       * Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna.
+
    * Dessa gäller för mallen (och sidor som skapas med mallen).
 
    Mer information om hur en mallskapare definierar principer finns i [Skapa sidmallar](/help/sites-cloud/authoring/features/templates.md#editing-a-template-structure-template-author).
@@ -433,10 +434,10 @@ Definierar strukturen för den resulterande sidan:
 
 * Sammanfogas med det ursprungliga innehållet ( `/initial`) när du skapar en ny sida.
 * Ändringar som görs i strukturen återspeglas i alla sidor som skapas med mallen.
-* The `root` ( `structure/jcr:content/root`)-noden definierar listan med komponenter som ska vara tillgängliga på den resulterande sidan.
+* The `root` ( `structure/jcr:content/root`)-noden definierar listan med komponenter som är tillgängliga på den resulterande sidan.
    * Komponenter som definieras i mallstrukturen kan inte flyttas eller tas bort från resultatsidor.
    * När en komponent har låsts upp `editable` egenskapen är inställd på `true`.
-   * När en komponent som redan innehåller innehåll är olåst flyttas det här innehållet till `initial` förgrening.
+   * När en komponent som redan innehåller innehåll har låsts upp, flyttas det här innehållet till `initial` förgrening.
 
 * The `cq:responsive` noden innehåller definitioner för den responsiva layouten.
 
@@ -447,7 +448,7 @@ Definierar det ursprungliga innehåll som en ny sida kommer att ha när den skap
 * Innehåller en `jcr:content` nod som kopieras till nya sidor.
 * Sammanfogas med strukturen ( `/structure`) när du skapar en ny sida.
 * Befintliga sidor uppdateras inte om det ursprungliga innehållet ändras efter att de har skapats.
-* The `root` noden innehåller en lista med komponenter för att definiera vad som ska vara tillgängligt på den resulterande sidan.
+* The `root` noden innehåller en lista med komponenter som definierar vad som är tillgängligt på den resulterande sidan.
 * Om innehåll läggs till i en komponent i strukturläge och den komponenten sedan låses upp (eller vice versa), används det här innehållet som ursprungligt innehåll.
 
 ### Layout {#layout}
@@ -461,13 +462,13 @@ När [redigera en mall kan du definiera layouten](/help/sites-cloud/authoring/fe
 Innehållsprinciperna definierar designegenskaperna för en komponent. Till exempel de tillgängliga komponenterna eller minimi-/maximidimensionerna. Dessa gäller för mallen (och sidor som skapas med mallen). Du kan skapa och välja innehållsprinciper i mallredigeraren.
 
 * Egenskapen `cq:policy`, på `root` nod
-   `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
+  `/conf/<your-folder>/settings/wcm/templates/<your-template>/policies/jcr:content/root`
 Ger en relativ referens till innehållsprincipen för sidans styckesystem.
 
 * Egenskapen `cq:policy`, på de komponentspecifika noderna under `root`, innehåller länkar till profilerna för de enskilda komponenterna.
 
 * De faktiska principdefinitionerna lagras under:
-   `/conf/<your-folder>/settings/wcm/policies/wcm/foundation/components`
+  `/conf/<your-folder>/settings/wcm/policies/wcm/foundation/components`
 
 >[!NOTE]
 >
@@ -488,7 +489,7 @@ Med sidprofiler kan du definiera [innehållsprincip](#content-policies) för sid
    * Ställa in egenskapen status på `jcr:content` nod.
 
       * På:
-         `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
+        `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
 
       * Definiera egenskapen:
 
@@ -500,9 +501,9 @@ Med sidprofiler kan du definiera [innehållsprincip](#content-policies) för sid
 
    * [Definiera tillåtna mallsökvägar på **Sidegenskaper**](/help/sites-cloud/authoring/features/templates.md#allowing-a-template-author) av rätt sida eller rotsida i en underavdelning.
    * Ange egenskapen:
-      `cq:allowedTemplates`
-På 
-`jcr:content` noden för den begärda grenen.
+     `cq:allowedTemplates`
+På `jcr:content` noden för den begärda grenen.
+
    Med till exempel värdet:
 
    `/conf/<your-folder>/settings/wcm/templates/.*`
@@ -532,13 +533,13 @@ Vid återgivning av en sida:
 
 * **Mallar**:
 
-   * The `cq:template` egenskap för dess `jcr:content` Noden kommer att refereras till för att komma åt mallen som motsvarar den sidan.
+   * The `cq:template` egenskap för dess `jcr:content` noden refereras till för att komma åt mallen som motsvarar den sidan.
 
 * **Komponenter**:
 
    * Sidkomponenten kommer att sammanfoga `structure/jcr:content` mallens träd med `jcr:content` sidans träd.
       * Sidkomponenten tillåter bara författaren att redigera noderna i mallstrukturen som har flaggats som redigerbara (samt eventuella underordnade noder).
-      * När du återger en komponent på en sida hämtas komponentens relativa sökväg från `jcr:content` nod; samma bana under `policies/jcr:content` -noden i mallen söks sedan igenom.
+      * När en komponent återges på en sida hämtas den relativa sökvägen från `jcr:content` nod; samma bana under `policies/jcr:content` -noden i mallen söks sedan igenom.
          * The `cq:policy` den här nodens egenskap pekar på den faktiska innehållsprincipen (d.v.s. den innehåller komponentens designkonfiguration).
             * På så sätt kan du ha flera mallar som återanvänder samma innehållsprincipkonfigurationer.
 

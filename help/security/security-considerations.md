@@ -4,9 +4,9 @@ description: Läs om viktiga säkerhetsfrågor när du använder AEM as a Cloud 
 hidefromtoc: true
 hide: true
 exl-id: d2dfde05-ce02-478e-8697-b939fb8740c3
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## AEM Trust Store {#aem-trust-store}
 
-För att stödja asymmetriska kryptografiska åtgärder lagrar AEM certifikat inuti innehållsarkivet i ett globalt förtroendearkiv. Innehållet är offentligt och är som standard anonymt tillgängligt för alla på utgivarinstanser.
+För att stödja asymmetriska, kryptografiska åtgärder lagrar AEM certifikat inuti innehållsarkivet i en global betrodd lagringsplats. Innehållet är offentligt och är som standard anonymt tillgängligt för alla på utgivarinstanser.
 
 ### Egenskaper hos Trust Store {#truststore-characteristics}
 
@@ -24,7 +24,7 @@ För att stödja asymmetriska kryptografiska åtgärder lagrar AEM certifikat in
 * Kunderna kan använda den i sin egen kod via [API för nyckelbehållare](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/keystore/KeyStoreService.html#getTrustStore-org.apache.sling.api.resource.ResourceResolver-)
 * Trust-butiken kan hanteras via användargränssnittet på **verktyg** - **Säkerhet** - **Trust Store** eller genom åtkomst *`https://serveraddress:serverport/libs/granite/security/content/truststore.html`*, enligt nedan:
 
-   ![Hantering av betrodda arkiv](/help/security/assets/global-trust-store-modified.png)
+  ![Hantering av betrodda arkiv](/help/security/assets/global-trust-store-modified.png)
 
 * Åtkomsten till förtroendearkivet kan begränsas ytterligare av åtkomstkontrollen i databasen beroende på användningsfallet.
 

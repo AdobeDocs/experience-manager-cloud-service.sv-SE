@@ -2,9 +2,9 @@
 title: Responsiv layout
 description: AEM gör att du kan förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1764'
 ht-degree: 7%
 
 ---
@@ -28,11 +28,11 @@ AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer
 
 * [**Layoutbehållare**](#adding-a-layout-container-and-its-content-edit-mode) komponent
 
-   Den här komponenten är tillgänglig i [komponentwebbläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) och har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät. Den kan också anges som standardstyckesystem på sidan.
+  Den här komponenten är tillgänglig i [komponentwebbläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) och har ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät. Den kan också anges som standardstyckesystem på sidan.
 
 * [**Layoutläge**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes)
 
-   När layoutbehållaren är placerad på sidan kan du använda **Layout** läge för att placera innehåll i det responsiva rutnätet.
+  När layoutbehållaren är placerad på sidan kan du använda **Layout** läge för att placera innehåll i det responsiva rutnätet.
 
 * [**Emulator**](#selecting-a-device-to-emulate)
 På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten efter enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
@@ -124,7 +124,6 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540
    * Flödets linje visas inte om höjden på den enhet som emuleras är högre än skärmstorleken.
    * Flödet visas för författarens bekvämlighet och visas inte på den publicerade sidan.
 
-
 ## Lägga till en layoutbehållare och dess innehåll (redigeringsläge) {#adding-a-layout-container-and-its-content-edit-mode}
 
 A **Layoutbehållare** är ett styckesystem som
@@ -190,53 +189,54 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
 * Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot stödrastret. När du ändrar storlek på bakgrundsstödrastret visas det för att underlätta justeringen:
 
-   ![Ändra storlek på komponenter](/help/sites-cloud/authoring/assets/responsive-layout-resizing.png)
+  ![Ändra storlek på komponenter](/help/sites-cloud/authoring/assets/responsive-layout-resizing.png)
 
-   >[!NOTE]
-   >
-   >Proportionerna och proportionerna bevaras när komponenter som **Bilder** storleksändras.
+  >[!NOTE]
+  >
+  >Proportioner och proportioner bevaras när komponenter som **Bilder** storleksändras.
 
 * Klicka/peka på en innehållskomponent så kan du göra följande i verktygsfältet:
    * **Överordnad** - Gör att du kan markera hela layoutbehållarkomponenten för att utföra en åtgärd i sin helhet.
    * **Flyt till ny rad** - Komponenten flyttas till en ny rad, beroende på vilket utrymme som är tillgängligt i stödrastret.
    * **Dölj komponent** - Komponenten blir osynlig (den kan återställas från verktygsfältet i layoutbehållaren).
 
-   ![Dölj komponent](/help/sites-cloud/authoring/assets/responsive-layout-hide.png)
+  ![Dölj komponent](/help/sites-cloud/authoring/assets/responsive-layout-hide.png)
 
 * I **Layout** läge där du kan trycka/klicka på **Dra komponenter hit** om du vill markera hela komponenten. Då visas verktygsfältet för det här läget.
 
-   Verktygsfältet har olika alternativ beroende på layoutkomponentens läge och vilka komponenter som tillhör det. Till exempel:
+  Verktygsfältet har olika alternativ beroende på layoutkomponentens läge och vilka komponenter som tillhör det. Till exempel:
 
    * **Överordnad** - Markera den överordnade komponenten.
 
-      ![Överordnad knapp](/help/sites-cloud/authoring/assets/responsive-layout-parent-button.png)
+     ![Överordnad knapp](/help/sites-cloud/authoring/assets/responsive-layout-parent-button.png)
 
    * **Visa dolda komponenter** - Visa alla eller enskilda komponenter. Numret visar hur många dolda komponenter det finns för närvarande. Räknaren visar hur många komponenter som är dolda.
 
-      ![Knappen Visa dolda komponenter](/help/sites-cloud/authoring/assets/responsive-layout-show-button.png)
+     ![Knappen Visa dolda komponenter](/help/sites-cloud/authoring/assets/responsive-layout-show-button.png)
 
    * **Återställ brytpunktslayout** - Återgå till standardlayouten. Det innebär att ingen anpassad layout kommer att användas.
 
-      ![Återställ brytpunktslayoutknapp](/help/sites-cloud/authoring/assets/responsive-layout-revert-button.png)
+     ![Återställ brytpunktslayoutknapp](/help/sites-cloud/authoring/assets/responsive-layout-revert-button.png)
 
    * **Flyt till ny rad** - Flytta komponenten uppåt en position om avstånd tillåter.
 
-      ![Knappen Flyt till en ny rad](/help/sites-cloud/authoring/assets/responsive-layout-float-button.png)
+     ![Knappen Flyt till en ny rad](/help/sites-cloud/authoring/assets/responsive-layout-float-button.png)
 
    * **Dölj komponent** - Dölj den aktuella komponenten.
 
-      ![Dölj komponentknapp](/help/sites-cloud/authoring/assets/responsive-layout-hide-button.png)
-   >[!NOTE]
-   >
-   >I exemplet ovan är åtgärderna float och hide tillgängliga eftersom den här layoutbehållaren är kapslad i en överordnad layoutbehållare.
+     ![Dölj komponentknapp](/help/sites-cloud/authoring/assets/responsive-layout-hide-button.png)
+
+  >[!NOTE]
+  >
+  >I exemplet ovan är åtgärderna float och hide tillgängliga eftersom den här layoutbehållaren är kapslad i en överordnad layoutbehållare.
 
    * **Visa komponenter**
-Välj de överordnade komponenterna för att visa åtgärdsverktygsfältet med 
-**Visa dolda komponenter** alternativ. I det här exemplet är två komponenter dolda.
+Välj de överordnade komponenterna för att visa åtgärdsverktygsfältet med **Visa dolda komponenter** alternativ. I det här exemplet är två komponenter dolda.
 
-      ![Visa komponenter](/help/sites-cloud/authoring/assets/responsive-layout-unhide.png)
-   Om du väljer alternativet **Visa dolda komponenter** visas de dolda komponenterna i blått i sina ursprungliga positioner.
+     ![Visa komponenter](/help/sites-cloud/authoring/assets/responsive-layout-unhide.png)
 
-   ![Knappen Återställ alla](/help/sites-cloud/authoring/assets/responsive-layout-restore-all.png)
+  Om du väljer alternativet **Visa dolda komponenter** visas de dolda komponenterna i blått i sina ursprungliga positioner.
 
-   Markera **Återställ alla** visar alla dolda komponenter.
+  ![Knappen Återställ alla](/help/sites-cloud/authoring/assets/responsive-layout-restore-all.png)
+
+  Markera **Återställ alla** visar alla dolda komponenter.

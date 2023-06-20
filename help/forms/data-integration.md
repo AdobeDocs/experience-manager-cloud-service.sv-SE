@@ -3,7 +3,7 @@ title: Ansluta en databas till [!DNL AEM Forms] as a Cloud Service?
 seo-title: AEM Forms Data Integration
 description: Du kan hämta och spara data till en RESTful-webbtjänst, SOAP-baserade webbtjänster och OData-tjänster från [!DNL AEM Forms] as a Cloud Service. Tjänsten tillhandahåller ett dedikerat verktyg för att hämta, testa, validera och skicka data till olika typer av datakällor.
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -40,7 +40,7 @@ När du har skapat en formulärdatamodell kan du använda den i olika arbetsflö
 
 ## Kom igång med dataintegrering {#get-started-with-data-integration}
 
-Det första steget för att implementera dataintegrering är att identifiera och konfigurera datakällor som lagrar information som du vill använda i Adaptive Forms och interaktiva kommunikationssituationer. Därefter skapar du en formulärdatamodell som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms och interaktiv kommunikation baserat på en formulärdatamodell där fält eller platshållare för adaptiva formulär i interaktiv kommunikation är bundna till respektive egenskaper för datakälla.
+Det första steget för att implementera dataintegrering är att identifiera och konfigurera datakällor som lagrar information som du vill använda i Adaptiv Forms och interaktiva kommunikationssituationer. Därefter skapar du en formulärdatamodell som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms och interaktiv kommunikation baserat på en formulärdatamodell där fält eller platshållare för adaptiva formulär i interaktiv kommunikation är bundna till respektive egenskaper för datakälla.
 
 [!DNL AEM Forms] I kan du också skapa en formulärdatamodell som är oberoende av datakällor och senare associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen med datakällan. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell.
 

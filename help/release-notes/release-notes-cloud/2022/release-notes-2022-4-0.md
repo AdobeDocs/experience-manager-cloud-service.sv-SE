@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.4.0-versionen av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.4.0-versionen av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 6c86838a-cabf-4770-b1ae-618af70193a2
-source-git-commit: 599f924465552b2ef43827da8e139c239e47baed
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 0%
@@ -64,7 +64,7 @@ Den AEM as a Cloud Service SDK Build Analyzer Maven Plugin identifierar problem 
 
 En ny analyserare har nyligen lagts till:
 
-* `content-packages-validation` - validerar för korrekt formaterad innehållssyntax och struktur för paket som ska installeras under distributionen
+* `content-packages-validation` - validerar för korrekt formaterad innehållssyntax och struktur för paket som installeras under distributionen
 
 Vi rekommenderar starkt att du uppdaterar ditt maven-projekt med den senaste versionen av analyseraren eller inkluderar analyseraren om du inte redan har gjort det. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html).
 
@@ -72,7 +72,7 @@ Vi rekommenderar starkt att du uppdaterar ditt maven-projekt med den senaste ver
 
 ### Borttagning av TLS 1.0, 1.1
 
-Från och med den 30 juni 2022 kommer Experience Manager as a Cloud Service att kräva säkrare nätverkskommunikation och datautbyte med användarsystem. AEM använder enbart TLS (Transport Layer Security), 1.2-protokollet. Äldre TLS-versioner 1.0 och 1.1 kommer att bli inaktuella.
+Från och med den 30 juni 2022 kommer Experience Manager as a Cloud Service att kräva säkrare nätverkskommunikation och datautbyte med användarsystem. AEM avser att enbart använda TLS (Transport Layer Security), 1.2-protokollet. Äldre TLS-versionerna 1.0 och 1.1 är nu inaktuella.
 
 Om du fortsätter att använda äldre versioner av TLS som 1.0, 1.1 kan du förlora åtkomsten till Experience Manager as a Cloud Service.
 

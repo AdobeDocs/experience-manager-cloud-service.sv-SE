@@ -2,9 +2,9 @@
 title: Marknadsföra Launches
 description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar.
 exl-id: 5f5ed17c-43db-4ef6-ab79-c491326fa01c
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '816'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,6 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 >* [Startar - ordningen för händelser](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events) om du vill ha mer information om automatiska kampanjer och publiceringar.
 >
 
-
 Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
 
 1. Öppna:
@@ -65,13 +64,13 @@ Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
       * **Höj upp aktuell sida**
       * **Befordra aktuella sidor och undersidor**
 
-      Om du t.ex. väljer att bara befordra ändrade sidor:
+     Om du t.ex. väljer att bara befordra ändrade sidor:
 
-      ![Starta kampanj](/help/sites-cloud/authoring/assets/launches-promote.png)
+     ![Starta kampanj](/help/sites-cloud/authoring/assets/launches-promote.png)
 
-      >[!NOTE]
-      >
-      >Detta omfattar en enstaka programstart, om du har kapslade programstarter, se [Befordra en kapslad start](#promoting-a-nested-launch).
+     >[!NOTE]
+     >
+     >Detta omfattar en enstaka programstart, om du har kapslade programstarter, se [Befordra en kapslad start](#promoting-a-nested-launch).
 1. Välj **Nästa** för att fortsätta.
 1. Du kan granska de sidor som ska befordras; dessa beror på vilket sidintervall du har valt:
 
@@ -119,7 +118,7 @@ När du har skapat en kapslad start kan du befordra den tillbaka till någon av 
    >
    >Vilka sidor som visas beror på **Omfång** definierade och eventuellt de sidor som har redigerats.
 
-1. Ändringarna kommer att främjas och återspeglas i **Startar** konsol:
+1. Ändringarna befordras och återspeglas i **Startar** konsol:
 
    ![Startar konsolen](/help/sites-cloud/authoring/assets/launches-console.png)
 

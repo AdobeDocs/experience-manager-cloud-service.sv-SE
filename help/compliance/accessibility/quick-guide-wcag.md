@@ -2,10 +2,10 @@
 title: En snabbguide till WCAG 2.1
 description: En snabbguide till WCAG 2.1
 exl-id: 56aa834b-cd07-41c5-88f2-915bc0596e48
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1776'
-ht-degree: 98%
+source-wordcount: '1774'
+ht-degree: 92%
 
 ---
 
@@ -42,8 +42,7 @@ Det vill säga riktlinjer som kan tillämpas på en rad olika format för webbin
 Varje riktlinje är skriven på ett sådant sätt att den kan testas objektivt för att säkerställa att en allmän grupp tillgänglighetsexperter håller med om att riktlinjen har följts. En av utmaningarna med riktlinjerna för tillgänglighet är att vissa kan testas tekniskt medan andra kräver en mänsklig bedömning för att avgöra om riktlinjerna har följts eller inte.
 
 * Stöd för **prioriterad och sammanhangsbaserad implementering:**
-Riktlinjer för WCAG 2.1 är prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet 
-*tillgänglighet som stöds*. Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet eller som kan kräva att användarna har särskilda hjälpmedelstekniker och/eller webbläsare för att kunna utnyttja tillgänglighetsfunktionerna.
+Riktlinjer för WCAG 2.1 är prioriteringar som rör den troliga effekten av att inte följa en riktlinje för en viss grupp användare med funktionshinder. Detta gör det möjligt för författare att fatta ett välgrundat beslut om de viktigaste riktlinjerna för sin särskilda situation. Dessutom introduceras begreppet *tillgänglighet som stöds*. Detta gör att författare kan fatta beslut om hur de bäst använder webbtekniker som kanske inte har fullständigt stöd för tillgänglighet, eller som kan kräva att användarna har särskilda hjälpmedelstekniker och webbläsare, eller båda, för att utnyttja tillgänglighetsfunktioner.
 
 Dessa mål har i hög grad påverkat strukturen i WCAG 2.1.
 
@@ -115,7 +114,7 @@ Varje teknik har ett unikt nummer som refererar till dess samling. En av ARIA-te
 
 Tekniker kan vara tillräckliga, rådgivande eller felaktiga:
 
-* En *tillräcklig teknik* är en teknik som, om den följs, kommer att vara tillräcklig för att uppfylla ett visst framgångkriterium.
+* A *Tillräcklig teknik* är ett som, om det följs, är tillräckligt för att uppfylla ett visst kriterium för framgång.
 * En *rådgivande teknik* är en teknik som, om den följs, kommer att ha en positiv inverkan på tillgängligheten, men kanske inte i sig räcker för att uppfylla ett visst kriterium.
 * En *felaktig teknik* är en teknik som beskriver ett specifikt exempel när ett framgångskriterium inte uppfylls.
 
@@ -127,15 +126,15 @@ Listan över tekniker är inte fullständig och WAI uppdaterar hela tiden listan
 
 Detta är en serie dokument som innehåller råd som hjälper läsarna att förstå syftet med specifika riktlinjer och framgångskriterier. Du kan [ladda ned en introduktion samt länkar till mer detaljerad information](https://www.w3.org/WAI/WCAG21/Understanding/).
 
-Varje riktlinje och framgångskriterium har också en egen Understanding-sida med information om:
+Varje enskild riktlinje och kriterium för framgång har också en egen&quot;Förstå&quot;-sida med information om:
 
 * Syftet med riktlinjen
 * Särskilda framgångskriterier
 * Rådgivande tekniker som hjälper till att uppfylla kraven i riktlinjen, men som inte omfattas av något särskilt framgångskriterium.
 
-Sidan Understanding för varje framgångskriterium innehåller information om:
+Varje resultatkriteris sida för&quot;förståelse&quot; innehåller information om:
 
-* Syftet med framgångskriteriet.
+* Framgångskriteriets avsikt.
 * Allmänna exempel på hur framgångskriteriet kan uppfyllas.
 * Relaterade resurser (ej från W3C) om hur man uppfyller framgångskriteriet.
 * Tekniker och fel: specifika och detaljerade exempel på hur framgångskriteriet kan uppfyllas (beskrivs nedan)
@@ -145,7 +144,7 @@ Ett exempel finns på: [Understanding Success Criterion 1.1.1 (&quot;Non-text co
 
 ### Så här uppfyller du WCAG 2.1 {#how-to-meet-wcag}
 
-Avsnittet How to Meet finns på sidan [How To Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/). Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
+Avsnittet &quot;Hur du uppfyller&quot; finns på [Så här uppfyller du WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/) sida. Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
 
 Utan filtrering visar den här resursen alla framgångskriterier grupperade efter riktlinjer. För varje framgångskriterium anges följande:
 

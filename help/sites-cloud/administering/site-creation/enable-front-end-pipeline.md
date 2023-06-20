@@ -1,19 +1,19 @@
 ---
 title: Aktivera frontendspipelinen
-description: Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser för att utnyttja webbplatsteman för att snabbare anpassa din webbplats.
+description: Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser så att du kan använda webbplatsteman för att anpassa webbplatsen snabbare.
 feature: Administering
 role: Admin
 exl-id: 55d54d72-f87b-47c9-955f-67ec5244dd6e
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
 
 # Aktivera frontendspipelinen {#enable-front-end-pipeline}
 
-Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser för att utnyttja webbplatsteman för att snabbare anpassa din webbplats.
+Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser så att du kan använda webbplatsteman för att anpassa webbplatsen snabbare.
 
 ## Översikt {#overview}
 
@@ -21,7 +21,7 @@ Det är en mekanism som snabbt kan driftsätta endast koden på era webbplatser 
 
 I stället för att använda den fullständiga stacken hanteras bara den färdiga koden av den här pipeline som gör processen snabbare och gör det även möjligt för gränssnittsutvecklare att enkelt och snabbt anpassa din webbplats utan att känna till AEM.
 
-Webbplatser som är baserade på webbplatsmallar kan utnyttja frontendspipelinen som standard. I det här dokumentet beskrivs hur du kan anpassa dina befintliga webbplatser för att dra nytta av frontendriet.
+Platser som är baserade på platsmallar kan som standard använda frontendspipelinen. I det här dokumentet beskrivs hur du kan anpassa dina befintliga webbplatser för att dra nytta av frontendriet.
 
 >[!TIP]
 >

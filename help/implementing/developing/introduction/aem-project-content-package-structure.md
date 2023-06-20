@@ -2,9 +2,9 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2927'
 ht-degree: 11%
 
 ---
@@ -74,7 +74,7 @@ Den rekommenderade programdistributionsstrukturen är följande:
 
 >[!NOTE]
 >
->Samma kod måste distribueras till alla miljöer. Detta är nödvändigt för att säkerställa en nivå av konfidensvalidering i scenmiljön som också är i produktion. Mer information finns i avsnittet om [Runmodes](/help/implementing/deploying/overview.md#runmodes).
+>Samma kod måste distribueras till alla miljöer. Den här koden behövs för att säkerställa en nivå av konfidensvalidering i scenmiljön som också är i produktion. Mer information finns i avsnittet om [Runmodes](/help/implementing/deploying/overview.md#runmodes).
 
 
 ### Innehållspaket
@@ -93,11 +93,11 @@ Den rekommenderade programdistributionsstrukturen är följande:
 
 + The `all` paketet är ett behållarpaket som ENDAST innehåller installerbara artefakter, den oSGI-paketerade JAR-filen, `ui.apps`, `ui.config` och `ui.content` paket som inbäddade. The `all` paketet får inte ha **allt innehåll och all kod** själva, men delegera i stället all distribution till databasen till dess underpaket eller OSGi-paket med Jar-filer.
 
-   Paket ingår nu i Maven [Konfiguration för plugin-programmet FileVault Package Maven](#embeddeds)i stället för `<subPackages>` konfiguration.
+  Paket ingår nu i Maven [Konfiguration för plugin-programmet FileVault Package Maven](#embeddeds)i stället för `<subPackages>` konfiguration.
 
-   För komplexa Experience Manager-distributioner kan det vara önskvärt att skapa flera `ui.apps`, `ui.config` och `ui.content` projekt/paket som representerar specifika webbplatser eller klientorganisationer i AEM. Om detta görs ser du till att delningen mellan ändringsbart och icke-ändringsbart innehåll respekteras och att de nödvändiga innehållspaketen och OSGi bundle JAR-filerna bäddas in som underpaket i `all` behållarinnehållspaket.
+  För komplexa Experience Manager-distributioner kan det vara önskvärt att skapa flera `ui.apps`, `ui.config` och `ui.content` projekt/paket som representerar specifika webbplatser eller klientorganisationer i AEM. Om detta görs ser du till att delningen mellan ändringsbart och icke-ändringsbart innehåll respekteras och att de nödvändiga innehållspaketen och OSGi bundle JAR-filerna bäddas in som underpaket i `all` behållarinnehållspaket.
 
-   En innehållsstruktur för en komplex distribution kan till exempel se ut så här:
+  En innehållsstruktur för en komplex distribution kan till exempel se ut så här:
 
    + `all` innehållspaketet bäddar in följande paket för att skapa en enda distributionsartefakt
       + `common.ui.apps` distribuerar kod som krävs av **båda** plats A och plats B
@@ -231,12 +231,12 @@ Bryter ned mappstrukturen:
    + `/apps/my-other-app-packages`
    + `/apps/vendor-packages`
 
-   >[!WARNING]
-   >
-   >Mappar som bäddats in i underpaket namnges med suffixet `-packages`. Detta garanterar att distributionskoden och innehållspaketen **inte** distribueras till målmappen/målmapparna i något underpaket `/apps/<app-name>/...`, vilket skulle leda till destruktivt och cykliskt installationsbeteende.
+  >[!WARNING]
+  >
+  >Mappar som bäddats in i underpaket namnges med suffixet `-packages`. Detta garanterar att distributionskoden och innehållspaketen **inte** distribueras till målmappen/målmapparna i något underpaket `/apps/<app-name>/...`, vilket skulle leda till destruktivt och cykliskt installationsbeteende.
 
 + Mappen på den tredje nivån måste vara antingen
-   `application`, `content` eller `container`
+  `application`, `content` eller `container`
    + The `application` mapp innehåller kodpaket
    + The `content` mapp innehåller innehållspaket
    + The `container` mappen innehåller alla [extra programpaket](#extra-application-packages) som kan ingå i AEM.
@@ -286,7 +286,7 @@ Om du lägger till Maven-beroenden följer standardMaven-rutiner, och inbäddnin
 
 ## Paketberoenden mellan `ui.apps` från `ui.content` Paket {#package-dependencies}
 
-För att paketen ska kunna installeras på rätt sätt rekommenderar vi att du skapar beroenden mellan paketen.
+För att paketen ska kunna installeras på rätt sätt rekommenderar vi att du skapar beroenden mellan paket.
 
 Den allmänna regeln är paket som innehåller ändringsbart innehåll (`ui.content`) ska vara beroende av den oföränderliga koden (`ui.apps`) som har stöd för återgivning och användning av det ändringsbara innehållet.
 
@@ -549,7 +549,7 @@ Om flera `/apps/*-packages` används i de inbäddade målen, måste alla räknas
 
 >[!WARNING]
 >
->Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras om det finns beroenden.
+>Om du lägger till fler Maven-databaser kan det ta längre tid att bygga maven när ytterligare Maven-databaser kontrolleras för beroenden.
 
 I reaktorprojektets `pom.xml`, lägger du till eventuella nödvändiga direktiv från tredje part för databasen Maven. Den fullständiga `<repository>` -konfigurationen bör vara tillgänglig från tredjepartsprovidern för databas.
 

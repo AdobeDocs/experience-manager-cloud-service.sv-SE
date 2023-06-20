@@ -3,9 +3,9 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: 6063c587c1d65587c44e551f3a5c2f3c34ced011
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Frågan visas på redigeringspanelen. Gör de ändringar du behöver och använd
 
 Du kan köra en ny fråga direkt eller läsa in och köra en beständig fråga. Om du vill läsa in en beständig fråga väljer du den i listan. Frågan visas i redigeringspanelen.
 
-I båda fallen är frågan som visas på redigeringspanelen den fråga som kommer att köras när du antingen:
+I båda fallen är frågan som visas på redigeringspanelen den fråga som körs när du antingen:
 
 * klicka/tryck på **Kör fråga** icon
 * använda tangentbordskombinationen `Control-Enter`

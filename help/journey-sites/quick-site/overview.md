@@ -2,10 +2,10 @@
 title: AEM för att skapa webbplatser snabbt
 description: Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av AEM sajt och snabbt anpassar sajten utan någon AEM backend-kunskap.
 exl-id: b8218232-0298-4b16-9dab-fa59be592a24
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 0%
+source-wordcount: '1035'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget so
 
 ## Introduktion {#introduction}
 
-AEM Sites är en kraftfull verktygslåda för att skapa och hantera digitala upplevelser. Innehållsförfattare kan enkelt skapa digitala upplevelser med hjälp av webbplatsredigeraren och ordna innehållet med hjälp av webbplatskonsolen, samtidigt som de kan se innehållet live som det kommer att levereras av AEM till era målgrupper i alla kanaler.
+AEM Sites är en kraftfull verktygslåda för att skapa och hantera digitala upplevelser. Innehållsförfattare kan enkelt skapa digitala upplevelser med hjälp av webbplatsredigeraren och ordna innehållet med hjälp av webbplatskonsolen, samtidigt som de kan se innehållet live som det levereras av AEM till era målgrupper i alla kanaler.
 
 Med AEM snabbverktyg kan andra användare snabbt skapa en ny webbplats från grunden med hjälp av webbplatsmallar. Med verktyget Skapa snabbwebbplats kan du snabbt anpassa temat och formatet för den AEM webbplatsen (JavaScript, CSS och statiska resurser). Detta gör att gränssnittsutvecklaren, som inte behöver ha någon kunskap om AEM, kan arbeta separat och parallellt med innehållsskaparna. Den AEM administratören laddar ned webbplatstemat och skickar det till den frontendutvecklare som anpassar det med sina favoritverktyg och sedan implementerar ändringarna i den AEM koddatabasen, som sedan distribueras.
 
@@ -31,7 +31,7 @@ Den här dokumentationsresan tar dig igenom alla funktioner i videon steg för s
 
 [En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar hur man löser webbplatsaffärsärenden med AEM, är AEM Sites Journeys där man ska börja.
 
@@ -50,7 +50,16 @@ Den här resan innehåller krav, steg och tillvägagångssätt för att anpassa 
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar får du grundläggande kunskaper om hur du skapar och anpassar AEM webbplatser med verktyget Skapa snabbwebbplats och länkar till detaljerad teknisk dokumentation.
 
-|#|Artikel|Beskrivning|Ansvarig roll| |—|—|—|—| |0|AEM snabbresa för att skapa webbplatser|Det här dokumentet|Administratörer för AEM &amp; Cloud Manager| |1|[Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md)|Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.|AEM Administratör| |2|[Skapa webbplats från mall](create-site.md)|Lär dig hur du snabbt skapar en ny AEM webbplats med hjälp av en webbplatsmall.|AEM Administratör| |3|[Konfigurera din pipeline](pipeline-setup.md)|Skapa en pipeline i gränssnittet för att hantera anpassningen av webbplatsens tema.Administratör för |Cloud Manager| |4|[Bevilja åtkomst till klientutvecklaren](grant-access.md)|Lägg in gränssnittsutvecklarna i Cloud Manager så att de får tillgång till databasen och pipeline för AEM webbplats.Administratör för |Cloud Manager| |5|[Hämta åtkomstinformation för Git-databasen](retrieve-access.md)|Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.|Front-End Developer| |6|[Anpassa webbplatstemat](customize-theme.md)|Lär dig hur ett webbplatstema byggs, hur du anpassar det och hur du testar det med AEM.|Front-End Developer| |7|[Distribuera ditt anpassade tema](deploy-theme.md)|Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.|Front-End Developer|
+| # | Artikel | Beskrivning | Ansvarig roll |
+|---|---|---|--|
+| 0 | AEM för att skapa webbplatser snabbt | Det här dokumentet | Administratörer för AEM &amp; Cloud Manager |
+| 1 | [Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md) | Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser. | AEM-administratör |
+| 2 | [Skapa webbplats från mall](create-site.md) | Lär dig hur du snabbt skapar en ny AEM med hjälp av en webbplatsmall. | AEM-administratör |
+| 3 | [Konfigurera din pipeline](pipeline-setup.md) | Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens tema. | Administratör för Cloud Manager |
+| 4 | [Bevilja åtkomst till klientutvecklaren](grant-access.md) | Anlita gränssnittsutvecklare i Cloud Manager så att de får tillgång till era AEM och er pipeline. | Administratör för Cloud Manager |
+| 5 | [Hämta åtkomstinformation för Git-databasen](retrieve-access.md) | Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation. | Front-End Developer |
+| 6 | [Anpassa webbplatstemat](customize-theme.md) | Lär dig hur ett webbplatstema byggs, hur du anpassar det och hur du testar det med AEM innehåll. | Front-End Developer |
+| 7 | [Distribuera ditt anpassade tema](deploy-theme.md) | Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline. | Front-End Developer |
 
 ## What&#39;s Next {#what-is-next}
 

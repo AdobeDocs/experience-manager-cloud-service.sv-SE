@@ -2,9 +2,9 @@
 title: Versionsinformation om 2020.11.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.11.0."
 exl-id: 8066c0fb-c2f5-4625-9448-b0c74ff4e192
-source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1254'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,15 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 ### Nyheter i [!DNL Assets] och [!DNL Dynamic Media] {#what-is-new-assets}
 
-* **Massintag av resurser**: Förse kunderna med en skalbar, molnbaserad importfunktion som utnyttjar [!DNL Experience Manager] as a Cloud Service arkitektur inklusive tillgångsmikrotjänster. Exempel på viktiga användningsområden är inhämtning i stor skala med övervakning, rapportering och schemaläggning, samtidigt som resurser kan överföras till molndatalager med hjälp av vanliga verktyg för molnöverföring. Se [verktyg för massinhämtning](/help/assets/add-assets.md#asset-bulk-ingestor).
+* **Massintag av resurser**: Förse kunderna med en skalbar, molnbaserad importfunktion som använder [!DNL Experience Manager] as a Cloud Service arkitektur inklusive tillgångsmikrotjänster. Exempel på viktiga användningsområden är inhämtning i stor skala med övervakning, rapportering och schemaläggning, samtidigt som resurser kan överföras till molndatalager med hjälp av vanliga verktyg för molnöverföring. Se [verktyg för massinhämtning](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-   Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=en) eller [överföra med Assets-användargränssnittet](/help/assets/add-assets.md#upload-assets).
+  Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=en) eller [överföra med Assets-användargränssnittet](/help/assets/add-assets.md#upload-assets).
 
-   ![Konfiguration av bulkimporterare](/help/assets/assets/bulk-import-config-low-res.png)
+  ![Konfiguration av bulkimporterare](/help/assets/assets/bulk-import-config-low-res.png)
 
 * Användarna kan nu sortera de digitala resurserna i kort- och kolumnvyerna.
 
-   ![sortera resurser](/help/assets/assets/asset-sort-options.png)
+  ![sortera resurser](/help/assets/assets/asset-sort-options.png)
 
 * Följande förbättringar har gjorts för tillgänglighet i [!DNL Experience Manager Assets] i den här versionen. Mer information finns i [tillgänglighetsfunktioner i [!DNL Assets]](/help/assets/accessibility.md).
 
@@ -54,7 +54,7 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 * **Gruppuppsättningsförinställningar i Dynamic Media**: Nu kan du automatisera skapandet och organiseringen av flera resurser i en bilduppsättning eller snurra när du överför resursfiler till en mapp, antingen individuellt eller genom att använda massinläsning.
 
-   Se [Om förinställningar för gruppuppsättning](/help/assets/dynamic-media/batch-set-presets-dm.md).
+  Se [Om förinställningar för gruppuppsättning](/help/assets/dynamic-media/batch-set-presets-dm.md).
 
 * Följande tillgänglighetsförbättringar är nu tillgängliga i [!DNL Dynamic Media]:
 
@@ -67,7 +67,7 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
    * Användare av tangentbord och skärmläsare kan använda beskärningsfunktionen.
    * Tangentbordsanvändarna kan hantera de aktiveringspunkter som behövs bättre.
 
-   Se [Tillgänglighet i [!DNL Dynamic Media]](/help/assets/dynamic-media/accessibility-dm.md).
+  Se [Tillgänglighet i [!DNL Dynamic Media]](/help/assets/dynamic-media/accessibility-dm.md).
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
@@ -99,7 +99,7 @@ Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#lo
 * Inläsningen av beroenden som gjorts före körningen av bygget krävde hämtning av ett Maven-plugin-program.
 * Länken från molnhanterarens sidfot för att välja ett språk navigerar nu till rätt plats.
 * Ibland startar inte SonarQube-processen under kodskanningen. Detta identifieras nu automatiskt och ett omstartsförsök görs.
-* Alla befintliga produktionspipelinjer aktiveras automatiskt med Experience Audit-steget.
+* Alla befintliga produktionspipelines aktiveras automatiskt med Experience Audit-steget.
 
 ## Adobe Experience Manager as a Cloud Service Foundation {#cloud-service-foundation}
 

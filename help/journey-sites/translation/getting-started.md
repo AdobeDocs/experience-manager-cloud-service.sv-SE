@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 9bfc3995-ac8e-488e-b68f-9e1b5b4a3176
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1406'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Det finns ett antal krav innan du börjar översätta AEM innehåll.
 
 ## Så här lagrar AEM innehåll {#content-in-aem}
 
-För översättningsspecialisten är det inte viktigt att förstå hur AEM hanterar innehåll i detalj. Att känna till de grundläggande begreppen och terminologin kan dock vara praktiskt när du senare använder AEM översättningsverktyg. Viktigast av allt är att ni måste förstå ert eget innehåll och hur det är strukturerat för att kunna översätta det effektivt.
+För översättningsspecialisten är det inte viktigt att förstå hur AEM hanterar innehåll i detalj. Att känna till grundläggande begrepp och terminologi är dock användbart eftersom du senare använder AEM översättningsverktyg. Viktigast av allt är att ni måste förstå ert eget innehåll och hur det är strukturerat för att effektivt kunna översätta det.
 
 ### Webbplatskonsol {#sites-console}
 
@@ -97,7 +97,7 @@ På webbplatskonsolen kan du navigera i ditt innehåll och få en översikt öve
 
 Så här redigerar du en sida:
 
-1. Använd platskonsolen för att hitta och välja en sida. Kom ihåg att du måste trycka på eller klicka i kryssrutan för en enskild sida för att kunna markera den.
+1. Använd platskonsolen för att hitta och välja en sida. Kom ihåg att du måste trycka på eller klicka i kryssrutan för en enskild sida för att markera den.
 
    ![Markera en sida som ska redigeras](assets/sites-editor-select-page.png)
 
@@ -175,7 +175,7 @@ Den slutliga strukturen kan se ut ungefär så här.
     |- ...
 ```
 
-Du bör notera den specifika sökvägen för ditt innehåll, eftersom det krävs senare för att konfigurera översättningen.
+Du bör tänka på den specifika sökvägen för ditt innehåll eftersom det krävs senare för att konfigurera översättningen.
 
 >[!NOTE]
 >

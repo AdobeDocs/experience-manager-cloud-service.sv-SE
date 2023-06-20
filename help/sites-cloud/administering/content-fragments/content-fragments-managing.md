@@ -4,10 +4,10 @@ description: Lär dig hur du använder konsolen Innehållsfragment för att hant
 feature: Content Fragments
 role: User
 exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
-source-git-commit: 6063c587c1d65587c44e551f3a5c2f3c34ced011
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2071'
-ht-degree: 1%
+source-wordcount: '2053'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,6 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 >
 >* vid framtagning av sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 >* for [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-fragments-graphql.md).
-
 
 >[!NOTE]
 >
@@ -71,10 +70,10 @@ Så här skapar du ett innehållsfragment:
 
 1. The **Nytt innehållsfragment** öppnas en dialogruta där du kan ange:
 
-   * **Plats** - den här fylls i automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs
+   * **Plats** - slutförs automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs
    * **Content Fragment Model** - välj den modell som ska användas som bas för fragmentet i listrutan.
    * **Titel**
-   * **Namn** - detta slutförs automatiskt baserat på **Titel**, men du kan redigera det om det behövs
+   * **Namn** - automatiskt slutförd baserat på **Titel**, men du kan redigera det om det behövs
    * **Beskrivning**
 
    ![Dialogrutan Nytt innehållsfragment](assets/cfm-managing-new-cf-01.png)
@@ -185,23 +184,23 @@ Redigeraren har olika alternativ:
    * **Spara** sparar de senaste ändringarna och finns kvar i redigeraren.
    * **Spara och stäng** sparar de senaste ändringarna och avslutar redigeraren.
 
-   >[!CAUTION]
-   >
-   >Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
+  >[!CAUTION]
+  >
+  >Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
-   >[!NOTE]
-   >
-   >Du kan vara kvar i redigeraren och göra en serie ändringar innan du sparar.
+  >[!NOTE]
+  >
+  >Du kan vara kvar i redigeraren och göra en serie ändringar innan du sparar.
 
-   >[!CAUTION]
-   >
-   >Förutom att bara spara ändringarna uppdaterar åtgärderna alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
-   >
-   >Tänk på detta när du använder **Spara och stäng** och sedan snabbt ange fragmentredigeraren igen för att göra och spara ytterligare ändringar.
+  >[!CAUTION]
+  >
+  >Förutom att bara spara ändringarna uppdaterar åtgärderna alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
+  >
+  >Tänk på detta när du använder **Spara och stäng** och sedan snabbt ange fragmentredigeraren igen för att göra och spara ytterligare ändringar.
 
 * **Stäng**
 
-   Avslutar redigeraren utan att spara de senaste ändringarna (d.v.s. gjorda sedan den senaste **Spara**).
+  Avslutar redigeraren utan att spara de senaste ändringarna (d.v.s. gjorda sedan den senaste **Spara**).
 
 När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du avbryter ändringarna (med **Stäng** utan att spara):
 
@@ -246,20 +245,24 @@ Du kan publicera dina innehållsfragment till:
 
 * den **[Förhandsgranskningstjänst](/help/overview/architecture.md#runtime-architecture)** - förhandsgranska innehållet innan det är fullständigt tillgängligt
 
-   >[!CAUTION]
-   Publicera innehållsfragment till **Förhandsgranskningstjänst** är bara tillgängligt från [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md); med **Publicera** åtgärd.
+  >[!CAUTION]
+  >
+  Publicera innehållsfragment till **Förhandsgranskningstjänst** är bara tillgängligt från [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md); med **Publicera** åtgärd.
 
-   >[!NOTE]
-   Mer information om förhandsvisningsmiljöerna finns i:
-   * [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#access-preview-service)
-   * [Konfigurera OSGi-inställningar för förhandsgranskningsnivån](/help/implementing/preview-tier/preview-tier-configuring-osgi.md#configuring-osgi-settings-for-the-preview-tier)
-   * [Förhandsvisa felsökning med Developer Console](/help/implementing/preview-tier/preview-tier-configuring-osgi.md#debugging-preview-using-the-developer-console)
-
+  >[!NOTE]
+  >
+  Mer information om förhandsvisningsmiljöerna finns i:
+  >
+  * [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#access-preview-service)
+  * [Konfigurera OSGi-inställningar för förhandsgranskningsnivån](/help/implementing/preview-tier/preview-tier-configuring-osgi.md#configuring-osgi-settings-for-the-preview-tier)
+  * [Förhandsvisa felsökning med Developer Console](/help/implementing/preview-tier/preview-tier-configuring-osgi.md#debugging-preview-using-the-developer-console)
 
 Publicera dina innehållsfragment med **Publicera** i verktygsfältet i [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md#actions-selected-content-fragment):
 
 >[!CAUTION]
+>
 Om fragmentet är baserat på en modell bör du se till att [modellen har publicerats](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model).
+>
 Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
 1. Markera ett eller flera av fragmenten i listan.
@@ -267,7 +270,7 @@ Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publ
 1. Välj **Publicera** och sedan något av följande för att öppna rätt dialogruta:
 
    * **Nu** - välj antingen **Publiceringstjänst** eller **Förhandsgranskningstjänst**; efter bekräftelse publiceras fragmentet omedelbart
-   * **Schema** - förutom den obligatoriska tjänsten kan du även välja datum och tid då fragmentet ska publiceras
+   * **Schema** - förutom den obligatoriska tjänsten kan du även välja datum och tid när fragmentet publiceras
 
    Vid behov måste du ange vilka referenser som ska publiceras. Som standard publiceras referenser även till förhandsgranskningstjänsten för att säkerställa att det inte finns någon brytning i innehållet.
 För en schemalagd publiceringsbegäran:
@@ -280,10 +283,12 @@ Du kan även publicera på **Publiceringstjänst** från [Innehållsfragmentsred
 * **Hantera publikation**
 
 >[!NOTE]
-Efter [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet kommer att listas i sidreferenserna.
+>
+Efter [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing), listas fragmentet i sidreferenserna.
 
 >[!CAUTION]
-När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i avsnittet även påverkar de refererade sidorna.
+>
+När ett fragment har publicerats, refererats, eller både och, visar AEM en varning när en författare öppnar fragmentet för redigering igen. Författaren får en varning om att ändringar i fragmentet även kommer att påverka refererade sidor.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 
@@ -293,9 +298,11 @@ När dialogrutan öppnas kan du välja rätt tjänst:
 ![Dialogrutan Avpublicera](assets/cfm-unpublish-01.png)
 
 >[!NOTE]
-The **Avpublicera** åtgärden visas bara när publicerade fragment är tillgängliga.
+>
+The **Avpublicera** -åtgärden visas bara när publicerade fragment är tillgängliga.
 
 >[!CAUTION]
+>
 Om fragmentet redan refereras från ett annat fragment, eller från en sida, visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta.
 
 ## Ta bort ett fragment {#deleting-a-fragment}
@@ -306,13 +313,15 @@ Så här tar du bort ett fragment:
 2. Markera fragmentet.
 
    >[!NOTE]
+   >
    The **Ta bort** åtgärden är inte tillgänglig som en snabbåtgärd.
 
 3. Välj **Ta bort** i verktygsfältet.
 4. Bekräfta **Ta bort** åtgärd.
 
    >[!CAUTION]
-   Om fragmentet redan refereras från ett annat fragment, eller från en sida, visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med ett **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponentfragment, tas bort från alla innehållssidor.
+   >
+   Om fragmentet redan refereras från ett annat fragment, eller från en sida, visas ett varningsmeddelande och du måste bekräfta att du vill fortsätta med ett **Tvinga borttagning**. Fragmentet, tillsammans med dess innehållskomponent fragment, tas bort från alla innehållssidor.
 
 ## Söka efter överordnade referenser för ditt fragment {#parent-references-fragment}
 
@@ -325,6 +334,7 @@ Information om språkkopior finns på **Språk** kolumn i [Konsol för innehåll
 ## Tidslinje för innehållsfragment {#timeline-for-content-fragments}
 
 >[!NOTE]
+>
 Den här funktionen är bara tillgänglig i **Resurser** konsol
 
 Förutom standardalternativen [Tidslinje](/help/assets/manage-digital-assets.md#timeline) innehåller både information och åtgärder som är specifika för innehållsfragment:
@@ -345,16 +355,18 @@ Förutom standardalternativen [Tidslinje](/help/assets/manage-digital-assets.md#
    * **Ta bort**
 
 >[!NOTE]
+>
 Kommentarerna är:
+>
 * Standardfunktionalitet för alla resurser
 * Skapat i tidslinjen
 * Relaterat till fragmentresursen
 >
 Anteckningar (för innehållsfragment) är:
+>
 * Anges i fragmentredigeraren
 * Specifik för ett markerat textsegment i fragmentet
 >
-
 
 Till exempel:
 
@@ -363,6 +375,7 @@ Till exempel:
 ## Jämföra fragmentversioner {#comparing-fragment-versions}
 
 >[!NOTE]
+>
 Den här funktionen är bara tillgänglig i **Resurser** konsol
 
 The **Jämför med aktuell** finns tillgänglig från [Tidslinje](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) när du har valt en viss version.
@@ -386,6 +399,7 @@ De visas sida vid sida, där:
 * **Klar** kommer du tillbaka till konsolen
 
 >[!NOTE]
+>
 Du kan inte redigera fragmentinnehållet när du jämför fragment.
 
 ![jämföra](assets/cfm-managing-06.png)
@@ -393,12 +407,13 @@ Du kan inte redigera fragmentinnehållet när du jämför fragment.
 ## Återställa till en version  {#reverting-to-a-version}
 
 >[!NOTE]
+>
 Den här funktionen är bara tillgänglig i **Resurser** konsol
 
 Du kan återgå till en viss version av fragmentet:
 
 * Direkt från [Tidslinje](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#timeline-for-content-fragments).
 
-   Välj önskad version och sedan **Återgå till den här versionen** åtgärd.
+  Välj önskad version och sedan **Återgå till den här versionen** åtgärd.
 
 * while [jämföra en version med den aktuella versionen](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#comparing-fragment-versions) du kan **Återställ** till den valda versionen.

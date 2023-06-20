@@ -2,9 +2,9 @@
 title: Java Functional Tests
 description: Lär dig skriva Java-funktionstester för AEM as a Cloud Service
 exl-id: e449a62a-c8ad-4d39-a170-abacdda3f1b1
-source-git-commit: cda1f51c89a98cfb75d63f8bd9b54e76ee745aa7
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '848'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ Innan du aktiverar funktionstester i en pipeline för Cloud Manager rekommendera
 
 Eftersom testklasser är JUnit-tester kan de köras från vanliga Java-IDE:er som Eclipse, IntelliJ och NetBeans. Eftersom både produktfunktionstester och anpassade funktionstester baseras på samma teknik, kan båda köras lokalt genom att produkttesterna kopieras till dina anpassade tester.
 
-När du kör dessa tester måste du dock ange ett antal systemegenskaper som förväntas av `aem-testing-clients` (och det underliggande Sling Testing Clients) biblioteket.
+När du kör dessa tester måste du dock ange en mängd olika systemegenskaper som förväntas av `aem-testing-clients` (och det underliggande Sling Testing Clients) biblioteket.
 
 Systemegenskaperna är följande.
 
@@ -130,11 +130,11 @@ Systemegenskaperna är följande.
 | `sling.it.instance.url.1` | ska anges till författarens URL | `http://localhost:4502` |
 | `sling.it.instance.runmode.1` | runmode för den första instansen, ska anges till `author` | `author` |
 | `sling.it.instance.adminUser.1` | ska anges till författaradministratörsanvändaren. | `admin` |
-| `sling.it.instance.adminPassword.1` | ska anges som författarens administratörslösenord. |  |
+| `sling.it.instance.adminPassword.1` | ska anges som författarens administratörslösenord. |                         |
 | `sling.it.instance.url.2` | ska anges till publicerings-URL:en | `http://localhost:4503` |
 | `sling.it.instance.runmode.2` | runmode för den andra instansen, ska anges till `publish` | `publish` |
 | `sling.it.instance.adminUser.2` | ska ställas in för publiceringsadministratörsanvändaren. | `admin` |
-| `sling.it.instance.adminPassword.2` | ska anges till administratörslösenordet för publicering. |  |
+| `sling.it.instance.adminPassword.2` | ska anges till administratörslösenordet för publicering. |                         |
 
 
 

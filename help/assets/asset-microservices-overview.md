@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Compute Microservices,Workflow,Release Information,Asset Processing
 role: Architect,Admin
 exl-id: 1e069b95-a018-40ec-be01-9a74ed883b77
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Översikt över intag och hantering av tillgångar med hjälp av mikrotjänster {#asset-microservices-overview}
 
-Adobe Experience Manager som [!DNL Cloud Service] har en molnbaserad metod för att utnyttja program och funktioner från Experience Manager. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster. Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna med molnbaserade resurstjänster är:
+Adobe Experience Manager som [!DNL Cloud Service] innehåller en molnbaserad metod för att använda program och funktioner i Experience Manager. En av de viktigaste komponenterna i den nya arkitekturen är att man får in och bearbetar material med hjälp av mikrotjänster. Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. De viktigaste fördelarna med molnbaserade resurstjänster är:
 
 * Skalbar arkitektur som möjliggör smidig bearbetning för resurskrävande åtgärder.
 * Effektiv indexering och textextrahering som inte påverkar Experience Manager-miljöernas prestanda.
@@ -98,4 +98,3 @@ Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsfl
 >* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
 >* [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
 >* [Apache Oak-dokumentation om direkt binär åtkomst](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)
-

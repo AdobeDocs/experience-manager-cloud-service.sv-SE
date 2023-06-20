@@ -2,7 +2,7 @@
 title: Aktivera progressiva webbprogramfunktioner
 description: AEM Sites gör det möjligt för innehållsförfattaren att aktivera progressiva webbprogramfunktioner för alla webbplatser genom enkel konfiguration istället för kodning.
 exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
-source-git-commit: 3910b47c5d25679d03409380d91afaa6ff5ab265
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '2004'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 >* Förståelse av cachelagringsstrategier
 >* Support från ditt utvecklingsteam
 >
->Innan du använder den här funktionen bör du diskutera detta med utvecklingsteamet för att definiera det bästa sättet att utnyttja den i ditt projekt.
+>Innan du använder den här funktionen bör du diskutera detta med utvecklingsteamet för att definiera det bästa sättet att använda den i ditt projekt.
 
 ## Introduktion {#introduction}
 
@@ -50,7 +50,7 @@ Detta är tekniska steg som författaren måste samordna med utvecklingsteamet. 
 
 ### Använd kärnkomponenter {#adjust-components}
 
-Core Components version 2.15.0 och senare har fullt stöd för PWA-funktionerna i AEM. Eftersom AEMaaCS alltid innehåller den senaste versionen av de centrala komponenterna kan du utnyttja PWA-funktionerna direkt. Ditt AEMaaCS-projekt uppfyller automatiskt detta krav.
+Core Components version 2.15.0 och senare har fullt stöd för PWA-funktionerna i AEM. Eftersom AEMaaCS alltid innehåller den senaste versionen av de centrala komponenterna kan du använda PWA-funktioner direkt. Ditt AEMaaCS-projekt uppfyller automatiskt detta krav.
 
 >[!NOTE]
 >
@@ -122,7 +122,6 @@ Med [förutsättningarna](#prerequisites) är det mycket enkelt för en innehål
       * `/etc/clientlibs/<sitename>`
 
       ![Definiera offlinesökvägar för PWA](../assets/pwa-offline.png)
-
 
 1. Tryck eller klicka **Spara och stäng**.
 

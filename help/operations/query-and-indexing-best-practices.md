@@ -3,9 +3,9 @@ title: Bästa praxis för frågor och indexering
 description: Lär dig hur du optimerar index och frågor baserat på Adobe riktlinjer för bästa praxis.
 topic-tags: best-practices
 exl-id: 37eae99d-542d-4580-b93f-f454008880b1
-source-git-commit: afeff7cfb8606eb58126a4ca62ce9e6e58c44215
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1558'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Eftersom frågor kan vara en av de mer beskattningsbara åtgärder som utförs i
 
 ### Går igenom noder {#traversing-nodes}
 
-Om databasen är utformad på ett sådant sätt att det går att på förhand känna till platsen för de data som krävs, kan kod som hämtar dessa data från de nödvändiga sökvägarna distribueras utan att behöva köra frågor för att hitta dem.
+Om databasen är utformad på ett sätt som möjliggör tidigare kunskap om platsen för de data som krävs, kan kod som hämtar dessa data från de nödvändiga sökvägarna distribueras utan att behöva köra frågor för att hitta dem.
 
 Ett exempel på detta är att återge innehåll som passar inom en viss kategori. Ett sätt är att ordna innehållet med en kategoriegenskap som kan efterfrågas för att fylla i en komponent som visar objekt i en kategori.
 
@@ -77,7 +77,7 @@ I det här diagrammet visas det allmänna flödet för att använda verktyget Fr
 
 Alla frågor bör använda ett index för att ge optimala prestanda. I de flesta fall bör befintliga färdiga index vara tillräckliga för att hantera frågor.
 
-Ibland måste anpassade egenskaper läggas till i ett befintligt index, så att ytterligare begränsningar kan efterfrågas med hjälp av indexet. Se dokumentet [Innehållssökning och indexering](/help/operations/indexing.md#changing-an-index) för mer information. The [JCR-frågekarta](#jcr-query-cheatsheet) i det här dokumentet beskriver hur en egenskapsdefinition för ett index måste se ut för att stödja en viss frågetyp.
+Ibland måste anpassade egenskaper läggas till i ett befintligt index, så att ytterligare begränsningar kan efterfrågas med hjälp av indexet. Se dokumentet [Innehållssökning och indexering](/help/operations/indexing.md#changing-an-index) för mer information. The [JCR-frågekarta](#jcr-query-cheatsheet) i det här dokumentet beskriver hur en egenskapsdefinition i ett index måste se ut för att stödja en viss frågetyp.
 
 ### Använd rätt villkor {#use-the-right-criteria}
 

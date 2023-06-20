@@ -3,9 +3,9 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 3348662e3da4dad75b851d7af7251d456321a3ec
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1516'
+source-wordcount: '1509'
 ht-degree: 0%
 
 ---
@@ -73,6 +73,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 1. På **Källkod** måste du definiera följande alternativ.
 
    * **Databas** - Det här alternativet definierar från vilken Git-repo pipelinen ska hämta koden.
+
    >[!TIP]
    > 
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
@@ -101,6 +102,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 1. På **Källkod** måste du definiera följande alternativ.
 
    * **Databas** - Det här alternativet definierar från vilken Git-repo pipelinen ska hämta koden.
+
    >[!TIP]
    > 
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
@@ -135,7 +137,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 
 1. Klicka på **Spara** för att spara ditt flöde.
 
-Sökvägar som har konfigurerats för Experience Audit skickas till tjänsten och utvärderas efter prestanda, tillgänglighet, SEO (sökmotoroptimering), bästa praxis och PWA (Progressive Web App) när pipeline körs. Se [Upplevelsegranskningsresultat](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
+Sökvägar som har konfigurerats för Experience Audit skickas till tjänsten och utvärderas utifrån prestanda-, hjälpmedels-, SEO-test (sökmotoroptimering), bästa praxis och PWA-tester (Progressive Web App) när pipeline körs. Se [Upplevelsegranskningsresultat](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
 
 Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
 
@@ -148,6 +150,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 1. På **Källkod** måste du definiera följande alternativ.
 
    * **Databas** - Det här alternativet definierar från vilken Git-repo pipelinen ska hämta koden.
+
    >[!TIP]
    > 
    >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
@@ -174,7 +177,7 @@ Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.m
 
 Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
 
-Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) för hur denna process fungerar tillsammans med vissa överväganden som måste beaktas för att man ska få ut mesta möjliga av denna process.
+Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) om hur den här processen fungerar tillsammans med vissa överväganden för att vara medveten om att utnyttja hela potentialen i den här processen.
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 

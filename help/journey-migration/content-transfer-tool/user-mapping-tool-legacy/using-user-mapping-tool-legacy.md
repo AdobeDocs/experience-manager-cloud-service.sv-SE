@@ -4,9 +4,9 @@ description: Använda verktyget för användarmappning (äldre)
 exl-id: dcb750c4-0f81-4d11-ac6c-0592162b683d
 hide: true
 hidefromtoc: true
-source-git-commit: 8a258c2c929f9af84a1cde99072291a3e7f6cfc3
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '831'
 ht-degree: 3%
 
 ---
@@ -61,15 +61,15 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
 
    * **Organisations-ID**: Ange IMS-organisationsnumret (Adobe Identity Management System) för den organisation som användarna migreras till.
 
-      >[!NOTE]
-      >Logga in på [Admin Console](https://adminconsole.adobe.com/) och välj organisation (i det övre högra området) om du tillhör fler än en. Org-ID:t kommer att vara i URL:en för den sidan, i ett format som `xx@AdobeOrg`, där xx är IMS Org ID.  Du kan också hitta ditt Org ID i [Adobe Developer Console](https://console.adobe.io) sidan där du genererar åtkomsttoken.
+     >[!NOTE]
+     >Logga in på [Admin Console](https://adminconsole.adobe.com/) och välj organisation (i det övre högra området) om du tillhör fler än en. Org-ID:t kommer att vara i URL:en för den sidan, i ett format som `xx@AdobeOrg`, där xx är IMS Org ID.  Du kan också hitta ditt Org ID i [Adobe Developer Console](https://console.adobe.io) sidan där du genererar åtkomsttoken.
 
    * **Klient-ID**: Ange det klient-ID som du sparade i konfigurationssteget.
 
    * **Åtkomsttoken**: Ange den åtkomsttoken som du sparade i konfigurationssteget.
 
-      >[!NOTE]
-      >Åtkomsttoken upphör att gälla var 24:e timme och en ny måste skapas. Om du vill skapa en ny token går du tillbaka till [Adobe Developer Console](https://console.adobe.io), välj projekt, klicka på **API för användarhantering** och klistra in samma privata nyckel i rutan.
+     >[!NOTE]
+     >Åtkomsttoken upphör att gälla var 24:e timme och en ny måste skapas. Om du vill skapa en ny token går du tillbaka till [Adobe Developer Console](https://console.adobe.io), väljer projektet, klickar på **API för användarhantering** och klistra in samma privata nyckel i rutan.
 
 1. När du har fyllt i fälten klickar du på **Testa konfiguration** för att testa anslutningen till API-tjänsten för användarhantering. Om anslutningen lyckas kan du klicka på **Spara** för att spara konfigurationen.
 
@@ -95,7 +95,6 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
    >[!IMPORTANT]
    >* När användarmappningen är klar kan du gå tillbaka till sidan Innehållsmigrering med hjälp av den synliga sökvägen. Kortet för användarmappning visar status och tidsstämpel. Klicka på **Innehållsöverföring** för att skapa en migreringsuppsättning för att köra extraheringen. Se [Använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=en#running-tool) för mer information.
 
-
 ### Återuppta användarmappningsprocessen {#resume-user-mapping-process}
 
 Om användarmappningsprocessen stoppas på grund av någon av följande orsaker:
@@ -104,26 +103,26 @@ Om användarmappningsprocessen stoppas på grund av någon av följande orsaker:
 * åtkomsttoken upphörde att gälla under processen, eller
 * annan orsak
 
-   >[!NOTE]
-   >Förloppet sparas från den plats där processen stoppades.
+  >[!NOTE]
+  >Förloppet sparas från den plats där processen stoppades.
 
 Så här återupptar du användarmappningsprocessen:
 
-1. Klicka på **Visa logg** om du vill granska användarmappningsloggen för att kontrollera den sparade förloppet.
+1. Klicka **Visa logg** om du vill granska användarmappningsloggen för att kontrollera den sparade förloppet.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-user-mapping/resume-user-mapping1.png)
 
-1. Klicka på **Starta användarmappning** för att fortsätta där det slutade.
+1. Klicka **Starta användarmappning** för att fortsätta där det slutade.
 
    >[!NOTE]
    >Kontrollera att åtkomsttoken fortfarande är giltig eller har uppdaterats innan du startar om den.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-user-mapping/resume-user-mapping2.png)
 
-1. Klicka på **Starta** i dialogrutan för att återuppta användarmappningsprocessen.
+1. Klicka **Starta** i dialogrutan för att återuppta användarmappningsprocessen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-user-mapping/resume-user-mapping3.png)
 
-   När användarmappningen är klar visas **Status** as **SLUTFÖRD** för just den konfigurationen.
+   När användarmappningen är klar kan du visa **Status** as **SLUTFÖRD** för just den konfigurationen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-user-mapping/resume-user-mapping4.png)

@@ -2,9 +2,9 @@
 title: Skapa och hantera skärmar på as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar skärmar på as a Cloud Service.
 exl-id: 0f9faa4b-b50e-40f8-a8ed-280f8bd0a9b8
-source-git-commit: 9e0ab778e97658bc8d7669b1f582f3bcddd47915
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '663'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 När du har publicerat kanalen är det nu dags att skapa din skärm i Screens Services Provider.
 
-En bildskärm är en virtuell gruppering av skärmar som vanligtvis placeras bredvid varandra. Bildskärmen är vanligtvis permanent när det gäller en installation. Detta blir det objekt som författare ska arbeta med och alltid referera till som logisk visning i stället för deras fysiska räknardel.
+En bildskärm är en virtuell gruppering av skärmar som vanligtvis placeras bredvid varandra. Bildskärmen är vanligtvis permanent när det gäller en installation. Det här objektinnehållet är det författare arbetar med och refererar alltid till som logisk visning i stället för deras fysiska motdelar.
 
 ## Syfte {#objective}
 
@@ -128,7 +128,7 @@ Alla mappåtgärder är tillgängliga via markeringsåtgärdsfältet i lagervyn.
 
 1. I lagervyn markerar du den underordnade mapp som du vill ta bort och ser till att den är tom.
 
-1. Klicka på **Ta bort** i markeringsåtgärdsfältet. Åtgärden inaktiveras om mappen inte är tom.
+1. Klicka **Ta bort** i markeringsåtgärdsfältet. Åtgärden inaktiveras om mappen inte är tom.
 
 
 ## What&#39;s Next {#whats-next}

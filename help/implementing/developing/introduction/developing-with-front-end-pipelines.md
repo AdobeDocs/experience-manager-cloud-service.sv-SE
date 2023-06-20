@@ -2,9 +2,9 @@
 title: Developing Sites with the Front-End Pipeline
 description: Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan bli betydligt snabbare. I det här dokumentet beskrivs några särskilda aspekter av den inledande konstruktionsprocessen som bör anges.
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
-source-git-commit: a6b228023d7bd2a40e4db3a1d2c3900a5c24031c
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Developing Sites with the Front-End Pipeline {#developing-site-with-front-end-pipeline}
 
-[Med den främre rörledningen](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) fler oberoende ges till gränssnittsutvecklare och utvecklingsprocessen kan gå mycket snabbare. I det här dokumentet beskrivs hur den här processen fungerar tillsammans med vissa överväganden som du bör vara medveten om för att få ut mesta möjliga av processen.
+[Med den främre rörledningen](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) fler oberoende ges till gränssnittsutvecklare och utvecklingsprocessen kan gå mycket snabbare. I det här dokumentet beskrivs hur den här processen fungerar tillsammans med vissa överväganden som du bör vara medveten om så att du kan utnyttja hela potentialen i den här processen.
 
 >[!TIP]
 >
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Liknar [byggmiljö i full hög,](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) den främre rörledningen har en egen miljö. Utvecklarna har viss flexibilitet i den här pipeline så länge som följande frontavtal gäller.
 
-För frontendpipeline krävs att front-end-Node.js-projektet använder `build` skriptdirektiv för att generera det bygge som ska distribueras av frontendpipeline. I.e.e. Cloud Manager använder kommandot `npm run build` för att generera ett driftsättningsbart projekt till `dist` mapp.
+För frontendpipeline krävs att front-end-Node.js-projektet använder `build` skriptdirektiv för att generera det bygge som distribueras av frontendpipeline. I.e.e. Cloud Manager använder kommandot `npm run build` för att generera ett driftsättningsbart projekt till `dist` mapp.
 
 Innehållet i `dist` är den mapp som distribueras till AEM as a Cloud Service från molnhanterarens pipeline.
 
@@ -68,7 +68,7 @@ Följande steg rekommenderas i allmänhet när det är nödvändigt att ändra H
    1. Som vanligt för att utveckla lokalt:
       1. The `npx aem-site-theme-builder proxy` -kommandot som körs i front end-modulen startar en proxyserver som begär innehållet från en AEM-miljö och ersätter CSS- och JS-filerna för front end-modulen med de som finns i den lokala `dist` mapp.
       1. Konfigurera `AEM_URL` variabeln i det dolda `.env` kan styra från vilken AEM som den lokala proxyservern använder innehållet.
-      1. Ändra värdet för detta `AEM_URL` gör det därför möjligt att växla mellan produktions- och utvecklingsmiljöer för att justera CSS och JS så att den passar båda miljöerna.
+      1. Ändra värdet för detta `AEM_URL` så att du kan växla mellan produktions- och utvecklingsmiljöerna för att justera CSS och JS så att de passar båda miljöerna.
       1. Det måste fungera med den utvecklingsmiljö som återger det nya resultatet och med den produktionsmiljö som återger det gamla resultatet.
    1. Det färdiga arbetet slutförs när den uppdaterade frontmodulen fungerar för båda miljöerna och distribueras till båda.
 1. Back-end-teamet kan sedan uppdatera produktionsmiljön genom att distribuera koden som återger de nya HTML- och/eller JSON-utdata via hela stacken.

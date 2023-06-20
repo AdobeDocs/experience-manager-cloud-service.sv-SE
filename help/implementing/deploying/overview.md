@@ -3,9 +3,9 @@ title: Distribuera till AEM as a Cloud Service
 description: Distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 3dd65a9bd67a0a029483d580dd819fb7ac2a10be
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3542'
+source-wordcount: '3523'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 De grundläggande funktionerna för kodutveckling liknar de i AEM as a Cloud Service jämfört med AEM On Premise och Managed Services. Utvecklare skriver kod och testar den lokalt, som sedan skickas till AEM as a Cloud Service miljöer. Cloud Manager, som var ett valfritt verktyg för innehållsleverans för Managed Services, krävs. Detta är nu den enda mekanismen för att distribuera kod till AEM as a Cloud Service miljö för utveckling, scener och produktion. För snabb funktionsvalidering och felsökning innan du driftsätter dessa miljöer kan koden synkroniseras från en lokal miljö till en [Rapid Development Environment](/help/implementing/developing/introduction/rapid-development-environments.md).
 
-Uppdateringen av [AEM](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse från att trycka [egen kod](#customer-releases). Om den visas på ett annat sätt bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som kommer att distribueras högst upp. AEM versionsuppdateringar som görs därefter, som kommer att vara vanliga och automatiskt tillämpas. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
+Uppdateringen av [AEM](/help/implementing/deploying/aem-version-updates.md) är alltid en separat distributionshändelse från att trycka [egen kod](#customer-releases). Om du tittar på en annan metod bör anpassade kodreleaser testas mot den AEM versionen som är i produktion eftersom det är det som distribueras högst upp. AEM versionsuppdateringar som görs därefter, som är vanliga och som tillämpas automatiskt. De är avsedda att vara bakåtkompatibla med den kundkod som redan har distribuerats.
 
 I resten av det här dokumentet beskrivs hur utvecklare bör anpassa sina rutiner så att de kan arbeta med både AEM as a Cloud Service versionsuppdateringar och kunduppdateringar.
 
@@ -31,12 +31,12 @@ I resten av det här dokumentet beskrivs hur utvecklare bör anpassa sina rutine
 
 För tidigare AEM ändrades den senaste AEM versionen sällan (ungefär en gång om året med kvartalsvisa servicepaket) och kunderna uppdaterar produktionsinstanserna till den senaste snabbstarten på egen tid med referens till API Jar. AEM as a Cloud Service program uppdateras automatiskt till den senaste versionen av AEM oftare, så anpassad kod för interna releaser bör byggas mot den senaste AEM versionen.
 
-Precis som för befintliga AEM som inte är molnbaserade stöds en lokal offlineutveckling baserad på en viss snabbstart och förväntas vara det verktyg som i de flesta fall är det bästa för felsökning.
+Precis som för befintliga AEM som inte är molnbaserade stöds en lokal offlineutveckling baserad på en specifik snabbstart och förväntas vara det verktyg som i de flesta fall är det självklara valet för felsökning.
 
 >[!NOTE]
 >Det finns små skillnader i hur programmet fungerar på en lokal dator jämfört med Adobe Cloud. Dessa arkitektoniska skillnader måste respekteras under lokal utveckling och kan leda till ett annat beteende vid driftsättning i molninfrastrukturen. På grund av dessa skillnader är det viktigt att utföra de fullständiga testerna på dev- och stage-miljöer innan ny anpassad kod distribueras i produktionen.
 
-För att kunna utveckla anpassad kod för en intern release, den relevanta versionen av [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) ska hämtas och installeras. Mer information om hur du använder AEM as a Cloud Service Dispatcher Tools finns i [den här sidan](/help/implementing/dispatcher/disp-overview.md).
+För att utveckla anpassad kod för en intern release, den relevanta versionen av [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md) ska hämtas och installeras. Mer information om hur du använder AEM as a Cloud Service Dispatcher Tools finns i [den här sidan](/help/implementing/dispatcher/disp-overview.md).
 
 I följande video visas en översikt på hög nivå över hur du distribuerar kod till AEM as a Cloud Service:
 
@@ -86,7 +86,7 @@ Läs mer om OSGI-konfiguration på [Konfigurera OSGi för AEM as a Cloud Service
 
 I vissa fall kan det vara användbart att förbereda innehållsändringar i källkontrollen så att den kan distribueras av Cloud Manager när en miljö har uppdaterats. Det kan till exempel vara rimligt att skapa startvärden för vissa rotmappsstrukturer eller att göra ändringar i redigerbara mallar för att aktivera principer i de för komponenter som uppdaterades i programdistributionen.
 
-Det finns två strategier för att beskriva det innehåll som ska distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och registersatser.
+Det finns två strategier för att beskriva innehållet som distribueras av Cloud Manager till den ändringsbara databasen, innehållspaket som kan ändras och poinit-satser.
 
 ### Innehållspaket som kan ändras {#mutable-content-packages}
 
@@ -140,14 +140,14 @@ I följande fall är det att föredra att använda handkodning för att skapa ex
 Repoinit är att föredra för de här användningsområdena för innehållsändringar som stöds på grund av följande fördelar:
 
 * Repoinit skapar resurser vid start så att logiken kan ta tillvara dessa resurser för givet. I det ändringsbara innehållspaketet skapas resurser efter start, så programkod som förlitar sig på dem kan misslyckas.
-* Repoinit är en relativt säker instruktionsuppsättning eftersom du uttryckligen kontrollerar vilken åtgärd som ska vidtas. De enda åtgärder som stöds är dessutom additiva, med undantag för ett fåtal säkerhetsrelaterade fall där användare, tjänstanvändare och grupper kan tas bort. En borttagning av något i det variabla innehållspaketet är däremot explicit. När du definierar ett filter tas allt som täcks av ett filter bort. Försiktighet bör dock iakttas eftersom det finns scenarier där förekomsten av nytt innehåll kan ändra programmets beteende.
+* Repoinit är en relativt säker instruktionsuppsättning eftersom du uttryckligen kontrollerar vilken åtgärd som ska vidtas. De enda åtgärder som stöds är dessutom additiva, med undantag för ett fåtal säkerhetsrelaterade fall där användare, tjänstanvändare och grupper kan tas bort. En borttagning av något i det variabla innehållspaketet är däremot explicit. När du definierar ett filter tas allt som ingår i ett filter bort. Försiktighet bör dock iakttas eftersom det finns scenarier där förekomsten av nytt innehåll kan ändra programmets beteende.
 * Repoinit utför snabba och atomiska operationer. Blandbara innehållspaket i kontrast kan i hög grad vara beroende av prestanda beroende på de strukturer som täcks av ett filter. Även om du uppdaterar en enskild nod kan en ögonblicksbild av ett stort träd skapas.
-* Det är möjligt att validera repoinit-satser i en lokal enhetsmiljö vid körning eftersom de körs när OSGi-konfigurationen registreras.
+* Det går att validera repoinit-satser i en lokal enhetsmiljö vid körning eftersom de körs när OSGi-konfigurationen registreras.
 * Repoinit-satser är atomiska och explicita och hoppas över om läget redan matchar.
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Så här skapar du repoinit-satser:
+Följ nedanstående procedur för att skapa repoinit-satser:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
 1. Lägg till repoinit-satser i egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). Observera att en överordnad mapp bör skapas explicit före deras underordnade mappar. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För ACL-listor som ställs in på lågnivåstrukturer rekommenderar vi att du ställer in dem på en högre nivå och arbetar med en `rep:glob` begränsning.  Till exempel `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
@@ -174,12 +174,12 @@ above appears to be internal, to confirm with Brian -->
 >[!CONTEXTUALHELP]
 >id="aemcloud_packagemanager"
 >title="Pakethanteraren - migrerar paket med ändringsbart innehåll"
->abstract="Utforska användningen av pakethanteraren i användningsfall där ett innehållspaket ska installeras som en engångslösning, vilket inkluderar import av visst innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer med mera."
+>abstract="Utforska användningen av pakethanteraren i användningsfall där ett innehållspaket ska installeras som en engångslösning, vilket inkluderar import av visst innehåll från produktion till testning för att felsöka ett produktionsproblem, överföring av ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer med mera."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=en#cloud-migration" text="Content Transfer Tool"
 
-I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Du kan till exempel importera specifikt innehåll från produktion till mellanlagring för att felsöka ett produktionsproblem. För dessa scenarier [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) kan användas i AEM as a Cloud Service miljöer.
+I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Om du till exempel importerar specifikt innehåll från produktion till mellanlagring felsöker du ett produktionsproblem. För dessa scenarier [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) kan användas i AEM as a Cloud Service miljöer.
 
-Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt) installeras endast det muterbara innehållet.
+Eftersom Package Manager är ett runtime-koncept går det inte att installera innehåll eller kod i den oföränderliga databasen, så dessa innehållspaket bör endast bestå av ändringsbart innehåll (huvudsakligen `/content` eller `/conf`). Om innehållspaketet innehåller innehåll som är blandat (både muterbart och oföränderligt innehåll) installeras endast det muterbara innehållet.
 
 >[!IMPORTANT]
 >
@@ -239,7 +239,7 @@ The following Maven `POM.xml` utdrag visar hur paket från tredje part kan bädd
 
 ## Hur rullande distributioner fungerar {#how-rolling-deployments-work}
 
-Precis som AEM uppdateringar distribueras kundreleaser med hjälp av en strategi för rullande driftsättning för att eliminera driftavbrott i utvecklarklustret under rätt omständigheter. Den allmänna händelsesekvensen beskrivs nedan, där noder med både den gamla och den nya versionen av kundkoden körs i samma version AEM koden.
+Precis som AEM uppdateringar distribueras kundreleaser med hjälp av en strategi för rullande driftsättning för att eliminera driftavbrott i utvecklarkluster under rätt omständigheter. Den allmänna händelsesekvensen beskrivs nedan, där noder med både den gamla och den nya versionen av kundkoden körs i samma version AEM koden.
 
 * Noder med den gamla versionen är aktiva och en release som kan användas för den nya versionen har skapats och blir tillgängliga.
 * Om det finns nya eller uppdaterade indexdefinitioner bearbetas motsvarande index. Observera att noder med den gamla versionen alltid använder de gamla indexen, medan noder med den nya versionen alltid använder de nya indexen.
@@ -263,7 +263,7 @@ För närvarande fungerar inte AEM as a Cloud Service med indexhanteringsverktyg
 
 Publiceringsfunktionen är bakåtkompatibel med [AEM-Java-API:er för replikering](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.day.cq.replication.Replicator.html).
 
-För att kunna utveckla och testa med replikering med molnklart AEM snabbstart måste de klassiska replikeringsfunktionerna användas med en författar-/publiceringskonfiguration. Om användargränssnittets startpunkt på AEM Author har tagits bort för molnet går användarna till `http://localhost:4502/etc/replication` för konfiguration.
+Om du vill utveckla och testa med replikering med molnförberedda AEM snabbstart måste du använda de klassiska replikeringsfunktionerna med en författare-/publiceringskonfiguration. Om användargränssnittets startpunkt på AEM Author har tagits bort för molnet går användarna till `http://localhost:4502/etc/replication` för konfiguration.
 
 ## Bakåtkompatibel kod för rullande distributioner {#backwards-compatible-code-for-rolling-deployments}
 
@@ -281,7 +281,7 @@ Om ändringar görs i index är det viktigt att den nya versionen fortsätter at
 
 ### Konservativ kodning för återställningar {#conservative-coding-for-rollbacks}
 
-Om ett fel rapporteras eller upptäcks efter distributionen är det möjligt att en återställning till den gamla versionen krävs. Vi rekommenderar att du ser till att den nya koden är kompatibel med alla nya strukturer som skapas av den nya versionen eftersom de nya strukturerna (allt innehåll som kan ändras) inte återställs. Om den gamla koden inte är kompatibel måste korrigeringar tillämpas i efterföljande kundreleaser.
+Om ett fel rapporteras eller upptäcks efter distributionen kan det vara nödvändigt att återställa den gamla versionen. Vi rekommenderar att du ser till att den nya koden är kompatibel med alla nya strukturer som skapas av den nya versionen eftersom de nya strukturerna (allt innehåll som kan ändras) inte återställs. Om den gamla koden inte är kompatibel måste korrigeringar tillämpas i efterföljande kundreleaser.
 
 ## Rapid Development Environment (RDE) {#rde}
 

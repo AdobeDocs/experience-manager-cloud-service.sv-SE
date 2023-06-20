@@ -2,9 +2,9 @@
 title: Formatsystem
 description: Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 exl-id: 224928dd-e365-4f3e-91af-4d8d9f47efdd
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1320'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ På samma sätt behöver innehållsförfattare inte bara kunna strukturera och o
 Style System ger en enhetlig lösning för både mallskaparens och innehållsförfattarens krav:
 
 * Mallförfattare kan definiera formatklasser i komponenternas innehållsprincip.
-* Innehållsförfattare kan sedan välja dessa klasser i en listruta när de redigerar komponenten på en sida för att tillämpa motsvarande format.
+* Innehållsförfattare kan sedan välja dessa klasser från en nedrullningsbar lista när de redigerar komponenten på en sida så att de kan använda motsvarande format.
 
 Klassen style infogas sedan i elementet dekoration wrapper i komponenten så att komponentutvecklaren inte behöver bekymra sig om att hantera formaten utöver att tillhandahålla sina CSS-regler.
 
@@ -104,7 +104,7 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
 >[!CAUTION]
 >
->CSS-klasserna (och eventuell nödvändig JavaScript) som konfigurerats som formategenskaper för en komponents policy måste distribueras som [Klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) för att kunna arbeta.
+>CSS-klasserna - och eventuell nödvändig JavaScript - som konfigurerats som formategenskaper i en komponents policy måste distribueras som [Klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) till jobbet.
 
 ## Inställningar {#setup}
 
@@ -120,7 +120,7 @@ För att en komponent ska kunna arbeta med AEM Style System och visa stilfliken 
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 >[!NOTE]
->Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md)genom [Samla resurser](/help/implementing/developing/introduction/sling-resource-merger.md).
+Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md)genom [Samla resurser](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 När komponenten är konfigurerad infogas de format som är konfigurerade av sidförfattarna automatiskt av AEM på dekorationselementet som AEM runt varje redigerbar komponent automatiskt. Själva komponenten behöver inte göra något annat för att detta ska hända.
 
@@ -134,11 +134,11 @@ Fliken för redigeringsdialogrutan kan läggas in på ungefär samma sätt som f
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
 
 >[!NOTE]
->Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md)genom [Samla resurser](/help/implementing/developing/introduction/sling-resource-merger.md).
+Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md)genom [Samla resurser](/help/implementing/developing/introduction/sling-resource-merger.md).
 
 >[!NOTE]
 >
->Fliken Format i dialogrutan Redigera är inte aktiverad som standard.
+Fliken Format i dialogrutan Redigera är inte aktiverad som standard.
 
 ### Format med elementnamn {#styles-with-element-names}
 
@@ -150,15 +150,13 @@ Den här egenskapen ställs in på `cq:Component` nod. Till exempel:
 
 >[!CAUTION]
 >
->Undvik att definiera elementnamn för format som kan kombineras. När flera elementnamn definieras är prioritetsordningen:
+Undvik att definiera elementnamn för format som kan kombineras. När flera elementnamn definieras är prioritetsordningen:
 >
->1. HTML har företräde framför allt: `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
->1. Sedan används det första formatet i listan med format som är konfigurerade i komponentens profil bland flera aktiva format.
->1. Slutligen är komponentens `cq:htmlTag`/ `cq:tagName` betraktas som ett reservvärde.
-
+1. HTML har företräde framför allt: `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
+1. Sedan används det första formatet i listan med format som är konfigurerade i komponentens profil bland flera aktiva format.
+1. Slutligen är komponentens `cq:htmlTag`/ `cq:tagName` betraktas som ett reservvärde.
 >
 
-
-Den här möjligheten att definiera formatnamn är användbar för mycket generiska komponenter, som Layoutbehållaren eller komponenten Innehållsfragment, för att ge dem ytterligare innebörd.
+Den här möjligheten att definiera formatnamn är användbar för generiska komponenter, som Layoutbehållaren eller komponenten Innehållsfragment, för att ge dem ytterligare innebörd.
 
 Den tillåter till exempel att en Layout Container får semantik som `<main>`, `<aside>`, `<nav>`, osv.

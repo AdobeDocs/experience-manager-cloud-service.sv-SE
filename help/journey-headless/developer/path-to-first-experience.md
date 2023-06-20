@@ -2,9 +2,9 @@
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
 exl-id: 172ad8d8-5067-4452-bf91-1eea9a39a7bc
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2014'
+source-wordcount: '2013'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Förutom AEM vill du också se till att du har en korrekt utvecklingsmiljö konf
 
 ### Definiera innehållsmodeller och API:er {#defining-models}
 
-Ni vill skapa en enhetlig upplevelse och hantera personaliserade kampanjer i alla kanaler, så att ni kan se varje enskild kanal och yta som sin egen innehållsstruktur att leverera till. Det är dock en utmaning att behålla varje kanal med en egen innehållsmodell.
+Ni vill skapa en enhetlig upplevelse och hantera personaliserade kampanjer i alla kanaler, så att ni kan se varje enskild kanal och yta som sin egen innehållsstruktur att leverera till. Det är emellertid en utmaning att behålla en egen innehållsmodell för varje kanal.
 
 Istället bör ni överväga hur innehåll på olika ytor är relaterat till en organiseringsprincip som varumärken och produkthierarkier, kategorier av varor eller ytor, eller steg i kundresan. Om du t.ex. har en uppsättning ytor som stöder ett visst varumärke med bilar som du tillverkar, kanske du vill börja med en innehållsmodell för allmän information som är sann för hela bilen och sedan har mer - specifika element som innehåll som behövs när bilen startar vid serviceproblem. En sådan modell kommer att genomdriva arv av allmänt varumärkesinnehåll samtidigt som den möjliggör förändringar baserat på det specifika sammanhang som behövs. Det hjälper även till med framtida hantering av uppdateringar av det här innehållet eftersom ni kan tillämpa kontroll baserat på roller som den övergripande marknadsföraren eller produktchefen för hela varumärket jämfört med en författare som ansvarar för upplevelsen av att starta bilen.
 

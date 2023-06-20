@@ -2,9 +2,9 @@
 title: Utöka [!DNL Adobe Experience Manager] as a Cloud Service med Adobe Developer App Builder.
 description: Utöka [!DNL Adobe Experience Manager] as a Cloud Service med Adobe Developer App Builder.
 exl-id: 50d82745-5deb-4bfa-961b-714842403601
-source-git-commit: a14ee350b3fdc3ac197b703aa36957d1d1dd7355
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ App Builder erbjuder ett enhetligt ramverk för utbyggbarhet från tredje part f
 
 Med App Builder kan kunderna enkelt utöka Adobe Experience Manager i olika fall:
 
-* Utbyggbarhet för mediematerial - Koppla samman externa system med Adobe-applikationer och bygg upp anpassade anslutningar eller utnyttja en serie färdiga integreringar.
+* Utbyggbarhet för mellanvara - Koppla samman externa system med Adobe-program och skapa anpassade anslutningar eller använd en serie färdiga integreringar.
 * Utbyggbarhet för bastjänster - Utöka de centrala programfunktionerna genom att utöka standardbeteendet med anpassade funktioner och affärslogik.
 * Utbyggbarhet för användarupplevelse - Utöka kärnupplevelsen för att uppfylla verksamhetskrav eller bygga kundspecifika digitala resurser, butiker och back-office-appar.
 
@@ -27,18 +27,18 @@ App Builder har varit tillgängligt för företagskunder och partners via vår D
 
 >[!NOTE]
 >
-> För AEM 6.5-kunder som vill utnyttja App Builder går du till [Utöka Adobe Experience Manager 6.5 med Adobe Developer App Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/app-builder.html).
+> AEM 6.5-kunder som vill använda App Builder finns på [Utöka Adobe Experience Manager 6.5 med Adobe Developer App Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/app-builder.html).
 
 ## Arkitektur {#architecture}
 
 I stället för en färdig lösning erbjuder Adobe Developer App Builder en gemensam, enhetlig och standardiserad utvecklingsplattform för utökade Adobe Cloud-lösningar som AEM som:
 
 * Adobe Developer Console - För utveckling av anpassade mikrotjänster och tillägg kan utvecklare skapa och hantera projekt med tillgång till alla verktyg och API:er de behöver för att skapa plugin-program och integreringar.
-* Utvecklingsverktyg - verktyg med öppen källkod, SDK:er och bibliotek som gör det möjligt för utvecklare att enkelt bygga anpassade tillägg och integreringar. Använd React Spectrum (Adobe’s UI toolkit) för att ha ett gemensamt användargränssnitt för alla Adobe-appar.
+* Utvecklingsverktyg - verktyg med öppen källkod, SDK:er och bibliotek som gör det möjligt för utvecklare att enkelt bygga anpassade tillägg och integreringar. Använd React Spectrum (Adobe UI-verktygslådan) om du vill ha ett gemensamt användargränssnitt för alla Adobe-program.
 * Tjänster - I/O Runtime för värdinfrastruktur på vår serverlösa plattform och I/O Events för händelsebaserade integreringar. Vi har också färdiga funktioner för lagring av data och filer.
 * Adobe Experience Cloud - Utvecklare kan skicka tillägg och integreringar som ska publiceras i Experience Cloud-organisationen. Systemadministratörer kan sedan granska, hantera och godkänna dessa tillägg. När du har publicerat dina anpassade tillägg och verktyg i App Builder finns de tillsammans med andra Adobe Experience Cloud-program.
 
-Följande diagram visar hur ett standardprogram som är byggt på App Builder utnyttjar dessa funktioner:
+Följande diagram visar hur ett standardprogram som är byggt på App Builder använder dessa funktioner:
 
 ![Arkitektur](/help/implementing/developing/extending/assets/appbuilder-architecture.jpg)
 

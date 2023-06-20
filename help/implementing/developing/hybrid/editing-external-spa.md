@@ -2,9 +2,9 @@
 title: Redigera en extern SPA i AEM
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
-source-git-commit: b06e734fd6874946323cdc71073ecb1c50945845
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2456'
+source-wordcount: '2447'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Förutsättningarna är enkla.
 
 * Kontrollera att en instans av AEM körs lokalt.
 * Skapa ett AEM SPA med [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties)
-   * Detta kommer att utgöra grunden för det AEM projektet som kommer att uppdateras för att inkludera det externa SPA.
+   * Forms ligger till grund för det AEM projektet som uppdateras för att inkludera det externa SPA.
    * För exemplen i det här dokumentet använder vi startpunkten för [WKND-SPA.](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor)
 * Ha den fungerande, externa SPA som ni vill integrera till hands.
 
@@ -81,7 +81,7 @@ I det här exemplet `ModelManager` har initierats och är tom `ModelStore` skapa
 
 ### AEM Authorable Leaf Components {#authorable-leaf-components}
 
-1. Skapa/identifiera en AEM som en redigerbar React-komponent ska skapas för. I det här exemplet använder vi WKND-projektets textkomponent.
+1. Skapa/identifiera en AEM som en redigerbar React-komponent skapas för. I det här exemplet använder vi WKND-projektets textkomponent.
 
    ![WKND-textkomponent](assets/external-spa-text-component.png)
 
@@ -237,7 +237,7 @@ The `TestPage` -komponenten ser ut så här när den virtuella komponenten har l
 >
 >Se till att `AEMText` komponenten har `resourceType` anges i konfigurationen för att aktivera den här funktionen.
 
-Du kan nu distribuera ändringarna till AEM genom att följa stegen i avsnittet [Verifiera redigering av textinnehåll på AEM.](#verify-text-edit) En platshållare visas för de som inte finns `text_20` nod.
+Du kan nu distribuera ändringarna till AEM genom att följa stegen i avsnittet [Verifiera redigering av textinnehåll på AEM.](#verify-text-edit) En platshållare visas för de befintliga `text_20` nod.
 
 ![Noden text_20 i aem](assets/external-spa-text20-aem.png)
 
@@ -351,9 +351,8 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
       * Sökvägen som krävs för routning
       * Den ursprungliga URL:en för den AEM instansen där SPA redigeras
       * Projektroten på AEM enligt det första steget
+
    * Dessa värden kan anges som miljövariabler för större flexibilitet.
-
-
 
 1. Verifiera redigering av sidan i AEM.
 

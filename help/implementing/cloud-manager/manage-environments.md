@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: e5142052423abee7a2e2ed64affb2b04a93bf0d1
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2325'
 ht-degree: 0%
 
 ---
@@ -157,7 +157,7 @@ När förhandsvisningstjänsten skapas används en IP-tillåtelselista som stand
 
 ![Förhandsgranskningstjänst och tillåtelselista](assets/preview-ip-allow.png)
 
-En användare med nödvändig behörighet måste utföra följande steg innan han eller hon kan dela URL:en för förhandsvisningstjänsten för att se till att den är tillgänglig.
+En användare med nödvändig behörighet måste utföra följande steg innan du kan dela URL:en för förhandsvisningstjänsten för att se till att den är tillgänglig.
 
 1. Skapa en lämplig IP-tillåtelselista, använd den för förhandsgranskningstjänsten och ta omedelbart bort tillämpningen av `Preview Default [<envId>]` tillåtelselista.
 
@@ -302,7 +302,7 @@ Följ de här stegen för att använda en IP-tillåtelselista.
 
 ### Avinstallera en IP-Tillåtelselista {#unapply-ip-allow-list}
 
-Om du avkopplar ett IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista bort från en författare eller en utgivartjänst i en miljö. En användare i **Företagsägare** eller **Distributionshanteraren** rollerna måste vara inloggade för att du ska kunna ta bort en IP-tillåtelselista.
+Om du avkopplar ett IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista bort från en författare eller en utgivartjänst i en miljö. En användare i **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att kunna ta bort en IP-tillåtelselista.
 
 Följ de här stegen för att ta bort en IP-tillåtelselista.
 

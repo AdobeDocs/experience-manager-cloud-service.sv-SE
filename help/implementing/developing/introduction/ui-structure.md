@@ -2,9 +2,9 @@
 title: Struktur för AEM
 description: Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement
 exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Alla moduler använder samma grundläggande layout, AEM detta kan ses som:
 
 Layouten följer en responsiv designstil och anpassas till storleken på enheten/fönstret som du använder.
 
-Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) justeras skärmen därefter:
+Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) justeras visningen därefter:
 
 ![Mobilvyn i webbplatskonsolen](assets/ui-sites-mobile.png)
 

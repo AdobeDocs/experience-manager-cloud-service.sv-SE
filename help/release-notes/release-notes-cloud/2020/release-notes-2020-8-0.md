@@ -2,9 +2,9 @@
 title: Versionsinformation om 2020.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.8.0."
 exl-id: 83413130-ae90-4419-bcf7-42fdc740452b
-source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
@@ -79,10 +79,10 @@ Releasedatum för [!UICONTROL Cloud Manager] Version 2020.8.0 är 6 augusti 2020
 * Content Audit är en funktion som är aktiverad i produktionsstegen för Cloud Manager Sites. Konfigurationen av produktionspipeline för program med Sites innehåller nu en tredje flik med namnet **Granskning av innehåll**. När en produktionsprocess körs inkluderas ett nytt Content Audit-steg i produktionsflödet efter anpassad funktionstestning som utvärderar webbplatsen mot ett antal dimensioner, inklusive prestanda, SEO (sökmotoroptimering), tillgänglighet, bästa praxis och PWA (Progressive Web App).
 
 
-   >[!NOTE]
-   >Namnet på Content Audit har ändrats till Experience Audit.
+  >[!NOTE]
+  >Namnet på Content Audit har ändrats till Experience Audit.
 
-   Se [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
+  Se [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
 
 * Nyligen skapade miljöer i Assets-program konfigureras nu automatiskt med Smart Content Services.
 
@@ -116,7 +116,7 @@ Releasedatum för [!UICONTROL Cloud Manager] Version 2020.8.0 är 6 augusti 2020
 
 * På fliken Innehållsgranskning visas bas-URL:en felaktigt med författardomänen i stället för publiceringsdomänen.
 
-* För att aktivera steget Innehållsgranskning måste användarna redigera pipeline och, om så önskas, lägga till sidor. Om inga sidor läggs till granskas hemsidan.
+* Om du vill aktivera steget för innehållsgranskning måste användarna redigera pipeline och, om så önskas, lägga till sidor. Om inga sidor läggs till granskas hemsidan.
 
 ## Content Transfer Tool {#content-transfer-tool}
 

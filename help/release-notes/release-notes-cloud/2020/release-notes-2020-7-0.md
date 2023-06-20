@@ -2,7 +2,7 @@
 title: Versionsinformation om 2020.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.7.0."
 exl-id: 75d354a3-6987-4de0-aec8-24043461c516
-source-git-commit: cc6565121a76f70b958aa9050485e0553371f3a3
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 1%
@@ -88,7 +88,7 @@ Releasedatum för [!UICONTROL Cloud Manager] Version 2020.7.0 är 9 juli 2020.
 
 * Molnhanterarens pipelines har nu stöd för kundspecifika variabler och hemligheter.
 
-   Mer information finns i Pipeline-variabler.
+  Mer information finns i Pipeline-variabler.
 
 * Stöd finns nu för autentiseringsbundna privata Maven-databaser.
 
@@ -121,7 +121,7 @@ Mer information finns i Använda Java 11-stöd.
 
 ### Nyheter {#what-is-new-foundations}
 
-* [Loggar kan vidarebefordras till Splunk-konton](/help/implementing/developing/introduction/logging.md#splunk-logs), som gör det möjligt för organisationer att utnyttja Splunk-investeringen.
+* [Loggar kan vidarebefordras till Splunk-konton](/help/implementing/developing/introduction/logging.md#splunk-logs), som gör det möjligt för organisationer att använda sin Splunk-investering.
 
 * [En statisk, dedikerad IP-adress för utgångar](/help/implementing/developing/introduction/development-guidelines.md#dedicated-egress-ip-address) kan tilldelas för utgående trafik som programmeras i Java-kod, vilket kan vara användbart för vissa integreringar.
 
@@ -137,7 +137,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Tidigare version av CRA kunde inte köras på Adobe Experience Manager (AEM) 6.1. Explicit stöd för att tillåta användare i administratörsgruppen har lagts till.
 
-   Se [Installera CRA på AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/using-cloud-readiness-analyzer.html#installing-on-aem61) för mer information.
+  Se [Installera CRA på AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/using-cloud-readiness-analyzer.html#installing-on-aem61) för mer information.
 
 * Den förfallotidsstämpel som visades i sammanfattningsrapporten var felaktig.
 

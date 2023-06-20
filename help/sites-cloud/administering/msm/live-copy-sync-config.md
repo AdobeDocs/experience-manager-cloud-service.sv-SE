@@ -4,9 +4,9 @@ description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy oc
 feature: Multi Site Manager
 role: Admin
 exl-id: 0c97652c-edac-436e-9b5b-58000bccf534
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2337'
+source-wordcount: '2335'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ I följande tabell visas de synkroniseringsåtgärder som medföljer AEM.
 | `contentDelete` | Den här åtgärden tar bort noder i Live-kopian som inte finns i källan. [Konfigurera **CQ MSM Content Delete Action** service](#excluding-properties-and-node-types-from-synchronization) för att ange vilka nodtyper, styckeobjekt och sidegenskaper som ska uteslutas. |  |
 | `contentUpdate` | Den här åtgärden uppdaterar Live Copy-innehållet med ändringarna från källan. [Konfigurera **CQ MSM Content Update Action** service](#excluding-properties-and-node-types-from-synchronization) för att ange vilka nodtyper, styckeobjekt och sidegenskaper som ska uteslutas. |  |
 | `editProperties` | Den här åtgärden redigerar egenskaper för Live-kopian. The `editMap` egenskapen avgör vilka egenskaper som redigeras och deras värde. Värdet för `editMap` -egenskapen måste ha följande format:<br>`[property_name_n]#[current_value]#[new_value]`<br>`current_value` och `new_value` är reguljära uttryck och `n` är ett stegvis heltal.<br>Tänk dig följande värde för `editMap`:<br>`sling:resourceType#/(contentpage`○`homepage)#/mobilecontentpage,cq:template#/contentpage#/mobilecontentpage`<br>Det här värdet redigerar egenskaperna för Live Copy-noderna enligt följande:<br>The `sling:resourceType` egenskaper som är inställda på `contentpage` eller till `homepage` är inställda på `mobilecontentpage`.<br>The `cq:template` egenskaper som är inställda på `contentpage` är inställda på `mobilecontentpage`. | `editMap: (String)` identifierar egenskapen, det aktuella värdet och det nya värdet. Mer information finns i beskrivningen. |
-| `notify` | Den här åtgärden skickar en sidhändelse om att sidan har rullats ut. För att kunna meddelas måste du först prenumerera på utrullningshändelser. |  |
+| `notify` | Den här åtgärden skickar en sidhändelse om att sidan har rullats ut. För att kunna meddelas måste man först prenumerera på utrullningshändelser. |  |
 | `orderChildren` | Den här åtgärden ordnar de underordnade noderna baserat på ordningen i ritningen. |  |
 | `referencesUpdate` | Den här synkroniseringsåtgärden uppdaterar referenser på Live-kopian.<br>Söker efter sökvägar på Live Copy-sidorna som pekar på en resurs i planen. När den hittas uppdateras sökvägen till den relaterade resursen i Live Copy. Referenser som har mål utanför planen ändras inte. <br>[Konfigurera **Uppdateringsåtgärd för CQ MSM-referenser** service](#excluding-properties-and-node-types-from-synchronization) för att ange vilka nodtyper, styckeobjekt och sidegenskaper som ska uteslutas. |  |
 | `targetVersion` | Den här åtgärden skapar en version av Live-kopian.<br>Den här åtgärden måste vara den enda synkroniseringsåtgärden som ingår i en utrullningskonfiguration. |  |

@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 081167dd-da4c-48d2-a6d3-f95e873be3e9
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Ditt översatta innehåll publiceras nu! Den kan nu nås och konsumeras.
 
 >[!TIP]
 >
->Du kan markera flera objekt (d.v.s. flera språkmappar) när du publicerar för att kunna publicera flera översättningar samtidigt.
+>Du kan markera flera objekt (d.v.s. flera språkmappar) när du publicerar för att publicera flera översättningar samtidigt.
 
 Det finns ytterligare alternativ när du publicerar innehåll, till exempel schemaläggning av en publiceringstid, som ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) i slutet av dokumentet om du vill ha mer information.
 

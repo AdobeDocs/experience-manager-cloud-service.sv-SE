@@ -1,9 +1,9 @@
 ---
 title: AEM dokumentationsresor
-description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner för att lösa ett affärsmål på ett sätt som är beprövat med bästa praxis. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
+description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner så att du kan lösa ett affärsmål på bästa sätt. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 exl-id: aab346b8-26dc-4d5b-88bb-720cf634e0a2
 hidefromtoc: true
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 0%
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # AEM dokumentationsresor {#aem-documentation-journeys}
 
-Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner för att lösa ett affärsmål på ett sätt som är beprövat med bästa praxis. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
+Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner så att du kan lösa ett affärsmål på bästa sätt. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 
 ## Vad är en dokumentationsresa? {#what-is}
 
 En dokumentationsresa knyter ihop många olika och komplexa ämnen och funktioner genom att tillhandahålla en berättelse som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskaper.
 
-Dokumentation Resor står i kontrast till AEM befintliga tekniska dokument som primärt fokuserar på en enda funktion och dokumentation av uppgifter, och som förutsätter att man är bekant med AEM. Genom att fokusera på koncepten och ge detaljerad information till den befintliga tekniska dokumentationen ger Documentation Journeys läsarna nya möjligheter att AEM en plats där de kan börja förstå hur plattformen kan utnyttjas genom att använda bästa praxis för att hantera vanliga affärsbehov och arbetsflöden. Av den anledningen fungerar Documentation Journeys som ett komplement till och inte som ersättning för [AEM befintlig teknisk dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
+Dokumentation Resor står i kontrast till AEM befintliga tekniska dokument som primärt fokuserar på en enda funktion och dokumentation av uppgifter, och som förutsätter att man är bekant med AEM. Genom att fokusera på koncepten och ge detaljerad information till den befintliga tekniska dokumentationen ger Documentation Journeys läsarna nya möjligheter att AEM en plats där de kan förstå hur plattformen kan användas med hjälp av bästa praxis för att hantera vanliga affärsbehov och arbetsflöden. Av den anledningen fungerar Documentation Journeys som ett komplement till och inte som ersättning för [AEM befintlig teknisk dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
 
 ### Learning by Narrative {#narrative}
 
@@ -82,7 +82,7 @@ Dokumentationsresor är avsedda som komplement till befintlig AEM teknisk dokume
 
 ## Vilka resor finns det? {#journeys}
 
-Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom varje resa är utformad som en berättelse, var vänlig och börja med inledningen och läs igenom hela vägen för att få en fullständig förståelse för ämnet i AEM.
+Det finns redan ett antal dokumentationsresor tillgängliga för dig. Eftersom varje resa är utformad som en berättelse börjar du med introduktionen och läser hela vägen igenom så att du får en fullständig förståelse för ämnet i AEM.
 
 | Resa | Beskrivning |
 |---|---|

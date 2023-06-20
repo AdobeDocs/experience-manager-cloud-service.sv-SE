@@ -6,9 +6,9 @@ seo-description: The Table component in AEM Forms lets you create tables in adap
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Adaptive Forms
 exl-id: 88ace1d4-b68d-40e6-a7b4-918ba25f2e91
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2401'
 ht-degree: 0%
 
 ---
@@ -299,7 +299,7 @@ Om du vill sammanfoga dessa data med tabellen vid körning måste vi peka det ad
 
 Om du har skapat ett adaptivt formulär baserat på en XFA-formulärmall är XFA-elementen tillgängliga på fliken Datamodell AEM Content Finder. Du kan dra och släppa dessa XFA-element, inklusive tabeller, i det anpassningsbara formuläret.
 
-XFA-tabellelementet mappas till tabellkomponenten och fungerar som det ska i adaptiva former. Alla egenskaper och funktioner i XDP-tabellen bevaras när den flyttas till ett anpassat formulär, och du kan utföra vilken åtgärd som helst på den på samma sätt som du gör med en intern adaptiv formulärtabell. Om en rad i en XDP-tabell till exempel är markerad som upprepningsbar, upprepas den även när den tas bort i anpassningsbara former.
+XFA-tabellelementet mappas till tabellkomponenten och fungerar som det ska i adaptiva former. Alla egenskaper och funktioner i XDP-tabellen bevaras när den flyttas till ett anpassat formulär, och du kan utföra vilken åtgärd som helst på den på samma sätt som du gör med en intern adaptiv formulärtabell. Om en rad i en XDP-tabell till exempel är markerad som upprepningsbar upprepas den även när den tas bort i anpassningsbara former.
 
 Dessutom kan du dra och släppa XDP-delformulär för att lägga till en ny rad i tabellen. Observera dock att det inte går att släppa ett kapslat delformulär.
 
@@ -313,11 +313,11 @@ Dessutom kan du dra och släppa en grupp XSD-element med komplex typ för att sk
 >
 >Antalet element i en XDP-tabellkomponent, ett delformulär eller en XSD-komplex typ får inte överstiga antalet celler i en rad. Du kan till exempel inte släppa fyra element på en rad som bara har tre celler. Det resulterar i ett fel.
 >
->Om antalet element är mindre än antalet celler i en rad lägger den nya raden först till celler som baseras på elementen, och därefter läggs standardcellerna till för att fylla i de återstående cellerna i raden. Om du till exempel släpper en grupp med tre element på en rad som har fyra celler, baseras de första tre cellerna på de element som du har tagit bort och de återstående en cellerna blir standardtabellcellen.
+>Om antalet element är mindre än antalet celler i en rad lägger den nya raden först till celler som baseras på elementen, och därefter läggs standardcellerna till för att fylla i de återstående cellerna i raden. Om du till exempel släpper en grupp med tre element på en rad som har fyra celler, baseras de första tre cellerna på elementen som du släppte och den återstående cellen är standardtabellcellen.
 
 ## Viktiga överväganden {#key-considerations}
 
 * Om du flyttar rader uppåt och nedåt när du redigerar en XSD-baserad tabell, visas en del dataförluster från tabellrader i den data-XML som genereras när formuläret skickas.
 * Varje tabellcell i standardtabellen har ett fördefinierat elementnamn kopplat till sig. Om du lägger till en annan tabell i det adaptiva formuläret får standardcellerna i den nya tabellen samma elementnamn som i den första tabellen. I sådana fall kommer de data som genereras när formuläret skickas endast att innehålla data i standardcellerna för en av tabellerna. Se därför till att du byter namn på elementnamnen för standardcellerna för brödtext så att de är unika i alla tabeller och undvika dataförlust.
 
-   Observera att detta endast gäller för standardcellerna. Om du lägger till fler rader eller kolumner i en tabell genereras unika elementnamn automatiskt för brödtextceller som inte är standard.
+  Observera att detta endast gäller för standardcellerna. Om du lägger till fler rader eller kolumner i en tabell genereras unika elementnamn automatiskt för brödtextceller som inte är standard.

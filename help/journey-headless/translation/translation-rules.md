@@ -2,7 +2,7 @@
 title: Konfigurera översättningsregler för Headless-innehåll
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
-source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
 source-wordcount: '942'
 ht-degree: 0%
@@ -29,7 +29,6 @@ Nu när du har konfigurerat din koppling tar den här artikeln dig igenom nästa
 >* The **Översättningsbar** flagga skapar automatiskt översättningsregler åt dig och kräver ingen åtgärd.
 >* The **Översättningsbar** -flaggan används bara om konfigurationen för Translation Integration Framework är inställd på **[Aktivera fält för innehållsmodell för översättning.](/help/sites-cloud/administering/translation/integration-framework.md)**
 >* Om du aktiverar det här alternativet i TIF-konfigurationen ersätts eventuella manuellt skapade översättningsregler.|
-
 
 ## Syfte {#objective}
 
@@ -77,7 +76,7 @@ I **Översättningskonfiguration** Det finns ett antal alternativ för översät
 1. AEM sparar konfigurationen.
 1. Du måste välja den kontext du just skapade och sedan trycka eller klicka **Redigera**. Då öppnas **Redigerare för översättningsregler** för att konfigurera egenskaperna.
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
-1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** för att lägga till ytterligare fält i konfigurationen.
+1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** så att du kan lägga till fler fält i konfigurationen.
 1. När avmarkerat, under **Allmänt** i listan lägger du till egenskapsnamnen för de innehållsfragmentmodeller som du [som tidigare identifierats som fält för översättning.](getting-started.md#content-models)
    1. Ange egenskapsnamnet i **Ny egenskap** fält.
    1. Alternativen **Översätt** och **Inherit** kontrolleras automatiskt.

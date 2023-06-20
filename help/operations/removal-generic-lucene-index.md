@@ -2,9 +2,9 @@
 title: Generisk borttagning av Lucene-index
 description: Lär dig mer om den planerade borttagningen av generiska Lucene-index och hur du kan påverkas.
 exl-id: 3b966d4f-6897-406d-ad6e-cd5cda020076
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ I AEM används följande funktioner för fulltextfrågor:
 
 Sådana frågor kan inte returnera resultat utan att använda ett index. Till skillnad från en fråga som bara innehåller sökvägs- eller egenskapsbegränsningar returnerar alltid en fråga som innehåller en fullständig textbegränsning som det inte går att hitta något index för (och som därmed utför en genomgång) noll resultat.
 
-Det generiska Lucene-indexet (`/oak:index/lucene-*`) har funnits sedan AEM 6.0/Oak 1.0 för att ge en fullständig textsökning i de flesta databashierarkier, även om vissa sökvägar, som `/jcr:system` och `/var` har alltid uteslutits från detta. Indexet har dock i stort sett ersatts av index för mer specifika nodtyper (till exempel `damAssetLucene-*` för `dam:Asset` nodtyp), som har stöd för både fullständig text och egenskapssökningar.
+Det generiska Lucene-indexet (`/oak:index/lucene-*`) har funnits sedan AEM 6.0/ak 1.0 för att ge en fullständig textsökning i de flesta databashierarkier, även om vissa sökvägar, som `/jcr:system` och `/var` har alltid uteslutits från detta. Indexet har dock i stort sett ersatts av index för mer specifika nodtyper (till exempel `damAssetLucene-*` för `dam:Asset` nodtyp), som har stöd för både fullständig text och egenskapssökningar.
 
 I AEM 6.5 markerades det generiska Lucene-indexet som inaktuellt, vilket tyder på att det skulle tas bort i framtida versioner. Sedan dess har en WARN loggats när indexet har använts, vilket visas i följande loggutdrag:
 
@@ -38,21 +38,21 @@ Referenssökningsfrågor, till exempel i följande exempel, bör nu använda ind
 //*[jcr:contains(., '"/content/dam/mysite"')]
 ```
 
-För att stödja större kunddatavolymer kommer Adobe inte längre att skapa det generiska Lucene-indexet för nya AEM as a Cloud Service miljöer. Dessutom kommer Adobe att börja ta bort indexet från befintliga databaser. [Se tidslinjen](#timeline) i slutet av det här dokumentet om du vill ha mer information.
+För att ge stöd åt större kunddatavolymer skapar Adobe inte längre det generiska Lucene-indexet i nya AEM as a Cloud Service miljöer. Dessutom tar Adobe bort indexet från befintliga databaser. [Se tidslinjen](#timeline) i slutet av det här dokumentet om du vill ha mer information.
 
 Adobe har redan justerat indexkostnaderna via `costPerEntry` och `costPerExecution` egenskaper för att säkerställa att andra index, som `/oak:index/pathreference` används i första hand när det är möjligt.
 
-Kundprogram som använder frågor som fortfarande är beroende av detta index bör uppdateras omedelbart för att kunna utnyttja andra befintliga index, som kan anpassas vid behov. Alternativt kan nya anpassade index läggas till i kundapplikationen. Fullständiga anvisningar för indexhantering i AEM as a Cloud Service finns i [indexeringsdokumentation.](/help/operations/indexing.md)
+Kundprogram som använder frågor som fortfarande är beroende av detta index bör uppdateras omedelbart för att kunna använda andra befintliga index, som kan anpassas vid behov. Alternativt kan nya anpassade index läggas till i kundapplikationen. Fullständiga anvisningar för indexhantering i AEM as a Cloud Service finns i [indexeringsdokumentation.](/help/operations/indexing.md)
 
 ## Är du påverkad? {#are-you-affected}
 
-Det generiska Lucene-indexet används för närvarande som reserv om inget annat fulltextindex kan hantera en fråga. När detta inaktuella index används loggas ett meddelande som detta på WARN-nivå:
+Det generiska Lucene-indexet används för närvarande som reserv om inget annat fulltextindex kan hantera en fråga. När detta inaktuella index används loggas ett meddelande som liknar följande på WARN-nivå:
 
 ```text
 org.apache.jackrabbit.oak.plugins.index.lucene.LucenePropertyIndex This index is deprecated: /oak:index/lucene-2; it is used for query Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains(*, 'test') /* xpath: //*[jcr:contains(.,"test")] */ fullText="test", path=*). Please change the query or the index definitions.
 ```
 
-I vissa fall kan Oak försöka använda ett annat fullständigt textindex (som `/oak:index/pathreference`) som har stöd för den fullständiga textfrågan, men om frågesträngen inte matchar det reguljära uttrycket i indexdefinitionen, loggas ett meddelande på WARN-nivå och frågan returnerar troligen inga resultat.
+I vissa fall kan Oak försöka använda ett annat fullständigt textindex (som `/oak:index/pathreference`) för att ge stöd åt den fullständiga textfrågan, men om frågesträngen inte matchar det reguljära uttrycket i indexdefinitionen, loggas ett meddelande på WARN-nivå och frågan kommer troligen inte att returnera några resultat.
 
 ```text
 org.apache.jackrabbit.oak.query.QueryImpl Potentially improper use of index /oak:index/pathReference with queryFilterRegex (["']|^)/ to search for value "test"
@@ -61,7 +61,7 @@ org.apache.jackrabbit.oak.query.QueryImpl Potentially improper use of index /oak
 När det generiska Lucene-indexet har tagits bort loggas ett meddelande som visas nedan på WARN-nivå om en fullständig textfråga inte kan hitta någon lämplig indexdefinition:
 
 ```text
-org.apache.jackrabbit.oak.query.QueryImpl Fulltext query without index for filter Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains(*, 'test') /* xpath: //*[jcr:contains(.,"test")] */ fullText="test", path=*); no results will be returned
+org.apache.jackrabbit.oak.query.QueryImpl Fulltext query without index for filter Filter(query=select [jcr:path], [jcr:score], * from [nt:base] as a where contains(*, 'test') /* xpath: //*[jcr:contains(.,"test")] */ fullText="test", path=*); no results are returned
 ```
 
 >[!IMPORTANT]
@@ -117,7 +117,7 @@ Frågan återgår därför till det generiska fulltextindexet där alla inkluder
 >
 >**Kundåtgärd krävs**
 >
->Markera `jcr:content/metadata/@cq:tags` egenskapen så som den har analyserats i en anpassad version av `damAssetLucene` kommer att leda till att den här frågan hanteras av det här indexet och ingen WARN kommer att loggas.
+>Markera `jcr:content/metadata/@cq:tags` egenskapen så som den har analyserats i en anpassad version av `damAssetLucene` leder till att den här frågan hanteras av det här indexet och ingen WARN loggas.
 
 ### Författarinstans {#author-instance}
 
@@ -157,7 +157,6 @@ Innan det generiska Lucene-indexet tas bort ska `pathfield` -komponenten uppdate
 > * För närvarande utför dessa frågor utan angivna nodtyper, vilket resulterar i att en WARN loggas på grund av användningen av det generiska Lucene-indexet.
 > * Förekomster av de här komponenterna används snart automatiskt som standard `cq:Page` och `dam:Asset` nodtyper utan ytterligare kundåtgärder.
 > * The `nodeTypes` kan läggas till för att åsidosätta dessa standardnodtyper.
-
 
 ## Tidslinje för allmän borttagning av Lucene {#timeline}
 

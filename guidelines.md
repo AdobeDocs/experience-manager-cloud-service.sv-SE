@@ -1,15 +1,15 @@
 ---
-source-git-commit: d37193833d784f3f470780b8f28e53b473fd4e10
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '753'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 # Riktlinjer för att bidra till Adobe Experience Manager-dokumentation
 
 ## Dokumentationsfilosofi
 
-Vi vet att Adobe Experience Manager-användare arbetar i mycket konkurrensutsatta miljöer och strävar efter att skapa digitala upplevelser som skiljer dem från deras konkurrenter. Därför är det viktigt att Adobe när de tillhandahåller avancerade nya verktyg i AEM kompletteras med korrekt och tydlig dokumentation som gör det möjligt för kunden att omedelbart utnyttja sin AEM och maximera avkastningen.
+Vi vet att Adobe Experience Manager-användare arbetar i mycket konkurrensutsatta miljöer och strävar efter att skapa digitala upplevelser som skiljer dem från deras konkurrenter. Därför är det viktigt att Adobe när de tillhandahåller avancerade nya verktyg i AEM kompletteras med korrekt och tydlig dokumentation som gör det möjligt för kunden att omedelbart använda sin AEM och maximera avkastningen på investeringen.
 
 Målet med den AEM dokumentationen är att ge AEM tillgång till dokumentation så snart som möjligt. Därför prioriterar vi korrekt, användbar dokumentation och strävar efter att kontinuerligt uppdatera och förbättra den.
 
@@ -35,11 +35,11 @@ Undantag från den här regeln gäller versionsinformationen där kända problem
 
 ### Dokumentationsbidragen är inte till för att besvara tekniska frågor.
 
-Alla idéer du kan behöva förbättra AEM dokumentation är välkomna som bidrag. Kommentarer, utgåvor och pull-begäranden är dock endast avsedda för *bidrag*. De är inte avsedda att användas för att besvara frågor om hur du använder AEM, implementerar ditt AEM eller löser tekniska problem.
+Alla idéer du kan behöva förbättra AEM dokumentation är välkomna som bidrag. Kommentarer, problem och pull-förfrågningar är dock avsedda för *avgifter* endast. De är inte avsedda att användas för att besvara frågor om hur du använder AEM, implementerar ditt AEM eller löser tekniska problem.
 
-Frågor om hur du använder AEM eller tekniska fel som du kan ha gjort ska rapporteras via den normala supportprocessen via [Experience Manager supportportal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) eller diskuteras i [Experience Manager community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Om du har frågor om hur AEM eller tekniska fel har använts ska du rapportera via den normala supportprocessen via [Experience Manager supportportal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) eller diskuteras i [Experience Manager community](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
-***AEM är inte en ersättning för Adobe*** kundsupport och eventuella bidrag som söker svar på supportrelaterade frågor kommer att refuseras.
+***AEM ska inte ersätta Adobe kundsupport*** och eventuella bidrag som söker svar på frågor som rör stöd kommer att avslås.
 
 ### Bidragen ska tydligt hänvisa till berörda dokumentationssidor.
 
@@ -55,7 +55,7 @@ Genom att följa dessa riktlinjer blir det enklare att granska ditt bidrag och d
 
 ### Språk och format
 
-#### Språk:
+#### Språk
 
 * AEM dokumentation skrivs och underhålls på amerikansk engelska.
 * Håll meningar så enkla som möjligt.
@@ -65,11 +65,11 @@ Kom ihåg att läsare AEM dokumentation finns i hela världen och inte kan förv
 
 #### Följ Microsoft formathandbok
 
-[Microsoft Manual of ](https://docs.microsoft.com/en-us/style-guide/welcome/) Style är en kostnadsfri handbok för dokumentationsformat som fokuserar på programvarudokumentation och AEM dokumentation som följer den här handboken när det är möjligt.
+[The Microsoft Manual of Style](https://docs.microsoft.com/en-us/style-guide/welcome/) är en kostnadsfri handbok för dokumentationsformat som fokuserar på programvarudokumentation och AEM dokumentation följer den här handboken när det är möjligt.
 
 ### Formatering
 
-| Objekt | Format |
+| Objekt | Stil |
 |---|---|
 | Element eller alternativ i användargränssnittet | **fet** |
 | Filnamn, sökväg, användarindata, parametervärden | `monospaced` |

@@ -2,9 +2,9 @@
 title: Konfigurerar din kontomiljö
 description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
 exl-id: 1b948f0b-85b9-478a-8b7e-61495c1d57b6
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '488'
 ht-degree: 4%
 
 ---
@@ -40,36 +40,36 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Språk**
 
-   Detta definierar vilket språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
+  Detta definierar vilket språk som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
 
 * **Fönsterhantering**
 
-   Detta definierar beteendet för att öppna fönster. Välj något av följande:
+  Detta definierar beteendet för att öppna fönster. Välj något av följande:
 
    * **Flera fönster** (Standard)
 
       * Sidorna öppnas i ett nytt fönster.
+
    * **Ett fönster**
 
       * Sidorna öppnas i det aktuella fönstret.
 
-
 * **Visa skrivbordsåtgärder för Assets**
 
-   Det här alternativet kräver AEM datorprogram.
+  Det här alternativet kräver AEM datorprogram.
 
 * **Anteckningsfärg**
 
-   Detta definierar den standardfärg som används när anteckningar görs.
+  Detta definierar den standardfärg som används när anteckningar görs.
 
    * Klicka på färgblocket för att öppna väljaren för färgrutor och markera en färg.
    * Du kan också ange hexkoden för önskad färg i fältet.
 
 * **Relativ datumpresentation**
 
-   För att förbättra läsbarheten kommer AEM att återge datum inom de senaste sju dagarna som relativa datum (till exempel för tre dagar sedan) och äldre datum som exakta datum (till exempel den 20 mars 2017).
+  För att förbättra läsbarheten kommer AEM att återge datum inom de senaste sju dagarna som relativa datum (till exempel för tre dagar sedan) och äldre datum som exakta datum (till exempel den 20 mars 2017).
 
-   Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
+  Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
 
    * **Visa alltid exakt datum**: Det exakta datumet visas alltid (aldrig ett relativt datum).
    * **1 dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
@@ -80,17 +80,17 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Aktivera kortkommandon**
 
-   AEM stöder ett antal kortkommandon som gör redigeringen effektivare.
+  AEM stöder ett antal kortkommandon som gör redigeringen effektivare.
 
    * [Kortkommandon för att redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
    * [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
 
-   Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras om en användare har vissa tillgänglighetskrav.
+  Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras om en användare har vissa tillgänglighetskrav.
 
 * **Aktivera startsidan för resurser**
 
-   Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets Home Page Experience för hela organisationen.
+  Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets Home Page Experience för hela organisationen.
 
 * **Stock-konfiguration**
 
-   Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md).
+  Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md).

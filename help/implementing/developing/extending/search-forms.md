@@ -2,9 +2,9 @@
 title: Konfigurera sökformulär
 description: Konfigurera Sök i Forms för Adobe Experience Manager as a Cloud Service.
 exl-id: b06649c4-cc91-44e3-8699-00e90140b90d
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2043'
+source-wordcount: '2037'
 ht-degree: 2%
 
 ---
@@ -495,47 +495,46 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Fältetikett**
 
-   Den etikett som visas som ett komprimeringsbart huvud eller som fältetikett för predikatet.
+  Den etikett som visas som ett komprimeringsbart huvud eller som fältetikett för predikatet.
 
 * **Beskrivning**
 
-   Beskrivande information för användaren.
+  Beskrivande information för användaren.
 
 * **Platshållare**
 
-   Tom text eller platshållaren för predikatet om ingen filtreringstext anges.
+  Tom text eller platshållaren för predikatet om ingen filtreringstext anges.
 
 * **Egenskapsnamn**
 
-   Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` ange egenskapens djup i förhållande till `jcr:content` nod (varje asterisk representerar en nodnivå).
+  Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` ange egenskapens djup i förhållande till `jcr:content` nod (varje asterisk representerar en nodnivå).
 
-   Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` på `jcr:content` nod `*/jcr:content/x`
+  Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` på `jcr:content` nod `*/jcr:content/x`
 
 * **Egenskapsdjup**
 
-   Det maximala djup som ska sökas efter den egenskapen i resurserna. En sökning på den egenskapen kan därför utföras på en resurs och rekursiva underordnade tills nivån på de underordnade är lika med det angivna djupet.
+  Det maximala djup som ska sökas efter den egenskapen i resurserna. En sökning på den egenskapen kan därför utföras på en resurs och rekursiva underordnade tills nivån på de underordnade är lika med det angivna djupet.
 
 * **Egenskapsvärde**
 
-   Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel `cq:Page` eller
+  Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel `cq:Page` eller
 
-   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
+  `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
 
 * **Intervalltext**
 
-   Etiketten för intervallfältet i **Datumintervall** förutsäga.
+  Etiketten för intervallfältet i **Datumintervall** förutsäga.
 
 * **Alternativbana**
 
-   Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har valt **+** -ikonen används för att lägga till markeringen i listan över giltiga alternativ (sedan **-** -ikonen som ska tas bort om det behövs).
+  Användaren kan markera sökvägen med hjälp av Bandläsaren på fliken för predikatinställningar. När du har valt **+** -ikonen används för att lägga till markeringen i listan över giltiga alternativ (sedan **-** -ikonen som ska tas bort om det behövs).
 
-   Alternativen är innehållsnoder som skapas av användaren och som har följande struktur:
+  Alternativen är innehållsnoder som skapas av användaren och som har följande struktur:
 
-   `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
+  `(jcr:primaryType = nt:unstructured, value (String), jcr:title (String))`
 
 * **Alternativ nodsökväg**
-I praktiken samma som 
-**Sökväg till alternativ**, det är bara det här som finns i det vanliga predikatfältet, det andra är specifikt för resurser.
+I praktiken samma som **Sökväg till alternativ**, det är bara det här som finns i det vanliga predikatfältet, det andra är specifikt för resurser.
 
 * **Enkel markering**
 Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter ett urval. Om du av misstag markerar kryssrutan kan den avmarkeras.
@@ -563,7 +562,6 @@ Etiketterna för publicerings- och Live copy-kryssrutorna för det platsspecifik
    >* `/apps/cq/gui/content/facets/<option>`
    >* `/apps/commerce/gui/content/facets/<option>`
 
-
 ### Lägg till/redigera ett prediktionsfält och definiera fältinställningar {#add-edit-a-predicate-field-and-define-field-settings}
 
 Du kan lägga till eller redigera fält och definiera/uppdatera deras inställningar:
@@ -577,11 +575,12 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    * Du lägger till ett nytt fält:
 
-      När du har lagt till predikatet **Inställningar** öppnar och visar de egenskaper som kan definieras.
+     När du har lagt till predikatet **Inställningar** öppnar och visar de egenskaper som kan definieras.
 
    * Du vill uppdatera ett befintligt predikat:
 
-      Markera predikatfältet (till höger) och öppna sedan **Inställningar** -fliken.
+     Markera predikatfältet (till höger) och öppna sedan **Inställningar** -fliken.
+
    Till exempel inställningarna för **Prediktion för datumintervall**:
 
    ![ändra predikat](assets/csf-modify-predicate.png)
@@ -594,7 +593,7 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    ![förhandsgranskningsikon](assets/csf-preview-icon.png)
 
-1. Då visas sökformulären så som de visas (helt expanderade) i kolumnen Sök i lämplig konsol.
+1. Visar sökformulären så som de visas (helt utökade) i kolumnen Sök i lämplig konsol.
 
    ![förhandsgranska formulär](assets/csf-preview-form.png)
 
@@ -656,7 +655,6 @@ I följande exempel (som används för att söka efter mallen som används för 
    >1. `/libs/cq/gui/content/common/options/predicates`
    >1. Gör ändringar i `/apps.`
 
-
 1. Öppna **Sök i Forms** och välj den konfiguration som du vill uppdatera. Till exempel: **Webbplatsadministratörens sökväg**. Välj sedan **Redigera**.
 
 1. Beroende på konfigurationen lägger du till en **Alternativ** eller **Alternativ, egenskap** till konfigurationen.
@@ -664,15 +662,16 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    * **Egenskapsnamn**
 
-      Specificera den nodegenskap som du vill söka efter på målnoderna. Till exempel:
+     Specificera den nodegenskap som du vill söka efter på målnoderna. Till exempel:
 
-      `jcr:content/cq:template`
+     `jcr:content/cq:template`
 
    * **Alternativ nodsökväg**
 
-      Välj den sökväg där du vill ha dina alternativ. Till exempel:
+     Välj den sökväg där du vill ha dina alternativ. Till exempel:
 
-      `/apps/cq/gui/content/common/options/predicates/templatetype`
+     `/apps/cq/gui/content/common/options/predicates/templatetype`
+
    ![Alternativpredikat](assets/csf-options-predicate-02.png)
 
 1. Välj **Klar** för att spara konfigurationen.

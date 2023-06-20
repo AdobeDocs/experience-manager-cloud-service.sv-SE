@@ -4,9 +4,9 @@ description: Lär dig de bästa arbetssätten som skapats av tekniker och konsul
 feature: Multi Site Manager
 role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1429'
 ht-degree: 0%
 
 ---
@@ -29,8 +29,8 @@ Kom ihåg att en Live-kopia kan skapas med [vanliga sidor](creating-live-copies.
 
 Ytterligare fördelar med att använda en ritkonfiguration är att de
 
-* Tillåt författaren att använda **Utrullning** på en plan för att uttryckligen skicka ändringar till Live-kopior som ärver från denna plan.
-* Tillåt författaren att använda **Skapa webbplats** för att enkelt kunna välja språk och konfigurera strukturen för Live Copy.
+* Tillåt författaren att använda **Utrullning** på en ritning för att uttryckligen skicka ändringar till Live-kopior som ärver från den här ritningen.
+* Tillåt författaren att använda **Skapa webbplats** för att enkelt välja språk och konfigurera strukturen för Live Copy.
 * Definiera en standardkonfiguration för utrullning för Live-kopior som har en relation till ritningen.
 
 Om det inte finns någon referens till en ritningskonfiguration kan rollouts bara initieras från själva Live-kopiorna, vilket i huvudsak leder till att innehållet hämtas från källan.
@@ -48,7 +48,7 @@ I allmänhet gäller följande som utrullningsregel i MSM för synkronisering av
 * Komponenter introduceras med synkronisering av alla resurser som ingår i planen.
 * Behållare synkroniserar bara den aktuella resursen.
 
-Detta innebär att komponenterna behandlas som en sammanställning och att själva komponenten och alla dess underordnade komponenter i en utrullning ersätts med de i ritningarna. Det innebär att om en resurs läggs till lokalt i en sådan komponent, kommer den att gå förlorad i innehållet i ritningen vid utrullning.
+Detta innebär att komponenterna behandlas som en sammanställning och att själva komponenten och alla dess underordnade komponenter i en utrullning ersätts med de i ritningarna. Det innebär att om en resurs läggs till lokalt i en sådan komponent, försvinner den till innehållet i ritningen vid utrullning.
 
 För att ge stöd åt kapsling av komponenter så att lokalt tillagda komponenter bibehålls i en utrullning måste komponenten deklareras som en behållare.
 

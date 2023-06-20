@@ -2,9 +2,9 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: addfa18ed8fa45b1cfc17d4e35cbdde47b491507
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1753'
+source-wordcount: '1732'
 ht-degree: 6%
 
 ---
@@ -28,7 +28,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-01.png)
 
-1. Granska checklistan för konsumtion och se till att alla steg har slutförts. Detta är nödvändiga steg för att säkerställa ett lyckat intag. Du kan fortsätta till **Nästa** endast om checklistan har slutförts.
+1. Granska checklistan för konsumtion och se till att alla steg har slutförts. Detta är nödvändiga steg för att säkerställa ett lyckat intag. Gå till **Nästa** endast om checklistan är slutförd.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/Ingestion-checklist.png)
 
@@ -36,20 +36,20 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    * Välj den migreringsuppsättning som innehåller extraherade data som källa.
       * Migreringsuppsättningar kommer att upphöra efter en längre inaktivitetsperiod, så det förväntas att intaget sker relativt snart efter att extraktionen har utförts. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
-   * Välj målmiljö. Det är här som migreringsuppsättningens innehåll importeras. Välj nivån. (Författare/Publicera). Snabba utvecklingsmiljöer stöds inte.
+   * Välj målmiljö. I den här miljön importeras migreringsuppsättningens innehåll. Välj nivån. (Författare/Publicera). Snabba utvecklingsmiljöer stöds inte.
 
    >[!NOTE]
    >Följande anmärkningar gäller inhämtning av innehåll:
    > Om källan var författare rekommenderar vi att du importerar den till nivån Författare på målet. Om källan var Publish ska även målet vara Publish.
-   > Om målnivån är `Author`, kommer författarinstansen att stängas under den tid som inmatningen pågår och kommer inte att vara tillgänglig för användare (till exempel författare eller alla som utför underhåll). Detta är för att skydda systemet och förhindra ändringar som antingen kan gå förlorade eller orsaka en ingiftskonflikt. Se till att ditt team är medvetna om detta. Observera också att miljön kommer att visas i viloläge under författarintaget.
+   > Om målnivån är `Author`, stängs författarinstansen av under den tid som inmatningen pågår och blir otillgänglig för användare (till exempel författare eller alla som utför underhåll). Orsaken är att skydda systemet och förhindra alla ändringar som antingen kan gå förlorade eller orsaka en konflikt i intaget. Se till att ditt team är medvetna om detta. Observera också att miljön visas i viloläge under författarintaget.
    > Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intagningsfasen. Se [Ingesting with AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#ingesting-azcopy) för mer information.
-   > Om du använder inmatning med förkopia (för S3 eller Azure Data Store) bör du endast köra Author-intagning. Detta snabbar upp inläsningen av publiceringen när den körs senare.
-   > Inställningarna stöder inte en Rapid Development Environment-destination (RDE). De visas inte som ett möjligt målalternativ, även om användaren har åtkomst till det.
+   > Om du använder inmatning med förkopia (för S3 eller Azure Data Store) bör du endast köra Author-intagning. Det snabbar upp publiceringsintrycket när det körs senare.
+   > Inställningarna stöder inte ett mål för Rapid Development Environment (RDE) och visas inte som ett möjligt målalternativ, även om användaren har åtkomst till det.
 
    >[!IMPORTANT]
    > Följande viktiga meddelanden gäller inhämtning av innehåll:
    > Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
-   > Om inställningen **Svep** är aktiverat före inmatning, tar bort hela den befintliga databasen och skapar en ny databas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Du måste läggas till igen i administratörsgruppen för att kunna påbörja ett intag.
+   > Om inställningen **Svep** är aktiverat före inmatning, tar bort hela den befintliga databasen och skapar en ny databas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Du måste läggas till på nytt i administratörsgruppen för att påbörja ett intag.
 
 1. Klicka på **Ingest**
 
@@ -138,7 +138,7 @@ Detta indikerar att Cloud Acceleration Manager inte kunde nå målmiljöns migre
 > 
 > Fältet &quot;Migreringstoken&quot; visas eftersom det i ett fåtal fall inte är tillåtet att hämta denna token. Genom att tillåta manuell inmatning kan användaren snabbt påbörja intagningen utan ytterligare hjälp. Om variabeln anges och meddelandet fortfarande visas är det inte problemet att hämta variabeln.
 
-* AEM as a Cloud Service bevarar miljötillståndet och kan ibland behöva starta om migreringstjänsten av ett antal vanliga orsaker. Om tjänsten startas om går den inte att nå, men kommer snart att vara tillgänglig.
+* AEM as a Cloud Service bevarar miljötillståndet och kan ibland behöva starta om migreringstjänsten av ett antal vanliga orsaker. Om tjänsten startas om går det inte att nå den, men den är vanligtvis tillgänglig snart.
 * Det är möjligt att en annan process körs på instansen. Om till exempel Release Orchestrator tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. Därför, och risken för att scenen eller produktionsinstansen skadas, är det mycket viktigt att du pausar uppdateringarna under ett intag.
 * Om en [IP-Tillåtelselista har tillämpats](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) via Cloud Manager blockeras Cloud Acceleration Manager från att nå migreringstjänsten. Det går inte att lägga till en IP-adress för frågor eftersom adressen är mycket dynamisk. För närvarande är den enda lösningen att inaktivera IP-tillåtelselista när intaget körs.
 * Det kan finnas andra skäl till att en utredning behöver göras. Kontakta Adobe kundtjänst om ditt intag fortfarande misslyckas.

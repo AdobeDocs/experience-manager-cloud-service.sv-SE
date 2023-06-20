@@ -2,9 +2,9 @@
 title: Så här Live med ditt headless-program
 description: I den här delen av AEM Headless Developer Journey lär du dig hur du distribuerar ett headless-program live genom att ta din lokala kod i Git och flytta den till Cloud Manager Git för CI/CD-pipeline.
 exl-id: 81616e31-764b-44b0-94a6-3ae24ce56bf6
-source-git-commit: 270eb35023e34eed2cd17674372794c6c2cc7757
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Följ de bästa metoderna nedan för att göra ditt AEM headless-program klart f
    * Använd beständiga frågor när det är möjligt.
    * Tillhandahåll CDN TTL över 600 sekunder för att CDN ska cachelagra dem.
    * AEM kan beräkna effekten av en modelländring av befintliga frågor.
-* Dela JSON-filer/GraphQL-frågor mellan låg och hög förändringsfrekvens för innehåll för att minska klienttrafiken till CDN och tilldela högre TTL. Detta minimerar antalet CDN som validerar JSON med den ursprungliga servern.
+* Dela JSON-filer/GraphQL-frågor mellan låg och hög förändringsfrekvens för innehåll, så att du kan minska klienttrafiken till CDN och tilldela högre TTL. Detta minimerar antalet CDN som validerar JSON med den ursprungliga servern.
 * Om du vill göra innehåll från CDN ogiltigt använder du Mjuk tömning. På så sätt kan CDN ladda ned innehållet på nytt utan att orsaka ett cacheminne.
 
 ## Förkorta nedladdningstiden för headless Content {#improve-download-time}
@@ -101,7 +101,7 @@ Följ dessa metodtips som ett allmänt tillvägagångssätt vid felsökning:
 
 ### Logga ett fel med support {#logging-a-bug-with-support}
 
-Följ stegen nedan för att effektivt logga ett fel med support om du behöver mer hjälp:
+Så här loggar du effektivt ett fel med support om du behöver mer hjälp:
 
 * Ta skärmbilder av problemet, om det behövs
 * Dokumentera ett sätt att återskapa problemet

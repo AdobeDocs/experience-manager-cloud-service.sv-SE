@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: 7e6a42f5804ddef918df859811ba48f27ebbf19a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '4934'
+source-wordcount: '4925'
 ht-degree: 0%
 
 ---
@@ -30,22 +30,21 @@ Genom att använda GraphQL API i AEM kan du effektivt leverera innehållsfragmen
 >* [AEM Commerce använder data från en Commerce-plattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
 >* AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard-GraphQL) för att leverera strukturerat innehåll som kan användas i dina program.
 
-
 ## GraphQL API {#graphql-api}
 
 GraphQL är:
 
 * &quot;*...ett frågespråk för API:er och en körningsmiljö för att utföra dessa frågor med dina befintliga data. GraphQL ger en fullständig och begriplig beskrivning av data i API:t, ger kunderna möjlighet att fråga efter exakt vad de behöver och ingenting mer, gör det enklare att utveckla API:er över tid och möjliggör kraftfulla utvecklingsverktyg.*&quot;.
 
-   Se [GraphQL.org](https://graphql.org)
+  Se [GraphQL.org](https://graphql.org)
 
 * &quot;*...en öppen specifikation för ett flexibelt API-lager. Placera GraphQL över era befintliga bakgrunder för att skapa produkter snabbare än någonsin ....*&quot;.
 
-   Se [Utforska GraphQL](https://www.graphql.com).
+  Se [Utforska GraphQL](https://www.graphql.com).
 
 * *&quot;...ett datameddelande och en specifikation som utvecklats internt av Facebook 2012 innan de blev offentligt tillgängliga 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktionen av hundratals organisationer av alla storlekar..&quot;*
 
-   Se [GraphQL Foundation](https://foundation.graphql.org/).
+  Se [GraphQL Foundation](https://foundation.graphql.org/).
 
 <!--
 "*Explore GraphQL is maintained by the Apollo team. Our goal is to give developers and technical leaders around the world all of the tools they need to understand and adopt GraphQL.*". 
@@ -125,7 +124,6 @@ GraphQL-frågor som använder förfrågningar om POST rekommenderas inte efterso
 >* Skapa en [Cloud Manager-miljövariabel](/help/implementing/cloud-manager/environment-variables.md) anropad `ENABLE_GRAPHQL_ENDPOINT`
 >* med värdet `true`
 
-
 >[!NOTE]
 >
 >Möjligheten att utföra direkta frågor kan vara föråldrad vid något tillfälle i framtiden.
@@ -201,7 +199,7 @@ Om du till exempel:
 
 1. Installera ett paket som innehåller `Content-Fragment-Model-1` och `Content-Fragment-Model-2`:
 
-   1. GraphQL-typer för `Model-1` och `Model-2` kommer att genereras.
+   1. GraphQL-typer för `Model-1` och `Model-2` genereras.
 
 1. Ändra sedan `Content-Fragment-Model-2`:
 
@@ -233,7 +231,7 @@ Inom schemat finns det enskilda fält av två baskategorier:
 
 * Fält som du genererar.
 
-   Ett urval av [Datatyper](#Data-types) används för att skapa fält baserat på hur du konfigurerar innehållsfragmentmodellen. Fältnamnen hämtas från **Egenskapsnamn** fält för **Datatyp** -fliken.
+  Ett urval av [Datatyper](#Data-types) används för att skapa fält baserat på hur du konfigurerar innehållsfragmentmodellen. Fältnamnen hämtas från **Egenskapsnamn** fält för **Datatyp** -fliken.
 
    * Det finns också **Återge som** inställning som ska beaktas, eftersom användare kan konfigurera vissa datatyper. Ett textfält med en rad kan till exempel konfigureras att innehålla flera textrader genom att välja `multifield` i listrutan.
 
@@ -371,7 +369,7 @@ Se [Exempelfråga - Alla städer med en namngiven variant](/help/headless/graphq
 
 >[!NOTE]
 >
->Om den angivna varianten inte finns för ett innehållsfragment returneras originaldata (som också kallas för den överordnad variationen) som standard (fallback).
+>Om den angivna varianten inte finns för ett innehållsfragment returneras originaldata (kallas även för den överordnad variationen) som standard (fallback).
 
 <!--
 ## Security Considerations {#security-considerations}
@@ -666,10 +664,9 @@ query {
 
 >[!NOTE]
 >
->* Sidindelning kräver en stabil sorteringsordning för att fungera korrekt i flera frågor som begär olika sidor i samma resultatuppsättning. Som standard används databassökvägen för varje objekt i resultatuppsättningen för att säkerställa att ordningen alltid är densamma. Om en annan sorteringsordning används, och om sorteringen inte kan göras på JCR-frågenivå, kommer det att få en negativ prestandapåverkan eftersom hela resultatuppsättningen måste läsas in i minnet innan sidorna kan bestämmas.
+>* Sidindelning kräver en stabil sorteringsordning för att fungera korrekt i flera frågor som begär olika sidor i samma resultatuppsättning. Som standard används databassökvägen för varje objekt i resultatuppsättningen för att säkerställa att ordningen alltid är densamma. Om en annan sorteringsordning används, och om sorteringen inte kan göras på JCR-frågenivå, uppstår en negativ prestandapåverkan eftersom hela resultatuppsättningen måste läsas in i minnet innan sidorna kan bestämmas.
 >
 >* Ju högre förskjutning, desto längre tid tar det att hoppa över objekten från den fullständiga JCR-frågeresultatuppsättningen. En alternativ lösning för stora resultatuppsättningar är att använda den numrerade frågan med `first` och `after` -metod.
-
 
 ### Sidnumrerad fråga - första och efter {#paginated-first-after}
 
@@ -708,7 +705,6 @@ query {
 >
 >* På grund av interna tekniska begränsningar försämras prestanda om sortering och filtrering tillämpas på kapslade fält. Därför bör du använda filter-/sorteringsfält som lagras på rotnivå. Detta är också det rekommenderade sättet om du vill fråga stora sidnumrerade resultatuppsättningar.
 
-
 ## Webboptimerad bildleverans i GraphQL-frågor {#web-optimized-image-delivery-in-graphql-queries}
 
 Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
@@ -717,9 +713,9 @@ Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
 
 * Skicka parametrar med frågan så att en viss återgivning av bilden genereras och returneras automatiskt
 
-   >[!NOTE]
-   >
-   >Den angivna återgivningen lagras inte i AEM Assets. Återgivningen genereras och sparas i cache-minnet under en kort period.
+  >[!NOTE]
+  >
+  >Den angivna återgivningen lagras inte i AEM Assets. Återgivningen genereras och sparas i cache-minnet under en kort period.
 
 * Returnera URL:en som en del av JSON-leveransen
 
@@ -744,7 +740,7 @@ Med GraphQL kan man
 Strukturen och syntaxen är:
 
 * `format`: en uppräkning med alla format som stöds av tillägget: GIF, PNG, PNG8, JPG, PJPG, BJPG, WEBP, WEBPLL eller WEBPLY
-* `seoName`: en sträng som ska användas som filnamn i stället för nodnamnet
+* `seoName`: en sträng som används som filnamn i stället för nodnamnet
 * `crop`: en understruktur för en bildruta, om bredd eller höjd utelämnas, används höjden eller bredden som samma värde
    * `xOrigin`: bildrutans x-ursprung och är obligatoriskt
    * `yOrigin`: ramens y-ursprung och är obligatoriskt
@@ -888,17 +884,17 @@ Om du till exempel vill köra de tidigare exemplen direkt (sparade som beständi
 
    * `http://localhost:4502/graphql/execute.json/wknd-shared/dynamic-url-x;seoName=xxx`
 
-      Svaret ser ut så här:
+     Svaret ser ut så här:
 
-      ![Bildleverans med parametrar](assets/cfm-graphiql-sample-image-delivery.png "Bildleverans med parametrar")
+     ![Bildleverans med parametrar](assets/cfm-graphiql-sample-image-delivery.png "Bildleverans med parametrar")
 
 * [Flera parametrar](#dynamic-image-delivery-multiple-specified-parameters); Beständig fråga med namnet `dynamic`
 
    * `http://localhost:4502/graphql/execute.json/wknd-shared/dynamic;seoName=billiboy;format=GIF;`
 
-      >[!CAUTION]
-      >
-      >Efterföljande `;`är obligatoriskt för att utan problem avsluta parameterlistan.
+     >[!CAUTION]
+     >
+     >Efterföljande `;`är obligatoriskt för att utan problem avsluta parameterlistan.
 
 ### Begränsningar för bildleverans {#image-delivery-limitations}
 
@@ -922,26 +918,26 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
    * add `List` till modellnamnet, till exempel  `cityList`
    * Se [Exempelfråga - All information om alla städer](/help/headless/graphql-api/sample-queries.md#sample-all-information-all-cities)
 
-   Då kan du:
+  Då kan du:
 
    * [Sortera resultaten](#sorting)
 
       * `ASC` : stigande
       * `DESC` : fallande
+
    * Returnera en resultatsida med antingen:
 
       * [En listfråga med förskjutning och begränsning](#list-offset-limit)
       * [En sidnumrerad fråga med första och efter](#paginated-first-after)
+
    * Se [Exempelfråga - All information om alla städer](/help/headless/graphql-api/sample-queries.md#sample-all-information-all-cities)
-
-
-
 
 * Filtret `includeVariations` ingår i `List` och `Paginated` frågetyper.  Om du vill hämta variationer för innehållsfragment i frågeresultaten väljer du `includeVariations` filter måste anges till `true`.
 
    * Se [Exempelfråga för flera innehållsfragment, och deras variationer, för en given modell](/help/headless/graphql-api/sample-queries.md#sample-wknd-multiple-fragment-variations-given-model)
-   >[!CAUTION]
-   >Filtret `includeVariations` och det systemgenererade fältet `_variation` kan inte användas tillsammans i samma frågedefinition.
+
+  >[!CAUTION]
+  >Filtret `includeVariations` och det systemgenererade fältet `_variation` kan inte användas tillsammans i samma frågedefinition.
 
 * Om du vill använda ett logiskt OR:
    * use ` _logOp: OR`
@@ -958,25 +954,31 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
       * `_locale` : för att avslöja språket, baserat på Language Manager
          * Se [Exempelfråga för flera innehållsfragment för en viss språkinställning](/help/headless/graphql-api/sample-queries.md#sample-wknd-multiple-fragments-given-locale)
+
       * `_metadata` : för att visa metadata för ditt fragment
          * Se [Exempelfråga för metadata - Ange metadata för utmärkelserna med namnet GB](/help/headless/graphql-api/sample-queries.md#sample-metadata-awards-gb)
+
       * `_model` : tillåt frågor för en innehållsfragmentmodell (sökväg och rubrik)
          * Se [Exempelfråga för en innehållsfragmentmodell från en modell](/help/headless/graphql-api/sample-queries.md#sample-wknd-content-fragment-model-from-model)
+
       * `_path` : sökvägen till ditt innehållsfragment i databasen
          * Se [Exempelfråga - Ett enskilt specifikt stadsfragment](/help/headless/graphql-api/sample-queries.md#sample-single-specific-city-fragment)
+
       * `_reference` : avslöja referenser, inkludera textbundna referenser i RTF-redigeraren
          * Se [Exempelfråga för flera innehållsfragment med förhämtade referenser](/help/headless/graphql-api/sample-queries.md#sample-wknd-multiple-fragments-prefetched-references)
+
       * `_variation` : för att visa specifika variationer i ditt innehållsfragment
 
-         >[!NOTE]
-         >
-         >Om den angivna varianten inte finns för ett innehållsfragment returneras den överordnad varianten som ett (fallback) standardvärde.
+        >[!NOTE]
+        >
+        >Om den angivna varianten inte finns för ett innehållsfragment returneras den överordnad variationen som ett (fallback) standardvärde.
 
-         >[!CAUTION]
-         >
-         >Det systemgenererade fältet `_variation` kan inte användas tillsammans med filtret `includeVariations`.
+        >[!CAUTION]
+        >
+        >Det systemgenererade fältet `_variation` kan inte användas tillsammans med filtret `includeVariations`.
 
          * Se [Exempelfråga - Alla städer med en namngiven variant](/help/headless/graphql-api/sample-queries.md#sample-cities-named-variation)
+
    * För [bildleverans](#image-delivery):
 
       * `_dynamicUrl`: på `ImageRef` referens
@@ -988,6 +990,7 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
          * [Exempelfråga för bildleverans med fullständiga parametrar](#image-delivery-full-parameters)
 
          * [Exempelfråga för bildleverans med en enda angiven parameter](#image-delivery-single-specified-parameter)
+
    * `_tags` : visa ID:n för innehållsfragment eller variationer som innehåller taggar, this is an array of `cq:tags` identifierare.
 
       * Se [Exempelfråga - namn på alla städer som taggats som stadbrytningar](/help/headless/graphql-api/sample-queries.md#sample-names-all-cities-tagged-city-breaks)
@@ -995,29 +998,21 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
       * Se [Exempelfråga med filtrering efter _tagg-ID och exklusive variationer](/help/headless/graphql-api/sample-queries.md#sample-filtering-tag-not-variations)
       * Se [Exempelfråga med filtrering efter _tagg-ID och inklusive variationer](/help/headless/graphql-api/sample-queries.md#sample-filtering-tag-with-variations)
 
-      >[!NOTE]
-      >
-      >Taggar kan också efterfrågas genom att en lista med metadata för ett innehållsfragment visas.
+     >[!NOTE]
+     >
+     >Taggar kan också efterfrågas genom att en lista med metadata för ett innehållsfragment visas.
 
    * Och åtgärder:
 
       * `_operator` : tillämpa särskilda operatörer, `EQUALS`, `EQUALS_NOT`, `GREATER_EQUAL`, `LOWER`, `CONTAINS`, `STARTS_WITH`
          * Se [Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot;](/help/headless/graphql-api/sample-queries.md#sample-all-persons-not-jobs)
          * Se [Exempelfråga - Alla annonser där `_path` börjar med ett visst prefix](/help/headless/graphql-api/sample-queries.md#sample-wknd-all-adventures-cycling-path-filter)
+
       * `_apply` : tillämpa särskilda villkor, till exempel  `AT_LEAST_ONCE`
          * Se [Exempelfråga - Filtrera en array med ett objekt som måste förekomma minst en gång](/help/headless/graphql-api/sample-queries.md#sample-array-item-occur-at-least-once)
+
       * `_ignoreCase` : för att ignorera skiftläget vid fråga
          * Se [Exempelfråga - Alla städer med SAN i namnet, oavsett fall](/help/headless/graphql-api/sample-queries.md#sample-all-cities-san-ignore-case)
-
-
-
-
-
-
-
-
-
-
 
 * GraphQL-unionstyper stöds:
 
@@ -1050,4 +1045,4 @@ AEM planerar att investera i det AEM GraphQL API:t.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Checka ut [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) en komplett självstudiekurs som visar hur man bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app, i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Checka ut [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) en komplett självstudiekurs som visar hur man bygger upp och exponerar innehåll med hjälp av AEM GraphQL API:er och som används av en extern app, i ett headless CMS-scenario.

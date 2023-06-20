@@ -4,9 +4,9 @@ description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as
 feature: Content Fragments
 role: User
 exl-id: d12b1dda-85ce-4665-b8b1-915b74231bb8
-source-git-commit: e99522cb6221285b5b4de5f026dcc4d925035ec1
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2127'
+source-wordcount: '2121'
 ht-degree: 3%
 
 ---
@@ -60,7 +60,6 @@ Om du vill ha hjälp med det här kan du förhandsvisa [Strukturträd](/help/sit
 >* [Stöd för Content Fragments i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
 >* [Återanvänd innehållsfragment med MSM för resurser](/help/assets/reuse-assets-using-msm.md) (endast tillgängligt via **Resurser** konsol)
-
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som
 
@@ -162,9 +161,9 @@ Resurser kan användas med ett innehållsfragment på flera sätt. var och en me
    * Definiera tillgångens position.
    * Se [Infoga resurser i fragment](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment) i fragmentredigeraren om du vill ha mer information.
 
-   >[!NOTE]
-   >
-   >Visuella resurser som infogats i själva innehållsfragmentet kopplas till föregående stycke. När fragmentet läggs till på en sida flyttas dessa resurser i relation till det stycket när mellanliggande innehåll läggs till.
+  >[!NOTE]
+  >
+  >Visuella resurser som infogats i själva innehållsfragmentet kopplas till föregående stycke. När fragmentet läggs till på en sida flyttas dessa resurser i relation till det stycket när mellanliggande innehåll läggs till.
 
 * **Associerat innehåll**
 
@@ -207,13 +206,13 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
    * Kopplas till föregående text (stycke).
 
-      >[!CAUTION]
-      >
-      >Resurser kan tas bort (oavsiktligt) från ett fragment genom att växla till oformaterad text.
+     >[!CAUTION]
+     >
+     >Resurser kan tas bort (oavsiktligt) från ett fragment genom att växla till oformaterad text.
 
-      >[!NOTE]
-      >
-      >Resurser kan också läggas till som [extra (mellanliggande) innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md#using-associated-content) när ett fragment används på en sida, med antingen Associerat innehåll eller resurser från Resurser-webbläsaren.
+     >[!NOTE]
+     >
+     >Resurser kan också läggas till som [extra (mellanliggande) innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md#using-associated-content) när ett fragment används på en sida, med antingen Associerat innehåll eller resurser från Resurser-webbläsaren.
 
 * **Associerat innehåll**
 
@@ -236,9 +235,9 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
          * Genom att visa/redigera fragmentet **Egenskaper** från konsolen
          * Genom att redigera **Metadata** i fragmentredigeraren
 
-   >[!CAUTION]
-   >
-   >Metadatabearbetningsprofiler gäller inte för innehållsfragment.
+  >[!CAUTION]
+  >
+  >Metadatabearbetningsprofiler gäller inte för innehållsfragment.
 
 * **Överordnad**
 
@@ -246,9 +245,9 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
       * Alla innehållsfragment har en instans av Överordnad.
       * Överordnad kan inte tas bort.
+
    * Överordnad är tillgängligt i fragmentredigeraren under **[Variationer](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md)**.
    * Överordnad är inte en variation i sig, utan är grunden för alla variationer.
-
 
 * **Variationer**
 
@@ -301,7 +300,7 @@ Om du vill använda dina innehållsfragment för att skapa sidor behöver du ock
 
 ## Exempel på användning {#example-usage}
 
-Ett fragment, med dess element och variationer, kan användas för att skapa sammanhängande innehåll för flera kanaler. När du utformar ditt fragment måste du tänka på vad som kommer att användas var.
+Ett fragment, med dess element och variationer, kan användas för att skapa sammanhängande innehåll för flera kanaler. När du utformar ditt fragment bör du tänka på vad som användes var.
 
 ### WKND-exempel {#wknd-sample}
 
@@ -310,7 +309,7 @@ The [WKND-plats](/help/implementing/developing/introduction/develop-wknd-tutoria
 WKND-projektet innehåller:
 
 * Content Fragment Models available under:
-   `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
+  `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
 
 * Innehållsfragment (och annat innehåll) tillgängliga under:
-   `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
+  `http://<hostname>:<port>/assets.html/content/dam/wknd/en`

@@ -4,9 +4,9 @@ description: Validera och felsöka med Dispatcher Tools (äldre)
 feature: Dispatcher
 hidefromtoc: true
 exl-id: dc04d035-f002-42ef-9c2e-77602910c2ec
-source-git-commit: 33dfe795140f2780f7f2cf876f3ebc725310214d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2337'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ Den här filen finns i `dispatcher_vhost.conf` -fil. Du kan ändra Dispatcher oc
 
 * `conf.dispatcher.d/available_farms/<CUSTOMER_CHOICE>.farm`
 
-Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamn och som gör att Dispatcher-modulen kan hantera varje grupp med olika regler. Filerna skapas i `available_farms` och aktiveras med en symbolisk länk i `enabled_farms` katalog. Från `.farm` filer, andra filer som filter, cacheregler och andra tas med.
+Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamn och som gör att Dispatcher-modulen kan hantera varje grupp med olika regler. Filerna skapas i `available_farms` och aktiveras med en symbolisk länk i `enabled_farms` katalog. Från `.farm` filer, andra filer som filter, cacheregler och andra inkluderas.
 
 * `conf.dispatcher.d/cache/rules.any`
 
@@ -125,7 +125,7 @@ Ovanstående filer refererar till de oföränderliga konfigurationsfiler som lis
 
 Dessa filer ingår i grundramverket och följer standarder och bästa praxis. Filerna anses oföränderliga eftersom ändringar eller borttagningar av dem lokalt inte påverkar distributionen eftersom de inte överförs till din molninstans.
 
-Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer som listas nedan, följt av eventuella ytterligare programsatser eller åsidosättningar. När Dispatcher-konfigurationen distribueras till en molnmiljö kommer den senaste versionen av de oföränderliga filerna att användas, oavsett vilken version som användes i den lokala utvecklingen.
+Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer som listas nedan, följt av eventuella ytterligare programsatser eller åsidosättningar. När Dispatcher-konfigurationen distribueras till en molnmiljö används den senaste versionen av de oföränderliga filerna, oavsett vilken version som användes i den lokala utvecklingen.
 
 * `conf.d/available_vhosts/default.vhost`
 
@@ -218,10 +218,10 @@ Phase 3 finished
 Skriptet gör följande:
 
 1. Den kör valideraren. Om konfigurationen inte är giltig misslyckas skriptet.
-2. Det kör `httpd -t` för att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution.
+2. Den kör `httpd -t` för att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution.
 3. Kontrollerar att delmängden av Dispatcher SDK-konfigurationsfilerna, som är avsedda att vara oföränderliga enligt beskrivningen i [Filstruktursektion](##legacy-mode-file-structure), har inte ändrats. Detta är en ny kontroll som introducerades i AEM SDK version v2021.1.4738 som även innehåller Dispatcher Tools version 2.0.36. Före den här uppdateringen kan kunderna felaktigt ha antagit att lokala SDK-ändringar av dessa oföränderliga filer också skulle tillämpas på molnmiljön.
 
-Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också att utföras och eventuella fel kommer att inkluderas i Cloud Manager `Build Images step failure` log.
+Under en driftsättning av Cloud Manager `httpd -t` syntaxkontrollen körs också och fel inkluderas i Cloud Manager `Build Images step failure` log.
 
 ### Fas 1 {#first-phase}
 
@@ -356,7 +356,7 @@ Den här fasen kontrollerar apachesyntaxen genom att starta Docker i en bild. Do
 
 Denna fas kan också köras oberoende av varandra `validator full -d out src/dispatcher`, som genererar en out-katalog som behövs för nästa kommando `bin/docker_run.sh out host.docker.internal:4503 8080`.
 
-Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också att utföras och eventuella fel kommer att inkluderas i felloggen för stegen i Cloud Manager Build Images.
+Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll körs och eventuella fel inkluderas i felloggen för stegen i Cloud Manager Build Images.
 
 ### Fas 3 {#third-phase}
 

@@ -4,9 +4,9 @@ description: Lär dig hur AEM webbplatsteman kan användas för att anpassa webb
 feature: Administering
 role: Admin
 exl-id: 53d4afb3-d091-47a1-ba12-5bcec99f46b9
-source-git-commit: a77c31ebfce01834325bfdb806793dcd8ba169d4
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Webbplatser som skapats med AEM webbplatsmallar gör det enkelt att hämta, anpa
 
 >[!NOTE]
 >
->AEM teman ska inte blandas ihop med [AEM webbplatsmallar.](site-templates.md) AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM platstema för att möjliggöra [skapa webbplatser snabbt.](create-site.md)
+>AEM teman ska inte blandas ihop med [AEM webbplatsmallar.](site-templates.md) AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt.](create-site.md)
 
 ## Använda webbplatsteman {#using-themes}
 

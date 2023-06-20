@@ -2,9 +2,9 @@
 title: Skapa webbplats från mall
 description: Lär dig hur du snabbt skapar en ny AEM med hjälp av en webbplatsmall.
 exl-id: 31bb04c2-b3cc-44ca-b517-5b0d66d9b1fa
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1485'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Det är mycket enkelt att använda en mall för att skapa en ny webbplats.
 
    ![Välj en mall](assets/select-site-template.png)
 
-1. Ange en titel för din webbplats. Ett platsnamn kan anges eller genereras från titeln om det utelämnas.
+1. Ange en titel för din webbplats. Om det utelämnas kan du ange eller generera ett platsnamn från titeln.
 
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.

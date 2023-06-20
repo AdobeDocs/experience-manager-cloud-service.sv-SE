@@ -2,9 +2,9 @@
 title: Aktivera AEM Screens för din demowebbplats
 description: Lär dig hur du aktiverar den fullständiga as a Cloud Service AEM Screens-upplevelsen på din demowebbplats.
 exl-id: 369eea9f-2e81-4b87-841c-188b67657bab
-source-git-commit: 8ee3de944290a917c320ad9aa4205b28ad1620bb
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2696'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Den sista bilden på ingångskanalerna är också riktad (dvs. dynamiskt ändrad
 
 ## Distribuera ett projekt för demonstrationsskärmar {#deploy-project}
 
-För att kunna använda demoinnehållet i sandlådan som du skapade i [Skapa program](create-program.md) måste en plats skapas baserat på en mall.
+Så här använder du demoinnehåll i sandlådan som du skapade i [Skapa program](create-program.md) måste en plats skapas baserat på en mall.
 
 Om du inte redan har skapat en demowebbplats för We.Cafe följer du bara samma steg som i [Skapa demowebbplats](create-site.md) -avsnitt. När du väljer en mall väljer du bara **Webbplatsmall för We.Cafe**.
 
@@ -207,7 +207,7 @@ Nu när du har skapat datakällan som ett Google-kalkylblad och aktiverat åtkom
    }
    ```
 
-AEM Screens kan använda samma tjänst för att få tillgång till simulerade väderdata. Detta konfigureras i nästa steg.
+AEM Screens kan använda samma tjänst för att komma åt simulerade väderdata som konfigureras i nästa steg.
 
 ### Konfigurera ContextHub {#configure-contexthub}
 

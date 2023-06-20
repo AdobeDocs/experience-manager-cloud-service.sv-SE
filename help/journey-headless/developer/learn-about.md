@@ -2,7 +2,7 @@
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
 exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
-source-git-commit: 7ded4f891f5ab5c1562044772ea3304fc07b173e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras o
 
 ## Leverans av högklassigt innehåll {#full-stack}
 
-Ända sedan de lättanvända, storskaliga CMS-systemen (Content Management System) började användas har organisationer utnyttjat dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Att använda CMS som en central punkt för att administrera upplevelser har förbättrat effektiviteten genom att eliminera behovet av att duplicera uppgifter i olika system.
+Ända sedan de lättanvända, storskaliga CMS:erna (Content Management System) började användas har organisationer använt dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Att använda CMS som en central punkt för att administrera upplevelser har förbättrat effektiviteten genom att eliminera behovet av att duplicera uppgifter i olika system.
 
 ![Klassisk CMS i full hög](assets/full-stack.png)
 
@@ -84,7 +84,7 @@ Det finns fortfarande ett behov av stabila REST API:er. REST-begäranden kan doc
 
 Huvudlös innehållsleverans använder ofta GraphQL API:er. GraphQL tillåter en liknande tillståndslös överföring, men ger fler riktade frågor, minskar det totala antalet frågor som krävs och förbättrar prestanda. Det är vanligt att lösningar blandas med REST och GraphQL, vilket i huvudsak är det bästa verktyget för det aktuella arbetet.
 
-Oavsett vilket API du väljer kan du, genom att definiera ett headless-system baserat på gemensamma API:er, utnyttja den senaste webbläsaren och andra webbtekniker som progressiva webbappar (PWA). API:er skapar ett standardgränssnitt som är enkelt att utöka och anpassa.
+Oavsett vilket API du väljer kan du, genom att definiera ett headless-system baserat på gemensamma API:er, använda den senaste webbläsaren och andra webbtekniker som progressiva webbappar (PWA). API:er skapar ett standardgränssnitt som är enkelt att utöka och anpassa.
 
 Normalt återges innehållet på klientsidan. Detta innebär normalt att någon anropar ditt innehåll på en mobil enhet, att ditt CMS-system skickar innehållet och att den mobila enheten (klienten) sedan ansvarar för återgivningen av det innehåll som du betjänade. Om enheten är gammal eller långsam på något annat sätt är den digitala upplevelsen också långsam.
 
@@ -110,7 +110,7 @@ När du fortsätter med den här utvecklarresan får du lära dig hur AEM stöde
 
 Som branschledare inom digital upplevelsehantering inser Adobe att den idealiska lösningen på verkliga utmaningar som upplevelseskapare står inför sällan är ett binärt val. Det är därför AEM inte bara stöder båda modellerna, utan också ger en unik kombination av de båda, vilket kombinerar fördelarna med headless och full stack, så att ni kan hjälpa era kunder med ert innehåll, oavsett var de befinner sig.
 
-Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har den här grundläggande kunskapen kan ni utforska hur ni kan utnyttja båda modellernas möjligheter ytterligare.
+Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har fått den här grundläggande kunskapen kan ni utforska hur ni kan använda båda modellernas kraftfulla funktioner.
 
 ## What&#39;s Next {#what-is-next}
 

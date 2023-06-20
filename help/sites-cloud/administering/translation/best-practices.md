@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna som sammanställts av 
 feature: Language Copy
 role: Admin
 exl-id: 51b98c24-5566-4088-9010-bd39841a1633
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 0%
 Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men med bra planering och planering kan AEM förenkla arbetet och stödja företagets globala mål.
 
 * **Plan för global expansion** innan du implementerar din första webbplats. Att anpassa en befintlig webbplats för global täckning när webbplatsen implementerades med kort varsel är vanligtvis svårare än att planera för global expansion i början:
-   * Utvärdera det aktuella läget för organisationens lokaliseringslösning. Kontrollera om du har **verktyg**, **processer** och **resurser** på plats för att stödja global expansion.
+   * Utvärdera det aktuella läget för organisationens mognad för lokalisering. Kontrollera om du har **verktyg**, **processer** och **resurser** på plats för att stödja global expansion.
    * Var medveten om **global reglering** och **regional språkinställning**. Designa flexibla innehållsstrukturer och processer som kan hantera en föränderlig global affärsmiljö.
-* Bestämma en **styrning** modell som stöder er globala verksamhet och använder AEM som MSM och användarbehörigheter för att tillämpa den valda modellen. Du kan till exempel avgöra om innehållet ska redigeras centralt och&quot;pushas&quot; eller&quot;hämtas&quot; till regioner/länder. Bestäm vilket innehåll som kan låsas upp och ändras i olika geografiska områden. Bestäm vem som ansvarar för att initiera och hantera översättningar.
+* Bestämma en **styrning** modell som stöder er globala verksamhet och använder AEM som MSM och användarbehörigheter för att tillämpa den valda modellen. Ta till exempel reda på om innehållet skrivs centralt och&quot;push&quot; eller&quot;pull&quot; till regioner/länder. Bestäm vilket innehåll som kan låsas upp och ändras i olika geografiska områden. Bestäm vem som ansvarar för att initiera och hantera översättningar.
 * Om resurserna tillåter är det bäst att hantera översättningsaktiviteter från ett centralt team som kan utveckla expertis i de verktyg, processer och leverantörsrelationer som behövs.
 * **Plan**, **prototype** och **test** er globala struktur och processer för att säkerställa att de stöder företaget och att ni har den support som krävs från intressenter i de olika geografiska områdena.
 

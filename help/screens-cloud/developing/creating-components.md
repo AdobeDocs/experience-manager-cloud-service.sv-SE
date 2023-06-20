@@ -2,9 +2,9 @@
 title: Skapa komponenter
 description: AEM används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor. Följ den här sidan om du vill veta mer om redigeringskanaler och återgivningskomponenter.
 exl-id: a81e812e-29ed-45de-b2d0-1fb0a8c5ce1a
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ AEM används för att lagra, formatera och återge innehåll som är tillgängli
 
 Kanalen är det centrala objektet för innehåll som levereras till en uppsättning skärmar. Därför öppnar en innehållsförfattare vanligtvis en kanal i redigeraren för att lägga till eller ändra innehåll. Eftersom kanalen är en ***cq:Page*** kommer att följa samma traditionella UX-mönster för att lägga till och ändra komponenter i kanalen.
 
-Men eftersom komponenter i en kanal vanligtvis återges i helskärmsläge blir redigeringsupplevelsen lidande när du försöker redigera enskilda komponenter eller skapa nya order. Kanalen använder därför väljare för att återge olika vyer av komponenterna. Redigeringsmiljön använder redigeringsväljaren för att aktivera den anpassade kanalåtergivningen.
+Men eftersom komponenter i en kanal vanligtvis återges i helskärmsläge blir redigeringsupplevelsen lidande när du försöker redigera enskilda komponenter eller skapa nya order. Kanalen använder därför väljare för att återge olika vyer av komponenterna. I redigeringsmiljön används redigeringsväljaren för att aktivera den anpassade kanalåtergivningen.
 
 Till exempel, `http://localhost:4502/editor.html/content/screens/we-retail/channels/idle.edit.html](http://localhost:4502/editor.html/content/screens/we-retail/channels/idle.edit.html`
 
@@ -32,7 +32,7 @@ För att möjliggöra en korrekt redigering måste komponenterna tillhandahålla
 | *my-component/my-component.html* | produktionsrendering |
 | *my-component/edit.html* | redigera återgivning i en mindre vy |
 
-De inbyggda komponenterna utnyttjar följande klientbibliotekskategorier:
+De inbyggda komponenterna använder följande klientbibliotekskategorier:
 
 | **Komponent** | **Klientbibliotek** |
 |---|---|

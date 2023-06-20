@@ -3,9 +3,9 @@ title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
-source-git-commit: 5b4366c1e8791ffca4b5ad47f94de44f6df2cd0b
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ En konfigurationspipeline för webbskikt Distribuerar konfigurationer för HTTPD
 
 >[!NOTE]
 >
->Om det redan finns en kodrapport på webbnivå för den valda miljön inaktiveras den här markeringen.
+>Om det redan finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
 
 Följ de här stegen för att slutföra konfigurationen av icke-produktionsflödet för kod på webbnivå.
 
@@ -166,7 +166,7 @@ Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.m
 
 Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
 
-Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) för hur denna process fungerar tillsammans med vissa överväganden som måste beaktas för att man ska få ut mesta möjliga av denna process.
+Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) om hur den här processen fungerar tillsammans med vissa överväganden för att vara medveten om att utnyttja hela potentialen i den här processen.
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 

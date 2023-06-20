@@ -2,16 +2,16 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
-source-git-commit: 36d42ec1a273e4b910340ca0cd15ac6ffc57454e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3659'
+source-wordcount: '3649'
 ht-degree: 0%
 
 ---
 
 # Referenshandbok för komponenter {#components-reference-guide}
 
-Komponenterna utgör kärnan i AEM. The [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) gör det enkelt att komma igång med en verktygsuppsättning med färdiga, robusta komponenter. The [WKND - självstudiekurs](/help/implementing/developing/introduction/develop-wknd-tutorial.md) tar utvecklaren igenom hur dessa verktyg används och hur man bygger anpassade komponenter för att skapa en ny AEM.
+Komponenterna utgör kärnan i AEM. The [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) gör det enkelt att komma igång med en verktygsuppsättning med färdiga, robusta komponenter. The [WKND - självstudiekurs](/help/implementing/developing/introduction/develop-wknd-tutorial.md) tar utvecklaren igenom hur dessa verktyg används och hur man bygger anpassade komponenter för att skapa en AEM webbplats.
 
 >[!TIP]
 >
@@ -55,7 +55,7 @@ Det innebär att du bara behöver definiera om skillnaderna, i stället för att
 
 ### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
-Komponenten återges med [HTML.](https://www.w3schools.com/htmL/html_intro.asp) Komponenten måste definiera den HTML som behövs för att ta det önskade innehållet och sedan återge det som det behövs, både i författarmiljön och i publiceringsmiljön.
+Komponenten återges med [HTML](https://www.w3schools.com/htmL/html_intro.asp). Komponenten måste definiera den HTML som behövs för att ta det önskade innehållet och sedan återge det som det behövs, både i författarmiljön och i publiceringsmiljön.
 
 Vi rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
@@ -127,7 +127,7 @@ Ikonen eller förkortningen för komponenten definieras via JCR-egenskaperna fö
    * Förkortningen översätts bara om komponenten har en `abbreviation_commentI18n` -egenskapen, som sedan används som översättningstips.
 1. `cq:icon.png` eller `cq:icon.svg` - Ikon för den här komponenten, som visas i komponentwebbläsaren
    * 20 x 20 pixlar är storleken på ikonerna för standardkomponenter.
-      * Storleken på större ikoner kommer att minskas (klientsidan).
+      * Storleken på större ikoner ändras (klientsidan).
    * Den rekommenderade färgen är rgb(112, 112, 112) > #707070
    * Bakgrunden för standardkomponentikoner är genomskinlig.
    * Endast `.png` och `.svg` filer stöds.
@@ -415,7 +415,6 @@ The `cq:listeners` nod (nodtyp) `cq:EditListenersConfig`) definierar vad som hä
 >
 >* `aftermove`
 >* `aftercopy`
-
 
 Händelsehanteraren kan implementeras med en anpassad implementering. Till exempel `project.customerAction` är en statisk metod):
 

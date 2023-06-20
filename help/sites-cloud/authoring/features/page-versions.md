@@ -2,10 +2,10 @@
 title: Arbeta med sidversioner
 description: Skapa, jämföra och återställa versioner av en sida
 exl-id: 33d8e43c-594d-4bba-9631-b2c42a1e910f
-source-git-commit: 2d1b40b8d6f7b6ca5ce112331a7d389816739494
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 4%
+source-wordcount: '1512'
+ht-degree: 3%
 
 ---
 
@@ -64,17 +64,17 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 
 * den **Återgå till den här versionen** från [Tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline) järnväg
 
-   Återskapa en tidigare version av en markerad sida.
+  Återskapa en tidigare version av en markerad sida.
 
 * den **Återställ** från början [åtgärdsverktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)
 
    * **Återställ version**
 
-      Återställa versioner av angivna sidor i den markerade mappen; detta kan även omfatta återställning av sidor som tidigare har tagits bort.
+     Återställa versioner av angivna sidor i den markerade mappen; detta kan även omfatta återställning av sidor som tidigare har tagits bort.
 
    * **Återställ träd**
 
-      återinför en version av ett helt träd vid ett angivet datum och en viss tidpunkt, kan innehålla sidor som tidigare har tagits bort.
+     återinför en version av ett helt träd vid ett angivet datum och en viss tidpunkt, kan innehålla sidor som tidigare har tagits bort.
 
 >[!NOTE]
 >
@@ -86,8 +86,7 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 >1. De inledande etiketterna och versionsnodnamnen är 1.0, 1.1, 1.2 och så vidare.
 >1. återställ den första versionen, dvs. 1.0.
 >1. Skapa nya versioner igen.
->1. De genererade etiketterna och nodnamnen blir nu 1.0.0, 1.0.1, 1.0.2 osv.
-
+>1. De genererade etiketterna och nodnamnen är nu 1.0.0, 1.0.1, 1.0.2 och så vidare.
 
 ### Återgå till en version {#revert-to-a-version}
 
@@ -115,7 +114,6 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
    >Om:
    >* du har valt en sida som aldrig har haft några underordnade sidor,
    >* eller ingen av sidorna i mappen har versioner,
-
    >
    >Sedan är visningen tom eftersom det inte finns några tillämpliga versioner.
 
@@ -153,7 +151,7 @@ Den här metoden kan användas för att återställa en version av ett träd vid
 
    * Om den är aktiv (markerad) bevaras alla sidor som inte är versionshanterade och påverkas inte av återställningen.
 
-   * Om alternativet är inaktivt (omarkerat) tas alla sidor som inte är versionshanterade bort eftersom de inte fanns i versionsträdet.
+   * Om sidan är inaktiv (omarkerad) tas alla sidor som inte är versionshanterade bort eftersom de inte fanns i versionsträdet.
 
 1. Välj **Återställ** för den valda versionen av trädet som ska återställas som *aktuell* version.
 
@@ -197,7 +195,7 @@ Timewarp är en funktion som simulerar *publicerad* en sidas status vid en viss 
 >
 >[Timewarp kan även användas med Launches för att förhandsgranska framtiden.](/help/sites-cloud/authoring/launches/preview.md)
 
-Eftersom framtagning av innehåll är en pågående och samarbetsorienterad process är syftet med Timewarp att tillåta författare att spåra den publicerade webbplatsen över tid för att förstå hur innehållet har ändrats. Den här funktionen använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
+Eftersom framtagning av innehåll är en pågående och samarbetsorienterad process är syftet med Timewarp att tillåta författare att spåra den publicerade webbplatsen över tid så att de kan förstå hur innehållet har ändrats. Den här funktionen använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
 
 Så här gör du:
 

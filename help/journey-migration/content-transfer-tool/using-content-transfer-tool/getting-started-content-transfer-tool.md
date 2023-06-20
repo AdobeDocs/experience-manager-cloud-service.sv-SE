@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: b31fe77cd43362b6ad768e8a2b258c23ae84466c
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1396'
 ht-degree: 6%
 
 ---
@@ -34,7 +34,7 @@ Endast version 2.0.0 och senare stöds, och du bör använda den senaste version
 >
 >Ett anslutningsfel kan också uppstå om en migreringsuppsättning har tagits bort från Cloud Acceleration Manager.
 
-Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. För att en extrahering ska kunna köras måste följande slutpunkter vara tillgängliga från den instans som körs AEM:
+Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. Följande slutpunkter måste vara tillgängliga från den instans som kör AEM för att det ska gå att köra en extrahering:
 
 * Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
 
@@ -120,7 +120,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam5.png)
 
-1. Klistra in extraheringsnyckeln som kopierades från CAM tidigare i indatafältet för extraheringsnyckeln i **Skapa migreringsuppsättning** formulär. När du gör det fylls fälten för migreringsuppsättningens namn och projektnamnet för Cloud Acceleration Manager (CAM) automatiskt i. Dessa ska matcha namnet på migreringsuppsättningen i CAM och namnet på CAM-projektet som du skapade. Nu kan du lägga till innehållssökvägar. När du har lagt till innehållssökvägar kan du spara migreringsuppsättningen. Du kan köra extraheringen med antingen versioner inkluderade eller exkluderade.
+1. Klistra in extraheringsnyckeln som kopierades från CAM tidigare i indatafältet för extraheringsnyckeln i **Skapa migreringsuppsättning** formulär. När du har gjort det fylls namnen på migreringsuppsättningen och CAM-projektnamnen i automatiskt. Dessa ska matcha namnet på migreringsuppsättningen i CAM och namnet på CAM-projektet som du skapade. Nu kan du lägga till innehållssökvägar. Spara migreringsuppsättningen när du har lagt till innehållssökvägar. Du kan köra extraheringen med antingen versioner inkluderade eller exkluderade.
 
    >[!NOTE]
    >
@@ -147,7 +147,6 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
       >* `/home`
       >* `/etc` (vissa `/etc` banor kan markeras i CTT)
 
-
 1. Klicka på **Spara** när du har fyllt i alla fält i **Skapa migreringsuppsättning** informationsskärmen.
 
 <!-- 1. You will view your migration set in the **Content Transfer** wizard, as shown in the figure below.
@@ -168,6 +167,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
 
 När du har skapat en migreringsuppsättning rekommenderar vi att du kör en storlekskontroll på migreringsuppsättningen innan du startar en extraheringsprocess.
 Genom att köra en storlekskontroll på migreringsuppsättningen kan du:
+
 * Kontrollera om det finns tillräckligt med diskutrymme i `crx-quickstart` underkatalog för att slutföra extraheringen.
 * Kontrollera om migreringsuppsättningens storlek ligger inom de produktgränser som stöds och undvik misslyckade innehållsfrågor.
 
@@ -185,11 +185,11 @@ Följ stegen nedan för att göra en storlekskontroll:
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam10.png)
 
-1. En gång **Kontrollera storlek** processen är slutförd, statusen ändras till **SLUTFÖRD**. Välj samma migreringsuppsättning och klicka på **Kontrollera storlek** för att visa resultaten. Nedan visas ett exempel på **Kontrollera storlek** resultat utan varningar.
+1. Efter **Kontrollera storlek** processen är slutförd, statusen ändras till **SLUTFÖRD**. Välj samma migreringsuppsättning och klicka på **Kontrollera storlek** för att visa resultaten. Nedan visas ett exempel på **Kontrollera storlek** resultat utan varningar.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam11.png)
 
-1. Om **Kontrollera storlek** resultaten visar att det antingen inte finns tillräckligt med diskutrymme och/eller att migreringsuppsättningen överskrider produktgränserna, **VARNING** status visas.
+1. Om **Kontrollera storlek** resultatet visar att det antingen inte finns tillräckligt med diskutrymme eller att migreringsuppsättningen överskrider produktgränserna, eller både och **VARNING** status visas.
 
 <!--   ![image](/help/journey-migration/content-transfer-tool/assets/CTT_CheckSize_image6.png)
    

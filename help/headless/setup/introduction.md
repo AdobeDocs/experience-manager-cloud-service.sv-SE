@@ -2,9 +2,9 @@
 title: Headless Setup
 description: Med den här snabbstartsguiden lär du dig grunderna i AEM as a Cloud Service kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API.
 exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
-source-git-commit: d35b60810a1624390d3d9c82c2a364140ea37536
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
@@ -30,12 +30,11 @@ Nedan beskrivs en enkel väg för att skapa, hantera och leverera upplevelser me
 >* [Headless Content Author Journey](/help/journey-headless/author/overview.md)
 >* [Headless Translation Journey](/help/journey-headless/translation/overview.md).
 
-
 ## Målgrupp {#audience}
 
 De uppgifter som beskrivs är nödvändiga för en grundläggande heltäckande demonstration av AEM headless-funktioner. Alla som har administratörsåtkomst till en testinstans AEM kan följa dessa guider för att förstå headlessleverans i AEM, även om någon med utvecklarupplevelse är idealisk.
 
-I en produktionssituation kommer uppgifterna dock att utföras av olika personer, olika många gånger. Till exempel:
+I en produktionssituation utförs uppgifterna dock av olika personer, olika många gånger. Till exempel:
 
 * **Administratörer** kommer att behöva konfigurera den inledande konfigurationen och mappstrukturen för innehållet normalt bara en gång eller sporadiskt.
 * **Informationsarkitekter** kommer i allmänhet att lägga till nya modeller i takt med att organisationens behov utvecklas.

@@ -2,9 +2,9 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från AEM as a Cloud Service produktionsmiljöer till lägre miljöer för teständamål.
 exl-id: f060821d-d559-45d2-b3b1-1b2277694ec4
-source-git-commit: d056ad0f29cfd2448164e3e866f2cedbe1bf6fc2
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1223'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ Innehållet som ska kopieras definieras av en innehållsuppsättning. En innehå
 När du kopierar innehåll är källmiljön en källa till sanning.
 
 * Om innehållet har ändrats i målmiljön skrivs det över av innehållet i källan, om sökvägarna är desamma.
-* Om banorna inte är samma kommer innehåll från källan att sammanfogas med innehållet i målet.
+* Om banorna inte är likadana sammanfogas innehåll från källan med innehållet i målplatsen.
 
 ## Behörigheter {#permissions}
 
-För att du ska kunna använda verktyget för innehållskopiering krävs vissa behörigheter i både käll- och målmiljöer.
+Om du vill använda verktyget för innehållskopiering krävs vissa behörigheter i både käll- och målmiljöer.
 
 | Innehållskopia | AEM | Distributionshanterarroll |
 |---|---|---|
@@ -122,7 +122,6 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
    >* Användaren har inte rätt behörighet.
    >* Miljön har en pågående pipeline eller en åtgärd för att kopiera innehåll.
    >* Miljön försätts i viloläge eller startar.
-
 
 1. I **Kopiera innehåll** anger du källa och mål för kopieringsåtgärden.
 

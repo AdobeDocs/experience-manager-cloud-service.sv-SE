@@ -2,9 +2,9 @@
 title: Komma igång med migreringsresan till AEM as a Cloud Service
 description: Börja din migreringsresa genom att bekanta dig med grunderna i att gå över till AEM as a Cloud Service
 exl-id: e1a79630-56c1-4648-aa11-3348c3b37541
-source-git-commit: 595eff9c259208754ac62ea27dfc6be7d74b79d3
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '585'
 ht-degree: 10%
 
 ---
@@ -18,7 +18,7 @@ I den här delen av den AEM as a Cloud Service migreringsresan får du lära dig
 Det här dokumentet hjälper dig att förstå varför du bör använda en molnbaserad version av AEM, samt de olika faserna för migrering till AEM as a Cloud Service. Efter läsning bör du:
 
 * Förstå fördelarna med att flytta AEM as a Cloud Service
-* Bekanta dig med de breda steg du måste ta för att gå över till molnet
+* Bekanta dig med de breda steg du måste ta så att du kan gå över till molnet
 
 ## Fördelar med att flytta till AEM as a Cloud Service {#benefits-of-moving-to-aem-as-a-cloud-service}
 
@@ -30,9 +30,9 @@ Med AEM as a Cloud Service kan era team fokusera på innovationer i stället fö
 
 Migreringsresan till Cloud Service omfattar följande faser:
 
-* Börja med att avgöra om distributionen är klar att flyttas till AEM as a Cloud Service med [Beredskapsfas](/help/journey-migration/readiness.md). I den här fasen bör du också bekanta dig med de ändringar som AEM as a Cloud Service har gjort
-* Gör sedan koden och innehållet i molnet klart med [Implementeringsfas](/help/journey-migration/implementation.md). I den här fasen kommer du att utforska de verktyg som Adobe tillhandahåller för att underlätta övergången till molnet
-* När allt är på plats kan du utföra migreringen med [GoLive Phase](/help/journey-migration/go-live.md)
+* Börja med att avgöra om distributionen är klar att flyttas till AEM as a Cloud Service med [Beredskapsfas](/help/journey-migration/readiness.md). I den här fasen bör du också bekanta dig med de ändringar som AEM as a Cloud Service har gjort.
+* Gör sedan koden och innehållet i molnet klart med [Implementeringsfas](/help/journey-migration/implementation.md). I den här fasen utforskar du de verktyg Adobe tillhandahåller för att underlätta övergången till molnet.
+* När allt är på plats kan du utföra migreringen med [GoLive Phase](/help/journey-migration/go-live.md).
 * Slutligen bör du kontrollera om det finns problem och förbättra prestanda när migreringen är klar, i [Post GoLive Phase](/help/journey-migration/post-go-live.md).
 
 I bilden nedan visas en högnivårepresentation av den rekommenderade övergångsresan till AEM as a Cloud Service.

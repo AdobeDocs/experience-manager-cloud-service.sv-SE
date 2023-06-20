@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.2.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.2.0."
 exl-id: 88dac54b-cc12-44a0-b429-6e691221f806
-source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1228'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 * [!DNL Experience Manager Assets] som [!DNL Cloud Service] har rätt att ha en förkonfigurerad [!DNL Brand Portal] -instans. The [!DNL Cloud Manager] användare kan aktivera [!DNL Brand Portal] på [!DNL Experience Manager Assets] som [!DNL Cloud Service]. Se [aktivera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=en).
 
-* Företag kan nu skaffa resurser med [!DNL Brand Portal]. Funktioner för resurskälla [!DNL Brand Portal] för att hjälpa kunderna att interagera med byråanvändare för att skaffa resurser för nya marknadsföringskampanjer, fotografier och projekt. Se [resurskälla i [!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html).
+* Företag kan nu skaffa resurser med [!DNL Brand Portal]. Funktionen för resurskälla använder [!DNL Brand Portal] för att hjälpa kunderna att interagera med byråanvändare för att skaffa resurser för nya marknadsföringskampanjer, fotografier och projekt. Se [resurskälla i [!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html).
 
 * The [!DNL Brand Portal] användningsrapporten visar nu endast de aktiva användarna. De inaktiva användarna visas inte nu. Aktiva användare är de vars konto har tilldelats en produktprofil i [!DNL Admin Console]. Se [[!DNL Brand Portal] rapporter](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/admin-tools/brand-portal-reports.html).
 
@@ -101,7 +101,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.2.0 är 11 februar
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan lägga till/uppdatera domännamn för tillfället eftersom den associerade miljön antingen har en pågående pipeline kopplad till sig eller väntar på godkännandesteget.
 
-* Egenskaper angivna i kunden `pom.xml` filer som har prefixats med sonar tas nu bort dynamiskt för att undvika fel i skapande och kvalitetskontroll.
+* Egenskaper angivna i kunden `pom.xml` filer som har prefixats med sonar tas nu bort dynamiskt för att undvika fel i skapande och kvalitet vid skanning.
 
 * Molnhanterarens användargränssnitt informerar användaren som kanske inte kan välja ett SSL-certifikat tillfälligt om det används av ett domännamn som för närvarande distribueras.
 

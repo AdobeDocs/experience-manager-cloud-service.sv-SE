@@ -2,7 +2,7 @@
 title: Lär dig mer om Headless-innehåll och hur du översätter det i AEM
 description: Lär dig headless-koncept, hur de mappas till AEM och teorin om AEM översättning.
 exl-id: 72bb6646-e573-4576-8d17-49787d8c8c7f
-source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras, 
 
 ## Leverans av högklassigt innehåll {#full-stack}
 
-Ända sedan de lättanvända, storskaliga CMS-systemen (Content Management System) började användas har organisationer utnyttjat dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Att använda CMS som en central punkt för att administrera upplevelser har förbättrat effektiviteten genom att eliminera behovet av att duplicera uppgifter i olika system.
+Ända sedan de lättanvända, storskaliga CMS:erna (Content Management System) började användas har organisationer använt dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Att använda CMS som en central punkt för att administrera upplevelser har förbättrat effektiviteten genom att eliminera behovet av att duplicera uppgifter i olika system.
 
 ![Klassisk CMS i full hög](/help/journey-headless/developer/assets/full-stack.png)
 

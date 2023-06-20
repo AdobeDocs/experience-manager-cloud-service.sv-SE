@@ -2,9 +2,9 @@
 title: Valfritt - Så här skapar du enkelsidiga program (SPA) med AEM
 description: I den här valfria fortsättningen av den AEM Headless Developer Journey får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA.
 exl-id: d74848f2-683e-49e1-9374-32596ca5d7d7
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1274'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Det finns ett antal krav innan du börjar arbeta med SPA i AEM.
 
 * Utvecklingserfarenhet som skapar SPA med React- eller Angular-ramverk
 * Grundläggande AEM att skapa innehållsfragment och använda redigeraren
-* Var noga med att granska dokumentet [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md) för att förstå de olika graden av SPA.
+* Var noga med att granska dokumentet [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md) så att ni kan förstå de olika nivåerna av SPA.
 
 ### verktyg {#tools}
 
@@ -72,7 +72,7 @@ En fullständig beskrivning av SPA och varför du skulle använda dem finns i [y
 
 ## Hur AEM hanterar SPA
 
-Utveckla single page-applikationer AEM förutsätter att frontutvecklaren följer vedertagna standarder när han skapar en SPA. Om du som frontendutvecklare följer dessa allmänna bästa metoder samt några AEM-specifika principer, kommer din SPA att fungera med AEM och dess innehållsredigeringsfunktioner.
+Utveckla single page-applikationer AEM förutsätter att frontutvecklaren följer vedertagna standarder när han skapar en SPA. Om ni som frontendutvecklare följer både dessa allmänna och bästa metoder samt några AEM specifika principer, kan SPA fungera med AEM och dess funktioner för innehållsutveckling.
 
 * **Portabilitet** - Precis som med andra komponenter ska SPA byggas så att de är så portabla som möjligt. SPA bör byggas med rörliga och återanvändbara komponenter.
 * **AEM diskar platsstruktur** - Utvecklaren skapar komponenter och äger sin interna struktur, men använder AEM för att definiera webbplatsens innehållsstruktur.
@@ -93,7 +93,7 @@ En fullständig beskrivning av AEM SPA Editor finns i [ytterligare resurser](#ad
 
 ## Antar befintliga SPA {#existing-spas}
 
-Om du har en befintlig SPA har AEM stöd för att bädda in den i AEM så att den är synlig för innehållsförfattarna i AEM redigerare. Det här kan vara användbart om du vill visa innehållet som de skapar via innehållsfragment i slutprogrammet där det kommer att användas.
+Om du har en befintlig SPA har AEM stöd för att bädda in den i AEM så att den är synlig för innehållsförfattarna i AEM redigerare. Det här kan vara användbart om du vill visa innehållet som de skapar med hjälp av innehållsfragment i slutprogrammet där det används.
 
 Dessutom kan du, med endast små ändringar, aktivera vissa redigeringsmöjligheter för de externa SPA i AEM redigerare.
 

@@ -9,10 +9,10 @@ audience: administrator
 feature: Commerce Integration Framework
 kt: 4933
 thumbnail: 34350.jpg
-exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7,363cb465-c50a-422f-b149-b3f41c2ebc0f
-source-git-commit: 9c25d9991b41a5a714df3f07e84946162e5495c0
+exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2197'
 ht-degree: 2%
 
 ---
@@ -51,8 +51,8 @@ När det gäller [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-g
 
 * `{{page}}` ersätts med `/content/venia/us/en/products/product-page`
 * `{{sku}}` ersätts med produktens sku, t.ex. `VP09`
-* `{{url_key}}` ersätts av produktens `url_key` egenskap, till exempel `lenora-crochet-shorts`
-* `{{url_path}}` ersätts av produktens `url_path`, till exempel `venia-bottoms/venia-pants/lenora-crochet-shorts`
+* `{{url_key}}` ersätts med produktens `url_key` egenskap, till exempel `lenora-crochet-shorts`
+* `{{url_path}}` ersätts med produktens `url_path`, till exempel `venia-bottoms/venia-pants/lenora-crochet-shorts`
 * `{{variant_sku}}` ersätts med den markerade varianten, till exempel `VP09-KH-S`
 
 Sedan `url_path` eftersom de fördefinierade produkt-URL-formaten är inaktuella används en produkts `url_rewrites` och välja den med de flesta bansegment som alternativ om `url_path` är inte tillgängligt.
@@ -229,7 +229,7 @@ _**Balansera URL-längden och kodad information.**_
 
 Beroende på katalogstorleken, särskilt storleken och djupet på kategoriträdet, är det kanske inte rimligt att koda hela `url_path` av kategorier i URL:en. I så fall kan URL-längden minskas genom att endast kategorins `url_key` i stället. Detta har stöd för de flesta funktioner som är tillgängliga när du använder kategorin `url_path`.
 
-Dessutom kan du använda [Samlingsmappningar](#sling-mapping) för att kombinera sku med produkten `url_key`. I de flesta e-handelssystem följer sku ett visst format och separerar sku från `url_key` för inkommande förfrågningar bör enkelt vara möjligt. Med detta i åtanke bör det vara möjligt att skriva om en produktsidas URL till `/p/{{category}}/{{sku}}-{{url_key}}.html`och en kategori-URL till `/c/{{url_key}}.html` respektive. The `/p` och `/c` -prefix krävs fortfarande för att skilja produkt- och kategorisidor från andra innehållssidor.
+Dessutom kan du använda [Samlingsmappningar](#sling-mapping) för att kombinera sku med produkten `url_key`. I de flesta e-handelssystem följer sku ett visst format och separerar sku från `url_key` för inkommande förfrågningar bör enkelt vara möjligt. Med detta i åtanke bör det vara möjligt att skriva om en produktsidas URL till `/p/{{category}}/{{sku}}-{{url_key}}.html`och en kategori-URL till `/c/{{url_key}}.html` respektive. The `/p` och `/c` -prefix är fortfarande nödvändigt för att skilja produkt- och kategorisidor från andra innehållssidor.
 
 ### Migrera till ett nytt URL-format {#migrate-url-formats}
 

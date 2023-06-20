@@ -2,9 +2,9 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1808'
 ht-degree: 1%
 
 ---
@@ -32,13 +32,13 @@ De enskilda innehållsfragmenten baseras på modeller för innehållsfragment:
 * Modeller är inbyggda i datatyper.
 * Funktioner för att lägga till nya varianter, osv., måste uppdatera fragmentet därefter.
 
-   >[!NOTE]
-   >
-   >För att du ska kunna visa/återge ett innehållsfragment måste ditt konto ha `read` behörigheter för modellen.
+  >[!NOTE]
+  >
+  >För att du ska kunna visa/återge ett innehållsfragment måste ditt konto ha `read` behörigheter för modellen.
 
-   >[!CAUTION]
-   >
-   >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
+  >[!CAUTION]
+  >
+  >Alla ändringar i en befintlig innehållsfragmentmodell kan påverka beroende fragment. detta kan leda till egenskaper som är överblivna i dessa fragment.
 
 ### Integrering av webbplatser med resurser {#integration-of-sites-with-assets}
 
@@ -61,15 +61,14 @@ Innehållsfragment, som baseras på en innehållsfragmentmodell, mappas till en 
 * Allt innehåll lagras under `jcr:content/data` resursens nod:
 
    * Elementdata lagras under den överordnad undernoden:
-      `jcr:content/data/master`
+     `jcr:content/data/master`
 
    * Variationer lagras under en undernod som har variantens namn: till exempel `jcr:content/data/myvariation`
 
    * Data för varje element lagras i respektive undernod som en egenskap med elementnamnet: till exempel elementets innehåll `text` lagras som egenskap `text` på `jcr:content/data/master`
 
 * Metadata och tillhörande innehåll lagras nedan `jcr:content/metadata`
-Förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på 
-`jcr:content`
+Förutom rubriken och beskrivningen, som inte betraktas som traditionella metadata och lagras på `jcr:content`
 
 #### Resursplats {#asset-location}
 
@@ -121,7 +120,7 @@ Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. 
 >
 >När ett innehållsfragment används på en sida refereras innehållsfragmentmodellen som det baseras på.
 >
->Det innebär att om modellen inte har publicerats när du publicerar sidan, kommer den att flaggas och läggas till i resurserna som ska publiceras med sidan.
+>Det innebär att om modellen inte har publicerats när du publicerar sidan, flaggas den och modellen läggs till i resurserna som ska publiceras med sidan.
 
 ### Integrering med andra ramar {#integration-with-other-frameworks}
 
@@ -129,24 +128,25 @@ Innehållsfragment kan integreras med:
 
 * **Översättningar**
 
-   Innehållsfragment är helt integrerade med [Arbetsflöde för AEM](/help/sites-cloud/administering/translation/overview.md). Arkitekturnivå innebär följande:
+  Innehållsfragment är helt integrerade med [Arbetsflöde för AEM](/help/sites-cloud/administering/translation/overview.md). Arkitekturnivå innebär följande:
 
    * De enskilda översättningarna av ett innehållsfragment är i själva verket separata fragment. till exempel:
 
       * De finns under olika språkrötter. men har exakt samma relativa sökväg under den relevanta språkroten:
 
-         `/content/dam/<path>/en/<to>/<fragment>`
+        `/content/dam/<path>/en/<to>/<fragment>`
 
-         jämfört med
+        jämfört med
 
-         `/content/dam/<path>/de/<to>/<fragment>`
+        `/content/dam/<path>/de/<to>/<fragment>`
+
    * Förutom de regelbaserade sökvägarna finns det ingen ytterligare koppling mellan de olika språkversionerna av ett innehållsfragment. De hanteras som två separata fragment, även om användargränssnittet ger möjlighet att navigera mellan språkvarianterna.
-   >[!NOTE]
-   >
-   >Det AEM arbetsflödet för översättning fungerar med `/content`:
-   >
-   >* När innehållsfragmentsmodellerna finns i `/conf`, ingår de inte i sådana översättningar. Du kan internationalisera gränssnittssträngarna.
 
+  >[!NOTE]
+  >
+  >Det AEM arbetsflödet för översättning fungerar med `/content`:
+  >
+  >* När innehållsfragmentsmodellerna finns i `/conf`, ingår de inte i sådana översättningar. Du kan internationalisera gränssnittssträngarna.
 
 * **Metadata-scheman**
 
@@ -154,9 +154,9 @@ Innehållsfragment kan integreras med:
 
    * CFM har ett eget specifikt schema:
 
-      `/libs/dam/content/schemaeditors/forms/contentfragment`
+     `/libs/dam/content/schemaeditors/forms/contentfragment`
 
-      detta kan vid behov förlängas.
+     detta kan vid behov förlängas.
 
    * respektive schemaformulär är integrerat med fragmentredigeraren.
 
@@ -176,9 +176,9 @@ Följande tre gränssnitt kan fungera som startpunkter:
 
 * **Innehållsfragment** ([ContentFragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentFragment.html))
 
-   Med det här gränssnittet kan du arbeta med ett innehållsfragment på ett abstrakt sätt.
+  Med det här gränssnittet kan du arbeta med ett innehållsfragment på ett abstrakt sätt.
 
-   Gränssnittet ger dig möjlighet att
+  Gränssnittet ger dig möjlighet att
 
    * Hantera grundläggande data (till exempel get name;) get/set title/description)
    * Åtkomst till metadata
@@ -189,6 +189,7 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Skapa nya element (se [Caveats](#caveats))
 
       * Åtkomst till elementdata (se `ContentElement`)
+
    * Listvarianter definierade för fragmentet
    * Skapa nya varianter globalt
    * Hantera associerat innehåll:
@@ -196,9 +197,10 @@ Följande tre gränssnitt kan fungera som startpunkter:
       * Listsamlingar
       * Lägg till samlingar
       * Ta bort samlingar
+
    * Åtkomst till fragmentets modell
 
-   Gränssnitt som representerar de primära elementen i ett fragment är:
+  Gränssnitt som representerar de primära elementen i ett fragment är:
 
    * **Innehållselement** ([ContentElement](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentElement.html))
 
@@ -211,24 +213,20 @@ Följande tre gränssnitt kan fungera som startpunkter:
          * Skapa nya varianter (se [Caveats](#caveats))
          * Ta bort variationer (se [Caveats](#caveats))
          * Åtkomst till variantdata (se `ContentVariation`)
+
       * Kortkommando för att matcha variationer (tillämpa ytterligare, implementeringsspecifik reservlogik om den angivna varianten inte är tillgänglig för ett element)
+
    * **Innehållsvariation** ([ContentVariation](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/cq/dam/cfm/ContentVariation.html))
 
       * Hämta grundläggande data (namn, titel, beskrivning)
       * Hämta/ange innehåll
       * Enkel synkronisering, baserat på den senast ändrade informationen
 
-   Alla tre gränssnitten ( `ContentFragment`, `ContentElement`, `ContentVariation`) utöka `Versionable` gränssnitt, som lägger till versionsfunktioner, som krävs för innehållsfragment:
+  Alla tre gränssnitten ( `ContentFragment`, `ContentElement`, `ContentVariation`) utöka `Versionable` gränssnitt, som lägger till versionsfunktioner, som krävs för innehållsfragment:
 
    * Skapa en ny version av elementet
    * Lista versioner av elementet
    * Hämta innehållet i en specifik version av det versionshanterade elementet
-
-
-
-
-
-
 
 ### Adapting - Using customito() {#adapting-using-adaptto}
 
@@ -274,7 +272,7 @@ Se följande:
 
 * `filter.xml`
 
-   The `filter.xml` för hantering av innehållsfragment konfigureras så att den inte överlappar det centrala resurspaketet.
+  The `filter.xml` för hantering av innehållsfragment konfigureras så att den inte överlappar det centrala resurspaketet.
 
 ## Redigera sessioner {#edit-sessions}
 

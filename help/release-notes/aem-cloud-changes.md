@@ -2,9 +2,9 @@
 title: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
 description: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
 exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
-source-git-commit: d3208a9a0785909e9b62d4033437a8ff44f7ba3e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '845'
 ht-degree: 8%
 
 ---
@@ -29,7 +29,6 @@ AEM Cloud Service har många nya funktioner för  att administrera AEM-projekt. 
 >* [Viktiga ändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
 >* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 
-
 De största skillnaderna finns i följande områden:
 
 * [/apps och /libs kan inte ändras under körning](#apps-libs-immutable)
@@ -50,7 +49,7 @@ De största skillnaderna finns i följande områden:
 
 ## /apps och /libs kan inte ändras under körning {#apps-libs-immutable}
 
-Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddad. Funktioner eller anpassad kod som förväntas göra ändringar där kommer inte att kunna göra det. Ett fel returneras om att det här innehållet är skrivskyddat och att skrivåtgärden inte kunde slutföras. Detta påverkar ett antal AEM:
+Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddad. Funktioner eller anpassad kod som förväntas göra ändringar där kommer inte att kunna göra det. Ett fel returneras som anger att sådant innehåll är skrivskyddat och att skrivåtgärden inte kunde slutföras. Detta påverkar ett antal AEM:
 
 * Inga ändringar i `/libs` tillåts överhuvudtaget.
    * Det här är inte en ny regel, men den har inte införts i tidigare lokala versioner av AEM.

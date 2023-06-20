@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: 1e3130578b7e36e5ffd5ad7b04cc7981a95bb291
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ AEM as a Cloud Service är ett fullständigt molnbaserat erbjudande som ger AEM 
 
 Dina AEM as a Cloud Service teammedlemmar läggs till och tilldelas en eller flera av följande produktprofiler via Admin Console under introduktionen.
 
-* **AEM administratörer**: En AEM administratör tilldelas vanligtvis till utvecklare, särskilt utvecklare som måste ha tillgång till exempelvis utvecklingsmiljöerna. Den AEM administratörens produktprofil används för att ge administratörsbehörighet i den associerade AEM.
+* **AEM administratörer**: En AEM administratör tilldelas vanligtvis till utvecklare, särskilt utvecklare som måste ha tillgång till exempelvis utvecklingsmiljöerna. AEM administratörs produktprofil används för att ge administratörsbehörighet i den associerade AEM.
 
 * **AEM**: AEM användare är de användare i organisationen som i allmänhet använder AEM as a Cloud Service för att skapa innehåll. Dessa användare måste ha åtkomst till AEM för att kunna utföra sina uppgifter. AEM produktprofil tilldelas vanligtvis till en författare som skapar och granskar innehåll AEM. Det här innehållet kan vara av många typer, till exempel sidor, resurser, publikationer och så vidare. De AEM användarnas produktprofil som visas nedan tilldelas dessa medlemmar.
 
@@ -43,7 +43,6 @@ Dina AEM as a Cloud Service teammedlemmar läggs till och tilldelas en eller fle
 >
 >* Läs mer om AEM produktprofiler i dokumentet [Tilldela AEM produktprofiler.](/help/journey-onboarding/assign-profiles-aem.md)
 >* Mer information om introduktionsprocessen finns i [Startresa.](/help/journey-onboarding/overview.md)
-
 
 ## Produktprofiler för Cloud Manager {#cloud-manager-product-profiles}
 
@@ -76,4 +75,3 @@ Ditt Cloud Manager-team kommer att innehålla minst:
 >
 >* Läs mer om produktprofiler för Cloud Manager i dokumentet [Tilldela teammedlemmar till Cloud Manager-produktprofiler.](/help/journey-onboarding/assign-profiles-cloud-manager.md)
 >* Mer information om introduktionsprocessen finns i [Startresa.](/help/journey-onboarding/overview.md)
-

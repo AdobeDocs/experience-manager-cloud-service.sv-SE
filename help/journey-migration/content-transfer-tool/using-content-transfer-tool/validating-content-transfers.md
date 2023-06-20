@@ -2,9 +2,9 @@
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
-source-git-commit: c1f60a1ead466b47694b8918e5b39011041c5f25
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1062'
 ht-degree: 1%
 
 ---
@@ -44,37 +44,37 @@ En illustration av detta finns i exemplen nedan:
 
 * **Extrahering (skriv över)**
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-01.png)
+  ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-01.png)
 
 * **Inmatning (svep)**
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-02.png)
+  ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-02.png)
 
 * **Anteckningar**
 
-   Den här kombinationen av Skriv över och Svep ger enhetliga valideringsresultat, även för upprepade inmatningar.
+  Den här kombinationen av Skriv över och Svep ger enhetliga valideringsresultat, även för upprepade inmatningar.
 
 ### Exempel 2 {#example-2}
 
 * **Extrahering**
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-03.png)
+  ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-03.png)
 
 * **Inmatning**
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-04.png)
+  ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-04.png)
 
 * **Anteckningar**
 
-   Kombinationen av Skriv över och Svep ger enhetliga valideringsresultat för det initiala intaget.
+  Kombinationen av Skriv över och Svep ger enhetliga valideringsresultat för det initiala intaget.
 
-   Om intaget upprepas kommer ätningssammanfattningen att vara tom och valideringen verkar ha misslyckats. Inledningssammanfattningen är tom eftersom alla noder från den här extraheringen redan finns på målet.
+  Om intaget upprepas, är ätningssammanfattningen tom och valideringen verkar ha misslyckats. Inledningssammanfattningen är tom eftersom alla noder från den här extraheringen redan finns på målet.
 
 När extraktionen är klar, börja intaget.
 
 Inmatningsloggens överkant innehåller en post som påminner om `aem-ethos/tools:1.2.438`. Kontrollera att versionsnumret är **1.2.438** eller senare, annars stöds inte valideringen av AEM as a Cloud Service som du använder.
 
-När intaget är klart och valideringen börjar, kommer följande loggpost att registreras i matningsloggen:
+När intaget är klart och valideringen börjar, noteras följande loggpost i matningsloggen:
 
 ```
 Gathering artifacts for migration validation...
@@ -136,7 +136,7 @@ Förutom att den ingår i matningsloggen kan man även få tillgång till valide
 
 Se [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md) för att läsa information om huvudmigrering och varför det är nödvändigt.
 
-När extraheringen och intaget har slutförts kommer en sammanfattning och rapport om den huvudsakliga migreringen att finnas tillgänglig. Den här informationen kan användas för att validera vilka användare och grupper som migrerats och, kanske, för att avgöra varför vissa inte gjorde det.
+När extraheringen och intaget har slutförts finns en sammanfattning och rapport om den huvudsakliga migreringen. Den här informationen kan användas för att validera vilka användare och grupper som migrerats och, kanske, för att avgöra varför vissa inte gjorde det.
 
 Om du vill visa den här informationen går du till Cloud Acceleration Manager. Klicka på ditt projektkort och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och hitta det intag du vill verifiera. Klicka på de tre punkterna (**...**) för det intrycket och klicka sedan på **Visa huvudsammanfattning** i listrutan.
 

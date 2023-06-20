@@ -2,9 +2,9 @@
 title: Versionsinformation om 2023.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2023.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: f134fdbc-224b-404c-b20f-44cae8bad681
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Titta på videon med versionsöversikten från januari 2023 om du vill se en sam
 
 * Resursrapporter innehåller nu funktioner för administratörer att [generera rapporter om hämtning av resurser](/help/assets/asset-reports.md) från Experience Manager Assets as a Cloud Service driftsättning. Dessa data ger ytterligare möjligheter för administratörer att få insikt i viktiga framgångsmått för att mäta användningen av resurser inom företaget och av kunderna.
 
-   ![PDF-återgivning för andra format](/help/release-notes/assets/choose_report.png)
+  ![PDF-återgivning för andra format](/help/release-notes/assets/choose_report.png)
 
 * Experience Manager Assets nu [stöder SAS-token](/help/assets/add-assets.md#asset-bulk-ingestor) utöver åtkomstnyckeln för autentisering vid anslutning till Azure Blob Storage-datakällan för inmatning av resurser med verktyget för massimport.
 
@@ -82,17 +82,17 @@ Titta på videon med versionsöversikten från januari 2023 om du vill se en sam
 
 * [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md) - De tekniska utvecklingsverktygen gör det möjligt för utvecklare att snabbt felsöka problem och driftsätta nya funktioner på AEM as a Cloud Service.
 
-   Snabba utvecklingsmiljöer är en ny typ av molnmiljö som är avsedd som ett snabbt, konsekvent och utbyggbart sätt att validera att koden fungerar lokalt, vilket också fungerar som väntat i molnet. Med kommandoradsverktygen kan du snabbt&quot;synkronisera&quot; innehållspaket, paket, innehållsfiler, OSGI-konfiguration eller dispatcherkonfiguration till RDE. Se hur det fungerar i videon nedan:
+  Snabba utvecklingsmiljöer är en ny typ av molnmiljö som är avsedd som ett snabbt, konsekvent och utbyggbart sätt att validera att koden fungerar lokalt, vilket också fungerar som väntat i molnet. Med kommandoradsverktygen kan du snabbt&quot;synkronisera&quot; innehållspaket, paket, innehållsfiler, OSGI-konfiguration eller dispatcherkonfiguration till RDE. Se hur det fungerar i videon nedan:
 
-   >[!VIDEO](https://video.tv.adobe.com/v/3413508/?quality=12&learn=on)
+  >[!VIDEO](https://video.tv.adobe.com/v/3413508/?quality=12&learn=on)
 
-   När du har validerat koden i den lokala utvecklingsmiljön bör du distribuera den till en molnutvecklingsmiljö för att träna Cloud Managers kvalitetsportar innan du distribuerar den via produktionsflödet till scen- och produktionsmiljöer.
+  När du har validerat koden i den lokala utvecklingsmiljön bör du distribuera den till en molnutvecklingsmiljö för att träna Cloud Managers kvalitetsportar innan du distribuerar den via produktionsflödet till scen- och produktionsmiljöer.
 
-   Varje program innehåller en RDE och eventuellt kan fler licensieras.
+  Varje program innehåller en RDE och eventuellt kan fler licensieras.
 
-   >[!NOTE]
-   >
-   >De regionala utvecklingsföretagen kommer gradvis att byggas ut under de närmaste veckorna. Du kan skicka ett e-postmeddelande till aemcs-rde-support@adobe.com om du vill hoppa längst fram på raden.
+  >[!NOTE]
+  >
+  >De regionala utvecklingsföretagen kommer gradvis att byggas ut under de närmaste veckorna. Du kan skicka ett e-postmeddelande till aemcs-rde-support@adobe.com om du vill hoppa längst fram på raden.
 
 * [Utökat stöd för API-åtkomsttoken på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md) - Du kan nu generera flera autentiseringsuppgifter, vilket är användbart för scenarier där API:er har olika egenskaper. Nu går det även att återkalla inloggningsuppgifter på ett sätt som bygger på självbetjäning.
 

@@ -2,7 +2,7 @@
 title: Vanliga frågor och svar om skärmar
 description: Den här sidan beskriver Vanliga frågor och svar om skärmar.
 exl-id: 93f2144c-0e64-4012-88c6-86972d8cad9f
-source-git-commit: 02c9cbff56399ea2ca1baad7d2289d5d4c17c1c5
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Bilderna i formatet `*.tif` (Tagg Image File-format) stöds inte i AEM Screens a
 
 ## Vad ska jag göra om en kanal i utvecklarläget (online) inte återges i AEM Screens Player?{#screens-cloud-online-channel-blank-iframe}
 
-Vi rekommenderar att du utnyttjar AEM Screens cachningsfunktioner, men om du behöver köra din kanal i utvecklarläge och AEM Screens Player visar en tom skärm bör du kontrollera utvecklingsverktygen i spelaren och leta efter `X-Frame-Options` eller `frame-ancestors` fel. Upplösningen är att konfigurera dispatchern så att innehåll som körs i iFrames tillåts. Vanligtvis fungerar följande konfiguration:
+Vi rekommenderar att du använder cachningsfunktionerna i AEM Screens, men om du behöver köra din kanal i utvecklarläge och AEM Screens Player visar en tom skärm bör du kontrollera utvecklarverktygen i spelaren och leta efter `X-Frame-Options` eller `frame-ancestors` fel. Upplösningen är att konfigurera dispatchern så att innehåll som körs i iFrames tillåts. Vanligtvis fungerar följande konfiguration:
 
 ```
 Header set Content-Security-Policy "frame-ancestors ‘self’ file: localhost:*;"

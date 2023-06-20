@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: eadcf71aa96298383b05e61251dfeb5f345df6b9
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '13870'
+source-wordcount: '13864'
 ht-degree: 3%
 
 ---
@@ -45,7 +45,6 @@ I följande avsnitt presenteras [lager i WCAG 2.1-riktlinjerna](https://www.w3.o
 >* The [korta namn för WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance).
 >* The [numrering som används i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#numbering-in-wcag-2-1) för att underlätta korsreferenser med WCAG:s webbplats.
 
-
 ## Princip 1: Förväntningsbar {#principle-perceivable}
 
 [Princip 1: Perfekt - Information och komponenter i användargränssnittet måste kunna presenteras för användarna på ett sätt som de kan uppfatta.](https://www.w3.org/TR/WCAG/#perceivable)
@@ -73,6 +72,7 @@ För statisk grafik är det grundläggande kravet att tillhandahålla ett motsva
 >[!NOTE]
 >
 >Vissa färdiga kärnkomponenter, till exempel **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)** - inte tillhandahåller **Alternativ text** fält för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns **Etikett** fält (**[Tillgänglighet](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html#accessibility-tab)** för hela komponenten.
+>
 När du implementerar versioner av dessa för din AEM måste ditt utvecklingsteam konfigurera sådana komponenter så att de stöder `alt` -attribut. Detta säkerställer att författare kan lägga till det i innehållet (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
 AEM kräver **Alternativ text** fält som ska fyllas i som standard. Om bilden bara är dekorativ och alternativ text inte behövs, kan **Bilden är dekorativ** kan markeras.
@@ -109,6 +109,7 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 * Bakgrundsbilder: Dessa uppnås med CSS (Cascading Style Sheets) i stället för HTML. Det innebär att det inte går att ange ett alternativt textvärde. Därför bör bakgrundsbilder inte innehålla viktig textinformation. Om de gör det måste den här informationen också anges i sidans text. Det är dock viktigt att en alternativ bakgrund visas när bilden inte kan visas.
 
 >[!NOTE]
+>
 Det bör finnas en lämplig kontrastnivå mellan bakgrunden och förgrundstexten. detta diskuteras mer ingående [Kontrast (minimal) (1.4.3)](#contrast-minimum).
 
 #### Mer information - Innehåll som inte är text (1.1.1) {#more-information-non-text-content}
@@ -156,12 +157,15 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
    * Eller en motsvarande ljudbeskrivning i ett vanligt ljudformat som MP3.
 
 >[!NOTE]
+>
 Om ljud- eller videoinnehållet tillhandahålls som ett alternativ till innehåll som finns i ett annat format på samma webbsida kanske inget extra alternativ krävs.
+>
 Riktlinjerna [Om WCAG 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html), lämna ytterligare information.
 
 Att infoga multimedia i dina AEM webbsidor påminner om att infoga en bild. Men eftersom multimediainnehållet är mycket mer än en stillbild finns det olika inställningar och alternativ för att styra hur multimediainnehållet spelas upp.
 
 >[!NOTE]
+>
 När du använder multimedia med informativt innehåll måste du också skapa länkar till alternativ. Om du till exempel vill ta med en textutskrift skapar du en HTML-sida som visar utskriften och lägger sedan till en länk bredvid eller under ljudinnehållet.
 
 #### Mer information - endast ljud och endast video (inspelat i förväg) (1.2.1) {#more-information-audio-only-and-video-only-prerecorded}
@@ -221,7 +225,7 @@ Det finns två strategier som kan användas för att uppfylla detta kriterium. B
    * Skapa ett nytt, extra och valfritt ljudspår som innehåller det ursprungliga ljudspåret, men även extra ljudinformation om ändringar i scenen.
       * På så sätt kan användare växla mellan det befintliga ljudspåret (som *inte* innehåller en ljudbeskrivning) och det nya ljudspåret (som *gör* innehåller en ljudbeskrivning).
       * Detta förhindrar avbrott för användare som inte behöver den ytterligare beskrivningen.
-   * Skapa en andra version av videoinnehållet som tillåter utökade ljudbeskrivningar. Detta minskar de svårigheter som är förknippade med att tillhandahålla detaljerade ljudbeskrivningar i mellanrummen mellan de befintliga dialogrutorna genom att tillfälligt pausa ljudet och videon vid lämpliga tidpunkter. Därför kan en mycket längre ljudbeskrivning ges innan åtgärden startar om. Precis som i föregående exempel är detta det bästa sättet att tillhandahålla detta som ett extra ljudspår för att förhindra avbrott för användare som inte behöver den extra beskrivningen.
+   * Skapa en andra version av videoinnehållet som tillåter utökade ljudbeskrivningar. Detta minskar de svårigheter som är förknippade med att tillhandahålla detaljerade ljudbeskrivningar i mellanrummen mellan de befintliga dialogrutorna genom att tillfälligt pausa ljudet och videon vid lämpliga tidpunkter. Därför kan en mycket längre ljudbeskrivning ges innan åtgärden startar om. Precis som i föregående exempel är detta det bästa som finns som ett extra ljudspår för att förhindra avbrott för användare som inte behöver den extra beskrivningen.
 1. Ange en textavskrift som är en lämplig textmotsvarighet till ljud- och visuella element i videon eller animeringen. Detta bör i tillämpliga fall omfatta en indikation om vem som talar, en beskrivning av inställningen, eventuella händelser eller information som presenteras visuellt samt röstuttryck. Beroende på längden kan du placera utskriften på samma sida som videon eller animeringen, eller på en separat sida; Om du väljer det senare alternativet anger du en länk till utskriften bredvid videon eller animeringen.
 
 Exakta detaljer om hur du skapar ljudbeskrivad video ligger utanför den här handbokens räckvidd. Det kan ta lång tid att skapa videoklipp och ljudbeskrivningar, men med andra Adobe-produkter kan du göra detta.
@@ -297,7 +301,7 @@ Denna riktlinje omfattar de krav som är nödvändiga för att stödja personer 
 
 #### Syfte - Information och relationer (1.3.1) {#purpose-info-and-relationships}
 
-Många hjälpmedelstekniker som används av personer med funktionshinder är beroende av strukturinformation för att effektivt kunna visa eller *förstå* innehåll. Den här strukturinformationen kan ha formen av sidrubriker, tabellrader, kolumnrubriker och listtyper. En skärmläsare kan till exempel tillåta användaren att navigera på en sida från rubrik till rubrik. Men när sidinnehåll bara verkar ha en struktur genom visuell formatering, snarare än underliggande HTML, finns det ingen strukturinformation tillgänglig för hjälpmedelstekniker, vilket begränsar deras möjligheter att hantera enklare surfning.
+Många hjälpmedelstekniker som används av personer med funktionshinder använder strukturinformation för att effektivt kunna visa eller *förstå* innehåll. Den här strukturinformationen kan ha formen av sidrubriker, tabellrader, kolumnrubriker och listtyper. En skärmläsare kan till exempel tillåta användaren att navigera på en sida från rubrik till rubrik. Men när sidinnehåll bara verkar ha en struktur genom visuell formatering, snarare än underliggande HTML, finns det ingen strukturinformation tillgänglig för hjälpmedelstekniker, vilket begränsar deras möjligheter att hantera enklare surfning.
 
 Detta kriterium gäller för att säkerställa att sådan strukturinformation tillhandahålls via HTML, eller andra kodningstekniker, så att webbläsare och hjälpmedelstekniker kan komma åt informationen och dra nytta av den.
 
@@ -313,9 +317,9 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
    * Elementet `<ul>` används för *oordnade* punktlistor. Enskilda listobjekt identifieras med `<li>` -element. I RTE använder du **Punktlista** ikon.
    * The `<ol>` element används för *numrerad* listor. Enskilda listobjekt identifieras med `<li>` -element. I RTE använder du **Numrerad lista** ikon.
 
-   Om du vill ändra befintligt innehåll till en viss listtyp markerar du lämplig text och väljer lämplig listtyp. Precis som i det tidigare exemplet som visar hur stycketext skrivs in, läggs de rätta listelementen automatiskt till i HTML.
+  Om du vill ändra befintligt innehåll till en viss listtyp markerar du lämplig text och väljer lämplig listtyp. Precis som i det tidigare exemplet som visar hur stycketext skrivs in, läggs de rätta listelementen automatiskt till i HTML.
 
-   I helskärmsläge visas ikonerna **Punktlista** och **Numrerad lista**. Om du inte arbetar i helskärmsläge finns de två alternativen bakom den enda **Listor**-ikonen.
+  I helskärmsläge visas ikonerna **Punktlista** och **Numrerad lista**. Om du inte arbetar i helskärmsläge finns de två alternativen bakom den enda **Listor**-ikonen.
 
 * **Tabeller**: Datatabeller måste identifieras med tabellelement i HTML:
    * en `<table>` element
@@ -323,71 +327,76 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
    * a `<th>` element för varje rad och kolumnrubrik
    * a `<td>` element för varje datacell
 
-   Tillgängliga tabeller använder dessutom följande element och attribut:
+  Tillgängliga tabeller använder dessutom följande element och attribut:
 
    * The `<caption>` -elementet används för att ange en synlig bildtext för tabellen. Bildtexter visas som standard centrerade ovanför tabellen, men kan placeras korrekt med CSS. Bildtexten är programmatiskt kopplad till tabellen och är därför en användbar metod för att ge en introduktion till innehållet.
    * The `<summary>` -elementet hjälper icke-synkade användare att enklare förstå den information som presenteras i en tabell genom att ge en sammanfattning av vad en synkad användare kan se. Det här arbetsflödet är användbart när komplexa eller okonventionella tabellayouter används (det här attributet visas inte i webbläsaren, det läses bara ut för hjälpfunktioner).
    * The `scope` attributet för `<th>` -element används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
 
-   >[!NOTE]
-   Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
+  >[!NOTE]
+  >
+  Som standard är dessa element och attribut inte direkt tillgängliga, men systemadministratören kan lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper**[ (se Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
-   Öppna **Tabell** där du kan välja **Tabellegenskaper** tab:
+  Öppna **Tabell** där du kan välja **Tabellegenskaper** tab:
 
    * Definiera en lämplig **Bildtext**.
    * Ta helst bort alla standardvärden för **Bredd**, **Höjd**, **Kant**, **Cellfyllnad** och **Cellmellanrum** eftersom dessa egenskaper kan anges i en global formatmall.
 
-   Du kan sedan använda **Cellegenskaper** för att välja om cellen är en data- eller rubrikcell:
+  Du kan sedan använda **Cellegenskaper** för att välja om cellen är en data- eller rubrikcell:
 
 * **Betoning**: Använd `<strong>` eller `<em>` element som anger betoning. Använd inte rubriker för att markera text i stycken.
    * Markera texten som du vill framhäva;
    * Klicka på ikonen **B** (för `<strong>`) eller ikonen **I** (för `<em>`) som visas på panelen **Egenskaper** (kontrollera att HTML är markerat).
 
-      >[!NOTE]
-      RTE i en AEM standardinstallation är konfigurerad att använda:
-      * `<b>` for `<strong>`
-      * `<i>` for `<em>`
-
-      De är i själva verket desamma, men `<strong>` och `<em>` är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE att använda `<strong>` och `<em>` (i stället för `<b>` och `<i>`) när du utvecklar din projektinstans.
+     >[!NOTE]
+     >
+     RTE i en AEM standardinstallation är konfigurerad att använda:
+     >
+     * `<b>` for `<strong>`
+     * `<i>` for `<em>`
+     >
+     De är i själva verket desamma, men `<strong>` och `<em>` är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE att använda `<strong>` och `<em>` (i stället för `<b>` och `<i>`) när du utvecklar din projektinstans.
 
 * **Komplexa datatabeller**: Om det finns komplexa tabeller med två eller flera rubriknivåer kan det hända att de grundläggande tabellegenskaperna inte räcker till för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av attributen **header** och **id.**
 
-   >[!NOTE]
-   Attributet id är inte tillgängligt i en körklar installation. Den kan aktiveras genom att konfigurera HTML-regler och serialiseraren i textredigeraren.
+  >[!NOTE]
+  >
+  Attributet id är inte tillgängligt i en körklar installation. Den kan aktiveras genom att konfigurera HTML-regler och serialiseraren i textredigeraren.
 
-   I tabellen nedan matchas till exempel rubriker och ID:n för att skapa en programmatisk association för hjälpmedelsanvändare.
+  I tabellen nedan matchas till exempel rubriker och ID:n för att skapa en programmatisk association för hjälpmedelsanvändare.
 
-   ```xml
-     <table>
-       <tr>
-         <th rowspan="2" id="h">Homework</th>
-         <th colspan="3" id="e">Exams</th>
-         <th colspan="3" id="p">Projects</th>
-       </tr>
-       <tr>
-         <th id="e1" headers="e">1</th>
-         <th id="e2" headers="e">2</th>
-         <th id="ef" headers="e">Final</th>
-         <th id="p1" headers="p">1</th>
-         <th id="p2" headers="p">2</th>
-         <th id="pf" headers="p">Final</th>
-       </tr>
-       <tr>
-         <td headers="h">15%</td>
-         <td headers="e e1">15%</td>
-         <td headers="e e2">15%</td>
-         <td headers="e ef">20%</td>
-         <td headers="p p1">10%</td>
-         <td headers="p p2">10%</td>
-         <td headers="p pf">15%</td>
-       </tr>
-     </table>
-   ```
+  ```xml
+    <table>
+      <tr>
+        <th rowspan="2" id="h">Homework</th>
+        <th colspan="3" id="e">Exams</th>
+        <th colspan="3" id="p">Projects</th>
+      </tr>
+      <tr>
+        <th id="e1" headers="e">1</th>
+        <th id="e2" headers="e">2</th>
+        <th id="ef" headers="e">Final</th>
+        <th id="p1" headers="p">1</th>
+        <th id="p2" headers="p">2</th>
+        <th id="pf" headers="p">Final</th>
+      </tr>
+      <tr>
+        <td headers="h">15%</td>
+        <td headers="e e1">15%</td>
+        <td headers="e e2">15%</td>
+        <td headers="e ef">20%</td>
+        <td headers="p p1">10%</td>
+        <td headers="p p2">10%</td>
+        <td headers="p pf">15%</td>
+      </tr>
+    </table>
+  ```
 
-   Om du vill göra det i AEM lägger du till markeringen direkt i källredigeringsläget.
+  Om du vill göra det i AEM lägger du till markeringen direkt i källredigeringsläget.
 
-   >[!NOTE]
-   Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. Det kräver konfiguration av RTE, HTML-regler och serialisering.
+  >[!NOTE]
+  >
+  Den här funktionen är inte omedelbart tillgänglig i en standardinstallation. Det kräver konfiguration av RTE, HTML-regler och serialisering.
 
 #### Mer information - Info och relationer (1.3.1) {#more-information-info-and-relationships}
 
@@ -426,6 +435,7 @@ Designers fokuserar ofta på visuella designfunktioner som färg, form, textstil
 På samma sätt utgör information som kräver att man skiljer mellan olika ljud (till exempel manligt eller kvinnligt talt innehåll) tillgänglighetshinder för personer med nedsatt hörsel, om den inte återspeglas i något textalternativ för ljudinnehållet.
 
 >[!NOTE]
+>
 Information om krav för alternativ till färg finns i [Användning av färg](#use-of-color).
 
 #### Hur man uppfyller kraven - sensoriska egenskaper (1.3.3) {#how-to-meet-sensory-characteristics}
@@ -436,6 +446,7 @@ Se till att all information som bygger på visuella egenskaper för sidinnehåll
 * Förlita dig inte på att textformatering (till exempel fet eller kursiv text) är det enda sättet att förmedla information.
 
 >[!NOTE]
+>
 Beskrivande termer får användas om de anses ha betydelse i en icke-visuell kontext. Använd till exempel *ovan* och *nedan* skulle i allmänhet vara godtagbara, eftersom de innebär innehåll före och efter en viss innehållspost, detta skulle fortfarande vara vettigt när innehållet talas högt.
 
 #### Mer information - Sensoriska egenskaper (1.3.3) {#more-information-sensory-characteristics}
@@ -454,6 +465,7 @@ Beskrivande termer får användas om de anses ha betydelse i en icke-visuell kon
 * Användning av färg: Färg används inte som det enda visuella sättet att förmedla information, ange en åtgärd, fråga ett svar eller ange ett visuellt element.
 
 >[!NOTE]
+>
 Detta kriterium gäller specifikt färguppfattningen. Andra former av uppfattningar beskrivs i [Anpassningsbar (1.3)](#adaptable); med programmatisk åtkomst till färg och annan visuell presentationskodning.
 
 #### Syfte - Användning av färg (1.4.1) {#purpose-use-of-color}
@@ -492,6 +504,7 @@ Personer som använder skärmläsarprogram kan uppleva att det är svårt att h�
 Därför är det viktigt att användaren kan stänga av bakgrundsljudet.
 
 >[!NOTE]
+>
 Att ha kontroll över volymen innebär bland annat att kunna minska volymen till noll.
 
 #### Hur man klarar - ljudkontroll (1.4.2) {#how-to-meet-audio-control}
@@ -512,8 +525,9 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna 1.4.2](https://www.w3.or
    * Oavsiktlig: Text eller bilder av text som är en del av en inaktiv användargränssnittskomponent, som är [ren dekoration](https://www.w3.org/TR/WCAG/#dfn-pure-decoration), som inte är synliga för någon eller som är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
    * Logotyper: Text som är en del av en logotyp eller ett varumärkesnamn har inget minimikrav på kontrast.
 
-   >[!NOTE]
-   Se [Förstå icke-textkontrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) för mer information, för att säkerställa att innehållsförfattare förstår ytterligare krav runt icke-textelement (inklusive ikoner, gränssnittselement med flera).
+  >[!NOTE]
+  >
+  Se [Förstå icke-textkontrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) för mer information, för att säkerställa att innehållsförfattare förstår ytterligare krav runt icke-textelement (inklusive ikoner, gränssnittselement med flera).
 
 #### Syfte - Kontrast (minimum) (1.4.3) {#purpose-contrast-minimum}
 
@@ -523,6 +537,7 @@ Personer med vissa nedsatt syn kanske inte kan skilja mellan vissa färgpar med 
 * Färgkodningen för text (t.ex. länktext och icke-länktext) är viktig för att kunna skilja information åt.
 
 >[!NOTE]
+>
 Text som endast används för dekorationsändamål ingår inte i detta kriterium.
 
 #### Hur man klarar - Kontrast (minimum) (1.4.3) {#how-to-meet-contrast-minimum}
@@ -534,15 +549,18 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 * Om en bakgrund är mönstrad ska bakgrunden runt all text skuggas så att proportionerna 4.5:1 eller 3:1 behålls.
 
 >[!NOTE]
+>
 Tänk på att teckensnitt kan skilja sig åt när det gäller hur de återger motsvarande PT/PX/EM-storlek.
+>
 Använd god vana vid och felen när det gäller läsbarhet och användbarhet när du väljer lämpliga teckensnitt och storlek för webbinnehåll.
 
 >[!NOTE]
+>
 Gör en webbsökning på följande fraser för att hitta verktyg som kan hjälpa dig att konvertera till andra enheter:
+>
 * Px to Em Calculator <!--  (https://www.omnicalculator.com/conversion/px-to-em) -->
 * Konvertering av teckenstorlek: pixel-point-em-rem-percent <!-- CAUSES 404 ERROR DESPITE URL BEING CORRECT https://www.websemantics.uk/tools/ -->
 * Pixel to EM Converter <!-- (https://www.w3schools.com/tags/ref_pxtoemconversion.asp) -->
-
 
 Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyzer](https://www.tpgi.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
 
@@ -583,6 +601,7 @@ Förutom att följa riktlinjerna i [Så här uppfyller du kriterierna 1.4.4](htt
    * Grundläggande: En viss presentation av texten är väsentlig för den information som förmedlas.
 
 >[!NOTE]
+>
 Logotyper (text som är en del av en logotyp eller ett varumärkesnamn) anses vara viktiga.
 
 #### Syfte - Textbilder (1.4.5) {#purpose-images-of-text}
@@ -718,6 +737,7 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 * Tre Flash eller under tröskelvärde: Webbsidor innehåller inte något som blinkar mer än tre gånger under en sekund, eller så är blixten under de allmänna tröskelvärdena för blixt och rött.
 
 >[!NOTE]
+>
 Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens förmåga att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Icke-interferens](https://www.w3.org/TR/WCAG/#cc5).
 
 #### Syfte - Tre Flash eller under tröskelvärde (2.3.1) {#purpose-three-flashes-or-below-threshold}
@@ -844,6 +864,7 @@ John Smith's publications
 ```
 
 >[!NOTE]
+>
 Ovanstående kodutdrag är en illustration, du bör använda **Bild** -komponenten.
 
 Vi rekommenderar att du anger länktext som identifierar länkens syfte utan att behöva ytterligare kontext, men det är inte alltid möjligt. Kontextfria länkar kan användas i följande fall, varav exempel på HTML finns i [Hur man uppfyller kriterierna för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
@@ -953,14 +974,15 @@ Syftet med detta kriterium är att säkerställa att text och annat språkligt i
 För att uppfylla det här kriteriet kan standardspråket på en webbsida identifieras med `lang` i `<html>` -element överst på sidan. Till exempel:
 
 * Om en sida är skriven på engelska är `<html>` -elementet ska vara:
-   `<html lang = "en">`
+  `<html lang = "en">`
 
 * En sida som skall återges på spanska bör anta följande standard:
-   `<html lang = "es">`
+  `<html lang = "es">`
 
 I AEM anges sidans standardspråk när du skapar sidan, men det kan också ändras när du redigerar [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
 
 >[!NOTE]
+>
 AEM erbjuder ytterligare finjusteringar för variationer av ett rotspråk. till exempel amerikansk engelska - en-us, brittisk engelska - en-gb och kanadensisk engelska - en-ca. Denna detaljnivå är ofta överflödig för hjälpmedelstekniker, men kan användas för regionala variationer av sidinnehåll.
 
 #### Mer information - Sidans språk (3.1.1) {#more-information-language-of-page}
@@ -996,6 +1018,7 @@ The `lang` kan användas för att identifiera ändringar i innehållsspråket. E
 ```
 
 >[!NOTE]
+>
 Blockcitattecken stöds inte i en körklar instans. En anpassad komponent kan utvecklas som stöd för funktionen.
 
 På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig fras korrekt om `span` -elementet används enligt följande:
@@ -1005,6 +1028,7 @@ På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig 
 ```
 
 >[!NOTE]
+>
 Det är inte nödvändigt att följa detta kriterium när namn eller städer på olika språk inkluderas eller när man använder låneord eller fraser som har blivit vanliga på standardspråket (t.ex. *schadenfreude* på eng).
 
 Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses upp som ovan. Alternativt `lang` attribut kan inkluderas i textredigeraren av en systemadministratör (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).

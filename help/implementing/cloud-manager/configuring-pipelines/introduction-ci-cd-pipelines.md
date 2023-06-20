@@ -3,9 +3,9 @@ title: CI/CD-rör
 description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
-source-git-commit: a14ee350b3fdc3ac197b703aa36957d1d1dd7355
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas fö
 
 ## Introduktion {#introduction}
 
-En CI/CD-pipeline i Cloud Manager är en mekanism som bygger kod från en källdatabas och distribuerar den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (dvs. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecadence.
+En CI/CD-pipeline i Cloud Manager är en mekanism för att skapa kod från en källdatabas och distribuera den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (dvs. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecadence.
 
 Om du vill konfigurera en pipeline måste du:
 
@@ -97,10 +97,10 @@ I rörledningar med hel hög kan webbnivåkonfigurationer distribueras om en [pi
 
 Följande begränsningar gäller.
 
-* En användare måste vara inloggad med **Distributionshanteraren** roll för att konfigurera eller driva rörledningar.
+* En användare måste vara inloggad med **Distributionshanteraren** roll för att konfigurera eller köra rörledningar.
 * Det kan bara finnas en pipeline i full hög per miljö.
 
-Du bör dessutom vara medveten om hur helstackspipelinen kommer att fungera om du väljer att introducera en [konfigurationsflöde för webbnivå.](#web-tier-config-pipelines)
+Du bör dessutom vara medveten om hur rörledningen i en hel hög fungerar om du väljer att introducera en [konfigurationsflöde för webbnivå.](#web-tier-config-pipelines)
 
 * I en helgrupps-pipeline för en miljö ignoreras Dispatcher-konfigurationen om motsvarande konfigurationsflöde för webbnivån finns.
 * Om motsvarande konfigurationsflöde för webbskiktet för miljön inte finns kan användaren konfigurera pipelinen för hela stacken som innehåller eller ignorerar Dispatcher-konfigurationen.
@@ -115,7 +115,7 @@ Med rörledningar kan era team effektivisera design- och utvecklingsprocessen ge
 
 >[!IMPORTANT]
 >
->Du måste ha AEM version `2021.10.5933.20211012T154732Z ` eller senare med AEM Sites aktiverat för att utnyttja rörledningar för frontservrar.
+>Du måste ha AEM version `2021.10.5933.20211012T154732Z ` eller senare när AEM Sites är aktiverat för att använda rörledningar för frontservrar.
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ Läs följande dokument om du vill veta hur du konfigurerar rörledningar för f
 
 Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
 
-Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) för hur denna process fungerar tillsammans med vissa överväganden som måste beaktas för att man ska få ut mesta möjliga av denna process.
+Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) om hur den här processen fungerar tillsammans med vissa överväganden för att vara medveten om att utnyttja hela potentialen i den här processen.
 
 ### Konfigurera rörledningar i helhög {#configure-full-stack}
 
@@ -160,18 +160,18 @@ Med konfigurationspipelines på webbnivå kan du exklusiv distribution av HTTPD/
 
 Följande begränsningar gäller.
 
-* Du måste ha AEM version `2021.12.6151.20211217T120950Z` eller nyare för att utnyttja konfigurationspipelines på webbnivå.
-* Du måste [välja det flexibla läget för dispatcherverktygen](/help/implementing/dispatcher/disp-overview.md#validation-debug) för att utnyttja konfigurationsrörledningar på webbnivå.
-* En användare måste vara inloggad med **Distributionshanteraren** roll för att konfigurera eller driva rörledningar.
+* Du måste ha AEM version `2021.12.6151.20211217T120950Z` eller nyare för att använda konfigurationströrningar på webbnivå.
+* Du måste [välja det flexibla läget för dispatcherverktygen](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill använda konfigurationströrningar på webbnivå.
+* En användare måste vara inloggad med **Distributionshanteraren** roll för att konfigurera eller köra rörledningar.
 * Det kan bara finnas en konfigurationspipeline för webbskikt per miljö.
 * Användaren kan inte konfigurera en konfigurationspipeline för ett webbskikt när motsvarande pipeline för en hel hög körs.
 * Webbnivåstrukturen måste följa strukturen för det flexibla läget, enligt definitionen i dokumentet [Dispatcher i molnet.](/help/implementing/dispatcher/disp-overview.md#validation-debug)
 
-Var dessutom medveten om hur [fullständigt stackflöde](#full-stack-pipeline) kommer att fungera när en webbskiktspipeline introduceras.
+Var dessutom medveten om hur [fullständigt stackflöde](#full-stack-pipeline) fungerar när du introducerar ett webbskiktsflöde.
 
 * Om en konfigurationspipeline för ett webbskikt inte har konfigurerats för en miljö, kan användaren göra ett val när han/hon konfigurerar sin motsvarande pipeline för hela stacken för att inkludera eller ignorera Dispatcher-konfigurationen under körning och distribution.
 * När en konfigurationspipeline för ett webbskikt har konfigurerats för en miljö, ignorerar dess motsvarande pipeline för hela stacken (om det finns en sådan) dispatcherkonfigurationen under körning och distribution.
-* När en konfigurationspipeline för ett webbskikt tas bort återställs dess motsvarande pipeline för hela stacken för att distribuera Dispatcher-konfigurationer under körningen.
+* När en konfigurationspipeline för ett webbskikt har tagits bort återställs dess motsvarande pipeline för hela stacken för att distribuera Dispatcher-konfigurationer under körningen.
 
 Rörledningar för webbnivåkonfiguration kan vara av typen kodkvalitet eller distribution.
 

@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: aa7b9daba4242965baf20a77af356952cd7bc279
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Introduktionen av AEM Commerce as a Cloud Service är en tvåstegsprocess:
 
 Det första startsteget görs av Adobe. Mer information om priser och provisionering får du av din säljare.
 
-När du har etablerats med CIF-tillägget kommer det att tillämpas på alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett nytt. Mer information finns i [Konfigurera ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/setting-up-program.html).
+När du har etablerat dig med CIF-tillägget tillämpas det på alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett nytt. Mer information finns i [Konfigurera ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/setting-up-program.html).
 
 Det andra steget är självbetjäning för varje AEM as a Cloud Service miljö. Det finns ytterligare konfigurationer du behöver göra efter den första etableringen av CIF-tillägget.
 
@@ -41,7 +41,7 @@ Miljövariabeln används på två ställen:
 - GraphQL anropar från AEM till e-handelskunderna via en gemensam Sharable GraphQl-klient som används av AEM CIF Core Components och kundprojektskomponenter.
 - Konfigurera en proxywebbadress för GraphQL för varje AEM som variabeln är inställd på `/api/graphql`. Detta används av AEM utvecklingsverktyg (CIF-tillägg) och CIF-komponenter på klientsidan.
 
-En annan GraphQL-slutpunkts-URL kan användas för varje AEM as a Cloud Service miljö. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara allmänt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Ett autentiseringshuvud kan anges om du vill använda ytterligare CIF-funktioner som kräver autentisering.
+En annan GraphQL-slutpunkts-URL kan användas för varje AEM as a Cloud Service miljö. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara allmänt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Du kan också ange en autentiseringshuvud om du vill använda ytterligare CIF-funktioner som kräver autentisering.
 
 Tillägget CIF kan användas endast för Adobe Commerce Enterprise/Cloud med stöd för användning av testade katalogdata för AEM. Detta kräver att du konfigurerar en auktoriseringshuvud. Den här rubriken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
 
@@ -51,7 +51,7 @@ Det finns två alternativ för att konfigurera slutpunkten:
 
 >[!VIDEO](https://video.tv.adobe.com/v/37843?quality=12&learn=on)
 
-Detta kan du göra med en dialogruta på sidan Miljöinformation. När den här sidan visas för ett program som har stöd för Commerce visas en knapp om slutpunkten inte är konfigurerad:
+Detta kan du göra med en dialogruta på sidan Miljöinformation. När den här sidan visas för ett Commerce-aktiverat program visas en knapp om slutpunkten inte är konfigurerad:
 
 ![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui.png)
 
@@ -59,7 +59,7 @@ Om du klickar på den här knappen öppnas en dialogruta:
 
 ![CM Commerce Endpoint](/help/commerce-cloud/assets/commerce-cm-endpoint.png)
 
-När slutpunkten och eventuellt en auktoriseringshuvud för stöd för mellanlagrad katalog har angetts, visas slutpunkten på detaljsidan. Om du klickar på ikonen Redigera öppnas samma dialogruta där slutpunkten kan ändras om det behövs.
+När slutpunkten och eventuellt en auktoriseringshuvud för stöd för mellanlagrad katalog har angetts visas slutpunkten på detaljsidan. Om du klickar på ikonen Redigera öppnas samma dialogruta där slutpunkten kan ändras om det behövs.
 
 ![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui-done.png)
 
@@ -120,17 +120,17 @@ Följande egenskaper kan konfigureras:
 - GraphQL Client - Välj den konfigurerade GraphQL-klienten för e-handelskommunikation. Detta bör normalt vara kvar som standard.
 - Butiksvy - butiksvyns identifierare. Om den är tom används standardbutiksvyn.
 - GraphQL Proxy Path - den URL-sökväg som GraphQL Proxy AEM använder för proxybegäranden till GraphQL-slutpunkt för e-handel.
-   >[!NOTE]
-   >
-   > I de flesta inställningar är standardvärdet `/api/graphql` får inte ändras. Endast avancerade inställningar som inte använder den angivna GraphQL-proxyn bör ändra den här inställningen.
+  >[!NOTE]
+  >
+  > I de flesta inställningar är standardvärdet `/api/graphql` får inte ändras. Endast avancerade inställningar som inte använder den angivna GraphQL-proxyn bör ändra den här inställningen.
 - Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsserverdelens GraphQL-anrop.
-   >[!NOTE]
-   >
-   > Stöd för UID introducerades i Adobe Commerce 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
+  >[!NOTE]
+  >
+  > Stöd för UID introducerades i Adobe Commerce 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
 - Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogroten
-   >[!CAUTION]
-   >
-   > Från och med CIF Core Components version 2.0.0 finns stöd för `id` togs bort och ersattes med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som &quot;Katalogens rotkategoriidentifierare&quot;.
+  >[!CAUTION]
+  >
+  > Från och med CIF Core Components version 2.0.0 finns stöd för `id` togs bort och ersattes med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som &quot;Katalogens rotkategoriidentifierare&quot;.
 
 Konfigurationen som visas ovan är för referens. Projekten ska innehålla egna konfigurationer.
 

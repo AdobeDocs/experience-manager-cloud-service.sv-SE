@@ -2,9 +2,9 @@
 title: Installation av Enterprise Development Team
 description: Lär dig hur du konfigurerar och skalar ditt utvecklingsteam och se hur AEM as a Cloud Service kan stödja din utvecklingsprocess.
 exl-id: 85f8779b-12cb-441b-a34d-04641184497a
-source-git-commit: f19c4c71cf3b70331b9ccc56adf0bfd31e7edb2c
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
@@ -94,9 +94,9 @@ Denna verkliga konfiguration kan användas som en plan och sedan anpassas efter 
 
 ### Att tänka på vid installation av flera team {#considerations}
 
-Med Cloud Managers Git-databas och produktionsflödet körs den fullständiga produktionskoden alltid genom alla kvalitetsportar, vilket behandlar den som en enda distributionsenhet. På så sätt fungerar produktionssystemet alltid utan avbrott eller driftavbrott.
+Med Cloud Managers Git-databas och produktionsflödet körs hela produktionskoden alltid genom alla kvalitetsportar, vilket behandlar den som en enda distributionsenhet. På så sätt fungerar produktionssystemet alltid utan avbrott eller driftavbrott.
 
-Utan ett sådant system finns det däremot en risk att en uppdatering från ett team kan leda till produktionsstabilitetsproblem. Dessutom krävs samordning och planerad driftstopp för att lansera uppdateringar. Med ett ökande antal team kommer samordningen att bli mycket mer komplex och snabbt bli ohanterlig.
+Utan ett sådant system finns det däremot en risk att en uppdatering från ett team kan leda till produktionsstabilitetsproblem. Dessutom krävs samordning och planerad driftstopp för att lansera uppdateringar. Med ett ökande antal team blir samordningen mycket mer komplex och snabbt ohanterlig.
 
 Om ett problem upptäcks i kvalitetsportarna påverkas inte produktionen, och problemet kan upptäckas och åtgärdas utan att Adobe personal behöver gå in i programmet. Utan Cloud Service och utan att alltid testa hela distributionen kan partiella distributioner orsaka avbrott som kräver en begäran om återställning eller till och med en fullständig återställning från en säkerhetskopia. Den partiella testningen kan också leda till andra problem som sedan måste åtgärdas efter det att behovet av samordning och stöd från Adobe personal åter har kommit att kräva.
 

@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lär dig hur du lägger till ett anpassat domännamn med hjälp av Cloud Manager.
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: 21496a52fbe3caa08c606ddaeb85481a9d416b3d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Följ de här stegen för att lägga till ett eget domännamn från **Domäninst
    >
    >Inkludera inte `http://`, `https://`eller blanksteg när du anger i domänen.
 
-1. Välj **Miljö** vars tjänst kommer att associeras med domännamnet.
+1. Välj **Miljö** vars tjänst är associerad med domännamnet.
 
 1. Välj antingen **Publicera** eller **Förhandsgranska** service.
 

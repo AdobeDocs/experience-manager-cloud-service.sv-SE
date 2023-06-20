@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
-source-git-commit: d054f960f13b7308dbf42556ef60a971e880197e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2598'
+source-wordcount: '2594'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Vi klonar [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia) och
 
 ## Skapa Product Teaser {#author-product-teaser}
 
-Product Teaser Component kommer att byggas ut genom hela kursen. Som ett första steg lägger du till en ny instans av Product Teaser på startsidan för att förstå baslinjefunktionerna.
+Product Teaser Component utökas genom hela kursen. Som ett första steg lägger du till en ny instans av Product Teaser på startsidan för att förstå baslinjefunktionerna.
 
 1. Navigera till **Hemsida** för platsen: [http://localhost:4502/editor.html/content/acme/us/en.html](http://localhost:4502/editor.html/content/acme/us/en.html)
 
@@ -436,7 +436,7 @@ I det här fallet vill vi återge en banderoll ovanpå teaser för att ange att 
 
 I det här läget är logiken för när **Miljövänlig** emblemet fungerar, men den oformaterade texten kan använda vissa format. Lägg sedan till en ikon och format i `ui.frontend` för att slutföra implementeringen.
 
-1. Ladda ned [eco_friendly.svg](../assets/customize-cif-components/eco_friendly.svg) -fil. Detta kommer att användas som **Miljövänlig** emblem.
+1. Ladda ned [eco_friendly.svg](../assets/customize-cif-components/eco_friendly.svg) -fil. Detta används som **Miljövänlig** emblem.
 1. Återgå till utvecklingsmiljön och navigera till `ui.frontend` mapp.
 1. Lägg till `eco_friendly.svg` till `ui.frontend/src/main/resources/images` mapp:
 

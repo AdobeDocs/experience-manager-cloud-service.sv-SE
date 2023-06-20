@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1209'
 ht-degree: 2%
 
 ---
@@ -79,7 +79,7 @@ Så här hämtar du resurser:
 
    | Hämtningsalternativ | Beskrivning |
    |---|---|
-   | **[!UICONTROL Create separate folder for each asset]** | Välj det här alternativet om du vill skapa en mapp för varje resurs som innehåller alla hämtade återgivningar för resursen. Om du inte markerar det här alternativet kommer varje resurs (och dess återgivningar om de har valts för hämtning) att finnas i den överordnade mappen för det genererade arkivet. |
+   | **[!UICONTROL Create separate folder for each asset]** | Välj det här alternativet om du vill skapa en mapp för varje resurs som innehåller alla hämtade återgivningar för resursen. Om du inte markerar det här alternativet finns varje resurs (och dess återgivningar om de har valts för hämtning) i den överordnade mappen för det genererade arkivet. |
    | **[!UICONTROL Email]** | Välj det här alternativet om du vill skicka ett e-postmeddelande (som innehåller en länk till din hämtning) till en annan användare. Mottagaranvändaren måste vara medlem i `dam-users` grupp. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> Mallar som du anpassar under distributionen finns på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
    | **[!UICONTROL Asset(s)]** | Välj det här alternativet om du vill hämta resursen i dess ursprungliga form.<br>Alternativet Delresurser är tillgängligt om den ursprungliga tillgången har delresurser. |
    | **[!UICONTROL Rendition(s)]** | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka återgivningar som är tillgängliga beror på vilken resurs du har valt. |
@@ -155,4 +155,3 @@ Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att 
 >* [Hämta DRM-skyddade resurser](drm.md)
 >* [Hämta resurser med datorprogrammet Experience Manager på Win eller Mac](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
 >* [Hämta resurser med Adobe Assets Link inifrån de Adobe Creative Cloud-appar som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
-

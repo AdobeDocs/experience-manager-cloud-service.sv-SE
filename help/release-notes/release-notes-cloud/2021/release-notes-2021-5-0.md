@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 3f9d7339-7e37-4702-821e-f2b03cd7e224
-source-git-commit: af5eb5aeb34e2f0ead98e0a0acb412b19bcfe517
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1352'
 ht-degree: 0%
 
 ---
@@ -47,19 +47,19 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 * Du kan hämta resurser som delas med funktionen Länkdelning. Nedladdningen använder nu en asynkron tjänst som ger snabbare och oavbruten nedladdning, även för mycket stora nedladdningar. Se [ladda ned resurser](/help/assets/download-assets-from-aem.md#link-share-download).
 
-   ![Hämta inkorg](/help/assets/assets/download-inbox.png)
+  ![Hämta inkorg](/help/assets/assets/download-inbox.png)
 
 ### Nya funktioner i prerelease-kanalen {#what-is-new-assets-prerelease}
 
 * Metadata-scheman kan tillämpas direkt på mappegenskaperna.
 
-   ![Lägg till metadatamatchemat från mappegenskaper](/help/assets/assets/metadata-schema-folder-properties.png)
+  ![Lägg till metadatamatchemat från mappegenskaper](/help/assets/assets/metadata-schema-folder-properties.png)
 
 * Med verktyget Massingestor kan du lägga till metadata vid ett massintag.
 
 * En förbättring av användarupplevelsen visar antalet resurser i en mapp. För mer än 1000 resurser i en mapp, [!DNL Assets] visar 1000+.
 
-   ![Antalet resurser i en mapp visas i gränssnittet](/help/assets/assets/browse-folder-number-of-assets.png)
+  ![Antalet resurser i en mapp visas i gränssnittet](/help/assets/assets/browse-folder-number-of-assets.png)
 
 ### Fel som har åtgärdats i [!DNL Assets] {#assets-bugs-fixed}
 
@@ -110,7 +110,7 @@ Nästa version är planerad till 3 juni 2021.
 
 * Databasslutpunkten i det offentliga API:t innehåller nu Git-URL:en.
 
-* Distributionsloggen som hämtas av en Cloud Manager-användare blir mer insiktsfull och innehåller nu information om fel och lyckade scenarier.
+* Distributionsloggen som hämtas av en Cloud Manager-användare är mer insiktsfull och innehåller information om fel och lyckade scenarier.
 
 * Intermittenta fel som uppstod när koden skulle skickas till Adobe Git har nu åtgärdats.
 
@@ -148,7 +148,7 @@ Releasedatum för Content Transfer Tool v1.4.6 är 27 maj 2021.
 
 * En ny loggningssats har lagts till i snabbstartsloggen om användaren inte har behörighet att köra Java-filen.
 
-* När en användare tar bort en migreringsuppsättning från CTT-gränssnittet, där en extrahering utfördes, `tmp` mapp som är kopplad till den migreringsuppsättningen tas bort för att spara utrymme.
+* När en användare tar bort en migreringsuppsättning från CTT-användargränssnittet, där en extrahering utfördes, `tmp` mapp som är associerad med den migreringsuppsättningen tas bort för att spara utrymme.
 
 ### Felkorrigeringar {#bug-fixes-ctt-latest}
 

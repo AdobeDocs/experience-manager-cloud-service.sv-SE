@@ -1,10 +1,10 @@
 ---
 title: SPA Blueprint
-description: I det här dokumentet beskrivs det allmänna, ramverksoberoende kontrakt som SPA ska uppfylla för att implementera redigerbara SPA komponenter inom AEM.
+description: I det här dokumentet beskrivs det allmänna ramverksoberoende kontraktet som alla SPA ramverk ska uppfylla så att du kan implementera redigerbara SPA komponenter inom AEM.
 exl-id: 9d47c0e9-600c-4f45-9169-b3c9bbee9152
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2056'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera 
 
 ## Introduktion {#introduction}
 
-I det här dokumentet beskrivs det allmänna kontraktet att alla SPA ramverk ska uppfylla (dvs. typ av AEM stödlager) för att implementera redigerbara SPA komponenter inom AEM.
+I det här dokumentet beskrivs det allmänna kontraktet att alla SPA ramverk ska uppfylla (d.v.s. AEM stödskikt) så att du kan implementera redigerbara SPA komponenter i AEM.
 
 Om du vill att författaren ska kunna använda AEM Page Editor för att redigera data som exponeras av ett ramverk för ett enkelsidigt program, måste ett projekt kunna tolka modellstrukturen som representerar semantiken för data som lagras för ett program i AEM. För att uppnå detta mål finns två ramverksbaserade bibliotek: den `PageModelManager` och `ComponentMapping`.
 
@@ -67,7 +67,7 @@ De SPA komponenterna måste vara synkroniserade med sidmodellen och uppdateras m
 
 ### Metafält {#meta-fields}
 
-Sidmodellen utnyttjar JSON-modellens exporterare, som i sin tur är baserad på [Sling Model](https://sling.apache.org/documentation/bundles/models.html) API. De exporterbara snedsättningsmodellerna visar följande fältlista för att de underliggande biblioteken ska kunna tolka datamodellen:
+Sidmodellen använder JSON Model Exporter, som i sin tur är baserad på [Sling Model](https://sling.apache.org/documentation/bundles/models.html) API. De exporterbara snedsättningsmodellerna visar följande fältlista för att de underliggande biblioteken ska kunna tolka datamodellen:
 
 * `:type`: Typ av AEM (standard = resurstyp)
 * `:children`: Hierarkiska underordnade för den aktuella resursen. Underordnade är inte en del av den aktuella resursens inre innehåll (kan hittas på objekt som representerar en sida)
@@ -175,7 +175,6 @@ Till exempel:
 >* `"aem-Grid-newComponent"`: Normaliserar komponenten för layoututveckling
 >
 
-
 #### Komponentmappning {#component-mapping}
 
 Den underliggande [`Component Mapping`](#componentmapping) bibliotek och `MapTo` kan kapslas in och utökas för att ge funktioner i förhållande till redigeringskonfigurationen som finns bredvid den aktuella komponentklassen.
@@ -204,7 +203,7 @@ I implementeringen ovan utökas projektkomponenten med tomrumsfunktionen innan d
 
 ```javascript
 /**
- * Configuration object in charge of providing the necessary data expected by the page editor to initiate the authoring. The provided data will be decorating the associated component
+ * Configuration object in charge of providing the necessary data expected by the page editor to initiate the authoring. The provided data is decorating the associated component
  *
  * @typedef {{}} EditConfig
  * @property {String} [dragDropName]       If defined, adds a specific class name enabling the drag and drop functionality

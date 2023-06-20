@@ -2,9 +2,9 @@
 title: Dataskydd och dataintegritet - beredskap för Adobe Experience Manager as a Cloud Service webbplatser
 description: Läs mer om Adobe Experience Manager as a Cloud Service Sites support för de olika dataskydds- och datasekretessreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
 exl-id: fdcad111-0cdd-46cc-964c-3f8669ca2030
-source-git-commit: acd80887d71a528604d37fa2787bca3c3a48d7c4
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -56,15 +56,16 @@ Så här avanmäler du:
 
 1. Markera den refererade länken; för närvarande namngiven **här**.
 
-1. Du kommer att få följande information tillsammans med alternativen för att välja bort eller anmäla dig:
+1. Du får följande information tillsammans med alternativen för att avanmäla dig eller i:
 
    * Om du vill avanmäla dig från aggregering och analys av data om ditt besök på webbplatsen måste du installera en cookie i webbläsaren. Den här cookien identifierar att du har avanmält dig.
 
-      Om du tar bort cookien för anmälan eller om du byter dator eller webbläsare måste du avanmäla dig igen.
+     Om du tar bort cookien för anmälan eller om du byter dator eller webbläsare måste du avanmäla dig igen.
 
-      Opt-out - Uteslut mig från sessionsaggregering och analys för besökare (installera `amcglobal.sc.omtrdc.net` opt-out cookie) - Klicka här.
+     Opt-out - Uteslut mig från sessionsaggregering och analys för besökare (installera `amcglobal.sc.omtrdc.net` opt-out cookie) - Klicka här.
 
-      Opt-in - Inkludera mig i sessionsaggregering och analys för besökare (installera inte `amcglobal.sc.omtrdc.net` opt-out cookie) - Klicka här.
+     Opt-in - Inkludera mig i sessionsaggregering och analys för besökare (installera inte `amcglobal.sc.omtrdc.net` opt-out cookie) - Klicka här.
+
    Följ stegen ovan för att komma åt de faktiska länkarna.
 
    >[!NOTE]
@@ -108,22 +109,22 @@ I dessa riktlinjer används anmälan som standard. Därför måste en besökare 
 
 * Om en besökare godkänner villkoren för webbplatsen bör cookien för ContextHub-avanmälan tas bort:
 
-   ```
-   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
-   ```
+  ```
+  ContextHub.Utils.Cookie.removeItem('cq-opt-out');
+  ```
 
 * Om en besökare inte accepterar webbplatsens villkor ska cookie för ContextHub-avanmälan anges:
 
-   ```
-   ContextHub.Utils.Cookie.setItem('cq-opt-out', 1);
-   ```
+  ```
+  ContextHub.Utils.Cookie.setItem('cq-opt-out', 1);
+  ```
 
 * För att kontrollera om ContextHub körs i avanmälningsläge bör följande anrop göras i webbläsarens konsol:
 
-   ```
-   var isOptedOut = ContextHub.isOptedOut(true) === true;
-   // if isOptedOut is true, ContextHub is running in opt-out mode
-   ```
+  ```
+  var isOptedOut = ContextHub.isOptedOut(true) === true;
+  // if isOptedOut is true, ContextHub is running in opt-out mode
+  ```
 
 ### Förhandsgranska Persistence för ContextHub {#previewing-persistence-of-contexthub}
 
@@ -138,6 +139,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
          * Lokal lagring > (webbplats) > ContextHubPersistence
          * Sessionslagring > (webbplats) > ContextHubPersistence
          * Cookies > (website) > SessionPersistence
+
    * Firefox:
 
       * Öppna Utvecklarverktyg > Lagring:
@@ -145,6 +147,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
          * Lokal lagring > (webbplats) > ContextHubPersistence
          * Sessionslagring > (webbplats) > ContextHubPersistence
          * Cookies > (website) > SessionPersistence
+
    * Safari:
 
       * Öppna Inställningar > Avancerat > Visa menyn Framkalla i menyraden
@@ -153,6 +156,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
          * Konsol > Lagring > Lokal lagring > (webbplats) > ContextHubPersistence
          * Konsol > Lagring > Sessionslagring > (webbplats) > ContextHubPersistence
          * Konsol > Lagring > Cookies > (webbplats) > ContextHubPersistence
+
    * Internet Explorer:
 
       * Öppna Utvecklarverktyg > Konsol
@@ -160,9 +164,6 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
          * `localStorage.getItem('ContextHubPersistence')`
          * `sessionStorage.getItem('ContextHubPersistence')`
          * `document.cookie`
-
-
-
 
 * Använd ContextHub-API:t i webbläsarens konsol:
 
@@ -173,8 +174,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
       * `ContextHub.Utils.Persistence.Modes.COOKIE`
       * `ContextHub.Utils.Persistence.Modes.WINDOW`
 
-      ContextHub-arkivet definierar vilket beständigt lager som ska användas, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
-
+     ContextHub-arkivet definierar vilket beständigt lager som används, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
 
 Så här visar du data som lagras i localStorage:
 
@@ -187,12 +187,12 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
       * Lokal lagring > (webbplats) > ContextHubPersistence
       * Sessionslagring > (webbplats) > ContextHubPersistence
       * Cookies > (website) > SessionPersistence
+
    * Firefox - öppna Utvecklarverktyg > Lagring:
 
       * Lokal lagring > (webbplats) > ContextHubPersistence
       * Sessionslagring > (webbplats) > ContextHubPersistence
       * Cookies > (website) > SessionPersistence
-
 
 * Använd ContextHub-API:t i webbläsarens konsol:
 
@@ -203,8 +203,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
       * `ContextHub.Utils.Persistence.Modes.COOKIE`
       * `ContextHub.Utils.Persistence.Modes.WINDOW`
 
-      ContextHub-arkivet definierar vilket beständigt lager som ska användas, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
-
+     ContextHub-arkivet definierar vilket beständigt lager som används, och för att visa det aktuella läget för beständigheten bör alla lager kontrolleras.
 
 Så här visar du data som lagras i localStorage:
 
@@ -219,27 +218,27 @@ Så här rensar du ContextHub-beständighet:
 
 * Så här rensar du beständighet för inlästa arkiv:
 
-   ```
-   // in order to be able to fully access persistence layer, Opt-Out must be turned off
-   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
-   
-   // following call asks all currently loaded stores to clear their data
-   ContextHub.cleanAllStores();
-   
-   // following call asks all currently loaded stores to set back default values (provided in their configs)
-   ContextHub.resetAllStores();
-   ```
+  ```
+  // to be able to fully access persistence layer, Opt-Out must be turned off
+  ContextHub.Utils.Cookie.removeItem('cq-opt-out');
+  
+  // following call asks all currently loaded stores to clear their data
+  ContextHub.cleanAllStores();
+  
+  // following call asks all currently loaded stores to set back default values (provided in their configs)
+  ContextHub.resetAllStores();
+  ```
 
 * för att rensa ett visst beständigt lager, sessionStorage:
 
-   ```
-   var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.SESSION });
-   storage.setItem('/store', null);
-   storage.setItem('/_', null);
-   
-   // to confirm that nothing is stored:
-   console.log(storage.getTree());
-   ```
+  ```
+  var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.SESSION });
+  storage.setItem('/store', null);
+  storage.setItem('/_', null);
+  
+  // to confirm that nothing is stored:
+  console.log(storage.getTree());
+  ```
 
 * Om du vill ta bort alla ContextHub-beständiga lager måste rätt kod anropas för alla lager:
 

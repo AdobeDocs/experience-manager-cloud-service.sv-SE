@@ -2,9 +2,9 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '4596'
+source-wordcount: '4595'
 ht-degree: 10%
 
 ---
@@ -202,7 +202,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
    `/conf/<your-folder>/settings/wcm/templates/.*`
 
-   Sökvägsordningen är irrelevant, alla sökvägar skannas och alla mallar hämtas.
+   Banornas ordning är irrelevant. Alla sökvägar genomsöks och alla mallar hämtas.
 
    >[!NOTE]
    >
@@ -513,18 +513,18 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 
 * Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kant:
 
-   ![Läget Inledande innehåll](/help/sites-cloud/authoring/assets/templates-initial-content-mode.png)
+  ![Läget Inledande innehåll](/help/sites-cloud/authoring/assets/templates-initial-content-mode.png)
 
 * Olåsta komponenter har ett verktygsfält där du kan redigera och konfigurera innehållet:
 
-   ![Olåst komponent](/help/sites-cloud/authoring/assets/templates-unlocked-components.png)
+  ![Olåst komponent](/help/sites-cloud/authoring/assets/templates-unlocked-components.png)
 
 * Om en behållarkomponent har låsts upp (i **strukturläget**) kan du lägga till nya komponenter i behållaren (i **ursprungligt innehåll**). Komponenter som läggs till i **ursprungligt innehåll** kan flyttas på eller tas bort från resultatsidor.
 
-   Du kan lägga till en komponent med hjälp av antingen **Dra komponenter hit** eller **Infoga ny komponent** i verktygsfältet för lämplig behållare.
+  Du kan lägga till en komponent med hjälp av antingen **Dra komponenter hit** eller **Infoga ny komponent** i verktygsfältet för lämplig behållare.
 
-   ![Lägg till komponent](/help/sites-cloud/authoring/assets/templates-add-component.png)
-   ![Lägg till komponent](/help/sites-cloud/authoring/assets/templates-add-component-dialog.png)
+  ![Lägg till komponent](/help/sites-cloud/authoring/assets/templates-add-component.png)
+  ![Lägg till komponent](/help/sites-cloud/authoring/assets/templates-add-component-dialog.png)
 
 * Om mallens ursprungliga innehåll uppdateras efter att sidorna har skapats baserat på mallen påverkas inte dessa sidor av ändringarna av mallens ursprungliga innehåll.
 
@@ -566,24 +566,24 @@ Du kan tillämpa en innehållsprincip på antingen mallen eller de resulterande 
 
 * Du kan välja en befintlig profil för sidan på menyn **Välj princip** nedrullningsbar meny.
 
-   ![Principväljare](/help/sites-cloud/authoring/assets/templates-policy-selector.png)
+  ![Principväljare](/help/sites-cloud/authoring/assets/templates-policy-selector.png)
 
-   Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
+  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
 
-   ![Knappen Lägg till princip](/help/sites-cloud/authoring/assets/templates-add-policy-button.png)
+  ![Knappen Lägg till princip](/help/sites-cloud/authoring/assets/templates-add-policy-button.png)
 
-   Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
+  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
 
-   ![Kopiera princip, knapp](/help/sites-cloud/authoring/assets/templates-copy-policy-button.png)
+  ![Kopiera princip, knapp](/help/sites-cloud/authoring/assets/templates-copy-policy-button.png)
 
 * Definiera en rubrik för profilen i dialogrutan **Policytitel** fält. En profil måste ha en titel så att den enkelt kan väljas i **Välj princip** listruta.
 
-   ![Policytitel](/help/sites-cloud/authoring/assets/templates-policy-title.png)
+  ![Policytitel](/help/sites-cloud/authoring/assets/templates-policy-title.png)
 
 * En beskrivning av profilen är valfri i **Principbeskrivning** fält.
 * I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
 
-   ![Policyanvändning](/help/sites-cloud/authoring/assets/templates-policy-use.png)
+  ![Policyanvändning](/help/sites-cloud/authoring/assets/templates-policy-use.png)
 
 #### Sidegenskaper {#page-properties}
 
@@ -593,17 +593,17 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 * Ange de klientbibliotek som du vill använda på sidor som skapas med den här mallen. Ange namnet på ett bibliotek i textfältet i **Klientbibliotek** -avsnitt.
 
-   ![Bibliotek på klientsidan](/help/sites-cloud/authoring/assets/templates-client-side-libraries.png)
+  ![Bibliotek på klientsidan](/help/sites-cloud/authoring/assets/templates-client-side-libraries.png)
 
 * Om flera bibliotek behövs klickar du på knappen Lägg till för att lägga till ytterligare ett textfält för biblioteksnamnet.
 
-   ![Knappen Lägg till](/help/sites-cloud/authoring/assets/templates-add-button.png)
+  ![Knappen Lägg till](/help/sites-cloud/authoring/assets/templates-add-button.png)
 
-   Lägg till så många textfält som behövs för klientbiblioteken.
+  Lägg till så många textfält som behövs för klientbiblioteken.
 
 * Definiera bibliotekets relativa position om det behövs genom att dra fälten med draghandtaget.
 
-   ![Dra handtag](/help/sites-cloud/authoring/assets/templates-drag-handle.png)
+  ![Dra handtag](/help/sites-cloud/authoring/assets/templates-drag-handle.png)
 
 >[!NOTE]
 >
@@ -633,13 +633,16 @@ När du skapar mallar bör du tänka på följande:
 
       * De används omedelbart på de resulterande sidorna.
       * För att besökarna ska kunna se ändringarna måste den ändrade mallen fortfarande publiceras.
+
    * Ändringar i innehållsprinciper och designkonfigurationer:
 
       * Dessa gäller omedelbart för de resulterande sidorna.
       * För att besökarna ska kunna se ändringarna måste ändringarna publiceras.
+
    * Ändringar av det ursprungliga innehållet:
 
       * Dessa gäller endast sidor som skapas efter malländringarna.
+
    * Ändringar i layouten beror på om den ändrade komponenten är en del av:
 
       * Endast struktur - används omedelbart

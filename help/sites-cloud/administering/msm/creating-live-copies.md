@@ -4,16 +4,16 @@ description: Lär dig hur du skapar och synkroniserar Live-kopior för att åter
 feature: Multi Site Manager
 role: Admin
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
-source-git-commit: 17d828f7813657aaeca49bfc87447c2bc24e712d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '4322'
+source-wordcount: '4308'
 ht-degree: 0%
 
 ---
 
 # Skapa och synkronisera Live-kopior {#creating-and-synchronizing-live-copies}
 
-Du kan skapa en Live-kopia från en sida eller en ritningskonfiguration om du vill återanvända innehållet på hela webbplatsen. Hantera arv och synkronisering. Du kan styra hur ändringar av innehållet ska spridas.
+Du kan skapa en Live-kopia från en sida eller en plantryckskonfiguration för att återanvända innehållet på hela webbplatsen. Hantera arv och synkronisering. Du kan styra hur ändringar av innehållet ska spridas.
 
 ## Hantera layoutkonfigurationer {#managing-blueprint-configurations}
 
@@ -101,7 +101,7 @@ Du kan skapa en Live-kopia av vilken sida som helst:
 
 Den enda skillnaden är att tillgängligheten för **Utrullning** -kommandot på käll-/ritningssidorna är beroende av om källan refereras av en ritningskonfiguration:
 
-* Om du skapar Live-kopian från en källsida som **är** som refereras i en ritningskonfiguration, kommer kommandot Rollout att vara tillgängligt på käll-/ritningssidorna.
+* Om du skapar Live-kopian från en källsida som **är** som refereras i en ritningskonfiguration är kommandot Rollout tillgängligt på käll-/ritningssidan/sidorna.
 * Om du skapar Live-kopian från en källsida som **är inte** som refereras i en ritningskonfiguration, kommer kommandot Rollout inte att vara tillgängligt på käll-/ritningssidan/-sidorna.
 
 Så här skapar du en Live-kopia:
@@ -256,17 +256,17 @@ Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [***Status f�
 
    ![Rityta från referenslinjen](../assets/rollout-blueprint-from-references.png)
 
-1. Du ombeds bekräfta informationen om utrullningen:
+1. Du ombeds bekräfta information om utrullningen:
 
    * **Rullningsomfång**:
 
-      Ange om omfånget gäller enbart för den valda sidan eller om det ska omfatta underordnade sidor.
+     Ange om omfånget gäller enbart för den valda sidan eller om det ska omfatta underordnade sidor.
 
    * **Schema**:
 
-      Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett senare datum/tid (**Senare**).
+     Ange om utrullningsjobbet ska köras omedelbart (**Nu**) eller vid ett senare datum/tid (**Senare**).
 
-      ![Definiera omfång och schema för utrullning](../assets/rollout-scope-schedule.png)
+     ![Definiera omfång och schema för utrullning](../assets/rollout-scope-schedule.png)
 
 1. När du har bekräftat dessa uppgifter väljer du **Utrullning** för att utföra åtgärden.
 
@@ -309,7 +309,7 @@ Synkronisera en Live-kopia för att dra ändringar från källan till Live-kopia
 
    ![Knappen Synkronisera](../assets/synchronize.png)
 
-   Bekräftelse kommer att begäras, använd **Synkronisera** för att fortsätta.
+   Bekräftelse krävs, använd **Synkronisera** för att fortsätta.
 
 #### Synkronisera en Live-kopia från Live Copy-översikt {#synchronize-a-live-copy-from-the-live-copy-overview}
 
@@ -335,7 +335,7 @@ Om du vill ändra Live Copy-innehåll kan du:
 >
 >Om du skapar en ny sida manuellt i Live Copy, är den nya sidan lokal för Live-kopian, vilket innebär att den inte har någon motsvarande källsida som den är kopplad till.
 >
->Ett tips för att skapa en lokal sida som är en del av relationen är att skapa den lokala sidan i källan och utföra en djup utrullning. Då skapas sidan lokalt som Live-kopior.
+>Ett tips som du kan använda för att skapa en lokal sida som ingår i relationen är att skapa den lokala sidan i källan och utföra en djup utrullning. Då skapas sidan lokalt som Live-kopior.
 
 >[!NOTE]
 >
@@ -403,7 +403,7 @@ När du återaktiverar arv synkroniseras inte sidan automatiskt med källan. Du 
 
 * I **Återuppta**/**Återställ** dialog, till exempel:
 
-   ![Återuppta och synkronisera](../assets/resume-and-synch.png)
+  ![Återuppta och synkronisera](../assets/resume-and-synch.png)
 
 * I ett senare skede, genom att manuellt välja synkroniseringsåtgärden.
 
@@ -423,7 +423,7 @@ När du väljer det här alternativet visas dialogrutan. Du kan välja en synkro
 
 The [Åtgärden Återuppta är också tillgänglig från Live Copy Overview](live-copy-overview.md#using-the-live-copy-overview)när en Live Copy-sida är markerad.
 
-1. Öppna [Live Copy - översikt](live-copy-overview.md#using-the-live-copy-overview) och välj en Live Copy-sida som har pausats. Sidan visas som **ARV AVBRUTEN**.
+1. Öppna [Live Copy - översikt](live-copy-overview.md#using-the-live-copy-overview) och välj en pausad Live Copy-sida. Sidan visas som **ARV AVBRUTEN**.
 1. Välj **Återuppta** i verktygsfältet.
 1. Ange om du vill synkronisera sidan efter att ha återställt arv och bekräfta sedan **Återuppta** i **Fortsätt Live Copy** -dialogrutan.
 
@@ -498,7 +498,7 @@ Om du vill aktivera arv för en komponent klickar eller trycker du på **Återak
 Om en Live-kopia innehåller komponenter som är en del av ett styckesystem, kommer arvet av det styckesystemet att följa följande regler:
 
 * Komponenternas ordning i ett ärvt styckesystem kan ändras, även om arv är etablerat.
-* Vid utrullning återställs komponenternas ordning från ritningen. Om nya komponenter lades till i Live Copy innan de lanserades kommer de att ordnas om tillsammans med de komponenter ovanför vilka de lades till.
+* Vid utrullning återställs komponenternas ordning från ritningen. Om nya komponenter lades till i Live Copy innan de lanserades, ordnas de om tillsammans med komponenterna ovanför vilka de lades till.
 * Om arvet av styckesystemet avbryts återställs inte komponenternas ordning vid utrullning och förblir som i Live Copy.
 
 >[!NOTE]
@@ -544,7 +544,7 @@ Om du vill aktivera arv för en egenskap klickar eller trycker du på **Återst�
 
 ### Återställa en Live Copy-sida {#resetting-a-live-copy-page}
 
-Du kan återställa en Live Copy-sida om du vill:
+Du kan återställa en Live Copy-sida och göra följande:
 
 * Ta bort alla annulleringar av arv och
 * Returnera sidan till samma läge som källsidan.
@@ -608,27 +608,28 @@ Det påverkar var i trädet du använder **Koppla loss**:
 
 * **Frigör på en rotsida i en Live-kopia**
 
-   När den här åtgärden utförs på rotsidan för en Live-kopia tas den aktiva relationen mellan alla sidor i planen och dess Live-kopia bort.
+  När den här åtgärden utförs på rotsidan för en Live-kopia tas den aktiva relationen mellan alla sidor i planen och dess Live-kopia bort.
 
-   Ytterligare ändringar av sidor i planen **inte** påverkar Live Copy.
+  Ytterligare ändringar av sidor i planen **inte** påverkar Live Copy.
 
 * **Frigöra på en undersida till en Live-kopia**
 
-   När den här åtgärden utförs på en undersida (eller en gren) i en Live-kopia:
+  När den här åtgärden utförs på en undersida (eller en gren) i en Live-kopia:
 
    * Den aktiva relationen tas bort för den undersidan (eller grenen) och
    * (under)sidorna i Live Copy-grenen behandlas som om de skapats manuellt.
 
-   Undersidorna är dock fortfarande beroende av den överordnade grenens aktiva relation, så en ytterligare utrullning av ritningssidan/-sidorna kommer att göra båda:
+  Undersidorna är dock fortfarande beroende av den överordnade grenens aktiva relation, så en ytterligare utrullning av ritningssidan/-sidorna kommer att göra båda:
 
    1. Byt namn på den eller de frånkopplade sidorna:
 
       * Detta beror på att MSM betraktar dem som manuellt skapade sidor som orsakar en konflikt eftersom de har samma namn som de Live Copy-sidor som de försöker skapa.
+
    1. Skapa en ny Live Copy-sida med det ursprungliga namnet som innehåller ändringarna från utrullningen.
 
-   >[!NOTE]
-   >
-   >Se [MSM-utrullningskonflikter](rollout-conflicts.md) för detaljer om sådana situationer.
+  >[!NOTE]
+  >
+  >Se [MSM-utrullningskonflikter](rollout-conflicts.md) för detaljer om sådana situationer.
 
 ### Frigöra en Live Copy-sida från Sidegenskaper {#detach-a-live-copy-page-from-the-page-properties}
 

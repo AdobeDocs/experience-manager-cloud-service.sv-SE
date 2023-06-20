@@ -2,16 +2,16 @@
 title: Content Fragments - Configuration Browser (Assets - Content Fragments)
 description: Lär dig hur du aktiverar funktionen för innehållsfragment i konfigurationsläsaren.
 exl-id: 9fc911de-1d33-4811-8f58-ea21ce94bedb
-source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '360'
 ht-degree: 14%
 
 ---
 
 # Content Fragments - Configuration Browser{#content-fragments-configuration-browser}
 
-Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Browser för att utnyttja AEM kraftfulla headless-leveransfunktioner.
+Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Browser för att använda AEM kraftfulla headless-leveransfunktioner.
 
 ## Aktivera funktionen för innehållsfragment för instansen {#enable-content-fragment-functionality-instance}
 
@@ -26,7 +26,6 @@ Innan du använder innehållsfragment måste du använda **Konfigurationsläsare
 >
 >* den **Skapa** kan inte användas för att skapa nya modeller.
 >* kommer du inte att kunna [välj platskonfigurationen för att skapa den relaterade slutpunkten](/help/headless/graphql-api/graphql-endpoint.md).
-
 
 Om du vill aktivera funktioner för innehållsfragment måste du:
 
@@ -55,21 +54,19 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
 >* Beständiga frågor sparas (fortfarande) som är relevanta för den överordnade konfigurationen (roten).
 
 
-
 1. Navigera till **Verktyg**, **Allmänt** och öppna sedan **Konfigurationsläsaren**.
 
 1. Använd **Skapa** för att öppna dialogrutan där du:
 
    1. Ange en **Titel**.
    1. The **Namn** blir nodnamnet i databasen.
-      * Det genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
       * Du kan justera den om det behövs.
    1. Om du vill aktivera deras användning väljer du
       * **Modeller för innehållsfragment**
       * **GraphQL Beständiga frågor**
 
       ![Definiera konfiguration](assets/cfm-conf-01.png)
-
 
 1. Välj **Skapa** för att spara definitionen.
 

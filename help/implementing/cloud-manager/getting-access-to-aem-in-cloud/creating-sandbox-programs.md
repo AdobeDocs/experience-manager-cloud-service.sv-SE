@@ -2,9 +2,9 @@
 title: Skapa sandlådeprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget sandlådeprogram för utbildning, demo, POC eller andra icke-produktionssyften.
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
-source-git-commit: b916bf5b252045120659600293e004fc34b96e7a
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Du kan visa information om sandlådekonfigurationen och få tillgång till milj�
 
    ![Åtkomst till programöversikt](assets/program-overview-sandbox.png)
 
-1. När projektet är klart kan du öppna **Åtkomst till svarsinformation** för att kunna använda ditt Git-svar.
+1. När du har skapat projektet kan du komma åt **Åtkomst till svarsinformation** för att kunna använda ditt Git-svar.
 
    ![Programkonfiguration](assets/create-program4.png)
 

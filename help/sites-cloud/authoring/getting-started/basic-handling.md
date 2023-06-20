@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2994'
+source-wordcount: '2993'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,6 @@ Dokumentet är utformat för att ge en översikt över grundläggande hantering 
 >
 >* Vissa funktioner är inte tillgängliga i alla konsoler, och i vissa konsoler kan ytterligare funktioner vara tillgängliga. Specifik information om de enskilda konsolerna och deras tillhörande funktioner beskrivs mer ingående på andra sidor.
 >* Kortkommandon är tillgängliga i hela AEM. I synnerhet när [använda konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) och [redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
-
 
 ## Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
@@ -89,79 +88,79 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
 * [Global navigering](#global-navigation)
 
-   Välj **Adobe Experience Manager** för att navigera mellan konsoler.
+  Välj **Adobe Experience Manager** för att navigera mellan konsoler.
 
-   ![Global navigering](/help/sites-cloud/authoring/assets/global-navigation.png)
+  ![Global navigering](/help/sites-cloud/authoring/assets/global-navigation.png)
 
 * [Sökning](/help/sites-cloud/authoring/getting-started/search.md)
 
-   ![Ikonen Sök](/help/sites-cloud/authoring/assets/search-icon.png)
+  ![Ikonen Sök](/help/sites-cloud/authoring/assets/search-icon.png)
 
-   Du kan också använda [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökning från en konsol.
+  Du kan också använda [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökning från en konsol.
 
 * [Lösningar](https://www.adobe.com/experience-cloud.html)
 
-   ![Knappen Lösningar](/help/sites-cloud/authoring/assets/solutions.png)
+  ![Knappen Lösningar](/help/sites-cloud/authoring/assets/solutions.png)
 
 * [Hjälp](#accessing-help)
 
-   ![Hjälp-knapp](/help/sites-cloud/authoring/assets/help.png)
+  ![Hjälp-knapp](/help/sites-cloud/authoring/assets/help.png)
 
 * [Meddelanden](/help/sites-cloud/authoring/getting-started/inbox.md)
 
-   ![Knappen Meddelanden](/help/sites-cloud/authoring/assets/notifications.png)
+  ![Knappen Meddelanden](/help/sites-cloud/authoring/assets/notifications.png)
 
-   Den här ikonen kommer att märkas med antalet för närvarande tilldelade ofullständiga meddelanden.
+  Den här ikonen kommer att märkas med antalet för närvarande tilldelade ofullständiga meddelanden.
 
 * [Användaregenskaper](/help/sites-cloud/authoring/getting-started/account-environment.md)
 
-   ![Knappen Användaregenskaper](/help/sites-cloud/authoring/assets/user-properties.png)
+  ![Knappen Användaregenskaper](/help/sites-cloud/authoring/assets/user-properties.png)
 
 * [Järnvägsväljare](#rail-selector)
 
-   ![Knapp för att välja tåg](/help/sites-cloud/authoring/assets/rail-selector.png)
+  ![Knapp för att välja tåg](/help/sites-cloud/authoring/assets/rail-selector.png)
 
-   Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller panelen på filtersidan.
+  Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller panelen på filtersidan.
 
-   ![Exempel på järnvägsväljare](/help/sites-cloud/authoring/assets/rail-selector-example.png)
+  ![Exempel på järnvägsväljare](/help/sites-cloud/authoring/assets/rail-selector-example.png)
 
 * Breadcrumbs
 
-   ![Bläddringar i navigeringsfältet](/help/sites-cloud/authoring/assets/breadcrumbs-navigation.png)
+  ![Bläddringar i navigeringsfältet](/help/sites-cloud/authoring/assets/breadcrumbs-navigation.png)
 
-   I mitten av spåret, och alltid med beskrivningen av det markerade objektet, kan du navigera i en viss konsol med hjälp av de synliga kolumnerna. I **Webbplatser** kan du navigera på webbplatsnivå.
+  I mitten av spåret, och alltid med beskrivningen av det markerade objektet, kan du navigera i en viss konsol med hjälp av de synliga kolumnerna. I **Webbplatser** kan du navigera på webbplatsnivå.
 
-   Klicka bara på den breda texten för att visa en listruta med hierarkinivåerna för det markerade objektet. Klicka på en post för att hoppa till den platsen.
+  Klicka bara på den breda texten för att visa en listruta med hierarkinivåerna för det markerade objektet. Klicka på en post för att hoppa till den platsen.
 
-   ![Exempel på expanderade vägbeskrivningar](/help/sites-cloud/authoring/assets/breadcrumbs-example.png)
+  ![Exempel på expanderade vägbeskrivningar](/help/sites-cloud/authoring/assets/breadcrumbs-example.png)
 
 * **Skapa** knapp
 
-   ![Knappen Skapa](/help/sites-cloud/authoring/assets/create.png)
+  ![Knappen Skapa](/help/sites-cloud/authoring/assets/create.png)
 
-   När du klickar på det här alternativet lämpar sig de alternativ som visas för konsolen/kontexten.
+  När du klickar på det här alternativet lämpar sig de alternativ som visas för konsolen/kontexten.
 
 * [Vyer](#viewing-and-selecting-resources)
 
-   Vyikonen finns längst till höger i verktygsfältet AEM. Eftersom den aktuella vyn också visas ändras den. I standardvyn, till exempel **Kolumnvy** den visar:
+  Vyikonen finns längst till höger i verktygsfältet AEM. Eftersom den aktuella vyn också visas ändras den. I standardvyn, till exempel **Kolumnvy** den visar:
 
-   ![Knappen Vyer](/help/sites-cloud/authoring/assets/views-button.png)
+  ![Knappen Vyer](/help/sites-cloud/authoring/assets/views-button.png)
 
-   Du kan växla mellan kolumnvy, kortvy och listvy. I listvyn visas även visningsinställningarna.
+  Du kan växla mellan kolumnvy, kortvy och listvy. I listvyn visas även visningsinställningarna.
 
-   ![Vyer](/help/sites-cloud/authoring/assets/view.png)
+  ![Vyer](/help/sites-cloud/authoring/assets/view.png)
 
-   >[!NOTE]
-   >
-   >Alternativet **Visa inställningar** är bara tillgängligt i **listvyn**.
+  >[!NOTE]
+  >
+  >Alternativet **Visa inställningar** är bara tillgängligt i **listvyn**.
 
 * Tangentbordsnavigering
 
-   Du kan bara navigera på en webbplats med hjälp av tangentbordet. Detta använder webbläsarens standardfunktioner i **TABB** tangent (eller **OPT+TAB**) för att flytta dig mellan element på sidan som är fokuserbara.
+  Du kan bara navigera på en webbplats med hjälp av tangentbordet. Detta använder webbläsarens standardfunktioner i **TABB** tangent (eller **OPT+TAB**) för att flytta dig mellan element på sidan som är fokuserbara.
 
-   I **Webbplatser** konsolen där det finns ett tillagt alternativ för **Hoppa till huvudinnehåll**. Detta blir synligt när du bläddrar mellan rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
+  I **Webbplatser** konsolen där det finns ett tillagt alternativ för **Hoppa till huvudinnehåll**. Detta blir synligt när du bläddrar mellan rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
 
-   ![Hoppa till huvudinnehåll](/help/sites-cloud/authoring/assets/skip-to-main-content.png)
+  ![Hoppa till huvudinnehåll](/help/sites-cloud/authoring/assets/skip-to-main-content.png)
 
 ## Få hjälp {#accessing-help}
 
@@ -169,42 +168,41 @@ Det finns olika hjälpresurser:
 
 * **Verktygsfältet Konsol**
 
-   Beroende på var du befinner dig **Hjälp** öppnas lämpliga resurser:
+  Beroende på var du befinner dig **Hjälp** öppnas lämpliga resurser:
 
-   ![Hjälpikon](/help/sites-cloud/authoring/assets/help-console.png)
+  ![Hjälpikon](/help/sites-cloud/authoring/assets/help-console.png)
 
 * **Navigering**
 
-   Första gången du navigerar i systemet [en serie bilder AEM navigering](#product-navigation).
+  Första gången du navigerar i systemet [en serie bilder AEM navigering](#product-navigation).
 
-   ![Självstudiekurs](/help/sites-cloud/authoring/assets/tutorial.png)
+  ![Självstudiekurs](/help/sites-cloud/authoring/assets/tutorial.png)
 
 * **Page Editor**
 
-   Första gången du redigerar en sida innehåller en serie bilder en sidredigerare.
+  Första gången du redigerar en sida innehåller en serie bilder en sidredigerare.
 
-   ![Redigerare, genomgång](/help/sites-cloud/authoring/assets/editor-tutorial.png)
+  ![Redigerare, genomgång](/help/sites-cloud/authoring/assets/editor-tutorial.png)
 
-   Navigera i den här översikten precis som i [produktnavigering - översikt](#product-navigation) vid första åtkomst till en konsol.
+  Navigera i den här översikten precis som i [produktnavigering - översikt](#product-navigation) vid första åtkomst till en konsol.
 
-   Från [**Sidinformation** meny som du kan välja **Hjälp**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#accessing-help) för att visa detta igen när som helst.
+  Från [**Sidinformation** meny som du kan välja **Hjälp**](/help/sites-cloud/authoring/fundamentals/environment-tools.md#accessing-help) för att visa detta igen när som helst.
 
 * **Verktygskonsol**
 
-   Från **verktyg** konsolen som du också kan komma åt externt **Resurser**:
+  Från **verktyg** konsolen som du också kan komma åt externt **Resurser**:
 
    * **Dokumentation** - Visa dokumentationen för Web Experience Management
    * **Resurser för utvecklare** - Resurser och nedladdningar för utvecklare
 
-   >[!NOTE]
-   >
-   >Du kan när som helst få tillgång till en översikt över kortkommandon via snabbtangenten `?` (frågetecken) i en konsol.
-   >
-   >En översikt över alla kortkommandon finns i följande dokumentation:
-   >
-   >* [Kortkommandon för att redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
-   >* [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
-
+  >[!NOTE]
+  >
+  >Du kan när som helst få tillgång till en översikt över kortkommandon via snabbtangenten `?` (frågetecken) i en konsol.
+  >
+  >En översikt över alla kortkommandon finns i följande dokumentation:
+  >
+  >* [Kortkommandon för att redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
+  >* [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
 
 ## Verktygsfältet Åtgärder {#actions-toolbar}
 
@@ -311,7 +309,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * Information om den valda resursen visas i den sista kolumnen.
    * Verktygsfältet för funktionsmakron blir tillgängligt.
 
-   När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
+  När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
 
    * Sidtitel
    * Sidnamn (del av sidans URL)
@@ -319,7 +317,6 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * Ändringsinformation
    * Sidspråk
    * Information om publikation och förhandsgranskning
-
 
 ### Kortvy {#card-view}
 
@@ -336,7 +333,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
 * [Snabbåtgärder](#quick-actions) är även tillgängliga i den här vyn, t.ex. markering och vanliga åtgärder som redigering.
 
-   ![Snabbåtgärder](/help/sites-cloud/authoring/assets/quick-actions.png)
+  ![Snabbåtgärder](/help/sites-cloud/authoring/assets/quick-actions.png)
 
 * Du kan navigera nedåt i trädet genom att trycka på/klicka på kort (var noga med att undvika snabbåtgärderna) eller uppåt igen genom att använda [vägbeskrivningar i sidhuvudet](#the-header).
 
@@ -348,16 +345,16 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 * Du kan navigera nedåt i trädet genom att trycka på/klicka på resursnamnet och sedan säkerhetskopiera genom att använda [vägbeskrivningar i sidhuvudet](#the-header).
 * Om du enkelt vill markera alla objekt i listan använder du kryssrutan längst upp till vänster i listan.
 
-   ![Markera alla i listvyn](/help/sites-cloud/authoring/assets/list-view-select-all.png)
+  ![Markera alla i listvyn](/help/sites-cloud/authoring/assets/list-view-select-all.png)
 
    * När alla objekt i listan är markerade visas den här kryssrutan markerad.
 
       * Avmarkera alla genom att klicka eller trycka på kryssrutan.
+
    * När bara vissa objekt är markerade visas det med ett minustecken.
 
       * Markera alla genom att klicka eller trycka på kryssrutan.
       * Klicka eller tryck på kryssrutan igen för att avmarkera alla.
-
 
 * Markera de kolumner som ska visas med **Visa inställningar** som finns under knappen Vyer. Följande kolumner är tillgängliga för visning:
 
@@ -371,20 +368,21 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
    * **Unika besökare**
    * **Tid på sidan**
 
-      ![Markera kolumner](/help/sites-cloud/authoring/assets/select-columns.png)
-   Som standard är **Namn** -kolumnen visas, vilket utgör en del av sidans URL. I vissa fall kan författaren behöva komma åt sidor på ett annat språk och det kan vara bra att se sidans namn (som vanligtvis inte ändras) om författaren inte kan sidans språk.
+     ![Markera kolumner](/help/sites-cloud/authoring/assets/select-columns.png)
+
+  Som standard är **Namn** -kolumnen visas, vilket utgör en del av sidans URL. I vissa fall kan författaren behöva komma åt sidor på ett annat språk och det kan vara bra att se sidans namn (som vanligtvis inte ändras) om författaren inte kan sidans språk.
 
 * Ändra objektens ordning med hjälp av den prickade lodräta listen längst till höger om varje objekt i listan.
 
-   >[!NOTE]
-   >
-   >Att ändra ordningen fungerar bara i en ordnad mapp som har `jcr:primaryType` värde som `sling:OrderedFolder`.
+  >[!NOTE]
+  >
+  >Att ändra ordningen fungerar bara i en ordnad mapp som har `jcr:primaryType` värde som `sling:OrderedFolder`.
 
-   ![Kolumnordning](/help/sites-cloud/authoring/assets/column-order.png)
+  ![Kolumnordning](/help/sites-cloud/authoring/assets/column-order.png)
 
-   Klicka eller tryck på det lodräta markeringsfältet och dra objektet till en ny plats i listan.
+  Klicka eller tryck på det lodräta markeringsfältet och dra objektet till en ny plats i listan.
 
-   ![Orderlista](/help/sites-cloud/authoring/assets/order-list.png)
+  ![Orderlista](/help/sites-cloud/authoring/assets/order-list.png)
 
 ## Järnvägsväljare {#rail-selector}
 

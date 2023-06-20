@@ -2,9 +2,9 @@
 title: Attribut och typer
 description: Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '659'
 ht-degree: 3%
 
 ---
@@ -29,8 +29,8 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 | `itemprop` | Resursens attribut, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
 | `itemtype` | Typ av redigerbart objekt (t.ex. text, bild, referens) |
 | `data-editor-itemfilter` | Definierar vilka referenser som kan användas |
-| `data-editor-itemlabel` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `itemmodel` är inställd hämtas etiketten via modellen |
-| `data-editor-itemmodel` | Definierar en modell som ska användas för formulärbaserad redigering i egenskapsfältet |
+| `data-editor-itemlabel` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `itemmodel` är inställd hämtas etiketten med hjälp av modellen |
+| `data-editor-itemmodel` | Definierar en modell som används för formulärbaserad redigering i egenskapsfältet |
 | `data-editor-behavior` | Definierar beteendet för en instrumentering, t.ex. fristående text eller bild kan också efterlikna en komponent så att den kan flyttas eller tas bort |
 
 ## Objekttyper {#item-types}
@@ -38,10 +38,10 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 | `itemtype` | Beskrivning | `itemid` | `itemprop` | `data-editor-itemfilter` | `data-editor-itemlabel` | `data-editor-itemmodel` | `data-editor-behvior` |
 |---|---|---|---|---|---|---|---|
 | `text` | Texten kan redigeras i HTML-taggarna, men bara i ett enkelt textformat, ingen formatering, det här används ofta för rubrikkomponenter, till exempel | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
-| `richtext` | Texten kan redigeras med omfattande textfunktioner. RTE visas i den högra panelen | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
+| `richtext` | Texten kan redigeras med omfattande textfunktioner. RTE visas på den högra panelen | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
 | `media` | Det redigerbara är en resurs, t.ex. bild eller video | Valfritt | Obligatoriskt | Valfritt<br>lista med bild- eller videofiltervillkor som skickas till resursväljaren | Valfritt | n/a | Valfritt |
 | `container` | De redigerbara funktionerna fungerar som behållare för komponenter som kallas Styckesystem. | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>en lista över tillåtna komponenter | Valfritt | n/a | n/a |
-| `component` | Det redigerbara är en komponent. Ingen ytterligare funktionalitet läggs till. Den krävs för att ange rörliga/borttagbara delar av DOM och för att öppna egenskapsfältet och dess fält. | Obligatoriskt | n/a | n/a | Valfritt | Valfritt | n/a |
+| `component` | Det redigerbara är en komponent. Ingen ytterligare funktionalitet läggs till, det krävs för att ange rörliga/borttagbara delar av DOM och för att öppna egenskapsfältet och dess fält | Obligatoriskt | n/a | n/a | Valfritt | Valfritt | n/a |
 | `reference` | Det redigerbara är en referens, t.ex. Content Fragment, Experience Fragment eller Product | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>lista med villkor för innehållsfragment, produkt eller Experience Fragment-filter som skickas vidare till referensväljaren | Valfritt | Valfritt | n/a |
 
 Beroende på användningsfallet `itemprop` eller `itemid` kan vara nödvändigt eller inte. Till exempel:
@@ -59,7 +59,7 @@ Beroende på användningsfallet `itemprop` eller `itemid` kan vara nödvändigt 
 
 Mer information om Universal Editor finns i de här dokumenten.
 
-* [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar för att leverera enastående upplevelser, öka innehållets hastighet och leverera en toppmodern utvecklarupplevelse.
+* [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar, så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
 * [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 * [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.

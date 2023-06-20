@@ -4,7 +4,7 @@ description: Experience Manager lägger automatiskt till kontextuella och beskri
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: b59043c5-5df3-49a7-b4fc-da34c03649d7
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '1172'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Videotaggning är aktiverad som standard i [!DNL Adobe Experience Manager] som [
 
 ## Smart taggning av videoklipp vid överföring {#smart-tag-assets-on-ingestion}
 
-När du [ladda upp videomaterial](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som [!DNL Cloud Service], bearbetas videoklippen. När bearbetningen är klar går du till [!UICONTROL Basic] tillgångsflik [!UICONTROL Properties] sida. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. Resursmikrotjänster utnyttjar [!DNL Adobe Sensei] för att skapa dessa smarta taggar.
+När du [ladda upp videomaterial](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som [!DNL Cloud Service], bearbetas videoklippen. När bearbetningen är klar går du till [!UICONTROL Basic] tillgångsflik [!UICONTROL Properties] sida. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. Resursmikrotjänster använder [!DNL Adobe Sensei] för att skapa dessa smarta taggar.
 
 ![Smarta taggar läggs till i videoklipp och visas på fliken Grundläggande i resursegenskaper](assets/smart-tags-added-to-videos.png)
 
@@ -153,4 +153,3 @@ Lägga till OSGI-konfiguration med konfidensgrad i projektet som distribueras ti
 >
 >* [Hantera smarta taggar och resurssökningar](smart-tags.md#manage-smart-tags-and-searches)
 >* [Utbilda tjänsten Smart Tag och tagga dina bilder](smart-tags.md)
-

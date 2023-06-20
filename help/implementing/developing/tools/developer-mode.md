@@ -4,9 +4,9 @@ seo-title: Developer Mode
 description: I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan
 seo-description: Developer mode opens a side panel with several tabs that provide a developer with information about the current page
 exl-id: fbf11c0f-dc6e-43f3-bcf2-080eacc6ba99
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,6 @@ Detta hjälper en utvecklare att:
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
 >  * Detta inträffar när bredden är mindre än 1024px.
 >* Är endast tillgänglig för användare som är medlemmar i `administrators` grupp.
-
 
 ## Öppnar utvecklarläge {#opening-developer-mode}
 
@@ -73,7 +72,7 @@ Varje komponentpost kan ha följande alternativ:
    * Alla komponentskript som används för att återge komponenten.
    * Databasens innehållssökväg för den här specifika komponenten.
 
-      ![Visa detaljer](assets/developer-mode-view-details.png)
+     ![Visa detaljer](assets/developer-mode-view-details.png)
 
 * **Redigera skript:** En länk som öppnar komponentskriptet i CRXDE Lite.
 

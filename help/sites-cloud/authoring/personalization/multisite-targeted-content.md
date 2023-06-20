@@ -2,9 +2,9 @@
 title: Arbeta med riktat innehåll på flera webbplatser
 description: Om ni behöver hantera riktat innehåll, t.ex. aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll
 exl-id: 03d2d640-8de8-4c4c-8a1d-756bb2dc8457
-source-git-commit: 7dd3a658a88cae98732820ab92da0d27d21beb6f
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '2893'
+source-wordcount: '2891'
 ht-degree: 4%
 
 ---
@@ -49,7 +49,6 @@ En webbplats eller en live-kopia länkar till ett område som innehåller de akt
 >* När du använder utrullningar eller live-kopior krävs en MSM-licens.
 >* När du synkroniserar med Adobe Target krävs en Adobe Target-licens.
 >
-
 
 ## Användningsexempel {#use-cases}
 
@@ -235,7 +234,6 @@ En aktivitet som ärver från en annan plats markeras som grön bredvid aktivite
 >* Du kan bara göra uppehåll i eller koppla loss live-kopior i en aktivitet.
 >* Du behöver inte göra uppehåll i eller koppla loss live-kopior för att utöka en ärvd aktivitet. Du kan alltid skapa **new** lokala upplevelser och erbjudanden för den aktiviteten. Om du vill ändra en befintlig aktivitet måste du göra uppehåll i arv.
 >
-
 
 ### Avbryter arv {#suspending-inheritance}
 

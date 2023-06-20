@@ -2,10 +2,10 @@
 title: Enterprise DevOps
 description: Läs om processer, metoder och kommunikation som krävs för att underlätta driftsättning och samarbete.
 exl-id: c8da1fd7-fe3e-4c7b-8fe7-1f7faf02769c
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 97%
+source-wordcount: '1000'
+ht-degree: 94%
 
 ---
 
@@ -86,7 +86,7 @@ Författarinstanser ligger vanligtvis bakom den interna brandväggen. I den här
 
 Innehåll som aktiverats paketeras och placeras i författarmiljöns replikeringskö. Replikeringsprocessen överför sedan innehållet till publiceringsmiljön.
 
-För att data som genererats i en publiceringsmiljö ska återreplikeras tillbaka till författarmiljön kommer en replikeringslyssnare i författarmiljön att undersöka publiceringsmiljön och hämta sådant innehåll från publiceringsmiljöns utkorg för omvänd replikering.
+Om du vill återreplikera data som genererats i en publiceringsmiljö tillbaka till redigeringsmiljön kommer en replikeringslyssnare i redigeringsmiljön att undersöka publiceringsmiljön och hämta sådant innehåll från publiceringsmiljöns utkorg för omvänd replikering.
 
 #### Publicera {#publish}
 

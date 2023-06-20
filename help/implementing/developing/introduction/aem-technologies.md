@@ -2,9 +2,9 @@
 title: AEM Technical Foundations
 description: En översikt över den tekniska grunden för AEM, inklusive hur AEM är strukturerad och grundläggande tekniker som JCR, Sling och OSGi.
 exl-id: ab6e7fe9-a25d-4351-a005-f4466cc0f40e
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2180'
 ht-degree: 0%
 
 ---
@@ -142,11 +142,11 @@ Sökvägen som anges av `sling:resourceType` kan antingen vara:
 >
 >Relativa sökvägar rekommenderas av Adobe när de ökar portabiliteten.
 
-Alla Sling-skript lagras i undermappar till båda `/apps` (mutable, user scripts) eller `/libs` (ej ändringsbart, systemskript) som söks igenom i den här ordningen.
+Alla Sling-skript lagras i undermappar till båda `/apps` (mutable, user scripts) eller `/libs` (ej ändringsbart, systemskript), som söks igenom i den här ordningen.
 
 Några andra punkter att notera är:
 
-* När metoden (GET, POST) krävs, specificeras den med versaler enligt till exempel HTTP-specifikationen, `jobs.POST.esp`
+* När metoden (GET, POST) krävs, anges den med versaler som enligt HTTP-specifikationen, till exempel `jobs.POST.esp`
 * Olika skriptmotorer stöds, men de vanliga, rekommenderade skripten är HTML och JavaScript.
 
 Listan över skriptmotorer som stöds av den angivna AEM finns på Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
@@ -154,22 +154,22 @@ Listan över skriptmotorer som stöds av den angivna AEM finns på Felix Managem
 Använda föregående exempel om `sling:resourceType` är `hr/jobs` sedan för:
 
 * GET/HEAD och URL:er som slutar på `.html` (standardtyper för begäran, standardformat)
-   * Skriptet kommer att `/apps/hr/jobs/jobs.esp`; det sista avsnittet i `sling:resourceType` används som filnamn.
+   * Skriptet är `/apps/hr/jobs/jobs.esp`; det sista avsnittet i `sling:resourceType` används som filnamn.
 * Begäranden om POST (alla förfrågningstyper utom GET/HEAD, metodnamnet måste vara versaler)
-   * POSTEN används i skriptnamnet.
-   * Skriptet kommer att `/apps/hr/jobs/jobs.POST.esp`.
+   * POST används i skriptnamnet.
+   * Skriptet är `/apps/hr/jobs/jobs.POST.esp`.
 * URL-adresser i andra format, slutar inte med `.html`
    * Till exempel `../content/corporate/jobs/developer.pdf`
-   * Skriptet kommer att `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
+   * Skriptet är `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
 * URL:er med väljare
    * Väljare kan användas för att visa samma innehåll i ett alternativt format. Till exempel en utskriftsvänlig version, ett RSS-flöde eller en sammanfattning.
    * Om vi tittar på en utskriftsvänlig version där väljaren kan vara `print`; som i `../content/corporate/jobs/developer.print.html`
-   * Skriptet kommer att `/apps/hr/jobs/jobs.print.esp`; väljaren läggs till i skriptnamnet.
+   * Skriptet är `/apps/hr/jobs/jobs.print.esp`; väljaren läggs till i skriptnamnet.
 * Om nej `sling:resourceType` har definierats då:
-   * Innehållssökvägen kommer att användas för att söka efter ett lämpligt skript (om den sökvägsbaserade `ResourceTypeProvider` är aktivt).
+   * Innehållssökvägen används för att söka efter ett lämpligt skript (om sökvägen är baserad) `ResourceTypeProvider` är aktivt).
    * Skriptet för `../content/corporate/jobs/developer.html` skulle generera en sökning i `/apps/content/corporate/jobs/`.
-   * Den primära nodtypen kommer att användas.
-* Om inget skript hittas används standardskriptet.
+   * Den primära nodtypen används.
+* Om inget skript hittas alls används standardskriptet.
    * Standardåtergivningen stöds för närvarande som oformaterad text (`.txt`), HTML (`.html`) och JSON (`.json`), som alla innehåller nodens egenskaper (lämpligt formaterade). Standardåtergivningen för tillägget `.res`, eller begäranden utan ett tillägg till en begäran, är att resursen (där det är möjligt) ska tas bort.
 * För http-felhantering (kod 403 eller 404) söker Sling efter ett skript på antingen:
    * Platsen `/apps/sling/servlet/errorhandler` för anpassade skript

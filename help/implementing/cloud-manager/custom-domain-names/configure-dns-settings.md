@@ -2,9 +2,9 @@
 title: Konfigurera DNS-inställningar
 description: Konfigurera DNS-inställningar
 exl-id: 6e294f0b-52cb-40dd-bc42-ddbcffdf5600
-source-git-commit: 60b496024b3d012033309632999851c08f43c5d7
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ När det anpassade domännamnet har verifierats och distribuerats kan du uppdate
 
 ## Vad är DNS-inställningar? {#dns-settings}
 
-A `CNAME` eller En post dirigerar all Internettrafik för domänen till den plats där den pekar när den har etablerats. Om den platsen inte tillhandahålls för att betjäna trafiken uppstår ett driftstopp. Om innehållet inte har testats kan det finnas fel i det. Det är därför det här steget alltid utförs när testningen är klar och du är redo att publicera.
+A `CNAME` eller En post dirigerar all Internettrafik för domänen till den plats där den pekar när den har etablerats. Om den platsen inte har etablerats för att betjäna trafiken uppstår ett driftstopp. Om innehållet inte har testats kan det finnas fel i det. Det är därför det här steget alltid utförs när testningen är klar och du är redo att publicera.
 
-För att kunna konfigurera inställningarna måste du avgöra om en `CNAME` eller Apex-posten måste konfigureras så att den pekar ditt anpassade domännamn mot Cloud Manager-domännamnet. Följande avsnitt hjälper dig att avgöra vilken typ av post som passar din DNS-konfiguration.
+Om du vill konfigurera de här inställningarna måste du avgöra om en `CNAME` eller Apex-posten måste konfigureras så att den pekar ditt anpassade domännamn mot Cloud Manager-domännamnet. Följande avsnitt hjälper dig att avgöra vilken typ av post som passar din DNS-konfiguration.
 
 >[!NOTE]
 >

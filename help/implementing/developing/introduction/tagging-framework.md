@@ -1,10 +1,10 @@
 ---
 title: AEM Taggningsramverk
-description: Tagga innehåll och utnyttja infrastrukturen för AEM taggar för att kategorisera och organisera det.
+description: Tagga innehåll och använd infrastrukturen för AEM taggar för att kategorisera och organisera det.
 exl-id: 25418d44-aace-4e73-be1a-4b1902f40403
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Taggning gör att innehållet kan kategoriseras och struktureras. Taggar kan kla
 * Se [Använda taggar](/help/sites-cloud/authoring/features/tags.md) om du vill ha information om hur du taggar innehåll som innehållsförfattare.
 * Se Administrera taggar för en administratörs perspektiv om hur du skapar och hanterar taggar, samt vilka innehållstaggar som har tillämpats.
 
-Den här artikeln fokuserar på det underliggande ramverket som stöder taggning i AEM och hur det kan utnyttjas som utvecklare.
+Den här artikeln fokuserar på det underliggande ramverket som stöder taggning i AEM och hur det används som utvecklare.
 
 ## Introduktion {#introduction}
 
@@ -128,7 +128,6 @@ The `cq:OwnerTaggable` mixin, som ärver från `cq:Taggable`, är avsedd att ind
 >* Sidor (`cq:Page`) där `jcr:content`noden är av typen `cq:PageContent`, som innehåller `cq:Taggable` blanda.
 >* Resurser (`cq:Asset`) där `jcr:content/metadata` noden har alltid `cq:Taggable` blanda.
 
-
 ### Nodtypsnotation (CND) {#node-type-notation-cnd}
 
 Det finns nodtypsdefinitioner i databasen som CND-filer. CND-notation definieras som en del av [JCR-dokumentation.](https://jackrabbit.apache.org/node-type-notation.html).
@@ -156,7 +155,7 @@ The `cq:tags` egenskapen är en `String` matris som används för att lagra en e
 
 >[!NOTE]
 >
->För att utnyttja AEM taggningsfunktion bör anpassade utvecklade program inte definiera andra taggegenskaper än `cq:tags`.
+>Om du vill använda AEM taggningsfunktioner bör anpassade utvecklade program inte definiera andra taggegenskaper än `cq:tags`.
 
 ## Flytta och sammanfoga taggar {#moving-and-merging-tags}
 
@@ -171,25 +170,22 @@ När tagg A flyttas eller sammanfogas till tagg B under `/content/cq:tags`:
    * Tagg A är alltså dold och sparas bara i databasen för att matcha tagg-ID:n i innehållsnoder som pekar på tagg A.
    * Taggskräpinsamlaren tar bort taggar som tagg A en gång och inga fler innehållsnoder pekar på dem.
    * Ett specialvärde för `cq:movedTo` egenskapen är `nirvana`, som används när taggen tas bort men inte kan tas bort från databasen eftersom det finns undertaggar med en `cq:movedTo` som måste behållas.
-
-      >[!NOTE]
-      >
-      >The `cq:movedTo` egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av dessa villkor uppfylls:
-      >
-      > 1. Taggen används i innehåll (vilket innebär att den har en referens). ELLER
-      > 1. Taggen har underordnade objekt som redan har flyttats.
-
+     >[!NOTE]
+     >
+     >The `cq:movedTo` egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av dessa villkor uppfylls:
+     >
+     > 1. Taggen används i innehåll (vilket innebär att den har en referens). ELLER
+     > 1. Taggen har underordnade objekt som redan har flyttats.
+     >
 * Tagg B skapas (vid en flytt) och får ett `cq:backlinks` -egenskap.
    * `cq:backlinks` behåller referenserna i den andra riktningen, dvs. en lista över alla taggar som har flyttats till eller sammanfogats med tagg B.
    * Detta krävs oftast för att behålla `cq:movedTo` egenskaperna är uppdaterade även när tagg B flyttas/sammanfogas/tas bort eller när tagg B aktiveras, och då måste även alla dess bakåttaggar aktiveras.
-
-      >[!NOTE]
-      >
-      >The `cq:backlinks` egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av dessa villkor uppfylls:
-      >
-      > 1. Taggen används i innehåll (vilket innebär att den har en referens). ELLER
-      > 1. Taggen har underordnade objekt som redan har flyttats.
-
+     >[!NOTE]
+     >
+     >The `cq:backlinks` egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av dessa villkor uppfylls:
+     >
+     > 1. Taggen används i innehåll (vilket innebär att den har en referens). ELLER
+     > 1. Taggen har underordnade objekt som redan har flyttats.
 
 Läsa en `cq:tags` -egenskapen för en innehållsnod omfattar följande upplösning:
 

@@ -2,9 +2,9 @@
 title: Konfigurera Translation Connector för Headless-innehåll
 description: Lär dig hur du ansluter AEM till en översättningstjänst.
 exl-id: c91b2701-7ede-4d0b-93dd-3636c6638be2
-source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1233'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Om du väljer en annan provider måste administratören installera kopplingspake
 >
 >Om du väljer att använda Microsoft Translator-anslutningen för testning behöver du inte utföra stegen i de följande två avsnitten: [Skapa en konfiguration för översättningsintegrering](#create-config) och [Associera konfigurationen med ditt innehåll.](#associate) Du bör dock läsa dem så att du vet hur du gör när du behöver konfigurera den önskade anslutningen.
 >
->Testversionen av Microsoft Translator Connector är inte avsedd för produktion och om du bestämmer dig för att licensiera den måste systemadministratören följa stegen som beskrivs i [Ytterligare resurser](#additional-resources) i slutet av dokumentet för att konfigurera licensen.
+>Testversionen av Microsoft Translator Connector är inte avsedd för produktion och om du bestämmer dig för att licensiera den måste systemadministratören följa stegen som beskrivs i [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet så att du kan konfigurera licensen.
 
 ## Skapa en konfiguration för översättningsintegrering {#create-config}
 
@@ -99,7 +99,7 @@ Så här skapar du en ny översättningskonfiguration:
    1. **Översätt metadata** - Markera det här alternativet om du vill översätta metadata för resurser.
    1. **Översätt taggar** - Markera det här alternativet om du vill översätta taggar som är kopplade till resursen.
    1. **Automatisk översättning** - Markera den här egenskapen om du vill att översättningar ska skickas automatiskt till översättningstjänsten.
-   1. **Inaktivera översättning med endast uppdatering** - När det här alternativet är markerat skickas alla översättningsbara fält för översättning när du uppdaterar översättningsprojektet, inte bara de som ändrats sedan den senaste översättningen. Uppdateringen av ditt översättningsprojekt diskuteras senare under kundresan.
+   1. **Inaktivera översättning med endast uppdatering** - När det här alternativet är markerat skickas alla översättningsbara fält för översättning när du uppdaterar översättningsprojektet, inte bara de som ändrats sedan den senaste översättningen. Att uppdatera översättningsprojektet diskuteras senare under kundresan.
    1. **Aktivera fält för innehållsmodell för översättning** - Markera det här alternativet så att översättningskonfigurationen automatiskt känner igen fält i innehållsmodellerna baserat på **Översättningsbar** flagga.
 
 1. Tryck eller klicka **Spara och stäng**.

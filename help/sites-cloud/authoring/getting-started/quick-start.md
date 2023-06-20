@@ -2,9 +2,9 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: 07702fbebc768ee877d68219eff5551b09c7ff3e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1578'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,6 @@ Innan du börjar med snabbstartsguiden finns det en liten samling allmänna tips
 >
 >* [Kortkommandon vid sidredigering](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
 >* [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
-
 
 ### Hitta din sida {#finding-your-page}
 
@@ -103,6 +102,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
       * På en mobil enhet: tryck och håll ned kortet
       * På en stationär enhet: använder [snabbåtgärd](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) som representeras av tickningsikonen:
+
    * Kortet kommer att förses med en bock som visar att sidan har valts.
 
    ![Exempelkort](/help/sites-cloud/authoring/assets/card.png)
@@ -138,27 +138,31 @@ Så här redigerar du sidan:
       * Välja fliken Komponenter (på [komponentwebbläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser))
       * Dra den önskade komponenten till sidan.
 
-      Sidpanelen kan öppnas (och stängas) med:
+     Sidpanelen kan öppnas (och stängas) med:
 
-      ![Växlingsknapp för sidopanelen](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
+     ![Växlingsknapp för sidopanelen](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
 
    * [Redigera innehållet i en befintlig komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) på sidan:
 
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Redigera** (penna) för att öppna dialogrutan.
-      * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är detta ett begränsat urval).
+      * Öppna komponentens direktredigerare genom att trycka och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
 
-         ![Helskärmsknapp](/help/sites-cloud/authoring/assets/full-screen.png)
+        ![Helskärmsknapp](/help/sites-cloud/authoring/assets/full-screen.png)
+
    * [Konfigurera egenskaperna för en befintlig komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-edit-dialog)
 
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Konfigurera** (skiftnyckel) för att öppna dialogrutan.
+
    * [Flytta en komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#moving-a-component) antingen:
 
       * Dra den önskade komponenten till dess nya plats.
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Klipp ut** sedan **Klistra in** ikoner där det behövs.
+
    * [Kopiera (och klistra in)](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) en komponent:
 
       * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Kopiera** sedan **Klistra in** ikoner efter behov.
+
    >[!NOTE]
    >
    >Du kan **Klistra in** -komponenter till antingen samma sida eller en annan sida. Om du klistrar in på en annan sida som redan var öppen före klipp ut/kopiera-åtgärden, måste sidan uppdateras.
@@ -166,14 +170,17 @@ Så här redigerar du sidan:
    * [Ta bort](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) en komponent:
 
       * Öppna komponentens verktygsfält med tryck eller klicka och använd sedan **Ta bort** ikon.
+
    * [Lägg till anteckningar](/help/sites-cloud/authoring/fundamentals/annotations.md#annotations) till sidan:
 
       * Välj **Anteckna** läge (pratbubblarikon). Lägg till anteckningar med **Lägg till anteckning** (plus) ikon. Avsluta anteckningsläget med X överst till höger.
 
-         ![Anteckningsknapp](/help/sites-cloud/authoring/assets/annotations.png)
+        ![Anteckningsknapp](/help/sites-cloud/authoring/assets/annotations.png)
+
    * [Förhandsgranska en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md#preview-mode) (för att se hur det kommer att se ut i publiceringsmiljön)
 
       * Välj **Förhandsgranska** i verktygsfältet.
+
    * Återgå till redigeringsläget (eller välj ett annat läge) med **Redigera** nedrullningsbar väljare.
 
    >[!NOTE]
@@ -196,7 +203,6 @@ Det finns två (huvudsakliga) metoder för [redigera sidegenskaper](/help/sites-
 
    1. Sidegenskaperna visas. Du kan göra nödvändiga uppdateringar och sedan använda Spara för att behålla dessa
 
-
 * När [redigera sidan](#editing-your-page-content):
 
    1. Öppna **Sidinformation** -menyn.
@@ -218,7 +224,6 @@ Det finns två huvudmetoder för [publicera din sida](/help/sites-cloud/authorin
 
       ![Knappen Snabbpublicering](/help/sites-cloud/authoring/assets/quick-publish.png)
 
-
 * När [redigera sidan](#editing-your-page-content):
 
    1. Öppna **Sidinformation** -menyn.
@@ -226,11 +231,11 @@ Det finns två huvudmetoder för [publicera din sida](/help/sites-cloud/authorin
 
 * Du kan bara avpublicera en sida från konsolen via alternativet **Hantera publikation**, som bara är tillgängligt i verktygsfältet (inte via snabbåtgärderna).
 
-   ![Knappen Hantera publikation](/help/sites-cloud/authoring/assets/manage-publication.png)
+  ![Knappen Hantera publikation](/help/sites-cloud/authoring/assets/manage-publication.png)
 
-   The **Avpublicera sida** är fortfarande tillgängligt via **Sidinformation** i redigeraren.
+  The **Avpublicera sida** är fortfarande tillgängligt via **Sidinformation** i redigeraren.
 
-   Se [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#unpublishing-pages) för mer information.
+  Se [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md#unpublishing-pages) för mer information.
 
 ### Flytta, kopiera och klistra in eller ta bort sidan {#move-copy-and-paste-or-delete-your-page}
 
@@ -247,12 +252,15 @@ Alla dessa åtgärder kan utlösas av:
    * [Kopiera](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#copying-and-pasting-a-page):
 
       * Du måste sedan navigera till den nya platsen och klistra in.
+
    * [Flytta](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#moving-or-renaming-a-page):
 
       * Guiden öppnas och samlar in den information som behövs för att flytta sidan. Följ instruktionerna på skärmen.
+
    * [Ta bort](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#deleting-a-page):
 
       * Du ombeds bekräfta åtgärden.
+
    >[!NOTE]
    >
    >Borttagning är inte tillgängligt som snabbåtgärd.
@@ -305,13 +313,14 @@ Samma grundläggande funktion används när du återställer och/eller jämför 
 
    ![Vyalternativ för tidslinje](/help/sites-cloud/authoring/assets/timeline.png)
 
-   Om en version av sidan redan har sparats visas den i tidslinjen.
+   Om en version av sidan redan har sparats visas den på tidslinjen.
 
 1. Tryck/klicka på den version som du vill återställa - då visas ytterligare åtgärdsknappar:
 
    * **Återgå till den här versionen**
 
       * Versionen återställs.
+
    * **Visa skillnader**
 
       * Sidan öppnas med skillnader (mellan de två versionerna) markerade.

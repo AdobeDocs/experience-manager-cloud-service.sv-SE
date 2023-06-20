@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 2c72973b-5a51-4744-bf88-50da0013ba31
-source-git-commit: 36b0af857d5b9b179f01a43b5fd36c51b48c795f
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1439'
 ht-degree: 1%
 
 ---
@@ -88,7 +88,7 @@ Nästa version är planerad till 15 juli 2021.
 
 ### Nya funktioner i [!DNL Assets] {#ga-features-assets}
 
-* Med funktionen för innehållsautomatisering kan [!DNL Experience Manager Assets] utnyttja [!DNL Adobe Creative Cloud] API:er för att automatisera materialproduktion i stor skala. Det förbättrar innehållets hastighet genom att dramatiskt minska den tid det tar och de iterationer som krävs för att skapa varianter av samma material. Funktionen kräver ingen kod och fungerar inifrån DAM.
+* Med funktionen för innehållsautomatisering kan [!DNL Experience Manager Assets] använder [!DNL Adobe Creative Cloud] API:er för att automatisera materialproduktion i stor skala. Det förbättrar innehållets hastighet genom att dramatiskt minska den tid det tar och de iterationer som krävs för att skapa varianter av samma material. Funktionen kräver ingen kod och fungerar inifrån DAM.
 * [!DNL Adobe Asset Link] v3.0 för [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign] och [!DNL Adobe Asset Link] v2.0 för [!DNL Adobe XD] släpps. Den innehåller följande:
 
    * Stöd för [!DNL Assets Essentials].

@@ -2,9 +2,9 @@
 title: Skapa och ordna sidor
 description: Skapa och ordna sidor med AEM
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2561'
+source-wordcount: '2556'
 ht-degree: 4%
 
 ---
@@ -83,7 +83,7 @@ När du skapar en ny sida finns det två nyckelfält:
 
 Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida är det bara **Titel** fältet är obligatoriskt. Om nej **Namn** anges när sidan skapas, kommer AEM att generera ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten att använda korta sidnamn.
+* När du skapar en sida är det bara **Titel** fältet är obligatoriskt. Om nej **Namn** anges när sidan skapas, kommer AEM att generera ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 
 >[!TIP]
@@ -112,7 +112,7 @@ Fullständig information om alla tillåtna tecken finns i [namnkonventioner](/he
 
 Om du bara anger en **sidtitel** när du skapar en ny sida härleds sidans **namn**[ i AEM från den här strängen och namnet valideras enligt konventionerna i AEM och JCR.](/help/implementing/developing/introduction/naming-conventions.md)
 
-A **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet kommer att ha de ogiltiga tecknen ersatta. Till exempel:
+A **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet har ogiltiga tecken som ersatts. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
@@ -199,6 +199,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Titel**:
 
       * Detta visas för användaren och är obligatoriskt.
+
    * **Namn**:
 
       * Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
@@ -326,6 +327,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
       * Markera målet genom att klicka på målets miniatyrbild.
       * Klicka **Nästa** för att fortsätta.
+
    * Använd **Bakåt** för att återgå till sidnamnsspecifikationen.
 
    >[!NOTE]
@@ -338,7 +340,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
    >
    >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Exempel: `winter` finns redan `winter` kommer `winter1`.
 
-1. Om sidan är länkad till eller refererad, eller har publicerats, listas informationen i **Justera/publicera igen** steg.
+1. Om sidan är länkad till eller refererad, eller har publicerats, visas informationen i **Justera/publicera igen** steg.
 
    Du kan ange vilka som ska justeras och/eller publiceras på nytt efter behov.
 
@@ -379,7 +381,7 @@ Om antalet sidor som påverkas ligger över en angiven gräns, kommer åtgärden
       * **Nu** kör det asynkrona jobbet omedelbart.
       * **Senare** låter användaren definiera när det asynkrona jobbet ska starta.
 
-         ![Asynkron flyttning av sida](/help/sites-cloud/authoring/assets/asynchronous-page-move.png)
+        ![Asynkron flyttning av sida](/help/sites-cloud/authoring/assets/asynchronous-page-move.png)
 
 Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **verktyg** -> **Operationer** -> **Jobb**
 
@@ -443,4 +445,3 @@ Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 >* Mappar kan bara skapas direkt under **Webbplatser** eller under andra mappar. De kan inte skapas under en sida.
 >* Standardåtgärderna för att flytta, kopiera, klistra in, ta bort, publicera, avpublicera och visa/redigera egenskaper kan utföras på en mapp.
 >* Det går inte att välja mappar i en live-kopia.
-

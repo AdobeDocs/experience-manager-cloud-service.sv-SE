@@ -2,9 +2,9 @@
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: d452690b03ed32701030476572c5db9ddb1fbc2c
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2917'
+source-wordcount: '2903'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    >[!NOTE]
    >
-   >När ett fält är **Obligatoriskt**, **Etikett** som anges i den vänstra rutan markeras med ett asterix (**&#42;**).
+   >När ett fält är **Obligatoriskt**, **Etikett** som anges i den vänstra rutan är markerad med ett asterix (**&#42;**).
 
 ![egenskaper](assets/cfm-models-03.png)
 
@@ -64,22 +64,22 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    * Dra en obligatorisk datatyp till önskad plats för ett fält:
 
-      ![datatyp till fält](assets/cfm-models-04.png)
+     ![datatyp till fält](assets/cfm-models-04.png)
 
    * När ett fält har lagts till i modellen visas den högra panelen **Egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet.
 
       * Många egenskaper är självförklarande, mer information finns i [Egenskaper](#properties).
       * Skriva ett **Fältetikett** kommer att slutföra **Egenskapsnamn**  - om den är tom, och sedan kan den uppdateras manuellt.
 
-         >[!CAUTION]
-         >
-         >När egenskapen uppdateras manuellt **Egenskapsnamn** för en datatyp, observera att namn bara får innehålla A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
-         >
-         >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
-      Till exempel:
+        >[!CAUTION]
+        >
+        >När egenskapen uppdateras manuellt **Egenskapsnamn** för en datatyp, observera att namn bara får innehålla A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
+        >
+        >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
-      ![fältegenskaper](assets/cfm-models-05.png)
+     Till exempel:
 
+     ![fältegenskaper](assets/cfm-models-05.png)
 
 1. **Ta bort ett fält**
 
@@ -122,16 +122,15 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 * **JSON-objekt**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
       * För att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
-      * JSON skickas vidare och skrivs ut som JSON i GraphQL.
+      * JSON skickas och skrivs ut som JSON i GraphQL.
       * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i innehållsfragmentredigeraren.
 * **Platshållare för flik**
    * Tillåter introduktion av flikar som kan användas när innehållet i innehållsfragmentet redigeras.
 Detta visas som en avgränsare i modellredigeraren, som avgränsar avsnitt i listan med innehållsdatatyper. Varje instans representerar början på en ny flik.
 I fragmentredigeraren visas varje instans som en flik.
-
-      >[!NOTE]
-      >
-      >Den här datatypen används endast för formatering, den ignoreras av det AEM GraphQL-schemat.
+     >[!NOTE]
+     >
+     >Den här datatypen används endast för formatering, den ignoreras av det AEM GraphQL-schemat.
 
 ## Egenskaper {#properties}
 
@@ -139,18 +138,17 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
 
 * **Egenskapsnamn**
 
-   Observera följande namn när du uppdaterar den här egenskapen manuellt för en datatyp **måste** innehåller *endast* A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
+  Observera följande namn när du uppdaterar den här egenskapen manuellt för en datatyp **måste** innehåller *endast* A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
 
-   >[!CAUTION]
-   >
-   >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+  >[!CAUTION]
+  >
+  >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
 * **Återge som**
-De olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan ange om författaren ska se en enda instans av fältet eller om den ska kunna skapa flera instanser.
+De olika alternativen för att realisera/återge fältet i ett fragment. Med den här egenskapen kan du ofta definiera om författaren ska se en enda instans av fältet eller om han eller hon ska kunna skapa flera instanser.
 
 * **Fältetikett**
-Ange en 
-**Fältetikett** genererar automatiskt en **Egenskapsnamn** som sedan kan uppdateras manuellt vid behov.
+Ange en **Fältetikett** genererar automatiskt en **Egenskapsnamn** som sedan kan uppdateras manuellt vid behov.
 
 * **Validering**
 Grundläggande validering är tillgängligt via funktioner som **Obligatoriskt** -egenskap. Vissa datatyper har ytterligare valideringsfält. Se [Validering](#validation) för mer information.
@@ -161,28 +159,28 @@ Grundläggande validering är tillgängligt via funktioner som **Obligatoriskt**
    * **Markdown**
    * **Oformaterad text**
 
-   Om inget anges används standardvärdet **RTF** används för det här fältet.
+  Om inget anges används standardvärdet **RTF** används för det här fältet.
 
-   Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
+  Om du ändrar **standardtypen** i en innehållsfragmentmodell börjar detta bara gälla för ett befintligt, relaterat innehållsfragment efter att fragmentet har öppnats i redigeraren och sparats.
 
 * **Unik**
 Innehållet (för det specifika fältet) måste vara unikt för alla innehållsfragment som skapas från den aktuella modellen.
 
-   Detta används för att säkerställa att innehållsförfattare inte kan upprepa innehåll som redan har lagts till i ett annat fragment av samma modell.
+  Detta används för att säkerställa att innehållsförfattare inte kan upprepa innehåll som redan har lagts till i ett annat fragment av samma modell.
 
-   Till exempel en **Enkelradig text** fältet anropades `Country` i Content Fragment Model får inte ha värdet `Japan` i två beroende innehållsfragment. En varning kommer att skickas när ett försök görs att utföra den andra instansen.
+  Till exempel en **Enkelradig text** fältet anropades `Country` i Content Fragment Model får inte ha värdet `Japan` i två beroende innehållsfragment. En varning skickas när ett försök görs att utföra den andra instansen.
 
-   >[!NOTE]
-   >
-   >Unikitet säkerställs per språkrot.
+  >[!NOTE]
+  >
+  >Unikitet säkerställs per språkrot.
 
-   >[!NOTE]
-   >
-   >Variationer kan ha samma *unik* som variationer av samma fragment, men inte samma värde som används i andra variationer av fragment.
+  >[!NOTE]
+  >
+  >Variationer kan ha samma *unik* som variationer av samma fragment, men inte samma värde som används i andra variationer av fragment.
 
-   >[!CAUTION]
-   >
-   >Om du vill använda MSM (som skapar kopior av innehållsfragment) kan du använda **Unik** begränsningar ska tas bort från alla datatyper som används i respektive Content Fragment Models.
+  >[!CAUTION]
+  >
+  >Om du vill använda MSM (som skapar kopior av innehållsfragment) kan du använda **Unik** begränsningar ska tas bort från alla datatyper som används i respektive Content Fragment Models.
 
 * Se **[Innehållsreferens](#content-reference)** om du vill ha mer information om den specifika datatypen och dess egenskaper.
 
@@ -190,7 +188,7 @@ Innehållet (för det specifika fältet) måste vara unikt för alla innehållsf
 
 * **Översättningsbar**
 
-   Kontrollerar **Översättningsbar** kryssrutan för ett fält i redigeraren för innehållsfragmentmodellen:
+  Kontrollerar **Översättningsbar** kryssrutan för ett fält i redigeraren för innehållsfragmentmodellen:
 
    * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfigurationen, kontexten `/content/dam/<sites-configuration>`, om det inte redan finns.
    * För GraphQL: ange en `<translatable>` egenskapen i fältet Innehållsfragment till `yes`, för att tillåta GraphQL-frågefilter för JSON-utdata med endast översättningsbart innehåll.
@@ -221,10 +219,9 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 * **[Fragmentreferens](#fragment-reference-nested-fragments)** (Kapslade fragment)
    * Refererar till andra fragment, beroende på vilka specifika modeller som anges.
    * Gör att du kan ta med/hämta strukturerade data.
-
-      >[!NOTE]
-      >
-      >Denna metod är av särskilt intresse i kombination med [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+     >[!NOTE]
+     >
+     >Denna metod är av särskilt intresse i kombination med [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
 >[!NOTE]
@@ -232,11 +229,10 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 >AEM har ett upprepningsskydd för:
 >
 >* Innehållsreferenser
-   >  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+>  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
 >* Fragmentreferenser i GraphQL
-   >  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
-
+>  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 ### Innehållsreferens {#content-reference}
 
@@ -296,11 +292,11 @@ Detta anger en rotsökväg för alla fragment som refereras.
 
 * **Tillåt skapande av fragment**
 
-   Detta gör att fragmentförfattaren kan skapa ett nytt fragment baserat på lämplig modell.
+  Detta gör att fragmentförfattaren kan skapa ett nytt fragment baserat på lämplig modell.
 
    * **fragmentreferencecomposite** - låter fragmentförfattaren skapa en sammansatt bild genom att markera flera fragment
 
-   ![Fragmentreferens](assets/cfm-fragment-reference.png)
+  ![Fragmentreferens](assets/cfm-fragment-reference.png)
 
 >[!NOTE]
 >
@@ -375,15 +371,16 @@ Så här konfigurerar du **Profiler** for **Tillåtna modeller för innehållsfr
 
    * **Ärvs från`<folder>`**
 
-      Profiler ärvs automatiskt när nya underordnade mappar skapas; principen kan konfigureras om (och arvet brytas) om undermapparna måste tillåta modeller som skiljer sig från den överordnade mappen.
+     Profiler ärvs automatiskt när nya underordnade mappar skapas; principen kan konfigureras om (och arvet brytas) om undermapparna måste tillåta modeller som skiljer sig från den överordnade mappen.
 
    * **Tillåtna modeller för innehållsfragment efter sökväg**
 
-      Flera modeller kan tillåtas.
+     Flera modeller kan tillåtas.
 
    * **Tillåtna modeller för innehållsfragment efter tagg**
 
-      Flera modeller kan tillåtas.
+     Flera modeller kan tillåtas.
+
    ![Princip för innehållsfragmentmodell](assets/cfm-model-policy-assets-folder.png)
 
 1. **Spara** eventuella ändringar.
@@ -409,7 +406,7 @@ Så här tar du bort en innehållsfragmentmodell:
 
    >[!NOTE]
    >
-   >Om det refereras till modellen visas en varning. Vidta lämpliga åtgärder.
+   >Om modellen refereras visas en varning. Vidta lämpliga åtgärder.
 
 ## Publicera en innehållsfragmentmodell {#publishing-a-content-fragment-model}
 
@@ -483,16 +480,16 @@ Du kan hantera **Låst** modeller från antingen konsolen eller modellredigerare
 
 * Konsol
 
-   I konsolen kan du hantera skrivskyddat läge med **Lås upp** och **Lås** funktionsmakron i verktygsfältet:
+  I konsolen kan du hantera skrivskyddat läge med **Lås upp** och **Lås** funktionsmakron i verktygsfältet:
 
-   ![Verktygsfält för låst innehållsfragmentmodell](assets/cfm-model-locked.png)
+  ![Verktygsfält för låst innehållsfragmentmodell](assets/cfm-model-locked.png)
 
    * Du kan **Lås upp** en modell som aktiverar redigering.
 
-      Om du väljer **Lås upp** en varning visas och du måste bekräfta **Lås upp** åtgärd:
-      ![Meddelande när innehållsfragmentmodellen låses upp](assets/cfm-model-unlock-message.png)
+     Om du väljer **Lås upp**, visas en varning och du måste bekräfta **Lås upp** åtgärd:
+     ![Meddelande när innehållsfragmentmodellen låses upp](assets/cfm-model-unlock-message.png)
 
-      Du kan sedan öppna modellen för redigering.
+     Du kan sedan öppna modellen för redigering.
 
    * Du kan också **Lås** modellen efteråt.
    * Om modellen publiceras på nytt kommer den omedelbart att användas igen **Låst** (SKRIVSKYDDAT) läge.
@@ -501,18 +498,18 @@ Du kan hantera **Låst** modeller från antingen konsolen eller modellredigerare
 
    * När du öppnar en låst modell får du en varning och tre åtgärder: **Avbryt**, **Visa skrivskyddad**, **Redigera**:
 
-      ![Meddelande när en låst innehållsfragmentmodell visas](assets/cfm-model-editor-lock-message.png)
+     ![Meddelande när en låst innehållsfragmentmodell visas](assets/cfm-model-editor-lock-message.png)
 
    * Om du väljer **Visa skrivskyddad** du kan se modellens innehåll och struktur:
 
-      ![Visa skrivskyddad - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-view-only.png)
+     ![Visa skrivskyddad - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-view-only.png)
 
    * Om du väljer **Redigera** kan du redigera och spara dina uppdateringar:
 
-      ![Redigera - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-edit.png)
+     ![Redigera - låst innehållsfragmentmodell](assets/cfm-model-editor-locked-edit.png)
 
-      >[!NOTE]
-      >
-      >Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
+     >[!NOTE]
+     >
+     >Det kan fortfarande finnas en varning överst, men det är när modellen redan används av befintliga innehållsfragment.
 
    * **Avbryt** kommer du tillbaka till konsolen.

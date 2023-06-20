@@ -2,9 +2,9 @@
 title: AEM Headless Content Author Journey
 description: Börja här för en guidad resa med de kraftfulla och flexibla headlessfunktionerna i AEM, deras funktioner och hur du skapar innehåll för ditt projekt.
 exl-id: fe124c6b-932a-44fc-a87b-12691aefea56
-source-git-commit: 3f6c96da3fd563b4c8db91ab1bc08ea17914a8c1
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Den här resan är utformad för innehållsförfattarens personlighet. Som inneh
 
 På resan beskrivs krav, steg och tillvägagångssätt för att skapa innehåll för ett AEM Headless-projekt. Resan kommer att definiera ytterligare personligheter som författaren måste interagera med för ett framgångsrikt projekt, men utgångspunkten för resan är innehållsförfattarens.
 
-Information i den här resan kan förstås vara användbar för andra personer, men viss information kommer att vara överflödig för vissa roller. Stanna kvar och vänta på kommande resor som omfattar fler roller.
+Information i den här resan kan förstås vara användbar för andra personer, men viss information är överflödig för vissa roller. Stanna kvar och vänta på kommande resor som omfattar fler roller.
 
 ## The Headless Content Author Journey {#the-journey}
 
@@ -79,7 +79,7 @@ Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandah
 Som sådana resor är utformade för att stå på egen hand. Ett antal av dem kan dock vara relaterade till varandra. Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
 
 * [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
-* [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du kan utnyttja dem i ditt första utvecklingsprojekt.
+* [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md) - Börja här för en guidad resa med de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du använder dem i ditt första utvecklingsprojekt.
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du skapar material för ditt projekt.
 * [AEM as a Cloud Service teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM och headless-teknik kan du behöva läsa våra detaljerade tekniska dokument direkt.
 * [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Om du föredrar att lära dig genom att göra något och är tekniskt inriktad kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar att skapa och använda program som bygger på AEM Headless.

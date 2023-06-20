@@ -2,9 +2,9 @@
 title: Genererar åtkomsttoken för API:er på serversidan
 description: Lär dig att underlätta kommunikationen mellan en tredjepartsserver och AEM as a Cloud Service genom att generera en säker JWT-token
 exl-id: 20deaf8f-328e-4cbf-ac68-0a6dd4ebf0c9
-source-git-commit: dd869397feca593f93ee8ed5030828e01cc45c4d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2132'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Du kan också verifiera att det tekniska kontot visas i användarlistan genom at
 
 <u>**Ange behörigheter för lämplig grupp**</u>
 
-Konfigurera slutligen gruppen med de behörigheter som krävs för att anropa eller låsa API:erna korrekt. Du kan göra detta genom att:
+Slutligen måste du konfigurera gruppen med de behörigheter som krävs för att anropa eller låsa API:erna korrekt. Du kan göra detta genom att:
 
 1. Loggar in på rätt författarinstans och går till **Inställningar** - **Säkerhet** - **Behörigheter**
 1. Sök efter namnet på gruppen som motsvarar produktprofilen i den vänstra rutan (i det här fallet skrivskyddade API:er) och klicka på den:
@@ -217,9 +217,9 @@ För att uppnå detta kan du:
 
 * Använd **Lägg till certifikat** knapp under **Integreringar** - **Tekniska konton** i Developer Console, som visas nedan
 
-   ![Uppdatera autentiseringsuppgifter](/help/implementing/developing/introduction/assets/s2s-credentialrefresh.png)
+  ![Uppdatera autentiseringsuppgifter](/help/implementing/developing/introduction/assets/s2s-credentialrefresh.png)
 
-* När du har tryckt på knappen skapas en uppsättning autentiseringsuppgifter som innehåller ett nytt certifikat. Installera de nya autentiseringsuppgifterna på den AEM servern och kontrollera att anslutningen fungerar som förväntat, utan att ta bort de gamla autentiseringsuppgifterna 
+* När du har tryckt på knappen genereras en uppsättning autentiseringsuppgifter som innehåller ett nytt certifikat. Installera de nya autentiseringsuppgifterna på den AEM servern och kontrollera att anslutningen fungerar som förväntat, utan att ta bort de gamla autentiseringsuppgifterna 
 * Kontrollera att de nya autentiseringsuppgifterna används i stället för de gamla när du genererar åtkomsttoken
 * Du kan också återkalla (och sedan ta bort) det tidigare certifikatet så att det inte längre kan användas för att autentisera med AEM as a Cloud Service.
 
@@ -229,7 +229,7 @@ Om den privata nyckeln komprometteras måste du skapa autentiseringsuppgifter me
 
 Så här gör du:
 
-1. Lägg först till den nya nyckeln. Detta genererar autentiseringsuppgifter med en ny privat nyckel och ett nytt certifikat. Den nya privata nyckeln markeras i användargränssnittet som **aktuell** och kommer därför att användas för alla nya autentiseringsuppgifter för det här tekniska kontot. Observera att autentiseringsuppgifterna som är associerade med de äldre privata nycklarna fortfarande är giltiga tills de återkallas. För att uppnå detta trycker du på de tre punkterna (**...**) med ditt nuvarande tekniska konto och tryck **Lägg till ny privat nyckel**:
+1. Lägg först till den nya nyckeln. Den här nyckeln genererar autentiseringsuppgifter med en ny privat nyckel och ett nytt certifikat. Den nya privata nyckeln är markerad i användargränssnittet som **aktuell** och kommer därför att användas för alla nya autentiseringsuppgifter för det här tekniska kontot. Observera att autentiseringsuppgifterna som är associerade med de äldre privata nycklarna fortfarande är giltiga tills de återkallas. För att uppnå detta trycker du på de tre punkterna (**...**) med ditt nuvarande tekniska konto och tryck **Lägg till ny privat nyckel**:
 
    ![Lägg till ny privat nyckel](/help/implementing/developing/introduction/assets/s2s-addnewprivatekey.png)
 
@@ -237,7 +237,7 @@ Så här gör du:
 
    ![Bekräfta tillägg av ny privat nyckel](/help/implementing/developing/introduction/assets/s2s-addprivatekeyconfirm.png)
 
-   En ny bläddringsflik med de nya inloggningsuppgifterna öppnas och användargränssnittet uppdateras för att visa båda privata nycklar, med den nya markerad som **aktuell**:
+   En ny bläddringsflik med de nya inloggningsuppgifterna öppnas och användargränssnittet uppdateras så att både privata nycklar visas med den nya som markerats som **aktuell**:
 
    ![Privata nycklar i användargränssnittet](/help/implementing/developing/introduction/assets/s2s-twokeys.png)
 

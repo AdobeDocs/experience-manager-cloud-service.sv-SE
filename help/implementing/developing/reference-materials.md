@@ -1,8 +1,8 @@
 ---
 title: API-referensmaterial
-description: AEM har omfattande och kraftfulla API:er som ni kan använda för ert digitala upplevelseprojekt.
+description: AEM har omfattande och kraftfulla API:er som du kan använda för ditt digitala upplevelseprojekt.
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
-source-git-commit: cc6565121a76f70b958aa9050485e0553371f3a3
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 3%
@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # API-referensmaterial {#api-reference-materials}
 
-Adobe Experience Manager (AEM) innehåller många API:er för utveckling av program och utökning av AEM. AEM bygger på ett antal öppen källkod-tekniker som också kan utnyttjas.
+Adobe Experience Manager (AEM) innehåller många API:er för utveckling av program och utökning av AEM. AEM bygger på ett antal öppen källkod-tekniker som också kan användas.
 
 ## AEM Core API:er {#core-aem-apis}
 

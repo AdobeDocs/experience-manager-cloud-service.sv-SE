@@ -4,9 +4,9 @@ description: Integrera med Adobe Target
 feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: 588825f910b3b9ad6a491c57322971200cea1d15
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1046'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,6 @@ Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud S
 > 1. Ange klientorganisations-ID:t igen.
 > 2. Återanslut till mål.
 > 3. Spara konfigurationen.
-
 
 ### Redigera målkonfigurationen {#edit-target-configuration}
 
@@ -157,4 +156,4 @@ Mer information om hur du skapar och publicerar finns i [page](https://experienc
 
 >[!NOTE]
 >
->Äldre konfigurationer stöds fortfarande för befintliga kunder (utan möjlighet att redigera eller skapa nya). Äldre konfigurationer kommer att ingå i innehållspaket som överförs av kunder som använder VSTS.
+>Äldre konfigurationer stöds fortfarande för befintliga kunder (utan möjlighet att redigera eller skapa nya). Äldre konfigurationer är en del av innehållspaket som överförs av kunder med VSTS.

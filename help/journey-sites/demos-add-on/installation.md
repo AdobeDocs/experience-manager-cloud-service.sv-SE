@@ -2,9 +2,9 @@
 title: Förstå installationen av tilläggsprogrammet för referensdemo
 description: Lär dig mer om Cloud Manager och hur det används för att installera tillägget.
 exl-id: 9418aac6-a8c4-43f7-b329-b02149fe2d53
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Program kan vara antingen produktionsprogram eller sandlådeprogram.
 * **Ett produktionsprogram** skapas för att så småningom tillåta livstrafik när ditt program är klart att användas live.
 * **Ett sandlådeprogram** har skapats för utbildning, löpande demonstrationer, aktivering, POC, osv. och är inte avsedd för livstrafik.
 
-För att kunna installera tillägget AEM Reference Demos måste du skapa ett nytt sandlådeprogram.
+Skapa ett sandlådeprogram om du vill installera AEM Reference Demos Add-On.
 
 >[!NOTE]
 >

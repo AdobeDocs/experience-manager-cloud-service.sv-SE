@@ -2,9 +2,9 @@
 title: Optimera GraphQL-frågor
 description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, sidlägger och sorterar innehållsfragment i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 67aec373-4e1c-4afb-9c3f-a70e463118de
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
@@ -49,20 +49,19 @@ Den här tekniken ger den flexibilitet som GraphQL-filter ger och delegerar så 
 GraphQL i AEM har stöd för två typer av sidnumrering:
 
 * [limit/offset-baserad sidnumrering](/help/headless/graphql-api/content-fragments.md#list-offset-limit)
-Detta används för listfrågor. slutar med 
-`List`; till exempel `articleList`.
+Detta används för listfrågor. slutar med `List`; till exempel `articleList`.
 Om du vill använda den måste du ange positionen för det första objektet som ska returneras ( `offset`) och antalet objekt som ska returneras ( `limit`, eller sidstorlek).
 
 * [markörbaserad sidnumrering](/help/headless/graphql-api/content-fragments.md#paginated-first-after) (representeras av `first`och `after`) Detta ger ett unikt ID för varje objekt. kallas också markör.
 I frågan anger du markören för det sista objektet på föregående sida plus sidstorleken (det maximala antalet objekt som ska returneras).
 
-   Eftersom markörbaserad sidnumrering inte passar i de listbaserade frågestrukturerna har AEM infört `Paginated` frågetyp; till exempel `articlePaginated`. De datastrukturer och parametrar som används följer [GraphQL Cursor ConnectionSpecification](https://relay.dev/graphql/connections.htm).
+  Eftersom markörbaserad sidnumrering inte passar i de listbaserade frågestrukturerna har AEM infört `Paginated` frågetyp; till exempel `articlePaginated`. De datastrukturer och parametrar som används följer [GraphQL Cursor ConnectionSpecification](https://relay.dev/graphql/connections.htm).
 
-   >[!NOTE]
-   >
-   >AEM har för närvarande stöd för sidväxling framåt (med `after`/`first` parametrar).
-   >
-   >Bakåt sidindelning (med `before`/`last` parametrar) stöds inte.
+  >[!NOTE]
+  >
+  >AEM har för närvarande stöd för sidväxling framåt (med `after`/`first` parametrar).
+  >
+  >Bakåt sidindelning (med `before`/`last` parametrar) stöds inte.
 
 ## Sortering {#sorting}
 
@@ -129,7 +128,7 @@ Om du är mest intresserad av att bara hämta de första sidorna är det ingen s
 
 ### Logiska åtgärder i filteruttryck {#logical-operations-in-filter-expressions}
 
-Om du filtrerar kapslade fragment kan du fortfarande utnyttja JCR-filtrering genom att tillhandahålla ett medföljande filter på ett fält på den översta nivån som kombineras med `AND` -operator.
+Om du filtrerar kapslade fragment kan du fortfarande tillämpa JCR-filtrering genom att tillhandahålla ett medföljande filter på ett fält på den översta nivån som kombineras med `AND` -operator.
 
 Ett vanligt användningsfall skulle vara att begränsa frågans omfattning med hjälp av ett filter på `_path` -fältet i fragmentet på den översta nivån och filtrera sedan efter ytterligare fält som kan finnas på den översta nivån eller på ett kapslat fragment.
 

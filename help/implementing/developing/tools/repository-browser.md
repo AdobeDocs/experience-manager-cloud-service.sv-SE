@@ -4,9 +4,9 @@ seo-title: Repository Browser
 description: Databasens webbläsare ger en skrivskyddad vy i databasen för alla miljöer på författar-, publicerings- och förhandsgranskningsnivåer.
 seo-description: The repository browser provides a read-only view into the repository for all environments on author, publish, and preview tiers.
 exl-id: 22473a97-8f7b-4014-b885-1233116aeda6
-source-git-commit: 43429562ea4292f38d3459e03185270ec950a58a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '885'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Introduktion {#introduction}
 
-Databasens webbläsare är ett utvecklarverktyg som ger en skrivskyddad vy i databasen för alla miljöer med författare-, publicerings- och förhandsgranskningsnivåer. Den är utformad för att göra det enklare att se och felsöka innehållet genom att visa innehållsstrukturen.
+Databasens webbläsare är ett utvecklarverktyg som ger en skrivskyddad vy i databasen för alla miljöer med författare-, publicerings- och förhandsgranskningsnivåer. Den är utformad för att göra det enklare att se och felsöka innehåll genom att visa innehållsstrukturen.
 
 Den är tillgänglig från Developer Console och kan användas för att bläddra i databasen för en författare eller publicera en instans för en vald miljö.
 
@@ -31,12 +31,12 @@ Den är tillgänglig från Developer Console och kan användas för att bläddra
 
 Följande villkor måste vara uppfyllda för att du ska få tillgång till Developer Console eller Databaswebbläsaren
 
-Så här får du åtkomst till Developer Console:
+Så här öppnar du Developer Console:
 
 * För produktionsprogram måste användarna ha **Cloud Manager - Utvecklarroll** i Admin Console
 * För sandlådeprogram är den tillgänglig för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service.
 
-Så här kommer du åt Databasläsaren:
+Så här öppnar du Databasläsaren:
 
 * Användarna måste ha **Cloud Manager - utvecklare** Roll i Admin Console för att visa författarinstanser och publiceringsinstanser.
 * Dessutom kan användare med AEM användarprofil visa databaswebbläsaren med minimal läsåtkomst. användarens behörigheter respekteras när användaren bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
@@ -76,7 +76,7 @@ När du klickar på en mapp ändras URL-adressen dynamiskt så att den innehåll
 
 Som standard visas bara publikt innehåll, vilket innebär att vissa mappar som `/conf` eller `/home` kommer inte att synas.
 
-För att göra platserna synliga måste du följa proceduren nedan.
+Gör så här för att göra platserna synliga.
 
 1. Klicka på de tre punkterna bredvid den miljö du vill använda och välj **Hantera åtkomst**
 

@@ -4,9 +4,9 @@ description: Konfigurera [!DNL Workfront for Experience Manager enhanced connect
 role: Admin
 feature: Integrations
 exl-id: d4e1247a-342c-4bc4-83bf-4e4902468fb3
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1596'
 ht-degree: 0%
 
 ---
@@ -30,10 +30,9 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som 
 >
 >* Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrad anslutning](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). Mer information om provet finns i [Provguide](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
 
-
 ## Konfigurera händelseprenumerationer {#event-subscriptions}
 
-Evenemangsprenumerationer används för att meddela AEM om händelser som inträffar i [!DNL Adobe Workfront]. Det finns tre [!DNL Workfront for Experience Manager enhanced connector] funktioner som kräver en händelseteckning för att fungera är följande:
+Evenemangsprenumerationer används för att meddela AEM om händelser som inträffar i [!DNL Adobe Workfront]. Det finns tre [!DNL Workfront for Experience Manager enhanced connector] funktioner som kräver att en händelseprenumeration fungerar är följande:
 
 * Automatiskt skapande av projektlänkade mappar.
 * Synkronisering av ändringar i anpassade formulärvärden för Workfront-dokument till AEM metadata för resurser.
@@ -45,7 +44,7 @@ Aktivera händelseprenumerationer om du vill använda dessa funktioner.
 * Välj [!UICONTROL Workfront Custom Integration] som du skapade i avsnitt 6.
 * Klicka på [!UICONTROL Enable Workfront Event Subscriptions].
 
-   ![Evenemangsprenumeration](/help/assets/assets/event-subs.png)
+  ![Evenemangsprenumeration](/help/assets/assets/event-subs.png)
 
 ## Konfigurera länkade mappar {#linked-folders}
 
@@ -60,11 +59,11 @@ Så här prenumererar du på händelserna:
 1. Gå till fliken Projektlänkade mappar i molntjänsterna.
 1. Överordnad sökväg för länkad mapp: Välj en mapp i DAM där du vill skapa de länkade mapparna. Om det lämnas tomt används /content/dam som standard. Se till att metadatamatchemat för Workfront Tools och Workfront-mappen för länkade mappar har tillämpats på den markerade mappen.
 1. Struktur för länkad mapp: Ange kommaavgränsade värden. Varje värde ska `DE:<some-project-custom-form-field>`, Portfolio, Program, Year, Name eller lite Literal String Value (det här sista med citattecken). Den är för närvarande inställd på Portfolio, Program, År, DE:Projekttyp, Namn.
-1. Skapa länkad mapptitel i Workfront med hjälp av kryssrutan Mappstrukturnamn bör vara markerad om mappens titel i Workfront ska innehålla alla mappar i strukturen. I annat fall är det den sista mappens namn.
+1. Skapa länkad mapptitel i Workfront med hjälp av kryssrutan Mappstrukturnamn bör vara markerad om mappens titel i Workfront ska innehålla alla mappar i strukturen. Annars är det den sista mappens namn.
 1. Med undermappsmappar kan du ange en lista med mappar som ska skapas som en underordnad mapp till den länkade mappen.
-1. Projektstatus: Välj den status som projektet måste ställas in på för att den länkade mappen ska kunna skapas.
-1. Skapa en länkad mapp i projekt med en portfölj: Lista med Portfolio som projektet måste tillhöra för att skapa den länkade mappen. Lämna listan tom om du vill skapa den länkade mappen för alla projektportföljer.
-1. Skapa en länkad mapp i projekt med anpassat formulärfält: Anpassat formulärfält och motsvarande värde som projektet måste ha för att kunna skapa den länkade mappen. Den här konfigurationen ignoreras om den lämnas tom. Välj `CUSTOM FORMS: Create DAM Linked Folder` för fält och indata `Yes` för värdet.
+1. Projektstatus: Välj den status som projektet måste ställas in för för att skapa den länkade mappen.
+1. Skapa en länkad mapp i projekt med en portfölj: Lista med Portfolio som projektet måste tillhöra så att du kan skapa den länkade mappen. Lämna listan tom om du vill skapa den länkade mappen för alla projektportföljer.
+1. Skapa en länkad mapp i projekt med anpassat formulärfält: Anpassat formulärfält och motsvarande värde som projektet måste ha för att du ska kunna skapa den länkade mappen. Den här konfigurationen ignoreras om den lämnas tom. Välj `CUSTOM FORMS: Create DAM Linked Folder` för fält och indata `Yes` för värdet.
 1. Klicka på Aktivera automatiskt skapande av länkade mappar. Om du går tillbaka till fliken Händelseprenumerationer ser du att det nu finns en händelse för att skapa.
 
 ![länkad mappkonfiguration](/help/assets/assets/wf-linked-folder-config.png)

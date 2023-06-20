@@ -2,10 +2,10 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: 3f7c9240a81062c335c33b0e59971de43cacf87b
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1227'
-ht-degree: 3%
+source-wordcount: '1226'
+ht-degree: 1%
 
 ---
 
@@ -73,7 +73,6 @@ Innehållsfragmenten aktiverar:
    >* [Responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md)
    >* [Redigera sidinnehåll](/help/sites-cloud/authoring/fundamentals/editing-content.md)
 
-
 ### Markera elementet eller variationen {#selecting-the-element-or-variation}
 
 Öppna fragmentets **Konfiguration** för att konfigurera fragmentet för användning på den aktuella sidan. Dialogrutan kan vara beroende av vilken komponent som används.
@@ -92,9 +91,9 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 * **Element**
    * En markering är tillgänglig beroende på vilken modell som används.
 
-   >[!NOTE]
-   >
-   >Vilka element som är tillgängliga beror på vilken modell som används.
+  >[!NOTE]
+  >
+  >Vilka element som är tillgängliga beror på vilken modell som används.
 
 * **Variant**
    * **Standardmastern** är alltid tillgänglig.
@@ -147,10 +146,9 @@ För mellanliggande innehåll kan du:
 >  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
 >* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
 
-
 ### Använda associerat innehåll {#using-associated-content}
 
-Om du har [associerat innehåll](/help/sites-cloud/administering/content-fragments/content-fragments-assoc-content.md) med [innehållsfragmentet](/help/sites-cloud/administering/content-fragments/content-fragments.md) är dessa resurser tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](/help/sites-cloud/administering/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments).
+Om du har [associerat innehåll](/help/sites-cloud/administering/content-fragments/content-fragments-assoc-content.md) med [innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) dessa resurser är tillgängliga från sidopanelen (när du har placerat fragmentet på innehållssidan). Associerat innehåll är i själva verket en särskild innehållskälla för [mellanliggande innehåll](/help/sites-cloud/administering/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments).
 
 >[!NOTE]
 >

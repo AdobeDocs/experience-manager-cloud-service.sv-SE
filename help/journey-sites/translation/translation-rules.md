@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 831009b8-8e09-4b0f-b0fd-4e21221c1455
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ AEM skapar automatiskt översättningsregler för allt innehåll. Så här visar
 
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
 
-1. De sidegenskaper som ska översättas finns under **Allmänt** i listan. Du kan lägga till eller uppdatera befintliga egenskapsnamn som du vill inkludera explicit i översättning.
+1. De översatta sidegenskaperna finns under **Allmänt** i listan. Du kan lägga till eller uppdatera befintliga egenskapsnamn som du vill inkludera explicit i översättning.
    1. Ange egenskapsnamnet i **Ny egenskap** fält.
    1. Alternativen **Översätt** och **Inherit** kontrolleras automatiskt.
    1. Tryck eller klicka **Lägg till**.

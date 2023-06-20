@@ -2,9 +2,9 @@
 title: Implementera en anpassad predikatutvärderare för Query Builder
 description: AEM i Query Builder är ett enkelt och anpassningsbart sätt att fråga innehållsdatabasen
 exl-id: 8c2f8c22-1851-4313-a1c9-10d6d9b65824
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,6 @@ Ett anpassat predikat kan även utföra andra saker som inte är direkt möjliga
 >
 >* [Öppna aem-search-custom-prediate-valuator-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator)
 >* Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/aem-search-custom-predicate-evaluator/archive/master.zip)
-
 
 >[!NOTE]
 >
@@ -106,7 +105,7 @@ Först måste du uppdatera Maven-beroendena för ditt projekt. The `PredicateEva
 
 >[!NOTE]
 >
->Omfattningen av `cq-search` beroende är inställt på `provided` därför `cq-search` kommer att tillhandahållas av `OSGi` behållare.
+>Omfattningen av `cq-search` beroende är inställt på `provided` därför `cq-search` tillhandahålls av `OSGi` behållare.
 
 Följande utdrag visar skillnaderna i `pom.xml` fil, i [enhetligt format för differenser](https://en.wikipedia.org/wiki/Diff#Unified_format)
 

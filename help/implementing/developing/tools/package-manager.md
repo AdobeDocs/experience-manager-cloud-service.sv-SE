@@ -4,9 +4,9 @@ description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering
 role: Admin
 exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
-source-git-commit: e6b6dd3dcccfa73893d224ccbd5ead0d910072a8
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3782'
 ht-degree: 0%
 
 ---
@@ -280,7 +280,7 @@ Ett paket skapas ofta samtidigt som du [skapa paketet](#creating-a-new-package),
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Bygge**. En dialogruta där du uppmanas bekräfta att du vill skapa paketet eftersom allt befintligt paketinnehåll skrivs över.
+1. Klicka **Bygge**. En dialogruta innehåller en fråga om du vill bekräfta att du vill skapa paketet eftersom allt befintligt paketinnehåll skrivs över.
 
 1. Klicka **OK**. AEM skapar paketet och visar allt innehåll som lagts till i paketet på samma sätt som i aktivitetslistan. När AEM är klar visas en bekräftelse på att paketet har skapats och (när du stänger dialogrutan) information om paketlistan uppdateras.
 
@@ -453,7 +453,7 @@ Behörigheterna beskrivs i aktivitetsloggen för Package Manager.
 
 **Fellägen**
 
-Inga explicita fel kan anges. Valideringen anger bara om nya ACL-behörigheter kommer att läggas till eller påverkas av att paketet installeras.
+Inga explicita fel kan anges. Valideringen anger helt enkelt om nya ACL-behörigheter läggs till eller påverkas av att paketet installeras.
 
 **Felupplösning**
 
@@ -528,7 +528,7 @@ När du överför ett paket läggs bara paketinnehållet till i databasen, men d
 >
 >Om du installerar ett paket kan befintligt innehåll skrivas över eller tas bort. Överför bara ett paket om du är säker på att det inte tar bort eller skriver över innehåll som du behöver.
 
-Innan du installerar paketet skapas ett ögonblicksbildspaket som innehåller det innehåll som ska skrivas över automatiskt av Package Manager. Den här ögonblicksbilden installeras om du avinstallerar paketet.
+Innan du installerar paketet skapas ett ögonblicksbildspaket som innehåller det överskrivna innehållet automatiskt i Package Manager. Den här ögonblicksbilden installeras om du avinstallerar paketet.
 
 1. [Access Package Manager.](#accessing)
 

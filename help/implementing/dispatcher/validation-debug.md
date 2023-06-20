@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Validera och felsöka med Dispatcher Tools
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: a56b0ed1efff7b8d04e65921ee9dd25ae7030dbd
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2865'
+source-wordcount: '2859'
 ht-degree: 0%
 
 ---
@@ -92,17 +92,17 @@ Om du vill matcha den exakta värden eftersom du har flera värdfiler kan du fö
 
 ```
 <VirtualHost *:80>
-	ServerName	"example.com"
-	# Put names of which domains are used for your published site/content here
-	ServerAlias	 "*example.com" "\*.local" "localhost" "127.0.0.1" "*.adobeaemcloud.net" "*.adobeaemcloud.com"
-	# Use a document root that matches the one in conf.dispatcher.d/default.farm
-	DocumentRoot "${DOCROOT}"
-	# URI dereferencing algorithm is applied at Sling's level, do not decode parameters here
-	AllowEncodedSlashes NoDecode
-	# Add header breadcrumbs for help in troubleshooting which vhost file is chosen
-	<IfModule mod_headers.c>
-		Header add X-Vhost "publish-example-com"
-	</IfModule>
+    ServerName    "example.com"
+    # Put names of which domains are used for your published site/content here
+    ServerAlias     "*example.com" "\*.local" "localhost" "127.0.0.1" "*.adobeaemcloud.net" "*.adobeaemcloud.com"
+    # Use a document root that matches the one in conf.dispatcher.d/default.farm
+    DocumentRoot "${DOCROOT}"
+    # URI dereferencing algorithm is applied at Sling's level, do not decode parameters here
+    AllowEncodedSlashes NoDecode
+    # Add header breadcrumbs for help in troubleshooting which vhost file is chosen
+    <IfModule mod_headers.c>
+        Header add X-Vhost "publish-example-com"
+    </IfModule>
   ...
 </VirtualHost>
 ```
@@ -121,7 +121,7 @@ Den här filen finns i `dispatcher_vhost.conf` -fil. Du kan ändra Dispatcher oc
 
 * `conf.dispatcher.d/available_farms/<CUSTOMER_CHOICE>.farm`
 
-Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamn och som gör att Dispatcher-modulen kan hantera varje grupp med olika regler. Filerna skapas i `available_farms` och aktiveras med en symbolisk länk i `enabled_farms` katalog. Från `.farm` filer, andra filer som filter, cacheregler och andra tas med.
+Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamn och som gör att Dispatcher-modulen kan hantera varje grupp med olika regler. Filerna skapas i `available_farms` och aktiveras med en symbolisk länk i `enabled_farms` katalog. Från `.farm` filer, andra filer som filter, cacheregler och andra inkluderas.
 
 * `conf.dispatcher.d/cache/rules.any`
 
@@ -149,7 +149,7 @@ Ovanstående filer refererar till de oföränderliga konfigurationsfiler som lis
 
 Dessa filer ingår i grundramverket och följer standarder och bästa praxis. Filerna anses oföränderliga eftersom ändringar eller borttagningar av dem lokalt inte påverkar distributionen eftersom de inte överförs till din molninstans.
 
-Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer som listas nedan, följt av eventuella ytterligare programsatser eller åsidosättningar. När Dispatcher-konfigurationen distribueras till en molnmiljö kommer den senaste versionen av de oföränderliga filerna att användas, oavsett vilken version som användes i den lokala utvecklingen.
+Vi rekommenderar att ovanstående filer refererar till de oföränderliga filer som listas nedan, följt av eventuella ytterligare programsatser eller åsidosättningar. När Dispatcher-konfigurationen distribueras till en molnmiljö används den senaste versionen av de oföränderliga filerna, oavsett vilken version som användes i den lokala utvecklingen.
 
 * `conf.d/available_vhosts/default.vhost`
 
@@ -252,7 +252,7 @@ Skriptet har följande tre faser:
 2. Det kör `httpd -t` för att testa om syntaxen är korrekt så att apache httpd kan starta. Om det lyckas bör konfigurationen vara klar för distribution.
 3. Kontrollerar att delmängden av Dispatcher SDK-konfigurationsfilerna, som är avsedda att vara oföränderliga enligt beskrivningen i [Filstruktursektion](##flexible-mode-file-structure), har inte ändrats och matchar den aktuella SDK-versionen.
 
-Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också att utföras och eventuella fel kommer att inkluderas i Cloud Manager `Build Images step failure` log.
+Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också att utföras och fel inkluderas i Cloud Manager `Build Images step failure` log.
 
 >[!NOTE]
 >
@@ -262,7 +262,7 @@ Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också
 
 Om ett direktiv inte är tillåtslista loggas ett fel och en avslutningskod som inte är noll returneras. Dessutom genomsöks alla filer ytterligare med mönstret `conf.dispatcher.d/enabled_farms/*.farm` och kontrollerar att
 
-* Det finns ingen filterregel som tillåter via `/glob` (se [CVE-2016-0957](https://nvd.nist.gov/vuln/detail/CVE-2016-0957) för mer information.
+* Det finns ingen filterregel som tillåter via `/glob` (se [CVE-2016-0957](https://nvd.nist.gov/vuln/detail/CVE-2016-0957)) för mer information.
 * Ingen administratörsfunktion visas. Åtkomst till banor som `/crx/de or /system/console`.
 
 Observera att valideringsverktyget endast rapporterar förbjuden användning av Apache-direktiv som inte har tillåtslista. Den rapporterar inte syntaktiska eller semantiska problem med din Apache-konfiguration eftersom den här informationen endast är tillgänglig för Apache-moduler i en körningsmiljö.
@@ -401,7 +401,7 @@ Den här fasen kontrollerar apachesyntaxen genom att starta Apache HTTPD i en do
 
 Denna fas kan också köras oberoende av varandra `bin/docker_run.sh src/dispatcher host.docker.internal:4503 8080`.
 
-Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll kommer också att utföras och eventuella fel kommer att inkluderas i felloggen för stegen i Cloud Manager Build Images.
+Under en driftsättning av Cloud Manager `httpd -t` syntaxkontroll körs också och eventuella fel inkluderas i felloggen för stegen Build Images i Cloud Manager.
 
 ### Fas 3 {#third-phase}
 
@@ -531,7 +531,7 @@ I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik
 }
 ```
 
-Du kan också använda Cloud Manager-miljövariabler i din httpd/dispatcher-konfiguration, men inte miljöhemligheter. Den här metoden är särskilt viktig om ett program har flera dev-miljöer och vissa av dessa dev-miljöer har olika värden för httpd/dispatcher-konfigurationen. Samma ${VIRTUALHOST}-syntax används som i exemplet ovan, men Define-deklarationerna i ovanstående variabelfil används inte. Läs [Dokumentation för Cloud Manager](/help/implementing/cloud-manager/environment-variables.md) för instruktioner om hur du konfigurerar Cloud Manager-miljövariabler.
+Du kan också använda Cloud Manager-miljövariabler i din httpd/dispatcher-konfiguration, men inte miljöhemligheter. Den här metoden är särskilt viktig om ett program har flera dev-miljöer och vissa av dessa dev-miljöer har olika värden för httpd/dispatcher-konfigurationen. Samma ${VIRTUALHOST} syntax används som i exemplet ovan, men Define-deklarationerna i variabelfilen ovan används inte. Läs [Dokumentation för Cloud Manager](/help/implementing/cloud-manager/environment-variables.md) för instruktioner om hur du konfigurerar Cloud Manager-miljövariabler.
 
 När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till `docker_run.sh` skript direkt:
 
@@ -574,7 +574,6 @@ Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstru
    * Verkställ filen `opt-in/USE_SOURCES_DIRECTLY` till en Git-gren som distribueras av icke-produktionsflödet till en molnutvecklingsmiljö.
    * Använd Cloud Manager för att distribuera till en molnutvecklingsmiljö.
    * Testa noggrant. Det är viktigt att du kontrollerar att konfigurationen för din cache och dispatcher fungerar som du förväntar dig innan du distribuerar ändringar i högre miljöer. Kontrollera alla beteenden som hör till din anpassade konfiguration! Registrera en kundsupportanmälan om du tror att den distribuerade dispatcherkonfigurationen inte återspeglar din anpassade konfiguration.
-
    >[!NOTE]
    >
    >I det flexibla läget bör du använda relativa sökvägar i stället för absoluta sökvägar.

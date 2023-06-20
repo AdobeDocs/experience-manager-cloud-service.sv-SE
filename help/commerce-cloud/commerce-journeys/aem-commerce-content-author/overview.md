@@ -2,9 +2,9 @@
 title: AEM Commerce Content Author Journey
 description: Börja här för en guidad resa via AEM Commerce Authoring
 exl-id: 155a2534-746d-4237-b7e2-9212c36fac7f
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '457'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Om du vill veta hur Adobe rekommenderar hur man löser webbplatsaffärsärenden 
 
 Den här resan är avsedd för innehållsförfattaren i AEM Commerce. Den här resan innehåller krav, steg och tillvägagångssätt för att komma igång och hantera katalogsidor, mallar och fullständiga produktupplevelser.
 
-Information i den här resan kan förstås vara användbar för andra personer, men viss information kommer att vara överflödig för vissa roller. Stanna kvar och vänta på kommande resor som omfattar fler roller.
+Information i den här resan kan förstås vara användbar för andra personer, men viss information är överflödig för vissa roller. Stanna kvar och vänta på kommande resor som omfattar fler roller.
 
 ## Resan {#the-journey}
 

@@ -2,9 +2,9 @@
 title: Sökning
 description: Hitta materialet snabbare med omfattande sökfunktioner
 exl-id: 8a799e9a-1461-4e79-ae90-1978af6cf0ed
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '492'
 ht-degree: 6%
 
 ---
@@ -33,11 +33,11 @@ Med sökfältet kan du:
 
 Så här söker och filtrerar du resurser:
 
-1. Öppna **Sök** (med förstoringsglaset i verktygsfältet) och ange söktermen. Förslag kommer att göras och kan väljas:
+1. Öppna **Sök** (med förstoringsglaset i verktygsfältet) och ange söktermen. Förslag görs och kan väljas:
 
    ![Sökterm](/help/sites-cloud/authoring/assets/search-term.png)
 
-   Som standard begränsas sökresultaten till din aktuella plats (dvs. konsol och relaterad resurstyp):
+   Som standard är sökresultaten begränsade till din aktuella plats (d.v.s. konsol och relaterad resurstyp):
 
    ![Sökplats](/help/sites-cloud/authoring/assets/search-term-location.png)
 
@@ -67,7 +67,6 @@ Så här söker och filtrerar du resurser:
    >
    >* Beroende på vilken resurstyp du har valt; Exempelvis är kriterierna Assets och Communities begripligt specialiserade.
    >* Instansen som sökningen i Forms kan anpassas (lämplig för platsen i AEM).
-
 
 <!--
   >* Your instance as the [Search Forms](/help/sites-administering/search-forms.md) can be customized (appropriate to the location within AEM).

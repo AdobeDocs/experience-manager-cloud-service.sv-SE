@@ -2,9 +2,9 @@
 title: Begränsningar för redigerare
 description: Redigeraren i det beröringsaktiverade användargränssnittet använder övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare.
 exl-id: 6a4f0e43-1076-4da9-95dc-9c5bf83e30d0
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Fasta bakgrundsbilder kanske inte visas som fasta vid bläddring eftersom de är
 
 Höjden 100 % stöds inte för en sidas body-element.
 
-* Du kan komma runt en del av brödtexten genom att&quot;sträcka ut&quot; brödtexten enligt följande:
+* Du kan använda en tillfällig lösning för att implementera en helskärmsbrödtext genom att&quot;sträcka ut&quot; body-elementet enligt följande:
 
 ```xml
 body {

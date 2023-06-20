@@ -2,9 +2,9 @@
 title: Förberedelse för introduktion
 description: Innan introduktionsprocessen börjar finns det ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet.
 exl-id: 86139b1a-c22a-4716-a0f9-cf142cbc6c53
-source-git-commit: 097c17b37cc308dc906cd4af7dc7c5d51862bdfa
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '766'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ När du har läst det här dokumentet kommer du att förstå
 * Hur det avtalet påverkar introduktionsprocessen.
 * Hur du förbereder dig för ditt introduktionssamtal.
 
-Var inte orolig om du inte känner till alla termer som används på den här sidan. De kommer att förklaras i nästa del av resan.
+Var inte orolig om du inte känner till alla termer som används på den här sidan. Villkoren förklaras i nästa del av resan.
 
 ## Video {#video}
 
@@ -48,7 +48,7 @@ När avtalet har undertecknats skickar Adobe ett välkomstmeddelande till de onb
 
 ## Systemetablering {#provisioning}
 
-När avtalet har undertecknats kommer alla AEM molnmiljöer som omfattas av avtalet att etableras automatiskt av Adobe. De här miljöerna kommer också att länkas till dina program i Cloud Manager (mer om det här ämnet senare under resan). Dessa AEM molnmiljöer ingår i varje AEM as a Cloud Service prenumeration och består vanligtvis av minst en produktionsmiljö, en mellanlagringsmiljö och eventuellt en eller flera utvecklings- eller testmiljöer.
+När kontraktet har signerats tillhandahålls alla AEM molnmiljöer som omfattas av avtalet automatiskt av Adobe. De här miljöerna kommer också att länkas till dina program i Cloud Manager (mer om det här ämnet senare under resan). Dessa AEM molnmiljöer ingår i varje AEM as a Cloud Service prenumeration och består vanligtvis av minst en produktionsmiljö, en mellanlagringsmiljö och eventuellt en eller flera utvecklings- eller testmiljöer.
 
 ## Onboarding-samtal {#onboarding-call}
 
@@ -60,7 +60,7 @@ Deltagare i din organisation ska inkludera:
 * Tekniker
 * Din implementeringspartner
 
-Adobe kommer att representeras av
+Adobe representeras av:
 
 * Inflyttningsspecialist
 * Din tekniska kontoansvarige (beroende på vad som är tillämpligt)

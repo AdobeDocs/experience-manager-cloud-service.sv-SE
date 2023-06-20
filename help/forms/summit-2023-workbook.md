@@ -7,9 +7,9 @@ topic-tags: develop
 hide: true
 hidefromtoc: true
 exl-id: e1eb0812-c92e-4a18-aabb-5a70b9e6fc7d
-source-git-commit: 4279b4a880429f535cf341d35ac38c9b4dc55ae2
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '3360'
+source-wordcount: '3359'
 ht-degree: 3%
 
 ---
@@ -267,7 +267,6 @@ Konfigurera lokal databas för temat:
    > * Om du får ett meddelande där du ombeds att uppdatera npm via `npm notice Run npm nstall -g npm@9.6.0`ignorera meddelandet.
    > * Kör inte andra npm-kommandon om inte annat anges i arbetsboken.
 
-
 1. Kör nu följande kommando för att förhandsgranska formuläret.
 
    ```Shell
@@ -366,7 +365,7 @@ Så här återger du formuläret som finns i molntjänstens publiceringsmiljö:
 
    * **AEM_FORM_PATH**: Ange sökvägen till det anpassade formulär som skapades i föregående lektion. Till exempel, `/content/forms/af/registration/`
 
-      ![](/help/forms/assets/screenshot202023-03-0820at202.49.1820pm.png)
+     ![](/help/forms/assets/screenshot202023-03-0820at202.49.1820pm.png)
 
 1. Öppna kommandofönstret, kontrollera att du befinner dig i katalogen response-starter-kit-aem-headless-forms och kör följande kommando:
 
@@ -516,7 +515,7 @@ Så här återger du formuläret som finns i molntjänstens publiceringsmiljö:
 
    * **AEM_FORM_PATH**: Ange sökvägen till det anpassade formulär som skapades i föregående lektion. Till exempel /content/forms/af/registration/
 
-      ![](/help/forms/assets/screenshot2028126929.png)
+     ![](/help/forms/assets/screenshot2028126929.png)
 
 1. Öppna kommandofönstret och kontrollera att du är vid **response-starter-kit-aem-headless-forms** och kör följande kommando:
 

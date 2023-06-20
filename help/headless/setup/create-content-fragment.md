@@ -2,9 +2,9 @@
 title: Skapa innehållsfragment - Headless-inställningar
 description: Lär dig använda AEM innehållsfragment för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
 exl-id: a227ae2c-f710-4968-8a00-bfe48aa66145
-source-git-commit: d6038920a5866c19a94980cc14fa46dec48daf51
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Innehållsfragment innehåller strukturerat innehåll och kan levereras i JSON-f
 
 ## Så här skapar du ett innehållsfragment {#how-to-create-a-content-fragment}
 
-Innehållsförfattare skapar valfritt antal innehållsfragment som representerar det innehåll de skapar. Detta kommer att vara deras huvuduppgift i AEM. I den här guiden behöver vi bara skapa en.
+Innehållsförfattare skapar valfritt antal innehållsfragment som representerar det innehåll de skapar. Detta är deras huvuduppgift i AEM. I den här guiden behöver vi bara skapa en.
 
 1. Logga in AEM as a Cloud Service och välj **Navigering** -> **Innehållsfragment**.
 

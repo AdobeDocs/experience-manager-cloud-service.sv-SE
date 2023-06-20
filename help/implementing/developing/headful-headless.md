@@ -2,9 +2,9 @@
 title: Headless and Headless in AEM
 description: AEM kan implementeras i en headful och headless-modell, men valet är inte binärt. AEM erbjuder flexibiliteten att utnyttja fördelarna med båda modellerna i ett och samma projekt.
 exl-id: 709850ca-7757-47ab-9625-f411121cde2c
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Single Page Applications (SPA) är ofta målet för innehåll som levereras head
 
 ## Exempel på Web Shop {#web-shop-example}
 
-Säg att du har en befintlig webbutik för ditt företag som SPA. Där finns all produktinformation och alla bilder. Sedan introducerar ni AEM för att stärka era marknadsföringssatsningar, till exempel reklamwebbplatser, bloggar och kampanjinnehåll. Hur integrerar man de två? AEM har flera alternativ:
+Säg att du har en befintlig webbutik för ditt företag som SPA. Där finns all produktinformation och alla bilder. Sedan introducerar ni AEM för att stärka era marknadsföringssatsningar, som reklamwebbplatser, bloggar och kampanjinnehåll. Hur integrerar man de två? AEM har flera alternativ:
 
 * **Låt systemen fungera oberoende av varandra.**
 * **Tillhandahåll webbbutiken med begränsat innehåll från AEM via GraphQL.** Innehåll kan skapas av författare i AEM, men bara ses via SPA.

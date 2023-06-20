@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag sökfilter för Inkorgen?
 description: Lär dig hur du konfigurerar sökfilter för inkorgsobjekt.
 exl-id: 0e82d7ad-7a82-4d67-8eb8-9af6936652d8
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---

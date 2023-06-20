@@ -2,9 +2,9 @@
 title: Versionsinformation om Adobe Experience Manager as a Cloud Service 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
 exl-id: fd6ebe2b-6d98-498c-a45d-b9a9c34e6be7
-source-git-commit: 856266faf4cb99056b1763383d611e9b2c3c13ea
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
@@ -60,11 +60,11 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * En användare i *Företagsägare* rollen i Cloud Manager kan nu ta bort ett sandlådeprogram från landningssidan (via snabbåtgärdsknappen på programkortet) eller inifrån programmet.
 
-   Se [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html) för mer information.
+  Se [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html) för mer information.
 
 * En användare av sandlådeprogrammet i *Företagsägare* eller *Distributionshanteraren* rollen i Cloud Manager kan nu ta bort sin produktionsmiljö och scenmiljö som angetts via användargränssnittet i Cloud Manager. Alternativet Ta bort är nu tillgängligt både från miljökortet på **Programöversikt** sidan och **Miljö** sida. Om du väljer borttagningsalternativet för antingen produktion eller scen tas även det andra bort i uppsättningen.
 
-   Se [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html) för mer information.
+  Se [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html) för mer information.
 
 * Tips på landningssidan som informerar och instruerar användaren om grundläggande navigering.
 
@@ -72,15 +72,15 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * A **LÄR DIG** sidan är nu tillgänglig i Cloud Manager via den övre navigeringen. Den här sidan innehåller resurser som hjälper användare att lära sig mer om de mest använda arbetsflödena som är relevanta för deras roller i Cloud Manager.
 
-* Sandlådeprogram identifieras nu med en **Sandbox** emblem som ska visas på programkortet på landningssidan samt bredvid programnamnet i **Programöversikt** sida.
+* Sandlådeprogram identifieras nu med en **Sandbox** emblem som visas på programkortet på landningssidan samt bredvid programnamnet i **Programöversikt** sida.
 
 * En användare i rollen SysAdmin har nu tillgång till den plats i Admin Console där användarroller eller behörigheter till Cloud Manager kan hanteras med ett enda klick. A **Hantera åtkomst** finns nu på landningssidan intill **Lägg till program** -knappen.
 
-   Se [SysAdmin-uppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#sysadmin-tasks) för mer information.
+  Se [SysAdmin-uppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#sysadmin-tasks) för mer information.
 
 * En användare i rollen SysAdmin har nu tillgång till författarinstansen med ett klick direkt från Cloud Manager.
 
-   Se [Hantera åtkomst till författarinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem) för mer information.
+  Se [Hantera åtkomst till författarinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem) för mer information.
 
 * Build-loggen innehåller nu en lista över identifierade artefakter, inklusive överhoppade innehållspaket.
 
@@ -176,7 +176,7 @@ Versionen innehåller följande andra förbättringar:
 * Möjlighet att bearbeta om resurser med tillgångsbearbetningsprofiler, ge användarna full kontroll över processen (kör full bearbetning av resurser, bara tillämpa en viss bearbetningsprofil och bestämma om arbetsflödet ska köras efter bearbetning).
 * Sökfrågor returnerar resultat snabbare nu när den underliggande klusterinstansen har startats om bakom scenerna (den inledande sökningen kan ta längre tid i ett sådant fall tidigare).
 * Sortera efter Namn när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten. Se [sökresurser](/help/assets/search-assets.md#sort).
-* Sortera efter&quot;Skapad&quot; (Datum) när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten. Se [sökresurser](/help/assets/search-assets.md#sort).
+* Sortera efter Skapat (Datum) när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten. Se [sökresurser](/help/assets/search-assets.md#sort).
 * Stöd för konvertering av EPS-filer till bilder med hjälp av objektmikrotjänster.
 
 ### Felkorrigeringar {#assets-bug-fixes}

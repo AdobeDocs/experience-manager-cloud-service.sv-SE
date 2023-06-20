@@ -2,9 +2,9 @@
 title: Komma åt och hantera loggar
 description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: a9303c659730022b7417fc9082dedd26d7cbccca
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '270'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ Du kan också avsluta loggar via kommandoradens gränssnitt.
 $ aio cloudmanager:tail-log --programId 5 1884 author aemerror
 ```
 
-För att få tillgång till miljö-ID (1884 i det här exemplet) och tillgängliga service- eller loggnamnsalternativ kan du använda följande kommandon.
+Om du vill hämta miljö-ID (1884 i det här exemplet) och tillgängliga service- eller loggnamnsalternativ kan du använda följande kommandon.
 
 ```shell
 $ aio cloudmanager:list-environments

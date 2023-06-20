@@ -3,9 +3,9 @@ title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service versi
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.7.0
 feature: Release Information
 exl-id: bc8f1a80-867e-423a-9c03-4a53b1ebc57c
-source-git-commit: cc52dfac1e7495d6a792bc7525720695022db8eb
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '429'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Releasedatum för Content Transfer Tool v2.0.12 är 19 juli 2022.
 * För att hjälpa till att felsöka SSL-/TLS-anslutningsproblem under extraheringar kan användarna nu aktivera SSL-loggning.
 * För att underlätta felsökningen av källanslutningsproblem skrivs nu underdomännamn ut i loggarna när anslutningen till Azure misslyckas.
 * För att felsöka problem under förkopiering läggs AzCopy-loggar nu till i extraheringsloggarna när förkopieringen misslyckas.
-* För att undvika inaktuella resultat av typen Kontrollera storlek kan användarna köra kontrollstorlek igen först när en tidigare kontrollstorlek är klar.
+* För att undvika inaktuella resultat av typen Kontrollera storlek kan användare bara köra Kontrollera storlek igen när en tidigare kontrollstorlek har slutförts.
 
 ### Felkorrigeringar {#bug-fixes-ctt}
 

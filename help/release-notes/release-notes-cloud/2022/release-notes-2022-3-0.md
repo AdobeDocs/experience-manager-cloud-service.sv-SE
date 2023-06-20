@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 761f1605-c421-4f3a-8f90-af23f4f047b1
-source-git-commit: 599f924465552b2ef43827da8e139c239e47baed
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 0%
@@ -91,13 +91,13 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 ### Vad är nytt? {#what-is-new-foundation}
 
-* För effektivare och effektivare felsökning av anpassade funktioner i molnmiljöer har vi släppt ett nytt utvecklarverktyg - [Databasläsaren](/help/implementing/developing/tools/repository-browser.md). Det är en lättviktig, skrivskyddad webbläsare i HTML som du kan starta från Developer Console. Få insyn i innehållslagringsplatsen på utgivar-, författar- och förhandsgranskningsnivå - och i alla miljöer, inklusive produktion, scener och utveckling. Bläddra i innehållsstrukturen, visa egenskaper samt förhandsgranska och hämta binärfiler.
+* För effektivare och effektivare felsökning av anpassade funktioner i molnmiljöer har vi släppt ett nytt utvecklarverktyg - [Databasläsaren](/help/implementing/developing/tools/repository-browser.md). Det är en lättviktig, skrivskyddad HTML-webbläsare som du kan starta från Developer Console. Få insyn i innehållslagringsplatsen på utgivar-, författar- och förhandsgranskningsnivå - och i alla miljöer, inklusive produktion, scener och utveckling. Bläddra i innehållsstrukturen, visa egenskaper samt förhandsgranska och hämta binärfiler.
 
-   ![repoblästeranteckningar](/help/release-notes/assets/repobrowserrelnotes.png)
+  ![repoblästeranteckningar](/help/release-notes/assets/repobrowserrelnotes.png)
 
 * Autentiseringsuppgifterna som används för att autentisera API-anrop från server till server (t.ex. för GraphQL API-begäranden) kan nu uppdateras på ett självbetjäningssätt från Developer Console innan de går ut. Se [dokumentation](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) för mer information.
 
-* Underhållsuppgifter för rensning av versioner och granskningslogg som inte tidigare aktiverats kommer att aktiveras för nya miljöer. Se de associerade värdena i [Underhållsaktivitet](/help/operations/maintenance.md) artikel.
+* Underhållsuppgifter för rensning av versioner och granskningsloggar, som inte tidigare hade aktiverats, har nu aktiverats för nya miljöer. Se de associerade värdena i [Underhållsaktivitet](/help/operations/maintenance.md) artikel.
 
 * AEM as a Cloud Service SDK Dispatcher Tools har nu stöd för Mac datorer med M1-chipet
 

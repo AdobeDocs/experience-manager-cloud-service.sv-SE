@@ -4,9 +4,9 @@ description: Ta reda på hur du felsöker de vanligaste MSM-relaterade problemen
 feature: Multi Site Manager
 role: Admin
 exl-id: 50f02f4f-a347-4619-ac90-b3136a7b1782
-source-git-commit: 7c0be1a7bdc9ccb788ba41eb6ee83b89df94f500
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -27,12 +27,12 @@ MSM registrerar flera servrar som kan begäras med väljare på resurs-URL:erna.
 1. `http://<host>:<port>/content/path/to/bluprint/page.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
    * Använd detta på en ritningssida för att hämta listan över alla Live-kopior som är länkade till den, med ytterligare statusinformation för Live Copy.
    * till exempel:
-      `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
+     `http://localhost:4502/content/wknd/language-masters/en.blueprint.json?&maxSize=500&advancedStatus=true&returnRelationships=true&msm%3Atrigger=ROLLOUT`
 
 1. `http://<host>:<port>/content/path/to/livecopy/page.msm.json`
    * Använd detta på Live Copy-sidor för att hämta avancerad information om deras anslutning till deras ritningssidor. Om sidan inte är en Live-kopia returneras ingenting.
    * till exempel:
-      `http://localhost:4502/content/wknd/ca/en.msm.json`
+     `http://localhost:4502/content/wknd/ca/en.msm.json`
 
 Dessa servrar genererar felsökningsloggmeddelanden via `com.day.cq.wcm.msm` loggare som också kan vara till hjälp.
 
@@ -55,7 +55,7 @@ De tidigare servletarna returnerade beräknad information baserat på MSM-specif
 
 Informationen i dessa egenskaper bör återspeglas i användargränssnittet, men vid felsökning kan det vara bra att observera MSM-beteenden direkt i databasen när MSM-åtgärder utförs.
 
-Att känna till dessa egenskaper kan också vara användbart för att fråga databasen och ta reda på uppsättningar med sidor som är i vissa lägen. Till exempel:
+Att känna till dessa egenskaper kan också vara användbart så att du kan söka i databasen och ta reda på vilka siduppsättningar som är i olika lägen. Till exempel:
 
 * `select * from cq:LiveSync` returnerar alla Live Copy-rotsidor.
 
@@ -82,9 +82,9 @@ Du kan också:
 
 Om en ritningssida introduceras uppdaterar den antingen sin Live Copy-sida eller skapar en ny Live Copy-sida om den inte finns än (t.ex. när den introduceras för första gången eller när Live Copy-sidan tas bort manuellt).
 
-I det senare fallet om en sida utan `cq:LiveRelationship` -egenskapen finns med samma namn. Sidans namn ändras därefter innan sidan Live Copy skapas.
+I det senare fallet om en sida utan `cq:LiveRelationship` egenskapen finns med samma namn, och sidans namn ändras därefter innan sidan Live Copy skapas.
 
-Som standard förväntas en länkad Live Copy-sida, till vilken uppdateringarna av ritningarna kommer att rullas ut, eller ingen sida på, när en Live Copy-sida skapas.
+Som standard förväntas en länkad Live Copy-sida, till vilken uppdateringarna av ritningarna rullas ut, eller ingen sida på, när en Live Copy-sida skapas.
 
 Om en fristående sida hittas väljer MSM att byta namn på sidan och skapa en separat länkad Live Copy-sida.
 

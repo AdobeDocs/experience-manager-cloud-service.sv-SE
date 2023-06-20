@@ -2,9 +2,9 @@
 title: Säkerhetskopiera och återställ i AEM as a Cloud Service
 description: Säkerhetskopiera och återställ i AEM as a Cloud Service
 exl-id: 469fb1a1-7426-4379-9fe3-f5b0ebf64d74
-source-git-commit: eec03acf5d208236ddac338134f95fb3aaa5ee26
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_backuprestore"
 >title="Säkerhetskopiera och återställ"
->abstract="AEM as a Cloud Service kan återställa en kunds fullständiga program (kod och innehåll) till specifika, förutbestämda tider de senaste sju dagarna, vilket ersätter det som fanns i produktionen. Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll. De senaste data mellan tidpunkten för den återställda säkerhetskopieringen och den aktuella kommer att gå förlorade. Mellanlagring återställs också till den gamla versionen."
+>abstract="AEM as a Cloud Service kan återställa en kunds fullständiga program (kod och innehåll) till specifika, förutbestämda tider de senaste sju dagarna, vilket ersätter det som fanns i produktionen. Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll. De senaste data som finns mellan tidpunkten för den återställda säkerhetskopieringen och den aktuella säkerhetskopian går förlorade. Mellanlagring återställs också till den gamla versionen."
 
 Om innehåll eller data skadas kan AEM as a Cloud Service återställa en kunds fullständiga program (kod och innehåll) till specifika, förutbestämda tider de senaste sju dagarna och ersätta det som fanns i produktionen.
 Om en kunds distribution, dvs. den distribuerade programkoden antingen är trasig eller felfri, är det bättre att åtgärda den och återställa den till en ny version i stället för att återställa den från en säkerhetskopia. Säkerhetskopieringen utförs på ett sätt som inte påverkar programmets körningsprestanda.
 
 >[!CAUTION]
 >
->Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll. De senaste data mellan tidpunkten för den återställda säkerhetskopieringen och den aktuella kommer att gå förlorade. Mellanlagring återställs också till den gamla versionen.
+>Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll. De senaste data som finns mellan tidpunkten för den återställda säkerhetskopieringen och den aktuella säkerhetskopian går förlorade. Mellanlagring återställs också till den gamla versionen.
 
 ## Användning {#how-to-use}
 
@@ -34,7 +34,7 @@ AEM as a Cloud Service stöder:
 * 24 timmars tidsåterställning, vilket innebär att systemet kan återställas till valfri punkt under de senaste 24 timmarna.
 * Återställ från en viss, Adobe-definierad tidsstämpel som tagits två gånger dagligen de senaste 7 dagarna.  Alla replikeringsmeddelanden (som tas bort, uppdateras, skapas) bevaras.
 
-I samtliga fall hämtas den anpassade kodversionen från den senaste distributionen som lyckades före återställningspunkten.
+I samtliga fall är den anpassade kodversionen hämtad från den senast slutförda distributionen före återställningspunkten.
 
 Återställningstidens mål kan variera, men som en allmän riktlinje tar återställningssekvensen mellan 60 och 90 minuter i genomsnitt beroende på flera faktorer, till exempel databasstorlek. Förhandsgranskningsmiljöer och utgivare i flera regioner kan förlänga återställningstiden.
 

@@ -4,9 +4,9 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: f57a856b-0932-4e8f-be59-a19fe692e2ab
-source-git-commit: 77ae5d79ecb8a11a230cee461f247ffe0e9891a5
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1417'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Beroende på organisationens behov kan samma användare ha båda rollerna.
 Innan du börjar de uppgifter som beskrivs i det här dokumentet som utvecklare eller distributionshanterare måste du se till att systemadministratören har slutfört alla steg i den här introduktionsresan. Detta innebär att
 
 * Systemadministratören har tilldelat utvecklare och distributionsansvariga till sina respektive produktprofiler.
-* Utvecklare måste dessutom tilldelas **AEM** eller **AEM administratörer** produktprofiler för att även använda AEM.
+* Utvecklare måste dessutom tilldelas **AEM** eller **AEM administratörer** produktprofiler som också använder AEM.
 * Molnresurser har konfigurerats.
 
 ## Åtkomst till Git {#accessing-git}
@@ -127,7 +127,7 @@ Du kan se information om körningen genom att klicka på ellipsknappen igen och 
 
 Grattis! Nu har du distribuerat kod från din Git-databas till en icke-produktionsmiljö!
 
-## What’s Next {#whats-next}
+## What&#39;s Next {#whats-next}
 
 Nu när du har läst det här dokumentet bör du:
 

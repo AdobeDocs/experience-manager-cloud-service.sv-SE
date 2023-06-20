@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 775332b5-24ce-430e-97a2-6eeb80877c64
-source-git-commit: a2c844d6f72c22ed085690ff98572a52e97de40d
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * Innehållsmodeller, förbättrad datatyp för taggar - det går nu att konfigurera datatypen Tags så att du kan skapa en eller flera taggar.
 
-* Innehållsmodeller, ny flik-platshållardatatyp - den nya tabbplatshållardatatypen gör det möjligt att gruppera datatyper i avsnitt som återges under flikar i innehållsfragmentredigeraren.
+* Innehållsmodeller, ny datatyp för platshållare på flik - den nya datatypen för platshållare på flikar gör det möjligt att gruppera datatyper i avsnitt som återges under flikar i innehållsfragmentredigeraren.
 
 ### Felkorrigeringar i [!DNL Sites] {#bug-fixes-sites}
 
@@ -67,7 +67,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * När du redigerar ett metadataschema läggs en datatyp till som ger ett friformstextområde i metadataredigeraren. Användare kan använda det här textområdet för att ange frihandstext som metadata för en resurs. Se [metadatamatchredigerare](/help/assets/metadata-schemas.md).
 
-* Metadata för många resurser kan importeras gruppvis med hjälp av en CSV-fil och kan exporteras till en CSV-fil. Standarddatumformatet är nu `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`. Användare kan utnyttja ett annat format genom att uppdatera kolumnrubriken. Lägg till exempel `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX` som kolumnrubrik i CSV-filen i stället för ordet `Date`.
+* Metadata för många resurser kan importeras gruppvis med hjälp av en CSV-fil och kan exporteras till en CSV-fil. Standarddatumformatet är nu `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`. Användare kan använda ett annat format genom att uppdatera kolumnrubriken. Lägg till exempel `Date: DateFormat: yyyy-MM-dd'T'HH:mm:ssXXX` som kolumnrubrik i CSV-filen i stället för ordet `Date`.
 
 * När du bläddrar bland resurser i kolumnvyn visas en visuell indikator med statusen Godkänd eller Avvisad för varje resurs.
 
@@ -95,25 +95,25 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * **Använd autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverad Adaptive Forms**
 
-   Adobe Sign Government ID-process bygger på avancerade maskininlärningsalgoritmer och ger företag över hela världen möjlighet att säkra en högkvalitativ autentisering av mottagarens identitet. Nu kan du använda autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade Adaptive Forms.
+  Adobe Sign Government ID-process drivs av avancerade maskininlärningsalgoritmer och ger företag över hela världen möjlighet att säkra en högkvalitativ autentisering av mottagarens identitet. Nu kan du använda autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade Adaptive Forms.
 
-   Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [överföra bilden av ett foto på ett foto av ett foto av ett foto som utfärdats av en myndighet (körkort, nationellt id, pass),](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html)och utvärderar sedan dokumentet för att säkerställa att det är autentiskt.
+  Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [ladda upp bilden av ett foto på ett foto av ett foto av ett foto som utfärdats av en myndighet (körkort, nationellt ID, pass)](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html)och utvärderar sedan dokumentet för att säkerställa att det är autentiskt.
 
 * **Stöd för att använda signeringsfunktionen i formulär för asynkrona inskickade formulär med adaptiv formatering**
 
-   Nu kan du använda signeringsfunktionen i formulär för asynkrona, anpassningsbara formulärinskickade formulär. Du kan även bädda in ett anpassat formulär i en [!DNL Experience Manager Sites] och använda signeringsfunktionen i formulär för att skicka formulär med adaptiv form.
+  Nu kan du använda signeringsfunktionen i formulär för asynkrona, anpassningsbara formulärinskickade formulär. Du kan även bädda in ett anpassat formulär i en [!DNL Experience Manager Sites] och använda signeringsfunktionen i formulär för att skicka formulär med adaptiv form.
 
 * **Stöd för att använda en variabel för att ange en bifogad fil när ett adaptivt formulär fylls i i förväg för steget Tilldela uppgift**
 
-   När du fyller i ett adaptivt formulär i förväg för steget Tilldela uppgift kan du nu använda en dokumenttypsvariabel för att välja en bifogad inmatning för det adaptiva formuläret.
+  När du fyller i ett adaptivt formulär i förväg för steget Tilldela uppgift kan du nu använda en dokumenttypsvariabel för att välja en bifogad inmatning för det adaptiva formuläret.
 
 * **Stöd för att använda det literala alternativet för att ange ett värde för en JSON-typvariabel**
 
-   Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med det literala alternativet kan du ange en JSON i form av en sträng.
+  Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med det literala alternativet kan du ange en JSON i form av en sträng.
 
 * **Använd lokal utvecklingsmiljö för att skapa en dokumentfil (DoR)**
 
-   Du kan använda en XDP-fil som en dokumentmall på Cloud Service och AEM Forms as a Cloud Service SDK (lokal utvecklingsmiljö). Tidigare var stödet begränsat till endast Cloud Service.
+  Du kan använda en XDP-fil som en dokumentmall på Cloud Service och AEM Forms as a Cloud Service SDK (lokal utvecklingsmiljö). Tidigare var stödet begränsat till endast Cloud Service.
 
 ### Felkorrigeringar i [!DNL Forms] {#bug-fixes-forms}
 
@@ -165,7 +165,7 @@ Nästa version är planerad till 6 maj 2021.
 
 * Projekt i Adobe I/O Developer Console som har skapats i Cloud Manager kan inte längre redigeras eller tas bort oavsiktligt.
 
-* När en användare lägger till en ny miljö informeras de om att när en miljö väl har skapats kan den inte flyttas till en annan region.
+* När en användare lägger till en ny miljö informeras de om att när en miljö har skapats kan den inte flyttas till en annan region.
 
 * Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM version 2021.03.5104.20210328T185548Z eller senare.
 

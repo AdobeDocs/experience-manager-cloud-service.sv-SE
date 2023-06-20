@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Compute Microservices,Workflow,Asset Processing
 role: Architect,Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
 source-wordcount: '2868'
 ht-degree: 1%
@@ -161,7 +161,7 @@ Använd bearbetningsprofiler på mappar på något av följande sätt:
 
 * Administratörer kan välja en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. Den öppnar en innehållsläsare där du kan navigera till specifika mappar, markera dem och bekräfta programmet för profilen.
 * Användare kan välja en mapp i Assets-användargränssnittet och använda **[!UICONTROL Properties]** åtgärd för att öppna fönstret för mappegenskaper klickar du på **[!UICONTROL Asset Processing]** och i [!UICONTROL Processing Profile] väljer du lämplig bearbetningsprofil för den mappen. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
-   ![Använda bearbetningsprofil på en mapp från fliken Resursegenskaper](assets/folder-properties-processing-profile.png)
+  ![Använda bearbetningsprofil på en mapp från fliken Resursegenskaper](assets/folder-properties-processing-profile.png)
 
 * Användarna kan välja mappar eller specifika resurser i Assets-användargränssnittet för att tillämpa en bearbetningsprofil och sedan välja ![ikon för ombearbetning av resurser](assets/do-not-localize/reprocess-assets-icon.png) **[!UICONTROL Reprocess Assets]** från de tillgängliga alternativen överst.
 
@@ -287,7 +287,6 @@ Följ stegen som beskrivs i [använda en arbetsflödesmodell i en mapp](#apply-w
 >* [Förstå utbyggbarhet och när den ska användas](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html).
 >* [Skapa anpassade program](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html).
 >* [MIME-typer som stöds för olika användningsområden](/help/assets/file-format-support.md).
-
 
 <!-- TBD: 
 * How/where can admins check what's already configured and provisioned.

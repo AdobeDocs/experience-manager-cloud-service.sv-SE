@@ -3,9 +3,9 @@ title: Beständiga GraphQL-frågor
 description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: c3d7cd591bce282bb4d3b5b5d0ee2e22fd337a83
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1681'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,10 @@ Om du till exempel vill skapa en beständig fråga specifikt för WKND-platskonf
 
 Om det till exempel finns en viss fråga som heter `my-query`, som använder en modell `my-model` från platskonfigurationen `my-conf`:
 
-* Du kan skapa en fråga med `my-conf` en specifik slutpunkt, och därefter sparas frågan enligt följande:
-   `/conf/my-conf/settings/graphql/persistentQueries/my-query`
-* Du kan skapa samma fråga med `global` slutpunkten, men frågan sparas sedan enligt följande:
-   `/conf/global/settings/graphql/persistentQueries/my-query`
+* Du kan skapa en fråga med `my-conf` en specifik slutpunkt, och därefter sparas frågan så här:
+  `/conf/my-conf/settings/graphql/persistentQueries/my-query`
+* Du kan skapa samma fråga med `global` slutpunkt, men frågan sparas sedan som följer:
+  `/conf/global/settings/graphql/persistentQueries/my-query`
 
 >[!NOTE]
 >
@@ -363,14 +363,14 @@ Standardkonfigurationen för OSGi för publiceringsinstanser:
 
 * läser Cloud Manager-variabler om de är tillgängliga:
 
-   | OSGi-konfigurationsegenskap | läser detta | Cloud Manager-variabel |
-   |--- |--- |--- |
-   | `cacheControlMaxAge` | läsningar | `graphqlCacheControl` |
-   | `surrogateControlMaxAge` | läsningar | `graphqlSurrogateControl` |
-   | `surrogateControlStaleWhileRevalidate` | läsningar | `graphqlStaleWhileRevalidate` |
-   | `surrogateControlStaleIfError` | läsningar | `graphqlStaleIfError` |
+  | OSGi-konfigurationsegenskap | läser detta | Cloud Manager-variabel |
+  |--- |--- |--- |
+  | `cacheControlMaxAge` | läsningar | `graphqlCacheControl` |
+  | `surrogateControlMaxAge` | läsningar | `graphqlSurrogateControl` |
+  | `surrogateControlStaleWhileRevalidate` | läsningar | `graphqlStaleWhileRevalidate` |
+  | `surrogateControlStaleIfError` | läsningar | `graphqlStaleIfError` |
 
-   {style="table-layout:auto"}
+  {style="table-layout:auto"}
 
 * Om den inte är tillgänglig använder OSGi-konfigurationen [standardvärden för publiceringsinstanser](#publish-instances).
 
@@ -386,13 +386,13 @@ Du kan [konfigurera OSGi-inställningarna](/help/implementing/deploying/configur
 
 Fältet `Respond with application/graphql-response+json` (`responseContentTypeGraphQLResponseJson`) kan definieras enligt behov:
 
-* `false` (standardvärde): Det spelar ingen roll om den beständiga frågan lyckas eller inte. The `/execute.json/persisted-query` returnerar statuskoden `200` och `Content-Type` returnerad rubrik `application/json`.
+* `false` (standardvärde): Det spelar ingen roll om den beständiga frågan lyckas eller inte. The `/execute.json/persisted-query` returnerar statuskoden `200` och `Content-Type` header returned is `application/json`.
 
-* `true`: Slutpunkten returnerar `400` eller `500` om det finns någon form av fel när den beständiga frågan körs. Även den returnerade `Content-Type` kommer att `application/graphql-response+json`.
+* `true`: Slutpunkten returnerar `400` eller `500` om det finns någon form av fel när den beständiga frågan körs. Dessutom returneras `Content-Type` är `application/graphql-response+json`.
 
-   >[!NOTE]
-   >
-   >Mer information finns på https://graphql.github.io/graphql-over-http/draft/#sec-Status-Codes
+  >[!NOTE]
+  >
+  >Mer information finns på https://graphql.github.io/graphql-over-http/draft/#sec-Status-Codes
 
 ## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
 
@@ -438,7 +438,7 @@ Så här skapar du ett paket:
 1. Skapa ett nytt paket genom att trycka **Skapa paket**. Då öppnas en dialogruta där du kan definiera paketet.
 1. I dialogrutan Paketdefinition, under **Allmänt** ange **Namn** som &quot;wknd-persistent-queries&quot;.
 1. Ange ett versionsnummer som &quot;1.0&quot;.
-1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. Till exempel `wknd` konfiguration den fullständiga sökvägen kommer att `/conf/wknd/settings/graphql/persistentQueries`.
+1. Under **Filter** lägg till en ny **Filter**. Använd Sökväg för att välja `persistentQueries` under konfigurationen. För `wknd` konfiguration, den fullständiga sökvägen är `/conf/wknd/settings/graphql/persistentQueries`.
 1. Tryck **Spara** för att spara den nya paketdefinitionen och stänga dialogrutan.
 1. Tryck på **Bygge** i den nyligen skapade paketdefinitionen.
 

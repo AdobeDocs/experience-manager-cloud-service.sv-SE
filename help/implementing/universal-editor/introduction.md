@@ -2,9 +2,9 @@
 title: Introduktion till Universal Visual Editor
 description: Se hur den universella Visual Editor (alias. Universal Editor) möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,11 @@ Den universella redigeraren kan användas för alla implementeringar, för vilke
 
 ### Alla implementeringar {#any-implementation}
 
-Eftersom upplevelserna kan byggas på många olika sätt kan alla implementeringar utnyttja den universella redigeraren så att författarna kan redigera i sitt sammanhang.
+Eftersom upplevelser kan byggas på många olika sätt kan alla implementeringar använda den universella redigeraren så att författare kan redigera i sitt sammanhang.
 
 Användare tror ofta att en headless-implementering begränsar författarens möjlighet att redigera allt innehåll i ett formulärbaserat användargränssnitt, men detta stämmer inte med den universella redigeraren
 
-Kraven för att implementeringen ska kunna utnyttja den universella redigeraren är mycket enkla och har stöd för:
+Kraven för en implementering som ska använda den universella redigeraren är raka framifrån och har stöd för följande:
 
 * **Valfri arkitektur** - Återgivning på serversidan, edge-side-återgivning, rendering på klientsidan osv.
 * **Alla ramverk** - Vanilla AEM, eller andra ramverk från tredje part som React, Next.js, Angular osv.
@@ -57,7 +57,7 @@ Genom att frikoppla redigeringsupplevelsen från ett visst innehållsleveranssys
 
 ![The value of the Universal Editor](assets/value.png)
 
-* **Leverera exceptionella upplevelser** - För att yrkesutövare ska kunna skapa en övertygande upplevelse för besökarna kan de som arbetar med den universella redigeraren skapa och redigera innehållet i förhandsgranskningssammanhang. På så sätt kan de skapa innehåll som passar upplevelsens design och som utgör en meningsfull resa för besökarna.
+* **Leverera exceptionella upplevelser** - För att yrkesutövare ska kunna skapa en övertygande upplevelse för besökare kan yrkesutövare skapa och redigera innehållet i förhandsvisningssammanhang. På så sätt kan de skapa innehåll som passar upplevelsens design och som utgör en meningsfull resa för besökarna.
 * **Öka innehållshastigheten** - För att effektivisera yrkesutövarnas arbetsflöde tillåter den universella redigeraren redigering av innehåll i förhandsgranskningen som vägledning för användarna genom att endast visa de alternativ som är relevanta för det sammanhanget och som gör arbetsflödet oberoende av innehållskällorna.
 * **Avancerad utvecklarupplevelse** - För att stödja heterogena applikationslandskap i verkligheten är den universella redigeraren helt fristående och teknikberoende, vilket gör att utvecklare kan använda den teknologi de föredrar för att implementera upplevelsen.
 

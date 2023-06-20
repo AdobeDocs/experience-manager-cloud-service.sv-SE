@@ -4,9 +4,9 @@ description: Lär dig hur AEM webbplatsmallar kan användas för att fördefinie
 feature: Administering
 role: Admin
 exl-id: 42eec922-b02e-4f2c-8107-7336192919c7
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Mallarna är kraftfulla eftersom de både kan återanvändas och anpassas. Och e
 >
 >AEM webbplatsmallar ska inte blandas ihop med [sidmallar.](/help/sites-cloud/authoring/features/templates.md) Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
 >
->AEM webbplatsmallar ska inte blandas ihop med [AEM webbplatsteman.](site-themes.md) AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM platstema för att möjliggöra [skapa webbplatser snabbt.](create-site.md)
+>AEM webbplatsmallar ska inte blandas ihop med [AEM webbplatsteman.](site-themes.md) AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt.](create-site.md)
 
 ## Lägga till en platsmall i AEM {#adding}
 

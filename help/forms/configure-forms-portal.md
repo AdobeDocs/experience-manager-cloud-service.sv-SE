@@ -2,9 +2,9 @@
 title: Skapa en Forms Portal på en Experience Manager Sites-sida
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: f22554450d2eb1f4948f749ba00f78b568ee308f
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Så här konfigurerar du Unified Storage Connector för AEM arbetsflöden:
 
 ## Aktivera Forms Portal-komponenter {#enable-forms-portal-components}
 
-Om du vill använda en huvudkomponent (inklusive färdiga portalkomponenter) på en Adobe Experience Manager (AEM) webbplats måste du skapa en proxykomponent och aktivera den för din webbplats. Information om hur du skapar en proxykomponent och aktiverar portalkomponenter finns i [Använda kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=en#create-proxy-components).
+Om du vill använda en huvudkomponent (inklusive färdiga portalkomponenter) på en Adobe Experience Manager-webbplats (AEM) måste du skapa en proxykomponent och aktivera den för din webbplats. Information om hur du skapar en proxykomponent och aktiverar portalkomponenter finns i [Använda kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=en#create-proxy-components).
 
 När en portalkomponent är aktiverad kan du använda den i författarinstansen av din webbplatssida.
 

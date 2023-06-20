@@ -2,9 +2,9 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
-source-git-commit: f201e8bf8a44db6b408edec5b77cc814c7e87abb
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 
 >[!TIP]
 >
->Alla AEM ska utnyttja [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+>Alla AEM ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ### Vad är en SPA? {#what-is-a-spa}
 
@@ -94,10 +94,9 @@ Genom att återge på klientsidan reagerar sidelementen snabbare, och besökaren
 >Mer information om design, arkitektur och tekniska arbetsflöden i SPA Editor finns i artikeln:
 >* [SPA](editor-overview.md).
 
-
 ## Innehållsredigering med SPA {#content-editing-experience-with-spa}
 
-När en SPA har byggts för att dra nytta av den AEM SPA redigeraren märker innehållsförfattaren ingen skillnad när du redigerar och skapar innehåll. Vanliga AEM är tillgängliga och inga ändringar i författarens arbetsflöde krävs.
+När en SPA har byggts för att använda AEM SPA Editor märker innehållsförfattaren ingen skillnad när innehållet redigeras och skapas. Vanliga AEM är tillgängliga och inga ändringar i författarens arbetsflöde krävs.
 
 1. Redigera WKND SPA Project-appen i AEM.
 
@@ -242,7 +241,7 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
 ## Headless and Headless in AEM {#headful-headless}
 
-SPA kan aktiveras med flexibla integreringsnivåer i AEM, inklusive SPA som utvecklats och underhålls utanför AEM. Dessutom kan SPA utnyttjas inom AEM och AEM för att leverera innehåll till ytterligare slutpunkter utan problem.
+SPA kan aktiveras med flexibla integreringsnivåer i AEM, inklusive SPA som utvecklats och underhålls utanför AEM. Dessutom kan SPA användas inom AEM samtidigt som man använder AEM för att leverera innehåll till ytterligare slutpunkter utan huvud.
 
 >[!TIP]
 >

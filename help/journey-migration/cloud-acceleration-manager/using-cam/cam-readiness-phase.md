@@ -2,9 +2,9 @@
 title: Beredningsfas i molnaccelerationshanteraren
 description: Den här sidan innehåller en översikt över beredskapsfasen i Cloud Acceleration Manager.
 exl-id: 2583985b-0358-433c-9d31-38e2c60dc3dc
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1055'
 ht-degree: 4%
 
 ---
@@ -83,7 +83,6 @@ Följ stegen nedan:
    >* Alternativet **Spara som PDF** rekommenderas och stöds för ovanstående funktioner.
    >* Om webbläsarens utskriftsknapp används skrivs bara en sida ut.
 
-
    ![bild](/help/journey-migration/best-practices-analyzer/assets/bpa-printpreview2.png)
 
 ### Använda Visa trendlinje {#trendline-view-cam}
@@ -121,7 +120,6 @@ Följ stegen nedan för att visa rapporter från trendlinjealternativet:
    >Du ser två diagram som visar trenden för:
    >1. **Trend för rapportresultat**
    >1. **Anpassade komponenter och malltrend**
-
    >
    >Du kan lägga till eller ändra den grafiska vyn via listrutan enligt bilden nedan:
    >![bild](/help/journey-migration/cloud-acceleration-manager/assets/reports-bpa1.png)
@@ -138,7 +136,6 @@ Utforska följande kort som finns på sidan Best Practices Analysis Report:
 >* klicka på varje kort för att öppna den tillhörande fliken
 >* bokmärk alla rapportflikar (inklusive filtrering) för delning eller framtida hämtning
 >* använda informationsikonen för att visa information om varje rapportsökning
-
 
 #### Rapportegenskaper {#report-properties}
 
@@ -183,7 +180,7 @@ Du kan granska följande information på den här fliken:
 * Bedömning
 * Överväganden vid innehållsmigrering
 
-   ![bild](/help/journey-migration/cloud-acceleration-manager/assets/migration-complexity-1.png)
+  ![bild](/help/journey-migration/cloud-acceleration-manager/assets/migration-complexity-1.png)
 
 ## Använda Planera och konfigurera kort {#planning-setup}
 

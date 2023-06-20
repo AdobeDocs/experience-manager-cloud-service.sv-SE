@@ -2,9 +2,9 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2157'
+source-wordcount: '2154'
 ht-degree: 11%
 
 ---
@@ -60,21 +60,21 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 * **Mobil enhet (till exempel iPad)**
 
-   Komponentwebbläsaren täcker hela sidan som redigeras.
+  Komponentwebbläsaren täcker hela sidan som redigeras.
 
-   Om du vill lägga till en komponent på sidan trycker du på och håller ned den nödvändiga komponenten och flyttar den åt höger. Komponentwebbläsaren stängs och sidan visas igen, där du kan placera komponenten.
+  Om du vill lägga till en komponent på sidan trycker du på och håller ned den nödvändiga komponenten och flyttar den åt höger. Komponentwebbläsaren stängs och sidan visas igen, där du kan placera komponenten.
 
-   ![Komponentbläddraren på mobilen](/help/sites-cloud/authoring/assets/component-browser-mobile.png)
+  ![Komponentbläddraren på mobilen](/help/sites-cloud/authoring/assets/component-browser-mobile.png)
 
 * **Skrivbordsenhet**
 
-   Komponentwebbläsaren öppnas till vänster i fönstret.
+  Komponentwebbläsaren öppnas till vänster i fönstret.
 
-   Om du vill lägga till en komponent på sidan klickar du på den önskade komponenten och drar den till önskad plats.
+  Om du vill lägga till en komponent på sidan klickar du på den önskade komponenten och drar den till önskad plats.
 
-   ![Komponentbläddraren på skrivbordet](/help/sites-cloud/authoring/assets/component-browser-desktop.png)
+  ![Komponentbläddraren på skrivbordet](/help/sites-cloud/authoring/assets/component-browser-desktop.png)
 
-   Komponenterna representeras av
+  Komponenterna representeras av
 
    * Komponentnamn
    * Komponentgrupp (i grått)
@@ -82,20 +82,20 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
       * Standardkomponentens ikoner är monokroma.
       * Förkortningar är alltid de två första tecknen i komponentnamnet.
 
-   I det övre verktygsfältet i **Komponenter** webbläsare:
+  I det övre verktygsfältet i **Komponenter** webbläsare:
 
    * Filtrera komponenter efter namn.
    * Begränsa visningen till en viss grupp med listrutan.
 
-   Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **Innehållsfragment**:
+  Om du vill ha en mer detaljerad beskrivning av komponenten kan du klicka eller trycka på informationsikonen bredvid komponenten i **komponentläsaren** (om den är tillgänglig). För **Innehållsfragment**:
 
-   ![Information om komponentwebbläsare](/help/sites-cloud/authoring/assets/component-browser-information.png)
+  ![Information om komponentwebbläsare](/help/sites-cloud/authoring/assets/component-browser-information.png)
 
-   Mer information om de komponenter som finns tillgängliga finns i [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md).
+  Mer information om de komponenter som finns tillgängliga finns i [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md).
 
 >[!NOTE]
 >
->En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan också vara fallet för ett litet skrivbordsfönster.
+>En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan även vara fallet för ett litet skrivbordsfönster.
 
 ## Resursläsaren {#assets-browser}
 
@@ -136,19 +136,19 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 * **Mobil enhet**
 
-   Resursläsaren täcker hela sidan som redigeras.
+  Resursläsaren täcker hela sidan som redigeras.
 
-   Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den nödvändiga komponenten.
+  Om du vill lägga till en resurs på sidan håller du pekaren över den resurs du behöver och sedan flyttar den åt höger. Resursläsaren stängs och sidan visas igen, där du kan lägga till resursen i den nödvändiga komponenten.
 
-   ![Resursläsaren på mobilen](/help/sites-cloud/authoring/assets/assets-browser-mobile.png)
+  ![Resursläsaren på mobilen](/help/sites-cloud/authoring/assets/assets-browser-mobile.png)
 
 * **Skrivbordsenhet**
 
-   Resursläsaren öppnas till vänster i fönstret.
+  Resursläsaren öppnas till vänster i fönstret.
 
-   Om du vill lägga till en resurs på sidan klickar du på den önskade resursen och drar den till önskad komponent eller plats.
+  Om du vill lägga till en resurs på sidan klickar du på den önskade resursen och drar den till önskad komponent eller plats.
 
-   ![Resursläsaren på skrivbordet](/help/sites-cloud/authoring/assets/assets-browser-desktop.png)
+  ![Resursläsaren på skrivbordet](/help/sites-cloud/authoring/assets/assets-browser-desktop.png)
 
 >[!NOTE]
 >
@@ -182,13 +182,13 @@ Om du klickar på komponenten markeras komponenten i sidredigeraren. Vilka åtg�
 
 * En grundsida:
 
-   ![Innehållsträdet markerat](/help/sites-cloud/authoring/assets/content-tree-highlighted.png)
+  ![Innehållsträdet markerat](/help/sites-cloud/authoring/assets/content-tree-highlighted.png)
 
-   Komponenterna på en bassida har de vanliga alternativen.
+  Komponenterna på en bassida har de vanliga alternativen.
 
-   Om komponenten som du klickar på i trädet är redigerbar visas en skiftnyckelsikon till höger om namnet. Om du klickar på den här ikonen öppnas redigeringsdialogrutan för komponenten.
+  Om komponenten som du klickar på i trädet är redigerbar visas en skiftnyckelsikon till höger om namnet. Om du klickar på den här ikonen öppnas redigeringsdialogrutan för komponenten.
 
-   ![Redigeringsknapp för innehållsträd](/help/sites-cloud/authoring/assets/content-tree-edit.png)
+  ![Redigeringsknapp för innehållsträd](/help/sites-cloud/authoring/assets/content-tree-edit.png)
 
 * En sida som är en del av en [livecopy](/help/sites-cloud/administering/msm/overview.md), där komponenter ärvs från en annan sida.
 
@@ -285,7 +285,6 @@ Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktisk
 >* Det finns en [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) ( `Ctrl-Shift-M`) för att växla mellan **Förhandsgranska** och det valda läget (till exempel **Redigera**, **Layout**, etc).
 >
 
-
 ## Banmarkering {#path-selection}
 
 När du redigerar är det ofta nödvändigt att välja en annan resurs, till exempel när du definierar en länk till en annan sida eller resurs eller markerar en bild. Markera en bana enkelt genom att [sökvägsfält](#path-fields) erbjuder automatisk komplettering och [sökvägsläsare](#path-browser) ger mer robust markering.
@@ -316,7 +315,7 @@ Sökvägsläsaren är ordnad som [kolumnvy](/help/sites-cloud/authoring/getting-
 * Du kan när som helst använda sökfältet högst upp i dialogrutan. Klicka på **X** i sökfältet för att rensa sökningen.
 * Om du vill begränsa sökningen kan du visa filteralternativen och filtrera resultaten baserat på en viss bana.
 
-   ![Alternativet Filter](/help/sites-cloud/authoring/assets/filters-option.png)
+  ![Alternativet Filter](/help/sites-cloud/authoring/assets/filters-option.png)
 
 ## Kortkommandon {#keyboard-shortcuts}
 

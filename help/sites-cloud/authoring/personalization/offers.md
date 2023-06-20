@@ -2,9 +2,9 @@
 title: Skapa och hantera erbjudanden (Erbjudandekonsol)
 description: Använd offertkonsolen för att skapa erbjudanden som du kan använda i aktivitetsupplevelser
 exl-id: 81d2fda2-06a9-48f6-820a-dd9e11d94fcc
-source-git-commit: c27870c39da80d664f208d658994eec83a19589f
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1393'
+source-wordcount: '1392'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,6 @@ A **Konvertera till upplevelsefragmentvariation** har implementerats för att hj
 >
 >* The **Erbjudanden** Konsolen är inte längre tillgänglig.
 >* Målikonen i verktygsfältet för andra påverkade komponenter visas inte längre.
-
 
 1. Öppna en sida som innehåller erbjudandet för redigering.
 
@@ -102,7 +101,7 @@ Lägg till taggar, om det behövs.
 >
 >Därför rekommenderar vi att du använder Experience Fragments, inte det här alternativet.
 
-För kunder med tidigare erbjudanden **Använd erbjudandemall** alternativen visas när komponenter som är **not** Upplevelsefragment:
+För kunder med tidigare erbjudanden **Använd erbjudandemall** är synliga när komponenter som **not** Upplevelsefragment:
 
 ![Dialogrutan Konvertera till upplevelsefragmentvariationer](/help/sites-cloud/authoring/assets/offers-legacy-target-non-experience-fragment.png)
 

@@ -2,9 +2,9 @@
 title: Introduktion till Cloud Manager
 description: Läs om hur Cloud Manager stöder ditt AEM genom program, miljöer och rörledningar.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: 33d587baba27ad54b1c9e34a36fadbd1dc56e3f5
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '851'
 ht-degree: 0%
 
 ---

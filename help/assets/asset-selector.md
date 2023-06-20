@@ -3,13 +3,13 @@ title: Resursväljare för [!DNL Adobe Experience Manager] som [!DNL Cloud Servi
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 contentOwner: Adobe
 role: Admin,User
-source-git-commit: af36101d8fecd7fab2300f93d40bba4c92f8eafe
+exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '2366'
+source-wordcount: '2364'
 ht-degree: 0%
 
 ---
-
 
 # Mikrofrontsväljare för mediefiler {#Overview}
 
@@ -76,7 +76,6 @@ Definiera förutsättningarna i `index.html` -filen eller en liknande fil i prog
 * imsOrg
 * imsToken
 * apikey
-
 <!--
 The prerequisites vary if you are authenticating using a SUSI flow or a non-SUSI flow.
 
@@ -361,28 +360,28 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 
 | Egenskap | Typ | Obligatoriskt | Standard | Beskrivning |
 |---|---|---|---|---|
-| *järnväg* | boolesk | Nej | false | Om markerad `true`, kommer resursväljaren att återges i den vänstra vyn. Om den är markerad `false`, kommer resursväljaren att återges i modal vy. |
-| *imsOrg* | string | Ja |  | IMS-ID (Adobe Identity Management System) som tilldelas vid etablering [!DNL Adobe Experience Manager] som [!DNL Cloud Service] för er organisation. The `imsOrg` Nyckeln krävs för att verifiera om den organisation som du använder är under Adobe IMS eller inte. |
-| *imsToken* | string | Nej |  | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett icke-SUSI-flöde. |
-| *apiKey* | string | Nej |  | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder ett icke-SUSI-flöde. |
+| *järnväg* | boolesk | Nej | false | Om markerad `true`, återges resursväljaren i en vy med vänster skena. Om den är markerad `false`, återges resursväljaren i modal vy. |
+| *imsOrg* | string | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas vid etablering [!DNL Adobe Experience Manager] som [!DNL Cloud Service] för er organisation. The `imsOrg` Nyckeln krävs för att verifiera om den organisation som du använder är under Adobe IMS eller inte. |
+| *imsToken* | string | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett icke-SUSI-flöde. |
+| *apiKey* | string | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder ett icke-SUSI-flöde. |
 | *rootPath* | string | Nej | /content/dam/ | Mappsökväg där resursväljaren visar dina resurser. `rootPath` kan också användas i form av inkapsling. Med följande sökväg, till exempel `/content/dam/marketing/subfolder/`kan du inte bläddra igenom någon överordnad mapp, utan bara visa de underordnade mapparna. |
-| *bana* | string | Nej |  | Sökväg som används för att navigera till en viss katalog med resurser när resursväljaren återges. |
-| *filterSchema* | array | Nej |  | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
-| *filterFormProps* | Objekt | Nej |  | Ange de filteregenskaper som du behöver använda för att förfina sökningen. Exempel: MIME-typ JPG, PNG, GIF. |
-| *selectedAssets* | Array `<Object>` | Nej |  | Ange valda resurser när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. Till exempel: `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du ett värde för `path` också. |
-| *acvConfig* | Objekt | Nej |  | Resurssamlingens visningsegenskap som innehåller objekt med anpassad konfiguration som åsidosätter standardvärden. |
-| *i18nSymbols* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |  | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
-| *intl* | Objekt | Nej |  | Resursväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språkområden som stöds: Engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
+| *bana* | string | Nej | | Sökväg som används för att navigera till en viss katalog med resurser när resursväljaren återges. |
+| *filterSchema* | array | Nej | | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
+| *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. Exempel: MIME-typ JPG, PNG, GIF. |
+| *selectedAssets* | Array `<Object>` | Nej |                 | Ange valda resurser när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. Till exempel: `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du ett värde för `path` också. |
+| *acvConfig* | Objekt | Nej | | Resurssamlingens visningsegenskap som innehåller objekt med anpassad konfiguration som åsidosätter standardvärden. |
+| *i18nSymbols* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |                 | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
+| *intl* | Objekt | Nej | | Resursväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språkområden som stöds: Engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 | *databaseId* | string | Nej | &#39; | Databas från vilken resursväljaren läser in innehållet. |
 | *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Det gör att du kan lägga till en lista med ytterligare AEM. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
 | *hideTreeNav* | boolesk | Nej |  | Anger om navigeringssidofältet för resursträd ska visas eller döljas. Den används endast i modal vy och därför har den här egenskapen ingen effekt i järnvägsvy. |
-| *onDrop* |  -funktion | Nej |  | Egenskapen gör att en resurs kan släppas. |
-| *dropOptions* | `{allowList?: Object}` | Nej |  | Konfigurerar släppningsalternativ med tillåtelselista. |
-| *colorScheme* | string | Nej |  | Konfigurera tema (`light` eller `dark`) för resursväljaren. |
-| *handleSelection* |  -funktion | Nej |  | Anropas med en array med tillgångsobjekt när resurser är markerade och `Select` klickar du på spärrknappen. Den här funktionen anropas bara i modal vy. För järnvägsvy använder du `handleAssetSelection` eller `onDrop` funktioner. Exempel: <pre>handleSelection=(assets: Tillgång[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
-| *handleAssetSelection* |  -funktion | Nej |  | Anropas med en array med objekt när resurserna markeras eller avmarkeras. Detta är användbart när du vill lyssna efter resurser när användaren väljer dem. Exempel: <pre>handleSelection=(assets: Tillgång[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
-| *onClose* |  -funktion | Nej |  | Anropas när `Close` knappen i modal vy trycks ned. Detta anropas bara `modal` visa och ignorera i `rail` vy. |
-| *onFilterSubmit* |  -funktion | Nej |  | Anropas med filterobjekt när användaren ändrar olika filtervillkor. |
+| *onDrop* |  -funktion | Nej | | Egenskapen gör att en resurs kan släppas. |
+| *dropOptions* | `{allowList?: Object}` | Nej | | Konfigurerar släppningsalternativ med tillåtelselista. |
+| *colorScheme* | string | Nej | | Konfigurera tema (`light` eller `dark`) för resursväljaren. |
+| *handleSelection* |  -funktion | Nej | | Anropas med en array med tillgångsobjekt när resurser är markerade och `Select` klickar du på spärrknappen. Den här funktionen anropas bara i modal vy. För järnvägsvy använder du `handleAssetSelection` eller `onDrop` funktioner. Exempel: <pre>handleSelection=(assets: Tillgång[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
+| *handleAssetSelection* |  -funktion | Nej | | Anropas med en array med objekt när resurserna markeras eller avmarkeras. Detta är användbart när du vill lyssna efter resurser när användaren väljer dem. Exempel: <pre>handleSelection=(assets: Tillgång[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
+| *onClose* |  -funktion | Nej | | Anropas när `Close` knappen i modal vy trycks ned. Detta anropas bara `modal` visa och ignorera i `rail` vy. |
+| *onFilterSubmit* |  -funktion | Nej | | Anropas med filterobjekt när användaren ändrar olika filtervillkor. |
 | *selectionType* | string | Nej | enkel | Konfiguration för `single` eller `multiple` urval av resurser i taget. |
 
 ## Exempel på hur du använder egenskaper för resursväljare {#usage-examples}

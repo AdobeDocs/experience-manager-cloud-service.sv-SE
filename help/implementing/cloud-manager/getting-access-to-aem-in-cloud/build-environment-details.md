@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: 3348662e3da4dad75b851d7af7251d456321a3ec
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Tabellen hänvisar till produktversionsnummer. Java-build-nummer eller installat
 
 >[!NOTE]
 >
->Från och med april 2022 kommer Oracle-JDK att vara standard-JDK för utveckling och drift av AEM program. Molnhanterarens byggprocess växlar automatiskt till att använda Oracle-JDK, även om ett alternativ uttryckligen har valts i Maven-verktygskedjan. Mer information finns i versionsinformationen för april när den har publicerats.
+>Från och med april 2022 blir Oracle-JDK standard för utveckling och drift av AEM program. Molnhanterarens byggprocess växlar automatiskt till att använda Oracle-JDK, även om ett alternativ uttryckligen har valts i verktygskedjan Maven. Se versionsinformationen för april 2022.
 
 #### Alternate Maven Execution JDK Version {#alternate-maven-jdk-version}
 

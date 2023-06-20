@@ -2,7 +2,7 @@
 title: Konfigurera OSGi-inställningar för förhandsgranskningsnivån
 description: Lär dig hur du konfigurerar AEM förhandsvisningstjänst för att förhandsgranska innehåll innan du publicerar.
 exl-id: 1200bb17-8a3c-4e41-85f4-ed2334b61f69
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Mer information finns i [det här avsnittet](/help/implementing/deploying/config
 
 ## Förhandsvisa felsökning med Developer Console {#debugging-preview-using-the-developer-console}
 
-Följ de här stegen för att felsöka förhandsvisningsnivån med hjälp av utvecklarkonsolen:
+Följ de här stegen för att felsöka förhandsvisningsnivån med hjälp av Developer Console:
 
 * I [Developer Console](/help/implementing/developing/introduction/development-guidelines.md#aem-as-a-cloud-service-development-tools), välj antingen **— All Preview —** eller en produktionsmiljö som innehåller **föregående** i namnet
 * Generera relevant information för förhandsvisningsinstansen Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill ha mer information om hur du hämtar URL:er för dina miljöer.

@@ -2,9 +2,9 @@
 title: Meddelanden
 description: Lär dig hur du får information om pipeline-distributioner med hjälp av Adobe Experience Cloud meddelandesystem.
 exl-id: c1c740b0-c873-45a8-9518-a856db2be75b
-source-git-commit: 6f390df560e9eeb76a8c4f1904e500aa5ed2bd65
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Som standard får du alla meddelanden för alla produkter. Klicka på **Anpassa*
 
 ### Prioritet {#priority}
 
-Prioritetsaviseringar markeras med en **HÖG** -taggen och kan konfigureras så att den endast tas emot som aviseringar. I **Prioritet** kan du definiera vilka kategorier som kvalificerar som prioritetsmeddelanden.
+Prioritetsvarningar är markerade med en **HÖG** -taggen och kan konfigureras så att den endast tas emot som aviseringar. I **Prioritet** kan du definiera vilka kategorier som kvalificerar som prioritetsmeddelanden.
 
 ![Meddelandeprioritet](assets/notifications-priority.png)
 

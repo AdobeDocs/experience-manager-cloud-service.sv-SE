@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet
 description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: 288faf39a86411bb96d781a320abfa47538b2066
+source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
 workflow-type: tm+mt
-source-wordcount: '3508'
+source-wordcount: '3504'
 ht-degree: 1%
 
 ---
@@ -811,7 +811,7 @@ Kunder som använder omvänd replikering bör kontakta Adobe för att få altern
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Klientbibliotek i Experience Manager kan innehålla statiska resurser som bilder och teckensnitt. Enligt beskrivningen i dokumentet [Använda preprocessorer,](/help/implementing/developing/introduction/clientlibs.md#using-preprocessors) när du använder proxyanslutna klientbibliotek måste dessa statiska resurser finnas i en underordnad mapp med namnet `resources` för att effektivt kunna referera till publiceringsinstanserna.
+Klientbibliotek i Experience Manager kan innehålla statiska resurser som bilder och teckensnitt. Enligt beskrivningen i dokumentet [Använda preprocessorer,](/help/implementing/developing/introduction/clientlibs.md#using-preprocessors) när du använder proxyanslutna klientbibliotek måste dessa statiska resurser finnas i en underordnad mapp med namnet `resources` att effektivt refereras till i publiceringsinstanser.
 
 #### Kod som inte uppfyller kraven {#non-compliant-proxy-enabled}
 

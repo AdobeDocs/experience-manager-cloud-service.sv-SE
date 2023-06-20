@@ -4,9 +4,9 @@ seo-title: Manage [!DNL AEM Forms] metadata
 description: Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 seo-description: Metadata allows for easier categorization and organization of assets and helps users who are looking for a specific asset.
 exl-id: 8527246a-37f0-4d43-a49e-1c76c265514e
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1640'
 ht-degree: 0%
 
 ---
@@ -178,9 +178,9 @@ Resurser har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Des
 
    * Klicka på **[!UICONTROL Properties]** ![Egenskaper](assets/Smock_Info_18_N.svg) -ikon från snabbåtgärder.
 
-      >[!NOTE]
-      >
-      >Snabbåtgärder är de åtgärdsobjekt som visas över en miniatyrbild när du håller muspekaren.
+     >[!NOTE]
+     >
+     >Snabbåtgärder är de åtgärdsobjekt som visas över en miniatyrbild när du håller muspekaren.
 
    * Markera formuläret och klicka på knappen **[!UICONTROL Properties]** ![Egenskaper](assets/Smock_Info_18_N.svg) som visas i verktygsfältet.
    * Navigera till sidan med formulärinformation genom att klicka på miniatyrbilden för formuläret när det inte är i markeringsläget. Klicka på ![Egenskaper](assets/Smock_Info_18_N.svg) ögonikonen i det övre högra hörnet och klicka sedan på Egenskaper i listan nedanför.
@@ -234,7 +234,6 @@ För Adaptiv Forms finns ytterligare funktioner som gör att användaren kan gen
 >* När en ny bild har överförts eller genererats ersätts miniatyrbilden av den här bilden och kan inte återställas till den föregående bilden.
 >
 
-
 ## Lägg till anpassade metadata {#add-custom-metadata}
 
 Förutom de metadata som anges i kartongen [!DNL AEM Forms] har stöd för nya anpassade metadata.
@@ -285,11 +284,11 @@ Ett verktyg (redigeringsprogram för metadataschema) finns för att definiera sc
 1. Klicka på en komponent som du just har dragit. Fyll i information för följande fält på fliken Inställningar som öppnas i den högra panelen:
 
    1. Ange en fältetikett som ska användas som visningsnamn ovanför fältet som placeras i schemat (till exempel: Avdelning)
-   1. I egenskapsfältet Mappa till kan du se ett förifyllt värde **&#39;./jcr:content/metadata/default&#39;**. Ändra&quot;**standard** till ett önskat egenskapsnamn, som används för att lagra egenskapen i crx-databasen (till exempel: &#39;./jcr:content/metadata/dec&#39;)
+   1. I egenskapsfältet Mappa till kan du se ett förifyllt värde **&#39;./jcr:content/metadata/default&#39;**. Ändra &#39;**standard**&#39; till ett önskat egenskapsnamn, som används för att lagra egenskapen i crx-databasen (till exempel: &#39;./jcr:content/metadata/dec&#39;)
 
       >[!NOTE]
       >
-      >Ändra inte prefixet&quot;./jcr:content/metadata/&#39; som den definierar sökvägen där egenskapen lagras.
+      >Ändra inte prefixet &#39;./jcr:content/metadata/&#39; när den definierar sökvägen där egenskapen lagras.
       >
       >Egenskapsnamnet måste också vara unikt för att du inte ska kunna skriva värden för två eller flera egenskaper på samma plats i databasen. Vi rekommenderar att du ändrar värdet &#39;default&#39;.
 
