@@ -2,9 +2,9 @@
 title: Hantera IP-Tillåtelselista
 description: Lär dig hur du visar, redigerar, tar bort och kontrollerar status för din IP-tillåtelselista i Cloud Manager.
 exl-id: 6efabe53-3f45-47d4-ac1f-979cae0ab33e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5311ba7f001201fc94c73fa52bc7033716c1ba78
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -23,24 +23,22 @@ En användare i **Företagsägare** eller **Distributionshanteraren** kan följa
 1. Identifiera raden för IP-tillåtelselista som du vill visa eller uppdatera.
 1. Klicka på ellipsknappen till höger om raden.
 1. Välj **Visa och uppdatera** alternativ.
-1. The **Visa och uppdatera** I guiden visas namn, IP-adresser (eller intervall) som definierar regeln tillsammans med de miljöer och tjänster som regeln tillämpas på.
-1. Gör ändringar i namnet eller IP-adressen och bekräfta din inskickning.
+1. The **Visa och uppdatera** visas namn, IP-adresser (eller intervall) som definierar regeln tillsammans med de miljöer och tjänster som regeln tillämpas på.
+1. Ändra namn eller IP-adresser efter behov och bekräfta ditt bidrag.
 
 Om du lägger till eller tar bort ett nytt IP-intervall i ett IP-tillåtelselista används/tas det automatiskt bort från alla motsvarande miljöer/tjänster som det tidigare tillämpades på.
 
-Det går inte att uppdatera IP-tillåtelselista medan en tidigare uppdatering pågår och inte har slutförts.
+Det går inte att göra uppdateringar till IP-tillåtelselista när en tidigare uppdatering pågår och inte har slutförts.
 
 ## Kontrollerar IP-Tillåtelselista status {#check-allow-list-status}
 
-Följ de här stegen för att kontrollera IP-tillåtelselista status.
-
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
 1. Navigera till **Miljö** från **Översikt** sida.
 
 1. Klicka på **Status** ikonen för IP-tillåtelselista från tabellen på **Miljö** och väljer **IP-Tillåtelselista** sida.
 
-1. Cloud Manager visar tillåtelselista status enligt beskrivningen [i följande avsnitt.](#status)
+1. I Cloud Manager visas statusen för tillåtelselista enligt beskrivningen [i följande avsnitt.](#status)
 
 ### Status för IP-Tillåtelselista {#status}
 
@@ -53,25 +51,25 @@ Följ de här stegen för att kontrollera IP-tillåtelselista status.
    * Varje program/program som inte används visas tillsammans med dess egen status **Har inte startats**, **Pågår**, **Slutförd**, eller **Misslyckades**.
 
 * **Misslyckades** - En eller flera program- eller avprogramprocesser för en uppdatering misslyckades.
-   * Alla program och icke-program visas tillsammans med status.
+   * Alla program och avaktiverade program visas tillsammans med programmets status.
       * Statusen är **Misslyckades** om ett program/ett program i uppdateringen misslyckas.
       * Statusen ändras inte **Misslyckades** tills alla fel har åtgärdats.
-         * Du måste välja **Försök igen** -ikonen bredvid statusen för att rensa felet.
+         * Välj **Försök igen** -ikonen bredvid statusen så att du kan ta bort felet.
       * Du kan inte uppdatera eller ta bort en IP-tillåtelselista med en **Misslyckades** status.
 
 * **Tar bort** - En borttagning av IP-tillåtelselista pågår.
    * Borttagning innebär att listan inte används för alla tjänster.
-   * Alla program som inte används visas tillsammans med programmets egen status: **Har inte startats**, **Pågår**, **Slutförd**, eller **Misslyckades**.
+   * Varje program som inte används visas tillsammans med sin egen status på **Har inte startats**, **Pågår**, **Slutförd**, eller **Misslyckades**.
    * När borttagningen är klar kommer IP tillåtelselista att:
       * Visas inte längre i IP tillåtelselista-tabellen.
       * Tillämpas inte längre på någon tjänst i programmet i Cloud Manager.
 
 * **Borttagningen misslyckades** - Ett eller flera icke-program misslyckades under en borttagningsåtgärd.
 
-   * Alla program som inte används visas tillsammans med status **Slutförd** eller **Misslyckades**.
-   * Statusen blir **Borttagningen misslyckades** om ett icke-program misslyckas.
+   * Varje program som inte används visas tillsammans med statusen **Slutförd** eller **Misslyckades**.
+   * Statusen blir **Borttagningen misslyckades** om ett avaktiveringsfel inträffar.
    * Statusen ändras inte **Borttagningen misslyckades** tills alla fel har åtgärdats.
-      * Du måste välja **Ta bort** på ellipsmenyn längst till höger om raden i tabellen för att ta bort eventuella fel.
+      * Välj **Ta bort** på ellipsmenyn längst till höger om raden i tabellen så att du kan ta bort eventuella fel.
    * Du kan inte uppdatera ett IP-tillåtelselista när statusen är **Misslyckades**.
 
 ## Ta bort en IP-Tillåtelselista {#delete-allow-list}
@@ -90,10 +88,10 @@ Om du tar bort ett IP-tillåtelselista tas det automatiskt bort från alla tjän
 
 ## Befintliga CDN-konfigurationer {#pre-existing-cdn}
 
-Om du har en befintlig CDN-konfiguration för IP-tillåtelselista visas ett informationsmeddelande på **IP Tillåtelselista** som uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
+Om du har en befintlig CDN-konfiguration för IP-tillåtelselista visas ett informationsmeddelande på **IP Tillåtelselista** sida. Meddelandet uppmanar dig att lägga till dessa konfigurationer via användargränssnittet så att de är synliga och konfigurerbara i Cloud Manager.
 
 Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
-Se dokumentet [Lägga till en IP-tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) för mer information.
+Se [Lägga till en IP-tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) för mer information.
 
 Ett liknande meddelande finns också på **SSL-certifikat** och **Miljö** sidor för miljöer som har befintliga CDN-konfigurationer för SSL-certifikat eller anpassade domännamn.

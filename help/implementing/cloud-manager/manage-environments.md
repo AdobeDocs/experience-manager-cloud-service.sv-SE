@@ -1,10 +1,10 @@
 ---
 title: Hantera miljöer
-description: Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
+description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5311ba7f001201fc94c73fa52bc7033716c1ba78
 workflow-type: tm+mt
-source-wordcount: '2325'
+source-wordcount: '2271'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Hantera miljöer {#managing-environments}
 
-Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
+Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 
 ## Miljötyper {#environment-types}
 
@@ -20,9 +20,9 @@ En användare med nödvändig behörighet kan skapa följande miljötyper (inom 
 
 * **Production + Stage** - Produktions- och testmiljöer finns som par och används för produktions- respektive testningsändamål.
 
-* **Utveckling** - En utvecklingsmiljö kan skapas för såväl utvecklings- som testningsändamål och kan endast kopplas till rörledningar som inte är avsedda för produktion.
+* **Utveckling** - En utvecklingsmiljö kan skapas för utvecklings- och testningsändamål och kan endast kopplas till icke-produktionsrörledningar.
 
-* **Snabb utveckling** - Med en snabb utvecklingsmiljö (RDE) kan utvecklare snabbt driftsätta och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som är beprövade i en lokal utvecklingsmiljö. Se [dokumentation för snabb utvecklingsmiljö](/help/implementing/developing/introduction/rapid-development-environments.md) om du vill ha mer information om hur du använder en RDE.
+* **Snabb utveckling** - Med en snabb utvecklingsmiljö kan utvecklare snabbt driftsätta och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som är beprövade i en lokal utvecklingsmiljö. Se [dokumentation för snabb utvecklingsmiljö](/help/implementing/developing/introduction/rapid-development-environments.md) om du vill ha mer information om hur du använder en RDE.
 
 De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) av miljön.
 
@@ -33,7 +33,7 @@ De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [progra
 
 >[!NOTE]
 >
->Produktions- och mellanlagringsmiljöer skapas endast som par. Du kan inte bara skapa en staging eller bara en produktionsmiljö.
+>Produktions- och mellanlagringsmiljöer skapas endast som par. Du kan inte skapa enbart en staging eller bara en produktionsmiljö.
 
 ## Lägga till en miljö {#adding-environments}
 
@@ -41,7 +41,7 @@ De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [progra
 
 1. Klicka på det program som du vill lägga till en miljö för.
 
-1. Från **Programöversikt** sida, klicka på **Lägg till miljö** på **Miljö** för att lägga till en miljö.
+1. Från **Programöversikt** sida, klicka **Lägg till miljö** på **Miljö** för att lägga till en miljö.
 
    ![Miljökort](assets/no-environments.png)
 
@@ -59,8 +59,8 @@ De enskilda miljöernas kapacitet beror på vilka lösningar som finns i [progra
    * Tillhandahålla en miljö **Beskrivning**.
    * Om du lägger till en **Production + Stage** måste du ange ett miljönamn och en beskrivning för både din produktions- och staging-miljö.
    * Välj en **Primär region** i listrutan.
-      * Observera att detta inte kan ändras när det har skapats.
-      * Beroende på vilka rättigheter du har kan du kanske konfigurera [flera regioner.](#multiple-regions)
+      * Den primära regionen kan inte ändras efter att den har skapats.
+      * Beroende på vilka rättigheter du har kan du kanske konfigurera [flera regioner](#multiple-regions).
 
    ![Dialogrutan Lägg till miljö](assets/add-environment2.png)
 
@@ -70,7 +70,7 @@ The **Översikt** visas nu din nya miljö i **Miljö** kort. Nu kan du ställa i
 
 ## Flera publiceringsområden {#multiple-regions}
 
-En användare med **Företagsägare** kan konfigurera prod- och staging-miljöer så att de omfattar ytterligare tre publiceringsregioner förutom den primära regionen. Ytterligare publiceringsregioner kan förbättra tillgängligheten. Se [Ytterligare dokumentation för publiceringsregioner](/help/operations/additional-publish-regions.md) för mer information.
+En användare med **Företagsägare** kan konfigurera produktions- och staging-miljöer så att de omfattar upp till tre ytterligare publiceringsregioner förutom den primära regionen. Ytterligare publiceringsregioner kan förbättra tillgängligheten. Se [Ytterligare dokumentation för publiceringsregioner](/help/operations/additional-publish-regions.md) för mer information.
 
 >[!TIP]
 >
@@ -78,14 +78,14 @@ En användare med **Företagsägare** kan konfigurera prod- och staging-miljöer
 
 ### Lägga till flera publiceringsregioner i en ny miljö {#add-regions}
 
-När du lägger till en ny miljö kan du välja att konfigurera ytterligare regioner utöver den primära regionen.
+När du lägger till en miljö kan du välja att konfigurera ytterligare regioner utöver den primära regionen.
 
 1. Välj **Primär region**.
-   * Observera att detta inte kan ändras när miljön har skapats.
-1. Välj alternativet **Lägg till ytterligare publiceringsregioner** och en ny **Ytterligare publiceringsregioner** visas.
-1. I **Ytterligare publiceringsregioner** väljer du ytterligare en region.
+   * Den primära regionen kan inte ändras efter att miljön har skapats.
+1. Välj alternativet **Lägg till ytterligare publiceringsregioner** och en ny **Ytterligare publiceringsregioner** nedrullningsbar meny för alternativ visas.
+1. I **Ytterligare publiceringsregioner** väljer du ett extra område.
 1. Det markerade området läggs till under listrutan för att ange dess val.
-   * Tryck eller klicka på X bredvid det markerade området för att avmarkera det.
+   * Tryck eller klicka på `X` bredvid det markerade området så att du kan avmarkera det.
 1. Välj ett annat område på menyn **Ytterligare publiceringsregioner** för att lägga till en annan region.
 1. Tryck eller klicka **Spara** när du är redo att skapa din miljö.
 
@@ -95,13 +95,13 @@ De valda regionerna gäller både produktions- och stagningsmiljöer.
 
 Om du inte anger några ytterligare regioner [kan du göra det senare när du har skapat miljöerna.](#edit-regions)
 
-Om du vill etablera dig [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet bör du göra detta innan du lägger till ytterligare publiceringsregioner i miljöerna med hjälp av Cloud Manager API. I annat fall kommer trafiken i de extra publiceringsregionerna att gå via den primära regionens proxy.
+Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet rekommenderar vi att denna etablering görs innan ytterligare publiceringsregioner läggs till i miljöerna med hjälp av Cloud Manager API. I annat fall går trafiken för de extra publiceringsregionerna igenom den primära regionens proxy.
 
 ### Redigera flera publiceringsområden {#edit-regions}
 
 Om du inte angav några ytterligare regioner från början kan du göra det efter att miljöerna har skapats om du har de tillstånd som krävs.
 
-Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga till eller ta bort regioner i en transaktion. Om du behöver lägga till ett område och ta bort ett område, ska du först lägga till, spara ändringen och sedan ta bort (eller tvärtom).
+Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga till eller ta bort regioner i en transaktion. Om du måste lägga till en region och ta bort en region, ska du först lägga till, spara ändringen och sedan ta bort (eller omvänt).
 
 1. Klicka på ellipsknappen för produktionsmiljön i programöversiktskonsolen och välj **Redigera** på menyn.
 
@@ -117,11 +117,11 @@ Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga t
 
 De ändringar som görs i produktionsmiljön gäller både produktions- och stagningsmiljöer. Ändringar i flera publiceringsregioner kan bara redigeras i produktionsmiljön.
 
-Om du vill etablera dig [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet bör du göra detta innan du lägger till ytterligare publiceringsregioner i miljöerna. I annat fall kommer trafiken i de extra publiceringsregionerna att gå via den primära regionens proxy.
+Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet rekommenderar vi att den här etableringen görs innan du lägger till ytterligare publiceringsregioner i miljöerna. Annars går trafiken i de extra publiceringsregionerna igenom den primära regionens proxy.
 
 ## Miljöinformation {#viewing-environment}
 
-Du kan använda **Miljö** på översiktssidan för att få tillgång till miljöinformation på två sätt.
+Du kan använda **Miljö** på översiktssidan för att få åtkomst till detaljerna i en miljö på två sätt.
 
 1. Från **Översikt** klickar du på **Miljö** överst på skärmen.
 
@@ -135,7 +135,7 @@ Du kan använda **Miljö** på översiktssidan för att få tillgång till milj�
 
    ![Fliken Miljöer](assets/environment-view-2.png)
 
-1. Klicka på en miljö i listan för att visa informationen om den.
+1. Klicka på en miljö i listan så att du kan visa informationen om den.
 
    ![Miljöinformation](assets/environ-preview1.png)
 
@@ -145,7 +145,7 @@ Du kan också klicka på ellipsknappen för den miljö du vill använda och seda
 
 >[!NOTE]
 >
->The **Miljö** endast tre miljöer. Klicka på **Visa alla** så som beskrivits ovan för att se alla programmiljöer.
+>The **Miljö** endast tre miljöer. Klicka **Visa alla** som tidigare beskrivits för att se alla programmiljöer.
 
 ### Åtkomst till förhandsgranskningstjänsten {#access-preview-service}
 
@@ -153,31 +153,31 @@ I Cloud Manager finns en förhandsgranskningstjänst (som levereras som en extra
 
 Med tjänsten kan du förhandsgranska en webbplats slutliga upplevelse innan den når den faktiska publiceringsmiljön och är tillgänglig för allmänheten.
 
-När förhandsvisningstjänsten skapas används en IP-tillåtelselista som standard, märkt `Preview Default [<envId>]`, som blockerar all trafik till förhandsvisningstjänsten. Du måste aktivt ta bort standardvärdet för IP tillåtelselista från förhandsgranskningstjänsten för att kunna aktivera åtkomst.
+När förhandsvisningstjänsten skapas används en IP-tillåtelselista som standard, märkt `Preview Default [<envId>]`, som blockerar all trafik till förhandsvisningstjänsten. Använd inte standardvärdet för IP-tillåtelselista från förhandsgranskningstjänsten så att du kan aktivera åtkomst.
 
 ![Förhandsgranskningstjänst och tillåtelselista](assets/preview-ip-allow.png)
 
 En användare med nödvändig behörighet måste utföra följande steg innan du kan dela URL:en för förhandsvisningstjänsten för att se till att den är tillgänglig.
 
-1. Skapa en lämplig IP-tillåtelselista, använd den för förhandsgranskningstjänsten och ta omedelbart bort tillämpningen av `Preview Default [<envId>]` tillåtelselista.
+1. Skapa ett lämpligt IP-tillåtelselista, tillämpa det på förhandsgranskningstjänsten och omedelbart ta bort kopplingen för `Preview Default [<envId>]` tillåtelselista.
 
-   * Se dokumentet [Använda och inte använda IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) för mer information.
+   * Se [Använder och tar bort tillämpning av IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) för mer information.
 
 1. Använda uppdateringen **IP Tillåtelselista** arbetsflöde för att ta bort standard-IP och lägga till IP-adresser efter behov. Se [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md) om du vill veta mer.
 
 När åtkomsten till förhandsgranskningstjänsten har låsts upp visas inte längre låsikonen framför namnet på förhandsgranskningstjänsten.
 
-När det är aktiverat kan du publicera innehåll till förhandsgranskningstjänsten med hjälp av gränssnittet Hantera publikation i AEM. Se dokumentet [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/previewing-content.md) för mer information.
+När det är aktiverat kan du publicera innehåll till förhandsgranskningstjänsten med hjälp av gränssnittet Hantera publikation i AEM. Se [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/previewing-content.md) för mer information.
 
 >[!NOTE]
 >
->Miljön måste vara i AEM version `2021.05.5368.20210529T101701Z` eller nyare för att använda förhandsgranskningstjänsten. Kontrollera att en uppdateringspipeline har körts korrekt i din miljö för att göra detta.
+>Miljön måste vara i AEM version `2021.05.5368.20210529T101701Z` eller nyare för att använda förhandsgranskningstjänsten. Kontrollera att en uppdateringspipeline har körts korrekt i din miljö så att du kan använda förhandsgranskningstjänsten.
 
 ## Uppdaterar miljöer {#updating-dev-environment}
 
 Som molnbaserad tjänst hanteras uppdateringar av dina staging- och produktionsmiljöer i produktionsprogrammen automatiskt av Adobe.
 
-Uppdateringar av utvecklingsmiljöer och miljöer i sandlådeprogram hanteras dock i programmen. När en sådan miljö inte kör den senaste allmänt tillgängliga AEM-versionen, anges statusen på **Miljö** på **Översikt** visas **Uppdatering tillgänglig**.
+Uppdateringar av utvecklingsmiljöer och miljöer i sandlådeprogram hanteras dock i programmen. När en sådan miljö inte kör den senaste allmänt tillgängliga AEM-versionen, anges statusen på **Miljö** på **Översikt** skärm **Uppdatering tillgänglig**.
 
 ![Status för miljöuppdatering](assets/environ-update.png)
 
@@ -239,27 +239,27 @@ Välj **Hantera åtkomst** på menyn ellips i miljön på **Miljö** kort. Du ka
 
 >[!TIP]
 >
->Se dokumentet [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) om du vill veta hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
+>Se [AEM as a Cloud Service team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) om du vill veta hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomsten till era licensierade Adobe-lösningar.
 
 ## Åtkomst till Developer Console {#accessing-developer-console}
 
-Välj **Developer Console** på menyn ellips i miljön på **Miljö** kort. Då öppnas en ny flik i webbläsaren med inloggningssidan till **Developer Console**.
+Välj **Developer Console** på menyn ellips i miljön på **Miljö** kort. En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console**.
 
 ![](assets/environ-devconsole.png)
 
-Endast en användare med **Utvecklare** rollen har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare med åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
+Endast en användare med **Utvecklare** rollen har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare som har åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
 
-Se dokumentet [Viloläge och avvänjningsmiljöer för sandlådor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/sandbox-programs.html#hibernating-introduction) för mer information.
+Se [Viloläge och avvänjningsmiljöer för sandlådor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html#hibernation) för mer information.
 
 Det här alternativet är också tillgängligt från **Miljö** -fliken i **Översikt** när du klickar på ellipsmenyn i en enskild miljö.
 
 ## Logga in lokalt {#login-locally}
 
-Välj **Lokal inloggning** från ellipsmenyn i miljön i **Miljö** för att logga in lokalt på Adobe Experience Manager.
+Välj **Lokal inloggning** från ellipsmenyn i miljön i **Miljö** så att du kan logga in lokalt på Adobe Experience Manager.
 
 ![Logga in lokalt](assets/environ-login-locally.png)
 
-Dessutom kan du logga in lokalt från **Miljö** -fliken i **Översikt** sida.
+Du kan även logga in lokalt från **Miljö** -fliken i **Översikt** sida.
 
 ![Logga in lokalt från fliken Miljö](assets/environ-login-locally-2.png)
 
@@ -267,7 +267,7 @@ Dessutom kan du logga in lokalt från **Miljö** -fliken i **Översikt** sida.
 
 Anpassade domännamn stöds i Cloud Manager för Sites-program för både publicerings- och förhandsgranskningstjänster. Varje Cloud Manager-miljö har plats för upp till 250 anpassade domäner.
 
-Om du vill konfigurera egna domännamn går du till **Miljö** och klicka på en miljö för att visa information om miljön.
+Om du vill konfigurera egna domännamn går du till **Miljö** och klicka på en miljö för att visa miljöinformation.
 
 ![Miljöinformation](assets/domain-names.png)
 
@@ -284,29 +284,29 @@ Följande åtgärder kan utföras på publiceringstjänsten för din miljö.
 
 ## Hantera IP-Tillåtelselista {#manage-ip-allow-lists}
 
-IP tillåtelselista stöds i Cloud Manager för författare, publicering och förhandsgranskningstjänster för Sites-program.
+IP-tillåtelselista stöds i Cloud Manager för författare, publicering och förhandsgranskningstjänster för Sites-program.
 
-Om du vill hantera IP tillåtelselista går du till **Miljö** -fliken i **Översikt** sidan med ditt program. Klicka på en enskild miljö för att hantera informationen om den.
+Om du vill hantera IP-tillåtelselista går du till **Miljö** -fliken i **Översikt** sidan med ditt program. Klicka på en enskild miljö så att du kan hantera informationen om den.
 
 ### Använda ett IP-Tillåtelselista {#apply-ip-allow-list}
 
-När du använder ett IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista till en författare eller publiceringstjänst i en miljö. En användare i **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att kunna använda IP-tillåtelselista.
+När du använder en IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista till en författare eller publiceringstjänst i en miljö. En användare i **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att kunna tillämpa en IP-tillåtelselista.
 
-IP-tillåtelselista måste finnas i Cloud Manager för att det ska kunna användas i en miljö. Mer information om IP tillåtelselista i Cloud Manager finns i dokumentet[Introduktion till IP-Tillåtelselista i Cloud Manager.](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
+IP-tillåtelselista måste finnas i Cloud Manager för att det ska kunna användas i en miljö. Mer information om IP-tillåtelselista i Cloud Manager finns i [Introduktion till IP-Tillåtelselista i Cloud Manager](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
 
-Följ de här stegen för att använda en IP-tillåtelselista.
-
-1. Navigera till den specifika miljön från **Miljö** fliken för programmet **Översikt** och navigera till **IP-Tillåtelselista** tabell.
-1. Använd inmatningsfälten högst upp i IP tillåtelselista-tabellen för att välja IP tillåtelselista och författaren eller publiceringstjänsten som du vill använda den på.
-1. Klicka på **Använd** och bekräfta ditt bidrag.
-
-### Avinstallera en IP-Tillåtelselista {#unapply-ip-allow-list}
-
-Om du avkopplar ett IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista bort från en författare eller en utgivartjänst i en miljö. En användare i **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att kunna ta bort en IP-tillåtelselista.
-
-Följ de här stegen för att ta bort en IP-tillåtelselista.
+**Så här använder du ett IP-tillåtelselista:**
 
 1. Navigera till den specifika miljön från **Miljö** fliken för programmet **Översikt** och navigera till **IP-Tillåtelselista** tabell.
-1. Identifiera raden där den IP tillåtelselista-regel som du vill ta bort gäller listas.
+1. Använd inmatningsfälten högst upp i tabellen IP tillåtelselista så att du kan välja IP-tillåtelselista och den författare eller publiceringstjänst som du vill använda den på.
+1. Klicka **Använd** och bekräfta ditt bidrag.
+
+### Ta bort en IP-tillåtelselista {#unapply-ip-allow-list}
+
+Om du tar bort en IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista bort från en författare eller en utgivartjänst i en miljö. En användare i **Företagsägare** eller **Distributionshanteraren** roll måste vara inloggad för att kunna ta bort en IP-tillåtelselista.
+
+**Så här tar du bort ett IP-tillåtelselista:**
+
+1. Navigera till den specifika miljön från **Miljö** fliken för programmet **Översikt** och navigera till **IP-Tillåtelselista** tabell.
+1. Identifiera raden där regeln för IP-tillåtelselista som du vill ta bort är listad.
 1. Markera ellipsknappen i slutet av raden.
 1. Välj **Oanvänd** och bekräfta ditt bidrag.
