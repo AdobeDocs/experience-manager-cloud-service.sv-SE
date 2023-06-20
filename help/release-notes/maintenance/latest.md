@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: beb6ac3dbb036559510e6a2e2700b28c433ef98d
+source-git-commit: 26178edc3308801e0273aca67b7cd82180131483
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '372'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,7 @@ Ingen.
 
 - ASSETS-25729 - Visa väljarmenyn är inaktiverad
 - ASSETS-25728 - alternativet Bearbeta om resurs är inte tillgängligt i sökvyn
+- ASSETS-22603 - Vissa kolumner för tillgångsrapport av hämtningstyp visar &quot;null&quot;-värden i användargränssnittet. Hämtningsbar CSV-fil påverkas inte.
 
 ### Åtgärdade problem {#fixed-issues-12255}
 
