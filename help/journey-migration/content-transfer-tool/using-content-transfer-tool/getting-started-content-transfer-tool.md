@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: ea5d86e1a43bb7ae0c7608fc0625983cf2bf273f
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1439'
 ht-degree: 6%
 
 ---
@@ -52,6 +52,8 @@ Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsök
 
    ![bild](/help/journey-migration/content-transfer-tool/assets/enable_ssl_logging.png)
 
+>[!NOTE]
+>Den här flaggan används endast för felsökning av SSL-problem. Kontrollera att flaggan är inaktiverad innan du kör extraheringen, eftersom det kan kräva mycket diskutrymme. Detta kan potentiellt fylla diskkapaciteten och orsaka att extraheringsprocessen misslyckas.
 
 ## Köra Content Transfer Tool {#running-tool}
 
