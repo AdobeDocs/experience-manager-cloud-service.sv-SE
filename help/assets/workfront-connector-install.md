@@ -4,9 +4,9 @@ description: Installera [!DNL Workfront for Experience Manager enhanced connecto
 role: Admin
 feature: Integrations
 exl-id: 2907a3b2-e28c-4194-afa8-47eadec6e39a
-source-git-commit: aa183901e80ba414fc3db5af01fbc49d082af7b6
+source-git-commit: 5568be57db4e270fcee22e637fc40f07529e0ecd
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,7 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som 
 
 >[!IMPORTANT]
 >
+>* Från juni 2022 släppte Adobe en ny inbyggd integrering för att ansluta Workfront till Adobe Experience Manager Assets as a Cloud Service. Den här integreringen har blivit den metod som krävs för att ansluta dessa två lösningar. Eventuella framtida nya implementeringar av den utökade anslutningen (1.9.8 och senare) för att ansluta Workfront till AEM Assets as a Cloud Service blockeras. Mer information om hur du konfigurerar den här integreringen finns i [Konfigurera Experience Manager Assets as a Cloud Service-integrering](workfront-connector-configure.md).
 >* Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
 >
 >* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
@@ -46,7 +47,7 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
    >
    >* Om du vill hitta programmets IP-adress öppnar du ett terminalfönster och kör ett kommando, till exempel:
    >
-   >    ```TXT
+   >    ```
    >    dscacheutil -q host -a name p{PROGRAM_ID}.external.adobeaemcloud.com
    >
    >    ```

@@ -4,7 +4,7 @@ description: Introduktion till integrering mellan [!DNL Assets] och [!DNL Workfr
 role: Admin,Leader,Architect
 feature: Integrations
 exl-id: 365de3dc-51db-4dcf-94e2-104b5a5d33a8
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5568be57db4e270fcee22e637fc40f07529e0ecd
 workflow-type: tm+mt
 source-wordcount: '1317'
 ht-degree: 0%
@@ -34,13 +34,14 @@ Med inbyggd integrering med Experience Manager och [!DNL Workfront for Experienc
 
 Se [funktioner nedan för en jämförelse](#feature-parity-matrix) mellan inbyggd integrering eller integrering med hjälp av anslutningar mellan de två lösningarna.
 
-
+>[!IMPORTANT]
+>
+>Från juni 2022 släppte Adobe en ny inbyggd integrering för att ansluta Workfront till Adobe Experience Manager Assets as a Cloud Service. Den här integreringen har blivit den metod som krävs för att ansluta dessa två lösningar. Eventuella framtida nya implementeringar av den utökade anslutningen (1.9.8 och senare) för att ansluta Workfront till AEM Assets as a Cloud Service blockeras. Mer information om hur du konfigurerar den här integreringen finns i [Konfigurera Experience Manager Assets as a Cloud Service-integrering](workfront-connector-configure.md).
+>
 
 Se plattformsstödet och [krav för den förbättrade anslutningen](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience).
 
 >[!IMPORTANT]
->
->* Från juni 2022 släppte Adobe en ny inbyggd integrering för att ansluta Workfront till Adobe Experience Manager Assets as a Cloud Service. Den här integreringen har blivit den metod som krävs för att ansluta dessa två lösningar. Eventuella framtida nya implementeringar av den utökade anslutningen (1.9.8 och senare) för att ansluta Workfront till AEM Assets as a Cloud Service blockeras. Mer information om hur du konfigurerar den här integreringen finns i [Konfigurera Experience Manager Assets as a Cloud Service-integrering](workfront-connector-configure.md).
 >
 >* Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
 >
