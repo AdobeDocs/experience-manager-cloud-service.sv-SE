@@ -1,10 +1,10 @@
 ---
 title: Introduktion till IP Tillåtelselista
-description: Lär dig hur IP tillåtelselista kan begränsa från vilka adresser användare kan få åtkomst till dina AEM as a Cloud Service domäner.
+description: Lär dig hur IP tillåtelselista kan begränsa från vilka adresser användare kan få åtkomst till domäner AEM as a Cloud Service.
 exl-id: 352fae8e-d116-40b0-ba54-d7f001f076e8
-source-git-commit: 286bc8e206b7a54cc1869e3965e55852cf62946d
+source-git-commit: f0edd0e3deeba89dcbd2dc1a07859138b24e2220
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -14,25 +14,25 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_ipallowlist"
->title="Hantera IP-Tillåtelselista"
->abstract="AEM som molntjänst är tillgänglig via Internet och skyddas genom användarautentisering och auktorisering. Cloud Managers IP-tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till betrodda IP-adresser. Användare av Cloud Manager med lämplig behörighet kan skapa tillåtelselista med betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/add-ip-allow-lists.html" text="Lägg till en IP-Tillåtelselista"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/view-update-ip-allow-list.html" text="Visa och uppdatera en IP-Tillåtelselista"
+>title="Hantera IP-tillåtelselista"
+>abstract="AEM som molntjänst är tillgänglig via Internet och skyddas genom användarautentisering och behörighet. Cloud Managers IP-tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till betrodda IP-adresser. Användare av Cloud Manager med lämplig behörighet kan skapa tillåtelselista med betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/add-ip-allow-lists.html" text="Lägg till en IP-Tillåtelselista"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/managing-ip-allow-lists.html" text="Visa och uppdatera en IP-Tillåtelselista"
 
 AEM som molntjänst är som standard tillgänglig via Internet. Säkerhet hanteras genom användarautentisering och -auktorisering, men IP-registrering är ett sätt att begränsa åtkomsten enbart till betrodda IP-adresser.
 
-Cloud Managers IP-tillåtelselista kan bara användas för att begränsa och styra åtkomsten till betrodda IP-adresser. Cloud Manager-användare med lämplig behörighet kan [skapa tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) av betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner.
+Cloud Managers IP-tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till sådana betrodda IP-adresser. Cloud Manager-användare med lämplig behörighet kan [skapa tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) av betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM domäner.
 
-När de lagts till [IP-tillåtelselista kan användas/tas bort](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) flera gånger som en enhet eller enhet till en författare och/eller utgivartjänst i en miljö.
+När du har lagt till [IP-tillåtelselista kan tillämpas/inte tillämpas](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) flera gånger som en enhet eller enhet till en författare och/eller utgivartjänst i en miljö.
 
 >[!NOTE]
 >
->Om IP tillåtelselista inte används tillåts som standard alla IP-adresser. Så snart en IP tillåtelselista används tillåts inga IP-adresser förutom de på IP tillåtelselista.
+>Om ingen IP-tillåtelselista används tillåts som standard alla IP-adresser. När ett IP-tillåtelselista används tillåts inga IP-adresser förutom adresser på IP-tillåtelselista.
 
 ## Begränsningar {#limitations}
 
-Det finns ett antal begränsningar för IP-tillståndslistor att tänka på.
+Det finns flera begränsningar för IP-tillåtelselista att tänka på.
 
-* Du kan lägga till högst 50 IP-tillåtelselista i programmet
+* Högst 50 IP-tillåtelselista kan läggas till i programmet
 * Högst 50 IP/CIDR-adresser kan läggas till i varje IP-tillåtelselista.
-* IP tillåtelselista-namn stöds i Cloud Manager för författare och/eller publiceringstjänst i en miljö.
+* Namn på IP-tillåtelselista stöds i Cloud Manager för författare, publiceringstjänst, eller båda, i en miljö.
