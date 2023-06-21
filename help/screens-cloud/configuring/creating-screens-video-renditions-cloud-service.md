@@ -2,9 +2,9 @@
 title: Skapa videoåtergivningar på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar videoåtergivningar på skärmar as a Cloud Service.
 exl-id: a9c46036-cd29-47fa-81d9-c865cf22c98a
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ Följ stegen nedan för att skapa videoåtergivningar på skärmar som är as a 
 
 1. Klicka på verktygsavsnittet i det vänstra navigeringsfältet och klicka på **Resurser** och klicka sedan på **Bearbetar profiler**.
 
-   ![](/help/screens-cloud/assets/configure/screens-cp-3.png)
+   ![Klicka på Bearbeta profiler](/help/screens-cloud/assets/configure/screens-cp-3.png)
 
 1. Klicka på **Skapa** för att skapa en ny bearbetningsprofil.
 
-   ![](/help/screens-cloud/assets/configure/screens-video-2.png)
+   ![Klicka på Skapa](/help/screens-cloud/assets/configure/screens-video-2.png)
 
 1. Ange **Namn**, till exempel **SkärmarBearbetningsprofil**.
 
@@ -57,11 +57,11 @@ Följ stegen nedan för att skapa videoåtergivningar på skärmar som är as a 
 
 1. Välj Bearbetningsprofil och klicka på **Använd profil för mapp(ar)**.
 
-   ![](/help/screens-cloud/assets/configure/screens-video-5.png)
+   ![Använd profil i mapp](/help/screens-cloud/assets/configure/screens-video-5.png)
 
 1. Markera mappen/mapparna där skärmar-videor finns och klicka på **Använd**.
 
-   ![](/help/screens-cloud/assets/configure/screens-video-6.png)
+   ![Klicka på Använd](/help/screens-cloud/assets/configure/screens-video-6.png)
 
    >[!NOTE]
    >* Du kan skapa flera Bearbeta-profiler och använda dem för motsvarande mappar, så att videofilmerna i dessa mappar får de specifika videoåtergivningarna.

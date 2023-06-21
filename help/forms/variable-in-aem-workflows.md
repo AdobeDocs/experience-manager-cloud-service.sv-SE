@@ -2,9 +2,9 @@
 title: Hur lägger jag till variabler i AEM?
 description: Lär dig skapa en variabel, ange ett värde för variabeln och använda den i [!DNL AEM Forms] Arbetsflödessteg.
 exl-id: d9139ea9-2f86-476c-8767-b36766790f2c
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
 workflow-type: tm+mt
-source-wordcount: '2045'
+source-wordcount: '2047'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Använd datatypen ArrayList för att skapa variabelsamlingar. Du kan skapa en Ar
 
 Så här skapar du en variabel:
 
-1. Navigera AEM till Verktyg ![](assets/hammer-icon.svg) > Arbetsflöde > Modeller.
+1. Navigera AEM till Verktyg ![Hammerikon](assets/hammer-icon.svg) > Arbetsflöde > Modeller.
 1. Tryck **[!UICONTROL Create]** och ange arbetsflödesmodellens titel och valfria namn. Markera modellen och tryck på **[!UICONTROL Edit]**.
 1. Tryck på variabelikonen som är tillgänglig i sidokanten av arbetsflödesmodellen och tryck på **[!UICONTROL Add Variable]**.
 

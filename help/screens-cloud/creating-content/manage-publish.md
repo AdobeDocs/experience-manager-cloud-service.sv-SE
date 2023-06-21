@@ -2,9 +2,9 @@
 title: Publicera en kanal på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du publicerar en kanal på skärmar as a Cloud Service.
 exl-id: a69086d2-777c-4a94-bd22-5c02f98bbedb
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -31,20 +31,20 @@ Följ stegen nedan för att publicera kanalen:
 
 1. Navigera och markera kanalen i projektet, till exempel **FirstDigitalExperience** —> **Kanaler** —> **LoopingChannelOne**.
 
-   ![](/help/screens-cloud/assets/create-content/managepub-1.png)
+   ![Välj kanal](/help/screens-cloud/assets/create-content/managepub-1.png)
 
 1. Klicka på **Hantera publikation** i åtgärdsfältet.
 
 1. Välj **Åtgärd** as **Publicera** och **Schemaläggning** as **Nu** från **Guiden Hantera publikation** och klicka på **Nästa**.
 
-   ![](/help/screens-cloud/assets/create-content/managepub-2.png)
+   ![Välj publiceringsåtgärd](/help/screens-cloud/assets/create-content/managepub-2.png)
 
    >[!NOTE]
    >Klicka **Inkludera underordnade** från åtgärdsfältet och avmarkera alla alternativ för att publicera alla moduler i projektet och klicka på Lägg till för att publicera. Som standard är alla rutor markerade och du måste avmarkera kryssrutorna manuellt för att publicera alla moduler i projektet.
 
 1. När du har valt kanalen i **Hantera publikation** guide, klicka på **Publicera** för att publicera kanalen.
 
-   ![](/help/screens-cloud/assets/create-content/managepub-3.png)
+   ![Publicera kanalen](/help/screens-cloud/assets/create-content/managepub-3.png)
 
 
 ## What&#39;s Next {#whats-next}

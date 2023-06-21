@@ -3,9 +3,9 @@ title: Stöd för miniatyrbilder för videoklipp på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du lägger till stöd för miniatyrbilder för videoklipp på skärmar as a Cloud Service.
 index: true
 exl-id: 7b15d7cc-f089-4008-9039-5f48343a0f20
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -42,19 +42,19 @@ Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 
 1. Markera kanalen och klicka på **Redigera** i åtgärdsfältet för att öppna redigeraren.
 
-   ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-1.png)
+   ![Öppna redigeraren](/help/screens-cloud/using-core-product-features/assets/thumbnail-1.png)
 
 1. Lägg till eller redigera en befintlig videokomponent enligt bilden nedan.
 
-   ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-2.png)
+   ![Redigera komponenten](/help/screens-cloud/using-core-product-features/assets/thumbnail-2.png)
 
 1. Markera videon och klicka på *wrench* -ikonen för att öppna videoegenskaperna.
 
-   ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-3.png)
+   ![Klicka på växeln](/help/screens-cloud/using-core-product-features/assets/thumbnail-3.png)
 
 1. The **Video** öppnas där du kan se **Miniatyrbild** släppzon.
 
-   ![](/help/screens-cloud/using-core-product-features/assets/thumbnail-4.png)
+   ![Visa miniatyrbilden](/help/screens-cloud/using-core-product-features/assets/thumbnail-4.png)
 
 1. Dra och släpp en bild från resursväljaren till **Miniatyrbild** släppa zon och klicka på **Klar**.
 

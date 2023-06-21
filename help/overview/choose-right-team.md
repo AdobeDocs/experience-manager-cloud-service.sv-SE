@@ -2,9 +2,9 @@
 title: Rätt personer, rätt roller
 description: Rätt personer, rätt roller
 exl-id: 9106ccf5-dc90-4ccb-95bd-7dd5392cd174
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 <br>
 
-![](assets/team_involvement.png)
+![Granska roller för implementering](assets/team_involvement.png)
 
 **Granska den här listan med ditt implementeringsteam** och se till att ni har personer med relevanta kvalifikationer i varje roll. Teammedlemmar som inte är lika bekanta med Adobe Experience Cloud kan använda [Experience League](https://experienceleague.adobe.com/#recommended/solutions/experience-manager) utbildningsresurser för att bli certifierade genom [Adobe Digital Learning](https://learning.adobe.com/certification.html).
 

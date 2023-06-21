@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 5311ba7f001201fc94c73fa52bc7033716c1ba78
+source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
 workflow-type: tm+mt
-source-wordcount: '2271'
+source-wordcount: '2276'
 ht-degree: 0%
 
 ---
@@ -245,7 +245,7 @@ Välj **Hantera åtkomst** på menyn ellips i miljön på **Miljö** kort. Du ka
 
 Välj **Developer Console** på menyn ellips i miljön på **Miljö** kort. En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console**.
 
-![](assets/environ-devconsole.png)
+![Logga in på Developer Console](assets/environ-devconsole.png)
 
 Endast en användare med **Utvecklare** rollen har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare som har åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
 
