@@ -4,10 +4,10 @@ description: Lär dig hur du aktiverar funktionerna Content Fragment och GraphQL
 feature: Content Fragments
 role: User
 exl-id: 55d442ae-ae06-4dfa-8e4e-b415385ccea5
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1fc57dacbf811070664d5f5aaa591dd705516fa8
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 14%
+source-wordcount: '358'
+ht-degree: 3%
 
 ---
 
@@ -26,21 +26,21 @@ Innan du använder innehållsfragment måste du använda **Konfigurationsläsare
 >
 >Om du inte aktiverar **Modeller för innehållsfragment**:
 >
->* den **Skapa** kan inte användas för att skapa nya modeller.
->* kommer du inte att kunna [välj platskonfigurationen för att skapa den relaterade slutpunkten](/help/headless/graphql-api/graphql-endpoint.md).
+>* den **Skapa** kan inte användas för att skapa modeller.
+>* du inte kan [välj platskonfigurationen för att skapa den relaterade slutpunkten](/help/headless/graphql-api/graphql-endpoint.md).
 
-Om du vill aktivera funktioner för innehållsfragment måste du:
+Om du vill aktivera funktionen för innehållsfragment måste du göra följande:
 
 * Aktivera användning av innehållets fragmentfunktioner via konfigurationsläsaren
 * Använda konfigurationen i resursmappen
 
 ### Aktivera funktionen för innehållsfragment i konfigurationsläsaren {#enable-content-fragment-functionality-in-configuration-browser}
 
-Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fragment-model) dig **måste** först aktivera dem via **Konfigurationsläsaren**:
+Använda vissa [Funktion för innehållsfragment](#creating-a-content-fragment-model), **måste** först aktivera dem via **Konfigurationsläsaren**:
 
 >[!NOTE]
 >
->Mer information finns i [Konfigurationsläsaren:](/help/implementing/developing/introduction/configurations.md#using-configuration-browser).
+>Mer information finns i [Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser).
 
 >[!NOTE]
 >
@@ -49,9 +49,9 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
 >Observera följande:
 >
 >
->* När du har skapat modeller i en underkonfiguration är det INTE möjligt att flytta eller kopiera modellen till en annan underkonfiguration.
+>* När du har skapat modeller i en delkonfiguration går det INTE att flytta eller kopiera modellen till en annan underkonfiguration.
 >
->* En GraphQL-slutpunkt kommer (fortfarande) att baseras på en överordnad (rot) konfiguration.
+>* En GraphQL-slutpunkt är (fortfarande) baserad på en överordnad (rot) konfiguration.
 >
 >* Beständiga frågor sparas (fortfarande) som är relevanta för den överordnade konfigurationen (roten).
 
@@ -76,8 +76,8 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
 
 ### Använd konfigurationen för din mapp {#apply-the-configuration-to-your-folder}
 
-När konfigurationen **global** är aktiverat för innehållets fragmentfunktion, vilket sedan gäller för alla resursmappar som är tillgängliga via **Resurser** konsol.
+När konfigurationen **global** är aktiverat för innehållets fragmentfunktion, gäller för alla resursmappar som är tillgängliga via **Resurser** konsol.
 
-Om du vill använda andra konfigurationer (dvs. exkludera globala) med en jämförbar Assets-mapp måste du definiera kopplingen. Detta gör du genom att välja lämplig **konfiguration** på fliken **Cloud Services** i **Mappegenskaper** för rätt mapp.
+Om du vill använda andra konfigurationer (d.v.s. exkludera globala) med en jämförbar resursmapp måste du definiera anslutningen. Den här anslutningen görs genom att välja lämplig **Konfiguration** i **Cloud Services** -fliken i **Mappegenskaper** för rätt mapp.
 
 ![Använd konfiguration](assets/cfm-conf-02.png)
