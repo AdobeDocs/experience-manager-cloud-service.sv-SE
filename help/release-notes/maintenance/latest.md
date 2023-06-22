@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 26178edc3308801e0273aca67b7cd82180131483
+source-git-commit: 46f0f8ba51b328bef1061d574b0d378a510fcf38
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '382'
 ht-degree: 1%
 
 ---
@@ -17,17 +17,11 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 12255, som offentliggjordes den 13 juni 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 12142.
 
-Funktionsaktiveringen för den här underhållsversionen ger dig den fullständiga funktionsuppsättningen. Se [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för fullständig information.
+Funktionsaktiveringen för den här underhållsversionen ger dig tillgång till alla funktioner som är aktiverade i 2023.6.0. Se [Roadmap för lansering av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
 ### Förbättringar {#enhancements-12255}
 
 Ingen.
-
-### Kända fel {#known-issues-12255}
-
-- ASSETS-25729 - Visa väljarmenyn är inaktiverad
-- ASSETS-25728 - alternativet Bearbeta om resurs är inte tillgängligt i sökvyn
-- ASSETS-22603 - Vissa kolumner för tillgångsrapport av hämtningstyp visar &quot;null&quot;-värden i användargränssnittet. Hämtningsbar CSV-fil påverkas inte.
 
 ### Åtgärdade problem {#fixed-issues-12255}
 
@@ -49,6 +43,12 @@ Ingen.
 - ASSETS-23981 - Sorteringsfunktionen för titlar som inte fungerar i samlingslänkar
 - ASSETS-24723 - Publicerade resurser bearbetades på nytt utan att användaren behövde göra något
 - GRANITE-45385 - Migrera trädaktivering så att sling-jobb används i stället för arbetsflöde
+
+### Kända fel {#known-issues-12255}
+
+- ASSETS-25729 - Visa väljarmenyn är inaktiverad
+- ASSETS-25728 - alternativet Bearbeta om resurs är inte tillgängligt i sökvyn
+- ASSETS-22603 - Vissa kolumner för tillgångsrapport av hämtningstyp visar &quot;null&quot;-värden i användargränssnittet. Hämtningsbar CSV-fil påverkas inte.
 
 ### Inbäddade tekniker {#embedded-tech-12255}
 
