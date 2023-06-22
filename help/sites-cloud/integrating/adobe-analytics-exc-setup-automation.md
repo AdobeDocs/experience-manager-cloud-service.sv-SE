@@ -4,9 +4,9 @@ description: Experience Cloud Setup Automation är ett enkelt och automatiserat 
 feature: Administering
 role: Admin
 exl-id: 351ead2c-7b0d-4bd9-a020-47516948d467
-source-git-commit: f91885a7d15c0ff927c6e10f65852f787cf26eb3
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Miljön bör nu vara redo för Experience Cloud Setup Automation.
 1. Tryck på **Integrera analyser** -knappen.
 1. Ange ett namn för **Report Suite-ID**.
 
-   Strängen används för att skapa en ny [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html?lang=en) i Adobe Analytics som datalager för analysdata för den valda AEM. Den angivna strängen läggs till med miljö- och skiktidentifierare för att säkerställa unikt utseende.
+   Strängen används för att skapa en ny [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html?lang=en) i Adobe Analytics som datalager för analysdata för den valda AEM. Den angivna strängen har bifogats med miljö- och skiktidentifierare för att säkerställa unikt utseende.
 
 1. Uppdatera sidan och panelen och tryck på **Kontrollera integreringsstatus** för att kontrollera automatiseringsstatus.
 

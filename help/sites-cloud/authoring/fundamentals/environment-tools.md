@@ -2,9 +2,9 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2153'
 ht-degree: 11%
 
 ---
@@ -95,7 +95,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 >[!NOTE]
 >
->En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan även vara fallet för ett litet skrivbordsfönster.
+>En mobil enhet identifieras när bredden är mindre än 1 024 pixlar. Detta kan också vara fallet för ett litet skrivbordsfönster.
 
 ## Resursläsaren {#assets-browser}
 
@@ -270,7 +270,7 @@ Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 * [Timewarp](/help/sites-cloud/authoring/features/page-versions.md#timewarp) - gör att du kan visa ett sidläge vid en viss tidpunkt.
 * [Live Copy-status](/help/sites-cloud/authoring/fundamentals/editing-content.md#live-copy-status) - ger dig en snabb översikt över live-kopians status och vilka komponenter som ärvs/inte ärvs.
 * [Utvecklarläge](/help/implementing/developing/tools/developer-mode.md)
-* [Förhandsgranska](/help/sites-cloud/authoring/fundamentals/editing-content.md#previewing-pages) - används för att visa sidan så som den kommer att visas i publiceringsmiljön, eller navigera med hjälp av länkar i innehållet.
+* [Förhandsgranska](/help/sites-cloud/authoring/fundamentals/editing-content.md#previewing-pages) - används för att visa sidan så som den visas i publiceringsmiljön, eller navigera med hjälp av länkar i innehållet.
 * [Anteckna](/help/sites-cloud/authoring/fundamentals/annotations.md) - används för att lägga till eller visa anteckningar på sidan.
 
 Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktiska ikonen ändras för att återspegla det läge som du använder för närvarande:

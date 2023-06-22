@@ -2,10 +2,10 @@
 title: Skapa och ordna sidor
 description: Skapa och ordna sidor med AEM
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '2556'
-ht-degree: 4%
+source-wordcount: '2542'
+ht-degree: 3%
 
 ---
 
@@ -133,7 +133,7 @@ När du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet en
 
 ### Mallar {#templates}
 
-I AEM anger en mall en speciell typ av sida. En mall kommer att användas som bas för alla nya sidor som skapas.
+I AEM anger en mall en speciell typ av sida. En mall används som bas för alla nya sidor som skapas.
 
 Mallen definierar strukturen för en sida, inklusive en miniatyrbild och andra egenskaper. Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation. Mallar består av [komponenter](#components).
 
@@ -220,7 +220,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    >[!NOTE]
    >
-   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Exempel: `beach` finns redan en ny sida `beach1`.
+   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Exempel: `beach` finns redan, en ny sida blir `beach1`.
 
 1. Om du återgår till konsolen ser du den nya sidan:
 
@@ -280,7 +280,7 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
 >[!NOTE]
 >
->Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Exempel: `beach` finns redan en ny sida med namnet `beach` kommer `beach1`.
+>Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Exempel: `beach` finns redan, en ny sida med namnet `beach` blir `beach1`.
 
 >[!NOTE]
 >
@@ -319,7 +319,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
    >[!NOTE]
    >
-   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Exempel: `beach` finns redan en ny sida med namnet `beach` kommer `beach1`.
+   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `beach` finns redan, en ny sida med namnet `beach` blir `beach1`.
 
 1. Från **Välj mål** steg i guiden som du kan antingen:
 
@@ -332,13 +332,13 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
    >[!NOTE]
    >
-   >Som standard väljs den överordnade sidan för sidan som du flyttar/byter namn på som mål.
+   >Som standard är den överordnade sidan till sidan som du flyttar eller byter namn på markerad som mål.
 
    ![Välj mål för flyttning av sida](/help/sites-cloud/authoring/assets/move-page-destination.png)
 
    >[!NOTE]
    >
-   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Exempel: `winter` finns redan `winter` kommer `winter1`.
+   >Om du flyttar en sida till en plats där det redan finns en sida med samma namn, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `winter` finns redan, `winter` blir `winter1`.
 
 1. Om sidan är länkad till eller refererad, eller har publicerats, visas informationen i **Justera/publicera igen** steg.
 
@@ -354,11 +354,11 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
 >[!NOTE]
 >
->Om sidan redan har publicerats avpubliceras den automatiskt när du flyttar den. Som standard publiceras den om när flytten är klar, men du kan ändra detta genom att avmarkera fältet **Publicera igen** i steget **Justera/publicera igen**.
+>Om sidan redan har publicerats, kommer den att återpubliceras automatiskt när du flyttar den. Som standard publiceras den om när flytten är klar, men detta kan ändras genom att avmarkera **Publicera igen** i **Justera/publicera igen** steg.
 
 >[!NOTE]
 >
->Om det inte finns någon referens till sidan på något sätt visas **Justera/publicera igen** kommer att hoppas över.
+>Om det inte finns någon referens till sidan på något sätt visas **Justera/publicera igen** steget hoppas över.
 
 >[!NOTE]
 >
@@ -372,7 +372,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
 Vanligtvis utförs en åtgärd för att flytta eller byta namn på en sida direkt. Detta betraktas som synkron bearbetning och ytterligare åtgärder i gränssnittet blockeras tills åtgärden är klar.
 
-Om antalet sidor som påverkas ligger över en angiven gräns, kommer åtgärden att bearbetas asynkront, vilket gör att användaren kan fortsätta att redigera i gränssnittet utan att detta hindras av åtgärden för att flytta sidan eller byta namn.
+Om antalet sidor som påverkas ligger över en definierad gräns bearbetas åtgärden asynkront, så att användaren kan fortsätta att redigera i gränssnittet utan att detta hindras av åtgärden för att flytta sidan eller byta namn.
 
 * När du klickar **Flytta** AEM i det sista steget ovan kontrollerar den konfigurerade gränsen.
 * Om antalet sidor som påverkas ligger under gränsen utförs en synkron åtgärd.
@@ -404,7 +404,7 @@ Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** ko
 
    ![Dialogrutan Ta bort](/help/sites-cloud/authoring/assets/delete-page.png)
 
-   * **Vill du arkivera sidor före borttagning?** - Om det här alternativet är markerat skapas versioner av de sidor som markerats för borttagning när de tas bort.
+   * **Vill du arkivera sidor före borttagning?** - Om det här alternativet är markerat skapas versioner av de sidor som markerats för borttagning vid borttagning.
       * [Versioner kan återställas vid ett senare tillfälle.](/help/sites-cloud/authoring/features/page-versions.md)
       * Det går inte att återställa sidor som tagits bort utan tidigare versioner.
    * **Avbryt** för att avbryta åtgärden

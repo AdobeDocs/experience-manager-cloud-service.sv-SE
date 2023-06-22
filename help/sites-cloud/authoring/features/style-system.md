@@ -2,9 +2,9 @@
 title: Formatsystem
 description: Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 exl-id: 224928dd-e365-4f3e-91af-4d8d9f47efdd
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1319'
 ht-degree: 1%
 
 ---

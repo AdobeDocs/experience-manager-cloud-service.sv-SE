@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '2993'
+source-wordcount: '2986'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ Dokumentet är utformat för att ge en översikt över grundläggande hantering 
 
 >[!NOTE]
 >
->* Vissa funktioner är inte tillgängliga i alla konsoler, och i vissa konsoler kan ytterligare funktioner vara tillgängliga. Specifik information om de enskilda konsolerna och deras tillhörande funktioner beskrivs mer ingående på andra sidor.
+>* Vissa funktioner är inte tillgängliga i alla konsoler, och i vissa konsoler kan ytterligare funktioner vara tillgängliga. Specifik information om de enskilda konsolerna och deras relaterade funktioner beskrivs mer ingående på andra sidor.
 >* Kortkommandon är tillgängliga i hela AEM. I synnerhet när [använda konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) och [redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
 
 ## Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
@@ -110,7 +110,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Knappen Meddelanden](/help/sites-cloud/authoring/assets/notifications.png)
 
-  Den här ikonen kommer att märkas med antalet för närvarande tilldelade ofullständiga meddelanden.
+  Den här ikonen är märkt med antalet för närvarande tilldelade ofullständiga meddelanden.
 
 * [Användaregenskaper](/help/sites-cloud/authoring/getting-started/account-environment.md)
 
@@ -305,9 +305,9 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
 * Om du trycker eller klickar på miniatyrbilden markeras resursen.
 
-   * När du väljer det här alternativet kommer en bock att läggas över miniatyrbilden och resursnamnet kommer också att markeras.
+   * När du väljer det här alternativet läggs en bock över miniatyrbilden och resursnamnet markeras också.
    * Information om den valda resursen visas i den sista kolumnen.
-   * Verktygsfältet för funktionsmakron blir tillgängligt.
+   * Verktygsfältet för åtgärder blir tillgängligt.
 
   När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
 

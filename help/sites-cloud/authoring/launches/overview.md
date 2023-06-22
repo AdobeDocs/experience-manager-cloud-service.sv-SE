@@ -2,9 +2,9 @@
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '903'
 ht-degree: 5%
 
 ---
@@ -64,7 +64,7 @@ Med Launes kan du:
    * Automatiskt - det innebär följande:
       * The **Starta**(**Live**) **datum** fält: detta kan anges när du skapar eller redigerar en programstart.
       * The **Produktionsklar** flagga: detta kan bara anges när du redigerar en programstart.
-      * Om **Produktionsklar** -flaggan är inställd kommer lanseringen automatiskt att befordras till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
+      * Om **Produktionsklar** -flaggan är inställd, lanseringen befordras automatiskt till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
         Om inget datum har angetts har flaggan ingen effekt.
 * Uppdatera käll- och startsidor parallellt:
    * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). dvs. som en live-kopia).
@@ -92,7 +92,7 @@ Med Launes kan du:
 
 1. I **Webbplatser** navigera till startkällan (startfilerna).
 1. Öppna **Referenser** och välj källsidan.
-1. Välj **Startar**, kommer de befintliga starterna att listas tillsammans med tillgång till **Startar konsolen**:
+1. Välj **Startar**, listas de befintliga starterna tillsammans med tillgång till **Startar konsolen**:
 
    ![Referenser till starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references.png)
 

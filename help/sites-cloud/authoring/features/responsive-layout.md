@@ -2,9 +2,9 @@
 title: Responsiv layout
 description: AEM gör att du kan förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1764'
+source-wordcount: '1745'
 ht-degree: 7%
 
 ---
@@ -74,9 +74,9 @@ Enheten **Skrivbord**, som inte har någon specifik bredd, relaterar till standa
 >
 >Det skulle vara möjligt att definiera brytpunkter för varje enskild enhet, men detta skulle drastiskt öka den insats som krävs för att definiera och underhålla layout.
 
-När du använder emulatorn väljer du en specifik enhet för emulerings- och layoutdefinition och den relaterade brytpunkten markeras också. Alla layoutändringar du gör gäller för andra enheter som brytpunkten gäller för, dvs. enheter som är placerade till vänster om den aktiva brytpunktsmarkören, men före nästa brytpunktsmarkör.
+När du använder emulatorn väljer du en specifik enhet för emulerings- och layoutdefinition och den relaterade brytpunkten markeras också. Alla layoutändringar du gör gäller för andra enheter som brytpunkten gäller för. Det vill säga alla enheter som är placerade till vänster om den aktiva brytpunktsmarkören, men före nästa brytpunktsmarkör.
 
-När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540 pixlar) för emulering och layout, brytpunkten **Telefon** (definierat som 768 pixlar) aktiveras också. Alla layoutändringar du gör för **iPhone 6** kommer att gälla för andra enheter enligt **Telefoner** brytpunkt, som **iPhone 5** (definierat som 320 pixlar).
+När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540 pixlar) för emulering och layout, brytpunkten **Telefon** (definierat som 768 pixlar) aktiveras också. Alla layoutändringar du gör för **iPhone 6** är tillämpliga på andra enheter enligt **Telefoner** brytpunkt, som **iPhone 5** (definierat som 320 pixlar).
 
 ![Emulatorer](/help/sites-cloud/authoring/assets/responsive-layout-emulators.png)
 
@@ -157,16 +157,16 @@ Precis som med andra komponenter kan du markera och sedan vidta åtgärder för 
 
    ![Överordnad knapp](/help/sites-cloud/authoring/assets/responsive-layout-parent-button.png)
 
-1. Om layoutkomponenten är kapslad väljer du **Överordnad** Med det här alternativet visas en listruta där du kan välja den kapslade layoutbehållaren eller dess överordnade behållare.
+1. Om layoutkomponenten är kapslad väljer du **Överordnad** Med det här alternativet visas en listruta där du kan välja den kapslade layoutbehållaren eller dess överordnade.
 
    När du för musen över behållarnamnen i listrutan visas deras konturer på sidan.
 
    * Den lägsta kapslade layoutbehållaren visas med blå kontur.
-   * Varje efterföljande behållare linjeras med en ljusare nyans av blått.
+   * Varje efterföljande behållare kontureras med en ljusare nyans av blått.
 
    ![Kapslade behållare](/help/sites-cloud/authoring/assets/responsive-layout-nested.png)
 
-1. Då markeras hela stödrastret med dess innehåll. Åtgärdsverktygsfältet visas där du kan välja en åtgärd som **Ta bort.**
+1. Hela stödrastret markeras med dess innehåll. Åtgärdsverktygsfältet visas, där du kan välja en åtgärd som **Ta bort.**
 
 ## Definiera layouter (layoutläget) {#defining-layouts-layout-mode}
 
@@ -187,7 +187,7 @@ Om du vill konfigurera layouten för ett responsivt rutnät som implementeras me
 
 I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
-* Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot stödrastret. När du ändrar storlek på bakgrundsstödrastret visas det för att underlätta justeringen:
+* Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot stödrastret. När du ändrar storlek visas stödrastret i bakgrunden för att underlätta justeringen:
 
   ![Ändra storlek på komponenter](/help/sites-cloud/authoring/assets/responsive-layout-resizing.png)
 
@@ -198,11 +198,11 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
 * Klicka/peka på en innehållskomponent så kan du göra följande i verktygsfältet:
    * **Överordnad** - Gör att du kan markera hela layoutbehållarkomponenten för att utföra en åtgärd i sin helhet.
    * **Flyt till ny rad** - Komponenten flyttas till en ny rad, beroende på vilket utrymme som är tillgängligt i stödrastret.
-   * **Dölj komponent** - Komponenten blir osynlig (den kan återställas från verktygsfältet i layoutbehållaren).
+   * **Dölj komponent** - Komponenten är osynlig (den kan återställas från verktygsfältet i layoutbehållaren).
 
   ![Dölj komponent](/help/sites-cloud/authoring/assets/responsive-layout-hide.png)
 
-* I **Layout** läge där du kan trycka/klicka på **Dra komponenter hit** om du vill markera hela komponenten. Då visas verktygsfältet för det här läget.
+* I **Layout** läge där du kan trycka/klicka på **Dra komponenter hit** om du vill markera hela komponenten. Verktygsfältet visas för det här läget.
 
   Verktygsfältet har olika alternativ beroende på layoutkomponentens läge och vilka komponenter som tillhör det. Till exempel:
 
@@ -214,7 +214,7 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
      ![Knappen Visa dolda komponenter](/help/sites-cloud/authoring/assets/responsive-layout-show-button.png)
 
-   * **Återställ brytpunktslayout** - Återgå till standardlayouten. Det innebär att ingen anpassad layout kommer att användas.
+   * **Återställ brytpunktslayout** - Återgå till standardlayouten. Ingen anpassad layout används.
 
      ![Återställ brytpunktslayoutknapp](/help/sites-cloud/authoring/assets/responsive-layout-revert-button.png)
 

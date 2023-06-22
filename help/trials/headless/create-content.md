@@ -4,7 +4,7 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: ac94981e477e1fe8b883460ed9be009b4c1c088d
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -37,7 +37,7 @@ I den här modulen skapar du ett nytt innehållsfragment baserat på den modelle
 
 1. Tryck eller klicka på **Skapa** längst upp till höger på konsolen.
 
-1. The **Nytt innehållsfragment** öppnas där du kan börja skapa ett nytt innehållsfragment. **Plats** fylls automatiskt i med var det nya innehållet sparas.
+1. The **Nytt innehållsfragment** öppnas där du kan börja skapa ett nytt innehållsfragment. **Plats** fylls automatiskt i där det nya innehållet sparas.
 
 1. I **Modell för innehållsfragment** väljer du **Adventure** Modell för innehållsfragment som du skapade tidigare.
 
@@ -62,7 +62,7 @@ När du har sparat och öppnat ditt nya innehållsfragment öppnas redigeraren f
 1. Ange en **Beskrivning** för fragmentet genom att klistra in i följande text.
 
    ```text
-   Visiting Tuscany on a bicycle is about experiencing the old world charm of Italy on your own terms. Your efforts on the climbs of Italy's rolling hills during this tour will be rewarded with sunny Mediterranean landscapes and unmatched Italian hospitality.  Tuscany’s natural wonders have always been a well of inspiration for arts and culture. Find out why as you explore the Italian countryside and coastline on bicycle.
+   Visiting Tuscany on a bicycle is about experiencing the old world charm of Italy on your own terms. Your efforts on the climbs of Italy's rolling hills during this tour are rewarded with sunny Mediterranean landscapes and unmatched Italian hospitality. Tuscany's natural wonders have always been a well of inspiration for arts and culture. Find out why as you explore the Italian countryside and coastline on bicycle.
    ```
 
 1. Ange en **Pris** för ditt fragment genom att ange `$700`.

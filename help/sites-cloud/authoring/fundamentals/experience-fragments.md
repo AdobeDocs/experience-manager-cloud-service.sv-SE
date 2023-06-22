@@ -2,10 +2,10 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 9c3153efe4aacd1666663cd5eb718f75329202af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '2064'
-ht-degree: 5%
+source-wordcount: '2052'
+ht-degree: 4%
 
 ---
 
@@ -83,15 +83,15 @@ Om du skapar mappar kan du:
 
 * skapa en meningsfull struktur för era Experience Fragments, t.ex. efter klassificering
 
-   >[!NOTE]
-   >
-   >Det är inte nödvändigt att anpassa strukturen för dina Experience Fragments till sidstrukturen på din plats.
+  >[!NOTE]
+  >
+  >Det är inte nödvändigt att anpassa strukturen för dina Experience Fragments till sidstrukturen på din plats.
 
 * [allokera tillåtna mallar på mappnivå](#configure-allowed-templates-folder)
 
-   >[!NOTE]
-   >
-   >Du kan använda [mallredigerare](/help/sites-cloud/authoring/features/templates.md) för att skapa en egen mall.
+  >[!NOTE]
+  >
+  >Du kan använda [mallredigerare](/help/sites-cloud/authoring/features/templates.md) för att skapa en egen mall.
 
 WKND-projektet strukturerar vissa Experience Fragments enligt `Contributors`. Den struktur som används visar också hur andra funktioner, som Multi Site Management (inklusive språkkopior), kan användas.
 
@@ -184,7 +184,7 @@ Så här skapar du ett Experience Fragment:
 
 1. Ange **egenskaperna** för **upplevelsefragmentet**.
 
-   A **Titel** är obligatoriskt. Om **Namn** är tom kommer den att härledas från **Titel**.
+   A **Titel** är obligatoriskt. Om **Namn** är tom, den härleds från **Titel**.
 
    ![Experience Fragment-egenskaper](/help/sites-cloud/authoring/assets/xf-04.png)
 
@@ -196,7 +196,7 @@ Så här skapar du ett Experience Fragment:
 
 1. Klicka **Skapa**.
 
-   Ett meddelande visas. Välj:
+   Ett meddelande  visas. Välj:
 
    * **Klar** för att återgå till konsolen
    * **Öppna** för att öppna fragmentredigeraren
@@ -241,7 +241,7 @@ Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
 
    * **Mall**
    * **Titel**
-   * **Namn** - Om det lämnas tomt kommer det att härledas från titeln
+   * **Namn** - Om inget anges hämtas den från titeln
    * **Beskrivning**
    * **Variationstaggar**
 
@@ -293,7 +293,7 @@ Så här skapar du ett nytt byggblock:
 
    ![Namnbyggblock](/help/sites-cloud/authoring/assets/xf-11.png)
 
-1. **Byggblocket** visas på den vänstra fliken (**Lokal**) och kan väljas för ytterligare åtgärder:
+1. The **Byggblock** visas på den vänstra fliken (**Lokal**) och kan väljas för ytterligare åtgärder:
 
    ![Byggblock i rälen](/help/sites-cloud/authoring/assets/xf-12.png)
 
@@ -355,16 +355,15 @@ Så här anpassar du fragment:
    >
    >The **ContextHub-sökväg** markerat i **Personalisering** -fliken måste vara antingen:
    >
-   >* samma sökväg som den som konfigurerats för sidan där fragmentet ska återges
-      >Eller:
+   >* samma sökväg som den som konfigurerats för sidan där fragmentet återges
+   >Eller:
    >* en sökväg som innehåller en delmängd av de butiker som definieras i ContextHub som konfigurerats för sidan
-
    >
    > 
 The **Segmentsökväg** markerat i **Personalisering** -fliken måste vara antingen:
-   * samma sökväg som den som konfigurerats för sidan där fragmentet ska återges, eller
+   >
+   * samma sökväg som den som konfigurerats för sidan där fragmentet återges, eller
    * en sökväg som innehåller en delmängd av segmenten som konfigurerats för sidan
-
 
 ### Definiera målanpassning för ert upplevelsefragment {#defining-targeting-experience-fragment}
 
@@ -390,7 +389,9 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn**[ v
    Egenskaperna är tillgängliga på olika flikar:
 
    >[!CAUTION]
+   >
    De här flikarna visas när du öppnar **Egenskaper** från Experience Fragments-konsolen.
+   >
    Om du **öppnar egenskaperna** när du redigerar ett upplevelsefragment visas rätt [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
 
    ![Experience Fragment-egenskaper](/help/sites-cloud/authoring/assets/xf-17.png)
@@ -420,6 +421,7 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn**[ v
 Använda `.plain.` -väljaren i URL-adressen kan du komma åt den vanliga HTML-återgivningen från webbläsaren.
 
 >[!NOTE]
+>
 Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att få tillgång till innehållet i Experience Fragment direkt, med endast URL:en](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
 
 ## Publicera upplevelsefragment {#publishing-experience-fragments}

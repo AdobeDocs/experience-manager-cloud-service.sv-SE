@@ -2,9 +2,9 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1222'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Innehållsfragmenten aktiverar:
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-4. Inledningsvis innehållet från **Huvud** Element och **Överordnad** (variation) visas. Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+4. Till att börja med innehåller innehållet från **Huvud** Element och **Överordnad** (variation) visas. Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
    ![Innehållsfragment i Resursläsaren](/help/sites-cloud/authoring/assets/content-fragments.png)
 
@@ -96,8 +96,8 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
   >Vilka element som är tillgängliga beror på vilken modell som används.
 
 * **Variant**
-   * **Standardmastern** är alltid tillgänglig.
-   * En markering blir tillgänglig om variationer har skapats för fragmentet.
+   * Standardvärdet **Överordnad** är alltid tillgängligt.
+   * En markering är tillgänglig om variationer har skapats för fragmentet.
 
 * **ID**
 

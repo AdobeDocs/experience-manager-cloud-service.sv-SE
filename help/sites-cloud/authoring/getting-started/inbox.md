@@ -2,9 +2,9 @@
 title: Din inkorg
 description: Hantera dina uppgifter med inkorgen
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '905'
 ht-degree: 15%
 
 ---
@@ -112,7 +112,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 >
 >Även om det går att markera mer än ett objekt, kan åtgärder bara vidtas för ett objekt i taget.
 
-1. Om du vill utföra en åtgärd för ett objekt markerar du miniatyrbilden för det aktuella objektet. Ikoner för de åtgärder som är tillämpliga på det objektet visas i verktygsfältet:
+1. Om du vill utföra en åtgärd för ett objekt markerar du miniatyrbilden för det aktuella objektet. Ikoner för de åtgärder som gäller för det objektet visas i verktygsfältet:
 
    ![Markera inkorgsobjekt](/help/sites-cloud/authoring/assets/inbox-select-item.png)
 
@@ -139,7 +139,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 2. Beroende på vilket objekt som är markerat startas en åtgärd, till exempel:
 
    * En dialogruta som är lämplig för åtgärden öppnas
-   * En åtgärdsguide startas
+   * En åtgärdsguide har startats
    * En dokumentationssida öppnas
 
    Till exempel: **Delegera** öppnar en dialogruta:

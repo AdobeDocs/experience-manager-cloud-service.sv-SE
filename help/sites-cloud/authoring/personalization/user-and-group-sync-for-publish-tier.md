@@ -2,9 +2,9 @@
 title: Registrering, inloggning och användarprofil
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1168'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ The `com.adobe.granite.auth.oauth.provider` -gränssnittet kan implementeras med
 
 ### Anteckningssessioner och inkapslade token {#sticky-sessions-and-encapsulated-tokens}
 
-AEM as a Cloud Service har aktiverat cookie-baserade klistersessioner, vilket ser till att slutanvändaren dirigeras till samma publiceringsnod vid varje begäran. För att öka prestanda är den inkapslade tokenfunktionen aktiverad som standard, så användarposten i databasen behöver inte refereras till vid varje begäran. Om den publiceringsnod som en slutanvändare har en tillhörighet att ersätta, är användar-id-posten tillgänglig på den nya publiceringsnoden, vilket beskrivs i avsnittet Datasynkronisering nedan.
+AEM as a Cloud Service har aktiverat cookie-baserade klistersessioner, vilket ser till att slutanvändaren dirigeras till samma publiceringsnod vid varje begäran. För att öka prestanda är den inkapslade tokenfunktionen aktiverad som standard, så användarposten i databasen behöver inte refereras till vid varje begäran. Om den publiceringsnod som en slutanvändare har en tillhörighet att ersätta är användar-id-posten tillgänglig på den nya publiceringsnoden, vilket beskrivs i avsnittet Datasynkronisering nedan.
 
 ## Användarprofil {#user-profile}
 

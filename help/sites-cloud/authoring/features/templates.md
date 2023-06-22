@@ -2,16 +2,16 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '4595'
-ht-degree: 10%
+source-wordcount: '4579'
+ht-degree: 9%
 
 ---
 
 # Skapa sidmallar {#creating-page-templates}
 
-När du skapar en sida måste du välja en mall som ska användas som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas.
+När du skapar en sida måste du välja en mall som används som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas.
 
 Tack vare **mallredigeraren** är det inte längre bara utvecklare som kan skapa och underhålla mallar. En typ av superanvändare, som kallas **mallskapare**, kan också arbeta med detta. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när dessa grunder väl är på plats kan **mallskaparen** skapa och konfigurera mallar utan något utvecklingsprojekt.
 
@@ -180,7 +180,7 @@ En mall kan aktiveras eller inaktiveras så att den blir tillgänglig eller inte
 
 >[!CAUTION]
 >
->När en mall är aktiverad visas en varning när en mallskapare börjar uppdatera mallen ytterligare. Detta är till för att informera användaren om att mallen kan refereras, så eventuella ändringar kan påverka sidorna som refererar till mallen.
+>När en mall har aktiverats visas en varning när en mallskapare börjar uppdatera mallen ytterligare. Detta är till för att informera användaren om att mallen kan refereras, så eventuella ändringar kan påverka sidorna som refererar till mallen.
 
 1. I **Mallkonsol** markerar du mallen.
 1. Välj **Aktivera** eller **Inaktivera** i verktygsfältet och i bekräftelsedialogrutan igen.
@@ -206,7 +206,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
    >[!NOTE]
    >
-   >Om **Tillåtna mallar** listan är tom. Trädet kommer att läggas till tills ett värde/en lista hittas.
+   >Om **Tillåtna mallar** listan är tom, trädet får ett stigande värde tills ett värde/en lista hittas.
    >
    >
    >Se [Malltillgänglighet](/help/implementing/developing/components/templates.md#template-availability) - principerna för tillåtna mallar förblir desamma.
@@ -262,7 +262,7 @@ När komponenter är låsta kan du lägga till innehåll som inte kan redigeras 
 
 #### Ursprungligt innehåll {#template-initial-content}
 
-När en komponent har låsts upp kan du definiera [ursprungligt innehåll](#editing-a-template-initial-content-author) som kommer att kopieras till de resulterande sidorna som skapas från mallen. Dessa olåsta komponenter kan redigeras på den eller de slutliga sidorna.
+När en komponent har låsts upp kan du definiera [ursprungligt innehåll](#editing-a-template-initial-content-author) som kopieras till de resulterande sidorna som skapas från mallen. Dessa olåsta komponenter kan redigeras på den eller de slutliga sidorna.
 
 >[!NOTE]
 >
@@ -368,7 +368,7 @@ Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **V
 
 ![Knappen Lägg till princip](/help/sites-cloud/authoring/assets/templates-add-policy-button.png)
 
-Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
+Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
 
 ![Kopiera princip, knapp](/help/sites-cloud/authoring/assets/templates-copy-policy-button.png)
 
@@ -427,7 +427,7 @@ Inställningarna för principer och egenskaper för en layoutbehållare liknar d
 
 >[!NOTE]
 >
->Det är obligatoriskt att konfigurera en princip för behållarkomponenter eftersom det gör att du kan definiera komponenter som ska vara tillgängliga i behållaren.
+>Det är obligatoriskt att konfigurera en princip för behållarkomponenter eftersom det gör att du kan definiera komponenter som är tillgängliga i behållaren.
 
 Konfigurationsfönstret är uppdelat i två delar, precis som i den allmänna användningen av fönstret.
 
@@ -478,14 +478,14 @@ Du låser upp/låser komponenter för att definiera om innehållet är tillgäng
 När en komponent har låsts upp:
 
 * En öppen hänglåsindikator visas i kanten.
-* Komponentverktygsfältet justeras därefter.
+* Komponentens verktygsfält justeras därefter.
 * Innehåll som redan har angetts visas inte längre i **Struktur** läge.
    * Innehåll som redan har angetts betraktas som ursprungligt innehåll och är bara synligt i **Ursprungligt innehåll** läge.
 * Den olåsta komponentens överordnade kan inte flyttas, klippas ut eller tas bort.
 
 ![Lås komponentknapp](/help/sites-cloud/authoring/assets/templates-unlock-component.png)
 
-Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i läget **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre i **strukturläget**, men de visas i **ursprungligt innehåll**. I **strukturläget** visas bara själva behållarkomponenten med dess lista över **tillåtna komponenter**.
+Detta inkluderar upplåsning av behållarkomponenter så att ytterligare komponenter kan läggas till, antingen i läget **ursprungligt innehåll** eller på resulterande sidor. Om du redan har lagt till komponenter/innehåll i behållaren innan du låser upp den visas dessa inte längre när du använder **Struktur** läge, men de visas i **Ursprungligt innehåll** läge. I **Strukturläge**, visas bara behållarkomponenten med sin lista över **Tillåtna komponenter**.
 
 ![Tillåtna komponenter](/help/sites-cloud/authoring/assets/templates-allowed-components.png)
 
@@ -572,7 +572,7 @@ Du kan tillämpa en innehållsprincip på antingen mallen eller de resulterande 
 
   ![Knappen Lägg till princip](/help/sites-cloud/authoring/assets/templates-add-policy-button.png)
 
-  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard kommer den kopierade profilen att namnges **Kopia av X**, där X är namnet på den kopierade profilen.
+  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
 
   ![Kopiera princip, knapp](/help/sites-cloud/authoring/assets/templates-copy-policy-button.png)
 

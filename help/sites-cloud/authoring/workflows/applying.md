@@ -2,9 +2,9 @@
 title: Använda arbetsflöden på sidor
 description: När du redigerar kan du anropa arbetsflöden för att göra något på sidorna; det går även att använda mer än ett arbetsflöde.
 exl-id: 86e71f0e-e53e-40bc-901d-2a1ab347bd0a
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '661'
 ht-degree: 11%
 
 ---
@@ -31,7 +31,6 @@ Arbetsflöden kan startas från:
 >
 >* Använda arbetsflöden för DAM-resurser.
 >* [Arbeta med projektarbetsflöden](/help/sites-cloud/authoring/projects/workflows.md).
-
 
 <!-- 
 >* [How to apply workflows to DAM assets](/help/assets/assets-workflow.md).
@@ -104,6 +103,7 @@ Du kan ange information:
    * **Pakettitel**
 
       * Du kan ange en rubrik för paketet för att underlätta identifieringen.
+
    >[!NOTE]
    >
    >Alternativet **Behåll arbetsflödespaket** är tillgängligt när arbetsflödet har konfigurerats med stöd för flera resurser och flera resurser har valts.
@@ -122,14 +122,14 @@ Du kan ange information:
 
    * En befintlig resurs som visar ytterligare åtgärder:
 
-      * **Inkludera underordnade** för att ange att underordnade resurser ska inkluderas i arbetsflödet.
+      * **Inkludera underordnade** om du vill ange att underordnade resurser ska inkluderas i arbetsflödet.
 En dialogruta öppnas där du kan förfina markeringen enligt:
 
          * Inkludera endast omedelbara barn.
          * Inkludera endast ändrade sidor.
          * Inkludera endast redan publicerade sidor.
 
-         Alla underordnade objekt läggs till i listan över resurser som arbetsflödet gäller för.
+        Alla underordnade objekt läggs till i listan över resurser som arbetsflödet gäller för.
 
       * **Ta bort markering** för att ta bort resursen från arbetsflödet.
 

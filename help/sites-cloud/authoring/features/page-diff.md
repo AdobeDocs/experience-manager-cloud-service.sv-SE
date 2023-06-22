@@ -2,9 +2,9 @@
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 exl-id: 6e5c7f14-c980-48e3-8bdd-a7ec10a9e680
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Den markerade sidan fyller hela fönstret, men fältet förblir överst så att 
 
 >[!NOTE]
 >
->Om webbläsarbredden inte kan hantera båda sidnamnen i helskärmsläge visas bara namnet på sidan som visas och den andra visas bakom ellipsen.
+>Om webbläsarbredden inte kan hantera båda sidnamnen i helskärmsläge visas bara namnet på sidan som visas och den andra är tillgänglig bakom ellipsen.
 
 Du kan också stänga helskärmsläget genom att klicka på ikonen för att avsluta helskärmsläget.
 

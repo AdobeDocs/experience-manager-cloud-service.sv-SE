@@ -2,9 +2,9 @@
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 exl-id: 8d80d867-2d0f-4ddb-8a06-f9441e6d85ce
-source-git-commit: 41027653bffb064b3c313d6512b0314336f6c8dc
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '5414'
+source-wordcount: '5412'
 ht-degree: 5%
 
 ---
@@ -151,7 +151,7 @@ Efter [starta målinriktningsprocessen](#the-targeting-process-create-target-and
 
 >[!CAUTION]
 >
->Var försiktig när du inaktiverar mål för en komponent som redan är avsedd i författarinstansen. Aktiviteten raderas automatiskt även från publiceringsinstansen.
+>Var försiktig när du inaktiverar mål för en komponent som redan är avsedd i författarinstansen. Aktiviteten tas automatiskt bort från publiceringsinstansen också.
 
 >[!NOTE]
 >

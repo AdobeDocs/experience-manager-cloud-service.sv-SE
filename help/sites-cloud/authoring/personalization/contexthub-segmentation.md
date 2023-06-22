@@ -2,9 +2,9 @@
 title: Konfigurera segmentering med ContextHub
 description: Lär dig hur du konfigurerar segmentering med ContextHub.
 exl-id: fbc38611-dbee-426e-b823-df64b6730c45
-source-git-commit: a278b3925180f4baa3b82af84080c947a72c9844
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1694'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Följande segmentjämförelser är tillgängliga när du vill utvärdera segment
 >
 >Därför när [skapa ett segment](#creating-a-new-segment)bör du välja en **datatyp** när de olika typerna av jämförda värden är kända. Till exempel:
 >
->Vid jämförelse av egenskapen `profile/age`, du vet redan att jämförelsetypen kommer att **tal**, så även om `profile/age` har inte angetts, en jämförelse `profile/age` mindre än 30 returneras **false**, som du skulle kunna förvänta dig.
+>Vid jämförelse av egenskapen `profile/age`, du vet redan att jämförelsetypen är en **tal**, så även om `profile/age` har inte angetts, en jämförelse `profile/age` mindre än 30 returneras **false**, som du skulle kunna förvänta dig.
 
 ### Referenser {#references}
 
@@ -96,7 +96,7 @@ Så här definierar du det nya segmentet:
 
    ![Nytt segment](../assets/contexthub-new-segment.png)
 
-   Varje segment har en startparameter som används som viktningsfaktor. Ett högre värde anger att segmentet väljs framför ett segment med ett lägre värde i de fall där flera segment är giltiga.
+   Varje segment har en startparameter som används som viktningsfaktor. Ett högre värde anger att segmentet är markerat i stället för ett segment med ett lägre värde i instanser där flera segment är giltiga.
 
    * Minsta värde: `0`
    * Högsta värde: `1000000`
@@ -200,7 +200,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 1. Ange en **Titel** och **Namn** för din mapp.
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
-      * Det genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
       * Den kan vid behov justeras.
 
    ![Skapa mapp](../assets/contexthub-create-folder.png)
@@ -212,7 +212,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 1. Mappen visas i segmentlistan.
    * Hur du sorterar kolumnerna påverkar var i listan den nya mappen visas.
    * Du kan justera sorteringen genom att trycka eller klicka på kolumnrubrikerna.
-      ![Den nya mappen](../assets/contexthub-folder.png)
+     ![Den nya mappen](../assets/contexthub-folder.png)
 
 ### Ändra befintliga mappar {#modify-folders}
 

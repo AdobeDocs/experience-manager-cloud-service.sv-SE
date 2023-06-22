@@ -2,9 +2,9 @@
 title: Lägga till sidanteckningar
 description: Använd anteckningsläget för att lämna anteckningar och skisser på sidor på samma sätt som du använder anteckningar för att underlätta granskning av innehåll
 exl-id: a9cb9745-8140-4795-a5f9-fb3a1a299bd8
-source-git-commit: 64d801b108229866394e993811a67f983be5df6c
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -66,13 +66,13 @@ Förutom att visa anteckningarna kan du i anteckningsläget skapa, redigera, fly
    * Ange anteckningstexten.
    * Skapa en skiss (linjer och former) för att markera ett område i komponenten.
 
-      ![Anteckningsknapp](/help/sites-cloud/authoring/assets/annotation-sketch.png)
+     ![Anteckningsknapp](/help/sites-cloud/authoring/assets/annotation-sketch.png)
 
-      Markören ändras till ett hårkors när du skapar en skiss. Du kan rita flera distinkta linjer. Skisslinjen återspeglar anteckningsfärgen och kan vara en pil, cirkel eller oval.
+     Markören ändras till ett hårkors när du skapar en skiss. Du kan rita flera distinkta linjer. Skisslinjen återspeglar anteckningsfärgen och kan vara en pil, cirkel eller oval.
 
    * Välj eller ändra färg:
 
-      ![Färgruteknapp för anteckningsfärg](/help/sites-cloud/authoring/assets/annotation-color-swatch.png)
+     ![Färgruteknapp för anteckningsfärg](/help/sites-cloud/authoring/assets/annotation-color-swatch.png)
 
 1. Du kan stänga anteckningsdialogrutan genom att klicka eller trycka utanför dialogrutan. En trunkerad vy av anteckningen tillsammans med eventuella skisser visas:
 

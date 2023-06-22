@@ -2,9 +2,9 @@
 title: IMS-konfiguration som ska användas vid integrering med Adobe Analytics
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Analytics
 exl-id: 12bd1573-373a-4001-be71-c8f155ef6896
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '887'
 ht-degree: 1%
 
 ---
@@ -73,9 +73,9 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
-   * Om du inte har något projekt än **Skapa nytt projekt** kommer att vara i mitten, nederst.
+   * Om du inte har något projekt än **Skapa nytt projekt** är centrerad, nederst.
      ![Skapa nytt projekt - första projektet](assets/integration-analytics-ims-02.png)
-   * Om du redan har befintliga projekt listas dessa och **Skapa nytt projekt** kommer att vara överst till höger.
+   * Om du redan har befintliga projekt visas dessa och **Skapa nytt projekt** är överst till höger.
      ![Skapa nytt projekt - flera projekt](assets/integration-analytics-ims-03.png)
 
 
@@ -107,7 +107,7 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
    ![Välj önskade produktprofiler](assets/integration-analytics-ims-16.png)
 
-1. Konfigurationen kommer att bekräftas.
+1. Konfigurationen har bekräftats.
 
 ### Tilldela behörigheter till integreringen {#assigning-privileges-to-the-integration}
 
@@ -219,5 +219,5 @@ The configuration can now be referenced for a Cloud Service to use the Analytics
 
 1. Complete other parameters as required, followed by **OK** on the dialog to confirm the configuration.
 
-1. You can now proceed to [Adding an Analytics Framework](/help/sites-administering/adobeanalytics-connect.md) to configure parameters that will be sent to Adobe Analytics. 
+1. You can now proceed to [Adding an Analytics Framework](/help/sites-administering/adobeanalytics-connect.md) to configure parameters that are sent to Adobe Analytics. 
 -->

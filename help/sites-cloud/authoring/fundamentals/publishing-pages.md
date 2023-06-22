@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1804'
 ht-degree: 5%
 
 ---
@@ -46,10 +46,9 @@ Beroende på var du befinner dig kan du publicera:
 >
 >Om du inte har behörighet att publicera en viss sida:
 >
->* Ett arbetsflöde kommer att utlösas för att meddela lämplig person om din begäran om publicering.
+>* Ett arbetsflöde aktiveras för att meddela lämplig person om din begäran om publicering.
 >* Det här arbetsflödet kan ha anpassats av ditt utvecklingsteam.
 >* Ett meddelande visas kort för att meddela dig att arbetsflödet har utlösts.
-
 
 >[!NOTE]
 >
@@ -129,17 +128,18 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    * **Åtgärd**
 
-      Välj om du vill publicera eller avpublicera de markerade sidorna.
+     Välj om du vill publicera eller avpublicera de markerade sidorna.
 
    * **Schemaläggning**
 
-      Välj om du vill utföra åtgärden nu eller vid ett senare datum.
+     Välj om du vill utföra åtgärden nu eller vid ett senare datum.
 
-      När du publicerar senare startas ett arbetsflöde för publicering av den eller de valda sidorna vid den angivna tidpunkten. Om du inte publicerar senare startas ett arbetsflöde för att avpublicera den eller de valda sidorna vid en viss tidpunkt.
+     När du publicerar senare startas ett arbetsflöde för publicering av den eller de valda sidorna vid den angivna tidpunkten. Om du inte publicerar senare startas ett arbetsflöde för att avpublicera den eller de valda sidorna vid en viss tidpunkt.
 
-      >[!NOTE]
-      >
-      >Om du vill avbryta en publicering/avpublicering senare går du till [Arbetsflödeskonsol](/help/sites-cloud/administering/workflows-administering.md#suspending-resuming-and-terminating-a-workflow-instance) för att avsluta motsvarande arbetsflöde.
+     >[!NOTE]
+     >
+     >Om du vill avbryta en publicering/avpublicering senare går du till [Arbetsflödeskonsol](/help/sites-cloud/administering/workflows-administering.md#suspending-resuming-and-terminating-a-workflow-instance) för att avsluta motsvarande arbetsflöde.
+
    ![Hantera publikationsalternativ](/help/sites-cloud/authoring/assets/publishing-manage-publication-options.png)
 
 1. Klicka **Nästa** för att fortsätta.
@@ -168,7 +168,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    ![Hantera publikationsalternativ](/help/sites-cloud/authoring/assets/publishing-manage-publication-references.png)
 
-   The **Publicerade referenser** visas referenserna för det markerade innehållet. Som standard är alla markerade och publiceras/avpubliceras, men du kan avmarkera dem så att de inte tas med i funktionsmakrot.
+   The **Publicerade referenser** visas referenserna för det markerade innehållet. Som standard är alla markerade och publicerade/opublicerade, men du kan avmarkera dem genom att avmarkera dem så att de inte tas med i funktionsmakrot.
 
    Klicka **Klar** för att spara dina ändringar eller **Avbryt** om du vill avbryta markeringen och återgå till guiden.
 
@@ -287,14 +287,14 @@ Du kan ange en sidas publiceringsstatus:
 
 * I [resursöversiktsinformation på webbplatskonsolen](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)
 
-   ![Publikationsstatus i kortvyn](/help/sites-cloud/authoring/assets/publishing-status-console-card.png)
+  ![Publikationsstatus i kortvyn](/help/sites-cloud/authoring/assets/publishing-status-console-card.png)
 
-   Publikationsstatusen visas i [kort](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view)-, [kolumn](/help/sites-cloud/authoring/getting-started/basic-handling.md#column-view)- och [list](/help/sites-cloud/authoring/getting-started/basic-handling.md#list-view)vyerna i Sites-konsolen.
+  Publikationsstatusen visas i [kort](/help/sites-cloud/authoring/getting-started/basic-handling.md#card-view)-, [kolumn](/help/sites-cloud/authoring/getting-started/basic-handling.md#column-view)- och [list](/help/sites-cloud/authoring/getting-started/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
 * I [tidslinje](/help/sites-cloud/authoring/getting-started/basic-handling.md#timeline)
 
-   ![Publiceringsstatus i tidslinjevyn](/help/sites-cloud/authoring/assets/publishing-status-timeline.png)
+  ![Publiceringsstatus i tidslinjevyn](/help/sites-cloud/authoring/assets/publishing-status-timeline.png)
 
 * I [Sidinformation-menyn](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-information) när du redigerar en sida
 
-   ![Publiceringsstatus på menyn Sidinformation](/help/sites-cloud/authoring/assets/publishing-status-page-information.png)
+  ![Publiceringsstatus på menyn Sidinformation](/help/sites-cloud/authoring/assets/publishing-status-page-information.png)

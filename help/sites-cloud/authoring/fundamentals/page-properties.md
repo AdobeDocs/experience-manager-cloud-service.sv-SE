@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '2357'
+source-wordcount: '2340'
 ht-degree: 3%
 
 ---
@@ -50,8 +50,8 @@ Egenskaperna fördelas på flera flikar.
 
 * **Fler rubriker och beskrivning**
 
-   * **Sidrubrik** - En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom **Titel** kommer att användas.
-   * **Navigeringsrubrik** - Du kan ange en separat rubrik som ska användas i navigeringen (t.ex. om du vill ha något mer koncist). Om den är tom visas **Titel** kommer att användas.
+   * **Sidrubrik** - En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom visas **Titel** används.
+   * **Navigeringsrubrik** - Du kan ange en separat rubrik som ska användas i navigeringen (t.ex. om du vill ha något mer koncist). Om den är tom visas **Titel** används.
    * **Underrubrik** - En underrubrik som ska användas på sidan.
    * **Beskrivning** - Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
 
@@ -64,11 +64,11 @@ Egenskaperna fördelas på flera flikar.
   >[!NOTE]
   >Om någon av **I tid** eller **Fråntid** är tidigare och automatisk replikering har konfigurerats, kommer den relevanta åtgärden att utlösas omedelbart.
 
-   * **I tid** - Det datum och den tidpunkt då den publicerade sidan ska synas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
+   * **I tid** - Det datum och den tidpunkt då den publicerade sidan visas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
 
-      * Om redan [publicerad (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) den här sidan behålls vilande (dold) tills den återges vid den angivna tidpunkten.
-      * Om sidan inte publiceras och konfigureras för automatisk replikering kommer den att publiceras automatiskt och sedan återges vid den angivna tidpunkten.
-      * Om sidan inte publiceras och inte är konfigurerad för automatisk replikering kommer den inte att publiceras automatiskt. Därför visas 404 när du försöker komma åt sidan.
+      * Om redan [publicerad (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) den här sidan förblir vilande (dold) tills den återges vid den angivna tidpunkten.
+      * Om sidan inte publiceras och konfigureras för automatisk replikering publiceras den automatiskt och återges sedan vid den angivna tidpunkten.
+      * Om sidan inte är publicerad och inte konfigurerad för automatisk replikering publiceras den inte automatiskt, så en 404-sida visas när ett försök görs att komma åt sidan.
 
    * **Fråntid** - Liknar och används ofta i kombination med **I tid** definierar detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
 
@@ -115,7 +115,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Mallinställningar**
 
-   * **Tillåtna mallar** - [Definierar listan med mallar som ska vara tillgängliga](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) inom denna underavdelning
+   * **Tillåtna mallar** - [Definierar listan med tillgängliga mallar](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) inom denna underavdelning
 
 * **Autentiseringskrav**
 
@@ -133,7 +133,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **SEO**
 
-   * **Kanonisk URL** - kan användas för att skriva över sidans kanoniska URL, om den lämnas tom blir sidans URL dess kanoniska URL
+   * **Kanonisk URL** - kan användas för att skriva över sidans kanoniska URL, om den lämnas tom är sidans URL dess kanoniska URL
 
    * **Robots-taggar** - välj robottaggarna för att styra beteendet för sökmotorcrawler.
 
@@ -141,7 +141,7 @@ Egenskaperna fördelas på flera flikar.
      >
      >Vissa av alternativen står i konflikt med varandra. Om en konflikt uppstår har det mer tillåtna alternativet företräde.
 
-   * **Generera platskarta** - När du väljer det här alternativet genereras en sitemap.xml för den här sidan och dess underordnade
+   * **Generera platskarta** - när det här alternativet är markerat genereras en sitemap.xml för den här sidan och dess underordnade
 
 ### Bilder {#images}
 

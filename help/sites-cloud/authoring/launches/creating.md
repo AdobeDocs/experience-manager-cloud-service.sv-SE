@@ -2,9 +2,9 @@
 title: Skapa Launches
 description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny version av befintliga webbsidor för framtida aktivering.
 exl-id: 216ccb7a-1409-4f55-8be2-2b088f91a430
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1042'
 ht-degree: 12%
 
 ---
@@ -28,7 +28,6 @@ Du kan också ange **startdatum** (och starttid) för att definiera när startsi
 >Dessa sidor kan inte redigeras. Meddelandet visas:
 >
 >* **Den här sidan är inte en del av startsidan. Gå till produktionssidan**
-
 
 ## Skapa en Launch {#creating-a-launch}
 
@@ -80,7 +79,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 1. I **Egenskaper** steg i guiden som du kan ange:
 
    * **Starta titel**: Namnet på Launch. Namnet ska vara meningsfullt för författare.
-   * **med befintligt innehåll**: det ursprungliga innehållet kommer att användas för att skapa starten.
+   * **med befintligt innehåll**: det ursprungliga innehållet används för att skapa starten.
    * **använda en ny mall för att ersätta sidan**: Se [Skapa start med ny mall](#create-launch-with-new-template) för mer information.
    * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår du genom att göra starten till [Live Copy](/help/sites-cloud/administering/msm/overview.md). Som standard är det här alternativet markerat.—>
    * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på **Produktionsklar** Flagga. se [Startar - ordningen för händelser](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events)).
@@ -113,7 +112,7 @@ Om du väljer det här alternativet kommer det att:
 
 >[!CAUTION]
 >
->Om du använder en annan mall kommer den nya sidan att vara tom. På grund av den annorlunda sidstrukturen kommer inget innehåll att kopieras över.
+>När en annan mall används är den nya sidan tom. På grund av den annorlunda sidstrukturen kopieras inget innehåll.
 >
 >Den här funktionen kan användas för att ändra mallen för en [befintlig sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page) - även om innehållsförlusten måste beaktas.
 

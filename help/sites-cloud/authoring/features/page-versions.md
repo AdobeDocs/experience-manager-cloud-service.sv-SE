@@ -2,9 +2,9 @@
 title: Arbeta med sidversioner
 description: Skapa, jämföra och återställa versioner av en sida
 exl-id: 33d8e43c-594d-4bba-9631-b2c42a1e910f
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1502'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ Du kan skapa en version av resursen från:
 1. Samma dialogruta öppnas. Du kan ange en **Etikett** och **Kommentar** vid behov.
 1. Bekräfta den nya versionen med **Skapa**.
 
-Tidslinjen öppnas och informationen uppdateras för att ange den nya versionen.
+Tidslinjen öppnas med informationen uppdaterad för att ange den nya versionen.
 
 ## Återställer versioner {#reinstating-versions}
 
@@ -78,7 +78,7 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 
 >[!NOTE]
 >
->När du återställer en sida blir den skapade versionen en del av en ny gren.
+>När du återställer en sida är den skapade versionen en del av en ny gren.
 >
 >Så här illustrerar du:
 >
@@ -112,10 +112,11 @@ Denna metod kan användas för att återställa versioner av angivna sidor i den
    >[!NOTE]
    >
    >Om:
+   >
    >* du har valt en sida som aldrig har haft några underordnade sidor,
    >* eller ingen av sidorna i mappen har versioner,
    >
-   >Sedan är visningen tom eftersom det inte finns några tillämpliga versioner.
+   >Visningen blir tom eftersom det inte finns några tillämpliga versioner.
 
 1. De tillgängliga versionerna visas:
 
@@ -225,7 +226,7 @@ Timewarp är en [läge](/help/sites-cloud/authoring/fundamentals/environment-too
 Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i den kontinuerliga redigeringen av innehåll i AEM är detta dock inte alltid möjligt. Dessa begränsningar bör beaktas när du använder Timewarp.
 
 * **Timewarp fungerar baserat på publicerade sidor** - Timewarp fungerar bara helt om du tidigare har publicerat sidan. I annat fall visas den aktuella sidan i författarmiljön.
-* **Timewarp använder sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen kommer den att återges korrekt om det fortfarande finns äldre versioner av sidan i databasen.
+* **Timewarp använder sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen, återges den korrekt om gamla versioner av sidan fortfarande är tillgängliga i databasen.
 * **Borttagna versioner påverkar Timewarp** - Om versioner tas bort från databasen kan inte Timewarp visa rätt vy.
 * **Timewarp är skrivskyddat** - Du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [återställ](#revert-to-a-version).
 * **Timewarp baseras bara på sidinnehåll** - Om element (som kod, css, resurser/bilder osv.) för återgivning av webbplatsen har ändrats, skiljer sig vyn från den ursprungliga, eftersom objekten inte versionsindelas i databasen.

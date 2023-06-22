@@ -2,9 +2,9 @@
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1545'
+source-wordcount: '1542'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en akti
 
 När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas olika varningar och/eller meddelanden:
 
-* Dina [meddelande](/help/sites-cloud/authoring/getting-started/inbox.md) Indikatorn (verktygsfältet) ökas:
+* Dina [meddelande](/help/sites-cloud/authoring/getting-started/inbox.md) indikatorn (verktygsfältet) ökas:
 
-   ![Verktygsfältet Meddelande](/help/sites-cloud/authoring/assets/workflows-notifications.png)
+  ![Verktygsfältet Meddelande](/help/sites-cloud/authoring/assets/workflows-notifications.png)
 
-* Objektet kommer att listas i meddelandet [Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md):
+* Objektet visas i meddelandet [Inkorg](/help/sites-cloud/authoring/getting-started/inbox.md):
 
-   ![Meddelanden i inkorgen](/help/sites-cloud/authoring/assets/workflows-inbox.png)
+  ![Meddelanden i inkorgen](/help/sites-cloud/authoring/assets/workflows-inbox.png)
 
 * När du använder sidredigeraren visas statusfältet:
    * Namnet på det eller de arbetsflöden som ska användas på sidan. till exempel Begär aktivering.
@@ -39,18 +39,18 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
       * Använd vänster-/högerpilarna för att navigera i statusinformationen för de olika arbetsflödena.
       * klicka/tryck på det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
 
-   ![Sida med flera arbetsflöden](/help/sites-cloud/authoring/assets/workflows-multiple.png)
+  ![Sida med flera arbetsflöden](/help/sites-cloud/authoring/assets/workflows-multiple.png)
 
-   >[!NOTE]
-   >
-   >Statusfältet är endast synligt för användare med arbetsflödesbehörighet. till exempel medlemmar i `workflow-users` grupp.
-   >
-   >
-   >Åtgärder visas när den aktuella användaren är direkt involverad i det aktuella steget i arbetsflödet.
+  >[!NOTE]
+  >
+  >Statusfältet är endast synligt för användare med arbetsflödesbehörighet. till exempel medlemmar i `workflow-users` grupp.
+  >
+  >
+  >Åtgärder visas när den aktuella användaren är direkt involverad i det aktuella steget i arbetsflödet.
 
 * När **Tidslinje** är öppet för resursen visas arbetsflödessteget. När du klickar/trycker på varningsbanderollen visas även de tillgängliga åtgärderna:
 
-   ![Arbetsflöde på tidslinjen](/help/sites-cloud/authoring/assets/workflows-timeline.png)
+  ![Arbetsflöde på tidslinjen](/help/sites-cloud/authoring/assets/workflows-timeline.png)
 
 ### Slutför ett deltagarsteg {#completing-a-participant-step}
 
@@ -219,19 +219,19 @@ Arbetsflödesinformationen visas i flikar och lämpliga åtgärder är tillgäng
 
 * **ARBETSOBJEKT** tab:
 
-   ![Fliken ARBETSOBJEKT](/help/sites-cloud/authoring/assets/workflows-work-item.png)
+  ![Fliken ARBETSOBJEKT](/help/sites-cloud/authoring/assets/workflows-work-item.png)
 
 * **INFORMATION OM ARBETSFLÖDE** tab:
 
-   ![Fliken ARBETSFLÖDE](/help/sites-cloud/authoring/assets/workflows-workflow-info.png)
+  ![Fliken ARBETSFLÖDE](/help/sites-cloud/authoring/assets/workflows-workflow-info.png)
 
-   Om arbetsflödessteg har konfigurerats för modellen kan du visa förloppet enligt följande: <!--If [Workflow Stages](/help/sites-developing/workflows.md#workflow-stages) have been configured for the model, you can view the progress according to these:-->
+  Om arbetsflödessteg har konfigurerats för modellen kan du visa förloppet enligt följande: <!--If [Workflow Stages](/help/sites-developing/workflows.md#workflow-stages) have been configured for the model, you can view the progress according to these:-->
 
-   ![Arbetsflödesfaser](/help/sites-cloud/authoring/assets/workflows-workflow-stages.png)
+  ![Arbetsflödesfaser](/help/sites-cloud/authoring/assets/workflows-workflow-stages.png)
 
 * **KOMMENTARER** tab:
 
-   ![Fliken KOMMENTARER](/help/sites-cloud/authoring/assets/workflows-comments.png)
+  ![Fliken KOMMENTARER](/help/sites-cloud/authoring/assets/workflows-comments.png)
 
 Du kan öppna information om arbetsobjekt från:
 

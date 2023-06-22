@@ -4,9 +4,9 @@ description: Upptäck hur du hämtar JSON-innehåll från testmiljön med exempe
 hidefromtoc: true
 index: false
 exl-id: b7dc70f2-74a2-49f7-ae7e-776eab9845ae
-source-git-commit: 1949ee211b4f816e05aa779deb9e287347f006ad
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Funktionen `fetchJsonFromGraphQL()` används för att utföra hämtningsbegäran
 
 ## Hämta data från din beständiga fråga {#use-persisted-query}
 
-På rad 25 anger vi vilken GraphQL-fråga som appen ska hämta data från. Det beständiga frågenamnet är en kombination av slutpunktens namn (dvs. `your-project` eller `aem-demo-assets`), följt av ett snedstreck och därefter frågans namn. Om du följde instruktionerna från den tidigare modulen exakt, kommer den beständiga fråga du skapade att finnas i `your-project` slutpunkt.
+På rad 25 anger vi vilken GraphQL-fråga som appen ska hämta data från. Det beständiga frågenamnet är en kombination av slutpunktens namn (dvs. `your-project` eller `aem-demo-assets`), följt av ett snedstreck och därefter frågans namn. Om du följde instruktionerna från den tidigare modulen exakt finns den beständiga frågan som du skapade i `your-project` slutpunkt.
 
 1. Uppdatera `persistedQueryName` variabeln för att använda den beständiga frågan som du skapade i föregående modul. Om du följde namnförslaget skulle du ha skapat en beständig fråga med namnet `adventure-list` i `your-project` slutpunkt, och du anger `persistedQueryName` variabel till `your-project/adventure-list`:
 

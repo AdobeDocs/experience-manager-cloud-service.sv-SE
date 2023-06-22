@@ -2,9 +2,9 @@
 title: Aktivera progressiva webbprogramfunktioner
 description: AEM Sites gör det möjligt för innehållsförfattaren att aktivera progressiva webbprogramfunktioner för alla webbplatser genom enkel konfiguration istället för kodning.
 exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2000'
 ht-degree: 0%
 
 ---
@@ -181,7 +181,7 @@ Dessa inställningar gör delar av den här webbplatsen tillgängliga offline oc
 
 * **Cachelagringsstrategi och uppdateringsfrekvens för innehåll** - Den här inställningen definierar cachningsmodellen för PWA.
    * **Måttligt** - [Den här inställningen](https://web.dev/stale-while-revalidate/) är ett standardvärde för de flesta webbplatser.
-      * Med den här inställningen läses det innehåll som först visas av användaren in från cacheminnet, och medan användaren konsumerar det innehållet kommer resten av innehållet i cacheminnet att omvalideras.
+      * Med den här inställningen läses det innehåll som först visas av användaren in från cacheminnet, och medan användaren konsumerar det innehållet valideras resten av innehållet i cacheminnet.
    * **Ofta** - Detta gäller webbplatser som behöver uppdateras mycket snabbt, till exempel auktionslokaler.
       * Med den här inställningen söker programmet först efter det senaste innehållet via nätverket och om det inte är tillgängligt återgår det till det lokala cacheminnet.
    * **Sällan** - Detta gäller för webbplatser som är nästan statiska, t.ex. referenssidor.

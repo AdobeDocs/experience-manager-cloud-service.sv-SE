@@ -4,9 +4,9 @@ description: Integrera med Adobe Target
 feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1042'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ I båda fallen ska du tänka på följande:
 
 * Som standard kopieras även klientkoden (om den läggs till först) automatiskt till fältet Klient-ID.
 * Du kan ändra standardinställningen för klient-ID.
-* Därför kommer serverdelsanropen till Target att baseras på klientens ID och klientsidans anrop till Target kommer att baseras på klientkoden.
+* Därför baseras backend-anropen till Target på klientens ID och klientsidans anrop till Target baseras på klientkoden.
 
 Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud Service. Oavsett vilket, se till att **båda** fälten innehåller rätt information beroende på dina behov.
 
@@ -112,7 +112,7 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
 3. Välj **Konfigurera** -knappen. Observera konfigurationsfönstret med Target-kontots autentiseringsuppgifter importerade och at.js-versionen för det här tillägget.
 4. Välj **Spara** om du vill lägga till måltillägget i Launch-egenskapen. Du bör kunna se måltillägget under **Installerade tillägg** lista.
    ![Spara tillägg](assets/configure_extension1.png "Spara tillägg")
-5. Upprepa stegen ovan om du vill söka efter **Adobe ContextHub** tillägg och installation (detta krävs för integrering med kontexthub-parametrar, baserat på vilken målanpassning som ska göras).
+5. Upprepa stegen ovan om du vill söka efter **Adobe ContextHub** tillägg och installation (detta krävs för integrering med kontexthub-parametrar, baserat på vilken målanpassning som görs).
 
 ### Skapa ett dataelement {#data-element}
 
@@ -130,7 +130,7 @@ I **Regel** vi definierar och beställer en sekvens av åtgärder, som utförs p
 
 1. Lägg till en uppsättning åtgärder som visas i skärmbilden.
    ![Åtgärder](assets/rules1.png "Åtgärder")
-2. I Lägg till parametrar i alla Mboxes lägger du till dataelementet som konfigurerats tidigare (se dataelementet ovan) i den parameter som ska skickas i mbox-anropet.
+2. I Lägg till parametrar i alla Mboxes lägger du till dataelementet som konfigurerats tidigare (se dataelementet ovan) i den parameter som skickas i mbox-anropet.
    ![Mbox](assets/map_data1.png "Åtgärder")
 
 ### Bygg och publicera {#build-publish}

@@ -2,9 +2,9 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1572'
 ht-degree: 4%
 
 ---
@@ -90,11 +90,11 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 1. Kolumnvy:
 
-   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden kommer att överlappas med en bock för att visa att den har markerats.
+   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock för att visa att den har markerats.
 
 1. Listvy:
 
-   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden kommer att överlappas med en bock för att visa att den har markerats.
+   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock för att visa att den har markerats.
 
 1. Kortvy:
 
@@ -103,7 +103,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
       * På en mobil enhet: tryck och håll ned kortet
       * På en stationär enhet: använder [snabbåtgärd](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) som representeras av tickningsikonen:
 
-   * Kortet kommer att förses med en bock som visar att sidan har valts.
+   * Kortet är dolt med en bock som visar att sidan har valts.
 
    ![Exempelkort](/help/sites-cloud/authoring/assets/card.png)
 

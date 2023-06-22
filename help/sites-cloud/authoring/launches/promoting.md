@@ -2,9 +2,9 @@
 title: Marknadsföra Launches
 description: Du måste befordra startsidor för att kunna flytta tillbaka innehållet till källan (produktionen) innan du publicerar.
 exl-id: 5f5ed17c-43db-4ef6-ab79-c491326fa01c
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '814'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ Du kan befordra starter från **Webbplatser** konsolen eller **Startar** konsol:
       1. Välj **Befordra lansering** för att öppna guiden.
    * The **Webbplatser** konsol vid navigering på startsidor:
       1. Välj önskad startsida med [markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md).
-      1. The **Befordra** kommer att vara tillgängligt i verktygsfältet.
+      1. The **Befordra** finns i verktygsfältet.
    * The **Startar** konsol:
       1. Välj start (tryck/klicka på miniatyrbilden).
       1. Välj **Befordra**.
@@ -99,7 +99,7 @@ När du har skapat en kapslad start kan du befordra den tillbaka till någon av 
 1. Ange nödvändig information:
    * **Mål**
       * **Erbjudandemål** - Du kan göra reklam för alla källor.
-      * **Ta bort start efter befordran** - När du har befordrat den valda starten och alla starter som är kapslade i den tas de bort.
+      * **Ta bort start efter befordran** - Efter befordran tas den markerade starten och alla kapslade starter bort.
    * **Omfång** - Här kan du välja om du vill befordra hela programstarten eller bara de sidor som faktiskt har redigerats. Om det är det senare alternativet kan du välja att ta med/exkludera underordnade sidor. Standardkonfigurationen är att endast befordra sidändringar för den aktuella sidan:
       * **Befordra en fullständig lansering**
       * **Befordra ändrade sidor**

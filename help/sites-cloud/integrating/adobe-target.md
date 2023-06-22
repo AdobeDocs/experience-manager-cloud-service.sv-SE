@@ -2,16 +2,16 @@
 title: Integrera med Adobe Target
 description: Integrera med Adobe Target
 exl-id: 2b4cf35e-2b75-4303-8d09-f6644ad99274
-source-git-commit: f40a2db6616aeaaf13f8ae19ab429a7301e6c05a
+source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '726'
 ht-degree: 1%
 
 ---
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Marketing Cloud [Adobe Target](https://www.adobe.com/solutions/testing-targeting/testandtarget.html) gör att ni kan öka innehållets relevans genom målinriktning och mätning över alla kanaler. Adobe Target används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser. AEM as a Cloud Service har antagit målarbetsflödet som används i Adobe Target Standard. Om du använder Target kommer du att känna till målredigeringsmiljön i AEM as a Cloud Service.
+Som en del av Adobe Marketing Cloud [Adobe Target](https://www.adobe.com/solutions/testing-targeting/testandtarget.html) gör att ni kan öka innehållets relevans genom målinriktning och mätning över alla kanaler. Adobe Target används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser. AEM as a Cloud Service har antagit målarbetsflödet som används i Adobe Target Standard. Om du använder Target är du bekant med målredigeringsmiljön i AEM as a Cloud Service.
 
 Integrera era AEM med Adobe Target för att personalisera innehåll på era sidor:
 
@@ -54,7 +54,6 @@ Utför följande uppgifter för att integrera med Target:
 >* 4.x har konfigurerats med [http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](http://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >
 
-
 >[!CAUTION]
 >
 >Du måste skydda noden för aktivitetsinställningar **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
@@ -83,4 +82,3 @@ Att integrera AEM as a Cloud Service med Adobe Target kräver kunskaper om Adobe
 >* 2 000 upplevelser
 >* 50-tal
 >* 50 rapporteringssegment
-
