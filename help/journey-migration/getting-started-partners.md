@@ -98,7 +98,6 @@ Se självhjälpsresurser om hur du konfigurerar och distribuerar till AEM as a C
 >1. [Kontakta Experience Manager Support-teamet](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=en)
 >2. Utforska [Experience Manager Communities &amp; Forums](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
-
 <br>
 
 ## Flyttar till Adobe Experience Manager as a Cloud Service {#move-to-cloud}
@@ -191,7 +190,6 @@ I fasen efter publicering bör du se till att tillfälliga filer rensas, granska
 >2. [CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/repository-browser.html?lang=en)
 >3. [Hantera loggar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs.html?lang=en)
 
-
 <br>
 
 ### Verktyg och resurser
@@ -204,4 +202,3 @@ I fasen efter publicering bör du se till att tillfälliga filer rensas, granska
 > Om du behöver mer hjälp kan du:
 >1. [Kontakta Experience Manager Support-teamet](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=en)
 >2. Utforska [Experience Manager Communities &amp; Forums](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
-

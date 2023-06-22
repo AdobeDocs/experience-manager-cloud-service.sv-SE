@@ -41,11 +41,11 @@ Med AEM Dispatcher Converter kan man omfaktorisera befintliga konfigurationer av
 
 * Via Adobe I/O CLI: Vi rekommenderar att du använder AEM Dispatcher Converter via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för CLI-programmet för Adobe I/O).
 
-   Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** för att lära dig hur du installerar och använder plugin-programmet.
+  Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** för att lära dig hur du installerar och använder plugin-programmet.
 
 * Som fristående verktyg: AEM Dispatcher Converter-verktyget kan också köras som ett fristående verktyg.
 
-   Se **[Git-resurs: AEM Cloud Service Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter)** om du vill veta mer om användning och felsökning för det här verktyget.
+  Se **[Git-resurs: AEM Cloud Service Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter)** om du vill veta mer om användning och felsökning för det här verktyget.
 
 >[!IMPORTANT]
 >AEM Dispatcher Converter utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.

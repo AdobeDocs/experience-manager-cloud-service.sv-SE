@@ -77,7 +77,7 @@ Det finns tre typer av miljöer med AEM as a Cloud Service:
 
 * **Utvecklingsmiljö**: ger utvecklare möjlighet att implementera AEM-program under samma körningsförhållanden som scen- och produktionsmiljöerna.
 
-   Se [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#using-cloud-manager) för mer information.
+  Se [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=en#using-cloud-manager) för mer information.
 
 * **Snabb utvecklingsmiljö**: möjliggör snabb utveckling av iterationer för felsökning av ny eller befintlig kod.
 
@@ -122,6 +122,7 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
       * Inloggning på redigeringsnivå hanteras av Adobe Identity Management Services (IMS).
 
       * En dedikerad resurshanteringstjänst används för integrering och bearbetning av resurser.
+
    * Förhandsgranskningsnivån består av en enda förhandsvisningsnod. Detta används för kvalitetssäkring av innehåll innan det publiceras på publiceringsnivån.
 
    * Publiceringsnivån består av två eller flera noder i en enda publiceringsgrupp.
@@ -135,7 +136,6 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
       * Som standard finns det en enda publiceringsgrupp i den primära regionen [ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) får licensieras.
 
       * Slutanvändare, eller besökare, besöker webbplatsen via AEM Publish Service.
-
 
 * För AEM Assets as a Cloud Service:
 
@@ -151,9 +151,9 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
 
    * När innehåll godkänns från författarnivån är detta en indikation på att det kan aktiveras och därför skickas till publiceringsskiktet för beständighet. eller eventuellt till förhandsvisningsnivån. Detta sker via replikeringstjänsten, en pipeline för mellanprogram. Den här pipeline tar emot det nya innehållet, där de enskilda publiceringstjänstens (eller förhandsgranskningstjänstens) noder prenumererar på det innehåll som skickas till pipeline.
 
-      >[!NOTE]
-      >
-      >Mer information finns i [Replikering](/help/operations/replication.md).
+     >[!NOTE]
+     >
+     >Mer information finns i [Replikering](/help/operations/replication.md).
 
    * Utvecklare och administratörer hanterar AEM as a Cloud Service genom att använda en CI/CD-tjänst (Continuous Integration/Continuous Delivery) som är tillgänglig via [Cloud Manager](/help/overview/what-is-new-and-different.md#cloud-manager). Det inkluderar kod- och konfigurationsdistribution med Cloud Managers CI/CD-pipeline. Allt som rör övervakning, underhåll och felsökning (till exempel loggfiler) visas för kunder i Cloud Manager.
 
