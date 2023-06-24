@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management,Renditions
 role: User,Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: d00e1f49438ad36339a09f8914496faeda3d4de6
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1019'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ Några av de viktigaste funktionerna för resurskonvertering är följande:
 * Nyckel [Adobe-filformat](#adobe-formats) som producerats av Adobe program och tjänster, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension]och [!DNL Adobe Acrobat] eller PDF.
 * Nyckel [bildfilformat](#image-formats).
 * [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, inklusive Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw som bas).
-* Vanliga [dokumentformat](#document-formats), inklusive Microsoft Office och Open Document-format.
+* Vanliga [dokumentformat](#document-formats), inklusive Microsoft® Office och Open Document-format.
 * Ett stort antal [video](#video-formats)- och [ljud](#audio-formats)-format.
 
 I följande förklaring beskrivs stödnivån för varje format.
@@ -41,6 +41,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 | AI | ✓ | - | ✓ | ✓ |
 | COLLAGE | - | - | ✓ | - |
 | DN | ✓ | - | ✓ | ✓ |
+| SBSAR | ✓ | - | ✓ | ✓ |
 | IDÉER | - | - | ✓ | - |
 | INDD | ✓ | - | ✓ | ✓ * |
 | INDT | - | - | ✓ | - |
@@ -50,7 +51,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 | PSD | ✓ | - | ✓ | ✓ |
 | XD | ✓ | - | ✓ | ✓ |
 
-\* för [!DNL Adobe InDesign] filer (INDD) bestäms storleken på återgivningen av den förhandsgranskning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) för att bädda in större återgivning.
+\* för [!DNL Adobe InDesign] filer (INDD) bestäms storleken på återgivningarna av den förhandsvisning som är inbäddad i INDD-filen. Konfigurera inställningarna i [!DNL InDesign] (**[!UICONTROL Preferences > File Handling > Always Save Preview Images with Documents, Preview Size]**) så att du kan bädda in större återgivningar.
 
 ## Bildformat {#image-formats}
 
@@ -63,7 +64,7 @@ I följande förklaring beskrivs stödnivån för varje format.
 | PNG | ✓ | ✓ | ✓ | ✓ |
 | RGB | ✓ | ✓ | ✓ | ✓ |
 | RGBA | ✓ | ✓ | ✓ | ✓ |
-| SGI | ✓ | ✓ | ✓ | ✓ |
+| SGI™ | ✓ | ✓ | ✓ | ✓ |
 | SVG | ✓ | - | ✓ | ✓ |
 | TIFF | ✓ | ✓ | ✓ | - |
 | WebP | ✓ | ✓ | ✓ | ✓ |
@@ -77,13 +78,16 @@ Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/ass
 | Format | Lagring | Versionshantering | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans till Dynamic Media |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ✓ | ✓ | ✓ | - | ✓ | ✓ | - | - |
-| gLB | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
+| gLB | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | gLTF | ✓ | ✓ | ✓ | - | ✓ | - | ✓ | - |
-| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
+| OBJ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | STL | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ | ✓ |
-| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | - | - | ✓ |
+| FBX | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| 3DS | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - |
+| USDz | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | - | ✓ |
+| SBSAR | ✓ | ✓ | ✓ | - | ✓ | ✓ | - | - |
 
-## [!DNL Camera RAW] format {#camera-raw-formats}
+## [!DNL Camera Raw] format {#camera-raw-formats}
 
 | Filformat | Generering av miniatyrbilder | Extrahering av metadata | Bredd/höjd |
 | ----------- | -------------------- | ------------------- | ------------ |
@@ -181,20 +185,20 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 * Windows Media Video (WMV)/ASF (.wmv, .asf)
 * AVI (okomprimerad 8 bitar/10 bitar) (.avi)
 * MP4 (.mp4, .m4a, .m4v)
-* Microsoft Digital Video Recording (DVR-MS) (.dvr-ms)
+* Microsoft® Digital Video Recording (DVR-MS) (.dvr-ms)
 * Matroska/WebM (.mkv)
 * WAVE/WAV (.wav)
 * QuickTime (.mov)
 
 ## Tips och begränsningar {#limitations-and-tips}
 
-* För närvarande är filstorleksgränsen för metadataextrahering ungefär 15 GB. När mycket stora resurser överförs misslyckas ibland metadataextraheringen.
+* För närvarande är filstorleksgränsen för metadataextrahering ungefär 15 GB. När du överför stora resurser misslyckas ibland metadataextraheringen.
 
 ## Dynamic Media - Videoformat som stöds för transkodning {#video-dynamic-media-transcoding}
 
 | Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
 | --- | --- | --- | --- |
-| AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft Video 1 (MS-CRAM) |
+| AVI | A/V-sammanflätning | XVID, DIVX, HDV, MiniDV (DV25), Techsmith Camtasia, Huffyuv, Fraps, Panasonic DVCPro | Indeo3 (IV30), MJPEG, Microsoft® Video 1 (MS-CRAM) |
 | FLV, F4V | Adobe Flash | H264/AVC, Flix VP6, H263, Sorenson | SWF (vektoranimeringsfiler) |
 | M4V | Apple iTunes | H264/AVC | − |
 | MKV | Matroska | H264/AVC | − |
@@ -202,9 +206,9 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 | MP4 | MPEG-4 | H264/AVC (alla profiler) | − |
 | MPG, VOB, M2V, MP2 | MPEG-2 | MPEG-2 | − |
 | MXF ‡ | MXF | Sony XDCAM, MPEG-2, MPEG-4, Panasonic DVCPro | − |
-| OGV, OGG | Ogg | Theora, VP3, Dirac | − |
+| OGV, OGG | OGG | Theora, VP3, Dirac | − |
 | WebM | WebM | Google VP8 | − |
-| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft Screen (MSS2), Microsoft Photo Story (WVP2) |
+| WMV | Windows Media 9 | WMV3 (v9), WMV2 (v8), WMV1 (v7), GoToMeeting (G2M2, G2M3, G2M4) | Microsoft® Screen (MSS2), Microsoft® Photo Story (WVP2) |
 
 ‡ Det här videoformatet stöds ännu inte för interaktiva videoklipp i Dynamic Media eller för användning med anteckningar i Experience Manager Assets.
 
@@ -237,7 +241,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Dynamic Media - Rasterbildformat som inte stöds {#unsupported-raster-image-formats-dm}
 
-Följande undertyper av rasterbildfilformat som är *not* stöds i [!DNL Dynamic Media]:
+Följande undertyper av rasterbildfilformat som *not* stöds i [!DNL Dynamic Media]:
 
 * PNG-filer som har en IDAT-segmentstorlek som är större än 100 MB.
 * PSB-filer.
@@ -253,9 +257,9 @@ Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-f
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
 | GLB | Binär GL-överföring | model/gltf-binary | Materialen och texturerna inkluderas som en enda resurs. |
-| OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
-| STL | Stereolitografi | application/vnd.ms-pki.stl |  |
-| USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd endast för förtäring. ingen visning eller interaktion är tillgänglig.* USDZ är ett tillverkarspecifikt 3D-format som kan visas direkt av Safari eller iOS. |
+| OBJ | WaveFront 3D-objektfil | application/x-tgif | |
+| STL | Stereolitografi | application/vnd.ms-pki.stl | |
+| USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | *Stöd för intag och generering av miniatyrbilder. 3D-förhandsvisningar stöds inte ännu.* USDZ är ett 3D-format som kan visas direkt av Safari eller iOS. |
 
 **Se även**
 
@@ -275,4 +279,3 @@ Se även [Stöd för 3D-format](/help/assets/file-format-support.md#support-3d-f
 >
 >* [Behandling av tillgångar med hjälp av mikrotjänster](asset-microservices-overview.md)
 >* [Filformat som stöds för smart taggning av textbaserade resurser](/help/assets/smart-tags.md#smart-tags-supported-file-formats)
-

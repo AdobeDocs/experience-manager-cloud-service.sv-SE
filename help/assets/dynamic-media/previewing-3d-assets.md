@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: 3D Assets
 role: User
 exl-id: e873bd25-f841-4063-824f-7e48f40bb678
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: d00e1f49438ad36339a09f8914496faeda3d4de6
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '625'
 ht-degree: 1%
 
 ---
@@ -19,15 +19,27 @@ ht-degree: 1%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/previewing-3d-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Experience Manager stöder överföring, leverans och interaktiv förhandsgranskning av 3D-resurser som en del av utvecklingsprocessen.
+Experience Manager Assets hanterar, förhandsvisar och levererar 3D-resurser.
 
-Det interaktiva 3D-visningsprogrammet finns på sidan med resursinformation i Experience Manager. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som du kan använda för att rotera, zooma och panorera 3D-resursen.
+Du kan förhandsgranska 3D-resurser med de automatiskt genererade miniatyrbildsrenderingarna eller det interaktiva 3D-visningsprogrammet. Det interaktiva 3D-visningsprogrammet finns på sidan med resursinformation i Experience Manager. Visningsprogrammet innehåller bland annat en samling interaktiva kamerakontroller som gör att du kan rotera, zooma och panorera runt 3D-scenen.
 
 <!-- See also [Working with 3D assets in Dynamic Media](/help/assets/dynamic-media/assets-3d.md). -->
 
-## Format som stöds för 3D-förhandsgranskning i Experience Manager{#supported-3d-previewing-assets}
+## Format som stöds för miniatyrförhandsvisning i Experience Manager{#supported-thumbnail-previewing-assets}
 
-Interaktiv 3D-förhandsvisning i Experience Manager har stöd för följande filformat:
+Experience Manager genererar miniatyrbilder för följande filformat som standard:
+
+| 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
+|---|---|---|---|
+| GLB | Binär GL-överföring | model/gltf-binary |  |
+| FBX | Autodesk FBX | application/octet-stream |  |
+| OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
+| 3DS | 3D Studio Model | application/x-3ds |  |
+| USDz | Universal Scene Description | model/vnd.usdz+zip |  |
+
+## Format som stöds för interaktiv 3D-förhandsgranskning i Experience Manager{#supported-3d-previewing-assets}
+
+Experience Manager har stöd för interaktiv 3D-förhandsgranskning i följande filformat:
 
 | 3D-filtillägg | Filformat | MIME-typ | Anteckningar |
 |---|---|---|---|
@@ -35,8 +47,7 @@ Interaktiv 3D-förhandsvisning i Experience Manager har stöd för följande fil
 | GLTF | GL-överföringsformat | model/gltf+json | Se **Anteckning** nedan. |
 | OBJ | WaveFront 3D-objektfil | application/x-tgif |  |
 | STL | Stereolitografi | application/vnd.ms-pki.stl |  |
-| DN | Adobe Dimension | model/x-adobe-dn | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
-| USDZ | Zip-arkiv för universell scenbeskrivning | model/vnd.usdz+zip | Stöd endast för förtäring. förhandsgranskning är inte tillgänglig. |
+
 
 >[!NOTE]
 >
@@ -80,7 +91,7 @@ Se [Format som stöds för 3D-förhandsgranskning](#supported-3d-previewing-asse
    | **Panorera kameran** | Panorera vyn åt vänster, åt höger, uppåt eller nedåt. | Högerklicka och dra. | Tryck med två fingrar och dra. |
    | **Zooma kameran** | Flytta in och ut från områden i 3D-scenen. | Rullningshjul. | Nyp med två fingrar. |
    | **Ange kameran igen** | Centrera kameran igen till en punkt på ett objekt i 3D-scenen. | Dubbelklicka. | Dubbeltryck. |
-   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |  |  |
-   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |  |  |
+   | **Återställ** | I närheten av det nedre högra hörnet av sidan väljer du ikonen Återställ om du vill återställa målpunkten till mitten av 3D-resursen. Återställ flyttar också kameran närmare eller längre bort för att visa resursen i dess helhet och med en rimlig visningsstorlek. |   |   |
+   | **Helskärmsläge** | Om du vill aktivera helskärmsläget väljer du Helskärmsikonen längst ned till höger på sidan. |   |   |
 
 1. När du är klar väljer du **[!UICONTROL Close]**.
