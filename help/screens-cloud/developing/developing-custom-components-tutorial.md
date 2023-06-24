@@ -2,9 +2,9 @@
 title: Utveckla en anpassad komponent för skärmar as a Cloud Service
 description: I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
 workflow-type: tm+mt
-source-wordcount: '2106'
+source-wordcount: '2108'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ I följande självstudiekurs går du igenom stegen för att skapa en anpassad ko
 
 ## Översikt {#overview}
 
-Den här självstudiekursen är avsedd för utvecklare som inte har använt AEM Screens tidigare. I den här självstudiekursen har en enkel Hello World-komponent byggts för en Sequence-kanal i AEM Screens. I en dialogruta kan författare uppdatera den text som visas.
+Den här självstudiekursen är avsedd för utvecklare som inte har använt AEM Screens tidigare. I den här självstudiekursen är en enkel Hello World-komponent byggd för en Sequence-kanal i AEM Screens. I en dialogruta kan författare uppdatera den text som visas.
 
 
 ## Förutsättningar {#prerequisites}
 
-För att slutföra den här självstudiekursen behöver du följande:
+Du behöver följande för att kunna slutföra den här självstudiekursen:
 
 1. Senaste skärmfunktionspaket
 
@@ -28,14 +28,14 @@ För att slutföra den här självstudiekursen behöver du följande:
 
 1. Lokal utvecklingsmiljö
 
-Självstudiestegen och skärmbilderna utförs med **CRXDE-Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en utvecklingsmiljö [AEM finns här.](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html#eclipse-ide)
+Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en utvecklingsmiljö [AEM finns här.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en)
 
 
 ## Projektinställningar {#project-setup}
 
-Källkoden för ett skärmsprojekt hanteras vanligtvis som ett Maven-projekt med flera moduler. För att underlätta självstudiekursen har ett projekt förskapats med [AEM Project Archetype 13](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype). Mer information om [skapa ett projekt med Maven AEM Project Archetype finns här](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop/part1.html#maven-multimodule).
+Källkoden för ett skärmsprojekt hanteras vanligtvis som ett Maven-projekt med flera moduler. För att underlätta självstudiekursen har ett projekt förskapats med [AEM Project Archetype 13](https://github.com/adobe/aem-project-archetype). Mer information om [skapa ett projekt med Maven AEM Project Archetype finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=en).
 
-1. Hämta och installera följande paket med [CRX-pakethanterare](http://localhost:4502/crx/packmgr/index.jsp):
+1. Hämta och installera följande paket med [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp):
 
 [Hämta fil](/help/screens-cloud/developing/assets/base-screens-weretail-runuiapps-001-snapshot.zip)
 
@@ -48,7 +48,7 @@ Källkoden för ett skärmsprojekt hanteras vanligtvis som ett Maven-projekt med
 
 [Hämta fil](/help/screens-cloud/developing/assets/src-screens-weretail-run.zip)
 
-1. I [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp) kontrollera att följande två paket är installerade:
+1. I [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp)kontrollerar du att följande två paket är installerade:
 
    1. **screens-weretail-run.ui.content-0.0.1-SNAPSHOT.zip**
    1. **screens-weretail-run.ui.apps-0.0.1-SNAPSHOT.zip**
@@ -59,17 +59,17 @@ Källkoden för ett skärmsprojekt hanteras vanligtvis som ett Maven-projekt med
 
 1. The **screens-weretail-run.ui.apps** paketet installerar kod under `/apps/weretail-run`.
 
-   Det här paketet innehåller koden som ansvarar för att återge anpassade komponenter för projektet. Det här paketet innehåller komponentkod och eventuell JavaScript eller CSS som behövs. Det här paketet bäddar även in **screens-weretail-run.core-0.0.1-SNAPSHOT.jar** som innehåller all Java-kod som krävs för projektet.
+   Det här paketet innehåller koden som ansvarar för att återge anpassade komponenter för projektet. Det här paketet innehåller komponentkod och eventuell JavaScript eller CSS som behövs. Det här paketet bäddar även in **screens-weretail-run.core-0.0.1-SNAPSHOT.jar** som innehåller all Java™-kod som krävs för projektet.
 
    >[!NOTE]
    >
-   >I den här självstudiekursen skrivs ingen Java-kod. Om mer komplex affärslogik behövs kan back-end Java skapas och driftsättas med Core Java bundle.
+   >I den här självstudiekursen skrivs ingen Java™-kod. Om mer komplex affärslogik behövs kan back-end Java™ skapas och driftsättas med Core Java™-paketet.
 
    ![Representation av ui.apps-koden i CRXDE Lite](/help/screens-cloud/developing/assets/uipps-contents.png)
 
    Representation av ui.apps-koden i CRXDE Lite
 
-   The **helig** är för närvarande bara en platshållare. Under kursen har funktioner lagts till som gör att en författare kan uppdatera det meddelande som visas av komponenten.
+   The **`helloworld`** är bara en platshållare. Under kursen har funktioner lagts till som gör att en författare kan uppdatera det meddelande som visas av komponenten.
 
 1. The **screens-weretail-run.ui.content** paketet installerar kod under:
 
@@ -91,11 +91,11 @@ Komponenten Hello World är en enkel komponent som gör att en användare kan an
 
 AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna för traditionella WCM-webbplatskomponenter.
 
-* De flesta skärmkomponenter måste köras i helskärmsläge på de digitala signeringsenheterna
+* De flesta skärmar-komponenter måste köras i helskärmsläge på de digitala signeringsenheterna
 * De flesta skärmkomponenter måste vara inbäddade i sekvenskanalerna för att bildspel ska kunna genereras
 * Redigering bör göra det möjligt att redigera enskilda komponenter i en sekvenskanal, så att återgivning av dem i helskärmsläge inte påverkas
 
-1. I **CRXDE-Lite** `http://localhost:4502/crx/de/index.jsp` (eller valfri IDE) navigera till `/apps/weretail-run/components/content/helloworld.`
+1. I **CRXDE-Lite** `http://localhost:4502/crx/de/index.jsp` (eller valfri IDE), navigera till `/apps/weretail-run/components/content/helloworld.`
 
    Lägg till följande egenskaper i `helloworld` komponent:
 
@@ -109,7 +109,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
 
    Egenskaper för /apps/weretail-run/components/content/helpWorld
 
-   The **helig** -komponenten utökar **grund/komponenter/parbase** så att den kan användas i en sekvenskanal.
+   The **`helloworld`** -komponenten utökar **grund/komponenter/parbase** så att den kan användas i en sekvenskanal.
 
 1. Skapa en fil under `/apps/weretail-run/components/content/helloworld` namngiven `helloworld.html.`
 
@@ -129,12 +129,12 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
    <sly data-sly-test="${!production}" data-sly-include="edit.html" />
    ```
 
-   Skärmkomponenter kräver två olika återgivningar beroende på vilken [redigeringsläge](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/author-environment-tools.html#PageModes) används:
+   Skärmkomponenter kräver två olika återgivningar beroende på vilken [redigeringsläge](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/author-environment-tools.html?lang=en#page-modes) används:
 
    1. **Produktion**: Förhandsgranska eller publicera (wcmmode=disabled)
    1. **Redigera**: används för alla andra redigeringslägen, t.ex. redigering, design, ställningar, utvecklare...
 
-   `helloworld.html`fungerar som en växel, kontrollerar vilket redigeringsläge som är aktivt och omdirigerar till ett annat HTML-skript. En vanlig konvention som används för skärmkomponenter är att ha en `edit.html` skript för redigeringsläge och `production.html` skript för produktionsläge.
+   `helloworld.html`fungerar som en växel, kontrollerar vilket redigeringsläge som är aktivt och dirigerar om till ett annat HTML-skript. En vanlig konvention som används för skärmkomponenter är att ha en `edit.html` skript för redigeringsläge och `production.html` skript för produktionsläge.
 
 1. Skapa en fil under `/apps/weretail-run/components/content/helloworld` namngiven `production.html.`
 
@@ -151,11 +151,11 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
    </div>
    ```
 
-   Ovanför är produktionsmarkeringen för Hello World-komponenten. A `data-duration` -attributet inkluderas eftersom komponenten används på en sekvenskanal. The `data-duration` -attributet används av sekvenskanalen för att veta hur länge ett sekvensobjekt ska visas.
+   Produktionskoden ovan gäller Hello World-komponenten. A `data-duration` -attributet inkluderas eftersom komponenten används på en sekvenskanal. The `data-duration` -attributet används av sekvenskanalen för att veta hur länge ett sekvensobjekt ska visas.
 
-   Komponenten återger en `div` och `h1` med text. `${properties.message}` är en del av HTML-skriptet som kommer att visa innehållet i en JCR-egenskap med namnet `message`. En dialogruta skapas senare där användaren kan ange ett värde för `message` egenskapstext.
+   Komponenten återger en `div` och `h1` med text. `${properties.message}` är en del av HTML-skriptet som matar ut innehållet i en JCR-egenskap med namnet `message`. En dialogruta skapas senare där användaren kan ange ett värde för `message` egenskapstext.
 
-   Observera också att BEM-notation (Block Element Modifier) används med komponenten. BEM är en CSS-kodkonvention som gör det enklare att skapa återanvändbara komponenter. BEM är den beteckning som används av [AEM kärnkomponenter](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/wiki/CSS-coding-conventions). <!-- WEBSITE WAS NOT ACCESSIBLE AS OF SEPTEMBER 1, 2022 More info can be found at: [https://getbem.com/](https://getbem.com/) -->
+   Observera också att BEM-notation (Block Element Modifier) används med komponenten. BEM är en CSS-kodkonvention som gör det enklare att skapa återanvändbara komponenter. BEM är den beteckning som används av [AEM kärnkomponenter](https://github.com/adobe/aem-core-wcm-components/wiki/CSS-coding-conventions). <!-- WEBSITE WAS NOT ACCESSIBLE AS OF SEPTEMBER 1, 2022 More info can be found at: [https://getbem.com/](https://getbem.com/) -->
 
 1. Skapa en fil under `/apps/weretail-run/components/content/helloworld` namngiven `edit.html.`
 
@@ -182,7 +182,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
    </div>
    ```
 
-   Ovanför finns redigeringskoden för Hello World-komponenten. Det första blocket visar en redigeringsversion av komponenten om dialogmeddelandet har fyllts i.
+   Redigeringsmarkeringen ovan gäller Hello World-komponenten. Det första blocket visar en redigeringsversion av komponenten om dialogmeddelandet har fyllts i.
 
    Det andra blocket återges om inget dialogrutemeddelande har angetts. The `cq-placeholder` och `data-emptytext` återge etiketten ***Hello World*** som platshållare i det fallet. Strängen för etiketten kan internationaliseras med i18n som stöd för redigering på flera språk.
 
@@ -197,7 +197,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
 
 1. **Uppdatera dialogrutan Hello World så att den innehåller en flik för meddelandet.**
 
-   Uppdatera dialogrutan så att den matchar följande. JCR-nodstrukturen i den slutliga dialogrutan presenteras nedan i XML:
+   Uppdatera dialogrutan så att den matchar följande. JCR-nodstrukturen i den slutliga dialogrutan visas nedan i XML:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -255,7 +255,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
    </jcr:root>
    ```
 
-   Textfältet för meddelandet sparas i en egenskap med namnet `message` och att nummerfältet för Varaktighet sparas i en egenskap med namnet `duration`. Båda dessa två egenskaper refereras i `/apps/weretail-run/components/content/helloworld/production.html` av HTML som `${properties.message}` och `${properties.duration}`.
+   The `textfield` för meddelandet sparas i en egenskap med namnet `message` och `numberfield` för Varaktighet sparas i en egenskap med namnet `duration`. Båda dessa två egenskaper refereras i `/apps/weretail-run/components/content/helloworld/production.html` av HTML som `${properties.message}` och `${properties.duration}`.
 
    ![Hello World - slutförd dialogruta](/help/screens-cloud/developing/assets/2018-04-29_at_5_21pm.png)
 
@@ -269,11 +269,11 @@ AEM Screens-komponenter återges annorlunda i redigeringsläge jämfört med fö
 
 1. Skapa en mapp för klientbibliotek för Hello World-komponenten.
 
-   Under `/apps/weretail-run/components/content/helloworld`skapa en ny mapp med namnet `clientlibs`.
+   Under `/apps/weretail-run/components/content/helloworld`, skapa en mapp med namnet `clientlibs`.
 
    ![2018-04-30_at_1046am](/help/screens-cloud/developing/assets/2018-04-30_at_1046am.png)
 
-1. Under `clientlibs` mapp skapa en ny nod med namnet `shared` av typen `cq:ClientLibraryFolder.`
+1. Under `clientlibs` mapp, skapa en nod med namnet `shared` av typen `cq:ClientLibraryFolder.`
 
    ![2018-04-30_at_1115am](/help/screens-cloud/developing/assets/2018-04-30_at_1115am.png)
 
@@ -327,15 +327,15 @@ AEM Screens-komponenter återges annorlunda i redigeringsläge jämfört med fö
    }
    ```
 
-1. Kopiera och klistra in `shared` klientbiblioteksmapp för att skapa ett nytt klientbibliotek med namnet `production`.
+1. Kopiera och klistra in `shared` klientbiblioteksmapp för att skapa ett klientbibliotek med namnet `production`.
 
    ![Kopiera det delade klientbiblioteket för att skapa ett nytt produktionsklientbibliotek](/help/screens-cloud/developing/assets/copy-clientlib.gif)
 
-   Kopiera det delade klientbiblioteket för att skapa ett nytt produktionsklientbibliotek
+   Kopiera det delade klientbiblioteket för att skapa ett produktionsklientbibliotek.
 
 1. Uppdatera `categories` egenskapen för det produktionsklientbibliotek som ska `cq.screens.components.production.`
 
-   Detta garanterar att formaten bara läses in i förhandsgransknings-/produktionsläge.
+   Om du gör det ser du till att formaten bara läses in i förhandsvisnings-/produktionsläge.
 
    ![Egenskaper för /apps/weretail-run/components/content/help/world/clientlibs/production](/help/screens-cloud/developing/assets/2018-04-30_at_5_04pm.png)
 
@@ -376,12 +376,12 @@ En tredje klientbibliotekskategori: `cq.screens.components.edit` kan användas f
 
 ## Skapa en designsida {#design-page}
 
-AEM Screens använder [statiska sidmallar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-static.html) och [Designkonfigurationer](https://helpx.adobe.com/experience-manager/6-4/sites/authoring/using/default-components-designmode.html) för globala ändringar. Designkonfigurationer används ofta för att konfigurera tillåtna komponenter för parsys i en kanal. Ett tips är att lagra dessa konfigurationer på ett appspecifikt sätt.
+AEM Screens använder [statiska sidmallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-static.html?lang=en) och [Designkonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/default-components-designmode.html?lang=en) för globala ändringar. Designkonfigurationer används ofta för att konfigurera tillåtna komponenter för parsys i en kanal. Ett tips är att lagra dessa konfigurationer på ett appspecifikt sätt.
 
-Nedanför en webbsida (We.Retail Run Design) skapas som lagrar alla konfigurationer som är specifika för Web.Retail Run-projektet.
+En sida för att köra webb.butik skapas nedan som lagrar alla konfigurationer som är specifika för Web.Retail Run-projektet.
 
-1. I **CRXDE-Lite** `http://localhost:4502/crx/de/index.jsp#/apps/settings/wcm/designs` navigera till `/apps/settings/wcm/designs`
-1. Skapa en ny nod under designmappen med namnet `we-retail-run` med en typ av `cq:Page`.
+1. I **CRXDE Lite** `http://localhost:4502/crx/de/index.jsp#/apps/settings/wcm/designs`, navigera till `/apps/settings/wcm/designs`
+1. Skapa en nod under designmappen med namnet `we-retail-run` med en typ av `cq:Page`.
 1. Under `we-retail-run` sida, lägg till en annan nod med namnet `jcr:content` av typen `nt:unstructured`. Lägg till följande egenskaper i `jcr:content` nod:
 
    | Namn | Typ | Värde |
@@ -396,7 +396,7 @@ Nedanför en webbsida (We.Retail Run Design) skapas som lagrar alla konfiguratio
 
 ## Skapa en sekvenskanal {#create-sequence-channel}
 
-Komponenten Hello World är avsedd att användas på en sekvenskanal. Om du vill testa komponenten skapas en ny sekvenskanal.
+Hello World-komponenten är avsedd att användas på en sekvenskanal. Om du vill testa komponenten skapas en ny sekvenskanal.
 
 1. Navigera AEM Start-menyn till **Skärmar** > **Vi.Retail Ru** n > och markera **Kanaler**.
 
@@ -417,17 +417,17 @@ Komponenten Hello World är avsedd att användas på en sekvenskanal. Om du vill
 
    ![inaktiv kanal](/help/screens-cloud/developing/assets/idle-channel.gif)
 
-1. Öppna sidegenskaperna för inaktivitetskanalen. Uppdatera fältet Design så att det pekar på `/apps/settings/wcm/designs/we-retail-run,`den designsida som skapades i föregående avsnitt.
+1. Öppna sidegenskaperna för inaktivitetskanalen. Uppdatera designfältet så att det pekar på `/apps/settings/wcm/designs/we-retail-run,`den designsida som skapades i föregående avsnitt.
 
    ![Designkonfiguration /apps/settings/wcm/designs/we-retail-run](/help/screens-cloud/developing/assets/2018-05-07_at_1240pm.png)
 
    Designkonfiguration som pekar på /apps/settings/wcm/designs/we-retail-run
 
-1. Redigera den nyligen skapade inaktivitetskanalen för att öppna den.
+1. Redigera den nya inaktivitetskanalen så att du kan öppna den.
 
-1. Växla sidläge till **Design** Läge
+1. Växla sidläge till **Design** Läge.
 
-   1. Klicka på **wrench** Ikon i Parsys för att konfigurera tillåtna komponenter
+   1. Klicka på **wrench** Ikon i Parsys så att du kan konfigurera de tillåtna komponenterna.
 
    1. Välj **Skärmar** gruppen och **Vi.Retail Run - Innehåll** grupp.
 
@@ -437,7 +437,7 @@ Komponenten Hello World är avsedd att användas på en sekvenskanal. Om du vill
 
    ![2018-04-30_at_5_53pm](assets/2018-04-30_at_5_53pm.png)
 
-1. I **CRXDE-Lite** `http://localhost:4502/crx/de/index.jsp#/apps/settings/wcm/designs/we-retail-run/jcr%3Acontent/sequencechannel/par` navigera till `/apps/settings/wcm/designs/we-retail-run/jcr:content/sequencechannel/par`. Lägg märke till `components` egenskapen inkluderar nu `group:Screens`, `group:We.Retail Run - Content`.
+1. I **CRXDE Lite** `http://localhost:4502/crx/de/index.jsp#/apps/settings/wcm/designs/we-retail-run/jcr%3Acontent/sequencechannel/par`, navigera till `/apps/settings/wcm/designs/we-retail-run/jcr:content/sequencechannel/par`. Lägg märke till `components` egenskapen inkluderar nu `group:Screens`, `group:We.Retail Run - Content`.
 
    ![Designkonfiguration under /apps/settings/wcm/designs/we-retail-run](/help/screens-cloud/developing/assets/2018-05-07_at_1_14pm.png)
 
@@ -445,9 +445,9 @@ Komponenten Hello World är avsedd att användas på en sekvenskanal. Om du vill
 
 ## Mall för anpassade hanterare {#custom-handlers}
 
-Om din anpassade komponent använder externa resurser som resurser (bilder, videoklipp, teckensnitt, ikoner osv.), specifika resursåtergivningar eller klientbibliotek (css, js osv.), läggs dessa inte automatiskt till i offlinekonfigurationen eftersom vi bara paketerar HTML-koden som standard.
+Om din anpassade komponent använder externa resurser, t.ex. resurser (bilder, videoklipp, teckensnitt och ikoner), särskilda återgivningar av resurser eller klientbibliotek (css och js), läggs dessa resurser inte automatiskt till i offlinekonfigurationen. Orsaken är att Adobe bara paketerar HTML-koden som standard.
 
-För att du ska kunna anpassa och optimera exakt de resurser som hämtas till spelaren erbjuder vi en tilläggsmekanism för anpassade komponenter som visar deras beroenden för offline-cachningslogiken i skärmar.
+För att du ska kunna anpassa och optimera de exakta resurserna som hämtas till spelaren har Adobe en tilläggsfunktion för anpassade komponenter som visar deras beroenden för offline-cachningslogiken i skärmar.
 
 I avsnittet nedan visas mallen för anpassade offline-resurshanterare och minimikraven i `pom.xml` för det specifika projektet.
 
@@ -546,7 +546,7 @@ I videon nedan visas den färdiga komponenten och hur den kan läggas till i en 
 
 ## Kod klar {#finished-code}
 
-Nedan visas den färdiga koden från självstudiekursen. The **screens-weretail-run.ui.apps-0.0.1-SNAPSHOT.zip** och **screens-weretail-run.ui.content-0.0.1-SNAPSHOT.zip** är de kompilerade AEM. **SRC-screens-weretail-run-0.0.1.zip **är den icke-kompilerade källkoden som kan distribueras med Maven.
+Nedan visas den färdiga koden från självstudiekursen. The **screens-weretail-run.ui.apps-0.0.1-SNAPSHOT.zip** och **screens-weretail-run.ui.content-0.0.1-SNAPSHOT.zip** är de kompilerade AEM. **SRC-screens-weretail-run-0.0.1.zip **är den okompilerade källkoden som kan distribueras med Maven.
 
 [Hämta fil](/help/screens-cloud/developing/assets/screens-weretail-runuiapps-001-snapshot.zip)
 

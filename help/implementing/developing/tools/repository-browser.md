@@ -4,9 +4,9 @@ seo-title: Repository Browser
 description: Databasens webbläsare ger en skrivskyddad vy i databasen för alla miljöer på författar-, publicerings- och förhandsgranskningsnivåer.
 seo-description: The repository browser provides a read-only view into the repository for all environments on author, publish, and preview tiers.
 exl-id: 22473a97-8f7b-4014-b885-1233116aeda6
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '844'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Introduktion {#introduction}
 
-Databasens webbläsare är ett utvecklarverktyg som ger en skrivskyddad vy i databasen för alla miljöer med författare-, publicerings- och förhandsgranskningsnivåer. Den är utformad för att göra det enklare att se och felsöka innehåll genom att visa innehållsstrukturen.
+Databasens webbläsare är ett utvecklarverktyg som ger en skrivskyddad vy i databasen för alla miljöer när det gäller författare, publicering och förhandsgranskningsnivåer. Den är utformad för att göra det enklare att se och felsöka innehåll genom att visa innehållsstrukturen.
 
 Den är tillgänglig från Developer Console och kan användas för att bläddra i databasen för en författare eller publicera en instans för en vald miljö.
 
@@ -41,7 +41,7 @@ Så här öppnar du Databasläsaren:
 * Användarna måste ha **Cloud Manager - utvecklare** Roll i Admin Console för att visa författarinstanser och publiceringsinstanser.
 * Dessutom kan användare med AEM användarprofil visa databaswebbläsaren med minimal läsåtkomst. användarens behörigheter respekteras när användaren bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
 
-Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+Mer information om hur du ställer in användarbehörigheter finns i [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html).
 
 ### Starta Databasläsaren {#launching-the-repository-browser}
 
@@ -52,29 +52,29 @@ Databaswebbläsaren kan startas genom att följa stegen nedan.
    ![repobrowser1](/help/implementing/developing/tools/assets/repobrowser1.png)
 
 1. Klicka sedan på **Databasläsare** tab
-1. Välj en ruta som motsvarar författare, publicering eller förhandsgranskning genom att klicka på **Pod** listruta.
+1. Välj en ruta som motsvarar författaren, publiceringen eller förhandsgranskningen genom att klicka på **Pod** listruta.
 
    ![repobrowser2](/help/implementing/developing/tools/assets/repobrowser2.png)
 
-1. Starta databaswebbläsaren genom att klicka på **Öppna databasläsaren** länka längre ned. Då startas webbläsaren som motsvarar en representativ instans (pod) för det valda skiktet. Då startas webbläsaren som motsvarar en representativ instans (pod) för det valda skiktet. Observera att du inte kan styra den specifika pod för den nivån som startas.
+1. Starta databaswebbläsaren genom att klicka på **Öppna databasläsaren** länka längre ned. Webbläsaren som motsvarar en representativ instans (pod) för den valda nivån startas. Du kan inte styra den specifika pod för den nivån som startas.
 
 ## Funktioner {#features}
 
 ### Navigera i hierarkin {#navigate-the-hierarchy}
 
-Du kan använda den vänstra navigeringsrutan för att navigera i innehållshierarkin. Om du klickar på varje mapp eller nod visas dess underordnade objekt. Mappstrukturen återspeglar Sling Resource-trädet, som är en överordnad uppsättning till JCR-nodträdet.
+Du kan använda den vänstra navigeringsrutan för att navigera i innehållshierarkin. När du klickar på varje mapp eller nod visas dess underordnade objekt. Mappstrukturen återspeglar Sling Resource-trädet, som är en överordnad uppsättning till JCR-nodträdet.
 
 ![repobrowser3](/help/implementing/developing/tools/assets/repobrowser3.png)
 
-Du kan också navigera direkt till en sökväg genom att ange den i **Bana** enligt nedan. Detta utökar också dess plats i innehållshierarkivyn till vänster.
+Du kan också navigera direkt till en sökväg genom att ange den i **Bana** enligt nedan. Sökvägen utökar också sin plats i innehållshierarkin till vänster.
 
 ![repobrowser14](/help/implementing/developing/tools/assets/repobrowser14.png)
 
-När du klickar på en mapp till vänster fylls fältet Sökväg automatiskt i med sin plats. Detta är användbart när du vill kopiera och klistra in värdet för senare bruk.
+När du klickar på en mapp till vänster fylls fältet Sökväg automatiskt i med sin plats. Den här funktionen är användbar när du vill kopiera och klistra in värdet för senare bruk.
 
-När du klickar på en mapp ändras URL-adressen dynamiskt så att den innehåller sökvägen till mappen. Detta gör att det går att skapa bokmärken för URL:er.
+När du klickar på en mapp ändras URL-adressen dynamiskt så att den innehåller sökvägen till mappen. Med den här funktionen kan du skapa bokmärkningsbara URL:er.
 
-Som standard visas bara publikt innehåll, vilket innebär att vissa mappar som `/conf` eller `/home` kommer inte att synas.
+Som standard visas endast offentligt innehåll i Databasläsaren för publicering, vilket innebär att vissa mappar `/conf` eller `/home` är inte synliga.
 
 Gör så här för att göra platserna synliga.
 
@@ -82,11 +82,11 @@ Gör så här för att göra platserna synliga.
 
    ![repobrowser7](/help/implementing/developing/tools/assets/repobrowser7.png)
 
-1. Hitta din publiceringsinstans och klicka sedan på den
+1. Leta reda på publiceringsinstansen och klicka sedan på den
 
    ![repobrowser8](/help/implementing/developing/tools/assets/repobrowser8.png)
 
-1. Skapa en ny produktprofil för publiceringsadministratörer. I exemplet nedan anropas den **DEV - AEM administratörer publicerar**
+1. Skapa en produktprofil för publiceringsadministratörer. I exemplet nedan anropas den **DEV - AEM administratörer publicerar**
 
    ![repobrowser9](/help/implementing/developing/tools/assets/repobrowser9.png)
 
@@ -95,7 +95,7 @@ Gör så här för att göra platserna synliga.
    ![repobrowser10](/help/implementing/developing/tools/assets/repobrowser10.png)
 
 1. Vänta i några minuter och öppna sedan **AEM** konsol
-1. Lägg till gruppen som motsvarar den nya produktprofilen som medlem i gruppen Administratörer. Du kan göra detta genom att klicka på **Verktyg - Säkerhet - grupper på författaren** och sedan klicka på **administratörer** grupp. Lägg sedan till gruppen enligt nedan
+1. Lägg till gruppen som motsvarar den nya produktprofilen som medlem i administratörsgruppen genom att klicka på **Verktyg - Säkerhet - grupper på författaren** och sedan klicka på **administratörer** grupp. Lägg sedan till gruppen enligt nedan
 
    ![repobrowser11](/help/implementing/developing/tools/assets/repobrowser11.png)
 
@@ -103,7 +103,7 @@ Gör så här för att göra platserna synliga.
 
    ![repobrowser12](/help/implementing/developing/tools/assets/repobrowser12.png)
 
-1. Som en bra säkerhetspraxis bör du ta bort den nya **DEV - AEM administratörer publicerar** grupp från administratörsgruppen på **författare** så att den nya gruppen isoleras för publicering
+1. Som en bra säkerhetspraxis bör du ta bort den nya **DEV - AEM administratörer publicerar** grupp från administratörens grupp på **författare** så att den nya gruppen isoleras för publicering
 
    ![repobrowser13](/help/implementing/developing/tools/assets/repobrowser13.png)
 
@@ -111,17 +111,17 @@ Gör så här för att göra platserna synliga.
 
 ### Visa JCR-egenskaper {#view-jcr-properties}
 
-Om du klickar på en nod visas dess JCR-egenskaper till höger i navigeringsläsaren. Nedan visas ett exempel för `experience-fragments` nod.
+När du klickar på en nod visas dess JCR-egenskaper i den högra rutan i navigeringsläsaren. Nedan visas ett exempel för `experience-fragments` nod.
 
 ![repobrowser4](/help/implementing/developing/tools/assets/repobrowser41.png)
 
 ### Visa innehåll {#view-content}
 
-Du kan använda databaswebbläsaren för att visa innehåll genom att klicka på en resurs i navigeringsrutan. Då öppnas en förhandsgranskning till höger om webbläsaren, under en flik som heter efter respektive resurs.
+Du kan använda databaswebbläsaren för att visa innehåll. Klicka på en resurs i navigeringsrutan så att du kan öppna en förhandsvisning till höger i webbläsaren, under en flik som heter efter respektive resurs.
 
 ![repobrowser6](/help/implementing/developing/tools/assets/repobrowser61.png)
 
-Förhandsgranskning är för närvarande tillgängligt för bildtyper i listan nedan:
+Förhandsvisning är tillgängligt för följande bildtyper:
 
 * apng
 * avif

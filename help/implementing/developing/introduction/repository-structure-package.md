@@ -1,19 +1,19 @@
 ---
 title: Strukturpaket för AEM-projektdatabas
-description: Adobe Experience Manager as a Cloud Service Maven-projekt kräver en definition av underpaketet Databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets Code-underpaket distribueras till.
+description: Maven-projekt på Adobe Experience Manager as a Cloud Service kräver en definition av underpaketet Databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets Code-underpaket distribueras till.
 exl-id: dec08410-d109-493d-bf9d-90e5556d18f0
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 9%
+source-wordcount: '535'
+ht-degree: 2%
 
 ---
 
 # Strukturpaket för AEM-projektdatabas
 
-Maven-projekt för Adobe Experience Manager as a Cloud Service kräver en underpaketsdefinition för databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets kodunderpaket distribueras till. Detta garanterar att installationen av paket i Experience Manager as a Cloud Service automatiskt beställs av JCR-resursberoenden. Saknade beroenden kan leda till scenarier där understrukturer installeras före sina överordnade strukturer och därför tas bort oväntat, vilket bryter distributionen.
+Maven-projekt för Adobe Experience Manager as a Cloud Service kräver en underpaketsdefinition för databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets kodunderpaket distribueras till. Den här metoden ser till att installationen av paket på Experience Manager as a Cloud Service automatiskt beställs av JCR-resursberoenden. Saknade beroenden kan leda till scenarier där delstrukturer installeras före de överordnade strukturerna och därför tas bort oväntat, vilket bryter distributionen.
 
-Om kodpaketet distribueras till en plats som **inte täcks** av kodpaketet måste alla överordnade resurser (JCR-resurser som ligger närmare JCR-roten) räknas upp i databasstrukturpaketet för att dessa beroenden ska kunna etableras.
+Om kodpaketet distribueras till en plats **inte täckt** av kodpaketet måste alla överordnade resurser (JCR-resurser närmare JCR-roten) räknas upp i databasstrukturpaketet. Denna process är nödvändig för att fastställa dessa beroenden.
 
 ![Databasstrukturpaket](./assets/repository-structure-packages.png)
 
@@ -25,15 +25,15 @@ De vanligaste sökvägarna som ska inkluderas i databasstrukturpaketet är:
 + `/apps/cq/...`, `/apps/dam/...`, `/apps/wcm/...`och `/apps/sling/...` som innehåller gemensamma övertäckningar för `/libs`.
 + `/apps/settings` som är den delade kontextmedvetna konfigurationsrotsökvägen
 
-Observera att det här underpaketet **har inte** allt innehåll och endast består av `pom.xml` definiera filterrötterna.
+Det här underpaketet **har inte** allt innehåll och endast består av `pom.xml` definiera filterrötterna.
 
 ## Skapa databasstrukturpaketet
 
-Om du vill skapa ett databasstrukturpaket för ditt Maven-projekt skapar du ett nytt tomt Maven-delprojekt med följande `pom.xml`, uppdaterar projektmetadata enligt det överordnade Maven-projektet.
+Om du vill skapa ett databasstrukturpaket för ditt Maven-projekt skapar du ett tomt Maven-delprojekt med följande `pom.xml`, uppdaterar projektmetadata enligt det överordnade Maven-projektet.
 
 Uppdatera `<filters>` för att inkludera alla sökvägar till JCR-databasen som dina kodpaket distribueras till.
 
-Se till att lägga till det nya delprojektet Maven i de överordnade projekten `<modules>` lista.
+Se till att lägga till det nya Maven-delprojektet i de överordnade projekten `<modules>` lista.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -116,7 +116,7 @@ Se till att lägga till det nya delprojektet Maven i de överordnade projekten `
 
 ## Referera till databasstrukturpaketet
 
-Om du vill använda databasstrukturpaketet refererar du det via alla kodpaket (underpaket som distribueras till `/apps`) Maven projects via FileVault content package Maven plug-ins `<repositoryStructurePackage>` konfiguration.
+Om du vill använda databasstrukturpaketet refererar du det via alla kodpaket (de delpaket som distribueras till `/apps`) Maven projects via FileVault content package Maven plug-ins `<repositoryStructurePackage>` konfiguration.
 
 I `ui.apps/pom.xml`och andra kodpaket `pom.xml`s lägger du till en referens till projektets konfiguration av databasstrukturpaket (#database-structure-package) i plugin-programmet för FileVault-paketet Maven.
 
@@ -162,7 +162,7 @@ Till exempel:
 + Kodpaket A distribuerar till `/apps/a`
 + Kodpaket B distribueras till `/apps/a/b`
 
-Om ett beroende på paketnivå inte har etablerats från kodpaket B i kodpaket A, kan kodpaket B distribueras först i `/apps/a`, följt av kodpaket B, som distribuerar till `/apps/a`, vilket resulterar i att den tidigare installerade versionen tas bort `/apps/a/b`.
+Om ett beroende på paketnivå inte har etablerats från kodpaket B i kodpaket A, kan kodpaket B distribueras först i `/apps/a`. Därefter kommer kodpaketet B, som distribueras till `/apps/a`. Resultatet blir att den tidigare installerade filen tas bort `/apps/a/b`.
 
 I detta fall:
 
@@ -178,7 +178,7 @@ Om databasstrukturpaketen inte är korrekt konfigurerade rapporteras ett fel vid
 Filter root's ancestor '/apps/some/path' is not covered by any of the specified dependencies.
 ```
 
-Detta anger att det inte finns någon `<repositoryStructurePackage>` som listor `/apps/some/path` i filterlistan.
+Det här felet indikerar att det inte finns någon `<repositoryStructurePackage>` som listor `/apps/some/path` i filterlistan.
 
 ## Ytterligare resurser
 

@@ -2,9 +2,9 @@
 title: Komma åt och hantera loggar
 description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '266'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ Du kan komma åt en lista över tillgängliga loggfiler för den valda miljön m
 
 ## Laddar ned loggar {#download-logs}
 
-Följ de här stegen för att hämta loggar.
+Så här hämtar du loggar:
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
@@ -48,7 +48,7 @@ Om du vill hämta loggfilerna för en viss miljö ser kommandot ut ungefär så 
 $ aio cloudmanager:download-logs --programId 5 1884 author aemerror
 ```
 
-Du kan också avsluta loggar via kommandoradens gränssnitt.
+Du kan också avsluta loggar via kommandoradsgränssnittet.
 
 ```shell
 $ aio cloudmanager:tail-log --programId 5 1884 author aemerror
@@ -79,7 +79,7 @@ Environment Id Service    Name
 
 ### Ytterligare resurser {#resources}
 
-Mer information om API:t för Cloud Manager och CLI för Adobe I/O finns i följande resurser:
+Mer information om API:t för Cloud Manager och Adobe Developer CLI finns i följande resurser:
 
-* [API-dokumentation för Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
-* [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+* [API-dokumentation för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/)
+* [Adobe Developer CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)

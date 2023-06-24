@@ -4,9 +4,9 @@ description: Viktigt att tänka på för verktyget för användarmappning (äldr
 exl-id: 0d39a5be-93e1-4b00-ac92-c2593c02b740
 hide: true
 hidefromtoc: true
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -21,27 +21,27 @@ ht-degree: 0%
 
 Följande specialfall loggas:
 
-1. Om en användare inte har någon e-postadress i `profile/email` fält *jcr* -noden migreras användaren eller gruppen i fråga men mappas inte.  Detta gäller även om e-postadressen används som användarnamn för inloggning.
+1. Om en användare inte har någon e-postadress i `profile/email` fält *jcr* -noden migreras användaren eller gruppen i fråga men mappas inte. Detta gäller även om e-postadressen används som användarnamn för inloggning.
 
-1. Om ett visst e-postmeddelande inte hittas i IMS-systemet (Adobe Identity Management System) för det organisations-ID som används (eller om IMS-ID inte kan hämtas av någon annan anledning) migreras användaren eller gruppen i fråga men inte mappas.
+1. Om det inte går att hitta något e-postmeddelande i IMS-systemet (Adobe Identity Management System) för det organisations-ID som används (eller, om IMS-ID:t inte kan hämtas), migreras användaren eller gruppen men inte mappas.
 
 1. Om användaren är inaktiverad behandlas den på samma sätt som om den inte var inaktiverad. Den mappas och migreras som vanligt och förblir inaktiverad i molninstansen.
 
-1. Om det finns en användare på AEM Cloud Service-målinstansen med samma användarnamn (rep:PrincipalName) som en av användarna AEM källinstansen migreras inte användaren eller gruppen i fråga.
+1. Om det finns en användare på AEM Cloud Service-målinstansen med samma användarnamn (rep:PrincipalName) som en av användarna på AEM-källinstansen migreras inte användaren eller gruppen.
 
-1. Om en användare migreras utan att först mappas via Användarmappning, kan de inte logga in med sitt IMS-ID på målmolnsystemet.  De kanske kan logga in med den traditionella AEM metoden, men tänk på att det vanligtvis inte är vad som önskas eller förväntas.
+1. Om en användare migreras utan att först mappas via Användarmappning kan de inte logga in med sitt IMS-ID på målmolnsystemet. De kanske kan logga in med den traditionella AEM metoden, men det här arbetsflödet är vanligtvis inte vad som önskas eller förväntas.
 
 ## Ytterligare överväganden {#additional-considerations}
 
-* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** är inställt tas redan överförda användare på Cloud Servicen bort tillsammans med hela den befintliga databasen och en ny databas skapas för att importera innehåll till. Detta återställer även alla inställningar inklusive behörigheter för målanvändarinstansen och gäller för en Cloud Service som lagts till i **administratörer** grupp. Administratörsanvändaren måste läggas till på nytt i **administratörer** grupp för att hämta åtkomsttoken för CTT.
+* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** har angetts tas redan överförda användare bort från Cloud Servicen. Hela den befintliga databasen tas också bort och en ny databas skapas där innehållet hämtas. Den här åtgärden återställer även alla inställningar, inklusive behörigheter, för målanvändarinstansen och gäller för en Cloud Service som lagts till i **administratörer** grupp. Administratörsanvändaren måste läsas till **administratörer** grupp för att hämta åtkomsttoken för CTT.
 
-* Vi rekommenderar att du tar bort alla befintliga användare från målinstansen AEM Cloud Servicen innan du kör CTT med användarmappning. Detta för att förhindra konflikter mellan att migrera användare från AEM till AEM. Konflikter uppstår under importen om samma användare finns på AEM och AEM.
+* Adobe rekommenderar att du tar bort alla befintliga användare från målinstansen AEM Cloud Servicen innan du kör CTT med användarmappning. Den här åtgärden är nödvändig för att förhindra konflikter mellan att migrera användare från AEM till AEM. Konflikter kan uppstå vid förtäring om samma användare finns på AEM och AEM.
 
-* När innehållsöverläggningar utförs och innehållet inte överförs eftersom det inte har ändrats sedan den tidigare överföringen, kommer användare och grupper som är kopplade till det innehållet inte heller att överföras, även om användare och grupper har ändrats under tiden. Detta beror på att användare och grupper migreras tillsammans med det innehåll de är kopplade till.
+* När innehållets popup-fönster utförs, och innehållet inte överförs eftersom det inte har ändrats sedan den tidigare överföringen, överförs inte heller användare och grupper som är kopplade till det innehållet. Den här regeln gäller även om användare och grupper har ändrats under tiden. Orsaken är att användare och grupper migreras tillsammans med det innehåll de är kopplade till.
 
-* Om målinstansen av AEM Cloud Service har en användare med ett annat användarnamn men samma e-postadress som en av användarna i AEM och användarmappning är aktiverat, skrivs ett felmeddelande i loggarna och AEM-användaren kommer inte att överföras, eftersom endast en användare med en angiven e-postadress tillåts i målsystemet.
+* Om AEM Cloud Service har en användare med ett annat användarnamn men samma e-postadress som en användare i AEM och Användarmappning är aktiverat, loggas ett felmeddelande. Källanvändaren AEM inte överföras eftersom endast en användare med en angiven e-postadress tillåts i målsystemet.
 
-* Om två användare på AEM-källinstansen har samma e-postadress och användarmappning är aktiverat, skrivs ett felmeddelande i loggarna och en av AEM-användarna kommer inte att överföras, eftersom endast en användare med en given e-postadress tillåts på måldatorn.
+* Om två användare på AEM har samma e-postadress och användarmappning är aktiverat loggas ett felmeddelande. En av AEM användare överförs också eftersom endast en användare med en viss e-postadress tillåts i målsystemet.
 
 ### What&#39;s Next {#whats-next}
 
