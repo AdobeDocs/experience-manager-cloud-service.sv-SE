@@ -2,9 +2,9 @@
 title: AEM Reference Demos Add-On Journey
 description: Börja här för en guidad resa genom hur du enkelt lägger till tillägget AEM Reference Demos i en sandlådemiljö med minimal AEM och kan testa de kraftfulla funktionerna i AEM med detaljerade exempel baserade på bästa praxis.
 exl-id: 8a6d4abf-0832-40e8-9ba6-1ad4ba794ffa
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '853'
 ht-degree: 1%
 
 ---
@@ -19,16 +19,16 @@ AEM är en kraftfull verktygsuppsättning för att skapa och hantera digitala up
 
 Utan exempelinnehåll och konfiguration kan det vara svårt att testa de kraftfulla funktionerna i AEM för både nya och erfarna kunder. Med AEM Reference Demos Add-On kan du enkelt skapa sandlådemiljöer som är förinlästa med exempelinnehåll och förkonfigurerade med hjälp av de senaste Adobe-riktlinjerna för bästa praxis. Med tillägget kan du enkelt utvärdera AEM Sites- och AEM Screens-funktioner i sitt sammanhang och utan att behöva göra någon konfiguration alls.
 
-* **Om du inte har använt AEM tidigare**, som följer den här resan är det enklaste sättet att komma igång med verkligt innehåll i en verklig, fullt fungerande AEM så att du kan testa funktionalitet och lära dig AEM funktioner.
+* **Om du inte har använt AEM tidigare**, är det enklaste sättet att komma igång med verkligt innehåll i en verkligt fungerande AEM miljö där du kan testa funktionalitet och lära dig AEM funktioner.
 * **Om du är en erfaren AEM**&#x200B;är det enklaste sättet att skapa en separat demomiljö för testningsändamål eller skapa en POC med nya funktioner.
 
-Oavsett vad du behöver kan du konfigurera en sandlåda med AEM Reference Demo Add-On om du behöver en AEM som är fylld med realistiskt, fullt fungerande exempelinnehåll. Fortsätt läsa!
+Oavsett vad du behöver kan du konfigurera en sandlåda med tillägget AEM Reference Demo om du behöver en AEM som är fylld med realistiskt, fullt fungerande exempelinnehåll. Fortsätt läsa!
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
 [En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar hur man löser webbplatsaffärsärenden med AEM, är AEM Sites Journeys där man ska börja.
 

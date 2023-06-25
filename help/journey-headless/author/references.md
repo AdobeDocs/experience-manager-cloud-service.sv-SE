@@ -2,9 +2,9 @@
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
 exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '731'
 ht-degree: 1%
 
 ---
@@ -71,7 +71,7 @@ Och det är bara till att börja med. Beroende på komplexiteten kan en utmärke
 
 Att representera dessa inbördes relationer kan uppnås med Fragmentreferenser, så som de tolkas både av dig (författaren) och av rubrikfria program.
 
-Som författare ansvarar du inte för att definiera dessa relationer (det gör innehållsarkitekten när du skapar innehållsfragmentmodellen), men du behöver veta hur du känner igen och redigerar referenserna.
+Som författare ansvarar du inte för att definiera de här relationerna (det vill säga görs av innehållsarkitekten när du skapar innehållsfragmentmodellen), men du måste veta hur referenserna ska identifieras och redigeras.
 
 <!--
 ![Content Modeling with Content Fragments](/help/journey-headless/developer/assets/headless-modeling-01.png "Content Modeling with Content Fragments")
@@ -117,6 +117,7 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
       * [Använd konfigurationen i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [Skapa ett innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+
    * [Variationer - Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md)
 
    * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
@@ -124,7 +125,6 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
       * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#data-types)
 
       * [Modeller för innehållsfragment - egenskaper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#properties)
-
 
 * Komma igång-guider
    * [Skapa en resursmapp - Headless-konfiguration](/help/headless/setup/create-assets-folder.md)

@@ -2,7 +2,7 @@
 title: AEM-projektstruktur
 description: Lär dig hur du definierar paketstrukturer för distribution till Adobe Experience Manager Cloud Service.
 exl-id: 38f05723-5dad-417f-81ed-78a09880512a
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
 source-wordcount: '2927'
 ht-degree: 11%
@@ -223,7 +223,7 @@ Om du vill ange AEM författare, AEM publicera eller båda, är paketet inbädda
 
 `/apps/<app-name>-packages/(content|application|container)/install(.author|.publish)?`
 
-Bryter ned mappstrukturen:
+Bryter ned den här mappstrukturen:
 
 + Den första nivåmappen **måste vara** `/apps`.
 + Mappen på den andra nivån representerar programmet med `-packages` efter korrigering till mappnamnet. Ofta finns det bara en mapp på andra nivån som alla underpaket är inbäddade i, men du kan skapa valfritt antal mappar på andra nivån för att bäst representera programmets logiska struktur:

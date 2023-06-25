@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: 803c4dc44189d58ddbd2669b00dd8107b2a926ae
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '3705'
+source-wordcount: '3706'
 ht-degree: 0%
 
 ---
@@ -157,9 +157,9 @@ Låt oss titta närmare på de problem som Dynamic Media löser med den enda fil
 | Skapa och lagra alla resurser. | Använd en enda bildfil och skapa automatiskt de återgivningar som krävs endast i samband med leveransen. |
 | Höga lagringskostnader. | Eliminerar behovet av att skapa och lagra flera kopior av en mediefil. |
 | Svårighet att upprätthålla vårdkedjan. | Garanterar leverans av enhetsoptimerade och enhetliga upplevelser. |
-| Ingen versionshistorik. |  |
-| Inkonsekventa varumärkesupplevelser på olika enheter. |  |
-| Onödig kostnad för att skapa duplicerade resurser. |  |
+| Ingen versionshistorik. | |
+| Inkonsekventa varumärkesupplevelser på olika enheter. | |
+| Onödig kostnad för att skapa duplicerade resurser. | |
 
 När du tänker på en fil skapar du en resurs för alla typer av upplevelser. Du kanske har en startbild och sedan måste du skapa 20, 30 eller 40 varianter av den bilden, som du i slutändan måste lagra och betala för den lagringen.
 
@@ -178,7 +178,7 @@ Ett annat användningsfall som Dynamic Media löser är video. Video är komplex
 | Svårt att hantera och leverera video som är optimerad för olika enheter. | Använd en enda video som automatiskt storleksändras för alla enheter. |
 | Videorna stannar kvar eller spelas upp med låg kvalitet på grund av att slutanvändaren har en tillgänglig bandbredd. | Leverera video via en HTML-spelare som automatiskt hittar tillgänglig bandbredd och anpassar kvaliteten för att säkerställa hög återgivning och jämn uppspelning. |
 | Omöjligt och tidsödande att manuellt skapa alla versioner av en video för att säkerställa bra visning och uppspelning på alla enheter. | Eliminera timtals av mödosamt transkodningsarbete med ett förenklat arbetsflöde. |
-|  | Frigör tid för mer värdefullt arbete. |
+| | Frigör tid för mer värdefullt arbete. |
 
 Kunder kommer till Dynamic Media med följande problem som de hoppas kunna lösa:
 

@@ -2,7 +2,7 @@
 title: Rätt personer, rätt roller
 description: Rätt personer, rätt roller
 exl-id: 9106ccf5-dc90-4ccb-95bd-7dd5392cd174
-source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Det finns en chans att olika avdelningar inom organisationen har olika aspekter av den digitala upplevelsen. Utan styre är steget klart för en oändlig debatt, konflikter och förvirring.
 
-Digital styrning börjar med att ta reda på vem som ansvarar för vad och vem som gör det digitalt inriktade jobbet. Du kan behöva göra en del strategiska rekryteringar för att lägga till nödvändiga kunskaper. En ännu större utmaning är att driva på en kulturförändring - att bygga upp ett brett stöd för den nya tekniken och hjälpa människor att vänja sig vid nya sätt att göra saker och ting. En viktig del av denna satsning är att skapa en digital community där människor kan lära sig av och stödja varandra.
+Digital styrning börjar med att ta reda på vem som ansvarar för vad och vem som gör det digitalt fokuserade jobbet. Du kan behöva göra en del strategiska rekryteringar för att lägga till nödvändiga kunskaper. En ännu större utmaning är att driva på en kulturförändring - att bygga upp ett brett stöd för den nya tekniken och hjälpa människor att vänja sig vid nya sätt att göra saker och ting. En viktig del av denna satsning är att skapa en digital community där människor kan lära sig av och stödja varandra.
 
 För närvarande fokuserar vi på att sätta rätt personer i rätt jobb för att driva driftsättningen av Adobe Experience Manager. För varje kärnprodukt - Experience Manager Sites och Experience Manager Assets - har vi tagit fram en lista över de roller du behöver fylla, tillsammans med de kunskaper, den expertis och de attribut som gör att människor kan arbeta effektivt i de olika rollerna.
 
@@ -54,7 +54,7 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 Från Architect till ScrumMaster är alla roller i teamet oumbärliga - inklusive DAM-biblioteket.
 
-Du kanske redan har de flesta personer som behövs för att köra en lyckad implementering av Adobe Experience Manager Assets. Listan liknar den för Adobe Experience Manager Sites, med ett viktigt tillägg: behöver ni en bibliotekarier för att era digitala resurser ska vara ordnade och märkta på ett sätt som gör dem enkla att hitta.
+Du kanske redan har de flesta personer som behövs för att köra en lyckad implementering av Adobe Experience Manager Assets. Listan liknar den för Adobe Experience Manager Sites, med ett viktigt tillägg: behöver ni en bibliotekarier som ser till att era digitala resurser är ordnade och märkta på ett sätt som gör dem enkla att hitta.
 
 | Roll | Kompetens | Kapacitetsnivå | Kvaliteter |
 |--- |--- |--- |--- |

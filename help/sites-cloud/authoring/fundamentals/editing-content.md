@@ -2,9 +2,9 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '3004'
+source-wordcount: '3002'
 ht-degree: 5%
 
 ---
@@ -443,7 +443,7 @@ The **Visa som publicerad** är tillgängligt från [Sidinformation](/help/sites
 
 ## Låsa en sida {#locking-a-page}
 
-AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Det här är användbart när du gör många ändringar på en viss sida eller när du behöver frysa en sida en kort stund.
+AEM kan du låsa en sida så att ingen annan kan redigera innehållet. Det här låset är användbart när du gör flera ändringar på en viss sida, eller när du behöver frysa en sida en kort stund.
 
 En sida kan låsas från:
 

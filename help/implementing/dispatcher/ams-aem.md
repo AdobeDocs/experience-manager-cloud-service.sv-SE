@@ -3,9 +3,9 @@ title: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 description: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 feature: Dispatcher
 exl-id: ff7397dd-b6e1-4d08-8e2d-d613af6b81b3
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1446'
 ht-degree: 14%
 
 ---
@@ -257,6 +257,6 @@ Detta startar behållaren och visar Apache på den lokala porten 8080.
 
 ### Använd din nya Dispatcher-konfiguration
 
-Grattis! Om valideraren inte längre rapporterar något problem och dockningsbehållaren startar utan fel eller varningar är du redo att flytta konfigurationen till en `dispatcher/src` underkatalog till din Git-databas.
+Grattis! Om valideraren inte längre rapporterar något problem och dockningsbehållaren startar utan fel eller varningar kan du flytta konfigurationen till en `dispatcher/src` underkatalog till din Git-databas.
 
 **Kunder som använder AMS Dispatcher-konfiguration version 1 bör kontakta kundsupport för att hjälpa dem att migrera från version 1 till version 2 så att instruktionerna ovan kan följas.**

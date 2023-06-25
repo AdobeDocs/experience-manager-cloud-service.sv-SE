@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: 9202cf44595070c98ca3d21887dff257bcd88b87
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '2848'
+source-wordcount: '2845'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Men om du har olika bildförinställningar i Dynamic Media kan du använda dessa
 ![Grundläggande filhantering](/help/assets/dynamic-media/assets/dm-onefile.png)
 _Bäst: en fil med flera återgivningar skapade i farten med hjälp av bildförinställningar, som `Search_Grid` och `Thumbnail`._
 
-| **Varför använda bildförinställningar?** |  |
+| **Varför använda bildförinställningar?** | |
 |---|---|
 | Standarder | Bildförinställningar tillämpar en standardbehandling för bildbearbetning på alla bilder som de efterfrågas med. |
 | Ändringshantering | Om du måste ändra bildbearbetningen redigerar du bara parametern för den befintliga bildförinställningen. Den uppdaterade definitionen sprids automatiskt till alla begäranden. |
@@ -199,7 +199,7 @@ När du flyttar muspekaren över skon zoomar du in den bilden och du ser fler de
 
 När du funderar på att bo som konsument eller arbeta i din dagliga roll och när du besöker olika webbplatser ser du saker som detta. Fundera på hur det går till och hur du kan använda Dynamic Media i ditt eget arbete och på företagets webbplats.
 
-Du läser bara lite om bilduppsättningar och visningsprogram. Låt oss titta på ett par andra tittare och testa dem på enstaka resurser. Klicka på knappen **[!UICONTROL Refresh]** i det nedre vänstra hörnet.
+Du läser bara om bilduppsättningar och visningsprogram. Låt oss titta på ett par andra tittare och testa dem på enstaka resurser. Klicka på knappen **[!UICONTROL Refresh]** i det nedre vänstra hörnet.
 
 <!-- LEAVE THIS HIDDEN PATH IN THE DOCUMENTATION FOR DEMO PURPOSES [Flyout viewer with image set](http://www.partycity.com/girls-little-old-lady-costume-P750948.html) -->
 

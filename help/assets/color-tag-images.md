@@ -2,9 +2,9 @@
 title: Färgtaggar för bilder
 description: Med Experience Manager Assets kan du skilja mellan färger i en bild och använda dem som taggar automatiskt. Du kan sedan använda dessa taggar för att söka efter och filtrera bilder.
 exl-id: 3afa949b-ea1b-4b8e-ac94-06566e2c7147
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1119'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 Experience Manager Assets använder Adobe Sensei AI-funktioner för att skilja mellan färger i en bild och tillämpa dem som taggar automatiskt vid intag. Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition.
 
-Du kan konfigurera antalet färger, inom ett intervall av en till fyrtio, som är taggade till en bild så att du kan söka efter bilder baserade på dessa färger senare. Experience Manager Assets använder märkorden baserat på färgmängden i en bild. Du kan också konfigurera visningsformatet för en färgtagg.
+Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare. Experience Manager Assets använder märkorden baserat på färgmängden i en bild. Du kan också konfigurera visningsformatet för en färgtagg.
 
 I följande bild visas de åtgärder du utför för att konfigurera och hantera färgtaggning för bilder i Experience Manager Assets:
 
@@ -42,11 +42,11 @@ Så här hanterar du färgtaggningsegenskaperna för bilder:
 
 1. Ange ett visningsformat för färgtaggen i **[!UICONTROL Display Format]** fält. Möjliga alternativ är färgnamn, RGB eller HEX.
 
-1. Ange antalet färger som ska taggas för bilderna i **[!UICONTROL Limit]** fält. Dessa färger visas när du visar en bilds egenskaper.  I det här fältet kan du definiera ett tal mellan ett och fyrtio. Standardvärdet för det här fältet är tio färger.
+1. Ange antalet färger som ska taggas för bilderna i **[!UICONTROL Limit]** fält. Dessa färger visas när du visar en bilds egenskaper.  I det här fältet kan du definiera ett tal mellan 1 och 40. Standardvärdet för det här fältet är tio färger.
 
-1. Ange den lägsta färgtäckningsprocenten för att inkludera en färgtagg i sökresultaten i **[!UICONTROL Coverage/Dominance Threshold %]** fält. Om den röda färgmängden i en bild till exempel är tio procent och du anger nio procent i det här fältet, inkluderas bilden när du söker efter bilder med röd färg. Om täckningen för den röda färgen i en bild är tio procent och du definierar elva procent i det här fältet tas bilden inte med när du söker efter bilder med röd färg.
+1. Ange den lägsta färgtäckningsprocenten för att inkludera en färgtagg i sökresultaten i **[!UICONTROL Coverage/Dominance Threshold %]** fält. Om den röda färgmängden i en bild till exempel är tio procent och du anger nio procent i det här fältet, inkluderas bilden när du söker efter bilder med röd färg. Om täckningen för den röda färgen i en bild är tio procent och du anger 11 procent i det här fältet tas bilden inte med när du söker efter bilder med röd färg.
 
-   I det här fältet kan du ange valfritt tal mellan fem och hundra. Standardvärdet är elva.
+   I det här fältet kan du ange valfritt tal mellan fem och hundra. Standardvärdet är 11.
 
    >[!NOTE]
    >

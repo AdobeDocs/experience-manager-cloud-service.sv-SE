@@ -2,9 +2,9 @@
 title: Aktivera progressiva webbprogramfunktioner
 description: AEM Sites gör det möjligt för innehållsförfattaren att aktivera progressiva webbprogramfunktioner för alla webbplatser genom enkel konfiguration istället för kodning.
 exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '1998'
 ht-degree: 0%
 
 ---
@@ -217,7 +217,7 @@ Klientbibliotek levereras med en cacheväljare som har följande mönster `lc-<c
 
 Bildkomponenten för AEM Core Components avgör den översta delen av den bästa återgivningen som ska hämtas. Den här mekanismen innehåller också en tidsstämpel som motsvarar den senaste ändringstiden för resursen. Den här mekanismen komplicerar konfigurationen av förcache-minnet för PWA.
 
-När användaren konfigurerar pre-cache måste han/hon lista alla sökvägsvariationer som kan hämtas. Dessa variationer består av parametrar som kvalitet och bredd. Vi anmodar er att minska antalet av dessa variationer till högst tre - liten, medelstor, stor. Det kan du göra via dialogrutan för innehållspolicy i [Bildkomponent.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)
+När användaren konfigurerar pre-cache måste han/hon lista alla sökvägsvariationer som kan hämtas. Dessa variationer består av parametrar som kvalitet och bredd. Vi rekommenderar att du reducerar antalet av dessa variationer till högst tre - liten, medelstor, stor. Det kan du göra via dialogrutan för innehållspolicy i [Bildkomponent.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html)
 
 Om den inte konfigureras noggrant kan minnes- och nätverkskonsumtionen påverka PWA prestanda negativt. Om du tänker skapa t.ex. 50 bilder framför varandra och har 3 bredder per bild, måste användaren som underhåller webbplatsen ha en lista med upp till 150 poster i PWA-avsnittet för förhandscache i sidegenskaperna.
 

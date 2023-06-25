@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 8b041934-1c4a-4670-9b03-d38f683b99e5
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
@@ -36,24 +36,24 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 
 * När användarna delar digitala resurser som en länk kan de kopiera URL:en till Urklipp direkt. Förbättringen gör att du kan dela resurser snabbare och bekvämare. Den här funktionen gör det möjligt att dela material snabbare och smidigt.
 
-   ![Alternativet Kopiera URL när du delar en resurs som en länk](/help/assets/assets/link-share-copy-URL-option.png)
-   *Bild: När du delar en resurs som en länk kan du nu kopiera URL-adressen och dela den separat.*
+  ![Alternativet Kopiera URL när du delar en resurs som en länk](/help/assets/assets/link-share-copy-URL-option.png)
+  *Bild: När du delar en resurs som en länk kan du nu kopiera URL-adressen och dela den separat.*
 
 * När du överför TXT-filer genererar resursens mikrotjänster automatiskt en miniatyrbild. PNG-miniatyrbilden är en återgivning av TXT-filen som gör det lättare för användare att identifiera innehållet eller filerna i viss utsträckning, utan att öppna filerna. Den här funktionen kräver ingen konfiguration och fungerar som standard.
 
-   ![En återgivning av en TXT-fil genereras automatiskt av [!DNL Assets] i PNG-format](/help/assets/assets/thumbnail-rendition-txt-file.png)
-   *Bild: En återgivning av en TXT-fil genereras automatiskt så att du lättare kan identifiera filen utan att öppna den.*
+  ![En återgivning av en TXT-fil genereras automatiskt av [!DNL Assets] i PNG-format](/help/assets/assets/thumbnail-rendition-txt-file.png)
+  *Bild: En återgivning av en TXT-fil genereras automatiskt så att du lättare kan identifiera filen utan att öppna den.*
 
 ### Ny funktion i [!DNL Assets] prerelease channel {#assets-prerelease-features}
 
 * Användarna kan nu sortera de resurser som visas i sökresultaten i kolumn- och kortvyn. Sorteringen fungerar på kolumnerna Namn, Skapad, Ändrad eller Ingen.
 
-   ![Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer](/help/assets/assets/sort-searched-assets.png)
-   *Bild: Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyn.*
+  ![Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer](/help/assets/assets/sort-searched-assets.png)
+  *Bild: Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyn.*
 
 ### Fel som har åtgärdats i [!DNL Assets] {#assets-bugs-fixed}
 
-* När en medlem i medverkargruppen navigerar till [!DNL Assets] Konsol, en extra `POST` begäran genereras för att försöka skapa en samling. Denna begäran är inte obligatorisk, den misslyckas på grund av behörighetsproblem och skapar många fel i loggarna. (CQ-4328856)
+* När en medlem i medverkargruppen navigerar till [!DNL Assets] Konsol, en extra `POST` begäran genereras för att skapa en samling. Denna begäran krävs inte. den misslyckas på grund av behörighetsproblem och skapar många fel i loggarna. (CQ-4328856)
 * När användare visar en resurs och väljer [!UICONTROL Timeline] på popup-menyn i den vänstra panelen visas ett fel. I loggarna loggas många varningar på grund av en felaktig fråga. (CQ-4328919)
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
@@ -80,7 +80,7 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 
 * Nytt användargränssnitt för kategoriväljare för förbättrad användarupplevelse, ökad effektivitet och bättre stöd för komplexa produktkataloger
 
-   ![Ny kategoriväljare](/help/assets/CIF/category-picker.png)
+  ![Ny kategoriväljare](/help/assets/CIF/category-picker.png)
 
 * Bättre stöd för A11Y för CIF Core-komponenter
 

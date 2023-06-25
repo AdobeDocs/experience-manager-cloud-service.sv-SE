@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User
 level: Beginner, Intermediate
 exl-id: c17c0443-d4dc-41f8-9315-6cc49e6c471f
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '3968'
+source-wordcount: '3967'
 ht-degree: 0%
 
 ---
@@ -195,10 +195,9 @@ Använd attributet request för att hämta associerade egenskaper från datakäl
    >[!NOTE]
    >
    > * Om du använder en statisk mall ska du täcka över head.jsp på:
-      >   `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+   >   `/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp`
    > * Om du använder en redigerbar mall ska du täcka över den eftermalledpage.jsp som:
-      >   `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
-
+   >   `/libs/fd/af/components/page2/aftemplatedpage/aftemplatedpage.jsp`
 
 1. Ange [!DNL paramMap] för attributet request. Ta till exempel med följande kod i .jsp-filen i mappen apps:
 
@@ -292,7 +291,8 @@ Så här redigerar du egenskaper:
    * **[!UICONTROL Property]**: Ange typ, undertyp och format för egenskapen. Du kan också ange om den valda egenskapen är primärnyckeln för datamodellobjektet.
    * **[!UICONTROL Service]**: Ange tjänstens indatamodell, utdatatyp och argument. För en Get-tjänst kan du ange om den förväntas returnera en array.
 
-      ![edit-properties-service](assets/edit-properties-service.png)
+     ![edit-properties-service](assets/edit-properties-service.png)
+
    Dialogrutan Redigera egenskaper för en get-tjänst
 
 1. Tryck **[!UICONTROL Done]** för att spara egenskaper och sedan **[!UICONTROL Save]** för att spara formulärdatamodellen.
@@ -419,7 +419,7 @@ Flaggan kan anges med något av följande värden:
 
 * **HELT**: FDM utför valideringen baserat på alla begränsningar
 * **AV**: Ingen validering
-* **GRUNDLÄGGANDE**: FDM utför valideringen baserat på begränsningarna&quot;required&quot; och&quot;nullable&quot;
+* **GRUNDLÄGGANDE**: FDM utför valideringen baserat på begränsningarna &#39;required&#39; och &#39;nullable&#39;
 
 Om inget värde har angetts för `ValidationOptions`flagga, **GRUNDLÄGGANDE** validering utförs på indata.
 

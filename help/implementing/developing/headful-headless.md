@@ -2,9 +2,9 @@
 title: Headless and Headless in AEM
 description: AEM kan implementeras i en headful och headless-modell, men valet är inte binärt. AEM erbjuder flexibiliteten att utnyttja fördelarna med båda modellerna i ett och samma projekt.
 exl-id: 709850ca-7757-47ab-9625-f411121cde2c
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ I nästa avsnitt beskrivs dessa integreringsnivåer mer ingående.
 
 >[!NOTE]
 >
->Naturligtvis kan du också återimplementera SPA som en AEM fullt fungerande SPA [med AEM ramverk för SPA.](/help/implementing/developing/hybrid/introduction.md) Om du redan har AEM och vill skapa en ny webbshop eller andra SPA rekommenderas den här metoden, men den ligger utanför det här dokumentets omfång.
+>Du kan förstås även implementera SPA på nytt som en fullt fungerande AEM SPA [med AEM ramverk för SPA.](/help/implementing/developing/hybrid/introduction.md) Om du redan har AEM och vill skapa en ny webbshop eller andra SPA rekommenderas den här metoden, men den ligger utanför det här dokumentets omfång.
 
 ## SPA integreringsnivåer {#integration-levels}
 

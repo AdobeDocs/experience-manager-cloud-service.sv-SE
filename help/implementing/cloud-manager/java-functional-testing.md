@@ -2,9 +2,9 @@
 title: Java Functional Tests
 description: Lär dig skriva Java-funktionstester för AEM as a Cloud Service
 exl-id: e449a62a-c8ad-4d39-a170-abacdda3f1b1
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ Se [`aem-testing-clients` GitHub-repo](https://github.com/adobe/aem-testing-clie
 | CPU | 0.5 | Den CPU-tid som reserverats per testkörning |
 | Minne | 0.5Gi | Mängd minne som tilldelats testet, värde i gibibyte |
 | Timeout | 30m | Den varaktighet efter vilken testet avslutas. |
-| Rekommenderad varaktighet | 15m | Vi rekommenderar att du skriver testerna så att de inte tar längre tid än så här. |
+| Rekommenderad varaktighet | 15m | Adobe rekommenderar att testet inte tar längre tid än så här. |
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ Systemegenskaperna är följande.
 
 | Egenskap | Beskrivning | Exempel |
 |-------------------------------------|------------------------------------------------------------------|-------------------------|
-| `sling.it.instances` | mängden instanser som matchar molntjänsten ska anges till `2` | `2` |
+| `sling.it.instances` | antal instanser, för att matcha molntjänsten ska anges till `2` | `2` |
 | `sling.it.instance.url.1` | ska anges till författarens URL | `http://localhost:4502` |
 | `sling.it.instance.runmode.1` | runmode för den första instansen, ska anges till `author` | `author` |
 | `sling.it.instance.adminUser.1` | ska anges till författaradministratörsanvändaren. | `admin` |

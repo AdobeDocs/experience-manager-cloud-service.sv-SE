@@ -2,9 +2,9 @@
 title: Versionsinformation om 2022.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2022.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: cf2133dc-56cd-4a07-ab11-72e16f015ff5
-source-git-commit: 599f924465552b2ef43827da8e139c239e47baed
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Titta på videon med versionsöversikten för juni 2022 om du vill se en sammanf
 
 * En ny [användargränssnitt](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) är nu tillgängligt för innehållsadministratörer och innehållsförfattare att effektivt hantera (vidta åtgärder som att publicera, avpublicera, kopiera, flytta osv.), söka/filtrera och skapa innehållsfragment för Headless-fall.
 
-   ![Konsol för innehållsfragment](/help/release-notes/assets/cf-ui.png)
+  ![Konsol för innehållsfragment](/help/release-notes/assets/cf-ui.png)
 
 * Den nya [Innehållsförteckningskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/tableofcontents.html) fungerar inte bara med kärnkomponenterna utan med alla komponenter, vilket automatiskt återger ToCS på innehållssidorna. Och eftersom den renderas på serversidan och cachas fullständigt av dispatchern är det också effektivt att läsa in den.
 
@@ -47,7 +47,7 @@ Titta på videon med versionsöversikten för juni 2022 om du vill se en sammanf
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja på färger i en bild och använda dem som taggar automatiskt vid förtäring](/help/assets/color-tag-images.md). Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition. Du kan konfigurera antalet färger, inom ett intervall av en till fyrtio, som är taggade till en bild så att du kan söka efter bilder baserade på dessa färger senare.
+Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja på färger i en bild och använda dem som taggar automatiskt vid förtäring](/help/assets/color-tag-images.md). Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition. Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare.
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
@@ -57,7 +57,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 * **Guide för att skapa ett adaptivt formulär**: Du kan använda en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden ger dig en snabb fliknavigering så att du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär.
 
-   ![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png)
+  ![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png)
 
 ## CIF-tillägg {#cloud-services-cif}
 
@@ -94,7 +94,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 ### Vad är nytt? {#what-is-new-foundation}
 
-* Som nämndes i versionsinformationen från maj (2022.5.0) finns alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **Distribuera** har tagits bort. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Publicera innehållsträd](/help/operations/replication.md#manage-publication#publish-content-tree-workflow) arbetsflöde.
+* Som nämndes i versionsinformationen från maj (2022.5.0) finns alternativet Lägg till träd under administrationsskärmen för replikeringsagenten **Distribuera** har tagits bort. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Publicera innehållsträd](/help/operations/replication.md#manage-publication#publish-content-tree-workflow) arbetsflöde.
 
 ## Cloud Manager {#cloud-manager}
 

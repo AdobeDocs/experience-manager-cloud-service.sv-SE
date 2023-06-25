@@ -2,9 +2,9 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från AEM as a Cloud Service produktionsmiljöer till lägre miljöer för teständamål.
 exl-id: f060821d-d559-45d2-b3b1-1b2277694ec4
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
    1. Ange banan i dialogrutan **Lägg till inkluderingssökväg** fält.
    1. Tryck eller klicka på **Lägg till bana** om du vill lägga till sökvägen till innehållsuppsättningen.
    1. Tryck eller klicka på **Lägg till bana** igen om det behövs.
-      * Upp till femtio banor tillåts.
+      * Upp till 50 banor är tillåtna.
 
    ![Lägg till banor i innehållsuppsättningen](assets/add-content-set-paths.png)
 
@@ -183,7 +183,7 @@ Verktyget för innehållskopiering har följande begränsningar.
 * Innehåll kan bara kopieras från och till redigeringstjänster.
 * Det går inte att kopiera innehåll mellan program.
 * Det går inte att köra samtidiga kopieringsåtgärder för innehåll i samma miljö.
-* Upp till femtio sökvägar kan anges per innehållsuppsättning. Det finns ingen begränsning för uteslutna banor.
+* Upp till 50 sökvägar kan anges per innehållsuppsättning. Det finns ingen begränsning för uteslutna banor.
 * Verktyget för innehållskopia bör inte användas som kloning eller spegling eftersom det inte går att spåra flyttat eller borttaget innehåll i källan.
 * Verktyget för innehållskopiering har ingen versionshantering och kan inte automatiskt identifiera ändrat innehåll eller nyligen skapat innehåll i källmiljön i en innehållsuppsättning sedan den senaste kopieringsåtgärden.
    * Om du bara vill uppdatera målmiljön med innehållsändringar sedan den senaste kopieringsåtgärden, måste du skapa en innehållsuppsättning och ange sökvägarna i källinstansen där ändringar har gjorts sedan den senaste kopieringsåtgärden.

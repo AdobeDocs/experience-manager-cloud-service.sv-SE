@@ -3,9 +3,9 @@ title: Målväljare för AEM as a Cloud Service
 description: Använd AEM målväljare för att visa och välja resurser som du kan använda som en kopia av den ursprungliga resursen.
 contentOwner: Adobe
 role: Admin,User
-source-git-commit: d6ea74834f73ad90f5df929a2806cd1ed53af0aa
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ En fullständig lista över egenskaper och detaljerade exempel finns på [Exempe
 
 I det här exemplet visas hur du använder målväljaren med ett icke-SUSI-flöde när du kör en [!DNL Adobe] program under Unified Shell eller när du redan har `imsToken` genereras för autentisering.
 
-Inkludera målväljarpaketet i koden med `script` -tagg, som visas i _rader 6 till 15_ i exemplet nedan. När skriptet har lästs in visas `PureJSSelectors` global variabel är tillgänglig för användning. Definiera målväljaren [egenskaper](#destination-selector-properties) som visas i _raderna 16-23_. The `imsOrg` och `imsToken` båda egenskaperna krävs för autentisering i icke-SUSI-flöden. The `handleSelection` -egenskapen används för att hantera de valda resurserna. Om du vill återge målväljaren anropar du `renderDestinationSelector` funktionen enligt _rad 17_. Målväljaren visas i `<div>` behållarelement, som visas i _raderna 21 och 22_.
+Inkludera målväljarpaketet i koden med `script` -tagg, som visas i _raderna 6-15_ i exemplet nedan. När skriptet har lästs in `PureJSSelectors` global variabel är tillgänglig för användning. Definiera målväljaren [egenskaper](#destination-selector-properties) som visas i _raderna 16-23_. The `imsOrg` och `imsToken` båda egenskaperna krävs för autentisering i icke-SUSI-flöden. The `handleSelection` -egenskapen används för att hantera de valda resurserna. Om du vill återge målväljaren anropar du `renderDestinationSelector` funktionen enligt _rad 17_. Målväljaren visas i `<div>` behållarelement, som visas i _raderna 21 och 22_.
 
 Följ de här stegen kan du använda målväljaren med ett icke-SUSI-flöde i [!DNL Adobe] program.
 
@@ -185,22 +185,22 @@ Du kan använda egenskaperna för målväljaren för att anpassa hur målväljar
 
 | Egenskap | Typ | Obligatoriskt | Standard | Beskrivning |
 |---|---|---|---|---|
-| *imsOrg* | string | Ja |  | IMS-ID (Adobe Identity Management System) som tilldelas vid etablering [!DNL Adobe Experience Manager] som [!DNL Cloud Service] för er organisation. The `imsOrg` Nyckeln krävs för att verifiera om den organisation som du använder är under Adobe IMS eller inte. |
-| *imsToken* | string | Nej |  | IMS-innehavartoken används för autentisering. `imsToken` är inte nödvändigt om du använder SUSI-flödet. Det är dock nödvändigt om du använder ett icke-SUSI-flöde. |
-| *apiKey* | string | Nej |  | API-nyckel som används för åtkomst till AEM. `apiKey` är inte nödvändigt om du använder SUSI-flödet. Det krävs dock i icke-SUSI-flöden. |
+| *imsOrg* | string | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas vid etablering [!DNL Adobe Experience Manager] som [!DNL Cloud Service] för er organisation. The `imsOrg` Nyckeln krävs för att verifiera om den organisation du använder är under Adobe IMS eller inte. |
+| *imsToken* | string | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs inte om du använder SUSI-flödet. Det är dock nödvändigt om du använder ett icke-SUSI-flöde. |
+| *apiKey* | string | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs inte om du använder SUSI-flödet. Det krävs dock i icke-SUSI-flöden. |
 | *rootPath* | string | Nej | /content/dam/ | Mappsökväg som målväljaren visar dina resurser från. `rootPath` kan också användas i form av inkapsling. Med följande sökväg, till exempel `/content/dam/marketing/subfolder/`kan du inte bläddra igenom någon överordnad mapp med målväljaren, utan bara visa de underordnade mapparna. |
-| *hasMore* | boolesk | Nej |  | När programmet har mer innehåll att visa kan du använda den här egenskapen för att lägga till en inläsare som läser in innehållet för att göra det synligt i programmet. Det är en indikator som anger att inläsning av innehåll pågår. |
-| *orgName* | boolesk | Nej |  | Det är namnet på organisationen (troligtvis orgID) som är associerad med AEM |
-| *initRepoID* | string | Nej |  | Det är sökvägen till resurskatalogen som du vill använda i en inledande standardvy |
-| *onCreateFolder* | string | Nej |  | The `onCreateFolder` kan du lägga till ikoner som lägger till en ny mapp i programmet. |
-| *onConfirm* | string | Nej |  | Det är ett återanrop när du trycker på bekräftelseknappen. |
-| *confirmDisabled* | string | Nej |  | Den här egenskapen styr omkopplaren av bekräftelseknappen. |
-| *viewType* | string | Nej |  | The `viewType` -egenskapen används för att ange de vyer som du använder för att visa resurser. |
-| *viewTypeOptions* | string | Nej |  | Den här egenskapen är relaterad till `viewType` -egenskap. du kan ange en eller flera vyer för att visa resurser. Tillgängliga viewTypeOptions är: Listvy, stödrastervy, gallerivy, vattenfallsvy och trädvy. |
-| *itemNameFormatter* | string | Nej |  | Med den här egenskapen kan du formatera objektnamnet |
+| *hasMore* | boolesk | Nej | | När programmet har mer innehåll att visa kan du använda den här egenskapen för att lägga till en inläsare som läser in innehållet för att göra det synligt i programmet. Det är en indikator som anger att inläsning av innehåll pågår. |
+| *orgName* | boolesk | Nej | | Det är namnet på organisationen (troligtvis orgID) som är associerad med AEM |
+| *initRepoID* | string | Nej | | Det är sökvägen till resurskatalogen som du vill använda i en inledande standardvy |
+| *onCreateFolder* | string | Nej | | The `onCreateFolder` kan du lägga till ikoner som lägger till en ny mapp i programmet. |
+| *onConfirm* | string | Nej | | Det är ett återanrop när du trycker på bekräftelseknappen. |
+| *confirmDisabled* | string | Nej | | Den här egenskapen styr omkopplaren av bekräftelseknappen. |
+| *viewType* | string | Nej | | The `viewType` -egenskapen används för att ange de vyer som du använder för att visa resurser. |
+| *viewTypeOptions* | string | Nej | | Den här egenskapen är relaterad till `viewType` -egenskap. du kan ange en eller flera vyer för att visa resurser. Tillgängliga viewTypeOptions är: Listvy, stödrastervy, gallerivy, vattenfallsvy och trädvy. |
+| *itemNameFormatter* | string | Nej | | Med den här egenskapen kan du formatera objektnamnet |
 | *i18nSymbols* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |  | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
-| *inlineAlertSetup* | string | Nej |  | Det lägger till ett varningsmeddelande som du vill skicka i programmet. Du kan till exempel lägga till ett varningsmeddelande om att du inte har behörighet att komma åt den här mappen. |
-| *intl* | Objekt | Nej |  | Målväljaren innehåller standardöversättningar av OTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språkområden som stöds: Engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
+| *inlineAlertSetup* | string | Nej | | Det lägger till ett varningsmeddelande som du vill skicka i programmet. Du kan till exempel lägga till ett varningsmeddelande om att du inte har behörighet att komma åt den här mappen. |
+| *intl* | Objekt | Nej | | Målväljaren innehåller standardöversättningar av OTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språkområden som stöds: Engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 
 ## Exempel på hur du använder egenskaper för målväljare {#usage-examples}
 

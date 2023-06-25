@@ -2,9 +2,9 @@
 title: Aktivera AEM Screens för din demowebbplats
 description: Lär dig hur du aktiverar den fullständiga as a Cloud Service AEM Screens-upplevelsen på din demowebbplats.
 exl-id: 369eea9f-2e81-4b87-841c-188b67657bab
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '2696'
+source-wordcount: '2694'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Kaféet We.Cafe består av tre butiker på tre platser i USA. Alla tre butikerna
 >
 >Kiosken ingår inte i den aktuella versionen av demon. Den kommer att ingå i en framtida version.
 
-New-York-platsen antas befinna sig i en mindre butik som inte har mycket utrymme, och som sådan:
+Platsen New York antas befinna sig i en mindre butik som inte har så mycket utrymme, och som sådan:
 
 * Menypanelen har bara två vertikala paneler i stället för tre för San Francisco och San Jose
 * Ingångsvyn placeras lodrätt i stället för vågrätt

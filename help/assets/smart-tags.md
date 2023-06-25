@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: f8535b9d1b8334bede817714eab469fbb1fcbb03
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2411'
 ht-degree: 4%
 
 ---
@@ -51,8 +51,8 @@ Du kan tagga följande typer av resurser:
 | image/x-portable-graymap | SRT |  |
 | image/x-portable-pixmap | TXT |  |
 | image/x-rgb | VTT |  |
-| image/x-xbitmap |  |  |
-| image/x-xpixmap |  |  |
+| image/x-xbitmap | |  |
+| image/x-xpixmap | |  |
 | image/x-icon |  |  |
 | image/photoshop |  |  |
 | image/x-photoshop |  |  |
@@ -277,4 +277,3 @@ Om du vill söka efter filer med smarta taggar (vanliga eller förbättrade) anv
 >
 >* [Förstå hur smarta taggar hjälper dig att hantera dina digitala filer](https://medium.com/adobetech/efficient-asset-management-with-enhanced-smart-tags-887bd47dbb3f)
 >* [Använd smarta taggar för videoklipp](smart-tags-video-assets.md)
-

@@ -2,9 +2,9 @@
 title: Vanliga frågor om Cloud Manager
 description: Hitta svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
-source-git-commit: 698ea704d821d26067e29a89b562388d7517772e
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Vanliga frågor om Cloud Manager {#cloud-manager-faqs}
 
-Det här dokumentet innehåller svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
+Det här dokumentet ger svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 
 ## Går det att använda Java 11 med Cloud Manager-byggen? {#java-11-cloud-manager}
 

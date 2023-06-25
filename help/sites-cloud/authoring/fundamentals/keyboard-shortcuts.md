@@ -2,9 +2,9 @@
 title: Kortkommandon för sidredigering
 description: Det finns olika kortkommandon i hela AEM, bland annat för sidredigering
 exl-id: 6c501897-48f9-478a-b143-d3ad19643b8c
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 |  | `Ctrl-y` | [Gör om senaste ändring](/help/sites-cloud/authoring/fundamentals/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | Markera flera stycken |
 |  | `Ctrl-c` | Kopiera markerade stycken |
-|  | `Ctrl-x` | Klipp ut markerade stycken, (urklippta stycken försvinner inte i användargränssnittet förrän de klistras in) |
+|  | `Ctrl-x` | Klipp ut markerade stycken (urklippta stycken försvinner inte i användargränssnittet förrän de klistras in) |
 |  | `Ctrl-v` | Klistra in stycken som tidigare klippts ut eller kopierats |
 |  | `Ctrl-Backspace` | Ta bort markerade stycken |
 | **Redigera** läge - RTF-redigerare | `Ctrl-b` | Fet |

@@ -1,6 +1,6 @@
 ---
 title: Komma igång med AEM Commerce as a Cloud Service
-description: Lär dig hur du distribuerar ett e-handelsaktiverat AEM till ett AEM som körs som en molntjänstmiljö. Använd funktionerna i Adobe Cloud Manager och en CI/CD-pipeline för att bygga Venia-referensbutiken till en körbar miljö.
+description: Lär dig hur du distribuerar ett e-handelsaktiverat AEM till ett AEM som körs som en molntjänstmiljö. Använd funktionerna i Adobe Cloud Manager och en CI/CD-pipeline så att du kan skapa Venias referensarkiv för en körningsmiljö.
 topics: Commerce
 feature: Commerce Integration Framework, Cloud Manager
 version: Cloud Service
@@ -8,16 +8,16 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1113'
 ht-degree: 0%
 
 ---
 
 # Komma igång med AEM Commerce as a Cloud Service {#start}
 
-För att komma igång med AEM Commerce as a Cloud Service måste din Experience Manager Cloud Service etableras med tillägget Commerce Integration Framework (CIF). CIF-tillägget är ytterligare en modul ovanpå [AEM Sites as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/home.html).
+För att komma igång med AEM Commerce as a Cloud Service måste din Experience Manager Cloud Service etableras med tillägget Commerce Integration Framework (CIF). CIF-tillägget är en extra modul ovanpå [AEM Sites as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/home.html).
 
 ## Onboarding {#onboarding}
 
@@ -28,9 +28,9 @@ Introduktionen av AEM Commerce as a Cloud Service är en tvåstegsprocess:
 
 Det första startsteget görs av Adobe. Mer information om priser och provisionering får du av din säljare.
 
-När du har etablerat dig med CIF-tillägget tillämpas det på alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett nytt. Mer information finns i [Konfigurera ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/setting-up-program.html).
+När du har etablerat dig med CIF-tillägget tillämpas det på alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett. Mer information finns i [Konfigurera ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html).
 
-Det andra steget är självbetjäning för varje AEM as a Cloud Service miljö. Det finns ytterligare konfigurationer du behöver göra efter den första etableringen av CIF-tillägget.
+Det andra steget är självbetjäning för varje AEM as a Cloud Service miljö. Det finns ytterligare konfigurationer som du måste göra efter den första etableringen av CIF-tillägget.
 
 ## Ansluta AEM till en Commerce Solution {#solution}
 
@@ -39,11 +39,11 @@ Ansluta CIF-tillägget och [AEM CIF-kärnkomponenter](https://github.com/adobe/a
 Miljövariabeln används på två ställen:
 
 - GraphQL anropar från AEM till e-handelskunderna via en gemensam Sharable GraphQl-klient som används av AEM CIF Core Components och kundprojektskomponenter.
-- Konfigurera en proxywebbadress för GraphQL för varje AEM som variabeln är inställd på `/api/graphql`. Detta används av AEM utvecklingsverktyg (CIF-tillägg) och CIF-komponenter på klientsidan.
+- Ange en proxywebbadress för GraphQL för varje AEM som variabeln är inställd på `/api/graphql`. Den här URL:en används av AEM utvecklingsverktyg (CIF-tillägg) och CIF-komponenter på klientsidan.
 
 En annan GraphQL-slutpunkts-URL kan användas för varje AEM as a Cloud Service miljö. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara allmänt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Du kan också ange en autentiseringshuvud om du vill använda ytterligare CIF-funktioner som kräver autentisering.
 
-Tillägget CIF kan användas endast för Adobe Commerce Enterprise/Cloud med stöd för användning av testade katalogdata för AEM. Detta kräver att du konfigurerar en auktoriseringshuvud. Den här rubriken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
+Tillägget CIF kan, och endast för Adobe Commerce Enterprise/Cloud, användas med mellanlagrade katalogdata för AEM. Dessa data kräver att du konfigurerar en auktoriseringshuvud. Den här rubriken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
 
 Det finns två alternativ för att konfigurera slutpunkten:
 
@@ -51,7 +51,7 @@ Det finns två alternativ för att konfigurera slutpunkten:
 
 >[!VIDEO](https://video.tv.adobe.com/v/37843?quality=12&learn=on)
 
-Detta kan du göra med en dialogruta på sidan Miljöinformation. När den här sidan visas för ett Commerce-aktiverat program visas en knapp om slutpunkten inte är konfigurerad:
+Den här konfigurationen kan göras med hjälp av en dialogruta på sidan Miljöinformation. När den här sidan visas för ett Commerce-aktiverat program visas en knapp om slutpunkten inte är konfigurerad:
 
 ![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui.png)
 
@@ -59,19 +59,19 @@ Om du klickar på den här knappen öppnas en dialogruta:
 
 ![CM Commerce Endpoint](/help/commerce-cloud/assets/commerce-cm-endpoint.png)
 
-När slutpunkten och eventuellt en auktoriseringshuvud för stöd för mellanlagrad katalog har angetts visas slutpunkten på detaljsidan. Om du klickar på ikonen Redigera öppnas samma dialogruta där slutpunkten kan ändras om det behövs.
+När slutpunkten och eventuellt en auktoriseringshuvud för stöd för mellanlagrad katalog har angetts visas slutpunkten på detaljsidan. Klicka på ikonen Redigera för att öppna samma dialogruta där du kan redigera slutpunkten, om det behövs.
 
 ![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui-done.png)
 
-### Via Adobe I/O CLI  {#adobe-cli}
+### Genom Adobe Developer CLI  {#adobe-cli}
 
-Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/O CLI:
+Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe Developer CLI:
 
-1. Skaffa Adobe I/O CLI med plugin-programmet Cloud Manager
+1. Skaffa Adobe Developer CLI med plugin-programmet Cloud Manager
 
-   Kontrollera [Dokumentation för Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [CLI-plugin för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+   Kontrollera [Dokumentation för Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) om hur du hämtar, konfigurerar och använder [Adobe Developer CLI](https://github.com/adobe/aio-cli) med [CLI-plugin för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
-2. Autentisera Adobe I/O CLI med det AEM as a Cloud Service programmet
+2. Autentisera Adobe Developer CLI med det AEM as a Cloud Service programmet
 
 3. Ange `COMMERCE_ENDPOINT` variabel i Cloud Manager
 
@@ -99,25 +99,25 @@ Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/
 >
 >Du kan visa alla Cloud Manager-variabler med följande kommando för att dubbelkontrollera: `aio cloudmanager:list-environment-variables ENVIRONMENT_ID`
 
-Detta gör att du kan använda AEM Commerce as a Cloud Service och driftsätta ditt projekt via Cloud Manager.
+Du är redo att använda AEM Commerce as a Cloud Service och kan distribuera ditt projekt via Cloud Manager.
 
 ## Konfigurera butiker och kataloger {#catalog}
 
-CIF-tillägget och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer osv.). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
+CIF-tillägget och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer, och så vidare). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
 
-Den här konfigurationen kan justeras för projektet via CIF-Cloud Servicens konfiguration enligt följande steg:
+Den här konfigurationen kan justeras för projektet med CIF-Cloud Servicens konfiguration enligt följande steg:
 
-1. I AEM går du till Verktyg -> Cloud Services -> CIF-konfiguration
+1. I AEM går du till Verktyg -> Cloud Services -> CIF-konfiguration.
 
-2. Välj den e-postkonfiguration som du vill ändra
+2. Välj den e-postkonfiguration som du vill ändra.
 
-3. Öppna konfigurationsegenskaperna via åtgärdsfältet
+3. Öppna konfigurationsegenskaperna via åtgärdsfältet.
 
 ![Konfiguration av CIF-Cloud Services](/help/commerce-cloud/assets/cif-cloud-service-config.png)
 
 Följande egenskaper kan konfigureras:
 
-- GraphQL Client - Välj den konfigurerade GraphQL-klienten för e-handelskommunikation. Detta bör normalt vara kvar som standard.
+- GraphQL Client - Välj den konfigurerade GraphQL-klienten för e-handelskommunikation. Den här klienten ska normalt vara kvar som standard.
 - Butiksvy - butiksvyns identifierare. Om den är tom används standardbutiksvyn.
 - GraphQL Proxy Path - den URL-sökväg som GraphQL Proxy AEM använder för proxybegäranden till GraphQL-slutpunkt för e-handel.
   >[!NOTE]
@@ -126,20 +126,20 @@ Följande egenskaper kan konfigureras:
 - Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsserverdelens GraphQL-anrop.
   >[!NOTE]
   >
-  > Stöd för UID introducerades i Adobe Commerce 2.4.2. Aktivera bara detta om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
+  > Stöd för UID introducerades i Adobe Commerce 2.4.2. Aktivera bara UID:n om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
 - Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogroten
   >[!CAUTION]
   >
   > Från och med CIF Core Components version 2.0.0 finns stöd för `id` togs bort och ersattes med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som &quot;Katalogens rotkategoriidentifierare&quot;.
 
-Konfigurationen som visas ovan är för referens. Projekten ska innehålla egna konfigurationer.
+Konfigurationen som visas ovan är för referens. Projekten ska ha egna konfigurationer.
 
-Mer komplexa inställningar som använder flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger finns i [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md) självstudiekurs.
+Om du vill ha mer komplexa inställningar kan du använda flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger i [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md) självstudiekurs.
 
 ## Ytterligare resurser {#additional-resources}
 
 - [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
 - [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)
 - [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md)
-- [Installation av flera Commerce Systems](configuring/multiple-commerce-systems-setup.md)
+- [Flera inställningar för Commerce Systems](configuring/multiple-commerce-systems-setup.md)
 
