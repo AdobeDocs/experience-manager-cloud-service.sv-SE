@@ -10,9 +10,9 @@ topic-tags: adaptive_forms, author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 exl-id: 3fdbe5a3-5c3c-474d-b701-e0182da4191a
-source-git-commit: 0c303439c879605f1ab0927cf79b132dbb448af5
+source-git-commit: 1633e02fc6b79a45582b919863662bc1d1b49b42
 workflow-type: tm+mt
-source-wordcount: '1341'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -29,12 +29,11 @@ CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Ap
 >* CAPTCHA i Adaptive Forms stöds inte i offlineläge i [!DNL AEM Forms] app.
 >
 
-
-## Konfigurera ReCAPTCHA-tjänsten av Google {#google-recaptcha}
+## Konfigurera tjänsten reCAPTCHA från Google {#google-reCAPTCHA}
 
 Formulärförfattare kan använda tjänsten reCAPTCHA från Google för att implementera CAPTCHA i Adaptiv Forms. Den har avancerade CAPTCHA-funktioner för att skydda er webbplats. Mer information om hur reCAPTCHA fungerar finns i [Google reCAPTCHA](https://developers.google.com/recaptcha/).
 
-![Recaptcha](assets/recaptcha_new.png)
+![reCAPTCHA](assets/recaptcha_new.png)
 
 Så här implementerar du tjänsten reCAPTCHA i [!DNL AEM Forms]:
 
@@ -49,10 +48,10 @@ Så här implementerar du tjänsten reCAPTCHA i [!DNL AEM Forms]:
 
       1. Aktivera i dialogrutan Konfigurationsegenskaper **[!UICONTROL Cloud Configurations]**.
       1. Tryck **[!UICONTROL Save & Close]** för att spara konfigurationen och stänga dialogrutan.
+
    1. Tryck på **[!UICONTROL Create]**.
    1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen och aktiverar **[!UICONTROL Cloud Configurations]**.
    1. Tryck **[!UICONTROL Create]** för att skapa en mapp som är aktiverad för molntjänstkonfigurationer.
-
 
 1. Konfigurera molntjänsten för reCAPTCHA.
 
@@ -85,14 +84,14 @@ Så här använder du CAPTCHA i Adaptiv Forms:
 
 1. Välj den Captcha-komponent som du har lagt till och tryck på ![cmppr](assets/configure-icon.svg) om du vill redigera dess egenskaper.
 1. Ange en titel för CAPTCHA-widgeten. Standardvärdet är **[!UICONTROL Captcha]**. Välj **[!UICONTROL Hide title]** om du inte vill att rubriken ska visas.
-1. Från **[!UICONTROL Captcha service]** nedrullningsbar meny, välja **[!UICONTROL reCaptcha]** för att aktivera tjänsten reCAPTCHA om du har konfigurerat den enligt beskrivningen i [Tjänsten ReCAPTCHA från Google](#google-recaptcha). Välj en konfiguration i listrutan Inställningar.
+1. Från **[!UICONTROL Captcha service]** nedrullningsbar meny, välja **[!UICONTROL reCAPTCHA]** för att aktivera tjänsten reCAPTCHA om du har konfigurerat den enligt beskrivningen i [reCAPTCHA-tjänst från Google](#google-reCAPTCHA). Välj en konfiguration i listrutan Inställningar.
 1. Välj typen som **[!UICONTROL Normal]** eller **[!UICONTROL Compact]** för widgeten reCAPTCHA. Du kan också välja **[!UICONTROL Invisible]** möjlighet att visa CAPTCHA-utmaningen endast i händelse av en misstänkt aktivitet. Varumärket protected by reCAPTCHA, som visas nedan, visas på de skyddade formulären.
 
    ![Google skyddat av reCAPTCHA-märke](assets/google-recaptcha-v2.png)
 
    >[!NOTE]
    >
-   >Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom Experience Manager CAPTCHA-standardtjänsten är inaktuell.
+   >* Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom Experience Manager CAPTCHA-standardtjänsten är inaktuell.
 
 1. Spara egenskaperna.
 
@@ -107,6 +106,10 @@ CAPTCHA-komponenten måste till exempel bara visas i ett adaptivt formulär om f
 Tryck på **[!UICONTROL Currency Value]** i formuläret och skapa följande regler:
 
 ![Visa eller dölja regler](assets/rules-show-hide-captcha.png)
+
+>[!NOTE]
+>
+>* Om du väljer reCAPTCHA v2-konfiguration med storleken [!UICONTROL Invisible] då alternativet visa/dölj inte är tillgängligt.
 
 ### Validera CAPTCHA {#validate-captcha}
 
@@ -206,7 +209,7 @@ public interface GuideCaptchaValidator {
 
 `userResponseToken` refererar till `g_recaptcha_response` som genereras när en CAPTCHA har lösts i ett formulär.
 
-### Redigera reCAPTCHA-tjänstdomän {#recaptcha-service-domain}
+### Redigera reCAPTCHA-tjänstdomän {#reCAPTCHA-service-domain}
 
 reCAPTCHA-tjänsten använder `https://www.recaptcha.net/` som standarddomän. Du kan ändra inställningarna för att ange `https://www.google.com/` eller ett anpassat domännamn för inläsning, återgivning och validering av reCAPTCHA-tjänsten.
 
