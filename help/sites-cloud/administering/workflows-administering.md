@@ -3,9 +3,9 @@ title: Administrera arbetsflödesinstanser
 description: Lär dig hur du administrerar arbetsflödesinstanser
 feature: Administering
 role: Admin
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 31cda6f7eb7ef1c32ba9d0ec7d198a5f2f38b1e6
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1284'
 ht-degree: 0%
 
 ---
@@ -28,12 +28,21 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
 1. Välj **Instanser** för att visa en lista över pågående arbetsflödesinstanser.
 1. På den övre listen i det högra hörnet visas arbetsflödesinstanserna **Köra arbetsflöden**, **Status** och **Detaljer**.
-1. **Köra arbetsflöden** visar antalet arbetsflöden som körs och deras status. I de angivna bilderna visas till exempel antalet **Köra arbetsflöden** och **Status** AEM.
-   ![status-hälsosam](/help/sites-cloud/administering/assets/status-healthy.png)
-   ![status-ohälsosam](/help/sites-cloud/administering/assets/status-unhealthy.png)
-1. För **Statusinformation** av arbetsflödesinstanser klickar du på **Detaljer** för att visa **antal arbetsflödesinstanser som körs**, **slutförda arbetsflödesinstanser**, **avbrutna arbetsflödesinstanser**, **misslyckade arbetsflödesinstanser** och så vidare. nedan visas till exempel de bilder som visas **Statusinformation** med **Status: Hälsosam** och **Status: Ohälsosam**.
-   ![status-details-good](/help/sites-cloud/administering/assets/status-details-healthy.png)
-   ![status-details-unsafe](/help/sites-cloud/administering/assets/status-details-unhealthy.png)
+1. **Köra arbetsflöden** visar antalet arbetsflöden som körs och deras status. I de angivna bilderna visas till exempel antalet **Köra arbetsflöden** och **Status** AEM:
+
+   * **Status: Hälsosam**
+     ![status-hälsosam](/help/sites-cloud/administering/assets/status-healthy.png)
+
+   * **Status: Ohälsosam**
+     ![status-ohälsosam](/help/sites-cloud/administering/assets/status-unhealthy.png)
+
+1. För **Statusinformation** av arbetsflödesinstanser klickar du på **Detaljer** för att visa **antal arbetsflödesinstanser som körs**, **slutförda arbetsflödesinstanser**, **avbrutna arbetsflödesinstanser**, **misslyckade arbetsflödesinstanser** och så vidare. nedan visas till exempel de bilder som visas **Statusinformation** med:
+
+   * **Statusinformation: Hälsosam**
+     ![status-details-good](/help/sites-cloud/administering/assets/status-details-healthy.png)
+
+   * **Statusinformation: Ohälsosam**
+     ![status-details-unsafe](/help/sites-cloud/administering/assets/status-details-unhealthy.png)
 
    >[!NOTE]
    >
@@ -191,7 +200,7 @@ På arbetsflödesmodellnivån anges en flagga som anger att modellen (och dess k
 
 Egenskapen *userMetadataPersistenceEnabled* lagras på *jcr:innehållsnod* av arbetsflödesmodellen. Den här flaggan bevaras i arbetsflödets metadata som *cq:userMetaDataCustomPersistenceEnabled*.
 
-Bilden nedan måste ange flaggan i ett arbetsflöde.
+Bilden nedan visar hur du anger flaggan i ett arbetsflöde.
 
 ![workflow-externalize-config](/help/sites-cloud/administering/assets/workflow-externalize-config.png)
 
