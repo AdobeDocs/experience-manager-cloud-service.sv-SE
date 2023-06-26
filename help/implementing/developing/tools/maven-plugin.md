@@ -2,9 +2,9 @@
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: a5eef46835e234bb47451693cf5fdcda66c5b26f
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1842'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ The `mode` -elementet definierar hur innehåll i databasen påverkas när pakete
 
 * **Sammanfoga:** Innehåll i paketet som inte redan finns i databasen läggs till. Innehåll som finns både i paketet och i databasen ändras inte. Inget innehåll tas bort från databasen.
 * **Ersätt:** Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet. Innehåll tas bort från databasen när den inte finns i paketet.
-* **Uppdatering:** Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet. Befintligt innehåll tas bort från databasen.
+* **Uppdatering:** Innehåll i paketet som inte finns i databasen läggs till i databasen. Innehåll i databasen ersätts med matchande innehåll i paketet.
 
 När filtret inte innehåller `mode` element, standardvärdet för `replace` används.
 
