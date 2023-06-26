@@ -10,7 +10,7 @@ topic-tags: adaptive_forms, author
 discoiquuid: 4c53dfc0-25ca-419d-abfe-cf31fc6ebf61
 docset: aem65
 exl-id: 3fdbe5a3-5c3c-474d-b701-e0182da4191a
-source-git-commit: 1633e02fc6b79a45582b919863662bc1d1b49b42
+source-git-commit: a16da1b11cfe18910b2e57c0b6b668543dba46e3
 workflow-type: tm+mt
 source-wordcount: '1358'
 ht-degree: 0%
@@ -70,17 +70,14 @@ Så här använder du CAPTCHA i Adaptiv Forms:
 
    >[!NOTE]
    >
-   >Kontrollera att den konfigurationsbehållare som valts när det adaptiva formuläret skapas innehåller molntjänsten reCAPTCHA. Du kan också redigera egenskaper för adaptiva formulär för att ändra konfigurationsbehållaren som är kopplad till formuläret.
+   > Kontrollera att den konfigurationsbehållare som valts när det adaptiva formuläret skapas innehåller molntjänsten reCAPTCHA. Du kan också redigera egenskaper för adaptiva formulär för att ändra konfigurationsbehållaren som är kopplad till formuläret.
 
 1. Dra från komponentwebbläsaren och släpp **[!UICONTROL Captcha]** på adaptiva formulär.
 
    >[!NOTE]
    >
-   >Det går inte att använda mer än en Captcha-komponent i ett adaptivt formulär. Du bör inte heller använda CAPTCHA i en panel som är markerad för lazy loading eller i ett fragment.
-
-   >[!NOTE]
-   >
-   >Captcha är tidskänsligt och upphör om ungefär en minut. Därför rekommenderar vi att du placerar Captcha-komponenten precis före Skicka-knappen i den adaptiva formen.
+   > * Det går inte att använda mer än en Captcha-komponent i ett adaptivt formulär. Du bör inte heller använda CAPTCHA i en panel som är markerad för lazy loading eller i ett fragment.
+   > * Captcha är tidskänsligt och upphör om ungefär en minut. Därför rekommenderar vi att du placerar Captcha-komponenten precis före Skicka-knappen i den adaptiva formen.
 
 1. Välj den Captcha-komponent som du har lagt till och tryck på ![cmppr](assets/configure-icon.svg) om du vill redigera dess egenskaper.
 1. Ange en titel för CAPTCHA-widgeten. Standardvärdet är **[!UICONTROL Captcha]**. Välj **[!UICONTROL Hide title]** om du inte vill att rubriken ska visas.
@@ -91,7 +88,7 @@ Så här använder du CAPTCHA i Adaptiv Forms:
 
    >[!NOTE]
    >
-   >* Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom Experience Manager CAPTCHA-standardtjänsten är inaktuell.
+   > Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom Experience Manager CAPTCHA-standardtjänsten är inaktuell.
 
 1. Spara egenskaperna.
 
@@ -109,7 +106,7 @@ Tryck på **[!UICONTROL Currency Value]** i formuläret och skapa följande regl
 
 >[!NOTE]
 >
->* Om du väljer reCAPTCHA v2-konfiguration med storleken [!UICONTROL Invisible] då alternativet visa/dölj inte är tillgängligt.
+> Om du väljer reCAPTCHA v2-konfiguration med storleken [!UICONTROL Invisible] då alternativet visa/dölj inte är tillgängligt.
 
 ### Validera CAPTCHA {#validate-captcha}
 
