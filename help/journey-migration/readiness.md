@@ -1,11 +1,11 @@
 ---
 title: Beredskapsfas
-description: Lär dig mer om de steg du behöver utföra så att du kan vara säker på att AEM är redo att flyttas till molnet
+description: Lär dig mer om de steg du måste ta så att du kan vara säker på att AEM är redo att flyttas till molnet.
 exl-id: 3bc8c037-d82a-4455-bce6-3c80c359a4ae
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a9aa82c8258e6a5f43680069c65518093c0baf8d
 workflow-type: tm+mt
-source-wordcount: '2074'
-ht-degree: 6%
+source-wordcount: '2066'
+ht-degree: 2%
 
 ---
 
@@ -14,14 +14,14 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="aemcloud_cam_planning"
 >title="Planera övergången"
->abstract="Innan du börjar din övergång till Cloud Service bör du bekanta dig med AEM as a Cloud Service och granska de ändringar som gjorts i den samt även se vilka funktioner som har ersatts eller tagits bort."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html" text="Best Practices Analyzer"
+>abstract="Innan du påbörjar en övergångsresa till Cloud Service bör du bekanta dig med AEM as a Cloud Service. Granska de ändringar som gjorts och de funktioner som ersatts eller ersatts."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html" text="Best Practices Analyzer"
 
-I den här fasen av den AEM as a Cloud Service migreringsresan kommer du att bekanta dig med AEM as a Cloud Service, granska de ändringar som den har infört och förstå vad som krävs för att planera en lyckad migrering till molnet.
+I den här fasen av den AEM as a Cloud Service migreringsresan bekanta du dig med AEM as a Cloud Service. Du kan granska de ändringar som gjorts och förstå vad som krävs för att planera en lyckad migrering till molnet.
 
 ## Story hittills {#story-so-far}
 
-Det föregående dokumentet, [Komma igång med att gå till AEM as a Cloud Service](/help/journey-migration/getting-started.md)innehåller en lista med faser som du behöver genomgå så att du kan migrera till AEM as a Cloud Service, samt fördelarna med att göra det.
+Det föregående dokumentet, [Komma igång med att gå till AEM as a Cloud Service](/help/journey-migration/getting-started.md), innehåller en lista med faser som du måste genomgå så att du kan migrera till AEM as a Cloud Service. Det redogör också för fördelarna med att migrera.
 
 ## Syfte {#objective}
 
@@ -32,7 +32,7 @@ Det här dokumentet hjälper dig att förstå vilka faktorer du måste tänka p�
 
 ## Granska de anmärkningsvärda förändringarna i den AEM as a Cloud Service arkitekturen {#notable-changes-in-aem-cloud-service-architecture}
 
-AEM as a Cloud Service har många nya funktioner för  att administrera AEM-projekt.
+AEM as a Cloud Service har många nya funktioner och möjligheter för att hantera dina AEM projekt.
 
 Förutom dessa förbättringar har flera skillnader införts mellan lokala installationer av AEM och Adobes hanterade tjänster, jämfört med AEM as a Cloud Service.
 
@@ -49,7 +49,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
 <tbody>
   <tr>
     <td>Separera oföränderliga och oföränderliga filter i motsvarande paket</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/aem-cloud-changes.html?lang=en">AEM as a Cloud Service förändringar</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#mutable-vs-immutable">AEM projektstruktur för AEM as a Cloud Service</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html?lang=en">AEM as a Cloud Service förändringar</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html#mutable-vs-immutable">AEM projektstruktur för AEM as a Cloud Service</a></td>
     <td>Ett enskilt paket som kan distribueras till AEM as a Cloud Service kan ha underpaket, främst för att innehålla ändringsbart och oföränderligt innehåll som separeras till sina egna paket.</td>
   </tr>
   <tr>
@@ -60,7 +60,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   <tr>
     <td>Anpassade körningslägen tillåts inte</td>
     <td></td>
-    <td>Endast körningslägen som anges i rutan med AEM as a Cloud Service stöds.<br>När ytterligare utvecklingsmiljöer läggs till är alla kopplade till körningsläget"dev".</td>
+    <td>Endast körningslägen som anges i rutan med AEM as a Cloud Service stöds.<br>När ytterligare utvecklingsmiljöer läggs till kopplas alla till körningsläget"dev".</td>
   </tr>
   <tr>
     <td>Molnhanterarens pipeline-körning är det enda sättet att distribuera</td>
@@ -70,7 +70,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   <tr>
     <td>Replikeringsagenter ersätts av Sling Content Distribution</td>
     <td></td>
-    <td>Konceptet för replikeringsagenten ersätts av Sing Content Distribution. Om det finns anpassningar som utnyttjar replikeringsagenter måste de designas om.<br>Omvänd replikering stöds inte</td>
+    <td>Konceptet för replikeringsagenten ersätts av Sing Content Distribution. Om det finns anpassningar som använder replikeringsagenter måste de omformas.<br>Omvänd replikering stöds inte</td>
   </tr>
   <tr>
     <td>CRX/DE och Package Manager</td>
@@ -80,27 +80,27 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   <tr>
     <td>Inbyggt CDN och Skaffa ett eget CDN</td>
     <td></td>
-    <td>AEM as a Cloud Service innehåller CDN för alla miljöer som är optimerade för de flesta fall.<br>Om du vill skapa ett eget CDN måste du skicka in en begäran till Adobe Support för att det ska godkännas.<br>Om CDN godkänns pekar det snabbt och inte AEM instanser i någon miljö.</td>
+    <td>AEM as a Cloud Service innehåller CDN för alla miljöer som är optimerade för de flesta fall.<br>Om du vill skapa ett eget CDN måste du skicka in en begäran till Adobe Support för att det ska godkännas.<br>Om CDN godkänns pekar det snabbt mot AEM och inte mot instanser i några miljöer.</td>
   </tr>
   <tr>
     <td>Långa jobb</td>
     <td></td>
-    <td>Undvik att köra tidskrävande jobb som Sling Schedulers eller Cron, eftersom AEM instanser som körs i behållarna kan komma och gå när som helst.<br>Tänk om de här funktionerna så att de avlastas till Adobe I/O.</td>
+    <td>Undvik tidskrävande jobb som Sling Schedulers och Cron, eftersom AEM instanser som körs i behållarna kan komma och gå när som helst.<br>Tänk om de här funktionerna så att du kan avlasta dem till Adobe Developer.</td>
   </tr>
   <tr>
     <td>Växla till asynkrona åtgärder</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/asynchronous-jobs.html?lang=en#configuring-asynchronous-msm-operations">Konfigurera asynkrona åtgärder</a></td>
-    <td>Vissa åtgärder utförs i asynkront läge för att förbättra övergripande prestanda i dina miljöer. De asynkrona jobben köas och körs när systemresurser är tillgängliga.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/asynchronous-jobs.html?lang=en#configuring-asynchronous-msm-operations">Konfigurera asynkrona åtgärder</a></td>
+    <td>För att förbättra övergripande prestanda i dina miljöer körs vissa åtgärder i asynkront läge. De asynkrona jobben köas och körs när systemresurser är tillgängliga.</td>
   </tr>
   <tr>
     <td>Tokenbaserad autentisering och integreringsstrategier</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#the-server-to-server-flow">Genererar åtkomsttoken för API:er på serversidan</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication">Token-based Authentication Tutorial</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=en#the-server-to-server-flow">Genererar åtkomsttoken för API:er på serversidan</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication">Token-based Authentication Tutorial</a></td>
     <td>Det är vanligt att system utanför AEM försöker utföra HTTP-åtgärder inom AEM.<br>Vi rekommenderar att du implementerar de strategier som beskrivs här i stället för att förlita dig på att du skapar lokala användarnamn med lösenord i AEM.</td>
   </tr>
   <tr>
     <td>IO-fil/diskanvändning</td>
     <td></td>
-    <td>Eftersom det inte finns någon garanti för hur mycket diskutrymme som tilldelas och instanserna i behållarna kommer och går, är det inte tillrådligt att använda I/O-åtgärder för fil för att skriva eller läsa från den disk som är kopplad till AEM.</td>
+    <td>Det finns ingen garanti för hur mycket diskutrymme som tilldelas och instanserna i behållarna kommer och går. Därför är det inte tillrådligt att använda I/O-åtgärder för fil för att skriva eller läsa från den disk som är kopplad till AEM.</td>
   </tr>
   <tr>
     <td>DAM - uppdatera resursarbetsflöde</td>
@@ -109,48 +109,48 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>Metoder för överföring av tillgångar och arbetsflödessteg som stöds i AEM as a Cloud Service</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/developer-reference-material-apis.html?lang=en#post-processing-workflows-steps">Överför API-jämförelser och WF-processsteg som stöds</a></td>
-    <td>På AEM as a Cloud Service strömmas resursen direkt in i eller ut ur binär lagring, antingen under överföring eller hämtning av en resurs.</br>Alla arbetsflödesprocessteg stöds inte i AEMaaCS.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis.html?lang=en#post-processing-workflows-steps">Överför API-jämförelser och WF-processsteg som stöds</a></td>
+    <td>På AEM as a Cloud Service strömmas resursen direkt in i eller ut ur binär lagring, antingen under överföring eller hämtning av en resurs. <br>Alla arbetsflödesprocessteg stöds inte i AEMaaCS.</td>
   </tr>
   <tr>
     <td>Starta arbetsflöden</td>
     <td></td>
-    <td>Ta bort alla Workflow Launcher som utlöser antingen OOTB eller ett anpassat arbetsflöde för DAM-uppdatering från koden.</br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av tjänsten för tillgångsbearbetning. För anpassade steg, se <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=en#post-processing-workflows"> Arbetsflöden för efterbearbetning</a> om hur du konfigurerar och konfigurerar efterbearbetningsarbetsflöden.</td>
+    <td>Ta bort alla arbetsflödeskörare som utlöser ett körklart eller anpassat arbetsflöde för DAM Update Asset från koden. <br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av tjänsten för tillgångsbearbetning. Anvisningar om anpassade steg finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=en#post-processing-workflows"> Arbetsflöden för efterbearbetning</a> om hur du konfigurerar och konfigurerar efterbearbetningsarbetsflöden.</td>
   </tr>
   <tr>
     <td>Anpassade återgivningssteg</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html?lang=en#manage">Bearbetar profiler</a></td>
-    <td>Alla anpassade återgivningsgenereringar, bildkonverteringar eller videokodningar måste avlastas till resurshanteringstjänsten genom att motsvarande bearbetningsprofiler skapas.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=en">Bearbetar profiler</a></td>
+    <td>Alla anpassade återgivningsgenereringar, bildkonverteringar och videokodningar måste avlastas till resurshanteringstjänsten genom att motsvarande bearbetningsprofiler skapas.</td>
   </tr>
   <tr>
     <td>Innehållssökning och indexering</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en">Innehållssökning och indexeringsändringar</a></td>
-    <td>Den underliggande bearbetningen av index förändras avsevärt och när den börjar spelas in.<br>Fullständig förståelse för och omfaktorisera ekindexen innan de hanteras i koden som du ska distribuera.</td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=en">Innehållssökning och indexeringsändringar</a></td>
+    <td>Den underliggande bearbetningen av index förändras avsevärt och när den börjar spelas in.<br>Fullständig förståelse för och omfaktorisera ekindexen innan de hanteras i koden som du distribuerar.</td>
   </tr>
   <tr>
     <td>Alla underhållsaktiviteter är inte konfigurerbara</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/maintenance.html?lang=en">AEM as a Cloud Service underhållsaktiviteter</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/maintenance.html?lang=en">AEM as a Cloud Service underhållsaktiviteter</a></td>
     <td>Du kan bara konfigurera vissa underhållsåtgärder med AEM as a Cloud Service.</td>
   </tr>
   <tr>
     <td>Ändringar i publiceringsdatabasen</td>
     <td></td>
-    <td>Direktändringar i publiceringsdatabasen tillåts inte, förutom de under /home. Vi rekommenderar alltid att du gör ändringar i författaren och distribuerar dem. Alla kod- och konfigurationsändringar måste distribueras via motsvarande Cloud Manager-pipeline.</td>
+    <td>Direktändringar i publiceringsdatabasen tillåts inte, förutom de ändringar som finns under /home. Vi rekommenderar alltid att ändringar som görs på författaren distribueras. Alla kod- och konfigurationsändringar måste distribueras via motsvarande Cloud Manager-pipeline.</td>
   </tr>
   <tr>
     <td>Dispatcher Configurations and Caching</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html?lang=en#content-delivery">Dispatcher i molnet</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html?lang=en#other-content">Cachehantering<br></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=en">Dispatcher i molnet</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=en#other-content">Cachehantering<br></td>
     <td>Dispatcher-konfigurationerna måste följa en specifik struktur.<br>Konfigurationerna måste hanteras som en del av koden och distribueras via molnhanterarens pipeline.</td>
   </tr>
   <tr>
-    <td>Säkerhetskopiering och återställning</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/backup.html?lang=en">AEM as a Cloud Service säkerhetskopiering och återställning</a></td>
+    <td>Säkerhetskopiera och återställa</td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/backup.html?lang=en">AEM as a Cloud Service säkerhetskopiering och återställning</a></td>
     <td></td>
   </tr>
   <tr>
     <td>Ändringar i autentisering</td>
     <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=en">IMS-stöd för AEM as a Cloud Service</td>
-    <td>Om du tidigare har använt SAML 2.0-integrering på både författare och publicering innan du går till Cloud Service är den största förändringen att AEM as a Cloud Service Author bara kan integreras med Adobe IMS. AEM as a Cloud Service Publish-nivå kan dock fortfarande använda SAML eller andra autentiseringsintegreringar. AEM as a Cloud Service har bara stöd för IMS-autentisering för författare, administratörer och utvecklare. IMS-autentiseringen ger inte stöd för externa slutanvändare på kundsajter som webbplatsbesökare.</td>
+    <td>Om du tidigare har använt SAML 2.0-integrering på både författare och publicering innan du går till Cloud Service är den största förändringen att AEM as a Cloud Service Author bara kan integreras med Adobe IMS. AEM as a Cloud Service Publish-nivå kan dock fortfarande använda SAML eller andra autentiseringsintegreringar. AEM as a Cloud Service har endast stöd för IMS-autentisering för författare, administratörer och utvecklare. IMS-autentiseringen ger inte stöd för externa slutanvändare på kundsajter som webbplatsbesökare.</td>
   </tr>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet.
 
-Vi rekommenderar att du läser [Föråldrade funktioner](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/deprecated-removed-features.html#deprecated-features) för att bekanta dig med de funktioner som markerats som borttagna i Experience Manager as a Cloud Service och se vilken effekt det har för er AEM driftsättning.
+Adobe rekommenderar att du kontaktar [Föråldrade funktioner](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features.html#deprecated-features) för att bekanta dig med funktioner som markerats som borttagna i Experience Manager as a Cloud Service. Se vilken effekt ni får för er AEM driftsättning.
 
 ## Planera för en granskning av AEM {#review-planning}
 
@@ -169,15 +169,15 @@ I följande bild visas de viktigaste stegen under granskningsfasen:
 
 ![bild](/help/journey-migration/assets/planning-phaseimg1.png)
 
-Därefter ska vi gå igenom vad varje steg innebär i detalj.
+Därefter tittar vi närmare på vad varje steg innebär.
 
 ### Utvärderar beredskap för Cloud Service {#assess-cloud-readiness}
 
 Det första steget är att utvärdera om du är redo att gå över från den befintliga AEM till Cloud Service och avgöra vilka områden som behöver omfaktorisering för att vara kompatibel med AEM as a Cloud Service.
 
-Du måste göra en omfattande utvärdering av den aktuella AEM källkoden mot de märkbara ändringarna och de borttagna funktionerna för att avgöra hur stor insats som förväntas under övergångsresan.
+Gör en omfattande utvärdering av den aktuella AEM källkoden mot de märkbara ändringarna och de borttagna funktionerna för att avgöra hur stor insats som förväntas under övergångsresan.
 
-Antalet resultat kommer att direkt påverka tidslinjerna och projektets övergripande framgång. Därför rekommenderar vi att du i så stor utsträckning som möjligt tar reda på vad som levereras eller startar de konversationer som behövs för att omkonstruera anpassningar som ska vara i linje med AEM as a Cloud Service bästa praxis.
+Antalet resultat kan direkt påverka tidslinjerna och projektets övergripande framgång. Därför rekommenderar Adobe att du identifierar så mycket som möjligt så att du kan planera leveransen. Eller starta konversationerna så att du kan göra om alla anpassningar som behövs för att följa AEM as a Cloud Service bästa praxis.
 
 **Best Practice Analyzer**
 
@@ -187,7 +187,7 @@ Du kan läsa mer om hur det fungerar genom att läsa [Best Practices Analyzer](/
 
 **Skapa en bedömningsrapport om beredskap för molnet**
 
-Nästa steg är att skapa en rapport baserad på alla de kunskaper som hittills har förvärvats. Du kan göra detta genom att generera rapporter från Best Practices Analyzer från Stage- och Production-instanserna, [överföra dem sedan till Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-readiness-phase.md#readiness-phase-cam) för en sammanfattande rapport över användbara poster.
+Nästa steg är att skapa en rapport baserad på alla de kunskaper som hittills har förvärvats. Du skapar rapporten genom att generera rapporter från Best Practices Analyzer från Stage- och Production-instanserna, [överföra dem sedan till Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-readiness-phase.md#readiness-phase-cam) för en sammanfattande rapport över användbara poster.
 
 En vanlig rapport ska innehålla följande indata:
 
@@ -208,7 +208,7 @@ När du har uppskattat den nivå av arbete som krävs för att gå över till Cl
 
 Om du inte har fastställt nyckeltal (KPI) tidigare rekommenderar vi att du skapar nyckeltal för implementeringen av AEM så att ditt team kan fokusera på det som är viktigast.
 
-Se [Utveckla nyckeltal](https://guided.adobe.com/welcome/aem/part6.html) för att lära dig hur ni väljer rätt nyckeltal för era affärsmål.
+Se [Utveckla nyckeltal](https://experienceleague.adobe.com/welcome/aem/part6.html) så att ni kan lära er hur ni väljer rätt nyckeltal för era affärsmål.
 
 ## What&#39;s Next {#what-is-next}
 
@@ -216,8 +216,8 @@ När du förstår omfattningen av de ändringar som krävs för att gå AEM as a
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Komma igång med Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md) - En omfattande guide om hur du använder Cloud Acceleration Manager för att snabba upp övergången till molnet
+* [Komma igång med Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md) - En omfattande guide om hur du använder Cloud Acceleration Manager för att snabba upp övergången till molnet.
 * [AEM as a Cloud Service: Introduktion, arkitektur och annat tänkande](https://experienceleague.adobe.com/?launch=ExperienceManager-D-1-2021.1.migration&amp;recommended=ExperienceManager-D-1-2021.1.migration&amp;lang=en#dashboard/learning)
 * [AEM en Cloud Service - startsida](/help/overview/home.md) - Börja här om du vill se en översikt över den as a Cloud Service dokumentationen för Experience Manager.
 * [AEM as a Cloud Service Översikt](/help/overview/home.md) - Den här guiden ger en översikt över Experience Manager som en molntjänst, inklusive en introduktion, terminologi och arkitektur.
-* [Onboarding Journey](/help/journey-onboarding/overview.md)- Den här guiden ger dig en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och konfigurerar ditt team
+* [Onboarding Journey](/help/journey-onboarding/overview.md)- Den här guiden innehåller en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och konfigurerar ditt team.

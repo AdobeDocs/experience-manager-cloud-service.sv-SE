@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service on Unified Shell
 description: AEM as a Cloud Service on Unified Shell
 exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
-source-git-commit: 24ae6187813de801813236f0bbcb2ea51e8fe5e1
+source-git-commit: a9aa82c8258e6a5f43680069c65518093c0baf8d
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -32,19 +32,19 @@ AEM as a Cloud Service har ett enhetligt skal aktiverat. Om den övre rubriken h
 >[!NOTE]
 >Enhetligt gränssnitt kan endast inaktiveras av ett konto med administratörsbehörighet.
 
-1. Gå till **Verktyg - Cloud Services**.
+1. Klicka **Verktyg > Cloud Services**.
 
-   En administratörsanvändare ser det enhetliga gränssnittskonfigurationskortet som visas nedan:
+   En administratörsanvändare ser det enhetliga gränssnittskonfigurationskortet enligt nedan:
 
    ![bild](/help/overview/assets/unifiedshell2.png)
 
-1. Klicka på **Enhetlig gränssnittskonfiguration**. Avmarkera sedan kryssrutan nedan för att inaktivera Unified Shell:
+1. Klicka **Enhetlig gränssnittskonfiguration**. Avmarkera sedan kryssrutan nedan för att inaktivera Unified Shell:
 
    ![bild](/help/overview/assets/unifiedshell3.png)
 
 ## Ändra till mörkt tema {#changing-to-dark-theme}
 
-Om du vill ändra till det mörka temat klickar du på din profilikon. Då visas ett popup-fönster enligt nedan. Du kan använda växlingsknappen för att växla till ett mörkt tema för det enhetliga skalet.
+Om du vill ändra till det mörka temat klickar du på din profilikon. Den här åtgärden visar en portfölj enligt nedan. Du kan använda växlingsknappen för att växla till ett mörkt tema för det enhetliga skalet.
 
 >[!INFO]
 >
@@ -68,6 +68,6 @@ Du kommer åt AEM Inkorg genom att klicka på klockikonen i det enhetliga skalet
 
 ![bild](/help/overview/assets/unifiedshell5.png)
 
-Klicka på knappen Inkorg i popup-fönstret för att gå till AEM Inkorg:
+Klicka på Inkorgen i portfölj så att du kan gå till AEM Inkorg:
 
 ![bild](/help/overview/assets/unifiedshell6.png)
