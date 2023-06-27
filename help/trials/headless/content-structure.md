@@ -4,7 +4,7 @@ description: Lär dig hur du använder AEM Content Fragment-modeller för att sk
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: e507b409e4d2382b1eac54b11a9ad68fd965db4b
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Du kan till exempel skapa en modell som representerar datastrukturen för en res
    * **Modelltitel** - En kort etikett för modellen och anger vanligtvis syftet med modellen. Du kan anropa den nya modellen `Adventure`.
    * **Aktivera modell** - Det här alternativet är markerat som standard och måste markeras för att det ska gå att skapa innehållsfragment baserat på den här modellen.
 
-1. När de obligatoriska fälten har fyllts i klickar du på **Skapa** längst upp till vänster för att skapa modellen.
+1. När de obligatoriska fälten har fyllts i klickar du på **Skapa** längst upp till höger för att skapa modellen.
 
 1. The **Lyckades** bekräftar att modellen skapades. Klicka **Öppna** i dialogrutan så att du kan öppna den nya innehållsfragmentmodellen i redigeraren på en ny flik. Fortsätt sedan till nästa steg för att lägga till datafält i modellen.
 
