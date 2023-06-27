@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 663dae5785c13d74524054287869310d1fce5bd6
+source-git-commit: 171aca87ff725a2f142f0336dca3491e213f55ab
 workflow-type: tm+mt
-source-wordcount: '4079'
+source-wordcount: '4081'
 ht-degree: 20%
 
 ---
@@ -530,7 +530,6 @@ ht-degree: 20%
          + [Integrera AEM Forms as a Cloud Service med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
          + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
          + [Bädda in en adaptiv Forms på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
-         + [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
       + Formulärdatamodell {#use-form-data-model}
          + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
          + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
@@ -541,6 +540,7 @@ ht-degree: 20%
          + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
          + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
    + Adaptiv Forms {#adaptive-forms-authoring}
+      + [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
       + Skapa adaptiv Forms - kärnkomponenter {#authoring-adaptive-forms-core-components}
          + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
             + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
