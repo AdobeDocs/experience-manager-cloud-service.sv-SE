@@ -2,9 +2,9 @@
 title: Vanliga frågor om Cloud Manager
 description: Hitta svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -14,25 +14,25 @@ ht-degree: 0%
 
 Det här dokumentet ger svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 
-## Går det att använda Java 11 med Cloud Manager-byggen? {#java-11-cloud-manager}
+## Går det att använda Java™ 11 med Cloud Manager-byggen? {#java-11-cloud-manager}
 
-Ja. Du måste lägga till `maven-toolchains-plugin` med rätt inställningar för Java 11.
+Ja. Lägg till `maven-toolchains-plugin` med rätt inställningar för Java™ 11.
 
 Processen är dokumenterad [här](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
 
 Se till exempel [projektets exempelprojektkod](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
-## Mitt bygge misslyckas med ett fel om maven-scr-plugin efter byte från Java 8 till Java 11. Vad kan jag göra? {#build-fails-maven-scr-plugin}
+## Mitt bygge misslyckas med ett fel om maven-scr-plugin efter byte från Java™ 8 till Java™ 11. Vad kan jag göra? {#build-fails-maven-scr-plugin}
 
-AEM Cloud Manager-bygget kan misslyckas när du försöker byta från Java 8 till 11. Om följande fel uppstår måste du ta bort `maven-scr-plugin` och konvertera alla OSGi-anteckningar till OSGi R6-anteckningar.
+AEM Cloud Manager-bygget kan misslyckas när du försöker byta från Java™ 8 till 11. Om följande fel uppstår måste du ta bort `maven-scr-plugin` och konvertera alla OSGi-anteckningar till OSGi R6-anteckningar.
 
 ```text
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
 ```
 
-Instruktioner om hur du tar bort det här plugin-programmet finns i [här.](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/)
+Instruktioner om hur du tar bort det här plugin-programmet finns i [här](https://cqdump.joerghoh.de/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
-## Min version misslyckas med ett fel om RequireJavaVersion efter växling från Java 8 till Java 11. Vad kan jag göra? {#build-fails-requirejavaversion}
+## Mitt bygge misslyckas med ett fel om RequireJavaVersion efter byte från Java™ 8 till Java™ 11. Vad kan jag göra? {#build-fails-requirejavaversion}
 
 För Cloud Manager-byggen `maven-enforcer-plugin` kan misslyckas med det här felet.
 
@@ -40,7 +40,7 @@ För Cloud Manager-byggen `maven-enforcer-plugin` kan misslyckas med det här fe
 "[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion".
 ```
 
-Det här är ett känt fel som beror på att Cloud Manager använder en annan version av Java för att köra maven-kommandot jämfört med att kompilera kod. Bara utelämna `requireJavaVersion` från `maven-enforcer-plugin` konfigurationer.
+Felet är känt eftersom Cloud Manager använder en annan version av Java™ för att köra maven-kommandot jämfört med att kompilera kod. Bara utelämna `requireJavaVersion` från `maven-enforcer-plugin` konfigurationer.
 
 ## Kodkvalitetskontrollen misslyckades och distributionen stoppas. Finns det något sätt att kringgå den här kontrollen? {#deployment-stuck}
 
@@ -54,9 +54,9 @@ Se dokumenten [Testning av kodkvalitet](/help/implementing/cloud-manager/code-qu
 
 Ja. Git-grenen för utvecklardistributioner `pom.xml` måste innehålla `-SNAPSHOT` i slutet av `<version>` värde.
 
-Detta gör att efterföljande distribution fortfarande kan installeras när versionen inte ändras. I utvecklingsmiljöer läggs ingen automatisk version till eller genereras för maven-bygget.
+Med det här värdet kan efterföljande distribution fortfarande installeras när versionen inte ändras. I utvecklingsmiljöer läggs ingen automatisk version till eller genereras för maven-bygget.
 
-Du kan också ange versionen till `-SNAPSHOT` för byggen eller driftsättningarna av faser och produktion. Cloud Manager anger automatiskt rätt versionsnummer och skapar en tagg åt dig i Git. Om det behövs kan du hänvisa till den här taggen senare.
+Du kan också ange versionen till `-SNAPSHOT` för byggen eller driftsättningarna av faser och produktion. Cloud Manager anger automatiskt rätt versionsnummer och skapar en tagg åt dig i Git. Denna tagg kan vid behov hänvisas till senare.
 
 Mer information om versionshantering finns i [dokumenteras här.](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
 
@@ -66,7 +66,7 @@ I fas- och produktionsdistributioner genereras en automatisk version som [dokume
 
 För anpassad versionshantering i scen- och produktionsinstallationer ställer du in en korrekt version med tre delar som `1.0.0`. Öka versionen varje gång du distribuerar till produktionen.
 
-Cloud Manager lägger automatiskt till sin version i scen- och produktionsbyggen och skapar en Git-gren. Ingen särskild konfiguration krävs. Om du inte ställer in en maven-version enligt beskrivningen ovan kommer distributionen fortfarande att lyckas och en version ställs in automatiskt.
+Cloud Manager lägger automatiskt till sin version i scen- och produktionsbyggen och skapar en Git-gren. Ingen särskild konfiguration krävs. Om du inte ställer in en maven-version enligt beskrivningen ovan lyckas distributionen ändå och en version ställs in automatiskt.
 
 ## Min maven-konstruktion misslyckas för distributioner av Cloud Manager, men den byggs lokalt utan fel. Vad är det för fel? {#maven-build-fail}
 
@@ -85,35 +85,35 @@ Caused by: org.apache.sling.api.resource.PersistenceException: Unable to commit 
 Caused by: javax.jcr.AccessDeniedException: OakAccess0000: Access denied [EventAdminAsyncThread #7] org.apache.sling.distribution.journal.impl.publisher.DistributionPublisher [null] Error processing distribution package` `dstrpck-1583514457813-c81e7751-2da6-4d00-9814-434187f08d32. Retry attempts 344/infinite. Message: Error trying to extract package at path /etc/packages/com.myapp/myapp-base.ui.content-5.1.0-SNAPSHOT.
 ```
 
-The `sling-distribution-importer` användaren behöver ytterligare behörigheter för innehållssökvägarna som definieras i `ui.content package`.  Det innebär vanligtvis att du måste lägga till behörigheter för båda `/conf` och `/var`.
+The `sling-distribution-importer` användaren behöver ytterligare behörigheter för innehållssökvägarna som definieras i `ui.content package`. Den här regeln innebär vanligtvis att du måste lägga till behörigheter för båda `/conf` och `/var`.
 
 Lösningen är att lägga till en [RepositoryInitializer OSGi-konfiguration](/help/implementing/deploying/overview.md#repoint) skript i programdistributionspaketet för att lägga till åtkomstkontrollistor för `sling-distribution-importer` användare.
 
 I föregående exempelfel är paketet `myapp-base.ui.content-*.zip` innehåller innehåll under `/conf` och `/var/workflow`. Behörigheter för `sling-distribution-importer` under dessa banor behövs.
 
-Här är ett exempel på en [`org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config`](https://github.com/cqsupport/cloud-manager/blob/main/org.apache.sling.jcr.repoinit.RepositoryInitializer-distribution.config) OSGi-konfiguration som lägger till ytterligare behörigheter för `sling-distribution-importer` användare.  Konfigurationen lägger till behörigheter under `/var`.  En sådan konfiguration måste läggas till i programpaketet under `/apps/myapp/config` (där myapp är den mapp där programkoden lagras).
+Här är ett exempel på en [`org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config`](https://github.com/cqsupport/cloud-manager/blob/main/org.apache.sling.jcr.repoinit.RepositoryInitializer-distribution.config) OSGi-konfiguration som lägger till ytterligare behörigheter för `sling-distribution-importer` användare. Konfigurationen lägger till behörigheter under `/var`. En sådan konfiguration måste läggas till i programpaketet under `/apps/myapp/config` (där myapp är den mapp där programkoden lagras).
 
 ## Distributionen av min Cloud Manager misslyckas vid distributionssteget i AEM as a Cloud Service och jag har redan lagt till en OSGi-konfiguration för RepositoryInitializer. Vad mer kan jag göra? {#build-failures}
 
 If [lägga till en RepositoryInitializer OSGi-konfiguration](#cloud-manager-deployment-cloud-service) inte löste felet, det kan bero på något av dessa ytterligare problem.
 
 * Distributionen kan misslyckas på grund av en felaktig OSGi-konfiguration som bryter en färdig tjänst.
-   * Kontrollera loggarna under distributionen för att se om det finns några uppenbara fel.
+   * Kontrollera loggarna under distributionen så att du kan se om det finns några uppenbara fel.
 
-* Distributionen kan misslyckas på grund av felaktig dispatcher eller Apache-konfigurationer.
+* Distributionen kan misslyckas på grund av felaktiga Dispatcher- eller Apache-konfigurationer.
    * Testa dina Apache- och Dispatcher-konfigurationer lokalt med den Docker-bild som ingår i SDK:n.
-   * Se [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md#content-delivery) om hur du konfigurerar Docker-behållaren för dispatcher för enkel lokal testning.
+   * Se [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md#content-delivery) om hur du konfigurerar Dispatcher Docker-behållaren för enkel lokal testning.
 
 * Distributionen kan misslyckas på grund av ett annat fel under replikering av innehållspaketen (Sling-distribution) från författaren till publiceringsinstanser.
    * Följ de här stegen för att simulera problemet i en lokal konfiguration.
       1. Installera en författare och publicera instansen lokalt med de senaste AEM SDK-burkarna.
-      1. Logga in i författarinstansen.
+      1. Logga in på författarinstansen.
       1. Gå till **verktyg** -> **Distribution** -> **Distribution**.
       1. Distribuera innehållspaketen som är en del av kodbasen och se om kön blockeras med ett fel.
 
 ## Jag kan inte ange en variabel med ett aio-kommando. Vad kan jag göra? {#set-variable}
 
-Du kan få en `403` fel som följande när du försöker lista eller ange pipeline-variabler via `aio` kommandon.
+Du kan få en `403` fel som följande när du försöker lista eller ange pipeline-variabler med hjälp av `aio` kommandon.
 
 ```shell
 $ aio cloudmanager:list-pipeline-variables 222
@@ -133,4 +133,4 @@ Cannot set variables: https://cloudmanager.adobe.io/api/program/111/environment/
 
 I det här fallet måste användaren som kör dessa kommandon läggas till i **Distributionshanteraren** i Admin Console.
 
-Se [API-behörigheter](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md) för mer information.
+Se [API-behörigheter](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/) för mer information.

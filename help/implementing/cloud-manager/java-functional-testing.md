@@ -1,17 +1,17 @@
 ---
-title: Java Functional Tests
-description: Lär dig skriva Java-funktionstester för AEM as a Cloud Service
+title: Java&trade; Funktionstester
+description: Lär dig skriva Java&trade; funktionstester för AEM as a Cloud Service
 exl-id: e449a62a-c8ad-4d39-a170-abacdda3f1b1
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '844'
 ht-degree: 0%
 
 ---
 
-# Java Functional Testing
+# Java™ Functional Testing
 
-Lär dig skriva Java-funktionstester för AEM as a Cloud Service
+Lär dig skriva Java™-funktionstester för AEM as a Cloud Service
 
 ## Komma igång med funktionstester {#getting-started-functional-tests}
 
@@ -31,13 +31,13 @@ När du har fått innehållet i `it.tests` kan du använda den som bas för dina
 
 Samma verktyg som Adobe använder för att skriva produktfunktionstester kan användas för att skriva dina anpassade funktionstester. Använd [funktionsprovningar av produkter](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) i GitHub som ett exempel på hur du skriver dina tester.
 
-Koden för det anpassade funktionstestet är Java-kod som finns i `it.tests` projektmapp. Den ska producera en enda JAR med alla funktionstester. Om bygget skapar mer än en test-JAR är den JAR som är vald icke-deterministisk. Om inga JAR-testversioner skapas godkänns teststeget som standard. [Se AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/it.tests) för stickprov.
+Koden för anpassade funktionstester är Java™-kod i `it.tests` projektmapp. Den ska producera en enda JAR med alla funktionstester. Om bygget skapar mer än en test-JAR är den JAR som är vald icke-deterministisk. Om inga JAR-testversioner skapas godkänns teststeget som standard. [Se AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/it.tests) för stickprov.
 
-Testerna körs på testinfrastruktur som underhålls i Adobe, inklusive minst två författarinstanser, två publiceringsinstanser och en dispatcherkonfiguration. Det innebär att dina anpassade funktionstester körs mot hela AEM.
+Testerna körs på testinfrastruktur som underhålls av Adobe, inklusive minst två författarinstanser, två publiceringsinstanser och en Dispatcher-konfiguration. Detta innebär att dina anpassade funktionstester körs mot hela AEM.
 
 ### Struktur för funktionstester {#functional-tests-structure}
 
-Anpassade funktionstester måste paketeras som en separat JAR-fil som skapas av samma Maven-bygge som de artefakter som ska distribueras till AEM. I allmänhet är detta en separat Maven-modul. Den resulterande JAR-filen måste innehålla alla nödvändiga beroenden och skulle vanligtvis skapas med `maven-assembly-plugin` med `jar-with-dependencies` beskrivning.
+Anpassade funktionstester måste paketeras som en separat JAR-fil som skapas av samma Maven-bygge som de artefakter som ska distribueras till AEM. I allmänhet är detta bygge en separat Maven-modul. Den resulterande JAR-filen måste innehålla alla nödvändiga beroenden och skulle vanligtvis skapas med `maven-assembly-plugin` med `jar-with-dependencies` beskrivning.
 
 Dessutom måste JAR ha `Cloud-Manager-TestType` manifest header inställd på `integration-test`.
 
@@ -81,7 +81,7 @@ En klass med namnet `com.myco.tests.aem.it.ExampleIT` skulle köras, men en klas
 
 Om du vill utesluta testkoden från disponeringskontrollen för kodskanningen måste testkoden dessutom finnas under ett paket med namnet `it` (filtret för uteslutning av täckning är `**/it/**/*.java`).
 
-Testklasserna måste vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad så att den är kompatibel med konventionerna som används av `aem-testing-clients` testbibliotek. Utvecklare uppmuntras starkt att använda det här biblioteket och följa vedertagna standarder.
+Testklasserna ska vara normala JUnit-tester. Testinfrastrukturen är utformad och konfigurerad så att den är kompatibel med konventionerna som används av `aem-testing-clients` testbibliotek. Utvecklare uppmuntras att använda det här biblioteket och följa sina bästa rutiner.
 
 Se [`aem-testing-clients` GitHub-repo](https://github.com/adobe/aem-testing-clients) för mer information.
 
@@ -103,13 +103,13 @@ Se [`aem-testing-clients` GitHub-repo](https://github.com/adobe/aem-testing-clie
 | Typ | Värde | Beskrivning |
 |----------------------|-------|--------------------------------------------------------------------|
 | CPU | 0.5 | Den CPU-tid som reserverats per testkörning |
-| Minne | 0.5Gi | Mängd minne som tilldelats testet, värde i gibibyte |
-| Timeout | 30m | Den varaktighet efter vilken testet avslutas. |
-| Rekommenderad varaktighet | 15m | Adobe rekommenderar att testet inte tar längre tid än så här. |
+| Minne | 0,5 Gi | Mängd minne som tilldelats testet, värde i gibibyte |
+| Timeout | 30 m | Den varaktighet efter vilken testet avslutas. |
+| Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testet inte tar längre tid än så här. |
 
 >[!NOTE]
 >
-> Om du behöver mer resurser skapar du ett kundvårdsärende och beskriver ditt användningsfall. vårt team granskar din förfrågan och ger lämplig hjälp.
+> Om du behöver mer resurser kan du skapa ett kundvårdsärende och beskriva ditt användningsfall. Adobe teamet granskar din begäran och ger lämplig hjälp.
 
 
 ### Lokal testkörning {#local-test-execution}
@@ -118,9 +118,9 @@ Innan du aktiverar funktionstester i en pipeline för Cloud Manager rekommendera
 
 #### Köra i en IDE {#running-in-an-ide}
 
-Eftersom testklasser är JUnit-tester kan de köras från vanliga Java-IDE:er som Eclipse, IntelliJ och NetBeans. Eftersom både produktfunktionstester och anpassade funktionstester baseras på samma teknik, kan båda köras lokalt genom att produkttesterna kopieras till dina anpassade tester.
+Eftersom testklasser är JUnit-tester kan de köras från vanliga Java™-utvecklingsmiljöer som Eclipse, IntelliJ och NetBeans. Eftersom både produktfunktionstester och anpassade funktionstester baseras på samma teknik, kan båda köras lokalt genom att produkttesterna kopieras till dina anpassade tester.
 
-När du kör dessa tester måste du dock ange en mängd olika systemegenskaper som förväntas av `aem-testing-clients` (och det underliggande Sling Testing Clients) biblioteket.
+När du kör dessa tester måste du dock ange olika systemegenskaper som förväntas av `aem-testing-clients` (och det underliggande Sling Testing Clients) biblioteket.
 
 Systemegenskaperna är följande.
 
@@ -128,11 +128,11 @@ Systemegenskaperna är följande.
 |-------------------------------------|------------------------------------------------------------------|-------------------------|
 | `sling.it.instances` | antal instanser, för att matcha molntjänsten ska anges till `2` | `2` |
 | `sling.it.instance.url.1` | ska anges till författarens URL | `http://localhost:4502` |
-| `sling.it.instance.runmode.1` | runmode för den första instansen, ska anges till `author` | `author` |
+| `sling.it.instance.runmode.1` | körningsläge för den första instansen, ska anges till `author` | `author` |
 | `sling.it.instance.adminUser.1` | ska anges till författaradministratörsanvändaren. | `admin` |
 | `sling.it.instance.adminPassword.1` | ska anges som författarens administratörslösenord. |                         |
 | `sling.it.instance.url.2` | ska anges till publicerings-URL:en | `http://localhost:4503` |
-| `sling.it.instance.runmode.2` | runmode för den andra instansen, ska anges till `publish` | `publish` |
+| `sling.it.instance.runmode.2` | körningsläge för den andra instansen, ska anges till `publish` | `publish` |
 | `sling.it.instance.adminUser.2` | ska ställas in för publiceringsadministratörsanvändaren. | `admin` |
 | `sling.it.instance.adminPassword.2` | ska anges till administratörslösenordet för publicering. |                         |
 
@@ -142,7 +142,7 @@ Systemegenskaperna är följande.
 
 1. Öppna ett skal och navigera till `it.tests` i din databas.
 
-1. Kör följande kommando med de parametrar som behövs för att starta testerna med Maven.
+1. Kör följande kommando med de parametrar som krävs för att starta testerna med Maven.
 
 ```shell
 mvn verify -Plocal \

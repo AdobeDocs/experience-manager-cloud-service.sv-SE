@@ -1,17 +1,17 @@
 ---
 title: Enterprise DevOps
-description: Läs om processer, metoder och kommunikation som krävs för att underlätta driftsättning och samarbete.
+description: Läs om de processer, metoder och den kommunikation som krävs för att underlätta driftsättningen och samarbetet.
 exl-id: c8da1fd7-fe3e-4c7b-8fe7-1f7faf02769c
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 94%
+source-wordcount: '1009'
+ht-degree: 48%
 
 ---
 
 # Enterprise DevOps{#enterprise-devops}
 
-DevOps omfattar processer, metoder och kommunikation som krävs för att:
+DevOps omfattar de processer, metoder och den kommunikation som krävs för att
 
 * Underlätta driftsättningen av programvaran i olika miljöer.
 * Förenkla samarbetet mellan utvecklings-, testnings- och driftsättningsteamen.
@@ -39,16 +39,16 @@ Adobe Experience Manager (AEM) as a Cloud Service består vanligtvis av flera mi
 
 ### Utveckling {#development}
 
-Utvecklarna ansvarar för att utveckla och anpassa det föreslagna projektet (oavsett om det är en webbplats, mobilappar, DAM-implementering osv.) med alla funktioner som krävs. De ska:
+Utvecklarna ansvarar för att utveckla och anpassa det föreslagna projektet (oavsett om det är en webbplats, mobilappar, DAM-implementering och så vidare) med alla funktioner som krävs. De ska:
 
 * utveckla och anpassa de nödvändiga delarna, till exempel mallar, komponenter, arbetsflöden och program
 * förverkliga designen
-* utveckla de tjänster och skript som krävs för att implementera de funktioner som krävs
+* utveckla nödvändiga tjänster och skript så att ni kan implementera de funktioner som krävs
 
-Konfigurationen av [utvecklingsmiljön](/help/implementing/developing/introduction/development-guidelines.md) kan vara beroende av olika faktorer, men består vanligtvis av:
+Konfigurationen av [utveckling](/help/implementing/developing/introduction/development-guidelines.md) miljön kan vara beroende av olika faktorer, men vanligtvis består den av:
 
-* Ett integrerat utvecklingssystem med versionskontroll som ger en integrerad kodbas. Detta används för att sammanfoga och konsolidera kod från de enskilda utvecklingsmiljöer som används av varje utvecklare.
-* En personlig miljö för varje utvecklare, vilken vanligtvis finns på hens lokala dator. Koden synkroniseras med versionskontrollsystemet vid lämpliga intervall
+* Ett integrerat utvecklingssystem med versionskontroll som ger en integrerad kodbas. Den här integrerade kodbasen används för att sammanfoga kod från de enskilda utvecklingsmiljöer som används av varje utvecklare.
+* En personlig miljö för varje utvecklare, vilken vanligtvis finns på hens lokala dator. Koden synkroniseras med versionskontrollsystemet med lämpliga intervall
 
 Beroende på hur omfattande ditt system är kan utvecklingsmiljön ha både författar- och publiceringsinstanser.
 
@@ -58,26 +58,26 @@ Den här miljön används av kvalitetssäkringsteamet för att på ett heltäcka
 
 ### Mellanlagring {#staging}
 
-Mellanlagringsmiljön bör vara en spegling av produktionsmiljön – konfiguration, kod och innehåll:
+Mellanlagringsmiljön bör vara en spegling av produktionsmiljön - konfiguration, kod och innehåll:
 
 * Den används för att testa de skript som används för att implementera den faktiska driftsättningen.
-* Den kan användas för sluttester (design, funktionalitet och gränssnitt) före driftsättning till produktionsmiljöerna.
+* Den kan användas för sluttester (design, funktionalitet och gränssnitt) innan den distribueras till produktionsmiljöerna.
 * Även om det inte alltid är möjligt att ha samma mellanlagringsmiljö som produktionsmiljön bör den vara så lik som möjligt för att möjliggöra prestanda- och lasttestning.
 
 ### Produktion – Author och Publish {#production-author-and-publish}
 
-Produktionsmiljön består av de miljöer som behövs för att [författa och publicera](/help/sites-cloud/authoring/getting-started/concepts.md) implementeringen.
+Produktionsmiljön består av miljöer som [skapa och publicera](/help/sites-cloud/authoring/getting-started/concepts.md) implementeringen.
 
 En produktionsmiljö består av minst en författarinstans och en publiceringsinstans:
 
 * En [författarinstans](#author) för inmatning av innehåll.
 * En [publiceringsinstans](#publish) för innehåll som är tillgängligt för besökare/användare.
 
-Beroende på projektets omfattning består det ofta av flera författar- och/eller publiceringsinstanser. På en lägre nivå kan databasen även grupperas i flera instanser.
+Beroende på projektets omfattning består den ofta av flera författare, utgivare eller både och. På en lägre nivå kan databasen även grupperas i flera instanser.
 
 #### Författare {#author}
 
-Författarinstanser ligger vanligtvis bakom den interna brandväggen. I den här miljön kommer du, och dina kolleger, att utföra författaruppgifter som att:
+Vanligtvis ligger författarinstanser bakom den interna brandväggen. Denna interna brandvägg är den miljö där du, och dina kollegor, utför redigeringsuppgifter som:
 
 * administrera hela systemet
 * mata in innehåll
@@ -86,11 +86,11 @@ Författarinstanser ligger vanligtvis bakom den interna brandväggen. I den här
 
 Innehåll som aktiverats paketeras och placeras i författarmiljöns replikeringskö. Replikeringsprocessen överför sedan innehållet till publiceringsmiljön.
 
-Om du vill återreplikera data som genererats i en publiceringsmiljö tillbaka till redigeringsmiljön kommer en replikeringslyssnare i redigeringsmiljön att undersöka publiceringsmiljön och hämta sådant innehåll från publiceringsmiljöns utkorg för omvänd replikering.
+Om du vill återreplikera data som genererats i en publiceringsmiljö till författarmiljön avsöker en replikeringslyssnare i redigeringsmiljön publiceringsmiljön och hämtar sådant innehåll från publiceringsmiljöns utkorg för omvänd replikering.
 
 #### Publicera {#publish}
 
-En Publish-miljö finns vanligtvis i DMZ (Demilitarized Zone). Det är i den här miljön som besökare kommer att få tillgång till ditt innehåll (t.ex. via en webbplats eller i form av en mobilapp) och interagera med det oavsett om det är offentligt eller finns i intranätet. En publiceringsmiljö:
+Normalt finns en publiceringsmiljö i DMZ (Demilitarized Zone). I den här miljön får besökarna tillgång till ditt innehåll (t.ex. via en webbplats eller i form av ett mobilprogram) och kan interagera med det, oavsett om det är offentligt eller i intranätet. En publiceringsmiljö:
 
 * innehåller innehåll som replikerats från författarmiljön
 * gör innehållet tillgängligt för besökare
@@ -101,19 +101,19 @@ I publiceringsmiljön genereras ditt innehåll dynamiskt i realtid och innehåll
 
 ## Kodförflyttning {#code-movement}
 
-Kod ska alltid spridas nedifrån och upp:
+Sprid alltid kod nedifrån och upp:
 
 * koden utvecklas först lokalt och sedan i integrerade utvecklingsmiljöer
-* följt av grundlig testning i QA-miljön
+* följt av grundlig testning av QA-miljöer
 * testas sedan på nytt i mellanlagringsmiljöer
 * endast därefter får koden driftsättas till produktionsmiljöerna
 
-Koden (till exempel anpassade webbprogramfunktioner och designmallar) överförs vanligtvis genom att paket exporteras och importeras mellan olika innehållsdatabaser. Om det behövs kan den här replikeringen konfigureras som en automatisk process.
+Vanligtvis överförs koden (till exempel anpassade webbprogramfunktioner och designmallar) genom att paket exporteras och importeras mellan olika innehållsdatabaser. Om det behövs kan den här replikeringen konfigureras som en automatisk process.
 
-AEM as a Cloud Service-projekt utlöser ofta koddriftsättning:
+Projekt på AEM as a Cloud Service utlöser ofta koddistribution:
 
 * Automatiskt: för överföring till utvecklings- och QA-miljöer.
-* Manuellt: driftsättning till mellanlagrings- och produktionsmiljöerna sker på ett mer kontrollerat sätt, ofta manuellt, men automatisering är dock möjlig vid behov.
+* Manuellt: driftsättning till stagnings- och produktionsmiljöerna sker på ett mer kontrollerat sätt, ofta manuellt, Automatisering är dock möjlig, om det behövs.
 
 ![Kodförflyttning](assets/code-movement.png)
 
@@ -121,17 +121,17 @@ AEM as a Cloud Service-projekt utlöser ofta koddriftsättning:
 
 Innehåll som skapas för produktion ska **alltid** författas inom författarinstansen.
 
-Innehåll bör inte följa kod från lägre miljöer till högre, eftersom det inte är bra att låta författare skapa innehåll på lokala datorer eller lägre miljöer, och att sedan flytta innehållet till produktionsmiljön, vilket troligen kan orsaka fel och inkonsekvenser.
+Innehåll bör inte följa kod som flyttas från lägre miljöer till högre. Det är alltså inte bra att låta skribenter skapa innehåll på lokala datorer eller i lägre miljöer och sedan flytta det till produktionsmiljön. Orsaken är att den kan orsaka fel och inkonsekvenser.
 
 Produktionsinnehållet bör flyttas från produktionsmiljön till mellanlagringsmiljön för att säkerställa att mellanlagringsmiljön är effektiv och korrekt.
 
 >[!NOTE]
 >
->Detta innebär inte att mellanlagringsinnehåll måste synkroniseras kontinuerligt med produktionen, regelbundna uppdateringar är tillräckligt, men framför allt bör det ske innan en ny koditeration testas. Innehåll i kvalitetssäkrings- och utvecklingsmiljöer behöver inte uppdateras lika ofta, utan bara vara en bra representation av produktionsinnehållet.
+>Denna metod innebär inte att mellanlagringsinnehållet måste synkroniseras kontinuerligt med produktionen. regelbundna uppdateringar är tillräckliga, men framför allt innan du testar en ny kodupprepning. Innehåll i QA- och utvecklingsmiljöer behöver inte uppdateras lika ofta. Det måste bara vara en bra representation av produktionsinnehållet.
 
 Innehåll kan överföras:
 
 * Mellan olika miljöer – genom exporter och importer av paket.
-* Mellan olika instanser – genom direkt replikering (AEM as a Cloud Service-replikering) av innehållet (med HTTP- eller HTTPS-anslutning).
+* Mellan olika instanser - genom direkt replikering (AEM as a Cloud Service replikering) av innehållet (med en HTTP- eller HTTPS-anslutning).
 
 ![Innehållsförflyttning](assets/content-movement.png)

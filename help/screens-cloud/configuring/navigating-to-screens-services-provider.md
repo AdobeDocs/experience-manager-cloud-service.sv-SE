@@ -2,9 +2,9 @@
 title: Navigera till Screens Services Provider
 description: Den här sidan beskriver hur du navigerar till Screens Services Provider.
 exl-id: 9eff6fe8-41d4-4cf3-b412-847850c4e09c
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '263'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Följ stegen nedan för att konfigurera leverantören av skärmtjänster:
 1. Navigera till Screens Services Provider från [här](https://experience.adobe.com/screens).
 
    >[!CAUTION]
-   >Om du har tillgång till flera organisationer måste du se till att du har loggat in på rätt organisation. Om du vill ändra din organisation klickar du på organisationsnamnet i det övre högra hörnet av skärmen och väljer den organisation som du behöver åtkomst till.
+   >Om du har tillgång till flera organisationer måste du se till att du har loggat in på rätt organisation. Om du vill ändra organisation klickar du på organisationsnamnet i det övre högra hörnet av skärmen och väljer den organisation som du behöver åtkomst till.
 
 2. Klicka på kugghjulsikonen bredvid Projekt (övre vänstra hörnet)
 
@@ -41,9 +41,9 @@ Följ stegen nedan för att konfigurera leverantören av skärmtjänster:
 
    ![bild](/help/screens-cloud/assets/configure/configure-screens4.png)
 
-4. Klicka på **Spara** för att ansluta till leverantören av skärminnehåll
+4. Klicka **Spara** för att ansluta till leverantören av skärminnehåll
 
-5. Välj **Kanaler** i det vänstra navigeringsfältet och klicka på **öppna i innehållsleverantör**.
+5. Välj **Kanaler** i det vänstra navigeringsfältet och klicka **öppna i innehållsleverantör**.
 
    ![bild](/help/screens-cloud/assets/configure/configure-screens1.png)
 
@@ -53,4 +53,4 @@ Följ stegen nedan för att konfigurera leverantören av skärmtjänster:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du konfigurerar en leverantör av skärmtjänster kan du navigera till [Använda leverantör av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=end) för mer information.
+När du har lärt dig hur du konfigurerar Screens Services Provider går du till [Använda leverantör av skärminnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=end#screens-content-provider) för mer information.

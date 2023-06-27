@@ -2,9 +2,9 @@
 title: Struktur för AEM
 description: Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement
 exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Det AEM användargränssnittet har flera bakomliggande principer och består av 
 
 Gränssnittet fungerar både för mobila och stationära enheter, men i stället för att skapa två format använder AEM ett format som fungerar för alla skärmar och enheter.
 
-Alla moduler använder samma grundläggande layout, AEM detta kan ses som:
+Alla moduler använder samma grundläggande layout:
 
 ![AEM Sites-konsol](assets/ui-sites-console.png)
 
-Layouten följer en responsiv designstil och anpassas till storleken på enheten/fönstret som du använder.
+Layouten följer en responsiv designstil och passar sig till storleken på enheten, fönstret eller båda, som du använder.
 
-Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) justeras visningen därefter:
+När upplösningen till exempel är lägre än 1 024 pixlar (som på en mobil enhet) justeras visningen därefter:
 
 ![Mobilvyn i webbplatskonsolen](assets/ui-sites-mobile.png)
 
@@ -35,22 +35,22 @@ Om upplösningen till exempel ligger under 1 024 px (som på en mobil enhet) jus
 
 Rubrikraden visar globala element som:
 
-* logotypen och den specifika produkt/lösning som du för närvarande använder; för AEM utgör detta också en länk till den globala navigeringen
+* Logotypen och den specifika produkt/lösning som du för närvarande använder. För AEM utgör det här elementet även en länk till den globala navigeringen
 * Sökning
 * Ikon för att komma åt hjälpresurserna
 * Ikon för att komma åt andra lösningar
-* En indikator för (och åtkomst till) alla varningar eller inkorgsobjekt som väntar på dig
+* En indikator på - och åtkomst till - alla varningar och inkorgsobjekt som väntar på dig
 * Användarikonen tillsammans med en länk till din profilhantering
 
 ### Verktygsfält {#toolbar}
 
 Verktygsfältet är sammanhangsberoende för din plats och de ytverktyg som är relevanta för att styra vyn eller resurserna på sidan nedan. Verktygsfältet är produktspecifikt, men det finns vissa gemensamma element.
 
-Alla tillgängliga åtgärder visas i verktygsfältet:
+I verktygsfältet visas de åtgärder som är tillgängliga:
 
 ![AEM Sites verktygsfält](assets/ui-sites-toolbar.png)
 
-Beroende på om en resurs är markerad:
+Beroende på om en resurs har valts:
 
 ![AEM Sites-verktygsfältet har valts](assets/ui-sites-toolbar-selected.png)
 
@@ -74,7 +74,7 @@ När du skapar sidor är de strukturella områdena följande.
 
 ### Innehållsram {#content-frame}
 
-Sidinnehållet återges i innehållsramen. Innehållsramen är helt oberoende av redigeraren för att säkerställa att det inte finns några konflikter på grund av CSS eller javascript.
+Sidinnehållet återges i innehållsramen. Innehållsramen är oberoende av redigeraren för att säkerställa att det inte finns några konflikter på grund av CSS eller JavaScript.
 
 Innehållsramen finns till höger i fönstret, under verktygsfältet.
 
@@ -95,27 +95,27 @@ Redigeringsramen är en behållare (abstrakt) för alla sidredigeringselement. D
 
 ### Side Panel {#side-panel}
 
-Det här innehåller tre standardflikar. The **Resurser** och **Komponenter** Med -flikar kan du markera sådana element och dra dem från panelen och släppa dem på sidan. The **Innehållsträd** kan du inspektera innehållshierarkin på sidan.
+Innehåller tre standardflikar. The **Resurser** och **Komponenter** Med -flikar kan du markera sådana element och dra dem från panelen och släppa dem på sidan. The **Innehållsträd** kan du kontrollera hierarkin med innehåll på sidan.
 
-Sidpanelen är dold som standard. När det här alternativet är markerat visas det antingen på vänster sida, eller glida över för att täcka hela fönstret när fönsterstorleken är under bredden 1024px. till exempel på en mobil enhet.
+Sidpanelen är dold som standard. När du väljer det här alternativet visas det antingen på den vänstra sidan eller när fönsterbredden är mindre än 1 024 pixlar, flyttas det över för att täcka hela fönstret som t.ex. på en mobil enhet.
 
 ![Panelen Sida](assets/ui-side-panel.png)
 
 ### Side Panel - Assets {#side-panel-assets}
 
-På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera efter en viss term eller välja en grupp.
+På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera efter en viss term eller markera en grupp.
 
 ![Fliken Resurser](assets/ui-side-panel-assets.png)
 
 ### Sida - Resursgrupper {#side-panel-asset-groups}
 
-På fliken Resurser finns det en listruta där du kan välja specifika resursgrupper.
+På fliken Resurser finns det en listruta som du kan använda för att välja specifika resursgrupper.
 
 ![Resursgrupper](assets/ui-side-panel-asset-groups.png)
 
 ### Side Panel - Components {#side-panel-components}
 
-På fliken Komponenter kan du välja bland komponenterna. Du kan också filtrera efter en viss term eller välja en grupp.
+På fliken Komponenter kan du välja bland komponenterna. Du kan också filtrera efter en viss term eller markera en grupp.
 
 ![Fliken Komponenter](assets/ui-side-panel-components.png)
 
@@ -127,7 +127,7 @@ På fliken Innehållsträd kan du visa hierarkin med innehåll på sidan. Om du 
 
 ### Övertäckningar {#overlays}
 
-Dessa överlägg innehållsramen och används av [lager](#layer) för att utnyttja mekanismerna i hur du kan interagera (helt transparent) med komponenterna och deras innehåll.
+Överlappar innehållsramen och används av [lager](#layer) för att utnyttja mekanismerna i hur du kan interagera på ett transparent sätt med komponenterna och deras innehåll.
 
 Övertäckningarna finns i redigerarramen (med alla andra sidredigeringselement), även om de faktiskt täcker över rätt komponenter i innehållsramen.
 
@@ -146,7 +146,7 @@ AEM innehåller flera lager som redan har implementerats för sidredigering, som
 
 >[!NOTE]
 >
->Lager är ett kraftfullt koncept som påverkar hur användaren ser på och interagerar med sidinnehållet. När du utvecklar egna lager måste du se till att lagret rensas när det avslutas.
+>Lager är ett kraftfullt koncept som påverkar användarens vy och interaktion med sidinnehållet. När du utvecklar egna lager måste du se till att lagret rensas när det avslutas.
 
 ### Lagerväxlare {#layer-switcher}
 
@@ -168,4 +168,4 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 <!--For more details about the concepts around the touch-enabled UI, continue to the article [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).-->
 
-Mer teknisk information finns i [JS-dokumentationsuppsättning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.
+Mer teknisk information finns i [JS-dokumentationsuppsättning](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html) för sidredigeraren.

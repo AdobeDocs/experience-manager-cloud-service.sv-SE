@@ -2,9 +2,9 @@
 title: Databasmodernisering
 description: Databasmodernisering
 exl-id: cd9d212e-e720-4209-8b5a-659883cc1d95
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Databasmodernisering är ett verktyg som utvecklats för att strukturera om befi
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager as a Cloud Service har många nya funktioner och möjligheter i dina AEM projekt. Det krävs dock vissa förändringar i Adobe Experience Manager Maven-projekten för att de ska vara kompatibla med AEM Cloud Service. På en hög nivå kräver AEM att **innehåll** och **kod** till diskreta delpaket för att ta hänsyn till uppdelningen mellan muterbart och oföränderligt innehåll. Se [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) om du vill ha mer information om den nya AEM projektstrukturen för Cloud Service.
+Adobe Experience Manager as a Cloud Service har många nya funktioner och möjligheter i dina AEM projekt. Det krävs dock vissa förändringar i Adobe Experience Manager Maven-projekten för att de ska vara kompatibla med AEM Cloud Service. På en hög nivå kräver AEM att **innehåll** och **kod** i diskreta delpaket för att ta hänsyn till uppdelningen mellan muterbart och oföränderligt innehåll. Se [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html) om du vill ha mer information om den nya AEM projektstrukturen för Cloud Service.
 
 Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service genom att skapa följande distributionsstruktur:
 
@@ -32,14 +32,14 @@ Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service
 
 >[!VIDEO](https://video.tv.adobe.com/v/333057/?quality=12&learn=on)
 
-* Via Adobe I/O CLI: Vi rekommenderar att du använder Repository Modernizer via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för CLI-programmet för Adobe I/O).
+* Med Adobe Developer CLI: Vi rekommenderar att du använder Repository Modernizer via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för Adobe Developer CLI).
 
-   Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** för att lära dig hur du installerar och använder plugin-programmet.
+  Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** så att du kan lära dig hur du installerar och använder plugin-programmet.
 
 * Som fristående verktyg: Databasmoderniseraren kan också köras som ett fristående verktyg.
 
-   Se **[Git-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)** om du vill lära dig hur du använder det här verktyget.
+  Se **[Git-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)** så att du kan lära dig hur du använder det här verktyget.
 
-   >[!NOTE]
-   >
-   >Databasmoderniseringen utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.
+  >[!NOTE]
+  >
+  >Databasmoderniseringen utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.

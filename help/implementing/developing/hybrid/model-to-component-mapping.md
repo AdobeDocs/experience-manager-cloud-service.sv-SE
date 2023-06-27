@@ -1,21 +1,21 @@
 ---
 title: Dynamisk mappning av modell till komponent för SPA
-description: I den här artikeln beskrivs hur den dynamiska mappningen av modell till komponent sker i Javascript SPA SDK för AEM.
+description: I den här artikeln beskrivs hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för AEM.
 exl-id: 3a7b3f26-4a09-40c1-af03-bb8408a68e57
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
 
 # Dynamisk mappning av modell till komponent för SPA {#dynamic-model-to-component-mapping-for-spas}
 
-I det här dokumentet beskrivs hur den dynamiska mappningen av modell till komponent sker i Javascript SPA SDK för AEM.
+I det här dokumentet beskrivs hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för AEM.
 
 ## ComponentMapping-modul {#componentmapping-module}
 
-The `ComponentMapping` -modulen tillhandahålls som ett NPM-paket till frontendprojektet. Det lagrar komponenter för användargränssnitt och tillhandahåller ett sätt för Single Page Application att mappa komponenter för användargränssnitt till AEM resurstyper. Detta aktiverar en dynamisk upplösning för komponenter när JSON-modellen för programmet analyseras.
+The `ComponentMapping` -modulen tillhandahålls som ett NPM-paket till frontendprojektet. Det lagrar komponenter för användargränssnitt och tillhandahåller ett sätt för Single Page Application att mappa komponenter för användargränssnitt till AEM resurstyper. Modulen aktiverar en dynamisk upplösning för komponenter när JSON-modellen för programmet analyseras.
 
 Varje objekt i modellen innehåller en `:type` fält som visar en AEM resurstyp. När den är monterad kan den främre komponenten återge sig själv med det fragment av modellen som den har fått från de underliggande biblioteken.
 
@@ -25,12 +25,12 @@ Se även npm-paketet: [@adobe/aem-spa-component-mapping](https://www.npmjs.com/p
 
 ## Modellstyrt Single Page-program {#model-driven-single-page-application}
 
-Single Page-program som använder Javascript SPA SDK för AEM är modelldrivna:
+Single Page-program som använder JavaScript SPA SDK för AEM är modelldrivna:
 
 1. Front-end-komponenter registrerar sig för [Komponentmappningsarkiv](#componentmapping-module).
 1. Sedan [Behållare](blueprint.md#container), efter att ha fått en modell av [Modellprovider](blueprint.md#the-model-provider), itererar över sitt modellinnehåll (`:items`).
 
-1. För en sida, dess underordnade sidor (`:children`) hämta först en komponentklass från [Komponentmappning](blueprint.md#componentmapping) och sedan instansiera den.
+1. Om det finns en sida, dess underordnade sidor (`:children`) hämta först en komponentklass från [Komponentmappning](blueprint.md#componentmapping) och sedan instansiera den.
 
 ## Programinitiering {#app-initialization}
 
