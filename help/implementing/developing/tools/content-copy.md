@@ -2,9 +2,9 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
 exl-id: f060821d-d559-45d2-b3b1-1b2277694ec4
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: f08048b2378b150210a3fd1168206f4efb0c4f8e
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1203'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand 
 
 ## Introduktion {#introduction}
 
-Aktuella, riktiga data är värdefulla för testning, validering och för att ge användaren erkännande. Med innehållskopieringsverktyget kan du kopiera innehåll från en AEM till en staging, utveckling eller [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) miljö för sådan testning.
+Aktuella, riktiga data är värdefulla för testning, validering och för att ge användaren erkännande. Med innehållskopieringsverktyget kan du kopiera innehåll från en produktion AEM en as a Cloud Service miljö till en staging, utveckling eller [Rapid Development Environment (RDE)](/help/implementing/developing/introduction/rapid-development-environments.md) miljö för sådan testning.
 
 Innehållet som ska kopieras definieras av en innehållsuppsättning. En innehållsuppsättning består av en lista med JCR-sökvägar som innehåller det muterbara innehåll som ska kopieras från en källredigeringstjänstmiljö till en målredigeringstjänstmiljö i samma Cloud Manager-program. Följande sökvägar tillåts i en innehållsuppsättning.
 
