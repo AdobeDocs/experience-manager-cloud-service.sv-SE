@@ -5,10 +5,10 @@ contentOwner: AG
 feature: Asset Management
 role: User,Leader,Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: f075c6032edb23f9cf52ad53ae2a628915e76ec2
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 2%
+source-wordcount: '738'
+ht-degree: 1%
 
 ---
 
@@ -36,6 +36,22 @@ Nedan beskrivs de viktigaste fördelarna med Assets som [!DNL Cloud Service]. Me
 * **Alltid online**: Noll driftavbrott (0dt) tack vare instansen som distribuerats i ett kluster med säkerhetskopior och redundans. Uppgraderingar är också 0dt.
 * **Konstantövervakning**: Övervakningen av systemet är automatiserade och inbyggda kontroller och utlösare som hjälper till att upprätthålla prestanda, tillgänglighet och övergripande tillförlitlighet.
 * **Smidig driftsättning**: Experience Manager i molnfunktionerna är helt automatiserade och kräver ingen manuell åtgärd. För automatiserad driftsättning automatiserar komponenten Cloud Manager (CM) byggandet av driftsättningsbara Docker-bilder som innehåller din anpassade kod.
+
+## Tillgängliga personbaserade upplevelser
+
+Adobe erbjuder robusta DAM-lösningar (Digital Asset Management) så att ni får ut mesta möjliga av era digitala resurser. Adobe Experience Manager Assets har två separata upplevelser som använder samma Cloud Services:
+
+* **Administratörsvy**: Det befintliga as a Cloud Service användargränssnittet för Assets. Använd administrationsvyn för alla avancerade funktioner för resurshantering, inklusive integreringar, arbetsflöden, innehållsautomatisering, publicering med mera.
+
+* **Resursvy**: Adobe lätthanterlig resurshantering för att lagra, hantera, identifiera och använda digitala resurser. Effektivt användargränssnitt med funktioner för resurshantering. Utformad för enklare DAM-användare med fokus på överföring, metadatahantering, sökning, hämtning och delning.
+
+Användare som har åtkomst till administrationsvyn kan även komma åt resursvyn. Resursvyn har ett förenklat användargränssnitt som gör det enkelt att hantera, identifiera och distribuera digitala resurser. Ett stort antal användare från olika funktioner, inklusive kreatörer, marknadsförare och branschgrupper, kan samarbeta om resurser och få tillgång till rätt, godkänt material när och var de behöver det. Många tillfälliga DAM-användare föredrar resursvyn eftersom den bara innehåller en delmängd av funktioner. Upplevelsen riktar sig till kreatörer, skrivskyddade mediekonsumenter och användare med mindre vikt-DAM.
+
+DAM-bibliotek, utvecklare och superanvändare kan fortsätta att använda administrationsvyn eller växla mellan användargränssnitten efter behov. Du kan välja den upplevelse som fungerar bäst för din roll.
+
+![add-tags](assets/newui-overview.svg)
+
+Mer information om hur du kommer åt resursvyn och vissa av de förenklingar som den erbjuder via administratörsvyn finns i resursvyn.
 
 ## Nya Assets-funktioner {#whats-new-assets}
 
