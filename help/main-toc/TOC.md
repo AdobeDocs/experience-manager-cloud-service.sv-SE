@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 69c6ca6104e5360e2db4c3ba9f34b3cddb2269ab
+source-git-commit: 66c7b30b8b66bc86d7b83e57e02ed61d426553a2
 workflow-type: tm+mt
-source-wordcount: '4085'
+source-wordcount: '4094'
 ht-degree: 20%
 
 ---
@@ -576,6 +576,7 @@ ht-degree: 20%
             + [Använda infogade CSS-format på enskilda adaptiva formulärkomponenter](/help/forms/inline-style-adaptive-forms.md)
          + Lägga till regler och använda uttryck i ett adaptivt formulär {#add-rules-and-use-expressions-in-an-adaptive-form}
             + [Lägga till regler i ett adaptivt formulär](/help/forms/rule-editor.md)
+            + [Lägg till anpassad felhanterare med hjälp av tjänsten Invoke i regelredigeraren](/help/forms/add-custom-error-handler-adaptive-forms.md)
          + Använd [!DNL Adobe Sign] {#use-adobe-sign}
             + [Använd Adobe Sign för att e-signera ett adaptivt formulär](/help/forms/working-with-adobe-sign.md)
          + Konfigurera Skicka-åtgärder och metadataöverföring {#configure-submit-actions-and-metadata-submission}
