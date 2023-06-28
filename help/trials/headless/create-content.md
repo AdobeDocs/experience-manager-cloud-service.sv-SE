@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '657'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content"
 >title="Skapa nytt innehåll"
->abstract="Med hjälp av den modell du skapade i den tidigare modulen får du lära dig att skapa innehåll som kan användas för att skapa sidor, eller som bas för rubrikfritt innehåll."
+>abstract="Med hjälp av den modell du skapade i den tidigare modulen får du lära dig hur du skapar innehåll som kan användas för att skapa sidor, eller som bas för det rubrikfria innehållet."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content_guide"
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 Innehållsfragment representerar ditt headless-innehåll och baseras på fördefinierade strukturer, som kallas modeller för innehållsfragment. Du har redan skapat en modell i en tidigare modul.
 
-I den här modulen skapar du ett nytt innehållsfragment baserat på den modellen med konsolen Innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
+I den här modulen skapar du ett nytt innehållsfragment baserat på den modellen med hjälp av konsolen Innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
 
 1. Tryck eller klicka på **Skapa** längst upp till höger på konsolen.
 
@@ -49,7 +49,7 @@ I den här modulen skapar du ett nytt innehållsfragment baserat på den modelle
 
 >[!TIP]
 >
->Beroende på inställningarna för webbläsaren kan den nya fliken i webbläsaren vara inaktiverad av en blockerare för popup-fönster. Om ditt nya fragment inte öppnas efter att du klickat **Skapa och öppna**, kontrollera webbläsarens inställningar.
+>Beroende på inställningarna för webbläsaren kan den nya fliken i webbläsaren vara inaktiverad av en blockerare för popup-fönster. Om ditt nya fragment inte öppnas efter att du klickat **Skapa och öppna** kontrollerar du webbläsarens inställningar.
 
 ## Lägg till innehåll i ditt innehållsfragment {#add-content}
 

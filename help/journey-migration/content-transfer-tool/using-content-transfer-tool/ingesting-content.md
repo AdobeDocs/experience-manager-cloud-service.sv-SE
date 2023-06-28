@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1732'
-ht-degree: 6%
+source-wordcount: '1707'
+ht-degree: 7%
 
 ---
 
@@ -17,22 +17,22 @@ ht-degree: 6%
 >id="aemcloud_ctt_ingestion"
 >title="Innehållsintag"
 >abstract="Inmatning avser att hämta innehåll från migreringsuppsättningen till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#top-up-ingestion-process" text="Uppdatera inmatning"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html" text="Uppdatera inmatning"
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
 
 >[!NOTE]
 >Kom du ihåg att logga en supportbiljett för det här intaget? Se [Viktigt att tänka på innan du använder verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html#important-considerations) och andra överväganden för att underlätta intag.
 
-1. Gå till Cloud Acceleration Manager. Klicka på ditt projektkort och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och klicka på **Nytt intag**
+1. Gå till Cloud Acceleration Manager. Klicka på projektkortet och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och klicka **Nytt intag**
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-01.png)
 
-1. Granska checklistan för konsumtion och se till att alla steg har slutförts. Detta är nödvändiga steg för att säkerställa ett lyckat intag. Gå till **Nästa** endast om checklistan är slutförd.
+1. Granska checklistan för konsumtion och se till att alla steg är slutförda. Dessa steg är nödvändiga för att tillförseln ska lyckas. Gå till **Nästa** endast om checklistan är slutförd.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/Ingestion-checklist.png)
 
-1. Ange nödvändig information för att skapa ett nytt intag.
+1. Ange nödvändig information för att skapa ett intag.
 
    * Välj den migreringsuppsättning som innehåller extraherade data som källa.
       * Migreringsuppsättningar kommer att upphöra efter en längre inaktivitetsperiod, så det förväntas att intaget sker relativt snart efter att extraktionen har utförts. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
@@ -49,9 +49,9 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
    >[!IMPORTANT]
    > Följande viktiga meddelanden gäller inhämtning av innehåll:
    > Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
-   > Om inställningen **Svep** är aktiverat före inmatning, tar bort hela den befintliga databasen och skapar en ny databas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Du måste läggas till på nytt i administratörsgruppen för att påbörja ett intag.
+   > Om inställningen **Svep** är aktiverat före inmatning, tas hela den befintliga databasen bort och en databas skapas där du kan importera innehåll. Det här arbetsflödet innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Återställningen gäller även för en admin-användare som lagts till i **administratörer** grupp. Du måste läsa till administratörsgruppen för att kunna påbörja ett intag.
 
-1. Klicka på **Ingest**
+1. Klicka **Ingest**.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam22.png)
 
@@ -59,7 +59,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam23.png)
 
-1. Klicka på **(i)** om du vill ha mer information om intagsjobbet. Du kan se hur länge varje steg i Ingrediktionen varar när den körs eller slutförs genom att klicka på **...** och sedan **Visa varaktighet**. Informationen från extraheringen visar också på vad som förtärs.
+1. Klicka på **(i)** om du vill ha mer information om intagsjobbet. Du kan se hur länge varje steg i Inledningen varar när den körs eller slutförs genom att klicka **...** och sedan klicka **Visa varaktighet**. Informationen från extraheringen visar också på vad som förtärs.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam23b.png)
 
@@ -81,7 +81,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 
    ![image](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-04.png)
    
-   Also, refer to [Important Considerations for Using Content Transfer Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html#important-considerations) to learn more.
+   Also, see [Important Considerations for Using Content Transfer Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html#important-considerations) to learn more.
 
 1. Once the ingestion is complete, the status under **Author ingestion** updates to **FINISHED**.
 
@@ -98,11 +98,11 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
 Content Transfer Tool har en funktion för differentiell *innehållsuppdatering* som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
 >[!NOTE]
->Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt steget före kopiering för det första fullständiga intaget kan du hoppa över förkopiering för efterföljande toppkopieringsförslag (om den översta migreringsuppsättningsstorleken är mindre än 200 GB) eftersom det kan göra hela processen tidsödande.
+>Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt förkopieringssteget för det första fullständiga intaget kan du hoppa över förkopiering för efterföljande toppkopieringsförslag (om den översta migreringsuppsättningsstorleken är mindre än 200 GB). Orsaken är att det kan lägga till tid i hela processen.
 
-När inmatningsprocessen är klar måste du köra en [Extrahering uppifrån och ned](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process) och använd sedan den översta intagsmetoden.
+När importen är klar måste du köra en [Extrahering uppifrån och ned](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process)och använd sedan den översta intagsmetoden.
 
-Du kan göra detta genom att skapa ett nytt intag-jobb och se till att **Svep** är inaktiverat under matningsfasen, vilket visas nedan:
+Börja med att skapa ett matningsjobb och se till att **Svep** är inaktiverat under matningsfasen, vilket visas nedan:
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam24.png)
 
@@ -114,7 +114,7 @@ Den automatiska hämtningen av migreringstoken kan misslyckas av olika orsaker, 
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/troubleshooting-token.png)
 
-Du måste hämta migreringstoken manuellt genom att klicka på länken Hämta token i dialogrutan. Då öppnas en annan flik som visar variabeln. Du kan sedan kopiera token och klistra in den i **Indata för migreringstoken** fält. Nu borde du kunna påbörja intaget.
+Hämta migreringstoken manuellt genom att klicka på länken Hämta token i dialogrutan. En annan flik öppnas som visar token. Du kan sedan kopiera token och klistra in den i **Indata för migreringstoken** fält. Nu borde du kunna påbörja intaget.
 
 >[!NOTE]
 >
@@ -122,32 +122,32 @@ Du måste hämta migreringstoken manuellt genom att klicka på länken Hämta to
 
 ### Det går inte att starta matning {#unable-to-start-ingestion}
 
-Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte tillhör gruppen AEM administratörer visas ett felmeddelande enligt nedan när du försöker starta ett intag. Du kan antingen be administratören att lägga till dig på den lokala **AEM administratörer** eller fråga efter själva variabeln som du sedan kan klistra in i **Indata för migreringstoken** fält.
+Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte tillhör gruppen AEM administratörer visas ett fel som visas nedan när du försöker starta ett intag. Du kan antingen be administratören att lägga till dig på den lokala **AEM administratörer** eller fråga efter själva variabeln som du sedan kan klistra in i **Indata för migreringstoken** fält.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_nonadmin_ingestion.png)
 
 ### Det gick inte att nå migreringstjänsten {#unable-to-reach-migration-service}
 
-Efter att en fråga om att få ta emot ett inlägg har skickats ett meddelande som följande till användaren: &quot;Migreringstjänsten på målmiljön är för närvarande inte tillgänglig. Försök igen senare eller kontakta Adobe support.&quot;
+Efter att en fråga om att få ta emot ett inlägg har skickats ett meddelande som följande till användaren: &quot;Migreringstjänsten på målmiljön kan inte nås. Om så är fallet, försök igen senare eller kontakta supporten för Adobe.&quot;
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_cannot_reach_migser.png)
 
-Detta indikerar att Cloud Acceleration Manager inte kunde nå målmiljöns migreringstjänst för att starta intaget. Det här kan hända av flera orsaker.
+Det här meddelandet anger att Cloud Acceleration Manager inte kunde nå målmiljöns migreringstjänst för att starta inmatningen. Denna situation kan uppstå av olika skäl.
 
 >[!NOTE]
 > 
-> Fältet &quot;Migreringstoken&quot; visas eftersom det i ett fåtal fall inte är tillåtet att hämta denna token. Genom att tillåta manuell inmatning kan användaren snabbt påbörja intagningen utan ytterligare hjälp. Om variabeln anges och meddelandet fortfarande visas är det inte problemet att hämta variabeln.
+> Fältet &quot;Migreringstoken&quot; visas eftersom det i ett fåtal fall inte är tillåtet att hämta denna token. Genom att tillåta manuell inmatning kan användaren snabbt påbörja intagningen utan ytterligare hjälp. Om token anges och meddelandet fortfarande visas, var det inte problemet att hämta token.
 
-* AEM as a Cloud Service bevarar miljötillståndet och kan ibland behöva starta om migreringstjänsten av ett antal vanliga orsaker. Om tjänsten startas om går det inte att nå den, men den är vanligtvis tillgänglig snart.
-* Det är möjligt att en annan process körs på instansen. Om till exempel Release Orchestrator tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. Därför, och risken för att scenen eller produktionsinstansen skadas, är det mycket viktigt att du pausar uppdateringarna under ett intag.
-* Om en [IP-Tillåtelselista har tillämpats](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) via Cloud Manager blockeras Cloud Acceleration Manager från att nå migreringstjänsten. Det går inte att lägga till en IP-adress för frågor eftersom adressen är mycket dynamisk. För närvarande är den enda lösningen att inaktivera IP-tillåtelselista när intaget körs.
-* Det kan finnas andra skäl till att en utredning behöver göras. Kontakta Adobe kundtjänst om ditt intag fortfarande misslyckas.
+* AEM as a Cloud Service bevarar miljötillståndet och måste ibland starta om migreringstjänsten av olika vanliga orsaker. Om tjänsten startas om kan den inte nås, men är tillgänglig så småningom.
+* Det är möjligt att en annan process körs på instansen. Om till exempel Release Orchestrator tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. Därför, och risken att scenen eller produktionsinstansen skadas, är det mycket viktigt att du pausar uppdateringar under ett intag.
+* Om en [IP-Tillåtelselista har tillämpats](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) via Cloud Manager blockerar det Cloud Acceleration Manager från att nå migreringstjänsten. Det går inte att lägga till en IP-adress för frågor eftersom adressen är dynamisk. För närvarande är den enda lösningen att inaktivera IP-tillåtelselista när intaget körs.
+* Det kan finnas andra skäl till att en utredning behöver göras. Kontakta Adobe kundtjänst om intaget fortfarande misslyckas.
 
 ### Automatiska uppdateringar via Release Orchestrator är fortfarande aktiverat
 
-Frisläpp Orchestrator håller automatiskt miljön uppdaterad genom att uppdatera automatiskt. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön. Detta är en av orsakerna till att en supportanmälan bör loggas innan ett förtäring påbörjas (se &quot;Anteckning&quot; ovan), så att det går att schemalägga tillfällig inaktivering av Release Orchestrator.
+Frisläpp Orchestrator håller automatiskt miljön uppdaterad genom att uppdatera automatiskt. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön. En bra anledning att logga en kundsupportbiljett innan ett förtäring påbörjas (se&quot;Obs&quot; ovan), så att det går att schemalägga en tillfällig inaktivering av Release Orchestrator.
 
-Om Frisläpp Orchestrator fortfarande körs när ett intag startas visas det här meddelandet. Du kan välja att fortsätta i alla fall och ta risken genom att markera fältet och trycka på knappen igen.
+Om Release Orchestrator fortfarande körs när ett intag startas visas det här meddelandet i användargränssnittet. Du kan välja att fortsätta i alla fall och ta risken genom att markera fältet och trycka på knappen igen.
 
 >[!NOTE]
 >
@@ -161,7 +161,7 @@ En vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-trans
 
 >java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakConstraint0030: Unikitetsbegränsningen bröt mot egenskap [jcr:uuid] med ett värde på a1a1a1-b2b2-c3c3-d4d4-e5e5e5e5e5e5: /some/path/jcr:content, /some/other/path/jcr:content
 
-Varje nod i AEM måste ha ett unikt uuid. Detta fel anger att en nod som importeras har samma UID som en som redan finns på en annan sökväg i målinstansen.
+Varje nod i AEM måste ha ett unikt uuid. Detta fel anger att en nod som importeras har samma UID som en som finns någon annanstans på en annan sökväg i målinstansen.
 Detta kan inträffa om en nod flyttas på källan mellan en extrahering och en efterföljande [Extrahering uppifrån och ned](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process).
 Det kan också inträffa om en nod på målet flyttas mellan ett intag och ett efterföljande tilläggsintag.
 
@@ -169,4 +169,4 @@ Den här konflikten måste lösas manuellt. Någon som är bekant med innehålle
 
 ## What&#39;s Next {#whats-next}
 
-När du har slutfört Inkludering av innehåll i Target kan du visa loggar för varje steg (extrahering och förtäring) och leta efter fel. Se [Visa loggar för en migreringsuppsättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/viewing-logs.html) om du vill veta mer.
+När du har slutfört Inkludering av innehåll i Target kan du visa loggar för varje steg (extrahering och förtäring) och leta efter fel. Se [Visa loggar för en migreringsuppsättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs.html) om du vill veta mer.

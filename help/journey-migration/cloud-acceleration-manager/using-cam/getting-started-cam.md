@@ -2,9 +2,9 @@
 title: Komma igång med Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över hur du använder och kommer igång med Cloud Acceleration Manager.
 exl-id: e2fad21c-3de6-4186-97c6-ebc84780b2e8
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '536'
 ht-degree: 1%
 
 ---
@@ -15,14 +15,14 @@ Cloud Acceleration Manager är en molnbaserad applikation som är utformad för 
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du kommer igång med CAM (Cloud Acceleration Manager). Efter läsningen ska du kunna:
+Det här dokumentet hjälper dig att förstå hur du kommer igång med CAM (Cloud Acceleration Manager). Efter läsningen bör du kunna:
 
 * förstå hur du loggar in på CAM
 * skapa projekt utifrån CAM:s användargränssnitt
 
 ## Använda Cloud Acceleration Manager {#using-cam}
 
-Cloud Acceleration Manager (CAM) ger en helhetsupplevelse för migreringar i form av en guidad resa genom att tillhandahålla en inledande utvärdering som pekar ut dem mot rätt verktyg, dokumentation och bästa metoder för att säkerställa en lyckad publicering på AEM as a Cloud Service.
+CAM (Cloud Acceleration Manager) ger en helhetsupplevelse för migreringar. Den levereras i form av en guidad resa genom att tillhandahålla en inledande utvärdering som pekar ut rätt verktyg, dokumentation och bästa metoder för att säkerställa en framgångsrik publicering på AEM as a Cloud Service.
 
 ### Navigera till Cloud Acceleration Manager {#navigating}
 
@@ -30,9 +30,9 @@ Följ stegen nedan för att navigera till Cloud Acceleration Manager (CAM):
 
 1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com).
 
-1. Klicka på **Experience Manager** kort.
+1. Klicka **Experience Manager** kort.
 
-1. Klicka på **Starta** från **Cloud Acceleration Manager** för att öppna landningssidan.
+1. Klicka **Starta** från **Cloud Acceleration Manager** så att du kan öppna landningssidan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-1.png)
 
@@ -42,20 +42,20 @@ Följ stegen nedan för att navigera till Cloud Acceleration Manager (CAM):
 >id="aemcloud_cam_gettingstarted"
 >title="Komma igång med Cloud Acceleration Manager"
 >abstract="Skapa ditt projekt och kom igång snabbt med din resa till AEM as a Cloud Service."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/introduction-cam/benefits-cam.html?lang=en" text="Fördelar med Cloud Acceleration Manager"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/introduction-cam/benefits-cam.html?lang=en" text="Fördelar med Cloud Acceleration Manager"
 
 På landningssidan i CAM-hanteraren (Cloud Acceleration Manager) kan du skapa och redigera flera projekt.
 
-Skapa ett nytt projekt genom att följa stegen nedan:
+Skapa ett projekt genom att följa stegen nedan:
 
-1. Klicka på **Skapa projekt** från landningssidan.
+1. Klicka **Skapa projekt** från landningssidan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-2.png)
 
    >[!NOTE]
-   >Användare som använder CAM för första gången ser en dialogruta där de kan skapa ett nytt projekt. Användare som har använt CAM tidigare kommer att se ett standardprojekt eller projekt som skapats tidigare.
+   >Användare som använder CAM för första gången kan se en dialogruta för att skapa ett projekt. Användare som har använt CAM tidigare ser ett standardprojekt eller projekt som skapats tidigare.
 
-1. Ange **Namn** och **Beskrivning** för ditt projekt och klicka på **Skapa**.
+1. Ange **Namn** och **Beskrivning** för ditt projekt och klicka **Skapa**.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-3.png)
 
@@ -63,7 +63,7 @@ Skapa ett nytt projekt genom att följa stegen nedan:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-landing.png)
 
-1. Klicka på projektkortet för att ange projektet. Då kommer du till projektets landningssida.
+1. Klicka på projektkortet så att du kan ange projektet. Du dirigeras till projektstartsidan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-5.png)
 
@@ -75,7 +75,7 @@ Du kan redigera projektnamnet, beskrivningen, miniatyrbilden eller ta bort proje
 
 Följ stegen nedan för att redigera ditt projekt:
 
-1. Markera projektet och för markören över projektet och klicka på pennikonen för att redigera projektet, så som visas i bilden nedan.
+1. Markera projektet och för pekaren över projektet, och klicka på pennikonen så att du kan öppna och redigera projektet, vilket visas i bilden nedan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-4.png)
 
@@ -83,18 +83,18 @@ Följ stegen nedan för att redigera ditt projekt:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-edit.png)
 
-1. Klicka på **Uppdatera** för att genomföra ändringarna.
+1. Klicka **Uppdatera** för att genomföra ändringarna.
 
 ### Tar bort projektet {#delete-project}
 
 Följ stegen nedan för att ta bort ditt projekt:
 
-1. Markera projektet och för markören över projektet och klicka på ikonen för att ta bort projektet, så som visas i bilden nedan.
+1. Markera projektet och för markören över projektet, och klicka på ikonen för att ta bort projektet, så som visas i bilden nedan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-4.png)
 
-1. Klicka på **Ta bort** för att bekräfta steget.
+1. Klicka **Ta bort** för att bekräfta steget.
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg i [Beredskapsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=en).
+När du har lärt dig hur du loggar in i Cloud Acceleration Manager och hur du skapar ett projekt är du redo att gå igenom nästa steg i [Beredskapsfas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=en).
