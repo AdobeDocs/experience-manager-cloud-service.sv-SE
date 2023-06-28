@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 171aca87ff725a2f142f0336dca3491e213f55ab
+source-git-commit: 69c6ca6104e5360e2db4c3ba9f34b3cddb2269ab
 workflow-type: tm+mt
-source-wordcount: '4081'
+source-wordcount: '4085'
 ht-degree: 20%
 
 ---
@@ -73,6 +73,7 @@ ht-degree: 20%
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
       + 2023 {#2023}
+         + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023.6.0.md)
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023.4.0.md)
          + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023.2.0.md)
          + [Versionsinformation om underhåll för 2023.1.0](/help/release-notes/maintenance/2023/2023.1.0.md)

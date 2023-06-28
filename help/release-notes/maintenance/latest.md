@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 39696141a50bf8204d37341a85a4f4a8acae69db
+source-git-commit: fd0b8ca281f35a92876f3c31baa4e17884f23948
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 1%
+source-wordcount: '297'
+ht-degree: 2%
 
 ---
 
@@ -13,44 +13,36 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Version 12255 {#release-12255}
+## Version 12441 {#release-12441}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 12255, som offentliggjordes den 13 juni 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 12142.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 12441, som offentliggjordes den 27 juni 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 12255.
 
-2023.6.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lansering av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
+2023.7.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lansering av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-12255}
+### Förbättringar {#enhancements-12441}
+
+- SITES-8769: Förbättra StyleImpl-anrop i ResponsiveGrid
+
+### Åtgärdade problem {#fixed-issues-12441}
+
+- Olika tillgänglighetsrelaterade uppdateringar
+- SITES-12688: Sidredigeraren: Logiska operatorn ELLER fungerar inte korrekt i sökningen i Resurssökaren
+- SITES-4951: Sidredigeraren: Taggar-sökning i sidredigeraren hittar inte undertaggar
+- SITES-12465: Upplevelsefragment: Piltangenter fungerar inte i Experience fragment-komponentens dialogruta
+- SITES-12893: Upplevelsefragment: Använd cirkulär referensvalidering för Experience Fragments
+- SITES-12715: Upplevelsefragment: Konfigurationer av molntjänster som används i Experience fragments mapp finns inte kvar
+- SITES-13097: Upplevelsefragment: Det går inte att lägga till upplevelsefragment i ett översättningsprojekt
+- SITES-13165: GraphQL: Återställ standardbeteende för filtrering av null-värden
+- SITES-12577: Länkkontroll: Transformatorn skriver inte om länkar ibland
+- SITES-13559: MSM: Undantaget &#39;Är inte ändringsbart&#39; utlöses när komponenten rullas ut
+- SITES-11757: MSM: Ärv utrullningskonfiguration från överordnad återställs inte för underordnade sidor
+- SITES-14073: Webbplatsadministratör: CSV-rapporten misslyckas med 500 när ingen egenskap väljs för export
+
+### Kända fel {#known-issues-12441}
 
 Ingen.
 
-### Åtgärdade problem {#fixed-issues-12255}
-
-- Olika tillgänglighetsrelaterade uppdateringar
-- ASSETS-15116 - Alternativet &quot;Gå till plats&quot; är tillgängligt i resursens sökvy
-- ASSETS-17453 - (Dynamic Media) Det går inte att välja en anpassad miniatyrbild för videoklipp
-- ASSETS-19279 - Arkiv för hämtning av resurser för stora filer
-- ASSETS-19544 - Senast ändrad av användaren för resursuppdateringar
-- ASSETS-20146 - (Touch UI) Rapporter om misslyckade hämtningsrapporter på grund av valideringsfel visas alltid högst upp på listsidan för rapporter
-- ASSETS-21056 - Optimera prestanda för resursreferens för att minimera skrivningar
-- ASSETS-21909 - Det går inte att se videon med smart beskärning när videon inte kan hämtas
-- ASSETS-22261 - Mappstrukturen för Linkshare-hämtningar är inkonsekvent med resursgränssnittets hämtningar
-- ASSETS-22550 - sökfilterpanelen är nu öppen som standard
-- ASSETS-22920 - Avpubliceringsmappen från Brand Portal markerar inte resurserna i som opublicerade
-- ASSETS-22922 - Inaktiverade visningsprogramförinställningar visas i Dynamic Media-komponenten
-- ASSETS-23461 - sökvyn Brand Portal Snabbpublicering från resurser
-- ASSETS-23466 - Länkhantering som inte går att komma åt i InDesign Server kan inte matcha AAL-länkar som innehåller blanksteg
-- ASSETS-23469 - Standardresursfilter kolliderade med anpassade filter
-- ASSETS-23981 - Sorteringsfunktionen för titlar som inte fungerar i samlingslänkar
-- ASSETS-24723 - Publicerade resurser bearbetades på nytt utan att användaren behövde göra något
-- GRANITE-45385 - Migrera trädaktivering så att sling-jobb används i stället för arbetsflöde
-
-### Kända fel {#known-issues-12255}
-
-- ASSETS-25729 - Visa väljarmenyn är inaktiverad
-- ASSETS-25728 - alternativet Bearbeta om resurs är inte tillgängligt i sökvyn
-- ASSETS-22603 - Vissa kolumner för tillgångsrapport av hämtningstyp visar &quot;null&quot;-värden i användargränssnittet. Hämtningsbar CSV-fil påverkas inte.
-
-### Inbäddade tekniker {#embedded-tech-12255}
+### Inbäddade tekniker {#embedded-tech-12441}
 
 | Teknik | Version | Länk |
 |---|---|---|
