@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: fd0b8ca281f35a92876f3c31baa4e17884f23948
+source-git-commit: f0dc0e0ccd196ab748e2bfcdb4ce404c1c91c213
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 2%
+source-wordcount: '604'
+ht-degree: 0%
 
 ---
 
@@ -22,6 +22,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 124
 ### Förbättringar {#enhancements-12441}
 
 - SITES-8769: Förbättra StyleImpl-anrop i ResponsiveGrid
+- Forms-5054: Stöd för alla [statyer](https://opensource.adobe.com/acrobat-sign/acrobat_sign_events/webhookeventsagreements.html) som stöds av Adobe Sign.
 
 ### Åtgärdade problem {#fixed-issues-12441}
 
@@ -37,6 +38,21 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 124
 - SITES-13559: MSM: Undantaget &#39;Är inte ändringsbart&#39; utlöses när komponenten rullas ut
 - SITES-11757: MSM: Ärv utrullningskonfiguration från överordnad återställs inte för underordnade sidor
 - SITES-14073: Webbplatsadministratör: CSV-rapporten misslyckas med 500 när ingen egenskap väljs för export
+- Forms-7648: Validering av fältet Maximalt antal siffror fungerar inte för Numeric Box-komponenten.
+- Forms-8177: När Forms-tjänsten är aktiv kunde inte felsökningarna för com.adobe.aem.formsndocuments.publish.AssetReferenceProvider hämta resursberoenden.
+- Forms-8300: När en användare försöker delegera en uppgift efter att ha öppnat den, läser delegatsvaret in uppgiften igen, i stället för att öppna användarens AEM.
+- Forms-8500: I Microsoft® Edge-webbläsaren med alternativet IE Mode aktiverat kan HTML5 Forms inte öppnas.
+- Forms-8541: Vid återgivning av ett adaptivt Forms inträffar ett Null-pekarundantag.
+- Forms-8964: När ett formulär öppnas på en Android™-enhet i Google Chrome eller Mozilla Firefox går det inte att ta bort texten som anges i textrutekomponenten.
+- Forms-9026: När en användare skapar ett adaptivt formulär baserat på ett komplext och giltigt JSON-schema, drar relaterade JSON-schemafält till adaptiv Forms-redigerare för att skapa adaptiva Forms-fält och uppdaterar fönstret Adaptiv Forms Editor, tas alla fält bort och Adaptiv Forms-redigerare visas tomma.
+- Forms-9263: När en kryssrutas visningstext innehåller specialtecken kan användaren inte markera sådana kryssrutor.
+- Forms-8668: När du återger en förhandsgranskning av ett formulär i PDF visas en del Java™-stackdumpar som inte behövs i felloggarna. Det finns dock inga problem med att återge formuläret.
+- Forms-8116: När regler tillämpas på den adaptiva Forms-behållarkomponenten sparas inte de regler som används.
+- Forms-7906: När ett anpassat formulär läggs till i en AEM Sites-behållarkomponent kan regelredigeraren inte öppnas.
+- Forms-8846: Referensegenskapen Bind fungerar inte för komponenten Adaptiva Forms-bilagor.
+- Forms-9072: När du söker i ett schema när du skapar ett formulärfragment returnerar sökresultatet inget schema för markering.
+- Forms: Flera tillgänglighetsrelaterade fel har korrigerats för att förbättra tillgängligheten för AEM Forms-funktioner.
+
 
 ### Kända fel {#known-issues-12441}
 
