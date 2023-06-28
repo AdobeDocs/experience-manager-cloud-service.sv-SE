@@ -2,9 +2,9 @@
 title: Headless Setup
 description: Med den här snabbstartsguiden lär du dig grunderna i AEM as a Cloud Service kraftfulla headless-funktioner som Content Models, Content Fragments och GraphQL API.
 exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Nedan beskrivs en enkel väg för att skapa, hantera och leverera upplevelser me
 >
 >Den här guiden för att komma igång förutsätter kunskap om både AEM och headless-teknik.
 >
->Om du inte är van vid AEM eller headless, se våra Headless Documentation Journeys för en heltäckande introduktion till både headless och hur AEM klarar det.
+>Om du inte är van vid AEM eller headless, se Adobe Headless Documentation Journeys för en heltäckande introduktion till både headless och hur AEM klarar det.
 >
 >* [Headless Developer Journey](/help/journey-headless/developer/overview.md)
 >* [Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
@@ -36,9 +36,9 @@ De uppgifter som beskrivs är nödvändiga för en grundläggande heltäckande d
 
 I en produktionssituation utförs uppgifterna dock av olika personer, olika många gånger. Till exempel:
 
-* **Administratörer** kommer att behöva konfigurera den inledande konfigurationen och mappstrukturen för innehållet normalt bara en gång eller sporadiskt.
-* **Informationsarkitekter** kommer i allmänhet att lägga till nya modeller i takt med att organisationens behov utvecklas.
-* **Innehållsförfattare** skapar kontinuerligt nytt innehåll som innehållsfragment baserat på de modeller som definieras av arkitekterna.
+* **Administratörer** måste ställa in den inledande konfigurationen och mappstrukturen för innehållet normalt bara en gång eller sporadiskt.
+* **Informationsarkitekter** i allmänhet lägger till nya modeller allt eftersom organisationens behov förändras.
+* **Innehållsförfattare** skapa kontinuerligt innehåll som innehållsfragment baserat på de modeller som definieras av arkitekterna.
 
 ## Nästa steg {#next-step}
 

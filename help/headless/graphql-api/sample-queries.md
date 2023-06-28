@@ -1,29 +1,28 @@
 ---
 title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
-description: Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
+description: Lär dig använda GraphQL med AEM så att du kan leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: 063d8a23c0634de7c5c25b4e617cc536c2dc3a3b
+source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
 workflow-type: tm+mt
-source-wordcount: '1760'
+source-wordcount: '1752'
 ht-degree: 0%
 
 ---
 
 # Lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
-Lär dig använda GraphQL med AEM för att leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
+Lär dig använda GraphQL med AEM så att du kan leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 
 >[!NOTE]
 >
->Den här sidan ska läsas tillsammans med:
+>Läs den här sidan tillsammans med följande:
 >
 >* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
 >* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
 
-
-Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan du se några praktiska exempel.
+Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan det vara bra att se några praktiska exempel.
 
 Mer information finns i:
 
@@ -49,14 +48,13 @@ I de här exempelfrågorna finns illustrationer av hur du skapar frågor, tillsa
 >* **verktyg** -> **Allmänt** -> **GraphQL Query Editor**
 >* direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
-
 >[!NOTE]
 >
 >Exempelfrågorna baseras på [Exempel på struktur för innehållsfragment som kan användas med GraphQL](#content-fragment-structure-graphql)
 
 ### Exempelfråga - Alla tillgängliga scheman och datatyper {#sample-all-schemes-datatypes}
 
-Detta returnerar alla `types` för alla tillgängliga scheman.
+Returnerar alla `types` för alla tillgängliga scheman.
 
 **Exempelfråga**
 
@@ -149,7 +147,7 @@ Detta returnerar alla `types` för alla tillgängliga scheman.
 
 ### Exempelfråga - All information om alla städer {#sample-all-information-all-cities}
 
-Om du vill hämta all information om alla städer kan du använda den grundläggande frågan:
+Om du vill hämta all information om alla städer kan du använda följande grundläggande fråga:
 **Exempelfråga**
 
 ```graphql
@@ -160,7 +158,7 @@ Om du vill hämta all information om alla städer kan du använda den grundlägg
 }
 ```
 
-När den körs utökas frågan automatiskt så att den omfattar alla fält:
+Vid körning utökas frågan automatiskt så att den omfattar alla fält:
 
 ```graphql
 {
@@ -232,7 +230,7 @@ När den körs utökas frågan automatiskt så att den omfattar alla fält:
 
 ### Exempelfråga - namn på alla städer {#sample-names-all-cities}
 
-Det här är en enkel fråga som returnerar `name`av alla poster i `city`schema.
+En enkel fråga som returnerar `name`av alla poster i `city`schema.
 
 **Exempelfråga**
 
@@ -282,7 +280,7 @@ query {
 
 ### Exempelfråga - Ett enskilt specifikt stadsfragment {#sample-single-specific-city-fragment}
 
-Det här är en fråga som returnerar information om en enskild fragmentpost på en viss plats i databasen.
+En fråga som returnerar information om en enskild fragmentpost på en viss plats i databasen.
 
 **Exempelfråga**
 
@@ -323,7 +321,7 @@ Det här är en fråga som returnerar information om en enskild fragmentpost på
 
 ### Exempelfråga - Alla städer med en namngiven variant {#sample-cities-named-variation}
 
-Om du skapar en ny variant som heter &quot;Berlin Center&quot; (`berlin_centre`), för `city` I Berlin kan du använda en fråga för att returnera information om variationen.
+Om du skapar en variant med namnet &quot;Berlin Center&quot; (`berlin_centre`), för `city` I Berlin kan du använda en fråga för att returnera information om variationen.
 
 **Exempelfråga**
 
@@ -368,8 +366,8 @@ Om du skapar en ny variant som heter &quot;Berlin Center&quot; (`berlin_centre`)
 
 Om du:
 
-* skapa en mängd olika taggar, namngivna `Tourism` : `Business`, `City Break`, `Holiday`
-* och tilldela dessa till den Överordnad variationen av `City` instanser
+* skapa olika taggar, namngivna `Tourism` : `Business`, `City Break`, `Holiday`
+* och tilldela dem till de Överordnad variationerna av olika `City` instanser
 
 Sedan kan du använda en fråga för att returnera information om `name` och `tags`av alla poster som är taggade som Citybrytningar i `city`schema.
 
@@ -546,7 +544,7 @@ query {
 
 ### Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot; {#sample-all-persons-jobs-smith}
 
-Detta kommer att filtrera alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
+En fråga som filtrerar alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
 
 **Exempelfråga**
 
@@ -600,7 +598,7 @@ query {
 
 ### Exempelfråga - Alla personer som inte har namnet &quot;Jobs&quot; {#sample-all-persons-not-jobs}
 
-Detta kommer att filtrera alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
+En fråga som filtrerar alla `persons` för alla som har ett namn `Jobs`eller `Smith`.
 
 **Exempelfråga**
 
@@ -1154,15 +1152,14 @@ query {
 
 ## Exempelfrågor med WKND-projektet {#sample-queries-using-wknd-project}
 
-Dessa exempelfrågor är baserade på WKND-projektet. Detta har:
+Dessa exempelfrågor är baserade på WKND-projektet. Den har följande:
 
 * Content Fragment Models available under:
-   `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
+  `http://<hostname>:<port>/libs/dam/cfm/models/console/content/models.html/conf/wknd`
 
 * Innehållsfragment (och annat innehåll) tillgängliga under:
-   `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
-
-   `http://<hostname>:<port>/assets.html/content/dam/wknd-shared/en`
+  `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
+  `http://<hostname>:<port>/assets.html/content/dam/wknd-shared/en`
 
 >[!NOTE]
 >
@@ -1259,7 +1256,7 @@ Den här frågan förhör:
 Detta exempel på frågor intervjuar:
 
 * för ett enda innehållsfragment av typen `article` vid en viss sökväg
-   * där alla format:
+   * inom det fragmentet, alla innehållsformat:
       * HTML
       * Markdown
       * Oformaterad text
@@ -1318,7 +1315,7 @@ Detta exempel på frågor intervjuar:
 Den här frågan förhör:
 
 * för ett enda innehållsfragment av typen `article` vid en viss sökväg
-   * i det, sökvägen och författaren till det refererade (kapslade) fragmentet
+   * inom det fragmentet, sökvägen och författaren till det refererade (kapslade) fragmentet
 
 >[!NOTE]
 >
@@ -1541,7 +1538,7 @@ Den här frågan förhör:
 Den här frågan förhör:
 
 * för ett enda innehållsfragment av typen `author` vid en viss sökväg
-   * inom detta, de uppgifter som avser variationen: `another`
+   * inom det fragmentet, de data som rör variationen: `another`
 
 **Exempelfråga**
 
@@ -1567,7 +1564,7 @@ Den här frågan förhör:
 
 >[!NOTE]
 >
->Detta visar återfall för innehållsfragment som inte har en [Variation](/help/headless/graphql-api/content-fragments.md#variations) för det angivna namnet.
+>Den här frågan visar reservlösningar för innehållsfragment som inte har en [Variation](/help/headless/graphql-api/content-fragments.md#variations) för det angivna namnet.
 
 **Exempelfråga**
 
@@ -1720,7 +1717,7 @@ Den här frågan förhör:
 }
 ```
 
-### Exempelfråga med filtrering efter _tagg-ID och exklusive variationer {#sample-filtering-tag-not-variations}
+### Exempelfråga med filtrering efter _tagg-ID och utan variationer {#sample-filtering-tag-not-variations}
 
 Den här frågan förhör:
 
@@ -1808,7 +1805,7 @@ Exempelfrågorna baseras på följande struktur som använder:
 
 ### Exempel på modeller för innehållsfragment (scheman) {#sample-content-fragment-models-schemas}
 
-För exempelfrågorna använder vi följande innehållsmodeller och deras inbördes relationer (referenser ->):
+För exempelfrågorna använder du följande innehållsmodeller och deras inbördes relationer (referenser ->):
 
 * [Företag](#model-company)
 -> [Person](#model-person)
@@ -1822,7 +1819,7 @@ De grundläggande fälten som definierar företaget är:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Företag | Enkelradig text |  |
+| Företag | Enkelradig text | |
 | VD | Fragmentreferens (enkel) | [Person](#model-person) |
 | Anställda | Fragmentreferens (multifält) | [Person](#model-person) |
 
@@ -1832,8 +1829,8 @@ Fälten som definierar en person, som också kan vara en medarbetare:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Namn | Enkelradig text |  |
-| Förnamn | Enkelradig text |  |
+| Namn | Enkelradig text | |
+| Förnamn | Enkelradig text | |
 | Utmärkelser | Fragmentreferens (multifält) | [Utmärkelse](#model-award) |
 
 #### Utmärkelse {#model-award}
@@ -1842,8 +1839,8 @@ Fälten som definierar en utmärkelse är:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Genväg/ID | Enkelradig text |  |
-| Titel | Enkelradig text |  |
+| Genväg/ID | Enkelradig text | |
+| Titel | Enkelradig text | |
 
 #### Ort {#model-city}
 
@@ -1851,10 +1848,10 @@ Fälten för att definiera en stad är:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Namn | Enkelradig text |  |
-| Land | Enkelradig text |  |
-| Population | Siffra |  |
-| Kategorier | Taggar |  |
+| Namn | Enkelradig text | |
+| Land | Enkelradig text | |
+| Population | Siffra | |
+| Kategorier | Taggar | |
 
 ### Exempel på innehållsfragment {#sample-content-fragments}
 
@@ -1872,14 +1869,14 @@ Följande fragment används för rätt modell.
 
 | Namn | Förnamn | Utmärkelser |
 |--- |--- |--- |
-| Lincoln | Adobe |  |
-| Smith | Adam |  |
+| Lincoln | Adobe | |
+| Smith | Adam | |
 | Slade | Rensare | Gameblitz<br>Gamestar |
-| Marmor | Duke |  |
-| Smith | Joe |  |
+| Marmor | Duke | |
+| Smith | Joe | |
 | Beskär | Lara | Gamestar |
 | Caulfield | Max | Gameblitz |
-| Jobb | Steve |  |
+| Jobb | Steve | |
 
 #### Utmärkelse {#fragment-award}
 

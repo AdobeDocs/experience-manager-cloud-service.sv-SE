@@ -2,16 +2,16 @@
 title: AEM Technical Foundations
 description: En översikt över den tekniska grunden för AEM, inklusive hur AEM är strukturerad och grundläggande tekniker som JCR, Sling och OSGi.
 exl-id: ab6e7fe9-a25d-4351-a005-f4466cc0f40e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2144'
 ht-degree: 0%
 
 ---
 
 # AEM Technical Foundations {#aem-technical-foundations}
 
-AEM är en stabil plattform som bygger på beprövade, skalbara och flexibla tekniker. I det här dokumentet finns en detaljerad översikt över de olika delar som AEM består av och är avsedda som ett tekniskt tillägg för en AEM som utvecklar en hel hög. Den är inte avsedd som en guide för att komma igång. Om du inte har använt AEM tidigare bör du läsa [Getting Started Developing AEM Sites - WKND Tutorial](develop-wknd-tutorial.md) som ett första steg.
+AEM är en stabil plattform som bygger på beprövade, skalbara och flexibla tekniker. Det här dokumentet ger en detaljerad översikt över de olika delar som AEM består av och är avsett som ett tekniskt tillägg för en AEM som utvecklar en hel hög. Den är inte avsedd som en guide för att komma igång. Om du inte är van vid att AEM utveckling, se [Getting Started Developing AEM Sites - WKND Tutorial](develop-wknd-tutorial.md) som ett första steg.
 
 >[!TIP]
 >
@@ -26,85 +26,85 @@ Som ett modernt innehållshanteringssystem använder AEM standardwebbtekniker:
 * CSS
 * JavaScript
 
-Den underliggande innehållsdatabasen och affärslogiken bygger på Java-tekniker:
+Det underliggande lagret för innehåll och affärslogik bygger på Java™-teknologier:
 
 * JCR
 * Sling
 * OSGi
 
-## Java Content Repository {#java-content-repository}
+## Java™ Content Repository {#java-content-repository}
 
-Java Content Repository (JCR)-standarden, [JSR 283](https://www.adobe.io/experience-manager/reference-materials/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att få åtkomst till innehåll dubbelriktat på en detaljnivå i en innehållsdatabas. Specifikationsledaren innehas av Adobe Research (Schweiz) AG.
+Java™ Content Repository (JCR)-standarden, [JSR 283](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/index.html), anger ett leverantörsoberoende och implementeringsoberoende sätt att få åtkomst till innehåll dubbelriktat på en detaljnivå i en innehållsdatabas. Specifikationsledaren innehas av Adobe Research (Schweiz) AG.
 
-The [JCR API 2.0](https://www.adobe.io/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) paket, `javax.jcr.*` används för direkt åtkomst och hantering av databasinnehåll.
+The [JCR API 2.0](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html) paket, `javax.jcr.*` används för direkt åtkomst och hantering av databasinnehåll.
 
 AEM bygger på en JCR.
 
 ## Apache Jackrabbit Oak {#jackrabbit-oak}
 
-[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/) är en implementering av ett skalbart och högpresterande hierarkiskt innehållslager som kan användas som grund för moderna webbplatser i världsklass och andra krävande innehållsprogram, som uppfyller JCR-standarden.
+[Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/) är en implementering av ett skalbart och högpresterande hierarkiskt innehållslager som kan användas som grund för moderna webbplatser i världsklass och andra krävande innehållsprogram, som uppfyller JCR-standarden.
 
 Jackrabbit Oak (även kallad Oak) är implementeringen av JCR-standarden som AEM bygger på.
 
 ## Bearbetning av försäljningsbegäran {#sling-request-processing}
 
-AEM byggs med [Sling](https://sling.apache.org/site/index.html), ett ramverk för webbapplikationer som bygger på REST-principer och som gör det enkelt att utveckla innehållsorienterade applikationer. Sling använder en JCR-databas, som Apache Jackrabbit Oak, som datalager. Sling har bidragit till Apache Software Foundation - mer information finns på Apache.
+AEM byggs med [Sling](https://sling.apache.org/index.html), ett ramverk för webbapplikationer som bygger på REST-principer och som gör det enkelt att utveckla innehållsorienterade applikationer. Sling använder en JCR-databas, som Apache Jackrabbit Oak, som datalager. Sling har bidragit till Apache Software Foundation - mer information finns på Apache.
 
 ### Introduktion till Sling {#introduction-to-sling}
 
-Med Sling är den typ av innehåll som ska återges inte den första bearbetningen. Det viktigaste är i stället om URL:en tolkas till ett innehållsobjekt för vilket ett skript sedan kan användas för återgivningen. Detta ger ett utmärkt stöd för dem som skapar webbmaterial att bygga sidor som enkelt kan anpassas efter deras behov.
+Med Sling är den typ av innehåll som ska återges inte den första bearbetningen. Det viktigaste är i stället om URL:en tolkas till ett innehållsobjekt för vilket ett skript sedan kan hittas för att utföra återgivningen. Den här processen ger utmärkt stöd för webbinnehållsförfattare att skapa sidor som enkelt kan anpassas efter deras behov.
 
 Fördelarna med den här flexibiliteten är uppenbara i program med många olika innehållselement eller när du behöver sidor som enkelt kan anpassas. Detta gäller särskilt när man implementerar ett system för hantering av webbinnehåll, t.ex. AEM.
 
 Se [Upptäck Sling på 15 minuter](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html) för de första stegen för att utveckla med Sling.
 
-I följande diagram förklaras Sling-skriptupplösningen: visar hur du hämtar från HTTP-begäran till innehållsnod, från innehållsnod till resurstyp, från resurstyp till skript och vilka skriptvariabler som är tillgängliga.
+I följande diagram förklaras Sling-skriptupplösningen. Den visar hur du hämtar från HTTP-begäran till innehållsnoden, från innehållsnod till resurstyp, från resurstyp till skript och vilka skriptvariabler som är tillgängliga.
 
 ![Om Apache Sling-skriptupplösningen](assets/sling-cheatsheet-01.png)
 
-I följande diagram förklaras alla dolda, men kraftfulla, frågeparametrar som du kan använda när du hanterar `SlingPostServlet`, standardhanteraren för alla begäranden om POSTER som ger dig oändliga alternativ för att skapa, ändra, ta bort, kopiera och flytta noder i databasen.
+I följande diagram förklaras de dolda, men kraftfulla, frågeparametrarna som du kan använda med `SlingPostServlet`, standardhanteraren för alla POSTER. Hanteraren ger dig oändliga alternativ för att skapa, ändra, ta bort, kopiera och flytta noder i databasen.
 
 ![Använda SlingPostServlet](assets/sling-cheatsheet-02.png)
 
 ### Sling är innehållscentrerat {#sling-is-content-centric}
 
-Sling är *innehållscentrerad*. Detta innebär att bearbetningen är inriktad på innehållet eftersom varje HTTP-begäran mappas till innehåll i form av en JCR-resurs (en databasnod):
+Sling är *innehållscentrerad*. Det innebär att bearbetningen är inriktad på innehållet eftersom varje HTTP-begäran mappas till innehåll i form av en JCR-resurs (en databasnod):
 
 * Det första målet är den resurs (JCR-nod) som innehåller innehållet
-* För det andra finns representationen, eller skriptet, från resursegenskaperna i kombination med vissa delar av begäran (till exempel väljare och/eller tillägg)
+* För det andra finns representationen, eller skriptet, från resursegenskaperna med vissa delar av begäran (till exempel väljare och/eller tillägg)
 
 ### RESTful Sling {#restful-sling}
 
 På grund av sin innehållsorienterade filosofi implementerar Sling en REST-orienterad server och har därmed ett nytt koncept i ramverk för webbapplikationer. Fördelarna är:
 
-* Mycket RESTful, inte bara på ytan; resurser och representationer är korrekt modellerade i servern
+* RESTful, inte bara på ytan; resurser och representationer är korrekt modellerade i servern
 * Tar bort en eller flera datamodeller
    * Andra content management-ramverk kan kräva URL-struktur, affärsobjekt och DB-schema för att komma åt en resurs.
-   * Med Sling minskas detta till: URL = resurs = JCR-struktur
+   * Med Sling minskas den till: URL = resurs = JCR-struktur
 
 ### URL-disposition {#url-decomposition}
 
-Vid Sling styrs bearbetningen av URL:en för användarförfrågningen. Här definieras vilket innehåll som ska visas av rätt skript. Det gör du genom att extrahera information från webbadressen.
+Vid Sling styrs bearbetningen av URL:en för användarförfrågningen. Den definierar det innehåll som ska visas med lämpliga skript och information extraheras från URL:en.
 
-Om vi analyserar följande URL:
+Analyserar följande URL:
 
 ```text
 https://myhost/tools/spy.printable.a4.html/a/b?x=12
 ```
 
-Vi kan dela upp det i dess sammansatta delar:
+Du kan dela upp den i dess sammansatta delar:
 
-| protocol | värd |  | innehållsbana | väljare | extension |  | suffix |  | param(er) |
+| protocol | värd |  | innehållsbana | väljare | extension |  | suffix |  | parametrar |
 |---|---|---|---|---|---|---|---|---|---|
 | `https://` | `myhost` | `/` | `tools/spy` | `.printable.a4.` | `html` | `/` | `a/b` | `?` | `x=12` |
 
 * **protocol** - HTTPS
 * **värd** - Webbplatsens domän
-* **innehållsbana** - Sökväg som anger vilket innehåll som ska återges och som används tillsammans med tillägget. i det här exemplet översätter de till `tools/spy.html`
+* **innehållsbana** - Sökväg som anger det innehåll som ska återges och som används med tillägget. I det här exemplet innebär det att `tools/spy.html`
 * **väljare** - Används för alternativa metoder för återgivning av innehållet. i det här exemplet en utskriftsvänlig version i A4-format
 * **extension** - Innehållsformat; anger även vilket skript som ska användas för återgivning
 * **suffix** - Kan användas för att ange ytterligare information
-* **param(er)** - Alla parametrar som krävs för dynamiskt innehåll
+* **parametrar** - Alla parametrar som krävs för dynamiskt innehåll
 
 #### Från URL till innehåll och skript {#from-url-to-content-and-scripts}
 
@@ -127,11 +127,11 @@ Begäran har delats upp och nödvändig information har extraherats. Databasen g
 * Om ingen nod hittas tas tillägget bort och sökningen upprepas. till exempel `../content/corporate/jobs/developer`
 * Om ingen nod hittas returnerar Sling http-koden 404 (Hittades inte).
 
-Med Sling kan även andra saker än JCR-noder vara resurser, men det här är en avancerad funktion.
+Med Sling kan även andra saker än JCR-noder vara resurser, men den här funktionen är en avancerad funktion.
 
 ### Hitta skriptet {#locating-the-script}
 
-När rätt resurs (innehållsnod) finns, **slingresurstyp** extraheras. Detta är en sökväg som letar upp skriptet som ska användas för återgivning av innehållet.
+När rätt resurs (innehållsnod) finns, **slingresurstyp** extraheras. Den här sökvägen hittar det skript som ska användas för återgivning av innehållet.
 
 Sökvägen som anges av `sling:resourceType` kan antingen vara:
 
@@ -159,18 +159,18 @@ Använda föregående exempel om `sling:resourceType` är `hr/jobs` sedan för:
    * POST används i skriptnamnet.
    * Skriptet är `/apps/hr/jobs/jobs.POST.esp`.
 * URL-adresser i andra format, slutar inte med `.html`
-   * Till exempel `../content/corporate/jobs/developer.pdf`
+   * Till exempel, `../content/corporate/jobs/developer.pdf`
    * Skriptet är `/apps/hr/jobs/jobs.pdf.esp`; suffixet läggs till i skriptnamnet.
 * URL:er med väljare
    * Väljare kan användas för att visa samma innehåll i ett alternativt format. Till exempel en utskriftsvänlig version, ett RSS-flöde eller en sammanfattning.
-   * Om vi tittar på en utskriftsvänlig version där väljaren kan vara `print`; som i `../content/corporate/jobs/developer.print.html`
+   * Om du tittar på en utskriftsvänlig version där väljaren kan vara `print`; som i `../content/corporate/jobs/developer.print.html`
    * Skriptet är `/apps/hr/jobs/jobs.print.esp`; väljaren läggs till i skriptnamnet.
-* Om nej `sling:resourceType` har definierats då:
-   * Innehållssökvägen används för att söka efter ett lämpligt skript (om sökvägen är baserad) `ResourceTypeProvider` är aktivt).
+* Om nej, `sling:resourceType` definieras sedan:
+   * Innehållssökvägen används för att söka efter ett lämpligt skript (om den sökvägsbaserade `ResourceTypeProvider` är aktivt).
    * Skriptet för `../content/corporate/jobs/developer.html` skulle generera en sökning i `/apps/content/corporate/jobs/`.
    * Den primära nodtypen används.
 * Om inget skript hittas alls används standardskriptet.
-   * Standardåtergivningen stöds för närvarande som oformaterad text (`.txt`), HTML (`.html`) och JSON (`.json`), som alla innehåller nodens egenskaper (lämpligt formaterade). Standardåtergivningen för tillägget `.res`, eller begäranden utan ett tillägg till en begäran, är att resursen (där det är möjligt) ska tas bort.
+   * Standardåtergivningen stöds som oformaterad text (`.txt`), HTML (`.html`) och JSON (`.json`), som alla innehåller en lista med nodens egenskaper (lämpligt formaterade). Standardåtergivningen för tillägget `.res`, eller begäranden utan ett tillägg till en begäran, är att resursen (där det är möjligt) ska tas bort.
 * För http-felhantering (kod 403 eller 404) söker Sling efter ett skript på antingen:
    * Platsen `/apps/sling/servlet/errorhandler` för anpassade skript
    * Eller platsen för standardskriptet `/libs/sling/servlet/errorhandler/404.jsp`
@@ -181,11 +181,11 @@ Ta till exempel en begäran om åtkomst till resursen
 
 * `/content/corporate/jobs/developer.print.a4.html`
 
-av typen
+Av typ
 
 * `sling:resourceType="hr/jobs"`
 
-Anta att vi har följande skriptlista på rätt plats:
+Anta att du har följande lista med skript på rätt plats:
 
 1. `GET.esp`
 1. `jobs.esp`
@@ -198,7 +198,7 @@ Anta att vi har följande skriptlista på rätt plats:
 
 Sedan är ordningen (8) - (7) - (6) - (5) - (4) - (3) - (2) - (1).
 
-Förutom resurstyperna (definieras primärt av `sling:resourceType` ) finns också resursens supertyp. Detta anges vanligtvis av `sling:resourceSuperType` -egenskap. De här supertyperna beaktas också när du försöker hitta ett skript. Fördelen med resurssupertyper är att de kan utgöra en hierarki av resurser där standardresurstypen är `sling/servlet/default` (används av standardservletarna) är roten.
+Förutom resurstyperna (definieras primärt av `sling:resourceType` ) finns också resursens supertyp. Denna typ anges av `sling:resourceSuperType` -egenskap. De här supertyperna beaktas också när du försöker hitta ett skript. Fördelen med resurssupertyper är att de kan utgöra en hierarki av resurser där standardresurstypen är `sling/servlet/default` (används av standardservletarna) är roten.
 
 Resursens överordnade typ kan definieras på två sätt:
 
@@ -226,11 +226,11 @@ Typhierarkin för:
 * Med `/y`
    * Hierarkin är `[ c, a, <default>]`
 
-Det beror på att `/y` har `sling:resourceSuperType` egenskap. `/x` inte och dess supertyp tas därför från sin resurstyp.
+Orsaken är att `/y` har `sling:resourceSuperType` egendom, medan `/x` inte och dess supertyp tas därför från sin resurstyp.
 
 #### Sling Scripts kan inte anropas direkt {#sling-scripts-cannot-be-called-directly}
 
-I Sling kan skript inte anropas direkt eftersom detta skulle bryta det strikta begreppet med en REST-server. kan du blanda resurser och representationer.
+I Sling kan skript inte anropas direkt eftersom det skulle bryta det strikta begreppet med en REST-server. kan du blanda resurser och representationer.
 
 Om du anropar representationen (skriptet) direkt döljer du resursen i skriptet, så att ramverket (Sling) inte längre vet om det. Därför förlorar du vissa funktioner:
 
@@ -241,26 +241,26 @@ Om du anropar representationen (skriptet) direkt döljer du resursen i skriptet,
 
 ### Sling API {#sling-api}
 
-Detta använder Sling API-paketet, `org.apache.sling.*`och taggbibliotek.
+Använder Sling API-paketet, `org.apache.sling.*`och taggbibliotek.
 
 ### referera till befintliga element med sling:include {#referencing-existing-elements-using-sling-include}
 
 En sista sak är behovet av att referera till befintliga element i skripten.
 
-Mer komplicerade skript (sammanställning av skript) kan behöva ha tillgång till flera resurser (t.ex. navigering, sidospalt, sidfot, element i en lista) genom att inkludera *resurs*.
+Mer komplicerade skript (sammanfoga skript) har åtkomst till flera resurser (t.ex. navigering, sidospalt, sidfot, element i en lista) och gör det genom att inkludera *resurs*.
 
-För att göra detta kan du använda `sling:include("/<path>/<resource>")` -kommando. Detta inkluderar effektivt definitionen av den refererade resursen.
+I det här fallet kan du använda `sling:include("/<path>/<resource>")` -kommando. Den innehåller effektivt definitionen av den refererade resursen.
 
 ## OSGi {#osgi}
 
-OSGi (Open Services Gateway Initiative) definierar en arkitektur för utveckling och driftsättning av modulära program och bibliotek (kallas även Dynamic Module System för Java). Med OSGi-behållare kan du dela in programmet i enskilda moduler (är jar-filer med ytterligare metainformation och kallas buntar i OSGi-terminologi) och hantera korsberoenden mellan dem med:
+OSGi (Open Services Gateway Initiative) definierar en arkitektur för utveckling och driftsättning av modulära program och bibliotek (kallas även Dynamic Module System för Java™). Med OSGi-behållare kan du dela in programmet i enskilda moduler (är jar-filer med ytterligare metainformation och kallas buntar i OSGi-terminologi) och hantera korsberoenden mellan dem med:
 
 * Tjänster som implementeras i behållaren
 * Ett kontrakt mellan behållaren och programmet
 
 Dessa tjänster och kontrakt utgör en arkitektur som gör att enskilda element dynamiskt kan identifiera varandra för samarbete.
 
-Ett OSGi-ramverk ger dig dynamisk inläsning/borttagning, konfigurering och kontroll av dessa paket - utan att du behöver starta om.
+Ett OSGi-ramverk ger dig dynamisk inläsning/borttagning, konfiguration och kontroll av dessa paket - utan att du behöver starta om.
 
 >[!NOTE]
 >
@@ -268,23 +268,23 @@ Ett OSGi-ramverk ger dig dynamisk inläsning/borttagning, konfigurering och kont
 >
 >På sidan Grundläggande utbildning finns en samling presentationer och självstudiekurser.
 
-Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Sling, och därmed AEM, använder [Apache Felix](https://felix.apache.org/) implementering av OSGi. De är båda samlingar av OSGi-paket som körs i ett OSGi-ramverk.
+Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Sling, och därmed AEM, använder [Apache Felix](https://felix.apache.org/documentation/index.html) implementering av OSGi. De är båda samlingar av OSGi-paket som körs i ett OSGi-ramverk.
 
-Detta gör att du kan utföra följande åtgärder på något av paketen i din installation:
+Med den här funktionen kan du utföra följande åtgärder på något av paketen i din installation:
 
 * Installera
 * Starta
 * Stoppa
 * Uppdatera
 * Avinstallera
-* Se aktuell status
-* Få mer detaljerad information (t.ex. symboliskt namn, version, plats) om de specifika paketen
+* Se senaste status
+* Mer information om specifika paket, till exempel symboliskt namn, version och plats
 
 Se [Konfigurera OSGi för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md) för mer information.
 
 ## Struktur i databasen {#structure-within-the-repository}
 
-I följande lista visas en översikt över strukturen som visas i databasen.
+I följande lista visas en översikt över strukturen som du ser i databasen.
 
 * `/apps` - Ansökningsrelaterade; innehåller komponentdefinitioner som är specifika för din webbplats. Komponenterna som du utvecklar kan baseras på de färdiga komponenterna som finns på `/libs/core/wcm/components`.
 * `/content` - Innehåll som skapats för din webbplats.
@@ -298,4 +298,4 @@ I följande lista visas en översikt över strukturen som visas i databasen.
 >
 >Den här strukturen, eller de filer som finns i den, bör ändras med försiktighet. Se till att du är helt medveten om konsekvenserna av de ändringar du gör.
 >
->Du får inte ändra något i `/libs` bana. För konfiguration och andra ändringar kopierar du objektet från `/libs` till `/apps` och göra ändringar i `/apps`.
+>Ändra ingenting i dialogrutan `/libs` bana. Kopiera objektet från för konfiguration och andra ändringar `/libs` till `/apps` och göra ändringar i `/apps`.

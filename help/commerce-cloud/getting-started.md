@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -63,15 +63,15 @@ När slutpunkten och eventuellt en auktoriseringshuvud för stöd för mellanlag
 
 ![CM-miljöinformation](/help/commerce-cloud/assets/commerce-cmui-done.png)
 
-### Genom Adobe Developer CLI  {#adobe-cli}
+### Genom Adobe I/O CLI  {#adobe-cli}
 
-Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe Developer CLI:
+Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/O CLI:
 
-1. Skaffa Adobe Developer CLI med plugin-programmet Cloud Manager
+1. Skaffa Adobe I/O CLI med plugin-programmet Cloud Manager
 
-   Kontrollera [Dokumentation för Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) om hur du hämtar, konfigurerar och använder [Adobe Developer CLI](https://github.com/adobe/aio-cli) med [CLI-plugin för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+   Kontrollera [Dokumentation för Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [CLI-plugin för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
-2. Autentisera Adobe Developer CLI med det AEM as a Cloud Service programmet
+2. Autentisera Adobe I/O CLI med det AEM as a Cloud Service programmet
 
 3. Ange `COMMERCE_ENDPOINT` variabel i Cloud Manager
 

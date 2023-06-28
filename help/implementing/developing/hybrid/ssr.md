@@ -1,19 +1,19 @@
 ---
 title: SPA- och serveråtergivning
-description: Om du använder SSR-återgivning (server side rendering) i SPA kan det snabba upp den initiala inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
+description: Om du använder SSR-återgivning (server-side rendering) i SPA kan det snabba upp den initiala inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
 exl-id: be409559-c7ce-4bc2-87cf-77132d7c2da1
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1486'
 ht-degree: 0%
 
 ---
 
 # SPA- och serveråtergivning{#spa-and-server-side-rendering}
 
-Single page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som ett systemspecifikt program. [Detta uppnås genom att klienten förlitar sig på att läsa in innehållet framtill och sedan göra den tunga hanteringen av användarinteraktionen](introduction.md#how-does-a-spa-work) och på så sätt minimera mängden kommunikation som krävs mellan klienten och servern, vilket gör appen mer reaktiv.
+Single page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som ett systemspecifikt program. [Den här funktionaliteten uppnås genom att klienten förlitar sig på att läsa in innehållet framtill och sedan göra en grov förbättring av användarinteraktionen](introduction.md#how-does-a-spa-work). Den här processen minimerar mängden kommunikation som krävs mellan klienten och servern, vilket gör programmet mer reaktivt.
 
-Detta kan dock leda till längre inledande inläsningstider, särskilt om SPA är stor och har mycket innehåll. För att optimera inläsningstiden kan en del av innehållet återges på serversidan. Serversidorendering (SSR) kan snabba upp den initiala inläsningen av sidan och sedan överföra ytterligare återgivning till klienten.
+Den här processen kan dock leda till längre inledande inläsningstider, särskilt om SPA är stor och har mycket innehåll. För att optimera inläsningstiden kan en del av innehållet återges på serversidan. Med SSR-återgivning (server-side rendering) går sidans initiala belastning snabbare och skickar sedan vidare återgivning till klienten.
 
 ## När SSR ska användas {#when-to-use-ssr}
 
@@ -23,7 +23,7 @@ När du beslutar dig för att implementera SSR måste du först uppskatta vilken
 
 SSR ger vanligtvis ett visst värde när det finns ett tydligt&quot;ja&quot; till någon av följande frågor:
 
-* **SEO:** Krävs det fortfarande SSR för att webbplatsen ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
+* **SEO:** Krävs fortfarande SSR för att din webbplats ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
 * **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
 
 Endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot; för ditt projekt rekommenderar Adobe att SSR implementeras. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime, som ingår i [App Builder](https://developer.adobe.com/app-builder).
@@ -32,7 +32,7 @@ Endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot
 
 Om du [är säkra på att ditt projekt kräver SSR-implementering](#when-to-use-ssr), rekommenderas Adobe att använda Adobe I/O Runtime.
 
-Mer information om Adobe I/O Runtime finns på
+Mer information om Adobe I/O Runtime finns i:
 
 * [https://developer.adobe.com/runtime](https://developer.adobe.com/runtime) - för en översikt över runtime-funktionen i App Builder
 * [https://developer.adobe.com/app-builder](https://developer.adobe.com/app-builder) - för mer information om den fullständiga App Builder-produkten
@@ -45,15 +45,15 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 
 >[!NOTE]
 >
->Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (scen, prod, testning osv.). Detta möjliggör typiska mönster för systemutvecklingens livscykel (SDLC) med olika versioner av ett enda program som distribueras till olika miljöer.  Se dokumentet [CI/CD för App Builder-program](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/) för mer information.
+>Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (stage, prod, testing osv.). Detta möjliggör typiska mönster för systemutvecklingscykler (SDLC) med olika versioner av ett program som distribueras till olika miljöer. Se [CI/CD för App Builder-program](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/) för mer information.
 >
 >En separat arbetsyta behövs inte per instans (författare, publicering) såvida det inte finns skillnader i körtidsimplementeringen per instanstyp.
 
 ## Fjärrrenderarkonfiguration {#remote-content-renderer-configuration}
 
-AEM måste veta var det fjärråtergivna innehållet kan hämtas. Oavsett [vilken modell du väljer att implementera för SSR,](#adobe-i-o-runtime) måste du ange AEM hur du får åtkomst till den här fjärrrenderingstjänsten.
+AEM måste veta var det fjärråtergivna innehållet kan hämtas. Oavsett [vilken modell du väljer att implementera för SSR,](#adobe-i-o-runtime) du måste ange AEM hur du får åtkomst till den här fjärråtergivningstjänsten.
 
-Detta görs via **RemoteContentRenderer - Configuration Factory OSGi-tjänst**. Sök efter strängen RemoteContentRenderer i webbkonsolens konfigurationskonsol på `http://<host>:<port>/system/console/configMgr`.
+Den här tjänsten utförs via **RemoteContentRenderer - Configuration Factory OSGi-tjänst**. Sök efter strängen RemoteContentRenderer i webbkonsolens konfigurationskonsol på `http://<host>:<port>/system/console/configMgr`.
 
 ![Renderingskonfiguration](assets/renderer-configuration.png)
 
@@ -87,7 +87,7 @@ När SSR används [arbetsflöde för komponentinteraktion](introduction.md#inter
 
 ## Adobe I/O Runtime-drivet kommunikationsflöde {#adobe-i-o-runtime-driven-communication-flow}
 
-I föregående avsnitt beskrivs standardimplementeringen och den rekommenderade implementeringen av serversidans återgivning med avseende på SPA i AEM, där AEM utför startsvällning och -visning av innehåll.
+I det föregående avsnittet beskrivs standardimplementeringen och den rekommenderade implementeringen av serversidesåtergivning för SPA i AEM, där AEM utför startsvällning och -visning av innehåll.
 
 Alternativt kan SSR implementeras så att Adobe I/O Runtime ansvarar för startkomponenten, vilket effektivt kan vända kommunikationsflödet.
 
@@ -105,7 +105,7 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
    <td>
     <ul>
      <li>AEM hanterar inmatning av bibliotek där det behövs</li>
-     <li>Resurserna behöver bara underhållas på AEM<br /> </li>
+     <li>Underhåll endast resurser på AEM<br /> </li>
     </ul> </td>
    <td>
     <ul>
@@ -120,7 +120,7 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
     </ul> </td>
    <td>
     <ul>
-     <li>Clientlib-resurser som krävs av programmet, t.ex. CSS och JavaScript, måste göras tillgängliga av AEM utvecklare via <code><a href="/help/implementing/developing/introduction/clientlibs.md">allowProxy</a></code> property<br /> </li>
+     <li>Klientlib-resurser som krävs av programmet, t.ex. CSS och JavaScript, måste göras tillgängliga av den AEM utvecklaren via <code><a href="/help/implementing/developing/introduction/clientlibs.md">allowProxy</a></code> property<br /> </li>
      <li>Resurserna måste synkroniseras mellan AEM och Adobe I/O Runtime<br /> </li>
      <li>Om du vill aktivera redigering av SPA kan det behövas en proxyserver för Adobe I/O Runtime</li>
     </ul> </td>
@@ -130,9 +130,9 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
 
 ## Planering för SSR {#planning-for-ssr}
 
-I allmänhet behöver bara en del av ett program återges på serversidan. Det vanliga exemplet är det innehåll som visas ovanför vikningen vid den första inläsningen av sidan återges på serversidan. Detta sparar tid genom att leverera till klienten, som redan har återgett innehåll. När användaren interagerar med SPA återges det extra innehållet av klienten.
+I allmänhet får endast en del av ett program återges på serversidan. Det vanliga exemplet är det innehåll som visas ovanför vikningen vid den första inläsningen av sidan återges på serversidan. Den här processen sparar tid genom att leverera till klienten, som redan har återgett innehåll. När användaren interagerar med SPA återges det extra innehållet av klienten.
 
-När du funderar på att implementera serversidesåtergivning för SPA måste du kontrollera vilka delar av programmet som det är nödvändigt.
+När du funderar på att implementera serversidesåtergivning för SPA kan du kontrollera vilka delar av programmet som behövs.
 
 ## Utveckla en SPA med SSR {#developing-an-spa-using-ssr}
 
@@ -144,7 +144,7 @@ Om du vill använda SSR måste du distribuera koden i AEM och på Adobe I/O Runt
 
 SSR för SPA i AEM kräver Adobe I/O Runtime, vilket krävs för återgivning av programinnehållsserversidan. I programmets HTML anropas en resurs på Adobe I/O Runtime för att återge innehållet.
 
-Precis som AEM stöder ramverken Angular och React SPA direkt, stöds även serversidorendering för Angular- och React-appar. Mer information finns i NPM-dokumentationen för båda ramverken.
+Precis som AEM stöder ramverken Angular och React SPA direkt, stöds även serversidesrendering för Angular- och React-appar. Mer information finns i NPM-dokumentationen för båda ramverken.
 
 ## Renderare för fjärrinnehåll {#remote-content-renderer}
 
@@ -152,15 +152,15 @@ The [Konfiguration av fjärrinnehållsrenderare](#remote-content-renderer-config
 
 ### RemoteContentRenderingService {#remotecontentrenderingservice}
 
-`RemoteContentRenderingService` är en OSGi-tjänst som hämtar innehåll som återges på en fjärrserver, till exempel från Adobe I/O. Innehållet som skickas till fjärrservern baseras på den begärandeparameter som skickas.
+`RemoteContentRenderingService` En OSGi-tjänst för att hämta innehåll som återges på en fjärrserver, till exempel från Adobe I/O. Innehållet som skickas till fjärrservern baseras på den begärandeparameter som skickas.
 
-`RemoteContentRenderingService` kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller servlet när ytterligare innehållsmanipulering krävs.
+`RemoteContentRenderingService` Kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller en servlet när ytterligare innehållsmanipulering krävs.
 
 Den här tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
 
 ### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
 
-The `RemoteContentRendererRequestHandlerServlet` kan användas för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer så att du kan mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
+The `RemoteContentRendererRequestHandlerServlet` används för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer så att du kan mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
 
 Implementera `RemoteContentRendererRequestHandler` gränssnitt. Var noga med att ange `Constants.SERVICE_RANKING` egenskapen component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
 
@@ -179,7 +179,7 @@ Konfigurationen av standardhanteraren måste konfigureras enligt beskrivningen i
 
 ### Användning av fjärråtergivning av innehåll {#usage}
 
-Så här hämtar du en servlet och returnerar innehåll som kan injiceras på sidan:
+Ta en servlet och returnera innehåll som har injicerats på sidan:
 
 1. Kontrollera att fjärrservern är tillgänglig.
 1. Lägg till ett av följande kodfragment i HTML-mallen för en AEM.
