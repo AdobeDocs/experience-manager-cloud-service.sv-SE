@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management
 role: User,Leader,Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: f075c6032edb23f9cf52ad53ae2a628915e76ec2
+source-git-commit: d0deca8acbf6049d5be6c27275eedf9b52b27658
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '740'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Nedan beskrivs de viktigaste fördelarna med Assets som [!DNL Cloud Service]. Me
 * **Konstantövervakning**: Övervakningen av systemet är automatiserade och inbyggda kontroller och utlösare som hjälper till att upprätthålla prestanda, tillgänglighet och övergripande tillförlitlighet.
 * **Smidig driftsättning**: Experience Manager i molnfunktionerna är helt automatiserade och kräver ingen manuell åtgärd. För automatiserad driftsättning automatiserar komponenten Cloud Manager (CM) byggandet av driftsättningsbara Docker-bilder som innehåller din anpassade kod.
 
-## Tillgängliga personbaserade upplevelser
+## Tillgängliga personbaserade upplevelser {#persona-based-experiences}
 
 Adobe erbjuder robusta DAM-lösningar (Digital Asset Management) så att ni får ut mesta möjliga av era digitala resurser. Adobe Experience Manager Assets har två separata upplevelser som använder samma Cloud Services:
 
@@ -51,7 +51,7 @@ DAM-bibliotek, utvecklare och superanvändare kan fortsätta att använda admini
 
 ![add-tags](assets/newui-overview.svg)
 
-Mer information om hur du kommer åt resursvyn och vissa av de förenklingar som den erbjuder via administratörsvyn finns i resursvyn.
+Mer information om hur du kommer åt resursvyn och vissa av de förenklingar som den erbjuder via administratörsvyn finns i [Introduktion till resursvyn](/help/assets/assets-view-introduction.md).
 
 ## Nya Assets-funktioner {#whats-new-assets}
 

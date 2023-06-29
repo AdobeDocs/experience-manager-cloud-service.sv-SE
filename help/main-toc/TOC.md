@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 40393340131a72a86503c00a0a2e9e78a28b7e69
+source-git-commit: 9424bef8a9a2c7ab4afb06e2a08e15336f858b7b
 workflow-type: tm+mt
-source-wordcount: '4138'
+source-wordcount: '4139'
 ht-degree: 20%
 
 ---
@@ -501,23 +501,22 @@ ht-degree: 20%
       + [Vanliga frågor om leverans av innehåll med HTTP2](/help/assets/dynamic-media/http2faq.md)
       + [Flash-tittare som slutar svara](/help/assets/dynamic-media/flash-viewers-eol.md)
       + [DHTML-visningsprogram - slutdatum](/help/assets/dynamic-media/dhtml-viewer-endoflifefaqs.md)
-
-+ Arbeta med resursvyn {#assets-view}
-   + [Komma igång](/help/assets/get-started-assets-view.md)
-   + [Min arbetsyta](/help/assets/my-workspace-assets-view.md)
-   + [Filtyper och användningsområden som stöds](/help/assets/supported-file-formats-assets-view.md)
-   + [Visa resurser](/help/assets/navigate-assets-view.md)
-   + [Överför och lägg till resurser](/help/assets/add-delete-assets-view.md)
-   + [Söka efter och identifiera resurser](/help/assets/search-assets-view.md)
-   + [Resurshanteringsaktiviteter](/help/assets/manage-organize-assets-view.md)
-   + [Redigera bilder](/help/assets/edit-images-assets-view.md)
-   + [Hantera metadata för resurser](/help/assets/metadata-assets-view.md)
-   + [Dela resurser](/help/assets/share-links-for-assets-view.md)
-   + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
-   + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
-   + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
-   + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
-
+   + Arbeta med resursvyn {#assets-view}
+      + [Introduktion](/help/assets/assets-view-introduction.md)
+      + [Komma igång](/help/assets/get-started-assets-view.md)
+      + [Min arbetsyta](/help/assets/my-workspace-assets-view.md)
+      + [Filtyper och användningsområden som stöds](/help/assets/supported-file-formats-assets-view.md)
+      + [Visa resurser](/help/assets/navigate-assets-view.md)
+      + [Överför och lägg till resurser](/help/assets/add-delete-assets-view.md)
+      + [Söka efter och identifiera resurser](/help/assets/search-assets-view.md)
+      + [Resurshanteringsaktiviteter](/help/assets/manage-organize-assets-view.md)
+      + [Redigera bilder](/help/assets/edit-images-assets-view.md)
+      + [Hantera metadata för resurser](/help/assets/metadata-assets-view.md)
+      + [Dela resurser](/help/assets/share-links-for-assets-view.md)
+      + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
+      + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
+      + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
+      + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
    + Integrering med Adobe Workfront {#integrations}
       + [Integrering med [!DNL Adobe Workfront]](/help/assets/workfront-integrations.md)
       + [Konfigurera metadatamappning för resurser](/help/assets/configure-asset-metadata-mapping.md)
@@ -525,6 +524,7 @@ ht-degree: 20%
       + [Ta bort externa beroenden för befintliga installationer](/help/assets/remove-external-dependencies.md)
       + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
       + [Uppdatera [!DNL Workfront for Experience Manager enhanced connector]](/help/assets/update-workfront-enhanced-connector.md)
+
 + Forms {#forms}
    + Översikt {#forms-overview}
       + [Introduktion](/help/forms/home.md)
