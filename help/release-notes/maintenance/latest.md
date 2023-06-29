@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: f0dc0e0ccd196ab748e2bfcdb4ce404c1c91c213
+source-git-commit: e8ea040ba3f8c73d7ed64c9669ac1d0a22d3a3c8
 workflow-type: tm+mt
-source-wordcount: '604'
-ht-degree: 0%
+source-wordcount: '600'
+ht-degree: 1%
 
 ---
 
@@ -38,8 +38,8 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 124
 - SITES-13559: MSM: Undantaget &#39;Är inte ändringsbart&#39; utlöses när komponenten rullas ut
 - SITES-11757: MSM: Ärv utrullningskonfiguration från överordnad återställs inte för underordnade sidor
 - SITES-14073: Webbplatsadministratör: CSV-rapporten misslyckas med 500 när ingen egenskap väljs för export
-- Forms-7648: Validering av fältet Maximalt antal siffror fungerar inte för Numeric Box-komponenten.
-- Forms-8177: När Forms-tjänsten är aktiv kunde inte felsökningarna för com.adobe.aem.formsndocuments.publish.AssetReferenceProvider hämta resursberoenden.
+- Forms-7648: Det går inte att validera maximalt antal siffror i en Numeric Box-komponent. Valideringsskriptet fungerar inte.
+- Forms-8177: När Forms-tjänsten är aktiv `com.adobe.aem.formsndocuments.publish.AssetReferenceProvider Failed to retrieve asset dependencies` fel påträffar.
 - Forms-8300: När en användare försöker delegera en uppgift efter att ha öppnat den, läser delegatsvaret in uppgiften igen, i stället för att öppna användarens AEM.
 - Forms-8500: I Microsoft® Edge-webbläsaren med alternativet IE Mode aktiverat kan HTML5 Forms inte öppnas.
 - Forms-8541: Vid återgivning av ett adaptivt Forms inträffar ett Null-pekarundantag.
@@ -52,7 +52,6 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 124
 - Forms-8846: Referensegenskapen Bind fungerar inte för komponenten Adaptiva Forms-bilagor.
 - Forms-9072: När du söker i ett schema när du skapar ett formulärfragment returnerar sökresultatet inget schema för markering.
 - Forms: Flera tillgänglighetsrelaterade fel har korrigerats för att förbättra tillgängligheten för AEM Forms-funktioner.
-
 
 ### Kända fel {#known-issues-12441}
 
