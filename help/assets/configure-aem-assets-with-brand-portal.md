@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5096cd6141e70f40b5145389ca4db3cc65ea1e66
 workflow-type: tm+mt
-source-wordcount: '2385'
+source-wordcount: '2416'
 ht-degree: 11%
 
 ---
@@ -101,11 +101,11 @@ Följ de här stegen för att validera anslutningen mellan din Experience Manage
 
 1. Från **verktyg** panel, navigera till **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]**.
 
-   ![](assets/test-bpconfig1.png)
+   ![Konfigurera AEM Assets as a Cloud Service med Brand Portal](assets/test-bpconfig1.png)
 
    En Brand Portal-distributionsagent (**[!UICONTROL bpdistributionagent0]**) skapas under **[!UICONTROL Publish to Brand Portal]**.
 
-   ![](assets/test-bpconfig2.png)
+   ![Skapa distributionsagent](assets/test-bpconfig2.png)
 
 
 1. Klicka **[!UICONTROL Publish to Brand Portal]** för att öppna distributionsagenten.
@@ -121,11 +121,11 @@ Följ de här stegen för att validera anslutningen mellan din Experience Manage
    >
    >Vi rekommenderar att du regelbundet granskar felen och rensar **error-queue**.
 
-   ![](assets/test-bpconfig3.png)
+   ![Bearbetningskön för distribution av resurser](assets/test-bpconfig3.png)
 
 1. Så här verifierar du anslutningen mellan Experience Manager Assets som [!DNL Cloud Service] och Brand Portal klickar du på **[!UICONTROL Test Connection]** ikon.
 
-   ![](assets/test-bpconfig4.png)
+   ![Verifiera anslutningen mellan AEM och Brand Portal](assets/test-bpconfig4.png)
 
    Ett meddelande om att *testpaketet har levererats*.
 
@@ -156,7 +156,7 @@ Låt oss nu publicera en mediefil från Experience Manager Assets till Brand Por
 1. Följ stegen (från 1 till 4) enligt anvisningarna i **Testanslutning** och navigera till distributionsagentsidan.
 1. Klicka **[!UICONTROL Logs]** för att visa bearbetnings- och felloggarna.
 
-   ![](assets/test-bpconfig5.png)
+   ![Bearbetning och felloggar](assets/test-bpconfig5.png)
 
 Distributionsagenten har genererat följande loggar:
 
