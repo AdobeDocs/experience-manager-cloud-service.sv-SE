@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lär dig hur du lägger till ett anpassat domännamn med hjälp av Cloud Manager.
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -54,13 +54,13 @@ Följ de här stegen för att lägga till ett eget domännamn från **Domäninst
 
 CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta anges av statusen **Verifierat och distribuerat**.
 
-Se dokumentet [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) om du vill veta mer om olika statusar och hur du åtgärdar potentiella problem.
+Se [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) om du vill veta mer om olika statusar och hur du åtgärdar potentiella problem.
 
 >[!NOTE]
 >
 >DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.
 >
->Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Se dokumentet [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) för mer information.
+>Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Se [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) för mer information.
 
 >[!TIP]
 >
@@ -98,13 +98,13 @@ Följ de här stegen för att lägga till ett eget domännamn från **Miljö** s
 
 CDN-distributionen kräver ett giltigt SSL-certifikat och lyckad TXT-verifiering. Detta anges av statusen **Verifierat och distribuerat**.
 
-Se dokumentet [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) om du vill veta mer om olika statusar och hur du åtgärdar potentiella problem.
+Se [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) om du vill veta mer om olika statusar och hur du åtgärdar potentiella problem.
 
 >[!NOTE]
 >
 >DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.
 >
->Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Se dokumentet [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) för mer information.
+>Cloud Manager kontrollerar ägarskap och uppdaterar statusen som visas i tabellen Domäninställningar. Se [Kontrollerar status för anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) för mer information.
 
 >[!TIP]
 >

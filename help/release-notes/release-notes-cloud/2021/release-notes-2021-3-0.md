@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2021.3.0."
 exl-id: 0c07364c-ba25-4081-8e35-3c1c84ed556f
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1290'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ Releasedatum för Best Practices Analyzer v2.1.8 är 22 mars 2021.
 
 ### Nyheter i Best Practices Analyzer {#what-is-new-bpa}
 
-* Möjlighet att filtrera bort ACS Commons-resultat från BPA-rapporten i användargränssnittet samt från den rapport som exporterats som en CSV-fil.
+* Möjlighet att filtrera bort ACS Commons-resultat från BPA-rapporten i användargränssnittet och från rapporten som exporterats som en CSV-fil.
 
 ## Verktyg för omstrukturering av kod {#code-refactoring-tools}
 

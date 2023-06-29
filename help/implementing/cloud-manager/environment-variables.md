@@ -2,9 +2,9 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1018'
 ht-degree: 0%
 
 ---
@@ -128,8 +128,8 @@ Miljövariabler kan dock inte användas i `IfDefine` direktiv.
 
 ### OSGi-konfigurationer {#osgi}
 
-Både vanliga miljövariabler och hemligheter kan användas i [OSGi-konfigurationer.](/help/implementing/deploying/configuring-osgi.md)
+Både vanliga miljövariabler och hemligheter kan användas i [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md).
 
 ### Rörledningsvariabler {#pipeline}
 
-Förutom miljövariabler finns det även variabler för pipeline som exponeras under byggfasen. [Läs mer om pipeline-variabler här.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#pipeline-variables)
+Förutom miljövariabler finns det även variabler för pipeline som exponeras under byggfasen. [Läs mer om pipeline-variabler här](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#pipeline-variables).

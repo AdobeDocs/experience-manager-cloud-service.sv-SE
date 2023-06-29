@@ -3,9 +3,9 @@ title: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experi
 description: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] as a Cloud Service.
 contentOwner: AG
 exl-id: 1f0ff800-5e95-429a-97f2-221db0668170
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1875'
+source-wordcount: '1876'
 ht-degree: 0%
 
 ---
@@ -223,7 +223,7 @@ Administratörer kan styra textredigeringsalternativen med hjälp av innehållsp
 De tillgängliga alternativen i textredigeraren flödar nedåt från användargränssnittskonfigurationerna till innehållsprinciperna.
 
 * Konfigurationsinställningarna för användargränssnittet definierar vilka alternativ som är tillgängliga för innehållsprinciperna.
-* Om användargränssnittskonfigurationen för RTE har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
+* Om användargränssnittskonfigurationen för textredigeraren har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
 * En författare har bara tillgång till funktioner som är tillgängliga i användargränssnittskonfigurationerna och i innehållsprinciperna.
 
 Du kan till exempel se [Dokumentation för komponenten Text Core](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).

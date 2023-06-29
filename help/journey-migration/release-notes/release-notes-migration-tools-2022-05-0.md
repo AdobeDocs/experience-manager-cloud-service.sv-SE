@@ -3,9 +3,9 @@ title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service versi
 description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.5.0
 feature: Release Information
 exl-id: 1aa49e85-1914-44d9-bcf7-0a1b03926df0
-source-git-commit: 01c4a21b980918ba99ac174419d80b577bc96dda
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---

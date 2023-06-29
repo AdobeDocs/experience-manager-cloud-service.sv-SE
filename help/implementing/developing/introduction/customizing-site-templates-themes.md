@@ -4,9 +4,9 @@ description: Lär dig hur AEM webbplatsmallar kan användas för att fördefinie
 feature: Administering
 role: Admin
 exl-id: dc20f26c-59f0-4244-9797-926f25ed4da3
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatss
 
 För att AEM snabbt ska kunna skapa webbplatser som är anpassade till företagets behov kan AEM skapa nya webbplatser med hjälp av webbplatsmallar och webbplatsteman.
 
-* An **AEM webbplatsmall** innehåller ofta baswebbplatsinnehåll och -struktur samt information om webbplatsformat, så kallat webbplatstemat, så att du snabbt kan komma igång med en ny webbplats. Mallarna är kraftfulla eftersom de både kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
+* An **AEM webbplatsmall** innehåller allmänt grundläggande information om webbplatsinnehåll och struktur och webbplatsformat, så kallade webbplatsteman, så att du snabbt kan komma igång med en ny webbplats. Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
 * An **AEM webbplatstema** är ett paket som innehåller CSS-, JavaScript- och statiska resurser som definierar formateringen för din AEM och som följer strukturen för ett AEM webbplatstema.
 
 ## Ytterligare resurser {#additional-resources}
@@ -31,4 +31,4 @@ För [webbplatsskapande](/help/sites-cloud/administering/site-creation/create-si
 
 >[!TIP]
 >
->En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [En resa där man snabbt skapar webbplatser.](/help/journey-sites/quick-site/overview.md)
+>En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md).

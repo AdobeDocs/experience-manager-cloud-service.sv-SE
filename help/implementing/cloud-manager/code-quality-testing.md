@@ -2,9 +2,9 @@
 title: Testning av kodkvalitet
 description: Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan förbättra kvaliteten på dina distributioner.
 exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan för
 
 Kodkvalitetstestningen utvärderar din programkod baserat på en uppsättning kvalitetsregler. Det är det främsta syftet med en rörledning av kodkvalitet och genomförs omedelbart efter byggsteget i alla rörledningar för produktion och icke-produktion.
 
-Se dokumentet [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) om du vill veta mer om olika typer av rörledningar.
+Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) om du vill veta mer om olika typer av rörledningar.
 
 ## Regler för kodkvalitet {#understanding-code-quality-rules}
 
@@ -30,7 +30,7 @@ Kodkvalitetstestning söker igenom källkoden för att säkerställa att den upp
 
 >[!NOTE]
 >
->Du kan hämta den fullständiga listan med regler [med den här länken.](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx)
+>Du kan hämta den fullständiga listan med regler [med den här länken](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx).
 
 ### Tre nivåindelade omdömen {#three-tiered-gate}
 
@@ -69,7 +69,7 @@ I följande tabell sammanfattas klassificerings- och feltrösklarna för var och
 
 >[!NOTE]
 >
->Mer information om anpassade regler för kodkvalitet som körs av [!UICONTROL Cloud Manager], se dokumentet [Anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
+>Läs mer om de anpassade reglerna för kodkvalitet som körs av [!UICONTROL Cloud Manager], se [Anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
 
 ## Hantera med falskt positiva {#dealing-with-false-positives}
 
@@ -103,10 +103,10 @@ Den rätta lösningen är sedan att ta bort det hårdkodade lösenordet.
 
 >[!NOTE]
 >
->Även om det är en bra rutin att göra `@SuppressWarnings` Anteckningen är så specifik som möjligt, d.v.s. kommenterar bara den specifika programsats eller det block som orsakar problemet. Det går att anteckna på klassnivå.
+>Även om det är en bra rutin att göra `@SuppressWarnings` Anteckningen är så specifik som möjligt, d.v.s. anteckna bara den specifika programsats eller det block som orsakar problemet. Det går att anteckna på klassnivå.
 
 >[!NOTE]
->Även om det inte finns något uttryckligt steg för säkerhetstestning finns det säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Se dokumentet [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md) om du vill veta mer om säkerhet i Cloud Service.
+>Även om det inte finns något uttryckligt steg för säkerhetstestning finns det säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Se [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md) om du vill veta mer om säkerhet i Cloud Service.
 
 ## Optimering av skanning av innehållspaket {#content-package-scanning-optimization}
 
@@ -120,7 +120,7 @@ Om de enda objekten i `myco-all-1.0.0-SNAPSHOT.zip` är de två överhoppade inn
 
 För projekt som producerar dussintals inbäddade paket har den här optimeringen visat sig spara upp till 10 minuter per pipeline-körning.
 
-Ett specialfall kan inträffa när innehållspaketet &quot;all&quot; innehåller en kombination av överhoppade innehållspaket och OSGi-paket. Om `myco-all-1.0.0-SNAPSHOT.zip` innehåller de två inbäddade paketen som tidigare nämnts samt ett eller flera OSGi-paket, och sedan konstrueras ett nytt, minimalt innehållspaket med endast OSGi-paketen. Det här paketet har alltid namnet `cloudmanager-synthetic-jar-package` och de medföljande paketen placeras i `/apps/cloudmanager-synthetic-installer/install`.
+Ett specialfall kan inträffa när innehållspaketet &quot;all&quot; innehåller en kombination av överhoppade innehållspaket och OSGi-paket. Om `myco-all-1.0.0-SNAPSHOT.zip` innehåller de två inbäddade paketen som tidigare nämnts och ett eller flera OSGi-paket, och sedan skapas ett nytt, minimalt innehållspaket med endast OSGi-paketen. Det här paketet har alltid namnet `cloudmanager-synthetic-jar-package` och de medföljande paketen placeras i `/apps/cloudmanager-synthetic-installer/install`.
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: Skapa en resursmapp - Headless-konfiguration
 description: Använd AEM Content Fragment Models för att definiera strukturen för Content Fragments, som är grunden för ditt headless-innehåll.
 exl-id: 9a156a17-8403-40fc-9bd0-dd82fb7b2235
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
 1. Ange en **Titel** och **Namn** för din mapp.
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
-      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md).
       * Den kan vid behov justeras.
 
    ![Skapa mapp](../assets/assets-folder-create.png)
-1. Markera mappen som du nyss skapade genom att hålla muspekaren nedtryckt och trycka på bockmarkeringen. Välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando.](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md))
+1. Markera mappen som du nyss skapade genom att hålla muspekaren nedtryckt och trycka på bockmarkeringen. Välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommando](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)).
 1. I **Egenskaper** väljer du **Cloud Services** -fliken.
 1. För **Molnkonfiguration** Välj [som du skapade tidigare.](create-configuration.md)
    ![Konfigurera resursmapp](../assets/assets-folder-configure.png)

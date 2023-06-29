@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: 803a7788cde37fb0026f7cc3582efb33c10e1358
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ En översikt över funktionerna för innehållsöversättning i AEM finns på [�
 
 >[!TIP]
 >
->Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll, se [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
@@ -73,7 +73,7 @@ En enda konfiguration av ramverket styr hur sidinnehåll och resurser översätt
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på en viss webbplats eller kan vara globalt.
 1. Ange följande information i fälten och klicka eller tryck sedan på **Skapa**.:
    1. Välj **Konfigurationstyp** i listrutan.
-   1. Ange **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Services** Console samt i listrutor för sidegenskaper.
+   1. Ange **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Services** console och in page property drop-down lists.
    1. Du kan även skriva en **Namn** som ska användas för den databasnod som lagrar konfigurationen.
 1. I **Redigera konfiguration** fönster, konfigurera egenskaperna för **Webbplatser** och **Resurser** och sedan klicka eller trycka på **Spara och stäng**.
 
@@ -85,7 +85,7 @@ The **Webbplatser** -fliken styr hur sidinnehållet ska översättas.
 
 | Egenskap | Beskrivning |
 |---|---|
-| Översättningsmetod | Den här egenskapen definierar den översättningsmetod som ramverket utför för webbplatsinnehåll:<br>- Maskinöversättning: Översättningsprovidern utför översättningen med maskinöversättning i realtid.<br>- mänsklig översättning: Innehållet skickas till översättningsleverantören för översättning av översättare.<br>- Översätt inte: Innehållet skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet. |
+| Översättningsmetod | Den här egenskapen definierar den översättningsmetod som ramverket utför för webbplatsinnehåll:<br>- Maskinöversättning: Översättningsprovidern utför översättningen med maskinöversättning i realtid.<br>- mänsklig översättning: Innehållet skickas till översättningsleverantören för översättning av översättare.<br>- Översätt inte: Innehåll skickas inte för översättning. Detta är för att hoppa över vissa innehållsgrenar som inte skulle översättas, men som skulle kunna uppdateras med det senaste innehållet. |
 | Översättningsprovider | This property define the translation provider to perform the translation. En provider visas i listan när dess motsvarande koppling är installerad. |
 | Innehållskategori | (Endast maskinöversättning) Den här egenskapen är en kategori som beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts. |
 | Översätt taggar | Det här alternativet aktiverar översättning av taggar som är kopplade till sidan. |

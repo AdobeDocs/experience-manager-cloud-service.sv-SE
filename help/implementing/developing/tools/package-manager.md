@@ -4,9 +4,9 @@ description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering
 role: Admin
 exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '3780'
+source-wordcount: '3775'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Innehållspaket som skapas för AEM as a Cloud Service program måste ha en ren 
 
 >[!NOTE]
 >
->Paket kan bara innehålla innehåll. Alla funktioner (till exempel innehåll som lagras under `/apps`) måste vara [distribueras med hjälp av CI/CD-pipeline i Cloud Manager.](/help/implementing/cloud-manager/deploy-code.md)
+>Paket kan bara innehålla innehåll. Alla funktioner (till exempel innehåll som lagras under `/apps`) måste vara [distribueras med hjälp av CI/CD-pipeline i Cloud Manager](/help/implementing/cloud-manager/deploy-code.md).
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Innehållspaket som skapas för AEM as a Cloud Service program måste ha en ren 
 >
 >Försök inte installera igen om du ser ett sådant fel. Installationen fortsätter korrekt i bakgrunden. Om du startar om installationen kan vissa konflikter uppstå vid flera samtidiga importprocesser.
 
-Mer information om hur du hanterar paket för AEMaaCS finns i dokumentet [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md) i användarhandboken för distribution.
+Mer information om hur du hanterar paket för AEMaaCS finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md) i användarhandboken för distribution.
 
 ## Paketstorlek {#package-size}
 
@@ -57,7 +57,7 @@ MaxPackageSize (in MB) = ConnectionSpeed (in MB/s) * 60 s
 
 Eftersom nätverkstrafiken varierar och alltid är mindre än det annonserade maximala teoretiska värdet kan du testa med ett hastighetstest online.
 
-Internet-hastigheter är nästan alltid olika för överföringar och nedladdningar. Förutsatt att du behöver både överföra och hämta paket bör du använda det lägre värdet (vanligen överföringshastigheten) i beräkningen.
+Internet-hastigheter är nästan alltid olika för överföringar och nedladdningar. Om du måste både överföra och hämta paket bör du använda det lägre värdet (vanligen överföringshastigheten) i beräkningen.
 
 ### Exempel {#example}
 
@@ -194,8 +194,8 @@ När du skapar filter kan du definiera en bana eller använda ett reguljärt utt
 
 | Regeltyp | Beskrivning |
 |---|---|
-| include | Om du tar med en katalog inkluderas den katalogen och alla filer och mappar i den katalogen (dvs. hela underträdet), men **inte** ta med andra filer eller mappar från den angivna rotsökvägen. |
-| exclude | Om du exkluderar en katalog exkluderas den katalogen och alla filer och mappar i den katalogen (dvs. hela underträdet). |
+| include | Om du tar med en katalog inkluderas den katalogen och alla filer och mappar i den katalogen (det vill säga hela underträdet), men **inte** ta med andra filer eller mappar från den angivna rotsökvägen. |
+| exclude | Om du exkluderar en katalog exkluderas den katalogen och alla filer och mappar i den katalogen (det vill säga hela underträdet). |
 
 Paketfilter definieras oftast först [skapa paketet.](#creating-a-new-package) De kan emellertid också redigeras senare, och därefter bör paketet byggas om för att uppdatera innehållet baserat på de nya filterdefinitionerna.
 

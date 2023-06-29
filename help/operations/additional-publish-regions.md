@@ -1,9 +1,9 @@
 ---
 title: Ytterligare publiceringsregioner
 description: Läs om hur AEM as a Cloud Service stöder ytterligare publiceringsregioner för ökad tillgänglighet och minskad latens.
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Organisationer kan licensiera upp till tre ytterligare publiceringsregioner.
 
 >[!NOTE]
 >
->Den här funktionen är för närvarande endast tillgänglig för AEM Sites. Den kan inte heller tillämpas på sandlådeprogram. Observera dessutom att funktionen för ytterligare publiceringsregioner kräver att ditt program uppdateras till AEM version 12142 eller senare.
+>Den här funktionen är för närvarande endast tillgänglig för AEM Sites. Den kan inte heller tillämpas på sandlådeprogram. Tänk dessutom på att funktionen för ytterligare publiceringsregioner kräver att programmet uppdateras till AEM version 12142 eller senare.
 
 ## Användningsexempel {#use-cases}
 
@@ -44,7 +44,7 @@ Se [Avancerad nätverkskonfiguration för ytterligare publiceringsregioner](/hel
 
 ## Begränsningar {#limitations}
 
-Tänk på dessa begränsningar när du funderar på att använda ytterligare publiceringsregioner.
+Tänk på följande begränsningar när du funderar på att använda ytterligare publiceringsregioner.
 
 * Ytterligare publiceringsregioner kan bara läggas till i AEM Sites. Ytterligare publiceringsregioner omfattar inte andra AEM lösningar eller relaterade funktioner som körs i samma program (t.ex. AEM Forms eller Adobe Learning Manager).
 * Ytterligare regioner kan bara läggas till om associerade berättiganden är tillgängliga och inte används i klientorganisationen.

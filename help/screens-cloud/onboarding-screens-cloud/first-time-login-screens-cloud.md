@@ -2,9 +2,9 @@
 title: Första gången du loggar in på skärmar as a Cloud Service
 description: Den här sidan beskriver de första stegen för att komma igång med skärmar as a Cloud Service.
 exl-id: d3a6aa5d-226b-484d-97ea-0b8312c7a0fd
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---

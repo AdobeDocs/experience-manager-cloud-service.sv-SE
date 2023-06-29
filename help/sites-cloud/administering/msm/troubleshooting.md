@@ -4,9 +4,9 @@ description: Ta reda på hur du felsöker de vanligaste MSM-relaterade problemen
 feature: Multi Site Manager
 role: Admin
 exl-id: 50f02f4f-a347-4619-ac90-b3136a7b1782
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Du kan också:
 
 ### Varför visas Live Copy-sidor med suffixet&quot;_msm_move&quot;? {#moved-pages}
 
-Om en ritningssida introduceras uppdaterar den antingen sin Live Copy-sida eller skapar en ny Live Copy-sida om den inte finns än (t.ex. när den introduceras för första gången eller när Live Copy-sidan tas bort manuellt).
+Om en ritningssida rullas ut uppdaterar den antingen sin Live Copy-sida eller skapar en Live Copy-sida om den inte finns än (t.ex. när den rullas ut för första gången eller när Live Copy-sidan tas bort manuellt).
 
 I det senare fallet om en sida utan `cq:LiveRelationship` egenskapen finns med samma namn, och sidans namn ändras därefter innan sidan Live Copy skapas.
 

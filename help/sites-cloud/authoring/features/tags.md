@@ -2,9 +2,9 @@
 title: Använda taggar
 description: Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats
 exl-id: d2a9f578-fe0a-48ea-851c-2c84463661e0
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '563'
 ht-degree: 6%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 6%
 
 Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats. Taggar kan ses som nyckelord eller etiketter som kan bifogas till en sida, en resurs eller annat innehåll för att göra det möjligt att söka efter innehållet och relaterat innehåll.
 
-* Mer information om hur du skapar och hanterar taggar samt vilka innehållstaggar som har tillämpats finns i Administrera taggar. <!-- See [Administering Tags](/help/sites-administering/tags.md) for information about creating and managing tags, as well as to which content tags have been applied.-->
-* Se [Tagga för utvecklare](/help/implementing/developing/introduction/tagging-framework.md) om du vill ha information om taggningsramverket samt om hur du inkluderar och utökar taggar i anpassade program.
+* Mer information om hur du skapar och hanterar taggar och vilka innehållstaggar som har tillämpats finns i Administrera taggar. <!-- See [Administering Tags](/help/sites-administering/tags.md) for information about creating and managing tags, and to which content tags have been applied.-->
+* Se [Tagga för utvecklare](/help/implementing/developing/introduction/tagging-framework.md) om du vill ha information om taggningsramverket och inkludera och utöka taggar i anpassade program.
 
 ## Tio skäl att använda märkord {#ten-reasons-to-use-tagging}
 
@@ -47,7 +47,7 @@ På samma sätt som du kan publicera och avpublicera sidor kan du göra följand
 
 * Aktivera enskilda taggar.
 
-   Precis som för sidor måste nyligen skapade taggar aktiveras innan de blir tillgängliga i publiceringsmiljön.
+  Precis som för sidor måste nyligen skapade taggar aktiveras innan de blir tillgängliga i publiceringsmiljön.
 
 >[!NOTE]
 >

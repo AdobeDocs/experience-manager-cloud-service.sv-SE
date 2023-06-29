@@ -2,9 +2,9 @@
 title: Responsiv layout
 description: AEM gör att du kan förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1748'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter 
 Layoutbehållaren:
 
 * Tillhandahåller vågrät fäst mot rutnät, tillsammans med möjligheten att placera komponenter i rutnätet sida vid sida och definiera när de ska komprimeras/omformas.
-* Använder fördefinierade brytpunkter (t.ex. för telefon, surfplatta) så att du kan definiera vad som krävs för innehåll för relaterade enheter/orientering.
+* Använder fördefinierade brytpunkter (till exempel för telefon, surfplatta och så vidare) för att du ska kunna definiera önskat beteende för innehåll för relaterade enheter/orientering.
    * Du kan till exempel anpassa komponentstorleken eller om komponenten kan visas på särskilda enheter.
 * Kan kapslas så att kolumnkontroll tillåts.
 
@@ -181,7 +181,7 @@ Om du vill konfigurera layouten för ett responsivt rutnät som implementeras me
 * Genom att använda [lägesmenyn i verktygsfältet](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) och välja **layoutläget**
    * Välj **layoutläget** på samma sätt som du växlar till **redigeringsläget** eller **målinriktningsläget**.
    * **Layoutläget** är beständigt och du lämnar inte **layoutläget** förrän du väljer ett annat läge med lägesväljaren.
-* När [redigera en enskild komponent.](/help/sites-cloud/authoring/fundamentals/editing-content.md#edit-component-layout)
+* När [redigera en enskild komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#edit-component-layout).
    * Genom att använda **Layout** i snabbåtgärdsmenyn för komponenten kan du växla till **Layout** läge.
    * **Layout** läget kvarstår när komponenten redigeras och återgår till **Redigera** när fokus ändras till en annan komponent.
 

@@ -2,10 +2,10 @@
 title: AEM Modernization Tools
 description: AEM Modernization Tools
 exl-id: d541fae0-6386-403f-99c9-373dc978ad13
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 77%
+source-wordcount: '129'
+ht-degree: 51%
 
 ---
 
@@ -26,8 +26,8 @@ Med AEM Modernization Tools blir det enkelt att konvertera:
 >[!NOTE]
 >AEM Modernize Tools är community-utvecklade verktyg som inte stöds eller garanteras av Adobe.
 
-Läs **[Introduktion till AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)** om du vill veta mer om planering, konfiguration och utveckling för AEM Modernization Tool Suite.
+Se **[Introduktion AEM moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/)** om du vill veta mer om planering, konfiguration och utveckling för AEM verktygspaket.
 
 ## Installation och implementering av AEM Modernization Tool Suite {#installing-implementing}
 
-Läs **[Git-resurs: AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools)** för mer information om installation och implementering.
+Se **[Git-resurs: AEM Modernize Tools Suite](https://github.com/adobe/aem-modernize-tools)** om du vill veta mer om installation och implementering.

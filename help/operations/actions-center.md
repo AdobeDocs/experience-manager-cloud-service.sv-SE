@@ -4,9 +4,9 @@ description: Utnyttja åtgärdscentret för att enkelt vidta åtgärder i samban
 hidefromtoc: true
 hide: true
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 >[!NOTE]
 >Den här funktionen har inte släppts.
 
-AEM när Cloud Servicen skickar e-postmeddelanden till åtgärdscentret när allvarliga incidenter inträffar som kräver omedelbara åtgärder, samt proaktiva rekommendationer för optimeringar. Exempel är en blockerad kö eller en uppsättning uppgifter som förfaller. hela uppsättningen meddelandetyper i Åtgärdscenter kan visas i [tabellen nedan](#supported-notification-types), som kommer att byggas ut med tiden.
+AEM när Cloud Servicen skickar e-postmeddelanden till Åtgärdscenter när allvarliga incidenter inträffar som kräver omedelbara åtgärder och proaktiva rekommendationer för optimering. Exempel är en blockerad kö eller en uppsättning uppgifter som förfaller. hela uppsättningen meddelandetyper i Åtgärdscenter kan visas i [tabellen nedan](#supported-notification-types), som kommer att byggas ut med tiden.
 
 När ett e-postmeddelande från Åtgärdscenter tas emot kan du klicka på det för att öppna AEM as a Cloud Service åtgärdscenter med en popup som visar ytterligare kontext som förklarar vilken åtgärd en kund ska vidta.
 
-Förutom att visa information om det nyligen klickade e-postmeddelandet fungerar Åtgärdscenter som ett nav där du kan visa och hantera den aktuella och äldre meddelandeuppsättningen. <!-- It can be accessed directly at the url TBD (Alexandru: I'm intentionally keeping it TBD for now so customers don't find it) -->
+Förutom att visa information om det nyligen klickade e-postmeddelandet fungerar Åtgärdscenter som ett nav där du kan visa och hantera den aktuella och äldre meddelandeuppsättningen. <!-- It can be accessed directly at the url TBD (Alexandru: I'm intentionally keeping it TBD for now so customers do not find it) -->
 
 Det finns två högnivåkategorier med meddelanden som visas i Åtgärdscenter:
 

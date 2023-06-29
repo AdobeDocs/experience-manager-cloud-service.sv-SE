@@ -2,9 +2,9 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1485'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Oavsett perspektiv har konfigurationerna två huvudsyften AEM:
 
 ## Konfigurationer som administratör {#configurations-administrator}
 
-AEM administratör och författare kan betrakta konfigurationer som arbetsytor. De här arbetsytorna kan användas för att samla ihop grupper av inställningar samt tillhörande innehåll för organisering genom att implementera åtkomsträttigheter för dessa funktioner.
+AEM administratör och författare kan betrakta konfigurationer som arbetsytor. De här arbetsytorna kan användas för att samla ihop grupper med inställningar och deras associerade innehåll i organiseringssyfte genom att implementera åtkomsträttigheter för dessa funktioner.
 
 Du kan skapa konfigurationer för många olika funktioner i AEM.
 
@@ -155,7 +155,7 @@ Nu ska vi titta på motsvarande JCR-innehåll:
 
 I det här exemplet antar vi en WKND-specifik DAM-mapp här och en motsvarande konfiguration. Från den mappen `/content/dam/wknd`ser vi att det finns en strängegenskap med namnet `cq:conf` som refererar till konfigurationen som ska användas för underträdet. Egenskapen ställs vanligtvis in på `jcr:content` för en resursmapp eller -sida. Dessa `conf` länkar är explicita, så det är enkelt att följa dem genom att bara titta på innehållet i CRXDE.
 
-Hoppa inuti `/conf`, följer vi referensen och ser att det finns en `/conf/wknd` nod. Detta är en konfiguration. Observera att sökningen är helt genomskinlig för programkoden. Exempelkoden har aldrig någon dedikerad referens till den, den döljs bakom `Conf` -objekt. Vilken konfiguration som tillämpas styrs helt av JCR-innehållet.
+Hoppa inuti `/conf`, följer vi referensen och ser att det finns en `/conf/wknd` nod. Detta är en konfiguration. Sökningen är helt genomskinlig för programkoden. Exempelkoden har aldrig någon dedikerad referens till den, den döljs bakom `Conf` -objekt. Vilken konfiguration som tillämpas styrs helt av JCR-innehållet.
 
 Vi ser att konfigurationen innehåller ett fast namn `settings` nod som innehåller de faktiska objekten, inklusive `dam/imageserver` vi behöver i vårt fall. Ett sådant objekt kan tolkas som ett inställningsdokument och representeras vanligtvis av en `cq:Page` inkluderar `jcr:content` som innehåller det faktiska innehållet.
 

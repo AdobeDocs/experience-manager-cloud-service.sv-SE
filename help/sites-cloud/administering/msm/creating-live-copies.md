@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och synkroniserar Live-kopior för att åter
 feature: Multi Site Manager
 role: Admin
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 151ef672e847f793b37d220920081ac9fce94edf
 workflow-type: tm+mt
 source-wordcount: '4308'
 ht-degree: 0%
@@ -45,7 +45,7 @@ När du använder en ritningskonfiguration kan du associera den med en utrullnin
 
 Blåtryckskonfigurationer betraktas som oföränderliga data och kan därför inte redigeras under körning. Därför måste alla konfigurationsändringar distribueras via Git med CI/CD-pipeline.
 
-Mer information finns i artikeln [Observerbara ändringar av Adobe Experience Manager (AEM) as a Cloud Service.](/help/release-notes/aem-cloud-changes.md)
+Mer information finns i artikeln [Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service](/help/release-notes/aem-cloud-changes.md).
 
 Följande steg är bara tillgängliga för en administratör på en lokal utvecklingsinstans för testnings- och utvecklingssyften. Dessa alternativ är inte tillgängliga i någon AEMaaCS-molninstans.
 
@@ -245,7 +245,7 @@ Rulla ut en ritningssida för att överföra innehållsändringar till Live-kopi
 
    ![Definiera utrullningstid](../assets/rollout-now-later.png)
 
-Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [***Status för asynkrona jobb** sida.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [***Status för asynkrona jobb** page](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations).
 
 #### Rulla ut en skiss från referensspåret {#roll-out-a-blueprint-from-the-reference-rail}
 
@@ -270,7 +270,7 @@ Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [***Status f�
 
 1. När du har bekräftat dessa uppgifter väljer du **Utrullning** för att utföra åtgärden.
 
-Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [**Status för asynkrona jobb** sida.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [**Status för asynkrona jobb** page](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations).
 
 #### Rulla ut en utkast från Live Copy-översikt {#roll-out-a-blueprint-from-the-live-copy-overview}
 
@@ -289,7 +289,7 @@ The [**Utrullning** finns även tillgängligt från Live Copy Overview](live-cop
 
    ![Definiera distributionsschema](../assets/rollout-now-later.png)
 
-Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [**Status för asynkrona jobb** sida.](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations)
+Utrullningar bearbetas som asynkrona jobb och kan kontrolleras på [**Status för asynkrona jobb** page](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations).
 
 ### Synkronisera en Live-kopia {#synchronizing-a-live-copy}
 
@@ -429,7 +429,7 @@ The [Åtgärden Återuppta är också tillgänglig från Live Copy Overview](liv
 
 ### Ändra arvsdjup (grund/djup) {#changing-inheritance-depth-shallow-deep}
 
-I en befintlig Live-kopia kan du ändra siddjupet, dvs. om underordnade sidor ska tas med.
+I en befintlig Live-kopia kan du ändra siddjupet, det vill säga om underordnade sidor ska tas med.
 
 * Byt till en ytlig Live Copy:
 
@@ -575,7 +575,7 @@ The [**Återställ** finns även tillgängligt från Live Copy Overview](live-co
 
 Om du vill spåra de ändringar du har gjort kan du visa planeringsidan i **Referenser** och jämför med sin Live Copy-sida:
 
-1. I **Webbplatser** konsol, [navigera till en plan eller en Live Copy-sida och markera den.](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)
+1. I **Webbplatser** konsol, [navigera till en ritning eller en Live Copy-sida och markera den](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
 1. Öppna **[Referenser](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)** och beroende på sammanhanget väljer du antingen:
 
    * **Blueprint**

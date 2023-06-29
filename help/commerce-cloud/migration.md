@@ -2,9 +2,9 @@
 title: Migrering till tillägget AEM Commerce Integration Framework (CIF)
 description: Så här migrerar du till CIF-tillägget (AEM Commerce Integration Framework) från en gammal version
 exl-id: 0db03a05-f527-4853-b52f-f113bce929cf
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---

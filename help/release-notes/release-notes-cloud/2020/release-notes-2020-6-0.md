@@ -2,9 +2,9 @@
 title: Versionsinformation om Adobe Experience Manager as a Cloud Service 2020.6.0
 description: Versionsinformation om Experience Manager för 2020.6.0
 exl-id: fd6ebe2b-6d98-498c-a45d-b9a9c34e6be7
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1907'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * A **LÄR DIG** sidan är nu tillgänglig i Cloud Manager via den övre navigeringen. Den här sidan innehåller resurser som hjälper användare att lära sig mer om de mest använda arbetsflödena som är relevanta för deras roller i Cloud Manager.
 
-* Sandlådeprogram identifieras nu med en **Sandbox** emblem som visas på programkortet på landningssidan samt bredvid programnamnet i **Programöversikt** sida.
+* Sandlådeprogram identifieras nu med en **Sandbox** emblem som visas på programkortet på landningssidan och bredvid programnamnet i **Programöversikt** sida.
 
 * En användare i rollen SysAdmin har nu tillgång till den plats i Admin Console där användarroller eller behörigheter till Cloud Manager kan hanteras med ett enda klick. A **Hantera åtkomst** finns nu på landningssidan intill **Lägg till program** -knappen.
 

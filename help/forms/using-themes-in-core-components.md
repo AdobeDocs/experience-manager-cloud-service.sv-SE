@@ -2,7 +2,7 @@
 title: Skapa och använda teman
 description: Du kan använda teman för att stilisera och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '1652'
 ht-degree: 0%
@@ -17,7 +17,7 @@ När du [skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md) me
 
 >[!NOTE]
 >
->Ett anpassat formulärtema får inte blandas ihop med [Adaptiva formulärmallar.](/help/forms/template-editor.md) Adaptiva formulärteman innehåller bara formatinformation för ett adaptivt formulär. Anpassade formulärmallar definierar formulärstrukturen och det ursprungliga innehållet och innehåller ett tema som gör det möjligt att skapa nya [Adaptiv form.](/help/forms/creating-adaptive-form.md)
+>Ett anpassat formulärtema får inte blandas ihop med [Adaptiva formulärmallar](/help/forms/template-editor.md). Adaptiva formulärteman innehåller bara formatinformation för ett adaptivt formulär. Anpassade formulärmallar definierar formulärstrukturen och det ursprungliga innehållet och innehåller ett tema som gör det möjligt att skapa nya [Adaptiv form](/help/forms/creating-adaptive-form.md).
 
 ## Använda Canvas-temat i Adaptive Forms med hjälp av kärnkomponenter {#using-theme-in-adaptive-form}
 

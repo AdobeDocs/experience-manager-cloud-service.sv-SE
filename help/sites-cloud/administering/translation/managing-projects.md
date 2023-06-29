@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '4085'
+source-wordcount: '4078'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Med översättningsprojekt kan du hantera översättning av AEM. Ett översättn
 
 >[!TIP]
 >
->Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll, se [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 När resurser läggs till i ett översättningsprojekt skapas ett översättningsjobb för dem. Jobb innehåller kommandon och statusinformation som du använder för att hantera de mänskliga översättnings- och maskinöversättningsarbetsflödena som körs på resurserna.
 
@@ -196,7 +196,7 @@ Uppdateringarna av översättningsminnet kan fångas upp och skickas till en anp
 
 En egenskap kan väljas i listvyn i webbplatskonsolen som visar om en sida har översatts, är i översättning eller ännu inte har översatts.
 
-1. I platskonsolen växlar du till [listvy.](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources)
+1. I platskonsolen växlar du till [listvy](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources).
 1. Tryck eller klicka **Visa inställningar** i listrutan.
 1. I dialogrutan markerar du **Översatt** egenskapen och trycka eller klicka **Uppdatera**.
 
@@ -210,7 +210,7 @@ Många översättningsuppgifter och avancerade alternativ finns i projektkonsole
 
 ### Om projektkonsolen
 
-Översättningsprojekt i AEM använder standarden [AEM projektkonsol.](/help/sites-cloud/authoring/projects/overview.md) Om du inte är van vid AEM kan du läsa den dokumentationen.
+Översättningsprojekt i AEM använder standarden [AEM projektkonsol](/help/sites-cloud/authoring/projects/overview.md). Om du inte är van vid AEM kan du läsa den dokumentationen.
 
 Som alla andra projekt består ett översättningsprojekt av plattor som ger en översikt över projektuppgifterna.
 
@@ -277,7 +277,7 @@ Du kan lägga till sidor, resurser eller taggar i översättningsjobbet för öv
 
 ### Lägga till taggar i ett översättningsjobb {#adding-tags-to-a-translation-job}
 
-Du kan lägga till taggar i ett översättningsprojekt på ungefär samma sätt som [hur du lägger till resurser och sidor i ett projekt.](#adding-pages-assets-to-a-translation-job) Välj bara **Taggar** under **Lägg till** sedan följer du samma steg.
+Du kan lägga till taggar i ett översättningsprojekt på ungefär samma sätt som [hur du lägger till resurser och sidor i ett projekt](#adding-pages-assets-to-a-translation-job). Välj bara **Taggar** under **Lägg till** sedan följer du samma steg.
 
 ### Visa information om översättningsprojekt {#seeing-translation-project-details}
 
@@ -303,7 +303,7 @@ När ett projekt skapas med referenslinjen för en sida, konfigureras dessa egen
 
 ### Övervaka status för ett översättningsjobb {#monitoring-the-status-of-a-translation-job}
 
-Översättningsjobbpanelen i ett översättningsprojekt anger status för ett översättningsjobb samt antalet sidor och resurser i jobbet.
+Översättningsjobbpanelen i ett översättningsprojekt anger status för ett översättningsjobb och antalet sidor och resurser i jobbet.
 
 ![Översättningsjobb](../assets/translation-job.png)
 
@@ -437,7 +437,7 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
 Så här jämför du språkkopior med överordnad:
 
 1. Gå till den språkkopia som du vill jämföra i webbplatskonsolen.
-1. Öppna [Referensfält.](/help/sites-cloud/authoring/getting-started/basic-handling.md#references)
+1. Öppna [Referensspår](/help/sites-cloud/authoring/getting-started/basic-handling.md#references).
 1. Under **Kopior** rubrikmarkera **Språkkopior.**
 1. Välj en språkversion och sedan kan du antingen klicka **Jämför med Överordnad** eller **Jämför med föregående** om tillämpligt.
 

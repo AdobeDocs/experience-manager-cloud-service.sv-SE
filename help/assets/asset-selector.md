@@ -4,9 +4,9 @@ description: Använd resursväljaren för att söka efter, hitta och hämta resu
 contentOwner: Adobe
 role: Admin,User
 exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2363'
+source-wordcount: '2367'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ The prerequisites vary if you are authenticating using a SUSI flow or a non-SUSI
 *   imsToken
 *   apikey
 
-For more information on these properties, refer to [Asset Selector Properties](#asset-selector-properties).
+For more information on these properties, see [Asset Selector Properties](#asset-selector-properties).
 
 **SUSI flow**
 
@@ -95,7 +95,7 @@ For more information on these properties, refer to [Asset Selector Properties](#
 *   imsOrg
 *   apikey
 
-For more information on these properties, refer to [Example for the SUSI flow](#susi-vanilla) and [Asset Selector Properties](#asset-selector-properties).
+For more information on these properties, see [Example for the SUSI flow](#susi-vanilla) and [Asset Selector Properties](#asset-selector-properties).
 -->
 
 ## Installation {#installation}
@@ -171,12 +171,12 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda res
 | *repo:storlek* | tal | Resursens storlek i byte. |
 | *repo:sökväg* | string | Platsen för resursen i databasen. |
 | *repo:överordnade* | `Array<string>` | En array med överordnade objekt för resursen i databasen. |
-| *repo:läge* | string | Aktuell status för resursen i databasen (t.ex. aktiv, borttagen osv.). |
+| *repo:läge* | string | Aktuellt läge för resursen i databasen (t.ex. aktiv, borttagen och så vidare). |
 | *repo:createdBy* | string | Användaren eller systemet som skapade resursen. |
 | *repa:createDate* | string | Datum och tid då tillgången skapades. |
 | *repo:modifiedBy* | string | Den användare eller det system som senast ändrade resursen. |
 | *repo:modifyDate* | string | Datum och tid då tillgången senast ändrades. |
-| *dc:format* | string | Resursens format, t.ex. filtypen (t.ex. JPEG, PNG). |
+| *dc:format* | string | Resursens format, till exempel filtypen (till exempel JPEG, PNG och så vidare). |
 | *tiff:imageWidth* | tal | Bredden på en resurs. |
 | *tiff:imageLength* | tal | En tillgångs höjd. |
 | *computedMetadata* | `Record<string, any>` | Ett objekt som representerar en bucket för alla resursens metadata av alla slag (databas, program eller inbäddade metadata). |
@@ -364,7 +364,7 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *imsOrg* | string | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas vid etablering [!DNL Adobe Experience Manager] som [!DNL Cloud Service] för er organisation. The `imsOrg` Nyckeln krävs för att verifiera om den organisation du använder är under Adobe IMS eller inte. |
 | *imsToken* | string | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett icke-SUSI-flöde. |
 | *apiKey* | string | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder ett icke-SUSI-flöde. |
-| *rootPath* | string | Nej | /content/dam/ | Mappsökväg där resursväljaren visar dina resurser. `rootPath` kan också användas i form av inkapsling. Med följande sökväg, till exempel `/content/dam/marketing/subfolder/`kan du inte bläddra igenom någon överordnad mapp, utan bara visa de underordnade mapparna. |
+| *rootPath* | string | Nej | /content/dam/ | Mappsökväg där resursväljaren visar dina resurser. `rootPath` kan också användas i form av inkapsling. Med följande sökväg `/content/dam/marketing/subfolder/`kan du inte bläddra igenom någon överordnad mapp, utan bara visa de underordnade mapparna. |
 | *bana* | string | Nej | | Sökväg som används för att navigera till en viss katalog med resurser när resursväljaren återges. |
 | *filterSchema* | array | Nej | | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
 | *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. Exempel: MIME-typ JPG, PNG, GIF. |
@@ -477,7 +477,7 @@ interface SelectedAsset {
 | tiff:imageLength | number | The height of an image type of Asset |
 | repo:state | string | The `Approved`, `Rejected`, or `Expired`state of an Asset |
 | computedMetadata | string | It is an object that represents a bucket for all the Asset's metadata of all kinds (repository, application or embedded metadata) |
-| _links | string | It represents the collection of links used in the Asset Selector. The links are represented in the form of an array. The parameters of an array include: `href`, `type`, `repo:size`, `width`, `height`, etc.  |
+| _links | string | It represents the collection of links used in the Asset Selector. The links are represented in the form of an array. The parameters of an array include: `href`, `type`, `repo:size`, `width`, `height`, and so on  |
 
 For the detailed example of Object Schema, click 
 -->

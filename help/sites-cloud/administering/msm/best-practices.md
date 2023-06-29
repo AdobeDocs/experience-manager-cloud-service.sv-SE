@@ -4,9 +4,9 @@ description: Lär dig de bästa arbetssätten som skapats av tekniker och konsul
 feature: Multi Site Manager
 role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ När du skapar en ny webbplats med Live Copy är det fördelaktigt att skapa des
 
 >[!NOTE]
 >
-> Observera att CUG-filer på fliken Behörigheter inte kan rullas ut till Live-kopior från utkast. Se till att du undviker detta när du konfigurerar Live Copy.
+>CUG-filer på fliken Behörigheter kan inte rullas ut till Live-kopior från utkast. Planera runt den här regeln när du konfigurerar Live Copy.
 
 ## Komponenter- och behållarsynkronisering {#components-and-container-synchronization}
 
@@ -81,13 +81,13 @@ MSM kan hjälpa till att skapa flerspråkiga webbplatser på två sätt:
 
 Tänk på följande när du skapar språkmallar:
 
-* Medan själva MSM **tillhandahåller inte innehållsöversättning**, kan den integreras med översättningskontakter från tredje part. Observera att:
+* Medan själva MSM **tillhandahåller inte innehållsöversättning**, kan den integreras med översättningskontakter från tredje part. Observera följande:
    * Med MSM kan du avbryta arv på sid- och/eller komponentnivå. Detta förhindrar att översatt innehåll (från en Live-kopia, med ännu inte översatt innehåll från en ritning) skrivs över vid nästa utrullning.
       * Vissa översättningsanslutningar från tredje part automatiserar hanteringen av MSM-arv.
       * Kontakta översättningstjänsten för mer information.
       * Ett annat sätt att skapa och översätta språkmallsidor är att använda språkkopior i kombination med AEM färdiga integrationsramverk för översättning.
 
-Mer information finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md) och [Bästa praxis för översättning.](/help/sites-cloud/administering/translation/best-practices.md)
+Mer information finns i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md) och [Bästa praxis för översättning](/help/sites-cloud/administering/translation/best-practices.md).
 
 ## Strukturändringar och utrullningar {#structure-changes-and-rollouts}
 

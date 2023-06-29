@@ -2,9 +2,9 @@
 title: Använda Best Practices Analyzer
 description: Använda Best Practices Analyzer
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2479'
+source-wordcount: '2474'
 ht-degree: 38%
 
 ---
@@ -144,7 +144,7 @@ Rapportens format är:
 Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder.
 
 >[!NOTE]
->Om du vill veta mer om varje sökkategori kan du läsa [Kategorier för mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
+>Mer information om varje sökkategori finns i [Kategorier för mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
 
 Läs tabellen nedan för mer information om viktighetsgrad:
 
@@ -192,7 +192,7 @@ HTTP-gränssnittet kan användas på flera olika sätt.
 
 Ett enkelt sätt är att öppna en webbläsarflik i den webbläsare där du har loggat in i AEM som administratör. Du kan ange URL-adressen på webbläsarfliken och låta webbläsaren visa eller hämta resultat.
 
-Du kan också använda ett kommandoradsverktyg som `curl` eller `wget` samt HTTP-klientprogram. Om du inte använder en webbläsarflik med en autentiserad session måste du ange ett administratörsanvändarnamn och lösenord som en del av kommentaren.
+Du kan också använda ett kommandoradsverktyg som `curl` eller `wget` och alla HTTP-klientprogram. Om du inte använder en webbläsarflik med en autentiserad session måste du ange ett administratörsanvändarnamn och lösenord som en del av kommentaren.
 
 Nedan visas ett exempel på hur du gör det:
 `curl -u admin:admin 'http://localhost:4502/apps/best-practices-analyzer/analysis/report.csv' > report.csv`.

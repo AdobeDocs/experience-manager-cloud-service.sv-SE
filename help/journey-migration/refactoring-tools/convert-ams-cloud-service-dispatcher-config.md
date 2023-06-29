@@ -1,10 +1,10 @@
 ---
 title: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
 description: Konvertera en hanterad tjänst till en Adobe Experience Manager as a Cloud Service Dispatcher-konfiguration
-source-git-commit: 1fc57dacbf811070664d5f5aaa591dd705516fa8
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1275'
-ht-degree: 44%
+source-wordcount: '1278'
+ht-degree: 39%
 
 ---
 
@@ -49,7 +49,7 @@ ska du ta bort eller kommentera dem. Programsatser i de här avsnitten bearbetas
 
    * Ta bort alla filer med namnen base_rewrite.rules och xforward_forcessl_rewrite.rules och kom ihåg att ta bort Include-satser i de virtuell värd-filerna som refererar till dem.
 
-   * Om conf.d/rewrites nu innehåller en enstaka fil bör namnet ändras till rewrite.rules och glöm inte att anpassa de Include-satser som refererar till den filen även i virtuell värd-filerna.
+   * Om conf.d/rewrites nu innehåller en enda fil bör namnet på filen ändras till rewrite.rules och glöm inte att anpassa programsatserna Include som refererar till den filen i de virtuella värdfilerna.
 
    * Om mappen däremot innehåller flera, virtuella värdspecifika filer, ska deras innehåll kopieras till programsatsen Inkludera som refererar till dem i de virtuella värdfilerna.
 
@@ -59,7 +59,7 @@ ska du ta bort eller kommentera dem. Programsatser i de här avsnitten bearbetas
 
    1. Ta bort alla filer med namnet ams_default.vars och kom ihåg att ta bort Include-satser i de virtuell värd-filer som refererar till dem.
 
-   1. Om conf.d/variables nu innehåller en enstaka fil bör namnet ändras till custom.vars och glöm inte att anpassa de Include-satser som refererar till den filen även i virtuell värd-filerna.
+   1. Om conf.d/variables nu innehåller en enda fil bör namnet på filen ändras till custom.vars och du får inte glömma att anpassa programsatserna Include som refererar till den filen i de virtuella värdfilerna.
 
    1. Om mappen däremot innehåller flera, virtuella värdspecifika filer, ska deras innehåll kopieras till programsatsen Inkludera som refererar till dem i de virtuella värdfilerna.
 

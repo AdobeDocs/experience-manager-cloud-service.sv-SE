@@ -4,9 +4,9 @@ description: Lär dig hur du kan koppla AEM till Microsoft Translator körklart 
 feature: Language Copy
 role: Admin
 exl-id: ca3c50f9-005e-4871-8606-0cfd3ed21936
-source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Skapa en konfiguration för [Microsoft Translator](https://www.microsoft.com/en-
 
 >[!TIP]
 >
->Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll, se [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Följande procedur skapar en Microsoft Translator-konfiguration.
 1. Tryck eller klicka på **Skapa** -knappen.
 1. Definiera konfigurationen.
    1. Välj **Microsoft Translator** i listrutan.
-   1. Ange en rubrik för konfigurationen. Titeln identifierar konfigurationen i konsolen Cloud Services samt i listrutor för sidegenskaper.
+   1. Ange en rubrik för konfigurationen. Titeln identifierar konfigurationen i konsolen Cloud Services och i listrutor för sidegenskaper.
    1. Du kan också ange ett namn som ska användas för databasnoden som lagrar konfigurationen.
 
    ![Skapa översättningskonfiguration](../assets/create-translation-config.png)

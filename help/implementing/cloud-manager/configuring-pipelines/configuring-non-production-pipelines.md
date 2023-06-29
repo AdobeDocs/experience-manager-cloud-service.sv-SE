@@ -3,9 +3,9 @@ title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Öppna **Pipelines** från startskärmen i Cloud Manager. Klicka på **+Lägg till** och markera **Lägg till icke-produktionsförlopp**.
+1. Öppna **Pipelines** från startskärmen i Cloud Manager. Klicka **+Lägg till** och markera **Lägg till icke-produktionsförlopp**.
 
    ![Lägg till icke-produktionsflöde](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add1.png)
 
@@ -50,25 +50,25 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
    * **Utlösare för distribution** - Du har följande alternativ när du definierar distributionsutlösare för att starta pipeline.
 
       * **Manuell** - Använd det här alternativet om du vill starta pipelinen manuellt.
-      * **Vid Git-ändringar** - Detta alternativ startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Med det här alternativet kan du fortfarande starta pipelinen manuellt efter behov.
+      * **Vid Git-ändringar** - Det här alternativet startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Med det här alternativet kan du fortfarande starta pipelinen manuellt efter behov.
 
-1. Om du väljer att skapa en **Distributionsförlopp** Du måste också definiera **Beteende vid viktiga måttfel**.
+1. Om du väljer att skapa en **Distributionsförlopp** måste du också definiera **Beteende vid viktiga måttfel**.
 
-   * **Fråga varje gång** - Det här är standardinställningen och kräver manuell åtgärd vid viktiga fel.
-   * **Misslyckas omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
-   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
+   * **Fråga varje gång** - Det här beteendet är standardinställningen och kräver manuell åtgärd vid viktiga fel.
+   * **Misslyckas omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Det emulerar i princip en användare som manuellt avvisar varje fel.
+   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Det emulerar i princip en användare som manuellt godkänner varje fel.
 
 1. Klicka **Fortsätt**.
 
 1. På **Källkod** -fliken i **Lägg till icke-produktionsförlopp** måste du välja vilken typ av kod som pipeline ska bearbeta.
 
-   * **[Front End-kod](#front-end-code)**
+   * **[Front-End-kod](#front-end-code)**
    * **[Fullständig stackkod](#full-stack-code)**
    * **[Webbnivåkonfiguration](#web-tier-config)**
 
-Hur du slutför skapandet av din icke-produktionsprocess varierar beroende på vilket alternativ du har för **Källkod** du markerade. Följ länkarna ovan för att gå till nästa avsnitt i det här dokumentet för att slutföra konfigurationen av din pipeline.
+Hur du slutför skapandet av din icke-produktionsprocess varierar beroende på vilket alternativ du har för **Källkod** du markerade. Följ länkarna ovan för att gå till nästa avsnitt i det här dokumentet så att du kan slutföra konfigurationen av din pipeline.
 
-### Front End-kod {#front-end-code}
+### Front-End-kod {#front-end-code}
 
 En frontkodspipeline distribuerar frontkodsbyggen som innehåller ett eller flera gränssnittsprogram på klientsidan. Se dokumentet [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill ha mer information om den här typen av pipeline.
 
@@ -77,14 +77,14 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 1. På **Källkod** måste du definiera följande alternativ.
 
    * **Berättigade driftsättningsmiljöer** - Om din pipeline är en distributionsprocess måste du välja till vilka miljöer den ska distribueras.
-   * **Databas** - Det här alternativet definierar från vilken Git-repo pipelinen ska hämta koden.
+   * **Databas** - Det här alternativet definierar från vilken Git-repo som pipelinen ska hämta koden.
 
    >[!TIP]
    > 
-   >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
+   >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
-      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
+      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Här hittas de matchande grenar som du kan välja.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
 
    ![Front-end-pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-front-end.png)
@@ -99,24 +99,24 @@ En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i fra
 
 >[!NOTE]
 >
->Om det redan finns en kodrapport med fullständig stapel för den valda miljön inaktiveras den här markeringen.
+>Om det finns en kodrapport med fullständig stapel för den valda miljön inaktiveras den här markeringen.
 
 Följ de här stegen för att slutföra konfigurationen av icke-produktionsflödet för kod i helhög.
 
 1. På **Källkod** måste du definiera följande alternativ.
 
    * **Berättigade driftsättningsmiljöer** - Om din pipeline är en distributionsprocess måste du välja till vilka miljöer den ska distribueras.
-   * **Databas** - Det här alternativet definierar från vilken Git-repo pipelinen ska hämta koden.
+   * **Databas** - Det här alternativet definierar från vilken Git-repo som pipelinen ska hämta koden.
 
    >[!TIP]
    > 
-   >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
+   >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
-      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
+      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Det hjälper dig att hitta matchande grenar som du kan välja.
    * **Ignorera webbnivåkonfiguration** - När du markerar det här alternativet distribueras inte webbnivåkonfigurationen.
 
-   * **Pipeline** - Om din pipeline är en distributionsprocess kan du välja att köra en testfas. Markera de alternativ du vill aktivera i den här fasen. Om inget av alternativen är markerat visas inte testfasen under pipeline-körningen.
+   * **Pipeline** - Om din pipeline är en distributionsprocess kan du välja att köra en testfas. Markera de alternativ som du vill aktivera i den här fasen. Om inget av alternativen är markerat visas inte testfasen när pipeline körs.
 
       * **Funktionstestning av produkten** - Kör [funktionsprovningar av produkter](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) mot utvecklingsmiljön.
       * **Anpassad funktionstestning** - Kör [anpassade funktionstester](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) mot utvecklingsmiljön.
@@ -130,26 +130,26 @@ Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.m
 
 ### Webbnivåkonfiguration {#web-tier-config}
 
-En konfigurationspipeline för webbskikt Distribuerar konfigurationer för HTTPD/Dispatcher. Se dokumentet [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipeline) om du vill ha mer information om den här typen av pipeline.
+En konfigurationspipeline för webbskikt Distribuerar konfigurationer för HTTPD/Dispatcher. Se [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipeline) om du vill ha mer information om den här typen av pipeline.
 
 >[!NOTE]
 >
->Om det redan finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
+>Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
 
 Följ de här stegen för att slutföra konfigurationen av icke-produktionsflödet för kod på webbnivå.
 
 1. På **Källkod** måste du definiera följande alternativ.
 
    * **Berättigade driftsättningsmiljöer** - Om din pipeline är en distributionsprocess måste du välja till vilka miljöer den ska distribueras.
-   * **Databas** - Det här alternativet definierar från vilken Git-repo pipelinen ska hämta koden.
+   * **Databas** - Det här alternativet definierar från vilken Git-repo som pipelinen ska hämta koden.
 
    >[!TIP]
    > 
-   >Se dokumentet [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) om du vill lära dig hur du lägger till och hanterar databaser i Cloud Manager.
+   >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
-      * För konfigurationspipelines på webbnivå är detta vanligtvis sökvägen som innehåller `conf.d`, `conf.dispatcher.d`och `opt-in` kataloger.
+      * För konfigurationspipelines på webbnivå innehåller den här sökvägen vanligtvis `conf.d`, `conf.dispatcher.d`och `opt-in` kataloger.
       * Om projektstrukturen till exempel genererades från [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) banan `/dispatcher/src`.
 
    ![Rörledning på webbnivå](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-web-tier.png)
@@ -170,9 +170,9 @@ Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 
-Om du vill att dispatcherpaket ska byggas som en del av pipeline, men inte vill att de ska publiceras för att skapa lagring, kan du inaktivera publicering av dem, vilket kan minska körningstiden för pipeline.
+Om du vill att Dispatcher-paket ska byggas som en del av pipeline, men inte vill att de ska publiceras för att skapa lagring, kan du inaktivera publicering av dem, vilket kan minska körningstiden för pipeline.
 
-Följande konfiguration för att inaktivera publiceringsdispatcherpaket måste läggas till via ditt projekt `pom.xml` -fil. Den baseras på en miljövariabel, som fungerar som en flagga som du kan ange i Cloud Managers byggbehållare för att definiera när dispatcherpaket ska ignoreras.
+Följande konfiguration för att inaktivera publicering av Dispatcher-paket måste läggas till via ditt projekt `pom.xml` -fil. Den baseras på en miljövariabel, som fungerar som en flagga som du kan ange i Cloud Managers byggbehållare för att definiera när Dispatcher-paket ska ignoreras.
 
 ```xml
 <profile>

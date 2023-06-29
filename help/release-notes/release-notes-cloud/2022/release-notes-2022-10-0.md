@@ -2,9 +2,9 @@
 title: Versionsinformation för version 2022.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för version 2022.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 8fce7c50-f322-4bcf-bd76-390faedfd5b7
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Titta på videon med versionsöversikten för oktober 2022 om du vill se en samm
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* The [Fliken Personalisering för Experience Fragments](/help/sites-cloud/authoring/fundamentals/experience-fragments.md#personalization-experience-fragment) möjliggör funktioner för segmenteringsspecifikation för Experience Fragment Editor samt flexibiliteten att skapa kapslade Experience Fragments, där sidhuvuds- och sidfotsvarianter kan skapas för flera segment. Före lanseringen av den här funktionen är AEM personalisering bara tillgängligt för webbplatssidor, men inte för Experience Fragments
+* The [Fliken Personalisering för Experience Fragments](/help/sites-cloud/authoring/fundamentals/experience-fragments.md#personalization-experience-fragment) möjliggör funktioner för segmenteringsspecifikation för Experience Fragment Editor och flexibiliteten att skapa kapslade Experience Fragments, där sidhuvuds- och sidfotsvarianter kan skapas för flera segment. Före lanseringen av den här funktionen är AEM personalisering bara tillgängligt för webbplatssidor, men inte för Experience Fragments
 
 * The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) gör det nu möjligt att effektivt hantera översatta innehållsfragment. Åtkomst med ett klick har tillhandahållits för att visa alla språkkopior också. Användarna kan också filtrera tabellvyn efter de språkområden de är intresserade av.
 
@@ -85,7 +85,7 @@ Titta på videon med versionsöversikten för oktober 2022 om du vill se en samm
 
 ### Vad är nytt? {#what-is-new-foundation}
 
-* AEM as a Cloud Service (Author Service) är nu integrerat med Unified Shell för att förbättra användarupplevelsen och sammanföra den med alla andra Experience Cloud-program. Se AEM som en [Cloud Service i enhetligt gränssnitt](/help/overview/aem-cloud-service-on-unified-shell.md) för mer information.
+* AEM as a Cloud Service (Author Service) är nu integrerat med Unified Shell för att förbättra användarupplevelsen och sammanföra den med alla andra Experience Cloud-program. Se AEM som [Cloud Service i enhetligt gränssnitt](/help/overview/aem-cloud-service-on-unified-shell.md) för mer information.
 
 * Som tidigare nämnts i versionsinformationen är nu användningen av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) föråldrat och påtvingat. Se [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) för förslag på metoder för att replikera dessa stora innehållspaket.
 
@@ -93,7 +93,7 @@ Titta på videon med versionsöversikten för oktober 2022 om du vill se en samm
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här.](/help/implementing/cloud-manager/release-notes/current.md)
+Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes/current.md).
 
 ## Migreringsverktyg {#migration-tools}
 

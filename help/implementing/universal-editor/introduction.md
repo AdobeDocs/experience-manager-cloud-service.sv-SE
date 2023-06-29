@@ -2,7 +2,7 @@
 title: Introduktion till Universal Visual Editor
 description: Se hur den universella Visual Editor (alias. Universal Editor) möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Den universella redigeraren kan användas för alla implementeringar, för vilke
 
 Eftersom upplevelser kan byggas på många olika sätt kan alla implementeringar använda den universella redigeraren så att författare kan redigera i sitt sammanhang.
 
-Användare tror ofta att en headless-implementering begränsar författarens möjlighet att redigera allt innehåll i ett formulärbaserat användargränssnitt, men detta stämmer inte med den universella redigeraren
+Användare tror ofta att en headless-implementering begränsar författarna till att redigera allt innehåll i ett formulärbaserat användargränssnitt, men detta gäller inte för den universella redigeraren
 
 Kraven för en implementering som ska använda den universella redigeraren är raka framifrån och har stöd för följande:
 
@@ -81,7 +81,7 @@ En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i e
 
 Det är viktigt att komma ihåg att den universella redigeraren är ett pågående arbete och en del av funktionerna som beskrivs i det här dokumentet är en vision för den slutliga redigeraren och inte nödvändigtvis en representation av dess nuvarande funktioner.
 
-Kontakta din Adobe-kontakt för mer information om kommande funktioner som planeras för den universella redigeraren.
+Tala med din Adobe-kontakt för mer information om kommande funktioner som planeras för den universella redigeraren.
 
 ## Ytterligare resurser {#additional-resources}
 

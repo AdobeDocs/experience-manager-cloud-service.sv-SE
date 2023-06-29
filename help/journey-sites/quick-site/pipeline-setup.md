@@ -2,9 +2,9 @@
 title: Konfigurera din pipeline
 description: Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
 exl-id: 0d77d1a6-98f3-4961-9283-f52c1b5b2a7b
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '967'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Den här delen av resan gäller för administratören av Cloud Manager.
 * Du måste ha tillgång till Cloud Manager.
 * Du måste vara medlem i **Distributionshanteraren** roll i Cloud Manager.
 * En Git-repo för AEM måste konfigureras i Cloud Manager.
-   * Detta är vanligtvis redan fallet för alla aktiva projekt. Om så inte är fallet, se dokumentationen för Cloud Manager-databaser som finns på [Ytterligare resurser](#additional-resources) -avsnitt.
+   * Detta är vanligtvis redan fallet för alla aktiva projekt. Om så inte är fallet, se dokumentationen för Cloud Manager-databaser som finns under [Ytterligare resurser](#additional-resources) -avsnitt.
 
 ## Vad är en frontpipeline? {#front-end-pipeline}
 
@@ -102,7 +102,7 @@ Den nya pipeline skapas och visas i **Pipelines** i Cloud Manager-fönstret. Om 
 
 >[!TIP]
 >
->Om du redan känner till rörledningar i AEMaaCS och vill veta mer om skillnaderna mellan de olika typerna av rörledningar, inklusive mer information om frontendledningen, kan du läsa mer om Konfigurera CI/CD Pipeline - Cloud Services i [Ytterligare resurser](#additional-resources) nedan.
+>Om du redan känner till rörledningar i AEMaaCS och vill veta mer om skillnaderna mellan de olika typerna av rörledningar, inklusive mer information om frontendledningen, kan du läsa Konfigurera CI/CD Pipeline - Cloud Services som är länkade i [Ytterligare resurser](#additional-resources) nedan.
 
 ## What&#39;s Next {#what-is-next}
 
@@ -118,5 +118,5 @@ Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom at
 Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebbplats genom att granska dokumentet [Anpassa webbplatstemat,](customize-theme.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
 
 * [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html) - Om du vill ha mer information om funktionerna i Cloud Manager kan du läsa de detaljerade tekniska dokumenten direkt.
-* [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) - Om du vill ha mer information om hur du konfigurerar och hanterar Git-databaser för ditt AEMaaCS-projekt kan du läsa det här dokumentet.
+* [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) - Om du vill ha mer information om hur du konfigurerar och hanterar Git-databaser för ditt AEMaaCS-projekt läser du i det här dokumentet.
 * [Konfigurera CI/CD-pipeline - Cloud Services](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) - Läs mer om hur du ställer in rörledningar, både i full hög och i framände, i det här dokumentet.

@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2308'
+source-wordcount: '2310'
 ht-degree: 0%
 
 ---
@@ -702,7 +702,7 @@ Det finns dessutom klasser för att formatera tabbnavigatorer (både vänster oc
   </tr>
   <tr>
    <td><p><code>nested_false</code></p> </td>
-   <td><p>Tabbnavigatorer (vänster och överst) som inte har kapslade/underordnade/underordnade navigatorer</p> </td>
+   <td><p>Tabbnavigatörer (vänster och överst) som inte har kapslade/underordnade/underordnade navigatorer</p> </td>
   </tr>
  </tbody>
 </table>
@@ -941,7 +941,7 @@ En panel innehåller ett valfritt verktygsfält och dess innehåll.
  </tbody>
 </table>
 
-Panelnoden är uppdelad i navigatorer och innehåll. Där `` `` är ingen separat formatkomponent för innehållet. Variablerna som beskrivs tillämpas både på navigatorn och på innehållet.
+Panelnoden är uppdelad i navigatorer och innehåll. Där `` `` är ingen separat formatkomponent för innehållet. Variablerna som beskrivs tillämpas på navigatorn och innehållet.
 
 Den översta panelen (RootPanel) har inte den här klassen.
 

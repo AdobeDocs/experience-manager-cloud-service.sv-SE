@@ -2,9 +2,9 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: 1e9ca4f18c3698dbf4bbc0f104559e14f429e28e
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1826'
 ht-degree: 75%
 
 ---
@@ -65,7 +65,7 @@ Skalningen av tjänstens instanser per tenant gäller för de två axlarna:
 ## Miljöer {#environments}
 
 >[!NOTE]
->Mer information finns i [Distribuera – Körningslägen](/help/implementing/deploying/overview.md#runmodes)
+>Mer information finns i [Distribuera - Körningslägen](/help/implementing/deploying/overview.md#runmodes)
 
 AEM as a Cloud Service är tillgängligt som enskilda instanser där varje instans representerar en komplett AEM-miljö.
 

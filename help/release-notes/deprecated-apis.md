@@ -2,9 +2,9 @@
 title: Föråldrade API:er
 description: Versionsinformation om borttagna och borttagna API:er i [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 exl-id: fbd8c60a-3e2b-4696-aaba-f4db97923184
-source-git-commit: 9e722de86e925cb8de626dc16624954dfac063cc
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1120'
+source-wordcount: '1116'
 ht-degree: 5%
 
 ---

@@ -2,9 +2,9 @@
 title: AEM Sites Journeys
 description: Börja här för att få en översikt över de guidade resor som finns för att förstå AEM kraftfulla webbplatsfunktioner.
 exl-id: d18bc8b8-8d94-4296-a218-b21b59e6563d
-source-git-commit: fd663a98cc4b2924edb274baa452264a37641e0c
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ Börja här för att få en översikt över de guidade resor som finns för att 
 
 ## Introduktion {#introduction}
 
-[AEM Sites](https://business.adobe.com/products/experience-manager/sites/aem-sites.html) är en enhetlig uppsättning kraftfulla verktyg som gör det enkelt att skapa, hantera och publicera digitala upplevelser i alla kanaler. AEM Sites är en heltäckande, central lösning för att skapa fantastiska upplevelser för era målgrupper oavsett var de befinner sig, från att skapa en första innehållsstruktur, till att enkelt skapa återanvändbart innehåll, till att distribuera till flera marknader och språk samt till att skapa anpassade applikationer som erbjuder personaliserade upplevelser.
+[AEM Sites](https://business.adobe.com/products/experience-manager/sites/aem-sites.html) är en enhetlig uppsättning kraftfulla verktyg som gör det enkelt att skapa, hantera och publicera digitala upplevelser i alla kanaler. AEM Sites är en heltäckande, central lösning för att skapa fantastiska upplevelser för era målgrupper oavsett var de befinner sig, från att skapa en första innehållsstruktur, till att enkelt skapa återanvändbart innehåll, till att distribuera till flera marknader och språk samt skapa anpassade applikationer som erbjuder personaliserade upplevelser.
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
 [En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar att man löser affärsärenden med AEM Sites så är AEM Sites Journeys där man ska börja.
 
@@ -43,4 +43,4 @@ Följande dokumentationsresor är tillgängliga för AEM Sites.
 | [Referensdemonstrationer, tilläggsresa](/help/journey-sites/demos-add-on/overview.md) | Börja här för en guidad resa genom hur du enkelt lägger till tillägget AEM Reference Demos i en sandlådemiljö med minimal AEM och kan testa de kraftfulla funktionerna i AEM med detaljerade exempel baserade på bästa praxis. | Systemadministratör |
 | [Site Translation Journey](/help/journey-sites/translation/overview.md) | Lär dig mer om AEM Sites tekniker, hur de kan användas i ditt projekt och hur du skapar och uppdaterar översättningsprojekt i AEM från A till Z. | Översättningsspecialister |
 
-Stanna kvar på [kommande resor som omfattar ytterligare roller.](/help/journey-documentation/documentation-journeys.md#journeys)
+Stanna kvar på [kommande resor som omfattar ytterligare roller](/help/journey-documentation/documentation-journeys.md#journeys).

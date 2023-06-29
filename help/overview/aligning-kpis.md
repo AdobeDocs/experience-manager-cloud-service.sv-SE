@@ -2,7 +2,7 @@
 title: Justera KPI:er
 description: Justera KPI:er
 exl-id: d338a7bd-adfe-486a-badf-348acd6018d0
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -36,7 +36,7 @@ I en digital värld kan du mäta nästan allt. Om du väljer tre nyckeltal för 
 
 1. **Skapa en mätbar metod för varje KPI.** När du har valt KPI:er hämtar du Adobe KPI-metodmall som vägleder dig genom resten av processen.
 
-1. **Definiera målgruppen för varje KPI.** Det sista steget för den här veckan är att identifiera den grupp med intressenter som bryr sig mest om varje KPI. Nästa vecka ska du samarbeta med varje grupp för att bekräfta KPI:n, förfina metoden och komma överens om formatet och tidpunkten för dina rapporter.
+1. **Definiera målgruppen för varje KPI.** Det sista steget för den här veckan är att identifiera den grupp med intressenter som bryr sig mest om varje KPI. Nästa vecka arbetar du med varje grupp för att bekräfta KPI:n, förfina metoden och komma överens om format och tidpunkter för rapporterna.
 
 >[!TIP]
 >

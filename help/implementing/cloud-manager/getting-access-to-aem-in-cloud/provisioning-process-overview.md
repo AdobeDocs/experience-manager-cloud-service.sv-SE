@@ -1,9 +1,9 @@
 ---
 title: Provisioneringsprocess - översikt
 description: Provisioneringsprocess - översikt
-source-git-commit: ffeda76f9c661117ddba50588ebea01d151ee8c3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '330'
 ht-degree: 7%
 
 ---
@@ -34,7 +34,7 @@ När automatisk etablering är klar:
 ![processurview.jpg](assets/processOverview.jpg)
 
 
-Mer information finns på [Anordnande av nyanställda på Experience Manager as a Cloud Service på Experience League](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=en)
+Mer information finns i [Anordnande av nyanställda på Experience Manager as a Cloud Service på Experience League](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=en).
 
 ### Resurser och länkar
 

@@ -2,9 +2,9 @@
 title: Program och programtyper
 description: Lär dig mer om Cloud Managers hierarki och hur de olika typerna av program passar in i dess struktur och hur de skiljer sig åt.
 exl-id: 507df619-a5b5-419a-9e38-db77541425a2
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Ett Cloud Manager-program etableras automatiskt med en egen Git-databas.
 
 För att få åtkomst till molnhanterarens Git-databas måste användarna använda en Git-klient med ett kommandoradsverktyg, en fristående visuell Git-klient eller användarens valfria IDE som Eclipse, IntelliJ eller NetBeans.
 
-När en Git-klient har konfigurerats kan du hantera din Git-databas via användargränssnittet i Cloud Manager. Mer information om hur du hanterar Git med hjälp av användargränssnittet i molnhanteraren finns i dokumentet [Åtkomst till Git.](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
+När en Git-klient har konfigurerats kan du hantera din Git-databas via användargränssnittet i Cloud Manager. Mer information om hur du hanterar Git med användargränssnittet i Cloud Manager finns i [Åtkomst till Git](/help/implementing/cloud-manager/managing-code/accessing-repos.md).
 
 Om du vill börja utveckla AEM Cloud-programmet måste du checka ut den från Cloud Manager-databasen till en plats på den lokala datorn.
 
@@ -56,8 +56,8 @@ Den enda skillnaden är att Git-fjärrdatabasen är en del av Cloud Manager, som
 En användare kan skapa en **produktion** program eller **sandlåda** program.
 
 * A **produktionsprogram** skapas för att aktivera livatrafik för din webbplats.
-   * Se dokumentet [Introduktion till produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för mer information.
+   * Se [Introduktion till produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för mer information.
 * A **sandlådeprogram** skapas vanligtvis för utbildning, löpande demonstrationer, aktivering, POC eller dokumentation.
    * En sandlådemiljö är inte avsedd att bära trafik i realtid och har begränsningar som ett produktionsprogram inte kommer att ha.
    * Den innehåller Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en utvecklingsmiljö och en icke-produktionsprocess.
-   * Se dokumentet [Introduktion till sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md) för mer information.
+   * Se [Introduktion till sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md) för mer information.

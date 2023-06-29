@@ -4,9 +4,9 @@ seo-title: Learn to add support for new locales to your adaptive forms
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. Engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR) språk.
 seo-description: AEM Forms allows you to add new locales for localizing adaptive forms. We support 10 locales out of the box curently, as  "en","fr","de","ja","pt-br","zh-cn","zh-tw","ko-kr","it","es".
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Skapa en nod med namnet som `[locale-name]_xfa` och skriv som `cq:ClientLibraryF
 
 * **I18N.js** definiera `xfalib.locale.Strings` för `<locale>` enligt definition i `/etc/clientlibs/fd/xfaforms/I18N/ja/I18N`.
 * **js.txt** som innehåller följande:
-   */libs/fd/xfaforms/clientlibs/I18N/Namespace.js I18N.js /etc/clientlibs/fd/xfaforms/I18N/LogMessages.js*
+  */libs/fd/xfaforms/clientlibs/I18N/Namespace.js I18N.js /etc/clientlibs/fd/xfaforms/I18N/LogMessages.js*
 
 ##### 3.2. Lägg till klientbibliotek för adaptiv form för en språknamnsmapp
 
@@ -129,9 +129,8 @@ Det finns två metoder för att identifiera språkområdet i en adaptiv form. N�
 * Hämtar följande parametrar i listordningen:
 
    * Begäranparameter `afAcceptLang`
-Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka 
-`afAcceptLang` begär parameter för att tvinga språkområdet. Följande URL-adress tvingar till exempel formuläret att återges på kanadensisk-fransk plats:
-      `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ca-fr`
+Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka `afAcceptLang` begär parameter för att tvinga språkområdet. Följande URL-adress tvingar till exempel formuläret att återges på kanadensisk-fransk plats:
+     `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ca-fr`
 
    * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med `Accept-Language` header.
 

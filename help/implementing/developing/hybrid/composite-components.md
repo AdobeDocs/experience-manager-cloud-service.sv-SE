@@ -2,7 +2,7 @@
 title: Sammansatta komponenter i SPA
 description: Lär dig hur du skapar egna sammansatta komponenter, komponenter som består av andra komponenter, som fungerar med AEM Single-Page Application (SPA) Editor.
 exl-id: fa1ab1dd-9e8e-4e2c-aa9a-5b46ed8a02cb
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -19,7 +19,7 @@ I den här artikeln visas hur du kan lägga till en sammansatt komponent i ett e
 
 ## Användningsfall {#use-case}
 
-I den här artikeln används den vanliga kortkomponenten som exempel på hur den används. Kort är ett vanligt gränssnittselement för många digitala upplevelser och består vanligtvis av en bild och tillhörande text eller bildtext. En författare vill kunna dra och släppa hela kortet, men kan redigera kortets bild individuellt samt anpassa den tillhörande texten.
+I den här artikeln används den vanliga kortkomponenten som exempel på hur den används. Kort är ett vanligt gränssnittselement för många digitala upplevelser och består vanligtvis av en bild och tillhörande text eller bildtext. En författare vill kunna dra och släppa hela kortet, men kan redigera kortets bild individuellt och anpassa den tillhörande texten.
 
 ## Förutsättningar {#prerequisites}
 
@@ -41,7 +41,7 @@ I följande avsnitt ges exempel på hur du implementerar varje fall med kortkomp
 
 ### Komponenten finns inte i AEM. {#component-does-not-exist}
 
-Börja med att skapa de komponenter som ska utgöra den sammansatta komponenten, dvs. komponenter för bilden och dess text.
+Börja med att skapa de komponenter som ska utgöra den sammansatta komponenten, det vill säga komponenterna för bilden och dess text.
 
 1. Skapa textkomponenten i AEM.
 1. Lägg till motsvarande `resourceType` från projektet i komponentens `editConfig` nod.
@@ -156,7 +156,7 @@ Sedan kan du lägga till den i SPA och hämta dess innehåll.
     itemPath='root/responsivegrid' />
    ```
 
-1. Lägg till skapade `wknd-spa/components/imagecard` till de tillåtna komponenterna för behållarkomponenten [i sidmallen.](/help/sites-cloud/authoring/features/templates.md)
+1. Lägg till skapade `wknd-spa/components/imagecard` till de tillåtna komponenterna för behållarkomponenten [i sidmallen](/help/sites-cloud/authoring/features/templates.md).
 
 Nu `imagecard` kan läggas till direkt i behållaren i AEM.
 

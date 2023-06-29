@@ -6,7 +6,7 @@ seo-description: With Adaptive Forms, you users can prefill basic information in
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 exl-id: e2a87233-a0d5-48f0-b883-915fe56f105f
-source-git-commit: 99a86fa88b0b98d732487b9e4b0b6de9fa3773ad
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '1947'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Du kan förifylla fälten i ett adaptivt formulär med befintliga data. När en 
 
 ## Struktur för förifyllda data {#the-prefill-structure}
 
-Ett adaptivt formulär kan innehålla en blandning av bundna och obundna fält. Bundna fält är fält som dras från fliken Innehållssökare och som inte är tomma `bindRef` egenskapsvärde i dialogrutan för fältredigering. Obundna fält dras direkt från komponentwebbläsaren i Sidespark och har en tom `bindRef` värde.
+Ett adaptivt formulär kan innehålla en blandning av bundna och obundna fält. Bundna fält är fält som dras från fliken Innehållssökare och som inte är tomma `bindRef` egenskapsvärde i dialogrutan för fältredigering. Obundna fält dras direkt från komponentwebbläsaren i Sidekick och har ett tomt värde `bindRef` värde.
 
 Du kan förifylla både bundna och obundna fält i ett adaptivt formulär. Prefill-data innehåller avsnitten afBoundData och afUnBoundData för att förifylla både bundna och obundna fält i ett adaptivt formulär. The `afBoundData` -avsnittet innehåller förifyllda data för bundna fält och paneler. Dessa data måste vara kompatibla med det associerade formulärmodellschemat:
 
@@ -128,7 +128,7 @@ För fält vars modell är XML-schema är data förifyllda i `afBoundData` -tagg
 
 >[!NOTE]
 >
->Vi rekommenderar att du inte använder obundna fält i bundna paneler (paneler med icke-tomma paneler) `bindRef` som har skapats genom att dra komponenter från fliken SideKlick eller Datakällor). Det kan orsaka dataförlust för dessa obundna fält. Vi rekommenderar dessutom att fältnamnen är unika i hela formuläret, särskilt för obundna fält.
+>Vi rekommenderar att du inte använder obundna fält i bundna paneler (paneler med icke-tomma paneler) `bindRef` som har skapats genom att dra komponenter från Sidekick eller fliken Datakällor). Det kan orsaka dataförlust för dessa obundna fält. Vi rekommenderar dessutom att fältnamnen är unika i hela formuläret, särskilt för obundna fält.
 
 #### Ett exempel utan afData och afBoundData-wrapper {#an-example-without-afdata-and-afbounddata-wrapper}
 
@@ -199,7 +199,8 @@ Nedan visas ett exempel utan `afData/afBoundData` wrapper:
 
 >[!NOTE]
 >
-> Använda obundna fält i bundna paneler (paneler med icke-tomma bindRef som har skapats genom att dra komponenter från fliken Sidspark eller Datakällor) **not** rekommenderas eftersom det kan orsaka dataförlust i obundna fält. Du bör ha unika fältnamn i hela formuläret, särskilt för obundna fält.
+> Använda obundna fält i bundna paneler (paneler med icke-tomma bindRef som har skapats genom att dra komponenter från Sidekick eller fliken Datakällor) **not** rekommenderas eftersom det kan orsaka dataförlust i obundna fält. Du bör ha unika fältnamn i hela formuläret, särskilt för obundna fält.
+>
 
 ### Adaptiv form utan formulärmodell {#adaptive-form-with-no-form-model}
 
@@ -247,7 +248,6 @@ Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer 
 > - Som standard är förifyllning tillåtet via crx-filer för alla typer av adaptiva Forms (XSD, XDP, JSON, FDM och utan formulärmodellbaserad). Förifyll tillåts bara med JSON- och XML-filer.
 > - CRX-protokollet hanterar förfylld datasäkerhet och är därför tillåtet som standard. Förifyllnad via andra protokoll med generisk regex kan orsaka sårbarhet. I konfigurationen anger du en säker URL-konfiguration för att skydda dina data.
 
-
 ## Det nyfikna fallet med repeterbara paneler {#the-curious-case-of-repeatable-panels}
 
 Vanligtvis skapas bundna (formulärschema) och obundna fält i samma adaptiva form, men följande undantag görs om bindningen är repeterbar:
@@ -292,7 +292,7 @@ https://`servername`/content/forms/af/xml.html?wcmmode=disabled&dataRef=https://
 https://`servername`/content/forms/af/abc.html?wcmmode=disabled&dataRef=service://[SERVICE_NAME]/[IDENTIFIER]
 ```
 
-- SERVICE_NAME refererar till namnet på OSGI-förifyllningstjänsten. Referens [Skapa och köra en förifyllningstjänst](prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service).
+- SERVICE_NAME refererar till namnet på OSGI-förifyllningstjänsten. Se [Skapa och köra en förifyllningstjänst](prepopulate-adaptive-form-fields.md#create-and-run-a-prefill-service).
 - IDENTIFIER avser alla metadata som krävs av OSGI-förifyllningstjänsten för att hämta förifyllda data. En identifierare för den inloggade användaren är ett exempel på metadata som kan användas.
 
 >[!NOTE]

@@ -2,10 +2,10 @@
 title: Översikt över verktyget för innehållsöverföring
 description: Översikt över Content Transfer Tool
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: 8197b4f4e5cda21532c3660c2f0ec4855ba53a6a
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 37%
+source-wordcount: '645'
+ht-degree: 33%
 
 ---
 
@@ -34,7 +34,7 @@ Det finns två faser som är associerade med innehållsöverföring:
 
 1. **Extrahering**: Extrahering avser att extrahera innehåll från AEM-källinstansen till ett temporärt område som kallas *migreringsuppsättning*. En *migreringsuppsättning* är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen.
 
-   Mer information finns i [Extraheringsprocess i innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md).
+   Se [Extraheringsprocess i innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md) för mer information.
 
    >[!NOTE]
    >Användarmappning körs nu automatiskt som en del av extraheringsfasen på författaren (men kan även inaktiveras på författaren eller aktiveras vid publicering). Se [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md) för mer information.
@@ -55,9 +55,9 @@ Content Transfer Tool har en funktion för differentiell innehållsuppdatering s
 >[!NOTE]
 >Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service.
 
-I extraheringsfasen måste alternativet för ***overwrite*** vara inaktiverat för att en befintlig migreringsuppsättning ska kunna *uppdateras*. Mer information finns i [Extrahering av ändringar](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process).
+I extraheringsfasen måste alternativet för ***overwrite*** vara inaktiverat för att en befintlig migreringsuppsättning ska kunna *uppdateras*. Se [Extrahering uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process) för mer information.
 
-För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet måste alternativet *wipe* vara inaktiverat i inmatningsfasen. Mer information finns i [Uppdatera inmatning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process).
+För att delta-innehållet ska kunna tillämpas ovanpå det aktuella innehållet måste alternativet *wipe* vara inaktiverat i inmatningsfasen. Se [Övre inmatning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) för mer information.
 
 ## Förfallotid för migreringsuppsättning {#migration-set-expiry}
 

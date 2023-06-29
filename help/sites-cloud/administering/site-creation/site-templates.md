@@ -4,9 +4,9 @@ description: Lär dig hur AEM webbplatsmallar kan användas för att fördefinie
 feature: Administering
 role: Admin
 exl-id: 42eec922-b02e-4f2c-8107-7336192919c7
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -19,19 +19,19 @@ Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatss
 
 Det är bekvämt att ha fördefinierade strukturer tillgängliga för att snabbt kunna driftsätta en ny webbplats baserat på en uppsättning befintliga standarder. Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i ett bekvämt och återanvändbart paket.
 
-Webbplatsmallar innehåller i allmänhet baswebbplatsinnehåll och -struktur samt information om webbplatsformat, som kallas [webbplatstema,](site-themes.md) för att snabbt komma igång med en ny webbplats. Administratörer väljer en webbplatsmall som webbplatsen ska baseras på [när webbplatsen skapades.](create-site.md)
+Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll och struktur och webbplatsformat, som kallas [webbplatstema,](site-themes.md) för att snabbt komma igång med en ny webbplats. Administratörer väljer en webbplatsmall som webbplatsen ska baseras på [när webbplatsen skapades.](create-site.md)
 
-Mallarna är kraftfulla eftersom de både kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
+Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
 
 >[!NOTE]
 >
->AEM webbplatsmallar ska inte blandas ihop med [sidmallar.](/help/sites-cloud/authoring/features/templates.md) Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
+>AEM webbplatsmallar ska inte blandas ihop med [sidmallar](/help/sites-cloud/authoring/features/templates.md). Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
 >
->AEM webbplatsmallar ska inte blandas ihop med [AEM webbplatsteman.](site-themes.md) AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt.](create-site.md)
+>AEM webbplatsmallar ska inte blandas ihop med [AEM webbplatsteman](site-themes.md). AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt](create-site.md).
 
 ## Lägga till en platsmall i AEM {#adding}
 
-Du kan lägga till flera mallar i AEM, som sedan kan användas för att [skapa webbplatser.](create-site.md)
+Du kan lägga till flera mallar i AEM, som sedan kan användas för att [skapa webbplatser](create-site.md).
 
 1. Logga in i AEM redigeringsmiljö och navigera till webbplatskonsolen
 
@@ -49,7 +49,7 @@ Du kan lägga till flera mallar i AEM, som sedan kan användas för att [skapa w
 
 1. När den har överförts visas den i listan med tillgängliga mallar.
 
-Mallen har överförts och kan användas för [skapa nya webbplatser.](create-site.md)
+Mallen har överförts och kan användas för [skapa nya webbplatser](create-site.md).
 
 När du väljer en befintlig mall visas information om mallen i den högra kolumnen.
 
@@ -68,10 +68,10 @@ Webbplatsmallar är helt enkelt paket med en logisk struktur som tydligt återsp
 
 Adobe tillhandahåller en referensmall som du kan använda som utgångspunkt för att skapa egna mallar. [Standardwebbplatsmallen är tillgänglig på GitHub.](https://github.com/adobe/aem-site-template-standard)
 
-[Den senaste versionen av standardwebbplatsmallen](https://github.com/adobe/aem-site-template-standard/releases) kan laddas ned och användas direkt för [skapa nya webbplatser.](create-site.md)
+[Den senaste versionen av standardwebbplatsmallen](https://github.com/adobe/aem-site-template-standard/releases) kan laddas ned och användas direkt för [skapa nya webbplatser](create-site.md).
 
 ## Utveckla webbplatsmallar {#developing-templates}
 
 Adobe tillhandahåller och AEM Site Template Builder som en uppsättning skript för att skapa nya webbplatsmallar.
 
-[AEM Site Template Builder är tillgänglig tillsammans med användningsdokumentation för GitHub.](https://github.com/adobe/aem-site-template-builder) Det krävs en upplevelse av gränssnittsutvecklare för att anpassa [webbplatstema](site-themes.md) och AEM utvecklarkunskap krävs för att anpassa webbplatsens struktur och innehåll.
+[AEM Site Template Builder är tillgänglig tillsammans med användningsdokumentation för GitHub](https://github.com/adobe/aem-site-template-builder). Det krävs en upplevelse av gränssnittsutvecklare för att anpassa [webbplatstema](site-themes.md) och AEM utvecklarkunskap krävs för att anpassa webbplatsens struktur och innehåll.

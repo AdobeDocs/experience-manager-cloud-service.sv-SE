@@ -2,9 +2,9 @@
 title: Redigera en extern SPA i AEM
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2420'
+source-wordcount: '2421'
 ht-degree: 0%
 
 ---

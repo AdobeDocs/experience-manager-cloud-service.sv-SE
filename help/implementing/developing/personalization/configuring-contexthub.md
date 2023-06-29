@@ -2,9 +2,9 @@
 title: ContextHub konfigureras
 description: Lär dig hur du konfigurerar kontextnavet.
 exl-id: 1fd7d41e-31ad-4838-8749-a5791edcfd63
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguratio
 | [contexthub.base](sample-modules.md#contexthub-base-ui-module-type) | En allmän gränssnittsmodultyp | Konfigureras i gränssnittsmodulens egenskaper |
 | [contexthub.browserinfo](sample-modules.md#contexthub-browserinfo-ui-module-type) | Visar information om webbläsaren | `surferinfo` |
 | [contexthub.datetime](sample-modules.md#contexthub-datetime-ui-module-type) | Visar datum- och tidsinformation | `datetime` |
-| [contexthub.location](sample-modules.md#contexthub-location-ui-module-type) | Visar klientens latitud och longitud samt platsen på en karta. Gör att du kan ändra platsen. | `geolocation` |
+| [contexthub.location](sample-modules.md#contexthub-location-ui-module-type) | Visar klientens latitud och longitud och platsen på en karta. Gör att du kan ändra platsen. | `geolocation` |
 | [contexthub.screen-orientation](sample-modules.md#contexthub-screen-orientation-ui-module-type) | Visar enhetens skärmorientering (liggande eller stående) | `emulators` |
 | [contexthub.tagcloud](sample-modules.md#contexthub-tagcloud-ui-module-type) | Visar statistik om sidtaggar | `tagcloud` |
 | [granite.profile](sample-modules.md#granite-profile-ui-module-type) | Visar profilinformationen för den aktuella användaren, inklusive `authorizableID`, `displayName` och `familyName`. Du kan ändra värdet för `displayName` och `familyName`. | `profile` |
@@ -149,7 +149,7 @@ Ett contextHub.generic-jsonp-arkiv har konfigurerats så att det lagrar data fö
 
 Med exempelarkivkandidaten contexthub.generic-jsonp kan du hämta data från en JSONP-tjänst eller en webbtjänst som returnerar JSON-data. För den här butikskandidaten använder du butikskonfigurationen för att ange information om den JSONP-tjänst som ska användas.
 
-The [init](contexthub-api.md#init-name-config) funktionen i `ContextHub.Store.JSONPStore` Javascript-klassen definierar en `config` objekt som initierar den här lagringskanalen. The `config` objektet innehåller `service` objekt som innehåller information om JSONP-tjänsten. Om du vill konfigurera butiken anger du `service` -objekt i JSON-format som värde för egenskapen Detaljkonfiguration.
+The [init](contexthub-api.md#init-name-config) funktionen i `ContextHub.Store.JSONPStore` JavaScript-klassen definierar en `config` objekt som initierar den här lagringskanalen. The `config` objektet innehåller `service` objekt som innehåller information om JSONP-tjänsten. Om du vill konfigurera butiken anger du `service` -objekt i JSON-format som värde för egenskapen Detaljkonfiguration.
 
 Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen ska du göra så här: [Skapa ett ContextHub Store](#creating-a-contexthub-store) med följande egenskaper:
 
@@ -159,21 +159,21 @@ Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen ska du g�
 * **Aktiverad:** Välj
 * **Detaljkonfiguration (JSON):**
 
-   ```javascript
-   {
-    "service": {
-    "jsonp": false,
-    "timeout": 1000,
-    "ttl": 1800000,
-    "secure": false,
-    "host": "md5.jsontest.com",
-    "port": 80,
-    "params":{
-    "text":"text to md5"
-        }
-      }
-    }
-   ```
+  ```javascript
+  {
+   "service": {
+   "jsonp": false,
+   "timeout": 1000,
+   "ttl": 1800000,
+   "secure": false,
+   "host": "md5.jsontest.com",
+   "port": 80,
+   "params":{
+   "text":"text to md5"
+       }
+     }
+   }
+  ```
 
 ### Lägga till en gränssnittsmodul för md5-data {#adding-a-ui-module-for-the-md-data}
 
@@ -187,15 +187,15 @@ Använd proceduren i [Lägga till en gränssnittsmodul](#adding-a-ui-module) om 
 * **Modultyp:** contexthub.base
 * **Detaljkonfiguration (JSON):**
 
-   ```javascript
-   {
-    "icon": "coral-Icon--data",
-    "title": "MD5 Conversion",
-    "storeMapping": { "md5": "md5" },
-    "template": "<p> {{md5.original}}</p>;
-                 <p>{{md5.md5}}</p>"
-   }
-   ```
+  ```javascript
+  {
+   "icon": "coral-Icon--data",
+   "title": "MD5 Conversion",
+   "storeMapping": { "md5": "md5" },
+   "template": "<p> {{md5.original}}</p>;
+                <p>{{md5.md5}}</p>"
+  }
+  ```
 
 ## Debugging ContextHub {#debugging-contexthub}
 
@@ -230,7 +230,7 @@ Om du vill konfigurera tjänsten kan du antingen använda [Webbkonsol](/help/imp
 
 I tyst läge inaktiveras all felsökningsinformation. Till skillnad från det normala felsökningsalternativet, som kan anges separat för varje ContextHub-konfiguration, är tyst läge en global inställning som har företräde framför eventuella felsökningsinställningar på ContextHub-konfigurationsnivån.
 
-Detta är användbart för din publiceringsinstans där du inte vill ha någon felsökningsinformation alls. Eftersom det är en global inställning aktiveras den via OSGi.
+Detta är användbart för publiceringsinstansen där du inte vill ha någon felsökningsinformation alls. Eftersom det är en global inställning aktiveras den via OSGi.
 
 1. Öppna **Konfiguration av Adobe Experience Manager Web Console** på `http://<host>:<port>/system/console/configMgr`
 1. Sök efter **Adobe Granite ContextHub**

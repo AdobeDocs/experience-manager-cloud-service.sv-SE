@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2021'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Du kan konfigurera relationsdatabaser med [!DNL Experience Manager] Konfiguratio
 
    >[!NOTE]
    >
-   > Referens [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html) för mer detaljerad information.
+   > Se [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html) för mer detaljerad information.
 
 1. Tryck **[!UICONTROL Save]** för att spara konfigurationen.
 
@@ -170,7 +170,7 @@ En del åtgärder som inte stöds av RESTful services Open API Specification ver
 * Länkar
 * Olika begärande organ för olika MIME-typer för en enda operation
 
-Du kan referera till [OpenAPI 3.0-specifikation](https://swagger.io/specification/v3/) för detaljerad information.
+Se [OpenAPI 3.0-specifikation](https://swagger.io/specification/v3/) för detaljerad information.
 
 ### HTTP-klientkonfiguration för formulärdatamodell för optimering av prestanda {#fdm-http-client-configuration}
 

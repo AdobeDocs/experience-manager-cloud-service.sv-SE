@@ -2,16 +2,16 @@
 title: Lägga till en TXT-post
 description: Lär dig hur du lägger till en TXT-post för att lägga till ett eget domännamn i Cloud Manager.
 exl-id: d441de29-af41-4d3e-9155-531af9702841
-source-git-commit: 491e710223c5878bfa81c4b0a57d18ec0ec29479
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '329'
 ht-degree: 1%
 
 ---
 
 # Lägga till en TXT-post {#adding-txt}
 
-En DNS TXT-post tillåter en domän att vara värd för en CDN-tjänst. Du måste skapa en DNS TXT-post i zonen som tillåter Cloud Manager att distribuera CDN-tjänsten med den anpassade domänen och associera den med serverdelstjänsten. Den här associationen står helt under din kontroll och godkänner att Cloud Manager skickar innehåll från tjänsten till en domän. Detta tillstånd kan beviljas såväl som återkallas. TXT-posten är specifik för domänen och Cloud Manager-miljön.
+En DNS TXT-post tillåter en domän att vara värd för en CDN-tjänst. Du måste skapa en DNS TXT-post i zonen som tillåter Cloud Manager att distribuera CDN-tjänsten med den anpassade domänen och associera den med serverdelstjänsten. Den här associationen står helt under din kontroll och godkänner att Cloud Manager skickar innehåll från tjänsten till en domän. Detta tillstånd får beviljas och återkallas. TXT-posten är specifik för domänen och Cloud Manager-miljön.
 
 Du måste uppfylla dessa krav innan du lägger till en TXT-post.
 

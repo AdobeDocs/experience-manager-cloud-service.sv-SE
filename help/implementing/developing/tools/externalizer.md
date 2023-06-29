@@ -2,9 +2,9 @@
 title: Extern URL
 description: Externalizer är en OSGi-tjänst som gör att du kan omvandla en resurssökväg programmatiskt till en extern och absolut URL.
 exl-id: 06efb40f-6344-4831-8ed9-9fc49f2c7a3f
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '657'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ AEM **Externalizer** är en OSGi-tjänst som gör att du kan omvandla en resurss
 
 Eftersom en AEM as a Cloud Service instans inte kan känna till sin externt synliga URL och eftersom en länk ibland måste skapas utanför det begärda omfånget, tillhandahåller den här tjänsten en central plats för att konfigurera dessa externa URL:er och skapa dem.
 
-I den här artikeln beskrivs hur du konfigurerar tjänsten Externalizer och hur du använder den. Tekniska detaljer om tjänsten finns i [Javadocs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html).
+I den här artikeln beskrivs hur du konfigurerar tjänsten Externalizer och hur du använder den. Teknisk information om tjänsten finns i [Javadocs](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## Externalizerns standardbeteende och hur du åsidosätter {#default-behavior}
 

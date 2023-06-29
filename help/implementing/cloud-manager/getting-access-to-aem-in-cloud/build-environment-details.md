@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -229,4 +229,4 @@ Samma teknik kan användas för att installera språkspecifika paket, till exemp
 
 >[!TIP]
 >
->Mer information om frontendens byggmiljö finns i dokumentet [Utveckla sajter med frontlinjen.](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md)
+>Mer information om frontendmiljön finns i [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md).

@@ -2,9 +2,9 @@
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1712'
 ht-degree: 1%
 
 ---
@@ -121,7 +121,7 @@ You can view additional information about items using the Rail Selector. This al
 
 ## Skapa innehållsfragment {#authoring-content-fragments}
 
-Det var en mycket snabb introduktion till AEM användargränssnitt, men du har förhoppningsvis haft en chans att prova det. Nu kommer vi till ditt verkliga intresse - innehållsfragment för Headless.
+Det var en mycket snabb introduktion till AEM användargränssnitt, men du har förhoppningsvis haft en chans att testa det. Nu kommer vi till ditt verkliga intresse - innehållsfragment för Headless.
 
 Vi måste gå igenom allt från början till slut, men din instans kanske redan har mappar och/eller fragment skapade, och dessa kan finnas på olika platser. Principerna är desamma.
 
@@ -213,7 +213,7 @@ När redigeraren öppnas ser du:
 
 Exempel:
 
-* Ett fragment som bara kräver flera informationsdelar, vissa med en viss typ. För headless-innehåll är referenser viktiga och du kommer att lära dig mer om dem senare under din resa.
+* Ett fragment som bara kräver flera informationsdelar, vissa med en viss typ. För headless-innehåll är referenser viktiga och du lär dig mer om dem senare under din resa.
 
   ![Content Fragment Editor - My Fragment](/help/journey-headless/author/assets/headless-journey-author-content-fragment-04.png)
 
@@ -235,7 +235,7 @@ Bekräfta dina uppdateringar med antingen **Spara** eller **Spara och stäng**.
 
 #### Det du (antagligen) inte behöver oroa dig för {#what-you-probably-do-not-need-to-worry-about}
 
-OK, det här kan verka lite konstigt, men när du väl har öppnat Content Fragment Editor och börjat utforska ser du olika alternativ som (förmodligen) inte gäller för din resa som innehållsförfattare. Så det här är bara en snabbtitt på vad du bör ignorera i det headlesssammanhanget:
+OK, det här kan verka lite konstigt, men när du har öppnat Content Fragment Editor och börjat utforska kan du se olika alternativ som (förmodligen) inte gäller för din resa som innehållsförfattare. Så det här är bara en snabbtitt på vad du bör ignorera i det headlesssammanhanget:
 
 * **Modeller för innehållsfragment**
 

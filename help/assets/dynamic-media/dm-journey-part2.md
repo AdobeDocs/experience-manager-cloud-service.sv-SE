@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2845'
+source-wordcount: '2842'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Nu kan du föreställa dig att Creative Director tittar på bilderna och säger:
 
 _&quot;Jag ville verkligen ha den här bilden så att den stora handen pekar mot de fyra, och den lilla handen pekar mot 1 för att göra det lättare att se på den där klockan.&quot;_
 
-Alla nya statiska bilder måste fotograferas igen.
+Alla dessa nya statiska bilder måste fotograferas igen.
 
 Men om du har olika bildförinställningar i Dynamic Media kan du använda dessa bilder var du vill. Bildförinställningarna följer standarder.
 
@@ -208,7 +208,7 @@ Du läser bara om bilduppsättningar och visningsprogram. Låt oss titta på ett
 
 ## Valfritt - Läs mer
 
-Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars är din Dynamic Media Journey klar!
+Om du vill veta mer om vad du just läste kan du använda materialet nedan för att utforska koncept i detalj. Annars är din Dynamic Media Journey klar!
 
 _Hjälpavsnitt för Dynamic Media_
 

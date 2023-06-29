@@ -2,9 +2,9 @@
 title: Driftsätt ditt anpassade tema
 description: Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.
 exl-id: fe065972-39db-4074-a802-85895c701efd
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Grattis! Du har slutfört AEM snabbwebbplats! Nu bör du:
 * Hur du anpassar och testar ett tema med hjälp av proxiderat AEM och implementerar dessa ändringar i AEM Git.
 * Så här distribuerar du gränssnittsanpassning med pipeline.
 
-Nu kan du anpassa temana för din egen AEM. Innan du börjar skapa olika arbetsflöden med flera rörledningar bör du dock granska dokumentet [Utveckla sajter med frontlinjen.](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) Det hjälper er att få ut så mycket som möjligt av er frontendutveckling genom att:
+Nu kan du anpassa temana för din egen AEM. Innan du börjar skapa olika arbetsflöden med flera frontendpipelines bör du dock granska dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md). Det kan hjälpa er att få ut så mycket som möjligt av er frontendutveckling genom att:
 
 * Bevara en enda sanningskälla.
 * Upprätthålla ett åtskilt engagemang.
@@ -105,8 +105,8 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [Använda webbplatsservern för att hantera ditt webbplatstema](/help/sites-cloud/administering/site-creation/site-rail.md) - Lär dig de kraftfulla funktionerna i webbplatsspåret så att du enkelt kan anpassa och hantera ditt webbplatstema, inklusive nedladdning av temakällor och hantering av temaversioner.
 * [AEM as a Cloud Service teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM kan du behöva läsa de detaljerade tekniska dokumenten direkt.
 * [Dokumentation för Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html) - Om du vill ha mer information om funktionerna i Cloud Manager kan du läsa de detaljerade tekniska dokumenten direkt.
-* [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html) - Molnhanteraren har förkonfigurerade roller med lämplig behörighet. Mer information om rollerna och hur du administrerar dem finns i det här dokumentet.
-* [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) - Om du vill ha mer information om hur du konfigurerar och hanterar Git-databaser för ditt AEMaaCS-projekt kan du läsa det här dokumentet.
+* [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html) - Molnhanteraren har förkonfigurerade roller med lämplig behörighet. I det här dokumentet finns mer information om de här rollerna och hur du administrerar dem.
+* [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) - Om du vill ha mer information om hur du konfigurerar och hanterar Git-databaser för ditt AEMaaCS-projekt läser du i det här dokumentet.
 * [Konfigurera CI/CD-pipeline - Cloud Services](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) - Läs mer om hur du ställer in rörledningar, både i full hög och i framände, i det här dokumentet.
 * [AEM standardmall för webbplats](https://github.com/adobe/aem-site-template-standard) - Detta är GitHub-databasen för AEM standardplatsmall.
 * [AEM](https://github.com/adobe/aem-site-template-standard-theme-e2e) - Detta är GitHub-databasen för AEM webbplatstema.

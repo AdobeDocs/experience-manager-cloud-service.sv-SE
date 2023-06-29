@@ -2,7 +2,7 @@
 title: Vanliga frågor om Cloud Manager
 description: Hitta svar på de vanligaste frågorna om Cloud Manager på AEM as a Cloud Service.
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -58,11 +58,11 @@ Med det här värdet kan efterföljande distribution fortfarande installeras nä
 
 Du kan också ange versionen till `-SNAPSHOT` för byggen eller driftsättningarna av faser och produktion. Cloud Manager anger automatiskt rätt versionsnummer och skapar en tagg åt dig i Git. Denna tagg kan vid behov hänvisas till senare.
 
-Mer information om versionshantering finns i [dokumenteras här.](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
+Mer information om versionshantering finns i [dokumenteras här](/help/implementing/cloud-manager/managing-code/project-version-handling.md).
 
 ## Hur fungerar paketering och paketversionshantering för driftsättning av faser och produktioner? {#snapshot-version}
 
-I fas- och produktionsdistributioner genereras en automatisk version som [dokumenteras här.](/help/implementing/cloud-manager/managing-code/project-version-handling.md)
+I fas- och produktionsdistributioner genereras en automatisk version som [dokumenteras här](/help/implementing/cloud-manager/managing-code/project-version-handling.md).
 
 För anpassad versionshantering i scen- och produktionsinstallationer ställer du in en korrekt version med tre delar som `1.0.0`. Öka versionen varje gång du distribuerar till produktionen.
 

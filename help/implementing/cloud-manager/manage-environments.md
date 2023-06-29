@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2276'
+source-wordcount: '2274'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ När du lägger till en miljö kan du välja att konfigurera ytterligare regione
 1. I **Ytterligare publiceringsregioner** väljer du ett extra område.
 1. Det markerade området läggs till under listrutan för att ange dess val.
    * Tryck eller klicka på `X` bredvid det markerade området så att du kan avmarkera det.
-1. Välj ett annat område på menyn **Ytterligare publiceringsregioner** för att lägga till en annan region.
+1. Välj ett annat område på menyn **Ytterligare publiceringsregioner** listrutan för att lägga till en annan region.
 1. Tryck eller klicka **Spara** när du är redo att skapa din miljö.
 
 ![Markera flera områden](assets/select-multiple-regions.png)

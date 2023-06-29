@@ -4,27 +4,27 @@ description: Integrera med Adobe Target
 feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1018'
 ht-degree: 1%
 
 ---
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Marketing Cloud kan Adobe Target öka innehållets relevans genom målinriktning och mätning i alla kanaler. Integrering av Adobe Target och AEM as a Cloud Service kräver:
+Som en del av Adobe Experience Cloud kan Adobe Target öka innehållets relevans genom målinriktning och mätning i alla kanaler. Integrering av Adobe Target och AEM as a Cloud Service kräver:
 
 * med Touch-gränssnittet för att skapa en målkonfiguration i AEM as a Cloud Service (IMS-konfiguration krävs).
 * lägga till och konfigurera Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
 
-Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;upplevelseanpassning&quot;.
+Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;Experience Targeting&quot;.
 
 Om du vill exportera Experience Fragments och/eller Content Fragments till Target behöver du bara [Adobe Target Configuration and IMS](/help/sites-cloud/integrating/integration-adobe-target-ims.md).
 
 >[!NOTE]
 >
->Adobe Experience Manager as a Cloud Service-kunder som inte har något befintligt Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad volymanvändning av Target.
+>Kunder som inte har något befintligt Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad volymanvändning av Target.
 
 ## Skapa Adobe Target-konfigurationen {#create-configuration}
 
@@ -38,7 +38,7 @@ Om du vill exportera Experience Fragments och/eller Content Fragments till Targe
 
 ### IMS-konfiguration {#ims-configuration}
 
-En IMS-konfiguration för både Launch och Target krävs för att Target ska kunna integreras korrekt med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM as a Cloud Service, men mål-IMS-konfigurationen måste skapas (efter att Target har etablerats). Se [IMS-konfiguration som ska användas vid integrering med Adobe Target](/help/sites-cloud/integrating/integration-adobe-target-ims.md) och videon [Integrera Experience Platform Launch och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html) om du vill lära dig hur du skapar mål-IMS-konfigurationen.
+En IMS-konfiguration för både Launch och Target krävs för att Target ska kunna integreras korrekt med AEM och Launch. IMS-konfigurationen för Launch är förkonfigurerad i AEM as a Cloud Service, men mål-IMS-konfigurationen måste skapas (efter att Target har etablerats). Se [IMS-konfiguration som ska användas vid integrering med Adobe Target](/help/sites-cloud/integrating/integration-adobe-target-ims.md) och videon [Integrera Experience Platform Launch och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html) om du vill lära dig hur du skapar mål-IMS-konfigurationen.
 
 ### Adobe Target klientorganisations-ID och Adobe Target klientkod {#tenant-client}
 
@@ -47,11 +47,11 @@ När du konfigurerar fälten för Adobe Target klient-ID och Adobe Target klient
 1. För de flesta kunder är innehavar-ID och klientkod samma. Det innebär att båda fälten innehåller samma information och är identiska. Se till att du anger klient-ID i båda fälten.
 2. För äldre syften kan du även ange olika värden i fälten Klient-ID och Klientkod.
 
-I båda fallen ska du tänka på följande:
+I båda fallen:
 
 * Som standard kopieras även klientkoden (om den läggs till först) automatiskt till fältet Klient-ID.
 * Du kan ändra standardinställningen för klient-ID.
-* Därför baseras backend-anropen till Target på klientens ID och klientsidans anrop till Target baseras på klientkoden.
+* Backend-anrop till Target baseras på klientens ID och klientsidans anrop till Target baseras på klientkoden.
 
 Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud Service. Oavsett vilket, se till att **båda** fälten innehåller rätt information beroende på dina behov.
 
@@ -59,7 +59,7 @@ Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud S
 >
 > Om du vill ändra en befintlig målkonfiguration:
 >
-> 1. Ange klientorganisations-ID:t igen.
+> 1. Ange klient-ID igen.
 > 2. Återanslut till mål.
 > 3. Spara konfigurationen.
 
@@ -74,7 +74,7 @@ Så här redigerar du målkonfigurationen:
 
 ### Lägga till en konfiguration till en plats {#add-configuration}
 
-Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Webbplatser** → **Välj en webbplatssida** → **Egenskaper** → **Avancerat** → **Konfiguration** → Välj konfigurationtenant.
+Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Webbplatser** > **Välj en webbplatssida** > **Egenskaper** > **Avancerat** > **Konfiguration** > Välj konfigurationtenant.
 
 ## Integrera Adobe Target på AEM sajter med Adobe Launch {#integrate-target-launch}
 
@@ -82,7 +82,7 @@ AEM erbjuder en färdig integrering med Experience Platform Launch. Genom att l�
 
 >[!NOTE]
 >
->Befintliga (äldre) ramverk fungerar fortfarande, men de kan inte konfigureras i Touch-gränssnittet. Du bör återskapa variabelmappningskonfigurationerna i Launch.
+>Befintliga (äldre) ramverk fungerar fortfarande, men de kan inte konfigureras i Touch-gränssnittet. Adobe rekommenderar att du återskapar variabelmappningskonfigurationerna i Launch.
 
 Som en allmän översikt är integrationsstegen:
 
@@ -104,7 +104,7 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
 
 ### Lägga till nödvändiga tillägg {#add-extension}
 
-**Tillägg** är den behållare som hanterar huvudbiblioteksinställningarna. Adobe Target-tillägget stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Du måste lägga till båda **Adobe Target** och **Adobe ContextHub** tillägg.
+**Tillägg** är den behållare som hanterar huvudbiblioteksinställningarna. Adobe Target-tillägget stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Lägg till båda **Adobe Target** och **Adobe ContextHub** tillägg.
 
 1. Välj alternativet Tilläggskatalog och sök efter mål i filtret.
 2. Välj **Adobe Target** at.js och klicka på alternativet Install.
@@ -112,7 +112,7 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
 3. Välj **Konfigurera** -knappen. Observera konfigurationsfönstret med Target-kontots autentiseringsuppgifter importerade och at.js-versionen för det här tillägget.
 4. Välj **Spara** om du vill lägga till måltillägget i Launch-egenskapen. Du bör kunna se måltillägget under **Installerade tillägg** lista.
    ![Spara tillägg](assets/configure_extension1.png "Spara tillägg")
-5. Upprepa stegen ovan om du vill söka efter **Adobe ContextHub** tillägg och installation (detta krävs för integrering med kontexthub-parametrar, baserat på vilken målanpassning som görs).
+5. Upprepa stegen ovan om du vill söka efter **Adobe ContextHub** tillägg och installation (det här tillägget krävs för integrering med kontexthub-parametrar, baserat på vilken målanpassning som görs).
 
 ### Skapa ett dataelement {#data-element}
 
@@ -126,7 +126,7 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
 
 ### Skapa en sidregel {#page-rule}
 
-I **Regel** vi definierar och beställer en sekvens av åtgärder, som utförs på plats, för att uppnå målinriktning.
+I **Regel** definierar och ordnar den en sekvens av åtgärder, som körs på webbplatsen, för att uppnå målgruppsanpassning.
 
 1. Lägg till en uppsättning åtgärder som visas i skärmbilden.
    ![Åtgärder](assets/rules1.png "Åtgärder")
@@ -156,4 +156,4 @@ Mer information om hur du skapar och publicerar finns i [page](https://experienc
 
 >[!NOTE]
 >
->Äldre konfigurationer stöds fortfarande för befintliga kunder (utan möjlighet att redigera eller skapa nya). Äldre konfigurationer är en del av innehållspaket som överförs av kunder med VSTS.
+>Äldre konfigurationer stöds fortfarande för befintliga kunder (utan möjlighet att redigera eller skapa dem). Äldre konfigurationer är en del av innehållspaket som överförs av kunder med VSTS.

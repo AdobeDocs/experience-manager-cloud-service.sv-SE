@@ -2,9 +2,9 @@
 title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '3649'
+source-wordcount: '3650'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Definitionen av en komponent kan delas upp enligt följande:
    * Se avsnittet [Komponentikon](#component-icon) för mer information
 * **Vitala underordnade noder**:
    * `cq:editConfig (cq:EditConfig)` - Definierar redigeringsegenskaperna för komponenten och aktiverar komponenten så att den visas i komponentwebbläsaren
-      * Om komponenten har en dialogruta visas den automatiskt i komponentwebbläsaren eller i Sidekick, även om cq:editConfig inte finns.
+      * Om komponenten har en dialogruta visas den automatiskt i komponentwebbläsaren eller Sidekick, även om cq:editConfig inte finns.
    * `cq:childEditConfig (cq:EditConfig)` - Styr gränssnittsaspekter för författare för underordnade komponenter som inte definierar sina egna `cq:editConfig`.
    * `cq:dialog (nt:unstructured)` - Dialog för den här komponenten. Definierar gränssnittet som tillåter användaren att konfigurera komponenten och/eller redigera innehåll.
    * `cq:design_dialog (nt:unstructured)` - Designredigering för den här komponenten
@@ -122,7 +122,7 @@ Ikonen eller förkortningen för komponenten definieras via JCR-egenskaperna fö
 1. `abbreviation` - String-egenskap för att anpassa förkortningen av komponentnamnet i komponentwebbläsaren
    * Förkortningen ska vara begränsad till två tecken.
    * Om du anger en tom sträng byggs förkortningen av de två första tecknen i `jcr:title` -egenskap.
-      * Exempel:&quot;Im&quot; för&quot;Bild&quot;
+      * Exempel: &quot;Im&quot; för &quot;Bild&quot;
       * Den lokaliserade titeln används för att skapa förkortningen.
    * Förkortningen översätts bara om komponenten har en `abbreviation_commentI18n` -egenskapen, som sedan används som översättningstips.
 1. `cq:icon.png` eller `cq:icon.svg` - Ikon för den här komponenten, som visas i komponentwebbläsaren
@@ -166,7 +166,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
 | Namn | Typ | Beskrivning |
 |---|---|---|
 | `.` | `cq:Component` | Detta representerar den aktuella komponenten. En komponent är av nodtyp `cq:Component`. |
-| `componentGroup` | `String` | Detta representerar gruppen som komponenten kan markeras under i [Komponentbläddraren.](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser) Ett värde som börjar med `.` används för komponenter som inte är tillgängliga för val från gränssnittet, till exempel baskomponenter som andra komponenter ärver från. |
+| `componentGroup` | `String` | Detta representerar gruppen som komponenten kan markeras under i [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). Ett värde som börjar med `.` används för komponenter som inte är tillgängliga för val från gränssnittet, till exempel baskomponenter som andra komponenter ärver från. |
 | `cq:isContainer` | `Boolean` | Detta anger om komponenten är en behållarkomponent och kan därför innehålla andra komponenter, till exempel ett styckesystem. |
 | `cq:dialog` | `nt:unstructured` | Detta är definitionen av komponentens redigeringsdialogruta. |
 | `cq:design_dialog` | `nt:unstructured` | Detta är definitionen av komponentens designdialogruta. |
@@ -321,7 +321,7 @@ Det finns många befintliga konfigurationer i AEM. Du kan enkelt söka efter spe
 
 Komponenter måste alltid återge viss HTML som är synlig för författaren, även när komponenten inte har något innehåll. I annat fall försvinner det visuellt från redigerarens gränssnitt, vilket gör det tekniskt möjligt men osynligt på sidan och i redigeraren. I så fall kan författarna inte markera och interagera med den tomma komponenten.
 
-Därför bör komponenter återge en platshållare så länge de inte återger några synliga utdata när sidan återges i sidredigeraren (när WCM-läget är `edit` eller `preview`).
+Därför bör komponenterna återge en platshållare så länge de inte återger några synliga utdata när sidan återges i sidredigeraren (när WCM-läget är `edit` eller `preview`).
 Den typiska HTML-koden för en platshållare är följande:
 
 ```HTML
@@ -383,7 +383,7 @@ Följande konfiguration aktiverar redigering på plats av komponenten och defini
 
 ### Hantera fälthändelser - cq:avlyssnare {#cq-listeners}
 
-Metoden för att hantera händelser i dialogrutefält görs med avlyssnare i en anpassad [klientbibliotek.](/help/implementing/developing/introduction/clientlibs.md)
+Metoden för att hantera händelser i dialogrutefält görs med avlyssnare i en anpassad [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md).
 
 För att lägga in logik i fältet bör du:
 
@@ -416,7 +416,7 @@ The `cq:listeners` nod (nodtyp) `cq:EditListenersConfig`) definierar vad som hä
 >* `aftermove`
 >* `aftercopy`
 
-Händelsehanteraren kan implementeras med en anpassad implementering. Till exempel `project.customerAction` är en statisk metod):
+Händelsehanteraren kan implementeras med en anpassad implementering. Till exempel (där `project.customerAction` är en statisk metod):
 
 `afteredit = "project.customerAction"`
 
@@ -469,7 +469,7 @@ Allt du behöver göra är att placera en `README.md` i komponentstrukturen.
 
 ![README.md in component structure](assets/components-documentation.png)
 
-Den här markeringen visas i dialogrutan [Komponentkonsol.](/help/sites-cloud/authoring/features/components-console.md)
+Den här markeringen visas i dialogrutan [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md).
 
 ![README.md visible in the Components Console](assets/components-documentation-console.png)
 

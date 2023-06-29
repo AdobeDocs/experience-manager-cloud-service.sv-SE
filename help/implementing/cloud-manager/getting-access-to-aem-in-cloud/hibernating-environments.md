@@ -2,9 +2,9 @@
 title: Viloläge och avvänjningsmiljöer för sandlådor
 description: Lär dig hur miljöer i ett sandlådeprogram automatiskt övergår i viloläge och hur du kan avviloläge.
 exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
-source-git-commit: 2ad5bdc886f3c47b6ee600e69c6e40f1df071cbc
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Följ de här stegen för att manuellt förvara sandlådeprogrammiljöer.
 
 1. På **Miljö** klickar du på ellipsknappen och väljer **Developer Console**.
 
-   * Se dokumentet [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console) om du vill ha mer information om Developer Console.
+   * Se [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console) om du vill ha mer information om Developer Console.
 
    ![Menyalternativet Developer Console](assets/developer-console-menu-option.png)
 
@@ -69,7 +69,7 @@ Du kan manuellt förvara ditt sandlådeprogram från utvecklarkonsolen.
 
 1. På **Miljö** klickar du på ellipsknappen och väljer **Developer Console**.
 
-   * Se dokumentet [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console) om du vill ha mer information om Developer Console.
+   * Se [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console) om du vill ha mer information om Developer Console.
 
 1. Klicka på **Avviloläge**.
 

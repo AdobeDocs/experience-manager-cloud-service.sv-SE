@@ -2,9 +2,9 @@
 title: Adobe Content Package Maven Plugin
 description: Använd plugin-programmet Content Package Maven för att distribuera AEM
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
-source-git-commit: a5eef46835e234bb47451693cf5fdcda66c5b26f
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '1838'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ AEM as a Cloud Service följer de senaste metoderna för pakethantering och proj
 
 >[!TIP]
 >
->Mer information finns i [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen samt [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.
+>Mer information finns i [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.
 
 ## Hämta innehållspaketet Maven Plugin {#obtaining-the-content-package-maven-plugin}
 
@@ -135,7 +135,7 @@ Förutom följande parametrar finns beskrivningarna i [Gemensamma parametrar](#c
 
 ### ls {#ls}
 
-Visar de paket som distribuerats till [Pakethanteraren.](/help/implementing/developing/tools/package-manager.md)
+Visar de paket som distribuerats till [Pakethanteraren](/help/implementing/developing/tools/package-manager.md).
 
 #### Parametrar {#parameters-2}
 
@@ -143,7 +143,7 @@ Alla parametrar för ls-målet beskrivs i [Gemensamma parametrar](#common-parame
 
 ### rm {#rm}
 
-Tar bort ett paket från [Pakethanteraren.](/help/implementing/developing/tools/package-manager.md)
+Tar bort ett paket från [Pakethanteraren](/help/implementing/developing/tools/package-manager.md).
 
 #### Parametrar {#parameters-3}
 
@@ -229,7 +229,7 @@ När filtret inte innehåller `mode` element, standardvärdet för `replace` anv
 
 ## Inkludera en miniatyrbild eller egenskapsfil i paketet {#including-a-thumbnail-image-or-properties-file-in-the-package}
 
-Ersätt standardpaketkonfigurationsfilerna för att anpassa paketegenskaperna. Ta till exempel med en miniatyrbild för att skilja på paketet i [Pakethanteraren.](/help/implementing/developing/tools/package-manager.md)
+Ersätt standardpaketkonfigurationsfilerna för att anpassa paketegenskaperna. Ta till exempel med en miniatyrbild för att skilja på paketet i [Pakethanteraren](/help/implementing/developing/tools/package-manager.md).
 
 Källfilerna kan finnas var som helst i filsystemet. I POM-filen definierar du byggresurser som kopierar källfilerna till `target/vault-work/META-INF` för införande i förpackningen.
 
@@ -238,7 +238,7 @@ Följande POM-kod lägger till filerna i `META-INF` projektkällans mapp till pa
 ```xml
 <build>
     <resources>
-        <!-- vault META-INF resources (thumbnail etc.) -->
+        <!-- vault META-INF resources (thumbnail and so on) -->
         <resource>
             <directory>${basedir}/src/main/content/META-INF</directory>
             <targetPath>../vault-work/META-INF</targetPath>
@@ -267,4 +267,4 @@ Den senaste AEM Project Archetype implementerar paketstrukturen med bästa praxi
 
 >[!TIP]
 >
->Mer information finns i [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen samt [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.
+>Mer information finns i [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) artikel i den AEM as a Cloud Service dokumentationen och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) dokumentation. Båda stöds fullt ut för AEM 6.5.

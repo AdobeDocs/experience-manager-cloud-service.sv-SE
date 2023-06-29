@@ -2,9 +2,9 @@
 title: Konfigurera Translation Connector för Headless-innehåll
 description: Lär dig hur du ansluter AEM till en översättningstjänst.
 exl-id: c91b2701-7ede-4d0b-93dd-3636c6638be2
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1231'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Så här skapar du en ny översättningskonfiguration:
 
 1. Ange följande information i fälten och klicka eller tryck sedan på **Skapa**.
    1. Välj **Konfigurationstyp** i listrutan. Välj **Översättningsintegrering** från listan.
-   1. Ange **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Services** Console samt i listrutor för sidegenskaper.
+   1. Ange **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Services** console och in page property drop-down lists.
    1. Du kan även skriva en **Namn** som ska användas för den databasnod som lagrar konfigurationen.
 
    ![Skapa översättningskonfiguration](assets/create-translation-configuration.png)

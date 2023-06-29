@@ -3,9 +3,9 @@ title: AEM dokumentationsresor
 description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och olika funktioner så att du kan lösa ett affärsmål på bästa sätt. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 exl-id: aab346b8-26dc-4d5b-88bb-720cf634e0a2
 hidefromtoc: true
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Om du vill veta hur Adobe rekommenderar att du löser ett affärsärende med AEM
 
 ## Hur är en dokumentationsresa strukturerad? {#structure}
 
-En dokumentationsresa fungerar som en introduktion till hur AEM löser vanliga affärsproblem. Därför är varje resa utformad med läsare som inte har AEM i åtanke, som utformar affärsproblemet, beskriver en nödvändig teori och sedan ger en stegvis översikt över hur AEM löser problemet. Eftersom en resa är omfattande kan den vara användbar både för läsare som är nya för AEM och för erfarna användare.
+En dokumentationsresa fungerar som en introduktion till hur AEM löser vanliga affärsproblem. Därför är varje resa utformad med läsare som inte har AEM i åtanke, som utformar affärsproblemet, beskriver en nödvändig teori och sedan ger en stegvis översikt över hur AEM löser problemet. På grund av den omfattande resan kan det vara användbart för läsare som är nya för AEM och erfarna användare.
 
 En typisk dokumentationsresa har följande delar.
 

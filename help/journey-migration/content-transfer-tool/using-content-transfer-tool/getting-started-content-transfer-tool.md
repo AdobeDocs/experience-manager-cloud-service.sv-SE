@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Komma igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: ea5d86e1a43bb7ae0c7608fc0625983cf2bf273f
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1436'
 ht-degree: 6%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 6%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
 
-Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns i [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
+Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns på [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html).
 
 Endast version 2.0.0 och senare stöds, och du bör använda den senaste versionen.
 
@@ -53,7 +53,7 @@ Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsök
    ![bild](/help/journey-migration/content-transfer-tool/assets/enable_ssl_logging.png)
 
 >[!NOTE]
->Den här flaggan används endast för felsökning av SSL-problem. Kontrollera att flaggan är inaktiverad innan du kör extraheringen, eftersom det kan kräva mycket diskutrymme. Detta kan potentiellt fylla diskkapaciteten och orsaka att extraheringsprocessen misslyckas.
+>Den här flaggan används endast för felsökning av SSL-problem. Se till att flaggan är inaktiverad innan du kör extraheringen, eftersom det kan kräva mycket diskutrymme. Detta kan potentiellt fylla diskkapaciteten och orsaka att extraheringsprocessen misslyckas.
 
 ## Köra Content Transfer Tool {#running-tool}
 
@@ -102,7 +102,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    >[!NOTE]
    >
-   >Extraheringsnyckeln gör att AEM kan ansluta säkert till migreringsuppsättningen. Behandla den här nyckeln med samma omsorg som du gör om ett lösenord och dela det aldrig på ett osäkert medium som e-post.
+   >Extraheringsnyckeln gör att AEM kan ansluta säkert till migreringsuppsättningen. Behandla den här nyckeln med samma noggrannhet som du skulle ha gjort med ett lösenord och dela det aldrig på ett osäkert medium som e-post.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam4.png)
 

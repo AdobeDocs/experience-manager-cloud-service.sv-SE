@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2385'
 ht-degree: 11%
 
 ---
@@ -191,7 +191,7 @@ tillsammans med automatiseringsarbetsflödet för att aktivera Brand Portal på 
 
 I följande avsnitt beskrivs hur du konfigurerar Experience Manager Assets manuellt som en [!DNL Cloud Service] med Brand Portal via Adobe Developer Console.
 
-Tidigare var Experience Manager Assets [!DNL Cloud Service] konfigurerades manuellt med Brand Portal via Adobe Developer Console, som köper en kontotoken för Adobe Identity Management Services (IMS) för auktorisering av Brand Portal-klienten. Det kräver konfigurationer i både Experience Manager Assets och Adobe Developer Console.
+Tidigare var Experience Manager Assets [!DNL Cloud Service] konfigurerades manuellt med Brand Portal via Adobe Developer Console, som köper en kontotoken för Adobe Identity Management Services (IMS) för auktorisering av Brand Portal-klienten. Den kräver konfigurationer i både Experience Manager Assets och Adobe Developer Console.
 
 1. Skapa ett IMS-konto i Experience Manager Assets och generera en offentlig nyckel (certifikat).
 1. Skapa ett projekt för din Brand Portal-klient (organisation) i Adobe Developer Console.

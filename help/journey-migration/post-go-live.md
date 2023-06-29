@@ -2,10 +2,10 @@
 title: Post GoLive
 description: Lär dig hur du övervakar problem och förbättrar prestanda
 exl-id: 487f0b51-501b-48fc-a796-3cb8a6d64462
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 20%
+source-wordcount: '482'
+ht-degree: 9%
 
 ---
 
@@ -36,7 +36,7 @@ I det här dokumentet beskrivs de verktyg som är tillgängliga för att felsök
 
 Felsökning AEM as a Cloud Service utvecklingsmiljöer finns på Developer Console för utvecklings-, scen- och produktionsmiljöer.
 
-Mer information om utvecklingsverktyg finns i [Implementera för AEM as a Cloud Service](/help/implementing/developing/introduction/development-guidelines.md#aem-as-a-cloud-service-development-tools).
+Se [Implementera för AEM as a Cloud Service](/help/implementing/developing/introduction/development-guidelines.md#aem-as-a-cloud-service-development-tools) om du vill veta mer om utvecklingsverktyg.
 
 ## CRXDE Lite {#crxde-lite}
 
@@ -45,13 +45,13 @@ Som användare har du åtkomst till CRXDE Lite i utvecklingsmiljön, men inte i 
 >[!IMPORTANT]
 >Skriva till oföränderliga databaser som `/libs` och `/apps` vid körning resulterar i fel. Dessutom har du inte tillgång till utvecklarverktyg för staging- och produktionsmiljöer.
 
-Läs mer i [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.md) om du vill veta hur du utvecklar ditt AEM-program med CRXDE Lite.
+Se [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.md) om du vill lära dig hur du utvecklar AEM med CRXDE Lite.
 
 ## Hantera loggar {#managing-logs}
 
 Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
-Läs [Komma åt och hantera loggar](/help/implementing/cloud-manager/manage-logs.md) för att lära dig hur du får åtkomst till och hanterar loggar via användargränssnittet eller från API via Cloud Manager.
+Se [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) om du vill lära dig att komma åt och hantera loggar via användargränssnittet eller från API via Cloud Manager.
 
 ## Kontakta support {#contacting-support}
 

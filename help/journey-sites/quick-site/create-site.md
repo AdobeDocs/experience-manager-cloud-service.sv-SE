@@ -2,9 +2,9 @@
 title: Skapa webbplats från mall
 description: Lär dig hur du snabbt skapar en ny AEM med hjälp av en webbplatsmall.
 exl-id: 31bb04c2-b3cc-44ca-b517-5b0d66d9b1fa
-source-git-commit: 171aca87ff725a2f142f0336dca3491e213f55ab
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1506'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Den här delen av resan gäller AEM.
 
 ## Webbplatsmallar {#site-templates}
 
-Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i ett bekvämt och återanvändbart paket. Webbplatsmallar innehåller i allmänhet baswebbplatsinnehåll och -struktur samt information om webbplatsens format så att du snabbt kan komma igång med den nya webbplatsen. Den faktiska strukturen är följande:
+Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i ett bekvämt och återanvändbart paket. Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll och struktur- och webbplatsformatering så att du snabbt kommer igång med den nya webbplatsen. Den faktiska strukturen är följande:
 
 * `files`: Mapp med UI-kit, XD och eventuellt andra filer
 * `previews`: Mapp med skärmbilder av platsmallen
@@ -109,7 +109,7 @@ Innehållsförfattare kan nu börja skriva.
 Webbplatsmallar är mycket kraftfulla och flexibla och alla nummer kan skapas för ett projekt, vilket gör det enkelt att skapa olika webbplatsvarianter. Beroende på den nivå av anpassning som redan har gjorts för den webbplatsmall som du använder kanske du inte ens behöver anpassa gränssnittet ytterligare.
 
 * Om sajten inte kräver någon ytterligare anpassning, grattis! Din resa tar slut här!
-* Om du fortfarande behöver anpassa gränssnittet, eller om du bara vill förstå hela processen om du behöver anpassa dig i framtiden, kan du fortsätta läsa.
+* Om du fortfarande behöver anpassa gränssnittet ytterligare, eller om du bara vill förstå hela processen om du behöver anpassa dig i framtiden, kan du fortsätta läsa.
 
 ## Exempelsida {#example-page}
 

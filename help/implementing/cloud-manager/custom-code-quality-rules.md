@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet
 description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '3504'
+source-wordcount: '3502'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud
 
 >[!NOTE]
 >
->Fullständiga SonarQube-regler kan inte laddas ned på grund av Adobe egna information. Du kan hämta den fullständiga listan med regler [med den här länken.](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx) Fortsätt läsa det här dokumentet för beskrivningar och exempel på reglerna.
+>Fullständiga SonarQube-regler kan inte laddas ned på grund av Adobe egna information. Du kan hämta den fullständiga listan med regler [med den här länken](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx). Fortsätt läsa det här dokumentet för beskrivningar och exempel på reglerna.
 
 >[!NOTE]
 >
@@ -773,7 +773,7 @@ OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` defin
 Experience Manager-komponenter som har en klassisk användargränssnittsdialogruta bör alltid ha en motsvarande dialogruta för användargränssnittet. Båda ger en optimal redigeringsupplevelse och är kompatibla med Cloud Servicens distributionsmodell, där det klassiska användargränssnittet inte stöds. Den här regeln verifierar följande scenarier:
 
 * En komponent med en klassisk användargränssnittsdialogruta (d.v.s. en `dialog` underordnad nod) måste ha en motsvarande Touch UI-dialogruta (d.v.s. en `cq:dialog` underordnad nod).
-* En komponent med en klassisk dialogruta för användargränssnittsdesign (dvs. en `design_dialog` nod) måste ha en motsvarande dialogruta för Touch UI-design (d.v.s. en `cq:design_dialog` underordnad nod).
+* En komponent med en klassisk dialogruta för användargränssnittsdesign (d.v.s. en `design_dialog` nod) måste ha en motsvarande dialogruta för Touch UI-design (d.v.s. en `cq:design_dialog` underordnad nod).
 * En komponent med både en klassisk användargränssnittsdialogruta och en klassisk dialogruta för användargränssnittsdesign måste ha både en motsvarande dialogruta för användargränssnittet för touchredigering och en motsvarande designdialogruta för användargränssnittet för touchgränssnitt.
 
 Dokumentationen för Experience Manager Moderniseringsverktyg innehåller dokumentation och verktyg för hur du konverterar komponenter från det klassiska användargränssnittet till Touch-användargränssnittet. Se [dokumentationen för Experience Manager Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/) för mer information.
@@ -800,7 +800,7 @@ Se [Experience Manager projektstruktur](/help/implementing/developing/introducti
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
-Stöd för omvänd replikering är inte tillgängligt i distributioner av Cloud Service, vilket beskrivs som en del av Experience Manager as a Cloud Service [versionsinformation.](/help/release-notes/aem-cloud-changes.md#replication-agents)
+Stöd för omvänd replikering är inte tillgängligt i distributioner av Cloud Service, vilket beskrivs som en del av Experience Manager as a Cloud Service [versionsinformation](/help/release-notes/aem-cloud-changes.md#replication-agents).
 
 Kunder som använder omvänd replikering bör kontakta Adobe för att få alternativa lösningar.
 
@@ -853,7 +853,7 @@ Migreringsverktyget i [Experience Manager as a Cloud Service Assets GitHub-datab
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Även om det historiskt sett är vanligt att använda statiska mallar i Experience Manager-projekt rekommenderar Adobe redigerbara mallar eftersom de ger den flexibilitet och stöder ytterligare funktioner som inte finns i statiska mallar. Mer information finns i dokumentet [Sidmallar.](/help/implementing/developing/components/templates.md)
+Även om det historiskt sett är vanligt att använda statiska mallar i Experience Manager-projekt rekommenderar Adobe redigerbara mallar eftersom de ger den flexibilitet och stöder ytterligare funktioner som inte finns i statiska mallar. Mer information finns i dokumentet [Sidmallar](/help/implementing/developing/components/templates.md).
 
 Migrering från statiska till redigerbara mallar kan till stor del automatiseras med [Moderniseringsverktyg för Experience Manager.](https://opensource.adobe.com/aem-modernize-tools/)
 
@@ -864,7 +864,7 @@ Migrering från statiska till redigerbara mallar kan till stor del automatiseras
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-De äldre Foundation Components (dvs. komponenter under `/libs/foundation`) har ersatts av flera Experience Manager-versioner till förmån för kärnkomponenterna. Användning av Foundation Components som grund för anpassade komponenter (oavsett om de är övertäckningar eller arv) rekommenderas inte och bör konverteras till motsvarande Core Components.
+De äldre Foundation Components (d.v.s. komponenter under `/libs/foundation`) har ersatts av flera Experience Manager-versioner till förmån för kärnkomponenterna. Användning av Foundation Components som grund för anpassade komponenter (oavsett om de är övertäckningar eller arv) rekommenderas inte och bör konverteras till motsvarande Core Components.
 
 Den här konverteringen kan underlättas av [Moderniseringsverktyg för Experience Manager.](https://opensource.adobe.com/aem-modernize-tools/)
 
@@ -884,7 +884,7 @@ Experience Manager as a Cloud Service tillämpar en strikt namngivningsprincip f
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) be direct child nodes of `/oak:index`. Index på andra platser måste flyttas för att vara kompatibla med Experience Manager as a Cloud Service. Mer information om sökindex finns i dokumentet [Innehållssökning och indexering.](/help/operations/indexing.md)
+Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) be direct child nodes of `/oak:index`. Index på andra platser måste flyttas för att vara kompatibla med Experience Manager as a Cloud Service. Mer information om sökindex finns i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
 
 ### Definitionsnoder för anpassade sökindex måste ha en compatVersion av 2 {#oakpal-custom-search-compatVersion}
 
@@ -893,7 +893,7 @@ Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (till exempel noder av typen `oak:QueryIndexDefinition`) måste ha `compatVersion` egenskap inställd på `2`. Alla andra värden stöds inte av Experience Manager as a Cloud Service. Mer information om sökindex finns på [Innehållssökning och indexering.](/help/operations/indexing.md)
+Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (till exempel noder av typen `oak:QueryIndexDefinition`) måste ha `compatVersion` egenskap inställd på `2`. Alla andra värden stöds inte av Experience Manager as a Cloud Service. Mer information om sökindex finns på [Innehållssökning och indexering](/help/operations/indexing.md).
 
 ### Underordnade noder för anpassade sökindexdefinitionsnoder måste vara av typen nt:undefined {#oakpal-descendent-nodes}
 
@@ -920,7 +920,7 @@ En korrekt definierad definitionsnod för ett anpassat sökindex måste innehål
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) måste namnges efter ett specifikt mönster som beskrivs i dokumentet [Innehållssökning och indexering.](/help/operations/indexing.md)
+Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) måste namnges efter ett specifikt mönster som beskrivs i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
 
 ### Definitionsnoder för anpassade sökindex måste använda indextypen Lucene  {#oakpal-index-type-lucene}
 

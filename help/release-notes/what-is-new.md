@@ -2,7 +2,7 @@
 title: Vad är nytt?
 description: Nyheter i Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: f854aaf8-e84d-4904-832f-f72433590920
-source-git-commit: ab81bca96bcf06b06357f900464e999163bb1bb2
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 15%
@@ -20,7 +20,7 @@ En översikt över Adobe Experience Manager as a Cloud Service finns i:
 * den [Arkitektur](/help/overview/architecture.md) Adobe Experience Manager as a Cloud Service
 * An [Översikt över AEM as a Cloud Service - Vad är nytt och Vad är annorlunda?](/help/overview/what-is-new-and-different.md)
 
-<!-- Please link to introduction or what's new of Sites. -->
+<!-- Link to introduction or what's new of Sites. -->
 
 En översikt över resurser finns i [Introduktion till Assets as a Cloud Service](/help/assets/overview.md)
 

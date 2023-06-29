@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: b8ab2525-3f15-4844-866c-da47bfc7518c
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2598'
+source-wordcount: '2590'
 ht-degree: 0%
 
 ---
@@ -174,7 +174,7 @@ Maskinöversättningar returneras automatiskt med statusen **Godkänd**. Övers�
 >
 >Om du inte inaktiverade projektalternativet **Ta bort start efter erbjudande** as [som beskrivs i föregående avsnitt,](#using-translation-project) översatta objekt visas med **Borttagen** tillstånd. Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
 >
->Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill lära dig mer om hur AEM hanterar översättningar kan du läsa [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
+>Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill lära dig mer om hur AEM bearbetar översättningar finns mer information i [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
 
 ### Använda ett manuellt skapat översättningsprojekt {#using-manual-project}
 
@@ -234,7 +234,7 @@ Maskinöversättningar returneras automatiskt med statusen **Godkänd**. Övers�
 >
 >Om du inte inaktiverade projektalternativet **Ta bort start efter erbjudande** as [som beskrivs i föregående avsnitt,](#using-translation-project) översatta objekt visas med **Borttagen** tillstånd. Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
 >
->Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill lära dig mer om hur AEM hanterar översättningar kan du läsa [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
+>Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill lära dig mer om hur AEM bearbetar översättningar finns mer information i [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
 
 ## Granskning av översatt innehåll {#reviewing}
 

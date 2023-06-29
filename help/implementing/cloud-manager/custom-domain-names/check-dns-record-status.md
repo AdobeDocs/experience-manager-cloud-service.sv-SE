@@ -2,9 +2,9 @@
 title: Kontrollerar DNS-poststatus
 description: Lär dig hur du avgör om dina DNS-inställningar kan matchas korrekt med hjälp av Cloud Manager.
 exl-id: 76ca1584-e21d-4e3a-a08a-82b2779167cf
-source-git-commit: 2278abcf0c34fd34a7730242ee27814d37b7d4d0
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av föl
 
 * **DNS-matchningen är felaktig** - Detta anger att konfigurationen för DNS-posterna inte har matchats eller är felaktig.
 
-   * Se dokumentet [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) om du vill veta mer.
+   * Se [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) om du vill veta mer.
    * När du är klar måste du välja **Lös igen** -ikonen bredvid statusen.
 
 * **DNS-matchning pågår** - Upplösningen pågår.

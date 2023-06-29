@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '3706'
+source-wordcount: '3705'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Denna unika leveransmetod säkerställer att enhetliga kvalitetsupplevelser skic
 
 <!-- As part of building and publishing assets with Dynamic Media, you visually configure the effects that you want to apply to assets. In so doing, you are literally building the URL that correctly tells the publish server how to deliver your primary asset to the screen.  -->
 
-![Adobe Dynamic Media levererar samma primära bild till olika medier i olika storlekar och format.](/help/assets/dynamic-media/assets/dm-oneasset-multioutput.png)
+![Adobe Dynamic Media levererar samma primära bild till olika medier i olika storlekar och format](/help/assets/dynamic-media/assets/dm-oneasset-multioutput.png)
 _Adobe Dynamic Media ger enhetliga upplevelser av hög kvalitet för alla skärmar, oavsett storlek och bandbredd._
 
 När du läser vidare kommer du att lära dig mer om varför konceptet&quot;en primär resursfil, oändliga möjligheter&quot; är viktigt.
@@ -182,7 +182,7 @@ Ett annat användningsfall som Dynamic Media löser är video. Video är komplex
 
 Kunder kommer till Dynamic Media med följande problem som de hoppas kunna lösa:
 
-&quot;_Vi har videon och spenderade mycket pengar på att skapa den. Men vi slipper lägga in den på webbsidor eller leverera den, eftersom vi inte kan garantera kvaliteten på videon, eller om den verkligen kommer att spelas upp. Och i slutändan påverkar det våra varumärken och kanske vår roll till och med konverteringsgraden._&quot;
+&quot;_Vi har videon och spenderade mycket pengar på att skapa den. Men vi slipper lägga ut den på webbsidor eller leverera den eftersom vi inte kan garantera kvaliteten på videon, eller om den verkligen kommer att spelas upp. Och i slutändan påverkar det våra varumärken och kanske vår roll till och med konverteringsgraden._&quot;
 
 Dynamic Medias lösning är att ta den primära videofilen och låta Dynamic Media göra alla storlekar genom sin transkodningsprocess. Koppla sedan ihop det med Dynamic Medias intelligenta videospelare. Detta arbetsflöde garanterar att videon, oavsett om du använder den på landningssidan eller på en kategori- eller produktinformationssida, är konsekvent hela tiden och levereras med hög kvalitet.
 
@@ -265,7 +265,7 @@ _Förhandsgranska en resurs baserat på den valda visningsförinställningen &qu
 
 ## Valfritt - Läs mer
 
-Del I av resan gick igenom grunderna för en rad olika Dynamic Media-ämnen. Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [What&#39;s next in this Dynamic Media Journey](#whats-next).
+Del I av resan gick igenom grunderna för en rad olika Dynamic Media-ämnen. Om du vill veta mer om vad du just läste kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [What&#39;s next in this Dynamic Media Journey](#whats-next).
 
 _Hjälpavsnitt för Dynamic Media_
 
@@ -291,7 +291,7 @@ _Dynamic Media-visningsprogram_
 
 ## What&#39;s next in this Dynamic Media Journey {#whats-next}
 
-I del II på den här resan kommer du att undersöka Dynamic Media URL:er lite närmare för att bättre förstå vad som händer när en mediefil levereras. Du får också lära dig mer om grunderna bakom hur du skapar bildförinställningar för att återge resurser, och om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar samt hur de skapas.
+I del II på den här resan undersöker du Dynamic Media URL:er lite närmare för att bättre förstå vad som händer när en mediefil levereras. Du kan också lära dig mer om grunderna bakom hur du skapar bildförinställningar för att återge resurser, och om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar samt hur de skapas.
 
 Ta mig till [Dynamic Media Journey: Grunderna, del II](/help/assets/dynamic-media/dm-journey-part2.md#dm-journey-d).
 

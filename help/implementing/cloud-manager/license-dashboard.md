@@ -2,9 +2,9 @@
 title: Licenspanelen
 description: Med Cloud Manager får du en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller klientorganisation.
 exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Innehållsförfrågningar kommer att innehålla avvikelser med en organisations 
 
 ### Vad gör jag om jag vill veta mer om min innehållsförfrågningsvolym? {#current-request-volumes}
 
-Om du vill ha ytterligare insikter om hur många innehållsförfrågningar som visas på License Dashboard kan ditt Adobe-team tillhandahålla en rapport som visar de viktigaste volymdrivrutinerna för innehållsförfrågningar. Kontakta ditt Adobe-team eller Adobe kundtjänst om du vill ha en rapport över de viktigaste användningsområdena.
+Om du vill ha ytterligare insikter om hur många innehållsförfrågningar som visas på License Dashboard kan ditt Adobe-team tillhandahålla en rapport som visar de viktigaste volymdrivrutinerna för innehållsförfrågningar. Kontakta ert Adobe-team eller Adobe kundtjänst för att få en rapport om hur ni bäst använder dem.
 
 ### Vad händer om jag använder mitt eget CDN? {#using-own-cdn}
 

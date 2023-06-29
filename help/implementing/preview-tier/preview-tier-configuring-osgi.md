@@ -2,9 +2,9 @@
 title: Konfigurera OSGi-inställningar för förhandsgranskningsnivån
 description: Lär dig hur du konfigurerar AEM förhandsvisningstjänst för att förhandsgranska innehåll innan du publicerar.
 exl-id: 1200bb17-8a3c-4e41-85f4-ed2334b61f69
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ OSGi-egenskapsvärdena för förhandsvisningsskiktet ärvs från publiceringsski
 
 >[!NOTE]
 >
->Mer information om förhandsvisningsmiljöerna finns i dokumentet [Hantera miljöer.](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
+>Mer information om förhandsvisningsmiljöerna finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
 
 ## Konfigurera OSGi-inställningarna för förhandsgranskningsnivån {#configuring-osgi-settings-for-the-preview-tier}
 

@@ -2,7 +2,7 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som används som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '3294'
 ht-degree: 0%
@@ -197,7 +197,7 @@ Om du vill skapa en ny mapp kan du göra det här:
 
 ### Använda Konfigurationsläsaren {#using-the-configuration-browser}
 
-1. Gå till **Global navigering** -> **verktyg** > [**Konfigurationsläsaren**.](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)
+1. Gå till **Global navigering** -> **verktyg** > [**Konfigurationsläsaren**](/help/implementing/developing/introduction/configurations.md#using-configuration-browser).
 
    De befintliga mapparna visas till vänster, inklusive `global` mapp.
 
@@ -304,7 +304,7 @@ När du skapar en ny mall måste du ange en malltyp:
 
 * AEM innehåller ett litet urval av färdiga malltyper som HTML5 Page och Adaptive Form Page.
 
-   * Ytterligare exempel finns som en del av [WKND självstudiekurs.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+   * Ytterligare exempel finns som en del av [WKND, genomgång](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 * Malltyper definieras vanligtvis av utvecklare.
 
@@ -328,7 +328,7 @@ Definitioner för dina anpassade malltyper bör lagras i användardefinierade ma
 
 >[!CAUTION]
 >
->Malltyperna måste ta hänsyn till rätt mappstruktur (dvs. `/settings/wcm/...`), annars går det inte att hitta malltyperna.
+>Malltyperna måste ta hänsyn till rätt mappstruktur (d.v.s. `/settings/wcm/...`), annars går det inte att hitta malltyperna.
 
 <!--
 ### Template Type and Mobile Device Groups {#template-type-and-mobile-device-groups-br}
@@ -538,7 +538,7 @@ Vid återgivning av en sida:
 * **Komponenter**:
 
    * Sidkomponenten kommer att sammanfoga `structure/jcr:content` mallens träd med `jcr:content` sidans träd.
-      * Sidkomponenten tillåter bara författaren att redigera noderna i mallstrukturen som har flaggats som redigerbara (samt eventuella underordnade noder).
+      * Sidkomponenten tillåter bara författaren att redigera noderna i mallstrukturen som har flaggats som redigerbara (och eventuella underordnade noder).
       * När en komponent återges på en sida hämtas den relativa sökvägen från `jcr:content` nod; samma bana under `policies/jcr:content` -noden i mallen söks sedan igenom.
          * The `cq:policy` den här nodens egenskap pekar på den faktiska innehållsprincipen (d.v.s. den innehåller komponentens designkonfiguration).
             * På så sätt kan du ha flera mallar som återanvänder samma innehållsprincipkonfigurationer.

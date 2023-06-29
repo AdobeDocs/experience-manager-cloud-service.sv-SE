@@ -2,9 +2,9 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '3087'
+source-wordcount: '3084'
 ht-degree: 0%
 
 ---
@@ -190,7 +190,7 @@ Se [ytterligare resurser](#additional-resources) för ytterligare dokumentation 
 Mapphierarkin kan hantera två viktiga problem när det gäller innehållshantering:
 
 * [Översättning](#translation) - AEM hanterar översättning av innehåll genom att underhålla kopior av innehåll i språkspecifika mappar.
-* Organisation - Mappar används för att definiera en innehållshierarki som krävs för översättningsbehov och för att hantera innehållsfragment logiskt.
+* Organisation - Mappar används för att definiera en innehållshierarki som krävs för översättningsbehov och för att logiskt hantera innehållsfragment.
 
 AEM ger en flexibel innehållsstruktur och en hierarki kan vara godtyckligt stor. Det är dock viktigt att komma ihåg att ändringar i mappstrukturen kan få oönskade konsekvenser för befintliga frågor som [förlitar sig på innehållssökvägen.](#developer) Därför kan en väldefinierad hierarki som är tydligt angiven i förväg vara till hjälp för innehållsförfattarna.
 

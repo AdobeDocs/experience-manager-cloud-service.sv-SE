@@ -2,9 +2,9 @@
 title: Funktionstestning
 description: Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet.
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ Det finns tre olika typer av funktionstestning på AEM as a Cloud Service.
 * [Anpassad funktionstestning](#custom-functional-testing)
 * [Testning av anpassat användargränssnitt](#custom-ui-testing)
 
-För alla funktionstester kan detaljerade testresultat hämtas som `.zip` genom att använda **Hämta bygglogg** på skärmen som utgör en del av [distributionsprocessen.](/help/implementing/cloud-manager/deploy-code.md)
+För alla funktionstester kan detaljerade testresultat hämtas som `.zip` genom att använda **Hämta bygglogg** på skärmen som utgör en del av [distributionsprocess](/help/implementing/cloud-manager/deploy-code.md).
 
-Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen. För att få tillgång till loggarna, se dokumentet [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) för mer information.
+Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen. Information om hur du kommer åt loggarna finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) för mer information.
 
 Både produktfunktionstesterna och de anpassade funktionstesterna baseras på [AEM testar klienter.](https://github.com/adobe/aem-testing-clients)
 
@@ -54,7 +54,7 @@ Funktionstester av produkter underhålls som ett öppen källkodsprojekt. Se [fu
 
 Även om produktfunktionstestning definieras av Adobe kan du skriva egna kvalitetstester för ditt eget program. Detta körs som anpassad funktionstestning som en del av [produktionsflöde](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) eller valfritt [rörledning för icke-produktion](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för att säkerställa programmets kvalitet.
 
-Anpassad funktionstestning utförs både för anpassade koddistributioner och push-uppgraderingar, vilket gör det särskilt viktigt att skriva bra funktionstester som förhindrar att AEM kan knäcka programkoden. Det anpassade funktionsteststeget finns alltid och kan inte hoppas över.
+Anpassad funktionstestning körs både för anpassade koddistributioner och push-uppgraderingar, vilket gör det särskilt viktigt att skriva bra funktionstester som förhindrar att AEM kan knäcka programkoden. Det anpassade funktionsteststeget finns alltid och kan inte hoppas över.
 
 Se [Java Functional Tests](/help/implementing/cloud-manager/java-functional-testing.md) för mer information.
 

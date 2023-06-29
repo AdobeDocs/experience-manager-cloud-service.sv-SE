@@ -2,9 +2,9 @@
 title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt
 exl-id: c5f3331e-637f-4816-be83-faf2df59bd5f
-source-git-commit: 8ea043b4b6424d6922c41c143ca74fd25ac60cf8
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1255'
 ht-degree: 9%
 
 ---
@@ -105,7 +105,7 @@ Panelen Projektinformation innehåller allmän information om projektet, inklusi
 
 ![Projektinformation](/help/sites-cloud/authoring/assets/project-info.png)
 
-Teammedlemmar kan tilldelas och tas bort från den här panelen (eller få sina roller ändrade) samt teampanelen.
+Teammedlemmar kan tilldelas och tas bort från den här panelen (eller få sina roller ändrade) och teampanelen.
 
 ![Lägg till teammedlemmar i projekt](/help/sites-cloud/authoring/assets/projects-add-team.png)
 
@@ -137,11 +137,11 @@ Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Om något arbe
 
 Du kan tilldela ditt projekt för att följa vissa arbetsflöden. Beroende på vilket projekt du väljer finns olika arbetsflöden tillgängliga.
 
-Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-cloud/authoring/projects/workflows.md)
+Dessa beskrivs i [Arbeta med projektarbetsflöden](/help/sites-cloud/authoring/projects/workflows.md).
 
 ### Launches {#launches}
 
-Panelen Launches (Starta) visar alla starter som har begärts med en [Begär startarbetsflöde.](/help/sites-cloud/authoring/projects/workflows.md)
+Panelen Launches (Starta) visar alla starter som har begärts med en [Arbetsflödet Begär start](/help/sites-cloud/authoring/projects/workflows.md).
 
 ![Launches](/help/sites-cloud/authoring/assets/project-launches.png)
 

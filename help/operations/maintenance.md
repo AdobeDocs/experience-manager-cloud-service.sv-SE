@@ -2,7 +2,7 @@
 title: Underhållsaktiviteter på AEM as a Cloud Service
 description: Underhållsaktiviteter på AEM as a Cloud Service
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -44,7 +44,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
   <tr>
     <td>Rensa version</td>
     <td>Adobe</td>
-    <td>För befintliga miljöer (de som skapats före 1 juni 2023) är rensning inaktiverat och kommer inte att aktiveras i framtiden såvida inte kunden uttryckligen aktiverar det, då de även kan konfigurera det med anpassade värden.<br><br> <!--Alexandru: please leave the two line breaks in place, otherwise spacing won't render properly-->Nya miljöer (de som skapats från och med 1 juni 2023) har rensning aktiverat som standard med värdena nedan, och kunderna kan konfigurera med anpassade värden.
+    <td>För befintliga miljöer (de som skapats före 1 juni 2023) är rensning inaktiverat och kommer inte att aktiveras i framtiden såvida inte kunden uttryckligen aktiverar det, då de även kan konfigurera det med anpassade värden.<br><br> <!--Alexandru: leave the two line breaks in place, otherwise spacing won't render properly-->Nya miljöer (de som skapats från och med 1 juni 2023) har rensning aktiverat som standard med värdena nedan, och kunderna kan konfigurera med anpassade värden.
      <ol>
        <li>Versioner som är äldre än 30 dagar tas bort</li>
        <li>De senaste 5 versionerna de senaste 30 dagarna sparas</li>

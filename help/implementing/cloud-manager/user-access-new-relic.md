@@ -2,9 +2,9 @@
 title: New Relic One
 description: Läs mer om New Relic One APM-tjänst (Application Performance Monitoring) för AEM as a Cloud Service och hur du kan komma åt den.
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1589'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Följ de här stegen för att aktivera ditt konto som New Relic-användare.
 
 1. New Relic skickar ett mejl med en länk som bekräftar kontot.
 
-Om du inte får något bekräftelsemeddelande från New Relic kan du läsa [felsökningsavsnitt.](#troubshooting)
+Om du inte får något bekräftelsemeddelande från New Relic går du till [felsökningsavsnitt.](#troubshooting)
 
 ## Åtkomst till New Relic One {#accessing-new-relic}
 
@@ -116,7 +116,7 @@ Om du uppmanas att verifiera din e-postadress under inloggningen på New Relic O
 
 Om du inte verifierar din e-postadress försöker New Relic logga in dig med den senast skapade användarposten som är kopplad till din e-postadress. Klicka på knappen **Kom ihåg mig** i inloggningsfönstret.
 
-Om du behöver mer hjälp kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp öppnar du en supportanmälan via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Felsöka New Relic One Access {#troubleshooting}
 
@@ -134,13 +134,13 @@ Om du har lagts till som New Relic One-användare enligt beskrivningen i avsnitt
 
 1. New Relic skickar ett mejl med en länk som bekräftar kontot.
 
-Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden via e-post eller lösenord loggar du en supportanmälan via [Admin Console.](https://adminconsole.adobe.com/)
+Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden i e-post eller lösenord loggar du en supportanmälan via [Admin Console.](https://adminconsole.adobe.com/)
 
 Om du inte får något e-postmeddelande från New Relic:
 
 * Kontrollera [skräppostfilter](https://docs.newrelic.com/docs/accounts/accounts-billing/account-setup/create-your-new-relic-account/).
 * Om tillämpligt, [lägg till New Relic i e-postmeddelandet tillåtelselista](https://docs.newrelic.com/docs/accounts/accounts/account-maintenance/account-email-settings/#email-whitelist).
-* Om ingen av dem föreslår hjälp, ge gärna feedback på supportanmälan så kommer Adobe Support att hjälpa dig vidare.
+* Om inget av förslagen hjälper dig kan du ge feedback på supportanmälan och Adobe Support-teamet kan hjälpa dig.
 
 ## Begränsningar {#limitations}
 
@@ -150,7 +150,7 @@ Följande begränsningar gäller när du lägger till användare i New Relic One
 * Användare som läggs till i New Relic är av samma typ **Begränsad**, se [Mer information finns i New Relic-dokumentationen.](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change)
 * AEM as a Cloud Service har bara New Relic One APM-lösning och har inte stöd för varningar, loggning eller API-integreringar.
 
-Om du vill ha mer hjälp eller mer information om New Relic One erbjudanden för ditt AEM as a Cloud Service program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Frågor och svar om New Relic One {#faqs}
 
@@ -164,7 +164,7 @@ Ditt New Relic One-konto är kopplat till ett primärt Adobe-konto och har flera
 * Ett program för publiceringstjänsten per miljö (inklusive Golden Publish)
 * Ett program för förhandsgranskningstjänsten per miljö
 
-Observera:
+Obs!
 
 * Varje program använder en licensnyckel.
 * AEM as a Cloud Service miljöer rapporterar till endast ett New Relic One-konto.

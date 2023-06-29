@@ -2,9 +2,9 @@
 title: AEM
 description: AEM är en enkel lösning för att överföra JCR-innehåll mellan det lokala filsystemet och den AEM servern via kommandoraden som kan jämföras med FTP.
 exl-id: fb887ba3-e40b-4ab1-b142-0748c6d9f18e
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Verktyget stöder inte flera filtersökvägar eller FileVault-filer `filter.xml`
 
 >[!CAUTION]
 >
->Observera att AEM alltid skriver över hela filen eller katalogen som anges.
+>AEM skriver alltid över hela filen eller katalogen som anges.
 
 ## Ladda ned och dokumentation {#download-and-documentation}
 

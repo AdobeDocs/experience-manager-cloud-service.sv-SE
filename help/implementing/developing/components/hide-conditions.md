@@ -2,7 +2,7 @@
 title: Använda Dölj villkor
 description: Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte.
 exl-id: 2a96f246-fb0f-4298-899e-ebbf9fc1c96f
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -49,7 +49,7 @@ När du definierar ditt dolda uttryck ska du tänka på:
 
 ## Exempel {#example}
 
-Exempel på dolda villkor finns i hela AEM och [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) särskilt. Tänk dig till exempel [listkärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) som implementerats i [WKND självstudiekurs.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+Exempel på dolda villkor finns i hela AEM och [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) särskilt. Tänk dig till exempel [listkärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) som implementerats i [WKND, genomgång](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 [Använda mallredigeraren](/help/sites-cloud/authoring/features/templates.md)kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Alternativ som om listan ska kunna vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor osv. kan aktiveras eller inaktiveras.
 

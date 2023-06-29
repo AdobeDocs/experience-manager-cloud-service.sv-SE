@@ -1,9 +1,9 @@
 ---
 title: Använda innehållstransformeraren
 description: Använda innehållstransformeraren
-source-git-commit: bc44990c3c2b445f1a3e56467d9dfb56168cd121
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,7 @@ Innehållstransformeraren paketeras med [Verktyget Innehållsöverföring](/help
 1. Ett exempel på ett säkerhetskopieringspaket som skapats för flyttningsåtgärden för sökvägarna visas nedan. Klicka på Installera för att återställa källsökvägarna. Observera att installationen endast tar tillbaka källsökvägarna till deras ursprungliga plats och inte tar bort sökvägarna som de flyttades till under omformningen. Om du vill ta bort banorna på den flyttade platsen klickar du på **Lägg till banor** knapp för att lägga till platsen (till exempel `/etc/packages/content-transformation/paths`) väljer du platsen och klickar på **Ta bort**.
 
    >[!CAUTION]
-   > Ta inte bort `/etc/packages/content-transformation` eftersom det är platsen där säkerhetskopieringspaketen finns. Det är bara när du är säker på att du inte behöver dessa paket längre som du kan ta bort den här platsen för att minska databasstorleken.
+   > Ta inte bort `/etc/packages/content-transformation` eftersom det är platsen där säkerhetskopieringspaketen finns. Du kan bara ta bort den här platsen om du är säker på att du inte behöver dessa paket längre för att minska databasstorleken.
 
    ![bild](/help/journey-migration/content-transformer/assets/ct-7.png)
    ![bild](/help/journey-migration/content-transformer/assets/ct-8.png)

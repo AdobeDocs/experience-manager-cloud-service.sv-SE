@@ -4,9 +4,9 @@ description: Lär dig hur administratörer använder AEM för att skapa en ny we
 feature: Administering
 role: Admin
 exl-id: 50105d03-9d94-4aec-b0a7-0b88e3fe50e0
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -19,4 +19,4 @@ Lär dig hur administratörer använder AEM skapa en ny webbplats med hjälp av 
 
 Innan innehållsförfattare kan skapa sidor med nytt innehåll måste webbplatsen först skapas. Hur framgångsrik en webbplats är beror i hög grad på den planering och de överväganden som ursprungligen gjordes för webbplatsens struktur, format och innehåll. Av den anledningen skapas den första webbplatsen vanligtvis av en AEM.
 
-Om du vill veta mer om hur webbplatsmallarna gör att processen att skapa webbplatser går snabbt och flexibelt kan du läsa [Skapa en dokumentation för administratören av den nya platsen.](/help/sites-cloud/administering/site-creation/create-site.md)
+Mer information om hur du använder webbplatsmallar för att skapa webbplatser snabbt och flexibelt finns i [Skapa dokumentation för en ny platsadministratör](/help/sites-cloud/administering/site-creation/create-site.md).

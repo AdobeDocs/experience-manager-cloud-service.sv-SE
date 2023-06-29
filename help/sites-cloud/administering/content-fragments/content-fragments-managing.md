@@ -4,9 +4,9 @@ description: Lär dig hur du använder konsolen Innehållsfragment för att hant
 feature: Content Fragments
 role: User
 exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2054'
 ht-degree: 0%
 
 ---
@@ -196,7 +196,7 @@ Redigeraren har olika alternativ:
   >
   >Förutom att bara spara ändringarna uppdaterar åtgärderna alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
   >
-  >Tänk på detta när du använder **Spara och stäng** och sedan snabbt ange fragmentredigeraren igen för att göra och spara ytterligare ändringar.
+  >Tänk på detta när du använder **Spara och stäng** och sedan snabbt starta om fragmentredigeraren för att göra och spara ytterligare ändringar.
 
 * **Stäng**
 
@@ -231,7 +231,7 @@ När du har skapat det Överordnad innehållet kan du skapa och hantera [Variati
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
-Du kan också [associera innehåll](/help/sites-cloud/administering/content-fragments/content-fragments-assoc-content.md) med ett fragment. Detta ger en anslutning så att resurser (t.ex. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
+Du kan också [associera innehåll](/help/sites-cloud/administering/content-fragments/content-fragments-assoc-content.md) med ett fragment. Detta ger en anslutning så att resurser (dvs. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
 
 ## Visa och redigera metadata (egenskaper) för fragmentet {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 

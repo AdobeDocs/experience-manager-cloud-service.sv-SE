@@ -4,9 +4,9 @@ description: Lär dig hur du förbereder innehåll för översättning.
 feature: Language Copy
 role: Admin
 exl-id: afc577a2-2791-481a-ac77-468011e4302e
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Flerspråkiga webbplatser har i allmänhet en viss mängd innehåll på flera sp
 
 >[!TIP]
 >
->Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll, se [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 The [WKND självstudiewebbplats](/help/implementing/developing/introduction/develop-wknd-tutorial.md) innehåller flera språkgrenar och använder följande struktur:
 
@@ -92,7 +92,7 @@ AEM tillhandahåller en **Referenser** som visar en lista med språkrötter som 
 
 ![Språkrötter](../assets/language-roots.png)
 
-Använd följande procedur för att visa språkkopiorna för en sida med [järnvägsväljare.](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector)
+Använd följande procedur för att visa språkkopiorna för en sida med [järnvägsväljare](/help/sites-cloud/authoring/getting-started/basic-handling.md#rail-selector).
 
 1. Välj en sida på webbplatsen i webbplatskonsolen och klicka eller tryck sedan på **Referenser**.
 

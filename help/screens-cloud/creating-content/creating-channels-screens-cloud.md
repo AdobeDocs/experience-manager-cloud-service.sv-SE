@@ -2,9 +2,9 @@
 title: Skapa och hantera kanaler på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1087'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler
 
 >[!NOTE]
 >**Förutsättningar**
->Innan du börjar med det här avsnittet av handboken bör du granska [Skapa och hantera projekt på skärmar as a Cloud Service](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md).
+>Innan du startar det här avsnittet av handboken bör du granska [Skapa och hantera projekt på skärmar as a Cloud Service](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md).
 
 Följ stegen nedan för att skapa en ny sekvenskanal på as a Cloud Service Skärmar:
 
@@ -42,7 +42,7 @@ Följ stegen nedan för att skapa en ny sekvenskanal på as a Cloud Service Skä
 
    ![](/help/screens-cloud/assets/create-content/channel-create2.png)
    >[!NOTE]
-   > The **Skapa** Guiden innehåller olika typer av mallar när du skapar en kanal. Se avsnittet [Tillgängliga mallar](#available-templates) i Skapa guide för mer information.
+   > The **Skapa** Guiden innehåller olika typer av mallar när du skapar en kanal. Se [Tillgängliga mallar](#available-templates) i Skapa guide för mer information.
 
 1. Ange namnet på sekvenskanalen, till exempel **LoopingChannelOne** och klicka på **Skapa**.
 
@@ -100,7 +100,7 @@ Med den här funktionen kan du definiera ett standardaktiveringsschema för en k
    ![bild](/help/screens-cloud/assets/display/Assignment1.png)
 
 1. Klicka **Ange standardinformation**.
-1. Konfigurera standardtilldelningsinformation, inklusive prioritet, start- och slutdatum samt återkommande mönster för kanalen, och klicka på **Tilldela**.
+1. Konfigurera standardinformation om tilldelning, inklusive prioritet, start- och slutdatum samt återkommande mönster för kanalen, och klicka sedan på **Tilldela**.
 
    ![bild](/help/screens-cloud/assets/display/Assignments2.png)
 
@@ -111,7 +111,7 @@ Med den här funktionen kan du definiera ett standardaktiveringsschema för en k
 Den här rutan visar följande information:
 * Kanalens standardprioritet i visningen.
 * Start- och slutdatum för aktiveringen när kanalen är schemalagd att spelas upp.
-* Syntetisk vy över upprepningen (varje timme/dag/vecka/månad/år samt namn som angetts för upprepningen).
+* Syntetisk vy av upprepningen (varje timme/dag/vecka/varje månad/år och namn som angetts för upprepningen).
 
 ### Använd standarduppdragsinformationen när du tilldelar till en skärm {#default-display}
 
@@ -143,8 +143,8 @@ Du kan också välja önskad visning i lagervyn och klicka på **Tilldela kanal*
 
 **Obs!** En kanaltilldelning som använder standardtilldelningsinformationen kan inte redigeras i visningssammanhanget.
 
-* Om du behöver ändra det till ett anpassat uppdrag måste du först ta bort det och sedan lägga till det igen med **Ange information om anpassad tilldelning** alternativ.
-* Om du behöver ändra egenskaperna för standarduppdragsinformationen måste du göra det direkt från sidan med kanalinformation.
+* Om du måste ändra det till ett anpassat uppdrag tar du först bort det och lägger sedan till det igen med **Ange information om anpassad tilldelning** alternativ.
+* Om du måste ändra egenskaperna för standarduppdragsinformationen gör du det direkt från sidan med kanalinformation.
 
 ### Ta bort information om standardtilldelning från en kanal {#remove-display}
 

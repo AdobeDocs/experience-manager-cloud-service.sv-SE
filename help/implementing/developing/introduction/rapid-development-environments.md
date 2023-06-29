@@ -2,9 +2,9 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig använda miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '3318'
+source-wordcount: '3313'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ När ändringarna har testats i en RDE kan de distribueras till en vanlig molnut
 >[!VIDEO](https://video.tv.adobe.com/v/3415582/?quality=12&learn=on)
 
 
-Du kan titta på ytterligare videofilmer som visar [konfigurera](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html), [hur man använder den](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html)och [utvecklingslivscykel](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/development-life-cycle.html) med RDE.
+Du kan se ytterligare videofilmer som visar [konfigurera](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html), [hur man använder den](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html)och [utvecklingslivscykel](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/development-life-cycle.html) med RDE.
 
 ## Introduktion {#introduction}
 
@@ -42,7 +42,7 @@ Följ de här stegen för att använda Cloud Manager för att skapa en RDE för 
 
 1. Klicka på det program som du vill lägga till en RDE till för att visa information om det.
 
-   * RDE kan läggas till i båda [sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md) och [produktionsprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md)
+   * RDE kan läggas till i båda [sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md) och [produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md).
 
 1. Från **Programöversikt** sida, klicka på **Lägg till miljö** på **Miljö** för att lägga till en miljö.
 
@@ -70,11 +70,11 @@ The **Översikt** visas nu din nya miljö i **Miljö** kort.
 
 När de skapas ställs de virtuella skrivborden in på den senast tillgängliga AEM. En RDE-återställning, som även kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
 
-Mer information om hur du använder Cloud Manager för att skapa miljöer, hantera vem som har åtkomst till dem och tilldela anpassade domäner finns i [Cloud Manager-dokumentationen.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
+Mer information om hur du använder Cloud Manager för att skapa miljöer, hantera vem som har åtkomst till dem och tilldela anpassade domäner finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
 
 ## Installera kommandoradsverktygen för RDE {#installing-the-rde-command-line-tools}
 
-När du har lagt till en RDE för ditt program med Cloud Manager kan du interagera med den genom att konfigurera kommandoradsverktygen enligt följande steg:
+När du har lagt till en RDE för ditt program med hjälp av Cloud Manager kan du interagera med den genom att konfigurera kommandoradsverktygen enligt följande steg:
 
 >[!IMPORTANT]
 >
@@ -147,7 +147,7 @@ Adobe rekommenderar följande arbetsflöde för att utveckla en ny funktion:
 
 * När en mellanliggande milstolpe har nåtts och validerats lokalt med den AEM as a Cloud Service SDK:n, bör koden implementeras på en Git-funktionsgren som ännu inte är en del av huvudraden, även om det är valfritt att binda sig för Git. Vad som utgör en&quot;mellanmilstolpe&quot; varierar beroende på teamets vanor. Exempel är några nya kodrader, en halv arbetsdag eller en underfunktion.
 
-* Återställ RDE om den har använts av en annan funktion och du vill [återställa till standardläge](#reset-rde). <!-- Alexandru: hiding for now, please don't delete This can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart. Den nya versionen av AEM kommer att användas.
+* Återställ RDE om den har använts av en annan funktion och du vill [återställa till standardläge](#reset-rde). <!-- Alexandru: hiding for now, do not delete This can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart. Den nya versionen av AEM kommer att användas.
 
   >[!IMPORTANT]
   >
@@ -308,7 +308,7 @@ The analyser found the following errors for publish :
 [api-regions-exportsimports] com.adobe.aem.temp:org.apache.felix.gogo.jline:1.1.8: Bundle org.apache.felix.gogo.jline:1.1.8 is importing package(s) [org.jline.builtins, org.jline.utils, org.apache.felix.service.command, org.apache.felix.service.threadio, org.jline.terminal, org.jline.reader, org.apache.felix.gogo.runtime, org.jline.reader.impl] in start level 20 but no bundle is exporting these for that start level.
 ```
 
-Kodexemplet ovan visar hur ett paket fungerar om det inte går att lösa. I så fall&quot;staged&quot; och installeras bara om kraven (import saknas, i detta fall) uppfylls genom installation av annan kod.
+Kodexemplet ovan visar hur ett paket fungerar om det inte går att lösa. I så fall&quot;staged&quot; och installeras bara om kraven (saknad import, i detta fall) uppfylls genom installation av annan kod.
 
 ### Kontrollera statusen för den lokala lagringsplatsen {#checking-rde-status}
 
@@ -369,7 +369,7 @@ Om du återställer RDE tas all anpassad kod, konfigurationer och innehåll bort
 
 En återställning anger att den senaste tillgängliga AEM är RDE.
 
-<!-- Alexandru: hiding for now, please don't delete
+<!-- Alexandru: hiding for now, do not delete
 
 Resetting can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). Resetting takes a few minutes and all existing content and code is deleted from the RDE.
 
@@ -425,7 +425,7 @@ Du kan också återställa den lokala redigeringsmiljön med hjälp av ellipskna
 
 ![Återställ RDE från miljökort](/help/implementing/cloud-manager/assets/rde-reset-environments-card.png)
 
-Mer information om hur du använder Cloud Manager för att hantera dina miljöer finns i [Cloud Manager-dokumentationen.](/help/implementing/cloud-manager/manage-environments.md)
+Mer information om hur du använder Cloud Manager för att hantera dina miljöer finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/manage-environments.md).
 
 ## Körningslägen {#runmodes}
 
@@ -500,4 +500,4 @@ Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environm
 
 ## RDE, genomgång
 
-Om du vill veta mer om RDE på AEM as a Cloud Service kan du läsa [videosjälvstudiekurs som visar hur du konfigurerar den, hur du använder den och utvecklingscykeln](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
+Mer information om RDE på AEM as a Cloud Service finns i [videosjälvstudiekurs som visar hur du konfigurerar den, hur du använder den och utvecklingscykeln](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)

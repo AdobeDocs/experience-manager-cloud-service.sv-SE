@@ -2,9 +2,9 @@
 title: Product Cockpit
 description: Arbeta med Product Cockpit
 exl-id: 6dbf039c-e040-48f1-88f3-ebbd70cdf94d
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Mellanlagrade produktdata inkluderar eventuell mutation i framtiden, t.ex. nya k
 
 ## Konfiguration {#configuration}
 
-Produktkataloger måste konfigureras i AEM. Se [konfigurera butik och kataloger](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/storefront/getting-started.html?#catalog) för mer information.
+Produktkataloger måste konfigureras i AEM. Se [konfigurera butik och kataloger](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html#catalog) för mer information.
 
-Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/storefront/getting-started.html) för mer information.
+Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html) för mer information.
 
 >[!NOTE]
 >
@@ -43,11 +43,11 @@ Produktkatalogen ordnas hierarkiskt efter produktkatalogstrukturen. Den första 
 
 ![Konfigurerade kataloger](../assets/catalog-overview.png)
 
-Om du klickar på en kategori läses de underordnade objekten för den valda kategorin in.
+När du klickar på en kategori läses de underordnade objekten för den valda kategorin in.
 
 ![Kategoriunderordnade](../assets/catalog-category-children.png)
 
-Om du klickar på en produkt läses produktvariationer in om sådana finns.
+När du klickar på en produkt läses produktvariationer in om sådana finns.
 
 ![Produktvariationer](../assets/catalog-product-variation.png)
 
@@ -69,7 +69,7 @@ Som standard visas data i produktkatalogen i produktcockpit. Om du använder&quo
 
 ## Egenskaper för produktkatalog {#catalog-properties}
 
-Om du klickar på egenskapsikonen för en produkt eller kategori öppnas egenskapsvyn för det valda objektet. Öppna egenskaper för en produktvariant är lika med öppna de huvudsakliga produktegenskaperna.
+Om du klickar på egenskapsikonen för en produkt eller kategori öppnas egenskapsvyn för det markerade objektet. Öppna egenskaper för en produktvariant är lika med öppna de huvudsakliga produktegenskaperna.
 
 ### Flikar {#tabs}
 

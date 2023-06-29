@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 0eff8100-5990-4553-8373-445fb7e6fb27
-source-git-commit: 599f924465552b2ef43827da8e139c239e47baed
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Titta på videon Augusti 2022 Release Overview om du vill se en sammanfattning a
 
 * Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ av resurser som användare kan överföra baserat på MIME-typen](/help/assets/configure-asset-upload-restrictions.md).
 
-   ![Begränsningar för överföring av tillgångar](/help/assets/assets/asset-upload-restrictions.png)
+  ![Begränsningar för överföring av tillgångar](/help/assets/assets/asset-upload-restrictions.png)
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
@@ -74,11 +74,11 @@ Titta på videon Augusti 2022 Release Overview om du vill se en sammanfattning a
 ### Vad är nytt? {#what-is-new-cif}
 
 * Sammanslutning av AEM sidor till produkter och kategorier via AEM sidegenskaper plus en översikt i produktcockpit
-   ![association för produktcockpitsida](/help/assets/CIF/product_cockpit_page_association.png)
+  ![association för produktcockpitsida](/help/assets/CIF/product_cockpit_page_association.png)
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här.](/help/implementing/cloud-manager/release-notes/current.md)
+Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes/current.md).
 
 ## Migreringsverktyg {#migration-tools}
 

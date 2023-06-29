@@ -2,9 +2,9 @@
 title: Redigeringsbegrepp
 description: Begrepp att skapa i AEM
 exl-id: ee9e4952-e075-4398-b31f-d7886153efff
-source-git-commit: b407765438086bb2f7fb720fb7f1dd05699cb48f
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '386'
 ht-degree: 1%
 
 ---
@@ -16,34 +16,34 @@ En AEM består vanligtvis av minst två miljöer:
 * Författare
 * Publicera
 
-Dessa interagerar så att ni kan göra innehåll tillgängligt på er webbplats så att besökarna kan komma åt det.
+Dessa miljöer interagerar så att ni kan göra innehållet tillgängligt på er webbplats så att besökarna kan komma åt det.
 
 I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska innehållet innan det publiceras:
 
-* En författare skapar och granskar innehållet. Innehåll kan vara av många olika typer, t.ex. sidor, resurser, publikationer m.m.
+* En författare skapar och granskar innehållet. Innehåll kan vara av många olika typer, till exempel sidor, resurser och publikationer.
 * Det här innehållet kommer vid något tillfälle att publiceras på din webbplats.
 
 ![Diagram över författare, utgivare och avsändare](/help/sites-cloud/authoring/assets/author-publish.png)
 
-I redigeringsmiljön är AEM funktionalitet tillgänglig via AEM. För publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
+I redigeringsmiljön är AEM funktionalitet tillgänglig via AEM. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
 
 ## Författarmiljö {#author-environment}
 
-Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det kräver att författaren loggar in med ett konto som har tilldelats rätt åtkomstbehörighet.
+Författaren arbetar i det som kallas **författarmiljö**. I den här miljön finns ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
 
 >[!NOTE]
 >
->Ditt konto behöver rätt behörighet för att skapa, redigera eller publicera innehåll.
+>Ditt konto behöver rätt behörighet för att skapa, redigera och publicera innehåll.
 
 Beroende på hur din instans och dina personliga åtkomsträttigheter är konfigurerade kan du utföra många åtgärder på ditt innehåll, bland annat:
 
 * Generera nytt innehåll eller redigera befintligt innehåll på en sida
-* Använda fördefinierade mallar för att skapa nya innehållssidor
+* Använda fördefinierade mallar för att skapa innehållssidor
 * Skapa, redigera och hantera dina resurser och samlingar
-* Flytta, kopiera och ta bort innehållssidor, resurser osv.
-* Publicera (eller ta bort publicering) sidor, resurser osv.
+* Flytta, kopiera och ta bort innehållssidor och resurser.
+* Publicera (eller avpublicera) sidor och resurser.
 
-Det finns dessutom administrativa uppgifter som hjälper dig att hantera ditt innehåll:
+Det finns även administrativa uppgifter som hjälper dig att hantera ditt innehåll:
 
 * Arbetsflöden som styr hur ändringar hanteras, t.ex. framtvingar en granskning före publicering
 * Projekt som koordinerar enskilda uppgifter
@@ -62,8 +62,8 @@ Se [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/preview
 
 När det är klart publiceras webbplatsens innehåll på **publiceringsmiljö**. Här görs webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
-Mer information om att publicera och avpublicera sidor finns i dokumentet [Publicerar sidor.](/help/sites-cloud/authoring/fundamentals/publishing-pages.md)
+Mer information om att publicera och avpublicera sidor finns i dokumentet [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md).
 
 ## Dispatcher {#dispatcher}
 
-Om du vill optimera prestanda för besökare på webbplatsen kan du **[avsändare](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachning.
+Om du vill optimera prestanda för besökare på webbplatsen kan du **[Dispatcher](/help/implementing/dispatcher/overview.md)** implementerar belastningsutjämning och cachning.

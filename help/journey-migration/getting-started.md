@@ -2,9 +2,9 @@
 title: Komma igång med migreringsresan till AEM as a Cloud Service
 description: Börja din migreringsresa genom att bekanta dig med grunderna i att gå över till AEM as a Cloud Service
 exl-id: e1a79630-56c1-4648-aa11-3348c3b37541
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '583'
 ht-degree: 10%
 
 ---
@@ -15,7 +15,7 @@ I den här delen av den AEM as a Cloud Service migreringsresan får du lära dig
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå varför du bör använda en molnbaserad version av AEM, samt de olika faserna för migrering till AEM as a Cloud Service. Efter läsning bör du:
+Det här dokumentet hjälper dig att förstå varför du bör använda en molnbaserad version av AEM och de olika faserna för migrering till AEM as a Cloud Service. Efter läsning bör du:
 
 * Förstå fördelarna med att flytta AEM as a Cloud Service
 * Bekanta dig med de breda steg du måste ta så att du kan gå över till molnet

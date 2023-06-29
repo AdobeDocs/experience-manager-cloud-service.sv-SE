@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: ca58b4df232dc658d7843ede2386710c4da43fcb
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '5037'
+source-wordcount: '5039'
 ht-degree: 5%
 
 ---
@@ -31,11 +31,11 @@ Resurssökning i AEM stöder följande användningsfall och den här artikeln be
 | [Sökförslag](#searchsuggestions) | [Obligatoriska metadata](#mandatorymetadata) | [Hämta](#download) |
 | [Förstå sökresultat och beteenden](#searchbehavior) | [Ändra sökfaktorer](#searchfacets) | [Massmetadatauppdateringar](#metadata-updates) |
 | [Sökrankning och förstärkning](#searchrank) | [Anpassade predikat](#custompredicates) | [Smarta samlingar](#collections) |
-| [Avancerad sökning: filtrering och sökningens omfattning](#scope) |  | [Förstå och felsöka oväntade resultat](#unexpected-results) |
-| [Sök bland andra lösningar och appar](#search-assets-other-surfaces):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brand-portal)</li><li>[Experience Manager](#desktop-app)</li><li>[Adobe Stock-bilder](#adobe-stock)</li><li>[Dynamic Media-resurser](#search-dynamic-media-assets)</li></ul> |  |  |
-| [Resursväljare](#asset-picker) |  |  |
-| [Begränsningar](#limitations) och [Tips](#tips) |  |  |
-| [Illustrerade exempel](#samples) |  |  |
+| [Avancerad sökning: filtrering och sökningens omfattning](#scope) | | [Förstå och felsöka oväntade resultat](#unexpected-results) |
+| [Sök bland andra lösningar och appar](#search-assets-other-surfaces):<ul><li>[Adobe Asset Link](#aal)</li><li>[Brand Portal](#brand-portal)</li><li>[Experience Manager](#desktop-app)</li><li>[Adobe Stock-bilder](#adobe-stock)</li><li>[Dynamic Media-resurser](#search-dynamic-media-assets)</li></ul> | | |
+| [Resursväljare](#asset-picker) | | |
+| [Begränsningar](#limitations) och [Tips](#tips) | | |
+| [Illustrerade exempel](#samples) | | |
 
 Söka efter resurser med hjälp av omsökningsfältet högst upp i [!DNL Experience Manager] webbgränssnitt. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** in [!DNL Experience Manager], klicka ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet anger du söknyckelord och väljer `Return`. Du kan även använda kortkommandot för nyckelord `/` (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
 
@@ -243,7 +243,7 @@ Skicka följande frågeparametrar i en URL för att starta resursväljaren i en 
 | `mode` | en, flera | <ul><li>`https://localhost:4502/aem/assetpicker.html?mode=single`</li><li>`https://localhost:4502/aem/assetpicker.html?mode=multiple`</li></ul> | I flera lägen kan du markera flera resurser samtidigt med resursväljaren. |
 | `dialog` | true, false | [https://localhost:4502/aem/assetpicker.html?dialog=true](https://localhost:4502/aem/assetpicker.html?dialog=true) | Använd de här parametrarna för att öppna resursväljaren som Granite-dialogrutan. Det här alternativet kan bara användas när du startar resursväljaren via fältet Bevilja sökväg och konfigurerar den som URL för pickerSrc. |
 | `root` | &lt;folder_path> | `https://localhost:4502/aem/assetpicker.html?assettype=images&root=/content/dam/we-retail/en/activities` | Använd det här alternativet om du vill ange rotmappen för resursväljaren. I det här fallet kan du bara välja underordnade resurser (direkt/indirekt) under rotmappen. |
-| `viewmode` | sök |  | Så här startar du resursväljaren i sökningsläge, med `assettype` och `mimetype` parametrar. |
+| `viewmode` | sök | | Så här startar du resursväljaren i sökningsläge, med `assettype` och `mimetype` parametrar. |
 | `assettype` | Bilder, dokument, multimedia, arkiv. | <ul><li>`https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=images`</li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=documents` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=multimedia` </li><li> `https://localhost:4502/aem/assetpicker.html?viewmode=search&assettype=archives` </li></ul> | Använd alternativet för att filtrera resurstyper baserat på angivet värde. |
 | `mimetype` | MIME-typ (`/jcr:content/metadata/dc:format`) av en resurs (jokertecken stöds också). | <ul><li>`https://localhost:4502/aem/assetpicker.html?mimetype=image/png`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*png`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*presentation`</li><li>`https://localhost:4502/aem/assetpicker.html?mimetype=*presentation&mimetype=*png`</li></ul> | Använd det för att filtrera resurser baserat på MIME-typ. |
 
@@ -483,7 +483,7 @@ Relatera och dela upp resurser som visas i sökresultaten. Markera resursen/resu
 | Sökfilter eller predikat är inte tillgängligt. | <ul><li>Sökfiltret är inte konfigurerat.</li><li>Den är inte tillgänglig för din inloggning.</li><li>(Sannolikheten är mindre) Sökalternativen är inte anpassade efter den distribution du använder.</li></ul> | <ul><li>Kontakta administratören för att kontrollera om sökanpassningarna är tillgängliga eller inte.</li><li>Kontakta administratören för att kontrollera om ditt konto har behörighet att använda anpassningen.</li><li>Kontakta administratören och kontrollera tillgängliga anpassningar för [!DNL Assets] distribution du använder.</li></ul> |
 | När du söker efter visuellt liknande bilder saknas en förväntad bild. | <ul><li>Bilden är inte tillgänglig i [!DNL Experience Manager].</li><li>Bilden är inte indexerad. Vanligtvis när den nyligen har överförts.</li><li>Bilden är inte smart taggad.</li></ul> | <ul><li>Lägg till bilden i [!DNL Assets].</li><li>Kontakta administratören om du vill indexera om databasen. Se även till att du använder rätt index.</li><li>Kontakta administratören om du vill tagga de relevanta resurserna på ett smart sätt.</li></ul> |
 | När du söker efter visuellt liknande bilder visas en irrelevant bild. | Visuell sökfunktion. | [!DNL Experience Manager] visar så många potentiellt relevanta tillgångar som möjligt. Mindre relevanta bilder, om sådana finns, läggs till i resultatet men med en lägre sökrankning. Kvaliteten på matchningarna och relevansen hos de sökda resurserna minskar när du bläddrar nedåt i sökresultaten. |
-| När du väljer och arbetar med sökresultat utförs inte alla sökbara resurser. | The [!UICONTROL Select All] väljer bara de första 100 sökresultaten i kortvyn och de första 200 sökresultaten i listvyn. |  |
+| När du väljer och arbetar med sökresultat utförs inte alla sökbara resurser. | The [!UICONTROL Select All] väljer bara de första 100 sökresultaten i kortvyn och de första 200 sökresultaten i listvyn. | |
 
 **Se även**
 
@@ -504,4 +504,3 @@ Relatera och dela upp resurser som visas i sökresultaten. Markera resursen/resu
 >* [[!DNL Experience Manager] guide för sökimplementering](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html)
 >* [Avancerad konfiguration som förbättrar sökresultaten](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html)
 >* [Konfigurera smart översättningssökning](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/translation/smart-translation-search-technical-video-setup.html)
-

@@ -4,9 +4,9 @@ description: Läs om AEM as a Cloud Service stöd för integrering med Adobe Cam
 feature: Administering
 role: Admin
 exl-id: 23874955-bdf3-41be-8a06-53d2afdd7f2b
-source-git-commit: 6d391ea86a950a3777311543492b5b89813ae377
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '175'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Läs om AEM as a Cloud Service stöd för integrering med Adobe Campaign.
 >
 >I det här dokumentet beskrivs hur du integrerar Adobe Campaign med AEM as a Cloud Service, den AEM molnbaserade lösningen.
 >
->Mer information om hur du integrerar Adobe Campaign med AEM 6.5, AEM på plats eller AMS-värd, finns i [se det här dokumentet.](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/campaign.html)
+>Mer information om hur du integrerar Adobe Campaign med AEM 6.5, AEM på plats eller AMS-värd, finns i [visa det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/campaign.html).
 
 ## Integrera med Adobe Campaign Classic {#acc}
 

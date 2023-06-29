@@ -2,9 +2,9 @@
 title: Skapa snabbt webbplatser och anpassa gränssnittet
 description: Läs om hur verktyget för att skapa snabbwebbplatser använder webbplatsmallar, teman och produktionsflödet för att snabbt kunna driftsätta nya webbplatser och skapa en fristående utveckling.
 exl-id: 9ec5126b-bee4-445a-a4bb-0c27c1a93d3f
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Verktyget Skapa snabbt webbplatser är ett lättanvänt verktyg som gör att adm
 
 För att göra detta använder verktyget Skapa snabbwebbplats flera kraftfulla AEM as a Cloud Service funktioner:
 
-1. **AEM webbplatsmallar** används för att definiera baswebbplatsinnehåll och -struktur samt webbplatsformat och väljs av en administratör när en ny plats skapas.
+1. **AEM webbplatsmallar** används för att definiera baswebbplatsinnehåll samt struktur och webbplatsformat och väljs av en administratör när en ny plats skapas.
 1. An **AEM** ingår i mallen och innehåller CSS-, JavaScript- och statiska resurser som definierar platsens format.
 1. The **Front-End Pipeline** kan användas för att distribuera anpassningar till webbplatstemat oberoende av serverutvecklingsarbetet.
 
 ## Skapa snabbt webbplatser {#quick-site-creation-journey}
 
-En fullständig översikt över hur verktyget Skapa snabbwebbplats fungerar och hur du snabbt kommer igång med att driftsätta och anpassa din egen webbplats med dessa kraftfulla verktyg finns i [En resa där man snabbt skapar webbplatser.](/help/journey-sites/quick-site/overview.md)
+Om du vill ha en fullständig översikt över hur verktyget Skapa snabbwebbplats fungerar och om du vill komma igång med att omedelbart distribuera och anpassa din egen webbplats med hjälp av dessa kraftfulla verktyg kan du läsa [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md).
 
 ## Ytterligare resurser {#additional-resources}
 

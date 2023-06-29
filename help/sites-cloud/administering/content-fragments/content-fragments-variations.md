@@ -4,9 +4,9 @@ description: Förstå hur variationer gör att du kan skapa innehåll för fragm
 feature: Content Fragments
 role: User
 exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2463'
 ht-degree: 7%
 
 ---
@@ -90,7 +90,7 @@ Textredigeraren i helskärmsläge innehåller:
 
 ### Åtgärder {#actions}
 
-Följande åtgärder är också tillgängliga (för alla [format](#formats)) när helskärmsredigeraren (d.v.s. text med flera rader) är öppen:
+Följande åtgärder är också tillgängliga (för alla [format](#formats)) när helskärmsredigeraren (d.v.s. flerradig text) är öppen:
 
 * Välj [format](#formats) ([RTF](#rich-text), [Oformaterad text,](#plain-text) [Markering](#markdown))
 
@@ -198,7 +198,7 @@ Sedan kan du skapa ett nytt fragment genom att:
 1. Markera **Skapa**.
 1. Äntligen:
    1. **Klar** återgår (till det ursprungliga fragmentet) och refererar till det nya fragmentet.
-   1. **Öppna** refererar till det nya fragmentet samt öppnar det nya fragmentet, för redigering, på en ny flik i webbläsaren.
+   1. **Öppna** refererar till det nya fragmentet och öppnar det nya fragmentet, för redigering, på en ny flik i webbläsaren.
 
 ### Visa nyckelstatistik {#viewing-key-statistics}
 

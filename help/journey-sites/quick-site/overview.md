@@ -2,9 +2,9 @@
 title: AEM för att skapa webbplatser snabbt
 description: Börja här för en guidad resa med det lättanvända AEM snabbplatsverktyget som effektiviserar utvecklingen av AEM sajt och snabbt anpassar sajten utan någon AEM backend-kunskap.
 exl-id: b8218232-0298-4b16-9dab-fa59be592a24
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1035'
+source-wordcount: '1034'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Den här dokumentationsresan tar dig igenom alla funktioner i videon steg för s
 
 [En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
-Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe-konsulter och återkoppling från kundprojekt.
+Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
 Om du vill veta hur Adobe rekommenderar hur man löser webbplatsaffärsärenden med AEM, är AEM Sites Journeys där man ska börja.
 
@@ -65,7 +65,7 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 
 Du är nu redo att komma igång med din Adobe-resa för att skapa snabbwebbplatser.
 
-* Om du är administratör för AEM eller Cloud Manager, eller om du har både avancerade utvecklings- och administratörsroller, eller om du bara vill förstå hela processen i AEM, ska du börja i början av resan med [Förstå Cloud Manager](cloud-manager.md) enligt nedan.
+* Om du är administratör för AEM eller Cloud Manager, eller om du har både avancerade utvecklings- och administratörsroller, eller om du bara vill förstå hela processen i AEM, börjar du i början av resan med [Förstå Cloud Manager](cloud-manager.md) enligt nedan.
 * Om du bara ansvarar för frontend-utvecklingen och kommer att interagera med administratörerna för AEM och Cloud Manager kan du hoppa direkt till [Hämta åtkomstinformation för Git-databasen](retrieve-access.md) för att få åtkomst till AEM Git-databasen och börja anpassa.
 * Om du redan är insatt i att AEM Sites och Cloud Manager fungerar ihop och vill börja direkt med konfigurationen kan du [gå direkt till att skapa en ny plats från en mall.](create-site.md)
 

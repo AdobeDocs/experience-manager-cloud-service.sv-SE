@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: eef90c6a-b354-4342-8b97-21d067ae2979
-source-git-commit: 948b671965cf438e2c93dea0371331cb3a02b6ca
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1328'
 ht-degree: 18%
 
 ---
@@ -34,13 +34,13 @@ Redigera följande egenskaper för **[!UICONTROL Description]** komponent:
    * **[!UICONTROL Field Label]** - Visningsnamnet för metadataegenskapen. Det är bara till för användarreferensen.
    * **[!UICONTROL Map to Property]** - Värdet för den här egenskapen anger den relativa sökvägen/namnet till resursnoden där den sparas i databasen. Värdet ska alltid börja med `./` eftersom det anger att sökvägen finns under objektets nod.
 
-      Värdet som du anger för **[!UICONTROL Map to property]** lagras som en egenskap under objektets metadatanod. Om du till exempel anger . `/jcr:content/metadata/dc:desc` som namnet på **[!UICONTROL Map to property]**, [!DNL Adobe Experience Manager Assets] lagrar värdet `dc:desc` på resursens metadatanod.
+     Värdet som du anger för **[!UICONTROL Map to property]** lagras som en egenskap under objektets metadatanod. Om du till exempel anger . `/jcr:content/metadata/dc:desc` som namnet på **[!UICONTROL Map to property]**, [!DNL Adobe Experience Manager Assets] lagrar värdet `dc:desc` på resursens metadatanod.
 
    * **[!UICONTROL Default Value]** - Använd den här egenskapen om du vill lägga till ett standardvärde för metadatakomponenten. Om du till exempel anger &quot;Min beskrivning&quot; tilldelas det här värdet till egenskapen `dc:desc` på resursens metadatanod.
 
-      >[!NOTE]
-      >
-      >Lägga till ett standardvärde i en ny metadataegenskap (som inte finns i `/jcr:content/metadata` nod) visar inte egenskapen och dess värde på objektets egenskapssida som standard. Så här visar du den nya egenskapen på [!UICONTROL Properties] ändrar du motsvarande schemaformulär.
+     >[!NOTE]
+     >
+     >Lägga till ett standardvärde i en ny metadataegenskap (som inte finns på `/jcr:content/metadata` nod) visar inte egenskapen och dess värde på objektets egenskapssida som standard. Så här visar du den nya egenskapen på [!UICONTROL Properties] ändrar du motsvarande schemaformulär.
 
 1. (Valfritt) Lägg till fler komponenter i Redigera formulär på fliken **[!UICONTROL Build Form]** och konfigurera deras egenskaper på fliken **[!UICONTROL Settings]**. Följande egenskaper är tillgängliga på fliken **[!UICONTROL Build Form]**:
 

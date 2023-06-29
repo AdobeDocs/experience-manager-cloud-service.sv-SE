@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2376'
+source-wordcount: '2375'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Utveckling</td>
 FELSÖKNING</td>
 <td>
 Beskriver vad som händer i programmet.<br>
-När DEBUG-loggning är aktiv loggas programsatser som ger en tydlig bild av vilka aktiviteter som utförs samt alla nyckelparametrar som påverkar bearbetningen.</td>
+När DEBUG-loggning är aktiv, loggas programsatser som ger en tydlig bild av vilka aktiviteter som utförs och alla nyckelparametrar som påverkar bearbetningen.</td>
 <td>
 <ul>
 <li> Lokal utveckling</li>

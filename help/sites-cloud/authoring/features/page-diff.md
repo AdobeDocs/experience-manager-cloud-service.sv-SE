@@ -2,9 +2,9 @@
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 exl-id: 6e5c7f14-c980-48e3-8bdd-a7ec10a9e680
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -98,4 +98,4 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 >[!NOTE]
 >
->Mer information om hur sidskillnader fungerar samt om begränsningar som kan påverka sidskillnader finns i [dokumentation för utvecklare](/help/implementing/developing/introduction/page-diff.md) av den här funktionen.
+>Mer information om funktionen för sidskillnader och begränsningar som kan påverka sidskillnader finns i [dokumentation för utvecklare](/help/implementing/developing/introduction/page-diff.md) av den här funktionen.

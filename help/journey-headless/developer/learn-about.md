@@ -2,9 +2,9 @@
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
 exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1621'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ Headless öppnar upp en värld av flexibilitet för att leverera digitala upplev
 
 Att ha många olika kanaler kan innebära att de har sina egna presentationssystem. Även om de alla använder samma innehåll via samma API:er kan upplevelsen vara annorlunda tack vare de olika presentationerna. Man måste bekymra sig om och se till att kundupplevelsen är enhetlig.
 
-Genom att implementera noggranna designsystem, dela mönsterbibliotek och dra nytta av återanvändbara designkomponenter liksom etablerade, öppna ramverk på klientsidan kan enhetliga upplevelser säkerställas, men detta måste planeras.
+Genom att implementera noggranna designsystem, dela mönsterbibliotek och dra nytta av återanvändbara designkomponenter och etablerade, öppna ramverk på klientsidan kan enhetliga upplevelser säkerställas, men detta måste planeras.
 
 ## Framtiden är Headless och framtiden är nu {#future}
 

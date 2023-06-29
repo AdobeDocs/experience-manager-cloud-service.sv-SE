@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ I de föregående faserna av resan:
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du utför migreringen till AEM as a Cloud Service när du känner till de tidigare stegen under resan. Du får lära dig att utföra den inledande produktionsmigreringen samt de bästa arbetssätten att följa när du migrerar till AEM as a Cloud Service.
+Det här dokumentet hjälper dig att förstå hur du utför migreringen till AEM as a Cloud Service när du känner till de tidigare stegen under resan. Du lär dig hur du utför den inledande produktionsmigreringen och de bästa arbetssätten att följa när du migrerar till AEM as a Cloud Service.
 
 ## Inledande produktionsmigrering {#initial-migration}
 
@@ -120,7 +120,7 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
    * [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing)
    * [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
 * Migrera innehåll till produktion och se till att det finns en relevant delmängd tillgänglig på testningen.
-   * Observera att de bästa sätten för DevOps för AEM innebär att koden går från utveckling till produktionsmiljö medan innehållet går ned från produktionsmiljöer.
+   * DevOps bästa praxis för AEM innebär att koden går från utveckling till produktionsmiljö medan innehållet rör sig från produktionsmiljöer.
 * Schemalägg en frysperiod för kod och innehåll.
    * Se även avsnittet [Tidslinjer för Kod- och Content Freeze för migrering](#code-content-freeze)
 * Utför den slutliga innehållsuppsättningen.

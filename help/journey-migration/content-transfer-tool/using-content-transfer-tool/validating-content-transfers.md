@@ -2,9 +2,9 @@
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1055'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ När migreringsvalidering är aktiverat i AEM källmiljö påbörjar du en extra
 
 If **Skriv över mellanlagringsbehållaren under extraheringen** är aktiverat loggas alla noder som är inblandade i extraheringen till extraheringssökvägssammanfattningen. När den här inställningen används är det viktigt att aktivera **Rensa befintligt innehåll i molninstansen före intag** Inställningen under intaget, annars kan det verka som att det saknas noder i matsmältningen. Detta är de noder som redan finns på målet från tidigare inmatningar.
 
-En illustration av detta finns i exemplen nedan:
+En grafisk illustration av detta finns i följande exempel:
 
 ### Exempel 1 {#example-1}
 
@@ -115,7 +115,7 @@ EXTRACTION: Number of nodes extracted: 4635
 INGESTION: Number of nodes ingested: 0
 ----------------------------------------------------------
 Validation failed. However, the following nodes may already be present in the target environment.
-Please refer to our Migration Validation FAQ (https://www.adobe.com/go/aem_cloud_ctt_validation_en) or open a ticket with Customer Care.
+See our Migration Validation FAQ (https://www.adobe.com/go/aem_cloud_ctt_validation_en) or open a ticket with Customer Care.
 There are 4635 entries present in the extraction digest that are missing from the ingestion digest.
 /content/dam/bruce
 /content/dam/bruce-assets

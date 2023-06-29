@@ -2,9 +2,9 @@
 title: Få åtkomst till ditt innehåll via AEM-API:er
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du använder GraphQL-frågor för att komma åt ditt innehåll i Content Fragments.
 exl-id: 1adecc69-5f92-4007-8a2a-65bf1e960645
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 ## Så du vill komma åt ditt innehåll? {#so-youd-like-to-access-your-content}
 
-Så..har du allt det här innehållet, har en struktur (i innehållsfragment) och väntar bara på att mata in din nya app. Frågan är hur man får dit den?
+Så..har du fått allt det här innehållet, är strukturerat (i innehållsfragment) och bara väntar på att mata din nya app. Frågan är hur man får dit den?
 
 Vad du behöver är ett sätt att rikta specifikt innehåll, välja vad du behöver och returnera det till appen för vidare bearbetning.
 

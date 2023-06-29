@@ -11,9 +11,9 @@ level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
 exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
-source-git-commit: 73fe6ce5bbdf0ad437ae4b47b892ad05e016ab68
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -382,7 +382,7 @@ Om du vill lagra händelsedata måste du skapa en datauppsättning som överenss
 
 - På den nya sidan __sök och markera__ schemat som du skapade i föregående steg och klicka på __Nästa__ -knappen.
 
-   ![AEP Skapa datauppsättningar Välj schema](../assets/aep-integration/AEP-Datasets-Select-Schema.png)
+  ![AEP Skapa datauppsättningar Välj schema](../assets/aep-integration/AEP-Datasets-Select-Schema.png)
 
 1. Namnge datauppsättningen med __Konfigurera datauppsättning > Namn__ och klicka på __Slutför__ -knappen.
 

@@ -2,9 +2,9 @@
 title: Registrering, inloggning och användarprofil
 description: Läs mer om registrering, inloggning, användardata och gruppsynkronisering för AEM as a Cloud Service
 exl-id: a991e710-a974-419f-8709-ad86c333dbf8
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ Användarprofilinformation kan skrivas och läsas på två sätt:
 
 Slutanvändardata kan skickas till tredjepartsleverantörer som CRM och hämtas via API:er när användaren loggar in på AEM och sparas (eller uppdateras) på AEM profilnod, och användas av AEM efter behov.
 
-Åtkomst i realtid till tjänster från tredje part för att hämta profilattribut är möjlig, men det är viktigt att se till att detta inte i väsentlig grad påverkar behandlingen av begäranden i AEM.
+Det är möjligt att få åtkomst till tredjepartstjänster i realtid för att hämta profilattribut, men det är viktigt att se till att detta inte i väsentlig grad påverkar behandlingen av förfrågningar i AEM.
 
 ## Behörigheter (stängda användargrupper) {#permissions-closed-user-groups}
 

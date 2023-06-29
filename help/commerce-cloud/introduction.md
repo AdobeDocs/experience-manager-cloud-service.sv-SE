@@ -3,9 +3,9 @@ title: Introduktion och översikt
 description: Introduktion och översikt av innehåll och handel. Experience Manager Commerce Integration Framework (CIF) rekommenderas av Adobe för att integrera och utöka handelstjänster från Adobe Commerce och andra tredjepartslösningar med Experience Cloud.
 thumbnail: introducing-aem-commerce.jpg
 exl-id: 29410f76-a63f-4b0a-b817-2ed724ad1a3c
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och u
 
 Med allt högre förväntningar på onlinehandelsupplevelser har varumärkena press på sig att leverera differentierade upplevelser och mer innehåll snabbare. Att implementera en plattform för innehållshantering kräver ofta stora tids- och budgetinvesteringar i utveckling av grundläggande element, som anpassade komponenter och redigeringsverktyg, och medför kostnader för underhåll och uppgraderingar. Experience Manager Sites erbjuder Content and Commerce som en tilläggsmodul för Experience Manager as a Cloud Service som tillhandahåller körklara kärnkomponenter för e-handel, redigeringsverktyg och en referensbutik som snabbar upp idriftsättningen, möjliggör smidigt samarbete mellan team och driver konverteringsprocessen framåt.
 
-Varumärken kan integrera Experience Manager med Adobe Commerce, som ingår i Adobe Experience Cloud, samt valfri e-handelsmotor. Med Experience Manager Content and Commerce kan varumärken
+Varumärken kan integrera Experience Manager med Adobe Commerce, en del av Adobe Experience Cloud och valfri e-handelsmotor. Med Experience Manager Content and Commerce kan varumärken
 
 * Skala och förnya snabbare
 * Skräddarsy upplevelser och öka konverteringsgraden
@@ -79,6 +79,6 @@ CIF stöder kunder med standardiserade integreringsmönster baserade på bästa 
 
 ## Resa {#journey}
 
-Om du följer en Commerce Journey, vänligen gå till nästa steg:
+Om du följer en Commerce Journey, gå till nästa steg:
 
 * The [AEM Innehållsförfattarens resa](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/getting-started.md)

@@ -2,9 +2,9 @@
 title: Installera och konfigurera spelare på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du installerar och konfigurerar spelare på skärmar as a Cloud Service.
 exl-id: a022738a-c543-4629-a244-f70fa294fe7f
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -88,4 +88,4 @@ Några begränsningar för grundläggande uppspelningsövervakning visas nedan:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har installerat och konfigurerat spelaren till molnläge kan du fortsätta den as a Cloud Service vägen för skärmar. Granska dokumentet [Registrerar spelare på skärmar as a Cloud Service](/help/screens-cloud/managing-players-registration/registering-players-screens-cloud.md) från Screens Services Provider.
+Nu när du har installerat och konfigurerat spelaren till molnläge kan du fortsätta den as a Cloud Service vägen för skärmar. Se [Registrerar spelare på skärmar as a Cloud Service](/help/screens-cloud/managing-players-registration/registering-players-screens-cloud.md) från Screens Services Provider.

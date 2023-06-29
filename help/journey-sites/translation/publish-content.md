@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 081167dd-da4c-48d2-a6d3-f95e873be3e9
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Du ser att ett nytt jobbkort har lagts till i projektet. I det här exemplet har
 
 ![Ytterligare översättningsjobb har lagts till](assets/additional-translation-job.png)
 
-Du kan märka att statistiken på det nya kortet är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som behöver översättas. Detta inkluderar omöversättning av uppdaterat innehåll samt förstagångsöversättning av nytt innehåll.
+Du kan märka att statistiken på det nya kortet är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som behöver översättas. Detta inkluderar omöversättning av uppdaterat innehåll och förstagångsöversättning av nytt innehåll.
 
 Från och med nu [starta och hantera översättningsjobbet på samma sätt som du gjorde originalet.](translate-content.md#using-translation-project)
 

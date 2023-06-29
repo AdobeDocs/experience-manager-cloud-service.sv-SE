@@ -2,9 +2,9 @@
 title: Din inkorg
 description: Hantera dina uppgifter med inkorgen
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '906'
 ht-degree: 15%
 
 ---
@@ -25,7 +25,7 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 
 >[!NOTE]
 >
->Mer information om objekttyperna finns även i:
+>Mer information om objekttyperna finns i:
 >
 >* [Projekt](/help/sites-cloud/authoring/projects/overview.md)
 >* [Projekt - arbeta med uppgifter](/help/sites-cloud/authoring/projects/tasks.md)
@@ -102,7 +102,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
   ![Visningsinställningar för inkorgslista](/help/sites-cloud/authoring/assets/inbox-list-settings.png)
 
-  Du kan även delegera din kalender till andra användare samt begära delegering från andra användare och hantera dina delegeringar.
+  Du kan även delegera din kalender till andra användare och begära delegering från andra användare och hantera dina delegeringar.
 
   ![Visningsdelegeringsinställningar för inkorgslista](/help/sites-cloud/authoring/assets/inbox-delegation.png)
 
@@ -132,7 +132,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    >[!NOTE]
    >
-   >Mer information finns i:
+   >Mer information finns i följande:
    >
    >* Arbetsflödesobjekt - [Delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
 

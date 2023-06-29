@@ -2,7 +2,7 @@
 title: Bygga in märkord i AEM
 description: Arbeta programmatiskt med taggar eller utöka taggar i ett anpassat AEM
 exl-id: a106dce1-5d51-406a-a563-4dea83987343
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -22,7 +22,7 @@ som interagerar med
 Mer information om taggning:
 
 * Se [Använda taggar](/help/sites-cloud/authoring/features/tags.md) om du vill ha information om hur du taggar innehåll som innehållsförfattare.
-* Se Administrera taggar för en administratörs perspektiv om hur du skapar och hanterar taggar, samt vilka innehållstaggar som har tillämpats.
+* Se Administrera taggar för administratörens perspektiv om hur du skapar och hanterar taggar, och i vilka innehållstaggar har tillämpats.
 
 ## Översikt över taggnings-API:t {#overview-of-the-tagging-api}
 
@@ -138,7 +138,7 @@ Sökningen efter taggar och tagglistan fungerar enligt följande:
 
 En tagg `title` kan definieras på olika språk. Sedan läggs en språkkänslig egenskap till i taggnoden. Den här egenskapen har formatet `jcr:title.<locale>`, till exempel `jcr:title.fr` för den franska översättningen. `<locale>` måste vara en ISO-språksträng med gemener och använda understreck (`_`) i stället för bindestreck/streck (`-`), till exempel: `de_ch`.
 
-Till exempel när **Djur** -taggen läggs till i **Produkter** sida, värdet `stockphotography:animals` läggs till i egenskapen `cq:tags` av noden `/content/wknd/en/products/jcr:content`. Översättningen refereras från taggnoden.
+När **Djur** -taggen läggs till i **Produkter** sida, värdet `stockphotography:animals` läggs till i egenskapen `cq:tags` av noden `/content/wknd/en/products/jcr:content`. Översättningen refereras från taggnoden.
 
 API:t på serversidan har lokaliserats `title`-relaterade metoder:
 
@@ -168,4 +168,4 @@ Finska är nu tillgängligt i taggdialogrutan för sidegenskaperna och i **Redig
 
 >[!NOTE]
 >
->Det nya språket måste vara ett av de AEM identifierade språken, dvs. det måste vara tillgängligt som en nod nedan `/libs/wcm/core/resources/languages`.
+>Det nya språket måste vara ett av de AEM identifierade språken, det vill säga det måste vara tillgängligt som en nod nedan `/libs/wcm/core/resources/languages`.

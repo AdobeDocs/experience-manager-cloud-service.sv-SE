@@ -2,9 +2,9 @@
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '13864'
+source-wordcount: '13862'
 ht-degree: 3%
 
 ---
@@ -550,7 +550,7 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 
 >[!NOTE]
 >
-Tänk på att teckensnitt kan skilja sig åt när det gäller hur de återger motsvarande PT/PX/EM-storlek.
+Kom ihåg att teckensnitt kan skilja sig åt när det gäller hur de återger motsvarande PT/PX/EM-storlek.
 >
 Använd god vana vid och felen när det gäller läsbarhet och användbarhet när du väljer lämpliga teckensnitt och storlek för webbinnehåll.
 

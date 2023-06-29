@@ -2,9 +2,9 @@
 title: Enhetlig upplevelse för verktyg för kodkorrigering
 description: Enhetlig upplevelse för verktyg för kodkorrigering
 exl-id: daee0e2d-1e2b-41a3-acab-fc59142d0e05
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ The `aio-cli-plugin-aem-cloud-service-migration` plugin-programmet består av tv
 
 * **Underliggande Code Refactoring Tool Suite**
 
-   Kodomfaktoriseringsverktygen utför sina funktioner genom att:
+  Kodomfaktoriseringsverktygen utför sina funktioner genom att:
 
    * Skanna in respektive avsnitt i kundens kod och ändra koden (baserat på bästa praxis för kodimplementering) för att skapa utdata som sedan kan valideras och distribueras.
 

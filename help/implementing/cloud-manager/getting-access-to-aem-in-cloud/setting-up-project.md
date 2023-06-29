@@ -2,7 +2,7 @@
 title: Projektinställningar
 description: Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skapar ditt eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '1404'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur AEM byggs med Maven och de standarder du måste följa när du skap
 För att kunna bygga och distribuera med Cloud Manager måste AEM följa följande riktlinjer:
 
 * Projekt måste byggas med [Apache Maven.](https://maven.apache.org)
-* Det måste finnas en `pom.xml` -filen i Git-databasens rot. Detta `pom.xml` filen kan referera till så många undermoduler (som i sin tur kan ha andra undermoduler osv.) vid behov.
+* Det måste finnas en `pom.xml` -filen i Git-databasens rot. Detta `pom.xml` filen kan referera till så många undermoduler (som i sin tur kan ha andra undermoduler och så vidare) som det behövs.
 * Du kan lägga till referenser till ytterligare Maven-artefaktdatabaser i dina `pom.xml` filer.
    * Åtkomst till [lösenordsskyddade artefaktarkiv](#password-protected-maven-repositories) stöds vid konfigurering. Åtkomst till nätverksskyddade artefaktdatabaser stöds dock inte.
 * Distribuerbara innehållspaket identifieras genom sökning efter innehållspaket `.zip` filer som finns i en katalog med namnet `target`.
@@ -32,7 +32,7 @@ För att kunna bygga och distribuera med Cloud Manager måste AEM följa följan
 
 I vissa begränsade fall kan du behöva ändra din byggprocess något när du kör i Cloud Manager i stället för när du kör på arbetsstationer för utvecklare. I dessa fall [Maven profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) kan användas för att definiera hur bygget ska vara olika i olika miljöer, inklusive Cloud Manager.
 
-Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att leta efter `CM_BUILD` [systemvariabel.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager-byggmiljön göras genom att leta efter denna variabel som saknas.
+Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att leta efter `CM_BUILD` [miljövariabel](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager-byggmiljön göras genom att leta efter denna variabel som saknas.
 
 Om du till exempel bara vill visa ett enkelt meddelande när bygget körs i Cloud Manager gör du det här.
 
@@ -110,11 +110,11 @@ Och om du bara vill få ut ett enkelt meddelande när bygget körs utanför Clou
 
 >[!NOTE]
 >
->Artefakter från en lösenordsskyddad Maven-databas bör endast användas med försiktighet eftersom kod som distribueras via den här mekanismen för närvarande inte kan köras i alla [regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) implementeras i Cloud Managers kvalitetsportar. Därför bör det endast användas i sällsynta fall och för kod som inte är knuten till AEM. Du bör också distribuera Java-källorna samt hela projektets källkod tillsammans med binärfilen.
+>Artefakter från en lösenordsskyddad Maven-databas bör endast användas med försiktighet eftersom kod som distribueras via den här mekanismen för närvarande inte kan köras i alla [regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) implementeras i Cloud Managers kvalitetsportar. Därför bör det endast användas i sällsynta fall och för kod som inte är knuten till AEM. Du bör också distribuera Java-källorna och hela projektets källkod tillsammans med binärfilen.
 
 Så här använder du en lösenordsskyddad Maven-databas i Cloud Manager:
 
-1. Ange lösenordet (och eventuellt användarnamnet) som en hemlighet [pipeline-variabel.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md)
+1. Ange lösenordet (och eventuellt användarnamnet) som en hemlighet [pipeline-variabel](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md).
 1. Referera sedan hemligheten inuti en fil med namnet `.cloudmanager/maven/settings.xml` i Git-databasen, som följer [Maven Settings-fil](https://maven.apache.org/settings.html) schema.
 
 När Cloud Manager-byggprocessen startar:

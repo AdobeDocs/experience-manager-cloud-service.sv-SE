@@ -2,9 +2,9 @@
 title: Förberedelse för introduktion
 description: Innan introduktionsprocessen börjar finns det ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet.
 exl-id: 86139b1a-c22a-4716-a0f9-cf142cbc6c53
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -88,4 +88,4 @@ Nu bör du ha en grundläggande förståelse för:
 * Hur det avtalet påverkar introduktionsprocessen.
 * Hur du förbereder dig för ditt introduktionssamtal.
 
-Nu när du är bekant med de här förberedelsestegen är du nästan redo att logga in på systemet själv. Men först behöver du en kort översikt över hur AEM as a Cloud Service är strukturerad ur en systemadministratörs synvinkel och lär dig en del viktiga terminologi. Fortsätt till nästa del av resan, [AEM as a Cloud Service Terminologi.](terminology.md)
+Nu när du är bekant med de här förberedelsestegen är du nästan redo att logga in på systemet själv. Men först behöver du en kort översikt över hur AEM as a Cloud Service är strukturerad ur en systemadministratörs synvinkel och lär dig en del viktiga terminologi. Fortsätta till nästa del av resan [AEM as a Cloud Service terminologi](terminology.md).

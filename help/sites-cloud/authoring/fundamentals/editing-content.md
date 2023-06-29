@@ -2,10 +2,10 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '3002'
-ht-degree: 5%
+source-wordcount: '2990'
+ht-degree: 4%
 
 ---
 
@@ -291,7 +291,7 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
 * Bildkomponent - helskärm
 
-  [Om du aktiverar helskärmsläget](#edit-content-full-screen-mode) för bildkomponenten får du mer plats att redigera bilden och dessutom visas extra redigeringsalternativ som **Startkarta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
+  [Gå in i helskärmsläge](#edit-content-full-screen-mode) för bildkomponenten ger mer utrymme att redigera bilden och visar extra redigeringsalternativ som **Starta karta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
 
   ![Bildkomponentens helskärmsläge](/help/sites-cloud/authoring/assets/editing-image-component-full-screen.png)
 
@@ -358,7 +358,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
 >[!TIP]
 >
->Layoutåtgärden är begränsad i omfång till den markerade komponenten. Om du till exempel redigerar layouten för en komponent och sedan klickar på en annan komponent, visas standardverktygsfältet för redigering (inte layoutverktygsfältet) för den nyligen markerade komponenten, storleksändringshandtagen samt emulatorns verktygsfält.
+>Layoutåtgärden är begränsad i omfång till den markerade komponenten. Om du till exempel redigerar layouten för en komponent och sedan klickar på en annan komponent, visas standardverktygsfältet för redigering (inte verktygsfältet för layout) för den nyligen markerade komponenten och storleksändringshandtagen och emulatorns verktygsfält försvinner.
 >
 >Om du behöver redigera sidans övergripande layout, vilket påverkar flera komponenter, växlar du till [layoutläge](/help/sites-cloud/authoring/features/responsive-layout.md).
 
@@ -469,7 +469,7 @@ När konsolvyn är låst uppdateras informationen och när du redigerar en låss
 >
 >Sidorna kan inte låsas upp genom att den användare som låste sidan personifieras.
 >
->Om användaren som låste sidan inte kan låsa upp sidan kan du kontakta kundsupport för att utvärdera alternativen för att ta bort låset.
+>Om användaren som låste sidan inte är tillgänglig för att låsa upp sidan, kontaktar du kundsupport för att utvärdera alternativen för att ta bort låset.
 
 ## Låsa upp en sida {#unlocking-a-page}
 
@@ -485,7 +485,7 @@ På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen p�
 >
 >Sidorna kan inte låsas upp genom att den användare som låste sidan personifieras.
 >
->Om användaren som låste sidan inte kan låsa upp sidan kan du kontakta kundsupport för att utvärdera alternativen för att ta bort låset.
+>Om användaren som låste sidan inte är tillgänglig för att låsa upp sidan, kontaktar du kundsupport för att utvärdera alternativen för att ta bort låset.
 
 <!--
 >[!CAUTION]
@@ -516,7 +516,7 @@ Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i ver
 
 ## Ångra och göra om sidredigeringar - The Theory {#undoing-and-redoing-page-edits-the-theory}
 
-AEM lagrar en historik över åtgärder som du utför och i vilken ordning du utförde dem, så att du kan ångra flera åtgärder i den ordning som du utförde dem samt göra om dem för att återanvända en eller flera av åtgärderna om det behövs.
+AEM lagrar en historik över åtgärder som du utför och i vilken ordning du utförde dem, så att du kan ångra flera åtgärder i den ordning som du utförde dem och göra om dem för att återanvända en eller flera av åtgärderna om det behövs.
 
 Om ett element på innehållssidan är markerat (till exempel en textkomponent) gäller kommandot ångra och gör om det markerade objektet.
 

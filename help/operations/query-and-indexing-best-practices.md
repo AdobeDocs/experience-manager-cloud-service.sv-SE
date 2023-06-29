@@ -3,9 +3,9 @@ title: Bästa praxis för frågor och indexering
 description: Lär dig hur du optimerar index och frågor baserat på Adobe riktlinjer för bästa praxis.
 topic-tags: best-practices
 exl-id: 37eae99d-542d-4580-b93f-f454008880b1
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Se avsnittet [Frågor med stora resultat](#queries-with-large-result-sets) av de
 
 För att skapa effektiva JCR-frågor och indexdefinitioner har [JCR Query Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html#jcrquerycheatsheet) finns att hämta och använda som referens under utvecklingen.
 
-Den innehåller exempelfrågor för QueryBuilder, XPath och SQL-2, som omfattar flera scenarier som beter sig på olika sätt när det gäller frågeprestanda. Här finns också rekommendationer för hur du skapar eller anpassar ekindexeringar. Innehållet i detta värmeblad gäller både AEM as a Cloud Service och AEM 6.5.
+Den innehåller exempelfrågor för QueryBuilder, XPath och SQL-2, som omfattar flera scenarier som beter sig på olika sätt när det gäller frågeprestanda. Här finns också rekommendationer för hur du skapar eller anpassar ekindexeringar. Innehållet i detta värmeblad gäller AEM as a Cloud Service och AEM 6.5.
 
 ## Frågor med stora resultatuppsättningar {#queries-with-large-result-sets}
 

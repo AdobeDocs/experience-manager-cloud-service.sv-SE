@@ -2,9 +2,9 @@
 title: Lägga till skärmar i ett befintligt program i Cloud Manager
 description: På den här sidan beskrivs hur du lägger till ett skärmstillägg i ett befintligt program i Cloud Manager för skärmar as a Cloud Service.
 exl-id: 0f9a2c21-2d45-470e-a096-443741f9f2ab
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---

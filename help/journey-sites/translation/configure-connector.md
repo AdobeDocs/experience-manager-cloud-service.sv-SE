@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: d1a3eb42-e9e4-4118-9ff7-7aab5519cf0d
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Så här skapar du en ny översättningskonfiguration:
 1. Klicka eller tryck **Skapa** i verktygsfältet för att skapa den nya konfigurationen.
 1. Ange följande information i fälten och klicka eller tryck sedan på **Skapa**.
    1. Välj **Konfigurationstyp** i listrutan. Välj **Översättningsintegrering** från listan.
-   1. Ange **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Services** Console samt i listrutor för sidegenskaper.
+   1. Ange **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Services** console och in page property drop-down lists.
    1. Du kan även skriva en **Namn** som ska användas för den databasnod som lagrar konfigurationen.
 
    ![Skapa översättningskonfiguration](assets/create-translation-configuration.png)

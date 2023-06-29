@@ -2,9 +2,9 @@
 title: Konfigurera segmentering med ContextHub
 description: Lär dig hur du konfigurerar segmentering med ContextHub.
 exl-id: fbc38611-dbee-426e-b823-df64b6730c45
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ AEM gör att ni enkelt kan personalisera användarnas upplevelser. Du kan även 
 
 ## Åtkomst till segment {#accessing-segments}
 
-The [Målgrupper](audiences.md) Console används för att hantera segment för ContextHub samt målgrupper för ditt Adobe Target-konto. I den här dokumentationen beskrivs hur du hanterar segment för ContextHub.
+The [Målgrupper](audiences.md) konsolen används för att hantera segment för ContextHub och målgrupper för ditt Adobe Target-konto. I den här dokumentationen beskrivs hur du hanterar segment för ContextHub.
 
 Om du vill komma åt dina segment väljer du **Navigering > Personalisering > Publiker**. Välj din konfiguration (till exempel WKND-plats) för att visa dina segment:
 
@@ -65,7 +65,7 @@ Följande segmentjämförelser är tillgängliga när du vill utvärdera segment
 
 >[!NOTE]
 >
->Om datatypen för jämförelsen inte är inställd (d.v.s. inställd på automatisk identifiering) vid jämförelse av värden, kommer segmenteringsmotorn för ContextHub helt enkelt att jämföra värdena som javascript skulle göra. Den konverterar inte värden till de förväntade typerna, vilket kan leda till missvisande resultat. Till exempel:
+>Om datatypen för jämförelsen inte är inställd (d.v.s. inställd på automatisk identifiering), kommer ContextHubs segmenteringsmotor att jämföra värdena som javascript skulle göra. Den konverterar inte värden till de förväntade typerna, vilket kan leda till missvisande resultat. Till exempel:
 >
 >`null < 30 // will return true`
 >
@@ -92,7 +92,7 @@ Så här definierar du det nya segmentet:
 
    ![Lägg till segment](../assets/contexthub-create-segment.png)
 
-1. I **Nytt ContextHub-segment**, ange en titel för segmentet samt ett ökningsvärde om det behövs och tryck eller klicka sedan på **Skapa**.
+1. I **Nytt ContextHub-segment**, ange en titel för segmentet och ett ökningsvärde om det behövs och tryck eller klicka sedan på **Skapa**.
 
    ![Nytt segment](../assets/contexthub-new-segment.png)
 
@@ -200,7 +200,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 1. Ange en **Titel** och **Namn** för din mapp.
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
-      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md).
       * Den kan vid behov justeras.
 
    ![Skapa mapp](../assets/contexthub-create-folder.png)
@@ -279,7 +279,7 @@ Eller om den inte är löst:
 
 Sådana tester kan även utföras på innehållssidor och i kombination med riktat innehåll och relaterat innehåll **Verksamhet** och **Erfarenheter**.
 
-Om du har konfigurerat en aktivitet och upplevelse kan du enkelt testa ditt segment med aktiviteten. Mer information om hur du konfigurerar en aktivitet finns i [dokumentation om framtagning av riktat innehåll](targeted-content.md).
+Om du har konfigurerat en aktivitet och upplevelse kan du enkelt testa ditt segment med aktiviteten. Mer information om hur du ställer in en aktivitet finns i [dokumentation om framtagning av riktat innehåll](targeted-content.md).
 
 1. I redigeringsläget för en sida där du har konfigurerat riktat innehåll kan du se att innehållet har angetts som mål via en pilikon i innehållet.
 1. Växla till förhandsgranskningsläget och använd kontextnavet för att växla till en profil som inte matchar den segmentering som har konfigurerats för upplevelsen.

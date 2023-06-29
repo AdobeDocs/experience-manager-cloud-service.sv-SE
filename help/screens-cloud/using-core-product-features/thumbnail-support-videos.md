@@ -3,7 +3,7 @@ title: Stöd för miniatyrbilder för videoklipp på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du lägger till stöd för miniatyrbilder för videoklipp på skärmar as a Cloud Service.
 index: true
 exl-id: 7b15d7cc-f089-4008-9039-5f48343a0f20
-source-git-commit: f5af37bf39ecd5a964a8c94a731111c561c2934e
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
@@ -43,25 +43,25 @@ Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 1. Markera kanalen. Klicka på i åtgärdsfältet **Redigera** för att öppna redigeraren.
 
 
-   ![Redigera-knappen i åtgärdsfältet.](/help/screens-cloud/using-core-product-features/assets/thumbnail-1.png)
+   ![Knappen Redigera i åtgärdsfältet](/help/screens-cloud/using-core-product-features/assets/thumbnail-1.png).
 
 1. Lägg till eller redigera en befintlig videokomponent enligt bilden nedan.
 
-   ![Markerad bild av en videoresurs.](/help/screens-cloud/using-core-product-features/assets/thumbnail-2.png)
+   ![Markerad bild av en videoresurs](/help/screens-cloud/using-core-product-features/assets/thumbnail-2.png).
 
 1. Lägg till eller redigera en befintlig videokomponent enligt bilden nedan.
 
 1. Markera videon och klicka på knappen Konfigurera (*wrench*) för att öppna videoegenskaperna.
 
-   ![Markerad videomateribild med pilen pekande på ikonen Konfigurera, som visas som en skiftnyckel. i verktygsfältet.](/help/screens-cloud/using-core-product-features/assets/thumbnail-3.png)
+   ![Markerad videomateribild med pilen pekande på ikonen Konfigurera, som visas som en skiftnyckel. i verktygsfältet](/help/screens-cloud/using-core-product-features/assets/thumbnail-3.png).
 
 1. The **Video** öppnas där du kan se **Miniatyrbild** släppzon.
 
-   ![Dialogrutan Video visar en bild av videomaterialet och miniatyrrutan.](/help/screens-cloud/using-core-product-features/assets/thumbnail-4.png)
+   ![Dialogrutan Video som visar en bild av en videoresurs och en miniatyrruta](/help/screens-cloud/using-core-product-features/assets/thumbnail-4.png).
 
 1. Dra och släpp en bild från resursväljaren till **Miniatyrbild** och klicka **Klar**.
 
-   ![Resursväljaren visas bakom dialogrutan Video med bildresurser som visas i miniatyrrutan.](/help/screens-cloud/using-core-product-features/assets/thumbnail-5.png)
+   ![Resursväljaren visas bakom dialogrutan Video med bildresurser som visas i miniatyrrutan](/help/screens-cloud/using-core-product-features/assets/thumbnail-5.png).
 
 1. Klicka **Förhandsgranska**.
 

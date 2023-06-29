@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service säkerhetsöversikt
 description: AEM as a Cloud Service säkerhetsöversikt
 exl-id: 19b123de-5db5-4fa8-81ec-e5438fed3f7f
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---

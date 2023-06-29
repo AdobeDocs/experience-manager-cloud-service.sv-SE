@@ -2,10 +2,10 @@
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: Stöd för Image Management System i Adobe Experience Manager as a Cloud Service
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1997'
-ht-degree: 38%
+source-wordcount: '1993'
+ht-degree: 37%
 
 ---
 
@@ -106,7 +106,7 @@ Mer information om de nya gruppfunktionerna finns på [den här webbplatsen](htt
 
 **Dokumentation om användarsynkronisering**
 
-Mer information finns i [UST-dokumentationen](https://adobe-apiplatform.github.io/user-sync.py/en/).
+Se [UST-dokumentation](https://adobe-apiplatform.github.io/user-sync.py/en/) för mer information.
 
 Verktyget för användarsynkronisering måste registreras som Adobe Developer klient-UMAPI enligt proceduren [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
 
@@ -214,10 +214,10 @@ Som visas nedan är gruppen **AEM-GRP_008** ärver behörigheter och behörighet
 
 För att kunna komma åt Cloud Manager eller miljöer på AEM as a Cloud Service måste du tilldelas Profiler för Cloud Manager-produkten.
 
-Läs Rolldefinitioner om du vill veta mer om roller för användare som styr tillgången till specifika funktioner i Cloud Manager.
+Mer information om användarroller som styr tillgängligheten av specifika funktioner i Cloud Manager finns i Rolldefinitioner.
 
 >[!NOTE]
->Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de roller som har specifika behörigheter, förkonfigurerade uppgifter eller behörigheter, eller som är kopplade till varje roll, kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions.html?lang=en).
+>Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de roller som har specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions.html?lang=en).
 
 **Steg för att lägga till en användare**
 

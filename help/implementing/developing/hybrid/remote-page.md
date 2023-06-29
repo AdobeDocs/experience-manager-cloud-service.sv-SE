@@ -2,7 +2,7 @@
 title: RemotePage-komponenten
 description: RemotePage-komponenten är en anpassad sidkomponent för redigering av SPA för fjärreaktion i AEM.
 exl-id: d3465592-0392-49b0-b49d-de93983c1d6e
-source-git-commit: d213dd0788e66015237d241caf0f3b5737ce725c
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Se artikeln [Redigera en extern SPA i AEM](editing-external-spa.md) om du vill h
    * https://github.com/shellscape/webpack-manifest-plugin
    * https://github.com/webdeveric/webpack-assets-manifest
    * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
-      ![Exempel på egenskapen entrypoints](assets/asset-manifest-entrypoints.png)
+     ![Exempel på egenskapen entrypoints](assets/asset-manifest-entrypoints.png)
 * Programmet måste kunna initieras i en `<div id="root"></div>` under `body` -element. Om en annan kod förväntas för att programmet ska kunna instansieras måste detta justeras i enlighet med HTML-skripten för proxykomponenten som har en `sling:resourceSuperType="spa-project-core/components/remotepage`.
 
 ## Begränsningar {#limitations}
@@ -42,4 +42,4 @@ Se artikeln [Redigera en extern SPA i AEM](editing-external-spa.md) om du vill h
 
 ## Teknisk information {#technical-details}
 
-Precis som resten av det AEM SPA projektet är RemotePage-komponenten en öppen källkod. Mer information om RemotePage-komponenten finns i [finns i GitHub-databasen.](https://github.com/adobe/aem-spa-project-core/tree/master/ui.apps/src/main/content/jcr_root/apps/spa-project-core/components/remotepage)
+Precis som resten av det AEM SPA projektet är RemotePage-komponenten en öppen källkod. Mer information om RemotePage-komponenten finns i [se GitHub-databasen.](https://github.com/adobe/aem-spa-project-core/tree/master/ui.apps/src/main/content/jcr_root/apps/spa-project-core/components/remotepage)

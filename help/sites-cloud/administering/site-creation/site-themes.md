@@ -4,7 +4,7 @@ description: Lär dig hur AEM webbplatsteman kan användas för att anpassa webb
 feature: Administering
 role: Admin
 exl-id: 53d4afb3-d091-47a1-ba12-5bcec99f46b9
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Webbplatser som skapats med AEM webbplatsmallar gör det enkelt att hämta, anpa
 
 >[!NOTE]
 >
->AEM teman ska inte blandas ihop med [AEM webbplatsmallar.](site-templates.md) AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt.](create-site.md)
+>AEM teman ska inte blandas ihop med [AEM webbplatsmallar](site-templates.md). AEM webbplatsteman innehåller bara formatinformation för en AEM. AEM webbplatsmallar definierar webbplatsens struktur och innehåll samt innehåller ett AEM webbplatstema för [skapa webbplatser snabbt](create-site.md).
 
 ## Använda webbplatsteman {#using-themes}
 
@@ -34,7 +34,7 @@ Webbplatsteman används på två olika sätt:
 
 >[!TIP]
 >
->En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [En resa där man snabbt skapar webbplatser.](/help/journey-sites/quick-site/overview.md)
+>En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md).
 
 ## Platstemastruktur {#structure}
 
@@ -53,4 +53,4 @@ Adobe tillhandahåller ett referenstema som du kan använda som utgångspunkt f�
 
 Adobe tillhandahåller en AEM Site Theme Builder som en uppsättning skript för att skapa nya webbplatsteman.
 
-[AEM Site Theme Builder finns tillsammans med användningsdokumentation för GitHub.](https://github.com/adobe/aem-site-theme-builder) Utvecklingsupplevelsen i gränssnittet krävs för att anpassa temat.
+[AEM Site Theme Builder är tillgänglig tillsammans med användningsdokumentation för GitHub](https://github.com/adobe/aem-site-theme-builder). Utvecklingsupplevelsen i gränssnittet krävs för att anpassa temat.

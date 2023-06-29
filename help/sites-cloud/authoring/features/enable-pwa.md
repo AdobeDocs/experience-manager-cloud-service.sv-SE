@@ -2,9 +2,9 @@
 title: Aktivera progressiva webbprogramfunktioner
 description: AEM Sites gör det möjligt för innehållsförfattaren att aktivera progressiva webbprogramfunktioner för alla webbplatser genom enkel konfiguration istället för kodning.
 exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '1997'
 ht-degree: 0%
 
 ---
@@ -160,20 +160,20 @@ Med de här inställningarna kan din webbplats bete sig som ett systemspecifikt 
    * **Minimalt användargränssnitt** - Webbläsaren är oftast dold, som ett inbyggt program, men grundläggande navigeringskontroller visas.
    * **Helskärm** - Webbläsaren är helt dold, precis som ett inbyggt program, men återges i helskärmsläge.
       * Med det här alternativet måste appnavigering vara möjlig helt och hållet via ditt innehåll med hjälp av länkar och komponenter på webbplatsens sidor, utan att webbläsarens navigeringskontroller används.
-* **Skärmorientering** - Som lokal app behöver PWA kunna hantera [enhetsorienteringar.](https://developer.mozilla.org/en-US/docs/Web/Manifest/orientation)
+* **Skärmorientering** - Som lokal app behöver PWA kunna hantera [enhetsorienteringar](https://developer.mozilla.org/en-US/docs/Web/Manifest/orientation).
    * **Alla** - Appen justeras efter orienteringen för användarens enhet. Detta är standardvärdet.
    * **Stående** - Detta tvingar programmet att öppnas i stående format oavsett orientering för användarens enhet.
    * **Liggande** - Detta tvingar programmet att öppnas i liggande format oavsett orientering för användarens enhet.
 * **Temafärg** - Detta definierar [appens färg](https://developer.mozilla.org/en-US/docs/Web/Manifest/theme_color) som påverkar hur den lokala användarens operativsystem visar det inbyggda verktygsfältet och navigeringskontrollerna. Beroende på webbläsaren kan det påverka andra presentationselement i programmet.
    * Använd popup-fönstret för färgbrunn för att välja en färg.
    * Färgen kan också definieras med hex- eller RGB-värde.
-* **Bakgrundsfärg** - Detta definierar [appens bakgrundsfärg,](https://developer.mozilla.org/en-US/docs/Web/Manifest/background_color) som visas när appen läses in.
+* **Bakgrundsfärg** - Detta definierar [appens bakgrundsfärg](https://developer.mozilla.org/en-US/docs/Web/Manifest/background_color), som visas när appen läses in.
    * Använd popup-fönstret för färgbrunn för att välja en färg.
    * Färgen kan också definieras med hex- eller RGB-värde.
    * Vissa webbläsare [skapa en startskärm automatiskt](https://developer.mozilla.org/en-US/docs/Web/Manifest#Splash_screens) från programnamnet, bakgrundsfärgen och ikonen.
 * **Ikon** - Detta definierar [ikonen](https://developer.mozilla.org/en-US/docs/Web/Manifest/icons) som representerar appen på användarens enhet.
    * Ikonen måste vara en PNG-fil med storleken 512x512 pixlar.
-   * Ikonen måste vara [lagras i DAM.](/help/assets/overview.md)
+   * Ikonen måste vara [lagras i DAM](/help/assets/overview.md).
 
 ### Cachehantering (avancerat) {#offline-configuration}
 

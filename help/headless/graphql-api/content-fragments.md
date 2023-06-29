@@ -3,9 +3,9 @@ title: AEM GraphQL API för användning med innehållsfragment
 description: Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 feature: Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '4924'
+source-wordcount: '4918'
 ht-degree: 0%
 
 ---
@@ -407,7 +407,7 @@ query($variation: String!) {
 
 Frågan returnerar den fullständiga listan med författare. Författare utan `another` återgår till originaldata (`_variation` kommer att rapportera `master` i detta fall).
 
-Om du vill begränsa listan till författare som anger den angivna varianten (och hoppa över författare som skulle återgå till originaldata) måste du använda en [filter](#filtering):
+Om du vill begränsa listan till författare som anger den angivna varianten (och hoppa över författare som skulle återgå till originaldata) använder du en [filter](#filtering):
 
 ```graphql
 query($variation: String!) {
@@ -431,7 +431,7 @@ query($variation: String!) {
 
 I GraphQL finns en möjlighet att ändra frågan baserat på variabler, så kallade GraphQL-direktiv.
 
-Du kan till exempel inkludera `adventurePrice` fält i en fråga för alla `AdventureModels`, baserat på en variabel `includePrice`.
+Här kan du till exempel inkludera `adventurePrice` fält i en fråga för alla `AdventureModels`, baserat på en variabel `includePrice`.
 
 ![GraphQL-direktiv](assets/cfm-graphqlapi-04.png "GraphQL-direktiv")
 
@@ -570,7 +570,7 @@ Sorteringskriterierna:
 
 * är en kommaavgränsad lista med värden som representerar fältsökvägen
    * det första fältet i listan definierar den primära sorteringsordningen, det andra fältet används om två värden för det primära sorteringsvillkoret är lika, det tredje om de första två kriterierna är lika, osv.
-   * punktnotation, t.ex. field1.subfield.subfield osv.
+   * punktnotation, d.v.s. field1.subfield.subfield osv.
 * med valfri orderriktning
    * ASC (stigande) eller DESC (fallande). som standard används ASC
    * Riktningen kan anges per fält. det innebär att du kan sortera ett fält i stigande ordning och ett annat i fallande ordning (name, firstName DESC)

@@ -2,10 +2,10 @@
 title: Skapa och ordna sidor
 description: Skapa och ordna sidor med AEM
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2542'
-ht-degree: 3%
+source-wordcount: '2539'
+ht-degree: 2%
 
 ---
 
@@ -176,7 +176,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
 1. Öppna Sites-konsolen (till exempel `https://<host>:<port>/sites.html/content`.
 1. Navigera till den plats där du vill skapa den nya sidan.
-1. Öppna listrutan med **Skapa** i verktygsfältet och välj sedan **Sida** i listan:
+1. Öppna den nedrullningsbara väljaren med **Skapa** i verktygsfältet väljer du **Sida** från listan:
 
    ![Skapa en sida](/help/sites-cloud/authoring/assets/organizing-create-page.png)
 
@@ -220,7 +220,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    >[!NOTE]
    >
-   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Exempel: `beach` finns redan, en ny sida blir `beach1`.
+   >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Om `beach` finns redan, en ny sida blir `beach1`.
 
 1. Om du återgår till konsolen ser du den nya sidan:
 
@@ -280,7 +280,7 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
 >[!NOTE]
 >
->Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Exempel: `beach` finns redan, en ny sida med namnet `beach` blir `beach1`.
+>Om du kopierar sidan till en plats där det redan finns en sida med samma namn som originalet, kommer systemet automatiskt att generera en variant av namnet genom att lägga till en siffra. Om `beach` finns redan, en ny sida med namnet `beach` blir `beach1`.
 
 >[!NOTE]
 >
@@ -405,7 +405,7 @@ Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** ko
    ![Dialogrutan Ta bort](/help/sites-cloud/authoring/assets/delete-page.png)
 
    * **Vill du arkivera sidor före borttagning?** - Om det här alternativet är markerat skapas versioner av de sidor som markerats för borttagning vid borttagning.
-      * [Versioner kan återställas vid ett senare tillfälle.](/help/sites-cloud/authoring/features/page-versions.md)
+      * [Versioner kan återställas vid ett senare datum](/help/sites-cloud/authoring/features/page-versions.md).
       * Det går inte att återställa sidor som tagits bort utan tidigare versioner.
    * **Avbryt** för att avbryta åtgärden
    * **Ta bort** för att bekräfta åtgärden:

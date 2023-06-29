@@ -3,9 +3,9 @@ title: CI/CD-rör
 description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas fö
 
 ## Introduktion {#introduction}
 
-En CI/CD-pipeline i Cloud Manager är en mekanism för att skapa kod från en källdatabas och distribuera den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (dvs. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecadence.
+En CI/CD-pipeline i Cloud Manager är en mekanism som bygger kod från en källdatabas och distribuerar den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (d.v.s. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecedence.
 
 Om du vill konfigurera en pipeline måste du:
 
@@ -44,7 +44,7 @@ En produktionspipeline är en konstruerad pipeline som innehåller en serie samo
 
 >[!TIP]
 >
->Se dokumentet [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för mer information.
+>Se [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för mer information.
 
 ## Icke-produktionsförlopp {#non-prod-pipeline}
 
@@ -52,7 +52,7 @@ En icke-produktionspipeline används främst för att köra kodkvalitetssökning
 
 >[!TIP]
 >
->Se dokumentet [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
+>Se [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) för mer information.
 
 ## Kodkällor {#code-sources}
 
@@ -91,7 +91,7 @@ I rörledningar i fullhög distribueras back-end-kod, front-end-kod och webbskik
 
 Pipelinen i full hög representerar en rörledning som gör allt på en gång, samtidigt som användarna får möjlighet att exklusivt distribuera sin frontkodkonfiguration eller Dispatcher-konfigurationer via frontendpipelines respektive webbskiktskonfigurationspipelines.
 
-Kompletta rörledningar paketerar slutkod (JavaScript/CSS) som [AEM klientbibliotek.](/help/implementing/developing/introduction/clientlibs.md)
+Kompletta rörledningar paketerar slutkod (JavaScript/CSS) som [AEM klientbibliotek](/help/implementing/developing/introduction/clientlibs.md).
 
 I rörledningar med hel hög kan webbnivåkonfigurationer distribueras om en [pipeline för konfiguration av webbnivå](#web-tier-config-pipelines) har inte konfigurerats.
 
@@ -127,11 +127,11 @@ Frontrörledningar kan vara pipelines med kodkvalitet eller distributionsrörled
 
 ### Innan du konfigurerar frontmatriser {#before-start}
 
-Läs igenom [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) för att få en komplett guide genom det lättanvända AEM för att skapa webbplatser. Den här resan hjälper er att effektivisera utvecklingen på frontend och göra det möjligt att snabbt anpassa webbplatsen utan kunskaper om AEM.
+Läs mer i [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) för att få en komplett guide genom det lättanvända AEM för att skapa webbplatser. Den här resan hjälper er att effektivisera utvecklingen på frontend och göra det möjligt att snabbt anpassa webbplatsen utan kunskaper om AEM.
 
 ### Konfigurera en frontpipeline {#configure-front-end}
 
-Läs följande dokument om du vill veta hur du konfigurerar rörledningar för frontservrar:
+Om du vill veta mer om hur du konfigurerar rörledningar för frontservrar kan du läsa följande:
 
 * [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline)
 * [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)
@@ -140,11 +140,11 @@ Läs följande dokument om du vill veta hur du konfigurerar rörledningar för f
 
 Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
 
-Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) om hur den här processen fungerar tillsammans med vissa överväganden för att vara medveten om att utnyttja hela potentialen i den här processen.
+Se [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) om hur den här processen fungerar tillsammans med vissa överväganden för att vara medveten om att utnyttja hela potentialen i den här processen.
 
 ### Konfigurera rörledningar i helhög {#configure-full-stack}
 
-Mer information om hur du konfigurerar rörledningar i full hög finns i följande dokument.
+Om du vill veta mer om hur du konfigurerar rörledningar i full hög läser du i följande dokument:
 
 * [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline)
 * [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)
@@ -165,7 +165,7 @@ Följande begränsningar gäller.
 * En användare måste vara inloggad med **Distributionshanteraren** roll för att konfigurera eller köra rörledningar.
 * Det kan bara finnas en konfigurationspipeline för webbskikt per miljö.
 * Användaren kan inte konfigurera en konfigurationspipeline för ett webbskikt när motsvarande pipeline för en hel hög körs.
-* Webbnivåstrukturen måste följa strukturen för det flexibla läget, enligt definitionen i dokumentet [Dispatcher i molnet.](/help/implementing/dispatcher/disp-overview.md#validation-debug)
+* Webbnivåstrukturen måste följa strukturen för det flexibla läget, enligt definitionen i dokumentet [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md#validation-debug).
 
 Var dessutom medveten om hur [fullständigt stackflöde](#full-stack-pipeline) fungerar när du introducerar ett webbskiktsflöde.
 
@@ -177,7 +177,7 @@ Rörledningar för webbnivåkonfiguration kan vara av typen kodkvalitet eller di
 
 ### Konfigurera konfigurationsförlopp för webbnivå {#configure-web-tier-config-pipelines}
 
-Mer information om hur du konfigurerar pipelines för webbnivåkonfiguration finns i följande dokument.
+Mer information om hur du konfigurerar pipelines för webbnivåkonfiguration finns i följande dokument:
 
 * [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#adding-production-pipeline)
 * [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#adding-non-production-pipeline)

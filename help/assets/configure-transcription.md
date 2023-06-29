@@ -2,7 +2,7 @@
 title: Konfigurera transkriberingstjänsten
 seo-title: Configure transcription service
 description: Adobe Experience Manager Assets har konfigurerats med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-format (Vtt).
-seo-description: When an audio or video asset is processed in Experience Manager Assets, the AI-based transcription service automatically generates the text transcript rendition of the audio or video asset and stores it at the same location within your Assets repository where the original asset resides. The Experience Manager Assets transcription service allows marketers to effectively manage their audio and video content with added discoverability of the text content as well as increase the ROI of these assets by supporting accessibility and localization.
+seo-description: When an audio or video asset is processed in Experience Manager Assets, the AI-based transcription service automatically generates the text transcript rendition of the audio or video asset and stores it at the same location within your Assets repository where the original asset resides. The Experience Manager Assets transcription service allows marketers to effectively manage their audio and video content with added discoverability of the text content and increase the ROI of these assets by supporting accessibility and localization.
 products: SG_EXPERIENCEMANAGER/ASSETS and Experience Manager as a Cloud Service
 sub-product: assets
 content-type: reference
@@ -11,9 +11,9 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1631'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 # Konfigurera transkription i [!DNL Experience Manager Assets] {#configure-transcription-service}
 
 Transkription är processen att översätta ljudet från en ljud- eller videofil till text (tal till text) med hjälp av taligenkänningstekniken.
-[!DNL Adobe Experience Manager Assets] är konfigurerad med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-formatet (.vtt). När ett ljud- eller videomaterial bearbetas i [!DNL Experience Manager Assets], genererar transkriberingstjänsten automatiskt texttranskriberingen av ljud- eller videoresursen och lagrar den på samma plats i resurskatalogen där den ursprungliga resursen finns. The [!DNL Experience Manager Assets] Med transkriberingstjänsten kan marknadsförarna effektivt hantera sitt ljud- och videomaterial med ökad upptäckbarhet av textinnehållet samt öka avkastningen på dessa resurser genom hjälpmedel och lokalisering.
+[!DNL Adobe Experience Manager Assets] är konfigurerad med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-formatet (.vtt). När ett ljud- eller videomaterial bearbetas i [!DNL Experience Manager Assets], genererar transkriberingstjänsten automatiskt texttranskriberingen av ljud- eller videoresursen och lagrar den på samma plats i resurskatalogen där den ursprungliga resursen finns. The [!DNL Experience Manager Assets] Med transkriberingstjänsten kan marknadsförarna effektivt hantera sitt ljud- och videomaterial med ökad upptäckbarhet av textinnehållet och öka avkastningen på dessa resurser genom stöd för tillgänglighet och lokalisering.
 
 Transcript är textversioner av talt innehåll. Ett exempel är en film som du tittar på på en OTT-plattform som ofta innehåller bildtexter eller undertexter som hjälper till med tillgängligheten eller som konsumerar innehållet på andra språk. Eller alla ljud- och videofiler som används i marknadsförings-, utbildnings- eller underhållningssyfte. De här upplevelserna börjar med en transkription som sedan formateras eller översätts på lämpligt sätt. Att transkribera ljud eller video är en tidskrävande och felbenägen process när den utförs manuellt. Det är också en utmaning att skala den manuella processen, med tanke på det ständigt ökande behovet av ljud- och videoinnehåll. [!DNL Experience Manager Assets] använder Azure:s AI-baserade transkription, som tillåter storskalig bearbetning av ljud- och videoresurser och genererar texttranskriberingarna (.vtt-filer) tillsammans med tidsstämpelsinformationen. Utöver Assets stöds även transkriberingsfunktionen i Dynamic Media.
 
@@ -88,7 +88,7 @@ När bearbetningsprofilen har konfigurerats för transkription av ljud- och vide
 * Välj en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. I innehållsläsaren kan du navigera till en viss mapp, välja en mapp och bekräfta programmet för profilen.
 * Välj en mapp i Assets-användargränssnittet och klicka på **[!UICONTROL Properties]** åtgärd för att öppna mappegenskaper. Klicka på **[!UICONTROL Asset Processing]** och väljer lämplig bearbetningsprofil för mappen på **[!UICONTROL Processing Profile]** lista. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
 
-   ![configure-transcription-service](assets/video-processing-profile3.png)
+  ![configure-transcription-service](assets/video-processing-profile3.png)
 
 * Användarna kan välja mappar eller specifika resurser i Assets-användargränssnittet för att tillämpa en bearbetningsprofil och sedan välja **[!UICONTROL Reprocess Assets]** från de tillgängliga alternativen överst.
 

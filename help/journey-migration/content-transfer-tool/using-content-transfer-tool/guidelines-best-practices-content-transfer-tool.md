@@ -2,9 +2,9 @@
 title: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 description: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1544'
 ht-degree: 14%
 
 ---
@@ -77,13 +77,13 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 
-* När du är klar med *Extrahering* fas i innehållsöverföringsprocessen och innan du påbörjar *Inmatningsfas* att lägga in innehåll i AEM as a Cloud Service *Scen* eller *Produktion* -instanser måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Inmatning* så att Adobe kan säkerställa att inga avbrott inträffar under *Inmatning* -processen. Du måste logga supportbiljetten en vecka före ditt planerade *Inmatning* datum. När du har skickat in supportanmälan kommer supportteamet att ge vägledning om nästa steg. Du kan logga en supportanmälan med följande information:
+* När du är klar med *Extrahering* fas i innehållsöverföringsprocessen och innan du påbörjar *Inmatningsfas* att lägga in innehåll i AEM as a Cloud Service *Scen* eller *Produktion* -instanser måste du logga en supportanmälan för att meddela Adobe om din avsikt att köra *Inmatning* så att Adobe kan säkerställa att inga avbrott inträffar under *Inmatning* -processen. Du måste logga supportbiljetten en vecka före ditt planerade *Inmatning* datum. När du har skickat in supportanmälan ger supportteamet vägledning om nästa steg. Du kan logga en supportanmälan med följande information:
 
    * Exakt datum och beräknad tid (med din tidszon) när du tänker starta *Inmatning* fas.
    * Miljötyp (Stage eller Production) som du vill importera data till.
    * Program-ID.
 
-* The *Inmatningsfas* för författaren skalas ned för hela författardistributionen. Det innebär att författarens AEM inte är tillgängligt under hela importen. Kontrollera också att inga rörledningar för Cloud Manager körs när du kör *Inmatning* fas.
+* The *Inmatningsfas* för författaren skalas ned för hela författardistributionen. Det innebär att författarens AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör *Inmatning* fas.
 
 * När du använder `Amazon S3` eller `Azure` som datalager i AEM bör datalagret konfigureras så att de lagrade blobblarna inte kan tas bort (skräpinsamlade). Detta garanterar indexdataintegritet och om detta inte konfigureras på det här sättet kan det leda till misslyckade extraheringar på grund av att dessa indexdata saknar integritet.
 

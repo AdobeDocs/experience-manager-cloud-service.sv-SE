@@ -2,9 +2,9 @@
 title: SPA
 description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 exl-id: 1186b64e-11f8-43a6-bc75-450c4d7587ec
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Appen äger routningen och implementeras sedan av projektutvecklarna. Det här d
 
 ## Arkitektur {#architecture}
 
-En detaljerad beskrivning finns i [PageModelManager](blueprint.md#pagemodelmanager) i SPA.
+En detaljerad beskrivning finns på [PageModelManager](blueprint.md#pagemodelmanager) i SPA.
 
 ## ModelRouter {#modelrouter}
 

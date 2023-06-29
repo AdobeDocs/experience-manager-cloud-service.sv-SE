@@ -2,7 +2,7 @@
 title: SPA Blueprint
 description: I det här dokumentet beskrivs det allmänna ramverksoberoende kontraktet som alla SPA ramverk ska uppfylla så att du kan implementera redigerbara SPA komponenter inom AEM.
 exl-id: 9d47c0e9-600c-4f45-9169-b3c9bbee9152
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '2056'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Varje objekt i modellen innehåller en `:type` fält som visar en AEM resurstyp.
 
 #### Dynamisk mappning av modell till komponent {#dynamic-model-to-component-mapping}
 
-Mer information om hur den dynamiska mappningen av modell till komponent sker i Javascript SPA SDK för AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](model-to-component-mapping.md).
+Mer information om hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](model-to-component-mapping.md).
 
 ### Ramverksspecifikt lager {#framework-specific-layer}
 
@@ -106,7 +106,7 @@ Följande enheter bör genomföras i enlighet med de riktlinjer som är specifik
 
 Projektkomponenter måste delegera åtkomst till en modells fragment till en modellprovider. Modellprovidern ansvarar sedan för att lyssna efter ändringar som gjorts i det angivna fragmentet i modellen och returnerar den uppdaterade modellen till den delegerande komponenten.
 
-För att göra detta måste modellprovidern registrera sig för [`PageModelManager`](#pagemodelmanager). När en ändring inträffar tar den emot och skickar den uppdaterade informationen till den delegerande komponenten. Egenskapen som gjorts tillgänglig för den delegerande komponenten som ska bära fragmentet av modellen namnges enligt konvention `cqModel`. Implementeringen kan fritt tillhandahålla den här egenskapen till komponenten men bör beakta aspekter som integrering med ramverksarkitekturen, upptäckbarhet och användarvänlighet.
+För att göra detta måste modellprovidern registrera sig för [`PageModelManager`](#pagemodelmanager). När en ändring inträffar tar den emot och skickar de uppdaterade data till den delegerande komponenten. Egenskapen som gjorts tillgänglig för den delegerande komponenten som ska bära fragmentet av modellen namnges enligt konvention `cqModel`. Implementeringen kan fritt tillhandahålla den här egenskapen till komponenten men bör beakta aspekter som integrering med ramverksarkitekturen, upptäckbarhet och användarvänlighet.
 
 ### Komponentens HTML-dekorator {#the-component-html-decorator}
 

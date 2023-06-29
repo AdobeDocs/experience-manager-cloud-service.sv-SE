@@ -2,9 +2,9 @@
 title: Introduktion till Cloud Manager
 description: Läs om hur Cloud Manager stöder ditt AEM genom program, miljöer och rörledningar.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Cloud Manager är en viktig komponent i AEM as a Cloud Service och fungerar som en enda startpunkt för ditt team. Dess specialbyggda CI/CD-ledningar är utrustade för att säkerställa grundlig testning och högsta kodkvalitet för att leverera exceptionella upplevelser. För att kunderna snabbt ska kunna starta sina projekt tillhandahåller Cloud Manager allt som behövs på ett självbetjäningssätt, inklusive möjligheten att skapa molnresurser och miljöer samt få tillgång till era Git-databaser. De här funktionerna ger stöd för företagsutvecklingsmiljöer så att team kan arbeta för att implementera ändringar ofta, snabbt leverera unika digitala upplevelser och snabba upp time-to-value-processen.
 
-Din systemadministratör ansvarar för att konfigurera ditt Cloud Manager-team, som kommer att innehålla personer som skapar dina molnresurser och utvecklare. Mer information om hur du konfigurerar och skalar ditt utvecklingsteam och hur AEM as a Cloud Service kan stödja din utvecklingsprocess finns i dokumentet [Enterprise Team Development Setup för AEM as a Cloud Service.](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md)
+Din systemadministratör ansvarar för att konfigurera ditt Cloud Manager-team, som kommer att innehålla personer som skapar dina molnresurser och utvecklare. Mer information om hur du konfigurerar och skalar ditt utvecklingsteam och hur AEM as a Cloud Service kan stödja utvecklingsprocessen finns i [Inställningar för utveckling av Enterprise-team för AEM as a Cloud Service](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md).
 
 ## Navigera till översiktssidan för Cloud Manager {#navigate-cloud-manager}
 
@@ -54,7 +54,7 @@ Du kan även navigera till Cloud Managers program- och produktsida från Adobe E
 
 >[!NOTE]
 >
->En användare kan tilldelas flera roller. Till exempel tilldela båda **Företagsägare** och **Distributionshanteraren** roller till en användare ger användaren summan av dessa behörigheter.
+>En användare kan tilldelas flera roller. Du kan till exempel tilldela båda **Företagsägare** och **Distributionshanteraren** roller till en användare ger användaren summan av dessa behörigheter.
 
 ## Cloud Manager-program {#cloud-manager-programs}
 
@@ -66,12 +66,12 @@ Titta på detta [video](https://experienceleague.adobe.com/docs/experience-manag
 En användare kan skapa **Sandbox** eller en **Produktion** program.
 
 * A **produktionsprogram** skapas för att möjliggöra livstrafik vid rätt tidpunkt i framtiden.
-   * Se dokumentet [Introduktion till produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för mer information.
+   * Se [Introduktion till produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för mer information.
 
 * A **sandlådeprogram** skapas vanligtvis för utbildning, löpande demonstrationer, aktivering, skapande av POC eller för dokumentation.
    * Den är inte avsedd att transportera levande trafik och kommer att ha begränsningar som ett produktionsprogram inte kommer att ha.
    * Den innehåller Sites and Assets och levereras automatiskt ifylld med en Git-gren som innehåller exempelkod, en utvecklingsmiljö och en icke-produktionsprocess.
-   * Se dokumentet [Introduktion till sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md) för mer information.
+   * Se [Introduktion till sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md) för mer information.
 
 ## Cloud Manager-miljöer {#cloud-manager-environments}
 
@@ -85,7 +85,7 @@ Dina molnmiljöer skapas, öppnas och visas via Cloud Manager. Dessa miljöer ka
 >
 > Se videon [Använda Adobe Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html) en översikt över tillgängliga miljöer.
 >
->Se dokumentet [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill veta mer om de typer av miljöer som en användare kan skapa och hur användaren kan skapa en miljö.
+>Se [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill veta mer om de typer av miljöer som en användare kan skapa och hur användaren kan skapa en miljö.
 
 ### AEM {#author-services}
 

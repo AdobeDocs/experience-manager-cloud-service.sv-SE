@@ -2,9 +2,9 @@
 title: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 description: AEM - Commerce Integration med Commerce Integration Framework - frågor och svar
 exl-id: 0a946d98-22c7-445d-984a-9e09c306ce45
-source-git-commit: d925310603961f1f3721c283fc247105459e9c0f
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '967'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## 1. Används CIF GraphQL endast för e-handel eller kommer det att finnas tillgängligt för frågor som författas AEM JCR?
 
-Adobe har antagit Adobe Commerce GraphQL API:er som sin officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av AEM GraphQL-API:t för att komma åt innehållsfragment.
+Adobe har antagit Adobe Commerce GraphQL API:er som sitt officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av AEM GraphQL-API:t för att komma åt innehållsfragment.
 
 ## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce Admin? Hur kan resurser från Dynamic Media förbrukas?
 

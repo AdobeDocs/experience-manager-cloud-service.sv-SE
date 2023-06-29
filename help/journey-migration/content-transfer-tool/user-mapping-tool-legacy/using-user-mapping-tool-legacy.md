@@ -4,9 +4,9 @@ description: Använda verktyget för användarmappning (äldre)
 exl-id: dcb750c4-0f81-4d11-ac6c-0592162b683d
 hide: true
 hidefromtoc: true
-source-git-commit: 1fc57dacbf811070664d5f5aaa591dd705516fa8
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ Följ stegen nedan för att konfigurera detta:
 
 ## Åtkomst till användargränssnittet för verktyget för användarmappning {#user-interface}
 
-Verktyget för användarmappning är integrerat i verktyget Innehållsöverföring. Du kan hämta verktyget Innehållsöverföring från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Mer information om den senaste versionen finns i [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md).
+Verktyget för användarmappning är integrerat i verktyget Innehållsöverföring. Du kan hämta verktyget Innehållsöverföring från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html). Mer information om den senaste versionen finns på [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
 1. Markera Adobe Experience Manager och gå till verktygen -> **Operationer** -> **Innehållsmigrering**.
 

@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management,Publishing
 role: User,Architect,Leader
 exl-id: 4737d5ee-9a93-49f3-9f20-d4368e60e9fb
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 2%
@@ -87,7 +87,7 @@ Om du vill använda Media Library-funktionen kan du använda standardfunktionen 
 
 <!-- TBD: Define exactly which basic Assets workflow are available for use with Media Library?
 
-As per PM, we must avoid stating such a list, as we don't have a list that makes sense in Cloud Service.
+As per PM, we must avoid stating such a list, as we do not have a list that makes sense in Cloud Service.
 -->
 
 >[!IMPORTANT]
@@ -117,4 +117,3 @@ Observera att du inte kan använda smarta taggar, [!DNL Asset] länk, [!DNL Asse
 >
 >* [DAM-funktioner i [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html)
 >* [[!DNL Experience Manager] as a [!DNL Cloud Service] produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-cloud-service.html)
-

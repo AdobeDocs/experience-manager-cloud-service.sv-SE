@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 9bfc3995-ac8e-488e-b68f-9e1b5b4a3176
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1400'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Det finns ett antal krav innan du börjar översätta AEM innehåll.
 
 >[!TIP]
 >
->Om du inte är van vid att använda ett stort CMS-system som AEM kan du titta i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) dokumentation innan du fortsätter. Dokumentationen för grundläggande hantering är inte en del av resan, så gå tillbaka till den här sidan när du är klar.
+>Om du inte är van vid att använda ett stort CMS-system som AEM kan du titta i [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) dokumentation innan du fortsätter. Dokumentationen för grundläggande hantering ingår inte i resan. Gå tillbaka till den här sidan när du är klar.
 
 ### verktyg {#tools}
 
@@ -75,7 +75,7 @@ Så här kommer du åt webbplatskonsolen:
 
    ![Innehållshierarki](assets/sites-console-hierarchy.png)
 
-1. Genom att trycka eller klicka på kryssrutan för ett objekt i en kolumn, markeras objektet och det markerade objektets information visas i kolumnen till höger. Dessutom visas ett antal åtgärder som är tillgängliga för det markerade objektet i verktygsfältet ovan.
+1. Genom att trycka eller klicka på kryssrutan för ett objekt i en kolumn, markeras objektet och det markerade objektets information visas i kolumnen till höger. Ett antal åtgärder som är tillgängliga för det markerade objektet visas i verktygsfältet ovan.
 
    ![Val av innehåll](assets/sites-console-selection.png)
 

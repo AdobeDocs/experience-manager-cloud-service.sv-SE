@@ -3,9 +3,9 @@ title: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 description: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 feature: Dispatcher
 exl-id: ff7397dd-b6e1-4d08-8e2d-d613af6b81b3
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1451'
 ht-degree: 14%
 
 ---
@@ -35,7 +35,7 @@ Extrahera arkivet till en mapp och se till att de omedelbara undermapparna börj
 
 ### Ta bort oanvända undermappar och filer
 
-Ta bort undermappar `conf` och `conf.modules.d`samt filer som matchar `conf.d/*.conf`.
+Ta bort undermappar `conf` och `conf.modules.d`och filer som matchar `conf.d/*.conf`.
 
 ### Ta bort alla virtuella värdar som inte är publicerade 
 

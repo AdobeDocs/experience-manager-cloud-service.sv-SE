@@ -2,7 +2,7 @@
 title: Introduktion till Adobe Experience Manager as a Cloud Service
 description: Introduktion till Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d81b85bb-a69d-49a4-9e75-76f1c6bbcd67
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 49%
@@ -78,6 +78,6 @@ AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna
 
 >[!TIP]
 >
->När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboarding Journey.](/help/journey-onboarding/overview.md)
+>När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboarding Journey](/help/journey-onboarding/overview.md).
 >
 >Är du redan upptagen eller redo att dyka upp i testning AEM funktioner? Installera [AEM Reference Demos Add-on](/help/journey-sites/demos-add-on/overview.md) att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.

@@ -2,9 +2,9 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '4579'
+source-wordcount: '4577'
 ht-degree: 9%
 
 ---
@@ -266,7 +266,7 @@ När en komponent har låsts upp kan du definiera [ursprungligt innehåll](#edit
 
 >[!NOTE]
 >
->I **Ursprungligt innehåll** samt på de resulterande sidorna kan alla olåsta komponenter som har en tillgänglig överordnad (dvs. komponenter i en layoutbehållare) tas bort.
+>I **Ursprungligt innehåll** och på de resulterande sidorna kan alla olåsta komponenter som har en tillgänglig överordnad (d.v.s. komponenter i en layoutbehållare) tas bort.
 
 #### Layout {#template-layout}
 
@@ -393,7 +393,7 @@ Under **Egenskaper** Du kan definiera komponentens inställningar. Rubriken har 
 
 På **Huvud** -fliken definieras de viktigaste inställningarna för komponenten.
 
-För en bildkomponent kan till exempel de tillåtna bredderna definieras tillsammans med aktivering av lazy loading.
+För en bildkomponent kan till exempel tillåtna bredder definieras tillsammans med aktivering av lazy loading.
 
 Om en inställning tillåter flera konfigurationer klickar eller trycker du på **Lägg till** om du vill lägga till en annan konfiguration.
 

@@ -2,9 +2,9 @@
 title: Cloud Manager-databaser
 description: Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Manager.
 exl-id: 6e1cf636-78f5-4270-9a21-38b4d5e5a0b0
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Du kan markera databasen i tabellen och klicka på ellipsknappen och välja **Ko
 
 ![Databasalternativ](/help/implementing/cloud-manager/assets/repos/create-repo3.png)
 
-Databaser som skapas i Cloud Manager kan du också välja när du lägger till eller redigerar pipelines. Se dokumentet [CI-CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) om du vill veta mer.
+Databaser som skapas i Cloud Manager kan du också välja när du lägger till eller redigerar pipelines. Se [CI-CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) om du vill veta mer.
 
 Det finns en enda primär databas eller en gren för en given pipeline. Med [stöd för Git-delmodul](#git-submodule-support)kan många sekundära grenar inkluderas vid byggtillfället.
 
@@ -76,7 +76,7 @@ $ git submodule update --init
 
 Den här tekniken är ett möjligt alternativ till den lösning som beskrivs i dokumentet [Arbeta med Git-databaser med flera källor](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md) för organisationer som känner sig bekväma med att använda Git-undermoduler och inte vill hantera en extern sammanfogningsprocess.
 
-Låt oss till exempel säga att det finns tre databaser, där var och en innehåller en gren med namnet `main`. I den primära databasen, dvs. den som konfigurerats i pipelines, `main` grenen har en `pom.xml` fil som deklarerar projekten i de två andra databaserna.
+Låt oss till exempel säga att det finns tre databaser, där var och en innehåller en gren med namnet `main`. I den primära databasen, det vill säga den som konfigurerats i pipelines, är `main` grenen har en `pom.xml` fil som deklarerar projekten i de två andra databaserna.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

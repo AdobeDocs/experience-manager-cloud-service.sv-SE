@@ -2,9 +2,9 @@
 title: Adobe Experience Manager as a Cloud Service Prerelease Channel
 description: Lär dig hur du använder betaversionskanalen för att få en förhandsvisning av kommande funktioner som AEM as a Cloud Service.
 exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1304'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ Lär dig hur du använder betaversionskanalen för att få en förhandsvisning a
 
 Adobe Experience Manager as a Cloud Service har nya funktioner på ett regelbundet cadence, enligt [Experience Manager släpper vägkartan.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
 
-Om du vill bekanta dig med de funktioner som är schemalagda att användas i följande funktionsrelease kan du prenumerera på betaversionskanalen, som du kommer åt genom att konfigurera dina utvecklingsmiljöer eller andra sandlådemiljöer. Du kan förhandsgranska ändringar som är tillgängliga via det AEM användargränssnittet samt skapa kod mot nya förhandsversioner-API:er.
+Om du vill bekanta dig med de funktioner som är schemalagda att användas i följande funktionsrelease kan du prenumerera på betaversionskanalen, som du kommer åt genom att konfigurera dina utvecklingsmiljöer eller andra sandlådemiljöer. Du kan förhandsgranska ändringar som är tillgängliga via det AEM användargränssnittet och skapa kod mot alla nya prerelease-API:er.
 
-Listan över förhandsversionsfunktioner för en viss funktionsrelease finns i [versionsinformation.](/help/release-notes/release-notes-cloud/release-notes-current.md)
+Listan över förhandsversionsfunktioner för en viss funktionsrelease finns i [versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
 ## AEM as a Cloud Service releaser {#releases}
 
@@ -37,7 +37,7 @@ Om det till exempel är maj och du prenumererar på betaversionskanalen kan du u
 
 ![Bild på föruppspelningskadens](assets/prerelease-cadence.png)
 
-Med Förhandsversionen får du ett rullande månadsfönster med kommande AEMaaCS-funktioner, som ger dig tid att bedöma effekten av nya funktioner i dina projekt och anpassningar samt planera lanseringar av sådana funktioner, tester och användarutbildning.
+Med Förhandsversionen får du ett rullande månadsfönster med kommande AEMaaCS-funktioner, som ger dig tid att bedöma effekten av nya funktioner i dina projekt och anpassningar och planera lanseringar av sådana funktioner, tester och användarutbildning.
 
 För att utnyttja prerelease-kanalen effektivt krävs fyra steg.
 
@@ -122,7 +122,7 @@ Du kan se nya funktioner i Sites-konsolen i den lokala QuickStart SDK och kod mo
 
 #### Starta Quickstart SDK i förhandsversionsläge {#prerelease-mode}
 
-1. Hämta SDK från programdistributionsportalen och installera enligt beskrivningen i [Åtkomst till AEM as a Cloud Service SDK.](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
+1. Hämta SDK från programdistributionsportalen och installera enligt beskrivningen i [Åtkomst till AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
 1. Inkludera argumentet när du startar SDK QuickStart `-r prerelease`.
 
 Värdet är fästigt så att det bara kan markeras vid första starten. Installera om SDK om du vill ändra kommandoradsalternativet.

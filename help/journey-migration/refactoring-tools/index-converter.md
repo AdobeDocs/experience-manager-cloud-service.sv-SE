@@ -2,9 +2,9 @@
 title: Indexkonverterare
 description: Indexkonverterare
 exl-id: ac02ca41-eb35-4f24-bf17-d00ce318423d
-source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---

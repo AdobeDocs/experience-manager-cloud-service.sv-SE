@@ -2,9 +2,9 @@
 title: Installation av Enterprise Development Team
 description: Lär dig hur du konfigurerar och skalar ditt utvecklingsteam och se hur AEM as a Cloud Service kan stödja din utvecklingsprocess.
 exl-id: 85f8779b-12cb-441b-a34d-04641184497a
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1437'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Lär dig hur du konfigurerar och skalar ditt utvecklingsteam och se hur AEM as a
 
 ## Introduktion {#introduction}
 
-För att ge stöd åt kunder med Enterprise-utvecklingsmiljöer AEM as a Cloud Service fullt integrerat med Cloud Manager och dess specialbyggda [påvisade rörledningar för CI/CD.](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) Dessa rörledningar och tjänster byggs baserat på bästa praxis och säkerställer en grundlig [testning och högsta kodkvalitet.](/help/implementing/cloud-manager/code-quality-testing.md)
+För att ge stöd åt kunder med Enterprise-utvecklingsmiljöer AEM as a Cloud Service fullt integrerat med Cloud Manager och dess specialbyggda [påtalade CI/CD-ledningar](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md). Dessa rörledningar och tjänster byggs baserat på bästa praxis och säkerställer en grundlig [testning och högsta kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md).
 
 ## Cloud Managers support i Enterprise Team Development Setup {#cloud-manager}
 
@@ -70,7 +70,7 @@ Konfigurationen i Cloud Managers Git-databas har två grenar.
 * En stabil releasegren innehåller produktionskoden från alla team.
 * En utvecklingsgren innehåller utvecklingskoden från alla team.
 
-Varje push till ett teams Git-databas i antingen utvecklingen eller den stabila grenen utlöser en [GitHub-åtgärd.](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md#managing-code)
+Varje push till ett teams Git-databas i antingen utvecklingen eller den stabila grenen utlöser en [GitHub-åtgärd](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md#managing-code).
 
 Alla projekt följer samma inställningar för den stabila grenen. En push-överföring till den stabila grenen av ett projekt överförs automatiskt till den stabila grenen i Cloud Managers Git-databas. Produktionspipeline i Cloud Manager är konfigurerad att utlösas av en push till den stabila grenen. Produktionspipeline körs därför av varje team som går över till en stabil gren och produktionsdistributionen uppdateras om alla kvalitetsportar godkänns.
 
@@ -82,7 +82,7 @@ I produktionsflödet kontrolleras koden för alla team via de angivna kvalitetsp
 
 För lokal utveckling [SDK för AEM as a Cloud Service](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md#developing) används. Med SDK kan en lokal författare, publicerare och dispatcher konfigureras. Detta möjliggör offlineutveckling och snabb handläggningstid. Ibland används bara författarmiljön för utveckling, men om du snabbt ställer in dispatcher och publiceringsmiljöer kan du testa allting lokalt innan du tar dig in i Git-databasen.
 
-Medlemmar i varje team checkar vanligtvis ut koden från den delade Git-instansen samt sin egen projektkod. Du behöver inte checka ut andra projekt eftersom de är fristående.
+Medlemmar i varje team checkar vanligtvis ut koden från den delade Git för sin egen projektkod. Du behöver inte checka ut andra projekt eftersom de är fristående.
 
 ![Lokal utcheckning och SDK](/help/implementing/cloud-manager/assets/team-setup3.png)
 
@@ -90,7 +90,7 @@ Denna verkliga konfiguration kan användas som en plan och sedan anpassas efter 
 
 >[!TIP]
 >
->Se dokumentet [Arbeta med Git-databaser med flera källor](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html#managing-code) om du vill veta mer om den här konfigurationen.
+>Se [Arbeta med Git-databaser med flera källor](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html#managing-code) om du vill veta mer om den här konfigurationen.
 
 ### Att tänka på vid installation av flera team {#considerations}
 

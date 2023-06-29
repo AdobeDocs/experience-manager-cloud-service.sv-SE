@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management,Translation
 role: Admin,User
 exl-id: 98df1412-a957-48a3-81c2-7dfe1d5e6d31
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '2499'
 ht-degree: 19%
@@ -191,7 +191,7 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
 1. Navigera till resurskonsolen och öppna sidan Egenskaper för var och en av de översatta resurserna för att visa översatta metadata.
 
-<!-- TBD: Possibly this blog wasn't migrated. Still try to find from the author. Old one is archived at https://web.archive.org/web/20180423042713/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/
+<!-- TBD: Possibly this blog was not migrated. Still try to find from the author. Old one is archived at https://web.archive.org/web/20180423042713/https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/
 
 For tips on translating metadata for assets efficiently, see [5 Steps to efficiently translate metadata](https://blogs.adobe.com/experiencedelivers/experience-management/translate_aemassets_metadata/). 
 -->
@@ -264,9 +264,9 @@ Genom att använda översättningsmolntjänster direkt i resursmappen behöver d
 
 ### Använd anpassad översättningskoppling {#applying-custom-translation-connector}
 
-Du kan använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Installera först anslutningen från om du vill använda en anpassad anslutning [Pakethanteraren.](/help/implementing/developing/tools/package-manager.md) Konfigurera sedan kopplingen från Cloud Services-konsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över kopplingar på fliken Cloud Services som beskrivs i [Använda översättningstjänsterna](#applying-the-translation-services). När du har använt den anpassade kopplingen och kört översättningsarbetsflödena visas kopplingsinformationen under rubrikerna **[!UICONTROL Provider]** och **[!UICONTROL Method]** i rutan **[!UICONTROL Translation Summary]** för översättningsprojektet.
+Du kan använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Installera först anslutningen från om du vill använda en anpassad anslutning [Pakethanteraren](/help/implementing/developing/tools/package-manager.md). Konfigurera sedan kopplingen från Cloud Services-konsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över kopplingar på fliken Cloud Services som beskrivs i [Använda översättningstjänsterna](#applying-the-translation-services). När du har använt den anpassade kopplingen och kört översättningsarbetsflödena visas kopplingsinformationen under rubrikerna **[!UICONTROL Provider]** och **[!UICONTROL Method]** i rutan **[!UICONTROL Translation Summary]** för översättningsprojektet.
 
-1. Installera anslutningen från [Pakethanteraren.](/help/implementing/developing/tools/package-manager.md)
+1. Installera anslutningen från [Pakethanteraren](/help/implementing/developing/tools/package-manager.md).
 1. Klicka/tryck på Experience Manager-logotypen och navigera till **[!UICONTROL Tools > Deployment > Cloud Services]**.
 1. Leta upp den koppling du installerade under **[!UICONTROL Third Party Services]** på sidan **[!UICONTROL Cloud Services]**.
 

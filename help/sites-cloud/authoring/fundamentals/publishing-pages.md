@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Publicera och avpublicera sidor med AEM
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1802'
 ht-degree: 5%
 
 ---
@@ -81,7 +81,7 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
 >[!NOTE]
 >
->Publicering från redigeraren är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och eventuella underordnade sidor publiceras/inte.
+>Publicering från redigeraren är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och eventuella underordnade sidor publiceras/publiceras inte.
 
 >[!NOTE]
 >
@@ -112,11 +112,11 @@ Så här publicerar du en sida med Snabbpublicering:
 
 >[!NOTE]
 >
->Snabbpublicering är en grund publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
+>Snabbpublicering är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
 
 #### Hantera publikation {#manage-publication}
 
-**Hantera publikation** erbjuder fler alternativ än **Snabbpublicering**, vilket gör det möjligt att inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden samt erbjuda möjlighet att publicera vid ett senare datum.
+**Hantera publikation** erbjuder fler alternativ än **Snabbpublicering**, vilket gör det möjligt att inkludera underordnade sidor, anpassa referenserna och starta eventuella arbetsflöden och erbjuda möjlighet att publicera vid ett senare datum.
 
 Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
@@ -203,7 +203,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    >[!NOTE]
    >
-   >The **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Se föregående kommentar på den här sidan om publiceringsrättigheter samt Hantera åtkomst till arbetsflöden och [Använda arbetsflöden på sidor](/help/sites-cloud/authoring/workflows/applying.md) för mer information.
+   >The **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Se föregående kommentar på den här sidan om publiceringsrättigheter och Hantera åtkomst till arbetsflöden och [Använda arbetsflöden på sidor](/help/sites-cloud/authoring/workflows/applying.md) för mer information.
 
    Resurserna grupperas efter de arbetsflöden som utlöses och de olika alternativen:
 

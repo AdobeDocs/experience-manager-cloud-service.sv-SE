@@ -2,9 +2,9 @@
 title: Hantera projekt
 description: Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet som du kan komma åt och hantera i projektkonsolen
 exl-id: be4616e7-18bc-4b2d-89f6-d04178ac7f3a
-source-git-commit: 54a098d8986c8bbd740bed50f8625c1025d2f6f4
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '893'
 ht-degree: 12%
 
 ---
@@ -57,7 +57,7 @@ Så här associerar du resurser med ditt projekt:
 
    >[!NOTE]
    >
-   >Projekttitlar som kan kopplas till ett projekt beskrivs i detalj i [Projektpaneler.](/help/sites-cloud/authoring/projects/overview.md#project-tiles)
+   >Projekttitlar som kan kopplas till ett projekt beskrivs i detalj i [Projektpaneler](/help/sites-cloud/authoring/projects/overview.md#project-tiles).
 
 1. Tryck/klicka **Skapa**. Resursen är länkad till ditt projekt och från och med nu kan du komma åt den från ditt projekt.
 
@@ -134,6 +134,7 @@ Så här gör du ett projekt inaktivt (eller aktivt):
 1. I **Projekt** konsolen, öppna projektet och hitta sedan **Projektinformation** platta.
 
    >[!NOTE]
+   >
    Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
 
 1. Tryck/klicka **Redigera**.

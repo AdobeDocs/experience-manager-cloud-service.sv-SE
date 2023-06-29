@@ -2,9 +2,9 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2068'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 
 ### Vad är en SPA? {#what-is-a-spa}
 
-Ett enkelsidigt program (SPA) skiljer sig från en konventionell sida på så sätt att det återges på klientsidan och i huvudsak är Javascript-drivet, beroende på Ajax-anrop för att läsa in data och dynamiskt uppdatera sidan. Det mesta eller allt innehåll hämtas en gång på en sida, och ytterligare resurser läses in asynkront efter behov baserat på användarinteraktionen med sidan.
+Ett enkelsidigt program (SPA) skiljer sig från en konventionell sida genom att det återges på klientsidan och i huvudsak är JavaScript-styrt, beroende på Ajax-anrop för att läsa in data och dynamiskt uppdatera sidan. Det mesta eller allt innehåll hämtas en gång på en sida, och ytterligare resurser läses in asynkront efter behov baserat på användarinteraktionen med sidan.
 
 Detta minskar behovet av siduppdatering och ger användaren en upplevelse som är smidig, snabb och som känns mer som en appupplevelse.
 
@@ -71,7 +71,7 @@ Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir 
 #### Utvecklare {#developers}
 
 * Utvecklarna vill att det ska finnas tydliga skillnader mellan innehåll och presentation.
-* Ren separation gör systemet mer utbyggbart samt möjliggör oberoende framend-utveckling.
+* Ren separation gör systemet mer utbyggbart och möjliggör oberoende frontendutveckling.
 
 ### Hur fungerar en SPA? {#how-does-a-spa-work}
 
@@ -177,7 +177,7 @@ Nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), går djupare in 
 
 1. Växla till fliken Nätverk i panelen Granska och läs in sidan igen.
 
-   Observera att de primära resurser som har lästs in för sidan är själva sidan, CSS, React Javascript, dess beroenden samt JSON-data för sidan.
+   Observera att de primära resurser som har lästs in för sidan är själva sidan, CSS, React JavaScript, dess beroenden och JSON-data för sidan.
 
    ![WKND SPA projektnätverksaktivitet](assets/wknd-network.png)
 
@@ -207,7 +207,7 @@ Nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), går djupare in 
 
 ### Interaktion med SPA {#interaction-with-the-spa-editor}
 
-Med exempelprogrammet WKND SPA Project är det tydligt hur appen fungerar och läses in när den publiceras, och utnyttjar innehållstjänster för JSON-innehållsleverans samt asynkron inläsning av resurser.
+Med exempelprogrammet WKND SPA Project är det tydligt hur appen fungerar och läses in när den publiceras, och utnyttjar innehållstjänster för leverans av JSON-innehåll och asynkron inläsning av resurser.
 
 Dessutom är det smidigt för innehållsförfattaren att skapa innehåll med en SPA redigerare i AEM.
 

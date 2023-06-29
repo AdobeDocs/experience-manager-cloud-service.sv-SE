@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Om du vill skapa innehåll för ett program med den universella redigeraren mås
 
 >[!TIP]
 >
->Se dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) om du vill se ett exempel på hur du konfigurerar ett AEM program så att det fungerar med den universella redigeraren.
+>Se [Komma igång med Universal Editor i AEM](getting-started.md) om du vill se ett exempel på hur du konfigurerar ett AEM program så att det fungerar med den universella redigeraren.
 
 ## Logga in {#sign-in}
 
@@ -84,7 +84,7 @@ Hjälpikonen ger snabb åtkomst till utbildningsresurser och supportresurser.
 
 #### Meddelanden {#notifications}
 
-Den här ikonen är märkt med antalet tilldelade ofullständiga [meddelanden.](/help/implementing/cloud-manager/notifications.md)
+Den här ikonen är märkt med antalet tilldelade ofullständiga [meddelanden](/help/implementing/cloud-manager/notifications.md).
 
 ![Meddelanden](assets/notifications.png)
 
@@ -96,7 +96,7 @@ Tryck eller klicka på ikonen som representerar användaren för att få åtkoms
 
 ### The Universal Editor Header {#universal-editor-header}
 
-Rubriken Universal Editor visas alltid längst upp på skärmen precis nedanför [Experience Cloud.](#experience-cloud-header) Du kan snabbt navigera till en annan sida för att redigera och publicera den aktuella sidan.
+Rubriken Universal Editor visas alltid längst upp på skärmen precis nedanför [Experience Cloud.](#experience-cloud-header) Du får snabb åtkomst för att navigera till en annan sida för att redigera och publicera den aktuella sidan.
 
 ![The Universal Editor header](assets/universal-editor-header.png)
 

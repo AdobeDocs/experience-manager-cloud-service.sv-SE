@@ -2,9 +2,9 @@
 title: Kontrollerar domännamnsstatus
 description: Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Manager.
 exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -40,13 +40,13 @@ Cloud Manager verifierar domänägarskap via TXT-värdet och visar ett av följa
 * **Domänen har verifierats och distribuerats** - Den här statusen anger att ditt anpassade domännamn är klart att användas.
 
    * Nu är ditt anpassade domännamn klart för testning och kan hänvisas till molnhanterarens domännamn.
-   * Se dokumentet [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) om du vill veta mer.
+   * Se [Konfigurera DNS-inställningar](/help/implementing/cloud-manager/custom-domain-names/configure-dns-settings.md) om du vill veta mer.
 
 * **Tar bort** - Borttagningen av ett anpassat domännamn pågår.
 
 * **Borttagningen misslyckades** - Det gick inte att ta bort det anpassade domännamnet. Du måste försöka igen.
 
-   * Se dokumentet [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md) om du vill veta mer.
+   * Se [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md) om du vill veta mer.
 
 Cloud Manager utlöser automatiskt en TXT-verifiering när du väljer **Spara** om kontrollsteg för **Lägg till anpassad domän** guide. För efterföljande verifieringar måste du aktivt markera ikonen för att verifiera igen bredvid statusen.
 
@@ -86,4 +86,4 @@ Om du har en befintlig CDN-konfiguration för dina anpassade domännamn visas et
 
 Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
-Se dokumentet [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) för mer information.
+Se [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) för mer information.

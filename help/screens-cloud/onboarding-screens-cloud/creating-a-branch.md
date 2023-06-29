@@ -2,9 +2,9 @@
 title: Skapa en gren
 description: På den här sidan beskrivs hur du skapar en gren i Cloud Manager för skärmar as a Cloud Service.
 exl-id: bcfdcb45-8547-4160-ba47-4f47916ca48a
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '225'
 ht-degree: 1%
 
 ---

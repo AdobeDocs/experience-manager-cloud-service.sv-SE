@@ -2,9 +2,9 @@
 title: Krav för verktyget Innehållsöverföring
 description: Krav för verktyget Innehållsöverföring
 exl-id: 41a9cff1-4d89-480c-b9fc-5e8efc2a0705
-source-git-commit: 1fc57dacbf811070664d5f5aaa591dd705516fa8
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
@@ -34,4 +34,4 @@ Granska alla överväganden som anges nedan:
 
 ## What&#39;s Next {#whats-next}
 
-När du har granskat kraven och har fastställt om du kan använda verktyget för innehållsöverföring i ditt migreringsprojekt, se [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html).
+När du har granskat kraven och har fastställt om du kan använda verktyget för innehållsöverföring i ditt migreringsprojekt går du till [Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html).

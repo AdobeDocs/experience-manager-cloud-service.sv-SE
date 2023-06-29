@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Det här dokumentet vägleder dig genom dessa steg.
 
 ## Begär åtkomst till den universella redigeraren {#request-access}
 
-Du måste först begära åtkomst till Universal Editor. Gå till [https://experience.adobe.com/#/aem/editor,](https://experience.adobe.com/#/aem/editor) logga in och validera om du har tillgång till den universella redigeraren.
+Du måste först begära åtkomst till Universal Editor. Se [https://experience.adobe.com/#/aem/editor](https://experience.adobe.com/#/aem/editor), logga in och validera om du har tillgång till Universell redigerare.
 
 Om du inte har åtkomst kan du begära det via ett formulär som är länkat på samma sida.
 
@@ -66,7 +66,7 @@ Om du inte implementerar ett React-program och/eller kräver serveråtergivning 
 
 För att kunna redigera AEM med din app med Universal Editor måste CORS och cookie-inställningarna göras i AEM.
 
-Följande [OSGi-konfigurationer måste anges för AEM.](/help/implementing/deploying/configuring-osgi.md)
+Följande [OSGi-konfigurationer måste anges för AEM-redigeringsinstansen](/help/implementing/deploying/configuring-osgi.md).
 
 * `SameSite Cookies = None` in `com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`
 * Ta bort X-FRAME-OPTIONS: SAMEORIGIN Header in `org.apache.sling.engine.impl.SlingMainServlet`
@@ -165,7 +165,7 @@ itemid="urn:<referenceName>:<resource>"
 
 Din app är nu instrumenterad för att använda den universella redigeraren!
 
-Se dokumentet [Skapa innehåll med den universella redigeraren](authoring.md) om du vill lära dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
+Se [Skapa innehåll med den universella redigeraren](authoring.md) om du vill lära dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 
 ## Ytterligare resurser {#additional-resources}
 

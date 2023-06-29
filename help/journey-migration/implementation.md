@@ -2,7 +2,7 @@
 title: Implementeringsfas
 description: Kontrollera att koden och innehållet är klara för migrering till molnet
 exl-id: d124f9a5-a754-4ed0-a839-f2968c7c8faa
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '2337'
 ht-degree: 8%
@@ -15,7 +15,7 @@ Under kundens implementeringsfas kommer du att utforska de verktyg du kan använ
 
 ## Story hittills {#story-so-far}
 
-I de föregående delarna av resan har du gått igenom [bekanta dig med förändringar i AEM as a Cloud Service](/help/journey-migration/getting-started.md), samt avgöra om distributionen är klar att flyttas till molnet med [beredskapsfas](/help/journey-migration/readiness.md).
+I tidigare delar av resan har du gått igenom [bekanta dig med förändringar i AEM as a Cloud Service](/help/journey-migration/getting-started.md)och avgör om distributionen är klar att flyttas till molnet med [beredskapsfas](/help/journey-migration/readiness.md).
 
 Artikeln fortsätter med råd om hur du använder verktygen från Adobe för att se till att koden och innehållet är klara att flyttas till molnet.
 

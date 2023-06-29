@@ -2,9 +2,9 @@
 title: Verktyg för AEM Dispatcher Converter
 description: Verktyg för AEM Dispatcher Converter
 exl-id: 2e95ff7b-cc94-477d-99ab-816a58998287
-source-git-commit: a9aa82c8258e6a5f43680069c65518093c0baf8d
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '338'
 ht-degree: 20%
 
 ---
@@ -29,7 +29,7 @@ Se [Dispatcher - översikt](https://experienceleague.adobe.com/docs/experience-m
 
 ### Konfiguration och testning av Apache och Dispatcher {#dispatcher-configurations-cloud}
 
-Lär dig att strukturera AEM as a Cloud Service Apache- och Dispatcher-konfigurationer samt hur du validerar och kör dem lokalt innan du distribuerar dem till molnmiljöer.
+Lär dig strukturera konfigurationerna för AEM as a Cloud Service Apache och Dispatcher och hur du validerar och kör den lokalt innan du distribuerar den i molnmiljöer.
 
 Se [Dispatcher i molnet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html) för mer information.
 

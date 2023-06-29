@@ -2,9 +2,9 @@
 title: Åtkomst till Admin Console
 description: När du har förstått de förberedelser som krävs för att komma igång och grunderna i AEMaaCS-strukturen är du redo att logga in på Admin Console för första gången.
 exl-id: 0ccce328-a356-4ba9-b7fe-f67abc25b924
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---

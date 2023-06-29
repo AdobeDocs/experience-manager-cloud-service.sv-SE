@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: a2064dcbec1c171b0a6de57b4197f4921d234428
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Du har just validerat en listfråga för en fullständig lista över alla inneh�
 
 >[!NOTE]
 >
->Om du inte kan välja **AEM demoresurser** från listrutan, kontakta Adobe kundtjänst eller kontakta [AEM testversioner Slack channel.](https://adobe-dx-support.slack.com/)
+>Om du inte kan välja **AEM demoresurser** från listrutan, kontakta Adobe Customer Care eller kontakta [AEM testversioner Slack channel.](https://adobe-dx-support.slack.com/)
 
 ## Fråga efter en viss del av exempelinnehållet {#bypath-query}
 
@@ -109,7 +109,7 @@ Genom att köra en byPath-fråga kan du hämta innehåll för ett visst innehål
 
    ![byPath-frågeresultat](assets/do-not-localize/bypath-query-2-3-4.png)
 
-Du har precis validerat en byPath-fråga för att hämta ett specifikt innehållsfragment som identifieras av sökvägen för det fragmentet.
+Du har just validerat en byPath-fråga för att hämta ett specifikt innehållsfragment som identifieras av sökvägen för det fragmentet.
 
 ## Fråga ditt eget innehåll {#own-queries}
 

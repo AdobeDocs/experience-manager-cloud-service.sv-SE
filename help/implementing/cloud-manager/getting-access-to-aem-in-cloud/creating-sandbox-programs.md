@@ -2,9 +2,9 @@
 title: Skapa sandlådeprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget sandlådeprogram för utbildning, demo, POC eller andra icke-produktionssyften.
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,9 @@ Läs mer om programtyper i dokumentet [Program- och programtyper.](program-types
 
 ## Skapa ett sandlådeprogram {#create}
 
-Följ de här stegen för att skapa ett sandlådeprogram.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
-
-1. Klicka på **Lägg till program** i skärmens övre högra hörn.
+1. Klicka på på Cloud Managers startsida, i skärmens övre högra hörn **Lägg till program**.
 
    ![Startsida för Cloud Manager](assets/cloud-manager-my-programs.png)
 
@@ -35,21 +33,21 @@ Följ de här stegen för att skapa ett sandlådeprogram.
 
 1. I **Konfigurera din sandlåda** väljer du vilka lösningar du vill aktivera i ditt sandlådeprogram genom att markera alternativen i **Lösningar och tillägg** tabell.
 
-   * Använd ändringarna bredvid lösningsnamnen för att visa ytterligare valfria tillägg för lösningarna.
+   * Använd ändringarna bredvid lösningsnamnen så att du kan se ytterligare valfria tillägg för lösningarna.
 
-   * The **Webbplatser** och **Resurser** -lösningar ingår alltid i sandlådeprogram och kan inte avmarkeras.
+   * The **Webbplatser** och **Resurser** lösningar ingår alltid i sandlådeprogram och kan inte avmarkeras.
 
    ![Välja lösningar och tillägg för en sandlåda](assets/sandbox-solutions-add-ons.png)
 
-1. När du har valt lösningar och tillägg för sandlådeprogrammet trycker du på **Skapa**.
+1. När du har valt lösningar och tillägg för ditt sandlådeprogram klickar du på **Skapa**.
 
-Du ser ett nytt sandlådeprogramkort på landningssidan med en statusindikator allt eftersom installationsprocessen fortskrider.
+Ett nytt sandlådeprogramkort visas på landningssidan med en statusindikator allt eftersom installationsprocessen fortskrider.
 
 ![Skapa sandlåda från översiktssida](assets/sandbox-setup.png)
 
 ## Sandlådeåtkomst {#access}
 
-Du kan visa information om sandlådekonfigurationen och få tillgång till miljön (när den är tillgänglig) genom att visa programöversiktssidan.
+Du kan visa detaljerna i sandlådekonfigurationen och få tillgång till miljön (när den är tillgänglig) genom att visa programöversiktssidan.
 
 1. På landningssidan för Cloud Manager klickar du på ellipsknappen på det nya programmet.
 
@@ -61,7 +59,7 @@ Du kan visa information om sandlådekonfigurationen och få tillgång till milj�
 
    >[!TIP]
    >
-   >Mer information om hur du får åtkomst till och hanterar Git-databasen finns i dokumentet [Åtkomst till Git.](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
+   >Mer information om hur du får åtkomst till och hanterar Git-databasen finns i [Åtkomst till Git](/help/implementing/cloud-manager/managing-code/accessing-repos.md).
 
 1. När utvecklingsmiljön har skapats kan du använda **AEM** för att logga in AEM.
 
@@ -71,6 +69,6 @@ Du kan visa information om sandlådekonfigurationen och få tillgång till milj�
 
    ![Distribuera sandlåda](assets/create-program-setup-deploy.png)
 
-Om du behöver växla till ett annat program eller gå tillbaka till översiktssidan för att skapa ett annat program klickar du på programnamnet längst upp till vänster på skärmen för att visa **Navigera till** alternativ.
+Om du måste växla till ett annat program, eller gå tillbaka till översiktssidan för att skapa ett annat program, klickar du på programnamnet längst upp till vänster på skärmen för att visa **Navigera till** alternativ.
 
 ![Navigera till](assets/create-program-a1.png)

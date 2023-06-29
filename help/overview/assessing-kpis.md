@@ -2,9 +2,9 @@
 title: Åtkomst till KPI:er
 description: Åtkomst till KPI:er
 exl-id: 8556e0e3-a557-4fd6-9b82-09cb1decff0a
-source-git-commit: 8bd001f6f70ce1aa9a63623b3ad68793fa355c9a
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -34,21 +34,21 @@ När du bedömer nyckeltal ska du se till att:
 1. KPI:n avser särskilt lösningen (Experience Manager).
 1. KPI:n är nära knuten till ett mål som ledningsgruppen anser vara kritiskt viktigt.
 1. Detta mål stöder direkt ett verksamhetsmål som drivs av minst en företagsledare på C-nivå.
-1. Du har baslinjedata som du behöver för att jämföra den aktuella situationen med de resultat du får när du har startat Experience Manager.
+1. Du har baslinjedata för att jämföra den aktuella situationen med de resultat du ser efter att du har startat Experience Manager.
 1. KPI:n spårar något som kan mätas med regelbundna intervall.
 
 När ni har bekräftat att ni har rätt nyckeltal måste ni ta reda på hur och när ni ska rapportera om varje nyckeltal till de relevanta aktörerna.
 
 Tänk på följande när du definierar rapporteringsprocessen:
 
-1. Vem riktar sig den här KPI-rapporten till? För varje nyckeltal ska du se till att du har identifierat en chefssponsor - någon som håller dig och resten av teamet ansvariga för mätningen - samt en bredare lista över personer som ska få regelbundna rapporter.
+1. Vem riktar sig den här KPI-rapporten till? För varje nyckeltal ska du se till att du har identifierat en chefssponsor - någon som kan hålla dig och resten av teamet ansvariga för mätvärdena - och en större lista över personer som ska få regelbundna rapporter.
 1. Hur ofta rapporterar du om denna KPI?
 1. Hur spåras denna KPI? Vem hämtar in data? Vilka datakällor använder den personen eller teamet? Finns det något du kan göra just nu för att förenkla den processen?
 1. Vilket format kommer rapporten att ha?
 1. Hur kommer rapporten att levereras?
 
-Efter lanseringen av Experience Manager får du snabbt en klar uppsättning nyckeltal som ger dig en uppfattning om du är på rätt spår. Om ni inte uppfyller någon av nyckeltalen måste ni justera hur era team använder Experience Manager. Om ni snabbt överskrider ett av era KPI-mål är det något att fira - men då vill ni omkalibrera målet för att få ett ännu bättre resultat.
+Efter lanseringen av Experience Manager får du snabbt en klar uppsättning nyckeltal som ger dig en uppfattning om du är på rätt spår. Om du inte uppfyller en av nyckeltalen måste du justera hur teamen använder Experience Manager. Om du snabbt överskrider ett av dina KPI-mål är det något att fira - men då måste du omkalibrera målet för att få ett ännu bättre resultat.
 
 >[!TIP]
 >
-> Om du vill ha mer hjälp med dina nyckeltal kan du kontakta [Adobe konsulttjänster](https://www.adobe.com/experience-cloud/consulting-services.html) eller din implementeringspartner.
+> Om du behöver mer hjälp med dina KPI:er kan du kontakta [Adobe konsulttjänster](https://www.adobe.com/experience-cloud/consulting-services.html) eller din implementeringspartner.

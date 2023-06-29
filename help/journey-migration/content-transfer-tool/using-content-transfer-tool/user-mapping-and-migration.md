@@ -2,9 +2,9 @@
 title: Användarmappning och huvudmigrering
 description: Översikt över användarmappning och huvudmigrering
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: caa04391077d594a828a42a1a5a6a03daa107168
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 3%
 
 ---

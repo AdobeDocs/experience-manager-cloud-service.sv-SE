@@ -4,9 +4,9 @@ description: Lär dig mer om de effektivaste strategierna som sammanställts av 
 feature: Language Copy
 role: Admin
 exl-id: 51b98c24-5566-4088-9010-bd39841a1633
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Om du är nybörjare på att översätta innehåll kan du läsa [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll, se [Sites Translation Journey,](/help/journey-sites/translation/overview.md) som vägleder dig genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealiskt för dem som saknar AEM eller översättningsupplevelse.
 
 ## Allmänt {#general}
 
@@ -32,7 +32,7 @@ Att skapa eller utöka en global webbnärvaro kan vara en komplex process, men m
 
 * När du utformar webbplatsstrukturen börjar du med att undersöka ditt innehåll och avgör var och på vilket språk innehållet skrivs. Platsen bör vara den översta nivån på din plats.
 * Det bästa sättet är att **språkbaserad struktur** med högst tre nivåer mellan den högsta utvecklingsnivån och landsinställningarna.
-* Använd en namngivningskonvention för språk/land som följer **[W3C-standarder.](/help/sites-cloud/authoring/fundamentals/accessible-content.md)**
+* Använd en namngivningskonvention för språk/land som följer **[W3C-standarder](/help/sites-cloud/authoring/fundamentals/accessible-content.md)**.
 * Bestäm hur innehållet ska distribueras mellan regioner och länder. Tänk på vilka länder som delar språk. Vi rekommenderar att du skapar språkmallsidor, ett lager med oaktiverade sidor, där översatt innehåll kan granskas och ändras och sedan pushas eller dras till en landsplats där det språket delas.
 * Det finns två sätt att skapa språkmallar: använda språkkopior och använda MSM/live-kopior.
    * Språkkopieringsmetoden är den som används i AEM körklara ramverk för översättningsintegrering, och därför är det enklaste sättet att komma igång. Ramverket har ett användargränssnitt som gör det till att börja med enkelt att sprida och översätta innehållsändringar från huvudspråket (t.ex. engelska) till mallsidor på överordnad språk. I takt med att projektet växer blir det dock allt viktigare att automatisera arbetsflödet för att hantera översättningen av det ökade antalet sidor och/eller språk.

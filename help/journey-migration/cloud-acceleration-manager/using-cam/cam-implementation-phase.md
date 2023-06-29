@@ -2,9 +2,9 @@
 title: Implementeringsfas i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över implementeringsfasen i Cloud Acceleration Manager.
 exl-id: e6ac88f0-4b3f-43a1-98bc-8c6608713784
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '662'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ Följ det här avsnittet för att utforska aktivitetskortet för kodkorrigering:
 >[!NOTE]
 >Granska innehållet på de här flikarna för att förstå några andra områden som inte omfattas av Best Practices Analyzer.
 
-The **Dispatcher** På -fliken finns information om hur du strukturerar de AEM as a Cloud Service Apache- och Dispatcher-konfigurationerna samt om hur du validerar och kör dem lokalt innan du distribuerar dem till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
+The **Dispatcher** På -fliken finns information om hur du strukturerar konfigurationerna för AEM as a Cloud Service Apache och Dispatcher samt hur du validerar och kör dem lokalt innan du distribuerar dem till molnmiljöer. Det beskriver även felsökning i molnmiljöer.
 
 ![bild](/help/journey-migration/cloud-acceleration-manager/assets/coderefactoring-2.png)
 

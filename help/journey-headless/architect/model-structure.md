@@ -2,9 +2,9 @@
 title: Läs om hur du skapar modeller för innehållsfragment i AEM
 description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
 exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '687'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ Du kan dra instanser av **Datatyper** till vänster - du definierar redan din mo
 
 ![Definiera fält](/help/sites-cloud/administering/content-fragments/assets/cfm-models-04.png)
 
-När du lägger till en datatyp måste du definiera **Egenskaper** för det fältet. De beror på vilken typ som används. Till exempel:
+När du har lagt till en datatyp måste du definiera **Egenskaper** för det fältet. De beror på vilken typ som används. Till exempel:
 
 ![Dataegenskaper](/help/sites-cloud/administering/content-fragments/assets/cfm-models-05.png)
 

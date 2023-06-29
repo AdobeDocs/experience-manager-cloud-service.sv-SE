@@ -2,9 +2,9 @@
 title: Redigeringsprogram
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Om ditt produktionsprogram hade förbättrat säkerheten aktiverat, ytterligare 
 
 ![Förbättrat skydd aktivt för ett program](assets/edit-program-enhanced.png)
 
-Den här inställningen kan inte ändras när programmet har skapats. Mer information om förbättrat säkerhetsalternativ finns i [Skapa produktionsprogram](creating-production-programs.md) -dokument.
+Den här inställningen kan inte ändras när programmet har skapats. Mer information om alternativet Förbättrat skydd finns i [Skapa produktionsprogram](creating-production-programs.md) -dokument.
 
 ## Tar bort sandlådeprogram {#delete-sandbox-program}
 

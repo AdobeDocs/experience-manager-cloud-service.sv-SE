@@ -1,23 +1,23 @@
 ---
 title: Lägga till ContextHub på Pages och Access Stores
-description: Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och för att länka till ContextHub Javascript-biblioteken
+description: Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken
 exl-id: 8bfe2cff-3944-4e86-a95c-ebf1cb13913c
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '926'
 ht-degree: 0%
 
 ---
 
 # Lägga till ContextHub på Pages och Access Stores {#adding-contexthub-to-pages-and-accessing-stores}
 
-Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och för att länka till ContextHub Javascript-biblioteken.
+Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och för att länka till ContextHub JavaScript-biblioteken.
 
-ContextHub Javascript-API:t ger åtkomst till kontextdata som hanteras av ContextHub. Den här sidan beskriver kortfattat huvudfunktionerna i API:t för att komma åt och ändra kontextdata. Följ länkarna till API-referensdokumentationen för att se detaljerad information och kodexempel.
+ContextHub JavaScript-API:t ger åtkomst till kontextdata som ContextHub hanterar. Den här sidan beskriver kortfattat huvudfunktionerna i API:t för att komma åt och ändra kontextdata. Följ länkarna till API-referensdokumentationen för att se detaljerad information och kodexempel.
 
 ## Lägga till ContextHub i en sidkomponent {#adding-contexthub-to-a-page-component}
 
-Om du vill aktivera ContextHub-funktionerna och länka till ContextHub Javascript-biblioteken inkluderar du `contexthub` i `head` på sidan. HTML-koden för sidkomponenten ska likna följande exempel:
+Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken inkluderar du `contexthub` i `head` på sidan. HTML-koden för sidkomponenten ska likna följande exempel:
 
 ```xml
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
@@ -89,11 +89,11 @@ Dessutom finns [`ContextHub.Utils.JSON`](contexthub-api.md#contexthub-utils-json
 
 ## Interagera med ContextHub Stores {#interacting-with-contexthub-stores}
 
-Använd [`ContextHub`](contexthub-api.md#ui-event-constants) Javascript-objekt för att hämta ett arkiv som ett Javascript-objekt. När du har fått lagringsobjektet kan du ändra de data som det innehåller. Använd [`getAllStores`](contexthub-api.md#getallstores) eller [`getStore`](contexthub-api.md#getstore-name) för att hämta butiken.
+Använd [`ContextHub`](contexthub-api.md#ui-event-constants) JavaScript-objekt för att få ett arkiv som ett JavaScript-objekt. När du har fått lagringsobjektet kan du ändra de data som det innehåller. Använd [`getAllStores`](contexthub-api.md#getallstores) eller [`getStore`](contexthub-api.md#getstore-name) för att hämta butiken.
 
 ### Åtkomst till butiksdata {#accessing-store-data}
 
-The [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) Javascript-klassen definierar flera funktioner för interaktion med butiksdata. Följande funktioner lagrar och hämtar flera dataobjekt som finns i objekt:
+The [`ContexHub.Store.Core`](contexthub-api.md#contexthub-store-core) JavaScript-klassen definierar flera funktioner för interaktion med butiksdata. Följande funktioner lagrar och hämtar flera dataobjekt som finns i objekt:
 
 * [addAllItems](contexthub-api.md#addallitems-tree-options)
 * [getTree](contexthub-api.md#gettree-includeinternals)
@@ -113,11 +113,11 @@ Observera att anpassade lagringskandidater kan definiera ytterligare funktioner 
 
 ### ContextHub Eventing {#contexthub-eventing}
 
-ContextHub innehåller ett ramverk för händelser som gör att du automatiskt kan reagera på butikshändelser. Varje lagringsobjekt innehåller en [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) objekt som är tillgängligt som butikens [`eventing`](contexthub-api.md#eventing) -egenskap. Använd [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) eller [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) funktion för att binda en Javascript-funktion till en store-händelse.
+ContextHub innehåller ett ramverk för händelser som gör att du automatiskt kan reagera på butikshändelser. Varje lagringsobjekt innehåller en [`ContextHub.Utils.Eventing`](contexthub-api.md#contexthub-utils-eventing) objekt som är tillgängligt som butikens [`eventing`](contexthub-api.md#eventing) -egenskap. Använd [`on`](contexthub-api.md#on-name-handler-selector-triggerforpastevents) eller [`once`](contexthub-api.md#once-name-handler-selector-triggerforpastevents) funktion för att binda en JavaScript-funktion till en store-händelse.
 
 ## Använda kontextnavet för att hantera cookies {#using-context-hub-to-manipulate-cookies}
 
-Context Hub Javascript API har stöd för olika webbläsare för hantering av webbläsarcookies. The [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) I namnutrymmet definieras flera funktioner för att skapa, ändra och ta bort cookies.
+JavaScript-API:t för kontextnavet har stöd för olika webbläsare för hantering av webbläsarcookies. The [`ContextHub.Utils.Cookie`](contexthub-api.md#contexthub-utils-cookie) I namnutrymmet definieras flera funktioner för att skapa, ändra och ta bort cookies.
 
 ## Bestämmer matchade ContextHub-segment {#determining-resolved-contexthub-segments}
 
@@ -127,7 +127,7 @@ Med segmentmotorn för ContextHub kan du avgöra vilket av de registrerade segme
 
 ContextHub-segment installeras under `/conf/<site>/settings/wcm/segments` nod.
 
-Följande segment installeras med [WKND självstudiewebbplats.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+Följande segment installeras med [WKND självstudiewebbplats](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 * sommar
 * vintertid

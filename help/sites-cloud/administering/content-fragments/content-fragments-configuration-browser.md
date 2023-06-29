@@ -4,7 +4,7 @@ description: Lär dig hur du aktiverar funktionerna Content Fragment och GraphQL
 feature: Content Fragments
 role: User
 exl-id: 55d442ae-ae06-4dfa-8e4e-b415385ccea5
-source-git-commit: 1fc57dacbf811070664d5f5aaa591dd705516fa8
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 3%
@@ -62,7 +62,7 @@ Använda vissa [Funktion för innehållsfragment](#creating-a-content-fragment-m
 
    1. Ange en **Titel**.
    1. The **Namn** blir nodnamnet i databasen.
-      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md).
       * Du kan justera den om det behövs.
    1. Om du vill aktivera deras användning väljer du
       * **Modeller för innehållsfragment**

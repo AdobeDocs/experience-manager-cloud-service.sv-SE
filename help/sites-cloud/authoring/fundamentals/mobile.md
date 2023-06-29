@@ -2,7 +2,7 @@
 title: Skapa en sida för mobila enheter
 description: När du skapar för mobilen kan du växla mellan flera emulatorer för att se vad slutanvändaren ser
 exl-id: fabd4468-3304-402f-9522-342da3bbae94
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enh
 
 >[!NOTE]
 >
->Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. Se [Skapa Live-kopior.](/help/sites-cloud/administering/msm/creating-live-copies.md)
+>Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. Se [Skapa Live-kopior](/help/sites-cloud/administering/msm/creating-live-copies.md).
 >
 >AEM utvecklare kan skapa nya enhetsgrupper. Se Skapa enhetsgruppsfilter.
 

@@ -2,9 +2,9 @@
 title: Exportera innehållsfragment till Adobe Target
 description: Exportera innehållsfragment till Adobe Target
 exl-id: 760e0a39-0805-498e-a2c9-038fd1e1058d
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2227'
+source-wordcount: '2222'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Följande åtgärd krävs:
 
 1. Du måste [integrera AEM med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
 
-<!-- link rewriter - targets in content-fragments-customizing don't exist yet
+<!-- link rewriter - targets in content-fragments-customizing do not exist yet
 
 1. Content Fragments are exported from the AEM author instance, so you need to [Configure the AEM Link Externalizer](/help/implementing/developing/extending/content-fragments-customizing.md#configuring-the-aem-link-externalizer) on the author instance to ensure that any references within the Content Fragment are externalized for web delivery.
 
@@ -324,7 +324,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
    ![Exportera till Adobe Target](assets/cfm-export-target-01.png)
 
-   <!-- this note doesn't seem to be accurate for CFs -->
+   <!-- this note does not seem to be accurate for CFs -->
 
    <!--
    
@@ -364,7 +364,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
 ## Använda dina innehållsfragment i Adobe Target {#using-your-content-fragments-in-adobe-target}
 
-När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Ta en titt på [specifik Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html) om du vill veta vad du kan uppnå där.
+När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Se [specifik Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html) om du vill veta vad du kan uppnå där.
 
 >[!NOTE]
 >
@@ -396,7 +396,7 @@ För att undvika sådana situationer:
 
 ## Ytterligare resurser {#further-resources}
 
-Mer information finns även i:
+Mer information finns i följande:
 
 <!--
 * [Creating a Target Cloud Configuration](/help/sites-cloud/integrating/integrating-adobe-target.md#create-configuration)

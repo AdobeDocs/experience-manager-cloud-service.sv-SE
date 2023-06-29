@@ -2,10 +2,10 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2986'
-ht-degree: 4%
+source-wordcount: '2978'
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,7 @@ Klicka eller tryck **Nästa** för att gå vidare till nästa sida i översikten
 
 ## Global navigering {#global-navigation}
 
-Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
+Du kan navigera mellan konsolerna med den globala navigeringspanelen. Detta aktiveras som en listruta i helskärmsläge när du klickar på eller trycker på länken Adobe Experience Manager längst upp till vänster på skärmen.
 
 Du kan stänga den globala navigeringspanelen genom att klicka eller trycka på **Stäng** för att återgå till din tidigare plats.
 
@@ -71,7 +71,7 @@ Följande konsoler finns i Navigation:
 | Sites | Med platskonsolerna kan du [skapa, visa och hantera webbplatser](/help/sites-cloud/authoring/fundamentals/organizing-pages.md) som körs på din AEM. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
 | Experience Fragments | An [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en fristående upplevelse som kan återanvändas i olika kanaler och som har variationer, vilket besparar dig problem med att kopiera och klistra in upplevelser eller delar av upplevelser. |
 | Assets | Med Resurskonsolen kan du importera och hantera [digitalt material som bilder, videoklipp, dokument och ljudfiler](/help/assets/overview.md). Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. Du kan också skapa och hantera [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) från Assets-konsolen. |
-| Personanpassning | Den här konsolen innehåller ett ramverk med verktyg för [skapa riktat innehåll och presentera personaliserade upplevelser.](/help/sites-cloud/authoring/personalization/overview.md) |
+| Personanpassning | Den här konsolen innehåller ett ramverk med verktyg för [skapa riktat innehåll och presentera personaliserade upplevelser](/help/sites-cloud/authoring/personalization/overview.md). |
 | Innehållsfragment | [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) Med kan du utforma, skapa, strukturera och publicera sidoberoende innehåll. De gör att du kan ta fram strukturerat innehåll som är klart för användning på flera platser/i flera kanaler, och som är idealiskt för både sidutveckling och headless-leverans. |
 
 ## Panelen Verktyg {#tools-panel}
@@ -216,7 +216,7 @@ Den åtgärd som är tillgänglig i verktygsfältet ändras så att den återspe
 
 Hur du [välj en resurs](#viewing-and-selecting-resources) beror på vyn.
 
-På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Om du klickar eller trycker på ellipsen (de tre punkterna eller **...**) öppnas en listruta med alla återstående åtgärder. När du till exempel har valt en sida i **Sites**-konsolen:
+På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt bli längre än det tillgängliga utrymmet. När detta inträffar visas ytterligare alternativ. Klicka eller peka på ellipsen (de tre punkterna eller **...**) öppnar en nedrullningsbar väljare med alla återstående åtgärder. När du till exempel har valt en sida i **Sites**-konsolen:
 
 ![Ytterligare alternativ](/help/sites-cloud/authoring/assets/additional-options.png)
 
@@ -226,7 +226,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 ## Snabbåtgärder {#quick-actions}
 
-I [Kortvy](#card-view) vissa åtgärder är tillgängliga både som snabbikoner och i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
+I [Kortvy](#card-view) vissa åtgärder är tillgängliga som snabbåtgärdsikoner och finns i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
 
 Snabbåtgärderna är synliga när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
 
@@ -402,7 +402,7 @@ Om du bara väljer innehåll visas bara ikonen för skenor. När något annat al
 
 Innehållsträdet kan användas för att snabbt navigera i platshierarkin på sidopanelen och visa mycket information om sidorna i den aktuella mappen.
 
-Med innehållsträdets sidopanel i kombination med en listvy eller kortvy kan användarna enkelt se projektets hierarkiska struktur och enkelt navigera i innehållsstrukturen med innehållsträdets sidopanel, samt visa detaljerad sidinformation i listvyn.
+Med innehållsträdets sidopanel i kombination med en listvy eller kortvy kan användarna enkelt se projektets hierarkiska struktur och enkelt navigera i innehållsstrukturen med innehållsträdets sidopanel samt visa detaljerad sidinformation i listvyn.
 
 ![Innehållsträd](/help/sites-cloud/authoring/assets/content-tree.png)
 
@@ -460,15 +460,15 @@ De här alternativen är tillgängliga via markören bredvid **Kommentar** fält
 
 ### Plats {#site}
 
-**Plats** visar information om webbplatser [som har skapats med en webbplatsmall.](/help/sites-cloud/administering/site-creation/create-site.md)
+**Plats** visar information om webbplatser [som skapats med en webbplatsmall](/help/sites-cloud/administering/site-creation/create-site.md).
 
 ![Site rail](../assets/site-rail.png)
 
-Se dokumentet [Använda webbplatsservern för att hantera ditt webbplatstema](/help/sites-cloud/administering/site-creation/site-rail.md) om du vill ha mer information om hur du kan använda järnvägen för att hantera [temat för din webbplats.](/help/sites-cloud/administering/site-creation/site-themes.md)
+Se dokumentet [Använda webbplatsservern för att hantera ditt webbplatstema](/help/sites-cloud/administering/site-creation/site-rail.md) om du vill ha mer information om hur du kan använda järnvägen för att hantera [tema för din webbplats](/help/sites-cloud/administering/site-creation/site-themes.md).
 
 >[!TIP]
 >
->En fullständig beskrivning av processen att skapa en ny webbplats från en mall och anpassa temat finns i [En resa där man snabbt skapar webbplatser.](/help/journey-sites/quick-site/overview.md)
+>En fullständig beskrivning av processen att skapa en ny webbplats från en mall och anpassa temat finns i [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md).
 
 ### Filter {#filter}
 

@@ -2,9 +2,9 @@
 title: Anpassade felsidor
 description: AEM har en standardfelhanterare för hantering av HTTP-fel, som kan anpassas.
 exl-id: b74c65d1-8ef5-4ad4-8255-8187f3b1d84c
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ När bearbetningen av en begäran resulterar i ett undantag, är Apache Sling-ra
    * HTTP-svarskoden 500
    * Undantagets stackspårning
 
-Av [anpassa de sidor som visas i felhanteraren](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` kan skapas. Det används dock bara om `HttpServletResponse.sendError(500)` exekveras uttryckligen, d.v.s. från en undantagskatalog.
+Av [anpassa de sidor som visas i felhanteraren](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` kan skapas. Det används dock bara om `HttpServletResponse.sendError(500)` exekveras uttryckligen, d.v.s. från en undantagskattekare.
 
 Annars är svarskoden inställd på 500, men `500.jsp` skriptet körs inte.
 
@@ -77,6 +77,6 @@ Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsam
 >
 >På en författarinstans [CQ WCM-felsökningsfilter](/help/implementing/deploying/configuring-osgi.md) är aktiverat som standard. Detta resulterar alltid i svarskoden 200. Standardfelhanteraren svarar genom att skriva den fullständiga stackspårningen till svaret.
 >
->För en anpassad felhanterare behövs svar med koden 500, så [CQ WCM Debug Filter måste inaktiveras.](/help/implementing/deploying/configuring-osgi.md) Detta garanterar att svarskoden 500 returneras, vilket i sin tur utlöser rätt Sling-felhanterare.
+>För en anpassad felhanterare behövs svar med koden 500, så [CQ WCM Debug Filter måste inaktiveras](/help/implementing/deploying/configuring-osgi.md). Detta garanterar att svarskoden 500 returneras, vilket i sin tur utlöser rätt Sling-felhanterare.
 >
 >I en publiceringsinstans är CQ WCM-felsökningsfiltret **alltid** inaktiverat (även om det har konfigurerats som aktiverat).

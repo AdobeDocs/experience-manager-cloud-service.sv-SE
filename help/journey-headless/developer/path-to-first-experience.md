@@ -2,9 +2,9 @@
 title: Vägen till din första upplevelse med AEM utan headless
 description: I den här delen av den AEM Headless Developer Journey kommer du att förstå hur du implementerar din första headless-upplevelse i AEM, inklusive planeringsöverväganden, och också lära dig bästa praxis för att göra din väg så smidig som möjligt.
 exl-id: 172ad8d8-5067-4452-bf91-1eea9a39a7bc
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Innehållsförfattare skapar innehåll baserat på de innehållsmodeller som har
 
 Innan du börjar använda headless i AEM måste du se till att alla nödvändiga funktioner är aktiverade. I det här avsnittet beskrivs vad som krävs. Stegen för att utföra dessa steg beskrivs senare i [AEM Headless Developer Journey.](#overview.md)
 
-Du kan även referera till [ytterligare resurser](#additional-resources) för mer information om de olika ämnena.
+Du kan också se [ytterligare resurser](#additional-resources) för mer information om de olika ämnena.
 
 ### Konfiguration {#configuration}
 
@@ -106,7 +106,7 @@ Ett headless-projekt är inte bara framgångsrikt på grund av den teknik som an
 * Gruppera liknande innehåll i en mapp.
    * Det är troligare att en innehållsförfattare kopierar och klistrar in befintligt innehåll för att skapa nytt innehåll. Om du gör detta i samma mapp blir det därför effektivare.
    * AEM tillåter att tillåtna modeller anges per mapp så att **Skapa nytt** visas endast de modeller som stöds på den platsen.
-* Det går att förenkla skapandet av nya innehållsfragment i den infogade redigeraren för innehållsfragment om rotmappen är inställd i modellen. Sedan behöver inte administratören välja en plats, utan bara ange ett namn och kan börja redigera den nya referensen.
+* Det går att förenkla skapandet av nya innehållsfragment i den infogade redigeraren för innehållsfragment om rotmappen är inställd i modellen. Sedan behöver inte behandlaren välja en plats, utan bara ange ett namn och kan börja redigera den nya referensen.
 
 ### Skapa innehåll {#authoring}
 

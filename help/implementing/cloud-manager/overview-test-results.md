@@ -2,7 +2,7 @@
 title: Översikt över testning av Cloud Manager
 description: Få en översikt över de tre typer av tester som Cloud Manager automatiskt kör för att säkerställa kvaliteten på din anpassade kod.
 exl-id: 5f5c97b1-4180-4f49-af8b-257d4744766e
-source-git-commit: 94f818b7622e0f878d15ba30e2f07a169bd114c3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Det finns tre testkategorier som stöds av Cloud Manager för rörledningar för
 
 1. [Funktionstestning](/help/implementing/cloud-manager/functional-testing.md)
 
-   * Funktionstestning är en del av testfasen i ett [produktionsflöde](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och eventuellt en del av testfasen i [icke-produktionsrörledning.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
+   * Funktionstestning är en del av testfasen i ett [produktionsflöde](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) och eventuellt en del av testfasen i [rörledning för icke-produktion](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md).
 
 1. [Testning av Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
 

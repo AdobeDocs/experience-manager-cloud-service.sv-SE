@@ -2,9 +2,9 @@
 title: Publicera översatt rubrikfritt innehåll
 description: Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna när innehållet uppdateras.
 exl-id: eb8d1152-ed37-47ca-86a8-6a66c010ee62
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1389'
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ Du ser att ett nytt jobbkort har lagts till i projektet. I det här exemplet har
 
 ![Ytterligare översättningsjobb har lagts till](assets/additional-translation-job.png)
 
-Du kan lägga märke till att statistiken på det nya kortet (antal tillgångar och innehållsfragment) är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som behöver översättas. Detta inkluderar omöversättning av uppdaterat innehåll samt förstagångsöversättning av nytt innehåll.
+Du kan lägga märke till att statistiken på det nya kortet (antal tillgångar och innehållsfragment) är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som behöver översättas. Detta inkluderar omöversättning av uppdaterat innehåll och förstagångsöversättning av nytt innehåll.
 
 Från och med nu [starta och hantera översättningsjobbet på samma sätt som du gjorde originalet.](translate-content.md#using-translation-project)
 

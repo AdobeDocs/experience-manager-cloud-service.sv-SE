@@ -2,9 +2,9 @@
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 exl-id: 8d80d867-2d0f-4ddb-8a06-f9441e6d85ce
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '5412'
+source-wordcount: '5410'
 ht-degree: 5%
 
 ---
@@ -549,7 +549,7 @@ Så här konfigurerar du mål och inställningar om du använder Adobe Target:
 1. Om du vill ha mer kontroll över hur framgångsvärdena räknas klickar du på **Avancerade inställningar** för att få tillgång till dem.
 1. Klicka **Spara**.
 
-När du har konfigurerat kan du [visa hur dina aktiviteter fungerar](/help/sites-cloud/authoring/personalization/activities.md#viewing-performance-and-converting-winning-experiences-a-b-test) som använder Adobe Target (antingen upplevelse eller A/B-testmål). Dessutom kan ni med A/B-testanpassning [konvertera vinnarna.](/help/sites-cloud/authoring/personalization/activities.md#viewing-performance-and-converting-winning-experiences-a-b-test)
+När du har konfigurerat kan du [visa hur dina aktiviteter fungerar](/help/sites-cloud/authoring/personalization/activities.md#viewing-performance-and-converting-winning-experiences-a-b-test) som använder Adobe Target (antingen upplevelse eller A/B-testmål). Dessutom kan ni med A/B-testanpassning [konvertera vinnarna](/help/sites-cloud/authoring/personalization/activities.md#viewing-performance-and-converting-winning-experiences-a-b-test).
 
 ## Simulera en upplevelse {#simulating-an-experience}
 
@@ -634,4 +634,4 @@ Om du väljer Adobe Target som motor:
 >
 >Välj **ContextHub** som motor om du använder ContextHub för målinriktning. Mer information finns i Konfigurera ContextHub.
 <!--You select **Adobe Campaign** as the engine if you are integrating AEM with Adobe Campaign. See [Integrating AEM with Adobe Campaign](/help/sites-administering/campaign.md) for more information.-->
-<!--Select **ContextHub** as the engine if you are using ContextHub for targeting. See [Configuring ContextHub.](/help/sites-administering/contexthub-config.md)-->
+<!--Select **ContextHub** as the engine if you are using ContextHub for targeting. See [Configuring ContextHub](/help/sites-administering/contexthub-config.md).-->

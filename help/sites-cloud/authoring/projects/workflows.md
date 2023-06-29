@@ -2,7 +2,7 @@
 title: Arbeta med projektarbetsflöden
 description: Det finns en mängd olika projektarbetsflöden att välja mellan.
 exl-id: a5c9a6df-7def-43f3-b41b-524a4f4211e9
-source-git-commit: 89972691dadb9573160ba16a220c5b7cb3ae9742
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 10%
@@ -21,18 +21,18 @@ De projektarbetsflöden som är tillgängliga från paketet innehåller följand
 
 Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
-|  | **Enkelt projekt** | **Översättningsprojekt** |
+|   | **Enkelt projekt** | **Översättningsprojekt** |
 |---|:-:|:-:|
 | Arbetsflöde för projektgodkännande | x |  |
 | Begär start | x |  |
 | Begär landningssida | x |  |
-| Begär e-post | x |  |
+| Begär e-post | x | |
 | DAM - skapa &amp;språkkopia; |  | x |
-| DAM Skapa och översätt &amp;språkkopia; |  | x |
+| DAM Skapa och översätt &amp;språkkopia; |   | x |
 
 >[!NOTE]
 >
->&amp;ast; De här arbetsflödena har inte startats från **Arbetsflöde** i Projekt. Se [Skapa språkkopior för resurser.](/help/sites-cloud/administering/translation/managing-projects.md)
+>&amp;ast; De här arbetsflödena har inte startats från **Arbetsflöde** i Projekt. Se [Skapa språkkopior för resurser](/help/sites-cloud/administering/translation/managing-projects.md).
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 
@@ -70,4 +70,4 @@ Med det här arbetsflödet kan du begära att programmet startas.
 
 ## Skapa (och översätt) språkkopieringsarbetsflöde för resurser {#create-and-translate-language-copy-workflow-for-assets}
 
-Arbetsflödena **Skapa språkkopia** och **Skapa och översätt språkkopia**[ beskrivs i detalj när du skapar språkkopior för resurser.](/help/assets/translate-assets.md)
+Arbetsflödena **Skapa språkkopia** och **Skapa och översätt språkkopia**[ beskrivs i detalj när du skapar språkkopior för resurser](/help/assets/translate-assets.md).

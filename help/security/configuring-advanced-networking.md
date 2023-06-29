@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '3579'
+source-wordcount: '3571'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Ett program kan tillhandahålla en enda avancerad nätverksvariant. När du ska 
 
 >[!NOTE]
 >
->Kunder som redan har etablerat sig med äldre dedikerad utgångsteknik som behöver konfigurera något av dessa alternativ bör inte göra det, annars kan platsanslutningen påverkas. Kontakta Adobe Support för att få hjälp.
+>Kunder som redan har etablerat sig med äldre dedikerad utgångsteknik som behöver konfigurera något av dessa alternativ bör inte göra det, annars kan platsanslutningen påverkas. Kontakta supporten för Adobe om du behöver hjälp.
 
 ## Flexibla portägg {#flexible-port-egress}
 
@@ -44,11 +44,11 @@ Med den här avancerade nätverksfunktionen kan du konfigurera AEM as a Cloud Se
 
 ### Överväganden {#flexible-port-egress-considerations}
 
-Det rekommenderas att du väljer Flexibel portutgång om du inte behöver VPN och inte behöver en dedikerad IP-adress för utgångar eftersom trafik som inte är beroende av en dedikerad utgångs kan uppnå högre genomströmning.
+Flexibel portutgång rekommenderas om du inte behöver VPN och inte behöver en dedikerad IP-adress för utgångar eftersom trafik som inte är beroende av en dedikerad utgångs kan uppnå högre genomströmning.
 
 ### Konfiguration {#configuring-flexible-port-egress-provision}
 
-En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas, bara värdet för `flexiblePortEgress` för `kind` parameter och region. Slutpunkten svarar med `network_id`, samt annan information, inklusive status. Den fullständiga uppsättningen med parametrar och exakt syntax, liksom viktig information som vilka parametrar som inte kan ändras senare. [kan refereras i API-dokumenten.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure)
+En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas, bara värdet för `flexiblePortEgress` för `kind` parameter och region. Slutpunkten svarar med `network_id`och annan information, inklusive status. Den fullständiga uppsättningen parametrar och exakt syntax samt viktig information som vilka parametrar som inte kan ändras senare. [kan refereras i API-dokumenten.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure)
 
 När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter innan den etableras. Ett anrop till Cloud Managers [slutpunkt för GET av nätverksinfrastruktur](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) skulle visa statusen&quot;ready&quot;.
 
@@ -179,7 +179,7 @@ ProxyPassReverse "/somepath" "https://example.com:8443"
 
 >[!NOTE]
 >
->Om du har fått en dedikerad utgående IP-adress före versionen från september 2021 (10/6/21), se [Äldre dedikerade gruppadresskunder](#legacy-dedicated-egress-address-customers).
+>Om du har fått en dedikerad utgående IP-adress före versionen från september 2021 (10/6/21) kan du läsa [Äldre dedikerade gruppadresskunder](#legacy-dedicated-egress-address-customers).
 
 ### Fördelar {#benefits}
 
@@ -353,7 +353,7 @@ De flesta VPN-enheter med IPSec-teknik stöds. Läs listan över enheter på [de
 
 ### Skapande {#vpn-creation}
 
-En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas och skickar en nyttolast med konfigurationsinformation som: värdet på vpn för `kind` parameter, region, adressutrymme (lista med CIDR - observera att detta inte kan ändras senare), DNS-matchare (för att matcha namn i kundens nätverk) och VPN-anslutningsinformation som gatewaykonfiguration, delad VPN-nyckel och IP-säkerhetsprincipen. Slutpunkten svarar med `network_id`, samt annan information, inklusive status. Hela uppsättningen parametrar och exakt syntax ska refereras i [API-dokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
+En gång per program, POSTEN `/program/<programId>/networkInfrastructures` slutpunkten anropas och skickar en nyttolast med konfigurationsinformation som: värdet på vpn för `kind` parameter, region, adressutrymme (lista med CIDR - observera att detta inte kan ändras senare), DNS-matchare (för att matcha namn i kundens nätverk) och VPN-anslutningsinformation som gatewaykonfiguration, delad VPN-nyckel och IP-säkerhetsprincipen. Slutpunkten svarar med `network_id`och annan information, inklusive status. Hela uppsättningen parametrar och exakt syntax ska refereras i [API-dokumentation](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
 
 När det anropas tar det normalt mellan 45 och 60 minuter innan nätverksinfrastrukturen etableras. API:ts GET-metod kan anropas för att returnera den aktuella statusen, som så småningom kommer att vändas från `creating` till `ready`. Läs API-dokumentationen för alla lägen.
 
@@ -424,7 +424,7 @@ Tabellen nedan beskriver trafikdirigering.
   </tr>
   <tr>
     <td></td>
-    <td>Om IP-adressen inte faller inom <i>Adressutrymme för VPN-gateway</i> och via http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
+    <td>Om IP inte faller i <i>Adressutrymme för VPN-gateway</i> och via http-proxykonfiguration (konfigurerad som standard för http/s-trafik med Java HTTP-klientbibliotek som standard)</td>
     <td>Alla</td>
     <td>Genom den dedikerade IP-adressen för utgångar</td>
     <td></td>
@@ -453,7 +453,7 @@ Tabellen nedan beskriver trafikdirigering.
   </tr>
   <tr>
     <td></td>
-    <td>Om IP-adressen inte faller inom <i>Adressutrymme för VPN-gateway</i> omfång och klienten ansluter till <code>AEM_PROXY_HOST</code> env-variabel med en <code>portOrig</code> deklareras i <code>portForwards</code> API-parameter</td>
+    <td>Om IP inte faller i <i>Adressutrymme för VPN-gateway</i> omfång och klienten ansluter till <code>AEM_PROXY_HOST</code> env-variabel med en <code>portOrig</code> deklareras i <code>portForwards</code> API-parameter</td>
     <td>Alla</td>
     <td>Genom den dedikerade IP-adressen för utgångar</td>
     <td></td>

@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2401'
+source-wordcount: '2389'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ I det här avsnittet beskrivs stegen som krävs för att lägga till ett UI-test
 
 >[!TIP]
 >
->The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) Du kan skapa ett UI-testprojekt åt dig, som uppfyller följande beskrivning, om du inte har några särskilda krav för programmeringsspråket.
+>The [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) Du kan generera ett UI-testprojekt åt dig, som uppfyller följande beskrivning, om du inte har några särskilda krav för programmeringsspråket.
 
 ### Skapa en kontext för Docker Build {#generate-docker-build-context}
 
@@ -259,7 +259,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 
 >[!NOTE]
 >
-> Om du behöver mer resurser skapar du ett kundvårdsärende och beskriver ditt användningsfall. Adobe kommer att granska din begäran och ge lämplig hjälp.
+> Om du behöver mer resurser kan du skapa ett kundvårdsärende och beskriva hur det används. Adobe kommer att granska din begäran och ge lämplig hjälp.
 
 ## Selenspecifik information
 
@@ -271,7 +271,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
 1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.

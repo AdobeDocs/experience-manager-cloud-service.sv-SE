@@ -2,9 +2,9 @@
 title: Versionsinformation om 2022.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2022.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: cf2133dc-56cd-4a07-ab11-72e16f015ff5
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Titta på videon med versionsöversikten för juni 2022 om du vill se en sammanf
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* En ny [användargränssnitt](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) är nu tillgängligt för innehållsadministratörer och innehållsförfattare att effektivt hantera (vidta åtgärder som att publicera, avpublicera, kopiera, flytta osv.), söka/filtrera och skapa innehållsfragment för Headless-fall.
+* En ny [användargränssnitt](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) är nu tillgängligt för innehållsadministratörer och innehållsförfattare att effektivt hantera (vidta åtgärder som att publicera, avpublicera, kopiera, flytta och så vidare), söka/filtrera och skapa innehållsfragment för Headless-fall.
 
   ![Konsol för innehållsfragment](/help/release-notes/assets/cf-ui.png)
 
@@ -67,7 +67,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 ![översikt över egenskaper för produktcockpit](/help/assets/CIF/product_cockpit_properties_overview.png)
 
-* Förbättrad kompatibilitet och tillförlitlighet för anslutningar från tredje part vid I/O-körning
+* Förbättrad kompatibilitet och tillförlitlighet för tredjepartsanslutningar i I/O-miljön
 
 * Förbättrat stöd för överskrivningar av GQL-klientkonfigurationen (ange t.ex. anpassad cachelagring)
 
@@ -98,7 +98,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här.](/help/implementing/cloud-manager/release-notes/current.md)
+Du hittar en fullständig lista över månatliga utgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes/current.md).
 
 ## Migreringsverktyg {#migration-tools}
 

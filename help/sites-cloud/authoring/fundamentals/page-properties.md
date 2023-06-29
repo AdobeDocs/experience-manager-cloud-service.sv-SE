@@ -2,16 +2,16 @@
 title: Redigera sidegenskaper
 description: Definiera de egenskaper som krävs för en sida
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2340'
+source-wordcount: '2341'
 ht-degree: 3%
 
 ---
 
 # Redigera sidegenskaper {#editing-page-properties}
 
-Du kan definiera de egenskaper som krävs för en sida. Dessa kan variera beroende på sidans beskaffenhet. Vissa sidor kan till exempel vara kopplade till en live-kopia medan andra inte är det och live-kopieringsinformationen är tillgänglig efter behov.
+Du kan definiera de egenskaper som krävs för en sida. Dessa kan variera beroende på sidans beskaffenhet. Vissa sidor kan t.ex. vara kopplade till en live-kopia medan andra inte är det och live-kopieringsinformationen är tillgänglig om det är lämpligt.
 
 ## Sidegenskaper {#page-properties}
 
@@ -196,15 +196,15 @@ Egenskaperna fördelas på flera flikar.
 
 ### Blueprint {#blueprint}
 
-Den här fliken visas bara för sidor som fungerar som utkast. Kort text är grunden för Live-kopior och ingår i [Hantering av flera webbplatser.](/help/sites-cloud/administering/msm/overview.md)
+Den här fliken visas bara för sidor som fungerar som utkast. Kort text är grunden för Live-kopior och ingår i [Hantering av flera webbplatser](/help/sites-cloud/administering/msm/overview.md).
 
-* **Aktuella Live-kopior** - Visar en lista över sidor som är baserade (d.v.s. live-kopior av) på den här översiktssidan
+* **Aktuella Live-kopior** - Visar en lista över sidor som är baserade på (d.v.s. live-kopior av) den här översiktssidan
 
 * **Utrullningskonfigurationer** - Styr under vilka omständigheter ändringar ska spridas till Live Copy
 
 ### Live Copy {#live-copy}
 
-Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Live-kopior är en del av [Hantering av flera webbplatser.](/help/sites-cloud/administering/msm/overview.md).
+Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Live-kopior är en del av [Hantering av flera webbplatser](/help/sites-cloud/administering/msm/overview.md).
 
 * **Synkronisera** - Synkronisera Live Copy med utkast, med lokala ändringar
 * **Återställ** - Återställ live-kopia till blå text och ta bort lokala ändringar

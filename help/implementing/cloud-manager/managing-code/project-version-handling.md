@@ -2,9 +2,9 @@
 title: Versionshantering för Maven Project
 description: För testnings- och produktionsdistributioner av AEM as a Cloud Service genererar Cloud Manager en unik, stegvis version.
 exl-id: 658bcbed-0733-45da-a3e3-9a5f817099c5
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '264'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 För testnings- och produktionsdistributioner av AEM as a Cloud Service genererar Cloud Manager en unik, stegvis version
 
-Den här versionen visas på [informationssida om pipeline-körning](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) samt aktivitetssidan. När ett bygge körs uppdateras Maven-projektet till att använda den här versionen och en tagg skapas i Git-databasen med den versionen som namn.
+Den här versionen visas på [informationssida om pipeline-körning](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) och aktivitetssidan. När ett bygge körs uppdateras Maven-projektet till att använda den här versionen och en tagg skapas i Git-databasen med den versionen som namn.
 
 Om den ursprungliga projektversionen uppfyller vissa kriterier kommer den uppdaterade projektversionen från Maven att sammanfoga både den ursprungliga projektversionen och den version av Cloud Manager som genererats. Men taggen använder alltid den genererade versionen. För att sammanfogningen ska ske måste den ursprungliga projektversionen ha exakt tre versionssegment, till exempel `1.0.0` eller `1.2.3`, men inte `1.0` eller `1`och originalversionen får inte sluta med `-SNAPSHOT`.
 

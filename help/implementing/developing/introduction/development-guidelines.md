@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2591'
+source-wordcount: '2586'
 ht-degree: 1%
 
 ---
@@ -152,7 +152,7 @@ Loggnivåerna är följande:
 
 ### Trådbitar {#thread-dumps}
 
-Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande inte hämtas på ett självbetjäningssätt. Under tiden kontaktar du AEM om tråddumpar behövs för att felsöka ett problem och ange exakt tidsfönster.
+Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande inte hämtas på ett självbetjäningssätt. Under tiden kontaktar du AEM om det behövs tråddumpar för att felsöka ett problem och ange exakt tidsfönster.
 
 ## CRX/DE Lite och Developer Console {#crxde-lite-and-developer-console}
 
@@ -286,4 +286,4 @@ Se [Apache Oak-dokumentation](https://jackrabbit.apache.org/oak/docs/dos_and_don
 
 ## [!DNL Assets] riktlinjer för utveckling och användningsfall {#use-cases-assets}
 
-Mer information om användningsfall, rekommendationer och referensmaterial för Assets as a Cloud Service finns i [Utvecklarreferenser för Assets.](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis)
+Mer information om användningsfall, rekommendationer och referensmaterial för Assets as a Cloud Service finns i [Utvecklarreferenser för Assets](/help/assets/developer-reference-material-apis.md#assets-cloud-service-apis).

@@ -2,7 +2,7 @@
 title: Konfigurera översättningsregler för Headless-innehåll
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '942'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Nu när du har konfigurerat din koppling tar den här artikeln dig igenom nästa
 >Det här steget i dokumentationsresan är bara nödvändigt om du inte använder **Översättningsbar** flagga på innehållsfragment.
 >
 >* The **Översättningsbar** flagga skapar automatiskt översättningsregler åt dig och kräver ingen åtgärd.
->* The **Översättningsbar** -flaggan används bara om konfigurationen för Translation Integration Framework är inställd på **[Aktivera fält för innehållsmodell för översättning.](/help/sites-cloud/administering/translation/integration-framework.md)**
+>* The **Översättningsbar** -flaggan används bara om konfigurationen för Translation Integration Framework är inställd på **[Aktivera fält för innehållsmodell för översättning](/help/sites-cloud/administering/translation/integration-framework.md)**.
 >* Om du aktiverar det här alternativet i TIF-konfigurationen ersätts eventuella manuellt skapade översättningsregler.|
 
 ## Syfte {#objective}

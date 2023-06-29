@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begräns
 
 ## Produktprofiler {#profiles}
 
-När du ger en användare åtkomst till en viss Adobe-lösning behöver du inte nödvändigtvis ge dem fullständig åtkomst. Med produktprofiler kan varje lösning ha en egen uppsättning användarbehörigheter. Dessa är tillgängliga via [Admin Console.](/help/journey-onboarding/admin-console.md)
+När du ger en användare åtkomst till en viss Adobe-lösning behöver du inte nödvändigtvis ge dem fullständig åtkomst. Med produktprofiler kan varje lösning ha en egen uppsättning användarbehörigheter. Dessa är tillgängliga via [Admin Console](/help/journey-onboarding/admin-console.md).
 
 ## AEM as a Cloud Service produktprofiler {#aem-product-profiles}
 
@@ -41,8 +41,8 @@ Dina AEM as a Cloud Service teammedlemmar läggs till och tilldelas en eller fle
 
 >[!TIP]
 >
->* Läs mer om AEM produktprofiler i dokumentet [Tilldela AEM produktprofiler.](/help/journey-onboarding/assign-profiles-aem.md)
->* Mer information om introduktionsprocessen finns i [Startresa.](/help/journey-onboarding/overview.md)
+>* Mer information om AEM produktprofiler finns i [Tilldela AEM produktprofiler](/help/journey-onboarding/assign-profiles-aem.md).
+>* Mer information om introduktionsprocessen finns i [introduktionsresa](/help/journey-onboarding/overview.md).
 
 ## Produktprofiler för Cloud Manager {#cloud-manager-product-profiles}
 
@@ -50,7 +50,7 @@ Cloud Manager har förkonfigurerade produktprofiler som kan ses som rollbaserade
 
 >[!TIP]
 >
->Se dokumentet [Rollbaserade behörigheter i Cloud Manager](/help/onboarding/cloud-manager-introduction.md#role-based-permissions) för mer information.
+>Se [Rollbaserade behörigheter i Cloud Manager](/help/onboarding/cloud-manager-introduction.md#role-based-permissions) för mer information.
 
 Var och en av produktprofilerna har särskilda behörigheter kopplade till sig.
 
@@ -73,5 +73,5 @@ Ditt Cloud Manager-team kommer att innehålla minst:
 
 >[!TIP]
 >
->* Läs mer om produktprofiler för Cloud Manager i dokumentet [Tilldela teammedlemmar till Cloud Manager-produktprofiler.](/help/journey-onboarding/assign-profiles-cloud-manager.md)
->* Mer information om introduktionsprocessen finns i [Startresa.](/help/journey-onboarding/overview.md)
+>* Mer information om produktprofiler för Cloud Manager finns i [Tilldela teammedlemmar till Cloud Manager-produktprofiler](/help/journey-onboarding/assign-profiles-cloud-manager.md).
+>* Mer information om introduktionsprocessen finns i [introduktionsresa](/help/journey-onboarding/overview.md).

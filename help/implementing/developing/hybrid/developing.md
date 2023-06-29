@@ -2,9 +2,9 @@
 title: Utveckla SPA för AEM
 description: I den här artikeln finns viktiga frågor att tänka på när en frontutvecklare ska utveckla en SPA för AEM. Den ger också en översikt över arkitekturen i AEM vad gäller SPA som ska beaktas när en utvecklad SPA distribueras på AEM.
 exl-id: f6c6f31a-69ad-48f6-b995-e6d0930074df
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2035'
 ht-degree: 0%
 
 ---

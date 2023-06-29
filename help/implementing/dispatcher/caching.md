@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: Cache i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 1fc57dacbf811070664d5f5aaa591dd705516fa8
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2793'
+source-wordcount: '2795'
 ht-degree: 0%
 
 ---
@@ -319,7 +319,7 @@ I tabellen kan du även se följande:
 
 * SCD API behövs när varje händelse måste garanteras, till exempel synkronisering med ett externt system som kräver korrekt kunskap. Om det finns en publiceringsnivåuppskalningshändelse vid tidpunkten för ogiltigförklaringsanropet, utlöses en extra händelse när varje ny publiceringsnivå bearbetar ogiltigförklaringen.
 
-* Att använda replikerings-API är inte vanligt, men kan användas i fall där utlösaren för att göra cachen ogiltig kommer från publiceringsnivån och inte från författarnivån. Den här metoden kan vara användbar om Dispatcher TTL har konfigurerats.
+* Det är inte vanligt att använda replikerings-API:t, men det kan användas om utlösaren för att göra cachen ogiltig kommer från publiceringsskiktet och inte från författarskiktet. Den här metoden kan vara användbar om Dispatcher TTL har konfigurerats.
 
 Sammanfattningsvis, om du vill göra Dispatcher-cachen ogiltig, rekommenderar vi att du använder SCD API-åtgärden Ovalidate från Författare. Du kan också lyssna efter händelsen så att du sedan kan utlösa ytterligare åtgärder längre fram i kedjan.
 
@@ -448,7 +448,7 @@ The diagram presented below illustrates this.
 
 ![CDN](assets/cdnd.png "CDN")
 
-If there is a concern that the dispatcher cache isn't clearing, contact [customer support](https://helpx.adobe.com/support.ec.html) who can flush the dispatcher cache if necessary.
+If there is a concern that the dispatcher cache is not clearing, contact [customer support](https://helpx.adobe.com/support.ec.html) who can flush the dispatcher cache if necessary.
 
 The Adobe-managed CDN respects TTLs and thus there is no need fo it to be flushed. If an issue is suspected, [contact customer support](https://helpx.adobe.com/support.ec.html) support who can flush an Adobe-managed CDN cache as necessary. -->
 

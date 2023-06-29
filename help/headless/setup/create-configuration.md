@@ -2,7 +2,7 @@
 title: Skapa en konfiguration - Headless Setup
 description: Skapa en konfiguration som ett första steg för att komma igång med headless på AEM as a Cloud Service.
 exl-id: 48801599-f279-4e55-8033-9c418d2af5bb
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -29,7 +29,7 @@ En administratör behöver bara skapa en konfiguration en gång, eller mycket s�
 1. Ange en **Titel** och **Namn** för din konfiguration.
    * The **Titel** ska vara beskrivande.
    * The **Namn** blir nodnamnet i databasen.
-      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/implementing/developing/introduction/naming-conventions.md)
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md).
       * Den kan vid behov justeras.
 1. Markera följande alternativ:
    * **Modeller för innehållsfragment**
@@ -51,4 +51,4 @@ Med den här konfigurationen kan du nu gå vidare till den andra delen av guiden
 
 >[!TIP]
 >
->Fullständig information om Configuration Browser finns här: [finns i dokumentationen för Configuration Browser.](/help/implementing/developing/introduction/configurations.md)
+>Fullständig information om Configuration Browser finns här: [finns i dokumentationen för Configuration Browser](/help/implementing/developing/introduction/configurations.md).

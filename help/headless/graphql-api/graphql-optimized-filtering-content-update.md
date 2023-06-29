@@ -2,9 +2,9 @@
 title: Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering
 description: Lär dig hur du uppdaterar innehållsfragment för optimerad GraphQL-filtrering i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 211f079e-d129-4905-a56a-4fddc11551cc
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '908'
 ht-degree: 2%
 
 ---
@@ -99,7 +99,7 @@ Så här kör du proceduren:
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
-      <td>Intervall (sekunder) för bearbetning av återstående innehållsfragment upp till nästa gräns<br>Det här intervallet betraktas också som en väntetid innan jobbet startas samt en fördröjning mellan bearbetningen av varje efterföljande CF_MIGRATION_LIMIT-antal CF:er.<br>(*)</td>
+      <td>Intervall (sekunder) för bearbetning av återstående innehållsfragment upp till nästa gräns<br>Det här intervallet betraktas också som en väntetid innan jobbet startas och en fördröjning mellan bearbetningen av varje efterföljande CF_MIGRATION_LIMIT-antal CF:er.<br>(*)</td>
      </tr>
     </tbody>
    </table>
@@ -146,7 +146,7 @@ Så här kör du proceduren:
         23.01.2023 12:40:45.180 *INFO* [sling-threadpool-8abcc1bb-cdcb-46d4-8565-942ad8a73209-(apache-sling-job-thread-pool)-1-Content Fragment Upgrade Job Queue Config(cfm/upgrader)] com.adobe.cq.dam.cfm.impl.upgrade.UpgradeJob Finished content fragments upgrade in 5m, slingJobId: 2023/1/23/12/34/ad1b399e-77be-408e-bc3f-57097498fddb_0, status: MaintenanceJobStatus{jobState=SUCCEEDED, statusMessage='Upgrade to version '1' succeeded.', errors=[], successCount=3781, failedCount=0, skippedCount=0}
         ```
 
-   Kunder som har aktiverat åtkomst till miljöloggar med Splunk kan använda exempelfrågan nedan för att övervaka uppgraderingsprocessen. Mer information om att aktivera Splunk-loggning finns i [Felsöka produktion och scen](/help/implementing/developing/introduction/logging.md#debugging-production-and-stage) sida.
+   Kunder som har aktiverat åtkomst till miljöloggar med Splunk kan använda exempelfrågan nedan för att övervaka uppgraderingsprocessen. Mer information om hur du aktiverar Splunk-loggning finns i [Felsöka produktion och scen](/help/implementing/developing/introduction/logging.md#debugging-production-and-stage) sida.
 
    ```splunk
    index=<indexName> sourcetype=aemerror aem_envId=<environmentId> msg="*com.adobe.cq.dam.cfm.impl.upgrade.UpgradeJob Finished*" 
@@ -242,7 +242,7 @@ Därför finns den här egenskapen på JCR-noden `/content/dam` med värdet `1`,
 
 ## Begränsningar {#limitations}
 
-Observera följande begränsningar:
+Tänk på följande begränsningar:
 
 * Optimering av prestanda för GraphQL-filter är endast möjligt efter en fullständig uppdatering av alla dina innehållsfragment (vilket indikeras av närvaron av `cfGlobalVersion` egenskap för JCR-noden `/content/dam`)
 

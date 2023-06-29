@@ -6,7 +6,7 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: 1046231f-787c-4e49-9ba0-e7dd59e41bce
-source-git-commit: 1d5641dd07cc68dade247fe30bb57663872e5560
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 0%
@@ -112,12 +112,12 @@ I [!UICONTROL Edit Adaptive Forms Container] kan du ange följande:
    * **Förifyllningstjänst**: Du kan använda förifyllningstjänsten för att autofylla fält i ett adaptivt formulär med befintliga data. När en användare öppnar ett formulär är värdena för dessa fält förifyllda. Mer information om förifyllningstjänsten finns i [Förifyll adaptiva formulärfält](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/prepopulate-adaptive-form-fields.html#configuring-prefill-service-using-configuration-manager)
    * **Kategori för klientbibliotek**: Ange [JavaScript-funktioner](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=en#custom-functions) som används i uttryck och stöds av Adaptive Forms.
 * **Datamodell**: Med en datamodell kan du integrera enheter och tjänster från olika datakällor i ett adaptivt formulär. Välj **[!UICONTROL Form Data Model]** om det adaptiva formulär som du skapar inbegriper att hämta och skriva data från och till flera datakällor.
-   * **Formulärdatamodell**: Med en formulärdatamodell kan ett adaptivt formulär kommunicera med olika datakällor. Mer information om hur du konfigurerar en datakälla finns i [Konfigurera datakällor.](/help/forms/configure-data-sources.md)
+   * **Formulärdatamodell**: Med en formulärdatamodell kan ett adaptivt formulär kommunicera med olika datakällor. Mer information om hur du konfigurerar en datakälla finns i [Konfigurera datakällor](/help/forms/configure-data-sources.md).
    * **Schema**: Schema representerar den struktur i vilken data produceras eller används av det bakomliggande systemet i din organisation. Du kan [associera schemat med ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/create-an-adaptive-form-on-forms-cs/adaptive-form-json-schema-form-model.html) och använder elementen för att lägga till dynamiskt innehåll i ett adaptivt formulär.
 
-      >[!NOTE]
-      >
-      > När du har konfigurerat formulärdatamodellen kan du inte ändra den associerade formulärmodellen. Det går dock att ändra schemat som är kopplat till datamodellen Formulär.
+     >[!NOTE]
+     >
+     > När du har konfigurerat formulärdatamodellen kan du inte ändra den associerade formulärmodellen. Det går dock att ändra schemat som är kopplat till datamodellen Formulär.
 
 * **Fliken Skicka**
 
@@ -133,7 +133,7 @@ I [!UICONTROL Edit Adaptive Forms Container] kan du ange följande:
          * Skicka till OneDrive
          * Skicka till Azure Blob Storage
 
-   Du kan också [utöka standardskickaåtgärder](custom-submit-action-form.md) för att skapa en egen anpassad skickaåtgärd.
+  Du kan också [utöka standardskickaåtgärder](custom-submit-action-form.md) för att skapa en egen anpassad skickaåtgärd.
 
 * **Visa meddelande**
    * **Meddelandeinnehåll**: Skriv ett meddelande med RTF-redigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.

@@ -2,9 +2,9 @@
 title: Använda bibliotek på klientsidan på AEM as a Cloud Service
 description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2556'
 ht-degree: 0%
 
 ---
@@ -21,17 +21,17 @@ Fördelarna med att använda klienter i AEM är bland annat:
 * Visa klienten via en bana som är tillgänglig via [avsändare](/help/implementing/dispatcher/disp-overview.md)
 * Tillåter omskrivning av sökvägar för refererade filer eller bilder
 
-Clientlibs är den inbyggda lösningen för att leverera CSS och Javascript från AEM.
+Clientlibs är den inbyggda lösningen för att leverera CSS och JavaScript från AEM.
 
 >[!TIP]
 >
->Utvecklare som skapar CSS och Javascript för AEM bör också bekanta sig med [AEM Project Archetype och dess automatiserade front-end-byggprocess.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)
+>Utvecklare som skapar CSS och JavaScript för AEM bör också bekanta sig med [AEM Project Archetype och dess automatiserade front-end-byggprocess.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)
 
 ## Vad är bibliotek på klientsidan? {#what-are-clientlibs}
 
-Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att kunna bearbetas på klientsidan. En klientlib är AEM som refererar (efter kategori om det behövs) och betjänar sådana resurser.
+Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att behandlas på klientsidan. En klientlib är AEM som refererar (efter kategori om det behövs) och betjänar sådana resurser.
 
-AEM samlar in webbplatsens CSS och Javascript till en enda fil, på en central plats, för att säkerställa att endast en kopia av en resurs inkluderas i utdata från HTML. Detta maximerar effektiviteten vid leverans och gör att sådana resurser kan underhållas centralt i databasen via proxy, vilket skyddar åtkomsten.
+AEM samlar in webbplatsens CSS och JavaScript i en enda fil, på en central plats, för att säkerställa att endast en kopia av en resurs inkluderas i HTML-utdata. Detta maximerar effektiviteten vid leverans och gör att sådana resurser kan underhållas centralt i databasen via proxy, vilket skyddar åtkomsten.
 
 ## Front-End Development för AEM as a Cloud Service {#fed-for-aemaacs}
 
@@ -189,7 +189,7 @@ Ytterligare mappegenskaper kan styra beroenden och inbäddningar, men behövs va
 
 ### Länka till beroenden {#linking-to-dependencies}
 
-När koden i klientbiblioteksmappen refererar till andra bibliotek identifierar du de andra biblioteken som beroenden. The `ui:includeClientLib` -taggen som refererar till din klientbiblioteksmapp gör att HTML-koden innehåller en länk till den biblioteksfil som genereras samt beroenden.
+När koden i klientbiblioteksmappen refererar till andra bibliotek identifierar du de andra biblioteken som beroenden. The `ui:includeClientLib` -taggen som refererar till din klientbiblioteksmapp gör att HTML-koden innehåller en länk till den biblioteksfil som genereras och beroendena.
 
 Beroenden måste vara ett annat `cq:ClientLibraryFolder`. Om du vill identifiera beroenden lägger du till en egenskap i `cq:ClientLibraryFolder` nod med följande attribut:
 

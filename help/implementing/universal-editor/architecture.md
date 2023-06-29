@@ -2,9 +2,9 @@
 title: Universal Editor Architecture
 description: Läs mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 exl-id: e6f40743-0f21-4fb6-bf23-76426ee174be
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -28,16 +28,16 @@ I det här dokumentet beskrivs dessa byggstenar och hur de utbyter data.
 
 >[!TIP]
 >
->Om du vill se hur Universal Editor och dess arkitektur fungerar i praktiken kan du läsa dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) om du vill lära dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
+>För att se hur Universal Editor och dess arkitektur fungerar, se [Komma igång med Universal Editor i AEM](getting-started.md) om du vill lära dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 
 ### Redigerare {#editors}
 
-* **Universal Editor** - Universell redigerare använder en instrumenterad DOM för att tillåta redigering på plats av innehåll. Se dokumentet [Attribut och typer](attributes-types.md) om du vill ha information om nödvändiga metadata. Se dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) för ett exempel på instrumentering i AEM.
+* **Universal Editor** - Universell redigerare använder en instrumenterad DOM för att tillåta redigering på plats av innehåll. Se [Attribut och typer](attributes-types.md) om du vill ha information om nödvändiga metadata. Se dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) för ett exempel på instrumentering i AEM.
 * **Properties Rail** - Vissa egenskaper hos komponenterna kan inte redigeras i sitt sammanhang, t.ex. rotationstid för en karusell eller vilken dragspelsflik som alltid ska öppnas eller stängas. För att sådan komponentinformation ska kunna redigeras finns en formulärbaserad redigerare i sidlisten i redigeraren.
 
 ### Remote App {#remote-app}
 
-DOM måste vara instrumenterad för att ett program ska kunna redigeras i sitt sammanhang i den universella redigeraren. Fjärrprogrammet måste återge vissa attribut i DOM. Se dokumentet [Attribut och typer](attributes-types.md) om du vill ha information om nödvändiga metadata. Se dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) för ett exempel på instrumentering i AEM.
+DOM måste vara instrumenterad för att ett program ska kunna redigeras i sitt sammanhang i den universella redigeraren. Fjärrprogrammet måste återge vissa attribut i DOM. Se [Attribut och typer](attributes-types.md) om du vill ha information om nödvändiga metadata. Se dokumentet [Komma igång med Universal Editor i AEM](getting-started.md) för ett exempel på instrumentering i AEM.
 
 Den universella redigeraren strävar efter ett minimum av SDK, och därför är det implementeringen av fjärrappen som ansvarar för instrumenteringen.
 

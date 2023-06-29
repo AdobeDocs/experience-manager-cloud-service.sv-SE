@@ -2,9 +2,9 @@
 title: Databasmodernisering
 description: Databasmodernisering
 exl-id: cd9d212e-e720-4209-8b5a-659883cc1d95
-source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---

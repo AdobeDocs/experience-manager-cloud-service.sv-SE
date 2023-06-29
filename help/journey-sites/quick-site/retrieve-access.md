@@ -2,9 +2,9 @@
 title: Hämta Git-databasåtkomstinformation
 description: Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.
 exl-id: 3ef1cf86-6da4-4c09-9cfc-acafc8f6dd5c
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '891'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst ti
 
 Om du är en frontendutvecklare som bara ansvarar för att anpassa webbplatstemat behöver du inte veta hur AEM konfigurerades och kan hoppa till [Syfte](#objective) i det här dokumentet.
 
-Om du också är Cloud Managers eller AEM administratörs och front end-utvecklare lärde du dig i det tidigare dokumentet av den AEM snabbplatsgenereringsresan, [Bevilja åtkomst till klientutvecklaren,](grant-access.md) Anlita en utvecklare så att han/hon får tillgång till Git-databasen, och du bör nu veta:
+Om du också är Cloud Managers eller AEM administratörs- och gränssnittsutvecklare lärde du dig i det tidigare dokumentet av den AEM snabbplatsens skaparresa, [Bevilja åtkomst till klientutvecklaren,](grant-access.md) Anlita en utvecklare så att han/hon får tillgång till Git-databasen, och du bör nu veta:
 
 * Så här lägger du till en frontendutvecklare som användare.
 * Så här tilldelar du de roller som krävs till frontendutvecklaren.
@@ -52,7 +52,7 @@ Med verktyget för att skapa snabbwebbplatser kan gränssnittsutvecklare arbeta 
 
 Om du saknar något av dessa objekt kontaktar du AEM eller Cloud Manager-administratören.
 
-Man utgår ifrån att den som utvecklar främst har stor erfarenhet av utvecklingsarbetsflöden och gemensamma verktyg som installeras:
+Man utgår ifrån att den som utvecklar främst har stor erfarenhet av arbetsflöden för utveckling och gemensamma verktyg som installeras:
 
 * git
 * npm
