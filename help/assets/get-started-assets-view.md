@@ -3,14 +3,14 @@ title: Kom igång med [!DNL Assets View]
 description: Hur man får åtkomst till, kan logga in på, vilka användningsfall som stöds och kända problem med [!DNL Assets View].
 role: User, Leader
 exl-id: 7917b2a0-8340-4d94-aa6f-30ce986fa752
-source-git-commit: 5af7f9160b0028d0eff5358c3c1a43729b86883b
+source-git-commit: 5a7938d5e52388516f8b66bbcf8ffdee332a51a3
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 1%
+source-wordcount: '334'
+ht-degree: 0%
 
 ---
 
-# Kom igång med [!DNL Adobe Experience Manager Assets View] {#assets-view-get-started}
+# Kom igång med resursvyn {#assets-view-get-started}
 
 <!-- TBD: Make links for these steps. -->
 
@@ -25,11 +25,9 @@ Används [!DNL Assets View], logga in på [https://experience.adobe.com/#/assets
 <!--In addition, more reference information that can be helpful is [understanding of the user interface](/help/assets/navigate-assets-view.md), [list of use cases](#use-cases), [supported file types](/help/assets/supported-file-formats-assets-view.md), and [known issues](/help/assets/release-notes.md#known-issues).
 -->
 
-## Få åtkomst till [!DNL Assets View] {#get-access}
+## Visa resursvyn {#access-assets-view}
 
-Adobe tillhandahåller lösningen och lägger till den utsedda personen från din organisation som administratör. Administratörerna kan ge åtkomst till olika användare i organisationen genom att använda [[!DNL Admin Console]](https://helpx.adobe.com/enterprise/using/admin-console.html). Kontakta organisationens administratör för frågor som rör din åtkomst.
-
-När du loggar in, efter att du angett inloggningsuppgifterna, [!DNL Assets View] uppmanar dig att välja ett konto. I det här fallet väljer du `Company or School Account` för att fortsätta.
+Se [Så här kommer du åt resursvyn](/help/assets/assets-view-introduction.md#how-to-access-assets-view) om du vill ha detaljerade anvisningar om hur du kommer åt resursvyn.
 
 ## Konfigurera [!DNL Assets View] {#configuration}
 

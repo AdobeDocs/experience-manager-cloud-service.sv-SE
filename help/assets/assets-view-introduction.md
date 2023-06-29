@@ -2,9 +2,9 @@
 title: På vilket sätt har du nytta av resursvyn?
 description: Läs mer om de viktigaste fördelarna med resursvyn
 mini-toc-levels: 3
-source-git-commit: 4e31a57a6bcbc6783398c205075bb8e1b1a5dc74
+source-git-commit: 5a7938d5e52388516f8b66bbcf8ffdee332a51a3
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -120,6 +120,11 @@ Förutom dessa funktioner kan du även använda resursvyn för att utföra följ
 * Överför en ny version av en resurs med ett annat namn från det lokala filsystemet till resurskatalogen. Den överförda resursen är tillgänglig som en ny version med samma namn som den ursprungliga resursen.
 
 * Byt namn på resurser och mappar som är tillgängliga i databasen.
+
+Använd de här länkarna för att snabbt komma igång med resursvyn:
+
+* [Min arbetsyta](/help/assets/my-workspace-assets-view.md)
+* [Kom igång med resursvyn](/help/assets/get-started-assets-view.md)
 
 ## Slutsats {#conclusion}
 
