@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 32fb0942b8007aeee8afa6378a9293eecd7d7700
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1385'
 ht-degree: 0%
 
 ---
@@ -26,22 +26,17 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för den aktu
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.4.0) är 7 juni 2023. Nästa version (2023.6.0) är planerad till 29 juni 2023.
+Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.6.0) är 29 juni 2023. Nästa funktionsversion (2023.7.0) är planerad till 27 juli 2023.
 
 ## Släpp video {#release-video}
 
-Titta på videon med versionsöversikten för april 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.4.0:
+Titta på videon om versionsöversikten för juni 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.6.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3418681/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3420971/?quality=12)
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
 ### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
-
-* Exportera innehållsfragment från AEM as a Cloud Service till Adobe Target i JSON-format och skapa motsvarande JSON-erbjudanden i Target.
-* Stöd för sidnumrering och sortering i GraphQL, tillsammans med förbättringar för intern cachning, hjälper nu till att förbättra prestanda i fristående klientprogram när du hämtar stora innehållsuppsättningar från AEM med komplexa GraphQL-frågor och filter.
-
-### Nya funktioner i [!DNL Experience Manager Sites] prerelease {#prerelease-sites}
 
 * Innehållsfragment och deras referenser kan nu publiceras i [Tjänsten AEM Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#access-preview-service) med [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=en), vilket gör att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publicerar.
 * Bilderna kan nu optimeras dynamiskt för webbleverans i headlessscenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html?lang=en#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
@@ -51,36 +46,72 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* Stöd för WebP-bilder som automatiskt extraherar metadata, genererar miniatyrbilder och anpassade renderingar. Funktionen Smarta taggar stöds nu även för dessa filer. Dynamic Media-funktioner stöds inte för WebP som indataformat.
+**Tillgång till vyn Nya resurser**
 
-* [Förbättrade sökupplevelser](/help/assets/search-assets.md#aftersearch) - Du kan nu snabbt utföra följande åtgärder på resurserna som visas i sökresultaten:
+The [ny resursvy](/help/assets/assets-view-introduction.md) finns nu i Experience Manager Assets. Resursvyn har ett förenklat användargränssnitt som gör det enkelt att hantera, identifiera och distribuera digitala resurser. Upplevelsen riktar sig till kreatörer, skrivskyddade mediekonsumenter och användare med mindre vikt-DAM.
 
-   * Skapa ett arbetsflöde
-   * Skapa en version
-   * Relatera eller inte relatera tillgångar
+![Tagghantering](/help/assets/assets/my-workspace.png)
 
-     Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
+**Förbättrade sökupplevelser**
 
-* Förbättrad användbarhet för färgsökningsaspekten - Indatafältet för färgvärden kan nu redigeras och sökresultaten uppdateras endast när du avslutar färgväljaren.
+Experience Manager Assets ger dig nu möjlighet att göra mer med sökresultatens användargränssnitt: Nu kan du:
 
-* Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
-   * Adaptiv direktuppspelning (DASH/HLS) ger en bättre visningsupplevelse för videor
-   * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
-   * Tillgängligt i alla regioner, för att aktiveras via supportanmälan
+* Sök som standard på den aktuella databasplatsen i stället för att söka efter nyckelordet i hela databasen.
 
-* Dynamic Media _Ögonblicksbild_ - Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare och utvärdera smarta bildoptimeringar för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och Device Pixel Ratio. Se [Dynamic Media Snapshot](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
+* Navigera till mapplatsen för resurser som visas i sökresultaten.
 
-### Funktion i [!DNL Assets] prerelease {#prerelease-feature-assets}
+**Miniatyrförhandsvisningar för 3D-resurser**
 
-* Dynamic Media - Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html?lang=en#crop-options).
+[!DNL Experience Manager Assets] genererar nu [miniatyrbilder för vanliga 3D-filformat](/help/assets/file-format-support.md) inklusive gLB, USDz, FBX, 3DS, OBJ och SBSAR. När dessa filer överförs genereras miniatyrbilder automatiskt som standard.
+
+**Länkresurskonfiguration**
+
+En ny förbättrad användarupplevelse för [skapa länkresurser](/help/assets/share-assets.md) tillsammans med en helt ny uppsättning konfigurationer som gör att administratörer kan anpassa standardbeteendet för den här funktionen för dina användare.
+
+![Tagghantering](/help/assets/assets/config-email-service.png)
+
+**Dynamic Media: Uppdaterade fält relaterade till smart beskärning i bildprofilen**
+
+Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html?lang=en#crop-options).
+
+### Nya funktioner i resursvyn {#assets-view-features}
+
+**Hierarkisk taggning av resurser för snabbare sökupplevelse**
+
+Platta listor med kontrollerade vokabulärer blir ohanterliga över tid. Resursvyn har nu stöd för [hierarkisk taggningsstruktur](/help/assets/tagging-management-assets-view.md), som gör det enklare att använda relevanta metadata, kategorisera resurser, söka, återanvända taggar, förbättra upptäckbarheten och så vidare.
+
+![Tagghantering](/help/assets/assets/tags-hierarchy.png)
+
+**Fäst filer, mappar och samlingar för snabb åtkomst**
+
+Nu kan du [fästa filer, mappar och samlingar för snabbare åtkomst](/help/assets/my-workspace-assets-view.md) till de här objekten när du behöver dem senare. De fästa objekten visas i **Snabb åtkomst** i Min arbetsyta. Du kan komma åt dem med Min arbetsyta i stället för att navigera till den plats där de sparas i databasen.
+
+![Uppgifter på arbetsytan](/help/assets/assets/quick-access.png)
+
+**Filtrera resurser i papperskorgen**
+
+I resursvyn kan du nu [filterresurser som finns i papperskorgen](/help/assets/navigate-assets-view.md). Du kan använda standardfilter eller anpassade filter för att söka efter lämpliga resurser i papperskorgen för att antingen återställa eller ta bort dem permanent.
+
+**Miniatyrförhandsvisningar för 3D-resurser**
+
+Resursvyn genererar nu miniatyrförhandsvisningar för vanliga 3D-filformat som gLB, USDz, FBX, 3DS, OBJ och SBSAR. När dessa filer överförs till resursvyn skapas miniatyrbilder automatiskt av systemet som standard.
+
+![Uppgifter på arbetsytan](/help/assets/assets/3d-preview.png)
+
+**Visa de vanligaste söktermerna**
+
+Resursvyn har nu stöd för [visa de vanligaste söktermerna i din distribution](/help/assets/my-workspace-assets-view.md) med **Insikter** i Min arbetsyta. Du kan även navigera till detaljerade insikter för att visa de vanligaste sökningarna under de senaste 30 dagarna eller 12 månaderna.
+
+![Uppgifter på arbetsytan](/help/assets/assets/insights-top-searches.png)
+
+**Förbättringar av metadataformulär**
+
+I resursvyn kan du nu [lägga till text med flera värden och nedrullningsbara listegenskapskomponenter](/help/assets/metadata-assets-view.md#property-components) till metadataformulären.
+
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
 ### Nya funktioner i [!DNL Forms] {#new-features-available-in-channel}
-
-* **[Skicka anpassningsbara Forms till Microsoft® SharePoint och Microsoft® OneDrive](/help/forms/configuring-submit-actions.md)**: Öka användarflexibiliteten så att ni snabbt kan starta nya formulär och lagra inlämnade data i vardagliga verktyg som Microsoft® SharePoint eller OneDrive.
-
-### Funktioner i [!DNL Forms] prerelease {#prerelease-features-forms}
 
 * [Adaptiv Forms i AEM Page Editor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md): Nu kan du använda AEM Page Editor för att snabbt skapa och lägga till flera formulär på webbplatsens sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsmöjligheter på webbplatssidor med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan:
 
@@ -92,15 +123,23 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 * [Adobe Acrobat Sign Solutions för myndigheter](/help/forms/adobe-sign-integration-adaptive-forms.md): AEM Forms kan nu integreras med Adobe Acrobat Sign Solutions för myndigheter. Integreringen ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inskickade adaptiva formulär för myndighetskonton (myndigheter och myndigheter).
 
-  Integrationen med Adobe Acrobat Sign for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
+  Integrationen med Adobe Acrobat Sign Solutions for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
 
-* Förbättrad felhantering med anpassade felhanterare i regelredigeraren: Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
+* [Förbättrad felhantering med anpassade felhanterare i regelredigeraren](/help/forms/add-custom-error-handler-adaptive-forms.md): Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
 
   Den här funktionen förbättrar den övergripande felhanteringskapaciteten genom att införa standardbaserade felsvar som är bakåtkompatibla med OOTB-felhanterare, med större flexibilitet och kontroll.
 
+* [Förbättrade autentiseringsmetoder för formulärdatamodell](/help/forms/configure-data-sources.md): Upplev ökad säkerhet med nya Client Credentials-baserade autentiseringar för att ansluta AEM Forms till kompatibla datakällor. Den här förbättringen eliminerar behovet av personifiering eller användarinloggning, vilket stärker skyddet av dina data.
+
+* Gör adaptiva Forms-avsnitt repeterbara: Nu kan du [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html), [Panel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel-container.html)och [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html) komponenter i en adaptiv form repeterbara.
+
+  >[!VIDEO](https://video.tv.adobe.com/v/3421052/adaptive-forms-repeatable-sections-repeat-sections/?quality=12&learn=on)
+
+  Dessa upprepningsbara avsnitt låter dig ange ett obegränsat antal poster utan ett fast fältantal. Det är användbart när de nödvändiga instanserna av data är okända i förväg. Forms-användare kan enkelt lägga till eller ta bort avsnitt, göra formulären anpassningsbara till olika datainmatningsscenarier och förenkla insamlingen av flera förekomster av samma data.
+
 ### Headless Adaptive Forms early adopter {#forms-early-adopter}
 
-Med Headless Adaptive Forms kan utvecklarna skapa, publicera och hantera interaktiva blanketter som kan öppnas och interagera med via API:er i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
+Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) för att ge utvecklarna möjlighet att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
 
 * bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
 * integrera formulär direkt i era datorprogram och mobilappar, webbplatser och chattapplikationer
@@ -109,11 +148,6 @@ Med Headless Adaptive Forms kan utvecklarna skapa, publicera och hantera interak
 
 Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från ditt officiella e-post-ID till att gå med i det tidiga adopterprogrammet.
 
-## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
-
-### Vad är nytt? {#what-is-new-foundation}
-
-* Ytterligare publiceringsregioner: Webbplatser Kunder kan licensiera upp till tre publiceringsregioner utöver den primära regionen. Trafiken dirigeras till ytterligare publiceringsanläggningar, vilket leder till minskad fördröjning för vissa förfrågningar och ökad motståndskraft mot regionala avbrott. Kontakta kontohanteraren för Adobe om du vill ha information om licensiering [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) för programmen.
 
 ## Versionsinformation om underhåll {#maintenance}
 

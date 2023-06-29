@@ -4,9 +4,9 @@ description: Lär dig konfigurera Adobe Acrobat Sign för [!DNL AEM Forms] as a 
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: d9c5934c03b9c5aa91bafa09569d441fc7868937
+source-git-commit: 09ed1ae61e7748da2cc182b005a9dd26853cb3f7
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
@@ -110,9 +110,6 @@ Utför följande steg för att konfigurera [!DNL Adobe Acrobat Sign] med [!DNL A
 Nu kan du [använda lägg till Adobe Acrobat Sign-fält i ett adaptivt formulär](working-with-adobe-sign.md). Se till att du lägger till konfigurationsbehållaren som används för Cloud Servicen i alla adaptiva Forms som aktiveras för [!DNL Adobe Acrobat Sign]. Du kan ange en konfigurationsbehållare bland egenskaperna för ett adaptivt formulär.
 
 ## Koppla AEM Forms till Adobe Acrobat Sign Solutions för myndigheter {#adobe-acrobat-sign-for-government}
-
-[!BADGE dokumentation för förhandsversion]{type=Caution tooltip="Gul status"}
-<span class="preview"> Detta avsnitt innehåller dokumentation om förhandsversionen och kan komma att ändras.</span>
 
 Att knyta AEM Forms till Adobe Acrobat Sign Solutions för myndigheter är en flerstegsprocess. Den innehåller följande uppgifter:
 

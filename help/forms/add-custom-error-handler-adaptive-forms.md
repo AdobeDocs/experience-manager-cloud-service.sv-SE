@@ -7,9 +7,9 @@ keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterar
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: 66c7b30b8b66bc86d7b83e57e02ed61d426553a2
+source-git-commit: 09ed1ae61e7748da2cc182b005a9dd26853cb3f7
 workflow-type: tm+mt
-source-wordcount: '1960'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
@@ -119,9 +119,7 @@ Var:
 
 Vissa av alternativen för att visa felsvaren är:
 
-+++
-
-+++  Baserat på fältet Adaptivt formulärNamn
++++  Baserat på egenskapen Adaptive Form fieldName
 
 
 * **`Header:`** `content-type:application/problem+json`
@@ -148,7 +146,7 @@ Vissa av alternativen för att visa felsvaren är:
 +++
 
 
-+++ Baserat på dataRef för adaptiv form
++++ Baserat på egenskapen dataRef för adaptiv form
 
 * **`Header:`** `content-type:application/problem+json`
 * **`Response:`**
@@ -171,8 +169,8 @@ Vissa av alternativen för att visa felsvaren är:
 
 Du kan visa värdet för dataRef i **[!UICONTROL Properties]** -fönstret för en formulärkomponent.
 
-
 +++
+
 
 ## Lägg till felhanterare med Regelredigeraren {#add-error-handler-using-rule-editor}
 
