@@ -2,9 +2,9 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2438'
 ht-degree: 8%
 
 ---
@@ -195,8 +195,12 @@ Sedan kan du skapa ett nytt fragment genom att:
 1. Ange egenskaper. till exempel **Titel**.
 1. Markera **Skapa**.
 1. Äntligen:
-   1. **Klar** återgår (till det ursprungliga fragmentet) och refererar till det nya fragmentet.
-   1. **Öppna** refererar till det nya fragmentet och öppnar det nya fragmentet, för redigering, på en ny flik i webbläsaren.
+   1. **Klar**:
+      * returnerar (till det ursprungliga fragmentet)
+      * refererar till det nya fragmentet
+   1. **Öppna**:
+      * refererar till det nya fragmentet
+      * öppnar det nya avsnittet för redigering på en ny flik i webbläsaren
 
 ### Visa nyckelstatistik {#viewing-key-statistics}
 

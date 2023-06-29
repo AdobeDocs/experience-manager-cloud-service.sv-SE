@@ -2,9 +2,9 @@
 title: Redigeringsbegrepp
 description: Begrepp att skapa i AEM
 exl-id: ee9e4952-e075-4398-b31f-d7886153efff
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Dessa miljöer interagerar så att ni kan göra innehållet tillgängligt på er
 
 I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska innehållet innan det publiceras:
 
-* En författare skapar och granskar innehållet. Innehåll kan vara av många olika typer, till exempel sidor, resurser och publikationer.
+* En författare skapar och granskar innehållet. Innehåll kan vara av många olika typer, bland annat sidor, resurser och publikationer.
 * Det här innehållet kommer vid något tillfälle att publiceras på din webbplats.
 
 ![Diagram över författare, utgivare och avsändare](/help/sites-cloud/authoring/assets/author-publish.png)

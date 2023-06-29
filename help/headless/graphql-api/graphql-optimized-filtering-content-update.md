@@ -2,9 +2,9 @@
 title: Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering
 description: Lär dig hur du uppdaterar innehållsfragment för optimerad GraphQL-filtrering i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 211f079e-d129-4905-a56a-4fddc11551cc
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '909'
 ht-degree: 2%
 
 ---
@@ -99,7 +99,7 @@ Så här kör du proceduren:
       <td>Alla </td>
       <td> </td>
       <td>Variabel </td>
-      <td>Intervall (sekunder) för bearbetning av återstående innehållsfragment upp till nästa gräns<br>Det här intervallet betraktas också som en väntetid innan jobbet startas och en fördröjning mellan bearbetningen av varje efterföljande CF_MIGRATION_LIMIT-antal CF:er.<br>(*)</td>
+      <td>Intervall (sekunder) för bearbetning av återstående innehållsfragment upp till nästa gräns<br>Det här intervallet betraktas också som både en väntetid innan jobbet startas och en fördröjning mellan bearbetningen av varje efterföljande CF_MIGRATION_LIMIT-antal CF:er.<br>(*)</td>
      </tr>
     </tbody>
    </table>

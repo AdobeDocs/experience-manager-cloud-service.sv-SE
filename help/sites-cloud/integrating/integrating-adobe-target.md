@@ -4,7 +4,7 @@ description: Integrera med Adobe Target
 feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 1%
@@ -50,7 +50,7 @@ När du konfigurerar fälten för Adobe Target klient-ID och Adobe Target klient
 I båda fallen:
 
 * Som standard kopieras även klientkoden (om den läggs till först) automatiskt till fältet Klient-ID.
-* Du kan ändra standardinställningen för klient-ID.
+* Om det behövs kan du ändra standardinställningen för innehavar-ID.
 * Backend-anrop till Target baseras på klientens ID och klientsidans anrop till Target baseras på klientkoden.
 
 Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud Service. Oavsett vilket, se till att **båda** fälten innehåller rätt information beroende på dina behov.
@@ -156,4 +156,4 @@ Mer information om hur du skapar och publicerar finns i [page](https://experienc
 
 >[!NOTE]
 >
->Äldre konfigurationer stöds fortfarande för befintliga kunder (utan möjlighet att redigera eller skapa dem). Äldre konfigurationer är en del av innehållspaket som överförs av kunder med VSTS.
+>Äldre konfigurationer stöds fortfarande för befintliga kunder (utan möjlighet att redigera eller skapa). Äldre konfigurationer är en del av innehållspaket som överförs av kunder med VSTS.

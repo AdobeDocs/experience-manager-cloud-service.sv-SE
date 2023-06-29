@@ -4,9 +4,9 @@ description: Förstå hur variationer gör att du kan skapa innehåll för fragm
 feature: Content Fragments
 role: User
 exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
 workflow-type: tm+mt
-source-wordcount: '2463'
+source-wordcount: '2461'
 ht-degree: 7%
 
 ---
@@ -197,8 +197,12 @@ Sedan kan du skapa ett nytt fragment genom att:
 1. Ange egenskaper. till exempel **Titel**.
 1. Markera **Skapa**.
 1. Äntligen:
-   1. **Klar** återgår (till det ursprungliga fragmentet) och refererar till det nya fragmentet.
-   1. **Öppna** refererar till det nya fragmentet och öppnar det nya fragmentet, för redigering, på en ny flik i webbläsaren.
+   1. **Klar**:
+      * returnerar (till det ursprungliga fragmentet)
+      * refererar till det nya fragmentet
+   1. **Öppna**:
+      * refererar till det nya fragmentet
+      * öppnar det nya avsnittet, för redigering, på en ny flik i webbläsaren
 
 ### Visa nyckelstatistik {#viewing-key-statistics}
 
