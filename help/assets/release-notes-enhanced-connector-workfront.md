@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 0cc57a144b69799cfabc8baae2051e9ac8701d49
+source-git-commit: 87aeebad2576e91472530a2617b23bece4cd453f
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -30,13 +30,13 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du [uppgradera till den senaste 1.9.11-versionen](../assets/update-workfront-enhanced-connector.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar dig [uppgradera till den senaste 1.9.11-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
 * När projektlänkade mappar konfigureras med AEM 6.4 sparar Experience Manager inte värdena för **[!UICONTROL sub-folders]** och **[!UICONTROL Create linked folder in projects with portfolio]** fält. Värdet för **[!UICONTROL sub-folders]** fältuppdateringar till **[!UICONTROL undefined]** och värdet för **[!UICONTROL Create linked folder in projects with portfolio]** fältuppdateringar till **[!UICONTROL Default Portfolio]** automatiskt när konfigurationen har sparats.
 
-* När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** listrutan samt **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i den nya Workfront-upplevelsen.
+* När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** nedrullningsbar lista. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** nedrullningsbar lista och **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i nya Workfront.
 
 ## Tidigare versioner {#previous-releases}
 
@@ -139,7 +139,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 [!DNL Workfront for Experience Manager enhanced connector] version 1.9.4, släppt i oktober 2007, innehåller följande uppdateringar:
 
-* Det går inte att visa fliken Händelseprenumerationer på den utökade konfigurationssidan för anslutningsprogrammet på grund av ett stort antal händelser.
+* Det går inte att visa fliken Händelseprenumerationer på den utökade konfigurationssidan för anslutningsprogrammet på grund av många händelser.
 
 * Workfront kan inte hämta listan över befintliga mappar i ett projekt, vilket resulterar i att dubblettmappar skapas.
 
@@ -178,7 +178,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 [!DNL Workfront for Experience Manager enhanced connector] innehåller nu följande uppdateringar:
 
-* När du överför via en länkad mapp eller använder `Send To` åtgärd som är tillgänglig i Workfront för att överföra resurser till Experience Manager as a Cloud Service, resursen eller resurserna skadas och kan inte öppnas i Adobe Photoshop.
+* När du överför via en länkad mapp eller använder `Send To` åtgärden som är tillgänglig i Workfront för att överföra resurser till Experience Manager as a Cloud Service, är skadad och kan inte öppnas i Adobe Photoshop.
 
 ### Mars 2022-utgåvan {#march-2022-release}
 
