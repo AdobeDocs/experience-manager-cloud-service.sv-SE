@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 5096cd6141e70f40b5145389ca4db3cc65ea1e66
+source-git-commit: 6d445943fb8a79eb549c954bb88daf61242a8b10
 workflow-type: tm+mt
-source-wordcount: '2416'
+source-wordcount: '2411'
 ht-degree: 11%
 
 ---
@@ -101,7 +101,7 @@ Följ de här stegen för att validera anslutningen mellan din Experience Manage
 
 1. Från **verktyg** panel, navigera till **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]**.
 
-   ![Konfigurera AEM Assets as a Cloud Service med Brand Portal](assets/test-bpconfig1.png)
+   ![Navigera till distributionsalternativet](assets/test-bpconfig1.png)
 
    En Brand Portal-distributionsagent (**[!UICONTROL bpdistributionagent0]**) skapas under **[!UICONTROL Publish to Brand Portal]**.
 
