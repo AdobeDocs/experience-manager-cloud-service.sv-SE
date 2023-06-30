@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Innehållssökning och indexering
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: c19783ed4899772835a05856fc3a5601ef6a6df8
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2309'
 ht-degree: 0%
 
 ---
@@ -35,37 +35,37 @@ Begränsningar:
 
 ## Användning {#how-to-use}
 
-Att definiera index kan omfatta följande tre användningsområden:
+Indexdefinitioner kan kategoriseras i tre primära användningsområden:
 
-1. Lägga till en kundindexdefinition.
-1. Uppdaterar en befintlig indexdefinition. Den här uppdateringen innebär att en ny version av en befintlig indexdefinition läggs till.
-1. Tar bort ett befintligt index som är överflödigt eller föråldrat.
+1. **Lägg till** en ny anpassad indexdefinition.
+2. **Uppdatera** en befintlig indexdefinition genom att lägga till en ny version.
+3. **Ta bort** en indexdefinition som inte längre behövs.
 
-För båda punkterna 1 och 2 ovan måste du skapa en indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM as a Cloud Service dokumentation](/help/implementing/deploying/overview.md).
+För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md) dokumentation.
 
 ## Indexnamn {#index-names}
 
-En indexdefinition kan vara:
+En indexdefinition kan delas in i någon av följande kategorier:
 
-1. Ett körklart index. Ett exempel är `/oak:index/cqPageLucene-2`.
-1. En anpassning av ett körklart index. Sådana anpassningar definieras av kunden. Ett exempel är `/oak:index/cqPageLucene-2-custom-1`.
-1. Ett helt anpassat index. Ett exempel är `/oak:index/acme.product-1-custom-2`. För att undvika namnkonflikter kräver Adobe att helt anpassade index har ett prefix, till exempel `acme.`
+1. OTB-index (Out-of-the-box). Till exempel: `/oak:index/cqPageLucene-2` eller `/oak:index/damAssetLucene-8`.
 
-Observera att både anpassning av ett körklart index och helt anpassade index måste innehålla `-custom-`. Endast helt anpassade index får börja med ett prefix.
+2. Anpassning av ett OOTB-index. Dessa indikeras genom tillägg `-custom-` följt av en numerisk identifierare till det ursprungliga indexnamnet. Till exempel: `/oak:index/damAssetLucene-8-custom-1`.
+
+3. Helt anpassat index: Det går att skapa ett helt nytt index från grunden. Deras namn måste ha ett prefix för att namnkonflikter ska undvikas. Till exempel: `/oak:index/acme.product-1-custom-2`, där prefixet är `acme.`
 
 ## Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
 
 >[!NOTE]
 >
->Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-6`, kopierar den senaste körklara indexdefinitionen från en *Cloud Service* med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt sedan namn på konfigurationen, till exempel för att `damAssetLucene-6-custom-1`och lägg till anpassningar överst. Denna process säkerställer att nödvändiga konfigurationer inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-6/tika` krävs i det anpassade indexvärdet för molntjänsten. Den finns inte i molnet-SDK:n.
+>Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-8`, please copy the latest out-of-box index definition from a *Cloud Service* med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt namn på den till `damAssetLucene-8-custom-1` (eller senare) och lägg till anpassningar i XML-filen. Detta säkerställer att de nödvändiga konfigurationerna inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-8/tika` krävs i det anpassade indexvärdet för molntjänsten. Den finns inte i molnet-SDK:n.
 
-Förbered ett indexdefinitionspaket som innehåller den faktiska indexdefinitionen enligt namnmönstret:
+Om du vill anpassa ett OOTB-index förbereder du ett nytt paket som innehåller den faktiska indexdefinitionen som följer namnmönstret:
 
-`<indexName>[-<productVersion>]-custom-<customVersion>`
+`<indexName>-<productVersion>-custom-<customVersion>`
 
-Då måste vi gå under `ui.apps/src/main/content/jcr_root`. Alla anpassade och anpassade indexdefinitioner måste lagras under `/oak:index`.
+För ett helt anpassat index skapar du ett nytt indexdefinitionspaket som innehåller indexdefinitionen som följer detta namnmönster:
 
-Filtret för paketet måste anges så att befintliga (körklara index) behålls. I filen `ui.apps/src/main/content/META-INF/vault/filter.xml`ska varje anpassat (eller anpassat) index anges, t.ex. som `<filter root="/oak:index/damAssetLucene-6-custom-1"/>`. Om indexversionen ändras senare måste filtret justeras.
+`<prefix>.<indexName>-<productVersion>-custom-<customVersion>`
 
 <!-- Alexandru: temporarily drafting this statement due to CQDOC-17701
 
@@ -73,136 +73,160 @@ The package from the above sample is built as `com.adobe.granite:new-index-conte
 
 >[!NOTE]
 >
->Alla innehållspaket som innehåller indexdefinitioner bör ha följande egenskap angiven i egenskapsfilen för innehållspaketet, på `/META-INF/vault/properties.xml`:
+>Alla innehållspaket som innehåller indexdefinitioner bör ha följande egenskaper angivna i egenskapsfilen för innehållspaketet, som finns på `<package_name>/META-INF/vault/properties.xml`:
 >
->`noIntermediateSaves=true`
+> * `noIntermediateSaves=true`
+>
+> * `allowIndexDefinitions=true`
 
-## Distribuera indexdefinitioner {#deploying-index-definitions}
+## Distribuera anpassade indexdefinitioner {#deploying-custom-index-definitions}
 
-Indexdefinitioner markeras som anpassade och versionsindelade:
+Så här illustrerar du hur en anpassad version av det körklara indexvärdet används `damAssetLucene-8`kommer vi att tillhandahålla en stegvis guide. I det här exemplet byter vi namn på den till `damAssetLucene-8-custom-1`. Sedan görs följande:
 
-* Själva indexdefinitionen (till exempel `/oak:index/ntBaseLucene-custom-1`)
+1. Skapa en ny mapp med det uppdaterade indexnamnet i `ui.apps` katalog:
+   * Exempel: `ui.apps/src/main/content/jcr_root/_oak_index/damAssetLucene-8-custom-1/`
 
-Om du vill distribuera ett anpassat eller anpassat index, indexdefinitionen (`/oak:index/definitionname`) måste levereras med `ui.apps` via Git och Cloud Manager-distributionsprocessen. I filtret FileVault, till exempel, `ui.apps/src/main/content/META-INF/vault/filter.xml`, lista varje anpassat och anpassat index individuellt, till exempel `<filter root="/oak:index/damAssetLucene-7-custom-1"/>`. Själva den anpassade/anpassade indexdefinitionen sparas sedan i filen `ui.apps/src/main/content/jcr_root/_oak_index/damAssetLucene-7-custom-1/.content.xml`, enligt följande:
+2. Lägg till en konfigurationsfil `.content.xml` med anpassade konfigurationer i den nya mappen. Nedan visas ett exempel på en anpassning: Filnamn: `ui.apps/src/main/content/jcr_root/_oak_index/damAssetLucene-8-custom-1/.content.xml`
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:oak="https://jackrabbit.apache.org/oak/ns/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
-        jcr:primaryType="oak:QueryIndexDefinition"
-        async="[async,nrt]"
-        compatVersion="{Long}2"
-        ...
-        </indexRules>
-        <tika jcr:primaryType="nt:unstructured">
-            <config.xml jcr:primaryType="nt:file"/>
-        </tika>
-</jcr:root>
-```
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:oak="http://jackrabbit.apache.org/oak/ns/1.0" xmlns:rep="internal"
+       jcr:mixinTypes="[rep:AccessControllable]"
+       jcr:primaryType="oak:QueryIndexDefinition"
+       async="[async,nrt]"
+       compatVersion="{Long}2"
+       evaluatePathRestrictions="{Boolean}true"
+       includedPaths="[/content/dam]"
+       maxFieldLength="{Long}100000"
+       type="lucene">
+       <facets
+           jcr:primaryType="nt:unstructured"
+           secure="statistical"
+           topChildren="100"/>
+       <indexRules jcr:primaryType="nt:unstructured">
+           <dam:Asset jcr:primaryType="nt:unstructured">
+               <properties jcr:primaryType="nt:unstructured">
+                   <cqTags
+                       jcr:primaryType="nt:unstructured"
+                       name="jcr:content/metadata/cq:tags"
+                       nodeScopeIndex="{Boolean}true"
+                       propertyIndex="{Boolean}true"
+                       useInSpellcheck="{Boolean}true"
+                       useInSuggest="{Boolean}true"/>
+               </properties>
+           </dam:Asset>
+       </indexRules>
+       <tika jcr:primaryType="nt:folder">
+           <config.xml jcr:primaryType="nt:file"/>
+       </tika>
+   </jcr:root>
+   ```
 
-Ovanstående exempel innehåller en konfiguration för Apache Tika. Tika-konfigurationsfilen lagras under `ui.apps/src/main/content/jcr_root/_oak_index/damAssetLucene-7-custom-1/tika/config.xml`.
+3. Lägg till en post i FileVault-filtret i `ui.apps/src/main/content/META-INF/vault/filter.xml`:
 
-### Projektkonfiguration
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <workspaceFilter version="1.0">
+       ...
+       <filter root="/oak:index/damAssetLucene-8-custom-1"/> 
+   </workspaceFilter>
+   ```
 
-Beroende på vilken version av Jackrabbit Filevault Maven Package Plugin som används krävs en del mer konfiguration i projektet. När du använder Jackrabbit Filevault Maven Package Plugin version **1.1.6** eller nyare, sedan filen `pom.xml` måste innehålla följande avsnitt i plug-in-konfigurationen för `filevault-package-maven-plugin`, in `configuration/validatorsSettings` (precis före `jackrabbit-nodetypes`):
+4. Lägg till en konfigurationsfil för Apache Tika i: `ui.apps/src/main/content/jcr_root/_oak_index/damAssetLucene-8-custom-1/tika/config.xml`:
 
-```xml
-<jackrabbit-packagetype>
-    <options>
-        <immutableRootNodeNames>apps,libs,oak:index</immutableRootNodeNames>
-    </options>
-</jackrabbit-packagetype>
-```
+   ```xml
+   <properties>
+       <detectors>
+           <detector class="org.apache.tika.detect.TypeDetector"/>
+       </detectors>
+       <parsers>
+           <parser class="org.apache.tika.parser.DefaultParser">
+           <mime>text/plain</mime>
+           </parser>
+       </parsers>
+       <service-loader initializableProblemHandler="ignore" dynamic="true"/>
+   </properties>
+   ```
 
-I det här fallet gäller även `vault-validation` versionen måste uppgraderas till en senare version:
+5. Kontrollera att konfigurationen uppfyller riktlinjerna i [Projektkonfiguration](#project-configuration) -avsnitt. Gör nödvändiga anpassningar i enlighet med detta.
 
-```xml
-<dependency>
-    <groupId>org.apache.jackrabbit.vault</groupId>
-    <artifactId>vault-validation</artifactId>
-    <version>3.5.6</version>
-</dependency>
-```
+## Projektkonfiguration
 
-Sedan `ui.apps.structure/pom.xml` och `ui.apps/pom.xml`, konfigurationen av `filevault-package-maven-plugin` måste ha `allowIndexDefinitions` och `noIntermediateSaves` aktiverat. Alternativet `noIntermediateSaves` säkerställer att indexkonfigurationerna läggs till automatiskt.
+Vi rekommenderar starkt att du använder version >= `1.3.2` av Jackrabbit `filevault-package-maven-plugin`. Så här implementerar du den i ditt projekt:
 
-```xml
-<groupId>org.apache.jackrabbit</groupId>
-    <artifactId>filevault-package-maven-plugin</artifactId>
-    <configuration>
-        <allowIndexDefinitions>true</allowIndexDefinitions>
-        <properties>
-            <cloudManagerTarget>none</cloudManagerTarget>
-            <noIntermediateSaves>true</noIntermediateSaves>
-        </properties>
-    ...
-```
+1. Uppdatera versionen på den översta nivån `pom.xml`:
 
-I `ui.apps.structure/pom.xml`, `filters` -avsnittet för det här plugin-programmet måste innehålla en filterrot enligt följande:
+   ```xml
+   <plugin>
+       <groupId>org.apache.jackrabbit</groupId>
+           <artifactId>filevault-package-maven-plugin</artifactId>
+           ...
+           <version>1.3.2</version>
+       ...
+   </plugin>
+   ```
 
-```xml
-<filter><root>/oak:index</root></filter>
-```
+2. Lägg till följande på den översta nivån `pom.xml`:
 
-När den nya indexdefinitionen har lagts till distribueras det nya programmet med hjälp av Cloud Manager. Vid distributionen startas två jobb som ansvarar för att lägga till (och sammanfoga vid behov) indexdefinitionerna i MongoDB och Azure Segment Store för författare respektive publicering. De underliggande databaserna omindexeras med de nya indexdefinitionerna, innan växlingen äger rum.
+   ```xml
+   <jackrabbit-packagetype>
+       <options>   
+           <immutableRootNodeNames>apps,libs,oak:index</immutableRootNodeNames>
+       </options>
+   </jackrabbit-packagetype>
+   ```
 
-### ANMÄRKNING
+   Här är ett exempel på projektets högsta nivå `pom.xml` fil med de ovannämnda konfigurationerna:
 
-Om du observerar följande fel i felvalideringen <br>
-`[ERROR] ValidationViolation: "jackrabbit-nodetypes: Mandatory child node missing: jcr:content [nt:base] inside node with types [nt:file]"` <br>
-Därefter kan du åtgärda problemet genom att följa något av följande steg: <br>
+   Filnamn: `pom.xml`
 
-1. Nedgradera filnivå till version 1.0.4 och lägg till följande i det övre rummet:
+   ```xml
+   <plugin>
+       <groupId>org.apache.jackrabbit</groupId>
+           <artifactId>filevault-package-maven-plugin</artifactId>
+           ...
+           <version>1.3.2</version>
+           <configuration>
+               ...
+               <validatorsSettings>
+                   <jackrabbit-packagetype>
+                       <options>
+                           <immutableRootNodeNames>apps,libs,oak:index</immutableRootNodeNames>
+                       </options>
+                   </jackrabbit-packagetype>
+                   ...
+               ...
+   </plugin>
+   ```
 
-```xml
-<allowIndexDefinitions>true</allowIndexDefinitions>
-```
+3. I `ui.apps/pom.xml` och `ui.apps.structure/pom.xml` det är nödvändigt att aktivera `allowIndexDefinitions` och `noIntermediateSaves` i `filevault-package-maven-plugin`. Aktivering `allowIndexDefinitions` möjliggör anpassade indexdefinitioner, medan `noIntermediateSaves` säkerställer att konfigurationerna läggs till automatiskt.
 
-Nedan visas ett exempel på var ovanstående konfiguration ska placeras i rummet.
+   Filnamn: `ui.apps/pom.xml` och `ui.apps.structure/pom.xml`
 
-```xml
-<plugin>
-    <groupId>org.apache.jackrabbit</groupId>
-    <artifactId>filevault-package-maven-plugin</artifactId>
-    <configuration>
-        <properties>
-        ...
-        </properties>
-        ...
-        <allowIndexDefinitions>true</allowIndexDefinitions>
-        <repositoryStructurePackages>
-        ...
-        </repositoryStructurePackages>
-        <dependencies>
-        ...
-        </dependencies>
-    </configuration>
-</plugin>
-```
+   ```xml
+   <plugin>
+       <groupId>org.apache.jackrabbit</groupId>
+           <artifactId>filevault-package-maven-plugin</artifactId>
+           <configuration>
+               <allowIndexDefinitions>true</allowIndexDefinitions>
+               <properties>
+                   <cloudManagerTarget>none</cloudManagerTarget>
+                   <noIntermediateSaves>true</noIntermediateSaves>
+               </properties>
+       ...
+   </plugin>
+   ```
 
-1. Inaktivera validering av nodtyp. Ange följande egenskap i avsnittet jackrabbit-nodetypes i konfigurationen av plugin-programmet filevault:
+4. Lägg till ett filter för `/oak:index` in `ui.apps.structure/pom.xml`:
 
-```xml
-<isDisabled>true</isDisabled>
-```
+   ```xml
+   <filters>
+       ...
+       <filter><root>/oak:index</root></filter>
+   </filters>
+   ```
 
-Nedan visas ett exempel på var ovanstående konfiguration ska placeras i rummet.
-
-```xml
-<plugin>
-    <groupId>org.apache.jackrabbit</groupId>
-    <artifactId>filevault-package-maven-plugin</artifactId>
-    ...
-    <configuration>
-    ...
-        <validatorsSettings>
-        ...
-            <jackrabbit-nodetypes>
-                <isDisabled>true</isDisabled>
-            </jackrabbit-nodetypes>
-        </validatorsSettings>
-    </configuration>
-</plugin>
-```
+När du har lagt till den nya indexdefinitionen distribuerar du det nya programmet med Cloud Manager. Distributionen initierar två jobb som ansvarar för att lägga till (och sammanfoga om det behövs) indexdefinitionerna i MongoDB och Azure Segment Store för författare respektive publicering. Före bytet omindexeras de underliggande databaserna med de uppdaterade indexdefinitionerna.
 
 >[!TIP]
 >
@@ -307,7 +331,7 @@ I den nya versionen av programmet används följande (ändrade) konfiguration:
 
 ### Ångra en ändring {#undoing-a-change}
 
-Ibland måste en ändring i en indexdefinition återställas. Orsaken kan vara att en ändring har gjorts av misstag eller att en ändring inte längre behövs. Indexdefinitionen `damAssetLucene-8-custom-3` skapades av misstag och har redan distribuerats. Därför kanske du vill återgå till den tidigare indexdefinitionen `damAssetLucene-8-custom-2`. Det gör du genom att lägga till ett index som kallas `damAssetLucene-8-custom-4` som innehåller definitionen av föregående index, `damAssetLucene-8-custom-2`.
+Ibland behöver du ångra en ändring i en indexdefinition. Detta kan bero på ett oavsiktligt fel eller på att ändringen inte längre behövs. Ta till exempel indexdefinitionen `damAssetLucene-8-custom-3,` som har skapats av misstag och redan har distribuerats. Därför vill du återgå till den tidigare indexdefinitionen, `damAssetLucene-8-custom-2.` För att uppnå detta måste du infoga ett nytt index med namnet `damAssetLucene-8-custom-4` som innehåller definitionen från föregående index, `damAssetLucene-8-custom-2.`
 
 ### Ta bort ett index {#removing-an-index}
 
