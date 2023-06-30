@@ -2,9 +2,9 @@
 title: På vilket sätt har du nytta av resursvyn?
 description: Läs mer om de viktigaste fördelarna med resursvyn
 mini-toc-levels: 3
-source-git-commit: 5a7938d5e52388516f8b66bbcf8ffdee332a51a3
+source-git-commit: 97b6f66f2d19b85ec0a71eda756aaa334ea5da57
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1064'
 ht-degree: 0%
 
 ---
@@ -121,14 +121,15 @@ Förutom dessa funktioner kan du även använda resursvyn för att utföra följ
 
 * Byt namn på resurser och mappar som är tillgängliga i databasen.
 
+Den nya vyn Adobe Experience Manager Assets är skräddarsydd för att effektivisera arbetsflöden, främja samarbete och snabba upp materialleveranserna. Genom att anamma innehållets snabbhet kan marknadsförarna utnyttja hela potentialen i sitt digitala material och frigöra kreativiteten som aldrig förr.
+
+
 Använd de här länkarna för att snabbt komma igång med resursvyn:
 
 * [Min arbetsyta](/help/assets/my-workspace-assets-view.md)
 * [Kom igång med resursvyn](/help/assets/get-started-assets-view.md)
 
-## Slutsats {#conclusion}
 
-Det är dags att omvandla våra marknadsföringsverktyg för att stödja det föränderliga affärslandskapet. Den nya vyn Adobe Experience Manager Assets är skräddarsydd för att effektivisera arbetsflöden, främja samarbete och snabba upp materialleveranserna. Genom att anamma innehållets snabbhet kan marknadsförarna utnyttja hela potentialen i sitt digitala material och frigöra kreativiteten som aldrig förr. Gör er redo att utnyttja kraften i Adobe nya Assets för att visa upplevelsen och få exceptionella resultat i era marknadsföringskampanjer. Det är dags att ta till sig framtiden för DAM och driva verksamheten framåt.
 
 
 
