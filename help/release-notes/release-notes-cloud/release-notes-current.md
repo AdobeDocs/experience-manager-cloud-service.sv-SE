@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 5a37f237d04d19f3c4113c2ea3e37ab447bf3b0c
+source-git-commit: da5634dfa812268b81b2db783da772b6ecc1d7ce
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -115,8 +115,8 @@ I resursvyn kan du nu [lägga till text med flera värden och nedrullningsbara l
 
 * [Adaptiv Forms i AEM Page Editor och Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md): Nu kan du använda AEM Page Editor och Experience Fragment för att snabbt skapa och lägga till flera formulär på dina AEM Sites-sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsupplevelser på webbplatssidor med hjälp av kraften i adaptiva Forms-komponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering.
 
-      >[!VIDEO](https://video.tv.adobe.com/v/3419284?quality=12&amp;learn=on)
-  
+  >[!VIDEO](https://video.tv.adobe.com/v/3419284?quality=12&learn=on)
+
 * [Använd Adobe Acrobat Sign Solutions for Government (HIPPA-klagomål) med AEM Forms](/help/forms/adobe-sign-integration-adaptive-forms.md): AEM Forms kan nu integreras med Adobe Acrobat Sign Solutions för myndigheter. Integreringen ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inskickade adaptiva formulär för myndighetskonton (myndigheter och myndigheter).
 
   Integrationen med Adobe Acrobat Sign Solutions for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
