@@ -2,7 +2,7 @@
 title: Skapa och använd teman för att utforma ett adaptivt formulär
 description: Du kan använda teman för att anpassa och ge en visuell identitet till ett adaptivt formulär. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
-source-git-commit: 4279b4a880429f535cf341d35ac38c9b4dc55ae2
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '5362'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Teman som skapats för en Cloud Service-instans:
 
 * Innan du överför ett tema som skapats den [!DNL Experience Manager Forms] 6.5 eller tidigare versioner till en Cloud Service-instans, kontrollera att klientbibliotekets plats är inställd på `etc/clientlibs/fd/themes`. Om klientbiblioteket inte finns i `etc` mapp, uppdatera platsen manuellt till `etc/clientlibs/fd/themes`.  Du kan ändra dina [!DNL Experience Manager Forms] 6.5 eller tidigare versioner. När du har angett platsen för klientbiblioteket kan en administratör överföra teman till Cloud Servicen eller använda verktyget Innehållsöverföring för att migrera teman från 6.5 eller tidigare versioner till Cloud Servicen.
 
-   Ändra också namnet på kategorin. Om namnet inte ändras uppstår ett fel `theme with same category name exists` kan inträffa. När du ändrar kategorinamnet påverkas inte den adaptiva Forms som använder temat.
+  Ändra också namnet på kategorin. Om namnet inte ändras uppstår ett fel `theme with same category name exists` kan inträffa. När du ändrar kategorinamnet påverkas inte den adaptiva Forms som använder temat.
 
 ### Hämta ett tema {#downloading-a-theme}
 
@@ -205,25 +205,26 @@ Temaredigeraren är uppdelad i två paneler:
 
    * **Väljare:** Visar den komponent som är markerad för formatering och dess egenskaper som du kan formatera. Väljaren representerar alla komponenter av en typ. Om du väljer en textrutekomponent i ett tema för formatering, alla textrutor i formuläret <!-- or interactive communication --> ärva stilen. Med väljare kan du välja en allmän komponent eller en specifik komponent för formatering. En fältkomponent är till exempel en allmän komponent och en textruta är en specifik komponent.
 
-      **Formatera allmän komponent:**
+     **Formatera allmän komponent:**
 Ett fält kan vara ett numeriskt fält, t.ex. age, eller ett textfält, t.ex. adress.
 När du formaterar ett fält formateras alla fält, till exempel ålder, namn och adress.
 
-      **Formateringsspecifik komponent**: En specifik komponent påverkar objekt i den specifika kategorin. När du formaterar den numeriska rutkomponenten i temat ärver bara det numeriska ruteobjektet formatet.
+     **Formateringsspecifik komponent**: En specifik komponent påverkar objekt i den specifika kategorin. När du formaterar den numeriska rutkomponenten i temat ärver bara det numeriska ruteobjektet formatet.
 
-      Ett textrutefält, till exempel en längre adress och ett numeriskt rutefält som t.ex. ålder, är kortare. Du kan markera ett numeriskt rutfält, minska dess längd och använda det i formuläret. Bredden på alla numeriska rutfält minskas i formuläret.
+     Ett textrutefält, till exempel en längre adress och ett numeriskt rutefält som t.ex. ålder, är kortare. Du kan markera ett numeriskt rutfält, minska dess längd och använda det i formuläret. Bredden på alla numeriska rutfält minskas i formuläret.
 
-      När du anpassar alla fältkomponenter med en viss bakgrundsfärg ärver alla fält, som ålder, namn och adress, bakgrundsfärgen. När du markerar en numerisk ruta, t.ex. ålder, och minskar bredden på den, minskas bredden på alla numeriska rutor, t.ex. ålder, antalet personer i en familj. Bredden på textrutor ändras inte.
+     När du anpassar alla fältkomponenter med en viss bakgrundsfärg ärver alla fält, som ålder, namn och adress, bakgrundsfärgen. När du markerar en numerisk ruta, t.ex. ålder, och minskar bredden på den, minskas bredden på alla numeriska rutor, t.ex. ålder, antalet personer i en familj. Bredden på textrutor ändras inte.
 
    * **Läge:** Gör att du kan anpassa format för ett objekt i ett visst läge. Du kan till exempel ange ett objekts utseende när det är i standardläge, fokusläge, inaktiverat läge, hovring eller felläge.
-   * **Egenskapskategorier:** Formategenskaper delas upp i olika kategorier. Till exempel Dimension och placering, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
+   * **Egenskapskategorier:** Formategenskaper delas upp i olika kategorier. Exempel: Dimension och placering, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
 
    * **Avancerat:** Gör att du kan lägga till anpassad CSS till ett objekt, vilket åsidosätter de egenskaper som visuella kontroller definierar om det finns en överlappning.
 
    * **Visa CSS**: Gör att du kan visa CSS för den markerade komponenten.
-   I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **Simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs i detalj [nedan](themes.md#using-rail).
 
-[ ![Theme editor](assets/themes.png)](assets/themes-1.png) **S.** Sidebar **B.** Arbetsyta
+  I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **Simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs i detalj [nedan](themes.md#using-rail).
+
+[![Theme editor](assets/themes.png)](assets/themes-1.png) **S.** Sidebar **B.** Arbetsyta
 
 ### Formatkomponenter {#styling-components}
 
@@ -620,7 +621,7 @@ Du kan se den genererade CSS-koden med följande alternativ:
 
 * **Undvika resurser från ett annat tema**
 
-   När du redigerar ett tema kan du bläddra bland och lägga till resurser (till exempel bilder) från andra teman. Du redigerar till exempel bakgrunden på en sida. Om du till exempel väljer **[!UICONTROL Page]** ![edit-button](assets/edit-button.png)> **[!UICONTROL Background]** > **[!UICONTROL Add]** > **[!UICONTROL Image]** visas en dialogruta där du kan bläddra bland och lägga till bilder i andra teman.
+  När du redigerar ett tema kan du bläddra bland och lägga till resurser (till exempel bilder) från andra teman. Du redigerar till exempel bakgrunden på en sida. Om du till exempel väljer **[!UICONTROL Page]** ![edit-button](assets/edit-button.png)> **[!UICONTROL Background]** > **[!UICONTROL Add]** > **[!UICONTROL Image]** visas en dialogruta där du kan bläddra bland och lägga till bilder i andra teman.
 
 * Du kan stöta på problem med det aktuella temat om en resurs läggs till från ett annat tema och det andra temat flyttas eller tas bort. Du bör undvika att bläddra bland och lägga till resurser från andra teman.
 
@@ -654,9 +655,9 @@ Du kan se den genererade CSS-koden med följande alternativ:
 
 * **Ändra layoutbredd för behållarpanelen**
 
-   Du bör inte ändra bredden på behållarpanelens layout. När du anger bredden på en behållarpanel blir den statisk och anpassas inte till olika skärmar.
+  Du bör inte ändra bredden på behållarpanelens layout. När du anger bredden på en behållarpanel blir den statisk och anpassas inte till olika skärmar.
 
 * **När formulärredigeraren eller temaredigeraren ska användas för att arbeta med sidhuvud och sidfot**
 
-   Använd temaredigeraren om du vill formatera sidhuvud och sidfot med formatalternativ som teckensnittsformat, bakgrund och genomskinlighet.
+  Använd temaredigeraren om du vill formatera sidhuvud och sidfot med formatalternativ som teckensnittsformat, bakgrund och genomskinlighet.
 Om du vill ange information som logotypbild, företagsnamn i sidhuvud och copyrightinformation i sidfoten använder du alternativen för formulärredigeraren.

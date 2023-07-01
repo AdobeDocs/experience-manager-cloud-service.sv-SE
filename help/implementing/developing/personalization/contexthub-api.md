@@ -1,21 +1,21 @@
 ---
-title: ContextHub Javascript API-referens
-description: ContextHub Javascript-API:t är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
+title: ContextHub JavaScript API-referens
+description: ContextHub JavaScript API är tillgängligt för skript när ContextHub-komponenten har lagts till på sidan
 exl-id: ec35bef5-610c-4e85-a43a-d4201b5eb03e
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '4620'
 ht-degree: 0%
 
 ---
 
-# ContextHub Javascript API-referens {#contexthub-javascript-api-reference}
+# ContextHub JavaScript API-referens {#contexthub-javascript-api-reference}
 
-ContextHub Javascript API är tillgängligt för skript när [ContextHub-komponenten har lagts till på sidan](adding-contexthub.md).
+ContextHub JavaScript API är tillgängligt för skript när [ContextHub-komponenten har lagts till på sidan](adding-contexthub.md).
 
 ## ContextHub-konstanter {#contexthub-constants}
 
-Konstantvärden som definieras av ContextHub Javascript-API:t.
+Konstantvärden som definieras av JavaScript-API:t för ContextHub.
 
 ### Händelsekonstanter {#event-constants}
 
@@ -62,7 +62,7 @@ I följande tabell visas namnen på händelser som inträffar för användargrä
 | `ContextHub.Constants.EVENT_UI_INITIALIZED` | Utlöses när gränssnittsbehållaren initieras | `ui-initialized` |
 | `ContextHub.Constants.ACTIVE_UI_MODE` | Anger aktivt användargränssnittsläge | `/_/active-ui-mode` |
 
-## ContextHub Javascript API-referens {#contexthub-javascript-api-reference-2}
+## ContextHub JavaScript API-referens {#contexthub-javascript-api-reference-2}
 
 ContextHub-objektet ger åtkomst till alla arkiv.
 
@@ -369,7 +369,7 @@ A `boolean` värde:
 
 Ett arkiv som innehåller JSON-data. Data hämtas från en extern JSONP-tjänst, eller eventuellt från en tjänst som returnerar JSON-data. Ange tjänstinformationen med [`init`](#init-name-config) när du skapar en instans av den här klassen.
 
-Butiken använder beständighet i minnet (Javascript-variabel). Lagringsdata är bara tillgängliga under sidans livstid.
+Butiken använder beständighet i minnet (JavaScript-variabel). Lagringsdata är bara tillgängliga under sidans livstid.
 
 ContextHub.Store.JSONPStore extends [ContextHub.Store.Core](#contexthub-store-core) och ärver funktionerna i den klassen.
 
@@ -441,7 +441,7 @@ initierar `ContextHub.Store.JSONPStore` -objekt.
 * **`config`:** (Objekt) Ett objekt som innehåller egenskapen service. JSONPStore-objektet använder egenskaperna för `service` objekt för att skapa URL:en för JSONP-tjänsten:
    * `eventDeferring`: 32.
    * `eventing`: Objektet ContextHub.Utils.Eventing för det här arkivet. Standardvärdet är `ContextHub.eventing` -objekt.
-   * `persistence`: ContextHub.Utils.Persistence-objektet för det här arkivet. Som standard används minnesbeständighet (Javascript-objekt).
+   * `persistence`: ContextHub.Utils.Persistence-objektet för det här arkivet. Som standard används minnesbeständighet (JavaScript-objekt).
    * `service`: (Objekt)
       * `host`: (String) Servernamnet eller IP-adressen.
       * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, i annat fall false. När true är `{callback: "ContextHub.Callbacks.*Object.name*}`objekt läggs till i `service.params`.
@@ -489,7 +489,7 @@ Matchar den angivna parametern.
 
 ## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
 
-`ContextHub.Store.SessionStore` extends [ContextHub.Store.Core](#contexthub-store-core) så den ärver alla funktioner i den klassen. Data i det här arkivet bevaras med beständighet i minnet (Javascript-objekt).
+`ContextHub.Store.SessionStore` extends [ContextHub.Store.Core](#contexthub-store-core) så den ärver alla funktioner i den klassen. Data i det här arkivet bevaras med hjälp av en minnesbeständig (JavaScript-objekt).
 
 ## ContextHub.UI {#contexthub-ui}
 
@@ -869,7 +869,7 @@ Värdet som motsvarar tangenten. När nyckeln har underordnade nycklar returnera
 
 ##### Exempel {#example-getitem-2}
 
-Tänk på följande JavaScript-objekt:
+Titta på följande JavaScript-objekt:
 
 ```javascript
 myObject {

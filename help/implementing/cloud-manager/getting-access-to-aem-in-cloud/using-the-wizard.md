@@ -2,9 +2,9 @@
 title: Guiden Skapa projekt
 description: Lär dig mer om guiden för att skapa projekt så att du snabbt kan konfigurera projektet efter att du har skapat produktionsprogrammet.
 exl-id: 03736ca7-1345-4faf-a61a-f9213ab5c89a
-source-git-commit: 93cb0ffa87f2338518c2a23de4e0a692031e1a71
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ När programmet är klart **Lägg till miljö** kortet ersätter **Projekt skapa
 
 Nu har du ett AEM baserat på den AEM typen av arkiv som lagts till i Git-databasen och som kan användas som grund för ditt eget projekt. Därefter kan du skapa miljöer där du kan distribuera projektkoden.
 
-Se dokumentet [Hantera dina miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill lära dig hur du lägger till eller hanterar miljöer.
+Se [Hantera dina miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill lära dig hur du lägger till eller hanterar miljöer.
 
 >[!NOTE]
 >

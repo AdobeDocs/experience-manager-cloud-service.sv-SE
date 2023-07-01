@@ -4,9 +4,9 @@ description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as
 feature: Content Fragments
 role: User
 exl-id: d12b1dda-85ce-4665-b8b1-915b74231bb8
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2122'
 ht-degree: 3%
 
 ---
@@ -87,7 +87,7 @@ Dessa innehållsfragment kan sedan samlas ihop för att ge upplevelser över en 
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns även i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
+>Mer information finns i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
@@ -147,7 +147,7 @@ Innehållsfragment är en innehållsstruktur som:
 * Kan [innehålla eller vara ansluten till bilder](#fragments-with-visual-assets).
 * Kan använda [mellanliggande innehåll](#in-between-content-when-page-authoring-with-content-fragments) vid referens på en sida.
 
-* Är oberoende av leveransmekanismen (dvs. sida, kanal).
+* Är oberoende av leveransmekanismen (d.v.s. sidan, kanalen).
 
 ### Fragment med visuella resurser {#fragments-with-visual-assets}
 
@@ -294,7 +294,7 @@ Om du vill använda dina innehållsfragment för att skapa sidor behöver du ock
 
    * Instrumentellt för att leverera fragmentet i HTML- och/eller JSON-format.
    * Krävs för [referera till fragmentet på en sida](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
-   * Ansvarig för layout och leverans av ett fragment. dvs. kanaler.
+   * Ansvarig för layout och leverans av ett fragment. det vill säga, kanaler.
    * Fragment behöver en eller flera dedikerade komponenter för att definiera layout och leverera vissa eller alla element/varianter och tillhörande innehåll.
    * Om du drar ett fragment till en sida när du redigerar kopplas den nödvändiga komponenten automatiskt till.
 

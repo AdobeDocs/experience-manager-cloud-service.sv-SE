@@ -5,10 +5,10 @@ contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 2f2fd6cb-8b53-4167-a7e3-453f27549109
-source-git-commit: ec3939e34028d1dbadbd2b855796ca63e049b814
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '3054'
-ht-degree: 4%
+source-wordcount: '3053'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Om du vill lägga till Dynamic Media-funktionalitet i resurser som du använder på dina webbplatser kan du lägga till **Dynamic Media**, **Interaktiva media**, **Panoramabilder**, eller **Video 360 Media** direkt på sidan. Du aktiverar layoutläget och Dynamic Media-komponenterna. Sedan lägger du till de här komponenterna på sidan och lägger till resurser i komponenten. Dynamic Media-komponenterna är smarta – de känner av om du lägger till en bild eller en video och konfigurationsalternativen ändras i enlighet med detta.
 
-Du lägger till Dynamic Media-resurser direkt på sidan om du använder [!DNL Adobe Experience Manager] som din WCM. Om du använder en tredje part för ditt WCM-system, kan du antingen [link](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller [embed](/help/assets/dynamic-media/embed-code.md) dina resurser. En responsiv tredjepartswebbplats finns på [leverera optimerade bilder till en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md).
+Du lägger till Dynamic Media-resurser direkt på sidan om du använder [!DNL Adobe Experience Manager] som din WCM. Om ni använder en annan leverantör för innehållshanteringssystemet kan ni antingen [länka](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) eller [bädda in](/help/assets/dynamic-media/embed-code.md) resurserna. En responsiv tredjepartswebbplats finns på [leverera optimerade bilder till en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md).
 
 >[!NOTE]
 >
@@ -85,13 +85,13 @@ Du kan lokalisera Dynamic Media-komponenter på ett av två sätt:
 
 * Från en webbsida i Sites öppnar du **[!UICONTROL Properties]** och väljer fliken **[!UICONTROL Advanced]**. Välj språk för lokalisering.
 
-   ![chlimage_1-172](assets/chlimage_1-538.png)
+  ![chlimage_1-172](assets/chlimage_1-538.png)
 
 * Välj önskad sida eller sidgrupp i platsväljaren. Välj **[!UICONTROL Properties]** och väljer **[!UICONTROL Advanced]** -fliken. Välj språk för lokalisering.
 
-   >[!NOTE]
-   >
-   >Inte alla språk som är tillgängliga i **[!UICONTROL Language]** menyn har för närvarande tilldelade variabler.
+  >[!NOTE]
+  >
+  >Inte alla språk som är tillgängliga i **[!UICONTROL Language]** menyn har för närvarande tilldelade variabler.
 
 ## Tillgängliga Dynamic Media-komponenter {#dynamic-media-components}
 
@@ -145,44 +145,44 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
 * **[!UICONTROL Viewer preset]** - Välj en befintlig visningsförinställning i listrutan. Om den visningsförinställning du söker efter inte visas måste du göra den synlig. Se Hantera förinställningar för visningsprogram. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
-   Det här alternativet är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är även förinställningar som bara är smarta och relevanta för visningsprogrammet visas.
+  Det här alternativet är det enda tillgängliga alternativet om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar. De visningsförinställningar som visas är även förinställningar som bara är smarta och relevanta för visningsprogrammet visas.
 
 * **[!UICONTROL Viewer modifiers]** - Visningsmodifierare har formen av namn=värde-par med en &amp;-avgränsare och du kan ändra visningsprogram enligt riktlinjerna i referenshandboken för visningsprogrammen. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1` som anger en annan bild för videominiatyrbilden och associerar en undertextningsfil med videon.
 
 * **[!UICONTROL Image preset]** - Välj en befintlig bildförinställning i listrutan. Om den bildförinställning du söker inte syns måste du göra den synlig. Se Hantera bildförinställningar. Du kan inte välja en visningsförinställning om du använder en bildförinställning och omvänt.
 
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+  Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
 * **[!UICONTROL Image Modifiers]** - Du kan använda bildeffekter genom att ange fler bildkommandon. Dessa kommandon beskrivs i Bildförinställningar och i Referens för bildserverkommando.
 
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+  Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
 * **[!UICONTROL Breakpoints]** - Om du använder den här resursen på en responsiv webbplats måste du lägga till bildbrytpunkter. Bildbrytpunkter måste avgränsas med kommatecken (,). Det här alternativet fungerar när ingen höjd eller bredd har definierats i en bildförinställning.
 
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+  Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-   Du kan redigera följande avancerade inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
+  Du kan redigera följande avancerade inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
 * **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
 
-   The **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
+  The **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
    * Under Förinställningstyp, **[!UICONTROL Image Preset]** är markerat och **[!UICONTROL RESS_IP]** är markerat i **[!UICONTROL Image Preset]** nedrullningsbar lista.
 
-   ![inställning för enhetens pixelproportioner för bildförinställning](/help/assets/dynamic-media/assets/dpr-ress-ip.png)
+  ![inställning för enhetens pixelproportioner för bildförinställning](/help/assets/dynamic-media/assets/dpr-ress-ip.png)
 
-   Se även [Om optimering av enhetens pixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
+  Se även [Om optimering av enhetens pixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
 
-   Alla [!DNL Experience Manager] DPR-värden för Dynamic Media Smart Imaging ignoreras.
+  Alla [!DNL Experience Manager] DPR-värden för Dynamic Media Smart Imaging ignoreras.
 
 * **[!UICONTROL Title]** - Ändra bildens titel.
 
 * **[!UICONTROL Alt Text]** - Lägg till en titel i bilden för de användare som har inaktiverat grafik.
 
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+  Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
 * **[!UICONTROL URL, Open in]** - Du kan ange att en resurs ska öppna en länk. Ange URL:en och Öppna i anger om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
 
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+  Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
 * **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
@@ -204,12 +204,12 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
 * **[!UICONTROL Viewer modifiers]** - Granskningsmodifierare har formen av `name=value` par med `&` avgränsare. De gör att du kan ändra visningsprogram enligt anvisningarna i referenshandboken för Adobe-visningsprogram. Ett exempel på en visningsmodifierare är `posterimage=img.jpg&caption=text.vtt,1`
 
-   Med visningsmodifierare kan du till exempel göra följande:
+  Med visningsmodifierare kan du till exempel göra följande:
 
    * Associera en bildtextfil med en video: [bildtext](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-caption.html)
    * Associera en navigeringsfil med en video: [navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/command-reference-url-video/r-html5-video-viewer-url-navigation.html)
 
-      Du kan redigera följande avancerade inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
+     Du kan redigera följande avancerade inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
 * **[!UICONTROL Title]** - Ändra videons titel.
 
@@ -235,33 +235,33 @@ Du kan redigera följande Dynamic Media-inställningar genom att välja **[!UICO
 
 * **[!UICONTROL Image Modifiers]** - Du kan använda bildeffekter genom att ange fler bildkommandon. Dessa kommandon beskrivs i Bildförinställningar och i Referens för bildserverkommando.
 
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+  Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
-   Du kan redigera följande avancerade inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
+  Du kan redigera följande avancerade inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
 * **[!UICONTROL Enable Aspect Ration match]** - Välj det här alternativet om du vill att Dynamic Media ska välja en smart beskärningsåtergivning med de proportioner som bäst matchar originalbildens proportioner.
 
 * **[!UICONTROL Optimize for higher resolution devices]** - Markera (standard) kryssrutan för att tillåta optimering av DPR (Device Pixel Ratio).
 
-   The **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
+  The **[!UICONTROL Optimize for higher resolution devices]** visas bara när följande är sant:
 
    * Under Förinställningstyp, **[!UICONTROL Smart Crop]** är markerat.
 
-   ![inställning för enhetspixelproportioner för smart beskärning](/help/assets/dynamic-media/assets/dpr-smartcrop.png)
+  ![inställning för enhetspixelproportioner för smart beskärning](/help/assets/dynamic-media/assets/dpr-smartcrop.png)
 
-   Se även [Om optimering av enhetens pixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
+  Se även [Om optimering av enhetens pixelproportioner](/help/assets/dynamic-media/imaging-faq.md#dpr).
 
-   Alla [!DNL Experience Manager] DPR-värden för Dynamic Media Smart Imaging ignoreras.
+  Alla [!DNL Experience Manager] DPR-värden för Dynamic Media Smart Imaging ignoreras.
 
 * **[!UICONTROL Title]** - Ändra titeln på bilden för smart beskärning.
 
 * **[!UICONTROL Alt Text]** - Lägg till en titel i den smarta beskärningsbilden för de användare som har inaktiverat grafik.
 
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+  Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
 * **[!UICONTROL URL, Open in]** - Du kan ange att en resurs ska öppna en länk. Ange URL:en och Öppna i anger om du vill att den ska öppnas i samma fönster eller i ett nytt fönster.
 
-   Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
+  Det här alternativet är inte tillgängligt om du visar bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar.
 
 * **[!UICONTROL Width]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
@@ -296,7 +296,7 @@ Du kan redigera följande **[!UICONTROL General]** inställningar genom att väl
 
 * **[!UICONTROL Height]** - Ange värdet i pixlar om du vill att bilden ska ha en fast storlek. Om du lämnar det här värdet tomt anpassas resursen.
 
-   Du kan redigera följande **[!UICONTROL Add To Cart]** inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
+  Du kan redigera följande **[!UICONTROL Add To Cart]** inställningar genom att välja **[!UICONTROL Edit]** i komponenten.
 
 * **[!UICONTROL Show Product Asset]** - Som standard är det här värdet valt. Produktresursen visar en bild av produkten enligt definitionen i modulen Handel. Avmarkera kryssrutan om du inte vill visa produktresursen.
 
@@ -362,4 +362,3 @@ Se [HTTP2-leverans av innehåll](/help/assets/dynamic-media/http2faq.md) om du v
 >* [Använd anpassad videominiatyr med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-video-thumbnails-feature-video-use.html)
 >* [Förstå färghantering med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-color-management-technical-video-setup.html#dynamic-media)
 >* [Använd bildskärpa med Experience Manager Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use.html)
-

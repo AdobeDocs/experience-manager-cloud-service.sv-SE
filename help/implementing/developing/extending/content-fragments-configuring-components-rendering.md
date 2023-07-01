@@ -2,9 +2,9 @@
 title: Content Fragments – konfigurera komponenter för återgivning
 description: Content Fragments – konfigurera komponenter för återgivning
 exl-id: 6606dc3b-f1b8-4941-8fd0-f69cbd414afa
-source-git-commit: 47910a27118a11a8add6cbcba6a614c6314ffe2a
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '524'
 ht-degree: 4%
 
 ---
@@ -93,7 +93,7 @@ OSGi-konfigurationen är:
  </tbody>
 </table>
 
-För vissa funktioner måste komponenten följa fördefinierade konventioner. Följande tabell visar vilka egenskaper som behöver definieras, av komponenten, för varje stycke (d.v.s. `jcr:paragraph` för varje komponentinstans) så att tjänsterna kan identifiera och bearbeta dem korrekt.
+För vissa funktioner måste komponenten följa fördefinierade konventioner. Följande tabell visar vilka egenskaper som behöver definieras, av komponenten, för varje stycke (det vill säga, `jcr:paragraph` för varje komponentinstans) så att tjänsterna kan identifiera och bearbeta dem korrekt.
 
 <table>
  <thead>

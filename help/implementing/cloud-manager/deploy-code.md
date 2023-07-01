@@ -2,9 +2,9 @@
 title: Distribuera koden
 description: Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -57,9 +57,9 @@ The **Scendistribution** fas. omfattar de här stegen.
 
 * **Validering**  - Detta steg säkerställer att pipeline är konfigurerad att använda de tillgängliga resurserna. Du kan till exempel testa att den konfigurerade grenen finns och att miljöerna är tillgängliga.
 * **Build &amp; Unit Testing** - Det här steget kör en innesluten byggprocess.
-   * Se dokumentet [Information om byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) för mer information om byggmiljön.
+   * Se [Information om byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) för mer information om byggmiljön.
 * **Kodskanning** - I det här steget utvärderas kvaliteten på programkoden.
-   * Se dokumentet [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) för mer information om testprocessen.
+   * Se [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) för mer information om testprocessen.
 * **Skapa bilder** - Den här processen gör att du kan omvandla innehåll och dispatcherpaket som skapats av byggsteget till Docker-bilder och Kubernetes-konfigurationer.
 * **Distribuera till scenen** - Bilden distribueras till testmiljön som förberedelse för [Scenens testfas.](#stage-testing)
 
@@ -70,20 +70,20 @@ The **Scendistribution** fas. omfattar de här stegen.
 The **Scentestning** dessa steg.
 
 * **Funktionstestning av produkten** - Molnhanterarens pipeline kör tester som körs mot scenmiljön.
-   * Se dokumentet [Funktionstestning av produkten](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) för mer information.
+   * Se [Funktionstestning av produkten](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) för mer information.
 
 * **Anpassad funktionstestning** - Det här steget i pipeline körs alltid och kan inte hoppas över. Om inget test-JAR produceras av bygget godkänns testet som standard.
-   * Se dokumentet [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) för mer information.
+   * Se [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) för mer information.
 
 * **Testning av anpassat användargränssnitt** - Det här steget är en valfri funktion som automatiskt kör gränssnittstester som skapats för anpassade program.
    * Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium).
-   * Se dokumentet [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) för mer information.
+   * Se [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) för mer information.
 
 * **Experience Audit** - Det här steget i pipeline körs alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna.
    * De konfigurerade sidorna skickas till tjänsten och utvärderas.
    * Resultaten är informativa och visar poängen och förändringen mellan aktuella och tidigare poäng.
    * Den här insikten är värdefull för att avgöra om det finns en regression som introduceras i den aktuella distributionen.
-   * Se dokumentet [Upplevelsegranskningsresultat](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
+   * Se [Upplevelsegranskningsresultat](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
 
 ![Scentestning](assets/stage-testing.png)
 
@@ -120,7 +120,7 @@ Följande steg gör timeout om du väntar på användarfeedback:
 
 ## Distributionsprocess {#deployment-process}
 
-Alla driftsättningar av Cloud Service följer en rullande process för att säkerställa noll driftavbrott. Se dokumentet [Hur rullande distributioner fungerar](/help/implementing/deploying/overview.md#how-rolling-deployments-work) om du vill veta mer.
+Alla driftsättningar av Cloud Service följer en rullande process för att säkerställa noll driftavbrott. Se [Hur rullande distributioner fungerar](/help/implementing/deploying/overview.md#how-rolling-deployments-work) om du vill veta mer.
 
 >[!NOTE]
 >
@@ -155,7 +155,7 @@ För att identifiera om en körning är en körning på nytt kan utlösarfältet
 
 För att utlösa en omkörning måste en PUT-begäran göras till HAL Link &lt;()<https://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> i produktionsdistributionssteget. Om den här länken finns kan körningen startas om från det steget. Om den inte finns kan inte körningen startas om från det steget. I den första versionen finns den här länken aldrig kvar i produktionsdistributionssteget, men framtida versioner kan ha stöd för att starta pipeline från andra steg. Exempel:
 
-```Javascript
+```JavaScript
  {
   "_links": {
     "https://ns.adobe.com/adobecloud/rel/pipeline/logs": {

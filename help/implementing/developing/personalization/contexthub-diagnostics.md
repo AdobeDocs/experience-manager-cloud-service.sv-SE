@@ -2,9 +2,9 @@
 title: ContextHub Diagnostics
 description: ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket
 exl-id: c8d4e160-ea02-49f3-9e31-119445ef5a68
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,8 @@ I avsnittet Klientlibs visas alla [biblioteksmappar](/help/implementing/developi
 Avsnittet URL:er innehåller länkar till ContextHub-funktioner:
 
 * **Konfigurationsredigerare:** Öppnar [Konfigurationssida för ContextHub](configuring-contexthub.md) där du kan konfigurera butiker, gränssnittslägen och gränssnittsmoduler.
-* **Konfiguration av ContextHub-moduler:** Öppnar `/etc/cloudsettings/default/contexthub.config.kernel.js` -filen, som innehåller Javascript-objektrepresentationen av ContextHub-lagringskonfigurationerna.
-* **Konfiguration av ContextHub-gränssnitt:** Öppnar `/etc/cloudsettings/default/contexthub.config.ui.js` -filen, som innehåller Javascript-objektrepresentationen av ContextHub-gränssnittskonfigurationerna.
+* **Konfiguration av ContextHub-moduler:** Öppnar `/etc/cloudsettings/default/contexthub.config.kernel.js` -filen, som innehåller JavaScript-objektrepresentationen av ContextHub-lagringskonfigurationerna.
+* **Konfiguration av ContextHub-gränssnitt:** Öppnar `/etc/cloudsettings/default/contexthub.config.ui.js` -filen, som innehåller JavaScript-objektrepresentationen av ContextHub-gränssnittskonfigurationerna.
 * **kernel.js:** Öppnar `/etc/cloudsettings/default/contexthub.kernel.js` -filen, som innehåller källkoden för de klientbibliotek som implementerar ContextHub-ramverket, segmentmotorn och lagringstyperna.
 * **ui.js:** Öppnar `/etc/cloudsettings/default/contexthub.ui.js` som innehåller källkoden för de klientbibliotek som implementerar gränssnittstyperna ContextHub och UI.
 * **style.css:** Öppnar `/etc/cloudsettings/default/contexthub.styles.css` som innehåller CSS-formaten för ContextHub-gränssnittsmodulerna.

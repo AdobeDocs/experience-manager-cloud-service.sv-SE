@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1754'
+source-wordcount: '1755'
 ht-degree: 5%
 
 ---
@@ -225,9 +225,9 @@ Redigeraren har olika alternativ:
 
   >[!CAUTION]
   >
-  >Förutom att bara spara ändringarna uppdaterar åtgärderna alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt belastat system.
+  >Förutom att bara spara ändringarna uppdaterar åtgärderna alla referenser och ser till att Dispatcher rensas efter behov. Dessa ändringar kan ta tid att bearbeta. På grund av detta kan prestandan påverkas på ett stort/komplext/tungt laddat system.
   >
-  >Tänk på detta när du använder **Spara och stäng** och sedan snabbt ange fragmentredigeraren igen för att göra och spara ytterligare ändringar.
+  >Tänk på detta när du använder **Spara och stäng** och sedan snabbt ange fragmentredigeraren igen för att göra och spara fler ändringar.
 
 * **Stäng**
 
@@ -262,7 +262,7 @@ När du har skapat det Överordnad innehållet kan du skapa och hantera [Variati
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
-Du kan också [associera innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med ett fragment. Detta ger en anslutning så att resurser (t.ex. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
+Du kan också [associera innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) med ett fragment. Detta ger en anslutning så att resurser (dvs. bilder) kan användas (valfritt) med fragmentet när det läggs till på en innehållssida.
 
 ## Visa och redigera metadata (egenskaper) för fragmentet {#viewing-and-editing-the-metadata-properties-of-your-fragment}
 

@@ -2,9 +2,9 @@
 title: Komponenter
 description: Komponenter är den grundläggande byggstenen för innehållssidor i AEM
 exl-id: a8118329-1330-49b0-a3f8-a27774f1c5df
-source-git-commit: 171aca87ff725a2f142f0336dca3491e213f55ab
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sed
 * [Redigera innehåll](/help/sites-cloud/authoring/fundamentals/editing-content.md)
 * [Redigera innehåll - helskärmsläge](/help/sites-cloud/authoring/fundamentals/editing-content.md#edit-content-full-screen-mode)
 
-Mer information om hur du lägger till komponenter på en sida finns i artikeln [Redigera sidinnehåll](/help/sites-cloud/authoring/fundamentals/editing-content.md).
+Mer information om hur du lägger till komponenter på en sida finns i [Redigera sidinnehåll](/help/sites-cloud/authoring/fundamentals/editing-content.md).
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 

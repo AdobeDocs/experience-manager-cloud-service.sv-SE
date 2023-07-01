@@ -2,9 +2,9 @@
 title: Introduktion till sandlådeprogram
 description: Lär dig vilka sandlådeprogram som skiljer sig från produktionsprogram.
 exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
-source-git-commit: 2ad5bdc886f3c47b6ee600e69c6e40f1df071cbc
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Lär dig vilka sandlådeprogram som skiljer sig från produktionsprogram.
 
 Ett sandlådeprogram skapas vanligtvis för att användas för utbildning, löpande demonstrationer, aktivering eller konceptbevis (POC) och är därför inte avsett för livstrafik.
 
-Ett sandlådeprogram är ett av de två tillgängliga programmen i AEM Cloud Service, och det andra är ett [produktionsprogram.](introduction-production-programs.md) Se dokumentet [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) om du vill veta mer om programtyper.
+Ett sandlådeprogram är ett av de två tillgängliga programmen i AEM Cloud Service, och det andra är ett [produktionsprogram.](introduction-production-programs.md) Se [Program och programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) om du vill veta mer om programtyper.
 
 ## Automatiskt skapande {#auto-creation}
 
@@ -49,7 +49,7 @@ Anpassade domäner och IP-tillåtelselista är inte tillgängliga i sandlådepro
 
 ### Inget avancerat nätverk {#advanced-networking}
 
-[Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (till exempel självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar osv.) är inte tillgängliga i sandlådeprogram.
+[Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (till exempel är självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar och så vidare) inte tillgängliga i sandlådeprogram.
 
 ### Manuella AEM {#updates}
 
@@ -58,9 +58,9 @@ AEM uppdateras inte automatiskt i sandlådeprogram, men kan tillämpas manuellt 
 * En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.
 * En manuell uppdatering av antingen en produktions- eller staging-miljö uppdaterar automatiskt den andra. Miljöuppsättningen Production+Stage måste finnas i samma AEM.
 
-Se dokumentet [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md) för mer information.
+Se [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md) för mer information.
 
-Se dokumentet [Uppdaterar miljö](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment) för att lära dig hur man uppdaterar en miljö.
+Se [Uppdaterar miljö](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment) för att lära dig hur man uppdaterar en miljö.
 
 ### Viloläge och borttagning {#hibernation}
 

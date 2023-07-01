@@ -2,9 +2,9 @@
 title: Redigera Launches
 description: När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 exl-id: d3cd3383-e0a0-4019-9f97-8baa3be99e6e
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '553'
 ht-degree: 17%
 
 ---
@@ -72,7 +72,7 @@ Du kan när som helst lägga till eller ta bort sidor till/från intervallet med
 
 >[!NOTE]
 >
->Om du vill lägga till sidor i en programstart måste de ligga under en gemensam språkrot. dvs. inom en enda plats.
+>Om du vill lägga till sidor i en programstart måste de ligga under en gemensam språkrot. det vill säga, inom en enda plats.
 
 ## Redigera en startkonfiguration {#editing-a-launch-configuration}
 

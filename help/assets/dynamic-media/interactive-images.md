@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Interactive Images
 role: User
 exl-id: 89eef5e6-d508-4f33-b54e-24d4df49f8c3
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '4142'
 ht-degree: 1%
@@ -221,6 +221,7 @@ När du lägger till aktiveringspunkter kan du definiera dem som en snabbvypopup
 Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
 
 >[!NOTE]
+>
 Delningsverktygen för sociala medier i Interactive Image stöds inte när du bäddar in visningsprogrammet i ett Experience Fragment. Använd eller skapa i stället visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
 Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöds under den aktuella skaps-/redigeringssessionen.
@@ -230,11 +231,15 @@ När du är klar med att skapa en interaktiv bild kan du använda Förhandsgrans
 Se [(Valfritt) Förhandsgranska interaktiva bilder](#optional-previewing-interactive-images).
 
 >[!NOTE]
+>
 När du lägger till aktiveringspunkter i en bild i en interaktiv bild eller en Carousel-banderoll lagras hotspot-informationen på samma metadataplats. Platsen är relativ till bildens plats, oavsett om det är en interaktiv bild eller en Carousel Banner. Den här funktionen innebär att du enkelt kan återanvända samma bild tillsammans med dess definierade hotspot-data i båda visningsprogrammen.
+>
 Observera dock att Carousel Banners stöder bildscheman på bilder som även kan innehålla hotspot-områden. en interaktiv bild gör det inte. Tänk på detta om du tänker skapa en interaktiv bild eller Carousel Banner som använder samma bild. Du kan i stället skapa interaktiva bilder och Carousel Banners med separata kopior av samma bild.
+>
 Se även [Carousel Banners](/help/assets/dynamic-media/carousel-banners.md).
 
 >[!NOTE]
+>
 Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
 **Så här lägger du till aktiveringspunkter i en bildbanderoll:**
@@ -267,6 +272,7 @@ Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas
          * Se [Identifiera hotspot-variabler](#optional-identifying-hotspot-variables); du måste definiera dessa variabler.
          * Ange sedan SKU-värdet manuellt. Skriv produktens SKU i textfältet SKU-värde. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen. Det ser till att systemet känner till att koppla den aktiveringspunkt som användaren knackar på till en viss SKU:s snabbvy.
          * (Valfritt) Om det finns andra variabler i snabbvyn som används för att identifiera en produkt ytterligare trycker du på **[!UICONTROL Add Generic Variable]**. Ange en extra variabel i textfältet. Till exempel: `category=Mens` är en tillagd variabel.
+
    * Välj **[!UICONTROL Hyperlink]**.
 
       * Om du är kund hos Experience Manager Sites trycker du på ikonen för platsväljaren (mappen). Navigera till en URL. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
@@ -283,10 +289,9 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-frag
 
       * Ange bredd och höjd för Experience Fragment så som du vill att det ska visas på banderollen.
 
-         >[!NOTE]
-         Delningsverktygen för sociala medier i Interactive Image stöds inte när du bäddar in visningsprogrammet i ett Experience Fragment. Använd eller skapa i stället visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
-
-
+        >[!NOTE]
+        >
+        Delningsverktygen för sociala medier i Interactive Image stöds inte när du bäddar in visningsprogrammet i ett Experience Fragment. Använd eller skapa i stället visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
 1. Välj **[!UICONTROL Save]** om du vill spara ditt arbete och gå tillbaka till sidan Bläddra.
 1. Publicera den interaktiva bilden. Publicering levererar banderollen via molnet och genererar även inbäddningskod som gör att du kan integrera med en tredjepartswebbplats.
@@ -298,6 +303,7 @@ Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-frag
    Se [Integrera en interaktiv bild med webbplatsen](#integrating-an-interactive-image-with-your-website).
 
    >[!NOTE]
+   >
    Om du redigerar interaktiva bilder med aktiveringspunkter och beskär bilden tas dina aktiveringspunkter bort.
 
 ### (Valfritt) Förhandsgranska interaktiva bilder {#optional-previewing-interactive-images}
@@ -345,6 +351,7 @@ Använda [demowebbplats som exempel](https://experienceleague.adobe.com/tools/dy
 Integreringen är enkel som att ta bort `IMG` tagga och ersätta den med den kopierade inbäddningskoden från Experience Manager Assets. Du ser att resultatet [visar den interaktiva bilden som går att handla på sidan med tre cirkelaktiveringspunkter](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-banner/we-fashion/landing-1.html).
 
 >[!NOTE]
+>
 Nu är de hotspots som finns på den interaktiva bilden av demowebbplatsen endast avsedda för webben. De är ännu inte integrerade med de befintliga snabbvyerna.
 
 Om du vill tillämpa en beskärning på en interaktiv bild för en responsiv miljö inkluderar du konfigurationsattributet Interactive Image `ZoomView.iscommand` till banan. I det här fallet `ZoomView` -komponenten anropas och `iscommand` är det&quot;beskär&quot; bildserverkommando som du använder.
@@ -358,6 +365,7 @@ Nu kan du integrera den interaktiva bilden med en befintlig Quickview på webbpl
 ## Integrera en interaktiv bild med en befintlig snabbvy {#integrating-an-interactive-image-with-an-existing-quickview}
 
 >[!NOTE]
+>
 Detta gäller endast om du är en fristående Experience Manager Assets-kund.
 
 Det sista steget i den här processen är att integrera den interaktiva bilden med en befintlig Quickview-implementering på din webbplats. Det finns ingen lösning på integreringen som fungerar i alla fall. Alla QuickView-implementeringar är unika och det krävs en särskild strategi. Det är därför till stor hjälp att hjälpa IT-avdelningen.
@@ -399,7 +407,7 @@ Den inbäddningskod som returneras av Experience Manager Assets har en färdig h
                     var sku=inData.sku; //SKU for product ID
                     //To pass other parameter from the hotspot, you will need to add custom parameter during the hotspot setup as parameterName=value
                     loadQuickView(sku); //Replace this call with your Quickview plugin
-                    //Please refer to your Quickviewer plugin for the Quickview call
+                    //See your Quickviewer plugin for the Quickview call
                  },
              });
         */

@@ -2,9 +2,9 @@
 title: Använda arbetsflöden på sidor
 description: När du redigerar kan du anropa arbetsflöden för att göra något på sidorna; det går även att använda mer än ett arbetsflöde.
 exl-id: 86e71f0e-e53e-40bc-901d-2a1ab347bd0a
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '660'
 ht-degree: 11%
 
 ---

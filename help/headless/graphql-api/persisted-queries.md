@@ -1,9 +1,9 @@
 ---
 title: Beständiga GraphQL-frågor
-description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestandan. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
+description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Manager as a Cloud Service för att optimera prestanda. Beständiga frågor kan begäras av klientprogram med HTTP GET-metoden och svaret kan cachas i dispatcher- och CDN-lagren, vilket i slutänden förbättrar klientprogrammens prestanda.
 feature: Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '1681'
 ht-degree: 1%
@@ -194,7 +194,7 @@ GET <AEM_HOST>/graphql/execute.json/<PERSISTENT_PATH>
 
 Plats `PERSISTENT_PATH` är en förkortad sökväg där den beständiga frågan sparas.
 
-1. Till exempel `wknd` är konfigurationsnamnet och `plain-article-query` är namnet på den beständiga frågan. Så här kör du frågan:
+1. Till exempel: `wknd` är konfigurationsnamnet och `plain-article-query` är namnet på den beständiga frågan. Så här kör du frågan:
 
    ```shell
    $ curl -X GET \
@@ -396,7 +396,7 @@ Fältet `Respond with application/graphql-response+json` (`responseContentTypeGr
 
 ## Kodning av fråge-URL för användning av ett program {#encoding-query-url}
 
-Om det används av ett program används alla specialtecken som används för att skapa frågevariabler (t.ex. semikolon (`;`), likhetstecken (`=`), snedstreck `/`) måste konverteras till motsvarande UTF-8-kodning.
+Om det används av ett program används alla specialtecken som används för att konstruera frågevariabler (d.v.s. semikolon (`;`), likhetstecken (`=`), snedstreck `/`) måste konverteras till motsvarande UTF-8-kodning.
 
 Till exempel:
 

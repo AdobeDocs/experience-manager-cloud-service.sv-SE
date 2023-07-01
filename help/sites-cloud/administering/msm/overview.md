@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2706'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ Som en introduktion ger följande tabell en översikt över de viktigaste termer
 | Källa | Originalsidorna används som bas för Live-kopior | Synonyma med utkast och/eller dekorsidor |
 | Live Copy | Kopian (av källan), som underhålls av synkroniseringsåtgärder som definieras av rollout-konfigurationerna |  |
 | Konfiguration av Live Copy | Definition av konfigurationsinformation för en Live-kopia |  |
-| Live-relation | Effektiv definition av arvet för en given resurs, dvs. anslutningen/anslutningarna mellan källan och Live-kopior | Ser till att ändringar i källan kan synkroniseras med Live Copy |
+| Live-relation | Effektiv definition av arvet för en given resurs, det vill säga anslutningen/anslutningarna mellan källan och Live-kopior | Ser till att ändringar i källan kan synkroniseras med Live Copy |
 | Blueprint | Synonym med källa | Kan definieras med en ritningskonfiguration |
 | Konfiguration av utkast | Fördefinierad konfiguration som anger en källsökväg | När en ritningssida refereras i en ritningskonfiguration blir kommandot Överrullning tillgängligt |
 | Kapitel | De avsnitt i planen som ska ingå i Live Copy | Dessa är vanligtvis undersidor till roten |

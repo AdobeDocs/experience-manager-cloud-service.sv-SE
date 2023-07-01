@@ -2,9 +2,9 @@
 title: Exportera Experience Fragments till Adobe Target
 description: Exportera Experience Fragments till Adobe Target
 exl-id: 752d91f9-13a6-40c2-9425-7d18dafe9205
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2245'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Upplevelsefragment kan exporteras till standardarbetsytan i Adobe Target eller t
 
 >[!NOTE]
 >
->Mer information finns även i:
+>Mer information finns i följande:
 >
 >* [Utveckling av Adobe Target](https://developers.adobetarget.com/)
 >* [Kärnkomponenter - Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
@@ -356,7 +356,7 @@ Så här exporterar du ett upplevelsefragment från AEM till mål (efter att du 
 
 ## Använda dina upplevelsefragment i Adobe Target {#using-your-experience-fragments-in-adobe-target}
 
-När du har utfört de föregående åtgärderna visas upplevelsefragmentet på sidan Erbjudanden i Target. Ta en titt på [specifik Target-dokumentation](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html) om du vill veta vad du kan uppnå där.
+När du har utfört de föregående åtgärderna visas upplevelsefragmentet på sidan Erbjudanden i Target. Se [specifik Target-dokumentation](https://experiencecloud.adobe.com/resources/help/en_US/target/target/aem-experience-fragments.html) om du vill veta vad du kan uppnå där.
 
 >[!NOTE]
 >

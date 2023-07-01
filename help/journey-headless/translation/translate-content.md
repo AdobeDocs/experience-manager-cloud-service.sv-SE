@@ -2,9 +2,9 @@
 title: Översätt rubrikfritt innehåll
 description: Använd översättningskopplingen för att översätta ditt headless-innehåll.
 exl-id: 3bfbf186-d684-4742-8c5c-34c34ff3adb5
-source-git-commit: 4914a182a88084e280f1161147eccf28718df29e
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '2177'
+source-wordcount: '2175'
 ht-degree: 0%
 
 ---

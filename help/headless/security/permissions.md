@@ -3,9 +3,9 @@ title: Behörighetsaspekter för headless-innehåll
 description: Läs om olika behörigheter och ACL-överväganden för en headless-implementering med Adobe Experience Manager. Förstå de olika personifieringsnivåer och behörighetsnivåer som krävs för både författarmiljön och publiceringsmiljön.
 feature: Content Fragments,GraphQL API
 exl-id: 3fbee755-2fa4-471b-83fc-3f4bf056267a
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Om IMS används för gruppmedlemskap lägger du till lämpliga IMS-grupper som m
 
 Det är bäst att inte ändra behörigheter för en grupp utanför rutan direkt. I stället kan du även skapa en eller flera egna grupper som är utformade efter **DAM-användare** gruppbehörigheter och begränsa åtkomsten ytterligare till olika **mappar** inom AEM Assets.
 
-Använd **Behörigheter** konsol i AEM och uppdatera sökvägen från `/content/dam` till en mer specifik sökväg, dvs. `/content/dam/mycontentfragments`.
+Använd **Behörigheter** konsol i AEM och uppdatera sökvägen från `/content/dam` till en mer specifik sökväg, det vill säga `/content/dam/mycontentfragments`.
 
 Det kan vara önskvärt att ge den här gruppen användarbehörigheter för att skapa och redigera innehållsfragment, men inte ta bort. Om du vill granska och tilldela behörigheter för redigering, men inte ta bort, se [Innehållsfragment - Ta bort överväganden](/help/sites-cloud/administering/content-fragments/content-fragments-delete.md).
 

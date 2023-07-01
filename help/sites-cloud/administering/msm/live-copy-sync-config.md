@@ -4,7 +4,7 @@ description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy oc
 feature: Multi Site Manager
 role: Admin
 exl-id: 0c97652c-edac-436e-9b5b-58000bccf534
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 0%
@@ -123,7 +123,7 @@ I följande tabell beskrivs egenskaperna som du kan konfigurera:
 
 Flera egenskaper och nodtyper exkluderas som standard, de definieras i OSGi-konfigurationen av **CQ MSM Content Update Action**, under **Uteslutna sidegenskaper**.
 
-Som standard är egenskaper som matchar följande reguljära uttryck exkluderade (dvs. inte uppdaterade) vid utrullning:
+Som standard är egenskaper som matchar följande reguljära uttryck exkluderade (d.v.s. inte uppdaterade) vid utrullning:
 
 ![Exkluderingsregler för Live Copy](../assets/live-copy-exclude.png)
 
@@ -196,7 +196,7 @@ Observera att de underordnade sidorna för den blå sidan ärver konfigurationen
 1. Använd **Webbplatser** för att välja rotsidan för ritningen.
 1. Välj **Egenskaper** i verktygsfältet.
 1. Öppna **Blueprint** -fliken.
-1. Markera en eller flera **Konfigurationer för utrullning** med listruteväljaren.
+1. Markera en eller flera **Konfigurationer för utrullning** med hjälp av den nedrullningsbara väljaren.
 1. Behåll uppdateringarna med **Spara**.
 
 ### Ange systemets standardkonfiguration för utrullning {#setting-the-system-default-rollout-configuration}

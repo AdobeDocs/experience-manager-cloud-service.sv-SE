@@ -3,9 +3,9 @@ title: Målväljare för AEM as a Cloud Service
 description: Använd AEM målväljare för att visa och välja resurser som du kan använda som en kopia av den ursprungliga resursen.
 contentOwner: Adobe
 role: Admin,User
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1903'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda må
 | *repo:storlek* | tal | Resursens storlek i byte. |
 | *repo:sökväg* | string | Platsen för resursen i databasen. |
 | *repo:överordnade* | `Array<string>` | En array med överordnade objekt för resursen i databasen. |
-| *repo:läge* | string | Aktuell status för resursen i databasen (t.ex. aktiv, borttagen osv.). |
+| *repo:läge* | string | Aktuellt läge för resursen i databasen (t.ex. aktiv, borttagen och så vidare). |
 | *repo:createdBy* | string | Användaren eller systemet som skapade resursen. |
 | *repa:createDate* | string | Datum och tid då tillgången skapades. |
 | *repo:modifiedBy* | string | Den användare eller det system som senast ändrade resursen. |
@@ -188,7 +188,7 @@ Du kan använda egenskaperna för målväljaren för att anpassa hur målväljar
 | *imsOrg* | string | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas vid etablering [!DNL Adobe Experience Manager] som [!DNL Cloud Service] för er organisation. The `imsOrg` Nyckeln krävs för att verifiera om den organisation du använder är under Adobe IMS eller inte. |
 | *imsToken* | string | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs inte om du använder SUSI-flödet. Det är dock nödvändigt om du använder ett icke-SUSI-flöde. |
 | *apiKey* | string | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs inte om du använder SUSI-flödet. Det krävs dock i icke-SUSI-flöden. |
-| *rootPath* | string | Nej | /content/dam/ | Mappsökväg som målväljaren visar dina resurser från. `rootPath` kan också användas i form av inkapsling. Med följande sökväg, till exempel `/content/dam/marketing/subfolder/`kan du inte bläddra igenom någon överordnad mapp med målväljaren, utan bara visa de underordnade mapparna. |
+| *rootPath* | string | Nej | /content/dam/ | Mappsökväg som målväljaren visar dina resurser från. `rootPath` kan också användas i form av inkapsling. Med följande sökväg `/content/dam/marketing/subfolder/`kan du inte bläddra igenom någon överordnad mapp med målväljaren, utan bara visa de underordnade mapparna. |
 | *hasMore* | boolesk | Nej | | När programmet har mer innehåll att visa kan du använda den här egenskapen för att lägga till en inläsare som läser in innehållet för att göra det synligt i programmet. Det är en indikator som anger att inläsning av innehåll pågår. |
 | *orgName* | boolesk | Nej | | Det är namnet på organisationen (troligtvis orgID) som är associerad med AEM |
 | *initRepoID* | string | Nej | | Det är sökvägen till resurskatalogen som du vill använda i en inledande standardvy |

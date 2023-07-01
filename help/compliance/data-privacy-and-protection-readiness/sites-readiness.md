@@ -2,9 +2,9 @@
 title: Dataskydd och dataintegritet - beredskap för Adobe Experience Manager as a Cloud Service webbplatser
 description: Läs mer om Adobe Experience Manager as a Cloud Service Sites support för de olika dataskydds- och datasekretessreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
 exl-id: fdcad111-0cdd-46cc-964c-3f8669ca2030
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1025'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Innehållet i detta dokument utgör inte juridisk rådgivning och är inte avsett som ersättning för juridisk rådgivning.
 >
->Kontakta företagets juridiska avdelning för råd angående dataskydd och dataintegritet.
+>Kontakta företagets juridiska avdelning för råd om dataskydd och dataintegritet.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Användarkonton och UGC-innehåll på författarservern beskrivs i [AEM Foundati
 
 Användarkonton som används för att autentisera besökare på webbplatsen, och UGC-innehåll på publiceringsservern omfattas av [AEM Foundation-dokumentation](/help/compliance/data-privacy-and-protection-readiness/aem-readiness.md).
 
-Som standard lagrar inte AEM Sites-komponenter formulärdata som anges av besökare på publiceringsservern. Vi rekommenderar att du vidarebefordrar data till ett tredjepartssystem eller Adobe Campaign för vidare behandling.
+Som standard lagrar inte AEM Sites-komponenter formulärdata som anges av besökare på publiceringsservern. Vi rekommenderar att du vidarebefordrar data till ett tredjepartssystem eller Adobe Campaign för vidare bearbetning.
 
 ## Opt-In/Opt-Out {#opt-in-opt-out}
 

@@ -2,7 +2,7 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '2153'
 ht-degree: 11%

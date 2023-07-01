@@ -2,9 +2,9 @@
 title: Exportera till CSV
 description: Exportera information om sidorna till en CSV-fil på det lokala systemet
 exl-id: 818e927e-40b2-4ccb-bfb3-88284ad49829
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '198'
 ht-degree: 28%
 
 ---
@@ -50,7 +50,7 @@ Så här skapar du en CSV-export:
    * Alternativet Skapa **CSV-rapport** är tillgängligt när du bläddrar i **Sites-konsolen** (i listvyn)
    * Det är ett alternativ i **Skapa** nedrullningsbar meny:
 
-      ![Alternativet Skapa CSV](/help/sites-cloud/authoring/assets/csv-create.png)
+     ![Alternativet Skapa CSV](/help/sites-cloud/authoring/assets/csv-create.png)
 
 1. I verktygsfältet väljer du **Skapa** och sedan **CSV-rapport** för att öppna guiden:
 

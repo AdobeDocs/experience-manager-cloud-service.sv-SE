@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar och löser flera sammanslagningskonflikter
 feature: Multi Site Manager
 role: Admin
 exl-id: 733e9411-50a7-42a5-a5a8-4629f6153f10
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ AEM tillhandahåller:
 Standardkonflikthanteraren är `ResourceNameRolloutConflictHandler`
 
 * Med den här hanteraren får plantryckssidan företräde.
-* Tjänstrankningen för hanteraren är låg, dvs. under standardvärdet för `service.ranking` -egenskapen, eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
+* Tjänstrankningen för hanteraren är låg, det vill säga under standardvärdet för `service.ranking` -egenskapen, eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
 
 Den här konflikthanteraren ger prioritet åt ritningen. Till exempel sidan Live Copy `/b` flyttas inom Live Copy-grenen till `/b_msm_moved`.
 

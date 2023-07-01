@@ -2,9 +2,9 @@
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1537'
 ht-degree: 1%
 
 ---
@@ -134,7 +134,7 @@ Använd följande procedur för att delegera en arbetsuppgift:
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
-1. Dialogrutan öppnas. Ange **Användare** i listrutan (det kan också vara en grupp) och lägga till en **Kommentar** vid behov.
+1. Dialogrutan öppnas. Ange **Användare** i den nedrullningsbara väljaren (detta kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Delegera ett deltagarsteg - sidredigeraren {#delegating-a-participant-step-page-editor}
@@ -143,7 +143,7 @@ Använd följande procedur för att delegera en arbetsuppgift:
 
 1. Öppna [sida för redigering](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#opening-a-page-for-editing).
 1. Välj **Delegera** i statusfältet högst upp.
-1. Dialogrutan öppnas. Ange **Användare** i listrutan (det kan också vara en grupp) och lägga till en **Kommentar** vid behov.
+1. Dialogrutan öppnas. Ange **Användare** i den nedrullningsbara väljaren (detta kan också vara en grupp) och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Delegera ett deltagarsteg - tidslinje {#delegating-a-participant-step-timeline}

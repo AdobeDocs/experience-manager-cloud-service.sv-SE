@@ -2,9 +2,9 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1223'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns även i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
+>Mer information finns i [Förstå innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!CAUTION]
 >
@@ -115,7 +115,7 @@ Du kan öppna fragmentkällan för redigering (resursen) med **Redigera** -ikone
 
 När ett visst innehållsfragment läggs till på sidan finns det ett **Dra komponenter hit** platshållare mellan styckena HTML (och längst upp/längst ned) i fragmentet.
 
-Detta gör att du kan lägga till extra innehåll [in-between (dvs. in-between content)](/help/sites-cloud/administering/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
+Detta gör att du kan lägga till extra innehåll [in-between (d.v.s. in-between content)](/help/sites-cloud/administering/content-fragments/content-fragments.md#in-between-content-when-page-authoring-with-content-fragments) fragmentinnehållet (vid någon av de tillgängliga punkterna), utan att behöva ändra rotfragmentet.
 
 För mellanliggande innehåll kan du:
 
@@ -137,7 +137,7 @@ För mellanliggande innehåll kan du:
 
 >[!CAUTION]
 >
->När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan ändringar av strukturen för det underliggande innehållsfragmentet (dvs. i innehållsfragmentets redigerare) leda till felaktiga/oväntade resultat.
+>När du har lagt till mellanliggande innehåll i ett innehållsfragment på sidan kan en ändring av strukturen för det underliggande innehållsfragmentet (det vill säga i innehållsfragmentets redigerare) leda till felaktiga/oväntade resultat.
 >
 >När detta inträffar behålls det mellanliggande innehållet som det är:
 >

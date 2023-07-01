@@ -6,9 +6,9 @@ seo-description: Learn how to enable Adaptive Forms Core Components on AEM Forms
 contentOwner: Khushwant Singh
 docset: CloudService
 role: Admin
-source-git-commit: f22554450d2eb1f4948f749ba00f78b568ee308f
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -193,8 +193,7 @@ Utför följande steg i listad ordning för att aktivera adaptiva Forms Core-kom
    >
    >  För att hitta `${appId}`, i `[AEM Repository Folder]/all/pom.xml` -fil, söka i `-packages/application/install` term. Texten före `-packages/application/install` termen är `${appId}`. Följande kod, till exempel `myheadlessform` är `${appId}`.
    >
-   >   
-   ```
+   >   ```
    >             <embedded>
    >                     <groupId>com.myheadlessform</groupId>
    >                     <artifactId>myheadlessform.ui.apps<artifactId>

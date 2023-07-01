@@ -3,7 +3,7 @@ title: Konfigurera OSGi för Adobe Experience Manager as a Cloud Service
 description: OSGi-konfiguration med hemliga värden och miljöspecifika värden
 feature: Deploying
 exl-id: f31bff80-2565-4cd8-8978-d0fd75446e15
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '3318'
 ht-degree: 0%
@@ -293,7 +293,7 @@ Vi rekommenderar att du skriver ett enkelt basskript som anger de systemvariable
 
 Värdena för hemligheter läses från filer. Därför måste en textfil med det hemliga värdet skapas för varje platshållare som använder en hemlighet.
 
-Exempel: `$[secret:server_password]` används, en textfil med namnet **server_password** måste skapas. Alla dessa hemliga filer måste lagras i samma katalog och ramverksegenskapen `org.apache.felix.configadmin.plugin.interpolation.secretsdir` måste konfigureras med den lokala katalogen.
+Om `$[secret:server_password]` används, en textfil med namnet **server_password** måste skapas. Alla dessa hemliga filer måste lagras i samma katalog och ramverksegenskapen `org.apache.felix.configadmin.plugin.interpolation.secretsdir` måste konfigureras med den lokala katalogen.
 
 >[!CAUTION]
 >

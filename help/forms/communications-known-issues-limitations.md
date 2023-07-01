@@ -2,9 +2,9 @@
 title: Kända fel och god praxis
 description: Kommunicera bästa praxis, kända problem och begränsningar
 exl-id: e95615dd-e494-40cd-9cdf-6e9761ca3b3e
-source-git-commit: 4b76fbbb1b58324065b39d6928027759b0897246
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
@@ -161,11 +161,11 @@ I följande tabell anges XCI-alternativ.
 
 * Du kan bara använda en viss renderingstyp (PDF, PRINT) en gång i listan med utskriftsalternativ. Du kan t.ex. inte ha två PRINT-alternativ där var och en anger en PCL-återgivningstyp.
 
-* För en gruppkonfiguration är det bara en instans av en kombination av värden av OutputType (PDF, PRINT) och RenderType(PostScript, PCL, IPL, ZPL, osv.) är tillåtet.
+* För en gruppkonfiguration tillåts bara en instans av en kombination av värden av OutputType (PDF, PRINT) och RenderType(PostScript, PCL, IPL, ZPL o.s.v.).
 
 * För asynkrona API:er (gruppbearbetning) är standardpostnivån 2. Du kan använda en anpassad XCI för att ändra postnivån till 1.
 
-* När standard-XCI är konfigurerad inkluderas sökväg till ursprunglig återgivning. Till exempel `/content/dam/formsanddocuments/default.xci/jcr:content/renditions/original`
+* När standard-XCI är konfigurerad inkluderas sökväg till ursprunglig återgivning. Till exempel, `/content/dam/formsanddocuments/default.xci/jcr:content/renditions/original`
 
 
 

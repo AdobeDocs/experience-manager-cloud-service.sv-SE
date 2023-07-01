@@ -2,7 +2,7 @@
 title: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 7dc36220c1f12177037aaa79d864c1ec2209a301
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '2812'
 ht-degree: 1%
@@ -191,25 +191,25 @@ AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utv
    * (Apple macOS) Installera [Docker Desktop för Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac). Det innehåller Docker Engine, Docker CLI-klient, Docker Compose, Docker Content Trust, Kubernetes och Credential Helper.
 
    * (För Linux®) Installera [Dockningsmotor](https://docs.docker.com/engine/install/#server) och [Docker Compose](https://docs.docker.com/compose/install/) på din dator.
+
    >[!NOTE]
    >
    > * För Apple macOS tillåtslista du mappar som innehåller lokala AEM Author-instanser.
    >
    > * Docker Desktop för Windows har stöd för två backends, Hyper-V
-      > (äldre) och WSL2 (modern). Fildelning sker automatiskt
-      > hanteras av Docker när WSL2 används (modern). Du måste
-      > konfigurera fildelning explicit när Hyper-V används (äldre).
+   > (äldre) och WSL2 (modern). Fildelning sker automatiskt
+   > hanteras av Docker när WSL2 används (modern). Du måste
+   > konfigurera fildelning explicit när Hyper-V används (äldre).
 
-
-1. Skapa en mapp, till exempel aem-sdk, parallellt med författaren och publiceringsinstanser. Till exempel C:\aem-sdk.
+1. Skapa en mapp, till exempel aem-sdk, parallellt med författaren och publiceringsinstanser. Exempel: C:\aem-sdk.
 
 1. Extrahera `aem-forms-addon-<version>.zip\aem-forms-addon-native-<version>.zip` -fil.
 
    ![extraherade aem-formulär läggs till i inbyggda](assets/microservice-docker.png)
 
-1. Skapa en miljövariabel AEM_HOME och peka på en lokal AEM Author-installation. Till exempel C:\aem\author\.
+1. Skapa en miljövariabel AEM_HOME och peka på en lokal AEM Author-installation. Exempel: C:\aem\author\.
 
-1. Öppna sdk.bat eller sdk.sh för redigering. Ställ in AEM_HOME så att det pekar på en lokal AEM Author-installation. Till exempel C:\aem\author\.
+1. Öppna sdk.bat eller sdk.sh för redigering. Ställ in AEM_HOME så att det pekar på en lokal AEM Author-installation. Exempel: C:\aem\author\.
 
 1. Öppna kommandotolken och navigera till `aem-forms-addon-native-<version>` mapp.
 
@@ -234,7 +234,7 @@ Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurati
 ---------|----------|---------
 | Arbetsyta 3.0 | Grundläggande | Microsoft® Dynamics 365 |
 | Tranquil | Tom | Salesforce |
-| Urbane |  |  |
+| Urbane |   |  |
 | Ultramarin |  |  |
 | Beryl |  |  |
 

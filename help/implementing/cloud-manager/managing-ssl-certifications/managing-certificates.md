@@ -2,9 +2,9 @@
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Ett SSL-certifikat kan ersättas med följande steg som beskrivs i avsnittet [Up
 
 Att ta bort certifikat från Cloud Manager är en permanent åtgärd som inte kan ångras. Som en god praxis rekommenderar Adobe att du sparar SSL-filer lokalt innan du tar bort dem i Cloud Manager.
 
-I Cloud Manager kan du inte ta bort ett SSL-certifikat som har en eller flera domäner kopplade till sig. Alla associerade domäner måste tas bort innan SSL-certifikatet tas bort. Se dokumentet [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md) om du vill veta mer.
+I Cloud Manager kan du inte ta bort ett SSL-certifikat som har en eller flera domäner kopplade till sig. Alla associerade domäner måste tas bort innan SSL-certifikatet tas bort. Se [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md) om du vill veta mer.
 
 Följ de här stegen för att ta bort ett SSL-certifikat.
 
@@ -67,6 +67,6 @@ Om du har en befintlig CDN-konfiguration för ditt SSL-certifikat finns det ett 
 
 Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
-Se dokumentet [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) för mer information.
+Se [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) för mer information.
 
 Ett liknande meddelande finns också på **IP Tillåtelselista** och **Miljö** sidor för miljöer som har befintliga CDN-konfigurationer för IP tillåtelselista eller anpassade domännamn.

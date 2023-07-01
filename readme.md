@@ -1,17 +1,16 @@
 ---
-source-git-commit: 3409c713ea1ca033a2835d0070d0da4fec58fd18
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
-# Adobe Experience Manager som Cloud Service Documentation
+# Adobe Experience Manager as a Cloud Service Documentation
 
-Det här är databasen för Adobe Experience Manager som Cloud Service dokumentation. Den här dokumentationen beskriver installation, administration, redigering och hur du anpassar Experience Using som Cloud Service.
+Det här är arkivet för Adobe Experience Manager as a Cloud Service-dokumentation. Denna dokumentation beskriver installation, administration, redigering och anpassning av Experience Using as a Cloud Service.
 
 Dina bidrag till dokumentationen är välkomna. Se följande resurser:
 
-* [contribute.](contributing.md) mdEn översikt över hur du kan bidra till dokumentationen.
-* [guidelines.](guidelines.md) mdEn översikt över vad som förväntas i bidragen och hur du komponerar dokumentationsbidragen.
-* [code-of-behavior.](code-of-conduct.md) mdFör en översikt över de beteendestandarder vi förväntar oss när du bidrar till detta dokumentationsprojekt.
+* [contribute.md](contributing.md) En översikt över hur du bidrar till dokumentationen.
+* [riktlinjer.md](guidelines.md) En översikt över vad som förväntas i bidragen och hur du sammanställer dina dokumentationsbidrag.
+* [uppförandekod.md](code-of-conduct.md) En översikt över de beteendestandarder vi förväntar oss när du bidrar till det här dokumentationsprojektet.

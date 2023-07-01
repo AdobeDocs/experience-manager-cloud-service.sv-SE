@@ -3,9 +3,9 @@ title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments 
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1785'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,6 @@ Till exempel för att komma åt `/content/dam/wknd/en/adventures/cycling-tuscany
 >
 >* `/api/assets` **inte** behöver du använda `.model` väljare.
 >* `/content/path/to/page` **gör** kräver att `.model` väljare.
-
 
 HTTP-metoden avgör vilken åtgärd som ska utföras:
 
@@ -154,7 +153,6 @@ Om REST API:t för Resurser används i en miljö utan särskilda autentiseringsk
 >* [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
 >
 
-
 I miljöer med specifika autentiseringskrav rekommenderas OAuth.
 
 ## Tillgängliga funktioner {#available-features}
@@ -177,7 +175,7 @@ Svaret kommer att innehålla sidindelningsinformation som en del av `properties`
 
 >[!NOTE]
 >
->Sidindelning används vanligtvis för behållarentiteter (d.v.s. mappar eller resurser med återgivningar), eftersom det relaterar till den begärda entitetens underordnade.
+>Sidindelning används vanligtvis för behållarentiteter (d.v.s. mappar eller resurser med återgivningar), eftersom den relaterar till den begärda entitetens underordnade.
 
 #### Exempel: Sidindelning {#example-paging}
 
@@ -230,7 +228,7 @@ Innehållsfragment:
 * Visa inga binära data.
 * Finns helt i JSON-utdata (i `properties` egenskap).
 
-* betraktas också som atomiska, dvs. elementen och variationerna exponeras som en del av fragmentets egenskaper jämfört med som länkar eller underordnade enheter. Detta ger effektiv åtkomst till nyttolasten för ett fragment.
+* betraktas också som atomiska, dvs. elementen och variationerna visas som en del av fragmentets egenskaper jämfört med som länkar eller underordnade enheter. Detta ger effektiv åtkomst till nyttolasten för ett fragment.
 
 #### Innehållsmodeller och innehållsfragment {#content-models-and-content-fragments}
 
@@ -275,68 +273,71 @@ Följande statuskoder kan visas under de relevanta omständigheterna:
 
 * **200** (OK)
 
-   Returneras när:
+  Returneras när:
 
    * begära ett innehållsfragment via `GET`
    * uppdaterar ett innehållsfragment via `PUT`
 
 * **201** (Skapad)
 
-   Returneras när:
+  Returneras när:
 
    * har skapat ett innehållsfragment via `POST`
 
 * **404** (Hittades inte)
 
-   Returneras när:
+  Returneras när:
 
    * det begärda innehållsfragmentet inte finns
 
 * **500** (Internt serverfel)
 
-   >[!NOTE]
-   >
-   >Detta fel returneras:
-   >
-   >* när ett fel som inte kan identifieras med en viss kod har inträffat
-   >* när den angivna nyttolasten inte var giltig
+  >[!NOTE]
+  >
+  >Detta fel returneras:
+  >
+  >* när ett fel som inte kan identifieras med en viss kod har inträffat
+  >* när den angivna nyttolasten inte var giltig
 
-
-   I följande exempel visas vanliga scenarier när den här felstatusen returneras, tillsammans med felmeddelandet (monospace) som genereras:
+  I följande exempel visas vanliga scenarier när den här felstatusen returneras, tillsammans med felmeddelandet (monospace) som genereras:
 
    * Överordnad mapp finns inte (när ett innehållsfragment skapas via `POST`)
    * Ingen innehållsfragmentmodell har angetts (cq:model saknas), kan inte läsas (på grund av en ogiltig sökväg eller ett behörighetsproblem) eller så finns det ingen giltig fragmentmodell:
 
       * `No content fragment model specified`
       * `Cannot create a resource of given model '/foo/bar/qux'`
+
    * Det gick inte att skapa innehållsfragmentet (eventuellt ett behörighetsproblem):
 
       * `Could not create content fragment`
+
    * Titeln och/eller beskrivningen kunde inte uppdateras:
 
       * `Could not set value on content fragment`
+
    * Det gick inte att ange metadata:
 
       * `Could not set metadata on content fragment`
+
    * Innehållselementet kunde inte hittas eller kunde inte uppdateras
 
       * `Could not update content element`
       * `Could not update fragment data of element`
 
-   De detaljerade felmeddelandena returneras vanligtvis på följande sätt:
+  De detaljerade felmeddelandena returneras vanligtvis på följande sätt:
 
-   ```xml
-   {
-     "class": "core/response",
-     "properties": {
-       "path": "/api/assets/foo/bar/qux",
-       "location": "/api/assets/foo/bar/qux.json",
-       "parentLocation": "/api/assets/foo/bar.json",
-       "status.code": 500,
-       "status.message": "...{error message}.."
-     }
-   }
-   ```
+  ```xml
+  {
+    "class": "core/response",
+    "properties": {
+      "path": "/api/assets/foo/bar/qux",
+      "location": "/api/assets/foo/bar/qux.json",
+      "parentLocation": "/api/assets/foo/bar.json",
+      "status.code": 500,
+      "status.message": "...{error message}.."
+    }
+  }
+  ```
 
 ## API-referens {#api-reference}
 

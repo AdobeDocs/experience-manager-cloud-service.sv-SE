@@ -2,7 +2,7 @@
 title: AEM Taggningsramverk
 description: Tagga innehåll och använd infrastrukturen för AEM taggar för att kategorisera och organisera det.
 exl-id: 25418d44-aace-4e73-be1a-4b1902f40403
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Vanligtvis är `TagID` är en kortskrift `TagID` som börjar med namnutrymmet el
 
 Om innehållet är taggat och inte finns än, [`cq:tags`](#cq-tags-property) -egenskapen läggs till i innehållsnoden och `TagID` läggs till i egenskapens `String` arrayvärde.
 
-The `TagID` består av en [namespace](#tag-namespace) följt av `TagID`. [Behållartaggar](#container-tags) har undertaggar som representerar en hierarkisk ordning i taxonomin. Undertaggar kan användas för att referera till taggar som är samma som alla lokala `TagID`. Exempel: tagga innehåll med `fruit` tillåts, även om det är en behållartagg med undertaggar, som `fruit/apple` och `fruit/banana`.
+The `TagID` består av en [namespace](#tag-namespace) följt av `TagID`. [Behållartaggar](#container-tags) har undertaggar som representerar en hierarkisk ordning i taxonomin. Undertaggar kan användas för att referera till taggar som är samma som alla lokala `TagID`. Du kan till exempel tagga innehåll med `fruit` tillåts, även om det är en behållartagg med undertaggar, som `fruit/apple` och `fruit/banana`.
 
 ### Taxonomirotnod {#taxonomy-root-node}
 

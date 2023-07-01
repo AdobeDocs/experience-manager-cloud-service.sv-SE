@@ -2,9 +2,9 @@
 title: Skapa Launches
 description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny version av befintliga webbsidor för framtida aktivering.
 exl-id: 216ccb7a-1409-4f55-8be2-2b088f91a430
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1043'
 ht-degree: 12%
 
 ---
@@ -62,7 +62,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    >[!NOTE]
    >
-   >Om du vill lägga till sidor och/eller grenar i en lansering måste de finnas på en webbplats. dvs. under en gemensam toppnivårot.
+   >Om du vill lägga till sidor och/eller grenar i en lansering måste de finnas på en webbplats. d.v.s. under en gemensam toppnivårot.
    >
    >Om en webbplats innehåller språkrötter under den översta nivån måste sidorna och grenarna för en start ligga under en gemensam språkrot.
 

@@ -2,10 +2,10 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1808'
-ht-degree: 1%
+source-wordcount: '1811'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +46,7 @@ Content Fragment Management (CFM) ingår i AEM Assets som:
 
 * Innehållsfragment är resurser.
 * De använder befintliga Assets-funktioner.
-* De är helt integrerade med Assets (Admin Consoles, etc.).
+* De är helt integrerade med Assets (administrationskonsoler och så vidare).
 
 Innehållsfragment betraktas som en webbplatsfunktion som:
 
@@ -106,7 +106,7 @@ Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. 
 
 * Komponenten tillåter mellanliggande innehåll:
 
-   * Här kan du placera andra resurser (bilder, etc.) mellan styckena i det refererade fragmentet.
+   * Här kan du placera andra resurser (bilder och så vidare) mellan styckena i det refererade fragmentet.
 
    * För det mellanliggande innehållet behöver du:
 
@@ -278,7 +278,7 @@ Se följande:
 
 >[!CAUTION]
 >
->Ta hänsyn till den här bakgrundsinformationen. Du ska inte ändra någonting här (eftersom det är markerat som en *privat område* i databasen), men det kan i vissa fall hjälpa dig att förstå hur saker och ting fungerar under huven.
+>Tänk på den här bakgrundsinformationen. Du ska inte ändra någonting här (eftersom det är markerat som en *privat område* i databasen), men det kan i vissa fall hjälpa dig att förstå hur saker och ting fungerar under huven.
 
 Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), är atomiskt. Eftersom sådana atomiska redigeringsfunktioner för flera vyer inte är ett vanligt AEM, används det som kallas för ett innehållsfragment *redigeringssession*.
 

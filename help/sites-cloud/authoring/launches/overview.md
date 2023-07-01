@@ -2,7 +2,7 @@
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 5%
@@ -67,7 +67,7 @@ Med Launes kan du:
       * Om **Produktionsklar** -flaggan är inställd, lanseringen befordras automatiskt till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
         Om inget datum har angetts har flaggan ingen effekt.
 * Uppdatera käll- och startsidor parallellt:
-   * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). dvs. som en live-kopia).
+   * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). d.v.s. som en live-kopia).
    * Du kan göra ändringar i startversionen utan att störa dessa automatiska uppdateringar eller källsidorna.
 
   ![Åtgärder parallellt](/help/sites-cloud/authoring/assets/launches-parallel.png)

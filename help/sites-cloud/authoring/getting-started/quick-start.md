@@ -2,9 +2,9 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1569'
 ht-degree: 4%
 
 ---
@@ -270,7 +270,7 @@ Alla dessa åtgärder kan utlösas av:
 [När du låser en sida](/help/sites-cloud/authoring/fundamentals/editing-content.md#locking-a-page) kan andra författare inte arbeta med den. Ikonen/knappen Lås (och Lås upp) finns:
 
 * Verktygsfältet när [sidan har valts](#selecting-your-page-for-further-action).
-* The [Listruta för sidinformation](#editing-the-page-properties) när du redigerar en sida.
+* The [Listrutan Sidinformation](#editing-the-page-properties) när du redigerar en sida.
 * Sidans verktygsfält när du redigerar en sida (när sidan är låst)
 
 Låsikonen ser till exempel ut så här:

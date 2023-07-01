@@ -2,9 +2,9 @@
 title: Använda Sling Resource Merger i Adobe Experience Manager as a Cloud Service
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
 exl-id: 5b6e5cb5-4c6c-4246-ba67-6b9f752867f5
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1160'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser. De
 
 Med Sling Resource Merger sammanfogas överläggnings-/åsidosättningsresurserna och/eller egenskaperna med de ursprungliga resurserna/egenskaperna:
 
-* Innehållet i den anpassade definitionen har en högre prioritet än det ursprungliga (dvs. det *övertäckningar* eller *åsidosättningar* den).
+* Innehållet i den anpassade definitionen har en högre prioritet än det ursprungliga (det vill säga det *övertäckningar* eller *åsidosättningar* den).
 
 * Vid behov [egenskaper](#properties) som definieras i anpassningen anger du hur innehåll som sammanfogas från originalet ska användas.
 

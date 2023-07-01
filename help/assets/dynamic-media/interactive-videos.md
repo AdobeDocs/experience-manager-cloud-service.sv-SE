@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Interactive Videos
 role: User
 exl-id: e4859223-91de-47a1-a789-c2a9447e5f71
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
 workflow-type: tm+mt
 source-wordcount: '5919'
 ht-degree: 3%
@@ -242,6 +242,7 @@ Se [Skapa en visningsförinställning](/help/assets/dynamic-media/managing-viewe
 Om du redan har laddat upp videoklipp och miniatyrbilder går du vidare till [Lägg till interaktivitet i videon](#adding-interactivity-to-your-video).
 
 >[!NOTE]
+>
 MXF-videoformatet stöds ännu inte för användning med interaktiva videoklipp i Dynamic Media.
 
 Om du har överfört fel videoklipp eller bilder, eller om du vill ta bort överförda videoklipp eller bilder som du inte längre behöver, se [Ta bort resurser](/help/assets/manage-digital-assets.md#delete-assets).
@@ -264,9 +265,11 @@ När du har lagt till tidslinjesegment lägger du till miniatyrbilder i varje se
 Se [Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md).
 
 >[!NOTE]
+>
 Delningsverktyg för sociala medier i interaktiv video stöds inte när du bäddar in visningsprogrammet i ett Experience Fragment. I stället kan du använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.
 
 >[!NOTE]
+>
 Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
 
 Alternativen Ångra och Gör om, nära det övre högra hörnet på sidan, stöds under den aktuella skaps-/redigeringssessionen.
@@ -288,11 +291,11 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    * För att börja spela upp videon väljer du **[!UICONTROL Play]** -knappen. När en viss produkt, tjänst eller detalj som du vill markera visas, väljer du **[!UICONTROL Add Segment]** i verktygsfältet. Upprepa tills du har nått slutet av videon.
 
-      För varje tidssegment som du lägger till kan du tilldela det en eller flera miniatyrbilder. Du kan sedan länka dessa miniatyrbilder till QuickView-produktsidor som kunderna kan köpa eller till webbsidor för mer information.
+     För varje tidssegment som du lägger till kan du tilldela det en eller flera miniatyrbilder. Du kan sedan länka dessa miniatyrbilder till QuickView-produktsidor som kunderna kan köpa eller till webbsidor för mer information.
 
    * För att börja spela upp videon väljer du **[!UICONTROL Play]** -knappen. När en viss produkt, tjänst eller detalj som du vill markera visas, väljer du **[!UICONTROL Pause]**. Välj **[!UICONTROL Add Segment]**.
 
-      Fortsätt spela upp och pausa videon vid punkter längs tidslinjen där du vill lägga till ett segment tills du når slutet av videon.
+     Fortsätt spela upp och pausa videon vid punkter längs tidslinjen där du vill lägga till ett segment tills du når slutet av videon.
 
 1. (Valfritt) Dra fältet till vänster **[!UICONTROL Timeline Scale Slider]** vänster för att zooma in eller höger för att zooma ut. Med den här åtgärden kan du styra hur mycket detaljrikedom du ser på de segment som du har lagt till.
 
@@ -355,9 +358,9 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    * Justera ett segments starttid och sluttid.
 
-      Markera ett segment och dra sedan den inledande eller avslutande blå ovalen för att justera start- respektive sluttiden. Den videobildruta som visas flyttas till lämplig tid i videon, baserat på dina justeringar. Tidslinjesegmentets rörelse begränsas baserat på intilliggande segment i tidslinjen. Den minsta tillåtna segmenttiden är en sekund.
+     Markera ett segment och dra sedan den inledande eller avslutande blå ovalen för att justera start- respektive sluttiden. Den videobildruta som visas flyttas till lämplig tid i videon, baserat på dina justeringar. Tidslinjesegmentets rörelse begränsas baserat på intilliggande segment i tidslinjen. Den minsta tillåtna segmenttiden är en sekund.
 
-      Använd följande kortkommandon för att snabbt kontrollera och finjustera videosegmenten:
+     Använd följande kortkommandon för att snabbt kontrollera och finjustera videosegmenten:
 
       * Om du vill söka efter videon direkt till början av det segmentet väljer du den blå inledande ovalen.
       * Om du vill söka efter videon direkt i slutet av det segmentet markerar du den efterföljande blå ovalen.
@@ -369,10 +372,9 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    * Ta bort ett segment
 
-      Markera det sista segmentet på tidslinjen och välj sedan i verktygsfältet **[!UICONTROL Delete Segment]**. Om två eller flera segment är markerade är funktionen Ta bort segment inaktiverad.
+     Markera det sista segmentet på tidslinjen och välj sedan i verktygsfältet **[!UICONTROL Delete Segment]**. Om två eller flera segment är markerade är funktionen Ta bort segment inaktiverad.
 
-      Du kan bara ta bort det sista segmentet. Om du till exempel vill ta bort alla segment på tidslinjen måste du alltid markera det sista och sedan markera **[!UICONTROL Delete Segment]**.
-
+     Du kan bara ta bort det sista segmentet. Om du till exempel vill ta bort alla segment på tidslinjen måste du alltid markera det sista och sedan markera **[!UICONTROL Delete Segment]**.
 
 1. Markera ett tidssegment som du vill associera en eller flera miniatyrbilder till.
 1. Till höger om videon väljer du **[!UICONTROL Content]** -fliken.
@@ -463,18 +465,20 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    * **[!UICONTROL Merge Segment]** - Du kan kombinera två intilliggande segment (med eller utan produktminiatyrer tilldelade till dem) till ett segment.
 
-      Markera på tidslinjen två eller flera sammanhängande segment som du vill sammanfoga till ett. Det finns inga blå ovala draghandtag för de två valda segmenten i bilden nedan.
+     Markera på tidslinjen två eller flera sammanhängande segment som du vill sammanfoga till ett. Det finns inga blå ovala draghandtag för de två valda segmenten i bilden nedan.
 
-      Välj **[!UICONTROL Merge Segment]** i verktygsfältet.
+     Välj **[!UICONTROL Merge Segment]** i verktygsfältet.
+
    ![chlimage_1-134](assets/chlimage_1-134.png)
 
    Sammanfoga två valda femsekunderssegment till ett segment på tio sekunder.
 
    * **[!UICONTROL Split Segment]** - Du kan dela upp ett enskilt segment i två segment med samma tidsindelning. Om det redan finns produktminiatyrer för segmentet kombineras miniatyrbilderna till det vänstra segmentet.
 
-      Markera det segment som du vill dela upp i halva på tidslinjen och markera sedan **[!UICONTROL Split Segment]** i verktygsfältet.
+     Markera det segment som du vill dela upp i halva på tidslinjen och markera sedan **[!UICONTROL Split Segment]** i verktygsfältet.
 
-      Om du markerar två eller flera segment inaktiveras **[!UICONTROL Split Segment]** -funktion.
+     Om du markerar två eller flera segment inaktiveras **[!UICONTROL Split Segment]** -funktion.
+
    ![chlimage_1-135](assets/chlimage_1-135.png)
 
    Dela upp ett markerat segment på tio sekunder i två segment på fem sekunder vardera.
@@ -488,6 +492,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
    När du är klar väljer du **[!UICONTROL Save]**.
 
    >[!NOTE]
+   >
    När du sparar den interaktiva videon sparas en associerad `.vtt`-fil automatiskt med den. The `.vtt` filen sparas i `_VTT` mapp i roten av **[!UICONTROL Assets]**. Filen och mappen är nödvändiga för att den interaktiva videon ska kunna spelas upp korrekt på webbplatsen. Därför ska du inte flytta, redigera eller ta bort mappen `_VTT` eller dess innehåll.
 
 1. Publicera den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kopierar och klistrar in på webbplatsupplevelserna.
@@ -497,6 +502,7 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
    Se [Publicera resurser](publishing-dynamicmedia-assets.md).
 
    >[!NOTE]
+   >
    Om du vill publicera en videoklipp som kan köpas med snabbvyer måste du även publicera videons relaterade bildresurser separat från din e-handelsplats.
 
    När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med webbplatsen](#integrating-an-interactive-video-with-your-website).
@@ -522,7 +528,9 @@ Om du har lagt till interaktivitet med snabbvyer ska du bara använda inbäddnin
 Den kopierade inbäddningskoden ställs in för en responsiv miljö så att den automatiskt passar det område som den statiska videon tidigare upptog.
 
 >[!NOTE]
+>
 Nu är du klar om du har lagt till interaktivitet med endast hyperlänkade webbsidor.
+>
 Om du har lagt till någon interaktivitet för att aktivera en snabbvy är miniatyrbilderna bredvid den interaktiva videon endast avsedda för visning. de är ännu inte integrerade med dina befintliga snabbvyer. I så fall måste du integrera den interaktiva videon med befintliga snabbvyer på webbplatsen.
 
 **Exempel**
@@ -565,6 +573,7 @@ Integrationen är lika enkel som att ta bort inbäddningskoden för video och er
 ## Integrera en interaktiv video med en befintlig QuickView {#integrating-an-interactive-video-with-an-existing-quickview}
 
 >[!NOTE]
+>
 Detta gäller endast om du är en fristående Experience Manager Assets-kund.
 
 Det sista steget i den här processen är att integrera din interaktiva video med en befintlig QuickView-implementering som används på din webbplats. Det finns ingen lösning på integreringen som fungerar i alla fall. Alla QuickView-implementeringar är unika. Därför behövs ett specifikt tillvägagångssätt som innebär att IT-personal på frontend får hjälp.
@@ -622,7 +631,7 @@ Den inbäddningskod som returneras av Experience Manager har redan en färdig h�
      var sku=inData.sku; //SKU for product ID
     //To pass other parameter from the hotspot, you need to add custom parameter during the hotspot setup as parameterName=value
     loadQuickView(sku); //Replace this call with your quickview plugin
-    //Please refer to your quickviewer plugin for the quickview call
+    //See your quickviewer plugin for the quickview call
     },
 "initComplete":function() {
     //--- Attach quickview popup to viewer container so popup will work in fullscreen mode ---
