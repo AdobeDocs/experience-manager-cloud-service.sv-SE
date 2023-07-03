@@ -6,10 +6,10 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 589ed1e1befa84c0caec0eed986c3e1a717ae602
 workflow-type: tm+mt
-source-wordcount: '5039'
-ht-degree: 5%
+source-wordcount: '5101'
+ht-degree: 4%
 
 ---
 
@@ -37,7 +37,7 @@ Resurssökning i AEM stöder följande användningsfall och den här artikeln be
 | [Begränsningar](#limitations) och [Tips](#tips) | | |
 | [Illustrerade exempel](#samples) | | |
 
-Söka efter resurser med hjälp av omsökningsfältet högst upp i [!DNL Experience Manager] webbgränssnitt. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** in [!DNL Experience Manager], klicka ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet anger du söknyckelord och väljer `Return`. Du kan även använda kortkommandot för nyckelord `/` (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. [!DNL Experience Manager] innehåller förslag när du börjar skriva ett söknyckelord.
+Söka efter resurser med hjälp av omsökningsfältet högst upp i [!DNL Experience Manager] webbgränssnitt. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]** in [!DNL Experience Manager], klicka ![search_icon](assets/do-not-localize/search_icon.png) i det övre fältet anger du söknyckelord och väljer `Return`. Du kan även använda kortkommandot för nyckelord `/` (snedstreck) för att öppna Omnissearch-fältet. `Location:Assets` är förvalt för att begränsa sökningarna till DAM-resurser. `Path:/content/dam` visas även när du utför sökningar på rotnivå i **[!UICONTROL Files]** mapp. Om du navigerar till en annan mapp `Path:/content/dam/<folder name>` visas i Omnissearch-fältet för att begränsa sökningen till den aktuella mappen. [!DNL Experience Manager] ger förslag när du börjar skriva ett söknyckelord.
 
 Använd **[!UICONTROL Filters]** för att söka efter resurser, mappar, taggar och metadata. Du kan filtrera sökresultaten baserat på de olika alternativen (predikaten), t.ex. filtyp, filstorlek, datum då filen senast ändrades, status för resursen, information om insikter och Adobe Stock-licensiering. Du kan anpassa panelen Filter och lägga till eller ta bort sökpredikatorn med [sökfack](/help/assets/search-facets.md). The [!UICONTROL File Type] filter i [!UICONTROL Filters] panelen har kryssrutor för blandat läge. Om du inte markerar alla kapslade predikat (eller format) markeras därför kryssrutorna på första nivån delvis.
 
@@ -415,6 +415,7 @@ Du kan göra följande med de resurser du har sökt i [!DNL Experience Manager]:
 * Starta ett arbetsflöde
 * Relatera eller inte relatera tillgångar
 * Använd filter på panelen Filter som visas automatiskt när sökningen har slutförts för att begränsa sökresultaten.
+* Navigera till resursplatsen
 
 ### Sortera sökresultat {#sort}
 
@@ -466,6 +467,10 @@ På samma sätt som när du skapar en version kan du också skapa ett arbetsflö
 ### Relatera och inte relatera tillgångar {#relate-unrelate-assets}
 
 Relatera och dela upp resurser som visas i sökresultaten. Markera resursen/resurserna och klicka på **[!UICONTROL Relate]** eller **[!UICONTROL Unrelate]**.
+
+### Navigera till resursmappens plats {#navigate-asset-folder-location}
+
+Navigera till mapplatsen för resurser som visas i sökresultaten. Markera resursen och klicka på **[!UICONTROL Show File Location]**.
 
 ## Oväntade sökresultat och problem {#unexpected-results}
 

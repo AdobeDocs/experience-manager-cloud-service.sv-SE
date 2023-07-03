@@ -4,9 +4,9 @@ description: Hantera PDF-dokument i [!DNL Adobe Experience Manager] som [!DNL Cl
 feature: Asset Management
 role: User,Admin
 exl-id: 29660869-6902-4093-845b-cd629be59d4d
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: 589ed1e1befa84c0caec0eed986c3e1a717ae602
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '853'
 ht-degree: 1%
 
 ---
@@ -22,6 +22,7 @@ Document Cloud PDF viewer ger AEM Assets fördelar på följande sätt:
 
 > Tips
 > Om du inte kan hämta förhandsgranskning av flera sidor för ett tidigare överfört PDF-dokument markerar du PDF och klickar på **![Återbearbeta](/help/assets/assets/Reprocess.svg) Bearbeta resurser igen**.
+>
 
 ## Stöd för visningsprogramkomponenter för PDF Document Cloud {#pdf-doc-cloud}
 
@@ -55,6 +56,7 @@ Du kan också använda [anteckningar](#pdf-annotations) till PDF-dokumentet i en
 
 > ANMÄRKNING
 > Den maximala storleken för en resurs som du kan förhandsgranska är upp till 100 MB.
+>
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409355)
 
@@ -110,6 +112,10 @@ Följande anteckningar kan användas på ett PDF-dokument:
         </tr>
     </table>
 
+>[!NOTE]
+>
+>Anteckningarna som du lägger till i PDF-dokumentet är tillgängliga i förhandsgranskningsläget. Anteckningarna visas dock inte när du hämtar eller skriver ut dokumentet PDF.
+
 ## Stöd för förhandsgranskning av flera sidor för dokument i andra format {#multi-format}
 
 Förutom PDF-dokument kan du även förhandsgranska flera sidor för dokument i andra formattyper. De dokumentformat som stöds är TXT, RTF, DOC, DOCX, PPT, PPTX, XLS och XLSX. Experience Manager Assets konverterar automatiskt dessa dokumentformat till ett PDF-format och gör dem tillgängliga för förhandsgranskning.
@@ -126,7 +132,6 @@ Utför följande steg för att förhandsgranska flera sidor i andra dokumentform
 > * Den maximala storleken för en resurs som du kan förhandsgranska är upp till 100 MB.
 > * Den maximala storleken på XLS- eller XLSX-filer som kan förhandsgranskas är 20 MB.
 >
-
 
 **Se även**
 

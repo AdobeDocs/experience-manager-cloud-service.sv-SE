@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: da5634dfa812268b81b2db783da772b6ecc1d7ce
+source-git-commit: 45004db44af48301f0a9cbd9f574ac34c360275e
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 0%
@@ -56,9 +56,9 @@ The [ny resursvy](/help/assets/assets-view-introduction.md) finns nu i Experienc
 
 Experience Manager Assets ger dig nu möjlighet att göra mer med sökresultatens användargränssnitt: Nu kan du:
 
-* Sök som standard på den aktuella databasplatsen i stället för att söka efter nyckelordet i hela databasen.
+* [Utför sökningen på den aktuella databasplatsen](/help/assets/search-assets.md) som standard i stället för att söka efter nyckelordet i hela databasen.
 
-* Navigera till mapplatsen för resurser som visas i sökresultaten.
+* [Navigera till mapplatsen](/help/assets/search-assets.md#aftersearch) för resurser som visas i sökresultaten.
 
 **Miniatyrförhandsvisningar för 3D-resurser**
 
