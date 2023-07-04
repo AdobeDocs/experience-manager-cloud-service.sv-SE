@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: e8ea040ba3f8c73d7ed64c9669ac1d0a22d3a3c8
+source-git-commit: c7143ce939ca8c06fc678fc30f90c71981e4f8d7
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 1%
+source-wordcount: '607'
+ht-degree: 0%
 
 ---
 
@@ -13,18 +13,18 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Version 12441 {#release-12441}
+## Utgåva 12549 {#release-12549}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 12441, som offentliggjordes den 27 juni 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 12255.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 12549, som offentliggjordes den 4 juli 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 12255. Underhållsutgåva 12549 ersätter 12441 för att åtgärda två problem.
 
 2023.7.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lansering av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-12441}
+### Förbättringar {#enhancements-12549}
 
 - SITES-8769: Förbättra StyleImpl-anrop i ResponsiveGrid
 - Forms-5054: Stöd för alla [statyer](https://opensource.adobe.com/acrobat-sign/acrobat_sign_events/webhookeventsagreements.html) som stöds av Adobe Sign.
 
-### Åtgärdade problem {#fixed-issues-12441}
+### Åtgärdade problem {#fixed-issues-12549}
 
 - Olika tillgänglighetsrelaterade uppdateringar
 - SITES-12688: Sidredigeraren: Logiska operatorn ELLER fungerar inte korrekt i sökningen i Resurssökaren
@@ -53,11 +53,11 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 124
 - Forms-9072: När du söker i ett schema när du skapar ett formulärfragment returnerar sökresultatet inget schema för markering.
 - Forms: Flera tillgänglighetsrelaterade fel har korrigerats för att förbättra tillgängligheten för AEM Forms-funktioner.
 
-### Kända fel {#known-issues-12441}
+### Kända fel {#known-issues-12549}
 
 Ingen.
 
-### Inbäddade tekniker {#embedded-tech-12441}
+### Inbäddade tekniker {#embedded-tech-12549}
 
 | Teknik | Version | Länk |
 |---|---|---|
