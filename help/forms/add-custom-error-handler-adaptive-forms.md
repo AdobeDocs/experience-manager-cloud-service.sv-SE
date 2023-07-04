@@ -7,9 +7,9 @@ keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterar
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: 09ed1ae61e7748da2cc182b005a9dd26853cb3f7
+source-git-commit: 11ab8d41b911afc73fe5339d43ca3a0fc80a5f8d
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '1907'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Koden nedan visar den befintliga strukturen för felsvar:
     ]
     originCode : <target error Code>
     originMessage : <unstructured error message returned by service>
-}
+    }
 ```
 
 
@@ -125,20 +125,20 @@ Vissa av alternativen för att visa felsvaren är:
 * **`Header:`** `content-type:application/problem+json`
 * **`Response:`**
 
-      &quot;javascript
-      {
-      &quot;type&quot;: &quot;VALIDATION_ERROR&quot;,
-      &quot;validationErrors&quot;: [
-      {
-      &quot;fieldName&quot;: &quot;guide[0].guide1[0].guideRootPanel[0].textbox1686647736683[0]&quot;,
-      &quot;dataRef&quot;: &quot;&quot;,
-      &quot;details&quot;: [
-      &quot;Ett ogiltigt ID har angetts. Angivet värde är inte korrekt!&quot;
-      ]
-      }
-      ]}
-      &quot;
-  
+  ```javascript
+          {
+              "type": "VALIDATION_ERROR",
+              "validationErrors": [
+              {
+              "fieldName": "guide[0].guide1[0].guideRootPanel[0].textbox1686647736683[0]",
+              "dataRef": "",
+              "details": [
+              "Invalid ID supplied. Provided value is not correct!"
+          ]
+          }
+          ]}
+  ```
+
   Du kan visa SOM-uttrycket för vilket fält som helst i ett adaptivt formulär genom att trycka på fältet och välja **[!UICONTROL View SOM Expression]**.
 
   ![Som uttryck för ett adaptivt formulärfält för att visa felsvar i en anpassad felhanterare](/help/forms/assets/custom-error-handler-somexpression.png)
@@ -152,17 +152,17 @@ Vissa av alternativen för att visa felsvaren är:
 * **`Response:`**
 
   ```javascript
-  {
-      "type": "VALIDATION_ERROR",
-      "validationErrors": [
       {
-          "fieldName": "",
-          "dataRef": "/Pet/id",
-          "details": [
-          "Invalid ID supplied. Provided value is not correct!"
-          ]
-          }
-  ]}
+          "type": "VALIDATION_ERROR",
+          "validationErrors": [
+          {
+              "fieldName": "",
+              "dataRef": "/Pet/id",
+              "details": [
+              "Invalid ID supplied. Provided value is not correct!"
+              ]
+              }
+      ]}
   ```
 
   ![Datareferens för ett adaptivt formulärfält som visar felsvar i en anpassad felhanterare](/help/forms/assets/custom-errorhandler-dataref.png)
@@ -235,21 +235,21 @@ Så här skapar du en anpassad felfunktion:
 1. Lägg till en JavaScript-fil, till exempel `function.js`. Filen innehåller koden för den anpassade felhanteraren.
 Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rubriker som tagits emot från REST-tjänstens slutpunkt i webbläsarkonsolen.
 
-       &quot;javascript
+   ```javascript
        /**
-       * Anpassad felhanterare
-       * @name customErrorHandler anpassad felhanterarfunktion
+       * Custom Error handler
+       * @name customErrorHandler Custom Error Handler Function
        * @errorHandler
        */
        function customErrorHandler(response, headers)
        {
-       console.log(&quot;Custom Error Handler processing start...&quot;);
-       console.log(&quot;response:&quot;+JSON.stringify(response));
-       console.log(&quot;headers:&quot;+JSON.stringify(headers));
-       console.log(&quot;Custom Error Handler processing end..&quot;);
+           console.log("Custom Error Handler processing start...");
+           console.log("response:"+JSON.stringify(response));
+           console.log("headers:"+JSON.stringify(headers));
+           console.log("Custom Error Handler processing end...");
        }
-       &quot;
-   
+   ```
+
    <!--  To call the default error handler after the custom error handler, the following line of the sample code is used:
         `guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers) `-->
 1. Spara `function.js` -fil.
