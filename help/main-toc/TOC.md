@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: e60a734d7e0887a23978efac8d896ac3745dbb5d
+source-git-commit: 823d9875f1cd293df834cc6e2fc16fc8f7e0d37b
 workflow-type: tm+mt
-source-wordcount: '4150'
+source-wordcount: '4160'
 ht-degree: 20%
 
 ---
@@ -526,7 +526,6 @@ ht-degree: 20%
       + [Ta bort externa beroenden för befintliga installationer](/help/assets/remove-external-dependencies.md)
       + [Konfigurera [!DNL enhanced connector] for [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
       + [Uppdatera [!DNL Workfront for Experience Manager enhanced connector]](/help/assets/update-workfront-enhanced-connector.md)
-
 + Forms {#forms}
    + Översikt {#forms-overview}
       + [Introduktion](/help/forms/home.md)
@@ -627,9 +626,10 @@ ht-degree: 20%
       + [Använda anpassade teckensnitt i PDF-dokument](/help/forms/use-custom-fonts.md)
       + [Kända fel, bästa praxis och vanliga frågor](/help/forms/communications-known-issues-limitations.md)
    + API-referens för utvecklare {#aem-forms-developer-api-reference}
+      + [Adaptiv API-referens för Forms](https://developer-stage.adobe.com/experience-cloud/experience-manager-apis/api/stable/forms/)
       + [API-referens för AEM Forms Cloud Service Communications](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)
       + [API-referens för AEM Forms Cloud Service JavaScript](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/jsdoc/aem-forms-cloud-service-jsdoc/index.html)
-      + [AEM Forms Cloud Service Java API Reference](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/aem-forms-cloud-service-javadoc/index.html)
+      + [AEM Forms Cloud Service Java API Reference](https://javadoc.io/doc/com.adobe.aem/aem-forms-sdk-api/latest/index.html)
    + Felsökning {#troubleshooting-aem-forms-cloud-service}
       + [Installation och konfiguration](/help/forms/troubleshooting-installation-and-configuration.md)
       + [Dispatcher och CDN-cachning](/help/forms/troubleshooting-caching-performance.md)
