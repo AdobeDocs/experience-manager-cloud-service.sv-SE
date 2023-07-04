@@ -3,9 +3,9 @@ title: Skillnader mellan AEM 6.5 Forms och AEM Cloud Services
 description: Använder du Experience Manager Forms och vill uppgradera till Adobe Experience Manager Forms as a Cloud Service? Jämför AEM 6.5 Forms och AEM Cloud Services och lär dig de viktigaste ändringarna innan du uppgraderar eller migrerar till Cloud Service.
 exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
 contentOwner: khsingh
-source-git-commit: 54a1ae1cc030030e44612b502b70c9b567144538
+source-git-commit: 1d16797f741fc9032356564061f2b6743d4c7936
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 
 * Utvecklarna har samma kod för Cloud Service och lokal utvecklingsmiljö [git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/cloud-manager-repositories.html). En Git-databas, som baseras på AEM Archetype, skapas automatiskt när ett AEM as a Cloud Service program skapas.
 
-   ![](/help/forms/assets/git-repo-local-and-forms-cs.png)
+  ![](/help/forms/assets/git-repo-local-and-forms-cs.png)
 
 * Utvecklingsflödet för Forms as a Cloud Service är anpassat till AEM Archetype för AEM Cloud Service. Det krävs dock vissa förändringar i Adobe Experience Manager Maven-projekten för att de ska vara kompatibla med AEM Cloud Service. På en hög nivå kräver AEM att innehåll och kod skiljs åt i diskreta delpaket för att se skillnaden mellan muterbart och oföränderligt innehåll. Använd [Verktyget Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html) att strukturera om befintliga projektpaket genom att separera innehåll och kod i separata paket som är kompatibla med projektstrukturen som definierats för Adobe Experience Manager as a Cloud Service.
 
@@ -50,7 +50,7 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 
 * **Regelredigerare:** AEM Forms as a Cloud Service har en härdad [Regelredigerare](rule-editor.md#visual-rule-editor). Kodredigeraren är inte tillgänglig på Forms as a Cloud Service.
 
-   The [migreringsverktyg](/help/forms/migrate-to-forms-as-a-cloud-service.md) hjälper dig att migrera formulär som har anpassade regler (skapade i kodredigeraren). Verktyget konverterar sådana regler till anpassade funktioner som stöds på Forms as a Cloud Service. Du kan använda de återanvändbara funktionerna med Regelredigeraren för att fortsätta att hämta resultat från regelskript. The `onSubmitError` eller `onSubmitSuccess` funktioner är nu tillgängliga som åtgärder i regelredigeraren.
+  The [migreringsverktyg](/help/forms/migrate-to-forms-as-a-cloud-service.md) hjälper dig att migrera formulär som har anpassade regler (skapade i kodredigeraren). Verktyget konverterar sådana regler till anpassade funktioner som stöds på Forms as a Cloud Service. Du kan använda de återanvändbara funktionerna med Regelredigeraren för att fortsätta att hämta resultat från regelskript. The `onSubmitError` eller `onSubmitSuccess` funktioner är nu tillgängliga som åtgärder i regelredigeraren.
 
 * **Förifyllningstjänst:** Som standard sammanfogar förifyllningstjänsten data med ett adaptivt formulär på klienten i stället för att sammanfoga data på servern i AEM 6.5 Forms. Funktionen hjälper till att ge snabbare förifyllnad av ett adaptivt formulär. Du kan alltid konfigurera så att kopplingsåtgärden körs på Adobe Experience Manager Forms Server.
 
@@ -113,4 +113,13 @@ Forms as a Cloud Service tillhandahåller RESTful-API:er för dokumentgenerering
 
 * Du kan använda API:er för kommunikation för att skapa anpassade dokument on-demand eller gruppvis på Forms as a Cloud Service. Du kan använda en AEM 6.5 Forms-miljö för interaktiv kommunikation och användargränssnitt för agenter.
 
+## Se nästa
 
+* [Migrera från AEM Forms (On-Premise och AMS) till AEM Forms as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
+* [Lägg till eller skapa Adaptiv Forms på AEM Sites Page](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Skapa en adaptiv form (kärnkomponenter)](/help/forms/creating-adaptive-form-core-components.md)
+
+## Ytterligare information
+
+* [Introduktion till AEM Forms as a Cloud Service](/help/forms/home.md)
+* [Konfigurera en lokal utvecklingsmiljö och ett inledande utvecklingsprojekt](/help/forms/setup-local-development-environment.md)

@@ -1,16 +1,16 @@
 ---
 title: Så här migrerar du från en AEM 6.5 Forms till [!DNL AEM Forms] as a Cloud Service miljö?
 description: Migrera från en [!DNL AEM Forms] (On-Premise- och AMS-miljöer) till [!DNL AEM Forms] as a Cloud Service miljö.
-keywords: 6.5-formulär till molntjänster, 6.5-formulär till cs, migrera 6.5-formulär till CS, migrera 6.5-formulär till molntjänsten, uppgradera 6.5-formulär till CS, flytta 6.5-formulär till CS, uppgradera AEM 6.5 till CS
+keywords: 6.5-formulär till molntjänster, 6.5-formulär till cs, migrera 6.5-formulär till CS, migrera 6.5-formulär till molntjänster, uppgradera 6.5-formulär till CS, flytta 6.5-formulär till CS, uppgradera AEM 6.5 till CS, AEM Forms 6.5 till Cloud Service, AEM från migrering till molntjänster
 contentOwner: khsingh
 feature: Adaptive Forms
 role: User, Developer
 level: Intermediate
 topic: Migration
 exl-id: 090e77ff-62ec-40cb-8263-58720f3b7558
-source-git-commit: f6b8ef52ad551be70e665a14ce00c197d1470e84
+source-git-commit: 850b1cccb03ca05ea53b646c55fcb0d0c100494c
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1517'
 ht-degree: 1%
 
 ---
@@ -120,7 +120,7 @@ Utför följande steg för att göra [!DNL AEM Forms] resurser som är kompatibl
 
    Cloud Servicen stöder inte regelredigeringsskript. The **[!UICONTROL Code editor script migration]** används för att konvertera alla regelskript i miljön till återanvändbara funktioner och de återanvändbara funktionerna används i den visuella redigeraren på lämplig plats. Dessa återanvändbara funktioner sparas i form av klientbibliotek och hjälper dig att behålla befintliga funktioner intakta. Verktyget tillämpar automatiskt de genererade återanvändbara funktionerna på motsvarande Adaptive Forms.
 
-   Använd [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en#contentmanagement) om du vill exportera återanvändbara funktioner (klientbibliotek) till ett paket.
+   AEM formulärmigrering till Cloud Servicen använder du [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en#contentmanagement) om du vill exportera återanvändbara funktioner (klientbibliotek) till ett paket.
 
 1. [Distribuera](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#deploying-content-packages-via-cloud-manager-and-package-manager) paketet med återanvändbara funktioner (Client Libraries), [egen kod, komponenter, konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html#cloud-manager), anpassade språkspecifika bibliotek till [!DNL AEM] as a Cloud Service miljö.
 
@@ -152,7 +152,7 @@ Du kan lägga till mappsökvägar på den översta nivån som listas nedan eller
 * `/content/forms/af`
 * `/etc/clientlibs/fd/theme`
 
-Om du vill migrera AEM arbetsflödesmodeller anger du följande sökvägar:
+När du migrerar AEM arbetsflödesmodeller från AEM Forms 6.5 till Cloud Service anger du följande sökvägar:
 
 * `/conf/global/settings/workflow/models/`
 * `/conf/global/settings/workflow/launcher`
