@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 823d9875f1cd293df834cc6e2fc16fc8f7e0d37b
+source-git-commit: 0efdb9353ef908cf5a655c989ae7be1107c8f3de
 workflow-type: tm+mt
-source-wordcount: '4160'
+source-wordcount: '4164'
 ht-degree: 20%
 
 ---
@@ -559,6 +559,7 @@ ht-degree: 20%
          + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
          + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
    + Adaptiv Forms {#adaptive-forms-authoring}
+      + [Skapa ett adaptivt formulär](/help/forms/create-an-adaptive-form.md)
       + [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
       + Skapa adaptiv Forms - kärnkomponenter {#authoring-adaptive-forms-core-components}
          + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
