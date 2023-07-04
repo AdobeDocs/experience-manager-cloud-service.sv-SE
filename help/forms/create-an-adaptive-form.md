@@ -7,9 +7,9 @@ role: User, Developer
 level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: 0efdb9353ef908cf5a655c989ae7be1107c8f3de
+source-git-commit: e302d24261f24697aeb5f97b99ffee1fc2135959
 workflow-type: tm+mt
-source-wordcount: '2771'
+source-wordcount: '2705'
 ht-degree: 0%
 
 ---
@@ -24,20 +24,17 @@ ht-degree: 0%
 
 Med anpassningsbara Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. AEM Forms har en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden har en snabb fliknavigering där du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett adaptivt formulär.
 
+![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png){width="100%" align="center"}
+
 Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan använda:
 
-* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en): Dessa är standardiserade komponenter för datainhämtning. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. **Adobe rekommenderar att man använder dessa moderna och utbyggbara komponenter för att utveckla adaptiva Forms**.
+* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en): Dessa är standardiserade komponenter för datainhämtning. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Du kan besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) se tillgängliga kärnkomponenter i praktiken **Adobe rekommenderar att man använder dessa moderna och utbyggbara komponenter för att utveckla adaptiva Forms**.
 
 * [Adaptiva Forms Foundation-komponenter](creating-adaptive-form.md): Dessa är klassiska (gamla) datainhämtningskomponenter. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar nya formulär rekommenderar Adobe att du använder  [Adaptiva Forms Core-komponenter för att skapa en adaptiv Forms](#create-an-adaptive-form-core-components).
 
-![Guide för att skapa ett adaptivt formulär](/help/release-notes/assets/wizard.png){width="100%" align="center"}
-
-
 >[!BEGINTABS]
 
->[!TAB Skapa adaptiv Forms med kärnkomponenter]
-
-## Krav {#pre-requisites-to-create-a-core-components-based-adaptive-form}
+>[!TAB Skapa adaptiv Forms med kärnkomponenter (rekommenderas)]
 
 Du behöver följande för att skapa ett adaptivt formulär:
 
@@ -101,25 +98,20 @@ Du behöver följande för att skapa ett adaptivt formulär:
    * **[!UICONTROL Name:]** Anger formulärets namn. En nod med det angivna namnet skapas i databasen. När du börjar skriva en titel genereras värdet för namnfältet automatiskt. Du kan ändra det föreslagna värdet. Namnfältet får endast innehålla alfanumeriska tecken, bindestreck och understreck. Alla ogiltiga indata ersätts med ett bindestreck.
    * **[!UICONTROL Path:]** Anger platsen där det adaptiva formuläret ska sparas. Du kan spara det anpassade formuläret direkt på `/content/dam/formsanddocuments` eller skapa en mapp som `/content/dam/formsanddocuments/adaptiveforms` för att spara ett adaptivt formulär. Se till att du skapar mappen innan du använder den i sökvägen. The **[!UICONTROL Path]** skapas ingen mapp automatiskt.
 
-1. Tryck på **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen.  Baserat på typen av adaptiv form finns formulärelementen i den associerade <!--XFA form template, XML schema or --> JSON-schema eller formulärdatamodell visas i **[!UICONTROL Data Model Objects]** -fliken i **[!UICONTROL Content Browser]** i sidlisten. Du kan också dra och släppa dessa element för att skapa ett anpassat formulär.
+1. Tryck på **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen.  Baserat på typen av adaptiv form finns formulärelementen i den associerade <!--XFA form template, XML schema or --> JSON-schema eller formulärdatamodell visas i **[!UICONTROL Data Model Objects]** -fliken i **[!UICONTROL Content Browser]** i sidlisten.
 
-Nu kan du dra och släppa de adaptiva Forms Core-komponenterna till den adaptiva Forms-behållaren för att utforma och skapa formuläret.
+Nu kan du dra och släppa [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#components) eller schemaelement för att skapa ett adaptivt formulär.
 
-## Tillgängliga adaptiva Forms Core-komponenter {#available-core-components}
-
-Adaptiva Forms Core-komponenter är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, hjälper till att minska utvecklingstiden och sänker underhållskostnaderna för era digitala registreringsupplevelser. [Dokumentation för adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en) innehåller en detaljerad lista över tillgängliga komponenter tillsammans med detaljerad information om funktionerna för varje komponent. Du kan också besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) för att se hur de tillgängliga kärnkomponenterna fungerar i praktiken.
 
 ## Redigera formulärmodellegenskaper för ett adaptivt formulär {#edit-form-model-core-components-based-adaptive-forms}
 
-1. Markera det adaptiva formuläret och tryck på ![Sidinformation](/help/forms/assets/Smock_Properties_18_N.svg){width="100%" align="center"} > **[!UICONTROL Open Properties]**. Sidan Formuläregenskaper öppnas.
+1. Markera det adaptiva formuläret och tryck på ![Sidinformation](/help/forms/assets/Smock_Properties_18_N.svg) > **[!UICONTROL Open Properties]**. Sidan Formuläregenskaper öppnas.
 
 1. Gå till **[!UICONTROL Form Model]** och välj en formulärmodell. Om det adaptiva formuläret inte har någon formulärmodell kan du välja antingen ett JSON-schema eller en formulärdatamodell. Om det adaptiva formuläret däremot redan är baserat på en formulärmodell kan du växla till en annan formulärmodell av samma typ. Om formuläret till exempel använder ett JSON-schema kan du enkelt växla till ett annat JSON-schema, och på samma sätt kan du växla till en annan formulärdatamodell om formuläret använder en formulärdatamodell.
 
 1. Tryck **[!UICONTROL Save]** för att spara egenskaperna.
 
 >[!TAB Skapa adaptiv Forms med Foundation Components]
-
-## Krav {#pre-requisites-to-create-a-foundation-components-based-adaptive-form}
 
 Du behöver följande för att skapa ett adaptivt formulär:
 
@@ -254,7 +246,7 @@ Du kan ändra formulärmodellen för ett adaptivt formulär (JSON-baserat eller 
 Du kan också ändra formulärmodellens egenskaper i den adaptiva formulärredigeraren eller i den adaptiva formulärmallsredigeraren.
 
 1. Välj **[!UICONTROL Adaptive Form container (Root)]** -komponenten.
-1. Klicka ![Konfigurera ikon](/help/forms/assets/configure-icon.svg){width="100%" align="center"} -ikonen för att öppna **[!UICONTROL Properties]** i behållaren för adaptiv form.
+1. Klicka ![Konfigurera ikon](/help/forms/assets/configure-icon.svg) -ikonen för att öppna **[!UICONTROL Properties]** i behållaren för adaptiv form.
 1. Välj **[!UICONTROL Data Model]** och gör något av följande:
 
    * Om det adaptiva formuläret inte har någon formulärmodell kan du välja en formulärmodell och därefter välja <!-- a form template, --> XML- eller JSON-schema eller formulärdatamodell.
