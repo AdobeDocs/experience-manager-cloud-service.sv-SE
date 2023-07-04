@@ -4,7 +4,7 @@ description: Förstå hur Content Fragment Editor använder markeringssyntax fö
 feature: Content Fragments
 role: User
 exl-id: 7a6d4a63-faf8-4e1c-95da-90db2027a2dd
-source-git-commit: c15ef1cc9b14466105e5565c8ccc15120346f0f2
+source-git-commit: 5c59189abf809293a319d6bce4ef7389c2451f92
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 När du [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva headless-innehåll:
 
-![markeringsredigerare](/help/assets/content-fragments/assets/cfm-markdown-01.png)
+![Markeringsredigerare](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
 Du kan definiera:
 

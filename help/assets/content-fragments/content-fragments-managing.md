@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5c59189abf809293a319d6bce4ef7389c2451f92
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1770'
 ht-degree: 5%
 
 ---
@@ -56,7 +56,7 @@ Metoden för att skapa ett innehållsfragment är:
 
    Efter markering, använd **Nästa** för att fortsätta.
 
-   ![fragmentbas](assets/cfm-managing-01.png)
+   ![Välj innehållsfragmentmodell](assets/cfm-managing-01.png)
 
 1. Ange följande i steget **Egenskaper**:
 
@@ -92,7 +92,7 @@ I **Resurser** konsol en rad åtgärder är tillgängliga för dina innehållsfr
 * Från verktygsfältet; när du har valt fragmentet är alla lämpliga åtgärder tillgängliga.
 * Som [snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions); en delmängd av åtgärder som är tillgängliga för de enskilda fragmentkorten.
 
-![funktionsmakron](assets/cfm-managing-02.png)
+![Åtgärder i verktygsfältet](assets/cfm-managing-02.png)
 
 Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
@@ -139,7 +139,7 @@ Så här öppnar du fragmentet för redigering:
 
 1. Fragmentredigeraren öppnas. Gör önskade ändringar:
 
-   ![fragmentredigerare](assets/cfm-managing-03.png)
+   ![Fragmentredigerare](assets/cfm-managing-03.png)
 
 1. När du har gjort ändringar använder du **Spara**, **Spara och stäng** eller **Stäng** efter behov.
 
@@ -167,13 +167,13 @@ Navigera genom de olika lägena med ikonerna på sidopanelen:
 * [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
 * [Förhandsgranska](/help/assets/content-fragments/content-fragments-json-preview.md)
 
-![lägen](assets/cfm-managing-04.png)
+![Lägen i Content Fragment Editor](assets/cfm-managing-04.png)
 
 ### Verktygsfältsåtgärder i redigeraren för innehållsfragment {#toolbar-actions-in-the-content-fragment-editor}
 
 Vissa funktioner i det övre verktygsfältet finns i flera lägen:
 
-![lägen](assets/cfm-managing-top-toolbar.png)
+![Verktygsfältsåtgärder som är tillgängliga i olika lägen](assets/cfm-managing-top-toolbar.png)
 
 * Ett meddelande visas när fragmentet redan refereras på en innehållssida. Du kan **Stäng** meddelandet.
 
@@ -303,7 +303,7 @@ Anteckningar (för innehållsfragment) är:
 
 Till exempel:
 
-![tidslinje](assets/cfm-managing-05.png)
+![Tidslinje](assets/cfm-managing-05.png)
 
 ## Jämföra fragmentversioner {#comparing-fragment-versions}
 
@@ -331,7 +331,7 @@ De visas sida vid sida, där:
 >
 Du kan inte redigera fragmentinnehållet när du jämför fragment.
 
-![jämföra](assets/cfm-managing-06.png)
+![Jämföra variationer](assets/cfm-managing-06.png)
 
 ## Återställa till en version  {#reverting-to-a-version}
 

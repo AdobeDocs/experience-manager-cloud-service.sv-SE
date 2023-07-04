@@ -2,9 +2,9 @@
 title: Metadata - Fragmentegenskaper (resurser - innehållsfragment)
 description: Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment.
 exl-id: bc67480d-a1e4-4ef9-b811-8bd110f70369
-source-git-commit: 344d04eb18c100835b78fe59c909d92c1e42111b
+source-git-commit: 5c59189abf809293a319d6bce4ef7389c2451f92
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '223'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,8 @@ Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 
    * Välj [**Visa egenskaper** för att öppna dialogrutorna](/help/assets/manage-digital-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
    * Öppna innehållsfragmentet för redigering och markera sedan **Metadata** från sidopanelen.
-   ![metadata](assets/cfm-metadata-01.png)
+
+   ![Metadata på sidopanelen](assets/cfm-metadata-01.png)
 
 3. The **Grundläggande** -fliken innehåller alternativ som du kan visa eller redigera:
 
@@ -34,9 +35,11 @@ Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
       * [Taggar](/help/sites-cloud/authoring/features/tags.md) är särskilt kraftfulla när du organiserar dina fragment eftersom de kan användas för innehållsklassificering och taxonomi. Taggar kan användas för att hitta innehåll (med taggar) och tillämpa gruppåtgärder.
 Du kan till exempel tagga relevanta fragment som&quot;Julstart&quot; så att du bara kan bläddra bland dem som en delmängd, eller kopiera dem för användning med en annan framtida start i en ny mapp.
 
-         >[!NOTE]
-         >
-         >**Taggar** kan också läggas till när [skapa ditt Variation-innehåll](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) och när [skapa variationer](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
+        >[!NOTE]
+        >
+        >**Taggar** kan också läggas till när [skapa ditt Variation-innehåll](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) och när [skapa variationer](/help/assets/content-fragments/content-fragments-variations.md#creating-a-variation).
+
    * **Skapad** (endast visning)
+
    Till exempel:
-   ![metadata](assets/cfm-metadata-02.png)
+   ![Exempel på metadata](assets/cfm-metadata-02.png)

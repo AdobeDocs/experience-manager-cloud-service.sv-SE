@@ -2,9 +2,9 @@
 title: Associerat innehåll (resurser - innehållsfragment)
 description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet.
 exl-id: 8c8ad768-a210-4d34-bb47-2347599bcac9
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 5c59189abf809293a319d6bce4ef7389c2451f92
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '231'
 ht-degree: 4%
 
 ---
@@ -38,7 +38,7 @@ För att kunna skapa associationen måste du först [lägga till mediefiler i en
 
 1. Bekräfta (med **Välj**). Samlingen visas som associerad.
 
-   ![cfm-6420-05](assets/cfm-assoc-content-03.png)
+   ![Bekräftad association](assets/cfm-assoc-content-03.png)
 
 ## Redigera associerat innehåll {#editing-associated-content}
 
