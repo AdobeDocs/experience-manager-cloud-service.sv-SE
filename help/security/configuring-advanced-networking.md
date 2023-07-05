@@ -543,7 +543,7 @@ Om driftsavbrott skulle få allvarliga konsekvenser för verksamheten kontaktar 
 
 ## Avancerad nätverkskonfiguration för ytterligare publiceringsregioner {#advanced-networking-configuration-for-additional-publish-regions}
 
-När ytterligare en region läggs till i en miljö som redan har avancerade nätverk konfigurerade, dirigeras trafik från den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard genom den primära regionen. Om den primära regionen blir otillgänglig tas emellertid den avancerade nätverkstrafiken bort om avancerade nätverk inte har aktiverats i den extra regionen. Om du vill optimera fördröjningen och öka tillgängligheten om någon av regionerna skulle drabbas av ett driftstopp är det nödvändigt att aktivera avancerade nätverk för ytterligare publiceringsregioner. Två olika scenarier beskrivs i följande avsnitt.
+När ytterligare en region läggs till i en miljö som redan har avancerade nätverk konfigurerade, dirigeras trafik från den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard via den primära regionen. Om den primära regionen blir otillgänglig tas emellertid den avancerade nätverkstrafiken bort om avancerade nätverk inte har aktiverats i den extra regionen. Om du vill optimera fördröjningen och öka tillgängligheten om någon av regionerna skulle drabbas av ett driftstopp är det nödvändigt att aktivera avancerade nätverk för ytterligare publiceringsregioner. Två olika scenarier beskrivs i följande avsnitt.
 
 >[!NOTE]
 >

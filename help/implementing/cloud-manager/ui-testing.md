@@ -271,7 +271,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
-1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` miljövariabel.
+1. Läs URL:en för Selenium-tjänsten på `SELENIUM_BASE_URL` systemvariabel.
 1. Avsökning med regelbundna intervall till [statusslutpunkt](https://github.com/SeleniumHQ/docker-selenium/#waiting-for-the-grid-to-be-ready) exponeras av Selenium API.
 
 När Seleniums statusendpoint svarar med ett positivt svar kan testerna börja.

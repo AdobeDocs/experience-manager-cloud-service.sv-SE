@@ -17,7 +17,7 @@ Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas fö
 
 ## Introduktion {#introduction}
 
-En CI/CD-pipeline i Cloud Manager är en mekanism som bygger kod från en källdatabas och distribuerar den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (d.v.s. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecedence.
+En CI/CD-pipeline i Cloud Manager är en mekanism för att skapa kod från en källdatabas och distribuera den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (d.v.s. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecedence.
 
 Om du vill konfigurera en pipeline måste du:
 

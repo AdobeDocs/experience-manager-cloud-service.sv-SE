@@ -108,7 +108,7 @@ Definitionen av en komponent kan delas upp enligt följande:
    * Se avsnittet [Komponentikon](#component-icon) för mer information
 * **Vitala underordnade noder**:
    * `cq:editConfig (cq:EditConfig)` - Definierar redigeringsegenskaperna för komponenten och aktiverar komponenten så att den visas i komponentwebbläsaren
-      * Om komponenten har en dialogruta visas den automatiskt i komponentwebbläsaren eller Sidekick, även om cq:editConfig inte finns.
+      * Om komponenten har en dialogruta visas den automatiskt i komponentwebbläsaren eller i Sidekick, även om cq:editConfig inte finns.
    * `cq:childEditConfig (cq:EditConfig)` - Styr gränssnittsaspekter för författare för underordnade komponenter som inte definierar sina egna `cq:editConfig`.
    * `cq:dialog (nt:unstructured)` - Dialog för den här komponenten. Definierar gränssnittet som tillåter användaren att konfigurera komponenten och/eller redigera innehåll.
    * `cq:design_dialog (nt:unstructured)` - Designredigering för den här komponenten
