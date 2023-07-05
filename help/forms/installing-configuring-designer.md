@@ -2,9 +2,9 @@
 title: Hur laddar man ned och installerar Forms Designer för att skapa dokumentmallar?
 description: Du kan använda Forms Designer för att skapa XDP- och PDF-formulärmallar som fungerar som mall för ett dokument för registrering. Designer är tillgängligt med [!DNL AEM Forms] licens.
 exl-id: d6f1cb21-c48b-406d-8d47-482d7a1b4cc3
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: e71dd8a4eb92acbed53fb9384bc40efc3e743761
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,7 @@ Du behöver följande programvara och minimimaskinvara för att installera och k
 * Maskinvaruacceleration för video (valfritt)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC.
 * Administrativ behörighet för att installera Designer.
+* Microsoft Visual C++ 2019 (VC 14.28 eller senare) 32-bitars runtime
 
 ## Installera Designer {#install-designer}
 
