@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: c7143ce939ca8c06fc678fc30f90c71981e4f8d7
+source-git-commit: 1251f36ece4449d8be6a40f34421351161bf3b23
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,6 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 125
 
 ### Förbättringar {#enhancements-12549}
 
-- SITES-8769: Förbättra StyleImpl-anrop i ResponsiveGrid
 - Forms-5054: Stöd för alla [statyer](https://opensource.adobe.com/acrobat-sign/acrobat_sign_events/webhookeventsagreements.html) som stöds av Adobe Sign.
 
 ### Åtgärdade problem {#fixed-issues-12549}
@@ -55,7 +54,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 125
 
 ### Kända fel {#known-issues-12549}
 
-Ingen.
+- SKYOPS-61385: Med den senaste dispatcheruppdateringen har vissa ogiltiga reguljära uttryck som tidigare ignorerats tyst av `libpcre1` inte längre accepteras av den uppdaterade `libpcre2` under driftsättningen. Sändarkonfigurationskontrollen uppdateras snart för att även identifiera dessa tidigare.
 
 ### Inbäddade tekniker {#embedded-tech-12549}
 
