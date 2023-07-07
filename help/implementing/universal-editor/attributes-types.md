@@ -2,9 +2,9 @@
 title: Attribut och typer
 description: Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 0f62245d31074ab7a64d86b97ef3b1a8d7533001
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '663'
 ht-degree: 3%
 
 ---
@@ -41,7 +41,7 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 | `richtext` | Texten kan redigeras med omfattande textfunktioner. RTE visas på den högra panelen | Valfritt | Obligatoriskt | n/a | Valfritt | n/a | Valfritt |
 | `media` | Det redigerbara är en resurs, t.ex. bild eller video | Valfritt | Obligatoriskt | Valfritt<br>lista med bild- eller videofiltervillkor som skickas till resursväljaren | Valfritt | n/a | Valfritt |
 | `container` | De redigerbara funktionerna fungerar som behållare för komponenter som kallas Styckesystem. | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>en lista över tillåtna komponenter | Valfritt | n/a | n/a |
-| `component` | Det redigerbara är en komponent. Ingen ytterligare funktionalitet läggs till, krävs för att ange rörliga/borttagbara delar av DOM och för att öppna egenskapsfältet och dess fält | Obligatoriskt | n/a | n/a | Valfritt | Valfritt | n/a |
+| `component` | Det redigerbara är en komponent. Det lägger inte till ytterligare funktioner. Det är obligatoriskt att ange flyttbara/borttagbara delar av DOM och att öppna egenskapsspåret och dess fält | Obligatoriskt | n/a | n/a | Valfritt | Valfritt | n/a |
 | `reference` | Det redigerbara är en referens, t.ex. Content Fragment, Experience Fragment eller Product | Beroende <br>se nedan | Beroende <br>se nedan | Valfritt<br>lista med villkor för innehållsfragment, produkt eller Experience Fragment-filter som skickas vidare till referensväljaren | Valfritt | Valfritt | n/a |
 
 Beroende på användningsfallet `itemprop` eller `itemid` kan vara nödvändigt eller inte. Till exempel:

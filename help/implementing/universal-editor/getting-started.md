@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 0f62245d31074ab7a64d86b97ef3b1a8d7533001
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Om du inte implementerar ett React-program och/eller kräver serveråtergivning 
 
 För att kunna redigera AEM med din app med Universal Editor måste CORS och cookie-inställningarna göras i AEM.
 
-Följande [OSGi-konfigurationer måste anges för AEM-redigeringsinstansen](/help/implementing/deploying/configuring-osgi.md).
+Följande [OSGi-konfigurationer måste anges för AEM.](/help/implementing/deploying/configuring-osgi.md)
 
 * `SameSite Cookies = None` in `com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`
 * Ta bort X-FRAME-OPTIONS: SAMEORIGIN Header in `org.apache.sling.engine.impl.SlingMainServlet`
