@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 124b363fe341199fdc9b25d25bbf2a9bc8f87d87
+source-git-commit: e0bee5134bea71010cacf4bf16eac0baa3dee725
 workflow-type: tm+mt
-source-wordcount: '5827'
+source-wordcount: '6188'
 ht-degree: 1%
 
 ---
@@ -27,27 +27,26 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 >* Se [Konfigurera Dynamic Media-Cloud Services](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media och [Felsöka Dynamic Media](/help/assets/dynamic-media/troubleshoot-dm.md).
 >
 
-
 1. **Ladda upp dina Dynamic Media-filmer** genom att göra följande:
 
    * Skapa en egen videokodningsprofil. Du kan också helt enkelt använda den fördefinierade _Adaptiv videokodning_ profil som medföljer Dynamic Media.
 
       * [Skapa en videokodningsprofil](/help/assets/dynamic-media/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming).
       * Läs mer om [Bästa tillvägagångssätt för videokodning](#best-practices-for-encoding-videos).
+
    * Koppla videobearbetningsprofilen till en eller flera mappar där du ska överföra dina primära källvideor.
 
       * [Använda en videoprofil på mappar](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
       * Läs mer om [Ordna digitala resurser](/help/assets/organize-assets.md).
+
    * Överför dina primära källvideor till mapparna. När du lägger till videofilmer i mappen kodas de enligt den videobearbetningsprofil som du tilldelade mappen.
 
       * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 25 x 25.
       * Du kan överföra videofiler som är upp till 15 GB vardera.
       * [Ladda upp videor](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
       * Läs mer om [Indatafilformat som stöds](/help/assets/file-format-support.md).
+
    * Övervaka hur [videokodning pågår](#monitoring-video-encoding-and-youtube-publishing-progress) antingen från resursen eller arbetsflödesvyn.
-
-
-
 
 1. **Hantera dina Dynamic Media-filmer** genom att göra något av följande:
 
@@ -55,21 +54,24 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
       * [Ordna digitala resurser](/help/assets/organize-assets.md)
       * [Sök videoresurser](/help/assets/search-assets.md#custompredicates) eller [Söka efter resurser](/help/assets/manage-digital-assets.md#search-assets)
+
    * Förhandsgranska och publicera videomaterial
 
       * Visa källvideon och de kodade återgivningarna av videon tillsammans med tillhörande miniatyrer:
-         [Förhandsgranska videoklipp](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) eller [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
-         [Hantera videoåtergivningar](/help/assets/manage-digital-assets.md#managing-renditions)
+        [Förhandsgranska videoklipp](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) eller [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
+        [Hantera videoåtergivningar](/help/assets/manage-digital-assets.md#managing-renditions)
 
       * [Hantera förinställningar för visningsprogram](/help/assets/dynamic-media/managing-viewer-presets.md)
       * [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
+
    * Arbeta med videometadata
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
-         [Redigera videoegenskaper](/help/assets/manage-digital-assets.md#editing-properties)
+        [Redigera videoegenskaper](/help/assets/manage-digital-assets.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](/help/assets/manage-metadata.md)
       * [Metadata-scheman](/help/assets/metadata-schemas.md)
+
    * Granska, godkänn och kommentera videoklipp och behåll fullständig versionskontroll
 
       * [Kommentera videoklipp](/help/assets/manage-video-assets.md#annotate-video-assets) eller [Anteckna resurser](/help/assets/manage-digital-assets.md#annotating)
@@ -80,26 +82,23 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
       * [Granska mappresurser](/help/assets/bulk-approval.md)
       * [Projekt](/help/sites-cloud/authoring/projects/overview.md)
 
-
-
-
 1. **Publicera dina Dynamic Media-filmer** genom att göra något av följande:
 
    * Om du använder Experience Manager som WCM-system (Web Content Management) kan du lägga till videofilmer direkt på dina webbsidor.
 
       * [Lägga till videoklipp på webbsidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md).
+
    * Om du använder ett webbinnehållshanteringssystem från en annan leverantör kan du länka eller bädda in videor på dina webbsidor.
 
       * Integrera video med URL:
-         [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md).
+        [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md).
 
       * Integrera video med inbäddad kod på webbsidan:
-         [Bädda in videovisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
+        [Bädda in videovisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
+
    * [Generera videorapporter](#viewing-video-reports).
 
    * [Lägga till bildtexter i video](#adding-captions-to-video).
-
-
 
 ## Arbeta med video i Dynamic Media {#working-with-video-in-dynamic-media}
 
@@ -600,15 +599,15 @@ Se [Hantera statiskt innehåll (inte bildinnehåll)](https://experienceleague.ad
 
    * Om du vill visa en popup-video väljer du **[!UICONTROL URL]**. I dialogrutan URL-adress markerar och kopierar du URL-adressen till Urklipp och sedan förbi URL-adressen till en enkel textredigerare. Lägg till den kopierade URL:en för videon med följande syntax:
 
-      `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
+     `&caption=<server_path>/is/content/<path_to_caption.vtt_file,1>`
 
-      Anteckna `,1` i slutet av bildtextbanan. Omedelbart efter filnamnstillägget VTT i sökvägen kan du aktivera (aktivera) eller inaktivera (inaktivera) den stängda bildtextsknappen i videospelarfältet genom att ställa in på `,1` eller `,0`, respektive.
+     Anteckna `,1` i slutet av bildtextbanan. Omedelbart efter filnamnstillägget VTT i sökvägen kan du aktivera (aktivera) eller inaktivera (inaktivera) den stängda bildtextsknappen i videospelarfältet genom att ställa in på `,1` eller `,0`, respektive.
 
    * Om du vill visa en inbäddad video väljer du **[!UICONTROL Embed Code]**. I dialogrutan Bädda in kod markerar och kopierar du den inbäddade koden till Urklipp och klistrar sedan in koden i en enkel textredigerare. Lägg till den kopierade inbäddningskoden med följande syntax:
 
-      `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
+     `videoViewer.setParam("caption","<path_to_caption.vtt_file,1>");`
 
-      Anteckna `,1` i slutet av bildtextbanan. Omedelbart efter filnamnstillägget VTT i sökvägen kan du aktivera (aktivera) eller inaktivera (inaktivera) den stängda bildtextsknappen i videospelarfältet genom att ställa in på `,1` eller `,0`, respektive.
+     Anteckna `,1` i slutet av bildtextbanan. Omedelbart efter filnamnstillägget VTT i sökvägen kan du aktivera (aktivera) eller inaktivera (inaktivera) den stängda bildtextsknappen i videospelarfältet genom att ställa in på `,1` eller `,0`, respektive.
 
 ## Lägga till kapitelmarkörer i video {#adding-chapter-markers-to-video}
 
@@ -688,51 +687,49 @@ Se [WebVTT: Textspår för webbvideo](https://w3c.github.io/webvtt/).
      </tbody>
    </table>
 
-<!--
 
-## About video thumbnails {#about-video-thumbnails}
 
-A video thumbnail is a reduced-size version of a video frame or an image asset representing the video to the customer. The thumbnail should serve to encourage a customer to select the video.
+## Om videominiatyrer {#about-video-thumbnails}
 
-All videos in Experience Manager must have an associated thumbnail; you cannot delete a thumbnail without replacing it. By default, when you upload a video to Experience Manager, the first frame is used as the thumbnail. However, you can customize the thumbnail for branding purposes or visual search, for example. When you customize a video thumbnail, you can either play the video and pause on the frame you want to use, or you can select an image asset that you have already uploaded and *published* in your digital asset manager.
+En videominiatyr är en version med reducerad storlek av en videobildruta eller en bildresurs som representerar videon för kunden. Miniatyrbilden bör uppmuntra kunden att välja videon.
 
-Note that a custom video thumbnail image that you select from a video is not extracted and saved in the DAM as a separate and distinct asset. However, a custom video thumbnail that you select from an existing image asset is saved to the JCR. The path of the selected asset gets stored under the video asset's node as in the following example path:
+Alla videofilmer i Experience Manager måste ha en tillhörande miniatyrbild. Du kan inte ta bort en miniatyrbild utan att ersätta den. Som standard används den första bildrutan som miniatyrbild när du överför en video till Experience Manager. Du kan dock anpassa miniatyrbilden för exempelvis varumärke eller visuell sökning. När du anpassar en videominiatyr kan du antingen spela upp videon och pausa den bildruta som du vill använda, eller välja en bildresurs som du redan har överfört och *publicerad* i er Digital Asset Manager.
 
-`/content/dam/*<folder_name*>/<*video_name*>/jcr:content/manualThumbnail`
+Observera att när miniatyrbilden ändras för en video hoppas miniatyrbildsgenerering via Asset compute-tjänsten över när videon bearbetas om.
 
-The ability to customize a video thumbnail is only available after you have applied a video profile to the folder where the video is located.
+Möjligheten att anpassa en videominiatyr är endast tillgänglig efter att du har tillämpat en videoprofil på den mapp där videon finns.
 
-### Adding a custom video thumbnail {#adding-a-custom-video-thumbnail}
+### Lägga till en anpassad videominiatyr {#adding-a-custom-video-thumbnail}
 
-1. Be sure you have already done the following:
+1. Kontrollera att du redan har gjort följande:
 
-    * Created a folder for your video assets.
-    * [Applied a video profile to the folder](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
+   * Skapade en mapp för dina videoresurser.
+   * [En videoprofil har använts på mappen](/help/assets/dynamic-media/video-profiles.md#applying-a-video-profile-to-folders).
 
-    * [Uploaded your videos to the folder](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
+   * [Dina videoklipp har överförts till mappen](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
 
-1. Navigate to an uploaded video asset whose thumbnail image you want to change.
-1. In asset selection mode either from **[!UICONTROL List View]** or **[!UICONTROL Card View]**, select the video asset.
-1. On the toolbar, select the **[!UICONTROL Properties** icon (a circle with an "i" in it).
-1. On the video's Properties page, select **[!UICONTROL Change Thumbnail]**.
-1. On the Change Thumbnail page, do one of the following:
+1. Navigera till en överförd videoresurs vars miniatyrbild du vill ändra.
+1. I resursurvalsläget antingen från **[!UICONTROL List View]** eller **[!UICONTROL Card View]** väljer du videoresursen.
+1. I verktygsfältet väljer du **[!UICONTROL Properties]** (en cirkel med&quot;i&quot;).
+1. På videons egenskapssida väljer du **[!UICONTROL Change Thumbnail]**.
+1. Gör något av följande på sidan Ändra miniatyrbild:
 
-    * To use a frame from the video as the new thumbnail:
+   * Så här använder du en bildruta från videon som ny miniatyrbild:
 
-        * On the toolbar, select **[!UICONTROL Select Frame from video]**.
-        * Select the Play button, then select the Pause button on the frame you want to capture as the video's new thumbnail.
+      * I verktygsfältet väljer du **[!UICONTROL Select Frame from video]**.
+      * Välj uppspelningsknappen och sedan pausknappen för bildrutan som du vill spela in som videons nya miniatyrbild.
 
-    * To use an image asset as the new thumbnail:
+   * Så här använder du en bildresurs som ny miniatyrbild:
 
-        * On the toolbar, select **[!UICONTROL Select Thumbnail from Assets]**.
-        * Select **[!UICONTROL Select Thumbnail]**.
-        * Navigate to a previously uploaded and published image asset you want to use. Note that the asset will automatically be resized to serve as a thumbnail image for the video.
-        * Select the image asset, then select **[!UICONTROL Select]**.
+      * I verktygsfältet väljer du **[!UICONTROL Select Thumbnail from Assets]**.
+      * Välj **[!UICONTROL Select Thumbnail]**.
+      * Navigera till en tidigare överförd och publicerad bildresurs som du vill använda. Observera att resursens storlek automatiskt ändras så att den fungerar som en miniatyrbild för videon.
+      * Markera bildresursen och välj sedan **[!UICONTROL Select]**.
 
-1. On the Change Thumbnail page, select **[!UICONTROL Save Change]**.
-1. On the video's Properties page, in the upper-right corner, select **[!UICONTROL Save & Close]**.
+1. På sidan Ändra miniatyrbild väljer du **[!UICONTROL Save Change]**.
+1. På videons egenskapssida, i det övre högra hörnet, väljer du **[!UICONTROL Save & Close]**.
 
--->
+
 
 <!--
 
