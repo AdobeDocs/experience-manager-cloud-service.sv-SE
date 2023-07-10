@@ -1,7 +1,7 @@
 ---
 title: Så här migrerar du från en AEM 6.5 Forms till [!DNL AEM Forms] as a Cloud Service miljö?
 description: Komma igång med migreringsresan till AEM as a Cloud Service | Adobe Experience Manager. Migrera från en [!DNL AEM Forms] (On-Premise- och AMS-miljöer) till [!DNL AEM Forms] as a Cloud Service miljö.
-keywords: 6.5-formulär till molntjänster, 6.5-formulär till cs, migrera 6.5-formulär till CS, migrera 6.5-formulär till molntjänster, uppgradera 6.5-formulär till CS, flytta 6.5-formulär till CS, uppgradera AEM 6.5 till CS, AEM Forms 6.5 till Cloud Service, AEM från migrering till molntjänst, migreringsresa till AEM as a Cloud Service | Adobe Experience Manager
+Keywords: 6.5 forms to cloud service, 6.5 forms to cs, migrate 6.5 forms to CS, migrate 6.5 forms to cloud service, upgrade 6.5 forms to CS, move 6.5 forms to CS, upgrade AEM 6.5 to CS, AEM Forms 6.5 to Cloud Service, AEM form migration to cloud service, Migration Journey to AEM as a Cloud Service | Adobe Experience Manager.
 contentOwner: khsingh
 feature: Adaptive Forms
 feature-set: Experience Manager Assets,Experience Manager Sites,Experience Manager, Experience Manager Forms, Experience Manager Cloud Manager
@@ -9,10 +9,10 @@ role: User, Developer
 level: Intermediate
 topic: Migration
 exl-id: 090e77ff-62ec-40cb-8263-58720f3b7558
-source-git-commit: 8dc89bf4b20d12bdb380797b6e56db1a2ce6ce0a
+source-git-commit: d43e2d555a09f481900ec70e5e38bab42f4cc1d7
 workflow-type: tm+mt
-source-wordcount: '1559'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
