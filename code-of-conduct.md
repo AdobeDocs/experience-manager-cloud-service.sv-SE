@@ -1,15 +1,17 @@
 ---
-source-git-commit: 2ca676ed1bd59651c00a83fd28945f6f042ca50a
-translation-type: tm+mt
+source-git-commit: 8d8e5ba548c13d3d908a549f52a8b91946b35361
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
-# Adobes uppförandekod
+# Adobe uppförandekod
 
-## Vår redovisning
+## Adobe Pledge
 
-I syfte att främja en öppen och välkommen miljö lovar vi som medverkande och underhållande att göra deltagande i vårt projekt och i vår community till en trakasserfri upplevelse för alla, oavsett ålder, kroppsstorlek, funktionshinder, etnicitet, könsidentitet och -uttryck, erfarenhetsnivå, nationalitet, personligt utseende, ras, religion, sexuell identitet och läggning.
+I syfte att främja en öppen och välkommen miljö lovar Adobe Documentation Team - som medverkande och underhållande personer - att göra deltagandet i detta projekt och samhället till en trakasserfri upplevelse för alla, oavsett ålder, kroppsstorlek, funktionshinder, etnicitet, könsidentitet och -uttryck, erfarenhetsnivå, nationalitet, personligt utseende, ras, religion eller sexuell identitet och läggning.
 
-## Våra standarder
+## Adobe standarder
 
 Exempel på beteenden som bidrar till att skapa en positiv miljö är:
 
@@ -27,7 +29,7 @@ Exempel på oacceptabla beteenden från deltagarnas sida är:
 * Publicera andras personuppgifter, t.ex. en fysisk eller elektronisk adress, utan uttryckligt tillstånd
 * Annat beteende som rimligen skulle kunna anses olämpligt i yrkesmässig miljö
 
-## Vårt ansvar
+## Adobe ansvar
 
 Projektledare ansvarar för att förtydliga standarderna för godtagbart beteende och förväntas vidta lämpliga och rättvisa korrigerande åtgärder som svar på eventuella fall av oacceptabla beteenden.
 
@@ -45,4 +47,4 @@ Projektledare som inte följer eller tillämpar uppförandekoden i god tro kan d
 
 ## Attribut
 
-Denna uppförandekod har anpassats från [Contributor-konventionen](https://contributor-covenant.org), version 1.4, som finns på [https://contributor-covenant.org/version/1/4](https://contributor-covenant.org/version/1/4/).
+Denna uppförandekod har anpassats från [Contributor-konventionen](https://www.contributor-covenant.org/), version 1.4, finns på [Regler för uppförande i Contributor-konventionen](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
