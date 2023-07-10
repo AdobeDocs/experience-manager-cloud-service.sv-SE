@@ -2,9 +2,9 @@
 title: Använda providern för skärminnehåll
 description: Den här sidan beskriver hur du använder Screens Content Provider för att skapa innehåll.
 exl-id: ed7de2c0-13cf-4ce0-8794-aef918cf8e71
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
@@ -30,21 +30,21 @@ Logga in på Screens Content Provider genom att följa stegen nedan:
 1. Navigera till [Adobe Experience Cloud](https://experience.adobe.com) Hemsida.
 
 1. Välj **Experience Manager**.
-   ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page1.png)
+   ![Landningssida för snabbåtkomst till områden i Experience Manager.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page1.png)
 
 1. Klicka **Starta** från Cloud Manager-kortet. När du har loggat in på [!UICONTROL Cloud Manager]är du redo att använda användargränssnittet.
-   ![](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page2.png)
+   ![Fyra områden i Cloud Manager - Brand Portal, Cloud Manager, Cloud Acceleration Manager och Programvarudistribution - där var och en har sin egen Launch-knapp.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/landing-page2.png)
 
 1. Markera programmet för skärmar as a Cloud Service och klicka på ikonen så som visas nedan för att öppna Cloud Managers **Översikt** sida för det specifika programmet.
 
-   ![](/help/screens-cloud/assets/configure/screens-cp-1.png)
+   ![Ikonen för översiktssidan för Cloud Manager visas längst till vänster i ett verktygsfält.](/help/screens-cloud/assets/configure/screens-cp-1.png)
 
    >[!NOTE]
    >Om du inte har skapat något program kan du läsa [Första gången du loggar in på skärmar as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html?lang=en). I avsnittet får du hjälp med att lägga till ett program för skärmar as a Cloud Service i Cloud Manager.
 
 1. Markera länken i **Miljö** så att du kan komma åt leverantören av skärminnehåll.
 
-   ![](/help/screens-cloud/assets/configure/screens-cp-2.png)
+   ![Länken är markerad från miljökortet som gör att du kan komma åt leverantören av skärminnehåll.](/help/screens-cloud/assets/configure/screens-cp-2.png)
 
    När du har loggat in på Screens Content Provider kan du nu skapa innehåll i uppspelning av innehåll.
 

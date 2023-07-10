@@ -2,10 +2,10 @@
 title: Skapa ett projekt på skärmar as a Cloud Service
 description: Lär dig hur du skapar ett projekt på skärmar as a Cloud Service.
 exl-id: 89e3ac28-7537-413d-b63b-abd2bbae6cb7
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 0%
+source-wordcount: '335'
+ht-degree: 1%
 
 ---
 
@@ -28,18 +28,18 @@ Följ stegen nedan för att skapa ett projekt på skärmar as a Cloud Service:
 
 1. Klicka på i åtgärdsfältets övre högra hörn **Skapa skärmsprojekt**.
 
-   ![](/help/screens-cloud/assets/create-content/create-screens-project1.png)
+   ![create-screens-project1](/help/screens-cloud/assets/create-content/create-screens-project1.png)
 
 1. Ange **Titel** av ditt projekt i **Skapa skärmsprojekt** -dialogrutan. Till exempel: *FirstDigitalExperience*.
 
-   ![](/help/screens-cloud/assets/create-content/create-screens-project2.png)
+   ![create-screens-project2](/help/screens-cloud/assets/create-content/create-screens-project2.png)
 
    >[!NOTE]
    >The **Namn** fältet fylls i automatiskt i **Skapa skärmsprojekt** baserat på den titel du väljer.
 
 1. Klicka **Spara**. Du ser ditt skärpeprojekt, som *FirstDigitalExperience* i Screens Content Provider. Du kan även se projektet i Skärminnehållsleverantören, med två mappar med namnet **Platser** och **Kanaler**.
 
-   ![](/help/screens-cloud/assets/create-content/create-screens-project3.png)
+   ![create-screens-project3](/help/screens-cloud/assets/create-content/create-screens-project3.png)
 
    Nu när du har skapat ett AEM Screens-projekt kan du börja lägga till kanaler och platser i ditt projekt.
 
@@ -51,7 +51,7 @@ Befintliga projekt på as a Cloud Service Skärmar kan tas bort.
 1. Markera det projekt som du vill ta bort.
 1. Klicka på i åtgärdsfältet **Ta bort**.
 
-   ![](/help/screens-cloud/assets/create-content/create-project5.png)
+   ![create-project5](/help/screens-cloud/assets/create-content/create-project5.png)
 
 1. Klicka **Ta bort** för att bekräfta borttagningen av projektet.
 

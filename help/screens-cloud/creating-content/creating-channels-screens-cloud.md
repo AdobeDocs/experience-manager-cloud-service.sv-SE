@@ -2,9 +2,9 @@
 title: Skapa och hantera kanaler på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -36,17 +36,18 @@ Följ stegen nedan för att skapa en ny sekvenskanal på as a Cloud Service Skä
 
 1. Välj **Kanaler** mapp från ditt projekt, till exempel **FirstDigitalExperience** —> **Kanaler** och klicka på **Skapa** i åtgärdsfältet.
 
-   ![](/help/screens-cloud/assets/create-content/channel-create1.png)
+   ![channel-create1](/help/screens-cloud/assets/create-content/channel-create1.png)
 
 1. Välj en mall, till exempel **Sekvenskanal** från **Skapa** guide och klicka på **Nästa**.
 
-   ![](/help/screens-cloud/assets/create-content/channel-create2.png)
+   ![channel-create2](/help/screens-cloud/assets/create-content/channel-create2.png)
+
    >[!NOTE]
    > The **Skapa** Guiden innehåller olika typer av mallar när du skapar en kanal. Se [Tillgängliga mallar](#available-templates) i Skapa guide för mer information.
 
 1. Ange namnet på sekvenskanalen, till exempel **LoopingChannelOne** och klicka på **Skapa**.
 
-   ![](/help/screens-cloud/assets/create-content/channel-create3.png)
+   ![channel-create3](/help/screens-cloud/assets/create-content/channel-create3.png)
 
    Nu kommer du att se **LoopingChannelOne** i din kanalmapp i ditt AEM Screens-projekt.
 
@@ -58,7 +59,7 @@ Du kan redigera, visa egenskaper och kontrollpanel, kopiera, förhandsgranska oc
 
 Navigera till kanalen från ditt projekt och markera kanalen enligt bilden nedan. Nu kan du välja alternativ som att redigera kanalen, visa egenskaper, förhandsgranska innehåll, hantera publicering eller ta bort kanalen från åtgärdsfältet.
 
-![](/help/screens-cloud/assets/create-content/channelprop1.png)
+![channelprop1](/help/screens-cloud/assets/create-content/channelprop1.png)
 
 ### Lägga till innehåll i en kanal {#add-content}
 
@@ -66,17 +67,17 @@ Följ stegen nedan om du vill lägga till eller redigera innehåll i en kanal:
 
 1. Markera kanalen som du vill redigera, enligt bilden nedan. Klicka på **Redigera** i åtgärdsfältets övre vänstra hörn för att öppna redigeraren.
 
-   ![](/help/screens-cloud/assets/create-content/edit-channel1.png)
+   ![edit-channel1](/help/screens-cloud/assets/create-content/edit-channel1.png)
 
 1. Med redigeraren kan du lägga till resurser/komponenter i kanalen som du vill publicera.
 
 1. Dra och släpp resurserna från den vänstra rutan och lägg till dem i redigeraren.
 
-   ![](/help/screens-cloud/assets/create-content/edit-channel2.png)
+   ![edit-channel2](/help/screens-cloud/assets/create-content/edit-channel2.png)
 
    >[!NOTE]
    >Klicka på **Förhandsgranska** för att förhandsgranska innehållet i kanalen.
-   >![](/help/screens-cloud/assets/create-content/edit-channelpreview.png)
+   >![edit-channel-preview](/help/screens-cloud/assets/create-content/edit-channelpreview.png)
 
 ## Tillgängliga mallar i guiden Skapa {#available-templates}
 

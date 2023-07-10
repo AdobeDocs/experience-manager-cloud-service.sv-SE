@@ -2,9 +2,9 @@
 title: Skapa videoåtergivningar på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar videoåtergivningar på skärmar as a Cloud Service.
 exl-id: a9c46036-cd29-47fa-81d9-c865cf22c98a
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -37,15 +37,15 @@ Följ stegen nedan för att skapa videoåtergivningar på skärmar som är as a 
 
 1. Ange **Namn**, till exempel **SkärmarBearbetningsprofil**.
 
-   ![](/help/screens-cloud/assets/configure/screens-video-3.png)
+   ![Dialogrutan Bearbetar profil med fältet Namn markerat.](/help/screens-cloud/assets/configure/screens-video-3.png)
 
 1. Navigera till **Video** så att du kan lägga till en videokodning och sedan klicka på **Lägg till ny**.
 
-   ![](/help/screens-cloud/assets/configure/screens-video-4a.png)
+   ![Dialogrutan Bearbetar profil med knappen Lägg till ny markerad.](/help/screens-cloud/assets/configure/screens-video-4a.png)
 
 1. Ange **Kodningsnamn** som **screens-fullhd** och **Bithastighet** as **2500**.
 
-   ![](/help/screens-cloud/assets/configure/screens-video-4.png)
+   ![Dialogrutan Bearbetar profil med knappen Spara markerad.](/help/screens-cloud/assets/configure/screens-video-4.png)
 
    >[!IMPORTANT]
    >Använd kodningsnamnet som börjar med &quot;screens-&quot;. Endast dessa videoåtergivningar anses spela upp videoupplevelsen på skärmar as a Cloud Service. Ange den bithastighet som fungerar för videoklipp (2 500 kbit/s för video med upplösningen 720 pixlar och 5 000 kbit/s för video med upplösningen 1 080 pixlar).

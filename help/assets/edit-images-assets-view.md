@@ -3,9 +3,9 @@ title: Redigera bilder
 description: Redigera bilder med [!DNL Adobe Photoshop Express] och spara uppdaterade bilder som versioner.
 role: User
 exl-id: fc21a6ee-bf23-4dbf-86b0-74695a315b2a
-source-git-commit: e2efffe0192f7914fd97178884b7938b84fd9a27
+source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Med många standardalternativ kan du beskära bilden till de bästa proportioner
 
 ## Ändra bildstorlek {#resize-image}
 
-Att ändra storlek på en bild till en viss storlek är ett vanligt användningsexempel. [!DNL Assets view] Med kan du snabbt ändra storlek på bilden så att den passar de vanliga fotostorlekarna genom att tillhandahålla förberäknade nya upplösningar för specifika fotostorlekar. Du kan visa de vanliga fotostorlekarna i centimeter eller tum för att ta reda på måtten. Som standard behåller metoden för storleksändring proportionerna. Om du vill åsidosätta proportionerna manuellt klickar du på ![](assets/do-not-localize/lock-closed-icon.png).
+Att ändra storlek på en bild till en viss storlek är ett vanligt användningsexempel. [!DNL Assets view] Med kan du snabbt ändra storlek på bilden så att den passar de vanliga fotostorlekarna genom att tillhandahålla förberäknade nya upplösningar för specifika fotostorlekar. Du kan visa de vanliga fotostorlekarna i centimeter eller tum för att ta reda på måtten. Som standard behåller metoden för storleksändring proportionerna. Om du vill åsidosätta proportionerna manuellt klickar du på ![Alternativ för att ändra storlek på en bild.](assets/do-not-localize/lock-closed-icon.png).
 
 Ange måtten och klicka på **[!UICONTROL Resize Image]** för att ändra storlek på bilden. Innan du sparar ändringarna som en version kan du antingen ångra alla ändringar som gjorts innan du sparar genom att klicka på [!UICONTROL Undo] Du kan också ändra det specifika steget i redigeringsprocessen genom att klicka på [!UICONTROL Revert].
 

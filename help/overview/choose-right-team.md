@@ -2,9 +2,9 @@
 title: Rätt personer, rätt roller
 description: Rätt personer, rätt roller
 exl-id: 9106ccf5-dc90-4ccb-95bd-7dd5392cd174
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 <br>
 
-![](/help/overview/assets/team_involvement2.png)
+![Vågrätt stapeldiagram med fiktiva roller och deras medverkan i AEM Assets team.](/help/overview/assets/team_involvement2.png)
 
 >[!TIP]
 >
