@@ -10,9 +10,9 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
 exl-id: dc89ecb1-2d9e-4d1d-b85b-af90c550e7d8
-source-git-commit: fce6a3dff4136aa9ea94f5fdd03dd7a6341b8a9d
+source-git-commit: 50f5b34fa9453fd6d8e85290f69194622afeb42c
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Du kan trycka på **Konfigurera** ![konfigurera ikon](assets/configure.png) -iko
    >
    >Komponenten Signatursteg får full bredd som är tillgänglig för formuläret. Vi rekommenderar att du inte har någon annan komponent i avsnittet som innehåller komponenten Signatursteg.
 
-1. Tryck på **Formulärbehållare** och trycker på **Konfigurera** ![](assets/configure.png) ikon. Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas. Navigera till **Adaptiv formulärbehållare** > **Elektronisk signatur** och avmarkera **Aktivera Adobe Sign** alternativ. Tryck på Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna.
+1. Tryck på **Formulärbehållare** och trycker på **Konfigurera** ![konfigurera ikon](assets/configure.png) ikon. Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas. Navigera till **Adaptiv formulärbehållare** > **Elektronisk signatur** och avmarkera **Aktivera Adobe Sign** alternativ. Tryck på Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna.
 
    >[!NOTE]
    >
