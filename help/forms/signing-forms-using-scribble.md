@@ -10,9 +10,9 @@ discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
 docset: aem65
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
 exl-id: dc89ecb1-2d9e-4d1d-b85b-af90c550e7d8
-source-git-commit: 76f13cb4236b8c7eb515d647a1cede6fa2cf4799
+source-git-commit: fce6a3dff4136aa9ea94f5fdd03dd7a6341b8a9d
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Du kan använda **Klottersignatur** komponenter och **Signatursteg** -komponent 
 
 När du har tryckt på Klar ![aem_forms_save](assets/aem_forms_save.png) -ikonen i fönstret Klottsignatur kan du inte redigera signaturen. Om du vill redigera signaturen måste du bortse från den aktuella signaturen och signera igen med alternativet Målningspensel/Tangentbord ovan.
 
-Du kan trycka på **Konfigurera** ![](assets/configure.png) -ikonen för att ange proportioner för arbetsytan Skrivbar signatur.
+Du kan trycka på **Konfigurera** ![konfigurera ikon](assets/configure.png) -ikonen för att ange proportioner för arbetsytan Skrivbar signatur.
 * När proportionerna för arbetsytan Klottra signatur är mindre än 1 läggs platsinformationen till längst ned på arbetsytan Klottra signatur.
 
 
@@ -46,6 +46,7 @@ Du kan trycka på **Konfigurera** ![](assets/configure.png) -ikonen för att ang
 >[!NOTE]
 >
 >Signaturer sparas alltid i PNG-format.
+>
 
 ## Konfigurera ett anpassat formulär för att använda skriptsignatur {#configure-an-adaptive-form-to-use-scribble-signature}
 
