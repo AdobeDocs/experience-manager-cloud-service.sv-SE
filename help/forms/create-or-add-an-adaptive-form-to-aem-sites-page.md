@@ -2,16 +2,16 @@
 title: Hur lägger man till ett adaptivt formulär på en AEM Sites-sida?
 description: Upptäck hur du enkelt kan skapa eller lägga till ett adaptivt formulär på din AEM Sites-sida. Lär dig stegvisa tekniker och metodtips för att integrera formulär på er webbplats och optimera era digitala upplevelser för maximal effekt.
 feature: Adaptive Forms, Page Editor, Authoring
-Keywords: Forms AEM Sites, Add Form to a Sites page, Adaptive Forms AEM Sites, Add Adaptive Forms to AEM Page, Create Forms in an AEM Sites page
-source-git-commit: bbb01d049083d0aef09bc2365235a7930fb53070
+Keywords: adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
+source-git-commit: 6f07493714c68cb7c6e96a252c4ef1ff9d6ba9ac
 workflow-type: tm+mt
-source-wordcount: '3212'
+source-wordcount: '3213'
 ht-degree: 0%
 
 ---
 
 
-# Skapa ett anpassat formulär på AEM Sites-sidan eller i Experience Fragment {#create-or-add-an-adaptive-form-to-aem-sites-page}
+# Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment {#create-or-add-an-adaptive-form-to-aem-sites-page}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |

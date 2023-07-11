@@ -3,12 +3,13 @@ title: Introduktion till [!DNL AEM Forms] as a Cloud Service
 description: Upptäck AEM Forms och lär dig hur du kan producera affärsklara formulär och dokument. Läs mer om Platform-as-a-Service (PaaS) och hur du hanterar digitala formulär och affärsprocesser i storföretagsklass och hur du kopplar Forms till Adobe Sign och aktuella datakällor.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: 87aeebad2576e91472530a2617b23bece4cd453f
+source-git-commit: 6f07493714c68cb7c6e96a252c4ef1ff9d6ba9ac
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1137'
 ht-degree: 4%
 
 ---
+
 
 # Introduktion till AEM Forms as a Cloud Service {#introduction}
 
@@ -58,5 +59,12 @@ Tjänsten integreras med Adobe Analytics så att ni kan hämta in och spåra pre
 | E-signaturer | Integrera med Adobe Sign och Adobe Sign Solutions for Government för att enkelt skicka Forms och dokument till användare för e-signering: <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/use-adobe-sign/working-with-adobe-sign.html">E-signera ett adaptivt formulär med Adobe Sign </a></li><li></a> <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference.html?lang=en#sign-document-step">E-signera ett dokument med Adobe Sign och AEM arbetsflöden</a></li></ul> |
 | Forms Analytics | Använd Adobe Analytics för att få värdefulla insikter om användarbeteende och -preferenser: <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-aem-forms-with-adobe-analytics.html?lang=en">Ansluta ett adaptivt formulär till Adobe Analytics</a></li></ul> |
 | Datakällor | Koppla enkelt formulär och dokument till externa datakällor för att hämta och skicka data: <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html?lang=en">Anslut till en RDBMS- eller återställningsslutpunkt</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en">Anslut till molntjänsten Microsoft® Dynamics 365 eller Salesforce</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html?lang=en">Anslut till Microsoft® Azure Blob Storage</a></li></ul> |
+
+
+## Relaterade artiklar
+
+* [Gå med i en Cloud Service-miljö](/help/forms/setup-forms-cloud-service.md)
+* [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
+* [Migrera från AEM 6.5 Forms till Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
 
 
