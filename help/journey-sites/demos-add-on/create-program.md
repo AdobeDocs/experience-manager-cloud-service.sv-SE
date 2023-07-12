@@ -2,12 +2,13 @@
 title: Skapa program
 description: Lär dig hur du konfigurerar ett nytt program och en ny pipeline för att distribuera tillägget.
 exl-id: 06287618-0328-40b1-bba8-84002283f23f
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 7c33a618f474914ca80dff525552017c55a32517
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
+
 
 # Skapa program {#creating-a-program}
 
@@ -47,48 +48,36 @@ När du har loggat in på Cloud Manager kan du skapa ett nytt sandlådeprogram f
 
 1. Tryck eller klicka **Lägg till program** längst upp till höger i fönstret.
 
-1. I **Låt oss skapa ditt program** se till att **Adobe Experience Manager** är markerat under **Produkter** och sedan trycka eller klicka **Fortsätt**.
+1. I **Låt oss skapa ditt program** dialog:
+
+   1. Ange en **Programnamn** för att beskriva ditt program.
+   1. Tryck eller klicka **Konfigurera en sandlåda** för **Programmål**
+   1. Tryck eller klicka **Fortsätt**.
 
    ![Dialogrutan Skapa program](assets/create-program.png)
 
-1. I nästa dialogruta:
+1. I **Konfigurera din sandlåda** i **Lösningar och tillägg** tabell, expandera **Webbplatser** i listan genom att trycka eller klicka på den och sedan kontrollera **Referensdemonstrationer**.
 
-   * Ange en **Programnamn** för att beskriva ditt program.
-   * Tryck eller klicka **Konfigurera en sandlåda** för **Programmål**
+   * Om du även vill skapa demos för AEM Screens ska du kontrollera **Skärmar** i listan också. Tryck eller klicka **Uppdatera**.
 
-   Tryck sedan på eller klicka **Skapa**.
+   ![Välja tillägg för referensdemo i programinställningarna](assets/select-reference-demo-add-on.png)
 
-   ![Programnamn](assets/program-name.png)
 
-1. På programöversiktsskärmen ser du hur programmet har skapats. Cloud Manager innehåller uppskattningar av återstående tid. Du kan navigera bort från den här skärmen när programmet skapas och returnera det senare om det behövs.
+1. Tryck eller klicka **Skapa** och Cloud Manager börjar konfigurera ditt sandlådeprogram. Du kommer nu till programöversikten och ett kort banderollmeddelande anger att processen har startats. Ett kort har lagts till på översiktssidan för ditt nya program. Installationsprocessen tar några minuter.
 
-   ![Skapa program](assets/program-creation.png)
+1. När konfigurationen är klar visas miljökortets status som **Klar**. Tryck eller klicka på kortet för att öppna miljön.
 
-1. När Cloud Manager är klart visas en översikt över miljöer och rörledningar som skapas automatiskt.
+   ![Programmet har skapats](assets/ready.png)
 
-   ![Programmet har skapats](assets/creation-complete.png)
+1. Miljön är klar och tillägget är nu aktiverat som ett alternativ, men innehållet i demon måste distribueras för att AEM ska vara tillgängligt. Gör detta genom att trycka eller klicka på ellipsknappen bredvid pipelinen Distribuera till utvecklare i **Pipelines** och välj **Kör**.
 
-1. Redigera programinformationen genom att klicka på programnamnet längst upp till vänster på sidan och välj i listrutan **Redigera program**.
-
-   ![Redigera program](assets/edit-program.png)
-
-1. I **Redigera program** växlar du till **Lösningar och tillägg** -fliken.
-
-   ![Redigera programdialogruta](assets/edit-program-dialog.png)
-
-1. På **Lösningar och tillägg** -fliken, expandera **Webbplatser** i listan och kontrollera sedan **Referensdemonstrationer**. Om du även vill skapa demos för AEM Screens ska du kontrollera **Skärmar** i listan också. Tryck eller klicka **Uppdatera**.
-
-   ![Alternativet Kontrollera referensdemos](assets/edit-program-add-on.png)
-
-1. Tillägget är nu aktiverat som ett alternativ, men innehållet måste distribueras för att AEM ska vara tillgängligt. Gå tillbaka till programöversikten, tryck eller klicka **Starta** för att starta pipeline för att distribuera tilläggsinnehållet till AEM.
-
-   ![Starta](assets/deploy.png)
+   ![Starta](assets/run.png)
 
 1. Pipelinen börjar och du dirigeras till en sida med information om distributionsförloppet. Du kan navigera bort från den här skärmen när programmet skapas och returnera det senare om det behövs.
 
    ![Distribution](assets/deployment.png)
 
-När pipeline är klar kan tillägget och dess demoinnehåll användas i AEM redigeringsmiljö.
+Det kan ta flera minuter att slutföra pipelinen. När det är klart är tillägget och dess demoinnehåll tillgängligt för användning i AEM redigeringsmiljö.
 
 ## What&#39;s Next {#what-is-next}
 
