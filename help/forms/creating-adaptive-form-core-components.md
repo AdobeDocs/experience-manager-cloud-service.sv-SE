@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
 exl-id: 1e812d93-4ba5-4589-b59b-2f564d754b0f
-source-git-commit: 53997540cc469f4cc2ad747ca4e52b531a7b193e
+source-git-commit: 8d40f259e70ef73285aafcb736e1f9d720380f7d
 workflow-type: tm+mt
-source-wordcount: '2174'
+source-wordcount: '2178'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
 
    * Om du vill konfigurera ett anpassat meddelande eller ett tackmeddelande väljer du alternativet Skicka i **[!UICONTROL Show Message]** och skriv ett meddelande i **[!UICONTROL Message content]** box. Det är en RTF-ruta som du kan använda helskärmsalternativet för att visa alla tillgängliga RTF-objekt.
 
-## Konfigurera ett schema eller en formulärdatamodell {#configure-schema-or-data-model-for-form}
+## Konfigurera ett schema eller en formulärdatamodell för ett anpassat formulär{#configure-schema-or-data-model-for-form}
 
 Du kan använda formulärdatamodellen för att ansluta ett formulär till en datakälla för att skicka och ta emot data baserat på användaråtgärder. Du kan också ansluta ett formulär till ett JSON-schema för att ta emot skickade data i ett fördefinierat format. Beroende på behovet kan du ansluta formuläret till ett JSON-schema eller en formulärdatamodell:
 
