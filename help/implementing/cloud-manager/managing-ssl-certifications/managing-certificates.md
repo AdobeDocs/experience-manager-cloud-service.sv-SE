@@ -2,12 +2,13 @@
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: aeb407f8971dabb4e86203b3cee82318330638b0
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
+
 
 # Hantera SSL-certifikat {#managing-ssl-certificates}
 
@@ -34,6 +35,7 @@ När ett certifikat upphör att gälla fungerar inte längre domäner som använ
 1. Navigera till **SSL-certifikat** från **Miljö** skärm.
 1. En tabell med en rad för varje SSL-certifikat som har installerats i programmet visas. Klicka på ellipsknappen längst till höger i raden i certifikatet som du vill uppdatera och välj **Visa och uppdatera**.
 1. Certifikatinformationen visas och kan uppdateras.
+1. Kör pipeline för att distribuera det uppdaterade certifikatet.
 
 >[!NOTE]
 >
@@ -56,6 +58,7 @@ Följ de här stegen för att ta bort ett SSL-certifikat.
 1. Navigera till **SSL-certifikat** från **Miljö** skärm.
 1. En tabell med en rad för varje SSL-certifikat som har installerats i programmet visas. Klicka på ellipsknappen längst till höger i raden för det certifikat som du vill ta bort och välj **Ta bort**.
 1. Bekräfta borttagningen i dialogrutan **Ta bort SSL-certifikat** -dialogrutan.
+1. Kör pipeline för att ta bort distributionen av det borttagna certifikatet.
 
 >[!NOTE]
 >
