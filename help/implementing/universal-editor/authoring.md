@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: c6ab2d9b01a3f1abedb06d1d413e7eceb8b1c031
+source-git-commit: 05554f397a843ede5a723b206b6e0748e2d6ba96
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den 
 
 Med den universella redigeraren kan du redigera alla delar av innehållet i alla implementeringar så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
 
-För att göra detta har den universella redigeraren ett intuitivt användargränssnitt som kräver minimal utbildning för att man ska kunna börja redigera material.
+För att göra detta har den universella redigeraren ett intuitivt användargränssnitt som kräver minimal utbildning för att man ska kunna börja redigera material. I det här dokumentet beskrivs hur du skapar i Universell redigerare.
 
 >[!TIP]
 >
@@ -25,7 +25,7 @@ För att göra detta har den universella redigeraren ett intuitivt användargrä
 
 >[!NOTE]
 >
->Den universella redigeraren är fortfarande under utveckling och kan för närvarande inte redigera alla innehållstyper.
+>Den universella redigeraren är fortfarande under utveckling. Det kan för närvarande inte redigera alla innehållstyper.
 
 ## Förbered appen {#prepare-app}
 
@@ -201,13 +201,23 @@ I komponentläget återges sidan i redigeraren, men innehållsförfattaren kan k
 
 ![Komponentläge](assets/component-mode.png)
 
+När du väljer ett innehållsfragment visas information om det i [komponentskena.](#component-rail)
+
 >[!TIP]
 >
 >Använda snabbtangenten `C` för att växla till komponentläge.
 
->[!NOTE]
+#### Redigera {#edit}
+
+När [komponentläge,](#component-mode) Om du väljer ett innehållsfragment visas redigeringsalternativet på lägeslisten.
+
+![Ikonen Redigera](assets/edit.png)
+
+Om du trycker eller klickar på redigeringsknappen öppnas redigeringsprogrammet för innehållsfragment på en ny flik, vilket gör att du kan redigera refererat innehåll samt text och mediainnehåll från den universella redigeraren.
+
+>[!TIP]
 >
->Komponentläget är fortfarande under utveckling och är för närvarande begränsat till att välja komponenter.
+>Använda snabbtangenten `E` om du vill redigera en markerad komponent.
 
 ### Redigeraren {#editor}
 
@@ -230,9 +240,11 @@ I egenskapsläget visar rälen egenskaperna för den komponent som är markerad 
 
 ![Egenskapsläge](assets/properties-mode.png)
 
-Information om den valda komponenten visas i listen. Observera att inte alla komponenter har information som ska visas.
+Information om den valda komponenten visas i listen. Om du har valt ett innehållsfragment med hjälp av [komponentläge,](#component-mode) Du kan ändra inställningarna i komponenträlen. Ändringarna sparas automatiskt av den universella redigeraren.
 
 ![Komponentinformation](assets/component-details.png)
+
+Observera att inte alla komponenter har information som kan visas.
 
 >[!TIP]
 >
@@ -259,13 +271,17 @@ Det är enkelt och intuitivt att redigera innehåll. I redigeringslägen ([textl
 
 ![Redigerbart innehåll markeras med en blå ruta](assets/editable-content.png)
 
-Tryck eller klicka bara på innehållet i den blå rutan för att starta en redigerare på plats och göra ändringarna. Tryck på Retur för att spara ändringarna.
+Tryck eller klicka bara på innehållet i den blå rutan för att starta en redigerare på plats och göra ändringarna. Ändringarna sparas automatiskt.
 
 ![Redigera innehåll](assets/editing-content.png)
 
 Observera att när du trycker eller klickar på innehåll i redigeringsläge görs ett försök att markera det för redigering. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
 
-Beroende på vilket läge du befinner dig i och vilket innehåll du väljer kan det finnas olika redigeringsalternativ. Dessutom kan du granska ytterligare egenskaper för innehållet med [komponentskena.](#component-rail)
+Beroende på [läge](#mode-rail) om du befinner dig i och det innehåll du väljer kan ha olika redigeringsalternativ.
+
+Dessutom kan du granska ytterligare egenskaper för innehållet med [komponentskena.](#component-rail) Om du till exempel markerar en RTF-komponent kan du redigera formateringsalternativ i komponentens rand.
+
+![Redigera en RTF-komponent](assets/rich-text-editing.png)
 
 ## Förhandsgranska innehåll {#previewing-content}
 
