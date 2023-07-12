@@ -2,9 +2,9 @@
 title: SDK för AEM as a Cloud Service
 description: En översikt över AEM as a Cloud Service Software Development Kit
 exl-id: 06f3d5ee-440e-4cc5-877a-5038f9bd44c6
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 33ba3e88a4116674c70c44a29273a04544b6b39b
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1235'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,10 @@ AEM as a Cloud Service SDK används för att skapa och distribuera anpassad kod.
 * **Distribuera artefakter**. Artefakter distribueras till den lokala servern.
 
 Samma steg utförs av Cloud Manager när du distribuerar till molnmiljöer. När du utför byggen lokalt kan du utveckla och testa dem lokalt. Utvecklare kan effektivt upptäcka kod eller strukturella problem innan de bestämmer sig för källkontroll och utlöser driftsättningar i Cloud Manager, vilket kan ta längre tid.
+
+>[!NOTE]
+>
+>Den AEM as a Cloud Service SDK:n ska byggas med en distribution och version av Java som stöds av [Cloud Managers byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). AEM as a Cloud Service kunder kan ladda ned Oracle-JDK från [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) och har Java 11 Extended Support till september 2026 på grund av Adobe’s licensing and support terms for the Oracle Java technology when used in Adobe Experience Manager projects.
 
 ## Åtkomst till AEM as a Cloud Service SDK {#accessing-the-aem-as-a-cloud-service-sdk}
 
