@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 241dcc75e9f2c840be85c34800d8145457baa58d
+source-git-commit: eca0903050bb178f13d37073f8d65354f4bf36d3
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '283'
 ht-degree: 2%
 
 ---
@@ -34,6 +34,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 126
 - AEM stödlinjer: Förbättringar och stabilitetskorrigeringar för olika inbyggda PDF
 - SKYOPS-53130: Förbättra stödet för AC-verktyg i RDE
 - SKYOPS-57146: Åtgärda dödläge vid AEM
+- SKYOPS-61646: Det senaste replikeringsdatumet uppdateras inte efter uppgradering till version 12585
 
 ### Kända fel {#known-issues-12697}
 
