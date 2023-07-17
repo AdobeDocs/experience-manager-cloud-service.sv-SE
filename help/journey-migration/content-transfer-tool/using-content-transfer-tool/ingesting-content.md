@@ -2,10 +2,10 @@
 title: Infoga innehåll i mål
 description: Infoga innehåll i mål
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 3f526b8096125fbcf13b73fe82b2da0f611fa6ca
 workflow-type: tm+mt
-source-wordcount: '1707'
-ht-degree: 7%
+source-wordcount: '1925'
+ht-degree: 6%
 
 ---
 
@@ -155,7 +155,7 @@ Om Release Orchestrator fortfarande körs när ett intag startas visas det här 
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_ingestion.png)
 
-### Inmatningsfel upptill
+### Popup-matningsfel p.g.a. Unikhetsbegränsningsöverträdelse
 
 En vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) fel är en konflikt i nod-ID:n. Identifiera felet genom att hämta matningsloggen med användargränssnittet i Cloud Acceleration Manager och leta efter en post som följande:
 
@@ -166,6 +166,18 @@ Detta kan inträffa om en nod flyttas på källan mellan en extrahering och en e
 Det kan också inträffa om en nod på målet flyttas mellan ett intag och ett efterföljande tilläggsintag.
 
 Den här konflikten måste lösas manuellt. Någon som är bekant med innehållet måste bestämma vilken av de två noderna som måste tas bort, med hänsyn tagen till annat innehåll som refererar till det. Lösningen kan kräva att extraheringen av den övre delen görs igen utan den felande noden.
+
+### Inmatningsfel högst upp på grund av att det inte går att ta bort referensnod
+
+En annan vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) fel är en versionskonflikt för en viss nod i målinstansen. Identifiera felet genom att hämta matningsloggen med användargränssnittet i Cloud Acceleration Manager och leta efter en post som följande:
+>java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakIntegrity0001: Det går inte att ta bort den refererade noden: 8a2289f4-b904-4bd0-8410-15e41e0976a8
+
+Detta kan inträffa om en nod på målet ändras mellan ett intag och ett efterföljande toppmängdintag så att en ny version har skapats. Om inmatningen har inkluderingsversioner aktiverat kan en konflikt uppstå eftersom målet nu har en senare version som refereras av versionshistorik och annat innehåll. Det går inte att ta bort den felaktiga versionsnoden eftersom den refereras.
+
+Lösningen kan kräva att extraheringen av den övre delen görs igen utan den felande noden. Eller skapa en liten migreringsuppsättning av den felande noden, men med inkluderingsversioner inaktiverade.
+
+Bästa tillvägagångssätt visar att om ett intag måste köras med wipe=false och&quot;include versions&quot;=true är det viktigt att innehållet på målet ändras så lite som möjligt, tills migreringsresan är klar. Annars kan dessa konflikter uppstå.
+
 
 ## What&#39;s Next {#whats-next}
 
