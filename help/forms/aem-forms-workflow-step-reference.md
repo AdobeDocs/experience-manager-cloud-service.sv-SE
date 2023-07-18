@@ -3,14 +3,19 @@ title: Hur tilldelar man ett arbetsflöde till en annan användare, skickar e-po
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '6540'
+source-wordcount: '6560'
 ht-degree: 0%
 
 ---
 
 # Forms-centrerade AEM - stegreferens {#forms-centric-workflow-on-osgi-step-reference}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Du använder arbetsflödesmodeller för att konvertera en affärslogik till en automatiserad repetitiv process. En modell hjälper dig att definiera och köra en serie steg. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser. Du kan [inkludera olika AEM arbetsflödessteg i en modell för att uppnå affärslogiken](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem).
 
@@ -45,7 +50,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **[!UICONTROL Description]**: Förklaring av de åtgärder som utförs i uppgiften. Den här informationen är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
 * **[!UICONTROL Thumbnail Path]**: Sökväg till aktivitetsminiatyrbilden. Om ingen sökväg anges visas en standardminiatyrbild för ett anpassat formulär och en standardikon för Postdokument.
-* **[!UICONTROL Workflow Stage]**: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera de här stegen i modellens egenskaper (Sidspark > Sida > Sidegenskaper > Steg).
+* **[!UICONTROL Workflow Stage]**: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper (Sidekick > Sida > Sidegenskaper > Steg).
 * **[!UICONTROL Priority]**: Den valda prioriteten visas i AEM. De tillgängliga alternativen är Hög, Medel och Låg. Standardvärdet är Medel.
 * **[!UICONTROL Due Date]**: Ange antalet dagar eller timmar efter vilka aktiviteten har markerats som försenad. Om du väljer **[!UICONTROL Off]**, markeras uppgiften aldrig som försenad. Du kan också ange en uttidshanterare för att utföra vissa åtgärder när åtgärden är försenad.
 

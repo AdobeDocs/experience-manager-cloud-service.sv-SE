@@ -5,14 +5,19 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb7b41f0-fd4f-4ba6-9f45-792a66ba6368
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 0%
+source-wordcount: '957'
+ht-degree: 1%
 
 ---
 
 # [!DNL Microsoft Dynamics] OData-konfiguration {#microsoft-dynamics-odata-configuration}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/ms-dynamics-odata-configuration.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 ![dataintegrering](assets/data-integeration.png)
 
@@ -95,7 +100,7 @@ Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Dire
 
    * `Client-ID` är ett klient-ID som du kan generera med valfri GUID-generator.
    * `redirect-uri` är URL:en till [!DNL Microsoft Dynamics] OData-molntjänst på [!DNL Experience Manager Forms]. Standardmolntjänsten som installeras med [!DNL Experience Manager Forms] distribueras på följande URL:
-      `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
+     `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
 1. Kör följande kommando för att bevilja åtkomst på AD FS-datorn:
 

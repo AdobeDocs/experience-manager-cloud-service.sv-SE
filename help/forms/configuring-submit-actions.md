@@ -2,14 +2,19 @@
 title: Konfigurera en Skicka-åtgärd för ett anpassat formulär
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: 921dc0f109b1faaa6d53086c4ca29627cb30bef8
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '2959'
+source-wordcount: '2979'
 ht-degree: 0%
 
 ---
 
 # Inlämningsåtgärd för anpassat formulär {#configuring-the-submit-action}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 En Skicka-åtgärd aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Adaptiv Forms innehåller vissa inskickningsåtgärder. De Skicka-åtgärder som är tillgängliga är:
 
@@ -111,7 +116,6 @@ Du kan använda **[!UICONTROL Send Email]** Skicka åtgärd för att skicka ett 
 > * Alla formulärfält måste ha olika elementnamn, även om fälten placeras på olika paneler i ett anpassat formulär.
 > * AEM as a Cloud Service kräver att utgående e-post krypteras. Som standard är utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [Begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 
-
 Du kan även bifoga bilagor och ett DoR-dokument (Document of Record) till e-postmeddelandet. Aktivera **[!UICONTROL Attach Document of Record]** konfigurerar du det adaptiva formuläret för att generera ett dokument för inspelning (DoR). Du kan aktivera alternativet att generera ett postdokument från egenskaper för anpassat formulär.
 
 
@@ -198,7 +202,6 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lagring:
    >* Som standard `forms-ootb-storage-adaptive-forms-submission` finns på den valda SharePoint-webbplatsen.
    >* Skapa en mapp som `forms-ootb-storage-adaptive-forms-submission`, om de inte redan finns i `Documents` bibliotek för den valda SharePoint-webbplatsen genom att klicka på **Skapa mapp**.
 
-
 Nu kan du använda den här SharePoint Sites-konfigurationen för att skicka-åtgärden i ett adaptivt formulär.
 
 ### Använda SharePoint Configuration i en adaptiv form {#use-sharepoint-configuartion-in-af}
@@ -210,7 +213,6 @@ Du kan använda den skapade SharePoint-konfigurationen i ett adaptivt formulär 
    >
    > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär där du har skapat din SharePoint-lagring.
    > * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
-
 
 1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to SharePoint]**.
    ![SharePoint GIF](/help/forms/assets/sharedrive-video.gif)
@@ -257,7 +259,6 @@ Så här ansluter du AEM Forms till din Microsoft® OneDrive-lagring:
    >* Som standard `forms-ootb-storage-adaptive-forms-submission` finns i OneDrive-behållaren.
    > * Skapa en mapp som `forms-ootb-storage-adaptive-forms-submission`, om den inte redan finns genom att klicka **Skapa mapp**.
 
-
 Nu kan du använda den här lagringskonfigurationen för OneDrive för att skicka-åtgärden i ett adaptivt formulär.
 
 ### Använd OneDrive-konfiguration i ett adaptivt formulär {#use-onedrive-configuartion-in-af}
@@ -269,7 +270,6 @@ Du kan använda den skapade OneDrive-lagringskonfigurationen i ett adaptivt form
    >
    > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat din OneDrive-lagring.
    > * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
-
 
 1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to OneDrive]**.
    ![OneDrive GIF](/help/forms/assets/onedrive-video.gif)
@@ -284,7 +284,7 @@ Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date
 The **[!UICONTROL Submit to Azure Blob Storage]**  Skicka åtgärd kopplar ett anpassat formulär till en Microsoft® Azure-portal. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till de anslutna Azure Storage-behållarna. Så här använder du åtgärden Skicka för Azure Blob Storage:
 
 1. [Skapa en Azure Blob Storage-behållare](#create-a-azure-blob-storage-container-create-azure-configuration): Den ansluter AEM Forms till Azure Storage-behållare.
-2. [Använd Azure Storage-konfigurationen i ett adaptivt formulär ](#use-azure-storage-configuration-in-an-adaptive-form-use-azure-storage-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Azure-lagringsbehållare.
+2. [Använd Azure Storage-konfigurationen i ett adaptivt formulär](#use-azure-storage-configuration-in-an-adaptive-form-use-azure-storage-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Azure-lagringsbehållare.
 
 ### Skapa en Azure Blob Storage-behållare {#create-azure-configuration}
 
@@ -313,7 +313,6 @@ Du kan använda den skapade Azure Storage-behållarkonfigurationen i ett adaptiv
    >
    > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat din OneDrive-lagring.
    > * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
-
 
 1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to Azure Blob Storage]**.
    ![Azure Blob Storage GIF](/help/forms/assets/azure-submit-video.gif)

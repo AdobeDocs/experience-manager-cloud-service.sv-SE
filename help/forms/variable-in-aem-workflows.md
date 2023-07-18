@@ -2,14 +2,19 @@
 title: Hur lägger jag till variabler i AEM?
 description: Lär dig skapa en variabel, ange ett värde för variabeln och använda den i [!DNL AEM Forms] Arbetsflödessteg.
 exl-id: d9139ea9-2f86-476c-8767-b36766790f2c
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
 
 # Variabler i Forms-centrerade AEM {#variables-in-aem-forms-workflows}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/variable-in-aem-workflows.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp. Du kan använda namnet på variabeln i vilket arbetsflödessteg som helst för att hämta värdet som lagras i variabeln. Du kan också använda variabelnamn för att definiera uttryck för att fatta beslut om routning.
 

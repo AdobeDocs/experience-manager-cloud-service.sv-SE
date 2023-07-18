@@ -5,14 +5,20 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: b17b7441-912c-44c7-a835-809f014a8c86
-source-git-commit: 1f3104d4a986018675f751afa04fe0ed3b7f5c26
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1485'
 ht-degree: 0%
 
 ---
 
 # Skapa formulärdatamodell {#create-form-data-model}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html) |
+| AEM as a Cloud Service | Den här artikeln |
+
 
 ![Dataintegrering](do-not-localize/data-integeration.png)
 
@@ -77,7 +83,7 @@ Gör följande för att lägga till eller uppdatera datakällor till en befintli
    * Om du vill ersätta en befintlig datakälla med en annan datakälla av samma typ trycker du på **[!UICONTROL Edit]** -ikonen för datakällan och välj i listan över tillgängliga datakällor.
    * Om du vill ta bort en befintlig datakälla trycker du på **[!UICONTROL Delete]** -ikon för datakällan. Ikonen Ta bort är inaktiverad om ett datamodellsobjekt i datakällan läggs till i formulärdatamodellen.
 
-      ![fdm-properties](assets/fdm-properties.png)
+     ![fdm-properties](assets/fdm-properties.png)
 
 1. Tryck **[!UICONTROL Save & Close]** för att spara uppdateringarna.
 
@@ -108,8 +114,7 @@ Aktivera distributionsspecifika molnkonfigurationer i [!UICONTROL Form Data Mode
 
 1. Skapa en kontextmedveten konfiguration för Apache Sling. Så här skapar du OSGi-konfigurationen:
    1. **Konfigurera OSGi-konfigurationsfiler i [!DNL Experience Manager] Arketype-projekt.**
-Skapa OSGi Factory Configuration-filer med PID 
-`org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider`. Skapa en fil med samma namn i varje körningslägesmapp där värdena måste ändras för varje körningsläge. Mer information finns i [Konfigurera OSGi för [!DNL Adobe Experience Manager]](/help/implementing/deploying/configuring-osgi.md#creating-sogi-configurations).
+Skapa OSGi Factory Configuration-filer med PID `org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider`. Skapa en fil med samma namn i varje körningslägesmapp där värdena måste ändras för varje körningsläge. Mer information finns i [Konfigurera OSGi för [!DNL Adobe Experience Manager]](/help/implementing/deploying/configuring-osgi.md#creating-sogi-configurations).
 
    1. **Ange konfigurationsjson för OSGI.** Så här använder du Åsidosättningsprovider för kontextmedveten konfiguration för Apache Sling:
       1. On local development instance `/system/console/configMgr`väljer du OSGi-fabrikskonfiguration med namnet **[!UICONTROL Apache Sling Context-Aware Configuration Override Provider: OSGi configuration]**.
@@ -123,7 +128,6 @@ Du kan lägga till flera åsidosättningar genom att välja **[!UICONTROL +]**.
       1. Ändra värdet för `newURL` baserat på miljö (eller körläge).
       1. Om du vill ändra ett hemligt värde baserat på körningsläge kan du skapa en hemlig variabel med [API för molnhantering](/help/implementing/deploying/configuring-osgi.md#cloud-manager-api-format-for-setting-properties) och senare kan refereras i [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md#secret-configuration-values).
 När det här arketype-projektet distribueras via CM-pipeline, kommer åsidosättning att ge olika värden i olika miljöer (eller körningsläge).
-
       >[!NOTE]
       >
       >[!DNL Adobe Managed Service] användare kan kryptera de hemliga värdena med krypteringsstöd (mer information finns i [krypteringsstöd för konfigurationsegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encryption-support-for-configuration-properties.html#enabling-encryption-support) och placera krypterad text i värdet efter [Kontextmedvetna konfigurationer finns i Service Pack 6.5.13.0](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html#runmode-specific-context-aware-config).

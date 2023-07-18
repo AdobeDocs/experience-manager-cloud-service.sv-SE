@@ -5,14 +5,19 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 53896a8e-4568-460b-bca7-994baea0c8eb
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
 
 # Använd layoutläget för att ändra storlek på komponenter {#use-layout-mode-to-resize-components}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/resize-using-layout-mode.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Med redigeringsgränssnittet Adaptivt formulär kan du ändra storlek på komponenter i layoutläget. Dra blå punkter i kolumner för att definiera start- och slutpunkterna för att placera komponenter. De blå punkterna visas när du har tryckt på komponenten i det responsiva rutnätet. Det responsiva rutnätet består av 12 lika stora kolumner. Den vita och blå färgskuggningen i alternativa kolumner skiljer den ena kolumnen från den andra.
 

@@ -2,14 +2,19 @@
 title: Hur integrerar man AEM Forms med Adobe Analytics?
 seo-title: Learn how to integrate AEM Forms with Adobe Analytics.
 exl-id: 0730432e-75b8-4b35-a377-ae4a2bee6c9f
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1506'
 ht-degree: 0%
 
 ---
 
 # Integrera med [!DNL Adobe Analytics] {#integrate-aem-forms-with-adobe-analytics}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/integrate-aem-forms-with-experience-cloud-solutions/configure-analytics-forms-documents.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 AEM Forms kan integreras med [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=en) så att ni kan samla in och spåra resultatvärden för era publicerade formulär. Syftet med att analysera dessa värden är att göra det möjligt för företagsanvändare att få insikter i slutanvändarnas beteende och optimera datainhämtningsupplevelsen. Du kan fånga in och spåra beteenden hos både inloggade och ej inloggade (anonyma) användare via Adobe Analytics för Adaptiv Forms.
 
@@ -140,7 +145,7 @@ Utför följande steg för att skapa regler baserade på **[!UICONTROL Adobe Exp
 
    * **[!UICONTROL Clear Variables]**: Använd den här åtgärdstypen för att rensa dataspårningen så att händelsen bara registreras en gång i [!DNL Adobe Analytics].
 
-      Rekommenderad metod är att använda **[!UICONTROL Set Variables]** åtgärdstyp för att konfigurera händelsen och dataelementen och sedan använda **[!UICONTROL Send Beacon]** för att skicka data och sedan använda **[!UICONTROL Clear Variables]** för att rensa dataspårningen.
+     Rekommenderad metod är att använda **[!UICONTROL Set Variables]** åtgärdstyp för att konfigurera händelsen och dataelementen och sedan använda **[!UICONTROL Send Beacon]** för att skicka data och sedan använda **[!UICONTROL Clear Variables]** för att rensa dataspårningen.
 
 1. I **[!UICONTROL Props]** mappa de alternativ för rapportsviten som finns i listrutan med dataelementen som definieras med [Konfigurera dataelement](#configure-data-elements).
 

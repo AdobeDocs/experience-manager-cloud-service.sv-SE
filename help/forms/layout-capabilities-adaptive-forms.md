@@ -3,14 +3,19 @@ title: Layoutfunktioner i Adaptive Forms
 seo-title: Layout capabilities of Adaptive Forms
 description: Layout och utseende för Adaptive Forms på olika enheter styrs av layoutinställningarna. Förstå de olika layouterna och hur de ska användas.
 exl-id: e30c6ff9-692b-4415-8f14-b4ef616b2d12
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
 
 # Layoutfunktioner i Adaptive Forms {#layout-capabilities-of-adaptive-forms}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/layout-capabilities-adaptive-forms.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 [!DNL Adobe Experience Manager] Med kan ni skapa lättanvända, adaptiva Forms som ger användarna dynamiska upplevelser. Formulärlayouten styr hur objekt och komponenter visas i ett adaptivt formulär.
 
@@ -68,7 +73,7 @@ Sammanfattningsuttryck kan användas för att visa de värden som slutanvändare
 
 ![Repeterbara paneler med dragspelslayout i adaptiv Forms](assets/accordion-layout.png)
 
-### [!UICONTROL Tabbed layout - tabs appear on the left ]{#tabbed-layout-tabs-appear-on-the-left}
+### [!UICONTROL Tabbed layout - tabs appear on the left]{#tabbed-layout-tabs-appear-on-the-left}
 
 Med den här layouten kan du montera **[!UICONTROL Panel Adaptive Form]** i en panel med tabbnavigering. Flikarna placeras till vänster om panelinnehållet.
 
@@ -102,7 +107,7 @@ I den här layouten, som namnet föreslår, visas panelrubriker tillsammans med 
 
 ![Mobila layouter med paneltitlar i formulärrubriker](assets/mobile-layout1.png)
 
-### [!UICONTROL Layout without panel titles in the form header ]{#layout-without-panel-titles-in-the-form-header}
+### [!UICONTROL Layout without panel titles in the form header]{#layout-without-panel-titles-in-the-form-header}
 
 Den här layouten, som namnet föreslår, visar bara navigeringsmenyn och navigeringsfältet utan panelrubriker. Den här layouten innehåller även ikoner för Nästa och Föregående för navigering.
 

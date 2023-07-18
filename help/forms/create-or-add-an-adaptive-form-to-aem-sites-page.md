@@ -1,11 +1,11 @@
 ---
 title: Hur lägger man till ett adaptivt formulär på en AEM Sites-sida?
-description: Upptäck hur du enkelt kan skapa eller lägga till ett adaptivt formulär på din AEM Sites-sida. Lär dig stegvisa tekniker och metodtips för att integrera formulär på er webbplats och optimera era digitala upplevelser för maximal effekt.
+description: Upptäck hur du skapar eller lägger till ett anpassat formulär på din AEM Sites-sida. Lär dig även fördelarna och olika sätt att integrera formulär på din webbplats.
 feature: Adaptive Forms, Page Editor, Authoring
-Keywords: adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
-source-git-commit: 53997540cc469f4cc2ad747ca4e52b531a7b193e
+Keywords: af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
+source-git-commit: 05401630484fa881da1304b6d0301670248b9889
 workflow-type: tm+mt
-source-wordcount: '3173'
+source-wordcount: '3165'
 ht-degree: 0%
 
 ---
@@ -181,7 +181,7 @@ Så här konverterar du ett adaptivt formulär på en AEM Sites-sida till ett Ex
 
 1. Öppna AEM Sites-sidan som innehåller det adaptiva formuläret (i adaptiva Forms Container-komponenten) i redigeringsläge.
 1. Öppna innehållsträdet och välj **[!UICONTROL Adaptive Forms Container]** som är värd för din adaptiva form. En AEM Sites-sida kan vara värd för flera adaptiva Forms. Välj rätt adaptiva Forms-behållare.
-1. På menyraden väljer du ![Ikon för att konvertera till upplevelsefragmentvariationer](/help/forms/assets/Smock_FilingCabinet_18_N.svg) Konvertera till Experience Fragment-variationsikon.
+1. På menyraden väljer du ![Ikonen Konvertera till upplevelsefragment](/help/forms/assets/Smock_FilingCabinet_18_N.svg) Konvertera till Experience Fragment-variationsikon.
    ![Klicka på filkabinettlogotypen för att konvertera ett adaptivt formulär på AEM Sites-sidan till ett Experience Fragment](/help/forms/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
 
    En dialogruta visas om du vill konvertera behållaren för det adaptiva formuläret till ett nytt Experience Fragment eller lägga till i ett befintligt Experience Fragment
@@ -200,7 +200,7 @@ Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett a
 1. Öppna AEM Page Editor eller Experience Fragment som innehåller det adaptiva formuläret.
 1. Öppna innehållsträdet och välj **[!UICONTROL Adaptive Forms Container]** som är värd för din adaptiva form. En AEM Sites-sida kan vara värd för flera adaptiva Forms. Välj rätt adaptiva Forms-behållare.
 1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare där du kan konfigurera skicka-åtgärder öppnas.
-   ![Klicka på skiftningsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/assets/adaptive-forms-container.png)
+   ![Klicka på ikonen Bläddra för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera åtgärden Skicka för ett adaptivt formulär](/help/forms/assets/adaptive-forms-container.png)
 1. Välj och konfigurera en Skicka-åtgärd utifrån dina krav. Mer information om Skicka åtgärder finns i [Inlämningsåtgärd för anpassat formulär](/help/forms/configuring-submit-actions.md)
 
 
@@ -216,7 +216,7 @@ Så här konfigurerar du ett JSON-schema eller en formulärdatamodell för formu
 1. Öppna AEM Page Editor eller Experience Fragment som innehåller det adaptiva formuläret.
 1. Öppna innehållsträdet och välj **[!UICONTROL Adaptive Forms Container]** som är värd för din adaptiva form. En AEM Sites-sida kan vara värd för flera adaptiva Forms. Välj rätt adaptiva Forms-behållare.
 1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
-   ![Klicka på skiftningsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en datamodell för det adaptiva formuläret](/help/forms/assets/form-data-model-adaptive-forms-container.png)
+   ![Klicka på skiftnyckelsikonen för att konfigurera datamodeller för det adaptiva formuläret](/help/forms/assets/form-data-model-adaptive-forms-container.png)
 1. Välj och konfigurera ett JSON-schema eller en formulärdatamodell utifrån dina behov. Mer information om Skicka åtgärder finns i [Inlämningsåtgärd för anpassat formulär](/help/forms/configuring-submit-actions.md).
 
    * När du väljer **[!UICONTROL Form Model]** , använd **[!UICONTROL Select Form Data Model]** för att välja en förkonfigurerad formulärdatamodell.
@@ -238,7 +238,7 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
 1. Öppna AEM Page Editor eller Experience Fragment som innehåller det adaptiva formuläret.
 1. Öppna innehållsträdet och välj **[!UICONTROL Adaptive Forms Container]** som är värd för din adaptiva form. En AEM Sites-sida kan vara värd för flera adaptiva Forms. Välj rätt adaptiva Forms-behållare.
 1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
-   ![Klicka på ikonen för att öppna dialogrutan Adaptiv formulärbehållare för att konfigurera förifyllningstjänsten](/help/forms/assets/adaptive-forms-container.png)
+   ![Klicka på ikonen för skiftläge för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera förifyllningstjänsten för det adaptiva formuläret](/help/forms/assets/adaptive-forms-container.png)
 1. Välj en formulärdatamodell. Öppna **[!UICONTROL Basic]** -fliken. I förifyllningstjänsten väljer du **[!UICONTROL Form Data Model Prefill Service]**.
 1. Klicka på **[!UICONTROL Done]**. Ditt adaptiva formulär har nu konfigurerats för att använda förifyllning av formulärdatamodell. Nu kan du använda [regelredigerare](rule-editor.md) för att skapa regler för förifyllning av formulärfält.
 

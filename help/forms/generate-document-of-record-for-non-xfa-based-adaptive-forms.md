@@ -2,14 +2,19 @@
 title: Generera ett urkunder för Adaptive Forms
 description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
-source-git-commit: 4279b4a880429f535cf341d35ac38c9b4dc55ae2
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '3926'
+source-wordcount: '3946'
 ht-degree: 0%
 
 ---
 
 # Generera arkivdokument för adaptiv Forms
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 ## Översikt {#overview}
 
@@ -359,6 +364,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
 
       ![Överordnad sidegenskaper](/help/forms/assets/masterpagepropertiesdor.png)
+
    >[!NOTE]
    >
    >Om du använder en mall för adaptiva formulär som skapats med en tidigare version av Designer än 6.3, för att egenskaperna för dekorfärg och teckensnittsfamilj ska fungera, kontrollerar du att följande finns i mallen för adaptiva formulär under rotdelformuläret:

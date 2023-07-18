@@ -4,14 +4,19 @@ seo-title: Manage [!DNL AEM Forms] metadata
 description: Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 seo-description: Metadata allows for easier categorization and organization of assets and helps users who are looking for a specific asset.
 exl-id: 8527246a-37f0-4d43-a49e-1c76c265514e
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '1640'
+source-wordcount: '1660'
 ht-degree: 0%
 
 ---
 
 # Lägga till, ta bort eller redigera metadata i ett anpassat formulär {#manage-form-metadata}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/manage-form-metadata.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 

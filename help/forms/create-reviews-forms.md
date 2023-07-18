@@ -4,14 +4,20 @@ seo-title: Creating and managing reviews in forms
 description: En granskning är en mekanism som gör att en eller flera granskare kan kommentera ett formulär.
 seo-description: A Review is a mechanism that allows one or more reviewers to comment on a form.
 topic-tags: forms-manager
-source-git-commit: 3efd7d81424369ce6430802373129ab91b7356ab
+exl-id: 378049f8-bf21-4595-819d-ba5fba7023c0
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
 
 # Skapa och hantera granskningar av formulär{#creating-and-managing-reviews-to-forms}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/create-reviews-forms.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 ## Granska {#review}
 
@@ -35,7 +41,6 @@ En granskning är en mekanism som gör att en eller flera granskare kan kommente
    >* Administratören kan komma åt alla grupper som är kopplade till formuläranvändarna.
    >* Tjänstanvändargruppen är inte tillgänglig för granskning.
 
-
 ### Åtgärder som inträffar när en granskning konfigureras {#actions-that-occur-when-a-review-is-set-up}
 
 I det här avsnittet beskrivs vad som händer när en granskning skapas eller konfigureras.
@@ -55,7 +60,6 @@ I det här avsnittet beskrivs vad som händer när en granskning skapas eller ko
 >
 >* Endast pågående granskningar kan ändras.
 >* Fullständiga granskningar kan inte ändras.
-
 
 1. Navigera till fliken Formulär och markera ett formulär.
 
@@ -107,4 +111,5 @@ I det här avsnittet beskrivs vad som händer på **Granska uppdatering/Slut**:
    1. **Granskare**: För varje granskare avslutas den ofullständiga uppgift som är relaterad till granskningen. Aktiviteten visas inte längre som Väntande i granskarens meddelandeavsnitt.
    1. **Initierare**: Uppgiften som tilldelats granskningsinitieraren är markerad som slutförd. Aktiviteten tas bort från meddelandeavsnittet för granskningsinitieraren.
    1. **Alla**: Granskningen visas i avsnittet Tidigare granskningar. Inga fler kommentarer kan läggas till.
+
    ![granskning slutförd](assets/review-complete-imgg.png)

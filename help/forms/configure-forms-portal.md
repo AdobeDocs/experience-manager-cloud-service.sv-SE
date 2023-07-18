@@ -2,14 +2,19 @@
 title: Skapa en Forms Portal på en Experience Manager Sites-sida
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f7f30545b76afa6abd4f49316d0fb2245f5470c2
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
 
 # List Adaptive Forms on a Portal {#publish-forms-on-portal}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/introduction-publishing-forms.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 I ett typiskt formulärcentrerat portalscenario är formulärutveckling och portalutveckling två osammanhängande aktiviteter. När formulärdesigners designar och lagrar formulär i en databas skapar webbutvecklare ett webbprogram som listar formulär och hanterar inskickandet av formulär. Forms kopieras till webbnivån eftersom det inte finns någon kommunikation mellan formulärdatabasen och webbprogrammet.
 

@@ -6,14 +6,19 @@ seo-description: With Adaptive Forms, you users can prefill basic information in
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 exl-id: e2a87233-a0d5-48f0-b883-915fe56f105f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1967'
 ht-degree: 0%
 
 ---
 
 # Förifyll adaptiva formulärfält{#prefill-adaptive-form-fields}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/prepopulate-adaptive-form-fields.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 ## Introduktion {#introduction}
 
@@ -21,7 +26,7 @@ Du kan förifylla fälten i ett adaptivt formulär med befintliga data. När en 
 
 ## Struktur för förifyllda data {#the-prefill-structure}
 
-Ett adaptivt formulär kan innehålla en blandning av bundna och obundna fält. Bundna fält är fält som dras från fliken Innehållssökare och som inte är tomma `bindRef` egenskapsvärde i dialogrutan för fältredigering. Obundna fält dras direkt från komponentwebbläsaren i Sidekick och har ett tomt värde `bindRef` värde.
+Ett adaptivt formulär kan innehålla en blandning av bundna och obundna fält. Bundna fält är fält som dras från fliken Innehållssökare och som inte är tomma `bindRef` egenskapsvärde i dialogrutan för fältredigering. Obundna fält dras direkt från komponentwebbläsaren i Sidespark och har en tom `bindRef` värde.
 
 Du kan förifylla både bundna och obundna fält i ett adaptivt formulär. Prefill-data innehåller avsnitten afBoundData och afUnBoundData för att förifylla både bundna och obundna fält i ett adaptivt formulär. The `afBoundData` -avsnittet innehåller förifyllda data för bundna fält och paneler. Dessa data måste vara kompatibla med det associerade formulärmodellschemat:
 

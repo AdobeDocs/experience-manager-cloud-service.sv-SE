@@ -4,14 +4,19 @@ seo-title: Configure Out of Office settings
 description: Konfigurera inställningar för frånvaro
 seo-description: Configure Out of Office settings
 exl-id: c7e436f1-8e1c-4334-b3dc-ab9800695301
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 0%
+source-wordcount: '775'
+ht-degree: 1%
 
 ---
 
 # Konfigurera frånvaroinställningar {#configure-out-of-office-settings}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/configure-out-of-office-settings.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Om du tänker vara utanför kontoret kan du ange vad som ska hända med artiklar som har tilldelats dig för den perioden.
 
@@ -28,7 +33,6 @@ Du kan dela upp objektdelegering baserat på arbetsflödesmodellerna. Du kan til
 >* När du inaktiverar inställningen Frånvarande tilldelas de delegerade objekten inte tillbaka till dig automatiskt. Du kan använda anspråksfunktionen för att tilldela objekt till dig.
 >* När Användare A delegerar objekt till Användare B och Användare B delegerar vidare till Användare C, tilldelas objekten bara Användare C och inte Användare B.
 >* När det finns en slinga i uppdraget stannar uppgifterna kvar hos den ursprungliga användaren. När Användare A till exempel delegerar objekt till Användare B till Användare C, Användare C delegerar till Användare D och Användare D delegerar till Användare B skapas en slinga. I sådana fall behålls objektet av den ursprungliga användaren. Användare A är ursprunglig användare i ovanstående exempel.
-
 
 ## Aktivera inställningen Frånvarande för ditt konto {#enable-out-of-office}
 

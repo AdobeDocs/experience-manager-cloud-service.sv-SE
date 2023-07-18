@@ -5,14 +5,20 @@ feature: Form Data Model
 role: User
 level: Beginner, Intermediate
 exl-id: 827ce457-6585-46fb-8e28-1d970a40d949
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
 
 # Använd formulärdatamodell {#use-form-data-model}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/using-form-data-model.html) |
+| AEM as a Cloud Service | Den här artikeln |
+
 
 ![dataintegrering](do-not-localize/data-integeration.png)
 
@@ -26,8 +32,7 @@ ht-degree: 0%
 En formulärdatamodell är ett tillägg till JSON-schema som du kan använda för att:
 
 * [Skapa adaptiva Forms och fragment](#create-af)
-
-   <!--* [Create interactive communications and building blocks like text, list, and condition fragments](#create-ic)-->
+  <!--* [Create interactive communications and building blocks like text, list, and condition fragments](#create-ic)-->
 * [Förhandsgranska med exempeldata](#preview-ic)
 * [använder datamodelltjänst för formulär](#prefill)
 * [Skriv data i anpassat formulär tillbaka till datakällor](#write-af)

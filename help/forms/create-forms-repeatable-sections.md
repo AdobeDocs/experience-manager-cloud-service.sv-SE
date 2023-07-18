@@ -2,7 +2,7 @@
 title: Repeterbarhet i adaptiv form (kärnkomponenter)
 description: Använd upprepningsfunktionen i panelkomponenterna för att upprepa liknande avsnitt i en adaptiv form.
 role: Architect, Developer, Admin, User
-source-git-commit: bf45e7b935c3e57c2ecf77d9391abda80ee4a761
+source-git-commit: f7f30545b76afa6abd4f49316d0fb2245f5470c2
 workflow-type: tm+mt
 source-wordcount: '1410'
 ht-degree: 0%
@@ -97,6 +97,7 @@ Panelens överordnade panel bör innehålla en borttagningsknapp för att ta bor
    * Om du vill skapa en knapp för borttagningspanelen anger du `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
 
    Klicka **Klar**.
+>[!VIDEO](https://video.tv.adobe.com/v/3421620/adaptive-forms-repeatable-sections)
 
 >[!NOTE]
 >

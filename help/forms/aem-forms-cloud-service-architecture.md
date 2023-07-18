@@ -2,14 +2,19 @@
 title: Experience Manager [!DNL AEM Forms] as a Cloud Service arkitektur
 description: Förstå arkitekturen i [!DNL AEM Forms] as a Cloud Service att lära sig om plattformens skalbarhet, flexibilitet och prestanda.
 exl-id: 9d677bee-50ca-460e-b503-6b7799900735
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 0%
+source-wordcount: '1065'
+ht-degree: 1%
 
 ---
 
 # [!DNL AEM] Forms as a Cloud Service arkitektur {#architecture}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/aem-forms-architecture-deployment.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 [!DNL Adobe Experience Manager Forms] as a Cloud Service är en molnbaserad lösning för företag som vill skapa, hantera, publicera och uppdatera komplexa digitala formulär och kommunikation och samtidigt integrera inlämnade data med back-end-processer, affärsregler och spara data i ett externt datalager. Den utökas [!DNL Adobe Experience Manager as a Cloud Service]. Mer information om skalning, driftsättning, miljöer och annan infrastruktur finns i [En introduktion till arkitekturen i [!DNL Adobe Experience Manager as a Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html).
 

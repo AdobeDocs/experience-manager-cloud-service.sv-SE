@@ -2,14 +2,17 @@
 title: Hur konfigurerar jag Azure-lagring?
 description: Lär dig hur du integrerar formulär med Azure-lagringsservern.
 exl-id: 606383b3-293c-43d2-9ba0-5843c4e0caa8
-source-git-commit: 10284b1ac6fbad2e7f6231603c3dd60b6e404299
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
 
 # Konfigurera [!DNL Azure] lagring {#configure-azure-storage}
+
+
+![dataintegrering](assets/data-integeration.png)
 
 [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) ger en [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Azure] för att möjliggöra arbetsflöden. Till exempel:
 

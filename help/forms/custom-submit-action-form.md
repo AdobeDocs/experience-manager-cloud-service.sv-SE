@@ -5,14 +5,19 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 77131cc2-9cb1-4a00-bbc4-65b1a66e76f5
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1762'
 ht-degree: 0%
 
 ---
 
 # Skapa en anpassad Skicka-åtgärd för Adaptiv Forms {#writing-custom-submit-action-for-adaptive-forms}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/customize-aem-forms/custom-submit-action-form.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Ett anpassat formulär innehåller flera färdiga inskickningsåtgärder (OTB). En Skicka-åtgärd specificerar vilka åtgärder som ska utföras på data som samlats in via det adaptiva formuläret. Du kan till exempel skicka data via ett e-postmeddelande.
 

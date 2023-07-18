@@ -5,14 +5,21 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 026f4920-f8f9-4b08-b1b0-af50229633d7
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
 
 # Asynkron inlämning av adaptiv Forms {#asynchronous-submission-of-adaptive-forms}
+
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/asynchronous-submissions-adaptive-forms.html) |
+| AEM as a Cloud Service | Den här artikeln |
+
 
 Som standard är webbformulär konfigurerade att skicka synkront. När användare skickar ett formulär omdirigeras de i synkront skick till en bekräftelsesida, en tacksida eller en felsida om det uppstår ett överföringsfel. Moderna webbupplevelser som single page-applikationer blir dock allt populärare där webbsidan är statisk medan klient-server-interaktion sker i bakgrunden. Du kan konfigurera asynkron sändning för att ge den här upplevelsen med Adaptive Forms.
 

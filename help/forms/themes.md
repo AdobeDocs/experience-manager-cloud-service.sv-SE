@@ -2,14 +2,19 @@
 title: Skapa och använd teman för att utforma ett adaptivt formulär
 description: Du kan använda teman för att anpassa och ge en visuell identitet till ett adaptivt formulär. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '5362'
+source-wordcount: '5382'
 ht-degree: 0%
 
 ---
 
 # Skapa och använda teman {#creating-and-using-themes}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Du kan skapa och använda teman för att anpassa ett anpassat formulär<!-- or an interactive communication-->. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Temat hanteras separat utan referens till ett anpassat formulär<!-- or interactive communication -->.
 

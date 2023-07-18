@@ -5,14 +5,19 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 25adabfb-ff19-4cb2-aef5-0a8086d2e552
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 0%
+source-wordcount: '710'
+ht-degree: 1%
 
 ---
 
 # Textbunden formatering av adaptiva formulärkomponenter {#inline-styling-of-adaptive-form-components}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/inline-style-adaptive-forms.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Du kan definiera det övergripande utseendet och formatet för ett anpassat formulär genom att ange format med [temaredigerare](themes.md). Du kan också använda infogade CSS-format på enskilda adaptiva formulärkomponenter och förhandsgranska ändringarna direkt. Inline-format åsidosätter format som finns i temat.
 

@@ -3,14 +3,20 @@ title: Ansluta en databas till [!DNL AEM Forms] as a Cloud Service?
 seo-title: AEM Forms Data Integration
 description: Du kan hämta och spara data till en RESTful-webbtjänst, SOAP-baserade webbtjänster och OData-tjänster från [!DNL AEM Forms] as a Cloud Service. Tjänsten tillhandahåller ett dedikerat verktyg för att hämta, testa, validera och skicka data till olika typer av datakällor.
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
 
 # Koppla datakällor till Cloud Service {#aem-forms-data-integration}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/data-integration.html) |
+| AEM as a Cloud Service | Den här artikeln |
+
 
 ![Dataintegrering](do-not-localize/data-integeration.png)
 
