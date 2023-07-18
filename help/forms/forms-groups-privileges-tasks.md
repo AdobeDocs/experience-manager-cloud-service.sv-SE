@@ -2,10 +2,10 @@
 title: Inbyggd [!DNL AEM Forms] as a Cloud Service grupper
 description: Lista över användargrupper som inte ingår i rutan och behörigheter som tilldelats varje grupp
 exl-id: bd66ce92-14d9-47fe-b5d3-022e3e468d25
-source-git-commit: d67e46e2f798e56e322d5c4aad536e718c7aae1a
+source-git-commit: 8ac35abd1335b4e31a6dc0d8812cc9df333e69a4
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 2%
+source-wordcount: '155'
+ht-degree: 1%
 
 ---
 
@@ -31,19 +31,19 @@ När du har konfigurerat [!DNL AEM Forms] as a Cloud Service, de grupper som lis
      <li>Skapa teman</li> 
     </ul> </td> 
   </tr>
-  <tr>
+  <!-- <tr>
    <td>[!DNL forms-power-user]</td> 
    <td>
     <ul> 
-     <li>Skapa, förhandsgranska, publicera och skicka Adaptiv Forms</li> 
-     <!-- <li>Create, preview, and publish interactive communications and document fragments</li> 
-     <li>Create scripts for Adaptive Forms using code editor</li> -->
-     <li>Överför resurser inklusive skript</li> 
-     <li>Skapa teman</li> 
-     <li>Importera paket som innehåller XDP</li> 
+     <li>Create, preview, publish, and submit Adaptive Forms</li> 
+     <li>Create, preview, and publish interactive communications and document fragments</li> 
+     <li>Create scripts for Adaptive Forms using code editor</li> 
+     <li>Upload assets including scripts</li> 
+     <li>Create themes</li> 
+     <li>Import packages containing XDP</li> 
     </ul> </td> 
   </tr>
-  <!-- <tr>
+ <tr>
    <td>forms-submission-reviewers</td> 
    <td>
     <ul> 
@@ -100,3 +100,14 @@ När du har konfigurerat [!DNL AEM Forms] as a Cloud Service, de grupper som lis
   </tr>
  </tbody>
 </table>
+
+## Se även
+
+* [Gå med i en Cloud Service-miljö](/help/forms/setup-forms-cloud-service.md)
+* [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
+* [Migrera från AEM 6.5 Forms till Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
+* [Skapa ett fristående anpassat formulär](/help/forms/creating-adaptive-form-core-components.md)
+* [Lägg till ett anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+
+
+

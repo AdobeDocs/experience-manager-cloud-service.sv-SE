@@ -5,14 +5,14 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
 exl-id: 1e812d93-4ba5-4589-b59b-2f564d754b0f
-source-git-commit: 8d40f259e70ef73285aafcb736e1f9d720380f7d
+source-git-commit: 8ac35abd1335b4e31a6dc0d8812cc9df333e69a4
 workflow-type: tm+mt
-source-wordcount: '2178'
+source-wordcount: '2174'
 ht-degree: 0%
 
 ---
 
-# Skapa en adaptiv form (kärnkomponenter) {#creating-an-adaptive-form-core-components}
+# Skapa ett adaptivt formulär {#creating-an-adaptive-form-core-components}
 
 Med anpassningsbara Forms kan du skapa engagerande, responsiva, dynamiska och anpassningsbara formulär. AEM Forms har en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden har en snabb fliknavigering där du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett adaptivt formulär.
 
@@ -44,7 +44,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 * **Behörigheter**: Lägg till dina användare i [!DNL forms-users] grupp. Medlemmarna i [!DNL forms-users] gruppen har behörighet att skapa ett adaptivt formulär. En detaljerad lista över formulärspecifika användargrupper finns i [Grupper och behörigheter](forms-groups-privileges-tasks.md).
 
 
-## Skapa en adaptiv form (kärnkomponenter) {#create-an-adaptive-form-core-components}
+## Skapa ett adaptivt formulär  {#create-an-adaptive-form-core-components}
 
 1. Logga in på [!DNL Experience Manager Forms] Författarinstans. Det kan vara en molninstans eller en lokal utvecklingsinstans.
 

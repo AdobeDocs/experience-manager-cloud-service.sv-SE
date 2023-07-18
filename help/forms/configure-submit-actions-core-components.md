@@ -1,40 +1,85 @@
 ---
 title: Konfigurera en Skicka-åtgärd för ett anpassat formulär
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
-exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
+hide: true
+hidefromtoc: true
 source-git-commit: 8ac35abd1335b4e31a6dc0d8812cc9df333e69a4
 workflow-type: tm+mt
-source-wordcount: '3004'
+source-wordcount: '3190'
 ht-degree: 0%
 
 ---
 
 # Inlämningsåtgärd för anpassat formulär {#configuring-the-submit-action}
 
+
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-**Gäller för**: ✔️ adaptiva Form Foundation-komponenter. ❌ [Kärnkomponenter i adaptiv form](/help/forms/configure-submit-actions-core-components.md). Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](creating-adaptive-form-core-components.md).
+**Gäller för**: ✔️ adaptiva grundkomponenter ❌ [Komponenter i adaptiv Form Foundation](/help/forms/configuring-submit-actions.md). Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](creating-adaptive-form-core-components.md).
 
-En Skicka-åtgärd aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service innehåller följande inskickningsåtgärder.
+Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär.
 
+Forms as a Cloud Service, för Adaptive Forms som bygger på Core Components, erbjuder en mängd färdiga Submit Actions. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
 
-* [Skicka till REST-slutpunkt](#submit-to-rest-endpoint)
-* [Skicka e-post](#send-email)
-* [Skicka med formulärdatamodell](#submit-using-form-data-model)
-* [Anropa ett AEM arbetsflöde](#invoke-an-aem-workflow)
-* [Skicka till SharePoint](#submit-to-sharedrive)
-* [Skicka till OneDrive](#submit-to-onedrive)
-* [Skicka till Azure Blob Storage](#azure-blob-storage)
+* Skicka enkelt formulärdata via e-post.
+* Initiera Microsoft Power Automate-flöden eller AEM arbetsflöden när data skickas.
+* Skicka formulärdata direkt till Microsoft SharePoint Server, Microsoft Azure Blob Storage eller Microsoft OneDrive.
+* Skicka smidigt data till en konfigurerad datakälla med hjälp av formulärdatamodellen.
+* Skicka enkelt data till en REST-slutpunkt.
 
-Du kan också [utöka standardskickaåtgärder](custom-submit-action-form.md) för att skapa en egen Skicka-åtgärd.
+Du kan också [utöka standardskickaåtgärder](custom-submit-action-form.md) för att skapa en egen skickningsåtgärd.
 
-Du kan konfigurera en Skicka-åtgärd i **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren i sidlisten.
+## Välj och konfigurera en Skicka-åtgärd för ett anpassat formulär {#select-and-configure-submit-action}
 
-![Konfigurera Skicka-åtgärd](assets/submission.png)
+Så här väljer och konfigurerar du en Skicka-åtgärd för formuläret:
 
+1. Öppna innehållsläsaren och välj **[!UICONTROL Guide Container]** i din adaptiva form.
+1. Klicka på egenskaperna för stödlinjebehållaren ![Stödlinjeegenskaper](/help/forms/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas.
+
+1. Klicka på  **[!UICONTROL Submission]** -fliken.
+
+   ![Klicka på skiftningsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/assets/adaptive-forms-submit-message.png)
+
+1. Välj och konfigurera en **[!UICONTROL Submit action]**, baserat på era behov. Mer information om den valda åtgärden Skicka finns i:
+
+   * [Skicka e-post](#send-email)
+   * [Skicka till SharePoint](#submit-to-sharedrive)
+   * [Skicka med formulärdatamodell](#submit-using-form-data-model)
+   * [Skicka till Azure Blob Storage](#azure-blob-storage)
+   * [Skicka till REST-slutpunkt](#submit-to-rest-endpoint)
+   * [Skicka till OneDrive](#submit-to-onedrive)
+   * [Anropa ett AEM arbetsflöde](#invoke-an-aem-workflow)
+
+## Skicka e-post {#send-email}
+
+Om du vill skicka ett e-postmeddelande till en eller flera mottagare när formuläret har skickats kan du använda **[!UICONTROL Send Email]** Skicka åtgärd. Med den här åtgärden kan du skapa ett e-postmeddelande som innehåller formulärdata i ett fördefinierat format. Ta till exempel följande mall där kundnamn, leveransadress, delstatsnamn och postnummer hämtas från skickade formulärdata:
+
+    &quot;
+    
+    Hej ${customer_Name},
+    
+    Följande anges som standardleveransadress:
+    ${customer_Name},
+    ${customer_Shipping_Address},
+    ${customer_State},
+    ${customer_ZIPCode}
+    
+    Med vänlig hälsning
+    WKND
+    
+    &quot;
+
+>[!NOTE]
+>
+> * Det är viktigt att alla formulärfält har unika elementnamn, även om de placeras på olika paneler i ett adaptivt formulär.
+> * När du använder AEM as a Cloud Service måste du kryptera utgående e-post. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [Begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
+
+Dessutom **[!UICONTROL Send Email]** Skicka-åtgärd ger möjlighet att inkludera bilagor och ett DoR-dokument (Document of Record) tillsammans med e-postmeddelandet.
+
+Aktivera [!UICONTROL Attach Document of Record] finns i dokumentationen om [konfigurera det adaptiva formuläret för att generera ett dokument för registrering (DoR)](generate-document-of-record-core-components.md). Du kan aktivera det här alternativet från egenskaperna för adaptiva formulär.
 
 <!-- [!NOTE]
 >
@@ -57,6 +102,64 @@ Du kan konfigurera en Skicka-åtgärd i **[!UICONTROL Submission]** i egenskaper
 
 
 -->
+
+## Skicka till SharePoint {#submit-to-sharedrive}
+
+The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen. Så här använder du **[!UICONTROL Submit to SharePoint]** Skicka åtgärd i anpassad form:
+
+1. [Skapa en SharePoint-konfiguration](#create-a-sharepoint-configuration-create-sharepoint-configuration): Den kopplar AEM Forms till din Microsoft® Sharepoint-lagring.
+2. [Använda Skicka till SharePoint-åtgärden i ett anpassat formulär](#use-sharepoint-configuartion-in-af): Den kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
+
+### Skapa en SharePoint-konfiguration {#create-sharepoint-configuration}
+
+Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lagring:
+
+1. Gå till **AEM Forms** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
+1. Välj en **Konfigurationsbehållare**. Klicka inte i kryssrutan i konfigurationsbehållaren. Klicka på namnet på konfigurationsbehållaren för att markera den. Konfigurationen lagras i den valda konfigurationsbehållaren.
+1. Klicka på **[!UICONTROL Create]**. Konfigurationsguiden för SharePoint visas.
+   ![SharePoint-konfiguration](/help/forms/assets/sharepoint_configuration.png)
+1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
+   * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
+   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din AEM Forms Author-instans.
+   * Lägg till API-behörigheter `offline_access` och `Sites.Manage.All` för att ge läs- och skrivbehörigheter.
+   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
+
+   >[!NOTE]
+   >
+   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program är konfigurerat att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
+
+1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning visas `Connection Successful` visas.
+
+1. Om du vill välja en mapp där data ska sparas väljer du **SharePoint Site** > **Dokumentbibliotek** > **SharePoint-mapp**, .
+
+   >[!NOTE]
+   >
+   >* Som standard är `forms-ootb-storage-adaptive-forms-submission` finns i den valda SharePoint-platsen. Om mappen inte är tillgänglig använder du **Skapa mapp** för att skapa den.
+
+Nu kan du använda den här SharePoint Sites-konfigurationen för **Skicka till SharePoint** skicka-åtgärd i adaptiv form.
+
+### Använda Skicka till SharePoint-åtgärden i ett anpassat formulär {#use-sharepoint-configuartion-in-af}
+
+Du kan använda den SharePoint-konfiguration som skapades i föregående avsnitt om du vill spara data eller postdokument i en SharePoint-mapp. Utför följande steg för att använda åtgärden Skicka till SharePoint i anpassad form:
+
+1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form.md). När du skapar det adaptiva formuläret väljer du [!UICONTROL Configuration Container] används för [skapa en SharePoint-konfiguration](#create-sharepoint-configuration).
+
+   >[!NOTE]
+   >
+   > När nej [!UICONTROL Configuration Container] markeras, den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
+
+1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to SharePoint]**.
+1. Välj den konfigurerade **[!UICONTROL Storage Configuration]**. Den anger vilken mapp i SharePoint som formulärdata och arkivdokument ska sparas i.
+1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
+
+När du skickar formuläret sparas data på den angivna lagringsplatsen för Microsoft® Sharepoint (mapp).
+Mappstrukturen för sparade data är `/folder_name/form_name/year/month/date/submission_id/data`.
+
+## Skicka med formulärdatamodell {#submit-using-form-data-model}
+
+The **[!UICONTROL Submit using Form Data Model]** Skicka åtgärd skriver skickade adaptiva formulärdata för det angivna datamodellsobjektet i en formulärdatamodell till datakällan. När du konfigurerar åtgärden Skicka kan du välja ett datamodellsobjekt vars skickade data du vill skriva tillbaka till dess datakälla.
+
+Dessutom kan du skicka en bifogad fil med en formulärdatamodell och en DoR-fil (Document of Record) till datakällan. Mer information om formulärdatamodell finns i [[!DNL AEM Forms] Dataintegrering](data-integration.md).
 
 ## Skicka till REST-slutpunkt {#submit-to-rest-endpoint}
 
@@ -95,34 +198,6 @@ Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skic
 >
 >Om du vill skicka fälten som parametrar i en REST-URL måste alla fält ha olika elementnamn, även om fälten placeras på olika paneler.
 
-## Skicka e-post {#send-email}
-
-Du kan använda **[!UICONTROL Send Email]** Skicka åtgärd för att skicka ett e-postmeddelande till en eller flera mottagare när formuläret har skickats. E-postmeddelandet som genereras kan innehålla formulärdata i ett fördefinierat format. I följande mall hämtas till exempel kundnamn, leveransadress, namn på stat och postnummer från skickade formulärdata.
-
-    &quot;
-    
-    Hej ${customer_Name},
-    
-    Följande anges som standardleveransadress:
-    ${customer_Name},
-    ${customer_Shipping_Address},
-    ${customer_State},
-    ${customer_ZIPCode}
-    
-    Med vänlig hälsning
-    WKND
-    
-    &quot;
-
->[!NOTE]
->
-> * Alla formulärfält måste ha olika elementnamn, även om fälten placeras på olika paneler i ett anpassat formulär.
-> * AEM as a Cloud Service kräver att utgående e-post krypteras. Som standard är utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [Begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
-
-Du kan även bifoga bilagor och ett DoR-dokument (Document of Record) till e-postmeddelandet. Aktivera **[!UICONTROL Attach Document of Record]** konfigurerar du det adaptiva formuläret för att generera ett dokument för inspelning (DoR). Du kan aktivera alternativet att generera ett postdokument från egenskaper för anpassat formulär.
-
-
-
 <!-- ## Send PDF via Email {#send-pdf-via-email}
 
 The **Send PDF via Email** Submit Action sends an email with a PDF containing form data, to one or more recipients on successful submission of the form.
@@ -137,11 +212,7 @@ The **Submit to Forms workflow** submit option sends a data xml and file attachm
 
 For information about how to configure the Submit to forms workflow Submit Action, see [Submitting and processing your form data using forms workflows](submit-form-data-livecycle-process.md). -->
 
-## Skicka med formulärdatamodell {#submit-using-form-data-model}
 
-The **[!UICONTROL Submit using Form Data Model]** Skicka åtgärd skriver skickade adaptiva formulärdata för det angivna datamodellsobjektet i en formulärdatamodell till datakällan. När du konfigurerar åtgärden Skicka kan du välja ett datamodellsobjekt vars skickade data du vill skriva tillbaka till dess datakälla.
-
-Dessutom kan du skicka en bifogad fil med en formulärdatamodell och en DoR-fil (Document of Record) till datakällan. Mer information om formulärdatamodell finns i [[!DNL AEM Forms] Dataintegrering](data-integration.md).
 
 <!--
 ## Forms Portal Submit Action {#forms-portal-submit-action}
@@ -170,60 +241,7 @@ Innan du använder **[!UICONTROL Invoke an AEM Workflow]** Skicka åtgärd konfi
 
 * **[!UICONTROL Processing Server Password]**: Lösenord för arbetsflödesanvändare
 
-## Skicka till SharePoint {#submit-to-sharedrive}
 
-The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen. Så här använder du **[!UICONTROL Submit to SharePoint]** Skicka åtgärd i anpassad form:
-
-1. [Skapa en SharePoint-konfiguration](#create-a-sharepoint-configuration-create-sharepoint-configuration): Den kopplar AEM Forms till din Microsoft® Sharepoint-lagring.
-2. [Använda Skicka till SharePoint-åtgärden i ett anpassat formulär](#use-sharepoint-configuartion-in-af): Den kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
-
-### Skapa en SharePoint-konfiguration {#create-sharepoint-configuration}
-
-Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lagring:
-
-1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
-1. När du har valt **[!UICONTROL Microsoft® SharePoint]** omdirigeras du till **[!UICONTROL SharePoint Browser]**.
-1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
-1. Klicka på **[!UICONTROL Create]**. Konfigurationsguiden för SharePoint visas.
-   ![SharePoint-konfiguration](/help/forms/assets/sharepoint_configuration.png)
-1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
-   * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
-   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
-   * Lägg till API-behörigheter `offline_access` och `Sites.Manage.All` för att ge läs- och skrivbehörigheter.
-   * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
-
-   >[!NOTE]
-   >
-   > The **klienthemlighet** fältet är obligatoriskt eller valfritt beroende på din Azure Active Directory-programkonfiguration. Om ditt program är konfigurerat att använda en klienthemlighet är det obligatoriskt att ange klienthemligheten.
-
-1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning visas `Connection Successful` visas.
-
-1. Välj nu **SharePoint Site** > **Dokumentbibliotek** > **SharePoint-mapp**, för att spara data.
-
-   >[!NOTE]
-   >
-   >* Som standard `forms-ootb-storage-adaptive-forms-submission` finns på den valda SharePoint-webbplatsen.
-   >* Skapa en mapp som `forms-ootb-storage-adaptive-forms-submission`, om de inte redan finns i `Documents` bibliotek för den valda SharePoint-webbplatsen genom att klicka på **Skapa mapp**.
-
-Nu kan du använda den här SharePoint Sites-konfigurationen för att skicka-åtgärden i ett adaptivt formulär.
-
-### Använda SharePoint Configuration i en adaptiv form {#use-sharepoint-configuartion-in-af}
-
-Du kan använda den skapade SharePoint-konfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint-mapp. Så här använder du en SharePoint-lagringskonfiguration i ett adaptivt format:
-1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form.md).
-
-   >[!NOTE]
-   >
-   > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär där du har skapat din SharePoint-lagring.
-   > * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
-
-1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to SharePoint]**.
-   ![SharePoint GIF](/help/forms/assets/sharedrive-video.gif)
-1. Välj **[!UICONTROL Storage Configuration]**, där du vill spara dina data.
-1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
-
-När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-lagringsplatsen.
-Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
 
 ## Skicka till OneDrive {#submit-to-onedrive}
 
