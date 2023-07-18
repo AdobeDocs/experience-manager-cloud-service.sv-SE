@@ -1,6 +1,6 @@
 ---
 title: Berika produktdata med tillhörande AEM
-description: Läs om hur marknadsförare kan förbättra produktdata med tillhörande innehåll från Adobe Experience Manager. Innehåll, som resurser och Experience Fragments i AEM, kan kopplas till handelsprodukter. När du har associerat dessa innehållstyper kan de infogas dynamiskt i en platshållare på en produktsida eller kategorisida. Detta öppnar upp en rad olika möjligheter för marknadsförare att rikta in sig på en specifik produktsida med ytterligare innehåll som bilder och video.
+description: Läs om hur marknadsförare kan förbättra produktdata med tillhörande innehåll från Adobe Experience Manager genom att dynamiskt lägga till marknadsföringsinnehåll på produktsidor. Detta ger marknadsförarna en rad möjligheter att rikta in sig på specifika produktsidor med ytterligare innehåll som bilder och video.
 sub-product: Commerce
 version: Cloud Service
 doc-type: feature-video
@@ -10,10 +10,10 @@ feature: Commerce Integration Framework
 kt: 7065
 thumbnail: 333205.jpg
 exl-id: d0062779-7e90-4f09-8878-eded877580ef
-source-git-commit: f452e248f414c3304bd9d885e592ba19a53a1a65
+source-git-commit: d1fa9824375ef739e2fdb90e8fd625b43fbca77b
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 0%
+source-wordcount: '396'
+ht-degree: 1%
 
 ---
 
