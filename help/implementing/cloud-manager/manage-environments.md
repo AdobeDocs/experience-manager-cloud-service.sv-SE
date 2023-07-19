@@ -2,9 +2,9 @@
 title: Hantera miljöer
 description: Lär dig mer om de typer av miljöer du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt.
 exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: e636a765cdc1be7cb0d385089e8ccc75b798844a
 workflow-type: tm+mt
-source-wordcount: '2274'
+source-wordcount: '2558'
 ht-degree: 0%
 
 ---
@@ -172,6 +172,38 @@ När det är aktiverat kan du publicera innehåll till förhandsgranskningstjän
 >[!NOTE]
 >
 >Miljön måste vara i AEM version `2021.05.5368.20210529T101701Z` eller nyare för att använda förhandsgranskningstjänsten. Kontrollera att en uppdateringspipeline har körts korrekt i din miljö så att du kan använda förhandsgranskningstjänsten.
+
+### Status för ytterligare publiceringsregioner {#additional-region-status}
+
+Om du har aktiverat ytterligare publiceringsregioner kan du kontrollera statusen för dessa regioner från **Miljö** kort.
+
+1. På **Översikt** sidan, leta upp **Miljö** kort.
+
+1. På **Miljö** kortet, **Status** -kolumnen visar om det finns några problem med de konfigurerade ytterligare publiceringsregionerna. Klicka på **Info** -ikonen om du vill ha information om regionerna.
+
+   ![Ytterligare statusinformation om publiceringsregioner på miljökortet](assets/additional-publish-region-status-environments-card.png)
+
+Du kan även få åtkomst till samma information från **Miljö** -fliken.
+
+1. På **Översikt** väljer du **Miljö** -fliken.
+
+1. På **Miljö** väljer du den miljö som du vill fråga i den vänstra navigeringspanelen.
+
+1. När en miljö har valts:
+
+   * The **Miljöinformation** tabellen visar vilka regioner som har konfigurerats för den valda miljön.
+   * The **Status** kolumn i **Miljösegment** tabellen visar om det finns några problem med de konfigurerade ytterligare publiceringsregionerna. Håll muspekaren över statusen för att få information om eventuella problem.
+
+   ![Ytterligare statusinformation om publiceringsregioner på fliken Miljö](assets/additional-publish-region-status-environments-tab.png)
+
+Om några problem rapporteras med ytterligare publiceringsregioner:
+
+1. Var tålmodig. Cloud Manager försöker hela tiden återställa regionen och den kan bli tillgänglig när som helst.
+1. Om problemet kvarstår efter ett antal timmar kan du ta bort den extra publiceringsregionen och lägga till den igen (antingen samma region eller en annan region) för att utlösa en fullständig distribution.
+
+Hur länge du väntar på att systemet ska återställas fristående innan du vidtar ytterligare åtgärder beror på hur svårt det är för dina system.
+
+Observera att under alla omständigheter [trafiken dirigeras alltid till den närmaste regionen som är online.](/help/operations/additional-publish-regions.md) Om du fortfarande ser problem kan du kontakta Adobe kundtjänst.
 
 ## Uppdaterar miljöer {#updating-dev-environment}
 
