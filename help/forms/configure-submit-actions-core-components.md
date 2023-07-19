@@ -3,7 +3,7 @@ title: Konfigurera en Skicka-åtgärd för ett anpassat formulär
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 hide: true
 hidefromtoc: true
-source-git-commit: 8ac35abd1335b4e31a6dc0d8812cc9df333e69a4
+source-git-commit: ac9689a911be119ae53d5e1134595c567370b7c4
 workflow-type: tm+mt
 source-wordcount: '3190'
 ht-degree: 0%
@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Inlämningsåtgärd för anpassat formulär {#configuring-the-submit-action}
 
+<span class="preview"> Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md). </span>
+
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service | Den här artikeln |
+| Gäller för | ✅ adaptiva grundkomponenter, ❎ [Komponenter i adaptiv Form Foundation](/help/forms/configuring-submit-actions.md) |
 
-**Gäller för**: ✔️ adaptiva grundkomponenter ❌ [Komponenter i adaptiv Form Foundation](/help/forms/configuring-submit-actions.md). Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](create-or-add-an-adaptive-form-to-aem-sites-page.md) eller till [skapa fristående Adaptive Forms](creating-adaptive-form-core-components.md).
 
-Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär.
-
-Forms as a Cloud Service, för Adaptive Forms som bygger på Core Components, erbjuder en mängd färdiga Submit Actions. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
+Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på **[!UICONTROL Submit]** på ett adaptivt formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en mängd färdiga Submit-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
 
 * Skicka enkelt formulärdata via e-post.
 * Initiera Microsoft Power Automate-flöden eller AEM arbetsflöden när data skickas.
