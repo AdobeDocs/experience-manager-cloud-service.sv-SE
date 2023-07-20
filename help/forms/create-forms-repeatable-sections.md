@@ -2,9 +2,9 @@
 title: Repeterbarhet i adaptiv form (kärnkomponenter)
 description: Använd upprepningsfunktionen i panelkomponenterna för att upprepa liknande avsnitt i en adaptiv form.
 role: Architect, Developer, Admin, User
-source-git-commit: f7f30545b76afa6abd4f49316d0fb2245f5470c2
+source-git-commit: fcdb96a6bbe8ff8761293eedc0d38efaecb56037
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ I slutet av den här artikeln lär du dig att:
 * Ange minsta eller högsta antal upprepningar för en adaptiv formulärkomponent
 * Använd regelredigeraren för att konfigurera åtgärder för tillägg eller borttagning för repeterbara avsnitt
 
-Du kan använda [Panel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel-container.html), [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html), eller [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html) för att göra avsnitt i en adaptiv form repeterbara. Du kan lägga till underordnade komponenter till panelen, dragspelspanelen, vågräta flikar eller guidekomponenter för att skapa upprepningsbart avsnitt i ett formulär.
+Du kan använda [Panel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel-container.html), [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html), eller [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html) -komponenter för att göra avsnitt i en adaptiv form repeterbara. Du kan lägga till underordnade komponenter till panelen, dragspelspanelen, vågräta flikar eller guidekomponenter för att skapa upprepningsbart avsnitt i ett formulär.
 
 
 Exemplen i det här dokumentet är baserade på [Panel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel-container.html) -komponenten. Du kan utföra identiska steg för att göra [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html)och [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html) komponenter repeterbara.
@@ -131,7 +131,11 @@ Panelens överordnade panel bör innehålla en borttagningsknapp för att ta bor
 >`Panel1.instanceManager.instances[1].textbox.value`
 >
 >
->Mer information finns i: Klass: InstanceManager#instances i [AEM Forms Java API-referens](https://adobe.com/go/learn_aemforms_documentation_63).
+>
+
+<!-- 
+>For more information, see: Class: InstanceManager#instances in [AEM Forms Java API reference](https://adobe.com/go/learn_aemforms_documentation_63).      
+-->
 
 >[!NOTE]
 >
@@ -221,7 +225,7 @@ I följande kod visas `SampleType`I panelen används egenskapen minOcCours och m
 ```
 
 
-## relaterade artiklar
+## Relaterade artiklar
 
 * [Skapa ett adaptivt formulär](creating-adaptive-form-core-components.md)
 * [Skapa stilar eller teman för formulären](using-themes-in-core-components.md)
