@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: b9b9cf79173a0ae486bd5d8fcbc1fec48c0b2bc8
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -67,10 +67,6 @@ Du börjar med GraphQL Explorer på en ny flik. Här kan du skapa och validera f
    ![Listfråga](assets/do-not-localize/list-query-1-3-4-5.png)
 
 Du har just validerat en listfråga för en fullständig lista över alla innehållsfragment. Den här processen bidrar till att säkerställa att svaret blir vad din app förväntar sig, med resultat som visar hur dina appar och webbplatser kommer att hämta innehåll som skapas i AEM.
-
->[!NOTE]
->
->Om du inte kan välja **AEM demoresurser** från listrutan, kontakta Adobe Customer Care eller kontakta [AEM testversioner Slack channel.](https://adobe-dx-support.slack.com/)
 
 ## Fråga efter en viss del av exempelinnehållet {#bypath-query}
 

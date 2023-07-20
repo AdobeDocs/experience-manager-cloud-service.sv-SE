@@ -4,9 +4,9 @@ description: Upptäck hur du hämtar JSON-innehåll från testmiljön med exempe
 hidefromtoc: true
 index: false
 exl-id: b7dc70f2-74a2-49f7-ae7e-776eab9845ae
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: b9b9cf79173a0ae486bd5d8fcbc1fec48c0b2bc8
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Klicka på **Starta exempelappen CodePen** från testversionen tar dig till prog
           ...
 ```
 
-Om du får ett felmeddelande i stället bör du kontrollera webbläsarkonsolen för mer information eller kontakta [på Slack](https://adobe-dx-support.slack.com).
+Om du får ett felmeddelande i stället bör du kontrollera webbläsarkonsolen för mer information eller kontakta [via e-post](mailto:aem-headless-trials-support@adobe.com?subject=AEM%20Trials%20support%20request).
 
 Nu när du känner till lite om CodePen konfigurerar du appen så att den hämtar data från den beständiga fråga du skapade i en tidigare modul.
 
@@ -92,7 +92,7 @@ På rad 25 anger du från vilken GraphQL beständig fråga appen ska hämta data
    persistedQueryName = 'your-project/adventure-list';
    ```
 
-1. När den här ändringen har gjorts bör programmet uppdatera automatiskt och skriva ut det råa JSON-svaret från din beständiga fråga till `#output` div. Om du ser ett felmeddelande bör du kontrollera konsolen för mer information. Nå ut [på Slack](https://adobe-dx-support.slack.com) om du fortfarande har problem med det här steget.
+1. När den här ändringen har gjorts bör programmet uppdatera automatiskt och skriva ut det råa JSON-svaret från din beständiga fråga till `#output` div. Om du ser ett felmeddelande bör du kontrollera konsolen för mer information. Nå ut [via e-post](mailto:aem-headless-trials-support@adobe.com?subject=AEM%20Trials%20support%20request) om du fortfarande har problem med det här steget.
 
 1. Innehåller denna JSON exakt de egenskaper som din app behöver? Om inte, gå tillbaka till [Extrahera innehåll med GraphQL API](https://experience.adobe.com/experiencemanager/learn/extract_content_using_graphql) utbildningsguide för att göra ändringar. Glöm inte att spara och publicera frågan när du är klar.
 
