@@ -1,22 +1,22 @@
 ---
-title: Universal Editor
-description: Utforska den universella redigeraren och se hur den gör det möjligt för alla att redigera olika delar av innehållet i alla implementeringar.
+title: Redigera kontext
+description: Se hur du kan använda den universella redigeraren för att redigera olika delar av innehållet på plats och i sitt sammanhang i alla implementeringar.
 hidefromtoc: true
 index: false
-source-git-commit: 372e9c6a10f7769c0db52d5909f400ce5af84b85
+source-git-commit: 4dd0998862baf3e1d0c8ed2d42006acfcf5d0873
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
 
 
-# Universal Editor {#universal-editor}
+# Redigera kontext {#editing-in-context}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor"
->title="Universell redigerare"
->abstract="Se hur era headless-appar kan påverka den universella redigeraren så att era författare kan använda lättanvända redigeringsfunktioner i sitt sammanhang."
+>title="Redigera i sitt sammanhang"
+>abstract="Se hur era headless-appar kan utnyttja den universella redigeraren för att ge era författare lättanvända redigeringar i sitt sammanhang."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor_guide"
@@ -25,18 +25,38 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor_guide_footer"
->title="I den här modulen lärde du dig att anpassa innehåll med den universella redigeraren."
+>title="I den här modulen lärde du dig att anpassa innehåll i sitt sammanhang och på plats med den universella redigeraren."
 >abstract=""
 
-## Använd emulatorn för att se ditt innehåll som Reader gör {#emulators}
+## Redigera kontext i text {#edit-text}
 
-Med den universella redigeraren kan du interagera med innehållet i dess sammanhang, se innehållet så som det levereras till slutanvändarna och redigera det på plats.
+Att redigera på plats och i sitt sammanhang kan ofta vara fördelaktigt jämfört med strukturerad redigering av headless-innehåll, som i Content Fragment-redigeraren, som du såg i tidigare moduler.
 
-1. Den universella redigeraren visar innehållet som läsarna kommer att se det, oavsett enhet. Som standard återger redigeraren skrivbordsversionen av ditt innehåll. Tryck eller klicka på emulatorknappen längst upp till höger i redigeraren för att ändra målenheten.
+Med den universella redigeraren kan du smidigt redigera text i sitt sammanhang och på plats, vilket gör att du enkelt och intuitivt kan skapa innehåll.
+
+1. Redigeraren bör läsas in som standard i **Text** läge. Om inte, tryck eller klicka på **Text** i fältet mode till vänster om redigeraren.
+
+1. Tryck eller klicka på titeln för den senaste artikeln för att redigera den.
+
+   ![Universell redigerare](assets/do-not-localize/ue-text-mode.png)
+
+1. Komponenten markeras enligt en blå kant med en tabb som anger att det är en textkomponent. Det finns en markör i kanten som väntar på textinmatning. Ändra texten till `Aloha Spirit in Lofoten`.
+
+   ![Redigera text i den universella redigeraren](assets/do-not-localize/ue-edit-text-2.png)
+
+1. Tryck på Enter eller tryck eller klicka utanför textkomponenten så sparas ändringarna automatiskt.
+
+Den universella redigeraren sparar ändringarna automatiskt i redigeringsmiljön. Du måste fortfarande publicera dem så att läsarna kan se dem, vilket vi gör i ett senare steg.
+
+## Upplev ert innehåll som er Reader {#emulators}
+
+Med den universella redigeraren kan du interagera med ditt innehåll i dess sammanhang och se innehållet så som det levereras till användarnas enheter.
+
+1. Som standard återger redigeraren skrivbordsversionen av ditt innehåll. Tryck eller klicka på emulatorknappen längst upp till höger i redigeraren för att ändra målenheten.
 
    ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-1.png)
 
-1. Reader kan finnas på olika enheter med olika proportioner, så redigeraren har emuleringslägen. Om du vill se hur sidan visas för användare på en mobil enhet väljer du alternativet för den mobila enheten i stående läge.
+1. Reader kan finnas på olika enheter med olika proportioner, så redigeraren erbjuder emuleringslägen för att se hur sidan kommer att visas för användarna. Välj till exempel alternativet för mobil enhet i stående läge.
 
    ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-3.png)
 
@@ -46,49 +66,42 @@ Med den universella redigeraren kan du interagera med innehållet i dess sammanh
 
 Du kan också ange exakta dimensioner för emulatorn och rotera den emulerade enheten för att kunna visa innehållet på valfri målenhet.
 
-## Redigera text i kontext {#edit-text}
-
-Du kan redigera texten i sitt sammanhang och på plats, vilket gör det enkelt och intuitivt att skapa innehåll.
-
-1. Tryck eller klicka på titeln för den senaste artikeln för att redigera den.
-
-1. Komponenten markeras enligt en blå kant med en tabb som anger att det är en textkomponent. Det finns en markör i kanten som väntar på textinmatning. Ändra texten till `Aloha Spirit in Lofoten`.
-
-   ![Redigera text i den universella redigeraren](assets/do-not-localize/ue-edit-text-2.png)
-
-1. Tryck på Enter eller tryck eller klicka utanför textkomponenten så sparas ändringarna automatiskt.
-
-Den universella redigeraren sparar dina ändringar automatiskt, men de sparas bara i redigeringsmiljön. Du måste fortfarande publicera dem så att läsarna kan se dem.
-
 ## Förhandsgranska och publicera {#preview}
 
-Redigeraren återger sammanhanget så som läsarna kommer att se det. Eftersom du behöver trycka eller klicka på innehållet för att markera det, kan du inte följa länkar eller interagera med innehållet genom att trycka eller klicka i redigeraren. I förhandsgranskningsläget kan du uppleva innehållet som det kommer att publiceras före publiceringen.
+Eftersom du behöver trycka eller klicka på innehållet för att markera det i redigeraren kan du inte följa länkar eller interagera med innehållet genom att trycka eller klicka när det är i redigeringsläge. I förhandsgranskningsläget kan du följa länkarna i ditt innehåll och uppleva det som användarna gör innan de publicerar det.
 
 1. Tryck eller klicka i fältet mode till vänster om redigeraren **Förhandsgranska**.
 
-1. Sidan öppnas i förhandsgranskningsläge på en ny flik i webbläsaren.
+1. Tryck eller klicka på **Läs mer** för huvudartikeln.
 
-1. Granska ändringarna och om allt ser bra ut går du tillbaka till fliken Universal Editor i webbläsaren och trycker eller klickar **Publicera**.
+   ![Förhandsgranskningsläge](assets/do-not-localize/ue-preview-publish-1.png)
 
-   ![Förhandsgranska och publicera menyalternativ](assets/do-not-localize/ue-preview-publish.png)
+1. Bläddra i artikeln och använd sedan **Bakåt** för att gå tillbaka till huvudsidan.
+
+   ![Återgå till huvudsidan med hjälp av länken Bakåt](assets/do-not-localize/ue-preview-publish-3.png)
+
+1. Tryck eller klicka på **Publicera** längst upp till höger i redigeraren för att publicera ditt innehåll.
+
+   ![Förhandsgranska och publicera menyalternativ](assets/do-not-localize/ue-preview-publish-4.png)
 
 Ditt innehåll publiceras.
 
 ## Redigera innehållsfragment {#editing-fragments}
 
-Den universella redigeraren ger dig också snabb tillgång till innehållsfragmentsredigeraren så att du kan skapa innehåll snabbare.
+För att snabba upp redigeringen av innehåll när strukturerad redigering av headless-innehåll är mer fördelaktig än redigering på plats, ger den universella redigeraren snabb åtkomst även till Content Fragment-redigeraren.
 
 1. Bläddra längre ned på sidan till sidan **Annonser** -avsnitt.
 
 1. Välj **Komponenter**. På så sätt kan du välja sidkomponenter i redigeraren.
 
-1. Tryck eller klicka på någon av äventyren för att markera den. En ny **Redigera** visas på skrivlisten.
+1. Tryck eller klicka på någon av äventyren för att markera den.
 
-   * Lägg märke till den blå konturen. Fliken ska vara **referens** när ett innehållsfragment är markerat.
-   * Eftersom det går att markera ett objekt på sidan i den universella redigeraren kan komponenter som delar av ett innehållsfragment också markeras individuellt.
+   * Observera den markerade komponentens blå kontur. Fliken ska vara **referens** när ett innehållsfragment är markerat.
+   * Eftersom den universella redigeraren tillåter att du markerar ett objekt på sidan, kan komponenter som är delar av ett innehållsfragment också markeras individuellt. Tryck eller klicka där det visas på bilden för att markera hela komponenten för innehållsfragment.
 
-   ![Markera innehållsfragment i den universella redigeraren](assets/do-not-localize/ue-content-fragments.png)
+1. En ny **Redigera** visas på skrivlisten. Tryck eller klicka på **Redigera** om du vill öppna redigeraren för innehållsfragment på en ny flik.
 
-1. Tryck eller klicka på **Redigera** -ikonen i fältet mode för att öppna redigeraren för innehållsfragment på en ny flik.
+![Markera innehållsfragment i den universella redigeraren](assets/do-not-localize/ue-content-fragments.png)
+
 
 På den nya fliken kan du nu redigera det innehållsfragment du har valt i den universella redigeraren.

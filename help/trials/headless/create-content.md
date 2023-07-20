@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 91e9711e10a7aa8e3c7fa0b4cc25a098741e53b1
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content"
->title="Skapa nytt innehåll"
+>title="Skapa headless-innehåll"
 >abstract="Med hjälp av den modell du skapade i den tidigare modulen får du lära dig hur du skapar innehåll som kan användas för att skapa sidor, eller som bas för det rubrikfria innehållet."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content_guide"
 >title="Starta konsolen för innehållsfragment"
->abstract="Att skapa enhetligt, högkvalitativt innehåll som fungerar smidigt i alla era appar och webbplatser leder till enastående kundupplevelser. I den här modulen får du hjälp med att skapa ditt första innehållsfragment som visar hur du får det att fungera.<br><br>Starta den här modulen på en ny flik genom att klicka på knappen nedan och följ sedan den här guiden."
+>abstract="Att skapa enhetligt, högkvalitativt innehåll som fungerar smidigt i alla era appar och webbplatser leder till enastående kundupplevelser. Med den här modulen får du hjälp att skapa ditt första innehåll utan rubrik med hjälp av konsolen för innehållsfragment.<br><br>Starta den här modulen på en ny flik genom att klicka på knappen nedan och följ sedan den här guiden."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content_guide_footer"
->title="Bra jobbat! I den här modulen lärde du dig att skapa ett innehållsfragment baserat på den modell du skapade tidigare. Ni förstår nu hur innehållsteam kan skapa och hantera innehåll för appar och webbplatser oberoende av utvecklingscyklerna."
+>title="Bra jobbat! I den här modulen lärde du dig att skapa rubrikfritt innehåll som ett innehållsfragment baserat på den tidigare modellen. Ni förstår nu hur innehållsteam kan skapa och hantera innehåll för appar och webbplatser oberoende av utvecklingscyklerna."
 >abstract=""
 
 ## Skapa ett innehållsfragment {#create-fragment}
@@ -34,6 +34,8 @@ ht-degree: 0%
 Innehållsfragment representerar ditt headless-innehåll och baseras på fördefinierade strukturer, som kallas modeller för innehållsfragment. Du har redan skapat en modell i en tidigare modul.
 
 I den här modulen skapar du ett nytt innehållsfragment baserat på den modellen med hjälp av konsolen Innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
+
+Konsolen för innehållsfragment används för att skapa och redigera headless-innehåll i olika distributionskanaler och oberoende av sammanhang, vilket kan vara den mest effektiva metoden i många fall. I en senare modul kommer vi att utforska redigering av headless-innehåll på plats och i sitt sammanhang.
 
 1. Tryck eller klicka på **Skapa** längst upp till höger på konsolen.
 
