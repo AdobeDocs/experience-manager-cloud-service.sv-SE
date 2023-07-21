@@ -2,9 +2,9 @@
 title: Översätt en huvudkomponentbaserad adaptiv form
 description: Använd maskinöversättning eller mänsklig översättning för att översätta en grundläggande komponentbaserad adaptiv form
 feature: Adaptive Forms
-source-git-commit: a33b380570210a32f4a4a1f26c9a2fe37c885bb1
+source-git-commit: 8c125d834ebfff5601f56646d59ce00a80fcc0ba
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Utför följande steg för att lokalisera ett formulär och dess urkunder med pe
 1. Längst ned på **Sammanfattning** platta, klicka på **ellipser**. Skärmen Egenskaper för översättningsprojekt öppnas.
 1. Öppna **[!UICONTROL Advanced]** överst på **Egenskaper för översättningsprojekt** skärm. För **[!UICONTROL Translation field]**, markera **[!UICONTROL Human Translation]**. Klicka **Spara och stäng** längst upp på skärmen.
 1. På **Översättningsjobb** platta, klicka på ![aem62forms_down](assets/aem62forms_downarrow.png) och klicka **Exportera**. I dialogrutan Exportera klickar du på alternativet Hämta exporterad fil. Den hämtar en ZIP-fil.
-   ![](/help/forms/assets/adaptive-forms-core-components-start-translation-export.png)
+   ![Exportera översättningsfil](/help/forms/assets/adaptive-forms-core-components-start-translation-export.png)
 1. Extrahera den hämtade ZIP-filen. Den extraherade mappen har två filer:
    * translation_export_summary.xml
    * [form-fields-file].xml.
@@ -79,6 +79,6 @@ Utför följande steg för att lokalisera ett formulär och dess urkunder med pe
 1. Zippa filerna som translation_export_summary.xml och [form-fields-file].xml.
 1. På **Översättningsjobb** platta, klicka på ![aem62forms_down](assets/aem62forms_downarrow.png) och klicka **Importera**. Välj arkivet som innehåller [form-fields-file].xml. med lokaliserade strängar och meddelanden för formulärfält.
 
-   ![](/help/forms/assets/adaptive-forms-core-components-start-translation-import.png)
+   ![Importera översättningsfil](/help/forms/assets/adaptive-forms-core-components-start-translation-import.png)
 
 1. Om du vill förhandsgranska det lokaliserade formuläret väljer du det lokaliserade formuläret i användargränssnittet i AEM Forms. Klicka på **[!UICONTROL Preview]** >**[!UICONTROL Preview as HTML]**. Öppna formuläret igen när du har lagt till `afAcceptLang=<locale code>` till formulärets URL. Lägg till exempel `afAcceptLang=de`för att öppna den tyska versionen av formuläret.
