@@ -2,12 +2,13 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: 05554f397a843ede5a723b206b6e0748e2d6ba96
+source-git-commit: 481202760e0d22cde9c32e0b781dc99f67d463e4
 workflow-type: tm+mt
-source-wordcount: '1682'
+source-wordcount: '1939'
 ht-degree: 0%
 
 ---
+
 
 # Skapa innehåll med den universella redigeraren {#authoring}
 
@@ -141,7 +142,7 @@ Du kan också välja att emulera en mobil enhet och i Universell redigerare:
 
 #### Öppna programförhandsgranskning {#open-app-preview}
 
-Tryck eller klicka på ikonen för att öppna appförhandsgranskning för att öppna sidan som du redigerar i en egen webbläsare, utan redigeraren, för att förhandsgranska ändringarna.
+Tryck eller klicka på ikonen för att öppna förhandsgranskning av program för att öppna sidan som du redigerar på en egen webbläsarflik, utan redigeraren, för att förhandsgranska innehållet.
 
 ![Öppna appförhandsgranskning](assets/open-app-preview.png)
 
@@ -177,9 +178,12 @@ I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i
 
 #### Textläge {#text-mode}
 
-I textläge återges sidan i redigeraren, men innehållsförfattaren kan klicka för att markera textinnehåll och redigera det. Det här är standardläget för redigeraren när en sida läses in.
+I textläge kan innehållsförfattaren klicka för att markera textinnehåll.
 
 ![Textläge](assets/text-mode.png)
+
+* Du kan [redigera oformaterad text](#editing-content) på plats.
+* Du kan också [redigera RTF-text](#editing-rich-text) på plats med ytterligare formateringsalternativ som visas i komponentspåret.
 
 >[!TIP]
 >
@@ -187,9 +191,11 @@ I textläge återges sidan i redigeraren, men innehållsförfattaren kan klicka 
 
 #### Medieläge {#media-mode}
 
-I medieläge återges sidan i redigeraren, men författaren kan klicka för att välja mediainnehåll och redigera det.
+I medieläge kan innehållsförfattaren klicka för att välja medieinnehåll.
 
 ![Medieläge](assets/media-mode.png)
+
+Information om innehållet visas i komponentfältet och författaren kan också [redigera medieinnehållet.](#editing-media)
 
 >[!TIP]
 >
@@ -197,11 +203,11 @@ I medieläge återges sidan i redigeraren, men författaren kan klicka för att 
 
 #### Komponentläge {#component-mode}
 
-I komponentläget återges sidan i redigeraren, men innehållsförfattaren kan klicka för att markera sidkomponenter.
+I komponentläget kan innehållsförfattaren klicka för att välja [Innehållsfragment.](/help/assets/content-fragments/content-fragments.md)
 
 ![Komponentläge](assets/component-mode.png)
 
-När du väljer ett innehållsfragment visas information om det i [komponentskena.](#component-rail)
+När du väljer ett innehållsfragment visas detaljerna om det i komponentlisten där du kan [redigera innehållsfragmentet.](#edit-content-fragment)
 
 >[!TIP]
 >
@@ -209,11 +215,13 @@ När du väljer ett innehållsfragment visas information om det i [komponentsken
 
 #### Redigera {#edit}
 
-När [komponentläge,](#component-mode) Om du väljer ett innehållsfragment visas redigeringsalternativet på lägeslisten.
+När [komponentläge,](#component-mode) om du väljer en [Innehållsfragment,](/help/assets/content-fragments/content-fragments.md) redigeringsalternativet visas på skrivlisten.
 
 ![Ikonen Redigera](assets/edit.png)
 
-Om du trycker eller klickar på redigeringsknappen öppnas redigeringsprogrammet för innehållsfragment på en ny flik, vilket gör att du kan redigera refererat innehåll samt text och mediainnehåll från den universella redigeraren.
+Om du trycker eller klickar på redigeringsknappen öppnas knappen [Redigera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) på en ny flik, som ger dig tillgång till den fulla kraften i Content Fragment Editor.
+
+Du kan även redigera detaljer för innehållsfragmentet i dialogrutan [komponenträl](#edit-content-fragment) beroende på arbetsflödets behov.
 
 >[!TIP]
 >
@@ -223,7 +231,7 @@ Om du trycker eller klickar på redigeringsknappen öppnas redigeringsprogrammet
 
 Redigeraren tar upp större delen av fönstret och är där sidan som anges i [platsfältet](#location-bar) återges.
 
-* Om redigeraren är i ett redigeringsläge som [textläge](#text-mode) eller [medieläge,](#media-mode) innehållet kan redigeras och du kan inte följa länkar.
+* Om redigeraren är i ett redigeringsläge som [textläge](#text-mode) eller [medieläge,](#media-mode) innehållet kan redigeras, men du kan inte följa länkar.
 * Om redigeraren är i [förhandsgranskningsläge,](#preview-mode) innehållet kommer att kunna navigeras och du kan följa länkar, men du kan inte redigera innehållet.
 
 ![Redigerare](assets/editor.png)
@@ -240,11 +248,11 @@ I egenskapsläget visar rälen egenskaperna för den komponent som är markerad 
 
 ![Egenskapsläge](assets/properties-mode.png)
 
-Information om den valda komponenten visas i listen. Om du har valt ett innehållsfragment med hjälp av [komponentläge,](#component-mode) Du kan ändra inställningarna i komponenträlen. Ändringarna sparas automatiskt av den universella redigeraren.
+Beroende på vilken typ av komponent du väljer kan information visas och ändras i egenskapsfältet.
 
 ![Komponentinformation](assets/component-details.png)
 
-Observera att inte alla komponenter har information som kan visas.
+Observera att inte alla komponenter har information som kan visas och/eller redigeras.
 
 >[!TIP]
 >
@@ -271,17 +279,59 @@ Det är enkelt och intuitivt att redigera innehåll. I redigeringslägen ([textl
 
 ![Redigerbart innehåll markeras med en blå ruta](assets/editable-content.png)
 
-Tryck eller klicka bara på innehållet i den blå rutan för att starta en redigerare på plats och göra ändringarna. Ändringarna sparas automatiskt.
+Observera att när du trycker eller klickar på innehåll i redigeringsläge görs ett försök att markera det för redigering. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
+
+Beroende på [läge](#mode-rail) du befinner dig i och det innehåll du väljer kan ha olika redigeringsalternativ och du kan granska ytterligare egenskaper för innehållet med hjälp av [komponentskena.](#component-rail)
+
+### Redigera oformaterad text {#edit-plain-text}
+
+Om du är [textläge](#text-mode) och väljer en oformaterad textkomponent kan du redigera texten på plats.
 
 ![Redigera innehåll](assets/editing-content.png)
 
-Observera att när du trycker eller klickar på innehåll i redigeringsläge görs ett försök att markera det för redigering. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
+Skriv bara för att uppdatera innehållet. Tryck på Enter eller tryck eller klicka utanför textrutan för att spara ändringarna.
 
-Beroende på [läge](#mode-rail) om du befinner dig i och det innehåll du väljer kan ha olika redigeringsalternativ.
+### Redigera RTF {#edit-rich-text}
 
-Dessutom kan du granska ytterligare egenskaper för innehållet med [komponentskena.](#component-rail) Om du till exempel markerar en RTF-komponent kan du redigera formateringsalternativ i komponentens rand.
+Om du är [textläge](#text-mode) och markerar en RTF-komponent kan du redigera texten på plats.
+
+Skriv bara för att uppdatera innehållet. Tryck på Enter eller tryck eller klicka utanför textrutan för att spara ändringarna.
+
+Dessutom är formateringsalternativ och information på texten tillgängliga i komponentspåret.
 
 ![Redigera en RTF-komponent](assets/rich-text-editing.png)
+
+Formateringsändringar sparas automatiskt i innehållet.
+
+### Redigera media {#edit-media}
+
+Om du är [medieläge](#media-mode) och du markerar en bild kan du visa information om den i komponenträlen.
+
+![Redigera media](assets/ue-edit-media.png)
+
+Tryck eller klicka på **Ersätt** under förhandsgranskningen av den markerade bilden i komponentlisten för att ersätta bilden med en annan bild från ditt resursbibliotek.
+
+1. The [resursväljare](/help/assets/asset-selector.md#using-asset-selector) öppnas så att du kan välja en resurs.
+1. Tryck eller klicka för att välja en ny resurs.
+1. Tryck eller klicka **Välj** för att återgå till den del av järnvägen där tillgången ersattes.
+
+Ändringarna sparas automatiskt i innehållet.
+
+>[!TIP]
+>
+>Använda snabbtangenten `R` om du vill öppna resursväljaren och ersätta den markerade bilden.
+
+### Redigera innehållsfragment {#edit-content-fragment}
+
+Om du är [komponentläge](#component-mode) och du väljer [Innehållsfragment,](/help/assets/content-fragments/content-fragments.md) du kan redigera informationen i komponenterna.
+
+![Redigera ett innehållsfragment](assets/ue-edit-cf.png)
+
+De fält som definieras i innehållsmodellen för det valda innehållsfragmentet visas och kan redigeras i komponentfältet.
+
+Ändringarna sparas automatiskt i innehållet.
+
+Om du vill redigera ditt innehållsfragment i dialogrutan [Redigera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) i stället klickar du på [redigeringsknapp](#edit) i lägesrälen.
 
 ## Förhandsgranska innehåll {#previewing-content}
 
