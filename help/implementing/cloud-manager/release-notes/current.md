@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2023.7.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2023.7.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 1b46f763903a1b103837ed7e8cc498ad08ce64f1
+source-git-commit: 2721cb20083eeda7546513817f1ddfe12e9cb43a
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,8 @@ Releasedatum för Cloud Manager version 2023.7.0 i AEM as a Cloud Service är 29
    * Detta kommer att introduceras stegvis.
 * När [avbryta utförande,](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) godkännandesteget för pipeline-körningen ber nu användaren ange en orsak till att den avbryts.
    * Detta kommer att introduceras stegvis.
+* Användarna har nu åtkomst [loggar från innehållsprocessen.](/help/implementing/developing/tools/content-copy.md#accessing-logs)
+   * Det här alternativet är bara tillgängligt om både käll- och målmiljöerna är i AEM version `2023.7.12549` eller senare.
 
 ## Felkorrigeringar {#bug-fixes}
 

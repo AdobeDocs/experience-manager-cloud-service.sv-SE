@@ -2,12 +2,13 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
 exl-id: f060821d-d559-45d2-b3b1-1b2277694ec4
-source-git-commit: f08048b2378b150210a3fd1168206f4efb0c4f8e
+source-git-commit: f579539d582e2059fca20f9f7e5e82f4ae24c833
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
+
 
 # Verktyget Innehållskopia {#content-copy}
 
@@ -40,6 +41,8 @@ Om du vill använda verktyget för innehållskopiering krävs vissa behörighete
 |---|---|---|
 | Skapa och ändra [innehållsuppsättningar](#create-content-set) | Obligatoriskt | Krävs inte |
 | Starta eller avbryta [innehållskopia](#copy-content) | Obligatoriskt | Obligatoriskt |
+
+Mer information om behörigheter och hur du ställer in dem finns i dokumentet [AEM as a Cloud Service team och produktprofiler.](/help/onboarding/aem-cs-team-product-profiles.md)
 
 ## Skapa en innehållsuppsättning {#create-content-set}
 
@@ -174,6 +177,16 @@ Om du vill göra det går du till **Kopiera innehållsaktivitet** väljer du **A
 >När du avbryter en innehållskopia kan det resultera i en partiell kopia av innehållet i målmiljön. Detta kan göra att målmiljön inte kan användas.
 >
 >Om din miljö är i ett sådant läge på grund av att du har upphört kontaktar du Adobe kundtjänst för att få hjälp.
+
+### Åtkomst till loggar {#accessing-logs}
+
+Du kan kontrollera loggarna för både käll- och målmiljöer för att se om det finns några slutförda innehållskopieringsprocesser.
+
+Om du vill göra det går du till **Kopiera innehållsaktivitet** väljer du **Loggar** åtgärden på ellipsmenyn i kopieringsprocessen som du vill granska loggarna för och sedan välja för vilken miljö.
+
+![Åtkomst till loggar för innehållskopiering](assets/copy-content-logs.png)
+
+Loggarna hämtas till din lokala dator. Om nedladdningen inte startar kontrollerar du inställningarna för blockering av popup-fönster.
 
 ## Begränsningar {#limitations}
 
