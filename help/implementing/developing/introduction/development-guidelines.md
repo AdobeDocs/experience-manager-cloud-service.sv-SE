@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: f69b348b7de6c6537a9945793e3397bf4fe30f98
 workflow-type: tm+mt
-source-wordcount: '2586'
+source-wordcount: '2655'
 ht-degree: 1%
 
 ---
@@ -66,6 +66,13 @@ Alternativ som är kända för att fungera, men som kan kräva att du själv ang
 * [OK HTTP](https://square.github.io/okhttp/) (Tillhandahålls inte av AEM)
 
 Förutom att tillhandahålla timeout bör även en korrekt hantering av sådana tidsgränser och oväntade HTTP-statuskoder implementeras.
+
+## Hantera hastighetsbegränsningar för begäranden {#rate-limit-handling}
+
+>[!NOTE]
+>HTTP-felsvaret ändras från 503 till 429 under veckan 7 augusti 2023.
+>
+När antalet inkommande begäranden som ska AEM överstiger felfria nivåer, svarar AEM på nya begäranden med HTTP-felkod 429. Program som anropar programmatiska AEM kan överväga att koda på ett defensivt sätt och försöka igen efter några sekunder med en exponentiell bakåtstrategi. Före mitten av augusti 2023 svarade AEM på samma villkor med HTTP-felkod 503.
 
 ## Inga klassiska gränssnittsanpassningar {#no-classic-ui-customizations}
 
