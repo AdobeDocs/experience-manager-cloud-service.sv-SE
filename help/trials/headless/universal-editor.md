@@ -1,22 +1,22 @@
 ---
-title: Redigera kontext
+title: Redigera i sammanhang
 description: Se hur du kan använda den universella redigeraren för att redigera olika delar av innehållet på plats och i sitt sammanhang i alla implementeringar.
 hidefromtoc: true
 index: false
-source-git-commit: 4dd0998862baf3e1d0c8ed2d42006acfcf5d0873
+source-git-commit: 9826041962a3a0065feb676b07304ba30d23d2e9
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
 
 
-# Redigera kontext {#editing-in-context}
+# Redigera i sammanhang {#editing-in-context}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor"
 >title="Redigera i sitt sammanhang"
->abstract="Se hur era headless-appar kan utnyttja den universella redigeraren för att ge era författare lättanvända redigeringar i sitt sammanhang."
+>abstract="Se hur era headless-appar kan utnyttja den universella redigeraren för att ge dina författare lättanvända kontextredigeringar."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor_guide"
@@ -28,11 +28,15 @@ ht-degree: 0%
 >title="I den här modulen lärde du dig att anpassa innehåll i sitt sammanhang och på plats med den universella redigeraren."
 >abstract=""
 
-## Redigera kontext i text {#edit-text}
+## Redigera text i kontext {#edit-text}
 
-Att redigera på plats och i sitt sammanhang kan ofta vara fördelaktigt jämfört med strukturerad redigering av headless-innehåll, som i Content Fragment-redigeraren, som du såg i tidigare moduler.
+Redigering på plats och i sitt sammanhang kan ofta vara fördelaktigt jämfört med strukturerad redigering av headless-innehåll, som i Content Fragment-redigeraren, som du såg i tidigare moduler.
 
-Med den universella redigeraren kan du smidigt redigera text i sitt sammanhang och på plats, vilket gör att du enkelt och intuitivt kan skapa innehåll.
+>[!NOTE]
+>
+>Om du vill använda den universella redigeraren i den här testversionen måste du använda Chrome som webbläsare och inte i Incognito-läge. Detta är en begränsning av testversionen, inte av Universal Editor.
+
+Med den universella redigeraren kan du smidigt redigera text både i sitt sammanhang och på plats, vilket gör det enkelt och intuitivt att skapa innehåll.
 
 1. Redigeraren bör läsas in som standard i **Text** läge. Om inte, tryck eller klicka på **Text** i fältet mode till vänster om redigeraren.
 
@@ -47,6 +51,26 @@ Med den universella redigeraren kan du smidigt redigera text i sitt sammanhang o
 1. Tryck på Enter eller tryck eller klicka utanför textkomponenten så sparas ändringarna automatiskt.
 
 Den universella redigeraren sparar ändringarna automatiskt i redigeringsmiljön. Du måste fortfarande publicera dem så att läsarna kan se dem, vilket vi gör i ett senare steg.
+
+## Redigera media i kontext {#edit-media}
+
+Du kan också byta ut bilder samtidigt som du behåller innehållet genom att använda den universella redigeraren.
+
+1. Ändra redigeraren till **Media** genom att trycka på eller klicka på **Media** på skrivskenan.
+
+1. Tryck eller klicka på surfarens bild för att markera den.
+
+1. I komponentspåret kan du se detaljerna för resursen. Tryck eller klicka **Ersätt**.
+
+   ![Markera en bild som ska redigeras](assets/do-not-localize/ue-edit-media.png)
+
+1. I **Välj resurser** bläddra nedåt och tryck eller klicka på `surfer-wave-02.JPG` för att markera den.
+
+1. Tryck eller klicka **Välj** i **Välj resurser** -fönstret.
+
+   ![Använda fönstret Välj resurs för att välja en bild](assets/do-not-localize/ue-select-asset.png)
+
+Bilden ersätts med den bild du har markerat.
 
 ## Upplev ert innehåll som er Reader {#emulators}
 
@@ -102,6 +126,5 @@ För att snabba upp redigeringen av innehåll när strukturerad redigering av he
 1. En ny **Redigera** visas på skrivlisten. Tryck eller klicka på **Redigera** om du vill öppna redigeraren för innehållsfragment på en ny flik.
 
 ![Markera innehållsfragment i den universella redigeraren](assets/do-not-localize/ue-content-fragments.png)
-
 
 På den nya fliken kan du nu redigera det innehållsfragment du har valt i den universella redigeraren.
