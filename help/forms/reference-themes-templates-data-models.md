@@ -4,14 +4,16 @@ seo-title: Reference Themes, Templates, and Form Data models
 description: AEM Forms tillhandahåller adaptiva formulärteman, mallar och formulärdatamodeller som du kan hämta från Software Distribution
 seo-description: AEM Forms provides adaptive forms themes, templates, and form data models that you can get from Software Distribution
 exl-id: 81588759-22da-4123-92fe-5ca97e97f1e4
-source-git-commit: 9cff6e94b38016f008fd8177be2e071a530d80b6
+source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
 
 # Referensteman, mallar och formulärdatamodeller {#reference-themes-templates-and-data-models}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 AEM Forms as a Cloud Service innehåller flera referensteman, mallar och formulärdatamodeller som hjälper dig att snabbt komma igång med att skapa Adaptiv Forms. Du kan ladda ned [referera till innehållspaket från programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip) och använder [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) för att installera [referensinnehållspaket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip) i din produktions-, utvecklings- eller lokala utvecklingsmiljö för att få dessa referensresurser till din miljö.
 
@@ -22,11 +24,11 @@ De teman, mallar och formulärdatamodeller som ingår i referensinnehållspakete
 ---------|----------|---------
 | Arbetsyta 3.0 | Grundläggande | Microsoft Dynamics 365 |
 | Tranquil | Tom | Salesforce |
-| Urbane |  |  |
+| Urbane |   |  |
 | Ultramarin |  |  |
 | Beryl |  |  |
-| Sjukvård |  |  |
-| FSI |  |  |
+| Sjukvård |  |   |
+| FSI |   |   |
 
 ## Referensteman {#reference-themes}
 

@@ -4,14 +4,17 @@ seo-title: Manage [!DNL AEM Forms] metadata
 description: Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
 seo-description: Metadata allows for easier categorization and organization of assets and helps users who are looking for a specific asset.
 exl-id: 8527246a-37f0-4d43-a49e-1c76c265514e
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1717'
 ht-degree: 0%
 
 ---
 
 # Lägga till, ta bort eller redigera metadata i ett anpassat formulär {#manage-form-metadata}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |

@@ -6,14 +6,16 @@ seo-description: With Adaptive Forms, you users can prefill basic information in
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 exl-id: e2a87233-a0d5-48f0-b883-915fe56f105f
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '2024'
 ht-degree: 0%
 
 ---
 
 # Förifyll adaptiva formulärfält{#prefill-adaptive-form-fields}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -26,7 +28,7 @@ Du kan förifylla fälten i ett adaptivt formulär med befintliga data. När en 
 
 ## Struktur för förifyllda data {#the-prefill-structure}
 
-Ett adaptivt formulär kan innehålla en blandning av bundna och obundna fält. Bundna fält är fält som dras från fliken Innehållssökare och som inte är tomma `bindRef` egenskapsvärde i dialogrutan för fältredigering. Obundna fält dras direkt från komponentwebbläsaren i Sidespark och har en tom `bindRef` värde.
+Ett adaptivt formulär kan innehålla en blandning av bundna och obundna fält. Bundna fält är fält som dras från fliken Innehållssökare och som inte är tomma `bindRef` egenskapsvärde i dialogrutan för fältredigering. Obundna fält dras direkt från komponentwebbläsaren i Sidekick och har ett tomt värde `bindRef` värde.
 
 Du kan förifylla både bundna och obundna fält i ett adaptivt formulär. Prefill-data innehåller avsnitten afBoundData och afUnBoundData för att förifylla både bundna och obundna fält i ett adaptivt formulär. The `afBoundData` -avsnittet innehåller förifyllda data för bundna fält och paneler. Dessa data måste vara kompatibla med det associerade formulärmodellschemat:
 

@@ -2,14 +2,16 @@
 title: Skapa en Forms Portal på en Experience Manager Sites-sida
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: f7f30545b76afa6abd4f49316d0fb2245f5470c2
+source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1759'
 ht-degree: 0%
 
 ---
 
 # List Adaptive Forms on a Portal {#publish-forms-on-portal}
+
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
