@@ -2,14 +2,19 @@
 title: En introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 33e59ce272223e081710294a2e2508edb92eba52
+source-git-commit: 94b24e3fb1ce009fb31506a1b0a6d5159c4907eb
 workflow-type: tm+mt
-source-wordcount: '1127'
-ht-degree: 1%
+source-wordcount: '1147'
+ht-degree: 2%
 
 ---
 
 # Använd AEM Forms as a Cloud Service Communications {#frequently-asked-questions}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Med kommunikationsfunktioner kan ni skapa varumärkesgodkända, personaliserade och standardiserade dokument som affärskontakter, kontoutdrag, kravbrev, förmånsmeddelanden, månatliga fakturor eller välkomstpaket.
 
