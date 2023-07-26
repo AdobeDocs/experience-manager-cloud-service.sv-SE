@@ -2,9 +2,9 @@
 title: Replikering
 description: Distribution och felsökning av replikering.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: e545ff2bc3dc0c56cd6d3e1160b453551816f07f
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ Adobe Experience Manager as a Cloud Service använder [Distribution av säljinne
 
 >[!NOTE]
 >
->Om du är intresserad av att publicera satsvis kan du använda [Publicera arbetsflöde för innehållsträd](#publish-content-tree-workflow).
+>Om du är intresserad av bulkpublicering kan du använda [Publicera arbetsflöde för innehållsträd](#publish-content-tree-workflow).
 >Det här arbetsflödessteget är särskilt utformat för Cloud Service och kan effektivt hantera stora nyttolaster.
 >Vi rekommenderar inte att du skapar en egen anpassad masspubliceringskod.
->Om du måste anpassa av någon anledning kan du utlösa det här arbetsflödes-/arbetsflödessteget med befintliga arbetsflödes-API:er.
+>Om du måste anpassa av någon anledning kan du utlösa det här arbetsflödes-/arbetsflödessteget genom att använda befintliga arbetsflödes-API:er.
 >Det är alltid en god vana att bara publicera innehåll som måste publiceras. Och var försiktig med att inte försöka publicera stora mängder innehåll, om det inte är nödvändigt. Det finns dock inga gränser för hur mycket innehåll du kan skicka via arbetsflödet Publicera innehållsträd.
 
 ### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
@@ -35,7 +35,7 @@ Mer information finns i [Hantera publikation](/help/sites-cloud/authoring/fundam
 
 ### På- och avaktiveringstider - utlösarkonfiguration {#on-and-off-times-trigger-configuration}
 
-Ytterligare möjligheter **I tid** och **Fråntid** är tillgängliga från [Fliken Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#basic).
+Ytterligare möjligheter för **I tid** och **Fråntid** är tillgängliga från [Fliken Grundläggande i Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#basic).
 
 Aktivera om du vill genomföra den automatiska replikeringen för den här funktionen **Automatisk replikering** i [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md) **Konfiguration av utlösare vid avstängning**:
 
@@ -55,14 +55,14 @@ Du kan aktivera en trädreplikering genom att välja **Verktyg - Arbetsflöde - 
 
 ![Arbetsflödeskortet för publiceringsinnehållsträdet](/help/operations/assets/publishcontenttreeworkflow.png)
 
-Ändra inte och anropa inte den ursprungliga modellen. I stället måste du först kopiera modellen och sedan ändra eller anropa kopian.
+Anropa inte den ursprungliga modellen. Kontrollera i stället att först kopiera modellen och anropa kopian.
 
 Precis som med alla arbetsflöden kan den också anropas via API. Mer information finns i [Interagera med arbetsflöden programmatiskt](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-program-interaction.html?lang=en#extending-aem).
 
 Du kan också skapa en arbetsflödesmodell som använder `Publish Content Tree` processteg:
 
 1. Från den AEM as a Cloud Service hemsidan går du till **Verktyg - Arbetsflöde - Modeller**.
-1. På sidan Arbetsflödesmodeller trycker du på **Skapa** i skärmens övre högra hörn.
+1. Tryck på **Skapa** i skärmens övre högra hörn.
 1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 1. Markera den nya modellen i listan och tryck på **Redigera**
 1. I följande fönster drar och släpper du Processsteg till det aktuella modellflödet:
@@ -87,10 +87,10 @@ Du kan också skapa en arbetsflödesmodell som använder `Publish Content Tree` 
 
 **Parametrar**
 
-* `includeChildren` (booleskt värde, standard: `false`). Värdet `false` innebär att endast banan offentliggörs, `true` innebär att även barn publiceras.
+* `includeChildren` (booleskt värde, standard: `false`). Värdet `false` innebär att det endast är banan som offentliggörs, `true` innebär att även barn publiceras.
 * `replicateAsParticipant` (booleskt värde, standard: `false`). Om konfigurerad som `true`används `userid` av huvudmannen som utförde deltagarsteget.
 * `enableVersion` (booleskt värde, standard: `true`). Den här parametern avgör om en ny version skapas vid replikering.
-* `agentId` (strängvärde, standard betyder att endast agenter för publicering används). Vi rekommenderar att du uttryckligen anger agentId; Om du till exempel anger värdet: publicera. Ange att agenten ska `preview` publicerar till förhandsgranskningstjänsten.
+* `agentId` (strängvärde, standard betyder att endast agenter för publicering används). Vi rekommenderar att du anger agentens ID explicit, till exempel anger värdet: publish. Ange att agenten ska `preview` publicerar till förhandsgranskningstjänsten.
 * `filters` (strängvärde, standard betyder att alla sökvägar aktiveras). Tillgängliga värden är:
    * `onlyActivated` - aktivera endast sidor som har (redan) aktiverats. Fungerar som en form av omaktivering.
    * `onlyModified` - aktivera endast sökvägar som redan är aktiverade och som har ett ändringsdatum efter aktiveringsdatumet.
@@ -182,12 +182,12 @@ Det övergripande `ReplicationStatus` för en resurs ändras bara om replikering
 
 ### Metoder för att verifiera innehåll {#invalidating-content}
 
-Du kan göra innehåll ogiltigt direkt genom att antingen använda Sling Content Invalidation (SCD) från författaren (den föredragna metoden) eller genom att använda replikerings-API:t för att anropa replikeringsagenten för publiceringsrensningen för Dispatcher. Se [Cachelagring](/help/implementing/dispatcher/caching.md) sida för mer information.
+Du kan göra innehåll ogiltigt direkt genom att antingen använda Sling Content Invalidation (SCD) från författaren (den föredragna metoden) eller genom att använda replikerings-API:t för att anropa replikeringsagenten för publiceringsrensningen för Dispatcher. Se [Cachning](/help/implementing/dispatcher/caching.md) sida för mer information.
 
 **Kapacitetsbegränsningar för replikerings-API**
 
 Replikera färre än 100 banor i taget, med 500 som gräns. Ovanför gränsen är `ReplicationException` kastas.
-Om programlogiken inte kräver atomisk replikering kan den här gränsen överskridas genom att du anger `ReplicationOptions.setUseAtomicCalls` till false, vilket accepterar valfritt antal banor, men internt skapar buketter som ligger under denna gräns.
+Om programlogiken inte kräver atomisk replikering kan den här gränsen överskridas genom att du ställer in `ReplicationOptions.setUseAtomicCalls` till false, vilket accepterar valfritt antal banor, men internt skapar buketter som ligger under denna gräns.
 
 Storleken på innehållet som skickas per replikeringsanrop får inte överskrida `10 MB`. Den här regeln omfattar noder och egenskaper, men inte binärfiler (arbetsflödespaket och innehållspaket betraktas som binärfiler).
 
