@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: d3bc5dbb5a88aff7765beffc8282d99063dde99f
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
 * Apache Maven 3.6.0 är installerad.
-* De Java-versioner som är installerade är Oracle JDK 8u202 och Oracle JDK 11.0.2.
+* Java-versionerna är Oracle JDK 8u202 och Oracle JDK 11.0.2.
 * Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_202`  som innehåller Oraclet JDK 8u202. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
 * Det finns ytterligare systempaket installerade som är nödvändiga.
 
@@ -31,7 +31,7 @@ Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
    * `graphicsmagick`
 
 * Andra paket kan installeras vid byggtillfället enligt beskrivningen i avsnittet [Installerar ytterligare systempaket.](#installing-additional-system-packages)
-* Varje bygge görs i en riktig miljö. byggbehållaren behåller inte något läge mellan körningar.
+* Varje bygge görs i en absolut miljö. Byggbehållaren behåller inte något läge mellan körningarna.
 * Maven körs alltid med följande tre kommandon.
 
 * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
@@ -52,29 +52,43 @@ Som standard byggs projekt av Cloud Managers byggprocess med Oracle 8 JDK. Kunde
 
 #### Maven Toolchains {#maven-toolchains}
 
-The [Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/) gör det möjligt för projekt att välja en viss JDK (eller verktygskedja) som ska användas i samband med verktygsfältsmedvetna Maven-plugin-program. Detta görs i projektets `pom.xml` genom att ange en leverantör och ett versionsvärde.
+The [Maven Toolchains Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/) gör det möjligt för projekt att välja en viss JDK (eller verktygskedja) som ska användas i samband med verktygsfältsmedvetna Maven-plugin-program. Detta görs i projektets `pom.xml` genom att ange leverantör och versionsvärde.
+
+Detta plug-in-program för verktygskedjan kan läggas till som en del av en profil enligt nedan.
 
 ```xml
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-toolchains-plugin</artifactId>
-    <version>1.1</version>
-    <executions>
-        <execution>
-            <goals>
-                <goal>toolchain</goal>
-            </goals>
-        </execution>
-    </executions>
-    <configuration>
-        <toolchains>
-            <jdk>
-                <version>11</version>
-                <vendor>oracle</vendor>
-            </jdk>
-        </toolchains>
-    </configuration>
-</plugin>
+<profile>
+    <id>cm-java-11</id>
+    <activation>
+        <property>
+            <name>env.CM_BUILD</name>
+        </property>
+    </activation>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-toolchains-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>toolchain</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <toolchains>
+                        <jdk>
+                            <version>11</version>
+                            <vendor>oracle</vendor>
+                        </jdk>
+                    </toolchains>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</profile>
 ```
 
 Detta gör att alla verktygskedjedåliga Maven-plugin-program använder Oraclet JDK, version 11.
@@ -110,7 +124,7 @@ Du kan behöva ändra byggprocessen baserat på information om programmet eller 
 
 Om JavaScript-miniatyrbilder vid bygge görs med ett verktyg som Glup, kan det finnas en önskan om att använda en annan miniminivå när du skapar för en utvecklingsmiljö i stället för att bygga för staging och produktion.
 
-Som stöd för detta lägger Cloud Manager till dessa standardmiljövariabler i byggbehållaren för varje körning.
+Som stöd för detta läggs dessa standardmiljövariabler till i byggbehållaren för varje körning.
 
 | Variabelnamn | Definition |
 |---|---|
@@ -127,9 +141,9 @@ Som stöd för detta lägger Cloud Manager till dessa standardmiljövariabler i 
 
 Din byggprocess kan vara beroende av specifika konfigurationsvariabler som skulle vara olämpliga att placera i Git-databasen, eller så måste du variera dem mellan pipeline-körningar som använder samma gren.
 
-Med Cloud Manager kan dessa variabler konfigureras via Cloud Manager API eller Cloud Manager CLI per pipeline. Variabler kan lagras som antingen ren text eller krypteras i vila. I båda fallen görs variablerna tillgängliga i byggmiljön som en miljövariabel som sedan kan refereras inifrån `pom.xml` eller andra byggskript.
+Med Cloud Manager kan dessa variabler konfigureras via Cloud Manager API eller Cloud Manager CLI per pipeline. Variabler kan lagras som antingen oformaterad text eller krypteras i vila. I båda fallen görs variablerna tillgängliga i byggmiljön som en miljövariabel som sedan kan refereras inifrån `pom.xml` eller andra byggskript.
 
-Det här CLI-kommandot anger en variabel.
+Det här CLI-kommandot ställer in en variabel.
 
 ```shell
 $ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test
