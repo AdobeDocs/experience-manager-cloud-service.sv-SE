@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 579f2842a72c7da1c9d24772bdae354a943de40c
+source-git-commit: 651fd49950c9b168a097e4b7d2812b22bd8de03f
 workflow-type: tm+mt
-source-wordcount: '4192'
+source-wordcount: '4194'
 ht-degree: 20%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 20%
 
 # Hjälp för Experience Manager as a Cloud Service {#content}
 
-+ [AEMaaCS - startsida](/help/overview/home.md)
++ [AEMaaCS Home](/help/overview/home.md)
 + Översikt {#overview}
    + [Introduktion till AEM as a Cloud Service](/help/overview/introduction.md)
    + [Nyheter och skillnader](/help/overview/what-is-new-and-different.md)
@@ -78,7 +78,7 @@ ht-degree: 20%
          + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023.6.0.md)
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023.4.0.md)
          + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023.2.0.md)
-         + [Versionsinformation om underhåll för 2023.1.0](/help/release-notes/maintenance/2023/2023.1.0.md)
+         + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023.1.0.md)
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2023 {#2023}
@@ -162,7 +162,7 @@ ht-degree: 20%
    + [AEM as a Cloud Service säkerhetsfrågor](/help/security/security-considerations.md)
 + Introduktion till {#onboarding}
    + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)
-   + Onboarding Journey {#journey}
+   + Onboardresa {#journey}
       + [Översikt över introduktionsresan](/help/journey-onboarding/overview.md)
       + [Förberedelse för introduktion](/help/journey-onboarding/preparation.md)
       + [AEM as a Cloud Service terminologi](/help/journey-onboarding/terminology.md)
@@ -339,8 +339,7 @@ ht-degree: 20%
             + [Bevilja åtkomst till klientutvecklaren](/help/journey-sites/quick-site/grant-access.md)
             + [Hämta åtkomstinformation för Git-databasen](/help/journey-sites/quick-site/retrieve-access.md)
             + [Anpassa webbplatstemat](/help/journey-sites/quick-site/customize-theme.md)
-            + [Distribuera ditt anpassade tema](/help/journey-sites/quick-site/deploy-theme.md)
-      + [Administrera arbetsflöden](/help/sites-cloud/administering/workflows-administering.md)
+            + [Använd ditt anpassade tema](/help/journey-sites/quick-site/deploy-theme.md)
       + Återanvända innehåll {#reusing-content}
          + [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md)
          + Multi Site Manager {#msm}
@@ -369,6 +368,8 @@ ht-degree: 20%
             + [Konfigurera översättningsintegreringsramverket](/help/sites-cloud/administering/translation/integration-framework.md)
             + [Ansluta till Microsoft Translator](/help/sites-cloud/administering/translation/connect-ms-translator.md)
             + [Bästa praxis för översättning](/help/sites-cloud/administering/translation/best-practices.md)
+      + [Administrera taggar](/help/sites-cloud/administering/tags.md)
+      + [Administrera arbetsflöden](/help/sites-cloud/administering/workflows-administering.md)
    + Integrera med AEM as a Cloud Service {#integrations}
       + [Integrera med Adobe Analytics](/help/sites-cloud/integrating/integrating-adobe-analytics.md)
       + [Integrering med Adobe Analytics Automated Setup](/help/sites-cloud/integrating/adobe-analytics-exc-setup-automation.md)
@@ -455,9 +456,9 @@ ht-degree: 20%
       + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
       + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
    + Dynamic Media {#dynamicmedia}
-      + Dynamic Media Journey: Grunderna {#dm-journey}
-         + [Del I: Vad är Dynamic Media - Användningsexempel - Hur en mediefil flödar genom systemet](/help/assets/dynamic-media/dm-journey-part1.md)
-         + [Del II: En Dynamic Media URL-adress - grunderna för bildförinställningar - Om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar](/help/assets/dynamic-media/dm-journey-part2.md)
+      + Dynamic Media Journey: The Basics {#dm-journey}
+         + [Del I: Vad är Dynamic Media - Användningsexempel - Hur en resurs flödar genom systemet](/help/assets/dynamic-media/dm-journey-part1.md)
+         + [Del II: Anatomi av en Dynamic Media URL - Grundläggande om bildförinställningar - Om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar](/help/assets/dynamic-media/dm-journey-part2.md)
       + [Dynamic Media nyhetsbrevarkiv från Experience League](/help/assets/dynamic-media/dynamic-media-newsletter.md)
       + [Konfigurera Dynamic Media](/help/assets/dynamic-media/administering-dynamic-media.md)
       + [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md)
@@ -644,7 +645,7 @@ ht-degree: 20%
    + Översikt till as a Cloud Service skärmar {#overview}
       + [Introduktion](/help/screens-cloud/introduction/introduction.md)
       + [Om rolldefinitioner](/help/screens-cloud/introduction/personas-screens-cloud.md)
-   + as a Cloud Service introduktion till skärmar {#onboarding-screens-cloud}
+   + As a Cloud Service introduktion till skärmar {#onboarding-screens-cloud}
       + [Inloggning för första gången](/help/screens-cloud/onboarding-screens-cloud/first-time-login-screens-cloud.md)
       + Lägga till skärmar som ett tillägg i Cloud Manager {#adding-screens-addon}
          + [Lägga till skärmar som tillägg till ett nytt program](/help/screens-cloud/onboarding-screens-cloud/add-on-new-program-screens-cloud.md)
@@ -668,8 +669,8 @@ ht-degree: 20%
       + [Registrerar spelaren](/help/screens-cloud/managing-players-registration/registering-players-screens-cloud.md)
       + [Tilldela spelare till en bildskärm](/help/screens-cloud/managing-players-registration/assigning-player-display.md)
    + Använda kärnfunktioner {#core-product-features}
-      + [Stöd för miniatyrbilder för videoklipp](/help/screens-cloud/using-core-product-features/thumbnail-support-videos.md)
-   + Utveckling på skärmar as a Cloud Service {#developing-screens-cloud}
+      + [Stöd för miniatyrbilder för videor](/help/screens-cloud/using-core-product-features/thumbnail-support-videos.md)
+   + Utveckla på skärmar as a Cloud Service {#developing-screens-cloud}
       + [REST API:er](/help/screens-cloud/developing/rest-apis-screens-cloud.md)
       + [Skapa komponenter](/help/screens-cloud/developing/creating-components.md)
       + [Utveckla en anpassad komponent för skärmar as a Cloud Service](/help/screens-cloud/developing/developing-custom-components-tutorial.md)
@@ -735,7 +736,7 @@ ht-degree: 20%
       + [Metadata](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-metadata.html)
       + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-structure-tree.html)
       + [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-json-preview.html)
-   + GraphQL API {#graphql-api}
+   + GRAPHQL API {#graphql-api}
       + [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md)
       + [Hantera GraphQL-slutpunkter](/help/headless/graphql-api/graphql-endpoint.md)
       + [GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md)
@@ -780,7 +781,7 @@ ht-degree: 20%
          + [Publicera översatt innehåll](/help/journey-headless/translation/publish-content.md)
       + Headless Content Author Journey {#author}
          + [AEM Headless Content Author Journey - översikt](/help/journey-headless/author/overview.md)
-         + [Om du skriver för Headless med AEM - en introduktion](/help/journey-headless/author/introduction.md)
+         + [Om du skriver för Headless med AEM - introduktion](/help/journey-headless/author/introduction.md)
          + [Grundläggande om redigering för Headless med AEM](/help/journey-headless/author/basics.md)
          + [Läs om hur du använder referenser i innehållsfragment](/help/journey-headless/author/references.md)
          + [Läs om hur du definierar metadata och taggar för innehållsfragment](/help/journey-headless/author/metadata-tagging.md)
@@ -812,7 +813,7 @@ ht-degree: 20%
          + [Introduktion](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)
          + [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md)
          + [Konfigurera en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
-         + [Hantera pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md)
+         + [Hantera pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md)
       + [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md)
       + Förstå testresultat {#test-results}
          + [Översikt](/help/implementing/cloud-manager/overview-test-results.md)
@@ -844,7 +845,7 @@ ht-degree: 20%
          + [Lägga till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
          + [Använda och inte använda IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
          + [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md)
-      + [Licenspanelen](/help/implementing/cloud-manager/license-dashboard.md)
+      + [Licensieringspanel](/help/implementing/cloud-manager/license-dashboard.md)
       + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/faqs.md)
    + Utveckla för AEM as a Cloud Service {#developing}
       + [AEM-projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
@@ -891,7 +892,7 @@ ht-degree: 20%
             + [Predikatreferens för Query Builder](/help/implementing/developing/introduction/query-builder-predicates.md)
             + [Implementera en anpassad predikatutvärderare](/help/implementing/developing/introduction/query-builder-custom-predicate.md)
          + [Anpassade felsidor](/help/implementing/developing/introduction/custom-error-page.md)
-         + [AEM](/help/implementing/developing/introduction/node-types.md)
+         + [AEM nodtyper](/help/implementing/developing/introduction/node-types.md)
       + [Headless Experience Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html)
       + Hybrid- och SPA {#hybrid}
          + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
@@ -903,8 +904,8 @@ ht-degree: 20%
          + [SPA djupdykning](/help/implementing/developing/hybrid/deep-dives.md)
          + [Utveckla SPA för AEM](/help/implementing/developing/hybrid/developing.md)
          + [SPA](/help/implementing/developing/hybrid/editor-overview.md)
-         + [SPA Blueprint](/help/implementing/developing/hybrid/blueprint.md)
-         + [SPA](/help/implementing/developing/hybrid/page-component.md)
+         + [SPA](/help/implementing/developing/hybrid/blueprint.md)
+         + [SPA sidkomponent](/help/implementing/developing/hybrid/page-component.md)
          + [Dynamisk mappning av modell till komponent](/help/implementing/developing/hybrid/model-to-component-mapping.md)
          + [Modellroutning](/help/implementing/developing/hybrid/routing.md)
          + [RemotePage-komponenten](/help/implementing/developing/hybrid/remote-page.md)
@@ -928,7 +929,7 @@ ht-degree: 20%
       + [ContextHub](/help/implementing/developing/personalization/contexthub.md)
       + [ContextHub konfigureras](/help/implementing/developing/personalization/configuring-contexthub.md)
       + [Lägga till ContextHub på sidor](/help/implementing/developing/personalization/adding-contexthub.md)
-      + [Exempel på butikskandidater](/help/implementing/developing/personalization/sample-stores.md)
+      + [Exempelarkivsökande](/help/implementing/developing/personalization/sample-stores.md)
       + [Exempel på lagringsmoduler](/help/implementing/developing/personalization/sample-modules.md)
       + [ContextHub Diagnostics](/help/implementing/developing/personalization/contexthub-diagnostics.md)
       + [Utökar ContextHub](/help/implementing/developing/personalization/extending-contexthub.md)
@@ -960,7 +961,7 @@ ht-degree: 20%
       + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
    + Distribuera till AEM as a Cloud Service {#deploying}
       + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
-      + [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md)
+      + [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
       + [Konfigurera OSGI för AEM as a Cloud Service](/help/implementing/deploying/configuring-osgi.md)
       + [OSGi Configuration API](/help/implementing/deploying/osgi-configuration-api.md)
       + [Resursmappning](/help/implementing/deploying/resource-mapping.md)
