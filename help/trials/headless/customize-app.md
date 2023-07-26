@@ -4,9 +4,9 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: 3645918f6ce592b6c70cb4339ab6f0e5e9d71519
+source-git-commit: 3177832b32c98bf463c763dafe2d9e284dc2ac28
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1044'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app_guide_footer"
->title="I den här modulen lärde du dig att anpassa en exempelapp för React.<br><br>time to market: Snabbare!<br>Utvecklingscykler: Reducerat!<br><br>Nu förstår du hur enkelt det är att hantera headless-innehåll för webbplatser och appar som har AEM headless-funktioner."
+>title="I den här modulen lärde du dig att anpassa en exempelapp för React.<br><br>time to market: Accelerated!<br>Utvecklingscykler: Minskade!<br><br>Nu förstår du hur enkelt det är att hantera headless-innehåll för webbplatser och appar som har AEM headless-funktioner."
 >abstract=""
 
 ## Förhandsgranska appen {#preview}
@@ -43,9 +43,9 @@ Du börjar i Content Fragment-redigeraren med exempelappen som medföljer AEM He
 
 ## Redigera en rubrik i appen {#edit-app}
 
-Innehållsfragmentsredigeraren visar programmets grundläggande layout som ett sidinnehållsfragment. The **Paneler** representerar olika sidor i programmet, som var och en är sin egen innehållsfragment. Genom att ändra dessa fragment kan du ändra innehållet i appen.
+Innehållsfragmentsredigeraren visar programmets grundläggande layout som ett sidinnehållsfragment. The **Panel** representerar olika sidor i programmet, som var och en är sin egen innehållsfragment. Genom att ändra dessa fragment kan du ändra innehållet i appen.
 
-1. Tryck eller klicka **Mtn Biker i Canyon** i **Paneler** -avsnitt.
+1. Tryck eller klicka **Mtn Biker i Canyon** i **Panel** -avsnitt.
 
    ![Markera textpanelen](assets/do-not-localize/edit-header-1.png)
 
@@ -69,17 +69,17 @@ Nu när du har ändrat en rubrik i appen kan du prova att ändra en bild.
 
 1. Gå tillbaka till fliken för webbläsaren i redigeraren för innehållsfragment från förhandsgranskningen.
 
-1. Du måste gå tillbaka till rätt plats i Content Fragment-redigeraren. Bröderna högst upp till vänster i redigeraren visar var du befinner dig i innehållshierarkin. Tryck eller klicka **Mtn Biker i Canyon** i vägbeskrivningarna för att återgå till den sidan.
+1. Du måste gå tillbaka till rätt plats i Content Fragment Editor. Bröderna högst upp till vänster i redigeraren visar var du befinner dig i innehållshierarkin. Tryck eller klicka **Mtn Biker i Canyon** i vägbeskrivningarna för att återgå till den sidan.
 
    ![Breadcrumbs](assets/do-not-localize/swap-image-2.png)
 
-1. Välj **Mtn Biking - Biker** bildlager. Då öppnas Content Fragment-redigeraren
+1. Välj **Mtn Biking - Biker** bildlager. Då öppnas Content Fragment Editor
 
 1. Tryck eller klicka på **X** om du vill ta bort den större bilden. Bilden försvinner och redigeraren visar ett fel eftersom bilden krävs för den här modellen för innehållsfragment.
 
    ![Ta bort bild från fragment](assets/do-not-localize/swap-image-4.png)
 
-1. Tryck eller klicka **Lägg till resurs**.
+1. Tryck eller klicka **Lägg till resurs** och sedan **Bläddra bland resurser** på snabbmenyn.
 
 1. The **Välj resurs** öppnas och sökvägen **sample-wknd-app** > **en** > **bildfiler** väljs automatiskt åt dig.
 
@@ -99,7 +99,7 @@ Nu när du har uppdaterat bilden av budgivaren ska vi gå igenom hur man lägger
 
 1. Gå tillbaka till fliken Webbläsare i redigeraren för innehållsfragment på fliken Förhandsgranska.
 
-1. Du måste gå tillbaka till rätt plats i Content Fragment-redigeraren. Bröderna högst upp till vänster i redigeraren visar var du befinner dig i innehållshierarkin. Tryck eller klicka **WKND - startsida** i vägbeskrivningarna för att återgå till den sidan.
+1. Du måste gå tillbaka till rätt plats i Content Fragment Editor. Bröderna högst upp till vänster i redigeraren visar var du befinner dig i innehållshierarkin. Tryck eller klicka **WKND Home** i vägbeskrivningarna för att återgå till den sidan.
 
 1. Välj **Mtn Biker på WKND Gul** -panelen.
 
@@ -109,7 +109,7 @@ Nu när du har uppdaterat bilden av budgivaren ska vi gå igenom hur man lägger
 
    ![Lägg till en köpbar stund](assets/do-not-localize/add-reference-1-5.png)
 
-1. Du måste först välja en modell som det nya innehållsfragmentet ska baseras på. Välj **Moment som kan köpas** modell från **Modell för innehållsfragment** nedrullningsbar meny.
+1. Du måste först välja en modell som det nya innehållsfragmentet ska baseras på. Välj **Artikel för köpbart ögonblick** modell från **Modell för innehållsfragment** nedrullningsbar meny.
 
 1. Ge Content Fragment ett namn. Skriv till exempel `Shorts` till **Namn** fält.
 
