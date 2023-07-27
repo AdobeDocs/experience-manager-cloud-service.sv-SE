@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 758960006bd1e58530fdf7b20cdd761853170366
+source-git-commit: 71af59cae28332793471568069204e9c88acd6a5
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Assets Essentials sorterar nu sökresultaten baserat på relevans som standard. 
 
 * [**Färdiga teman**](/help/forms/using-themes-in-core-components.md) **och mallar**: Kom igång snabbt med processen för att skapa formulär med våra färdiga OOTB-teman och mallar som är skräddarsydda för både erfarna proffs och nya formulärförfattare. Dessa välstrukturerade teman och mallar är sömlöst byggda med adaptiva Forms Core-komponenter och gör att du snabbt kan börja skapa formulär för vanliga användningsområden.
 
-!![Körklara mallar](/help/forms/assets/form-templates-ootb.png)
+  ![Körklara mallar](/help/forms/assets/form-templates-ootb.png)
 
 * **Reaktionskomponenter för Headless Forms**: Nu kan du förhandsgranska och anpassa Headless Adaptive Form-renderingar med React-komponenterna som medföljer. Dessa komponenter utnyttjar BEM-klasser från adaptiva Forms Core-komponenter för formatering, vilket gör det enkelt för dig att anpassa deras utseende efter dina specifika krav.
 
