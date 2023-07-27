@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 8efe5d66929d1e2ccd7af71a2de8ae02f2bbc290
+source-git-commit: 758960006bd1e58530fdf7b20cdd761853170366
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -77,10 +77,9 @@ Assets Essentials sorterar nu sökresultaten baserat på relevans som standard. 
 
 * [**Färdiga teman**](/help/forms/using-themes-in-core-components.md) **och mallar**: Kom igång snabbt med processen för att skapa formulär med våra färdiga OOTB-teman och mallar som är skräddarsydda för både erfarna proffs och nya formulärförfattare. Dessa välstrukturerade teman och mallar är sömlöst byggda med adaptiva Forms Core-komponenter och gör att du snabbt kan börja skapa formulär för vanliga användningsområden.
 
+!![Körklara mallar](/help/forms/assets/form-templates-ootb.png)
 
 * **Reaktionskomponenter för Headless Forms**: Nu kan du förhandsgranska och anpassa Headless Adaptive Form-renderingar med React-komponenterna som medföljer. Dessa komponenter utnyttjar BEM-klasser från adaptiva Forms Core-komponenter för formatering, vilket gör det enkelt för dig att anpassa deras utseende efter dina specifika krav.
-
-  Integrationen med Adobe Acrobat Sign Solutions for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
 
 * [**Skapa adaptiv Forms med repeterbara avsnitt**](/help/forms/create-forms-repeatable-sections.md): Nu kan du [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html), [Panel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel-container.html)och [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html) komponentbaserad Adaptiv form repeterbar för inspelning av flera dataposter.  Dessa upprepningsbara avsnitt gör att du enkelt kan ange flera datainmatningar. Det är användbart när de nödvändiga instanserna av data är okända i förväg. En formuläranvändare kan enkelt lägga till eller ta bort avsnitt, göra formulären anpassningsbara till olika datainmatningsscenarier och förenkla insamlingen av flera förekomster av samma datapost.
 
