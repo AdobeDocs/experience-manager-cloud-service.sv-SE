@@ -1,27 +1,381 @@
 ---
 title: Skapa och använda teman
 description: Du kan använda teman för att stilisera och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
+seo-description: You can create a new theme by customizing the available theme. The themes are customized and deployed using frontend pipeline.
+keywords: skapa nytt tema, anpassa tema, ladda upp nytt tema, använda tema i formulär, anpassa temat med hjälp av frontend
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 1cec6e01e72cb286949f64749e2386a2b652920e
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '2651'
 ht-degree: 0%
 
 ---
 
-# Teman i Adaptiv Forms (kärnkomponenter) {#themes-for-af-using-core-components}
+# Teman i Adaptiv Forms {#themes-for-af-using-core-components}
 
-Du kan skapa och använda teman för att stilisera ett adaptivt formulär med hjälp av kärnkomponenterna. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Temat hanteras oberoende av varandra utan referens till ett adaptivt formulär.
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/create-or-customize-themes-for-adaptive-forms-core-components.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
-När du [skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md) med hjälp av kärnkomponenter visas&quot;Out-of-the-Box&quot;-teman under **Stil** -fliken. Som standard är bara **Arbetsyta** temat är tillgängligt.
+Du kan skapa och använda teman för att utforma ett anpassat formulär. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Ett tema hanteras separat utan referens till ett adaptivt formulär och kan återanvändas i flera adaptiva Forms.
 
->[!NOTE]
->
->Ett anpassat formulärtema får inte blandas ihop med [Adaptiva formulärmallar](/help/forms/template-editor.md). Adaptiva formulärteman innehåller bara formatinformation för ett adaptivt formulär. Anpassade formulärmallar definierar formulärstrukturen och det ursprungliga innehållet och innehåller ett tema som gör det möjligt att skapa nya [Adaptiv form](/help/forms/creating-adaptive-form.md).
+## Tillgängliga teman
 
-## Använda Canvas-temat i Adaptive Forms med hjälp av kärnkomponenter {#using-theme-in-adaptive-form}
+Forms som Cloud Service innehåller följande teman för Core Components based Adaptive Forms:
 
-Steg för att tillämpa temat på ett adaptivt formulär är:
+* [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
+* [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
+* [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
+
+## Om temats struktur
+
+Ett tema är ett paket som omfattar CSS-filen, JavaScript-filer och resurser (som ikoner) som definierar formatet för din adaptiva Forms. Temat Adaptiv form följer en särskild organisation som består av följande komponenter:
+
+* `src/theme.scss`: Den här mappen innehåller CSS-filen som har stor effekt på hela temat. Det fungerar som en central plats för att definiera och hantera temats format och beteende. Genom att redigera den här filen kan du göra ändringar som tillämpas överallt i temat, vilket påverkar både utseendet och funktionaliteten på dina adaptiva Forms- och AEM Sites-sidor.
+
+* `src/site`: Den här mappen innehåller CSS-filer som används på en hel AEM. Dessa filer består av kod och format som påverkar den övergripande funktionen och layouten för AEM webbplats. Alla ändringar som görs här återspeglas på alla sidor på webbplatsen. [När ska den användas?]
+
+* `src/components`: CSS-filerna i den här mappen är utformade för enskilda AEM kärnkomponenter. Varje dedikerad mapp för en komponent innehåller en `.scss` som formaterar en viss komponent i ett adaptivt formulär. Filen /src/components/accordion/_accordion.scss innehåller till exempel formatinformation för den adaptiva Forms-dragspelskomponenten.
+
+  ![adaptiv formulärbaserad temastruktur](/help/forms/assets/theme_structure.png)
+
+* `src/resources`: Den här mappen innehåller statiska filer som ikoner, logotyper och teckensnitt. Resurserna används för att förbättra temats visuella element och övergripande design.
+
+## Skapa ett tema
+
+Forms som Cloud Service innehåller följande teman för Core Components based Adaptive Forms.
+
+* [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
+* [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
+* [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
+
+Du kan [anpassa något av dessa teman för att skapa ett nytt tema](#customize-a-theme-core-components).
+
+![Arbetsflöde för anpassning av teman](/help/forms/assets/workflow-of-customization-of-theme.png)
+
+## Anpassa ett tema {#customize-a-theme-core-components}
+
+Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett tema. När du anpassar ett tema ändrar du dess designelement, layout, färger, typografi och ibland den underliggande koden. Du kan skapa ett unikt och skräddarsytt utseende för webbplatsen eller tillämpningen, samtidigt som du behåller den grundläggande strukturen och funktionaliteten som temat ger.
+
+### Förutsättningar {#prerequisites-to-customize}
+
+* Bekanta dig med [konfigurera en pipeline i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline) och om du har grundläggande kunskaper om hur du konfigurerar en pipeline kan du effektivt hantera och driftsätta dina temaanpassningar.
+* Lär dig hur [konfigurera en användare med rollen Medarbetare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html). Om du förstår hur du konfigurerar en användare med rollen Medarbetare kan du ge dig de behörigheter som krävs för att anpassa temat.
+* Installera den senaste versionen av [Apache Maven.](https://maven.apache.org/download.cgi) Apache Maven är ett automatiserat byggverktyg som ofta används för Java™-projekt. Genom att installera den senaste versionen får du de beroenden du behöver för att anpassa temat.
+* Installera en vanlig textredigerare. Exempel: Microsoft® Visual Studio Code. Med en vanlig textredigerare som Microsoft® Visual Studio Code får du en användarvänlig miljö där du kan redigera och ändra temafiler.
+
+### Konfigurera din miljö
+
+* [Aktivera adaptiva Forms Core-komponenter](/help/forms/enable-adaptive-forms-core-components.md)  för den lokala utvecklingen och Cloud Servicen.
+* Konfigurera [pipeline för driftsättning i frontend-läge](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html) för Cloud Servicen. Du kan också konfigurera pipeline senare, så att du kan prioritera testning och finjustering av temat innan du ställer in distributionsflödet.
+
+<!-- 
+To deploy your themes to a Forms as a Cloud Service environment, first test theme on a local development environment to address any issues. Once the theme is tested, configure the front-end deployment pipeline, which is responsible for deploying the themes.
+
+These themes are deployed to a Forms as a Cloud Service environment via the front-end pipeline. You can configure the pipeline later also, after testing the theme on a local development environment. 
+
+-->
+
+När du har lärt dig förinställningarna och konfigurerat utvecklingsmiljön är du väl beredd att börja anpassa temat efter dina specifika behov.
+
+### Anpassa ett tema {#steps-to-customize-a-theme-core-components}
+
+Att anpassa ett tema är en process i flera steg. Om du vill anpassa temat utför du stegen i listordning:
+
+1. [Klona ett tema](#download-a-theme-core-components)
+1. [Ange namn på ett tema](#set-name-of-theme)
+1. [Anpassa ett tema](#customize-the-theme)
+1. [Testa ett tema](#test-the-theme)
+1. [Distribuera ett tema](#deploy-the-theme)
+
+Exemplen i dokumentet är baserade på **Arbetsyta** tema, men det är viktigt att tänka på att du kan klona ett tema och anpassa det med samma instruktioner. Dessa instruktioner kan användas för alla teman och du kan ändra teman efter dina specifika behov.
+
+#### 1. Klona ett tema {#download-a-theme-core-components}
+
+Om du vill klona ett tema för Core Components based Adaptive Forms väljer du ett av följande teman:
+
+* [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas)
+* [WKND-tema](https://github.com/adobe/aem-forms-theme-wknd)
+* [EASEL-tema](https://github.com/adobe/aem-forms-theme-easel)
+
+Så här klonar du ett tema:
+
+1. Öppna kommandotolken eller terminalfönstret i den lokala utvecklingsmiljön.
+
+1. Kör `git clone` för att klona ett tema.
+
+   ```
+      git clone [Path of Git Repository of the theme]
+   ```
+
+   Ersätt [Sökväg till temats Git-databas] med den faktiska URL:en för temats motsvarande Git-databas
+
+   Om du till exempel vill klona arbetsytans tema kör du följande kommando:
+
+   ```
+      git clone https://github.com/adobe/aem-forms-theme-canvas
+   ```
+
+   När kommandot har körts har du en lokal kopia av temat på datorn i  `aem-forms-theme-canvas` mapp.
+
+
+#### 2. Ange ett temats namn {#set-name-of-theme}
+
+1. Öppna temamappen i en textredigerare. Om du till exempel vill öppna `aem-forms-theme-canvas` i Visual Studio Code editor.
+
+1. Navigera till `aem-forms-theme-canvas` mapp.
+
+1. Kör följande kommando:
+
+   ```
+         code .
+   ```
+
+   ![Öppna temamappen i en vanlig textredigerare](/help/forms/assets/aem-forms-theme-folder-in-vs-code.png)
+
+   Mappen öppnas i Visual Studio-koden.
+
+1. Öppna `package.json` fil för redigering.
+
+1. Ange värden för `name` och `description` attribut.
+
+   Namnattributet används för att unikt identifiera temat, t.ex.&quot;aem-forms-wknd-theme&quot;, och visas i **Stil** flik för **Guiden Skapa formulär**. Attributet description ger ytterligare information om temat, inklusive dess syfte och de scenarier det är avsett för. Du kan också ange version, beskrivning och licens för temat.
+
+1. Spara och stäng filen.
+
+![Byt bild på temanamn på arbetsytan](/help/forms/assets/changename_canvastheme.png)
+
+
+#### 3. Anpassa ett tema {#customize-the-theme}
+
+Du kan anpassa enskilda komponenter eller göra ändringar på temanivå med hjälp av globala variabler i ett tema. Ändringar som görs i globala variabler påverkar alla enskilda komponenter. Du kan till exempel använda globala variabler för att ändra kantfärgen för alla komponenter i ett adaptivt formulär och en ljus fyllningsfärg för att ange CTA (Call to action) med hjälp av knappkomponenten:
+
+* [Ange format för temanivåer](#theme-customization-global-level)
+
+* [Ange format för komponentnivå](#component-based-customization)
+
+##### Ange format för temanivåer{#theme-customization-global-level}
+
+The `variable.scss` filen innehåller temats globala variabler. Genom att uppdatera dessa variabler kan du göra formatrelaterade ändringar på temanivå. Så här använder du format på temanivå:
+
+1. Öppna `<your-theme-sources>/src/site/_variables.scss` fil för redigering.
+1. Ändra värdet för alla egenskaper. Standardfelfärgen är till exempel `red`. Ändra felfärgen från `red` till `blue`, ändra färghexkoden för `$errorvariable`. Till exempel, `$error: #196ee5`.
+1. Spara och stäng filen.
+
+   ![Redigera tema](/help/forms/assets/edit_theme.png)
+
+På samma sätt kan du använda `variable.scss` för att ange teckensnittsfamilj och -typ, tema- och teckensnittsfärger, teckenstorlek, temaavstånd, felikoner, temats kantlinjeformat och fler variabler som påverkar flera adaptiva formulärkomponenter.
+
+##### Ange format för komponentnivå {#component-based-customization}
+
+Du kan också ändra teckensnitt, färg, storlek och andra CSS-egenskaper för en viss kärnkomponent i Adaptiv form. Till exempel knapp, kryssruta, behållare, sidfot med mera. Du kan formatera knappen eller kryssrutan genom att redigera CSS-filen för den specifika komponenten så att den anpassas till din organisations stil. Så här anpassar du en stil för en komponent:
+
+1. Öppna filen `<your-theme-sources>/src/components/<component>/<component.scss>` för redigering. Om du till exempel vill ändra teckenfärgen för knappkomponenten öppnar du `<your-theme-sources>/src/components/button/button.scss`, fil .
+1. Ändra värdet enligt dina önskemål. Om du till exempel vill ändra färgen på knappkomponenten vid muspekaren till `green`, ändra värdet för `color: $white` -egenskapen i `cmp-adaptiveform-button__widget:hover` class to hex code `#12B453` eller någon annan nyans av `green`. Den färdiga koden ser ut så här:
+
+   ```
+   .cmp-adaptiveform-button__widget:hover {
+   background: $dark-gray;
+   color: #12B453;
+   }
+   ```
+
+1. Spara och stäng filen.
+
+   ![Redigera CSS för textruta](/help/forms/assets/edit_color_textbox.png)
+
+   >
+   >
+   > När ett format definieras både på tema- och komponentnivå prioriteras det format som definieras på komponentnivå.
+
+#### 4. Testa ett anpassat tema {#test-the-theme}
+
+Så här förhandsgranskar och testar du ändringarna i den lokala miljön och anpassar temat enligt kraven för olika AEM:
+
+* 4.1 [Konfigurera lokal miljö för testning](#rename-env-file-theme-folder)
+* 4.2 [Testa temat i den lokala miljön](#start-a-local-proxy-server)
+
+##### 4.1. Konfigurera lokal miljö för testning {#rename-env-file-theme-folder}
+
+1. Öppna temamappen i en textredigerare. Öppna till exempel `aem-forms-theme-canvas` i Visual Studio Code editor.
+1. Byt namn på `env_template` fil till `.env` i temamappen och lägg till följande parametrar:
+
+   ```
+   * **AEM url**
+   AEM_URL=https://[author-instance] 
+   
+   * **AEM Adaptive form name**
+   AEM_ADAPTIVE_FORM=Form_name
+   
+   * **AEM proxy port**
+   AEM_PROXY_PORT=7000
+   ```
+
+   Formulärets URL är till exempel `http://localhost:4502/editor.html/content/forms/af/contactusform.html`. Värdena för:
+
+   * AEM_URL = `http://localhost:4502/`
+   * AEM_ADAPTIVE_FORM = `contactusform`
+
+1. Spara filen.
+
+   ![Arbetsytans temastruktur](/help/forms/assets/env-file-canvas-theme.png)
+
+##### 4.2 Testa temat i lokal miljö {#start-a-local-proxy-server}
+
+1. Navigera till temamappens rot. I det här fallet är temamappens namn `aem-forms-theme-canvas`.
+1. Öppna kommandotolken eller terminalen.
+1. Kör `npm install` för att installera beroenden.
+1. Kör `npm run live` om du vill förhandsgranska formuläret med det uppdaterade temat i den lokala webbläsaren.
+
+   >[!NOTE]
+   >
+   > Om ett fel inträffar när `npm run live` kommando, köra följande kommandon före `npm run live` kommando:
+   >
+   > * `npm install parcel --save-dev`
+   > * `npm i @parcel/transformer-sass`
+
+Det här är en het driftsättning. Så när du gör några ändringar och sparar `_variables.scss` och `button.scss` -filer väljs ändringarna automatiskt och de senaste utdata förhandsgranskas. Raden `[Browsersync] File event [change]` innebär att servern har identifierat de senaste ändringarna och distribuerar ändringarna i den lokala miljön.
+
+![Webbläsarsynk för proxy](/help/forms/assets/browser_sync.png)
+
+Efter att ha följt exemplen som finns på både temanivå och komponentnivå för temaanpassningar har felmeddelandena i ett adaptivt formulär ändrats till `blue` färg, medan etikettfärgen för knappkomponenten ändras till `green` vid hovring.
+
+**Förhandsgranska stil på temanivå**
+
+![Exempel: Felfärgen är blå](/help/forms/assets/theme-level-changes.png)
+
+**Förhandsgranska komponentnivåformat**
+
+![Exempel: Hovringsfärg inställd på grön](/help/forms/assets/button-customization.png)
+
+###### Testa temat för formulär som lagras i en Cloud Service-miljö
+
+Du kan också testa temat för den adaptiva formen som finns på din as a Cloud Service AEM Forms-instans. Så här konfigurerar och anger du den lokala miljön för testning av teman med Adaptive Forms på molninstansen:
+
+1. Öppna temamappen i en textredigerare. Öppna till exempel `aem-forms-theme-canvas` i Visual Studio Code editor.
+1. Byt namn på `env_template` fil till `.env` och lägga till följande parametrar:
+
+   ```
+   * **AEM url**
+   AEM_URL=https://[author-instance] 
+   
+   * **AEM Adaptive form name**
+   AEM_ADAPTIVE_FORM=Form_name
+   
+   * **AEM proxy port**
+   AEM_PROXY_PORT=7000
+   ```
+
+   URL:en för formuläret i molnmiljön är till exempel `https://author-XXXX.adobeaemcloud.com/editor.html/content/forms/af/contactusform.html`. Värdena för:
+
+   * AEM_URL = `https://author-XXXX-cmstg.adobeaemcloud.com/`
+   * AEM_ADAPTIVE_FORM = `contactusform`
+1. Spara filen.
+1. Skapa en lokal användare.
+
+   >[!NOTE]
+   >
+   > Så här skapar du en lokal användare:
+   >
+   > * Gå till **[!UICONTROL AEM Home]** > **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]** .
+   > * Se till att användaren är medlem i `forms-users` grupp.
+
+1. Navigera till temamappens rot. I det här fallet är temamappens namn `aem-forms-theme-canvas`.
+1. Kör `npm run live` och du omdirigeras till en lokal webbläsare.
+1. Klicka `SIGN IN LOCALLY (ADMIN TASKS ONLY)` och logga in med den lokala användarens inloggningsuppgifter.
+
+Du kan förhandsgranska det adaptiva formuläret med de senaste ändringarna. När du är nöjd med ändringarna som gjorts i en temamapp distribuerar du temat till din AEM Cloud Service-miljö med hjälp av frontendpipeline.
+
+#### 5. Använd ett tema {#deploy-the-theme}
+
+Så här distribuerar du temat till din Cloud Service med hjälp av frontendpipeline:
+
+* 5.1 [Skapa en databas för temat](#create-a-new-theme-repo)
+* 5.2 [Överför ändringarna till databasen](#committing-the-changes)
+* 5.3 [Kör frontpipeline](#run-a-frontend-pipeline)
+
+##### 5.1 Skapa en databas för temat{#create-a-new-theme-repo}
+
+Du behöver en databas för att distribuera temat. Logga in på [AEM Cloud Manager-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git) och lägg till ny databas för ditt tema.
+
+1. Skapa ny databas för temat genom att klicka på **[!UICONTROL Repositories]** > **[!UICONTROL Add Repository]**.
+
+   ![skapa ny temarapport](/help/forms/assets/createrepo_canvastheme.png)
+
+
+1. Ange **Databasnamn** i **Lägg till databas** -dialogrutan. Det angivna namnet är till exempel `custom-canvas-theme-repo`.
+1. Klicka på **[!UICONTROL Save]**.
+
+   ![Lägg till upprepning av arbetsytans tema](/help/forms/assets/addcanvasthemerepo.png)
+
+1. Klicka **[!UICONTROL Copy Repository URL]** för att kopiera databasens URL.
+
+   ![Tema-URL för arbetsyta](/help/forms/assets/copyurl_canvastheme.png)
+
+   >[!NOTE]
+   > 
+   > * Du kan använda en databas för flera teman.
+   > * Om du vill distribuera olika teman måste du skapa separata rörledningar.
+   >* Du kan till exempel använda samma databas som `custom-canvas-theme-repo`, för Canvas-tema, WKND-tema och EASEL-tema. För att kunna använda teman måste du dock skapa separata frontledningar. Framtida anpassningar av ett specifikt tema distribueras med motsvarande frontendpipeline.
+
+##### 5.2. Skicka ändringarna till databasen {#committing-the-changes}
+
+Nu kan du överföra ändringarna till temadeatalogen för din AEM Forms-Cloud Service. .
+
+1. Navigera till temamappens rot.  I det här fallet är temamappens namn `aem-forms-theme-canvas`.
+1. Öppna kommandotolken eller terminalen.
+1. Kör följande kommando i den ordning som visas:
+
+   ```
+   git remote add [alias-name-for-repository] [URL of repository]
+   git add .
+   git commit
+   git push [name-for-createdrepository]
+   ```
+
+   Till exempel:
+
+   ```
+   git remote add canvascloudthemerepo https://git.cloudmanager.adobe.com/stage-aemformsdev/customcanvastheme/
+   git add .
+   git commit
+   git push canvascloudthemerepo 
+   ```
+
+   ![Utförda ändringar](/help/forms/assets/cmd_git_push.png)
+
+
+
+##### 5.3 Köra frontlinjen {#run-a-frontend-pipeline}
+
+Temat distribueras med [rörledning.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html). Så här distribuerar du temat:
+
+1. Logga in i din AEM Cloud Manager-databas.
+1. Klicka **[!UICONTROL Add]** från **[!UICONTROL Pipelines]** -avsnitt.
+1. Välj **[!UICONTROL Add Non-Production Pipeline]** eller **[!UICONTROL Add Production Pipeline]** baserat på Cloud Servicen. Här visas till exempel **[!UICONTROL Add Production Pipeline]** är markerat.
+1. I **[!UICONTROL Add Production Pipeline]** som en del av **[!UICONTROL Configuration]** -steg anger du ett namn för pipeline. Namnet på pipeline är till exempel `customcanvastheme`.
+1. Klicka på **[!UICONTROL Continue]**.
+1. Välj **[!UICONTROL Targeted Deployment]** > **[!UICONTROL Front-end code]** alternativ, i **[!UICONTROL Source Code]** steg.
+1. Välj **[!UICONTROL Repository]** och **[!UICONTROL Git Branch]** värden som har dina senaste ändringar. Här är till exempel det valda databasnamnet `custom-canvas-theme-repo` och Git-grenen är `main`.
+1. Välj **[!UICONTROL Code Location]** as `/`, om ändringarna finns i rotmappen.
+1. Klicka på **[!UICONTROL Save]**.
+   ![skapa frontendpipeline](/help/forms/assets/canvas-theme-frontendpipeline.gif)
+
+   När pipeline-konfigurationen är klar uppdateras åtgärdskortet.
+
+1. Högerklicka på den pipeline som skapats.
+1. Klicka på **[!UICONTROL Run]** .
+
+   ![run-a-pipleine](/help/forms/assets/canvas-theme-run-pipeline.png)
+
+När bygget är klart blir temat tillgängligt vid författarinstansen för användning. Den visas under **[!UICONTROL Style]** i guiden Skapa anpassningsbara formulär när du skapar ett nytt anpassat formulär.
+
+![anpassat tema tillgängligt under formatfliken](/help/forms/assets/custom-theme-style-tab.png)
+
+## Använda ett tema i ett anpassat formulär {#using-theme-in-adaptive-form}
+
+Steg för att tillämpa ett tema på ett adaptivt formulär är:
 
 1. Logga in på din AEM Forms-författarinstans.
 
@@ -30,215 +384,10 @@ Steg för att tillämpa temat på ett adaptivt formulär är:
 1. Klicka **Skapa** > **Adaptiv Forms**. Guiden för att skapa adaptiva formulär öppnas.
 
 1. Välj kärnkomponentmallen i **Källa** -fliken.
-
-   >[!NOTE]
-   >
-   > När du skapar ett adaptivt formulär med kärnkomponenter visas Canvas-temat på fliken Format. Det här är det enda färdiga temat som är tillgängligt just nu. Men du kan ändra temat efter dina önskemål och spara det för framtida bruk genom att skapa en frontpipeline.
-
-1. Välj arbetsytans tema i **Stil** -fliken.
+1. Välj temat i **Stil** -fliken.
 1. Klicka **Skapa**.
 
 Adaptiva formulärteman används som en del av en adaptiv formulärmall för att definiera format när du skapar ett adaptivt formulär.
-
-## Anpassa temat {#customizing-theme}
-
-Om du vill anpassa ett tema
-
-* [konfigurera en pipeline i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline)
-* Konfigurera en användare med [medarbetarroll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html).
-* Du borde ha en [grundläggande kunskaper i Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git) och Cloud Service Git-databaser.
-
-Så här anpassar du ett Canvas-tema:
-
-1. [Klona arbetsytans tema](#1-download-canvas-theme-download-canvas-theme)
-1. [Förstå temats struktur](#2-understand-structure-of-the-canvas-theme-structure-of-canvas-theme)
-1. [Ändra namn i package.json och package_lock.json](#changename-packagelock-packagelockjson)
-1. [Skapa ](#3-create-the-env-file-in-a-theme-folder-creating-env-file-theme-folder)
-1. [Starta den lokala proxyservern](#4-start-a-local-proxy-server-starting-a-local-proxy-server)
-1. [Anpassa temat](#customize-the-theme-customizing-theme)
-1. [Verkställ ändringarna](#6-committing-the-changes-committing-the-changes)
-1. [Distribuera pipeline](#7-deploying-the-customized-theme-deploy-customized-theme)
-
-### 1. Klona arbetsytans tema {#download-canvas-theme}
-
-Öppna kommandotolken och kör följande kommando för att klona arbetsytans tema:
-
-```
-git clone https://github.com/adobe/aem-forms-theme-canvas
-```
-
->[!NOTE]
->
-> Fliken Format i guiden Skapa formulär visar samma temanamn som i filen package.json.
-
-### 2. Förstå temats struktur {#structure-of-canvas-theme}
-
-Ett Adaptivt formulärtema är ett paket som innehåller CSS-, JavaScript- och statiska resurser som definierar formulärets format och som följer strukturen i ett adaptivt formulärtema. Ett Adaptivt formulärtema har följande struktur som är typisk för ett front end-projekt:
-
-* `src/components`: JavaScript- och CSS-filer som är specifika för AEM kärnkomponenter
-* `src/resources`: Statiska filer som ikoner, logotyper och teckensnitt
-* `src/site`: JavaScript- och CSS-filer som gäller för hela AEM Sites-sidan
-* `src/theme.ts`: Huvudstartpunkten för JavaScript- och CSS-temat
-* `src\theme.scss`: JavaScript- och CSS-filer som gäller för hela temat
-
-The `src/components` -mappen har JavaScript- och CSS-filer som är specifika för alla AEM kärnkomponenter som knapp, kryssruta, behållare, sidfot osv. Du kan formatera en knapp eller kryssruta genom att redigera CSS-filen som är specifik för AEM.
-
-![Redigera temat](/help/forms/assets/theme_structure.png)
-
-Om du vill anpassa temat kan du starta den lokala proxyservern och se temaanpassningarna i realtid baserat på det faktiska AEM innehållet.
-
-### 3. Ändra namn i temat package.json och package_lock.json för arbetsytan {#changename-packagelock-packagelockjson}
-
-Uppdatera namnet på och versionen av Canvas-temat i `package.json` och `package_lock.json` filer.
-
->[!NOTE]
->
-> Namn får inte ha `@aemforms` -tagg. Det ska vara enkel text som användardefinierat namn.
-
-![Arbetsytans temabild](/help/forms/assets/changename_canvastheme.png)
-
-### 4. Skapa .env-filen i en temamapp {#creating-env-file-theme-folder}
-
-Skapa en `.env` i temamappen och lägg till följande parametrar:
-
-* **AEM url**
-AEM_URL=https://[author-instance]
-
-* **AEM webbplatsnamn**
-AEM_ADAPTIVE_FORM=Form_name
-
-* **AEM proxyport**
-AEM_PROXY_PORT=7000
-
-
-![Arbetsytans temastruktur](/help/forms/assets/env-file-canvas-theme.png)
-
-### 5. Starta en lokal proxyserver {#starting-a-local-proxy-server}
-
-1. Navigera från kommandoraden till temats rot på din lokala dator.
-1. Kör `npm install` och npm hämtar beroenden och installerar projektet.
-1. Kör `npm run live` och proxyservern startas.
-
-   ![npm run live](/help/forms/assets/theme_proxy.png)
-
-
-1. Tryck eller klicka **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)** och logga in med de autentiseringsuppgifter för proxyanvändare som du har fått från AEM.
-
-   ![Logga in lokalt](/help/forms/assets/local_signin.png)
-
-   >[!NOTE]
-   >
-   > * Skapa en lokal användare som kan logga in lokalt. Ange deltagarroll för temadesigner.
-   > * Om du anger AEM URL som `http://localhost:[port]/` i `.env` -filen med Canvas-temat omdirigeras du direkt till webbläsaren.
-
-1. När du är inloggad ändrar du URL:en i webbläsaren så att den pekar på sökvägen till exempelinnehållet som AEM har gett dig.
-
-   * Om den angivna sökvägen till exempel `/content/formname.html?wcmmode=disabled`, ändra URL:en till `http://localhost:[port]/content/forms/af/formname.html?wcmmode=disabled`
-
-   ![Proxyinnehåll](/help/forms/assets/sample_af.png)
-
-Navigera till ett adaptivt formulär och se arbetsytans tema som används i ett adaptivt formulär.
-
-### 6. Anpassa temat {#customize-theme}
-
-1. Öppna filen i redigeraren `<your-theme-sources>/src/site/_variables.scss`.
-
-   >[!NOTE]
-   >
-   > Du kan formatera alla adaptiva formulärkomponenter direkt på en plats genom att redigera `site/_variables.scss` -fil.
-
-1. Redigera variabeln för `font colour` till `red`.
-
-   ![Redigera tema](/help/forms/assets/edit_theme.png)
-
-   **Formatera de olika AEM**
-
-   Du kan formatera de olika komponenterna i ett adaptivt formulär genom att ändra dess CSS-fil i redigeraren. Det finns olika CSS-mappar för varje komponent i kärnan Adaptiv form i mappen Tema på arbetsytan.
-
-   ![Kärnkomponent](/help/forms/assets/theme-component.png)
-
-   Om du vill ange format för en viss komponent i temaredigeraren kan du redigera CSS-koden i en temamapp. Om du till exempel vill ändra kantfärgen för ett textrutefält öppnar du CSS-filen i redigeraren och ändrar kantfärgen.
-
-   ![Redigera CSS för textruta](/help/forms/assets/edit_color_textbox.png)
-
-1. När du sparar filen känner proxyservern igen ändringen via raden `[Browsersync] File event [change]`.
-
-   ![Webbläsarsynk för proxy](/help/forms/assets/browser_sync.png)
-
-1. När du växlar tillbaka till webbläsaren på den lokala proxyservern visas ändringen omedelbart.
-
-   ![ändra AF-tema](/help/forms/assets/edit_theme_af.png)
-
-Temadesigner förhandsgranskar ändringarna på den lokala proxyservern och anpassar temat enligt kraven för olika AEM.
-
-Innan du implementerar ändringarna i AEM Git-databasen måste du få åtkomst till [Git-databasinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
-
-### 7. Verkställ ändringarna {#committing-the-changes}
-
-När du har ändrat temat och testat det med en lokal proxyserver implementerar du ändringarna i Git-databasen för din AEM Forms-Cloud Service. Det gör det anpassade temat tillgängligt i Forms Cloud Service-miljön så att designers av Adaptive Forms kan använda det.
-
-Innan du implementerar ändringar i Git-databasen för din AEM Forms-Cloud Service måste du klona databasen på din lokala dator. Så här klonar du databasen:
-
-1. Skapa en ny temabasera genom att klicka på **[!UICONTROL Repositories]** alternativ.
-
-   ![skapa ny temarapport](/help/forms/assets/createrepo_canvastheme.png)
-
-1. Klicka **[!UICONTROL Add Repository]** och ange **Databasnamn** i **Lägg till databas** -dialogrutan. Klicka på **[!UICONTROL Save]**.
-
-   ![Lägg till upprepning av arbetsytans tema](/help/forms/assets/addcanvasthemerepo.png)
-
-1. Klicka **[!UICONTROL Copy Repository URL]** för att kopiera URL:en för den skapade databasen.
-
-   ![Tema-URL för arbetsyta](/help/forms/assets/copyurl_canvastheme.png)
-
-1. Öppna kommandotolken och klona den molndatabas som skapats ovan.
-
-   ```
-   git clone https://git.cloudmanager.adobe.com/aemforms/Canvasthemerepo/
-   ```
-
-1. Flytta filerna i den temalagringsplats som du redigerar till molndatabasen med ett kommando som liknar
-   `cp -r [source-theme-folder]/* [destination-cloud-repo]`
-Använd till exempel det här kommandot `cp -r [C:/cloned-git-canvas/*] [C:/cloned-repo]`
-1. I molndatabasens katalog implementerar du de temafiler du flyttade till med följande kommandon.
-
-   ```text
-   git add .
-   git commit -a -m "Adding theme files"
-   git push
-   ```
-
-1. Anpassningarna skickas till Git-databasen.
-
-   ![Utförda ändringar](/help/forms/assets/cmd_git_push.png)
-
-Dina anpassningar lagras nu säkert i Git-databasen.
-
-
-### 8. Kör frontpipeline {#deploy-pipeline}
-
-1. Skapa frontendpipeline för att distribuera det anpassade temat. Lär dig [hur du ställer in en pipeline för första raden för att distribuera anpassat tema](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline).
-1. Kör den skapade frontend-pipelinen för att distribuera en anpassad temamapp under **[!UICONTROL Style]** i en guide för att skapa adaptiva formulär.
-
->[!NOTE]
->
->Om du gör några ändringar i temamappen för arbetsytan i framtiden måste du köra pipelinen ovan igen. Det är därför nödvändigt att komma ihåg rörledningens namn.
-
-## Exempel på hur du anpassar temat {#example-to-customize-a-theme}
-
-1. Logga in på din AEM Forms-författarinstans.
-1. Öppna ett adaptivt formulär som skapats med kärnkomponenter.
-1. Starta den lokala proxyservern med kommandotolken och klicka på **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)**.
-1. När du har loggat in omdirigeras du till webbläsaren och ser det aktuella temat.
-1. Ladda ned [Tema Canvas](https://github.com/adobe/aem-forms-theme-canvas) och extrahera den hämtade zip-mappen.
-1. Öppna den extraherade zip-mappen i det redigeringsprogram du föredrar.
-1. Skapa en `.env` i temamappen och lägg till parametrar: **AEM URL**, **AEM_ADAPTIVE_FORM** och **AEM_PROXY_PORT**.
-1. Öppna CSS-filen för textrutan i temamappen för arbetsytan och ändra kantfärgen till `red` och spara ändringarna.
-1. Öppna webbläsaren igen och du ser ändringarna direkt i ett adaptivt formulär.
-1. Flytta temamappen för arbetsytan i din klonade databas.
-1. Verkställ ändringarna och kör frontpipeline.
-
-När du har kört pipeline är temat tillgängligt på fliken Format.
 
 ## God praxis {#best-practices}
 
@@ -256,3 +405,21 @@ När du har kört pipeline är temat tillgängligt på fliken Format.
 
   Använd temaredigeraren om du vill formatera sidhuvud och sidfot med formatalternativ som teckensnittsformat, bakgrund och genomskinlighet.
 Om du vill ange information som logotypbild, företagsnamn i sidhuvud och copyrightinformation i sidfoten använder du alternativen för formulärredigeraren.
+
+## Vanliga frågor {#faq}
+
+**F:** Vilken anpassning prioriteras när du gör anpassningar i en temamapp på både global nivå och komponentnivå?
+
+**Ans:** När anpassningar görs på både global nivå och komponentnivå prioriteras anpassningen på komponentnivå.
+
+## Se nästa
+
+* [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
+* [Generera urkunder för adaptiva Forms (kärnkomponenter)](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
+* [Skapa en adaptiv Forms med upprepningsbara avsnitt](/help/forms/create-forms-repeatable-sections.md)
+
+
+## Relaterad artikel {#related-article}
+
+* [Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö](/help/forms/enable-adaptive-forms-core-components.md)
+* [Skapa en fristående grundkomponentbaserad adaptiv form](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html)
