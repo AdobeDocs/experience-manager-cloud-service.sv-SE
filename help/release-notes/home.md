@@ -2,7 +2,7 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: 12dc95da58690284ade3963bf7e9336196062d3f
+source-git-commit: 3f62a7db9038dabdcca3dd59612e8e26c48b8482
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 32%
@@ -13,7 +13,7 @@ ht-degree: 32%
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2023.6.0 |
+| Version | 2023.7.0 |
 | Typ | Kontinuerliga uppdateringar |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 
@@ -24,7 +24,7 @@ Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager] as a Clo
 * [Funktioner](/help/release-notes/release-notes-cloud/release-notes-current.md) görs med en förutsägbar månadsfrekvens och fokuserar på nya funktioner och produktinnovationer.
 * [Underhållsreleaser](/help/release-notes/maintenance/latest.md) görs ofta och fokuseras på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta säkerställer att [!DNL Adobe Experience Manager] as a Cloud Service är alltid uppdaterad med alla viktiga korrigeringar.
 
-Förutom innovationshastigheten [!DNL Adobe Experience Manager] as a Cloud Service ger också möjlighet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna långt i förväg. Om du har ett AEM, t.ex. formulär, kan du se till att det också uppdateras genom att välja lösningen i [programinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
+Utöver innovationshastigheten, [!DNL Adobe Experience Manager] as a Cloud Service ger också möjlighet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna långt i förväg. Om du har ett AEM, t.ex. formulär, kan du se till att det också uppdateras genom att välja lösningen i [programinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
 
 >[!NOTE]
 >
@@ -32,16 +32,16 @@ Förutom innovationshastigheten [!DNL Adobe Experience Manager] as a Cloud Servi
 
 Så här förbereder du en release:
 
-1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager släpper färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
+1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager släpper en färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
 1. Läs versionsinformationen: Läs [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för att bekanta sig med releasefunktionerna och förhandsversionsfunktionerna.
-1. Få tillgång till och testa nya funktioner: Aktivera [prerelease channel](/help/release-notes/prerelease.md) i icke-produktionsmiljöer och börja testa de funktioner som ska utvärderas i dina anpassade miljöer.
-1. Utbilda dina användare: Använd dokumentation och Experience League-resurser för att få användarna att komma igång och få en bättre överblick över de nya funktionerna.
+1. Få tillgång till och prova nya funktioner: Aktivera [prerelease channel](/help/release-notes/prerelease.md) i icke-produktionsmiljöer och börja testa de funktioner som ska utvärderas i dina anpassade miljöer.
+1. Utbilda dina användare: Använd dokumentation och Experience League-resurser för att få användarna att komma igång och bli bättre på de nya funktionerna.
 
 ## Viktig versionsinformation {#key-articles}
 
 * [Versionsinformation om funktioner](/help/release-notes/release-notes-cloud/release-notes-current.md)
 * [Versionsinformation om underhåll](/help/release-notes/maintenance/latest.md)
-* [Vad är nytt?](what-is-new.md)
+* [Nyheter](what-is-new.md)
 * [Viktiga ändringar](aem-cloud-changes.md)
 * [Föråldrade och borttagna funktioner](deprecated-removed-features.md)
 
@@ -51,7 +51,7 @@ Så här förbereder du en release:
 |---|---|
 | [Översikt](/help/overview/home.md) | Den här guiden ger en översikt över Experience Manager as a Cloud Service, med bland annat en introduktion och en terminologilista. |
 | [Användarhandbok om säkerhet](/help/security/home.md) | Läs om viktiga säkerhetsfrågor när det gäller Experience Manager as a Cloud Service. |
-| [Onboarding Journey](/help/journey-onboarding/overview.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och viktig dataskyddsinformation. |
+| [Onboardresa](/help/journey-onboarding/overview.md) | Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och viktig dataskyddsinformation. |
 | [Användarhandbok för Sites](/help/sites-cloud/home.md) | Läs om hur du utvecklar med och administrerar Experience Manager Sites as a Cloud Service. |
 | [Användarhandbok för Assets](/help/assets/home.md) | Läs om hur du använder och administrerar Experience Manager Assets as a Cloud Service. |
 | [Flytta till AEM as a Cloud Service](/help/journey-migration/getting-started.md) | Förstå övergången till Cloud Service. |

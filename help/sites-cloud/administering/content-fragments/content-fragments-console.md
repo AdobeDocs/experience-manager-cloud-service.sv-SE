@@ -5,9 +5,9 @@ landing-page-description: Lär dig hur du hanterar innehållsfragment från kons
 feature: Content Fragments
 role: User
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: afe676b0972462ef2c9b52150d96560c71f7a0f6
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -53,18 +53,19 @@ Här ser du att det finns tre huvudområden:
    * Tillhandahåller AEM
    * Visar även din IMS-organisation
 * Den vänstra panelen
-   * Här kan du dölja, eller visa, mappträdet
+   * Här kan du dölja eller visa mappträdet
    * Du kan välja en viss gren av trädet
    * Storleken kan ändras så att kapslade mappar visas
-* Panelen main/right - härifrån kan du:
+* Den högra panelen - härifrån kan du:
    * Se listan med alla innehållsfragment i den markerade grenen i trädet:
-      * Platsen anges av vägbeskrivningarna. dessa kan också användas för att ändra platsen
+      * Platsen anges av vägbeskrivningarna. Dessa kan även användas för att ändra platsen
       * Innehållsfragment från den valda mappen och alla underordnade mappar visas:
-         * [Olika informationsområden](#selectuse-available-columns) om ett innehållsfragment som innehåller länkar, Beroende på vilket fält det gäller kan dessa:
+         * [Olika informationsområden](#selectuse-available-columns) om ett innehållsfragment innehåller länkar. Beroende på fältet kan dessa:
             * Öppna rätt fragment i redigeraren
             * Visa information om referenser
             * Visa information om språkversioner av fragmentet
-      * Genom att använda musen på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du göra följande:
+            * Snabbfiltrera efter markerad tagg
+      * Genom att använda muspekaren på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du göra följande:
          * Sortera - välj lämplig åtgärd för antingen stigande eller fallande Detta sorterar hela tabellen efter den kolumnen. Sortering är bara tillgängligt för lämpliga kolumner.
          * Ändra storlek på kolumnen med antingen funktionsmakrot eller breddreglagen
 
@@ -116,28 +117,35 @@ Huvudpanelen/den högra panelen (tabellvyn) i konsolen innehåller en rad inform
 * **Namn**
    * Tillhandahåller en länk för att öppna fragmentet i redigeraren.
 * **Modell**
-   * Tillhandahåller en länk för att öppna fragmentet i redigeraren.
+   * Endast information.
+   * Kan användas för [Snabb filtrering](#fast-filtering#fast-filtering)
 * **Mapp**
    * Tillhandahåller en länk för att öppna mappen i konsolen.
 Vid hovring över mappnamnet visas JCR-sökvägen.
 * **Status**
-   * Endast information
+   * Endast information.
+   * Kan användas för [Snabb filtrering](#fast-filtering#fast-filtering)
 * **Förhandsgranska**
    * Endast information:
       * **Synkroniserad**: Innehållsfragmentet är synkroniserat på **Upphovsman** och **Förhandsgranska** tjänster.
-      * **Slut på synkronisering**: Innehållsfragmentet är inte synkroniserat på **Upphovsman** och **Förhandsgranska** tjänster. Du måste **Publicera** till **Förhandsgranska** för att säkerställa att de två instanserna återgår till att vara synkroniserade.
+      * **Slut på synkronisering**: Innehållsfragmentet är inte synkroniserat på **Upphovsman** och **Förhandsgranska** tjänster. Du måste **Publicera** till **Förhandsgranska** för att se till att de två instanserna är synkroniserade igen.
       * blank: Innehållsfragmentet finns inte på **Förhandsgranska** service.
 * **Ändrad**
-   * Endast information
+   * Endast information.
 * **Ändrad av**
-   * Endast information
+   * Endast information.
+   * Kan användas för [Snabb filtrering](#fast-filtering#fast-filtering).
+* **Taggar**
+   * Endast information.
+   * Visar alla taggar som hör till innehållsfragmentet, både Main och alla variationer.
+   * Kan användas för [Snabb filtrering](#fast-filtering#fast-filtering).
 * **Publicerad den**
-   * Endast information
+   * Endast information.
 * **Publicerat av**
-   * Endast information
+   * Endast information.
+   * Kan användas för [Snabb filtrering](#fast-filtering#fast-filtering).
 * **Refererad av**
-
-   * Tillhandahåller en länk som öppnar en dialogruta med alla överordnade referenser till det fragmentet. inklusive referenser till innehållsfragment, upplevelsefragment och sidor. Om du vill öppna en viss referens klickar du på **Titel** i dialogrutan.
+   * Tillhandahåller en länk som öppnar en dialogruta med alla överordnade referenser till det fragmentet, inklusive referenser till innehållsfragment, upplevelsefragment och sidor. Klicka på **Titel** i dialogrutan.
 
      ![Konsolen Innehållsfragment - dialogrutan Referenser](assets/cfc-console-references-dialog.png)
 
@@ -147,7 +155,7 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 
      ![Konsol för innehållsfragment - språkindikator](assets/cfc-console-language-indicator.png)
 
-      * Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
+      * Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Klicka på **Titel** i dialogrutan.
 
         ![Konsol för innehållsfragment - språkdialogruta](assets/cfc-console-languages-dialog.png)
 
@@ -165,9 +173,13 @@ Här visas en lista med kolumner som du kan dölja eller visa:
 
 På panelen Filter finns:
 
-* Ett urval av prediater. ett eller flera predikat kan markeras och kombineras för att skapa filtret
+* Ett urval av prediater.
+   * inklusive innehållsfragmentmodeller, lokalisering, taggar, statusfält med flera
+   * ett eller flera predikat kan markeras och kombineras för att skapa filtret
 * möjlighet att **Spara** din konfiguration
 * alternativet att hämta ett sparat sökfilter för återanvändning
+
+När du har valt **Filtrera med** visas (under sökrutan). De kan avmarkeras därifrån. Till exempel:
 
 ![Konsol för innehållsfragment - filtrering](assets/cfc-console-filter.png)
 
@@ -179,7 +191,7 @@ Välj till exempel **Publicerad** i **Status** kolumn:
 
 >[!NOTE]
 >
->Snabb filtrering stöds bara för **Modell**, **Status**, **Ändrad av** och **Publicerat av** kolumner.
+>Snabb filtrering stöds bara för **Modell**, **Status**, **Ändrad av**, **Taggar** och **Publicerat av** kolumner.
 
 ![Konsol för innehållsfragment - filtrering](assets/cfc-console-fast-filter-01.png)
 

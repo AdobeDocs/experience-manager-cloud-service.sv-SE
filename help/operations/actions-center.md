@@ -1,20 +1,15 @@
 ---
 title: Actions Center
 description: Utnyttja åtgärdscentret för att enkelt vidta åtgärder vid incidenter och annan viktig information
-hidefromtoc: true
-hide: true
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
-source-git-commit: 083aa4b893b58102b3a0bf68c4dd3b4c003b48f6
+source-git-commit: 4adae6ffe45dcd2b80d7d199fc29a806ce5e78c4
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '727'
 ht-degree: 0%
 
 ---
 
 # Actions Center {#actions-center}
-
->[!NOTE]
->Den här funktionen har inte släppts.
 
 AEM när Cloud Servicen skickar e-postmeddelanden till Åtgärdscenter när allvarliga incidenter inträffar som kräver omedelbara åtgärder och proaktiva rekommendationer för optimering. Exempel är en blockerad kö eller en uppsättning med förfallna autentiseringsuppgifter. Den fullständiga uppsättningen med meddelandetyper i Åtgärdscenter kan visas i [tabellen nedan](#supported-notification-types), som kommer att byggas ut med tiden.
 
@@ -40,7 +35,7 @@ Skapa de produktprofiler som beskrivs för att konfigurera mottagning av e-postm
 
 ## Detaljerat användarflöde {#detailed-user-flow}
 
-Om du klickar på e-postmeddelandet kommer du till Åtgärdscenter, med en popup-meny som visar kontexten för det meddelande du klickade på och i vissa fall länkar till ytterligare information som beskriver hur du ska vidta korrigerande åtgärder.
+Om du klickar på e-postmeddelandet kommer du till Åtgärdscenter, med en popup-meny som visar kontexten för det meddelande du klickade på och i vissa fall länkar till ytterligare information som beskriver hur du ska vidta korrigerande åtgärder. Du kan även komma åt Actions Center direkt på [https://experience.adobe.com/aem/actions-center](https://experience.adobe.com/aem/actions-center/), där du kan välja rätt program och miljö.
 
 ![Incidentinformation](/help/operations/assets/incident-details.png)
 
