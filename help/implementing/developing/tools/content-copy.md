@@ -2,7 +2,7 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
 exl-id: f060821d-d559-45d2-b3b1-1b2277694ec4
-source-git-commit: f579539d582e2059fca20f9f7e5e82f4ae24c833
+source-git-commit: 639c49c69c87e7c408929f0d35a673a96a5cc5db
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Om du vill använda verktyget för innehållskopiering krävs vissa behörighete
 
 | Innehållskopia | AEM | Distributionshanterarroll |
 |---|---|---|
-| Skapa och ändra [innehållsuppsättningar](#create-content-set) | Obligatoriskt | Krävs inte |
+| Skapa och ändra [innehållsuppsättningar](#create-content-set) | Krävs inte | Obligatoriskt |
 | Starta eller avbryta [innehållskopia](#copy-content) | Obligatoriskt | Obligatoriskt |
 
 Mer information om behörigheter och hur du ställer in dem finns i dokumentet [AEM as a Cloud Service team och produktprofiler.](/help/onboarding/aem-cs-team-product-profiles.md)
@@ -50,7 +50,7 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Navigera till **Innehållsuppsättningar** sidan från **Miljö** skärm.
 
@@ -58,15 +58,15 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
 
    ![Innehållsuppsättningar](assets/content-sets.png)
 
-1. På **Detaljer** Ange ett namn och en beskrivning för innehållsuppsättningen och tryck eller klicka på **Fortsätt**.
+1. På **Information** Ange ett namn och en beskrivning för innehållsuppsättningen och tryck eller klicka på **Fortsätt**.
 
    ![Information om innehållsuppsättning](assets/add-content-set-details.png)
 
-1. På **Innehållsbanor** -fliken i guiden anger du sökvägarna till det ändringsbara innehåll som ska inkluderas i innehållsuppsättningen.
+1. På **Innehållsbanor** -fliken i guiden anger du sökvägarna för det muterbara innehåll som ska inkluderas i innehållsuppsättningen.
 
    1. Ange banan i dialogrutan **Lägg till inkluderingssökväg** fält.
    1. Klicka **Lägg till bana** för att lägga till sökvägen till innehållsuppsättningen.
-   1. Klicka **Lägg till bana** vid behov.
+   1. Klicka **Lägg till bana** igen efter behov.
       * Upp till 50 banor är tillåtna.
 
    ![Lägg till banor i innehållsuppsättningen](assets/add-content-set-paths.png)
@@ -110,7 +110,7 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Navigera till **Innehållsuppsättningar** sidan från **Miljö** skärm.
 
@@ -141,17 +141,17 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
 
 Kopieringsprocessen startar. Kopieringsprocessens status visas i konsolen för den valda innehållsuppsättningen.
 
-## Innehållskopia - aktivitet {#copy-activity}
+## Innehållskopia aktivitet {#copy-activity}
 
 Du kan övervaka statusen för dina kopieringsprocesser i **Kopiera innehållsaktivitet** sida.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Navigera till **Kopiera innehållsaktivitet** sidan från **Miljö** skärm.
 
-![Innehållskopia - aktivitet](assets/copy-content-activity.png)
+![Innehållskopia aktivitet](assets/copy-content-activity.png)
 
 ### Status för innehållskopia {#statuses}
 
