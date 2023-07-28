@@ -1,9 +1,9 @@
 ---
 title: Konfigurera CDN- och WAF-regler för att filtrera trafik
 description: Använd reglerna för brandvägg för CDN och webbaserade program för att filtrera skadlig trafik
-source-git-commit: 579f2842a72c7da1c9d24772bdae354a943de40c
+source-git-commit: a9b8b4d6029d0975428b9cff04dbbec993d56172
 workflow-type: tm+mt
-source-wordcount: '2360'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Adobe försöker mildra attacker mot kundwebbplatser, men det kan vara praktiskt
 
 I den här artikeln beskrivs den senare metoden, som innehåller två kategorier av regler:
 
-1. **CDN-regler**: blockera eller tillåt förfrågningar baserat på egenskaper för förfrågningar och rubriker för förfrågningar, inklusive IP, sökvägar och användaragent. Dessa regler kan konfigureras av alla AEM as a Cloud Service kunder
-1. **WAF** (Brandvägg för webbaserade program) regler: blockförfrågningar som matchar olika mönster som man vet är associerade med skadlig trafik. Dessa regler kan konfigureras av kunder som licensierar WAF-tillägget; kontakta ditt Adobe-kontoteam för mer information. Observera att ingen ytterligare licens krävs under det tidiga adopterprogrammet.
+1. **CDN-regler**: blockera eller tillåt förfrågningar baserat på begäranegenskaper och begäranrubriker, inklusive IP, sökvägar och användaragent. Dessa regler kan konfigureras av alla AEM as a Cloud Service kunder
+1. **WAF** (Brandvägg för webbaserade program): blockbegäranden som matchar olika mönster som man vet är associerade med skadlig trafik. Dessa regler kan konfigureras av kunder som licensierar WAF-tillägget. Kontakta Adobe-kontoteamet för mer information. Observera att ingen ytterligare licens krävs under det tidiga adopterprogrammet.
 
-Dessa regler kan distribueras till dev-, stage- och prod-molnmiljötyper, för produktionsprogram (inte sandlådeprogram). Stöd för RDE-miljöer kommer att finnas i framtiden.
+Dessa regler kan distribueras till dev-, stage- och prod-molnmiljötyper, för produktionsprogram (inte sandbox). Stöd för RDE-miljöer kommer att finnas tillgängligt i framtiden.
 
 ## Inställningar {#setup}
 
@@ -56,7 +56,7 @@ Dessa regler kan distribueras till dev-, stage- och prod-molnmiljötyper, för p
 
 1. För andra miljötyper än RDE kör du Cloud Managers konfigurationsflöde, som kan konfigureras enligt beskrivningen nedan.
 
-   1. Välj **Lägg till produktionspipeline** eller **Lägg till icke-produktionsförlopp** för att starta guiden Lägg till pipeline
+   1. På ditt pipeline-kort på startsidan för Cloud Manager väljer du **Lägg till produktionspipeline** eller **Lägg till icke-produktionsförlopp** för att starta guiden Lägg till pipeline
    1. Välj **Distributionsförlopp** på konfigurationsfliken
 
       ![Välj alternativet Distributionsförlopp](/help/security/assets/deployment.png)
@@ -156,17 +156,17 @@ The `wafRules` -egenskapen kan innehålla följande regler:
 | AWS SSRF | AWS-SSRF | SSRF (Server Side Request Forgery) är en begäran som försöker skicka begäranden från webbprogrammet till interna målsystem. AWS SSRF-attacker använder SSRF för att få Amazon Web Services-nycklar (AWS) och få tillgång till S3-bucket och deras data. |
 | BHH | Felaktiga Hop-huvuden | Felaktiga Hop-huvuden anger ett försök till HTTP-smuggling via en felformaterad Transfer-Encoding (TE) eller Content-Length (CL)-rubrik, eller en korrekt formaterad TE- och CL-rubrik |
 | ABNORMALPATH | Onormal bana | Onormal bana anger att den ursprungliga banan skiljer sig från den normaliserade banan (till exempel `/foo/./bar` normaliseras till `/foo/bar`) |
-| KOMPRIMERAD | Komprimering upptäcktes | POSTENS begärandetext är komprimerad och kan inte inspekteras. Om t.ex.&quot;Innehållskodning: gzip&quot;-begärandehuvudet har angetts och POSTENS brödtext är inte oformaterad text. |
+| KOMPRIMERAD | Komprimering upptäcktes | POSTENS begärandetext är komprimerad och kan inte inspekteras. Om t.ex. begärandehuvudet &quot;Content-Encoding: gzip&quot; anges och POSTENS brödtext inte är oformaterad text. |
 | DUBBELKODNING | Dubbel kodning | Dubbel kodning används för att kontrollera om HTML-tecken med dubbel kodning kan användas |
 | FORCEFULBROWSING | Tvingad bläddring | Tvingad bläddring är det misslyckade försöket att komma åt administratörssidor |
 | NOTUTF8 | Ogiltig kodning | Ogiltig kodning kan göra att servern översätter skadliga tecken från en begäran till ett svar, vilket kan orsaka denial of service eller XSS |
-| JSON-FEL | JSON-kodningsfel | En begärandetext för POST, PUT eller PATCH som har angetts som innehåller JSON i begärandehuvudet för Content-Type men som innehåller JSON-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
-| MALFORMED-DATA | Felformaterade data i begärandetexten | En begärandetext för POST, PUT eller PATCH som har fel format enligt begärandehuvudet Content-Type. Exempel:&quot;Innehållstyp: application/x-www-form-urlencoded&quot; request header har angetts och innehåller en POST body som är json. Detta är ofta ett programmeringsfel, en automatiserad eller skadlig begäran. Kräver agent 3.2 eller högre. |
+| JSON-ERROR | JSON-kodningsfel | En begärandetext för POST, PUT eller PATCH som har angetts som innehåller JSON i begärandehuvudet för Content-Type men som innehåller JSON-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
+| MALFORMED-DATA | Felformaterade data i begärandetexten | En begärandetext för POST, PUT eller PATCH som har fel format enligt begärandehuvudet Content-Type. Om en begäranderubrik av typen&quot;Content-Type: application/x-www-form-urlencoded&quot; anges och innehåller en POST som är json. Detta är ofta ett programmeringsfel, en automatiserad eller skadlig begäran. Kräver agent 3.2 eller högre. |
 | SANS | Skadlig IP-trafik | [SANS Internet Storm Center](https://isc.sans.edu/) lista över IP-adresser som har rapporterats ha varit inblandade i skadlig aktivitet |
-| SIGSCI-IP | Nätverkseffekt | IP flaggad av SignalSciences: När en IP-adress markeras på grund av en skadlig signal från beslutsmotorn kommer denna IP-adress att spridas till alla kunder. Efterföljande förfrågningar från de IP-adresser som innehåller ytterligare signaler under flaggan loggas sedan |
-| INNEHÅLLSTYP | Begäranhuvudet Content-Type saknas | En POST-, PUT- eller PATCH-begäran som inte har någon Content-Type-begäranderubrik. Som standard ska programservrar anta &quot;Content-Type: text/ren text, charset=us-ascii&quot; i det här fallet. Många automatiska och skadliga förfrågningar kanske saknar&quot;Innehållstyp&quot;. |
+| SIGSCI-IP | Nätverkseffekt | IP flaggad av SignalSciences: När ett IP-värde flaggas på grund av en skadlig signal från beslutsmotorn sprids detta IP-värde till alla kunder. Efterföljande förfrågningar från de IP-adresser som innehåller ytterligare signaler under flaggan loggas sedan |
+| INNEHÅLLSTYP | Begäranhuvudet Content-Type saknas | En POST-, PUT- eller PATCH-begäran som inte har någon Content-Type-begäranderubrik. Som standard ska programservrar anta&quot;Content-Type: text/plain; charset=us-ascii&quot; i det här fallet. Många automatiska och skadliga förfrågningar kanske saknar&quot;Innehållstyp&quot;. |
 | NOUA | Ingen användaragent | Många automatiserade och skadliga förfrågningar använder falska eller saknade användaragenter för att göra det svårt att identifiera vilken typ av enhet som framställningarna görs på. |
-| TORNODE | Torgrafik | Tor är programvara som döljer en användares identitet. En spik i Tor-trafiken kan indikera en angripare som försöker maskera sin plats. |
+| TORNODE | Tor Traffic | Tor är programvara som döljer en användares identitet. En spik i Tor-trafiken kan indikera en angripare som försöker maskera sin plats. |
 | DATACENTER | Datacentertrafik | Datacentralstrafik är icke-organisk trafik som härrör från identifierade värdtjänstleverantörer. Den här typen av trafik är vanligtvis inte kopplad till en riktig slutanvändare. |
 | NULLBYTE | Null byte | Null-byte visas normalt inte i en begäran och anger att begäran är felformaterad och potentiellt skadlig. |
 | IMPOSTOR | SearchBot Impostor | Sökrobotimporteraren är någon som låtsas vara en sökrobot från Google eller Bing, men som inte är berättigad. Observera att är inte beroende av ett svar för sig självt, utan måste lösas i molnet först, så det bör inte användas i en förregel. |
@@ -249,7 +249,7 @@ data:
 
 ## Regler med hastighetsbegränsningar {#rules-with-rate-limits}
 
-Ibland är det önskvärt att blockera trafikmatchning för en regel endast om matchningen överskrider en viss hastighet över tiden. Ange ett värde för `rateLimit` egenskapen begränsar hastigheten för de begäranden som matchar regelvillkoret.
+Ibland är det önskvärt att blockera trafikmatchning för en regel endast om matchningen överskrider en viss hastighet över tiden. Ange ett värde för `rateLimit` Egenskapen begränsar hastigheten för de begäranden som matchar regelvillkoret.
 
 ### rateLimit-struktur {#ratelimit-structure}
 
@@ -261,7 +261,7 @@ Ibland är det önskvärt att blockera trafikmatchning för en regel endast om m
 
 ### Exempel {#ratelimiting-examples}
 
-Exempel 1: Om begärandehastigheten överstiger 100 begäranden per sekund under de senaste 60 sekunderna, blockera `/critical/resource` i 60 sekunder
+Exempel 1: Om begärandehastigheten överstiger 100 begäranden per sekund under de senaste 60 sekunderna blockerar du `/critical/resource` i 60 sekunder
 
 ```
 - name: rate-limit-example
@@ -270,7 +270,7 @@ Exempel 1: Om begärandehastigheten överstiger 100 begäranden per sekund under
   rateLimit: { limit: 100, window: 60, penalty: 60 }
 ```
 
-Exempel 2: När begärandehastigheten överstiger 10 begäranden per sekund på 10 sekunder, blockera resursen i 300 sekunder:
+Exempel 2: När begärandehastigheten överstiger 10 begäranden per sekund på 10 sekunder blockerar du resursen i 300 sekunder:
 
 ```
 - name: rate-limit-using-defaults
@@ -312,6 +312,7 @@ data:
 "ttfb": 19,
 "cip": "147.160.230.112",
 "rid": "974e67f6",
+"ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
 "host": "example.com",
 "url": "/block-me",
 "req_mthd": "GET",
@@ -329,11 +330,12 @@ data:
 "timestamp": "2023-05-26T09:20:01+0000",
 "ttfb": 19,
 "cip": "147.160.230.112",
+"ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
 "rid": "974e67f6",
 "host": "example.com",
 "url": "/?sqli=%27%29%20UNION%20ALL%20SELECT%20NULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL--%20fAPK",
 "req_mthd": "GET",
-"res_type": "",
+"res_type": "image/png",
 "cache": "PASS",
 "res_status": 406,
 "res_bsize": 3362,
@@ -352,7 +354,8 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 | *ttfb* | Förkortning för *Tid till första byte*. Tidsintervallet mellan begäran startades fram till punkten innan svarstexten började direktuppspelas. |
 | *cip* | Klientens IP-adress. |
 | *rutnät* | Värdet på begärandehuvudet som används för att unikt identifiera begäran. |
-| *värd* | Den myndighet som begäran är avsedd för. |
+| *ua* | Användaragenten som ansvarar för att göra en given HTTP-begäran. |
+| *värd* | Den myndighet som begäran avser. |
 | *url* | Den fullständiga sökvägen, inklusive frågeparametrar. |
 | *req_mthd* | HTTP-metod som skickas av klienten, till exempel &quot;GET&quot; eller &quot;POST&quot;. |
 | *res_type* | Den innehållstyp som används för att ange resursens ursprungliga medietyp |
