@@ -7,9 +7,9 @@ role: Admin, User
 hide: true
 hidefromtoc: true
 level: Intermediate
-source-git-commit: 6abd681fbf0258029dd594d214a2480d73b21f57
+source-git-commit: 6cc7153c9754b6786a08c5fd378d72a8ab7c478d
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1200'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Exempelteman, mallar och formulärdatamodeller i kärnkomponenter {#sample-themes-templates-and-data-models}
 
-AEM Forms as a Cloud Service innehåller exempelreferensteman, mallar och formulärdatamodeller som hjälper dig att snabbt komma igång med att skapa Adaptiv Forms med kärnkomponenter. Du kan [aktivera adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) på AEM Forms as a Cloud Service och lokala utvecklingsmiljö för att få OTB-mallar och [använda och anpassa teman](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) in [!DNL AEM Forms].
+AEM Forms as a Cloud Service innehåller exempelreferensteman, mallar och formulärdatamodeller som hjälper dig att snabbt komma igång med att skapa Adaptiv Forms med kärnkomponenter. Du kan [aktivera adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) på AEM Forms as a Cloud Service och lokala utvecklingsmiljö för att få OTB-mallar och till [använda och anpassa exempelteman](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) in [!DNL AEM Forms].
 
 Exempelteman, mallar och formulärdatamodeller som ingår i referensinnehållspaketet är:
 
@@ -26,14 +26,13 @@ Exempelteman, mallar och formulärdatamodeller som ingår i referensinnehållspa
 | Grundläggande | Arbetsyta | Microsoft® Dynamics 365 |
 | Tom | WKND | Salesforce |
 | Kontakta oss | Easel |  |
+| Uppdatering av kontaktinformation |   |   |
 | Samtyckesformulär | |  |
-| Raise Complaint | | |
 | Loggtjänstbegäran |  |  |
 | Ge feedback |  |  |
 | Registrering av förmåner |  |   |
 | Sammanfattning av löneförmåner för medarbetare |   |   |
 | Kontoutdrag för begäran |   |   |
-| Uppdatering av kontaktinformation |   |   |
 | Formulär för säkerhetskontroll |   |   |
 | Kvalitetskontroll |   |   |
 | Inköpsbegäran |  |  |
@@ -77,15 +76,15 @@ Med en grundläggande mall kan du snabbt skapa ett formulär för registreringsu
 
 >[!TAB Skrivbord]
 
-    ![Basic Template Desktop](assets/Basic-template-desktop-view.png)
+![Basic Template Desktop](assets/Basic-template-desktop-view.png)
 
 >[!TAB Telefon]
 
-    ![Basic Template Phone](assets/Basic-template-phone-view.png)
+![Telefon till standardmall](assets/Basic-temp-phone-view.png)
 
 >[!TAB Tablet]
 
-    ![Enkel mallplatta](assets/Basic-template-tablet-view.png)
+![Enkel mallsurfplatta](assets/Basic-temp-tablet-view.png)
 
 >[!ENDTABS]
 
@@ -96,11 +95,9 @@ En tom arbetsytemall används för att skapa en anpassad formulärstruktur, inne
 
 ![Tom mall](assets/Blank-template.png)
 
-### Kontoutdrag för förfrågan {#Request-for-Account-Statement}
+### Kontakta oss {#Contact-Us}
 
-En mall för kontoutdrag hjälper till att skapa ett formulär som initierar processen att få en korrekt och aktuell kundförsäkran. Rapporten innehåller detaljerad information om finansiella transaktioner, aktiviteter eller annan relevant information om kunder som använder formuläret.
-
-![Request-for-account-statement](assets/Request-for-account-statment.png)
+Kontakta oss formulärmall som används för att skapa ett formulär som underlättar kommunikationen mellan webbplatsbesökare och administratörer. Användare kan skicka frågor, feedback eller supportförfrågningar via formuläret.
 
 ### Uppdatering av kontaktinformation {#Contact-Details-Update}
 
@@ -108,38 +105,9 @@ Kontaktuppgifter uppdaterar mallar så att författare kan skapa ett formulär f
 
 ![Kontaktinformation-uppdatering](assets/Contact-details-update.png)
 
-### Säkerhetsinspektion {#Safety-Inspection}
-
-Formulärmallen för säkerhetsinspektioner hjälper till att skapa ett formulär med inmatningsinformation för en säker arbetsmiljö. Genom regelbundna inspektioner med hjälp av denna blankett kan potentiella risker identifieras. Formuläret omfattar olika aspekter såsom nödutgångar, brandsäkerhet, elsäkerhet, farligt material, personlig skyddsutrustning, arbetsstationens ergonomi för anställdas, besökares och kunders säkerhet och välbefinnande.
-
-### Inköpsbegäran {#Purchase-Request}
-
-Formulärmallen för inköpsbegäran hjälper till att skapa ett formulär som initierar upphandlingsprocessen och gör det möjligt för medarbetarna att formellt begära inköp av varor eller tjänster som är nödvändiga för deras arbete. Formuläret innehåller viktig information som artikelbeskrivning, kvantitet, föredragen leverantör (om tillämpligt), budgetallokering, motivering för inköp, leveransinformation och obligatoriska godkännanden.
-
-![inköpsbegäran](assets/purchase-request.gif)
-
-### Sammanfattning av medarbetarförmåner {#Employee-Benefits-Summary}
-
-En mall för en sammanfattande mall för löneförmåner används för att skapa ett formulär som samlar in viktig information om en persons förmåner. Det hjälper till att snabbt och korrekt utvärdera täckningen och ger en heltäckande översikt för effektivt stöd och stöd.
-
-### Registrering av förmåner {#Benefits-Enrollment}
-
-Blankettmall för förmånsregistrering används för att skapa ett formulär som samlar in viktig information från medarbetarna om vilka förmåner de föredrar och vilka täckningsalternativ de har. Det är vanligtvis en del av den årliga perioden för förmånsregistrering.
-
-
-### Kvalitetskontrollinspektion {#Quality-Control-Inspection}
-
-Formulärmallen för kvalitetskontroll används för att skapa ett formulär för att bedöma och dokumentera en produkts eller objektets visuella utseende, dimensioner, funktionalitet, dokumentation, testresultat och övergripande kvalitet. Det hjälper till att identifiera brister, avvikelser och korrigerande åtgärder som är nödvändiga för att säkerställa att kvalitetsnormerna följs.
-
-
 ### Samtyckesformulär {#Consent-Form}
 
 Blankettmall för samtycke används för att skapa ett formulär för att köpa ett juridiskt dokument från deltagare som deltar i en viss verksamhet, en forskningsundersökning, ett medicinskt förfarande eller en situation där deras personuppgifter eller rättigheter kan vara inblandade. Formuläret säkerställer öppenhet, skyddar deltagarens rättigheter och skapar en tydlig förståelse för vad personen går med på.
-
-
-### Kontakta oss {#Contact-Us}
-
-Kontakta oss formulärmall som används för att skapa ett formulär som underlättar kommunikationen mellan webbplatsbesökare och administratörer. Användare kan skicka frågor, feedback eller supportförfrågningar via formuläret.
 
 ### Loggtjänstbegäran {#Log-Service-Request}
 
@@ -148,6 +116,34 @@ I mallen för loggtjänstbegäran kan du skapa ett formulär som begär specifik
 ### Ge feedback {#Give-Feedback}
 
 Ge feedback-formulärmallar hjälper till att skapa ett formulär som ger konstruktiv feedback till en annan person eller grupp. Formuläret ser till att informationen är tydlig, specifik och åtgärdbar och främjar öppen kommunikation och förbättring.
+
+### Registrering av förmåner {#Benefits-Enrollment}
+
+Blankettmall för förmånsregistrering används för att skapa ett formulär som samlar in viktig information från medarbetarna om vilka förmåner de föredrar och vilka täckningsalternativ de har. Det är vanligtvis en del av den årliga perioden för förmånsregistrering.
+
+### Sammanfattning av medarbetarförmåner {#Employee-Benefits-Summary}
+
+En mall för en sammanfattande mall för löneförmåner används för att skapa ett formulär som samlar in viktig information om en persons förmåner. Det hjälper till att snabbt och korrekt utvärdera täckningen och ger en heltäckande översikt för effektivt stöd och stöd.
+
+### Kontoutdrag för förfrågan {#Request-for-Account-Statement}
+
+En mall för kontoutdrag hjälper till att skapa ett formulär som initierar processen att få en korrekt och aktuell kundförsäkran. Rapporten innehåller detaljerad information om finansiella transaktioner, aktiviteter eller annan relevant information om kunder som använder formuläret.
+
+![Request-for-account-statement](assets/Request-for-account-statment.png)
+
+### Säkerhetsinspektion {#Safety-Inspection}
+
+Formulärmallen för säkerhetsinspektioner hjälper till att skapa ett formulär med inmatningsinformation för en säker arbetsmiljö. Genom regelbundna inspektioner med hjälp av denna blankett kan potentiella risker identifieras. Formuläret omfattar olika aspekter såsom nödutgångar, brandsäkerhet, elsäkerhet, farligt material, personlig skyddsutrustning, arbetsstationens ergonomi för anställdas, besökares och kunders säkerhet och välbefinnande.
+
+### Kvalitetskontrollinspektion {#Quality-Control-Inspection}
+
+Formulärmallen för kvalitetskontroll används för att skapa ett formulär för att bedöma och dokumentera en produkts eller objektets visuella utseende, dimensioner, funktionalitet, dokumentation, testresultat och övergripande kvalitet. Det hjälper till att identifiera brister, avvikelser och korrigerande åtgärder som är nödvändiga för att säkerställa att kvalitetsnormerna följs.
+
+### Inköpsbegäran {#Purchase-Request}
+
+Formulärmallen för inköpsbegäran hjälper till att skapa ett formulär som initierar upphandlingsprocessen och gör det möjligt för medarbetarna att formellt begära inköp av varor eller tjänster som är nödvändiga för deras arbete. Formuläret innehåller viktig information som artikelbeskrivning, kvantitet, föredragen leverantör (om tillämpligt), budgetallokering, motivering för inköp, leveransinformation och obligatoriska godkännanden.
+
+![inköpsbegäran](assets/purchase-request.gif)
 
 ## Referensformulärdatamodeller {#reference-models}
 
