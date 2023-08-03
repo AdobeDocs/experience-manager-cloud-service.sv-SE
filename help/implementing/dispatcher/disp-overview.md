@@ -1,11 +1,11 @@
 ---
 title: Dispatcher i molnet
-description: Dispatcher i molnet
+description: Lär dig mer om Dispatcher-verktygen, vilka Apache-moduler som stöds samt äldre och flexibla lägen.
 feature: Dispatcher
 exl-id: 6d78026b-687e-434e-b59d-9d101349a707
-source-git-commit: 98eff568686c72c626d2bf77d82e8c3f224eda42
+source-git-commit: 127b79d766a4dfc33a2ed6016e191e771206d791
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '993'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Mer information om hur du migrerar från den äldre konfigurationsmodellen till 
 
 ## Disposition av innehåll {#content-disposition}
 
-För publiceringsskiktet är standardinställningen för att visa blober som en bifogad fil. Åsidosätt den här inställningen med standardinställningen [dispositionshuvud för innehåll](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) i Dispatcher.
+För publiceringsskiktet är standardinställningen för att visa blober som en bifogad fil. Åsidosätt den här inställningen med standardinställningen [dispositionshuvud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) i Dispatcher.
 
 Nedan visas ett exempel på hur konfigurationen ska se ut:
 

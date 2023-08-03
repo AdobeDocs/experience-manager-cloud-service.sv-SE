@@ -1,11 +1,11 @@
 ---
 title: Validera och felsöka med Dispatcher Tools
-description: Validera och felsöka med Dispatcher Tools
+description: Lär dig mer om lokal validering, felsökning, filstrukturen i flexibelt läge och hur du migrerar från äldre läge till flexibelt läge.
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 127b79d766a4dfc33a2ed6016e191e771206d791
 workflow-type: tm+mt
-source-wordcount: '2847'
+source-wordcount: '2861'
 ht-degree: 0%
 
 ---
@@ -262,7 +262,7 @@ Se [Automatisk omladdning och validering](#automatic-loading) för ett effektivt
 
 Om ett direktiv inte är tillåtslista loggas ett fel och en avslutningskod som inte är noll returneras. Dessutom genomsöks alla filer ytterligare med mönstret `conf.dispatcher.d/enabled_farms/*.farm` och kontrollerar att
 
-* Det finns ingen filterregel som tillåter via `/glob` (se [CVE-2016-0957](https://nvd.nist.gov/vuln/detail/CVE-2016-0957)) för mer information.
+* Det finns ingen filterregel som tillåter via `/glob` (se [CVE-2016-0957](https://nvd.nist.gov/vuln/detail/CVE-2016-0957)) om du vill ha mer information.
 * Ingen administratörsfunktion visas. Åtkomst till banor som `/crx/de or /system/console`.
 
 Valideringsverktyget rapporterar endast förbjuden användning av Apache-direktiv som inte har tillåtslista. Den rapporterar inte syntaktiska eller semantiska problem med din Apache-konfiguration eftersom den här informationen endast är tillgänglig för Apache-moduler i en körningsmiljö.
@@ -278,7 +278,7 @@ använda prefixet `etc/httpd` i arkivet.
 
 De aktiverade grupperna bör finnas i den angivna undermappen.
 
-**Filen som ingår (..) måste ha följande namn: ...**
+**Den inkluderade filen (..) måste ha följande namn: ...**
 
 Det finns två avsnitt i servergruppskonfigurationen som **måste** inkludera en specifik fil: `/renders` och `/allowedClients` i `/cache` -avsnitt. Dessa avsnitt måste se ut så här:
 
@@ -309,7 +309,7 @@ Det finns fyra avsnitt i servergruppskonfigurationen där du kan inkludera egna 
 
 Du kan även inkludera **standard** version av dessa filer, vars namn föregås av ordet `default_`, till exempel `../filters/default_filters.any`.
 
-**Inkludera programsats på (..), utanför känd plats: ...**
+**Inkludera programsats vid (..), utanför känd plats: ...**
 
 Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda `$include` följande skulle till exempel generera detta fel:
 
@@ -322,7 +322,7 @@ Förutom de sex avsnitt som nämns i styckena ovan, får du inte använda `$incl
 **Tillåtna klienter/återgivningar inkluderas inte från: ...**
 
 Det här felet genereras när du inte anger något &quot;include&quot; för `/renders` och `/allowedClients` i `/cache` -avsnitt. Se
-**filen som ingår (..) måste ha följande namn: ...** för mer information.
+**fil som ingår (..) måste ha följande namn: ...** för mer information.
 
 **Filtret får inte använda glob-mönster för att tillåta förfrågningar**
 
@@ -338,12 +338,12 @@ Den här programsatsen är avsedd att tillåta begäranden för `css` -filer, me
 
 **Den inkluderade filen (..) matchar inte någon känd fil**
 
-Som standard kan två typer av filer i din virtuella värdkonfiguration för Apache anges enligt följande: skriver om och variabler.
+Som standard kan två typer av filer i din virtuella värdkonfiguration för Apache anges som bland annat: omskrivningar och variabler.
 
 | Typ | Inkludera filnamn |
 |-----------|---------------------------------|
 | Skriver om | `conf.d/rewrites/rewrite.rules` |
-| Variabler | `conf.d/variables/custom.vars` |
+| Variabel | `conf.d/variables/custom.vars` |
 
 I flexibelt läge kan även andra filer inkluderas, förutsatt att de finns i underkataloger (på alla nivåer) av `conf.d` katalog med följande prefix.
 
@@ -396,7 +396,7 @@ Den här fasen kontrollerar Apache-syntaxen genom att starta Apache HTTPD i en d
 
 >[!NOTE]
 >
-Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är en förutsättning för att du ska kunna köra och felsöka Dispatcher på en lokal dator.
+Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är ett krav för att köra och felsöka Dispatcher på en lokal dator.
 För både Windows och macOS rekommenderar Adobe att du använder Docker Desktop.
 
 Denna fas kan också köras oberoende av varandra `bin/docker_run.sh src/dispatcher host.docker.internal:4503 8080`.
@@ -432,7 +432,7 @@ Dina lokala oföränderliga filer kan uppdateras genom att köra `bin/update_mav
 
 Du kan köra Apache Dispatcher lokalt med `./bin/docker_run.sh src/dispatcher docker.for.mac.localhost:4503 8080`.
 
-Som tidigare nämnts måste Docker installeras lokalt och det är inte nödvändigt att AEM körs. Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är en förutsättning för att du ska kunna köra och felsöka Dispatcher på en lokal dator.
+Som tidigare nämnts måste Docker installeras lokalt och det är inte nödvändigt att AEM körs. Windows-användare måste använda Windows 10 Professional eller andra distributioner som stöder Docker. Detta krav är ett krav för att köra och felsöka Dispatcher på en lokal dator.
 
 Följande strategi kan användas för att öka loggutdata för modulen Dispatcher och för att se resultaten av `RewriteRule` utvärdering i både lokala miljöer och molnmiljöer.
 
@@ -533,7 +533,7 @@ I Dispatcher-konfigurationen är samma systemvariabel tillgänglig. Om mer logik
 
 Du kan också använda Cloud Manager-miljövariabler i din httpd/dispatcher-konfiguration, men inte miljöhemligheter. Den här metoden är särskilt viktig om ett program har flera dev-miljöer och vissa av dessa dev-miljöer har olika värden för httpd/dispatcher-konfigurationen. Samma ${VIRTUALHOST} syntax används som i exemplet ovan, men Define-deklarationerna i variabelfilen ovan används inte. Läs [Dokumentation för Cloud Manager](/help/implementing/cloud-manager/environment-variables.md) för instruktioner om hur du konfigurerar Cloud Manager-miljövariabler.
 
-När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till `docker_run.sh` skript direkt:
+När du testar konfigurationen lokalt kan du simulera olika miljötyper genom att skicka variabeln `DISP_RUN_MODE` till `docker_run.sh` direkt:
 
 ```
 $ DISP_RUN_MODE=stage docker_run.sh src docker.for.mac.localhost:4503 8080
@@ -544,7 +544,7 @@ Kör skriptet för att få en fullständig lista över tillgängliga alternativ 
 
 ## Visa Dispatcher-konfigurationen som används av Docker-behållaren {#viewing-dispatcher-configuration-in-use-by-docker-container}
 
-Med miljöspecifika konfigurationer kan det vara svårt att avgöra hur den faktiska Dispatcher-konfigurationen ser ut. När du har startat din dockningsbehållare med `docker_run.sh`kan den dumpas enligt följande:
+Med miljöspecifika konfigurationer kan det vara svårt att avgöra hur Dispatcher-konfigurationen ser ut. När du har startat din dockningsbehållare med `docker_run.sh`kan den dumpas enligt följande:
 
 * Bestäm vilket behållar-ID som används:
 

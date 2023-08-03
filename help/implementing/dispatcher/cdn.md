@@ -1,12 +1,12 @@
 ---
 title: CDN i AEM as a Cloud Service
-description: CDN i AEM as a Cloud Service
+description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar ditt eget CDN mot det AEM-hanterade CDN.
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 127b79d766a4dfc33a2ed6016e191e771206d791
 workflow-type: tm+mt
-source-wordcount: '1022'
-ht-degree: 10%
+source-wordcount: '1033'
+ht-degree: 9%
 
 ---
 
@@ -40,7 +40,7 @@ Se [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists
 >
 >Endast begäranden från tillåtna IP-adresser hanteras av AEM hanterat CDN. Om du pekar ditt eget CDN mot det AEM CDN-nätverket kontrollerar du att IP-adresserna för ditt CDN är med i tillåtelselista.
 
-## Customer CDN points to AEM-Managed CDN {#point-to-point-CDN}
+## Customer CDN pekar på AEM CDN {#point-to-point-CDN}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_byocdn"
@@ -55,7 +55,7 @@ Om en kund måste använda sitt befintliga CDN kan de hantera det och peka det m
 * Kunden måste ha tekniska CDN-experter som är i bruk om det uppstår några ärenderelaterade problem.
 * Kunden måste utföra och klara ett lasttest innan han/hon kan börja producera.
 
-Konfigurationsinstruktioner:
+Konfigurationsanvisningar:
 
 1. Peka ditt CDN mot Adobe CDN:s ingress som ursprungsdomän. Till exempel, `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`.
 1. Ställ in SNI på Adobe CDN:s ingress.
@@ -63,7 +63,7 @@ Konfigurationsinstruktioner:
 1. Ange `X-Forwarded-Host` header med domännamnet så att AEM kan avgöra värdhuvudet. Till exempel: `X-Forwarded-Host:example.com`.
 1. Ange `X-AEM-Edge-Key`. Värdet ska komma från Adobe.
 
-   * Krävs för att Adobe CDN ska kunna validera källan till begäran och skicka `X-Forwarded-*` rubriker i AEM. Till exempel:`X-Forwarded-For` används för att fastställa klientens IP-adress. Det blir alltså den betrodda uppringarens (det vill säga kundhanterade CDN) ansvar att se till att `X-Forwarded-*` rubriker (se anteckningen nedan).
+   * Krävs för att Adobe CDN ska kunna validera källan till begäran och skicka `X-Forwarded-*` sidhuvuden till AEM. Till exempel:`X-Forwarded-For` används för att fastställa klientens IP-adress. Det blir alltså den betrodda uppringarens (det vill säga kundhanterade CDN) ansvar att se till att `X-Forwarded-*` rubriker (se anteckningen nedan).
    * Åtkomst till Adobe CDN-ingången kan blockeras om en `X-AEM-Edge-Key` finns inte. Informera Adobe om du behöver direktåtkomst till Adobe CDN:s ingress (som ska blockeras).
 
 Se [Exempel på CDN-leverantörskonfigurationer](#sample-configurations) för exempel på konfiguration från ledande CDN-leverantörer.
@@ -143,4 +143,4 @@ Värdena för kontinentkoderna är:
 * OC Oceanien
 * Sydamerika
 
-Denna information kan vara användbar vid användning, t.ex. omdirigering till en annan URL som baseras på begärans ursprung (land). Använd rubriken Variera för att cachelagra svar som är beroende av geoinformation. Omdirigeringar till en viss landningssida bör till exempel alltid innehålla `Vary: x-aem-client-country`. Om det behövs kan du använda `Cache-Control: private` för att förhindra cachelagring. Se även [Cachelagring](/help/implementing/dispatcher/caching.md#html-text).
+Denna information kan vara användbar vid användning, t.ex. omdirigering till en annan URL som baseras på begärans ursprung (land). Använd rubriken Variera för att cachelagra svar som är beroende av geoinformation. Omdirigeringar till en viss landningssida bör till exempel alltid innehålla `Vary: x-aem-client-country`. Om det behövs kan du använda `Cache-Control: private` för att förhindra cachelagring. Se även [Cachning](/help/implementing/dispatcher/caching.md#html-text).
