@@ -2,9 +2,9 @@
 title: Använda reCAPTCHA i Adaptive Forms
 description: Lär dig hur du konfigurerar tjänsten Google reCAPTCHA i Adaptive Forms.
 topic-tags: adaptive_forms, author
-source-git-commit: 4b6c22667bb79bb6cac22675fa22f741b0262210
+source-git-commit: a1689c61715f01cb4eb62882dbcd6e202b74ffc9
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1833'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,7 @@ Så här använder du reCAPTCHA i adaptiva former:
    >[!NOTE]
    >
    >* Det går inte att använda mer än en Captcha-komponent i ett adaptivt formulär. Du bör inte heller använda CAPTCHA i en panel som är markerad för lazy loading eller i ett fragment.
-   >* reCaptcha är tidskänsligt och upphör om ungefär en minut. Därför rekommenderar vi att du placerar Captcha-komponenten precis före Skicka-knappen i den anpassade formen.
+   >* reCaptcha är tidskänsligt och upphör om cirka ett par minuter. Därför rekommenderar vi att du placerar Captcha-komponenten precis före Skicka-knappen i den anpassade formen.
 
 1. Välj den Captcha-komponent som du har lagt till och tryck på ![cmppr](assets/cmppr.png) om du vill redigera dess egenskaper.
 1. Ange en titel för CAPTCHA-widgeten. Standardvärdet är **Captcha**. Välj **Dölj titel** om du inte vill att rubriken ska visas.
