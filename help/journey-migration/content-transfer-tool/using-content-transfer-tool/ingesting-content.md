@@ -1,10 +1,10 @@
 ---
 title: Infoga innehåll i mål
-description: Infoga innehåll i mål
+description: Lär dig hur du använder verktyget Innehållsöverföring för att importera innehåll från din migreringsuppsättning till en Cloud Service-instans.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 3f526b8096125fbcf13b73fe82b2da0f611fa6ca
+source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1941'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_ingestion"
 >title="Innehållsintag"
->abstract="Inmatning avser att hämta innehåll från migreringsuppsättningen till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
+>abstract="Inmatning syftar på att hämta innehåll från migreringsuppsättningen till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html" text="Uppdatera inmatning"
 
 Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
@@ -128,7 +128,7 @@ Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM 
 
 ### Det gick inte att nå migreringstjänsten {#unable-to-reach-migration-service}
 
-Efter att en fråga om att få ta emot ett inlägg har skickats ett meddelande som följande till användaren: &quot;Migreringstjänsten på målmiljön kan inte nås. Om så är fallet, försök igen senare eller kontakta supporten för Adobe.&quot;
+Efter att ett matningsförslag har begärts kan ett meddelande som följande visas för användaren: &quot;Migreringstjänsten i målmiljön är inte tillgänglig. Om så är fallet, försök igen senare eller kontakta supporten för Adobe.&quot;
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_cannot_reach_migser.png)
 
@@ -141,7 +141,7 @@ Det här meddelandet anger att Cloud Acceleration Manager inte kunde nå målmil
 * AEM as a Cloud Service bevarar miljötillståndet och måste ibland starta om migreringstjänsten av olika vanliga orsaker. Om tjänsten startas om kan den inte nås, men är tillgänglig så småningom.
 * Det är möjligt att en annan process körs på instansen. Om till exempel Release Orchestrator tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. Därför, och risken att scenen eller produktionsinstansen skadas, är det mycket viktigt att du pausar uppdateringar under ett intag.
 * Om en [IP-Tillåtelselista har tillämpats](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) via Cloud Manager blockerar det Cloud Acceleration Manager från att nå migreringstjänsten. Det går inte att lägga till en IP-adress för frågor eftersom adressen är dynamisk. För närvarande är den enda lösningen att inaktivera IP-tillåtelselista när intaget körs.
-* Det kan finnas andra skäl till att en utredning behöver göras. Kontakta Adobe kundtjänst om intaget fortfarande misslyckas.
+* Det kan finnas andra skäl till att en utredning behöver göras. Kontakta Adobe kundtjänst om ditt intag fortfarande misslyckas.
 
 ### Automatiska uppdateringar via Release Orchestrator är fortfarande aktiverat
 
@@ -155,11 +155,11 @@ Om Release Orchestrator fortfarande körs när ett intag startas visas det här 
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_ingestion.png)
 
-### Popup-matningsfel p.g.a. Unikhetsbegränsningsöverträdelse
+### Inmatningsfel i toppklass på grund av Unikhetsbegränsningsöverträdelse
 
 En vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) fel är en konflikt i nod-ID:n. Identifiera felet genom att hämta matningsloggen med användargränssnittet i Cloud Acceleration Manager och leta efter en post som följande:
 
->java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakConstraint0030: Unikitetsbegränsningen bröt mot egenskap [jcr:uuid] med ett värde på a1a1a1-b2b2-c3c3-d4d4-e5e5e5e5e5e5: /some/path/jcr:content, /some/other/path/jcr:content
+>java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakConstraint0030: Unikhetsvillkoret bröt egenskap [jcr:uuid] med värdet a1a1a1a1-b2b2-c3c3-d4d4-e5e5e5e5e5e5: /some/path/jcr:content, /some/other/path/jcr:content
 
 Varje nod i AEM måste ha ett unikt uuid. Detta fel anger att en nod som importeras har samma UID som en som finns någon annanstans på en annan sökväg i målinstansen.
 Detta kan inträffa om en nod flyttas på källan mellan en extrahering och en efterföljande [Extrahering uppifrån och ned](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process).
@@ -170,13 +170,13 @@ Den här konflikten måste lösas manuellt. Någon som är bekant med innehålle
 ### Inmatningsfel högst upp på grund av att det inte går att ta bort referensnod
 
 En annan vanlig orsak till [Inmatning uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) fel är en versionskonflikt för en viss nod i målinstansen. Identifiera felet genom att hämta matningsloggen med användargränssnittet i Cloud Acceleration Manager och leta efter en post som följande:
->java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakIntegrity0001: Det går inte att ta bort den refererade noden: 8a2289f4-b904-4bd0-8410-15e41e0976a8
+>java.lang.RuntimeException: org.apache.jackrabbit.oak.api.CommitFailedException: OakIntegrity001: Det går inte att ta bort refererad nod: 8a2289f4-b904-4bd0-8410-15e41e 0976a8
 
 Detta kan inträffa om en nod på målet ändras mellan ett intag och ett efterföljande toppmängdintag så att en ny version har skapats. Om inmatningen har inkluderingsversioner aktiverat kan en konflikt uppstå eftersom målet nu har en senare version som refereras av versionshistorik och annat innehåll. Det går inte att ta bort den felaktiga versionsnoden eftersom den refereras.
 
 Lösningen kan kräva att extraheringen av den övre delen görs igen utan den felande noden. Eller skapa en liten migreringsuppsättning av den felande noden, men med inkluderingsversioner inaktiverade.
 
-Bästa tillvägagångssätt visar att om ett intag måste köras med wipe=false och&quot;include versions&quot;=true är det viktigt att innehållet på målet ändras så lite som möjligt, tills migreringsresan är klar. Annars kan dessa konflikter uppstå.
+Bästa tillvägagångssätt visar att om ett intag måste köras med wipe=false och&quot;include versions&quot;=true är det viktigt att innehållet på målet ändras så lite som möjligt, tills migreringsresan är klar. I annat fall kan dessa konflikter uppstå.
 
 
 ## What&#39;s Next {#whats-next}

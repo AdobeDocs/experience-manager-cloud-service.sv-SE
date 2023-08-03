@@ -1,10 +1,10 @@
 ---
 title: Underhållsaktiviteter på AEM as a Cloud Service
-description: Underhållsaktiviteter på AEM as a Cloud Service
+description: Lär dig mer om underhållsåtgärder på AEM as a Cloud Service och hur du konfigurerar dem.
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
-source-git-commit: 19a3ebd981a7a62fe78a9ec909547b6a70c55121
+source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_maintenance"
 >title="Underhållsåtgärder"
->abstract="Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimal. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe."
+>abstract="Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimalt. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe."
 
-Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimal. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe.
+Underhållsåtgärder är processer som körs enligt ett schema för att optimera databasen. Med AEM as a Cloud Service är behovet av att kunderna konfigurerar driftsegenskaperna för underhållsåtgärder minimalt. Kunderna kan fokusera sina resurser på frågor som rör applikationsnivå och lämna infrastrukturåtgärderna åt Adobe.
 
 ## Konfigurera underhållsåtgärder {#maintenance-tasks-configuring}
 
@@ -149,7 +149,7 @@ I följande tabell visas underhållsåtgärder som är tillgängliga när AEM as
 
 * Dagligen - /apps/settings/granite/operations/intenance/granite_day
 * Varje vecka - /apps/settings/granite/operations/intenance/granite_week
-* Varje månad - /apps/settings/granite/operations/intenance/granite_monthly
+* Månadsvis - /apps/settings/granite/operations/intenance/granite_monthly
 
 **Kodexempel**:
 

@@ -1,11 +1,11 @@
 ---
 title: Implementera en AEM-anslutning
-description: Implementera en AEM-anslutning
+description: Lär dig hur du bygger och implementerar en AEM.
 exl-id: 70024424-8c52-493e-bbc9-03d238b8a5f5
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 7%
+source-wordcount: '971'
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ AEM är en banbrytande lösning för hantering av webbupplevelser och erbjuder m
 Användbar dokumentation
 --------------------
 
-Experience Manager as a Cloud Service [dokumentation](../overview/introduction.md) ger värdefulla insikter i utvecklingen av AEM. Nedan finns några specifika tekniska ämnen och referenser som du kan använda när du implementerar en AEM-anslutning:
+Experience Manager as a Cloud Service [dokumentation](../overview/introduction.md) ger värdefulla insikter i utvecklingen av AEM. Nedan finns några specifika tekniska ämnen och referenser som du kan finna användbara när du implementerar en AEM-anslutning:
 
 * Adobe konsulttjänster (ACS) [AEM](https://adobe-consulting-services.github.io/acs-aem-samples/) för kommenterad kod som hjälper AEM att utbilda utvecklare
 * De olika dokumentationslänkarna i avsnittet Vanliga integreringsmönster i den här artikeln
@@ -57,7 +57,7 @@ För att stödja rullande driftsättningar har AEM as a Cloud Service paket, av 
 * `/apps`
 * `/content` och `/conf`
 
-Kopplingarna ska följa dessa riktlinjer för förpackningen som beskrivs i [den här artikeln](/help/implementing/developing/introduction/aem-project-content-package-structure.md). Befintliga kopplingar bör även omfaktoriseras för att anpassas.
+Kopplingarna ska följa dessa riktlinjer för förpackningen, som beskrivs i [den här artikeln](/help/implementing/developing/introduction/aem-project-content-package-structure.md). Befintliga kopplingar bör även omfaktoriseras för att anpassas.
 
 Dessutom bör bara Adobe skriva kod i `/libs`, med kunder och partners som skriver till `/apps`.
 
@@ -74,7 +74,7 @@ En aspekt av anslutningsimplementeringen är att koden som stöder konfiguration
 Kontextmedvetna konfigurationer
 -----------------------------
 
-[Kontextmedvetna konfigurationer](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) gör det möjligt att skapa lager i olika mappar, inklusive `/libs`, `/apps`, `/conf` och undermappar under `/conf`. Det stöder arv så att kunden kan konfigurera den globala konfigurationen samtidigt som specifika ändringar görs för varje mikroplats. Eftersom den här funktionen kan användas för konfigurationer av Cloud Services bör kopplingskoden referera till konfigurationen med hjälp av det kontextmedvetna konfigurations-API:t i stället för att referera till en specifik konfigurationsnod.
+[Kontextmedvetna konfigurationer](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) gör det möjligt att skapa lager i olika mappar, inklusive `/libs`, `/apps`, `/conf` och undermappar under `/conf`. Det har stöd för arv så att kunden kan konfigurera den globala konfigurationen samtidigt som specifika ändringar görs för varje mikroplats. Eftersom den här funktionen kan användas för konfigurationer av Cloud Services bör kopplingskoden referera till konfigurationen med hjälp av det kontextmedvetna konfigurations-API:t i stället för att referera till en specifik konfigurationsnod.
 
 Om ändrade konfigurationer används i Connector ska du skapa Connector som hanterar/sammanfogar eventuella framtida uppdateringar av standardkonfigurationer som tillhandahålls av Connector med eventuella kundkonfigurationer. Kom ihåg att om du ändrar anpassat (som det ändrats av kunden) innehåll eller konfiguration utan kundvarning och samtycke kan det hända att det inte fungerar (eller att det inte fungerar som det ska) med Connector-funktionen.
 

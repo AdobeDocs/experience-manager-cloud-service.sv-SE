@@ -1,12 +1,12 @@
 ---
 title: Integrera med Adobe Target
-description: Integrera med Adobe Target
+description: Lär dig hur du integrerar Adobe Target med AEM as a Cloud Service.
 feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
+source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1026'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Som tidigare nämnts är det första fallet det vanligaste för AEM as a Cloud S
 >
 > Om du vill ändra en befintlig målkonfiguration:
 >
-> 1. Ange klient-ID igen.
+> 1. Ange klientorganisations-ID:t igen.
 > 2. Återanslut till mål.
 > 3. Spara konfigurationen.
 
@@ -74,7 +74,7 @@ Så här redigerar du målkonfigurationen:
 
 ### Lägga till en konfiguration till en plats {#add-configuration}
 
-Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Webbplatser** > **Välj en webbplatssida** > **Egenskaper** > **Avancerat** > **Konfiguration** > Välj konfigurationtenant.
+Om du vill använda en Touch UI-konfiguration på en webbplats går du till: **Webbplatser** > **Välj en webbplatssida** > **Egenskaper** > **Avancerat** > **Konfiguration** > Välj en konfigurationtenant.
 
 ## Integrera Adobe Target på AEM sajter med Adobe Launch {#integrate-target-launch}
 
@@ -87,7 +87,7 @@ AEM erbjuder en färdig integrering med Experience Platform Launch. Genom att l�
 Som en allmän översikt är integrationsstegen:
 
 1. Skapa en startegenskap
-2. Lägg till nödvändiga tillägg
+2. Lägg till de tillägg som krävs
 3. Skapa ett dataelement (för att hämta hubbparametrar)
 4. Skapa en sidregel
 5. Bygg och publicera
@@ -102,7 +102,7 @@ En egenskap är en behållare som är fylld med tillägg, regler och dataelement
 4. Välj **Spara** -knappen.
    ![Launchproperty](assets/properties_newproperty1.png "Launchproperty")
 
-### Lägga till nödvändiga tillägg {#add-extension}
+### Lägga till de tillägg som krävs {#add-extension}
 
 **Tillägg** är den behållare som hanterar huvudbiblioteksinställningarna. Adobe Target-tillägget stöder implementeringar på klientsidan genom att använda Target JavaScript SDK för den moderna webben, at.js. Lägg till båda **Adobe Target** och **Adobe ContextHub** tillägg.
 
@@ -150,7 +150,7 @@ Mer information om hur du skapar och publicerar finns i [page](https://experienc
     <td>Sökväg till målkonfigurationen.</td>
     <td>/etc/cloudservices/testandtarget/</td>
     <td>/conf/tenant/settings/cloudconfigs/target/</td>
-    <td> Tidigare fanns flera konfigurationer under /etc/cloudservices/testandtarget, men nu finns det en enda konfiguration under en klientorganisation.</td>
+    <td> Tidigare fanns det flera konfigurationer under /etc/cloudservices/testandtarget, men nu finns det en enda konfiguration under en klientorganisation.</td>
   </tr>
 </table>
 
