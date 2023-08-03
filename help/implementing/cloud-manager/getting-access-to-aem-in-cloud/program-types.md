@@ -2,9 +2,9 @@
 title: Program och programtyper
 description: Lär dig mer om Cloud Managers hierarki och hur de olika typerna av program passar in i dess struktur och hur de skiljer sig åt.
 exl-id: 507df619-a5b5-419a-9e38-db77541425a2
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: fc14675e47e7a61bf36acb9a16756a593189b702
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ Cloud Manager byggs kring en hierarki av enheter. Detaljerna i det här är inte
 
 ![Cloud Manager-hierarki](assets/program-types1.png)
 
-* **TENANT** - Detta är överst i hierarkin. Alla kunder tillhandahålls med en klient.
+* **TENANT** - Detta är överst i hierarkin. Alla kunder tillhandahålls med en klientorganisation.
 * **PROGRAM** - Varje innehavare har ett eller flera program, [som ofta återspeglar kundens licensierade lösningar.](introduction-production-programs.md)
 * **MILJÖ** - Varje program har flera miljöer, t.ex. produktion för direktinnehåll, en för mellanlagring och en för utvecklingsändamål.
    * Varje program kan bara ha en produktionsmiljö, men flera icke-produktionsmiljöer.
-* **DATABAS** - Program har Git-databaser där program och frontkod bevaras för miljöer.
+* **DATABAS** - Program har Git-databaser där program och frontkod underhålls för miljöer.
 * **VERKTYG OCH ARBETSFLÖDEN** - Pipelines hanterar koddistribution från databaser till miljöer medan andra verktyg ger åtkomst till loggar, övervakning och miljöhantering.
 
 Ett exempel är ofta användbart när hierarkin ska sammanställas.
@@ -53,7 +53,7 @@ Den enda skillnaden är att Git-fjärrdatabasen är en del av Cloud Manager, som
 
 ## Programtyper {#program-types}
 
-En användare kan skapa en **produktion** program eller **sandlåda** program.
+En användare kan skapa **produktion** program eller **sandlåda** program.
 
 * A **produktionsprogram** skapas för att aktivera livatrafik för din webbplats.
    * Se [Introduktion till produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för mer information.
