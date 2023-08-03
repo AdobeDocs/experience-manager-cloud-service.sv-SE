@@ -7,7 +7,7 @@ role: Admin, User
 hide: true
 hidefromtoc: true
 level: Intermediate
-source-git-commit: b527e7499bfd995362b792ca1c57a2c92901739c
+source-git-commit: 2739b89da945cb96b35bfd33e683b5b5e98490d0
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Exempelteman, mallar och formulärdatamodeller i kärnkomponenter {#sample-themes-templates-and-data-models}
 
-AEM Forms as a Cloud Service innehåller exempelreferensteman, mallar och formulärdatamodeller som hjälper dig att snabbt komma igång med att skapa Adaptiv Forms med kärnkomponenter. Du kan [aktivera adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) på AEM Forms as a Cloud Service och lokala utvecklingsmiljö för att få OTB-mallar och till [använda och anpassa exempelteman](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) in [!DNL AEM Forms].
+AEM Forms Core Components innehåller exempelreferensteman, mallar och formulärdatamodeller som hjälper dig att snabbt komma igång med att skapa Adaptiv Forms med kärnkomponenter. Du kan [aktivera adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) på AEM Forms as a Cloud Service och lokala utvecklingsmiljö för att få OTB-mallar och till [använda och anpassa exempelteman](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components.html) in [!DNL AEM Forms].
 
 Exempelteman, mallar och formulärdatamodeller som ingår i referensinnehållspaketet är:
 
@@ -47,20 +47,20 @@ Med exempelteman kan man definiera och anpassa formateringen efter blanketterna,
 
 Arbetsytans tema är standardtema för formulär och betonar användningen av grundläggande färger, genomskinlighet och platta ikoner. På skärmbilden nedan ser du hur Canvas-temat ser ut.
 
-![Tema Canvas](assets/canvas-theme.png)
+![Tema Canvas](assets/Safety-Inspection-Theme-Canvas.png)
 
 ### WKND {#WKND}
 
 WKND-temat innehåller en livlig, fantasifull och engagerande design som visar ett snyggt utseende på dina formulär. Temat baseras på utseendet och stilen hos [WKND-webbplats](https://wknd.site/us/en.html) som är en rese- och reklamwebbplats som bygger på [Adobe Experience Manager Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction).
 
-![WKND-tema](assets/WKND-theme.png)
+![WKND-tema](assets/Safety-Inspection-Form-Theme.png)
 
 
 ### Easel {#Easel}
 
 Easel-temat hjälper dig att skapa ett snyggt och lättkonfigurerat formulärutseende som är anpassat för enkelhet och användarvänlighet. Easel-temat bygger på konceptet där en portabel stativ används av konstnärer för att ge stöd åt en arbetsyta medan de arbetar med sina målningar.
 
-![Easel-tema](assets/Easel-theme.png)
+![Easel-tema](assets/Safety-Inspection-Theme-Easel.png)
 
 ## Exempelmallar {#Sample-templates}
 
@@ -72,46 +72,19 @@ Mallar definierar den inledande formulärstrukturen, innehållet och de åtgärd
 
 Med en grundläggande mall kan du snabbt skapa ett formulär för registreringsupplevelser. Du kan också använda den för att förhandsgranska funktioner i [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction). Den innehåller en guidelayout för avsnitt-för-avsnitt-presentation av data.
 
->[!BEGINTABS]
-
->[!TAB Skrivbord]
-
-![Basic Template Desktop](assets/Basic-template-desktop-view.png)
-
->[!TAB Telefon]
-
-![Telefon till standardmall](assets/Basic-temp-phone-view.png){width:&quot;25%&quot;}
-
->[!TAB Tablet]
-
-![Enkel mallsurfplatta](assets/Basic-temp-tablet-view.png)
-
->[!ENDTABS]
-
+![Grundläggande mall](assets/Basic-template-desktop-view.png)
 
 ### Tom {#Blank}
 
 En tom arbetsytemall används för att skapa en anpassad formulärstruktur, innehåll och regler från grunden. Inga formulärkomponenter har förintegrerats i den tomma mallen.
 
->[!BEGINTABS]
-
->[!TAB Skrivbord]
-
-![Tom malldator](assets/Blank-temp-desktop-view.png)
-
->[!TAB Telefon]
-
-![Telefon till standardmall](assets/Blank-temp-phone-view.png){width:&quot;25%&quot;}
-
->[!TAB Tablet]
-
-![Enkel mallsurfplatta](assets/Blank-temp-tablet-view.png)
-
->[!ENDTABS]
+![Tom mall](assets/Blank-temp-desktop-view.png)
 
 ### Kontakta oss {#Contact-Us}
 
 Kontakta oss formulärmall som används för att skapa ett formulär som underlättar kommunikationen mellan webbplatsbesökare och administratörer. Användare kan skicka frågor, feedback eller supportförfrågningar via formuläret.
+
+![Kontakta oss-mall](assets/Contact-us-desktop-view.png)
 
 ### Uppdatering av kontaktinformation {#Contact-Details-Update}
 
@@ -123,21 +96,34 @@ Kontaktuppgifter uppdaterar mallar så att författare kan skapa ett formulär f
 
 Blankettmall för samtycke används för att skapa ett formulär för att köpa ett juridiskt dokument från deltagare som deltar i en viss verksamhet, en forskningsundersökning, ett medicinskt förfarande eller en situation där deras personuppgifter eller rättigheter kan vara inblandade. Formuläret säkerställer öppenhet, skyddar deltagarens rättigheter och skapar en tydlig förståelse för vad personen går med på.
 
+![Samtyckesformulär](assets/Consent-form-desktop-view.png)
+
 ### Loggtjänstbegäran {#Log-Service-Request}
 
 I mallen för loggtjänstbegäran kan du skapa ett formulär som begär specifika loggningstjänster från en tjänsteleverantör. Formuläret fungerar som en formell begäran om att skapa en biljett och innehåller vissa händelser, aktiviteter eller data som har loggats för övervaknings- eller spårningsstatus.
+
+![Mall för loggtjänstbegäran](assets/Log-service-request-desktop-view.png)
+
 
 ### Ge feedback {#Give-Feedback}
 
 Ge feedback-formulärmallar hjälper till att skapa ett formulär som ger konstruktiv feedback till en annan person eller grupp. Formuläret ser till att informationen är tydlig, specifik och åtgärdbar och främjar öppen kommunikation och förbättring.
 
+![Ge feedback-mall](assets/Give-feedback-desktop-view.png)
+
+
 ### Registrering av förmåner {#Benefits-Enrollment}
 
 Blankettmall för förmånsregistrering används för att skapa ett formulär som samlar in viktig information från medarbetarna om vilka förmåner de föredrar och vilka täckningsalternativ de har. Det är vanligtvis en del av den årliga perioden för förmånsregistrering.
 
+![Mall för förmånsregistrering](assets/Benefits-enrollment-form-template.png)
+
+
 ### Sammanfattning av medarbetarförmåner {#Employee-Benefits-Summary}
 
 En mall för en sammanfattande mall för löneförmåner används för att skapa ett formulär som samlar in viktig information om en persons förmåner. Det hjälper till att snabbt och korrekt utvärdera täckningen och ger en heltäckande översikt för effektivt stöd och stöd.
+![Sammanfattning av medarbetarförmåner](assets/Employee-benefits-summary.png)
+
 
 ### Kontoutdrag för förfrågan {#Request-for-Account-Statement}
 
@@ -149,15 +135,20 @@ En mall för kontoutdrag hjälper till att skapa ett formulär som initierar pro
 
 Formulärmallen för säkerhetsinspektioner hjälper till att skapa ett formulär med inmatningsinformation för en säker arbetsmiljö. Genom regelbundna inspektioner med hjälp av denna blankett kan potentiella risker identifieras. Formuläret omfattar olika aspekter såsom nödutgångar, brandsäkerhet, elsäkerhet, farligt material, personlig skyddsutrustning, arbetsstationens ergonomi för anställdas, besökares och kunders säkerhet och välbefinnande.
 
+![Formulär för säkerhetskontroll](assets/Safety-inspection-form.png)
+
 ### Kvalitetskontrollinspektion {#Quality-Control-Inspection}
 
 Formulärmallen för kvalitetskontroll används för att skapa ett formulär för att bedöma och dokumentera en produkts eller objektets visuella utseende, dimensioner, funktionalitet, dokumentation, testresultat och övergripande kvalitet. Det hjälper till att identifiera brister, avvikelser och korrigerande åtgärder som är nödvändiga för att säkerställa att kvalitetsnormerna följs.
+
+![Kvalitetskontrollinspektion](assets/Quality-Control-Inspection.png)
+
 
 ### Inköpsbegäran {#Purchase-Request}
 
 Formulärmallen för inköpsbegäran hjälper till att skapa ett formulär som initierar upphandlingsprocessen och gör det möjligt för medarbetarna att formellt begära inköp av varor eller tjänster som är nödvändiga för deras arbete. Formuläret innehåller viktig information som artikelbeskrivning, kvantitet, föredragen leverantör (om tillämpligt), budgetallokering, motivering för inköp, leveransinformation och obligatoriska godkännanden.
 
-![inköpsbegäran](assets/purchase-request.gif)
+![purchase-request-form](assets/Purchase-request-form.png)
 
 ## Referensformulärdatamodeller {#reference-models}
 
