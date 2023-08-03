@@ -1,10 +1,10 @@
 ---
 title: Din inkorg
-description: Hantera dina uppgifter med inkorgen
+description: Lär dig hur du använder meddelanden som kommer in i din Inkorg för att hantera dina uppgifter.
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
+source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '914'
 ht-degree: 15%
 
 ---
@@ -118,7 +118,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    Åtgärderna är lämpliga för objektet och omfattar:
 
-   * **Slutförd** åtgärd
+   * **Complete** åtgärd
    * **Delegera** ett objekt
    * **Öppna** ett objekt, beroende på objekttypen kan den här åtgärden:
 
@@ -126,7 +126,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
       * Öppna en lämplig kontrollpanel eller guide för ytterligare åtgärder
       * Öppna relaterad dokumentation
 
-   * **Stega bakåt** till ett föregående steg
+   * **Gå bakåt** till ett föregående steg
    * Visa nyttolasten för ett arbetsflöde
    * Skapa ett projekt från artikeln
 
@@ -134,7 +134,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
    >
    >Mer information finns i följande:
    >
-   >* Arbetsflödesobjekt - [Delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
+   >* Arbetsflödesartiklar - [Delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
 
 2. Beroende på vilket objekt som är markerat startas en åtgärd, till exempel:
 
@@ -150,7 +150,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
    * Bekräfta lämplig åtgärd, t.ex. omtilldelning.
    * Avbryt åtgärden
-   * Välj bakåtpilen för att återgå till inkorgen, t.ex. om en åtgärdsguide eller dokumentationssida har öppnats, kan du gå tillbaka till Inkorgen.
+   * Välj bakåtpilen för att återgå till inkorgen, t.ex. om en åtgärdsguide eller dokumentationssida har öppnats, kan du återgå till inkorgen.
 
 ## Skapa en uppgift {#creating-a-task}
 
@@ -214,7 +214,7 @@ För vissa uppgifter kan du skapa en [Projekt](/help/sites-cloud/authoring/proje
 
 1. Välj **Skapa** för att bekräfta åtgärden.
 
-## Filtrera objekt i AEM {#filtering-items-in-the-aem-inbox}
+## Filtrera objekt i AEM Inkorg {#filtering-items-in-the-aem-inbox}
 
 Du kan filtrera objekten i listan:
 

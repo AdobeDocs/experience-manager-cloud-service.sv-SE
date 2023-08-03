@@ -1,10 +1,10 @@
 ---
 title: Redigera sidegenskaper
-description: Definiera de egenskaper som krävs för en sida
+description: Lär dig hur du definierar de egenskaper som krävs för att hantera en sida i AEM.
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
 workflow-type: tm+mt
-source-wordcount: '2341'
+source-wordcount: '2347'
 ht-degree: 3%
 
 ---
@@ -40,7 +40,7 @@ Egenskaperna fördelas på flera flikar.
    * **Varumärkesinstruktionsmarginal**
 
       * **Åsidosätt** - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
-         * Värdet ärvs av alla underordnade sidor såvida de inte också har sina **Åsidosätt** värden anges.
+         * Värdet ärvs av alla underordnade sidor såvida de inte också har sina **Åsidosätt** värden har angetts.
       * **Åsidosätt värde** - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
          * Värdet läggs till i sidrubriken efter ett lodstreck som &quot;Cycling Tuscany&quot; | Alltid redo för WKND&quot;
 
@@ -51,7 +51,7 @@ Egenskaperna fördelas på flera flikar.
 * **Fler rubriker och beskrivning**
 
    * **Sidrubrik** - En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom visas **Titel** används.
-   * **Navigeringsrubrik** - Du kan ange en separat rubrik som ska användas i navigeringen (t.ex. om du vill ha något mer koncist). Om den är tom visas **Titel** används.
+   * **Navigeringsrubrik** - Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom visas **Titel** används.
    * **Underrubrik** - En underrubrik som ska användas på sidan.
    * **Beskrivning** - Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till.
 
@@ -64,7 +64,7 @@ Egenskaperna fördelas på flera flikar.
   >[!NOTE]
   >Om någon av **I tid** eller **Fråntid** är tidigare och automatisk replikering har konfigurerats, kommer den relevanta åtgärden att utlösas omedelbart.
 
-   * **I tid** - Det datum och den tidpunkt då den publicerade sidan visas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
+   * **I tid** - Det datum och den tidpunkt då den publicerade sidan görs synlig (återgiven) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
 
       * Om redan [publicerad (manuellt)](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) den här sidan förblir vilande (dold) tills den återges vid den angivna tidpunkten.
       * Om sidan inte publiceras och konfigureras för automatisk replikering publiceras den automatiskt och återges sedan vid den angivna tidpunkten.
@@ -76,8 +76,8 @@ Egenskaperna fördelas på flera flikar.
 
 * **Vanity URL**
 
-   * Gör att du kan ange en egen URL för den här sidan, vilket kan göra att du kan ha en kortare och/eller mer uttrycksfull URL.
-   * Om Vanity-URL:en till exempel är inställd på `welcome` till sidan som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`sedan `http://example.com/welcome` skulle vara den vanligaste URL:en för `http://example.com/content/v1.0/startpage`
+   * Gör att du kan ange en fågel-URL för den här sidan, vilket kan ge dig en kortare och/eller mer uttrycksfull URL.
+   * Om Vanity-URL:en till exempel är inställd på `welcome` till den sida som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`sedan `http://example.com/welcome` skulle vara den vanligaste URL:en för `http://example.com/content/v1.0/startpage`
 
   >[!CAUTION]
   >
@@ -90,7 +90,7 @@ Egenskaperna fördelas på flera flikar.
    * **Lägg till** - Tryck eller klicka för att visa ett fält för att definiera en fågel-URL för sidan.
       * Tryck eller klicka igen för att lägga till flera.
       * Tryck eller klicka på **Ta bort** -ikonen för att ta bort fågel-URL:en.
-   * **URL för omdirigering** - Anger om du vill att sidan ska använda fågel-URL:en.
+   * **URL för omdirigering av vanity** - Anger om du vill att sidan ska använda fågel-URL:en.
 
 ### Avancerat {#advanced}
 
@@ -109,13 +109,13 @@ Egenskaperna fördelas på flera flikar.
 
 * **Konfiguration**
 
-   * **Ärvs från &lt;path>** - aktivera/inaktivera arv, växlar tillgänglighet för **Molnkonfiguration** för markering
+   * **Ärvs från &lt;path>** - aktivera/inaktivera arv; växlar tillgänglighet för **Molnkonfiguration** för markering
 
    * **Molnkonfiguration** - Sökvägen till den valda konfigurationen
 
 * **Mallinställningar**
 
-   * **Tillåtna mallar** - [Definierar listan med tillgängliga mallar](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) inom denna underavdelning
+   * **Tillåtna mallar** - [Definierar listan med mallar som är tillgängliga](/help/sites-cloud/authoring/features/templates.md#enabling-and-allowing-a-template-template-author) inom denna underavdelning
 
 * **Autentiseringskrav**
 
@@ -133,9 +133,9 @@ Egenskaperna fördelas på flera flikar.
 
 * **SEO**
 
-   * **Kanonisk URL** - kan användas för att skriva över sidans kanoniska URL, om den lämnas tom är sidans URL dess kanoniska URL
+   * **Kanonisk URL** - kan användas för att skriva över sidans kanoniska URL; om den lämnas tom är sidans URL dess kanoniska URL
 
-   * **Robots-taggar** - välj robottaggarna för att styra beteendet för sökmotorcrawler.
+   * **Robots-koder** - välj robottaggarna för att styra beteendet för sökmotorcrawler.
 
      >[!NOTE]
      >
@@ -147,13 +147,13 @@ Egenskaperna fördelas på flera flikar.
 
 * **Aktuell bild**
 
-  Markera och konfigurera den bild som ska visas. Detta används i komponenter som refererar till sidan; till exempel teasers, page lists, etc.
+  Markera och konfigurera den bild som ska visas. Detta används i komponenter som refererar till sidan, t.ex. teasers, page lists, etc.
 
    * **Bild**
 
      Du kan **Välj** en resurs, eller bläddra efter en fil som ska överföras, och sedan **Redigera**, eller **Rensa**.
 
-   * **Alternativ text** - en text som används för att representera bildens betydelse och/eller funktion, till exempel för skärmläsare.
+   * **Alternativ text** - en text som används för att representera innebörden och/eller funktionen i bilden, till exempel för skärmläsare.
 
    * **Ärv - värde som tagits från DAM-resursen** - om det här alternativet är markerat fylls den alternativa texten i med värdet för `dc:description`metadata i DAM
 
@@ -174,7 +174,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **ContextHub-konfigurationer**
 
-   * **Ärvs från &lt;path>** - aktivera/inaktivera arv, växlar tillgänglighet för **ContextHub-bana** och **Segmentsökväg** för markering
+   * **Ärvs från &lt;path>** - aktivera/inaktivera arv; växlar tillgänglighet för **ContextHub-bana** och **Segmentsökväg** för markering
 
    * **ContextHub-sökväg** - Definiera [ContextHub-konfiguration](/help/sites-cloud/authoring/personalization/contexthub.md)
    * **Segmentsökväg** - Definiera [Segmentbana](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
@@ -233,7 +233,7 @@ När en förhandsvisningsmiljö är aktiverad ser du:
 
 ### Progressiv webbapp {#progressive-web-app}
 
-Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiva webbprogramfunktioner (PWA) för upplevelser som skapats i AEM Sites.
+Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiva webbappsfunktioner (PWA) för upplevelser som skapats i AEM Sites.
 
 >[!NOTE]
 >
@@ -241,7 +241,7 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 
 * **Konfigurera installerbar upplevelse**
 
-   * **Aktivera PWA** - aktivera/inaktivera funktionen, tillåter användare att installera webbplatsen som PWA
+   * **Aktivera PWA** - aktivera/inaktivera funktionen; tillåter användare att installera webbplatsen som PWA
    * **StartURL** - önskad start-URL
    * **Visningsläge** - hur webbläsaren ska döljas eller på annat sätt visas för användaren på den lokala enheten
    * **Skärmorientering** - hur PWA ska hantera enhetsorienteringar
@@ -255,8 +255,8 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
    * **Filer som ska cachas för offlineanvändning**
       * **Filförcachelagring (teknisk förhandsgranskning)** - filer som lagras på AEM sparas i den lokala webbläsarcachen när servicearbetaren installeras och innan den används
       * **Bibliotek på klientsidan** - bibliotek på klientsidan för att cachelagra offlineupplevelsen
-      * **Inkluderingar av banor** - nätverksbegäranden för de definierade sökvägarna fångas upp och cachelagrat innehåll returneras i enlighet med den konfigurerade cachelagringsstrategin och frekvensen för innehållsuppdatering
-      * **Undantag för sökväg** - dessa filer kommer aldrig att cachelagras oavsett inställningarna under Filförcachelagring och Sökvägsinkluderingar
+      * **Inkluderingar av sökväg** - nätverksbegäranden för de definierade sökvägarna fångas upp och cachelagrat innehåll returneras i enlighet med den konfigurerade cachelagringsstrategin och frekvensen för innehållsuppdatering
+      * **Undantag för sökvägar** - dessa filer kommer aldrig att cachelagras oavsett inställningarna under Filförcachelagring och Baninkluderingar
 
 ## Redigera sidegenskaper {#editing-page-properties-1}
 
@@ -273,7 +273,7 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 Klicka eller peka **Egenskaper** för att definiera sidegenskaperna:
 
 1. Använda **Webbplatser** navigera till platsen för sidan som du vill visa och redigera egenskaper för.
-1. Välj **Egenskaper** för den önskade sidan med något av följande alternativ:
+1. Välj **Egenskaper** för den önskade sidan med något av följande:
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
    * [Markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources)
    * Sidegenskaperna visas med rätt flikar.

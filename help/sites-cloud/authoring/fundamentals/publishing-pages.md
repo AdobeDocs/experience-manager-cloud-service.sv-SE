@@ -1,10 +1,10 @@
 ---
 title: Publicera sidor
-description: Publicera och avpublicera sidor med AEM
+description: Lär dig hur du publicerar och avpublicerar sidor med olika mekanismer i AEM.
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
 workflow-type: tm+mt
-source-wordcount: '1802'
+source-wordcount: '1807'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ Du kan stöta på olika termer om publicering när du arbetar med Adobe Experien
 
 ## Publicera sidor {#publishing-pages-1}
 
-Beroende på var du befinner dig kan du publicera:
+Beroende på din plats kan du publicera:
 
 * [Från sidredigeraren](#publishing-from-the-editor)
 * [Från webbplatskonsolen](#publishing-from-the-console)
@@ -65,7 +65,7 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 1. Beroende på om sidan har referenser som behöver publiceras:
 
    * Sidan publiceras direkt om det inte finns några referenser att publicera.
-   * Om sidan innehåller referenser som behöver publiceras visas dessa i **Publicera** guide, där du kan antingen:
+   * Om sidan innehåller referenser som behöver publiceras visas dessa i **Publicera** guide, där du kan
       * Ange vilket av resurserna/taggarna/etc. du vill publicera tillsammans med sidan och sedan använda **Publicera** för att slutföra processen.
       * Använd **Avbryt** om du vill avbryta åtgärden.
 
@@ -81,7 +81,7 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
 >[!NOTE]
 >
->Publicering från redigeraren är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och eventuella underordnade sidor publiceras/publiceras inte.
+>Publicering från redigeraren är en ytlig publicering, d.v.s. bara den eller de markerade sidorna publiceras och eventuella underordnade sidor publiceras/publiceras inte.
 
 >[!NOTE]
 >
@@ -124,7 +124,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    ![Välja sidor för publicering](/help/sites-cloud/authoring/assets/publishing-select-pages.png)
 
-1. Guiden **Hantera publikation** startar. Det första steget, **Alternativ** kan du:
+1. Guiden **Hantera publikation** startar. Det första steget **Alternativ** kan du:
 
    * **Åtgärd**
 
@@ -197,7 +197,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    I webbplatskonsolen bekräftar ett meddelande publikationen.
 
-1. Om de publicerade sidorna är kopplade till arbetsflöden kan de visas i en **Arbetsflöden** steg i publikationsguiden.
+1. Om de publicerade sidorna är kopplade till arbetsflöden kan de visas i en **Arbetsflöden** steg i guiden.
 
    ![Hantera publikationsmarkering av sidor](/help/sites-cloud/authoring/assets/publishing-manage-publication-workflow.png)
 
@@ -254,7 +254,7 @@ Precis som du [publicera med alternativet Hantera publikation](#manage-publicati
 
 ## Publicera och avpublicera ett träd {#publishing-and-unpublishing-a-tree}
 
-När du har angett eller uppdaterat ett stort antal innehållssidor, som alla finns på samma rotsida, kan det vara enklare att publicera hela trädet i en åtgärd.
+När du har angett eller uppdaterat ett stort antal innehållssidor, som alla finns på samma rotsida, kan det vara enklare att publicera hela trädet i en enda åtgärd.
 
 Du kan använda [Hantera publikation](#manage-publication) på webbplatskonsolen för att göra detta.
 
@@ -271,7 +271,7 @@ Du kan använda [Hantera publikation](#manage-publication) på webbplatskonsolen
    * avmarkera **Inkludera endast redan publicerade sidor**
    * konfigurera **Inkludera endast ändrade sidor** efter behov
 
-   Dessa alternativ är markerade som standard, så du måste komma ihåg att konfigurera dem. Bekräfta markeringen med **OK** för att lägga till innehållet i publikationen/avpublikationen.
+   Dessa alternativ är markerade som standard, så du måste komma ihåg att konfigurera dem. Bekräfta markeringen med **OK** om du vill lägga till innehållet i publikationen/avpublikationen.
 
    ![Inkludera underordnade för trädpublicering](/help/sites-cloud/authoring/assets/publishing-include-children-tree.png)
 

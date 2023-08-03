@@ -1,10 +1,10 @@
 ---
 title: Rätt personer, rätt roller
-description: Rätt personer, rätt roller
+description: Lär dig välja rätt personer och tilldela dem till rätt roller för ditt projekt.
 exl-id: 9106ccf5-dc90-4ccb-95bd-7dd5392cd174
-source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
+source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Ett vinnande team behöver nio personer i rätt platser, precis som ert driftsä
 | IT-ansvariga för säkerhet, infrastruktur, verktyg | CISM-certifiering, Adobe Experience Manager Component Developer-certifiering | Expert | Detaljorienterad |
 | Strategister/Power Users | Kunskap i Adobe Experience Manager Sites | Till expert | Tensiöst, nyfiken, grundligt, öppet sinne, villig att omfamna förändring, samarbete |
 | QA/UAT Lead | Smidig certifiering, förståelse för SDLC | Meddelande till Mellanhand | Detaljorienterad, processenhet, konsekvent |
-| Teknisk arkitekt | IT-infrastruktur | Expert | Detaljorienterad, processdriven, konsekvent |
+| Teknisk arkitekt | IT-infrastrukturupplevelse | Expert | Detaljorienterad, processdriven, konsekvent |
 | Back-end Developer | Agile-certifiering, erfarenhet av datorprogrammering och datavetenskap | Meddelande till Mellanhand | Detaljorienterad, processdriven, konsekvent |
 | Front-end Developer | Smidig certifiering, förståelse för HTML, CSS och JavaScript | Meddelande till Mellanhand | Detaljorienterad, processdriven, konsekvent |
 
@@ -54,7 +54,7 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 Från Architect till ScrumMaster är alla roller i teamet oumbärliga - inklusive DAM-biblioteket.
 
-Du kanske redan har de flesta personer som behövs för att köra en lyckad implementering av Adobe Experience Manager Assets. Listan liknar den för Adobe Experience Manager Sites, med ett viktigt tillägg: ni behöver en bibliotekarier för att se till att era digitala resurser är organiserade och märkta på ett sätt som gör dem enkla att hitta.
+Du kanske redan har de flesta personer som behövs för att köra en lyckad implementering av Adobe Experience Manager Assets. Listan liknar den för Adobe Experience Manager Sites, med ett viktigt tillägg: du behöver en bibliotekarie för att se till att dina digitala resurser är ordnade och märkta på ett sätt som gör dem enkla att hitta.
 
 | Roll | Kompetens | Kapacitetsnivå | Kvaliteter |
 |--- |--- |--- |--- |
@@ -64,7 +64,7 @@ Du kanske redan har de flesta personer som behövs för att köra en lyckad impl
 | IT-ansvariga för säkerhet, infrastruktur, verktyg | CISM-certifiering, Adobe Experience Manager Component Developer-certifiering | Expert | Detaljorienterad |
 | Strategister/Power Users | Kunskap i Adobe Experience Manager Sites | Till expert | Tensiöst, nyfiken, grundligt, öppet sinne, villig att omfamna förändring, samarbete |
 | QA/UAT Lead | Smidig certifiering, förståelse för SDLC | Meddelande till Mellanhand | Detaljorienterad, processenhet, konsekvent |
-| Teknisk arkitekt | IT-infrastruktur | Expert | Detaljorienterad, processdriven, konsekvent |
+| Teknisk arkitekt | IT-infrastrukturupplevelse | Expert | Detaljorienterad, processdriven, konsekvent |
 | Back-end Developer | Agile-certifiering, erfarenhet av datorprogrammering och datavetenskap | Meddelande till Mellanhand | Detaljorienterad, processdriven, konsekvent |
 | Front-end Developer | Smidig certifiering, förståelse för HTML, CSS och JavaScript | Meddelande till Mellanhand | Detaljorienterad, processdriven, konsekvent |
 | DAM-bibliotek | Bibliotekets vetenskapliga bakgrund och examen | Expert | Detaljorienterad, processdriven, organiserad |

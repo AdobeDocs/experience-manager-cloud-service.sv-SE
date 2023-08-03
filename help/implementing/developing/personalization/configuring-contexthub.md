@@ -1,10 +1,10 @@
 ---
 title: ContextHub konfigureras
-description: Lär dig hur du konfigurerar kontextnavet.
+description: Lär dig hur du konfigurerar Context Hub, ett ramverk för lagring, manipulering och presentation av kontextdata.
 exl-id: 1fd7d41e-31ad-4838-8749-a5791edcfd63
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Du kan konfigurera ContextHub-verktygsfältet för att kontrollera om det visas 
 
 Konfigurera Adobe Granite ContextHub OSGi-tjänsten för att visa eller dölja [ContextHub-gränssnitt](/help/sites-cloud/authoring/personalization/targeted-content.md) på era sidor. Tjänstens PID är `com.adobe.granite.contexthub.impl.ContextHubImpl.`
 
-Om du vill konfigurera tjänsten kan du antingen använda [Webbkonsol](/help/implementing/deploying/configuring-osgi.md) eller använda en JCR-nod i databasen:
+Du kan antingen använda [Webbkonsol](/help/implementing/deploying/configuring-osgi.md) eller använda en JCR-nod i databasen:
 
 * **Webbkonsol:** Om du vill visa användargränssnittet väljer du egenskapen Visa användargränssnitt. Om du vill dölja användargränssnittet avmarkerar du egenskapen Dölj användargränssnitt.
 * **JCR-nod:** Ange det booleska värdet för att visa användargränssnittet `com.adobe.granite.contexthub.show_ui` egenskap till `true`. Om du vill dölja användargränssnittet anger du egenskapen till `false`.
@@ -31,7 +31,7 @@ När du visar ContextHub-gränssnittet visas det bara på sidor AEM författarin
 Konfigurera de gränssnittslägen och moduler som visas i ContextHub-verktygsfältet i förhandsgranskningsläget:
 
 * Gränssnittslägen: Grupper av relaterade moduler
-* Moduler: Widgetar som visar kontextdata från en butik och gör det möjligt för författare att ändra kontexten
+* Moduler: Widgetar som visar kontextdata från en butik och gör att författare kan ändra kontexten
 
 Gränssnittslägen visas som en serie ikoner till vänster i verktygsfältet. När du väljer det här alternativet visas modulerna för ett användargränssnittsläge till höger.
 
@@ -52,15 +52,15 @@ Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler
 
 1. Ange värden för följande egenskaper:
 
-   * Titel för användargränssnittsläge: Titeln som identifierar användargränssnittsläget
-   * Lägesikon: Väljaren för [Coral UI: ikon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) till exempel använda `coral-Icon--user`
-   * Aktiverad: Välj det här alternativet om du vill visa gränssnittsläget i kontextHub-verktygsfältet
+   * Rubrik för användargränssnittsläge: Den titel som identifierar användargränssnittsläget
+   * Lägesikon: Väljaren för [Coral UI icon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) att använda, till exempel `coral-Icon--user`
+   * Aktiverad: Välj det här alternativet om du vill visa användargränssnittsläget i verktygsfältet ContextHub
 
 1. Klicka på eller tryck på Spara.
 
 ### Lägga till en gränssnittsmodul {#adding-a-ui-module}
 
-Lägg till en ContextHub-gränssnittsmodul i ett gränssnittsläge så att den visas i ContextHub-verktygsfältet för förhandsgranskning av sidinnehåll. När du lägger till en UI-modul skapar du en instans av en modultyp som är registrerad med ContextHub. Om du vill lägga till en gränssnittsmodul måste du känna till namnet på den associerade modultypen.
+Lägg till en ContextHub-gränssnittsmodul i ett UI-läge så att den visas i ContextHub-verktygsfältet för förhandsgranskning av sidinnehåll. När du lägger till en UI-modul skapar du en instans av en modultyp som är registrerad med ContextHub. Om du vill lägga till en gränssnittsmodul måste du känna till namnet på den associerade modultypen.
 
 AEM innehåller en grundläggande gränssnittsmodultyp samt flera exempeltyper av gränssnittsmodul som du kan basera en gränssnittsmodul på. Följande tabell innehåller en kort beskrivning av vart och ett av dem. Mer information om hur du utvecklar en anpassad gränssnittsmodul finns i [Skapa gränssnittsmoduler för ContextHub](extending-contexthub.md#creating-contexthub-ui-module-types).
 
@@ -86,7 +86,7 @@ Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguratio
 
 1. Ange värden för följande egenskaper:
 
-   * Modultitel för användargränssnitt: En titel som identifierar gränssnittsmodulen
+   * Modultitel för användargränssnitt: En titel som identifierar användargränssnittsmodulen
    * Modultyp: Modultypen
    * Aktiverad: Välj det här alternativet om du vill visa gränssnittsmodulen i ContextHub-verktygsfältet
 
@@ -103,17 +103,17 @@ När du konfigurerar en butik kan du med egenskapen Detaljkonfiguration ange vä
 
 Värdet för egenskapen Detaljkonfiguration är en `config` -objekt i JSON-format.
 
-### Exempel på butikskandidater {#sample-store-candidates}
+### Exempelarkivsökande {#sample-store-candidates}
 
 AEM innehåller följande exempel på butikskandidater som du kan basera en butik på.
 
 | Butikstyp | Beskrivning |
 |---|---|
 | [aem.segmentation](sample-stores.md#aem-segmentation-sample-store-candidate) | Lagra för lösta och olösta ContextHub-segment. Hämtar automatiskt segment från ContextHub SegmentManager |
-| [contexthub.geolocation](sample-stores.md#contexthub-geolocation-sample-store-candidate) | Lagrar latitud och longitud för webbläsarplatsen. |
+| [contexthub.geolocation](sample-stores.md#contexthub-geolocation-sample-store-candidate) | Lagrar latitud- och longitudvärdena för webbläsarplatsen. |
 | [granite.emulators](sample-stores.md#granite-emulators-sample-store-candidate) | Definierar egenskaper och funktioner för ett antal enheter och identifierar den aktuella klientenheten |
 | [granite.profile](sample-stores.md#granite-profile-sample-store-candidate) | Lagrar profildata för den aktuella användaren |
-| [contexthub.surferinfo](sample-stores.md#contexthub-surferinfo-sample-store-candidate) | Lagrar information om klienten, t.ex. enhetsinformation, webbläsartyp och fönsterorientering |
+| [contexthub.surferinfo](sample-stores.md#contexthub-surferinfo-sample-store-candidate) | Lagrar information om klienten, till exempel enhetsinformation, webbläsartyp och fönsterorientering |
 
 1. Klicka eller tryck på Verktyg > Platser > ContextHub på Experience Manager-listen.
 1. Klicka eller tryck på standardkonfigurationsbehållaren.
@@ -134,7 +134,7 @@ AEM innehåller följande exempel på butikskandidater som du kan basera en buti
 
 ## Exempel: Använda en JSONP-tjänst  {#example-using-a-jsonp-service}
 
-I det här exemplet visas hur du konfigurerar en lagringsplats och visar data i en gränssnittsmodul. I det här exemplet används MD5-tjänsten på jsontest.com-webbplatsen som datakälla för en butik. Tjänsten returnerar MD5-hash-koden för en sträng i JSON-format.
+I det här exemplet visas hur du konfigurerar en lagringsplats och visar data i en gränssnittsmodul. I det här exemplet används MD5-tjänsten på jsontest.com webbplats som datakälla för en butik. Tjänsten returnerar MD5-hash-koden för en sträng i JSON-format.
 
 Ett contextHub.generic-jsonp-arkiv har konfigurerats så att det lagrar data för serviceanropet `https://md5.jsontest.com/?text=%22text%20to%20md5%22`. Tjänsten returnerar följande data som visas i en gränssnittsmodul:
 
@@ -149,9 +149,9 @@ Ett contextHub.generic-jsonp-arkiv har konfigurerats så att det lagrar data fö
 
 Med exempelarkivkandidaten contexthub.generic-jsonp kan du hämta data från en JSONP-tjänst eller en webbtjänst som returnerar JSON-data. För den här butikskandidaten använder du butikskonfigurationen för att ange information om den JSONP-tjänst som ska användas.
 
-The [init](contexthub-api.md#init-name-config) funktionen i `ContextHub.Store.JSONPStore` JavaScript-klassen definierar en `config` objekt som initierar den här lagringskanalen. The `config` objektet innehåller `service` objekt som innehåller information om JSONP-tjänsten. Om du vill konfigurera butiken anger du `service` -objekt i JSON-format som värde för egenskapen Detaljkonfiguration.
+The [init](contexthub-api.md#init-name-config) funktionen i `ContextHub.Store.JSONPStore` JavaScript-klassen definierar en `config` objekt som initierar den här lagringskanalen. The `config` objektet innehåller `service` -objekt som innehåller information om JSONP-tjänsten. Om du vill konfigurera butiken anger du `service` -objekt i JSON-format som värde för egenskapen Detaljkonfiguration.
 
-Om du vill spara data från MD5-tjänsten på jsontest.com-webbplatsen ska du göra så här: [Skapa ett ContextHub Store](#creating-a-contexthub-store) med följande egenskaper:
+Om du vill spara data från MD5-tjänsten på jsontest.com här webbplatsen ska du göra så här: [Skapa ett ContextHub Store](#creating-a-contexthub-store) med följande egenskaper:
 
 * **Konfigurationstitel:** md5
 * **Lagringstyp:** contexthub.generic-jsonp
@@ -221,10 +221,10 @@ Använd CRXDE Lite för att ange egenskapen `debug` till **true** under:
 
 Konfigurera tjänsten Adobe Granite ContextHub OSGi (PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`) för att logga detaljerade felsökningsmeddelanden som är användbara vid utveckling.
 
-Om du vill konfigurera tjänsten kan du antingen använda [Webbkonsol](/help/implementing/deploying/configuring-osgi.md) eller använda en JCR-nod i databasen:
+Du kan antingen använda [Webbkonsol](/help/implementing/deploying/configuring-osgi.md) eller använda en JCR-nod i databasen:
 
-* Webbkonsol: Om du vill logga felsökningsmeddelanden väljer du egenskapen Felsökning.
-* JCR-nod: Om du vill logga felsökningsmeddelanden ställer du in det booleska värdet `com.adobe.granite.contexthub.debug` egenskap till `true`.
+* Webbkonsol: Om du vill logga felsökningsmeddelanden väljer du egenskapen Felsök.
+* JCR-nod: Om du vill logga felsökningsmeddelanden anger du det booleska värdet `com.adobe.granite.contexthub.debug` egenskap till `true`.
 
 ### Tyst läge {#silent-mode}
 

@@ -1,10 +1,10 @@
 ---
 title: Redigeringsbegrepp
-description: Begrepp att skapa i AEM
+description: Lär dig mer om redigering i AEM, med hjälp av redigerings-, förhandsgransknings- och publiceringsmiljöer.
 exl-id: ee9e4952-e075-4398-b31f-d7886153efff
-source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
+source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '394'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 
 ![Diagram över författare, utgivare och avsändare](/help/sites-cloud/authoring/assets/author-publish.png)
 
-I redigeringsmiljön är AEM funktionalitet tillgänglig via AEM. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
+I redigeringsmiljön är AEM funktionalitet tillgänglig AEM redigeringsgränssnittet. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
 
 ## Författarmiljö {#author-environment}
 
@@ -60,7 +60,7 @@ Se [Förhandsgranska innehåll](/help/sites-cloud/authoring/fundamentals/preview
 
 ## Publiceringsmiljö {#publish-environment}
 
-När det är klart publiceras webbplatsens innehåll på **publiceringsmiljö**. Här görs webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När det är klart publiceras webbplatsens innehåll på **publiceringsmiljö**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
 Mer information om att publicera och avpublicera sidor finns i dokumentet [Publicera sidor](/help/sites-cloud/authoring/fundamentals/publishing-pages.md).
 

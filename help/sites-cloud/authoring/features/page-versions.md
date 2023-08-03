@@ -1,10 +1,10 @@
 ---
 title: Arbeta med sidversioner
-description: Skapa, jämföra och återställa versioner av en sida
+description: Lär dig hur du skapar, jämför och återställer versioner av dina sidor i AEM.
 exl-id: 33d8e43c-594d-4bba-9631-b2c42a1e910f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1507'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med versionshantering kan du utföra följande åtgärder:
 
-* Skapa en version av en sida.
+* Skapa en sidversion.
 * Återskapa en tidigare version av en eller flera sidor till:
    * Ångra ändringar som gjorts på sidorna.
    * Återställ sidor som har tagits bort.
@@ -40,7 +40,7 @@ Du kan skapa en version av resursen från:
    ![Versioner i tidslinjen](/help/sites-cloud/authoring/assets/versions-timeline-rail.png)
 
 1. Välj **Spara som version**.
-1. Ange **Etikett** och **Kommentar**, om det behövs.
+1. Ange en **Etikett** och **Kommentar**, om det behövs.
 
    ![Lägg till etikett för en version](/help/sites-cloud/authoring/assets/versions-add-label.png)
 
@@ -66,7 +66,7 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 
   Återskapa en tidigare version av en markerad sida.
 
-* den **Återställ** från början [åtgärdsverktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)
+* den **Återställ** från början [funktionsmakron, verktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)
 
    * **Återställ version**
 
@@ -84,7 +84,7 @@ När du har skapat en version av sidan finns det olika metoder för att återst�
 >
 >1. Skapa versioner av valfri sida.
 >1. De inledande etiketterna och versionsnodnamnen är 1.0, 1.1, 1.2 och så vidare.
->1. återställ den första versionen, dvs. 1.0.
+>1. Återställ den första versionen, d.v.s. 1.0.
 >1. Skapa versioner igen.
 >1. De genererade etiketterna och nodnamnen är nu 1.0.0, 1.0.1, 1.0.2 och så vidare.
 
@@ -107,7 +107,7 @@ Den här metoden kan användas för att återställa versioner av angivna sidor 
 
 1. Navigera till och [välj](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources), den obligatoriska mappen.
 
-1. Välj **Återställ** sedan **Återställ version** uppifrån [åtgärdsverktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar).
+1. Välj **Återställ** sedan **Återställ version** uppifrån [funktionsmakron, verktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar).
 
    >[!NOTE]
    >
@@ -142,7 +142,7 @@ Den här metoden kan användas för att återställa en version av ett träd vid
 
 1. Navigera till och [välj](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources), den obligatoriska mappen.
 
-1. Välj **Återställ** sedan **Återställ träd** uppifrån [åtgärdsverktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar). Trädets senaste version visas:
+1. Välj **Återställ** sedan **Återställ träd** uppifrån [funktionsmakron, verktygsfält](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar). Trädets senaste version visas:
 
    ![Återställ träd](/help/sites-cloud/authoring/assets/versions-restore-tree-01.png)
 
@@ -198,7 +198,7 @@ Timewarp är en funktion som simulerar *publicerad* en sidas status vid en viss 
 
 Eftersom framtagning av innehåll är en pågående och samarbetsorienterad process är syftet med Timewarp att tillåta författare att spåra den publicerade webbplatsen över tid så att de kan förstå hur innehållet har ändrats. Den här funktionen använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
 
-Så här använder du den här funktionen:
+Så här använder du funktionen:
 
 * Systemet söker efter den sidversion som var aktiv vid den valda tidpunkten.
 * Det betyder att den visade versionen skapades/aktiverades *före* den tidpunkt som valts i Timewarp.
@@ -221,7 +221,7 @@ Timewarp är en [läge](/help/sites-cloud/authoring/fundamentals/environment-too
 
    ![I läget Timewarp](/help/sites-cloud/authoring/assets/versions-timewarp.png)
 
-### Begränsningar för tidsförvrängning {#timewarp-limitations}
+### Begränsningar för Timewarp {#timewarp-limitations}
 
 Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i den kontinuerliga redigeringen av innehåll i AEM går det dock inte alltid att återge detta. Tänk på dessa begränsningar när du använder Timewarp.
 

@@ -1,10 +1,10 @@
 ---
 title: Skapa och ordna sidor
-description: Skapa och ordna sidor med AEM
+description: Lär dig hur du organiserar din webbplats genom att skapa och hantera sidor med AEM.
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2544'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ När du skapar en ny sida finns det två nyckelfält:
 
 * **[Namn](#name)**:
 
-   * Detta används för att generera URI:n.
+   * Detta används för att generera URI.
    * Användarindata för det här fältet är valfria. Om inget anges hämtas namnet från titeln. Se följande avsnitt [Begränsningar för sidnamn och bästa praxis](#page-name-restrictions-and-best-practices) för mer information.
 
 #### Begränsningar för sidnamn och bästa praxis {#page-name-restrictions-and-best-practices}
@@ -92,7 +92,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >Tänk också på att vissa webbläsare (till exempel äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
-AEM skapar en ny sida [validera sidnamnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) AEM och JCR.
+AEM skapar en ny sida [validera sidnamnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR.
 
 Minsta tillåtna tecken är:
 
@@ -184,7 +184,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    * Välj den mall som du vill använda för att skapa den nya sidan och klicka/tryck sedan på **Nästa** för att fortsätta.
 
-   * **Avbryt** för att avbryta processen.
+   * **Avbryt** om du vill avbryta processen.
 
    ![Välja en mall för en ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-template.png)
 
@@ -202,15 +202,15 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 
    * **Namn**:
 
-      * Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
+      * Detta används för att generera URI. Om inget anges hämtas namnet från titeln.
       * Om du anger en sida **Namn** när du skapar en ny sida AEM [validera namnet enligt konventionerna](/help/implementing/developing/introduction/naming-conventions.md) som ålagts av AEM och JCR.
-      * Du **det går inte att skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+      * Du **kan inte skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
    >[!TIP]
    >
    >Se [Konventioner för sidnamngivning](#page-naming-conventions).
 
-   Den information som krävs för att skapa en ny sida är **Titel**.
+   Minimiinformationen som krävs för att skapa en ny sida är **Titel**.
 
    ![Ange sidrubrik](/help/sites-cloud/authoring/assets/organizing-create-page-title.png)
 
@@ -256,7 +256,7 @@ När du har skapat en sida eller navigerat till en befintlig sida (i konsolen) k
 Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
 1. I **Webbplatser** navigera tills du hittar sidan du vill kopiera.
-1. Välj sida med någon av följande metoder:
+1. Välj sida med hjälp av:
 
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
    * [Markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources) och verktygsfältet
@@ -265,7 +265,7 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
    ![Kopiera](/help/sites-cloud/authoring/assets/copy.png)
 
-1. Navigera till platsen för den nya kopian av sidan.
+1. Navigera till den nya kopians plats.
 1. Tryck eller klicka på **Klistra in** som blev tillgänglig.
 
    ![Klistra in](/help/sites-cloud/authoring/assets/paste.png)
@@ -288,7 +288,7 @@ Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
 ### Flytta eller byta namn på en sida {#moving-or-renaming-a-page}
 
-Proceduren för att flytta eller byta namn på en sida är i princip densamma och båda åtgärderna hanteras av guiden Flytta sida. Med den här guiden kan du:
+Proceduren för att flytta eller byta namn på en sida är i princip densamma och båda åtgärderna hanteras av guiden Flytta sida. Med den här guiden kan du
 
 * Byta namn på en sida utan att flytta den
 * Flytta sidan utan att byta namn på den
@@ -297,7 +297,7 @@ Proceduren för att flytta eller byta namn på en sida är i princip densamma oc
 I AEM finns funktioner för att uppdatera interna länkar som refererar till sidan som byter namn/flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
 
 1. Navigera tills du hittar sidan som du vill flytta.
-1. Välj sida med någon av följande metoder:
+1. Välj sida med hjälp av:
 
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
    * [Markeringsläge](/help/sites-cloud/authoring/getting-started/basic-handling.md#selecting-resources) och verktygsfältet
@@ -311,7 +311,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 1. Från **Byt namn** steg i guiden som du kan antingen:
 
    * Ange det namn du vill att sidan ska ha efter att den har flyttats och klicka/tryck sedan på **Nästa** för att fortsätta.
-   * **Avbryt** för att avbryta processen.
+   * **Avbryt** om du vill avbryta processen.
 
    ![Flytta och byta namn på sida](/help/sites-cloud/authoring/assets/move-page-rename.png)
 
@@ -354,7 +354,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
 >[!NOTE]
 >
->Om sidan redan har publicerats, kommer den att återpubliceras automatiskt när du flyttar den. Som standard publiceras den om när flytten är klar, men detta kan ändras genom att avmarkera **Publicera igen** i **Justera/publicera igen** steg.
+>Om sidan redan har publicerats, kommer den att återpubliceras automatiskt när du flyttar den. Som standard publiceras den om när flytten är klar, men detta kan ändras genom att avmarkera **Publicera igen** fältet i **Justera/publicera igen** steg.
 
 >[!NOTE]
 >
