@@ -1,10 +1,10 @@
 ---
 title: Implementera en AEM-anslutning
-description: Lär dig hur du bygger och implementerar en AEM.
+description: Lär dig hur du bygger, testar och implementerar en AEM. Du får också lära dig mer om vanliga integreringsmönster.
 exl-id: 70024424-8c52-493e-bbc9-03d238b8a5f5
-source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
+source-git-commit: 5482e94bc1a2e7524eb699f2ae766ba40c138e91
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '980'
 ht-degree: 6%
 
 ---

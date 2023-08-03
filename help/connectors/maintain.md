@@ -1,10 +1,10 @@
 ---
 title: Underhålla en AEM-anslutning
-description: Lär dig hur du uppdaterar AEM efter den första överföringen.
+description: Lär dig hur du underhåller och uppdaterar AEM efter den första överföringen.
 exl-id: 8122a8c8-6577-4907-8f6e-52711eed3970
-source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
+source-git-commit: 5482e94bc1a2e7524eb699f2ae766ba40c138e91
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '171'
 ht-degree: 17%
 
 ---

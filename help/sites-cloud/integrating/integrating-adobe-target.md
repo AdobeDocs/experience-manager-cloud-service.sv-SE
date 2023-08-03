@@ -1,12 +1,12 @@
 ---
 title: Integrera med Adobe Target
-description: Lär dig hur du integrerar Adobe Target med AEM as a Cloud Service.
+description: Lär dig hur du integrerar Adobe Target med AEM as a Cloud Service med Touch Ui och Adobe Launch.
 feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
+source-git-commit: 5482e94bc1a2e7524eb699f2ae766ba40c138e91
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1034'
 ht-degree: 1%
 
 ---
