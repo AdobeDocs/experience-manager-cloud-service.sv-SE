@@ -7,9 +7,9 @@ role: Admin, User
 hide: true
 hidefromtoc: true
 level: Intermediate
-source-git-commit: 6cc7153c9754b6786a08c5fd378d72a8ab7c478d
+source-git-commit: b527e7499bfd995362b792ca1c57a2c92901739c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1210'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Med en grundläggande mall kan du snabbt skapa ett formulär för registreringsu
 
 >[!TAB Telefon]
 
-![Telefon till standardmall](assets/Basic-temp-phone-view.png)
+![Telefon till standardmall](assets/Basic-temp-phone-view.png){width:&quot;25%&quot;}
 
 >[!TAB Tablet]
 
@@ -93,7 +93,21 @@ Med en grundläggande mall kan du snabbt skapa ett formulär för registreringsu
 
 En tom arbetsytemall används för att skapa en anpassad formulärstruktur, innehåll och regler från grunden. Inga formulärkomponenter har förintegrerats i den tomma mallen.
 
-![Tom mall](assets/Blank-template.png)
+>[!BEGINTABS]
+
+>[!TAB Skrivbord]
+
+![Tom malldator](assets/Blank-temp-desktop-view.png)
+
+>[!TAB Telefon]
+
+![Telefon till standardmall](assets/Blank-temp-phone-view.png){width:&quot;25%&quot;}
+
+>[!TAB Tablet]
+
+![Enkel mallsurfplatta](assets/Blank-temp-tablet-view.png)
+
+>[!ENDTABS]
 
 ### Kontakta oss {#Contact-Us}
 
@@ -147,7 +161,7 @@ Formulärmallen för inköpsbegäran hjälper till att skapa ett formulär som i
 
 ## Referensformulärdatamodeller {#reference-models}
 
-När du har skapat en [Adaptiv form](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#adaptive-forms-core-components) baserat på [Kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#adaptive-forms-core-components)kan du ansluta backend-delen av formuläret med databasservrarna Microsoft® Dynamics 365 och Salesforce för att aktivera affärsarbetsflöden. Till exempel:
+När du har skapat en [Adaptiv form](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#adaptive-forms-core-components) baserat på [Kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#adaptive-forms-core-components)kan du koppla ditt formulär till databasservrarna Microsoft® Dynamics 365 och Salesforce för att aktivera arbetsflöden. Till exempel:
 
 * Skriv data i Microsoft® Dynamics 365 och Salesforce när du skickar adaptiva formulär.
 * Skriv data i Microsoft® Dynamics 365 och Salesforce via anpassade entiteter som definierats i formulärdatamodellen och vice versa.
