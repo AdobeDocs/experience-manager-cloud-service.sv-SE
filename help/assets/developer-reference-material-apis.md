@@ -5,7 +5,7 @@ contentOwner: AG
 feature: APIs,Assets HTTP API
 role: Developer,Architect,Admin
 exl-id: c75ff177-b74e-436b-9e29-86e257be87fb
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: a63a237e8da9260fa5f88060304b8cf9f508da7f
 workflow-type: tm+mt
 source-wordcount: '1894'
 ht-degree: 1%
@@ -27,10 +27,10 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 | Supportnivå | Beskrivning |
 | ------------- | --------------------------- |
 | ✓ | Stöds |
-| × | Stöds inte. Skall ej användas. |
+| × | Stöds inte. Använd inte. |
 | - | Inte tillgängligt |
 
-| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [Experience Manager / Sling / JCR](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) Java API:er | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html) servlets | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) |
+| Använd skiftläge | [aem-upload](https://github.com/adobe/aem-upload) | [Experience Manager / Sling / JCR](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) Java-API:er | [Tjänsten asset compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) | [[!DNL Assets] HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html#create-an-asset) | Sling [GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) / [POST](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html) servlets | [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) |
 | ----------------|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Ursprunglig binär** |  |  |  |  |  |  |
 | Skapa original | ✓ | × | - | × | × | - |
@@ -75,6 +75,7 @@ I [!DNL Experience Manager] som [!DNL Cloud Service]kan du överföra resurserna
 ![Översikt över protokollet för direkt binär överföring](assets/add-assets-technical.png)
 
 >[!IMPORTANT]
+>
 Utför ovanstående steg i ett externt program och inte i [!DNL Experience Manager] JVM.
 
 Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser. Skillnaderna jämfört med [!DNL Experience Manager] 6.5 är:
@@ -83,13 +84,16 @@ Metoden ger en skalbar och mer effektiv hantering av överföringar av resurser.
 * Binär molnlagring fungerar med ett CDN-nätverk (Content Delivery Network) eller Edge-nätverk. Ett CDN väljer en slutpunkt för överföring som är närmare för en klient. När data flyttas kortare tid till en närliggande slutpunkt förbättras överföringsprestanda och användarupplevelsen, särskilt för geografiskt utspridda team.
 
 >[!NOTE]
+>
 Se klientkoden för att implementera den här metoden i öppen källkod [aem-upload library](https://github.com/adobe/aem-upload).
+>
 [!IMPORTANT]
-Under vissa omständigheter är det inte säkert att ändringarna till fullo kan spridas mellan begäranden till Experience Manager på grund av att lagringsutrymmet i Cloud Service så småningom är konsekvent. Detta leder till 404 svar på initiering eller slutförande av överföringsanrop på grund av att de nödvändiga mappprojekten inte sprids. Kunderna bör förvänta sig 404 svar och hantera dem genom att implementera ett nytt försök med en strategi för backoff.
+>
+Under vissa omständigheter är det inte säkert att ändringarna till fullo kan spridas mellan begäranden till Experience Manager på grund av att lagringsutrymmet i Cloud Service så småningom är konsekvent. Detta leder till 404 svar på initiering eller slutförande av överföringsanrop på grund av att de nödvändiga mappprojekten inte sprids. Kunderna bör förvänta sig 404 svar och hantera dem genom att implementera ett nytt försök med en strategi för backoff-hantering.
 
 ### Initiera överföring {#initiate-upload}
 
-Skicka en begäran om HTTP-POST till den önskade mappen. Resurser skapas eller uppdateras i den här mappen. Inkludera väljaren `.initiateUpload.json` för att ange att begäran är att initiera överföring av en binär fil. Sökvägen till mappen där resursen ska skapas är `/assets/folder`. Begäran om POST är `POST https://[aem_server]:[port]/content/dam/assets/folder.initiateUpload.json`.
+Skicka en begäran om HTTP-POST till den önskade mappen. Resurser skapas eller uppdateras i den här mappen. Inkludera väljaren `.initiateUpload.json` för att ange att begäran är att initiera överföring av en binär fil. Sökvägen till mappen där resursen ska skapas är `/assets/folder`. POSTEN begär `POST https://[aem_server]:[port]/content/dam/assets/folder.initiateUpload.json`.
 
 Innehållstypen för begärandetexten ska vara `application/x-www-form-urlencoded` formulärdata, som innehåller följande fält:
 
@@ -131,8 +135,8 @@ En enda begäran kan användas för att initiera överföringar för flera binä
 
 Utdata från initiering av en överföring innehåller ett eller flera överförda URI-värden. Om mer än en URI anges kan klienten dela upp binärfilen i delar och göra PUT-förfrågningar för varje del till de angivna överförings-URI:erna, i ordning. Om du väljer att dela upp binärfilen i delar ska du följa följande riktlinjer:
 
-* Varje del, med undantag för den sista, måste ha en storlek som är större än eller lika med `minPartSize`.
-* Varje del måste ha en storlek som är mindre än eller lika med `maxPartSize`.
+* Varje del, utom den sista, måste ha en storlek som är större än eller lika med `minPartSize`.
+* Varje del måste ha en storlek mindre än eller lika med `maxPartSize`.
 * Om binärfilens storlek överskrider `maxPartSize`, delar upp binärfilen i delar för att ladda upp den.
 * Du behöver inte använda alla URI:er.
 
@@ -140,7 +144,7 @@ Om binärfilens storlek är mindre än eller lika med `maxPartSize`kan du istäl
 
 CDN-kantnoder snabbar upp begärd överföring av binärfiler.
 
-Det enklaste sättet att uppnå detta är att använda värdet för `maxPartSize` som delstorlek. API-kontraktet garanterar att det finns tillräckligt med överförda URI:er för att överföra din binära fil om du använder det här värdet som delstorlek. Det gör du genom att dela binärfilen i delar av storleken `maxPartSize`, med en URI för varje del, i ordning. Den sista delen kan ha en storlek som är mindre än eller lika med `maxPartSize`. Anta till exempel att binärfilens totala storlek är 20 000 byte, `minPartSize` är 5 000 byte, `maxPartSize` är 8 000 byte och antalet överförings-URI är 5. Utför följande steg:
+Det enklaste sättet att uppnå detta är att använda värdet för `maxPartSize` som din delstorlek. API-kontraktet garanterar att det finns tillräckligt med överförda URI:er för att överföra din binära fil om du använder det här värdet som delstorlek. Det gör du genom att dela binärfilen i delar av storleken `maxPartSize`, med en URI för varje del, i ordning. Den sista delen kan ha en storlek som är mindre än eller lika med `maxPartSize`. Anta till exempel att binärfilens totala storlek är 20 000 byte, `minPartSize` är 5 000 byte, `maxPartSize` är 8 000 byte och antalet överförings-URI är 5. Utför följande steg:
 
 * Överför de första 8 000 byten i binärfilen med den första överförings-URI:n.
 * Överför de andra 8 000 byten i binärfilen med den andra överförings-URI:n.
@@ -154,6 +158,7 @@ Det enklaste och säkraste sättet är att helt enkelt använda delar som är li
 Om överföringen lyckas svarar servern på varje begäran med en `201` statuskod.
 
 >[!NOTE]
+>
 Mer information om överföringsalgoritmen finns i [officiell funktionsdokumentation](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html#Upload) och [API-dokumentation](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html) i projektet Apache Jackrabbit Oak.
 
 ### fullständig överföring {#complete-upload}
@@ -173,6 +178,7 @@ När alla delar av en binär fil har överförts skickar du en begäran om HTTP-
 | `fileSize` | Siffra | Valfritt | Filens storlek i byte. Om det anges inkluderas filstorleken i systemets loggfiler för analys av överföringshastighet. |
 
 >[!NOTE]
+>
 Om tillgången finns och ingendera `createVersion` eller `replace` anges, sedan [!DNL Experience Manager] uppdaterar resursens aktuella version med den nya binärfilen.
 
 Precis som initieringsprocessen kan fullständiga data för begäran innehålla information för mer än en fil.
@@ -187,6 +193,7 @@ Om du vill veta mer om överföringsalgoritmerna eller skapa egna överföringss
 * [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem).
 
 >[!NOTE]
+>
 Både aem-upload-biblioteket och kommandoradsverktyget använder [node-httptransfer library](https://github.com/adobe/node-httptransfer/)
 
 ### Inaktuella API:er för överföring av resurser {#deprecated-asset-upload-api}
@@ -195,16 +202,16 @@ Både aem-upload-biblioteket och kommandoradsverktyget använder [node-httptrans
 
 Den nya överföringsmetoden stöds endast för [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. API:erna från [!DNL Adobe Experience Manager] 6.5 är föråldrat. Metoderna för att överföra eller uppdatera resurser eller återgivningar (all binär överföring) är ersatta i följande API:er:
 
-* [Experience Manager Assets HTTP API](mac-api-assets.md)
-* `AssetManager` Java API, som `AssetManager.createAsset(..)`
+* [EXPERIENCE MANAGER ASSETS HTTP API](mac-api-assets.md)
+* `AssetManager` Java API, som `AssetManager.createAsset(..)`, `AssetManager.createAssetForBinary(..)`, `AssetManager.getAssetForBinary(..)`, `AssetManager.removeAssetForBinary(..)`, `AssetManager.createOrUpdateAsset(..)`, `AssetManager.createOrReplaceAsset(..)`
 
 >[!MORELIKETHIS]
+>
 * [Open-source aem-upload library](https://github.com/adobe/aem-upload).
 * [Kommandoradsverktyg med öppen källkod](https://github.com/adobe/aio-cli-plugin-aem).
 * [Apache Jackrabbit Oak-dokumentation för direkt överföring](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html#Upload).
 
-
-## Resurshantering och efterbearbetning {#post-processing-workflows}
+## Tillgångshantering och efterbearbetning av arbetsflöden {#post-processing-workflows}
 
 I [!DNL Experience Manager], är tillgångsbehandlingen baserad på **[!UICONTROL Processing Profiles]** konfiguration som använder [tillgångsmikrotjänster](asset-microservices-configure-and-use.md#get-started-using-asset-microservices). Bearbetningen kräver inga utvecklartillägg.
 
@@ -306,5 +313,5 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 * [Import av massmetadata](metadata-import-export.md)
 
 >[!MORELIKETHIS]
+>
 * [[!DNL Experience Cloud] as a [!DNL Cloud Service] SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
-
