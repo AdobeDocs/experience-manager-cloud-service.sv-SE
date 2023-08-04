@@ -1,10 +1,10 @@
 ---
 title: AEM as a Cloud Service on Unified Shell
-description: AEM as a Cloud Service on Unified Shell
+description: Läs om fördelarna med AEM as a Cloud Service i Unified Shell
 exl-id: ea739307-dc99-4621-a239-dbe60ab6b52e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '399'
 ht-degree: 2%
 
 ---
@@ -52,19 +52,19 @@ Om du vill ändra till det mörka temat klickar du på din profilikon. Den här 
 
 ![bild](/help/overview/assets/unifiedshell4.png)
 
-## Identifiera AEM as a Cloud Service miljö {#identify-aemaacs-environment}
+## Identifiera den AEM as a Cloud Service miljön {#identify-aemaacs-environment}
 
-AEM as a Cloud Service innehåller tre typer av miljöer: Produktion, scen och utveckling. Se [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en) för mer information. I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
+AEM as a Cloud Service innehåller tre typer av miljöer: produktion, scen och utveckling. Se [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en) för mer information. I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
 
 ![bild](/help/overview/assets/unifiedshell_header_label.png)
 
-## Åtkomst till AEM Inkorg {#accessing-the-aem-inbox}
+## Öppna AEM Inkorg {#accessing-the-aem-inbox}
 
-Du kommer åt AEM Inkorg genom att klicka på klockikonen i det enhetliga skalet.
+Du kommer åt AEM genom att klicka på klockikonen i det enhetliga skalet.
 
 >[!INFO]
 >
-> Numret som visas på klockikonen innehåller olästa meddelanden för alla lösningar i den IMS-organisationen och uppgifter som visas i AEM Inkorg.
+> Numret som visas på klockikonen innehåller olästa meddelanden för alla lösningar i den IMS-organisationen och uppgifter som visas i AEM.
 
 ![bild](/help/overview/assets/unifiedshell5.png)
 

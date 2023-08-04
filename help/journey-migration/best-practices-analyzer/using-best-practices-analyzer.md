@@ -1,11 +1,11 @@
 ---
 title: Använda Best Practices Analyzer
-description: Använda Best Practices Analyzer
+description: Lär dig hur du använder Best Practices Analyzer för att förstå hur redo du är att uppgradera.
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '2474'
-ht-degree: 38%
+source-wordcount: '2484'
+ht-degree: 37%
 
 ---
 
@@ -43,7 +43,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best 
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_bpa_download"
->title="Ladda ned Best Practices Analyzer"
+>title="Hämta Best Practices Analyzer"
 >abstract="Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM)."
 
 Best Practices Analyzer kan laddas ned som en zip-fil från portalen för programvarudistribution. Du kan installera paketet via [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) på din källinstans av Adobe Experience Manager (AEM).
@@ -73,7 +73,7 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic4.png)
 
-   Ovanstående åtgärd rullar automatiskt till platsen för sökningen i rapporten.
+   Ovanstående åtgärd rullar automatiskt till den plats där sökningen finns i rapporten.
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic5.png)
 
@@ -102,7 +102,7 @@ Filtrera bort resultat som är relaterade till [ACS-kommandon](https://adobe-con
    >[!NOTE]
    >Ikonen för vänster spår visas bara om BPA upptäcker att ACS Commons används.
 
-1. Avmarkera rutan om du vill filtrera bort alla resultat som rör ACS-kommandon. Du borde se en **Antal filtrerade sökningar** på rapporten enligt bilden nedan. Filtret används också i rapporten när den exporteras i ett CSV-format (kommaavgränsat värde).
+1. Avmarkera rutan om du vill filtrera bort alla upptäckter som rör ACS-kommandon. Du borde se en **Antal filtrerade sökningar** på rapporten enligt bilden nedan. Filtret används också i rapporten när den exporteras i ett CSV-format (kommaavgränsat värde).
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/report_filter_2.png)
 
@@ -125,7 +125,7 @@ For Adobe Experience Manager 6.1, the tool is not functional and only the HTTP i
 >[!CONTEXTUALHELP]
 >id="aemcloud_bpa_interpreting"
 >title="Tolka rapporten Best Practices Analyzer"
->abstract="Det finns två alternativ för att visa BPA-rapportutdata: Gränssnitt och CSV. När verktyget Best Practices Analyzer körs i AEM visas UI-rapporten som resultat i verktygsfönstret. Rapporten i CSV-format innehåller information som genereras med utdata från Pattern Detector och som sorteras och organiseras efter kategorityp, undertyp och viktighetsgrad."
+>abstract="Det finns två alternativ för att visa BPA-rapportutdata: UI och CSV. När verktyget Best Practices Analyzer körs i AEM visas UI-rapporten som resultat i verktygsfönstret. Rapporten i CSV-format innehåller information som genereras med utdata från Pattern Detector och som sorteras och organiseras efter kategorityp, undertyp och viktighetsgrad."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=en#analysis-report" text="Analysrapport om metodtips för granskning"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html?lang=en" text="Om rapportkategorier i Best Practices Analyzer"
 
@@ -157,7 +157,7 @@ Läs tabellen nedan för mer information om viktighetsgrad:
 
 ## Tolka CSV-rapporten för Best Practices Analyzer {#cra-csv-report}
 
-När du klickar på **CSV** CSV-formatet i Best Practices Analyzer-rapporten byggs från innehållscachen och returneras till din webbläsare. Den här rapporten hämtas automatiskt som en fil med standardnamnet `results.csv`.
+Klicka på **CSV** CSV-formatet i Best Practices Analyzer-rapporten byggs från innehållscachen och returneras till din webbläsare. Den här rapporten hämtas automatiskt som en fil med standardnamnet `results.csv`.
 
 Om cacheminnet har upphört att gälla genereras rapporten om innan CSV-filen skapas och hämtas.
 
@@ -201,17 +201,17 @@ Nedan visas ett exempel på hur du gör det:
 
 Följande HTTP-sidhuvuden används i gränssnittet:
 
-* `Cache-Control: max-age=<seconds>`: Anger livstid för cachefrihet i sekunder. (Se [RFC 7234](https://tools.ietf.org/html/rfc7234#section-5.2.2.8).)
+* `Cache-Control: max-age=<seconds>`: Anger livstid för cacheåtergivning i sekunder. (Se [RFC 7234](https://tools.ietf.org/html/rfc7234#section-5.2.2.8).)
 * `Prefer: respond-async`: Anger att servern ska svara asynkront. (Se [RFC 7240](https://tools.ietf.org/html/rfc7240#section-4.1).)
 * `Prefer: return=minimal`: Anger att servern ska returnera ett minimalt svar. (Se [RFC 7240](https://tools.ietf.org/html/rfc7240#section-4.2).)
 
 Följande HTTP-frågeparametrar är praktiska när det är svårt att använda HTTP-sidhuvuden:
 
-* `max-age` (tal, valfritt): Anger livstid för cachefrihet i sekunder. Siffran måste vara 0 eller större. Standardlivstiden för färskhet är 86400 sekunder. Utan den här parametern eller motsvarande rubrik används ett nytt cacheminne för att hantera begäranden i 24 timmar, och då måste cacheminnet genereras om. Använda `max-age=0` kommer att tvinga cachen att rensas och initiera en omgenerering av rapporten med hjälp av den tidigare icke-nollvaraktigheten för det nyligen genererade cacheminnet.
-* `respond-async` (boolesk, valfritt): Anger att svaret ska anges asynkront. Använda `respond-async=true` när cacheminnet är inaktuellt returnerar servern ett svar på `202 Accepted` utan att vänta på att cachen ska uppdateras och att rapporten ska genereras. Om cacheminnet är uppdaterat har den här parametern ingen effekt. Standardvärdet är `false`. Utan den här parametern eller motsvarande rubrik kommer servern att svara synkront, vilket kan kräva mycket tid och en justering av den maximala svarstiden för HTTP-klienten.
-* `may-refresh-cache` (boolesk, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. If `may-refresh-cache=true`, eller om den inte anges, kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. If `may-refresh-cache=false` kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha gjorts om cachen är tom eller inaktuell, och då är rapporten tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
-* `return-minimal` (boolesk, valfritt): Anger att svaret från servern endast ska innehålla statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. If `return-minimal=true`, begränsas svarstexten till statusobjektet. If `return-minimal=false`, eller om det inte anges, ges ett fullständigt svar.
-* `log-findings` (boolesk, valfritt): Anger att servern ska logga innehållet i cachen när den skapas eller uppdateras för första gången. Varje sökning från cachen loggas som en JSON-sträng. Denna loggning sker endast om `log-findings=true` och begäran genererar ett nytt cacheminne.
+* `max-age` (tal, valfritt): Anger cache-uppdateringens livstid i sekunder. Siffran måste vara 0 eller större. Standardlivstiden för färskhet är 86400 sekunder. Utan den här parametern eller motsvarande rubrik används ett nytt cacheminne för att hantera begäranden i 24 timmar, och då måste cacheminnet genereras om. Använda `max-age=0` kommer att tvinga cachen att rensas och initiera en omgenerering av rapporten med hjälp av den tidigare icke-nollvaraktigheten för det nyligen genererade cacheminnet.
+* `respond-async` (booleskt, valfritt): Anger att svaret ska anges asynkront. Använda `respond-async=true` när cacheminnet är inaktuellt returnerar servern ett svar på `202 Accepted` utan att vänta på att cachen ska uppdateras och att rapporten ska genereras. Om cacheminnet är uppdaterat har den här parametern ingen effekt. Standardvärdet är `false`. Utan den här parametern eller motsvarande rubrik kommer servern att svara synkront, vilket kan kräva mycket tid och en justering av den maximala svarstiden för HTTP-klienten.
+* `may-refresh-cache` (booleskt, valfritt): Anger att servern kan uppdatera cachen som svar på en begäran om den aktuella cachen är tom, inaktuell eller snart inaktuell. If `may-refresh-cache=true`, eller om den inte anges, kan servern initiera en bakgrundsuppgift som anropar mönsteravkännaren och uppdaterar cachen. If `may-refresh-cache=false` kommer servern inte att initiera någon uppdateringsåtgärd som annars skulle ha gjorts om cachen är tom eller inaktuell, och då är rapporten tom. Uppdateringsaktiviteter som redan pågår påverkas inte av den här parametern.
+* `return-minimal` (booleskt, valfritt): Anger att svaret från servern endast ska inkludera statusen som innehåller förloppsindikatorn och cachestatusen i JSON-formatet. If `return-minimal=true`, begränsas svarstexten till statusobjektet. If `return-minimal=false`, eller om det inte anges, ges ett fullständigt svar.
+* `log-findings` (booleskt, valfritt): Anger att servern ska logga innehållet i cachen när den skapas eller uppdateras. Varje sökning från cachen loggas som en JSON-sträng. Denna loggning sker endast om `log-findings=true` och begäran genererar en ny cache.
 
 När det finns både ett HTTP-sidhuvud och motsvarande frågeparameter har frågeparametern företräde.
 
@@ -224,7 +224,7 @@ När en begäran har skickats behöver klienten inte vara aktiv för att rapport
 
 Följande svarsvärden är möjliga:
 
-* `200 OK`: Anger att svaret innehåller upptäckter från mönsteravkännaren som genererades under cachelagringens aktualitetstid.
+* `200 OK`: Anger att svaret innehåller resultat från mönsteravkännaren som genererades under cachets aktualitetstid.
 * `202 Accepted`: Används för att ange att cachen är inaktuell. När `respond-async=true` och `may-refresh-cache=true` det här svaret anger att en uppdateringsaktivitet pågår. När `may-refresh-cache=false` det här svaret indikerar helt enkelt att cachen är inaktuell.
 * `400 Bad Request`: Anger att det uppstod ett fel med begäran. Ett meddelande i formatet Probleminformation (se [RFC 7807](https://tools.ietf.org/html/rfc7807)) innehåller mer information.
 * `401 Unauthorized`: Anger att begäran inte var auktoriserad.
@@ -244,7 +244,7 @@ Värdet för den här egenskapen är cachelivslängden i sekunder. Administratö
 
 ### Installera på AEM 6.1 {#installing-on-aem61}
 
-BPA använder ett användarkonto för systemtjänst med namnet `repository-reader-service` för att köra mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. AEM 6.1 måste det här kontot skapas *före* installation av BPA enligt följande:
+BPA använder ett användarkonto för systemtjänst med namnet `repository-reader-service` för att köra mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. På AEM 6.1 måste det här kontot skapas *före* installation av BPA enligt följande:
 
 1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom. Klicka sedan på den gröna bockmarkeringen.
 

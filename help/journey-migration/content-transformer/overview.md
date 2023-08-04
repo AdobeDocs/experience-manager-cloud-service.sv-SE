@@ -1,9 +1,9 @@
 ---
 title: Översikt över innehållstransformeraren
-description: Översikt över innehållstransformeraren
-source-git-commit: 55eedd342f048e19bad5c6fbfdd16a468ff1f4f9
+description: Lär dig hur du identifierar och åtgärdar innehållsrelaterade problem som rapporteras av BPA med hjälp av Content Transformer.
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '393'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,6 @@ Innehållsomvandlaren kan hjälpa dig att lösa problem som kan uppstå under f�
 
 Innehållstransformeraren har följande fördelar:
 
-* Felsäker: ett paket skapas av innehållstreraren varje gång den gör ändringar i databasen för att åtgärda problem. Om det behövs kan du återgå till det tidigare läget genom att installera paketet.
+* Felsäker: ett paket skapas av innehållstreraren varje gång det ändras i databasen för att åtgärda problem. Om det behövs kan du återgå till det tidigare läget genom att installera paketet.
 * Lättanvänt: Content Transformer har integrerats med Content Transfer Tool och har ett enkelt, intuitivt användargränssnitt.
-* Sparar tid: När du har ett stort antal innehållsproblem som faller under en mönsterkategori kan du lösa alla med bara ett par klick med hjälp av Innehållsomvandlaren.
+* Sparar tid: när du har ett stort antal innehållsproblem som faller under en mönsterkategori kan du lösa alla med bara ett par klick med hjälp av Innehållsomvandlaren.

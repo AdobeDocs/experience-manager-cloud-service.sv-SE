@@ -1,11 +1,11 @@
 ---
 title: Extraherar innehåll från källa
-description: Extraherar innehåll från källa
+description: Lär dig hur du extraherar innehåll från en AEM för att senare överföra det till en Cloud Service AEM.
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 21%
+source-wordcount: '718'
+ht-degree: 20%
 
 ---
 
@@ -45,7 +45,7 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam15.png)
 
-   Du kan klicka på **Visa förlopp** för att få en detaljerad bild av den pågående extraheringen.
+   Klicka på **Visa förlopp** för att få en detaljerad bild av den pågående extraheringen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam16.png)
 
@@ -53,7 +53,7 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam17.png)
 
-1. När extraheringen är klar kan du granska de andra kolumnerna som **Källa** och **Banor** för information om den migreringsuppsättning som du fyllde i genom att klicka på **...** och sedan **Visa detaljer** för att se detaljer, inklusive varaktigheten för varje steg i extraktionen. Visa den här dialogrutan under extraheringen för att se hur stegen fortskrider.
+1. När extraheringen är klar kan du granska de andra kolumnerna som **Källa** och **Banor** för information om den migreringsuppsättning som du fyllde i genom att klicka på **...** och sedan **Visa detaljer** för att se detaljer, inklusive varaktigheten för varje steg i extraktionen. Visa den här dialogrutan under extraheringen för att se hur stegen utvecklas.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam18b.png)
 
@@ -64,7 +64,7 @@ Content Transfer Tool har en funktion för differentiell innehållsuppdatering s
 
 >[!NOTE]
 >Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt förkopieringssteget för den första fullständiga extraheringen kan du hoppa över förkopieringen för efterföljande extraheringar i den övre delen (om den översta migreringsuppsättningsstorleken är mindre än 200 GB) eftersom det kan göra hela processen tidsödande.
->Dessutom är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen av den övre delen körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
+>Dessutom är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen av den översta kopian körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
 
 När extraheringen är klar kan du överföra delta-innehåll med extraheringsmetoden för uppdateringar.
 

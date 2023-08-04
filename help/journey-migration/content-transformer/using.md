@@ -1,9 +1,9 @@
 ---
 title: Använda innehållstransformeraren
-description: Använda innehållstransformeraren
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+description: Lär dig hur du omvandlar innehållsstrukturen som förberedelse för migrering till AEM as a Cloud Service.
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '645'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att använda in
 * Även om du kan köra Content Transformer i produktionsmiljön rekommenderar vi att du kör Content Transformer på en klon av produktionsmiljön. Dessutom måste du se till att BPA och CT körs i samma miljö.
 * Du måste vara administratör i miljön där du vill köra innehållstransformeraren.
 * Alla åtgärder som kan ändra källinnehållet ( move/remove/rename ) skapar som standard ett säkerhetskopieringspaket med källsökvägarna under `/etc/packages/content-transformation` före omformningen. Även om varje åtgärdsdialogruta har ett alternativ för att inaktivera/aktivera skapande av säkerhetskopieringspaket, rekommenderar vi att du alltid har aktiverat generering av paket.
-* Varje sida i CT är konfigurerad att innehålla högst 50 resultat, vilket innebär att maximalt 50 träffar kan omvandlas. Detta görs för att ge ett svar i rätt tid på användargränssnittet.
+* Varje sida i innehållstransformeraren är konfigurerad att innehålla högst 50 upptäckter, vilket innebär att maximalt 50 upptäckter kan omformas. Detta görs för att ge ett svar i rätt tid på användargränssnittet.
 
 ## Tillgänglighet {#availability-ct}
 
@@ -29,7 +29,7 @@ Innehållstransformeraren paketeras med [Verktyget Innehållsöverföring](/help
 
 ## Öppna innehållstransformeraren {#opening-ct}
 
-1. Logga in som administratör AEM källinstansen och gå till startsidan: https://host:port/aem/start.html.
+1. Logga in på AEM som administratör och gå till startsidan: https://host:port/aem/start.html.
 1. Navigera till Verktyg > Åtgärder > Innehållsmigrering
 
    ![bild](/help/journey-migration/content-transformer/assets/ct-1.png)
@@ -51,7 +51,7 @@ Innehållstransformeraren paketeras med [Verktyget Innehållsöverföring](/help
 
    ![bild](/help/journey-migration/content-transformer/assets/ct-4.png)
 
-1. Du kan markera alla eller specifika problem och vidta åtgärder som att flytta, ta bort och byta namn på dem. Anpassade banor kan också läggas till med **Lägg till banor** i det övre högra hörnet.
+1. Du kan markera alla eller specifika problem och vidta åtgärder som att flytta, ta bort och byta namn på dem för att lösa dem. Anpassade banor kan också läggas till med **Lägg till banor** längst upp till höger.
 
    >[!NOTE]
    > När du använder flyttåtgärden bör du flytta alla sökvägar till endast en mapp (till exempel under `/etc/packages/content-transformation/paths`), så när säkerhetskopieringspaketen installeras för att återföra instansen till det ursprungliga läget, är mappen (`/etc/packages/content-transformation/paths`) kan tas bort med åtgärden remove för att minska databasstorleken.

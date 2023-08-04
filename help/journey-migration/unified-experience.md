@@ -1,10 +1,10 @@
 ---
 title: Enhetlig upplevelse för verktyg för kodkorrigering
-description: Enhetlig upplevelse för verktyg för kodkorrigering
+description: Läs om Unified Experience for Code Refactoring Tools.
 exl-id: daee0e2d-1e2b-41a3-acab-fc59142d0e05
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ The `aio-cli-plugin-aem-cloud-service-migration` plugin-programmet består av tv
 
    * Skanna in respektive avsnitt i kundens kod och ändra koden (baserat på bästa praxis för kodimplementering) för att skapa utdata som sedan kan valideras och distribueras.
 
-   * Skapar en sammanfattningsrapport för att registrera de åtgärder som utförts under körningen.
+   * Skapar en sammanfattningsrapport för att registrera de åtgärder som har utförts under körningen.
 
 ## Tillgänglighet {#availability}
 

@@ -1,10 +1,10 @@
 ---
 title: Komma igång med verktyget Innehållsöverföring
-description: Komma igång med verktyget Innehållsöverföring
+description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1439'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_download"
->title="Hämta"
+>title="Ladda ned"
 >abstract="Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via pakethanteraren på din källinstans av Adobe Experience Manager (AEM). Glöm inte att hämta den senaste versionen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
@@ -39,7 +39,7 @@ Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa
 * Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
 
 >[!NOTE]
->Om extraheringen misslyckas på grund av följande fel: &quot;javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: Det gick inte att skapa PKIX-sökväg: sun.security.provider.certpath.SunCertPathBuilderException: det går inte att hitta en giltig certifieringssökväg till det begärda målet. Detta kan åtgärdas genom att det aktuella certifikatutfärdarcertifikatet importeras.
+>Om extraheringen misslyckas på grund av följande fel:&quot;javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to requested target&quot;, kan detta lösas genom import av relevant certifikatutfärdarcertifikat.
 
 ### Aktivera SSL-loggning {#enable-ssl-logging}
 
@@ -71,7 +71,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_extraction_setup"
 >title="Installationsfas för extrahering"
->abstract="Lär dig hur du skapar och hanterar en migreringsuppsättning och hur du kopierar extraheringsnyckeln."
+>abstract="Lär dig skapa och hantera en migreringsuppsättning och hur du kopierar extraheringsnyckeln."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
 <!-- Contextualhelp id "aemcloud_ctt_extraction_setup" needs to be added here -->
@@ -86,7 +86,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    >[!NOTE]
    >
-   >Högst fem migreringsuppsättningar, inklusive utgångna uppsättningar, kan skapas per projekt i Cloud Acceleration Manager.
+   >Högst fem migreringsuppsättningar, inklusive uppsättningar som gått ut, kan skapas per projekt i Cloud Acceleration Manager.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam2.png)
 
@@ -179,7 +179,7 @@ Följ stegen nedan för att göra en storlekskontroll:
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam8.png)
 
-1. Detta öppnar **Kontrollera storlek** -dialogrutan.
+1. Det här öppnar **Kontrollera storlek** -dialogrutan.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam9.png)
 

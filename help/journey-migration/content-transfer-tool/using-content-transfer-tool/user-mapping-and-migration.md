@@ -1,10 +1,10 @@
 ---
 title: Användarmappning och huvudmigrering
-description: Översikt över användarmappning och huvudmigrering
+description: Översikt över användarmappning och migrering av huvudnamn på AEM as a Cloud Service.
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '837'
 ht-degree: 3%
 
 ---
@@ -43,7 +43,7 @@ AEM användare kan mappas till motsvarande Adobe IMS-användare med samma e-post
 
 Följande specialfall loggas:
 
-1. Om en användare inte har någon e-postadress i `profile/email` fält *jcr* kan användaren eller gruppen i fråga migreras men inte mappas. Detta gäller även om e-postadressen används som användarnamn för inloggning.
+1. Om en användare inte har någon e-postadress `profile/email` fält för *jcr* kan användaren eller gruppen i fråga migreras men inte mappas. Detta gäller även om e-postadressen används som användarnamn för inloggning.
 
 1. Om användaren är inaktiverad behandlas den på samma sätt som om den inte var inaktiverad. Den mappas och migreras som vanligt och inaktiveras fortfarande i molninstansen.
 
@@ -60,4 +60,4 @@ Följande specialfall loggas:
 
 ## Slutlig sammanfattning och rapport {#final-report}
 
-När extraheringen och intaget har slutförts genereras en rapport med information om huvudmigreringen. Se [Validera huvudmigreringen](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/validating-content-transfers.md#how-to-validate-principal-migration) om du vill ha mer information.
+När extraheringen och intaget har slutförts genereras en rapport med information om huvudmigreringen. Se [Validera huvudmigreringen](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/validating-content-transfers.md#how-to-validate-principal-migration) för mer information.

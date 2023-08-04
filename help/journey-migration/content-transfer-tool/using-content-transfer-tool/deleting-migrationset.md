@@ -1,11 +1,11 @@
 ---
 title: Ta bort en migreringsuppsättning i verktyget Innehållsöverföring
-description: Ta bort en migreringsuppsättning i verktyget Innehållsöverföring
+description: Lär dig hur du tar bort en migreringsuppsättning i verktyget Innehållsöverföring.
 exl-id: 7ec1c5ca-bac7-4617-8068-78569d7cb503
-source-git-commit: c61407d70fb65a7fdc72174881b23db4deca556a
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 3%
+source-wordcount: '235'
+ht-degree: 2%
 
 ---
 
@@ -22,11 +22,11 @@ Migreringsuppsättningar kan tas bort från Cloud Acceleration Manager.
 
 Följ stegen nedan för att ta bort en migreringsuppsättning:
 
-1. Navigera till listvyn Migreringsuppsättning i Cloud Acceleration Manager och klicka på de tre punkterna (**...**) bredvid den migreringsuppsättning som du vill ta bort. The **Ta bort** åtgärden ska vara synlig enligt nedan.
+1. Navigera till listvyn Migreringsuppsättning i Cloud Acceleration Manager och klicka på de tre punkterna (**...**) bredvid den migreringsuppsättning som du vill ta bort. The **Ta bort** åtgärden ska vara synlig så som visas nedan.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/migration-delete1.png)
 
-1. När du har klickat på **Ta bort** En dialogruta visas där du kan bekräfta borttagningsåtgärden.
+1. När du klickar på **Ta bort** En dialogruta visas där du kan bekräfta borttagningsåtgärden.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/migration-delete2.png)
 

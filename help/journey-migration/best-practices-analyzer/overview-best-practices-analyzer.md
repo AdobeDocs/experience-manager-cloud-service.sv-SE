@@ -1,11 +1,11 @@
 ---
 title: Översikt över Best Practices Analyzer
-description: Översikt över Best Practices Analyzer
+description: Lär dig hur du använder Best Practices Analyzer för att bedöma om AEM följer rekommenderade metoder
 exl-id: 46c567f8-91e2-4d85-98bd-61d183b887d5
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 29%
+source-wordcount: '366'
+ht-degree: 27%
 
 ---
 

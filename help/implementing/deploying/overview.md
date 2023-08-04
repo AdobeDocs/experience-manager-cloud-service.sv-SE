@@ -1,11 +1,11 @@
 ---
 title: Distribuera till AEM as a Cloud Service
-description: Distribuera till AEM as a Cloud Service
+description: Läs mer om grunderna och de bästa sätten att distribuera till AEM as a Cloud Service
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '3462'
+source-wordcount: '3470'
 ht-degree: 0%
 
 ---
@@ -140,17 +140,17 @@ I följande fall är det att föredra att använda handkodning för att skapa ex
 Repoinit är att föredra för de här användningsområdena för innehållsändringar som stöds på grund av följande fördelar:
 
 * `Repoinit` skapar resurser vid start så att logiken kan ta tillvara dessa resurser för givet. I det ändringsbara innehållspaketet skapas resurser efter start, så programkod som förlitar sig på dem kan misslyckas.
-* `Repoinit` är en relativt säker instruktionsuppsättning eftersom du uttryckligen kontrollerar vilken åtgärd som ska vidtas. De enda åtgärder som stöds är dessutom additiva, förutom några säkerhetsrelaterade fall som tillåter borttagning av användare, tjänstanvändare och grupper. En borttagning av något i det variabla innehållspaketet är däremot explicit. När du definierar ett filter tas allt som ingår i ett filter bort. Försiktighet bör dock iakttas eftersom det finns scenarier där förekomsten av nytt innehåll kan ändra programmets beteende.
+* `Repoinit` är en relativt säker instruktionsuppsättning eftersom du uttryckligen kontrollerar vilken åtgärd som ska vidtas. De enda åtgärder som stöds är dessutom additiva, förutom några säkerhetsrelaterade fall som tillåter borttagning av användare, tjänstanvändare och grupper. En borttagning av något i det ändringsbara innehållspaketet är däremot explicit. När du definierar ett filter tas allt som ingår i ett filter bort. Försiktighet bör dock iakttas eftersom det finns scenarier där förekomsten av nytt innehåll kan ändra programmets beteende.
 * `Repoinit` utför snabba och atomiska operationer. Blandbara innehållspaket i kontrast kan i hög grad vara beroende av prestanda beroende på de strukturer som täcks av ett filter. Även om du uppdaterar en enskild nod kan en ögonblicksbild av ett stort träd skapas.
 * Det går att validera `repoinit` programsatser på en lokal enhetsmiljö vid körning eftersom de körs när OSGi-konfigurationen registreras.
 * `Repoinit` -programsatser är atomiska och explicita och hoppas över om läget redan matchar.
 
 När Cloud Manager distribuerar programmet körs dessa programsatser, oberoende av installationen av innehållspaket.
 
-Skapa `repoinit` gör du så här:
+Skapa `repoinit` -programsatser, följ proceduren nedan:
 
 1. Lägg till OSGi-konfiguration för fabriks-PID `org.apache.sling.jcr.repoinit.RepositoryInitializer` i en konfigurationsmapp för projektet. Använd ett beskrivande namn för konfigurationen som **org.apache.sling.jcr.repoinit.RepositoryInitializer~initstructure**.
-1. Lägg till `repoinit` -programsatser till egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). En överordnad mapp bör skapas explicit före de underordnade mapparna. Ett exempel: `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För åtkomstkontrollistor som ställs in på lågnivåstrukturer bör du ställa in dem på en högre nivå och arbeta med en `rep:glob` begränsning. Till exempel, `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
+1. Lägg till `repoinit` -programsatser till egenskapen script för config. Syntaxen och alternativen beskrivs i [Sling-dokumentation](https://sling.apache.org/documentation/bundles/repository-initialization.html). En överordnad mapp bör skapas explicit före de underordnade mapparna. Ett exempel på en explicit skapelse av `/content` före `/content/myfolder`, före `/content/myfolder/mysubfolder`. För åtkomstkontrollistor som ställs in på lågnivåstrukturer bör du ställa in dem på en högre nivå och arbeta med en `rep:glob` begränsning. Till exempel, `(allow jcr:read on /apps restriction(rep:glob,/msm/wcm/rolloutconfigs))`.
 1. Validera på den lokala utvecklingsmiljön vid körning.
 
 <!-- last statement in step 2 to be clarified with Brian -->
@@ -191,7 +191,7 @@ Eftersom Package Manager är ett runtime-koncept går det inte att installera in
 
 Alla innehållspaket som installeras med hjälp av Cloud Manager (både ändringsbart och oföränderligt) visas i ett låst läge i AEM användargränssnitt. Dessa paket kan inte installeras om, byggas om eller laddas ned, och finns listade med en **&quot;cp2fm&quot;** som anger att installationen hanterades av Cloud Manager.
 
-### Inklusive tredjepartspaket {#including-third-party}
+### Inklusive paket från tredje part {#including-third-party}
 
 Det är vanligt att kunder inkluderar färdiga paket från tredjepartskällor som programvaruleverantörer som Adobe översättning partners. Rekommendationen är att lagra dessa paket i en fjärrdatabas och referera till dem i `pom.xml`. Den här metoden är möjlig för offentliga databaser och även för privata databaser med lösenordsskydd, vilket beskrivs i [lösenordsskyddade maven-databaser](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#password-protected-maven-repositories).
 
@@ -210,7 +210,7 @@ Om det inte går att lagra paketet i en fjärrdatabas kan kunderna placera det i
 
 Alla inkluderade tredjepartspaket måste följa AEM riktlinjer för as a Cloud Service kodning och paketering som beskrivs i den här artikeln, annars leder inkludering till ett distributionsfel.
 
-The following Maven `POM.xml` utdrag visar hur tredjepartspaket kan bäddas in i projektets&quot;Behållarpaket&quot;, vanligtvis namngivna **&#39;all&#39;** genom **filevault-package-maven-plugin** Konfiguration av plugin-programmet Maven.
+The following Maven `POM.xml` utdrag visar hur tredjepartspaket kan bäddas in i projektets&quot;Behållarpaket&quot;, vanligtvis namngivna **all** genom **filevault-package-maven-plugin** Konfiguration av plugin-programmet Maven.
 
 ```
 ...
@@ -257,7 +257,7 @@ Nya eller ändrade index orsakar ett extra indexerings- eller omindexeringssteg 
 >
 >Den tid som krävs för en rullande distribution varierar beroende på indexets storlek. Orsaken är att den nya versionen inte accepterar trafik förrän det nya indexet genereras.
 
-För närvarande fungerar inte AEM as a Cloud Service med indexhanteringsverktyg som ACS Commons Sörja för ekindexering.
+För närvarande fungerar inte AEM as a Cloud Service med indexhanteringsverktyg som ACS Commons Sörja för att index bryts.
 
 ## Replikering {#replication}
 
@@ -267,7 +267,7 @@ Om du vill utveckla och testa med replikering med molnklar AEM snabbstart måste
 
 ## Bakåtkompatibel kod för rullande distributioner {#backwards-compatible-code-for-rolling-deployments}
 
-AEM as a Cloud Service strategi för driftsättning av rullande materiel innebär att både den gamla och den nya versionen kan användas samtidigt. Var därför försiktig med kodändringar som inte är bakåtkompatibla med den gamla AEM som fortfarande används.
+AEM as a Cloud Service strategi för rullande driftsättning innebär, som beskrivs ovan, att både den gamla och den nya versionen kan användas samtidigt. Var därför försiktig med kodändringar som inte är bakåtkompatibla med den gamla AEM som fortfarande används.
 
 Dessutom bör den gamla versionen testas för kompatibilitet med alla nya muterbara innehållsstrukturer som tillämpas i den nya versionen om det finns en återställning, eftersom muterbart innehåll inte tas bort.
 
@@ -312,7 +312,7 @@ De körlägeskonfigurationer som stöds är:
 * **config.publish.dev** (*Gäller för AEM Dev Publish Service*)
 * **config.publish.rde** (*Gäller AEM RDE-publiceringstjänsten*)
 * **config.publish.stage** (*Gäller för AEM mellanlagringspubliceringstjänst*)
-* **config.publish.prod** (*Gäller AEM produktionspubliceringstjänst*)
+* **config.publish.prod** (*Gäller för AEM produktionspubliceringstjänst*)
 * **config.dev** (*Gäller för AEM Dev-tjänster*)
 * **config.rde** (*Gäller RDE-tjänster*)
 * **config.stage** (*Gäller för AEM mellanlagringstjänster*)
@@ -332,4 +332,4 @@ Developers want to ensure that their custom code is performing well. For Cloud e
 
 ## Konfiguration av underhållsaktiviteter i källkontroll {#maintenance-tasks-configuration-in-source-control}
 
-Konfigurationer för underhållsaktiviteter måste sparas i källkontrollen eftersom **Verktyg > Åtgärder** skärmen är inte tillgänglig i molnmiljöer. Denna förmån säkerställer att ändringarna sparas avsiktligt i stället för att tillämpas och glöms bort. Se [Underhållsaktivitetsartikel](/help/operations/maintenance.md) för ytterligare information.
+Konfigurationer för underhållsaktiviteter måste sparas i källkontrollen eftersom **Verktyg > Åtgärder** skärmen är inte tillgänglig i molnmiljöer. Denna förmån säkerställer att ändringarna sparas avsiktligt i stället för att tillämpas och glöms bort. Se [Underhållsaktivitetsartikel](/help/operations/maintenance.md) om du vill ha mer information.

@@ -1,10 +1,10 @@
 ---
 title: Databasmodernisering
-description: Databasmodernisering
+description: Lär dig hur du strukturerar om befintliga projektpaket och gör dem kompatibla med den projektstruktur som har definierats för Adobe Experience Manager as a Cloud Service.
 exl-id: cd9d212e-e720-4209-8b5a-659883cc1d95
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
@@ -32,14 +32,14 @@ Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service
 
 >[!VIDEO](https://video.tv.adobe.com/v/333057/?quality=12&learn=on)
 
-* Med Adobe I/O CLI: Vi rekommenderar att du använder Repository Modernizer via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för CLI-programmet för Adobe I/O).
+* Som Adobe I/O CLI: Vi rekommenderar att du använder Repository Modernizer via `aio-cli-plugin-aem-cloud-service-migration` (AEM plugin-program för omfaktorisering av as a Cloud Service kod för CLI-programmet för Adobe I/O).
 
   Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** så att du kan lära dig hur du installerar och använder plugin-programmet.
 
-* Som fristående verktyg: Databasmoderniseraren kan också köras som ett fristående verktyg.
+* Som ett fristående verktyg: Databasmoderniseringen kan även köras som ett fristående verktyg.
 
-  Se **[Git-resurs: Databasmodernisering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)** så att du kan lära dig hur du använder det här verktyget.
+  Se **[Git-resurs: Databasmoderering](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/repository-modernizer)** så att du kan lära dig hur du använder verktyget.
 
   >[!NOTE]
   >
-  >Databasmoderniseringen utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.
+  >Databasmodernizer utvecklas med NodeJS. NodeJS 10.0+ bör vara installerat.

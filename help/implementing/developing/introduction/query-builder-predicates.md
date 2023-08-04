@@ -1,10 +1,10 @@
 ---
 title: Predikatreferens för Query Builder
-description: Predikatreferens för Query Builder API.
+description: Förutse referens för Query Builder API på AEM as a Cloud Service.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '2246'
+source-wordcount: '2252'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,20 @@ ht-degree: 0%
 
 ### root {#root}
 
-Rotpredikatgruppen. Den har stöd för alla funktioner i en grupp och tillåter inställning av globala frågeparametrar.
+Rotpredikatgruppen. Den stöder alla funktioner i en grupp och tillåter inställning av globala frågeparametrar.
 
-Namnet&quot;root&quot; används aldrig i en fråga; det är underförstått.
+Namnet&quot;root&quot; används aldrig i en fråga, utan är implicit.
 
 #### Egenskaper {#properties-18}
 
 * **`p.offset`** - ett tal som anger början på resultatsidan, det vill säga hur många objekt som ska hoppas över.
 * **`p.limit`** - ett tal som anger sidstorleken.
-* **`p.guessTotal`** - rekommenderas: undvika att beräkna det totala resultatet, vilket kan vara kostsamt. Antingen en siffra som anger den högsta summan som ska räknas upp till (till exempel 1000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat). Eller `true` för att räkna endast upp till det minsta nödvändiga `p.offset` + `p.limit`.
+* **`p.guessTotal`** - rekommenderas: undvik att beräkna det totala resultatet, vilket kan vara kostsamt. Antingen en siffra som anger den högsta summan som ska räknas upp till (till exempel 1000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat). Eller `true` för att räkna endast upp till det minsta nödvändiga `p.offset` + `p.limit`.
 * **`p.excerpt`** - om inställt på `true`, inkludera utdrag av fullständig text i resultatet.
 * **`p.hits`** - (endast för JSON-servleten) väljer du hur träffar skrivs som JSON, med dessa standardträffar (utbyggbara med hjälp av tjänsten ResultHitWriter).
    * **`simple`** - minimala objekt som `path`, `title`, `lastmodified`, `excerpt` (om angivet).
    * **`full`** - sling JSON rendering av noden, med `jcr:path` som anger träffens sökväg. Som standard listas bara nodens direkta egenskaper, inklusive ett djupare träd med `p.nodedepth=N`, med 0 betyder hela det oändliga underträdet. Lägg till `p.acls=true` för att inkludera JCR-behörigheterna för den aktuella sessionen för det angivna resultatobjektet (mappningar: `create` = `add_node`, `modify` = `set_property`, `delete` = `remove`).
-   * **`selective`** - endast egenskaper angivna i `p.properties`, som är ett blanksteg (använd `+` i URL:er) lista över relativa sökvägar. Om den relativa sökvägen har ett djup `>1`, representeras dessa egenskaper som underordnade objekt. Specialtecknet `jcr:path` -egenskapen innehåller träffens sökväg.
+   * **`selective`** - endast egenskaper som anges i `p.properties`, som är en blankstegsavgränsad (använd `+` i URL:er) lista över relativa sökvägar. Om den relativa sökvägen har ett djup `>1`, representeras dessa egenskaper som underordnade objekt. Specialtecknet `jcr:path` -egenskapen innehåller träffens sökväg.
 
 ### grupp {#group}
 
@@ -44,7 +44,7 @@ group.2_property=navTitle
 group.2_property.value=My Page
 ```
 
-Det är `(1_property` ELLER `2_property)`.
+Konceptuellt är det `(1_property` ELLER `2_property)`.
 
 Följande är ett exempel för kapslade grupper:
 
@@ -59,7 +59,7 @@ group.2_group.type=dam:Asset
 
 Söker efter termen **Förvaltning** på sidor i `/content/wknd/ch/de` eller i tillgångar i `/content/dam/wknd`.
 
-Det är `fulltext AND ( (path AND type) OR (path AND type) )`. Sådana OR-kopplingar behöver bra index av prestandaskäl.
+Konceptuellt är det `fulltext AND ( (path AND type) OR (path AND type) )`. Sådana OR-kopplingar behöver bra index av prestandaskäl.
 
 #### Egenskaper {#properties-6}
 
@@ -74,15 +74,15 @@ Med det här predikatet kan du sortera resultaten. Om det krävs en ordning efte
 
 #### Egenskaper {#properties-13}
 
-* **`orderby`** - antingen JCR-egenskapsnamnet som anges av radavståndet @, till exempel `@jcr:lastModified` eller `@jcr:content/jcr:title`eller ett annat predikat i frågan, till exempel `2_property`som sorteringen ska göras på
+* **`orderby`** - antingen JCR-egenskapsnamnet som anges av radavståndet @, till exempel `@jcr:lastModified` eller `@jcr:content/jcr:title`eller ett annat predikat i frågan, till exempel `2_property`, som sorteringen ska göras på
 * **`sort`** - sorteringsriktning, antingen `desc` för fallande eller `asc` för stigande (standard)
-* **`case`** - om inställt på `ignore`, vilket gör sorteringsskiftläget okänsligt, vilket betyder `a` kommer före `B`; om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder `B` kommer före `a`
+* **`case`** - om inställt på `ignore`, vilket gör sorteringsskiftläget okänsligt, vilket betyder `a` kommer före `B`Om den är tom eller utelämnad är sorteringen skiftlägeskänslig, vilket betyder `B` kommer före `a`
 
 ## Predikat {#predicates}
 
 ### boolproperty {#boolproperty}
 
-Det här predikatet matchar JCR-booleska egenskaper. Accepterar endast värdena `true` och `false`. Om värdet är `false`matchar det om egenskapen har värdet `false`eller om den inte finns alls. Det här predikatet är användbart för att kontrollera om det finns booleska flaggor som bara är inställda när de är aktiverade.
+Detta predikat matchar JCR-booleska egenskaper. Accepterar endast värdena `true` och `false`. Om värdet är `false`matchar det om egenskapen har värdet `false`eller om den inte finns alls. Det här predikatet är användbart för att kontrollera om det finns booleska flaggor som bara är inställda när de är aktiverade.
 
 Den ärvda `operation` parametern har ingen betydelse.
 
@@ -139,7 +139,7 @@ Det stöder inte filtrering.
 * **`upperOperation`** - `<` (äldre) eller `<=` (på eller tidigare) gäller för `upperBound`. Standardvärdet är `<`
 * **`timeZone`** - ID för den tidszon som ska användas när den inte anges som en ISO-8601-datumsträng. Standardvärdet är systemets standardtidszon.
 
-### exkluderingsdjup {#excludepaths}
+### exkluderingar {#excludepaths}
 
 Detta predikat utesluter noder från resultatet där deras sökväg matchar ett reguljärt uttryck.
 
@@ -188,7 +188,7 @@ Programmet har stöd för facetextrahering och innehåller hinkar för varje uni
 
 ### huvudtillgång {#mainasset}
 
-Detta predikat kontrollerar om en nod är en DAM-huvudresurs och inte en underresurs. Det är i stort sett alla noder som inte finns i en underresursnod. Den söker inte efter `dam:Asset` nodtyp. Om du vill använda det här predikatet anger du `mainasset=true` eller `mainasset=false`. Det finns inga fler egenskaper.
+Detta predikat kontrollerar om en nod är en DAM-huvudresurs och inte en underresurs. Det är i stort sett alla noder som inte finns i en underresursnod. Den söker inte efter `dam:Asset` nodtyp. Om du vill använda predikatet anger du `mainasset=true` eller `mainasset=false`. Det finns inga fler egenskaper.
 
 Ett predikat som bara kan filtreras och som inte kan använda ett sökindex.
 
@@ -245,10 +245,10 @@ Det stöder inte facetextrahering.
    * Beroende på `exact` egenskapen, antingen matchar hela underträdet (som att lägga till `//*` i xpath, men observera att den inte innehåller basbanan), eller så matchar bara en exakt bana, som kan innehålla jokertecken (`*`).
       * Standardvärdet är `true`.
 &lt;!— * Om `self`egenskapen är inställd söks hela underträdet inklusive basnoden igenom.—>
-* **`exact`** - if `exact` är `true`måste den exakta sökvägen matcha, men den kan innehålla enkla jokertecken (`*`), som matchar namn, men inte `/`; om det `false` (standard) alla underordnade tas med (valfritt).
+* **`exact`** - if `exact` är `true`måste den exakta sökvägen matcha, men den kan innehålla enkla jokertecken (`*`), som matchar namn, men inte `/`; om den är `false` (standard) alla underordnade tas med (valfritt).
 * **`flat`** - söker endast efter direkt underordnade (som att lägga till `/*` in xpath) (används endast om `exact` är inte true (valfritt).
 * **`self`** - söker i underträdet men inkluderar basnoden som angetts som sökväg (inga jokertecken).
-   * *Viktigt*: Ett problem har identifierats med `self` -egenskapen i den aktuella implementeringen av frågebyggaren och att använda den i frågor kanske inte ger rätt sökresultat. Ändra den aktuella implementeringen av `self` egenskapen är inte heller möjlig eftersom den kan bryta mot befintliga program som förlitar sig på den. På grund av denna funktionalitet `self` Egenskapen är nu föråldrad. det rekommenderas att undvika att använda den.
+   * *Viktigt*: Ett problem har identifierats med `self` -egenskapen i den aktuella implementeringen av frågebyggaren och att använda den i frågor kanske inte ger rätt sökresultat. Ändra den aktuella implementeringen av `self` egenskapen är inte heller möjlig eftersom den kan bryta mot befintliga program som förlitar sig på den. På grund av denna funktionalitet `self` egenskapen är nu föråldrad. Du bör undvika att använda den.
 
 ### property {#property}
 
@@ -259,8 +259,8 @@ Det har stöd för facetextrahering och innehåller bucket för varje unikt egen
 #### Egenskaper {#properties-15}
 
 * **`property`** - relativ sökväg till egenskap, till exempel `jcr:title`.
-* **`value`** - värde för att kontrollera egenskapen; följer JCR-egenskapstypen för strängkonverteringar.
-* **`N_value`** - användning `1_value`, `2_value`, ... för att kontrollera om det finns flera värden (i kombination med `OR` som standard, med `AND` if `and=true`).
+* **`value`** - värde att kontrollera egenskap för; följer JCR-egenskapstypen till strängkonverteringar.
+* **`N_value`** - användning `1_value`, `2_value`, ... för att kontrollera om det finns flera värden (i kombination med `OR` som standard med `AND` if `and=true`).
 * **`and`** - ställs in på `true` för att kombinera flera värden (`N_value`) med `AND`
 * **`operation`**
    * `equals` för exakt matchning (standard).
@@ -272,7 +272,7 @@ Det har stöd för facetextrahering och innehåller bucket för varje unikt egen
       * `false` är samma som `not` och är standard.
 * **`depth`** - antalet jokernivåer under vilka egenskapen/den relativa sökvägen kan finnas (till exempel `property=size depth=2` kontroller `node/size`, `node/*/size`och `node/*/*/size`).
 
-### rangegenskap {#rangeproperty}
+### rangeProperty {#rangeproperty}
 
 Detta predikat matchar en JCR-egenskap mot ett intervall. Det gäller egenskaper med linjära typer som `LONG`, `DOUBLE`och `DECIMAL`. För `DATE`, se [`daterange`](#daterange) som har optimerade indata för datumformat.
 
@@ -309,8 +309,8 @@ Det stöder extrahering av ansikten på samma sätt som [`daterange`](#daterange
 
 #### Egenskaper {#properties-17}
 
-* **`upperBound`** - övre gräns för datum i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd `-` för negativ förskjutning
-* **`lowerBound`** - undre gräns för datum i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd `-` för negativ förskjutning
+* **`upperBound`** - övre gräns för datum i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd `-` för negativ offset
+* **`lowerBound`** - undre gräns för datum i millisekunder eller `1s 2m 3h 4d 5w 6M 7y` (en sekund, två minuter, tre timmar, fyra dagar, fem veckor, sex månader, sju år) i förhållande till aktuell servertid, använd `-` för negativ offset
 
 ### sparad fråga {#savedquery}
 
@@ -346,7 +346,7 @@ Det har stöd för facet-extrahering och tillhandahåller bucket för varje unik
 #### Egenskaper {#properties-21}
 
 * **`tag`** - taggens titelsökväg att söka efter, till exempel `properties:orientation/landscape`
-* **`N_value`** - användning `1_value`, `2_value`, ... att söka efter flera taggar (i kombination med `OR` som standard, med `AND` if `and=true`)
+* **`N_value`** - användning `1_value`, `2_value`, ... för att kontrollera om det finns flera taggar (i kombination med `OR` som standard med `AND` if `and=true`)
 * **`property`** - egenskap (eller relativ sökväg till egenskap) att titta på (standard) `cq:tags`)
 
 ### tagid {#tagid}
@@ -358,7 +358,7 @@ Det har stöd för facet-extrahering och tillhandahåller bucket för varje unik
 #### Egenskaper {#properties-22}
 
 * **`tagid`** - tagg-ID att söka efter, till exempel `properties:orientation/landscape`
-* **`N_value`** - användning `1_value`, `2_value`, ... att söka efter flera tagg-ID:n (i kombination med `OR` som standard, med `AND` if `and=true`)
+* **`N_value`** - användning `1_value`, `2_value`, ... för att kontrollera om det finns flera tagg-ID:n (i kombination med `OR` som standard med `AND` if `and=true`)
 * **`property`** - egenskap (eller relativ sökväg till egenskap) att titta på (standard) `cq:tags`)
 
 ### tagsearch {#tagsearch}

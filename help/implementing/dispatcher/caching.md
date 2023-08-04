@@ -1,11 +1,11 @@
 ---
 title: Cache i AEM as a Cloud Service
-description: Cache i AEM as a Cloud Service
+description: Lär dig grunderna i cachning på AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
 workflow-type: tm+mt
-source-wordcount: '2795'
+source-wordcount: '2800'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Regler kan tillämpas på Dispatcher-konfigurationen för att ändra standardins
 
 Den här sidan beskriver också hur Dispatcher-cachen ogiltigförklaras och hur cachning fungerar på webbläsarnivå för klientbibliotek.
 
-## Cachelagring {#caching}
+## Cachning {#caching}
 
 ### HTML/text {#html-text}
 
@@ -42,7 +42,7 @@ Den här metoden är till exempel användbar när din affärslogik kräver finju
   ```
 
   >[!NOTE]
-  >Rubriken Surrogate-Control gäller för CDN som hanteras av Adobe. Om du använder en [kundhanterad CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=en#point-to-point-CDN), kan det krävas en annan rubrik beroende på din CDN-leverantör.
+  >Rubriken Surrogate-Control gäller för CDN som hanteras av Adobe. Om du använder [kundhanterad CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=en#point-to-point-CDN), kan det krävas en annan rubrik beroende på din CDN-leverantör.
 
   Var försiktig när du anger rubriker för global cachekontroll eller liknande cacherubriker som matchar ett brett register så att de inte tillämpas på innehåll som du måste behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM as a Cloud Service tar därför bort cachehuvudet om det upptäcker att det har tillämpats på det som Dispatcher identifierar som otillgängligt, vilket beskrivs i Dispatcher-dokumentationen. Om du vill tvinga AEM att alltid använda cachelagringshuvuden kan du lägga till **`always`** enligt följande:
 
@@ -98,7 +98,7 @@ I båda fallen kan cachelagringshuvuden åsidosättas på en mer detaljerad niv�
    </LocationMatch>
 ```
 
-Var försiktig så att du inte cachelagrar för mycket när du ändrar cachelagringshuvuden i Dispatcher-lagret. Läs mer i avsnittet HTML/text [ovan](#html-text). Se även till att resurser som ska hållas privata (i stället för cachelagrade) inte ingår i `LocationMatch` -filter.
+Var försiktig så att du inte cachelagrar för mycket när du ändrar cache-huvudena i Dispatcher-lagret. Läs mer i avsnittet HTML/text [ovan](#html-text). Se även till att resurser som ska hållas privata (i stället för cachelagrade) inte ingår i `LocationMatch` -filter.
 
 #### Nytt standardbeteende för cachelagring {#new-caching-behavior}
 
@@ -114,12 +114,12 @@ AEM anger cacherubriker beroende på om cachehuvudet redan har angetts och värd
 
 #### Äldre standardbeteende för cachelagring {#old-caching-behavior}
 
-Det AEM lagret cache-lagrar inte blobinnehåll som standard.
+Det AEM lagret cache-lagrar inte blobbinnehåll som standard.
 
 >[!NOTE]
 >Ändra det äldre standardbeteendet så att det överensstämmer med det nya beteendet (program-ID som är högre än 65000) genom att ange Cloud Manager-miljövariabeln AEM_BLOB_ENABLE_CACHING_HEADERS till true. Om programmet redan är öppet kontrollerar du att innehållet fungerar som du tänkt dig efter ändringarna.
 
-Nu kan bilder i bloblagring som markerats som privata inte cachas av Dispatcher med [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html). Bilden efterfrågas alltid från AEM ursprung och hanteras om användaren är behörig.
+Nu kan inte bilder i bloblagring som markerats som privata cachelagras hos Dispatcher med [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html). Bilden efterfrågas alltid från AEM ursprung och hanteras om användaren är behörig.
 
 >[!NOTE]
 >Andra metoder, inklusive [AEM ACS Commons-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/)åsidosätter inte värdena.
@@ -132,11 +132,11 @@ Nu kan bilder i bloblagring som markerats som privata inte cachas av Dispatcher 
 
 ### Ytterligare optimeringar {#further-optimizations}
 
-* Undvik att använda `User-Agent` som en del av `Vary` header. Äldre versioner av standardinställningen Dispatcher (före arkivtypsversion 28) innehöll den och Adobe rekommenderar att du tar bort den genom att följa stegen nedan.
-   * Hitta värdfilerna i `<Project Root>/dispatcher/src/conf.d/available_vhosts/*.vhost`
+* Undvik användning `User-Agent` som en del av `Vary` header. Äldre versioner av standardinställningen Dispatcher (före arkivtypsversion 28) innehöll den och Adobe rekommenderar att du tar bort den genom att följa stegen nedan.
+   * Leta reda på värdfilerna i `<Project Root>/dispatcher/src/conf.d/available_vhosts/*.vhost`
    * Ta bort eller kommentera raden: `Header append Vary User-Agent env=!dont-vary` från alla värdfiler, förutom default.vhost, som är skrivskyddad
 * Använd `Surrogate-Control` huvud för att styra CDN-cachning oberoende av webbläsarcachning
-* Överväg att tillämpa [`stale-while-revalidate`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-while-revalidate) och [`stale-if-error`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-if-error) Direktiv som tillåter bakgrundsuppdatering och undviker cachemissar, så att innehållet är snabbt och uppdaterat för användarna.
+* Använd inte [`stale-while-revalidate`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-while-revalidate) och [`stale-if-error`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#stale-if-error) Direktiv som tillåter bakgrundsuppdatering och undviker cachemissar, så att innehållet är snabbt och uppdaterat för användarna.
    * Det finns många sätt att tillämpa dessa direktiv, men att lägga till en 30-minutersperiod `stale-while-revalidate` till alla rubriker för cachekontroll är en bra utgångspunkt.
 * Några exempel följer för olika innehållstyper, som kan användas som vägledning när du ställer in egna cachningsregler. Fundera noggrant på och testa dina specifika inställningar och krav:
 
@@ -197,7 +197,7 @@ Nu kan bilder i bloblagring som markerats som privata inte cachas av Dispatcher 
      </LocationMatch>
      ```
 
-### HEAD beteende {#request-behavior}
+### HEAD beteende vid begäran {#request-behavior}
 
 När en begäran från HEAD tas emot i CDN i Adobe för en resurs som är **not** begäran konverteras och tas emot av Dispatcher- och/eller AEM-instansen som en GET-begäran. Om svaret är tillgängligt kan efterföljande förfrågningar från HEAD besvaras av CDN. Om svaret inte är tillgängligt skickas efterföljande HEAD-begäranden till Dispatcher-instansen, eller AEM-instansen, under en tid som är beroende av `Cache-Control` TTL.
 
@@ -220,7 +220,7 @@ I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i ställe
 
 ### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
 
-Precis som i tidigare versioner av AEM rensas innehållet från Dispatcher-cachen när du publicerar eller avpublicerar sidor. Om ett problem med cachelagring misstänks bör du publicera om sidorna och se till att det finns ett virtuellt värdsystem som matchar `ServerAlias` localhost, vilket krävs för invalidering av Dispatcher-cache.
+Precis som i tidigare versioner av AEM rensas innehållet från Dispatcher-cachen när du publicerar eller avpublicerar sidor. Om ett cachningsproblem misstänks bör du publicera om sidorna och se till att det finns ett virtuellt värdsystem som matchar `ServerAlias` localhost, vilket krävs för invalidering av Dispatcher-cache.
 
 >[!NOTE]
 >För att Dispatcher ska bli ogiltig måste du se till att alla förfrågningar från&quot;127.0.0.1&quot;,&quot;localhost&quot;,&quot;.local&quot;,&quot;.adobeaemcloud.com&quot; och&quot;.adobeaemcloud.net&quot; matchas och hanteras av en värdkonfiguration så att begäran kan hanteras. Du kan göra detta genom att globalt matcha &quot;*&quot; i en konfiguration som fångar upp alla värden enligt mönstret i referensen [AEM](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.d/available_vhosts/default.vhost). Du kan också se till att den tidigare nämnda listan fångas av någon av värdarna.
@@ -305,7 +305,7 @@ Metoderna skiljer sig åt när det gäller tillgång till nivån, möjlighet att
        <li>Publicerar innehåll och gör cachen ogiltig.</li>
        <li>Från författar-/publiceringsnivå - Tar bort innehåll och gör cachen ogiltig.</li>
        <li><p><strong>Från författarnivå</strong> - Tar bort innehåll och gör cachen ogiltig (om den aktiveras från AEM Author-nivån i Publish Agent).</p>
-           <p><strong>Från publiceringsnivå</strong> - Gör endast cacheminnet (om det aktiveras från AEM-publiceringsnivån på agenten för tömning eller tömning endast av resurser) ogiltigt.</p>
+           <p><strong>Från publiceringsnivå</strong> - Gör endast cacheminnet (om det aktiveras från AEM-publiceringsnivån på agenten för tömning eller tömning endast för resurser) ogiltigt.</p>
        </li>
      </ol>
      </td>
@@ -321,14 +321,14 @@ I tabellen kan du även se följande:
 
 * Det är inte vanligt att använda replikerings-API:t, men det kan användas om utlösaren för att göra cachen ogiltig kommer från publiceringsskiktet och inte från författarskiktet. Den här metoden kan vara användbar om Dispatcher TTL har konfigurerats.
 
-Sammanfattningsvis, om du vill göra Dispatcher-cachen ogiltig, rekommenderar vi att du använder SCD API-åtgärden Ovalidate från Författare. Du kan också lyssna efter händelsen så att du sedan kan utlösa ytterligare åtgärder längre fram i kedjan.
+Sammanfattningsvis, om du vill göra Dispatcher-cachen ogiltig, rekommenderar vi att du använder SCD API-åtgärden Ovalidate från Författare. Du kan också lyssna efter händelsen så att du sedan kan utlösa ytterligare åtgärder längre fram.
 
 ### Sling Content Distribution (SCD) {#sling-distribution}
 
 >[!NOTE]
 >När du använder instruktionerna nedan testar du den anpassade koden i en AEM Cloud Service Dev-miljö och inte lokalt.
 
-När du använder SCD-åtgärden från författaren är implementeringsmönstret följande:
+När du använder SCD-åtgärden från författaren ser implementeringsmönstret ut så här:
 
 1. Skriv egen kod från författaren för att anropa distributionen av försäljningsinnehåll [API](https://sling.apache.org/documentation/bundles/content-distribution.html), skickar åtgärden invalidate med en lista över sökvägar:
 
@@ -411,7 +411,7 @@ Nedan visas implementeringsmönstret när åtgärden för inaktivering av replik
 
 1. Anropa replikerings-API:t på publiceringsnivån för att utlösa replikeringsagenten för rensning av publiceringsdispatcher.
 
-Slutpunkten för rensningsagenten kan inte konfigureras utan är i stället förkonfigurerad till att peka på Dispatcher, som matchas med publiceringstjänsten som körs tillsammans med tömningsagenten.
+Slutpunkten för rensningsagenten kan inte konfigureras utan är i stället förkonfigurerad så att den pekar på Dispatcher, matchad med publiceringstjänsten som körs tillsammans med tömningsagenten.
 
 Flush-agenten kan oftast aktiveras av anpassad kod som baseras på OSGi-händelser eller arbetsflöden.
 
@@ -454,13 +454,13 @@ The Adobe-managed CDN respects TTLs and thus there is no need fo it to be flushe
 
 ## Bibliotek på klientsidan och versionskonsekvens {#content-consistency}
 
-Sidorna består av HTML, JavaScript, CSS och bilder. Vi rekommenderar [Klientbibliotek (clientlibs) - ramverk](/help/implementing/developing/introduction/clientlibs.md) om du vill importera JavaScript- och CSS-resurser till HTML-sidor, med hänsyn till beroenden mellan JS-bibliotek.
+Sidorna består av HTML, JavaScript, CSS och bilder. Vi rekommenderar [Klientbibliotek (clientlibs) ramverk](/help/implementing/developing/introduction/clientlibs.md) om du vill importera JavaScript- och CSS-resurser till HTML-sidor, med hänsyn till beroenden mellan JS-bibliotek.
 
 Med clientlibs Framework får du automatisk versionshantering. Det innebär att utvecklare kan checka in ändringar i JS-bibliotek i källkontrollen och att den senaste versionen blir tillgänglig när kunden publicerar sin release. Utan det här arbetsflödet måste utvecklare ändra HTML manuellt med referenser till den nya versionen av biblioteket, vilket är särskilt betungande om samma bibliotek delar många HTML-mallar.
 
 När de nya versionerna av biblioteken släpps i produktion uppdateras de refererande HTML-sidorna med nya länkar till de uppdaterade biblioteksversionerna. När webbläsarcachen har upphört att gälla för en viss HTML-sida behöver du inte bekymra dig om att de gamla biblioteken läses in från webbläsarens cacheminne. Orsaken är att den uppdaterade sidan (från AEM) nu garanterat refererar till de nya versionerna av biblioteken. Det vill säga att en uppdaterad HTML-sida innehåller alla de senaste biblioteksversionerna.
 
-Mekanismen bakom den här funktionen är en serialiserad hash som läggs till i klientbibliotekslänken. Den ser till att webbläsaren har en unik versionsadress för att cachelagra CSS/JS. Den serialiserade hashen uppdateras bara när innehållet i klientbiblioteket ändras. Det innebär att om det inte sker några ändringar (det vill säga om klientbibliotekets underliggande css/js ändras) även om det finns en ny distribution, förblir referensen densamma. Det säkerställer i sin tur färre avbrott i webbläsarens cacheminne.
+Mekanismen bakom den här funktionen är en serialiserad hash som läggs till i klientbibliotekslänken. Den ser till att webbläsaren har en unik versionsadress för att cachelagra CSS/JS. Den serialiserade hashen uppdateras bara när innehållet i klientbiblioteket ändras. Det innebär att om det inte sker några ändringar (det vill säga om klientbibliotekets underliggande css/js ändras) även om det finns en ny distribution, förblir referensen densamma. Det säkerställer i sin tur färre avbrott i webbläsarens cache.
 
 ### Aktivera Longcache-versioner av klientbibliotek - AEM as a Cloud Service SDK QuickStart {#enabling-longcache}
 
