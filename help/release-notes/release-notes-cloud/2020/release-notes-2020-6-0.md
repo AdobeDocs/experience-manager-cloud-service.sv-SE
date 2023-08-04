@@ -1,10 +1,10 @@
 ---
 title: Versionsinformation om Adobe Experience Manager as a Cloud Service 2020.6.0
-description: Versionsinformation om Experience Manager för 2020.6.0
+description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.6.0."
 exl-id: fd6ebe2b-6d98-498c-a45d-b9a9c34e6be7
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 9ceec0401b91bba2408bda89d4f2c486e2d51eec
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1909'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ På den här sidan finns en översikt över den allmänna versionsinformationen 
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Experience Manager] as a Cloud Service 2020.6.0 är 4 juni 2020.
+Utgivningsdatum för [!DNL Experience Manager] as a Cloud Service 2020.6.0 är 4 juni 2020.
 
 ## Nyheter i AEM Sites {#aem-sites}
 
@@ -70,7 +70,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Tips på **Programöversikt** för att informera och instruera användaren om grundläggande navigering i Cloud Manager för att komma igång.
 
-* A **LÄR DIG** sidan är nu tillgänglig i Cloud Manager via den övre navigeringen. Den här sidan innehåller resurser som hjälper användare att lära sig mer om de mest använda arbetsflödena som är relevanta för deras roller i Cloud Manager.
+* A **LÄR DIG** sidan är nu tillgänglig i Cloud Manager via den övre navigeringen. Den här sidan innehåller resurser som hjälper användare att lära sig mer om de mest använda arbetsflödena som är relevanta för deras roller som tilldelats i Cloud Manager.
 
 * Sandlådeprogram identifieras nu med en **Sandbox** emblem som visas på programkortet på landningssidan och bredvid programnamnet i **Programöversikt** sida.
 
@@ -80,17 +80,17 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * En användare i rollen SysAdmin har nu tillgång till författarinstansen med ett klick direkt från Cloud Manager.
 
-  Se [Hantera åtkomst till författarinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem) för mer information.
+  Se [Hantera åtkomst till författarinstansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem) för mer information.
 
 * Build-loggen innehåller nu en lista över identifierade artefakter, inklusive överhoppade innehållspaket.
 
 * I steget Skapa valideras nu att alla genererade innehållspaket innehåller alla obligatoriska egenskaper - namn, grupp och version.
 
-* Bygget verifierar nu att bygget producerade minst ett innehållspaket.
+* Bygg-steget verifierar nu att bygget producerade minst ett innehållspaket.
 
 ### Felkorrigeringar {#bug-fixes-cm}
 
-* I vissa situationer visas ikonerna i **Skapa program** Dialogrutan var feljusterad.
+* I vissa situationer visas ikonerna i **Skapa program** dialogrutan var feljusterad.
 
 * Den AEM releaseidentifieraren visades inte konsekvent på **Programöversikt** sida.
 
@@ -113,7 +113,7 @@ Utbilda förbättrade smarta taggar för mer intuitiv utbildning i Smarta taggar
 
 **Stöd för konsumtion, förgranskning och leverans av 3D-material**
 
-Organisationer kan nu lagra och använda 3D-filer i AEM Assets. Användaren kan ladda upp, förhandsgranska och använda olika centrala 3D-filer, inklusive OBJ-, STL-, GLTF- och GLB-filer. Med tillägget [!DNL Dynamic Media]kan du konfigurera och leverera 3D-upplevelser med hjälp av agnostiska URL:er eller visningsprogram. Detta inkluderar [!DNL Dynamic Media] 3D Experience Viewer, Sites 3D Viewer-komponent och möjlighet att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR). Se [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
+Organisationer kan nu lagra och använda 3D-filer i AEM Assets. Användaren kan ladda upp, förhandsgranska och använda olika centrala 3D-filer, inklusive OBJ-, STL-, GLTF- och GLB-filer. Med tillägget [!DNL Dynamic Media]kan du konfigurera och leverera 3D-upplevelser med hjälp av agnostiska URL:er eller visningsprogram. Detta inkluderar en [!DNL Dynamic Media] 3D Experience Viewer, Sites 3D Viewer-komponent och möjlighet att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR). Se [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
 
 **Stöd för Adobe Asset Link för Adobe XD**
 
@@ -121,7 +121,7 @@ Med den senaste versionen [!DNL Experience Manager Assets] har stöd för en ny 
 
 I den här versionen kan kreativa användare och designers nu arbeta med resurser som hanteras i [!DNL AEM Assets] använda [!DNL Adobe Asset Link] i en rad datorprogram från Creative Cloud, inklusive [!DNL Adobe XD], [!DNL Photoshop], [!DNL Illustrator]och [!DNL InDesign].
 
-**Förbättrad tillgänglighet**
+**Förbättringar av hjälpmedel**
 
 [!DNL Adobe Experience Manager Assets] är nu mer tillgängligt i enlighet med riktlinjerna för tillgängligt webbinnehåll (WCAG) v2.1. Tillgängligheten har förbättrats för följande användningsområden eller gränssnitt:
 
@@ -176,7 +176,7 @@ Versionen innehåller följande andra förbättringar:
 * Möjlighet att bearbeta om resurser med tillgångsbearbetningsprofiler, ge användarna full kontroll över processen (kör full bearbetning av resurser, bara tillämpa en viss bearbetningsprofil och bestämma om arbetsflödet ska köras efter bearbetning).
 * Sökfrågor returnerar resultat snabbare nu när den underliggande klusterinstansen har startats om bakom scenerna (den inledande sökningen kan ta längre tid i ett sådant fall tidigare).
 * Sortera efter Namn när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten. Se [sökresurser](/help/assets/search-assets.md#sort).
-* Sortera efter Skapat (Datum) när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten. Se [sökresurser](/help/assets/search-assets.md#sort).
+* Sortera efter&quot;Skapat&quot; (Datum) när du visar resurser i listvyn i Assets-gränssnittet och i sökresultaten. Se [sökresurser](/help/assets/search-assets.md#sort).
 * Stöd för konvertering av EPS-filer till bilder med hjälp av objektmikrotjänster.
 
 ### Felkorrigeringar {#assets-bug-fixes}
@@ -185,7 +185,7 @@ Förutom de nya funktionerna ovan innehåller den aktuella versionen följande f
 
 * För MP3-musikfiler fungerar inte den uppspelningsknapp som visas på miniatyrbilden i DAM-förhandsvisningen. (CQ-4294731)
 * Pekaren placeras på kortvyn och skärmen rullas som ett resultat av (automatisk) fokus på de snabbåtgärder som är tillgängliga på kortet. (GRANITE-26895)
-* För många bilder visas när du har bläddrat igenom många sökresultat vilket gör att webbläsaren kraschar. (GRANITE-26432)
+* För många bilder visas när du har bläddrat igenom många sökresultat, vilket leder till att webbläsaren kraschar. (GRANITE-26432)
 * När du hämtar en resurs är inte nedladdningsalternativet tillgängligt om du har valt e-postalternativ och även om du har angett ett giltigt e-post-ID. (CQ-4296535)
 * Anpassade filter som sparats som smarta samlingar används inte korrekt på resurser. (CQ-4294942)
 * Flera förbättringar av sökning och indexering samt felkorrigeringar för att förbättra prestandan. (CQ-4286373)

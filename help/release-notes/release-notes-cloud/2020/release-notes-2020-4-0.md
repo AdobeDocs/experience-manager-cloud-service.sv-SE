@@ -1,10 +1,10 @@
 ---
 title: Versionsinformation om Adobe Experience Manager as a Cloud Service 2020.4.0
-description: Versionsinformation om Experience Manager för 2020.4.0
+description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.4.0."
 exl-id: d98a3862-76fa-4b5b-b81a-333f5f532b67
-source-git-commit: 4be76f19c27aeab84de388106a440434a99a738c
+source-git-commit: 9ceec0401b91bba2408bda89d4f2c486e2d51eec
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ På den här sidan finns en beskrivning av den allmänna versionsinformationen f
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Experience Manager] as a Cloud Service 2020.4.0 är 9 april 2020.
+Utgivningsdatum för [!DNL Experience Manager] as a Cloud Service 2020.4.0 är 9 april 2020.
 
 ## Nyheter i Assets {#assets}
 
-Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experience Manager Assets] och [!DNL Dynamic Media] i den aktuella versionen.
+Läs om nya funktioner, förbättringar och felkorrigeringar för [!DNL Experience Manager Assets] och [!DNL Dynamic Media] i den aktuella versionen.
 
 * [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) stöder användningsexemplen för resursdistribution för Experience Manager Assets. [!DNL Brand Portal] hjälper organisationer att tillgodose sina marknadsföringsbehov genom att på ett säkert sätt distribuera godkänt varumärke och produktmaterial till externa byråer, partners, interna team och återförsäljare för nedladdning.
    * [!DNL Brand Portal] konfigurationen slutförs via [!DNL Adobe I/O] konsol. Se [konfigurera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html).
@@ -27,18 +27,18 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 
 * [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) v2.0 fungerar med [!DNL Experience Manager] as a Cloud Service. [!DNL Adobe Asset Link] effektiviserar samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll genom att koppla samman [!DNL Experience Manager Assets] med [!DNL Creative Cloud] datorprogram [!DNL Adobe Photoshop], [!DNL Adobe Illustrator]och [!DNL Adobe InDesign] via appen [!DNL Asset Link] -panelen.
    * [!DNL Experience Manager] är förkonfigurerad för [!DNL Adobe Asset Link], vilket resulterar i [enkel konfiguration](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html) och snabbare nå ut till kreatörer.
-   * [!DNL Asset Link] har nu stöd för [Experience Manager-miljöväljare](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) som gör att kreativa användare enkelt kan ansluta till en annan [!DNL Experience Manager] miljö. Ett exempel där den här funktionen är användbar är för designers som arbetar med flera kunder med olika [!DNL Experience Manager Assets] distributioner.
+   * [!DNL Asset Link] har nu stöd för [Experience Manager-miljöväljare](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) som gör det möjligt för kreativa användare att enkelt ansluta till en annan [!DNL Experience Manager] miljö. Ett exempel där den här funktionen är användbar är för designers som arbetar med flera kunder med olika [!DNL Experience Manager Assets] distributioner.
 
 * Användare kan konfigurera [efterbehandlingsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) till autostart i mappen [!UICONTROL Properties] användargränssnitt för de specifika mapphierarkierna.
    * Mappen [!UICONTROL Properties] användargränssnittet har förenklats med nya [!UICONTROL Asset Processing] som innehåller metadataprofil, bearbetningsprofil och den nya arbetsflödeskonfigurationen för autostart.
 
-      ![Bearbetningsprofiler kan enkelt tillämpas på mappar och allt material som överförs till mappar bearbetas med dessa profiler](/help/assets/assets/asset-processing-folder-properties.png)
+     ![Bearbetningsprofiler kan enkelt tillämpas på mappar och allt material som överförs till mappar bearbetas med dessa profiler](/help/assets/assets/asset-processing-folder-properties.png)
 
    * Med alternativet Återbearbetning av resurser kan du välja en specifik bearbetningsprofil för att bearbeta om användarvalda resurser i undermappar.
 
-      ![Bearbeta markerade resurser med en viss bearbetningsprofil](/help/assets/assets/fpo-existing-asset-reprocess.gif)
+     ![Bearbeta markerade resurser med en viss bearbetningsprofil](/help/assets/assets/fpo-existing-asset-reprocess.gif)
 
-   * [!DNL Dynamic Media]: Lagt till selektiv publiceringskonfiguration så att resurser automatiskt publiceras endast för säker förhandsvisning. Dessutom kan resurserna publiceras explicit på Experience Manager utan att publiceras till DMS7 för att levereras offentligt.
+   * [!DNL Dynamic Media]: Lagt till selektiv publiceringskonfiguration så att resurserna automatiskt publiceras för säker förhandsvisning. Dessutom kan resurserna publiceras explicit på Experience Manager utan att publiceras till DMS7 för att levereras offentligt.
 
 ### Felkorrigeringar {#assets-bug-fixes}
 
@@ -51,7 +51,6 @@ Lär dig mer om nya funktioner, förbättringar och felkorrigeringar för [!DNL 
 >* [Konfigurera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/configure-aem-assets-with-brand-portal.html)
 >* [Konfigurera Experience Manager för att arbeta med resurslänk](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html)
 >* [Skapa arbetsflöde i Experience Manager med hjälp av objektmikrotjänster](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows)
-
 
 ## Nyheter i Cloud Manager {#whats-new-cloud-manager}
 
