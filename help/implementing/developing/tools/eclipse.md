@@ -1,10 +1,10 @@
 ---
 title: AEM Developer Tools for Eclipse
-description: AEM Developer Tools for Eclipse
+description: Lär dig hur du använder AEM Developer Tools för Eclipse, ett Eclipse-plugin-program baserat på Eclipse-pluginprogrammet för Apache Sling.
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a1a92f8767186ba9e93b6b30870ecfa9f3b3bc28
 workflow-type: tm+mt
-source-wordcount: '1183'
+source-wordcount: '1199'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Den har flera funktioner som gör AEM enklare:
 * Smidig integrering med AEM instanser via Eclipse Server Connector
 * Synkronisering för både innehåll och OSGi-paket
 * Felsökningsstöd med möjlighet att byta kod under drift
-* Enkelt Bootstrap i AEM projekt med hjälp av en särskild guide för att skapa projekt
+* Enkelt Bootstrap i AEM projekt med hjälp av en särskild projektguide
 * Enkel redigering av JCR-egenskaper
 
 ## Krav {#requirements}
@@ -40,7 +40,7 @@ Innan du använder AEM Developer Tools måste du:
 
 När du har uppfyllt [krav](#requirements) ovan kan du installera plugin-programmet på följande sätt:
 
-1. Öppna [AEM Developer Tools Web Site](https://eclipse.adobe.com/com.adobe.granite.ide.p2update-1.3.0.zip). <!-- RB: OLD URL was (https://eclipse.adobe.com/aem/dev-tools/) This URL is generating a 404 error in the experience-manager-cloud-service.en LinkCheckExl report . The website appears to be dead; no redirects at all. Clicking "Installation Link" does not do anything. Only the link "Download archive" works. The "Online Documentation" link just takes you to the AEM Docs home page. Not sure if this topic is still needed?? -->
+1. Öppna [AEM för utvecklingsverktyg](https://eclipse.adobe.com/com.adobe.granite.ide.p2update-1.3.0.zip). <!-- RB: OLD URL was (https://eclipse.adobe.com/aem/dev-tools/) This URL is generating a 404 error in the experience-manager-cloud-service.en LinkCheckExl report . The website appears to be dead; no redirects at all. Clicking "Installation Link" does not do anything. Only the link "Download archive" works. The "Online Documentation" link just takes you to the AEM Docs home page. Not sure if this topic is still needed?? -->
 
 1. Kopiera **Installationslänk**.
 
@@ -52,7 +52,7 @@ När du har uppfyllt [krav](#requirements) ovan kan du installera plugin-program
 1. I **Namn** fält, ange `AEM Developer Tools`.
 1. I **Plats** kopierar du installations-URL:en.
 1. Klicka **Lägg till**.
-1. Markera båda **AEM** och **Sling** plugin-program.
+1. Markera båda **AEM** och **Sling** plugins.
 1. Klicka på **Nästa**.
 1. I **Installationsinformation** fönster, klicka **Nästa** igen.
 1. Godkänn licensavtalen och klicka på **Slutför**.
@@ -75,9 +75,9 @@ The _Experience Manager Developer Tools for Eclipse_ innehåller ett exempel på
 
 Så här skapar du exempelprojektet:
 
-1. I **Fil** > **Nytt** > **Projekt** -menyn, bläddra till **AEM** avsnitt och markera **Exempel på AEM projekt med flera moduler**.
+1. I **Fil** > **Nytt** > **Projekt** -menyn, bläddra till **AEM** avsnitt och markera **Exempel på AEM-projekt med flera moduler**.
 
-   ![Exempel på AEM projekt med flera moduler](assets/aem-sample-project.png)
+   ![Exempel på AEM-projekt med flera moduler](assets/aem-sample-project.png)
 
 1. Klicka på **Nästa**.
 
@@ -134,14 +134,14 @@ Du kan använda **Nytt projekt** för att skapa rätt struktur för dig:
    1. I projektutforskarpanelen, visa `PROJECT.ui.apps` > `src` > `main` > `content` > `jcr_root` > `apps`.
    1. Högerklicka på `apps` mapp och välj **Visa i** > **Systemutforskaren**.
    1. Ta bort `apps` och `etc` mappar som du nu ska visa och placera här `apps` och `etc` mappar med ditt innehållspaket.
-   1. I Eclipse högerklickar du på `PROJECT.ui.apps` projekt och välj **Uppdatera**.
+   1. Högerklicka på `PROJECT.ui.apps` projekt och välj **Uppdatera**.
 
 1. Gör sedan samma sak med `PROJECT.ui.content` och ersätta innehållsmappen med ett av dina paket:
 
    1. I projektutforskarpanelen, visa `PROJECT.ui.content` > `src` > `main` > `content` > `jcr_root` > `content`.
    1. Högerklicka på den djupare innehållsmappen och välj **Visa i** -> **Systemutforskaren**.
    1. Ta bort innehållsmappen som du nu ska se och placera innehållsmappen i innehållspaketet här.
-   1. I Eclipse högerklickar du på `PROJECT.ui.content` projekt och välj **Uppdatera**.
+   1. Högerklicka på `PROJECT.ui.content` projekt och välj **Uppdatera**.
 
 1. Nu måste du uppdatera `filter.xml` filer i dessa två projekt så att de motsvarar innehållet i ditt innehållspaket. Öppna `META-INF/vault/filter.xml` en fil med ditt innehållspaket i en separat text-/kodredigerare.
 
@@ -175,7 +175,7 @@ Du kan använda **Nytt projekt** för att skapa rätt struktur för dig:
         ```
 
    1. Öppna `PROJECT.ui.content/src/main/content/META-INF/filter.xml`.
-   1. Ersätt reglerna med reglerna i paketet som börjar med `/content`.
+   1. Ersätt reglerna med reglerna i ditt paket som börjar med `/content`.
       * Till exempel:
 
         ```xml
@@ -190,11 +190,11 @@ Du kan använda **Nytt projekt** för att skapa rätt struktur för dig:
 1. Spara alla ändringar. Nu kan du synkronisera det nya innehållet med din AEM.
 
 1. Kontrollera att anslutningen har startats på serverpanelen och starta den om den inte redan har startats.
-1. Klicka på **Rensa och publicera** ikon.
+1. Klicka på **Rensa och publicera** -ikon.
 
 När du är klar bör du låta paketet köras på din instans, och när du sparar synkroniseras alla ändringar automatiskt till instansen.
 
-Om du vill återskapa ett paket från ditt projekt högerklickar du på `PROJECT.ui.apps` eller `PROJECT.ui.content` och välja **Kör som** -> **Maven Install**.
+Om du vill återskapa ett paket från projektet högerklickar du på `PROJECT.ui.apps` eller `PROJECT.ui.content` och välja **Kör som** -> **Maven Install**.
 
 Nu har du en målmapp som skapats med ditt paket inuti (anropas till exempel `PROJECT.ui.apps-0.0.1-SNAPSHOT.zip`).
 

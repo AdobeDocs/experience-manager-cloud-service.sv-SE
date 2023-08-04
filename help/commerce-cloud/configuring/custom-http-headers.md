@@ -1,10 +1,10 @@
 ---
 title: Anpassade HTTP-huvuden
-description: Konfigurera anpassade HTTP-huvuden
+description: Lär dig hur du konfigurerar anpassade HTTP-huvuden som ska skickas till e-handelsmotorn, tillsammans med de som redan skickats av CIF.
 exl-id: 2cef5d4b-45f6-4d72-a24b-67ca53d9057d
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: ba0c1e13f311f48ac138f2c3ca582835a4a83bf6
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Om du vill konfigurera anpassade HTTP-huvuden måste du först definiera dem. De
 Du kan konfigurera värdena för HTTP-rubrikerna på Cloud Servicens konfigurationssida för ditt projekt:
 
 1. Gå till konfigurationssidan för Cloud Servicen under Verktyg -> Cloud Services -> CIF-konfiguration
-1. Öppna en befintlig konfiguration eller skapa en ny
+1. Öppna en befintlig eller ny konfiguration
 1. Gå till fliken &quot;Avancerat&quot; och leta upp det anpassade fältet för HTTP-rubriker. Du kan markera rubrikerna som du definierade tidigare och tilldela dem värden.
 
 Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-huvuden med alla GraphQL-förfrågningar.
@@ -37,4 +37,4 @@ Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-h
 Även om tjänsten tillåter att rubriknamn definieras, inklusive standardnamn, är de inte tillgängliga för konfigurering. Du kan alltså inte åsidosätta de vanliga HTTP-rubrikerna med den här funktionen. En lista med begränsade rubriknamn finns [här](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers). Det finns ytterligare två rubriker som inte kan användas:
 
 * &quot;Store&quot; - används av CIF för att identifiera Adobe Commerce-butiken
-* &quot;Preview-Version&quot; - används av CIF för att hämta mellanlagrade produkter
+* &quot;Preview-Version&quot; - används av CIF för att hämta mellanprodukter

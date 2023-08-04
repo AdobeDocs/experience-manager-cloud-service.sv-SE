@@ -1,10 +1,10 @@
 ---
 title: Redigering av handelsupplevelser
-description: Arbeta med e-handelsupplevelser
+description: Lär dig skapa och bygga e-handelsrelaterade upplevelser effektivt genom att få tillgång till produktdata och innehåll utan att lämna sammanhanget.
 exl-id: 45d697b7-ec96-4c26-be2a-3395b731d52d
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: ba0c1e13f311f48ac138f2c3ca582835a4a83bf6
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Den här väljaren gör att du kan bläddra i katalogstrukturen för att hitta k
 
 ![Kategoriväljaren](../assets/authoring/category-picker.png)
 
-**Exempel: karusell**
+**Exempel på karusell**
 
 ![Carousel-komponent utan markering](../assets/authoring/carousel_component_without_selection.png)
 
@@ -77,7 +77,7 @@ Då skapas en platshållarlänk som ersätts med en riktig länk när sidan åte
 
 ### Åtkomst till associerat produktinnehåll {#associated-content}
 
-Om 1:n-produkterna identifieras på en sida visas fliken &quot;Associerat Commerce Content&quot; automatiskt på sidopanelen. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [berika produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Det fungerar precis som att använda innehåll från fliken Resurser.
+Om 1:n-produkterna identifieras på en sida visas fliken &quot;Associerat Commerce Content&quot; automatiskt på sidopanelen. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [förbättra produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Att använda innehållet fungerar på samma sätt som att använda innehåll från fliken Resurser.
 
 ![Sidopanel för produktdata](../assets/authoring/associated-commerce-content-tab.png)
 

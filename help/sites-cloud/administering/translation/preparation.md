@@ -1,12 +1,12 @@
 ---
 title: Förbereder innehåll för översättning
-description: Lär dig hur du förbereder innehåll för översättning.
+description: Lär dig hur du förbereder innehåll för översättning när du utvecklar flerspråkiga webbplatser.
 feature: Language Copy
 role: Admin
 exl-id: afc577a2-2791-481a-ac77-468011e4302e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a1a92f8767186ba9e93b6b30870ecfa9f3b3bc28
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -52,13 +52,13 @@ The [WKND självstudiewebbplats](/help/implementing/developing/introduction/deve
 
 Den språkkopia som du ursprungligen skapade webbplatsinnehållet för är överordnad. Överordnad språk är källan som översätts till andra språk.
 
-Varje språkgren på en webbplats kallas för en språkkopia. Rotsidan för en språkkopia, som kallas språkroten, identifierar språket för innehållet i språkkopian. Till exempel: `/content/wknd/fr` är språkroten för den franska språkkopian. Språkkopior måste använda [korrekt konfigurerad språkrot](preparation.md#creating-a-language-root) så att rätt språk används när översättningar av en källplats utförs.
+Varje språkgren på en webbplats kallas för en språkkopia. Rotsidan för en språkkopia, som kallas språkroten, identifierar språket för innehållet i språkkopian. Till exempel: `/content/wknd/fr` är språkroten för den franska språkkopian. Språkkopior måste använda en [korrekt konfigurerad språkrot](preparation.md#creating-a-language-root) så att rätt språk används när översättningar av en källplats utförs.
 
 Gör så här för att förbereda webbplatsen för översättning:
 
 1. Skapa språkroten för din överordnad. Exempelvis är språkroten för den engelska demowebbplatsen WKND `/content/wknd/language-masters/en`. Kontrollera att språkroten är korrekt konfigurerad enligt informationen i [Skapa en språkrot](preparation.md#creating-a-language-root).
 1. Skriv innehåll på ditt språk överordnad.
-1. Skapa språkroten för varje språkkopia för webbplatsen. Exempelwebbplatsen för WKND innehåller t.ex. en fransk språkkopia `/content/wknd/language-masters/fr`.
+1. Skapa språkroten för varje språkkopia för webbplatsen. Exempelwebbplatsen för WKND har en fransk språkkopia `/content/wknd/language-masters/fr`.
 
 När du har förberett innehållet för översättning kan du automatiskt skapa saknade sidor i dina språkkopior och tillhörande översättningsprojekt. (Se [Skapa ett översättningsprojekt](managing-projects.md).) En översikt över innehållsöversättningsprocessen i AEM finns i [Översätta innehåll för flerspråkiga webbplatser](overview.md).
 
@@ -71,10 +71,10 @@ Om du vill skapa språkroten skapar du en sida och använder en ISO-språkkod so
 * `<language-code>` - Den språkkod som stöds är en kod med två bokstäver som definieras av ISO-639-1, till exempel `en`.
 * `<language-code>_<country-code>` eller `<language-code>-<country-code>` - Den landskod som stöds är en kod med två bokstäver i gemener eller versaler enligt ISO 3166, till exempel `en_US`, `en_us`, `en_GB`, `en-gb`.
 
-Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen. Rotsidan för den franska språkkopian av WKND-webbplatsen har `fr` som **Namn** -egenskap. Observera att **Namn** används som namn på sidnoden i databasen och därför bestäms sidans sökväg (`http://<host>:<4502>/content/wknd/language-masters/fr.html`).
+Du kan använda båda formaten enligt den struktur som du har valt för den globala platsen. Rotsidan för den franska språkkopian av WKND-webbplatsen har `fr` som **Namn** -egenskap. Observera att **Namn** egenskapen används som namn på sidnoden i databasen och därför bestäms sidans sökväg (`http://<host>:<4502>/content/wknd/language-masters/fr.html`).
 
 1. Navigera till webbplatser.
-1. Klicka på eller tryck på den webbplats där du vill skapa en språkkopia.
+1. Klicka på eller tryck på den webbplats som du vill skapa en språkkopia för.
 1. Klicka eller tryck **Skapa** och sedan klicka eller trycka **Sida**.
 
    ![Skapa sida](../assets/create-page.png)

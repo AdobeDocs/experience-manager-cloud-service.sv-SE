@@ -1,6 +1,6 @@
 ---
 title: Komma igång med AEM Commerce as a Cloud Service
-description: Lär dig hur du distribuerar ett e-handelsaktiverat AEM till ett AEM som körs som en molntjänstmiljö. Använd funktionerna i Adobe Cloud Manager och en CI/CD-pipeline så att du kan skapa Venias referensarkiv för en körningsmiljö.
+description: Lär dig hur du distribuerar ett AEM e-handelsprojekt med Adobe Cloud Manager, en CI/CD-pipeline och Venias referensbutik.
 topics: Commerce
 feature: Commerce Integration Framework, Cloud Manager
 version: Cloud Service
@@ -8,9 +8,9 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: ba0c1e13f311f48ac138f2c3ca582835a4a83bf6
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Miljövariabeln används på två ställen:
 
 En annan GraphQL-slutpunkts-URL kan användas för varje AEM as a Cloud Service miljö. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara allmänt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Du kan också ange en autentiseringshuvud om du vill använda ytterligare CIF-funktioner som kräver autentisering.
 
-Tillägget CIF kan, och endast för Adobe Commerce Enterprise/Cloud, användas med mellanlagrade katalogdata för AEM. Dessa data kräver att du konfigurerar en auktoriseringshuvud. Den här rubriken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
+Tillägget CIF kan, och endast för Adobe Commerce Enterprise/Cloud, användas med mellanlagrade katalogdata för AEM författare. Dessa data kräver att du konfigurerar en auktoriseringshuvud. Den här rubriken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
 
 Det finns två alternativ för att konfigurera slutpunkten:
 
@@ -69,7 +69,7 @@ Följ de här stegen för att ansluta AEM till en e-handelslösning via Adobe I/
 
 1. Skaffa Adobe I/O CLI med plugin-programmet Cloud Manager
 
-   Kontrollera [Dokumentation för Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [CLI-plugin för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+   Kontrollera [Dokumentation för Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) om hur du hämtar, konfigurerar och använder [ADOBE I/O CLI](https://github.com/adobe/aio-cli) med [CLI-plugin för Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 2. Autentisera Adobe I/O CLI med det AEM as a Cloud Service programmet
 
@@ -134,11 +134,11 @@ Följande egenskaper kan konfigureras:
 
 Konfigurationen som visas ovan är för referens. Projekten ska ha egna konfigurationer.
 
-Om du vill ha mer komplexa inställningar kan du använda flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger i [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md) självstudiekurs.
+Om du vill ha mer komplexa inställningar kan du använda flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger i [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md) självstudie.
 
 ## Ytterligare resurser {#additional-resources}
 
-- [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
+- [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
 - [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)
 - [Inställningar för Commerce Multi-Store](configuring/multi-store-setup.md)
 - [Flera inställningar för Commerce Systems](configuring/multiple-commerce-systems-setup.md)

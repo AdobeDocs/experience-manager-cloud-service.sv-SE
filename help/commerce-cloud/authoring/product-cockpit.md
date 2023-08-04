@@ -1,10 +1,10 @@
 ---
 title: Product Cockpit
-description: Arbeta med Product Cockpit
+description: Lär dig hur du arbetar med Product Cockpit, som ger en enhetlig översikt över länkade produktkataloger och tillhörande innehåll.
 exl-id: 6dbf039c-e040-48f1-88f3-ebbd70cdf94d
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: ba0c1e13f311f48ac138f2c3ca582835a4a83bf6
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma i
 >
 >Mellanlagrade katalogfunktioner är bara tillgängliga med Adobe Commerce- och tredjepartsanslutningar som stöder tokenbaserad autentisering.
 
-## Öppna produktdockan {#opening-product-cockpit}
+## Öppnar produktdockan {#opening-product-cockpit}
 
 Det enklaste sättet att komma åt produktdockan är via menyn&quot;Handel&quot; AEM huvudmenyn. Det går också att använda Omnissearch (sök efter handel) eller att öppna `https://<yourAEMInstance>/commerce.html`.
 
@@ -63,7 +63,7 @@ En textsökning i hela produktkatalogen finns på den vänstra filterfliken för
 
 ## Bläddrar i den mellanlagrade produktkatalogen {#staged-product-catalogs}
 
-Som standard visas data i produktkatalogen i produktcockpit. Om du använder&quot;STAGED CATALOG&quot; på den vänstra filterfliken läses produktkatalogen in för ett valt datum.
+Som standard visas data i produktkatalogen i produktcockpiten. Om du använder&quot;STAGED CATALOG&quot; på den vänstra filterfliken läses produktkatalogen in för ett valt datum.
 
 ![mellanlagrad katalog](../assets/staged-cockpit.png)
 
