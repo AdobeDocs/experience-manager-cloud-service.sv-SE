@@ -1,10 +1,10 @@
 ---
 title: Konfigurera DNS-inställningar
-description: Konfigurera DNS-inställningar
+description: Lär dig hur du konfigurerar DNS-inställningar för dina anpassade domännamn.
 exl-id: 6e294f0b-52cb-40dd-bc42-ddbcffdf5600
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 9fd7c17fce8c11809eabcc6387cbace0ebdc64a2
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Logga in på din domänregistrator och skapa en `CNAME` till att peka ditt anpas
 
 ## APEX-post {#apex-record}
 
-En apex-domän är en anpassad domän som inte innehåller någon underdomän, till exempel `example.com`. En apex-domän har konfigurerats med en `A` , `ALIAS` , eller `ANAME` spela in via din DNS-leverantör. Apex-domäner måste peka på specifika IP-adresser.
+En apex-domän är en anpassad domän som inte innehåller någon underdomän, som `example.com`. En apex-domän har konfigurerats med en `A` , `ALIAS` , eller `ANAME` spela in via din DNS-leverantör. Apex-domäner måste peka på specifika IP-adresser.
 
 Lägg till följande `A` poster till domänens DNS-inställningar via din domänleverantör.
 
