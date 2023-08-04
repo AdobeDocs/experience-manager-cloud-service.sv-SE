@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Lär dig hur du definierar de egenskaper som krävs för att hantera en sida i AEM.
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: 0183e14ad1653e98c06b19ea36c7e97dedccdb84
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2281'
 ht-degree: 3%
 
 ---
@@ -294,18 +294,6 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 ### Från webbplatskonsolen - flera sidor {#from-the-sites-console-multiple-pages}
 
 På **Sites**-konsolen kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
-
->[!NOTE]
->
->Det finns även massredigering av egenskaper för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i Redigera egenskaper för flera resurser.
->
->Här finns också en gruppredigerare där du kan söka efter innehåll från flera sidor med GQL (Google Query Language) och sedan redigera innehållet direkt i gruppredigeraren innan du sparar ändringarna på originalsidorna.
-
-<!--
->Bulk editing of properties is also available for Assets. It is very similar, but differs in a few points. See [Editing Properties of Multiple Assets](/help/assets/managing-multiple-assets.md) for details.
->
->There is also the [Bulk Editor](/help/sites-administering/bulk-editor.md), which allows you to search for content from multiple pages using GQL (Google Query Language) and then edit the content directly in the bulk editor before saving your changes to the originating pages.
--->
 
 Du kan välja flera sidor för massredigering på olika sätt, bland annat:
 

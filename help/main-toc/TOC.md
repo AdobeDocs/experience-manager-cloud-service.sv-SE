@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 4f2a51502202fba3792cde370180d127f8e17418
+source-git-commit: 0183e14ad1653e98c06b19ea36c7e97dedccdb84
 workflow-type: tm+mt
-source-wordcount: '4222'
+source-wordcount: '4236'
 ht-degree: 20%
 
 ---
@@ -963,6 +963,11 @@ ht-degree: 20%
       + [Konfigurera RTE-redigeraren](/help/implementing/developing/extending/rich-text-editor.md)
       + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
       + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
+      + [Utöka sidredigering](/help/implementing/developing/extending/page-authoring.md)
+      + [Utöka konsoler](/help/implementing/developing/extending/consoles.md)
+      + [Utöka sidegenskaper](/help/implementing/developing/extending/page-properties.md)
+      + [Utöka gruppredigeraren](/help/implementing/developing/extending/bulk-editor.md)
+      + [Utöka MSM](/help/implementing/developing/extending/msm.md)
    + Distribuera till AEM as a Cloud Service {#deploying}
       + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
       + [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)

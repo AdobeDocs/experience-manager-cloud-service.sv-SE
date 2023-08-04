@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 4049d226ecedb917c2a72cb76bc2fcaa946163f2
 workflow-type: tm+mt
-source-wordcount: '2706'
+source-wordcount: '2719'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Med Multi Site Manager (MSM) kan du använda samma platsinnehåll på flera plat
 
 * Med MSM kan man
    * Skapa innehåll en gång och sedan
-   * Återanvänd innehållet i andra områden (via [Live-kopior](#live-copies)) på samma eller andra webbplatser.
+   * Återanvänd det här innehållet i andra områden (via [Live-kopior](#live-copies)) på samma eller andra webbplatser.
 * MSM upprätthåller sedan Live-relationerna mellan källinnehållet och dess Live-kopior så att:
    * När du gör ändringar i källinnehållet synkroniseras källan och Live-kopior.
    * Du kan bara justera innehållet i Live-kopior genom att koppla från direktrelationen för enskilda undersidor och/eller komponenter.
@@ -66,11 +66,11 @@ Det finns många användningsområden för MSM och Live-kopior. Exempel:
   >MSM översätter inte innehållet. Den används för att skapa den struktur som krävs och distribuera innehållet.
   >
   >
-  >Se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md) för ett sådant exempel.
+  >Se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md) till exempel.
 
 * **Nationell myndighet - chef för de regionala avdelningarna**
 
-  Ett företag med ett nätverk av återförsäljare kan också vilja ha separata webbplatser för sina enskilda återförsäljare, som var och en är en variation av huvudföretagets huvudwebbplats. Detta kan gälla ett enskilt företag med flera regionala kontor eller ett nationellt franchisystem som består av en central franchisor och flera lokala franchisetagare.
+  Ett företag med ett nätverk av återförsäljare kan också vilja ha separata webbplatser för sina enskilda återförsäljare, vilket var och en är en variation av huvudwebbplatsen som huvudkontoret tillhandahåller. Detta kan gälla ett enskilt företag med flera regionala kontor eller ett nationellt franchisystem som består av en central franchisor och flera lokala franchisetagare.
 
   Huvudkontoret kan tillhandahålla viktig information, medan de regionala enheterna kan lägga till lokal information, som kontaktuppgifter, öppettider och händelser.
 
@@ -124,7 +124,7 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
    * Med MSM kan du [skapa en tillfällig (engångs) Live-kopia av en enskild sida eller underavdelning till en webbplats.](creating-live-copies.md#creating-a-live-copy-of-a-page) Du kan till exempel duplicera en underavdelning för att få information om en ny/uppdaterad version av en produkt. Skapa en Live-kopia på följande sätt:
       * Skapar en tillfällig Live Copy (ingen plantryckskonfiguration krävs).
       * Kan användas för att (omedelbart) skapa en Live-kopia av valfri sida/gren.
-      * Kräver **Synkronisera** (ger inte **Utrullning** ).
+      * Kräver **Synkronisera** (ger inte **Utrullning** -knapp).
 
 * **Visa egenskaper** (**Webbplatser**)
 
@@ -140,13 +140,13 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 
 * **Blueprints** (**verktyg** - **Webbplatser**)
 
-   * Med den här konsolen kan du [skapa och hantera dina skisser.](creating-live-copies.md#creating-a-blueprint-configuration)
+   * Med den här konsolen kan du [skapa och hantera dina ritningskonfigurationer.](creating-live-copies.md#creating-a-blueprint-configuration)
 
 >[!NOTE]
 >
 >Aspekter på MSM-funktionalitet används i flera andra AEM funktioner som Launches. I dessa fall hanteras Live-kopian av den funktionen.
 
-### Villkor {#terms-used}
+### Använda termer {#terms-used}
 
 Som en introduktion ger följande tabell en översikt över de viktigaste termerna som används med MSM. Dessa beskrivs mer ingående i de efterföljande avsnitten och sidorna.
 
@@ -170,11 +170,9 @@ Som en introduktion ger följande tabell en översikt över de viktigaste termer
 | Grund | A Live Copy of a single page |  |
 | Djup | En Live-kopia av en sida, tillsammans med dess underordnade sidor |  |
 
-<!--
 >[!TIP]
 >
->See [Overview of the Java API](/help/sites-developing/extending-msm.md#overview-of-the-java-api) for the object names.
--->
+>Se dokumentet [Utöka Multi Site Manager](/help/implementing/developing/extending/msm.md#overview-of-the-java-api) för objektnamnen.
 
 ## Live-kopior {#live-copies}
 
@@ -184,7 +182,7 @@ En MSM Live Copy är en kopia av specifikt webbplatsinnehåll som har en aktiv r
 * Synkroniseringen utför den faktiska överföringen av innehåll när ändringar görs i källan.
 * En Live-kopia kan betraktas som antingen:
    * Grund: en sida
-   * Djup: sidan tillsammans med dess underordnade sidor
+   * Djup: sidan tillsammans med de underordnade sidorna
 * Synkroniseringsregler, som kallas rollout-konfigurationer, avgör vilka egenskaper som synkroniseras och när synkroniseringen görs.
 
 I föregående exempel `/content/wknd/language-masters/en` är den globala överordnad webbplatsen på engelska. MSM Live-kopior skapas för att återanvända innehållet på den här webbplatsen:
@@ -219,7 +217,7 @@ Det grundläggande formuläret i Live Copy har:
 
 #### Live-kopia med icke-Live-Copy-sidor {#live-copy-with-non-live-copy-pages}
 
-När du skapar en Live-kopia i AEM kan du se och navigera genom grenen Live-kopia och använda de normala AEM funktionerna i grenen Live-kopia. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti Live-kopian. Exempel: en produkt för en viss region eller ett visst land.
+När du skapar en Live-kopia i AEM kan du se och navigera genom grenen Live-kopia och använda de normala AEM funktionerna i grenen Live-kopia. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti Live-kopian. Exempel: en produkt för ett visst område eller land.
 
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
 * Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både käll-/ritytan och Live-kopieringsgrenarna. För sådana situationer finns [MSM-utrullningskonflikter](rollout-conflicts.md) för mer information.
@@ -228,7 +226,7 @@ När du skapar en Live-kopia i AEM kan du se och navigera genom grenen Live-kopi
 
 #### Kapslade Live-kopior {#nested-live-copies}
 
-Skapa en [ny sida i en befintlig Live Copy](#live-copy-with-non-live-copy-pages) den här nya sidan kan också skapas som en Live-kopia av en annan plan. Detta kallas en kapslad Live Copy. I kapslade Live-kopior påverkas beteendet för den andra eller inre Live Copy av den första eller yttre Live-kopian på följande sätt:
+När du (eller en process) skapar en [ny sida i en befintlig Live Copy](#live-copy-with-non-live-copy-pages) den här nya sidan kan också skapas som en Live-kopia av en annan plan. Detta kallas en kapslad Live Copy. I kapslade Live-kopior påverkas beteendet för den andra eller inre Live-kopian av den första eller yttre Live-kopian på följande sätt:
 
 * En djup utrullning som utlöses för Live Copy på den översta nivån kan fortsätta till den kapslade Live Copy.
 * Alla länkar mellan källorna skrivs om i Live-kopior.
@@ -243,7 +241,7 @@ Till exempel skrivs länkar som pekar från den andra till den första utkast om
 
 #### Skiktade Live-kopior {#stacked-live-copies}
 
-En Live-kopia kallas för en staplad Live-kopia när den skapas som underordnad till en ytlig Live-kopia. Det uppför sig på samma sätt som [kapslad Live Copy](#nested-live-copies).
+En Live-kopia kallas för en staplad Live-kopia när den skapas som underordnad till en ytlig Live-kopia. Det fungerar på samma sätt som en [kapslad Live Copy](#nested-live-copies).
 
 ### Källa-, utkast- och designkonfigurationer {#source-blueprints-and-blueprint-configurations}
 
@@ -262,10 +260,10 @@ Källan utgör utkast för Live Copy. Planen definieras när du antingen:
 
 ### Utrullning och synkronisering {#rollout-and-synchronize}
 
-En utrullning är den centrala MSM-åtgärden som synkroniserar Live-kopior med sina källor. Du kan utföra rollouts manuellt eller så kan de inträffa automatiskt.
+En utrullning är den centrala MSM-åtgärden som synkroniserar Live-kopior med sina källor. Du kan utföra rollouts manuellt eller så kan de utföras automatiskt.
 
 * A [utrullningskonfiguration](#rollout-configurations) kan definieras så att specifika [händelser](live-copy-sync-config.md#rollout-triggers) kan orsaka att en utrullning inträffar automatiskt.
-* När du skapar en ritningssida kan du använda **[Utrullning](creating-live-copies.md#rolling-out-a-blueprint)** om du vill göra ändringar i Live Copy.
+* När du skapar en ritningssida kan du använda **[Utrullning](creating-live-copies.md#rolling-out-a-blueprint)** om du vill göra ändringar i Live-kopian.
    * The **Utrullning** -kommandot är tillgängligt på en ritningssida som en ritningskonfiguration refererar till.
 
   ![Utrullning](../assets/live-copy-rollout.png)
@@ -275,7 +273,7 @@ En utrullning är den centrala MSM-åtgärden som synkroniserar Live-kopior med 
 
   ![Synkronisera](../assets/live-copy-synchronize.png)
 
-### Konfigurationer för utrullning {#rollout-configurations}
+### Utrullningskonfigurationer {#rollout-configurations}
 
 En utrullningskonfiguration definierar när och hur en Live Copy synkroniseras med källinnehållet. En utrullningskonfiguration består av en utlösare och en eller flera synkroniseringsåtgärder:
 
@@ -322,10 +320,10 @@ Följande steg beskriver standardproceduren för att använda MSM för att åter
 1. Bestäm vilken utrullningskonfiguration som ska användas.
 
    1. MSM [installerar flera utrullningskonfigurationer](live-copy-sync-config.md#installed-rollout-configurations) som kan uppfylla ett antal användningsfall.
-   1. Du kan också [skapa en utrullningskonfiguration](live-copy-sync-config.md#creating-a-rollout-configuration) vid behov.
+   1. Om du vill kan du [skapa en utrullningskonfiguration](live-copy-sync-config.md#creating-a-rollout-configuration) vid behov.
 
 1. Bestäm var du behöver [ange de utrullningskonfigurationer som ska användas](live-copy-sync-config.md#specifying-the-rollout-configurations-to-use) och konfigurera efter behov.
-1. Om det behövs, [skapa en ritningskonfiguration](creating-live-copies.md#creating-a-blueprint-configuration) som identifierar källinnehållet i Live-kopian.
+1. Om det behövs, [skapa en ritningskonfiguration](creating-live-copies.md#creating-a-blueprint-configuration) som identifierar källinnehållet i Live Copy.
 1. [Skapa en Live-kopia.](creating-live-copies.md#creating-a-live-copy)
 1. Ändra källinnehållet efter behov. Ni bör använda den normala process för granskning och godkännande av innehåll som er organisation har etablerat.
 1. [Rulla ut](creating-live-copies.md#rolling-out-a-blueprint) ritningen, eller [synkronisera Live Copy](creating-live-copies.md#synchronizing-a-live-copy) med ändringarna.
