@@ -4,9 +4,9 @@ description: Du kan använda teman för att stilisera och ge en visuell identite
 seo-description: You can create a new theme by customizing the available theme. The themes are customized and deployed using frontend pipeline.
 keywords: skapa nytt tema, anpassa tema, ladda upp nytt tema, använda tema i formulär, anpassa temat med hjälp av frontend
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: 1cec6e01e72cb286949f64749e2386a2b652920e
+source-git-commit: fc0ff8cff8c616bc5576d834883aa0fe38ef593e
 workflow-type: tm+mt
-source-wordcount: '2651'
+source-wordcount: '2665'
 ht-degree: 0%
 
 ---
@@ -417,6 +417,7 @@ Om du vill ange information som logotypbild, företagsnamn i sidhuvud och copyri
 * [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
 * [Generera urkunder för adaptiva Forms (kärnkomponenter)](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
 * [Skapa en adaptiv Forms med upprepningsbara avsnitt](/help/forms/create-forms-repeatable-sections.md)
+* [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
 
 
 ## Relaterad artikel {#related-article}
