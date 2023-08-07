@@ -6,15 +6,20 @@ seo-description: Learn how to enable Adaptive Forms Core Components on AEM Forms
 contentOwner: Khushwant Singh
 docset: CloudService
 role: Admin
-source-git-commit: 8c125d834ebfff5601f56646d59ce00a80fcc0ba
+source-git-commit: 57acac078805bc195cb10c1e94462d5aa077b1af
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
 
 
 # Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö {#enable-headless-adaptive-forms-on-aem-forms-cloud-service}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 Genom att aktivera adaptiva Forms Core-komponenter på AEM Forms as a Cloud Service kan du börja skapa, publicera och leverera Core Components-baserade adaptiva Forms och Headless Forms med hjälp av AEM Forms Cloud Service-instanser i flera kanaler. Du behöver en adaptiv Forms Core Components-aktiverad miljö för att kunna använda Headless Adaptive Forms.
 
@@ -59,7 +64,7 @@ Utför följande steg i listad ordning för att aktivera adaptiva Forms Core-kom
 
 1. Öppna Git-databasmappen i en kodredigerare för oformaterad text. Exempel: VS-kod.
 1. Öppna `[AEM Repository Folder]\pom.xml` fil för redigering.
-1. Ersätt versioner av `core.forms.components.version`, `core.forms.components.af.version` och `core.wcm.components.version` komponenter med versioner angivna i [kärnkomponentdokumentation](https://github.com/adobe/aem-core-forms-components). Om komponenten inte finns lägger du till de här komponenterna.
+1. Ersätt versioner av `core.forms.components.version`, `core.forms.components.af.version` och `core.wcm.components.version` komponenter med versioner angivna i [kärnkomponentdokumentation](https://github.com/adobe/aem-core-forms-components). Om komponenten inte finns lägger du till dessa komponenter.
 
    ```XML
    <!-- Replace the version with the latest released version at https://github.com/adobe/aem-core-forms-components/tags -->
@@ -191,7 +196,7 @@ Utför följande steg i listad ordning för att aktivera adaptiva Forms Core-kom
    >
    >  Ersätt `${appId}` med ditt appId.
    >
-   >  För att hitta `${appId}`, i `[AEM Repository Folder]/all/pom.xml` -fil, söka i `-packages/application/install` term. Texten före `-packages/application/install` termen är `${appId}`. Följande kod, till exempel `myheadlessform` är `${appId}`.
+   >  Hitta `${appId}`, i `[AEM Repository Folder]/all/pom.xml` -fil, söka i `-packages/application/install` term. Texten före `-packages/application/install` termen `${appId}`. Följande kod, till exempel `myheadlessform` är `${appId}`.
    >
    >   ```
    >             <embedded>
@@ -278,9 +283,9 @@ Distribuera den uppdaterade koden till din lokala utvecklingsmiljö och Cloud Se
 
 * [Skapa och distribuera uppdaterad kod i en lokal utvecklingsmiljö (AEM as a Cloud Service SDK)](#core-components-on-aem-forms-local-sdk)
 
-* [Bygg och driftsätt uppdaterad kod i en as a Cloud Service AEM Forms-miljö](#core-components-on-aem-forms-cs)
+* [Skapa och driftsätt uppdaterad kod i en as a Cloud Service AEM Forms-miljö](#core-components-on-aem-forms-cs)
 
-### Bygg och driftsätt uppdaterad kod i en lokal utvecklingsmiljö {#core-components-on-aem-forms-local-sdk}
+### Skapa och distribuera uppdaterad kod i en lokal utvecklingsmiljö {#core-components-on-aem-forms-local-sdk}
 
 1. Öppna kommandotolken eller terminalen.
 
@@ -299,7 +304,7 @@ Distribuera den uppdaterade koden till din lokala utvecklingsmiljö och Cloud Se
 1. Använd [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype-projektmapp]\all\target\[appid].all-[version]ZIP-paket i lokal utvecklingsmiljö.
 
 
-### Bygg och driftsätt uppdaterad kod i en as a Cloud Service AEM Forms-miljö {#core-components-on-aem-forms-cs}
+### Skapa och driftsätt uppdaterad kod i en as a Cloud Service AEM Forms-miljö {#core-components-on-aem-forms-cs}
 
 1. Öppna terminalen eller kommandotolken.
 1. Navigera till `[AEM Repository Folder]` och kör följande kommandon i den ordning de visas

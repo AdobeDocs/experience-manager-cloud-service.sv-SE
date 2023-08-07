@@ -2,18 +2,23 @@
 title: Inbyggd [!DNL AEM Forms] as a Cloud Service grupper
 description: Lista över användargrupper som inte ingår i rutan och behörigheter som tilldelats varje grupp
 exl-id: bd66ce92-14d9-47fe-b5d3-022e3e468d25
-source-git-commit: 8ac35abd1335b4e31a6dc0d8812cc9df333e69a4
+source-git-commit: 57acac078805bc195cb10c1e94462d5aa077b1af
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 1%
+source-wordcount: '175'
+ht-degree: 4%
 
 ---
 
 # Grupper och behörigheter {#aem-forms-on-osgi-groups-and-privileges}
 
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html) |
+| AEM as a Cloud Service | Den här artikeln |
+
 Du kan [skapa grupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing) och tilldela profiler och [användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing) till grupperna. Dessa profiler styr behörigheter för de användare som ingår i gruppen.
 
-När du har konfigurerat [!DNL AEM Forms] as a Cloud Service, de grupper som listas i tabellen nedan, som [!DNL forms-users] och blankettkonstruktörer kan automatiskt tilldelas
+När du har konfigurerat [!DNL AEM Forms] as a Cloud Service, de grupper som listas i tabellen nedan, t.ex. [!DNL forms-users] och blankettkonstruktörer kan automatiskt tilldelas
 
 <table>
  <tbody>
