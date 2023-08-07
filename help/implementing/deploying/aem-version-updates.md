@@ -3,9 +3,9 @@ title: Uppdateringar av AEM
 description: Lär dig hur AEM as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade med den senaste versionen.
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
-source-git-commit: dd567c484d71e25de1808f784c455cfb9b124fbf
+source-git-commit: 635b4adeab8d93b7c7335453b04d8b78ef3a0496
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -58,6 +58,37 @@ På samma sätt kommer mellanlagrings- och produktionsmiljöer inte att uppdater
 >[!NOTE]
 >
 >Om anpassad kod flyttades till staging och inte till produktion, kommer nästa AEM att ta bort dessa ändringar för att återspegla Git-taggen för den senaste lyckade kundreleasen till produktion. Därför måste den anpassade koden som bara var tillgänglig för mellanlagring distribueras igen.
+
+## Bästa praxis {#best-practices}
+
+* 
+   * **Användning av scenmiljö**
+   * Använd en annan miljö (inte Stage) för långa QA-/UAT-cykler.
+   * När sanitetstestningen är klar på scenen går du vidare till Production.
+
+* 
+   * **Produktionspipeline**
+   * Pausa innan du distribuerar till Produktion.
+   * Om du avbryter pipelinen efter en scendistribution anges att koden är&quot;en eliminering&quot; och inte en giltig kandidat för produktion, se [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
+
+* 
+   * **Icke-produktionsförlopp**
+* Konfigurera [Icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#full-stack-code).
+* 
+   * Snabbare leverans/frekvens vid produktionsfel.  Identifiera problem i icke-producerade rörledningar genom att aktivera produktfunktionstestning, anpassad funktionstestning och anpassad gränssnittstestning.
+
+* 
+   * **Innehållskopia**
+   * Använd [Innehållskopia](/help/implementing/developing/tools/content-copy.md) om du vill flytta liknande innehållsuppsättningar till en icke-produktiv miljö.
+
+* 
+   * **Automatiserad funktionstestning**
+* Inkludera automatiserad testning i pipeline för att testa kritisk funktionalitet.
+* [Funktionstestning av kund](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) och [Anpassade gränssnittstestningar](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) blockerar, om de misslyckas kommer AEM inte att lanseras.
+
+## Regression {#regression}
+
+Om du stöter på ett problem som rör regression, ber vi dig ta upp ett supportärende via Admin Console.  Om problemet är blockerat och påverkar produktionen bör ett P1-fel uppstå.  Ange alla detaljer som krävs för att återskapa regressionsproblemet.
 
 ## Sammansatt nodarkiv {#composite-node-store}
 
