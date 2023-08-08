@@ -3,9 +3,9 @@ title: Uppdateringar av AEM
 description: Lär dig hur AEM as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade med den senaste versionen.
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
-source-git-commit: 635b4adeab8d93b7c7335453b04d8b78ef3a0496
+source-git-commit: ca91e969014415e872ecf8e42fe86ffc9ca41e10
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '801'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,7 @@ Lär dig hur AEM as a Cloud Service använder kontinuerlig integrering och lever
 
 AEM as a Cloud Service använder kontinuerlig integrering och kontinuerlig leverans (CI/CD) för att säkerställa att dina projekt finns i den senaste AEM versionen. Den här processen uppdaterar dina produktions-, staging- och utvecklingsinstanser utan att störa användarna.
 
-Innan instanserna uppdateras automatiskt kommer en ny AEM att publiceras 3-5 dagar i förväg. Under den här perioden kan du välja att
-[aktivera manuella uppdateringar för dina utvecklingsinstanser](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment).
-När detta är klart tillämpas versionsuppdateringar automatiskt i dina utvecklingsmiljöer först. Om uppdateringen lyckas fortsätter den till din scen och dina produktionsinstanser. Utvecklings- och mellanlagringsinstanserna fungerar som en automatiserad kvalitetsport, där dina anpassade tester utförs innan uppdateringen tillämpas i produktionsmiljön.
+Innan instanserna uppdateras automatiskt kommer en ny AEM att publiceras 3-5 dagar i förväg. Under den här perioden kan du välja att [aktivera manuella uppdateringar för dina utvecklingsinstanser](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment).När tiden är slut tillämpas versionsuppdateringar automatiskt i dina utvecklingsmiljöer först. Om uppdateringen lyckas fortsätter den till din scen och dina produktionsinstanser. Utvecklings- och mellanlagringsinstanserna fungerar som en automatiserad kvalitetsport, där dina anpassade tester utförs innan uppdateringen tillämpas i produktionsmiljön.
 
 >[!NOTE]
 >
@@ -44,13 +42,9 @@ Det finns två typer AEM versionsuppdateringar:
 
 ## Uppdateringsfel {#update-failure}
 
-AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalideringsplan som omfattar flera steg, vilket säkerställer att ingen tjänst avbryts för system i produktionen.
-Hälsokontroller används för att övervaka programmets hälsa.
-Om dessa kontroller misslyckas under en AEM as a Cloud Service uppdatering fortsätter inte releasen och Adobe undersöker varför uppdateringen orsakade detta oväntade beteende.
+AEM uppdateringar genomgår en intensiv och helt automatiserad produktvalideringsplan som omfattar flera steg, vilket säkerställer att ingen tjänst avbryts för system i produktionen. Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM as a Cloud Service uppdatering fortsätter inte releasen och Adobe undersöker varför uppdateringen orsakade detta oväntade beteende.
 
-När du distribuerar en ny version av en anpassad kod för dina miljöer,
-[Funktionstester för produkter och anpassade](/help/implementing/cloud-manager/overview-test-results.md#functional-testing)
-spela en viktig roll för att säkerställa att produktionssystemen förblir stabila och fungerar även efter det att en ändring har gjorts. De här testerna används också i uppdateringsprocessen för AEM.
+När du distribuerar en ny version av en anpassad kod för dina miljöer, [Funktionstester för produkter och anpassade](/help/implementing/cloud-manager/overview-test-results.md#functional-testing) spela en viktig roll för att säkerställa att produktionssystemen förblir stabila och fungerar även efter det att en ändring har gjorts. De här testerna används också i uppdateringsprocessen för AEM.
 
 Om uppdateringen till produktionsmiljön misslyckas kommer Cloud Manager automatiskt att återställa testmiljön. Detta görs automatiskt för att säkerställa att både testnings- och produktionsmiljöerna finns i samma AEM när uppdateringen är klar.
 På samma sätt kommer mellanlagrings- och produktionsmiljöer inte att uppdateras om en automatisk uppdatering av en utvecklingsmiljö misslyckas.
