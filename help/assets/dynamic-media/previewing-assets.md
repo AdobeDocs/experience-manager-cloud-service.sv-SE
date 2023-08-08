@@ -1,13 +1,13 @@
 ---
 title: Förhandsgranska resurser
-description: Lär dig hur du förhandsgranskar resurser i Dynamic Media.
+description: Lär dig hur du förhandsgranskar resurser i Dynamic Media så att du kan se hur de visas av en kund i en egen webbläsare.
 contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 3928798d-352a-42a8-a544-7104fc9b3cf1
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 0e452bd94d75609ecc3c20ab6b56ded968ed0a70
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
 **Så här förhandsgranskar du resurser:**
 
 1. Från **[!UICONTROL Experience Manager]**, på **[!UICONTROL Navigation]** sida, markera **[!UICONTROL Assets]** sedan **[!UICONTROL Files]** för att få tillgång till resurser.
-1. Nära sidans övre högra hörn, från sidans övre högra hörn **[!UICONTROL View]** nedrullningsbar lista, välja **[!UICONTROL List View]**.
+1. Nära sidans övre högra hörn, från sidan **[!UICONTROL View]** nedrullningsbar lista, välja **[!UICONTROL List View]**.
 1. (Valfritt) Använd **[!UICONTROL Type]** för att sortera resurserna efter den typ som du vill förhandsgranska.
 1. Under **[!UICONTROL Title]** markerar du titelnamnet (inte miniatyrbilden) för resursen som du vill förhandsvisa.
 1. Beroende på vilken resurstyp du har valt gör du något av följande:
@@ -40,7 +40,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
    <table>
     <tbody>
       <tr>
-      <td><strong>Resurstyp som du har valt</strong><br /> </td>
+      <td><strong>Resurstyp du valt</strong><br /> </td>
       <td><strong>Kan du förhandsgranska mediefilen i en viss återgivning?</strong></td>
       <td><strong>Kan du förhandsgranska mediefilen i ett visst visningsprogram?</strong></td>
       </tr>
@@ -56,8 +56,8 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       </ul>
       <p><strong>Navigera i 3D-scenen</strong></p>
       <ul>
-      <li><p><strong>Vrid din 3D-kamera</strong> - Rotera vyn runt 3D-motivet och objekten.</p> Mus: Vänsterklicka och dra.</p> Pekskärm: Tryck på + dra.</p></li>
-      <li><p><strong>Panorera kameran</strong> - Panorera vyn åt vänster, åt höger, uppåt och nedåt.</p> Mus: Högerklicka och dra.</p> Pekskärm: Tryck med två fingrar och dra.</p></li>
+      <li><p><strong>Vrid din 3D-kamera</strong> - Rotera vyn runt 3D-motivet och objekten.</p> Mus: Vänsterklicka och dra.</p> Touch-screen: Tryck på + dra.</p></li>
+      <li><p><strong>Panorera kameran</strong> - Panorera vyn åt vänster, åt höger, uppåt och nedåt.</p> Mus: Högerklicka + dra.</p> Pekskärm: Tryck med två fingrar och dra.</p></li>
       <li><p><strong>Zooma kameran</strong> - Zooma kameran om du vill flytta in och ut från områden i 3D-scenen.</p> Mus: Rullningshjul.</p> Pekskärm: Fingernyp.</p></li>
       <li><p><strong>Ange kameran igen</strong> - Rotera vyn runt 3D-motivet och objekten.</p> Mus: Dubbelklicka.</p> Pekskärm: Dubbeltryck.</li></ul></td>
       </tr>
@@ -68,7 +68,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <td><p><strong>Så här förhandsgranskar du en resurs i en viss återgivning</strong></p>
         <ul>
         <li>I närheten av sidans övre vänstra hörn markerar du ikonen så att listrutan visas. Välj <strong>Återgivningar</strong> i listan väljer du en viss återgivning som du vill förhandsgranska.</li>
-        </ul> <p><strong>Förhandsgranska resurs i ett visst visningsprogram</strong></p>
+        </ul> <p><strong>Så här förhandsgranskar du en resurs i ett visst visningsprogram</strong></p>
         <ul>
         <li>I närheten av sidans övre vänstra hörn markerar du ikonen så att listrutan visas. Välj <strong>Tittare</strong> i listan väljer du sedan ett visningsprogram som du vill använda för resursen.</li>
         </ul><p>Använd <strong>+</strong> och <strong>-</strong>ikoner för att öka respektive minska zoomningen i den markerade bilden. Om du vill återställa bilden till den ursprungliga zoomningen väljer du <strong>Återställ</strong>.<br>Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>
@@ -128,7 +128,7 @@ Information om hur du aktiverar eller inaktiverar visningsförinställningar i a
       <td><p><strong>Så här förhandsgranskar du en resurs i en viss återgivning</strong></p>
         <ul>
         <li>I närheten av sidans övre vänstra hörn markerar du ikonen så att listrutan visas. Välj <strong>Återgivningar</strong>väljer du sedan den återgivning som du vill förhandsgranska.</li>
-        </ul> <p><strong>Förhandsgranska resurs i ett visst visningsprogram</strong></p>
+        </ul> <p><strong>Så här förhandsgranskar du en resurs i ett visst visningsprogram</strong></p>
         <ul>
         <li>I närheten av sidans övre vänstra hörn markerar du ikonen så att listrutan visas. Välj <strong>Tittare</strong>väljer du sedan ett visningsprogram som du vill använda på resursen.</li>
         </ul> <p>Använd <strong>+</strong> och <strong>- </strong>ikoner för att öka respektive minska zoomningen i den markerade bilden. Om du vill återställa bilden till den ursprungliga zoomningen väljer du <strong>Återställ</strong>.<br /> Om du använder en pekskärm kan du zooma in steg för att dubbeltrycka på bilden. När du har uppnått maximal zoom dubbeltrycker du på bilden igen för att återställa zoomläget. Dra över bilden för att panorera.</p> </td>

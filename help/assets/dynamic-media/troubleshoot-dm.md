@@ -1,12 +1,12 @@
 ---
 title: Felsöka Dynamic Media
-description: Felsökningstips när du använder Dynamic Media.
+description: Lär dig mer om felsökningstips du kan testa när du arbetar med bilder, uppsättningar och visningsprogram i Dynamic Media.
 contentOwner: Rick Brough
 role: Admin,User
 exl-id: 3e8a085f-57eb-4009-a5e8-1080b4835ae2
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 0e452bd94d75609ecc3c20ab6b56ded968ed0a70
 workflow-type: tm+mt
-source-wordcount: '1129'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att resu
 | **Egenskap** | **Exempel** | **Beskrivning** |
 |---|---|---|
 | `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a|364266`** | En allmän indikator på att noden är länkad till Dynamic Media. |
-| `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** eller feltext | Status för överföring av resurs till Dynamic Media. |
+| `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** eller feltext | Status för överföring av mediefil till Dynamic Media. |
 | `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Måste fyllas i för att URL:er ska kunna genereras till Dynamic Media fjärråtkomst. |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **framgång** eller **misslyckades:`<error text>`** | Synkroniseringsstatus för uppsättningar (snurra uppsättningar, bilduppsättningar o.s.v.), bildförinställningar, visningsförinställningar, uppdateringar av bildscheman för en resurs eller bilder som har redigerats. |
 
@@ -85,7 +85,7 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
   </tr>
   <tr>
    <td>Den överförda resursen visas inte i resursväljaren</td>
-   <td><p>Kontrollera att resursen har en egenskap <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> = <code>processed</code> (CRXDE Lite)</p> </td>
+   <td><p>Kontrollera resurs har egenskap <code>jcr:content</code> &gt; <strong><code>dam:assetState</code></strong> = <code>processed</code> (CRXDE Lite)</p> </td>
    <td><p>Kontrollera att alla resurser har avslutat bearbetningen.</p> </td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
    <td>
     <ul>
      <li>Kontrollera att mappen har tilldelats en videoprofil (om filformatet inte stöds). Om det inte stöds visas bara en bild.</li>
-     <li>Videoprofilen måste innehålla mer än en kodningsförinställning för att generera en AVS-uppsättning (en kodning behandlas som videoinnehåll för MP4-filer). för filer som inte stöds, behandlas på samma sätt som obearbetade).</li>
+     <li>Videoprofilen måste innehålla mer än en kodningsförinställning för att generera en AVS-uppsättning (enstaka kodningar behandlas som videoinnehåll för MP4-filer; för filer som inte stöds behandlas samma som obearbetade).</li>
      <li>Kontrollera att videon har bearbetats klart genom att bekräfta <code>dam:scene7FileAvs</code> av <code>dam:scene7File</code> i metadata.</li>
     </ul> </td>
    <td>
@@ -189,7 +189,7 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
 1. Markera alla förinställningar för visningsprogram och välj sedan **Publicera**.
 1. Navigera tillbaka till exempelhanteraren och observera att antalet oaktiverade resurser nu är noll.
 
-### Problem: En förinställd teckning i visningsprogrammet returnerar 404 från Förhandsgranska i resursinformation eller Kopiera URL/Bädda in kod {#viewer-preset-404}
+### Problem: Förinställda bilder i visningsprogrammet returnerar 404 från Förhandsgranska i resursinformation eller Kopiera URL/Bädda in kod {#viewer-preset-404}
 
 **Felsöka**
 
@@ -204,8 +204,7 @@ Gör följande i CRXDE Lite:
    * `"is/content"`
    * `dam:scene7Folder`
    * `<asset-name>`
-Exempel: 
-`https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
+Exempel: `https://<server>/is/content/myfolder/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png`
 
 **Lösning**
 
@@ -214,13 +213,13 @@ Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet in
 1. Gå till CRXDE Lite.
 1. Ta bort `<sync-folder>/_CSS/_OOTB`.
 1. Navigera till CRX Package Manager: `https://localhost:4502/crx/packmgr/`.
-1. Sök efter visningsprogrampaket i listan; börjar med `cq-dam-scene7-viewers-content`.
+1. Sök efter visningsprogrampaket i listan. Det börjar med `cq-dam-scene7-viewers-content`.
 1. Välj **Installera om**.
 1. Gå till konfigurationssidan för Dynamic Media under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
 1. Gör inga ändringar, markera **Spara**.
 Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempelresurserna, CSS-förinställningen för visningsprogrammet och teckningen.
 
-### Problem: Bildförhandsvisningen läses inte in vid redigering av visningsförinställningar {#image-preview-not-loading}
+### Problem: Förhandsvisning läses inte in i redigering av visningsprogramförinställningar {#image-preview-not-loading}
 
 **Lösning**
 
@@ -236,5 +235,5 @@ Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempe
 
 1. Ta bort `viewer` mapp.
 1. I närheten av det övre vänstra hörnet på CRXDE Lite-sidan väljer du **[!UICONTROL Save All]**.
-1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du **Tillbaka hem** ikon.
+1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du **Tillbaka hem** -ikon.
 1. Återskapa en [Dynamic Media Configuration in Cloud Services](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).

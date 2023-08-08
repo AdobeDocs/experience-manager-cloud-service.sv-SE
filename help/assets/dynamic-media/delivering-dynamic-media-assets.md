@@ -1,13 +1,13 @@
 ---
 title: Leverera Dynamic Media Assets
-description: Lär dig leverera Dynamic Media-material.
+description: Lär dig hur du levererar Dynamic Media-resurser till dina webbsidor via inbäddad video och bilder, eller länkar URL:er till ditt webbprogram.
 contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 4557b561-b3c4-4d6f-8044-2069bda41613
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 0e452bd94d75609ecc3c20ab6b56ded968ed0a70
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Hur du kan leverera dina Dynamic Media-resurser - både video och bilder - beror
 Med Dynamic Media har du flera alternativ:
 
 * Om webbplatsen finns på Adobe Experience Manager vill du lägga till Dynamic Media-resurserna direkt på sidan.
-* Om webbplatsen inte ligger på Experience Manager kan du välja något av följande:
+* Om din webbplats inte finns på Experience Manager kan du välja något av följande:
 
    * Bädda in videon eller bilden på webbplatsen.
    * Länka URL:er till webbprogrammet. Använd länkning när du vill leverera en videospelare som ett popup-fönster eller modalt fönster.
@@ -27,7 +27,7 @@ Med Dynamic Media har du flera alternativ:
 
 >[!NOTE]
 >
->Smart bildbehandling fungerar med befintliga bildförinställningar. Den använder intelligens under de sista millisekunderna för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Se [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md) för mer information.
+>Smart bildbehandling fungerar med befintliga bildförinställningar. Den använder intelligens under de sista millisekunderna i leveransen för att ytterligare minska bildfilens storlek baserat på webbläsarens eller nätverkets anslutningshastighet. Se [Smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md) för mer information.
 
 Mer information finns i följande avsnitt:
 
@@ -43,6 +43,6 @@ Mer information finns i följande avsnitt:
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
-Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
+Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla era Dynamic Media-resurser.
 
 Mer information finns på [HTTP/2 - Vanliga frågor och svar om innehållsleverans](/help/assets/dynamic-media/http2faq.md).

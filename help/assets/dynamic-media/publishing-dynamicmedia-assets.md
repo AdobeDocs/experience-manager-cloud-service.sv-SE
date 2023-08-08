@@ -1,13 +1,13 @@
 ---
 title: Publicera Dynamic Media-resurser
-description: Lär dig hur du publicerar Dynamic Media-resurser.
+description: Lär dig hur du publicerar Dynamic Media video- och bildresurser så att du kan inkludera dem på en webbsida via en URL eller genom att bädda in kod på en webbsida.
 contentOwner: Rick Brough
 feature: Asset Management
 role: User
 exl-id: 8ee759dc-cb8f-4e80-8175-2c3ba06da862
-source-git-commit: a11529886d4b158c19a97ccbcb7d004cf814178d
+source-git-commit: 0e452bd94d75609ecc3c20ab6b56ded968ed0a70
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '476'
 ht-degree: 2%
 
 ---
@@ -36,13 +36,12 @@ Se även [Bädda in Dynamic Media Video Viewer eller Image Viewer på en webbsid
 >* Bildförinställningar och visningsförinställningar måste aktiveras och publiceras för direktleverans.
 >
 
-
 Mer information om hur du publicerar en uppsättning eller resurs finns i [Publicera resurser](/help/assets/manage-digital-assets.md).
 
 ## HTTP/2-leverans av Dynamic Media-resurser {#http-delivery-of-dynamic-media-assets}
 
-Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar kommunikationen mellan webbläsare och servrar, vilket ger bättre respons och laddningstider för alla dina Dynamic Media-resurser.
+Experience Manager stöder nu leverans av allt Dynamic Media-innehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla era Dynamic Media-resurser.
 
-Se [HTTP/2-leverans av innehåll, vanliga frågor och svar](/help/assets/dynamic-media/http2faq.md).
+Se [HTTP/2-leverans av innehåll, vanliga frågor](/help/assets/dynamic-media/http2faq.md).
 
 <!--this md file used to reside under sites-administering-->
