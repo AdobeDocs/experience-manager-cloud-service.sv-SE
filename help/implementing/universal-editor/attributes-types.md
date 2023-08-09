@@ -2,9 +2,9 @@
 title: Attribut och typer
 description: Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
-source-git-commit: 0f62245d31074ab7a64d86b97ef3b1a8d7533001
+source-git-commit: 9df57ce958bb8f7f9406b9fe342c9d2a4ccb0ae0
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '681'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 
 >[!NOTE]
 >
->Innehållsvalidering utförs på serversidan. Den universella redigeraren fungerar bara med dataattributen. Verifiering av att de passar modellen/strukturen måste åtgärdas på API-nivå.
+>Innehållsvalidering utförs på serversidan. Den universella redigeraren fungerar helt enkelt med dataattributen. Verifiering av att de passar modellen/strukturen måste åtgärdas på API-nivå.
 
 ## Dataegenskaper {#data-properties}
 
@@ -27,7 +27,7 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 |---|---|
 | `itemid` | URN to the resource, see the section [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
 | `itemprop` | Resursens attribut, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
-| `itemtype` | Typ av redigerbart objekt (t.ex. text, bild och referens) |
+| `itemtype` | Typ av redigerbart objekt (till exempel text, bild och referens) |
 | `data-editor-itemfilter` | Definierar vilka referenser som kan användas |
 | `data-editor-itemlabel` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `itemmodel` är inställd hämtas etiketten med hjälp av modellen |
 | `data-editor-itemmodel` | Definierar en modell som används för formulärbaserad redigering i egenskapsfältet |
@@ -53,7 +53,8 @@ Beroende på användningsfallet `itemprop` eller `itemid` kan vara nödvändigt 
 
 | `data-editor-behavior` | Beskrivning |
 |---|---|
-| `component` | Kan användas för att låta komponenter för fristående text, avancerad text och mediemimik vara flyttbara och borttagbara på sidan |
+| `component` | Används för att tillåta fristående text, fullödig text och mediemimiska komponenter så att de också kan flyttas och tas bort på sidan |
+| `container` | Används för att tillåta att behållare behandlas som sina egna komponenter så att de kan flyttas och tas bort på sidan |
 
 ## Ytterligare resurser {#additional-resources}
 

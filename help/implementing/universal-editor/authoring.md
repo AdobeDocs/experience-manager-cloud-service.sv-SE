@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: 481202760e0d22cde9c32e0b781dc99f67d463e4
+source-git-commit: e03bf6437b72a4fe7e959a23f12f0baa892fa567
 workflow-type: tm+mt
-source-wordcount: '1939'
+source-wordcount: '2271'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ Tryck eller klicka på publiceringsknappen så att du kan publicera ändringarna
 
 ### Mode Rail {#rail}
 
-Lägesfältet visas alltid längs den vänstra sidan av redigeraren. Det gör det enkelt att växla mellan olika redigeringslägen i redigeraren.
+Lägesfältet visas alltid längs den vänstra sidan av redigeraren. Du kan enkelt växla mellan olika redigeringslägen i redigeraren.
 
 ![Skrivskenan](assets/mode-rail.png)
 
@@ -182,8 +182,8 @@ I textläge kan innehållsförfattaren klicka för att markera textinnehåll.
 
 ![Textläge](assets/text-mode.png)
 
-* Du kan [redigera oformaterad text](#editing-content) på plats.
-* Du kan också [redigera RTF-text](#editing-rich-text) på plats med ytterligare formateringsalternativ som visas i komponentspåret.
+* Du kan [redigera ren text](#editing-content) på plats.
+* Du kan också [redigera RTF](#editing-rich-text) på plats med ytterligare formateringsalternativ som visas i komponentspåret.
 
 >[!TIP]
 >
@@ -212,20 +212,6 @@ När du väljer ett innehållsfragment visas detaljerna om det i komponentlisten
 >[!TIP]
 >
 >Använda snabbtangenten `C` för att växla till komponentläge.
-
-#### Redigera {#edit}
-
-När [komponentläge,](#component-mode) om du väljer en [Innehållsfragment,](/help/assets/content-fragments/content-fragments.md) redigeringsalternativet visas på skrivlisten.
-
-![Ikonen Redigera](assets/edit.png)
-
-Om du trycker eller klickar på redigeringsknappen öppnas knappen [Redigera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) på en ny flik, som ger dig tillgång till den fulla kraften i Content Fragment Editor.
-
-Du kan även redigera detaljer för innehållsfragmentet i dialogrutan [komponenträl](#edit-content-fragment) beroende på arbetsflödets behov.
-
->[!TIP]
->
->Använda snabbtangenten `E` om du vill redigera en markerad komponent.
 
 ### Redigeraren {#editor}
 
@@ -258,7 +244,7 @@ Observera att inte alla komponenter har information som kan visas och/eller redi
 >
 >Använda snabbtangenten `D` för att växla till egenskapsläge.
 
-#### Läge för innehållsträd {#Content-tree-mode}
+#### Läge för innehållsträd {#content-tree-mode}
 
 I innehållsträdsläge visar rälen sidinnehållets hierarki.
 
@@ -272,6 +258,43 @@ När du väljer ett objekt i innehållsträdet rullar redigeraren till det inneh
 >
 >Använda snabbtangenten `F` för att växla till innehållsträdsläge.
 
+#### Redigera {#edit}
+
+När [komponentläge,](#component-mode) om du väljer en [Innehållsfragment,](/help/assets/content-fragments/content-fragments.md) redigeringsalternativet visas på komponenträlen.
+
+![Ikonen Redigera](assets/edit.png)
+
+Om du trycker eller klickar på redigeringsknappen öppnas knappen [Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) på en ny flik, som ger dig tillgång till den fulla kraften i Content Fragment Editor.
+
+Du kan också redigera detaljer för innehållsfragmentet i komponentspåret beroende på arbetsflödets behov.
+
+>[!TIP]
+>
+>Använda snabbtangenten `E` om du vill redigera en markerad komponent.
+
+#### Lägg till {#add}
+
+Om du väljer en behållarkomponent i innehållsträdet eller i redigeraren visas alternativet Lägg till på komponenträlen.
+
+![Ikonen Lägg till](assets/ue-add-component-icon.png)
+
+Om du trycker eller klickar på knappen Lägg till öppnas en listruta med komponenter som är tillgängliga för [lägg till i den markerade behållaren.](#adding-components)
+
+>[!TIP]
+>
+>Använda snabbtangenten `A` om du vill lägga till en komponent i en markerad behållarkomponent.
+
+#### Ta bort {#delete}
+
+Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas borttagningsalternativet på komponenträlen.
+
+![Ikonen Ta bort](assets/ue-delete-component-icon.png)
+
+Tryck eller klicka på knappen Ta bort [tar bort komponenten.](#deleting-components)
+
+>[!TIP]
+>
+>Använda snabbtangenten `Shift+Backspace` om du vill ta bort en markerad komponent från en behållare.
 
 ## Redigera innehåll {#editing-content}
 
@@ -331,7 +354,39 @@ De fält som definieras i innehållsmodellen för det valda innehållsfragmentet
 
 Ändringarna sparas automatiskt i innehållet.
 
-Om du vill redigera ditt innehållsfragment i dialogrutan [Redigera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) i stället klickar du på [redigeringsknapp](#edit) i lägesrälen.
+Om du vill redigera ditt innehållsfragment i dialogrutan [Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) i stället klickar du på [redigeringsknapp](#edit) i lägesrälen.
+
+### Lägga till komponenter i behållare {#adding-components}
+
+1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
+1. Tryck eller klicka sedan på ikonen Lägg till i komponenträlen.
+
+   ![Välja en komponent som ska läggas till i en behållare](assets/ue-add-component.png)
+
+Komponenten infogas i behållaren och kan redigeras i redigeraren.
+
+### Ta bort komponenter från behållare {#deleting-components}
+
+1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
+1. Tryck eller klicka på ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
+1. Markera sedan en komponent i behållaren i innehållsträdet.
+1. Tryck eller klicka på ikonen Ta bort i komponenträlen.
+
+   ![Ta bort en komponent](assets/ue-delete-component.png)
+
+Den markerade komponenten har tagits bort.
+
+### Ändra ordning på komponenter i behållare {#reordering-components}
+
+1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
+1. Om inte redan [content tree-läge,](#content-tree-mode) växla till den.
+1. Tryck eller klicka på ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
+1. Dra handtagsikonerna intill komponenterna i behållaren för att visa att du kan ordna om dem. Dra komponenterna för att ordna om dem i behållaren.
+
+   ![Ändra ordning på komponenter](assets/ue-reordering-components.png)
+1. Den dragna komponenten blir grå i komponentträdet, medan insättningspunkten representeras av en blå linje. Släpp komponenten för att placera den på dess nya plats.
+
+Komponenterna ordnas om i både innehållsträdet och i redigeraren
 
 ## Förhandsgranska innehåll {#previewing-content}
 
