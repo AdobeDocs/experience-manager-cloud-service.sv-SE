@@ -2,9 +2,9 @@
 title: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 description: Riktlinjer och bästa metoder för att använda verktyget Innehållsöverföring
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 83c6c3c8c069059e49b632f332e24946e1712cb7
 workflow-type: tm+mt
-source-wordcount: '1544'
+source-wordcount: '1562'
 ht-degree: 14%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 14%
 
 -->
 
-Det finns en ny version av verktyget Innehållsöverföring som integrerar innehållsöverföringsprocessen med Cloud Acceleration Manager. Vi rekommenderar att du byter till den nya versionen för att få alla fördelar den ger:
+Det finns en ny version av verktyget Innehållsöverföring som integrerar innehållsöverföringsprocessen med Cloud Acceleration Manager. Vi rekommenderar att du går över till den nya versionen för att utnyttja alla fördelar den ger:
 
 * Självbetjäningssätt att extrahera en migreringsuppsättning en gång och importera den i flera miljöer parallellt
 * Förbättrad användarupplevelse tack vare bättre inläsningstillstånd, skyddsräcken och felhantering
@@ -65,7 +65,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * För att påbörja ett intag måste du tillhöra den lokala AEM **administratörer** i den Cloud Service som du överför innehåll till. Obehöriga användare kommer inte att kunna starta frågor utan att behöva ange migreringstoken manuellt.
 
-* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** om du aktiverar det här alternativet tas hela den befintliga databasen bort och en ny databas skapas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Användaren måste läggas till på nytt i **administratörer** grupp för att hämta åtkomsttoken för innehållsöverföringsverktyget.
+* Om inställningen **Rensa befintligt innehåll i molninstansen före intag** om du aktiverar det här alternativet tas hela den befintliga databasen bort och en ny databas skapas där innehållet kan importeras till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Detta gäller även för en admin-användare som har lagts till i **administratörer** grupp. Användaren måste läggas till på nytt i **administratörer** grupp för att hämta åtkomsttoken för verktyget Innehållsöverföring.
 
 * Det finns inga funktioner för att sammanfoga innehåll från flera källor till målkällinstansen om Cloud Servicen från de två källorna flyttas till samma sökvägar i målet. Om du vill flytta innehåll från flera olika källor till en enda instans av målsökvägen måste du se till att det inte finns någon överlappning mellan innehållssökvägarna från Cloud Servicen.
 
@@ -73,7 +73,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer till exempel inte mellan publicerat och opublicerat innehåll när innehåll hämtas till en publiceringsmiljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. Användaren kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Vi rekommenderar att CTT installeras på källinstansen Author för att flytta innehåll till målinstansen Author när du flyttar innehåll till en Production-instans och att CTT på källinstansen av Publish installeras för att flytta innehåll till målpubliceringsinstansen. Se [Köra verktyget Innehållsöverföring på en publiceringsinstans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#running-tool) för mer information.
 
-* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. The _Extrahering_ processen kopierar hela `/home` i migreringsuppsättningen, och det gör användarmappning genom att lägga till ett fält som är gjort från varje användares e-postadress. Mer information finns i [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md). The _Inmatning_ process kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna.
+* De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. The _Extrahering_ processen kopierar hela `/home` i migreringsuppsättningen, och det gör användarmappning genom att lägga till ett fält som är gjort från varje användares e-postadress. Mer information finns i [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md). The _Inmatning_ process kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna. Se [Migrerar stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md) om du vill ha mer information om grupper som används i en CUG-princip (Closed User Group).
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
 

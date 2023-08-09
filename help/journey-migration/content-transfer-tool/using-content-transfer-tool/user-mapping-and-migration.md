@@ -2,9 +2,9 @@
 title: Användarmappning och huvudmigrering
 description: Översikt över användarmappning och migrering av huvudnamn på AEM as a Cloud Service.
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: 83c6c3c8c069059e49b632f332e24946e1712cb7
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '855'
 ht-degree: 3%
 
 ---
@@ -57,6 +57,7 @@ Följande specialfall loggas:
 * Om inställningen **Rensa befintligt innehåll i molninstansen före intag** är inställt, tas redan överförda användare i Cloud Servicen bort tillsammans med hela den befintliga databasen. Och en ny databas skapas där innehållet hämtas. Den här processen återställer även alla inställningar inklusive behörigheter för målanvändarinstansen och gäller för en Cloud Service som lagts till i **administratörer** grupp. Administratörsanvändaren måste läsas till **administratörer** grupp för att hämta åtkomsttoken för CTT.
 * När innehållets popup-fönster utförs, och innehållet inte överförs eftersom det inte har ändrats sedan den tidigare överföringen, överförs inte heller användare och grupper som är kopplade till det innehållet. Den här regeln gäller även om användare och grupper har ändrats under tiden. Orsaken är att användare och grupper migreras tillsammans med det innehåll de är kopplade till.
 * Om målinstansen av AEM Cloud Service har en användare med ett annat användarnamn men samma e-postadress som en av användarna i AEM och användarmappning är aktiverat, registrerar loggarna ett felmeddelande. Källanvändaren AEM inte överföras eftersom endast en användare med en angiven e-postadress tillåts i målsystemet.
+* Se [Migrerar stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md) om du vill ha mer information om grupper som används i en CUG-princip (Closed User Group).
 
 ## Slutlig sammanfattning och rapport {#final-report}
 

@@ -2,9 +2,9 @@
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 83c6c3c8c069059e49b632f332e24946e1712cb7
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1077'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extr
 
 >[!INFO]
 >
->Den här funktionen är tillgänglig från och med version 1.8.x av verktyget för innehållsöverföring (CTT). AEM Cloud Service målmiljö måste köra minst version 6158 eller senare. Källmiljön måste också vara konfigurerad för att kunna köras [förkopia](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#setting-up-pre-copy-step). Valideringsfunktionen söker efter filen azcopy.config i källan. Om filen inte hittas körs inte valideringen. Mer information om hur du konfigurerar en azcopy.config-fil finns i [den här sidan](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#configure-azcopy-config-file).
+>Den här funktionen är tillgänglig från och med version 1.8.x av verktyget för innehållsöverföring (CTT). AEM Cloud Service målmiljö måste köra minst version 6158 eller senare. Källmiljön måste också vara konfigurerad för att kunna köras [pre-copy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#setting-up-pre-copy-step). Valideringsfunktionen söker efter filen azcopy.config i källan. Om filen inte hittas körs inte valideringen. Mer information om hur du konfigurerar en azcopy.config-fil finns i [den här sidan](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#configure-azcopy-config-file).
 
 Det är valfritt att validera en innehållsöverföring. Om du aktiverar den här funktionen ökar både tiden det tar att utföra en extrahering och ett intag. Om du vill använda funktionen aktiverar du den i systemkonsolen för AEM genom att följa dessa steg:
 
@@ -142,7 +142,7 @@ Om du vill visa den här informationen går du till Cloud Acceleration Manager. 
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-action.png)
 
-En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Klicka på **Hämta rapport** om du vill hämta den fullständiga kommaavgränsade (CSV) rapporten.
+En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Klicka på **Ladda ned rapport** om du vill hämta den fullständiga kommaavgränsade (CSV) rapporten.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-dialog.png)
 
@@ -158,8 +158,12 @@ Det första steget är att avgöra om intag verkligen misslyckades eller om det 
 
 Verifiera genom att välja en sökväg i valideringsrapporten och kontrollera om den finns i målmiljön. Om det här är en publiceringsmiljö kan du vara begränsad till att kontrollera sidor och resurser direkt. Öppna en biljett hos Kundtjänst om du behöver hjälp med det här steget.
 
-### Nodantalet är lägre än jag förväntade mig. Varför det? {#node-count-lower-than-expected}
+### Nodantalet är lägre än jag förväntade mig. Varför är det så? {#node-count-lower-than-expected}
 
 Vissa vägar från extraherings- och intagssammanfattningarna exkluderas för att hålla storleken på dessa filer hanterbar, med målet att kunna beräkna migreringens valideringsresultat inom två timmar efter att intaget har slutförts.
 
-De sökvägar vi för närvarande utesluter från sammanfattningarna är: `cqdam.text.txt` återgivningar, noder i `/home`och noder i `/jcr:system`.
+De sökvägar vi för närvarande utesluter från sammanfattningarna är bland annat: `cqdam.text.txt` återgivningar, noder i `/home`och noder i `/jcr:system`.
+
+### Stängda användargrupper fungerar inte {#validating-cugs}
+
+Se [Migrerar stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md) om du vill ha mer information när du använder en CUG-princip (Closed User Group).
