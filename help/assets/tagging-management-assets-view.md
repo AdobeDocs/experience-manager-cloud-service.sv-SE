@@ -1,6 +1,6 @@
 ---
 title: Hur hanterar jag taggar i resursvyn?
-description: Lär dig hur du hanterar taggar i resursvyn. Taggar hjälper dig att kategorisera resurser som du kan bläddra bland och söka efter mer effektivt.
+description: Lär dig hur du hanterar taggar i resursvyn. Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare.
 source-git-commit: bdbe47a8f06d2ec1cd75103905677fcd3955632d
 workflow-type: tm+mt
 source-wordcount: '1422'
@@ -14,9 +14,9 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="assets_taxonomy_management"
 >title="Hantera taggar"
->abstract="Taggar hjälper dig att kategorisera resurser som du kan bläddra bland och söka efter mer effektivt. Administratörer kan använda den hierarkiska taggningsstrukturen, som gör det lättare att använda relevanta metadata, kategorisera resurser, söka, återanvända taggar, förbättra upptäckbarheten och så vidare."
+>abstract="Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare. Administratörer kan använda den hierarkiska taggningsstrukturen, som gör det lättare att använda relevanta metadata, kategorisera resurser, söka, återanvända taggar, förbättra upptäckbarheten och så vidare."
 
-Taggar hjälper dig att kategorisera resurser som du kan bläddra bland och söka efter mer effektivt. Taggning hjälper till att sprida rätt taxonomi till andra användare och arbetsflöden.
+Taggar hjälper dig att kategorisera resurser som kan bläddras och sökas effektivare. Taggning hjälper till att sprida rätt taxonomi till andra användare och arbetsflöden.
 
 Platta listor med kontrollerade vokabulärer kan bli ohanterliga över tid. Administratörer kan använda den hierarkiska taggningsstrukturen, som gör det lättare att använda relevanta metadata, kategorisera resurser, söka, återanvända taggar, förbättra upptäckbarheten och så vidare.
 
@@ -85,7 +85,7 @@ Utför följande steg för att lägga till taggar i ett namnutrymme:
 
 ## Lägga till taggar i standardtaggar {#adding-tags-to-standard-tags}
 
-Ostrukturerade taggar eller taggar som inte har någon hierarki lagras under `Standard Tags` namnutrymme. Om du dessutom vill lägga till ytterligare beskrivande termer utan att påverka den styrda taxonomin, kan du lagra det värdet under `Standard Tags`. Du kan flytta dessa värden under strukturerade namnutrymmen över tiden. Dessutom kan du använda `Standard Tags` namnutrymme som en fri formulärpost för nyckelord.
+Ostrukturerade taggar eller taggar som inte har någon hierarki lagras under `Standard Tags` namnutrymme. Om du dessutom vill lägga till ytterligare beskrivande termer utan att påverka den styrda taxonomin, kan du lagra det värdet under `Standard Tags`. Du kan flytta dessa värden under strukturerade namnutrymmen över tiden. Dessutom kan du använda `Standard Tags` namnutrymme som en friformspost för nyckelord.
 
 Om du vill skapa en standardtagg klickar du på `Create Tag` på rotnivå. Ange titel, namn och beskrivning och klicka sedan på `Save`.
 

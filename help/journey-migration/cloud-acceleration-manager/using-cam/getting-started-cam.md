@@ -42,7 +42,7 @@ Följ stegen nedan för att navigera till Cloud Acceleration Manager (CAM):
 >id="aemcloud_cam_gettingstarted"
 >title="Komma igång med Cloud Acceleration Manager"
 >abstract="Skapa ditt projekt och kom igång snabbt med din resa till AEM as a Cloud Service."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/introduction-cam/benefits-cam.html?lang=en" text="Fördelar med Cloud Acceleration Manager"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/introduction-cam/benefits-cam.html?lang=en" text="Fördelar med att använda Cloud Acceleration Manager"
 
 På landningssidan i CAM-hanteraren (Cloud Acceleration Manager) kan du skapa och redigera flera projekt.
 
@@ -79,7 +79,7 @@ Följ stegen nedan för att redigera ditt projekt:
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-4.png)
 
-1. Du kan redigera projektnamnet, beskrivningen och till och med överföra en ny bild eller redigera en befintlig bild från **Redigera projekt** -dialogrutan.
+1. Du kan redigera projektnamnet, beskrivningen och även överföra en ny bild eller redigera en befintlig bild från **Redigera projekt** -dialogrutan.
 
    ![bild](/help/journey-migration/cloud-acceleration-manager/assets/cam-edit.png)
 

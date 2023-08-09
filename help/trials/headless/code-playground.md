@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_fetch_json_with_javascript_guide_footer"
->title="I den här modulen lärde du dig att använda den AEM Headless Client för JavaScript för att hämta JSON-data från testmiljön med GraphQL beständiga frågor.<br><br>Nu förstår ni hur ni kan använda den här klienten för att förbruka data från ert eget webbprogram."
+>title="I den här modulen lärde du dig att använda den AEM Headless Client för JavaScript för att hämta JSON-data från testmiljön med hjälp av GraphQL beständiga frågor.<br><br>Nu förstår ni hur ni kan använda den här klienten för att förbruka data från ert eget webbprogram."
 >abstract=""
 
 ## CodePen {#codepen}
@@ -77,7 +77,7 @@ const aemHeadlessClient = new AdobeAemHeadlessClientJs({
 >
 >The **serviceURL** är inställt på att använda en proxy-Adobe I/O Runtime-funktion för att undvika CORS-problem. Denna proxy krävs inte för dina egna projekt, men krävs för att CodePen-appen ska fungera med din testmiljö. Proxyfunktionen är konfigurerad att använda **publishHost** värdet som angavs i frågeparametern.
 
-Funktionen `fetchJsonFromGraphQL()` används för att utföra hämtningsbegäran med AEM Headless Client. Den anropas varje gång koden ändras eller kan aktiveras genom att du klickar på **Uppdatera** länk. Den faktiska `aemHeadlessClient.runPersistedQuery(..)` samtal inträffar på rad 34. lite senare ändrar du hur dessa JSON-data återges, men skriver nu ut dem på `#output` div med `resultToPreTag(queryResult)` funktion.
+Slutligen, funktionen `fetchJsonFromGraphQL()` används för att utföra hämtningsbegäran med AEM Headless Client. Den anropas varje gång koden ändras eller kan aktiveras genom att du klickar på **Uppdatera** länk. Den faktiska `aemHeadlessClient.runPersistedQuery(..)` samtal inträffar på rad 34. lite senare ändrar du hur dessa JSON-data återges, men skriver nu ut dem på `#output` div med `resultToPreTag(queryResult)` funktion.
 
 ## Hämta data från din beständiga fråga {#use-persisted-query}
 
@@ -94,7 +94,7 @@ På rad 25 anger du från vilken GraphQL beständig fråga appen ska hämta data
 
 1. När den här ändringen har gjorts bör programmet uppdatera automatiskt och skriva ut det råa JSON-svaret från din beständiga fråga till `#output` div. Om du ser ett felmeddelande bör du kontrollera konsolen för mer information. Nå ut [via e-post](mailto:aem-headless-trials-support@adobe.com?subject=AEM%20Trials%20support%20request) om du fortfarande har problem med det här steget.
 
-1. Innehåller denna JSON exakt de egenskaper som din app behöver? Om inte, gå tillbaka till [Extrahera innehåll med GraphQL API](https://experience.adobe.com/experiencemanager/learn/extract_content_using_graphql) utbildningsguide för att göra ändringar. Glöm inte att spara och publicera frågan när du är klar.
+1. Innehåller detta JSON exakt de egenskaper som din app behöver? Om inte, gå tillbaka till [Extrahera innehåll med GraphQL API](https://experience.adobe.com/experiencemanager/learn/extract_content_using_graphql) utbildningsguide för att göra ändringar. Glöm inte att spara och publicera frågan när du är klar.
 
 ## Ändra JSON-återgivning {#change-rendering}
 

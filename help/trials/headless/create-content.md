@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content"
 >title="Skapa headless-innehåll"
->abstract="Med hjälp av den modell du skapade i den tidigare modulen får du lära dig hur du skapar innehåll som kan användas för att skapa sidor, eller som bas för det rubrikfria innehållet."
+>abstract="Med hjälp av den modell du skapade i den tidigare modulen får du lära dig hur du skapar innehåll som kan användas för att skapa sidor, eller som bas för rubrikfritt innehåll."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content_guide"
@@ -26,12 +26,12 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_create_content_guide_footer"
->title="Bra jobbat! I den här modulen lärde du dig att skapa rubrikfritt innehåll som ett innehållsfragment baserat på den tidigare modellen. Ni förstår nu hur innehållsteam kan skapa och hantera innehåll för appar och webbplatser oberoende av utvecklingscyklerna."
+>title="Snyggt jobb! I den här modulen lärde du dig att skapa rubrikfritt innehåll som ett innehållsfragment baserat på den tidigare modellen. Ni förstår nu hur innehållsteam kan skapa och hantera innehåll för appar och webbplatser oberoende av utvecklingscyklerna."
 >abstract=""
 
 ## Skapa ett innehållsfragment {#create-fragment}
 
-Innehållsfragment representerar ditt headless-innehåll och baseras på fördefinierade strukturer, som kallas modeller för innehållsfragment. Du har redan skapat en modell i en tidigare modul.
+Content Fragments representerar ditt headless-innehåll och är baserade på fördefinierade strukturer, som kallas Content Fragment-modeller. Du har redan skapat en modell i en tidigare modul.
 
 I den här modulen skapar du ett nytt innehållsfragment baserat på den modellen med hjälp av konsolen Innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
 
@@ -61,7 +61,7 @@ När du har sparat och öppnat ditt nya innehållsfragment öppnas redigeraren f
 
 1. Ange en **Titel** för ditt fragment genom att ange `Tuscan Adventure`.
 
-1. Ange en **Beskrivning** för fragmentet genom att klistra in i följande text.
+1. Ange en **Beskrivning** för ditt fragment genom att klistra in i följande text.
 
    ```text
    Visiting Tuscany on a bicycle is about experiencing the old world charm of Italy on your own terms. Your efforts on the climbs of Italy's rolling hills during this tour are rewarded with sunny Mediterranean landscapes and unmatched Italian hospitality. Tuscany's natural wonders have always been a well of inspiration for arts and culture. Find out why as you explore the Italian countryside and coastline on bicycle.
@@ -85,7 +85,7 @@ När du har sparat och öppnat ditt nya innehållsfragment öppnas redigeraren f
 
 1. Den valda bilden visas i innehållsfragmentet. Redigeraren sparar ändringarna automatiskt.
 
-1. När du är klar med att lägga till innehåll trycker du på eller klickar på **Publicera** längst upp till höger i redigeraren. Detta gör att ditt innehållsfragment blir tillgängligt för konsumtion i externa appar. Välj sedan **Nu** i listrutan. Du kan också schemalägga publiceringen vid ett senare tillfälle.
+1. När du är klar med att lägga till innehåll trycker du på eller klickar på **Publicera** längst upp till höger i redigeraren. Detta gör att ditt innehållsfragment blir tillgängligt för konsumtion i externa appar. Välj sedan **Nu** i listrutan. Du kan också schemalägga det för publicering vid ett senare tillfälle.
 
    ![Publicera innehåll](assets/do-not-localize/publish.png)
 
