@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 87aeebad2576e91472530a2617b23bece4cd453f
+source-git-commit: 4b63c00847fa21967560a59c3bcd931433a3a73f
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,16 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.11 av [!DNL Workfront for Experience Manager enhanced connector] är 19 juni 2023.
+Releasedatum för den senaste versionen, 1.9.12 av [!DNL Workfront for Experience Manager enhanced connector] är 9 augusti 2023.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande uppdateringar:
 
-* När du har konfigurerat avancerade nätverk kan det uppstå problem när du skickar innehåll från Adobe Workfront till AEM as a Cloud Service.
+* Det går inte att skapa länkade mappar i Experience Manager eftersom det inte finns något användarkonto kopplat till den länkade mappen.
+
+* Ansiktsförhållanden under metadatauppdateringar för en resurs i Experience Manager.
+
 
 >[!NOTE]
 >
@@ -30,15 +33,20 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar dig [uppgradera till den senaste 1.9.11-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar dig [uppgradera till den senaste 1.9.12-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
-* När projektlänkade mappar konfigureras med AEM 6.4 sparar Experience Manager inte värdena för **[!UICONTROL sub-folders]** och **[!UICONTROL Create linked folder in projects with portfolio]** fält. Värdet för **[!UICONTROL sub-folders]** fältuppdateringar till **[!UICONTROL undefined]** och värdet för **[!UICONTROL Create linked folder in projects with portfolio]** fältuppdateringar till **[!UICONTROL Default Portfolio]** automatiskt när konfigurationen har sparats.
+* När du konfigurerar projektlänkade mappar med AEM 6.4 sparar Experience Manager inte värdena för **[!UICONTROL sub-folders]** och **[!UICONTROL Create linked folder in projects with portfolio]** fält. Värdet för **[!UICONTROL sub-folders]** fältuppdateringar till **[!UICONTROL undefined]** och värdet för **[!UICONTROL Create linked folder in projects with portfolio]** fältuppdateringar till **[!UICONTROL Default Portfolio]** automatiskt när konfigurationen har sparats.
 
-* När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** nedrullningsbar lista. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** nedrullningsbar lista och **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i nya Workfront.
+* När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** som finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** nedrullningsbar lista och **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i nya Workfront.
 
 ## Tidigare versioner {#previous-releases}
+
+### Juniversion 2023 {#june-2023-release}
+
+* När du har konfigurerat avancerade nätverk kan det uppstå problem när du skickar innehåll från Adobe Workfront till AEM as a Cloud Service.
+
 
 ### Version från maj 2023 {#may-2023-release}
 
@@ -75,7 +83,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 ### December 2022-utgåvan {#december-2022-release}
 
-[!DNL Workfront for Experience Manager enhanced connector] version 1.9.6 släppt den 9 december innehåller följande uppdateringar:
+[!DNL Workfront for Experience Manager enhanced connector] version 1.9.6, släppt den 9 december 2009, innehåller följande uppdateringar:
 
 **Förbättring**
 
@@ -101,7 +109,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 * Experience Manager visar `SERVER_ERROR` på **[!UICONTROL Link External Files and Folders]** skärm vid åtkomst av resursmappar på grund av ogiltiga behörigheter på `/content/dam/collections`.
 
-* Aktivera **[!UICONTROL Publish Assets to Brand Portal]** på konfigurationssidan för Workfront Enhanced Connector skapar en felaktig händelse. Händelsen tas inte bort även efter att alternativet har inaktiverats.
+* Aktivera **[!UICONTROL Publish Assets to Brand Portal]** på konfigurationssidan för Workfront Enhanced Connector skapar en felaktig händelse. Händelsen tas inte bort även sedan alternativet inaktiverats.
 
   Så här löser du problemet:
 
@@ -151,7 +159,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * Problem vid automatisk publicering av resurser som skickas från Workfront till AEM.
 * Fältet Rotsökväg är inte tillgängligt för fältet Taggar när du redigerar ett standardformulär för metadataschema.
 * Problem med att lägga till nya versioner i Workfront med AEM arbetsflöden.
-* När du utför en AEM sökning efter resurser som är tillgängliga i Workfront visas ett felmeddelande i AEM.
+* När du utför en AEM sökning efter resurser som är tillgängliga i Workfront visas ett felmeddelande AEM.
 * När du skapar ett AEM arbetsflöde för att skapa uppgifter från en resurs och inte definierar något överordnat aktivitetsnamn, skapas inte uppgiften i Workfront.
 
 ### Version från augusti 2022 {#august-2022-release}
