@@ -1,10 +1,10 @@
 ---
 title: Distribuera koden
-description: Lär dig hur du distribuerar kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
+description: Lär dig hur du distribuerar din kod med hjälp av Cloud Manager-pipelines AEM as a Cloud Service.
 exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 2d1d3ac98f8fe40ba5f9ab1ccec946c8448ddc43
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ När du har [har konfigurerat produktionsförloppet](/help/implementing/cloud-ma
 
 1. Klicka på det program som du vill distribuera kod för.
 
-1. Klicka **Distribuera** från uppmaning till åtgärd på **Översikt** för att starta distributionsprocessen.
+1. Klicka **Distribuera** från uppmaning till åtgärd på **Ökning** för att starta distributionsprocessen.
 
    ![CTA](assets/deploy-code1.png)
 
@@ -59,7 +59,7 @@ The **Scendistribution** fas. omfattar de här stegen.
 * **Build &amp; Unit Testing** - Det här steget kör en innesluten byggprocess.
    * Se [Information om byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) för mer information om byggmiljön.
 * **Kodskanning** - I det här steget utvärderas kvaliteten på programkoden.
-   * Se [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) för mer information om testprocessen.
+   * Se [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md) om du vill ha mer information om testprocessen.
 * **Skapa bilder** - Den här processen gör att du kan omvandla innehåll och dispatcherpaket som skapats av byggsteget till Docker-bilder och Kubernetes-konfigurationer.
 * **Distribuera till scenen** - Bilden distribueras till testmiljön som förberedelse för [Scenens testfas.](#stage-testing)
 
@@ -67,7 +67,7 @@ The **Scendistribution** fas. omfattar de här stegen.
 
 ## Scentestfas {#stage-testing}
 
-The **Scentestning** dessa steg.
+The **Stage testing** dessa steg.
 
 * **Funktionstestning av produkten** - Molnhanterarens pipeline kör tester som körs mot scenmiljön.
    * Se [Funktionstestning av produkten](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) för mer information.
@@ -75,9 +75,9 @@ The **Scentestning** dessa steg.
 * **Anpassad funktionstestning** - Det här steget i pipeline körs alltid och kan inte hoppas över. Om inget test-JAR produceras av bygget godkänns testet som standard.
    * Se [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) för mer information.
 
-* **Testning av anpassat användargränssnitt** - Det här steget är en valfri funktion som automatiskt kör gränssnittstester som skapats för anpassade program.
+* **Anpassade gränssnittstestningar** - Det här steget är en valfri funktion som automatiskt kör gränssnittstester som skapats för anpassade program.
    * Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för att möjliggöra ett brett val av språk och ramverk (t.ex. Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium).
-   * Se [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) för mer information.
+   * Se [Anpassade gränssnittstestningar](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) för mer information.
 
 * **Experience Audit** - Det här steget i pipeline körs alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna.
    * De konfigurerade sidorna skickas till tjänsten och utvärderas.
@@ -126,34 +126,41 @@ Alla driftsättningar av Cloud Service följer en rullande process för att säk
 >
 >Dispatcher-cachen rensas bort för varje distribution. Den värms upp senare innan de nya publiceringsnoderna accepterar trafik.
 
-## Kör en produktionsdistribution igen {#Reexecute-Deployment}
+## Köra om en produktionsdistribution {#reexecute-deployment}
 
-Omkörning av produktionsdistributionssteget stöds för körningar där produktionsdistributionssteget har slutförts. Typen av slutförande är inte viktig - distributionen kan avbrytas eller misslyckas. Detta innebär att det primära användningsexemplet förväntas vara fall där produktionsdistributionssteget misslyckades av tillfälliga orsaker. Omkörning skapar en ny körning med samma pipeline. Den här nya körningen består av tre steg:
+I sällsynta fall kan produktionsdistributionsstegen misslyckas av tillfälliga orsaker. I sådana fall stöds omkörning av produktionsdistributionssteget så länge produktionsdistributionssteget har slutförts, oavsett typ av slutförande (t.ex. avbruten eller misslyckad). Omkörning skapar en ny körning med samma pipeline som består av tre steg.
 
-1. Valideringssteget - det här är i stort sett samma validering som sker under en normal pipeline-körning.
-1. Byggsteget - i samband med en omkörning kopierar byggsteget artefakter, och utför inte någon ny byggprocess.
-1. Produktionsdistributionssteget - detta använder samma konfiguration och alternativ som produktionsdistributionssteget i en normal pipeline-körning.
+1. Valideringssteget - Detta är i stort sett samma validering som sker under en normal pipeline-körning.
+1. Byggsteget - I samband med en omkörning kopieras artefakter och ingen ny byggprocess utförs.
+1. Produktionsdistributionssteget - Detta använder samma konfiguration och alternativ som produktionsdistributionssteget i en normal pipeline-körning.
 
-Byggsteget kan ha en något annorlunda etikett i användargränssnittet för att reflektera att det är kopieringsartefakter, inte återskapande.
+I sådana fall där ett återgenomförande är möjligt visas statussidan för produktionsflödet på sidan med **Kör igen** alternativ bredvid det vanliga **Hämta bygglogg** alternativ.
 
-![Återdistribuera](assets/Re-deploy.png)
+![Alternativet Kör igen i översiktsfönstret för pipeline](assets/re-execute.png)
 
-Begränsningar:
+>[!NOTE]
+>
+>I en omkörning markeras byggsteget i användargränssnittet för att reflektera att det är kopieringsartefakter och inte återskapande.
 
-* Det går bara att köra produktionsdistributionssteget igen vid den senaste körningen.
-* Omkörning är inte tillgängligt för push-uppdateringskörningar. Om den senaste körningen är en push-uppdateringskörning går det inte att utföra om.
-* Om den senaste körningen är en push-uppdateringskörning går det inte att utföra om.
+### Begränsningar {#limitations}
+
+* Det går bara att köra produktionsdistributionssteget på nytt för den senaste körningen.
+* Omkörning är inte tillgängligt för push-uppdateringskörningar.
+   * Om den senaste körningen är en push-uppdateringskörning går det inte att utföra om.
 * Om den senaste körningen misslyckades någon gång före produktionsdistributionssteget går det inte att utföra om.
 
-### Kör API igen {#Reexecute-API}
+### Kör API igen {#reexecute-API}
 
-### Identifiera en körning på nytt
+Förutom att vara tillgänglig i användargränssnittet kan du använda [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) för att utlösa omkörningar samt identifiera körningar som utlöstes som omkörningar.
 
-För att identifiera om en körning är en körning på nytt kan utlösarfältet undersökas. Dess värde är *RE_EXECUTE*.
+#### Utlösa en omkörning {#reexecute-deployment-api}
 
-### Utlösa en ny körning
+Gör en PUT-begäran till HAL Link om du vill utlösa en omkörning `https://ns.adobe.com/adobecloud/rel/pipeline/reExecute` i produktionsdistributionssteget.
 
-För att utlösa en omkörning måste en PUT-begäran göras till HAL Link &lt;()<https://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> i produktionsdistributionssteget. Om den här länken finns kan körningen startas om från det steget. Om den inte finns kan inte körningen startas om från det steget. I den första versionen finns den här länken aldrig kvar i produktionsdistributionssteget, men framtida versioner kan ha stöd för att starta pipeline från andra steg. Exempel:
+* Om den här länken finns kan körningen startas om från det steget.
+* Om den inte finns kan inte körningen startas om från det steget.
+
+Den här länken är bara tillgänglig för produktionsdistributionssteget.
 
 ```JavaScript
  {
@@ -190,7 +197,10 @@ För att utlösa en omkörning måste en PUT-begäran göras till HAL Link &lt;(
   "status": "FINISHED"
 ```
 
+Syntaxen för HAL-länkens href-värde är bara ett exempel. Det faktiska värdet ska alltid läsas från HAL-länken och inte genereras.
 
-Syntaxen för HAL-länkens _href_  värdet ovan är inte avsett att användas som referenspunkt. Det faktiska värdet ska alltid läsas från HAL-länken och inte genereras.
+Om du skickar en PUT-begäran till den här slutpunkten får du ett svar från 2010 om det lyckas, och svarstexten är representationen av den nya körningen. Det liknar att starta en vanlig körning via API:t.
 
-Skicka ett *PUT* begäran till den här slutpunkten resulterar i en *201* om det lyckas, och svarsdelen är representationen av den nya körningen. Det liknar att starta en vanlig körning via API:t.
+#### Identifiera en körning som utförts på nytt {#identify-reexecution}
+
+Körda körningar kan identifieras av värdet `RE_EXECUTE` i `trigger` fält.

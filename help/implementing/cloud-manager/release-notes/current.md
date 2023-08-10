@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2023.7.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2023.7.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2023.8.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2023.8.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 2721cb20083eeda7546513817f1ddfe12e9cb43a
+source-git-commit: d1640c14c796d7b7b6a7b236b38077e360559966
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2023.7.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2023.8.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-Den här sidan dokumenterar versionsinformationen för Cloud Manager version 2023.7.0 i AEM as a Cloud Service.
+Den här sidan dokumenterar versionsinformationen för Cloud Manager version 2023.8.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,20 +21,34 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager version 202
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2023.7.0 i AEM as a Cloud Service är 29 juni 2023. Nästa version är planerad till den 10 augusti 2023.
+Releasedatum för Cloud Manager version 2023.8.0 i AEM as a Cloud Service är 10 augusti 2023. Nästa version är planerad till den 7 september 2023.
 
 ## Nyheter {#what-is-new}
 
-* Kort på landningssidan för Cloud Manager anger nu om [förbättrad säkerhet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md) är aktiverat för sina program.
-* Om en utveckling [pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) innehåller inga teststeg, användare har nu möjlighet att inkludera teststeg när de [starta rörledningen.](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines)
-   * Detta kommer att introduceras stegvis.
-* När [avbryta utförande,](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) godkännandesteget för pipeline-körningen ber nu användaren ange en orsak till att den avbryts.
-   * Detta kommer att introduceras stegvis.
-* Användarna har nu åtkomst [loggar från innehållsprocessen.](/help/implementing/developing/tools/content-copy.md#accessing-logs)
-   * Det här alternativet är bara tillgängligt om både käll- och målmiljöerna är i AEM version `2023.7.12549` eller senare.
+* När en innehållsuppsättning konfigureras till [kopiera innehåll,](/help/implementing/developing/tools/content-copy.md) [kontextmedvetna konfigurationer](/help/implementing/developing/introduction/configurations.md) tillåts nu i innehållsuppsättningar i användargränssnittet.
+* Förbättringar har gjorts för att förbättra förståelsen och visningen av felmeddelanden i användargränssnittet i Cloud Manager.
+
+## Självbetjäning för att återställa material som tagits i förtid {#early-adoption}
+
+[En ny självbetjäningsfunktion för innehållsåterställning](/help/operations/restore.md) erbjuder nu säkerhetskopiering för återställning i upp till sju dagar och är tillgänglig för tidiga användare i utvärderingssyfte som omfattar:
+
+* Säkerhetskopiering vid bestämda tidpunkter för de senaste 24 timmarna
+* Återställningar i upp till sju dagar
+
+Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-restorefrombackup-adopter@adobe.com` via e-post som är kopplad till din Adobe ID. Observera:
+
+* Det tidiga adopterprogrammet är begränsat till utvecklingsmiljöer.
+* Tillgången till programmet för tidig användning är begränsad.
+* Den här funktionen används för att återställa innehåll som har tagits bort av misstag och är inte avsedd för katastrofåterställning.
 
 ## Felkorrigeringar {#bug-fixes}
 
-* När du navigerar till redigeringsgränssnittet från Cloud Manager går det inte längre att omdirigera till Unified Shell efter inloggningen.
-* När du redigerar live-datumet via GoLive-widgeten navigerar du nu till **Go Live** i stället för **Förbättrat skydd** -fliken.
-* När en kopieringsåtgärd startas kan en användare inte längre välja en miljö där en kopieringsåtgärd redan har anropats.
+* The **Miljö** menyn stängs nu när **[Kopiera innehåll](/help/implementing/developing/tools/content-copy.md)** modal.
+* [En omkörning av en pipeline](/help/implementing/cloud-manager/deploy-code.md#reexecute-deployment) tillåts inte längre om föregående körning inte har en `commitId` anges för byggfastillståndet.
+* Ett mer begripligt meddelande visas nu för sällsynta fel när en användare klickar på en pipeline i **Aktivitet** eller **Pipeline** skärmar.
+* The `contentSetName` värdet saknas inte längre i loggarna och anges nu i indata när en [innehållskopia](/help/implementing/developing/tools/content-copy.md) operation.
+* Under vissa sällsynta omständigheter är det inte längre möjligt att påbörja två exekveringar från samma pipeline, vilket leder till ett fastnat tillstånd.
+* När ett certifikat upphör att gälla kommer domännamn och IP-tillåtna listor som är kopplade till certifikatet inte längre att tas bort från CDN.
+   * I sådana fall kan webbplatsen fortfarande nås.
+   * [Användargränssnittet i Cloud Manager](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) ger mer synliga, avancerade varningar om att SSL-certifikatet snart upphör att gälla.
+* Ett problem med att AEM förlora åtkomst till en publiceringsslutpunkt har korrigerats i situationer när Sites läggs till som en lösning i ett program som bara innehåller resurser.
