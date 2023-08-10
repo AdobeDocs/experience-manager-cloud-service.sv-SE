@@ -2,7 +2,7 @@
 title: Använda reCAPTCHA i Adaptive Forms
 description: Lär dig hur du konfigurerar tjänsten Google reCAPTCHA i Adaptive Forms.
 topic-tags: adaptive_forms, author
-source-git-commit: a1689c61715f01cb4eb62882dbcd6e202b74ffc9
+source-git-commit: b4665d0291ee1223e46c8ecf13ca13ea336107d3
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 0%
@@ -207,7 +207,7 @@ Så här använder du reCAPTCHA i adaptiva former:
 > 
 > Markera inte **[!UICONTROL Default]** från listrutan Captcha-tjänst eftersom AEM CAPTCHA-tjänsten är inaktuell.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422097/adaptive-forms-recaptcha-core-components-captcha/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422641/recaptcha-google-adaptive-forms/?quality=12&learn=on)
 
 ### Visa eller dölj CAPTCHA-komponent baserat på regler {#show-hide-captcha}
 
