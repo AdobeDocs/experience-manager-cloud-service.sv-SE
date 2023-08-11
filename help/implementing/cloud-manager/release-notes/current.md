@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2023.8.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2023.8.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: d1640c14c796d7b7b6a7b236b38077e360559966
+source-git-commit: 99772a1a3faa454a9b07dd92c9e7622ddb37ce2d
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,11 @@ Releasedatum för Cloud Manager version 2023.8.0 i AEM as a Cloud Service är 10
 * När en innehållsuppsättning konfigureras till [kopiera innehåll,](/help/implementing/developing/tools/content-copy.md) [kontextmedvetna konfigurationer](/help/implementing/developing/introduction/configurations.md) tillåts nu i innehållsuppsättningar i användargränssnittet.
 * Förbättringar har gjorts för att förbättra förståelsen och visningen av felmeddelanden i användargränssnittet i Cloud Manager.
 
-## Självbetjäning för att återställa material som tagits i förtid {#early-adoption}
+## Tidig användning {#early-adoption}
+
+Bli en del av vårt program för tidig användning och få möjlighet att testa några kommande funktioner.
+
+### Självbetjäning för återställning av innehåll {#content-restore}
 
 [En ny självbetjäningsfunktion för innehållsåterställning](/help/operations/restore.md) erbjuder nu säkerhetskopiering för återställning i upp till sju dagar och är tillgänglig för tidiga användare i utvärderingssyfte som omfattar:
 
@@ -38,8 +42,16 @@ Releasedatum för Cloud Manager version 2023.8.0 i AEM as a Cloud Service är 10
 Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-restorefrombackup-adopter@adobe.com` via e-post som är kopplad till din Adobe ID. Observera:
 
 * Det tidiga adopterprogrammet är begränsat till utvecklingsmiljöer.
-* Tillgången till programmet för tidig användning är begränsad.
+* Tillgången till programmet för tidig användning av den här funktionen är begränsad.
 * Den här funktionen används för att återställa innehåll som har tagits bort av misstag och är inte avsedd för katastrofåterställning.
+
+### Kontrollpanelen för Experience Audit {#experience-audit-dashboard}
+
+[Kontrollpanelen för Experience Audit i Cloud Manager](/help/implementing/cloud-manager/experience-audit-dashboard.md) innehåller en trendvy över dina sidresultatspoäng tillsammans med insikter och rekommendationer som hjälper dig att förbättra dem. Experience Audit ingår som ett steg i Cloud Managers produktionsflöde.
+
+Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen källkod som förbättrar kvaliteten på dina webbprogram. Du kan köra det mot alla webbsidor, offentliga eller som kräver autentisering. Den har granskningar av prestanda, tillgänglighet, progressiva webbprogram, SEO med mera.
+
+Är du intresserad av att testa den nya instrumentpanelen? Skicka e-post till `aem-lighthouse-pilot@adobe.com` via ditt e-postmeddelande som är kopplat till din Adobe ID så kommer vi igång.
 
 ## Felkorrigeringar {#bug-fixes}
 
