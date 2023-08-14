@@ -2,9 +2,9 @@
 title: Post GoLive
 description: Lär dig hur du övervakar problem och förbättrar prestanda
 exl-id: 487f0b51-501b-48fc-a796-3cb8a6d64462
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 3784569086a786c6c25c0e3d6d0bb0ddbdd37e4b
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '477'
 ht-degree: 9%
 
 ---
@@ -15,10 +15,10 @@ ht-degree: 9%
 >id="aemcloud_golive_troubleshooting"
 >title="AEM"
 >abstract="Granska metodtips för kontinuerlig utveckling och hantera loggar tillsammans med verktyg som Developer Console och CRXDE Lite för att få hjälp med felsökning av AEM"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-logs.html" text="Komma åt och hantera loggar"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service utvecklingsverktyg"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs.html" text="Komma åt och hantera loggar"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service utvecklingsverktyg"
 
-Detta är den sista delen av resan, så du får lära dig att övervaka problem och förbättra resultatet när migreringen är klar. Du bör se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar.
+Den här resan är den sista delen, så du får lära dig att övervaka problem och förbättra prestanda när migreringen är klar. Du bör se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar.
 
 ## Story hittills {#story-so-far}
 
@@ -43,39 +43,39 @@ Se [Implementera för AEM as a Cloud Service](/help/implementing/developing/intr
 Som användare har du åtkomst till CRXDE Lite i utvecklingsmiljön, men inte i mellanlagring eller produktion.
 
 >[!IMPORTANT]
->Skriva till oföränderliga databaser som `/libs` och `/apps` vid körning resulterar i fel. Dessutom har du inte tillgång till utvecklarverktyg för staging- och produktionsmiljöer.
+>Skriva till oföränderliga databaser som `/libs` och `/apps` vid körning resulterar i fel. Du har inte heller tillgång till utvecklarverktyg för staging- och produktionsmiljöer.
 
-Se [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.md) om du vill lära dig hur du utvecklar AEM med CRXDE Lite.
+Se [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.md) om du vill ha mer information om hur du utvecklar AEM med CRXDE Lite.
 
 ## Hantera loggar {#managing-logs}
 
 Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
-Se [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) om du vill lära dig att komma åt och hantera loggar via användargränssnittet eller från API via Cloud Manager.
+Se [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) om du vill lära dig hur du får åtkomst till och hanterar loggar via användargränssnittet eller från API via Cloud Manager.
 
 ## Kontakta support {#contacting-support}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_support"
 >title="Hjälp och support"
->abstract="Kontakta vårt AEM supportteam för att få klargöranden eller för att ta itu med eventuella frågor."
+>abstract="Kontakta Adobe AEM supportteam för att få klargöranden eller ta itu med eventuella problem."
 >additional-url="https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html" text="Stöd för Experience Cloud"
 
 Om du har frågor om åtkomst till Cloud Service kan du kontakta din Adobe-representant eller [Stöd för Experience Cloud](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) för mer information.
 
 ## Dokumentinlärning {#document-learnings}
 
-När migreringen är klar bör du dokumentera de kunskaper som förvärvats under den här processen. Några frågor som kan underlätta dokumentationsprocessen är:
+När migreringen är klar dokumenterar du de kunskaper som förvärvats under den här processen. Några frågor som kan underlätta dokumentationsprocessen är:
 
 * Vad fungerade bra och vad gjorde det inte?
 * Vilka var de största smärtorna?
-* Recommendations vid en framtida migrering.
+* Recommendations om det finns en framtida migrering.
 
-Sedan bör ni dela dessa inlärningar med intressenter och team inom organisationen.
+Dela med dig av detta material till intressenter och team inom organisationen.
 
 ## Resan slutar - eller gör det? {#journey-ends}
 
-Grattis! Du har slutfört den AEM as a Cloud Service migreringsresan! Du bör förstå hur du:
+Grattis! Du har slutfört den AEM as a Cloud Service migreringsresan! Du bör förstå hur man gör:
 
 * Kom igång med att gå över till AEM as a Cloud Service
 * Kontrollera om distributionen är klar att flyttas till AEM as a Cloud Service
