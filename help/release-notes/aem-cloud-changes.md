@@ -1,6 +1,6 @@
 ---
-title: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
-description: Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service
+title: Betydande ändringar av Adobe Experience Manager (AEM) as a Cloud Service
+description: Betydande ändringar av Adobe Experience Manager (AEM) as a Cloud Service
 exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
 source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
 workflow-type: tm+mt
@@ -9,14 +9,14 @@ ht-degree: 8%
 
 ---
 
-# Betydande ändringar i Adobe Experience Manager (AEM) as a Cloud Service {#notable-changes-aem-cloud}
+# Betydande ändringar av Adobe Experience Manager (AEM) as a Cloud Service {#notable-changes-aem-cloud}
 
-AEM Cloud Service har många nya funktioner för  att administrera AEM-projekt. Det finns dock ett antal skillnader mellan AEM Sites på plats eller i Adobe Managed Service jämfört med AEM Cloud Service. Det här dokumentet visar de viktiga skillnaderna.
+AEM Cloud Service har många nya funktioner för  att administrera AEM-projekt. Det finns dock ett antal skillnader mellan AEM Sites på plats eller i Adobe Managed Service jämfört med AEM Cloud Service. I det här dokumentet markeras de viktiga skillnaderna.
 
 >[!CONTEXTUALHELP]
 >id="aem_cloud_notable_changes"
 >title="Betydande ändringar i AEM as a Cloud Service"
->abstract="På den här fliken kan du visa innehåll som hjälper dig att förstå skillnaderna mellan AEM lokalt eller i Adobes hanterade tjänster, jämfört med AEM as a Cloud Service."
+>abstract="På den här fliken kan du visa innehåll som hjälper dig att förstå skillnaderna mellan AEM lokalt, eller i Adobe Managed Services, jämfört med AEM as a Cloud Service."
 >additional-url="https://video.tv.adobe.com/v/330543" text="AEM as a Cloud Service utveckling"
 
 
@@ -53,10 +53,10 @@ Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddad. Funk
 
 * Inga ändringar i `/libs` tillåts överhuvudtaget.
    * Det här är inte en ny regel, men den har inte införts i tidigare lokala versioner av AEM.
-* Övertäckningar för områden i `/libs` som får överlappas fortfarande tillåts inom `/apps`.
+* Övertäckningar för områden i `/libs` som får övertäckas fortfarande tillåts inom `/apps`.
    * Sådana övertäckningar måste komma från Git via CI/CD-pipeline.
 * Designinformation för statiska mallar som lagras i `/apps` kan inte redigeras via användargränssnittet.
-   * Vi rekommenderar att du använder Redigerbara mallar i stället.
+   * Du bör använda Redigerbara mallar i stället.
    * Om statiska mallar fortfarande krävs måste konfigurationsinformationen komma från Git via CI/CD-flödet.
 * MSM Blueprint och anpassade MSM roll-out-konfigurationer måste installeras från Git via CI/CD-pipeline.
 * I18n-översättningsändringar måste komma från Git via CI/CD-pipeline.
@@ -74,8 +74,8 @@ Webbkonsolen, som användes i tidigare versioner av AEM för att ändra OSGi-pak
 
 Förutom ändringarna under `/home` på publiceringsnivån tillåts inte direkta ändringar i publiceringsdatabasen på AEM Cloud Service. I tidigare versioner av lokala AEM eller AEM på AMS kan kodändringar göras direkt till publiceringsdatabasen. Vissa begränsningar kan minskas på följande sätt:
 
-* För innehåll- och innehållsbaserad konfiguration: gör ändringarna i författarinstansen och publicerar dem.
-* För kod och konfiguration: gör ändringarna i GIT-databasen och kör CI/CD-flödet för att implementera dem.
+* För innehåll- och innehållsbaserad konfiguration: gör ändringarna i författarinstansen och publicera dem.
+* För kod och konfiguration: gör ändringarna i GIT-databasen och kör CI/CD-flödet för att köra dem.
 
 ## Anpassade runmodes tillåts inte {#custom-runmodes}
 
@@ -93,7 +93,7 @@ Följande körningslägen är färdiga för AEM Cloud Service:
 * `author.dev`
 * `publish.dev`
 
-Det går inte att använda ytterligare eller anpassade körningslägen i AEM Cloud Service.
+Ytterligare eller anpassade körningslägen är inte möjliga i AEM Cloud Service.
 
 ## Borttagning av replikeringsagenter och relaterade ändringar {#replication-agents}
 
