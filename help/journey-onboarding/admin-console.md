@@ -2,9 +2,9 @@
 title: Åtkomst till Admin Console
 description: När du har förstått de förberedelser som krävs för att komma igång och grunderna i AEMaaCS-strukturen är du redo att logga in på Admin Console för första gången.
 exl-id: 0ccce328-a356-4ba9-b7fe-f67abc25b924
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1104'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Som systemadministratör ansvarar du för att hantera användare i organisatione
 
 ## Admin Console {#admin-console}
 
-Adobe Admin Console är en central plats för att administrera och hantera licenser och användare för Adobe. Med Admin Console kan ni skapa och hantera användare på en och samma plats i stället för i era olika individuella lösningar.
+Adobe Admin Console är en central plats för att administrera och hantera licenser och användare för Adobe. Med Admin Console kan du skapa och hantera användare på en och samma plats i stället för i olika individuella lösningar.
 
 ## Adobe ID {#adobe-id}
 
@@ -36,7 +36,7 @@ När du som systemadministratör konfigurerar ditt team i Admin Console anger du
 
 Det finns tre typer av Adobe-ID:
 
-* **Personligt ID**: Det här är standardtypen av Adobe ID och skapas på adobe.com. Det här kontot hanteras av Adobe och alla kan skapa ett konto av den här typen.
+* **Personligt ID**: Detta är standardtypen av Adobe ID och skapas på adobe.com. Det här kontot hanteras av Adobe och alla kan skapa ett konto av den här typen.
 
 * **Enterprise ID**: Organisationer vill vanligtvis få bättre kontroll över användarnas konton. Endast systemadministratörer kan skapa Enterprise ID:n och organisationen äger dessa konton med Adobe som endast fungerar som värd.
 
@@ -50,11 +50,11 @@ Innan du kan använda Admin Console för att administrera användare i ditt team
 
 1. Som systemadministratör kommer du att få flera e-postmeddelanden från Adobe som en del av introduktionsprocessen. Leta efter det välkomstmeddelande som innehåller information om organisationens namn som du har beviljats åtkomst till.
 
-1. Klicka på **Kom igång** i välkomstmeddelandet för att navigera till Admin Console. Om du inte kan hitta e-postmeddelandet öppnar du en webbläsare direkt till Admin Console på [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
+1. Klicka på **Kom igång** i välkomstmeddelandet för att navigera till Admin Console. Om du inte hittar e-postmeddelandet öppnar du en webbläsare direkt till Admin Console på [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
    ![Välkomstmeddelande](/help/journey-onboarding/assets/get-started-email.png)
 
-1. Logga in med din Adobe ID. När inloggningen är klar visas **Översikt** Adobe Admin Console.
+1. Logga in med din Adobe ID. När inloggningen är klar visas **Ökning** Adobe Admin Console.
 
    ![Admin Console](/help/journey-onboarding/assets/get-started1.png)
 
@@ -66,7 +66,7 @@ Innan du kan använda Admin Console för att administrera användare i ditt team
 
    ![Granska administratörer](/help/journey-onboarding/assets/get-started2.png)
 
-1. När du har klickat på **Administratörer** från **Användare** kan du söka genom att ange Adobe ID e-postadress, användarnamn, förnamn eller efternamn.
+1. När du klickar på **Administratörer** från **Användare** kan du söka genom att ange Adobe ID e-postadress, användarnamn, förnamn eller efternamn.
 
    ![Sök efter användare](/help/journey-onboarding/assets/get-started3.png)
 
@@ -96,7 +96,7 @@ På fliken kan du skapa och hantera ärenden, chatta direkt med Adobe kundsuppor
 
 Nu när du har läst det här dokumentet bör du:
 
-* Förstå vad och Adobe ID är.
+* Förstå vad och vad Adobe ID är.
 * Du kan logga in på Admin Console.
 * Lär dig hur du granskar dina behörigheter som systemadministratör via Admin Console.
 * Ta reda på hur du kontaktar supporten för Adobe om du behöver hjälp.

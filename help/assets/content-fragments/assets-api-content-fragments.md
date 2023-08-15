@@ -3,9 +3,9 @@ title: Stöd för Adobe Experience Manager as a Cloud Service Content Fragments 
 description: Lär dig mer om stöd för innehållsfragment i Assets HTTP API, en viktig del AEM headless delivery feature.
 feature: Content Fragments,Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1784'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Resurser REST API erbjuder [REST](https://en.wikipedia.org/wiki/Representational
 
 Den använder `/api/assets` slutpunkten och kräver att sökvägen till resursen har åtkomst till den (utan radavståndet) `/content/dam`).
 
-* Det innebär att du kan få tillgång till resursen på:
+* Det innebär att du kan få tillgång till resursen på
    * `/content/dam/path/to/asset`
 * Du måste begära:
    * `/api/assets/path/to/asset`
@@ -84,7 +84,7 @@ HTTP-metoden avgör vilken åtgärd som ska utföras:
 
 >[!NOTE]
 >
->Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Definiera till exempel att en mapp eller en resurs ska skapas av en **POST** begäran.
+>Parametrarna för begärandeinnehåll och/eller URL kan användas för att konfigurera vissa av dessa åtgärder. Du kan till exempel definiera att en mapp eller en resurs ska skapas av en **POST** begäran.
 
 Det exakta formatet för begäranden som stöds definieras i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference) dokumentation.
 
@@ -94,7 +94,7 @@ Alla förfrågningar är atomiska.
 
 Detta innebär att följande (`write`) kan inte kombineras till en enda transaktion som kan lyckas eller misslyckas som en enskild enhet.
 
-### AEM (Resurser) REST API jämfört med AEM komponenter {#aem-assets-rest-api-versus-aem-components}
+### AEM (Resurser) REST API jämfört med AEM {#aem-assets-rest-api-versus-aem-components}
 
 <table>
  <thead>
@@ -117,7 +117,7 @@ Detta innebär att följande (`write`) kan inte kombineras till en enda transakt
   </tr>
   <tr>
    <td>Åtkomst</td>
-   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkt, mappad till <code>/content/dam</code> (i databasen).</p> 
+   <td><p>Kan nås direkt.</p> <p>Använder <code>/api/assets </code>slutpunkt, mappad till <code>/content/dam</code> (i databasen)</p> 
    <p>En exempelsökväg skulle se ut så här: <code>/api/assets/wknd/en/adventures/cycling-tuscany.json</code></p>
    </td>
     <td><p>Måste refereras via en AEM på en AEM.</p> <p>Använder <code>.model</code> för att skapa JSON-representationen.</p> <p>En exempelsökväg skulle se ut så här:<br/> <code>/content/wknd/language-masters/en/adventures/cycling-tuscany.model.json</code></p> 
@@ -125,7 +125,7 @@ Detta innebär att följande (`write`) kan inte kombineras till en enda transakt
   </tr>
   <tr>
    <td>Dokumentskydd</td>
-   <td><p>Flera alternativ är möjliga.</p> <p>OAuth föreslås. kan konfigureras separat från standardinställningarna.</p> </td>
+   <td><p>Flera alternativ är möjliga.</p> <p>OAuth föreslås; kan konfigureras separat från standardinställningen.</p> </td>
    <td>Använder AEM standardinställningar.</td>
   </tr>
   <tr>
@@ -135,8 +135,8 @@ Detta innebär att följande (`write`) kan inte kombineras till en enda transakt
   </tr>
   <tr>
    <td>Utdata</td>
-   <td>JSON-baserade SIREN-utdata: mycket, men kraftfullt. Tillåter navigering i innehållet.</td>
-   <td>JSON-baserade egna produkter. som kan konfigureras med Sling Models. Att navigera i innehållsstrukturen är svårt att implementera (men inte nödvändigtvis omöjligt).</td>
+   <td>JSON-baserade SIREN-utdata: utförlig, men kraftfull. Tillåter navigering i innehållet.</td>
+   <td>JSON-baserade egna utdata som kan konfigureras via Sling-modeller. Att navigera i innehållsstrukturen är svårt att implementera (men inte nödvändigtvis omöjligt).</td>
   </tr>
  </tbody>
 </table>
@@ -201,7 +201,7 @@ Svaret kommer att innehålla sidindelningsinformation som en del av `properties`
 
 Mappar fungerar som behållare för resurser och andra mappar. De återspeglar strukturen i AEM innehållsdatabas.
 
-Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, titel osv. Resurser visas som underordnade enheter till mappar och undermappar.
+Resursens REST API visar åtkomst till egenskaperna för en mapp, till exempel dess namn, titel osv. Resurser visas som underordnade enheter till mappar och undermappar.
 
 >[!NOTE]
 >
@@ -209,7 +209,7 @@ Resursens REST API ger åtkomst till en mapps egenskaper. till exempel namn, tit
 
 ### Assets {#assets}
 
-Om en resurs begärs returneras dess metadata. som titel, namn och annan information som definieras av respektive resursschema.
+Om en resurs begärs returnerar svaret dess metadata, till exempel titel, namn och annan information som definieras i respektive resursschema.
 
 Den binära informationen för en resurs visas som en SIREN-länk av typen `content`.
 
@@ -232,7 +232,7 @@ Innehållsfragment:
 
 #### Innehållsmodeller och innehållsfragment {#content-models-and-content-fragments}
 
-För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför *konsument* behöver känna till modellen för ett fragment (minst ett minimum), men den mesta informationen kan härledas från nyttolasten, som datatyper, osv. är en del av definitionen.
+För närvarande visas inte modellerna som definierar strukturen för ett innehållsfragment via ett HTTP-API. Därför *konsument* behöver känna till modellen för ett fragment (minst ett minimum), även om den mesta informationen kan härledas från nyttolasten, som datatyper osv. är en del av definitionen.
 
 Om du vill skapa ett nytt innehållsfragment måste modellens (interna databas) sökväg anges.
 
@@ -249,7 +249,7 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
    * Lagring och leverans från en AEM författarinstans bör räcka för program som ligger bakom brandväggen och mediabibliotek.
 
-   * För direktwebbleverans rekommenderas en publiceringsinstans AEM.
+   * För live-webbleverans rekommenderas en publiceringsinstans AEM.
 
 >[!CAUTION]
 >
@@ -257,19 +257,19 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
 >[!NOTE]
 >
->Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). I synnerhet [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
+>Mer information finns i [API-referens](/help/assets/content-fragments/assets-api-content-fragments.md#api-reference). Särskilt gäller följande: [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
 
 ## Begränsningar {#limitations}
 
 Det finns några begränsningar:
 
-* **Modeller för innehållsfragment stöds för närvarande inte**: kan inte läsas eller skapas. För att kunna skapa ett nytt, eller uppdatera ett befintligt, innehållsfragment, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
-* **Referenser ignoreras**. För närvarande finns det inga kontroller för om ett befintligt innehållsfragment refereras. Om du t.ex. tar bort ett innehållsfragment kan det leda till problem på en sida som innehåller en referens till det borttagna innehållsfragmentet.
+* **Modeller för innehållsfragment stöds för närvarande inte**: de kan inte läsas eller skapas. För att kunna skapa ett nytt, eller uppdatera ett befintligt, innehållsfragment, måste utvecklarna veta rätt sökväg till innehållsfragmentmodellen. För närvarande är det enda sättet att få en översikt över dessa genom administrationsgränssnittet.
+* **Referenser ignoreras**. För närvarande finns det inga kontroller för om ett befintligt innehållsfragment refereras. Om du tar bort ett innehållsfragment kan det därför leda till problem på en sida som innehåller en referens till det borttagna innehållsfragmentet.
 * **JSON-datatyp** REST API-utdata för *JSON-datatyp* är för närvarande *strängbaserade utdata*.
 
 ## Statuskoder och felmeddelanden {#status-codes-and-error-messages}
 
-Följande statuskoder kan visas under de relevanta omständigheterna:
+Följande statuskoder kan ses under de relevanta omständigheterna:
 
 * **200** (OK)
 

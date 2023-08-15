@@ -3,9 +3,9 @@ title: Ansluta en databas till [!DNL AEM Forms] as a Cloud Service?
 seo-title: AEM Forms Data Integration
 description: Du kan hämta och spara data till en RESTful-webbtjänst, SOAP-baserade webbtjänster och OData-tjänster från [!DNL AEM Forms] as a Cloud Service. Tjänsten tillhandahåller ett dedikerat verktyg för att hämta, testa, validera och skicka data till olika typer av datakällor.
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
@@ -46,9 +46,9 @@ När du har skapat en formulärdatamodell kan du använda den i olika arbetsflö
 
 ## Kom igång med dataintegrering {#get-started-with-data-integration}
 
-Det första steget för att implementera dataintegrering är att identifiera och konfigurera datakällor som lagrar information som du vill använda i Adaptiv Forms och interaktiva kommunikationssituationer. Därefter skapar du en formulärdatamodell som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms och interaktiv kommunikation baserat på en formulärdatamodell där fält eller platshållare för adaptiva formulär i interaktiv kommunikation är bundna till respektive egenskaper för datakälla.
+Det första steget för att implementera dataintegrering är att identifiera och konfigurera datakällor som lagrar information som du vill använda i Adaptiv Forms och interaktiva kommunikationssituationer. Därefter skapar du en formulärdatamodell som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms och interaktiv kommunikation baserat på en formulärdatamodell där adaptiva formulärfält eller platshållare i interaktiv kommunikation är bundna till respektive datakällans egenskaper.
 
-[!DNL AEM Forms] I kan du också skapa en formulärdatamodell som är oberoende av datakällor och senare associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen med datakällan. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell.
+[!DNL AEM Forms] I kan du även skapa en formulärdatamodell som är oberoende av datakällor och associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen med datakällan senare. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell.
 
 Läs följande för att komma igång, förstå och implementera dataintegrering.
 

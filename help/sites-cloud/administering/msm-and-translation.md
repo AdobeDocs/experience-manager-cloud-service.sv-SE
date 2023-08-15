@@ -4,9 +4,9 @@ description: Lär dig hur du återanvänder innehåll i hela projektet och hante
 feature: Administering
 role: Admin
 exl-id: a3d48884-081e-44f8-8055-ee3657757bfd
-source-git-commit: 1fc57dacbf811070664d5f5aaa591dd705516fa8
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -17,14 +17,14 @@ Adobe Experience Manager inbyggda verktyg för Multi Site Manager och översätt
 
 * Med Multi Site Manager (MSM) och dess Live Copy-funktioner kan du använda samma webbplatsinnehåll på flera platser samtidigt som du kan använda olika varianter:
    * [Återanvända innehåll: Multi Site Manager och Live Copy](msm/overview.md)
-* Översättning gör att du kan automatisera översättningen av sidinnehåll för att skapa och underhålla flerspråkiga webbplatser:
+* Med översättningen kan du automatisera översättningen av sidinnehåll för att skapa och underhålla flerspråkiga webbplatser:
    * [Översätta innehåll för flerspråkiga webbplatser](translation/overview.md)
 
 Dessa två funktioner kan kombineras för att passa för webbplatser som båda [multinationella och flerspråkiga](#multinational-and-multilingual-sites).
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll, se [Site Translation Journey](/help/journey-sites/translation/overview.md). Det är en guidad väg genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg. idealiskt om du inte har någon AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll, se [Site Translation Journey](/help/journey-sites/translation/overview.md). Det är en guidad väg genom att översätta ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg. Perfekt om du inte har någon erfarenhet av AEM eller översättning.
 
 ## Flerspråkiga och flerspråkiga webbplatser {#multinational-and-multilingual-sites}
 

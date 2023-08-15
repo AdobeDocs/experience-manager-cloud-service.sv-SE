@@ -2,9 +2,9 @@
 title: Lär dig grunderna i innehållsmodellering
 description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
 exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '903'
 ht-degree: 1%
 
 ---
@@ -38,14 +38,14 @@ AEM använder Content Fragments för att tillhandahålla de strukturer som behö
 
 Innehållsmodellens struktur är:
 
-* som realiseras av definitionen av din innehållsfragmentmodell,
+* som realiseras av definitionen av din Content Fragment Model,
 * används som bas för de innehållsfragment som används för att generera innehåll.
 
 >[!NOTE]
 >
 >Modellerna för innehållsfragment används också som bas för de AEM GraphQL-scheman som används för att hämta ditt innehåll - mer om det på Developer Journey.
 
-Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av GraphQL standard-API. Med AEM GraphQL API kan program utföra (komplexa) frågor på dina innehållsfragment, där varje fråga anpassas efter en viss modelltyp.
+Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av GraphQL standard-API. Med AEM-API:t för GraphQL kan program utföra (komplexa) frågor på dina innehållsfragment, där varje fråga anpassas efter en viss modelltyp.
 
 Det returnerade innehållet kan sedan användas av dina program.
 
@@ -66,7 +66,7 @@ Inom en modell:
 
 1. **Datatyper** gör att du kan definiera de enskilda attributen.
 Definiera till exempel fältet som innehåller en lärares namn som **Text** och deras tjänsteår som **Nummer**.
-1. Datatyperna **Innehållsreferens** och **Fragmentreferens** gör att du kan skapa relationer till annat innehåll i AEM.
+1. Datatyperna **Innehållsreferens** och **Fragmentreferens** kan du skapa relationer till annat innehåll i AEM.
 1. The **Fragmentreferens** datatypen gör att du kan realisera flera strukturnivåer genom att kapsla dina innehållsfragment (enligt modelltypen). Detta är viktigt för er innehållsmodellering.
 
 Till exempel:
@@ -130,11 +130,11 @@ Du kan till exempel ha definierat följande modeller för innehållsfragment:
 * Person
 * Utmärkelser
 
-Det verkar ganska okomplicerat, men ett företag har förstås både en koncernchef och anställda ....och dessa är alla människor, var och en definierade som en person.
+Det verkar ganska okomplicerat, men ett företag har förstås både en koncernchef och anställda ...och dessa är alla människor, var och en definierade som en person.
 
 Och en person kan ha en utmärkelse (eller kanske två).
 
-* Mitt företag - Företag
+* Mitt företag
    * VD - person
    * Medarbetare - person
       * Personliga utmärkelser - Utmärkelse

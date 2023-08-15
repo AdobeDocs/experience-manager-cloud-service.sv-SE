@@ -2,7 +2,7 @@
 title: Strukturpaket för AEM-projektdatabas
 description: Maven-projekt på Adobe Experience Manager as a Cloud Service kräver en definition av underpaketet Databasstruktur vars enda syfte är att definiera de JCR-databasrötter som projektets Code-underpaket distribueras till.
 exl-id: dec08410-d109-493d-bf9d-90e5556d18f0
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 2%
@@ -86,7 +86,7 @@ Se till att lägga till det nya Maven-delprojektet i de överordnade projekten `
                         Examples of complex roots
 
 
-                        Overlays of /libs typically require defining the overlayed structure, at each level here.
+                        Overlays of /libs typically require defining the overlay structure, at each level here.
 
                         For example, adding a new section to the main AEM Tools navigation, necessitates the following rules:
 
@@ -118,7 +118,7 @@ Se till att lägga till det nya Maven-delprojektet i de överordnade projekten `
 
 Om du vill använda databasstrukturpaketet refererar du det via alla kodpaket (de delpaket som distribueras till `/apps`) Maven projects via FileVault content package Maven plug-ins `<repositoryStructurePackage>` konfiguration.
 
-I `ui.apps/pom.xml`och andra kodpaket `pom.xml`s lägger du till en referens till projektets konfiguration av databasstrukturpaket (#database-structure-package) i plugin-programmet för FileVault-paketet Maven.
+I `ui.apps/pom.xml`och alla andra kodpaket `pom.xml`s lägger du till en referens till projektets konfiguration av databasstrukturpaket (#database-structure-package) i plugin-programmet för FileVault-paketet Maven.
 
 ```xml
 ...
@@ -162,7 +162,7 @@ Till exempel:
 + Kodpaket A distribuerar till `/apps/a`
 + Kodpaket B distribueras till `/apps/a/b`
 
-Om ett beroende på paketnivå inte har etablerats från kodpaket B i kodpaket A, kan kodpaket B distribueras först i `/apps/a`. Därefter kommer kodpaketet B, som distribueras till `/apps/a`. Resultatet blir att den tidigare installerade filen tas bort `/apps/a/b`.
+Om ett beroende på paketnivå inte har etablerats från kodpaket B i kodpaket A, kan kodpaket B distribueras först i `/apps/a`. Därefter följer kodpaketet B, som distribueras till `/apps/a`. Resultatet blir att den tidigare installerade filen tas bort `/apps/a/b`.
 
 I detta fall:
 

@@ -2,9 +2,9 @@
 title: Använda taggar
 description: Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats
 exl-id: d2a9f578-fe0a-48ea-851c-2c84463661e0
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '562'
 ht-degree: 6%
 
 ---
@@ -22,9 +22,9 @@ Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbpla
 1. **Ordna taggar** - När taggar organiserar innehåll organiserar hierarkiska taxonomier och namnutrymmen taggar.
 1. **Djupt sorterade taggar** - Med möjlighet att skapa taggar och undertaggar blir det möjligt att uttrycka hela taxonomiska system, som omfattar termer, undertermer och deras relationer. Detta gör att en andra (eller tredje) innehållshierarki kan skapas parallellt med den officiella.
 1. **Kontrollerad taggning** - Taggningen kan styras genom att behörigheter tillämpas på taggar och/eller namnutrymmen för att styra hur taggar skapas och används.
-1. **Flexibel taggning** - Taggar har många namn och ansikten: taggar, taxonomitermer, kategorier, etiketter och mycket annat. De är flexibla i sin innehållsmodell och i hur de kan användas. om du t.ex. anger målgrafik, kategoriserar och klassificerar innehåll eller skapar en sekundär innehållshierarki.
+1. **Flexibel taggning** - Taggar har många namn och ansikten: taggar, taxonomitermer, kategorier, etiketter och mycket annat. De är flexibla i sin innehållsmodell och i hur de kan användas, t.ex. när måldemografi kontureras, kategoriseras och klassificeras innehåll eller när en sekundär innehållshierarki skapas.
 1. **Förbättrad sökning** - Standardsökkomponenten i AEM innehåller i stort sett skapade taggar och använda taggar som du kan använda filter på för att begränsa resultaten till de som är relevanta.
-1. **SEO-aktivering** - Taggar som används som sidegenskaper visas automatiskt i metataggar på sidan så att de visas för sökmotorer.
+1. **Aktivera SEO** - Taggar som används som sidegenskaper visas automatiskt i metataggar på sidan så att de visas för sökmotorer.
 1. **Enkel sofistikering** - Taggar kan skapas från ett ord och med en knapptryckning. Därefter kan en titel, beskrivning och ett obegränsat antal etiketter läggas till för att ge taggen mer semantik.
 1. **Konsekvens för kärna** - Taggsystemet är en viktig komponent i AEM och används av alla AEM för att kategorisera innehåll. Programmeringsgränssnittet för taggning är även tillgängligt för utvecklare som skapar taggningsaktiverade program med tillgång till samma taxonomier.
 1. **Kombinerar struktur och flexibilitet** - AEM är idealiskt för att arbeta med strukturerad information på grund av inkapsling av sidor och banor. Det är lika kraftfullt när du arbetar med ostrukturerad information på grund av den inbyggda textsökningen. Taggning kombinerar styrkan hos både strukturen och flexibiliteten.

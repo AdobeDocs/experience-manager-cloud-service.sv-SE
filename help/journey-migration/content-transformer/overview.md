@@ -1,9 +1,9 @@
 ---
 title: Översikt över innehållstransformeraren
 description: Lär dig hur du identifierar och åtgärdar innehållsrelaterade problem som rapporteras av BPA med hjälp av Content Transformer.
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Innehållsomvandlaren kan hjälpa dig att lösa problem som kan uppstå under f�
 | DOPI | deprecated.ordered.index | Ta bort de föråldrade indexen. |
 | OAUI | non.migrated.oauth.users | Ta bort de här användarna för att se till att de inte migreras till AEM as a Cloud Service. |
 | PCX | page.complex.medium <br> page.complex.high | Ta bort sidor/underordnade sidor eller flytta dem till en annan plats för att vara säker på att de inte migreras till AEM as a Cloud Service. |
-| REP | forward.replication <br> reverse.replication <br> standard.replication.agent.modification <br> custom.replication.agent.detection | Ta bort de replikeringsagenter som nyligen har skapats. <br> ELLER <br> Ta bort de ändrade/tillagda egenskaperna. |
+| REP | forward.replication <br> reverse.replication <br> standard.replication.agent.modification <br> custom.replication.agent.detection | Ta bort de nyligen skapade replikeringsagenterna. <br> ELLER <br> Ta bort de ändrade/tillagda egenskaperna. |
 | URS | clientlibs.location <br> file.location <br> node.location <br> workflow.location | Gå till rätt plats för att undvika problem under migreringen. |
 | URS | node.size | Flytta noderna tillfälligt till`/etc/packages/content-transformation/paths` för att säkerställa att de inte migreras till AEM as a Cloud Service. |
 

@@ -5,9 +5,9 @@ description: Funderar du på att migrera adaptiva Forms och resurser till och fr
 seo-description: Looking to migrate Adaptive Forms and assets to and from an AEM instances? Learn here how to import and export Adaptive Forms, PDF forms, themes, and other supporting assets from an [!DNL AEM Forms] instance.
 topic-tags: forms-manager
 exl-id: f5105fb7-b8c0-4656-8095-b21d392746c0
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1143'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ Så här hämtar du formulär eller relaterade resurser:
 
 1. Logga in på [!DNL AEM Forms] -instans.
 1. Tryck **[!UICONTROL Adobe Experience Manager]** ![adobeexperienceManager](assets/adobeexperiencemanager.png) ikon > **[!UICONTROL Navigation]** ![kompass](assets/Smock_Compass_18_N.svg) ikon > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Markera resurserna och tryck på **[!UICONTROL Download]** ikon.
+1. Markera resurserna och tryck på **[!UICONTROL Download]** -ikon.
 1. Välj något av följande alternativ i Hämta resurser och tryck sedan på **[!UICONTROL Download]**.
 
    * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla markerade resurser och relaterade beroenden från en [!DNL AEM Forms] till en annan instans. Den hämtar alla resurser och mappar som ett CRX-paket, inklusive formulär som skapats i AEM (adaptiva Forms och adaptiva formulärfragment), formuläruppsättningar, formulärdatamodell, formulärmallar, PDF-dokument och refererade resurser (XSD-filer och bilder).
 Fördelen med att hämta resurser som ett paket är att det även hämtar refererade resurser. Om du till exempel har ett adaptivt formulär som använder en formulärmall, XSD och en bild. När du väljer det här adaptiva formuläret och hämtar det som ett paket innehåller det hämtade paketet även formulärmallen, XSD och bilden. Alla metadataegenskaper (inklusive anpassade egenskaper) som är kopplade till resursen hämtas också.
 
-   * **Hämta resurser som binära filer:** Använd alternativet om du bara vill hämta formulärmallar (XDP), PDF forms (PDF), dokument (PDF) och resurser (bilder, scheman, formatmallar). Du kan redigera dessa resurser med externa program. Det hämtar resurser som har binära filer, till exempel bilder, PDF och andra format som stöds som en ZIP-fil.
+   * **Hämta resurser som binära filer:** Använd alternativet om du bara vill hämta formulärmallar (XDP), PDF forms (PDF), dokument (PDF) och resurser (bilder, scheman, formatmallar). Du kan redigera dessa resurser med externa program. Det hämtar resurser som har binära filer, t.ex. bilder, PDF och andra format som stöds som en ZIP-fil.
 Du kan inte hämta adaptiva Forms, adaptiva formulärfragment, teman och formuläruppsättningar med **[!UICONTROL Download asset(s) as binary files]** alternativ. Om du vill hämta resurserna bör du använda **[!UICONTROL Download as CRX Package]** alternativ.
 
    De valda resurserna hämtas som ett arkiv (.zip-fil).
@@ -57,7 +57,6 @@ Så här överför du ett formulär eller en relaterad resurs:
    >
    > * När ett namn hamnar i konflikt med olika resurstyper ersätter inte överföring av ett paket den befintliga mapphierarkin. Om du t.ex. har ett adaptivt formulär som heter &#39;Utbildning&#39; på platsen /content/dam/formSanddocuments på en server. Du hämtar det adaptiva formuläret och överför det till en annan server. Den andra servern har också en mapp med namnet &quot;Training&quot; på samma plats /content/dam/formSanddocuments. Överföringen misslyckas.
    > * Endast en medlem i `form-power-user` kan överföra XDP-filer.
-
 
 
 ## Hämta ett tema {#downloading-a-theme}
@@ -150,7 +149,7 @@ You can import assets that are exported into a .cmp file. A .cmp file can have o
 
 ## Exportera ett arbetsflödesprogram {#export-a-workflow-application}
 
-Du kan använda pakethanteraren för att exportera arbetsflödesprogram. Anges nedan:
+Du kan använda pakethanteraren för att exportera arbetsflödesprogram. Proceduren är som anges nedan:
 
 1. Öppna [!DNL AEM Forms] pakethanteraren. URL för pakethanteraren är `https://[server]:[port]/crx/packmgr`.
 1. Klicka på **[!UICONTROL Create Package]**. The **[!UICONTROL New Package]** visas.
@@ -164,7 +163,7 @@ Du kan använda pakethanteraren för att exportera arbetsflödesprogram. Anges n
 
    >[!NOTE]
    >
-   >För att arbetsflödesprogrammet ska fungera korrekt exporterar du även motsvarande adaptiva formulär- och arbetsflödesmodell med arbetsprogrammet.
+   >För att arbetsflödesprogrammet ska fungera på rätt sätt exporterar du även motsvarande adaptiva formulär- och arbetsflödesmodell med arbetsprogrammet.
 
 ## Använd mappar för att ordna adaptiva Forms-, PDF forms- och samhörande resurser  {#folders-and-organizing-assets}
 
@@ -173,12 +172,12 @@ Du kan använda mappar för att ordna och ordna resurser. Genom att ordna dokume
 ### Skapa en mapp {#create-a-folder}
 
 1. Logga in på [!DNL AEM Forms] -instans.
-1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) ikon > navigering ![kompass](assets/Smock_Compass_18_N.svg) ikon> **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/Smock_Compass_18_N.svg) ikon> **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL Folder]**.
 1. Ange följande information:
 
    * **[!UICONTROL Title]**: Visningsnamn för mappen
-   * **[!UICONTROL Name]**: *(Obligatoriskt)* Nodnamnet som du vill lagra mappen under i databasen
+   * **[!UICONTROL Name]**: *(Obligatoriskt)* Det nodnamn under vilket du vill lagra mappen i databasen
 
    >[!NOTE]
    >
@@ -186,9 +185,9 @@ Du kan använda mappar för att ordna och ordna resurser. Genom att ordna dokume
 
 1. En ny mapp med den titel du har definierat visas på den aktuella platsen i resurslistan.
 
-   Om det finns en mapp med det angivna namnet misslyckas överföringen med ett fel. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/Smock_Alert_18_N.svg) -ikonen som visas bredvid namnfältet.
+   Om det finns en mapp med det angivna namnet misslyckas överföringen. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/Smock_Alert_18_N.svg) -ikonen som visas bredvid namnfältet.
 
-   Du kan trycka på den nyligen skapade mappen för att gå in i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet.
+   Du kan trycka på den nyligen skapade mappen för att gå in i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet på den.
 
 
 <!-- ### Create copies of one or more assets or letters {#create-copies-of-one-or-more-assets-or-letters}
@@ -208,7 +207,7 @@ Complete the following steps to create copies of assets and letters:
 
 ## Search {#search-forms}
 
-You ca use the top bar **[A]** to search your content. When you search for assets, a side panel is displayed. You can also tap ![assets-browser-content-only](assets/assets-browser-content-only.png) &gt; Filter **[B]** to invoke the side panel. Using the various filters in the side panel, you can narrow down your search. The side panel also allows you to save your searches.
+You ca use the top bar **[A]** to search your content. When you search for assets, a side panel is displayed. You can also tap ![assets-browser-content-only](assets/assets-browser-content-only.png) &gt; Filter **[B]** to invoke the side panel. Using the various filters in the side panel, you can narrow down your search. The side panel also lets you save your searches.
 
 ![search_topbar](assets/search_topbar.png)
 
@@ -224,6 +223,6 @@ On the side panel, you can use the following to narrow down your search results:
 * Tags
 * Search Criteria; for example, Modified Dates, Publish Status, LiveCopy Status.
 
-The side panel also allows you to save your search settings with names of your choice.
+The side panel also lets you save your search settings with names of your choice.
 
 For more information and instructions on using search, filters, saved search, and side panel, see [Search](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html). -->

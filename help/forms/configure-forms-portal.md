@@ -2,16 +2,16 @@
 title: Skapa en Forms Portal på en Experience Manager Sites-sida
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1757'
 ht-degree: 0%
 
 ---
 
 # List Adaptive Forms on a Portal {#publish-forms-on-portal}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -26,7 +26,7 @@ AEM Forms tillhandahåller portalkomponenter som minskar administrationskostnade
 
 Med Form Portal-komponenterna kan du lägga till följande funktioner:
 
-* Visa formulär i anpassade layouter. Utanför kartongen finns layouter för listvyn och kortvyn. Du kan skapa egna layouter.
+* Visa formulär i anpassade layouter. Layouter för listvyn och kortvyn medföljer. Du kan skapa egna layouter.
 * Gör att du kan visa anpassade metadata och anpassade åtgärder när du listar dem.
 * Visa en lista över formulär som publicerats av AEM Forms-gränssnittet på den publiceringsinstans där Forms Portal-komponenter används.
 * Tillåt slutanvändare att återge formulär i HTML och PDF.
@@ -39,9 +39,9 @@ Med Form Portal-komponenterna kan du lägga till följande funktioner:
 
 AEM Forms tillhandahåller följande portalkomponenter direkt:
 
-* Sök och visa: Med den här komponenten kan du lista formulär från formulärdatabasen på din portalsida, och du får konfigurationsalternativ för att lista formulär baserat på angivna villkor.
+* Sök och lista: Med den här komponenten kan du lista formulär från formulärdatabasen på din portalsida och du kan ange konfigurationsalternativ för att lista formulär baserat på angivna villkor.
 
-* Utkast och inskickat material: Medan komponenten Sök och Lister visar formulär som har publicerats av Forms författare, visar komponenten Utkast och inskickningar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Den här komponenten ger en personaliserad upplevelse till alla inloggade användare.
+* Utkast och inskickningar: Medan komponenten Sök och lista visar formulär som har publicerats av Forms-författare, visar komponenten Utkast och inskickningar formulär som har sparats som utkast för att fylla i senare och skickade formulär. Den här komponenten ger en personaliserad upplevelse till alla inloggade användare.
 
 * Länk: Med den här komponenten kan du skapa en länk till ett formulär var som helst på sidan.
 
@@ -82,7 +82,7 @@ Så här importerar du färdiga Forms Portal-komponenter på AEM Forms as a Clou
 
 ## Konfigurera Azure Storage för adaptiv Forms {#configure-azure-storage-adaptive-forms}
 
-[[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) innehåller [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Azure] för att möjliggöra arbetsflöden.
+[[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) innehåller [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Azure] server för att möjliggöra arbetsflöden.
 
 ### Skapa Azure Storage-konfiguration {#create-azure-storage-configuration}
 
@@ -98,7 +98,7 @@ Innan du utför dessa steg måste du se till att du har ett Azure-lagringskonto 
 Så här konfigurerar du Unified Storage Connector för AEM arbetsflöden:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Unified Storage Connector]**.
-1. I **[!UICONTROL Forms Portal]** avsnitt, markera **[!UICONTROL Azure]** från **[!UICONTROL Storage]** nedrullningsbar lista.
+1. I **[!UICONTROL Forms Portal]** avsnitt, markera **[!UICONTROL Azure]** från **[!UICONTROL Storage]** listruta.
 1. Ange [konfigurationssökväg för Azure-lagringskonfigurationen](#create-azure-storage-configuration) i **[!UICONTROL Storage Configuration Path]** fält.
 1. Tryck **[!UICONTROL Publish]** och sedan trycka **[!UICONTROL Save]** för att spara konfigurationen.
 
@@ -170,7 +170,7 @@ Följ stegen nedan för att skapa en&quot;Spara formulär&quot;-regel för en fo
 1. Tryck på [!UICONTROL Button] och sedan trycka på ![Ikonen Konfigurera](assets/configure_icon.png).
 1. Tryck på [!UICONTROL Edit Rules] om du vill öppna Regelredigeraren.
 1. Tryck **[!UICONTROL Create]** för att konfigurera och skapa regeln.
-1. I [!UICONTROL When] väljer du&quot;klickas&quot; och i [!UICONTROL Then] väljer du&quot;Spara formulär&quot;.
+1. I [!UICONTROL When] väljer du&quot;klickas&quot; och i [!UICONTROL Then] väljer du alternativet &quot;Spara formulär&quot;.
 1. Tryck **[!UICONTROL Done]** för att spara regeln.
 
 ### Aktivera Spara automatiskt {#enable-auto-save}

@@ -10,16 +10,16 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 exl-id: 16f86dae-86fb-481b-8978-b8898705ed7e
-source-git-commit: 86da8e784e3e5ff034efdb9186cf134d4b1c6e9c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2471'
+source-wordcount: '2467'
 ht-degree: 0%
 
 ---
 
 # Adaptiv Forms-redigerare {#introduction-to-authoring-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -69,7 +69,7 @@ När du skapar ett nytt eller redigerar ett befintligt adaptivt formulär använ
 
 ### Sidebar {#sidebar}
 
-Med sidofältet kan du
+Med sidofältet
 
 * Sök, visa och använd resurser i din AEM DAM-databas (Digital Asset Management).
 * Se formulärinnehåll som paneler, komponenter, fält och layout.
@@ -90,11 +90,11 @@ Sidlisten innehåller följande webbläsare:
 I innehållsläsaren kan du se:
 
    * **Formulärobjekt**
-Visar formulärets objekthierarki. Författaren kan navigera till en viss formulärkomponent genom att trycka på det elementet i formulärobjektträdet. Författaren kan söka efter objekt och ordna om dem från det här trädet.
+Visar objekthierarkin för formuläret. Författaren kan navigera till en viss formulärkomponent genom att trycka på det elementet i formulärobjektträdet. Författaren kan söka efter objekt och ordna om dem från det här trädet.
 
    * **Datamodellsobjekt**
 Här kan du se formulärmodellens hierarki.
-Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De tillagda elementen konverteras automatiskt till formulärkomponenter samtidigt som deras ursprungliga egenskaper behålls. Du kan se datamodellsobjekt när formuläret använder XML-schema, JSON-schema eller XDP-mall.
+Du kan dra och släppa formulärmodellelement i det adaptiva formuläret. De tillagda elementen konverteras automatiskt till formulärkomponenter samtidigt som deras ursprungliga egenskaper behålls. Du kan se datamodellsobjekt när formuläret använder XML-schema, JSON-schema eller XDP-mall.
 
 * **Egenskapswebbläsaren**
 
@@ -104,7 +104,7 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
 
 * **Resursläsaren**
 
-  Segmenterar olika typer av innehåll, t.ex. bilder, dokument, sidor, filmer och så vidare.
+  Segmenterar olika typer av innehåll som bilder, dokument, sidor, filmer och så vidare.
 
 * **Komponentwebbläsare**
 
@@ -178,7 +178,7 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
   </tr>
   <tr>
    <td>Bild</td>
-   <td>Gör att du kan infoga en bild.</td>
+   <td>Infoga en bild.</td>
   </tr>
   <tr>
    <td>Bildval</td>
@@ -230,11 +230,11 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
   </tr>
   <tr>
    <td>Signatursteg</td>
-   <td>Visar informationen i formuläret och signaturfälten som användaren kan använda för att verifiera och signera formuläret.</td>
+   <td>Visar informationen i formuläret och signaturfälten som användaren kan verifiera och signera.</td>
   </tr>
   <tr>
    <td>Text</td>
-   <td>Gör att du kan ange statisk text.</td>
+   <td>Här kan du ange statisk text.</td>
   </tr>
   <tr>
    <td>Skicka-knapp</td>
@@ -246,7 +246,7 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
   </tr>
   <tr>
    <td>Byt</td>
-   <td>Lägger till en växel som utför en åtgärd för att växla eller aktivera/inaktivera. Du kan inte lägga till fler än två alternativ i komponenten Switch. Eftersom en switch bara kan ha två värden: På eller av är obligatoriskt inte tillämpligt. Minst ett värde sparas oavsett användarens indata. <br /> </td>
+   <td>Lägger till en växel som utför en åtgärd för att växla eller aktivera/inaktivera. Du kan inte lägga till fler än två alternativ i komponenten Switch. Eftersom en switch bara kan ha två värden: På eller Av, är obligatoriskt inte tillämpligt. Minst ett värde sparas oavsett användarens indata. <br /> </td>
   </tr>
   <tr>
    <td>Tabell</td>
@@ -268,7 +268,7 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
   </tr>
   <tr>
    <td>Textruta </td>
-   <td><p>Lägger till en textruta där en användare kan ange nödvändig information. </p> <p>Komponenten Textruta accepterar som standard bara oformaterad text. Du kan aktivera en textrutekomponent för att acceptera RTF. En RTF-aktiverad textkomponent innehåller alternativ för att lägga till rubriker, ändra teckenformat (fet, kursiv, stryka under tecknen), skapa sorterade och osorterade listor, ändra textbakgrund och textfärg samt lägga till hyperlänkar. Aktivera alternativet<strong> Tillåt RTF</strong> i komponentegenskaperna.</p> </td>
+   <td><p>Lägger till en textruta där en användare kan ange nödvändig information. </p> <p>Komponenten Textruta accepterar som standard bara oformaterad text. Du kan aktivera en textrutekomponent för att acceptera RTF. En RTF-aktiverad textkomponent innehåller alternativ för att lägga till rubriker, ändra teckenformat (fet, kursiv, stryka under tecknen), skapa sorterade och osorterade listor, ändra textbakgrund och textfärg samt lägga till hyperlänkar. Om du vill aktivera RTF för en textruta aktiverar du<strong> Tillåt RTF</strong> i komponentegenskaperna.</p> </td>
   </tr>
   <tr>
    <td>Titel</td>
@@ -276,7 +276,7 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
   </tr>
   <tr>
    <td>Verifiera steg</td>
-   <td><p>Lägger till en platshållare som visar det ifyllda formuläret för verifiering av användaren.</p> <p><strong>Anteckning</strong>: Adaptiv form som innehåller Verifiera-komponenten stöder inte anonyma användare. Du bör inte heller använda komponenten Verify i ett adaptivt formulärfragment.</p> </td>
+   <td><p>Lägger till en platshållare som visar det ifyllda formuläret för verifiering av användaren.</p> <p><strong>Anteckning</strong>: Adaptiv form som innehåller komponenten Verify stöder inte anonyma användare. Du bör inte heller använda komponenten Verify i ett adaptivt formulärfragment.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -285,13 +285,13 @@ Du kan dra och släppa formulärmodellelement i det anpassade formuläret. De ti
 
 Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan förhandsgranska formuläret, ändra formuläregenskaper och redigera formulärlayouten. Du kan förhandsgranska formuläret när du redigerar det och göra ändringar i det. I verktygsfältet visas:
 
-* **Växla sidopanel** ![växlingspanel](assets/Smock_RailLeft_18_N.svg): Här kan du visa eller dölja sidofältet.
+* **Växla sidopanel** ![växlingspanel](assets/Smock_RailLeft_18_N.svg): Visa eller dölj sidofältet.
 
 * **Sidinformation** ![temaalternativ](assets/Smock_Properties_18_N.svg): Gör att du kan visa sidegenskaper, publicera/avpublicera ett formulär, starta ett formulärarbetsflöde och öppna formuläret i klassiskt gränssnitt.
 
-* **Emulator** ![linjal](assets/Smock_Devices_18_N.svg): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, till exempel surfplattor och telefoner.
+* **Emulator** ![linjal](assets/Smock_Devices_18_N.svg): Gör att du kan emulera formulärutseendet för olika visningsstorlekar, t.ex. surfplattor och telefoner.
 
-* **Redigera**: Här kan du välja andra lägen, till exempel: **[!UICONTROL Edit]**, **[!UICONTROL Style]**, **[!UICONTROL Developer]** och **[!UICONTROL Design]**.
+* **Redigera**: Gör att du kan välja andra lägen som: **[!UICONTROL Edit]**, **[!UICONTROL Style]**, **[!UICONTROL Developer]** och **[!UICONTROL Design]**.
 
    * **Redigera**: Här kan du redigera egenskaperna för formuläret och dess komponenter. Du kan till exempel lägga till en komponent, släppa en bild och ange obligatoriska fält.
    * **Stil**: Gör att du kan formatera utseendet på komponenter i formuläret. I stilläge kan du till exempel markera en panel och ange dess bakgrundsfärg.
@@ -303,11 +303,11 @@ Verktygsfältet längst upp på sidan innehåller alternativ som gör att du kan
 
       * **Design**. Gör att du kan aktivera eller inaktivera anpassade komponenter eller komponenter som inte finns med i sidofältet.
 
-* **Förhandsgranska**: Gör att du kan förhandsgranska hur formuläret ser ut när du publicerar det.
+* **Förhandsgranska**: Du kan förhandsgranska hur formuläret ser ut när du publicerar det.
 
 ### Komponentverktygsfältet {#component-toolbar}
 
-![Komponentverktygsfältet i pekrörelsegränssnittet](assets/component-toolbar.png)
+![Komponentverktygsfältet i pekgränssnittet](assets/component-toolbar.png)
 
 När du markerar en komponent visas ett verktygsfält där du kan arbeta med den. Du får alternativ för att klippa ut, klistra in, flytta och ange egenskaper för komponenterna. Dina alternativ är:
 
@@ -315,19 +315,19 @@ S.**Konfigurera**: När du trycker **[!UICONTROL Configure]** visas komponentege
 
 B.**Kopiera**: Du kan använda kopieringsalternativet för att kopiera en komponent och klistra in den på andra platser i formuläret. När du klistrar in en komponent får den inklistrade komponenten ett nytt elementnamn men behåller den kopierade komponentens egenskaper.
 
-C.**Klipp ut**: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i det adaptiva formuläret.
+C.**Klipp ut**: Du kan använda alternativet Klipp ut för att flytta en komponent från en plats till en annan i den adaptiva formen.
 
-D. **Ta bort**: Gör att du kan ta bort komponenten från formuläret.
+D. **Ta bort**: Du kan ta bort komponenten från formuläret.
 
 E. **Infoga**: Gör att du kan infoga en komponent ovanför den markerade komponenten.
 
 F. **Klistra in**: Gör att du kan klistra in komponenten som du klipper ut eller kopierar med alternativen som beskrivs ovan.
 
-G. **Redigera regler**: Gör att du kan öppna regelredigeraren. Mer information finns i <!-- see [Rule Editor](rule-editor.md). -->
+G. **Redigera regler**: Du kan öppna regelredigeraren. Mer information finns i <!-- see [Rule Editor](rule-editor.md). -->
 
 H. **Grupp**: Gör att du kan markera flera komponenter om du vill klippa ut, kopiera eller klistra in mer än en komponent tillsammans.
 
-Jag. **Överordnad**: Gör att du kan välja en komponents överordnade. Ett textfält ligger till exempel i ett underavsnitt som finns i ett avsnitt. Avsnittet finns i stödlinjens rotpanel och behållaren för adaptiv form är överordnad en stödlinjens rotpanel. För en komponent kan du se alla alternativ med hierarkin sorterad längst ned.
+Jag. **Överordnad**: Gör att du kan välja överordnad för en komponent. Ett textfält ligger till exempel i ett underavsnitt som finns i ett avsnitt. Avsnittet finns i stödlinjens rotpanel och behållaren för adaptiv form är överordnad en stödlinjens rotpanel. För en komponent kan du se alla alternativ med hierarkin sorterad längst ned.
 
 Om du till exempel trycker **[!UICONTROL Parent]** för en textruta ser du:
 
@@ -352,11 +352,11 @@ Sidan Adaptiv form är den faktiska formen. Det är som vilken annan WCM-sida so
 
 Innehållsstrukturen innehåller vanligtvis följande primära komponenter:
 
-* **guideContainer**: Roten i ett adaptivt formulär, som markerats som **[!UICONTROL Start of Adaptive Form]** i gränssnittet för adaptiv form. I den här komponenten kan du ange:
+* **guideContainer**: Roten i ett adaptivt formulär, som markeras som **[!UICONTROL Start of Adaptive Form]** i gränssnittet för adaptiv form. I den här komponenten kan du ange:
 
    * *Mobil layout för det adaptiva formuläret*: Definierar formulärets utseende på mobila enheter.
    * *Tack*: Definierar sidan där användaren omdirigeras efter att formuläret har skickats.
-   * *Skicka åtgärd*: Definierar hur formuläret ska bearbetas på servern när användaren skickar formuläret.
+   * *Skicka åtgärd*: Definierar hur formuläret ska bearbetas på servern när användaren skickar in formuläret.
    * *Stilar*: Anger sökvägen till CSS-filen som används för att anpassa formulärets utseende.
 
 * **rootPanel:** Rotpanelen i ett adaptivt formulär. Den kan innehålla underpaneler under objektnoden. Varje panel, inklusive rotpanelen, kan ha en tillhörande layout. Panelens layout bestämmer hur formuläret placeras. I dragspelslayouten placeras till exempel objekten som dragspelssteg.

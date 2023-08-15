@@ -2,9 +2,9 @@
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1536'
 ht-degree: 1%
 
 ---
@@ -33,8 +33,8 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
   ![Meddelanden i inkorgen](/help/sites-cloud/authoring/assets/workflows-inbox.png)
 
 * När du använder sidredigeraren visas statusfältet:
-   * Namnet på det eller de arbetsflöden som ska användas på sidan. till exempel Begär aktivering.
-   * Alla åtgärder som är tillgängliga för den aktuella användaren för det aktuella steget i arbetsflödet. till exempel Fullständig, Delegera, Visa information.
+   * Namnet på arbetsflödet eller arbetsflödena som används på sidan, till exempel Begäran om aktivering.
+   * Alla åtgärder som är tillgängliga för den aktuella användaren för det aktuella steget i arbetsflödet, till exempel Fullständigt, Delegera, Visa information.
    * Antalet arbetsflöden som sidan är underställd. Du kan:
       * Använd vänster-/högerpilarna för att navigera i statusinformationen för de olika arbetsflödena.
       * klicka/tryck på det faktiska numret för att öppna en listruta med alla tillämpliga arbetsflöden och välj sedan det arbetsflöde som du vill visa i statusfältet.
@@ -43,7 +43,7 @@ När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas o
 
   >[!NOTE]
   >
-  >Statusfältet är endast synligt för användare med arbetsflödesbehörighet. till exempel medlemmar i `workflow-users` grupp.
+  >Statusfältet är bara synligt för användare med arbetsflödesbehörighet, till exempel för medlemmar i `workflow-users` grupp.
   >
   >
   >Åtgärder visas när den aktuella användaren är direkt involverad i det aktuella steget i arbetsflödet.
@@ -58,8 +58,8 @@ Du kan slutföra ett objekt så att arbetsflödet kan fortsätta till nästa ste
 
 På den här åtgärden kan du ange:
 
-* **Nästa steg**: nästa steg som skall tas, du kan välja från en lista
-* **Kommentar**: om det behövs
+* **Nästa steg**: nästa steg som ska tas; du kan välja från en lista
+* **Kommentar**: om obligatoriskt
 
 Du kan slutföra ett deltagarsteg från:
 
@@ -74,7 +74,7 @@ Gör så här för att slutföra arbetsuppgiften:
 
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
-1. Välj **Slutförd** i verktygsfältet.
+1. Välj **Complete** i verktygsfältet.
 1. The **Slutför arbetsuppgift** öppnas. Välj **Nästa steg** i listrutan och lägg till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
@@ -83,7 +83,7 @@ Gör så här för att slutföra arbetsuppgiften:
 Gör så här för att slutföra arbetsuppgiften:
 
 1. Öppna [sida för redigering](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#opening-a-page-for-editing).
-1. Välj **Slutförd** i statusfältet högst upp.
+1. Välj **Complete** i statusfältet högst upp.
 1. The **Slutför arbetsuppgift** öppnas. Välj **Nästa steg** i listrutan och lägg till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
@@ -117,8 +117,8 @@ Vilka användare som är tillgängliga för delegering beror på vem som har til
 
 På den här åtgärden kan du ange:
 
-* **Användare**: den användare du vill delegera till, du kan välja från en lista
-* **Kommentar**: om det behövs
+* **Användare**: den användare du vill delegera till; du kan välja i en lista
+* **Kommentar**: om obligatoriskt
 
 Du kan delegera ett deltagarsteg från antingen:
 
@@ -167,8 +167,8 @@ Om du upptäcker att ett steg, eller en serie steg, måste upprepas, kan du steg
 
 På den här åtgärden kan du ange:
 
-* **Föregående steg**: Det steg som ska återföras till. du kan välja från en lista
-* **Kommentar**: om det behövs
+* **Tidigare steg**: det steg som du vill returnera till; du kan välja från en lista
+* **Kommentar**: om obligatoriskt
 
 Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 
@@ -183,8 +183,8 @@ Använd följande procedur för att stega bakåt:
 
 1. Öppna **[AEM](/help/sites-cloud/authoring/getting-started/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (tryck/klicka på miniatyrbilden).
-1. Välj **Stega bakåt** för att öppna dialogrutan.
-1. Ange **Föregående steg** och lägga till en **Kommentar** vid behov.
+1. Välj **Gå bakåt** för att öppna dialogrutan.
+1. Ange **Tidigare steg** och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Utför steg tillbaka på deltagarsteget - sidredigeraren {#performing-step-back-on-a-participant-step-page-editor}
@@ -192,8 +192,8 @@ Använd följande procedur för att stega bakåt:
 Använd följande procedur för att stega bakåt:
 
 1. Öppna [sida för redigering](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#opening-a-page-for-editing).
-1. Välj **Stega bakåt** i statusfältet högst upp.
-1. Ange **Föregående steg** och lägga till en **Kommentar** vid behov.
+1. Välj **Gå bakåt** i statusfältet högst upp.
+1. Ange **Tidigare steg** och lägga till en **Kommentar** vid behov.
 1. Använd **OK** för att slutföra steget (eller **Avbryt** för att avbryta åtgärden).
 
 #### Stega bakåt i ett deltagarsteg - tidslinje {#performing-step-back-on-a-participant-step-timeline}
@@ -219,7 +219,7 @@ Arbetsflödesinformationen visas i flikar och lämpliga åtgärder är tillgäng
 
 * **ARBETSOBJEKT** tab:
 
-  ![Fliken ARBETSOBJEKT](/help/sites-cloud/authoring/assets/workflows-work-item.png)
+  ![Fliken WORKITEM](/help/sites-cloud/authoring/assets/workflows-work-item.png)
 
 * **INFORMATION OM ARBETSFLÖDE** tab:
 
@@ -259,7 +259,7 @@ Så här öppnar du ett arbetsflödesobjekt och visar information:
 
 ### Visa arbetsflödets nyttolast (flera resurser) {#viewing-the-workflow-payload-multiple-resources}
 
-Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstansen. Till att börja med visas resurserna i paketet, så kan du gå ned i detalj och visa de enskilda sidorna.
+Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstansen. Till att börja med visas resurserna i paketet, så kan du gå ned på detaljnivå för att visa de enskilda sidorna.
 
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 

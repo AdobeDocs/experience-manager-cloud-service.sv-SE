@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.11.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.11.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 86f8ddd1-af51-4874-9111-0935b5a162c1
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1053'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.11.0) är 16 december 2021.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.11.0) är 16 december 2021.
 Följande version (2022.1.0) är den 3 februari 2022.
 
 ## Släpp video {#release-video}
@@ -48,7 +48,7 @@ Ta en titt på [Versionsöversikt december 2021](https://video.tv.adobe.com/v/33
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra AEM arbetsflödesdata (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
+* **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra data AEM arbetsflöden (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
@@ -63,7 +63,7 @@ Ta en titt på [Versionsöversikt december 2021](https://video.tv.adobe.com/v/33
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
 * Utökade myAccount-komponenter som baseras på Commerce:s utökningsbara Premiere-komponenter
 
@@ -93,7 +93,7 @@ Nästa version är planerad till 9 december 2021.
 
 * Git-implementerings-ID visas nu i körningsinformationen för pipeline, vilket gör det enklare att spåra koden som skapades.
 
-* Nu kan du skapa program via offentligt exponerade API:er.
+* Nu kan du skapa program via offentligt exponerade API.
 
 * Miljöskapande är nu tillgängligt via offentligt exponerade API.
 

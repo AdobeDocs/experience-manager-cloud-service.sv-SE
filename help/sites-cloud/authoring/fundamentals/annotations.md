@@ -2,9 +2,9 @@
 title: Lägga till sidanteckningar
 description: Använd anteckningsläget för att lämna anteckningar och skisser på sidor på samma sätt som du använder anteckningar för att underlätta granskning av innehåll
 exl-id: a9cb9745-8140-4795-a5f9-fb3a1a299bd8
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Förutom att visa anteckningarna kan du i anteckningsläget skapa, redigera, fly
 
 1. [Starta anteckningsläge](#annotate-mode) på sidan.
 
-1. Klicka eller tryck på ikonen Lägg till anteckning (plus symbol till vänster i verktygsfältet) för att börja lägga till anteckningar.
+1. Klicka på eller tryck på ikonen Lägg till anteckning (plus symbol till vänster i verktygsfältet) för att börja lägga till anteckningar.
 
 1. Klicka eller tryck på den nödvändiga komponenten (komponenter som kan kommenteras markeras med en blå ram) för att lägga till anteckningen och öppna dialogrutan:
 

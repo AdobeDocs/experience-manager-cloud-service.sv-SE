@@ -2,9 +2,9 @@
 title: Publicera sidor
 description: Lär dig hur du publicerar och avpublicerar sidor med olika mekanismer i AEM.
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1804'
 ht-degree: 5%
 
 ---

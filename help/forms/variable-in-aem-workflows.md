@@ -2,9 +2,9 @@
 title: Hur lägger jag till variabler i AEM?
 description: Lär dig skapa en variabel, ange ett värde för variabeln och använda den i [!DNL AEM Forms] Arbetsflödessteg.
 exl-id: d9139ea9-2f86-476c-8767-b36766790f2c
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2065'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ I AEM arbetsflödesmodeller kan du:
 
 * [Skapa en variabel](variable-in-aem-workflows.md#create-a-variable) av en datatyp som baseras på den informationstyp som du vill lagra i den.
 * [Ange ett värde för variabeln](variable-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
-* [Använd variabeln](variable-in-aem-workflows.md#use-a-variable) i alla [!DNL AEM Forms] Arbetsflödessteg för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
+* [Använda variabeln](variable-in-aem-workflows.md#use-a-variable) i alla [!DNL AEM Forms] Arbetsflödessteg för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
 
 I följande video visas hur du kan skapa, ange och använda variabler i AEM arbetsflödesmodeller:
 
@@ -43,7 +43,7 @@ Du skapar variabler med hjälp av avsnittet Variabler som är tillgängliga i ar
 
 Använd datatypen ArrayList för att skapa variabelsamlingar. Du kan skapa en ArrayList-variabel för alla primitiva och komplexa datatyper. Skapa till exempel en ArrayList-variabel och välj String som undertyp för att lagra flera strängvärden med variabeln.
 
-Så här skapar du en variabel:
+Skapa en variabel:
 
 1. Navigera AEM till Verktyg ![Hammerikon](assets/hammer-icon.svg) > Arbetsflöde > Modeller.
 1. Tryck **[!UICONTROL Create]** och ange arbetsflödesmodellens titel och valfria namn. Markera modellen och tryck på **[!UICONTROL Edit]**.
@@ -52,7 +52,7 @@ Så här skapar du en variabel:
    ![Lägg till variabel](assets/variables_add_variable_new.png)
 
 1. I dialogrutan Lägg till variabel anger du namnet och väljer variabeltyp.
-1. Välj datatyp från **[!UICONTROL Type]** och ange följande värden:
+1. Välj datatyp på menyn **[!UICONTROL Type]** och ange följande värden:
 
    * Primitiv datatyp - Ange ett valfritt standardvärde för variabeln.
    * JSON eller XML - Ange en JSON- eller XML-schemasökväg (tillval). Systemet validerar schemasökvägen när egenskaper som är tillgängliga i schemat mappas och lagras till en annan variabel.
@@ -77,7 +77,7 @@ Beroende på variabelns datatyp kan du använda följande alternativ för att an
 
 * **Literal:** Använd alternativet när du vet exakt vilket värde du ska ange. Du kan också använda alternativet för att ange en JSON i form av en sträng.
 
-* **Uttryck:** Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i den angivna uttrycksredigeraren.
+* **Uttryck:** Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i angiven uttrycksredigerare.
 
 * **JSON-punktnotation:** Använd alternativet för att hämta ett värde från en JSON- eller FDM-typvariabel.
 * **XPATH:** Använd alternativet för att hämta ett värde från en XML-typvariabel.
@@ -102,7 +102,7 @@ Så här lägger du till mappning mellan variabler:
 
 Välj en variabel av XML-typ för att lagra en XML-fil. Fråga XML-variabeln för att ange värdet för en strängvariabel för egenskapen som är tillgänglig i XML-filen. Använd **Ange XPATH för XML-variabeln** fält för att definiera egenskapen som ska lagras i strängvariabeln.
 
-I det här exemplet väljer du **formdata** XML-variabel som lagrar **cc-app.xml** -fil. Fråga **formdata** variabel som anger värdet för **e-postadress** strängvariabel som lagrar värdet för **emailAddress** egenskapen finns i **cc-app.xml** -fil.
+I det här exemplet väljer du en **formdata** XML-variabel som lagrar **cc-app.xml** -fil. Fråga **formdata** variabel för att ange värdet för **e-postadress** strängvariabel som lagrar värdet för **emailAddress** egenskapen finns i **cc-app.xml** -fil.
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "Ange värdet för en variabel")
 
@@ -153,11 +153,11 @@ Steget Gå till, eller Dela, och alla [!DNL AEM Forms] Arbetsflödessteg stöder
 
 Med ELLER-delning skapas en delning i arbetsflödet, varefter endast en gren är aktiv. I det här steget kan du lägga in sökvägar för villkorlig bearbetning i arbetsflödet. Du kan lägga till arbetsflödessteg i varje gren efter behov.
 
-Du kan definiera routningsuttryck för en gren med hjälp av en regeldefinition, ett ECMA-skript eller ett externt skript.
+Du kan definiera routningsuttryck för en gren med en regeldefinition, ett ECMA-skript eller ett externt skript.
 
 Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget ELLER Dela finns i [ELLER Dela upp steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem#or-split).
 
-I det här exemplet ska du använda [exempel 2](variable-in-aem-workflows.md#example2) för att ange värdet för **totalvärde** variabel. Gren 1 är aktiv om värdet för **totalvärde** variabeln är större än 50000. På samma sätt kan du definiera en regel som gör grenen 2 aktiv om värdet för **totalvärde** variabeln är mindre än 50000.
+I det här exemplet ska du använda [exempel 2](variable-in-aem-workflows.md#example2) för att ange värdet för **totalvärde** variabel. Gren 1 är aktiv om värdet för **totalvärde** är större än 50000. På samma sätt kan du definiera en regel som gör grenen 2 aktiv om värdet för **totalvärde** är mindre än 50000.
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
@@ -230,7 +230,7 @@ Du kan använda ett API för att ange variabler och skicka dem för att anropa a
 
 [workflowSession.startWorkflow](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) I används model, wfData och metaData som argument. Använd MetaDataMap för att ange värdet för variabeln.
 
-I det här API:t **variableName** variabeln är inställd på **value** med metaData.put(variableName, value);
+I denna API **variableName** variabeln är inställd på **value** med metaData.put(variableName, value);
 
 ```javascript
 import com.adobe.granite.workflow.model.WorkflowModel;
@@ -275,7 +275,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 
 Ta bort alla referenser till variabeln från arbetsflödet innan du tar bort variabeln. Kontrollera att variabeln inte används i arbetsflödet.
 
-Så här tar du bort en variabel:
+Ta bort en variabel:
 
 1. Tryck på ikonen Variabler i sidledaren i arbetsflödesmodellen på sidan Redigera arbetsflöde. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
 1. Tryck på ikonen Ta bort bredvid variabelnamnet som du vill ta bort.

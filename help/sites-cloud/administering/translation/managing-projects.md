@@ -4,16 +4,16 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '4078'
+source-wordcount: '4077'
 ht-degree: 0%
 
 ---
 
 # Hantera översättningsprojekt {#managing-translation-projects}
 
-Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-cloud/authoring/projects/overview.md) som innehåller resurser som ska översättas till andra språk. Dessa resurser är sidorna och resurserna i [språkversioner](preparation.md) som har skapats från överordnad.
+Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-cloud/authoring/projects/overview.md) som innehåller resurser som ska översättas till andra språk. Dessa resurser är sidorna och resurserna i [språkversioner](preparation.md) som har skapats från språkinställaren.
 
 >[!TIP]
 >
@@ -37,7 +37,7 @@ AEM identifierar om ett översättningsprojekt skapas för den inledande övers�
    * När den översatta sidan importeras till AEM, skrivs sidan över vid start.
    * Den översatta sidan skriver bara över språkkopian när startsidan höjs.
 
-Till exempel `/content/wknd/fr` språkrot skapas för den franska översättningen av `/content/wknd/en` överordnad språk. Det finns inga andra sidor i den franska språkversionen.
+Till exempel `/content/wknd/fr` språkrot skapas för den franska översättningen av `/content/wknd/en` huvudspråk. Det finns inga andra sidor i den franska språkversionen.
 
 * Ett översättningsprojekt skapas för `/content/wknd/en/products` sida och alla underordnade sidor, med den franska språkkopian som mål. Eftersom språkkopian inte innehåller `/content/wknd/fr/products` AEM kopierar omedelbart `/content/wknd/en/products` och alla underordnade sidor till den franska språkkopian. Kopiorna ingår också i översättningsprojektet.
 * Ett översättningsprojekt skapas för `/content/wknd/en` sida och alla underordnade sidor, med den franska språkkopian som mål. Eftersom språkkopian innehåller den sida som motsvarar `/content/wknd/en` (språkroten), AEM kopierar `/content/wknd/en` och alla underordnade sidor och lägger till dem i en programstart. Kopiorna ingår också i översättningsprojektet.
@@ -48,7 +48,7 @@ Till exempel `/content/wknd/fr` språkrot skapas för den franska översättning
 
 ### Skapa översättningsprojekt med referenspanelen {#creating-translation-projects-using-the-references-panel}
 
-Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för översättning av språkresurserna på din överordnad. När du skapar projekt anger du sidan på det språk-överordnad som du översätter och de språkkopior som du utför översättningen för:
+Skapa översättningsprojekt så att du kan köra och hantera arbetsflödet för översättning av resurserna i din språkinställning. När du skapar projekt anger du sidan i den språkmall som du översätter och de språkkopior som du utför översättningen för:
 
 * Molnkonfigurationen för översättningsintegreringsramverket som är associerat med den valda sidan avgör många egenskaper för översättningsprojekten, till exempel översättningsarbetsflödet som ska användas.
 * Ett projekt skapas för varje vald språkkopia.
@@ -87,7 +87,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
       * Om du väljer flera språk skapas ett projekt med ett översättningsjobb för varje språk.
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du **Markera alla undersidor**. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
    * För **Projekt**, markera **Skapa översättningsprojekt**.
-   * Valfritt för **Överordnad projekt** väljer du ett projekt som användarroller och behörigheter ska ärvas från.
+   * Valfritt för **Projektmall** väljer du ett projekt som användarroller och behörigheter ska ärvas från.
    * I **Titel** skriv ett namn för projektet.
 
    ![Skapa översättningsprojekt](../assets/create-translation-project.png)
@@ -107,7 +107,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
    * Om du vill översätta den markerade sidan och alla underordnade sidor väljer du **Markera alla undersidor**. Om du bara vill översätta den markerade sidan avmarkerar du alternativet.
    * För **Projekt**, markera **Skapa översättningsprojekt**.
-   * Valfritt för **Överordnad projekt** väljer du ett projekt som användarroller och behörigheter ska ärvas från.
+   * Valfritt för **Projektmall** väljer du ett projekt som användarroller och behörigheter ska ärvas från.
    * I **Titel** skriv ett namn för projektet.
 
    ![Skapa projekt för att uppdatera språkkopior](../assets/create-update-language-copies-project.png)
@@ -116,7 +116,7 @@ Efter översättning kan du [granska översättningen](#reviewing-and-promoting-
 
 ### Lägga till sidor i ett översättningsprojekt {#adding-pages-to-a-translation-project}
 
-När du har skapat ett översättningsprojekt kan du använda **Resurser** för att lägga till sidor i projektet. Det är praktiskt att lägga till sidor när du inkluderar sidor från olika grenar i samma projekt.
+När du har skapat ett översättningsprojekt kan du använda **Resurs** för att lägga till sidor i projektet. Det är praktiskt att lägga till sidor när du inkluderar sidor från olika grenar i samma projekt.
 
 När du lägger till sidor i ett översättningsprojekt inkluderas sidorna i ett nytt översättningsjobb. Du kan också [lägga till sidor i ett befintligt jobb](#adding-pages-assets-to-a-translation-job).
 
@@ -146,11 +146,11 @@ Precis som när du skapar ett nytt projekt läggs kopior av sidorna till i en pr
 
 ### Skapa strukturen för en språkkopia {#creating-the-structure-of-a-language-copy}
 
-Det går bara att skapa strukturen för språkkopian, så att du kan kopiera innehåll och strukturella ändringar på det överordnad språket till (oöversatta) språkversioner. Detta har ingenting med översättningsjobb eller -projekt att göra. Du kan använda detta för att synkronisera dina språkmallsidor, även utan översättning.
+Det går bara att skapa strukturen för språkkopian, så att du kan kopiera innehåll och strukturella ändringar i språkinställningen till (oöversatta) språkkopior. Detta har ingenting med översättningsjobb eller -projekt att göra. Du kan använda detta för att synkronisera dina språkmallsidor, även utan översättning.
 
-Fyll i din språkkopia så att den innehåller innehåll från det överordnad språk som du översätter. Du måste ha [skapade språkroten](preparation.md#creating-a-language-root) av språkversionen.
+Fyll i din språkkopia så att den innehåller innehåll från huvudspråket som du översätter. Innan du fyller i din språkkopia måste du ha [skapade språkroten](preparation.md#creating-a-language-root) av språkversionen.
 
-1. Använd webbplatskonsolen för att välja språkroten för det överordnad språk som du använder som källa.
+1. Använd webbplatskonsolen för att välja språkroten för huvudspråket som du använder som källa.
 1. Öppna referenslisten genom att klicka eller trycka **Referenser** i verktygsfältet.
 
    ![Referenser](../assets/references.png)
@@ -183,7 +183,7 @@ AEM uppdaterar översättningen av de befintliga strängarna i översättningsmi
 * Det skapar inte nya översättningsjobb.
 * Det skickar översättningarna tillbaka till TMS via AEM översättnings-API (se nedan).
 
-Så här använder du den här funktionen:
+Så här använder du funktionen:
 
 * En TMS måste konfigureras för användning med AEM.
 * Kopplingen måste implementera metoden [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html).
@@ -239,7 +239,7 @@ När du skapar ett översättningsprojekt manuellt måste du ange värden för f
 
 * **Namn:** Projektnamn
 * **Källspråk:** Källinnehållets språk
-* **Målspråk:** Språket eller språken som innehållet översätts till
+* **Målspråk:** Det eller de språk som innehållet översätts till
    * Om du väljer flera språk skapas ett jobb för varje språk i projektet.
 * **Översättningsmetod:** Välj **Översättning av människor** för att ange att översättningen ska utföras manuellt.
 
@@ -277,7 +277,7 @@ Du kan lägga till sidor, resurser eller taggar i översättningsjobbet för öv
 
 ### Lägga till taggar i ett översättningsjobb {#adding-tags-to-a-translation-job}
 
-Du kan lägga till taggar i ett översättningsprojekt på ungefär samma sätt som [hur du lägger till resurser och sidor i ett projekt](#adding-pages-assets-to-a-translation-job). Välj bara **Taggar** under **Lägg till** sedan följer du samma steg.
+Du kan lägga till taggar i ett översättningsprojekt som liknar [hur du lägger till resurser och sidor i ett projekt](#adding-pages-assets-to-a-translation-job). Välj bara **Taggar** under **Lägg till** sedan följer du samma steg.
 
 ### Visa information om översättningsprojekt {#seeing-translation-project-details}
 
@@ -286,9 +286,9 @@ Du kan lägga till taggar i ett översättningsprojekt på ungefär samma sätt 
 Klicka eller tryck på ellipsen längst ned i översättningssammanfattningsrutan i översättningsprojektet. De flesta projektspecifika egenskaper finns på **Avancerat** -fliken.
 
 * **Källspråk:** Språket för de sidor som översätts
-* **Målspråk:** Språket eller språken som sidorna översätts till
+* **Målspråk:** Det eller de språk som sidorna översätts till
 * **Molnkonfiguration:** Molnkonfigurationen för översättningstjänstkopplingen som används för projektet
-* **Översättningsmetod:** Översättningsarbetsflödet, antingen **Översättning av människor** eller **Maskinöversättning**
+* **Översättningsmetod:** Översättningsarbetsflödet **Översättning av människor** eller **Maskinöversättning**
 * **Översättningsprovider:** Översättningstjänstleverantören som utför översättningen
 * **Innehållskategori:** (Maskinöversättning) Innehållskategorin som används för översättning
 * **Autentiseringsuppgifter för översättningsprovider:** Autentiseringsuppgifterna för att logga in på providern
@@ -312,14 +312,14 @@ I följande tabell beskrivs varje status som ett jobb eller ett objekt i jobbet 
 | Status | Beskrivning |
 |---|---|
 | **Utkast** | Översättningsjobbet har inte startats. Översättningsjobb finns i **Utkast** när de skapas. |
-| **Skickat** | Filer i översättningsjobbet har den här statusen när de har skickats till översättningstjänsten. Den här statusen kan inträffa efter **Begär omfång** eller **Starta** kommandot är utfärdat. |
+| **Skickat** | Filer i översättningsjobbet har den här statusen när de har skickats till översättningstjänsten. Den här statusen kan inträffa efter **Begär omfång** kommandot eller **Starta** kommandot är utfärdat. |
 | **Begärt omfång** | Filerna i jobbet har skickats till översättningsleverantören för omfång för det mänskliga översättningsarbetsflödet. Den här statusen visas efter **Begär omfång** kommandot är utfärdat. |
 | **Omfånget har slutförts** | Leverantören har omfattat översättningsjobbet. |
 | **Bekräftat för översättning** | Projektägaren har accepterat omfattningen. Den här statusen anger att översättningsleverantören ska börja översätta filerna i jobbet. |
 | **Översättning pågår** | För ett jobb är översättningen av en eller flera filer i jobbet inte slutförd än. För ett objekt i jobbet översätts objektet. |
 | **Översatt** | För ett jobb är översättningen av alla filer i jobbet slutförd. För ett objekt i jobbet översätts objektet. |
 | **Klar för granskning** | Objektet i jobbet översätts och filen har importerats till AEM. |
-| **Slutförd** | Projektägaren har angett att översättningskontraktet är slutfört. |
+| **Complete** | Projektägaren har angett att översättningskontraktet är slutfört. |
 | **Avbryt** | Anger att översättningsleverantören ska sluta arbeta med ett översättningsjobb. |
 | **Feluppdatering** | Ett fel uppstod när filer överfördes mellan AEM och översättningstjänsten. |
 | **Okänt läge** | Ett okänt fel har inträffat. |
@@ -397,8 +397,8 @@ Om du avvisar innehåll skickas det tillbaka till översättningsleverantören d
 Slutför ett översättningsjobb när du har granskat de översatta filerna från leverantören.
 
 1. Öppna översättningsprojektet i projektkonsolen.
-1. Klicka eller tryck på kommandomenyn på översättningsjobbpanelen och klicka eller tryck sedan på **Slutförd**.
-1. Jobbet har nu statusen **Slutförd**.
+1. Klicka eller tryck på kommandomenyn på översättningsjobbpanelen och klicka eller tryck sedan på **Complete**.
+1. Jobbet har nu statusen **Complete**.
 
 För mänskliga översättningsarbetsflöden anger en översättning för leverantören att översättningsavtalet har uppfyllts och att de bör spara översättningen till sitt översättningsminne.
 
@@ -419,7 +419,7 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
 
 ![Jobbet är klart för granskning](../assets/job-ready-for-review.png)
 
-1. Markera sidan på överordnad, klicka eller tryck **Referenser** och sedan klicka eller trycka **Språkkopior**.
+1. Markera sidan i huvudspråkfönstret, klicka eller tryck **Referenser** och sedan klicka eller trycka **Språkkopior**.
 1. Klicka på eller tryck på den språkkopia som du vill granska.
 
    ![Språkkopia klar för granskning](../assets/language-copy-ready-for-review.png)
@@ -434,17 +434,17 @@ När innehåll översätts för en befintlig språkkopia granskar du översättn
 
 ### Jämför språkkopior {#comparing-language-copies}
 
-Så här jämför du språkkopior med överordnad:
+Så här jämför du språkkopior med språkinställningen:
 
 1. Gå till den språkkopia som du vill jämföra i webbplatskonsolen.
 1. Öppna [Referensspår](/help/sites-cloud/authoring/getting-started/basic-handling.md#references).
 1. Under **Kopior** rubrikmarkera **Språkkopior.**
-1. Välj en språkversion och sedan kan du antingen klicka **Jämför med Överordnad** eller **Jämför med föregående** om tillämpligt.
+1. Välj en språkversion och sedan kan du antingen klicka **Jämför med mallsida** eller **Jämför med föregående** om tillämpligt.
 
    ![Jämför språkkopior](../assets/language-copy-compare.png)
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
-   * Mer information om hur du använder funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
+   * Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
 
 ## Flytta eller byta namn på en källsida {#move-source}
 
@@ -454,7 +454,7 @@ Det bästa sättet i detta scenario är att följa denna procedur:
 1. Avpublicera de språkkopior som är associerade med den källsida som du vill flytta.
 1. Ta bort dem.
 1. Skapa nya språkkopior från den nyligen flyttade källsidan.
-1. Publicera de nya språkkopiorna.
+1. Publicera de nyskapade språkkopiorna.
 
 ## Importera och exportera översättningsjobb {#import-export}
 

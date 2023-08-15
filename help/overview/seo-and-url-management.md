@@ -2,9 +2,9 @@
 title: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 description: Bästa metoder för SEO- och URL-hantering för Adobe Experience Manager as a Cloud Service
 exl-id: abe3f088-95ff-4093-95a1-cfc610d4b9e9
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '3706'
+source-wordcount: '3705'
 ht-degree: 53%
 
 ---
@@ -41,7 +41,7 @@ Här följer några allmänna tips om hur du skapar URL:er för SEO:
    * Använd katalogstrukturen för att ange informationsarkitekturen, om en sådan finns.
    * Om en katalogstruktur inte är ett alternativ använder du Delningsväljare i URL:en i stället för frågesträngar. Förutom det SEO-värde som de anger kan du även göra sidorna tillgängliga för Dispatcher med hjälp av snedväljare.
 
-* Ju mer läsbar en URL är, desto bättre. om det finns nyckelord i URL-adressen ökar värdet.
+* Ju mer läsbar en webbadress är, desto bättre blir det. Att ha nyckelord i webbadressen ökar värdet.
 
    * När du använder väljare på en sida är det bäst att använda väljare som har ett semantiskt värde.
    * Om en användare inte kan läsa URL:en kan inte en sökmotor heller göra det.
@@ -192,7 +192,7 @@ Du kanske vill visa lokaliserade sidnamn för användare av översatt innehåll.
 
 Utmaningen med att lokalisera sidans namn är att många av de lokaliseringsverktyg som finns på den AEM plattformen kräver att sidnamnen matchar olika språk för att innehållet ska vara synkroniserat.
 
-Egenskapen `sling:alias` gör att du både kan äta kakan och ha den kvar. Du kan lägga till `sling:alias` som en egenskap för alla resurser för att tillåta att ett aliasnamn används för resursen. I föregående exempel skulle du få:
+The `sling:alias` kan du ta med dig tårtan och äta den också. Du kan lägga till `sling:alias` som en egenskap för alla resurser för att tillåta att ett aliasnamn används för resursen. I föregående exempel skulle du få:
 
 * En sida i JCR:
   `…/es/home`
@@ -229,7 +229,7 @@ Mappningsdefinitioner kan läggas till på den här platsen för att mappa inkom
 
 Skapa en `sling:Mapping` nod på den här platsen under `/http` eller `/https`. Baserat på egenskaperna `sling:match` och `sling:internalRedirect` som har angetts för den här noden dirigerar AEM om all trafik för den matchade URL:en till det värde som har angetts i egenskapen `internalRedirect`.
 
-Det här är den metod som beskrivs i den officiella AEM- och Sling-dokumentationen, men det stöd för reguljära uttryck som tillhandahålls av implementeringen är begränsat i omfattning jämfört med de alternativ som är tillgängliga om `SlingResourceResolver` används direkt. Implementering av mappningar på det här sättet kan även leda till problem med invalidering av Dispatcher-cache.
+Det här är den metod som beskrivs i den officiella AEM- och Sling-dokumentationen, men det stöd för reguljära uttryck som tillhandahålls av implementeringen är begränsat i omfattning jämfört med de alternativ som är tillgängliga om `SlingResourceResolver` används direkt. Implementering av mappningar på det här sättet kan även leda till problem med invalidering av Dispatcher-cachen.
 
 Här är ett exempel på hur problemet uppstår:
 
@@ -369,9 +369,9 @@ Ta till exempel en plats som definierar en platskarta på den översta nivån p�
 >
 > Väljarna `sitemap` och `sitemap-index` kan störa anpassade implementeringar. Om du inte vill använda produktfunktionen konfigurerar du en egen servertjänst som servar väljarna med en `service.ranking` högre än 0.
 
-I standardkonfigurationen finns ett alternativ i dialogrutan Sidegenskaper för att markera en sida som en platskarta och på så sätt generera en platskarta för sig själv och dess underordnade. Detta beteende implementeras av implementeringar av `SitemapGenerator` gränssnitt och kan utökas genom att man lägger till alternativa implementeringar. Men eftersom hur ofta XML-webbplatskartorna ska genereras om beror på arbetsflödena och arbetsbelastningarna för att skapa innehåll, levereras inte produkten `SitemapScheduler` konfiguration. Detta gör att funktionen effektivt kan välja att delta.
+I standardkonfigurationen finns ett alternativ i dialogrutan Sidegenskaper för att markera en sida som en platskarta och på så sätt, som beskrivs ovan, generera en platskarta för sig själv och dess underordnade. Detta beteende implementeras av implementeringar av `SitemapGenerator` gränssnitt och kan utökas genom att man lägger till alternativa implementeringar. Men eftersom hur ofta XML-webbplatskartorna ska genereras om beror på arbetsflödena och arbetsbelastningarna för att skapa innehåll, levereras inte produkten `SitemapScheduler` konfiguration. Detta gör att funktionen effektivt kan välja att delta.
 
-Aktivera bakgrundsjobbet som genererar XML-platskartorna på en `SitemapScheduler` måste konfigureras. Om du vill göra det skapar du en OSGI-konfiguration för PID `org.apache.sling.sitemap.impl.SitemapScheduler`. Schemaläggarens uttryck `0 0 0 * * ?` kan användas som utgångspunkt för att generera om alla XML-webbplatskartor en gång om dagen vid midnatt.
+Aktivera bakgrundsjobbet som genererar XML-platskartorna på en `SitemapScheduler` måste konfigureras. Skapa en OSGI-konfiguration för PID `org.apache.sling.sitemap.impl.SitemapScheduler`. Schemaläggarens uttryck `0 0 0 * * ?` kan användas som utgångspunkt för att generera om alla XML-webbplatskartor en gång om dagen vid midnatt.
 
 ![Apache Sling Sitemap - Schemaläggare](assets/sling-sitemap-scheduler.png)
 
@@ -383,7 +383,7 @@ AEM Sites innehåller en standardimplementering av en `SitemapGenerator` som gå
 
 För att begränsa innehållet i en webbplatskarta kan följande gränssnitt implementeras vid behov:
 
-* den [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) kan implementeras för att dölja sidor från XML-webbplatskartor som genereras av den AEM Sites-specifika webbplatskartegeneratorn
+* den [SitemapPageFilter](https://javadoc.io/doc/com.adobe.cq.wcm/com.adobe.aem.wcm.seo/latest/com/adobe/aem/wcm/seo/sitemap/SitemapPageFilter.html) kan implementeras för att dölja sidor från XML-webbplatskartor som genereras av den AEM Sites-specifika webbplatskartan
 * a [SitemapProductFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapProductFilter.html) eller [SitemapCategoryFilter](https://javadoc.io/doc/com.adobe.commerce.cif/core-cif-components-core/latest/com/adobe/cq/commerce/core/components/services/sitemap/SitemapCategoryFilter.html) kan implementeras för att filtrera bort produkter eller kategorier från XML-webbplatskartor som genereras av [Ramverk för handelsintegrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) specifika generatorer för webbplatskartor
 
 Om standardimplementeringarna inte fungerar med ett visst användningsfall eller om tilläggspunkterna inte är tillräckligt flexibla, kan en anpassad `SitemapGenerator` kan implementeras för att få full kontroll över innehållet i en genererad webbplatskarta. I följande exempel visas hur detta kan göras med hjälp av standardimplementeringens logik för AEM Sites. Den använder [ResourceTreeSitemapGenerator](https://javadoc.io/doc/org.apache.sling/org.apache.sling.sitemap/latest/org/apache/sling/sitemap/spi/generator/ResourceTreeSitemapGenerator.html) som en startpunkt för att gå igenom ett sidträd:

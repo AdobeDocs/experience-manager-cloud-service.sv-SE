@@ -8,9 +8,9 @@ content-type: reference
 topic-tags: develop
 discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -20,20 +20,20 @@ ht-degree: 0%
 
 Lokaliserade formulär hjälper er att nå en större publik över alla länder. Adobe Experience Manager arbetsflöde för översättning hjälper dig att lokalisera adaptiva Forms och deras urkunder. Du kan använda **maskinöversättning** eller **mänskliga översättare** för att lokalisera ett adaptivt formulär.
 
-I den här artikeln förklaras hur du använder AEM arbetsflöde för översättning med Adaptiv Forms och urkunder.
+I den här artikeln förklaras hur du använder AEM översättningsarbetsflöde med Adaptiv Forms och urkunder.
 
 ## Lokalisera ett adaptivt formulär och dokument med hjälp av maskinöversättning {#localizing-an-adaptive-form-and-document-of-record-using-machine-translation}
 
 Maskinöversättningstjänsten översätter omedelbart ditt innehåll i Adaptiv form och Dokumentdokument. [!DNL AEM Forms] är förkonfigurerad att använda en testversion av [!DNL Microsoft Translator] för maskinöversättning. Utför följande steg för att aktivera maskinöversättning för ditt adaptiva Forms och arkivdokument:
 
-1. På [!DNL AEM Forms] Användargränssnitt, välj ett formulär och tryck på **Lägg till ordlista** alternativ.
+1. På [!DNL AEM Forms] Välj ett formulär och tryck på **Lägg till ordlista** alternativ.
 1. I **Lägg till ordlista i översättningsprojekt** väljer du **Skapa ett nytt översättningsprojekt** eller **Lägg till i ett befintligt översättningsprojekt** alternativ.
 1. I **Projektets titel** anger du rubriken. Till exempel, `Government Reference Site - German locale.`
 1. I **Målspråk** anger du nationella inställningar (till exempel `German(de)`) och klicka på **Klar**. Du kan ange flera språkinställningar. Formuläret översätts till alla språkområden som anges i **Målspråk** fält.
 1. I dialogrutan Lexikon tillagd klickar du på **Öppna projekt**. Öppna det nyskapade projektet på projektskärmen.
 1. Klicka på **ellipser** längst ned i **Översättningssammanfattning** platta. Skärmen Översättningssammanfattning öppnas.
 1. Klicka på **Redigera** ikonen längst upp på **Översättningssammanfattning** skärm. Öppna **Översättning** och välj Maskinöversättning i **Översättningsmetod** skärm. Välj lämplig **Översättningsprovider** och **Molnkonfiguration**. Klicka på **Klar** ikonen längst upp på skärmen.
-1. På **Översättningsjobb** platta, klicka på ![aem62forms_down](assets/aem62forms_downarrow.png) och klicka **Starta**. Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Klar för granskning**. Uppdatera sidan efter några minuter och kontrollera statusen.
+1. På **Översättningsjobb** platta, klicka på ![aem62forms_down](assets/aem62forms_downarrow.png) och klicka på **Starta**. Status för rutan ändras till Utkast. När översättningen är klar ändras statusen till **Klar för granskning**. Uppdatera sidan efter några minuter och kontrollera statusen.
 1. Efter statusändringen ändras till **Klar för granskning** på **Översättningsjobb** öppnar du formuläret i ett webbläsarfönster. En lokaliserad version av formuläret visas.
 
    >[!NOTE]

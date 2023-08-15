@@ -6,9 +6,9 @@ feature: Adaptive Forms
 hide: true
 hidefromtoc: true
 exl-id: 1046231f-787c-4e49-9ba0-e7dd59e41bce
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2016'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Du kan smidigt skriva eller bädda in Adaptiv Forms på en AEM Sites-sida så at
 
 Du kan välja någon av följande metoder för att skapa eller lägga till ett adaptivt formulär på en AEM Sites-sida:
 
-* **Skapa ett adaptivt formulär med komponenten Adaptiv Forms Container**: The [Adaptiv formulärbehållare](#af-container-component) kan ni skapa digitala registreringsupplevelser genom att använda adaptiva Forms-komponenter direkt i AEM Sites redigerare. Integreringen ger en smidig upplevelse för de som skapar AEM Sites och vill skapa och hantera formulär på sina AEM Sites-sidor.
+* **Skapa ett adaptivt formulär med komponenten Adaptiv Forms Container**: [Adaptiv formulärbehållare](#af-container-component) kan ni skapa digitala registreringsupplevelser genom att använda adaptiva Forms-komponenter direkt i AEM Sites redigerare. Integreringen ger en smidig upplevelse för de som skapar AEM Sites och vill skapa och hantera formulär på sina AEM Sites-sidor.
 
-* **Lägg till ett befintligt anpassat formulär**: The [Adaptiv Forms - Embed(v2)](#embed-existing-af) kan du enkelt lägga till ett befintligt adaptivt formulär på en sida i AEM Sites. Den här funktionen gör det enklare att anpassa och återanvända Adaptive Forms. Integreringen är ett bekvämt sätt för kunder att återanvända adaptiva Forms som de redan har skapat.
+* **Lägg till ett befintligt anpassat formulär**: [Adaptiv Forms - Embed(v2)](#embed-existing-af) kan du enkelt lägga till ett anpassat formulär på en sida i AEM Sites. Den här funktionen gör det enklare att anpassa och återanvända Adaptive Forms. Den här integreringen är ett bekvämt sätt för kunder att återanvända adaptiva Forms som de redan har skapat.
 
 * **Använd Adaptiv Forms-guide för att skapa ett formulär**: Använd [Adaptiv Forms - Embed(v2)](#embed-new-af) för att skapa ett adaptivt formulär i AEM Sites-redigeraren med hjälp av guiden Skapa formulär. Formuläret sparas som en extern entitet. Du kan även återanvända det här formuläret på andra webbplatssidor och i fristående formulär.
 
@@ -117,26 +117,26 @@ I [!UICONTROL Edit Adaptive Forms Container] kan du ange följande:
 
      >[!NOTE]
      >
-     > När du har konfigurerat formulärdatamodellen kan du inte ändra den associerade formulärmodellen. Det går dock att ändra schemat som är kopplat till datamodellen Formulär.
+     > När formulärdatamodellen har konfigurerats kan du inte ändra den associerade formulärmodellen. Det går dock att ändra schemat som är kopplat till datamodellen Formulär.
 
 * **Fliken Skicka**
 
    * **Omdirigera till URL**
-      * **Omdirigerings-URL/sökväg**: Anger den URL eller sökväg som ett anpassat formulär omdirigeras till efter överföringen.
+      * **Omdirigerings-URL/sökväg**: Anger den URL eller sökväg som ett anpassat formulär ska omdirigeras till efter överföringen.
 
-      * **Skicka åtgärd**: En sändningsåtgärd aktiveras när en användare klickar på knappen Skicka i ett anpassat formulär. Du kan [konfigurera skicka-åtgärden för anpassat formulär](/help/forms/configuring-submit-actions.md). Adaptiva formulär innehåller följande inskickningsåtgärder:
+      * **Skicka åtgärd**: En skicka-åtgärd utlöses när en användare klickar på Skicka-knappen i ett anpassat formulär. Du kan [konfigurera skicka-åtgärden för anpassat formulär](/help/forms/configuring-submit-actions.md). Adaptiva formulär innehåller följande inskickningsåtgärder:
          * Skicka till REST-slutpunkt
          * Skicka e-post
          * Skicka med formulärdatamodell
-         * Anropa ett AEM arbetsflöde
+         * Anropa ett AEM
          * Skicka till SharePoint
          * Skicka till OneDrive
          * Skicka till Azure Blob Storage
 
-  Du kan också [utöka standardskickaåtgärder](custom-submit-action-form.md) för att skapa en egen anpassad skickaåtgärd.
+  Du kan också [utöka standardåtgärderna för att skicka](custom-submit-action-form.md) för att skapa en egen anpassad skickaåtgärd.
 
 * **Visa meddelande**
-   * **Meddelandeinnehåll**: Skriv ett meddelande med RTF-redigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
+   * **Meddelandeinnehåll**: Skriv ett meddelande med textredigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
 
 ## Bädda in ett anpassat formulär  {#aem-container-component}
 
@@ -167,7 +167,7 @@ När **[!UICONTROL When form covers entire width of a page]** alternativet är m
 
 ![Överlägg Gif](/help/forms/assets/overlaycorecomponent.gif)
 
-Om du vill använda adaptiva Forms-komponenter på en AEM Sites-sida inkluderar du `Customheaderlibs` och `Customfooterlibs` klientbibliotek till AEM Sites-sidan med hjälp av AEM Archetype/Git Repository och distributionsflödet.
+Om du vill använda adaptiva Forms-komponenter på en AEM Sites-sida inkluderar du `Customheaderlibs` och `Customfooterlibs` klientbibliotek till AEM Sites-sidan med AEM Archetype/Git Repository och distribution.
 
 1. Öppna [AEM Forms Archetype eller Klonad Git-databas](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) i en textredigerare. Exempel: Visual Studio Code.
 1. Navigera till `ui.apps/src/main/content/jcr_root/apps/corecomponents/components/page/.content.xml`.
@@ -205,7 +205,7 @@ Om du vill använda adaptiva Forms-komponenter på en AEM Sites-sida inkluderar 
 
 1. Öppna AEM Sites-sidan i redigeringsläge.
 1. Dra och släpp komponentens [!UICONTROL Adaptive Forms - Embed] på sidan.
-1. Tryck på [!UICONTROL Adaptive Forms - Embed] på webbplatssidan och tryck på ![settings_icon](/help/forms/assets/Smock_Wrench_18_N.svg) i åtgärdsfältet. The **[!UICONTROL Edit Adaptive Forms - Embed]** öppnas.
+1. Tryck på [!UICONTROL Adaptive Forms - Embed] -komponenten på webbplatssidan och tryck på ![settings_icon](/help/forms/assets/Smock_Wrench_18_N.svg) i åtgärdsfältet. The **[!UICONTROL Edit Adaptive Forms - Embed]** öppnas.
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i [!UICONTROL Asset Path].
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat på sidan.
 
@@ -232,13 +232,13 @@ Om du vill använda adaptiva Forms-komponenter på en AEM Sites-sida inkluderar 
 Du kan anpassa de avancerade inställningarna för [!UICONTROL Adaptive Form - Embed(v2)] -komponenten. I [!UICONTROL Edit Adaptive Forms - Embed(v2)] kan du ange följande:
 
 * **Resurssökväg**: Bläddra och välj det adaptiva formulär som ska bäddas in. Den fylls i automatiskt om du släppte den från Assets-webbläsaren.
-* **Efterbeställning** : Välj den åtgärd som ska utlösas när formulär skickas. Du kan välja att visa ett tackmeddelande eller en tacksida.
-   * **Visa tackmeddelande**: Skriv ett meddelande med RTF-redigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
+* **Efterbeställning** : Välj den åtgärd som ska utlösas när formulär skickas. Du kan visa ett tackmeddelande eller en tacksida.
+   * **Visa tackmeddelande**: Skriv ett meddelande med textredigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
    * **Visa tacksida**: Bläddra och välj den sida som ska visas när formuläret skickas. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
-   * **Omdirigering till dig som tackar dig**: Aktivera alternativet att ersätta sidan som innehåller det inbäddade adaptiva formuläret med tacksidan. I annat fall ersätter tack-sidan det adaptiva formuläret i dialogrutan [!UICONTROL Adaptive Forms - Embed] utan att de underliggande webbplatserna uppdateras på sidan. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
-* **Använd sidspråk**: Använd den lokala delen av AEM Sites-sidan i stället för den anpassade formulärens språkinställning.
-* **Sätt fokus på formulär**: Välj det här alternativet om du vill ange fokus på det första fältet i det adaptiva formuläret.
-* **Formuläret täcker ramens hela bredd**: Om du markerar det här alternativet används inte iframe för att återge formuläret.
+   * **Omdirigering till dig som tackar dig**: Aktivera alternativet att ersätta sidan som innehåller det inbäddade adaptiva formuläret med tacksidan. I annat fall ersätter tack-sidan det adaptiva formuläret i dialogrutan [!UICONTROL Adaptive Forms - Embed] utan att uppdatera underliggande webbplatser på sidan. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
+* **Använd sidspråk**: Använd lokala sidor på AEM Sites-sidan i stället för anpassade formulär.
+* **Sätt fokus på formulär**: Välj det här alternativet om du vill fokusera på det första fältet i det adaptiva formuläret.
+* **Formuläret täcker ramens hela bredd**: Om det här alternativet är markerat används inte iframe för att återge formuläret.
 * **Höjd**: Ange behållarens höjd. Lämna det tomt om du vill ändra storlek på behållaren automatiskt.
 * **CSS-klientbibliotek**: Ange sökväg till ett CSS-klientbibliotek.
 

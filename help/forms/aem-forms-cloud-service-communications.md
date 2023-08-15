@@ -2,9 +2,9 @@
 title: AEM Forms as a Cloud Service - kommunikation
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: 33e59ce272223e081710294a2e2508edb92eba52
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Forms as a Cloud Service - Communications innehåller on demand- och batch-API:e
 
 * Synkrona API:er är lämpliga för dokumentgenerering on demand, med låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
 
-* API:er för gruppbearbetning (asynkrona API:er) är lämpliga för schemalagd hög genomströmning vid användning av flera dokumentgenereringar. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
+* API:er för gruppbearbetning (asynkrona API:er) är lämpliga för schemalagd hög genomströmning vid användning av flera dokumentgenereringar. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kontoutdrag och förmånsräkningar som genereras varje månad.
 
 ## Använd synkrona åtgärder {#batch-operations}
 
@@ -28,7 +28,7 @@ En synkron åtgärd är en process där dokument genereras linjärt. Dessa API:e
 
 ### Single-tenant-API:er
 
-* API:er för dokumentgenerering
+* API för dokumentgenerering
 * API:er för dokumentbearbetning
 
 <!-- 
@@ -41,19 +41,19 @@ En synkron åtgärd är en process där dokument genereras linjärt. Dessa API:e
 
 API-åtgärder för en innehavare har stöd för två typer av autentisering:
 
-* **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och en base64-kodad sträng med användarnamn:password. Om du till exempel vill auktorisera som administratör/administratör skickar klienten Basic [base64-kodad stränganvändarnamn]: [base64-kodat stränglösenord].
+* **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och en base64-kodad sträng med användarnamn:password. Om du till exempel vill auktorisera som administratör/administratör skickar klienten Basic [base64-encoded string username]: [base64-kodat stränglösenord].
 
 * **Tokenbaserad autentisering:** Tokenbaserad autentisering använder en åtkomsttoken (Bearer-autentiseringstoken) för att göra begäranden till Experience Manager as a Cloud Service. AEM Forms as a Cloud Service tillhandahåller API:er för att på ett säkert sätt hämta åtkomsttoken. Så här hämtar och använder du token för att autentisera en begäran:
 
    1. [Hämta as a Cloud Service autentiseringsuppgifter för Experience Manager från Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
-   1. [Installera as a Cloud Service autentiseringsuppgifter för Experience Manager i din miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html). (Programserver, webbserver eller andra icke-AEM servrar) som konfigurerats för att skicka begäranden till (ringa anrop) molntjänsten.
+   1. [Installera as a Cloud Service autentiseringsuppgifter för Experience Manager i din miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html). (Programserver, webbserver eller andra icke-AEM servrar) som är konfigurerade att skicka begäranden till (ringa anrop) molntjänsten.
    1. [Generera en JWT-token och ersätt den med Adobe IMS API:er för en åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
    1. Kör Experience Manager-API:t med åtkomsttoken som en Bearer-autentiseringstoken.
    1. [Ange lämplig behörighet för den tekniska kontoanvändaren i Experience Manager-miljön](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
-   >[!NOTE]
-   >
-   >Adobe rekommenderar att du använder tokenbaserad autentisering i en produktionsmiljö.
+  >[!NOTE]
+  >
+  >Adobe rekommenderar att du använder tokenbaserad autentisering i en produktionsmiljö.
 
 <!-- 
 

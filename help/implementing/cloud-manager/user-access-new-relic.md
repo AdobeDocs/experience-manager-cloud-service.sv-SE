@@ -2,9 +2,9 @@
 title: New Relic One
 description: Läs mer om New Relic One APM-tjänst (Application Performance Monitoring) för AEM as a Cloud Service och hur du kan komma åt den.
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
@@ -72,9 +72,9 @@ När ett New Relic One-användarkonto har skapats enligt beskrivningen i förhan
 
 Följ de här stegen för att aktivera ditt konto som New Relic-användare.
 
-1. Klicka på länken i e-postmeddelandet från New Relic. Då öppnas webbläsaren och New Relic inloggningssida öppnas.
+1. Klicka på länken i mejlet från New Relic. Då öppnas webbläsaren och New Relic inloggningssida öppnas.
 
-1. På New Relic inloggningssida väljer du **Har du glömt lösenordet?**.
+1. På inloggningssidan för New Relic väljer du **Har du glömt lösenordet?**.
 
    ![New Relic-inloggning](/help/implementing/cloud-manager/assets/new-relic/newrelic-1.png)
 
@@ -82,7 +82,7 @@ Följ de här stegen för att aktivera ditt konto som New Relic-användare.
 
    ![Ange e-postadress](/help/implementing/cloud-manager/assets/new-relic/newrelic-2.png)
 
-1. New Relic skickar ett mejl med en länk som bekräftar kontot.
+1. New Relic skickar ett e-postmeddelande med en länk för att bekräfta kontot.
 
 Om du inte får något bekräftelsemeddelande från New Relic går du till [felsökningsavsnitt.](#troubshooting)
 
@@ -120,7 +120,7 @@ Om du vill ha mer hjälp öppnar du en supportanmälan via [AEM supportportal](h
 
 ## Felsöka New Relic One Access {#troubleshooting}
 
-Om du har lagts till som New Relic One-användare enligt beskrivningen i avsnittet [Hantera New Relic One-användare](#manage-users) och kan inte hitta det ursprungliga e-postmeddelandet med kontobekräftelsen genom att följa dessa steg.
+Om du har lagts till som New Relic One-användare enligt beskrivningen i avsnittet [Hantera New Relic One-användare](#manage-users) och kan inte hitta e-postmeddelandet med den ursprungliga kontobekräftelsen genom att följa dessa steg.
 
 1. Gå till New Relic inloggningssida på [`login.newrelic.com/login`](https://login.newrelic.com/login).
 
@@ -132,11 +132,11 @@ Om du har lagts till som New Relic One-användare enligt beskrivningen i avsnitt
 
    ![Ange e-postadress](/help/implementing/cloud-manager/assets/new-relic/newrelic-2.png)
 
-1. New Relic skickar ett mejl med en länk som bekräftar kontot.
+1. New Relic skickar ett e-postmeddelande med en länk för att bekräfta kontot.
 
 Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden i e-post eller lösenord loggar du en supportanmälan via [Admin Console.](https://adminconsole.adobe.com/)
 
-Om du inte får något e-postmeddelande från New Relic:
+Om du inte får något mejl från New Relic:
 
 * Kontrollera [skräppostfilter](https://docs.newrelic.com/docs/accounts/accounts-billing/account-setup/create-your-new-relic-account/).
 * Om tillämpligt, [lägg till New Relic i e-postmeddelandet tillåtelselista](https://docs.newrelic.com/docs/accounts/accounts/account-maintenance/account-email-settings/#email-whitelist).
@@ -158,7 +158,7 @@ Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för
 
 Adobe övervakar den AEM as a Cloud Service författaren, publicerar och förhandsgranskar (där det är tillgängligt) via New Relic One Java-plugin. Adobe möjliggör anpassad New Relic One APM-telemetri och övervakning i icke-produktion och produktion AEM as a Cloud Service miljöer.
 
-Ditt New Relic One-konto är kopplat till ett primärt Adobe-konto och har flera program som rapporterar till det: tre per AEM as a Cloud Service Environment.
+Ditt New Relic One-konto är kopplat till ett primärt Adobe-underhållet konto och har flera program som rapporterar till det: tre per AEM as a Cloud Service Environment.
 
 * Ett program för författartjänsten per miljö
 * Ett program för publiceringstjänsten per miljö (inklusive Golden Publish)
@@ -180,7 +180,7 @@ Anpassad SSO-konfiguration stöds inte för New Relic One-kontot som tillhandah�
 
 ### Vad händer om jag redan har en lokal New Relic-prenumeration? {#new-relic-subscription}
 
-New Relic One är den nya plattformen för observerbarhet från New Relic och gör det möjligt för support från Adobe och era team att följa, övervaka och se mätvärden och händelser på ett och samma ställe.
+New Relic One är den nya plattformen för observerbarhet från New Relic och gör det möjligt för support från Adobe och era team att följa, övervaka och se mätvärden och händelser, allt på ett och samma ställe.
 
 New Relic One ger användarna möjlighet att söka på alla konton där de har tillgång till och kan visualisera data från alla tjänster och värdar i en och samma vy.
 

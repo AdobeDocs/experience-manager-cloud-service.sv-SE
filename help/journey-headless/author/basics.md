@@ -2,9 +2,9 @@
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
-source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1714'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author Trney](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du skapar ditt eget innehåll för AEM headless-projekt.
 
@@ -26,7 +26,7 @@ Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du s
 
 ## Grundläggande hantering {#basic-handling}
 
-Innan du får grepp om innehållsfragment finns det en (mycket) snabb introduktion till att använda AEM...men ingenting ersätter faktiskt upplevelsen av att logga in och försöka använda systemet.
+Innan du får grepp om innehållsfragment finns det en (mycket) snabb introduktion till AEM...men ingenting ersätter faktiskt upplevelsen av att logga in och försöka använda systemet.
 
 ### Skapa, förhandsgranska och publicera {#author-preview-publish}
 
@@ -50,7 +50,7 @@ Precis som med de flesta system måste du logga in. Som författare får du:
 * Lösenord
 * Länk till inloggningsskärmen
 
-Ditt konto har konfigurerats med de privilegier du behöver. Om du har problem rekommenderar vi att du kontaktar ditt interna projektsupportteam.
+Ditt konto har konfigurerats med de privilegier du behöver. Om du har några problem rekommenderar Adobe att du kontaktar ditt interna projektsupportteam.
 
 ### Navigering {#navigation}
 
@@ -67,7 +67,7 @@ The Navigation Panel can be opened by selecting Adobe icon at the top left, foll
 -->
 
 >[!NOTE]
->Innehållsfragment är en funktion i AEM **Webbplatser**, sparas de som **Resurser**. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
+>Även om innehållsfragment är en funktion i AEM **Webbplatser**, sparas de som **Resurser**. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
 
 I konsolen kan du välja mappar i den vänstra panelen för att navigera till ditt innehållsfragment. Du kan också filtrera och/eller söka.
 
@@ -81,7 +81,7 @@ I **Innehållsfragment** konsol: en rad åtgärder är tillgängliga för dina i
 
 * **Öppna i resurser**
 * **Skapa**
-* The **Refererad av** Kolumnen innehåller också en direkt länk för att visa alla överordnade referenser till det fragmentet. inklusive referenser till innehållsfragment, upplevelsefragment och sidor.
+* The **Refererad av** -kolumnen innehåller också en direkt länk för att visa alla överordnade referenser till det fragmentet, inklusive referenser till innehållsfragment, Experience Fragments och pages.
 * Vid hovring över mappnamnet visas JCR-sökvägen.
 
 När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
@@ -139,7 +139,7 @@ En dialogruta öppnas där du kan ange information och sedan bekräfta med **Ska
 
 ![Dialogrutan Skapa mapp](/help/journey-headless/author/assets/headless-journey-author-folder-02.png)
 
-#### Använda banor och taggar för att begränsa vilka modeller för innehållsfragment som finns i mappen {#tags-paths-for-models-in-folder}
+#### Använda banor och taggar för att begränsa antalet modeller för innehållsfragment i mappen {#tags-paths-for-models-in-folder}
 
 Det här avsnittet är något mer avancerat. Du behöver det inte riktigt om du bara börjar och provar saker, men det är *mycket* är användbart när du har många fragment. Så det är bra att veta om - även om du inte använder det helt än.
 
@@ -155,11 +155,11 @@ När du har skapat mappen kan du öppna den **Egenskaper**. Här finns olika fli
 
 Du navigerar sedan genom de här mapparna för att skapa och redigera dina innehållsfragment.
 
-#### Precis in case - konfiguration av mappkonfiguration {#cloud-services-folder}
+#### Precis in case - Konfiguration av mappkonfiguration {#cloud-services-folder}
 
 Bara om..
 
-Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Det här intresserar dig förmodligen inte, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Services** i mappen **Egenskaper**:
+Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Det här intresserar dig förmodligen inte, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Service** i mappen **Egenskaper**:
 
 ![Skapa mappegenskaper - Konfiguration](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
 
@@ -217,7 +217,7 @@ Exempel:
 
   ![Content Fragment Editor - My Fragment](/help/journey-headless/author/assets/headless-journey-author-content-fragment-04.png)
 
-* Ett fragment som gör att du kan skriva ett långt textavsnitt. Här finns ytterligare alternativ för att hantera och formatera texten. Du kan till och med öppna de enskilda textfälten i en helskärmsredigerare (med den lilla skärmliknande ikonen till höger)
+* Ett fragment som gör att du kan skriva ett långt textavsnitt. Här finns ytterligare alternativ för att hantera och formatera texten. Du kan även öppna enskilda textfält i en helskärmsredigerare (med den lilla skärmliknande ikonen till höger)
 
   ![Content Fragment Editor - Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
 
@@ -250,7 +250,7 @@ Modeller för innehållsfragment är faktiskt viktiga för dina innehållsfragme
 
   Den här är ganska självklar eftersom den är en flik i redigeraren.
 
-  Innehållsfragment har varit tillgängliga i AEM i ganska många versioner. Ursprungligen var de tillgängliga för&quot;traditionell&quot; användning vid redigering av sidor....och de används fortfarande i detta sammanhang. Detta kan innebära att resurser (till exempel bilder) som inte är inbäddade i fragmentet måste vara tillgängliga för författaren när sidan redigeras.
+  Innehållsfragment har varit tillgängliga i AEM i ganska många versioner. Ursprungligen var de tillgängliga för&quot;traditionell&quot; användning vid redigering av sidor...och de används fortfarande i detta sammanhang. Detta kan innebära att resurser (till exempel bilder) som inte är inbäddade i fragmentet måste vara tillgängliga för författaren när sidan redigeras.
 
 * **Förhandsgranska**
 
@@ -272,7 +272,7 @@ Publiceringsåtgärderna är tillgängliga i redigeraren:
 
 >[!NOTE]
 >
->Du kan även publicera ditt fragment från **Resurser** eller **Innehållsfragment** konsol.
+>Du kan även publicera ditt fragment från någon av **Resurser** eller **Innehållsfragment** konsol.
 
 ## What&#39;s Next {#whats-next}
 
@@ -288,7 +288,7 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
 
    * [Sidhuvudet](/help/sites-cloud/authoring/getting-started/basic-handling.md#the-header)
 
-   * [Verktygsfältet Åtgärd](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)
+   * [Åtgärdsverktygsfältet](/help/sites-cloud/authoring/getting-started/basic-handling.md#actions-toolbar)
 
    * [Snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions)
 
@@ -331,4 +331,4 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs mer om referenser](
 
 * AEM Headless Content Architect Journey
 
-* AEM Headless Translation Journey
+* AEM översättningsresa utan rubrik

@@ -2,10 +2,10 @@
 title: En snabbguide till WCAG 2.1
 description: A Quick Guide to the Web Content Accessibility Guidelines (WCAG) version 2.1.
 exl-id: 56aa834b-cd07-41c5-88f2-915bc0596e48
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 92%
+source-wordcount: '1782'
+ht-degree: 90%
 
 ---
 
@@ -68,7 +68,7 @@ För att förtydliga:
 * Riktlinjerna är numrerade från 1.1 till 4.1 där den första siffran motsvarar den överordnade principen.
 * Varje riktlinje består av ett eller flera **framgångskriterier**.
 * Framgångskriterier skrivs som programsatser, antingen `True` eller `False` för en given webbsida.
-* Framgångskriterier kan innehålla antingen/eller-alternativ eller undantag för situationer då framgångskriterierna inte behöver uppfyllas.
+* Godtagandekriterierna kan innehålla antingen eller alternativ, eller innehålla undantag; situationer där resultatkriterierna inte behöver uppfyllas.
 * Framgångskriterierna är numrerade enligt den överordnade riktlinjen och principen, från 1.1.1 till 4.1.1. De har också ett kort namn som sammanfattar syftet med kriteriet för enklare referens. [Framgångskriterium 1.1.1 är till exempel ett innehåll som inte är text](https://www.w3.org/TR/WCAG/#non-text-content).
 * Framgångskriterierna inkluderar en lista med relaterade **tekniker** (beskrivs nedan).
 

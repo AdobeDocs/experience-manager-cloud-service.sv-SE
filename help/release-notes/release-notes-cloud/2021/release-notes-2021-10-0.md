@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: ab584923-5f06-4b54-941b-e00bc1158b81
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1437'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.10.0) är 4 november 2021.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.10.0) är 4 november 2021.
 Följande version (2021.11.0) är den 2 december 2021.
 
 ## Släpp video {#release-video}
@@ -40,7 +40,7 @@ Ta en titt på [Oktober 2021 versionsöversikt](https://video.tv.adobe.com/v/338
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* [!DNL Experience Manager] har nu stöd för automatisk generering av texttranskript från ljud- och videomaterial som stöds, med en inbyggd koppling till [!DNL Azure Media Services]. The [filtyper som stöds](/help/assets/file-format-support.md#audio-video-transcription-formats) transkriberas automatiskt och texten lagras i WebVTT-format. WebVTT-bildtexter används för effektivare sökning, bildtext eller översättning. Funktionen förbättrar också tillgängligheten, identifieringen och lokaliseringen av resurserna.
+* [!DNL Experience Manager] har nu stöd för automatisk generering av texttranskript från ljud- och videomaterial som stöds, med en inbyggd koppling till [!DNL Azure Media Services]. The [filtyper som stöds](/help/assets/file-format-support.md#audio-video-transcription-formats) transkriberas automatiskt och texten lagras i WebVTT-format. WebVTT-bildtexterna används för effektivare sökning, bildtext eller översättning. Funktionen förbättrar också tillgängligheten, identifieringen och lokaliseringen av resurserna.
 
 ### Ny funktion i [!DNL Assets] prerelease channel {#assets-prerelease-features}
 
@@ -58,11 +58,11 @@ No customer-reported bugs fixed in Oct release. Details in CQDOC-18404.
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
 
-* **Analytics för Adaptive Forms**: Nu kan du fånga in och spåra beteenden hos både inloggade och ej inloggade (anonyma) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+* **Analytics för Adaptive Forms**: Du kan nu fånga in och spåra beteenden hos både inloggad och ej inloggad (anonym) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms-oct-2021}
 
-* **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra AEM arbetsflödesdata (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
+* **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra data AEM arbetsflöden (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
 
 ### Betafunktioner i [!DNL Forms] {#what-is-new-forms-oct2021-beta}
 
@@ -75,7 +75,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
 * CIF-tillägget stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
 
@@ -107,7 +107,7 @@ Nästa version är planerad till 9 december 2021.
 
 * Git-implementerings-ID visas nu i körningsinformationen för pipeline, vilket gör det enklare att spåra koden som skapades.
 
-* Nu kan du skapa program via offentligt exponerade API:er.
+* Nu kan du skapa program via offentligt exponerade API.
 
 * Miljöskapande är nu tillgängligt via offentligt exponerade API.
 

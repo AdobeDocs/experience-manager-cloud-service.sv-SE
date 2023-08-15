@@ -6,9 +6,9 @@ topic-tags: configuring
 content-type: reference
 feature: Configuring
 exl-id: 1a1bb23c-d1d1-4e2b-811b-753e6a90a01b
-source-git-commit: 7260649eaab303ba5bab55ccbe02395dc8159949
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -38,17 +38,17 @@ När mappningen automatiskt lägger till prefixet `/content` till `/we-retail/en
 
 >[!NOTE]
 >
->Läs Sling-dokumentationen och [Mappningar för resursupplösning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) och [Resurser](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för ytterligare information.
+>Läs Sling-dokumentationen och [Mappningar för resursupplösning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) och [Resurs](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för ytterligare information.
 
 ## Visa mappningsdefinitioner {#viewing-mapping-definitions}
 
 Mappningarna består av två listor som JCR-resurslösaren utvärderar (högst upp) för att hitta en matchning.
 
-De här listorna kan visas (tillsammans med konfigurationsinformation) under **JCR ResourceResolver** Valet av Felix-konsolen. till exempel `https://<*host*>:<*port*>/system/console/jcrresolver`:
+De här listorna kan visas (tillsammans med konfigurationsinformation) under **JCR ResourceResolver** Valet av Felix-konsolen, till exempel `https://<*host*>:<*port*>/system/console/jcrresolver`:
 
 * Konfiguration Visar den aktuella konfigurationen (enligt definition för [Resurslösare för Apache Sling](/help/overview/seo-and-url-management.md#etc-map)).
 
-* Konfigurationstest Detta gör att du kan ange en URL eller resurssökväg. Klicka **Lös** eller **Karta** för att bekräfta hur posten ändras.
+* Konfigurationstest Här kan du ange en URL eller resurssökväg. Klicka **Lös** eller **Karta** för att bekräfta hur posten ändras.
 
 * **Matcha mappningsposter**
 Listan över poster som används av metoderna ResourceResolver.resolve för att mappa URL:er till Resources.
@@ -128,7 +128,7 @@ begärdes.
 
 >[!NOTE]
 >
->Se [Resurser](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) I Sling Documentation finns mer information om vilka snedsättningsegenskaper som finns och hur de kan konfigureras.
+>Se [Resurs](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) I Sling Documentation finns mer information om vilka snedsättningsegenskaper som finns och hur de kan konfigureras.
 >Till exempel: [Stränginterpolation](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#string-interpolation-for-etcmap) är användbart eftersom du kan konfigurera en mappning som hämtar värden per miljö via miljövariabler.
 
 >[!NOTE]

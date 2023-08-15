@@ -1,17 +1,13 @@
 ---
 title: Skicka en bekräftelse på att formulär har skickats via e-post
-seo-title: Sending a form submission acknowledgement via email
 description: Med AEM Forms kan du konfigurera åtgärden Skicka via e-post som skickar en bekräftelse till en användare när formuläret skickas.
-seo-description: AEM Forms allows you to configure the email Submit Action that sends an acknowledgement to a user on submitting the form.
-uuid: c80b1ef4-8fe3-48e0-8fc6-3032dc022a38
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-discoiquuid: 574de3d5-69ba-4e2f-a8ab-c59f357e4386
 docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -67,9 +63,9 @@ Med åtgärden Skicka e-post kan en författare automatiskt skicka e-post till e
 
 Fältnamnen i ett adaptivt formulär kallas platshållare som ersätts med värdet i det fältet när användaren skickar formuläret.
 
-I **[!UICONTROL Send email]** kan du använda platshållare som bearbetas när åtgärden utförs. Det betyder att e-postmeddelandets rubriker (till exempel **[!UICONTROL To]**, **[!UICONTROL CC]**, **[!UICONTROL BCC]**, **[!UICONTROL Subject]**) genereras när användaren skickar formuläret.
+I **[!UICONTROL Send email]** kan du använda platshållare som bearbetas när åtgärden utförs. Det betyder att e-postens rubriker (som **[!UICONTROL To]**, **[!UICONTROL CC]**, **[!UICONTROL BCC]**, **[!UICONTROL Subject]**) genereras när användaren skickar formuläret.
 
-Om du vill definiera en platshållare anger du `${<field name>}` i ett fält efter markering **[!UICONTROL Send email]** som åtgärden Skicka.
+Om du vill definiera en platshållare anger du `${<field name>}` i ett fält efter markering **[!UICONTROL Send email]** som Skicka-åtgärd.
 
 Om formuläret till exempel innehåller **[!UICONTROL Email address]** fält, namngivna `email_addr`för att hämta användarens e-post-ID kan du ange följande i **[!UICONTROL To]**, **[!UICONTROL CC]**, eller **[!UICONTROL BCC]** fält.
 

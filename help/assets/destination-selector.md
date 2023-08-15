@@ -3,9 +3,9 @@ title: Målväljare för AEM as a Cloud Service
 description: Använd AEM målväljare för att visa och välja resurser som du kan använda som en kopia av den ursprungliga resursen.
 contentOwner: Adobe
 role: Admin,User
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1903'
+source-wordcount: '1894'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Utför följande uppgifter för att integrera och använda målväljaren med [!D
 
 Du kan integrera alla [!DNL Adobe] eller program som inte är Adobe med [!DNL Experience Manager Assets] som [!DNL Cloud Service] arkivera och välja resurser inifrån programmet.
 
-Integreringen görs genom att importera målväljarpaketet och ansluta till Assets-as a Cloud Service med hjälp av Vanilla JavaScript-biblioteket. Du måste redigera en `index.html` eller en lämplig fil i programmet till
+Integreringen görs genom att importera målväljarpaketet och ansluta till Assets-as a Cloud Service med hjälp av Vanilla JavaScript-biblioteket. Du måste redigera en `index.html` eller en lämplig fil i programmet till -
 * Definiera autentiseringsinformationen
 * Åtkomst till den as a Cloud Service resurskatalogen
 * Konfigurera visningsegenskaperna för målväljaren
@@ -86,7 +86,7 @@ import { DestinationSelector } from 'https://experience.adobe.com/solutions/CQ-a
 
 ### Markerat mål {#selected-destination}
 
-Målväljaren tar emot ett återanrop från `onItemSelect`, `onTreeToggleItem`, eller `onTreeSelectionChange` med den markerade katalogen som innehåller objektet (katalog, bild o.s.v.).
+Målväljaren tar emot ett återanrop från `onItemSelect`, `onTreeToggleItem`, eller `onTreeSelectionChange` med den markerade katalogen som innehåller objektet (katalog, bild och så vidare).
 
 **Schemasyntax**
 
@@ -136,7 +136,7 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda må
 | *repo:modifiedBy* | string | Den användare eller det system som senast ändrade resursen. |
 | *repo:modifyDate* | string | Datum och tid då tillgången senast ändrades. |
 | *dc:format* | string | Tillgångens format. |
-| *sida* | orderBy: sträng; antal: nummer; | Inkluderar dokumentets sidnummer. |
+| *sida* | orderBy: string; count: number; | Inkluderar dokumentets sidnummer. |
 
 En fullständig lista över egenskaper och detaljerade exempel finns på [Exempel på målväljarkod](https://github.com/adobe/aem-assets-selectors-mfe-examples).
 
@@ -144,7 +144,7 @@ En fullständig lista över egenskaper och detaljerade exempel finns på [Exempe
 
 I det här exemplet visas hur du använder målväljaren med ett icke-SUSI-flöde när du kör en [!DNL Adobe] program under Unified Shell eller när du redan har `imsToken` genereras för autentisering.
 
-Inkludera målväljarpaketet i koden med `script` -tagg, som visas i _raderna 6-15_ i exemplet nedan. När skriptet har lästs in `PureJSSelectors` global variabel är tillgänglig för användning. Definiera målväljaren [egenskaper](#destination-selector-properties) som visas i _raderna 16-23_. The `imsOrg` och `imsToken` båda egenskaperna krävs för autentisering i icke-SUSI-flöden. The `handleSelection` -egenskapen används för att hantera de valda resurserna. Om du vill återge målväljaren anropar du `renderDestinationSelector` funktionen enligt _rad 17_. Målväljaren visas i `<div>` behållarelement, som visas i _raderna 21 och 22_.
+Inkludera målväljarpaketet i koden med `script` -tagg, som i _raderna 6-15_ i exemplet nedan. När skriptet har lästs in `PureJSSelectors` global variabel är tillgänglig för användning. Definiera målväljaren [egenskaper](#destination-selector-properties) som visas i _raderna 16-23_. The `imsOrg` och `imsToken` båda egenskaperna krävs för autentisering i icke-SUSI-flöden. The `handleSelection` -egenskapen används för att hantera de valda resurserna. Om du vill återge målväljaren anropar du `renderDestinationSelector` funktionen enligt _rad 17_. Målväljaren visas i `<div>` behållarelement, som visas i _raderna 21 och 22_.
 
 Följ de här stegen kan du använda målväljaren med ett icke-SUSI-flöde i [!DNL Adobe] program.
 
@@ -192,15 +192,15 @@ Du kan använda egenskaperna för målväljaren för att anpassa hur målväljar
 | *hasMore* | boolesk | Nej | | När programmet har mer innehåll att visa kan du använda den här egenskapen för att lägga till en inläsare som läser in innehållet för att göra det synligt i programmet. Det är en indikator som anger att inläsning av innehåll pågår. |
 | *orgName* | boolesk | Nej | | Det är namnet på organisationen (troligtvis orgID) som är associerad med AEM |
 | *initRepoID* | string | Nej | | Det är sökvägen till resurskatalogen som du vill använda i en inledande standardvy |
-| *onCreateFolder* | string | Nej | | The `onCreateFolder` kan du lägga till ikoner som lägger till en ny mapp i programmet. |
+| *onCreateFolder* | string | Nej | | The `onCreateFolder` -egenskapen gör att du kan lägga till en ikon som lägger till en ny mapp i programmet. |
 | *onConfirm* | string | Nej | | Det är ett återanrop när du trycker på bekräftelseknappen. |
 | *confirmDisabled* | string | Nej | | Den här egenskapen styr omkopplaren av bekräftelseknappen. |
 | *viewType* | string | Nej | | The `viewType` -egenskapen används för att ange de vyer som du använder för att visa resurser. |
-| *viewTypeOptions* | string | Nej | | Den här egenskapen är relaterad till `viewType` -egenskap. du kan ange en eller flera vyer för att visa resurser. Tillgängliga viewTypeOptions är: Listvy, stödrastervy, gallerivy, vattenfallsvy och trädvy. |
+| *viewTypeOptions* | string | Nej | | Den här egenskapen är relaterad till `viewType` -egenskap. du kan ange en eller flera vyer för att visa resurser. Tillgängliga viewTypeOptions är: listvy, stödrastervy, gallerivy, vattenfallsvy och trädvy. |
 | *itemNameFormatter* | string | Nej | | Med den här egenskapen kan du formatera objektnamnet |
 | *i18nSymbols* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |  | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
 | *inlineAlertSetup* | string | Nej | | Det lägger till ett varningsmeddelande som du vill skicka i programmet. Du kan till exempel lägga till ett varningsmeddelande om att du inte har behörighet att komma åt den här mappen. |
-| *intl* | Objekt | Nej | | Målväljaren innehåller standardöversättningar av OTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språkområden som stöds: Engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
+| *intl* | Objekt | Nej | | Målväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 
 ## Exempel på hur du använder egenskaper för målväljare {#usage-examples}
 
@@ -241,7 +241,7 @@ När målväljaren har konfigurerats och du autentiserats för att använda mål
 
 ### Sökfältet {#search-bar}
 
-Med målväljaren kan du utföra fullständig textsökning av resurser i den valda databasen. Om du till exempel skriver nyckelordet `wave` i sökfältet, alla resurser med `wave` nyckelord som nämns i någon av metadataegenskaperna visas.
+Med målväljaren kan du utföra fullständig textsökning av resurser i den valda databasen. Om du till exempel skriver nyckelordet `wave` i sökfältet, alla resurser som har `wave` nyckelord som nämns i någon av metadataegenskaperna visas.
 
 ### Sortering {#sorting}
 
@@ -249,7 +249,7 @@ Du kan sortera resurser i målväljaren efter namn, dimension eller storlek för
 
 ### Resurslagringsplats {#assets-repo}
 
-Med målväljaren kan du även visa valfria databasdata som finns i AEM. Du kan använda `repositoryID` för att initiera sökvägen till målmappen som du vill visa vid den första instansen av målväljaren.
+Med målväljaren kan du även visa valfria databasdata i AEM. Du kan använda `repositoryID` för att initiera sökvägen till målmappen som du vill visa vid den första instansen av målväljaren.
 
 ### Lägg till suffix eller prefix {#add-suffix-or-prefix}
 
@@ -264,7 +264,7 @@ Du kan skapa en ny mapp i målmappen för [!DNL Adobe Experience Manager] som [!
 Med målväljaren kan du visa resursen i fyra olika vyer:
 
 * **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]**: I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervy](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]**: I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
+* **![stödrastervy](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]**: Stödrastervyn visar rullningsbara filer och mappar i ett rutnät med rader och kolumner.
 * **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]**: I gallerivyn visas filer eller mappar i en centrerad vågrät lista.
 * **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]**: I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 

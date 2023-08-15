@@ -2,9 +2,9 @@
 title: Skapa och hantera kanaler på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
-source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1092'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ När du har skapat ett AEM Screens-projekt måste du skapa kanaler.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler för ditt AEM Screens-projekt i Screens Content Provider. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler för ditt AEM Screens-projekt i Screens Content Provider. Efter läsning bör du:
 
 * förstå hur du skapar kanaler för leverantörer av skärminnehåll
 * hantera och redigera innehåll i era kanaler
@@ -86,7 +86,7 @@ Följande mallar är tillgängliga när du använder **Skapa** kanalguide:
 | Tillgängliga mallar | Beskrivning |
 |--- |--- |
 | Mappen Kanaler | Gör att du kan skapa en mapp för lagring av kanalsamlingar. |
-| Sekvenskanal | Gör att du kan skapa en kanal som spelar upp komponenterna sekventiellt (en i taget i ett bildspel). |
+| Sekvenskanal | Skapa en kanal som spelar upp komponenterna sekventiellt (en i taget i ett bildspel). |
 | Vänster eller höger L-streckkanal för delad skärm | Innehållsförfattare kan visa olika typer av resurser i zoner med lämplig storlek. |
 
 ## Använd standardtilldelningsinformation för kanaler {#default-channels}
@@ -155,7 +155,7 @@ Du kan också välja önskad visning i lagervyn och klicka på **Tilldela kanal*
 
    ![bild](/help/screens-cloud/assets/display/Assignments9.png)
 
-1. En bekräftelsedialogruta visas och informationen matchar något av följande villkor:
+1. En bekräftelsedialogruta visas och detaljerna matchar något av följande villkor:
    **a.** Kanalen används inte i någon visning.
 
    ![bild](/help/screens-cloud/assets/display/Assignments10.png)

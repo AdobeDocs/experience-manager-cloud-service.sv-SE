@@ -2,9 +2,9 @@
 title: Hantera anpassade domännamn
 description: Lär dig hur du använder Cloud Manager för att visa, uppdatera, ersätta och ta bort anpassade domännamn.
 exl-id: 6cab8cf2-22c0-4f4b-9c54-a1425e74ddd0
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Använd **Visa och uppdatera** om du vill visa information om dina anpassade dom
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Identifiera raden i det anpassade domännamnet som du vill visa eller uppdatera.
 
@@ -29,7 +29,7 @@ Använd **Visa och uppdatera** om du vill visa information om dina anpassade dom
 
 ## Uppdaterar det anpassade domännamnets SSL-certifikat {#update-cert}
 
-Du kan följa [samma steg för att visa och uppdatera ett anpassat domännamn](#view-and-update) för att uppdatera ett anpassat domännamns SSL-certifikat.
+Du kan följa [samma steg för att visa och uppdatera ett anpassat domännamn](#view-and-update) om du vill uppdatera ett anpassat domännamns SSL-certifikat.
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ En användare med **Företagsägare** eller **Distributionshanteraren** kan anv�
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Navigera till **Domäninställningar** sidan från **Miljö** skärm.
 
@@ -55,14 +55,14 @@ En användare med **Företagsägare** eller **Distributionshanteraren** kan anv�
 
    ![Tar bort anpassade domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-delete.png)
 
-1. Bekräfta ditt tävlingsbidrag.
+1. Bekräfta ditt bidrag.
 
 ### Ta bort ett anpassat domännamn från en viss miljö {#delete-cdn-specific}
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 1. Från **Miljö** navigera till informationsskärmen för den aktuella miljön.
 1. Identifiera raden med det anpassade domännamnet som du vill ta bort i tabellen över domännamn.
 1. Klicka på ellipsknappen längst till höger på raden.
 1. Välj **Ta bort**.
-1. Bekräfta ditt tävlingsbidrag.
+1. Bekräfta ditt bidrag.

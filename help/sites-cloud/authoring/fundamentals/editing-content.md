@@ -2,9 +2,9 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2990'
+source-wordcount: '2983'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 När sidan har skapats (antingen ny eller som en del av en lansering eller en live-kopia) kan du redigera innehållet för att få de uppdateringar du behöver.
 
-Innehåll läggs till med [komponenter](/help/sites-cloud/authoring/features/components-console.md) (som passar för innehållstypen) som kan dras till sidan. Du kan sedan redigera dem på plats, flytta eller ta bort dem.
+Innehåll läggs till med [komponenter](/help/sites-cloud/authoring/features/components-console.md) (anpassat till innehållstypen) som kan dras till sidan. Du kan sedan redigera dem på plats, flytta eller ta bort dem.
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ Innehåll läggs till med [komponenter](/help/sites-cloud/authoring/features/com
 
 >[!NOTE]
 >
->Om sidan och/eller mallen har konfigurerats på rätt sätt kan du använda [responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md) vid redigering.
+>Om sidan och/eller mallen har konfigurerats korrekt kan du använda [responsiv layout](/help/sites-cloud/authoring/features/responsive-layout.md) vid redigering.
 
 >[!TIP]
 >
@@ -44,7 +44,7 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
   Då öppnas/stängs sidopanelen som innehåller [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser), [Komponentbläddraren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser)och [Innehållsträd](/help/sites-cloud/authoring/fundamentals/environment-tools.md#content-tree).
 
-  ![Växla sida](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
+  ![Växla sidopanel](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
 
 * **Sidinformation**
 
@@ -72,7 +72,7 @@ Verktygsfältet har många alternativ. Beroende på ditt aktuella sammanhang och
 
 * **Lägesväljare**
 
-  Visar aktuell [läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) och gör att du kan välja ett annat läge, som redigering, layout, tidsförvrängning eller målinriktning.
+  Visar aktuell [läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) och låter dig välja ett annat läge, t.ex. redigering, layout, tidsförvrängning eller målinriktning.
 
   ![Lägesväljare, knapp](/help/sites-cloud/authoring/assets/mode-selector.png)
 
@@ -100,9 +100,9 @@ Om en sida är en del av en [arbetsflöde](/help/sites-cloud/authoring/workflows
 
 I meddelandet visas arbetsflödet som körs mot sidan. Om användaren är involverad i det aktuella arbetsflödessteget kan du välja [påverka arbetsflödets status](/help/sites-cloud/authoring/workflows/participating.md) och det finns även mer information om arbetsflödet:
 
-* **Slutförd** - Öppnar **Slutför arbetsuppgift** dialog
+* **Complete** - Öppnar **Slutför arbetsuppgift** dialog
 * **Delegera** - Öppnar **Slutför arbetsuppgift** dialog
-* **Visa detaljer** - Öppnar **Detaljer** arbetsflödets fönster
+* **Visa detaljer** - Öppnar **Information** arbetsflödets fönster
 
 Att slutföra och delegera arbetsflödessteg via meddelandefältet fungerar som när [delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md) från meddelandeinkorgen.
 
@@ -126,7 +126,7 @@ Komponentplatshållaren är en indikator som visar var en komponent placeras nä
 
 ### Infoga en komponent från komponentwebbläsaren {#inserting-a-component-from-the-components-browser}
 
-Du kan lägga till en ny komponent med [komponentwebbläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). The [komponentplatshållare](#component-placeholder) visar var komponenten är placerad:
+Du kan lägga till en ny komponent med [komponentwebbläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). The [platshållare för komponent](#component-placeholder) visar var komponenten är placerad:
 
 1. Kontrollera att sidan finns i [**Redigera** läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
 1. Öppna [komponentwebbläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser).
@@ -166,7 +166,7 @@ Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
 1. Kontrollera att sidan finns i [**Redigera** läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes).
 1. Öppna [resursläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser).
-1. Dra den önskade resursen till önskad position. The [komponentplatshållare](#component-placeholder) visar var komponenten är placerad.
+1. Dra den önskade resursen till önskad position. The [platshållare för komponent](#component-placeholder) visar var komponenten är placerad.
 
    En komponent som passar för resurstypen skapas på den önskade platsen - den innehåller den valda resursen.
 
@@ -184,7 +184,7 @@ Om du behöver göra en snabb ändring i en resurs när du bläddrar bland resur
 
 Om du väljer en komponent öppnas verktygsfältet. Detta ger åtkomst till olika åtgärder som kan utföras på komponenten.
 
-De faktiska åtgärder som är tillgängliga för användaren visas som lämpliga och inte alla åtgärder beskrivs här.
+De faktiska åtgärder som är tillgängliga för användaren visas som lämpliga och alla åtgärder kan inte beskrivas här.
 
 ![Komponentverktygsfältet](/help/sites-cloud/authoring/assets/editing-component-toolbar.png)
 
@@ -196,7 +196,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Konfigurera**
 
-  [Beroende på komponenttypen](/help/sites-cloud/authoring/fundamentals/components.md)gör det att du kan redigera och konfigurera komponentens egenskaper. Ofta öppnas en dialogruta.
+  [Beroende på komponenttypen](/help/sites-cloud/authoring/fundamentals/components.md)kan du redigera och konfigurera komponentens egenskaper. Ofta öppnas en dialogruta.
 
   ![Knappen Konfigurera](/help/sites-cloud/authoring/assets/editing-component-toolbar-configure.png)
 
@@ -208,7 +208,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Klipp ut**
 
-  Komponenten kopieras då till Urklipp. Efter inklistringsåtgärden tas originalkomponenten bort.
+  Komponenten kopieras då till Urklipp. Efter inklistringsåtgärden tas den ursprungliga komponenten bort.
 
   ![Klipp ut, knapp](/help/sites-cloud/authoring/assets/editing-component-toolbar-cut.png)
 
@@ -220,7 +220,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Infoga komponent**
 
-  Dialogrutan öppnas för [lägga till en ny komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#inserting-a-component-from-the-paragraph-system).
+  Dialogrutan öppnas [lägga till en ny komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#inserting-a-component-from-the-paragraph-system).
 
   ![Infoga, knapp](/help/sites-cloud/authoring/assets/editing-component-toolbar-insert.png)
 
@@ -269,7 +269,7 @@ Det finns två sätt att lägga till och/eller redigera innehåll i komponenter:
 * Öppna [komponentdialogruta för redigering](#component-edit-dialog).
 * [Dra och släpp en resurs](#drag-and-drop-assets-into-component) från resursläsaren för att lägga till innehåll direkt.
 
-### Dialogrutan Komponentredigering {#component-edit-dialog}
+### Komponentredigeringsdialogruta {#component-edit-dialog}
 
 Du kan öppna en komponent och redigera innehållet med ikonen [Redigera (penna) i komponentverktygsfältet](#component-toolbar).
 
@@ -291,7 +291,7 @@ De exakta redigeringsalternativen beror på komponenten. För vissa komponenter 
 
 * Bildkomponent - helskärm
 
-  [Gå in i helskärmsläge](#edit-content-full-screen-mode) för bildkomponenten ger mer utrymme att redigera bilden och visar extra redigeringsalternativ som **Starta karta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
+  [Gå in i helskärmsläge](#edit-content-full-screen-mode) för bildkomponenten ger mer utrymme för att redigera bilden och visa extra redigeringsalternativ som **Starta karta** och **Återställ zoomning**. I helskärmsläget kan du dessutom välja förinställningar för beskärning.
 
   ![Bildkomponentens helskärmsläge](/help/sites-cloud/authoring/assets/editing-image-component-full-screen.png)
 
@@ -303,7 +303,7 @@ För specifika komponenttyper (t.ex. bilder) kan du dra och släppa resurser fr�
 
 ## Redigera innehåll i helskärmsläge {#edit-content-full-screen-mode}
 
-För alla komponenter går det att komma åt helskärmsläget med (och avsluta från):
+För alla komponenter kan helskärmsläget nås med (och avslutas från):
 
 ![Knappen Helskärm](/help/sites-cloud/authoring/assets/editing-full-screen.png)
 
@@ -338,7 +338,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
    ![Komponentverktygsfältet för en sidkomponent](/help/sites-cloud/authoring/assets/editing-layout-toolbar.png)
 
-   Klicka eller tryck på **Layout** för att justera komponentens layout.
+   Klicka eller tryck på **Layout** åtgärd för att justera komponentens layout.
 
    ![Knappen Layout i komponentverktygsfältet](/help/sites-cloud/authoring/assets/editing-component-toolbar-layout.png)
 
@@ -397,12 +397,12 @@ Du kan enkelt se vilken mall sidan baseras på när du markerar sidan i [kolumnv
 
 The [Sidläget Live Copy-status](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes) ger dig en snabb översikt över live-kopians status och vilka komponenter som ärvs/inte ärvs:
 
-* Grön kantlinje: Ärvd
-* Rosa kantlinje: Arvet har annullerats
+* Grön kant: Ärvd
+* Rosa kantlinje: Arvet har avbrutits
 
 Till exempel:
 
-![Exempel på live-kopieringsstatus som visas](/help/sites-cloud/authoring/assets/editing-live-copy-status.png)
+![Exempel på live-kopia som visas](/help/sites-cloud/authoring/assets/editing-live-copy-status.png)
 
 ## Lägga till anteckningar {#adding-annotations}
 
@@ -492,7 +492,7 @@ På menyn Sidinformation visas **Lås upp** som ett alternativ och låsikonen p�
 >
 >Locking a page can be performed when impersonating a user. However a page locked in this way can only then be unlocked by the user who was impersonated, or by a user with admin rights (a member of AEM Administrator IMS profile).
 >
->Pages can not be unlocked by impersonating the user who locked the page.
+>Pages cannot be unlocked by impersonating the user who locked the page.
 -->
 
 <!--
@@ -516,7 +516,7 @@ Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i ver
 
 ## Ångra och göra om sidredigeringar - The Theory {#undoing-and-redoing-page-edits-the-theory}
 
-AEM lagrar en historik över åtgärder som du utför och i vilken ordning du utförde dem, så att du kan ångra flera åtgärder i den ordning som du utförde dem och göra om dem för att återanvända en eller flera av åtgärderna om det behövs.
+AEM lagrar en historik över åtgärder som du utför och den sekvens i vilken du utförde dem, så att du kan ångra flera åtgärder i den ordning som du utförde dem och göra om dem för att återanvända en eller flera av åtgärderna om det behövs.
 
 Om ett element på innehållssidan är markerat (till exempel en textkomponent) gäller kommandot ångra och gör om det markerade objektet.
 
@@ -531,7 +531,7 @@ Du kan till exempel:
 Du kan använda Ångra och Gör om för följande typer av sidändringar:
 
 * Lägga till, redigera, ta bort och flytta stycken
-* In-place editing of paragraph content
+* Redigera styckeinnehåll direkt
 * Kopiera, klippa ut och klistra in objekt på en sida
 
 >[!NOTE]

@@ -1,9 +1,9 @@
 ---
 title: Innehållsåterställning i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
-source-git-commit: 6813b5b9570a4d115cd0600bcccd4d787dc42154
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Bestäm först tidsramen för det innehåll som du vill återställa. Utför sed
 
 1. På **Återställ innehåll** på sidan med miljöinformation, först väljer du tidsramen för återställningen under **Tid att återställa** nedrullningsbar meny.
 
-   1. Om du väljer **De senaste 24 timmarna** granne **Tid** kan du ange exakt tid inom de senaste 24 timmarna som ska återställas.
+   1. Om du väljer **De senaste 24 timmarna** granne **Tid** I kan du ange exakt tid inom de senaste 24 timmarna som ska återställas.
 
       ![De senaste 24 timmarna](assets/backup-time.png)
 
@@ -114,11 +114,11 @@ Genom att klicka på informationsikonen för en säkerhetskopia kan du ladda ned
 
 ## Säkerhetskopiering offline {#offsite-backup}
 
-Regelbunden säkerhetskopiering täcker risken för oavsiktliga borttagningar eller tekniska fel i AEM Cloud-tjänster, men ytterligare risker kan uppstå om en region slutar fungera. Förutom tillgänglighet är den största risken i sådana regionala avbrott en dataförlust.
+Regelbunden säkerhetskopiering täcker risken för oavsiktliga borttagningar eller tekniska fel inom AEM Cloud Service, men ytterligare risker kan uppstå om en region inte fungerar. Förutom tillgänglighet är den största risken i sådana regionala avbrott en dataförlust.
 
 AEM as a Cloud Service minskar denna risk för alla AEM produktionsmiljöer genom att kontinuerligt kopiera allt AEM innehåll till en fjärrregion och göra det tillgängligt för återställning under en period av tre månader. Den här funktionen kallas säkerhetskopiering på annan plats.
 
-Återskapandet av AEM Cloud-tjänster för testnings- och produktionsmiljöer från säkerhetskopiering utomhus utförs av AEM för tillförlitlighetskonstruktion i händelse av dataavbrott i dataområden.
+Återställandet av AEM Cloud Service för mellanlagrings- och produktionsmiljöer från externa säkerhetskopieringar utförs av AEM Service Reliable Engineering i händelse av dataavbrott i dataområden.
 
 ## Begränsningar {#limitations}
 

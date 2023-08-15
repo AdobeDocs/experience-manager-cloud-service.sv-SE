@@ -2,7 +2,7 @@
 title: Förhandsgranska - JSON-representation (resurser - innehållsfragment)
 description: Lär dig hur du enkelt förhandsgranskar en JSON-representation av dina innehållsfragment när du implementerar AEM headless-lösning.
 exl-id: e5f3f3ee-c191-4b7b-8a29-67524bb68a8e
-source-git-commit: 344d04eb18c100835b78fe59c909d92c1e42111b
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 1%
@@ -22,5 +22,5 @@ Du kan visa JSON-representationen av det aktuella fragmentet. Till exempel:
 ![Innehållsfragmentredigerare - förhandsgranskning av ett fragment](assets/cfm-preview-02.png)
 
 <!--
-**Copy URL** allows you to copy to clipboard the URL for either author or publish.
+**Copy URL** lets you copy to clipboard the URL for either author or publish.
 -->

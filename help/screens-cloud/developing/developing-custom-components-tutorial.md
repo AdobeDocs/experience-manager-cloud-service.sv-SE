@@ -2,9 +2,9 @@
 title: Utveckla en anpassad komponent för skärmar as a Cloud Service
 description: I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2107'
 ht-degree: 0%
 
 ---
@@ -265,7 +265,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
 
 Med bibliotek på klientsidan kan du ordna och hantera CSS- och JavaScript-filer som behövs för en AEM implementering.
 
-AEM Screens-komponenter återges annorlunda i redigeringsläge jämfört med förhandsgransknings-/produktionsläge. Två klientbibliotek skapas: en för redigeringsläget och en för förhandsgranskning/produktion.
+AEM Screens-komponenter återges annorlunda i redigeringsläge jämfört med förhandsgransknings-/produktionsläge. Två klientbibliotek skapas: ett för redigeringsläget och ett för Förhandsgranska/Produktion.
 
 1. Skapa en mapp för klientbibliotek för Hello World-komponenten.
 
@@ -301,7 +301,7 @@ AEM Screens-komponenter återges annorlunda i redigeringsläge jämfört med fö
    styles.less
    ```
 
-1. Skapa en mapp med namnet `css` under `shared` mapp. Lägg till en fil med namnet `style.less` under `css` mapp. Klientbibliotekens struktur bör nu se ut så här:
+1. Skapa en mapp med namnet `css` under `shared` mapp. Lägga till en fil med namnet `style.less` under `css` mapp. Klientbibliotekens struktur bör nu se ut så här:
 
    ![2018-04-30_at_3_11pm](/help/screens-cloud/developing/assets/2018-04-30_at_3_11pm.png)
 
@@ -423,11 +423,11 @@ Hello World-komponenten är avsedd att användas på en sekvenskanal. Om du vill
 
    Designkonfiguration som pekar på /apps/settings/wcm/designs/we-retail-run
 
-1. Redigera den nya inaktivitetskanalen så att du kan öppna den.
+1. Redigera den nyligen skapade inaktivitetskanalen så att du kan öppna den.
 
 1. Växla sidläge till **Design** Läge.
 
-   1. Klicka på **wrench** Ikon i Parsys så att du kan konfigurera de tillåtna komponenterna.
+   1. Klicka på **wrench** Ikon i Parsys så att du kan konfigurera tillåtna komponenter.
 
    1. Välj **Skärmar** gruppen och **Vi.Retail Run - Innehåll** grupp.
 

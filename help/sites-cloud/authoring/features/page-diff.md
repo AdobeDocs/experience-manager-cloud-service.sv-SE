@@ -2,9 +2,9 @@
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 exl-id: 6e5c7f14-c980-48e3-8bdd-a7ec10a9e680
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 >
 >Användaren måste ha **Ändra/skapa/ta bort** behörighet på noden `/content/versionhistory` för att använda funktionen.
 >
->Se [Developing and Page Diff](/help/implementing/developing/introduction/page-diff.md#operation-details) om du vill ha mer teknisk information om den här funktionen.
+>Se [Developing and Page Diff](/help/implementing/developing/introduction/page-diff.md#operation-details) för mer teknisk information om den här funktionen.
 
 ## Använd {#use}
 
@@ -47,7 +47,7 @@ Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webblä
 
 ![Versioner sida vid sida](/help/sites-cloud/authoring/assets/versions-side-by-side.png)
 
-Skillnaden identifierar ändringar på komponentnivå och HTML. Objekt som har ändrats markeras med olika färger.
+Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som har ändrats markeras med olika färger.
 
 **Komponentändringar**
 

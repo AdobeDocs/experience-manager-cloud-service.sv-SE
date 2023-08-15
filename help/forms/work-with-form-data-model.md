@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User
 level: Beginner, Intermediate
 exl-id: c17c0443-d4dc-41f8-9315-6cc49e6c471f
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '3987'
+source-wordcount: '3984'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Så här lägger du till datamodellsobjekt och -tjänster:
 
 ### Skapa datamodellsobjekt {#create-data-model-objects}
 
-Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan också skapa datamodellsobjekt eller -enheter utan datakällor. Det är särskilt användbart om du inte har konfigurerat datakällor i formulärdatamodellen.
+Du kan lägga till datamodellsobjekt från konfigurerade datakällor, men du kan även skapa datamodellsobjekt eller -enheter utan datakällor. Det är särskilt användbart om du inte har konfigurerat datakällor i formulärdatamodellen.
 
 Så här skapar du ett datamodellsobjekt utan datakällor:
 
@@ -168,13 +168,13 @@ Bind lästjänstargumentet till ett användarprofilattribut, begärandeattribut 
 
 #### Litteralt värde {#literal-value}
 
-Välj **[!UICONTROL Literal]** från **[!UICONTROL Binding To]** nedrullningsbar meny och ange ett värde i **[!UICONTROL Binding Value]** fält. Information som är associerad med värdet hämtas från datakällan. Använd det här alternativet om du vill hämta information som är kopplad till ett statiskt värde.
+Välj **[!UICONTROL Literal]** från **[!UICONTROL Binding To]** och ange ett värde i listrutan **[!UICONTROL Binding Value]** fält. Information som är associerad med värdet hämtas från datakällan. Använd det här alternativet om du vill hämta information som är kopplad till ett statiskt värde.
 
 I det här exemplet är informationen som är kopplad till **4367655678**, som värdet för `mobilenum` -argument hämtas från datakällan. Den associerade informationen om du skickar värdet för ett mobilnummerargument kan innehålla egenskaper som kundnamn, kundadress och ort.
 
 ![Litteralt värde](assets/fdm_binding_literal_new.png)
 
-#### Användarprofilattribut {#user-profile-attribute}
+#### Attribut för användarprofil {#user-profile-attribute}
 
 Välj **[!UICONTROL User Profile Attribute]** från **[!UICONTROL Binding To]** nedrullningsbar meny och ange attributnamnet i **[!UICONTROL Binding Value]** fält. Information om användaren som är inloggad på [!DNL Experience Manager] -instansen hämtas från datakällan baserat på attributnamnet.
 
@@ -196,7 +196,7 @@ Använd attributet request för att hämta associerade egenskaper från datakäl
 
 1. Välj **[!UICONTROL Request Attribute]** från **[!UICONTROL Binding To]** nedrullningsbar meny och ange attributnamnet i **[!UICONTROL Binding Value]** fält.
 
-1. Skapa en [övertäckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/overlays.html?lang=en#developing) for the head.jsp. Om du vill skapa övertäckningen öppnar du CRX DE och kopierar `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` fil till `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+1. Skapa en [övertäckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/overlays.html?lang=en#developing) for the head.jsp. Skapa övertäckningen genom att öppna CRX DE och kopiera `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` fil till `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
 
    >[!NOTE]
    >
@@ -265,7 +265,7 @@ Så här lägger du till en association:
 
    Standardargumentet för tjänsten för läsning av beroenden är beroendestyrt
 
-   Argumentet måste dock vara en vanlig egenskap mellan det associerade datamodellobjektet, vilket i det här exemplet är `Employeeid`. Därför är `Employeeid` argument måste bindas till `id` egenskapen för Employee-datamodellobjektet för att hämta associerade beroendedetaljer från datamodellobjektet Dependents.
+   Argumentet måste dock vara en vanlig egenskap mellan det associerade datamodellobjektet, vilket i det här exemplet är `Employeeid`. Därför är `Employeeid` argument måste vara bundna till `id` egenskapen för Employee-datamodellobjektet för att hämta associerade beroendedetaljer från datamodellobjektet Dependents.
 
    ![add-association-example-2](assets/add-association-example-2.png)
 
@@ -310,7 +310,7 @@ En beräknad egenskap är den vars värde beräknas baserat på en regel eller e
 Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett resultat av sammanfogning av den befintliga **FirstName** och **LastName** egenskaper. Så här gör du:
 
 1. Skapa en ny egenskap med namnet `FullName` vars datatyp är String.
-1. Aktivera **[!UICONTROL Computed]** och trycka **[!UICONTROL Done]** för att skapa egenskapen.
+1. Aktivera **[!UICONTROL Computed]** och knacka **[!UICONTROL Done]** för att skapa egenskapen.
 
    ![beräknad](assets/computed.png)
 
@@ -321,7 +321,7 @@ Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett
 1. Välj egenskapen FullName och tryck på **[!UICONTROL Edit Rule]**. Ett regelredigeringsfönster öppnas.
 1. I regelredigeringsfönstret trycker du på **[!UICONTROL Create]**. A **[!UICONTROL Set Value]** regelfönstret öppnas.
 
-   I listrutan Välj alternativ väljer du **[!UICONTROL Mathematical Expression]**. Andra tillgängliga alternativ är **[!UICONTROL Form Data Model Object]** och **[!UICONTROL String]**.
+   Välj i listrutan Välj alternativ **[!UICONTROL Mathematical Expression]**. Andra tillgängliga alternativ är **[!UICONTROL Form Data Model Object]** och **[!UICONTROL String]**.
 
 1. I det matematiska uttrycket väljer du **[!UICONTROL FirstName]** och **[!UICONTROL LastName]** i första och andra objektet. Välj **[!UICONTROL plus]** som -operatorn.
 
@@ -329,7 +329,7 @@ Du kan till exempel skapa en beräknad egenskap **FullName** vars värde är ett
 
    ![regel](assets/rule.png)
 
-1. Tryck på **[!UICONTROL Save]**. Den beräknade egenskapen är konfigurerad.
+1. Tryck på formulärdatamodellen **[!UICONTROL Save]**. Den beräknade egenskapen är konfigurerad.
 
 ## Arbeta med navigeringsegenskaper för OData-tjänster {#work-with-navigation-properties-of-odata-services}
 
@@ -375,7 +375,7 @@ När du har lagt till `GET LINK` på fliken Tjänster i formulärdatamodellen ka
 
 >[!NOTE]
 >
->De värden som finns i **[!UICONTROL Default Value]** fält för **NavigationPropertyName** -argumentet beror på läget för **[!UICONTROL Return array?]** växlingsknapp. När den är aktiverad visas navigeringsegenskaper av samlingstyp.
+>De värden som är tillgängliga i **[!UICONTROL Default Value]** fält för **NavigationPropertyName** -argumentet beror på läget för **[!UICONTROL Return array?]** växlingsknapp. När den är aktiverad visas navigeringsegenskaper av samlingstyp.
 
 I det här exemplet kan du även välja utdatamodellsobjektet som Person och navigeringsegenskapsargument som Friends eller BestFriend (beroende på om **[!UICONTROL Return array?]** är aktiverat eller inaktiverat).
 
@@ -403,7 +403,7 @@ Så här genererar och redigerar du exempeldata:
 
 Din formulärdatamodell är konfigurerad, men innan den används kanske du vill testa om de konfigurerade datamodellsobjekten och -tjänsterna fungerar som förväntat. Så här testar du datamodellsobjekt och -tjänster:
 
-1. Markera ett datamodellsobjekt eller en tjänst i formulärdatamodellen och tryck på **[!UICONTROL Test Model Object]** eller **[!UICONTROL Test Service]**, respektive.
+1. Markera ett datamodellsobjekt eller en tjänst i formulärdatamodellen och tryck på **[!UICONTROL Test Model Object]** eller **[!UICONTROL Test Service]**, respektive
 
    Fönstret Testa formulärdatamodell öppnas.
 
@@ -425,7 +425,7 @@ Flaggan kan anges med något av följande värden:
 
 * **HELT**: FDM utför valideringen baserat på alla begränsningar
 * **AV**: Ingen validering
-* **GRUNDLÄGGANDE**: FDM utför valideringen baserat på begränsningarna &#39;required&#39; och &#39;nullable&#39;
+* **GRUNDLÄGGANDE**: FDM utför valideringen baserat på begränsningarna required och null
 
 Om inget värde har angetts för `ValidationOptions`flagga, **GRUNDLÄGGANDE** validering utförs på indata.
 
@@ -549,4 +549,4 @@ Ett undantag visas om indata inte uppfyller valideringskriterierna. Om loggnivå
 
 ## Nästa steg {#next-steps}
 
-Du har en fungerande formulärdatamodell som nu är klar att användas i Adaptiv Forms <!--and interactive communications--> arbetsflöden. Mer information finns i [Använd formulärdatamodell](using-form-data-model.md).
+Du har en fungerande formulärdatamodell som nu kan användas i Adaptiv Forms <!--and interactive communications--> arbetsflöden. Mer information finns i [Använd formulärdatamodell](using-form-data-model.md).

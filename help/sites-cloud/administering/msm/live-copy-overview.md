@@ -4,16 +4,16 @@ description: Lär dig grunderna i Live Copy Overview Console för att snabbt fö
 feature: Multi Site Manager
 role: Admin
 exl-id: 3ef7fbce-10a1-4b21-8486-d3c3706e537c
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '729'
 ht-degree: 0%
 
 ---
 
 # Översiktskonsol för Live Copy {#live-copy-overview-console}
 
-The **Live Copy - översikt** konsolen gör att du kan:
+The **Live Copy - översikt** konsolen gör att du kan
 
 * Visa/hantera arv på en webbplats.
    * Visa det blå trädet och motsvarande Live Copy-struktur, tillsammans med deras arvsstatus
@@ -61,7 +61,7 @@ The **Live Copy - översikt** kan öppnas när du visar egenskaper för en ritni
 
 The **Live Copy - översikt** I visas och visas en översikt över statusen för de Live-kopior som hör till den markerade sidan.
 
-![Live Copy Overview](../assets/live-copy-overview.png)
+![Live Copy Overview window](../assets/live-copy-overview.png)
 
 En utrullning beror på de synkroniseringsåtgärder som har definierats i den specifika utrullningskonfigurationen. Vissa åtgärder är beroende av ändringar i innehållet. Men det finns också många åtgärder som inte är beroende av ändringar i innehållet, men som är beroende av händelser som till exempel sidaktivering. Sådana händelser ändrar inte innehållet, men ändrar de interna egenskaperna som är relaterade till innehållet.
 
@@ -72,7 +72,7 @@ En utrullningskonfiguration definieras som `targetActivate`. Därför är en utr
 The **Live Copy - översikt** kan även användas för att utföra åtgärder på Live Copy:
 
 1. Öppna **Live Copy - översikt**.
-1. Välj önskad plan- eller Live Copy-sida så uppdateras verktygsfältet så att de tillgängliga åtgärderna visas. The [funktionsmakron](overview.md#terms-used) beroende på om du väljer [skiss](#actions-for-a-blueprint-page) eller [Live Copy](#actions-for-a-live-copy-page) sida.
+1. Välj önskad plan- eller Live Copy-sida så uppdateras verktygsfältet så att de tillgängliga åtgärderna visas. The [funktionsmakron](overview.md#terms-used) beroende på om du väljer en [skiss](#actions-for-a-blueprint-page) eller [Live Copy](#actions-for-a-live-copy-page) sida.
 
 ### Åtgärder för en designsida {#actions-for-a-blueprint-page}
 

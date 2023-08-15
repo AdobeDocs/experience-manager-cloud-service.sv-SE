@@ -2,9 +2,9 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs. Lär dig hur du kan anpassa dem.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-source-git-commit: 964599b919a7299da33a5f0ac72ad5ea644097d8
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1812'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Innehållsfragment, som baseras på en innehållsfragmentmodell, mappas till en 
 
 * Allt innehåll lagras under `jcr:content/data` resursens nod:
 
-   * Elementdata lagras under den överordnad undernoden:
+   * Elementdata lagras under huvudundernoden:
      `jcr:content/data/master`
 
    * Variationer lagras under en undernod som innehåller variantens namn, till exempel: `jcr:content/data/myvariation`
@@ -100,7 +100,7 @@ Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. 
 
 * Komponenten använder `fragmentPath` -egenskap som refererar till det faktiska innehållsfragmentet. The `fragmentPath` -egenskapen hanteras på samma sätt som liknande egenskaper för andra resurstyper, till exempel när innehållsfragmentet flyttas till en annan plats.
 
-* Med komponenten kan du välja varianten som ska visas.
+* Med komponenten kan du välja den variant som ska visas.
 
 * Dessutom kan ett styckeintervall markeras för att begränsa utdata. Det kan till exempel användas för utdata med flera kolumner.
 

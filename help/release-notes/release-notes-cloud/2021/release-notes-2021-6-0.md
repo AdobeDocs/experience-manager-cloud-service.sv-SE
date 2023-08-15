@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 2c72973b-5a51-4744-bf88-50da0013ba31
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -68,7 +68,7 @@ Nästa version är planerad till 15 juli 2021.
 
 * En ny regel för kodkvalitet har lagts till för att validera strukturen för `damAssetLucene` index. Se [Anpassade index för DAM-tillgångar, Luceneak](/help/implementing/cloud-manager/custom-code-quality-rules.md#oakpal-damAssetLucene-sanity-check) för mer information.
 
-* Sidan med miljöinformation visar nu flera domännamn för tjänsterna Publicera och Förhandsgranska (beroende på vad som är tillämpligt). Se [Miljöinformation](/help/implementing/cloud-manager/manage-environments.md#viewing-environment) mer information.
+* Sidan med miljöinformation visar nu flera domännamn för tjänsterna Publicera och Förhandsgranska (efter behov). Se [Miljöinformation](/help/implementing/cloud-manager/manage-environments.md#viewing-environment) mer information.
 
 ### Felkorrigeringar {#bug-fixes-junecm}
 
@@ -82,7 +82,7 @@ Nästa version är planerad till 15 juli 2021.
 
 * Vissa programredigeringssekvenser kan leda till att produktionsflödet inte kan skapas eller redigeras.
 
-* Vissa programredigeringssekvenser kan resultera i **Översikt** sida som visar ett missvisande meddelande för att köra programkonfigurationen igen.
+* Vissa programredigeringssekvenser kan resultera i **Ökning** sida som visar ett missvisande meddelande för att köra programkonfigurationen igen.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
@@ -165,9 +165,9 @@ Releasedatum för AEM Screens as a Cloud Service är 24 juni 2021.
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
-* Nya referensdatatyper för CIF-produkt och kategori för innehållsfragment (Inkl. användargränssnittsstöd för produkt-/kategoriväljare)
+* Nya referensdatatyper för CIF-produkt och kategori för innehållsfragment (Inkl. användargränssnitt för produkt-/kategoriväljare)
 * Ny kärnkomponent för Commerce Content Fragment
 * Heltextbaserad e-handelssökning stöds i AEM
 * Commerce Core Components stöder datainsamling i Adobe Commerce Sensei Recs
@@ -182,7 +182,7 @@ Releasedatum för Content Transfer Tool v1.5.4 är 28 juni 2021.
 
 ### Nyheter {#what-is-new-ctt-latest}
 
-* Stöd för ett valfritt [förkopia](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) steg som lagts till för att användas med CTT. Steg före kopiering kan användas för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten när AEM är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage-datalager.
+* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=en) steg som lagts till för att användas med CTT. Steg före kopiering kan användas för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten när AEM är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage-datalager.
 
 * Guardrail har lagts till i CTT för att förhindra användare från att stoppa ett intag och eventuellt skada data när det har nått den kritiska punkten under intagningsfasen.
 

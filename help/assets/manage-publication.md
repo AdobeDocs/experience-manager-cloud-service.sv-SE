@@ -5,9 +5,9 @@ mini-toc-levels: 1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User, Architect, Admin
 exl-id: 691a0925-0061-4c62-85ac-8257b96dddf2
-source-git-commit: 8466595f988d3a10806d4654885c14a622d14057
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1545'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Som en [!DNL Adobe Experience Manager Assets] kan du publicera resurser och mappar som innehåller resurser från författarinstansen till [!DNL Experience Manager Assets], [!DNL Dynamic Media]och [!DNL Brand Portal]. Du kan även schemalägga publicering av en resurs eller mapp vid ett senare datum eller tid. När de har publicerats kan användarna komma åt och distribuera resurserna vidare till andra användare. Som standard kan du publicera resurser och mappar till [!DNL Experience Manager Assets]. Du kan dock konfigurera [!DNL Experience Manager Assets] för att aktivera publicering till [[!DNL Dynamic Media]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm.html) och [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html).
 
-Du kan publicera eller avpublicera resurser på resurs- eller mappnivå med antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]** finns i [!DNL Experience Manager Assets] gränssnitt. Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL Experience Manager Assets]återspeglas inte ändringarna i publiceringsinstansen förrän du publicerar om från [!DNL Experience Manager Assets]. Det ser till att ändringar som pågår inte är tillgängliga i publiceringsinstansen. Endast godkända ändringar som publiceras av en administratör är tillgängliga i publiceringsinstansen.
+Du kan publicera eller avpublicera resurser på resurs- eller mappnivå med antingen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]** som finns i [!DNL Experience Manager Assets] gränssnitt. Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL Experience Manager Assets]återspeglas inte ändringarna i publiceringsinstansen förrän du publicerar om från [!DNL Experience Manager Assets]. Det ser till att ändringar som pågår inte är tillgängliga i publiceringsinstansen. Endast godkända ändringar som publiceras av en administratör är tillgängliga i publiceringsinstansen.
 
 * [Publicera resurser med Snabbpublicering](#quick-publish)
 * [Publicera resurser med Hantera publikation](#manage-publication)
@@ -75,12 +75,12 @@ Om du vill filtrera mappinnehållet som du vill publicera klickar du på **[!UIC
 
 * `Include folder contents`
 
-   * Aktiverad: Alla resurser i den valda mappen, undermappar (inklusive alla resurser i undermapparna) och referenser publiceras.
+   * Aktiverat: Alla resurser i den valda mappen, undermappar (inklusive alla resurser i undermapparna) och referenser publiceras.
    * Inaktiverad: Endast den markerade mappen (tom) och referenser publiceras. Resurserna i den valda mappen publiceras inte.
 
 * `Include folder contents` och `Include only immediate folder contents`
 
-   Om båda alternativen är markerade publiceras alla resurser i den markerade mappen, undermapparna (tomma) och referenserna. Undermapparnas resurser publiceras inte.
+  Om båda alternativen är markerade publiceras alla resurser i den markerade mappen, undermapparna (tomma) och referenserna. Undermapparnas resurser publiceras inte.
 
 <!--
 * [!UICONTROL Include only immediate folder contents]: Only the subfolders content and references are published. 
@@ -96,7 +96,7 @@ När du har använt filtren klickar du på **[!UICONTROL OK]** och klicka sedan 
 
 I bilden ovan kan du se olika värden för **[!UICONTROL Publish Target]** -attribut. Låt oss komma ihåg att du har valt att publicera till [!DNL Experience Manager Assets] (`Destination: Publish`). Varför visar det då att bara en mapp och en resurs publiceras till `AEM`, och de andra två resurserna publiceras till båda `AEM` och `Dynamic Media`?
 
-Här måste du känna till mappegenskapernas roll. En mapps **[!UICONTROL Dynamic Media Publishing mode]** egenskapen spelar en viktig roll i publikationen. Om du vill visa en mapps egenskaper markerar du en mapp och klickar på **[!UICONTROL Properties]** i verktygsfältet. Information om en resurs finns i egenskaperna för dess överordnade mapp.
+Här måste du känna till mappegenskapernas roll. En mapps **[!UICONTROL Dynamic Media Publishing mode]** egenskapen spelar en viktig roll när det gäller publicering. Om du vill visa en mapps egenskaper markerar du en mapp och klickar på **[!UICONTROL Properties]** i verktygsfältet. Information om en resurs finns i egenskaperna för dess överordnade mapp.
 
 I följande tabell förklaras hur publiceringen sker beroende på den definierade **[!UICONTROL Destination]** och **[!UICONTROL Dynamic Media Publish mode]**:
 
@@ -118,7 +118,7 @@ I följande tabell förklaras hur publiceringen sker beroende på den definierad
 >Om du väljer en mapp (`Selective Publish`) och väljer [!DNL Dynamic Media] mål, [!UICONTROL Publish Target] attribut reflekterar `None`.
 
 
-Låt oss nu ändra **[!UICONTROL Destination]** i ovanstående fall **[!UICONTROL Dynamic Media]** och verifiera resultatet. Genom att göra det är det bara `Selective Publish` mappen publiceras i [!DNL Dynamic Media]. Resurserna för `Immediate` och `Upon Activation` mappar publiceras inte och speglar `None`.
+Låt oss nu ändra **[!UICONTROL Destination]** i ovanstående fall till **[!UICONTROL Dynamic Media]** och verifiera resultatet. Genom att göra det är det bara `Selective Publish` mappen publiceras i [!DNL Dynamic Media]. Resurserna för `Immediate` och `Upon Activation` mappar publiceras inte och speglar `None`.
 
 ![Publicera till Dynamic Media](assets/manage-publication-dynamic-media.png)
 
@@ -189,11 +189,12 @@ Publiceringsalternativet för begäran är tillgängligt för följande använda
    * visa `Manage publication` knapp
    * schemalägga arbetsflödet och se alternativen `schedule now` och `schedule later`
 
-* **Administratör:** Som en administratörstyp kan du hantera övergripande arbetsflödessteg för resurserna. `Manage publication` knappen är synlig för dig. Om målet `publish` är markerat kan du schemalägga en resurs senare för arbetsflödessteget.
+* **Administratör:** Som en administratörstyp kan du hantera övergripande arbetsflödessteg för resurserna. `Manage publication` knappen visas för dig. Om målet `publish` är markerat kan du schemalägga en resurs senare för arbetsflödessteget.
 
 >[!NOTE]
 >
 >If [!DNL Dynamic Media] är markerat som mål och arbetsflödessteget är inaktiverat för **arbetsflödesanvändare** och **admin** -användare.
+>
 
 ## Begränsningar och tips {#limitations-and-tips}
 

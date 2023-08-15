@@ -2,9 +2,9 @@
 title: Adaptiva formuläruttryck
 seo-title: Adaptive Form Expressions
 description: Använd adaptiva Forms-uttryck för att lägga till automatisk validering, beräkning och aktivera eller inaktivera synlighet för ett avsnitt.
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2696'
+source-wordcount: '2695'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Adaptiva formuläruttryck {#adaptive-form-expressions}
 
-Adaptiv Forms ger optimerad och förenklad ifyllning av blanketter för användare med dynamiska skriptfunktioner. Det gör att du kan skriva uttryck för att lägga till olika beteenden, till exempel dynamiska visa/dölj-fält och paneler. Du kan också lägga till beräknade fält, skrivskydda fält, lägga till valideringslogik och mycket annat. Det dynamiska beteendet baseras på användarens indata eller förifyllda data.
+Adaptiv Forms ger optimerad och förenklad ifyllning av blanketter för användare med dynamiska skriptfunktioner. Det gör att du kan skriva uttryck för att lägga till olika beteenden, till exempel dynamiska fält och paneler för att visa/dölja. Du kan också lägga till beräknade fält, skrivskydda fält, lägga till valideringslogik och mycket annat. Det dynamiska beteendet baseras på användarens indata eller förifyllda data.
 
 JavaScript™ är uttrycksspråket i Adaptive Forms. Alla uttryck är giltiga JavaScript™-uttryck och använder API:er för adaptiv Forms-skriptmodell. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva Forms-klasser, händelser, objekt och offentliga API:er finns på [JavaScript™ Library API reference for Adaptive Forms](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
@@ -30,7 +30,7 @@ Upprepade paneler är instanser av en panel som läggs till eller tas bort dynam
 * Minsta antal för upprepade panelinställningar kan vara en eller flera, men det får inte vara fler än högsta antal.
 * När ett uttryck refererar till ett fält med upprepande panel tolkas fältnamnen i uttrycket som det närmaste upprepade elementet.
 * Adaptiv Forms har några specialfunktioner som förenklar beräkning av repeterbara paneler som summa, antal, min, max, filter och många andra. En fullständig lista över funktioner finns i [JavaScript™ Library API reference for Adaptive Forms](https://helpx.adobe.com/aem-forms/6/javascript-api/af.html)
-* API:er för att ändra instanser av upprepande panel är:
+* API:er för manipulering av instanser av upprepande panel är:
 
    * Så här lägger du till en panelinstans: `panel1.instanceManager.addInstance()`
    * Så här hämtar du en panel: `panel1.instanceIndex`
@@ -42,10 +42,10 @@ Upprepade paneler är instanser av en panel som läggs till eller tas bort dynam
 I Adaptiv Forms kan du skriva uttryck för att lägga till beteenden som dynamiska visa/dölj-fält och paneler. Du kan också skriva uttryck för att lägga till beräknade fält, skrivskydda fält, valideringslogik och mycket annat. Stöd för adaptiva Forms-uttryck:
 
 * **[Åtkomstuttryck](#access-expression-enablement-expression)**: för att aktivera/inaktivera ett fält.
-* **[Beräkna uttryck](#calculate-expression)**: till automatisk beräkning av ett fälts värde.
-* **[Klicka på uttryck](#click-expression)**: för att hantera åtgärder vid klickningshändelser för en knapp.
+* **[Beräkna uttryck](#calculate-expression)**: för automatisk beräkning av ett fälts värde.
+* **[Klicka på uttryck](#click-expression)**: för att hantera åtgärder vid klickningshändelse för en knapp.
 * **[Initieringsskript](#initialization-script):** utföra en åtgärd vid initiering av ett fält.
-* **[Alternativ](#options-expression)**: för att dynamiskt fylla i en nedrullningsbar lista.
+* **[Alternativuttryck](#options-expression)**: för att dynamiskt fylla i en nedrullningsbar lista.
 * **[Sammanfattningsuttryck](#summary)**: för att dynamiskt beräkna titeln på ett dragspel.
 * **[Validera uttryck](#validate-expression)**: för att validera ett fält.
 * **[Värde för implementeringsskript](#value-commit-script):** om du vill ändra komponenterna i ett formulär efter att värdet för ett fält har ändrats.
@@ -60,7 +60,7 @@ Du kan använda åtkomstuttrycket för att aktivera eller inaktivera ett fält. 
 
 **Returtyp**: Uttrycket returnerar ett booleskt värde som representerar om fältet är aktiverat eller inaktiverat. **true** visar att fältet är aktiverat och **false** representerar att fältet är inaktiverat.
 
-**Exempel**: Aktivera ett fält endast när värdet för **fält1** är inställd på **X**, är åtkomstuttrycket: `field1.value == "X"`
+**Exempel**: Om du bara vill aktivera ett fält när värdet för **fält1** är inställd på **X**, är åtkomstuttrycket: `field1.value == "X"`
 
 ### Beräkna uttryck {#calculate-expression}
 
@@ -68,9 +68,9 @@ Beräkningsuttrycket används för att automatiskt beräkna värdet för ett fä
 
 **Gäller för**: fält
 
-**Returtyp**: Uttrycket returnerar ett värde som är kompatibelt med fältet där uttrycksresultatet visas (till exempel decimal).
+**Returtyp**: Uttrycket returnerar ett värde som är kompatibelt med det fält där uttrycksresultatet visas (till exempel decimal).
 
-**Exempel**: Beräkningsuttrycket som ska visa summan av två fält i **fält1** är:
+**Exempel**: Det beräkningsuttryck som ska visa summan av två fält i **fält1** är:
 `field2.value + field3.value`
 
 ### Klicka på uttryck {#click-expression}
@@ -98,7 +98,7 @@ Initieringsskriptet aktiveras när ett adaptivt formulär initieras. Beroende p�
 **Exempel:** Om du vill fylla i fält med standardvärden i ett datafrifyllningsscenario `'Adaptive Forms'` När värdet sparas som null är initieringsskriptuttrycket:
 `if(this.value==null) this.value='Adaptive Forms';`
 
-### Alternativ {#options-expression}
+### Alternativuttryck {#options-expression}
 
 Alternativuttrycket används för att dynamiskt fylla i alternativ för ett nedrullningsbart listfält.
 
@@ -106,7 +106,7 @@ Alternativuttrycket används för att dynamiskt fylla i alternativ för ett nedr
 
 **Returtyp**: Alternativuttrycket returnerar en array med strängvärden. Varje värde kan vara en enkel sträng, till exempel **Man** eller i ett nyckel=värde-par, t.ex. **1=Man**
 
-**Exempel**: Om du vill fylla i ett fälts värde, baserat på värdet i ett annat fält, anger du ett enkelt alternativuttryck. Om du till exempel vill fylla i ett fält **Antal barn**, baserat på **Civilstånd** Uttryckt i ett annat fält är uttrycket:
+**Exempel**: Om du vill fylla i ett fältvärde, baserat på värdet i ett annat fält, anger du ett enkelt alternativuttryck. Om du till exempel vill fylla i ett fält **Antal barn**, baserat på **Civilstånd** Uttryckt i ett annat fält är uttrycket:
 
 **`marital_status.value == "married" ? ["1=One", "2=two"] : ["0=Zero"]`.**
 
@@ -131,7 +131,7 @@ Validate-uttrycket används för att validera fälten med det angivna uttrycket.
 **Gäller för**: fält
 
 **Returtyp**: Uttrycket returnerar ett booleskt värde som representerar fältets valideringsstatus. Värdet **false** visar att fältet är ogiltigt och **true** visar att fältet är giltigt.
-**Exempel**: För ett fält som representerar postnummer för UK är valideringsuttrycket:
+**Exempel**: För ett fält som representerar postnummer för Storbritannien är valideringsuttrycket:
 
 (**this.value** &amp;&amp; `this.value.match(/^(GIR 0AA|[A-Z]{1,2}\d[A-Z0-9]? ?[0-9][A-Z]{2}\s*)$/i) == null) ? false : true`
 
@@ -157,7 +157,7 @@ Skriptet Värde implementeras aktiveras när:
 
 >[!NOTE]
 >
->Du kan inaktivera körningen av Value Commit Script när värdet för ett fält ändras programmatiskt. Om du vill göra det går du till https://&#39;[server]:[port]&#39;/system/console/configMgr och change **Adaptiv Forms-version för kompatibilitet** till **AEM Forms 6.1**. Därefter körs Value Commit Script bara när användaren ändrar fältets värde från användargränssnittet.
+>Du kan inaktivera körningen av Value Commit Script när värdet för ett fält ändras programmatiskt. Gå till https://&#39;[server]:[port]&#39;/system/console/configMgr och change **Adaptiv Forms-version för kompatibilitet** till **AEM Forms 6.1**. Därefter körs Value Commit Script bara när användaren ändrar fältets värde från användargränssnittet.
 
 ### Synlighetsuttryck {#visibility-expression}
 
@@ -173,7 +173,7 @@ Synlighetsuttrycket används för att styra synligheten för fält/panel. Synlig
 
 Uttrycket för att slutföra steget används för att hindra en användare från att gå till nästa steg i en guidelayout. Dessa uttryck används när paneler har en guidelayout (ett flerstegsformulär som visar ett steg i taget). Användaren kan bara gå till nästa steg, panel eller underavsnitt om alla obligatoriska värden i det aktuella avsnittet är ifyllda och giltiga.
 
-**Gäller för**: Paneler med layout för objekt inställt på guide.
+**Gäller för**: Paneler med objektets layout inställd på guide.
 
 **Returtyp**: Uttrycket returnerar ett booleskt värde som representerar den aktuella panelen som är giltigt eller inte. **True** visar att den aktuella panelen är giltig och att användaren kan navigera till nästa panel.
 
@@ -188,11 +188,11 @@ Du kan lägga till valideringar i ett fält på följande sätt:
 
 ### Obligatoriskt {#required}
 
-Göra en komponent obligatorisk i **Redigera** -komponenten kan du välja alternativ **Titel och text > Obligatoriskt**. Du kan också lägga till rätt meddelande (valfritt). .
+Göra en komponent obligatorisk i **Redigera** -komponenten kan du välja **Titel och text > Obligatoriskt**. Du kan också lägga till rätt meddelande (valfritt). .
 
 ### Valideringsmönster {#validation-patterns}
 
-Det finns flera valideringsmönster tillgängliga för ett fält. Om du vill välja ett valideringsmönster går du till **Redigera** -komponenten, leta upp **Mönster** avsnitt och markera **mönster**. Du kan skapa ett eget valideringsmönster i en **Mönster** textruta. Valideringsstatusen returneras **True** bara om de data som fylls i är kompatibla med valideringsmönstret, annars **Falskt** returneras. <!-- To write your own custom validation pattern, see [Picture clause support for HTML5 forms](picture-clause-support.md). -->
+Det finns flera valideringsmönster tillgängliga för ett fält. Om du vill välja ett valideringsmönster går du till **Redigera** -dialogruta för komponenten, leta upp **Mönster** avsnitt och markera **mönster**. Du kan skapa ett eget valideringsmönster i en **Mönster** textruta. Valideringsstatusen returneras **True** bara om de data som fylls i är kompatibla med valideringsmönstret, annars **Falskt** returneras. <!-- To write your own custom validation pattern, see [Picture clause support for HTML5 forms](picture-clause-support.md). -->
 
 ### Valideringsuttryck {#validation-expressions}
 
@@ -218,7 +218,7 @@ GuideBridge är en samling API:er som kan användas för att interagera med Adap
 
 * Du kan använda `setFocus()` API för att ange fokus i olika fält eller paneler (för panelfokus ställs det första fältet automatiskt in). `setFocus()`innehåller ett stort antal alternativ för navigering, t.ex. navigering över paneler, föregående/nästa genomgång, inställning av fokus till ett visst fält och många andra alternativ. Om du till exempel vill gå till nästa panel kan du använda: `guideBridge.setFocus(this.panel.somExpression, 'nextItem').`
 
-* Om du vill validera ett adaptivt formulär eller dess specifika paneler använder du `guideBridge.validate(errorList, somExpression).`
+* Validera ett adaptivt formulär eller dess specifika paneler med `guideBridge.validate(errorList, somExpression).`
 
 #### Använda GuideBridge utanför uttryck  {#using-guidebridge-outside-expressions-nbsp}
 

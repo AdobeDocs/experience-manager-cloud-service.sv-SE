@@ -2,9 +2,9 @@
 title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Gränssnittet CRXDE Lite visas så här i webbläsaren:
 
 >[!TIP]
 >
->Du kan också öppna CRXDE Lite från AEM-menyn. På huvudmenyn väljer du **verktyg** -> **Allmänt** -> **CRXDE Lite**.
+>Du kan också öppna CRXDE Lite från AEM-menyn. Välj på huvudmenyn **verktyg** -> **Allmänt** -> **CRXDE Lite**.
 
 ## Översikt över användargränssnittet {#overview-of-the-user-interface}
 
@@ -144,11 +144,11 @@ The **Byt namn på knapp** byter namn på den markerade noden.
 
 ### Blandningar {#mixins-button}
 
-The **Knappen Blandningar** gör att du kan lägga till blandningstyper i nodtypen. Blandningstyperna används oftast för att lägga till avancerade funktioner.
+The **Knappen Blandningar** Med kan du lägga till blandningstyper i nodtypen. Blandningstyperna används oftast för att lägga till avancerade funktioner.
 
 ### verktyg {#tools-button}
 
-The **Verktygsknapp** är en rullgardinsmeny med följande verktyg tillgängliga:
+The **Verktygsknapp** är en rullgardinsmeny med följande verktyg:
 
 * **Serverkonfiguration** - för åtkomst till Felix Console (finns även på `https://<host>:<port>/system/console/configMgr`)
 * **Fråga** - för att fråga databasen
@@ -192,7 +192,7 @@ Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa
 >
 De flesta redigeringsåtgärderna, inklusive **Skapa nod** sparar alla ändringar i minnet och lagrar dem endast i databasen när de sparas (med [**Spara alla, knapp**](#save-all-button)). Vissa åtgärder, till exempel move, sparas dock automatiskt.
 >
-Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs även av databasen när ändringar sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa en `nt:unstructured` nod som underordnad till `nt:folder` nod).
+Valideringen av om den nyskapade noden tillåts av den överordnade nodens nodtyp utförs även av databasen när ändringar sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa en `nt:unstructured` nod som underordnad `nt:folder` nod).
 
 ## Skapa en egenskap {#creating-a-property}
 
@@ -247,7 +247,7 @@ Med CRXDE Lite kan du visa filen `error.log` som finns i filsystemet på `<aem-i
 
 Du kan:
 
-* Justera loggparametrarna i Felix Console genom att klicka på **Loggningskonfigurationer** ikon.
-* Rensa meddelandena genom att klicka på knappen **Rensa konsol** ikon.
-* Fäst meddelandet vid den aktuella markeringen genom att klicka på knappen **Fäst konsol** ikon.
-* Aktivera eller inaktivera visning av meddelanden genom att klicka på **Stoppa** ikon.
+* Justera loggparametrarna i Felix Console genom att klicka på **Loggningskonfigurationer** -ikon.
+* Rensa meddelandena genom att klicka på knappen **Rensa konsol** -ikon.
+* Fäst meddelandet vid den aktuella markeringen genom att klicka på knappen **Fäst konsol** -ikon.
+* Aktivera eller inaktivera visning av meddelanden genom att klicka på **Stoppa** -ikon.

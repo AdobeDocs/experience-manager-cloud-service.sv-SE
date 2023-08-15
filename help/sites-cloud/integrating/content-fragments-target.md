@@ -2,7 +2,7 @@
 title: Exportera innehållsfragment till Adobe Target
 description: Lär dig hur du exporterar innehållsfragment till Adobe Target för att testa och personalisera upplevelser.
 exl-id: 760e0a39-0805-498e-a2c9-038fd1e1058d
-source-git-commit: 964599b919a7299da33a5f0ac72ad5ea644097d8
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
 source-wordcount: '2231'
 ht-degree: 0%
@@ -81,7 +81,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
    >
    >Om du lägger till molnkonfigurationen i själva innehållsfragmentet ärvs konfigurationen av alla variationer.
 
-1. Välj **Cloud Services** -fliken.
+1. Välj **Cloud Service** -fliken.
 
 1. Under **Konfiguration av Cloud Service**, markera **Adobe Target** i listrutan.
 
@@ -89,7 +89,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
 
    >[!NOTE]
    >
-   >JSON-formatet i ett Content Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en komponent för kundinnehållsfragment och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
+   >JSON-formatet för ett Content Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en komponent för kundinnehållsfragment och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
    >
    >Se kärnkomponenten: [Kärnkomponenter - innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
 
@@ -112,7 +112,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
 
    <!-- need a new screenshot -->
 
-   ![Mapp - Cloud Services](assets/cf-target-integration-01.png "Mapp - Cloud Services")
+   ![Mapp - Cloud Service](assets/cf-target-integration-01.png "Mapp - Cloud Service")
 
 1. **Spara och stäng**.
 
@@ -136,7 +136,7 @@ Du kan konfigurera molnkonfigurationen så att segment från Adobe Target synkro
 
 Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
 
-1. Navigera till **Äldre Cloud Services** via **AEM** > **verktyg** > **Cloud Services** > **Äldre Cloud Services**.
+1. Navigera till **Äldre Cloud Service** via **AEM** > **verktyg** > **Cloud Service** > **Äldre Cloud Service**.
 Till exempel: ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 
    The **Adobe Experience Cloud** översiktssidan öppnas.
@@ -218,7 +218,7 @@ Nu kan du välja den nya konfigurationen för redigering.
      >
      >Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning, vad gäller prestanda, skapa en fördröjning på några millisekunder innan innehållet läses in.
      >
-     >Korrekt målinriktning är alltid aktiverat för författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målanpassning globalt genom att avmarkera kryssrutan bredvid Korrekt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
+     >Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målanpassning globalt genom att avmarkera kryssrutan bredvid Korrekt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
      >
      >Om du har ***redan*** har skapat riktade komponenter och du ändrar den här inställningen påverkar inte ändringarna dessa komponenter. Du måste göra ändringar i den komponenten direkt.
 
@@ -304,7 +304,7 @@ When you associate a page with the framework, the child pages inherit the associ
 
    >[!NOTE]
    >
-   >If the framework you attached to the page was not activated yet, a wizard opens which allows you to publish it as well.
+   >If the framework you attached to the page was not activated yet, a wizard opens which lets you publish it as well.
 -->
 
 ## Exportera ett innehållsfragment till Adobe Target {#exporting-a-content-fragment-to-adobe-target}

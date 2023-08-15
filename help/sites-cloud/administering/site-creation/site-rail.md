@@ -4,9 +4,9 @@ description: Lär dig de kraftfulla funktionerna i webbplatsspåret för att enk
 feature: Administering
 role: Admin
 exl-id: 45785e5a-4fa2-4cf2-a300-f1865f6f5807
-source-git-commit: 3e4c6fce54fe336c145d533c05e68e3a1f64c144
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Med hjälp av webbplatsspåret kan du hantera temat och mallresurserna för din 
 Webbplatsfältet används för att hantera tema- och mallrelaterad information för din webbplats, inklusive:
 
 * [Hämtar temakällor](#downloading-theme-sources)
-* [Hämta mallresurser som trådramar](#downloading-template-resources)
+* [Hämtar mallresurser som trådramar](#downloading-template-resources)
 * [Visa och ändra temaversioner](#theme-vrsions)
 * [Aktivera frontendpipeline](#enabling-the-front-end-pipeline)
 
@@ -38,7 +38,7 @@ Markera platsens rot för att visa temainformation om platsen när webbplatsspå
 
 ![Hämta temakällor](/help/sites-cloud/administering/assets/download-theme-wireframe.png)
 
-Tryck eller klicka **Hämta temakällor** för att ladda ned en lokal kopia av webbplatstemat som `.zip` för anpassning.
+Tryck eller klicka **Hämta temakällor** för att ladda ned en lokal kopia av webbplatstemat som `.zip` -fil för anpassning.
 
 ## Hämtar mallresurser {#downloading-template-resources}
 
@@ -52,7 +52,7 @@ Tryck eller klicka på knappen eller knapparna under rubriken **Hämta ytterliga
 
 ## Visa och ändra temaversioner {#them-versions}
 
-Om din webbplats är baserad på en webbplatsmall är det möjligt att temat redan har anpassats av din frontendutvecklare. Med hjälp av platslisten kan du visa vilken version av webbplatstemat som är distribuerad och växla till tidigare versioner.
+Om din webbplats är baserad på en webbplatsmall är det möjligt att temat redan har anpassats av din frontendutvecklare. Med hjälp av webbplatsspåret kan du visa vilken version av webbplatstemat som är distribuerad och växla till tidigare versioner.
 
 Markera platsens rot för att visa temainformation om platsen när webbplatsspåret visas i platskonsolen.
 

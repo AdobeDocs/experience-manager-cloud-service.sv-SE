@@ -4,9 +4,9 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: f57a856b-0932-4e8f-be59-a19fe692e2ab
-source-git-commit: bceec9ea6858b1c4c042ecd96f13ae5cac1bbee5
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '1415'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Uppgifter för utvecklare och distributionsansvarig {#developer-deployment-manager}
 
-I den här valfria delen av [startresan,](overview.md) kommer du att lära dig hur utvecklare och driftsättningsansvariga kan använda Git för att utveckla program och använda rörledningar för att driftsätta dem.
+I den här valfria delen av [startresan,](overview.md) kommer du att lära dig hur utvecklare och driftsättningsansvariga kan få åtkomst till Git för att utveckla program och använda rörledningar för att driftsätta dem.
 
 ## Story hittills {#story-so-far}
 
@@ -50,7 +50,7 @@ Beroende på organisationens behov kan samma användare ha båda rollerna.
 
 Innan du börjar de uppgifter som beskrivs i det här dokumentet som utvecklare eller distributionshanterare måste du se till att systemadministratören har slutfört alla steg i den här introduktionsresan. Detta innebär att
 
-* Systemadministratören har tilldelat utvecklare och distributionsansvariga till sina respektive produktprofiler.
+* Din systemadministratör har tilldelat utvecklare och distributionsansvariga till sina respektive produktprofiler.
 * Utvecklare måste dessutom tilldelas **AEM** eller **AEM administratörer** produktprofiler som också använder AEM.
 * Molnresurser har konfigurerats.
 
@@ -86,7 +86,7 @@ Följ de här stegen för att skapa din första icke-produktionspipeline.
 
    ![Lägg till icke-produktionsflöde](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add1.png)
 
-1. På **Konfiguration** -fliken i **Lägg till icke-produktionsförlopp** väljer du vilken typ av icke-produktionsflöde du ska lägga till. I det här exemplet väljer du **Distributionsförlopp**.
+1. På **Konfiguration** -fliken i **Lägg till icke-produktionsförlopp** väljer du vilken typ av icke-produktionsflöde du ska lägga till. I detta exempel väljer du **Distributionsförlopp**.
 
    ![Dialogrutan Lägg till icke-produktionsförlopp](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-config.png)
 
@@ -96,7 +96,7 @@ Följ de här stegen för att skapa din första icke-produktionspipeline.
 
 1. Klicka **Fortsätt**.
 
-1. På **Källkod** -fliken i **Lägg till icke-produktionsförlopp** måste du välja vilken typ av kod som pipeline ska bearbeta. I det här exemplet väljer du **Fullständig stackkod**.
+1. På **Källkod** -fliken i **Lägg till icke-produktionsförlopp** måste du välja vilken typ av kod som pipeline ska bearbeta. I detta exempel väljer du **Fullständig stapelkod**.
 
 1. På **Källkod** måste du definiera följande alternativ.
 
@@ -140,7 +140,7 @@ Om du är intresserad av hur innehållsförfattare får tillgång till och anvä
 
 >[!TIP]
 >
->Nu när du är ombord kan du [lära dig hur du enkelt lägger till tillägget AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) till en sandlådemiljö med minimal AEM och möjlighet att testa de kraftfulla funktionerna i AEM med omfattande exempel baserade på bästa praxis.
+>Nu när du är ombord kan du [lära dig hur du enkelt lägger till AEM Reference Demos Add-On](/help/journey-sites/demos-add-on/overview.md) till en sandlådemiljö med minimal AEM och möjlighet att testa de kraftfulla funktionerna i AEM med omfattande exempel baserade på bästa praxis.
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -150,6 +150,6 @@ Här följer ytterligare, valfria resurser om du vill gå längre än vad som in
 * [Använda Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md) - Lär dig hur du använder Cloud Managers Git-databaser och hur du integrerar din egen kundhanterade Git-databas med Cloud Manager.
 * [Lokal utvecklingsmiljö - konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) - I den här självstudiekursen får du hjälp med att konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager (AEM) med AEM as a Cloud Service SDK.
 * [Komma igång med AEM Sites - WKND självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) - Den här självstudiekursen i flera delar är utformad för utvecklare som inte har använt Adobe Experience Manager (AEM) tidigare. Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
-* [Komma igång med SPA i AEM med React](/help/implementing/developing/hybrid/getting-started-react.md) - I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med dina egna SPA med React Framework.
-* [Komma igång med SPA i AEM med Angularna](/help/implementing/developing/hybrid/getting-started-angular.md) - I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med hjälp av ramverket för Angular.
+* [Komma igång med SPA i AEM med React](/help/implementing/developing/hybrid/getting-started-react.md) - I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
+* [Komma igång med SPA i AEM med Angular](/help/implementing/developing/hybrid/getting-started-angular.md) - I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med hjälp av Angularnas ramverk.
 * [Headless Developer Journey](/help/journey-headless/developer/overview.md) - Börja här för att få en guidad kurs i utveckling av headless-program med AEM.

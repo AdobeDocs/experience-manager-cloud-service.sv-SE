@@ -2,10 +2,10 @@
 title: Exportera till CSV
 description: Exportera information om sidorna till en CSV-fil på det lokala systemet
 exl-id: 818e927e-40b2-4ccb-bfb3-88284ad49829
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 28%
+source-wordcount: '197'
+ht-degree: 23%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 28%
 
 **Skapa CSV-rapport** Med kan du exportera information om sidorna till en CSV-fil på det lokala systemet.
 
-* Den hämtade filen kallas `export.csv`
+* Den hämtade filen anropas `export.csv`
 * Innehållet beror på de egenskaper du väljer.
 * Du kan definiera banan tillsammans med exportens djup.
 
@@ -21,7 +21,7 @@ ht-degree: 28%
 >
 >Hämtningsfunktionen och standarddestinationen för webbläsaren används.
 
-I guiden **Skapa CSV-export** kan du välja:
+The **Skapa CSV-export** kan du välja:
 
 * Egenskaper att exportera
    * Metadata
@@ -42,7 +42,7 @@ I guiden **Skapa CSV-export** kan du välja:
    * Ytterligare nivåer av barn
    * Nivåer
 
-Resultatet `export.csv` kan öppnas i Excel eller något annat kompatibelt program.
+Resultatet `export.csv` filen kan öppnas i Excel eller något annat kompatibelt program.
 
 Så här skapar du en CSV-export:
 

@@ -4,9 +4,9 @@ description: Lär dig de bästa arbetssätten som skapats av tekniker och konsul
 feature: Multi Site Manager
 role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ MSM är ett konfigurerbart ramverk för automatisering av innehållsdistribution
 
 Kom ihåg att en Live-kopia kan skapas med [vanliga sidor](creating-live-copies.md#creating-a-live-copy-of-a-page) eller en [konfiguration av utkast](creating-live-copies.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration). Båda är giltiga användningsfall.
 
-Ytterligare fördelar med att använda en ritkonfiguration är att de
+Ytterligare fördelar med att använda en ritkonfiguration är att de:
 
 * Tillåt författaren att använda **Utrullning** på en ritning för att uttryckligen skicka ändringar till Live-kopior som ärver från den här ritningen.
 * Tillåt författaren att använda **Skapa webbplats** för att enkelt välja språk och konfigurera strukturen för Live Copy.
@@ -94,8 +94,8 @@ Mer information finns i [Översätta innehåll för flerspråkiga webbplatser](/
 Ändringar av innehållsstrukturen i ett utkast-/källträd återspeglas på olika sätt i en Live-kopia. Detta beror på ändringstypen:
 
 * **Skapar** nya sidor i en plan resulterar i att motsvarande sidor skapas i Live-kopior efter utrullning med standardkonfigurationen.
-* **Tar bort** sidor i en plan kommer att resultera i att motsvarande sidor tas bort från Live-kopior efter utrullning med standardkonfiguration för utrullning.
-* **Flyttar** sidor i en plan som **not** resulterar i att motsvarande sidor flyttas i Live-kopior efter utrullning med standardkonfiguration för utrullning:
+* **Tar bort** sidor i en plan kommer att resultera i att motsvarande sidor tas bort från Live-kopior efter utrullning med standardkonfiguration.
+* **Flyttar** sidor i en plan kommer att **not** resulterar i att motsvarande sidor flyttas i Live-kopior efter utrullning med standardkonfiguration för utrullning:
    * Orsaken till detta är att en sidflyttning implicit inkluderar en sidborttagning. Detta kan potentiellt leda till oväntat beteende vid publicering, eftersom borttagning av sidor på författaren automatiskt inaktiverar motsvarande innehåll vid publicering. Detta kan också ha en extra effekt på relaterade objekt som länkar, bokmärken och andra.
       * Innehållsarv på respektive Live Copy-sidor uppdateras för att återspegla den nya platsen för deras källor i planen.
       * För att få en sida att fungera som en övergång från utkast till Live-kopior bör du överväga [flytta bästa praxis för sidförflyttning.](#page-move)
@@ -128,7 +128,7 @@ MSM-utrullningskonfigurationer är mycket anpassningsbara. Du bör vara medveten
 
 ### onModify {#onmodify}
 
-När du använder [utlösare för utrullning](live-copy-sync-config.md#rollout-triggers) `onModify` Tänk på följande:
+När du använder [utlösare](live-copy-sync-config.md#rollout-triggers) `onModify` Tänk på följande:
 
 * Automatisera utrullningar med `onModify` -utlösare kan ha en negativ inverkan på redigeringsprestanda eftersom de utlöser utrullningar efter varje sidändring.
 * Resultatet av utrullningen kan skilja sig från det förväntade:

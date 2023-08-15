@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du skapar, ändrar och använder s
 feature: Search,Metadata
 role: User,Admin
 exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2327'
 ht-degree: 16%
 
 ---
@@ -108,7 +108,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 1. Gör något av följande:
 
    * I **[!UICONTROL Property Name]** anger du sökvägen till JSON-filen där du definierar noderna för alternativen och anger motsvarande nyckelvärdepar.
-   * Tryck ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ trycker du/klickar ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) och upprepa steget.
+   * Tryck ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ trycker du/klickar ![Ikon för att lägga till resurser](assets/do-not-localize/aem_assets_add_icon.png) och upprepa steget.
 
 1. Kontrollera att **[!UICONTROL Single Select]** är avmarkerat så att användaren kan välja flera alternativ för filtyper samtidigt (till exempel bilder, dokument, multimedia och arkiv). Om du väljer **[!UICONTROL Single Select]** kan användaren bara välja ett alternativ åt gången för olika filtyper.
 
@@ -126,7 +126,7 @@ The `Multi Value Property` kan du söka efter flera värden i resurser. Tänk di
 1. Klicka på Experience Manager-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]**, tryck **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. På sidan Redigera sökformulär drar du **[!UICONTROL Multi Value Property Predicate]** från fliken **[!UICONTROL Select Predicate]** till huvudrutan.
-1. I **[!UICONTROL Settings]** anger du en etikett och platshållartext för predikatet. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
+1. I **[!UICONTROL Settings]** anger du en etikett och platshållartext för predikatet. Ange egenskapsnamnet som ska användas för att utföra sökningen i egenskapsfältet, till exempel `jcr:content/metadata/dc:value`. Du kan också använda valdialogrutan för att välja en nod.
 1. Kontrollera att **[!UICONTROL Delimiter Support]** är markerat. I fältet **[!UICONTROL Input Delimiters]** anger du avgränsare för att separera enskilda värden. Som standard anges kommatecken som avgränsare. Du kan ange en annan avgränsare.
 1. I **Beskrivning** anger du en valfri beskrivning och trycker sedan **[!UICONTROL Done]**.
 1. Navigera till panelen Filter i Assets-gränssnittet. Predikatet **[!UICONTROL Multi Value Property]** läggs till på panelen.
@@ -139,7 +139,7 @@ The `Tags` kan du göra taggbaserade sökningar efter resurser. Som standard [!D
 1. Klicka på Experience Manager-logotypen och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan trycka **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 1. Dra på sidan Redigera sökformulär **[!UICONTROL Tags Predicate]** från fliken Välj predikat till huvudrutan.
-1. Ange en platshållartext för predikatet på fliken Inställningar. Ange egenskapsnamnet som ska användas för sökningen i egenskapsfältet, till exempel `jcr:content/metadata/cq:tags`. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
+1. Ange en platshållartext för predikatet på fliken Inställningar. Ange egenskapsnamnet som ska användas för att utföra sökningen i egenskapsfältet, till exempel `jcr:content/metadata/cq:tags`. Du kan också välja en nod i CRXDE i urvalsdialogrutan.
 1. Konfigurera sökvägsegenskapen för rottaggar för det här predikatet för att fylla i olika taggar i listan Taggar.
 1. Välj **[!UICONTROL Show match all tags option]** om du vill söka efter resurser som innehåller alla taggar du anger.
 
@@ -219,7 +219,7 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
   </tr>
   <tr>
    <td><p>Intervall</p> </td>
-   <td><p>Sök predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet.</p> </td>
+   <td><p>Sök på predikatet för att söka efter resurser som ligger inom ett angivet intervall. På sökpanelen kan du ange lägsta och högsta värden för intervallet.</p> </td>
    <td>
     <ul>
      <li>Etikett</li>
@@ -324,9 +324,9 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 
 | Åtgärd | Behörighet |
 |---|---|
-| Redigera | Läsa och skriva behörigheter på `/apps` nod i CRX. |
-| Ta bort | Läsa, skriva och ta bort behörigheter på `/apps` nod i CRX. |
-| Förhandsgranska | Läsa, skriva och ta bort behörigheter på `/var/dam/content` nod i CRX. Dessutom kan du läsa och skriva behörigheter på `/apps` nod. |
+| Redigera | Läsa och skriva behörigheter på `/apps` i CRX. |
+| Ta bort | Läsa, skriva och ta bort behörigheter på `/apps` i CRX. |
+| Förhandsgranska | Läsa, skriva och ta bort behörigheter på `/var/dam/content` i CRX. Dessutom kan du läsa och skriva behörigheter på `/apps` nod. |
 
 **Se även**
 
@@ -345,4 +345,3 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 >[!MORELIKETHIS]
 >
 >* [Söka efter digitala resurser](search-assets.md).
-

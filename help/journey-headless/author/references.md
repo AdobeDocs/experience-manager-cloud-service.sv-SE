@@ -2,9 +2,9 @@
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
 exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author Trney](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 Du har lärt dig grunderna i Headless CMS Authoring, med en introduktion till redigering med AEMaaCS och i synnerhet framtagning av Content Fragments.
 
@@ -58,11 +58,11 @@ Du kan till exempel ha definierat följande modeller för innehållsfragment:
 * Person
 * Utmärkelser
 
-Det verkar ganska okomplicerat, men ett företag har förstås både en koncernchef och anställda ....och dessa är alla människor, var och en definierade som en person.
+Det verkar ganska okomplicerat, men ett företag har förstås både en koncernchef och anställda ...och dessa är alla människor, var och en definierade som en person.
 
 Och en person kan ha en utmärkelse (eller kanske två).
 
-* Mitt företag - Företag
+* Mitt företag
    * VD - person
    * Medarbetare - person
       * Personliga utmärkelser - Utmärkelse
@@ -86,7 +86,7 @@ Att skapa fragmentreferenser är ganska okomplicerat (men vanligtvis kommer fäl
 Definitionen av kontrollerna för innehållsfragmentmodellen:
 
 * om du kan välja att lägga till flera referenser
-* Modelltyper för innehållsfragment som du kan välja. I Content Fragment Model definieras de fragmentmodeller som tillåts för referensen, så AEM endast presenterar fragment som baseras på dessa modeller.
+* modelltyperna för de innehållsfragment som du kan välja. I Content Fragment Model definieras fragmentmodellerna som tillåts för referensen, så AEM endast presenterar fragment som baseras på dessa modeller.
 
 ### Navigera i kapslade fragment {#navigate-nested-fragment}
 
@@ -131,4 +131,4 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
 
 * AEM Headless Content Architect Journey
 
-* AEM Headless Translation Journey
+* AEM översättningsresa utan rubrik

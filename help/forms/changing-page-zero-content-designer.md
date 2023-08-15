@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 56b6a573-8aba-43e7-acb7-c2da45869d95
 docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '227'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Sidnollinnehåll visas som standard när ett visningsprogram som inte är Adobe 
 
 ![defaultpage0message](assets/defaultpage0message.png)
 
-[!DNL AEM Forms] version av Designer låter dig ändra meddelandet som visas på sidan noll. Gör så här om du vill ändra sidans nollmeddelande:
+[!DNL AEM Forms] i Designer kan du ändra meddelandet som visas på sidan noll. Gör så här om du vill ändra sidans nollmeddelande:
 
 1. Se till att du har [!DNL AEM Forms] version av Designer installerad. Du kan kontrollera versionen från Om-skärmen i Designer.
 

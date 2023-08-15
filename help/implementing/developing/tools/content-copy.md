@@ -2,9 +2,9 @@
 title: Verktyget Innehållskopia
 description: Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on demand från produktionsmiljön i AEM as a Cloud Service till lägre miljöer i testsyfte.
 exl-id: f060821d-d559-45d2-b3b1-1b2277694ec4
-source-git-commit: 639c49c69c87e7c408929f0d35a673a96a5cc5db
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1306'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Innan något innehåll kan kopieras måste en innehållsuppsättning definieras.
 
    ![Information om innehållsuppsättning](assets/add-content-set-details.png)
 
-1. På **Innehållsbanor** -fliken i guiden anger du sökvägarna för det muterbara innehåll som ska inkluderas i innehållsuppsättningen.
+1. På **Innehållsbanor** -fliken i guiden anger du sökvägarna till det ändringsbara innehåll som ska inkluderas i innehållsuppsättningen.
 
    1. Ange banan i dialogrutan **Lägg till inkluderingssökväg** fält.
    1. Klicka **Lägg till bana** för att lägga till sökvägen till innehållsuppsättningen.

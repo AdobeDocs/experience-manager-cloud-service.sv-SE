@@ -1,11 +1,11 @@
 ---
 title: Importera och exportera resurser
 seo-title: Import and export assets to [!DNL AEM Forms]
-description: Du kan importera och exportera adaptiv Forms och relaterade resurser till en AEM. Detta gör det enklare att migrera formulär eller flytta dem mellan olika system.
+description: Du kan importera och exportera adaptiv Forms och relaterade resurser till en AEM. Detta gör det lättare att migrera formulär eller flytta dem mellan olika system.
 seo-description: You can import and export Adaptive Forms and templates from and in to AEM instances. This helps in migrating forms or moving them across systems.
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Du kan flytta formulär, teman, mallar, dokumentfragment, teman och andra resurser mellan olika [!DNL AEM Forms] -instanser. En sådan rörelse krävs när du migrerar system eller flyttar formulär från en utvecklings- eller mellanlagringsserver till en produktionsserver.
 
-För de resurser som du överför och importerar via [!DNL AEM Forms] Gränssnittet stöds, och du bör använda användargränssnittet i Forms för att exportera eller importera. Du bör inte använda AEM Package Manager för att exportera eller importera sådana resurser.
+För de mediefiler som du överför och importerar via [!DNL AEM Forms] Gränssnittet stöds, och du bör använda användargränssnittet i Forms för att exportera eller importera. Du bör inte använda AEM Package Manager för att exportera eller importera sådana resurser.
 
 ## Hämta eller överföra Forms &amp; Documents-resurser {#download-or-upload-forms-amp-documents-assets}
 
@@ -30,8 +30,8 @@ För dessa resurstyper måste du använda AEM Package Manager för att skapa ett
 Så här hämtar du Forms- och dokumentresurser:
 
 1. Logga in på [!DNL AEM Forms] -instans.
-1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) ikon > navigering ![kompass](assets/Smock_Compass_18_N.svg) ikon> **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Välj formulärresurser och tryck på **[!UICONTROL Download]** ikon.
+1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/Smock_Compass_18_N.svg) ikon> **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Välj formulärresurser och tryck på **[!UICONTROL Download]** -ikon.
 1. Välj något av följande alternativ i Hämta resurser och tryck sedan på **[!UICONTROL Download]**.
 
    * **Hämta som CRX-paket:** Använd alternativet för att hämta och flytta alla valda resurser och relaterade beroenden från en [!DNL AEM Forms] till en annan instans. Alla resurser och mappar hämtas som crx-paket. Alla formulärresurser, inklusive formulär som skapats i AEM (adaptiva Forms- och adaptiva formulärfragment), PDF-dokument och resurser (XSD, XFS, bilder) kan hämtas som paket från [!DNL AEM Forms] Gränssnitt.
@@ -51,7 +51,7 @@ Du kan inte hämta adaptiva Forms, adaptiva formulärfragment och teman med **[!
 Så här överför du Forms- och dokumentresurser:
 
 1. Logga in på [!DNL AEM Forms] -instans.
-1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) ikon > navigering ![kompass](assets/Smock_Compass_18_N.svg) ikon> **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/Smock_Compass_18_N.svg) ikon> **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
 1. Tryck **Skapa** >**Filöverföring**. En dialogruta för att överföra formulär eller paket visas.
 1. I dialogrutan bläddrar du till och väljer paketet eller arkivet som ska importeras. Du kan också välja PDF-dokument, XSD, bilder, formatmallar och XDP-formulär. Tryck på **[!UICONTROL Open]**. Mappen eller filnamnet som du väljer får inte innehålla några specialtecken.
 
@@ -61,7 +61,7 @@ Så här överför du Forms- och dokumentresurser:
 
    >[!NOTE]
    >
-   >Befintlig mapphierarki ersätts inte när du överför ett paket. Om du t.ex. har ett adaptivt formulär som heter &#39;Utbildning&#39; på platsen /content/dam/formSanddocuments på en server. Du hämtar det adaptiva formuläret och överför det till en annan server. Den andra servern har också en mapp med namnet &quot;Training&quot; på samma plats /content/dam/formSanddocuments. Överföringen misslyckas.
+   >Befintlig mapphierarki ersätts inte när ett paket överförs. Om du t.ex. har ett adaptivt formulär som heter &#39;Utbildning&#39; på platsen /content/dam/formSanddocuments på en server. Du hämtar det adaptiva formuläret och överför det till en annan server. Den andra servern har också en mapp med namnet &quot;Training&quot; på samma plats /content/dam/formSanddocuments. Överföringen misslyckas.
 
 ## Hämta eller överföra ett tema {#downloading-or-uploading-a-theme}
 
@@ -74,7 +74,7 @@ Du kan exportera teman i [!DNL AEM Forms] som du kan använda i andra projekt el
 Så här hämtar du ett tema:
 
 1. Logga in på [!DNL AEM Forms] -instans.
-1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) ikon > navigering ![kompass](assets/Smock_Compass_18_N.svg) ikon> **[!UICONTROL Forms]** > **[!UICONTROL Themes]**.
+1. Tryck Experience Manager ![adobeexperienceManager](assets/adobeexperiencemanager.png) icon > navigation ![kompass](assets/Smock_Compass_18_N.svg) ikon> **[!UICONTROL Forms]** > **[!UICONTROL Themes]**.
 1. Välj temat och tryck på **[!UICONTROL Download]**. Temat laddas ned som ett arkiv (.zip-fil).
 
 ### Överföra ett tema {#uploading-a-theme}
@@ -84,7 +84,7 @@ Du kan använda skapade teman med formatförinställningar i ditt projekt. Du ka
 Så här överför du ett tema:
 
 1. I Experience Manager går du till **[!UICONTROL Forms]** > **[!UICONTROL Forms Themes]**.
-1. Klicka på på sidan Teman **[!UICONTROL Forms Create]** > **[!UICONTROL Forms File Upload]**.
+1. På sidan Teman klickar du på **[!UICONTROL Forms Create]** > **[!UICONTROL Forms File Upload]**.
 1. Bläddra och välj ett temapaket på datorn i filöverföringsprompten och klicka på **[!UICONTROL Forms Upload]**. Temat överförs.
 
 <!--
@@ -162,7 +162,7 @@ You can import assets that are exported into a .cmp file. A .cmp file can have o
 
 ## Exportera ett arbetsflödesprogram {#export-a-workflow-application}
 
-Du kan använda AEM för att exportera arbetsflödesprogram. Anges nedan:
+Du kan använda AEM för att exportera arbetsflödesprogram. Proceduren är som anges nedan:
 
 1. Öppna [!DNL AEM Forms] pakethanteraren.
 1. Klicka på **[!UICONTROL Create Package]**. The **[!UICONTROL New Package]** visas.
@@ -192,7 +192,7 @@ Så här skapar du en mapp:
 1. Ange följande information:
 
    * **Titel:** Visningsnamn för mappen
-   * **Namn:** *(Obligatoriskt)* Nodnamnet som du vill lagra mappen under i databasen
+   * **Namn:** *(Obligatoriskt)* Det nodnamn under vilket du vill lagra mappen i databasen
 
    >[!NOTE]
    >
@@ -200,9 +200,9 @@ Så här skapar du en mapp:
 
 1. En ny mapp med den titel du har definierat visas på den aktuella platsen i resurslistan.
 
-   Om det finns en mapp med det angivna namnet misslyckas överföringen med ett fel. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/Smock_Alert_18_N.svg) -ikonen som visas bredvid namnfältet.
+   Om det finns en mapp med det angivna namnet misslyckas överföringen. Du kan visa felmeddelandet genom att hovra över felet ![aem6forms_error_alert](assets/Smock_Alert_18_N.svg) -ikonen som visas bredvid namnfältet.
 
-   Du kan trycka på den nyligen skapade mappen för att gå in i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet.
+   Du kan trycka på den nyligen skapade mappen för att gå in i mappen och skapa resurser eller mappar i mappen. Du kan också markera en mapp och välja att placera den i kö för hämtning, ta bort den eller redigera namnet på den.
 
 <!-- ### Create copies of one or more assets or letters {#create-copies-of-one-or-more-assets-or-letters}
 
@@ -221,9 +221,9 @@ Complete the following steps to create copies of assets and letters:
 
 ## Search {#search-forms}
 
-[!DNL AEM Forms] UI allows you to search your content. Using the top bar, you can tap Search **[A]** to search your content for resources such as assets and documents.
+[!DNL AEM Forms] UI lets you search your content. Using the top bar, you can tap Search **[A]** to search your content for resources such as assets and documents.
 
-When you search for assets, [!DNL AEM Forms] displays the side panel. You can also tap ![assets-browser-content-only](assets/assets-browser-content-only.png) &gt; Filter **[B]** to invoke the side panel. Using the various filters in the side panel, you can narrow down your search. The side panel also allows you to save your searches.
+When you search for assets, [!DNL AEM Forms] displays the side panel. You can also tap ![assets-browser-content-only](assets/assets-browser-content-only.png) &gt; Filter **[B]** to invoke the side panel. Using the various filters in the side panel, you can narrow down your search. The side panel also lets you save your searches.
 
 ![search_topbar](assets/search_topbar.png)
 
@@ -239,7 +239,7 @@ On the side panel, you can use the following to narrow down your search results:
 * Tags
 * Search Criteria; for example, Modified Dates, Publish Status, LiveCopy Status.
 
-The side panel also allows you to save your search settings with names of your choice.
+The side panel also lets you save your search settings with names of your choice.
 
 For more information and instructions on using search, filters, saved search, and side panel, see [Search](/help/sites-authoring/search.md).
 

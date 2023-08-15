@@ -2,9 +2,9 @@
 title: Sökning
 description: Hitta materialet snabbare med omfattande sökfunktioner
 exl-id: 8a799e9a-1461-4e79-ae90-1978af6cf0ed
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '490'
 ht-degree: 6%
 
 ---
@@ -41,10 +41,10 @@ Så här söker och filtrerar du resurser:
 
    ![Sökplats](/help/sites-cloud/authoring/assets/search-term-location.png)
 
-1. Om det behövs kan du ta bort platsfiltret (välj **X** på det filter som du vill ta bort) för att söka i alla konsoler/resurstyper.
+1. Om det behövs kan du ta bort platsfiltret (välj **X** på filtret som du vill ta bort) för att söka i alla konsoler/resurstyper.
 1. Resultaten visas, grupperade efter konsol och relaterad resurstyp.
 
-   Du kan antingen välja en specifik resurs (för ytterligare åtgärder) eller gå nedåt genom att välja önskad resurstyp; till exempel **Visa alla platser**:
+   Du kan antingen välja en specifik resurs (för ytterligare åtgärd) eller gå ned på detaljnivå genom att välja önskad resurstyp, till exempel **Visa alla platser**:
 
    ![Sökresultat](/help/sites-cloud/authoring/assets/search-results.png)
 
@@ -65,7 +65,7 @@ Så här söker och filtrerar du resurser:
    >
    >Sökvillkoren kan variera:
    >
-   >* Beroende på vilken resurstyp du har valt; Exempelvis är kriterierna Assets och Communities begripligt specialiserade.
+   >* Beroende på vilken resurstyp du har valt, är t.ex. kriterierna Resurser och Communities begripligt specialiserade.
    >* Instansen som sökningen i Forms kan anpassas (lämplig för platsen i AEM).
 
 <!--
@@ -92,7 +92,7 @@ Förutom att söka efter en mängd olika aspekter kan du även spara en viss sö
 
    ![Spara en sökning](/help/sites-cloud/authoring/assets/search-side-panel.png)
 
-1. Tilldela ett namn och använd sedan **Spara** för att bekräfta:
+1. Tilldela ett namn och använd sedan **Spara** bekräfta:
 
    ![Spara en sökning med ett namn](/help/sites-cloud/authoring/assets/search-save-name.png)
 

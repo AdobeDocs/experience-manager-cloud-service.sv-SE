@@ -4,16 +4,16 @@ description: Hantera PDF-dokument i [!DNL Adobe Experience Manager] som [!DNL Cl
 feature: Asset Management
 role: User,Admin
 exl-id: 29660869-6902-4093-845b-cd629be59d4d
-source-git-commit: 589ed1e1befa84c0caec0eed986c3e1a717ae602
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '849'
 ht-degree: 1%
 
 ---
 
 # Hantera PDF-dokument i Experience Manager Assets as a Cloud Service {#add-assets-to-experience-manager}
 
-Experience Manager Assets integreras smidigt med visningsprogrammet för Document Cloud PDF, som gör att du kan förhandsgranska flera sidor i ett PDF-dokument. Dessutom kan du använda avancerade visningsfunktioner för Document Cloud PDF, som anteckningar, söktext, navigera i PDF-dokumentet med bokmärken och miniatyrbilder med mera under samma tak. Med Experience Manager Assets kan du även överföra dokument i andra format som stöds och förhandsgranska dem i PDF-format.
+Experience Manager Assets integreras smidigt med visningsprogrammet för PDF i Document Cloud, vilket gör att du kan förhandsgranska flera sidor i ett PDF-dokument. Dessutom kan du använda avancerade visningsfunktioner för Document Cloud PDF, som anteckningar, söktext, navigera i PDF-dokumentet med bokmärken och miniatyrbilder med mera under samma tak. Med Experience Manager Assets kan du även överföra dokument i andra format som stöds och förhandsgranska dem i PDF-format.
 
 Document Cloud PDF viewer ger AEM Assets fördelar på följande sätt:
 * [Stöd för visningsprogramkomponenter för PDF Document Cloud](#pdf-doc-cloud)
@@ -30,7 +30,7 @@ Det inbyggda visningsprogrammet för PDF Doc Cloud har följande komponenter i A
 
 * **PDF-visningsprogram med sidminiatyrer** Miniatyrbildsvyn är en liten förhandsvisning av sidorna i ett PDF-dokument. Med hjälp av miniatyrbilder kan du gå direkt till önskad sida. Du kommer åt miniatyrbilder av det markerade PDF-dokumentet via ![miniatyrbild](/help/assets/assets/thumbnail.svg) till vänster.
 
-* **PDF viewer med bokmärken** Bokmärke är en direktlänk som leder dig till innehållet i dokumentet. Du kan öppna bokmärken i det markerade PDF-dokumentet via ![bokmärke](/help/assets/assets/bookmark.svg) till vänster.
+* **PDF viewer med bokmärken** Bokmärke är en direktlänk som leder dig till innehållet i dokumentet. Du kan komma åt bokmärken i det markerade PDF-dokumentet via ![bokmärke](/help/assets/assets/bookmark.svg) till vänster.
 
 * **Sök i PDF** Du kan använda sökning ![sök](/help/assets/assets/Search.svg) om du vill söka efter texten i PDF-dokumentet.
 
@@ -49,7 +49,7 @@ Med Adobe Experience Manager Assets kan du förhandsgranska PDF-dokument som bes
 1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=en).
 1. Bläddra i det PDF-dokument som du vill överföra och förhandsgranska.
 1. Öppna dokumentet.
-1. Dokumentvisningsprogrammet i PDF läses in som standard. Du kan också välja PDF återgivning på återgivningspanelen.
+1. Dokumentvisningsprogrammet i PDF läses in som standard. Du kan också välja PDF återgivning på panelen Återgivning.
 1. Under listrutan Återgivningar väljer du **Alla återgivningar**.
 
 Du kan också använda [anteckningar](#pdf-annotations) till PDF-dokumentet i en förhandsvisning av flera sidor.

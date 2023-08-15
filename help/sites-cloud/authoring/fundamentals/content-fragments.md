@@ -2,9 +2,9 @@
 title: Innehållsfragment
 description: Med Adobe Experience Manager as a Cloud Service Content Fragments kan du utforma, skapa, strukturera och använda sidoberoende innehåll
 exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1222'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 >
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** har olika funktioner i AEM:
 >* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att få tillgång till strukturerade data, bland annat texter, siffror och datum.
->* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
+>* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
@@ -29,7 +29,7 @@ Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfr
 
 >[!CAUTION]
 >
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) (och relaterade sidor) när det introducerar grundläggande terminologi och koncept, tillsammans med att skapa och hantera fragment.
+>Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) (och relaterade sidor) eftersom det innehåller grundläggande terminologi och begrepp, tillsammans med att skapa och hantera fragment.
 
 Innehållsfragmenten aktiverar:
 
@@ -45,7 +45,7 @@ Innehållsfragmenten aktiverar:
    * Kan dela innehållsfragment.
    * Kan hantera översättningar centralt.
 * **Producenter och reseansvariga**
-   * Välj bland fördefinierade fragment och variationer med redigering i AEM.
+   * Välj bland fördefinierade fragment och variationer med AEM.
    * Kan förlita sig på att fragment och tillhörande innehåll alltid är uppdaterade när kopieringsförfattare och kreatörer uppdaterar centralt hanterade fragment och resurser.
    * Kan lita på att tillhörande medieinnehåll kurateras för relevans.
    * Kan skapa tillfälliga innehållsvariationer direkt samtidigt som dessa variationer förblir centralt hanterade i fragmentet.
@@ -53,7 +53,7 @@ Innehållsfragmenten aktiverar:
 ## Lägga till ett innehållsfragment på sidan {#adding-a-content-fragment-to-your-page}
 
 1. Öppna sidan för redigering.
-2. Lägg till **Innehållsfragment** komponent, från **Komponenter** webbläsare eller **Infoga ny komponent**.
+2. Lägg till **Innehållsfragment** från någon av **Komponenter** webbläsare **Infoga ny komponent**.
 3. Du kan antingen:
    * Öppna **Resurser** webbläsare och filter för **Innehållsfragment** (standard är Bilder). Dra sedan det önskade fragmentet till komponentinstansen.
    * Markera innehållets fragmentkomponent och sedan **Konfigurera** i verktygsfältet. I dialogrutan kan du öppna urvalsdialogrutan för att bläddra och välja önskat alternativ **Innehållsfragment**.
@@ -62,7 +62,7 @@ Innehållsfragmenten aktiverar:
    >
    >Ett annat sätt är att dra ett visst innehållsfragment direkt till sidan. Då skapas automatiskt den associerade komponenten (innehållsfragment).
 
-4. Till att börja med innehåller innehållet från **Huvud** Element och **Överordnad** (variation) visas. Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
+4. Till att börja med innehåller innehållet från **Huvud** Element och **Master** (variation) visas. Du kan [markera andra element och/eller variationer](#selecting-the-element-or-variation) efter behov.
 
    ![Innehållsfragment i Resursläsaren](/help/sites-cloud/authoring/assets/content-fragments.png)
 
@@ -96,7 +96,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
   >Vilka element som är tillgängliga beror på vilken modell som används.
 
 * **Variant**
-   * Standardvärdet **Överordnad** är alltid tillgängligt.
+   * Standardvärdet **Master** är alltid tillgängligt.
    * En markering är tillgänglig om variationer har skapats för fragmentet.
 
 * **ID**
@@ -144,7 +144,7 @@ För mellanliggande innehåll kan du:
 >* Mellanliggande komponenter har en absolut position inom komponentsekvensen i fragmentflödet. Den här positionen ändras inte, även när innehållet i styckena i fragmentet ändras.
 >
 >  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
->* Om inte de två styckestrukturerna står i konflikt med varandra. I så fall visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
+>* Såvida inte de två styckestrukturerna står i konflikt med varandra, visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
 
 ### Använda associerat innehåll {#using-associated-content}
 
@@ -175,7 +175,7 @@ För en bild kan du till exempel
 * Ange en storlek.
 * Du kan också konfigurera layouten.
 
-Andra ändringar, till exempel move, copy, delete, måste göras i fragmentredigeraren.
+Andra ändringar, som att flytta, kopiera och ta bort, måste göras i fragmentredigeraren.
 
 ### Publicering {#publishing}
 

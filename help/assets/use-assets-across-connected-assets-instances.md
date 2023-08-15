@@ -6,9 +6,9 @@ mini-toc-levels: 2
 feature: Asset Management,Connected Assets,Asset Distribution,User and Groups
 role: Admin,User,Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: 62649d9aaa7c4307351cc83eefbab14806f91378
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '3758'
+source-wordcount: '3757'
 ht-degree: 14%
 
 ---
@@ -71,7 +71,7 @@ De olika roller som är involverade i konfigureringen och funktionen och deras m
 
 ### Arkitektur för anslutna resurser {#connected-assets-architecture}
 
-Med Experience Manager kan du ansluta en fjärrdistribution av DAM som en källa till flera Experience Manager [!DNL Sites] distributioner. Du kan dock ansluta en [!DNL Sites] driftsättning med endast en fjärrdistribution av DAM.
+Med Experience Manager kan du ansluta en fjärrdistribution av DAM som källa till flera Experience Manager [!DNL Sites] distributioner. Du kan dock ansluta en [!DNL Sites] driftsättning med endast en fjärrdistribution av DAM.
 
 Utvärdera det optimala antalet Sites-instanser som ska anslutas till en fjärr-DAM-distribution. Adobe rekommenderar att du stegvis ansluter platsinstanser till distributionen och testar att det inte finns någon prestandapåverkan på fjärr-DAM, eftersom varje ansluten platsinstans bidrar till datatrafiken på fjärr-DAM.
 

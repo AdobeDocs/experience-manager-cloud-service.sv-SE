@@ -4,9 +4,9 @@ seo-title: Developer Mode
 description: I utvecklarläget öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan
 seo-description: Developer mode opens a side panel with several tabs that provide a developer with information about the current page
 exl-id: fbf11c0f-dc6e-43f3-bcf2-080eacc6ba99
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -52,13 +52,13 @@ Detta visar ett komponentträd som:
 
 * Skapar konturer för kedjan med komponenter och mallar som återges på sidan. Trädet kan expanderas för att visa kontext i hierarkin.
 * Visar den datortid på serversidan som krävs för att återge komponenten.
-* Gör att du kan expandera trädet och välja specifika komponenter i trädet. Markeringen ger åtkomst till komponentinformation. t.ex.
+* Gör att du kan expandera trädet och välja specifika komponenter i trädet. Markeringen ger åtkomst till komponentinformation, till exempel:
    * Databassökväg
    * Länkar till skript (används i CRXDE Lite)
-   * Komponentdetaljer som de visas i [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md)
+   * Komponentdetaljer enligt [Komponentkonsol](/help/sites-cloud/authoring/features/components-console.md)
 * Komponenter som är markerade i trädet markeras med en blå kant i redigeraren.
 
-Fliken Komponenter hjälper dig att:
+På fliken Komponenter kan du
 
 * Fastställ och jämför återgivningstiden per komponent.
 * Se och förstå hierarkin.

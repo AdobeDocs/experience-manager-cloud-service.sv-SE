@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 0eff8100-5990-4553-8373-445fb7e6fb27
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.8.0-versionen av [!
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.8.0-versionen av [!
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.8.0) är 1 september 2022.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.8.0) är 1 september 2022.
 Nästa version (2022.10.0) är planerad till 10 november 2022.
 
 ## Släpp video {#release-video}
@@ -36,10 +36,10 @@ Titta på videon Augusti 2022 Release Overview om du vill se en sammanfattning a
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* Med e-postkomponenten kan du skapa innehåll i AEM som sedan levereras som e-post via Campaign Classic. Huvudkomponenten för e-post:
+* Med e-postkomponenten kan du skapa innehåll i AEM som sedan levereras som e-postmeddelanden via Campaign Classic. Huvudkomponenten för e-post:
    * baseras på [Core WCM Component](https://github.com/adobe/aem-core-wcm-components) som har stöd för redigerbara mallar och stilsystemet.
    * innehåller 10 e-postoptimerade produktionsklara komponenter (Page, Container, Title, Text, Image, Button, Teaser, Experience Fragment, Content Fragment, Segmentation).
-   * ger avancerad personalisering och segmentering tack vare [infogning av Campaign-variabler](https://github.com/adobe/aem-core-email-components/wiki/RTE-Personalization) i de flesta dialogrutefälten och i de flexibla [Segmenteringskomponent](https://github.com/adobe/aem-core-email-components/wiki/Segmentation-component-(Technical-Documentation)).
+   * ger avancerad personalisering och segmentering tack vare [infogning av kampanjvariabler](https://github.com/adobe/aem-core-email-components/wiki/RTE-Personalization) i de flesta dialogrutefälten och i de flexibla [Segmenteringkomponent](https://github.com/adobe/aem-core-email-components/wiki/Segmentation-component-(Technical-Documentation)).
    * ger optimala e-postvänliga HTML-resultat tack vare [Inline för CSS-format](https://github.com/adobe/aem-core-email-components/wiki/HTML-Inliner:-Technical-documentation), [Inliner för HTML-attribut](https://github.com/adobe/aem-core-email-components/wiki/HTML-Inliner:-Technical-documentation)och [HTML sanitizer](https://github.com/adobe/aem-core-email-components/wiki/HTML-sanitizing:-Technical-documentation).
    * gör det möjligt att skapa e-postmeddelanden var som helst.
 
@@ -61,17 +61,17 @@ Titta på videon Augusti 2022 Release Overview om du vill se en sammanfattning a
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
-* [Adaptiv Forms-guide](/help/forms/creating-adaptive-form.md): AEM Forms har en användarvänlig guide för att snabbt skapa Adaptive Forms. Guiden har en snabb fliknavigering där du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär. Den här versionen innehåller följande förbättringar av guiden:
+* [Adaptive Forms wizard](/help/forms/creating-adaptive-form.md): AEM Forms har en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden har en snabb fliknavigering där du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär. Den här versionen innehåller följande förbättringar av guiden:
 
-   * Markera eller avmarkera fält: Med guiden kan du skapa ett adaptivt formulär baserat på scheman för JSON och Formulärdatamodell. Nu kan du markera delmängder av fält i ett schema som ska inkluderas i ett anpassat formulär. De markerade fälten konverteras till motsvarande komponenter för datainhämtning från adaptiva formulär för att snabbt skapa de anpassade formulären.
+   * Markera eller avmarkera fält: Med guiden kan du skapa ett adaptivt formulär baserat på JSON- och formulärdatamodellscheman. Nu kan du markera delmängder av fält i ett schema som ska inkluderas i ett anpassat formulär. De markerade fälten konverteras till motsvarande komponenter för datainhämtning från adaptiva formulär för att snabbt skapa de anpassade formulären.
 
-   * Använd statiska mallar: Kunder som har investerat i statiska mallar kan fortsätta använda molnet genom att använda statiska mallar i guiden för att skapa anpassade formulär. Detta ger kunderna ytterligare tid att migrera gamla statiska mallar till moderna redigerbara mallar.
+   * Använd statiska mallar: Kunder som har investerat i statiska mallar kan fortsätta använda molnet med statiska mallar i guiden för att skapa anpassade formulär. Detta ger kunderna ytterligare tid att migrera gamla statiska mallar till moderna redigerbara mallar.
 
 * [Ta bort dolda fält från ett DoR-dokument (Document of Record) vid bearbetning på serversidan](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md): Du kan generera dokumentet med posten PDF för slutanvändare som bara innehåller de fält som var synliga för dem under datainhämtningen. När formuläret skickas validerar servern vilka fält som dolts för slutanvändaren baserat på inskickade data och utesluter att dokumentet är enhetligt.
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
 * Sammanslutning av AEM sidor till produkter och kategorier via AEM sidegenskaper plus en översikt i produktcockpit
   ![association för produktcockpitsida](/help/assets/CIF/product_cockpit_page_association.png)

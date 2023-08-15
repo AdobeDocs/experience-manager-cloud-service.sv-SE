@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 3f9d7339-7e37-4702-821e-f2b03cd7e224
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1352'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 ### Nyheter i AEM as a Cloud Service grunden {#what-is-new-foundation}
 
-* [Förhandsversion - kanal](/help/release-notes/prerelease.md): Förgranska kommande funktioner under en hel månad innan de går live i produktion!
+* [Förhandsversion - kanal](/help/release-notes/prerelease.md): Förgranska kommande funktioner under en hel månad innan de publiceras i produktion!
 
 * [API-borttagning](/help/release-notes/deprecated-apis.md): en lista över de senaste inaktuella API:erna för AEM as a Cloud Service finns tillgänglig.
 
@@ -57,7 +57,7 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 * Med verktyget Massingestor kan du lägga till metadata vid ett massintag.
 
-* En förbättring av användarupplevelsen visar antalet resurser i en mapp. För mer än 1000 resurser i en mapp, [!DNL Assets] visar 1000+.
+* En förbättring av användarupplevelsen visar antalet resurser i en mapp. För över 1 000 resurser i en mapp: [!DNL Assets] visar 1000+.
 
   ![Antalet resurser i en mapp visas i gränssnittet](/help/assets/assets/browse-folder-number-of-assets.png)
 
@@ -75,8 +75,8 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Sammanhangsberoende hjälp**: Kontextuell hjälp har lagts till för redigering av adaptiva formulär, mallredigerare och temaredigerare som hjälper författare att förstå olika funktioner i redigerare.
-* **Felmeddelanden i egenskapsbläddraren**: Felmeddelanden för varje egenskap i webbläsaren Adaptive Forms Properties har lagts till. Dessa meddelanden hjälper till att förstå tillåtna värden för ett fält.
+* **Sammanhangsberoende hjälp**: Kontextuell hjälp har lagts till för redigerare av adaptiva formulär, mallredigerare och temaredigerare som hjälper författare att förstå olika funktioner i redigerare.
+* **Felmeddelanden i egenskapsbläddraren**: Felmeddelanden för varje egenskap i webbläsaren Adaptiva Forms-egenskaper har lagts till. Dessa meddelanden hjälper till att förstå tillåtna värden för ett fält.
 
 ### Kommande betafunktion i [!DNL Forms] {#what-is-new-forms-prerelease}
 
@@ -90,7 +90,7 @@ Du kan skriva till formscsbeta@adobe.com och registrera dig för betaprogrammet.
 
 ### Fel som har åtgärdats i [!DNL Forms] {#forms-bugs-fixed}
 
-* När du ersätter standardikonen för åtgärdsknapparna med en korallikon i ett steg Tilldela uppgift i AEM Forms Workflows slutar arbetsflödet att fungera och ett undantag loggas. Arbetsflödet fungerar som väntat när standardikoner används.
+* När du ersätter standardikonen för åtgärdsknapparna med en korallikon i ett steg Tilldela uppgift i AEM Forms Workflows slutar arbetsflödet att fungera och ett undantag loggas. Arbetsflödet fungerar som förväntat när standardikoner används.
 * När du ändrar antalet kolumner i layoutlagret öppnar du redigeringslagret och drar några komponenter i en panel visas fyrkantiga blåa rutor i innehållsområdet i den adaptiva formulärredigeraren och redigeraren slutar svara.
 * Felmeddelande om ett alternativ för regelredigering som är relaterat till att ange en URL för en adaptiv resurs eller en extern resurs är för lång och inte användarvänlig.
 
@@ -172,7 +172,7 @@ Releasedatum för innehållsöverföringsverktyget v1.4.0 är 11 maj 2021.
 
 ## Commerce Add-on {#cloud-services-commerce}
 
-### Vad är nytt? {#what-is-new-commerce}
+### Nyheter {#what-is-new-commerce}
 
 * Sidnumreringsstöd för associerat innehåll i produktkonsolens egenskaper
 

@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 6822011a46a1c12c0057e828d976c735ec878eea
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1575'
 ht-degree: 1%
 
 ---
@@ -46,12 +46,12 @@ Du behöver administratörsbehörighet för att [konfigurera inställningar för
       * Välj `Select Include Renditions` för att välja `Include Renditions` som standard i dialogrutan för länkdelning.
       * Välj beteende genom att välja lämpligt alternativ för att göra `Include Renditions` redigerbar, skrivskyddad eller dold.
 
-1. Ange standardgiltighetsperioden för länken i `Validity Period` i `Expiration date` -avsnitt.
+1. Ange standardgiltighetsperioden för länken i `Validity Period` fältet i `Expiration date` -avsnitt.
 
 1. **[!UICONTROL Link share]** i åtgärdsfältet:
    * Alla användare med `jcr:modifyAccessControl` behörigheter kan visa [!UICONTROL Link share] alternativ. Den är synlig som standard för alla administratörer. The [!UICONTROL Link share] -knappen är som standard synlig för alla. Du kan konfigurera så att det här alternativet endast visas för de definierade grupperna eller så kan du även neka det här alternativet från specifika grupper. Välj `Allow only for groups` om du vill att specifika grupper ska kunna visa `Share Link` alternativ. Välj `Deny from groups` för att neka `Share Link` från specifika grupper. När du har valt något av dessa alternativ anger du gruppnamnen med `Select Groups` om du vill lägga till gruppnamn som du vill tillåta eller neka.
 
-Information om inställningar för e-postkonfiguration finns på [E-posttjänstdokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html)
+Information om inställningar för e-postkonfiguration finns på [Dokumentation för e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html)
 
 ![Konfigurera e-posttjänst](config-email-service.png)
 
@@ -121,11 +121,11 @@ Alla användare som har tillgång till länken för delade resurser kan hämta d
 
   ![Hämta kö](assets/queue-download.png)
 
-* Klicka på knappen **[!UICONTROL Download Inbox]** om du vill visa status för nedladdningen. För stora nedladdningar klickar du på **[!UICONTROL Refresh]** för att uppdatera statusen.
+* När nedladdningsfilen är klar klickar du på **[!UICONTROL Download Inbox]** om du vill visa status för nedladdningen. För stora nedladdningar klickar du på **[!UICONTROL Refresh]** för att uppdatera statusen.
 
   ![Hämta inkorg](assets/link-sharing-download-inbox.png)
 
-* När bearbetningen är klar klickar du på **[!UICONTROL Download]** för att ladda ned zip-filen.
+* Klicka på knappen **[!UICONTROL Download]** för att ladda ned zip-filen.
 
 <!--
 You can also copy the auto-generated link and share it with the users. The default expiration time for the link is one day.
@@ -203,7 +203,7 @@ To generate the URL for assets you want to share with users, use the Link Sharin
 A message confirms that you unshared the asset. In addition, the entry for the asset is removed from the list.
 -->
 
-## Hämta resurser och dela separat {#download-and-share-assets}
+## Ladda ned resurser och dela separat {#download-and-share-assets}
 
 Användarna kan hämta de nödvändiga resurserna och dela dem utanför [!DNL Experience Manager]. Mer information finns i [söka efter resurser](/help/assets/search-assets.md), [hur du hämtar resurser](/help/assets/download-assets-from-aem.md)och [ladda ned samlingar](manage-collections.md#download-a-collection)
 
@@ -211,7 +211,7 @@ Användarna kan hämta de nödvändiga resurserna och dela dem utanför [!DNL Ex
 
 Marknadsförare och andra användare kan enkelt dela godkänt material med sina kreatörer genom att
 
-* **Experience Manager**: Appen fungerar i Windows och Mac. Se [översikt över datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna kan du gå till [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är Experience Manager, till exempel genom att överföra nya bilder. Se [överföra resurser med datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
+* **Experience Manager datorprogram**: Programmet fungerar i Windows och Mac. Se [översikt över datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna kan du gå till [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är Experience Manager, till exempel genom att överföra nya bilder. Se [överföra resurser med datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
 
 * **Adobe Asset Link**: Kreatörer kan söka efter och använda resurser direkt inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator]och [!DNL Adobe Photoshop].
 
@@ -260,7 +260,7 @@ Add content or link about how to configure sharing via BP, DA, AAL, etc.
 
 ### Aktivera skrivbordsåtgärder som ska användas med skrivbordsappen {#desktop-actions}
 
-Från [!DNL Assets] -användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i datorprogrammet. De här alternativen kallas skrivbordsåtgärder och för att aktivera dem går du till [aktivera skrivbordsåtgärder i [!DNL Assets] webbgränssnitt](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
+Från [!DNL Assets] -användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i datorprogrammet. Dessa alternativ kallas skrivbordsåtgärder och för att aktivera dem går du till [aktivera skrivbordsåtgärder i [!DNL Assets] webbgränssnitt](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
 
 ![Aktivera skrivbordsåtgärder som ska användas som genväg när du arbetar med skrivbordsappen](assets/enable_desktop_actions.png)
 

@@ -3,9 +3,9 @@ title: Hur lägger man till ett adaptivt formulär på en AEM Sites-sida?
 description: Upptäck hur du skapar eller lägger till ett anpassat formulär på din AEM Sites-sida. Lär dig även fördelarna och olika sätt att integrera formulär på din webbplats.
 feature: Adaptive Forms, Page Editor, Authoring
 Keywords: AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
-source-git-commit: 6a462b7a437f74e659a43f7f5d4a95663b92c2cf
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '3219'
+source-wordcount: '3212'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Med AEM Forms kan du enkelt lägga till ett formulär på din AEM Sites-sida. På så sätt kan besökarna enkelt fylla i och skicka in formulär utan att lämna den sida de är på. På så sätt kan de enkelt hålla kontakten med andra element på webbplatsen samtidigt som de interagerar aktivt med formuläret.
 
-Du kan använda AEM Page Editor för att snabbt skapa och lägga till flera formulär på dina AEM Sites-sidor. Med AEM Page Editor kan skribenter skapa smidiga datainhämtningsupplevelser på en webbplatssida med hjälp av adaptiva formulärkomponenter som dynamiskt beteende, validering, dataintegrering, generering av registerdokument och automatisering av affärsprocesser. Det gör det även möjligt att använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
+Du kan använda AEM Page Editor för att snabbt skapa och lägga till flera formulär på dina AEM Sites-sidor. Med AEM Page Editor kan skribenter skapa smidiga datainhämtningsupplevelser på en webbplatssida med hjälp av adaptiva formulärkomponenter som dynamiskt beteende, validering, dataintegrering, generering av registerdokument och automatisering av affärsprocesser. Du kan även använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser.
 
 AEM Forms Cloud Service har adaptiv formulärbehållare och adaptiv Forms - inbäddningskomponenter. Du kan använda adaptiv formulärbehållare för att skapa ett nytt formulär på en AEM Sites-sida eller i ett Experience Fragment, medan adaptiv Forms - Embed-komponent gör att du kan lägga till ett befintligt adaptivt formulär eller skapa ett nytt formulär med Adaptiv Forms Editor.
 
@@ -30,7 +30,7 @@ AEM Forms Cloud Service har adaptiv formulärbehållare och adaptiv Forms - inb�
 
 ## Varför använda adaptiva Forms Core-komponenter för att skapa ett adaptivt formulär på AEM Sites-sidor eller i Experience Fragment?
 
-Om du tidigare har skapat adaptiva Forms Foundation-komponenter eller enkla HTML-baserade formulär för dina webbplatser rekommenderar Adobe att du använder adaptiva Forms Core-komponenter för att skapa ett adaptivt formulär på AEM Sites-sidor eller i Experience Fragment. Med den kan du använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser, vilket förbättrar den övergripande upplevelsen av att skapa och hantera formulär för Adaptiv Forms. Låt oss utforska några av dessa funktioner:
+Om du tidigare har skapat adaptiva Forms Foundation-komponenter eller enkla HTML-baserade formulär för dina webbplatser rekommenderar Adobe att du använder adaptiva Forms Core-komponenter för att skapa ett adaptivt formulär på AEM Sites-sidor eller i Experience Fragment. Här kan ni använda olika funktioner på AEM Sites-sidor, som versionshantering, målgruppsanpassning, översättning och hantering av flera webbplatser, vilket förbättrar den övergripande upplevelsen av att skapa och hantera formulär för Adaptiv Forms. Låt oss utforska några av dessa funktioner:
 
 * **Versionshantering:** Erbjudande om AEM Sites-sidor [robust versionshantering](/help/sites-cloud/authoring/features/page-versions.md), så att du kan spåra och hantera olika versioner av formulären. På så sätt kan du göra ändringar och förbättringar i formulär samtidigt som du behåller möjligheten att vid behov gå tillbaka till tidigare versioner. Versionshantering säkerställer ett kontrollerat och organiserat tillvägagångssätt för blankettutveckling och -utveckling.
 * **Målinriktning (integrering med Adobe Target):** Med målgruppsfunktionerna i AEM Sites kan man också [personalisera formulärupplevelsen för olika målgrupper](/help/sites-cloud/integrating/integration-adobe-target-ims.md). Genom att utnyttja användarsegment och kriterier för målinriktning kan du skräddarsy formulärets innehåll, design eller beteende för specifika användargrupper. På så sätt kan ni leverera en personaliserad och relevant formulärupplevelse, vilket ökar engagemanget och konverteringsgraden.

@@ -2,9 +2,9 @@
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '902'
 ht-degree: 5%
 
 ---
@@ -15,14 +15,14 @@ Med lanseringar kan du effektivt utveckla innehåll för en framtida release.
 
 En startsida skapas så att du kan göra ändringar redo för framtida publicering (samtidigt som du behåller dina aktuella sidor). När du har redigerat och uppdaterat startsidorna befordrar du dem tillbaka till källan och aktiverar sedan källsidorna (översta nivån). Befordra duplicerar startinnehållet tillbaka till källsidorna och kan göras antingen manuellt eller automatiskt (beroende på fält som anges när du skapar och redigerar startsidan).
 
-Till exempel kommer säsongsproduktsidorna i din onlinebutik att uppdateras varje kvartal så att de aktuella produkterna passar den aktuella säsongen. Om du vill förbereda dig för nästa kvartalsvisa uppdatering kan du skapa en startsida med lämpliga webbsidor. Under hela kvartalet ackumuleras följande ändringar i startversionen:
+Till exempel kommer säsongsproduktsidorna i din onlinebutik att uppdateras kvartalsvis så att de aktuella produkterna passar den aktuella säsongen. Om du vill förbereda dig för nästa kvartalsvisa uppdatering kan du skapa en startsida med lämpliga webbsidor. Under hela kvartalet ackumuleras följande ändringar i startversionen:
 
 * Ändringar av källsidorna som inträffar som ett resultat av normala underhållsåtgärder. Dessa ändringar dupliceras automatiskt på startsidorna.
 * Redigeringar som utförs direkt på startsidorna inför nästa kvartal.
 
 Du kan också:
 
-* Navigera i startgrenen; lägga till, eller ta bort, sidor efter behov.
+* Navigera i startgrenen och lägg till eller ta bort sidor efter behov.
 * Förhandsgranska hur publicerat innehåll ser ut på ett specifikt datum/tid i framtiden.
 
 När nästa kvartal anländer befordrar du startsidorna så att du kan publicera källsidorna (med det uppdaterade innehållet). Du kan antingen befordra alla sidor eller bara de som du har ändrat.
@@ -62,19 +62,19 @@ Med Launes kan du:
       * Publicera innehållet från källsidorna (efter att ha befordrat dem).
       * Befordra antingen alla sidor eller endast ändrade sidor.
    * Automatiskt - det innebär följande:
-      * The **Starta**(**Live**) **datum** fält: detta kan anges när du skapar eller redigerar en programstart.
-      * The **Produktionsklar** flagga: detta kan bara anges när du redigerar en programstart.
+      * The **Starta**(**Live**) **datum** fält: detta kan anges när du skapar eller redigerar en start.
+      * The **Produktionsklar** flagga: detta kan bara anges när du redigerar en start.
       * Om **Produktionsklar** -flaggan är inställd, lanseringen befordras automatiskt till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
         Om inget datum har angetts har flaggan ingen effekt.
 * Uppdatera käll- och startsidor parallellt:
-   * Ändringar av källsidorna implementeras automatiskt i startkopian (om den är konfigurerad som arv). d.v.s. som en live-kopia).
+   * Ändringar av källsidorna implementeras automatiskt i startkopian (om den har konfigurerats som arv, d.v.s. som en live-kopia).
    * Du kan göra ändringar i startversionen utan att störa dessa automatiska uppdateringar eller källsidorna.
 
-  ![Åtgärder parallellt](/help/sites-cloud/authoring/assets/launches-parallel.png)
+  ![Parallella åtgärder](/help/sites-cloud/authoring/assets/launches-parallel.png)
 
 * [Skapa en kapslad start](/help/sites-cloud/authoring/launches/creating.md#creating-a-nested-launch) - en programstart inom en programstart:
    * Källan är en befintlig start.
-   * Du kan [befordra en kapslad lansering](/help/sites-cloud/authoring/launches/promoting.md#promoting-a-nested-launch) till vilket mål som helst, detta kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
+   * Du kan [befordra en kapslad lansering](/help/sites-cloud/authoring/launches/promoting.md#promoting-a-nested-launch) till vilket mål som helst. Det kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
 
   ![En kapslad start](/help/sites-cloud/authoring/assets/launches-nested.png)
 

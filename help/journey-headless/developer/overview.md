@@ -3,7 +3,7 @@ title: AEM Headless CMS Developer Journey
 description: Läs om headless-utveckling med Adobe Experience Manager (AEM) som Headless CMS. Lär dig hur du använder funktioner som innehållsmodeller, innehållsfragment och ett GraphQL-API för att leverera headless-innehåll.
 landing-page-description: Få en förståelse för innehållsleverans och implementering utan problem. Läs mer om hur ni utvecklar er strategi inom ert företag.
 exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Välkommen till dokumentationen för utvecklare som inte använder Adobe Experience Manager headless CMS!
 
-Lär dig mer om de kraftfulla och flexibla headless-funktionerna, deras funktioner och hur du använder dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
+Läs om de kraftfulla och flexibla headless-funktionerna, deras funktioner och hur du använder dem i ditt första headless-utvecklingsprojekt. Den här resan ger dig all information du behöver för att utveckla din första headless-applikation.
 
 {{headless-trials-promotion}}
 
@@ -36,7 +36,7 @@ Den här guiden leder dig igenom rubrikfria implementeringsämnen i AEM så när
 
 >[!TIP]
 >
-> Om du föredrar att **lära sig göra** och ha kunskap om AEM kan du gå till självstudiekurserna AEM Headless, som är ordnade enligt API och ramverk och finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av det här dokumentet.
+> Om du föredrar att **lära sig göra** och ha kunskap om AEM kan du gå till självstudiekurserna AEM Headless, som är ordnade enligt API och ramverk och finns i [Avsnittet Ytterligare resurser](#additional-resources) i slutet av dokumentet.
 
 ## Målgrupp {#audience}
 
@@ -55,7 +55,7 @@ Följande personer interagerar på den här resan.
 
 Vi kommer att ta upp många ämnen på den här resan, som kommer att ge dig grundläggande kunskaper om headless i AEM.
 
-Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Vi rekommenderar att du börjar i början och fortsätter sekventiellt.
+Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Adobe rekommenderar att du börjar i början och fortsätter sekventiellt.
 
 | # | Artikel | Beskrivning |
 |---|---|---|
@@ -74,13 +74,13 @@ Vi kommer att ta upp många ämnen på den här resan, som kommer att ge dig gru
 
 ## What&#39;s Next {#what-is-next}
 
-Kom igång genom att checka ut nästa artikel: [Läs om CMS Headless Development.](learn-about.md)
+Kom igång genom att checka ut nästa artikel: [Läs mer om CMS Headless Development.](learn-about.md)
 
-### Välj egen Adventure {#choose-your-path}
+### Välj din egen Adventure {#choose-your-path}
 
 Föredrar du att lära dig i din egen takt? Kolla in följande alternativ:
 
-* Om du föredrar att fortsätta **lära sig om headless-koncept och AEM headless-teknik** bör du fortsätta din AEM resa utan att ha något att göra, enligt vad som rekommenderas i nästa granskning av dokumentet [Så här modellerar du innehåll som AEM innehållsmodeller](model-your-content.md) där du lär dig att utforma innehållsstrukturen i AEM.
+* Om du föredrar att fortsätta **lära sig om headless-koncept och AEM headless-teknik** bör du fortsätta din AEM resa utan att ha något att göra så som rekommenderas i nästa granskning av dokumentet [Så här modellerar du innehåll som AEM innehållsmodeller](model-your-content.md) där du lär dig att utforma innehållsstrukturen i AEM.
 * Om du föredrar att **lära sig göra** går du till [Komma igång med AEM självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) där du kommer att gå direkt in i AEM Headless-utveckling genom att implementera ett enkelt projekt som visar AEM headless-innehåll.
 
 ## Ytterligare resurser {#additional-resources}
@@ -90,7 +90,7 @@ Dokumentationsresor visar hur AEM löser ett affärsproblem genom att tillhandah
 Kolla in de här extra resorna för mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
 
 * [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Om du föredrar att lära dig genom att göra och ha befintliga kunskaper om AEM kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar att skapa och använda program som bygger på AEM Headless.
-* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
+* [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger er en bred förståelse för headless-teknik, hur AEM levererar headless-innehåll och hur ni kan översätta det.
 * [Headless Authoring Journey](/help/journey-headless/author/overview.md) - Börja här för att få en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du modellerar ditt innehåll i ditt första headless-projekt.
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för att få en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du skapar material för ditt projekt.
 * [AEM as a Cloud Service teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM och headless-teknik kan du läsa våra detaljerade tekniska dokument.

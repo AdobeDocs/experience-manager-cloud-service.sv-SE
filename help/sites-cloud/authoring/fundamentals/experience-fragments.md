@@ -2,9 +2,9 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2044'
 ht-degree: 4%
 
 ---
@@ -24,7 +24,7 @@ An Experience Fragment:
 * Kan användas på flera sidor.
 * Är baserad på en mall (endast redigerbar) för att definiera struktur och komponenter.
 * Den här mallen används för att skapa *rotsida* av Experience Fragment.
-* Består av en eller flera komponenter, med layout, i ett styckesystem.
+* Består av en eller flera komponenter med layout i ett styckesystem.
 * Kan innehålla andra upplevelsefragment.
 * Kan kombineras med andra komponenter (inklusive andra Experience Fragments) för att skapa en komplett sida (upplevelse).
 * En eller flera varianter kan skapas baserat på rotsidan.
@@ -36,14 +36,14 @@ Du kan använda Experience Fragments:
 * Om en författare vill återanvända delar (ett fragment av en upplevelse) av en sida.
 Utan Experience Fragments måste författaren kopiera och klistra in det fragmentet. Att skapa och underhålla dessa klipp-och-klistra-upplevelser är tidskrävande och leder ofta till användarfel.
 Upplevelsefragment eliminerar behovet av att kopiera/klistra in.
-* För att stödja headless CMS-fallstudier.
+* För att stödja headless CMS-fall.
 Författare vill bara använda AEM för att skapa, men inte för att leverera till kunden. Ett system/kontaktyta från tredje part skulle förbruka upplevelsen och sedan leverera till slutanvändaren.
 
 >[!NOTE]
 >
 >**[Innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)** och **Upplevelsefragment** har olika funktioner i AEM:
 >* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att få tillgång till strukturerade data, bland annat texter, siffror och datum.
->* **Upplevelsefragment** är helt utformat, ett fragment av en webbsida.
+>* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
@@ -68,7 +68,7 @@ Experience Fragments ska användas:
    * Bädda in innehåll i kontaktpunkter från tredje part.
 * Om du har en upplevelse med olika variationer eller renderingar.
    * Kanal- eller kontextspecifika varianter.
-   * upplevelser som är begripliga att gruppera, till exempel en kampanj med olika upplevelser i olika kanaler.
+   * Upplevelser som är bra att gruppera, till exempel en kampanj med olika upplevelser i olika kanaler.
 * När ni använder Omnichannel Commerce.
    * Göra kontaktytor transaktionella.
 
@@ -79,9 +79,9 @@ Det rekommenderas att
 
 * [konfigurera tillåtna mallar för dessa mappar](#configure-allowed-templates-folder).
 
-Om du skapar mappar kan du:
+Genom att skapa mappar kan du:
 
-* skapa en meningsfull struktur för era Experience Fragments, t.ex. efter klassificering
+* skapa en meningsfull struktur för era Experience Fragments, till exempel enligt klassificering
 
   >[!NOTE]
   >
@@ -111,7 +111,7 @@ Om du vill skapa och konfigurera en mapp för dina Experience Fragments bör du:
 
 >[!NOTE]
 >
->Det går också att konfigurera [Tillåtna mallar för din instans](#configure-allowed-templates-instance), men den här metoden är **not** rekommenderas eftersom värdena kan skrivas över vid uppgradering.
+>Det går också att konfigurera [Tillåtna mallar för din instans](#configure-allowed-templates-instance), men metoden är **not** rekommenderas eftersom värdena kan skrivas över vid uppgradering.
 
 ### Konfigurera tillåtna mallar för mappen {#configure-allowed-templates-folder}
 
@@ -143,7 +143,7 @@ Om du vill skapa och konfigurera en mapp för dina Experience Fragments bör du:
 
 >[!CAUTION]
 >
->Vi rekommenderar inte att du ändrar **Tillåtna mallar** den här metoden eftersom de angivna mallarna kan skrivas över vid uppgradering.
+>Du bör inte ändra **Tillåtna mallar** den här metoden eftersom de angivna mallarna kan skrivas över vid uppgradering.
 >
 >Använd den här dialogrutan endast i informationssyfte.
 
@@ -153,7 +153,7 @@ Om du vill skapa och konfigurera en mapp för dina Experience Fragments bör du:
 
    ![Knappen Konfiguration](/help/sites-cloud/authoring/assets/xf-18.png)
 
-1. Ange de mallar som krävs i **Konfigurera Experience Fragments** dialog:
+1. Ange vilka mallar som krävs i dialogrutan **Konfigurera Experience Fragments** dialog:
 
    ![Konfigurera Experience Fragments](/help/sites-cloud/authoring/assets/xf-19.png)
 
@@ -225,7 +225,7 @@ Till exempel: `http://<host>:<port>/editor.html/content/experience-fragments/wkn
 
 ## Skapa en upplevelsefragmentvariant {#creating-an-experience-fragment-variation}
 
-Ni kan skapa variationer av ert Experience Fragment, beroende på era behov:
+Ni kan skapa olika upplevelsefragment beroende på era behov:
 
 1. Öppna fragmentet för [redigera](#editing-your-experience-fragment).
 1. Öppna **Variationer** -fliken.
@@ -260,7 +260,7 @@ Nu kan du använda din Experience Fragment när du redigerar dina sidor:
 
 1. Skapa en instans av Experience Fragment-komponenten i sidstyckesystemet:
 
-1. Lägg till den faktiska Experience Fragment-funktionen i komponentinstansen. antingen:
+1. Lägg till den faktiska Experience Fragment-instansen i komponentinstansen, antingen:
 
    * Dra det önskade fragmentet från Resursläsaren och släpp det på komponenten.
    * Välj **Konfigurera** från komponentverktygsfältet och ange vilket fragment som ska användas, bekräfta med **Klar**.
@@ -301,7 +301,7 @@ Så här skapar du ett nytt byggblock:
 
 Byggblocket visas i **Byggblock** -fliken. Följande åtgärder är tillgängliga för varje block:
 
-* **Gå till överordnad**: öppna rotsidvarianten på en ny flik
+* **Gå till mallsida**: öppna varianten av rotsidan på en ny flik
 * **Byt namn**
 * **Ta bort**
 
@@ -309,7 +309,7 @@ Byggblocket visas i **Byggblock** -fliken. Följande åtgärder är tillgänglig
 
 #### Använda ett byggblock {#using-a-building-block}
 
-Du kan dra byggblocket till styckesystemet för vilket fragment som helst, precis som med vilken komponent som helst.
+Du kan dra byggblocket till styckesystemet för vilket fragment som helst, precis som med andra komponenter.
 
 När du redigerar ett Experience Fragment visas tillgängliga byggblock på fliken till vänster. Du kan filtrera enligt:
 
@@ -325,25 +325,25 @@ Personalisering på ert Experience Fragment gör att ni som marknadsförare kan 
 * eliminerar behovet av att ange önskade variationer för varje målgrupp varje gång fragmentet används
 * behåller sin formatering i alla erbjudanden
 
-Du kan skapa en Experience Fragment med flera komponenter grupperade inuti det här enskilda fragmentet. Ni kan också skapa variationer av fragmentet för varje specifikt målgruppssegment och sedan återanvända dessa Experience Fragments i alla kanaler som behövs.
+Du kan skapa ett Experience Fragment med flera komponenter grupperade inuti det här enskilda fragmentet. Ni kan också skapa variationer av fragmentet för varje specifikt målgruppssegment och sedan återanvända dessa Experience Fragments i alla kanaler som behövs.
 
-Personalisering uppnås genom att definiera **Personalisering** egenskaper på antingen Experience Fragment eller variation, eller den mapp som innehåller fragmenten, det innebär att arv kan åsidosätta personaliseringsegenskaper.
+Personalisering uppnås genom att definiera **Personalisering** egenskaper på antingen Experience Fragment eller variation, eller mappen som innehåller fragmenten. Detta innebär att arv kan åsidosätta personaliseringsegenskaper.
 
-När du konfigurerar dessa egenskaper aktiveras även **Målinriktning** i Experience Fragment-redigeraren.
+När du konfigurerar dessa egenskaper aktiveras även **Målinriktning** i Experience Fragment Editor.
 
 ### Definiera personalisering för ert Experience Fragment {#defining-personalization-experience-fragment}
 
 Så här anpassar du fragment:
 
-1. Navigera till önskad plats i **Upplevelsefragment** konsol.
+1. Navigera till önskad plats på panelen **Upplevelsefragment** konsol.
 
-1. Välj antingen en mapp eller ditt fragment och **Egenskaper** i verktygsfältet.
+1. Välj antingen en mapp eller ditt fragment och sedan **Egenskaper** i verktygsfältet.
 
    >[!NOTE]
    >
    >Personaliseringsegenskaper som definieras för en mapp ärvs av alla underordnade mappar nedåt via underträdet och Experience Fragments (och varianter) i det underträdet. De kan åsidosättas genom att arvet bryts.
 
-1. Öppna **Personalisering** för att definiera och spara inställningarna. Exempel:
+1. Öppna **Personalisering** för att definiera och spara inställningarna. I en mapp:
 
    ![Experience Fragment - personaliseringsegenskaper](/help/sites-cloud/authoring/assets/xf-personalization-properties.png)
 

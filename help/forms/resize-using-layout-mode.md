@@ -5,16 +5,16 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 53896a8e-4568-460b-bca7-994baea0c8eb
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
 
 # Använd layoutläget för att ändra storlek på komponenter {#use-layout-mode-to-resize-components}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -44,15 +44,15 @@ Välj **[!UICONTROL Layout]** från listrutan som visas högst upp i redigerings
 
    Verktygsfältet som visas när du har tryckt på komponenter består av följande alternativ:
 
-   * **[!UICONTROL Parent]**: Markera den överordnade komponenten för en komponent.
+   * **[!UICONTROL Parent]**: Välj överordnad för en komponent.
    * **[!UICONTROL Revert breakpoint layout]**: Ångra alla storleksändringar och använd standardlayout på komponenten.
-   * **[!UICONTROL Float to new line]**: Flytta komponenten till nästa rad om det finns flera komponenter på samma rad.
+   * **[!UICONTROL Float to new line]**: Skift komponenten till nästa rad om det finns flera komponenter på samma rad.
 
    Du kan också använda **[!UICONTROL Revert breakpoint layout]** ( ![Återställ brytpunkt](assets/reverttopreviouslypublishedversion.png)) på panelnivå om du vill ångra alla storleksändringar.
 
    >[!NOTE]
    >
-   >Du kan inte ändra storlek på tabellkolumn, verktygsfält, verktygsfältsknapp och målområdeskomponenter i layoutläget. Använd stilläget om du vill ändra storlek på komponenterna.
+   >Du kan inte ändra storlek på tabellkolumn, verktygsfält, verktygsfältsknapp och målområdeskomponenter i layoutläget. Använd stilläget om du vill ändra storlek på de här komponenterna.
 
 ### Exempel {#example}
 
@@ -85,7 +85,7 @@ Du kan upprepa steg 1 och 2 och välja ![Markera överordnad](assets/float_to_ne
 
 Utför följande steg för att definiera antalet kolumner för en panel:
 
-1. I **[!UICONTROL Edit]** läge, tryck på panelen, välj ![Konfigurera](assets/configure-icon.svg)och markera **[!UICONTROL Responsive - everything on the page without navigation]** från **[!UICONTROL Panel Layout]** nedrullningsbar lista.
+1. I **[!UICONTROL Edit]** läge, tryck på panelen, välj ![Konfigurera](assets/configure-icon.svg)och markera **[!UICONTROL Responsive - everything on the page without navigation]** från **[!UICONTROL Panel Layout]** listruta.
 
 1. Tryck ![Spara](assets/save_icon.svg) för att spara egenskaperna.
 

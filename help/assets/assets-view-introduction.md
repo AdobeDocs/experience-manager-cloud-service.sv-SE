@@ -2,9 +2,9 @@
 title: Hur är det till AEM fördel för det nya användargränssnittet eller resursvyn i AEM Assets?
 description: Läs mer om fördelarna med det nya användargränssnittet i AEM Assets eller den nya resursvyn i AEM
 mini-toc-levels: 3
-source-git-commit: 9980064be3ba7e8a15b95ac8ef6e23ba0f258cb0
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -49,15 +49,15 @@ Du kommer åt det nya användargränssnittet i AEM Assets eller den nya vyn i AE
 
 Det nya användargränssnittet i AEM Assets ger följande viktiga fördelar som inte är tillgängliga i administrationsvyn:
 
-* [Kontrollpanelen Min arbetsyta för att skapa effektiva upplevelser](#my-workspace-for-streamlined-experience)
+* [Kontrollpanelen Min arbetsyta för att leverera strömlinjeformade upplevelser](#my-workspace-for-streamlined-experience)
 * [Sökning i första rummet för ökad effektivitet](#search-first)
-* [Insikter för att fatta datadrivna beslut](#insights-data)
+* [Insikter för att fatta databaserade beslut](#insights-data)
 * [Adobe Photoshop Express-integration snabbar upp samarbetet](#accelerate-collaboration)
 * [Mappöverföringar för att konfigurera hierarkisk struktur för din organisation](#folder-uploads)
 * [Prenumerera på databasinnehåll för effektiv resurshantering](#subscribe-content)
 * [Mjuk borttagning av resurser för bättre kontroll till administratörer](#soft-delete-assets)
 
-### Kontrollpanelen Min arbetsyta för att skapa effektiva upplevelser {#my-workspace-for-streamlined-experience}
+### Kontrollpanelen Min arbetsyta för att leverera strömlinjeformade upplevelser {#my-workspace-for-streamlined-experience}
 
 Säg hej till en Digital Asset Management-lösning som förstår de olika behoven i olika organisationsroller. I den nya smidiga vyn i AEM Assets-gränssnittet prioriteras användarvänlighet och snabbhet, samtidigt som marknadsförarna vill ha visuell stil och prydliga arbetsytor. Med en anpassningsbar användarspecifik kontrollpanel för Min arbetsyta kan marknadsförarna snabbt hitta, förhandsgranska, redigera, hantera och leverera resurser med enastående effektivitet. Anlita en oändlig tid på att leta efter specifika resurser och välkomna en smidig upplevelse som ger dig allt du behöver nära till hands.
 
@@ -65,7 +65,7 @@ Säg hej till en Digital Asset Management-lösning som förstår de olika behove
 
 [![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](my-workspace-assets-view.md)
 
-### Insikter för att fatta datadrivna beslut {#insights-data}
+### Insikter för att fatta databaserade beslut {#insights-data}
 
 För att hålla jämna steg med innehållets hastighet är användbara insikter viktiga. Den nya användarupplevelsen i AEM Assets ger avancerade insikter på arbetsytan My Workspace, och ger värdefulla data om resursprestanda, målgruppsanvändning och engagemang. Marknadsförarna kan fatta datadrivna beslut, optimera innehållsstrategier och förfina leveransen i efterföljande led för att få optimala resultat. Med tillgång till meningsfulla insikter kan företag ligga steget före konkurrenterna och få exceptionella resultat.
 
@@ -101,7 +101,7 @@ Utnyttja potentialen i organisationens digitala resursbibliotek med kraftfulla s
 
 ### Prenumerera på databasinnehåll för effektiv resurshantering {#subscribe-content}
 
-Med det nya användargränssnittet i AEM Assets kan du övervaka de åtgärder som utförs för de resurser, mappar och samlingar som är tillgängliga i databasen. Du måste välja och prenumerera på det innehåll som meddelandena skickas till dig för. Du kan också konfigurera händelsetyperna, till exempel borttagning av det innehåll du prenumererar på, ändringar av det innehåll du prenumererar på och så vidare. Meddelandena skickas sedan bara till dig för de händelsetyperna.
+Med det nya användargränssnittet i AEM Assets kan du övervaka de åtgärder som utförs för de resurser, mappar och samlingar som är tillgängliga i databasen. Du måste välja och prenumerera på det innehåll som meddelandena skickas till dig för. Du kan också konfigurera händelsetyperna, till exempel borttagning av ditt prenumererade innehåll, ändringar av det prenumererade innehållet och så vidare. Meddelandena skickas sedan bara till dig för de händelsetyperna.
 
 ![Ta emot meddelanden](assets/notifications.gif)
 

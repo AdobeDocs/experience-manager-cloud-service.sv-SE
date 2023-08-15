@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 71d1aa10-d191-49bc-a50f-1098324f1cfe
 docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Om du vill associera en granskargrupp med ett formulär redigerar du metadatamod
 Så här redigerar du metadataschema:
 
 1. Klicka på under Experience Manager i författarläget **verktyg** > **Resurser** > **Metadata-scheman**.
-1. Gå till Forms Schema **Forms** > **Forms i AEM.**
+1. Gå till Forms-sidan Schema **Forms** > **Forms i AEM.**
 
    Sidans URL är:
 

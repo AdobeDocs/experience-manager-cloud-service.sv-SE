@@ -4,16 +4,16 @@ description: Experience Manager lägger automatiskt till kontextuella och beskri
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: b59043c5-5df3-49a7-b4fc-da34c03649d7
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 1%
 
 ---
 
 # Smarta taggar för videomaterial {#video-smart-tags}
 
-Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för automatisk taggning av videomaterial med hjälp av artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Men [!DNL Adobe Sensei] den kraftfulla videomaterifieringen använder artificiella intelligensmodeller för att analysera videomaterial och lägga till taggar i videomaterialet. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i videon. den andra uppsättningen avser åtgärder som att dricka, köra och jogga.
+Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för automatisk taggning av videomaterial med hjälp av artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Men [!DNL Adobe Sensei] den kraftfulla videomaterifieringen använder artificiella intelligensmodeller för att analysera videoinnehåll och lägga till taggar i videoresurserna. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i den videon, medan den andra handlar om åtgärder som att dricka, köra och jogga.
 
 Videotaggning är aktiverad som standard i [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. Du kan dock [avanmäl dig från smart taggning av video](#opt-out-video-smart-tagging) på en mapp. Videor taggas automatiskt när du överför nya videoklipp eller bearbetar om befintliga. [!DNL Experience Manager] skapar också miniatyrbilder och extraherar metadata för videofilerna. De smarta taggarna visas i fallande ordning efter deras [konfidensgrad](#confidence-score-video-tag) i tillgången [!UICONTROL Properties].
 
@@ -67,7 +67,7 @@ Sökresultaten är en kombination av videomaterial med sökbara nyckelord i meta
 
 ## Moderera smarta taggar för video {#moderate-video-smart-tags}
 
-[!DNL Adobe Experience Manager] använder du för att strukturera de smarta taggarna till:
+[!DNL Adobe Experience Manager] använder du för att strukturera smarta taggar till:
 
 * ta bort felaktiga taggar som tilldelats era varumärkesvideor.
 

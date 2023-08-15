@@ -4,9 +4,9 @@ description: Du kan använda teman för att stilisera och ge en visuell identite
 seo-description: You can create a new theme by customizing the available theme. The themes are customized and deployed using frontend pipeline.
 keywords: skapa nytt tema, anpassa tema, ladda upp nytt tema, använda tema i formulär, anpassa temat med hjälp av frontend
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: fc0ff8cff8c616bc5576d834883aa0fe38ef593e
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2665'
+source-wordcount: '2663'
 ht-degree: 0%
 
 ---
@@ -56,12 +56,12 @@ Du kan [anpassa något av dessa teman för att skapa ett nytt tema](#customize-a
 
 ## Anpassa ett tema {#customize-a-theme-core-components}
 
-Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett tema. När du anpassar ett tema ändrar du dess designelement, layout, färger, typografi och ibland den underliggande koden. Du kan skapa ett unikt och skräddarsytt utseende för webbplatsen eller tillämpningen, samtidigt som du behåller den grundläggande strukturen och funktionaliteten som temat ger.
+Att anpassa ett tema avser processen att ändra och anpassa utseendet på ett tema. När du anpassar ett tema ändrar du dess designelement, layout, färger, typografi och ibland den underliggande koden. Du kan skapa ett unikt och skräddarsytt utseende för webbplatsen eller tillämpningen, samtidigt som du bibehåller den grundläggande strukturen och funktionaliteten som temat ger.
 
 ### Förutsättningar {#prerequisites-to-customize}
 
 * Bekanta dig med [konfigurera en pipeline i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline) och om du har grundläggande kunskaper om hur du konfigurerar en pipeline kan du effektivt hantera och driftsätta dina temaanpassningar.
-* Lär dig hur [konfigurera en användare med rollen Medarbetare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html). Om du förstår hur du konfigurerar en användare med rollen Medarbetare kan du ge dig de behörigheter som krävs för att anpassa temat.
+* Lär dig hur [konfigurera en användare med rollen Medarbetare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html). Genom att förstå hur du konfigurerar en användare med rollen Medarbetare kan du ge de behörigheter som krävs för att anpassa temat.
 * Installera den senaste versionen av [Apache Maven.](https://maven.apache.org/download.cgi) Apache Maven är ett automatiserat byggverktyg som ofta används för Java™-projekt. Genom att installera den senaste versionen får du de beroenden du behöver för att anpassa temat.
 * Installera en vanlig textredigerare. Exempel: Microsoft® Visual Studio Code. Med en vanlig textredigerare som Microsoft® Visual Studio Code får du en användarvänlig miljö där du kan redigera och ändra temafiler.
 

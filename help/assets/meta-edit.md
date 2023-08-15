@@ -1,13 +1,13 @@
 ---
 title: Redigera eller lägga till metadata
-description: Läs om metadata för resurser i [!DNL Experience Manager Assets] olika sätt att redigera metadata för resurser.
+description: Läs mer om metadata för resurser i [!DNL Experience Manager Assets] olika sätt att redigera metadata för resurser.
 contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 464a97ce-da3e-47b5-9879-fafaf2f2378c
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '444'
 ht-degree: 9%
 
 ---
@@ -36,7 +36,7 @@ Så här redigerar du metadata:
    >
    >Om ett textfält är tomt finns det ingen befintlig metadatauppsättning. Du kan ange ett värde i fältet och spara det för att lägga till metadataegenskapen.
 
-Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Detta görs via Experience Manager metadata-återskrivningsarbetsflöde. Ändringar som gjorts i befintliga egenskaper (t.ex. `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till tillsammans med schemat.
+Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Detta görs via Experience Manager metadata-återskrivningsarbetsflöde. Ändringar som gjorts i befintliga egenskaper (till exempel `dc:title`) är överskrivna och nyligen skapade egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till tillsammans med schemat.
 
 <!-- XMP write-back is supported and enabled for the platforms and file formats described in technical requirements. -->
 

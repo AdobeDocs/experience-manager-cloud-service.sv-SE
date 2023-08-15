@@ -4,9 +4,9 @@ description: Använd resursväljaren för att söka efter, hitta och hämta resu
 contentOwner: Adobe
 role: Admin,User
 exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2361'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Utför följande uppgifter för att integrera och använda resursväljaren med [
 
 Du kan integrera alla [!DNL Adobe] eller program som inte är Adobe med [!DNL Experience Manager Assets] som [!DNL Cloud Service] arkivera och välja resurser inifrån programmet.
 
-Integreringen görs genom att importera resursväljarpaketet och ansluta till Assets-as a Cloud Service med Vanilla JavaScript-biblioteket. Du måste redigera en `index.html` eller en lämplig fil i programmet till
+Integreringen görs genom att importera resursväljarpaketet och ansluta till Assets-as a Cloud Service med hjälp av Vanilla JavaScript-biblioteket. Du måste redigera en `index.html` eller en lämplig fil i programmet till -
 * Definiera autentiseringsinformationen
 * Åtkomst till den as a Cloud Service resurskatalogen
 * Konfigurera visningsegenskaperna för resursväljaren
@@ -223,7 +223,7 @@ The `ImsAuthProps` properties define the authentication information and flow tha
 
 I det här exemplet visas hur du använder resursväljaren med ett icke-SUSI-flöde när du kör ett [!DNL Adobe] program under Unified Shell eller när du redan har `imsToken` genereras för autentisering.
 
-Inkludera paketet Resursväljare i koden med `script` -tagg, som visas i _raderna 6-15_ i exemplet nedan. När skriptet har lästs in visas `PureJSSelectors` global variabel är tillgänglig för användning. Definiera resursväljaren [egenskaper](#asset-selector-properties) som visas i _raderna 16-23_. The `imsOrg` och `imsToken` båda egenskaperna krävs för autentisering i icke-SUSI-flöden. The `handleSelection` -egenskapen används för att hantera de valda resurserna. Om du vill återge resursväljaren anropar du `renderAssetSelector` funktionen enligt _rad 17_. Resursväljaren visas i `<div>` behållarelement, som visas i _raderna 21 och 22_.
+Inkludera paketet Resursväljare i koden med `script` -tagg, som i _raderna 6-15_ i exemplet nedan. När skriptet har lästs in visas `PureJSSelectors` global variabel är tillgänglig för användning. Definiera resursväljaren [egenskaper](#asset-selector-properties) som visas i _raderna 16-23_. The `imsOrg` och `imsToken` båda egenskaperna krävs för autentisering i icke-SUSI-flöden. The `handleSelection` -egenskapen används för att hantera de valda resurserna. Om du vill återge resursväljaren anropar du `renderAssetSelector` funktionen enligt _rad 17_. Resursväljaren visas i `<div>` behållarelement, som visas i _raderna 21 och 22_.
 
 Följ de här stegen för att använda resursväljaren med ett icke-SUSI-flöde i [!DNL Adobe] program.
 
@@ -371,15 +371,15 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *selectedAssets* | Array `<Object>` | Nej |                 | Ange valda resurser när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. Till exempel: `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du ett värde för `path` också. |
 | *acvConfig* | Objekt | Nej | | Resurssamlingens visningsegenskap som innehåller objekt med anpassad konfiguration som åsidosätter standardvärden. |
 | *i18nSymbols* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |                 | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade lokaliserade värden via `i18nSymbols` prop. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna.  Om du vill utföra åsidosättningen måste du skicka en giltig [Meddelandebeskrivning](https://formatjs.io/docs/react-intl/api/#message-descriptor) objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
-| *intl* | Objekt | Nej | | Resursväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språkområden som stöds: Engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
+| *intl* | Objekt | Nej | | Resursväljaren innehåller standardöversättningar, OOTB. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale` prop. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ISO 639 - Koder](https://www.iso.org/iso-639-language-codes.html) för representation av namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 | *databaseId* | string | Nej | &#39; | Databas från vilken resursväljaren läser in innehållet. |
-| *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Det gör att du kan lägga till en lista med ytterligare AEM. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
+| *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Här kan du lägga till en lista med ytterligare AEM. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
 | *hideTreeNav* | boolesk | Nej |  | Anger om navigeringssidofältet för resursträd ska visas eller döljas. Den används endast i modal vy och därför har den här egenskapen ingen effekt i järnvägsvy. |
 | *onDrop* |  -funktion | Nej | | Egenskapen gör att en resurs kan släppas. |
 | *dropOptions* | `{allowList?: Object}` | Nej | | Konfigurerar släppningsalternativ med tillåtelselista. |
 | *colorScheme* | string | Nej | | Konfigurera tema (`light` eller `dark`) för resursväljaren. |
-| *handleSelection* |  -funktion | Nej | | Anropas med en array med tillgångsobjekt när resurser är markerade och `Select` klickar du på spärrknappen. Den här funktionen anropas bara i modal vy. För järnvägsvy använder du `handleAssetSelection` eller `onDrop` funktioner. Exempel: <pre>handleSelection=(assets: Tillgång[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
-| *handleAssetSelection* |  -funktion | Nej | | Anropas med en array med objekt när resurserna markeras eller avmarkeras. Detta är användbart när du vill lyssna efter resurser när användaren väljer dem. Exempel: <pre>handleSelection=(assets: Tillgång[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
+| *handleSelection* |  -funktion | Nej | | Anropas med en array med tillgångsobjekt när resurser är markerade och `Select` klickar du på spärrknappen. Den här funktionen anropas bara i modal vy. För järnvägsvy använder du `handleAssetSelection` eller `onDrop` funktioner. Exempel: <pre>handleSelection=(assets: Asset[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
+| *handleAssetSelection* |  -funktion | Nej | | Anropas med en array med objekt när resurserna markeras eller avmarkeras. Detta är användbart när du vill lyssna efter resurser när användaren väljer dem. Exempel: <pre>handleSelection=(assets: Asset[])=> {..}</pre> Se [Markerad resurstyp](#selected-asset-type) för mer information. |
 | *onClose* |  -funktion | Nej | | Anropas när `Close` knappen i modal vy trycks ned. Detta anropas bara `modal` visa och ignorera i `rail` vy. |
 | *onFilterSubmit* |  -funktion | Nej | | Anropas med filterobjekt när användaren ändrar olika filtervillkor. |
 | *selectionType* | string | Nej | enkel | Konfiguration för `single` eller `multiple` urval av resurser i taget. |
@@ -402,16 +402,16 @@ Use the `path` property to define the folder name that displays automatically wh
    ![selected-assets-example](assets/selected-assets-example-vanilla.png)
 -->
 
-### Exempel 2: Metadatapposer
+### Exempel 2: Metadatapuposer
 
 Använd olika egenskaper för att definiera metadata för en resurs som du vill visa med hjälp av en informationsikon. Info pover innehåller information om resursen eller mappen, inklusive namn, dimensioner, ändringsdatum, plats och beskrivning av en resurs. I exemplet nedan används olika egenskaper för att visa metadata för en resurs, till exempel `repo:path` -egenskapen anger platsen för en resurs. <!--`repo` represents the repository from where the asset is showing, whereas, `path` represents the route from where the asset or folder is rendered.-->
 
 ![metadata-pover-exempel](assets/metadata-popover.png)
 
 
-### Exempel 3: Egen filteregenskap i rälsvy
+### Exempel 3: Egen filteregenskap i skenvy
 
-Förutom den facetterade sökningen kan du med Resursväljaren anpassa olika attribut för att förfina sökningen från [!DNL Adobe Experience Manager] som [!DNL Cloud Service] program. Du måste lägga till följande kod för att lägga till anpassade sökfilter i programmet. I exemplet nedan är `Type Filter` sökning som filtrerar resurstypen bland bilder, dokument eller videoklipp eller den filtertyp som du har lagt till för sökningen.
+Förutom den facetterade sökningen kan du med Resursväljaren anpassa olika attribut för att begränsa sökningen från [!DNL Adobe Experience Manager] som [!DNL Cloud Service] program. Du måste lägga till följande kod för att lägga till anpassade sökfilter i programmet. I exemplet nedan är `Type Filter` sökning som filtrerar resurstypen bland bilder, dokument eller videoklipp eller den filtertyp som du har lagt till för sökningen.
 
 ![custom-filter-example-vanilla](assets/custom-filter-example-vanilla.png)
 
@@ -505,7 +505,7 @@ När resursväljaren har konfigurerats och du autentiserats för att använda re
 
 ### Visa/dölj panelen {#hide-show-panel}
 
-Om du vill dölja mappar i den vänstra navigeringen klickar du på **[!UICONTROL Hide folders]** ikon. Om du vill ångra ändringarna klickar du på **[!UICONTROL Hide folders]** ikonen igen.
+Om du vill dölja mappar i den vänstra navigeringen klickar du på **[!UICONTROL Hide folders]** -ikon. Om du vill ångra ändringarna klickar du på **[!UICONTROL Hide folders]** ikonen igen.
 
 ### Databasväxlare {#repository-switcher}
 
@@ -523,7 +523,7 @@ Det är en samling resursmappar som du kan använda för att utföra åtgärder.
 Resursväljaren innehåller även färdiga filteralternativ som kan förfina sökresultaten. Följande filter är tillgängliga:
 
 * `File type`: innehåller mapp, fil, bilder, dokument eller video
-* `MIME type`: innehåller JPG, GIF, PPTX, PNG, MP4, DOCX, TIFF, PDF, XLSX
+* `MIME type`: omfattar JPG, GIF, PPTX, PNG, MP4, DOCX, TIFF, PDF, XLSX
 * `Image Size`: innehåller minsta/högsta bredd, minsta/högsta höjd för bilden
 
 ![rail-view-example](assets/filters-asset-selector.png)
@@ -538,7 +538,7 @@ Du kan också skapa standardsökfilter för att spara de fält som du ofta söke
 
 ### Sökfältet {#search-bar}
 
-Med Resursväljaren kan du utföra fullständig textsökning av resurser i den valda databasen. Om du till exempel skriver nyckelordet `wave` i sökfältet, alla resurser med `wave` nyckelord som nämns i någon av metadataegenskaperna visas.
+Med Resursväljaren kan du utföra fullständig textsökning av resurser i den valda databasen. Om du till exempel skriver nyckelordet `wave` i sökfältet, alla resurser som har `wave` nyckelord som nämns i någon av metadataegenskaperna visas.
 
 ### Sortering {#sorting}
 
@@ -549,7 +549,7 @@ Du kan sortera resurser i Resursväljaren efter namn, dimensioner eller storlek 
 Med Resursväljaren kan du visa resursen i fyra olika vyer:
 
 * **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]**: I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervy](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]**: I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
+* **![stödrastervy](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]**: Stödrastervyn visar rullningsbara filer och mappar i ett rutnät med rader och kolumner.
 * **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]**: I gallerivyn visas filer eller mappar i en centrerad vågrät lista.
 * **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]**: I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 
@@ -571,7 +571,7 @@ Asset Selector supports two types of out of the box views:
 ### Application Integration
 
 Asset Selector is flexible and can be integrated within your existing [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] application. It is accessible and localized to add, search, and select assets in your application. With Asset Selector you can:
-*   **Configure** You can configure the files/folders that you want to show at the upfront. The assets that are chosen to view can be of any supported formats, for example, JPEG. It allows you to control the display of various text or symbols as per your choice.
+*   **Configure** You can configure the files/folders that you want to show at the upfront. The assets that are chosen to view can be of any supported formats, for example, JPEG. It lets you control the display of various text or symbols as per your choice.
 *   **Perfect fit** Asset selector easily fits in your existing [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] application and choose the way you want to view. The mode of view can be inline, rail, or modal view.
 *   **Accessible** With Asset Selector, you can reach the desired asset in an easy manner.
 *   **Localize** Assets can be availed for the various locales available as per Adobe's localization standards.
@@ -596,15 +596,15 @@ You can make default multi-selection of assets by specifying the assets to the c
 ### Action buttons
 
 When you customize your application with Asset Selector based on ReactJS, you are provided with the following action buttons to perform various actions:
-*   **Open in media library** Allows you to open the asset in media library.
-*   **Upload** Allows you to upload an asset directly.
+*   **Open in media library** Lets you open the asset in media library.
+*   **Upload** Lets you upload an asset directly.
 *   **Download** Downloads the asset in [!DNL Adobe Experience Manager] as a [!DNL Cloud Service].
 -->
 <!--
 
 ### Status of an asset
 
-Asset Selector allows you to know the status of your uploaded assets. The status can be `Approved`, `Rejected`, or `Expired` of the asset. 
+Asset Selector lets you know the status of your uploaded assets. The status can be `Approved`, `Rejected`, or `Expired` of the asset. 
 -->
 <!--
 

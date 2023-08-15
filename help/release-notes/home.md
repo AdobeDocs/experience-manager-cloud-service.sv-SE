@@ -2,9 +2,9 @@
 title: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
-source-git-commit: 3f62a7db9038dabdcca3dd59612e8e26c48b8482
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '642'
 ht-degree: 32%
 
 ---
@@ -24,7 +24,7 @@ Med den kontinuerliga releasemodellen i [!DNL Adobe Experience Manager] as a Clo
 * [Funktioner](/help/release-notes/release-notes-cloud/release-notes-current.md) görs med en förutsägbar månadsfrekvens och fokuserar på nya funktioner och produktinnovationer.
 * [Underhållsreleaser](/help/release-notes/maintenance/latest.md) görs ofta och fokuseras på säkerhetsuppdateringar, felkorrigeringar och prestandaförbättringar. Detta säkerställer att [!DNL Adobe Experience Manager] as a Cloud Service är alltid uppdaterad med alla viktiga korrigeringar.
 
-Utöver innovationshastigheten, [!DNL Adobe Experience Manager] as a Cloud Service ger också möjlighet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna långt i förväg. Om du har ett AEM, t.ex. formulär, kan du se till att det också uppdateras genom att välja lösningen i [programinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
+Utöver innovationshastigheten, [!DNL Adobe Experience Manager] as a Cloud Service ger också möjlighet att förhandsgranska kommande funktioner en hel månad i förväg innan de släpps i produktion. På så sätt kan du bedöma vilken inverkan en kommande release har på organisationen genom att testa hur funktionerna i din egen anpassade miljö fungerar och utbilda/förbered de interna användarna i god tid. Om du har ett AEM, t.ex. formulär, kan du se till att det också uppdateras genom att välja lösningen i [programinställningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
 
 >[!NOTE]
 >

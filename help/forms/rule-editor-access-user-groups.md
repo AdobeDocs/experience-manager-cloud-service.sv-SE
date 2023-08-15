@@ -1,12 +1,12 @@
 ---
 title: Hur ger jag regelredigeraren åtkomst till valda användargrupper?
-description: Det finns olika typer av användare med olika kunskaper som fungerar med Adaptive Forms. Lär dig hur du begränsar regelredigeringsåtkomst till användare baserat på deras roll eller funktion.
+description: Det finns olika typer av användare med olika kunskaper som fungerar med Adaptive Forms. Lär dig hur du begränsar regelredigeringsåtkomsten för användare baserat på deras roll eller funktion.
 feature: Adaptive Forms
 role: User
 level: Beginner, Intermediate
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Det finns olika typer av användare med olika kunskaper som fungerar med Adaptive Forms. Expertanvändare kan ha rätt kunskaper för att arbeta med skript och komplexa regler, men det kan finnas grundläggande användare som bara behöver arbeta med layout och grundläggande egenskaper i Adaptive Forms.
 
-[!DNL Experience Manager Forms] I kan du begränsa regelredigeringsåtkomst till användare baserat på deras roll eller funktion. I inställningarna för den adaptiva Forms-konfigurationstjänsten kan du ange [användargrupper](forms-groups-privileges-tasks.md) som kan visa och komma åt regelredigeraren.
+[!DNL Experience Manager Forms] Med kan du begränsa regelredigerarens åtkomst till användare baserat på deras roll eller funktion. I inställningarna för Adaptive Forms Configuration Service kan du ange [användargrupper](forms-groups-privileges-tasks.md) som kan visa och komma åt regelredigeraren.
 
 ## Ange användargrupper som kan komma åt regelredigeraren {#specify-user-groups-that-can-access-rule-editor}
 
@@ -50,7 +50,7 @@ Det finns olika typer av användare med olika kunskaper som fungerar med Adaptiv
 
    ![componentsstoolbarwithout](assets/componentstoolbarwithoutre.png)
 
-   Komponentverktygsfältet så synligt som det är för en användare utan åtkomst till regelredigeraren
+   Komponentverktygsfältet så synligt som det är för en användare utan regelredigeringsåtkomst
 
    Instruktioner om hur du lägger till användare i grupper finns i [Användaradministration och -säkerhet](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
 

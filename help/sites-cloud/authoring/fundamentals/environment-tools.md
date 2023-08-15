@@ -2,10 +2,10 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 11%
+source-wordcount: '2150'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehå
 
 ## Hantera din webbplats {#managing-your-site}
 
-Med **Sites**-konsolen kan du navigera och hantera webbplatsen med hjälp av sidhuvudsfältet, verktygsfältet, åtgärdsikonerna (som gäller för den valda resursen), vägbeskrivningar och, om det är valt, sekundära rutor (till exempel tidslinje och referenser).
+The **Webbplatser** Med konsolen kan du navigera och hantera din webbplats med hjälp av sidhuvudsfältet, verktygsfältet, åtgärdsikonerna (gäller för den valda resursen), vägbeskrivningar och, om du väljer det, sekundära spår (till exempel tidslinje och referenser).
 
 Till exempel kolumnvy:
 
@@ -52,7 +52,7 @@ Komponentwebbläsaren visar alla komponenter som är tillgängliga för användn
 
 Komponentläsaren är en flik i sidopanelen (tillsammans med [resursläsaren](#assets-browser) och [innehållsträdet](#content-tree)). Om du vill öppna (eller stänga) sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
-![Växla sida](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
+![Växla sidopanel](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
 
 När du öppnar sidopanelen öppnas den från vänster sida (välj **Komponenter** tabb om det behövs). När du är öppen kan du bläddra igenom alla komponenter som är tillgängliga för sidan.
 
@@ -72,14 +72,14 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
   Om du vill lägga till en komponent på sidan klickar du på den önskade komponenten och drar den till önskad plats.
 
-  ![Komponentbläddraren på skrivbordet](/help/sites-cloud/authoring/assets/component-browser-desktop.png)
+  ![Komponentwebbläsaren på skrivbordet](/help/sites-cloud/authoring/assets/component-browser-desktop.png)
 
   Komponenterna representeras av
 
    * Komponentnamn
    * Komponentgrupp (i grått)
    * Ikon eller förkortning
-      * Standardkomponentens ikoner är monokroma.
+      * Standardkomponenternas ikoner är monokroma.
       * Förkortningar är alltid de två första tecknen i komponentnamnet.
 
   I det övre verktygsfältet i **Komponenter** webbläsare:
@@ -103,7 +103,7 @@ Resursläsaren visar alla [resurser](/help/assets/home.md) som är tillgängliga
 
 Resursläsaren är en flik i sidopanelen tillsammans med [komponentläsaren](#components-browser) och [innehållsträdet](#content-tree). Om du vill öppna eller stänga sidopanelen använder du ikonen längst upp till vänster i verktygsfältet:
 
-![Växla sida](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
+![Växla sidopanel](/help/sites-cloud/authoring/assets/side-panel-toggle.png)
 
 När du öppnar sidopanelen öppnas den från vänster sida. Välj **Resurser** tabba vid behov.
 
@@ -152,7 +152,7 @@ Det faktiska utseendet och hanteringen beror på vilken enhetstyp du använder:
 
 >[!NOTE]
 >
->En mobil enhet upptäcks när bredden är mindre än 1024px. dvs. även i ett litet skrivbordsfönster.
+>En mobil enhet identifieras när bredden är mindre än 1 024 pixlar, d.v.s. även i ett litet skrivbordsfönster.
 
 Om du snabbt behöver göra en ändring i en resurs kan du starta [tillgångsredigerare](/help/assets/manage-digital-assets.md) direkt från resursläsaren genom att klicka på redigeringsikonen som visas bredvid resursens namn.
 
@@ -170,7 +170,7 @@ När du öppnar sidopanelen öppnas den (från vänster sida). Välj **Innehåll
 
 ![Innehållsträd](/help/sites-cloud/authoring/assets/content-tree-editor.png)
 
-En sida kan enkelt bestå av många av samma typ av komponenter, så innehållsträdet (komponentträdet) visar beskrivande text (i grått) efter komponenttypens namn (i svart). Den beskrivande texten kommer från vanliga egenskaper för komponenten, t.ex. rubrik eller text.
+En sida kan enkelt bestå av många av samma typ av komponenter, så innehållsträdet (komponentträdet) visar beskrivande text (i grått) efter komponenttypens namn (i svart). Den beskrivande texten kommer från vanliga egenskaper för komponenten, till exempel rubrik eller text.
 
 Komponenttyper visas på användarspråket, medan komponentbeskrivningstexten kommer från sidspråket.
 
@@ -180,15 +180,15 @@ Om du klickar på markören bredvid en komponent kommer den nivån att komprimer
 
 Om du klickar på komponenten markeras komponenten i sidredigeraren. Vilka åtgärder som är tillgängliga beror på sidstatus:
 
-* En grundsida:
+* En grundsida, till exempel:
 
-  ![Innehållsträdet markerat](/help/sites-cloud/authoring/assets/content-tree-highlighted.png)
+  ![Innehållsträdet är markerat](/help/sites-cloud/authoring/assets/content-tree-highlighted.png)
 
   Komponenterna på en bassida har de vanliga alternativen.
 
   Om komponenten som du klickar på i trädet är redigerbar visas en skiftnyckelsikon till höger om namnet. Om du klickar på den här ikonen öppnas redigeringsdialogrutan för komponenten.
 
-  ![Redigeringsknapp för innehållsträd](/help/sites-cloud/authoring/assets/content-tree-edit.png)
+  ![Redigera innehållsträd](/help/sites-cloud/authoring/assets/content-tree-edit.png)
 
 * En sida som är en del av en [livecopy](/help/sites-cloud/administering/msm/overview.md), där komponenter ärvs från en annan sida.
 
@@ -226,7 +226,7 @@ Välj lämplig referenstyp för mer information. I vissa situationer är ytterli
 * [Startar](/help/sites-cloud/authoring/launches/overview.md), ger åtkomst till relaterade starter
 * [Live-kopior](/help/sites-cloud/administering/msm/overview.md) visar sökvägarna för alla live-kopior som baseras på den valda resursen.
 * [Blueprint](/help/sites-cloud/administering/msm/best-practices.md), innehåller information och olika åtgärder
-* [Språkkopior](/help/sites-cloud/administering/translation/managing-projects.md#creating-translation-projects-using-the-references-panel), innehåller information och olika åtgärder
+* [Språk Kopior](/help/sites-cloud/administering/translation/managing-projects.md#creating-translation-projects-using-the-references-panel), innehåller information och olika åtgärder
 
 ## Händelser - Tidslinje {#events-timeline}
 
@@ -265,15 +265,15 @@ Dessutom **Sidinformation** kan ge tillgång till analyser och rekommendationer,
 Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 
 * [Redigera](/help/sites-cloud/authoring/fundamentals/editing-content.md) - det läge som ska användas när sidinnehållet redigeras.
-* [Layout](/help/sites-cloud/authoring/features/responsive-layout.md) - gör att du kan skapa och redigera din responsiva layout beroende på enhet (om sidan är baserad på en layoutbehållare)
+* [Layout](/help/sites-cloud/authoring/features/responsive-layout.md) - låter dig skapa och redigera din responsiva layout beroende på enhet (om sidan är baserad på en layoutbehållare)
 * [Målinriktning](/help/sites-cloud/authoring/personalization/targeted-content.md) - öka innehållets relevans genom målinriktning och mätning i alla kanaler.
 * [Timewarp](/help/sites-cloud/authoring/features/page-versions.md#timewarp) - gör att du kan visa ett sidläge vid en viss tidpunkt.
 * [Live Copy-status](/help/sites-cloud/authoring/fundamentals/editing-content.md#live-copy-status) - ger dig en snabb översikt över live-kopians status och vilka komponenter som ärvs/inte ärvs.
 * [Utvecklarläge](/help/implementing/developing/tools/developer-mode.md)
-* [Förhandsgranska](/help/sites-cloud/authoring/fundamentals/editing-content.md#previewing-pages) - används för att visa sidan så som den visas i publiceringsmiljön, eller navigera med hjälp av länkar i innehållet.
+* [Förhandsgranska](/help/sites-cloud/authoring/fundamentals/editing-content.md#previewing-pages) - används för att visa sidan så som den visas i publiceringsmiljön, eller för att navigera med hjälp av länkar i innehållet.
 * [Anteckna](/help/sites-cloud/authoring/fundamentals/annotations.md) - används för att lägga till eller visa anteckningar på sidan.
 
-Du kommer åt dem med hjälp av ikonerna i det övre högra hörnet. Den faktiska ikonen ändras för att återspegla det läge som du använder för närvarande:
+Du kommer åt dessa med ikonerna i det övre högra hörnet. Den faktiska ikonen ändras för att återspegla det läge som du använder för närvarande:
 
 ![Sidlägen](/help/sites-cloud/authoring/assets/page-modes.png)
 
@@ -297,11 +297,11 @@ Sökvägsfält har automatisk komplettering och framåtblickande funktioner som 
 
 Klicka på **Öppna dialogrutan Markering** knappen i sökvägsfältet öppnar [sökvägsläsare](#path-browser) för mer detaljerade markeringsalternativ.
 
-![Öppna dialogrutan Markering, knapp](/help/sites-cloud/authoring/assets/open-selection-dialog-button.png)
+![Öppna dialogrutan Markering](/help/sites-cloud/authoring/assets/open-selection-dialog-button.png)
 
 Du kan också börja skriva i sökvägsfältet och AEM erbjuder matchande sökvägar när du skriver.
 
-![Öppna dialogrutan Markering, knapp](/help/sites-cloud/authoring/assets/path-selection-completion.png)
+![Öppna dialogrutan Markering](/help/sites-cloud/authoring/assets/path-selection-completion.png)
 
 ### Sökvägsläsaren {#path-browser}
 

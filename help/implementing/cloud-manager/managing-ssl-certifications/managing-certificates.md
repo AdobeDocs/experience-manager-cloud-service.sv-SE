@@ -2,9 +2,9 @@
 title: Hantera SSL-certifikat
 description: Lär dig hur du använder Cloud Manager för att kontrollera statusen för dina SSL-certifikat och hur du redigerar, ersätter, uppdaterar och tar bort dem.
 exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
-source-git-commit: aeb407f8971dabb4e86203b3cee82318330638b0
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Statusen för dina SSL-certifikat kan snabbt förstås från SSL-certifikatsidan
 När ett certifikat upphör att gälla fungerar inte längre domäner som används med det utgångna certifikatet. Genom att uppdatera dina certifikat enligt följande steg ser du till att din domän fortsätter att fungera som du vill.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 1. Navigera till **SSL-certifikat** från **Miljö** skärm.
 1. En tabell med en rad för varje SSL-certifikat som har installerats i programmet visas. Klicka på ellipsknappen längst till höger i raden i certifikatet som du vill uppdatera och välj **Visa och uppdatera**.
 1. Certifikatinformationen visas och kan uppdateras.
@@ -51,10 +51,10 @@ Att ta bort certifikat från Cloud Manager är en permanent åtgärd som inte ka
 
 I Cloud Manager kan du inte ta bort ett SSL-certifikat som har en eller flera domäner kopplade till sig. Alla associerade domäner måste tas bort innan SSL-certifikatet tas bort. Se [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md) om du vill veta mer.
 
-Följ de här stegen för att ta bort ett SSL-certifikat.
+Så här tar du bort ett SSL-certifikat.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 1. Navigera till **SSL-certifikat** från **Miljö** skärm.
 1. En tabell med en rad för varje SSL-certifikat som har installerats i programmet visas. Klicka på ellipsknappen längst till höger i raden för det certifikat som du vill ta bort och välj **Ta bort**.
 1. Bekräfta borttagningen i dialogrutan **Ta bort SSL-certifikat** -dialogrutan.
@@ -72,4 +72,4 @@ Meddelandet försvinner när alla befintliga miljökonfigurationer migreras med 
 
 Se [Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) för mer information.
 
-Ett liknande meddelande finns också på **IP Tillåtelselista** och **Miljö** sidor för miljöer som har befintliga CDN-konfigurationer för IP tillåtelselista eller anpassade domännamn.
+Ett liknande meddelande finns också på **IP TILLÅTELSELISTA** och **Miljö** sidor för miljöer som har befintliga CDN-konfigurationer för IP tillåtelselista eller anpassade domännamn.

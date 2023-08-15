@@ -2,9 +2,9 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '4577'
+source-wordcount: '4570'
 ht-degree: 9%
 
 ---
@@ -32,7 +32,7 @@ Detaljerad information om hur redigerbara mallar fungerar på teknisk nivå finn
 
 >[!NOTE]
 >
->**Mallredigeraren** har inte stöd för direkt målinriktning på mallnivå. Sidor som skapas utifrån en redigerbar mall kan användas för målinriktning, men inte själva mallarna.
+>**Mallredigeraren** har inte stöd för direkt målinriktning på mallnivå. Sidor som skapas baserat på en redigerbar mall kan ha som mål, men det går inte att använda själva mallarna.
 
 ## Innan du börjar {#before-you-start}
 
@@ -59,7 +59,7 @@ Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren
    * Kan konfigurera användning av komponenter och annan högnivåinformation som kräver:
       * Vissa tekniska kunskaper
          * Du kan till exempel använda mönster när du definierar banor.
-      * Teknisk information från utvecklaren.
+      * Teknik från utvecklaren.
 
 På grund av egenskaperna hos vissa uppgifter, som att skapa en mapp, behövs en utvecklingsmiljö som kräver kunskap/erfarenhet.
 
@@ -69,7 +69,7 @@ De uppgifter som beskrivs i det här dokumentet listas med den roll som ansvarar
 
 När du skapar en ny redigerbar mall:
 
-* Använd **Mall** konsol. Det här finns i **Allmänt** i **verktyg** konsol.
+* Använd **Mall** konsol. Det här är tillgängligt i **Allmänt** i **verktyg** konsol.
    * Eller direkt på: `https://<host>:<port>/libs/wcm/core/content/sites/templates.html/conf`
 * Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) vid behov
 * [Skapa en ny mall](#creating-a-new-template-template-author), som till att börja med är tom
@@ -180,11 +180,11 @@ En mall kan aktiveras eller inaktiveras så att den blir tillgänglig eller inte
 
 >[!CAUTION]
 >
->När en mall har aktiverats visas en varning när en mallskapare börjar uppdatera mallen ytterligare. Detta är till för att informera användaren om att mallen kan refereras, så eventuella ändringar kan påverka sidorna som refererar till mallen.
+>När en mall har aktiverats visas en varning när en mallskapare börjar uppdatera mallen ytterligare. Detta är till för att informera användaren om att det finns referenser till mallen, så eventuella ändringar kan påverka de sidor som refererar till mallen.
 
 1. I **Mallkonsol** markerar du mallen.
 1. Välj **Aktivera** eller **Inaktivera** i verktygsfältet och i bekräftelsedialogrutan igen.
-1. Nu kan du använda mallen när [skapa en ny sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page)men du vill nog [redigera mallen](#editing-templates-template-authors) enligt dina krav.
+1. Nu kan du använda mallen när [skapa en ny sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page), även om du antagligen vill [redigera mallen](#editing-templates-template-authors) enligt dina krav.
 
 >[!NOTE]
 >
@@ -222,15 +222,15 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 När det refereras till mallen när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
 1. I **Mallkonsol** markerar du mallen.
-1. Välj **Publicera** i verktygsfältet för att öppna guiden.
-1. Välj **Innehållsprofiler** publiceras tillsammans.
+1. Välj **Publicera** Öppna guiden i verktygsfältet.
+1. Välj **Innehållsprinciper** publiceras tillsammans.
 1. Välj **Publicera** från verktygsfältet för att slutföra åtgärden.
 
 ## Redigera mallar - mallskapare {#editing-templates-template-authors}
 
 När du skapar eller redigerar en mall finns det olika aspekter som du kan definiera. Att redigera mallar liknar att skapa sidor.
 
-The **Läge** kan du välja och redigera lämplig del av mallen i verktygsfältet:
+The **Läge** Med -väljaren i verktygsfältet kan du markera och redigera rätt aspekt av mallen:
 
 * [Struktur](#editing-a-template-structure-template-author)
 * [Ursprungligt innehåll](#editing-a-template-initial-content-author)
@@ -238,13 +238,13 @@ The **Läge** kan du välja och redigera lämplig del av mallen i verktygsfälte
 
 ![Väljare för mallredigeringsläge](/help/sites-cloud/authoring/assets/templates-mode.png)
 
-Med **Sidprofil** på **Sidinformation** kan du [välj önskade sidprofiler](#page-policies):
+Med **Sidprofil** på **Sidinformation** -menyn [välj önskade sidprofiler](#page-policies):
 
 ![Sidinformation för mallredigeraren](/help/sites-cloud/authoring/assets/templates-page-information.png)
 
 >[!CAUTION]
 >
->Om en författare börjar redigera en mall som redan har aktiverats visas en varning. Detta är till för att informera användaren om att mallen kan refereras, så eventuella ändringar kan påverka sidorna som refererar till mallen.
+>Om en författare börjar redigera en mall som redan har aktiverats visas en varning. Detta är till för att informera användaren om att det finns referenser till mallen, så eventuella ändringar kan påverka de sidor som refererar till mallen.
 
 ### Mallattribut {#template-attributes}
 
@@ -364,17 +364,17 @@ Under **Policy** Du kan välja en befintlig profil som ska tillämpas på kompon
 
 ![Välj princip](/help/sites-cloud/authoring/assets/templates-policy-selector.png)
 
-Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
+Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** nedrullningsbar meny. En ny titel bör sedan anges i **Principtitel** fält.
 
 ![Knappen Lägg till princip](/help/sites-cloud/authoring/assets/templates-add-policy-button.png)
 
-Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
+Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Principtitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
 
 ![Kopiera princip, knapp](/help/sites-cloud/authoring/assets/templates-copy-policy-button.png)
 
 En beskrivning av profilen är valfri i **Principbeskrivning** fält.
 
-I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
+I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** nedrullningsbar meny.
 
 ![Användning av befintlig princip](/help/sites-cloud/authoring/assets/templates-policy-use.png)
 
@@ -395,7 +395,7 @@ På **Huvud** -fliken definieras de viktigaste inställningarna för komponenten
 
 För en bildkomponent kan till exempel tillåtna bredder definieras tillsammans med aktivering av lazy loading.
 
-Om en inställning tillåter flera konfigurationer klickar eller trycker du på **Lägg till** om du vill lägga till en annan konfiguration.
+Om en inställning tillåter flera konfigurationer klickar du på eller trycker på **Lägg till** om du vill lägga till en annan konfiguration.
 
 ![Knappen Lägg till](/help/sites-cloud/authoring/assets/templates-add-button.png)
 
@@ -415,7 +415,7 @@ För en bildkomponent kan du till exempel definiera beskärningsproportionerna, 
 
 >[!CAUTION]
 >
->Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av kompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **Namn** så här visas det tydligt i användargränssnittet.
+>Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **Namn** så här visas det tydligt i användargränssnittet.
 
 >[!NOTE]
 >
@@ -452,7 +452,7 @@ På **Tillåtna komponenter** definierar du vilka komponenter som är tillgängl
 * Komponenterna grupperas efter komponentgrupperna, som kan expanderas och komprimeras.
 * Du kan markera en hel grupp genom att markera gruppnamnet och avmarkera alla genom att avmarkera kryssrutan.
 * Ett minustecken representerar minst ett, men inte alla, objekt i en grupp markeras.
-* En sökning är tillgänglig för att filtrera efter en komponent efter namn.
+* Det finns en sökning som du kan använda för att filtrera efter en komponent efter namn.
 * Antalet som visas till höger om komponentgruppens namn representerar det totala antalet valda komponenter i dessa grupper oavsett filtret.
 
 ![Fliken Tillåtna komponenter](/help/sites-cloud/authoring/assets/templates-allowed-components-tab.png)
@@ -481,7 +481,7 @@ När en komponent har låsts upp:
 * Komponentens verktygsfält justeras därefter.
 * Innehåll som redan har angetts visas inte längre i **Struktur** läge.
    * Innehåll som redan har angetts betraktas som ursprungligt innehåll och är bara synligt i **Ursprungligt innehåll** läge.
-* Den olåsta komponentens överordnade kan inte flyttas, klippas ut eller tas bort.
+* Det går inte att flytta, klippa ut eller ta bort överordnade för den olåsta komponenten.
 
 ![Lås komponentknapp](/help/sites-cloud/authoring/assets/templates-unlock-component.png)
 
@@ -511,7 +511,7 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 >
 >**Ursprungligt innehåll** kan användas för redigeringsläge för sidor som skapas med den mallen. Därför har profiler inte definierats i **Ursprungligt innehåll** läge, men inte i [**Struktur** läge](#editing-a-template-structure-template-author).
 
-* Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kant:
+* Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kantlinje:
 
   ![Läget Inledande innehåll](/help/sites-cloud/authoring/assets/templates-initial-content-mode.png)
 
@@ -568,20 +568,20 @@ Du kan tillämpa en innehållsprincip på antingen mallen eller de resulterande 
 
   ![Principväljare](/help/sites-cloud/authoring/assets/templates-policy-selector.png)
 
-  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** listruta. En ny titel bör sedan anges i **Policytitel** fält.
+  Du kan lägga till en ny profil genom att markera knappen Lägg till bredvid **Välj princip** nedrullningsbar meny. En ny titel bör sedan anges i **Principtitel** fält.
 
   ![Knappen Lägg till princip](/help/sites-cloud/authoring/assets/templates-add-policy-button.png)
 
-  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Policytitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
+  Den valda befintliga profilen i **Välj princip** listrutan kan kopieras som en ny princip med kopieringsknappen bredvid listrutan. En ny titel bör sedan anges i **Principtitel** fält. Som standard har den kopierade profilen namnet **Kopia av X**, där X är namnet på den kopierade profilen.
 
   ![Kopiera princip, knapp](/help/sites-cloud/authoring/assets/templates-copy-policy-button.png)
 
-* Definiera en rubrik för profilen i dialogrutan **Policytitel** fält. En profil måste ha en titel så att den enkelt kan väljas i **Välj princip** listruta.
+* Definiera en rubrik för profilen i dialogrutan **Principtitel** fält. En profil måste ha en titel så att den enkelt kan väljas i **Välj princip** nedrullningsbar meny.
 
-  ![Policytitel](/help/sites-cloud/authoring/assets/templates-policy-title.png)
+  ![Principtitel](/help/sites-cloud/authoring/assets/templates-policy-title.png)
 
 * En beskrivning av profilen är valfri i **Principbeskrivning** fält.
-* I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** listruta.
+* I **Andra mallar använder även den valda profilen** kan du enkelt se vilka andra mallar som använder den profil som valts i **Välj princip** nedrullningsbar meny.
 
   ![Policyanvändning](/help/sites-cloud/authoring/assets/templates-policy-use.png)
 
@@ -591,7 +591,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 ![Sidegenskaper](/help/sites-cloud/authoring/assets/templates-page-properties.png)
 
-* Ange de klientbibliotek som du vill använda på sidor som skapas med den här mallen. Ange namnet på ett bibliotek i textfältet i **Klientbibliotek** -avsnitt.
+* Ange de klientbibliotek som du vill använda på sidor som skapas med den här mallen. Ange namnet på ett bibliotek i textfältet i **Bibliotek på klientsidan** -avsnitt.
 
   ![Bibliotek på klientsidan](/help/sites-cloud/authoring/assets/templates-client-side-libraries.png)
 
@@ -632,7 +632,7 @@ När du skapar mallar bör du tänka på följande:
    * Ändringar i strukturen:
 
       * De används omedelbart på de resulterande sidorna.
-      * För att besökarna ska kunna se ändringarna måste den ändrade mallen fortfarande publiceras.
+      * Det krävs fortfarande publicering av den ändrade mallen för att besökarna ska kunna se ändringarna.
 
    * Ändringar i innehållsprinciper och designkonfigurationer:
 

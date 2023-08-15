@@ -3,9 +3,9 @@ title: Redigera i sammanhang
 description: Se hur du kan använda den universella redigeraren för att redigera olika delar av innehållet på plats och i sitt sammanhang i alla implementeringar.
 hidefromtoc: true
 index: false
-source-git-commit: 9826041962a3a0065feb676b07304ba30d23d2e9
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '959'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ För att snabba upp redigeringen av innehåll när strukturerad redigering av he
 
 1. Bläddra längre ned på sidan till sidan **Annonser** -avsnitt.
 
-1. Välj **Komponenter**. På så sätt kan du välja sidkomponenter i redigeraren.
+1. I fältet mode till vänster om redigeraren väljer du **Komponenter**. På så sätt kan du välja sidkomponenter i redigeraren.
 
 1. Tryck eller klicka på någon av äventyren för att markera den.
 

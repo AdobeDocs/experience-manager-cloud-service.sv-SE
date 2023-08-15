@@ -1,16 +1,12 @@
 ---
 title: Sammanhangsberoende hjälp för formulärfält
-seo-title: Authoring in-context help for form fields
-description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp i fält och paneler för anpassade formulär, som text eller multimedia, inklusive videor.
-seo-description: AEM Forms allows you to add in-context help to Adaptive Form fields and panels, as text or rich media, including videos.
-uuid: 1865bf7b-66fc-4f89-bd98-904daa409320
+description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp i anpassade formulärfält och paneler, som text eller multimedia, inklusive videor.
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 78000342-a6a7-4c2e-acab-a88851b82c2a
 docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -35,7 +31,7 @@ Du kan ange sammanhangsberoende hjälp med följande alternativ i hjälpavsnitte
 
 >[!NOTE]
 >
->Lång beskrivning åsidosätter den korta beskrivningen. Om du har angett båda visas bara Lång beskrivning.
+>Long description åsidosätter Short description. Om du har angett båda visas bara Lång beskrivning.
 
 ### Kort beskrivning {#short-description}
 

@@ -3,9 +3,9 @@ title: CI/CD-rör
 description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1337'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas fö
 
 ## Introduktion {#introduction}
 
-En CI/CD-pipeline i Cloud Manager är en mekanism för att skapa kod från en källdatabas och distribuera den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (d.v.s. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecedence.
+En CI/CD-pipeline i Cloud Manager är en mekanism som bygger kod från en källdatabas och distribuerar den till en miljö. En pipeline kan utlösas av en händelse, till exempel en pull-begäran från en källkodsdatabas (d.v.s. en kodändring), eller enligt ett regelbundet schema för att matcha en releasecedence.
 
 Om du vill konfigurera en pipeline måste du:
 
@@ -59,7 +59,7 @@ En icke-produktionspipeline används främst för att köra kodkvalitetssökning
 Förutom produktion och icke-produktion kan rörledningar differentieras efter vilken typ av kod de använder.
 
 * **[Kompletta stackrör](#full-stack-pipeline)** - Driftsätt samtidigt kodbyggen i bakände och framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationer
-* **[Front-End Pipelines](#front-end)** - Distribuera kodsbyggen som innehåller ett eller flera gränssnittsprogram på klientsidan
+* **[Front-End Pipelines](#front-end)** - Använd kodbyggen som innehåller ett eller flera gränssnittsprogram på klientsidan
 * **[Konfigurationsrör för webbnivå](#web-tier-config-pipelines)** - Distribuerar konfigurationer för HTTPD/Dispatcher
 
 Dessa beskrivs senare i detalj i det här dokumentet.
@@ -70,10 +70,10 @@ I följande tabell sammanfattas alla rörledningar som är tillgängliga i Cloud
 
 | Typ av pipeline | Driftsättnings- eller kodkvalitet | Källkod | Syfte | Anteckningar |
 |--- |--- |--- |---|---|
-| Produktion eller icke-produktion | Distribution | Full-Stack | Distribuerar samtidigt kodbyggen i bakände och framände tillsammans med konfigurationer för HTTPD/Dispatcher | När slutkoden måste distribueras samtidigt med AEM serverkod.<br>När rörledningar i frontendsystemet eller konfigurationsledningar i webbskiktet ännu inte har antagits. |
+| Produktion eller icke-produktion | Distribution | Fullhög | Distribuerar samtidigt kodbyggen i bakände och framände tillsammans med konfigurationer för HTTPD/Dispatcher | När slutkoden måste distribueras samtidigt med AEM serverkod.<br>När rörledningar i frontendsystemet eller konfigurationsledningar i webbskiktet ännu inte har antagits. |
 | Produktion eller icke-produktion | Distribution | Front-End | Distribuerar frontkodbygge som innehåller ett eller flera gränssnittsprogram på klientsidan | Stöd för flera samtidiga rörledningar<br>Mycket snabbare än driftsättningar i fullstacksformat |
 | Produktion eller icke-produktion | Distribution | Webbnivåkonfiguration | Distribuerar konfigurationer för HTTPD/Dispatcher | Distribuerar på några minuter |
-| Icke-produktion | Kodkvalitet | Full-Stack | Kör kodkvalitetsgenomsökningar på kod i full stack utan distribution | Stöd för flera rörledningar |
+| Icke-produktion | Kodkvalitet | Fullhög | Kör kodkvalitetsgenomsökningar på kod i full stack utan distribution | Stöd för flera rörledningar |
 | Icke-produktion | Kodkvalitet | Front-End | Kör kodkvalitetsgenomsökningar på slutkod utan distribution | Stöd för flera rörledningar |
 | Icke-produktion | Kodkvalitet | Webbnivåkonfiguration | Kör kodkvalitetsgenomsökningar på dispatcherkonfigurationer utan distribution | Stöd för flera rörledningar |
 
@@ -91,7 +91,7 @@ I rörledningar i fullhög distribueras back-end-kod, front-end-kod och webbskik
 
 Pipelinen i full hög representerar en rörledning som gör allt på en gång, samtidigt som användarna får möjlighet att exklusivt distribuera sin frontkodkonfiguration eller Dispatcher-konfigurationer via frontendpipelines respektive webbskiktskonfigurationspipelines.
 
-Kompletta rörledningar paketerar slutkod (JavaScript/CSS) som [AEM klientbibliotek](/help/implementing/developing/introduction/clientlibs.md).
+Kompletta rörledningar (JavaScript/CSS) som [AEM klientbibliotek](/help/implementing/developing/introduction/clientlibs.md).
 
 I rörledningar med hel hög kan webbnivåkonfigurationer distribueras om en [pipeline för konfiguration av webbnivå](#web-tier-config-pipelines) har inte konfigurerats.
 

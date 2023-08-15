@@ -2,9 +2,9 @@
 title: Använda Sling-adaptrar
 description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 exl-id: 8ffe3bbd-01fe-44c2-bf60-7a4d25a6ba2b
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2214'
+source-wordcount: '2213'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Det finns följande användningsområden:
 
 * Skapa genvägar för objekt som kräver att interna kontextobjekt skickas.
 
-  Till exempel den JCR-baserade [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) innehåller en referens till begäran [`JCR Session`](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html), som i sin tur behövs för många objekt som arbetar baserat på den begärda sessionen, som [`PageManager`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) eller [`UserManager`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/security/UserManager.html).
+  Den JCR-baserade [`ResourceResolver`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html) innehåller en referens till begäran [`JCR Session`](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html), som i sin tur behövs för många objekt som arbetar baserat på den begärda sessionen, som [`PageManager`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) eller [`UserManager`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/security/UserManager.html).
 
 * Genväg till tjänster.
 
@@ -48,7 +48,7 @@ Det finns olika orsaker till null-returen, bland annat följande:
 
 Det är viktigt att du hanterar skiftläget null på ett smidigt sätt. Vid jsp-återgivning kan det vara acceptabelt att jsp misslyckas om det resulterar i en tom del av innehållet.
 
-### Cachelagring {#caching}
+### Cachning {#caching}
 
 För att förbättra prestanda kan implementeringar cachelagra objektet som returneras från en `obj.adaptTo()` ring. Om `obj` är samma, returnerade objekt är samma.
 
@@ -60,7 +60,7 @@ Det finns dock ingen allmän regel - objektet kan vara antingen en ny eller en b
 
 Det finns olika sätt att `Adaptable.adaptTo()` kan implementeras:
 
-* själva objektet, implementera själva metoden och mappa till vissa objekt.
+* Efter själva objektet, implementera själva metoden och mappa till vissa objekt.
 * Av en [`AdapterFactory`](https://sling.apache.org/apidocs/sling5/org/apache/sling/api/adapter/AdapterFactory.html), som kan mappa godtyckliga objekt.
 
   Objekten måste fortfarande implementera `Adaptable` gränssnitt och måste utöka [`SlingAdaptable`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/adapter/SlingAdaptable.html) (som klarar `adaptTo` till en central adapterhanterare).
@@ -69,7 +69,7 @@ Det finns olika sätt att `Adaptable.adaptTo()` kan implementeras:
 
 * En kombination av båda.
 
-I det första fallet kan Java™-dokumenten ange vad `adaptTo-targets` är möjliga. För vissa underklasser, t.ex. JCR-baserade resurser, går det ofta inte att använda den här programsatsen. I det senare fallet ska `AdapterFactory` är vanligtvis en del av de privata klasserna i ett paket och därför inte exponeras i ett klient-API, och inte heller listas i Java™-dokument. Teoretiskt sett är det möjligt att komma åt alla `AdapterFactory` implementeringar från [OSGi](/help/implementing/deploying/configuring-osgi.md) runtime-modulen för tjänster och se hur deras&quot;adaptable&quot;-konfigurationer (källor och mål) ser ut, men inte för att mappa dem till varandra. I slutändan beror det på den interna logiken, som måste dokumenteras. Denna referens.
+I det första fallet kan Java™-dokumenten ange vad `adaptTo-targets` är möjliga. För vissa underklasser, t.ex. JCR-baserade resurser, går det ofta inte att använda den här programsatsen. I det senare fallet ska `AdapterFactory` är vanligtvis en del av de privata klasserna i ett paket och därför inte exponeras i ett klient-API, och inte heller listas i Java™-dokument. Teoretiskt sett är det möjligt att komma åt alla `AdapterFactory` implementeringar från [OSGi](/help/implementing/deploying/configuring-osgi.md) runtime-modulen för tjänster och se hur deras&quot;adaptable&quot;-konfigurationer (källor och mål) ser ut, men inte för att mappa dem till varandra. I slutändan beror det på den interna logiken, som måste dokumenteras. Därför refererar vi till detta.
 
 ## Referens {#reference}
 
@@ -109,11 +109,11 @@ I det första fallet kan Java™-dokumenten ange vad `adaptTo-targets` är möjl
   </tr>
   <tr>
    <td><a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/io/InputStream.html">InputStream</a></td>
-   <td>Returnerar det binära innehållet för en filresurs (om det är en JCR-nodbaserad resurs och nodtypen är <code>nt:file</code> eller <code>nt:resource</code>; om det är en paketresurs, filinnehåll, om det är en filsystemresurs). Eller returnerar data för en binär JCR-egenskapsresurs.</td>
+   <td>Returnerar det binära innehållet i en filresurs (om det är en JCR-nodbaserad resurs och nodtypen är <code>nt:file</code> eller <code>nt:resource</code>, om det är en paketresurs, filinnehåll, om det är en filsystemresurs). Eller returnerar data för en binär JCR-egenskapsresurs.</td>
   </tr>
   <tr>
    <td><a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/net/URL.html">URL</a></td>
-   <td>Returnerar en URL till resursen (databas-URL för den här noden om det är en JCR-nodbaserad resurs; jar bundle URL om det är en paketresurs, fil-URL om det är en filsystemresurs)</td>
+   <td>Returnerar en URL till resursen (databas-URL för den här noden om det är en JCR-nodbaserad resurs; jar bundle-URL om det är en paketresurs; fil-URL om det är en filsystemresurs)</td>
   </tr>
   <tr>
    <td><a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/io/File.html">Fil</a></td>
@@ -173,7 +173,7 @@ I det första fallet kan Java™-dokumenten ange vad `adaptTo-targets` är möjl
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/org/apache/jackrabbit/api/security/user/Authorizable.html">Auktoriserbar</a></td>
-   <td>Authorizable är det gemensamma basgränssnittet för användare och grupper</td>
+   <td>Authorizable är det gemensamma grundgränssnittet för användare och grupp</td>
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/org/apache/jackrabbit/api/security/user/User.html">Användare</a></td>
@@ -320,7 +320,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
   </tr>
   <tr>
    <td><a href="https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Nod</a></td>
-   <td>Nod för den här mallen.</td>
+   <td>Nod för mallen.</td>
   </tr>
   <tr>
    <td>...</td>
@@ -350,7 +350,7 @@ Inga mål ännu, men implementerar Adaptable och kan användas som källa i en a
 
 **Tagg** anpassar sig till:
 
-| [Resurs](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html) | Resurs för taggen. |
+| [Resurs](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/org/apache/sling/api/resource/Resource.html) | Taggens resurs. |
 |---|---|
 | [Nod](https://developer.adobe.com/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) | Taggens nod. |
 | ... | Allt som taggens resurs kan anpassas till. |

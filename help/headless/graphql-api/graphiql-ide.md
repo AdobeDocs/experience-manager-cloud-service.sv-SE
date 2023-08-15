@@ -1,11 +1,11 @@
 ---
 title: Använda GraphiQL IDE i AEM
-description: Lär dig hur du använder GraphiQL IDE i Adobe Experience Manager.
+description: Lär dig använda GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,9 @@ The **GraphiQL** kan du testa och felsöka dina GraphQL-frågor genom att aktive
 * köra dina frågor för att omedelbart se resultatet
 * hantera **Frågevariabler**
 * spara och hantera **Beständiga frågor**
-* publicera eller avpublicera, **Beständiga frågor**, antingen **Publicera** eller **Förhandsgranska** Service. till exempel till/från `dev-publish`
+* publicera eller avpublicera, **Beständiga frågor**, till antingen **Publicera** eller **Förhandsgranska** service, till exempel till/från `dev-publish`
 * se **Historik** av dina tidigare frågor
-* använder **Dokumentationsutforskaren** få tillgång till dokumentationen, hjälper dig att lära dig vilka metoder som finns tillgängliga.
+* använder **Dokumentationsutforskaren** om du vill få tillgång till dokumentationen, så att du kan lära dig mer och förstå vilka metoder som finns.
 
 Du kan öppna frågeredigeraren från:
 
@@ -146,7 +146,7 @@ Detta aktiverar frågan till den miljö du väljer. Du kan välja **Publicera** 
 
 När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda **Avpublicera** åtgärd.
 
-Detta inaktiverar frågan från den miljö du väljer; antingen **Publicera** eller **Förhandsgranska** miljö.
+Detta inaktiverar frågan från den miljö du väljer, antingen **Publicera** eller **Förhandsgranska** miljö.
 
 >[!NOTE]
 >
@@ -154,7 +154,7 @@ Detta inaktiverar frågan från den miljö du väljer; antingen **Publicera** el
 
 ## Kopiera URL för direktåtkomst till frågan {#copy-url}
 
-The **Kopiera URL** kan du simulera en fråga genom att kopiera den URL som används för att få direkt åtkomst till den beständiga frågan och se resultatet. Detta kan sedan användas för testning. till exempel genom att gå till i en webbläsare:
+The **Kopiera URL** kan du simulera en fråga genom att kopiera den URL som används för att få direkt åtkomst till den beständiga frågan och se resultatet. Detta kan sedan användas för testning, t.ex. genom att gå till i en webbläsare:
 
 <!--
   >[!NOTE]
@@ -185,7 +185,7 @@ The **Ta bort** Du kan även använda det här alternativet via de tre lodräta 
 
 ## Installera den beständiga frågan i produktionen {#installing-persisted-query-production}
 
-När du har utvecklat och testat din beständiga fråga med GraphiQL är det sista målet att [överföra den till produktionsmiljön](/help/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production) som kan användas i dina program.
+När du har utvecklat och testat din beständiga fråga med GraphiQL är det sista målet att [överför den till produktionsmiljön](/help/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production) som kan användas i dina program.
 
 ## Kortkommandon {#keyboard-shortcuts}
 

@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 761f1605-c421-4f3a-8f90-af23f4f047b1
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.3.0-versionen av [!
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.3.0-versionen av [!
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.3.0) är 31 mars 2022.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.3.0) är 31 mars 2022.
 Nästa version (2022.4.0) är planerad till 5 maj 2022.
 
 ## Släpp video {#release-video}
@@ -42,13 +42,13 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 * [!DNL AEM Dynamic Media] ger nu flexibilitet att [konfigurera ett aliaskonto](/help/assets/dynamic-media/dm-alias-account.md) i användargränssnittet, vilket säkerställer att färdiga Dynamic Media-URL:er och inbäddningskod för visningsprogram uppdateras. Detta påverkar SEO positivt för att återspegla uppdateringar som gjorts i ert företagskontext, t.ex. omprofilering.
 
-* Nu kan du använda [!DNL Experience Manager Assets] till
+* Nu kan du använda [!DNL Experience Manager Assets] användargränssnitt till:
 
    * Konfigurera [identifiering av duplicerade resurser](/help/assets/manage-digital-assets.md#detect-duplicate-assets) i en databas.
 
    * Konfigurera [lägga till digitala vattenstämplar](/help/assets/watermark-assets.md) till bilder.
 
-* Administratörerna kan nu konfigurera e-posttjänsten för stora hämtningar. Det gör att användarna kan [aktivera e-postmeddelanden för stora nedladdningar](/help/assets/download-assets-from-aem.md#enable-email-notifications-for-large-downloads) från [!DNL Experience Manager Assets] gränssnitt. Användaren får ett e-postmeddelande med nedladdningslänken för den arkiverade zip-mappen när nedladdningen är klar.
+* Administratörerna kan nu konfigurera e-posttjänsten för stora hämtningar. Det gör det möjligt för användarna att [aktivera e-postmeddelanden för stora nedladdningar](/help/assets/download-assets-from-aem.md#enable-email-notifications-for-large-downloads) från [!DNL Experience Manager Assets] gränssnitt. Användaren får ett e-postmeddelande med nedladdningslänken för den arkiverade zip-mappen när nedladdningen är klar.
 
 * The [Hantera publikation](/help/assets/manage-publication.md) har förbättrats med ett förbättrat användargränssnitt. Användarna kan publicera eller avpublicera innehåll till och från det valda målet, [Lägg till innehåll](/help/assets/manage-publication.md#add-content) till publiceringslistan från DAM-databasen, [Inkludera mappinställningar](/help/assets/manage-publication.md#include-folder-settings) för att publicera innehållet i de valda mapparna och tillämpa filter, och [schemaläggning](/help/assets/manage-publication.md#publish-assets-later) till ett senare datum eller en senare tid.
 
@@ -60,7 +60,7 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **[!DNL Communications - Document Generation APIs]**: [API:er för dokumentgenerering](/help/forms/aem-forms-cloud-service-communications.md) kan du kombinera, ordna om och validera PDF-dokument. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
+* **[!DNL Communications - Document Generation APIs]**: [API för dokumentgenerering](/help/forms/aem-forms-cloud-service-communications.md) kan du kombinera, ordna om och validera PDF-dokument. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
 
    * Sammanställ dokument från PDF.
    * Disassemblera PDF-dokument.
@@ -70,15 +70,15 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
-* **Använd anpassad XCI för att generera ett postdokument**: Du kan nu använda en anpassad XCI-fil för att ange olika egenskaper för ett dokument för post. Den åsidosätter det överordnad XCI med de anpassade ändringarna.
+* **Använd anpassad XCI för att generera ett postdokument**: Du kan nu använda en anpassad XCI-fil för att ange olika egenskaper för ett postdokument. Det åsidosätter huvud-XCI med de anpassade ändringarna.
 
 * **Använd osynlig CAPTCHA i ett adaptivt formulär**: Du kan använda den osynliga CAPTCHA-funktionen för att visa CAPTCHA-utmaningen endast om en misstänkt aktivitet inträffar. Om ingen misstänkt aktivitet hittas visas inte CAPTCHA-utmaningen.
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
-* Förbättrad SEO för scenarier med flera butiker: URL-format för PDP/PLP kan nu konfigureras på en butiksnivå via CIF Cloud Config-egenskaper
+* Förbättrad SEO för scenarier med flera butiker: URL-format för PDP/PLP kan nu konfigureras på en butiksnivå via CIF-konfigurationsegenskaperna för molnkonfiguration
 * Produktväljaren har stöd för mellanlagrade produkter via ett nytt filteralternativ i användargränssnittet.  Detta gör att innehållsutvecklare kan förbereda innehållshantering för kommande produktlanseringar
 * Förenklad CIF-konfigurationshantering och felhantering genom att använda CIF Cloud Config-namn i stället för konfigurationsproxy-URL
 * Manuellt kategorival för produktlista och Carousel-komponenter. På så sätt kan innehållsutvecklare använda dessa komponenter på innehållssidor, utanför katalogupplevelsen
@@ -89,7 +89,7 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### Vad är nytt? {#what-is-new-foundation}
+### Nyheter {#what-is-new-foundation}
 
 * För effektivare och effektivare felsökning av anpassade funktioner i molnmiljöer har vi släppt ett nytt utvecklarverktyg - [Databasläsaren](/help/implementing/developing/tools/repository-browser.md). Det är en lättviktig, skrivskyddad HTML-webbläsare som du kan starta från Developer Console. Få insyn i innehållslagringsplatsen på utgivar-, författar- och förhandsgranskningsnivå - och i alla miljöer, inklusive produktion, scener och utveckling. Bläddra i innehållsstrukturen, visa egenskaper samt förhandsgranska och hämta binärfiler.
 

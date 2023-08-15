@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat
 description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjän
 
 SSL-certifikatfiler måste vara i PEM-format för att kunna installeras med Cloud Manager. Vanliga filtillägg för PEM-formatet är bland annat `.pem,` .`crt`, `.cer`och `.cert`.
 
-Följande `openssl` -kommandon kan användas för att konvertera certifikat som inte är PEM-certifikat.
+Följande `openssl` kan användas för att konvertera certifikat som inte är PEM-certifikat.
 
 * Konvertera PFX till PEM
 
@@ -47,7 +47,7 @@ Följ de här stegen för att lägga till ett certifikat med hjälp av Cloud Man
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Klicka på **SSL-certifikat** från den vänstra navigeringspanelen. En tabell med information om eventuella befintliga SSL-certifikat visas på huvudskärmen.
 

@@ -2,9 +2,9 @@
 title: Översikt över Experience Fragments
 description: Bygg ut Adobe Experience Manager as a Cloud Service Experience Fragments.
 exl-id: bd4ea763-d17c-40a6-9a86-a24d7600229e
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1641'
+source-wordcount: '1640'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 An [Experience Fragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor.
 
-En Experience Fragment-Överordnad, eller Variant, eller båda, använder:
+En Experience Fragment Master, eller Variant, eller båda, använder:
 
 * `sling:resourceType` : `/libs/cq/experience-fragments/components/xfpage`
 
@@ -142,18 +142,18 @@ När du skapar ett Target-erbjudande skickas som standard en begäran till en an
 
 När du har skapat HTML-sidan ändras Sling Rewriter-pipeline till utdata:
 
-1. The `html`, `head`och `body` -element ersätts med `div` -element. The `meta`, `noscript`och `title` elementen tas bort (de är underordnade element till originalet) `head` och beaktas inte när de ersätts med `div` element).
+1. The `html`, `head`och `body` -element ersätts med `div` -element. The `meta`, `noscript`och `title` elementen tas bort (de är underordnade element till originalet) `head` -element och beaktas inte när de ersätts med `div` element).
 
    Detta görs för att se till att HTML Target-erbjudandet kan inkluderas i målaktiviteter.
 
 2. AEM ändrar alla interna länkar i HTML så att de pekar på en publicerad resurs.
 
-   AEM här mönstret används för att fastställa vilka länkar som ska ändras:
+   AEM här mönstret visar attributen för HTML-element för att fastställa vilka länkar som ska ändras:
 
    1. `src` attributes
    2. `href` attributes
-   3. `*-src` attribut (t.ex. `data-src`och `custom-src`)
-   4. `*-href` attribut (t.ex. `data-href`, `custom-href`och `img-href`)
+   3. `*-src` attribut (till exempel `data-src`och `custom-src`)
+   4. `*-href` attribut (till exempel `data-href`, `custom-href`och `img-href`)
 
    >[!NOTE]
    >
@@ -292,7 +292,7 @@ Om systemet Exportera till mål bearbetar det här elementet kan du definiera `C
 <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
 ```
 
-Samtalet till `rewriteLink()` metoden utförs med följande parametrar:
+Anropet till `rewriteLink()` metoden utförs med följande parametrar:
 
 ```java
 rewriteLink(link="/etc.clientlibs/foundation/clientlibs/main.css", tag="link", attribute="href" )
@@ -304,7 +304,7 @@ Du vill till exempel ta bort `/etc.clientlibs` del av URL-adressen och lägg til
 
 >[!NOTE]
 >
->Mer information om hur du hämtar en resurslösare via en tjänstanvändare finns i Tjänstanvändare i AEM.
+>Mer information om hur du hämtar en resurslösare via en tjänstanvändare finns i AEM.
 
 <!--
 >For more information on how to get a resource resolver through a service user see [Service Users in AEM](/help/sites-administering/security-service-users.md).
@@ -337,7 +337,7 @@ public String rewriteLink(String link, String tag, String attribute) {
 
 >[!NOTE]
 >
->Om ovanstående metod returnerar `null`lämnar Export to Target-systemet länken som den är, en relativ länk till en resurs.
+>Om ovanstående metod returnerar `null`lämnar Export to Target-systemet länken som den är, som en relativ länk till en resurs.
 
 #### Prioriteringar - getPriority {#priorities-getpriority}
 

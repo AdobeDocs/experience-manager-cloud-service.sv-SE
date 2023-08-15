@@ -3,9 +3,9 @@ title: Hantera GraphQL-slutpunkter i AEM
 description: Lär dig hur du hanterar GraphQL slutpunkter i Adobe Experience Manager as a Cloud Service för leverans av headless-material.
 feature: Content Fragments,GraphQL API
 exl-id: f7164ae3-4074-4db7-8c43-a79cc2ef00b1
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 Slutpunkten är den sökväg som används för att komma åt GraphQL för AEM. Med den här sökvägen kan du (eller din app):
 
 * tillgång till GraphQL schema,
-* skicka dina GraphQL-frågor,
+* skicka dina GraphQL-frågor
 * ta emot svaren (på dina GraphQL-frågor).
 
 Det finns två typer av slutpunkter i AEM:
@@ -35,7 +35,7 @@ Det finns två typer av slutpunkter i AEM:
 >
 >I så fall går det inte att hämta allt innehåll med en platskonfigurationsspecifik slutpunkt.
 >
->Innehållsförfattaren bör kontrollera detta scenario; Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under konfigurationen för globala platser.
+>Innehållsförfattaren bör styra det här scenariot. Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under konfigurationen för globala webbplatser.
 
 Databassökvägen för den globala slutpunkten för GraphQL AEM är:
 
@@ -63,8 +63,8 @@ Så här aktiverar du motsvarande slutpunkt:
 1. Navigera till **verktyg**, **Allmänt** väljer **GraphQL**.
 1. Välj **Skapa**.
 1. The **Skapa ny GraphQL-slutpunkt** öppnas. Här kan du ange:
-   * **Namn**: Slutpunktens namn. du kan skriva vilken text som helst.
-   * **Använd GraphQL-schema från**: Använd listrutan för att välja önskad plats/önskat projekt.
+   * **Namn**: slutpunktens namn; du kan ange valfri text.
+   * **Använd GraphQL-schema från**: använd listrutan för att välja önskad plats/projekt.
 
    >[!NOTE]
    >
@@ -91,4 +91,4 @@ Markera den nya slutpunkten och **Publicera** för att göra den helt tillgängl
 >
 >På publiceringsinstanser kan detta utgöra ett säkerhetsproblem, eftersom GraphQL-frågor kan medföra en stor belastning på servern.
 >
->Du måste konfigurera [Behörighetslistor som passar ditt användningsfall](/help/headless/security/permissions.md) på slutpunkten.
+>Du måste konfigurera [Behöriga åtkomstkontrollistor för ditt användningsfall](/help/headless/security/permissions.md) på slutpunkten.

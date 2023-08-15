@@ -4,23 +4,23 @@ description: Lär dig hur Content Fragment Models fungerar som grund för dina C
 feature: Content Fragments
 role: User
 exl-id: 24b1806f-2e8c-49ec-8cb7-a66a3cbe91cd
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2919'
+source-wordcount: '2916'
 ht-degree: 2%
 
 ---
 
 # Modeller för innehållsfragment {#content-fragment-models}
 
-Content Fragment Models in AEM define the structure for the content of your [innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md). Dessa kan användas för att skapa sidor eller som grund för ditt headless-innehåll.
+Content Fragment Models i AEM definierar strukturen för innehållet i dina [innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md). Dessa kan användas för att skapa sidor eller som grund för ditt headless-innehåll.
 
 Så här använder du modeller för innehållsfragment:
 
 1. [Aktivera funktionen Content Fragment Model för instansen](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md)
 1. [Skapa](#creating-a-content-fragment-model)och [konfigurera](#defining-your-content-fragment-model), era modeller för innehållsfragment
 1. [Aktivera modeller för innehållsfragment](#enabling-disabling-a-content-fragment-model) för användning när du skapar innehållsfragment
-1. [Tillåt dina modeller för innehållsfragment i de resursmappar som krävs](#allowing-content-fragment-models-assets-folder) efter konfiguration **Profiler**.
+1. [Tillåt dina modeller för innehållsfragment i de resursmappar som krävs](#allowing-content-fragment-models-assets-folder) efter konfigurering **Profiler**.
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 
@@ -49,7 +49,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 1. Navigera till **verktyg**, **Allmänt**&#x200B;öppna **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Öppna den modell som krävs för **Redigera**; använd snabbåtgärden eller välj modell och sedan åtgärden från verktygsfältet.
+1. Öppna den modell som krävs för **Redigera**, använd snabbåtgärden eller välj modellen och sedan åtgärden från verktygsfältet.
 
    När du har öppnat modellredigeraren visas följande:
 
@@ -100,7 +100,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
 * **Enkelradig text**
-   * Lägg till ett eller flera fält på en textrad, maxlängden kan definieras
+   * Lägg till ett eller flera fält med en enda textrad. Den maximala längden kan definieras
 * **Flerradstext**
    * Ett textområde som kan vara RTF, Oformaterad text eller Markering
 * **Siffra**
@@ -110,14 +110,14 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 * **Datum och tid**
    * Lägg till ett datum och/eller en tid
 * **Uppräkning**
-   * Lägga till en uppsättning kryssrutor, alternativknappar eller listrutefält
+   * Lägga till en uppsättning kryssrutor, alternativknappar eller listrutor
 * **Taggar**
    * Tillåter fragmentförfattare att komma åt och markera taggområden
 * **Innehållsreferens**
-   * Hänvisningar till annat innehåll, oavsett typ. kan användas till [skapa kapslat innehåll](#using-references-to-form-nested-content)
-   * Om det finns referenser till en bild kan du välja att visa en miniatyrbild
+   * Refererar till annat innehåll, oavsett typ, som kan användas för [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * Om en bild refereras kan du välja att visa en miniatyrbild
 * **Fragmentreferens**
-   * Hänvisar till andra innehållsfragment. kan användas till [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * Refererar till andra innehållsfragment; kan användas till [skapa kapslat innehåll](#using-references-to-form-nested-content)
    * Datatypen kan konfigureras så att fragmentförfattare kan:
       * Redigera det refererade fragmentet direkt.
       * Skapa ett nytt innehållsfragment, baserat på lämplig modell
@@ -127,13 +127,13 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
       * JSON skickas och skrivs ut som JSON i GraphQL.
       * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i innehållsfragmentredigeraren.
 * **Platshållare för flik**
-   * Tillåter introduktion av flikar som kan användas när innehållet i innehållsfragmentet redigeras.
+   * Tillåter att flikar kan användas när innehållet i innehållsfragmentet redigeras.
 Visas som en avgränsare i modellredigeraren, och delar upp avsnitt i listan med innehållsdatatyper. Varje instans representerar början på en ny flik.
 I fragmentredigeraren visas varje instans som en flik.
 
      >[!NOTE]
      >
-     >Den här datatypen används endast för formatering, den ignoreras av det AEM GraphQL-schemat.
+     >Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schema.
 
 ## Egenskaper {#properties}
 
@@ -141,7 +141,7 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
 
 * **Egenskapsnamn**
 
-  Observera följande namn när du uppdaterar den här egenskapen manuellt för en datatyp **måste** innehåller *endast* A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
+  Observera följande namn när den här egenskapen uppdateras manuellt för en datatyp **måste** innehåller *endast* A-Z, a-z, 0-9 och understreck &quot;_&quot; som specialtecken.
 
   >[!CAUTION]
   >
@@ -151,7 +151,7 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
 De olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan definiera om författaren ska se en enda instans av fältet eller om han eller hon ska kunna skapa flera instanser.
 
 * **Fältetikett**
-Ange en **Fältetikett** genererar automatiskt en **Egenskapsnamn** som sedan kan uppdateras manuellt vid behov.
+Ange en **Fältetikett** genererar automatiskt en **Egenskapsnamn**, som sedan kan uppdateras manuellt vid behov.
 
 * **Validering**
 Grundläggande validering är tillgängligt via funktioner som **Obligatoriskt** -egenskap. Vissa datatyper har ytterligare valideringsfält. Se [Validering](#validation) för mer information.
@@ -194,7 +194,7 @@ Innehållet (för det specifika fältet) måste vara unikt för alla innehållsf
   Kontrollerar **Översättningsbar** kryssrutan för ett fält i redigeraren för innehållsfragmentmodellen:
 
    * Kontrollera att fältets egenskapsnamn har lagts till i översättningskonfigurationen, kontexten `/content/dam/<sites-configuration>`, om det inte redan finns.
-   * För GraphQL: ange en `<translatable>` egenskapen i fältet Innehållsfragment till `yes`, för att tillåta GraphQL-frågefilter för JSON-utdata med endast översättningsbart innehåll.
+   * För GraphQL: ange `<translatable>` egenskapen i fältet Innehållsfragment till `yes`, för att tillåta GraphQL-frågefilter för JSON-utdata med endast översättningsbart innehåll.
 
 ## Validering {#validation}
 
@@ -203,9 +203,9 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
 * **Enkelradig text**
    * Jämför med ett fördefinierat regex.
 * **Siffra**
-   * Kontrollera om det finns specifika värden.
+   * Sök efter specifika värden.
 * **Innehållsreferens**
-   * Testa för specifika typer av innehåll.
+   * Testa om det finns specifika typer av innehåll.
    * Det går endast att referera till resurser med en angiven filstorlek eller mindre.
    * Det går endast att referera till bilder inom ett fördefinierat intervall med bredd och/eller höjd (i pixlar).
 * **Fragmentreferens**
@@ -216,12 +216,13 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
 Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper:
 
 * **[Innehållsreferens](#content-reference)**
-   * ger en enkel referens till annat innehåll, av alla typer.
+   * Ger en enkel referens till annat innehåll, av alla typer.
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
 * **[Fragmentreferens](#fragment-reference-nested-fragments)** (Kapslade fragment)
    * Refererar till andra fragment, beroende på vilka specifika modeller som anges.
    * Gör att du kan ta med/hämta strukturerade data.
+
      >[!NOTE]
      >
      >Denna metod är av särskilt intresse i kombination med [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-fragments-graphql.md).
@@ -239,14 +240,14 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 
 ### Innehållsreferens {#content-reference}
 
-Med innehållsreferensen kan du återge innehåll från en annan källa; till exempel bild- eller innehållsfragment.
+Med Innehållsreferens kan du återge innehåll från en annan källa, till exempel bild- eller innehållsfragment.
 
 Förutom standardegenskaper kan du ange:
 
 * The **Rotsökväg** för refererat innehåll
 * De innehållstyper som kan refereras
 * Begränsningar för filstorlekar
-* Om det refereras till en bild:
+* Om en bild refereras:
    * Visa miniatyrbild
    * Bildbegränsningar för höjd och bredd
 
@@ -254,11 +255,11 @@ Förutom standardegenskaper kan du ange:
 
 ### Fragmentreferens (kapslade fragment) {#fragment-reference-nested-fragments}
 
-Fragmentreferensen refererar till ett eller flera innehållsfragment. Den här funktionen är särskilt intressant när du hämtar innehåll som ska användas i appen, eftersom den gör det möjligt att hämta strukturerade data med flera lager.
+Fragmentreferensen refererar till ett eller flera innehållsfragment. Den här funktionen är särskilt intressant när du hämtar innehåll som ska användas i programmet, eftersom du kan hämta strukturerade data med flera lager.
 
 Till exempel:
 
-* En modell som definierar detaljer för en anställd. bland annat följande:
+* En modell som definierar detaljer för en medarbetare. Dessa omfattar:
    * En referens till modellen som definierar arbetsgivaren (företaget)
 
 ```xml
@@ -303,7 +304,7 @@ Detta anger en rotsökväg för alla fragment som refereras.
 
 >[!NOTE]
 >
->Det finns en mekanism för återkommande skydd. Användaren kan inte välja det aktuella innehållsfragmentet i fragmentreferensen. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+>Det finns en mekanism för upprepningsskydd. Användaren kan inte välja det aktuella innehållsfragmentet i fragmentreferensen. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
 >Det finns också ett upprepningsskydd för fragmentreferenser i GraphQL. Om du skapar en djup fråga i två innehållsfragment som refererar till varandra returneras null.
 
@@ -326,8 +327,8 @@ För fullständig kontroll över användningen av dina modeller för innehållsf
 När en modell har skapats måste den aktiveras så att den:
 
 * Kan markeras när du skapar ett nytt innehållsfragment.
-* Kan refereras inifrån en Content Fragment-modell.
-* är tillgängligt för GraphQL, så att schemat genereras.
+* Kan refereras inifrån en innehållsfragmentmodell.
+* Är tillgängligt för GraphQL, så schemat genereras.
 
 Så här aktiverar du en modell som har flaggats som antingen:
 
@@ -347,7 +348,7 @@ En modell kan också inaktiveras så att:
 
 * Modellen är inte längre tillgänglig som grund för att skapa *new* Innehållsfragment.
 * Men:
-   * GraphQL-schemat fortsätter att genereras och är fortfarande frågningsbart (för att inte påverka JSON API).
+   * GraphQL-schemat fortsätter att genereras och är fortfarande frågningsbart (för att inte påverka JSON-API:t).
    * Alla innehållsfragment som är baserade på modellen kan fortfarande efterfrågas och returneras från GraphQL slutpunkt.
 * Det går inte att referera till modellen längre, men befintliga referenser behålls orörda och kan fortfarande läsas och returneras från GraphQL-slutpunkten.
 
@@ -366,15 +367,15 @@ Om du vill implementera innehållsstyrning kan du konfigurera **Profiler** i res
 >
 >Mekanismen liknar [tillåta sidmallar](/help/sites-cloud/authoring/features/templates.md#allowing-a-template-author) för en sida och dess underordnade sidor i avancerade egenskaper för en sida.
 
-Så här konfigurerar du **Profiler** for **Tillåtna modeller för innehållsfragment**:
+Konfigurera **Profiler** for **Tillåtna modeller för innehållsfragment**:
 
-1. Navigera och öppna **Egenskaper** för mappen Resurser.
+1. Navigera och öppna **Egenskaper** för den resursmapp som krävs.
 
 1. Öppna **Profiler** där du kan konfigurera:
 
    * **Ärvs från`<folder>`**
 
-     Profiler ärvs automatiskt när nya underordnade mappar skapas; principen kan konfigureras om (och arvet brytas) om undermapparna måste tillåta modeller som skiljer sig från den överordnade mappen.
+     Profiler ärvs automatiskt när nya underordnade mappar skapas. Profilen kan konfigureras om (och arvet brytas) om undermappar måste tillåta modeller som skiljer sig från den överordnade mappen.
 
    * **Tillåtna modeller för innehållsfragment efter sökväg**
 
@@ -391,7 +392,7 @@ Så här konfigurerar du **Profiler** for **Tillåtna modeller för innehållsfr
 De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
 * The **Profiler** for **Tillåtna modeller för innehållsfragment**.
 * Om den är tom kan du försöka identifiera principen med arvsreglerna.
-* Om arvskedjan inte ger något resultat kan du titta på **Cloud Services** -konfiguration för den mappen (först direkt och sedan via arv).
+* Om arvskedjan inte ger något resultat kan du titta på **Cloud Service** -konfiguration för den mappen (först direkt och sedan via arv).
 * Om inget av ovanstående ger några resultat finns det inga tillåtna modeller för den mappen.
 
 ## Ta bort en innehållsfragmentmodell {#deleting-a-content-fragment-model}
@@ -409,7 +410,7 @@ Så här tar du bort en innehållsfragmentmodell:
 
    >[!NOTE]
    >
-   >Om modellen refereras visas en varning. Vidta lämpliga åtgärder.
+   >Om modellen refereras visas en varning. Vidta åtgärder på lämpligt sätt.
 
 ## Publicera en innehållsfragmentmodell {#publishing-a-content-fragment-model}
 
@@ -465,7 +466,7 @@ Den här funktionen tillhandahåller styrning för publicerade modeller för inn
 
 ### Krav {#the-requirements}
 
-* Att göra användarna medvetna om riskerna vid redigering av modeller som redan används för leverans av direktsänt innehåll, med andra ord, publicerade modeller).
+* Att göra användarna medvetna om riskerna vid redigering av modeller som redan används för leverans av direktsänt innehåll, med andra ord, modeller som har publicerats).
 
 * För att undvika oönskade ändringar.
 
@@ -483,11 +484,11 @@ Du kan hantera **Låst** modeller från antingen konsolen eller modellredigerare
 
 * Konsol
 
-  I konsolen kan du hantera skrivskyddat läge med **Lås upp** och **Lås** funktionsmakron i verktygsfältet:
+  I konsolen kan du hantera skrivskyddat läge med **Lås upp** och **Lås** åtgärder i verktygsfältet:
 
   ![Verktygsfält för låst innehållsfragmentmodell](assets/cfm-model-locked.png)
 
-   * Du kan **Lås upp** en modell som aktiverar redigering.
+   * Du kan **Lås upp** en modell för att aktivera redigering.
 
      Om du väljer **Lås upp**, visas en varning och du måste bekräfta **Lås upp** åtgärd:
      ![Meddelande när innehållsfragmentmodellen låses upp](assets/cfm-model-unlock-message.png)

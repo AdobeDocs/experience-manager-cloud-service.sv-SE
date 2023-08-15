@@ -2,16 +2,16 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2978'
+source-wordcount: '2975'
 ht-degree: 3%
 
 ---
 
 # Grundläggande hantering {#basic-handling}
 
-Dokumentet är utformat för att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder **Webbplatser** som bas.
+Det här dokumentet är utformat för att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö. Den använder **Webbplatser** som bas.
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Dokumentet är utformat för att ge en översikt över grundläggande hantering 
 
 ## Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
-AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att trycka, hålla ned och dra. Eftersom användargränssnittet för AEM är pekaktiverat kan du använda pekgester på enheter med pekskärm som mobiltelefonen eller surfplattan. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
+AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programmet med gester som att trycka, hålla ned och dra. Eftersom användargränssnittet för AEM är pekaktiverat kan du använda pekgester på enheter med pekskärm som mobiltelefonen eller surfplattan. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
 
 ## Steg 1 {#first-steps}
 
@@ -32,7 +32,7 @@ För att få en bättre förståelse för AEM basanvändning är det här dokume
 
 ## Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudiekurs. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka eller tryck en minut för att få en bra överblick över den grundläggande hanteringen av AEM.
 
 ![Navigering, genomgång](/help/sites-cloud/authoring/assets/tutorial.png)
 
@@ -120,7 +120,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Knapp för att välja tåg](/help/sites-cloud/authoring/assets/rail-selector.png)
 
-  Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller panelen på filtersidan.
+  Vilka alternativ som visas beror på den aktuella konsolen. Till exempel i **Webbplatser** Du kan bara markera innehåll (standardvärdet), tidslinjen, referenser eller panelen på filtersidan.
 
   ![Exempel på järnvägsväljare](/help/sites-cloud/authoring/assets/rail-selector-example.png)
 
@@ -138,7 +138,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   ![Knappen Skapa](/help/sites-cloud/authoring/assets/create.png)
 
-  När du klickar på det här alternativet lämpar sig de alternativ som visas för konsolen/kontexten.
+  När du klickar på det här alternativet passar de alternativ som visas konsolen/kontexten.
 
 * [Vyer](#viewing-and-selecting-resources)
 
@@ -158,7 +158,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   Du kan bara navigera på en webbplats med hjälp av tangentbordet. Detta använder webbläsarens standardfunktioner i **TABB** tangent (eller **OPT+TAB**) för att flytta dig mellan element på sidan som är fokuserbara.
 
-  I **Webbplatser** konsolen där det finns ett tillagt alternativ för **Hoppa till huvudinnehåll**. Detta blir synligt när du bläddrar mellan rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
+  I **Webbplatser** konsolen där det finns ett tillagt alternativ **Hoppa till huvudinnehåll**. Detta blir synligt när du bläddrar mellan rubrikalternativen och snabbar upp navigeringen genom att du kan hoppa över standardelementen i verktygsfältet (produkten) och ta dig direkt till huvudinnehållet.
 
   ![Hoppa till huvudinnehåll](/help/sites-cloud/authoring/assets/skip-to-main-content.png)
 
@@ -190,7 +190,7 @@ Det finns olika hjälpresurser:
 
 * **Verktygskonsol**
 
-  Från **verktyg** konsolen som du också kan komma åt externt **Resurser**:
+  Från **verktyg** konsolen som du också kan komma åt externt **Resurs**:
 
    * **Dokumentation** - Visa dokumentationen för Web Experience Management
    * **Resurser för utvecklare** - Resurser och nedladdningar för utvecklare
@@ -201,7 +201,7 @@ Det finns olika hjälpresurser:
   >
   >En översikt över alla kortkommandon finns i följande dokumentation:
   >
-  >* [Kortkommandon för att redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
+  >* [Kortkommandon för redigering av sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
   >* [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
 
 ## Verktygsfältet Åtgärder {#actions-toolbar}
@@ -228,7 +228,7 @@ På grund av utrymmesbegränsningar i vissa fönster kan verktygsfältet snabbt 
 
 I [Kortvy](#card-view) vissa åtgärder är tillgängliga som snabbåtgärdsikoner och finns i verktygsfältet. Snabbåtgärdsikoner är tillgängliga för ett enskilt objekt i taget och eliminerar behovet av att välja i förväg.
 
-Snabbåtgärderna är synliga när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
+Snabbåtgärderna visas när du för musen över ett resurskort (en stationär enhet). Vilka snabbåtgärder som är tillgängliga beror på konsolen och sammanhanget. Här följer t.ex. snabbåtgärderna för en sida i **Webbplatser** konsol:
 
 ![Ytterligare alternativ](/help/sites-cloud/authoring/assets/quick-actions.png)
 
@@ -244,7 +244,7 @@ Du kan visa, navigera i och välja (för ytterligare åtgärder) dina resurser m
 
 >[!NOTE]
 >
->Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att ursprungliga återgivningar visas som miniatyrbilder.
+>Som standard visas inte de ursprungliga återgivningarna av resurser i användargränssnittet som miniatyrbilder i någon av vyerna i AEM Assets. Om du är administratör kan du använda övertäckningar för att konfigurera AEM Assets så att de ursprungliga återgivningarna visas som miniatyrbilder.
 
 ### Välja resurser {#selecting-resources}
 
@@ -253,7 +253,7 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
 | Visa | Välj Touch | Välj skrivbord | Avmarkera Touch | Avmarkera skrivbord |
 |---|---|---|---|---|
 | Kolumn | Tryck på miniatyrbilden | Klicka på miniatyrbilden | Tryck på miniatyrbilden | Klicka på miniatyrbilden |
-| Kort | Tryck och håll på kortet | Muspekaren använder sedan snabbåtgärden för bockmarkering | Tryck på kortet | Klicka på kortet |
+| Kort | Tryck och håll på kortet | Muspekaren använder sedan snabbåtgärden bock | Tryck på kortet | Klicka på kortet |
 | Lista | Tryck på miniatyrbilden | Klicka på miniatyrbilden | Tryck på miniatyrbilden | Klicka på miniatyrbilden |
 
 #### Markera alla {#select-all}
@@ -285,9 +285,9 @@ I alla vyer kan du avmarkera alla objekt genom att trycka på Esc på tangentbor
 
    ![Vyn Kort](/help/sites-cloud/authoring/assets/card-view-select.png)
 
-1. När du har valt en resurs täcks den översta rubriken av [åtgärdsverktygsfält](#actions-toolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
+1. När du har valt en resurs täcks den översta rubriken av [funktionsmakron, verktygsfält](#actions-toolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
 
-   Om du vill avsluta markeringsläget väljer du **X** längst upp till höger, eller använd **escape**.
+   Välj **X** längst upp till höger, eller använd **escape**.
 
 ### Kolumnvy {#column-view}
 
@@ -311,7 +311,7 @@ Om du väljer en resurs i kolumnen längst till vänster visas de underordnade r
 
   När en sida är markerad i kolumnvyn visas den markerade sidan i den sista kolumnen tillsammans med följande information:
 
-   * Sidtitel
+   * Sidrubrik
    * Sidnamn (del av sidans URL)
    * Mall som sidan baseras på
    * Ändringsinformation
@@ -418,13 +418,13 @@ Tidslinjen kan användas för att visa och/eller initiera händelser som har int
 
 ![Tidslinjeträd](/help/sites-cloud/authoring/assets/timeline.png)
 
-I tidslinjekolumnen kan du:
+Med tidslinjekolumnen kan du:
 
 * Visa olika händelser för ett valt objekt.
 
    * Händelsetyperna kan väljas i listrutan:
 
-      * Kommentarer
+      * Kommentar
       * [Anteckningar](/help/sites-cloud/authoring/fundamentals/annotations.md)
       * [Verksamhet](/help/sites-cloud/authoring/personalization/activities.md)
       * [Launches](/help/sites-cloud/authoring/launches/overview.md)

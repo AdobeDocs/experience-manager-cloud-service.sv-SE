@@ -2,7 +2,7 @@
 title: Exportera Experience Fragments till Adobe Target
 description: Lär dig hur du exporterar dina Experience Fragments till Adobe Target för att testa och personalisera upplevelser.
 exl-id: 752d91f9-13a6-40c2-9425-7d18dafe9205
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
 source-wordcount: '2254'
 ht-degree: 0%
@@ -87,7 +87,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
    >
    >Om du lägger till molnkonfigurationen i själva Experience Fragment ärvs konfigurationen av alla variationer.
 
-1. Välj **Cloud Services** -fliken.
+1. Välj **Cloud Service** -fliken.
 
 1. Under **Konfiguration av Cloud Service**, markera **Adobe Target** i listrutan.
 
@@ -114,7 +114,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp eller 
 
    För en mapp:
 
-   ![Mapp - Cloud Services](assets/xf-target-integration-01.png "Mapp - Cloud Services")
+   ![Mapp - Cloud Service](assets/xf-target-integration-01.png "Mapp - Cloud Service")
 
 1. **Spara och stäng**.
 
@@ -138,7 +138,7 @@ Du kan konfigurera molnkonfigurationen så att segment från Adobe Target synkro
 
 Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
 
-1. Navigera till **Äldre Cloud Services** via **AEM** > **verktyg** > **Cloud Services** > **Äldre Cloud Services**.
+1. Navigera till **Äldre Cloud Service** via **AEM** > **verktyg** > **Cloud Service** > **Äldre Cloud Service**.
 Till exempel: ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 
    The **Adobe Experience Cloud** översiktssidan öppnas.
@@ -220,7 +220,7 @@ Nu kan du välja den nya konfigurationen för redigering.
      >
      >Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning, vad gäller prestanda, skapa en fördröjning på några millisekunder innan innehållet läses in.
      >
-     >Korrekt målinriktning är alltid aktiverat för författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målanpassning globalt genom att avmarkera kryssrutan bredvid Korrekt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
+     >Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målanpassning globalt genom att avmarkera kryssrutan bredvid Korrekt målanpassning i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
      >
      >Om du har ***redan*** har skapat riktade komponenter och du ändrar den här inställningen påverkar inte ändringarna dessa komponenter. Du måste göra ändringar i den komponenten direkt.
 
@@ -306,7 +306,7 @@ When you associate a page with the framework, the child pages inherit the associ
 
    >[!NOTE]
    >
-   >If the framework you attached to the page was not activated yet, a wizard opens which allows you to publish it as well.
+   >If the framework you attached to the page was not activated yet, a wizard opens which lets you publish it as well.
 -->
 
 ## Exportera ett Experience Fragment till Adobe Target {#exporting-an-experience-fragment-to-adobe-target}

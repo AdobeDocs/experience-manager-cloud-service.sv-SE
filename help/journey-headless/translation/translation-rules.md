@@ -2,9 +2,9 @@
 title: Konfigurera översättningsregler för Headless-innehåll
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Nu när du har konfigurerat din koppling tar den här artikeln dig igenom nästa
 >Det här steget i dokumentationsresan är bara nödvändigt om du inte använder **Översättningsbar** flagga på innehållsfragment.
 >
 >* The **Översättningsbar** flagga skapar automatiskt översättningsregler åt dig och kräver ingen åtgärd.
->* The **Översättningsbar** -flaggan används bara om konfigurationen för Translation Integration Framework är inställd på **[Aktivera fält för innehållsmodell för översättning](/help/sites-cloud/administering/translation/integration-framework.md)**.
+>* The **Översättningsbar** -flaggan används bara om konfigurationen för översättningsintegreringsramverket är inställd på **[Aktivera fält för innehållsmodell för översättning](/help/sites-cloud/administering/translation/integration-framework.md)**.
 >* Om du aktiverar det här alternativet i TIF-konfigurationen ersätts eventuella manuellt skapade översättningsregler.|
 
 ## Syfte {#objective}
@@ -35,7 +35,7 @@ Nu när du har konfigurerat din koppling tar den här artikeln dig igenom nästa
 Det här dokumentet hjälper dig att förstå hur du använder AEM översättningsregler för att identifiera ditt översättningsinnehåll. När du har läst det här dokumentet bör du:
 
 * Förstå vad översättningsreglerna gör.
-* Du kan definiera egna översättningsregler.
+* Ange egna översättningsregler.
 
 ## Översättningsregler {#translation-rules}
 
@@ -54,7 +54,7 @@ Eftersom modeller för innehållsfragment, som definierar strukturen för dina i
 
 >[!TIP]
 >
->Innehållsarkitekten förser översättningsspecialisten med **Egenskapsnamn** som innehåller alla fält som behövs för översättning. Dessa namn behövs för att konfigurera översättningsregler. Som översättningsspecialist [kan hitta dessa **Egenskapsnamn** dig själv](getting-started.md#content-modlels) som tidigare beskrivits under denna resa.
+>Innehållsarkitekten förser översättningsspecialisten med **Egenskapsnamn**&#x200B;är en del av alla fält som behövs för översättning. Dessa namn behövs för att konfigurera översättningsregler. Som översättningsspecialist [kan hitta dessa **Egenskapsnamn**&#x200B;är dig själv](getting-started.md#content-modlels) som tidigare beskrivits under denna resa.
 
 ## Skapa översättningsregler {#creating-rules}
 
@@ -69,7 +69,7 @@ Det finns en **Översättningskonfiguration** konsolen är tillgänglig för kon
 
 I **Översättningskonfiguration** Det finns ett antal alternativ för översättningsreglerna. Här beskrivs de mest nödvändiga och typiska stegen som krävs för en grundläggande headless-lokaliseringskonfiguration.
 
-1. Tryck eller klicka **Lägg till kontext**, som gör att du kan lägga till en bana. Detta är sökvägen till innehållet som påverkas av regeln.
+1. Tryck eller klicka **Lägg till kontext**så att du kan lägga till en bana. Detta är sökvägen till innehållet som påverkas av regeln.
    ![Lägg till kontext](assets/add-translation-context.png)
 1. Använd sökvägsläsaren för att välja önskad sökväg och tryck eller klicka på **Bekräfta** knappen som ska sparas. Kom ihåg att innehållsfragment, som innehåller headless-innehåll, vanligtvis finns under `/content/dam/<your-project>`.
    ![Markera banan](assets/select-context.png)
@@ -78,7 +78,7 @@ I **Översättningskonfiguration** Det finns ett antal alternativ för översät
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
 1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** så att du kan lägga till fler fält i konfigurationen.
 1. När avmarkerat, under **Allmänt** i listan lägger du till egenskapsnamnen för de innehållsfragmentmodeller som du [som tidigare identifierats som fält för översättning.](getting-started.md#content-models)
-   1. Ange egenskapsnamnet i **Ny egenskap** fält.
+   1. Ange egenskapsnamnet i dialogrutan **Ny egenskap** fält.
    1. Alternativen **Översätt** och **Inherit** kontrolleras automatiskt.
    1. Tryck eller klicka **Lägg till**.
    1. Upprepa dessa steg för alla fält som du måste översätta.
@@ -98,7 +98,7 @@ Sådana funktioner behövs vanligtvis inte för att komma igång med lokaliserin
 Nu när du är klar med den här delen av den headless översättningsresan ska du:
 
 * Förstå vad översättningsreglerna gör.
-* Du kan definiera egna översättningsregler.
+* Ange egna översättningsregler.
 
 Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Översätta innehåll](translate-content.md) där du får lära dig hur dina kontakter och regler fungerar tillsammans för att översätta rubrikfritt innehåll.
 

@@ -2,9 +2,9 @@
 title: Arbeta med projektarbetsflöden
 description: Det finns en mängd olika projektarbetsflöden att välja mellan.
 exl-id: a5c9a6df-7def-43f3-b41b-524a4f4211e9
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '451'
 ht-degree: 10%
 
 ---
@@ -32,7 +32,7 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 
 >[!NOTE]
 >
->&amp;ast; De här arbetsflödena har inte startats från **Arbetsflöde** i Projekt. Se [Skapa språkkopior för resurser](/help/sites-cloud/administering/translation/managing-projects.md).
+>&amp;ast; dessa arbetsflöden startas inte från **Arbetsflöde** sida vid sida i projekt. Se [Skapa språkkopior för resurser](/help/sites-cloud/administering/translation/managing-projects.md).
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 
@@ -50,7 +50,7 @@ I det här avsnittet beskrivs de arbetsflöden som är tillgängliga för projek
 
 I arbetsflödet för projektgodkännande tilldelar du innehåll till en användare, granskar och godkänner sedan innehållet.
 
-1. I ditt enkla projekt väljer du **`+`** logga in på **Arbetsflöden** platta och markera **Arbetsflöde för projektgodkännande**.
+1. I ditt enkla projekt väljer du **`+`** logga in på **Arbetsflöden** sida vid sida och markera **Arbetsflöde för projektgodkännande**.
 1. Ange en titel och välj vem du vill tilldela den till i grupplistan. Ange en beskrivning, innehållssökväg, uppgiftsprioritet och ett förfallodatum om tillämpligt.
 
    ![Begär godkännande](/help/sites-cloud/authoring/assets/projects-approval.png)
@@ -59,7 +59,7 @@ I arbetsflödet för projektgodkännande tilldelar du innehåll till en använda
 
 ## Arbetsflödet Begär start {#request-launch-workflow}
 
-Med det här arbetsflödet kan du begära att programmet startas.
+Med det här arbetsflödet kan du begära en start.
 
 1. I det enkla projektet väljer du plustecknet (**+**) i rutan **Arbetsflöden** och väljer **arbetsflödet Begär start**.
 1. Ange en rubrik för startprogrammet och ange startkällans sökväg. Du kan också lägga till en beskrivning och ett live-datum, om du vill. Välj Ärv källsidans livedata eller exkludera undersidor beroende på hur du vill att startsidan ska fungera.

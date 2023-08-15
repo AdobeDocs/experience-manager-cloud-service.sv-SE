@@ -1,17 +1,17 @@
 ---
 title: Extern URL
-description: Externalizer är en OSGi-tjänst som gör att du kan omvandla en resurssökväg programmatiskt till en extern och absolut URL.
+description: Externalizer är en OSGi-tjänst som gör att du programmässigt kan omvandla en resurssökväg till en extern och absolut URL.
 exl-id: 06efb40f-6344-4831-8ed9-9fc49f2c7a3f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
 
 # Extern URL {#externalizing-urls}
 
-AEM **Externalizer** är en OSGi-tjänst som gör att du kan omvandla en resurssökväg med programkod (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
+AEM **Externalizer** är en OSGi-tjänst som gör att du programmässigt kan omvandla en resurssökväg (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
 
 Eftersom en AEM as a Cloud Service instans inte kan känna till sin externt synliga URL och eftersom en länk ibland måste skapas utanför det begärda omfånget, tillhandahåller den här tjänsten en central plats för att konfigurera dessa externa URL:er och skapa dem.
 
@@ -44,7 +44,7 @@ Som referens gäller OSGi-standardkonfigurationen för `com.day.cq.commons.impl.
 
 ## Konfigurera tjänsten Externalizer {#configuring-the-externalizer-service}
 
-Med tjänsten Externalizer kan du centralt definiera den domän som kan användas för att programmässigt prefix för resurssökvägar. Externalizer-tjänsten bör endast användas för program med en enda domän.
+Med tjänsten Externalizer kan du centralt definiera den domän som kan användas för att programmässigt prefix för resurssökvägar. Tjänsten Externalizer bör endast användas för program med en enda domän.
 
 >[!NOTE]
 >

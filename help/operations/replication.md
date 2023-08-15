@@ -2,9 +2,9 @@
 title: Replikering
 description: Lär dig mer om distribution och felsökning av replikering på AEM as a Cloud Service.
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1341'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Du kan också skapa en arbetsflödesmodell som använder `Publish Content Tree` 
 1. Från den AEM as a Cloud Service hemsidan går du till **Verktyg - Arbetsflöde - Modeller**.
 1. Tryck på **Skapa** i skärmens övre högra hörn.
 1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
-1. Markera den nya modellen i listan och tryck på **Redigera**
+1. Välj den nyskapade modellen i listan och tryck på **Redigera**
 1. I följande fönster drar och släpper du Processsteg till det aktuella modellflödet:
 
    ![Processsteg](/help/operations/assets/processstep.png)
@@ -194,7 +194,7 @@ Storleken på innehållet som skickas per replikeringsanrop får inte överskrid
 
 ## Felsökning {#troubleshooting}
 
-Om du vill felsöka replikering går du till replikeringsköerna i webbgränssnittet för AEM Author Service:
+Om du vill felsöka replikering går du till replikeringsköerna i webbgränssnittet för AEM författartjänst:
 
 1. Navigera AEM Start-menyn till **Verktyg > Distribution > Distribution**
 2. Välj kort **publicera**
@@ -205,5 +205,5 @@ Om du vill felsöka replikering går du till replikeringsköerna i webbgränssni
 
 ![Loggar](assets/publish-logs.png "Loggar")
 
-Om innehållet inte kunde publiceras återställs hela publikationen från AEM Publish Service.
+Om innehållet inte kunde publiceras återställs hela publikationen från AEM Publiceringstjänst.
 I så fall visar den huvudsakliga, redigerbara kön en röd status och bör granskas för att identifiera vilka objekt som gjorde att publiceringen avbröts. Genom att klicka på den kön visas de väntande objekten, från vilka ett eller alla objekt kan rensas vid behov.

@@ -4,7 +4,7 @@ description: När du har konfigurerat dina molnresurser måste du ge ditt team �
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: c00f5d28-85af-4bd3-a50c-913d1342241c
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Om du vill använda AEM måste teammedlemmarna tilldelas till minst en AEM produ
 >Alla användare som tilldelats en AEM as a Cloud Service produktprofil har skrivskyddad åtkomst till Cloud Manager via **Cloud Manager-användare** roll.
 >
 >Användare med **Cloud Manager** Användarrollen kan bara logga in i Cloud Manager och navigera till AEM författarmiljöer (om sådana finns) med hjälp av alternativen på menyn Program. The **Cloud Manager-användare** rollen räcker inte för att komma åt programinformationen. Om sådan åtkomst behövs måste användarna tilldelas ytterligare roller av systemadministratören.
->Se [Avsnittet Ytterligare resurser nedan](#additional-resources) om du vill ha mer information om användarroller i Cloud Manager.
+>Se [Avsnittet Ytterligare resurser nedan](#additional-resources) för mer information om användarroller i Cloud Manager.
 
 >[!CAUTION]
 >
@@ -58,7 +58,7 @@ Innan du börjar läsa det här avsnittet bör du ha tillgång till följande in
 
 >[!TIP]
 >
->För att komma igång rekommenderar vi att du först lägger till användare som ska delta i de omedelbara uppgifterna, till exempel administratörer, utvecklare och innehållsförfattare. Du kan fortsätta med resten av introduktionen utan att lägga till alla användare. När du är klar med introduktionen kan du skala till ett större antal användare senare.
+>För att komma igång rekommenderar Adobe att du till att börja med lägger till användare som ska delta i de omedelbara uppgifterna, till exempel administratörer, utvecklare och innehållsförfattare. Du kan fortsätta med resten av introduktionen utan att lägga till alla användare. När du är klar med introduktionen kan du skala till ett större antal användare senare.
 
 ## Visa AEM produktprofiler {#view-profiles}
 
@@ -66,7 +66,7 @@ Följ de här stegen för att se de AEM produktprofilerna från Admin Console.
 
 1. Logga in Admin Console på [`https://adminconsole.adobe.com`.](https://adminconsole.adobe.com)
 
-1. Från **Översikt** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
+1. Från **Ökning** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
 
    ![Produkter och tjänstekort](/help/journey-onboarding/assets/assign-team1.png)
 
@@ -106,8 +106,8 @@ Grattis! De användare du har tilldelat till AEM as a Cloud Service produktprofi
 
 Men om du bättre vill förstå hur författare och utvecklare använder systemet kan du fortsätta med två valfria delar av den här introduktionsresan:
 
-* [Uppgifter för utvecklare och distributionsansvarig](developers.md) - Där får du lära dig hur utvecklare använder Git för att lagra sin egen kod och distribuera den med hjälp av Cloud Manager-pipelines.
-* [AEM användaruppgifter](aem-users.md) - Där får du lära dig hur du kommer åt AEM där du kan börja skapa innehåll.
+* [Uppgifter för utvecklare och distributionsansvarig](developers.md) - Där får du lära dig hur utvecklare får tillgång till Git för att lagra sin egen kod och distribuera den med hjälp av Cloud Manager-pipelines.
+* [AEM användaruppgifter](aem-users.md) - Där får du lära dig hur du kommer åt den AEM miljön där du kan börja skapa innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 

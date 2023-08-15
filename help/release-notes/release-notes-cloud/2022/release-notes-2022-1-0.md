@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1c40ab67-8fd7-4f29-b8c9-dd98b6d5b490
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1079'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.1.0-versionen av [!
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.1.0-versionen av [!
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.1.0) är 3 februari 2022.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.1.0) är 3 februari 2022.
 Följande version (2022.3.0) är den 31 mars 2022.
 
 ## Släpp video {#release-video}
@@ -48,13 +48,13 @@ Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340
 
 * [!DNL AEM Dynamic Media] ger nu flexibilitet att [konfigurera ett aliaskonto](/help/assets/dynamic-media/dm-alias-account.md) i användargränssnittet, vilket säkerställer att färdiga Dynamic Media-URL:er och inbäddningskod för visningsprogram uppdateras. Detta påverkar SEO positivt för att återspegla uppdateringar som gjorts i ert företagskontext, t.ex. omprofilering.
 
-* Nu kan du använda [!DNL Experience Manager Assets] till
+* Nu kan du använda [!DNL Experience Manager Assets] användargränssnitt till:
 
    * Konfigurera identifiering av dubblettresurser i en databas.
 
    * Konfigurera tillägg av digitala vattenstämplar till bilder.
 
-* Administratörerna kan nu konfigurera e-posttjänsten för stora hämtningar. Det gör att användarna kan [aktivera e-postmeddelanden för stora nedladdningar](/help/assets/download-assets-from-aem.md#enable-email-notifications-for-large-downloads) från [!DNL Experience Manager Assets] gränssnitt. Användaren får ett e-postmeddelande med nedladdningslänken för den arkiverade zip-mappen när nedladdningen är klar.
+* Administratörerna kan nu konfigurera e-posttjänsten för stora hämtningar. Det gör det möjligt för användarna att [aktivera e-postmeddelanden för stora nedladdningar](/help/assets/download-assets-from-aem.md#enable-email-notifications-for-large-downloads) från [!DNL Experience Manager Assets] gränssnitt. Användaren får ett e-postmeddelande med nedladdningslänken för den arkiverade zip-mappen när nedladdningen är klar.
 
 
 * The [Hantera publikation](/help/assets/manage-publication.md) har förbättrats med ett förbättrat användargränssnitt. Användarna kan publicera eller avpublicera innehåll till och från det valda målet, [Lägg till innehåll](/help/assets/manage-publication.md#add-content) till publiceringslistan från DAM-databasen, [Inkludera mappinställningar](/help/assets/manage-publication.md#include-folder-settings) för att publicera innehållet i de valda mapparna och tillämpa filter, och [schemaläggning](/help/assets/manage-publication.md#publish-assets-later) till ett senare datum eller en senare tid.
@@ -83,10 +83,10 @@ Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
 * Förbättrade komponenter för myAccount
-* Produktrekommendationskomponenten har stöd för ytterligare sidtyper (hemsida, kundvagn, orderbekräftelse)
+* Produktrekommendationskomponenten stöder ytterligare sidtyper (hemsida, kundvagn, orderbekräftelse)
 * **Önsklista**
    * Inloggade besökare kan lägga till produkter i en önskelista
    * Du kan hantera önskelistan och dess produkter via mitt konto
@@ -99,7 +99,7 @@ Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340
 
 ### Releasedatum {#release-date-cm}
 
-Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.01.0 är 20 januari 2022. Nästa version är planerad till den 10 februari 2022.
+Releasedatum för Cloud Manager i AEM as a Cloud Service 2022.01.0 är 20 januari 2022. Nästa version planeras till den 10 februari 2022.
 
 ### Nyheter {#what-is-new-cm}
 

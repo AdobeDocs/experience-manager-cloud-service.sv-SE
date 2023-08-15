@@ -2,9 +2,9 @@
 title: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2812'
+source-wordcount: '2810'
 ht-degree: 1%
 
 ---
@@ -69,7 +69,7 @@ You can use the [development tools](https://experienceleague.adobe.com/docs/expe
 
 Du behöver följande program för att konfigurera en lokal utvecklingsmiljö. Ladda ned dessa innan du börjar konfigurera den lokala utvecklingsmiljön:
 
-| Mjukvara | Beskrivning | Hämta länkar |
+| Programvara | Beskrivning | Hämta länkar |
 |---|---|---|
 | Adobe Experience Manager as a Cloud Service SDK | SDK innehåller [!DNL Adobe Experience Manager] Verktygen QuickStart och Dispatcher | Hämta senaste SDK från [Programvarudistribution](#software-distribution) |  |
 | Adobe Experience Manager Forms feature archive (AEM Forms add-on) | Verktyg för att skapa, formatera och optimera adaptiva Forms och andra Adobe Experience Manager Forms-funktioner | Hämta från [Programvarudistribution](#software-distribution) |
@@ -78,13 +78,13 @@ Du behöver följande program för att konfigurera en lokal utvecklingsmiljö. L
 
 ### Ladda ned den senaste versionen av programvara från Software Distribution {#software-distribution}
 
-Om du vill hämta den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms add-on), formulärreferensresurser eller Forms Designer från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html):
+Om du vill hämta den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms-tillägg), formulärreferensresurser eller Forms Designer från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html):
 
 1. Logga in på <https://experience.adobe.com/#/downloads> med din Adobe ID
 
    >[!NOTE]
    >
-   > Din Adobe-organisation måste ha etablerats för att AEM as a Cloud Service ska kunna hämta den AEM as a Cloud Service SDK:n.
+   > Din Adobe-organisation måste ha etablerats för att AEM as a Cloud Service ska kunna hämta AEM as a Cloud Service SDK.
 
 1. Navigera till fliken **[!UICONTROL AEM as a Cloud Service]**.
 1. Sortera efter publicerat datum i fallande ordning.
@@ -132,7 +132,7 @@ Adobe Experience Manager Forms as a Cloud Service funktionsarkiv innehåller ver
 
 ### Konfigurera användare och behörigheter {#configure-users-and-permissions}
 
-Skapa användare som Form Developer och Form Practitioner och [lägga till dessa användare i fördefinierade formulärgrupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=en#accessing) för att ge dem nödvändiga behörigheter. Tabellen nedan visar alla typer av användare och fördefinierade grupper för varje typ av formuläranvändare:
+Skapa användare som formulärutvecklare och formulärdeltagare och [lägga till dessa användare i fördefinierade formulärgrupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=en#accessing) för att ge dem nödvändiga behörigheter. Tabellen nedan visar alla typer av användare och fördefinierade grupper för varje typ av formuläranvändare:
 
 | Användartyp | AEM |
 |---|---|
@@ -180,9 +180,9 @@ Use this project to update configurations, create overlays, develop custom Adapt
 1. **Set Up an Integrated Development Environment:**  Set up an IDE of your choice for development, see [Set Up an Integrated Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#set-up-an-integrated-development-environment) for detailed instructions.
  -->
 
-## Konfigurera lokal utvecklingsmiljö för DoR (Document of Record){#docker-microservices}
+## Ställ in lokal utvecklingsmiljö för DoR (Document of Record){#docker-microservices}
 
-AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utveckling av Document of Record och för användning av andra mikrotjänster. Du slipper konfigurera plattformsspecifika binärfiler och anpassningar manuellt. Så här konfigurerar du miljön:
+AEM Forms som Cloud Service har en dockningsbaserad SDK-miljö för enklare utveckling av Document of Record och för användning av andra mikrotjänster. Du slipper konfigurera plattformsspecifika binärfiler och anpassningar manuellt. Så här konfigurerar du miljön:
 
 1. Installera och konfigurera Docker:
 
@@ -194,7 +194,7 @@ AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utv
 
    >[!NOTE]
    >
-   > * För Apple macOS tillåtslista du mappar som innehåller lokala AEM Author-instanser.
+   > * I Apple macOS tillåtslista du mappar som innehåller lokala AEM författarinstanser.
    >
    > * Docker Desktop för Windows har stöd för två backends, Hyper-V
    > (äldre) och WSL2 (modern). Fildelning sker automatiskt
@@ -209,11 +209,11 @@ AEM Forms som Cloud Services har en dockningsbaserad SDK-miljö för enklare utv
 
 1. Skapa en miljövariabel AEM_HOME och peka på en lokal AEM Author-installation. Exempel: C:\aem\author\.
 
-1. Öppna sdk.bat eller sdk.sh för redigering. Ställ in AEM_HOME så att det pekar på en lokal AEM Author-installation. Exempel: C:\aem\author\.
+1. Öppna sdk.bat eller sdk.sh för redigering. Ställ in AEM_HOME så att den pekar på den lokala AEM författarinstallationen. Exempel: C:\aem\author\.
 
 1. Öppna kommandotolken och navigera till `aem-forms-addon-native-<version>` mapp.
 
-1. Kontrollera att din lokala AEM Author-instans är igång och körs. Kör följande kommando för att starta SDK:
+1. Kontrollera att den lokala AEM Author-instansen körs. Kör följande kommando för att starta SDK:
 
    * (i Microsoft® Windows) `sdk.bat start`
    * (i Linux® eller Apple macOS) `AEM_HOME=[local AEM Author installation] ./sdk.sh start`
@@ -228,7 +228,7 @@ Du kan nu använda den lokala utvecklingsmiljön för att återge arkivhandlinga
 
 ## Konfigurera ett utvecklingsprojekt för Forms baserat på Experience Manager-arkitypen {#forms-cloud-service-local-development-environment}
 
-Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurationsuppdateringar, överlägg, skapa anpassade adaptiva formulärkomponenter, testa och anpassa kod på lokala [!DNL Experience Manager Forms] SDK. När du har testat lokalt kan du distribuera projektet till  [!DNL Experience Manager Forms] as a Cloud Service produktions- och icke-produktionsmiljöer. När du distribuerar projektet distribueras även följande AEM Forms-resurser:
+Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurationsuppdateringar, överlägg, skapa anpassade adaptiva formulärkomponenter, testa och anpassa kod på lokala [!DNL Experience Manager Forms] SDK. När du har testat lokalt kan du distribuera projektet till  [!DNL Experience Manager Forms] as a Cloud Service produktion och icke-produktionsmiljöer. När du distribuerar projektet distribueras även följande AEM Forms-resurser:
 
 | Teman | Mallar | Formulärdatamodeller |
 ---------|----------|---------
@@ -276,7 +276,7 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
 
 ## Konfigurera lokala Dispatcher-verktyg {#setup-local-dispatcher-tools}
 
-Dispatcher är en Apache HTTP-webbservermodul som tillhandahåller ett säkerhets- och prestandalager mellan CDN- och AEM-publiceringsnivån. Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön.
+Dispatcher är en Apache HTTP-webbservermodul som tillhandahåller ett säkerhets- och prestandalager mellan CDN- och AEM-publiceringsskiktet. Dispatcher är en viktig del av den övergripande Experience Manager-arkitekturen och bör ingå i den lokala utvecklingsmiljön.
 
 Utför följande steg för att konfigurera lokal Dispatcher och lägg sedan till Forms-specifika regler i den:
 
@@ -320,7 +320,7 @@ Så här konfigurerar du Dispatcher-cachen för Experience Manager Forms as a Cl
 
 * Dispatcher-cachning tillåter [!DNL AEM Forms] för att förifylla Adaptiv Forms på en kund. Det förbättrar återgivningshastigheten för förfyllda formulär.
 * Cachelagring av funktioner för skyddat innehåll är inaktiverat som standard. Om du vill aktivera funktionen kan du följa instruktionerna i [Cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=en) artikel
-* Dispatcher kan inte göra vissa adaptiva Forms och relaterade adaptiva Forms ogiltiga. Information om hur du löser sådana problem finns i [[!DNL AEM Forms] Cachelagring](troubleshooting-caching-performance.md) i felsökningsavsnittet.
+* Dispatcher kan inte göra vissa adaptiva Forms och relaterade adaptiva Forms ogiltiga. Information om hur du löser sådana problem finns i [[!DNL AEM Forms] Cachning](troubleshooting-caching-performance.md) i felsökningsavsnittet.
 * Cachelagrar lokaliserade adaptiva Forms:
    * Använd URL-format `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
    * Alternativet Webbläsarspråk är inaktiverat som standard. Om du vill ändra språkinställningen för webbläsaren
@@ -342,7 +342,7 @@ Om du uppgraderar SDK till en ny version måste du ersätta hela den lokala utve
 
 ### Så här undviker du innehållsförluster när du uppgraderar SDK {#avoid-content-loss-when-upgrading--SDK}
 
-Genom att uppgradera SDK skapas en helt ny instans av Author och Publish, inklusive en ny databas ([Ställ in AEM projekt](#forms-cloud-service-local-development-environment)), vilket innebär att ändringar som gjorts i en tidigare SDK-databas går förlorade. Om du vill ha en genomförbar strategi för att hjälpa till med bestående innehåll mellan SDK-uppgraderingar kan du gå till [Så här undviker du innehållsförluster när du uppgraderar AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en#optional-local-aem-runtime-set-up-tasks)
+Genom att uppgradera SDK skapas en helt ny instans av Author och Publish, inklusive en ny databas ([Konfigurera AEM projekt](#forms-cloud-service-local-development-environment)), vilket innebär att ändringar som gjorts i en tidigare SDK-databas går förlorade. Om du vill ha en genomförbar strategi för att hjälpa till med bestående innehåll mellan SDK-uppgraderingar kan du gå till [Så här undviker du innehållsförluster när du uppgraderar AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en#optional-local-aem-runtime-set-up-tasks)
 
 <!--When you update any  Forms-specifc configuration, create overlays, develop custom Adaptive Form components, or develop and test any custom code in AEM project for the development tasks related to local development instance, use the AEM project cloned from the Cloud Manager Git repository to [deploy the custom code and other changes to your [!DNL AEM Forms] as a Cloud Service's production or non-production environment](https://video.tv.adobe.com/v/30191?quality=9).
 
@@ -366,7 +366,7 @@ For information about troubleshooting, stopping local AEM environment, run modes
 
 ### Säkerhetskopiera och importera Forms-specifikt innehåll till en ny SDK-miljö {#backup-and-import-Forms-specific-content-to-new-SDK-environment}
 
-Så här säkerhetskopierar och flyttar du resurser från befintlig SDK till en ny SDK-miljö:
+Så här säkerhetskopierar och flyttar du resurser från en befintlig SDK till en ny SDK-miljö:
 
 * Skapa en säkerhetskopia av befintligt innehåll.
 
@@ -378,12 +378,12 @@ Så här säkerhetskopierar och flyttar du resurser från befintlig SDK till en 
 
 Säkerhetskopiera dina adaptiva Forms, mallar, formulärdatamodell, tema, konfigurationer och anpassad kod. Du kan utföra följande åtgärd för att skapa en säkerhetskopia:
 
-1. [Hämta](import-export-forms-templates.md#manage-forms-and-related-assets) Adaptiv Forms, teman och PDF forms.
+1. [Ladda ned](import-export-forms-templates.md#manage-forms-and-related-assets) Adaptiv Forms, teman och PDF forms.
 1. Exportera adaptiva formulärmallar.
 
 1. Hämta formulärdatamodeller
 
-1. Exportera redigerbara mallar, molnkonfigurationer och arbetsflödesmodell. Om du vill exportera alla tidigare nämnda objekt från din befintliga SDK skapar du en [CRX-paket](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html) med följande filter:
+1. Exportera redigerbara mallar, molnkonfigurationer och arbetsflödesmodell. Skapa en [CRX-paket](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html) med följande filter:
 
    * /conf/ReferenceEditableTemplates
    * /conf/global/settings/cloudconfigs

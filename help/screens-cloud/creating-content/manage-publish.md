@@ -2,9 +2,9 @@
 title: Publicera en kanal på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du publicerar en kanal på skärmar as a Cloud Service.
 exl-id: a69086d2-777c-4a94-bd22-5c02f98bbedb
-source-git-commit: cf1e2717342ca4e00780428d6ccf264bd8eca371
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Du kan publicera innehåll från AEM Screens. Med funktionen Hantera publikation kan du leverera innehållsuppdateringar från författaren till publiceringsspelaren. Du kan publicera eller avpublicera innehåll för hela AEM Screens-projektet eller bara för en av dina kanaler, platser, spelare eller program.
+Du kan publicera innehåll från AEM Screens. Med funktionen Hantera publikation kan du leverera innehållsuppdateringar från författare till spelare. Du kan publicera eller avpublicera innehåll för hela AEM Screens-projektet eller bara för en av dina kanaler, platser, spelare eller program.
 
 >[!IMPORTANT]
 >När du har skapat en kanal eller kanaler i ditt projekt är det obligatoriskt att publicera kanalerna för att visa kanalen/kanalerna i lagerlistvyn i AEM Screens Services Provider.
@@ -23,7 +23,7 @@ Du kan publicera innehåll från AEM Screens. Med funktionen Hantera publikation
 Det här dokumentet hjälper dig att förstå hur du publicerar det redigerade innehållet till leverantören och spelaren av skärmtjänster. Efter läsningen ska du kunna:
 
 * förstå hur man publicerar en kanal
-* hantera publicering, vad gäller omfattning
+* hantera publicering, i fråga om omfattning
 
 ## Steg för att publicera en kanal {#publish-channel}
 

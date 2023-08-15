@@ -11,7 +11,7 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 0%
@@ -23,11 +23,11 @@ ht-degree: 0%
 Transkription är processen att översätta ljudet från en ljud- eller videofil till text (tal till text) med hjälp av taligenkänningstekniken.
 [!DNL Adobe Experience Manager Assets] är konfigurerad med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-formatet (.vtt). När ett ljud- eller videomaterial bearbetas i [!DNL Experience Manager Assets], genererar transkriberingstjänsten automatiskt texttranskriberingen av ljud- eller videoresursen och lagrar den på samma plats i resurskatalogen där den ursprungliga resursen finns. The [!DNL Experience Manager Assets] Med transkriberingstjänsten kan marknadsförarna effektivt hantera sitt ljud- och videomaterial med ökad upptäckbarhet av textinnehållet och öka avkastningen på dessa resurser genom stöd för tillgänglighet och lokalisering.
 
-Transcript är textversioner av talt innehåll. Ett exempel är en film som du tittar på på en OTT-plattform som ofta innehåller bildtexter eller undertexter som hjälper till med tillgängligheten eller som konsumerar innehållet på andra språk. Eller alla ljud- och videofiler som används i marknadsförings-, utbildnings- eller underhållningssyfte. De här upplevelserna börjar med en transkription som sedan formateras eller översätts på lämpligt sätt. Att transkribera ljud eller video är en tidskrävande och felbenägen process när den utförs manuellt. Det är också en utmaning att skala den manuella processen, med tanke på det ständigt ökande behovet av ljud- och videoinnehåll. [!DNL Experience Manager Assets] använder Azure:s AI-baserade transkription, som tillåter storskalig bearbetning av ljud- och videoresurser och genererar texttranskriberingarna (.vtt-filer) tillsammans med tidsstämpelsinformationen. Utöver Assets stöds även transkriberingsfunktionen i Dynamic Media.
+Transskript är textversioner av talat innehåll. Ett exempel är en film som du ser på en OTT-plattform som ofta innehåller bildtexter eller undertexter som hjälper till med hjälpmedel eller konsumerar innehållet på andra språk. Eller alla ljud- och videofiler som används i marknadsförings-, utbildnings- eller underhållningssyfte. De här upplevelserna börjar med en transkription som sedan formateras eller översätts på lämpligt sätt. Att transkribera ljud eller video är en tidskrävande och felbenägen process när den utförs manuellt. Det är också en utmaning att skala den manuella processen, med tanke på det ständigt ökande behovet av ljud- och videoinnehåll. [!DNL Experience Manager Assets] använder Azure:s AI-baserade transkription, som tillåter storskalig bearbetning av ljud- och videoresurser och genererar texttranskriberingarna (.vtt-filer) tillsammans med tidsstämpelsinformationen. Utöver Assets stöds även transkriberingsfunktionen i Dynamic Media.
 
 transkriberingsfunktionen är tillgänglig utan kostnad i [!DNL Experience Manager Assets]. Administratörerna kräver dock användarens Azure-autentiseringsuppgifter för att konfigurera transkriberingstjänsten i [!DNL Experience Manager Assets]. Du kan också [hämta autentiseringsuppgifter för testversionen](https://azure.microsoft.com/en-us/pricing/details/media-services/) direkt från Microsoft® och upplev ljud- och videomaterial i Assets.
 
-## Förutsättningar för transkribering {#prerequisites}
+## Krav för transkribering {#prerequisites}
 
 1. En igång [!DNL Experience Manager Assets as a Cloud Service] -instans.
 1. Följande Azure-autentiseringsuppgifter krävs för konfiguration i [!DNL Experience Manager Assets]:
@@ -57,7 +57,7 @@ Följande konfigurationer krävs för att aktivera transkriberingsfunktionen i [
 
 ![configure-transcription-service](assets/configure-transcription-service.png)
 
-Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Media Services Configuration]**. Välj en mapp (plats) i den vänstra listen och klicka på [!UICONTROL Create] för att konfigurera anslutningen till [!DNL Azure] konto. Den här mappen är platsen där din [!DNL Azure] molnkonfigurationen lagras i Experience Manager Assets. Ange [!DNL Azure] inloggningsuppgifter och klicka på **[!UICONTROL Save & Close]**.
+Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Media Services Configuration]**. Välj en mapp (plats) i den vänstra listen och klicka på [!UICONTROL Create] för att konfigurera anslutningen till [!DNL Azure] konto. Den här mappen är platsen där din [!DNL Azure] molnkonfigurationen lagras i Experience Manager Assets. Ange [!DNL Azure] och klicka på **[!UICONTROL Save & Close]**.
 
 ### Konfigurera bearbetningsprofil för transkription {#configure-processing-profile}
 
@@ -86,7 +86,7 @@ Låt oss nu konfigurera transkriberingen i den här videoprofilen. Navigera till
 När bearbetningsprofilen har konfigurerats för transkription av ljud- och videofiler kan du använda den här bearbetningsprofilen för mappar på något av följande sätt:
 
 * Välj en bearbetningsprofildefinition i **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** och använda **[!UICONTROL Apply Profile to Folder(s)]** åtgärd. I innehållsläsaren kan du navigera till en viss mapp, välja en mapp och bekräfta programmet för profilen.
-* Välj en mapp i Assets-användargränssnittet och klicka på **[!UICONTROL Properties]** åtgärd för att öppna mappegenskaper. Klicka på **[!UICONTROL Asset Processing]** och väljer lämplig bearbetningsprofil för mappen på **[!UICONTROL Processing Profile]** lista. Spara ändringarna genom att klicka på **[!UICONTROL Save & Close]**.
+* Välj en mapp i Assets-användargränssnittet och klicka på **[!UICONTROL Properties]** åtgärd för att öppna mappegenskaper. Klicka på **[!UICONTROL Asset Processing]** och väljer lämplig bearbetningsprofil för mappen på **[!UICONTROL Processing Profile]** lista. Klicka på **[!UICONTROL Save & Close]**.
 
   ![configure-transcription-service](assets/video-processing-profile3.png)
 
@@ -159,7 +159,7 @@ Följande ljud- och videofilformat stöds för transkription:
 
 * transkriberingsfunktionen stöds för videoklipp med en varaktighet på upp till 10 minuter.
 * Videotiteln får inte innehålla fler än 80 tecken.
-* Filstorleken som stöds är upp till 15 GB.
+* Filstorleken är upp till 15 GB.
 * Den maximala bearbetningstiden som stöds är 60 minuter.
 * I en betald [!DNL Azure] kan du överföra upp till 50 filmer per minut. I ett testversionskonto kan du dock överföra upp till fem filmer per minut.
 

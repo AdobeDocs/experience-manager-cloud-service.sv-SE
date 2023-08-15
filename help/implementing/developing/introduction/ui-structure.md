@@ -2,9 +2,9 @@
 title: Struktur för AEM
 description: Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement
 exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -46,11 +46,11 @@ Rubrikraden visar globala element som:
 
 Verktygsfältet är sammanhangsberoende för din plats och de ytverktyg som är relevanta för att styra vyn eller resurserna på sidan nedan. Verktygsfältet är produktspecifikt, men det finns vissa gemensamma element.
 
-I verktygsfältet visas de åtgärder som är tillgängliga:
+I verktygsfältet visas de åtgärder som är tillgängliga för tillfället:
 
 ![AEM Sites verktygsfält](assets/ui-sites-toolbar.png)
 
-Beroende på om en resurs har valts:
+Även beroende på om en resurs är markerad:
 
 ![AEM Sites-verktygsfältet har valts](assets/ui-sites-toolbar-selected.png)
 
@@ -89,7 +89,7 @@ Redigeringsramen är en behållare (abstrakt) för alla sidredigeringselement. D
 * Det övre verktygsfältet
 * Sidpanelen
 * Alla övertäckningar
-* Alla andra sidredigeringselement. komponentens verktygsfält
+* Andra sidredigeringselement, till exempel komponentens verktygsfält
 
 ![Redigeringsram](assets/ui-editor-frame.png)
 
@@ -107,7 +107,7 @@ På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera e
 
 ![Fliken Resurser](assets/ui-side-panel-assets.png)
 
-### Sida - Resursgrupper {#side-panel-asset-groups}
+### Side Panel - Resursgrupper {#side-panel-asset-groups}
 
 På fliken Resurser finns det en listruta som du kan använda för att välja specifika resursgrupper.
 
@@ -142,7 +142,7 @@ Ett lager är ett oberoende funktionspaket som kan aktiveras för att:
 
 Lagren har avancerade funktioner för hela sidan, i motsats till specifika åtgärder för en enskild komponent.
 
-AEM innehåller flera lager som redan har implementerats för sidredigering, som till exempel redigerar, förhandsgranskar och kommenterar lager.
+AEM innehåller flera lager som redan har implementerats för sidredigering, till exempel redigering, förhandsgranskning och anteckning av lager.
 
 >[!NOTE]
 >

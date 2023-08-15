@@ -2,9 +2,9 @@
 title: Introduktion till anpassade domännamn
 description: Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt.
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '757'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Med Cloud Managers användargränssnitt kan du lägga till en anpassad domän f�
 
 ## Vad är anpassade domännamn? {#what-are-custom-domain-names}
 
-Varje webbplats har en unik, maskinläsbar, numerisk adress, som `184.33.123.64`. DNS (Domain Name System) är en DNS-server som gör att du kan koppla anpassade domäner till webbplatser genom att översätta numeriska adresser till minnesvärda adresser som `wknd.com`.
+Varje webbplats har en unik, maskinläsbar, numerisk adress, som `184.33.123.64`. Med DNS (Domain Name System) kan du ha anpassade domäner kopplade till webbplatser genom att översätta numeriska adresser till minnesvärda adresser som `wknd.com`.
 
 Det är god praxis att ha ett domännamn för er webbplats som är minnesvärt för era kunder och som speglar ert varumärke.
 
@@ -35,7 +35,7 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 
 ## Anpassade domännamn och CDN för BYO {#byo-cdn}
 
-AEM as a Cloud Service har ett inbyggt leveransnätverk (CDN), men du kan även hämta ditt eget CDN (BYO) för användning med AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
+AEM as a Cloud Service har ett inbyggt leveransnätverk (CDN), men du kan även ta med ditt eget CDN (BYO) för AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
 
 * Anpassade domännamn (och certifikat) som är installerade i det AEM hanterade CDN hanteras via Cloud Manager.
 * Anpassade domännamn (och certifikat) som är installerade i ditt eget CDN hanteras i det specifika CDN.

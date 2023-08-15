@@ -1,19 +1,19 @@
 ---
 title: Responsiv layout
-description: AEM gör att du kan förverkliga en responsiv layout för dina sidor
+description: AEM kan du förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1748'
+source-wordcount: '1739'
 ht-degree: 7%
 
 ---
 
 # Responsiv layout {#responsive-layout}
 
-AEM gör att du kan ha en responsiv layout för dina sidor med **Layoutbehållare** -komponenten.
+AEM kan du använda en responsiv layout för dina sidor med **Layoutbehållare** -komponenten.
 
-Detta tillhandahåller ett styckesystem som gör att du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med [**Layout** läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes), vilket gör att du kan skapa och redigera din responsiva layout beroende på enhet.
+Detta ger ett styckesystem där du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med [**Layout** läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes), vilket gör att du kan skapa och redigera din responsiva layout beroende på enhet.
 
 Layoutbehållaren:
 
@@ -35,7 +35,7 @@ AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer
   När layoutbehållaren är placerad på sidan kan du använda **Layout** läge för att placera innehåll i det responsiva rutnätet.
 
 * [**Emulator**](#selecting-a-device-to-emulate)
-På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten efter enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
+På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten beroende på enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med emulatorn.
 
 Med dessa responsiva rutnätsmekanismer kan du:
 
@@ -59,7 +59,7 @@ Beroende på vilket projekt du arbetar med kan Layoutbehållaren användas som s
 
 När du skapar webbplatsinnehåll vill du se till att innehållet visas på rätt sätt för den enhet som används för att visa det.
 
-AEM gör att du kan definiera layouter beroende på enhetens bredd:
+Med AEM kan du definiera layouter beroende på enhetens bredd:
 
 * Med emulatorn kan du emulera dessa layouter på en mängd olika enheter. Förutom enhetstypen är orienteringen vald av **Rotera enhet** kan påverka den markerade brytpunkten när bredden ändras.
 * Brytpunkter är de punkter som skiljer layoutdefinitionerna åt.
@@ -76,7 +76,7 @@ Enheten **Skrivbord**, som inte har någon specifik bredd, relaterar till standa
 
 När du använder emulatorn väljer du en specifik enhet för emulerings- och layoutdefinition och den relaterade brytpunkten markeras också. Alla layoutändringar du gör gäller för andra enheter som brytpunkten gäller för. Det vill säga alla enheter som är placerade till vänster om den aktiva brytpunktsmarkören, men före nästa brytpunktsmarkör.
 
-När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540 pixlar) för emulering och layout, brytpunkten **Telefon** (definierat som 768 pixlar) aktiveras också. Alla layoutändringar du gör för **iPhone 6** är tillämpliga på andra enheter enligt **Telefoner** brytpunkt, som **iPhone 5** (definierat som 320 pixlar).
+När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540 pixlar) för emulering och layout, brytpunkten **Telefon** (definierat som 768 pixlar) aktiveras också. Alla layoutändringar du gör för **IPHONE 6** är tillämpliga på andra enheter enligt **Telefoner** brytpunkt, som **IPHONE 5** (definierat som 320 pixlar).
 
 ![Emulatorer](/help/sites-cloud/authoring/assets/responsive-layout-emulators.png)
 
@@ -166,7 +166,7 @@ Precis som med andra komponenter kan du markera och sedan vidta åtgärder för 
 
    ![Kapslade behållare](/help/sites-cloud/authoring/assets/responsive-layout-nested.png)
 
-1. Hela stödrastret markeras med dess innehåll. Åtgärdsverktygsfältet visas, där du kan välja en åtgärd som **Ta bort.**
+1. Hela stödrastret markeras med dess innehåll. Åtgärdsverktygsfältet visas, där du kan välja en åtgärd som t.ex. **Ta bort.**
 
 ## Definiera layouter (layoutläget) {#defining-layouts-layout-mode}
 
@@ -182,12 +182,12 @@ Om du vill konfigurera layouten för ett responsivt rutnät som implementeras me
    * Välj **layoutläget** på samma sätt som du växlar till **redigeringsläget** eller **målinriktningsläget**.
    * **Layoutläget** är beständigt och du lämnar inte **layoutläget** förrän du väljer ett annat läge med lägesväljaren.
 * När [redigera en enskild komponent](/help/sites-cloud/authoring/fundamentals/editing-content.md#edit-component-layout).
-   * Genom att använda **Layout** i snabbåtgärdsmenyn för komponenten kan du växla till **Layout** läge.
+   * Genom att använda **Layout** på komponentens snabbåtgärdsmeny kan du växla till **Layout** läge.
    * **Layout** läget kvarstår när komponenten redigeras och återgår till **Redigera** när fokus ändras till en annan komponent.
 
 I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
-* Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot stödrastret. När du ändrar storlek visas stödrastret i bakgrunden för att underlätta justeringen:
+* Ändra storlek på innehållskomponenterna med de blå punkterna. Storleksändring fästs alltid mot stödrastret. När du ändrar storlek visas bakgrundsstödrastret som stöd för justering:
 
   ![Ändra storlek på komponenter](/help/sites-cloud/authoring/assets/responsive-layout-resizing.png)
 
@@ -214,9 +214,9 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
      ![Knappen Visa dolda komponenter](/help/sites-cloud/authoring/assets/responsive-layout-show-button.png)
 
-   * **Återställ brytpunktslayout** - Återgå till standardlayouten. Ingen anpassad layout används.
+   * **Återställ brytpunktslayout** - Återgå till standardlayout. Ingen anpassad layout används.
 
-     ![Återställ brytpunktslayoutknapp](/help/sites-cloud/authoring/assets/responsive-layout-revert-button.png)
+     ![Återställ brytpunktslayoutknappen](/help/sites-cloud/authoring/assets/responsive-layout-revert-button.png)
 
    * **Flyt till ny rad** - Flytta komponenten uppåt en position om avstånd tillåter.
 

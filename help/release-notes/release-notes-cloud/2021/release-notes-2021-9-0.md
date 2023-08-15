@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 8c12ff09-fbc8-42dd-87c0-46e509604f36
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.9.0) är 6 oktober 2021.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2021.9.0) är 6 oktober 2021.
 Följande version (2021.10.0) är den 4 november 2021.
 
 ## Släpp video {#release-video}
@@ -45,7 +45,7 @@ Ta en titt på [Versionsöversikt september 2021](https://video.tv.adobe.com/v/3
   ![Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer](/help/assets/assets/sort-searched-assets.png)
   *Bild: Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyn.*
 
-* Ett nytt API introduceras för programmässig bearbetning med hjälp av objektmikrotjänster. Utvecklare kan nu använda en befintlig bearbetningsprofil på mappnivå på en eller flera specifika resurser i en mapp. Bearbetningsprofilen tillämpas baserat på uppdateringar av anpassade metadataegenskaper. Se `AssetProcessor` i [[!DNL Experience Manager] API-referens](https://www.adobe.io/experience-manager/reference-materials/). Som tidigare är det möjligt att [använda resursmikrotjänster från användargränssnittet](/help/assets/asset-microservices-configure-and-use.md).
+* Ett nytt API introduceras för programmässig bearbetning med hjälp av objektmikrotjänster. Utvecklare kan nu använda en befintlig bearbetningsprofil på mappnivå på en eller flera specifika resurser i en mapp. Bearbetningsprofilen tillämpas baserat på uppdateringar av anpassade metadataegenskaper. Se `AssetProcessor` i [[!DNL Experience Manager] API-referens](https://www.adobe.io/experience-manager/reference-materials/). Som tidigare kan man [använda resursmikrotjänster från användargränssnittet](/help/assets/asset-microservices-configure-and-use.md).
 
 <!-- Leave this commented.
 
@@ -68,26 +68,26 @@ CQ-4328183 was not reported on CS so not documented here.
 
 * **Analytics för Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
-* **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller direkt konfiguration av datakälla och datamodeller för Microsoft Dynamics och Salesforce, vilket gör den [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-msdynamics-salesforce.html?lang=en).
+* **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller out of the box-datakällkonfiguration och datamodeller för Microsoft Dynamics och Salesforce, vilket gör den [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-msdynamics-salesforce.html?lang=en).
 
 * **E-signera ett anpassat formulär med DocuSign:** Du kan använda DocuSign för att e-signera ett anpassat formulär. Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär. Du kan installera det paket som är tillgängligt på Programvarudistribution för att importera sändningsåtgärden.
 
 ### Betafunktioner i [!DNL Forms] {#sep-what-is-new-forms-prerelease}
 
 * **Enhetlig lagringsanslutning:** Använd Unified Storage Connector för att externalisera processdata i kundhanterade databaser. Du kan till exempel
-   * Möjliggör för Forms Portal att spara och återuppta samt lagra adaptiva formulärutkast i ett kundhanterat datalager.
+   * Möjliggör Forms Portals funktioner för att spara och återuppta samt lagra adaptiva blankettutkast i ett kundhanterat datalager.
    * Lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
 
 * **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera dokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
-   * Generera PDF-filer från ett XFA-formulär PDF och Adobe Acrobat-formulär.
+   * Generera PDF-filer från ett XFA-formulär i PDF och Adobe Acrobat-formulär.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betaprogrammet.
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
 * Ny flik för associerat e-handelsinnehåll i Sites editor ökar redigeringens effektivitet genom att snabbt få tillgång till relevant AEM för det aktuella sammanhanget
 
@@ -109,13 +109,13 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 ## [!DNL Experience Manager Screens] som [!DNL Cloud Service] {#screens}
 
-### Vad är nytt? {#what-is-new-screens}
+### Nyheter {#what-is-new-screens}
 
-* as a Cloud Service skärmar har nu stöd för grundläggande uppspelningsövervakning. Spelaren rapporterar nu olika uppspelningsmått för varje ping (standardvärdet är 30 sekunder). Baserat på mätvärden kan den upptäcka olika kantfall (fastnålade upplevelser, tom skärm, schemaläggningsproblem osv.). Med den här funktionen kan teamet fjärrövervaka om en spelare spelar upp innehåll, förbättrar reaktiviteten till tomma skärmar eller trasiga upplevelser i fältet och minskar risken för att slutanvändaren får en trasig upplevelse.
+* As a Cloud Service skärmar har nu stöd för grundläggande uppspelningsövervakning. Spelaren rapporterar nu olika uppspelningsmått för varje ping (standardvärdet är 30 sekunder). Baserat på mätvärden kan den upptäcka olika kantfall (fastnålade upplevelser, tom skärm, schemaläggningsproblem osv.). Med den här funktionen kan teamet fjärrövervaka om en spelare spelar upp innehåll, förbättrar reaktiviteten till tomma skärmar eller trasiga upplevelser i fältet och minskar risken för att slutanvändaren får en trasig upplevelse.
 Se [Grundläggande uppspelningsövervakning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html?lang=en#playback-monitoring) för mer information.
 
 * Miniatyrbildsstöd för videor i stöds nu i as a Cloud Service skärmar. Innehållsförfattare kan definiera en miniatyrbild för videoklipp så att bilden kan användas som platshållare och testa uppspelning och målgruppsanpassning av innehållet medan videon färdigställs av rätt team. Bilden kan också användas om videouppspelningen misslyckas.
-Se [Stöd för miniatyrbilder för videoklipp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/core-product-features/thumbnail-support-videos.html) för mer information.
+Se [Stöd för miniatyrbilder för videor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/core-product-features/thumbnail-support-videos.html) för mer information.
 
 ### Felkorrigeringar {#bug-fixes-screens}
 
@@ -180,7 +180,7 @@ Nästa version är planerad till 7 oktober 2021.
 
 Releasedatum för Cloud Acceleration Manager är 4 oktober 2021.
 
-### Vad är nytt? {#what-is-new-cam}
+### Nyheter {#what-is-new-cam}
 
 * Med Cloud Acceleration Manager kan användarna nu visa BPA-rapporter i en förhandsgranskning som kan skrivas ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela. Se steg 6 och 7 i [Använda analyskort för metodtips](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=en#best-practices-analysis).
 
@@ -209,7 +209,7 @@ Releasedatum för Best Practices Analyzer v2.1.18 är 2 september 2021.
 
 ### Nyheter {#what-is-new}
 
-* Möjlighet att identifiera och rapportera totalt antal noder.
+* Möjlighet att identifiera och rapportera det totala antalet noder.
 
 * Möjlighet att identifiera och rapportera om nodlagringstyp och -storlek.
 

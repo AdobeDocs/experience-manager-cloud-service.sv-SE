@@ -1,8 +1,8 @@
 ---
-title: AEM Commerce Content Author Journey
+title: AEM Commerce Content Author Resney
 description: Börja här för en guidad resa via AEM Commerce Authoring
 exl-id: 155a2534-746d-4237-b7e2-9212c36fac7f
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Den här guiden leder dig igenom de viktigaste AEM för innehåll och handel så
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
-[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
+[En dokumentationsresa](/help/journey-documentation/documentation-journeys.md) binder samman många olika och kanske komplicerade ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren att, som kan vara ny att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskap.
 
 Dokumentation Journeys bygger på principer för god praxis, grundade på Adobe senaste forskning, beprövade implementeringserfarenheter från Adobe konsulter och återkoppling från kundprojekt.
 
@@ -41,11 +41,11 @@ Information i den här resan kan förstås vara användbar för andra personer, 
 
 Du kommer att utforska många ämnen under den här resan. I följande artiklar hittar du grundläggande kunskaper och länkar till detaljerad teknisk dokumentation.
 
-Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte har använt AEM innehåll och handel tidigare rekommenderar vi att du börjar i början och fortsätter sekventiellt.
+Även om du kan gå direkt till en viss del av resan bygger många koncept på en del i tidigare artiklar. Om du inte har använt AEM innehåll och handel tidigare rekommenderar Adobe att du börjar i början och gör sekventiellt framsteg.
 
 | # | Artikel | Beskrivning |
 |---|---|---|
-| 0 | AEM Content and Commerce Developer Journey | Det här dokumentet |
+| 0 | AEM Content and Commerce Developer Trney | Det här dokumentet |
 | 1 | [Läs om AEM innehåll och handel](/help/commerce-cloud/introduction.md) | Lär dig mer om koncept och grunder AEM innehåll och handel. |
 | 2 | [Komma igång med AEM CIF-grunderna](getting-started.md) | Lär dig hur du får tillgång till och använder produktdata för dina användningsfall. |
 | 3 | [Hantera sidor och mallar för produktkataloger](catalog-templates.md) | Lär dig hur du skapar en typisk produktkatalogupplevelse. |

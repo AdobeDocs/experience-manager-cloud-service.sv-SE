@@ -1,10 +1,10 @@
 ---
 title: Snabba utvecklingsmiljöer
-description: Lär dig använda miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
+description: Lär dig hur du använder miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '3313'
+source-wordcount: '3312'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Följ de här stegen för att använda Cloud Manager för att skapa en RDE för 
 
 1. Klicka **Spara** för att lägga till den angivna miljön.
 
-The **Översikt** visas nu din nya miljö i **Miljö** kort.
+The **Ökning** visas nu din nya miljö i **Miljö** kort.
 
 När de skapas ställs de virtuella skrivborden in på den senast tillgängliga AEM. En RDE-återställning, som även kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
 
@@ -139,7 +139,7 @@ När du har lagt till en RDE för ditt program med hjälp av Cloud Manager kan d
    Detta bör visa alla program i din konfigurerade organisation.
 
 
-Mer information och demonstrationer finns i [konfigurera en RDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html) videosjälvstudiekurs.
+Mer information och demonstrationer finns i [konfigurera en RDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html) videosjälvstudie.
 
 ## Använda RDE under utvecklingen av en ny funktion {#using-rde-while-developing-a-new-feature}
 
@@ -168,7 +168,7 @@ Adobe rekommenderar följande arbetsflöde för att utveckla en ny funktion:
 
 * Distribuera koden till produktionen via Cloud Managers produktionsflöde.
 
-## Använda RDE för att felsöka en befintlig funktion {#use-rde-to-debug-an-existing-feature}
+## Felsöka en befintlig funktion med RDE {#use-rde-to-debug-an-existing-feature}
 
 Arbetsflödet liknar utvecklingen av en ny funktion. Skillnaden är att koden som synkroniseras till RDE skulle återspegla Git-etiketten för det som har skickats till miljön där problemet har hittats. Dessutom kan det vara användbart att distribuera innehåll som matchar den överordnade miljön. Detta kan du göra genom att exportera och importera innehållspaket.
 
@@ -266,7 +266,7 @@ Från `dispatcher` i ett AEM projekt kan du zippa upp dispatcherkonfigurationen 
 
 `mvn clean package`
 
-eller använda zip-kommandot nedan från `src` katalogen `dispatcher` modul:
+eller använda zip-kommandot nedan från `src` katalogen för `dispatcher` modul:
 
 `zip -y -r dispatcher.zip .`
 
@@ -280,7 +280,7 @@ distribuera sedan konfigurationen med det här kommandot:
 
 >[!NOTE]
 >
->RDE har stöd för dispatcherkonfigurationen för&quot;flexibelt läge&quot;, men inte för dispatcherkonfigurationen för&quot;äldre läge&quot;. Se [dokumentation för avsändare](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill ha information om de två lägena. Du kan även läsa dokumentationen om [migrera till flexibelt läge](/help/implementing/dispatcher/validation-debug.md#migrating), om du inte redan har gjort det.
+>RDE har stöd för dispatcherkonfigurationen för &quot;Flexible mode&quot;, men inte för dispatcherkonfigurationen för &quot;Legacy mode&quot;. Se [dokumentation för avsändare](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill ha information om de två lägena. Du kan även läsa dokumentationen om [migrera till flexibel modell](/help/implementing/dispatcher/validation-debug.md#migrating), om du inte redan har gjort det.
 
 En lyckad distribution genererar ett svar som liknar följande:
 
@@ -333,7 +333,7 @@ Environment: Ready
  com.adobe.granite.demo.MyServlet
 ```
 
-Om kommandot returnerar en anteckning om instansinstallationer kan du fortsätta och utföra nästa uppdatering, men den senaste uppdateringen kanske inte visas på instansen än.
+Om kommandot returnerar en anteckning om instanser som distribueras kan du fortsätta och utföra nästa uppdatering, men den senaste uppdateringen kanske inte visas på instansen än.
 
 ### Visa distributionshistorik {#show-deployment-history}
 
@@ -361,7 +361,7 @@ aio aem:rde:delete com.adobe.granite.csrf.impl.CSRFFilter
 #14: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on publish - done by karl at 2022-09-12T22:01:12.979Z
 ```
 
-Mer information och demonstrationer finns i [använda RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html) videosjälvstudiekurs.
+Mer information och demonstrationer finns i [använda RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html) videosjälvstudie.
 
 ## Återställ {#reset-rde}
 
@@ -393,13 +393,13 @@ Du kan använda Cloud Manager för att återställa din RDE genom att följa ste
 
 1. Klicka på det program för vilket du vill återställa RDE.
 
-1. Från **Översikt** klickar du på **Miljö** överst på skärmen.
+1. Från **Ökning** klickar du på **Miljö** överst på skärmen.
 
    ![Fliken Miljö](/help/implementing/cloud-manager/assets/environments-tab2.png)
 
    * Du kan även klicka på **Visa alla** på **Miljö** för att gå direkt till **Miljö** -fliken.
 
-     ![Visa alla, alternativ](/help/implementing/cloud-manager/assets/environment-showall.png)
+     ![Visa alla](/help/implementing/cloud-manager/assets/environment-showall.png)
 
 1. The **Miljö** öppnas och alla miljöer för programmet visas.
 
@@ -421,7 +421,7 @@ När återställningsprocessen för RDE har startats tar det oftast några minut
 
 ![Återställningsstatus för RDE](/help/implementing/cloud-manager/assets/rde-reset-status-environments-card.png)
 
-Du kan också återställa den lokala redigeringsmiljön med hjälp av ellipsknappen direkt från **Miljö** på **Översikt** sida.
+Du kan också återställa den lokala redigeringsmiljön med hjälp av ellipsknappen direkt från **Miljö** på **Ökning** sida.
 
 ![Återställ RDE från miljökort](/help/implementing/cloud-manager/assets/rde-reset-environments-card.png)
 
@@ -429,7 +429,7 @@ Mer information om hur du använder Cloud Manager för att hantera dina miljöer
 
 ## Körningslägen {#runmodes}
 
-RDE-specifik OSGI-konfiguration kan användas med suffix i mappnamnet, som i exemplen nedan:
+RDE-specifik OSGI-konfiguration kan tillämpas med hjälp av suffix i mappnamnet, som i exemplen nedan:
 
 * `config.rde`
 * `config.author.rde`
@@ -459,7 +459,7 @@ Observera att du är begränsad till 1 GB när du synkroniserar innehållspaket.
 
 ## Loggning {#logging}
 
-Loggnivåer kan ställas in genom att ändra OSGi-konfigurationer. Kontrollera [dokumentation](/help/implementing/developing/introduction/logging.md) för mer information.
+Loggnivåer kan ställas in genom att modifiera OSGi-konfigurationer. Kontrollera [dokumentation](/help/implementing/developing/introduction/logging.md) för mer information.
 
 ## Hur skiljer sig de lokala utvecklingsmiljöerna från utvecklingsmiljöer i molnet? {#how-are-rds-different-from-cloud-development-environments}
 

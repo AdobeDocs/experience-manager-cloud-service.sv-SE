@@ -2,9 +2,9 @@
 title: Skapa modeller för innehållsfragment - Headless-konfiguration
 description: Definiera strukturen för det innehåll du skapar och använd AEM headless-funktioner med hjälp av Content Fragment-modeller.
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
 
    ![Dra och släppa fält](../assets/models-drag-and-drop.png)
 
-1. När du har placerat ett fält måste du konfigurera dess egenskaper. Redigeraren växlar automatiskt till **Egenskaper** -fliken för det tillagda fältet där du kan ange de obligatoriska fälten.
+1. När du har placerat ett fält måste du konfigurera dess egenskaper. Redigeraren växlar automatiskt till **Egenskaper** för det tillagda fältet där du kan ange de obligatoriska fälten.
 
    ![Konfigurera egenskaper](../assets/models-configure-properties.png)
 
@@ -57,7 +57,7 @@ En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när ny
       ![Aktivera bekräftelsedialogrutan](../assets/models-enabling.png)
 1. Modellen är nu aktiverad och klar att användas.
 
-   ![Modellen är aktiverad](../assets/models-enabled.png)
+   ![Modell aktiverad](../assets/models-enabled.png)
 
 The **Modellredigerare för innehållsfragment** har stöd för många olika datatyper, till exempel enkla textfält, resursreferenser, referenser till andra modeller och JSON-data.
 

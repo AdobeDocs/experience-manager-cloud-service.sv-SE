@@ -2,9 +2,9 @@
 title: Experience Manager [!DNL Forms] Batchbearbetning av as a Cloud Service Communications
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: 6b546f551957212614e8b7a383c38797cc21fba1
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1692'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Kommunikationen tillhandahåller API:er för on demand- och schemalagd dokumentg
 
 * Synkrona API:er är lämpliga för dokumentgenerering on demand, med låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
 
-* API:er för gruppbearbetning (asynkrona API:er) är lämpliga för schemalagd hög genomströmning vid användning av flera dokumentgenereringar. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kreditkortsräkningar och förmånsräkningar som genereras varje månad.
+* API:er för gruppbearbetning (asynkrona API:er) är lämpliga för schemalagd hög genomströmning vid användning av flera dokumentgenereringar. Dessa API:er genererar dokument gruppvis. Till exempel telefonräkningar, kontoutdrag och förmånsräkningar som genereras varje månad.
 
 <!-- The following skills are required to create templates and use HTTP APIs: 
 
@@ -32,7 +32,7 @@ Kommunikationen tillhandahåller API:er för on demand- och schemalagd dokumentg
 
 En gruppåtgärd är en process för att generera flera dokument av liknande typ för en uppsättning poster med schemalagda intervall. En gruppåtgärd består av två delar: Konfiguration (definition) och körning.
 
-* **Konfiguration (definition)**: I en batchkonfiguration lagras information om olika resurser och egenskaper som ska anges för genererade dokument. Det innehåller till exempel information om XDP- eller PDF-mallen och platsen för kunddata som ska användas tillsammans med att ange olika egenskaper för utdatadokument.
+* **Konfiguration (definition)**: En batchkonfiguration lagrar information om olika resurser och egenskaper som ska anges för genererade dokument. Det innehåller till exempel information om XDP- eller PDF-mallen och platsen för kunddata som ska användas tillsammans med att ange olika egenskaper för utdatadokument.
 
 * **Körning**: Om du vill starta en gruppåtgärd skickar du gruppkonfigurationsnamnet till API:t för batchkörning.
 
@@ -63,11 +63,11 @@ Du kan titta på videon eller följa instruktionerna nedan för att lära dig hu
 Följande krävs för att använda batch-API:
 
 * [Microsoft Azure Storage-konto](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create)
-* PDF eller XDP-mallar
+* PDF- eller XDP-mallar
 * [Data som ska sammanfogas med mallar](#form-data)
 * Användare med administratörsbehörighet för Experience Manager
 
-### Konfigurera miljön {#setup-your-environment}
+### Konfigurera din miljö {#setup-your-environment}
 
 Innan du använder en gruppåtgärd:
 
@@ -87,7 +87,7 @@ Skapa på din Microsoft Azure-lagring [behållare](https://docs.microsoft.com/en
 
 Molnkonfigurationen ansluter din Experience Manager-instans till Microsoft Azure Storage. Så här skapar du en molnkonfiguration:
 
-1. Gå till Verktyg > Cloud Services > Azure Storage
+1. Gå till Verktyg > Cloud Service > Azure Storage
 1. Öppna en mapp som är värd för konfigurationen och klicka på Skapa. Du använder mappen Global eller skapar en mapp.
 1. Ange namnet på konfigurationen och autentiseringsuppgifterna som ska anslutas till tjänsten. Du kan [hämta dessa autentiseringsuppgifter från din Microsoft Azure-lagringsportal](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 1. Klicka på Skapa.
@@ -104,7 +104,7 @@ Så här skapar du konfigurationen:
 1. Öppna en mapp som är värd för konfigurationen och klicka på Skapa. Du använder mappen Global eller skapar en mapp.
 1. Ange namn och namn på konfigurationen. I Lagring väljer du Microsoft Azure Storage.
 1. I Sökväg till lagringskonfiguration bläddrar du till och väljer den molnkonfiguration som innehåller autentiseringsuppgifter för det kundägda Azure-lagringskontot.
-1. Ange namnet på Azure Storage-behållaren och mappen som innehåller poster i källmappen.
+1. I källmappen anger du namnet på Azure Storage-behållaren och mappen som innehåller poster.
 1. Ange sökvägen till Azure Storage-behållaren och mappen där de genererade dokumenten ska lagras i målmappen.
 1. Klicka på Skapa.
 
@@ -125,11 +125,11 @@ Om du vill använda ett batch-API skapar du en batchkonfiguration och kör en k�
 
 ### Skapa en batch {#create-a-batch}
 
-Om du vill skapa en grupp använder du `POST /config` API. Inkludera följande obligatoriska egenskaper i HTTP-begärans innehåll:
+Använd kommandot `POST /config` API. Inkludera följande obligatoriska egenskaper i HTTP-begärans innehåll:
 
-* **configName**: Ange gruppens unika namn. Till exempel, `wknd-job`
+* **configName**: Ange gruppnamnet. Till exempel, `wknd-job`
 * **dataSourceConfigUri**: Ange plats för konfigurationen för batchdatalagret. Den kan vara en relativ eller absolut sökväg till konfigurationen. Till exempel: `/conf/global/settings/forms/usc/batch/wknd-batch`
-* **outputTypes**: Ange utdataformat: PDF och TRYCK. Om du använder utdatatypen PRINT, `printedOutputOptionsList` anger du minst ett utskriftsalternativ. Utskriftsalternativen identifieras av sin renderingstyp, så för närvarande tillåts inte flera utskriftsalternativ med samma renderingstyp. De format som stöds är PS, PCL, DPL, IPL och ZPL.
+* **outputTypes**: Ange utdataformat: PDF och PRINT. Om du använder utdatatypen PRINT, `printedOutputOptionsList` anger du minst ett utskriftsalternativ. Utskriftsalternativen identifieras av sin renderingstyp, så för närvarande tillåts inte flera utskriftsalternativ med samma renderingstyp. De format som stöds är PS, PCL, DPL, IPL och ZPL.
 
 * **mall**: Ange en absolut eller relativ sökväg för mallen. Till exempel, `crx:///content/dam/formsanddocuments/wknd/statements.xdp`
 
@@ -141,7 +141,7 @@ Du kan använda `GET /config /[configName]` för att se information om batchkonf
 
 ### Kör en batch {#run-a-batch}
 
-Om du vill köra (köra) en batch använder du `POST /config /[configName]/execution`. Om du till exempel vill köra en batch med namnet wknd-demo använder du /config/wknd-demo/execution. Servern returnerar HTTP-svarskod 202 när den godkänner begäran. API:t returnerar ingen nyttolast förutom en unik kod (execution-identifier) i huvudet för HTTP-svaret för batchjobbet som körs på servern. Du kan använda körnings-ID för att hämta batchstatus.
+Om du vill köra (köra) en batch använder du `POST /config /[configName]/execution`. Om du till exempel vill köra en batch med namnet wknd-demo använder du /config/wknd-demo/execution. Servern returnerar HTTP-svarskod 202 när den godkänner begäran. API:t returnerar ingen nyttolast förutom en unik kod (execution-identifier) i huvudet för HTTP-svaret för batchjobbet som körs på servern. Du kan använda körnings-ID:t för att hämta batchstatus.
 
 >[!NOTE]
 >
@@ -151,19 +151,18 @@ Om du vill köra (köra) en batch använder du `POST /config /[configName]/execu
 
 Om du vill hämta status för en batch använder du `GET /config /[configName]/execution/[execution-identifier]`. Körnings-ID:t inkluderas i rubriken för HTTP-svar för gruppkörningsbegäran.
 
-Svaret på statusbegäran innehåller statusavsnittet. Den innehåller information om batchjobbets status, antalet poster som redan är i pipeline (som redan har lästs och bearbetats) och status för varje outputType/renderType(antal pågående, slutförda och misslyckade objekt). Status omfattar även start- och sluttid för batchjobb tillsammans med information om eventuella fel. Sluttiden är -1 tills batchkörningen faktiskt har slutförts.
+Svaret på statusbegäran innehåller statusavsnittet. Den innehåller information om batchjobbets status, antalet poster som redan är i pipeline (som redan har lästs och bearbetats) och status för varje outputType/renderType(antal pågående, slutförda och misslyckade objekt). Statusen omfattar även start- och sluttid för batchjobb tillsammans med information om eventuella fel. Sluttiden är -1 tills batchkörningen faktiskt har slutförts.
 
 >[!NOTE]
 >
 >* När du begär flera PRINT-format innehåller statusen flera poster. Exempel: PRINT/ZPL, PRINT/IPL.
 >* Ett batchjobb läser inte alla poster samtidigt, utan jobbet fortsätter att läsa och öka antalet poster. Statusen returnerar alltså -1 tills alla poster har lästs.
 
-
 ### Visa genererade dokument {#view-generated-documents}
 
-När jobbet är klart lagras de genererade dokumenten i `success` på den målplats som anges i konfigurationen för batchdatalagret. Om några fel uppstår skapar tjänsten en `failure` mapp. Här finns information om typ och orsak till fel.
+När jobbet är klart lagras de genererade dokumenten i `success` på den målplats som anges i konfigurationen för batchdatalagret. Om det finns några fel skapar tjänsten en `failure` mapp. Här finns information om typ och orsak till fel.
 
-Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Sedan innehåller målplatsen två undermappar `pdf` och `pcl`, en för varje utdatatyp. Låt oss anta att genereringen av PDF har slutförts och sedan `pdf` undermappen innehåller `success` undermapp som i sin tur innehåller det genererade PDF-dokumentet `record1.pdf`. Låt oss anta att PCL-genereringen misslyckades, sedan `pcl` undermappen innehåller en `failure` undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Dessutom innehåller målplatsen en tillfällig mapp med namnet `__tmp__` som innehåller vissa filer som krävs vid batchkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
+Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Sedan innehåller målplatsen två undermappar `pdf` och `pcl`, en för varje utdatatyp. Låt oss anta att genereringen av PDF har slutförts, och sedan `pdf` undermappen innehåller `success` undermapp som i sin tur innehåller det genererade PDF-dokumentet `record1.pdf`. Låt oss anta att PCL-genereringen misslyckades, sedan `pcl` undermappen innehåller en `failure` undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Dessutom innehåller målplatsen en tillfällig mapp med namnet `__tmp__` som innehåller vissa filer som krävs vid batchkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
 
 >[!NOTE]
 >

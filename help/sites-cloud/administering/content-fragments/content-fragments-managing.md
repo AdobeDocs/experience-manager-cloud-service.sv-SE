@@ -1,12 +1,12 @@
 ---
 title: Hantera innehållsfragment
-description: Lär dig hur du använder konsolen Innehållsfragment för att hantera AEM innehållsfragment. för framtagning av sidor, eller som bas för ditt headless-innehåll.
+description: Lär dig hur du använder konsolen Innehållsfragment för att hantera AEM innehållsfragment, för sidredigering eller som bas för rubrikfritt innehåll.
 feature: Content Fragments
 role: User
 exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
-source-git-commit: 1473c1ffccc87cb3a0033750ee26d53baf62872f
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2052'
+source-wordcount: '2051'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 >
 >Innehållsfragment kan användas:
 >
->* vid framtagning av sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
+>* när du redigerar sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 >* for [Headless Content Delivery using Content Fragments with GraphQL](/help/sites-cloud/administering/content-fragments/content-fragments-graphql.md).
 
 >[!NOTE]
@@ -68,7 +68,7 @@ Så här skapar du ett innehållsfragment:
    >
    >Om du vill ha platsen för det nya fragmentet fördefinierad kan du navigera till mappen där du vill skapa fragmentet, eller ange platsen när du skapar fragmentet.
 
-1. The **Nytt innehållsfragment** öppnas en dialogruta där du kan ange:
+1. The **Nytt innehållsfragment** öppnas en dialogruta där du kan ange
 
    * **Plats** - slutförs automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs
    * **Content Fragment Model** - välj den modell som ska användas som bas för fragmentet i listrutan.
@@ -103,7 +103,7 @@ Så här öppnar du fragmentet för redigering:
 >
 >Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
-1. Använd **Innehållsfragment** konsol för att navigera till platsen för ditt innehållsfragment.
+1. Använd **Innehållsfragment** för att navigera till platsen för ditt innehållsfragment.
 1. Öppna fragmentet för redigering genom att markera fragmentet och sedan **Öppna** i verktygsfältet.
 
 1. Fragmentredigeraren öppnas. Gör önskade ändringar:
@@ -114,11 +114,11 @@ Så här öppnar du fragmentet för redigering:
 
    >[!NOTE]
    >
-   >**Spara och stäng** är tillgängligt via **Spara** listruta.
+   >**Spara och stäng** är tillgängligt via **Spara** nedrullningsbar meny.
 
    >[!NOTE]
    >
-   >Båda **Spara och stäng** och **Stäng** kommer att avsluta redigeraren - se [Spara, stäng och versioner](#save-close-and-versions) om du vill ha fullständig information om hur de olika alternativen fungerar för innehållsfragment.
+   >Båda **Spara och stäng** och **Stäng** kommer att avsluta redigeraren - se [Spara, stäng och versioner](#save-close-and-versions) för fullständig information om hur de olika alternativen fungerar för innehållsfragment.
 
 ## Lägen och åtgärder i Content Fragment Editor {#modes-actions-content-fragment-editor}
 
@@ -126,9 +126,9 @@ Det finns olika lägen och åtgärder tillgängliga från Content Fragment Edito
 
 ### Lägen i Content Fragment Editor {#modes-in-the-content-fragment-editor}
 
-Navigera genom de olika lägena med ikonerna på sidopanelen:
+Navigera genom de olika lägena med hjälp av ikonerna på sidopanelen:
 
-* Variationer: [Redigera innehållet](#editing-the-content-of-your-fragment) och [Hantera variationer](#creating-and-managing-variations-within-your-fragment)
+* Variationer: [Redigera innehållet](#editing-the-content-of-your-fragment) och [Hantera dina variationer](#creating-and-managing-variations-within-your-fragment)
 
 * [Anteckningar](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
 * [Associerat innehåll](#associating-content-with-your-fragment)
@@ -146,16 +146,16 @@ Vissa funktioner i det övre verktygsfältet finns i flera lägen:
 
 * Ett meddelande visas när fragmentet redan refereras på en innehållssida. Du kan **Stäng** meddelandet.
 
-* Sidpanelen kan döljas/visas med **Växla sidopanel** ikon.
+* Sidpanelen kan döljas/visas med **Växla sidopanel** -ikon.
 
 * Under fragmentnamnet kan du se namnet på [Content Fragment Model](/help/sites-cloud/administering/content-fragments/content-fragments-models.md) används för att skapa det aktuella fragmentet:
 
    * Namnet är också en länk som öppnar modellredigeraren.
 
-* Se fragmentets status. information om när den skapades, ändrades eller publicerades. Statusen är även färgkodad:
+* Se fragmentets status, till exempel information om när det skapades, ändrades eller publicerades. Statusen är även färgkodad:
 
    * **Nytt**: grå
-   * **Utkast**: blå
+   * **Utkast**: blue
    * **Publicerad**: grön
    * **Ändrad**: orange
    * **Inaktiverad**: röd
@@ -227,7 +227,7 @@ När du har öppnat fragmentet kan du använda [Variationer](/help/sites-cloud/a
 
 ## Skapa och hantera variationer i fragment {#creating-and-managing-variations-within-your-fragment}
 
-När du har skapat det Överordnad innehållet kan du skapa och hantera [Variationer](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md) av det innehållet.
+När du har skapat mallinnehållet kan du skapa och hantera [Variationer](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md) av det innehållet.
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
@@ -284,7 +284,7 @@ Du kan även publicera på **Publiceringstjänst** från [Innehållsfragmentsred
 
 >[!NOTE]
 >
-Efter [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing), listas fragmentet i sidreferenserna.
+Efter dig [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing), listas fragmentet i sidreferenserna.
 
 >[!CAUTION]
 >
@@ -307,7 +307,7 @@ Om fragmentet redan refereras från ett annat fragment, eller från en sida, vis
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 
-Så här tar du bort ett fragment:
+Ta bort ett fragment:
 
 1. I **Innehållsfragment** konsolen navigerar till platsen för innehållsfragmentet.
 2. Markera fragmentet.
@@ -380,7 +380,7 @@ Den här funktionen är bara tillgänglig i **Resurser** konsol
 
 The **Jämför med aktuell** finns tillgänglig från [Tidslinje](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) när du har valt en viss version.
 
-Detta öppnas:
+Den här öppnas:
 
 * den **Aktuell** (senaste) version (vänster)
 
@@ -394,7 +394,7 @@ De visas sida vid sida, där:
    * Infogad text - grön
    * Ersatt text - blå
 
-* Med helskärmsikonen kan du öppna båda versionerna separat; växla sedan tillbaka till den parallella vyn
+* Med helskärmsikonen kan du öppna båda versionerna separat och sedan växla tillbaka till den parallella vyn
 * Du kan **Återställ** till den specifika versionen
 * **Klar** kommer du tillbaka till konsolen
 

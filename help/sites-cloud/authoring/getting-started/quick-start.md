@@ -2,9 +2,9 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1568'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,7 @@ Innan du börjar med snabbstartsguiden finns det en liten samling allmänna tips
 
 ### Hitta din sida {#finding-your-page}
 
-Det finns olika aspekter av att hitta en sida. kan du navigera och/eller söka:
+Det finns olika aspekter av att hitta en sida. Du kan navigera och/eller söka efter:
 
 1. Öppna **Webbplatser** konsol (med **Webbplatser** i [Global navigering](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) - den här utlöses (nedrullningsbar) när du väljer länken Adobe Experience Manager (överst till vänster).
 
@@ -63,7 +63,7 @@ Det finns olika aspekter av att hitta en sida. kan du navigera och/eller söka:
 
    ![Visa listrutan för val](/help/sites-cloud/authoring/assets/views.png)
 
-1. Navigera uppåt i trädet med [sidhuvudet](/help/sites-cloud/authoring/getting-started/basic-handling.md#the-header)som gör att du kan gå tillbaka till den valda platsen:
+1. Navigera uppåt i trädet med [sidhuvudet på väggen](/help/sites-cloud/authoring/getting-started/basic-handling.md#the-header)som gör att du kan gå tillbaka till den valda platsen:
 
    ![Breadcrumb-listruta](/help/sites-cloud/authoring/assets/breadcrumb.png)
 
@@ -98,10 +98,10 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 1. Kortvy:
 
-   * Ange markeringsläge med [välja nödvändig resurs](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources). Hur du gör detta beror på din enhet:
+   * Ange markeringsläge med [välja den resurs som krävs](/help/sites-cloud/authoring/getting-started/basic-handling.md#viewing-and-selecting-resources). Hur du gör detta beror på din enhet:
 
-      * På en mobil enhet: tryck och håll ned kortet
-      * På en stationär enhet: använder [snabbåtgärd](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) som representeras av tickningsikonen:
+      * På en mobil enhet: tryck och håll på kortet
+      * På en stationär enhet använder du [snabbåtgärd](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions) som representeras av tickningsikonen:
 
    * Kortet är dolt med en bock som visar att sidan har valts.
 
@@ -125,7 +125,7 @@ Så här redigerar du sidan:
 
    ![Knappen Redigera](/help/sites-cloud/authoring/assets/edit.png)
 
-   Du kommer åt detta från antingen:
+   Du kan komma åt detta från antingen:
 
    * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
    * Verktygsfältet när [sidan har valts](#selecting-your-page-for-further-action).
@@ -161,19 +161,19 @@ Så här redigerar du sidan:
 
    * [Kopiera (och klistra in)](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) en komponent:
 
-      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Kopiera** sedan **Klistra in** ikoner efter behov.
+      * Öppna komponentens verktygsfält genom att trycka eller klicka. Använd **Kopiera** sedan **Klistra in** vid behov.
 
    >[!NOTE]
    >
-   >Du kan **Klistra in** -komponenter till antingen samma sida eller en annan sida. Om du klistrar in på en annan sida som redan var öppen före klipp ut/kopiera-åtgärden, måste sidan uppdateras.
+   >Du kan **Klistra in** till antingen samma sida eller en annan sida. Om du klistrar in på en annan sida som redan var öppen före klipp ut/kopiera-åtgärden, måste sidan uppdateras.
 
    * [Ta bort](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-toolbar) en komponent:
 
-      * Öppna komponentens verktygsfält med tryck eller klicka och använd sedan **Ta bort** ikon.
+      * Öppna komponentens verktygsfält genom att trycka eller klicka och sedan använda **Ta bort** -ikon.
 
    * [Lägg till anteckningar](/help/sites-cloud/authoring/fundamentals/annotations.md#annotations) till sidan:
 
-      * Välj **Anteckna** läge (pratbubblarikon). Lägg till anteckningar med **Lägg till anteckning** (plus) ikon. Avsluta anteckningsläget med X överst till höger.
+      * Välj **Anteckna** läge (pratbubblarikon). Lägg till anteckningar med **Lägg till anteckning** (plus). Avsluta anteckningsläget med X överst till höger.
 
         ![Anteckningsknapp](/help/sites-cloud/authoring/assets/annotations.png)
 
@@ -181,7 +181,7 @@ Så här redigerar du sidan:
 
       * Välj **Förhandsgranska** i verktygsfältet.
 
-   * Återgå till redigeringsläget (eller välj ett annat läge) med **Redigera** nedrullningsbar väljare.
+   * Återgå till redigeringsläget (eller välj ett annat läge) med **Redigera** väljare.
 
    >[!NOTE]
    >
@@ -212,7 +212,7 @@ Det finns två (huvudsakliga) metoder för [redigera sidegenskaper](/help/sites-
 
 ### Publicera din sida (eller avpublicera) {#publishing-your-page-or-unpublishing}
 
-Det finns två huvudmetoder för [publicera din sida](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) (och även avpublicering):
+Det finns två metoder [publicera din sida](/help/sites-cloud/authoring/fundamentals/publishing-pages.md) (och även för avpublicering):
 
 * Från **Webbplatser** konsol:
 
@@ -289,7 +289,7 @@ Låsikonen ser till exempel ut så här:
 
    ![Referensvy](/help/sites-cloud/authoring/assets/references-list.png)
 
-1. Tryck/klicka på den typ av referens som krävs för att visa mer information och (vid behov) vidta ytterligare åtgärder.
+1. Tryck/klicka på den typ av referens som krävs för att visa mer information och (när det är lämpligt) vidta ytterligare åtgärder.
 
 ### Skapa en version av din sida {#creating-a-version-of-your-page}
 
@@ -319,7 +319,7 @@ Samma grundläggande funktion används när du återställer och/eller jämför 
 
    * **Återgå till den här versionen**
 
-      * Versionen återställs.
+      * Versionen har återställts.
 
    * **Visa skillnader**
 

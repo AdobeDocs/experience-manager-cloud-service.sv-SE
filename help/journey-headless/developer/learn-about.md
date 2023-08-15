@@ -2,16 +2,16 @@
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
 exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1620'
 ht-degree: 0%
 
 ---
 
 # Läs om CMS Headless Development {#learn-about}
 
-I den här delen av [AEM Headless Developer Journey,](overview.md) lär dig mer om headless-teknik och varför du skulle använda den.
+I den här delen av [AEM Headless Developer Journey](overview.md) lär dig mer om headless-teknik och varför du skulle använda den.
 
 ## Syfte {#objective}
 
@@ -56,7 +56,7 @@ Användarna förväntar sig engagemang oavsett plattform eller kontaktyta och be
 
 Huvudet för alla system är vanligtvis systemets utdatarenderare, vanligtvis i form av ett grafiskt gränssnitt eller andra grafiska utdata.
 
-En server utan headlessserver sitter till exempel förmodligen i ett rack i ett serverrum någonstans och har ingen övervakare ansluten. För att få tillgång till den måste du fjärransluta till den. I det här fallet är monitorn huvudet när den tar hand om återgivningen av serverns utdata. Du som kund för tjänsten kan ge dig ett eget huvud (bildskärmen) när du fjärransluter till den.
+En headless-server sitter till exempel förmodligen i ett rack i ett serverrum någonstans och har ingen övervakare ansluten. För att få tillgång till den måste du fjärransluta till den. I det här fallet är monitorn huvudet när den tar hand om återgivningen av serverns utdata. Du som kund för tjänsten kan ge dig ett eget huvud (bildskärmen) när du fjärransluter till den.
 
 När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsätter att leverera det till konsumenterna. Genom att bara leverera **innehåll** på ett standardiserat sätt utelämnar ett headless CMS den slutliga återgivningen och lämnar kvar **presentation** av innehållet till den konsumerande tjänsten.
 
@@ -76,7 +76,7 @@ Den här frikopplingen innebär att varje konsumtionstjänst (frontend) kan bygg
 
 ## Teknisk bakgrund {#technology}
 
-Med en headless-strategi kan ni bygga en tekniklösning som enkelt och snabbt kan anpassas efter framtida behov av digitala upplevelser.
+Med ett headless-tillvägagångssätt kan ni bygga en tekniklösning som enkelt och snabbt kan anpassas till framtida krav på digitala upplevelser.
 
 Tidigare var API:er för CMS:er vanligtvis REST-baserade. REST (Representational State transfer) tillhandahåller resurser som text på ett statslöst sätt. Detta gör att resurserna kan läsas och ändras med en fördefinierad uppsättning åtgärder. REST möjliggör stor interoperabilitet mellan tjänster på webben genom att säkerställa en tillståndslös representation av innehållet.
 
@@ -88,7 +88,7 @@ Oavsett vilket API du väljer kan du, genom att definiera ett headless-system ba
 
 Normalt återges innehållet på klientsidan. Detta innebär normalt att någon anropar ditt innehåll på en mobil enhet, att ditt CMS-system skickar innehållet och att den mobila enheten (klienten) sedan ansvarar för återgivningen av det innehåll som du betjänade. Om enheten är gammal eller långsam på något annat sätt är den digitala upplevelsen också långsam.
 
-Att frigöra innehåll från presentation innebär att det kan finnas mer kontroll över sådana prestandaproblem på klientsidan. SSR (Server-side rendering) överför ansvaret för återgivningen av innehållet från klientens webbläsare till servern. På så sätt kan ni som innehållsleverantör erbjuda en garanterad prestandanivå för er målgrupp om det är vad som krävs.
+Att frigöra innehåll från presentation innebär att det kan finnas mer kontroll över sådana prestandaproblem på klientsidan. SSR-återgivning (Server-side rendering) överför ansvaret för återgivningen av innehållet från klientens webbläsare till servern. På så sätt kan ni som innehållsleverantör erbjuda en garanterad prestandanivå för er målgrupp om det är vad som krävs.
 
 ## Organisationsutmaningar {#organization}
 

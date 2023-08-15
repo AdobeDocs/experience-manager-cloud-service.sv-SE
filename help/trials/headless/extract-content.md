@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: b9b9cf79173a0ae486bd5d8fcbc1fec48c0b2bc8
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Nu när du har kört de två primära typerna av frågor kan du fråga efter dit
 
    ![Starta anpassad fråga](assets/do-not-localize/custom-query-1.png)
 
-1. Definiera de objekt som frågan ska innehålla för den valda innehållsfragmentmodellen. Igen, skriv den öppna klammerparentesen `{`och trycker sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att visa en lista som fylls i automatiskt. Välj `items` från alternativen.
+1. Definiera de objekt som frågan ska innehålla för den valda innehållsfragmentmodellen. Igen, skriv inledande hakparentes `{`och trycker sedan på Ctrl+Blanksteg eller Alt+Blanksteg för att visa en lista som fylls i automatiskt. Välj `items` från alternativen.
 
 1. Tryck eller klicka på **Förtifiera** för att automatiskt formatera koden så att den blir lättare att läsa.
 
@@ -175,7 +175,7 @@ Du skapar en beständig fråga som innehåller data som du vill använda från k
 
 1. När du är nöjd med frågan klickar du på **Spara som** längst upp i frågeredigeraren för att behålla frågan.
 
-1. I **Frågenamn** popup-fönster, ge frågan namnet `adventure-list`.
+1. I **Frågenamn** ge frågan namnet `adventure-list`.
 
 1. Tryck eller klicka **Spara som**.
 

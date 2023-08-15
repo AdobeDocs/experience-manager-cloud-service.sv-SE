@@ -2,9 +2,9 @@
 title: Redigera sidegenskaper
 description: Lär dig hur du definierar de egenskaper som krävs för att hantera en sida i AEM.
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 0183e14ad1653e98c06b19ea36c7e97dedccdb84
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2279'
 ht-degree: 3%
 
 ---
@@ -76,7 +76,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Vanity URL**
 
-   * Gör att du kan ange en fågel-URL för den här sidan, vilket kan ge dig en kortare och/eller mer uttrycksfull URL.
+   * Här kan du ange en fågel-URL för den här sidan, vilket gör att du kan ha en kortare och/eller mer uttrycksfull URL.
    * Om Vanity-URL:en till exempel är inställd på `welcome` till den sida som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com`sedan `http://example.com/welcome` skulle vara den vanligaste URL:en för `http://example.com/content/v1.0/startpage`
 
   >[!CAUTION]

@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 4279
 thumbnail: customize-aem-cif-core-component.jpg
 exl-id: 4933fc37-5890-47f5-aa09-425c999f0c91
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2559'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 >[!TIP]
 >
-> Använd [AEM](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
+> Använd [AEM projekttyp](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
 
 ## Vad du ska bygga
 
 Varumärket Venia började nyligen tillverka vissa produkter med hjälp av hållbara material och företaget skulle vilja visa en **Miljövänlig** som en del av Product Teaser. Ett nytt anpassat attribut skapas i Adobe Commerce för att ange om en produkt använder **Miljövänlig** material. Det här anpassade attributet läggs till som en del av GraphQL-frågan och visas i Product Teaser för angivna produkter.
 
-![Slutlig implementering av miljöanpassade märken](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
+![Slutlig implementering av Eco-Friendly Badge](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
 ## Förutsättningar {#prerequisites}
 
@@ -52,14 +52,14 @@ Klona [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia)och åsi
    $ git clone git@github.com:adobe/aem-cif-guides-venia.git
    ```
 
-1. Bygg och distribuera projektet till en lokal instans av AEM:
+1. Skapa och distribuera projektet till en lokal instans av AEM:
 
    ```shell
    $ cd aem-cif-guides-venia/
    $ mvn clean install -PautoInstallSinglePackage,cloud
    ```
 
-1. Lägg till nödvändiga OSGi-konfigurationer så att du ansluter AEM till en Adobe Commerce-instans eller lägger till konfigurationerna i det nya projektet.
+1. Lägg till nödvändiga OSGi-konfigurationer så att du kan ansluta AEM till en Adobe Commerce-instans eller lägga till konfigurationerna i det nyskapade projektet.
 
 1. Nu bör du ha en fungerande version av en storefront som är ansluten till en Adobe Commerce-instans. Navigera till `US` > `Home` sida vid: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
 
@@ -77,7 +77,7 @@ Product Teaser Component utökas genom hela kursen. Som ett första steg lägger
 
    ![Insert Product Teaser](../assets/customize-cif-components/product-teaser-add-component.png)
 
-3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för att söka efter resurser **Produkter**. Den här listan bör visa en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** på **Product Teaser** på sidan.
+3. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan för att söka efter resurser **Produkter**. Den här listan bör visa en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans. Välj en produkt och **dra och släpp** den på **Product Teaser** på sidan.
 
    ![Dra och släpp Product Teaser](../assets/customize-cif-components/drag-drop-product-teaser.png)
 
@@ -103,7 +103,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
    ![Sök efter Valeria-produkt](../assets/customize-cif-components/search-valeria-product.png)
 
-1. I produktvyn klickar du på **Lägg till attribut** > **Skapa nytt attribut**.
+1. Klicka på i produktvyn **Lägg till attribut** > **Skapa nytt attribut**.
 1. Fyll i **Nytt attribut** formulär med följande värden (lämna standardinställningarna för andra värden)
 
    | Fältuppsättning | Fältetikett | Värde |
@@ -137,7 +137,7 @@ De produkter och produktdata som visas i AEM lagras i Adobe Commerce. Lägg seda
 
 ## Använd en GraphQL-utvecklingsmiljö för att verifiera attribut {#use-graphql-ide}
 
-Innan du börjar använda AEM kod är det praktiskt att utforska [GraphQL - översikt](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF Core-komponenterna.
+Innan du hoppar in i AEM kod är det praktiskt att utforska [GraphQL - översikt](https://devdocs.magento.com/guides/v2.4/graphql/) med en GraphQL IDE. Adobe Commerce integrering med AEM görs huvudsakligen via en serie GraphQL-frågor. Att förstå och ändra GraphQL-frågor är ett av de viktigaste sätten att utöka CIF Core-komponenterna.
 
 Använd sedan en GraphQL-utvecklingsmiljö för att verifiera att `eco_friendly` har lagts till i produktattributuppsättningen. Skärmbilder i den här självstudiekursen använder [Altair GraphQL Client](https://chrome.google.com/webstore/detail/altair-graphql-client/flnheeellpciglgpaodhkhmapeljopja).
 
@@ -354,7 +354,7 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
 
    Komponentdefinitionen ovan gäller för Product Teaser Component i ditt projekt. Observera egenskapen `sling:resourceSuperType="core/cif/components/commerce/productteaser/v1/productteaser"`. Den här egenskapen är ett exempel på hur du skapar en [Proxy-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html#create-proxy-components). I stället för att kopiera och klistra in HTML-skripten för Product Teaser från AEM CIF Core Components kan du använda `sling:resourceSuperType` för att ärva alla funktioner.
 
-1. Öppna filen `productteaser.html`. Den här filen är en kopia av `productteaser.html` från [CIF Product Teaser](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html).
+1. Öppna filen `productteaser.html`. Filen är en kopia av `productteaser.html` från [CIF Product Teaser](https://github.com/adobe/aem-core-cif-components/blob/master/ui.apps/src/main/content/jcr_root/apps/core/cif/components/commerce/productteaser/v1/productteaser/productteaser.html).
 
    ```html
    <!--/* productteaser.html */-->
@@ -367,7 +367,7 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
    ></sly>
    ```
 
-   Observera att Sling Model för `MyProductTeaser` används och tilldelas `product` variabel.
+   Observera att Sling-modellen för `MyProductTeaser` används och tilldelas `product` variabel.
 
 1. Ändra `productteaser.html` så att du kan ringa `isEcoFriendly` metod som har använts i föregående övning:
 
@@ -415,7 +415,7 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
 
    ![Miljövänligt meddelande visas](../assets/customize-cif-components/eco-friendly-text-displayed.png)
 
-   Om produkten har `eco_friendly` attribut inställt på **Ja** ska du se texten&quot;Eco-Friendly&quot; på sidan. Försök att byta till olika produkter för att se hur beteendet förändras.
+   Om produkten har `eco_friendly` attribut inställt på **Ja** ska du se texten&quot;Eco-Friendly&quot; på sidan. Försök med att byta till olika produkter för att se hur beteendet förändras.
 
 1. Öppna AEM `error.log` för att se de tillagda loggsatserna. The `error.log` är på `<AEM SDK Install Location>/crx-quickstart/logs/error.log`.
 
@@ -482,7 +482,7 @@ I det här läget är logiken för när **Miljövänlig** emblemet fungerar, men
 
 1. Uppdatera till **Venia - startsida** på [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html) där Product Teaser har lagts till.
 
-   ![Slutlig implementering av miljöanpassade märken](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
+   ![Slutlig implementering av Eco-Friendly Badge](../assets/customize-cif-components/final-product-teaser-eco-badge.png)
 
 ## Grattis {#congratulations}
 

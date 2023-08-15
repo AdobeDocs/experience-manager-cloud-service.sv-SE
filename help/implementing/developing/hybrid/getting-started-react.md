@@ -2,9 +2,9 @@
 title: Komma igång med SPA i AEM med React
 description: I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
 exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ Mer information om hur SPA fungerar i AEM finns i följande dokument:
 
 * [SPA introduktion och genomgång](introduction.md)
 * [SPA](editor-overview.md)
-* [SPA Blueprint](blueprint.md)
+* [SPA](blueprint.md)
 
 >[!NOTE]
 >
 >Om du vill kunna skapa innehåll i en SPA måste innehållet lagras i AEM och kunna visas av innehållsmodellen.
 >
->En SPA som utvecklats utanför AEM är inte författande om den inte följer innehållsmodellkontraktet.
+>En SPA som utvecklats utanför AEM blir inte författande om den inte respekterar innehållsmodellkontraktet.
 
 Det här dokumentet kommer att gå igenom strukturen i en förenklad SPA som skapats med React-ramverket och illustrera hur det fungerar så att du kan tillämpa den här förståelsen på din egen SPA.
 
@@ -43,7 +43,7 @@ Förutom det förväntade React-beroendet kan SPA använda ytterligare bibliotek
 
 ### Beroenden {#dependencies}
 
-The `package.json` -filen definierar kraven för det övergripande SPA. Här listas de minsta AEM beroendena för en fungerande SPA.
+The `package.json` -filen definierar kraven för det övergripande SPA. Här listas AEM beroenden för en fungerande SPA.
 
 ```
   "dependencies": {
@@ -66,7 +66,7 @@ The `aem-clientlib-generator` används för att skapa klientbibliotek automatisk
 
 Mer information finns [på GitHub här](https://github.com/wcm-io-frontend/aem-clientlib-generator).
 
-The `aem-clientlib-generator` är konfigurerad i `clientlib.config.js` så här.
+The `aem-clientlib-generator` är konfigurerad i `clientlib.config.js` filen enligt följande.
 
 ```
 module.exports = {
@@ -97,15 +97,15 @@ module.exports = {
 
 ### Byggnad {#building}
 
-Faktiskt bygga appen med [Webpack](https://webpack.js.org/) för implementering förutom aem-clientlib-generator för automatisk generering av klientbibliotek. Därför påminner kommandot build om:
+Faktiskt bygga appen som använder [Webpack](https://webpack.js.org/) för implementering förutom aem-clientlib-generator för automatisk generering av klientbibliotek. Därför påminner kommandot build om:
 
 `"build": "webpack && clientlib --verbose"`
 
 När paketet har skapats kan det överföras till en AEM.
 
-### AEM Project Archetype {#aem-project-archetype}
+### AEM Project Archettype {#aem-project-archetype}
 
-Alla AEM ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+Alla AEM ska använda [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ## Programstruktur {#application-structure}
 
@@ -176,9 +176,9 @@ class AppPage extends Page {
 MapTo('my-react-app/components/structure/page')(withComponentMappingContext(AppPage));
 ```
 
-I det här exemplet `AppPage` class extends `Page`, som innehåller de metoder för internt innehåll som sedan kan användas.
+I detta exempel `AppPage` class extends `Page`, som innehåller de metoder för internt innehåll som sedan kan användas.
 
-The `Page` infogar JSON-representationen av sidmodellen och bearbetar innehållet för att kapsla in/dekorera varje element på sidan. Mer information om `Page` finns i dokumentet [SPA Blueprint.](blueprint.md)
+The `Page` infogar JSON-representationen av sidmodellen och bearbetar innehållet för att kapsla in/dekorera varje element på sidan. Mer information om `Page` finns i dokumentet [SPA.](blueprint.md)
 
 ### Image.js {#image-js}
 
@@ -219,7 +219,7 @@ The `MapTo` metoden mappar SPA till AEM. Det stöder användningen av en enda st
 
 Om det inte finns något innehåll visas etiketter som platshållare för det tomma innehållet.
 
-#### Dynamiskt överförda egenskaper {#dynamically-passed-properties}
+#### Egenskaper som skickats dynamiskt {#dynamically-passed-properties}
 
 Data som kommer från modellen skickas dynamiskt som egenskaper för komponenten.
 
@@ -266,4 +266,4 @@ Det är regelbundet nödvändigt att komponenter i ett ensidigt program delar in
 * [SPA](editor-overview.md) fördjupar sig i kommunikationsmodellen mellan AEM och SPA.
 * [WKND SPA Project](wknd-tutorial.md) är en stegvis självstudiekurs som implementerar ett enkelt SPA i AEM.
 * [Dynamisk mappning av modell till komponent för SPA](model-to-component-mapping.md) I förklaras den dynamiska modellen för komponentmappning och hur den fungerar i SPA i AEM.
-* [SPA Blueprint](blueprint.md) ger en djupdykning i hur SPA SDK for AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.
+* [SPA](blueprint.md) ger en djupdykning i hur SPA SDK for AEM fungerar om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill ha en djupare förståelse.

@@ -5,16 +5,16 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 0cd38edb-2201-4ca6-8b84-6b5b7f76bd90
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1058'
 ht-degree: 0%
 
 ---
 
 # Förbättra prestanda för stora formulär med lat inläsningsverktyg{#improve-performance-of-large-forms-with-lazy-loading}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## Introduktion till lazy loading {#introduction-to-lazy-loading}
 
-När formuläret blir stort och komplext med hundratals och tusentals fält får slutanvändarna lång svarstid när de återger formulär vid körning. Med Adaptive Forms kan du minimera svarstiden genom att dela upp formulär i logiska fragment och konfigurera för att skjuta upp initiering eller inläsning av fragment tills fragmentet behöver vara synligt. Det kallas för lat inläsningsarbete. Dessutom tas de fragment som konfigurerats för lazy loading bort när användaren navigerar till andra avsnitt i formuläret och fragmenten inte längre visas.
+När formuläret blir stort och komplext med hundratals och tusentals fält får slutanvändarna lång svarstid när de återger formulär vid körning. Med Adaptive Forms kan du minimera svarstiden genom att dela upp formulär i logiska fragment och konfigurera så att initieringen eller inläsningen av fragment skjuts upp tills fragmentet behöver vara synligt. Det kallas för lat inläsningsarbete. Dessutom tas de fragment som konfigurerats för lazy loading bort när användaren navigerar till andra avsnitt i formuläret och fragmenten inte längre visas.
 
 Låt oss först förstå kraven och de förberedande stegen innan du konfigurerar lazy loading.
 
@@ -53,7 +53,7 @@ Utför följande steg för att aktivera lazy loading på ett adaptivt formulärf
 
 1. Öppna det adaptiva formuläret i det redigeringsläge som innehåller det fragment som du vill aktivera för lazy loading.
 1. Markera det adaptiva formulärfragmentet och tryck på ![konfigurera](assets/configure-icon.svg).
-1. Aktivera **[!UICONTROL Load fragment lazily]** och trycka **Klar**.
+1. Aktivera **[!UICONTROL Load fragment lazily]** och knacka **Klar**.
 
    ![Aktivera lazy loading för det anpassade formulärfragmentet](assets/lazy-loading-fragment.png)
 
@@ -89,4 +89,4 @@ Viktiga punkter att tänka på när du utvecklar skript för lazy loading-panele
 * Använd den globalt tillgängliga egenskapen för fält för att göra värden för fält som finns i en lat inläsningspanel tillgängliga för alla andra paneler i ett formulär.
 * Vidarebefordra inte referensvärdet för ett fält i en lat panel oavsett om fältet markeras globalt över fragment eller inte.
 * Använd panelåterställningsfunktionen för att återställa allt som visas på panelen med följande klickuttryck.\
-  guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;): &quot;navigablePanel&quot;}).resetData()
+  guideBridge.resolveNode(guideBridge.getFocus({&quot;focusOption&quot;: &quot;navigablePanel&quot;})).resetData()

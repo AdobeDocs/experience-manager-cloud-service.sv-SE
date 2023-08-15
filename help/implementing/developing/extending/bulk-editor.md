@@ -1,9 +1,9 @@
 ---
 title: Konfigurera massredigering av sidegenskaper
 description: Lär dig konfigurera gruppredigering så att du kan redigera egenskaperna för flera sidor samtidigt.
-source-git-commit: 9563c24c2794f8209494891da1a4a5a3360781db
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Konfigurera massredigering av sidegenskaper {#configuring-bulk-editing-of-page-properties}
 
-[Massredigering av sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#from-the-sites-console-multiple-pages) gör att du kan redigera egenskaperna för flera sidor samtidigt.
+[Massredigering av sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md#from-the-sites-console-multiple-pages) Med kan du redigera egenskaper för flera sidor samtidigt.
 
 ## Överväganden {#considerations}
 

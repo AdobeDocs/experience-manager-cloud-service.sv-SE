@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: 5c59189abf809293a319d6bce4ef7389c2451f92
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1770'
+source-wordcount: '1768'
 ht-degree: 5%
 
 ---
@@ -29,7 +29,7 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 >
 >Innehållsfragment kan användas:
 >
->* vid framtagning av sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
+>* när du redigerar sidor, se [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 >* for [Headless Content Delivery using Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
 
 >[!NOTE]
@@ -54,7 +54,7 @@ Metoden för att skapa ett innehållsfragment är:
 
       * Alla tillgängliga modeller visas.
 
-   Efter markering, använd **Nästa** för att fortsätta.
+   Efter markeringen kan du använda **Nästa** för att fortsätta.
 
    ![Välj innehållsfragmentmodell](assets/cfm-managing-01.png)
 
@@ -78,7 +78,7 @@ Metoden för att skapa ett innehållsfragment är:
 
         Namnet; används för att skapa URL:en.
 
-        Obligatoriskt. hämtas automatiskt från titeln, men kan uppdateras.
+        Obligatoriskt; hämtas automatiskt från titeln, men kan uppdateras.
 
 1. Välj **Skapa** för att slutföra åtgärden och **Öppna** sedan fragmentet för redigering eller gå tillbaka till konsolen med **Klar**.
 
@@ -89,7 +89,7 @@ Metoden för att skapa ett innehållsfragment är:
 
 I **Resurser** konsol en rad åtgärder är tillgängliga för dina innehållsfragment, antingen:
 
-* Från verktygsfältet; när du har valt fragmentet är alla lämpliga åtgärder tillgängliga.
+* Från verktygsfältet: när du har valt fragmentet är alla lämpliga åtgärder tillgängliga.
 * Som [snabbåtgärder](/help/sites-cloud/authoring/getting-started/basic-handling.md#quick-actions); en delmängd av åtgärder som är tillgängliga för de enskilda fragmentkorten.
 
 ![Åtgärder i verktygsfältet](assets/cfm-managing-02.png)
@@ -98,18 +98,18 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 * **Bearbeta resurser igen**
 * **Skapa**
-* **Hämta**
+* **Ladda ned**
 
-   * Spara fragmentet som en ZIP-fil; du kan definiera om element, variationer och metadata ska inkluderas.
+   * Spara fragmentet som en ZIP-fil. Du kan ange om du vill ta med Elements, Variationer eller Metadata.
 
 * **Utcheckning**
 * **Egenskaper**
 
-   * Gör att du kan visa och/eller redigera fragmentets metadata.
+   * Gör att du kan visa, redigera, eller båda, fragmentets metadata.
 
 * **Redigera**
 
-   * Gör att du kan [öppna fragmentet för att redigera innehåll](/help/assets/content-fragments/content-fragments-variations.md) tillsammans med dess element, variationer, tillhörande innehåll och metadata.
+   * Låter dig [öppna fragmentet för att redigera innehåll](/help/assets/content-fragments/content-fragments-variations.md) tillsammans med dess element, variationer, tillhörande innehåll och metadata.
 
 * **Snabbpublicering**
 * **Hantera publikation**
@@ -131,7 +131,7 @@ Så här öppnar du fragmentet för redigering:
 >
 >Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
 
-1. Använd **Resurser** konsol för att navigera till platsen för ditt innehållsfragment.
+1. Använd **Resurser** för att navigera till platsen för ditt innehållsfragment.
 1. Öppna fragmentet för redigering, antingen genom att:
 
    * Klicka/tryck på fragment- eller fragment-länken (detta beror på konsolvyn).
@@ -145,11 +145,11 @@ Så här öppnar du fragmentet för redigering:
 
    >[!NOTE]
    >
-   >**Spara och stäng** är tillgängligt via **Spara** listruta.
+   >**Spara och stäng** är tillgängligt via **Spara** nedrullningsbar meny.
 
    >[!NOTE]
    >
-   >Båda **Spara och stäng** och **Stäng** kommer att avsluta redigeraren - se [Spara, stäng och versioner](#save-close-and-versions) om du vill ha fullständig information om hur de olika alternativen fungerar för innehållsfragment.
+   >Båda **Spara och stäng** och **Stäng** kommer att avsluta redigeraren - se [Spara, stäng och versioner](#save-close-and-versions) för fullständig information om hur de olika alternativen fungerar för innehållsfragment.
 
 ## Lägen och åtgärder i Content Fragment Editor {#modes-actions-content-fragment-editor}
 
@@ -157,9 +157,9 @@ Det finns olika lägen och åtgärder tillgängliga från Content Fragment Edito
 
 ### Lägen i Content Fragment Editor {#modes-in-the-content-fragment-editor}
 
-Navigera genom de olika lägena med ikonerna på sidopanelen:
+Navigera genom de olika lägena med hjälp av ikonerna på sidopanelen:
 
-* Variationer: [Redigera innehållet](#editing-the-content-of-your-fragment) och [Hantera variationer](#creating-and-managing-variations-within-your-fragment)
+* Variationer: [Redigera innehållet](#editing-the-content-of-your-fragment) och [Hantera dina variationer](#creating-and-managing-variations-within-your-fragment)
 
 * [Anteckningar](/help/assets/content-fragments/content-fragments-variations.md#annotating-a-content-fragment)
 * [Associerat innehåll](#associating-content-with-your-fragment)
@@ -167,7 +167,7 @@ Navigera genom de olika lägena med ikonerna på sidopanelen:
 * [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
 * [Förhandsgranska](/help/assets/content-fragments/content-fragments-json-preview.md)
 
-![Lägen i Content Fragment Editor](assets/cfm-managing-04.png)
+![Lägen i redigeraren för innehållsfragment](assets/cfm-managing-04.png)
 
 ### Verktygsfältsåtgärder i redigeraren för innehållsfragment {#toolbar-actions-in-the-content-fragment-editor}
 
@@ -177,16 +177,16 @@ Vissa funktioner i det övre verktygsfältet finns i flera lägen:
 
 * Ett meddelande visas när fragmentet redan refereras på en innehållssida. Du kan **Stäng** meddelandet.
 
-* Sidpanelen kan döljas/visas med **Växla sidopanel** ikon.
+* Sidpanelen kan döljas/visas med **Växla sidopanel** -ikon.
 
 * Under fragmentnamnet kan du se namnet på [Content Fragment Model](/help/assets/content-fragments/content-fragments-models.md) används för att skapa det aktuella fragmentet:
 
    * Namnet är också en länk som öppnar modellredigeraren.
 
-* Se fragmentets status. information om när den skapades, ändrades eller publicerades. Statusen är även färgkodad:
+* Se fragmentets status, till exempel information om när det skapades, ändrades eller publicerades. Statusen är även färgkodad:
 
    * **Nytt**: grå
-   * **Utkast**: blå
+   * **Utkast**: blue
    * **Publicerad**: grön
    * **Ändrad**: orange
    * **Inaktiverad**: röd
@@ -258,7 +258,7 @@ När du har öppnat fragmentet kan du använda [Variationer](/help/assets/conten
 
 ## Skapa och hantera variationer i fragment {#creating-and-managing-variations-within-your-fragment}
 
-När du har skapat det Överordnad innehållet kan du skapa och hantera [Variationer](/help/assets/content-fragments/content-fragments-variations.md) av det innehållet.
+När du har skapat mallinnehållet kan du skapa och hantera [Variationer](/help/assets/content-fragments/content-fragments-variations.md) av det innehållet.
 
 ## Koppla innehåll till fragment {#associating-content-with-your-fragment}
 
@@ -309,7 +309,7 @@ Till exempel:
 
 The **Jämför med aktuell** finns tillgänglig från [Tidslinje](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) när du har valt en viss version.
 
-Detta öppnas:
+Den här öppnas:
 
 * den **Aktuell** (senaste) version (vänster)
 
@@ -323,7 +323,7 @@ De visas sida vid sida, där:
    * Infogad text - grön
    * Ersatt text - blå
 
-* Med helskärmsikonen kan du öppna båda versionerna separat; växla sedan tillbaka till den parallella vyn
+* Med helskärmsikonen kan du öppna båda versionerna separat och sedan växla tillbaka till den parallella vyn
 * Du kan **Återställ** till den specifika versionen
 * **Klar** kommer du tillbaka till konsolen
 
@@ -358,18 +358,18 @@ Innehållsfragment måste publiceras för användning i publiceringsmiljön. Det
 
 Du kan få åtkomst till detta:
 
-* Efter skapande; använda [åtgärder som är tillgängliga i resurskonsolen](#actions-for-a-content-fragment-assets-console).
+* efter skapande; använda [åtgärder som är tillgängliga i resurskonsolen](#actions-for-a-content-fragment-assets-console).
 * Från [Innehållsfragmentsredigerare](#toolbar-actions-in-the-content-fragment-editor).
 
 Dessutom när du [publicera en sida som använder fragmentet](/help/sites-cloud/authoring/fundamentals/content-fragments.md#publishing); fragmentet visas i sidreferenserna.
 
 >[!CAUTION]
 >
-När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i avsnittet även påverkar de refererade sidorna.
+När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 
-Så här tar du bort ett fragment:
+Ta bort ett fragment:
 
 1. I **Resurser** konsolen navigerar till platsen för innehållsfragmentet.
 2. Markera fragmentet.

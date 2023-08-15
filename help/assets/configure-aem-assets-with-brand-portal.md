@@ -1,13 +1,13 @@
 ---
-title: Konfigurera AEM Assets som en [!DNL Cloud Service] med Brand Portal
+title: Konfigurera AEM Assets som [!DNL Cloud Service] med Brand Portal
 description: Konfigurera AEM Assets med varumärkesportalen.
 contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2421'
+source-wordcount: '2420'
 ht-degree: 11%
 
 ---
@@ -40,7 +40,7 @@ Du behöver följande för att aktivera Brand Portal på din Experience Manager 
 
 Du kan aktivera Brand Portal när du skapar produktionsmiljöer för din Experience Manager Assets som en [!DNL Cloud Service] eller separat. Låt oss anta att miljön redan har skapats, och du måste nu aktivera Brand Portal.
 
-1. Logga in på Adobe Cloud Manager och gå till **[!UICONTROL Environments]**.
+1. Logga in på Adobe Cloud Manager och navigera till **[!UICONTROL Environments]**.
 
    The **[!UICONTROL Environments]** visas en lista med alla befintliga miljöer.
 
@@ -52,7 +52,7 @@ Du kan aktivera Brand Portal när du skapar produktionsmiljöer för din Experie
 
    ![Aktivera Brand Portal](assets/create-environment4.png)
 
-1. Det tar några minuter att aktivera Brand Portal-klienten när aktiveringsarbetsflödet skapar de nödvändiga konfigurationerna i bakgrunden. När Brand Portal-klienten har aktiverats ändras statusen till Aktiverad.
+1. Det tar några minuter att aktivera Brand Portal-klienten när aktiveringsarbetsflödet skapar de nödvändiga konfigurationerna i backend-läget. När Brand Portal-klienten har aktiverats ändras statusen till Aktiverad.
 
    ![Visa status](assets/create-environment5.png)
 
@@ -63,7 +63,7 @@ Du kan aktivera Brand Portal när du skapar produktionsmiljöer för din Experie
 >
 >Om du har en befintlig Brand Portal molnkonfiguration ([konfigureras manuellt med Adobe Developer Console](#manual-configuration)) för en IMS-organisation (org1-existing) och din Experience Manager Assets som [!DNL Cloud Service] -instansen är konfigurerad för en annan IMS-organisation (org2-new), och när du aktiverar Brand Portal från Cloud Manager återställs Brand Portal IMS-organisation till `org2-new`. Även om den manuellt konfigurerade molnkonfigurationen är på `org1-existing` är synligt i Experience Manager Assets författarinstans, men kommer inte längre att användas när Brand Portal har aktiverats från Cloud Manager.
 >
->Om den befintliga molnkonfigurationen för Brand Portal och Experience Manager Assets som [!DNL Cloud Service] om du använder samma IMS-organisation (org1) behöver du bara aktivera Brand Portal från Cloud Manager.
+>Om Brand Portal molnkonfiguration och Experience Manager Assets är [!DNL Cloud Service] -instansen använder samma IMS-organisation (org1), du behöver bara aktivera Brand Portal från Cloud Manager.
 >
 >Ändra inte några autogenererade inställningar.
 
@@ -88,7 +88,7 @@ Utför följande steg om du inte är säker på Brand Portal URL:
 1. Välj **[!UICONTROL Adobe Experience Manager Brand Portal – Brand Portal]**.
 1. Klicka på **[!UICONTROL Go to Brand Portal]** för att öppna Brand Portal direkt i webbläsaren.
 
-   Eller kopiera Brand Portal tenant-URL:en från **[!UICONTROL Go to Brand Portal]** och klistra in den i webbläsaren för att öppna Brand Portal-gränssnittet.
+   Eller kopiera Brand Portal tenant-URL:en från **[!UICONTROL Go to Brand Portal]** och klistra in den i webbläsaren för att öppna Brand Portal gränssnitt.
 
    ![Använd Brand Portal](assets/access-bp-on-cloud.png)
 
@@ -99,7 +99,7 @@ Följ de här stegen för att validera anslutningen mellan din Experience Manage
 
 1. Logga in på Experience Manager Assets.
 
-1. Från **verktyg** panel, navigera till **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]**.
+1. Från **verktyg** navigera till **[!UICONTROL Deployment]** > **[!UICONTROL Distribution]**.
 
    ![Navigera till distributionsalternativet](assets/test-bpconfig1.png)
 
@@ -123,11 +123,11 @@ Följ de här stegen för att validera anslutningen mellan din Experience Manage
 
    ![Bearbetningskön för distribution av resurser](assets/test-bpconfig3.png)
 
-1. Så här verifierar du anslutningen mellan Experience Manager Assets som [!DNL Cloud Service] och Brand Portal klickar du på **[!UICONTROL Test Connection]** ikon.
+1. Så här verifierar du anslutningen mellan Experience Manager Assets som [!DNL Cloud Service] och Brand Portal klickar du på **[!UICONTROL Test Connection]** -ikon.
 
    ![Verifiera anslutningen mellan AEM och Brand Portal](assets/test-bpconfig4.png)
 
-   Ett meddelande om att *testpaketet har levererats*.
+   Ett meddelande visas om att *testpaketet har levererats*.
 
    >[!NOTE]
    >
@@ -160,7 +160,7 @@ Låt oss nu publicera en mediefil från Experience Manager Assets till Brand Por
 
 Distributionsagenten har genererat följande loggar:
 
-* INFORMATION: Det är en systemgenererad logg som utlöser en lyckad konfiguration av distributionsagenten.
+* INFO: Det är en systemgenererad logg som utlöser en lyckad konfiguration av distributionsagenten.
 * DSTRQ1 (Begäran 1): Utlöses vid testanslutning.
 
 Följande begärande- och svarsloggar genereras när resursen publiceras:
@@ -168,7 +168,7 @@ Följande begärande- och svarsloggar genereras när resursen publiceras:
 **Begäranden från distributionsagenten**:
 
 * DSTRQ2 (Begäran 2): Begäran om publicering av resurser utlöses.
-* DSTRQ3 (Request 3): Systemet utlöser en annan begäran om att publicera Experience Manager Assets-mappen (där resursen finns) och replikerar mappen i Brand Portal.
+* DSTRQ3 (begäran 3): Systemet utlöser en annan begäran om att publicera Experience Manager Assets-mappen (där resursen finns) och replikerar mappen i Brand Portal.
 
 **Svar från distributionsagenten**:
 
@@ -189,14 +189,14 @@ tillsammans med automatiseringsarbetsflödet för att aktivera Brand Portal på 
 
 ## Manuell konfiguration med Adobe Developer Console {#manual-configuration}
 
-I följande avsnitt beskrivs hur du konfigurerar Experience Manager Assets manuellt som en [!DNL Cloud Service] med Brand Portal via Adobe Developer Console.
+I följande avsnitt beskrivs hur du konfigurerar Experience Manager Assets manuellt som [!DNL Cloud Service] med Brand Portal via Adobe Developer Console.
 
 Tidigare var Experience Manager Assets [!DNL Cloud Service] konfigurerades manuellt med Brand Portal via Adobe Developer Console, som köper en kontotoken för Adobe Identity Management Services (IMS) för auktorisering av Brand Portal-klienten. Den kräver konfigurationer i både Experience Manager Assets och Adobe Developer Console.
 
 1. Skapa ett IMS-konto i Experience Manager Assets och generera en offentlig nyckel (certifikat).
 1. Skapa ett projekt för din Brand Portal-klient (organisation) i Adobe Developer Console.
 1. Under projektet konfigurerar du ett API med den offentliga nyckeln för att skapa en tjänstkontoanslutning.
-1. Hämta tjänstkontots autentiseringsuppgifter och JSON Web Token-nyttolastinformation (JWT).
+1. Hämta tjänstkontots autentiseringsuppgifter och JSON Web Token-nyttolastinformation.
 1. I Experience Manager Assets konfigurerar du IMS-kontot med tjänstkontots autentiseringsuppgifter och JWT-nyttolast.
 1. I Experience Manager Assets konfigurerar du Brand Portal molntjänst med hjälp av IMS-kontot och Brand Portal slutpunkt (organisations-URL).
 1. Testa konfigurationen genom att publicera en resurs från Experience Manager Assets till Brand Portal.
@@ -236,10 +236,10 @@ IMS-konfigurationen har två steg:
 Den offentliga nyckeln (certifikatet) autentiserar din profil på Adobe Developer Console.
 
 1. Logga in på Experience Manager Assets.
-1. Från **verktyg** panel, navigera till **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
+1. Från **verktyg** navigera till **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 1. På sidan Adobe IMS-konfigurationer klickar du på **[!UICONTROL Create]**. Den kommer att omdirigeras till **[!UICONTROL Adobe IMS Technical Account Configuration]** sida. Som standard är **Certifikat** -fliken öppnas.
 1. Välj **[!UICONTROL Adobe Brand Portal]** i **[!UICONTROL Cloud Solution]** listruta.
-1. Välj **[!UICONTROL Create new certificate]** kryssruta och ange **alias** för den offentliga nyckeln. Aliaset används som namn på den offentliga nyckeln.
+1. Välj **[!UICONTROL Create new certificate]** kryssruta och ange en **alias** för den offentliga nyckeln. Aliaset används som namn på den offentliga nyckeln.
 1. Klicka på **[!UICONTROL Create certificate]**. Klicka sedan på **[!UICONTROL OK]** för att generera den offentliga nyckeln.
 
    ![Skapa ett certifikat](assets/ims-config2.png)
@@ -291,7 +291,7 @@ Utför följande steg för att generera autentiseringsuppgifter för tjänstkont
 
    ![Välj produktprofil](assets/service-account4.png)
 
-1. När API:t har konfigurerats omdirigeras du till API-översiktssidan. Från vänster navigering under **[!UICONTROL Credentials]** klickar du på **[!UICONTROL Service Account (JWT)]** alternativ.
+1. När API:t har konfigurerats omdirigeras du till API-översikten. Från vänster navigering under **[!UICONTROL Credentials]** klickar du på **[!UICONTROL Service Account (JWT)]** alternativ.
 
    >[!NOTE]
    >
@@ -386,7 +386,7 @@ Så här konfigurerar du molntjänsten i Brand Portal:
 
 1. Logga in på Experience Manager Assets.
 
-1. Från **verktyg** panel, navigera till **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
+1. Från **verktyg** navigera till **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
 
 1. På sidan Brand Portal Configurations klickar du på **[!UICONTROL Create]**.
 
@@ -396,7 +396,7 @@ Så här konfigurerar du molntjänsten i Brand Portal:
 
    I **[!UICONTROL Service URL]** anger du din Brand Portal tenant-URL (organisation).
 
-   ![Dialogrutan Brand Portal-konfiguration.](assets/create-cloud-service.png)
+   ![Dialogrutan Brand Portal Configuration.](assets/create-cloud-service.png)
 
 1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen har skapats.
 

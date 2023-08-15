@@ -2,9 +2,9 @@
 title: Skapa riktat innehåll med målläge
 description: Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser
 exl-id: 8d80d867-2d0f-4ddb-8a06-f9441e6d85ce
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '5410'
+source-wordcount: '5409'
 ht-degree: 5%
 
 ---
@@ -42,16 +42,16 @@ Skapa riktat innehåll med målläget AEM. Målinriktningsläget och Target-komp
 
 Du kan använda antingen AEM eller Adobe Target som målmotor (du måste ha ett giltigt Adobe Target-konto för att kunna använda Adobe Target). Om du använder Adobe Target måste du först konfigurera integreringen. Se [anvisningar för integrering med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
 
-![Riktat innehåll](../assets/targeted-content.png)
+![Målinriktat innehåll](../assets/targeted-content.png)
 
-De aktiviteter och upplevelser som du ser i målläget återspeglar [Aktivitetskonsol](/help/sites-cloud/authoring/personalization/activities.md):
+De aktiviteter och upplevelser som du ser i målläget speglar de [Aktivitetskonsol](/help/sites-cloud/authoring/personalization/activities.md):
 
 * Ändringar som du gör i aktiviteter och upplevelser med målläget visas i aktivitetskonsolen.
 * Ändringar som görs i aktivitetskonsolen återspeglas i målläget.
 
 >[!NOTE]
 >
->När du skapar en kampanj i Adobe Target tilldelas den en egenskap som kallas `thirdPartyId` till varje kampanj. När du tar bort kampanjen i Adobe Target tas inte thirdPartyId bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och kan inte tas bort manuellt. För att undvika detta bör varje kampanj namnges med ett unikt namn. kampanjnamn kan därför inte återanvändas i olika kampanjtyper.
+>När du skapar en kampanj i Adobe Target tilldelas den en egenskap som kallas `thirdPartyId` till varje kampanj. När du tar bort kampanjen i Adobe Target tas inte thirdPartyId bort. Du kan inte återanvända `thirdPartyId` för kampanjer av olika typer (AB, XT) och kan inte tas bort manuellt. För att undvika detta bör du namnge varje kampanj med ett unikt namn. Kampanjnamn kan därför inte återanvändas i olika kampanjtyper.
 >
 >Om du använder samma namn i samma kampanjtyp skriver du över den befintliga kampanjen.
 >
@@ -92,12 +92,12 @@ Så här lägger du till en aktivitet:
 
    >[!NOTE]
    >
-   >Vi rekommenderar att du [skapa varumärken via aktivitetskonsolen](/help/sites-cloud/authoring/personalization/activities.md#creating-a-brand-using-the-activities-console).
+   >Vi rekommenderar [skapa varumärken via aktivitetskonsolen](/help/sites-cloud/authoring/personalization/activities.md#creating-a-brand-using-the-activities-console).
    >
    >
    >Om du skapar ett varumärke på något annat sätt måste du se till att noden `/campaigns/<brand>/master` finns eller ett fel uppstår när du försöker skapa en aktivitet.
 
-1. Klicka eller tryck + bredvid **Aktivitet** nedrullningsbar meny.
+1. Klicka eller tryck + bredvid **Aktivitet** listruta.
 1. Ange ett namn för aktiviteten.
 
    >[!NOTE]
@@ -115,7 +115,7 @@ Så här lägger du till en aktivitet:
    * Målinriktning - hantera Adobe Target-aktiviteter från AEM.
    * A/B-test - skapa/hantera A/B-testaktiviteter i Adobe Target från AEM.
 
-## Målprocessen: Skapa, ange mål och inställningar {#the-targeting-process-create-target-and-goals-settings}
+## Målprocessen: Skapa, Mål och Mål och inställningar {#the-targeting-process-create-target-and-goals-settings}
 
 I målinriktningsläget kan du konfigurera flera aspekter av en aktivitet. Använd följande trestegsprocess för att skapa riktat innehåll för en varumärkesaktivitet:
 
@@ -141,17 +141,17 @@ Så här lägger du till en aktivitet:
    >
    >Om du vill ändra aktiviteten som du arbetar med klickar eller trycker du **Bakåt**.
 
-## Skapa: Att skapa upplevelser {#create-authoring-the-experiences}
+## Skapa: Skapa upplevelser {#create-authoring-the-experiences}
 
 Det kreativa steget i innehållsanpassningen innefattar att skapa upplevelser. Under det här steget kan du skapa eller ta bort aktivitetens upplevelser och lägga till erbjudanden för varje upplevelse.
 
 ### Upplevelserbjudanden i målinriktat läge {#seeing-experience-offers-in-targeting-mode}
 
-Efter [starta målinriktningsprocessen](#the-targeting-process-create-target-and-goals-settings)väljer du en upplevelse för att se vilka erbjudanden som finns för den upplevelsen. När du väljer en upplevelse ändras målkomponenterna på sidan så att erbjudandet för den upplevelsen visas.
+Efter dig [starta målinriktningsprocessen](#the-targeting-process-create-target-and-goals-settings)väljer du en upplevelse för att se vilka erbjudanden som finns för den upplevelsen. När du väljer en upplevelse ändras målkomponenterna på sidan så att erbjudandet för den upplevelsen visas.
 
 >[!CAUTION]
 >
->Var försiktig när du inaktiverar mål för en komponent som redan är avsedd i författarinstansen. Aktiviteten tas automatiskt bort från publiceringsinstansen också.
+>Var försiktig när du inaktiverar mål för en komponent som redan har angetts som mål i författarinstansen. Aktiviteten tas automatiskt bort från publiceringsinstansen också.
 
 >[!NOTE]
 >
@@ -171,13 +171,13 @@ När en upplevelse väljs och målkomponenten inte innehåller något erbjudande
 
 Standardupplevelsen visas också när besökaregenskaperna inte matchar några segment som är mappade till upplevelserna. Se [Lägga till upplevelser med målläge](#adding-and-removing-experiences-using-targeting-mode).
 
-### Specialerbjudanden och bibliotekserbjudanden {#custom-offers-and-library-offers}
+### Skräddarsydda erbjudanden och bibliotekserbjudanden {#custom-offers-and-library-offers}
 
-Erbjudanden som [skrivna på sidan](#adding-a-custom-offer) och används för en enda upplevelse kallas anpassade erbjudanden. Följande bild läggs ovanpå innehållet i ett anpassat erbjudande:
+Erbjudanden som [som har skapats på sidan](#adding-a-custom-offer) och används för en enda upplevelse kallas anpassade erbjudanden. Följande bild läggs ovanpå innehållet i ett anpassat erbjudande:
 
 ![Ikon för anpassat erbjudande](../assets/targeted-custom-offer-icon.png)
 
-Erbjudanden som [läggs till från ett erbjudandebibliotek](#adding-an-offer-from-an-offer-library) läggs ovanpå följande bild:
+Erbjudanden som [som lagts till från ett erbjudandebibliotek](#adding-an-offer-from-an-offer-library) läggs ovanpå följande bild:
 
 ![Symbol för bibliotekserbjudande](../assets/targeted-library-offer-icon.png)
 
@@ -189,7 +189,7 @@ Använda steget Skapa i [målgruppsprocessen](#the-targeting-process-create-targ
 
 #### Lägga till upplevelser med målinriktat läge {#adding-experiences-using-targeting-mode}
 
-Så här lägger du till en upplevelse:
+Lägga till en upplevelse:
 
 1. Klicka eller tryck för att lägga till en upplevelse **+** **Lägg till Experience Targeting** som visas under de befintliga upplevelserna i **Målgrupper** fönster.
 1. Välj och få en målgrupp. Som standard är det namnet på upplevelsen. Om du vill kan du skriva ett annat namn. Klicka eller tryck **OK**.
@@ -341,7 +341,7 @@ Du kan inte lägga till bibliotekserbjudanden i standardupplevelsen.
 1. Välj den upplevelse som du lägger till erbjudandet till.
 1. Om du vill visa komponentmenyn klickar eller trycker du på den målkomponent som du vill lägga till erbjudandet i.
 
-   ![Riktat erbjudande](../assets/targeted-add-offer-large.png)
+   ![Målinriktat erbjudande](../assets/targeted-add-offer-large.png)
 
 1. Klicka på eller tryck på mappikonen.
 
@@ -357,7 +357,7 @@ Du kan inte lägga till bibliotekserbjudanden i standardupplevelsen.
 
    ![Bläddra i innehåll](../assets/targeted-select-content-browse.png)
 
-   * Klicka eller tryck **Filter** för att filtrera erbjudandena mot nyckelord eller taggar. Du anger nyckelord och väljer taggar i listrutan. Klicka eller tryck **Filter** igen för att stänga filtreringsrutan.
+   * Klicka eller tryck **Filter** om du vill filtrera erbjudandena mot nyckelord eller taggar. Du anger nyckelord och väljer taggar i listrutan. Klicka eller tryck **Filter** igen för att stänga filtreringsrutan.
 
    ![Filtrera innehåll](../assets/targeted-filter.png)
 
@@ -376,7 +376,7 @@ Lägg till ett anpassat erbjudande i [erbjudandebibliotek](/help/sites-cloud/aut
 Mer information om hur du använder Offers-konsolen för att skapa ett återanvändbart erbjudande finns i [Lägg till ett erbjudande i ett erbjudandebibliotek](/help/sites-cloud/authoring/personalization/offers.md#add-an-offer-to-an-offer-library).
 
 1. Välj upplevelsen för att visa det anpassade erbjudandet.
-1. Klicka på eller tryck på det anpassade erbjudandet för att visa erbjudandemenyn, klicka eller tryck på **Spara erbjudandet i erbjudandebiblioteket** ikon.
+1. Klicka på eller tryck på det anpassade erbjudandet för att visa erbjudandemenyn, klicka eller tryck på **Spara erbjudandet i erbjudandebiblioteket** -ikon.
 
    ![Spara erbjudande om att erbjuda bibliotek](../assets/targeted-save-offer-library-button.png)
 
@@ -389,7 +389,7 @@ Konvertera ett bibliotekserbjudande till ett anpassat erbjudande för att ändra
 1. Välj den upplevelse du vill visa bibliotekserbjudandet.
 1. Klicka på eller tryck på bibliotekserbjudandet för att visa erbjudandemenyn och klicka eller tryck sedan på ikonen Konvertera till infogat erbjudande.
 
-   ![Konvertera till offert](../assets/targeted-convert-inline.png)
+   ![Konvertera till textbundet erbjudande](../assets/targeted-convert-inline.png)
 
 #### Redigera ett bibliotekserbjudande {#editing-a-library-offer}
 
@@ -431,23 +431,23 @@ Använd följande procedur för att associera en upplevelse med en målgrupp nä
 
 Om ni har en A/B-testaktivitet finns målgrupperna till vänster, procentandelen som varje upplevelse visas i mitten och upplevelserna till höger.
 
-Du kan ändra procentsatserna så länge de adderar till 100 procent. En målgrupp kan användas av flera olika upplevelser i A/B-tester.
+Du kan ändra procentsatserna så länge de adderar till 100 procent. En målgrupp kan användas av flera olika upplevelser i A/B-testning.
 
 ![A/B-målinriktning](../assets/targeted-ab.png)
 
 ### Associera målgrupper och trafikprocent med A/B-tester {#associating-audiences-and-traffic-percentages-with-a-b-testing}
 
 1. Klicka på eller tryck på listrutan bredvid målgruppen som är kopplad till upplevelsen.
-1. (Valfritt) Klicka på **Redigera** skriver du sedan ett nyckelord för att söka efter det önskade segmentet.
-1. Klicka eller tryck **OK.**
+1. (Valfritt) Klicka på **Redigera** skriver du ett nyckelord och söker efter det önskade segmentet.
+1. Klicka eller tryck **Okej.**
 1. Ange i procent för att konfigurera hur målgruppstrafiken dirigeras till varje upplevelse. Det totala talet måste vara lika med 100.
 1. (Valfritt) Redigera upplevelsens namn genom att klicka på den nedrullningsbara menyn bredvid upplevelsens namn.
 
-## Mål och inställningar: Konfigurera aktivitets- och inställningsmål {#goals-settings-configuring-the-activity-and-setting-goals}
+## Mål och inställningar: Konfigurera mål för aktivitet och inställning {#goals-settings-configuring-the-activity-and-setting-goals}
 
 Målet och inställningarna i [målgruppsprocessen](#the-targeting-process-create-target-and-goals-settings) innebär att varumärkesaktivitetens beteende konfigureras. Ange när aktiviteten startar och avslutas samt aktivitetsprioriteten. Dessutom håller du också koll på målen. Du kan bestämma vad du vill mäta med dina aktiviteter.
 
-Måttvärden är bara tillgängliga om du använder Adobe Target för målmotorn. Du måste definiera minst ett målmått. Om du har konfigurerat Adobe Analytics och har en A4T Analytics-molnkonfiguration kan du välja om du vill att rapportkällan ska vara Adobe Target eller Adobe Analytics.
+Måttvärden är bara tillgängliga om du använder Adobe Target för målgruppsmotorn. Du måste definiera minst ett målmått. Om du har konfigurerat Adobe Analytics och har en A4T Analytics-molnkonfiguration kan du välja om du vill att rapportkällan ska vara Adobe Target eller Adobe Analytics.
 
 Måtten mäts bara för den publicerade kampanjen.
 
@@ -467,8 +467,8 @@ Följande framgångsmått är tillgängliga (används endast för publicering):
 
 | Mått | Beskrivning | Alternativ |
 |---|---|---|
-| Konvertering | Andelen besökare som klickade på någon del av upplevelsen som testades. En konvertering kan antingen räknas en gång per besökare eller varje gång en besökare slutför en konvertering. Konverteringsmåttet är inställt på något av följande | Visad sida - Du kan definiera vilken sida målgruppen ska visa genom att välja antingen URL-adress och sedan definiera URL-adressen eller flera URL-adresser, eller genom att markera URL-adressen och sedan lägga till en sökväg eller ett nyckelord. Visad mbox - Du kan definiera vilken mbox som din publik ska visa genom att ange namnet på mbox. Du kan ange flera rutor genom att klicka på Lägg till en Mbox. |
-| Intäkter | Intäkter från besöket. Du kan välja bland de angivna intäktsmåtten. För något av dessa alternativ anger om en mbox visades att målet har uppnåtts. Du kan definiera mbox eller flera mbox. | Intäkter per besökare, genomsnittligt ordervärde (AOV), total försäljning, order |
+| Konvertering | Andelen besökare som klickade på någon del av upplevelsen som testades. En konvertering kan antingen räknas en gång per besökare eller varje gång en besökare slutför en konvertering. Konverteringsmåttet anges till något av följande | Visad sida - Du kan definiera vilken sida målgruppen ska visa genom att välja antingen URL-adress och sedan definiera URL-adressen eller flera URL-adresser, eller genom att markera URL-adressen och sedan lägga till en sökväg eller ett nyckelord. Visad mbox - Du kan definiera vilken mbox som din publik ska visa genom att ange namnet på mbox. Du kan ange flera rutor genom att klicka på Lägg till en Mbox. |
+| Intäkter | Intäkter från besöket. Du kan välja bland de angivna intäktsmåtten. För något av dessa alternativ anger om en mbox visades att målet har nåtts. Du kan definiera mbox eller flera mbox. | Intäkter per besökare, genomsnittligt ordervärde (AOV), total försäljning, order |
 | Engagemang | Ni kan mäta tre typer av engagemang | Sidvyer, anpassad poängsättning, tid på plats |
 
 Dessutom finns det avancerade inställningar som gör att du kan avgöra hur många framgångsmått som ska räknas. Du kan välja att räkna måtten per intryck eller en gång per besökare och välja om användaren ska vara kvar i aktiviteten eller ta bort dem.
@@ -477,8 +477,8 @@ Använd de avancerade inställningarna för att avgöra vad som händer **efter*
 
 | När en användare har påträffat detta målmått.. | Du väljer att följande ska hända.. |
 |---|---|
-| Öka antal och behåll användare i aktivitet | Ange hur antalet ska ökas: En gång per deltagare, vid varje intryck, förutom siduppdatering, vid varje intryck |
-| Ökning, frigör användare och Tillåt återinträde | Välj den upplevelse besökaren ser om de återupptar aktiviteten: Samma upplevelse, Slumpmässig upplevelse, Osynlig upplevelse |
+| Öka antal och behåll användare i aktivitet | Ange hur antalet ska ökas: En gång per deltagare, Vid varje intryck, exklusive siduppdatering, Vid varje intryck |
+| Ökning, frigör användare och Tillåt återinträde | Välj den upplevelse besökaren ser om han/hon återupptar aktiviteten: Samma upplevelse, Slumpmässig upplevelse, Osynlig upplevelse |
 | Ökningsantal, återinträde av användare och fält | Bestäm vad användaren ser i stället för aktivitetsinnehållet: Samma upplevelse, utan spårning, standardinnehåll eller annat aktivitetsinnehåll |
 
 Se [Adobe Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) för mer information om framgångsmått.
@@ -501,7 +501,7 @@ Så här konfigurerar du inställningar om du använder AEM mål:
 
 ### Konfigurera mål och inställningar (Adobe Target) {#configuring-goals-settings-adobe-target}
 
-Så här konfigurerar du mål och inställningar om du använder Adobe Target:
+Så här konfigurerar du mål och inställningar för Adobe Target:
 
 1. Om du vill ange när aktiviteten ska starta använder du **Starta** i den nedrullningsbara menyn för att välja något av följande värden:
 
@@ -558,7 +558,7 @@ Simulera en besökares upplevelse för att verifiera att sidinnehållet visas so
 Följande kriterier avgör vilket innehåll som visas när en besökares upplevelse simuleras:
 
 * Data i användarens sessionsarkiv (via kontextnavet).
-* The [Aktiviteter som är aktiverade](/help/sites-cloud/authoring/personalization/activities.md).
+* The [Aktiviteter som är på](/help/sites-cloud/authoring/personalization/activities.md).
 * The [regler som definierar segment](/help/sites-cloud/authoring/personalization/segmentation.md).
 * Innehållet i upplevelserna i Target-komponenterna.
 * The [konfiguration av målmotorn](/help/sites-cloud/authoring/personalization/activities.md).
@@ -571,8 +571,8 @@ Om oväntat innehåll visas på sidan när du läser in en profil kontrollerar d
 
 Använd följande verktyg för att simulera besökarens upplevelse:
 
-* Simuleringsaktiviteten i målläge: På sidan visas erbjudandena för användaren som är markerad i kontextnavet. Du kan redigera erbjudanden som riktar sig till användaren.
-* Förhandsgranskningsläge: Använd kontextnavet för att välja de användare och platser som uppfyller villkoren för de segment som era upplevelser bygger på. När dina kontextnavmarkeringar ändras, ändras målinnehållet i enlighet med detta.
+* Simuleringsaktivitet i målläge: Sidan visar erbjudanden för användaren som är markerad i kontextnavet. Du kan redigera erbjudanden som riktar sig till användaren.
+* Förhandsgranskningsläge: Använd kontextnavet för att välja de användare och platser som uppfyller villkoren för de segment som era upplevelser baseras på. När dina kontextnavmarkeringar ändras, ändras målinnehållet i enlighet med detta.
 
 1. Om du vill växla till förhandsgranskningsläget klickar eller trycker du på i verktygsfältet **Förhandsgranska**.
 1. Klicka på eller tryck på ikonen för snabbpanelen i verktygsfältet.
@@ -620,7 +620,7 @@ Om du väljer Adobe Target som motor:
 
 | Alternativ | Beskrivning |
 |---|---|
-| Exakt målinriktning | Om du aktiverar korrekt målinriktning anger du att komponenten ska vänta på att klientkontext eller kontextnav ska vara tillgängliga innan begäran skickas till Adobe Target. Det kan öka inläsningstiden. För redigering är korrekt målinriktning alltid aktiverat. Om du markerar kryssrutan Exakt målinriktning utför mboxDefine först och mboxUpdate senare, vilket resulterar i en Ajax-begäran när data är tillgängliga. Om du inte markerar kryssrutan Exakt målinriktning utför mboxCreate-funktionen, vilket resulterar i en synkron begäran direkt (i det här fallet är inte alla kontextdata tillgängliga än). Obs! Om du aktiverar eller inaktiverar korrekt målinriktning för en viss komponent påverkas inte inställningarna som du har angett globalt. Du kan alltid åsidosätta globala inställningar genom att välja Exakt målanpassning i komponenten. |
+| Korrekt målinriktning | Om du aktiverar korrekt målinriktning anger du att komponenten ska vänta på att klientkontext eller kontextnav ska vara tillgängliga innan begäran skickas till Adobe Target. Det kan öka inläsningstiden. För redigering är korrekt målinriktning alltid aktiverat. Om du markerar kryssrutan Exakt målinriktning utför mboxDefine först och mboxUpdate senare, vilket resulterar i en Ajax-begäran när data är tillgängliga. Om du inte markerar kryssrutan Exakt målinriktning utför mboxCreate-funktionen, vilket resulterar i en synkron begäran direkt (i det här fallet är inte alla kontextdata tillgängliga än). Obs! Om du aktiverar eller inaktiverar korrekt målinriktning för en viss komponent påverkas inte inställningarna som du har angett globalt. Du kan alltid åsidosätta globala inställningar genom att välja Korrekt målanpassning i komponenten. |
 | Inkludera lösta segment | Om du markerar den här kryssrutan inkluderas alla lösta segment i mbox-anropet och alla parametrar som har konfigurerats på sidan och i ramverket. Detta fungerar bara i situationer med XML API där du synkroniserar AEM segment. Om du har segment i AEM som inte hanteras av Adobe Target (som skriptsegment) kan du med det här alternativet lösa segmentet i AEM och skicka information till Adobe Target om att segmentet är aktivt. |
 | Ärvda kontextparametrar | Visar kontextparametrar som ärvts från Adobe Target-ramverket, om sådana finns, och som är kopplade till den valda sidan. |
 | Kontextparametrar | Klicka på eller tryck på fältet Lägg till om du vill konfigurera ytterligare kontextparametrar (samma som finns i Target Framework). Sammanhangsparametrar som läggs till i komponenten gäller bara för komponenten och inte för andra komponenter, vilket skulle vara fallet om du lade till kontextparametrar direkt i ramverket. |

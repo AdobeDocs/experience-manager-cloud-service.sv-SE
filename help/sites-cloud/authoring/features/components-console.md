@@ -2,9 +2,9 @@
 title: Komponentkonsol
 description: Med komponentkonsolen kan du bläddra igenom alla komponenter som definierats för din instans
 exl-id: f4949331-5302-46d3-a004-b813bb95ec2f
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '273'
 ht-degree: 17%
 
 ---
@@ -33,9 +33,9 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
 
 * **Egenskaper**
 
-   ![Egenskaper för komponentkonsolen](/help/sites-cloud/authoring/assets/components-console-properties.png)
+  ![Egenskaper för komponentkonsolen](/help/sites-cloud/authoring/assets/components-console-properties.png)
 
-   På fliken Egenskaper kan du:
+  På fliken Egenskaper kan du:
 
    * Visa komponentens allmänna egenskaper.
       * Visa hur ikonen eller förkortningen har definierats för komponenten. <!-- View how the [icon or abbreviation has been defined](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) for the component.-->
@@ -43,24 +43,24 @@ Om du vill visa information om en viss komponent trycker/klickar du på den nöd
    * Visa **Resurstyp** och **Resurssupertyp** (om det är definierat) för komponenten.
       * Om du klickar på Resurssupertypen kommer du till den komponenten.
 
-   >[!NOTE]
-   >
-   >För `/apps` går inte att redigera vid körning, komponentkonsolen är skrivskyddad.
+  >[!NOTE]
+  >
+  >För `/apps` går inte att redigera vid körning, komponentkonsolen är skrivskyddad.
 
 * **Profiler**
 
-   ![Principer för komponentkonsolen](/help/sites-cloud/authoring/assets/components-console-policies.png)
+  ![Principer för komponentkonsolen](/help/sites-cloud/authoring/assets/components-console-policies.png)
 
 * **Live-användning**
 
-   ![Live-användning av komponenter](/help/sites-cloud/authoring/assets/components-console-live-usage.png)
+  ![Live-användning av komponenter](/help/sites-cloud/authoring/assets/components-console-live-usage.png)
 
-   >[!CAUTION]
-   >
-   >På grund av den typ av information som samlas in för den här vyn kan det ta en stund att sortera/visa informationen.
+  >[!CAUTION]
+  >
+  >På grund av den typ av information som samlas in för den här vyn kan det ta en stund att sortera/visa informationen.
 
 * **Dokumentation**
 
-   Om utvecklaren har tillhandahållit dokumentation för komponenten visas den på **Dokumentation** -fliken. Om det inte finns någon tillgänglig dokumentation kan du **Dokumentation** kommer inte att visas. <!-- If the developer has provided [documentation for the component](/help/sites-developing/developing-components.md#documenting-your-component), it will appear on the **Documentation** tab. If there is no documentation available, the **Documentation** tab will not be shown.-->
+  Om utvecklaren har tillhandahållit dokumentation för komponenten visas den på **Dokumentation** -fliken. Om det inte finns någon tillgänglig dokumentation **Dokumentation** kommer inte att visas. <!-- If the developer has provided [documentation for the component](/help/sites-developing/developing-components.md#documenting-your-component), it will appear on the **Documentation** tab. If there is no documentation available, the **Documentation** tab will not be shown.-->
 
-   ![Komponentdokumentation](/help/sites-cloud/authoring/assets/components-console-documentation.png)
+  ![Komponentdokumentation](/help/sites-cloud/authoring/assets/components-console-documentation.png)

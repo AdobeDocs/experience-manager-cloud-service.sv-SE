@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 9bfc3995-ac8e-488e-b68f-9e1b5b4a3176
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1399'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig hur du ordnar ditt AEM Sites-innehåll och hur AEM översättningsverkt
 I det föregående dokumentet om AEM Sites översättningsresa [Läs om AEM Sites innehåll och hur du översätter i AEM](learn-about.md) du lärde dig grunderna i AEM Sites och nu bör du:
 
 * Lär dig grunderna i AEM Sites framtagning av innehåll.
-* Läs om hur AEM stöder översättning.
+* Lär dig mer om hur AEM stöder översättning.
 
 Den här artikeln bygger vidare på dessa grunder så att du förstår hur AEM lagrar och hanterar innehåll och hur du kan använda AEM översättningsverktyg för att översätta det innehållet.
 
@@ -39,7 +39,7 @@ Det finns ett antal krav innan du börjar översätta AEM innehåll.
 
 ### Kunskap {#knowledge}
 
-* Upplev hur man översätter innehåll i ett CMS-system
+* Upplev översättning av innehåll i ett CMS-system
 * Upplev de grundläggande funktionerna i ett storskaligt CMS-system
 * Kunskap AEM grundläggande hantering
 * Förståelse för översättningstjänsten som du använder
@@ -66,7 +66,7 @@ Webbplatskonsolen ger en översikt över innehållets struktur, vilket gör det 
 Så här kommer du åt webbplatskonsolen:
 
 1. Klicka eller tryck på den globala navigeringsmenyn **Navigering** -> **Webbplatser**.
-1. Webbplatskonsolen öppnas på den översta nivån i ditt innehåll.
+1. Platskonsolen öppnas på den översta nivån i ditt innehåll.
 1. Se till att **Kolumnvy** markeras med vyväljaren längst upp till höger i fönstret.
 
    ![Markera kolumnvy](assets/selecting-column-view.png)
@@ -77,7 +77,7 @@ Så här kommer du åt webbplatskonsolen:
 
 1. Genom att trycka eller klicka på kryssrutan för ett objekt i en kolumn, markeras objektet och det markerade objektets information visas i kolumnen till höger. Ett antal åtgärder som är tillgängliga för det markerade objektet visas i verktygsfältet ovan.
 
-   ![Val av innehåll](assets/sites-console-selection.png)
+   ![Innehållsmarkering](assets/sites-console-selection.png)
 
 1. Genom att trycka eller klicka på järnvägsväljaren längst upp till vänster kan du även visa **Innehållsträd** om du vill se en trädöversikt över ditt innehåll.
 
@@ -93,13 +93,13 @@ Med dessa enkla verktyg kan du navigera i innehållsstrukturen på ett intuitivt
 
 ### Page Editor {#page-editor}
 
-På webbplatskonsolen kan du navigera i ditt innehåll och få en översikt över dess struktur. Om du vill visa information om en enskild sida måste du använda webbplatsredigeraren.
+Med platskonsolen kan du navigera i ditt innehåll och få en översikt över dess struktur. Om du vill visa information om en enskild sida måste du använda webbplatsredigeraren.
 
-Så här redigerar du en sida:
+Redigera en sida:
 
 1. Använd platskonsolen för att hitta och välja en sida. Kom ihåg att du måste trycka på eller klicka i kryssrutan för en enskild sida för att markera den.
 
-   ![Markera en sida som ska redigeras](assets/sites-editor-select-page.png)
+   ![Markera en sida att redigera](assets/sites-editor-select-page.png)
 
 1. Tryck på **Redigera** i verktygsfältet.
 1. Webbplatsredigeraren öppnas med den valda sidan inläst för redigering på en ny flik i webbläsaren.
@@ -201,7 +201,7 @@ Nu när du är klar med den här delen av AEM Sites översättningsresa ska du:
 * Förstå hur AEM lagrar innehåll.
 * Bekanta dig med AEM översättningsverktyg.
 
-Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att nästa gång du granskar dokumentet [Konfigurera översättningskopplingen](configure-connector.md) där du får lära dig att ansluta AEM till en översättningstjänst.|
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att granska nästa gång dokumentet [Konfigurera översättningskopplingen](configure-connector.md) där du får lära dig att ansluta AEM till en översättningstjänst.|
 
 ## Ytterligare resurser {#additional-resources}
 

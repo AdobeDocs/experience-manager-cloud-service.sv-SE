@@ -3,9 +3,9 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1503'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ En användare måste ha **[Distributionshanteraren](/help/onboarding/cloud-manag
 
 >[!NOTE]
 >
->Det går inte att konfigurera en produktionspipeline förrän programskapandet är klart, en Git-databas har minst en gren och en uppsättning för produktions- och stagningsmiljö skapas.
+>Det går inte att ställa in en produktionspipeline förrän programmet har skapats, en Git-databas har minst en gren och en uppsättning produktions- och staging-miljöer har skapats.
 
 Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställningar från [!UICONTROL Cloud Manager].
 
@@ -33,7 +33,7 @@ När du har konfigurerat programmet och har minst en miljö som använder [!UICO
 
 >[!TIP]
 >
->Innan du konfigurerar en frontendpipeline ska du läsa [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) för att få en komplett guide med hjälp av det lättanvända AEM för att skapa webbplatser. Den här resan hjälper dig att effektivisera utvecklingen av AEM sajt, så att du snabbt kan anpassa din sajt utan någon AEM bakomliggande kunskap.
+>Innan du konfigurerar en frontendpipeline ska du läsa [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md) för att få en komplett guide med hjälp av det lättanvända AEM snabbverktyget för att skapa webbplatser. Den här resan hjälper dig att effektivisera utvecklingen av AEM sajt, så att du snabbt kan anpassa din sajt utan någon AEM bakomliggande kunskap.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
@@ -54,12 +54,12 @@ När du har konfigurerat programmet och har minst en miljö som använder [!UICO
    * **Misslyckas omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt avvisar varje fel.
    * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipeline automatiskt när ett viktigt fel inträffar. Detta emulerar i princip en användare som manuellt godkänner varje fel.
 
-   ![Konfiguration av produktionspipeline](/help/implementing/cloud-manager/assets/configure-pipeline/production-pipeline-configuration.png)
+   ![Konfiguration av produktionsflöde](/help/implementing/cloud-manager/assets/configure-pipeline/production-pipeline-configuration.png)
 
 1. På **Källkod** måste du definiera var pipelinen ska hämta sin kod och vilken typ av kod den är.
 
    * **[Front End-kod](#front-end-code)**
-   * **[Fullständig stackkod](#full-stack-code)**
+   * **[Fullständig stapelkod](#full-stack-code)**
    * **[Webbnivåkonfiguration](#web-tier-config)**
 
 Hur du slutför produktionen varierar beroende på vilket alternativ du väljer för **Källkod** du markerade. Följ länkarna ovan för att gå till nästa avsnitt i det här dokumentet för att slutföra konfigurationen av din pipeline.
@@ -85,11 +85,11 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
 
    ![Front end-kod](/help/implementing/cloud-manager/assets/configure-pipeline/production-pipeline-frontend.png)
 
-1. Klicka **Spara** för att spara ditt flöde.
+1. Klicka **Spara** för att spara på rörledningen.
 
-Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
+Pipelinen har sparats och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
 
-### Fullständig stackkod {#full-stack-code}
+### Fullständig stapelkod {#full-stack-code}
 
 En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationen. Se dokumentet [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#full-stack-pipeline) om du vill ha mer information om den här typen av pipeline.
 
@@ -135,11 +135,11 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
    * Du kan lägga till högst 25 banor.
    * Om du inte definierar några sökvägar inkluderas webbplatsens hemsida som standard i Experience Audit.
 
-1. Klicka på **Spara** för att spara ditt flöde.
+1. Klicka på **Spara** för att spara på rörledningen.
 
 Sökvägar som har konfigurerats för Experience Audit skickas till tjänsten och utvärderas utifrån prestanda-, hjälpmedels-, SEO-test (sökmotoroptimering), bästa praxis och PWA-tester (Progressive Web App) när pipeline körs. Se [Upplevelsegranskningsresultat](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
 
-Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
+Pipelinen har sparats och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
 
 ### Webbnivåkonfiguration {#web-tier-config}
 
@@ -159,19 +159,19 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet hittar de grenar som matchar dig.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
       * För konfigurationspipelines på webbnivå är detta vanligtvis sökvägen som innehåller `conf.d`, `conf.dispatcher.d`och `opt-in` kataloger.
-      * Om projektstrukturen till exempel genererades från [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) banan `/dispatcher/src`.
+      * Om projektstrukturen till exempel genererades från [AEM Project Archettype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) banan `/dispatcher/src`.
    * **Pausa innan du distribuerar till produktion** - Det här alternativet pausar pipeline innan den distribueras till produktion.
    * **Schemalagd** - Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen.
 
    ![Webbskiktskod](/help/implementing/cloud-manager/assets/configure-pipeline/production-pipeline-webtier.png)
 
-1. Klicka **Spara** för att spara ditt flöde.
+1. Klicka **Spara** för att spara på rörledningen.
 
 >[!NOTE]
 >
 >Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
 
-Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
+Pipelinen har sparats och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
 
 ## Developing Sites with the Front-End Pipeline {#developing-with-front-end-pipeline}
 

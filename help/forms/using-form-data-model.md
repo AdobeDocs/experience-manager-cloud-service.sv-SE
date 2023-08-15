@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User
 level: Beginner, Intermediate
 exl-id: 827ce457-6585-46fb-8e28-1d970a40d949
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,9 @@ En formulärdatamodell är ett tillägg till JSON-schema som du kan använda fö
 
 ## Skapa adaptiva Forms och fragment {#create-af}
 
-Du kan skapa [Adaptiv Forms](creating-adaptive-form.md) och adaptiva formulärfragment <!-- [Adaptive Form Fragments](adaptive-form-fragments.md) --> baserat på en formulärdatamodell. Så här använder du en formulärdatamodell när du skapar ett adaptivt formulär eller adaptivt formulärfragment:
+Du kan [Adaptiv Forms](creating-adaptive-form.md) och adaptiva formulärfragment <!-- [Adaptive Form Fragments](adaptive-form-fragments.md) --> baserat på en formulärdatamodell. Så här använder du en formulärdatamodell när du skapar ett adaptivt formulär eller adaptivt formulärfragment:
 
-1. På fliken Formulärmodell på skärmen Lägg till egenskaper väljer du **[!UICONTROL Form Data Model]** i **[!UICONTROL Select From]** nedrullningsbar lista.
+1. På fliken Formulärmodell på skärmen Lägg till egenskaper väljer du **[!UICONTROL Form Data Model]** i **[!UICONTROL Select From]** listruta.
 
    ![create-af-1-1](assets/create-af-1-1.png)
 
@@ -56,7 +56,7 @@ Du kan skapa [Adaptiv Forms](creating-adaptive-form.md) och adaptiva formulärfr
 
    ![create-af-3](assets/create-af-3.png)
 
-   När det adaptiva formuläret eller adaptiva formulärfragment som baseras på en formulärdatamodell har skapats visas formulärdatamodellsobjekten i **[!UICONTROL Data Sources]** i Content Browser i Adaptive Form Editor.
+   När det adaptiva formuläret eller adaptiva formulärfragment som baseras på en formulärdatamodell har skapats visas formulärdatamodellsobjekten i dialogrutan **[!UICONTROL Data Sources]** i Content Browser i Adaptive Form Editor.
 
    >[!NOTE]
    >
@@ -130,16 +130,16 @@ Du kan också skicka formulärbilagor till en datakälla med hjälp av objektege
 
 1. Lägg till ett datamodellsobjekt som innehåller en binär egenskap i formulärdatamodellen.
 1. Dra och släpp **[!UICONTROL File Attachment]** från komponentwebbläsaren till det adaptiva formuläret.
-1. Tryck för att markera den tillagda komponenten och tryck på ![settings_icon](assets/configure-icon.svg) för att öppna egenskapsgranskaren för komponenten.
+1. Tryck för att markera den tillagda komponenten och tryck på ![settings_icon](assets/configure-icon.svg) om du vill öppna egenskapsgranskaren för komponenten.
 1. I fältet Bindningsreferens trycker du på ![foldersearch_18](assets/folder-search-icon.svg) och navigera till den binära egenskap som du lade till i formulärdatamodellen. Konfigurera andra egenskaper efter behov.
 
    Tryck ![check-button](assets/save_icon.svg) för att spara egenskaperna. Bilagefältet är nu bundet till den binära egenskapen för formulärdatamodellen.
 
 1. Aktivera i delen Skicka i egenskaperna för den adaptiva formulärbehållaren **[!UICONTROL Submit Form Attachments]**. Den bifogade filen i fältet för binära egenskaper skickas till datakällan när formuläret skickas.
 
-## Anropa tjänster i Adaptive Forms med regler {#invoke-services}
+## Anropa tjänster i Adaptive Forms med hjälp av regler {#invoke-services}
 
-I ett adaptivt formulär baserat på en formulärdatamodell kan du [skapa regler](rule-editor.md) för att anropa tjänster som konfigurerats i formulärdatamodellen. The **[!UICONTROL Invoke Services]** -åtgärden i en regel listar alla tillgängliga tjänster i formulärdatamodellen och gör att du kan välja in- och utdatafält för tjänsten. Du kan också använda **[!UICONTROL Set Value]** regeltyp som anropar en formulärdatamodelltjänst och ställer in värdet för ett fält på utdata som returneras av tjänsten.
+I ett adaptivt formulär baserat på en formulärdatamodell kan du [skapa regler](rule-editor.md) för att anropa tjänster som konfigurerats i formulärdatamodellen. The **[!UICONTROL Invoke Services]** -åtgärden i en regel listar alla tillgängliga tjänster i formulärdatamodellen och låter dig välja in- och utdatafält för tjänsten. Du kan också använda **[!UICONTROL Set Value]** regeltyp som anropar en formulärdatamodelltjänst och ställer in värdet för ett fält på utdata som returneras av tjänsten.
 
 I följande regel anropas till exempel en get-tjänst som tar Employee Id som indata och de returnerade värdena fylls i i motsvarande fält för beroende ID, efternamn, förnamn och kön i formuläret.
 

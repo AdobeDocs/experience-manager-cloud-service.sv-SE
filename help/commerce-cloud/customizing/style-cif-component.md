@@ -11,9 +11,9 @@ feature: Commerce Integration Framework
 kt: 3456
 thumbnail: 3456-style-cif.jpg
 exl-id: 521c1bb8-7326-4ee8-aba3-f386727e2b34
-source-git-commit: 5311ba7f001201fc94c73fa52bc7033716c1ba78
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2536'
+source-wordcount: '2535'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ The [CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) är en re
 
 >[!TIP]
 >
-> Använd [AEM](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
+> Använd [AEM projekttyp](https://github.com/adobe/aem-project-archetype) när du startar en egen implementering av e-handeln.
 
 ## Vad du ska bygga
 
@@ -38,7 +38,7 @@ Det krävs en lokal utvecklingsmiljö för att slutföra den här självstudieku
 
 ## Klona Veniaprojektet {#clone-venia-project}
 
-Du ska klona [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia)och åsidosätt sedan standardformaten.
+Du kommer att klona [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia)och åsidosätt sedan standardformaten.
 
 >[!NOTE]
 >
@@ -50,14 +50,14 @@ Du ska klona [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia)o
    $ git clone git@github.com:adobe/aem-cif-guides-venia.git
    ```
 
-1. Bygg och distribuera projektet till en lokal instans av AEM:
+1. Skapa och distribuera projektet till en lokal instans av AEM:
 
    ```shell
    $ cd aem-cif-guides-venia/
    $ mvn clean install -PautoInstallPackage,cloud
    ```
 
-1. Lägg till nödvändiga OSGi-konfigurationer så att du kan ansluta AEM till en Adobe Commerce-instans eller lägga till konfigurationerna i det nya projektet.
+1. Lägg till nödvändiga OSGi-konfigurationer så att du kan ansluta AEM till en Adobe Commerce-instans eller lägga till konfigurationerna i det nyskapade projektet.
 
 1. Nu bör du ha en fungerande version av en storefront som är ansluten till en Adobe Commerce-instans. Navigera till `US` > `Home` sida vid: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
 
@@ -65,9 +65,9 @@ Du ska klona [Venedig-projektet](https://github.com/adobe/aem-cif-guides-venia)o
 
    ![Storefront konfigurerat med Venia-tema](../assets/style-cif-component/venia-store-configured.png)
 
-## Klientbibliotek och modulen ui.front {#introduction-to-client-libraries}
+## Klientbibliotek och modulen ui.frontEdge {#introduction-to-client-libraries}
 
-Den CSS och JavaScript som ansvarar för återgivningen av temat/formaten för butiken hanteras i AEM av en [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) eller&quot;clientlibs&quot; för kort tid. Med klientbibliotek kan du ordna CSS och JavaScript i ett projekts kod och sedan leverera på sidan.
+Den CSS och JavaScript som ansvarar för återgivningen av temat/formaten för butiken hanteras i AEM av en [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) eller&quot;clientlibs&quot; för kort tid. Klientbibliotek erbjuder en mekanism för att ordna CSS och JavaScript i ett projekts kod och sedan leverera på sidan.
 
 Märkesspecifika format kan användas på AEM CIF Core-komponenter genom att lägga till och åsidosätta den CSS som hanteras av dessa klientbibliotek. Det är viktigt att förstå hur klientbibliotek är strukturerade och inkluderas på sidan.
 
@@ -166,7 +166,7 @@ Gör sedan en liten ändring av Teaser-stilen för att se hur `ui.frontend` modu
 
    ![Kompilerad CSS för webbplats i ui.apps](../assets/style-cif-component/comiled-css-ui-apps.png)
 
-   Filen är `site.css` kopieras till `ui.apps` projekt. Den ingår nu i ett klientbibliotek med namnet `clientlib-site` med en kategori `venia.site`. När filen är en del av `ui.apps` -modul som den kan distribueras till AEM.
+   Filen är `site.css` kopieras till `ui.apps` projekt. Den ingår nu i ett klientbibliotek med namnet `clientlib-site` med en kategori `venia.site`. När filen ingår i `ui.apps` -modul som den kan distribueras till AEM.
 
    >[!NOTE]
    >
@@ -257,7 +257,7 @@ Kontrollera sedan att klientbiblioteken finns med på sidan.
 
 Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrollera sedan hur det genererade projektet innehåller `clientlib-site` bibliotek via [Sidmallar](/help/implementing/developing/components/templates.md).
 
-1. Navigera till **Hemsida** för webbplatsen i AEM Editor: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
+1. Navigera till **Hemsida** för webbplatsen i AEM: [http://localhost:4502/editor.html/content/venia/us/en.html](http://localhost:4502/editor.html/content/venia/us/en.html).
 
 1. Välj **Sidinformation** meny och klicka **Redigera mall**:
 
@@ -273,14 +273,14 @@ Det finns flera alternativ för hur du inkluderar ett klientbibliotek. Kontrolle
 
    ![Menyalternativ för sidpolicy](../assets/style-cif-component/page-policy-menu.png)
 
-1. Sidprofilen öppnas för mallen Landing Page:
+1. Sidprofilen öppnas för mallen Landningssida:
 
    ![Sidprofil - landningssida](../assets/style-cif-component/page-policy-properties.png)
 
    Till höger ser du en lista över klientbibliotek **kategorier** som finns på alla sidor som använder den här mallen.
 
    * `venia.dependencies` - Tillhandahåller eventuella leverantörsbibliotek som `venia.site` beroende av.
-   * `venia.site` - Kategorin för `clientlib-site` som `ui.frontend` modulen genererar.
+   * `venia.site` - kategorin för `clientlib-site` som `ui.frontend` modulen genererar.
 
    Observera att samma policy används för andra mallar, **Innehållssida**, **Landningssida** och så vidare. Genom att återanvända samma princip säkerställs att samma klientbibliotek inkluderas på alla sidor.
 
@@ -332,7 +332,7 @@ Webbpack-dev-server-proxies bilder och en del CSS/JavaScript från den lokala in
    >
    > Om du får ett Sass-relaterat fel stoppar du servern och kör kommandot `npm rebuild node-sass` och upprepa stegen ovan. Detta fel kan uppstå om du har en annan version av `npm` och `node` än vad som anges i projektet `aem-cif-guides-venia/pom.xml`.
 
-1. Navigera till [http://localhost:8080/](http://localhost:8080/) på en ny flik med samma webbläsare som en inloggad instans av AEM. Webbsidan Venia finns på webbpack-dev-server:
+1. Navigera till [http://localhost:8080/](http://localhost:8080/) på en ny flik med samma webbläsare som en inloggad instans av AEM. Du kan se Venias hemsida via webbpack-dev-server:
 
    ![Webbpaketets dev-server på port 80](../assets/style-cif-component/webpack-dev-server-port80.png)
 
@@ -457,7 +457,7 @@ När koden för projektet har distribuerats till AEM kan du nu se ändringarna i
 
 1. Experimentera genom att lägga till ytterligare produktutbildningar. Använd layoutläget om du vill ändra komponenternas bredd och förskjutning så att flera scener visas på en rad.
 
-   ![Flera produkttekniker](../assets/style-cif-component/multiple-teasers-final.png)
+   ![Flera produktteam](../assets/style-cif-component/multiple-teasers-final.png)
 
 ## Felsökning {#troubleshooting}
 
@@ -479,9 +479,9 @@ Använd [AEM](/help/sites-cloud/authoring/features/style-system.md) om du vill s
 
 ## Ytterligare resurser {#additional-resources}
 
-* [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
+* [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
 * [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components)
 * [Konfigurera en lokal AEM utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-* [Klientbibliotek](/help/implementing/developing/introduction/clientlibs.md)
+* [Bibliotek på klientsidan](/help/implementing/developing/introduction/clientlibs.md)
 * [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 * [Utveckla med Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/style-system.html)

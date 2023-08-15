@@ -2,9 +2,9 @@
 title: Redigeringsprogram
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Följ de här stegen för att redigera ett program.
 
    * Minst en lösning måste väljas för ett program.
 
-   ![Fliken Allmänt](assets/edit-program-prod1.png)
+   ![fliken Allmänt](assets/edit-program-prod1.png)
 
 1. På **Lösningar och tillägg** ändrar du lösningarna för programmet.
 
@@ -59,9 +59,9 @@ Följ de här stegen för att redigera ett program.
 
 Varje gång ett program redigeras, som att lägga till eller ta bort en lösning eller ett tillägg, börjar ändringarna gälla efter nästa distribution.
 
-Om ditt produktionsprogram hade förbättrat säkerheten aktiverat, ytterligare **Förbättrat skydd** -fliken finns i **Redigera program** för att bekräfta att funktionen är aktiv för programmet.
+Om ditt produktionsprogram hade förbättrat säkerheten aktiverat, ytterligare **Förbättrat skydd** -fliken är tillgänglig i **Redigera program** för att bekräfta att funktionen är aktiv för programmet.
 
-![Förbättrat skydd aktivt för ett program](assets/edit-program-enhanced.png)
+![Förbättrat skydd är aktivt för ett program](assets/edit-program-enhanced.png)
 
 Den här inställningen kan inte ändras när programmet har skapats. Mer information om alternativet Förbättrat skydd finns i [Skapa produktionsprogram](creating-production-programs.md) -dokument.
 

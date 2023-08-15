@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar och löser flera sammanslagningskonflikter
 feature: Multi Site Manager
 role: Admin
 exl-id: 733e9411-50a7-42a5-a5a8-4629f6153f10
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Konflikter kan uppstå om nya sidor med samma sidnamn skapas både i den blå gr
 
 ## Konflikthantering {#conflict-handling}
 
-När det finns sidor som är i konflikt (i grenarna utkast och Live Copy) kan du med MSM definiera hur (eller till och med om) de ska hanteras.
+När det finns sidor som är i konflikt (i grenarna utkast och Live Copy) kan du ange hur (eller till och med om) de ska hanteras i MSM.
 
 För att säkerställa att utrullningen inte blockeras kan möjliga definitioner omfatta:
 
@@ -35,7 +35,7 @@ I följande avsnitt använder vi exemplet på en ny sida `b`, som har skapats b�
 
 * skiss: `/b`
 
-  En överordnad sida med 1 underordnad sida, `bp-level-1`
+  En mallsida med 1 underordnad sida, `bp-level-1`
 
 * Live Copy: `/b`
 
@@ -69,7 +69,7 @@ AEM tillhandahåller:
 * The [standardkonflikthanterare](#default-conflict-handler):
    * `ResourceNameRolloutConflictHandler`
 * Möjligheten att implementera en [anpassad hanterare](#customized-handlers)
-* Den rangordningsmekanism som gör att du kan ange prioriteten för varje enskild hanterare
+* Tjänstens rangordningsmekanism som gör att du kan ange prioriteten för varje enskild hanterare
    * Tjänsten med högst rankning används.
 
 ### Standardhanterare för konflikter {#default-conflict-handler}

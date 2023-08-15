@@ -2,9 +2,9 @@
 title: Versionsinformation för version 2020.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: "[!DNL Adobe Experience Manager] as a Cloud Service Release Notes for 2020.10.0."
 exl-id: ac741744-5b47-47a4-b5af-e1089e92c3f0
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 ## [!DNL Adobe Experience Manager Assets] as a Cloud Service {#assets}
 
-* **[!DNL Adobe Sensei]smart taggning för video**: Genom att använda AI-modeller för att analysera videoinnehåll för objekt- och åtgärdsspecifika taggar kan DAM-användare lägga mindre tid på att lägga till taggar och mer tid på att använda den exponerade, omfattande informationen. Ni levererar i sin tur rätt upplevelse till kunderna. Se [Smart tagga videoresurser](/help/assets/smart-tags-video-assets.md).
+* **[!DNL Adobe Sensei]smart taggning för video**: Genom att använda AI-modeller för att analysera videoinnehåll för objekt- och åtgärdsspecifika taggar kan DAM-användare lägga mindre tid på att lägga till taggar och mer tid på att använda den exponerade, detaljerade informationen. Ni levererar i sin tur rätt upplevelse till kunderna. Se [Smart tagga videoresurser](/help/assets/smart-tags-video-assets.md).
 
 * **Brand Portal-förbättringar**: Följande nya funktioner och mer finns i [!DNL Brand Portal]. Mer information finns i [[!DNL Brand Portal] versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal-release-notes.html).
 
@@ -47,7 +47,7 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
 
-* **Analytics för Adaptive Forms**: Nu kan du fånga in och spåra beteenden hos både inloggade och ej inloggade (anonyma) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper företagsanvändare att fatta välgrundade beslut om anpassat formulärinnehåll, layout och format baserat på insamlade insikter.
+* **Analytics för Adaptive Forms**: Du kan nu fånga in och spåra beteenden hos både inloggad och ej inloggad (anonym) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper företagsanvändare att fatta välgrundade beslut om anpassat formulärinnehåll, layout och format baserat på insamlade insikter.
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms-oct-2021}
 
@@ -61,7 +61,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
-### Vad är nytt? {#what-is-new-commerce}
+### Nyheter {#what-is-new-commerce}
 
 * Lanserade CIF Venia Reference Site - 2020.10.2 som innehåller den senaste CIF Core Components version v1.4.0. Se [CIF Venias referenswebbplats](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2020.10.2) för mer information.
 
@@ -120,7 +120,7 @@ Se [Visningsmiljö](/help/implementing/cloud-manager/manage-environments.md#view
 
 Läs mer om nyheter och uppdateringar för [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) Version v1.1.12.
 
-### Vad är nytt? {#what-is-new-ctt}
+### Nyheter {#what-is-new-ctt}
 
 * Användarupplevelsen för loggar har förbättrats. Tidsstämplar har lagts till i loggarna för extrahering och inmatning. Meddelande har lagts till för att ange om loggarna är tomma.
 

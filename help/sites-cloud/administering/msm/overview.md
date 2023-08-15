@@ -4,9 +4,9 @@ description: Få en introduktion till att återanvända innehåll med AEM kraftf
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
-source-git-commit: 4049d226ecedb917c2a72cb76bc2fcaa946163f2
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2719'
+source-wordcount: '2714'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Det finns många användningsområden för MSM och Live-kopior. Exempel:
 
   Den engelska delen av [Exempel på WKND-självstudiekurs](/help/implementing/developing/introduction/develop-wknd-tutorial.md) skapas för kunder i USA. Det mesta av innehållet på denna webbplats kan också användas för andra WKND-webbplatser som passar för engelsktalande kunder i olika länder och kulturer. Kärninnehållet är detsamma på alla webbplatser, och regionala justeringar kan göras.
 
-  Följande struktur kan användas för webbplatser för USA och Kanada. Anteckna hur `language-masters` noden behåller den överordnad kopian av inte bara engelskt utan även annat språkinnehåll. Innehållet kan användas som bas för ytterligare regionalt språkinnehåll vid sidan av engelska.
+  Följande struktur kan användas för webbplatser för USA och Kanada. Anteckna hur `language-masters` noden underhåller huvudkopian av inte bara engelskt utan även annat språkinnehåll. Innehållet kan användas som bas för ytterligare regionalt språkinnehåll vid sidan av engelska.
 
   ```xml
   /content
@@ -185,7 +185,7 @@ En MSM Live Copy är en kopia av specifikt webbplatsinnehåll som har en aktiv r
    * Djup: sidan tillsammans med de underordnade sidorna
 * Synkroniseringsregler, som kallas rollout-konfigurationer, avgör vilka egenskaper som synkroniseras och när synkroniseringen görs.
 
-I föregående exempel `/content/wknd/language-masters/en` är den globala överordnad webbplatsen på engelska. MSM Live-kopior skapas för att återanvända innehållet på den här webbplatsen:
+I föregående exempel `/content/wknd/language-masters/en` är den globala huvudwebbplatsen på engelska. MSM Live-kopior skapas för att återanvända innehållet på den här webbplatsen:
 
 * Innehållet nedan `/content/wknd/language-masters/en` är källan.
 * Innehållet nedan `/content/wknd/language-masters/en` kopieras under `/content/wknd/us/en/` och `/content/wknd/ca/en` noder. Det här är Live-kopior.
@@ -245,7 +245,7 @@ En Live-kopia kallas för en staplad Live-kopia när den skapas som underordnad 
 
 ### Källa-, utkast- och designkonfigurationer {#source-blueprints-and-blueprint-configurations}
 
-Alla sidor och sidgrenar kan användas som källa för en Live-kopia. Med MSM kan du även definiera en ritningskonfiguration som anger en källsökväg. Fördelarna med att använda en designkonfiguration är att de
+Alla sidor och sidgrenar kan användas som källa för en Live-kopia. Med MSM kan du dock även definiera en ritningskonfiguration som anger en källsökväg. Fördelarna med att använda en designkonfiguration är att de
 
 * Tillåt författaren att använda **Utrullning** på en plan. Det vill säga att uttryckligen skicka ändringar till Live-kopior som ärver från den här ritningen.
 * Tillåt författaren att använda **Skapa webbplats**. På så sätt kan användaren enkelt välja språk och konfigurera strukturen för Live-kopian.

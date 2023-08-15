@@ -2,9 +2,9 @@
 title: Kontrollerar domännamnsstatus
 description: Lär dig hur du avgör om ditt anpassade domännamn har verifierats av Cloud Manager.
 exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Du kan fastställa statusen för ditt anpassade domännamn i Cloud Manager.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Klicka på **Domäninställningar** i den vänstra navigeringspanelen.
 
@@ -48,7 +48,7 @@ Cloud Manager verifierar domänägarskap via TXT-värdet och visar ett av följa
 
    * Se [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md) om du vill veta mer.
 
-Cloud Manager utlöser automatiskt en TXT-verifiering när du väljer **Spara** om kontrollsteg för **Lägg till anpassad domän** guide. För efterföljande verifieringar måste du aktivt markera ikonen för att verifiera igen bredvid statusen.
+Cloud Manager utlöser automatiskt en TXT-verifiering när du väljer **Spara** om verifieringssteget för **Lägg till anpassad domän** guide. För efterföljande verifieringar måste du aktivt markera ikonen för att verifiera igen bredvid statusen.
 
 ## Domännamnsfel {#domain-error}
 
@@ -56,13 +56,13 @@ Nedan följer några vanliga domännamnsfel och deras vanliga upplösning.
 
 ### Domänen är inte installerad {#domain-not-installed}
 
-Detta fel kan uppstå under domänvalidering av TXT-posten även efter det att du har kontrollerat att posten har uppdaterats korrekt.
+Det här felet kan inträffa under domänvalidering av TXT-posten även efter att du har kontrollerat att posten har uppdaterats korrekt.
 
 #### Felorsak {#cause}
 
-Låser snabbt en domän till det ursprungliga konto som registrerade den och inget annat konto kan registrera en underdomän utan att fråga om tillstånd. Dessutom kan du bara tilldela en API-domän och associerade underdomäner till en snabbast-tjänst och ett konto. Om du har ett befintligt Fast-konto som länkar samma index och underdomäner som används för dina AEM Cloud Service-domäner visas det här felet.
+Låser snabbt en domän till det ursprungliga konto som registrerade den och inget annat konto kan registrera en underdomän utan att fråga om tillstånd. Med Fastly kan du dessutom bara tilldela en apex-domän och associerade underdomäner till en fast tjänst och ett konto. Om du har ett befintligt Fast-konto som länkar samma index och underdomäner som används för dina AEM Cloud Service-domäner visas det här felet.
 
-#### Felupplösning {#resolution}
+#### Felmatchning {#resolution}
 
 Felet är åtgärdat på följande sätt:
 
@@ -74,7 +74,7 @@ Felet är åtgärdat på följande sätt:
 
 >[!TIP]
 >
->Att lösa domändelegeringsproblem med Fastly tar vanligtvis 1-2 arbetsdagar. Därför rekommenderar vi att du installerar domänerna långt innan de publiceras.
+>Det tar vanligtvis 1-2 arbetsdagar att lösa problem med domändelegering med Fastly. Därför rekommenderar vi att du installerar domänerna långt innan de publiceras.
 
 >[!NOTE]
 >

@@ -1,13 +1,13 @@
 ---
 title: Hur konfigurerar jag datakällor?
-description: Med Experience Manager Forms dataintegrering kan du konfigurera och ansluta till olika datakällor. Lär dig hur du konfigurerar RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster som datakällor och använder dem för att skapa formulärdatamodeller.
+description: Med Experience Manager Forms dataintegrering kan du konfigurera och ansluta till olika datakällor. Lär dig konfigurera RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster som datakällor och använda dem för att skapa formulärdatamodeller.
 feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2041'
+source-wordcount: '2039'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Dataintegrering stöder OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-t
 ### Förutsättningar
 
 Innan du konfigurerar relationsdatabaser med [!DNL Experience Manager] Konfiguration av webbkonsol, det är obligatoriskt att:
-* [Aktivera avancerade nätverk via molnhanterings-API](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html), eftersom portar är inaktiverade som standard.
+* [Aktivera avancerat nätverk via molnhanterings-API](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html), eftersom portar är inaktiverade som standard.
 * [Lägg till JDBC-drivrutinsberoenden i Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=en#mysql-driver-dependencies).
 
 
@@ -61,7 +61,7 @@ Du kan konfigurera relationsdatabaser med [!DNL Experience Manager] Konfiguratio
       * VÄLJ 1 från dubbla (Oracle)
    * Datakällans namn
 
-   Exempelsträngar för konfiguration av relationsdatabas:
+   Exempelsträngar för konfigurering av relationsdatabas:
 
    ```text
       "datasource.name": "sqldatasourcename-mysql",
@@ -122,13 +122,13 @@ Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 ## Konfigurera RESTful-webbtjänster {#configure-restful-web-services}
 
-RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/v2/) i JSON- eller YAML-format i en [!DNL Swagger] definitionsfil. Konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service, se till att du har antingen [!DNL Swagger] fil ([Swagger version 2.0](https://swagger.io/specification/v2/)) eller [!DNL Swagger] fil ([Swagger version 3.0](https://swagger.io/specification/v3/)) i filsystemet eller den URL där filen finns.
+RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/v2/) i JSON- eller YAML-format i [!DNL Swagger] definitionsfil. Konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service, se till att du har antingen [!DNL Swagger] fil ([Swagger version 2.0](https://swagger.io/specification/v2/)) eller [!DNL Swagger] fil ([Swagger version 3.0](https://swagger.io/specification/v3/)) i filsystemet eller den URL där filen finns.
 
 ### Konfigurera RESTful-tjänster för Open API Specification version 2.0 {#configure-restful-services-open-api-2.0}
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
-   Se [Konfigurera mapp för molntjänstkonfigurationer](configure-data-sources.md#cloud-folder) om du vill ha information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
+   Se [Konfigurera mapp för molntjänstkonfigurationer](configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
 1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
@@ -138,12 +138,12 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
 
       * Schema: De överföringsprotokoll som används av REST API. Antalet schematyper som visas i listrutan beror på scheman som definieras i [!DNL Swagger] källa.
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
-      * Grundsökväg: URL-prefixet för alla API-sökvägar. Det är ett valfritt fält.\
+      * Bassökväg: URL-prefixet för alla API-sökvägar. Det är ett valfritt fält.\
         Om det behövs kan du redigera de förifyllda värdena för dessa fält.
 
    * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication, API Key eller Custom Authentication - för att få åtkomst till RESTful-tjänsten och ange därmed information för autentisering.
 
-   Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
+   Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** efter behov.
 
    <!--If you select **[!UICONTROL Mutual Authentication]** as the authentication type, see [Certificate-based mutual authentication for RESTful and SOAP web services](#mutual-authentication).-->
 
@@ -153,7 +153,7 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
-   Se [Konfigurera mapp för molntjänstkonfigurationer](configure-data-sources.md#cloud-folder) om du vill ha information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
+   Se [Konfigurera mapp för molntjänstkonfigurationer](configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
 1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
@@ -162,7 +162,7 @@ RESTful-webbtjänsten kan beskrivas med [Swagger-specifikationer](https://swagge
    * Baserat på[!DNL  Swagger] Källindata, anslutningsinformationen med målservern visas.
    * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication, API Key eller Custom Authentication - för att få åtkomst till RESTful-tjänsten och ange därmed information för autentisering.
 
-   Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
+   Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** efter behov.
 
    <!--If you select **[!UICONTROL Mutual Authentication]** as the authentication type, see [Certificate-based mutual authentication for RESTful and SOAP web services](#mutual-authentication).-->
 
@@ -183,7 +183,7 @@ Se [OpenAPI 3.0-specifikation](https://swagger.io/specification/v3/) för detalj
 
 Ange följande egenskaper för **[!UICONTROL Form Data Model HTTP Client Configuration for REST data source]** konfiguration som anger det reguljära uttrycket:
 
-* Använd `http.connection.max.per.route` egenskapen för att ange maximalt antal tillåtna anslutningar mellan formulärdatamodell och RESTful-webbtjänster. Standardvärdet är 20 anslutningar.
+* Använd `http.connection.max.per.route` -egenskap för att ange maximalt antal tillåtna anslutningar mellan formulärdatamodell och RESTful-webbtjänster. Standardvärdet är 20 anslutningar.
 
 * Använd `http.connection.max` egenskapen för att ange maximalt antal tillåtna anslutningar för varje flöde. Standardvärdet är 40 anslutningar.
 
@@ -211,7 +211,7 @@ I följande JSON-fil visas ett exempel:
 
 1. I [!UICONTROL Form Data Model HTTP Client Configuration for REST data source] dialog:
 
-   * Ange maximalt antal tillåtna anslutningar mellan formulärdatamodell och RESTful-webbtjänster i dialogrutan **[!UICONTROL Connection limit in total]** fält. Standardvärdet är 20 anslutningar.
+   * Ange maximalt antal tillåtna anslutningar mellan formulärdatamodellen och RESTful-webbtjänster i dialogrutan **[!UICONTROL Connection limit in total]** fält. Standardvärdet är 20 anslutningar.
 
    * Ange maximalt antal tillåtna anslutningar för varje flöde i dialogrutan **[!UICONTROL Connection limit on per route basis]** fält. Standardvärdet är två anslutningar.
 
@@ -229,7 +229,7 @@ Konfigurera SOAP-baserad webbtjänst i [!DNL Experience Manager] as a Cloud Serv
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
-   Se [Konfigurera mapp för molntjänstkonfigurationer](configure-data-sources.md#cloud-folder) om du vill ha information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
+   Se [Konfigurera mapp för molntjänstkonfigurationer](configure-data-sources.md#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
 1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL SOAP Web Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
 1. Ange följande för SOAP-webbtjänsten:
@@ -247,7 +247,7 @@ Konfigurera SOAP-baserad webbtjänst i [!DNL Experience Manager] as a Cloud Serv
 
 ### Aktivera användning av importsatser i SOAP-webbtjänster WSDL {#enable-import-statements}
 
-Du kan ange ett reguljärt uttryck som fungerar som filter för absoluta URL:er som tillåts som importsatser i SWDL för SOAP-webbtjänster. Som standard finns det inget värde i det här fältet. Som en följd av detta [!DNL Experience Manager] blockerar alla importsatser som är tillgängliga i WSDL. Om du anger `.*` som värdet i detta fält, [!DNL Experience Manager] tillåter alla importsatser.
+Du kan ange ett reguljärt uttryck som fungerar som filter för absoluta URL:er som tillåts som importsatser i SWDL för SOAP-webbtjänster. Som standard finns det inget värde i det här fältet. Detta resulterar i [!DNL Experience Manager] blockerar alla importsatser som är tillgängliga i WSDL. Om du anger `.*` som värdet i detta fält, [!DNL Experience Manager] tillåter alla importsatser.
 
 Ange `importAllowlistPattern` egenskapen för **[!UICONTROL Form Data Model SOAP Web Services Import Allowlist]** -konfiguration för att ange det reguljära uttrycket. I följande JSON-fil visas ett exempel:
 
@@ -268,11 +268,11 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 >[!NOTE]
 >
 > Formulärdatamodellen stöder [OData version 4](https://www.odata.org/documentation/).
->Om du vill konfigurera steg-för-steg-guiden [!DNL Microsoft® Dynamics 365], online eller lokalt, se [[!DNL Microsoft® Dynamics] OData-konfiguration](ms-dynamics-odata-configuration.md).
+>Stegvisa anvisningar för konfiguration [!DNL Microsoft® Dynamics 365], online eller lokalt, se [[!DNL Microsoft® Dynamics] OData-konfiguration](ms-dynamics-odata-configuration.md).
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
-   Se [Konfigurera mapp för molntjänstkonfigurationer](#cloud-folder) om du vill ha information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
+   Se [Konfigurera mapp för molntjänstkonfigurationer](#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
 1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL OData Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
 1. Ange följande information för OData-tjänsten:
@@ -280,7 +280,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
    * Tjänstens rot-URL för OData-tjänsten som ska konfigureras.
    * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Basic Authentication, API Key eller Custom Authentication - för att få åtkomst till OData-tjänsten och därmed ange autentiseringsinformationen.
 
-   Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** i enlighet med detta.
+   Om du väljer **[!UICONTROL API Key]** Ange värdet för API-nyckeln som autentiseringstyp. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj ett av dessa alternativ på menyn **[!UICONTROL Location]** nedrullningsbar lista och ange namnet på huvudet eller frågeparametern i **[!UICONTROL Parameter Name]** efter behov.
 
    >[!NOTE]
    >

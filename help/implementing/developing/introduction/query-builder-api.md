@@ -1,10 +1,10 @@
 ---
 title: Query Builder API
-description: Funktionerna i Asset Share Query Builder visas via en Java&trade. API och ett REST API.
+description: Funktionerna i Asset Share Query Builder visas via Java&trade; API och REST API.
 exl-id: d5f22422-c9da-4c9d-b81c-ffa5ea7cdc87
-source-git-commit: d361ddc9a50a543cd1d5f260c09920c5a9d6d675
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ REST API ger åtkomst till samma funktioner via HTTP med svar som skickas i JSON
 
 >[!NOTE]
 >
->QueryBuilder-API:t byggs med JCR-API:t. Du kan också fråga AEM JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Fråga Adobe Experience Manager-data med JCR API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html).
+>QueryBuilder-API:t byggs med JCR-API:t. Du kan även fråga AEM JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Fråga Adobe Experience Manager-data med JCR API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html).
 
-## Gem-session {#gem-session}
+## Gruppsession {#gem-session}
 
 [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=en) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av experter från Adobe.
 
@@ -51,7 +51,7 @@ För `QueryBuilder` JSON Servlet innehåller varje exempel en exempellänk till 
 
 ### Returnera alla resultat {#returning-all-results}
 
-Följande fråga **returnerar tio resultat** (eller för att vara exakt, max tio), men informerar dig om **Antal träffar:** som finns:
+Följande fråga **returnerar tio resultat** (eller för att vara exakt, max tio), men informerar dig om **Antal träffar:** som är tillgänglig:
 
 `http://<host>:<port>/bin/querybuilder.json?path=/content&1_property=sling:resourceType&1_property.value=wknd/components/structure/page&1_property.operation=like&orderby=path`
 
@@ -95,7 +95,7 @@ p.guessTotal=true
 orderby=path
 ```
 
-Frågan returnerar `p.limit` standard för `10` resultat med `0` förskjutning:
+Frågan returnerar `p.limit` standard för `10` resultat med `0` offset:
 
 ```xml
 "success": true,
@@ -131,11 +131,11 @@ Gränssnittet kan till exempel anpassa följande metod:
 * Svaret kan ha följande resultat:
 
    * `total=43`, `more=false` - Anger att det totala antalet träffar är 43. Gränssnittet kan visa upp till tio resultat som en del av den första sidan och ge sidnumrering för de kommande tre sidorna. Du kan också använda den här implementeringen för att visa en beskrivande text som **&quot;43 resultat hittades&quot;**.
-   * `total=100`, `more=true` - Anger att det totala antalet träffar är större än 100 och att det exakta antalet inte är känt. Gränssnittet kan visas upp till tio som en del av den första sidan och sidnumreringen kan göras för de kommande tio sidorna. Du kan också använda den här funktionen för att visa text som **&quot;fler än 100 resultat hittades&quot;**. När användaren går till nästa sida kommer ett anrop till Query Builder att öka gränsen för `guessTotal` och `offset` och `limit` parametrar.
+   * `total=100`, `more=true` - Anger att det totala antalet träffar är större än 100 och att det exakta antalet inte är känt. Gränssnittet kan visas upp till tio som en del av den första sidan och sidnumreringen kan göras för de kommande tio sidorna. Du kan också använda den här funktionen för att visa text som **&quot;fler än 100 resultat hittades&quot;**. När användaren går till nästa sida kommer ett anrop till Query Builder att öka gränsen för `guessTotal` och även `offset` och `limit` parametrar.
 
 Använd också `guessTotal` i de fall där användargränssnittet måste använda oändlig rullning för att undvika att Query Builder avgör det exakta träffantalet.
 
-### Sök efter burkfiler och beställ dem, Senaste först {#find-jar-files-and-order-them-newest-first}
+### Hitta burkfiler och beställ dem, senaste först {#find-jar-files-and-order-them-newest-first}
 
 `http://<host>:<port>/bin/querybuilder.json?type=nt:file&nodename=*.jar&orderby=@jcr:content/jcr:lastModified&orderby.sort=desc`
 
@@ -206,9 +206,9 @@ Den här frågan använder en *grupp* (namngiven `group`), som används för att
 
 `"Experience" and ("/content/wknd/us/en/magazine" or "/content/wknd/us/en/adventures")`
 
-I gruppen i exemplet finns `path` predikatet används flera gånger. Om du vill differentiera och ordna de två instanserna av predikatet (ordningen krävs för vissa predikat) måste du prefix prefixet med `N_` där `N` är ordningsindex. I föregående exempel är resultatpredikaten `1_path` och `2_path`.
+Inuti gruppen i exemplet finns `path` predikatet används flera gånger. Om du vill differentiera och ordna de två instanserna av predikatet (ordningen krävs för vissa predikat) måste du prefix prefixet med `N_` där `N` är ordningsindex. I föregående exempel är resultatpredikaten `1_path` och `2_path`.
 
-The `p` in `p.or` är en särskild avgränsare som anger att följande (i det här fallet en `or`) är en *parameter* i gruppen, i motsats till ett underpredikt för gruppen, såsom `1_path`.
+The `p` in `p.or` är en särskild avgränsare som anger att följande (i det här fallet en `or`) är *parameter* i gruppen, i motsats till ett underpredikt för gruppen, såsom `1_path`.
 
 Om nej `p.or` anges, så sammanställs alla predikat med AND, vilket innebär att varje resultat måste uppfylla alla predikat.
 
@@ -351,7 +351,7 @@ Du kan även kontrollera [Javadoc för `PredicateEvaluator` klasser](https://dev
 
 Klassnamnets prefix (till exempel `similar` in [`SimilarityPredicateEvaluator`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/SimilarityPredicateEvaluator.html)) är *huvudegenskap* av klassen. Den här egenskapen är också namnet på predikatet som ska användas i frågan (i gemener).
 
-För sådana huvudegenskaper kan du förkorta frågan och använda `similar=/content/en` i stället för den fullständigt kvalificerade varianten `similar.similar=/content/en`. Det fullständiga, kvalificerade formuläret måste användas för alla icke-huvudsakliga egenskaper i en klass.
+För sådana huvudegenskaper kan du förkorta frågan och använda `similar=/content/en` i stället för den fullständigt kvalificerade varianten `similar.similar=/content/en`. Det fullständigt kvalificerade formuläret måste användas för alla icke-huvudsakliga egenskaper i en klass.
 
 ## Exempel på API-användning för frågebyggaren {#example-query-builder-api-usage}
 
@@ -464,7 +464,7 @@ Förklara **alla** frågar under utvecklingscykeln mot målindexuppsättningen.
    * `com.day.cq.search.impl.builder.QueryImpl XPath query: /jcr:root/content//element(*, cq:Page)[(jcr:contains(jcr:content, "WKND") or jcr:contains(jcr:content/@cq:tags, "WKND"))]`
 1. Klistra in XPath-frågan i Förklara fråga som XPath så att du kan hämta frågeplanen.
 
-### Hämta förklarlig XPath via felsökningsfunktionen i Query Builder {#obtain-explain-able-xpath-via-the-query-builder-debugger}
+### Hämta förklarlig XPath via Felsökning i Query Builder {#obtain-explain-able-xpath-via-the-query-builder-debugger}
 
 Använd felsökningsprogrammet AEM Query Builder för att generera en förklarlig XPath-fråga.
 
@@ -526,5 +526,5 @@ com.day.cq.search.impl.builder.QueryImpl query execution took 272 ms
 | [com.day.cq.search.facets](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/facets/package-summary.html) | Fasetter |
 | [com.day.cq.search.facets.bufickor](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/facets/buckets/package-summary.html) | Bucklar (inneslutna i facets) |
 | [com.day.cq.search.eval](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/package-summary.html) | Förutse utvärderare |
-| [com.day.cq.search.facets.extractor](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Facet Extractor (för utvärderare) |
+| [com.day.cq.search.facets.extractor](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/facets/extractors/package-summary.html) | Fasettextraherare (för utvärderare) |
 | [com.day.cq.search.writer](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/writer/package-summary.html) | JSON Result Hit Writer for Query Builder-serverlet (`/bin/querybuilder.json`) |

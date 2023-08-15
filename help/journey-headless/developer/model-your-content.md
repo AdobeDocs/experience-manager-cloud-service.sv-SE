@@ -1,15 +1,15 @@
 ---
-title: Så här modellerar du innehåll
+title: Så här modellerar du ditt innehåll
 description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f052183d-18fd-4615-a81e-e45db5928fc1
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
 
-# Så här modellerar du innehåll {#model-your-content}
+# Så här modellerar du ditt innehåll {#model-your-content}
 
 I den här delen av [AEM Headless Developer Journey](overview.md)kan du lära dig att modellera innehållsstrukturen. Förverkliga sedan strukturen för Adobe Experience Manager (AEM) med Content Fragments Models och Content Fragments, för återanvändning i alla kanaler.
 
@@ -21,7 +21,7 @@ I det föregående dokumentet om den AEM resan utan headless [Vägen till din f�
 
 * Förstå viktiga planeringsöverväganden vid utformningen av ditt innehåll
 * Förstå stegen för att implementera headless beroende på vilka krav ni har på integreringsnivån.
-* Konfigurera de verktyg och AEM som behövs.
+* Ställ in de verktyg och AEM som behövs.
 * Lär dig de bästa sätten att göra den enkla resan smidig, hålla innehållsgenereringen effektiv och se till att innehållet levereras snabbt.
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du förbereder ett eget AEM headless-projekt.
@@ -29,11 +29,11 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Syfte**: Lär dig hur du modellerar innehållsstrukturen och inser sedan den strukturen med AEM Content Fragment Models och Content Fragments:
+* **Syfte**: Lär dig modellera innehållsstrukturen och sedan förverkliga den strukturen med AEM Content Fragment Models och Content Fragments:
    * Lägg in koncept och terminologi för data-/innehållsmodellering.
    * Lär dig varför innehållsmodellering behövs för leverans av Headless-innehåll.
    * Lär dig hur du realiserar den här strukturen med AEM Content Fragment Models (och skapar innehåll med Content Fragments).
-   * Lär dig modellera ditt innehåll. principer med grundläggande urval.
+   * Lär dig modellera innehåll, principer med grundläggande exempel.
 
 >[!NOTE]
 >
@@ -60,13 +60,13 @@ Det finns många skolor, men de har alla olika saker gemensamt:
 * Många lärare
 * Många icke undervisande personal
 * Många elever
-* Många före detta lärare
+* Många f.d. lärare
 * Många före detta elever
 * Många klassrum
 * Många (många) böcker
 * Många (många) utrustningsdelar
 * Många aktiviteter utanför kurserna
-* och så vidare....
+* och så vidare...
 
 Även i ett sådant litet exempel kan listan verka oändlig. Men om du bara vill att programmet ska utföra en enkel uppgift måste du begränsa informationen till de viktigaste uppgifterna.
 
@@ -112,7 +112,7 @@ Dataintegritet krävs för att garantera innehållets exakthet och enhetlighet u
 
 ### Eliminera redundans {#data-redundancy}
 
-Dataredundans inträffar när samma information lagras två gånger i innehållsstrukturen. Detta bör undvikas eftersom det kan leda till missförstånd när innehållet skapas och fel vid frågor. för att inte tala om missbruk av lagringsutrymme.
+Dataredundans inträffar när samma information lagras två gånger i innehållsstrukturen. Detta bör undvikas eftersom det kan leda till missförstånd när innehållet skapas och fel vid frågor, för att inte tala om missbruk av lagringsutrymme.
 
 ### Optimering och prestanda {#optimization-and-performance}
 
@@ -140,7 +140,7 @@ AEM använder Content Fragments för att tillhandahålla de strukturer som behö
 
 Innehållsmodellens struktur är:
 
-* som realiseras av definitionen av din innehållsfragmentmodell,
+* som realiseras av definitionen av din Content Fragment Model,
 * används som bas för de innehållsfragment som används för att generera innehåll.
 
 >[!NOTE]
@@ -168,7 +168,7 @@ Inom en modell:
 
 1. **Datatyper** gör att du kan definiera de enskilda attributen.
 Definiera till exempel fältet som innehåller en lärares namn som **Text** och deras tjänsteår som **Nummer**.
-1. Datatyperna **Innehållsreferens** och **Fragmentreferens** gör att du kan skapa relationer till annat innehåll i AEM.
+1. Datatyperna **Innehållsreferens** och **Fragmentreferens** kan du skapa relationer till annat innehåll i AEM.
 1. The **Fragmentreferens** datatypen gör att du kan realisera flera strukturnivåer genom att kapsla dina innehållsfragment (enligt modelltypen). Detta är viktigt för er innehållsmodellering.
 
 Till exempel:
@@ -206,7 +206,7 @@ Datatypen kan konfigureras så att fragmentförfattare kan:
 
 ### Skapa modeller för innehållsfragment {#creating-content-fragment-models}
 
-Först måste du aktivera Content Fragment Models för platsen. Detta görs i Configuration Browser. under Verktyg -> Allmänt -> Konfigurationsläsaren. Du kan antingen välja att konfigurera den globala posten eller skapa en ny konfiguration. Till exempel:
+Först måste du aktivera Content Fragment Models för platsen. Detta görs i Configuration Browser, under Tools -> General -> Configuration Browser. Du kan antingen konfigurera den globala posten eller skapa en ny konfiguration. Till exempel:
 
 ![Definiera konfiguration](assets/cfm-configuration.png)
 
@@ -234,7 +234,7 @@ Ett innehållsfragment baseras på en viss innehållsfragmentmodell som du välj
 
 ### Skapa och redigera strukturerat innehåll {#create-edit-structured-content}
 
-När fragmentet har skapats kan du öppna det i Content Fragment Editor. Här kan du:
+När fragmentet har skapats kan du öppna det i redigeraren för innehållsfragment. Här kan du:
 
 * Redigera innehållet i normalt läge eller helskärmsläge.
 * Formatera innehållet som antingen Fullständig text, Oformaterad text eller Markering.
@@ -266,15 +266,15 @@ En grundläggande struktur som exempel finns i Struktur för exempelinnehållsfr
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig att utforma strukturen och skapa innehåll som är beroende av den, är nästa steg att [Lär dig hur du använder GraphQL-frågor för att komma åt och hämta innehåll i innehållsfragment](access-your-content.md). Här kommer GraphQL att introduceras och diskuteras, och sedan titta på några exempelfrågor för att se hur det fungerar i praktiken.
+Nu när du har lärt dig att modellera strukturen och skapa innehåll som är beroende av den, är nästa steg att [Lär dig hur du använder GraphQL-frågor för att komma åt och hämta innehåll i innehållsfragment](access-your-content.md). Här kommer GraphQL att introduceras och diskuteras, och sedan titta på några exempelfrågor för att se hur saker och ting fungerar i praktiken.
 
 ## Ytterligare resurser {#additional-resources}
 
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) - den första sidan för innehållsfragment
-   * [Innehållsfragment i konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md) - aktivera funktionen för innehållsfragment i konfigurationsläsaren
+   * [Innehållsfragment i konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md) - aktivera funktionen för innehållsfragment i Configuration Browser
    * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md) - skapa och redigera modeller för innehållsfragment
-   * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md) - skapa och skriva innehållsfragment, den här sidan leder dig till andra detaljerade avsnitt
-* [AEM GraphQL Schemas](access-your-content.md) - hur GraphQL realiserar modeller
+   * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md) - skapa och redigera innehållsfragment; den här sidan leder dig till andra detaljerade avsnitt
+* [AEM GraphQL-scheman](access-your-content.md) - hur GraphQL realiserar modeller
 * [Strukturen för exempelinnehållsfragment](/help/headless/graphql-api/sample-queries.md#content-fragment-structure-graphql)
 * [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - En kort videosjälvstudiekurs med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL
    * [Grundläggande om GraphQL-modellering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html) - Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för användning med GraphQL.

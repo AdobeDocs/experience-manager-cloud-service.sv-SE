@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Lär dig mer om lokal validering, felsökning, filstrukturen i flexibelt läge och hur du migrerar från äldre läge till flexibelt läge.
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 127b79d766a4dfc33a2ed6016e191e771206d791
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2861'
+source-wordcount: '2860'
 ht-degree: 0%
 
 ---
@@ -353,7 +353,7 @@ I flexibelt läge kan även andra filer inkluderas, förutsatt att de finns i un
 | `conf.d/modsec` |
 | `conf.d/rewrites` |
 
-Du kan till exempel inkludera en fil i en nyligen skapad katalog under `conf.d/includes` katalog enligt följande:
+Du kan t.ex. inkludera en fil i en katalog som nyligen har skapats under `conf.d/includes` katalog enligt följande:
 
 ```
 Include conf.d/includes/mynewdirectory/myincludefile.conf

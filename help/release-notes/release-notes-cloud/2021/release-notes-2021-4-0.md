@@ -2,9 +2,9 @@
 title: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2021.4.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 775332b5-24ce-430e-97a2-6eeb80877c64
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuella (senaste) versionen av [!DNL Adobe Experience Manager] as a Cloud Service.
 
 >[!NOTE]
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 ## AEM as a Cloud Service Foundation{#aem-as-a-cloud-service-foundation}
 
-### Vad är nytt? {#what-is-new-foundation}
+### Nyheter {#what-is-new-foundation}
 
 * [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) - En ny arbetsflödesmodell och ett nytt steg ger bättre prestanda vid publicering av djupa innehållshierarkier.
 
@@ -47,7 +47,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * Content Fragments - moving content fragments or folders now updates nested references inside the fragment (CQ-4320815)
 
-* GraphQL - beständiga frågor har nu stöd för användardefinierade slutpunkter som är specifika för AEM Sites-konfigurationer (CQ-4315928)
+* GraphQL - beständiga frågor stöder nu användardefinierade slutpunkter som är specifika för AEM Sites-konfigurationer (CQ-4315928)
 
 ## [!DNL Adobe Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
@@ -81,7 +81,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * Import av massmetadata misslyckas på grund av felaktigt datumformat. (CQ-4319014)
 
-* När du har valt att uppdatera metadata på egenskapssidan tar det lång tid för gränssnittet att svara när schemat innehåller många alternativ. (CQ-4318538)
+* När du har valt att uppdatera metadata på egenskapssidan tar det lång tid för gränssnittet att svara när det finns många alternativ i schemat. (CQ-4318538)
 
 * När du uppdaterar och sparar metadatavärde i ett enkelradigt textfält tas värdena i listrutan bort, även om redigeringar är inaktiverade i listrutan. (CQ-4317077)
 
@@ -109,7 +109,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 * **Stöd för att använda det literala alternativet för att ange ett värde för en JSON-typvariabel**
 
-  Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med det literala alternativet kan du ange en JSON i form av en sträng.
+  Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med alternativet literal kan du ange en JSON i form av en sträng.
 
 * **Använd lokal utvecklingsmiljö för att skapa en dokumentfil (DoR)**
 
@@ -126,7 +126,7 @@ Följande version (2021.5.0) kommer att vara den 27 maj 2021.
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
-### Vad är nytt? {#what-is-new-commerce}
+### Nyheter {#what-is-new-commerce}
 
 * Stöd för kategori-UID - Detta frigör e-handelsintegreringar från tredje part för system som använder strängar för kategori-ID
 
@@ -157,7 +157,7 @@ Nästa version är planerad till 6 maj 2021.
 
 * En användare med nödvändig behörighet kan nu skicka slutpunkten för e-handeln via användargränssnittet.
 
-* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. Kräver AEM `2021.03.5104.20210328T185548Z` eller senare.
+* Miljövariabler kan nu omfatta en viss tjänst, antingen författare eller publicerad. AEM version krävs `2021.03.5104.20210328T185548Z` eller senare.
 
 * The **Hantera Git** knappen visas på pipelines-kortet även när inga rörledningar har konfigurerats.
 

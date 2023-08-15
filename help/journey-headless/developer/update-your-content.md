@@ -2,16 +2,16 @@
 title: Så här uppdaterar du innehåll via AEM Assets API:er
 description: I den här delen av den AEM Headless Developer Journey kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1069'
 ht-degree: 1%
 
 ---
 
 # Så här uppdaterar du innehåll via AEM Assets API:er {#update-your-content}
 
-I den här delen av [AEM Headless Developer Journey,](overview.md) Lär dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
+I den här delen av [AEM Headless Developer Journey](overview.md) Lär dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 
 ## Story hittills {#story-so-far}
 
@@ -41,7 +41,7 @@ I det föregående steget i Headless Journey lärde du dig att använda AEM Grap
 
 Varför behövs en annan API?
 
-Med Assets HTTP API kan du **Läs** innehållet, men det gör det även möjligt att **Skapa**, **Uppdatera** och **Ta bort** content - åtgärder som inte är möjliga med GraphQL API.
+Med Assets HTTP API kan du **Läs** innehållet, men det gör det också möjligt för dig **Skapa**, **Uppdatera** och **Ta bort** content - åtgärder som inte är möjliga med GraphQL API.
 
 Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager as a Cloud Service-version.
 
@@ -54,7 +54,7 @@ Resursens HTTP-API omfattar:
 
 Den aktuella implementeringen av Assets HTTP API baseras på **REST** arkitektoniskt format så att du kan komma åt innehåll (lagrat i AEM) via **CRUD** (Skapa, läsa, uppdatera, ta bort).
 
-Med den här åtgärden kan du med API:t köra Adobe Experience Manager as a Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
+Med dessa åtgärder kan du med API:t köra Adobe Experience Manager as a Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
 
 <!--
 >[!NOTE]
@@ -211,7 +211,7 @@ Associated content is currently not exposed.
 
 Resursens REST API använder `/api/assets` slutpunkten och kräver att sökvägen till resursen har åtkomst till den (utan radavståndet) `/content/dam`).
 
-* Det innebär att du kan få tillgång till resursen på:
+* Det innebär att du kan få tillgång till resursen på
    * `/content/dam/path/to/asset`
 * Du måste begära:
    * `/api/assets/path/to/asset`
@@ -235,18 +235,18 @@ HTTP-metoden avgör vilken åtgärd som ska utföras:
 
 >[!NOTE]
 >
->Begärandetexten och/eller URL-parametrarna kan användas för att konfigurera vissa av dessa åtgärder. Definiera till exempel att en mapp eller en resurs ska skapas av en **POST** begäran.
+>Parametrarna för begärandeinnehåll och/eller URL kan användas för att konfigurera vissa av dessa åtgärder. Du kan till exempel definiera att en mapp eller en resurs ska skapas av en **POST** begäran.
 
 Det exakta formatet för begäranden som stöds definieras i API-referensdokumentationen.
 
 Användningen kan variera beroende på om du använder en AEM författare eller publiceringsmiljö, tillsammans med ditt specifika användningsexempel.
 
-* Vi rekommenderar att skapandet binds till en författarinstans (och det finns för närvarande inget sätt att replikera ett fragment för publicering med denna API).
+* Vi rekommenderar starkt att skapandet är bundet till en författarinstans (och att det för närvarande inte finns något sätt att replikera ett fragment för publicering med detta API).
 * Leverans är möjlig från båda, eftersom AEM endast skickar begärt innehåll i JSON-format.
 
    * Lagring och leverans från en AEM författarinstans bör räcka för program som ligger bakom brandväggen och mediabibliotek.
 
-   * För direktwebbleverans rekommenderas en publiceringsinstans AEM.
+   * För live-webbleverans rekommenderas en publiceringsinstans AEM.
 
 >[!CAUTION]
 >
@@ -254,7 +254,7 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
 >[!NOTE]
 >
->Mer information finns i API-referensen. I synnerhet [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
+>Mer information finns i API-referensen. Särskilt gäller följande: [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/assets-api-content-fragments/index.html).
 
 ### Läsning/leverans {#read-delivery}
 
@@ -271,7 +271,7 @@ Svaret är serialiserat JSON med innehållet strukturerat som i innehållsfragme
 Det finns två typer av läsåtgärder:
 
 * När du läser ett visst innehållsfragment efter sökväg, returneras JSON-representationen av innehållsfragmentet.
-* Läsa en mapp med innehållsfragment efter sökväg: returnerar JSON-representationerna för alla innehållsfragment i mappen.
+* Läser en mapp med innehållsfragment efter sökväg: Detta returnerar JSON-representationerna för alla innehållsfragment i mappen.
 
 ### Skapa {#create}
 
@@ -279,7 +279,7 @@ Användning sker via:
 
 `POST /{cfParentPath}/{cfName}`
 
-Brödtexten måste innehålla en JSON-representation av det innehållsfragment som ska skapas, inklusive allt ursprungligt innehåll som ska anges för elementen i innehållsfragmentet. Det är obligatoriskt att ange `cq:model` och måste peka på en giltig innehållsfragmentmodell. Om du inte gör det uppstår ett fel. Du måste också lägga till en rubrik `Content-Type` som är inställd på `application/json`.
+Brödtexten måste innehålla en JSON-representation av det innehållsfragment som ska skapas, inklusive allt ursprungligt innehåll som ska anges för elementen i innehållsfragmentet. Det är obligatoriskt att ange `cq:model` och måste peka på en giltig innehållsfragmentmodell. Om du inte gör det kommer ett fel att uppstå. Du måste också lägga till en rubrik `Content-Type` som är inställd på `application/json`.
 
 ### Uppdatera {#update}
 

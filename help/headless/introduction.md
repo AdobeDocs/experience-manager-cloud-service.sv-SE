@@ -3,9 +3,9 @@ title: Introduktion till Headless för AEM
 description: Läs mer om Headless i Adobe Experience Manager (AEM) med en kombination av detaljerad dokumentation och headless-resor. Lär dig hur funktioner som modeller för innehållsfragment, innehållsfragment och ett GraphQL-API används för att driva Headless-upplevelser.
 landing-page-description: Lär dig hur du använder och administrerar Headless i Adobe Experience Manager as a Cloud Service.
 exl-id: 24300499-ae9c-49d0-aa25-f51e14d9cf79
-source-git-commit: e03c067f4337bbf0e98cb4015b9be4fc99fc17c1
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '701'
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ AEM as a Cloud Service är ett flexibelt verktyg för den headless-implementerin
 
 ## Dina första steg {#first-steps}
 
-Det finns flera tillgängliga resurser för att komma igång med AEM headless-funktioner. Varje guide är skräddarsydd för olika användningsområden och målgrupper.
+Det finns flera tillgängliga resurser för att komma igång med AEM headless-funktioner. Varje guide är anpassad för olika användningsområden och målgrupper.
 
 | Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Tid |
 |---|---|---|---|---|
@@ -63,7 +63,7 @@ Det finns flera tillgängliga resurser för att komma igång med AEM headless-fu
 
 ## Jämför Headful och Headless {#headful-headless}
 
-Den här guiden fokuserar på den fullständiga headless-implementeringsmodellen för AEM. Men headful kontra headless behöver inte vara ett binärt val i AEM. Headless-funktioner kan användas för att hantera och leverera innehåll till flera kontaktpunkter, samtidigt som innehållsförfattare kan redigera single page-applikationer. Allt i AEM.
+Den här guiden fokuserar på den fullständiga headless-implementeringsmodellen för AEM. Däremot behöver headful kontra headless inte vara ett binärt val i AEM. Headless-funktioner kan användas för att hantera och leverera innehåll till flera kontaktpunkter, samtidigt som innehållsförfattare kan redigera single page-applikationer. Allt i AEM.
 
 >[!TIP]
 >

@@ -2,9 +2,9 @@
 title: "[!DNL AEM Forms] as a Cloud Service release notes"
 description: "[!DNL AEM Forms] as a Cloud Service release notes"
 exl-id: 35950b81-6e45-4a75-bd27-8c28fd68e42e
-source-git-commit: bc4da79735ffa99f8c66240bfbfd7fcd69d8bc13
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2015'
 ht-degree: 2%
 
 ---
@@ -31,11 +31,11 @@ Adobe Experience Manager [!DNL AEM Forms] as a Cloud Service får fortlöpande f
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-oct-2021}
 
-- **Analytics för Adaptive Forms**: Nu kan du fånga in och spåra beteenden hos både inloggade och ej inloggade (anonyma) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+- **Analytics för Adaptive Forms**: Du kan nu fånga in och spåra beteenden hos både inloggad och ej inloggad (anonym) via Adobe Analytics för Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms-oct-2021}
 
-- **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra AEM arbetsflödesdata (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
+- **Externt AEM arbetsflödesdata för säker bearbetning**: Du kan lagra data AEM arbetsflöden (AEM data från arbetsflödesvariabler) som innehåller känsliga dataelement (SPD) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
 
 ### Betafunktioner i [!DNL Forms] {#sep-what-is-new-forms-oct-prerelease}
 
@@ -52,21 +52,21 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 - **Använda Adobe Sign-roller i ett adaptivt formulär**: Adobe Sign för företags- och företagsnivåer har möjlighet att utöka rollerna för avtalsmottagare, utöver bara signeraren, så att de bättre motsvarar deras arbetsflödesbehov. Nu kan du [göra det möjligt för alla mottagare av avtal att konfigurera sin roll i ett adaptivt formulär](working-with-adobe-sign.md#addsignerstoanadaptiveform), med signerare som standardroll.
 
-- **Analytics för Adaptive Forms**: Nu kan du hämta och [spåra användarbeteende via Adobe Analytics](integrate-aem-forms-with-adobe-analytics.md) för Adaptive Forms för att samla in användarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+- **Analytics för Adaptive Forms**: Du kan nu hämta och [spåra användarbeteende via Adobe Analytics](integrate-aem-forms-with-adobe-analytics.md) för Adaptive Forms för att samla in användarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
-- **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller direkt konfiguration av datakälla och datamodeller för Microsoft Dynamics och Salesforce, vilket gör den [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett adaptivt formulär](configure-msdynamics-salesforce.md).
+- **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller out of the box-datakällkonfiguration och datamodeller för Microsoft Dynamics och Salesforce, vilket gör den [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett adaptivt formulär](configure-msdynamics-salesforce.md).
 
 - **E-signera ett anpassat formulär med DocuSign:** [Du kan använda DocuSign för att e-signera ett anpassat formulär](integrate-docusign-adaptive-forms.md). Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär.
 
 ### Betafunktioner i [!DNL Forms] {#sep-what-is-new-forms-prerelease}
 
 - **Enhetlig lagringsanslutning:** Använd Unified Storage Connector för att externalisera processdata i kundhanterade databaser. Du kan t.ex. lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
-   <!--* Enable Forms Portal’s save and resume functionality and store adaptive forms drafts in a customer-managed data repository.-->
+  <!--* Enable Forms Portal’s save and resume functionality and store adaptive forms drafts in a customer-managed data repository.-->
 
 - **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](aem-forms-cloud-service-communications.md) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    - Generera dokument genom att fylla i mallfiler med XML-data.
    - Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
-   - Generera PDF-filer från ett XFA-formulär PDF och Adobe Acrobat-formulär.
+   - Generera PDF-filer från ett XFA-formulär i PDF och Adobe Acrobat-formulär.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betaprogrammet.
 
@@ -104,19 +104,19 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 - **Acroform-based Document of Record**: AEM Forms as a Cloud Service stöder användning av [Adobe Acrobat Form PDF (Acrobat PDF)](generate-document-of-record-for-non-xfa-based-adaptive-forms.md) som en mall för postdokument förutom XFA-baserad formulärmall.
 
-- **Microsoft Azure-dataarkivanslutning**: Nu kan du [ansluta formulärdatamodell till Microsoft Azure Storage](configure-azure-storage.md). Det gör att du kan hämta och lagra adaptiva formulärdata till Microsoft Azure Storage som en BLOB.
+- **Microsoft Azure-dataarkivanslutning**: Du kan nu [ansluta formulärdatamodell till Microsoft Azure Storage](configure-azure-storage.md). Med den kan du hämta och lagra adaptiva formulärdata till Microsoft Azure Storage som en BLOB.
 
 ### Betafunktion i [!DNL Forms] {#aug-what-is-new-forms-prerelease}
 
 - **Enhetlig lagringsanslutning:** Använd Unified Storage Connector för att externalisera processdata i kundhanterade databaser. Du kan till exempel
 
-   - Möjliggör Forms Portals funktioner för att spara och återuppta samt lagra adaptiva formulärutkast i ett kundhanterat datalager.
+   - Möjliggör Forms Portals funktioner för att spara och återuppta samt lagra adaptiva blankettutkast i ett kundhanterat datalager.
    - Lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
 
 - **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](aem-forms-cloud-service-communications.md) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    - Generera dokument genom att fylla i mallfiler med XML-data.
    - Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
-   - Generera PDF-filer från ett XFA-formulär PDF och Adobe Acrobat-formulär.
+   - Generera PDF-filer från ett XFA-formulär i PDF och Adobe Acrobat-formulär.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betaprogrammet.
 
@@ -126,7 +126,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 - **Analytics för Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
 
-- **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller direkt konfiguration av datakälla och datamodeller för Microsoft Dynamics och Salesforce, vilket gör den [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett adaptivt formulär](configure-msdynamics-salesforce.md).
+- **Koppla enkelt upp AEM Forms med Microsoft Dynamics och Salesforce**: Tjänsten tillhandahåller out of the box-datakällkonfiguration och datamodeller för Microsoft Dynamics och Salesforce, vilket gör den [snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce som datakällor för ett adaptivt formulär](configure-msdynamics-salesforce.md).
 
 ## 2021.7.0 {#july-2021-07-0}
 
@@ -139,7 +139,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 - **Acroform-based Document of Record**: Du kan också [använd Adobe Acrobat Form PDF (Acrobat PDF)](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för postdokument förutom XFA-baserad formulärmall.
 
-- **Microsoft Azure-dataarkivanslutning**: Nu kan du [ansluta formulärdatamodell till Microsoft Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-azure-storage.html). Det gör att du kan hämta och lagra adaptiva formulärdata till Microsoft Azure Storage som en BLOB.
+- **Microsoft Azure-dataarkivanslutning**: Du kan nu [ansluta formulärdatamodell till Microsoft Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-azure-storage.html). Med den kan du hämta och lagra adaptiva formulärdata till Microsoft Azure Storage som en BLOB.
 
 - **Variable Data Externalizer**: Du kan spara data AEM arbetsflödesvariabler i ett externt lagringssystem som hanteras av din organisation.
 
@@ -148,7 +148,7 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 - **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](aem-forms-cloud-service-communications.md) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    - Generera dokument genom att fylla i mallfiler med XML-data.
    - Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
-   - Generera PDF-filer från ett XFA-formulär PDF och Adobe Acrobat-formulär.
+   - Generera PDF-filer från ett XFA-formulär i PDF och Adobe Acrobat-formulär.
 
 ## 2021.6.0 {#july-2021-06-0}
 
@@ -182,8 +182,8 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betapr
 
 ### Nyheter i [!DNL Forms] {#may-what-is-new-forms}
 
-- **Sammanhangsberoende hjälp**: Kontextuell hjälp har lagts till för redigering av adaptiva formulär, mallredigerare och temaredigerare som hjälper författare att förstå olika funktioner i redigerare.
-- **Felmeddelanden i egenskapsbläddraren**: Felmeddelanden för varje egenskap i webbläsaren Adaptive Forms Properties har lagts till. Dessa meddelanden hjälper till att förstå tillåtna värden för ett fält.
+- **Sammanhangsberoende hjälp**: Kontextuell hjälp har lagts till för redigerare av adaptiva formulär, mallredigerare och temaredigerare som hjälper författare att förstå olika funktioner i redigerare.
+- **Felmeddelanden i egenskapsbläddraren**: Felmeddelanden för varje egenskap i webbläsaren Adaptiva Forms-egenskaper har lagts till. Dessa meddelanden hjälper till att förstå tillåtna värden för ett fält.
 
 ### Kommande betafunktion i [!DNL Forms] {#may-what-is-new-forms-prerelease}
 
@@ -197,7 +197,7 @@ Du kan skriva till formscsbeta@adobe.com och registrera dig för betaprogrammet.
 
 ### Fel som har åtgärdats i [!DNL Forms] {#may-forms-bugs-fixed}
 
-- När du ersätter standardikonen för åtgärdsknapparna med en korallikon i ett steg Tilldela uppgift i AEM Forms Workflows slutar arbetsflödet att fungera och ett undantag loggas. Arbetsflödet fungerar som väntat när standardikoner används.
+- När du ersätter standardikonen för åtgärdsknapparna med en korallikon i ett steg Tilldela uppgift i AEM Forms Workflows slutar arbetsflödet att fungera och ett undantag loggas. Arbetsflödet fungerar som förväntat när standardikoner används.
 - När du ändrar antalet kolumner i layoutlagret öppnar du redigeringslagret och drar några komponenter i en panel visas fyrkantiga blåa rutor i innehållsområdet i den adaptiva formulärredigeraren och redigeraren slutar svara.
 - Felmeddelande om ett alternativ för regelredigering som är relaterat till att ange en URL för en adaptiv resurs eller en extern resurs är för lång och inte användarvänlig.
 
@@ -207,25 +207,25 @@ Du kan skriva till formscsbeta@adobe.com och registrera dig för betaprogrammet.
 
 - **Använd autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverad Adaptive Forms**
 
-   Adobe Sign Government ID-process bygger på avancerade maskininlärningsalgoritmer och ger företag över hela världen möjlighet att säkra en högkvalitativ autentisering av mottagarens identitet. Nu kan du använda autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade Adaptive Forms.
+  Adobe Sign Government ID-process bygger på avancerade maskininlärningsalgoritmer och ger företag över hela världen möjlighet att säkra en högkvalitativ autentisering av mottagarens identitet. Nu kan du använda autentiseringsmetoden för myndighets-ID i Adobe Sign-aktiverade Adaptive Forms.
 
-   Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [överföra bilden av ett foto på ett foto av ett foto av ett foto som utfärdats av en myndighet (körkort, nationellt id, pass),](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html)och utvärderar sedan dokumentet för att säkerställa att det är autentiskt.
+  Myndighets-ID är en autentiseringsmetod för premiumidentitet som instruerar mottagaren att [överföra bilden av ett foto på ett foto av ett foto av ett foto som utfärdats av en myndighet (körkort, nationellt id, pass),](https://helpx.adobe.com/in/sign/using/adobesign-authentication-government-id.html)och utvärderar sedan dokumentet för att säkerställa att det är autentiskt.
 
 - **Stöd för att använda signeringsfunktionen i formulär för asynkrona inskickade formulär med adaptiv formatering**
 
-   Nu kan du använda signeringsfunktionen i formulär för asynkrona, anpassningsbara formulärinskickade formulär. Du kan även bädda in ett anpassat formulär i en [!DNL Experience Manager Sites] och använda signeringsfunktionen i formulär för att skicka formulär med adaptiv form.
+  Nu kan du använda signeringsfunktionen i formulär för asynkrona, anpassningsbara formulärinskickade formulär. Du kan även bädda in ett anpassat formulär i en [!DNL Experience Manager Sites] och använda signeringsfunktionen i formulär för att skicka formulär med adaptiv form.
 
 - **Stöd för att använda en variabel för att ange en bifogad fil när ett adaptivt formulär fylls i i förväg för steget Tilldela uppgift**
 
-   När du fyller i ett adaptivt formulär i förväg för steget Tilldela uppgift kan du nu använda en dokumenttypsvariabel för att välja en bifogad inmatning för det adaptiva formuläret.
+  När du fyller i ett adaptivt formulär i förväg för steget Tilldela uppgift kan du nu använda en dokumenttypsvariabel för att välja en bifogad inmatning för det adaptiva formuläret.
 
 - **Stöd för att använda det literala alternativet för att ange ett värde för en JSON-typvariabel**
 
-   Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med det literala alternativet kan du ange en JSON i form av en sträng.
+  Du kan använda det literala alternativet för att ange ett värde för en JSON-typvariabel i det angivna variabelsteget i ett AEM arbetsflöde. Med alternativet literal kan du ange en JSON i form av en sträng.
 
 - **Använd lokal utvecklingsmiljö för att skapa en dokumentfil (DoR)**
 
-   Du kan använda en XDP-fil som en dokumentmall på Cloud Service och AEM Forms as a Cloud Service SDK (lokal utvecklingsmiljö). Tidigare var stödet begränsat till endast Cloud Service.
+  Du kan använda en XDP-fil som en dokumentmall på Cloud Service och AEM Forms as a Cloud Service SDK (lokal utvecklingsmiljö). Tidigare var stödet begränsat till endast Cloud Service.
 
 ### Felkorrigeringar i [!DNL Forms] {#april-bug-fixes-forms}
 

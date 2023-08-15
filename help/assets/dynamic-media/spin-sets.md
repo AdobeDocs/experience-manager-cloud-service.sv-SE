@@ -5,16 +5,16 @@ contentOwner: Rick Brough
 feature: Spin Sets
 role: User
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: b37ff72dbcf85e5558eb3421b5168dc48e063b47
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1862'
 ht-degree: 8%
 
 ---
 
 # Snurrande uppsättningar{#spin-sets}
 
-Med en snurra uppsättning kan du simulera hur det ser ut när du vrider ett objekt för att undersöka det. Med snurra uppsättningar kan du visa objekt från vilken vinkel som helst och få fram de viktigaste visuella detaljerna från vilken vinkel som helst.
+Med en snurra uppsättning kan du simulera hur det ser ut när du vrider ett objekt för att undersöka det. Med snurra uppsättningar kan du visa objekt från vilken vinkel som helst och få fram viktiga visuella detaljer från vilken vinkel som helst.
 
 En snurra uppsättning simulerar en 360-gradig visningsupplevelse. Dynamic Media erbjuder snurra uppsättningar med en axel där tittarna kan rotera ett objekt. Dessutom kan man zooma och panorera med några enkla musklick. På så sätt kan användare undersöka ett objekt närmare från en viss betraktningsvinkel.
 
@@ -54,7 +54,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
 1. [Skapa snurruppsättningar](#creating-spin-sets).
 
-   Om du vill skapa en snurruppsättning väljer du **[!UICONTROL Create]** > **[!UICONTROL Spin Set]** och namnge uppsättningen, välja resurser och välj i vilken ordning bilderna ska visas.
+   Om du vill skapa en snurruppsättning väljer du **[!UICONTROL Create]** > **[!UICONTROL Spin Set]** och namnge uppsättningen, välj resurser och välj i vilken ordning bilderna ska visas.
 
    Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
@@ -84,7 +84,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se [Länka en snurruppsättning till en webbsida](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md) och [Bädda in video- eller bildvisningsprogrammet](/help/assets/dynamic-media/embed-code.md).
 
-Om det behövs kan du [redigera snurra uppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra [Snurra uppsättningsegenskaper](/help/assets/manage-digital-assets.md#editing-properties).
+Du kan [redigera snurra uppsättningar](#editing-spin-sets). Dessutom kan du visa och ändra [Snurra uppsättningsegenskaper](/help/assets/manage-digital-assets.md#editing-properties).
 
 ## Överför resurser för snurruppsättningar {#uploading-assets-for-spin-sets}
 
@@ -99,8 +99,8 @@ Du kan överföra bilder för snurra uppsättningar på samma sätt som du gör 
 Nedan följer några tips om hur du använder snurra uppsättningsbilder. Ju fler bilder du har i en snurrfunktion, desto bättre blir effekten av att snurra. Om du inkluderar många bilder i uppsättningen ökar dock tiden det tar för bilderna att läsas in. Experience Manager rekommenderar följande riktlinjer för att ta bilder för användning i snurra uppsättningar:
 
 * Använd minst 8-12 bilder i en endimensionell snurra och 16-24 bilder i en tvådimensionell snurra. Minst 8 bilder krävs för att kunna vridas 360°. Endimensionella snurruppsättningar är vanligare eftersom det är arbetsintensivt att skapa tvådimensionella snurruppsättningar.
-* Använd ett förlustfritt format, TIFF och PNG rekommenderas.
-* Maskera alla bilder så att objektet visas på en helt vit eller annan bakgrund med hög kontrast. Du kan också lägga till skuggor.
+* Använd ett icke-förstörande format; TIFF och PNG rekommenderas.
+* Maskera alla bilder så att objektet visas på en helt vit eller annan högkontrastbakgrund. Du kan också lägga till skuggor.
 * Se till att produktinformationen är väl belyst och i fokus.
 * Ta snurra bilder till modekläder med mannequin eller modell. Ofta är mannequin antingen maskerat (med hjälp av en glasmannequin) eller en stiliserad mannequin/form visas i bilden. Du kan skapa en omformningsrotation genom att definiera antalet vinklar. Markera varje vinkel med band på golvet så att du kan vägleda modellen till steg och titta i riktningen för varje tagning.
 
@@ -145,6 +145,7 @@ Se även [Dynamic Media begränsningar](/help/assets/dynamic-media/limitations.m
    * I närheten av det övre vänstra hörnet på sidan för redigeraren för sned uppsättning väljer du **[!UICONTROL Add Asset]**.
 
    * I mitten av sidan för redigeraren för sned uppsättning väljer du **[!UICONTROL Tap to open Asset Selector]**.
+
    Välj de resurser som du vill inkludera i din snurruppsättning. De markerade resurserna visas med en bock. När du är klar väljer du **[!UICONTROL Select]**.
 
    Med resursväljaren kan du söka efter resurser genom att skriva ett nyckelord och trycka på **[!UICONTROL Return]**. Du kan också använda filter för att förfina sökresultatet. Du kan filtrera efter sökväg, samling, filtyp och tagg. Markera filtret och välj sedan **[!UICONTROL Filter]** -ikonen i verktygsfältet. Ändra vyn genom att trycka på ikonen Visa och sedan välja **[!UICONTROL Column View]**, **[!UICONTROL Card View]** eller **[!UICONTROL List View]**.
@@ -221,7 +222,6 @@ Om du tar bort den bild som Experience Manager använder som miniatyrbild genom 
    * Om du vill ta bort en resurs markerar du den och väljer **[!UICONTROL Delete Asset]**.
    * Om du vill använda en förinställning väljer du förinställningsikonen och väljer en förinställning.
    * Om du vill ta bort en hel snurruppsättning går du till snurra-uppsättningen, markerar den och markerar den **[!UICONTROL Delete]**
-
    >[!NOTE]
    >
    >Du kan redigera bilderna i en snurruppsättning genom att navigera till uppsättningen och välja **[!UICONTROL Set Members]** i den vänstra listen och välj sedan pennikonen på en enskild resurs för att öppna redigeringsfönstret.

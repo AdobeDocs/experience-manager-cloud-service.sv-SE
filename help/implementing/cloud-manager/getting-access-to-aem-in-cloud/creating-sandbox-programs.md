@@ -2,9 +2,9 @@
 title: Skapa sandlådeprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget sandlådeprogram för utbildning, demo, POC eller andra icke-produktionssyften.
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Läs mer om programtyper i dokumentet [Program- och programtyper.](program-types
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka på på Cloud Managers startsida, i skärmens övre högra hörn **Lägg till program**.
+1. Klicka på på Cloud Managers startsida i skärmens övre högra hörn **Lägg till program**.
 
    ![Startsida för Cloud Manager](assets/cloud-manager-my-programs.png)
 
@@ -41,7 +41,7 @@ Läs mer om programtyper i dokumentet [Program- och programtyper.](program-types
 
 1. När du har valt lösningar och tillägg för ditt sandlådeprogram klickar du på **Skapa**.
 
-Ett nytt sandlådeprogramkort visas på landningssidan med en statusindikator allt eftersom installationsprocessen fortskrider.
+Du ser ett nytt sandlådeprogramkort på landningssidan med en statusindikator allt eftersom installationsprocessen fortskrider.
 
 ![Skapa sandlåda från översiktssida](assets/sandbox-setup.png)
 
@@ -49,7 +49,7 @@ Ett nytt sandlådeprogramkort visas på landningssidan med en statusindikator al
 
 Du kan visa detaljerna i sandlådekonfigurationen och få tillgång till miljön (när den är tillgänglig) genom att visa programöversiktssidan.
 
-1. På landningssidan för Cloud Manager klickar du på ellipsknappen på det nya programmet.
+1. På landningssidan för Cloud Manager klickar du på ellipsknappen i det nya programmet.
 
    ![Åtkomst till programöversikt](assets/program-overview-sandbox.png)
 

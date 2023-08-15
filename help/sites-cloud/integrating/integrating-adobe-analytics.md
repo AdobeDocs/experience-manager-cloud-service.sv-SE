@@ -4,9 +4,9 @@ description: Lär dig hur du integrerar Adobe Analytics med AEM as a Cloud Servi
 feature: Administering
 role: Admin
 exl-id: e353a1fa-3e99-4d79-a0d1-40851bc55506
-source-git-commit: 957758a8d3c16328e7638356e7ee6df3e561386d
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '573'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Jämfört med tidigare versioner av AEM finns ramverksstöd inte i Analytics Con
 
 ## Skapa Adobe Analytics-konfigurationen {#analytics-configuration}
 
-1. Navigera till **verktyg** → **Cloud Services**.
+1. Navigera till **verktyg** → **Cloud Service**.
 2. Välj **Adobe Analytics**.
    ![Adobe Analytics Window](assets/analytics_screen2.png "Adobe Analytics Window")
 3. Välj **Skapa** -knappen.

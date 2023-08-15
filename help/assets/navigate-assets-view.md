@@ -3,9 +3,9 @@ title: "[!DNL Assets view] användargränssnitt"
 description: Förstå användargränssnittet för och navigering i [!DNL Assets view].
 role: User
 exl-id: 534a8084-88f7-410e-b872-719e47e62b10
-source-git-commit: 6cb30ffda6c0de04e5cb3d01341b59c9ee75b335
+source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ När du loggar in [!DNL Assets view]visas följande gränssnitt.
 ![[!DNL Assets view] användargränssnitt](assets/assets-view-interface.png)
 
     *S: Vänster sidofält för att bläddra i databasen och ger tillgång till några andra alternativ*
-    *B: Visa eller dölj det vänstra sidofältet för att öka resursens visningsområde*
+    *B: Visa eller komprimera vänster sidospalt för att öka resursens visningsområde*
     *C: Filtrera sökresultat*
     *D: Markera allt innehåll i den markerade mappen*
     *E: Alternativ för att sortera resurser*
@@ -40,14 +40,14 @@ När du loggar in [!DNL Assets view]visas följande gränssnitt.
 
 Du kan bläddra bland mapparna från huvudanvändargränssnittet eller från vänster sidofält. När du bläddrar kan du använda gränssnittet för att visa miniatyrbilder av resurser för att visuellt bläddra i databasen eller visa resursinformation för att snabbt hitta den resurs du vill ha. De alternativ som är tillgängliga i den vänstra sidlisten är:
 
-* [Min arbetsyta](/help/assets/my-workspace-assets-view.md): Resurserna innehåller nu en anpassningsbar arbetsyta med widgetar som du kan använda för att enkelt få tillgång till viktiga delar av användargränssnittet och den information som är mest relevant för dig. Den här sidan är en helhetslösning som ger en översikt över dina arbetsobjekt och ger snabb åtkomst till viktiga arbetsflöden. Mer lättåtkomlig åtkomst till dessa alternativ ökar effektiviteten och ökar innehållets hastighet.
-* [Uppgifter](/help/assets/my-workspace-assets-view.md): Du kan visa de uppgifter som du har tilldelats under **Mina uppgifter** -fliken. De uppgifter som du har skapat kan visas under **Tilldelade uppgifter** -fliken. Dessutom finns de uppgifter som du har slutfört under **Slutförda uppgifter** -fliken.
+* [Min arbetsyta](/help/assets/my-workspace-assets-view.md): Resurserna innehåller nu en anpassningsbar arbetsyta med widgetar för smidig åtkomst till viktiga delar av användargränssnittet och den information som är mest relevant för dig. Den här sidan är en helhetslösning som ger en översikt över dina arbetsobjekt och ger snabb åtkomst till viktiga arbetsflöden. Mer lättåtkomlig åtkomst till dessa alternativ ökar effektiviteten och ökar innehållets hastighet.
+* [Uppgifter](/help/assets/my-workspace-assets-view.md): Du kan visa de uppgifter som du har tilldelats under **Mina uppgifter** -fliken. De uppgifter som du har skapat kan visas under **Tilldelade uppgifter** -fliken. Dessutom finns de uppgifter du utför under **Slutförda uppgifter** -fliken.
 * [Resurser](/help/assets/manage-organize-assets-view.md): Lista över alla mappar i en trädvy som du har åtkomst till.
-* **Senast visade**: Lista över resurser som du nyligen har förhandsgranskat. [!DNL Assets view] visar bara de resurser som du förhandsgranskar. Det visar inte de resurser som du bläddrar förbi när du bläddrar bland databasfilerna eller databasmapparna.
+* **Nyligen visade**: Lista med resurser som du nyligen förhandsvisade. [!DNL Assets view] visar bara de resurser som du förhandsgranskar. Det visar inte de resurser som du bläddrar förbi när du bläddrar bland databasfilerna eller databasmapparna.
 * [Samlingar](/help/assets/manage-collections-assets-view.md): En samling är en uppsättning resurser, mappar eller andra samlingar i vyn Adobe Experience Manager Resurser. Använd samlingar för att dela resurser mellan användare. Till skillnad från mappar kan en samling innehålla resurser från olika platser. Du kan dela flera samlingar med en användare. Varje samling innehåller referenser till resurser. Resursernas referensintegritet bevaras i alla samlingar.
 
 * [Insikter](/help/assets/manage-reports-assets-view.md#view-live-statistics): I [!DNL Assets view]kan du visa realtidsinsikter på din instrumentpanel. I resursvyn kan du visa realtidsdata för din resursvymiljö med Insikter-instrumentpanelen. Du kan visa händelsemått i realtid under de senaste 30 dagarna eller under de senaste 12 månaderna.
-* **Papperskorgen**: Lista över resurser som tagits bort från roten **[!UICONTROL Assets]** mapp. Du kan markera en resurs i papperskorgen och antingen återställa den till den ursprungliga platsen eller ta bort den permanent. Du kan också ange ett nyckelord eller använda standardfilter eller anpassade filter för att söka efter lämpliga resurser i papperskorgen. Mer information om hur du använder standardfilter och anpassade filter finns i [Söka efter resurser i resursvyn](/help/assets/search-assets-view.md).
+* **Papperskorgen**: Lista de resurser som tagits bort från roten **[!UICONTROL Assets]** mapp. Du kan markera en resurs i papperskorgen och antingen återställa den till den ursprungliga platsen eller ta bort den permanent. Du kan också ange ett nyckelord eller använda standardfilter eller anpassade filter för att söka efter lämpliga resurser i papperskorgen. Mer information om hur du använder standardfilter och anpassade filter finns i [Söka efter resurser i resursvyn](/help/assets/search-assets-view.md).
 * **Inställningar**: Du kan konfigurera olika alternativ för resursvyn med **Inställningar**, t.ex. Metadataformulär, rapporter och taxonomihantering.
 
 <!-- TBD: Not sure if we want to publish these right now. CC Libs are beta as per Greg.
@@ -72,7 +72,7 @@ Om du vill navigera till en mapp dubbelklickar du på mappens miniatyrbilder ell
 
 ![Bläddra bland mappar](assets/browsing-folders.png)
 
-*Bild: Om du vill bläddra i hierarkin använder du de synliga kolumnerna högst upp eller det vänstra sidofältet.*
+*Bild: Om du vill bläddra i hierarkin använder du vägbeskrivningarna högst upp eller till vänster.*
 
 ## Förhandsgranska resurser {#preview-assets}
 
@@ -82,7 +82,7 @@ Om du vill förhandsgranska en resurs markerar du den och klickar på [!UICONTRO
 
 ![Förhandsgranska en resurs](assets/preview-asset-2.png)
 
-*S: Återgå till aktuell mapp eller aktuellt sökresultat i databasen*
+*A: Återgå till aktuell mapp eller aktuellt sökresultat i databasen*
 *B: Namn och format för filen som du förhandsgranskar*
 *C: Tilldela uppgifter*
 *D: Hämta resurs*
@@ -97,7 +97,7 @@ Om du vill förhandsgranska en resurs markerar du den och klickar på [!UICONTRO
 *K: Grundläggande metadata*
 *L: Avancerade metadata*
 *M: Nyckelord och smarta taggar*
-*N: Förhandsgranska mer ingående. Zooma, helskärm och andra alternativ*
+*N: Förhandsgranska närmare. Zooma, helskärm och andra alternativ*
 *O: Gå till föregående eller nästa resurs i den aktuella mappen utan att gå tillbaka till mappen*
 
 Du kan också förhandsgranska videoklipp.
