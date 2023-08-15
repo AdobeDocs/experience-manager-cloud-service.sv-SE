@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: acaed9eed20e8134574fd326e23ac68130ac019b
+source-git-commit: 4c38285f9e75618ad181a85034212c7c24030e99
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -13,78 +13,54 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 12874 {#release-12874}
+## Utgåva 13099 {#release-13099}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 12874, som offentliggjordes den 2 augusti 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 12790.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 13099, som offentliggjordes den 16 augusti 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 12874.
 
 2023.8.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-12874}
+### Förbättringar {#enhancements-13099}
 
-- Ny version av indexdefinitionen: `/oak:index/damAssetLucene-9`
-- ASSETS-18351: Växlar till osäkra ansikten för att förbättra sökprestanda
-- ASSETS-17896: Tar bort funktionsvarianter från indexet - likhetssökning baserad på smarta taggar
-- ASSETS-8715: Lägger till null-kontroll/inte null-kontroll för egenskapen &quot;jcr:content/metadata/dam:status&quot;
-- GRANITE-45138: Tar bort egenskapsindexet från den förutspådda taggens dynamiska boost-egenskap
-- ASSETS-17614: Lägger till Scene7 ID som en indexerad egenskap (null-kontroll och inte null-kontroll aktiverad)
-- ASSETS-14516: Lägger till egenskaper för funktionen&quot;Nytt användargränssnitt&quot; i indexet
-- ASSETS-16270: Lägger till den sammanslagna titelegenskapen i indexet (för användning vid sortering)
-- ASSETS-24478: Ta bort 5 potentiellt stora egenskaper från indexet (baserat på analys av kundindexdata)
-- ASSETS-3383: Lägger till en extra tagg, assetsOmnisearch
+- SITES-13906: GraphQL - uppgradera till graphql-java 20.1.
+- SITES-8972: GraphQL - alternativet Lägg till```label``` i JSON för datatypen Enumeration.
+- SITES-9689: GraphQL - Lägg till rubrik och beskrivning i JSON för datatypen Content Reference.
+- SITES-13052: Content Fragments - Export Content Fragments to Adobe Target
 
-AEM 12874 och senare innehåller en ny version av index damAssetLucene (damAssetLucene-9). För att ge den mest responsiva sökupplevelsen ändrar damAssetLucene-9 beteendet hos Oak Query-resultatfacettering så att åtkomstkontrollen inte längre utvärderas för antalet facet som returneras av det underliggande sökindexet (kallas osäkert läge).
+### Åtgärdade problem {#fixed-issues-13099}
 
-Därför är det möjligt att användare får tillgång till värden för antal ansikten som inkluderar resurser som den aktuella användaren inte har tillgång till. Detta gör inte att användaren kan komma åt, hämta eller läsa dessa resurser, och inte heller ger det användaren möjlighet att få mer information om resursernas existens.
+- SITES-14937: MSM - Värdet Inherit Rollout Configs from Parent växlar när Spara och stäng slås på live-kopior.
+- SITES-14847: Content Fragments - Content Fragment Links are are not marked.
+- SITES-11620: Content Fragments - References path is some cut in the UI.
+- SITES-14171: GraphQL - Cirkelreferenser bryts inte för cachelagrade data i vissa fall.
+- SITES-14577: Experience Fragments - Bulk publish is not working for live copies.
+- SITES-14341: Administratörsgränssnitt - Inkonsekvent beteende för knappen Egenskaper när borttagningsbehörigheter tas bort.
+- SITES-11000: Administratörsgränssnitt - Referenser: Inkommande länkar saknas på vissa sidor.
+- SITES-11559: Administratörsgränssnitt - Referenser: Inkommande länkar visar fel sidor.
+- SITES-14337: Administratörsgränssnitt - Öppningsredigeringssidan genererar ett fel i specifika fall.
+- SITES-13425: ContextHub - Menu Bar visas inte när du klickar på ContextHub-knappen.
+- FORMS-9971: När ett adaptivt formulär återges på ett annat språk tolkas och tillämpas komponenternas synlighet felaktigt.
+- FORMS-9888: När ett adaptivt formulär är inställt på att dirigera om till en extern URL (tack) när formuläret skickas, dirigeras det inte om till den externa URL:en.
+- FORMS-9845: När du har rensat en listruta med regelredigeraren behålls de värden som tidigare tillhandahållits, trots att de ska tas bort.
+- FORMS-9263: När kryssrutans etikett innehåller specialtecken och en användare klickar i kryssrutan, markeras inte kryssrutan.
+- FORMS-9254: När en användare bläddrar genom texten i villkorskomponenten aktiveras kryssrutan i komponenten automatiskt innan användaren har bläddrat igenom hela texten.
+- FORMS-9045: Skripttaggen löser inte externa fragmentreferenser i bas-XDP.
+- FORMS-9026: När du försöker skapa ett adaptivt formulär med hjälp av ett JSON-schema som innehåller uppräkningar med tomma strängar och validerar utan fel, resulterar processen i ett fel. Därefter går det inte att läsa in formuläret korrekt när sidan uppdateras. Ett tomt formulär visas tillsammans med ett fel i loggarna.
+- FORMS-8964: I Android™ Chrome/Firefox går det inte att redigera text i textrutekomponenten om den maximala teckengränsen uppnås.
+- FORMS-8668: För många Java™-stackar dumpas i felloggar, trots funktionell formuläråtergivning, vilket orsakar att loggfilen blottar.
+- FORMS-8554: Adaptiv Forms med lazy loading aktiverat fungerar inte i förhandsgranskningsläget för författarinstansen.
+- FORMS-8177: När formulärtjänsten är aktiv är undantaget&quot;com.adobe.aem.formsndocuments.publish.AssetReferenceProvider Det gick inte att hämta resursberoenden.&quot; inträffar. Felet försvinner när formulärtjänsten inaktiveras.
+- FORMS-3691: Vissa objekt saknar IFE-omfång (omedelbart anropat funktionsuttryck). Det främsta syftet med att använda en IIFE är att skapa ett omfång för variabler i funktionen, vilket förhindrar att dessa variabler förorenar det globala omfånget.
 
-Om föregående beteende önskas bör kunderna följa stegen som beskrivs i [Innehållssökning och indexering](/help/operations/indexing.md) om du vill skapa en anpassad version av index damAssetLucene-9 med det tidigare läget för &quot;statistisk&quot; faktor.
 
-### Åtgärdade problem {#fixed-issues-12874}
+### Kända fel {#known-issues-13099}
 
-- ASSETS-24379: Förbättrade ReplicateOnModifyListener.
-- ASSETS-25794: Ett problem med S7ConfigResolverImpl som orsakade att en dyr fråga kördes vid start har åtgärdats.
-- ASSETS-25473: Korrigerade ett fel där snabbpubliceringsalternativet var synligt för användare utan replikeringsbehörighet.
-- ASSETS-24803: Åtgärdade en XSS-säkerhetslucka i visningsprogramfunktionen.
-- ASSETS-25489: Ett fel där Smart beskärning hämtades med fel suffix har korrigerats.
-- ASSETS-25435: Korrigerade ett fel där WidthxHeight-fälten saknades i Hämtning för dynamiska återgivningar
-- ASSETS-25741: Korrigerade frånvaron av en visuell asterisk (`*`) för det obligatoriska breddredigeringsfältet på fliken Grundläggande.
-- ASSETS-25759: Förbättrad synlighet för fokus på nedrullningsbara element i svart/vitt-läge med hög kontrast.
-- ASSETS-25749: Korrigerade ett problem där fokus inte flyttades till flera kontroller under videon när användaren navigerade med tangentbordsfliken, vilket medförde att de inte var tillgängliga.
-- ASSETS-26074: Återställde gränsen på 127 tecken för namn på resurser som inte är video.
-- ASSETS-21428: Korrigerade ett fel där ett fält med flera rader i metadatarameditor överlappade följande fält
-- ASSETS-21989: Korrigerade ett fel som CORS-huvuden kunde skrivas över på 302- och 401-svar, vilket förhindrade fjärr-DAM-inloggning
-- ASSETS-22603: Problem som påverkar kolumnnamn och värden när hämtningsrapporter för resurser visas har åtgärdats
-- ASSETS-23120: Korrigerade ett fel i AssetSetLastModifiedProcess som gällde läckande resurslösare
-- ASSETS-24938: Korrigerade ett fel som fick knappen Spara i dialogrutan Egenskaper för resursmapp att fungera som Spara + Stäng
-- ASSETS-25456: Korrigerat ett fel där en resurs med ett långt namn förhindrar klickåtgärder i redigeraren för resursegenskaper
-- ASSETS-25832: Korrigerat problem med relaterat material från en fullständig åtkomstmapp till skrivskyddad åtkomstmapp.
-- ASSETS-25397: Korrigerade ett fel där det nya namnet på en resurs som bytt namn i det nya användargränssnittet inte skulle återspeglas i sökresultaten
-- ASSETS-26102: Korrigerade ett fel som kunde förhindra överföringar från CI Hub-anslutningen
-- ASSETS-26172: Minskar storleken på förloppsindikatorn för massimport som sparats i beständiga Sling Job-noder
-- ASSETS-26292: Borttagen AssetManager-metod createOrUpdateAsset() och createOrReplaceAsset() i Java API
-- ASSETS-26399: Korrigerat ett fel som förhindrade att samlingar publicerades till Brand Portal
-- ASSETS-26533: Korrigerade ett fel i InDesign Server-integrering som kunde leda till en timeout för långa bearbetningsbegäranden
-- ASSETS-26549: Korrigerade ett fel i resurslistvyn som gjorde att &quot;Extern användare&quot; visades som den senast ändrade användaren för alla överförda resurser
-- ASSETS-26551: Korrigerade ett problem där resurser som tagits bort från författaren inte avpublicerades
-- ASSETS-26571: Korrigerade ett fel på sidan Resursrapporter där sidan inte kunde läsas in om det fanns flera misslyckade rapportjobb i listan
-- ASSETS-26147: Korrigerade ett fel där Unified Shell försökte omdirigera en iframe till /ui när window.top.opener är inställd men inte window.opener
-- ASSETS-26576: Korrigerade ett fel med Dropbox Import där den felaktiga mapphierarkin skapades
-- ASSETS-26671: Korrigerat ett fel som förhindrade massimport från att inkludera filer som finns i en DCIM-mapp
-- ASSETS-26700: Korrigerat ett fel där 3 onödiga grupper skulle skapas när en egenskapssida för en gemensam mapp sparas utan några ändringar
-- CQ-4353449: Korrigerade ett fel som gjorde att användare med skrivskyddad taggningsbehörighet kunde skapa taggar med hjälp av taggningsgränssnittet
-- GRANITE-46601: Korrigerat ett fel som hindrade QuickStart SDK från att starta den 11.0.20
-- SKYOPS-33168: Korrigerade ett fel i CM Developer Console som förhindrade inläsning av /content/dam för resursnamn utan tillägg
-- SKYOPS-61484: Korrigerade ett fel i tjänsten RDEProvider som medgav att ${sling.home}-tokens som inte ersatts kunde finnas kvar i sammanslagna OSGi-konfigurationer
-- Olika åtgärder för säkerhet, tillgänglighet och lokalisering
+- SITES-15359: Variantnamnsmönstret matchar inte varianter som har ```'_'``` i sina resursnamn.
 
-### Kända fel {#known-issues-12874}
-
-- GRANITE-46851: Testanslutningen i innehållsdistributionen fungerar inte
-
-### Inbäddade tekniker {#embedded-tech-12874}
+### Inbäddade tekniker {#embedded-tech-13099}
 
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM | 1.52-T20230629133256-25c01b8 | [API för Oak API 1.52.0](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.52.0/index.html) |
 | AEM SLING API | Version 2.27.2 | [API för Apache Sling 2.27.2](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTML | Version 1.4.20-1.4.0 | [HTML-mallens språkspecifikation](https://github.com/adobe/htl-spec) |
-| Grundläggande komponenter i AEM | Version 2.23.0 | [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components) |
+| Grundläggande komponenter i AEM | Version 2.23.2 | [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components) |
