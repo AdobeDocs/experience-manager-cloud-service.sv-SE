@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: b2c67687e2f3577b44929777a31b6ce85a5f1877
+source-git-commit: cb963a233b5afd4497704233db7f51c37563d0f9
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 130
 ### Förbättringar {#enhancements-13099}
 
 - SITES-13906: GraphQL - uppgradera till graphql-java 20.1.
-- SITES-8972: GraphQL - alternativet Lägg till```label``` i JSON för datatypen Enumeration.
+- SITES-8972: GraphQL - Lägg till alternativetikett i JSON för datatypen Enumeration.
 - SITES-9689: GraphQL - Lägg till rubrik och beskrivning i JSON för datatypen Content Reference.
 - SITES-13052: Content Fragments - Export Content Fragments to Adobe Target
 
