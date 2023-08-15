@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 2f187eaec2f8418b63e54dc4f377d5798f8ed07a
+source-git-commit: d092e68b4f6dbc4f2bcfc45d2e522cfbfa831c0d
 workflow-type: tm+mt
-source-wordcount: '4238'
+source-wordcount: '4242'
 ht-degree: 20%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 20%
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
       + 2023 {#2023}
+         + [Underhållsinformation för 2023.8.0](/help/release-notes/maintenance/2023/2023.8.0.md)
          + [Underhållsinformation för 2023.7.0](/help/release-notes/maintenance/2023/2023.7.0.md)
          + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023.6.0.md)
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023.4.0.md)
@@ -509,7 +510,7 @@ ht-degree: 20%
       + [Arbeta med selektiv publicering i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md)
       + [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md)
       + [Vanliga frågor om leverans av innehåll med HTTP2](/help/assets/dynamic-media/http2faq.md)
-      + [Flash-tittare som slutar svara](/help/assets/dynamic-media/flash-viewers-eol.md)
+      + [Flash Viewers End-of-Life](/help/assets/dynamic-media/flash-viewers-eol.md)
       + [DHTML-visningsprogram - slutdatum](/help/assets/dynamic-media/dhtml-viewer-endoflifefaqs.md)
    + Arbeta med resursvyn {#assets-view}
       + [Introduktion](/help/assets/assets-view-introduction.md)
@@ -700,7 +701,7 @@ ht-degree: 20%
       + Redigering {#authoring}
          + [Commerce Experiences](/help/commerce-cloud/authoring/authoring-commerce-experiences.md)
          + [Product Cockpit](/help/commerce-cloud/authoring/product-cockpit.md)
-         + [Användning av flera mallar](/help/commerce-cloud/authoring/multi-template-usage.md)
+         + [Användning i flera mallar](/help/commerce-cloud/authoring/multi-template-usage.md)
          + [Berika produktdata med tillhörande innehåll](/help/commerce-cloud/authoring/enrich-product-associated-content.md)
          + [Recommendations](/help/commerce-cloud/authoring/product-recommendations.md)
       + Administratör {#administering}
