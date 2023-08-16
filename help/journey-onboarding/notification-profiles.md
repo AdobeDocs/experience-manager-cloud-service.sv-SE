@@ -4,9 +4,9 @@ description: Lär dig hur du skapar användarprofiler i Admin Console för att h
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 4edecfcd-6301-4a46-98c7-eb5665f48995
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 6764fe48068325dfb7ed84cf7834c7eb5f25fb48
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ För att kunna ställa in mottagning av meddelanden måste du skapa två använd
 
 1. Se till att du är i rätt organisation.
 
-1. Från **Översikt** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
+1. Från **Ökning** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
 
    ![Förteckning över produkter och tjänster i Admin Console](assets/products_services.png)
 
@@ -56,7 +56,7 @@ För att kunna ställa in mottagning av meddelanden måste du skapa två använd
 
    * **Produktprofilnamn**: `Incident Notification - Cloud Service`
    * **Visningsnamn**: `Incident Notification - Cloud Service`
-   * **Beskrivning**: Cloud Manager-profil för de användare som ska få meddelanden under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem i din AEM as a Cloud Service miljö
+   * **Beskrivning**: Cloud Manager-profil för de användare som ska få meddelanden under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem med din AEM as a Cloud Service miljö
 
 1. Klicka **Spara**.
 
@@ -64,7 +64,7 @@ För att kunna ställa in mottagning av meddelanden måste du skapa två använd
 
    * **Produktprofilnamn**: `Proactive Notification - Cloud Service`
    * **Visningsnamn**: `Proactive Notification - Cloud Service`
-   * **Beskrivning**: Cloud Manager-profil för de användare som får meddelanden när en medlem i Adobe support vill ge vägledning om en eventuell optimering eller rekommendationer som ska utföras med din AEM as a Cloud Service miljökonfiguration
+   * **Beskrivning**: Cloud Manager-profil för de användare som ska få meddelanden när en medlem i Adobe-supportteamet vill ge vägledning om en eventuell optimering eller rekommendationer som ska utföras med din AEM as a Cloud Service miljökonfiguration
 
 1. Klicka **Spara**.
 
@@ -74,7 +74,7 @@ De två nya meddelandeprofilerna skapas.
 >
 >Det är viktigt att Cloud Manager **produktprofilnamn** är exakt detsamma som angivet. Kopiera och klistra in det angivna produktprofilnamnet för att undvika fel. Eventuella avvikelser eller skrivfel leder till att meddelanden inte skickas som du vill.
 >
->Om ett fel uppstår eller om profilerna inte har definierats kommer Adobe som standard att meddela befintliga användare som har tilldelats till **Cloud Manager Developer** eller **Distributionshanteraren** profiler.
+>Om ett fel uppstår eller om profilerna inte har definierats kommer Adobe som standard att meddela befintliga användare som har tilldelats **Cloud Manager Developer** eller **Distributionshanteraren** profiler.
 
 ## Tilldela användare till meddelandeprofiler {#add-users}
 
@@ -90,7 +90,7 @@ Följ de här stegen för att lägga till användare för vilka Federated ID än
 
 1. Se till att du har valt rätt organisation.
 
-1. Från **Översikt** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
+1. Från **Ökning** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
 
    ![Användare](assets/product_services.png)
 
@@ -121,7 +121,7 @@ Följ de här stegen för att lägga till användare för vilka det redan finns 
 
 1. Se till att du har valt rätt organisation.
 
-1. Från **Översikt** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
+1. Från **Ökning** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
 
 1. Välj **Användare** från den övre navigeringen.
 
@@ -139,3 +139,9 @@ Följ de här stegen för att lägga till användare för vilka det redan finns 
 1. Klicka **Spara** och ett välkomstmeddelande skickas till användaren som du har lagt till.
 
 Den inbjudna användaren får nu meddelanden. Upprepa de här stegen för de användare i ditt team som du vill ska få meddelanden om.
+
+## Ytterligare resurser {#additional-resources}
+
+Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
+
+* [Actions Center](/help/operations/actions-center.md) - Utnyttja åtgärdscentret för att enkelt vidta åtgärder vid incidenter och annan viktig information.
