@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 2fcc33cfb8b0be89b4b9f91d687dc21ba456000c
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2683'
 ht-degree: 1%
 
 ---
@@ -17,13 +17,14 @@ AEM inställningar för as a Cloud Service loggning och loggnivåer hanteras i k
 
 * AEM loggning, som utför loggning på AEM programnivå
 * Apache HTTPD Web Server/Dispatcher-loggning, som utför loggning av webbservern och Dispatcher på Publiceringsnivå.
+* CDN-loggning, som enligt namnet, utför loggning på CDN. Den här funktionen är för närvarande tillgänglig för användare som är tidiga; om du vill gå med i det tidiga adopterprogrammet kan du skicka e-post **aemcs-cdnlogs-adopter@adobe.com**, inklusive namnet på organisationen och sammanhanget om ditt intresse för funktionen.
 
 ## AEM loggning {#aem-logging}
 
 Loggning på AEM programnivå hanteras av tre loggar:
 
 1. AEM Java-loggar, som återger Java-loggningsprogramsatser för det AEM programmet.
-1. HTTP-begärandeloggar, som loggar information om HTTP-begäranden och deras svar som hanteras av AEM
+1. HTTP-begärandeloggar, som loggar information om HTTP-begäranden och deras svar som AEM
 1. HTTP Access-loggar, som loggar sammanfattad information och HTTP-begäranden som hanteras av AEM
 
 >[!NOTE]
@@ -189,7 +190,7 @@ Nedan följer exempel på rekommenderade loggningskonfigurationer (med platshål
 
 AEM as a Cloud Service loggning av HTTP-begäran ger insikt i HTTP-begäranden som gjorts till AEM och deras HTTP-svar i tidsordning. Loggen är användbar för att förstå HTTP-begäranden som gjorts till AEM och i vilken ordning de bearbetas och besvaras.
 
-Nyckeln till att förstå den här loggen är att mappa HTTP-par för begäran och svar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Observera att ofta förfrågningar och deras motsvarande svar har andra HTTP-förfrågningar och svar som har intervjuats mellan dem i loggen.
+Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och svarspar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Observera att ofta förfrågningar och deras motsvarande svar har andra HTTP-förfrågningar och svar som har intervjuats mellan dem i loggen.
 
 **Exempellogg**
 
@@ -243,7 +244,7 @@ Loggen för AEM HTTP-begäran kan inte konfigureras i AEM as a Cloud Service.
 
 AEM när HTTP-åtkomstloggning för Cloud Service visar HTTP-begäranden i tidsordning. Varje loggpost representerar den HTTP-begäran som AEM åtkomst till.
 
-Loggen är användbar för att snabbt förstå vilka HTTP-begäranden som görs till AEM, om de lyckas genom att titta på den tillhörande HTTP-svarsstatuskoden och hur lång tid det tog att slutföra HTTP-begäran. Den här loggen kan också vara användbar om du vill felsöka en viss användares aktivitet genom att filtrera loggposter efter användare.
+Den här loggen är användbar för att snabbt förstå vilka HTTP-begäranden som görs till AEM, om de lyckas genom att titta på den tillhörande HTTP-svarsstatuskoden och hur lång tid det tog att slutföra HTTP-begäran. Den här loggen kan också vara användbar om du vill felsöka en viss användares aktivitet genom att filtrera loggposter efter användare.
 
 **Exempel på loggutdata**
 
@@ -276,17 +277,17 @@ AEM as a Cloud Service innehåller tre loggar för Apache-webbservrar och dispat
 
 * Åtkomstlogg för Apache HTTPD-webbserver
 * Fellogg för Apache HTTPD-webbserver
-* Sändningslogg
+* Dispatcher-logg
 
 Observera att dessa loggar endast är tillgängliga för publiceringsnivån.
 
-Den här uppsättningen loggar ger information om HTTP-begäranden till AEM as a Cloud Service publiceringsnivå innan dessa begäranden når det AEM programmet. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrar betjänas av innehåll som cachas av Apache HTTPD-webbservern och AEM Dispatcher, och som aldrig når själva AEM. Därför finns det inga loggsatser för dessa förfrågningar i AEM Java-, Request- eller Access-loggar.
+Den här uppsättningen loggar ger information om HTTP-begäranden till AEM as a Cloud Service publiceringsnivå innan dessa begäranden når AEM. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrar betjänas av innehåll som cachas av Apache HTTPD-webbservern och AEM Dispatcher, och som aldrig når själva AEM. Därför finns det inga loggsatser för dessa förfrågningar i AEM Java-, Request- eller Access-loggar.
 
 ### Åtkomstlogg för Apache HTTPD-webbserver {#apache-httpd-web-server-access-log}
 
 Åtkomstloggen för Apache HTTP Web Server innehåller programsatser för varje HTTP-begäran som når publiceringsskiktets webbserver/Dispatcher. Observera att förfrågningar som hanteras från ett CDN i ett tidigare flöde inte återspeglas i dessa loggar.
 
-Mer information om felloggformatet finns i [officiell dokumentation](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
+Mer information om felloggformatet finns i [officiell dokumentation om apache](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
 
 **Exempel på loggutdata**
 
@@ -342,7 +343,7 @@ cm-p1234-e5678-aem-publish-b86c6b466-qpfvp - - 17/Jul/2020:09:14:42 +0000  "GET 
 </tr>
 <tr>
 <td>Användaragent</td>
-<td>"Mozilla/5.0 (Macintosh); Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, t.ex. Gecko) Chrome/81.0.4044.122 Safari/537.36"</td>
+<td>"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, t.ex. Gecko) Chrome/81.0.4044.122 Safari/537.36"</td>
 </tr>
 </tbody>
 </table>
@@ -355,7 +356,7 @@ Loggen kan inte konfigureras på AEM as a Cloud Service.
 
 Felloggen för Apache HTTP Web Server innehåller programsatser för varje fel i Publish-skiktets webbserver/Dispatcher.
 
-Mer information om felloggformatet finns i [officiell dokumentation](https://httpd.apache.org/docs/2.4/logs.html#errorlog).
+Mer information om felloggformatet finns i [officiell dokumentation om apache](https://httpd.apache.org/docs/2.4/logs.html#errorlog).
 
 **Exempel på loggutdata**
 
@@ -433,7 +434,7 @@ Define REWRITE_LOG_LEVEL debug
 <tbody>
 <tr>
 <td>Datum och tid</td>
-<td>[17/Jul/2020]:23:48:16 +0000]</td>
+<td>[17/Jul/2020:23:48:16 +0000]</td>
 </tr>
 <tr>
 <td>Pod Name</td>
@@ -478,7 +479,7 @@ Den kan ställas in på error, warn, info, debug och trace1, med standardvärdet
 
 Även om Dispatcher-loggning stöder flera andra nivåer av loggningsgranularitet rekommenderar AEM as a Cloud Service att du använder de nivåer som beskrivs nedan.
 
-Om du vill ange loggnivån per miljö använder du lämplig villkorlig gren i `global.var` fil enligt beskrivningen nedan:
+Om du vill ange loggnivån per miljö använder du lämplig villkorlig gren i `global.var` fil, enligt beskrivning nedan:
 
 ```
 Define DISP_LOG_LEVEL debug
@@ -499,6 +500,57 @@ Define DISP_LOG_LEVEL debug
 >
 >I AEM as a Cloud Service miljöer är felsökning den högsta nivån för vertikal intensitet. Spårningsloggsnivån stöds inte, så du bör undvika att ange den när du arbetar i molnmiljöer.
 
+## CDN-logg {#cdn-log}
+
+>[!NOTE]
+>
+>Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i det pågående programmet för tidiga användare skickar du e-post **aemcs-cdnlogs-adopter@adobe.com**, inklusive namnet på organisationen och sammanhanget om ditt intresse för funktionen.
+>
+
+AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara vid användning, inklusive optimering av träffkvoten. Det går inte att anpassa CDN-loggformatet och det finns inget koncept för att ställa in det på olika lägen, till exempel info, warn eller error.
+
+**Exempel**
+
+```
+{
+"timestamp": "2023-05-26T09:20:01+0000",
+"ttfb": 19,
+"cli_ip": "147.160.230.112",
+"cli_country": "CH",
+"rid": "974e67f6",
+"req_ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
+"host": "example.com",
+"url": "/content/hello.png",
+"method": "GET",
+"res_ctype": "image/png",
+"cache": "PASS",
+"status": 200,
+"res_age": 0,
+"pop": "PAR"
+}
+```
+
+**Loggformat**
+
+CDN-loggarna skiljer sig från de andra loggarna på så sätt att de följer ett json-format.
+
+| **Fältnamn** | **Beskrivning** |
+|---|---|
+| *tidsstämpel* | Den tidpunkt då begäran startades, efter TLS-avslutning |
+| *ttfb* | Förkortning för *Tid till första byte*. Tidsintervallet mellan begäran startades fram till punkten innan svarstexten började direktuppspelas. |
+| *cli_ip* | Klientens IP-adress. |
+| *cli_country* | Två bokstäver [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) alpha-2-landskod för klientlandet. |
+| *rutnät* | Värdet på begärandehuvudet som används för att unikt identifiera begäran. |
+| *req_ua* | Användaragenten som ansvarar för att göra en given HTTP-begäran. |
+| *värd* | Den myndighet som begäran avser. |
+| *url* | Den fullständiga sökvägen, inklusive frågeparametrar. |
+| *method* | HTTP-metod som skickas av klienten, till exempel &quot;GET&quot; eller &quot;POST&quot;. |
+| *res_type* | Den innehållstyp som används för att ange resursens ursprungliga medietyp. |
+| *cache* | Status för cachen. Möjliga värden är HIT, MISS eller PASS |
+| *status* | HTTP-statuskoden som ett heltalsvärde. |
+| *_Bläddra* | Den tid (i sekunder) som ett svar har cachelagrats (i alla noder). |
+| *pop* | Datacenter för CDN-cacheservern. |
+
 ## Åtkomst till loggar {#how-to-access-logs}
 
 ### Molnmiljöer {#cloud-environments}
@@ -509,9 +561,9 @@ Du kommer åt AEM as a Cloud Service loggar för molntjänster antingen genom at
 
 AEM as a Cloud Service SDK innehåller loggfiler som stöder lokal utveckling.
 
-AEM loggar finns i mappen `crx-quickstart/logs`, där följande loggar kan visas:
+AEM finns i mappen `crx-quickstart/logs`, där följande loggar kan visas:
 
-* AEM Java-logg: `error.log`
+* AEM Java log: `error.log`
 * Logg för AEM HTTP-begäran: `request.log`
 * AEM HTTP Access-logg: `access.log`
 
@@ -520,10 +572,10 @@ Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som
 Så här hämtar du loggarna:
 
 1. Skriv på kommandoraden `docker ps` för att lista dina behållare
-1. Om du vill logga in i behållaren skriver du &quot;`docker exec -it <container> /bin/sh`&quot;, var `<container>` är avsändarens behållar-ID från föregående steg
+1. Om du vill logga in i behållaren skriver du`docker exec -it <container> /bin/sh`&quot;, var `<container>` är avsändarens behållar-ID från föregående steg
 1. Navigera till cacheroten under `/mnt/var/www/html`
 1. Loggarna är under `/etc/httpd/logs`
-1. Inspect loggarna: De kan nås under mappen XYZ, där följande loggar kan visas:
+1. Loggarna i Inspect: de finns i mappen XYZ, där följande loggar kan visas:
    * Åtkomstlogg för Apache HTTPD-webbserver - `httpd_access.log`
    * Felloggar för Apache HTTPD-webbserver - `httpd_error.log`
    * Utskicksloggar - `dispatcher.log`
@@ -554,7 +606,7 @@ Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas
 I supportärendet ska man ange
 
 * Splunk HEC-slutpunktsadress. Slutpunkten måste ha ett giltigt SSL-certifikat och vara allmänt tillgänglig.
-* Splunk-indexvärdet
+* Splunk-index
 * Splunk-porten
 * Splunk HEC-token. Se [den här sidan](https://docs.splunk.com/Documentation/Splunk/8.0.4/Data/HECExamples) för mer information.
 
@@ -580,21 +632,21 @@ Program 123, Production Env
 
 * Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
 * Segmentindex: acme_123prod (kunden kan välja vilken namnkonvention man vill)
-* Splunk-port: 443
+* Segmentport: 443
 * Splunk HEC-token: ABC123
 
 Program 123, Stage Env
 
 * Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
 * Segmentindex: acme_123stage
-* Splunk-port: 443
+* Segmentport: 443
 * Splunk HEC-token: ABC123
 
 Program 123, Dev Envs
 
 * Splunk HEC-slutpunktsadress: `splunk-hec-ext.acme.com`
 * Segmentindex: acme_123dev
-* Splunk-port: 443
+* Segmentport: 443
 * Splunk HEC-token: ABC123
 
 Det kan räcka med att samma Splunk-index används för varje miljö, i vilket fall antingen `aem_env_type` -fältet kan användas för att differentiera baserat på värdena dev, stage och prod. Om det finns flera utvecklingsmiljöer `aem_env_id` kan också användas. Vissa organisationer kan välja ett separat index för produktionsmiljöns loggar om det associerade indexet begränsar åtkomsten till en reducerad uppsättning Splunk-användare.
