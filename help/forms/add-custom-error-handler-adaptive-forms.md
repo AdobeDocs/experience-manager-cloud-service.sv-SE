@@ -7,7 +7,7 @@ keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterar
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: bb2ee07f8750c15959ecdaa65f0932b05edfcd39
 workflow-type: tm+mt
 source-wordcount: '1964'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Felhanterare i adaptiv Forms {#error-handlers-in-adaptive-form}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 AEM Forms har färdiga funktioner och felhanterare för att skicka in formulär. Den innehåller även funktioner för att anpassa felhanterarfunktioner. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När en extern tjänst anropas med API:er överförs data till servern för validering, som returnerar ett svar till klienten med information om lyckad eller felhändelse för överföringen. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen. En felhanterare hjälper till att hantera och visa fel eller valideringsproblem som påträffats.
 
-![felhanterararbetsflöde för att förstå hur du lägger till anpassad felhanterare i formulär](/help/forms/assets/error-handler-workflow.png)
+![felhanterararbetsflöde för att förstå hur du lägger till en anpassad felhanterare i formulär](/help/forms/assets/error-handler-workflow.png)
 
 Det adaptiva formuläret validerar de indata du anger i fält baserat på förinställda valideringskriterier och söker efter olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst. Du kan ange valideringskriterier baserat på den datakälla som du använder med det adaptiva formuläret. Om du till exempel använder RESTful-webbtjänster som datakälla kan du definiera valideringskriterierna i en Swagger-definitionsfil.
 
@@ -35,12 +35,12 @@ Om indatavärdena uppfyller valideringskriterierna skickas värdena till datakä
 ## Användning av felhanterare {#uses-of-error-handler}
 
 Felhanterare används för olika syften. Några av användningsområdena för felhanterarfunktioner visas nedan:
-* **Utför validering**: Felhanteringen börjar med att validera användarindata mot fördefinierade regler eller villkor. När användarna fyller i ett adaptivt formulär validerar felhanteraren indata så att det uppfyller det format, den längd eller andra begränsningar som krävs.
+* **Utför validering**: Felhanteringen börjar med att användarindata valideras mot fördefinierade regler eller villkor. När användarna fyller i ett adaptivt formulär validerar felhanteraren indata så att det uppfyller det format, den längd eller andra begränsningar som krävs.
 
 * **Ge feedback i realtid**: När ett fel upptäcks visar felhanteraren direkt feedback till användaren, t.ex. textbundna felmeddelanden under motsvarande formulärfält. Denna feedback hjälper användarna att identifiera och åtgärda fel utan att behöva skicka in formuläret och vänta på ett svar.
 
 
-* **Visa felmeddelanden**: När en sändning med adaptiva formulär stöter på ett valideringsfel visas ett felmeddelande i felhanteraren. Felmeddelandena ska vara tydliga, koncisa och markera de specifika fält som behöver åtgärdas.
+* **Visa felmeddelanden**: När en sändning med adaptiva formulär påträffar ett valideringsfel visas ett felmeddelande i felhanteraren. Felmeddelandena ska vara tydliga, koncisa och markera de specifika fält som behöver åtgärdas.
 
 * **Markerar det felaktiga fältet**: För att dra användarens uppmärksamhet till specifika felaktiga fält markeras eller visas motsvarande fält. Den utförs genom att ändra bakgrundsfärgen, lägga till en ikon eller kantlinje eller någon annan visuell indikator som hjälper användarna att snabbt hitta och åtgärda felen.
 
@@ -167,7 +167,7 @@ Vissa av alternativen för att visa felsvaren är:
       ]}
   ```
 
-  ![Datareferens för ett adaptivt formulärfält som visar felsvar i en anpassad felhanterare](/help/forms/assets/custom-errorhandler-dataref.png)
+  ![Datareferens för ett adaptivt formulärfält som visar felsvar i anpassad felhanterare](/help/forms/assets/custom-errorhandler-dataref.png)
 
 Du kan visa värdet för dataRef i **[!UICONTROL Properties]** -fönstret för en formulärkomponent.
 
@@ -277,7 +277,7 @@ Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rub
        git push
    ```
 
-1. [Kör pipeline.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline)
+1. [Kör pipelinen.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline)
 
 När pipeline har körts blir den anpassade felhanteraren tillgänglig i regelredigeraren för adaptiva formulär. Nu ska vi förstå hur du konfigurerar och använder en anpassad felhanterare med hjälp av regelredigerarens Invoke-tjänst i AEM Forms.
 
@@ -287,10 +287,10 @@ Använda en anpassad felhanterare med **[!UICONTROL Rule Editor's Invoke Service
 
 1. Öppna ett adaptivt formulär i redigeringsläge, markera en formulärkomponent och tryck på **[!UICONTROL Rule Editor]** för att öppna regelredigeraren.
 1. Tryck på **[!UICONTROL Create]**.
-1. Skapa ett villkor i **När** -delen av regeln. Till exempel När **[Namn på Pet ID-fält]** ändras, välj **ändras** från **Välj läge** nedrullningsbar lista.
-1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** nedrullningsbar lista.
-1. Välj en **Bokför tjänst** och dess motsvarande databindningar från **Indata** -avsnitt. Till exempel för att validera **Djurs-ID** väljer du en **Bokför tjänst** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
-1. Välj databindningar i listrutan **Utdata** -avsnitt. Välj till exempel **Djurnamn** i **Utdata** -avsnitt.
+1. Skapa ett villkor i **När** -delen av regeln. Till exempel När **[Namn på Pet ID-fält]** ändras, välj **ändras** från **Välj läge** listruta.
+1. I **Sedan** avsnitt, markera **[!UICONTROL Invoke Service]** från **Välj åtgärd** listruta.
+1. Välj en **Bokför tjänst** och dess motsvarande databindningar från **Indata** -avsnitt. Validera till exempel **Djurs-ID** väljer du en **Bokför tjänst** as **GET /husdjur/{petId}** och markera **Djurs-ID** i **Indata** -avsnitt.
+1. Välj databindningar på menyn **Utdata** -avsnitt. Välj till exempel **Djurnamn** i **Utdata** -avsnitt.
 1. Välj **[!UICONTROL Custom Error Handler]** från **[!UICONTROL Error Handler]** -avsnitt.
 1. Klicka på **[!UICONTROL Done]**.
 
