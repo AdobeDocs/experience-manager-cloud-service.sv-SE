@@ -2,9 +2,9 @@
 title: Testning av Experience Audit
 description: Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 exl-id: 8d31bc9c-d38d-4d5b-b2ae-b758e02b7073
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: e9f205a506fb2d2b7f5e634b353b112bf077058a
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,10 @@ Granskningsresultaten är informativa och gör det möjligt för distributionsha
 
 Experience Audit drivs av Google Lightroom, ett verktyg med öppen källkod från Google, och är aktiverat i alla produktionspipelines i Cloud Manager.
 
+>[!INFO]
+>
+>Från och med den 28 augusti 2023 kommer Experience Audit att gå över till att visa resultat som är specifika för mobilplattformen. Observera att mobilprestandamätningar vanligtvis registrerar lägre värden än de på stationära datorer, så förutse en förändring i rapporterade prestanda efter den här ändringen.
+
 >[!TIP]
 >
 >Du konfigurerar vilka sidor som ska ingå i Experience Audit när du [konfigurera din pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#full-stack-code).
@@ -41,7 +45,7 @@ Experience Audit drivs av Google Lightroom, ett verktyg med öppen källkod frå
 
 Experience Audit ger aggregerade och detaljerade testresultat på sidnivå via [körningssida för produktionsflöde](/help/implementing/cloud-manager/deploy-code.md).
 
-* Sammanlagda mätvärden mäter medelpoängen på de sidor som granskats med avseende på prestanda, tillgänglighet, bästa praxis, SEO (sökmotoroptimering).
+* Sammanlagda mätvärden mäter medelpoängen på de sidor som granskats för prestanda, tillgänglighet, bästa praxis, SEO (sökmotoroptimering).
 * Enskilda sidnivåpoäng kan också göras via fördjupning.
 * Detaljerad information om poängen finns tillgänglig för att visa resultaten av de enskilda testerna tillsammans med vägledning om hur man åtgärdar eventuella problem som identifierats.
 * En historik över testresultaten finns kvar i Cloud Manager för att avgöra om ändringar som införs i pipeline inkluderar eventuella regressioner från föregående körning.
@@ -56,7 +60,7 @@ Det finns en sammanställd nivå för varje testtyp, som prestanda, tillgänglig
 
 * **Positivt värde** - Sidorna har förbättrats på det valda testet sedan den senaste produktionspipeline-körningen.
 
-* **Negativt värde** - sidan/sidorna har gått om på det valda testet sedan den senaste produktionspipeline kördes.
+* **Negativt värde** - sidan/sidorna har gått om på det valda testet sedan den senaste produktionspipeline-körningen.
 
 * **Ingen ändring** - Sidorna har fått samma resultat sedan den senaste produktionsflödet.
 
