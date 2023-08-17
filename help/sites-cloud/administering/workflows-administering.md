@@ -1,11 +1,11 @@
 ---
 title: Administrera arbetsflödesinstanser
-description: Lär dig hur du administrerar arbetsflödesinstanser
+description: Lär dig administrera arbetsflödesinstanser med arbetsflödeskonsolen
 feature: Administering
 role: Admin
-source-git-commit: 31cda6f7eb7ef1c32ba9d0ec7d198a5f2f38b1e6
+source-git-commit: d1da8559da856e028a5dcad1d0c0b2c00176af0c
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1288'
 ht-degree: 0%
 
 ---
@@ -16,29 +16,29 @@ Arbetsflödeskonsolen innehåller flera verktyg för att administrera arbetsflö
 
 Det finns en rad konsoler som du kan använda för att administrera dina arbetsflöden. Använd [global navigering](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) för att öppna **verktyg** välj **Arbetsflöde**:
 
-* **Modeller**: Hantera arbetsflödesdefinitioner
+* **Models**: Hantera arbetsflödesdefinitioner
 * **Instanser**: Visa och hantera pågående arbetsflödesinstanser
-* **Startare**: Hantera hur arbetsflöden ska startas
+* **Startare**: Hantera hur arbetsflöden startas
 * **Arkiv**: Visa historik över arbetsflöden som har slutförts
 * **Fel**: Visa historik över arbetsflöden som slutförts med fel
 * **Tilldela automatiskt**: Konfigurera automatisk tilldelning av arbetsflöden till mallar
 
 ## Övervaka status för arbetsflödesinstanser {#monitoring-the-status-of-workflow-instances}
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 1. Välj **Instanser** för att visa en lista över pågående arbetsflödesinstanser.
-1. På den övre listen i det högra hörnet visas arbetsflödesinstanserna **Köra arbetsflöden**, **Status** och **Detaljer**.
-1. **Köra arbetsflöden** visar antalet arbetsflöden som körs och deras status. I de angivna bilderna visas till exempel antalet **Köra arbetsflöden** och **Status** AEM:
+1. På den övre listen i det högra hörnet visas arbetsflödesinstanserna **Köra arbetsflöden**, **Status** och **Information**.
+1. **Köra arbetsflöden** visar antalet arbetsflöden som körs och deras status. I de angivna bilderna visas t.ex. antalet **Köra arbetsflöden** och **Status** AEM:
 
-   * **Status: Hälsosam**
+   * **Status: felfri**
      ![status-hälsosam](/help/sites-cloud/administering/assets/status-healthy.png)
 
    * **Status: Ohälsosam**
      ![status-ohälsosam](/help/sites-cloud/administering/assets/status-unhealthy.png)
 
-1. För **Statusinformation** av arbetsflödesinstanser klickar du på **Detaljer** för att visa **antal arbetsflödesinstanser som körs**, **slutförda arbetsflödesinstanser**, **avbrutna arbetsflödesinstanser**, **misslyckade arbetsflödesinstanser** och så vidare. nedan visas till exempel de bilder som visas **Statusinformation** med:
+1. För **Statusinformation** av arbetsflödesinstanser klickar du på **Information** för att visa **antal arbetsflödesinstanser som körs**, **slutförda arbetsflödesinstanser**, **avbrutna arbetsflödesinstanser**, **misslyckade arbetsflödesinstanser** och så vidare. nedan visas till exempel de bilder som visas **Statusinformation** med:
 
-   * **Statusinformation: Hälsosam**
+   * **Statusinformation: felfri**
      ![status-details-good](/help/sites-cloud/administering/assets/status-details-healthy.png)
 
    * **Statusinformation: Ohälsosam**
@@ -50,44 +50,44 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
 ## Sök efter arbetsflödesinstanser {#search-workflow-instances}
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 1. Välj **Instanser** om du vill visa en lista över pågående arbetsflödesinstanser. I den övre rälen, i det vänstra hörnet, väljer du **Filter**. Du kan också använda tangenterna Alt+1. Följande dialogruta visas:
 
    ![wf-99-1](/help/sites-cloud/administering/assets/wf-99-1.png)
 
 1. Välj sökvillkor för arbetsflödet i dialogrutan Filter. Du kan söka baserat på följande indata:
 
-   * Nyttolastsökväg: Markera en specifik bana
+   * Nyttolastsökväg: Välj en specifik sökväg
    * Arbetsflödesmodell: Välj en arbetsflödesmodell
-   * Uppdragare: Välj en arbetsflödestilldelare
+   * Tilldelad: Välj en arbetsflödestilldelad
    * Typ: Aktivitet, arbetsflödesobjekt eller arbetsflödesfel
    * Aktivitetsstatus: Aktiv, Fullständig eller Avbruten
-   * Var jag är: Ägare OCH tilldelad, endast ägare, endast tilldelad
+   * Var jag är: Ägare OCH tilldelad, Endast ägare, Endast tilldelad
    * Startdatum: Startdatum före eller efter ett angivet datum
    * Slutdatum: Slutdatum före eller efter ett angivet datum
    * Förfallodatum: Förfallodatum före eller efter ett angivet datum
-   * Uppdateringsdatum: Uppdaterat datum före eller efter ett angivet datum
+   * Uppdateringsdatum: Uppdateringsdatum före eller efter ett angivet datum
 
 ## Göra uppehåll, återuppta och avsluta en arbetsflödesinstans {#suspending-resuming-and-terminating-a-workflow-instance}
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 1. Välj **Instanser** om du vill visa en lista över pågående arbetsflödesinstanser.
 
    ![wf-96-1](/help/sites-cloud/administering/assets/wf-96-1.png)
 
-1. Markera ett specifikt objekt och använd sedan **Avsluta**, **Gör uppehåll**, eller **Återuppta**, beroende på vad som är lämpligt, bekräftelse och/eller ytterligare uppgifter krävs:
+1. Markera ett specifikt objekt och använd sedan **Avsluta**, **Gör uppehåll**, eller **Återuppta**, beroende på vad som är tillämpligt; bekräftelse och/eller ytterligare uppgifter krävs:
 
    ![wf-97-1](/help/sites-cloud/administering/assets/wf-97-1.png)
 
    >[!NOTE]
    >
    >
-   >Om du vill avsluta eller avbryta ett arbetsflöde måste det vara i ett läge där användaren väntar på att göra något, till exempel i ett deltagarsteg. Om du försöker avbryta ett arbetsflöde som för närvarande kör jobb (aktiva trådar som körs) kanske inte resultatet blir som du förväntar dig.
+   >Om du vill avsluta eller avbryta ett arbetsflöde måste det vara i ett läge där användaren väntar på att göra något, t.ex. i ett deltagarsteg. Om du försöker avbryta ett arbetsflöde som för närvarande kör jobb (aktiva trådar som körs) kanske inte resultatet blir som du förväntar dig.
 
 
 ## Visa arkiverade arbetsflöden {#viewing-archived-workflows}
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 
 1. Välj **Arkiv** om du vill visa en lista över arbetsflödesinstanser som har slutförts.
 
@@ -96,12 +96,12 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
    >[!NOTE]
    >
    >
-   >Avbruten status betraktas som en avslutad åtgärd eftersom den inträffar till följd av en användaråtgärd. till exempel:
+   >Avbrottsstatusen betraktas som ett slutfört avbrott eftersom det inträffar som ett resultat av en användaråtgärd, till exempel:
    >
    >* användning av **Avsluta** åtgärd
    >* När en sida, som är underställd ett arbetsflöde, (framtvingas) tas bort, avslutas arbetsflödet.
 
-1. Markera ett specifikt objekt och sedan **Öppna historik** för mer information:
+1. Markera ett specifikt objekt och sedan **Öppna historik** om du vill ha mer information:
 
    ![wf-99](/help/sites-cloud/administering/assets/wf-99.png)
 
@@ -121,7 +121,7 @@ Visar information om arbetsflödeshistoriken.
 
 Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflödet:
 
-1. Använd navigeringsval **verktyg** sedan **Arbetsflöde**.
+1. Använda navigeringsval **verktyg** sedan **Arbetsflöde**.
 
 1. Välj **Fel** för att visa en lista över arbetsflödesinstanser som inte har slutförts korrekt.
 1. Välj ett specifikt objekt och sedan lämplig åtgärd:
@@ -162,7 +162,7 @@ Om du vill konfigurera tjänsten kan du konfigurera OSGi-konfigurationsfilerna p
    <td><p>Status för de arbetsflödesinstanser som ska rensas. Följande värden är giltiga:</p>
     <ul>
      <li>SLUTFÖRT: Slutförda arbetsflödesinstanser rensas.</li>
-     <li>KÖRS: Körande arbetsflödesinstanser rensas.</li>
+     <li>KÖRNING: Körande arbetsflödesinstanser rensas.</li>
     </ul> </td>
   </tr>
   <tr>

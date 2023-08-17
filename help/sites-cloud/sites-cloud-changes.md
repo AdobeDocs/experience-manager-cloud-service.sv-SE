@@ -1,11 +1,11 @@
 ---
 title: Viktiga ändringar av AEM Sites i AEM Cloud Service
-description: Viktiga ändringar av AEM Sites i AEM Cloud Service
+description: Läs mer om betydande förändringar av AEM Sites i AEM Cloud Service
 exl-id: 60b1aec4-75a0-459f-bf77-8d8c1af757ce
-source-git-commit: 8e06dff01e06ced62686a4784619278f29345082
+source-git-commit: d1da8559da856e028a5dcad1d0c0b2c00176af0c
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 15%
+source-wordcount: '537'
+ht-degree: 13%
 
 ---
 
@@ -24,7 +24,6 @@ AEM Sites as a Cloud Service har funktioner för upplevelsehantering som en del 
 >* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 >* [Nu kommer AEM Assets as a Cloud Service](/help/assets/overview.md)
 >* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
-
 
 Ändringarna och tilläggen i AEM Sites as a Cloud Service är följande:
 

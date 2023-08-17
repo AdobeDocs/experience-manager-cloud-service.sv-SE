@@ -1,10 +1,10 @@
 ---
 title: Översikt över leveransflöde
-description: Översikt över leveransflöde
+description: Läs mer om dataflödet för innehållsleverans och hur du publicerar ditt innehåll
 exl-id: fe42fb9e-cdf4-43e1-b688-7cecf4124fa5
-source-git-commit: f0edd0e3deeba89dcbd2dc1a07859138b24e2220
+source-git-commit: d1da8559da856e028a5dcad1d0c0b2c00176af0c
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '217'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 Den aktuella sidan innehåller information om publicering av tjänstinnehåll på AEM as a Cloud Service. Leverans av publiceringstjänstinnehåll inkluderar:
 
 * CDN
-* AEM Dispatcher
+* AEM
 * AEM
 
 Dataflödet är följande:
@@ -31,7 +31,7 @@ Som standard förfaller innehållstypen HTML/text efter 300 sekunder (5 minuter)
 
 I följande avsnitt finns mer information om innehållsleverans:
 * [CDN-konfiguration](/help/implementing/dispatcher/cdn.md)
-* [Cachelagring](/help/implementing/dispatcher/caching.md)
+* [Cachning](/help/implementing/dispatcher/caching.md)
 
 
 Information om replikering från författartjänsten till publiceringstjänsten finns tillgänglig [här](/help/operations/replication.md).

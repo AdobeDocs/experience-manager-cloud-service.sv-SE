@@ -1,10 +1,10 @@
 ---
 title: Åtkomst till KPI:er
-description: Åtkomst till KPI:er
+description: Lär dig hur du får tillgång till nyckeltal och definierar rapporteringsprocessen
 exl-id: 8556e0e3-a557-4fd6-9b82-09cb1decff0a
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: d1da8559da856e028a5dcad1d0c0b2c00176af0c
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '545'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Tänk på följande när du definierar rapporteringsprocessen:
 
 1. Vem riktar sig den här KPI-rapporten till? För varje nyckeltal ska du se till att du har identifierat en chefssponsor - någon som kan hålla dig och resten av teamet ansvariga för mätvärdena - och en större lista över personer som ska få regelbundna rapporter.
 1. Hur ofta rapporterar du om denna KPI?
-1. Hur spåras denna KPI? Vem hämtar in data? Vilka datakällor använder den personen eller teamet? Finns det något du kan göra just nu för att förenkla den processen?
+1. Hur spåras denna KPI? Vem hämtar in data? Vilka datakällor kommer den personen eller teamet att använda? Finns det något du kan göra just nu för att förenkla den processen?
 1. Vilket format kommer rapporten att ha?
 1. Hur kommer rapporten att levereras?
 
