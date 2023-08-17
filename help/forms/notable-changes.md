@@ -1,11 +1,11 @@
 ---
-title: Skillnader mellan AEM 6.5 Forms och AEM Cloud Services
-description: Använder du Experience Manager Forms och vill uppgradera till Adobe Experience Manager Forms as a Cloud Service? Jämför AEM 6.5 Forms och AEM Cloud Services och lär dig de viktigaste ändringarna innan du uppgraderar eller migrerar till Cloud Service.
+title: Skillnader mellan AEM 6.5 Forms och AEM Cloud Service
+description: Använder du Experience Manager Forms och vill uppgradera till Adobe Experience Manager Forms as a Cloud Service? Jämför AEM 6.5 Forms och AEM Cloud Services och lär dig de viktigaste förändringarna innan du uppgraderar eller migrerar till Cloud Service.
 exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
 contentOwner: khsingh
-source-git-commit: 57acac078805bc195cb10c1e94462d5aa077b1af
+source-git-commit: fa71eb6317314dc8c3540cd0ebb8afaa75d55a59
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '1343'
 ht-degree: 0%
 
 ---
@@ -60,11 +60,11 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 
 * **XSD-baserad, adaptiv Forms:** Du kan använda XDP-mall för att utforma en mall för Dokument för post. Tjänsten stöder inte XFA-baserad Adaptive Forms
 
-* **Komponenter**: Du kan använda [Adaptiva Forms Core-komponenter](/help/forms/creating-adaptive-form-core-components.md) för att utforma formulär. Dessa komponenter är baserade på WCM Core Components, följer BEM-standarder och kan enkelt anpassas. Tjänsten stöder inte signering i formulär och inkluderar inte komponenterna Summary och Verify för adaptive Form
+* **Komponenter**: Tjänsten stöder inte signering i formulär och inkluderar inte komponenterna Summary och Verify för Adaptive Form.
+
+* **Guidegränssnitt:** Du kan använda [Guidegränssnitt](/help/forms/creating-adaptive-form-core-components.md) för att snabbt konfigurera de vanligaste alternativen och enkelt skapa ett adaptivt formulär.
 
 ## Forms Portal
-
-* Du kan använda komponenterna Sök och lista, Utkast och överföring samt Länka i Forms Portal för att lista formulär för inloggade användare. Stöd för anonym användning av Forms Portal finns inte tillgängligt direkt. Du kan anpassa Forms Portal för att aktivera visning av formulär för användare som inte är inloggade.
 
 * Tjänsten bevarar inte metadata för utkast och skickade Adaptiv Forms.
 
@@ -85,7 +85,7 @@ Forms as a Cloud Service tillhandahåller RESTful-API:er för dokumentgenerering
 
 ## Dataintegrering (formulärdatamodell)
 
-* Tjänsten ger även stöd för JDBC-anslutning, Microsoft Dynamics, SalesForce, SOAP-baserade webbtjänster och tjänster som stöder OData.
+* Tjänsten ger även stöd för Microsoft Dynamics, SalesForce, SOAP-baserade webbtjänster och tjänster som stöder OData.
 
 * Du kan även ansluta AEM användarprofil för att hämta och uppdatera användarinformation.
 
@@ -96,8 +96,6 @@ Forms as a Cloud Service tillhandahåller RESTful-API:er för dokumentgenerering
 
 ## E-signera
 
-* Tjänsten ger en OOTB-integrering med Adobe Sign och stöder DocuSign för e-signaturer.
-
 * Tjänsten stöder även Adobe Sign roller. Du kan konfigurera rollerna i Adaptiv Forms-redigerare så att företagsanvändare enkelt kan konfigurera signeringsarbetsflöden.
 
 
@@ -105,7 +103,7 @@ Forms as a Cloud Service tillhandahåller RESTful-API:er för dokumentgenerering
 
 * Med en AEM 6.5 Forms-miljö kan du:
 
-   * återge dina XDP-baserade formulär som HTML5 Forms. Tjänsten stöder inte HTML5 Forms (Mobile Forms).
+   * återge dina XDP-baserade formulär som HTML5 Forms. Tjänsten stöder inte HTML5 Forms.
 
    * hämta in data offline och synkronisera dem nästa gång du kommer tillbaka online med [AEM Forms Workspace](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-aem-forms-workspace/introduction-html-workspace.html) app.
 
