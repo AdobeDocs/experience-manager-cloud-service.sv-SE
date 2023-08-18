@@ -1,14 +1,14 @@
 ---
-title: Vattenstämpel för resurserna
-description: Lägg till vattenstämpel i era digitala resurser.
+title: Hur vattenstämplar du dina resurser i AEM?
+description: Lär dig hur du lägger till en digital vattenstämpel till dina resurser i AEM. Vattenstämplar kan hjälpa användare att verifiera autenticitet och upphovsrättsskydd för resurserna.
 contentOwner: AG
 feature: Asset Management,Publishing
 role: User,Admin
 exl-id: 210f8925-bd15-4b4a-8714-5a1486eeb49e
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: d663c258a83473ec8d3c68bc5683955003d889c7
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 7%
+source-wordcount: '304'
+ht-degree: 6%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 7%
 
 Konfigurera [!DNL Experience Manager] till vattenstämpelresurser:
 
-1. En PNG-fil används som en vattenstämpel. Överför den här filen till DAM-databasen.
+1. En PNG-fil används som en vattenstämpel. Överför den här filen till din DAM-databas.
 
 1. Navigera till **[!UICONTROL Tools > Assets > Assets Configurations]**.
 

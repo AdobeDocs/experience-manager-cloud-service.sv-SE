@@ -1,12 +1,12 @@
 ---
-title: Hantera metadata
-description: Hantera metadata för resurser i [!DNL Assets view]
+title: Hur hanterar jag metadata i resursvyn?
+description: Lär dig hur du hanterar metadata i resursvyn. Bättre metadatahantering gör materialet mer tillgängligt, enklare att hantera och komplett.
 role: User,Leader,Admin,Architect,Developer
 contentOwner: AG
 exl-id: cfc105d1-41fc-4418-9905-b2a28a348682
-source-git-commit: e2efffe0192f7914fd97178884b7938b84fd9a27
+source-git-commit: d663c258a83473ec8d3c68bc5683955003d889c7
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -97,9 +97,9 @@ Så här skapar du ett metadataformulär:
 
    ![metadataformulär, alternativ i sidofältet till vänster](assets/metadata-form-new.png)
 
-   *Bild: Gränssnitt för att skapa metadata med alternativ för att lägga till komponenter och möjlighet att förhandsgranska formuläret.*
+   *Bild: Gränssnitt för att skapa metadataformulär med alternativ för att lägga till komponenter och möjlighet att förhandsgranska formuläret.*
 
-1. För varje komponent anger du ett namn i **[!UICONTROL Settings]** Ange en mappning med de egenskaper som stöds i den högra listen.
+1. Ange ett namn i **[!UICONTROL Settings]** Ange en mappning med de egenskaper som stöds i den högra listen.
 1. Om du vill kan du markera **[!UICONTROL Required]** för att göra metadatafältet obligatoriskt och markera **[!UICONTROL Read-Only]** för att göra fältet icke-redigerbart i resursen [!UICONTROL Details] sida.
 1. Om du vill kan du klicka **[!UICONTROL Preview]** om du vill förhandsgranska formuläret som du skapar.
 1. Du kan också lägga till fler flikar och de nödvändiga komponenterna på varje flik.
@@ -127,7 +127,7 @@ Nedan visas en översikt över varje egenskapstyp och hur de lagras.
 | Siffra | Lägg till en sifferkomponent. |
 | Kryssruta | Lägg till ett booleskt värde. Lagras som TRUE eller FALSE när ett värde har sparats. |
 | Datum | Lägg till en datumkomponent. |
-| Nedrullningsbar meny | Lägg till en nedrullningsbar lista. |
+| Nedrullningsbar meny | Lägg till en listruta. |
 | Läge | Lägg till egenskapen för databastillstånd (mappas till repo:state) |
 | Resursstatus | Lägg till standardegenskapen för tillgångsstatus (mappas till dam:assetStatus) |
 | Taggar | Lägg till en tagg från värden som lagras i taxonomihantering (mappas till xcm:tags). |

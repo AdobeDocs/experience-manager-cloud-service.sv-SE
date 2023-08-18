@@ -1,16 +1,16 @@
 ---
-title: Sök efter och hitta resurser i [!DNL Assets view]
-description: Sök efter och hitta resurser i [!DNL Assets view].
+title: Lär dig hur du söker efter och identifierar resurser i [!DNL Assets view]?
+description: Läs om hur du söker efter och identifierar resurser i AEM Assets-vyn. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet.
 role: User
 exl-id: be9597a3-056c-436c-a09e-15a03567c85a
-source-git-commit: ed7ce8be17ad1445132b9aa38a0efa84ffa70fdf
+source-git-commit: d663c258a83473ec8d3c68bc5683955003d889c7
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
 
-# Sök resurser i [!DNL Assets view] {#search-assets}
+# Sök efter resurser i [!DNL Assets view] {#search-assets}
 
 >[!CONTEXTUALHELP]
 >id="assets_search"
@@ -38,15 +38,15 @@ Du kan filtrera sökresultaten baserat på följande parametrar.
 
 *Bild: Filtrera sökningar efter resurser baserat på olika parametrar.*
 
-* Resursstatus: Filtrera sökresultaten med en `Approved`, `Rejected`, eller `No Status` tillgångsstatus.
+* Resursstatus: Filtrera sökresultaten med en `Approved`, `Rejected`, eller `No Status` status.
 
 * Filtyp: Filtrera sökresultaten efter de filtyper som stöds, det vill säga `Images`, `Documents`och `Videos`.
-* MIME-typ: Filtrera efter ett eller flera filformat som stöds. <!-- TBD:  [supported file formats](/help/assets/supported-file-formats-assets-view.md). -->
-* Bildstorlek: Ange en eller flera av de minsta och högsta måtten för att filtrera bilder. Storleken anges i pixeldimensioner och är inte bildens filstorlek.
-* Skapad: Skapandedatumet för resursen enligt metadatan. Standarddatumformatet som används är `yyyy-mm-dd`.
-* Ändringsdatum: Senaste ändringsdatum för resurserna. Standarddatumformatet som används är `yyyy-mm-dd`.
+* MIME-typ: Filtrera efter ett eller flera av de filformat som stöds. <!-- TBD:  [supported file formats](/help/assets/supported-file-formats-assets-view.md). -->
+* Bildstorlek: Ange en av flera av de minsta och högsta måtten för att filtrera bilder. Storleken anges i pixeldimensioner och är inte bildens filstorlek.
+* Skapad: Datum när resursen skapades enligt metadatan. Standarddatumformatet som används är `yyyy-mm-dd`.
+* Ändrad: Senaste ändringsdatum för resurserna. Standarddatumformatet som används är `yyyy-mm-dd`.
 
-* Förfallodatum: Filtrera sökresultaten baserat på en `Expired` tillgångsstatus. Du kan dessutom ange ett förfallodatumintervall för resurser för att ytterligare filtrera sökresultaten.
+* Förfallodatum: Filtrera sökresultaten baserat på en `Expired` status. Du kan dessutom ange ett förfallodatumintervall för resurser för att ytterligare filtrera sökresultaten.
 
 * Egna filter: [Lägga till egna filter](#custom-filters) till användargränssnittet i resursvyn. Använd de anpassade filtren utöver standardfiltren för att förfina sökresultaten.
 

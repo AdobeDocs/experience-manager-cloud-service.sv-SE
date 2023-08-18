@@ -1,10 +1,10 @@
 ---
 title: Hur är det till AEM fördel för det nya användargränssnittet eller resursvyn i AEM Assets?
-description: Läs mer om fördelarna med det nya användargränssnittet i AEM Assets eller den nya resursvyn i AEM
+description: Läs mer om fördelarna med det nya användargränssnittet i AEM Assets eller den nya resursvyn i AEM. Adobe, som utnyttjar sin expertis inom marknadsföring och kreativa yrkesutövare, introducerar en ny omvälvande användarupplevelse.
 mini-toc-levels: 3
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 2c8bac8627ed660d2780f93f4018c8fa980e569a
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
