@@ -2,9 +2,9 @@
 title: GraphQL Persistent Queries - aktivera cachelagring i Dispatcher
 description: Dispatcher är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Du kan aktivera cachelagring för beständiga frågor i AEM Headless.
 feature: Dispatcher, GraphQL API
-source-git-commit: 6f07089812e587834784aeda7e62d3e4614f45a1
+source-git-commit: 0066bfba3a403791c6a35b1280ae04b576315566
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ Cachelagring av beständiga frågor är inte aktiverat som standard i Dispatcher
 >Dispatcher cachelagrar inte `Vary` header.
 >
 >Cachelagring av andra CORS-relaterade rubriker kan aktiveras i Dispatcher, men kan vara otillräcklig om det finns flera CORS-ursprung.
+
+>[!NOTE]
+>
+>Detaljerad dokumentation om Dispatcher finns i [Dispatcher Guide](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
 
 ## Aktivera cachelagring av beständiga frågor {#enable-caching-persisted-queries}
 
