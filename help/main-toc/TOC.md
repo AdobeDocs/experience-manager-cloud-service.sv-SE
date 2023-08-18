@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: d092e68b4f6dbc4f2bcfc45d2e522cfbfa831c0d
+source-git-commit: 316680823fe4bc85e1f4359305047c0d1f517dc7
 workflow-type: tm+mt
-source-wordcount: '4242'
+source-wordcount: '4249'
 ht-degree: 20%
 
 ---
@@ -756,7 +756,8 @@ ht-degree: 20%
       + [Autentisering](/help/headless/security/authentication.md)
    + Distribution {#deployment}
       + [Arkitektur](/help/headless/deployment/architecture.md)
-      + [Dispatcher](/help/headless/deployment/dispatcher.md)
+      + [Dispatcher - slutpunkter](/help/headless/deployment/dispatcher.md)
+      + [Dispatcher - Aktivera cachelagring för beständiga frågor](/help/headless/deployment/dispatcher-caching.md)
       + [CORS-konfiguration](/help/headless/deployment/cross-origin-resource-sharing.md)
       + [Referensfilter](/help/headless/deployment/referrer-filter.md)
    + Huvudlösa resor {#journeys}

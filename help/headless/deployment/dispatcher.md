@@ -1,16 +1,17 @@
 ---
-title: Dispatcher-konfiguration med AEM Headless
+title: Sändningsslutpunktskonfiguration med AEM Headless
 description: Dispatcher är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Flera konfigurationer används för att öppna GraphQL-slutpunkter till headless-program.
 feature: Dispatcher, GraphQL API
 exl-id: 78a20021-910f-4cf0-87bf-6e2223994f76
-source-git-commit: f0edd0e3deeba89dcbd2dc1a07859138b24e2220
+source-git-commit: 316680823fe4bc85e1f4359305047c0d1f517dc7
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
-# Dispatcher-konfiguration med AEM Headless
+
+# Dispatcher - slutpunktskonfiguration med AEM Headless
 
 The [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Flera konfigurationer ingår som standard för att öppna GraphQL-slutpunkter för headless-program.
 
@@ -18,7 +19,7 @@ The [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-disp
 >
 >Detaljerad dokumentation om Dispatcher finns i [Dispatcher Guide](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
 
-Som en del av ett AEM-projekt ingår en Dispatcher-modul som innehåller konfigurationer för Dispatcher. Nyligen genererade projekt från [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) inkluderar automatiskt [filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?#defining-a-filter) som aktiverar slutpunkter för GraphQL.
+Som en del av ett AEM-projekt ingår en Dispatcher-modul som innehåller konfigurationer för Dispatcher. Nyligen genererade projekt från [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) inkluderar automatiskt [filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?#defining-a-filter) som aktiverar slutpunkter för GraphQL.
 
 ## GraphQL Endpoints
 
