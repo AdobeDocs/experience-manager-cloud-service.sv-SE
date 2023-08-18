@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 25af1b0d99f7c5971245f99a95c74d04ca943936
+source-git-commit: 6e491a68dedc55609349db75ac13691aeda2f0dc
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 130
 
 - SITES-15359: Content Fragments - Variantnamnsmönstret matchar inte varianter som har ```'_'``` i sina resursnamn.
 - SITES-15463: Sites Templates - Templates kan inte publiceras (tillfällig lösning: använd distributionskonsolen).
+- FORMS-10444: Adaptiva Forms-mallar - mallar kan inte publiceras (tillfällig lösning: använd distributionskonsolen).
 - CQ-4354191: Arbetsflöden - Anpassad startfunktion kan utlösas många gånger på grund av replikeringsmetadata som finns på nod:ostrukturerade noder (tillfällig lösning: startprogram för uppdatering som exkluderar egenskaper för replikeringsmetadata för att undvika överlappning).
 
 ### Inbäddade tekniker {#embedded-tech-13099}
