@@ -2,7 +2,7 @@
 title: Testning av Experience Audit
 description: Läs om hur Experience Audit validerar er distributionsprocess och ser till att de ändringar som driftsätts uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 exl-id: 8d31bc9c-d38d-4d5b-b2ae-b758e02b7073
-source-git-commit: e9f205a506fb2d2b7f5e634b353b112bf077058a
+source-git-commit: 9f305e1127957fdba6dae978da4ac5fce4d3a776
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Experience Audit drivs av Google Lightroom, ett verktyg med öppen källkod frå
 
 >[!INFO]
 >
->Från och med den 28 augusti 2023 kommer Experience Audit att gå över till att visa resultat som är specifika för mobilplattformen. Observera att mobilprestandamätningar vanligtvis registrerar lägre värden än de på stationära datorer, så förutse en förändring i rapporterade prestanda efter den här ändringen.
+>Från och med 31 augusti 2023 kommer Experience Audit att gå över till att visa resultat som är specifika för den mobila plattformen. Observera att mobilprestandamätningar vanligtvis registrerar lägre värden än de på stationära datorer, så förutse en förändring i rapporterade prestanda efter den här ändringen.
 
 >[!TIP]
 >
