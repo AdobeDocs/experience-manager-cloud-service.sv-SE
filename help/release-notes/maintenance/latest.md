@@ -2,7 +2,7 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 64d88b9af48f1c5736ef668ae00fb29e9bfad9f7
+source-git-commit: e78410a1ce229db0dd3529bf544f694e97bfff46
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 0%
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 ## Utgåva 13206 {#release-13206}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 13206, som offentliggjordes den 22 augusti 2023. Den här underhållsversionen ersätter utgåvorna 13173 och 13099 för att åtgärda ett problem som påverkar inkorgsfunktionen.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 13206, som offentliggjordes den 21 augusti 2023. Den här underhållsversionen ersätter utgåvorna 13173 och 13099 för att åtgärda ett problem som påverkar inkorgsfunktionen.
 
 2023.8.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
