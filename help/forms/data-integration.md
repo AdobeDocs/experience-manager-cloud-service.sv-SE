@@ -1,16 +1,14 @@
 ---
-title: Ansluta en databas till [!DNL AEM Forms] as a Cloud Service?
-seo-title: AEM Forms Data Integration
+title: Ansluta AEM Forms till en databas
 description: Du kan hämta och spara data till en RESTful-webbtjänst, SOAP-baserade webbtjänster och OData-tjänster från [!DNL AEM Forms] as a Cloud Service. Tjänsten tillhandahåller ett dedikerat verktyg för att hämta, testa, validera och skicka data till olika typer av datakällor.
-exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
 
-# Koppla datakällor till Cloud Service {#aem-forms-data-integration}
+# Ansluta AEM Forms till en databas {#aem-forms-data-integration}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |

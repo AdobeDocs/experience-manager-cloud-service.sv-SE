@@ -1,6 +1,5 @@
 ---
-title: Använda AEM översättningsarbetsflöde för att lokalisera adaptiv Forms och arkivdokument
-seo-title: Using AEM translation workflow to localize Adaptive Forms and Document of Record
+title: Lokalisera anpassningsbara Forms och arkivdokument
 description: Lär dig använda AEM översättningsarbetsflöden för att lokalisera adaptiv Forms och arkivdokument.
 seo-description: Learn to use AEM translation workflows to localize Adaptive Forms and Document of Record.
 uuid: 6c87a283-0203-4cf7-989a-3770ddbbbd6e
@@ -8,15 +7,15 @@ content-type: reference
 topic-tags: develop
 discoiquuid: f5642571-9657-4ca1-93c5-4ae2eb91e967
 noindex: true
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
 
 
-# Använda AEM översättningsarbetsflöde för att lokalisera adaptiv Forms och arkivdokument {#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
+# Lokalisera anpassningsbara Forms och arkivdokument{#using-aem-translation-workflow-to-localize-adaptive-forms-and-document-of-record}
 
 Lokaliserade formulär hjälper er att nå en större publik över alla länder. Adobe Experience Manager arbetsflöde för översättning hjälper dig att lokalisera adaptiva Forms och deras urkunder. Du kan använda **maskinöversättning** eller **mänskliga översättare** för att lokalisera ett adaptivt formulär.
 

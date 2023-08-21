@@ -1,19 +1,18 @@
 ---
-title: Skapa och hantera granskningar av Adaptive Forms som är inbäddade eller skapade på webbplatssidan
-seo-title: Review is a mechanism that allows reviewer to perform different tasks for adaptive forms using Assign Task step
+title: Skapa och hantera granskningar för ett adaptivt formulär
 description: Granskning är en mekanism som gör att granskare kan utföra olika uppgifter för adaptiva formulär med steget Tilldela uppgift
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: daeb407e27b9f1d390fe40151ca16ec0196712e6
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
 
-# Granska steg för Forms på webbplatsens sida {#review-step-forms-aem-sites-page}
+# Skapa och hantera granskningar för ett adaptivt formulär {#review-step-forms-aem-sites-page}
 
 Använda [Tilldela steg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference.html#assign-task-step) AEM av arbetsflödet granskar granskaren det inskickade formuläret och utför en åtgärd på det. Följ de här stegen för att granska det skickade formuläret i steget Tilldela:
 
@@ -34,7 +33,7 @@ Använda [Tilldela steg](https://experienceleague.adobe.com/docs/experience-mana
 
    ![Granskningssteg](/help/forms/assets/assigntask-review1.gif)
 
-1. Öppna **[!UICONTROL Assignee]** flik och öppna [!UICONTROL Pre-populated] nedrullningsbar meny och ange **[!UICONTROL Assign  options]**:
+1. Öppna **[!UICONTROL Assignee]** flik och öppna [!UICONTROL Pre-populated] listruta och ange **[!UICONTROL Assign  options]**:
 
    ![Granskningssteg](/help/forms/assets/review-assignstep.png)
 
@@ -46,7 +45,7 @@ Konfigurera nu åtgärden Skicka för en komponent med adaptiv formulärbehålla
 
 1. Gå till webbplatsens sida.
 1. Tryck ![settings_icon](assets/settings_icon.png) för en adaptiv formulärbehållare. The **[!UICONTROL Adaptive Form Container]** öppnas.
-1. Öppna **[!UICONTROL Submission]** och ange **[!UICONTROL Submit Action]** till [Anropa ett AEM arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#invoke-an-aem-workflow)
+1. Öppna **[!UICONTROL Submission]** -flik och ange **[!UICONTROL Submit Action]** till [Anropa ett AEM arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#invoke-an-aem-workflow)
 
 1. Klicka [Klar] för att spara inställningarna.
 
@@ -57,7 +56,7 @@ Konfigurera nu åtgärden Skicka för en komponent med adaptiv formulärbehålla
 Så här granskar och bekräftar du det inskickade adaptiva formuläret:
 
 1. Gå till [!UICONTROL Tools] >  [!UICONTROL Workflow] >  [!UICONTROL Instances]
-1. I Inkorgen ser du att en instans skapas.
+1. I Inkorgen ser du att en instans håller på att skapas.
 1. Markera instansen och klicka på [!UICONTROL Open].
 1. Nu kan du se det inskickade formuläret.
 

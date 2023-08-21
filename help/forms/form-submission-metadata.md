@@ -1,18 +1,18 @@
 ---
-title: Hur lägger man till information från användardata i metadata för inskickning av formulär?
+title: Lägg till information från användardata till metadata för formuläröverföring
 description: Lär dig hur du lägger till information i metadata för ett skickat formulär med användardata. Lär dig mer om hur du visar uppdaterade metadata för inlämning av formulär i CRX-databasen.
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
 
 
-# Lägga till information från användardata i metadata för att skicka formulär {#adding-information-from-user-data-to-form-submission-metadata}
+# Lägg till information från användardata i metadata för att skicka formulär {#adding-information-from-user-data-to-form-submission-metadata}
 
 Du kan använda värden som anges i ett element i formuläret för att beräkna metadatafält för ett utkast eller en formulärsändning. Med metadata kan du filtrera innehåll baserat på användardata. En användare skriver till exempel John Doe i namnfältet i ditt formulär. Du kan använda den här informationen för att beräkna metadata som kan kategorisera överföringen under den initiala JD:n.
 
@@ -61,4 +61,4 @@ Du väljer Adaptiv formulärbehållare och i formuläregenskaperna lägger du ti
 
 >[!NOTE]
 >
->Exemplet ovan är endast avsett för inlärning. Kontrollera att du söker efter metadata på rätt plats som konfigurerats i [!DNL Experience Manager Forms] implementering.
+>Exemplet ovan är endast avsett för inlärning. Kontrollera att du söker efter metadata på rätt plats som konfigurerats i din [!DNL Experience Manager Forms] implementering.

@@ -1,15 +1,14 @@
 ---
-title: Konfigurera en [!DNL AEM Forms] as a Cloud Service miljö?
+title: Anmäl dig till AEM Forms as a Cloud Service
 description: Lär dig konfigurera och konfigurera [!DNL AEM Forms] as a Cloud Service miljö
-exl-id: 42f53662-fbcf-4676-9859-bf187ee9e4af
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '623'
 ht-degree: 1%
 
 ---
 
-# Anmäl dig till [!DNL AEM Forms] as a Cloud Service {#overview}
+# Anlita till [!DNL AEM Forms] as a Cloud Service {#overview}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -23,13 +22,13 @@ ht-degree: 1%
 
 * **UX-designer (User Experience)**: En UX-designer (User Experience) definierar stil, layout och varumärke för [!DNL AEM Forms] resurser.
 
-* **Forms**: En Forms-designer skapar adaptiva Forms, teman och mallar utifrån den stil, layout och det varumärke som UX-designern ger. Användaren skapar också och integrerar adaptiva formulär med en formulärdatamodell och AEM arbetsflöden. En Forms-deltagare utför vanligtvis kundrelaterade uppgifter.
+* **Forms-läkare**: En Forms-designer skapar adaptiva Forms, teman och mallar utifrån den stil, layout och det varumärke som UX-designern ger. Användaren skapar också och integrerar adaptiva formulär med en formulärdatamodell och AEM arbetsflöden. En Forms-deltagare utför vanligtvis kundrelaterade uppgifter.
 
 * **Forms-utvecklare**: En Forms-utvecklare utvecklar en skräddarsydd blankettlösning.  En Forms-utvecklare utför vanligtvis backend-utveckling som utveckling av anpassade komponenter, AEM arbetsflöden, förifyllda tjänster med mera.
 
-* **AEM**: En AEM administratör hjälper till med den övergripande konfigurationen, som att konfigurera användare, göra miljön mer avancerad, konfigurera datakällor, konfigurera e-post och tredjepartsprogram. AEM kan också hjälpa till med integreringar som integrering med Adobe Analytics, Adobe Target och Adobe Sign.
+* **AEM**: En AEM administratör hjälper till med den övergripande konfigurationen, som att konfigurera användare, göra miljön skarpare, konfigurera datakällor, konfigurera e-post och tredjepartsprogram. AEM kan också hjälpa till med integreringar som integrering med Adobe Analytics, Adobe Target och Adobe Sign.
 
-* **Slutanvändare**: Användarna interagerar med och skickar in det publicerade formuläret, signerar inskickade formulär, spårar inskickade ansökningar via webbportalen och får personliga meddelanden.
+* **Slutanvändare**: Slutanvändaren interagerar med och skickar det publicerade formuläret, signerar skickade formulär, spårar skickade ansökningar via webbportalen och får personligt anpassad kommunikation.
 
 <!-- While onboarding to the service, assign the following AEM groups to [!DNL AEM Forms] as a Cloud Service based on their role:
 

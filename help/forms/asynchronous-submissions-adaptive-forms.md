@@ -1,18 +1,17 @@
 ---
-title: Hur konfigurerar man asynkron insändning för Adaptiv Forms?
+title: Konfigurera asynkron sändning av AEM Adaptiv Forms
 description: Lär dig hur du konfigurerar asynkron överföring för Adaptive Forms. Läs mer om hur asynkron inlämning fungerar för Adaptive Forms.
 feature: Adaptive Forms
 role: User
 level: Intermediate
-exl-id: 026f4920-f8f9-4b08-b1b0-af50229633d7
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
 
-# Asynkron inlämning av adaptiv Forms {#asynchronous-submission-of-adaptive-forms}
+# Konfigurera asynkron sändning av AEM Adaptiv Forms {#asynchronous-submission-of-adaptive-forms}
 
 
 | Version | Artikellänk |
@@ -21,7 +20,7 @@ ht-degree: 0%
 | AEM as a Cloud Service | Den här artikeln |
 
 
-Som standard är webbformulär konfigurerade att skicka synkront. När användare skickar ett formulär omdirigeras de i synkront skick till en bekräftelsesida, en tacksida eller en felsida om det uppstår ett överföringsfel. Moderna webbupplevelser som single page-applikationer blir dock allt populärare där webbsidan är statisk medan klient-server-interaktion sker i bakgrunden. Du kan konfigurera asynkron sändning för att ge den här upplevelsen med Adaptive Forms.
+Som standard är webbformulär konfigurerade att skicka synkront. När användare skickar ett formulär omdirigeras de i synkront skick till en bekräftelsesida, en tacksida eller en felsida om det uppstår ett överföringsfel. Moderna webbupplevelser som single page-applikationer blir dock allt populärare, där webbsidan är statisk medan klient-server-interaktion sker i bakgrunden. Du kan konfigurera asynkron sändning för att ge den här upplevelsen med Adaptive Forms.
 
 När en användare skickar in ett formulär i asynkron form plugin-program för formulärutvecklare, som omdirigering till ett annat formulär eller till ett separat avsnitt på webbplatsen. Författaren kan också plugin-program för olika tjänster, som att skicka data till ett annat datalager eller lägga till en anpassad analysmotor. Om formuläret skickas asynkront fungerar ett adaptivt formulär som ett program med en sida, eftersom det inte läses in igen eller dess URL inte ändras när skickade formulärdata valideras på servern.
 
@@ -36,7 +35,7 @@ Så här konfigurerar du asynkron överföring för ett adaptivt formulär:
 1. I **[!UICONTROL On Submit]** väljer du något av följande alternativ när formuläret har skickats.
 
    * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL-adress eller bläddra för att välja sökvägen till en sida i dialogrutan **[!UICONTROL Redirect URL/Path]** fält.
-   * **[!UICONTROL Show Message]**: Visar ett meddelande om att formulär har skickats. Du kan skriva ett meddelande i textfältet under **[!UICONTROL Show Message]** alternativ. Textfältet har stöd för RTF-formatering.
+   * **[!UICONTROL Show Message]**: Visar ett meddelande när formulär skickas. Du kan skriva ett meddelande i textfältet under **[!UICONTROL Show Message]** alternativ. Textfältet har stöd för RTF-formatering.
 
 1. Tryck ![check-button1](assets/save_icon.svg) för att spara egenskaperna.
 
@@ -106,11 +105,11 @@ Felhanteraren läser serversvaret och visar därför felmeddelandet i formuläre
 
 Formulärutvecklare och författare kan skriva regler på formulärnivå för att åsidosätta standardhanterare. Serversvaret för lyckade händelser och felhändelser visas på formulärnivå, som utvecklare kan komma åt med `$event.data` i regler.
 
-Utför följande steg för att skriva regler för att hantera lyckade och felhändelser.
+Utför följande steg för att skriva regler för att hantera lyckade och felade händelser.
 
 1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och tryck på ![edit-rules1](assets/edit-rules-icon.svg) för att öppna regelredigeraren.
 1. Välj **[!UICONTROL Form]** i trädet Formulärobjekt och tryck på **[!UICONTROL Create]**.
-1. Välj **[!UICONTROL is submitted successfully]** eller **[!UICONTROL submission fails]** från **[!UICONTROL Select state]** nedrullningsbar lista.
+1. Välj **[!UICONTROL is submitted successfully]** eller **[!UICONTROL submission fails]** från **[!UICONTROL Select state]** listruta.
 1. Definiera en **[!UICONTROL Then]** åtgärd för det markerade läget. Välj till exempel **[!UICONTROL Navigate To]** och skriv eller klistra in en URL. Du kan också dra valfri funktion med **[!UICONTROL Functions]** till regeln.
 
    ![hanterare för skickad överföring](assets/form-submission-handler.png)

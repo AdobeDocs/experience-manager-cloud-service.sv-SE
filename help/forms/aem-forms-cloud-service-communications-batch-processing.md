@@ -1,15 +1,15 @@
 ---
-title: Experience Manager [!DNL Forms] Batchbearbetning av as a Cloud Service Communications
+title: Batchbearbetning av AEM Forms as a Cloud Service Communications
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1698'
 ht-degree: 0%
 
 ---
 
-# Använd batchbearbetning
+# Batchbearbetning av AEM Forms as a Cloud Service Communications
 
 Med kommunikation kan ni skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation som affärskontakter, dokument, kontoutdrag, kravbrev, förmånsbesked, kravbrev, månatliga räkningar och välkomstpaket. Du kan använda API:er för kommunikation för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i formaten PDF, PS, PCL, DPL, IPL och ZPL.
 

@@ -1,18 +1,16 @@
 ---
-title: Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser
-seo-title: Learn to import, export, and organize Adaptive Forms, PDF forms, and other assets on an[!DNL AEM Forms] instance
+title: Importera eller exportera anpassningsbara Forms- och AEM Forms-resurser
 description: Funderar du på att migrera adaptiva Forms och resurser till och från AEM? Lär dig hur du importerar och exporterar adaptiva Forms, PDF forms, teman och andra stödresurser från en [!DNL AEM Forms] -instans.
 seo-description: Looking to migrate Adaptive Forms and assets to and from an AEM instances? Learn here how to import and export Adaptive Forms, PDF forms, themes, and other supporting assets from an [!DNL AEM Forms] instance.
 topic-tags: forms-manager
-exl-id: f5105fb7-b8c0-4656-8095-b21d392746c0
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1139'
 ht-degree: 1%
 
 ---
 
-# Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser{#importing-and-exporting-assets-to-aem-forms}
+# Importera eller exportera anpassningsbara Forms- och AEM Forms-resurser {#importing-and-exporting-assets-to-aem-forms}
 
 Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodeller, adaptiva formulärmallar, dokumentfragment och PDF forms mellan [!DNL AEM Forms] -instanser. Du kan importera och exportera resurser i CRX-paket eller binära filformat.
 

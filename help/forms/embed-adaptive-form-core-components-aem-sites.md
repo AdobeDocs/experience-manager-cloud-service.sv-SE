@@ -1,14 +1,12 @@
 ---
-title: Lägga till eller skapa ett adaptivt formulär (kärnkomponenter) på AEM Sites-sidan
-seo-title: How to add or create an Adaptive Form (Core Components) to an AEM Sites page?
+title: Skapa eller lägga till ett adaptivt formulär med AEM Sites Editor
 description: Du kan använda Adaptiv form (Core Components) på en AEM Sites-sida för att fylla i och skicka ett formulär utan att lämna AEM Sites sidor.
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-exl-id: 1046231f-787c-4e49-9ba0-e7dd59e41bce
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2010'
 ht-degree: 0%
 
 ---

@@ -1,16 +1,9 @@
 ---
 title: Använda elektroniska signaturer i ett formulär med hjälp av klottersignaturer
-seo-title: Apply electronic signatures to a form using scribble signatures
 description: Signera formulär med klottrar
 seo-description: Signing forms using scribble
-uuid: ffeba886-9b24-4ed1-95c0-e19356ff2f23
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-discoiquuid: 76d178d1-8e40-41b3-80d4-66b2f8d04211
-docset: aem65
-google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-exl-id: dc89ecb1-2d9e-4d1d-b85b-af90c550e7d8
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: b2c8e739c4e1c5289ca263360f4f59b8a2c05f5b
 workflow-type: tm+mt
 source-wordcount: '719'
 ht-degree: 0%
@@ -19,7 +12,7 @@ ht-degree: 0%
 
 # Använda elektroniska signaturer i ett formulär med hjälp av klottersignaturer{#apply-electronic-signatures-to-a-form-using-deprecated-scribble-signatures}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -31,20 +24,20 @@ Du kan använda **Klottersignatur** komponenter och **Signatursteg** -komponent 
 
 ![Dialogrutan Klottra signering](assets/scribble-signature.png)
 
-## Olika alternativ i signaturfönstret
+## Olika alternativ finns i signaturfönstret
 
 * **S:** Klicka på **Målarpensel** för att rita din signatur på arbetsytan.
 * **B:** Klicka på **Rensa** -ikonen för att rensa signaturen på arbetsytan.
 * **C:** Klicka på **Geolokalisering** -ikon för att lägga till geopositionering tillsammans med signaturen.
 * **D:** Klicka på **Tangentbord** om du vill skriva ditt namn på arbetsytan.
 
-När du har tryckt på Klar ![aem_forms_save](assets/aem_forms_save.png) -ikonen i fönstret Klottsignatur kan du inte redigera signaturen. Om du vill redigera signaturen måste du bortse från den aktuella signaturen och signera igen med alternativet Målningspensel/Tangentbord ovan.
+När du trycker på Klart ![aem_forms_save](assets/aem_forms_save.png) -ikonen i fönstret Klottsignatur kan du inte redigera signaturen. Om du vill redigera signaturen måste du bortse från den aktuella signaturen och signera igen med alternativet Målningspensel/Tangentbord ovan.
 
 Du kan trycka på **Konfigurera** ![konfigurera ikon](assets/configure.png) -ikonen för att ange proportioner för arbetsytan Skrivbar signatur.
 * När proportionerna för arbetsytan Klottra signatur är mindre än 1 läggs platsinformationen till längst ned på arbetsytan Klottra signatur.
 
 
-* När proportionerna för arbetsytan Klottra signatur är större än 1 läggs platsinformationen till till höger på arbetsytan Klottra signatur.
+* När proportionerna för arbetsytan Klottra signatur är större än 1 läggs geopositioneringsinformationen till till höger på arbetsytan Klottra signatur.
 
 
 ![klottra signature-bottom](assets/scribble-signature-aspectratio.PNG)
@@ -60,20 +53,20 @@ Du kan trycka på **Konfigurera** ![konfigurera ikon](assets/configure.png) -iko
 
 1. Alternativet Skapa ett postdokument aktiverat eller formulärmallsbaserat anpassat formulär. Stegvisa instruktioner finns i [Skapa ett adaptivt formulär](creating-adaptive-form.md).
 1. Dra och släpp **Klottersignatur** från komponentwebbläsaren till det adaptiva formuläret.
-1. Tryck på **Konfigurera** ![konfigurera](assets/configure.png) ikon. Egenskaper öppnas i webbläsaren och egenskaper för komponenten Skriptsignatur visas. Konfigurera egenskaper för komponenten Scribble Signature.
+1. Tryck på **Konfigurera** ![konfigurera](assets/configure.png) -ikon. Egenskaper öppnas i webbläsaren och egenskaper för komponenten Skriptsignatur visas. Konfigurera egenskaper för komponenten Scribble Signature.
 1. Dra och släpp signaturstegskomponenten från komponentwebbläsaren till det adaptiva formuläret.
 
    >[!NOTE]
    >
    >Komponenten Signatursteg får full bredd som är tillgänglig för formuläret. Vi rekommenderar att du inte har någon annan komponent i avsnittet som innehåller komponenten Signatursteg.
 
-1. Tryck på **Formulärbehållare** och trycker på **Konfigurera** ![konfigurera ikon](assets/configure.png) ikon. Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas. Navigera till **Adaptiv formulärbehållare** > **Elektronisk signatur** och avmarkera **Aktivera Adobe Sign** alternativ. Tryck på Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna.
+1. Tryck på **Formulärbehållare** och trycker på **Konfigurera** ![konfigurera ikon](assets/configure.png) -ikon. Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas. Navigera till **Adaptiv formulärbehållare** > **Elektronisk signatur** och avmarkera **Aktivera Adobe Sign** alternativ. Tryck på Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna.
 
    >[!NOTE]
    >
    >När du lägger till en komponent för signatursteg i ett anpassat formulär markeras alternativet Aktivera Adobe Sign automatiskt.
 
-1. Tryck på **Konfigurera** ![konfigurera](assets/configure.png) ikon. Egenskaper öppnas i webbläsaren och egenskaper för signatursteg visas. Konfigurera följande egenskaper:
+1. Tryck på **Konfigurera** ![konfigurera](assets/configure.png) -ikon. Egenskaper öppnas i webbläsaren och egenskaper för signatursteg visas. Konfigurera följande egenskaper:
 
    * **Elementnamn**: Ange komponentens namn.
 
@@ -81,7 +74,7 @@ Du kan trycka på **Konfigurera** ![konfigurera ikon](assets/configure.png) -iko
    * **Mallmeddelande:** Ange meddelandet som ska visas medan signaturen PDF läses in. Adobe Sign tjänster tar lite tid att förbereda och läsa in signaturen PDF.
    * **Underteckningstjänst:** Välj **Klottersignatur** alternativ.
 
-   * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om det finns någon. Det rekommenderas att använda [teman](themes.md) och [infogade format](inline-style-adaptive-forms.md) i stället för CSS-klassen.
+   * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om sådan finns. Det rekommenderas att använda [teman](themes.md) och [infogade format](inline-style-adaptive-forms.md) i stället för CSS-klassen.
 
    Tryck på Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna. Signaturen har konfigurerats.
 

@@ -1,18 +1,18 @@
 ---
-title: Använd Google reCAPTCHA i ett adaptivt format baserat på kärnkomponenter
+title: Använd Google reCAPTCHA i en AEM anpassad form
 description: Förbättra säkerheten med Google reCAPTCHA-tjänsten utan problem. Stegvisa anvisningar inifrån!
 topic-tags: Adaptive Forms, author
 hide: true
 hidefromtoc: true
 Keywords: Google reCAPTCHA service, Adaptive Forms, CAPTCHA challenge, Bot prevention, Core Components, Form submission security, Form spam prevention
-source-git-commit: b81acc99b1d90b05b7c341253e7cbb46c6ea12ae
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
 
-# Använd reCAPTCHA i adaptiv Forms baserat på kärnkomponenter {#using-reCAPTCHA-in-adaptive-forms}
+# Använd Google reCAPTCHA i en AEM anpassad form {#using-reCAPTCHA-in-adaptive-forms}
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 

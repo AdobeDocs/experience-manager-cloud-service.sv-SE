@@ -1,15 +1,15 @@
 ---
-title: En introduktion till Forms as a Cloud Service Communications
+title: Introduktion till Forms as a Cloud Service Communications
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 2%
 
 ---
 
-# Använd AEM Forms as a Cloud Service Communications {#frequently-asked-questions}
+# Introduktion till AEM Forms as a Cloud Service Communications {#frequently-asked-questions}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |

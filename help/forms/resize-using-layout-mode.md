@@ -1,18 +1,18 @@
 ---
-title: Hur använder man layoutläget för att ändra storlek på komponenter för adaptiva Forms?
+title: Använd layoutläget för att ändra storlek på komponenter för adaptiva Forms
 description: Definiera placeringen av komponenterna med det responsiva stödrastret som finns i layoutläget. Lär dig hur du kommer åt layoutläget, ändrar storlek på komponenter, ändrar storlek på paneler, definierar layout med flera kolumner för en panel, aktiverar det nya responsiva rutnätet för äldre responsiva layouter och inaktiverar layoutläget för formulär med äldre responsiv layout.
 feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 53896a8e-4568-460b-bca7-994baea0c8eb
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
 
-# Använd layoutläget för att ändra storlek på komponenter {#use-layout-mode-to-resize-components}
+# Använd layoutläget för att ändra storlek på komponenter för adaptiv Forms {#use-layout-mode-to-resize-components}
 
 <span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
