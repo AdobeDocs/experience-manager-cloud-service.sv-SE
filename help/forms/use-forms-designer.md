@@ -1,15 +1,15 @@
 ---
-title: Skapa DOR-mallar och formulärfragment med Forms Designer
+title: Använd AEM Forms Designer
 description: Använd [!DNL AEM Forms] designer för att skapa dokumentmallar.
 exl-id: 88a95374-620c-45a9-ae94-2043b542fd62
-source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
+source-git-commit: 755bab29e7b6c49540dee47d6bec13e9421bfc43
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
 
-# Använd Forms Designer för att skapa DoR-mallar (Document of Record) och formulärfragment {#install-designer}
+# Använd AEM Forms Designer {#install-designer}
 
 Designer är ett grafiskt formulärdesignverktyg som gör det enklare att skapa XDP-formulärmallar. Du kan utforma en formulärmall, definiera dess logik och uppfylla strikta lagstadgade krav. De här mallarna används som dokumentmall för ett anpassat formulär. Dessa formulärmallar skiljer sig från [Adaptiva formulärmallar](template-editor.md).
 
