@@ -2,14 +2,17 @@
 title: Använda reCAPTCHA i Adaptive Forms
 description: Lär dig hur du konfigurerar tjänsten Google reCAPTCHA i Adaptive Forms.
 topic-tags: adaptive_forms, author
-source-git-commit: b4665d0291ee1223e46c8ecf13ca13ea336107d3
+source-git-commit: ad63083016f0f8c51ea336e37461562e61c02a8f
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1852'
 ht-degree: 0%
 
 ---
 
 # Använd reCAPTCHA i Adaptiv Forms{#using-reCAPTCHA-in-adaptive-forms}
+
+<span class="preview"> Det här är en förhandsversion som du kommer åt via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -81,7 +84,7 @@ När du har aktiverat tjänsten reCAPTCHA Enterprise kan den användas i anpassn
 
 1. Konfigurera molntjänsten för reCAPTCHA v2.
 
-   1. Gå till AEM ![verktyg-1](assets/tools-1.png) > **Cloud Services**.
+   1. Gå till AEM ![verktyg-1](assets/tools-1.png) > **Cloud Service**.
    1. Tryck på **[!UICONTROL reCAPTCHA]**. Sidan Konfigurationer öppnas. Välj den konfigurationsbehållare som du skapade och tryck på **[!UICONTROL Create]**.
    1. Välj version som [!DNL reCAPTCHA v2] anger du Namn, Webbplatsnyckel och Hemlig nyckel för tjänsten reCAPTCHA (hämtas i steg 1) och trycker på **[!UICONTROL Create]** för att skapa molntjänstkonfigurationen.
    1. I dialogrutan Redigera komponent anger du platsen och de hemliga nycklarna som fås i steg 1. Tryck **[!UICONTROL Save Settings]** och sedan trycka **OK** för att slutföra konfigurationen.
