@@ -4,7 +4,7 @@ description: Använd resursväljaren för att söka efter, hitta och hämta resu
 contentOwner: Adobe
 role: Admin,User
 exl-id: b968f63d-99df-4ec6-a9c9-ddb77610e258
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: dd923ae9d63f1ca1379d8e177ff7b00648da052a
 workflow-type: tm+mt
 source-wordcount: '2361'
 ht-degree: 0%
@@ -44,6 +44,7 @@ Utför följande uppgifter för att integrera och använda resursväljaren med [
 Du kan integrera alla [!DNL Adobe] eller program som inte är Adobe med [!DNL Experience Manager Assets] som [!DNL Cloud Service] arkivera och välja resurser inifrån programmet.
 
 Integreringen görs genom att importera resursväljarpaketet och ansluta till Assets-as a Cloud Service med hjälp av Vanilla JavaScript-biblioteket. Du måste redigera en `index.html` eller en lämplig fil i programmet till -
+
 * Definiera autentiseringsinformationen
 * Åtkomst till den as a Cloud Service resurskatalogen
 * Konfigurera visningsegenskaperna för resursväljaren
@@ -73,6 +74,7 @@ You can use properties such as `imsScope` or `imsClientID` to retrieve `imsToken
 -->
 
 Definiera förutsättningarna i `index.html` -filen eller en liknande fil i programimplementeringen för att definiera autentiseringsinformationen för att komma åt [!DNL Experience Manager Assets] som [!DNL Cloud Service] databas. Förutsättningarna är följande:
+
 * imsOrg
 * imsToken
 * apikey
@@ -105,7 +107,7 @@ Resursväljare är tillgängliga via både ESM CDN (till exempel [esm.sh](https:
 I webbläsare som använder **UMD-version** (rekommenderas):
 
 ```
-<script src="https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/assets-selectors.js"></script>
+<script src="https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/assets-selectors.js"></script>
 
 <script>
   const { renderAssetSelector } = PureJSSelectors;
@@ -116,14 +118,14 @@ I webbläsare med `import maps` support med **ESM CDN-version**:
 
 ```
 <script type="module">
-  import { AssetSelector } from 'https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/@assets/selectors/index.js'
+  import { AssetSelector } from 'https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/@assets/selectors/index.js'
 </script>
 ```
 
 I Deno/Webpack Module Federation med **ESM CDN-version**:
 
 ```
-import { AssetSelector } from 'https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/@assets/selectors/index.js'
+import { AssetSelector } from 'https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/@assets/selectors/index.js'
 ```
 
 ### Markerad resurstyp {#selected-asset-type}
@@ -526,7 +528,7 @@ Resursväljaren innehåller även färdiga filteralternativ som kan förfina sö
 * `MIME type`: omfattar JPG, GIF, PPTX, PNG, MP4, DOCX, TIFF, PDF, XLSX
 * `Image Size`: innehåller minsta/högsta bredd, minsta/högsta höjd för bilden
 
-![rail-view-example](assets/filters-asset-selector.png)
+  ![rail-view-example](assets/filters-asset-selector.png)
 
 ### Anpassad sökning
 
