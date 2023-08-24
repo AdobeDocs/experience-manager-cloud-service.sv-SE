@@ -3,9 +3,9 @@ title: Konfigurera en Skicka-åtgärd för ett anpassat formulär
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 hide: true
 hidefromtoc: true
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: be57fe6c54f2ee07378e16bae601500f71e7ce6b
 workflow-type: tm+mt
-source-wordcount: '3189'
+source-wordcount: '3399'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,7 @@ Så här väljer och konfigurerar du en Skicka-åtgärd för formuläret:
    * [Skicka till REST-slutpunkt](#submit-to-rest-endpoint)
    * [Skicka till OneDrive](#submit-to-onedrive)
    * [Anropa ett AEM](#invoke-an-aem-workflow)
+   * [Skicka till Power Automate](#microsoft-power-automate)
 
 ## Skicka e-post {#send-email}
 
@@ -345,6 +346,20 @@ När du skickar formuläret sparas data i den angivna Azure Storage-behållarkon
 Mappstrukturen som data ska sparas i är `/configuration_container/form_name/year/month/date/submission_id/data`.
 
 Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart)och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
+
+
+## Skicka till Power Automate {#microsoft-power-automate}
+
+Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden. Här är några exempel på vad du kan göra efter att ha integrerat ett adaptivt formulär med Microsoft® Power Automate:
+
+* Använd adaptiva Forms-data i en Power Automate-affärsprocess
+* Använd Power Automate för att skicka inhämtade data till fler än 500 datakällor eller till något offentligt tillgängligt API
+* Utför komplexa beräkningar på inhämtade data
+* Spara adaptiva Forms-data i lagringssystemen enligt ett fördefinierat schema
+
+Adaptive Forms editor har **Anropa ett Microsoft® Power Automate-flöde** Skicka-åtgärd för att skicka adaptiva formulärdata, bilagor och arkivdokument till Power Automate Cloud Flow. Om du vill skicka inhämtade data till Microsoft® Power Automate med åtgärden Skicka [Koppla samman din as a Cloud Service Forms-instans med Microsoft® Power Automate](forms-microsoft-power-automate-integration.md)
+
+När konfigurationen är klar använder du [Anropa ett Microsoft® Power Automate-flöde](forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) skicka-åtgärd för att skicka data till ett Power Automate-flöde.
 
 ## Använd synkron eller asynkron sändning {#use-synchronous-or-asynchronous-submission}
 
