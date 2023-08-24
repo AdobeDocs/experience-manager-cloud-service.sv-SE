@@ -1,13 +1,10 @@
 ---
-title: Felsöka installation och konfiguration
-seo-title: Troubleshooting installation and configuration
-description: Felsöka installation och konfiguration
-seo-description: Troubleshooting installation and configuration
+title: Felsöka Cloud Service av installation och konfiguration
+description: Hur felsöker man installations- och konfigurationsrelaterade problem för AEM Forms as a Cloud Service?
 contentOwner: khsingh
-exl-id: 249ec8f2-4176-428a-bfcf-80b381ec7263
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 6dd34937a8aeb6c7ddfc0fb1180a112de534dd4b
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
@@ -18,14 +15,14 @@ Följande problem kan uppstå när du konfigurerar en Cloud Service:
 
 ## Forms-alternativet är inte tillgängligt
 
-The **[!UICONTROL Forms]** är inte tillgängligt på **[!UICONTROL Navigation]** sida.
+The **[!UICONTROL Forms]** alternativet är inte tillgängligt på **[!UICONTROL Navigation]** sida.
 
 ![Forms-alternativet är inte tillgängligt](assets/installation-configuration-forms-option-unavailable-troubleshooting.png)
 
 Aktivera **[!UICONTROL Forms]** alternativ:
 
 1. Logga in på [Cloud Manager](https://experience.adobe.com/)
-1. Hitta ditt program och klicka på ![Forms-alternativet är inte tillgängligt](assets/Smock_Edit_18_N.svg) ikon. Den öppnar sidan Redigera program för ditt program.
+1. Leta upp programmet och klicka på ![Forms-alternativet är inte tillgängligt](assets/Smock_Edit_18_N.svg) -ikon. Den öppnar sidan Redigera program för ditt program.
 1. Öppna **[!UICONTROL Solutions & Add-ons]** -fliken.
 1. Välj **[!UICONTROL Forms]** och klicka **[!UICONTROL Save]**.
 

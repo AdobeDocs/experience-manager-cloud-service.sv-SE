@@ -1,17 +1,16 @@
 ---
-title: Stöd för fotnoter
-description: RTE-stöd för fotnoter.
-exl-id: f04dae84-daab-42f8-876f-02fe426f62be
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+title: Stöd för fotnoter i Adaptive Forms
+description: Förbättra Adaptiv Forms med informativa fotnoter i RTF-format. Förbättra användarupplevelsen och engagemanget.
+source-git-commit: 6dd34937a8aeb6c7ddfc0fb1180a112de534dd4b
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
 
 # Fotnotskomponent {#footnotecomponent}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 **[!UICONTROL Footnote]** är den extra information eller anteckningar som visas i slutet av sidan. [!UICONTROL Footnote] innehåller de anteckningar som anges i texten med siffror som upphöjda.
 
@@ -20,7 +19,7 @@ Fotnoterna numreras sekventiellt i den ordning som de visas på sidan. Varje fot
 ![Fotnotsbeskrivning](/help/forms/assets/footnote_description.png)
 
 
-## Användning av fotnot {#usesoffootnotes}
+## Användning av fotnoten {#usesoffootnotes}
 
 * Hjälper till att tillhandahålla citat.
 * Ger extra information som kan avbryta det normala flödet av huvudinformationen.
@@ -31,9 +30,9 @@ I Adaptive Forms [!UICONTROL footnote] används för att visa information om hur
 ## Fotnot i Adaptiv Forms {#using-footnote-adaptiveforms}
 
 Så här lägger du till en fotnot i Adaptiv Forms:
-1. Öppna ett anpassat formulär i **Redigera** läge.
+1. Öppna ett adaptivt formulär i **Redigera** läge.
 1. Dra från komponentwebbläsaren och släpp **[!UICONTROL Text]** på adaptiva formulär.
-1. Välj **[!UICONTROL Text]** som du lade till och trycker på ![cmppr](assets/configure-icon.svg) om du vill redigera dess egenskaper.
+1. Välj **[!UICONTROL Text]** som du har lagt till och trycker på ![cmppr](assets/configure-icon.svg) om du vill redigera dess egenskaper.
 
    ![Fotnot i Adaptiv Forms](/help/forms/assets/footnote_rte.png)
 

@@ -1,11 +1,10 @@
 ---
 title: E-signera ett formulär med hjälp av klottersignaturer
-description: Signera formulär med klottrar
-seo-description: Signing forms using scribble
+description: E-signera enkelt anpassningsbara Forms med Scribble Signature & Signature Step. Effektivare digitala signaturer.
 topic-tags: author
-source-git-commit: 755bab29e7b6c49540dee47d6bec13e9421bfc43
+source-git-commit: 6dd34937a8aeb6c7ddfc0fb1180a112de534dd4b
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---

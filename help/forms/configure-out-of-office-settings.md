@@ -1,12 +1,9 @@
 ---
 title: Konfigurera inställningar för frånvaro
-seo-title: Configure Out of Office settings
-description: Konfigurera inställningar för frånvaro
-seo-description: Configure Out of Office settings
-exl-id: c7e436f1-8e1c-4334-b3dc-ab9800695301
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+description: Delegera uppgifter när du är ledig eller inte på kontoret för smidig körning av arbetsflöden.
+source-git-commit: 6dd34937a8aeb6c7ddfc0fb1180a112de534dd4b
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '782'
 ht-degree: 1%
 
 ---
@@ -29,7 +26,7 @@ Du kan dela upp objektdelegering baserat på arbetsflödesmodellerna. Du kan til
 
 >[!NOTE]
 >
->* När du aktiverar inställningen Frånvarande finns alla objekt som är tillgängliga i Inkorgen, innan inställningen aktiveras, kvar i Inkorgen. Endast objekt som tagits emot efter att inställningen aktiverats delegeras.
+>* När du aktiverar inställningen Frånvarande finns alla objekt som är tillgängliga i Inkorgen, innan du aktiverar inställningen, kvar i Inkorgen. Endast objekt som tagits emot efter att inställningen aktiverats delegeras.
 >* När du inaktiverar inställningen Frånvarande tilldelas de delegerade objekten inte tillbaka till dig automatiskt. Du kan använda anspråksfunktionen för att tilldela objekt till dig.
 >* När Användare A delegerar objekt till Användare B och Användare B delegerar vidare till Användare C, tilldelas objekten bara Användare C och inte Användare B.
 >* När det finns en slinga i uppdraget stannar uppgifterna kvar hos den ursprungliga användaren. När Användare A till exempel delegerar objekt till Användare B till Användare C, Användare C delegerar till Användare D och Användare D delegerar till Användare B skapas en slinga. I sådana fall behålls objektet av den ursprungliga användaren. Användare A är ursprunglig användare i ovanstående exempel.
@@ -55,7 +52,7 @@ Utför följande steg för att aktivera inställningen Frånvarande för ditt ko
 
    >[!NOTE]
    >
-   >Tilldelningsordningen är viktig. När ett objekt tilldelas en användare som har aktiverat inställningen Frånvarande utvärderas objektet mot den angivna listan över tilldelningar i den ordning som tilldelningarna läggs till. När ett objekt matchar villkoret tilldelas det till den som tilldelats objektet och nästa tilldelande kontrolleras inte.
+   >Tilldelningsordningen är viktig. När ett objekt tilldelas till en användare som har aktiverat inställningen för frånvaro utvärderas objektet mot den angivna listan över tilldelningar i ordningen som tilldelningarna läggs till. När ett objekt matchar villkoren tilldelas det till den som tilldelats objektet och nästa som tilldelats kontrolleras inte.
 
 1. Tryck på **[!UICONTROL Save]**. Inställningen börjar gälla vid angivet startdatum och angiven starttid. Om du loggar in när du inte är på kontoret beaktas du inte på kontoret förrän du ändrar dina inställningar.
 
@@ -64,7 +61,7 @@ Nu tilldelas objekt som du har tilldelats under frånvaroperioden automatiskt ti
 
 >[!NOTE]
 >
->(Endast för Forms-centrerade arbetsflödesobjekt) Aktivera **[!UICONTROL Allow assignee to delegate using 'Out of Office' settings]** alternativ för **[!UICONTROL Assign task]** i arbetsflödet. Endast objekt som har det ovannämnda alternativet aktiverat delegeras till andra användare.
+>(Endast för Forms-centrerade arbetsflödesobjekt) Aktivera **[!UICONTROL Allow assignee to delegate using 'Out of Office' settings]** alternativ för **[!UICONTROL Assign task]** i arbetsflödet. Endast objekt som har det tidigare nämnda alternativet aktiverat delegeras till andra användare.
 
 ## Begränsningar {#limitations}
 
