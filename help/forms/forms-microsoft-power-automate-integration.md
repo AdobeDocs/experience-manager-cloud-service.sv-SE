@@ -3,9 +3,9 @@ title: Hur ansluter och skickar man data i adaptiva blanketter till Microsoft&re
 description: Stegvisa instruktioner för att ansluta och skicka data i anpassade formulär till Microsoft&reg; Power Automate.
 keywords: Adaptiv Forms Microsoft Power Automate, skicka adaptiva Forms-data till Microsoft Power Automate
 exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
-source-git-commit: be57fe6c54f2ee07378e16bae601500f71e7ce6b
+source-git-commit: 74fed5b2bcffac9d267b66aaa3d69b27cadd3417
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Efter dig [Koppla samman din as a Cloud Service Forms-instans med Microsoft® Po
 1. Logga in på din Author-instans, välj ditt adaptiva formulär och klicka på **[!UICONTROL Properties]**.
 1. I konfigurationsbehållaren bläddrar du till och väljer den behållare som har skapats i avsnittet [Skapa Microsoft® Power Automate Dataverse Cloud-konfiguration](#microsoft-power-automate-dataverse-cloud-configuration)och trycka **[!UICONTROL Save and Close]**.
 1. Öppna det adaptiva formuläret för redigering och navigera till **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren.
-1. I egenskapsbehållaren, för **[!UICONTROL Submit Actions]** välj **[!UICONTROL Invoke a Power Automate flow]** alternativ. En lista över tillgängliga Power Automate-flöden blir tillgänglig **[!UICONTROL Power Automate flow]** alternativ. Välj önskat flöde och adaptiva Forms-data skickas till det när de skickas.
+1. I egenskapsbehållaren, för **[!UICONTROL Submit Actions]** välj **[!UICONTROL Invoke a Power Automate flow]** och välja **[!UICONTROL Power Automate flow]**. Välj önskat flöde och adaptiva Forms-data skickas till det när de skickas.
 
    ![Konfigurera Skicka-åtgärd](assets/submission.png)
 
