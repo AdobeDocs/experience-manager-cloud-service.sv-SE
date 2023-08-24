@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: c6186e549a9ef2aebddb4925cf84289aa7f7e662
+source-git-commit: 6b4fa2802b860c938f5085f047cc880f29698f3e
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 132
 - FORMS-10444: Adaptiva Forms-mallar - mallar kan inte publiceras (tillfällig lösning: använd distributionskonsolen).
 - CQ-4354191: Arbetsflöden - Anpassad startfunktion kan utlösas många gånger på grund av replikeringsmetadata som finns på nod:ostrukturerade noder (tillfällig lösning: startprogram för uppdatering som exkluderar egenskaper för replikeringsmetadata för att undvika överlappning).
 - SITES-15622: GraphQL - Issue with persistent queries with number &amp; boolean parameters.
+- SITES-15654: GraphQL - Issues with union and properties of same name.
 
 ### Inbäddade tekniker {#embedded-tech-13206}
 
