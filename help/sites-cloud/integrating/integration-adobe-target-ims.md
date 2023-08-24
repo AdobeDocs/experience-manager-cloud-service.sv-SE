@@ -2,9 +2,9 @@
 title: IMS-konfiguration som ska användas vid integrering med Adobe Target
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Target
 exl-id: b5474b70-bedc-4cc9-ad47-89dcb2415e3a
-source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
+source-git-commit: 155b24c4b46e8baebd6215c0717d9f2adde95017
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '883'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![Skapa ett certifikat](assets/integrate-target-ims-01.png)
 
-1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Target-integrering med AEM](#configuring-ims-adobe-target-integration-with-aem).
+1. Välj **Ladda ned** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Target-integrering med AEM](#configuring-ims-adobe-target-integration-with-aem).
 
    >[!CAUTION]
    >
@@ -65,13 +65,19 @@ Adobe Developer Console Project (integration) med Adobe Target som AEM ska anvä
 
 Öppna Adobe Developer Console och skapa ett projekt med Adobe Target som AEM ska använda:
 
+>[!CAUTION]
+>
+>För närvarande stöder vi endast Adobe Developer Console **Tjänstkonto (JWT)** autentiseringsuppgiftstyp.
+>
+>Använd inte **OAuth Server-till-server** autentiseringsuppgiftstyp, som kommer att stödjas i framtiden.
+
 1. Öppna Adobe Developer Console for Projects:
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
-   * Om du inte har något projekt än **Skapa nytt projekt** är centrerad, nederst.
+   * Om du inte har något projekt än, **Skapa nytt projekt** är centrerad, nederst.
      ![Skapa nytt projekt - första projektet](assets/integration-target-ims-02.png)
    * Om du redan har befintliga projekt visas dessa och **Skapa nytt projekt** är överst till höger.
      ![Skapa nytt projekt - flera projekt](assets/integration-target-ims-03.png)
@@ -126,7 +132,7 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 
    * [https://adminconsole.adobe.com](https://adminconsole.adobe.com/)
 
-1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **Adobe Target - &lt;*din-tenant-id*>** (från den vänstra panelen).
+1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **ADOBE TARGET - &lt;*din-tenant-id*>** (från vänster panel).
 1. Välj **Produktprofiler** och sedan den arbetsyta du behöver i den lista som visas. Exempel: Standardarbetsyta.
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
@@ -141,7 +147,7 @@ Välj **Visa** (till höger om en viss projektpost) om du vill visa mer informat
 
 * Projektöversikt
 * Insikter
-* Autentiseringsuppgifter
+* Referenser
    * Tjänstkonto (JWT)
       * Information om autentiseringsuppgifter
       * Generera JWT
@@ -161,8 +167,8 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
 
    * **Titel**: Din text.
    * **Auktoriseringsserver**: Kopiera/klistra in detta från `aud` rad i **Nyttolast** avsnitt nedan, till exempel `https://ims-na1.adobelogin.com` i exemplet nedan
-   * **API-nyckel**: Kopiera detta från projektet [Översikt](#details-stored-for-the-ims-integration-project) section
-   * **Klienthemlighet**: Generera detta i projektet [Översikt](#details-stored-for-the-ims-integration-project) och kopiera
+   * **API-nyckel**: Kopiera detta från projektet [Ökning](#details-stored-for-the-ims-integration-project) section
+   * **Klienthemlighet**: Generera detta i projektet [Ökning](#details-stored-for-the-ims-integration-project) och kopiera
    * **Nyttolast**: Kopiera detta från [Generera JWT](#details-stored-for-the-ims-integration-project) section
 
    ![Adobe IMS Technical Account Configuration](assets/integrate-target-ims-10.png)

@@ -2,9 +2,9 @@
 title: IMS-konfiguration som ska användas vid integrering med Adobe Analytics
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Analytics
 exl-id: 12bd1573-373a-4001-be71-c8f155ef6896
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: d59559d38eef182723a8791c6614d03930f64a85
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '914'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ Det första steget i konfigurationen är att skapa en IMS-konfiguration i AEM oc
 
    ![Skapa ett certifikat](assets/integrate-analytics-ims-01.png)
 
-1. Välj **Hämta** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Analytics-integrering med AEM](#configuring-ims-adobe-analytics-integration-with-aem).
+1. Välj **Ladda ned** (eller **Hämta offentlig nyckel**) för att hämta filen till den lokala hårddisken, så att den är klar att användas när [konfigurera IMS för Adobe Analytics-integrering med AEM](#configuring-ims-adobe-analytics-integration-with-aem).
 
    >[!CAUTION]
    >
@@ -67,13 +67,19 @@ Med Adobe Developer Console måste du skapa ett projekt (integration) med Adobe 
 
 Öppna Adobe Developer Console och skapa ett projekt med Adobe Analytics som AEM ska använda:
 
+>[!CAUTION]
+>
+>För närvarande stöder vi endast Adobe Developer Console **Tjänstkonto (JWT)** autentiseringsuppgiftstyp.
+>
+>Använd inte **OAuth Server-till-server** autentiseringsuppgiftstyp, som kommer att stödjas i framtiden.
+
 1. Öppna Adobe Developer Console for Projects:
 
    [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects)
 
 1. Alla projekt du har visas. Välj **Skapa nytt projekt** - platsen och användningen beror på:
 
-   * Om du inte har något projekt än **Skapa nytt projekt** är centrerad, nederst.
+   * Om du inte har något projekt än, **Skapa nytt projekt** är centrerad, nederst.
      ![Skapa nytt projekt - första projektet](assets/integration-analytics-ims-02.png)
    * Om du redan har befintliga projekt visas dessa och **Skapa nytt projekt** är överst till höger.
      ![Skapa nytt projekt - flera projekt](assets/integration-analytics-ims-03.png)
@@ -117,7 +123,7 @@ Du måste nu tilldela nödvändig behörighet till integreringen:
 
    * [https://adminconsole.adobe.com](https://adminconsole.adobe.com/)
 
-1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **Adobe Analytics - &lt;*din-tenant-id*>** (från den vänstra panelen).
+1. Navigera till **Produkter** (övre verktygsfältet) och sedan välja **ADOBE ANALYTICS - &lt;*din-tenant-id*>** (från vänster panel).
 1. Välj **Produktprofiler** och sedan den arbetsyta du behöver i den lista som visas. Exempel: Standardarbetsyta.
 1. Välj **API-autentiseringsuppgifter** och sedan den integreringskonfiguration som krävs.
 1. Välj **Redigerare** som **Produktroll**; i stället för **Observer**.
@@ -132,7 +138,7 @@ Välj en specifik projektpost om du vill visa mer information om konfigurationen
 
 * Projektöversikt
 * Insikter
-* Autentiseringsuppgifter
+* Referenser
    * Tjänstkonto (JWT)
       * Information om autentiseringsuppgifter
       * Generera JWT
@@ -152,7 +158,7 @@ Om du går tillbaka till AEM kan du slutföra IMS-konfigurationen genom att läg
 
    * **Titel**: Din text.
    * **Auktoriseringsserver**: Kopiera/klistra in detta från `aud` rad i **Nyttolast** avsnitt nedan, till exempel `https://ims-na1.adobelogin.com` i exemplet nedan
-   * **API-nyckel**: Kopiera detta från **Autentiseringsuppgifter** i [Projektöversikt](#details-stored-for-the-ims-integration-project)
+   * **API-nyckel**: Kopiera detta från **Referenser** i [Projektöversikt](#details-stored-for-the-ims-integration-project)
    * **Klienthemlighet**: Generera detta i [Fliken Klienthemlighet i avsnittet Tjänstkonto (JWT)](#details-stored-for-the-ims-integration-project)och kopiera
    * **Nyttolast**: Kopiera detta från [Generera JWT-flik i avsnittet Tjänstkonto (JWT)](#details-stored-for-the-ims-integration-project)
 
