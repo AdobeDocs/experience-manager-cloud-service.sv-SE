@@ -2,7 +2,7 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bad2225e7c5f2554ebd51c0e7e737296c3aa552b
 workflow-type: tm+mt
 source-wordcount: '2044'
 ht-degree: 4%
@@ -356,14 +356,18 @@ Så här anpassar du fragment:
    >The **ContextHub-sökväg** markerat i **Personalisering** -fliken måste vara antingen:
    >
    >* samma sökväg som den som konfigurerats för sidan där fragmentet återges
-   >Eller:
+   >
+   >  Eller:
+   >
    >* en sökväg som innehåller en delmängd av de butiker som definieras i ContextHub som konfigurerats för sidan
    >
-   > 
-The **Segmentsökväg** markerat i **Personalisering** -fliken måste vara antingen:
+   >The **Segmentsökväg** markerat i **Personalisering** -fliken måste vara antingen:
    >
-   * samma sökväg som den som konfigurerats för sidan där fragmentet återges, eller
-   * en sökväg som innehåller en delmängd av segmenten som konfigurerats för sidan
+   >* samma sökväg som den som konfigurerats för sidan där fragmentet återges
+   >
+   >  eller
+   >
+   >* en sökväg som innehåller en delmängd av segmenten som konfigurerats för sidan
 
 ### Definiera målanpassning för ert upplevelsefragment {#defining-targeting-experience-fragment}
 
@@ -390,9 +394,9 @@ Detaljer visas i alla vyer av konsolen **Upplevelsefragment** och **listvyn**[ v
 
    >[!CAUTION]
    >
-   De här flikarna visas när du öppnar **Egenskaper** från Experience Fragments-konsolen.
+   >De här flikarna visas när du öppnar **Egenskaper** från Experience Fragments-konsolen.
    >
-   Om du **öppnar egenskaperna** när du redigerar ett upplevelsefragment visas rätt [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
+   >Om du **öppnar egenskaperna** när du redigerar ett upplevelsefragment visas rätt [Sidegenskaper](/help/sites-cloud/authoring/fundamentals/page-properties.md).
 
    ![Experience Fragment-egenskaper](/help/sites-cloud/authoring/assets/xf-17.png)
 
@@ -422,7 +426,7 @@ Använda `.plain.` -väljaren i URL-adressen kan du komma åt den vanliga HTML-�
 
 >[!NOTE]
 >
-Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
+>Även om detta är tillgängligt direkt från webbläsaren, [det främsta syftet är att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
 
 ## Publicera upplevelsefragment {#publishing-experience-fragments}
 
