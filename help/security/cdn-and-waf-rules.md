@@ -1,9 +1,9 @@
 ---
 title: Konfigurera CDN- och WAF-regler för att filtrera trafik
 description: Använd reglerna för brandvägg för CDN och webbaserade program för att filtrera skadlig trafik
-source-git-commit: a9b8b4d6029d0975428b9cff04dbbec993d56172
+source-git-commit: 0f1ee0ec5fc2d084a6dfdc65d15a8497c23f11a2
 workflow-type: tm+mt
-source-wordcount: '2371'
+source-wordcount: '2391'
 ht-degree: 0%
 
 ---
@@ -310,17 +310,18 @@ data:
 {
 "timestamp": "2023-05-26T09:20:01+0000",
 "ttfb": 19,
-"cip": "147.160.230.112",
+"cli_ip": "147.160.230.112",
+"cli_country": "CH",
 "rid": "974e67f6",
-"ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
+"req_ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
 "host": "example.com",
 "url": "/block-me",
-"req_mthd": "GET",
-"res_type": "",
+"method": "GET",
+"res_ctype": "",
 "cache": "PASS",
-"res_status": 406,
-"res_bsize": 3362,
-"server": "PAR",
+"status": 406,
+"res_age": 0,
+"pop": "PAR",
 "rules": "cdn=path-rule;waf=;action=blocked"
 }
 ```
@@ -329,17 +330,18 @@ data:
 {
 "timestamp": "2023-05-26T09:20:01+0000",
 "ttfb": 19,
-"cip": "147.160.230.112",
-"ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
+"cli_ip": "147.160.230.112",
+"cli_country": "CH",
+"req_ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
 "rid": "974e67f6",
 "host": "example.com",
 "url": "/?sqli=%27%29%20UNION%20ALL%20SELECT%20NULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL%2CNULL--%20fAPK",
-"req_mthd": "GET",
-"res_type": "image/png",
+"method": "GET",
+"res_ctype": "image/png",
 "cache": "PASS",
-"res_status": 406,
-"res_bsize": 3362,
-"server": "PAR",
+"status": 406,
+"res_age": 0,
+"pop": "PAR",
 "rules": "cdn=;waf=SQLI;action=blocked"
 }
 ```
@@ -352,15 +354,16 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 |---|---|
 | *tidsstämpel* | Den tidpunkt då begäran startades, efter TLS-avslutning |
 | *ttfb* | Förkortning för *Tid till första byte*. Tidsintervallet mellan begäran startades fram till punkten innan svarstexten började direktuppspelas. |
-| *cip* | Klientens IP-adress. |
+| *cli_ip* | Klientens IP-adress. |
+| *cli_country* | Två bokstäver [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) alpha-2-landskod för klientlandet. |
 | *rutnät* | Värdet på begärandehuvudet som används för att unikt identifiera begäran. |
-| *ua* | Användaragenten som ansvarar för att göra en given HTTP-begäran. |
+| *req_ua* | Användaragenten som ansvarar för att göra en given HTTP-begäran. |
 | *värd* | Den myndighet som begäran avser. |
 | *url* | Den fullständiga sökvägen, inklusive frågeparametrar. |
-| *req_mthd* | HTTP-metod som skickas av klienten, till exempel &quot;GET&quot; eller &quot;POST&quot;. |
-| *res_type* | Den innehållstyp som används för att ange resursens ursprungliga medietyp |
+| *method* | HTTP-metod som skickas av klienten, till exempel &quot;GET&quot; eller &quot;POST&quot;. |
+| *res_type* | Den innehållstyp som används för att ange resursens ursprungliga medietyp. |
 | *cache* | Status för cachen. Möjliga värden är HIT, MISS eller PASS |
-| *res_status* | HTTP-statuskoden som ett heltalsvärde. |
-| *res_bsize* | Brödtextbyte som skickas till klienten i svaret. |
-| *server* | Datacenter för CDN-cacheservern. |
+| *status* | HTTP-statuskoden som ett heltalsvärde. |
+| *_Bläddra* | Den tid (i sekunder) som ett svar har cachelagrats (i alla noder). |
+| *pop* | Datacenter för CDN-cacheservern. |
 | *regler* | Namnet på matchande regler, för både CDN-regler och SWF-regler.<br><br>Matchande CDN-regler visas i loggposten för alla förfrågningar till CDN, oavsett om det är en CDN-träff, ett pass eller en miss.<br><br>Anger också om matchningen resulterade i ett block. <br><br>Till exempel &quot;`cdn=;waf=SQLI;action=blocked`&quot;<br><br>Tom om inga regler matchade. |
