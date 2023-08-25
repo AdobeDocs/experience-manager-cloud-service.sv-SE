@@ -1,9 +1,9 @@
 ---
 title: Hämta och installera Forms Designer
 description: Du kan använda Forms Designer för att skapa XDP- och PDF-formulärmallar som fungerar som mall för ett dokument för registrering. Designer är tillgängligt med [!DNL AEM Forms] licens.
-source-git-commit: 115612a11f43000894c76758b1d2bcb3506f3bcb
+source-git-commit: 3b05d413756a98c034388eb31e752b2448758496
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,12 @@ Designer är ett grafiskt formulärdesignverktyg som gör det enklare att skapa 
 
 För att kunna installera den senaste versionen av AEM Forms Designer, 64-bitars eller 32-bitars, krävs följande programvara och minimimaskinvara för att installera och konfigurera Designer:
 
+<!--
 >[!BEGINTABS]
 
->[!TAB 64-bitars operativsystem (rekommenderas)]
+>[!TAB 64-bit OS (Recommended)] -->
+
++++ 64-bitars operativsystem (rekommenderas)
 
 * [!DNL Microsoft® Windows® 2016 Server] eller [!DNL Microsoft® Windows® 2019 Server]och [!DNL Microsoft® Windows® 10]
 * Minst 2 GB RAM
@@ -31,7 +34,9 @@ För att kunna installera den senaste versionen av AEM Forms Designer, 64-bitars
 * Administrativ behörighet för att installera Designer
 * [!DNL Microsoft® Visual C++ 2019] (VC 14.28 eller högre)
 
->[!TAB 32-bitars operativsystem]
++++
+
++++ 32-bitars operativsystem
 
 * [!DNL Microsoft® Windows® 2016 Server] eller [!DNL Microsoft® Windows® 2019 Server]och [!DNL Microsoft® Windows® 10]
 * Minst 1 GB RAM
@@ -42,10 +47,9 @@ För att kunna installera den senaste versionen av AEM Forms Designer, 64-bitars
 * Maskinvaruacceleration för video (valfritt)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC
 * Administrativ behörighet för att installera Designer
-* Microsoft® Visual C++ 2019 (VC 14.28 eller senare)
+* [!DNL Microsoft® Visual C++ 2019] (VC 14.28 eller högre)
 
->[!ENDTABS]
-
++++
 
 ## Installera Designer {#install-designer}
 
