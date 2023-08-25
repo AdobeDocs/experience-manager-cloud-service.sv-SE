@@ -3,9 +3,9 @@ title: Målväljare för AEM as a Cloud Service
 description: Använd AEM målväljare för att visa och välja resurser som du kan använda som en kopia av den ursprungliga resursen.
 contentOwner: Adobe
 role: Admin,User
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: cf783a91d33bc7a42e177ace3ca49844f14a6a79
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1900'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,7 @@ Utför följande uppgifter för att integrera och använda målväljaren med [!D
 Du kan integrera alla [!DNL Adobe] eller program som inte är Adobe med [!DNL Experience Manager Assets] som [!DNL Cloud Service] arkivera och välja resurser inifrån programmet.
 
 Integreringen görs genom att importera målväljarpaketet och ansluta till Assets-as a Cloud Service med hjälp av Vanilla JavaScript-biblioteket. Du måste redigera en `index.html` eller en lämplig fil i programmet till -
+
 * Definiera autentiseringsinformationen
 * Åtkomst till den as a Cloud Service resurskatalogen
 * Konfigurera visningsegenskaperna för målväljaren
@@ -52,6 +53,7 @@ Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
 ## Förutsättningar {#prerequisites}
 
 Definiera förutsättningarna i `index.html` -filen eller en liknande fil i programimplementeringen för att definiera autentiseringsinformationen för att komma åt [!DNL Experience Manager Assets] som [!DNL Cloud Service] databas. Förutsättningarna är följande:
+
 * imsOrg
 * imsToken
 * apikey
@@ -62,11 +64,13 @@ Målväljaren är tillgänglig via både ESM CDN (till exempel [esm.sh](https://
 
 I webbläsare som använder **UMD-version** (rekommenderas):
 
+I webbläsare som använder **UMD-version** (rekommenderas):
+
 ```
-<script src="https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/assets-selectors.js"></script>
+<script src="https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/assets-selectors.js"></script>
 
 <script>
-  const { renderDestinationSelector } = PureJSSelectors;
+  const { renderAssetSelector } = PureJSSelectors;
 </script>
 ```
 
@@ -74,14 +78,14 @@ I webbläsare med `import maps` support med **ESM CDN-version**:
 
 ```
 <script type="module">
-  import { DestinationSelector } from 'https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/@assets/selectors/index.js'
+  import { AssetSelector } from 'https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/@assets/selectors/index.js'
 </script>
 ```
 
 I Deno/Webpack Module Federation med **ESM CDN-version**:
 
 ```
-import { DestinationSelector } from 'https://experience.adobe.com/solutions/CQ-assets-selectors/assets/resources/@assets/selectors/index.js'
+import { AssetSelector } from 'https://experience.adobe.com/solutions/CQ-assets-selectors/static-assets/resources/@assets/selectors/index.js'
 ```
 
 ### Markerat mål {#selected-destination}
