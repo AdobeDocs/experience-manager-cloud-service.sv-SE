@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: f28b8a85de76a1658ef45c509cbf5600baa1bb3a
 workflow-type: tm+mt
-source-wordcount: '2266'
+source-wordcount: '2267'
 ht-degree: 0%
 
 ---
@@ -224,7 +224,7 @@ Redigeraren tar upp större delen av fönstret och är där sidan som anges i [p
 
 ### Komponentspår {#component-rail}
 
-Komponentlisten visas alltid till vänster i redigeraren. Beroende på dess läge kan det visa information för en komponent som är markerad i innehållet eller hierarkin för sidinnehållet.
+Komponentlisten visas alltid till höger i redigeraren. Beroende på dess läge kan det visa information för en komponent som är markerad i innehållet eller hierarkin för sidinnehållet.
 
 ![Komponenträgen](assets/component-rail.png)
 
