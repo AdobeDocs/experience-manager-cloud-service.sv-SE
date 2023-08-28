@@ -2,9 +2,9 @@
 title: Introduktion till Cloud Manager
 description: Läs om hur Cloud Manager stöder ditt AEM genom program, miljöer och rörledningar.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: fe2b0eab36a3ecd6c731fe8c9ac23fd4a3175341
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Följ de här stegen för att navigera till Cloud Manager.
 
 1. Navigera till inloggningssidan för Cloud Manager på [`https://my.cloudmanager.adobe.com`.](https://my.cloudmanager.adobe.com/).
 
-1. Välj programmet från Cloud Managers **Program och produkter** sidan som startar **Översikt** sida.
+1. Välj programmet från Cloud Managers **Program och produkter** sidan som startar **Ökning** sida.
 
 Du kan även navigera till Cloud Managers program- och produktsida från Adobe Experience Cloud hemsida genom att följa dessa steg.
 
@@ -40,7 +40,7 @@ Du kan även navigera till Cloud Managers program- och produktsida från Adobe E
 | Lägg till program<br>Redigera program | Lägg till ett nytt program<br>Lägga till eller ta bort lösningar eller tillägg | x |  |  |  |
 | Skapa miljö | Skapa produktions-+stagnings- och utvecklingsmiljöer | x | x |  |  |
 | Uppdateringsmiljö | Uppdatera produktions-+stagnings- och utvecklingsmiljöer | x | x |  |  |
-| Ta bort Dev-miljö | Ta bort utvecklingsmiljöer | x | x |  |  |
+| Ta bort utvecklingsmiljö | Ta bort utvecklingsmiljöer | x | x |  |  |
 | Inställningar för pipeline | Konfigurera och redigera rörledningar |  | x |  |  |
 | Körning av pipeline | Starta rörledningar | x | x |  |  |
 | Körning av pipeline | Avvisa/godkänn viktiga fel med 3-skiktskvalitet | x | x | x |  |
@@ -51,6 +51,8 @@ Du kan även navigera till Cloud Managers program- och produktsida från Adobe E
 | Generera token för personlig åtkomst | Åtkomstgit |  | x |  | x |
 | Skapa RDE | Skapa en snabb utvecklingsmiljö | x |  |  | x |
 | Återställ RDE | Återställ en snabb utvecklingsmiljö | x |  |  | x |
+| Skapa/ändra innehållsuppsättningar | Skapa eller ändra en innehållsuppsättning för innehållskopia |  | x |  |  |
+| Starta/avbryt innehållskopia | Starta eller avbryta en innehållskopia |  | x |  |  |
 
 >[!NOTE]
 >
@@ -79,7 +81,7 @@ Dina molnmiljöer skapas, öppnas och visas via Cloud Manager. Dessa miljöer ka
 
 * [AEM](#author-services)
 * [AEM](#publish-services)
-* [Dispatcher Services](#dispatcher-services)
+* [Skicka vidare](#dispatcher-services)
 
 >[!TIP]
 >
