@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 316680823fe4bc85e1f4359305047c0d1f517dc7
+source-git-commit: 49d1e002f22427d8ffc6c5bdecd054c10eac47b9
 workflow-type: tm+mt
-source-wordcount: '4249'
+source-wordcount: '4252'
 ht-degree: 20%
 
 ---
@@ -519,6 +519,7 @@ ht-degree: 20%
       + [Filtyper och användningsområden som stöds](/help/assets/supported-file-formats-assets-view.md)
       + [Visa resurser](/help/assets/navigate-assets-view.md)
       + [Överför och lägg till resurser](/help/assets/add-delete-assets-view.md)
+      + [Massimportera resurser](/help/assets/bulk-import-assets-view.md)
       + [Söka efter och identifiera resurser](/help/assets/search-assets-view.md)
       + [Resurshanteringsaktiviteter](/help/assets/manage-organize-assets-view.md)
       + [Redigera bilder](/help/assets/edit-images-assets-view.md)

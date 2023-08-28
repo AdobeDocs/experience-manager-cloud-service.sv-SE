@@ -2,9 +2,9 @@
 title: Min arbetsyta för resursvy
 description: Min arbetsyta är en sida med anpassningsbara visuella moduler som ger smidig åtkomst till viktiga delar av Assets-användargränssnittet och information som är mest relevant för användaren.
 exl-id: 402dd3a6-44e5-4d13-97d8-1d7fa26a99e4
-source-git-commit: ab607be0cc4a6c7f686978250a513c776f73024e
+source-git-commit: 701a7610780553731a6ac4c85fe3221ee3d98ae2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '705'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Du kommer åt Min arbetsyta genom att klicka **[!UICONTROL My Workspace]** från
 
 >[!NOTE]
 >
->Widgeten Insights är bara synlig för administratörer.
+>Widgeten Insights visas bara för administratörer.
 
 <!--
 
@@ -40,13 +40,21 @@ Highlights upcoming features for Assets.
 
 Fäst filer, mappar och samlingar för snabbare åtkomst till dessa objekt när du behöver dem senare. Alla fästa objekt visas i **Snabb åtkomst** i Min arbetsyta. Du kan komma åt dem med Min arbetsyta i stället för att navigera till den plats där de sparas i databasen.
 
-Om du vill fästa en resurs, en mapp eller en samling markerar du objektet och klickar på **[!UICONTROL Pin to Quick Access]**.
+Så här fäster du en resurs, en mapp eller en samling:
 
-![Uppgifter på arbetsytan](assets/quick-access.png)
+1. Markera objektet och klicka på **[!UICONTROL Pin to Quick Access]**.
+
+1. Välj om du behöver fästa objektet bara för dig, för hela organisationen eller för valda grupper. Om du väljer **[!UICONTROL For groups]** definierar du gruppnamnen i **[!UICONTROL Pin for groups]** fält.
+
+   ![Fäst objekt för grupper](assets/pin-items-for-groups.png)
+1. Klicka på **[!UICONTROL Pin]**.
+
+   Det markerade objektet visas i **[!UICONTROL Quick Access]** i Min arbetsyta.
+   ![Uppgifter på arbetsytan](assets/quick-access.png)
 
 **Insikter**
 
-Administratörer kan visa en sammanfattning av antalet hämtningar och överföringar som har gjorts i Assets-miljön under de senaste 30 dagarna. Du kan klicka **[!UICONTROL View all]** för att snabbt navigera till Insights-sidan för mer detaljerade instrumentpaneler.
+Administratörer kan visa en sammanfattning av antalet hämtningar och överföringar som har gjorts i Assets-miljön under de senaste 30 dagarna. Klicka **[!UICONTROL View all]** för att snabbt navigera till Insights-sidan för mer detaljerade instrumentpaneler.
 
 Du kan också visa de mest sökbara termerna tillsammans med det antal gånger som de söks igenom i resursvydistributionen med **Insikter** i Min arbetsyta. Du kan även navigera till detaljerade insikter för att visa de vanligaste sökningarna under de senaste 30 dagarna eller 12 månaderna.
 

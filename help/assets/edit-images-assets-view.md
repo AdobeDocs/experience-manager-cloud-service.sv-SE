@@ -3,28 +3,98 @@ title: Redigera bilder
 description: Redigera bilder med [!DNL Adobe Photoshop Express] och spara uppdaterade bilder som versioner.
 role: User
 exl-id: fc21a6ee-bf23-4dbf-86b0-74695a315b2a
-source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
+source-git-commit: 30b8c9b8eaee6292323dde4b436c29fe8290c910
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
 
 # Redigera bilder i [!DNL Assets view] {#edit-images}
 
-[!DNL Assets view] innehåller användarvänliga redigeringsalternativ som bygger på [!DNL Adobe Photoshop Express]. De redigeringsåtgärder som är tillgängliga är Punktlagning, Beskär och räta upp, Ändra storlek på bild och Justera bild.
+[!DNL Assets view] innehåller användarvänliga redigeringsalternativ som bygger på [!DNL Adobe Express] och [!DNL Adobe Photoshop Express]. De redigeringsåtgärder som är tillgängliga med [!DNL Adobe Express] är Ändra storlek på bild, Ta bort bakgrund, Beskär bild och Konvertera JPEG till PNG.
 
-När du har redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att vid behov återställa den ursprungliga resursen senare. Om du vill redigera en bild [öppna förhandsgranskningen](/help/assets/navigate-assets-view.md#preview-assets) och klicka **[!UICONTROL Edit Image]** ![redigeringsikon](assets/do-not-localize/edit-icon.png) från järnvägen till höger.
+När du har redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att vid behov återställa den ursprungliga resursen senare. Om du vill redigera en bild [öppna förhandsgranskningen](/help/assets/navigate-assets-view.md) och klicka **[!UICONTROL Edit Image]**.
 
-![Alternativ för att redigera en bild](assets/edit-image2.png)
+>[!NOTE]
+>
+>Du kan redigera bilder av filtyperna PNG och JPEG med [!DNL Adobe Express].
 
-*Bild: Alternativen för att redigera bilder är [!DNL Adobe Photoshop Express].*
+<!--The editing actions that are available are Spot healing, Crop and straighten, Resize image, and Adjust image.-->
 
-## Dekorlagningsbilder {#spot-heal-images}
+## Redigera bilder med Adobe Express {#edit-using-express}
+
+>[!CONTEXTUALHELP]
+>id="assets_express_integration"
+>title="Integrering av Adobe Expresser"
+>abstract="De enkla och intuitiva bildredigeringsverktygen som bygger på Adobe Express är tillgängliga direkt i AEM Assets för att öka återanvändningen av innehåll och snabba upp hastigheten."
+
+### Ändra bildstorlek {#resize-image-using-express}
+
+Att ändra storlek på en bild till en viss storlek är ett vanligt användningsexempel. [!DNL Assets view] Med kan du snabbt ändra storlek på bilden så att den passar de vanliga fotostorlekarna genom att tillhandahålla förberäknade nya upplösningar för specifika fotostorlekar. Ändra storlek på bilden med [!DNL Assets view]följer du stegen nedan:
+
+1. Markera en bild och klicka på **Redigera**.
+2. Klicka **[!DNL Resize Image]** från de snabbåtgärder som är tillgängliga i den vänstra rutan.
+3. Välj lämplig plattform för sociala medier från **[!UICONTROL Resize for]** och välj bildstorlek bland de alternativ som visas.
+4. Skalförändra bilden, om det behövs, med **[!UICONTROL Image Scale]** fält.
+5. Klicka **[!DNL Apply]** för att tillämpa ändringarna.
+   ![Bildredigering med Adobe Express](assets/adobe-express-resize-image.png)
+
+   Den redigerade bilden kan hämtas. Du kan antingen spara den redigerade resursen som en ny version av samma resurs eller spara den som en ny resurs.
+   ![Spara bild med Adobe Express](assets/adobe-express-resize-save.png)
+
+### Ta bort bakgrund {#remove-background-using-express}
+
+Du kan ta bort bakgrunden från en bild med några enkla steg enligt nedan:
+
+1. Markera en bild och klicka på **Redigera**.
+2. Klicka **[!DNL Remove Background]** från de snabbåtgärder som är tillgängliga i den vänstra rutan. Experience Manager Assets visar bilden utan bakgrund.
+3. Klicka **[!DNL Apply]** för att tillämpa ändringarna.
+   ![Spara bild med Adobe Express](assets/adobe-express-remove-background.png)
+
+   Den redigerade bilden kan hämtas. Du kan antingen spara den redigerade resursen som en ny version av samma resurs eller spara den som en ny resurs.
+
+### Beskär bild {#crop-image-using-express}
+
+Det är enkelt att omvandla en bild till en perfekt storlek med hjälp av inbäddade [!DNL Adobe Express] snabba åtgärder.
+
+1. Markera en bild och klicka på **Redigera**.
+2. Klicka **[!DNL Crop Image]** från de snabbåtgärder som är tillgängliga i den vänstra rutan.
+3. Dra handtagen i hörnen av bilden för att skapa den önskade beskärningen.
+4. Klicka på **[!DNL Apply]**.
+   ![Spara bild med Adobe Express](assets/adobe-express-crop-image.png)
+Den beskurna bilden kan hämtas. Du kan antingen spara den redigerade resursen som en ny version av samma resurs eller spara den som en ny resurs.
+
+### Konvertera JPEG till PNG {#convert-jpeg-to-png-using-express}
+
+Du kan snabbt konvertera en JPEG-bild till ett PNG-format med Adobe Express. Utför följande steg:
+
+1. Markera en bild och klicka på **Redigera**.
+2. Klicka **[!DNL JPEG to PNG]** från de snabbåtgärder som är tillgängliga i den vänstra rutan.
+   ![Konvertera till PNG med Adobe Express](assets/adobe-express-convert-image.png)
+3. Klicka på **[!UICONTROL Download]**.
+
+### Begränsningar {#limitations-adobe-express}
+
+* Bildupplösning som stöds: Minimal - 50 pixlar, Maximal - 6 000 pixlar per dimension
+
+* Största filstorlek som stöds: 17 MB
+
+## Redigera bilder med [!DNL Adobe Photoshop Express] {#edit-using-photoshop-express}
+
+<!--
+After editing an image, you can save the new image as a new version. Versioning helps you to revert to the original asset later, if needed. To edit an image, [open its preview](//help/navigate-assets-view.md#preview-assets) and click **[!UICONTROL Edit Image]** ![edit icon](assets/do-not-localize/edit-icon.png) from the rail on the right.
+
+![Options to edit an image](assets/edit-image2.png)
+
+*Figure: The options to edit images are powered by [!DNL Adobe Photoshop Express].*
+-->
+
+### Dekorlagningsbilder {#spot-heal-images-using-photoshop-express}
 
 Om det finns små fläckar eller små objekt på en bild kan du redigera och ta bort fläckar med hjälp av funktionen för punktlagning i Adobe Photoshop.
 
-Penseln samplar det retuscherade området och gör att de reparerade pixlarna blandas smidigt i resten av bilden. Använd en penselstorlek som bara är något större än den punkt du vill korrigera.
+Penseln samplar det retuscherade området och gör så att de reparerade pixlarna blandas smidigt i resten av bilden. Använd en penselstorlek som bara är något större än den punkt du vill korrigera.
 
 ![Redigeringsalternativ för punktlagning](assets/edit-spot-healing.png)
 
@@ -33,9 +103,9 @@ TBD: See if we should give backlinks to PS docs for these concepts.
 For more information about how Spot Healing works in Photoshop, see [retouching and repairing photos](https://helpx.adobe.com/photoshop/using/retouching-repairing-images.html). 
 -->
 
-## Beskära och räta upp bilder {#crop-straighten-images}
+### Beskära och räta upp bilder {#crop-straighten-images-using-photoshop-express}
 
-Med alternativet Beskär och räta upp kan du göra grundläggande beskärning, rotera bilden, vända den horisontellt eller vertikalt och beskära den till dimensioner som passar för populära webbplatser för sociala medier.
+Med alternativet Beskär och räta upp kan du göra grundläggande beskärning, rotera bilden, vända den vågrätt eller lodrätt och beskära den till dimensioner som passar populära webbplatser för sociala medier.
 
 Klicka på **[!UICONTROL Crop Image]**. När du har redigerat kan du spara den nya bilden som en version.
 
@@ -43,15 +113,15 @@ Klicka på **[!UICONTROL Crop Image]**. När du har redigerat kan du spara den n
 
 Med många standardalternativ kan du beskära bilden till de bästa proportioner som passar olika profiler och inlägg på sociala medier.
 
-## Ändra bildstorlek {#resize-image}
+### Ändra bildstorlek {#resize-image-using-photoshop-express}
 
-Att ändra storlek på en bild till en viss storlek är ett vanligt användningsexempel. [!DNL Assets view] Med kan du snabbt ändra storlek på bilden så att den passar de vanliga fotostorlekarna genom att tillhandahålla förberäknade nya upplösningar för specifika fotostorlekar. Du kan visa de vanliga fotostorlekarna i centimeter eller tum för att ta reda på måtten. Som standard behåller metoden för storleksändring proportionerna. Om du vill åsidosätta proportionerna manuellt klickar du på ![Alternativ för att ändra storlek på en bild.](assets/do-not-localize/lock-closed-icon.png).
+Du kan visa de vanliga fotostorlekarna i centimeter eller tum för att ta reda på måtten. Som standard behåller metoden för storleksändring proportionerna. Om du vill åsidosätta proportionerna manuellt klickar du på ![](assets/do-not-localize/lock-closed-icon.png).
 
 Ange måtten och klicka på **[!UICONTROL Resize Image]** för att ändra storlek på bilden. Innan du sparar ändringarna som en version kan du antingen ångra alla ändringar som gjorts innan du sparar genom att klicka på [!UICONTROL Undo] Du kan också ändra det specifika steget i redigeringsprocessen genom att klicka på [!UICONTROL Revert].
 
 ![Alternativ vid storleksändring av en bild](assets/resize-image.png)
 
-## Justera bild {#adjust-image}
+### Justera bild {#adjust-image-using-photoshop-express}
 
 [!DNL Assets view] Med kan du justera färg, ton, kontrast med mera med bara några klick. Klicka **[!UICONTROL Adjust image]** i redigeringsfönstret. Följande alternativ är tillgängliga på den högra sidopanelen:
 
@@ -67,7 +137,7 @@ Ange måtten och klicka på **[!UICONTROL Resize Image]** för att ändra storle
 TBD: Insert a video of the available social media options.
 -->
 
-## Nästa steg {#next-steps}
+### Nästa steg {#next-steps}
 
 * Ge produktfeedback med [!UICONTROL Feedback] alternativ som finns i användargränssnittet i resursvyn
 
