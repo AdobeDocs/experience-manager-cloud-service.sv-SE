@@ -2,9 +2,9 @@
 title: Översikt över Experience Fragments
 description: Bygg ut Adobe Experience Manager as a Cloud Service Experience Fragments.
 exl-id: bd4ea763-d17c-40a6-9a86-a24d7600229e
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 29d8d08899bb60b2bf3027ed32dbcdca3a73e671
 workflow-type: tm+mt
-source-wordcount: '1640'
+source-wordcount: '1646'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,8 @@ Till exempel:
 >[!NOTE]
 >
 >Länkar refererar alltid till publiceringsinstansen. De är avsedda att användas av tredje part, så länken anropas alltid från publiceringsinstansen, inte författarinstansen.
+>
+>Mer information finns på [Extern URL](/help/implementing/developing/tools/externalizer.md).
 
 ![Rendering HTML](assets/xf-14.png)
 
