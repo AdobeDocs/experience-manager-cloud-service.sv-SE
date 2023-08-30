@@ -2,9 +2,9 @@
 title: Meddelanden
 description: Lär dig hur du får information om pipeline-distributioner med hjälp av Adobe Experience Cloud meddelandesystem.
 exl-id: c1c740b0-c873-45a8-9518-a856db2be75b
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: d95b432f74a7b52efc9fd1cf0e380c3f5237503c
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Prenumerationer definierar för vilka produkter du får meddelanden och vilka me
 
 ![Meddelandeprenumerationer](assets/notifications-subscriptions.png)
 
-Som standard får du alla meddelanden för alla produkter. Klicka på **Anpassa** bredvid en produkt för att definiera de typer av meddelanden du får för den produkten.
+Som standard får du alla meddelanden för alla produkter både i programmet och via e-post. Klicka på nedtryckningen bredvid ett produktnamn för att visa de detaljerade alternativen och definiera de typer av meddelanden som du får för den produkten. Eller markera eller avmarkera alternativen på produktnivå för att markera/avmarkera alla alternativ för produkten.
 
 ![Anpassa prenumerationer på meddelanden](assets/notifications-subscriptions-customize.png)
 
