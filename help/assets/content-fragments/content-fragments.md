@@ -2,9 +2,9 @@
 title: Arbeta med innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans. Hur de kan användas tillsammans med MSM.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
-source-git-commit: 0706c4a466db1d360b27868e3ab5c320a3ba24f8
+source-git-commit: 9a7087979831ac08aed5f93df024f1c835a9fc08
 workflow-type: tm+mt
-source-wordcount: '2159'
+source-wordcount: '2171'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 * [Aktivera funktionen för innehållsfragment för din instans](/help/assets/content-fragments/content-fragments-configuration-browser.md)
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) - aktivera, skapa och definiera dina modeller
 * [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md) - skapa dina innehållsfragment och sedan redigera, publicera och referera
-* [Variationer - innehåll för redigeringsfragment](/help/assets/content-fragments/content-fragments-variations.md) - skapa fragmentinnehållet och skapa varianter av det Överordnad
+* [Variationer - innehåll för redigeringsfragment](/help/assets/content-fragments/content-fragments-variations.md) - skapa fragmentinnehållet och skapa varianter av mallsidan
 * [Markering](/help/assets/content-fragments/content-fragments-markdown.md) - med markeringssyntax för ditt fragment
 * [Använda associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) - lägga till associerat innehåll
 * [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md) - visa och redigera fragmentegenskaperna
@@ -114,7 +114,7 @@ Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta struktu
 
 Vid åtkomst via **Resurser** kan du använda MSM och skapa Live-kopior för dina fragment.
 
-Mer information finns i [Återanvänd innehållsfragment med MSM för resurser](/help/assets/reuse-assets-using-msm.md).
+Mer information finns i [Återanvänd innehållsfragment med MSM för resurser](/help/assets/reuse-assets-using-msm.md). Detta aktiverar [arv](/help/assets/content-fragments/content-fragments-variations.md#inheritance) för både variationer och enskilda fält i fragmenten.
 
 >[!CAUTION]
 >
@@ -234,23 +234,23 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
   >
   >Metadatabearbetningsprofiler gäller inte för innehållsfragment.
 
-* **Överordnad**
+* **Master**
 
    * En integrerad del av fragmentet
 
-      * Alla innehållsfragment har en instans av Överordnad.
-      * Det går inte att ta bort överordnad.
+      * Alla innehållsfragment har en instans av Master.
+      * Mallen kan inte tas bort.
 
-   * Överordnad är tillgängligt i fragmentredigeraren under **[Variationer](/help/assets/content-fragments/content-fragments-variations.md)**.
-   * Överordnad är inte en variation i sig, utan är grunden för alla variationer.
+   * Mallen är tillgänglig i fragmentredigeraren under **[Variationer](/help/assets/content-fragments/content-fragments-variations.md)**.
+   * Huvudet är inte en variation i sig, utan baserar alla variationer.
 
 * **Variationer**
 
    * Återgivning av fragmenttext som är specifik för redaktionella ändamål. Den kan vara relaterad till kanalen men är inte obligatorisk, men kan även användas för lokala ad hoc-ändringar.
-   * Skapas som kopior av **Överordnad**, men kan sedan redigeras efter behov. Normalt överlappas innehållet mellan själva variationerna.
+   * Skapas som kopior av **Master**, men kan sedan redigeras efter behov. Normalt överlappas innehållet mellan själva variationerna.
    * Kan definieras vid fragmentredigering.
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
-   * Variationer kan vara [synkroniserad](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med Överordnad om det Överordnad innehållet har uppdaterats.
+   * Variationer kan vara [synkroniserad](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med Master om mallinnehållet har uppdaterats.
    * Kan [Sammanfattad](/help/assets/content-fragments/content-fragments-variations.md#summarizing-text) för att snabbt korta av texten till en fördefinierad längd.
    * Tillgängligt under [Variationer](/help/assets/content-fragments/content-fragments-variations.md) i fragmentredigeraren.
 

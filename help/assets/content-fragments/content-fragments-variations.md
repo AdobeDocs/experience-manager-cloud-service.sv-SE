@@ -2,9 +2,9 @@
 title: Variationer - innehåll i redigeringsfragment (resurser - innehållsfragment)
 description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 exl-id: af05aae6-d535-4007-ba81-7f41213ff152
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 9a7087979831ac08aed5f93df024f1c835a9fc08
 workflow-type: tm+mt
-source-wordcount: '2435'
+source-wordcount: '2516'
 ht-degree: 8%
 
 ---
@@ -391,8 +391,33 @@ Det finns olika metoder att lägga till [bilder](/help/assets/content-fragments/
    >[!CAUTION]
    >
    Om du efter att ha lagt till en referens till ett annat fragment ändrar formatet till:
+   >
    * **Oformaterad text**: referensen tas bort helt från fragmentet.
    * **Markering**: referensen kvarstår.
+
+## Arv {#inheritance}
+
+Arv är den mekanism där innehåll automatiskt kan överföras från ett fragment till ett annat. Ärvda fält, och variationer, kan vara produkten av [Hantering av flera webbplatser](/help/assets/content-fragments/content-fragments.md#reusing-content-fragments-with-msm-assets).
+
+Du kan avbryta (och sedan återaktivera) arvet. Beroende på sammanhanget kan detta vara tillgängligt för en variation, eller ett enskilt fält, om fragmentet är en del av en live-kopia.
+
+![Ett innehållsfragment som visar arvsrelation](/help/assets/content-fragments/assets/cfm-variations-inheritance.png)
+
+Till exempel:
+
+* Avbryt arv
+
+  ![Knappen Avbryt arv](/help/assets/content-fragments/assets/editing-cancel-inheritance.png)
+
+* Återaktivera arv (om arv redan har avbrutits)
+
+  ![Återaktivera arv, knapp](/help/assets/content-fragments/assets/editing-reenable-inheritance.png)
+
+<!--
+* Rollout action is also available in Live Copy source
+
+  ![Rollout button](/help/assets/content-fragments/assets/editing-rollout.png)
+-->
 
 ## Hantera variationer {#managing-variations}
 
