@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Lär dig mer om lokal validering, felsökning, filstrukturen i flexibelt läge och hur du migrerar från äldre läge till flexibelt läge.
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: fccce4fed057b9cf20825bce043b3ec95c3a5ab8
 workflow-type: tm+mt
-source-wordcount: '2860'
+source-wordcount: '2988'
 ht-degree: 0%
 
 ---
@@ -107,6 +107,28 @@ Om du vill matcha den exakta värden eftersom du har flera värdfiler kan du fö
 </VirtualHost>
 ```
 
+* `conf.d/enabled_vhosts/<CUSTOMER_CHOICE>.vhost`
+
+Den här mappen innehåller relativa symboliska länkar till filer under conf.dispatcher.d/available_vhosts.
+
+Exempelkommandon som krävs för att skapa dessa symboliska länkar:
+
+Apple® macOS, Linux och WSL
+
+```
+ln -s ../available_vhosts/wknd.vhost wknd.vhost
+```
+
+Microsoft® Windows
+
+```
+mklink wknd.vhost ..\available_vhosts\wknd.vhost
+```
+
+>[!NOTE]
+>
+> När du arbetar med symboliska länkar under Windows bör du köra i en förhöjd kommandotolk, i Windows-undersystemet för Linux eller ha [Skapa symboliska länkar](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links) privilegium tilldelat.
+
 * `conf.d/rewrites/rewrite.rules`
 
 Filen inkluderas inifrån `.vhost` filer. Den har en uppsättning regler för omskrivning av `mod_rewrite`.
@@ -122,6 +144,28 @@ Filen inkluderas inifrån `dispatcher_vhost.conf` -fil. Du kan ändra Dispatcher
 * `conf.dispatcher.d/available_farms/<CUSTOMER_CHOICE>.farm`
 
 Du kan ha en eller flera av de här filerna och de innehåller grupper som matchar värdnamn och som gör att Dispatcher-modulen kan hantera varje grupp med olika regler. Filerna skapas i `available_farms` och aktiveras med en symbolisk länk i `enabled_farms` katalog. Från `.farm` filer, andra filer som filter, cacheregler och andra inkluderas.
+
+* `conf.dispatcher.d/enabled_farms/<CUSTOMER_CHOICE>.farm`
+
+Den här mappen innehåller relativa symboliska länkar till filer under conf.dispatcher.d/available_farm.
+
+Exempelkommandon som krävs för att skapa dessa symboliska länkar:
+
+Apple® macOS, Linux och WSL
+
+```
+ln -s ../available_farms/wknd.farm wknd.farm
+```
+
+Microsoft® Windows
+
+```
+mklink wknd.farm ..\available_farms\wknd.farm
+```
+
+>[!NOTE]
+>
+> När du arbetar med symboliska länkar under Windows bör du köra i en förhöjd kommandotolk, i Windows-undersystemet för Linux eller ha [Skapa symboliska länkar](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/create-symbolic-links) privilegium tilldelat.
 
 * `conf.dispatcher.d/cache/rules.any`
 
