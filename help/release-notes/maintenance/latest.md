@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 22ed74b307b9eb4c6c2f72ac2a34e2ab6d30a85c
+source-git-commit: bb7d8145eb954557d185b58f884532f8f08c5a54
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '286'
 ht-degree: 2%
 
 ---
@@ -23,12 +23,10 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 132
 
 - GRANITE-46784: Lägg till alternativ för att inaktivera BearerAuthenticationHandler
 - GRANITE-36205: Uppdatera den interna ekversionen till den senaste
-- GRANITE-47059: Ta bort Granite Jetty SSL Bundle
 - ASSETS-26713: Touch UI External Link to New Experience UI Dashboard - unified-shell-integration och UI-touch-optimerad uppgraderad
 - SKYOPS-63302: Uppgradera com.adobe.granite:com.adobe.granite.auth.saml till v1.0.54
 - GRANITE-46634: Uppgradera till Eventing client 1.4.0
-- GRANITE-46788: Uppdatera Apache Commons-bibliotek
-- GRANITE-29211: Uppdatera verktygen till Sling Feature Model 2.0
+- GRANITE-46788: Uppdatera bibliotek till Apache Commons IO 2.13.0, Commons Lang 3.13.0, Commons Code 1.16.0 och Commons Compress 1.23.0
 - GRANITE-46705: Uppdatering till Apache Felix HTTP Jetty 4.1.14
 - GRANITE-46631: Uppdatera Jackrabbit-version till 2.20.11
 - SKYOPS-61895: Uppdatera till Jackrabbit Filevault 3.7.0
@@ -41,6 +39,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 132
 - GRANITE-43744: Sling Authenticator fungerar inte korrekt om det finns en felkonfiguration med autentiseringskrav och vanity-sökväg
 - GRANITE-46419: AEM integreringsproblem med Auth0 IP
 - GRANITE-46292: Okta SAML-konfiguration fungerar inte efter AEM Cloud-uppdatering
+- GRANITE-47059: Ta bort Granite Jetty SSL Bundle
 
 ### Kända fel {#known-issues-13239}
 
