@@ -3,9 +3,9 @@ title: Validera och felsöka med Dispatcher Tools
 description: Lär dig mer om lokal validering, felsökning, filstrukturen i flexibelt läge och hur du migrerar från äldre läge till flexibelt läge.
 feature: Dispatcher
 exl-id: 9e8cff20-f897-4901-8638-b1dbd85f44bf
-source-git-commit: fccce4fed057b9cf20825bce043b3ec95c3a5ab8
+source-git-commit: 4a79284d879af1920c839a68be14619d1e35f7e9
 workflow-type: tm+mt
-source-wordcount: '2988'
+source-wordcount: '2990'
 ht-degree: 0%
 
 ---
@@ -113,13 +113,13 @@ Den här mappen innehåller relativa symboliska länkar till filer under conf.di
 
 Exempelkommandon som krävs för att skapa dessa symboliska länkar:
 
-Apple® macOS, Linux och WSL
+Apple macOS, Linux och WSL
 
 ```
 ln -s ../available_vhosts/wknd.vhost wknd.vhost
 ```
 
-Microsoft® Windows
+Microsoft Windows
 
 ```
 mklink wknd.vhost ..\available_vhosts\wknd.vhost
@@ -151,13 +151,13 @@ Den här mappen innehåller relativa symboliska länkar till filer under conf.di
 
 Exempelkommandon som krävs för att skapa dessa symboliska länkar:
 
-Apple® macOS, Linux och WSL
+Apple macOS, Linux och WSL
 
 ```
 ln -s ../available_farms/wknd.farm wknd.farm
 ```
 
-Microsoft® Windows
+Microsoft Windows
 
 ```
 mklink wknd.farm ..\available_farms\wknd.farm
