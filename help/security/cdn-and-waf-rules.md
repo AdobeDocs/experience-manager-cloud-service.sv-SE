@@ -1,7 +1,7 @@
 ---
 title: Konfigurera CDN- och WAF-regler för att filtrera trafik
 description: Använd reglerna för brandvägg för CDN och webbaserade program för att filtrera skadlig trafik
-source-git-commit: 0f1ee0ec5fc2d084a6dfdc65d15a8497c23f11a2
+source-git-commit: 27165ce7d6259f5b5fc9915349d87f551076389e
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 0%
@@ -265,7 +265,7 @@ Exempel 1: Om begärandehastigheten överstiger 100 begäranden per sekund under
 
 ```
 - name: rate-limit-example
-  when: { reqProperty: /critical/resource }
+  when: { reqProperty: path, equals: /critical/resource }
   action: block
   rateLimit: { limit: 100, window: 60, penalty: 60 }
 ```
@@ -274,7 +274,7 @@ Exempel 2: När begärandehastigheten överstiger 10 begäranden per sekund på 
 
 ```
 - name: rate-limit-using-defaults
-  when: { reqProperty: /critical/resource }
+  when: { reqProperty: path, equals: /critical/resource }
   action: block
   rateLimit:
     limit: 10
