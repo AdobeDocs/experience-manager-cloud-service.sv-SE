@@ -7,7 +7,7 @@ content-type: reference
 feature: Accessibility
 role: Admin,User
 exl-id: f8d2dcbf-f61a-4b27-a3fc-406e3662adcb
-source-git-commit: 0d3262a3182063e69f764339e7937e2f83ad7bbb
+source-git-commit: 483a72f67f361023ebeefa3d74ec9f35a5f4f765
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 0%
@@ -16,16 +16,16 @@ ht-degree: 0%
 
 # Tillgänglighet i Dynamic Media {#accessibility-in-dm}
 
-Dynamic Media har stöd för tangentbordskontroll och hjälpmedelstekniker som JAWS och NVDA-skärmläsare i hela användargränssnittet.
+Dynamic Media har stöd för tangentbordskontroll och hjälpmedelstekniker, som JAWS och NVDA-skärmläsare, i hela användargränssnittet.
 
 ## Stöd för tangentbordstillgänglighet i Dynamic Media {#keyboard-support-in-dm}
 
 Eftersom Dynamic Media är ett plugin-program till [!DNL Experience Manager Assets], är det mesta av tangentbordskontrollen densamma som i [!DNL Experience Manager Assets]. Till exempel `Cancel` i Dynamic Media har samma fokus som i [!DNL Experience Manager Assets]. Den reagerar också på `Spacebar` tangent as in [!DNL Experience Manager Assets]. Se [kortkommandon i Resurser](/help/assets/accessibility.md#keyboard-shortcuts).
 
-Tangenttryckningar som stöds av enskilda element i användargränssnittet i Dynamic Media är i de flesta fall enkla att hitta. Tangentbordskontrollen i Dynamic Media handlar om följande:
+Tangenttryckningar som stöds av enskilda element i användargränssnittet i Dynamic Media är i de flesta fall enkla att hitta. Keyboard control in Dynamic Media is about the following:
 
 * Möjlighet att använda `Tab` och `Shift+Tab` tangenttryckningar för att navigera mellan interaktiva element på sidan.
-Använda `Tab` flyttar indatafokus till nästa element i användargränssnittet i tabbordningen, använda `Shift+Tab` återför indatafokus till föregående element i användargränssnittet.
+Använda `Tab` flyttar indatafokus till nästa element i användargränssnittet i tabbordningen, med `Shift+Tab` återför indatafokus till det föregående elementet i användargränssnittet.
 Fokusförflyttningen följer det naturliga elementet i användargränssnittet på skärmen och flyttas från vänster till höger och sedan uppifrån och ned. Om ett fält innehåller ett fel kan du dessutom trycka på `Tab` för att flytta fokus till den.
 * Möjlighet att använda `Spacebar` och `Enter` om du vill aktivera standardelement i användargränssnittet, till exempel knappar och nedrullningsbara listor.
 * Möjlighet att se fokus på tangentbordet på det aktiva elementet. Det element i användargränssnittet som har indatafokus fick en visuell fokusindikation som en kantlinje som renderades runt elementet i användargränssnittet.
@@ -34,12 +34,12 @@ Fokusförflyttningen följer det naturliga elementet i användargränssnittet p�
 * I redigeraren för bildbeskärning/smart beskärning kan du göra följande:
    * Använd piltangenterna för att beskära bildrutestorleken, flytta bilden eller båda.
    * Den första `Tab` högdagrar hela bildramen. Du kan sedan använda piltangenterna på tangentbordet för att flytta ramen.
-   * De kommande fyra `Tab` stopp är ramens fyra hörn. När fokus placeras i ett ramhörn markeras hörnet. Återigen kan du använda piltangenterna på tangentbordet för att flytta det fokuserade hörnet.
+   * De kommande fyra `Tab` stopp är ramens fyra hörn. När fokus placeras på ett ramhörn markeras hörnet. Återigen kan du använda piltangenterna på tangentbordet för att flytta det fokuserade hörnet.
 Se [Redigera den smarta beskärningen eller smarta färgrutan för en enskild bild](/help/assets/dynamic-media/image-profiles.md#editing-the-smart-crop-or-smart-swatch-of-a-single-image)
 
 <!-- Keyboarding is the same because Dynamic Media is using the same UI library (Coral 3 (Experience Manager 6.5) or Coral Spectrum (in Skyline)) as entire Experience Manager Assets.  -->
 
-<!-- In the Hotspot editor, Dynamic Media lets you use arrow keys to control the position of a hot spot. See [Carousel Banners](/help/assets/dynamic-media/carousel-banners.md##adding-hotspots-or-image-maps-to-an-image-banner) or [Interactive Images](/help/assets/dynamic-media/interactive-images.md#adding-hotspots-to-an-image-banner)  -->
+<!-- In the Hotspot editor, Dynamic Media lets you use arrow keys to control the position of a hot spot. See [Carousel Banners](/help/assets/dynamic-media/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner) or [Interactive Images](/help/assets/dynamic-media/interactive-images.md#adding-hotspots-to-an-image-banner)  -->
 
 <!-- I think we should definitely mention this in the DM-specific area of documentation for keyboard support. -->
 
@@ -58,7 +58,7 @@ Se [Tangentbordstillgänglighet och -navigering](https://experienceleague.adobe.
 ## Stöd för hjälpfunktioner i visningsprogram för Dynamic Media {#assistive-technology=support-for-dm-viewers}
 
 Alla Dynamic Media-visningsprogramkomponenter har stöd för ARIA-roller (Accessible Rich Internet Applications) och -attribut för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
-Se **Teknikstöd** Hjälpavsnitt om hur du anpassar visningsprogramavsnitt i referenshandboken för Dynamic Media Viewer. Se till exempel [Teknikstöd](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer, eller [Teknikstöd](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only) för Interactive Image Viewer.
+Se **Stöd för hjälpmedel** Hjälpavsnitt om hur du anpassar visningsprogramavsnitt i referenshandboken för Dynamic Media Viewer. Se till exempel [Stöd för hjälpmedel](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html) för Video Viewer, eller [Stöd för hjälpmedel](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html#viewers-for-aem-assets-only) för interaktiv bildvisning.
 
 ## Stöd för undertexter i [!DNL Dynamic Media] {#closed-caption-support}
 
@@ -71,4 +71,3 @@ Se [Video i Dynamic Media - Lägg in undertexter i videon](/help/assets/dynamic-
 >
 >* [Tillgänglighet för Adobe-lösningar](https://www.adobe.com/accessibility.html)
 >* [Tillgänglighet i Experience Manager Assets](/help/assets/dynamic-media/accessibility-dm.md)
-
