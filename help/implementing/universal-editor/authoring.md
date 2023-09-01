@@ -2,7 +2,7 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: f28b8a85de76a1658ef45c509cbf5600baa1bb3a
+source-git-commit: 4cf7d3692b53e5cb5baecd7d0ee93824d9186380
 workflow-type: tm+mt
 source-wordcount: '2267'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Den här ikonen är märkt med antalet tilldelade ofullständiga [meddelanden.](
 
 #### Användaregenskaper {#user-properties}
 
-Tryck eller klicka på ikonen som representerar användaren för att få åtkomst till dina användarinställningar. Om du inte har konfigurerat någon användarbild tilldelas ikonen slumpmässigt.
+Tryck eller klicka på ikonen som representerar användaren för att få åtkomst till dina användarinställningar. Om ingen användarbild är konfigurerad tilldelas en ikon slumpmässigt.
 
 ![Användaregenskaper](assets/user-properties.png)
 
@@ -312,23 +312,23 @@ Om du är [textläge](#text-mode) och väljer en oformaterad textkomponent kan d
 
 ![Redigera innehåll](assets/editing-content.png)
 
-Skriv bara för att uppdatera innehållet. Tryck på Enter eller tryck eller klicka utanför textrutan för att spara ändringarna.
+Det är bara att skriva för att uppdatera innehållet. Tryck på Enter/Retur eller tryck eller klicka utanför textrutan för att spara ändringarna.
 
 ### Redigera RTF {#edit-rich-text}
 
-Om du är [textläge](#text-mode) och markerar en RTF-komponent kan du redigera texten på plats.
+Om du är i [textläge](#text-mode) och markerar en RTF-komponent kan du redigera texten på plats.
 
-Skriv bara för att uppdatera innehållet. Tryck på Enter eller tryck eller klicka utanför textrutan för att spara ändringarna.
+Det är bara att skriva för att uppdatera innehållet. Tryck på Enter/Retur eller tryck eller klicka utanför textrutan för att spara ändringarna.
 
-Dessutom är formateringsalternativ och information på texten tillgängliga i komponentspåret.
+Dessutom finns formateringsalternativ och information på texten i komponentlisten.
 
 ![Redigera en RTF-komponent](assets/rich-text-editing.png)
 
-Formateringsändringar sparas automatiskt i innehållet.
+Formateringsändringarna sparas automatiskt i ditt innehåll.
 
 ### Redigera media {#edit-media}
 
-Om du är [medieläge](#media-mode) och du markerar en bild kan du visa information om den i komponenträlen.
+Om du är i [medieläge](#media-mode) när du markerar en bild kan du visa dess detaljer i komponentlisten.
 
 ![Redigera media](assets/ue-edit-media.png)
 
@@ -346,7 +346,7 @@ Tryck eller klicka på **Ersätt** under förhandsgranskningen av den markerade 
 
 ### Redigera innehållsfragment {#edit-content-fragment}
 
-Om du är [komponentläge](#component-mode) och du väljer [Innehållsfragment,](/help/assets/content-fragments/content-fragments.md) du kan redigera informationen i komponenterna.
+Om du är [komponentläge](#component-mode) och du väljer [Innehållsfragment,](/help/sites-cloud/administering/content-fragments/overview.md) du kan redigera informationen i komponenterna.
 
 ![Redigera ett innehållsfragment](assets/ue-edit-cf.png)
 
@@ -354,7 +354,7 @@ De fält som definieras i innehållsmodellen för det valda innehållsfragmentet
 
 Ändringarna sparas automatiskt i innehållet.
 
-Om du vill redigera ditt innehållsfragment i dialogrutan [Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) i stället klickar du på [redigeringsknapp](#edit) i lägesrälen.
+Om du vill redigera ditt innehållsfragment i dialogrutan [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md) i stället klickar du på [redigeringsknapp](#edit) i lägesrälen.
 
 ### Lägga till komponenter i behållare {#adding-components}
 
