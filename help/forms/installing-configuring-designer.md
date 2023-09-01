@@ -1,9 +1,9 @@
 ---
 title: Hämta och installera Forms Designer
 description: Du kan använda Forms Designer för att skapa XDP- och PDF-formulärmallar som fungerar som mall för ett dokument för registrering. Designer är tillgängligt med [!DNL AEM Forms] licens.
-source-git-commit: 34d966f6550cb9e507c751b580b16a3043137255
+source-git-commit: a22c21ba05e72c1bf18c56df72b7e3c7c62edc0c
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ För att kunna installera den senaste versionen av AEM Forms Designer, 64-bitars
 
 +++ 64-bitars Designer (rekommenderas)
 
-* Avinstallera 32-bitarsversionen av Designer innan du installerar 64-bitarsversionen av Forms Designer.
+* Innan du installerar 64-bitarsversionen av Forms Designer avinstallerar du 32-bitarsversionen av Designer.
 * [!DNL Microsoft® Windows® 2016 Server] eller [!DNL Microsoft® Windows® 2019 Server]och [!DNL Microsoft® Windows® 10]
 * Minst 2 GB RAM
 * 20 GB diskutrymme
