@@ -6,10 +6,10 @@ mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: 5b61b60a94b944a747232b238c3ce48195a5a212
+source-git-commit: c63f621f2526f05c8555acdac77a4c05a473c95d
 workflow-type: tm+mt
-source-wordcount: '4347'
-ht-degree: 10%
+source-wordcount: '4320'
+ht-degree: 9%
 
 ---
 
@@ -121,19 +121,18 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 1. Om du vill schemalägga ett visst datum/tid för att aktivera resursen använder du datumväljaren bredvid fältet **[!UICONTROL On Time]**.
 
-   ![chlimage_1-217](assets/chlimage_1-217.png)
+   ![Datumväljaren](assets/date-picker.png)
 
 1. Om du vill inaktivera tillgången efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid **[!UICONTROL Off Time]** fält. Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Off Time], är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet Resurser eller via HTTP-API:t.
 
-   ![chlimage_1-218](assets/chlimage_1-218.png)
-
+   <!--![chlimage_1-218](assets/chlimage_1-218.png)
 1. I **[!UICONTROL Tags]** markerar du en eller flera taggar. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och markerar `Enter` -tangenten. Den nya taggen sparas i [!DNL Experience Manager].
 
    YouTube kräver att taggar ska publiceras och ha en länk till YouTube (om en lämplig länk finns).
 
    >[!NOTE]
    >
-   >Om du vill skapa taggar måste du ha skrivbehörighet på `/content/cq:tags/default` sökväg i CRX-databasen.
+   > Om du vill skapa taggar måste du ha skrivbehörighet på `/content/cq:tags/default` sökväg i CRX-databasen.
 
 1. Tryck/klicka på **[!UICONTROL Save & Close]**.
 
@@ -181,7 +180,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. Klicka på **[!UICONTROL Paste]** resursikonen i verktygsfältet. Resurser kopieras till den här platsen.
 
-   ![chlimage_1-219](assets/chlimage_1-219.png)
+   <!--![chlimage_1-219](assets/chlimage_1-219.png)-->
 
    >[!NOTE]
    >
@@ -229,7 +228,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 1. Tryck/klicka på resursen för att öppna sidan för resursen.
 
-   ![chlimage_1-220](assets/chlimage_1-220.png)
+   <!--![chlimage_1-220](assets/chlimage_1-220.png)-->
 
 1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Renditions]** från listan.
 
@@ -255,7 +254,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    Navigera till sidan med resursinformation för resursen och tryck/klicka på ikonen **[!UICONTROL Add Rendition]** i verktygsfältet för att överföra en ny återgivning för resursen.
 
-   ![chlimage_1-221](assets/chlimage_1-221.png)
+   <!--![chlimage_1-221](assets/chlimage_1-221.png)-->
 
    >[!NOTE]
    >
@@ -267,7 +266,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    På samma sätt kan du anpassa anteckningssidans bild genom att lägga över `libs/dam/gui/content/assets/annotate/jcr:content/body/content/content/items/content/renditionpicker`.
 
-   ![chlimage_1-222](assets/chlimage_1-222.png)
+   <!--![chlimage_1-222](assets/chlimage_1-222.png)-->
 
    Om du vill konfigurera återgivningsdimensioner för en videoresurs går du till `videopicker` nod i CRX-databasen på platsen `/libs/dam/gui/content/assets/assetpage/jcr:content/body/content/content/items/assetdetail/items/col1/items/assetview/videopicker`, lägg över noden och redigera sedan lämplig egenskap.
 
@@ -451,11 +450,11 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
    * [Snabbåtgärder](#quick-actions)
    * Från verktygsfältet när du har valt resursen eller navigerat till resurssidan
 
-   ![chlimage_1-233](assets/chlimage_1-233.png)
+   <!--![chlimage_1-233](assets/chlimage_1-233.png)-->
 
 1. Lägg till en kommentar i rutan **[!UICONTROL Comment]** längst ned på tidslinjen. Du kan också markera ett område i bilden och lägga till en anteckning i dialogrutan **[!UICONTROL Add Annotation]**.
 
-   ![chlimage_1-234](assets/chlimage_1-234.png)
+<!-- ![chlimage_1-234](assets/chlimage_1-234.png)-->
 
 <!--
 1. To notify a user about an annotation, specify the email address of the user and add the comment. For example, to notify Aaron MacDonald about an annotation, enter @aa. Hints for all matching users is displayed in a list. Select Aaron's email address from the list to tag her with the comment. Similarly, you can tag more users anywhere within the annotation or before or after it.
@@ -465,11 +464,11 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 >
 >För användare som inte är administratörer visas endast förslag om användaren har läsbehörighet på `/home` i CRXDE.
 
-![chlimage_1-235](assets/chlimage_1-235.png)
+<!--![chlimage_1-235](assets/chlimage_1-235.png)-->
 
 1. När du har lagt till anteckningen klickar du på **[!UICONTROL Add]** för att spara den. Ett meddelande om anteckningen skickas till Aaron.
 
-   ![chlimage_1-236](assets/chlimage_1-236.png)
+   <!--![chlimage_1-236](assets/chlimage_1-236.png)-->
 
    >[!NOTE]
    >
@@ -484,11 +483,11 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
 1. Om du vill välja en annan färg så att du kan skilja på användarna klickar/trycker du på profilikonen och klickar/trycker **[!UICONTROL My Preferences]**.
 
-   ![chlimage_1-237](assets/chlimage_1-237.png)
+   <!--![chlimage_1-237](assets/chlimage_1-237.png)-->
 
    Ange önskad färg i rutan **[!UICONTROL Annotation Color]** och klicka/tryck sedan på **[!UICONTROL Accept]**.
 
-   ![chlimage_1-238](assets/chlimage_1-238.png)
+<!-- ![chlimage_1-238](assets/chlimage_1-238.png)-->
 
 >[!NOTE]
 >
@@ -508,15 +507,15 @@ Du kan bara visa en anteckning åt gången.
 
 1. Tryck/klicka på ikonen GlobalNav och välj **[!UICONTROL Timeline]** från listan.
 
-   ![chlimage_1-239](assets/chlimage_1-239.png)
+   <!--![chlimage_1-239](assets/chlimage_1-239.png)-->
 
 1. I listan **[!UICONTROL Show All]** på tidslinjen väljer du **[!UICONTROL Comments]** för att filtrera resultatet baserat på kommentarer.
 
-   ![chlimage_1-240](assets/chlimage_1-240.png)
+   <!--![chlimage_1-240](assets/chlimage_1-240.png)-->
 
    Tryck/klicka på en kommentar i **[!UICONTROL Timeline]** för att visa motsvarande anteckning i bilden.
 
-   ![chlimage_1-241](assets/chlimage_1-241.png)
+   <!--![chlimage_1-241](assets/chlimage_1-241.png)-->
 
    Tryck/klicka **[!UICONTROL Delete]**, om du vill ta bort en viss kommentar.
 
@@ -540,29 +539,29 @@ Tryck/klicka på knappen **[!UICONTROL Print]** och följ instruktionerna i guid
 
 1. Om du vill skriva ut särskilda anteckningar väljer du anteckningarna på tidslinjen.
 
-   ![chlimage_1-242](assets/chlimage_1-242.png)
+   <!--![chlimage_1-242](assets/chlimage_1-242.png)-->
 
    Om du bara vill skriva ut granskningsstatusen markerar du den på tidslinjen.
 
-   ![chlimage_1-243](assets/chlimage_1-243.png)
+   <!--![chlimage_1-243](assets/chlimage_1-243.png)-->
 
 1. Tryck/klicka på ikonen **[!UICONTROL Print]** i verktygsfältet.
 
-   ![chlimage_1-244](assets/chlimage_1-244.png)
+   <!--![chlimage_1-244](assets/chlimage_1-244.png)-->
 
 1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas på PDF. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du **Övre vänster** inställning. Det är markerat som standard.
 
-   ![chlimage_1-245](assets/chlimage_1-245.png)
+   <!--![chlimage_1-245](assets/chlimage_1-245.png)-->
 
    Du kan välja andra inställningar beroende på var du vill att anteckningarna/statusen ska visas i den utskrivna PDF-filen. Om du vill att anteckningarna/statusen ska visas på en sida som är skild från den utskrivna resursen väljer du **[!UICONTROL Next Page]**.
 
 1. Klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
 
-   ![chlimage_1-246](assets/chlimage_1-246.png)
+   <!--![chlimage_1-246](assets/chlimage_1-246.png)-->
 
 1. Hämta eller skriv ut PDF med alternativen längst upp till höger.
 
-   ![chlimage_1-247](assets/chlimage_1-247.png)
+   <!--![chlimage_1-247](assets/chlimage_1-247.png)-->
 
    Om du vill ändra utseendet på den återgivna PDF-filen, till exempel teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** från Configuration Manager och ändra önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg för anteckningar finns i [Anteckningar](/help/assets/manage-digital-assets.md#annotating).
 
@@ -594,15 +593,15 @@ Versionsfunktionen gör följande:
 
 1. Tryck/klicka på **[!UICONTROL Actions]** (pil) längst ned för att visa de tillgängliga åtgärder du kan utföra på resursen.
 
-   ![chlimage_1-249](assets/chlimage_1-249.png)
+   <!--![chlimage_1-249](assets/chlimage_1-249.png)-->
 
 1. Tryck/klicka **[!UICONTROL Save as Version]** för att skapa en version för resursen.
 
-   ![chlimage_1-250](assets/chlimage_1-250.png)
+<!--![chlimage_1-250](assets/chlimage_1-250.png)-->
 
 1. Lägg till en etikett och kommentar och klicka sedan på **[!UICONTROL Create]** för att skapa en version. Du kan också trycka/klicka **Avbryt** för att avsluta åtgärden.
 
-   ![chlimage_1-251](assets/chlimage_1-251.png)
+   <!--![chlimage_1-251](assets/chlimage_1-251.png)-->
 
 1. Om du vill visa den nya versionen öppnar du listan **[!UICONTROL Show All]** på tidslinjen från sidan med resursinformation eller från Assets-gränssnittet och väljer **[!UICONTROL Versions]**. Alla versioner som skapas för en resurs visas på fliken Tidslinje. Du kan filtrera listan så att olika versioner visas genom att klicka på listrutepilen och välja **[!UICONTROL Versions]** i listan.
 
@@ -635,23 +634,23 @@ Versionsfunktionen gör följande:
 
 1. Tryck/klicka på **[!UICONTROL Actions]** (pil) längst ned för att öppna en lista med tillgängliga åtgärder för resursen.
 
-   ![chlimage_1-252](assets/chlimage_1-252.png)
+   <!--![chlimage_1-252](assets/chlimage_1-252.png)-->
 
 1. Tryck/klicka **[!UICONTROL Start Workflow]** från listan.
 
-   ![chlimage_1-253](assets/chlimage_1-253.png)
+   <!--![chlimage_1-253](assets/chlimage_1-253.png)-->
 
 1. I **[!UICONTROL Start Workflow]** väljer du en arbetsflödesmodell i listan.
 
-   ![chlimage_1-254](assets/chlimage_1-254.png)
+   <!--![chlimage_1-254](assets/chlimage_1-254.png)-->
 
 1. (Valfritt) Ange en rubrik för arbetsflödet som kan användas som referens för arbetsflödesinstansen.
 
-   ![chlimage_1-255](assets/chlimage_1-255.png)
+   <!--![chlimage_1-255](assets/chlimage_1-255.png)-->
 
 1. Tryck/klicka på **[!UICONTROL Start]** och sedan på **[!UICONTROL Proceed]** i dialogrutan för att bekräfta. Varje steg i arbetsflödet visas på tidslinjen som en händelse.
 
-   ![chlimage_1-256](assets/chlimage_1-256.png)
+   <!--![chlimage_1-256](assets/chlimage_1-256.png)-->
 
 ## Samlingar {#collections}
 
