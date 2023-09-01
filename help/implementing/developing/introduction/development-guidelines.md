@@ -2,7 +2,7 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 5a60c491db4a182529a2c4b6490b18b356c14fa7
+source-git-commit: 5aa4a049bc6a69f161ad04d2a64ab0871e672432
 workflow-type: tm+mt
 source-wordcount: '2746'
 ht-degree: 1%
@@ -98,8 +98,6 @@ Omvänd replikering från Publicera till Författare stöds inte i AEM as a Clou
 
 Innehållet replikeras från författare till publicering via en pub-sub-mekanism. Anpassade replikeringsagenter stöds inte.
 
-## Övervakning och felsökning {#monitoring-and-debugging}
-
 ## Inga överbelastade utvecklingsmiljöer {#overloading-dev-envs}
 
 Produktionsmiljöerna storleksanpassas högre för att säkerställa stabil drift, medan scenmiljöer storleksförändras som produktionsmiljöer för att säkerställa realistisk testning under produktionsförhållanden.
@@ -107,6 +105,8 @@ Produktionsmiljöerna storleksanpassas högre för att säkerställa stabil drif
 Utvecklingsmiljöer och Rapid Dev-miljöer bör begränsas till utveckling, felanalys och funktionstester, och är inte utformade för att bearbeta stora arbetsbelastningar eller stora mängder innehåll.
 
 Om du till exempel ändrar en indexdefinition i en databas med stort innehåll i en Dev-miljö kan det leda till omindexering, vilket resulterar i för mycket bearbetning. Tester som kräver omfattande innehåll bör köras på scenmiljöer.
+
+## Övervakning och felsökning {#monitoring-and-debugging}
 
 ### Loggar {#logs}
 
