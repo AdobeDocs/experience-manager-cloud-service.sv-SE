@@ -2,9 +2,9 @@
 title: New Relic One
 description: Läs mer om New Relic One APM-tjänst (Application Performance Monitoring) för AEM as a Cloud Service och hur du kan komma åt den.
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
-source-git-commit: 1608a44b8c9b5ae6bd75307ecb29dcd8f0ff367f
+source-git-commit: 8ce7c26c6552c77bc845f76a805768a931b9d532
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1627'
 ht-degree: 0%
 
 ---
@@ -169,6 +169,10 @@ Obs!
 * Varje program använder en licensnyckel.
 * AEM as a Cloud Service miljöer rapporterar till endast ett New Relic One-konto.
 * Full övervakning av mätvärden och händelser för båda New Relic One bevaras i sju dagar.
+
+### Skickar Adobe varningsmeddelanden från New Relic One? {#alerting-new-relic}
+
+Adobe ger åtkomst till New Relic One endast i observationssyfte och använder det inte för kundvarningar eller interna varningar. Meddelanden om incidenter skickas med [profiler för användarmeddelanden.](/help/journey-onboarding/notification-profiles.md)
 
 ### Vem har åtkomst till New Relic One molntjänstdata? {#access-new-relic-cloud}
 
