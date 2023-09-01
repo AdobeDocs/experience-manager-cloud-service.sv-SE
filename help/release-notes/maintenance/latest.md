@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 370d5742065d659f32ec1ff4d4b0fc0a153f71c2
+source-git-commit: 288f871b75e68fdbca1244099e490408ea66ff40
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '316'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 1332
 - SKYOPS-63290: Korrigerad felaktig utveckling av bucklor.
 - SKYOPS-54607: Beräkningen av Ratelimiter-serverinläsningen är inte korrekt för en misslyckad begäran.
 - ASSETS-27648: ContentModelIT kan inte läsa exkluderingsfiler från andra paket.
-- GRANITE-43744: Sling Authenticator fungerar inte korrekt om det finns en felkonfiguration med autentiseringskrav och vanlighetssökväg.
+- GRANITE-43744: Sling Authenticator fungerar inte korrekt om det finns en felkonfiguration med autentiseringskrav och vanity-sökväg.
 - GRANITE-46419: AEM integreringsproblem med Auth0 IdP.
 - GRANITE-46292: Okta SAML-konfiguration fungerar inte efter AEM Cloud-uppdatering.
 - GRANITE-47059: Ta bort Granite Jetty SSL Bundle.
