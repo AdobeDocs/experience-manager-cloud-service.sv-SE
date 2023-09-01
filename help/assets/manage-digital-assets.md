@@ -6,9 +6,9 @@ mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: c63f621f2526f05c8555acdac77a4c05a473c95d
+source-git-commit: 2f3845495b545f88a1bc5a5feef1a6312f679a26
 workflow-type: tm+mt
-source-wordcount: '4320'
+source-wordcount: '4340'
 ht-degree: 9%
 
 ---
@@ -91,6 +91,11 @@ Så här extraherar du ZIP-filerna:
 1. Klicka på **[!UICONTROL Extract]**. Zippextraheringsprocessen startar. När processen är klar kan du visa de extraherade resurserna i målmappen.
 
    ![ZIP-extrahering](assets/zip-extraction.png)
+
+>[!NOTE]
+>
+>* ZIP-filstorleken som stöds är 15 GB.
+>* Du kan extrahera högst tre ZIP-filer åt gången.
 
 ## Förhandsgranska resurser {#previewing-assets}
 
