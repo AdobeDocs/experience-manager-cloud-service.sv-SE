@@ -3,8 +3,11 @@ title: Variationer – redigera innehållsfragment
 description: Förstå hur variationer gör att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte. Detta ger större flexibilitet för både headless-leverans och redigering av sidor.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: f2f28207-3e14-4cf4-acce-c6cf32231e05
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '2458'
 ht-degree: 7%
@@ -12,6 +15,12 @@ ht-degree: 7%
 ---
 
 # Variationer – redigera innehållsfragment{#variations-authoring-fragment-content}
+
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
 
 [Variationer](/help/sites-cloud/administering/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap hos AEM innehållsfragment, eftersom de gör det möjligt att skapa och redigera kopior av huvudinnehållet för användning i specifika kanaler och/eller scenarier, vilket gör både sidredigering och innehållsleverans utan rubrik ännu mer flexibel.
 

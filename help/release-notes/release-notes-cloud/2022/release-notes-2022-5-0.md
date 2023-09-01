@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.5.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1b867582-e34c-435b-b8f8-fc71dddcaccb
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.5.0-versionen av [!
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.5.0-versionen av [!
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.5.0) är 9 juni 2022.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.5.0) är 9 juni 2022.
 Nästa version (2022.6.0) är planerad till 30 juni 2022.
 
 ## Släpp video {#release-video}
@@ -37,7 +37,7 @@ Titta på videon om versionsöversikten från maj 2022 om du vill se en sammanfa
 ### Nya funktioner i [!DNL Sites] prerelease channel {#prerelease-features-sites}
 
 * Olika GraphQL-funktioner
-* A [ny konsol](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) optimerad för Headless-användning av Content Fragments
+* A [ny konsol](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) optimerad för Headless-användning av Content Fragments
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
@@ -56,7 +56,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
-* **Integrera adaptiv Forms med Microsoft® Power Automate**: Nu kan du konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden.
+* **Integrera adaptiv Forms med Microsoft® Power Automate**: Du kan nu konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden.
 
 * **Guide för att skapa ett adaptivt formulär**: Du kan använda en användarvänlig guide för att snabbt skapa Adaptiv Forms. Guiden ger dig en snabb fliknavigering så att du enkelt kan välja förkonfigurerade mallar, format, fält och alternativ för att skicka formulär för att skapa ett anpassat formulär.
 
@@ -64,20 +64,20 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner hittills [skilja 
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
 * Snabb åtkomst till produktcockpit: Få enkelt tillgång till detaljerad produktinformation med ett enda klick i Sites Editor
 
   ![Aktivera önskelista](/help/assets/CIF/enable-wishlist.png)
 
-* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett anrop till åtgärd för tillägg i varukorgen och tilläggslistan
+* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett tillägg i en kundvagn och tillägg i en önskelista som anropar till en åtgärd
 
   ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### Vad är nytt? {#what-is-new-foundation}
+### Nyheter {#what-is-new-foundation}
 
 * Alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **Fliken Distribuera**, som tidigare meddelats som borttagen, togs bort den 20 juni 2022 eller snart därefter. Paket med en trädhierarki av innehåll bör i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflödet Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow).
 

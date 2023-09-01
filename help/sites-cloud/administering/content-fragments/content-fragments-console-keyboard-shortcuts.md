@@ -3,8 +3,11 @@ title: Kortkommandon för konsolen Innehållsfragment
 description: Olika kortkommandon finns i hela AEM, bland annat för hantering av innehållsfragment
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: fe6ea615-43aa-41cd-a21c-50d855084154
-source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -12,6 +15,12 @@ ht-degree: 0%
 ---
 
 # Kortkommandon för konsolen Innehållsfragment {#keyboard-shortcuts-content-fragments-console}
+
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
 
 Det finns ett urval kortkommandon som kan användas i konsolen Innehållsfragment.
 
@@ -25,7 +34,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när [redigera sidor](/help/
 
 >[!NOTE]
 >
->Kortkommandona är inte skiftlägeskänsliga,
+>Kortkommandona är skiftlägesokänsliga,
 
 | Plats | Genväg | Beskrivning |
 |---|---|---|

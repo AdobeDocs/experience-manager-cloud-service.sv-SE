@@ -3,8 +3,11 @@ title: Hantera innehållsfragment
 description: Lär dig hur du använder konsolen Innehållsfragment för att hantera AEM innehållsfragment, för sidredigering eller som bas för rubrikfritt innehåll.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: fc4497cb-85ac-4d2d-aca4-588541266f0b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '2051'
 ht-degree: 0%
@@ -12,6 +15,12 @@ ht-degree: 0%
 ---
 
 # Hantera innehållsfragment {#managing-content-fragments}
+
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
 
 Lär dig använda **Innehållsfragment** för att hantera AEM. Dessa kan användas för att skapa sidor eller som bas för ditt headless-innehåll.
 

@@ -2,7 +2,7 @@
 title: Valfritt - Så här skapar du enkelsidiga program (SPA) med Adobe Experience Manager (AEM)
 description: I den här valfria fortsättningen av den AEM Headless Developer Journey får du lära dig hur AEM kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA.
 exl-id: d74848f2-683e-49e1-9374-32596ca5d7d7
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '1266'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Den här artikeln bygger på dina kunskaper om AEM Headless genom att ingående 
 
 Det här dokumentet hjälper dig att förstå hur Single Page-program utvecklas med AEM ramverk för SPA. När du har läst det här dokumentet bör du:
 
-* Förstå den grundläggande funktionen i SPA Editor.
+* Förstå den grundläggande funktionen i SPA.
 * Lär dig grunderna för att skapa en fullt redigerbar SPA för AEM.
 * Förstå hur externa SPA kan integreras i AEM.
 * Förstå hur rendering på serversidan kan eller inte kan implementeras.
@@ -54,7 +54,7 @@ Det finns flera krav innan du börjar arbeta med SPA i AEM.
 * Sandlådeåtkomst för testning av driftsättning av ditt projekt
 * Lokal utvecklingsinstans för datamodellering och -testning
 * Befintliga externa SPA (valfritt, beroende på vilken integrationsmodell som väljs)
-* AEM Project Archetype
+* AEM Project Archettype
 
 ## Vad är en SPA? {#what-is-a-spa}
 
@@ -126,5 +126,5 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [SPA](/help/implementing/developing/hybrid/editor-overview.md) - Information om hur SPA redigeraren fungerar
 * [Återgivning på serversidan](/help/implementing/developing/hybrid/ssr.md) - Konfigurera SSR för AEM SPA
 * [SPA referensdokument](/help/implementing/developing/hybrid/reference-materials.md) - JavaScript API-referenser och länkar till AEM med öppen källkod SPA GitHub-projekt
-* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) - Skapa innehållsfragment
-* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats
+* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#creating-content-fragments) - Skapa innehållsfragment
+* [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats

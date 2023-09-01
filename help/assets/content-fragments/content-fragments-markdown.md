@@ -4,16 +4,22 @@ description: Förstå hur Content Fragment Editor använder markeringssyntax fö
 feature: Content Fragments
 role: User
 exl-id: 7a6d4a63-faf8-4e1c-95da-90db2027a2dd
-source-git-commit: 5c59189abf809293a319d6bce4ef7389c2451f92
+source-git-commit: ceab75d3592a461478da3250a41ce00b6d4f31ef
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 3%
+source-wordcount: '576'
+ht-degree: 2%
 
 ---
 
 # Markdown {#markdown}
 
-När du [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva headless-innehåll:
+När du är [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva headless-innehåll:
+
+>[!NOTE]
+>
+>Innehållsfragment är en webbplatsfunktion, men lagras som **Resurser**.
+>
+>Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol).
 
 ![Markeringsredigerare](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
@@ -129,7 +135,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Skapa en osorterad &amp;lista med hjälp av den sista; -symbolen före objekten i listan. Till exempel:
+Om du vill skapa en osorterad lista använder du symbolen ast; före objekten i listan. Till exempel:
 
     `* item in list`
 

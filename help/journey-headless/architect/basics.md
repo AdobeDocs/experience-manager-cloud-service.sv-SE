@@ -2,7 +2,7 @@
 title: Lär dig grunderna i innehållsmodellering
 description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
 exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
 workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 1%
@@ -149,12 +149,12 @@ Nu när du har lärt dig grunderna är nästa steg att [Läs om hur du skapar mo
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 
-   * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#data-types)
+   * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
 
 * [Redigeringsbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
 
 * [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för redigering **Innehållsfragment** under **Resurser** konsol.
 
-* [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
+* [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)

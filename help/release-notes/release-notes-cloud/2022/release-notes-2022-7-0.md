@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: b339ab48-e836-4589-a573-9c50917b9280
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 0%
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.7.0-versionen av [!
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner; till exempel för 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ I följande avsnitt beskrivs versionsinformationen för 2022.7.0-versionen av [!
 
 ## Releasedatum {#release-date}
 
-Releasedatum [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2022.7.0) är 8 augusti 2022.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (202.7.0) är 8 augusti 2022.
 
 Nästa version (2022.8.0) är planerad till 1 september 2022.
 
@@ -37,7 +37,7 @@ Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanf
 
 ### Nya funktioner i [!DNL Sites] {#sites-features}
 
-* The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md) nu har stöd för [kortkommandon](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md).
+* The [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) nu stöder [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
 
 * AEM som Cloud Servicens [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) ger möjlighet att avsevärt förbättra sidhastigheten genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. Alla versioner av [Core Image Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
 
@@ -62,7 +62,7 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 ### Nya funktioner i [!DNL Forms] {#forms-features}
 
-* **[Stöd för tangentbordsinmatning med Scribble-signaturer](/help/forms/signing-forms-using-scribble.md)**: Adaptiv Forms används i allt större utsträckning på pekenheter, och ett vanligt krav är att stödja signaturer. Att signera dokument på pekenheter har blivit ett accepterat sätt att signera formulär. Adaptiv Forms har inbyggt stöd för Scribble Signatures och Adobe Sign för sådana användningsområden. Nu kan du, tillsammans med andra alternativ som redan stöds, även använda tangentbordet för att göra signaturer smarta i ett adaptivt formulär. Det förbättrar också tillgängligheten.
+* **[Stöd för tangentbordsinmatning med Scribble-signaturer](/help/forms/signing-forms-using-scribble.md)**: Adaptiv Forms används i allt större utsträckning på pekenheter, och ett vanligt krav är att stödja signaturer. Att signera dokument på pekenheter har blivit ett accepterat sätt att signera formulär. Adaptiv Forms har inbyggt stöd för Scribble Signatures och Adobe Sign för sådana användningsområden. Nu kan du, tillsammans med andra alternativ som redan stöds, även använda tangentbordet för att göra signaturer till klottersignaturer i ett adaptivt formulär. Det förbättrar också tillgängligheten.
 
 ![Stöd för tangentbordsinmatning för klottersignaturer på iphone](/help/release-notes/assets/scribble-keyboard-mobile.png)
 
@@ -78,14 +78,14 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 -->
 
-* **[Anropa DDX - ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md#invokeddx)**: Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX-dokument är mallar för dokumenten och beskriver önskade egenskaper för källdokument som ska visas i resulterande dokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget Anropa och AEM arbetsflöde för att utföra olika åtgärder, t.ex. att samla ihop dokument, skapa och ändra Acrobat och XFA Forms samt andra åtgärder som beskrivs i [DDX-referens](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) dokumentation.
+* **[Anropa DDX - ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md#invokeddx)**: XML (DDX) för dokumentbeskrivning är ett deklarativt kodspråk vars element representerar byggstenar i dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX-dokument är mallar för dokumenten och beskriver önskade egenskaper för källdokument som ska visas i resulterande dokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget Anropa och AEM arbetsflöde för att utföra olika åtgärder, t.ex. att samla ihop dokument, skapa och ändra Acrobat och XFA Forms samt andra åtgärder som beskrivs i [DDX-referens](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) dokumentation.
 
 * **[Konvertera till PDF/A - ett AEM arbetsflödessteg](/help/forms/aem-forms-workflow-step-reference.md##convert-pdfa)**: PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt. Alla teckensnitt bäddas in och filen är okomprimerad. Nu kan du använda steget Konvertera till PDF/A och AEM arbetsflöde för att konvertera dina dokument eller filer i valfritt format till PDF/A-format.
 
 
 ## CIF-tillägg {#cloud-services-cif}
 
-### Vad är nytt? {#what-is-new-cif}
+### Nyheter {#what-is-new-cif}
 
 * Produktkatalogsberikning har nu stöd för AEM sidor. Detta gör att författare kan hantera sida - produktassociation.
 
@@ -99,7 +99,7 @@ Nu kan du konfigurera Adobe Experience Manager Assets till [begränsa vilken typ
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### Vad är nytt? {#what-is-new-foundation}
+### Nyheter {#what-is-new-foundation}
 
 * The [Databasläsare](/help/implementing/developing/tools/repository-browser.md) har nu ett sökvägsinmatningsfält, vilket gör det möjligt att hoppa direkt till en viss mapp i databashierarkin
 * Sling Content Distribution (SCD) har nu stöd för en explicit&quot;invalidation&quot;-åtgärd som gör innehållet ogiltigt utan att det publiceras. Se [Cachelagring i AEM as a Cloud Service](/help/implementing/dispatcher/caching.md#explicit-invalidation) sida för mer information.

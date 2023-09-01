@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 2fcc33cfb8b0be89b4b9f91d687dc21ba456000c
+source-git-commit: 7d4e1acee54ebcb1398bcc6ab83491e3fa6a8801
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '2669'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ AEM inställningar för as a Cloud Service loggning och loggnivåer hanteras i k
 
 * AEM loggning, som utför loggning på AEM programnivå
 * Apache HTTPD Web Server/Dispatcher-loggning, som utför loggning av webbservern och Dispatcher på Publiceringsnivå.
-* CDN-loggning, som enligt namnet, utför loggning på CDN. Den här funktionen är för närvarande tillgänglig för användare som är tidiga; om du vill gå med i det tidiga adopterprogrammet kan du skicka e-post **aemcs-cdnlogs-adopter@adobe.com**, inklusive namnet på organisationen och sammanhanget om ditt intresse för funktionen.
+* CDN-loggning, som enligt namnet, utför loggning på CDN. Den här funktionen lanseras gradvis för kunderna i början av september.
 
 ## AEM loggning {#aem-logging}
 
@@ -504,10 +504,12 @@ Define DISP_LOG_LEVEL debug
 
 >[!NOTE]
 >
->Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i det pågående programmet för tidiga användare skickar du e-post **aemcs-cdnlogs-adopter@adobe.com**, inklusive namnet på organisationen och sammanhanget om ditt intresse för funktionen.
+>Den här funktionen lanseras gradvis för kunderna i början av september.
 >
 
 AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara vid användning, inklusive optimering av träffkvoten. Det går inte att anpassa CDN-loggformatet och det finns inget koncept för att ställa in det på olika lägen, till exempel info, warn eller error.
+
+Observera att funktionen Splunk Fording ännu inte stöder CDN-loggar.
 
 **Exempel**
 
@@ -600,6 +602,8 @@ Beroende på trafiken och mängden loggsatser som skrivits av Debug kan detta re
 Kunder som har Splunk-konton kan via kundsupportbiljetten begära att deras AEM Cloud Service-loggar vidarebefordras till lämpligt index. Loggningsinformationen motsvarar vad som är tillgängligt via hämtningen av loggen i Cloud Manager, men det kan vara praktiskt för kunderna att använda de frågefunktioner som är tillgängliga i Splunk-produkten.
 
 Nätverksbandbredden som är kopplad till loggar som skickas till Splunk räknas som en del av kundens I/O-användning i nätverket.
+
+Observera att Splunk Fording ännu inte stöder CDN-loggar.
 
 ### Aktivera vidarebefordran av segment {#enabling-splunk-forwarding}
 

@@ -3,15 +3,25 @@ title: Associerat innehåll
 description: Förstå hur den associerade innehållsfunktionen för innehållsfragment skapar anslutningen för resurser som (valfritt) ska användas med fragmentet, vilket ger ytterligare flexibilitet vid både sidredigering och leverans av rubrikfritt innehåll.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: eb524872-1403-42d1-b735-eaab382cf313
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 4%
 
 ---
 
+
 # Associerat innehåll{#associated-content}
+
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
 
 Funktionen AEM associerat innehåll tillhandahåller anslutningen så att resurser kan användas med fragmentet när det läggs till på en innehållssida av [tillhandahålla en mängd resurser som du kan komma åt när du använder innehållsfragmentet på en sida,](/help/sites-cloud/authoring/fundamentals/content-fragments.md#using-associated-content) samtidigt som det går snabbare att söka efter rätt resurs. Detta ger också flexibilitet för leverans av headless-material.
 
@@ -34,7 +44,7 @@ För att kunna skapa associationen måste du först [lägga till mediefiler i en
 
 1. Välj önskad samling.
 
-   Du kan också lägga till själva fragmentet i den valda samlingen; detta hjälper till att spåra.
+   Du kan också lägga till själva fragmentet i den valda samlingen. Detta hjälper till att spåra.
 
    ![Välj samling](assets/cfm-assoc-content-02.png)
 

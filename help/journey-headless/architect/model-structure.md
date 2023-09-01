@@ -2,7 +2,7 @@
 title: Läs om hur du skapar modeller för innehållsfragment i AEM
 description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
 exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) den [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author Trney](overview.md) den [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
 
 Den här artikeln bygger vidare på dessa så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
 
@@ -45,7 +45,7 @@ Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. 
 
 När du har valt detta navigerar du till modellens plats och väljer **Skapa**. Här kan du ange olika nyckeldetaljer.
 
-Alternativet **Aktivera modell** är aktiverat som standard. Det innebär att din modell är tillgänglig för användning (när du skapar innehållsfragment) så snart du har sparat den. Du kan inaktivera detta om du vill - det finns möjligheter att senare aktivera (eller inaktivera) en befintlig modell.
+Alternativet **Aktivera modell** aktiveras som standard. Det innebär att din modell är tillgänglig för användning (när du skapar innehållsfragment) så snart du har sparat den. Du kan inaktivera detta om du vill - det finns möjligheter att senare aktivera (eller inaktivera) en befintlig modell.
 
 ![Skapa innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/assets/cfm-models-02.png)
 
@@ -100,7 +100,7 @@ Modeller för innehållsfragment måste publiceras när/innan beroende innehåll
 
 Så snart en modell har publicerats *låst* till skrivskyddat läge på författaren. Detta syftar till att förhindra ändringar som kan leda till fel i befintliga GraphQL-scheman och -frågor, särskilt i publiceringsmiljön. Den anges i konsolen av **Låst**.
 
-När modellen är **Låst** (i läget SKRIVSKYDDAD) kan du se modellernas innehåll och struktur, men du kan inte redigera dem direkt; trots att du kan hantera **Låst** modeller från antingen konsolen eller modellredigeraren.
+När modellen är **Låst** (i läget SKRIVSKYDDAD) kan du se innehåll och struktur i modeller, men du kan inte redigera dem direkt, men du kan hantera dem **Låst** modeller från antingen konsolen eller modellredigeraren.
 
 ## What&#39;s Next {#whats-next}
 
@@ -110,25 +110,25 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
 * [Redigeringsbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
 
-* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för att navigera till och vidta åtgärder på, **Modeller för innehållsfragment** under **Allmänt** konsol.
+* [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md) - den här sidan är huvudsakligen baserad på **Webbplatser** konsol, men många/de flesta funktioner är också relevanta för navigering till och åtgärder på, **Modeller för innehållsfragment** under **Allmänt** konsol.
 
-* [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
+* [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 
-   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 
-      * [Definiera innehållsfragmentmodellen](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#defining-your-content-fragment-model)
+      * [Definiera innehållsfragmentmodellen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#defining-your-content-fragment-model)
 
-      * [Aktivera eller inaktivera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#enabling-disabling-a-content-fragment-model)
+      * [Aktivera eller inaktivera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#enabling-disabling-a-content-fragment-model)
 
-      * [Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
+      * [Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)
 
-      * [Ta bort en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#deleting-a-content-fragment-model)
+      * [Ta bort en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#deleting-a-content-fragment-model)
 
-      * [Publicera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#publishing-a-content-fragment-model)
+      * [Publicera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#publishing-a-content-fragment-model)
 
-      * [Avpublicera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#unpublishing-a-content-fragment-model)
+      * [Avpublicera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#unpublishing-a-content-fragment-model)
 
-      * [Låsta (publicerade) modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#locked-published-content-fragment-models)
+      * [Låsta (publicerade) modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#locked-published-content-fragment-models)
 
 * Komma igång-guider
 

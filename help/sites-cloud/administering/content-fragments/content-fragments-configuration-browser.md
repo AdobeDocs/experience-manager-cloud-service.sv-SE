@@ -3,8 +3,11 @@ title: Content Fragments - Configuration Browser
 description: Lär dig hur du aktiverar funktionerna Content Fragment och GraphQL i Configuration Browser för att använda AEM headless delivery features.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: 55d442ae-ae06-4dfa-8e4e-b415385ccea5
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 3%
@@ -13,11 +16,17 @@ ht-degree: 3%
 
 # Content Fragments - Configuration Browser{#content-fragments-configuration-browser}
 
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
+
 Lär dig hur du aktiverar vissa funktioner för innehållsfragment i konfigurationsläsaren.
 
 ## Aktivera funktionen för innehållsfragment för instansen {#enable-content-fragment-functionality-instance}
 
-Innan du använder innehållsfragment måste du använda **Konfigurationsläsaren** för att aktivera:
+Innan du använder innehållsfragment måste du använda **Konfigurationsläsaren** aktivera:
 
 * **Modeller för innehållsfragment** - obligatoriskt
 * **GraphQL Beständiga frågor** - valfritt
@@ -36,7 +45,7 @@ Om du vill aktivera funktionen för innehållsfragment måste du göra följande
 
 ### Aktivera funktionen för innehållsfragment i konfigurationsläsaren {#enable-content-fragment-functionality-in-configuration-browser}
 
-Använda vissa [Funktion för innehållsfragment](#creating-a-content-fragment-model), **måste** först aktivera dem via **Konfigurationsläsaren**:
+Använda vissa [Funktion för innehållsfragment](#creating-a-content-fragment-model), du **måste** först aktivera dem via **Konfigurationsläsaren**:
 
 >[!NOTE]
 >
@@ -78,6 +87,6 @@ Använda vissa [Funktion för innehållsfragment](#creating-a-content-fragment-m
 
 När konfigurationen **global** är aktiverat för innehållets fragmentfunktion, gäller för alla resursmappar som är tillgängliga via **Resurser** konsol.
 
-Om du vill använda andra konfigurationer (d.v.s. exkludera globala) med en jämförbar resursmapp måste du definiera anslutningen. Den här anslutningen görs genom att välja lämplig **Konfiguration** i **Cloud Services** -fliken i **Mappegenskaper** för rätt mapp.
+Om du vill använda andra konfigurationer (d.v.s. exkludera globala) med en jämförbar resursmapp måste du definiera anslutningen. Den här anslutningen görs genom att välja lämplig **Konfiguration** i **Cloud Service** -fliken i **Mappegenskaper** för rätt mapp.
 
 ![Använd konfiguration](assets/cfm-conf-02.png)

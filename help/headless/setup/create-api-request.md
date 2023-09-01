@@ -2,7 +2,7 @@
 title: Skapa en API-begäran - Headless-konfiguration
 description: Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment-innehåll och AEM Assets REST API för att hantera innehållsfragment.
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 0%
@@ -96,6 +96,6 @@ GraphQL kan undvika iterativa API-förfrågningar och överleverans, och tillåt
 
 Så ja! Ni har nu en grundläggande förståelse för innehållshantering utan problem i AEM. Det finns många fler resurser där du kan fördjupa dig för att få en heltäckande bild av de funktioner som finns.
 
-* **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)** - Mer information om hur du skapar och hanterar innehållsfragment
+* **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md)** - Mer information om hur du skapar och hanterar innehållsfragment
 * **[Stöd för innehållsfragment i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)** - Mer information om hur du får åtkomst till AEM direkt via HTTP API, via CRUD-åtgärder (Create, Read, Update, Delete)
 * **[GRAPHQL API](/help/headless/graphql-api/content-fragments.md)** - Mer information om hur du levererar innehållsfragment utan problem

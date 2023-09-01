@@ -4,8 +4,11 @@ description: Lär dig hur du hanterar innehållsfragment från konsolen Innehål
 landing-page-description: Lär dig hur du hanterar innehållsfragment från konsolen Innehållsfragment som fokuserar på användningen av innehållsfragment i stora volymer för rubrikfria användningsfall, men som även används vid redigering av sidor.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: 0e6e3b61-a0ca-44b8-914d-336e29761579
-source-git-commit: afe676b0972462ef2c9b52150d96560c71f7a0f6
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 0%
@@ -13,6 +16,12 @@ ht-degree: 0%
 ---
 
 # Konsol för innehållsfragment  {#content-fragments-console}
+
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
 
 Lär dig hur konsolen Innehållsfragment optimerar åtkomsten till dina innehållsfragment så att du kan skapa, söka efter och hantera dem genom att vidta administrativa åtgärder som publicera, avpublicera, kopiera.
 
@@ -83,7 +92,7 @@ Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja 
 * **[Skapa](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#creating-a-content-fragment)** ett nytt innehållsfragment
 * [Filter](#filtering-fragments) innehållsfragment enligt ett urval predikatmallar och spara filtret för framtida bruk
 * [Sök](#searching-fragments) innehållsfragment
-* [Anpassa tabellvyn så att markerade informationskolumner visas](#select-available-columns)
+* [Anpassa tabellvyn för att visa markerade kolumner med information](#select-available-columns)
 * Använd **Öppna i resurser** om du vill öppna den aktuella platsen direkt i **Resurser** konsol
 
   >[!NOTE]

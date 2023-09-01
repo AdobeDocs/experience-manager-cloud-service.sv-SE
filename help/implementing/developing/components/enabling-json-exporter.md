@@ -2,7 +2,7 @@
 title: Aktivera JSON-export för en komponent
 description: Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
 exl-id: e9be5c0c-618e-4b56-a365-fcdd185ae808
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 3d20f4bca566edcdb5f13eab581c33b7f3cf286d
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 @JsonSerialize(as = MyComponent.class)
 ```
 
-Detta garanterar att komponenten kan exporteras fristående med `.model` väljaren och `.json` tillägg.
+Detta garanterar att din komponent kan exporteras fristående med `.model` väljaren och `.json` tillägg.
 
 Dessutom anger detta att klassen Sling Model kan anpassas till `ComponentExporter` gränssnitt.
 
@@ -58,11 +58,11 @@ Dessutom anger detta att klassen Sling Model kan anpassas till `ComponentExporte
 https://<server>:<port>/content/page.model.selector1.selector2.json
 ```
 
-I sådana fall gäller dock att `model` väljaren måste vara den första väljaren och tillägget måste vara `.json`.
+I sådana fall gäller dock att `model` måste vara den första väljaren och tillägget måste vara `.json`.
 
 ## Anteckna gränssnittet för segmenteringsmodellen {#annotate-the-sling-model-interface}
 
-Modellgränssnittet bör implementera `ComponentExporter` gränssnitt (eller `ContainerExporter`, om det är en behållarkomponent).
+Modellgränssnittet bör implementera `ComponentExporter` gränssnitt (eller `ContainerExporter`, för behållarkomponenter).
 
 Motsvarande Sling Model-gränssnitt (`MyComponent`) kommenteras sedan med [Jackson annotations](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations) för att definiera hur den ska exporteras (serialiseras).
 
@@ -78,7 +78,7 @@ Ett exempel finns i Sling Model-implementeringen av Image Core-komponenten och d
 
 Mer information finns i:
 
-* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

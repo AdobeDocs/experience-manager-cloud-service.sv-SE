@@ -2,7 +2,7 @@
 title: Kortkommandon för sidredigering
 description: Det finns olika kortkommandon i hela AEM, bland annat för sidredigering
 exl-id: 6c501897-48f9-478a-b143-d3ad19643b8c
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Kortkommandon för sidredigering {#keyboard-shortcuts-when-editing-pages}
 
-Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, andra för [användning av konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md), och vissa särskilt [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, andra för [användning av konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md), och vissa särskilt [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 
 | Plats | Genväg | Beskrivning |
 |---|---|---|
-| Alla redigeringsfönsterlägen | `Ctrl-Shift-m` | Växla mellan **Förhandsgranska** och de markerade [läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes)</a> (t.ex. **Redigera**, **Layout**, etc)* |
+| Alla redigeringsfönsterlägen | `Ctrl-Shift-m` | Växla mellan **Förhandsgranska** och de markerade [läge](/help/sites-cloud/authoring/fundamentals/environment-tools.md#page-modes)</a> (till exempel **Redigera**, **Layout**, etc)* |
 | **Redigera** läge | `Ctrl-z` | [Ångra senaste ändring](/help/sites-cloud/authoring/fundamentals/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-y` | [Gör om senaste ändring](/help/sites-cloud/authoring/fundamentals/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | Markera flera stycken |
@@ -37,7 +37,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 >
 >När användaren börjar interagera med sidan i förhandsgranskningsläget `Ctrl-Shift-m` kortkommandot är inte längre tillgängligt. Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
 
-Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md), och vissa särskilt [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md).
+Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md), och vissa särskilt [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
 
 >[!NOTE]
 >

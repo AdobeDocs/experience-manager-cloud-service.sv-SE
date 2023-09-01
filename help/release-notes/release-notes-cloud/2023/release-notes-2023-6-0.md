@@ -1,7 +1,7 @@
 ---
 title: Versionsinformation om 2023.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2023.6.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
-source-git-commit: 2d10d03e478bff5a162c620c41ceac38a6d7911a
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Titta på videon om versionsöversikten för juni 2023 om du vill se en sammanfa
 
 ### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
 
-* Innehållsfragment och deras referenser kan nu publiceras i [Tjänsten AEM Preview](/help/implementing/cloud-manager/manage-environments.md#access-preview-service) med [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md), vilket gör att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publicerar.
+* Innehållsfragment och deras referenser kan nu publiceras i [Tjänsten AEM Preview](/help/implementing/cloud-manager/manage-environments.md#access-preview-service) med [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console), vilket gör att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publicerar.
 
 ![Förhandsgranska i konsolen för innehållsfragment](/help/assets/content-fragments-console-preview.png)
 

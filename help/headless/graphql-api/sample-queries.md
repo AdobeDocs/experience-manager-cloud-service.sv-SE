@@ -3,7 +3,7 @@ title: Lära sig använda GraphQL med AEM - exempelinnehåll och frågor
 description: Lär dig använda GraphQL med AEM så att du kan leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
 feature: Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
-source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 0%
@@ -18,8 +18,8 @@ Lär dig använda GraphQL med AEM så att du kan leverera innehåll utan problem
 >
 >Läs den här sidan tillsammans med följande:
 >
->* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
->* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+>* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
+>* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
 
 Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan det vara bra att se några praktiska exempel.
@@ -367,7 +367,7 @@ Om du skapar en variant med namnet &quot;Berlin Center&quot; (`berlin_centre`), 
 Om du:
 
 * skapa olika taggar, namngivna `Tourism` : `Business`, `City Break`, `Holiday`
-* och tilldela dem till de Överordnad variationerna av olika `City` instanser
+* och tilldela dem till mallvarianten av olika `City` instanser
 
 Sedan kan du använda en fråga för att returnera information om `name` och `tags`av alla poster som är taggade som Citybrytningar i `city`schema.
 
@@ -1819,7 +1819,7 @@ De grundläggande fälten som definierar företaget är:
 
 | Fältnamn | Datatyp | Referens |
 |--- |--- |--- |
-| Företag | Enkelradig text | |
+| Företagsnamn | Enkelradig text | |
 | VD | Fragmentreferens (enkel) | [Person](#model-person) |
 | Anställda | Fragmentreferens (multifält) | [Person](#model-person) |
 
@@ -1859,7 +1859,7 @@ Följande fragment används för rätt modell.
 
 #### Företag {#fragment-company}
 
-| Företag | VD | Anställda |
+| Företagsnamn | VD | Anställda |
 |--- |--- |--- |
 | Apple | Steve Jobs | Duke Marsh<br>Max. textfält |
 | Little Pony Inc. | Adam Smith | Lara Croft<br>Cutter Slade |

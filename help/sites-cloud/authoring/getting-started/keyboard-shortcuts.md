@@ -2,7 +2,7 @@
 title: Kortkommandon för konsoler
 description: Spara tid när du redigerar med dessa kortkommandon
 exl-id: 68508d05-a98d-483a-aa6d-f743ee29c284
-source-git-commit: bdefc8ccdb44bec7a72d9223614b3a6ba5c65225
+source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
 workflow-type: tm+mt
 source-wordcount: '376'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Följande kortkommandon är tillgängliga för konsolerna Platser, Resurser, Anv
 |  | `Backspace` | Ta bort |
 | Egenskapssidor | `Ctrl+s` | Spara |
 
-Tangentkombinationerna visas i Windows [modifieringstangenter](#os-specific-modifier-keys).
+Tangentkombinationerna listas med Windows [modifieringstangenter](#os-specific-modifier-keys).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 
@@ -84,4 +84,4 @@ Olika kortkommandon finns i hela AEM. Vissa gäller användning av konsoler, and
 
 ## Kortkommandon för konsolen Innehållsfragment {#keyboard-shortcuts-for-the-content-fragments-console}
 
-Vissa kortkommandon gäller för [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console-keyboard-shortcuts.md)
+Vissa kortkommandon gäller för [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md)

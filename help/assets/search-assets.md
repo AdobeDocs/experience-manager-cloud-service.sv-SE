@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 069103e7a82123bff28b4aa6e9d718c12e8496e3
+source-git-commit: fb70abb2aa698303c462e38ad3bec10d028f804e
 workflow-type: tm+mt
-source-wordcount: '5311'
+source-wordcount: '5463'
 ht-degree: 4%
 
 ---
@@ -137,6 +137,20 @@ Du kan använda detta till din fördel genom att öka rankningen för vissa resu
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
 *Video: Förstå hur sökresultaten rangordnas och hur rangordningen kan påverkas.*
+
+## Konfigurera batchstorlek för resurs för att visa sökresultat {#configure-asset-batch-size}
+
+Administratörer kan nu konfigurera batchstorleken för resurser som visas när du utför en sökning. Resurssökresultaten visas i multipler av det konfigurerade batchstorleksnumret när du rullar nedåt för att läsa in resultaten. Du kan välja mellan de tillgängliga gruppstorlekarna 200, 500 och 1 000 resurser. Om du anger ett lägre batchstorleksnummer blir sökningen snabbare.
+
+Om du till exempel anger gränsen för antal resultat till en batchstorlek på 200 resurser, visas en batchstorlek på 200 resurser i sökresultaten när du börjar utföra sökningen i Experience Manager Assets. När du bläddrar nedåt för att navigera bland sökresultaten visas nästa grupp med 200 resurser. Processen fortsätter tills alla resurser som matchar sökfrågan visas.
+
+Så här konfigurerar du batchstorleken för resursen:
+
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Assets Configurations]** > **[!UICONTROL Assets Omnisearch Configuration]**.
+
+1. Markera gränsen för antal resultat och klicka på **[!UICONTROL Save]**.
+
+   ![Konfiguration av batchstorlek för resurser](/help/release-notes/assets/assets-batch-size-configuration.png)
 
 ## Avancerad sökning {#scope}
 

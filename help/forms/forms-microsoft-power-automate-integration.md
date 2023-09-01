@@ -1,17 +1,17 @@
 ---
-title: Hur ansluter och skickar man data i adaptiva blanketter till Microsoft&reg; Power Automate?
-description: Stegvisa instruktioner för att ansluta och skicka data i anpassade formulär till Microsoft&reg; Power Automate.
-keywords: Adaptiv Forms Microsoft Power Automate, skicka adaptiva Forms-data till Microsoft Power Automate
+title: Integrera ett anpassat formulär med Microsoft&reg; Power Automate
+description: Integrera ett adaptivt formulär med Microsoft&reg; Power Automate.
+hide: true
+hidefromtoc: true
 exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
-source-git-commit: 74fed5b2bcffac9d267b66aaa3d69b27cadd3417
+source-git-commit: a635a727e431a73086a860249e4f42d297882298
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
 
-
-# Ansluta och skicka data i adaptiva blanketter till Microsoft® Power Automate {#connect-adaptive-form-with-power-automate}
+# Ansluta ett adaptivt formulär med Microsoft® Power Automate {#connect-adaptive-form-with-power-automate}
 
 Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden. Här är några exempel på vad du kan göra efter att ha integrerat ett adaptivt formulär med Microsoft® Power Automate:
 
@@ -26,8 +26,8 @@ Adaptive Forms editor har **Anropa ett Microsoft® Power Automate-flöde** Skick
 
 Följande krävs för att ansluta ett adaptivt formulär med Microsoft® Power Automate:
 
-* Microsoft® Power Automate Premium-licens
-* Microsoft® [Power Automate-flöde](https://docs.microsoft.com/en-us/power-automate/create-flow-solution) med `When an HTTP request is received` utlösare som accepterar data för att skicka adaptiva formulär
+* Microsoft® Power Automate Premium.
+* Microsoft® [Power Automate-flöde](https://docs.microsoft.com/en-us/power-automate/create-flow-solution) med `When an HTTP request is received` utlösare för att acceptera data för sändning av adaptiva formulär.
 * En Experience Manager-användare med [Forms Author](/help/forms/forms-groups-privileges-tasks.md) och [Forms Admin](/help/forms/forms-groups-privileges-tasks.md) behörigheter
 * Det konto som används för att ansluta till Microsoft® Power Automate är ägare av det Power Automate-flöde som konfigurerats för att ta emot data från adaptiv form
 
@@ -80,7 +80,8 @@ Utför följande åtgärder för att ansluta din as a Cloud Service Forms-instan
 1. I AEM Forms-författarinstansen går du till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
 1. På **[!UICONTROL Configuration Browser]** sida, tryck **[!UICONTROL Create]**.
 1. I **[!UICONTROL Create Configuration]** dialogruta, ange **[!UICONTROL Title]** för konfigurationen, aktivera **[!UICONTROL Cloud Configurations]** och trycka **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av Cloud Service. Kontrollera att mappnamnet inte innehåller något utrymme.
-1. Navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Microsoft®® Power Automate Dataverse]** och öppna konfigurationsbehållaren som du skapade i föregående steg.
+1. Navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Microsoft® Power Automate Dataverse]** och öppna konfigurationsbehållaren som du skapade i föregående steg.
+
 
    >[!NOTE]
    >
@@ -97,9 +98,11 @@ Utför följande åtgärder för att ansluta din as a Cloud Service Forms-instan
 
 1. Navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Microsoft®® Power Automate Flow Service]** och öppna konfigurationsbehållaren som du skapade i föregående avsnitt.
 
+
    >[!NOTE]
    >
    När du skapar ett adaptivt formulär anger du behållarnamnet i dialogrutan **[!UICONTROL Configuration Container]** fält.
+
 1. Tryck på på konfigurationssidan **[!UICONTROL Create]** att skapa [!DNL Microsoft®® Power Automate Flow Service] i AEM Forms.
 1. På **[!UICONTROL Configure Dataverse for Microsoft®® Power Automate]** sida, ange **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, Klienthemlighet, OAuth URL och Dynamics Environment-ID. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth-URL:en. Öppna [Mina flöden](https://us.flow.microsoft.com) och tryck på Mina flöden använder det ID som anges i URL:en som Dynamics Environment ID.
 1. Tryck på **[!UICONTROL Connect]**. Logga in på ditt Microsoft® Azure-konto om du blir tillfrågad. Tryck på **[!UICONTROL Save]**.

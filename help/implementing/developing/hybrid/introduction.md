@@ -2,7 +2,7 @@
 title: SPA introduktion och genomgång
 description: I den här artikeln beskrivs begreppen för en SPA och du kan gå igenom hur du använder ett grundläggande SPA för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '2068'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 
 >[!TIP]
 >
->Alla AEM ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+>Alla AEM ska använda [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
 
 ### Vad är en SPA? {#what-is-a-spa}
 
@@ -77,7 +77,7 @@ Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir 
 
 Den främsta idén bakom en SPA är att anrop till och beroende av en server minskas för att minimera fördröjningar som orsakas av serverfördröjning så att SPA närmar sig svarstiden för ett internt program.
 
-På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas när besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna ifatt besökarens önskemål.
+På en traditionell, sekventiell webbsida läses bara de data som behövs för den omedelbara sidan in. Det innebär att när besökaren flyttar till en annan sida anropas servern för de extra resurserna. Ytterligare anrop kan behövas eftersom besökaren interagerar med element på sidan. Dessa anrop kan ge en känsla av fördröjning eller fördröjning eftersom sidan måste hinna ifatt besökarens önskemål.
 
 ![Sekventiellt jämfört med flytande upplevelser](assets/spa-sequential-vs-fluid.png)
 
@@ -89,7 +89,7 @@ Genom att återge på klientsidan reagerar sidelementen snabbare, och besökaren
 >
 >Teknisk information om hur SPA arbetar i AEM finns i artiklarna:
 >* [Komma igång med SPA i AEM med React](getting-started-react.md)
->* [Komma igång med SPA i AEM med Angularna](getting-started-angular.md)
+>* [Komma igång med SPA i AEM med Angular](getting-started-angular.md)
 >
 >Mer information om design, arkitektur och tekniska arbetsflöden i SPA Editor finns i artikeln:
 >* [SPA](editor-overview.md).
@@ -98,7 +98,7 @@ Genom att återge på klientsidan reagerar sidelementen snabbare, och besökaren
 
 När en SPA har byggts för att använda AEM SPA Editor märker innehållsförfattaren ingen skillnad när innehållet redigeras och skapas. Vanliga AEM är tillgängliga och inga ändringar i författarens arbetsflöde krävs.
 
-1. Redigera WKND SPA Project-appen i AEM.
+1. Redigera WKND-SPA i AEM.
 
    `http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html`
 
@@ -124,9 +124,9 @@ Ytterligare redigeringsverktyg som att dra och släppa ytterligare komponenter p
 
 >[!NOTE]
 >
->SPA redigerare ändrar inte programmets DOM. SPA ansvarar själv för DOM.
+>SPA redigerare ändrar inte programmets DOM. SPA är själv ansvarig för DOM.
 >
->Om du vill se hur det här fungerar fortsätter du till nästa avsnitt i den här artikeln [SPA och AEM SPA](#spa-apps-and-the-aem-spa-editor).
+>Fortsätt till nästa avsnitt i den här artikeln om du vill se hur det fungerar [SPA och AEM SPA](#spa-apps-and-the-aem-spa-editor).
 
 ## SPA och AEM SPA {#spa-apps-and-the-aem-spa-editor}
 
@@ -150,7 +150,7 @@ Genom att uppleva hur en SPA fungerar för slutanvändaren och sedan inspektera 
 
    ![Nätverksaktivitet](assets/wknd-network-activity.png)
 
-   Trafiken är mycket liten när du går från sida till sida i appen. Sidan läses inte in igen och endast de nya bilderna efterfrågas.
+   Trafiken är mycket liten när du går från sida till sida i appen. Sidan läses inte in igen och endast de nya bilderna begärs.
 
    SPA hanterar innehållet och routningen enbart på klientsidan.
 
@@ -169,7 +169,7 @@ Nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), går djupare in 
 1. Använd det inbyggda verktyget i webbläsaren för att visa sidans källa.
 1. Observera att källans innehåll är begränsat.
    * Sidan har inget innehåll i sin brödtext. Den består huvudsakligen av formatmallar och ett anrop till olika skript, som `clientlib-react.min.js`.
-   * Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för att återge allt innehåll.
+   * Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för återgivningen av allt innehåll.
 
 1. Använd webbläsarens inbyggda verktyg för att inspektera sidan. Se innehållet i DOM som är fullständigt inläst.
 
@@ -187,7 +187,7 @@ Nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), går djupare in 
 
    ![JSON på startsidan för WKND SPA Project](assets/wknd-json.png)
 
-   AEM SPA Editor använder [AEM Content Services](/help/sites-cloud/administering/content-fragments/content-fragments.md) för att leverera hela sidans innehåll som en JSON-modell.
+   AEM SPA Editor använder [AEM Content Services](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-and-content-services) för att leverera hela sidans innehåll som en JSON-modell.
 
    Genom att implementera specifika gränssnitt ger Sling Models den information som behövs för SPA. Leveransen av JSON-data delegeras nedåt till varje komponent (från sida, stycke, komponent osv.).
 
@@ -195,13 +195,13 @@ Nästa avsnitt, [Läsa in ett SPA](#loading-a-spa-application), går djupare in 
 
 1. Modellen kan också gruppera sidor så att de läses in synkront, vilket minskar antalet sidomladdningar som behövs.
 
-   I exemplet med WKND SPA Project-appen `home`, `page-1`, `page-2`och `page-3` sidor läses in synkront eftersom besökarna vanligtvis besöker alla dessa sidor.
+   I exemplet med WKND SPA Project-programmet `home`, `page-1`, `page-2`och `page-3` sidor läses in synkront eftersom besökarna vanligtvis besöker alla dessa sidor.
 
    Detta beteende är inte obligatoriskt och är helt definierbart.
 
    ![WKND SPA projektartikelgruppering](assets/wknd-pages.png)
 
-1. Om du vill visa den här skillnaden i beteende läser du in `home` och rensa nätverksaktiviteten för inspektören. Navigera till `page-1` på sidmenyn och se att den enda nätverksaktiviteten är en begäran om bilden av `page-1`. `page-1` behöver inte läsas in.
+1. Om du vill visa skillnaden i beteende läser du in `home` och rensa nätverksaktiviteten för inspektören. Navigera till `page-1` på sidmenyn och se att den enda nätverksaktiviteten är en begäran om bilden av `page-1`. `page-1` behöver inte läsas in.
 
    ![WKND SPA nätverksaktivitet på projektsida 1](assets/wknd-page1-network.png)
 
@@ -235,9 +235,9 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
    >[!NOTE]
    >
-   >Det här beteendet skiljer sig från återgivna sidor på serversidan i AEM, där det finns en `cq` element infogat för varje redigerbar komponent.
+   >Det här beteendet skiljer sig från återgivna sidor på serversidan i AEM, där det finns en `cq` -element infogat för varje redigerbar komponent.
    >
-   >Med den här metoden i SPA Editor elimineras behovet av att mata in anpassade element, endast ytterligare ett dataattribut används, vilket gör markeringen enklare för klientutvecklaren.
+   >Med den här metoden i SPA Editor elimineras behovet av att mata in anpassade element, endast ytterligare ett dataattribut förväntades, vilket gör markeringen enklare för klientutvecklaren.
 
 ## Headless and Headless in AEM {#headful-headless}
 

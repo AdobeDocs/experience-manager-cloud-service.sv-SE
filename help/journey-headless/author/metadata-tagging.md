@@ -2,10 +2,10 @@
 title: Läs om hur du definierar metadata och taggar för innehållsfragment
 description: Läs om hur du definierar metadata och taggar för innehållsfragment
 exl-id: daa5b284-8264-48c3-826c-7909cff4d1a0
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 2%
+source-wordcount: '191'
+ht-degree: 3%
 
 ---
 
@@ -26,21 +26,9 @@ Den här artikeln bygger på dessa så att du förstår hur du använder metadat
 
 ## Lägga till metadata och taggar {#adding-metadata-and-tags}
 
-Det finns tre metoder som du kan använda för att lägga till metadata och taggar:
+Du kan lägga till metadata och taggar från den högra panelen i Content Fragment Editor:
 
-* När du skapar fragmentet (från **Resurser** konsol):
-
-  ![Skapa innehållsfragment - ange namn](/help/journey-headless/author/assets/headless-journey-author-content-fragment-03.png)
-
-* The **Variationer** kan du lägga till fördefinierade **Taggar** från ditt projekt:
-
-  ![Content Fragment Editor - Alaska Spirits](/help/journey-headless/author/assets/headless-journey-author-content-fragment-05.png)
-
-* The **Metadata** kan du lägga till olika metadatafält och fördefinierade **Taggar** från ditt projekt:
-
-  ![Content Fragment Editor - Metadata](/help/journey-headless/author/assets/headless-journey-author-metadata-01.png)
-
-   * Detta är också tillgängligt via **Egenskaper** i verktygsfältet i Resurskonsolen.
+![Content Fragment Editor - Alaska Spirits](/help/sites-cloud/administering/content-fragments/assets/cf-authoring-overview.png)
 
 ## What&#39;s Next {#whats-next}
 
@@ -48,8 +36,8 @@ Nu kan du använda och börja skapa innehållsfragment för ditt projekt.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Metadata – fragmentegenskaper](/help/sites-cloud/administering/content-fragments/content-fragments-metadata.md)
+* [Metadata – fragmentegenskaper](/help/sites-cloud/administering/content-fragments/authoring.md#view-properties-tags)
 
 * [Använda taggar](/help/sites-cloud/authoring/features/tags.md)
 
-* [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#allowing-content-fragment-models-assets-folder)
+* [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)

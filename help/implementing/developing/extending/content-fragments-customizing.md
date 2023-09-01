@@ -2,7 +2,7 @@
 title: Anpassa och utöka Content Fragments
 description: Ett innehållsfragment utökar en standardresurs. Lär dig hur du kan anpassa dem.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 I Adobe Experience Manager as a Cloud Service utökar ett innehållsfragment en standardresurs; se:
 
-* [Skapa och hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) och [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) för mer information om innehållsfragment.
+* [Skapa och hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) och [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) för mer information om innehållsfragment.
 
 * [Hantera resurser](/help/assets/manage-digital-assets.md) för mer information om standardtillgångar.
 
 ## Arkitektur {#architecture}
 
-Grundläggande [beståndsdelar](/help/sites-cloud/administering/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) för ett innehållsfragment är:
+Grundläggande [beståndsdelar](/help/sites-cloud/administering/content-fragments/overview.md#constituent-parts-of-a-content-fragment) för ett innehållsfragment är:
 
 * A *Innehållsfragment*,
 * bestående av en eller flera *Innehållselement*,
@@ -78,7 +78,7 @@ Precis som med standardresurser finns ett innehållsavdrag under:
 
 #### Tillgångsbehörigheter {#asset-permissions}
 
-Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/sites-cloud/administering/content-fragments/content-fragments-delete.md).
+Mer information finns i [Innehållsfragment - Ta bort överväganden](/help/sites-cloud/administering/content-fragments/delete-considerations.md).
 
 #### Funktionsintegrering {#feature-integration}
 
@@ -324,7 +324,7 @@ ContentFragment newFragment = tpl.createFragment(parentRsc, "A fragment name", "
 
 ### Exempel: Ange intervall för autosparande {#example-specifying-the-auto-save-interval}
 
-The [autosparintervall](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#save-close-and-versions) (mätt i sekunder) kan definieras med konfigurationshanteraren (ConfMgr):
+The [autosparintervall](/help/sites-cloud/administering/content-fragments/managing.md#save-close-and-versions) (mätt i sekunder) kan definieras med konfigurationshanteraren (ConfMgr):
 
 * Nod: `<conf-root>/settings/dam/cfm/jcr:content`
 * Egenskapsnamn: `autoSaveInterval`

@@ -2,7 +2,7 @@
 title: Konfigurationer och Configuration Browser
 description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '1485'
 ht-degree: 0%
@@ -20,7 +20,7 @@ En konfiguration kan övervägas från två olika vypunkter.
 * [En administratör](#configurations-administrator) använder konfigurationer som arbetsytor i AEM för att definiera och hantera grupper av inställningar.
 * [Utvecklare](#configurations-developer) använder den underliggande konfigurationsmekanismen som implementerar konfigurationer för att behålla och slå upp inställningar i AEM.
 
-Sammanfattning: ur administratörens synvinkel är konfigurationer hur du skapar arbetsytor för att hantera inställningar i AEM, medan utvecklaren bör förstå hur AEM använder och hanterar dessa konfigurationer i databasen.
+Sammanfattningsvis: ur administratörens synvinkel är konfigurationer hur du skapar arbetsytor för att hantera inställningar i AEM, medan utvecklaren bör förstå hur AEM använder och hanterar dessa konfigurationer i databasen.
 
 Oavsett perspektiv har konfigurationerna två huvudsyften AEM:
 
@@ -34,7 +34,7 @@ AEM administratör och författare kan betrakta konfigurationer som arbetsytor. 
 Du kan skapa konfigurationer för många olika funktioner i AEM.
 
 * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
 * olika molnkonfigurationer
 
@@ -80,7 +80,7 @@ Det är mycket enkelt att skapa en ny konfiguration i AEM med hjälp av Configur
       * Den kan vid behov justeras.
 1. Kontrollera vilken typ av konfigurationer du vill tillåta.
    * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
-   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
    * [Redigerbara mallar](/help/sites-cloud/authoring/features/templates.md)
    * olika molnkonfigurationer
 1. Tryck eller klicka **Skapa**.
@@ -101,7 +101,7 @@ Om du tänker på konfigurationer som arbetsytor kan åtkomsträttigheter anges 
    >Det går inte att avmarkera en funktion när konfigurationen har skapats.
 1. Använd **Effektiva behörigheter** om du vill visa en matris med roller och vilka behörigheter de för närvarande har för konfigurationer.
    ![Fönstret Effektiva behörigheter](assets/configuration-effective-permissions.png)
-1. Om du vill tilldela nya behörigheter anger du användar- eller gruppnamnet i dialogrutan **Välj användare eller grupp** i **Lägg till nya behörigheter** -avsnitt.
+1. Om du vill tilldela nya behörigheter anger du användar- eller gruppnamnet i **Välj användare eller grupp** fältet i **Lägg till nya behörigheter** -avsnitt.
    * The  **Välj användare eller grupp** fält erbjuder automatisk komplettering baserat på befintliga användare och roller.
 1. Välj lämplig användare eller roll bland resultaten för automatisk komplettering.
    * Du kan markera flera användare eller roller.
@@ -118,7 +118,7 @@ Som utvecklare är det viktigt att du vet hur AEM as a Cloud Service fungerar me
 
 Även om [administratörer och användare kan tänka sig konfigurationer som arbetsplatser](#configurations-administrator) om du vill hantera olika inställningar och innehåll är det viktigt att förstå att konfigurationer och innehåll lagras och hanteras separat av AEM i databasen.
 
-* `/content` är hemma i allt innehåll.
+* `/content` är hemmet för allt innehåll.
 * `/conf` är startsida för all konfiguration.
 
 Innehållet refererar till den associerade konfigurationen via en `cq:conf` -egenskap. AEM utför en sökning baserat på innehållet och dess kontextuella `cq:conf` för att hitta rätt konfiguration.
@@ -155,7 +155,7 @@ Nu ska vi titta på motsvarande JCR-innehåll:
 
 I det här exemplet antar vi en WKND-specifik DAM-mapp här och en motsvarande konfiguration. Från den mappen `/content/dam/wknd`ser vi att det finns en strängegenskap med namnet `cq:conf` som refererar till konfigurationen som ska användas för underträdet. Egenskapen ställs vanligtvis in på `jcr:content` för en resursmapp eller -sida. Dessa `conf` länkar är explicita, så det är enkelt att följa dem genom att bara titta på innehållet i CRXDE.
 
-Hoppa inuti `/conf`, följer vi referensen och ser att det finns en `/conf/wknd` nod. Detta är en konfiguration. Sökningen är helt genomskinlig för programkoden. Exempelkoden har aldrig någon dedikerad referens till den, den döljs bakom `Conf` -objekt. Vilken konfiguration som tillämpas styrs helt av JCR-innehållet.
+Hoppa inuti `/conf`, följer vi referensen och ser att det finns en `/conf/wknd` nod. Detta är en konfiguration. Sökningen är helt genomskinlig för programkoden. Exempelkoden har aldrig någon dedikerad referens till den, den är dold bakom `Conf` -objekt. Vilken konfiguration som tillämpas styrs helt av JCR-innehållet.
 
 Vi ser att konfigurationen innehåller ett fast namn `settings` nod som innehåller de faktiska objekten, inklusive `dam/imageserver` vi behöver i vårt fall. Ett sådant objekt kan tolkas som ett inställningsdokument och representeras vanligtvis av en `cq:Page` inkluderar `jcr:content` som innehåller det faktiska innehållet.
 
@@ -163,7 +163,7 @@ Vi ser att konfigurationen innehåller ett fast namn `settings` nod som innehål
 
 ### Konfigurationsupplösning {#configuration-resolution}
 
-I det grundläggande exemplet ovan visades en enda konfiguration. Men det finns många fall där du vill ha olika konfigurationer, till exempel en global standardkonfiguration, en som skiljer sig åt för varje varumärke och kanske en specifik konfiguration för dina delprojekt.
+I det grundläggande exemplet ovan visades en enda konfiguration. Men det finns många fall där du vill ha olika konfigurationer, till exempel en global standardkonfiguration, en som skiljer sig åt för varje varumärke och kanske en som är specifik för dina underprojekt.
 
 Som stöd för detta har konfigurationssökningen i AEM arv- och reservmekanism i följande prioritetsordning:
 

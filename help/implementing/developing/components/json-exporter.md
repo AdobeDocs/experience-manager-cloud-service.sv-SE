@@ -2,7 +2,7 @@
 title: JSON-exporterare för innehållstjänster
 description: AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor. De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder.
 exl-id: d3ddffb7-cef9-4c86-aa31-175f13f9b4a5
-source-git-commit: 6be7cc7678162c355c39bc3000716fdaf421884d
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Inom AEM levereras med väljaren `model` och `.json` tillägg.
 
 Du kan också leverera innehållet i ett strukturerat innehållsfragment genom att specifikt rikta in det på det.
 
-Detta görs med hela sökvägen till fragmentet (via `jcr:content`). till exempel med ett suffix som
+Detta görs med hela sökvägen till fragmentet (via `jcr:content`), till exempel med ett suffix som
 
 `.../jcr:content/root/container/container/contentfragment.model.json`
 
@@ -49,21 +49,21 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
 * En URL som:
 
-   ```shell
-   http://localhost:4502/content/wknd/language-masters/en/magazine/guide-la-skateparks/jcr:content/root/container/container/contentfragment.model.json
-   ```
+  ```shell
+  http://localhost:4502/content/wknd/language-masters/en/magazine/guide-la-skateparks/jcr:content/root/container/container/contentfragment.model.json
+  ```
 
 * Levererar innehåll som:
 
-   ![JSON-modell för WKND-innehållsfragment](assets/json-model-wknd-content-fragment.png)
+  ![JSON-modell för WKND-innehållsfragment](assets/json-model-wknd-content-fragment.png)
 
-   >[!NOTE]
-   >
-   >Du kan [anpassa era egna komponenter](enabling-json-exporter.md) för att få tillgång till och använda dessa data.
+  >[!NOTE]
+  >
+  >Du kan [anpassa era egna komponenter](enabling-json-exporter.md) för att få tillgång till och använda dessa data.
 
-   >[!NOTE]
-   >
-   >Även om det inte är en standardimplementering [flera väljare stöds,](enabling-json-exporter.md#multiple-selectors) men `model` måste vara först.
+  >[!NOTE]
+  >
+  >Även om det inte är en standardimplementering [flera väljare stöds,](enabling-json-exporter.md#multiple-selectors) men `model` måste vara den första.
 
 ### Ytterligare information {#further-information}
 
@@ -80,7 +80,7 @@ Se även:
 
 Mer information finns i:
 
-* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

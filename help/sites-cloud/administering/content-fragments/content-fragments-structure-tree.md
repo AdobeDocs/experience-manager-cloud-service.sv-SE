@@ -3,8 +3,11 @@ title: Strukturträd för innehållsfragment
 description: Använd funktionen Strukturträd i Content Fragment Editor i AEM för att bättre förstå rubriklöst innehåll.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: 7e55d7b7-3a82-4665-b4aa-9b47094d91c9
-source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
@@ -12,6 +15,12 @@ ht-degree: 0%
 ---
 
 # Strukturträd för innehållsfragment {#content-fragment-structure-tree}
+
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
 
 Använd strukturträdsfunktionen i Content Fragment Editor i AEM för att förstå rubriklöst innehåll.
 

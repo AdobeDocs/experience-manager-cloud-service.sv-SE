@@ -3,7 +3,7 @@ title: Använda GraphiQL IDE i AEM
 description: Lär dig använda GraphiQL IDE i Adobe Experience Manager.
 feature: Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
 workflow-type: tm+mt
 source-wordcount: '1141'
 ht-degree: 0%
@@ -21,7 +21,7 @@ En implementering av standarden [GraphiQL](https://graphql.org/learn/serving-ove
 >I tidigare versioner behövdes ett paket för att installera GraphiQL IDE. Om du har installerat den kan den nu tas bort.
 
 >[!NOTE]
->Du måste ha [konfigurerade dina slutpunkter](/help/headless/graphql-api/graphql-endpoint.md) i [konfigurationsläsare](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md) innan du använder GraphiQL IDE.
+>Du måste ha [konfigurerade dina slutpunkter](/help/headless/graphql-api/graphql-endpoint.md) i [konfigurationsläsare](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser) innan du använder GraphiQL IDE.
 
 The **GraphiQL** kan du testa och felsöka dina GraphQL-frågor genom att aktivera:
 * välj **Slutpunkt** lämplig för platskonfigurationen som du vill använda för dina frågor

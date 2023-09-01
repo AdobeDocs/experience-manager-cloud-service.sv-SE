@@ -3,8 +3,11 @@ title: Modeller för innehållsfragment
 description: Lär dig hur Content Fragment Models fungerar som grund för dina Content Fragments i AEM. Med dessa kan du skapa strukturerat innehåll som kan användas för rubrikfri leverans eller för att skapa sidor.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: 24b1806f-2e8c-49ec-8cb7-a66a3cbe91cd
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '2916'
 ht-degree: 2%
@@ -12,6 +15,12 @@ ht-degree: 2%
 ---
 
 # Modeller för innehållsfragment {#content-fragment-models}
+
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
 
 Content Fragment Models i AEM definierar strukturen för innehållet i dina [innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md). Dessa kan användas för att skapa sidor eller som grund för ditt headless-innehåll.
 

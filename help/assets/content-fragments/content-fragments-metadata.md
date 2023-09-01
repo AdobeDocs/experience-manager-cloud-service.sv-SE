@@ -2,16 +2,22 @@
 title: Metadata - Fragmentegenskaper (resurser - innehållsfragment)
 description: Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment.
 exl-id: bc67480d-a1e4-4ef9-b811-8bd110f70369
-source-git-commit: 5c59189abf809293a319d6bce4ef7389c2451f92
+source-git-commit: ceab75d3592a461478da3250a41ce00b6d4f31ef
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 3%
+source-wordcount: '274'
+ht-degree: 2%
 
 ---
 
 # Metadata – fragmentegenskaper {#metadata-fragment-properties}
 
 Se hur du kan visa och redigera metadataegenskaperna för innehållsfragment i AEM för att justera rubrikfritt innehåll.
+
+>[!NOTE]
+>
+>Innehållsfragment är en webbplatsfunktion, men lagras som **Resurser**.
+>
+>Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol).
 
 ## Redigera egenskaper/metadata {#editing-properties-meta-data}
 
@@ -20,7 +26,7 @@ Du kan visa och redigera metadata (egenskaper) för innehållsfragment:
 1. I **Resurser** konsolen navigerar till platsen för innehållsfragmentet.
 2. Antingen:
 
-   * Välj [**Visa egenskaper** för att öppna dialogrutorna](/help/assets/manage-digital-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
+   * Välj [**Visa egenskaper** öppna dialogrutorna](/help/assets/manage-digital-assets.md#editing-properties). När du har öppnat för visning kan du även redigera.
    * Öppna innehållsfragmentet för redigering och markera sedan **Metadata** från sidopanelen.
 
    ![Metadata på sidopanelen](assets/cfm-metadata-01.png)

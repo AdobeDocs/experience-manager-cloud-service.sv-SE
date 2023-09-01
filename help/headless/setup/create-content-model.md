@@ -2,7 +2,7 @@
 title: Skapa modeller för innehållsfragment - Headless-konfiguration
 description: Definiera strukturen för det innehåll du skapar och använd AEM headless-funktioner med hjälp av Content Fragment-modeller.
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -69,4 +69,4 @@ Nu när du har definierat strukturen för dina innehållsfragment genom att skap
 
 >[!TIP]
 >
->Fullständig information om modeller för innehållsfragment finns i [Dokumentation för Content Fragment Models](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+>Fullständig information om modeller för innehållsfragment finns i [Dokumentation för Content Fragment Models](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)

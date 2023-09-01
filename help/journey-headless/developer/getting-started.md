@@ -2,7 +2,7 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 0%
@@ -166,7 +166,7 @@ Administratören ska vara den användare som konfigurerar AEM och förbereder k�
 
 #### Innehållsförfattare {#content-author}
 
-Innehållsförfattare skapar och hanterar innehåll som levereras utan problem av AEM. Innehållsförfattare använder AEM funktioner som Content Fragments och Assets Console för att hantera sitt innehåll.
+Innehållsförfattare skapar och hanterar innehåll som levereras utan problem av AEM. Innehållsförfattare använder AEM funktioner som Content Fragment Editor och olika konsoler för att hantera sitt innehåll.
 
 Innehållsförfattare bör ha följande i åtanke:
 
@@ -289,8 +289,8 @@ Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsr
 * [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md) - Teknisk dokumentation om namngivningsbegränsningar för AEM
 * [Hanterare och översättning av flera webbplatser](/help/sites-cloud/administering/msm-and-translation.md) - Teknisk dokumentation om AEM kraftfulla översättningsfunktioner
 * [AEM arbetsflöden](/help/sites-cloud/authoring/workflows/overview.md) - Teknisk dokumentation om hur man automatiserar arbetsflöden i AEM
-* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md) - Teknisk dokumentation för innehållsfragment.
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md) - Teknisk dokumentation för Content Fragment Models.
+* [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) - Teknisk dokumentation för innehållsfragment.
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) - Teknisk dokumentation för Content Fragment Models.
 * [GraphQL tekniska dokumentation](https://graphql.org) - GraphQL-definitionen (extern länk)
 * [GRAPHQL API](/help/headless/graphql-api/content-fragments.md) - Teknisk dokumentation som förklarar hur man skapar förfrågningar om åtkomst och leverans av innehållsfragment
 * [Resurser REST API](/help/assets/content-fragments/assets-api-content-fragments.md) - Teknisk dokumentation som förklarar hur du skapar och ändrar innehållsfragment (och andra resurser)

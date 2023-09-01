@@ -3,7 +3,7 @@ title: Introduktion till Headless för AEM
 description: Läs mer om Headless i Adobe Experience Manager (AEM) med en kombination av detaljerad dokumentation och headless-resor. Lär dig hur funktioner som modeller för innehållsfragment, innehållsfragment och ett GraphQL-API används för att driva Headless-upplevelser.
 landing-page-description: Lär dig hur du använder och administrerar Headless i Adobe Experience Manager as a Cloud Service.
 exl-id: 24300499-ae9c-49d0-aa25-f51e14d9cf79
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
 workflow-type: tm+mt
 source-wordcount: '701'
 ht-degree: 8%
@@ -42,7 +42,7 @@ AEM as a Cloud Service är ett flexibelt verktyg för den headless-implementerin
 1. **Innehållsfragment**
    * Ett innehållsfragment skapas baserat på en innehållsfragmentmodell.
    * Innehållsfragment skapas av innehållsförfattare med hjälp av AEM Content Fragment Editor.
-   * Innehållsfragment lagras som AEM Assets, men kan hanteras via Resurskonsolen eller [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-console.md).
+   * Innehållsfragment lagras som AEM Assets, men kan hanteras via Resurskonsolen eller [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console).
 1. **Innehålls-API för leverans**
    * AEM GraphQL API stöder leverans av innehållsfragment.
    * AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.

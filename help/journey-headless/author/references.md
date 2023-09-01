@@ -2,9 +2,9 @@
 title: Läs om hur du använder referenser i innehållsfragment
 description: Lär dig hur du använder referenser i innehållsfragment, för innehåll, andra fragment och andra resurser (media). Lägg in behovet av och mekanismerna i kapslade fragment för Headless CMS Authoring.
 exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Referenser är helt enkelt en mekanism för att koppla samman resurser, oavsett 
 
 Vissa referenser har särskilda datatyper (till exempel Innehållsreferenser och Fragmentreferenser), medan andra bara läggs till som en referens i ett textblock (resursreferenser och ad hoc-referenser).
 
-![Innehållsfragment - referenser](/help/journey-headless/author/assets/headless-journey-author-references-01.png)
+![Innehållsfragment - referenser](/help/sites-cloud/administering/content-fragments/assets/cf-authoring-overview.png)
 
 ## Innehållsreferenser {#content-references}
 
@@ -92,11 +92,7 @@ Definitionen av kontrollerna för innehållsfragmentmodellen:
 
 Använda **Strukturträd** på fliken i redigeraren för innehållsfragment kan du navigera genom fragmenten som fragmentet refererar till och sedan genom eventuella referenser. Om du markerar en referens öppnas fragmentet för redigering.
 
->[!NOTE]
->
->Med hjälp av vägbeskrivningarna på huvudpanelen kan du gå tillbaka till startpunkten.
-
-![Strukturträd för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cfm-structuretree-02.png)
+![Strukturträd för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cf-authoring-structure-tree.png)
 
 ## Ad hoc-referenser {#adhoc-references}
 
@@ -110,21 +106,21 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
+* [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 
-   * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md)
+   * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md)
 
-      * [Använd konfigurationen i resursmappen](/help/sites-cloud/administering/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
+      * [Använd konfigurationen i resursmappen](/help/sites-cloud/administering/content-fragments/setup.md#apply-the-configuration-to-your-folder)
 
-      * [Skapa ett innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
+      * [Skapa ett innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#creating-a-content-fragment)
 
-   * [Variationer - Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md)
+   * [Skapa innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md)
 
-   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md)
+   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 
-      * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#data-types)
+      * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
 
-      * [Modeller för innehållsfragment - egenskaper](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#properties)
+      * [Modeller för innehållsfragment - egenskaper](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties)
 
 * Komma igång-guider
    * [Skapa en resursmapp - Headless-konfiguration](/help/headless/setup/create-assets-folder.md)

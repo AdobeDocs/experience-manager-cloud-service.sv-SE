@@ -6,9 +6,9 @@ mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 5b61b60a94b944a747232b238c3ce48195a5a212
 workflow-type: tm+mt
-source-wordcount: '4219'
+source-wordcount: '4347'
 ht-degree: 10%
 
 ---
@@ -29,7 +29,7 @@ När du organiserar en samling resurser, till exempel, alla `Nature` kan du skap
 >[!NOTE]
 >
 >* Dela en resursmapp av typen `sling:OrderedFolder`, stöds inte vid delning till Experience Cloud. Om du vill dela en mapp ska du inte markera [!UICONTROL Ordered] när du skapar en mapp.
->* Experience Manager tillåter inte att `subassets` ord som namnet på en mapp. Det är ett nyckelord som är reserverat för nod som innehåller delresurser för sammansatta resurser
+>* Experience Manager tillåter inte att `subassets` ord som namnet på en mapp. Det är ett nyckelord reserverat för nod som innehåller delresurser för sammansatta resurser
 
 1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp. Klicka på **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
 1. I **[!UICONTROL Title]** anger du ett mappnamn. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
@@ -77,6 +77,21 @@ När den är aktiverad skickar Experience Manager meddelanden om duplicerade res
 >
 >När du överför resurser till databasen upptäcker Experience Manager duplicering och meddelar dig om de första 100 duplicerade resurserna.
 
+## Extract ZIP-arkiv {#extract-zip-archives}
+
+Välj ZIP-arkiv som hanteras i Experience Manager och extrahera filerna direkt till Experience Manager utan att ladda ned dem.
+
+Så här extraherar du ZIP-filerna:
+
+1. Välj ZIP-filtyp.
+1. Klicka på **[!UICONTROL Extract Archive]** som finns i åtgärdsfältet.
+1. Välj den mapp där du behöver spara de extraherade resurserna som är tillgängliga i den komprimerade mappen.
+1. Klicka på **[!UICONTROL Next]**.
+1. Välj lämpligt beteende för att hantera filnamnskonflikter under extraheringen. Du kan välja att skapa en ny version av en befintlig resurs, ersätta resursen, behålla båda resurserna i målmappen eller hoppa över extraheringen av den nya resursen.
+1. Klicka på **[!UICONTROL Extract]**. Zippextraheringsprocessen startar. När processen är klar kan du visa de extraherade resurserna i målmappen.
+
+   ![ZIP-extrahering](assets/zip-extraction.png)
+
 ## Förhandsgranska resurser {#previewing-assets}
 
 Följ de här stegen för att förhandsgranska en resurs.
@@ -98,7 +113,7 @@ Följ de här stegen för att förhandsgranska en resurs.
 
    ![properties_quickaction](assets/properties_quickaction.png)
 
-1. I [!UICONTROL Properties] redigerar du metadataegenskaperna på olika flikar. Till exempel, under **[!UICONTROL Basic]** kan du redigera titeln, beskrivningen och så vidare.
+1. I [!UICONTROL Properties] redigerar du metadataegenskaperna på olika flikar. Under till exempel **[!UICONTROL Basic]** kan du redigera titeln, beskrivningen och så vidare.
 
    >[!NOTE]
    >
@@ -112,7 +127,7 @@ Följ de här stegen för att förhandsgranska en resurs.
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. I **[!UICONTROL Tags]** markerar du en eller flera taggar. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och markerar `Enter` nyckel. Den nya taggen sparas i [!DNL Experience Manager].
+1. I **[!UICONTROL Tags]** markerar du en eller flera taggar. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och markerar `Enter` -tangenten. Den nya taggen sparas i [!DNL Experience Manager].
 
    YouTube kräver att taggar ska publiceras och ha en länk till YouTube (om en lämplig länk finns).
 
@@ -150,7 +165,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
 * Skapandetid och refererade sökvägar är unika för varje resurs och för varje återgivning.
 
-Övriga egenskaper och metadatainformation behålls. Ingen del av kopian skapas när en resurs kopieras.
+Övriga egenskaper och metadatainformation bevaras. Ingen del av kopian skapas när en resurs kopieras.
 
 1. Välj en eller flera resurser i resursgränssnittet och tryck/klicka sedan på **[!UICONTROL Copy]** -ikonen i verktygsfältet. Du kan även välja **[!UICONTROL Copy]** ![copy_icon](assets/copy_icon.png) snabbåtgärd från tillgångskortet.
 
@@ -164,13 +179,13 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
    >
    >Om du kopierar en resurs på samma plats, [!DNL Experience Manager] genererar automatiskt en variant av namnet. Om du till exempel kopierar en resurs med namnet `Square`, [!DNL Experience Manager] genererar automatiskt titeln för kopian som `Square1`.
 
-1. Klicka på **[!UICONTROL Paste]** resursikon i verktygsfältet. Resurser kopieras till den här platsen.
+1. Klicka på **[!UICONTROL Paste]** resursikonen i verktygsfältet. Resurser kopieras till den här platsen.
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Paste]** ikonen är tillgänglig i verktygsfältet tills inklistringen är klar.
+   >The **[!UICONTROL Paste]** ikonen är tillgänglig i verktygsfältet tills inklistringsåtgärden är slutförd.
 
 ### Flytta eller byta namn på resurser {#moving-or-renaming-assets}
 
@@ -301,7 +316,7 @@ Se [hämta resurser från [!DNL Experience Manager]](/help/assets/download-asset
    ![Avpubliceringsåtgärd](assets/unpublish_action.png)
    *Bild: Alternativ för publicering och avpublicering samt schemaläggning.*
 
-1. Välj **[!UICONTROL Now]** för att agera på resursen direkt eller välja **[!UICONTROL Later]** för att schemalägga åtgärden. Välj ett datum och en tid om du väljer **[!UICONTROL Later]** alternativ. Klicka på **[!UICONTROL Next]**.
+1. Välj **[!UICONTROL Now]** för att agera på resursen direkt eller välja **[!UICONTROL Later]** för att schemalägga åtgärden. Välj datum och tid om du väljer **[!UICONTROL Later]** alternativ. Klicka på **[!UICONTROL Next]**.
 
 1. Om en resurs refererar till andra resurser vid publicering visas dess referenser i guiden. Endast de referenser som inte har publicerats eller ändrats sedan den senaste publiceringen visas. Välj de referenser som du vill publicera.
 
@@ -346,8 +361,8 @@ Mer information om enkla, avancerade och anpassade sökningar för att hitta och
 
 Snabbåtgärdsikoner är tillgängliga för en enskild resurs i taget. Beroende på vilken enhet du använder utför du följande åtgärder för att visa snabbåtgärdsikonerna:
 
-* Pekskärmar: Peka och håll. På en iPad kan du till exempel trycka och hålla ned en resurs så att snabbåtgärderna visas.
-* Ej pekskärmar: Hovringspekare. På en stationär enhet visas t.ex. snabbåtgärdsfältet om du håller pekaren över miniatyrbilden för resursen.
+* Pekskärmar: Tryck och håll. På en iPad kan du till exempel trycka och hålla ned en resurs så att snabbåtgärderna visas.
+* Ej pekskärmar: pekare. På en stationär enhet visas t.ex. snabbåtgärdsfältet om du håller pekaren över miniatyrbilden för resursen.
 
 <!-- Hiding this topic via cqdoc-18707
 
@@ -549,7 +564,7 @@ Tryck/klicka på knappen **[!UICONTROL Print]** och följ instruktionerna i guid
 
    ![chlimage_1-247](assets/chlimage_1-247.png)
 
-   Om du vill ändra utseendet på den återgivna PDF-filen, t.ex. teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** från Configuration Manager och ändra önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg för anteckningar finns i [Anteckningar](/help/assets/manage-digital-assets.md#annotating).
+   Om du vill ändra utseendet på den återgivna PDF-filen, till exempel teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** från Configuration Manager och ändra önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg för anteckningar finns i [Anteckningar](/help/assets/manage-digital-assets.md#annotating).
 
    Återgå till den återgivna PDF-filen och uppdatera den. Det uppdaterade PDF återspeglar de ändringar du gjorde.
 
@@ -653,7 +668,7 @@ Mer information om hantering av samlingar finns i [hantera samlingar](/help/asse
 
 När du bläddrar bland resurser inifrån [!DNL Experience Manager] de utgångna resurserna visas inte i användargränssnittet. Administratörer kan göra följande konfiguration för att förhindra att resurser som har gått ut visas, söks och hämtas när de bläddrar bland resurser från skrivbordsappen och Asset Link. Konfigurationen fungerar för alla användare, oavsett administratörsbehörighet.
 
-Kör följande CURL-kommando. Säkerställ läsåtkomst på `/conf/global/settings/dam/acpapi/` för de användare som har åtkomst till resurser. Användare som är en del av `dam-user` gruppen har behörigheten som standard.
+Kör följande CURL-kommando. Säkerställ läsåtkomst på `/conf/global/settings/dam/acpapi/` för de användare som har åtkomst till resurser. Användare som tillhör `dam-user` gruppen har behörigheten som standard.
 
 ```curl
 curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/global/settings/dam/acpapi/configuration/_jcr_content' \

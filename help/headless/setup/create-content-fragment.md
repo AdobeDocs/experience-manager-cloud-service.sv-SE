@@ -2,7 +2,7 @@
 title: Skapa innehållsfragment - Headless-inställningar
 description: Lär dig använda AEM innehållsfragment för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
 exl-id: a227ae2c-f710-4968-8a00-bfe48aa66145
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 0%
@@ -51,4 +51,4 @@ Nu när du har skapat ett innehållsfragment kan du gå vidare till den sista de
 
 >[!TIP]
 >
->Fullständig information om hur du hanterar innehållsfragment finns i [Dokumentation för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments.md)
+>Fullständig information om hur du hanterar innehållsfragment finns i [Dokumentation för innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)

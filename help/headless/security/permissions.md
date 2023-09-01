@@ -3,7 +3,7 @@ title: Behörighetsaspekter för headless-innehåll
 description: Läs om olika behörigheter och ACL-överväganden för en headless-implementering med Adobe Experience Manager. Förstå de olika personifieringsnivåer och behörighetsnivåer som krävs för både författarmiljön och publiceringsmiljön.
 feature: Content Fragments,GraphQL API
 exl-id: 3fbee755-2fa4-471b-83fc-3f4bf056267a
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 526520a8d9d217d0861a7283b10f7b89dffaf9d5
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Som en god praxis bör behörigheter anges för grupper i AEM. Dessa grupper kal
 
 Det enklaste sättet att hantera gruppmedlemskap är att använda Adobe Identity Management System-grupper (IMS) och tilldela [IMS-grupper till lokala AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=en#managing-permissions-in-aem).
 
-![Behörighetsflöde för Admin Console](assets/admin-console-aem-group-permissions.png)
+![Administratörskonsolens behörighetsflöde](assets/admin-console-aem-group-permissions.png)
 
 På en hög nivå är processen:
 
@@ -36,7 +36,7 @@ På en hög nivå är processen:
 
 >[!TIP]
 >
-> En detaljerad videogenomgång av hantering av IMS och AEM användare och grupper finns [här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html).
+> En detaljerad videogenomgång av hur du hanterar IMS och AEM användare och grupper finns [här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html).
 
 Att hantera **grupper** i AEM, navigera till **verktyg** > **Säkerhet** > **Grupper**.
 
@@ -44,7 +44,7 @@ Om du vill hantera behörigheter för grupper i AEM går du till **verktyg** > *
 
 ### DAM-användare
 
-&quot;DAM&quot; står i det här sammanhanget för Digital Asset Management. The **DAM-användare** är en grupp i AEM som kan användas för&quot;vardagliga&quot; användare som hanterar digitala resurser och innehållsfragment. Den här gruppen ger behörigheter till **visa**, **add**, **uppdatera**, **delete** och **publicera** Innehållsfragment och alla andra filer i AEM Assets.
+&quot;DAM&quot; står i det här sammanhanget för Digital Asset Management. The **DAM-användare** är en grupp i AEM som kan användas för&quot;vardagliga&quot; användare som hanterar digitala resurser och innehållsfragment. Den här gruppen ger behörigheter till **visa**, **lägg till**, **uppdatera**, **delete** och **publicera** Innehållsfragment och alla andra filer i AEM Assets.
 
 Om IMS används för gruppmedlemskap lägger du till lämpliga IMS-grupper som medlemmar i **DAM-användare** grupp. Medlemmar i IMS-gruppen ärver behörigheterna för DAM-användargruppen när de loggar in i AEM.
 
@@ -52,9 +52,9 @@ Om IMS används för gruppmedlemskap lägger du till lämpliga IMS-grupper som m
 
 Det är bäst att inte ändra behörigheter för en grupp utanför rutan direkt. I stället kan du även skapa en eller flera egna grupper som är utformade efter **DAM-användare** gruppbehörigheter och begränsa åtkomsten ytterligare till olika **mappar** inom AEM Assets.
 
-Använd **Behörigheter** konsol i AEM och uppdatera sökvägen från `/content/dam` till en mer specifik sökväg, det vill säga `/content/dam/mycontentfragments`.
+För mer detaljerad behörighet använder du **Behörigheter** konsol i AEM och uppdatera sökvägen från `/content/dam` till en mer specifik sökväg, det vill säga `/content/dam/mycontentfragments`.
 
-Det kan vara önskvärt att ge den här gruppen användarbehörigheter för att skapa och redigera innehållsfragment, men inte ta bort. Om du vill granska och tilldela behörigheter för redigering, men inte ta bort, se [Innehållsfragment - Ta bort överväganden](/help/sites-cloud/administering/content-fragments/content-fragments-delete.md).
+Det kan vara önskvärt att ge den här gruppen användarbehörigheter för att skapa och redigera innehållsfragment, men inte för att ta bort. Om du vill granska och tilldela behörigheter för redigering, men inte ta bort, se [Innehållsfragment - Ta bort överväganden](/help/sites-cloud/administering/content-fragments/delete-considerations.md).
 
 ### Modellredigerare
 
@@ -86,7 +86,7 @@ Assets CUGs jobbar med:
 * Först nekas all åtkomst till mappen och undermapparna
 * Ge sedan läsåtkomst till mappen och undermapparna för alla AEM användargrupper som är listade i CUG-listan
 
-CUG-grupper kan konfigureras för resursmappar som innehåller innehåll som exponeras via GraphQL API:er. Åtkomsten till resursmappar i AEM Publish bör styras via Användargrupper, i stället för direkt från användaren. Skapa (eller återanvänd) en AEM användargrupp som ger åtkomst till resursmappar som innehåller innehåll som exponeras av GraphQL API:er.
+CUG-grupper kan konfigureras för resursmappar som innehåller innehåll som exponeras via GraphQL API:er. Åtkomsten till resursmappar vid publicering AEM ska styras via användargrupper i stället för direkt från användaren. Skapa (eller återanvänd) en AEM användargrupp som ger åtkomst till resursmappar som innehåller innehåll som exponeras av GraphQL API:er.
 
 #### Välj autentiseringsschema{#publish-permissions-users}
 

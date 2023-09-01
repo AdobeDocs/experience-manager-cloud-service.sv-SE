@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 5995c416328e6f340285004ec2e723cc9279dabd
+source-git-commit: a635a727e431a73086a860249e4f42d297882298
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '1750'
 ht-degree: 0%
 
 ---
@@ -26,25 +26,42 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.7.0) är 27 juli 2023. Nästa version (2023.8.0) är planerad till 31 augusti 2023.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.8.0) är 31 augusti 2023. Nästa funktionsrelease (2023.9.0) planeras till 28 september 2023.
 
 ## Släpp video {#release-video}
 
-Titta på videon med versionsöversikten för juli 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.7.0:
+Titta på videon Versionsöversikt från augusti 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.8.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3422016/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3423535/?quality=12)
 
 ## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
 
 ### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
 
-* MSM för innehållsfragment. AEM Multisite Manager är nu tillgängligt för innehållsfragment, vilket gör att du kan skapa Live-kopior för innehållsfragment för massdistribution av innehåll. Detaljerade arvskontroller är tillgängliga ned till nivån för innehållselement och variationer.
-
-### Nya funktioner i [!DNL Experience Manager Sites] prerelease {#prerelease-sites}
-
 * The [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=en) Nu kan användare visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användarna behöver inte längre växla till Assets UI för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
 
-![Tagga i konsolen för innehållsfragment](/help/assets/content-fragments-console-tags.png)
+  ![Tagga i konsolen för innehållsfragment](/help/assets/content-fragments-console-tags.png)
+* Den nya redigeraren för innehållsfragment är nu tillgänglig på AEM as a Cloud Service. Det ger innehållsförfattarna möjlighet att bli produktivare genom att effektivisera sina redigeringsuppgifter och minska behovet av att växla mellan olika program samtidigt som de redigerar innehåll.
+  ![Ny redigerare för innehållsfragment](/help/release-notes/assets/newCFEditor.png)
+
+Den nya redigeraren för innehållsfragment har följande fördelar som inte är tillgängliga i den ursprungliga redigeraren:
+* Spara automatiskt för effektivare redigering och för att förhindra oavsiktliga redigeringsförluster.
+* Hierarkisk vy av ett innehållsfragment och dess referenser med hjälp av strukturträdet för snabb navigering i ett djupt strukturerat fragment.
+  ![Strukturträd i innehållsfragmentredigeraren](/help/release-notes/assets/newCFEditor_StructureTree.png)
+
+* Inline-överföring av resurser som innehållsreferenser utan att först behöva överföra dem till resursens DAM
+* Ad hoc-förhandsgranskning av den renderade upplevelsen som levereras av innehållsfragmentet för att hjälpa författare att visualisera utseendet och känslan för innehållet i klientappen
+* Publicera och avpublicera innehållsfragmentet med ett klick från redigeraren
+* Visa och navigera till språkkopior när du redigerar ett innehållsfragment
+  ![Språkkopior i Content Fragment Editor](/help/release-notes/assets/newCFEditor_LanguageCopies.PNG)
+
+* Visa versioner för att hjälpa till att hålla reda på tidslinjen för ett innehållsfragment
+
+  ![Versioner i Content Fragment Editor](/help/release-notes/assets/newCFEditor_Versionhistory.PNG)
+
+* Visa överordnade referenser som hjälper författare att förstå effekten av sina redigeringar
+
+  ![Överordnade referenser i Content Fragment Editor](/help/release-notes/assets/newCFEditor_Parentreferences.PNG)
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
@@ -60,39 +77,69 @@ You can now assign metadata form to a specific folder within your Assets Essenti
 
 -->
 
-**Förbättrat ramverk för artificiell intelligens för smarta taggar i bilder**
+* **Massimportera resurser från datakällor**: Administratörer har nu [möjlighet att importera ett stort antal resurser](/help/assets/bulk-import-assets-view.md) från en datakälla till AEM Assets. Administratörerna behöver inte längre överföra enskilda resurser eller mappar till AEM Assets. De datakällor som stöds för bulkimport är bland annat Azure, AWS, Google Cloud och Dropbox.
 
-Experience Manager Assets använder nu ett förbättrat ramverk för artificiell intelligens för smarta taggar i bilder. Den här innehållsintelligensen ger bättre relevans och precision för smarta taggar som är tillgängliga för alla bildresurser vid förtäring.
+  ![Massimportera resurser från en datakälla](/help/release-notes/assets/bulk-import.png)
 
-**Konfigurera visning av kolumner för resurslista-vyn**
+* **Bildredigeringsverktyg som bygger på Adobe Express**: Enkelt och intuitivt [bildredigeringsverktyg som bygger på Adobe Express](/help/assets/edit-images-assets-view.md) som finns direkt i AEM Assets för att öka återanvändningen av innehåll och snabba upp innehållets hastighet.
 
-Nu kan du i Assets Essentials välja vilka kolumner som ska visas i resurslista, till exempel Status, Format, Dimensioner, Storlek.
+  ![Bildredigering med Adobe Express](/help/release-notes/assets/edit-adobe-express.png)
 
-![Konfigurera kolumner](/help/release-notes/assets/configure-columns.png)
+* **Flexibilitet vid fästning av objekt för snabb åtkomst till arbetsytan**: Möjlighet att markera och fästa objekt åt dig, för hela organisationen eller för en lista över grupper så att de visas i [Snabb åtkomst till delen Min arbetsyta](/help/assets/my-workspace-assets-view.md) baserat på ditt val.
 
-**Sortera sökresultat baserat på relevans**
+  ![Fäst objekt för grupper](/help/release-notes/assets/pin-items-for-groups.png)
 
-Assets Essentials sorterar nu sökresultaten baserat på relevans som standard. Du kan sortera de sökda resurserna i stigande eller fallande ordning efter `Name`, `Relevance`, `Size`, `Modified`och `Created`.
+### Nya funktioner i administrationsvyn {#admin-view-features}
+
+**Förbättrade sökfunktioner**
+
+* Administratörer kan nu [konfigurera batchstorleken för resurser](/help/assets/search-assets.md#configure-asset-batch-size) som visas när du utför en sökning. Resurssökresultaten visas i multipler av det konfigurerade batchstorleksnumret när du rullar nedåt för att läsa in resultaten. Du kan välja mellan de tillgängliga gruppstorlekarna 200, 500 och 1 000 resurser. Om du anger ett lägre batchstorleksnummer blir sökningen snabbare.
+
+  ![Konfiguration av batchstorlek för resurser](/help/release-notes/assets/assets-batch-size-configuration.png)
+
+* Experience Manager Assets har nu en ny version 9 av `damAssetLucene` index. `damAssetLucene-9` ändrar beteendet för beräkning av Oak Query-faktor till [inte längre utvärdera åtkomstkontroll för antalet fakturor](/help/assets/search-assets.md) returneras av det underliggande sökindexet, vilket ger snabbare svarstider.
+
+### Förhandsversioner av funktioner som finns i [!DNL Experience Manager Assets] {#prerelease-features-assets}
+
+* **Dynamic Media**: [Stöd för flera undertexter och flerljudspår för videor i Dynamic Media](/help/assets/dynamic-media/video.md#about-msma)—Nu kan du enkelt lägga till flera undertexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för alla mottagare världen över. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera undertexter och ljudspår från en enda flik i användargränssnittet.
+
+  ![Fliken Undertexter och Ljudspår på sidan Egenskaper för en vald videoresurs.](/help/release-notes/assets/msma-aem-cs.png)*Fliken Undertexter och Ljudspår på sidan Egenskaper för en vald videoresurs.*
+
+* **Resurser**: Möjlighet att välja ZIP-arkiv som hanteras i Experience Manager och [extrahera filerna direkt i Experience Manager](/help/assets/manage-digital-assets.md#extract-zip-archives) utan att ladda ned dem.
+
+  ![Fäst objekt för grupper](/help/release-notes/assets/extract-archive.png)
 
 
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
 ### Nya funktioner i [!DNL Forms] {#new-features-available-in-forms-channel}
 
-* [**Färdiga teman**](/help/forms/using-themes-in-core-components.md) **och mallar**: Kom igång snabbt med processen för att skapa formulär med våra färdiga OOTB-teman och mallar som är skräddarsydda för både erfarna proffs och nya formulärförfattare. Dessa välstrukturerade teman och mallar är sömlöst byggda med adaptiva Forms Core-komponenter och gör att du snabbt kan börja skapa formulär för vanliga användningsområden.
-
-  ![Körklara mallar](/help/forms/assets/form-templates-ootb.png)
-
-* **Reaktionskomponenter för Headless Forms**: Nu kan du förhandsgranska och anpassa Headless Adaptive Form-renderingar med React-komponenterna som medföljer. Dessa komponenter utnyttjar BEM-klasser från adaptiva Forms Core-komponenter för formatering, vilket gör det enkelt för dig att anpassa deras utseende efter dina specifika krav.
-
-* [**Skapa adaptiv Forms med repeterbara avsnitt**](/help/forms/create-forms-repeatable-sections.md): Nu kan du [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html), [Panel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel-container.html)och [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html) komponentbaserad Adaptiv form repeterbar för inspelning av flera dataposter.  Dessa upprepningsbara avsnitt gör att du enkelt kan ange flera datainmatningar. Det är användbart när de nödvändiga instanserna av data är okända i förväg. En formuläranvändare kan enkelt lägga till eller ta bort avsnitt, göra formulären anpassningsbara till olika datainmatningsscenarier och förenkla insamlingen av flera förekomster av samma datapost.
+* [**Google reCAPTCHA - företagssupport**](/help/forms/captcha-adaptive-forms.md): Använd Google reCAPTCHA Enterprise i en adaptiv form för att få bättre skydd mot bedräglig aktivitet och skräppost, vilket ger en säkrare användarupplevelse. Med avancerad riskanalys och smidig integrering kan äkta användare enkelt skicka in formulär medan bots blockeras effektivt.
 
 
 ### Förhandsversioner av funktioner som finns i [!DNL Forms] {#pre-release-features-available-in-forms-channel}
 
-* [**Google reCAPTCHA - företagssupport**](/help/forms/captcha-adaptive-forms.md): Använd Google reCAPTCHA Enterprise i en adaptiv form för att få bättre skydd mot bedräglig aktivitet och skräppost, vilket ger en säkrare användarupplevelse. Med avancerad riskanalys och smidig integrering kan äkta användare enkelt skicka in formulär medan bots blockeras effektivt.
+* **Adobe Analytics med Experience Cloud Setup Automation för Forms**: Nu kan du aktivera Adobe Analytics med Experience Cloud Setup Automation (Automatisering av installationsprogram) med ett par knappar. Det gör att ni kan koppla AEM Forms as a Cloud Service till Experience Platform-taggar och Adobe Analytics för att hämta in och spåra prestandamått för era publicerade formulär.
 
-  >[!VIDEO](https://video.tv.adobe.com/v/3422097/adaptive-forms-recaptcha-core-components-captcha/?quality=12&learn=on)
+* **Adobe Analytics rapportmall för Adaptiv Forms**: Forms as a Cloud Service tillhandahåller nu en Adobe Analytics-rapport, OOTB. Det hjälper er att förstå hur era formulär fungerar. Med hjälp av formulärnivåstatistik får du insikt i hur formuläret fungerar med flera nyckeltal (KPI) som återgivningar, besökare, inskickat material, genomsnittlig fyllnadstid. Genom att följa upp användarbeteenden och feedback kan du identifiera områden i formuläret som orsakar förvirring och vägleda förbättringar av formulärets design och funktion.
+
+  ![Analysrapport om användarinteraktion med adaptiva formulär](/help/forms/assets/forms-analytics-report.png)
+
+* **[Form Fragment in Adaptive Forms based on Core Components](/help/forms/adaptive-form-fragments-core-components.md)**: Ta farväl av dubbelarbete, optimera det digitala arkivet och förbättra samarbetet när ni utökar upplevelsen av formulärgenereringen med formulärfragment. Dessa återanvändbara komponenter kan smidigt integreras i flera formulär, vilket effektiviserar skapandet av enhetliga och proffsiga formulär. Form Fragments säkerställer återanvändbarhet, standardisering och enhetlig varumärkesexponering genom funktionen&quot;change once and mirror everywhere&quot;. Upplev bättre underhålls- och effektivitetsvinster i takt med att uppdateringar som görs på ett och samma ställe sprids automatiskt i alla formulär som använder dessa fragment.
+
+* **[Förbättrat arbetsflöde i Adobe Sign](/help/forms/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)**: Adobe Sign Workflow-steget har förbättrats och innehåller följande:
+   * **Myndighets-ID-baserad autentisering för Adobe Sign**: Adobe Acrobat Sign Government ID-Based Authentication erbjuder ytterligare ett verifieringslager genom att användarna kan autentisera sin identitet med hjälp av foto-ID:n (körkort, nationellt ID, pass). Genom att utnyttja pålitliga identifieringsdokument ger den här förbättringen ett extra förtroende för signeringsprocessen, vilket gör den idealisk för scenarier som kräver högre säkerhet, regelefterlevnad och användarvalidering.
+
+   * **Granskningsspår för Adobe Sign-dokument**: Använd funktionen Granskningsspår för att få detaljerade insikter om livscykeln för dina Adobe Sign-dokument. Med granskningsspåret kan du nu föra ett omfattande register över alla åtgärder och interaktioner som rör dina dokument. Detta inkluderar information som vem som visade, redigerade eller signerade dokumentet, tillsammans med tidsstämplar för varje händelse. Den här förbättringen är avgörande för att upprätthålla regelefterlevnaden, lösa tvister och säkerställa integriteten för dina digitala avtal.
+
+   * **Nya roller för avtalsmottagare utöver bara signeraren**: Adobe Acrobat Sign har möjlighet att utöka rollerna för avtalsmottagare utöver bara signeraren för att bättre matcha deras arbetsflödesbehov. När det här alternativet är aktiverat kan varje mottagare i ett avtal konfigureras individuellt, med signerare som standard.
+
+* **[Protect dina dokument med Document Assurance API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med API:erna för Document Assurance kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
+
+* **Stöd för sidantal i kommunikations-API:er**: Nu kan du, tillsammans med att hämta ditt dokument via kommunikations-API:erna, även få värdefull information om antalet sidor i dokumentet.
+
+* **[Felhantering med anpassade felhanterare i regelredigeraren](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)**: Du kan nu anropa en anpassad funktion som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
+
 
 ### Headless Adaptive Forms early adopter {#forms-early-adopter}
 
@@ -105,13 +152,12 @@ Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experi
 
 Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från ditt officiella e-post-ID till att gå med i det tidiga adopterprogrammet.
 
+
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### Actions Center {#actions-center}
+### CDN-loggar {#cdn-logs}
 
-Prenumerera på e-postmeddelanden som varnar dig när allvarliga incidenter inträffar och som kräver omedelbara åtgärder, och även med personaliserade rekommendationer för att optimera webbplatsen. [Actions Center](/help/operations/actions-center.md) fungerar som ett nav där du kan granska dessa varningar, t.ex. blockerade replikeringsköer eller utgångna autentiseringsuppgifter, och markera dem som lösta.
-
-![Actions Center, bild](/help/assets/assets/actions-center.png)
+Ladda ned CDN-loggar från Cloud Manager, vilket är användbart för optimering av täckningsgrad för cache och större synlighet för innehållsleveransflödet. [Läs mer om](/help/implementing/developing/introduction/logging.md#cdn-log) CDN-loggformatet. Den här funktionen lanseras gradvis för kunderna i början av september.
 
 ### CDN och WAF Rules early adopter program {#waf-early-adopter}
 
@@ -123,9 +169,6 @@ Filtrera trafiken vid CDN baserat på:
 
 Läs mer om funktionen i artikeln [här](/help/security/cdn-and-waf-rules.md).
 
-### Andra Foundation-ändringar {#other-foundation-changes}
-
-* Under veckan 7 augusti returnerar AEM felkod 429 i stället för felkod 503 när begäranden om att AEM instanser överskrider en felfri nivå. [Läs mer](/help/implementing/developing/introduction/development-guidelines.md).
 
 ## Versionsinformation om underhåll {#maintenance}
 

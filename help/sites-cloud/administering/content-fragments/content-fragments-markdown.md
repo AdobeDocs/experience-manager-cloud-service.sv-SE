@@ -3,8 +3,11 @@ title: Markdown
 description: Förstå hur Content Fragment Editor använder markeringssyntax för att enkelt skapa innehåll, både för sidredigering och rubrikfri leverans.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: 4e9b076e-7429-466b-bb53-2164da379650
-source-git-commit: 34574fdc7f246499bd238fef388671d2287e62bc
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 3%
@@ -13,7 +16,13 @@ ht-degree: 3%
 
 # Markdown {#markdown}
 
-När du [redigering](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva innehåll för både sidredigering och headless-leverans:
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
+
+När du är [redigering](/help/sites-cloud/administering/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva innehåll för både sidredigering och headless-leverans:
 
 ![markeringsredigerare](/help/sites-cloud/administering/content-fragments/assets/cfm-markdown-01.png)
 
@@ -129,7 +138,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Skapa en osorterad &amp;lista med hjälp av den sista; -symbolen före objekten i listan. Till exempel:
+Om du vill skapa en osorterad lista använder du symbolen ast; före objekten i listan. Till exempel:
 
     `* item in list`
 

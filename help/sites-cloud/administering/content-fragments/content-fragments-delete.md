@@ -3,8 +3,11 @@ title: Innehållsfragment – ta bort överväganden
 description: Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
 feature: Content Fragments
 role: User
+hide: true
+index: false
+hidefromtoc: true
 exl-id: f6698dd8-3e2a-44ac-b00f-df578aa85ffe
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 5ce5746026c5683e79cdc1c9dc96804756321cdb
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 9%
@@ -12,6 +15,12 @@ ht-degree: 9%
 ---
 
 # Innehållsfragment – ta bort överväganden {#content-fragments-delete-considerations}
+
+<!--
+hide: yes
+index: no
+hidefromtoc: yes
+-->
 
 Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
 
@@ -26,9 +35,9 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
    * **Använd skiftläge**: En användare som behöver redigera/uppdatera ett innehållsfragment - **och ta bort ett helt fragment**.
    * **Behörigheter**: Behörigheten Ta bort kan tilldelas via användar- och/eller grupphantering. <!-- The [Delete](/help/sites-administering/security.md#actions) permission can be [assigned through User and/or Group Management](/help/sites-administering/security.md#managing-permissions). -->
 
-2. **De flera underenheter som utgör ett innehållsfragment. till exempel variationer, undernoder.**
+2. **De flera underenheter som utgör ett innehållsfragment, till exempel variationer, undernoder.**
 
-   Den grundläggande åtgärden i redigeraren för innehållsfragment kräver att sådana tillfälliga underelement kan tas bort. t.ex. vid manipulering av variationer, även när du redigerar metadata eller hanterar associerat innehåll.
+   Den grundläggande åtgärden i innehållsfragmentredigeraren kräver att sådana tillfälliga underelement kan tas bort. Till exempel när du ändrar variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
    * **Använd skiftläge**: En användare som behöver redigera/uppdatera ett innehållsfragment - **utan tillstånd att ta bort ett helt fragment**.
    * **Behörigheter**: Se [Behörigheter krävs endast för redigeringsfunktionen](#permissions-required-for-editor-functionality-only).
@@ -45,7 +54,7 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 Användare som behöver redigera/uppdatera ett innehållsfragment, **utan att kunna ta bort ett helt fragment**, måste tilldelas specifika behörigheter, eftersom grundläggande användning av redigeraren för innehållsfragment kräver att tillfälliga underelement kan tas bort.
 
-t.ex. vid manipulering av variationer, även när du redigerar metadata eller hanterar associerat innehåll.
+Till exempel när du ändrar variationer, även när du redigerar metadata eller hanterar associerat innehåll.
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: f499edbc05b71495c072564bb065a07c34a9e236
 workflow-type: tm+mt
-source-wordcount: '2898'
+source-wordcount: '2937'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,12 @@ Så här använder du modeller för innehållsfragment:
    >
    >Om [användning av innehållsfragmentmodeller inte har aktiverats](/help/assets/content-fragments/content-fragments-configuration-browser.md), **Skapa** kommer inte att vara tillgängligt.
 
-1. Ange **modelltitel**. Du kan också lägga till **Taggar**, a **Beskrivning** och markera **Aktivera modell** till [aktivera modellen](#enabling-disabling-a-content-fragment-model) vid behov.
+1. Ange **modelltitel**.
+Du kan också definiera olika egenskaper, till exempel lägga till **Taggar**, a **Beskrivning** och markera **Aktivera modell** till [aktivera modellen](#enabling-disabling-a-content-fragment-model) vid behov.
+
+   >[!NOTE]
+   >
+   >Mer information om **URL-mönster för standardförhandsvisning** se [Content Fragment Model - egenskaper](#content-fragment-model-properties).
 
    ![titel och beskrivning](assets/cfm-models-02.png)
 
@@ -313,6 +318,12 @@ Du kan redigera **Egenskaper** för en innehållsfragmentmodell:
    * **Taggar**
    * **Beskrivning**
    * **Överför bild**
+   * **URL-mönster för standardförhandsvisning**
+
+     >[!NOTE]
+     >
+     >Detta används endast av *new* Innehållsfragmentsredigeraren. Se [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-fragment-model-properties) för ytterligare information.
+
 
 ## Aktivera eller inaktivera en innehållsfragmentmodell {#enabling-disabling-a-content-fragment-model}
 

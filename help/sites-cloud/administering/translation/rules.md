@@ -4,7 +4,7 @@ description: Lär dig hur översättningsregler identifierar innehåll som behö
 feature: Language Copy
 role: Admin
 exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Översättningsreglerna som beskrivs i det här dokumentet gäller endast för innehållsfragment om **Aktivera fält för innehållsmodell för översättning** har inte aktiverats på [konfigurationsnivå för översättningsintegreringsramverk.](integration-framework.md#assets-configuration-properties)
 
-Om **Aktivera fält för innehållsmodell för översättning** är aktivt, AEM använder **Översättningsbar** fält på [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragments-models.md#properties) för att avgöra om fältet ska översättas och skapar automatiskt översättningsregler i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat och kräver inga åtgärder eller ytterligare steg.
+Om **Aktivera fält för innehållsmodell för översättning** är aktivt, AEM använder **Översättningsbar** fält på [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties) för att avgöra om fältet ska översättas och skapar automatiskt översättningsregler i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat och kräver inga åtgärder eller ytterligare steg.
 
 Om du vill använda översättningsregler för översättning av dina innehållsfragment, **Aktivera fält för innehållsmodell för översättning** för konfiguration av översättningsintegreringsramverk måste vara inaktiverat och du måste följa stegen nedan för att skapa reglerna.
 
@@ -69,7 +69,7 @@ En regel är en `node` element med ett eller flera underordnade `property` eleme
 </node>
 ```
 
-Var och en av dessa `node` elementen har följande egenskaper:
+Alla dessa `node` elementen har följande egenskaper:
 
 * The `path` -attributet innehåller sökvägen till rotnoden för grenen som reglerna gäller för.
 * Underordnad `property` element identifierar de nodegenskaper som ska översättas för alla resurstyper:
@@ -136,7 +136,7 @@ The `translation_rules.xml` filen består av en `nodelist` element med flera und
 
 ## Filteregenskaper {#filtering-properties}
 
-Du kan filtrera noder som har en viss egenskap genom att använda en `filter` -element.
+Du kan filtrera noder som har en viss egenskap med en `filter` -element.
 
 Följande regler skapar till exempel allt innehåll i `text` egenskaper som ska översättas, förutom de noder som har egenskapen `draft` ange till `true`.
 
@@ -218,7 +218,7 @@ I användargränssnittet kan du checka in/avmarkera **Översätt** i **Egenskape
 
 I användargränssnittet kan du checka in/avmarkera **Översätt** i **Egenskaper** om du vill ändra det här värdet, men för de specifika egenskaper som har språkkoder som värde.
 
-För att förtydliga skillnaden mellan `updateDestinationLanguage` och `translate`Här följer ett enkelt exempel på ett sammanhang med bara två regler:
+Förtydliga skillnaden mellan `updateDestinationLanguage` och `translate`Här följer ett enkelt exempel på ett sammanhang med bara två regler:
 
 ![updateDestinationLanguage-exempel](../assets/translation-rules-updatedestinationlanguage.png)
 
@@ -233,7 +233,7 @@ Resultatet i xml kommer att se ut så här:
 
 The `translation_rules.xml` filen som installeras med AEM innehåller en standarduppsättning med översättningsregler. Du kan redigera filen så att den uppfyller översättningsprojektens krav. Du kan till exempel lägga till regler så att innehållet i dina anpassade komponenter översätts.
 
-Om du redigerar `translation_rules.xml` sparar du en säkerhetskopia i ett innehållspaket. Om du installerar om vissa AEM-paket kan den aktuella `translation_rules.xml` med originalfilen. Om du vill återställa reglerna i den här situationen kan du installera det paket som innehåller säkerhetskopian.
+Om du redigerar `translation_rules.xml` sparar du en säkerhetskopia i ett innehållspaket. Om du installerar om vissa AEM-paket kan det ersätta den aktuella `translation_rules.xml` med originalfilen. Om du vill återställa reglerna i den här situationen kan du installera det paket som innehåller säkerhetskopian.
 
 >[!NOTE]
 >
