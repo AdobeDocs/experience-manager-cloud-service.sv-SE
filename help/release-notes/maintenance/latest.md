@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: bb7d8145eb954557d185b58f884532f8f08c5a54
+source-git-commit: a1686d7796bb1e310b776195bd19df98f6f10650
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 2%
+source-wordcount: '305'
+ht-degree: 1%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 2%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 13239 {#release-13239}
+## Utgåva 13323 {#release-13323}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 13239, som offentliggjordes den 29 augusti 2023. Den här underhållsversionen ersätter version 13206.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 13323, som offentliggjordes den 1 september 2023. Den här underhållsversionen ersätter version 13239.
 
 2023.9.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-13239}
+### Förbättringar {#enhancements-13323}
 
 - GRANITE-46784: Lägg till alternativ för att inaktivera BearerAuthenticationHandler
 - GRANITE-36205: Uppdatera den interna ekversionen till den senaste
@@ -31,7 +31,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 132
 - GRANITE-46631: Uppdatera Jackrabbit-version till 2.20.11
 - SKYOPS-61895: Uppdatera till Jackrabbit Filevault 3.7.0
 
-### Åtgärdade problem {#fixed-issues-13239}
+### Åtgärdade problem {#fixed-issues-13323}
 
 - SKYOPS-63290: Korrigerad felaktig utveckling av fickor
 - SKYOPS-54607: Beräkningen av Ratelimiter-serverbelastningen är inte korrekt för begäran som misslyckades
@@ -41,11 +41,12 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 132
 - GRANITE-46292: Okta SAML-konfiguration fungerar inte efter AEM Cloud-uppdatering
 - GRANITE-47059: Ta bort Granite Jetty SSL Bundle
 
-### Kända fel {#known-issues-13239}
+### Kända fel {#known-issues-13323}
 
-Ingen.
+- SITES-15622: GraphQL - Issue with persistent queries with number &amp; boolean parameters.
+- SITES-15654: GraphQL - Issues with union and properties of same name.
 
-### Inbäddade tekniker {#embedded-tech-13239}
+### Inbäddade tekniker {#embedded-tech-13323}
 
 | Teknik | Version | Länk |
 |---|---|---|
