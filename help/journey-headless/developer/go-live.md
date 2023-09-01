@@ -2,9 +2,9 @@
 title: Så här Live med ditt headless-program
 description: I den här delen av AEM Headless Developer Journey lär du dig hur du distribuerar ett headless-program live genom att ta din lokala kod i Git och flytta den till Cloud Manager Git för CI/CD-pipeline.
 exl-id: 81616e31-764b-44b0-94a6-3ae24ce56bf6
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1093'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Följ de bästa metoderna nedan för att göra ditt AEM headless-program klart f
 ## Säkra och skala ditt Headless-program innan det startas {#secure-and-scale-before-launch}
 
 1. Konfigurera [Tokenbaserad autentisering](/help/headless/security/authentication.md) med dina GraphQL-förfrågningar
-1. Konfigurera [Cachelagring](/help/implementing/dispatcher/caching.md).
+1. Konfigurera [Cachning](/help/implementing/dispatcher/caching.md).
 
 ## Modellstruktur jämfört med GraphQL Output {#structure-vs-output}
 
@@ -46,11 +46,11 @@ Följ de bästa metoderna nedan för att göra ditt AEM headless-program klart f
 
 ## Maximera CDN-cacheträffrekvens {#maximize-cdn}
 
-* Använd inte direkta GraphQL-frågor om du inte begär direktinnehåll från ytan.
+* Använd inte direkta GraphQL-frågor, såvida du inte begär direktinnehåll från ytan.
    * Använd beständiga frågor när det är möjligt.
    * Tillhandahåll CDN TTL över 600 sekunder för att CDN ska cachelagra dem.
    * AEM kan beräkna effekten av en modelländring av befintliga frågor.
-* Dela JSON-filer/GraphQL-frågor mellan låg och hög förändringsfrekvens för innehåll, så att du kan minska klienttrafiken till CDN och tilldela högre TTL. Detta minimerar antalet CDN som validerar JSON med den ursprungliga servern.
+* Dela JSON-filer/GraphQL-frågor mellan låg och hög förändringsfrekvens för innehåll, så att du kan minska klienttrafiken till CDN och tilldela högre TTL. Detta minimerar antalet CDN som validerar JSON på nytt med den ursprungliga servern.
 * Om du vill göra innehåll från CDN ogiltigt använder du Mjuk tömning. På så sätt kan CDN ladda ned innehållet på nytt utan att orsaka ett cacheminne.
 
 ## Förkorta nedladdningstiden för headless Content {#improve-download-time}
@@ -73,7 +73,7 @@ Du kan börja distribuera koden genom att utnyttja Cloud Managers CI/CD-pipeline
 
 För att användarna ska få bästa möjliga upplevelse när de använder det AEM headless-programmet är det viktigt att du övervakar nyckeltal enligt beskrivningen nedan:
 
-* Validera förhandsgransknings- och produktionsversioner av appen
+* Validera förhandsgransknings- och produktionsversionerna av appen
 * Verifiera AEM statussidor för den aktuella tjänsttillgänglighetsstatusen
 * Få resultatrapporter
    * Leveransprestanda
@@ -120,7 +120,7 @@ Grattis! Du har slutfört AEM Headless Developer Journey! Nu bör du förstå:
 * Så här lever du med ett AEM Headless-projekt.
 * Vad du ska göra efter det att du är klar.
 
-Antingen har du redan startat ditt första AEM Headless-projekt eller så har du nu all den kunskap du behöver för att göra det. Bra jobbat!
+Antingen har du redan startat ditt första AEM Headless-projekt eller så har du nu all den kunskap du behöver för att göra det. Snyggt jobb!
 
 ### Utforska Single Page-program {#explore-spa}
 
@@ -130,6 +130,9 @@ Om den här typen av flexibilitet är något du behöver för ditt projekt kan d
 
 ## Ytterligare resurser {#additional-resources}
 
+* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
 * [En översikt över distribuering till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
 * [Använd Cloud Manager för att distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)
 * [Integrera Cloud Manager Git-databasen med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html)

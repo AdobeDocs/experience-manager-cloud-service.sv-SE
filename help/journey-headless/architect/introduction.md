@@ -2,9 +2,9 @@
 title: Innehållsmodellering för AEM som ett headless CMS - en introduktion
 description: En introduktion till hur du använder funktionerna i Adobe Experience Manager as a Cloud Service som Headless CMS för att utforma innehåll för ditt projekt.
 exl-id: 62061d73-6fdb-440b-a7dd-b0d530d49186
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Det här dokumentet hjälper er att förstå hur headless-innehåll levereras, h
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Syfte**: Lägg in de koncept och termer som är relevanta för Headless Content Modeling.
+* **Syfte**: Presentera de koncept och den terminologi som är relevanta för Headless Content Modeling.
 
 ## Leverans av högklassigt innehåll {#full-stack}
 
@@ -64,7 +64,7 @@ För AEM som innehållsarkitekt kommer du att göra innehållsmodelleringen för
 
 ### Åtkomst till innehållet {#access-content}
 
-Det här är mer av en detalj - men det kan intressera dig, bara för att slutföra artikeln.
+Det här är mer av en detaljfråga - men det kan intressera dig, bara för att slutföra artikeln.
 
 När du har skapat modellerna för innehållsfragment, och dina författare har använt dem för att generera innehållet, måste de headless-program ha tillgång till det här innehållet.
 
@@ -81,3 +81,6 @@ Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig g
 * AEM Headless Developer Journey
    * [Läs om CMS Headless Development](/help/journey-headless/developer/learn-about.md)
    * [Lär dig modellera ditt innehåll](/help/journey-headless/developer/model-your-content.md)
+* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

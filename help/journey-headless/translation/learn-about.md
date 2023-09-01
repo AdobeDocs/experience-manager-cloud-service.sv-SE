@@ -1,17 +1,17 @@
 ---
-title: Lär dig mer om Headless-innehåll och hur du översätter det i AEM
-description: Lär dig headless-koncept, hur de mappas till AEM och teorin om AEM översättning.
+title: Lär dig mer om Headless-innehåll och översättning i AEM
+description: Lär dig headless-koncept, hur de AEM och teorin om AEM översättning.
 exl-id: 72bb6646-e573-4576-8d17-49787d8c8c7f
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
 
 # Lär dig mer om headless-innehåll och hur du översätter det i AEM {#learn-about}
 
-Lär dig headless-koncept, hur de mappas till AEM och teorin om AEM översättning.
+Lär dig headless-koncept, hur de AEM och teorin om AEM översättning.
 
 ## Syfte {#objective}
 
@@ -78,3 +78,5 @@ Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless trans
 Vi rekommenderar att du går vidare till nästa del av den headless-översättningsresan genom att granska dokumentet [Kom igång med AEM headless translation,](getting-started.md) Nedan följer ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den headless-resan.
 
 * [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om AEM Multi-Site Manager och hur det fungerar med översättningsverktygen
+* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

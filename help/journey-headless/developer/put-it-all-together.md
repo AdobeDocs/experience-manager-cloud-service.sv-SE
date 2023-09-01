@@ -2,9 +2,9 @@
 title: Så här sätter du samman allt - din app och ditt innehåll i AEM utan rubriker
 description: I den här delen av AEM Headless Developer Journey kan du lära dig hur du tar ditt AEM-projekt, inklusive innehållsfragment, dina GraphQL-samtal, dina REST API-anrop och programmet, och förbereder det för publicering.
 exl-id: bece84ad-4c8c-410c-847e-9ef3f79970cb
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,14 @@ Den här artikeln hjälper dig att förstå hur du sätter ihop AEM headless-pro
 
 AEM SDK används för att skapa och distribuera anpassad kod. Det är huvudverktyget som du behöver så att du kan utveckla och testa programmet utan huvud innan du publicerar det. Den innehåller följande artefakter:
 
-* Quickstart jar - en körbar jar-fil som kan användas för att ställa in både en författare och en publiceringsinstans
+* Quickstart jar - en körbar jar-fil som kan användas för att ställa in både författare och publiceringsinstans
 * Dispatcher-verktyg - Dispatcher-modulen och dess beroenden för Windows- och UNIX®-baserade system
 * Java™ API Jar - Java™ Jar/Maven Dependency som visar alla Java™-API:er som kan användas för att utveckla mot AEM
 * Javadoc jar - javadocs for the Java™ API jar
 
 ## AEM Headless SDK {#the-aem-headless-sdk}
 
-AEM skiljer sig från AEM SDK **Headless SDK** är en uppsättning bibliotek som kunder kan använda för att snabbt och enkelt interagera med AEM Headless API:er via HTTP.
+Förutom AEM SDK AEM **Headless SDK** är en uppsättning bibliotek som kunder kan använda för att snabbt och enkelt interagera med AEM Headless API:er via HTTP.
 
 Mer information om AEM Headless SDK finns i [dokumentation här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html).
 
@@ -49,7 +49,7 @@ Förutom AEM SDK behöver du ytterligare verktyg som gör det lättare att utvec
 * Java™
 * Git
 * Apache Maven
-* Biblioteket Node.js
+* The Node.js library
 * Den utvecklingsmiljö du vill använda
 
 Eftersom AEM är ett Java™-program måste du installera Java™ och Java™ SDK för att stödja utvecklingen av AEM as a Cloud Service.
@@ -68,9 +68,9 @@ En komplett AEM består av en författare, en publiceringsversion och en utskick
 
 * **Författartjänsten** är den plats där interna användare skapar, hanterar och förhandsgranskar innehåll.
 
-* **Publiceringstjänsten** är&quot;Live&quot;-miljön och det är vanligtvis den slutanvändaren interagerar med. Innehåll som har redigerats och godkänts av författartjänsten distribueras till publiceringstjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att ha produktionsversionen av programmet ansluten till en AEM Publish-tjänst.
+* **Publiceringstjänsten** är&quot;Live&quot;-miljön och det är vanligtvis den slutanvändaren interagerar med. Innehåll som har redigerats och godkänts av författartjänsten distribueras till publiceringstjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att få produktionsversionen av programmet att ansluta till en AEM Publish-tjänst.
 
-* **Dispatcher** är en statisk webbserver som utökas med AEM Dispatcher-modulen. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
+* **Dispatcher** är en statisk webbserver som utökas med modulen AEM. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
 
 ## Arbetsflödet för lokal utveckling {#the-local-development-workflow}
 
@@ -86,7 +86,7 @@ I ett produktionssystem placeras Dispatcher och en http Apache-server alltid fra
 
 För att förbereda AEM headless-projekt för lansering måste du se till att alla delar av projektet fungerar bra.
 
-För att göra det måste ni sätta ihop allt: kod, innehåll och konfiguration, och testa det i en lokal utvecklingsmiljö för live-beredskap.
+För att göra det måste ni sätta ihop allt: kod, innehåll och konfiguration, och testa det i en lokal utvecklingsmiljö för att kunna vara redo live.
 
 Den lokala utvecklingsmiljön består av tre huvudområden:
 
@@ -114,4 +114,6 @@ Fortsätt den AEM resan utan trassel genom att granska dokumentet nästa gång [
 * [AEM Headless SDK för webbläsare på klientsidan (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 * [AEM Headless SDK for server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
 * [AEM Headless SDK for Java™](https://github.com/adobe/aem-headless-client-java)
-
+* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

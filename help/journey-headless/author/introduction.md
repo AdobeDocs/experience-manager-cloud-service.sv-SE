@@ -2,23 +2,23 @@
 title: Om du skriver för AEM som ett headless CMS - en introduktion
 description: En introduktion till hur du använder funktionerna i Adobe Experience Manager as a Cloud Service som Headless CMS för att skapa innehåll för ditt projekt.
 exl-id: 065b00cb-a82d-4bcb-b2c9-44542cee6303
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '691'
 ht-degree: 1%
 
 ---
 
 # Om du skriver för AEM som ett headless CMS - en introduktion {#author-headless-introduction}
 
-I den här delen av [AEM Headless Content Author Journey](overview.md)kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du skapar innehåll när du använder Adobe Experience Manager (AEM) as a Cloud Service som ett headless CMS. Det handlar om att strukturera och skapa innehåll för leverans av headless-innehåll.
+I den här delen av [AEM Headless Content Author Trney](overview.md)kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du skapar innehåll när du använder Adobe Experience Manager (AEM) as a Cloud Service som ett headless CMS. Det handlar om att strukturera och skapa innehåll för leverans av headless-innehåll.
 
 {{headless-trials-promotion}}
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Syfte**: Innehåller koncept och terminologi för Headless Authoring.
+* **Syfte**: Innehåller koncept och terminologi som är relevanta för Headless Authoring.
 
 ## CMS (Content Management System) {#content-management-system}
 
@@ -77,10 +77,16 @@ Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig g
 
 ## Ytterligare resurser {#additional-resources}
 
+* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+
 * AEM Headless Developer Journey
    * [Läs om CMS Headless Development](/help/journey-headless/developer/learn-about.md)
    * [Lär dig modellera ditt innehåll](/help/journey-headless/developer/model-your-content.md)
 
-* AEM Headless Content Architect Journey
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 
-* AEM Headless Content Translation Journey
+* [AEM Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
+
+* [AEM Headless Content Translation Journey](/help/journey-headless/translation/overview.md)
