@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 3203e79d1dd083d13d9357b21040dfa88194c4db
+source-git-commit: 1df4f371fe4a98b910634b4742d9ff1a9448674f
 workflow-type: tm+mt
-source-wordcount: '9313'
+source-wordcount: '9310'
 ht-degree: 1%
 
 ---
@@ -576,7 +576,6 @@ Några av användningsområdena för att lägga till multiundertexter och flerlj
 | **Undertexter** | Stöd för flera språk |
 |  | Beskrivande text för tillgänglighet |
 | **Ljudspår** | Stöd för flera språk |
-|  | Stereo jämfört med flerkanaligt (surroundljud) |
 |  | Kommentarspår |
 |  | Beskrivande ljud |
 
@@ -669,7 +668,7 @@ Om du har konfigurerat Dynamic Media för omedelbar publicering kommer överför
 
 >[!CAUTION]
 >
->När du överför undertextningsfiler eller ljudfiler till en video som redan har publicerats tas dessa filer bort om du [*ombearbeta*](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud förblir intakt. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
+>När du överför undertextningsfiler eller ljudfiler till en video som antingen är publicerad eller opublicerad tas filerna bort om du [*ombearbeta*](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets) videon. Endast videons ursprungliga ljud förblir intakt. I så fall måste du ladda upp undertextningsfilerna och ljudspårsfilerna till videon igen.
 
 #### Lägga till flera bildtexter i en video som har en befintlig URL med bildtextmodifierare
 
