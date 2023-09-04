@@ -1,9 +1,9 @@
 ---
 title: Importera resurser gruppvis med hjälp av resursvyn
 description: Lär dig hur du importerar resurser i grupp med det nya resursgränssnittet (resursvyn). Det ger administratörer möjlighet att importera ett stort antal resurser från en datakälla till AEM Assets.
-source-git-commit: 49d1e002f22427d8ffc6c5bdecd054c10eac47b9
+source-git-commit: 5cc522db4bd86514c1093a0d6fee481f6604fc26
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -11,6 +11,10 @@ ht-degree: 0%
 # Importera resurser gruppvis med hjälp av resursvyn  {#bulk-import-assets-view}
 
 Vyn Importera satsvis i AEM Assets ger administratörer möjlighet att importera ett stort antal resurser från en datakälla till AEM Assets. Administratörerna behöver inte längre överföra enskilda resurser eller mappar till AEM Assets.
+
+>[!NOTE]
+>
+>Massimporteraren i resursvyn använder samma serverdel som bulkimporteraren i administratörsvyn. Det erbjuder dock fler datakällor att importera från och en smidigare användarupplevelse.
 
 Du kan importera resurser från följande datakällor:
 
@@ -58,6 +62,14 @@ Så här skapar du en bulkimportkonfiguration:
    ![Kör bulkimport](assets/bulk-import-run.png)
 
 1. Klicka **[!UICONTROL Save]** för att köra det valda alternativet.
+
+### Hantera filnamn vid bulkimport {#filename-handling-bulkimport-assets-view}
+
+När du importerar resurser eller mappar i grupp, [!DNL Experience Manager Assets] importerar hela strukturen för det som finns i importkällan. [!DNL Experience Manager] följer de inbyggda reglerna för specialtecken i resurs- och mappnamnen, och därför måste dessa filnamn saneras. För både mappnamn och resursnamn ändras inte titeln som definieras av användaren och lagras i `jcr:title`.
+
+Vid bulkimport, [!DNL Experience Manager] leta efter de befintliga mapparna för att undvika att importera om resurserna och mapparna, och verifierar även rensningsreglerna som tillämpas i den överordnade mappen där importen sker. Om saneringsreglerna tillämpas i den överordnade mappen, tillämpas samma regler på importkällan. För ny import används följande saneringsregler för att hantera filnamnen på resurser och mappar.
+
+Mer information om otillåtna namn, hantering av resursnamn och hantering av mappnamn vid bulkimport finns i [Hantera filnamn vid bulkimport i administratörsvyn](add-assets.md##filename-handling-bulkimport).
 
 ## Visa befintliga bulkimportkonfigurationer {#view-import-configuration}
 
