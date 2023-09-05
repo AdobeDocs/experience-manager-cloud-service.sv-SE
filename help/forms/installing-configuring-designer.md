@@ -1,7 +1,7 @@
 ---
 title: Hämta och installera Forms Designer
 description: Du kan använda Forms Designer för att skapa XDP- och PDF-formulärmallar som fungerar som mall för ett dokument för registrering. Designer är tillgängligt med [!DNL AEM Forms] licens.
-source-git-commit: a22c21ba05e72c1bf18c56df72b7e3c7c62edc0c
+source-git-commit: 325769d4a3b93502b0c6857e20911b05df34a24a
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -53,7 +53,6 @@ För att kunna installera den senaste versionen av AEM Forms Designer, 64-bitars
 Så här installerar du Designer:
 
 1. Hämta Designer från [Programvarudistribution](https://experience.adobe.com/downloads).
-
 1. Dubbelklicka på setup.exe för att köra installationsprogrammet.
 1. Gå vidare och ange dina uppgifter på skärmen Personalisering.
 1. Om du godkänner licensavtalet klickar du på **[!UICONTROL Next]** för att fortsätta.
