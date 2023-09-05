@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: bb15e840071279dbdf8bd2bfe89d59c067898aca
+source-git-commit: 876a861d3bc4ec3f685c6cc41a3a7e747ab214a5
 workflow-type: tm+mt
-source-wordcount: '4258'
+source-wordcount: '4264'
 ht-degree: 20%
 
 ---
@@ -570,6 +570,7 @@ ht-degree: 20%
          + [Integrera AEM Forms as a Cloud Service med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
          + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
          + [Bädda in en adaptiv Forms på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
+         + [Bädda in anpassningsbara formulär baserade på kärnkomponenter på en extern webbsida](/help/forms/embed-adaptive-form-core-components-external-web-page.md)
       + Formulärdatamodell {#use-form-data-model}
          + [Koppla datakällor till Cloud Service](/help/forms/data-integration.md)
          + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
@@ -583,7 +584,7 @@ ht-degree: 20%
    + Adaptiv Forms {#adaptive-forms-authoring}
       + [Skapa ett adaptivt formulär](/help/forms/create-an-adaptive-form.md)
       + [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
-      + Skapa adaptiv Forms - kärnkomponenter {#authoring-adaptive-forms-core-components}
+      + Kärnkomponenter {#authoring-adaptive-forms-core-components}
          + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
             + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
             + [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments-core-components.md)
@@ -596,7 +597,7 @@ ht-degree: 20%
             + [Konfigurera åtgärden Skicka för ett anpassat formulär](/help/forms/configure-submit-actions-core-components.md)
             + [Använd Google reCAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
             + [Lägga till en anpassad felhanterare i ett adaptivt formulär](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
-      + Skapa adaptiv Forms - grundkomponenter {#authoring-adaptive-forms-foundation-components}
+      + Foundation Components {#authoring-adaptive-forms-foundation-components}
          + Konvertera PDF forms till Adaptiv Forms {#afcs}
             + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)
             + [Konvertera ett befintligt PDF-formulär till ett anpassat formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)
