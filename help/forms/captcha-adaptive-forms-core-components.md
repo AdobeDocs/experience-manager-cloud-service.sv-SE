@@ -5,14 +5,21 @@ topic-tags: Adaptive Forms, author
 hide: true
 hidefromtoc: true
 Keywords: Google reCAPTCHA service, Adaptive Forms, CAPTCHA challenge, Bot prevention, Core Components, Form submission security, Form spam prevention
-source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
+source-git-commit: 496705937a01d99f988ba83f6d8984fc86dc8bfa
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
 
-# Använd Google reCAPTCHA i en AEM anpassad form {#using-reCAPTCHA-in-adaptive-forms}
+# Använd Google reCAPTCHA i ett AEM anpassat formulär baserat på kärnkomponenter {#using-reCAPTCHA-in-adaptive-forms}
+
+<span class="preview"> Det här är en förhandsversion som du kommer åt via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+
+| Gäller för | Artikellänk |
+| -------- | ---------------------------- |
+| Adaptiv form baserad på kärnkomponenter | Den här artikeln |
+| Adaptiv form baserad på grundläggande komponenter | [Klicka här](/help/forms/captcha-adaptive-forms.md) |
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
@@ -106,3 +113,9 @@ Tap the **[!UICONTROL Currency Value]** field in the form and create the followi
 **F: Kan jag använda mer än en Captcha-komponent i en adaptiv form?**
 **Ans:** Det går inte att använda mer än en Captcha-komponent i ett adaptivt formulär. Vi rekommenderar inte att du använder Captcha-komponenten i ett fragment eller i en panel som är markerad för lat inläsande.
 
+## Se även
+
+* [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
+* [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments-core-components.md)
+* [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Använd Google reCAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)

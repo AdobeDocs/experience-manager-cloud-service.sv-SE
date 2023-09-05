@@ -4,7 +4,7 @@ description: Lär dig bädda in ett anpassat formulär på en extern webbsida
 contentOwner: Khushwant Singh
 docset: CloudService
 role: Developer
-source-git-commit: 876a861d3bc4ec3f685c6cc41a3a7e747ab214a5
+source-git-commit: 496705937a01d99f988ba83f6d8984fc86dc8bfa
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -19,7 +19,8 @@ ht-degree: 0%
 | AEM as a Cloud Service | Den här artikeln |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html) |
 
-Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/embed-adaptive-form-core-components-aem-sites.md) eller en webbsida som ligger på AEM. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
+
+Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md) eller en webbsida som ligger på AEM. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
 
 ## Förutsättningar {#prerequisites}
 
