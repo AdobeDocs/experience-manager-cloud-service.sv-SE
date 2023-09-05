@@ -4,9 +4,9 @@ description: Lär dig hur du begär en felrapport för att Dynamic Media ska kun
 contentOwner: Rick Brough
 feature: Asset Management
 role: User
-source-git-commit: 1b9d49ce1ef8ad4b0a11400b41d8c9b880cbf884
+source-git-commit: 7ce15cc755c9db589001d543c16312096d88bcf0
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Begär en felrapport för Dynamic Media-leverans-URL:er som misslyckas
 
-Du kan nu begära en felrapport som identifierar Dynamic Media URL:er som inte kunde levereras. Rapporten är en sammanställning av data över fem dagar och är tillgänglig i CSV-format. Felrapporten innehåller följande information:
+Du kan begära en felrapport som identifierar Dynamic Media-URL:er som misslyckades vid leveransen. Rapporten är en sammanställning av data upp till fem dagar och är tillgänglig i CSV-format. Felrapporten innehåller följande information:
 
 * Misslyckad Dynamic Media-leverans-URL - En felaktig URL är en URL som genererats av Dynamic Media och som inte kan producera något innehåll vid leveranstillfället.
 * Referens-URL - Den refererande URL som den felaktiga leverans-URL:en anropas från.
@@ -26,15 +26,11 @@ Du kan begära en felrapport en gång i månaden för ett visst företag.
 
 **Så här begär du en felrapport för Dynamic Media URL:er som inte kan levereras:**
 
-1. [Skicka e-post till reports-dynamic-media@adobe.com](mailto:reports-dynamic-media@adobe.com) med företagsnamnet.
+1. [Skicka e-post till reports-dynamic-media@adobe.com](mailto:reports-dynamic-media@adobe.com) med det företagsnamn som är kopplat till ditt Dynamic Media-konto.
 
-   Information om hur du hittar företagsnamnet som är associerat med ditt Adobe Dynamic Media-konto finns i [Dynamic Media Configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm.html?lang=en#configuring-dynamic-media-cloud-services) i Adobe Experience Manager (AEM) **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]**.
+   Om du inte känner till företagsnamnet kan du läsa [Dynamic Media Configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm.html?lang=en#configuring-dynamic-media-cloud-services) sida in **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Dynamic Media Configuation]**. Klicka på Dynamic Media Configuration Browser **[!UICONTROL global]** väljer du *[Dynamic_Media_folder_icon]* kryssruta och sedan markera **[!UICONTROL Edit]**. Du måste ha administratörsbehörighet i AEM för att komma åt sidan Dynamic Media-konfiguration.
 
-
-   >[!NOTE]
-   >
-   >Du måste ha administratörsbehörighet i AEM för att få åtkomst **[!UICONTROL Dynamic Media Configuration]** information i AEM **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]**.
-
+   ![Öppnar konfigurationssidan för Dynamic Media.](/help/assets/dynamic-media/assets/reporting-accessdmconfig.png)
 
 
 
