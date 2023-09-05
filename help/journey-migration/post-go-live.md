@@ -2,9 +2,9 @@
 title: Post GoLive
 description: Lär dig hur du övervakar problem och förbättrar prestanda
 exl-id: 487f0b51-501b-48fc-a796-3cb8a6d64462
-source-git-commit: 3784569086a786c6c25c0e3d6d0bb0ddbdd37e4b
+source-git-commit: 1b9d49ce1ef8ad4b0a11400b41d8c9b880cbf884
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '483'
 ht-degree: 9%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs.html" text="Komma åt och hantera loggar"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service utvecklingsverktyg"
 
-Den här resan är den sista delen, så du får lära dig att övervaka problem och förbättra prestanda när migreringen är klar. Du bör se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar.
+Den här resan är den sista delen, så du får lära dig att övervaka problem och förbättra resultatet när migreringen är klar. Du bör se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar.
 
 ## Story hittills {#story-so-far}
 
@@ -51,7 +51,7 @@ Se [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.md) om du
 
 Användarna kan öppna en lista över tillgängliga loggfiler för den valda miljön.
 
-Se [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) om du vill lära dig hur du får åtkomst till och hanterar loggar via användargränssnittet eller från API via Cloud Manager.
+Se [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) om du vill lära dig hur du får åtkomst till och hanterar loggar via användargränssnittet eller från API:n med hjälp av Cloud Manager.
 
 ## Kontakta support {#contacting-support}
 
