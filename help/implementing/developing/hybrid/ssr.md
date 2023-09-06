@@ -2,9 +2,9 @@
 title: SPA- och serveråtergivning
 description: Om du använder SSR-återgivning (server-side rendering) i SPA kan det snabba upp den initiala inläsningen av sidan och sedan skicka vidare återgivningen till klienten.
 exl-id: be409559-c7ce-4bc2-87cf-77132d7c2da1
-source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
+source-git-commit: 66c9e95f96c8ce181722488a34a175c80f6f917c
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Single page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse s
 
 Den här processen kan dock leda till längre inledande inläsningstider, särskilt om SPA är stor och har mycket innehåll. För att optimera inläsningstiden kan en del av innehållet återges på serversidan. Med SSR-återgivning (server-side rendering) går sidans initiala belastning snabbare och skickar sedan vidare återgivning till klienten.
 
-## När SSR ska användas {#when-to-use-ssr}
+## Använd SSR {#when-to-use-ssr}
 
 SSR krävs inte för alla projekt. Även om AEM stöder JS SSR fullt ut för SPA rekommenderar Adobe inte att man implementerar det systematiskt för varje projekt.
 
@@ -23,14 +23,14 @@ När du beslutar dig för att implementera SSR måste du först uppskatta vilken
 
 SSR ger vanligtvis ett visst värde när det finns ett tydligt&quot;ja&quot; till någon av följande frågor:
 
-* **SEO:** Krävs fortfarande SSR för att din webbplats ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
+* **SEO:** Krävs det fortfarande SSR för att din webbplats ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
 * **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
 
 Endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot; för ditt projekt rekommenderar Adobe att SSR implementeras. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime, som ingår i [App Builder](https://developer.adobe.com/app-builder).
 
 ## Adobe I/O Runtime {#adobe-i-o-runtime}
 
-Om du [är säkra på att ditt projekt kräver SSR-implementering](#when-to-use-ssr), rekommenderas Adobe att använda Adobe I/O Runtime.
+Om du [är säkra på att ditt projekt kräver SSR](#when-to-use-ssr), rekommenderas Adobe att använda Adobe I/O Runtime.
 
 Mer information om Adobe I/O Runtime finns i:
 
@@ -48,6 +48,10 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 >Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (stage, prod, testing osv.). Detta möjliggör typiska mönster för systemutvecklingscykler (SDLC) med olika versioner av ett program som distribueras till olika miljöer. Se [CI/CD för App Builder-program](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/) för mer information.
 >
 >En separat arbetsyta behövs inte per instans (författare, publicering) såvida det inte finns skillnader i körtidsimplementeringen per instanstyp.
+
+>[!NOTE]
+>
+>Cloud Manager stöder inte distribution till Adobe I/O Runtime. Därför måste din egen infrastruktur konfigureras för att distribuera SSR-kod till Adobe I/O Runtime.
 
 ## Fjärrrenderarkonfiguration {#remote-content-renderer-configuration}
 
@@ -156,13 +160,13 @@ The [Konfiguration av fjärrinnehållsrenderare](#remote-content-renderer-config
 
 `RemoteContentRenderingService` Kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller en servlet när ytterligare innehållsmanipulering krävs.
 
-Den här tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
+Tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
 
 ### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
 
 The `RemoteContentRendererRequestHandlerServlet` används för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer så att du kan mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
 
-Implementera `RemoteContentRendererRequestHandler` gränssnitt. Var noga med att ange `Constants.SERVICE_RANKING` egenskapen component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
+Implementera `RemoteContentRendererRequestHandler` gränssnitt. Var noga med att ställa in `Constants.SERVICE_RANKING` egenskapen component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
 
 ```javascript
 @Component(immediate = true,
