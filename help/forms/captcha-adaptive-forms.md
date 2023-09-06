@@ -2,9 +2,9 @@
 title: Använda reCAPTCHA i Adaptive Forms
 description: Lär dig hur du konfigurerar tjänsten Google reCAPTCHA i Adaptive Forms.
 topic-tags: adaptive_forms, author
-source-git-commit: 58451648b120991a5e204044f8dd6aeeaf655d81
+source-git-commit: 6d0e3ee08862030e9eb7d068b251d13bc3e8e08f
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1850'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,13 @@ ht-degree: 0%
 
 <span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
-| Gäller för | Artikellänk |
-| -------- | ---------------------------- |
-| Adaptiv form baserad på grundläggande komponenter | Den här artikeln |
-| Adaptiv form baserad på kärnkomponenter | [Klicka här](/help/forms/captcha-adaptive-forms-core-components.md) |
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/captcha-adaptive-forms.html) |
 | AEM as a Cloud Service | Den här artikeln |
+| Gäller för | Adaptiv form baserad på grundläggande komponenter. <br> För adaptiva formulär baserade på kärnkomponenter, [Klicka här](/help/forms/captcha-adaptive-forms-core-components.md). |
+
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 

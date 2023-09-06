@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 325769d4a3b93502b0c6857e20911b05df34a24a
+source-git-commit: 6d0e3ee08862030e9eb7d068b251d13bc3e8e08f
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1926'
 ht-degree: 0%
 
 ---
@@ -137,21 +137,23 @@ You can now assign metadata form to a specific folder within your Assets Essenti
 
 * **[Felhantering med anpassade felhanterare i regelredigeraren](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)**: Du kan nu anropa en anpassad funktion som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
 
+* **[64-bitarsversion av AEM Forms Designer](/help/forms/installing-configuring-designer.md)**: 64-bitarsversionen av AEM Forms Designer ger bättre prestanda, skalbarhet och minneshantering så att du kan skapa formulär. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Utöka dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med den här banbrytande releasen.
+
 
 ### Program för tidig användning {#forms-early-adopter}
 
 * **[Protect dina dokument med DocAssurance API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med DocAssurance-API:erna kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
 
-Du kan ansluta Adobe Support för att gå med i det tidiga adopter-programmet för DocAssurance API:er.
+  Du kan ansluta Adobe Support för att gå med i det tidiga adopter-programmet för DocAssurance API:er.
 
-**Headless Adaptive Forms**: Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) så att utvecklarna kan skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
+* **[Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html)**: Använd Headless Adaptive Forms för att ge utvecklarna möjlighet att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
 
-* bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
-* integrera formulär direkt i era datorprogram och mobilappar, webbplatser och chattapplikationer
-* återanvända era egna gränssnittskomponenter med blankettapplikationer
-* använder kraften i Adobe Experience Manager Forms
+   * bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
+   * integrera formulär direkt i era datorprogram och mobilappar, webbplatser och chattapplikationer
+   * återanvända era egna gränssnittskomponenter med blankettapplikationer
+   * använder kraften i Adobe Experience Manager Forms
 
-Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från ditt officiella e-post-ID till att gå med i det tidiga adopterprogrammet.
+  Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från ditt officiella e-post-ID till att gå med i det tidiga adopterprogrammet.
 
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}

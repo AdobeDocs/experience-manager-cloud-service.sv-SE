@@ -4,9 +4,9 @@ description: Lär dig bädda in ett anpassat formulär på en extern webbsida
 contentOwner: Khushwant Singh
 docset: CloudService
 role: Developer
-source-git-commit: 496705937a01d99f988ba83f6d8984fc86dc8bfa
+source-git-commit: 6d0e3ee08862030e9eb7d068b251d13bc3e8e08f
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -99,14 +99,12 @@ Så här bäddar du in det anpassade formuläret:
 
 Det anpassningsbara formuläret är inbäddat på webbsidan. Observera följande i den inbäddade adaptiva formen:
 
-* Sidhuvud och sidfot i det ursprungliga anpassningsbara formuläret inkluderas inte i det inbäddade formuläret.
 * Utkast och inskickade formulär finns på fliken Utkast och inskickningar i Forms Portal.
 * Skicka-åtgärden som konfigurerats på det ursprungliga adaptiva formuläret behålls i det inbäddade formuläret.
 * Anpassningsbara formulärregler behålls och fungerar fullt ut i det inbäddade formuläret.
 * Upplevelsemål och A/B-tester som konfigurerats i det ursprungliga adaptiva formuläret fungerar inte i det inbäddade formuläret.
 * Om Adobe Analytics har konfigurerats på originalformuläret hämtas analysdata till Adobe Analytics-servern. Den finns dock inte i Forms analysrapport.
-
-I Adaptiv Forms, som bygger på kärnkomponenter, inkluderas klientbiblioteken (ClientLibs) och läses in tillsammans med sidhuvuds- och sidfotskomponenterna i ett formulär. När du bäddar in ett adaptivt Forms baserat på kärnkomponenter på en webbsida innehåller det alltid formulärets sidhuvud och sidfot.
+* I Adaptiv Forms, som bygger på kärnkomponenter, inkluderas klientbiblioteken (ClientLibs) och läses in tillsammans med sidhuvuds- och sidfotskomponenterna i ett formulär. När du bäddar in ett adaptivt Forms baserat på kärnkomponenter på en webbsida innehåller det alltid formulärets sidhuvud och sidfot.
 
 ## Exempel på topologi {#sample-topology}
 
