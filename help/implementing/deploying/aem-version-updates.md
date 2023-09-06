@@ -3,7 +3,7 @@ title: Uppdateringar av AEM
 description: Lär dig hur AEM as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade med den senaste versionen.
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
-source-git-commit: ca91e969014415e872ecf8e42fe86ffc9ca41e10
+source-git-commit: 7cdbda468221c42325a957131c6817c9f85a574a
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 1%
@@ -55,28 +55,22 @@ På samma sätt kommer mellanlagrings- och produktionsmiljöer inte att uppdater
 
 ## Bästa praxis {#best-practices}
 
-* 
-   * **Användning av scenmiljö**
-   * Använd en annan miljö (inte Stage) för långa QA-/UAT-cykler.
-   * När sanitetstestningen är klar på scenen går du vidare till Production.
+* **Användning av scenmiljö**
+* Använd en annan miljö (inte Stage) för långa QA-/UAT-cykler.
+* När sanitetstestningen är klar på scenen går du vidare till Production.
 
-* 
-   * **Produktionspipeline**
-   * Pausa innan du distribuerar till Produktion.
-   * Om du avbryter pipelinen efter en scendistribution anges att koden är&quot;en eliminering&quot; och inte en giltig kandidat för produktion, se [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
+* **Produktionspipeline**
+* Pausa innan du distribuerar till Produktion.
+* Om du avbryter pipelinen efter en scendistribution anges att koden är&quot;en eliminering&quot; och inte en giltig kandidat för produktion, se [Konfigurera en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md).
 
-* 
-   * **Icke-produktionsförlopp**
+* **Icke-produktionsförlopp**
 * Konfigurera [Icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#full-stack-code).
-* 
-   * Snabbare leverans/frekvens vid produktionsfel.  Identifiera problem i icke-producerade rörledningar genom att aktivera produktfunktionstestning, anpassad funktionstestning och anpassad gränssnittstestning.
+* Snabbare leverans/frekvens vid produktionsfel.  Identifiera problem i icke-producerade rörledningar genom att aktivera produktfunktionstestning, anpassad funktionstestning och anpassad gränssnittstestning.
 
-* 
-   * **Innehållskopia**
-   * Använd [Innehållskopia](/help/implementing/developing/tools/content-copy.md) om du vill flytta liknande innehållsuppsättningar till en icke-produktiv miljö.
+* **Innehållskopia**
+* Använd [Innehållskopia](/help/implementing/developing/tools/content-copy.md) om du vill flytta liknande innehållsuppsättningar till en icke-produktiv miljö.
 
-* 
-   * **Automatiserad funktionstestning**
+* **Automatiserad funktionstestning**
 * Inkludera automatiserad testning i pipeline för att testa kritisk funktionalitet.
 * [Funktionstestning av kund](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) och [Anpassade gränssnittstestningar](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) blockerar, om de misslyckas kommer AEM inte att lanseras.
 
