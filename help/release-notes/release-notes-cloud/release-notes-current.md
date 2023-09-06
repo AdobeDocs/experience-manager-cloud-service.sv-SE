@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 9da87302369331fb55c1c8036c5b22fa686b1be8
+source-git-commit: e75c957e8e791ed991117f5cd54012c3a24a2958
 workflow-type: tm+mt
-source-wordcount: '1938'
+source-wordcount: '1935'
 ht-degree: 0%
 
 ---
@@ -144,8 +144,7 @@ You can now assign metadata form to a specific folder within your Assets Essenti
 
 * **[Protect dina dokument med DocAssurance API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med API:erna för DocAssurance kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
 
-
-  <br> Du kan skicka ett e-postmeddelande till `aem-forms-early-adopter-program@adobe.com` från ditt officiella e-post-ID för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen för din miljö.  <br>  <br>
+  <br> Du kan skicka e-post från din officiella e-postadress till `aem-forms-early-adopter-program@adobe.com`  för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.  <br>  <br>
 
 
 * **[Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html)**: Använd Headless Adaptive Forms för att ge utvecklarna möjlighet att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
