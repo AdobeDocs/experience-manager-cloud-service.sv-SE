@@ -1,25 +1,25 @@
 ---
-title: Infoga innehåll i mål
-description: Lär dig hur du använder verktyget Innehållsöverföring för att importera innehåll från din migreringsuppsättning till en Cloud Service-instans.
+title: Infoga innehåll i Cloud Service
+description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: f7ffe727ecc7f1331c1c72229a5d7f940070c011
+source-git-commit: 382d1ed93e9545127ebb54641657db365886503d
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 6%
+source-wordcount: '1954'
+ht-degree: 5%
 
 ---
 
-# Infoga innehåll i mål {#ingesting-content}
+# Infoga innehåll i Cloud Service {#ingesting-content}
 
 ## Inmatningsprocess i verktyget Innehållsöverföring {#ingestion-process}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_ingestion"
 >title="Innehållsintag"
->abstract="Inmatning syftar på att hämta innehåll från migreringsuppsättningen till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
+>abstract="Inmatning avser att hämta innehåll från migreringsuppsättningen till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html" text="Uppdatera inmatning"
 
-Följ stegen nedan för att importera migreringsuppsättningen från Content Transfer Tool:
+Följ stegen nedan för att importera din migreringsuppsättning med Cloud Acceleration Manager:
 
 >[!NOTE]
 >Kom du ihåg att logga en supportbiljett för det här intaget? Se [Viktigt att tänka på innan du använder verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html#important-considerations) och andra överväganden för att underlätta intag.
@@ -80,7 +80,7 @@ Följ stegen nedan för att importera migreringsuppsättningen från Content Tra
    Additionally, click on **Customer Care** to log a ticket, as shown in the figure below. 
 
    ![image](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-04.png)
-   
+
    Also, see [Important Considerations for Using Content Transfer Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html#important-considerations) to learn more.
 
 1. Once the ingestion is complete, the status under **Author ingestion** updates to **FINISHED**.
@@ -165,7 +165,7 @@ Varje nod i AEM måste ha ett unikt uuid. Detta fel anger att en nod som importe
 Detta kan inträffa om en nod flyttas på källan mellan en extrahering och en efterföljande [Extrahering uppifrån och ned](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process).
 Det kan också inträffa om en nod på målet flyttas mellan ett intag och ett efterföljande tilläggsintag.
 
-Den här konflikten måste lösas manuellt. Någon som är bekant med innehållet måste bestämma vilken av de två noderna som måste tas bort, med hänsyn tagen till annat innehåll som refererar till det. Lösningen kan kräva att extraheringen av den övre delen görs igen utan den felande noden.
+Den här konflikten måste lösas manuellt. Någon som är bekant med innehållet måste bestämma vilken av de två noderna som ska tas bort, med hänsyn tagen till annat innehåll som refererar till det. Lösningen kan kräva att extraheringen av den övre delen görs igen utan den felande noden.
 
 ### Inmatningsfel högst upp på grund av att det inte går att ta bort referensnod
 
@@ -181,4 +181,7 @@ Bästa tillvägagångssätt visar att om ett intag måste köras med wipe=false 
 
 ## What&#39;s Next {#whats-next}
 
-När du har slutfört Inkludering av innehåll i Target kan du visa loggar för varje steg (extrahering och förtäring) och leta efter fel. Se [Visa loggar för en migreringsuppsättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs.html) om du vill veta mer.
+När importen är klar AEM indexeringen startas automatiskt. Se [Indexering efter migrering av innehåll](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/indexing-content.md) för mer information.
+
+När du har slutfört Inkludering av innehåll i Cloud Servicen kan du visa loggar för varje steg (extrahering och förtäring) och leta efter fel. Se [Visa loggar för en migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/viewing-logs.md) om du vill veta mer.
+

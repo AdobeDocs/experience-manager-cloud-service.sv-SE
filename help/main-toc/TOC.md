@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 71e9325997dcb32e27758d23177670cc70381537
+source-git-commit: 6c43921b90daa64dd4695c569e6dcd6f23e464cb
 workflow-type: tm+mt
-source-wordcount: '4260'
+source-wordcount: '4265'
 ht-degree: 20%
 
 ---
@@ -230,7 +230,8 @@ ht-degree: 20%
          + [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md)
          + [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md)
          + [Extraherar innehåll från källa](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md)
-         + [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md)
+         + [Infoga innehåll i Cloud Service](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md)
+         + [Indexering efter migrering av innehåll](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/indexing-content.md)
          + [Visa loggar för en migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/viewing-logs.md)
          + [Ta bort en migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/deleting-migrationset.md)
          + [Köra verktyget Innehållsöverföring på en publiceringsinstans](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/running-content-transfer-tool-publish-instance.md)
