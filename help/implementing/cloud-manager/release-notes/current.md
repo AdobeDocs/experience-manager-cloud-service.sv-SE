@@ -1,19 +1,18 @@
 ---
-title: Versionsinformation om Cloud Manager 2023.8.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2023.8.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2023.9.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2023.9.0 i AEM as a Cloud Service.
 feature: Release Information
-exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 99772a1a3faa454a9b07dd92c9e7622ddb37ce2d
+source-git-commit: dd52aef2f88cf64e8d9a32b1c8cafe4fcfbcb812
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2023.8.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2023.9.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-Den här sidan dokumenterar versionsinformationen för Cloud Manager version 2023.8.0 i AEM as a Cloud Service.
+Den här sidan dokumenterar versionsinformationen för Cloud Manager version 2023.9.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,12 +20,11 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager version 202
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2023.8.0 i AEM as a Cloud Service är 10 augusti 2023. Nästa version är planerad till den 7 september 2023.
+Releasedatum för Cloud Manager version 2023.9.0 i AEM as a Cloud Service är 7 september 2023. Nästa version är planerad till den 5 oktober 2023.
 
 ## Nyheter {#what-is-new}
 
-* När en innehållsuppsättning konfigureras till [kopiera innehåll,](/help/implementing/developing/tools/content-copy.md) [kontextmedvetna konfigurationer](/help/implementing/developing/introduction/configurations.md) tillåts nu i innehållsuppsättningar i användargränssnittet.
-* Förbättringar har gjorts för att förbättra förståelsen och visningen av felmeddelanden i användargränssnittet i Cloud Manager.
+Den här versionen fokuserar på felkorrigeringar.
 
 ## Tidig användning {#early-adoption}
 
@@ -55,12 +53,6 @@ Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen
 
 ## Felkorrigeringar {#bug-fixes}
 
-* The **Miljö** menyn stängs nu när **[Kopiera innehåll](/help/implementing/developing/tools/content-copy.md)** modal.
-* [En omkörning av en pipeline](/help/implementing/cloud-manager/deploy-code.md#reexecute-deployment) tillåts inte längre om föregående körning inte har en `commitId` anges för byggfastillståndet.
-* Ett mer begripligt meddelande visas nu för sällsynta fel när en användare klickar på en pipeline i **Aktivitet** eller **Pipeline** skärmar.
-* The `contentSetName` värdet saknas inte längre i loggarna och anges nu i indata när en [innehållskopia](/help/implementing/developing/tools/content-copy.md) operation.
-* Under vissa sällsynta omständigheter är det inte längre möjligt att påbörja två exekveringar från samma pipeline, vilket leder till ett fastnat tillstånd.
-* När ett certifikat upphör att gälla kommer domännamn och IP-tillåtna listor som är kopplade till certifikatet inte längre att tas bort från CDN.
-   * I sådana fall kan webbplatsen fortfarande nås.
-   * [Användargränssnittet i Cloud Manager](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md) ger mer synliga, avancerade varningar om att SSL-certifikatet snart upphör att gälla.
-* Ett problem med att AEM förlora åtkomst till en publiceringsslutpunkt har korrigerats i situationer när Sites läggs till som en lösning i ett program som bara innehåller resurser.
+* När ett program tas bort tas även associerade, pågående pipeline bort, vilket säkerställer att pipelinen inte felaktigt har angetts som misslyckad status.
+* När alla steg i en pipeline-körning är&quot;slutförda&quot; betraktas status för pipelinen som&quot;igång&quot;, vilket gör att den verkar vara i ett fast läge. Den ses nu som&quot;fullständig&quot;.
+* För databasförgreningar som genereras med kodgeneratorns arketyp misslyckas CI/CD-pipeline.
