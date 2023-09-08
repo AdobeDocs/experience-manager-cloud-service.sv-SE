@@ -1,37 +1,30 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.07.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.07.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.09.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.09.0
 feature: Release Information
-exl-id: 2f787321-f156-480d-bbe8-1a6d04f110c5
-source-git-commit: 88227693b7dfc3cbd30751718dc85e55ee67bb96
+source-git-commit: 9abce12c396ee74d36019218dd8b4fa72f762256
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 1%
+source-wordcount: '150'
+ht-degree: 3%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.07.0 {#release-notes}
+# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.09.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.07.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.09.0.
 
-## Best Practices Analyzer {#bpa-release}
+## Content Transfer Tool {#ctt-release}
 
-### Releasedatum {#release-date-bpa}
+### Releasedatum {#release-date-ctt}
 
-Releasedatum för Best Practices Analyzer v2.1.42 är 6 juli 2023.
+Releasedatum för Content Transfer Tool v3.0.0 är 7 september 2023.
 
-### Nyheter {#what-is-new-bpa}
+### Nyheter {#what-is-new-ctt}
 
-* I den här versionen av Best Practices Analyzer har flera metodmönster lagts till. Bland dessa finns:
-   * Identifiera konfiguration av minsta underhållsaktivitet
-   * Identifiera långvariga/tunga frågor
-   * Identifiera ett stort antal författararbetsflöden i körnings- eller inkörningstillstånd
-   * Identifierar konfigurationen för SLing-jobb för OSGI Apache
-   * Identifiera anpassade Guava-caches
+Verktyget Innehållsöverföring har förbättrats avsevärt och ger följande fördelar:
+* Minskad överföringstid vid migrering av en delmängd av en innehållsdatabas genom att använda AzCopy för att endast kopiera de blob-ID som krävs i stället för att kopiera alla blob-ID:n
+* Snabbare uppdatering av differentiellt innehåll med Oak-upgrade
+* Förbättrad tillförlitlighet genom att separera indexeringsprocessen från innehållsöverföringsprocessen. Om indexeringen misslyckas behöver innehållet inte importeras igen. Endast indexeringen startar om automatiskt, vilket sparar både tid och pengar
 
-### Felkorrigeringar {#bug-fixes-bpa}
-
-* BPA har förbättrats för att förhindra fel vid generering av minnesrapporter för rapporter med ett stort antal resultat.
-* BPA har förbättrats för att upptäcka escape-tecken i sökvägar för att förhindra misslyckade innehållsöverföringar när innehåll migreras till AEM as a Cloud Service.
 
 
