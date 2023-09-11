@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User
 level: Beginner, Intermediate
 exl-id: 827ce457-6585-46fb-8e28-1d970a40d949
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a6e76d2b3650d57adafe543b2b694360e4bb4169
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -146,3 +146,26 @@ I följande regel anropas till exempel en get-tjänst som tar Employee Id som in
 ![invoke-service](assets/invoke-service.png)
 
 Dessutom kan du använda `guidelib.dataIntegrationUtils.executeOperation` API för att skriva ett JavaScript i kodredigeraren för regelredigeraren. <!-- For API details, see [API to invoke Form Data Model service](invoke-form-data-model-services.md).-->
+
+### Anropa en formulärdatamodell med anpassade funktioner {#invoke-form-data-model-using-custom-functions}
+
+Du kan [anropa en formulärdatamodell från regelredigeraren med anpassade funktioner](/help/forms/rule-editor.md#custom-functions-in-rule-editor-custom-functions). Om du vill anropa formulärdatamodellen lägger du till en formulärdatamodell i tillåtelselista. Så här lägger du till en formulärdatamodell i en lista över tillåtna:
+
+1. Gå till webbkonsolen Experience Manager på `https://server:host/system/console/configMgr`.
+1. Sök **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]**.
+1. Klicka ![plus-ikon](/help/forms/assets/Smock_Add_18_N.svg) -ikon för att lägga till konfigurationen.
+1. Lägg till **[!UICONTROL Content path pattern]** för att ange var din adaptiva Forms finns.  Som standard är värdet `/content/forms/af/(.*)` som innehåller alla adaptiva Forms. Du kan också ange sökvägen för ett visst anpassat formulär.
+1. Lägg till **[!UICONTROL Form Data Model path pattern]** för att ange platsen för formulärdatamodellen. Som standard är värdet `/content/dams/formsanddocuments-fdm/(.*)` som innehåller alla formulärdatamodeller. Du kan också ange sökvägen för en viss formulärdatamodell.
+1. Spara inställningarna.
+
+Den tillagda konfigurationen sparas under **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]** alternativ.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423977/adaptive-forms-custom-function-rule-editor)
+
+>[!NOTE]
+>
+> Så här anropar du en formulärdatamodell från regelredigeraren med anpassade funktioner via ett AEM-projekt:
+>
+>1. [Skapa en konfigurationsfil](https://github.com/adobe/aem-core-forms-components/blob/master/it/config/src/main/content/jcr_root/apps/system/config/com.adobe.aemds.guide.factory.impl.AdaptiveFormFDMConfigurationFactoryImpl~core-components-it.cfg.json).
+>1. Ange egenskaper för getContentPathPattern och getFormDataModelPathPattern.
+>1. Distribuera projektet.

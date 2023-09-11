@@ -5,9 +5,9 @@ description: Du kan använda komponenten Adaptiv Forms - Embed för att bädda i
 feature: Adaptive Forms
 Keywords: Forms AEM Sites, Embed Form to a Sites page, Adaptive Forms AEM Sites, Embed Adaptive Forms to AEM Page, Embed Forms in an AEM Sites page
 exl-id: 359b05e8-d8c1-4a77-9e70-6f6b6e668560
-source-git-commit: bb2ee07f8750c15959ecdaa65f0932b05edfcd39
+source-git-commit: d9dee0b5a070da6a19004c749f69c724fff9d967
 workflow-type: tm+mt
-source-wordcount: '2947'
+source-wordcount: '2966'
 ht-degree: 0%
 
 ---
@@ -259,6 +259,11 @@ Du kan anpassa de avancerade inställningarna för **[!UICONTROL Adaptive Form -
 * **Använd sidspråk**: Använd lokala sidor på AEM Sites-sidan i stället för anpassade formulär. Det här alternativet gäller endast för Adaptiv form (Foundation).
 * **Sätt fokus på formulär**: Välj det här alternativet om du vill fokusera på det första fältet i det adaptiva formuläret. Det här alternativet gäller endast för Adaptiv form (Foundation).
 * **Tema**: Välj ett tema som definierar formatering för komponenter i det adaptiva formuläret. Formateringen innehåller utseendeegenskaper som teckensnittsstil, bakgrundsfärg, dimensioner och justering. Det här alternativet gäller endast för Adaptiv form (Foundation).
+
+  >[!NOTE]
+  >
+  > Du kan använda **Använd sidspråk**, **Sätt fokus på formulär** och **Tema** endast för Adaptiv form (Foundation).
+
 * **Formuläret täcker ramens hela bredd**: En textbunden bildruta (iframe) är ett HTML-element som läser in ett adaptivt formulär på en AEM Sites-sida.
 
    * Om **[!UICONTROL Form covers entire width of the frame]** om kryssrutan är markerad upptar ett adaptivt formulär hela bredden på den behållare som det är placerat i. I det här fallet används ingen iframe för att återge formuläret. Layouten och designen för ett adaptivt formulär anpassas efter behållarens hela bredd så att den blir responsiv och kan justeras till olika skärmstorlekar. Med det här alternativet kan du bädda in flera adaptiva Forms-filer på en AEM Sites-sida.
