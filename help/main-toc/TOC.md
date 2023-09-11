@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 9abce12c396ee74d36019218dd8b4fa72f762256
+source-git-commit: 96b3986f73ab71bad02b00ddc699aeecd498aebd
 workflow-type: tm+mt
-source-wordcount: '4271'
+source-wordcount: '4284'
 ht-degree: 20%
 
 ---
@@ -572,6 +572,8 @@ ht-degree: 20%
          + [Integrera AEM Forms as a Cloud Service med Adobe Sign](/help/forms/adobe-sign-integration-adaptive-forms.md)
          + [Integrera AEM Forms as a Cloud Service med DocuSign](/help/forms/integrate-docusign-adaptive-forms.md)
          + [Integrera AEM Forms as a Cloud Service med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
+         + [Integrera adaptiv Forms i Adobe Analytics](/help/forms/forms-experience-cloud-setup-automation.md)
+         + [Visa och förstå adaptiv Forms Analytics-rapport](/help/forms/view-understand-aem-forms-analytics-reports.md)
          + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
          + [Bädda in en adaptiv Forms på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
          + [Bädda in anpassningsbara formulär baserade på kärnkomponenter på en extern webbsida](/help/forms/embed-adaptive-form-core-components-external-web-page.md)
