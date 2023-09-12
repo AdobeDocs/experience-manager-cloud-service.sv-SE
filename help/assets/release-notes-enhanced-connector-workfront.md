@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 9981fb1ac5ddf5d918cf76476fa185c524749c70
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1197'
 ht-degree: 0%
 
 ---
@@ -15,16 +15,17 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.12 av [!DNL Workfront for Experience Manager enhanced connector] är 9 augusti 2023.
+Releasedatum för den senaste versionen, 1.9.13 av [!DNL Workfront for Experience Manager enhanced connector] är 11 september 2023.
 
 ## Frigör högdagrar {#release-highlights}
 
 Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande uppdateringar:
 
-* Det går inte att skapa länkade mappar i Experience Manager eftersom det inte finns något användarkonto kopplat till den länkade mappen.
+* Med den förbättrade kopplingen för Experience Manager hämtas alla händelseprenumerationer från Workfront samtidigt som en händelseprenumeration för ett projekt tas bort, vilket kan påverka programmets prestanda.
 
-* Ansiktsförhållanden under metadatauppdateringar för en resurs i Experience Manager.
+* När en resurs skickas från Workfront till Experience Manager är resursens MIME-typ inte inställd på `dc:format` i Experience Manager.
 
+* Workfront projekt-ID:n som lagras på den utökade anslutningen Experience Manager innehåller dubbletter.
 
 >[!NOTE]
 >
@@ -33,7 +34,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar dig [uppgradera till den senaste 1.9.12-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar dig [uppgradera till den senaste 1.9.13-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -42,6 +43,12 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** som finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** nedrullningsbar lista och **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i nya Workfront.
 
 ## Tidigare versioner {#previous-releases}
+
+### Augustiversionen 2023 {#august-2023-release}
+
+* Det går inte att skapa länkade mappar i Experience Manager eftersom det inte finns något användarkonto kopplat till den länkade mappen.
+
+* Ansiktsförhållanden under metadatauppdateringar för en resurs i Experience Manager.
 
 ### Juniversion 2023 {#june-2023-release}
 
