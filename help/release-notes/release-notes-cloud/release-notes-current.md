@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 555873b15e3a748c95893a371925d3ab6e87ae67
+source-git-commit: 407afc27911c507d3662fa4897b29e8187bbec7a
 workflow-type: tm+mt
 source-wordcount: '1934'
 ht-degree: 0%
@@ -116,9 +116,9 @@ You can now assign metadata form to a specific folder within your Assets Essenti
 
 * [**Google reCAPTCHA - företagssupport**](/help/forms/captcha-adaptive-forms-core-components.md): Använd Google reCAPTCHA Enterprise i en adaptiv form för att få bättre skydd mot bedräglig aktivitet och skräppost, vilket ger en säkrare användarupplevelse. Med avancerad riskanalys och smidig integrering kan äkta användare enkelt skicka in formulär medan bots blockeras effektivt.
 
-* **Adobe Analytics med Experience Cloud Setup Automation för Forms**: Nu kan du aktivera Adobe Analytics med Experience Cloud Setup Automation (Automatisering av installationsprogram) med ett par knappar. Det gör att ni kan koppla AEM Forms as a Cloud Service till Experience Platform-taggar och Adobe Analytics för att hämta in och spåra prestandamått för era publicerade formulär.
+* [**Adobe Analytics med Experience Cloud Setup Automation för Forms**](/help/forms/forms-experience-cloud-setup-automation.md): Nu kan du aktivera Adobe Analytics med Experience Cloud Setup Automation (Automatisering av installationsprogram) med ett par knappar. Det gör att ni kan koppla AEM Forms as a Cloud Service till Experience Platform-taggar och Adobe Analytics för att hämta in och spåra prestandamått för era publicerade formulär.
 
-* **Adobe Analytics rapportmall för Adaptiv Forms**: Forms as a Cloud Service tillhandahåller nu en Adobe Analytics-rapport, OOTB. Det hjälper er att förstå hur era formulär fungerar. Med hjälp av formulärnivåstatistik får du insikt i hur formuläret fungerar med flera nyckeltal (KPI) som återgivningar, besökare, inskickat material, genomsnittlig fyllnadstid. Genom att följa upp användarbeteenden och feedback kan du identifiera områden i formuläret som orsakar förvirring och vägleda förbättringar av formulärets design och funktion.
+* [**Adobe Analytics rapportmall för Adaptiv Forms**](/help/forms/view-understand-aem-forms-analytics-reports.md): Forms as a Cloud Service tillhandahåller nu en Adobe Analytics-rapport, OOTB. Det hjälper er att förstå hur era formulär fungerar. Med hjälp av formulärnivåstatistik får du insikt i hur formuläret fungerar med flera nyckeltal (KPI) som återgivningar, besökare, inskickat material, genomsnittlig fyllnadstid. Genom att följa upp användarbeteenden och feedback kan du identifiera områden i formuläret som orsakar förvirring och vägleda förbättringar av formulärets design och funktion.
 
   ![Analysrapport om användarinteraktion med adaptiva formulär](/help/forms/assets/forms-analytics-report.png)
 
