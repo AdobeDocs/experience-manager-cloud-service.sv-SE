@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 288f871b75e68fdbca1244099e490408ea66ff40
+source-git-commit: 57d818e3e89f17f829a6b51689f02e5f59614563
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 1%
+source-wordcount: '296'
+ht-degree: 2%
 
 ---
 
@@ -13,41 +13,38 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 13323 {#release-13323}
+## Utgåva 13420 {#release-13420}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 13323, som offentliggjordes den 1 september 2023. Den här underhållsversionen ersätter version 13239.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 13420, som offentliggjordes den 11 september 2023. Den här underhållsversionen ersätter version 13323.
 
 2023.9.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-13323}
+### Förbättringar {#enhancements-13420}
 
-- GRANITE-46784: Lägg till alternativ för att inaktivera BearerAuthenticationHandler.
-- GRANITE-36205: Uppdatera den interna ekversionen till den senaste.
-- ASSETS-26713: Touch UI External Link to New Experience UI Dashboard - unified-shell-integration och Ui-touch-optimerad uppgraderad.
-- SKYOPS-63302: Uppgradera com.adobe.granite:com.adobe.granite.auth.saml till v1.0.54.
-- GRANITE-46634: Uppgradera till Eventing client 1.4.0.
-- GRANITE-46788: Uppdatera bibliotek till Apache Commons IO 2.13.0, Commons Lang 3.13.0, Commons Code 1.16.0 och Commons Compress 1.23.0.
-- GRANITE-46705: Uppdatering till Apache Felix HTTP Jetty 4.1.14.
-- GRANITE-46631: Uppdatera Jackrabbit-version till 2.20.11.
-- SKYOPS-61895: Uppdatera till Jackrabbit Filevault 3.7.0.
+- ASSETS-19544: Resurser som senast ändrades av egenskapen ställs nu in på den användare som begär bearbetning.
 
-### Åtgärdade problem {#fixed-issues-13323}
+### Åtgärdade problem {#fixed-issues-13420}
 
-- ASSETS-28461: Doc cloud viewer fungerar inte för PDF, fast från 13239.
-- SKYOPS-63290: Korrigerad felaktig utveckling av bucklor.
-- SKYOPS-54607: Beräkningen av Ratelimiter-serverinläsningen är inte korrekt för en misslyckad begäran.
-- ASSETS-27648: ContentModelIT kan inte läsa exkluderingsfiler från andra paket.
-- GRANITE-43744: Sling Authenticator fungerar inte korrekt om det finns en felkonfiguration med autentiseringskrav och vanity-sökväg.
-- GRANITE-46419: AEM integreringsproblem med Auth0 IdP.
-- GRANITE-46292: Okta SAML-konfiguration fungerar inte efter AEM Cloud-uppdatering.
-- GRANITE-47059: Ta bort Granite Jetty SSL Bundle.
+- ASSETS-27628: Felaktig kanalnod skapas när resurspanelen anpassas
+- ASSETS-27539: Överför begränsningar för matchning av reguljära uttryck.
+- ASSETS-26530: Enhetligt gränssnitt återför inte användare till den ursprungliga sidan.
+- ASSETS-22719: Hakparenteser i Namngivning av brytpunkter för smart beskärning bryter redigeringsfunktionen för smart beskärning.
+- ASSETS-27726: linkshare.html ska inte indexeras av Google.
+- ASSETS-27791: Validering av metadatamatchema utförs endast för det första fältet.
+- ASSETS-25544: Korrigerad inaktiverad Cacheogiltighetsknapp för CDN.
+- ASSETS-26575: Trunkering av fast namn när bilduppsättningar skapas.
+- ASSETS-26705: Korrigerad onödig bearbetning av icke-DM-mappresurser och innehållsfragment.
+- ASSETS-25740: Fasta skärmläsare utan berättarröst Namn och roll för Redigera/Beskär-kontroller på sidan Redigera smarta beskärningar med hjälp av nedpilstangenterna.
+- CQ-4354266: Det går inte att öppna inkorgsobjekt.
+- CQ-4354347: Uppdaterade AEM.
+- DISP-1009: Användaren-agenten trimmar X-Forwarded-Host som inte är den första rubriken.
+- Flera tillgänglighets- och säkerhetsrelaterade korrigeringar.
 
-### Kända fel {#known-issues-13323}
+### Kända fel {#known-issues-13420}
 
-- SITES-15622: GraphQL - Issue with persistent queries with number &amp; boolean parameters.
-- SITES-15654: GraphQL - Issues with union and properties of same name.
+Ingen.
 
-### Inbäddade tekniker {#embedded-tech-13323}
+### Inbäddade tekniker {#embedded-tech-13420}
 
 | Teknik | Version | Länk |
 |---|---|---|
