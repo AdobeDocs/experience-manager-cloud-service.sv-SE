@@ -4,9 +4,9 @@ description: Lär dig hur du skapar användarprofiler i Admin Console för att h
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 4edecfcd-6301-4a46-98c7-eb5665f48995
-source-git-commit: 6764fe48068325dfb7ed84cf7834c7eb5f25fb48
+source-git-commit: afb20efe8ed078a508f828c5df4e079f99dfab21
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,10 @@ Adobe måste då och då kontakta användare om sina AEM as a Cloud Service milj
 
 * **Incidentmeddelande** - Dessa meddelanden skickas under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem i din AEM as a Cloud Service miljö.
 * **Proaktiv avisering** - Dessa meddelanden skickas när en medlem i Adobe supportteam vill ge vägledning om en eventuell optimering eller rekommendation som kan vara till nytta för er AEM as a Cloud Service miljö.
+
+>[!NOTE]
+>
+>Det går inte att tilldela grupper till proaktiva meddelanden. Du måste tilldela användare till produktprofilerna direkt i stället.
 
 För att rätt användare ska kunna ta emot dessa meddelanden måste du konfigurera och tilldela användarprofiler enligt beskrivningen i det här dokumentet.
 
