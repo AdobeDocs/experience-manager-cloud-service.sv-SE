@@ -5,9 +5,9 @@ topic-tags: develop
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: b44b54a88b87dc391dfeb51fb8b83095c274bd38
+source-git-commit: 39ea959cb0a0568fd94ca455be935228479c0415
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ För AEM Forms Analytics-rapporten integrerar du först Adobe Analytics till AEM
 1. Gå till på din AEM **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]**.
 1. Markera formuläret så ser du att Adobe Analytics är integrerat, som det visas till vänster, med Forms som har aktiverats för Adobe Analytics.
 
-   ![Visa rapport](assets/activ-aa.png)
+   ![Visa rapport](assets/activ-aa.png){width="100%"}
 
 1. Klicka **Adobe Analytics** för att visa rapporten och analysera prestandadata.
 
@@ -50,7 +50,7 @@ Här finns mätvärden för formuläråtergivning, formulärinskickning, valider
 
 * **Unika besökare**: Unika besökare representerar det antal gånger som formuläret återges av en besökare. Mer information om unika besökare finns på [Unika besökare, besök och kundbeteende](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html).
 
-  ![Forms prestanda](assets/forms-performance.png)
+  ![Forms prestanda](assets/forms-performance.png){width="100%"}
 
 ### **Besökare i formulären** {#visitors-to-your-forms}
 
@@ -59,46 +59,46 @@ Det hjälper er att få värdefulla insikter om besökaraktiviteten i era formul
 * **Besök och inskickat material**: Här beskrivs hur ofta du besöker formulär i ett datumintervall och hur många formulär du skickar in. Mer information finns på den här klickningen [Besök](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html).
 * **Unika besökare och deras totala besök**: Det skiljer mellan nya och returnerade användare. En besökare kan till exempel komma till din webbplats varje dag i en månad, men de räknas ändå som en unik besökare. Besök [Unika besökare](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html) för detaljerad information.
 
-  ![Forms Visitors](assets/forms-visitors.png)
+  ![Forms Visitors](assets/forms-visitors.png){width="100%"}
 
 ### **Enhetstyp** {#device-type}
 
 Enhetstypen hjälper dig att identifiera vilken typ av enhet som används för att komma åt dina formulär. Den kategoriserar enhetstypen som Mobilenhetstyp. I det här fallet är det till exempel Mobilenhetstyp: Annan och Mobilenhetstyp: Mobiltelefon. De olika typerna av mobila enheter är bland annat mobiltelefon, surfplatta, mediespelare och spelkonsol.
 
-![Enhetstyp](assets/device-type.png)
+![Enhetstyp](assets/device-type.png){width="100%"}
 
 ### **Geografisk fördelning** {#geographical-breakdown}
 
 Här visas den plats där du har åtkomst till Forms. Här finns regionspecifik information om formuläranvändare. Du kan till exempel se att en regionspecifik information om en formuläranvändare är Indien, vilket visas i bilden.
 
-![geografisk uppdelning](assets/geographical-breakdown.png)
+![Geografisk fördelning](assets/geographical-breakdown.png){width="100%"}
 
 ### **De viktigaste trafikkällorna och de populära formulären** {#top-sources-of-traffic-and-popular-forms}
 
 Detta hjälper dig att identifiera den primära källan eller länken till den plats där formulären refereras. I den angivna bilden nedan visas till exempel sökinstanser för dina adaptiva formulär där 18,9 % är **Typat/bokmärkt**, 70,49 % baserat på **Sökmotorer** och 24 % kommer från **Andra webbplatser**. Du kan definiera dimensionsobjekt baserat på dina behov. Dessutom kan ni ta reda på vilka som är de mest besökta eller populära formulären.
 
-![Refererade platser](assets/referred-sites.png)
+![Refererade platser](assets/referred-sites.png){width="100%"}
 
 ### **Användaraktivitet i de vanligaste formulären** {#user-activity-on-top-forms}
 
 En heltäckande bild av användarengagemanget med fältbesök, formuläråtergivningar, valideringsfel, övergivna formulär och inskickade formulär ger insikter om de formulär som är mest aktiva. I bilden nedan ser du att ansökningsformuläret är det mest aktiva baserat på formulärhändelsestatistik.
 
-![användaraktivitet](assets/user-activity.png)
+![Användaraktivitet](assets/user-activity.png){width="100%"}
 
 ### **Tidslinje för den tid som läggs på formulär** {#timeline-for-time-spent-on-forms}
 
 Det är den tid användarna lägger på era formulär över tiden, vilket hjälper er att identifiera engagemangsmönster.
 
-![tidsödande blanketter](assets/time-spent-on-forms.png)
+![Tidsåtgång för formulär](assets/time-spent-on-forms.png){width="100%"}
 
 ### **Områden där besökare behöver hjälp med att fylla i formuläret** {#areas-requiring-assistance}
 
 Mätvärden som hjälpvyer, valideringsfel och fältbesök visar var användarna behöver hjälp eller hur vi kan spåra fel i fält. I bilden nedan ser du till exempel att i ett formulär med fält som **Fullständigt namn**, **Telefonnummer**, **GörB**. The **Fullständigt namn** har 12 besök, av 12 besök har 8 besök valideringsfel och 1 klickad på hjälpikon för att få hjälp med det här fältet. Du kan se mätdata för andra formulärfält.
 
-![bidområden](assets/assisting-areas.png)
+![Hjälpområden](assets/assisting-areas.png){width="100%"}
 
 ### **Det sista formulärfältet som besökarna visade innan de övergav formuläret** {#last-form-field-that-visitors-viewed}
 
 Det hjälper dig att analysera formulärfälten där användarna har tillbringat tid innan du överger formuläret. I bilden nedan finns till exempel två övergivna formulär kvar i fältet **Fullständigt namn**, 2 kvar i fältet **Telefonnummer** och 1 kvar i fältet **Textindata**.
 
-![fältbesökare](assets/field-visitors.png)
+![Fältbesökare](assets/field-visitors.png){width="100%"}

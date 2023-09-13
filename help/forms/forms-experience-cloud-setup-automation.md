@@ -1,9 +1,9 @@
 ---
-title: Aktivera Adobe Analytics för ett adaptivt formulär med Experience Cloud Setup Automation
-description: Experience Cloud Setup Automation hjälper till att ansluta Adobe Analytics till ett adaptivt formulär. Det hjälper till att spåra och analysera användarinteraktion med ett adaptivt formulär, med insikter om besökarinteraktioner och engagemang.
-source-git-commit: b44b54a88b87dc391dfeb51fb8b83095c274bd38
+title: Aktivera Adobe Analytics för ett adaptivt formulär
+description: Experience Cloud Setup Automation kan koppla Adobe Analytics till ett adaptivt formulär för att spåra insikter om besökarinteraktioner och engagemang.
+source-git-commit: 39ea959cb0a0568fd94ca455be935228479c0415
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Adobe Analytics har ett omfattande utbud av adaptiva Forms-prestandamätningar s
 
 * **Områden som kräver hjälp av besökare** mätvärden som innehåller hjälpvyer, valideringsfel och besöksfrekvenser, som visar var användarna kan behöva hjälp med att fylla i formulär.
 
-![Analysrapport](assets/analytics-report.png)
+![Analysrapport](assets/analytics-report.png){width="100%"}
 
 
 Detaljerad information om varje mätvärde finns på [Visa och förstå AEM Forms Analytics-rapporter](/help/forms/view-understand-aem-forms-analytics-reports.md)
@@ -58,7 +58,7 @@ Om du har en aktiv licens för Experience Cloud Setup Automation, Adobe Analytic
 
 Du kan kontrollera att det som nämns ovan finns för din as a Cloud Service Forms-miljö på [utvecklarkonsol](https://developer.adobe.com/console/projects), navigera till projektet och söka efter projektet med program-id:t, till exempel för miljön med URL:en `https://author-p45913-e175111-cmstg.adobeaemcloud.com/index.html`, program-ID är `p45913-e175111`. Kontrollera att Experience Cloud Setup Automation, Adobe Analytics och Experience Platform Launch är listade. Om de här listas kan du aktivera Adobe Analytics för din adaptiva Forms.
 
-![Forms Analytics-integrering krävs](assets/analytics-aem.png)
+![Forms Analytics-integrering krävs](assets/analytics-aem.png){width="100%"}
 
 <!-- 
 >[!NOTE]
@@ -94,7 +94,7 @@ Följ stegen nedan för att aktivera och konfigurera Adobe Analytics för din ad
 1. Gå till på din AEM **[!UICONTROL Forms]** >> **[Forms och dokument]** och väljer **[!UICONTROL Form]** ser du att Adobe Analytics är integrerat i ditt formulär så som visas i bilden nedan.
 1. Nu kan du se [Adaptiv form Adobe Analytics-rapport](#view-adobe-analytics-report).
 
-![Integrerad AEM Analytics](assets/analytics-aem-integrated.png)
+![Integrerad AEM Analytics](assets/analytics-aem-integrated.png){width="100%"}
 
 ### Aktivera Adobe Analytics med adaptiv Forms för kärnkomponenter {#integrate-adobe-analytics-with-aem-forms-for-core-components}
 
@@ -115,7 +115,7 @@ Följ stegen nedan för att aktivera och konfigurera Adobe Analytics för din ad
 1. Gå till på din AEM **[!UICONTROL Forms]** >> **[!UICONTROL Forms and Document]**.
 1. Markera formuläret så ser du att Adobe Analytics är integrerat, som det visas till vänster, med Forms som har aktiverats för Adobe Analytics.
 
-   ![Visa rapport](assets/activ-aa.png)
+   ![Visa rapport](assets/activ-aa.png){width="100%"}
 
 1. Klicka **Adobe Analytics** för att visa rapporten och analysera prestandadata.
 
