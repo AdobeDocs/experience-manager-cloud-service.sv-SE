@@ -7,9 +7,9 @@ keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterar
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: a635a727e431a73086a860249e4f42d297882298
+source-git-commit: 1f6fd90b2a5772951c78275b395653bbd14bbd7b
 workflow-type: tm+mt
-source-wordcount: '2350'
+source-wordcount: '2397'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 0%
 # Felhanterare i adaptiv Forms (kärnkomponenter) {#error-handlers-in-adaptive-form}
 
 <span class="preview"> Det här är en förhandsversion som du kommer åt via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | Den här artikeln |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/add-custom-error-handler-adaptive-forms-core-components.html) |
 
 AEM Forms har färdiga funktioner och felhanterare för att skicka in formulär. Den innehåller även funktioner för att anpassa felhanterarfunktioner. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar. Hanterare är funktioner på klientsidan som körs baserat på serversvaret. När en extern tjänst anropas med API:er överförs data till servern för validering, som returnerar ett svar till klienten med information om lyckad eller felhändelse för överföringen. Informationen skickas som parametrar till den relevanta hanteraren för att köra funktionen. En felhanterare hjälper till att hantera och visa fel eller valideringsproblem som påträffats.
 
@@ -400,3 +405,9 @@ The `var som_map` lists the SOM expression of the Adaptive Form fields that you 
 Using this custom error handler, the adaptive form converts the fields listed in `var som_map` to standard error message format. As a result, the validation error messages display at field-level in the adaptive form.
 
  -->
+
+## Ytterligare information {#additional-information}
+
+* [Skapa en fristående grundkomponentbaserad adaptiv form](/help/forms/creating-adaptive-form-core-components.md)
+* [Skapa stilar eller teman för formulären](/help/forms/using-themes-in-core-components.md)
+* [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
