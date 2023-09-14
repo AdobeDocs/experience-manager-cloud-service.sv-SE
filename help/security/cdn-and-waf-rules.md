@@ -1,9 +1,9 @@
 ---
 title: Konfigurera trafikfilterregler (med WAF-regler)
 description: Använd trafikfilterregler (med WAF-regler) för att filtrera trafik
-source-git-commit: dc0c7e77bb4bc5423040364202ecac3c59adced0
+source-git-commit: b1b184b63ab6cdeb8a4e0019c31a34db59438a3d
 workflow-type: tm+mt
-source-wordcount: '2690'
+source-wordcount: '2709'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,8 @@ Trafikfilterregler kan distribueras till alla typer av molnmiljöer (RDE, dev, s
    ```
    kind: "CDN"
    version: "1"
-   envType: "dev"
+   metadata:
+     envTypes: ["dev"]
    data:
      trafficFilters:
        rules:
@@ -94,13 +95,14 @@ Här är ett exempel på en uppsättning trafikfilterregler, som även innehåll
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
       - name: "path-rule"
         when: { reqProperty: path, equals: /block-me }
-        action: 
+        action:
           type: block
       - name: "Enable-SQL-Injection-and-XSS-waf-rules-globally"
         when: { reqProperty: path, like: "*" }
@@ -225,7 +227,7 @@ The `wafFlag` kan innehålla följande:
 
 * Om en regel matchas och blockeras svarar CDN med en `406` returkod.
 
-* Konfigurationsfilerna bör inte innehålla hemligheter eftersom de skulle kunna läsas av alla som har åtkomst till Git-databasen
+* Konfigurationsfilerna bör inte innehålla hemligheter eftersom de skulle kunna läsas av alla som har åtkomst till Git-databasen.
 
 ## Exempel på regler {#examples}
 
@@ -238,13 +240,14 @@ Den här regeln blockerar begäranden från IP 192.168.1.1:
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
      rules:
        - name: "block-request-from-ip"
          when: { reqProperty: clientIp, equals: "192.168.1.1" }
-         action: 
+         action:
            type: block
 ```
 
@@ -255,7 +258,8 @@ Den här regeln blockerar begäranden på sökvägen `/helloworld` vid publiceri
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
      rules:
@@ -265,7 +269,7 @@ data:
             - { reqProperty: path, equals: /helloworld }
             - { reqProperty: tier, equals: publish }
             - { reqHeader: user-agent, matches: '.*Chrome.*'  }
-           action: 
+           action:
              type: block
 ```
 
@@ -276,17 +280,18 @@ Den här regeln blockerar begäranden som innehåller frågeparametern `foo`, me
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
       - name: "block-request-that-contains-query-parameter-foo"
         when: { queryParam: url-param, equals: foo }
-        action: 
+        action:
           type: block
       - name: "allow-all-requests-from-ip"
         when: { reqProperty: clientIp, equals: 192.168.1.1 }
-        action: 
+        action:
           type: allow
 ```
 
@@ -297,13 +302,14 @@ Den här regeln blockerar begäranden till path /block-me och blockerar alla beg
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
       - name: "path-rule"
         when: { reqProperty: path, equals: /block-me }
-        action: 
+        action:
           type: block
       - name: "Enable-SQL-Injection-and-XSS-waf-rules-globally"
         when: { reqProperty: path, like: "*" }
@@ -319,7 +325,8 @@ Den här regeln blockerar åtkomst till OFAC-länder:
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -352,20 +359,22 @@ Ibland är det önskvärt att blockera trafikmatchning för en regel endast om m
 
 | **Egenskap** | **Typ** | **Standard** | **MENING** |
 |---|---|---|---|
-| limit | heltal mellan 10 och 10000 | obligatoriskt | Begärandefrekvens i begäranden per sekund som regeln aktiveras för |
-| window | heltal: 1, 10 eller 60 | 10 | Provtagningsfönster i sekunder för vilket begärandehastigheten beräknas |
-| påföljd | heltal mellan 60 och 3600 | 300 (5 minuter) | En period i sekunder för vilken matchande begäranden blockeras (avrundat till närmaste minut) |
+| limit | heltal mellan 10 och 10000 | obligatoriskt | Begärandefrekvens i begäranden per sekund som regeln aktiveras för. |
+| window | heltal: 1, 10 eller 60 | 10 | Provningsfönstret i sekunder för vilket begärandehastigheten beräknas. |
+| påföljd | heltal mellan 60 och 3600 | 300 (5 minuter) | En period i sekunder för vilken matchande begäranden blockeras (avrundat till närmaste minut). |
+| groupBy | array[Getter] | ingen | Räknaren för hastighetsbegränsning sammanställs av en uppsättning egenskaper för begäran (till exempel clientIp). |
 
 ### Exempel {#ratelimiting-examples}
 
 **Exempel 1**
 
-Den här regeln blockerar en klient i 5 m när den överskrider 100 req/sek under de senaste 60 sektionerna
+Den här regeln blockerar en klient i 5 m när den överskrider 100 req/sek under de senaste 60 sektionerna:
 
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
     - name: limit-requests-client-ip
@@ -383,18 +392,19 @@ data:
 
 **Exempel 2**
 
-Blockera begäranden för 60-tal på sökvägen/kritiskt/resurs när den överskrider 100 req/sek under de senaste 60 sektionerna
+Blockera förfrågningar för 60-tal på sökvägen /critical/resource när den överskrider 100 req/sek under de senaste 60 sektionerna:
 
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
       - name: rate-limit-example
         when: { reqProperty: path, equals: /critical/resource }
-        action: 
+        action:
           type: block
         rateLimit: { limit: 100, window: 60, penalty: 60 }
 ```
@@ -418,7 +428,7 @@ Till exempel:
 Reglerna fungerar på följande sätt:
 
 * Alla matchande regelnamn som har deklarerats av kunden visas i attributet match.
-* åtgärdsattributet innehåller information om huruvida reglerna har lett till blockering, tillstånd eller loggning
+* åtgärdsattributet innehåller information om huruvida reglerna har lett till blockering, tillstånd eller loggning.
 * om WAF är licensierat och aktiverat listas alla SWF-regler (t.ex. SQLI; observera att detta är oberoende av det kunddeklarerade namnet) som upptäcktes, oavsett om SWF-reglerna listades i konfigurationen.
 * om inga kunddeklarerade regler matchar och inga waf-regler matchar, kommer egenskapen för regelattribut att vara tom.
 
@@ -430,7 +440,8 @@ I exemplet nedan visas ett exempel på cdn.yaml och två CDN-loggposter:
 ```
 kind: "CDN"
 version: "1"
-envType: "dev"
+metadata:
+  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -490,7 +501,7 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 
 | **Fältnamn** | **Beskrivning** |
 |---|---|
-| *tidsstämpel* | Den tidpunkt då begäran startades, efter TLS-avslutning |
+| *tidsstämpel* | Den tidpunkt då begäran startades, efter TLS-avslutning. |
 | *ttfb* | Förkortning för *Tid till första byte*. Tidsintervallet mellan begäran startades fram till punkten innan svarstexten började direktuppspelas. |
 | *cli_ip* | Klientens IP-adress. |
 | *cli_country* | Två bokstäver [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) alpha-2-landskod för klientlandet. |
