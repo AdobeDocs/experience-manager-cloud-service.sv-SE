@@ -1,9 +1,9 @@
 ---
-title: Versionsinformation om Cloud Manager 2023.8.0 i Adobe Experience Manager as a Cloud Service
+title: Versionsinformation om Cloud Manager 2023.9.0 i Adobe Experience Manager as a Cloud Service
 description: Detta är versionsinformationen för Cloud Manager 2023.9.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 2b23abec404689d1cc4deb55a2d5ed2a4f236644
+source-git-commit: 8bf2ffe8b1d3780f4ad3f6972fea4f8281945abb
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager version 202
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2023.8.0 i AEM as a Cloud Service är 14 september 2023. Nästa version är planerad till den 5 oktober 2023.
+Releasedatum för Cloud Manager version 2023.9.0 i AEM as a Cloud Service är 14 september 2023. Nästa version är planerad till den 5 oktober 2023.
 
 ## Nyheter {#what-is-new}
 
