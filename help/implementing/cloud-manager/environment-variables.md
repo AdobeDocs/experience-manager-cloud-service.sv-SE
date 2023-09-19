@@ -2,9 +2,9 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 15a53778e0934a1940efa5cc88467c20b4b67fe4
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ Både vanliga miljövariabler och hemligheter kan användas i redigerings-, för
 
 ### Dispatcher {#dispatcher}
 
-Endast reguljära miljövariabler kan användas med [avsändaren.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) Det går inte att använda sekreterare.
+Endast reguljära miljövariabler kan användas med [avsändaren.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) Hemligheter kan inte användas.
 
 Miljövariabler kan dock inte användas i `IfDefine` direktiv.
 
