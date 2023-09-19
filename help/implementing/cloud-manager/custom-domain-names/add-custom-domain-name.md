@@ -2,31 +2,31 @@
 title: Lägga till ett anpassat domännamn
 description: Lär dig hur du lägger till ett anpassat domännamn med hjälp av Cloud Manager.
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 600288a87e024fbe58ff605a8bcdc61535cc0759
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
 
 # Lägga till ett anpassat domännamn {#adding-cdn}
 
-Du kan lägga till ett eget domännamn från två platser i Cloud Manager:
+Du kan lägga till ett anpassat domännamn från två platser i Cloud Manager:
 
 * [Från sidan Domäninställningar](#adding-cdn-settings)
 * [Från sidan Miljöer](#adding-cdn-environments)
 
 >[!NOTE]
 >
->En användare måste ha **Företagsägare** eller **Distributionshanteraren** roll för att lägga till ett anpassat domännamn i Cloud Manager
+>En användare måste ha **Företagsägare** eller **Distributionshanteraren** roll för att lägga till ett anpassat domännamn i Cloud Manager, och du måste använda snabbnätverket för CDN.
 
 ## Lägga till ett anpassat domännamn från sidan Domäninställningar {#adding-cdn-settings}
 
-Följ de här stegen för att lägga till ett eget domännamn från **Domäninställningar** sida.
+Följ de här stegen för att lägga till ett eget domännamn från **Domäninställningar** sida. Om du använder ett annat CDN än det snabbkommando som angavs fungerar inte dessa steg för dig, och du måste konfigurera din domän med det CDN som du har konfigurerat.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Klicka på **Domäninställningar** i den vänstra navigeringspanelen.
 
@@ -40,7 +40,7 @@ Följ de här stegen för att lägga till ett eget domännamn från **Domäninst
 
    >[!NOTE]
    >
-   >Inkludera inte `http://`, `https://`eller blanksteg när du anger i domänen.
+   >Inkludera inte `http://`, `https://`, eller blanksteg när du anger i domänen.
 
 1. Välj **Miljö** vars tjänst är associerad med domännamnet.
 
@@ -48,7 +48,7 @@ Följ de här stegen för att lägga till ett eget domännamn från **Domäninst
 
 1. Välj **Domän-SSL-certifikat** som är associerat med domännamnet i listrutan och väljer **Fortsätt**.
 
-1. The **Lägg till domännamn** öppnas och du kommer att gå vidare till verifieringsprocessen för domännamnet. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka på **Skapa**.
+1. The **Lägg till domännamn** öppnas och du kommer att fortsätta verifiera domännamnet. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka på **Skapa**.
 
    ![Verifiering av domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create6.png)
 
@@ -86,13 +86,13 @@ Följ de här stegen för att lägga till ett eget domännamn från **Miljö** s
 
 1. Kontrollera de värden som är markerade i dialogrutan **Lägg till domännamn** och klicka **Fortsätt**.
 
-   ![Domännamnsfönster](/help/implementing/cloud-manager/assets/cdn/cdn-create5.png)
+   ![Fönstret Domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create5.png)
 
    >[!NOTE]
    >
    >Inkludera inte `http://`, `https://`eller blanksteg när du anger domännamnet.
 
-1. The **Lägg till domännamn** öppnas och du kommer att gå vidare till verifieringsprocessen för domännamnet. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka på **Skapa**.
+1. The **Lägg till domännamn** öppnas och du kommer att fortsätta verifiera domännamnet. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka på **Skapa**.
 
    ![Verifiering av domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create6.png)
 
