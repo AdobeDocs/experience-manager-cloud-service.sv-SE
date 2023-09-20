@@ -1,7 +1,7 @@
 ---
-title: Konfigurera trafikfilterregler (med WAF-regler)
-description: Använd trafikfilterregler (med WAF-regler) för att filtrera trafik
-source-git-commit: b1b184b63ab6cdeb8a4e0019c31a34db59438a3d
+title: Konfigurera trafikfilterregler med WAF-regler
+description: Använd trafikfilterregler med WAF-regler för att filtrera trafik
+source-git-commit: ce7b6922f92208c06f85afe85818574bf2bc8f6d
 workflow-type: tm+mt
 source-wordcount: '2709'
 ht-degree: 0%
@@ -9,7 +9,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurera trafikfilterregler (med WAF-regler) för att filtrera trafik {#configuring-cdn-and-waf-rules-to-filter-traffic}
+# Konfigurera trafikfilterregler med WAF-regler för att filtrera trafik {#configuring-cdn-and-waf-rules-to-filter-traffic}
 
 >[!NOTE]
 >

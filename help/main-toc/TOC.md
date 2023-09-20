@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 1a40ed62c57bfa704abe0aad669d1c628416d35a
+source-git-commit: ce7b6922f92208c06f85afe85818574bf2bc8f6d
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4293'
 ht-degree: 20%
 
 ---
@@ -166,7 +166,7 @@ ht-degree: 20%
    + [IMS-stöd för AEM as a Cloud Service](/help/security/ims-support.md)
    + [Stöd för samma webbplats-cookie AEM as a Cloud Service](/help/security/same-site-cookie-support.md)
    + [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md)
-   + [Konfigurera CDN- och WAF-regler för att filtrera trafik](/help/security/cdn-and-waf-rules.md)
+   + [Konfigurera trafikfilterregler med WAF-regler för att filtrera trafik](/help/security/cdn-and-waf-rules.md)
    + [AEM as a Cloud Service säkerhetsfrågor](/help/security/security-considerations.md)
 + Introduktion till {#onboarding}
    + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)
