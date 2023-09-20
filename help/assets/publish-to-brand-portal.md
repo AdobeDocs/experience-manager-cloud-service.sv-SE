@@ -5,10 +5,10 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: User
 exl-id: 1cc438bc-8cad-4421-af03-c1f6d750e0a8
-source-git-commit: 80ac947976bab2b0bfedb4ff9d5dd4634de6b4fc
+source-git-commit: 56a4b03e78e835108aa57fdb241803e75b867260
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 94%
+source-wordcount: '1130'
+ht-degree: 89%
 
 ---
 
@@ -87,6 +87,16 @@ Logga in på gränssnittet för varumärkesportalen för att visa de publicerade
 
 ![bp_landingpage](assets/bp_landingpage.png)
 
+>[!NOTE]
+>
+> * De befintliga användarna i gruppen DAM-Users har läsåtkomst på sökvägen &quot;/conf/global/settings/cloudconfigs/mediaportal&quot;
+>* Nya användare (eller icke-adminanvändare) behöver följande rättigheter för att publicera på varumärkesportalen.
+> Banor:
+> &quot;/conf/global/settings/cloudconfigs/mediaportal&quot; : jcr:read
+>/libs : jcr:read
+>/conf : jcr:read
+>/content : jcr:read, crx:replikate
+>/content/dam/ : jcr:read,Modify, crx:replicate
 
 ## Publicera mappar på varumärkesportalen {#publish-folders-to-brand-portal}
 
@@ -104,7 +114,7 @@ Du kan publicera eller avpublicera resursmappar direkt eller schemalägga åtgä
 
    * Välj **[!UICONTROL Quick Publish]** i verktygsfältet.
 
-      Välj **[!UICONTROL Publish to Brand Portal]** i menyn.
+     Välj **[!UICONTROL Publish to Brand Portal]** i menyn.
 
    * Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
