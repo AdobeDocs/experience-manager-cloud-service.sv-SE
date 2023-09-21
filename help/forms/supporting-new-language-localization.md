@@ -2,9 +2,9 @@
 title: Lägga till stöd för nya språkområden i ett anpassat formulär
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. Engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR) språk.
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 9a1bb716256b5e820723911f4e78a6a4c69d940c
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: '1251'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html) |
-| AEM as a Cloud Service | Den här artikeln |
 
 AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN).
 
@@ -31,7 +30,7 @@ Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordli
 
 ## Lägg till stöd för nya språk {#add-support-for-new-locales}
 
-Gör följande för att lägga till stöd för en ny språkinställning:
+Gör följande för att lägga till stöd för en språkinställning:
 
 1. [Lägg till lokaliseringsstöd för språk som inte stöds](#add-localization-support-for-non-supported-locales)
 1. [Använd tillagda språk i Adaptiv Forms](#use-added-locale-in-af)
@@ -40,7 +39,7 @@ Gör följande för att lägga till stöd för en ny språkinställning:
 
 AEM Forms har för närvarande stöd för lokalisering av Adaptivt Forms-innehåll på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR).
 
-Så här lägger du till stöd för en ny språkinställning i Adaptive Forms runtime:
+Så här lägger du till stöd för en språkinställning:
 
 1. [Klona din databas](#clone-the-repository)
 1. [Lägg till en språkinställning i tjänsten GuideLocalizationService](#add-a-locale-to-the-guide-localization-service)
@@ -112,12 +111,12 @@ Innan du implementerar ändringarna i AEM Git-databasen måste du få åtkomst t
 
 #### 5. Genomför ändringarna i databasen och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
 
-Genomför ändringarna i GIT-databasen när du har lagt till ett nytt språkstöd. Distribuera koden med hela stackpipeline. Läs [hur du ställer in en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
+Genomför ändringarna i GIT-databasen när du har lagt till stöd för nationella inställningar. Distribuera koden med hela stackpipeline. Läs [hur du ställer in en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
 När pipeline är klar visas den nya språkinställningen i AEM.
 
 ### Använd tillagda nationella inställningar i Adaptiv Forms {#use-added-locale-in-af}
 
-Utför följande steg för att använda och återge ett adaptivt formulär med hjälp av en nyligen tillagd språkinställning:
+Utför följande steg för att använda och återge ett adaptivt formulär med nyligen tillagda nationella inställningar:
 
 1. Logga in på AEM författarinstans.
 1. Gå till **Forms** >  **Forms och dokument**.
