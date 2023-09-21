@@ -2,7 +2,7 @@
 title: Använda taggar
 description: Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats
 exl-id: d2a9f578-fe0a-48ea-851c-2c84463661e0
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a7774ff75fb6bac55d5e931b13597d90bf8d721b
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 6%
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats. Taggar kan ses som nyckelord eller etiketter som kan bifogas till en sida, en resurs eller annat innehåll för att göra det möjligt att söka efter innehållet och relaterat innehåll.
 
-* Mer information om hur du skapar och hanterar taggar och vilka innehållstaggar som har tillämpats finns i Administrera taggar. <!-- See [Administering Tags](/help/sites-administering/tags.md) for information about creating and managing tags, and to which content tags have been applied.-->
+* Se [Administrera taggar](/help/sites-cloud/administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar och till vilka innehållstaggar har tillämpats.
 * Se [Tagga för utvecklare](/help/implementing/developing/introduction/tagging-framework.md) om du vill ha information om taggningsramverket och inkludera och utöka taggar i anpassade program.
 
 ## Tio skäl att använda märkord {#ten-reasons-to-use-tagging}

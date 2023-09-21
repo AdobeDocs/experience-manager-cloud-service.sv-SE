@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2023.9.0 i Adobe Experience Manager 
 description: Detta är versionsinformationen för Cloud Manager 2023.9.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 8bf2ffe8b1d3780f4ad3f6972fea4f8281945abb
+source-git-commit: a5e8c11340ab5eacdefb22da302f9e35d9429bc7
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,6 @@ Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen
 
 ## Felkorrigeringar {#bug-fixes}
 
-* När ett program tas bort tas även associerade, pågående pipeline bort, vilket säkerställer att pipelinen inte felaktigt har angetts som misslyckad status.
-* Knappen Go-live complete är inaktiverad och informerar användaren om varför en pipeline pågår.
-* När alla steg i en pipeline-körning är&quot;slutförda&quot; betraktas status för pipelinen som&quot;igång&quot;, vilket gör att den verkar vara i ett fast läge. Den ses nu som&quot;fullständig&quot;.
+* När ett program tas bort tas även associerade, pågående pipeline bort.
+* Om en pipeline pågår visas **Skicka** knappen på **GoLive-klart** dialogrutan är nu inaktiverad och informerar användaren om att live-datumet inte kan anges på grund av den pågående pipeline.
+* Ett tillfälligt fel har korrigerats där alla steg i en pipeline-körning markerades som slutförda, men statusen för pipelinen fortfarande kördes, vilket gav intryck av att ha fastnat.
