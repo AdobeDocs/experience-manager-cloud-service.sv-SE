@@ -1,7 +1,7 @@
 ---
 title: Hur lägger man till stöd för nya språk i ett adaptivt formulär baserat på kärnkomponenterna?
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär.
-source-git-commit: 23f915f0e2e33b9cf1313d15cb98a0a4f8243746
+source-git-commit: b643cdc9ebf57e164088e0dc3598e4e0d3ded267
 workflow-type: tm+mt
 source-wordcount: '1336'
 ht-degree: 0%
@@ -48,7 +48,7 @@ AEM Forms har för närvarande stöd för lokalisering av Adaptivt Forms-innehå
 
 ![Lägga till en språkinställning i en databas](add-a-locale-adaptive-form-core-components.png)
 
-### 1. Klona din AEM as a Cloud Service Git-databas {#clone-the-repository}
+### Klona din AEM as a Cloud Service Git-databas {#clone-the-repository}
 
 1. Öppna kommandoraden och välj en katalog där databasen ska lagras, t.ex. `/cloud-service-repository/`.
 
@@ -63,7 +63,7 @@ AEM Forms har för närvarande stöd för lokalisering av Adaptivt Forms-innehå
    När kommandot är klart skapas en mapp `<my-program>` skapas. Den innehåller det innehåll som klonats från Git-databasen. I resten av artikeln refereras mappen som, `[AEM Forms as a Cloud Service Git repostory]`.
 
 
-### 2. Lägg till det nya språket i Guide Localization Service. {#add-a-locale-to-the-guide-localization-service}
+### Lägg till den nya språkinställningen i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service}
 
 1. Öppna databasmappen, som klonats i föregående avsnitt, i en textredigerare.
 1. Navigera till `[AEM Forms as a Cloud Service Git repostory]/ui.config/src/main/content/jcr_root/apps/<appid>/osgiconfig/config` mapp. Du hittar `<appid>` i `archetype.properties` filer i projektet.
@@ -74,7 +74,7 @@ AEM Forms har för närvarande stöd för lokalisering av Adaptivt Forms-innehå
 1. Lägg till [språkkod](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) du vill lägga till, till exempel, &quot;hi&quot; för hindi.
 1. Spara och stäng filen.
 
-### 3. Skapa ett klientbibliotek för att lägga till en språkinställning
+### Skapa ett klientbibliotek för att lägga till en språkinställning
 
 AEM Forms har ett exempelbibliotek som hjälper dig att enkelt lägga till nya språkområden. Du kan hämta och lägga till `clientlib-it-custom-locale` klientbibliotek från den adaptiva Forms Core Components-databasen på GitHub till din as a Cloud Service Forms-databas. Så här lägger du till klientbiblioteket:
 
@@ -84,7 +84,7 @@ AEM Forms har ett exempelbibliotek som hjälper dig att enkelt lägga till nya s
 1. Navigera till `[AEM Forms as a Cloud Service Git repostory]/ui.apps/src/main/content/jcr_root/apps/moonlightprodprogram/clientlibs` och klistra in `clientlib-it-custom-locale` katalog.
 
 
-### 4. Skapa en språkspecifik fil {#locale-specific-file}
+### Skapa en språkspecifik fil {#locale-specific-file}
 
 1. Navigera till `[AEM Forms as a Cloud Service Git repostory]/ui.apps/src/main/content/jcr_root/apps/<program-id>/clientlibs/clientlib-it-custom-locale/resources/i18n/`
 1. Leta reda på [English locale .json file on GitHub](https://github.com/adobe/aem-core-forms-components/blob/master/ui.af.apps/src/main/content/jcr_root/apps/core/fd/af-clientlibs/core-forms-components-runtime-all/resources/i18n/en.json), som innehåller den senaste uppsättningen standardsträngar som ingår i produkten.
@@ -94,7 +94,7 @@ AEM Forms har ett exempelbibliotek som hjälper dig att enkelt lägga till nya s
 1. Spara och stäng filen.
 
 
-### 4. Lägg till språkstöd i ordlistan {#add-locale-support-for-the-dictionary}
+### Lägg till språkstöd i ordlistan {#add-locale-support-for-the-dictionary}
 
 Utför endast det här steget om `<locale>` du lägger till är inte bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`.
 
@@ -133,7 +133,7 @@ Utför endast det här steget om `<locale>` du lägger till är inte bland `en`,
 
    ![Lägg till de nyligen skapade mapparna i `filter.xml` under `/ui.content/src/main/content/meta-inf/vault/filter.xml`](langauge-filter.png)
 
-### 5. Verkställ ändringarna och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
+### Bekräfta ändringarna och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
 
 Genomför ändringarna i GIT-databasen när du har lagt till ett nytt språkstöd. Distribuera koden med hela stackpipeline. Läs [hur du ställer in en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
 När pipeline är klar visas den nya språkinställningen i AEM.
