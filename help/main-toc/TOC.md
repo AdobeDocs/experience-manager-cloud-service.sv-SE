@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: ce7b6922f92208c06f85afe85818574bf2bc8f6d
+source-git-commit: 23f915f0e2e33b9cf1313d15cb98a0a4f8243746
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4303'
 ht-degree: 20%
 
 ---
@@ -604,6 +604,7 @@ ht-degree: 20%
             + [Konfigurera åtgärden Skicka för ett anpassat formulär](/help/forms/configure-submit-actions-core-components.md)
             + [Använd Google reCAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
             + [Lägga till en anpassad felhanterare i ett adaptivt formulär](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
+            + [Lägg till en språkinställning för adaptiv Forms baserat på kärnkomponenter](/help/forms/supporting-new-language-localization-core-components.md)
       + Foundation Components {#authoring-adaptive-forms-foundation-components}
          + Konvertera PDF forms till Adaptiv Forms {#afcs}
             + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)

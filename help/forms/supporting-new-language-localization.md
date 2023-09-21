@@ -2,9 +2,9 @@
 title: Lägga till stöd för nya språkområden i ett anpassat formulär
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. Engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR) språk.
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
-source-git-commit: 9a1bb716256b5e820723911f4e78a6a4c69d940c
+source-git-commit: 23f915f0e2e33b9cf1313d15cb98a0a4f8243746
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html) |
+| Kärnkomponenter | [Klicka här](supporting-new-language-localization-core-components.md) |
+| Foundation Components | Den här artikeln |
 
 AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN).
 
