@@ -1,15 +1,15 @@
 ---
 title: Hur lägger man till stöd för nya språk i ett adaptivt formulär baserat på kärnkomponenterna?
-description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär.
-source-git-commit: 0a1310290c25a94ffe6f95ea6403105475ef5dda
+description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
+source-git-commit: 056aecd0ea1fd9ec1e4c05299d2c50bca161615f
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
 
-# Lägg till en språkinställning för adaptiv Forms baserat på kärnkomponenter {#supporting-new-locales-for-adaptive-forms-localization}
 
+# Lägg till en språkinställning för adaptiv Forms baserat på kärnkomponenter {#supporting-new-locales-for-adaptive-forms-localization}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -18,26 +18,32 @@ ht-degree: 0%
 
 AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR).
 
-Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN).
+## Hur väljs språkinställningen för ett anpassat formulär?
 
-<!-- 
-## Understanding locale dictionaries {#about-locale-dictionaries}
+Det finns två metoder för att identifiera och välja språkområde för ett adaptivt formulär när det återges:
 
-The localization of adaptive forms relies on two types of locale dictionaries:
+* **Använda [locale] Väljaren i URL**: Vid återgivning av ett adaptivt formulär identifierar systemet det begärda språkområdet genom att granska [locale] -väljaren i det adaptiva formulärets URL. URL:en har följande format: http:/[AEM Forms Server-URL]/content/forms/af/[afName].[locale].html?wcmmode=disabled. Användning av [locale] -väljaren gör det möjligt att cachelagra det adaptiva formuläret.
 
-*   **Form-specific dictionary** Contains strings used in adaptive forms. For example, labels, field names, error messages, help descriptions. It is managed as a set of XLIFF files for each locale and you can access it at `[AEM Forms as a Cloud Service Author instance]/libs/cq/i18n/gui/translator.html`.
+* Hämtar parametrarna i den ordning som anges nedan:
 
-*   **Global dictionaries** There are two global dictionaries, managed as JSON objects, in AEM client library. These dictionaries contain default error messages, month names, currency symbols, date and time patterns, and so on.  These locations contain separate folders for each locale. Because global dictionaries are not updated frequently, keeping separate JavaScript files for each locale enables browsers to cache them and reduce network bandwidth usage when accessing different adaptive forms on same server.
+   * Begäranparameter `afAcceptLang`: Om du vill åsidosätta användarens språkområde i webbläsaren kan du skicka begäran-parametern afAcceptLang. Den här URL:en tvingar till exempel formulärets rendering på kanadensisk franska: `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ca-fr`.
 
--->
+   * Webbläsarens språkinställning (Accept-Language Header): Systemet hanterar också användarens språkområde i webbläsaren, som anges i begäran med hjälp av `Accept-Language` header.
+
+  Om det inte finns något klientbibliotek för det begärda språket kontrollerar systemet om det finns ett klientbibliotek för språkkoden i språket. Om det begärda språket till exempel är `en_ZA` (sydafrikansk engelska) och det finns inget klientbibliotek för `en_ZA`används klientbiblioteket för en (engelska) om tillgängligt. Om ingen av dem hittas, används lexikonet för `en` språkinställning.
+
+  När språkområdet har identifierats väljer det adaptiva formuläret motsvarande formulärspecifika ordlista. Om det inte går att hitta ordlistan för det begärda språket använder den som standard ordlistan på det språk som det anpassade formuläret skapades på.
+
+  Om ingen språkinformation finns tillgänglig visas det adaptiva formuläret på sitt originalspråk, det språk som används under formulärutvecklingen
+
 
 ## Förutsättningar {#prerequistes}
 
 Innan du börjar lägga till stöd för ett nytt språk
 
-* Installera en vanlig textredigerare (IDE) för enklare redigering. Exemplen i det här dokumentet är baserade på Microsoft VS-kod.
+* Installera en vanlig textredigerare (IDE) för enklare redigering. Exemplen i det här dokumentet är baserade på Microsoft® Visual Studio Code.
 * Klona den adaptiva Forms Core Components-databasen. Så här klonar du databasen:
-   1. Öppna kommandoraden eller det tillfälliga fönstret och navigera till en plats där databasen ska lagras. Till exempel `/adaptive-forms-core-components`
+   1. Öppna kommandoraden eller terminalfönstret och navigera till en plats där databasen ska lagras. Till exempel `/adaptive-forms-core-components`
    1. Kör följande kommando för att klona databasen:
 
       ```SHELL
@@ -65,18 +71,18 @@ Så här lägger du till stöd för en ny språkinställning:
 
    Ersätt `<my-org>` och `<my-program>` i ovanstående URL med ditt organisationsnamn och programnamn. Detaljerade instruktioner om hur du får reda på organisationens namn, programnamn eller den fullständiga sökvägen till Git-databasen och de inloggningsuppgifter som krävs för att klona databasen finns i [Åtkomst till Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git) artikel.
 
-   När kommandot är klart skapas en mapp `<my-program>` skapas. Den innehåller det innehåll som klonats från Git-databasen. I resten av artikeln refereras mappen som, `[AEM Forms as a Cloud Service Git repostory]`.
+   När kommandot är klart skapas en mapp `<my-program>` skapas. Den innehåller det innehåll som klonats från Git-databasen. I resten av artikeln refereras mappen som, `[AEM Forms as a Cloud Service Git repository]`.
 
 
 ### Lägg till den nya språkinställningen i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service}
 
-1. Öppna databasmappen, som klonats i föregående avsnitt, i en textredigerare.
-1. Navigera till `[AEM Forms as a Cloud Service Git repostory]/ui.config/src/main/content/jcr_root/apps/<appid>/osgiconfig/config` mapp. Du hittar `<appid>` i `archetype.properties` filer i projektet.
-1. Öppna `[AEM Forms as a Cloud Service Git repostory]/ui.config/src/main/content/jcr_root/apps/<appid>/osgiconfig/config/Guide Localization Service.cfg.json` fil för redigering. Om filen inte finns skapar du den. En exempelfil med språkområden som stöds ser ut så här:
+1. Öppna databasmappen, som klonats i föregående avsnitt, i en vanlig textredigerare.
+1. Navigera till `[AEM Forms as a Cloud Service Git repository]/ui.config/src/main/content/jcr_root/apps/<appid>/osgiconfig/config` mapp. Du hittar `<appid>` i `archetype.properties` filer i projektet.
+1. Öppna `[AEM Forms as a Cloud Service Git repository]/ui.config/src/main/content/jcr_root/apps/<appid>/osgiconfig/config/Guide Localization Service.cfg.json` fil för redigering. Om filen inte finns skapar du den. En exempelfil med språkområden som stöds ser ut så här:
 
    ![Ett exempel på en guide till lokaliseringstjänsten.cfg.json](locales.png)
 
-1. Lägg till [språkkod](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) du vill lägga till, till exempel, &quot;hi&quot; för hindi.
+1. Lägg till [språkkod](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) som du vill lägga till, till exempel, &quot;hi&quot; för hindi.
 1. Spara och stäng filen.
 
 ### Skapa ett klientbibliotek för att lägga till en språkinställning
@@ -86,14 +92,14 @@ AEM Forms har ett exempelbibliotek som hjälper dig att enkelt lägga till nya s
 1. Öppna databasen Adaptive Forms Core Components i textredigeraren. Om databasen inte är klonad kan du läsa [Förutsättningar](#prerequistes) för instruktioner om hur du klonar databasen.
 1. Navigera till `/aem-core-forms-components/it/apps/src/main/content/jcr_root/apps/forms-core-components-it/clientlibs` katalog.
 1. Kopiera `clientlib-it-custom-locale` katalog.
-1. Navigera till `[AEM Forms as a Cloud Service Git repostory]/ui.apps/src/main/content/jcr_root/apps/moonlightprodprogram/clientlibs` och klistra in `clientlib-it-custom-locale` katalog.
+1. Navigera till `[AEM Forms as a Cloud Service Git repository]/ui.apps/src/main/content/jcr_root/apps/moonlightprodprogram/clientlibs` och klistra in `clientlib-it-custom-locale` katalog.
 
 
 ### Skapa en språkspecifik fil {#locale-specific-file}
 
-1. Navigera till `[AEM Forms as a Cloud Service Git repostory]/ui.apps/src/main/content/jcr_root/apps/<program-id>/clientlibs/clientlib-it-custom-locale/resources/i18n/`
+1. Navigera till `[AEM Forms as a Cloud Service Git repository]/ui.apps/src/main/content/jcr_root/apps/<program-id>/clientlibs/clientlib-it-custom-locale/resources/i18n/`
 1. Leta reda på [English locale .json file on GitHub](https://github.com/adobe/aem-core-forms-components/blob/master/ui.af.apps/src/main/content/jcr_root/apps/core/fd/af-clientlibs/core-forms-components-runtime-all/resources/i18n/en.json), som innehåller den senaste uppsättningen standardsträngar som ingår i produkten.
-1. Skapa en ny .json-fil för just din språkinställning.
+1. Skapa en JSON-fil för just din språkinställning.
 1. I den nyligen skapade .json-filen speglar du strukturen i den engelska språkfilen.
 1. Ersätt de engelska språksträngarna i din .json-fil med motsvarande översatta strängar för ditt språk.
 1. Spara och stäng filen.
@@ -103,7 +109,7 @@ AEM Forms har ett exempelbibliotek som hjälper dig att enkelt lägga till nya s
 
 Utför endast det här steget om `<locale>` du lägger till är inte bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`.
 
-1. Navigera till `[AEM Forms as a Cloud Service Git repostory]/ui.content/src/main/content/jcr_root/etc/` mapp.
+1. Navigera till `[AEM Forms as a Cloud Service Git repository]/ui.content/src/main/content/jcr_root/etc/` mapp.
 
 1. Skapa en `etc` mappen under `jcr_root` om den inte finns.
 
@@ -130,7 +136,7 @@ Utför endast det här steget om `<locale>` du lägger till är inte bland `en`,
    languages="[de,es,fr,it,pt-br,zh-cn,zh-tw,ja,ko-kr,hi]"/>
    ```
 
-1. Lägg till de nyligen skapade mapparna i `filter.xml` under `/ui.content/src/main/content/meta-inf/vault/filter.xml` as:
+1. Lägg till de nya mapparna i `filter.xml` under `/ui.content/src/main/content/meta-inf/vault/filter.xml` as:
 
    ```
    <filter root="/etc/languages"/>
@@ -142,7 +148,7 @@ Utför endast det här steget om `<locale>` du lägger till är inte bland `en`,
 
 Genomför ändringarna i GIT-databasen när du har lagt till ett nytt språkstöd. Distribuera koden med hela stackpipeline. Läs [hur du ställer in en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
 
-När pipeline-körningen har slutförts är den nyligen tillagda språkinställningen klar att användas.
+När pipeline-körningen har slutförts är den nya språkinställningen klar att användas.
 
 ## Förhandsgranska ett anpassat formulär med nyligen tillagda språk {#use-added-locale-in-af}
 
@@ -175,14 +181,13 @@ När språkinställningen har identifierats väljer adaptiv form den formulärsp
 
 Om det inte finns någon tillgänglig språkinformation visas det adaptiva formuläret på sitt ursprungliga språk, det språk som användes vid formulärutvecklingen.
 
-<!--
-Get [sample client library](/help/forms/assets/locale-support-sample.zip) to add support for new locale. You need to change the content of the folder in the required locale.
 
-## Best Practices to support for new localization {#best-practices}
+## De bästa sätten att stödja ny lokalisering {#best-practices}
 
-*   Adobe recommends creating a translation project after creating an Adaptive Form.
+* Adobe rekommenderar att du skapar ett översättningsprojekt när du har skapat ett adaptivt formulär.
 
-*   When new fields are added in an existing Adaptive Form:
-    * **For machine translation**: Re-create the dictionary and run the translation project. Fields added to an Adaptive Form after creating a translation project remain untranslated. 
-    * **For human translation**: Export the dictionary through `[server:port]/libs/cq/i18n/gui/translator.html`. Update the dictionary for the newly added fields and upload it.
--->
+* När nya fält läggs till i ett befintligt adaptivt formulär:
+   * **För maskinöversättning**: Återskapa ordlistan och kör översättningsprojektet. Fält som läggs till i ett adaptivt formulär när du har skapat ett översättningsprojekt förblir oöversatta.
+   * **För mänsklig översättning**: Exportera ordlistan via `[server:port]/libs/cq/i18n/gui/translator.html`. Uppdatera ordlistan för de nya fälten och överför den.
+
+
