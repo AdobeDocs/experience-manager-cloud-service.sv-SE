@@ -1,9 +1,9 @@
 ---
 title: Hur lägger man till stöd för nya språk i ett adaptivt formulär baserat på kärnkomponenterna?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
-source-git-commit: 056aecd0ea1fd9ec1e4c05299d2c50bca161615f
+source-git-commit: 2a738d17b1e2f46c06828512ee07c1c20f35596c
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1449'
 ht-degree: 0%
 
 ---
@@ -20,15 +20,16 @@ AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (
 
 ## Hur väljs språkinställningen för ett anpassat formulär?
 
+
 Det finns två metoder för att identifiera och välja språkområde för ett adaptivt formulär när det återges:
 
 * **Använda [locale] Väljaren i URL**: Vid återgivning av ett adaptivt formulär identifierar systemet det begärda språkområdet genom att granska [locale] -väljaren i det adaptiva formulärets URL. URL:en har följande format: http:/[AEM Forms Server-URL]/content/forms/af/[afName].[locale].html?wcmmode=disabled. Användning av [locale] -väljaren gör det möjligt att cachelagra det adaptiva formuläret.
 
 * Hämtar parametrarna i den ordning som anges nedan:
 
-   * Begäranparameter `afAcceptLang`: Om du vill åsidosätta användarens språkområde i webbläsaren kan du skicka begäran-parametern afAcceptLang. Den här URL:en tvingar till exempel formulärets rendering på kanadensisk franska: `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ca-fr`.
+   * **Begäranparameter`afAcceptLang`**: Om du vill åsidosätta användarens språkområde i webbläsaren kan du skicka begäran-parametern afAcceptLang. Den här URL:en tvingar till exempel formulärets rendering på kanadensisk franska: `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ca-fr`.
 
-   * Webbläsarens språkinställning (Accept-Language Header): Systemet hanterar också användarens språkområde i webbläsaren, som anges i begäran med hjälp av `Accept-Language` header.
+   * **Webbläsarens språkområde (sidhuvud för acceptera språk)**: Systemet hanterar också användarens språkområde i webbläsaren, som anges i begäran med `Accept-Language` header.
 
   Om det inte finns något klientbibliotek för det begärda språket kontrollerar systemet om det finns ett klientbibliotek för språkkoden i språket. Om det begärda språket till exempel är `en_ZA` (sydafrikansk engelska) och det finns inget klientbibliotek för `en_ZA`används klientbiblioteket för en (engelska) om tillgängligt. Om ingen av dem hittas, används lexikonet för `en` språkinställning.
 
@@ -42,7 +43,8 @@ Det finns två metoder för att identifiera och välja språkområde för ett ad
 Innan du börjar lägga till stöd för ett nytt språk
 
 * Installera en vanlig textredigerare (IDE) för enklare redigering. Exemplen i det här dokumentet är baserade på Microsoft® Visual Studio Code.
-* Klona den adaptiva Forms Core Components-databasen. Så här klonar du databasen:
+* Installera en version av [Git](https://git-scm.com), om det inte finns på din dator.
+* Klona [Adaptiva Forms Core-komponenter](https://github.com/adobe/aem-core-forms-components) databas. Så här klonar du databasen:
    1. Öppna kommandoraden eller terminalfönstret och navigera till en plats där databasen ska lagras. Till exempel `/adaptive-forms-core-components`
    1. Kör följande kommando för att klona databasen:
 
@@ -50,7 +52,7 @@ Innan du börjar lägga till stöd för ett nytt språk
           git clone https://github.com/adobe/aem-core-forms-components.git
       ```
 
-  Databasen innehåller ett klientbibliotek som behövs för att lägga till en språkinställning.
+  Databasen innehåller ett klientbibliotek som behövs för att lägga till en språkinställning. I resten av artikeln refereras mappen som, [Adaptiv Forms Core Components-databas].
 
 
 ## Lägga till en språkinställning {#add-localization-support-for-non-supported-locales}
@@ -59,9 +61,9 @@ Så här lägger du till stöd för en ny språkinställning:
 
 ![Lägga till en språkinställning i en databas](add-a-locale-adaptive-form-core-components.png)
 
-### Klona din AEM as a Cloud Service Git-databas {#clone-the-repository}
+### 1. Klona din AEM as a Cloud Service Git-databas {#clone-the-repository}
 
-1. Öppna kommandoraden och välj en katalog där databasen ska lagras, t.ex. `/cloud-service-repository/`.
+1. Öppna kommandoraden och välj en katalog där du vill lagra AEM Forms as a Cloud Service databas, t.ex. `/cloud-service-repository/`.
 
 1. Kör följande kommando för att klona databasen:
 
@@ -74,7 +76,7 @@ Så här lägger du till stöd för en ny språkinställning:
    När kommandot är klart skapas en mapp `<my-program>` skapas. Den innehåller det innehåll som klonats från Git-databasen. I resten av artikeln refereras mappen som, `[AEM Forms as a Cloud Service Git repository]`.
 
 
-### Lägg till den nya språkinställningen i tjänsten för guidelokalisering {#add-a-locale-to-the-guide-localization-service}
+### 2. Lägg till det nya språket i Guide Localization Service. {#add-a-locale-to-the-guide-localization-service}
 
 1. Öppna databasmappen, som klonats i föregående avsnitt, i en vanlig textredigerare.
 1. Navigera till `[AEM Forms as a Cloud Service Git repository]/ui.config/src/main/content/jcr_root/apps/<appid>/osgiconfig/config` mapp. Du hittar `<appid>` i `archetype.properties` filer i projektet.
@@ -85,17 +87,17 @@ Så här lägger du till stöd för en ny språkinställning:
 1. Lägg till [språkkod](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) som du vill lägga till, till exempel, &quot;hi&quot; för hindi.
 1. Spara och stäng filen.
 
-### Skapa ett klientbibliotek för att lägga till en språkinställning
+### 3. Skapa ett klientbibliotek för att lägga till en språkinställning
 
-AEM Forms har ett exempelbibliotek som hjälper dig att enkelt lägga till nya språkområden. Du kan hämta och lägga till `clientlib-it-custom-locale` klientbibliotek från den adaptiva Forms Core Components-databasen på GitHub till din as a Cloud Service Forms-databas. Så här lägger du till klientbiblioteket:
+AEM Forms har ett exempelbibliotek som hjälper dig att enkelt lägga till nya språkområden. Du kan hämta och lägga till `clientlib-it-custom-locale` klientbibliotek från [Adaptiv Forms Core Components-databas] på GitHub till din Forms as a Cloud Service databas. Så här lägger du till klientbiblioteket:
 
-1. Öppna databasen Adaptive Forms Core Components i textredigeraren. Om databasen inte är klonad kan du läsa [Förutsättningar](#prerequistes) för instruktioner om hur du klonar databasen.
+1. Öppna [Adaptiv Forms Core Components-databas] i textredigeraren. Om databasen inte är klonad kan du läsa [Förutsättningar](#prerequistes) för instruktioner om hur du klonar databasen.
 1. Navigera till `/aem-core-forms-components/it/apps/src/main/content/jcr_root/apps/forms-core-components-it/clientlibs` katalog.
 1. Kopiera `clientlib-it-custom-locale` katalog.
 1. Navigera till `[AEM Forms as a Cloud Service Git repository]/ui.apps/src/main/content/jcr_root/apps/moonlightprodprogram/clientlibs` och klistra in `clientlib-it-custom-locale` katalog.
 
 
-### Skapa en språkspecifik fil {#locale-specific-file}
+### 4. Skapa en språkspecifik fil {#locale-specific-file}
 
 1. Navigera till `[AEM Forms as a Cloud Service Git repository]/ui.apps/src/main/content/jcr_root/apps/<program-id>/clientlibs/clientlib-it-custom-locale/resources/i18n/`
 1. Leta reda på [English locale .json file on GitHub](https://github.com/adobe/aem-core-forms-components/blob/master/ui.af.apps/src/main/content/jcr_root/apps/core/fd/af-clientlibs/core-forms-components-runtime-all/resources/i18n/en.json), som innehåller den senaste uppsättningen standardsträngar som ingår i produkten.
@@ -105,7 +107,7 @@ AEM Forms har ett exempelbibliotek som hjälper dig att enkelt lägga till nya s
 1. Spara och stäng filen.
 
 
-### Lägg till språkstöd i ordlistan {#add-locale-support-for-the-dictionary}
+### 5. Lägg till språkstöd i ordlistan {#add-locale-support-for-the-dictionary}
 
 Utför endast det här steget om `<locale>` du lägger till är inte bland `en`, `de`, `es`, `fr`, `it`, `pt-br`, `zh-cn`, `zh-tw`, `ja`, `ko-kr`.
 
@@ -144,9 +146,9 @@ Utför endast det här steget om `<locale>` du lägger till är inte bland `en`,
 
    ![Lägg till de nyligen skapade mapparna i `filter.xml` under `/ui.content/src/main/content/meta-inf/vault/filter.xml`](langauge-filter.png)
 
-### Bekräfta ändringarna och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
+### 6. Genomför ändringarna och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
 
-Genomför ändringarna i GIT-databasen när du har lagt till ett nytt språkstöd. Distribuera koden med hela stackpipeline. Läs [hur du ställer in en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
+Genomför ändringarna i GIT-databasen när du har lagt till den nya språkinställningen. Distribuera koden med hela stackpipeline. Läs [hur du ställer in en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
 
 När pipeline-körningen har slutförts är den nya språkinställningen klar att användas.
 
