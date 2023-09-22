@@ -1,9 +1,9 @@
 ---
 title: Hur lägger man till stöd för nya språk i ett adaptivt formulär baserat på kärnkomponenterna?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
-source-git-commit: 2a738d17b1e2f46c06828512ee07c1c20f35596c
+source-git-commit: 4e48e49fea66fa24052632138a1b305208690d06
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1484'
 ht-degree: 0%
 
 ---
@@ -16,12 +16,11 @@ ht-degree: 0%
 | Foundation Components | [Klicka här](supporting-new-language-localization.md) |
 | Kärnkomponenter | Den här artikeln |
 
-AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR).
+AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN).
 
 ## Hur väljs språkinställningen för ett anpassat formulär?
 
-
-Det finns två metoder för att identifiera och välja språkområde för ett adaptivt formulär när det återges:
+Innan du börjar med att lägga till nya språk för Adaptiv Forms måste du skapa en förståelse för hur ett språkområde väljs för ett adaptivt formulär. Det finns två metoder för att identifiera och välja språkområde för ett adaptivt formulär när det återges:
 
 * **Använda [locale] Väljaren i URL**: Vid återgivning av ett adaptivt formulär identifierar systemet det begärda språkområdet genom att granska [locale] -väljaren i det adaptiva formulärets URL. URL:en har följande format: http:/[AEM Forms Server-URL]/content/forms/af/[afName].[locale].html?wcmmode=disabled. Användning av [locale] -väljaren gör det möjligt att cachelagra det adaptiva formuläret.
 
