@@ -1,9 +1,9 @@
 ---
 title: Hur lägger man till stöd för nya språk i ett adaptivt formulär baserat på kärnkomponenterna?
 description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär.
-source-git-commit: b643cdc9ebf57e164088e0dc3598e4e0d3ded267
+source-git-commit: 0a1310290c25a94ffe6f95ea6403105475ef5dda
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1079'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,20 @@ ht-degree: 0%
 | Foundation Components | [Klicka här](supporting-new-language-localization.md) |
 | Kärnkomponenter | Den här artikeln |
 
-AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN).
+AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR).
 
-## Om språklexikon {#about-locale-dictionaries}
+Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN).
 
-Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordlistor:
+<!-- 
+## Understanding locale dictionaries {#about-locale-dictionaries}
 
-* **Formulärspecifik ordlista** Innehåller strängar som används i adaptiva formulär. Till exempel etiketter, fältnamn, felmeddelanden och hjälpbeskrivningar. Den hanteras som en uppsättning XLIFF-filer för varje språkområde och du kan komma åt den på `[author-instance]/libs/cq/i18n/gui/translator.html`.
+The localization of adaptive forms relies on two types of locale dictionaries:
 
-* **Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, AEM klientbiblioteket. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Du hittar dessa ordlistor på `[author-instance]/libs/fd/xfaforms/clientlibs/I18N`. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor inte uppdateras så ofta kan olika JavaScript-filer för varje språkområde användas för att cachelagra dem och minska användningen av nätverksbandbredd vid åtkomst av olika adaptiva formulär på samma server.
+*   **Form-specific dictionary** Contains strings used in adaptive forms. For example, labels, field names, error messages, help descriptions. It is managed as a set of XLIFF files for each locale and you can access it at `[AEM Forms as a Cloud Service Author instance]/libs/cq/i18n/gui/translator.html`.
+
+*   **Global dictionaries** There are two global dictionaries, managed as JSON objects, in AEM client library. These dictionaries contain default error messages, month names, currency symbols, date and time patterns, and so on.  These locations contain separate folders for each locale. Because global dictionaries are not updated frequently, keeping separate JavaScript files for each locale enables browsers to cache them and reduce network bandwidth usage when accessing different adaptive forms on same server.
+
+-->
 
 ## Förutsättningar {#prerequistes}
 
@@ -44,7 +49,7 @@ Innan du börjar lägga till stöd för ett nytt språk
 
 ## Lägga till en språkinställning {#add-localization-support-for-non-supported-locales}
 
-AEM Forms har för närvarande stöd för lokalisering av Adaptivt Forms-innehåll på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Så här lägger du till stöd för en ny språkinställning i Adaptive Forms runtime:
+Så här lägger du till stöd för en ny språkinställning:
 
 ![Lägga till en språkinställning i en databas](add-a-locale-adaptive-form-core-components.png)
 
@@ -136,13 +141,14 @@ Utför endast det här steget om `<locale>` du lägger till är inte bland `en`,
 ### Bekräfta ändringarna och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
 
 Genomför ändringarna i GIT-databasen när du har lagt till ett nytt språkstöd. Distribuera koden med hela stackpipeline. Läs [hur du ställer in en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
-När pipeline är klar visas den nya språkinställningen i AEM.
 
-## Använd tillagda nationella inställningar i Adaptiv Forms {#use-added-locale-in-af}
+När pipeline-körningen har slutförts är den nyligen tillagda språkinställningen klar att användas.
 
-Utför följande steg för att använda och återge ett adaptivt formulär med hjälp av en nyligen tillagd språkinställning:
+## Förhandsgranska ett anpassat formulär med nyligen tillagda språk {#use-added-locale-in-af}
 
-1. Logga in på AEM författarinstans.
+Utför följande steg för att förhandsgranska en anpassad version med nyligen tillagda nationella inställningar:
+
+1. Logga in på din as a Cloud Service AEM Forms-instans.
 1. Gå till **Forms** >  **Forms och dokument**.
 1. Välj ett anpassat formulär och klicka på **Lägg till ordlista** och **Lägg till ordlista i översättningsprojekt** visas.
 1. Ange **Projektets titel** och väljer **Målspråk** i listrutan i **Lägg till ordlista i översättningsprojekt** guide.
@@ -153,7 +159,7 @@ Utför följande steg för att använda och återge ett adaptivt formulär med h
 
 Det finns två metoder för att identifiera språkområdet i en adaptiv form. När ett anpassat formulär återges identifieras det begärda språket av:
 
-* Hämtar `[local]` väljaren i den anpassningsbara formulärets URL. URL-formatet är `http://host:[port]/content/forms/af/[afName].[locale].html?wcmmode=disabled`. Använda `[local]` -väljaren tillåter cachelagring av ett adaptivt formulär.
+* Hämtar `[local]` väljaren i den anpassningsbara formulärets URL. URL-formatet är `http:/[AEM Forms Server URL]/content/forms/af/[afName].[locale].html?wcmmode=disabled`. Använda `[local]` -väljaren tillåter cachelagring av ett adaptivt formulär.
 
 * Hämtar följande parametrar i listordningen:
 
@@ -165,17 +171,18 @@ Om du vill åsidosätta webbläsarens språkområde för användare kan du skick
 
 Om det inte finns något klientbibliotek för det begärda språket söker programmet efter språkkoden i klientbiblioteket. Om det begärda språket till exempel är `en_ZA` (South Africa English) och klientbiblioteket för `en_ZA` finns inte, det adaptiva formuläret använder klientbiblioteket `en` (Engelska), om det finns. Om det inte finns någon av dem används lexikonet för `en` språkinställning.
 
-
 När språkinställningen har identifierats väljer adaptiv form den formulärspecifika ordlistan. Om det inte går att hitta den formulärspecifika ordlistan för den begärda språkversionen används ordlistan för det språk som Adaptiv form har skapats på.
 
-Om det inte finns någon tillgänglig språkinformation kommer det adaptiva formuläret att visas på sitt ursprungliga språk, vilket är det språk som användes under utvecklingen.
+Om det inte finns någon tillgänglig språkinformation visas det adaptiva formuläret på sitt ursprungliga språk, det språk som användes vid formulärutvecklingen.
 
-Hämta [exempelklientbibliotek](/help/forms/assets/locale-support-sample.zip) för att lägga till stöd för nya språk. Du måste ändra innehållet i mappen på det språk som krävs.
+<!--
+Get [sample client library](/help/forms/assets/locale-support-sample.zip) to add support for new locale. You need to change the content of the folder in the required locale.
 
-## De bästa sätten att stödja ny lokalisering {#best-practices}
+## Best Practices to support for new localization {#best-practices}
 
-* Adobe rekommenderar att du skapar ett översättningsprojekt när du har skapat ett adaptivt formulär.
+*   Adobe recommends creating a translation project after creating an Adaptive Form.
 
-* När nya fält läggs till i ett befintligt adaptivt formulär:
-   * **För maskinöversättning**: Återskapa ordlistan och kör översättningsprojektet. Fält som läggs till i ett adaptivt formulär när du har skapat ett översättningsprojekt förblir oöversatta.
-   * **För mänsklig översättning**: Exportera ordlistan via `[server:port]/libs/cq/i18n/gui/translator.html`. Uppdatera ordlistan för de nya fälten och överför den.
+*   When new fields are added in an existing Adaptive Form:
+    * **For machine translation**: Re-create the dictionary and run the translation project. Fields added to an Adaptive Form after creating a translation project remain untranslated. 
+    * **For human translation**: Export the dictionary through `[server:port]/libs/cq/i18n/gui/translator.html`. Update the dictionary for the newly added fields and upload it.
+-->
