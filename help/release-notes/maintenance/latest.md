@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 8a1ed1e44db0154854af73a96339d8e416afd3b4
+source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '295'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 1342
 
 - ASSETS-27628: Felaktig kanalnod skapas när resurspanelen anpassas
 - ASSETS-27539: Överför begränsningar för matchning av reguljära uttryck.
-- ASSETS-26530: Enhetligt gränssnitt återför inte användare till den ursprungliga sidan.
+- ASSETS-26530: Enhetligt gränssnitt återför inte användare till originalsidan.
 - ASSETS-22719: Hakparenteser i Namngivning av brytpunkter för smart beskärning bryter redigeringsfunktionen för smart beskärning.
 - ASSETS-27726: linkshare.html ska inte indexeras av Google.
 - ASSETS-27791: Validering av metadatamatchema utförs endast för det första fältet.
@@ -37,8 +37,8 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 1342
 - ASSETS-25740: Fasta skärmläsare utan berättarröst Namn och roll för Redigera/Beskär-kontroller på sidan Redigera smarta beskärningar med hjälp av nedpilstangenterna.
 - CQ-4354266: Det går inte att öppna inkorgsobjekt.
 - CQ-4354347: Uppdaterade AEM.
-- DISP-1009: Användaren-agenten trimmar X-Forwarded-Host som inte är den första rubriken.
-- Flera tillgänglighets- och säkerhetsrelaterade korrigeringar.
+- DISP-1009: Användaren-agenten trimmar X-Forwarded-Host som icke-första huvud.
+- Olika hjälpmedels- och säkerhetsrelaterade korrigeringar.
 
 ### Kända fel {#known-issues-13420}
 
@@ -48,7 +48,7 @@ Ingen.
 
 | Teknik | Version | Länk |
 |---|---|---|
-| AEM | 1.54-T20230817132355-3800a65 | [Oak API 1.54.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.54.0/index.html) |
+| AEM Oak | 1.54-T20230817132355-3800a65 | [Oak API 1.54.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.54.0/index.html) |
 | AEM SLING API | Version 2.27.2 | [API för Apache Sling 2.27.2](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTML | Version 1.4.20-1.4.0 | [HTML-mallens språkspecifikation](https://github.com/adobe/htl-spec) |
 | Grundläggande komponenter i AEM | Version 2.23.2 | [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components) |

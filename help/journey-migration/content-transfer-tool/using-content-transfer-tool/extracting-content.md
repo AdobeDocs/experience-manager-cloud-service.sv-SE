@@ -1,11 +1,11 @@
 ---
 title: Extraherar innehåll från källa
-description: Lär dig hur du extraherar innehåll från en AEM för att senare överföra det till en Cloud Service AEM.
+description: Lär dig hur du extraherar innehåll från en Adobe Experience Manager-källinstans (AEM) och senare överför det till en Cloud Service AEM.
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: 44a3f3c4ca08cffa06056ea85adc58e3cf1f2f1c
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 20%
+source-wordcount: '713'
+ht-degree: 22%
 
 ---
 
@@ -16,14 +16,14 @@ ht-degree: 20%
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_extraction"
 >title="Innehållsextrahering"
->abstract="Extrahering avser att extrahera innehåll från AEM till ett temporärt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen."
+>abstract="Extrahering avser att extrahera innehåll från Adobe Experience Manager-källinstansen (AEM) till ett temporärt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som finns hos Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#top-up-extraction-process" text="Extrahering uppifrån"
 
 
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:
 
 >[!NOTE]
->Om Amazon S3, Azure Data Store eller File Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att avsevärt snabba upp extraheringsfasen. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Se [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för mer information.
+>Om Amazon S3, Azure Data Store eller File Data Store används som typ av datalager kan du köra det valfria förkopieringssteget för att öka extraheringsfasens hastighet. Steg före kopiering är mest effektivt för första fullständiga extrahering och förtäring. Se [Hantera stora innehållsdatabaser](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md) för mer information.
 
 1. Välj en migreringsuppsättning från **Innehållsöverföring** guide och klicka **Extract** för att påbörja extraheringen.
 
@@ -31,29 +31,29 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 
    >[!IMPORTANT]
    >
-   >Kontrollera att Extraheringsnyckeln är giltig och att den inte ligger nära utgångsdatumet. Om den ligger nära sitt förfallodatum kan du förnya extraheringsnyckeln genom att markera migreringsuppsättningen och klicka på Egenskaper. Klicka på **Förnya**. Då kommer du till Cloud Acceleration Manager där du kan klicka på **Kopiera extraheringsnyckel**. Varje gång du klickar på **Kopiera extraheringsnyckel**skapas en ny extraheringsnyckel som är giltig i 14 dagar från det att den skapades.
+   >Kontrollera att Extraheringsnyckeln är giltig och att den inte är i närheten av utgångsdatumet. Om den ligger nära sitt förfallodatum kan du förnya extraheringsnyckeln genom att markera migreringsuppsättningen och klicka på Egenskaper. Klicka **Förnya**. Då kommer du till Cloud Acceleration Manager där du kan klicka **Kopiera extraheringsnyckel**. Varje gång du klickar **Kopiera extraheringsnyckel**skapas en ny extraheringsnyckel som är giltig i 14 dagar från det att den skapades.
    >![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam13.png)
 
-1. Då öppnas dialogrutan Extrahering. Klicka på **Extract** för att starta extraheringsfasen.
+1. Då öppnas dialogrutan Extrahering. Klicka **Extract** för att starta extraheringsfasen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam14.png)
 
    >[!NOTE]
-   >Du kan skriva över mellanlagringsbehållaren under extraheringsfasen. If **Skriv över mellanlagringsbehållare** är inaktiverat kan det snabba upp extraheringar för efterföljande migreringar där innehållssökvägarna eller inkluderingsversionsinställningarna inte har ändrats. Om innehållssökvägarna eller inkluderingsversionsinställningarna har ändrats **Skriv över mellanlagringsbehållare** ska vara aktiverat.
+   >Du kan också skriva över mellanlagringsbehållaren under extraheringsfasen. If **Skriv över mellanlagringsbehållare** är inaktiverat kan extraheringen för efterföljande migreringar snabbas upp om innehållssökvägarna eller inkluderingsversionsinställningarna inte har ändrats. Om innehållssökvägarna eller inkluderingsversionsinställningarna har ändrats **Skriv över mellanlagringsbehållare** ska vara aktiverat.
 
 1. The **Extrahering** fältet visas nu **KÖRS** status för att ange att extraheringen pågår.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam15.png)
 
-   Klicka på **Visa förlopp** för att få en detaljerad bild av den pågående extraheringen.
+   Klicka **Visa förlopp** för att få en detaljerad bild av den pågående extraheringen.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam16.png)
 
-   Du kan också övervaka extraheringsfasens förlopp från Cloud Acceleration Manager genom att gå till sidan Innehållsöverföring och se den mer i detalj genom att klicka på **...** och sedan **Visa detaljer**.
+   Du kan också övervaka extraheringsfasens förlopp från Cloud Acceleration Manager genom att gå till sidan Innehållsöverföring och se den mer i detalj genom att klicka på **...** > **Visa detaljer**.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam17.png)
 
-1. När extraheringen är klar kan du granska de andra kolumnerna som **Källa** och **Banor** för information om den migreringsuppsättning som du fyllde i genom att klicka på **...** och sedan **Visa detaljer** för att se detaljer, inklusive varaktigheten för varje steg i extraktionen. Visa den här dialogrutan under extraheringen för att se hur stegen utvecklas.
+1. När extraheringen är klar granskar du de andra kolumnerna som **Källa** och **Banor** om du vill ha information om den migreringsuppsättning som du har fyllt i. Klicka **...** > **Visa detaljer** för att se detaljer, inklusive varaktigheten för varje steg i extraheringen. Visa den här dialogrutan under extraheringen så att du kan se hur stegen utvecklas.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam18b.png)
 
@@ -63,8 +63,8 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
 
 >[!NOTE]
->Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt förkopieringssteget för den första fullständiga extraheringen kan du hoppa över förkopieringen för efterföljande extraheringar i den övre delen (om den översta migreringsuppsättningsstorleken är mindre än 200 GB) eftersom det kan göra hela processen tidsödande.
->Dessutom är det viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen av den översta kopian körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
+>Efter den första innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du börjar använda Cloud Service. Om du har använt förkopieringssteget för den första fullständiga extraheringen kan du hoppa över förkopieringen för efterföljande extraheringar (om den övre migreringsuppsättningsstorleken är mindre än 200 GB). Orsaken är att det kan lägga till tid i hela processen.
+>Det är också viktigt att innehållsstrukturen i befintligt innehåll inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen görs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
 
 När extraheringen är klar kan du överföra delta-innehåll med extraheringsmetoden för uppdateringar.
 
@@ -74,7 +74,7 @@ Följ stegen nedan:
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam19.png)
 
-1. The **Extrahering av migreringsuppsättning** visas. Klicka på **Extract**.
+1. Dialogrutan **Migration Set extraction** visas. Klicka **Extract**.
 
    >[!IMPORTANT]
    >Du bör inaktivera alternativet **Overwrite staging container during extraction**.
@@ -83,4 +83,4 @@ Följ stegen nedan:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du extraherar innehåll från källan i verktyget Innehållsöverföring är du nu redo att lära dig Inmatningsprocessen i verktyget Innehållsöverföring. Se [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) om du vill lära dig hur du importerar din migreringsuppsättning från verktyget Innehållsöverföring.
+När du har lärt dig hur du extraherar innehåll från källan i verktyget Innehållsöverföring är du nu redo att lära dig Inmatningsprocessen i verktyget Innehållsöverföring. Se [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) där du kan lära dig hur du importerar dina migreringsuppsättningar från verktyget Innehållsöverföring.

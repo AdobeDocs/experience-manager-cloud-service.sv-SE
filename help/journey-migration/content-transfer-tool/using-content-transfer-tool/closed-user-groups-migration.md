@@ -1,11 +1,11 @@
 ---
 title: Migrerar stängda användargrupper
-description: På den här sidan finns de nödvändiga, speciella överväganden som krävs för att aktivera stängda användargrupper efter att innehåll har migrerats till Adobe Experience Manager as a Cloud Service.
+description: Läs mer om de speciella överväganden som krävs för att aktivera stängda användargrupper efter att du har migrerat innehåll till Adobe Experience Manager as a Cloud Service.
 hide: true
 hidefromtoc: true
-source-git-commit: 9da813d39d154e81da5b9814aa86b8318dc0bb3a
+source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >abstract="För migrering av stängda användargrupper (CUG) krävs för närvarande några kontroller och steg för att den ska fungera efter en migrering."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/closed-user-groups.html" text="Stängda användargrupper i AEM"
 
-För närvarande behöver stängda användargrupper (CUG) några ytterligare steg för att fungera i målmiljön för en migrering.  I det här dokumentet förklaras scenariot och de steg som krävs för att skydda noderna på det avsedda sättet.
+För närvarande behöver stängda användargrupper (CUG) några ytterligare steg för att fungera i målmiljön för en migrering. I det här dokumentet förklaras scenariot och de steg som krävs för att skydda noderna på det avsedda sättet.
 
 ## Migrering av grupper
 
@@ -26,24 +26,24 @@ Huvudposter (inklusive grupper) inkluderas automatiskt i en migrering till Adobe
 
 ## Stängda användargrupper under migrering
 
-För närvarande, associerade grupper *endast* med en CUG-princip (Closed User Group) *not* ingår automatiskt i intaget. Som nämnts ovan kommer de att migreras om de är kopplade till något innehåll via en ACL. Verifiering av gruppen och dess medlemmar ska göras innan publicering inleds. Huvudrapporten, som hämtas via förslagsjobbvyn, kan användas för att se om den aktuella gruppen inkluderades eller inte var eftersom den inte fanns i en åtkomstkontrollista. Om gruppen inte finns bör den skapas i Author-instansen, inklusive tillägg av lämpliga medlemmar, och aktiveras så att den finns på Publish-instansen. Detta kan göras med paket som skapats på källan.
+För närvarande, associerade grupper *endast* med en CUG-princip (Closed User Group) *not* ingår automatiskt i intaget. Som nämnts ovan migreras de om de är kopplade till något innehåll via en ACL. Verifiering av gruppen och dess medlemmar ska göras innan publicering inleds. Huvudrapporten, som hämtas via förslagsjobbvyn, kan användas för att se om den aktuella gruppen inkluderades eller inte var eftersom den inte fanns i en åtkomstkontrollista. Om gruppen inte finns bör den skapas i Author-instansen, inklusive tillägg av lämpliga medlemmar, och aktiveras så att den finns i Publish-instansen. Detta kan göras med paket som skapats på källan.
 
-Slutligen måste processerna aktiveras och egenskaper måste anges för att CUG-grupper ska kunna aktiveras. Det gör du genom att publicera om alla sidor som är kopplade till en CUG-princip. Detta kalibrerar Publish-instansen för att spåra profilerna.
+Slutligen måste processerna aktiveras och egenskaper anges för att aktivera CUG-grupper. Det gör du genom att publicera om alla sidor som är kopplade till en CUG-princip. Detta kalibrerar Publish-instansen för att spåra profilerna.
 
-Detta aktiverar CUG-principer vid publicering, och innehållet är bara tillgängligt för autentiserade användare som är medlemmar i gruppen som är kopplad till profilerna.
+Detta aktiverar CUG-profiler vid publicering, och innehållet är bara tillgängligt för autentiserade användare som är medlemmar i gruppen som är kopplad till profilerna.
 
 ## Aktiv utveckling
 
 Migreringsteamet arbetar med att få CUG-policyer att migreras och fungera automatiskt, utan några ytterligare steg efter att innehållet har importerats.
-Det är tillrådligt att inkludera CUG-funktioner i alla testprocesser innan du försöker publicera.
+Inkludera CUG-funktioner i testprocesser innan du försöker publicera.
 
 ## Sammanfattning
 
 Sammanfattningsvis är det här stegen för att aktivera CUG efter en migrering:
 
 1. Kontrollera att varje grupp som används i CUG-principer finns vid publicering efter migreringen.
-   - En grupp kan redan finnas om den ingår i ett migrerat innehålls åtkomstkontrollista.
-   - Om den inte gör det kan du använda paket för att installera den på målinstansen (eller skapa den manuellt där) och aktivera den och dess medlemmar. Kontrollera sedan att den finns vid publicering.
-1. Publicera om alla sidor som är kopplade till en CUG-princip och se till att den publiceras, till exempel genom att redigera sidan först. Det är viktigt att publicera om alla.
-   - När alla sidor har publicerats på nytt kontrollerar du funktionerna för varje CUG-skyddad sida.
+   - Det kan finnas en grupp om den ingår i det migrerade innehållets åtkomstkontrollista.
+   - Om den inte gör det kan du använda Paket för att installera den på målinstansen (eller skapa den manuellt där) och aktivera den och dess medlemmar. Kontrollera sedan att den finns vid publicering.
+1. Publicera om alla sidor som är kopplade till en CUG-princip och kontrollera att den publiceras, till exempel genom att redigera sidan först. Det är viktigt att publicera om alla.
+   - När alla sidor har publicerats om kontrollerar du att de fungerar för varje CUG-skyddad sida.
 

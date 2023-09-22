@@ -2,9 +2,9 @@
 title: Redigeringsprogram
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Användare med nödvändig behörighet kan redigera [produktionsprogram som har skapats i din organisation](creating-production-programs.md) och [sandlådeprogram som har skapats i din organisation.](creating-sandbox-programs.md) Genom att redigera ett program kan du
 
-* Lägg till Sites-lösning i ett befintligt program med Assets och vice versa.
+* Lägg till Sites-lösning i ett befintligt program med Assets och omvänt.
 * Ta bort platser eller resurser från ett befintligt program med både platser och resurser.
-* Lägg till ett andra, oanvänt lösningsberättigande till antingen ett befintligt program eller som ett nytt program.
+* Lägg till ett andra, oanvänt lösningsberättigande, antingen till ett befintligt program eller som ett nytt program.
 * Ta bort sandlådeprogram.
 
 ## Behörigheter {#permissions}
@@ -24,11 +24,9 @@ Du måste vara medlem i **Företagsägare** roll för att redigera program eller
 
 ## Redigera ett program {#editing}
 
-Följ de här stegen för att redigera ett program.
-
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka på det program du vill redigera för att visa information om det.
+1. Klicka på det program som du vill redigera för att visa information om det.
 
 1. Klicka på programnamnet längst upp till vänster på sidan och välj **Redigera program**.
 
@@ -44,7 +42,7 @@ Följ de här stegen för att redigera ett program.
 
    ![Välj lösningar](assets/edit-prg.png)
 
-1. Klicka på avrivningen före lösningsnamnen för att visa valfria tillägg, som att välja **Handel** tilläggsalternativ under **Webbplatser**.
+1. Klicka på nedtryckningen före lösningsnamnet för att visa valfria tillägg, som att välja **Handel** tilläggsalternativ under **Webbplatser**.
 
    ![Redigera tillägg](assets/edit-program-add-on.png)
 
@@ -52,10 +50,10 @@ Följ de här stegen för att redigera ett program.
 
    ![Redigera inställningar för publicering](assets/edit-program-go-live.png)
 
-   * Detta datum är endast avsett som information och aktiverar Go Live-widgeten på programöversiktssidan för att tillhandahålla länkar till AEM as a Cloud Service best practice-dokumentation i rätt tid för att anpassa sig till den resa som leder till en lyckad och smidig Go Live-upplevelse.
+   * Detta datum är endast avsett som information. Den aktiverar Go Live-widgeten på programöversiktssidan. Det innehåller i sin tur länkar till Adobe Experience Manager (AEM) as a Cloud Service best practice-dokumentation för att passa in i kundresan, vilket leder till en lyckad Go Live-upplevelse.
    * Den här fliken är inte tillgänglig för sandlådeprogram.
 
-1. Klicka på **Uppdatera** för att spara ändringarna i programmet.
+1. Klicka **Uppdatera** för att spara ändringarna i programmet.
 
 Varje gång ett program redigeras, som att lägga till eller ta bort en lösning eller ett tillägg, börjar ändringarna gälla efter nästa distribution.
 
@@ -63,7 +61,7 @@ Om ditt produktionsprogram hade förbättrat säkerheten aktiverat, ytterligare 
 
 ![Förbättrat skydd är aktivt för ett program](assets/edit-program-enhanced.png)
 
-Den här inställningen kan inte ändras när programmet har skapats. Mer information om alternativet Förbättrat skydd finns i [Skapa produktionsprogram](creating-production-programs.md) -dokument.
+Du kan inte redigera den här inställningen efter att programmet har skapats. Mer information om alternativet Förbättrat skydd finns i [Skapa produktionsprogram](creating-production-programs.md).
 
 ## Tar bort sandlådeprogram {#delete-sandbox-program}
 
@@ -73,13 +71,13 @@ Om du tar bort ett sandlådeprogram tas alla miljöer och rörledningar som är 
 >
 >Användare med **Företagsägare** eller **Distributionshanteraren** roller kan också ta bort sin produktions- och scenmiljö i stället för hela sandlådeprogrammet.
 
-Följ de här stegen för att ta bort ett sandlådeprogram.
+Så här tar du bort ett sandlådeprogram.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka på det program du vill redigera för att visa information om det.
+1. Klicka på det program som du vill redigera för att visa information om det.
 
-1. Klicka på programnamnet längst upp till vänster på sidan och välj **Ta bort program**.
+1. Klicka på programnamnet uppe till vänster på sidan och välj **Ta bort program**.
 
    ![Ta bort programalternativ](assets/delete-sandbox1.png)
 

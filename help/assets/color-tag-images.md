@@ -1,8 +1,8 @@
 ---
 title: Färgtaggar för bilder
-description: Med Experience Manager Assets kan du skilja mellan färger i en bild och använda dem som taggar automatiskt. Du kan sedan använda dessa taggar för att söka efter och filtrera bilder.
+description: Med Adobe Experience Manager Assets kan du skilja mellan färger i en bild och använda dem som taggar automatiskt. Du kan sedan använda dessa taggar för att söka efter och filtrera bilder.
 exl-id: 3afa949b-ea1b-4b8e-ac94-06566e2c7147
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 57d6b50ef5256bf6e8fce84100eed4690b77cb87
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ![Banderoll för färgtaggning](assets/banner-image.png)
 
-Experience Manager Assets använder Adobe Sensei AI-funktioner för att skilja mellan färger i en bild och tillämpa dem som taggar automatiskt vid intag. Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition.
+Adobe Experience Manager (AEM) Assets använder Adobe Sensei AI-funktioner för att skilja mellan färger i en bild och använda dem som taggar automatiskt vid intag. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
 
 Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare. Experience Manager Assets använder märkorden baserat på färgmängden i en bild. Du kan också konfigurera visningsformatet för en färgtagg.
 
@@ -25,12 +25,12 @@ I följande bild visas de åtgärder du utför för att konfigurera och hantera 
 
 | Filformat | Tillägg | MIME-typ | Indatafärgrymd | Största tillåtna källfilsstorlek | Maximal filstorlek som stöds |
 |---|---|---|---|---|---|
-| JPEG | .jpg, .jpeg | image/jpeg | sRGB | 15GB | 20000px X 20000px |
-| PNG | .png | bild/png | sRGB | 15GB | 20000px X 20000px |
-| TIFF | .tif, .tiff | bild/tiff | sRGB | 4 GB (begränsat av formatspecifikationer | 20000px X 20000px |
-| PSD | .psd | image/vnd.adobe.photoshop | sRGB | 2 GB (begränsat av formatspecifikationer) | 20000px X 20000px |
-| GIF | .gif | image/gif | sRGB | 15GB | 20000px X 20000px |
-| BMP | .bmp | image/bmp | sRGB | 4 GB (begränsat av formatspecifikationer) | 20000px X 20000px |
+| JPEG | .jpg och .jpeg | image/jpeg | sRGB | 15 GB | 2 000 × 2 000 pixlar |
+| PNG | .png | bild/png | sRGB | 15 GB | 2 000 × 2 000 pixlar |
+| TIFF | .tif och .tiff | bild/tiff | sRGB | 4 GB (begränsat av formatspecifikationer) | 2 000 × 2 000 pixlar |
+| PSD | .psd | image/vnd.adobe.photoshop | sRGB | 2 GB (begränsat av formatspecifikationer) | 2 000 × 2 000 pixlar |
+| GIF | .gif | image/gif | sRGB | 15 GB | 2 000 × 2 000 pixlar |
+| BMP | .bmp | image/bmp | sRGB | 4 GB (begränsat av formatspecifikationer) | 2 000 × 2 000 pixlar |
 
 ## Hantera egenskaper för färgtaggning {#manage-color-tagging-properties}
 
@@ -42,15 +42,15 @@ Så här hanterar du färgtaggningsegenskaperna för bilder:
 
 1. Ange ett visningsformat för färgtaggen i **[!UICONTROL Display Format]** fält. Möjliga alternativ är färgnamn, RGB eller HEX.
 
-1. Ange antalet färger som ska taggas för bilderna i **[!UICONTROL Limit]** fält. Dessa färger visas när du visar en bilds egenskaper.  I det här fältet kan du definiera ett tal mellan 1 och 40. Standardvärdet för det här fältet är tio färger.
+1. Ange antalet färger som du vill tagga för bilderna i **[!UICONTROL Limit]** fält. Dessa färger visas när du visar en bilds egenskaper. I det här fältet kan du definiera ett tal mellan 1 och 40. Standardvärdet för det här fältet är tio färger.
 
-1. Ange den lägsta färgtäckningsprocenten för att inkludera en färgtagg i sökresultaten i **[!UICONTROL Coverage/Dominance Threshold %]** fält. Om den röda färgmängden i en bild till exempel är tio procent och du anger nio procent i det här fältet, inkluderas bilden när du söker efter bilder med röd färg. Om täckningen för den röda färgen i en bild är tio procent och du anger 11 procent i det här fältet tas bilden inte med när du söker efter bilder med röd färg.
+1. Ange den lägsta färgtäckningsprocenten som ska inkluderas i sökresultaten i **[!UICONTROL Coverage/Dominance Threshold %]** fält. Om den röda färgmängden i en bild till exempel är tio procent och du anger nio procent i det här fältet, inkluderas bilden när du söker efter bilder med röd färg. Om täckningen för den röda färgen i en bild är tio procent och du anger 11 procent i det här fältet tas bilden inte med när du söker efter bilder med röd färg.
 
-   I det här fältet kan du ange valfritt tal mellan fem och hundra. Standardvärdet är 11.
+   I det här fältet kan du ange valfritt tal mellan 5 och 100. Standardvärdet är 1.
 
    >[!NOTE]
    >
-   >Adobe rekommenderar att du använder ett värde som ligger nära standardvärdet i det här fältet. Om du anger ett högt siffervärde för det här fältet (till exempel större än 25) kan det returnera väldigt få sökresultat. På samma sätt kan ett lågt siffervärde (till exempel mindre än 6) returnera för många sökresultat, vilket kanske inte är användbart.
+   >Adobe rekommenderar att du använder ett värde som ligger nära standardvärdet i det här fältet. Om du anger ett högt siffervärde för det här fältet (till exempel större än 25) kan det returnera få sökresultat. På samma sätt kan ett lågt siffervärde (till exempel mindre än 6) returnera för många sökresultat, vilket kanske inte är användbart.
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -78,13 +78,13 @@ Så här inaktiverar du färgtaggning på mappnivå:
 
    ![Inställningar för färgtaggning](assets/color-tags-folder.png)
 
-## Konfigurera metadatamatchemat för att lägga till komponenten för smarta färgtaggar {#configure-metadata-schema}
+## Konfigurera metadatamatchemat för att lägga till en komponent för smarta färgtaggar {#configure-metadata-schema}
 
 Metadata-scheman innehåller specifika fält för specifik information som ska fyllas i. Den innehåller även layoutinformation för att visa metadatafält på ett användarvänligt sätt. Metadataegenskaperna innehåller titel, beskrivning, MIME-typer, taggar med mera. Du kan använda [!UICONTROL Metadata Schema Forms] redigeraren för att ändra befintliga scheman eller lägga till anpassade metadatamatcheman.
 
 >[!NOTE]
 >
->Fältet för smart färgtagg är tillgängligt i standardmetadataschemat. Om du använder ett anpassat metadatamatchema konfigurerar du schemat så att fältet för smarta färgtaggar läggs till.
+>Fältet Smart Color Tag är tillgängligt i standardmetadataschemat. Om du använder ett anpassat metadatamatchema konfigurerar du schemat så att ett smart färgtaggfält läggs till.
 
 Så här lägger du till komponenten Smarta färgtaggar i Formulärredigeraren för metadataschning:
 
@@ -96,7 +96,7 @@ Så här lägger du till komponenten Smarta färgtaggar i Formulärredigeraren f
 
 1. Klicka på **[!UICONTROL Smart Color Tag Field]** i **[!UICONTROL Metadata Schema Form Editor]**.
 
-1. Ange ett lämpligt värde i dialogrutan **[!UICONTROL Field Label]** i **[!UICONTROL Settings]**  -fliken.
+1. Ange ett lämpligt värde i dialogrutan **[!UICONTROL Field Label]** fältet i **[!UICONTROL Settings]**  -fliken.
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -104,21 +104,21 @@ Så här lägger du till komponenten Smarta färgtaggar i Formulärredigeraren f
 
 ## Färgtaggar för befintliga bilder i DAM {#color-tags-existing-images}
 
-De bilder som redan finns i DAM färgläggs inte automatiskt. Du måste [!UICONTROL Reprocess Assets] manuellt för att generera färgtaggar för dem.
+De befintliga bilderna i DAM färgläggs inte automatiskt. [!UICONTROL Reprocess Assets] manuellt för att generera färgtaggar för dem.
 
-Så här färgar du bilder eller mappar (inklusive undermappar) med resurser som redan finns i resurskatalogen:
+Så här färgar du bilder eller mappar (inklusive undermappar) med resurser som finns i resurskatalogen:
 
 1. Välj [!DNL Adobe Experience Manager] logotypen och välj sedan resurser från [!UICONTROL Navigation] sida.
 
-1. Välj [!UICONTROL Files] för att visa gränssnittet Resurser.
+1. Välj [!UICONTROL Files].
 
-1. Navigera till mappen som du vill använda färgtaggar på.
+1. I Assets-gränssnittet navigerar du till den mapp som du vill använda färgtaggar på.
 
 1. Markera hela mappen eller specifika bilder.
 
 1. Välj ![Ikon för att bearbeta resurser](assets/do-not-localize/reprocess-assets-icon.png) [!UICONTROL Reprocess Assets] -ikonen och välj [!UICONTROL Full Process] alternativ.
 
-När processen är klar går du till [!UICONTROL Properties] sida med alla bilder i mappen. De automatiskt tillagda taggarna visas i [!UICONTROL Smart Color Tags] avsnitt i [!UICONTROL Basic] -fliken.
+När processen är klar går du till [!UICONTROL Properties] sida med alla bilder i mappen. De automatiskt tillagda taggarna visas i [!UICONTROL Smart Color Tags] i [!UICONTROL Basic] -fliken.
 
 
 ## Visa smarta färgtaggar för bilder {#view-color-tags}
@@ -133,11 +133,11 @@ Så här visar du smarta färgtaggar för bilder:
 
    ![Visa färgtaggar](assets/view-color-tags.png)
 
-   Håll muspekaren över en färgtagg för att visa **[!UICONTROL Coverage/Dominance Threshold %]** av en färg i en bild.
+   Håll muspekaren över en färgtagg så att du kan visa **[!UICONTROL Coverage/Dominance Threshold %]** av en färg i en bild.
 
 ## Konfigurera AEM Assets-färgpredikat {#configure-search-predicate}
 
-Du kan konfigurera sökfilter för bilder. Du kan sedan basera sökvillkoren på en viss färg för att filtrera resultaten.
+Du kan konfigurera ett sökfilter för bilder. Du kan sedan basera sökvillkoren på en viss färg för att filtrera resultaten.
 
 >[!NOTE]
 >
@@ -145,7 +145,7 @@ Du kan konfigurera sökfilter för bilder. Du kan sedan basera sökvillkoren på
 
 Om du vill konfigurera sökfiltret skapar du ett predikat för resursfärg med hjälp av Resursens administratörssökspår.
 
-Så här konfigurerar du sökfiltret:
+Så här konfigurerar du sökfilter:
 
 1. Navigera till **[!UICONTROL Tools > General > Search Forms]**.
 
@@ -153,7 +153,7 @@ Så här konfigurerar du sökfiltret:
 
 1. Dra **[!UICONTROL Asset Color Predicate]** från **[!UICONTROL Select Predicate]** till **[!UICONTROL Search Form Editor]**.
 
-1. Ange ett lämpligt värde i dialogrutan **[!UICONTROL Field Label]** i **[!UICONTROL Settings]**  -fliken.
+1. Ange ett lämpligt värde i dialogrutan **[!UICONTROL Field Label]** fältet i **[!UICONTROL Settings]**  -fliken.
 
 1. Klicka **[!UICONTROL Done]** för att spara inställningarna.
 
@@ -163,7 +163,7 @@ Så här konfigurerar du sökfiltret:
 
 >[!VIDEO](https://video.tv.adobe.com/v/340761)
 
-När alla egenskaper för färgtaggning har konfigurerats och [konfigurera Assets-färgpredikat](#search-images-based-on-colors)kan du söka efter bilder baserat på en färg som ett filter.
+När alla egenskaper för färgtaggning har konfigurerats och [konfigurera Assets-färgpredikatet](#search-images-based-on-colors)kan du söka efter bilder baserat på en färg som ett filter.
 
 Så här söker du efter bilder baserat på färger:
 
@@ -180,7 +180,7 @@ Så här söker du efter bilder baserat på färger:
 
    Du kan filtrera bilder baserat på valet av en färg. De bilder som har den valda färgen som en av de smarta färgtaggarna och ovanför [Tröskelvärde för täckning/dominans %](#manage-color-tagging-settings) visas i den högra rutan.
 
-1. Klicka på x i sökfältet för att ta bort filtret.
+1. Rensa filtret genom att klicka på X i sökfältet.
 
 **Se även**
 
