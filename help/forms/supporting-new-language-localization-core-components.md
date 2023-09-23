@@ -1,9 +1,9 @@
 ---
-title: Hur lägger man till stöd för nya språk i ett adaptivt formulär baserat på kärnkomponenterna?
+title: Hur lägger man till stöd för nya språkområden i ett adaptivt formulär baserat på kärnkomponenter?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
-source-git-commit: 4e48e49fea66fa24052632138a1b305208690d06
+source-git-commit: 911b377edd4eb0c8793d500c26ca44a44c69e167
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1254'
 ht-degree: 0%
 
 ---
@@ -163,25 +163,6 @@ Utför följande steg för att förhandsgranska en anpassad version med nyligen 
 1. Välj ett anpassat formulär och klicka på **Förhandsgranska som HTML**.
 1. Lägg till `&afAcceptLang=<locale-name>` i URL:en för ett adaptivt formulär.
 1. Uppdatera sidan och Adaptiv form renderas i en angiven språkinställning.
-
-Det finns två metoder för att identifiera språkområdet i en adaptiv form. När ett anpassat formulär återges identifieras det begärda språket av:
-
-* Hämtar `[local]` väljaren i den anpassningsbara formulärets URL. URL-formatet är `http:/[AEM Forms Server URL]/content/forms/af/[afName].[locale].html?wcmmode=disabled`. Använda `[local]` -väljaren tillåter cachelagring av ett adaptivt formulär.
-
-* Hämtar följande parametrar i listordningen:
-
-   * Begäranparameter `afAcceptLang`
-Om du vill åsidosätta webbläsarens språkområde för användare kan du skicka `afAcceptLang` begär parameter för att tvinga språkområdet. Följande URL-adress tvingar till exempel formuläret att återges på kanadensisk-fransk plats:
-     `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ca-fr`
-
-   * Webbläsarens språkområdesuppsättning för användaren, som anges i begäran med `Accept-Language` header.
-
-Om det inte finns något klientbibliotek för det begärda språket söker programmet efter språkkoden i klientbiblioteket. Om det begärda språket till exempel är `en_ZA` (South Africa English) och klientbiblioteket för `en_ZA` finns inte, det adaptiva formuläret använder klientbiblioteket `en` (Engelska), om det finns. Om det inte finns någon av dem används lexikonet för `en` språkinställning.
-
-När språkinställningen har identifierats väljer adaptiv form den formulärspecifika ordlistan. Om det inte går att hitta den formulärspecifika ordlistan för den begärda språkversionen används ordlistan för det språk som Adaptiv form har skapats på.
-
-Om det inte finns någon tillgänglig språkinformation visas det adaptiva formuläret på sitt ursprungliga språk, det språk som användes vid formulärutvecklingen.
-
 
 ## De bästa sätten att stödja ny lokalisering {#best-practices}
 
