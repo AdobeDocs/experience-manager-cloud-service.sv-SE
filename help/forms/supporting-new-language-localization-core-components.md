@@ -1,9 +1,9 @@
 ---
 title: Hur lägger man till stöd för nya språkområden i ett adaptivt formulär baserat på kärnkomponenter?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
-source-git-commit: 911b377edd4eb0c8793d500c26ca44a44c69e167
+source-git-commit: 0d2e353208e4e59296d551ca5270be06e574f7df
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,17 @@ AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (
 
 ## Hur väljs språkinställningen för ett anpassat formulär?
 
-Innan du börjar med att lägga till nya språk för Adaptiv Forms måste du skapa en förståelse för hur ett språkområde väljs för ett adaptivt formulär. Det finns två metoder för att identifiera och välja språkområde för ett adaptivt formulär när det återges:
+Innan du börjar med att lägga till en språkinställning för Adaptiv Forms måste du skapa en förståelse för hur en språkinställning väljs för en adaptiv form. Det finns två metoder för att identifiera och välja språkområde för ett adaptivt formulär när det återges:
 
-* **Använda [locale] Väljaren i URL**: Vid återgivning av ett adaptivt formulär identifierar systemet det begärda språkområdet genom att granska [locale] -väljaren i det adaptiva formulärets URL. URL:en har följande format: http:/[AEM Forms Server-URL]/content/forms/af/[afName].[locale].html?wcmmode=disabled. Användning av [locale] -väljaren gör det möjligt att cachelagra det adaptiva formuläret.
+* **Använda `locale` Väljaren i URL**: Vid återgivning av ett adaptivt formulär identifierar systemet det begärda språkområdet genom att granska [locale] -väljaren i det adaptiva formulärets URL. URL:en har följande format: http:/[AEM Forms Server-URL]/content/forms/af/[afName].[locale].html?wcmmode=disabled. Användning av [locale] -väljaren gör det möjligt att cachelagra det adaptiva formuläret. URL:en `www.example.com/content/forms/af/contact-us.hi.html?wcmmmode=disabled` återger formuläret på hindi-språk.
 
 * Hämtar parametrarna i den ordning som anges nedan:
 
-   * **Begäranparameter`afAcceptLang`**: Om du vill åsidosätta användarens språkområde i webbläsaren kan du skicka begäran-parametern afAcceptLang. Den här URL:en tvingar till exempel formulärets rendering på kanadensisk franska: `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ca-fr`.
+   * **Använda `afAcceptLang`request, parameter**: Om du vill åsidosätta användarens språkområde i webbläsaren kan du skicka begäran-parametern afAcceptLang. Till exempel `https://'[server]:[port]'/<contextPath>/<formFolder>/<formName>.html?wcmmode=disabled&afAcceptLang=ca-fr` URL tvingar AEM Forms Server att återge formuläret på kanadensisk franska.
 
-   * **Webbläsarens språkområde (sidhuvud för acceptera språk)**: Systemet hanterar också användarens språkområde i webbläsaren, som anges i begäran med `Accept-Language` header.
+   * **Använda webbläsarens språkområde (sidhuvud för acceptera språk)**: Systemet hanterar också användarens språkområde i webbläsaren, som anges i begäran med `Accept-Language` header.
 
-  Om det inte finns något klientbibliotek för det begärda språket kontrollerar systemet om det finns ett klientbibliotek för språkkoden i språket. Om det begärda språket till exempel är `en_ZA` (sydafrikansk engelska) och det finns inget klientbibliotek för `en_ZA`används klientbiblioteket för en (engelska) om tillgängligt. Om ingen av dem hittas, används lexikonet för `en` språkinställning.
+  Om ett klientbibliotek (processen att skapa och använda biblioteket beskrivs senare i den här artikeln) för den begärda språkinställningen inte är tillgänglig kontrollerar systemet om det finns ett klientbibliotek för språkkoden i språkinställningen. Om det begärda språket till exempel är `en_ZA` (sydafrikansk engelska) och det finns inget klientbibliotek för `en_ZA`används klientbiblioteket för en (engelska) om tillgängligt. Om ingen av dem hittas, används lexikonet för `en` språkinställning.
 
   När språkområdet har identifierats väljer det adaptiva formuläret motsvarande formulärspecifika ordlista. Om det inte går att hitta ordlistan för det begärda språket använder den som standard ordlistan på det språk som det anpassade formuläret skapades på.
 
@@ -39,19 +39,21 @@ Innan du börjar med att lägga till nya språk för Adaptiv Forms måste du ska
 
 ## Förutsättningar {#prerequistes}
 
-Innan du börjar lägga till stöd för ett nytt språk
+Innan du börjar lägga till en språkinställning:
 
-* Installera en vanlig textredigerare (IDE) för enklare redigering. Exemplen i det här dokumentet är baserade på Microsoft® Visual Studio Code.
+* Installera en vanlig textredigerare (IDE) för enklare redigering. Exemplen i det här dokumentet är baserade på [Microsoft® Visual Studio Code](https://code.visualstudio.com/download).
 * Installera en version av [Git](https://git-scm.com), om det inte finns på din dator.
 * Klona [Adaptiva Forms Core-komponenter](https://github.com/adobe/aem-core-forms-components) databas. Så här klonar du databasen:
-   1. Öppna kommandoraden eller terminalfönstret och navigera till en plats där databasen ska lagras. Till exempel `/adaptive-forms-core-components`
+   1. Öppna kommandoraden eller terminalfönstret och navigera till en plats där databasen ska lagras. Till exempel, `/adaptive-forms-core-components`
    1. Kör följande kommando för att klona databasen:
 
       ```SHELL
           git clone https://github.com/adobe/aem-core-forms-components.git
       ```
 
-  Databasen innehåller ett klientbibliotek som behövs för att lägga till en språkinställning. I resten av artikeln refereras mappen som, [Adaptiv Forms Core Components-databas].
+  Databasen innehåller ett klientbibliotek som behövs för att lägga till en språkinställning.
+
+  Databasen klonas till `aem-core-forms-components` på datorn. I resten av artikeln kallas mappen som, [Adaptiv Forms Core Components-databas].
 
 
 ## Lägga till en språkinställning {#add-localization-support-for-non-supported-locales}
@@ -169,7 +171,13 @@ Utför följande steg för att förhandsgranska en anpassad version med nyligen 
 * Adobe rekommenderar att du skapar ett översättningsprojekt när du har skapat ett adaptivt formulär.
 
 * När nya fält läggs till i ett befintligt adaptivt formulär:
-   * **För maskinöversättning**: Återskapa ordlistan och kör översättningsprojektet. Fält som läggs till i ett adaptivt formulär när du har skapat ett översättningsprojekt förblir oöversatta.
-   * **För mänsklig översättning**: Exportera ordlistan via `[server:port]/libs/cq/i18n/gui/translator.html`. Uppdatera ordlistan för de nya fälten och överför den.
+   * **För maskinöversättning**: Återskapa ordlistan och [köra översättningsprojektet](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md). Fält som läggs till i ett adaptivt formulär när du har skapat ett översättningsprojekt förblir oöversatta.
+   * **För mänsklig översättning**: Exportera ordlistan med användargränssnittet på `[AEM Forms Server]/libs/cq/i18n/gui/translator.html`. Uppdatera ordlistan för de nya fälten och överför den.
+
+## Se mer
+
+* [Använd maskinöversättning eller mänsklig översättning för att översätta en grundläggande komponentbaserad adaptiv form](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
+* [Generera urkunder för Adaptive Forms](/help/forms/generate-document-of-record-core-components.md)
+* [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
 
 
