@@ -2,7 +2,7 @@
 title: Översikt över Content Transfer Tool
 description: Lär dig hur du använder verktyget Innehållsöverföring för att överföra innehåll från en lokal AEM till AEM as a Cloud Service
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: 9c45a46bc50625301529d5433c78fc9c706f8071
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 31%
@@ -47,7 +47,7 @@ Det finns två faser som är associerade med innehållsöverföring:
 
 En migreringsuppsättning har följande attribut:
 
-* Med den nya versionen kan du skapa maximalt fem migreringsuppsättningar i ett projekt som skapats i Cloud Acceleration Manager.
+* Med den nya versionen kan du skapa maximalt 20 migreringsuppsättningar i ett projekt som skapats i Cloud Acceleration Manager.
 * Varje migreringsuppsättning ska ha ett unikt namn.
 
 Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen.
