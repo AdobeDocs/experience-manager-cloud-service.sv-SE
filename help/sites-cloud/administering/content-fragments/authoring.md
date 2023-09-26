@@ -3,9 +3,9 @@ title: Skapa innehållsfragment
 description: Lär dig hur du skapar innehåll för dina innehållsfragment och sedan skapar varianter av det innehållet utifrån syfte. Detta ger större flexibilitet för både headless-leverans och redigering av sidor.
 feature: Content Fragments
 role: User, Developer, Architect
-source-git-commit: 3d20f4bca566edcdb5f13eab581c33b7f3cf286d
+source-git-commit: 2fa22bf2feb6b8697877b345bc29821e30b1c6a1
 workflow-type: tm+mt
-source-wordcount: '2208'
+source-wordcount: '2227'
 ht-degree: 0%
 
 ---
@@ -484,7 +484,7 @@ The **Fält** På panelen visas alla fält i innehållsfragmentet. Ikonen indike
    <td><p> <img src="assets/cf-authoring-json-icon.png"> </p></td>
   </tr>
   <tr>
-   <td><p><b>Platshållare för flik</b></p><p>Även om den inte representeras av en faktisk ikon, visas en <b>Platshållare för flik</b> visas i den vänstra panelen och i den centrala panelen.</p> </td>
+   <td><p><b>Platshållare för flik</b></p><p>Även om den inte representeras av en faktisk ikon, visas en <b>Platshållare för flik</b> visas i den vänstra panelen. <br>Den visas också i den centrala panelen, antingen vågrätt som visas, eller i en listruta (när det finns för många för att visa vågrätt).</p> </td>
    <td><p> <img src="assets/cf-authoring-tab-icon.png"> </p></td>
   </tr>
  </tbody>
