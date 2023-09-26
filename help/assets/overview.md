@@ -5,9 +5,9 @@ contentOwner: AK
 feature: Asset Management
 role: User,Leader,Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: d663c258a83473ec8d3c68bc5683955003d889c7
+source-git-commit: a4601d95076d37ed5df79b7c9dabb8beab8353d0
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '825'
 ht-degree: 1%
 
 ---
@@ -52,6 +52,12 @@ DAM-bibliotek, utvecklare och superanvändare kan fortsätta att använda admini
 ![add-tags](assets/newui-overview.svg)
 
 Mer information om hur du kommer åt resursvyn och vissa av de förenklingar som den erbjuder via administratörsvyn finns i [Introduktion till resursvyn](/help/assets/assets-view-introduction.md).
+
+## Integrering med dokumentbaserad framtagning för Edge Delivery Services {#integrate-doc-authoring-edge-and-assets}
+
+Med Edge Delivery kan ni skapa snabba, engagerande webbplatser där författare snabbt kan uppdatera och publicera innehåll och nya webbplatser snabbt kan lanseras.
+
+Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services för att göra det möjligt för webbredaktörer att använda bilder som finns i AEM Assets-arkiv när de skriver dokument i Microsoft Word eller Google Docs. Mer information finns i [Integrera AEM Assets med dokumentbaserad framtagning](/help/edge/using.md#integrate-assets-edge).
 
 ## Nya resurser {#whats-new-assets}
 
