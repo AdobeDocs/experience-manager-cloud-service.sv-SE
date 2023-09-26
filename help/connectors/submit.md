@@ -1,27 +1,26 @@
 ---
 title: Skicka en AEM-anslutning
-description: Lär dig hur du refererar och distribuerar anslutningar på AEM as a Cloud Service.
+description: Lär dig hur du refererar och distribuerar anslutningar på rätt sätt i Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: 9be1f00e-3666-411c-9001-c047e90b6ee5
-source-git-commit: 5482e94bc1a2e7524eb699f2ae766ba40c138e91
+source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 9%
+source-wordcount: '310'
+ht-degree: 2%
 
 ---
 
-Skicka en AEM-anslutning
-===========================
+# Skicka en AEM-anslutning
 
-Nedan finns användbar information om hur du skickar in AEM-kopplingar och den bör läsas tillsammans med artiklarna om [implementering](implement.md) och [underhåll](maintain.md) av kopplingar.
+Nedan finns användbar information om hur du skickar Adobe Experience Manager (AEM) Connectors. Informationen ska läsas med artiklar om [implementera](implement.md) och  [underhålla](maintain.md) kontakter.
 
-AEM Connectors finns listade på [Adobe Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud).
+AEM Connectors finns listade på [Adobe Exchange](https://partners.adobe.com/technologyprogram/experiencecloud.html).
 
 I tidigare AEM lösningar [Pakethanteraren](/help/implementing/developing/tools/package-manager.md) användes för att installera anslutningar på olika AEM instanser. Men med AEM as a Cloud Service driftsätts anslutningar under CI/CD-processen i Cloud Manager. För att anslutningarna ska kunna distribueras måste det finnas referenser till anslutningarna i maven-projektets pom.xml.
 
 Det finns olika alternativ för hur paketen kan inkluderas i ett projekt:
 
 1. Partnerns offentliga arkiv - en partner skulle vara värd för innehållspaketet i ett offentligt tillgängligt arkiv
-1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Se [lösenordsskyddade maven-databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories) för instruktioner.
+1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Se [lösenordsskyddade maven-databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=en#password-protected-maven-repositories) för instruktioner.
 1. Paket med sammankopplade artefakter - i det här fallet inkluderas kopplingspaketet lokalt i kundens maven-projekt.
 
 Oavsett var de finns måste paket refereras som beroenden i pom.xml, vilket tillhandahålls av leverantören.
@@ -37,7 +36,7 @@ Oavsett var de finns måste paket refereras som beroenden i pom.xml, vilket till
 </dependency>
 ```
 
-Om ISV-partnern är värd för anslutningen på en Internet-åtkomlig (till exempel Cloud Manager-tillgänglig) maven-databas, bör ISV tillhandahålla den databaskonfiguration där pom.xml kan placeras, så att anslutningsberoendena (ovan) kan lösas vid byggtillfället (både lokalt och av Cloud Manager).
+Om ISV-partnern är värd för anslutningen på en flerfaldig lagringsplats som är tillgänglig via Internet (t.ex. Cloud Manager), bör ISV-partnern tillhandahålla den databaskonfiguration där `pom.xml` kan placeras. Orsaken är att anslutningsberoendena (ovan) kan lösas vid byggtillfället, både lokalt och av Cloud Manager.
 
 ```xml
 <repository>
@@ -54,4 +53,4 @@ Om ISV-partnern är värd för anslutningen på en Internet-åtkomlig (till exem
 </repository>
 ```
 
-Om ISV-partnern väljer att distribuera anslutningsprogrammet som hämtningsbara filer, ska ISV-partnern ge instruktioner om hur filerna kan distribueras till en lokal filsystemmaven-databas som måste checkas in i Git som en del av AEM, så att Cloud Manager kan lösa dessa beroenden.
+Om ISV-partnern väljer att distribuera anslutningsprogrammet som hämtningsbara filer bör ISV-partnern ge instruktioner. Instruktionen bör beskriva hur filerna kan distribueras till en lokal filsystemdatabas som måste checkas in i Git som en del av AEM. Detta garanterar att Cloud Manager kan lösa dessa beroenden.

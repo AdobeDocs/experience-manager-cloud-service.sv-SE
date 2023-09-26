@@ -1,17 +1,17 @@
 ---
 title: Konfigurerar din kontomiljö
-description: AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön
+description: Adobe Experience Manager (AEM) ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 exl-id: 1b948f0b-85b9-478a-8b7e-61495c1d57b6
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '495'
 ht-degree: 4%
 
 ---
 
 # Konfigurerar din kontomiljö {#configuring-your-account-environment}
 
-AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
+Adobe Experience Manager (AEM) ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
 Med alternativet [Användare](#user-settings) i [sidhuvudet](/help/sites-cloud/authoring/getting-started/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#my-preferences) kan du ändra dina användaralternativ.
 
@@ -24,9 +24,9 @@ The **Användare** dialogrutan ger dig tillgång till:
 * Personifiera som
    * Med funktionen Personifiera som kan en användare arbeta för en annan användares räkning. <!--With the [Impersonate as](/help/sites-administering/security.md#impersonating-another-user) functionality, a user can work on behalf of another user.-->
 * Profil
-   * Ger en praktisk länk till dina användarinställningar <!--Offers a convenient link to your [user settings](/help/sites-administering/security.md))-->
+   * Det är en praktisk länk till dina användarinställningar <!--Offers a convenient link to your [user settings](/help/sites-administering/security.md))-->
 * [Mina inställningar](#my-preferences)
-   * Ange olika inställningar som är unika för din användare
+   * Ange olika inställningar som är unika för användaren
 
 ![Användarinställningar](/help/sites-cloud/authoring/assets/user-settings.png)
 
@@ -34,7 +34,7 @@ The **Användare** dialogrutan ger dig tillgång till:
 
 The **Mina inställningar** öppnas via [Användare](#user-settings) i sidhuvudet.
 
-Varje användare kan ange vissa egenskaper för sig själv.
+Varje användare kan ange sina egna önskade egenskaper.
 
 ![Mina inställningar](/help/sites-cloud/authoring/assets/user-preferences.png)
 
@@ -44,7 +44,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Fönsterhantering**
 
-  Detta definierar beteendet för att öppna fönster. Välj något av följande:
+  Detta definierar beteendet för att öppna fönster. Välj antingen:
 
    * **Flera fönster** (Standard)
 
@@ -56,40 +56,40 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Visa skrivbordsåtgärder för Assets**
 
-  Det här alternativet kräver AEM datorprogram.
+  Det här alternativet kräver att AEM datorprogram används.
 
 * **Anteckningsfärg**
 
   Detta definierar den standardfärg som används när anteckningar görs.
 
-   * Klicka på färgblocket för att öppna väljaren för färgrutor och markera en färg.
+   * Klicka på färgblocket så att du kan öppna väljaren för färgruta och välja en färg.
    * Du kan också ange hexkoden för önskad färg i fältet.
 
 * **Relativ datumpresentation**
 
-  För att förbättra läsbarheten kommer AEM att återge datum inom de senaste sju dagarna som relativa datum (till exempel för tre dagar sedan) och äldre datum som exakta datum (till exempel den 20 mars 2017).
+  För att förbättra läsbarheten återges datum inom de senaste sju dagarna som relativa datum (till exempel för tre dagar sedan) och äldre datum som exakta datum (till exempel den 20 mars 2017).
 
   Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
 
    * **Visa alltid exakt datum**: Det exakta datumet visas alltid (aldrig ett relativt datum).
    * **1 dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
-   * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, i annat fall visas ett exakt datum.
+   * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, annars visas ett exakt datum.
    * **1 månad**: Det relativa datumet visas för datum inom en månad, annars visas ett exakt datum.
    * **1 år**: Det relativa datumet visas för datum inom ett år, annars visas ett exakt datum.
    * **Visa alltid relativt datum**: Exakta datum visas aldrig och endast relativa datum visas.
 
 * **Aktivera kortkommandon**
 
-  AEM stöder ett antal kortkommandon som gör redigeringen effektivare.
+  AEM har stöd för olika kortkommandon som gör redigeringen effektivare.
 
-   * [Kortkommandon för att redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
+   * [Kortkommandon för redigering av sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md)
    * [Kortkommandon för konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md)
 
-  Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras om en användare har vissa tillgänglighetskrav.
+  Det här alternativet aktiverar kortkommandon. Som standard är de aktiverade, men kan inaktiveras, till exempel om en användare har vissa tillgänglighetskrav.
 
 * **Aktivera startsidan för resurser**
 
-  Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets Home Page Experience för hela organisationen.
+  Det här alternativet är bara tillgängligt om systemadministratören har aktiverat Assets Home Page (Startsidan för resurser) för hela organisationen.
 
 * **Stock-konfiguration**
 

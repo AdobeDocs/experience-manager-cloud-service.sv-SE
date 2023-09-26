@@ -1,6 +1,6 @@
 ---
 title: Komma igång med AEM Commerce as a Cloud Service
-description: Lär dig hur du distribuerar ett AEM e-handelsprojekt med Adobe Cloud Manager, en CI/CD-pipeline och Venias referensbutik.
+description: Lär dig hur du distribuerar ett e-handelsprojekt från Adobe Experience Manager (AEM) med Adobe Cloud Manager, en CI/CD-pipeline och Venias referensarkiv.
 topics: Commerce
 feature: Commerce Integration Framework, Cloud Manager
 version: Cloud Service
@@ -8,42 +8,42 @@ doc-type: tutorial
 kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
-source-git-commit: ba0c1e13f311f48ac138f2c3ca582835a4a83bf6
+source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1104'
 ht-degree: 0%
 
 ---
 
 # Komma igång med AEM Commerce as a Cloud Service {#start}
 
-För att komma igång med AEM Commerce as a Cloud Service måste din Experience Manager Cloud Service etableras med tillägget Commerce Integration Framework (CIF). CIF-tillägget är en extra modul ovanpå [AEM Sites as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/home.html).
+För att komma igång med Adobe Experience Manager (AEM) Commerce as a Cloud Service måste Experience Manager Cloud Servicen etableras med tillägget Commerce integration framework (CIF). CIF är en extra modul ovanpå [AEM Sites as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/home.html).
 
 ## Onboarding {#onboarding}
 
 Introduktionen av AEM Commerce as a Cloud Service är en tvåstegsprocess:
 
-1. Aktivera AEM Commerce as a Cloud Service och CIF-tillägget har etablerats
+1. Aktivera AEM Commerce as a Cloud Service och CIF tillägg har etablerats
 2. Anslut AEM Commerce as a Cloud Service till din e-handelslösning
 
 Det första startsteget görs av Adobe. Mer information om priser och provisionering får du av din säljare.
 
 När du har etablerat dig med CIF-tillägget tillämpas det på alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett. Mer information finns i [Konfigurera ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html).
 
-Det andra steget är självbetjäning för varje AEM as a Cloud Service miljö. Det finns ytterligare konfigurationer som du måste göra efter den första etableringen av CIF-tillägget.
+Det andra steget är självbetjäning för varje AEM as a Cloud Service miljö. Det finns ytterligare konfigurationer som du måste göra efter den första etableringen av CIF.
 
 ## Ansluta AEM till en Commerce Solution {#solution}
 
-Ansluta CIF-tillägget och [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange GraphQL slutpunkts-URL via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
+Ansluta CIF och [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) med en e-handelslösning måste du ange GraphQL slutpunkts-URL via en Cloud Manager-miljövariabel. Variabelnamnet är `COMMERCE_ENDPOINT`. En säker anslutning via HTTPS måste konfigureras.
 
 Miljövariabeln används på två ställen:
 
-- GraphQL anropar från AEM till e-handelskunderna via en gemensam Sharable GraphQl-klient som används av AEM CIF Core Components och kundprojektskomponenter.
-- Ange en proxywebbadress för GraphQL för varje AEM som variabeln är inställd på `/api/graphql`. Den här URL:en används av AEM utvecklingsverktyg (CIF-tillägg) och CIF-komponenter på klientsidan.
+- GraphQL anropar från AEM till e-handelskunderna via en gemensam Sharable GraphQl-klient som används av de AEM CIF Core Components och kundprojektskomponenterna.
+- Ange en proxywebbadress för GraphQL för varje AEM som variabeln är inställd på `/api/graphql`. Den här URL:en används av AEM utvecklingsverktyg (CIF) och CIF komponenter på klientsidan.
 
-En annan GraphQL-slutpunkts-URL kan användas för varje AEM as a Cloud Service miljö. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara allmänt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Du kan också ange en autentiseringshuvud om du vill använda ytterligare CIF-funktioner som kräver autentisering.
+En annan GraphQL-slutpunkts-URL kan användas för varje AEM as a Cloud Service miljö. På så sätt kan projekt koppla AEM staging-miljöer till e-handelssystem och AEM produktionsmiljö till ett handelsproduktionssystem. GraphQL-slutpunkten måste vara allmänt tillgänglig, privata VPN-anslutningar eller lokala anslutningar stöds inte. Om du vill kan du ange ett autentiseringshuvud om du vill använda ytterligare CIF funktioner som kräver autentisering.
 
-Tillägget CIF kan, och endast för Adobe Commerce Enterprise/Cloud, användas med mellanlagrade katalogdata för AEM författare. Dessa data kräver att du konfigurerar en auktoriseringshuvud. Den här rubriken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
+Tillägget CIF, och endast för Adobe Commerce Enterprise/Cloud, har stöd för användning av mellanlagrade katalogdata för AEM. Dessa data kräver att du konfigurerar en auktoriseringshuvud. Den här rubriken är bara tillgänglig och används AEM författarinstanser av säkerhetsskäl. AEM publiceringsinstanser kan inte visa mellanlagrade data.
 
 Det finns två alternativ för att konfigurera slutpunkten:
 
@@ -103,17 +103,17 @@ Du är redo att använda AEM Commerce as a Cloud Service och kan distribuera dit
 
 ## Konfigurera butiker och kataloger {#catalog}
 
-CIF-tillägget och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer, och så vidare). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
+Tillägget CIF och [CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer, och så vidare). Som standard distribueras CIF-tillägget med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
 
-Den här konfigurationen kan justeras för projektet med CIF-Cloud Servicens konfiguration enligt följande steg:
+Den här konfigurationen kan justeras för projektet med hjälp av CIF Cloud Service-konfigurationen enligt följande steg:
 
-1. I AEM går du till Verktyg -> Cloud Services -> CIF-konfiguration.
+1. AEM går till Verktyg -> Cloud Service -> CIF Konfiguration.
 
 2. Välj den e-postkonfiguration som du vill ändra.
 
 3. Öppna konfigurationsegenskaperna via åtgärdsfältet.
 
-![Konfiguration av CIF-Cloud Services](/help/commerce-cloud/assets/cif-cloud-service-config.png)
+![Konfiguration för CIF Cloud Service](/help/commerce-cloud/assets/cif-cloud-service-config.png)
 
 Följande egenskaper kan konfigureras:
 
@@ -130,7 +130,7 @@ Följande egenskaper kan konfigureras:
 - Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogroten
   >[!CAUTION]
   >
-  > Från och med CIF Core Components version 2.0.0 finns stöd för `id` togs bort och ersattes med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som &quot;Katalogens rotkategoriidentifierare&quot;.
+  > Från och med CIF Core Components version 2.0.0 stöds `id` togs bort och ersattes med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som&quot;Katalogens rotkategoriidentifierare&quot;.
 
 Konfigurationen som visas ovan är för referens. Projekten ska ha egna konfigurationer.
 

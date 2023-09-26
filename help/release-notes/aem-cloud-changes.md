@@ -1,17 +1,17 @@
 ---
 title: Betydande ändringar av Adobe Experience Manager (AEM) as a Cloud Service
-description: Betydande ändringar av Adobe Experience Manager (AEM) as a Cloud Service
+description: Observerbara ändringar av Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
 workflow-type: tm+mt
-source-wordcount: '846'
-ht-degree: 8%
+source-wordcount: '857'
+ht-degree: 7%
 
 ---
 
-# Betydande ändringar av Adobe Experience Manager (AEM) as a Cloud Service {#notable-changes-aem-cloud}
+# Betydande förändringar av Adobe Experience Manager as a Cloud Service {#notable-changes-aem-cloud}
 
-AEM Cloud Service har många nya funktioner för  att administrera AEM-projekt. Det finns dock ett antal skillnader mellan AEM Sites på plats eller i Adobe Managed Service jämfört med AEM Cloud Service. I det här dokumentet markeras de viktiga skillnaderna.
+Adobe Experience Manager (AEM) Cloud Service innehåller många nya funktioner och möjligheter för att hantera dina AEM projekt. Det finns dock vissa skillnader mellan AEM Sites på plats eller i Adobe Managed Service jämfört med AEM Cloud Service. I det här dokumentet markeras de viktiga skillnaderna.
 
 >[!CONTEXTUALHELP]
 >id="aem_cloud_notable_changes"
@@ -37,7 +37,7 @@ De största skillnaderna finns i följande områden:
 
 * [Ändringar i publiceringsdatabasen tillåts inte](#changes-to-publish-repo)
 
-* [Anpassade runmodes tillåts inte](#custom-runmodes)
+* [Anpassade körningslägen tillåts inte](#custom-runmodes)
 
 * [Borttagning av replikeringsagenter och relaterade ändringar](#replication-agents)
 
@@ -49,24 +49,24 @@ De största skillnaderna finns i följande områden:
 
 ## /apps och /libs kan inte ändras under körning {#apps-libs-immutable}
 
-Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddad. Funktioner eller anpassad kod som förväntas göra ändringar där kommer inte att kunna göra det. Ett fel returneras som anger att sådant innehåll är skrivskyddat och att skrivåtgärden inte kunde slutföras. Detta påverkar ett antal AEM:
+Allt innehåll och alla undermappar i `/apps` och `/libs` är skrivskyddad. Funktioner eller anpassad kod som förväntar sig att göra ändringar där misslyckas. Ett fel returneras som anger att sådant innehåll är skrivskyddat och att skrivåtgärden inte kunde slutföras. Detta påverkar på flera AEM områden:
 
 * Inga ändringar i `/libs` tillåts överhuvudtaget.
-   * Det här är inte en ny regel, men den har inte införts i tidigare lokala versioner av AEM.
-* Övertäckningar för områden i `/libs` som får övertäckas fortfarande tillåts inom `/apps`.
-   * Sådana övertäckningar måste komma från Git via CI/CD-pipeline.
-* Designinformation för statiska mallar som lagras i `/apps` kan inte redigeras via användargränssnittet.
+   * Detta är inte en ny regel, men den har inte införts i tidigare lokala versioner av AEM.
+* Övertäckningar för områden i `/libs` som fortfarande får användas inom `/apps`.
+   * Sådana övertäckningar måste komma från Git via CI/CD-ledningen.
+* Designinformation för statiska mallar som lagras i `/apps` kan inte redigeras via gränssnittet.
    * Du bör använda Redigerbara mallar i stället.
    * Om statiska mallar fortfarande krävs måste konfigurationsinformationen komma från Git via CI/CD-flödet.
 * MSM Blueprint och anpassade MSM roll-out-konfigurationer måste installeras från Git via CI/CD-pipeline.
-* I18n-översättningsändringar måste komma från Git via CI/CD-pipeline.
+* I18n-översättningsändringar måste komma från Git via CI/CD-flödet.
 
 ## OSGi-paket och -konfigurationer måste behandlas som kod {#osgi}
 
 Ändringar av OSGi-paket och -konfigurationer måste införas via CI/CD-pipeline.
 
 * Nya eller uppdaterade OSGi-paket måste introduceras via Git via CI/CD-pipeline.
-* Ändringar i OSGi-konfigurationer kan endast göras från Git via CI/CD-pipeline.
+* Ändringar i OSGi-konfigurationer kan bara komma från Git via CI/CD-pipeline.
 
 Webbkonsolen, som användes i tidigare versioner av AEM för att ändra OSGi-paket och -konfigurationer, är inte tillgänglig i AEM Cloud Service.
 
@@ -74,10 +74,10 @@ Webbkonsolen, som användes i tidigare versioner av AEM för att ändra OSGi-pak
 
 Förutom ändringarna under `/home` på publiceringsnivån tillåts inte direkta ändringar i publiceringsdatabasen på AEM Cloud Service. I tidigare versioner av lokala AEM eller AEM på AMS kan kodändringar göras direkt till publiceringsdatabasen. Vissa begränsningar kan minskas på följande sätt:
 
-* För innehåll- och innehållsbaserad konfiguration: gör ändringarna i författarinstansen och publicera dem.
-* För kod och konfiguration: gör ändringarna i GIT-databasen och kör CI/CD-flödet för att köra dem.
+* För innehåll och innehållsbaserad konfiguration: gör ändringarna i Author-instansen och publicera dem.
+* För kod och konfiguration: gör ändringarna i GIT-databasen och kör CI/CD-flödet för att implementera dem.
 
-## Anpassade runmodes tillåts inte {#custom-runmodes}
+## Anpassade körningslägen tillåts inte {#custom-runmodes}
 
 Följande körningslägen är färdiga för AEM Cloud Service:
 
@@ -100,10 +100,10 @@ Ytterligare eller anpassade körningslägen är inte möjliga i AEM Cloud Servic
 I AEM Cloud Service publiceras innehåll med [Distribution av säljinnehåll](https://sling.apache.org/documentation/bundles/content-distribution.html). Replikeringsagenterna som användes i tidigare versioner av AEM används inte längre eller tillhandahålls, vilket kan påverka följande områden i befintliga AEM projekt:
 
 * Anpassade arbetsflöden som till exempel skickar innehåll till replikeringsagenter för förhandsgranskningsservrar.
-* Anpassning till replikeringsagenter för att omvandla innehåll
-* Använda omvänd replikering för att återföra innehåll från publicering till författaren
+* Anpassning till replikeringsagenter för att omvandla innehåll.
+* Använda omvänd replikering för att återföra innehåll från publicering till författaren.
 
-Observera dessutom att knapparna för att pausa och inaktivera har tagits bort från administrationskonsolen för replikeringsagenten.
+Dessutom tas knapparna för paus och inaktivering bort från administrationskonsolen för replikeringsagenten.
 
 ## Borttagning av Classic UI {#classic-ui}
 
@@ -111,10 +111,10 @@ Det klassiska användargränssnittet är inte längre tillgängligt i AEM Cloud 
 
 ## Publish-side Delivery {#publish-side-delivery}
 
-HTTP-acceleration inklusive CDN och trafikhantering för författare och publiceringstjänster tillhandahålls som standard i AEM Cloud Service.
+HTTP-acceleration inklusive CDN och trafikhantering för författar- och publiceringstjänster tillhandahålls som standard i AEM Cloud Service.
 
-För projektövergångar från AMS eller en lokal installation rekommenderar Adobe starkt att man utnyttjar det inbyggda CDN, eftersom funktionerna i AEM Cloud Service är optimerade för det CDN som tillhandahålls.
+För projekt som går över från AMS eller en lokal installation rekommenderar Adobe starkt att du använder det inbyggda CDN, eftersom funktionerna i AEM Cloud Service är optimerade för det CDN som tillhandahålls.
 
 ## Hantering och leverans av tillgångar {#asset-handling}
 
-Överföring, bearbetning och nedladdning av mediefiler är optimerade i [!DNL Experience Manager Assets] som [!DNL Cloud Service]. [!DNL Assets] är nu mer effektivt, ger större skalbarhet och gör att du kan ladda upp och ned i mycket snabbare takt. Dessutom påverkas den befintliga anpassade koden och vissa åtgärder. För en lista över ändringar och för paritet med [!DNL Experience Manager] 6.5-funktioner, se [ändringar i [!DNL Assets]](/help/assets/assets-cloud-changes.md).
+Överföring, bearbetning och nedladdning av mediefiler är optimerade i [!DNL Experience Manager Assets] som [!DNL Cloud Service]. AEM [!DNL Assets] är nu mer effektivt, ger större skalbarhet och gör att du kan ladda upp och ned snabbare. Dessutom påverkas den befintliga anpassade koden och vissa åtgärder. För en lista över ändringar och för paritet med [!DNL Experience Manager] 6.5-funktioner, se [ändringar i [!DNL Assets]](/help/assets/assets-cloud-changes.md).

@@ -4,7 +4,7 @@ description: Lär dig hur du hanterar och löser flera sammanslagningskonflikter
 feature: Multi Site Manager
 role: Admin
 exl-id: 733e9411-50a7-42a5-a5a8-4629f6153f10
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 0%
@@ -21,25 +21,25 @@ När det finns sidor som är i konflikt (i grenarna utkast och Live Copy) kan du
 
 För att säkerställa att utrullningen inte blockeras kan möjliga definitioner omfatta:
 
-* Vilken sida (utkast eller Live Copy) som ska ha prioritet vid utrullning
+* Vilken sida (utkast eller Live Copy) som har prioritet vid utrullning
 * Vilka sidor som får nya namn och hur
 * Hur detta påverkar publicerat innehåll
 
-Standardbeteendet för AEM är att publicerat innehåll inte påverkas. Om en sida som skapades manuellt i Live Copy-grenen har publicerats kommer det innehållet fortfarande att publiceras efter konflikthanteringen och utrullningen.
+Standardbeteendet för Adobe Experience Manager (AEM) är att publicerat innehåll inte påverkas. Om en sida som skapades manuellt i Live Copy-grenen har publicerats, kommer det innehållet fortfarande att publiceras efter konflikthanteringen och utrullningen.
 
 Förutom standardfunktionerna kan anpassade konflikthanterare läggas till för att implementera olika regler. Detta kan även möjliggöra publiceringsåtgärder som en enskild process.
 
 ### Exempelscenario {#example-scenario}
 
-I följande avsnitt använder vi exemplet på en ny sida `b`, som har skapats både i utkast och i Live Copy-grenen (skapas manuellt), för att illustrera olika metoder för konfliktlösning:
+I följande avsnitt visas ett exempel på en ny sida `b` används, skapas både i ritningen och i förgreningen Live Copy (skapas manuellt), för att illustrera olika metoder för konfliktlösning:
 
 * skiss: `/b`
 
-  En mallsida med 1 underordnad sida, `bp-level-1`
+  En mallsida med en underordnad sida, `bp-level-1`
 
 * Live Copy: `/b`
 
-  En sida som skapats manuellt i Live Copy-grenen med en underordnad sida, `lc-level-1`
+  En sida som skapats manuellt i grenen Live Copy med en underordnad sida, `lc-level-1`
 
    * Aktiverat vid publicering som `/b`tillsammans med den underordnade sidan
 
@@ -77,7 +77,7 @@ AEM tillhandahåller:
 Standardkonflikthanteraren är `ResourceNameRolloutConflictHandler`
 
 * Med den här hanteraren får plantryckssidan företräde.
-* Tjänstrankningen för hanteraren är låg, det vill säga under standardvärdet för `service.ranking` -egenskapen, eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
+* Tjänstrankningen för hanteraren är låg. dvs. under standardvärdet för `service.ranking` eftersom antagandet är att anpassade hanterare behöver en högre rankning. Rankningen är dock inte den absolut minsta nivån för att garantera flexibilitet vid behov.
 
 Den här konflikthanteraren ger prioritet åt ritningen. Till exempel sidan Live Copy `/b` flyttas inom Live Copy-grenen till `/b_msm_moved`.
 
@@ -98,7 +98,7 @@ Den här konflikthanteraren ger prioritet åt ritningen. Till exempel sidan Live
 |  | Utskrift efter utrullning | Live Copy After Rollout | Live Copy After Rollout | Publicera efter utrullning |
 |---|---|---|---|---|
 | Värde | `b` | `b` | `b_msm_moved` | `b` |
-| Kommentar |  | Innehåller innehållet på ritningssidan `b` som lanserades | Har sidans innehåll `b` som skapades manuellt i Live Copy-grenen | Ingen ändring, innehåller innehållet på originalsidan `b` som skapades manuellt i Live Copy-grenen och nu anropas `b_msm_moved` |
+| Kommentar |  | Innehåller innehållet på ritningssidan `b` som lanserades | Har sidans innehåll `b` som skapades manuellt i Live Copy-grenen | Ingen ändring; innehåller originalsidans innehåll `b` som skapades manuellt i Live Copy-grenen och nu anropas `b_msm_moved` |
 | Värde | `/bp-level-1` | `/bp-level-1` | `/lc-level-1` | `/lc-level-1` |
 | Kommentar |  |  | Ingen ändring | Ingen ändring |
 
@@ -111,7 +111,7 @@ Anpassade konflikthanterare kan:
 * Namnge efter behov.
 * Utvecklas/konfigureras enligt dina krav.
    * Du kan t.ex. utveckla en hanterare så att sidan Live-kopia har prioritet.
-* Kan konfigureras med [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md). Särskilt gäller följande:
+* Den kan konfigureras med [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md). Särskilt gäller följande:
    * **Servicerangordning** definierar ordningen som hör till andra konflikthanterare ( `service.ranking`).
       * Standardvärdet är `0`.
 
@@ -127,19 +127,19 @@ I det här fallet har Live Copy företräde. Planeringssidan `/b` kopieras inte 
 
 * Blå: `/b`
 
-  Kopieras inte alls, men ignoreras.
+  Den kopieras inte alls, men ignoreras.
 
 * Live Copy: `/b`
 
-  Står detsamma.
+  Det förblir likadant.
 
 #### Efter utrullning {#after-rollout-no-conflict}
 
 |  | Utskrift efter utrullning | Live Copy After Rollout | Publicera efter utrullning |
 |---|---|---|---|
 | Värde | `b` | `b` | `b` |
-| Kommentar |  | Sidans innehåll ändras inte `b` som skapades manuellt i Live Copy-grenen | Ingen ändring, innehåller sidans innehåll `b` som skapades manuellt i Live Copy-grenen |
-| Värde | `/bp-level-1` | `/lc-level-1` | `/lc-level-1` |
+| Kommentar |  | Ingen ändring; har sidans innehåll `b` som skapades manuellt i Live Copy-grenen | Ingen ändring; innehåller sidans innehåll `b` som skapades manuellt i Live Copy-grenen |
+| Värde | `/bp-level-1,` | `/lc-level-1` | `/lc-level-1` |
 | Kommentar |  | Ingen ändring | Ingen ändring |
 
 ### Servicerangordning {#service-rankings}

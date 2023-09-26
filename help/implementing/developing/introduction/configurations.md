@@ -1,17 +1,17 @@
 ---
 title: Konfigurationer och Configuration Browser
-description: Förstå AEM konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
+description: Förstå Adobe Experience Manager (AEM)-konfigurationer och hur de hanterar arbetsyteinställningar i AEM.
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
 
 # Konfigurationer och Configuration Browser {#configuration-browser}
 
-AEM konfigurationer används för att hantera inställningar i AEM och fungerar som arbetsytor.
+Adobe Experience Manager (AEM)-konfigurationer används för att hantera inställningar i AEM och fungerar som arbetsytor.
 
 ## Vad är en konfiguration? {#what-is-a-configuration}
 
@@ -29,7 +29,7 @@ Oavsett perspektiv har konfigurationerna två huvudsyften AEM:
 
 ## Konfigurationer som administratör {#configurations-administrator}
 
-AEM administratör och författare kan betrakta konfigurationer som arbetsytor. De här arbetsytorna kan användas för att samla ihop grupper med inställningar och deras associerade innehåll i organiseringssyfte genom att implementera åtkomsträttigheter för dessa funktioner.
+AEM administratör och författare kan betrakta konfigurationer som arbetsytor. De här arbetsytorna kan användas för att samla in grupper med inställningar och tillhörande innehåll för organisatoriska syften genom att implementera åtkomsträttigheter för dessa funktioner.
 
 Du kan skapa konfigurationer för många olika funktioner i AEM.
 
@@ -51,8 +51,8 @@ Administratören kan sedan koppla WKND-general till allt innehåll på WKND-webb
 
 Genom att göra detta:
 
-* När en skribent skapar en ny sida för tidningen kan han eller hon välja bland allmänna mallar (WKND-General) eller tidskriftsmallar (WKND-Magazine).
-* När en innehållsförfattare skapar en ny sida för en annan del av webbplatsen som inte är tidskriften, kan författaren bara välja bland de allmänna mallarna (WKND-General).
+* När en skribent skapar en sida för tidningen kan han eller hon välja bland allmänna mallar (WKND-General) eller tidskriftsmallar (WKND-Magazine).
+* När en innehållsförfattare skapar en sida för en annan del av webbplatsen som inte är tidskriften, kan författaren bara välja bland de allmänna mallarna (WKND-General).
 
 Liknande inställningar kan göras inte bara för redigerbara mallar utan även för molnkonfigurationer, ContextHub-segment och Content Fragment-modeller.
 
@@ -62,11 +62,11 @@ Med Configuration Browser kan en administratör enkelt skapa, hantera och konfig
 
 >[!NOTE]
 >
->Det går bara att skapa konfigurationer med hjälp av Konfigurationsläsaren om användaren har `admin` rättigheter. `admin` behörighet krävs också för att tilldela behörighet till konfigurationen eller på annat sätt ändra en konfiguration.
+>Det är bara möjligt att skapa konfigurationer med hjälp av Konfigurationsläsaren om användaren har `admin` rättigheter. sådan `admin` behörighet krävs också för att tilldela behörighet till konfigurationen eller på annat sätt ändra en konfiguration.
 
 #### Skapa en konfiguration {#creating-a-configuration}
 
-Det är mycket enkelt att skapa en ny konfiguration i AEM med hjälp av Configuration Browser.
+Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Browser.
 
 1. Logga in AEM as a Cloud Service och välj **verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
 1. Tryck eller klicka **Skapa**.
@@ -94,20 +94,22 @@ Det är mycket enkelt att skapa en ny konfiguration i AEM med hjälp av Configur
 Om du tänker på konfigurationer som arbetsytor kan åtkomsträttigheter anges för dessa konfigurationer för att framtvinga vem som får och inte får tillgång till dessa arbetsytor.
 
 1. Logga in AEM as a Cloud Service och välj **verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
-1. Välj den konfiguration som du vill ändra och tryck eller klicka sedan på **Egenskaper** i verktygsfältet.
-1. Välj eventuella ytterligare funktioner som du vill lägga till i konfigurationen
+1. Markera konfigurationen som du vill redigera och välj sedan **Egenskaper** i verktygsfältet.
+1. Välj eventuella ytterligare funktioner som du vill lägga till i konfigurationen.
+
    >[!NOTE]
    >
    >Det går inte att avmarkera en funktion när konfigurationen har skapats.
+
 1. Använd **Effektiva behörigheter** om du vill visa en matris med roller och vilka behörigheter de för närvarande har för konfigurationer.
    ![Fönstret Effektiva behörigheter](assets/configuration-effective-permissions.png)
 1. Om du vill tilldela nya behörigheter anger du användar- eller gruppnamnet i **Välj användare eller grupp** fältet i **Lägg till nya behörigheter** -avsnitt.
    * The  **Välj användare eller grupp** fält erbjuder automatisk komplettering baserat på befintliga användare och roller.
 1. Välj lämplig användare eller roll bland resultaten för automatisk komplettering.
    * Du kan markera flera användare eller roller.
-1. Markera de åtkomstalternativ som de valda användarna eller rollerna ska ha och klicka på **Lägg till**.
+1. Markera de åtkomstalternativ som en eller flera valda användare eller roller ska ha och klicka på **Lägg till**.
    ![Lägga till åtkomsträttigheter till en konfiguration](assets/configuration-edit.png)
-1. Upprepa stegen för att välja användare eller roller och tilldela ytterligare åtkomsträttigheter efter behov.
+1. Upprepa stegen så att du kan välja användare eller roller och tilldela ytterligare åtkomsträttigheter efter behov.
 1. Tryck eller klicka **Spara och stäng** när du är klar.
 
 ## Konfigurationer som utvecklare {#configurations-developer}
@@ -133,9 +135,9 @@ ValueMap imageServerSettings = conf.getItem("dam/imageserver");
 String bgkcolor = imageServerSettings.get("bgkcolor", "FFFFFF");
 ```
 
-Startpunkten för all konfigurationssökning är en innehållsresurs, vanligtvis någonstans under `/content`. Det kan vara en sida, en komponent på en sida, en resurs eller en DAM-mapp. Det här är det innehåll som vi letar efter rätt konfiguration för i det här sammanhanget.
+Startpunkten för all konfigurationssökning är en innehållsresurs någonstans under `/content`. Det kan vara en sida, en komponent på en sida, en resurs eller en DAM-mapp. Det här är det innehåll som du letar efter rätt konfiguration för i det här sammanhanget.
 
-Nu med `Conf` -objekt kan vi hämta det specifika konfigurationsobjekt som vi är intresserade av. I detta fall är det `dam/imageserver`, som är en samling inställningar som är relaterade till `imageserver`. The `getItem` anrop returnerar `ValueMap`. Sedan läser vi en `bgkcolor` string-egenskap och ange standardvärdet FFFFFF om egenskapen (eller hela config-objektet) inte finns.
+Nu med `Conf` -objektet kan du hämta det specifika konfigurationsobjekt som du är intresserad av. I det här fallet är det `dam/imageserver`, som är en samling inställningar som är relaterade till `imageserver`. The `getItem` anrop returnerar `ValueMap`. Sedan läser du en `bgkcolor` string-egenskap och ange standardvärdet FFFFFF om egenskapen (eller hela config-objektet) inte finns.
 
 Nu ska vi titta på motsvarande JCR-innehåll:
 
@@ -153,19 +155,19 @@ Nu ska vi titta på motsvarande JCR-innehåll:
             - bgkcolor = "FF0000"
 ```
 
-I det här exemplet antar vi en WKND-specifik DAM-mapp här och en motsvarande konfiguration. Från den mappen `/content/dam/wknd`ser vi att det finns en strängegenskap med namnet `cq:conf` som refererar till konfigurationen som ska användas för underträdet. Egenskapen ställs vanligtvis in på `jcr:content` för en resursmapp eller -sida. Dessa `conf` länkar är explicita, så det är enkelt att följa dem genom att bara titta på innehållet i CRXDE.
+I det här exemplet kan du anta en WKND-specifik DAM-mapp här och en motsvarande konfiguration. Från den mappen `/content/dam/wknd`ser du att det finns en strängegenskap med namnet `cq:conf` som refererar till konfigurationen som gäller för underträdet. Egenskapen ställs in på `jcr:content` för en resursmapp eller -sida. Dessa `conf` länkar är explicita, så det är enkelt att följa dem genom att bara titta på innehållet i CRXDE.
 
-Hoppa inuti `/conf`, följer vi referensen och ser att det finns en `/conf/wknd` nod. Detta är en konfiguration. Sökningen är helt genomskinlig för programkoden. Exempelkoden har aldrig någon dedikerad referens till den, den är dold bakom `Conf` -objekt. Vilken konfiguration som tillämpas styrs helt av JCR-innehållet.
+Hoppa inuti `/conf`, följ referensen och se att det finns en `/conf/wknd` nod. Detta är en konfiguration. Dess sökning är genomskinlig för programkoden. Exempelkoden har aldrig någon dedikerad referens till den, den är dold bakom `Conf` -objekt. Vilken konfiguration som tillämpas styrs via JCR-innehållet.
 
-Vi ser att konfigurationen innehåller ett fast namn `settings` nod som innehåller de faktiska objekten, inklusive `dam/imageserver` vi behöver i vårt fall. Ett sådant objekt kan tolkas som ett inställningsdokument och representeras vanligtvis av en `cq:Page` inkluderar `jcr:content` som innehåller det faktiska innehållet.
+Du ser att konfigurationen innehåller ett fast namn `settings` nod som innehåller de faktiska objekten, inklusive `dam/imageserver` i det här fallet. Ett sådant objekt kan tolkas som ett inställningsdokument och representeras av en `cq:Page` inkluderar `jcr:content` som innehåller det faktiska innehållet.
 
-Äntligen ser vi egendomen `bgkcolor` som vår exempelkod behöver. The `ValueMap` vi kommer tillbaka från `getItem` baseras på sidans `jcr:content` nod.
+Slutligen ser du egenskapen `bgkcolor` som den här exempelkoden behöver. The `ValueMap` du kommer tillbaka från `getItem` baseras på sidans `jcr:content` nod.
 
 ### Konfigurationsupplösning {#configuration-resolution}
 
-I det grundläggande exemplet ovan visades en enda konfiguration. Men det finns många fall där du vill ha olika konfigurationer, till exempel en global standardkonfiguration, en som skiljer sig åt för varje varumärke och kanske en som är specifik för dina underprojekt.
+I det grundläggande exemplet ovan visades en enda konfiguration. Men det finns många fall där du vill ha olika konfigurationer, till exempel en global standardkonfiguration, en som skiljer sig åt för varje varumärke och kanske en som är specifik för dina delprojekt.
 
-Som stöd för detta har konfigurationssökningen i AEM arv- och reservmekanism i följande prioritetsordning:
+AEM har en arv- och reservmekanism i följande prioritetsordning för att stödja detta vid konfigurationssökning:
 
 1. `/conf/<siteconfig>/<parentconfig>/<myconfig>`
    * Specifik konfiguration som refereras från `cq:conf` någonstans i `/content`
@@ -179,7 +181,7 @@ Som stöd för detta har konfigurationssökningen i AEM arv- och reservmekanism 
    * Kan ändras vid körning av användare med konfigurationsprivilegier
 1. `/conf/global`
    * Systemglobala inställningar
-   * Vanligtvis globala standardinställningar för din installation
+   * Globala standardinställningar för din installation
    * Uppsättning med `admin` roll
    * Kan ändras vid körning av användare med konfigurationsprivilegier
 1. `/apps`
@@ -210,7 +212,7 @@ Ange bara:
 * **Objekt**
 * **Användare**
 
-Klicka **Lös** för att se vilka konfigurationer som är lösta och få exempelkod som löser dessa konfigurationer.
+Klicka **Lös** så att du kan se vilka konfigurationer som är lösta och få kodexempel som hjälper dig att lösa dessa konfigurationer.
 
 ### Kontextmedveten webbkonsol för konfiguration {#context-aware-web-console}
 
@@ -223,4 +225,4 @@ Ange bara:
 * **Innehållsbana**
 * **Konfigurationsnamn**
 
-Klicka **Lös** för att hämta associerade kontextsökvägar och egenskaper för den valda konfigurationen.
+Klicka **Lös** så att du kan hämta de associerade kontextsökvägarna och egenskaperna för den valda konfigurationen.
