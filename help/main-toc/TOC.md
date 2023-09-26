@@ -8,10 +8,10 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 44492597085c52eb715a8ecd19a2c4aa884ae12f
+source-git-commit: af7a4a3e23a07e4768192ae7d6308e3c6036ceb6
 workflow-type: tm+mt
-source-wordcount: '4310'
-ht-degree: 20%
+source-wordcount: '4321'
+ht-degree: 19%
 
 ---
 
@@ -741,6 +741,9 @@ ht-degree: 20%
    + [Adobe Commerce PWA Studio](/help/commerce-cloud/pwa-studio/getting-started.md)
    + [Migrering](/help/commerce-cloud/migration.md)
    + [Vanliga frågor](/help/commerce-cloud/faq.md)
++ Edge Delivery Services {#edge-delivery}
+   + [Komma igång med Edge Delivery](/help/edge/overview.md)
+   + [Använda Edge Delivery](/help/edge/using.md)
 + Headless {#headless}
    + [Vad är ett headless CMS?](/help/headless/what-is-headless.md)
    + [Introduktion till AEM Headless](/help/headless/introduction.md)

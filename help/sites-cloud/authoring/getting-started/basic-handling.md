@@ -2,12 +2,13 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
+source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
 workflow-type: tm+mt
 source-wordcount: '2975'
 ht-degree: 3%
 
 ---
+
 
 # Grundläggande hantering {#basic-handling}
 
@@ -17,6 +18,8 @@ Det här dokumentet är utformat för att ge en översikt över grundläggande h
 >
 >* Vissa funktioner är inte tillgängliga i alla konsoler, och i vissa konsoler kan ytterligare funktioner vara tillgängliga. Specifik information om de enskilda konsolerna och deras relaterade funktioner beskrivs mer ingående på andra sidor.
 >* Kortkommandon är tillgängliga i hela AEM. I synnerhet när [använda konsoler](/help/sites-cloud/authoring/getting-started/keyboard-shortcuts.md) och [redigera sidor](/help/sites-cloud/authoring/fundamentals/keyboard-shortcuts.md).
+
+{{edge-delivery-authoring}}
 
 ## Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 

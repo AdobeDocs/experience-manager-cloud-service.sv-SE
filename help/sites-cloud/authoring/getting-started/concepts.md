@@ -2,12 +2,13 @@
 title: Redigeringsbegrepp
 description: Lär dig mer om redigering i AEM, med hjälp av redigerings-, förhandsgransknings- och publiceringsmiljöer.
 exl-id: ee9e4952-e075-4398-b31f-d7886153efff
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 1%
 
 ---
+
 
 # Redigeringsbegrepp {#authoring-concepts}
 
@@ -26,6 +27,8 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 ![Diagram över författare, utgivare och avsändare](/help/sites-cloud/authoring/assets/author-publish.png)
 
 I redigeringsmiljön är AEM funktionalitet tillgänglig AEM redigeringsgränssnittet. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
+
+{{edge-delivery-authoring}}
 
 ## Författarmiljö {#author-environment}
 

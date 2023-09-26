@@ -4,16 +4,19 @@ description: Lär dig hur administratörer använder AEM för att skapa en ny we
 feature: Administering
 role: Admin
 exl-id: 50105d03-9d94-4aec-b0a7-0b88e3fe50e0
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
+
 # Skapa en ny plats {#new-site}
 
 Lär dig hur administratörer använder AEM skapa en ny webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
+
+{{edge-delivery-authoring}}
 
 ## Översikt {#overview}
 

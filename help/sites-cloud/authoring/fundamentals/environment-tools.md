@@ -2,16 +2,19 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
 workflow-type: tm+mt
 source-wordcount: '2150'
 ht-degree: 9%
 
 ---
 
+
 # Redigeringsmiljö och -verktyg {#authoring-the-environment-and-tools}
 
 I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll. Verktygen som tillhandahålls är tillgängliga från olika konsoler och sidredigerare.
+
+{{edge-delivery-authoring}}
 
 ## Hantera din webbplats {#managing-your-site}
 

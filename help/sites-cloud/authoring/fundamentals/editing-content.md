@@ -2,12 +2,13 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
 workflow-type: tm+mt
 source-wordcount: '2983'
 ht-degree: 4%
 
 ---
+
 
 # Redigera sidinnehåll{#editing-page-content}
 
@@ -31,6 +32,8 @@ Innehåll läggs till med [komponenter](/help/sites-cloud/authoring/features/com
 >[!TIP]
 >
 >När **Redigera** -läget är länkar i innehållet synliga, men **inte tillgänglig**. Använd [Förhandsgranskningsläge](#previewing-pages) om du vill navigera med hjälp av länkarna i ditt innehåll.
+
+{{edge-delivery-authoring}}
 
 ## Verktygsfältet Sida {#page-toolbar}
 

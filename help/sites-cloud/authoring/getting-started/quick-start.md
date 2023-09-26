@@ -2,12 +2,13 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
 workflow-type: tm+mt
 source-wordcount: '1568'
 ht-degree: 4%
 
 ---
+
 
 # Snabbstartsguide till redigering av sidor {#quick-guide-to-authoring-pages}
 
@@ -20,6 +21,8 @@ Mer information om redigering med AEM finns i:
 
 * [Designbegrepp](/help/sites-cloud/authoring/getting-started/concepts.md)
 * [Grundläggande hantering](/help/sites-cloud/authoring/getting-started/basic-handling.md)
+
+{{edge-delivery-authoring}}
 
 ## Några snabba tips {#a-few-quick-hints}
 
