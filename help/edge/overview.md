@@ -1,7 +1,7 @@
 ---
 title: Komma igång med Edge Delivery Services
-description: Komma igång med Edge Delivery Services
-source-git-commit: 22a3795340add4ae29ec690b41baef96e8fb4adc
+description: Komma igång med Edge Delivery Services.
+source-git-commit: 6334efceb9abae560ae77c133df1a70ffb438e6a
 workflow-type: tm+mt
 source-wordcount: '832'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Följande diagram visar hur du kan redigera innehåll i Microsoft Word (dokument
 
 Edge Delivery är en sammansatt uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Som tidigare nämnts kan du använda båda [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/concepts.html) och [dokumentbaserad redigering](https://www.hlx.live/docs/authoring).
 
-Du kan till exempel använda innehåll direkt från Microsoft Word eller Goggle Docs. Det innebär att dokument från dessa källor kan bli sidor på din webbplats. Dessutom kan rubriker, listor, bilder och teckensnittselement överföras från den ursprungliga källan till webbplatsen. Det nya innehållet läggs till omedelbart utan någon omgenereringsprocess.
+Du kan till exempel använda innehåll direkt från Microsoft Word eller Google Docs. Det innebär att dokument från dessa källor kan bli sidor på din webbplats. Dessutom kan rubriker, listor, bilder och teckensnittselement överföras från den ursprungliga källan till webbplatsen. Det nya innehållet läggs till omedelbart utan någon omgenereringsprocess.
 
 Edge Delivery utnyttjar GitHub så att kunderna kan hantera och driftsätta kod direkt från sin GitHub-databas. Du kan till exempel skriva innehåll i antingen Google Docs eller Microsoft Word och du kan utveckla funktionerna för din webbplats med hjälp av CSS och JavaScript i GitHub. När du är klar kan du använda webbläsartillägget Sidekick för att förhandsgranska och publicera innehållsuppdateringar.
 
