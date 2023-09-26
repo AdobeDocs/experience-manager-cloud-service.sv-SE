@@ -3,24 +3,24 @@ title: Skapa ett program
 description: Lär dig hur du använder Cloud Manager för att skapa ditt första program.
 role: Admin, User, Developer
 exl-id: ade4bb43-5f48-4938-ac75-118009f0a73b
-source-git-commit: b916bf5b252045120659600293e004fc34b96e7a
+source-git-commit: d67c5c9baafb9b7478f1d1c2ad924f5a8250a1ee
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
 
 # Skapa ett program {#create-program}
 
-I den här delen av [startresan,](overview.md) du får lära dig hur du använder Cloud Manager för att skapa ditt första program.
+I den här delen av [startresan,](overview.md) får du lära dig hur du använder Cloud Manager för att skapa ditt första program.
 
 ## Syfte {#objective}
 
 Efter att ha granskat det föregående dokumentet under den här introduktionsresan, [Access Cloud Manager,](cloud-manager.md) du har sett till att du har tillgång till Cloud Manager. Nu kan du skapa ditt första program.
 
-När du har läst det här dokumentet kommer du att:
+När du har läst dokumentet kan du:
 
-* Förstå vad ett program är.
+* Förstå och förklara vad ett program är.
 * Se skillnaden mellan produktion och sandlådeprogram.
 * Skapa ett eget program.
 
@@ -28,24 +28,22 @@ När du har läst det här dokumentet kommer du att:
 
 Program är den högsta organisationsnivån i Cloud Manager. Beroende på vilken licens du har hos Adobe kan du ordna din lösning och ge vissa teammedlemmar tillgång till dessa program.
 
-Cloud Manager-program representerar uppsättningar av Cloud Manager-miljöer. Dessa program stöder logiska uppsättningar av affärsinitiativ, som vanligtvis motsvarar ett licensierat serviceavtal (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja en global offentlig webbplats för en organisation, medan ett annat program representerar en intern, central DAM.
+Cloud Manager-program representerar uppsättningar av Cloud Manager-miljöer. Dessa program stöder logiska uppsättningar av affärsinitiativ, som vanligtvis motsvarar ett licensierat serviceavtal (SLA). Ett program kan t.ex. representera Adobe Experience Manager (AEM) resurser för att stödja en global offentlig webbplats för en organisation, medan ett annat program representerar en intern, central DAM.
 
-Om du kommer ihåg exemplet med WKND Travel and Adventure Enterprises, som är en hyresgäst som fokuserar på reserelaterade medier, kan de ha två program: ett Sites-program för divisionen WKND Magazine och ett Assets-program för divisionen WKND Media. Olika teammedlemmar skulle då ha tillgång till de olika programmen på grund av sin egen uppdelning av arbetskrav.
+Om du kommer ihåg exemplet med de teoretiska WKND Travel and Adventure Enterprises, som är en hyresgäst som fokuserar på reserelaterade medier, kan de ha två program. Ett AEM Sites-program för divisionen WKND Magazine och ett AEM Assets-program för divisionen WKND Media. Olika teammedlemmar skulle då ha tillgång till de olika programmen på grund av sin egen uppdelning av arbetskrav.
 
 Det finns två olika typer av program:
 
 * A **produktionsprogram** skapas för att aktivera livatrafik för din webbplats. Det här är din&quot;riktiga&quot; miljö.
 * A **sandlådeprogram** skapas vanligtvis för utbildning, löpande demonstrationer, aktivering, POC eller dokumentation.
 
-Eftersom de har olika syften har de olika miljöerna olika alternativ. Processen att skapa dem liknar dock den du gör. För den här introduktionsresan ska vi skapa en sandlådemiljö.
+Eftersom de har olika syften har de olika miljöerna olika alternativ. Processen att skapa dem liknar dock den du gör. För den här introduktionsresan skapar du en sandlådemiljö.
 
 >[!TIP]
 >
->Om du behöver skapa ett produktionsprogram kan du läsa [Ytterligare resurser](#additional-resources) för en länk till dokumentation som beskriver programmen i detalj.
+>Om du måste skapa ett produktionsprogram kan du läsa [Ytterligare resurser](#additional-resources) om du vill ha en länk till dokumentation som beskriver programmen i detalj.
 
 ## Skapa ett sandlådeprogram {#create-sandbox}
-
-Följ de här stegen för att skapa ett sandlådeprogram.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
@@ -53,11 +51,11 @@ Följ de här stegen för att skapa ett sandlådeprogram.
 
    ![Startsida för Cloud Manager](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/cloud-manager-my-programs.png)
 
-1. Välj **Konfigurera en sandlåda** och ange ett programnamn och tryck eller klicka **Fortsätt**.
+1. Välj **Konfigurera en sandlåda** anger du ett programnamn och trycker eller klickar på **Fortsätt**.
 
    ![Skapa programtyper](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/create-sandbox.png)
 
-1. I **Konfigurera din sandlåda** kan du välja vilka lösningar du vill aktivera i ditt sandlådeprogram. The **Webbplatser** och **Resurser** -lösningar ingår alltid i sandlådeprogram och väljs automatiskt. Detta är tillräckligt för vårt exempel på introduktion. Klicka **Skapa**.
+1. I **Konfigurera din sandlåda** kan du välja vilka lösningar du vill aktivera i ditt sandlådeprogram. The **Webbplatser** och **Resurser** -lösningar ingår alltid i sandlådeprogram och väljs automatiskt. Det här räcker för ditt exempel på introduktion. Klicka **Skapa**.
 
    ![Välj lösning](assets/set-up-sandbox-onboarding.png)
 
@@ -65,11 +63,11 @@ Du ser ett nytt sandlådeprogramkort på landningssidan med en statusindikator a
 
 ![Skapa sandlåda från översiktssida](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/program-create-setupdemo2.png)
 
-När programmet är klart har medlemmar i organisationen tilldelats **Utvecklare** produktprofilen kan logga in på Cloud Manager och hantera Creative Manager Git-databaser.
+När programmet är klart har medlemmar i organisationen tilldelats **Utvecklare** produktprofilen kan logga in på Cloud Manager och hantera Cloud Manager Git-databaser.
 
-## What’s Next {#whats-next}
+## What&#39;s Next {#whats-next}
 
-Nu när ditt första program har skapats kan du skapa miljöer för det. Du bör fortsätta din introduktionsresa genom att granska dokumentet nästa gång [Skapa miljöer.](create-environments.md)
+Nu när ditt första program har skapats kan du skapa miljöer för det. Fortsätt din introduktionsresa genom att nästa gång du granskar dokumentet [Skapa miljöer.](create-environments.md)
 
 ## Ytterligare resurser {#additional-resources}
 

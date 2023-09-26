@@ -1,28 +1,28 @@
 ---
 title: Så här modellerar du ditt innehåll
-description: I den här delen av AEM Headless Developer Journey lär du dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
+description: I den här delen av Adobe Experience Manager (AEM) Headless Developer Journey kan du lära dig att modellera ditt innehåll för AEM Headless-leverans med hjälp av Content Modeling med Content Fragment Models och Content Fragments.
 exl-id: f052183d-18fd-4615-a81e-e45db5928fc1
-source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
+source-git-commit: d67c5c9baafb9b7478f1d1c2ad924f5a8250a1ee
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1827'
 ht-degree: 0%
 
 ---
 
 # Så här modellerar du ditt innehåll {#model-your-content}
 
-I den här delen av [AEM Headless Developer Journey](overview.md)kan du lära dig att modellera innehållsstrukturen. Förverkliga sedan strukturen för Adobe Experience Manager (AEM) med Content Fragments Models och Content Fragments, för återanvändning i alla kanaler.
+I den här delen av [AEM Headless Developer Journey](overview.md)får du lära dig att modellera innehållsstrukturen. Förverkliga sedan strukturen för Adobe Experience Manager (AEM) med Content Fragments Models och Content Fragments, för återanvändning i alla kanaler.
 
 ## Story hittills {#story-so-far}
 
-I början [Läs om CMS Headless Development](learn-about.md) innehållsleverans utan extra kostnad och varför den ska användas. Sedan [Komma igång med AEM Headless as a Cloud Service](getting-started.md) beskrivs AEM Headless i ditt eget projekt.
+I början [Läs om CMS Headless Development](learn-about.md) innehållsleverans utan extra kostnad och varför den används. Sedan [Komma igång med AEM Headless as a Cloud Service](getting-started.md) beskrivs AEM Headless i ditt eget projekt.
 
-I det föregående dokumentet om den AEM resan utan headless [Vägen till din första upplevelse med AEM utan headless](path-to-first-experience.md)lärde du dig sedan de steg som krävs för att implementera det första projektet. Efter att ha läst den bör du:
+I det föregående dokumentet om den AEM resan utan headless [Vägen till din första upplevelse med AEM utan headless](path-to-first-experience.md)lärde du dig sedan de steg som krävs för att implementera det första projektet. När du har läst den kan du göra följande:
 
-* Förstå viktiga planeringsöverväganden vid utformningen av ditt innehåll
-* Förstå stegen för att implementera headless beroende på vilka krav ni har på integreringsnivån.
+* Förstå och förklara viktiga planeringsöverväganden vid utformningen av ditt innehåll
+* Förstå och förklara hur ni implementerar headless, beroende på era integreringsnivåkrav.
 * Ställ in de verktyg och AEM som behövs.
-* Lär dig de bästa sätten att göra den enkla resan smidig, hålla innehållsgenereringen effektiv och se till att innehållet levereras snabbt.
+* Lär dig de bästa metoderna så att du kan göra den enkla resan smidig, hålla innehållsgenereringen effektiv och se till att innehållet levereras snabbt.
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du förbereder ett eget AEM headless-projekt.
 
@@ -37,9 +37,9 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 >[!NOTE]
 >
->Datamodellering är ett mycket stort fält, eftersom det används vid utveckling av relationsdatabaser. Det finns många böcker och onlinekällor med information tillgängliga.
+>Datamodellering är ett stort fält, som det används vid utveckling av relationsdatabaser. Det finns många böcker och onlinekällor med information.
 >
->Vi kommer endast att ta hänsyn till de aspekter som är intressanta när vi modellerar data för användning med AEM Headless.
+>Denna resa tar endast hänsyn till aspekter som är av intresse vid modellering av data för användning med AEM Headless.
 
 ## Innehållsmodellering {#content-modeling}
 
@@ -49,7 +49,7 @@ Kanske, men kanske inte. Det är verkligen en ***komplicerad*** världen där ut
 
 >[!NOTE]
 >
->När AEM behandlar innehåll, talar vi om datamodellering som innehållsmodellering.
+>När AEM behandlar innehåll kallas den här resan datamodellering för innehållsmodellering.
 
 Till exempel:
 
@@ -68,7 +68,7 @@ Det finns många skolor, men de har alla olika saker gemensamt:
 * Många aktiviteter utanför kurserna
 * och så vidare...
 
-Även i ett sådant litet exempel kan listan verka oändlig. Men om du bara vill att programmet ska utföra en enkel uppgift måste du begränsa informationen till de viktigaste uppgifterna.
+Även i ett sådant litet exempel kan listan verka oändlig. Men om du bara vill att programmet ska utföra en enkel åtgärd bör du begränsa informationen till de viktigaste uppgifterna.
 
 Exempel: annonsera specialevent för alla skolor i området:
 
@@ -81,9 +81,9 @@ Exempel: annonsera specialevent för alla skolor i området:
 
 ### Concepts {#concepts}
 
-Vad du vill beskriva kallas för **Enheter** - det som vi vill lagra information om.
+Vad du vill beskriva kallas för **Enheter** - de&quot;saker&quot; som du vill lagra information om.
 
-Informationen som vi vill lagra om dem är **Attribut** (egenskaper), t.ex. namn, och lärarkvalifikationer.
+Informationen som du vill lagra om dem är **Attribut** (egenskaper), t.ex. namn, och lärarkvalifikationer.
 
 Sedan finns det olika **Relationer** mellan enheterna. Till exempel har en skola bara en huvudlärare, och många lärare (och vanligtvis är huvudläraren också lärare).
 
@@ -91,7 +91,7 @@ Processen att analysera och definiera informationen, tillsammans med relationern
 
 ### Grunderna {#basics}
 
-Du behöver ofta börja med att skapa en **Konceptuellt schema** som beskriver enheterna och deras relationer. Vanligtvis är detta en hög nivå (konceptuell).
+Oftast måste du börja med att skapa en **Konceptuellt schema** som beskriver enheterna och deras relationer. Vanligtvis är detta en hög nivå (konceptuell).
 
 När detta är stabilt kan du omvandla modellerna till en **Logiskt schema** som beskriver enheterna, tillsammans med attributen, och relationerna. På den här nivån bör du noggrant granska definitionerna för att undvika duplicering och optimera designen.
 
@@ -118,11 +118,7 @@ Dataredundans inträffar när samma information lagras två gånger i innehålls
 
 Genom att optimera strukturen kan du förbättra prestandan, både när det gäller att skapa innehåll och fråga.
 
-Allt är en balansakt, men att skapa en struktur som är för komplex, eller som har för många nivåer, kan:
-
-* Var förvirrande för författare som skapar innehållet.
-
-* Påverka prestandan allvarligt om frågan måste få åtkomst till flera kapslade (refererade) innehållsfragment för att hämta nödvändigt innehåll.
+Allt är en balansåtgärd, men att skapa en struktur som är för komplex, eller som har för många nivåer, kan vara förvirrande för författare som skapar innehållet. Och det kan påverka prestandan avsevärt om frågan måste få åtkomst till flera kapslade (refererade) innehållsfragment för att hämta det önskade innehållet.
 
 ## Innehållsmodellering för AEM Headless {#content-modeling-for-aem-headless}
 
@@ -132,7 +128,7 @@ Datamodellering är en uppsättning etablerade tekniker som ofta används vid ut
 
 För att ditt program ska kunna begära och ta emot nödvändigt innehåll från AEM på ett konsekvent och effektivt sätt måste det här innehållet struktureras.
 
-Detta innebär att din ansökan i förväg vet vilken form av svar det är och därför hur den ska behandlas. Detta är mycket enklare än att ta emot frihandsinnehåll, som måste analyseras för att avgöra vad det innehåller och därför hur det kan användas.
+Detta innebär att din ansökan i förväg vet vilken form av svar det är och därför hur den ska behandlas. Detta är enklare än att ta emot frihandsinnehåll, som måste analyseras för att avgöra vad det innehåller och därför hur det kan användas.
 
 ### Introduktion till Hur? {#how}
 
@@ -158,7 +154,7 @@ I Content Fragment Models finns olika mekanismer som gör att du kan definiera i
 En innehållsfragmentmodell beskriver en enhet.
 
 >[!NOTE]
->Du måste aktivera funktionen för innehållsfragment i konfigurationsläsaren så att du kan skapa nya modeller.
+>Du måste aktivera funktionen för innehållsfragment i konfigurationsläsaren så att du kan skapa modeller.
 
 >[!TIP]
 >
@@ -202,11 +198,11 @@ Detta innehåller referenser till andra innehållsfragment.
 Den här typen av referens används för att skapa kapslat innehåll, vilket introducerar de relationer som behövs för att modellera innehållet.
 Datatypen kan konfigureras så att fragmentförfattare kan:
    * Redigera det refererade fragmentet direkt.
-   * Skapa ett nytt innehållsfragment, baserat på lämplig modell
+   * Skapa ett innehållsfragment baserat på lämplig modell
 
 ### Skapa modeller för innehållsfragment {#creating-content-fragment-models}
 
-Först måste du aktivera Content Fragment Models för platsen. Detta görs i Configuration Browser, under Tools -> General -> Configuration Browser. Du kan antingen konfigurera den globala posten eller skapa en ny konfiguration. Till exempel:
+Först måste du aktivera Content Fragment Models för webbplatsen. Detta görs i Configuration Browser under **verktyg** > **Allmänt** > **Konfigurationsläsaren**. Du kan antingen välja att konfigurera den globala posten eller skapa en konfiguration. Till exempel:
 
 ![Definiera konfiguration](assets/cfm-configuration.png)
 
@@ -234,11 +230,11 @@ Ett innehållsfragment baseras på en viss innehållsfragmentmodell som du välj
 
 ### Skapa och redigera strukturerat innehåll {#create-edit-structured-content}
 
-När fragmentet har skapats kan du öppna det i redigeraren för innehållsfragment. Här kan du:
+När fragmentet har skapats kan du öppna det i redigeraren för innehållsfragment. Här kan du göra följande:
 
 * Redigera innehållet i normalt läge eller helskärmsläge.
 * Formatera innehållet som antingen Fullständig text, Oformaterad text eller Markering.
-* Skapa och hantera variationer av ert innehåll.
+* Skapa och hantera variationer av ditt innehåll.
 * Associera innehåll.
 * Redigera metadata.
 * Visa trädstrukturen.
@@ -266,7 +262,7 @@ En grundläggande struktur som exempel finns i Struktur för exempelinnehållsfr
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig att modellera strukturen och skapa innehåll som är beroende av den, är nästa steg att [Lär dig hur du använder GraphQL-frågor för att komma åt och hämta innehåll i innehållsfragment](access-your-content.md). Här kommer GraphQL att introduceras och diskuteras, och sedan titta på några exempelfrågor för att se hur saker och ting fungerar i praktiken.
+Nu när du har lärt dig att modellera strukturen och skapa innehåll som är beroende av den, är nästa steg att [Lär dig hur du använder GraphQL-frågor för att komma åt och hämta innehåll i innehållsfragment](access-your-content.md). Här presenteras GraphQL och vi diskuterar några exempelfrågor för att se hur det fungerar i praktiken.
 
 ## Ytterligare resurser {#additional-resources}
 

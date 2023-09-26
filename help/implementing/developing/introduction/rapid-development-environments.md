@@ -2,9 +2,9 @@
 title: Snabba utvecklingsmiljöer
 description: Lär dig hur du använder miljöer för snabb utveckling för snabb utveckling i en molnmiljö.
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: d67c5c9baafb9b7478f1d1c2ad924f5a8250a1ee
 workflow-type: tm+mt
-source-wordcount: '3312'
+source-wordcount: '3304'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ Du kan se ytterligare videofilmer som visar [konfigurera](https://experienceleag
 
 RDE kan användas för konfigurationer av kod, innehåll och Apache eller Dispatcher. Till skillnad från vanliga Cloud Development-miljöer kan utvecklare använda lokala kommandoradsverktyg för att synkronisera kod som skapats lokalt till en RDE.
 
-Alla program tillhandahålls med en RDE. När det gäller sandlådekonton är de i viloläge efter några timmars icke-användning.
+Alla program tillhandahålls med en RDE. Om det finns sandlådekonton är de i viloläge efter några timmars icke-användning.
 
-När de skapas ställs de virtuella skrivborden in på den senast tillgängliga AEM. En RDE-återställning, som kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
+När de skapas ställs de lokala utvecklingsmiljöerna in på den senast tillgängliga Adobe Experience Manager-versionen (AEM). En RDE-återställning, som kan utföras med Cloud Manager, går igenom RDE-filen och ställer in den till den senast tillgängliga AEM.
 
 Vanligtvis används en RDE av en enskild utvecklare vid en viss tidpunkt för att testa och felsöka en viss funktion. När utvecklingssessionen är klar kan den återställas till ett standardläge för nästa användning.
 
@@ -36,7 +36,7 @@ Ytterligare RDE kan licensieras för produktionsprogram (ej sandlådeprogram).
 
 ## Aktivera RDE i ett program {#enabling-rde-in-a-program}
 
-Följ de här stegen för att använda Cloud Manager för att skapa en RDE för ditt program.
+Följ de här stegen så att du kan använda Cloud Manager för att skapa en RDE för ditt program.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
@@ -44,7 +44,7 @@ Följ de här stegen för att använda Cloud Manager för att skapa en RDE för 
 
    * RDE kan läggas till i båda [sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md) och [produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md).
 
-1. Från **Programöversikt** sida, klicka på **Lägg till miljö** på **Miljö** för att lägga till en miljö.
+1. Från **Programöversikt** sida, klicka **Lägg till miljö** på **Miljö** för att lägga till en miljö.
 
    ![Miljökort](/help/implementing/cloud-manager/assets/no-environments.png)
 
@@ -118,7 +118,7 @@ När du har lagt till en RDE för ditt program med hjälp av Cloud Manager kan d
    3. Workspace: <no workspace selected>
    ```
 
-   Observera att det här steget kräver att du är medlem i Cloud Manager **Utvecklare - Cloud Service** Produktprofil. Se [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer) för mer information.
+   Det här steget kräver att du är medlem i Cloud Manager **Utvecklare - Cloud Service** Produktprofil. Se [den här sidan](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer) för mer information.
 
    Du kan också bekräfta att du har den här utvecklarrollen om du kan logga in på utvecklarkonsolen med det här kommandot:
 
@@ -126,7 +126,7 @@ När du har lagt till en RDE för ditt program med hjälp av Cloud Manager kan d
 
    >[!TIP]
    >
-   >Om du ser `Warning: cloudmanager:list-programs is not a aio command.` måste du installera [aio-cli-plugin-cloud-manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) genom att köra kommandot nedan:
+   >Om du ser `Warning: cloudmanager:list-programs is not a aio command.` fel måste du installera [aio-cli-plugin-cloud-manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) genom att köra kommandot nedan:
    >
    >```
    >aio plugins:install @adobe/aio-cli-plugin-cloudmanager
@@ -139,22 +139,22 @@ När du har lagt till en RDE för ditt program med hjälp av Cloud Manager kan d
    Detta bör visa alla program i din konfigurerade organisation.
 
 
-Mer information och demonstrationer finns i [konfigurera en RDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html) videosjälvstudie.
+Titta på videosjälvstudiekursen om du vill ha mer information och demonstration [Konfigurera en RDE (06:24)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup.html).
 
 ## Använda RDE under utvecklingen av en ny funktion {#using-rde-while-developing-a-new-feature}
 
 Adobe rekommenderar följande arbetsflöde för att utveckla en ny funktion:
 
-* När en mellanliggande milstolpe har nåtts och validerats lokalt med den AEM as a Cloud Service SDK:n, bör koden implementeras på en Git-funktionsgren som ännu inte är en del av huvudraden, även om det är valfritt att binda sig för Git. Vad som utgör en&quot;mellanmilstolpe&quot; varierar beroende på teamets vanor. Exempel är några nya kodrader, en halv arbetsdag eller en underfunktion.
+* När en mellanliggande milstolpe har nåtts och validerats lokalt med den AEM as a Cloud Service SDK:n, bekräftar du koden till en Git-funktionsgren. Branschen bör inte vara en del av huvudraden ännu, även om det är valfritt att binda sig för Git. Vad som utgör en&quot;mellanmilstolpe&quot; varierar beroende på teamets vanor. Exempel är några nya kodrader, en halv arbetsdag eller en underfunktion.
 
-* Återställ RDE om den har använts av en annan funktion och du vill [återställa till standardläge](#reset-rde). <!-- Alexandru: hiding for now, do not delete This can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart. Den nya versionen av AEM kommer att användas.
+* Återställ RDE om den har använts av en annan funktion och du vill [återställa till standardläge](#reset-rde). <!-- Alexandru: hiding for now, do not delete This can be done by way of [Cloud Manager](#reset-the-rde-cloud-manager) or by way of the [command line](#reset-the-rde-command-line). -->Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort. Du kan använda kommandot för RDE-status för att bekräfta att RDE är klart. Den senaste versionen av AEM kommer tillbaka till RDE.
 
   >[!IMPORTANT]
   >
-  > Om din testnings- och produktionsmiljö inte får automatiska AEM och ligger långt efter den senaste versionen av AEM bör du tänka på att koden som körs på den lokala utvecklingsmiljön kanske inte stämmer överens med hur koden fungerar i testversionerna och produktionen. I så fall är det särskilt viktigt att utföra grundliga tester av koden på mellanlagring innan den distribueras till produktion.
+  > Om din testnings- och produktionsmiljö inte får automatiska AEM och ligger bakom den senaste versionen av AEM, kanske koden som körs på den lokala utvecklingsmiljön inte stämmer överens med hur koden fungerar i testversionerna och produktionerna. I så fall är det särskilt viktigt att utföra grundliga tester av koden på mellanlagring innan den distribueras till produktion.
 
 
-* Synkronisera lokal kod med RDE-kommandoradsgränssnittet. Du kan installera ett innehållspaket, ett specifikt paket, en OSGI-konfigurationsfil, en innehållsfil och en zip-fil för en Apache/Dispatcher-konfiguration. Det går också att referera till ett fjärrinnehållspaket. Se [Verktyg för RDE-kommandorad](#rde-cli-commands) för mer information. Du kan använda statuskommandot för att validera att distributionen lyckades. Du kan också använda Package Manager för att installera innehållspaket.
+* Synkronisera lokal kod med RDE-kommandoradsgränssnittet. Du kan installera ett innehållspaket, ett specifikt paket, en OSGI-konfigurationsfil, en innehållsfil och en zip-fil för en Apache/Dispatcher-konfiguration. Det går också att referera till ett fjärrinnehållspaket. Se [Kommandoradsverktyg för RDE](#rde-cli-commands) för mer information. Du kan använda statuskommandot för att validera att distributionen lyckades. Du kan också använda Package Manager för att installera innehållspaket.
 
 * Testa koden i RDE. URL:er för författare och publicering är tillgängliga i Cloud Manager.
 
@@ -219,13 +219,13 @@ Alla AEM kan distribueras, till exempel paket med kod, innehåll eller en [behå
 
 >[!IMPORTANT]
 >
->Dispatcher-konfigurationen för WKND-projektet distribueras inte via installationen av innehållspaketet ovan. Du måste distribuera den separat enligt stegen&quot;Distribuera en Apache/Dispatcher-konfiguration&quot;.
+>Dispatcher-konfigurationen för WKND-projektet distribueras inte via innehållspaketinstallationen ovan. Distribuera den separat enligt stegen&quot;Distribuera en Apache/Dispatcher-konfiguration&quot;.
 
 <u>Distribuera en OSGI-konfiguration</u>
 
 `aio aem:rde:install com.adobe.granite.demo.MyServlet.cfg.json`
 
-där svaret för en lyckad distribution liknar följande:
+Där svaret för en lyckad distribution liknar följande:
 
 ```
 ...
@@ -238,7 +238,7 @@ Använd följande för att distribuera ett paket:
 
 `aio aem:rde:install ~/.m2/repository/org/apache/felix/org.apache.felix.gogo.jline/1.1.8/org.apache.felix.gogo.jline-1.1.8.jar`
 
-där svaret för en lyckad distribution liknar följande:
+Där svaret för en lyckad distribution liknar följande:
 
 ```
 ...
@@ -251,7 +251,7 @@ Använd följande för att distribuera en innehållsfil:
 
 `aio aem:rde:install world.txt -p /apps/hello.txt`
 
-där svaret för en lyckad distribution liknar följande:
+Där svaret för en lyckad distribution liknar följande:
 
 ```
 ..
@@ -262,25 +262,25 @@ där svaret för en lyckad distribution liknar följande:
 
 Hela mappstrukturen måste vara i form av en ZIP-fil för den här typen av konfiguration.
 
-Från `dispatcher` i ett AEM projekt kan du zippa upp dispatcherkonfigurationen genom att köra kommandot nedan maven:
+Från `dispatcher` i ett AEM projekt kan du zippa upp Dispatcher-konfigurationen genom att köra kommandot nedan:
 
 `mvn clean package`
 
-eller använda zip-kommandot nedan från `src` katalogen för `dispatcher` modul:
+Eller använda zip-kommandot nedan från `src` katalogen för `dispatcher` modul:
 
 `zip -y -r dispatcher.zip .`
 
-distribuera sedan konfigurationen med det här kommandot:
+Distribuera sedan konfigurationen med det här kommandot:
 
 `aio aem:rde:install target/aem-guides-wknd.dispatcher.cloud-X.X.X-SNAPSHOT.zip`
 
 >[!TIP]
 >
->Kommandot ovan förutsätter att du distribuerar [WKND](https://github.com/adobe/aem-guides-wknd) projektets dispatcherkonfigurationer. Se till att ersätta `X.X.X` med motsvarande WKND-projektversionsnummer eller projektspecifikt versionsnummer när du distribuerar projektets dispatcherkonfiguration.
+>Kommandot ovan förutsätter att du distribuerar [WKND](https://github.com/adobe/aem-guides-wknd) projektets Dispatcher-konfigurationer. Se till att ersätta `X.X.X` med motsvarande WKND-projektversionsnummer eller projektspecifikt versionsnummer när du distribuerar projektets Dispatcher-konfiguration.
 
 >[!NOTE]
 >
->RDE har stöd för dispatcherkonfigurationen för &quot;Flexible mode&quot;, men inte för dispatcherkonfigurationen för &quot;Legacy mode&quot;. Se [dokumentation för avsändare](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill ha information om de två lägena. Du kan även läsa dokumentationen om [migrera till flexibel modell](/help/implementing/dispatcher/validation-debug.md#migrating), om du inte redan har gjort det.
+>RDE har stöd för Dispatcher-konfiguration i flexibelt läge, men inte Dispatcher-konfiguration i äldre läge. Se [Dispatcher-dokumentation](/help/implementing/dispatcher/disp-overview.md#validation-debug) om du vill ha information om de två lägena. Du kan även läsa dokumentationen om [migrera till flexibel modell](/help/implementing/dispatcher/validation-debug.md#migrating), om du inte redan har gjort det.
 
 En lyckad distribution genererar ett svar som liknar följande:
 
@@ -293,7 +293,7 @@ Logs:
   Syntax OK
 ```
 
-Kod som distribueras till RDE genomgår inte någon Cloud Manager-pipeline och tillhörande kvalitetsgates, men koden går igenom en analys som rapporterar felen, vilket visas i kodexemplet nedan:
+Kod som distribueras till RDE genomgår inte någon Cloud Manager-pipeline och tillhörande kvalitetsportar. Koden går dock igenom en del analyser som rapporterar felen, vilket visas i kodexemplet nedan:
 
 ```
 $ aio aem:rde:install ~/.m2/repository/org/apache/felix/org.apache.felix.gogo.jline/1.1.8/org.apache.felix.gogo.jline-1.1.8.jar
@@ -308,7 +308,7 @@ The analyser found the following errors for publish :
 [api-regions-exportsimports] com.adobe.aem.temp:org.apache.felix.gogo.jline:1.1.8: Bundle org.apache.felix.gogo.jline:1.1.8 is importing package(s) [org.jline.builtins, org.jline.utils, org.apache.felix.service.command, org.apache.felix.service.threadio, org.jline.terminal, org.jline.reader, org.apache.felix.gogo.runtime, org.jline.reader.impl] in start level 20 but no bundle is exporting these for that start level.
 ```
 
-Kodexemplet ovan visar hur ett paket fungerar om det inte går att lösa. I så fall&quot;staged&quot; och installeras bara om kraven (saknad import, i detta fall) uppfylls genom installation av annan kod.
+Kodexemplet ovan visar beteendet om ett paket inte löses. I så fall&quot;mellanlagras&quot; den och installeras endast om dess krav (i detta fall&quot;import som saknas&quot;) uppfylls genom installation av annan kod.
 
 ### Kontrollera statusen för den lokala lagringsplatsen {#checking-rde-status}
 
@@ -318,7 +318,7 @@ Körs:
 
 `aio aem:rde:status`
 
-kommer att returnera:
+Returnerar följande:
 
 ```
 Info for cm-p12345-e987654
@@ -341,17 +341,17 @@ Du kan kontrollera historiken för distributioner som gjorts till RDE genom att 
 
 `aio aem:rde:history`
 
-som returnerar ett svar i form av
+som returnerar ett svar i form av:
 
 `#1: deploy completed for content-package aem-guides-wknd.all-2.1.0.zip on author,publish - done by 029039A55D4DE16A0A494025@AdobeID at 2022-09-12T14:41:55.393Z`
 
 ### Tar bort från RDE {#deleting-from-rde}
 
-Du kan ta bort konfigurationer och paket som tidigare har distribuerats till RDE via CLI-verktygen. Använd `status` om du vill visa en lista över vad som kan tas bort, som innehåller `bsn` för paket och `pid` för konfigurationer att referera till i kommandot delete.
+Du kan ta bort konfigurationer och paket som tidigare har distribuerats till RDE med CLI-verktyget. Använd `status` om du vill visa en lista över vad som kan tas bort, som innehåller `bsn` för paket och `pid` för konfigurationer att referera till i kommandot delete.
 
 Om `com.adobe.granite.demo.MyServlet.cfg.json` har installerats, `bsn` är bara `com.adobe.granite.demo.MyServlet`, utan **cfg.json** suffix.
 
-Det går inte att ta bort innehållspaket eller innehållsfiler. Om du vill ta bort dem bör du återställa den skrivskyddade miljön, vilket innebär att den återställs till standardläget.
+Det går inte att ta bort innehållspaket eller innehållsfiler. Om du vill ta bort dem bör du återställa den skrivskyddade miljön, vilket innebär att den återgår till standardläget.
 
 Se exemplet nedan för mer information:
 
@@ -361,23 +361,23 @@ aio aem:rde:delete com.adobe.granite.csrf.impl.CSRFFilter
 #14: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on publish - done by karl at 2022-09-12T22:01:12.979Z
 ```
 
-Mer information och demonstrationer finns i [använda RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html) videosjälvstudie.
+Mer information och demonstrationer finns i videosjälvstudien [använda RDE-kommandon (10:01)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html).
 
 ## Återställ {#reset-rde}
 
 Om du återställer RDE tas all anpassad kod, konfigurationer och innehåll bort från både författaren och publiceringsinstansen. Den här återställningen är användbar om den aktuella miljön har använts för att testa en viss funktion och du vill återställa den till ett standardläge så att du kan testa en annan funktion.
 
-En återställning anger att den senaste tillgängliga AEM är RDE.
+En återställning ställer in RDE till den senast tillgängliga AEM.
 
 <!-- Alexandru: hiding for now, do not delete
 
-Resetting can be done via [Cloud Manager](#reset-the-rde-cloud-manager) or via the [command line](#reset-the-rde-command-line). Resetting takes a few minutes and all existing content and code is deleted from the RDE.
+Resetting can be done by way of [Cloud Manager](#reset-the-rde-cloud-manager) or by way of the [command line](#reset-the-rde-command-line). Resetting takes a few minutes and all existing content and code is deleted from the RDE.
 
 >[NOTE!]
 >
 >You must be assigned the Cloud Manager Developer role to use the reset feature. If not, a reset action results in an error.
 
-### Reset the RDE via Command Line {#reset-the-rde-command-line}
+### Reset the RDE by way of Command Line {#reset-the-rde-command-line}
 
 You can reset the RDE and return it to a default state by running:
 
@@ -413,7 +413,7 @@ Du kan använda Cloud Manager för att återställa din RDE genom att följa ste
 
    ![Bekräfta återställning](/help/implementing/cloud-manager/assets/rde-reset-confirm.png)
 
-1. Cloud Manager bekräftar via ett banderollmeddelande att återställningsprocessen har startats.
+1. Cloud Manager bekräftar med ett banderollmeddelande att återställningsprocessen har startats.
 
    ![Återställ banderollmeddelande](/help/implementing/cloud-manager/assets/rde-reset-banner.png)
 
@@ -435,13 +435,13 @@ RDE-specifik OSGI-konfiguration kan tillämpas med hjälp av suffix i mappnamnet
 * `config.author.rde`
 * `config.publish.rde`
 
-Se [dokumentation för runmode](/help/implementing/deploying/overview.md#runmodes) för allmän information om körningslägen.
+Se [dokumentation för körningsläge](/help/implementing/deploying/overview.md#runmodes) för allmän information om körningslägen.
 
 >[!NOTE]
 >
 >RDE OSGI-konfigurationen är unik eftersom den ärver värdena för alla OSGI-egenskaper som deklarerats av paketets `dev` körningsläge.
 
-RDE skiljer sig från andra miljöer där innehåll kan installeras i en install.rde-mapp (eller install.author.rde eller install.publish.rde) under /apps. På så sätt kan du implementera innehåll för att Git och leverera det till RDE med kommandoradsverktygen.
+RDE skiljer sig från andra miljöer där innehåll kan installeras i en install.rde-mapp (eller install.author.rde eller install.publish.rde) under /apps. På så sätt kan du implementera innehåll för att Git och leverera det till RDE med hjälp av kommandoradsverktygen.
 
 ## Fylla med innehåll {#populating-content}
 
@@ -455,7 +455,7 @@ När en RDE återställs tas allt innehåll bort, och om så önskas måste en e
 
 1. Använd pakethanteraren
 
-Observera att du är begränsad till 1 GB när du synkroniserar innehållspaket.
+Du är begränsad till 1 GB när du synkroniserar innehållspaket.
 
 ## Loggning {#logging}
 
@@ -463,7 +463,7 @@ Loggnivåer kan ställas in genom att modifiera OSGi-konfigurationer. Kontroller
 
 ## Hur skiljer sig de lokala utvecklingsmiljöerna från utvecklingsmiljöer i molnet? {#how-are-rds-different-from-cloud-development-environments}
 
-Även om RDE på många sätt liknar en utvecklingsmiljö i molnet finns det vissa mindre arkitektoniska skillnader som gör det möjligt att snabbt synkronisera kod. Mekanismen för att hämta kod till RDE skiljer sig åt - för RDE synkroniseras en kod från en lokal utvecklingsmiljö, medan en för Cloud Development Environment distribuerar kod via Cloud Manager.
+Även om RDE på många sätt liknar en utvecklingsmiljö i molnet finns det vissa mindre arkitektoniska skillnader som gör det möjligt att snabbt synkronisera kod. Mekanismen för att hämta kod till RDE skiljer sig åt - för RDE synkroniserar en kod från en lokal utvecklingsmiljö, medan en för Cloud Development Environment distribuerar koden via Cloud Manager.
 
 Därför rekommenderar vi att du distribuerar koden till en Cloud Development Environment via icke-produktionsflödet när du har validerat koden i en RDE-miljö. Testa slutligen koden innan du distribuerar med produktionsflödet.
 
@@ -480,13 +480,13 @@ Det finns en RDE för varje licensierad lösning och Adobe erbjuder även ytterl
 
 Hur många skrivbord som behövs beror på en organisations sammansättning och processer. Den mest flexibla modellen är när en organisation köper en dedikerad RDE för var och en av sina AEM Cloud Service-utvecklare. I den här modellen kan varje utvecklare testa sin kod på den lokala utvecklingsmiljön utan att samordna med andra gruppmedlemmar kring om det finns en tillgänglig RDE-miljö.
 
-Å andra sidan kan ett team med en enda RDE använda interna processer för att samordna vilken utvecklare som kan använda miljön vid en viss tidpunkt. Detta kan vara möjligt när en utvecklare har nått en milstolpe för mellanliggande funktioner och är redo att validera i en molnmiljö där de snabbt kan göra de ändringar de behöver.
+Å andra sidan kan ett team med en enda RDE använda interna processer för att samordna vilka utvecklare som kan använda miljön vid en viss tidpunkt. Detta kan vara möjligt när en utvecklare har nått en milstolpe för mellanliggande funktioner och är redo att validera i en molnmiljö där de snabbt kan göra de ändringar de behöver.
 
-En mellanliggande modell är en modell där en organisation köper ett antal olika lagringssystem, vilket innebär att det är större sannolikhet att det finns en oanvänd lagringsmodell tillgänglig. En strategi kan vara att tilldela en RDE per team eller större funktion. Interna processer kan användas för att samordna användningen av miljöerna.
+En mellanliggande modell är en modell där en organisation köper flera olika lagringssystem, vilket innebär att det är större sannolikhet att det finns en oanvänd lagringsbar dataström tillgänglig. En strategi kan vara att tilldela en RDE per team eller större funktion. Interna processer kan användas för att samordna användningen av miljöerna.
 
 ## Hur skiljer sig en AEM Forms Cloud Service Rapid Development Environment (RDE) från andra miljöer? {#how-are-forms-rds-different-from-cloud-development-environments}
 
-Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environment för att snabbt utveckla adaptiva Forms, arbetsflöden och anpassningar som att anpassa kärnkomponenter, integreringar med tredjepartssystem med mera. AEM Forms Cloud Service Rapid Development Environment (RDE) saknar stöd för kommunikations-API:er och för funktioner som kräver ett dokument för registrering, som att generera ett dokument för registrering när ett adaptivt formulär skickas. Följande AEM Forms-funktioner är inte tillgängliga i en Rapid Development Environment (RDE):
+Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environment för att snabbt utveckla adaptiva Forms, arbetsflöden och anpassningar som att anpassa kärnkomponenter, integreringar med tredjepartssystem med mera. AEM Forms Cloud Service Rapid Development Environment (RDE) saknar stöd för kommunikations-API:er. Den har inte heller stöd för funktioner som kräver en dokumentfil, som att generera en dokumentfil när en anpassad blankett skickas in. Följande AEM Forms-funktioner är inte tillgängliga i en Rapid Development Environment (RDE):
 
 * Konfigurera ett postdokument för ett adaptivt formulär
 * Generera ett registreringsdokument när ett adaptivt formulär skickas eller när ett arbetsflödessteg tas
@@ -496,8 +496,8 @@ Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environm
 
 >[!NOTE]
 >
-> Det är ingen skillnad på användargränssnittet i Rapid Development Environment (RDE) och andra Cloud Service för Forms. Alla alternativ som är relaterade till Dokumentformat, som att välja ett dokument med en postmall för ett anpassat formulär, fortsätter att visas i användargränssnittet. De här miljöerna har inga kommunikations-API:er och dokumentfunktioner för att testa sådana alternativ. När du väljer ett alternativ som kräver funktioner för kommunikations-API:er eller dokument med post utförs ingen åtgärd och ett felmeddelande visas eller returneras.
+> Det är ingen skillnad på användargränssnittet i Rapid Development Environment (RDE) och andra Cloud Service för Forms. Alla alternativ som är relaterade till Dokumentformat, som att välja ett dokument med en postmall för ett anpassat formulär, fortsätter att visas i användargränssnittet. De här miljöerna har inga kommunikations-API:er och dokumentfunktioner för att testa sådana alternativ. När du väljer ett alternativ som kräver funktioner för kommunikations-API:er eller dokument med post utförs ingen åtgärd och ett felmeddelande visas.
 
 ## RDE, genomgång
 
-Mer information om RDE på AEM as a Cloud Service finns i [videosjälvstudiekurs som visar hur du konfigurerar den, hur du använder den och utvecklingscykeln](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
+Om du vill veta mer om RDE i AEM as a Cloud Service kan du titta i videosjälvstudiekursen som visar [hur den ska konfigureras, hur den ska användas och utvecklingscykeln (01:25)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html).
