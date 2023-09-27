@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
+source-git-commit: 0dab7428d8ae5ec4c11a88ff310fad649a365868
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 2%
+source-wordcount: '511'
+ht-degree: 1%
 
 ---
 
@@ -13,42 +13,60 @@ ht-degree: 2%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 13420 {#release-13420}
+## Version 13665 {#release-13665}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 13420, som offentliggjordes den 12 september 2023. Den här underhållsversionen ersätter version 13323.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 13665, som offentliggjordes den 27 september 2023. Den här underhållsversionen ersätter version 13420.
 
-2023.9.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
+2023.10.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-13420}
+### Förbättringar {#enhancements-13665}
 
-- ASSETS-19544: Resurser som senast ändrades av egenskapen ställs nu in på den användare som begär bearbetning.
+* Olika förbättringar i API:erna för innehållsfragment.
+* ASSETS-26713: Assets Dashboard: New Experience UI Dashboard kan nu nås från Touch UI.
+* SITES-11206: Content Fragments: Search API for Content Fragments.
+* SITES-11262: Content Fragments: Button to switch to the new Content Fragment Editor.
+* SITES-15447: Core Components: Release of version 2.23.4.
 
-### Åtgärdade problem {#fixed-issues-13420}
+### Åtgärdade problem {#fixed-issues-13665}
 
-- ASSETS-27628: Felaktig kanalnod skapas när resurspanelen anpassas
-- ASSETS-27539: Överför begränsningar för matchning av reguljära uttryck.
-- ASSETS-26530: Enhetligt gränssnitt återför inte användare till originalsidan.
-- ASSETS-22719: Hakparenteser i Namngivning av brytpunkter för smart beskärning bryter redigeringsfunktionen för smart beskärning.
-- ASSETS-27726: linkshare.html ska inte indexeras av Google.
-- ASSETS-27791: Validering av metadatamatchema utförs endast för det första fältet.
-- ASSETS-25544: Korrigerad inaktiverad Cacheogiltighetsknapp för CDN.
-- ASSETS-26575: Trunkering av fast namn när bilduppsättningar skapas.
-- ASSETS-26705: Korrigerad onödig bearbetning av icke-DM-mappresurser och innehållsfragment.
-- ASSETS-25740: Fasta skärmläsare utan berättarröst Namn och roll för Redigera/Beskär-kontroller på sidan Redigera smarta beskärningar med hjälp av nedpilstangenterna.
-- CQ-4354266: Det går inte att öppna inkorgsobjekt.
-- CQ-4354347: Uppdaterade AEM.
-- DISP-1009: Användaren-agenten trimmar X-Forwarded-Host som icke-första huvud.
-- Olika hjälpmedels- och säkerhetsrelaterade korrigeringar.
+* Olika översättningsrelaterade uppdateringar.
+* CQ-4354428: Arbetsflöden: Det går inte att slutföra en uppgift i Inbox.
+* SITES-9733: Innehållsfragment: Resursreferenser i innehållets fragmentreferenspanel visar 0(noll)-referenser.
+* SITES-14561: Content Fragments: Fixed and improved HTML to Markup conversion.
+* SITES-14882: Content Fragments: När vi redigerar Content Fragment och stänger fliken utan att klicka på knappen Save (Spara) eller close (stäng), lagras värdena.
+* SITES-15167: Innehållsfragment: Patchering av en variation med ogiltig nyttolast returnerar inte 400 utan 500.
+* SITES-15514: Content Fragments: Malformed Markdown output for table inside RTE.
+* SITES-15661: Content Fragments: Do not use unique constraand reorder items in references fields in Fragments API.
+* SITES-15730: Skärmar: Funktionen för förhandsvisning av rasterkanal fungerar inte på kontrollpanelen.
+* SITES-15995: Content Fragments: Mime types of both model model and fragment long text fields are hardcoded.
+* SITES-16074: Content Fragments: Taggfält som inte är String[] kan inte hämtas från JCR.
+* SITES-16084: Innehållsfragment: CFHomeCardModelImpl saknar målnavigator.
+* SITES-14773: Experience Fragments: Link Reference does not get updated inside experience fragment.
+* SITES-14899: Experience Fragments: Multiple offers created for XF variations in Target.
+* SITES-8590: GraphQL: Kodningsproblem med variabler i beständiga frågor.
+* SITES-9224: GraphQL: Undantaget &quot;Writer has already been closed&quot; i GraphQLServlet.
+* SITES-14800: GraphQL: Undantag i beständiga GraphQL-frågor med variabler.
+* SITES-15586: GraphQL: Problem med beständig frågefiltrering med null-värden.
+* SITES-15622: GraphQL: Problem med beständiga frågor med tal och bool-parametrar.
+* SITES-15654: GraphQL: Issue with union &amp; properties with same name.
+* SITES-15267: Startar: Erbjudandet hämtar inte startsidor som ändrats innan startkonfigurationen ändrades.
+* SITES-15406: Startar: Det går inte att lägga till en startsida.
+* SITES-15427: Startar: Inkonsekvent beteende för omfattningen&quot;Promote current page and sub pages&quot;.
+* SITES-15429: Startar: Redigeringssidor som tas bort vid befordran av starter.
+* SITES-15462: Startar: Automatisk befordringsprocess publicerar sidor utanför kampanjomfånget.
+* SITES-15815: Startar: Borttagen sida från start medför att Launch inte höjs korrekt.
+* SITES-15223: Page Editor: Det går inte att ändra storlek på komponenter i emulatorn för surfplattestorlek.
+* SITES-15463: Sidmallar: Det går inte att publicera mallar.
 
-### Kända fel {#known-issues-13420}
+### Kända fel {#known-issues-13665}
 
-Ingen.
+Ingen
 
-### Inbäddade tekniker {#embedded-tech-13420}
+### Inbäddade tekniker {#embedded-tech-13665}
 
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.54-T20230817132355-3800a65 | [Oak API 1.54.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.54.0/index.html) |
 | AEM SLING API | Version 2.27.2 | [API för Apache Sling 2.27.2](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTML | Version 1.4.20-1.4.0 | [HTML-mallens språkspecifikation](https://github.com/adobe/htl-spec) |
-| Grundläggande komponenter i AEM | Version 2.23.2 | [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components) |
+| Grundläggande komponenter i AEM | Version 2.23.4 | [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components) |
