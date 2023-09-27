@@ -2,9 +2,9 @@
 title: Introduktion till as a Cloud Service onboarding-resa
 description: Börja här för en översikt över den guidade resan genom introduktionsprocessen till AEM as a Cloud Service.
 exl-id: 892577db-05dc-49ff-bb2c-203efdb89c8c
-source-git-commit: d76a0782c72045698e8a595574f9e4c64c3ebaff
+source-git-commit: 7553d3c9f82c8b675af5f704a48bc316ba0d4885
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1221'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ I följande artiklar beskrivs grundbegreppen för introduktion och du får grund
 
 >[!NOTE]
 >
->Edge Delivery Services är en ny uppsättning sammansatta tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Mer information om Edge Delivery-tjänster finns i [Sidan Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html).
+>Edge Delivery Services är en ny uppsättning sammanställningsbara tjänster som möjliggör en flexibel och snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Mer information om Edge Delivery-tjänster finns i [Sidan Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html).
 
 ## What&#39;s Next {#what-is-next}
 
