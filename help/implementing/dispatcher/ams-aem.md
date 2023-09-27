@@ -3,7 +3,7 @@ title: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 description: Migrera Dispatcher-konfigurationen från AMS till AEM as a Cloud Service
 feature: Dispatcher
 exl-id: ff7397dd-b6e1-4d08-8e2d-d613af6b81b3
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 24c6e5e78e3e1b30e4becfad2f4f6e57e75ad4e9
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 14%
@@ -104,7 +104,7 @@ Ta bort en servergruppsfil i `conf.dispatcher.d/enabled_farms` som har `author`,
 
 ### Byta namn på servergruppsfiler
 
-Alla gårdar i `conf.d/enabled_farms` måste byta namn för att matcha mönstret `*.farm`, t.ex. en servergruppsfil som kallas `customerX_farm.any` ska byta namn `customerX.farm`.
+Alla gårdar i `conf.dispatcher.d/enabled_farms` måste byta namn för att matcha mönstret `*.farm`, t.ex. en servergruppsfil som kallas `customerX_farm.any` ska byta namn `customerX.farm`.
 
 ### Kontrollera cache
 
@@ -124,7 +124,7 @@ Ta bort alla filer som har suffixet `_invalidate_allowed.any`.
 
 Kopiera filen `conf.dispatcher.d/cache/default_invalidate_any` från AEM i Cloud Dispatcher-konfigurationen till den platsen.
 
-I varje gruppfil tar du bort allt innehåll i `cache/allowedClients` och ersätta den med
+I varje gruppfil tar du bort allt innehåll i `cache/allowedClients` och ersätta den med:
 
 ```
 $include "../cache/default_invalidate.any"
@@ -188,7 +188,7 @@ Ta bort alla filer i den mappen.
 
 Kopiera filen `conf.dispatcher.d/renders/default_renders.any` från standardkonfigurationen AEM as a Cloud Service Dispatcher till den platsen.
 
-I varje gruppfil tar du bort allt innehåll i `renders` och ersätta den med
+I varje gruppfil tar du bort allt innehåll i `renders` och ersätta den med:
 
 ```
 $include "../renders/default_renders.any"
