@@ -2,9 +2,9 @@
 title: Förhandsgranska innehåll
 description: Lär dig hur du använder AEM förhandsvisningstjänst för att förhandsgranska innehåll innan du publicerar.
 exl-id: 6b4b57f6-2e66-4c83-94d9-bc1e0daab0f3
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 1804eacb5399dc38c97ff953031666711b9a0e4f
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '316'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 0%
 AEM erbjuder en tjänst för förhandsgranskning av webbplatser som gör att utvecklare och innehållsförfattare kan förhandsgranska webbplatsens slutresultat innan den når publiceringsmiljön och blir tillgänglig för allmänheten.
 
 Det gör det lättare att förhandsgranska sidor som annars inte skulle vara synliga i redigeringsmiljön, som sidövergångar och annat innehåll på publiceringssidan.
+
+>[!NOTE]
+>
+>Som innehållet *publicerad* till förhandsvisningsmiljön är den tillgänglig via URL (så behöver inte åtkomst till AEM).
 
 Mer information om förhandsvisningsmiljöerna finns i [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
 
@@ -31,6 +35,9 @@ Du kan publicera innehåll till förhandsgranskningstjänsten med **Hanterad pub
 
 1. I en dialogruta visas URL:er för att komma åt innehållet i förhandsvisningsmiljön.
 
+   >[!NOTE]
+   >
+   >Som innehållet *publicerad* till förhandsvisningsmiljön är den tillgänglig via URL (så behöver inte åtkomst till AEM).
 
 Du kan även använda de URL-adresser som visas i guiden för att visa förhandsgranskningsinnehållet, men du kan också lägga till `preview-` till publicerings-URL:en för produktionsinstansen.
 
