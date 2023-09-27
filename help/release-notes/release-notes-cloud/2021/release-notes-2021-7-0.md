@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.7.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 848f6a29-2e0f-4976-8ed7-6b7f69408c1b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: f956b8379b5b93bc00e25f0eec641430c5565e34
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1317'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020 och 2021.
 
 >[!NOTE]
 >
@@ -34,8 +34,8 @@ Ta en titt på [Versionsöversikt juli 2021](https://video.tv.adobe.com/v/335580
 
 ### Nyheter {#what-is-new-foundation}
 
-* Flexiblare konfigurering av dispatcher: Projekten kan struktureras enklare. Du kan nu t.ex. inkludera flera regelfiler för omskrivning som återspeglar webbplatsens struktur. [Läs mer om](/help/implementing/dispatcher/disp-overview.md#validation-debug) det här flexibla läget, inklusive hur du strukturerar din dispatcherkonfiguration så att du kan utnyttja den.
-* Gränssnittet för trädreplikering under replikeringsagentens &quot;Distribuera&quot;-flik bör betraktas som inaktuellt och kommer att tas bort efter den 30 september. [Läs mer om](/help/operations/replication.md#tree-activation) alternativa replikeringsstrategier.
+* Flexiblare Dispatcher-konfiguration: Projekten kan enklare struktureras. Du kan nu t.ex. inkludera flera regelfiler för omskrivning som återspeglar webbplatsens struktur. [Läs mer om](/help/implementing/dispatcher/disp-overview.md#validation-debug) det här flexibla läget, inklusive hur du strukturerar Dispatcher-konfigurationen så att du kan utnyttja den.
+* Gränssnittet för trädreplikering på fliken Distribuera i replikeringsagenten bör betraktas som inaktuellt och har tagits bort efter den 30 september 2021. [Läs mer om](/help/operations/replication.md#tree-activation) alternativa replikeringsstrategier.
 * Paket `org.apache.sling.datasource-1.0.4.jar` för att använda Sling-datakällor har tagits bort eftersom funktionen är inaktuell och inte används av kunderna.
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
@@ -44,11 +44,11 @@ Ta en titt på [Versionsöversikt juli 2021](https://video.tv.adobe.com/v/335580
 
 * Med funktionen för innehållsautomatisering kan [!DNL Experience Manager Assets] använder [!DNL Adobe Creative Cloud] API:er för att automatisera materialproduktion i stor skala. Det förbättrar innehållets hastighet genom att dramatiskt minska den tid det tar och de iterationer som krävs för att skapa varianter av samma material. Funktionen kräver ingen programmering och fungerar inifrån DAM. Se [generera variationer av resurser med hjälp av Creative Cloud-integrering](/help/assets/cc-api-integration.md).
 
-* [!DNL Experience Manager Assets] innehåller [!DNL Document Cloud] PDF Viewer om du vill förhandsgranska PDF-dokument internt. Med den här funktionen kan användare förhandsgranska flersidiga PDF-filer utan bearbetning eller konvertering. Den här funktionen förbättrar pariteten med [!DNL Experience Manager] 6.5. De kontroller som är tillgängliga i visningsprogrammet omfattar zoomning, navigering till sidor, avdockningskontroller och visning i helskärmsläge. Användarna kan också förhandsgranska och hoppa till sidor och bokmärken. Kommentarer i själva filen stöds. Kommentarer och kommentarer om innehåll i filen PDF läggs till i en framtida version.
+* [!DNL Experience Manager Assets] innehåller [!DNL Document Cloud] PDF Viewer om du vill förhandsgranska PDF-dokument internt. Med den här funktionen kan användare förhandsgranska flersidiga PDF-filer utan bearbetning eller konvertering. Den här funktionen förbättrar pariteten med [!DNL Experience Manager] 6.5. De kontroller som är tillgängliga i visningsprogrammet omfattar zoomning, navigering till sidor, avdockningskontroller och visning i helskärmsläge. Användarna kan också förhandsgranska och hoppa till sidor och bokmärken. Kommentarer i själva filen stöds. Kommentarer och kommentarer om innehåll i filen PDF planeras för en framtida version.
 
   ![Förhandsgranska PDF-filer i [!DNL Experience Manager] med PDF Viewer](/help/assets/assets/preview-pdf-file-viewer.png)
 
-* Länkdelningsfunktionen använder asynkrona nedladdningar som ökar nedladdningshastigheten. Se [Hämta resurser som delas via länkdelning](/help/assets/download-assets-from-aem.md#link-share-download).
+* Funktionen för hämtning av länkdelning använder asynkrona nedladdningar som ökar nedladdningshastigheten. Mer information finns i [Hämta resurser som delas via länkdelning](/help/assets/download-assets-from-aem.md#link-share-download).
 
   ![Hämta inkorg](/help/assets/assets/download-inbox.png)
 
@@ -73,7 +73,7 @@ Ta en titt på [Versionsöversikt juli 2021](https://video.tv.adobe.com/v/335580
   ![Add metadata schema from folder properties](/help/assets/assets/metadata-schema-folder-properties.png)
 -->
 
-* När du delar digitala resurser som en länk kan användarna kopiera URL:en till Urklipp. Förbättringen gör att du kan dela resurser snabbare och bekvämare.
+* När du delar digitala resurser som en länk kan användarna kopiera URL-adressen till Urklipp. Förbättringen gör att du kan dela resurser snabbare och bekvämare.
 
 ### Fel som har åtgärdats i [!DNL Assets] {#assets-bugs-fixed}
 
@@ -95,9 +95,9 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 * **Variable Data Externalizer**: Du kan spara data AEM arbetsflödesvariabler i ett externt lagringssystem som hanteras av din organisation.
 
-* **Acroform-based Document of Record**: Du kan också [använd Adobe Acrobat Form PDF (Acrobat PDF)](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för postdokument förutom XFA-baserad formulärmall.
+* **Acroform-based Document of Record**: Du kan också [använd Adobe Acrobat Form PDF (Acrobat PDF)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för postdokument förutom XFA-baserad formulärmall.
 
-* **Microsoft Azure-dataarkivanslutning**: Du kan nu [ansluta formulärdatamodell till Microsoft Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-azure-storage.html). Med den kan du hämta och lagra adaptiva formulärdata till Microsoft Azure Storage som en BLOB.
+* **Microsoft® Azure-anslutning för datalager**: Du kan nu [ansluta formulärdatamodell till Microsoft® Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html). Med den kan du hämta och lagra adaptiva formulärdata i Microsoft® Azure Storage som en BLOB.
 
 ## CIF-tillägg {#cloud-services-cif}
 
@@ -114,7 +114,7 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 ### Felkorrigeringar {#bug-fixes-screens}
 
-* Inställningarna för innehållsleverantören valideras nu när du skapar eller uppdaterar.
+* Inställningarna för innehållsleverantören valideras nu när de skapas eller uppdateras.
 
 * Alla visningsvyer har en mappkolumn.
 
@@ -124,9 +124,9 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 * Hjälplänken har uppdaterats för att matcha den nya dokumentationen för skärmar i molnet.
 
-* Det går nu att ta bort spellistor och inte tillåta att spellistor med tilldelade spelare tas bort.
+* Det går nu att ta bort tilldelningen av spellistor och inte ta bort spellistor med tilldelade spelare.
 
-* Player hämtar nu resurser igen när ALL-cachen har rensats.
+* Spelaren hämtar nu resurser igen när ALL-cachen har rensats.
 
 * Upprepa schemaläggning fungerar nu om *Sluttid* är inställt för följande dag.
 
@@ -138,7 +138,7 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 ### Nyheter {#what-is-new-xml-documentation}
 
-XML Documentation för Experience Manager as a Cloud Service är allmänt tillgängligt. Med programmet kan Experience Manager as a Cloud Service kunder köpa XML Documentation-tillägg för att importera, skapa, hantera och leverera tekniskt innehåll i flera kanaler, inklusive Experience Manager Sites.
+XML Documentation för Experience Manager as a Cloud Service är allmänt tillgängligt. Med det kan Experience Manager as a Cloud Service kunder köpa ett XML Documentation-tillägg för att importera, skapa, hantera och leverera tekniskt innehåll i flera kanaler, inklusive Experience Manager Sites.
 
 ## Cloud Manager {#cloud-manager}
 
@@ -151,9 +151,9 @@ Nästa version är planerad till den 12 augusti 2021.
 
 ### Nyheter {#what-is-new-cm-july}
 
-* Kunderna kan nu använda Azul 8 och 11 JDK:er för sina Cloud Manager-byggprocesser och kan antingen välja att använda en av dessa JDK:er för verktygskedjor-kompatibla Maven-plugin-program *eller* hela Maven-processen.
+* Kunder kan nu använda Azul 8 och 11 JDK:er för sina Cloud Manager-byggprocesser och kan välja att använda en av dessa JDK:er för verktygskedjor-kompatibla Maven-plugins *eller* hela Maven-processen.
 
-* IP för utgående utgång loggas nu i loggfilen för byggsteget.
+* IP-adressen för utgående utgång är nu loggad i loggfilen för byggsteget.
 
 * Scen- och produktionsmiljöer som kör äldre versioner av AEM rapporterar nu statusen **Uppdatering tillgänglig**.
 
@@ -161,17 +161,17 @@ Nästa version är planerad till den 12 augusti 2021.
 
 * Det maximala antalet domäner som kan konfigureras har ökat till 500 per miljö.
 
-* The **Hantera Git** knapparna har ändrats till **Åtkomst till Git-information** och dialogrutan har uppdaterats.
+* The **Hantera Git** har namnändrats till **Åtkomst till Git-information** och dialogrutan har uppdaterats.
 
 * Den version av AEM Project Archetype som används av Cloud Manager har uppdaterats till version 28.
 
 ### Felkorrigeringar {#bug-fixes-cm-july}
 
-* I vissa situationer var Förhandsgranskning inte ett tillgängligt alternativ när en IP-Tillåtelselista skulle bindas till en miljö.
+* I vissa situationer var Förhandsvisning inte ett tillgängligt alternativ när en IP-tillåtelselista skulle bindas till en miljö.
 
 * Manuell navigering till sidan med körningsinformation för en körning som inte finns visade inte på något fel, bara en oändlig inläsningsskärm.
 
-* Felmeddelandet som visades när det maximala antalet SSL-certifikat nåddes var inte till någon hjälp.
+* Felmeddelandet som visades när maximalt antal SSL-certifikat nåddes var inte till någon hjälp.
 
 * I vissa fall kan det finnas en diskrepans i den version av produkten som visas på pipeline-kortet på **Ökning** sida.
 
@@ -179,7 +179,7 @@ Nästa version är planerad till den 12 augusti 2021.
 
 ### Kända fel {#known-issues-cm-july}
 
-Kunder som byter till Azul JDK bör vara medvetna om att inte alla befintliga program kompileras utan fel i Azul JDK. Vi rekommenderar att du testar lokalt innan du byter.
+Kunder som byter till Azul JDK bör känna till att inte alla befintliga program kompileras utan fel i Azul JDK. Adobe rekommenderar att du testar lokalt innan du byter.
 
 ## Cloud Acceleration Manager {#cam}
 
@@ -189,8 +189,8 @@ Releasedatum för Cloud Acceleration Manager är 15 juli 2021.
 
 ### Nyheter {#what-is-new-cam}
 
-Cloud Acceleration Manager är en molnbaserad applikation som är utformad för att vägleda era IT-team under hela övergångsresan, från planering till live Cloud Service. Konfigurera era team för en framgångsrik migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa er att AEM som Cloud Service under hela kundresan. Läs mer [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en).
+Cloud Acceleration Manager är en molnbaserad applikation som är utformad för att vägleda era IT-team under hela övergångsresan, från planering till live Cloud Service. Konfigurera teamet för en lyckad migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa till att AEM som Cloud Service under hela kundresan. Läs mer [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=en).
 
 >[!NOTE]
 >
-> Kontrollera detta [Demonstrationsvideo om Cloud Acceleration Manager](https://video.tv.adobe.com/v/335547).
+> Kolla in den här [Demonstrationsvideo om Cloud Acceleration Manager](https://video.tv.adobe.com/v/335547).

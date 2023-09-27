@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.8.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 8b041934-1c4a-4670-9b03-d38f683b99e5
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: f956b8379b5b93bc00e25f0eec641430c5565e34
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2020, 2021 och så vidare.
+>Härifrån kan du navigera till versionsinformation för tidigare versioner. Exempel: för 2020 och 2021.
 
 >[!NOTE]
 >
@@ -34,12 +34,12 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* När användarna delar digitala resurser som en länk kan de kopiera URL:en till Urklipp direkt. Förbättringen gör att du kan dela resurser snabbare och bekvämare. Den här funktionen gör det möjligt att dela material snabbare och smidigt.
+* När du delar digitala resurser som en länk kan användaren kopiera URL:en till Urklipp direkt. Förbättringen gör att du kan dela resurser snabbare och bekvämare. Den här funktionen gör det möjligt att dela material snabbare och smidigt.
 
   ![Alternativet Kopiera URL när du delar en resurs som en länk](/help/assets/assets/link-share-copy-URL-option.png)
   *Bild: När du delar en resurs som en länk kan du nu kopiera URL-adressen och dela den separat.*
 
-* När du överför TXT-filer genererar resursens mikrotjänster automatiskt en miniatyrbild. PNG-miniatyrbilden är en återgivning av TXT-filen som gör det lättare för användare att identifiera innehållet eller filerna i viss utsträckning, utan att öppna filerna. Den här funktionen kräver ingen konfiguration och fungerar som standard.
+* När du överför TXT-filer genereras en miniatyrbild automatiskt av resursens mikrotjänster. PNG-miniatyrbilden är en återgivning av en TXT-fil som gör det lättare för användare att identifiera innehållet eller filerna i viss utsträckning, utan att öppna filerna. Den här funktionen kräver ingen konfiguration och fungerar som standard.
 
   ![En återgivning av en TXT-fil genereras automatiskt av [!DNL Assets] i PNG-format](/help/assets/assets/thumbnail-rendition-txt-file.png)
   *Bild: En återgivning av en TXT-fil genereras automatiskt så att du kan identifiera filen utan att öppna den.*
@@ -62,27 +62,27 @@ Ta en titt på [Versionsöversikt augusti 2021](https://video.tv.adobe.com/v/336
 
 * Automated forms conversion service kan [konvertera PDF forms till italienska och portugisiska](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?#language-specific-meta-model) till Adaptiv Forms.
 
-* **Acroform-based Document of Record**: AEM Forms as a Cloud Service stöder användning av [Adobe Acrobat Form PDF (Acrobat PDF)](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/create-an-adaptive-form/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för postdokument förutom XFA-baserad formulärmall.
+* **Acroform-based Document of Record**: AEM Forms as a Cloud Service stöder användning av [Adobe Acrobat Form PDF (Acrobat PDF)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för postdokument förutom XFA-baserad formulärmall.
 
-* **Microsoft Azure-dataarkivanslutning**: Du kan nu [ansluta formulärdatamodell till Microsoft Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/use-form-data-model/configure-azure-storage.html). Med den kan du hämta och lagra adaptiva formulärdata till Microsoft Azure Storage som en BLOB.
+* **Microsoft® Azure-anslutning för datalager**: Du kan nu [ansluta formulärdatamodell till Microsoft® Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html). Med den kan du hämta och lagra adaptiva formulärdata i Microsoft® Azure Storage som en BLOB.
 
 ### Nya funktioner i [!DNL Forms] prerelease channel {#prerelease-features-forms}
 
-* **Använda Adobe Sign-roller i ett adaptivt formulär**: Adobe Sign för företags- och företagsnivåer har möjlighet att utöka rollerna för avtalsmottagare, utöver bara signeraren, så att de bättre motsvarar deras arbetsflödesbehov. Nu kan du göra det möjligt för alla mottagare av avtal att konfigurera sin roll i ett adaptivt formulär, med signerare som standardroll.
+* **Använda Adobe Sign-roller i ett adaptivt formulär** - Adobe Sign för företags- och företagsnivåer kan utöka rollerna för avtalsmottagare, utöver bara signeraren, så att de bättre motsvarar deras arbetsflödesbehov. Nu kan du göra det möjligt för alla mottagare av avtalet att konfigurera sin roll i ett adaptivt formulär, med signerare som standardroll.
 
-* **Analytics för Adaptive Forms**: Nu kan du samla in och spåra användarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra användarupplevelsen.
+* **Analytics för Adaptive Forms** - Du kan nu samla in och spåra slutanvändarbeteende via Adobe Analytics för Adaptive Forms för att få information om slutanvändarna. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra slutanvändarens upplevelse.
 
-* **Anslut enkelt AEM Forms med Microsoft Dynamics och Salesforce.com**: Tjänsten tillhandahåller out of the box-datakällkonfiguration och datamodeller för Microsoft Dynamics och Salesforce.com, vilket gör det snabbare och enklare för utvecklare att konfigurera Microsoft Dynamics och Salesforce.com som datakällor för ett anpassat formulär.
+* **Anslut enkelt AEM Forms med Microsoft® Dynamics och Salesforce.com** - Tjänsten tillhandahåller out of the box-datakällkonfiguration och datamodeller för Microsoft® Dynamics och Salesforce.com. Detta gör det snabbare och enklare för utvecklare att konfigurera Microsoft® Dynamics och Salesforce.com som datakällor för ett anpassat formulär.
 
 ## CIF-tillägg {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
-* Nytt användargränssnitt för kategoriväljare för förbättrad användarupplevelse, ökad effektivitet och bättre stöd för komplexa produktkataloger
+* Nytt användargränssnitt för kategoriväljare för förbättrad användarupplevelse, ökad effektivitet och bättre stöd för komplex produktkatalog
 
   ![Ny kategoriväljare](/help/assets/CIF/category-picker.png)
 
-* Bättre stöd för A11Y för CIF Core-komponenter
+* Bättre stöd för A11Y för CIF kärnkomponenter
 
 ## Cloud Manager {#cloud-manager}
 
@@ -95,16 +95,16 @@ Nästa version är planerad till 9 september 2021.
 
 ### Nyheter {#what-is-new-aug}
 
-* Cloud Service kan nu visa serviceavtalsrapporter (SLA) i Cloud Manager. Detta kommer att göras tillgängligt stegvis under de närmaste månaderna.
-Se [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/sla-reporting.html) om du vill veta mer.
+* Cloud Service kan nu visa serviceavtalsrapporter (SLA) i Cloud Manager. Detta kommer att göras tillgängligt successivt under de närmaste månaderna.
+Se [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/sla-reporting.html).
 
-* Typ och allvarlighetsgrad för IndexType och `IndexDamAssetLucene` kvalitetsreglerna har ändrats. Nu finns båda Bugs of Blocker *serverity*.
+* Typ och allvarlighetsgrad för IndexType och `IndexDamAssetLucene` kvalitetsreglerna har ändrats. Nu finns båda Bugs of Blocker *allvarlighetsgrad*.
 
-* Nya kvalitetsregler för Oak-index har införts för att omfatta asynkrona konfigurationer och kodkonfigurationer.
+* Nya kvalitetsregler för Oak-index har införts för att omfatta asynkrona konfigurationer och Tika-konfigurationer.
 
 * Öka det högsta antalet SSL-certifikat per program till 50.
 
-* Självbetjäning som gör att användare kan skapa och hantera flera databaser via användargränssnittet i Cloud Manager.
+* Självbetjäningsfunktioner som gör att användare kan skapa och hantera flera databaser med hjälp av användargränssnittet i Cloud Manager.
 
 * SonarQube läste historikdata för Git i onödan. På stora kodbaser kan detta leda till en onödig prestandaförbättring.
 
@@ -116,9 +116,9 @@ Se [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager
 
 * Status för tillgänglig uppdatering ska inte visas när den senaste versionen är mindre än den aktuella versionen.
 
-* Inledande introduktion misslyckades för nya organisationer med mycket långa namn.
+* Inledande introduktion misslyckades för nya organisationer med långa namn.
 
-* När en pipeline av någon anledning aktiveras två gånger resulterar det i att en av körningarna misslyckas *det går inte att uppdatera körningsstatus för pipeline* fel.
+* När en pipeline av någon anledning aktiveras två gånger resulterar det ibland i att en av körningarna misslyckas med en *`cannot update pipeline execution status`* fel.
 
 ## Content Transfer Tool {#content-transfer-tool}
 
@@ -128,7 +128,7 @@ Releasedatum för Content Transfer Tool v1.5.6 är 11 augusti 2021.
 
 ### Felkorrigeringar {#bug-fixes-ctt}
 
-* I vissa fall migrerades inte alla användare till målinstansen. För att få den här korrigeringen krävs CTT v1.5.6 tillsammans med aem-ethos-tools 1.2.354 eller senare version på AEM as a Cloud Service målinstansen.
+* Ibland migrerades inte alla användare till målinstansen. För att åtgärda detta krävs CTT v1.5.6 tillsammans med aem-ethos-tools 1.2.354 eller senare version på den as a Cloud Service målinstansen AEM.
 
 * The **Stoppa inmatning** -knappen inaktiverades under hämtning till Publish-instansen. Detta är inte nödvändigt eftersom det inte finns något steg för monoåterställning vid publiceringsintag.
 
