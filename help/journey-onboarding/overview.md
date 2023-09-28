@@ -2,9 +2,9 @@
 title: Introduktion till as a Cloud Service onboarding-resa
 description: Börja här för en översikt över den guidade resan genom introduktionsprocessen till AEM as a Cloud Service.
 exl-id: 892577db-05dc-49ff-bb2c-203efdb89c8c
-source-git-commit: 7553d3c9f82c8b675af5f704a48bc316ba0d4885
+source-git-commit: bba8310b9ba560ab9b6c2f9bea3e5c3cbec9228b
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1256'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 2%
 Grattis till AEM as a Cloud Service! Det här dokumentet är utgångspunkten för en guidad resa genom introduktionsprocessen. Oavsett om du distribuerar ett nytt program eller migrerar ett befintligt, säkerställer den här introduktionsresan att era team har konfigurerats och tillgång till AEM as a Cloud Service.
 
 ## Introduktion {#introduction}
+
+Adobe Experience Manager är en kraftfull uppsättning sammanställningsbara innehållstjänster som snabbt levererar mycket slagkraftiga, personaliserade upplevelser över alla kanaler och frigör innehåll från alla kanaler. **Edge Delivery Services** är den senaste innovationen i Adobe Experience Manager som möjliggör extremt snabb innehållshantering och levererar exceptionella upplevelser. Kom igång med Edge Delivery Services genom att besöka [den här sidan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html). Mer information om hur du använder Edge Delivery Services finns i [Självstudiekurs för utvecklare](https://www.hlx.live/developer/tutorial) sida.
 
 Onboarding är den process under vilken en utsedd systemadministratör konfigurerar AEM as a Cloud Service för din organisation. I den här processen ingår inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Det innebär att varje medlem kan logga in och komma åt sin resurs på AEM as a Cloud Service.
 
@@ -83,10 +85,6 @@ I följande artiklar beskrivs grundbegreppen för introduktion och du får grund
 | 8 | [Tilldela AEM produktprofiler](assign-profiles-aem.md) | Läs om hur systemadministratören tilldelar teammedlemmar produktprofiler på AEM as a Cloud Service. | Systemadministratör |
 | 9 | [Uppgifter för utvecklare och distributionsansvarig](developers.md) | Som utvecklare kan du läsa om hur du kan få åtkomst till och hantera Cloud Manager Git och hur du som distributionshanterare kan konfigurera pipelines och distribuera kod i Cloud Manager. | Utvecklare och driftsättningschefer |
 | 10 | [AEM användaruppgifter](aem-users.md) | Valfritt - Som AEM kan du lära dig hur du kan komma åt AEM as a Cloud Service instansen och lära dig hur du redigerar innehåll för AEM as a Cloud Service. | AEM |
-
->[!NOTE]
->
->Edge Delivery Services är en ny uppsättning sammanställningsbara tjänster som möjliggör en flexibel och snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Mer information om Edge Delivery-tjänster finns i [Sidan Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html).
 
 ## What&#39;s Next {#what-is-next}
 
