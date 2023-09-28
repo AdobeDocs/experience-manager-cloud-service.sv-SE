@@ -6,9 +6,9 @@ mini-toc-levels: 1
 feature: Search,Metadata,Asset Distribution
 role: User,Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: fb70abb2aa698303c462e38ad3bec10d028f804e
+source-git-commit: c1e115e0fcf7e168c26f810f0803950df50b2c6f
 workflow-type: tm+mt
-source-wordcount: '5463'
+source-wordcount: '5492'
 ht-degree: 4%
 
 ---
@@ -46,12 +46,26 @@ Använd **[!UICONTROL Filters]** för att söka efter resurser, mappar, taggar o
 ## Förstå gränssnittet för resurssökning {#searchui}
 
 Bekanta dig med gränssnittet för resurssökning och de tillgängliga åtgärderna.
-
-![Förstå Experience Manager Assets sökresultatgränssnitt](assets/aem_search_results.png)
-
+<!--
+![Understand Experience Manager Assets search results interface](assets/aem_search_results.png)
+-->
+![Förstå Experience Manager Assets sökresultatgränssnitt](assets/aem-search-interface.png)
 *Bild: Förstå [!DNL Experience Manager Assets] sökresultatgränssnitt.*
 
-**S.** Spara sökningen som en smart samling. **B.** Filter eller predikat som begränsar sökresultaten. **C.** Visa filer, mappar eller båda. **D.** Klicka på Filter för att öppna eller stänga den vänstra rutan. **E.** Sökplatsen är DAM. **F.** Omsökningsfält med användardefinierat söknyckelord. **G.** Välj inlästa sökresultat. **H.** Antal visade sökresultat av totalt antal sökresultat. **Jag.** Stäng sökningen. **J.** Växla mellan kortvyn och listvyn.
+**S.** Spara sökningen som en smart samling.
+**B.** Filter eller predikat som begränsar sökresultaten.
+**C.** Visa filer, mappar eller båda.
+**D.** Sökplatsen är DAM.
+**E.** Få åtkomst till sparade sökningar.
+**F.** Klicka på Filter för att öppna eller stänga den vänstra listen.
+**G.** Visar resurser som standardsökning.
+**H.** Sökplatsen är DAM.
+**Jag.** Omsökningsfält med användardefinierat söknyckelord.
+**J.** Välj inlästa sökresultat.
+**K.** Sortera efter Skapad, Ändrad, Namn, Ingen.
+**L.** Sortera efter stigande eller fallande ordning.
+**M.** Antal visade sökresultat av totalt antal sökresultat. **N.** Stäng sökningen.
+**O.** Växla mellan kortvyn och listvyn.
 
 ### Dynamiska sökfaktorer {#dynamicfacets}
 
@@ -160,7 +174,10 @@ Så här konfigurerar du batchstorleken för resursen:
 
 **Söka efter resurser i en mapp**: Du kan begränsa sökningen till en viss mapp. I **[!UICONTROL Filters]** lägger du till en mappsökväg. Du kan bara markera en mapp i taget.
 
-![Begränsa sökresultaten till en mapp genom att lägga till en mappsökväg i panelen Filter](assets/search_folder_select.gif)
+![Begränsa sökresultaten till en mapp genom att lägga till en mappsökväg i panelen Filter](assets/limiting-search.gif)
+<!--
+![Limit search results to a folder by adding a folder path in Filters panel](assets/search_folder_select.gif)
+-->
 
 *Bild: Begränsa sökresultaten till en mapp genom att lägga till en mappsökväg på panelen Filter.*
 
@@ -277,7 +294,9 @@ Skicka följande frågeparametrar i en URL för att starta resursväljaren i en 
 
 Om du vill komma åt resursväljargränssnittet går du till `https://[aem_server]:[port]/aem/assetpicker`. Navigera till önskad mapp och markera en eller flera resurser. Du kan också söka efter den önskade resursen i rutan Sök, tillämpa det filter som behövs och sedan markera den.
 
-![Bläddra och markera resurs i resursväljaren](assets/assetpicker.png)
+![Bläddra och markera resurs i resursväljaren](assets/select-asset.png)
+
+<!--![Browse and select asset in the asset selector](assets/assetpicker.png)-->
 
 *Bild: Bläddra och markera resurs i resursväljaren.*
 
