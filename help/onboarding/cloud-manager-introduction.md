@@ -2,9 +2,9 @@
 title: Introduktion till Cloud Manager
 description: Läs om hur Cloud Manager stöder ditt AEM genom program, miljöer och rörledningar.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: 1608a44b8c9b5ae6bd75307ecb29dcd8f0ff367f
+source-git-commit: 0e0daf9870ba2e5923f9ea5dcdf3821a0cd0b7c6
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,8 @@ Du kan även navigera till Cloud Managers program- och produktsida från Adobe E
 | Generera token för personlig åtkomst | Åtkomstgit |  | x |  | x |
 | Skapa RDE | Skapa en snabb utvecklingsmiljö | x |  |  | x |
 | Återställ RDE | Återställ en snabb utvecklingsmiljö | x |  |  | x |
+| Skapa/ändra innehållsuppsättningar | Skapa eller ändra en innehållsuppsättning för innehållskopia |  | x |  |  |
+| Starta/avbryt innehållskopia | Starta eller avbryta en innehållskopia |  | x |  |  |
 
 >[!NOTE]
 >
