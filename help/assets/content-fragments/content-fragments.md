@@ -1,17 +1,17 @@
 ---
 title: Arbeta med innehållsfragment (resurser - innehållsfragment)
-description: Lär dig hur innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service gör att du kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans. Hur de kan användas tillsammans med MSM.
+description: Lär dig hur du med Content Fragments in Adobe Experience Manager (AEM) as a Cloud Service kan utforma, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans. Hur de kan användas tillsammans med MSM.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
-source-git-commit: fa133319077388a3598ca13b2574b8b62bf9b2b4
+source-git-commit: c31f43986e44099a3a36cc6c9c2f1a7251499ffb
 workflow-type: tm+mt
-source-wordcount: '2216'
+source-wordcount: '2211'
 ht-degree: 2%
 
 ---
 
 # Arbeta med innehållsfragment {#working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) as a Cloud Service kan du skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler, idealiskt för headless-leverans. De kan också användas tillsammans med [Hantering av flera webbplatser gör att du kan återanvända innehållet](#reusing-content-fragments-with-msm-assets).
+Med Adobe Experience Manager (AEM) as a Cloud Service kan du skapa, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fundamentals/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler, idealiskt för headless-leverans. De kan också användas tillsammans med [Hantering av flera webbplatser gör att du kan återanvända innehållet](#reusing-content-fragments-with-msm-assets).
 
 Innehållsfragment innehåller strukturerat innehåll:
 
@@ -19,10 +19,10 @@ Innehållsfragment innehåller strukturerat innehåll:
 * Strukturen kan variera mellan:
    * Grundläggande
       * Ett enda textfält med flera rader.
-      * Kan användas för att förbereda okomplicerat innehåll för sidredigering.
+      * Den kan användas för att förbereda okomplicerat innehåll för sidredigering.
    * Komplex
       * En kombination av många fält med olika datatyper, bland annat text, tal, boolesk information och tid.
-      * Kan användas antingen för att förbereda mer strukturerat innehåll för redigering av sidor eller för leverans till programmet.
+      * Den kan användas antingen för att förbereda mer strukturerat innehåll för redigering av sidor eller för leverans till programmet.
    * Kapslad
       * De tillgängliga referensdatatyperna gör att du kan kapsla ditt innehåll.
       * Tender som ska användas för leverans till ditt program.
@@ -40,7 +40,7 @@ Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i S
 >
 >Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol).
 
-På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhåller och använder dina innehållsfragment:
+På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhåller och använder innehållsfragment:
 
 * [Aktivera funktionen för innehållsfragment för din instans](/help/assets/content-fragments/content-fragments-configuration-browser.md)
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) - aktivera, skapa och definiera dina modeller
@@ -49,12 +49,12 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 * [Markering](/help/assets/content-fragments/content-fragments-markdown.md) - med markeringssyntax för ditt fragment
 * [Använda associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) - lägga till associerat innehåll
 * [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md) - visa och redigera fragmentegenskaperna
-* Använd [Content Fragments, tillsammans med GraphQL, för att leverera innehåll](/help/assets/content-fragments/content-fragments-graphql.md) som kan användas i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
+* Använd [Content Fragments, tillsammans med GraphQL, så att ni kan leverera innehåll](/help/assets/content-fragments/content-fragments-graphql.md) som kan användas i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
 * [Återanvänd innehållsfragment med MSM för resurser](#reusing-content-fragments-with-msm-assets)
 
 >[!NOTE]
 >
->Dessa sidor kan läsas tillsammans med:
+>Dessa sidor kan läsas med:
 >
 >* [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 >* [Anpassa och utöka Content Fragments](/help/implementing/developing/extending/content-fragments-customizing.md)
@@ -67,7 +67,7 @@ Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransm
 * Fysisk kanal, till exempel dator, mobil.
 * Leveranssätt i en fysisk kanal, t.ex.&quot;produktinformationssida&quot;,&quot;produktkategorisida&quot; för dator eller&quot;mobilwebb&quot;,&quot;mobilapp&quot; för mobil.
 
-Men du vill (förmodligen) inte använda exakt samma innehåll för alla kanaler - du måste optimera innehållet utifrån den specifika kanalen.
+Men du vill (förmodligen) inte använda samma innehåll för alla kanaler. Du måste optimera innehållet utifrån den specifika kanalen.
 
 Med innehållsfragment kan du:
 
@@ -76,14 +76,14 @@ Med innehållsfragment kan du:
 * Bygg innehållspooler för en rad olika kanaler.
 * Utforma innehållsvarianter för specifika kanaler.
 * Lägg till bilder i texten genom att infoga resurser (blandade mediefragment).
-* Skapa kapslat innehåll som återspeglar komplexiteten i era data.
+* Skapa kapslat innehåll så att ni speglar komplexiteten i era data.
 
-Dessa innehållsfragment kan sedan samlas ihop för att ge upplevelser över en mängd olika kanaler.
+Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över olika kanaler.
 
 >[!NOTE]
 >
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md)** har olika funktioner i AEM:
->* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att få tillgång till strukturerade data, bland annat texter, siffror och datum.
+>* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att komma åt strukturerade data, bland annat texter, siffror och datum.
 >* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
@@ -133,7 +133,7 @@ Innehållsfragmenten är:
    * Innehållsfragment (och deras variationer) kan skapas och underhållas från **Resurser** konsol.
    * Skapat och redigerat i Content Fragment Editor.
 
-* Används i [sidredigeraren med komponenten Content Fragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) (refererande komponent):
+* Används i [sidredigeraren av komponenten Content Fragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md) (refererande komponent):
 
    * The **Innehållsfragment** -komponenten är tillgänglig för sidförfattare. De kan referera till och leverera det nödvändiga innehållsfragmentet i antingen HTML- eller JSON-format.
 
@@ -141,22 +141,21 @@ Innehållsfragmenten är:
 
 Innehållsfragment är en innehållsstruktur som:
 
-* Är utan layout eller design (viss textformatering är möjlig i RTF-läge).
+* Har ingen layout eller design (viss textformatering är möjlig i RTF-läge).
 * Innehåller en eller flera [beståndsdelar](#constituent-parts-of-a-content-fragment).
-* Kan [innehålla eller vara ansluten till bilder](#fragments-with-visual-assets).
-* Kan använda [mellanliggande innehåll](#in-between-content-when-page-authoring-with-content-fragments) vid referens på en sida.
-
-* Är oberoende av leveransmekanismen (d.v.s. sidan, kanalen).
+* [Innehåller eller kan kopplas till bilder](#fragments-with-visual-assets).
+* Används [mellanliggande innehåll](#in-between-content-when-page-authoring-with-content-fragments) vid referens på en sida.
+* De är oberoende av leveransmekanismen (d.v.s. sidan, kanalen).
 
 ### Fragment med visuella resurser {#fragments-with-visual-assets}
 
 För att ge författarna bättre kontroll över sitt innehåll kan bilder läggas till och/eller integreras med ett innehållsfragment.
 
-Resurser kan användas med ett innehållsfragment på flera sätt, var och en med sina egna fördelar:
+Resurser kan användas med ett innehållsfragment på flera sätt, vart och ett med sina egna fördelar:
 
 * **Infoga resurs** till ett fragment (blandade mediefragment)
 
-   * Är en integrerad del av fragmentet (se [Komponentdelar i ett innehållsfragment](#constituent-parts-of-a-content-fragment)).
+   * De är en del av fragmentet (se [Komponentdelar i ett innehållsfragment](#constituent-parts-of-a-content-fragment)).
    * Definiera tillgångens position.
    * Se [Infoga resurser i fragment](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment) i fragmentredigeraren om du vill ha mer information.
 
@@ -166,17 +165,19 @@ Resurser kan användas med ett innehållsfragment på flera sätt, var och en me
 
 * **Associerat innehåll**
 
-   * Är anslutna till ett fragment, men inte en fast del av fragmentet (se [Komponentdelar i ett innehållsfragment](#constituent-parts-of-a-content-fragment)).
-   * Möjliggör viss flexibilitet för placering.
-   * Är enkelt tillgängliga för användning (som mellanliggande innehåll) när du använder fragmentet på en sida.
-   * Se [Associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) för mer information.
+   * Ansluten till ett fragment, men inte till en fast del av fragmentet (se [Komponentdelar i ett innehållsfragment](#constituent-parts-of-a-content-fragment)).
+   * Har viss flexibilitet för placering.
+   * Enkelt tillgängligt för användning (som mellanliggande innehåll) när du använder fragmentet på en sida.
+
+  Se [Associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) för mer information.
 
 * Resurser som är tillgängliga från **resursläsaren** i sidredigeraren
 
    * Möjliggör full flexibilitet för val av en resurs.
-   * Möjliggör viss flexibilitet för placering.
+   * Har viss flexibilitet för placering.
    * Innebär inte att man kan godkänna ett visst fragment.
-   * Se [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser) för mer information.
+
+  Se [Resursläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser) för mer information.
 
 ### Komponentdelar i ett innehållsfragment {#constituent-parts-of-a-content-fragment}
 
@@ -198,7 +199,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 * **Resurser som infogats i ett fragment (blandade mediefragment)**
 
    * Resurser (bilder) infogade i det faktiska fragmentet och används som det interna innehållet i ett fragment.
-   * Är inbäddade i fragmentets styckesystem.
+   * Inbäddad i fragmentets styckesystem.
    * Kan formateras när [fragment används/refereras på en sida](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med fragmentredigeraren. Dessa åtgärder kan inte utföras i sidredigeraren.
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med [RTF-format i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
@@ -240,7 +241,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
 * **Master**
 
-   * En integrerad del av fragmentet
+   * En del av fragmentet
 
       * Alla innehållsfragment har en instans av Master.
       * Mallen kan inte tas bort.
@@ -250,8 +251,8 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
 * **Variationer**
 
-   * Återgivning av fragmenttext som är specifik för redaktionella ändamål. Den kan vara relaterad till kanalen men är inte obligatorisk, men kan även användas för lokala ad hoc-ändringar.
-   * Skapas som kopior av **Master**, men kan sedan redigeras efter behov. Normalt överlappas innehållet mellan själva variationerna.
+   * Återgivningar av fragmenttext som är specifik för ett redaktionellt syfte. Den kan vara relaterad till kanalen men är inte obligatorisk, men kan även användas för lokala ad hoc-ändringar.
+   * Skapas som kopior av **Master**, men kan sedan redigeras efter behov. Innehållet överlappar själva variationerna.
    * Kan definieras vid fragmentredigering.
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
    * Variationer kan vara [synkroniserad](/help/assets/content-fragments/content-fragments-variations.md#synchronizing-with-master) med Master om mallinnehållet har uppdaterats.
@@ -263,7 +264,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 Mellanliggande innehåll:
 
 * Kan användas i sidredigeraren när du arbetar med innehållsfragment.
-* Är [ytterligare innehåll som lagts till i flödet för ett fragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-in-between-content) när det har använts eller refererats på en sida.
+* [Ytterligare innehåll som läggs till i flödet i ett fragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md#adding-in-between-content) efter att det har använts eller refererats på en sida.
 * Finns att använda i [Sidredigeraren när du arbetar med innehållsfragment](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
 * Mellanliggande innehåll kan läggas till i vilket fragment som helst, där bara ett element är synligt.
 * Associerat innehåll kan användas, liksom resurser och/eller komponenter från lämplig webbläsare.
@@ -274,7 +275,7 @@ Mellanliggande innehåll:
 
 ### Krävs av fragment {#required-by-fragments}
 
-Om du vill skapa innehållsfragment behöver du:
+Om du vill skapa innehållsfragment måste du:
 
 * **Innehållsmodell**
 
@@ -291,15 +292,15 @@ Om du vill använda dina innehållsfragment för att skapa sidor behöver du ock
 
 * **Innehållsfragmentkomponent**
 
-   * Instrumentellt för att leverera fragmentet i HTML- och/eller JSON-format.
+   * Instrumental för att leverera fragmentet i HTML-format, JSON-format eller båda.
    * Krävs för [referera till fragmentet på en sida](/help/sites-cloud/authoring/fundamentals/content-fragments.md).
    * Ansvarig för layout och leverans av ett fragment, det vill säga kanaler.
-   * Fragment behöver en eller flera dedikerade komponenter för att definiera layout och leverera vissa eller alla element/varianter och tillhörande innehåll.
+   * Fragment behöver en eller flera dedikerade komponenter för att definiera layouten och leverera vissa eller alla element/varianter och tillhörande innehåll.
    * Om du drar ett fragment till en sida när du redigerar kopplas den nödvändiga komponenten automatiskt till.
 
 ## Exempel på användning {#example-usage}
 
-Ett fragment, med dess element och variationer, kan användas för att skapa sammanhängande innehåll för flera kanaler. När du utformar ditt fragment bör du tänka på vad som används och var.
+Ett fragment, med dess element och variationer, kan användas för att skapa sammanhängande innehåll för flera kanaler. När du utformar ditt fragment bör du tänka på vad som används och var det används.
 
 ### WKND-exempel {#wknd-sample}
 
