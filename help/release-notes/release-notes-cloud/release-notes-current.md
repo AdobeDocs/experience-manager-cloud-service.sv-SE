@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 39284210e6639c4ed2a80cf86dbf0ea32d889986
+source-git-commit: ed67bb95a82f083ed3b6eea4fe5f5d150359c539
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Läs mer om Edge Delivery Services i artikeln [här](/help/edge/overview.md).
 
 **Tilldela metadataformulär till en mapp**
 
-Nu kan du tilldela metadataformulär till en viss mapp i din Assets Essentials-distribution. Alla resurser i mappen, inklusive resurser i undermapparna, visar sedan egenskaper som definierats i det tilldelade metadataformuläret.
+Nu kan du tilldela metadataformulär till en viss mapp i distributionen. Alla resurser i mappen, inklusive resurser i undermapparna, visar sedan egenskaper som definierats i det tilldelade metadataformuläret.
 
 ![tilldela metadataformulär till en mapp](/help/release-notes/assets/assign-to-folder.png)
 
