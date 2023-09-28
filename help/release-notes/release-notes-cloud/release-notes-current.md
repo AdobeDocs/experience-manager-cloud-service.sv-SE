@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 4fc6d29cd008b04ad97ceb17201c1f8d0e72439e
+source-git-commit: 39284210e6639c4ed2a80cf86dbf0ea32d889986
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -26,78 +26,41 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.8.0) är 31 augusti 2023. Nästa funktionsrelease (2023.9.0) planeras till 28 september 2023.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.9.0) är 28 september 2023. Nästa funktionsrelease (2023.10.0) planeras till 26 oktober 2023.
 
-## Släpp video {#release-video}
+<!-- 
 
-Titta på videon Versionsöversikt från augusti 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.8.0:
+## Release Video {#release-video}
 
->[!VIDEO](https://video.tv.adobe.com/v/3423535/?quality=12)
+Have a look at the September 2023 Release Overview video for a summary of the features added in the 2023.9.0 release:
 
-## [!DNL Experience Manager Sites] som [!DNL Cloud Service] {#sites}
+>[!VIDEO](put new link here)
 
-### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
+-->
 
-* The [Konsol för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=en) Nu kan användare visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användarna behöver inte längre växla till Assets UI för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
+## Edge Delivery Services {#edge-delivery}
 
-  ![Tagga i konsolen för innehållsfragment](/help/assets/content-fragments-console-tags.png)
-* Den nya redigeraren för innehållsfragment är nu tillgänglig på AEM as a Cloud Service. Det ger innehållsförfattarna möjlighet att bli produktivare genom att effektivisera sina redigeringsuppgifter och minska behovet av att växla mellan olika program samtidigt som de redigerar innehåll.
-  ![Ny redigerare för innehållsfragment](/help/release-notes/assets/newCFEditor.png)
+Edge Delivery är en ny uppsättning sammanställningsbara tjänster med fokus på att maximera innehållets effekt och få mätbara affärsresultat vid kundinteraktionen.
 
-Den nya redigeraren för innehållsfragment har följande fördelar som inte är tillgängliga i den ursprungliga redigeraren:
-* Spara automatiskt för effektivare redigering och för att förhindra oavsiktliga redigeringsförluster.
-* Hierarkisk vy av ett innehållsfragment och dess referenser med hjälp av strukturträdet för snabb navigering i ett djupt strukturerat fragment.
-  ![Strukturträd i innehållsfragmentredigeraren](/help/release-notes/assets/newCFEditor_StructureTree.png)
-
-* Inline-överföring av resurser som innehållsreferenser utan att först behöva överföra dem till resursens DAM
-* Ad hoc-förhandsgranskning av den renderade upplevelsen som levereras av innehållsfragmentet för att hjälpa författare att visualisera utseendet och känslan för innehållet i klientappen
-* Publicera och avpublicera innehållsfragmentet med ett klick från redigeraren
-* Visa och navigera till språkkopior när du redigerar ett innehållsfragment
-  ![Språkkopior i Content Fragment Editor](/help/release-notes/assets/newCFEditor_LanguageCopies.PNG)
-
-* Visa versioner för att hjälpa till att hålla reda på tidslinjen för ett innehållsfragment
-
-  ![Versioner i Content Fragment Editor](/help/release-notes/assets/newCFEditor_Versionhistory.PNG)
-
-* Visa överordnade referenser som hjälper författare att förstå effekten av sina redigeringar
-
-  ![Överordnade referenser i Content Fragment Editor](/help/release-notes/assets/newCFEditor_Parentreferences.PNG)
+Läs mer om Edge Delivery Services i artikeln [här](/help/edge/overview.md).
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i resursvyn {#assets-view-features}
 
-<!--
+**Tilldela metadataformulär till en mapp**
 
-**Assign metadata form to a folder**
+Nu kan du tilldela metadataformulär till en viss mapp i din Assets Essentials-distribution. Alla resurser i mappen, inklusive resurser i undermapparna, visar sedan egenskaper som definierats i det tilldelade metadataformuläret.
 
-You can now assign metadata form to a specific folder within your Assets Essentials deployment. All assets in the folder, including assets in the sub-folders, then display properties defined in the assigned metadata form.
-
-![assign metadata form to a folder](/help/release-notes/assets/assign-to-folder.png)
-
--->
-
-* **Massimportera resurser från datakällor**: Administratörer har nu [möjlighet att importera ett stort antal resurser](/help/assets/bulk-import-assets-view.md) från en datakälla till AEM Assets. Administratörerna behöver inte längre överföra enskilda resurser eller mappar till AEM Assets. De datakällor som stöds för bulkimport är bland annat Azure, AWS, Google Cloud och Dropbox.
-
-  ![Massimportera resurser från en datakälla](/help/release-notes/assets/bulk-import.png)
-
-* **Bildredigeringsverktyg som bygger på Adobe Express**: Enkelt och intuitivt [bildredigeringsverktyg som bygger på Adobe Express](/help/assets/edit-images-assets-view.md) som finns direkt i AEM Assets för att öka återanvändningen av innehåll och snabba upp innehållets hastighet.
-
-  ![Bildredigering med Adobe Express](/help/release-notes/assets/edit-adobe-express.png)
-
-* **Flexibilitet vid fästning av objekt för snabb åtkomst till arbetsytan**: Möjlighet att markera och fästa objekt åt dig, för hela organisationen eller för en lista över grupper så att de visas i [Snabb åtkomst till delen Min arbetsyta](/help/assets/my-workspace-assets-view.md) baserat på ditt val.
-
-  ![Fäst objekt för grupper](/help/release-notes/assets/pin-items-for-groups.png)
+![tilldela metadataformulär till en mapp](/help/release-notes/assets/assign-to-folder.png)
 
 ### Nya funktioner i administrationsvyn {#admin-view-features}
 
-**Förbättrade sökfunktioner**
+* **Integrera AEM Assets as a Cloud Service med dokumentbaserad framtagning av Edge Delivery Services**: Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services så att webbutvecklare kan [använda bilder som finns i AEM Assets-databaser när du redigerar dokument i Microsoft Word eller Google Docs](/help/edge/using.md#integrate-assets-edge).
 
-* Administratörer kan nu [konfigurera batchstorleken för resurser](/help/assets/search-assets.md#configure-asset-batch-size) som visas när du utför en sökning. Resurssökresultaten visas i multipler av det konfigurerade batchstorleksnumret när du rullar nedåt för att läsa in resultaten. Du kan välja mellan de tillgängliga gruppstorlekarna 200, 500 och 1 000 resurser. Om du anger ett lägre batchstorleksnummer blir sökningen snabbare.
+* **Extract ZIP-arkiv**: Möjlighet att välja ZIP-arkiv som hanteras i Experience Manager och [extrahera filerna direkt i Experience Manager](/help/assets/manage-digital-assets.md#extract-zip-archives) utan att ladda ned dem.
 
-  ![Konfiguration av batchstorlek för resurser](/help/release-notes/assets/assets-batch-size-configuration.png)
-
-* Experience Manager Assets har nu en ny version 9 av `damAssetLucene` index. `damAssetLucene-9` ändrar beteendet för beräkning av Oak Query-faktor till [inte längre utvärdera åtkomstkontroll för antalet fakturor](/help/assets/search-assets.md) returneras av det underliggande sökindexet, vilket ger snabbare svarstider.
+  ![Fäst objekt för grupper](/help/release-notes/assets/extract-archive.png)
 
 ### Förhandsversioner av funktioner som finns i [!DNL Experience Manager Assets] {#prerelease-features-assets}
 
@@ -105,18 +68,15 @@ You can now assign metadata form to a specific folder within your Assets Essenti
 
   ![Fliken Undertexter och Ljudspår på sidan Egenskaper för en vald videoresurs.](/help/release-notes/assets/msma-aem-cs.png)*Fliken Undertexter och Ljudspår på sidan Egenskaper för en vald videoresurs.*
 
-* **Resurser**: Möjlighet att välja ZIP-arkiv som hanteras i Experience Manager och [extrahera filerna direkt i Experience Manager](/help/assets/manage-digital-assets.md#extract-zip-archives) utan att ladda ned dem.
-
-  ![Fäst objekt för grupper](/help/release-notes/assets/extract-archive.png)
-
-
 ## [!DNL Experience Manager Forms] som [!DNL Cloud Service] {#forms}
 
-### Förhandsversioner av funktioner som finns i [!DNL Forms] {#pre-release-features-available-in-forms-channel}
+### Nya funktioner i [!DNL Experience Manager Forms] {#forms-features}
 
 * [**Google reCAPTCHA - företagssupport**](/help/forms/captcha-adaptive-forms-core-components.md): Använd Google reCAPTCHA Enterprise i en adaptiv form för att få bättre skydd mot bedräglig aktivitet och skräppost, vilket ger en säkrare användarupplevelse. Med avancerad riskanalys och smidig integrering kan äkta användare enkelt skicka in formulär medan bots blockeras effektivt.
 
 * [**Adobe Analytics med Experience Cloud Setup Automation för Forms**](/help/forms/enable-adobe-analytics-adaptive-form-using-experience-cloud-setup-automation.md): Nu kan du aktivera Adobe Analytics med Experience Cloud Setup Automation (Automatisering av installationsprogram) med ett par knappar. Det gör att ni kan koppla AEM Forms as a Cloud Service till Experience Platform-taggar och Adobe Analytics för att hämta in och spåra prestandamått för era publicerade formulär.
+
+  >[!VIDEO](https://video.tv.adobe.com/v/3424577/enable-adobe-analytics/?quality=12&learn=on)
 
 * [**Adobe Analytics rapportmall för Adaptiv Forms**](/help/forms/view-understand-aem-forms-analytics-reports.md): Forms as a Cloud Service tillhandahåller nu en Adobe Analytics-rapport, OOTB. Det hjälper er att förstå hur era formulär fungerar. Med hjälp av formulärnivåstatistik får du insikt i hur formuläret fungerar med flera nyckeltal (KPI) som återgivningar, besökare, inskickat material, genomsnittlig fyllnadstid. Genom att följa upp användarbeteenden och feedback kan du identifiera områden i formuläret som orsakar förvirring och vägleda förbättringar av formulärets design och funktion.
 
@@ -131,21 +91,18 @@ You can now assign metadata form to a specific folder within your Assets Essenti
 
    * **Nya roller för avtalsmottagare utöver bara signeraren**: Adobe Acrobat Sign har möjlighet att utöka rollerna för avtalsmottagare utöver bara signeraren för att bättre matcha deras arbetsflödesbehov. När det här alternativet är aktiverat kan varje mottagare i ett avtal konfigureras individuellt, med signerare som standard.
 
-* **[Protect dina dokument med Document Assurance API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med API:erna för Document Assurance kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
-
 * **Stöd för sidantal i kommunikations-API:er**: Nu kan du, tillsammans med att hämta ditt dokument via kommunikations-API:erna, även få värdefull information om antalet sidor i dokumentet.
 
 * **[Felhantering med anpassade felhanterare i regelredigeraren](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)**: Du kan nu anropa en anpassad funktion som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
 
 * **[64-bitarsversion av AEM Forms Designer](/help/forms/installing-configuring-designer.md)**: 64-bitarsversionen av AEM Forms Designer ger bättre prestanda, skalbarhet och minneshantering så att du kan skapa formulär. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Utöka dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med den här banbrytande releasen.
 
-
 ### Program för tidig användning {#forms-early-adopter}
 
 * **[Protect dina dokument med DocAssurance API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med API:erna för DocAssurance kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
 
-      Du kan skriva till aem-forms-early-adopter-program@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
-  
+  Du kan skriva till `aem-forms-early-adopter-program@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen.
+
 * **[Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html)**: Använd Headless Adaptive Forms för att ge utvecklarna möjlighet att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
 
    * bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
@@ -155,14 +112,13 @@ You can now assign metadata form to a specific folder within your Assets Essenti
 
   Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från ditt officiella e-post-ID till att gå med i det tidiga adopterprogrammet.
 
-
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### CDN-loggar {#cdn-logs}
+### Nytt CDN-cachningsbeteende för kampanjrelaterade URL-parametrar {#cache-url-params}
 
-Ladda ned CDN-loggar från Cloud Manager, vilket är användbart för optimering av täckningsgrad för cache och större synlighet för innehållsleveransflödet. [Läs mer om](/help/implementing/developing/introduction/logging.md#cdn-log) CDN-loggformatet. Den här funktionen lanseras gradvis för kunderna i början av september.
+I nya miljöer tar CDN bort marknadsföringsrelaterade frågeparametrar som standard för att öka marknadsföringskampanjens resultat och cacha träfffrekvenser. Befintliga miljöer påverkas inte. [Läs mer.](/help/implementing/dispatcher/caching.md#marketing-parameters)
 
-### CDN och WAF Rules early adopter program {#waf-early-adopter}
+### Trafikfilterregler (inklusive WAF-regler) program för tidig användning {#waf-early-adopter}
 
 Filtrera trafiken vid CDN baserat på:
 * begäranrubriker och egenskaper (t.ex. IP-adress)
@@ -171,7 +127,6 @@ Filtrera trafiken vid CDN baserat på:
 Är du intresserad av att testa funktionen och ge feedback? Skicka e-post till **aemcs-waf-adopter@adobe.com** från ditt officiella e-post-ID om du vill veta mer om programmet för tidig användning. Utrymmet är begränsat.
 
 Läs mer om funktionen i artikeln [här](/help/security/cdn-and-waf-rules.md).
-
 
 ## Versionsinformation om underhåll {#maintenance}
 

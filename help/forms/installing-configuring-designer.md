@@ -1,15 +1,21 @@
 ---
 title: Hämta och installera Forms Designer
 description: Du kan använda Forms Designer för att skapa XDP- och PDF-formulärmallar som fungerar som mall för ett dokument för registrering. Designer är tillgängligt med [!DNL AEM Forms] licens.
-source-git-commit: 325769d4a3b93502b0c6857e20911b05df34a24a
+keywords: Installera Designer, installera Forms Designer, krav för installation av Forms Designer
+source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 0%
+source-wordcount: '392'
+ht-degree: 1%
 
 ---
 
 
 # Hämta och installera Forms Designer {#installing-and-configuring-designer}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | Den här artikeln |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/installing-configuring-designer.html) |
 
 Designer är ett grafiskt formulärdesignverktyg som gör det enklare att skapa XDP- och PDF-formulärmallar. Du kan utforma en formulärmall, definiera dess logik och uppfylla strikta lagstadgade krav. Ett XDP- och PDF-formulär fungerar som en dokumentmall i ett adaptivt format. Dessa formulärmallar skiljer sig från [Adaptiva formulärmallar](template-editor.md).
 
@@ -19,7 +25,6 @@ För att kunna installera den senaste versionen av AEM Forms Designer, 64-bitars
 
 +++ 64-bitars Designer (rekommenderas)
 
-* Innan du installerar 64-bitarsversionen av Forms Designer avinstallerar du 32-bitarsversionen av Designer.
 * [!DNL Microsoft® Windows® 2016 Server] eller [!DNL Microsoft® Windows® 2019 Server]och [!DNL Microsoft® Windows® 10]
 * Minst 2 GB RAM
 * 20 GB diskutrymme
@@ -50,6 +55,10 @@ För att kunna installera den senaste versionen av AEM Forms Designer, 64-bitars
 
 ## Installera Designer {#install-designer}
 
+>[!NOTE]
+>
+> Avinstallera 32-bitarsversionen av Designer innan du installerar 64-bitarsversionen av Forms Designer.
+
 Så här installerar du Designer:
 
 1. Hämta Designer från [Programvarudistribution](https://experience.adobe.com/downloads).
@@ -59,3 +68,9 @@ Så här installerar du Designer:
 1. (Valfritt) ändra standardinstallationssökvägen för att installera Designer på en valfri plats. Klicka på **[!UICONTROL Next]**.
 1. Klicka **[!UICONTROL Back]** om du vill ändra några inställningar. Installera Designer genom att klicka **[!UICONTROL Install]**.
 1. Klicka **[!UICONTROL Finish]** när installationen är klar.
+
+## Se även {#see-also}
+
+* [Använda anpassade teckensnitt](/help/forms/use-custom-fonts.md)
+* [Skapa en fristående grundkomponentbaserad adaptiv form](/help/forms/creating-adaptive-form-core-components.md)
+* [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)

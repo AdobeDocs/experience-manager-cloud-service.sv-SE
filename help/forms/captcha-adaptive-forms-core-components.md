@@ -2,19 +2,16 @@
 title: Använd Google reCAPTCHA i en AEM anpassad form
 description: Förbättra säkerheten med Google reCAPTCHA-tjänsten utan problem. Stegvisa anvisningar inifrån!
 topic-tags: Adaptive Forms, author
-hide: true
-hidefromtoc: true
-Keywords: Google reCAPTCHA service, Adaptive Forms, CAPTCHA challenge, Bot prevention, Core Components, Form submission security, Form spam prevention
-source-git-commit: 496705937a01d99f988ba83f6d8984fc86dc8bfa
+keywords: Google reCAPTCHA-tjänst, Adaptiv Forms, CAPTCHA-utmaning, startalternativ, kärnkomponenter, säkerhet för inskickande av formulär, skydd mot skräppost
+source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
 
-# Använd Google reCAPTCHA i ett AEM anpassat formulär baserat på kärnkomponenter {#using-reCAPTCHA-in-adaptive-forms}
 
-<span class="preview"> Det här är en förhandsversion som du kommer åt via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+# Använd Google reCAPTCHA i ett AEM anpassat formulär baserat på kärnkomponenter {#using-reCAPTCHA-in-adaptive-forms}
 
 | Gäller för | Artikellänk |
 | -------- | ---------------------------- |
@@ -54,13 +51,9 @@ Koppla samman AEM Forms-miljön med reCAPTCHA-tjänsten från Google
    1. Välj en konfigurationsbehållare som har skapats eller uppdaterats i föregående avsnitt. Tryck på **[!UICONTROL Create]**.
    1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för reCAPTCHA-tjänsten (finns i steg 1). Tryck på **[!UICONTROL Create]**.
 
-
    ![Konfigurera Cloud Servicen för att ansluta din AEM Forms-miljö med reCAPTCHA-tjänsten från Google](/help/forms/assets/captcha-configuration.gif)
 
-
-
    När reCAPTCHA-tjänsten har konfigurerats kan den användas i ett adaptivt format. Mer information finns i [använda Google reCAPTCHA i en adaptiv form](#using-reCAPTCHA).
-
 
 ## Använd Google reCAPTCHA i anpassad form {#using-reCAPTCHA}
 

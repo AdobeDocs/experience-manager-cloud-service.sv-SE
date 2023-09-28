@@ -7,9 +7,9 @@ keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterar
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: 963fcbe1e333dd6e0540e29ea150881826a1323c
+source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2378'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 0%
 
 # Felhanterare i adaptiv Forms (kärnkomponenter) {#error-handlers-in-adaptive-form}
 
-<span class="preview"> Det här är en förhandsversion som du kommer åt via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |

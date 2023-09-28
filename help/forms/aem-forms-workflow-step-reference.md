@@ -3,21 +3,21 @@ title: Använd blankettbaserade AEM för att automatisera affärsprocesserna
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-source-git-commit: a635a727e431a73086a860249e4f42d297882298
+keywords: Använd AEM arbetsflöden, tilldela uppgiftssteg, konvertera till PDF/A-steg, generera dokument för inspelat steg, använda arbetsflöden, signera dokumentsteg, generera utskrivet steg, generera icke-interaktiva utdata från PDF
+source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
 workflow-type: tm+mt
-source-wordcount: '6801'
+source-wordcount: '6782'
 ht-degree: 0%
 
 ---
 
-# Använd Forms-centrerade AEM - stegvis referens för att automatisera affärsprocesser{#forms-centric-workflow-on-osgi-step-reference}
+
+# Använd Forms-centrerade AEM - stegvis referens för att automatisera affärsprocesser {#forms-centric-workflow-on-osgi-step-reference}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html) |
 | AEM as a Cloud Service | Den här artikeln |
-
-<span class="preview"> Signerarroller, granskningsspår och autentiseringsalternativ baserade på Government-ID i [Underteckna dokumentsteg](#sign-document-step) är funktioner för förhandsversioner som är tillgängliga via våra [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Du använder arbetsflödesmodeller. En modell hjälper dig att definiera och köra en serie steg. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser. Du kan [inkludera olika AEM arbetsflödessteg i en modell för att uppnå affärslogiken](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem).
 
@@ -40,7 +40,6 @@ Forms-centrerade arbetsflödessteg utför AEM Forms-specifika åtgärder i ett A
 >[!NOTE]
 >
 >Om arbetsflödesmodellen är markerad för ett externt lagringsutrymme kan du bara välja variabelalternativet för lagring eller hämtning av datafiler och bilagor för alla steg i Formens Workflow.
-
 
 ## Tilldela aktivitetssteg {#assign-task-step}
 
@@ -379,8 +378,6 @@ I steget Anropa formulärdatamodelltjänst visas följande fält för att underl
 
 ## Underteckna dokumentsteg {#sign-document-step}
 
-<span class="preview"> Signerarroller, granskningsspår och autentiseringsalternativ baserade på myndighets-ID i Adobe Sign-steget är förhandsversioner och tillgängliga via våra [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
-
 Med steget Signera dokument kan du använda [!DNL Adobe Sign] för att signera dokument. När du använder [!DNL Adobe Sign] Arbetsflödessteg för att signera ett adaptivt formulär kan skickas mellan mottagarna en i taget eller skickas till alla mottagare samtidigt, beroende på arbetsflödesstegets konfiguration. [!DNL Adobe Sign] Adaptiv Forms skickas till Experience Manager Forms Server först när alla mottagare har slutfört signeringsprocessen.
 
 Som standard är [!DNL Adobe Sign] Tjänsten Schemaläggaren kontrollerar (avsöker) mottagarens svar efter 24 timmars intervall. Du kan [ändra standardintervallet för miljön](adobe-sign-integration-adaptive-forms.md#for-aem-workflows-only-configure-dnl-adobe-acrobat-sign-scheduler-to-sync-the-signing-status-configure-adobe-sign-scheduler-to-sync-the-signing-status).
@@ -589,3 +586,9 @@ Stegen Generera utskrift har följande egenskaper:
 * **Linjäriserad PDF**: Anger om den genererade PDF ska optimeras för webbvisning.
 * **Tagged PDF**: Anger om den genererade PDF ska vara tillgänglig.
 * **XCI-dokument**: Anger sökvägen till XCI-filen.
+
+## Se även {#see-also}
+
+* [Variabler i Forms-centrerade AEM](/help/forms/variable-in-aem-workflows.md)
+* [Konfigurera frånvaroinställningar](/help/forms/configure-out-of-office-settings.md)
+

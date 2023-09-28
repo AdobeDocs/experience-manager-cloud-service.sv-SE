@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: Lär dig grunderna i cachning på AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: a6714e79396f006f2948c34514e5454fef84b5d8
 workflow-type: tm+mt
-source-wordcount: '2800'
+source-wordcount: '2803'
 ht-degree: 0%
 
 ---
@@ -203,16 +203,18 @@ När en begäran från HEAD tas emot i CDN i Adobe för en resurs som är **not*
 
 ### Parametrar för marknadsföringskampanjer {#marketing-parameters}
 
-Webbplatsadresser innehåller ofta marknadsföringskampanjparametrar som används för att spåra en kampanjs framgång. Om du vill använda Dispatcher-cachen effektivt bör du konfigurera Dispatcher-konfigurationens `ignoreUrlParams` egenskap som [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters).
+Webbplatsadresser innehåller ofta marknadsföringskampanjparametrar som används för att spåra en kampanjs framgång.
 
-The `ignoreUrlParams` -avsnittet måste vara okommenterat och referera till filen `conf.dispatcher.d/cache/marketing_query_parameters.any`. Filen kan ändras genom att raderna som motsvarar de parametrar som är relevanta för marknadsföringskanalerna avkommenteras. Du kan även lägga till andra parametrar.
+För miljöer som skapats i oktober 2023 eller senare kommer CDN att ta bort vanliga marknadsföringsrelaterade frågeparametrar, särskilt de som matchar följande regex-mönster, för att bättre kunna cache-lagra begäranden:
 
 ```
-/ignoreUrlParams {
-{{ /0001 { /glob "*" /type "deny" }}}
-{{ $include "../cache/marketing_query_parameters.any"}}
-}
+^(utm_.*|gclid|gdftrk|_ga|mc_.*|trk_.*|dm_i|_ke|sc_.*|fbclid)$
 ```
+
+Skicka en supportanmälan om du vill att det här beteendet ska inaktiveras.
+
+För miljöer som skapats före oktober 2023 bör du konfigurera Dispatcher-konfigurationens `ignoreUrlParams` egenskap som [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters).
+
 
 ## Invalidering av Dispatcher-cache {#disp}
 
@@ -220,7 +222,7 @@ I allmänhet behöver du inte göra Dispatcher-cachen ogiltig. Du bör i ställe
 
 ### Invalidering av Dispatcher-cache under aktivering/inaktivering {#cache-activation-deactivation}
 
-Precis som i tidigare versioner av AEM rensas innehållet från Dispatcher-cachen när du publicerar eller avpublicerar sidor. Om ett cachningsproblem misstänks bör du publicera om sidorna och se till att det finns ett virtuellt värdsystem som matchar `ServerAlias` localhost, vilket krävs för invalidering av Dispatcher-cache.
+Precis som i tidigare versioner av AEM rensas innehållet från Dispatcher-cachen när du publicerar eller avpublicerar sidor. Om ett problem med cachelagring misstänks bör du publicera om sidorna och se till att det finns ett virtuellt värdsystem som matchar `ServerAlias` localhost, vilket krävs för invalidering av Dispatcher-cache.
 
 >[!NOTE]
 >För att Dispatcher ska bli ogiltig måste du se till att alla förfrågningar från&quot;127.0.0.1&quot;,&quot;localhost&quot;,&quot;.local&quot;,&quot;.adobeaemcloud.com&quot; och&quot;.adobeaemcloud.net&quot; matchas och hanteras av en värdkonfiguration så att begäran kan hanteras. Du kan göra detta genom att globalt matcha &quot;*&quot; i en konfiguration som fångar upp alla värden enligt mönstret i referensen [AEM](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.d/available_vhosts/default.vhost). Du kan också se till att den tidigare nämnda listan fångas av någon av värdarna.
@@ -304,8 +306,8 @@ Metoderna skiljer sig åt när det gäller tillgång till nivån, möjlighet att
      <ol>
        <li>Publicerar innehåll och gör cachen ogiltig.</li>
        <li>Från författar-/publiceringsnivå - Tar bort innehåll och gör cachen ogiltig.</li>
-       <li><p><strong>Från författarnivå</strong> - Tar bort innehåll och gör cachen ogiltig (om den aktiveras från AEM Author-nivån i Publish Agent).</p>
-           <p><strong>Från publiceringsnivå</strong> - Gör endast cacheminnet (om det aktiveras från AEM-publiceringsnivån på agenten för tömning eller tömning endast för resurser) ogiltigt.</p>
+       <li><p><strong>Från författarnivå</strong> - Tar bort innehåll och gör cachen ogiltig (om den aktiveras från AEM författarnivå i publiceringsagenten).</p>
+           <p><strong>Från publiceringsnivå</strong> - Gör bara cachen oskadad (om den aktiveras från AEM publiceringsnivå på agenten för tömning eller tömning enbart på resurs).</p>
        </li>
      </ol>
      </td>

@@ -1,13 +1,14 @@
 ---
 title: Visa och förstå analysrapporter för adaptiva Forms
 description: Adaptiv Forms integreras smidigt med Adobe Analytics för att hämta in och spåra prestandamått för era publicerade formulär och dokument.
+keywords: Visa och förstå adaptiva Forms-analysrapporter, analysrapport för Adobe, Forms Analytics-rapport
 topic-tags: develop
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: 4fc6d29cd008b04ad97ceb17201c1f8d0e72439e
+source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,10 @@ ht-degree: 0%
 
 # Visa och förstå analysrapporter för adaptiva Forms {#viewing-and-understanding-aem-forms-analytics-reports}
 
-<span class="preview"> Det här är en förhandsversion som du kommer åt via vår [kanal för förhandsversion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM as a Cloud Service | Den här artikeln |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/integrate-aem-forms-with-experience-cloud-solutions/view-understand-aem-forms-analytics-reports.html) |
 
 I det snabbt föränderliga landskapet med digital analys är det av största vikt att vi fortsätter att engagera oss i globala trender för att fatta välgrundade beslut och optimera digitala upplevelser. Adaptive Forms integreras smidigt med Adobe Analytics för att hämta in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta databaserade beslut med hjälp av statistik och analyser för att förbättra formulärens användbarhet och effektivitet.
 
@@ -102,3 +106,9 @@ Mätvärden som hjälpvyer, valideringsfel och fältbesök visar var användarna
 Det hjälper dig att analysera formulärfälten där användarna har tillbringat tid innan du överger formuläret. I bilden nedan finns till exempel två övergivna formulär kvar i fältet **Fullständigt namn**, 2 kvar i fältet **Telefonnummer** och 1 kvar i fältet **Textindata**.
 
 ![Fältbesökare](assets/field-visitors.png){width="100%"}
+
+## Se även {#see-also}
+
+* [Aktivera Adobe Analytics för ett adaptivt formulär med Experience Cloud Setup Automation](/help/forms/enable-adobe-analytics-adaptive-form-using-experience-cloud-setup-automation.md)
+* [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Integrera AEM Forms med Adobe Analytics](/help/forms/integrate-aem-forms-with-adobe-analytics.md)
