@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 0dab7428d8ae5ec4c11a88ff310fad649a365868
+source-git-commit: b147c80581bcb554ae0b4ac971c5f98e7160d1df
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 1%
+source-wordcount: '1363'
+ht-degree: 0%
 
 ---
 
@@ -26,6 +26,12 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 136
 * SITES-11206: Content Fragments: Search API for Content Fragments.
 * SITES-11262: Content Fragments: Button to switch to the new Content Fragment Editor.
 * SITES-15447: Core Components: Release of version 2.23.4.
+* FORMS-9624: Introducerad CAPTCHA-komponent för adaptiv Forms baserad på kärnkomponenter.
+* FORMS-9913: Förbättrade den visuella redigerarens anropstjänst genom att lägga till möjlighet att validera fält och visa lämpliga fel- och framgångsmeddelanden.
+* FORMS-10106: Förbättrat GeneratePDFOutput-API för att returnera antalet sidor i det genererade dokumentet.
+* FORMS-2494: Stöd för formulärfragment för adaptiv Forms baserat på kärnkomponenter har lagts till.
+* FORMS-9807: Stöd har lagts till för navigering till en sidadress som returneras som ett resultat av att överföringen lyckades via regelredigeraren Adaptiv form.
+* FORMS-10571: Lagt till möjlighet att ange en omdirigerings-URL för tack baserat på svar från en tjänst som används i en anpassad sändningsåtgärd för Adaptiv Forms baserad på kärnkomponenter.
 
 ### Åtgärdade problem {#fixed-issues-13665}
 
@@ -57,6 +63,42 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 136
 * SITES-15815: Startar: Borttagen sida från start medför att Launch inte höjs korrekt.
 * SITES-15223: Page Editor: Det går inte att ändra storlek på komponenter i emulatorn för surfplattestorlek.
 * SITES-15463: Sidmallar: Det går inte att publicera mallar.
+* FORMS-10700: När du använder datumväljarkomponenten i ett adaptivt formulär som bygger på kärnkomponenter:
+   * När användaren skickar formuläret utan att ange några indata för datumkomponenten, loggas ett fel.
+   * När du använder lokaliserade versioner av datumväljaren fungerar vissa månader sömlöst och om du väljer vissa andra leder det till att en komponent inte fungerar som den ska.
+* FORMS-9598: AEM Forms inbäddningskomponent fungerar inte.
+* FORMS-9579: Du kan inte skicka ett booleskt värde till en funktion när du använder Regelredigeraren.
+* FORMS-9916: Om du markerar fältet som ogiltigt utlöses en ändringshändelse igen på samma fält. Denna oväntade händelse utlöser regeln en gång till och skapar en slinga som fortsätter att upprepas tills den når upp till maximalt 10 upprepningar.
+* FORMS-10243: Alternativet Sätt fokus fungerar inte korrekt för adaptiv Forms baserat på kärnkomponenter. När användaren klickar på en alternativknapp och regeln för att ange fokus är aktiverad för ett textruteobjekt, ställs fokus inte in som avsett, trots att andra regler fungerar som de ska.
+* FORMS-10416: För ett Headless Adaptive-formulär visas flerradskomponenten som en vanlig textindatakomponent när egenskapen &quot;:type&quot; inkluderas.
+* FORMS-10015: När det gäller ett adaptivt formulär baserat på kärnkomponenter skickar det hela fältinstansobjektet till den anpassade funktionen i regelredigeraren, i stället för bara fältets värde.
+* FORMS-9890: Användare i molnadministratörsgruppen kan skapa datakällor, formulär och formulärdatamodell utan att behöva ge formuläranvändare åtkomst till dem. De kan dock inte visa tillgängliga tjänster i systemet när de använder tjänsten Anropa i regelredigeraren.
+* FORMS-9075: Skärmläsarna meddelar inte alla felmeddelanden för de obligatoriska fälten när de skickar ett adaptivt formulär.
+* FORMS-9014: Följande tillgänglighetsproblem har åtgärdats:
+   * När du öppnar signaturrutan för skript hoppar markören till nästa komponent, inte inuti själva rutan. Detta beteende har bekräftats som ett problem av tillgänglighetsgruppen.
+   * När du har signerat stänger du inte dialogrutan genom att trycka på Retur. Användarna måste klicka på OK.
+   * Efter signering återställs tabbordningen till överkanten, i stället för att stanna vid signaturkomponenten eller flyttas till nästa.
+   * Alternativet att rensa signaturen, som representeras av en korsikon, är inte en del av tabbordningen och visas bara när du hovrar.
+   * Det går inte att komma åt dialogrutan Bekräfta signatur via tangentbordet.
+   * Etiketten för tangentbordsteckenknappen bör korrigeras för tydlighet.
+   * Kontrollerna i klottersignaturen saknar det rekommenderade kontrastförhållandet.
+   * Det inaktiva läget för knappen OK/bock bör innehålla attributet &quot;aria-disabled&quot;.
+   * Skärmläsaren förmedlar inte den text som används för att skapa den skrivna signaturen, vilket gör den otillgänglig för synskadade.
+* FORMS-9214: För Adaptiv Forms baserad på kärnkomponenter anropas inte den anpassade funktionen såvida den inte används för att ändra ett annat fält, till exempel för att ange värdet för ett annat fält.
+* För API:er för dokumentgenerering visar sökvägen &quot;/content&quot; inkonsekvent användning av mallsökväg, innehållsrot och data. Den fungerar i vissa fall korrekt, men inte enhetligt.
+* FORMS-10718: Stöd för API:t resolveNode för GuideBridge har lagts till för Adaptive Forms baserat på kärnkomponenter.
+* FORMS-9998: I Adaptiv Forms baserat på kärnkomponenter fungerar inte funktionerna&quot;Är tom&quot; och&quot;Är inte tom&quot; som förväntat när textindata valideras via regelredigeraren.
+* FORMS-10236: Komponenten för bifogad fil fungerar inte korrekt för adaptiv Forms baserat på kärnkomponenter. När du använder den bifogade komponenten fungerar förhandsgranskningar av filer först, men om du bifogar andra filer av liknande eller olika typer eller format fungerar inte förhandsgranskningen.
+* FORMS-10470: I kryssrutekomponenter fungerar inte skicka-knappen när standardvärdet som omarkerat (&#39;off&#39;) och datatypen är String.
+* FORMS-10534: I Adaptiv Forms baserat på kärnkomponenter visas det booleska operandalternativet till vänster, vilket anger att det går att välja. När en användare försöker markera det visas dock en felmarkering eller någon form av felindikering, vilket tyder på att markeringen inte fungerar som förväntat.
+* FORMS-10248: I Adaptiv Forms baserat på kärnkomponenter fungerar inte inställningen av en alternativknapp eller kryssruta när datavärdestypen är Boolean som förväntat.
+* FORMS-8114: Datumväljaren och datummönstret läses inte korrekt av NVDA-skärmläsaren. När du använder skärmläsaren NVDA läses datumväljaren utan ett mönster upp korrekt. Men när ett mönster används för datumväljaren läses det som en tabell i stället för att tolkas korrekt.
+
+
+
+
+
+
 
 ### Kända fel {#known-issues-13665}
 
