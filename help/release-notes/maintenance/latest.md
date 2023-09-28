@@ -2,7 +2,7 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: b147c80581bcb554ae0b4ac971c5f98e7160d1df
+source-git-commit: c62ae58240298604e6cd7737678603eb734434b3
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -94,15 +94,9 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 136
 * FORMS-10248: I Adaptiv Forms baserat på kärnkomponenter fungerar inte inställningen av en alternativknapp eller kryssruta när datavärdestypen är Boolean som förväntat.
 * FORMS-8114: Datumväljaren och datummönstret läses inte korrekt av NVDA-skärmläsaren. När du använder skärmläsaren NVDA läses datumväljaren utan ett mönster upp korrekt. Men när ett mönster används för datumväljaren läses det som en tabell i stället för att tolkas korrekt.
 
-
-
-
-
-
-
 ### Kända fel {#known-issues-13665}
 
-Ingen
+Ingen.
 
 ### Inbäddade tekniker {#embedded-tech-13665}
 
