@@ -7,15 +7,15 @@ keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterar
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
+source-git-commit: a589005551dd7d8cdf8ac004725341905f0e99d1
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2380'
 ht-degree: 0%
 
 ---
 
 
-# Felhanterare i adaptiv Forms (kärnkomponenter) {#error-handlers-in-adaptive-form}
+# Felhanterare för adaptiva formulär baserade på kärnkomponenter {#error-handlers-in-adaptive-form}
 
 
 | Version | Artikellänk |

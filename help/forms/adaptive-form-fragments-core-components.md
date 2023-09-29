@@ -4,15 +4,15 @@ description: Adaptiv Forms har en funktion för att skapa ett formulärsegment, 
 topic-tags: author
 keywords: Lägg till adaptiva formulärfragment, adaptiva formulärfragment, skapa ett formulärfragment, lägga till ett fragment i ett adaptivt formulär, hantera fragment
 feature: Adaptive Forms
-source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
+source-git-commit: 290cdecdb355b5c9a872d0f12ac701d271a258d4
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1738'
 ht-degree: 0%
 
 ---
 
 
-# Adaptiva formulärfragment {#adaptive-form-fragments}
+# Skapa och använda adaptiva Forms-fragment i ett adaptivt formulär baserat på kärnkomponenter {#adaptive-form-fragments}
 
 
 | Version | Artikellänk |
