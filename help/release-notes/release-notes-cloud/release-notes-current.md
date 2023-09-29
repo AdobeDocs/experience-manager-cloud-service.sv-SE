@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: ed67bb95a82f083ed3b6eea4fe5f5d150359c539
+source-git-commit: 8c878833118b2d8dc51e8cfa2c15ce70efbd3deb
 workflow-type: tm+mt
 source-wordcount: '1419'
 ht-degree: 0%
@@ -27,6 +27,10 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 ## Releasedatum {#release-date}
 
 Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.9.0) är 28 september 2023. Nästa funktionsrelease (2023.10.0) planeras till 26 oktober 2023.
+
+## Versionsinformation om underhåll {#maintenance}
+
+Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
 
 <!-- 
 
@@ -127,10 +131,6 @@ Filtrera trafiken vid CDN baserat på:
 Är du intresserad av att testa funktionen och ge feedback? Skicka e-post till **aemcs-waf-adopter@adobe.com** från ditt officiella e-post-ID om du vill veta mer om programmet för tidig användning. Utrymmet är begränsat.
 
 Läs mer om funktionen i artikeln [här](/help/security/cdn-and-waf-rules.md).
-
-## Versionsinformation om underhåll {#maintenance}
-
-Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
 
 ## Cloud Manager {#cloud-manager}
 
