@@ -3,9 +3,9 @@ title: Skapa innehållsfragment
 description: Lär dig hur du skapar innehåll för dina innehållsfragment och sedan skapar varianter av det innehållet utifrån syfte. Detta ger större flexibilitet för både headless-leverans och redigering av sidor.
 feature: Content Fragments
 role: User, Developer, Architect
-source-git-commit: 2fa22bf2feb6b8697877b345bc29821e30b1c6a1
+source-git-commit: 2a4538ad8b52615ffdee110393bfbc01f57694f4
 workflow-type: tm+mt
-source-wordcount: '2227'
+source-wordcount: '2249'
 ht-degree: 0%
 
 ---
@@ -62,6 +62,11 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
    * ett alternativ för att visa alla **Överordnade referenser** (länkikon)
    * fragmentet **[Status](/help/sites-cloud/administering/content-fragments/managing.md#statuses-content-fragments)** och senast sparad information
    * växla till den ursprungliga (resursbaserade) redigeraren
+
+     >[!WARNING]
+     >
+     >Den ursprungliga redigeraren öppnas på samma flik. Vi rekommenderar inte att båda redigerarna är öppna samtidigt.
+
 * vänster panel: visar **[Variationer](#variations)** för innehållsfragmentet och dess **Fält**:
    * dessa länkar kan användas för [navigera i strukturen för innehållsfragment](#navigate-structure)
 * höger panel: presenterar flikar [visa egenskaper (metadata) och taggar](#view-properties-tags), information om [versionshistorik](#view-version-history)och information om [språkversioner](#view-language-copies)
