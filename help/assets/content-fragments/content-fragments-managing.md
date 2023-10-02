@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
+source-git-commit: cc752e540fd08c2db5145316f57071c991d264b3
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1855'
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ The [Innehållsfragmentsredigerare](#opening-the-fragment-editor) innehåller ol
 >
 >De hanteras nu främst med **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console)** konsolen, men de kan fortfarande hanteras från **Resurser** konsol. Detta avsnitt behandlar ledning från **Resurser** konsol.
 >
->Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol).
+>Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol). Båda redigerarna har en växlingsknapp i det övre verktygsfältet som ger snabb åtkomst till den andra redigeraren.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -194,6 +194,8 @@ Vissa funktioner i det övre verktygsfältet finns i flera lägen:
    * **Publicerad**: grön
    * **Ändrad**: orange
    * **Inaktiverad**: röd
+
+* Med en knapp **Prova den nya redigeraren** genom att öppna *new* [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md) som är tillgängliga via [Konsol för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console).
 
 * **Spara** ger åtkomst till **Spara och stäng** alternativ.
 

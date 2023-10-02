@@ -2,9 +2,9 @@
 title: Arbeta med innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du med Content Fragments in Adobe Experience Manager (AEM) as a Cloud Service kan utforma, skapa, strukturera och använda sidoberoende innehåll, idealiskt för sidredigering och rubrikfri leverans. Hur de kan användas tillsammans med MSM.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
-source-git-commit: c31f43986e44099a3a36cc6c9c2f1a7251499ffb
+source-git-commit: cc752e540fd08c2db5145316f57071c991d264b3
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2229'
 ht-degree: 2%
 
 ---
@@ -38,7 +38,7 @@ Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i S
 >
 >De hanteras nu främst med **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console)** konsolen, men de kan fortfarande hanteras från **Resurser** konsol. Detta avsnitt behandlar ledning från **Resurser** konsol.
 >
->Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol).
+>Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som du i första hand kommer åt från **Resurser** konsol. Se dokumentationen för Sites, [Content Fragments - Authoring](/help/sites-cloud/administering/content-fragments/authoring.md), om du vill ha information om den nya redigeraren (finns huvudsakligen i **Innehållsfragment** konsol). Båda redigerarna har en växlingsknapp i det övre verktygsfältet som ger snabb åtkomst till den andra redigeraren.
 
 På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhåller och använder innehållsfragment:
 
