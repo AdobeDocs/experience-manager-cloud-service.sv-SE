@@ -1,9 +1,7 @@
 ---
 title: AEM Assets-tillägg för Adobe Express
 description: AEM Assets-tillägg för Adobe Express ger dig direktåtkomst till resurser som lagras i AEM Assets inifrån användargränssnittet för Adobe Expressen.
-hide: true
-hidefromtoc: true
-source-git-commit: 5fe4204bcfdd42edad53ca80b693800aef0a5dc5
+source-git-commit: e9ff2f2b15642288e82ac6f900dc567231bf85c7
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%
