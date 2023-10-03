@@ -2,9 +2,9 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
+source-git-commit: ccd4206f029ac77b90f731891ac300c5d3849ef8
 workflow-type: tm+mt
-source-wordcount: '2150'
+source-wordcount: '2166'
 ht-degree: 9%
 
 ---
@@ -224,7 +224,10 @@ Om sidan innehåller innehållsfragment får du även åtkomst till [webbläsare
 
 Välj lämplig referenstyp för mer information. I vissa situationer är ytterligare åtgärder tillgängliga när du väljer en specifik referens, bland annat:
 
-* **Inkommande länkar**, innehåller en lista med sidor som refererar till sidan, tillsammans med direktåtkomst till **Redigera** en av dessa sidor när du väljer en specifik länk
+* **Inkommande länkar**, innehåller en lista med sidor som refererar till sidan, tillsammans med direktåtkomst till **Redigera** en av dessa sidor när du markerar en specifik länk.
+
+   * Detta kan bara visa statiska länkar, inte dynamiskt genererade länkar, till exempel från List-komponenten.
+
 * Förekomster av lånat och lånat innehåll med **Referens** -komponent, härifrån kan du navigera till den refererande/refererade sidan
 * [Startar](/help/sites-cloud/authoring/launches/overview.md), ger åtkomst till relaterade starter
 * [Live-kopior](/help/sites-cloud/administering/msm/overview.md) visar sökvägarna för alla live-kopior som baseras på den valda resursen.
