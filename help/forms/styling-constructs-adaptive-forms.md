@@ -1,16 +1,14 @@
 ---
-title: Formateringskonstruktioner för Adaptive Forms
-seo-title: Styling constructs for Adaptive Forms
-description: Använd LESS-ramverket för att anpassa utseendet på Adaptiv Forms.
-seo-description: Use LESS framework to customize appearance of Adaptive Forms.
+title: Hur formaterar jag konstruktioner för Adaptive Forms?
+description: Använd LESS-ramverket för Adaptive Forms för att anpassa utseendet på Adaptive Forms.
 uuid: d2e45ad9-7322-43ce-a1dd-ad97e2eea742
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '2310'
+source-wordcount: '2315'
 ht-degree: 0%
 
 ---
@@ -20,11 +18,11 @@ ht-degree: 0%
 
 ## Förutsättningar {#prerequisites}
 
-Kunskap om CSS och LESS-ramverket.
+Kunskap om CSS och LESS Framework.
 
 ## Vad kan anpassas {#what-can-be-customized}
 
-I artikeln listas allmänt tillgängliga CSS-klasser för Adaptive Forms. Du kan använda dessa klasser för att formatera olika komponenter i ett adaptivt formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd bara dessa formateringskonstruktioner när du skapar format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigerare](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html).
+Artikeln innehåller en lista över allmänt tillgängliga CSS-klasser för Adaptive Forms. Du kan använda dessa klasser för att formatera olika komponenter i ett adaptivt formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd dessa formateringskonstruktioner för att skapa format (med CSS eller Less) endast när du inte kan formatera komponenter med [temaredigerare](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html).
 
 ## Anpassa format i Adaptive Forms {#customizing-styles-in-adaptive-forms}
 
@@ -119,7 +117,7 @@ Fälten innehåller etiketter, widgetar, hjälpbeskrivning (både lång och kort
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -153,7 +151,7 @@ Elementet HTML **label** som används för fältet innehåller klasserna **väns
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -162,7 +160,7 @@ Elementet HTML **label** som används för fältet innehåller klasserna **väns
   </tr>
   <tr>
    <td><p><code>label-font-size</code></p> </td>
-   <td><p>Teckenstorlek för fältetiketten</p> </td>
+   <td><p>Teckensnittsstorlek för fältetiketten</p> </td>
   </tr>
   <tr>
    <td><p><code>label-line-height</code></p> </td>
@@ -179,11 +177,11 @@ Elementet HTML **label** som används för fältet innehåller klasserna **väns
  </tbody>
 </table>
 
-CSS-reglerna för etiketten tillämpas med **guideFieldLabel** label. Om du är författare åsidosätter du den här regeln för att göra dina anpassade ändringar synliga.
+CSS-reglerna för etiketten tillämpas med **guideFieldLabel** etikett. Om du är författare åsidosätter du den här regeln för att göra dina anpassade ändringar synliga.
 
 ## Widgets-format {#widgets-styling}
 
-Beroende på vilken typ de har innehåller widgetar även klasser. Vanligtvis innehåller widgetarna `guideFieldWidget` klassen. De widgetar som levereras med HTML använder normalt elementindata och markering för standardelementet HTML. Formateringen görs därefter. Du kan inte formatera en anpassad widget genom att ändra variablerna.
+Beroende på typ innehåller widgetar även klasser. Vanligtvis innehåller widgetarna `guideFieldWidget` klassen. De widgetar som levereras med HTML använder normalt elementindata och markering för standardelementet HTML. Formateringen görs därefter. Du kan inte formatera en anpassad widget genom att ändra variablerna.
 
 <table>
  <tbody>
@@ -197,7 +195,7 @@ Beroende på vilken typ de har innehåller widgetar även klasser. Vanligtvis in
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler <code></code></strong></p> </td>
+   <td><p><strong>Variabel <code></code></strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -294,7 +292,7 @@ En författare kan ange hjälpinnehåll i fälten med hjälp av komponenterna f�
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -335,7 +333,7 @@ Villkor (TnC) `` ``) kan du ange villkor. Du kan anpassa widgeten med hjälp av 
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -357,7 +355,7 @@ Knappar är också widgetar. Men deras format skiljer sig något från widgetarn
 * knapp
 * element med klass .button
 
-HTML-kod för knapp:
+HTML för knapp:
 
 `<button type="button" >`
 
@@ -391,7 +389,7 @@ HTML-kod för knapp:
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler <code></code></strong></p> </td>
+   <td><p><strong>Variabel <code></code></strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -400,7 +398,7 @@ HTML-kod för knapp:
   </tr>
   <tr>
    <td><p><code>button-border-type</code></p> </td>
-   <td><p>Kantlinjetyp</p> </td>
+   <td><p>Kanttyp</p> </td>
   </tr>
   <tr>
    <td><p><code>button-padding</code></p> </td>
@@ -493,7 +491,7 @@ För widgetarna visas ett questionMark när en författare lägger till en lång
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -514,7 +512,7 @@ Du kan ändra färgtemat för huvud- och innehållsrader i en tabell med hjälp 
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -539,7 +537,7 @@ Med widgeten Bifogad fil i Adaptiv Forms kan du överföra filer. Du kan också 
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -569,7 +567,7 @@ Med widgeten Bifogad fil i Adaptiv Forms kan du överföra filer. Du kan också 
  </tbody>
 </table>
 
-## Överblick {#navigator-styles}
+## Navigeringsformat {#navigator-styles}
 
 Det finns fyra typer av navigeringsflikar. Det finns flikar till vänster, högst upp i guiden och dragspelet. Varje navigator har en egen klass.
 
@@ -725,7 +723,7 @@ Klassen guideNavIcon innehåller en standardikon för tabbnavigering (både vän
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -903,7 +901,7 @@ En panel innehåller ett valfritt verktygsfält och dess innehåll.
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -963,7 +961,7 @@ Dessa variabler påverkar den rubrikrad som är synlig på en mobil enhet eller 
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -997,7 +995,7 @@ Dessa variabler påverkar rullningsindikatorn, som är en orange pil som visas p
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -1035,7 +1033,7 @@ Variablerna i följande tabell påverkar den fasta verktygsfältslayouten för m
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>
@@ -1080,7 +1078,7 @@ The **Enkel registrering** tema på /etc/clientlibs/fd/af/guithema/simpleRegistr
 <table>
  <tbody>
   <tr>
-   <td><p><strong>Variabler </strong></p> </td>
+   <td><p><strong>Variabel </strong></p> </td>
    <td><p><strong>Beskrivning</strong></p> </td>
   </tr>
   <tr>

@@ -1,13 +1,14 @@
 ---
-title: Skicka en bekräftelse på att formulär har skickats via e-post
-description: Med AEM Forms kan du konfigurera åtgärden Skicka via e-post som skickar en bekräftelse till en användare när formuläret skickas.
+title: Hur skickar man en bekräftelse på att man skickat in ett formulär via e-post i AEM Forms?
+description: Med AEM Forms kan du konfigurera åtgärden Skicka via e-post som skickar en bekräftelse till en användare när formulär skickas.
+uuid: c80b1ef4-8fe3-48e0-8fc6-3032dc022a38
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
 docset: aem65
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---

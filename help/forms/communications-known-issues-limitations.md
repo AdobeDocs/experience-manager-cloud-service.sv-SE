@@ -1,15 +1,15 @@
 ---
-title: Kända fel och god praxis
-description: Kommunicera bästa praxis, kända problem och begränsningar
+title: Kända fel och metodtips i AEM Forms
+description: Kända fel och metodtips för AEM Forms Communication API:er är viktiga.
 exl-id: e95615dd-e494-40cd-9cdf-6e9761ca3b3e
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---
 
-# Kända fel och god praxis {#best-practices-known-issues-and-limitations}
+# Kända fel och metodtips {#best-practices-known-issues-and-limitations}
 
 Innan du börjar använda API:er för kommunikation bör du ta reda på följande saker, kända fel och vanliga frågor:
 
@@ -142,7 +142,7 @@ I följande tabell anges XCI-alternativ.
 | config/present/pdf/scriptModel | Styr om XFA-specifik information ska inkluderas i utdata-PDF-dokumentet. |
 | config/present/common/data/adjustData | Kontrollerar om XFA-programmet justerar data efter sammanslagningen. |
 | config/present/pdf/renderPolicy | Kontrollerar om genereringen av sidinnehåll görs på servern eller skjuts upp till klienten. |
-| config/present/common/locale | Anger standardspråket som används i utdatadokumentet. |
+| config/present/common/locale | Anger den standardspråkinställning som används i utdatadokumentet. |
 | config/present/destination | Anger utdataformatet när det finns i ett aktuellt element. Anger vilken åtgärd som ska utföras när dokumentet öppnas i en interaktiv klient när det finns i ett openAction-element. |
 | config/present/output/type | Anger vilken typ av komprimering som ska användas för en fil eller vilken typ av utdata som ska skapas. |
 | config/present/common/temp/uri | Anger formulär-URI. |
@@ -163,7 +163,7 @@ I följande tabell anges XCI-alternativ.
 
 * För en gruppkonfiguration tillåts bara en instans av en kombination av värden av OutputType (PDF, PRINT) och RenderType(PostScript, PCL, IPL, ZPL o.s.v.).
 
-* För asynkrona API:er (gruppbearbetning) är standardpostnivån 2. Du kan använda en anpassad XCI för att ändra postnivån till 1.
+* För asynkrona API:er (gruppbearbetning) är standardpostnivån 2. Du kan använda en anpassad XCI för att ändra postnivå till 1.
 
 * När standard-XCI är konfigurerad inkluderas sökväg till ursprunglig återgivning. Till exempel, `/content/dam/formsanddocuments/default.xci/jcr:content/renditions/original`
 

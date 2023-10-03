@@ -1,13 +1,11 @@
 ---
 title: Referensteman
-seo-title: Reference Themes
-description: AEM Forms tillhandahåller adaptiva formulärteman som du kan hämta från Software Distribution och använda för att utforma ett formulär.
-seo-description: AEM Forms provides adaptive forms themes that you can get from Software Distribution and use to style a form.
+description: Använd de adaptiva formulärteman, mallar och formulärdatamodeller som finns som referens för att komma igång snabbt.
 discoiquuid: a1229970-5a5a-4f76-a880-278f972587cc
 exl-id: 92870b32-e0d5-4cb4-9b88-81f88ca8ff64
-source-git-commit: 575e9836d676cf6711e039a5bb6860ad04324d60
+source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -31,7 +29,7 @@ Varje tema innehåller en unik och elegant stil som du kan använda för att ska
 
 ![Referensteman](/help/forms/assets/ref-themes.png)
 
-Teman som ingår i det här paketet är responsiva, och format i dessa teman definieras för mobila och stationära skärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
+Teman som ingår i det här paketet är responsiva, och format i dessa teman definieras för mobilskärmar och datorskärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
 
 Mer information om hur du installerar paketet finns i [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md).
 

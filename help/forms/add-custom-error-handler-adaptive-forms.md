@@ -1,14 +1,16 @@
 ---
-title: Lägg till anpassade felhanterare i AEM Adaptive Forms
+title: Lägg till en anpassad felhanterare i Adaptive Forms för AEM Adaptive Forms
+seo-title: Error Handlers in Adaptive Forms for AEM Adaptive Forms
 description: AEM Forms har körklara hanterare och felhanterare för ett formulär som använder REST-slutpunkten som konfigurerats för att anropa en extern tjänst. Du kan lägga till en standardfelhanterare samt en anpassad felhanterare i en AEM anpassad form.
 seo-description: Error handler function and Rule Editor in Adaptive Forms helps you to effectively manage and customize error handling. You can add a default error handler as well as custom error handler in an AEM Adaptive Form.
 keywords: Lägg till en anpassad felhanterare, lägg till en standardfelhanterare, lägg till en felhanterare i formuläret, använd regelredigerarens anropstjänst för att lägga till en anpassad felhanterare, konfigurera regelredigeraren för att lägga till en anpassad felhanterare, lägg till en anpassad felhanterare med regelredigeraren
 contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
-source-git-commit: f6c6ef96f8de194942a95d8589591b41431037f5
+exl-id: 198a26a9-d6bb-457d-aab8-0a5d15177c48
+source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
 workflow-type: tm+mt
-source-wordcount: '2435'
+source-wordcount: '2439'
 ht-degree: 0%
 
 ---

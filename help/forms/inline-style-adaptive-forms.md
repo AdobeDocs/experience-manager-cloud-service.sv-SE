@@ -1,20 +1,20 @@
 ---
 title: Hur använder man infogade format på adaptiva formulärkomponenter?
-description: Du kan använda anpassade format på ett adaptivt formulär, men du kan också använda infogade CSS-egenskaper på enskilda komponenter i ett adaptivt formulär. Lär dig hur du använder infogade format i adaptiva formulärkomponenter. Gräv djupare med hjälp av ett exempel för att använda infogad stil på en textfältskomponent.
+description: Lär dig hur du använder anpassade format på ett adaptivt formulär. Du kan också använda infogade CSS-egenskaper på enskilda komponenter i ett adaptivt formulär.
 feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 25adabfb-ff19-4cb2-aef5-0a8086d2e552
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '742'
 ht-degree: 1%
 
 ---
 
 # Textbunden formatering av adaptiva formulärkomponenter {#inline-styling-of-adaptive-form-components}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -28,7 +28,7 @@ Du kan definiera det övergripande utseendet och formatet för ett anpassat form
 Så här lägger du till infogade format i en komponent:
 
 1. Öppna formuläret i formulärredigeraren och ändra läget till formateringsläge. Om du vill ändra läge till formateringsläge trycker du på ![canvas-drop-down](assets/Smock_ChevronDown.svg) > **[!UICONTROL Style]**.
-1. Markera en komponent på sidan och tryck på redigeringsknappen ![edit-button](assets/edit.svg). Stilegenskaper öppnas i sidofältet.
+1. Markera en komponent på sidan och tryck på knappen Redigera ![edit-button](assets/edit.svg). Stilegenskaper öppnas i sidofältet.
 
    Du kan också välja komponenter från formulärhierarkiträdet i sidlisten. Formulärhierarkiträdet är tillgängligt som formulärobjekt i sidlisten.
 
@@ -48,7 +48,7 @@ Så här lägger du till infogade format i en komponent:
 1. På samma sätt kan du använda format för andra delar av en komponent, som [!UICONTROL Widget], [!UICONTROL Caption]och [!UICONTROL Help].
 1. Tryck **[!UICONTROL Done]** för att bekräfta ändringarna eller **[!UICONTROL Cancel]** för att ignorera ändringarna.
 
-## Exempel: infogade format för en fältkomponent {#example-inline-styles-for-a-field-component}
+## Exempel: textbundna format för en fältkomponent {#example-inline-styles-for-a-field-component}
 
 Följande bilder visar ett textfält före och efter att infogade format har använts på det.
 
@@ -123,7 +123,7 @@ Så här definierar du format för ett läge för en komponent:
 
 1. I **[!UICONTROL Style]** läge, tryck på komponenten och tryck på ikonen Redigera ![Redigera](assets/Smock_Edit_18_N.svg).
 
-1. Välj läge för komponenten med **[!UICONTROL State]** nedrullningsbar lista.
+1. Välj läge för komponenten med **[!UICONTROL State]** listruta.
 
    ![Välj läge](assets/select-state.png)
 

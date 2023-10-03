@@ -1,10 +1,10 @@
 ---
-title: Integrera DocuSign med ett adaptivt formulär
+title: Hur integrerar man DocuSign med ett adaptivt formulär?
 description: Lär dig hur du använder DocuSign med ett adaptivt formulär för att samla in e-signaturer.
 exl-id: fb2e75d6-e454-4999-a079-f663af79051f
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1438'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ DocuSign är en framträdande e-signaturlösning. Du kan använda det för att e
 - Slutför HR-processerna snabbare och ge medarbetarna de digitala upplevelserna.
 - Minska kontraktscyklerna och anlita era leverantörer snabbare.
 
-AEM Forms as a Cloud Service har [anpassad skickaåtgärd för DocuSign](#deploy-custom-submit-action). Med åtgärden Skicka kan du skicka adaptiva formulär för e-signaturer med hjälp av API:er för DocuSign.
+AEM Forms as a Cloud Service har en [anpassad skickaåtgärd för DocuSign](#deploy-custom-submit-action). Med åtgärden Skicka kan du skicka adaptiva formulär för e-signaturer med hjälp av API:er för DocuSign.
 
 | Du kan också använda Adobe signaturlösning, Adobe Sign, för att e-signera ett anpassat formulär. AEM Forms har en mycket djupare integrering med Adobe Sign och ger mycket finare kontroller som sekventiell och parallell signering, flera autentiseringsmetoder, signering i formulär med mera. Mer information finns i [Använda Adobe Sign i en adaptiv form](working-with-adobe-sign.md). |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -140,7 +140,7 @@ Utför följande steg för att integrera [!DNL DocuSign] med [!DNL AEM Forms] p�
 
    Om du vill ha stegvis information om hur du konfigurerar OAuth-inställningar för en [!DNL DocuSign] program och hämta nycklarna, se [Konfigurera autentiseringsinställningar för programmet](https://support.docusign.com/guides/ndse-admin-guide-api-and-keys) dokumentation för utvecklare.
 
-1. Gå tillbaka till **[!UICONTROL Create DocuSign Configuration]** sida. I **[!UICONTROL Settings]** -fliken **[!UICONTROL OAuth URL]** I fältet anges följande standard-URL:
+1. Gå tillbaka till **[!UICONTROL Create DocuSign Configuration]** sida. I **[!UICONTROL Settings]** -fliken, **[!UICONTROL OAuth URL]** I fältet anges följande standard-URL:
 
    `https://account-d.docusign.com/oauth/auth`
 
@@ -174,7 +174,8 @@ Så här skapar du ett signeringsaktiverat adaptivt formulär:
    1. Ange **[!UICONTROL Name]** och **[!UICONTROL Title]** för den adaptiva formen.
 
    1. Välj [konfigurationsbehållare](adobe-sign-integration-adaptive-forms.md#configure-adobe-sign-with-aem-forms) skapad [integrering [!DNL DocuSign] med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md).
-   Konfigurationsbehållaren innehåller [!DNL DocuSign] Cloud Services som är konfigurerade för din miljö. Dessa tjänster kan väljas i redigeraren för adaptiva formulär.
+
+   Konfigurationsbehållaren innehåller [!DNL DocuSign] Cloud Service som konfigurerats för din miljö. Dessa tjänster kan väljas i redigeraren för adaptiva formulär.
 
 1. I **[!UICONTROL Form Model]** väljer du något av följande alternativ:
 
@@ -183,7 +184,7 @@ Så här skapar du ett signeringsaktiverat adaptivt formulär:
    - Om du inte har någon anpassad formulärmall väljer du **[!UICONTROL Generate Document of Record]** alternativ. När du använder alternativet visas alla fält i det adaptiva formuläret i det dokument som skickas för signering.
 
 1. Tryck **[!UICONTROL Create.]** Ett signeringsaktiverat anpassat formulär skapas. Du kan lägga till [!DNL DocuSign] fält till formuläret och skicka det för signering.
-1. Öppna det adaptiva formuläret i redigeringsläge. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Form Container]** och trycka ![Konfigurera](assets/configure-icon.svg).
+1. Öppna det adaptiva formuläret i redigeringsläge. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Form Container]** och knacka ![Konfigurera](assets/configure-icon.svg).
 
 1. I **[!UICONTROL Submission]** avsnitt, markera **[!UICONTROL Submit with DocuSign electronic signatures]** från **[!UICONTROL Submit Action]** listruta.
 
@@ -208,7 +209,7 @@ Används [!DNL DocuSign] i en befintlig adaptiv form:
 
 1. Tryck på **[!UICONTROL Save & Close]**. Det adaptiva formuläret är aktiverat för [!DNL DocuSign]. Nu kan du lägga till [!DNL DocuSign] fält till formuläret och skicka det för signering.
 
-1. Öppna det adaptiva formuläret i redigeringsläge. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Form Container]** och trycka ![Konfigurera](assets/configure-icon.svg).
+1. Öppna det adaptiva formuläret i redigeringsläge. I **[!UICONTROL Content]** trycker du på **[!UICONTROL Form Container]** och knacka ![Konfigurera](assets/configure-icon.svg).
 
 1. I **[!UICONTROL Submission]** avsnitt, markera **[!UICONTROL Submit with DocuSign electronic signatures]** från **[!UICONTROL Submit Action]** listruta.
 

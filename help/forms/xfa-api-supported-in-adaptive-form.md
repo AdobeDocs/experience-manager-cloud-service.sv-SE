@@ -1,14 +1,12 @@
 ---
 title: XFA-stöd i XDP-baserad Adaptive Forms
-seo-title: XFA support in XDP-based Adaptive Forms
 description: Visar XFA-händelser, egenskaper, skript och validering som stöds i Adaptive Forms.
-seo-description: Lists supported XFA events, properties, scripts, and validation in Adaptive Forms.
 uuid: 75d3c292-cfed-438f-afdb-4071d95a08b7
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 05303b29-9058-4723-b134-4ba605fe40c7
 docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -52,7 +50,7 @@ När ett adaptivt formulär skapas med en XDP-fil kan du dra och släppa ett XFA
   </tr>
   <tr>
    <td><p>Listruta </p> </td>
-   <td><p>Nedrullningsbar lista</p> </td>
+   <td><p>Listruta</p> </td>
   </tr>
   <tr>
    <td><p>Datum-/tidsfält </p> </td>
@@ -128,11 +126,11 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till rollegenskapen i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>Tillgänglighet: talkPriority </p> </td>
+   <td><p>Tillgänglighet: TalkPriority </p> </td>
    <td><p>Mappas till egenskapen talkPriority i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>Tillgänglighet: talkText</p> </td>
+   <td><p>Hjälpmedel: talkText</p> </td>
    <td><p>Mappas till den anpassade hjälpmedelstexten i adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -160,7 +158,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappas till egenskapen Maximum för tillåtna tecken i Adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>flerradig<em> (Textfält)</em></p> </td>
+   <td><p>flera<em> (Textfält)</em></p> </td>
    <td><p>Mappad till egenskapen Tillåt flera rader i adaptiv form.</p> </td>
   </tr>
   <tr>
@@ -213,7 +211,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filen fungerar 
    <td><p>Mappas till knappens Click-uttryck.</p> </td>
   </tr>
   <tr>
-   <td><p>Stöd för skript på serversidan</p> </td>
+   <td><p>Stöd för serverskript</p> </td>
    <td><p>Det här skriptet körs under körning och kan inte åsidosättas i Adaptiv form.</p> </td>
   </tr>
   <tr>

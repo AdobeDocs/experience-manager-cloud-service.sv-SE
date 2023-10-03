@@ -1,14 +1,14 @@
 ---
-title: Kända fel och begränsningar
-description: Kända fel och begränsningar i  [!DNL AEM Forms] as a Cloud Service miljö
+title: Kända fel och begränsningar i [!DNL AEM Forms] as a Cloud Service miljö
+description: Kända fel och begränsningar i  [!DNL AEM Forms] as a Cloud Service miljö.
 contentOwner: khsingh
 role: User, Developer
 level: Intermediate
 topic: Administration
 exl-id: 871f294d-f251-4966-a021-39df65b613f0
-source-git-commit: 63f6e7c6df7404062aa0d209496506bdabcf564c
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Innan du börjar använda [!DNL AEM Forms] as a Cloud Service kan du läsa om f�
 
 * Lägg inte till och kör ett test som skickar ett adaptivt formulär från en publiceringsinstans till ett AEM arbetsflöde som körs på en Author-instans förrän du får mer information.
 
-* När du importerar ett adaptivt formulär som använder en mall som innehåller **[!UICONTROL Save]** knappen **[!UICONTROL Save]** knappen fortsätter att visas i det adaptiva formuläret även efter att det har tagits bort från motsvarande mall. Ta bort **[!UICONTROL Save]** från din adaptiva Forms innan den publiceras. Håll ett öga på versionsinformationen om att Forms Portal och Spara som är en utkastfunktion är tillgängliga för att återställa och använda knappen.
+* När du importerar ett adaptivt formulär som använder en mall som innehåller **[!UICONTROL Save]** -knappen **[!UICONTROL Save]** knappen fortsätter att visas i det adaptiva formuläret även efter att det har tagits bort från motsvarande mall. Ta bort **[!UICONTROL Save]** från din adaptiva Forms innan den publiceras. Håll ett öga på versionsinformationen om att Forms Portal och Spara som är en utkastfunktion är tillgängliga för att återställa och använda knappen.
 
 * The **[!UICONTROL Set variable]** AEM arbetsflöden stöder inte variabler av typen matrislista. Du kan använda processsteget för att ange variabler för typmatrislistan.
 

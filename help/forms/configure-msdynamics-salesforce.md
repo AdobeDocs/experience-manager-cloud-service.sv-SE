@@ -1,9 +1,10 @@
 ---
-title: Konfigurera Microsoft&reg; Dynamics 365 eller Salesforce för AEM Forms
-description: Lär dig hur du integrerar Microsoft&reg; Dynamics 365 och Salesforce med adaptiva formulär.
-source-git-commit: 483a72f67f361023ebeefa3d74ec9f35a5f4f765
+title: Hur konfigurerar jag Microsoft Dynamics 365 och Salesforce från kartongdatamodeller för Adaptiv Forms?
+description: Lär dig hur du integrerar Microsoft Dynamics 365 och Salesforce med Adaptiv Forms.
+exl-id: 2a43b2db-2dfb-4c79-88be-ea770b44dac1
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---

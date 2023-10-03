@@ -1,14 +1,14 @@
 ---
-title: Repeterbarhet i adaptiv form (kärnkomponenter)
-description: Använd upprepningsfunktionen i panelkomponenterna för att upprepa liknande avsnitt i en adaptiv form.
+title: Så här skapar du repeterbara paneler i komponenter med adaptiv Form Core
+description: Lär dig att skapa upprepningsbara avsnitt eller fält i en adaptiv form.
 role: Architect, Developer, Admin, User
-source-git-commit: fcdb96a6bbe8ff8761293eedc0d38efaecb56037
+exl-id: 02521bf3-83c1-40a0-8fe6-23af240727e9
+source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
 workflow-type: tm+mt
-source-wordcount: '1391'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
-
 
 # Skapa formulär med repeterbara avsnitt (kärnkomponenter) {#repeat-panel}
 
@@ -49,7 +49,7 @@ Om du vill upprepa en panel i formuläret eller ta bort repeterbara paneler anv�
 
 Så här gör du en panel upprepningsbar:
 1. Välj en panelbehållare och tryck på ![cmppr](/help/forms/assets/cmppr.png).
-1. Klicka på **upprepningspanel** och växla till **gör panelen upprepningsbar**.
+1. Klicka på **upprepningspanel** och växla **gör panelen upprepningsbar**.
 1. Ange **minsta repetitioner** som krävs för minst repeterbara avsnitt kan du ange **minsta repetitioner** till noll för att inte hämta paneler eller för att ta bort de upprepade panelerna. Som standard är värdet för minsta repetition noll.
 1. Ange **maximalt antal upprepningar** om du vill upprepa panelens antal gånger som krävs är värdet som standard oändligt.
 
@@ -63,7 +63,7 @@ Så här gör du en panel upprepningsbar:
 
 Panelens överordnade objekt som ska upprepas bör innehålla en Lägg till-knapp för att hantera upprepad instans av panelen. Följ de här stegen för att infoga knappar i det överordnade objektet och aktivera skript på knapparna:
 
-1. Lägg till en **knappkomponent** till panelens överordnade. I exempelvideon nedan är det en knappkomponent med etikettnamnet **Lägg till** och fältnamn **AddPanel**, används. Markera komponenten och tryck på ![edit-rules](/help/forms/assets/edit-rules.png). Reglerna för knappkomponenten öppnas i regelredigeraren.
+1. Lägg till en **knappkomponent** till panelens överordnade panel. I exempelvideon nedan är det en knappkomponent med etikettnamnet **Lägg till** och fältnamn **AddPanel**, används. Markera komponenten och tryck på ![edit-rules](/help/forms/assets/edit-rules.png). Reglerna för knappkomponenten öppnas i regelredigeraren.
 1. Klicka på **Skapa**.
 
    Välj **Visual Editor** på raden Formulärobjekt och -funktioner.

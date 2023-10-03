@@ -1,11 +1,11 @@
 ---
-title: Skillnader mellan AEM 6.5 Forms och AEM Cloud Service
-description: Använder du Experience Manager Forms och vill uppgradera till Adobe Experience Manager Forms as a Cloud Service? Jämför AEM 6.5 Forms och AEM Cloud Services och lär dig de viktigaste förändringarna innan du uppgraderar eller migrerar till Cloud Service.
+title: Vilka är skillnaderna mellan AEM 6.5 Forms och AEM Cloud Service?
+description: Jämför AEM 6.5 Forms och AEM Cloud Services och lär dig de viktigaste förändringarna innan du uppgraderar eller migrerar till Cloud Service.
 exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
 contentOwner: khsingh
-source-git-commit: fa71eb6317314dc8c3540cd0ebb8afaa75d55a59
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1350'
 ht-degree: 0%
 
 ---
@@ -37,13 +37,13 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 
 * Använd [AEM Forms as a Cloud Service migreringsverktyg](/help/forms/migrate-to-forms-as-a-cloud-service.md) för att förbereda och migrera dina adaptiva Forms, teman, mallar och molnkonfigurationer från <!-- AEM 6.3 Forms--> AEM 6.4 Forms on OSGi and AEM 6.5 Forms on OSGi to [!DNL AEM] as a Cloud Service. Använd [Git-databasen för ditt program](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) för att importera befintliga adaptiva formulärmallar.
 
-* E-post har som standard bara stöd för HTTP- och HTTP-protokoll. [Kontakta supportteam](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#sending-email) för att aktivera portar för att skicka e-post och för att aktivera SMTP-protokoll för din miljö.
+* E-post har som standard bara stöd för HTTP- och HTTP-protokoll. [Kontakta supportteam](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#sending-email) för att göra det möjligt för portar att skicka e-post och aktivera SMTP-protokoll för din miljö.
 
 ## Lokalisering
 
-* URL-konventionen för lokaliserade adaptiva Forms har nu stöd för att ange nationella inställningar i URL:en. Ny URL-konvention möjliggör cachelagring av lokaliserade formulär på en Dispatcher eller CDN. I en Cloud Service-miljö använder du URL-formatet `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`.
+* URL-konventionen för lokaliserade adaptiva Forms har nu stöd för att ange nationella inställningar i URL:en. Den nya URL-konventionen gör det möjligt att cachelagra lokaliserade formulär på en Dispatcher eller CDN. I en Cloud Service-miljö använder du URL-formatet `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`.
 
-* Adobe rekommenderar att du använder Dispatcher eller CDN-cachning. Det förbättrar återgivningshastigheten för förfyllda formulär.
+* Adobe rekommenderar att du använder Dispatcher eller CDN-cachning. Det förbättrar återgivningshastigheten i förfyllda formulär.
 
 
 ## Adaptiv Forms
@@ -56,7 +56,7 @@ Adobe Experience Manager Forms as a Cloud Service förändrar de befintliga funk
 
 * **Skicka-åtgärder:** The **E-post** Skicka-åtgärd innehåller alternativ för att skicka bilagor och bifoga DoR-dokument (Document of Record) med e-post. Du kan använda den istället för **E-posta som PDF** i AEM 6.5 Forms.
 
-* **Tjänsten Automated forms conversion**: Tjänsten tillhandahåller inte metamodell för Automated forms conversion Service. Du kan [ladda ned den från Automated forms conversion Service-dokumentationen](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#default-meta-model).
+* **Tjänsten Automated forms conversion**: Tjänsten tillhandahåller inte någon metamodell för tjänsten Automated forms conversion. Du kan [ladda ned den från Automated forms conversion Service-dokumentationen](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=en#default-meta-model).
 
 * **XSD-baserad, adaptiv Forms:** Du kan använda XDP-mall för att utforma en mall för Dokument för post. Tjänsten stöder inte XFA-baserad Adaptive Forms
 
@@ -76,27 +76,29 @@ Forms as a Cloud Service tillhandahåller RESTful-API:er för dokumentgenerering
 
 * **API:er för dokumenthantering (Assembler Service)**:
 
-   * De åtgärder som kräver dokumenttjänster eller program är inte tillgängliga. Exempel: Microsoft Word till PDF, Microsoft Excel till PDF och HTML till PDF, PostScript (PS) till PDF, XDP till PDF forms stöds inte. De här åtgärderna är beroende av Microsoft Office, Adobe Acrobat, Adobe Distiller och Forms Document Service.
+   * De åtgärder som kräver dokumenttjänster eller program är inte tillgängliga. Exempel: Microsoft® Word till PDF, Microsoft® Excel till PDF och HTML till PDF, PostScript (PS) till PDF, XDP till PDF forms stöds inte. Dessa åtgärder kräver Microsoft® Office, Adobe Acrobat, Adobe Distiller respektive Forms Document Service.
 
-   * Konvertera dokument som inte är i PDF till ett PDF-format innan du använder dem med API:er för kommunikationsdokumentmanipulering. Om dina dokument till exempel är i Microsoft Office-, HTML-, PostScript- (PS) eller XDP-format, konverterar du dessa dokument till PDF innan du använder dem med PDF-dokument. Du kan använda [ConvertPDF](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/using-convertpdf-service.html) tjänster för sådana konverteringar.
+   * Konvertera dokument som inte är i PDF till ett PDF-format innan du använder dem med API:er för kommunikationsdokumentmanipulering. Om dina dokument till exempel är i Microsoft® Office-, HTML-, PostScript- (PS) eller XDP-format, konverterar du dessa dokument till PDF innan du använder dem med PDF-dokument. Du kan använda [ConvertPDF](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/using-convertpdf-service.html) tjänster för sådana konverteringar.
 
-* Du kan använda en AEM 6.5 Forms-miljö för Digital Signature, Encryption, Reader Extension, Send to printer, Convert PDF och Barcoded Forms.
+   * Du kan använda en AEM 6.5 Forms-miljö för Digital Signature, Encryption, Reader Extension, Send to printer, Convert PDF och Barcoded Forms.
 
 
 ## Dataintegrering (formulärdatamodell)
 
-* Tjänsten ger även stöd för Microsoft Dynamics, SalesForce, SOAP-baserade webbtjänster och tjänster som stöder OData.
+* Tjänsten har också stöd för JDBC-anslutning, Microsoft® Dynamics, SalesForce, SOAP-baserade webbtjänster och tjänster som stöder OData.
 
 * Du kan även ansluta AEM användarprofil för att hämta och uppdatera användarinformation.
 
 * Forms datamodell stöder endast HTTP- och HTTPS-slutpunkter för att skicka data. Tjänsten stöder inte ömsesidig SSL för REST-anslutning och x509-certifikatbaserad autentisering för SOAP-datakällor.
 
-* Forms as a Cloud Service tillåter att Microsoft Azure Blob, Microsoft Sharepoint, Microsoft OneDrive och tjänster som stöder allmänna CRUD-åtgärder (Skapa, Läs, Uppdatera och Ta bort) används som datalager. Både Open API-specifikation 2.0 och Open API 3.0 stöds.
+* Med Forms as a Cloud Service kan du använda Microsoft® Azure Blob, Microsoft® Sharepoint, Microsoft® OneDrive och tjänster med stöd för vanliga CRUD-åtgärder (Skapa, Läs, Uppdatera och Ta bort) som datalager. Både Open API-specifikationen 2.0 och Open API 3.0 stöds.
 
 
 ## E-signera
 
-* Tjänsten stöder även Adobe Sign roller. Du kan konfigurera rollerna i Adaptiv Forms-redigerare så att företagsanvändare enkelt kan konfigurera signeringsarbetsflöden.
+* Tjänsten ger en OOTB-integrering med Adobe Sign och stöder DocuSign för e-signaturer.
+
+* Tjänsten stöder även Adobe Sign roller. Du kan konfigurera rollerna i den adaptiva Forms-redigeraren så att företagsanvändare enkelt kan konfigurera signeringsarbetsflöden.
 
 
 ## HTML5 Forms
@@ -105,7 +107,7 @@ Forms as a Cloud Service tillhandahåller RESTful-API:er för dokumentgenerering
 
    * återge dina XDP-baserade formulär som HTML5 Forms. Tjänsten stöder inte HTML5 Forms.
 
-   * hämta in data offline och synkronisera dem nästa gång du kommer tillbaka online med [AEM Forms Workspace](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-aem-forms-workspace/introduction-html-workspace.html) app.
+   * hämta in data offline och synkronisera dem nästa gång du är online med [AEM Forms Workspace](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-aem-forms-workspace/introduction-html-workspace.html) app.
 
 ## Interaktiv kommunikation
 

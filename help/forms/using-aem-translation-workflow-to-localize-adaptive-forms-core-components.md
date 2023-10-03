@@ -1,10 +1,11 @@
 ---
-title: Översätt en huvudkomponentbaserad adaptiv form
-description: Använd maskinöversättning eller mänsklig översättning för att översätta en grundläggande komponentbaserad adaptiv form
+title: Hur översätter man en baskomponentbaserad adaptiv form?
+description: Lär dig skapa en formulärdatamodell i AEM Forms, testa modellen med exempeldata och tjänster och konfigurera olika alternativ för en modell.
 feature: Adaptive Forms
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+exl-id: ad46bf0f-e6ec-4c52-9695-5768a9968e16
+source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---

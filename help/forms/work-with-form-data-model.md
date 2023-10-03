@@ -1,13 +1,13 @@
 ---
 title: Hur arbetar man med formulärdatamodellen?
-description: Lär dig hur du lägger till datamodellsobjekt och -tjänster, skapar datamodellsobjekt och underordnade egenskaper, konfigurerar tjänster, lägger till associationer och arbetar med navigeringsegenskaper för OData-tjänster. Lär dig mer om hur du genererar och redigerar exempeldata, testar datamodellsobjekt och -tjänster och automatiserar valideringen av indata.
+description: Lägg till datamodellsobjekt, tjänster, skapa datamodellsobjekt och underordnade egenskaper, konfigurera tjänster, arbeta med navigeringsegenskaper för OData-tjänster.
 feature: Form Data Model
 role: User
 level: Beginner, Intermediate
 exl-id: c17c0443-d4dc-41f8-9315-6cc49e6c471f
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '3984'
+source-wordcount: '3955'
 ht-degree: 0%
 
 ---

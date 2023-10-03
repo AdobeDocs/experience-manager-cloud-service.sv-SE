@@ -1,12 +1,10 @@
 ---
 title: Tabeller i anpassningsbara former
-seo-title: Tables in adaptive forms
-description: Med tabellkomponenten i AEM Forms kan du skapa tabeller i adaptiva formulär som är responsiva för mobila layouter, och som även tillåter användning av XDP-tabellkomponenter.
-seo-description: The Table component in AEM Forms lets you create tables in adaptive forms that are responsive to mobile layouts, and also allows using XDP table components.
+description: Använd tabellkomponenten för att lägga till tabeller i ett adaptivt formulär. Förutom att bidra med den responsiva layouten kan tabellkomponenten lägga till XDP-tabellelement.
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Adaptive Forms
 exl-id: 88ace1d4-b68d-40e6-a7b4-918ba25f2e91
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
 source-wordcount: '2478'
 ht-degree: 0%

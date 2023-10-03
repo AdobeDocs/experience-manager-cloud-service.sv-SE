@@ -1,17 +1,17 @@
 ---
 title: Så här använder du [!DNL Adobe Sign] i anpassad form?
-description: Du kan aktivera e-signatur ([!DNL Adobe Sign]) för ett adaptivt formulär för att automatisera signeringsarbetsflöden, förenkla processerna med en eller flera signaturer samt för att elektroniskt signera formulär från mobila enheter.
+description: Använd Adobe Sign i ett adaptivt formulär för att låta formulärmottagarna e-signera ett formulär från valfri enhet.
 topic-tags: develop
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
+source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
 workflow-type: tm+mt
-source-wordcount: '3004'
+source-wordcount: '3000'
 ht-degree: 0%
 
 ---
-
 
 # Använda [!DNL Adobe Sign] i adaptiv form {#using-adobe-sign-in-an-adaptive-form}
 

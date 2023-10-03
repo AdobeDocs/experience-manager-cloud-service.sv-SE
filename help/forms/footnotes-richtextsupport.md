@@ -1,9 +1,10 @@
 ---
-title: Stöd för fotnoter i Adaptive Forms
-description: Förbättra Adaptiv Forms med informativa fotnoter i RTF-format. Förbättra användarupplevelsen och engagemanget.
-source-git-commit: 6dd34937a8aeb6c7ddfc0fb1180a112de534dd4b
+title: Stöd för fotnoter i adaptiva Forms
+description: Använd RTF-redigerare (Rich Text Editor) för fotnoter i en adaptiv form.
+exl-id: f04dae84-daab-42f8-876f-02fe426f62be
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---

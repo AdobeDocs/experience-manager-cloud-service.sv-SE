@@ -1,19 +1,17 @@
 ---
-title: Hantera metadata
-seo-title: Manage [!DNL AEM Forms] metadata
+title: Hantera metadata för AEM Forms
 description: Metadata gör det enklare att kategorisera och ordna resurser och hjälper användare som letar efter en viss resurs.
-seo-description: Metadata allows for easier categorization and organization of assets and helps users who are looking for a specific asset.
 exl-id: 8527246a-37f0-4d43-a49e-1c76c265514e
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '1717'
+source-wordcount: '1720'
 ht-degree: 0%
 
 ---
 
 # Lägga till, ta bort eller redigera metadata i ett anpassat formulär {#manage-form-metadata}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 
 | Version | Artikellänk |
@@ -56,7 +54,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
   <tr> 
    <td>Titel</td> 
    <td>Alla utom resurser</td> 
-   <td>Visningsnamn för resursen.<br /> </td> 
+   <td>Visa resursens namn.<br /> </td> 
   </tr> 
   <tr> 
    <td>Beskrivning</td> 
@@ -102,16 +100,16 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
     <ul> 
      <li>Inget värde: Om ett formulär aldrig har publicerats.</li> 
      <li>Publicerat: När ett formulär publiceras.</li> 
-     <li>Ändrad: När ett formulär ändrades efter att ha publicerats en gång.</li> 
+     <li>Ändrad: När ett formulär har ändrats efter att ha publicerats en gång.</li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>Senaste publiceringsdatum</td> 
+   <td>Senast publicerat den</td> 
    <td>Alla utom resurser</td> 
    <td>Ett skrivskyddat värde som anger när formuläret senast publicerades.</td> 
   </tr> 
   <tr> 
-   <td>Publicera på/av-tid</td> 
+   <td>Publicera på-/avaktiveringstid</td> 
    <td>Alla utom resurser</td> 
    <td><p>Tidpunkt då formuläret schemaläggs att automatiskt publiceras/avpubliceras. Användaren anger det här värdet när metadata redigeras.</p> 
     <ul> 
@@ -130,7 +128,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
     </ul> </td> 
   </tr> 
   <tr> 
-   <td>HTML renderingsprofil</td> 
+   <td>Återgivningsprofil för HTML</td> 
    <td>Formulärmall</td> 
    <td>Den återgivningsprofil för HTML som används vid återgivning av en formulärmall i HTML-format.</td> 
   </tr> 
@@ -154,7 +152,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
    <td><p>Adaptiv form</p> <p>Formulärmall</p> <p>Resurs</p> </td> 
    <td><p>Lista över resurser (andra formulär eller resurser) som det här formuläret är relaterat till. Dessa resurser kan delas in i följande två kategorier:</p> 
     <ul> 
-     <li>Referenser: Resurser som det aktuella formuläret refererar till.</li> 
+     <li>Referens: Resurser som det aktuella formuläret refererar till.</li> 
      <li>Refereras av: Resurser som refererar till den aktuella tillgången.</li> 
     </ul> <p>De här resurserna visas som länkar och deras metadata kan du komma åt direkt genom att klicka på dem.<br /> </p> </td> 
   </tr> 
@@ -164,7 +162,7 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i [!DNL AE
    <td><p>Anger vilken formulärmodell som används när det adaptiva formuläret skapas. Den här egenskapen kan ha följande värden:</p> 
     <ul> 
       <li>Formulärdatamodell </li>
-      <li>Schema: En XML med JSON-schema</li>
+      <li>Schema: En XML-kod för JSON-schema</li>
      <!-- <li>Form template: A form template is selected from the ones existing in the repository. This value can be updated.</li> 
      <li>XML schema: An XSD file is uploaded. This value can be updated.</li> -->
      <li>Ingen</li> 
@@ -191,7 +189,7 @@ Resurser har befintliga egenskapsvärden som kan visas i skrivskyddat läge. Des
      >Snabbåtgärder är de åtgärdsobjekt som visas över en miniatyrbild när du håller muspekaren.
 
    * Markera formuläret och klicka på knappen **[!UICONTROL Properties]** ![Egenskaper](assets/Smock_Info_18_N.svg) som visas i verktygsfältet.
-   * Navigera till sidan med formulärinformation genom att klicka på miniatyrbilden för formuläret när det inte är i markeringsläget. Klicka på ![Egenskaper](assets/Smock_Info_18_N.svg) ögonikonen i det övre högra hörnet och klicka sedan på Egenskaper i listan nedanför.
+   * Navigera till sidan med formulärinformation genom att klicka på miniatyrbilden för formuläret när det inte är i markeringsläget. Klicka nu på ![Egenskaper](assets/Smock_Info_18_N.svg) ögonikonen i det övre högra hörnet och klicka sedan på Egenskaper i listan nedanför.
 
 1. Egenskapssidan som öppnas visar ett schema som bara innehåller de metadataegenskaper som innehåller vissa värden.
 
@@ -246,7 +244,7 @@ För Adaptiv Forms finns ytterligare funktioner som gör att användaren kan gen
 
 Förutom de metadata som anges i kartongen [!DNL AEM Forms] har stöd för nya anpassade metadata.
 
-Ett verktyg (redigeringsprogram för metadataschema) finns för att definiera schemat för metadatalayouten. det vill säga layouten för det som visas i **[!UICONTROL Properties]** sida i ett formulär. Med metadatarameditor kan du lägga till eller ändra ett anpassat schema för dina resurser.
+Ett verktyg (redigeraren för metadataschema) tillhandahålls för att definiera metadatalayouten, det vill säga layouten för det som visas i **[!UICONTROL Properties]** sida i ett formulär. Med metadatarameditor kan du lägga till eller ändra ett anpassat schema för dina resurser.
 
 [!DNL AEM Forms] visar metadatamatcheman för de formulärtyper som stöds i det här verktyget. På så sätt kan du komma åt dessa scheman och använda funktionerna som finns i redigeraren för metadatamatchning för att lägga till anpassade egenskaper.
 
@@ -262,7 +260,7 @@ Ett verktyg (redigeringsprogram för metadataschema) finns för att definiera sc
    >
    >Dessa scheman innehåller metadataegenskaper som anges utanför rutan och får inte ändras/redigeras (markera kryssrutan och klicka på Redigera från verktygsfältet) för att undvika funktionsproblem.
 
-1. Alla resurstyper som du klickar på öppnas en lista som innehåller `extendedmetadata` alternativ. Redigera det här schemat.
+1. Alla resurstyper som du klickar på öppnas en lista som innehåller `extendedmetadata` alternativ. Redigera schemat.
 
 1. Markera kryssrutan bredvid `extendedmetadata` och klicka sedan på Redigera ![Redigera](assets/Smock_Edit_18_N.svg) som visas i verktygsfältet.
 
@@ -300,8 +298,8 @@ Ett verktyg (redigeringsprogram för metadataschema) finns för att definiera sc
       >
       >Egenskapsnamnet måste också vara unikt för att du inte ska kunna skriva värden för två eller flera egenskaper på samma plats i databasen. Vi rekommenderar att du ändrar värdet &#39;default&#39;.
 
-   1. Fyll i andra inställningar baserat på behov. Till exempel: Välj alternativet Obligatoriskt om du vill göra fältet obligatoriskt.
-   1. Om du vill ta bort ett fält som du har lagt till markerar du fältet och klickar sedan på borttagningen ![Ta bort](assets/Smock_Delete_18_N.svg) ikon.
+   1. Fyll i andra inställningar baserat på behov. Välj till exempel alternativet Obligatoriskt om du vill göra fältet obligatoriskt.
+   1. Om du vill ta bort ett fält som du har lagt till markerar du fältet och klickar sedan på borttagningen ![Ta bort](assets/Smock_Delete_18_N.svg) -ikon.
 
 1. Om det behövs följer du steg 1-3 för att lägga till en annan egenskap.
 1. Klicka **[!UICONTROL Save]** efter att ha gjort alla ändringar.

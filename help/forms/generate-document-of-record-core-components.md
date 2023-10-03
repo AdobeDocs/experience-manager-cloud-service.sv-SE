@@ -1,10 +1,10 @@
 ---
-title: Generera urkunder för Adaptive Forms
-description: Beskriver hur du kan generera en mall för en dokumentmall (DoR) för Adaptiv Forms.
+title: Hur skapar man urkunder för Adaptive Forms?
+description: Lär dig att generera en mall för ett dokument för inspelning (Document of Record, DoR) för adaptiva Forms Core-komponenter.
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '3003'
+source-wordcount: '3005'
 ht-degree: 0%
 
 ---

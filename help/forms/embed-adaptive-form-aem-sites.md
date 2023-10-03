@@ -1,13 +1,12 @@
 ---
-title: Bädda in ett anpassat formulär på AEM Sites-sidan
-seo-title: How to add an Adaptive Form to an AEM Sites page?
-description: Du kan använda komponenten Adaptiv Forms - Embed för att bädda in adaptiv Forms på en AEM Sites-sida, så att du kan fylla i och skicka ett formulär utan att lämna AEM Sites-sidorna.
+title: Hur lägger man till ett adaptivt formulär på en AEM Sites-sida?
+description: Lägg smidigt in Adaptiv Forms på en AEM Sites-sida eller en webbsida som ligger utanför AEM.
 feature: Adaptive Forms
 Keywords: Forms AEM Sites, Embed Form to a Sites page, Adaptive Forms AEM Sites, Embed Adaptive Forms to AEM Page, Embed Forms in an AEM Sites page
 exl-id: 359b05e8-d8c1-4a77-9e70-6f6b6e668560
-source-git-commit: d9dee0b5a070da6a19004c749f69c724fff9d967
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '2966'
+source-wordcount: '2954'
 ht-degree: 0%
 
 ---

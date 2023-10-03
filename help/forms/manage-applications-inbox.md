@@ -1,13 +1,13 @@
 ---
-title: Hantera Forms-program och -uppgifter i AEM Inkorg
+title: Hur hanterar jag formulärprogram och uppgifter i AEM Inkorg?
 description: Med AEM Inbox kan du starta Forms-centrerade arbetsflöden genom att skicka program och hantera uppgifter.
+uuid: c6c0d8ea-743f-4852-99d1-69fd50a0994e
 contentOwner: vishgupt
 topic-tags: document_services, publish
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
-docset: aem65
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+discoiquuid: dd11fd83-3df1-4727-8340-8c5426812823
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1131'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 # Hantera Forms-program och -uppgifter i AEM Inkorg{#manage-forms-applications-and-tasks-in-aem-inbox}
 
-Ett av många sätt att starta eller utlösa ett Forms-centrerat arbetsflöde är genom program i AEM Inbox. Du måste skapa ett arbetsflödesprogram för att göra ett Forms-arbetsflöde tillgängligt som program i Inbox. Mer information om arbetsflödesprogram och andra sätt att starta Forms-arbetsflöden finns i [Starta ett Forms-orienterat arbetsflöde i OSGi](aem-forms-workflow.md#launch).
+Ett av många sätt att starta eller utlösa ett Forms-centrerat arbetsflöde är genom program i AEM Inbox. Du måste skapa ett arbetsflödesprogram för att göra en Forms Workflow tillgänglig som ett program i Inkorgen. Mer information om arbetsflödesprogram och andra sätt att starta Forms-arbetsflöden finns i [Starta ett Forms-orienterat arbetsflöde i OSGi](aem-forms-workflow.md#launch).
 
-Dessutom konsoliderar AEM Inkorg meddelanden och uppgifter från olika AEM komponenter, inklusive Forms-arbetsflöden. När ett formulärarbetsflöde som innehåller ett tilldelningssteg aktiveras, visas det associerade programmet som en uppgift i den tilldelades inkorg. Om den som tilldelats är en grupp visas uppgiften i Inkorgen för alla gruppmedlemmar tills en enskild person gör anspråk på eller delegerar uppgiften.
+Dessutom konsoliderar AEM Inkorg meddelanden och uppgifter från olika AEM komponenter, inklusive Forms-arbetsflöden. När en Forms Workflow som innehåller ett tilldelningssteg aktiveras visas det associerade programmet som en uppgift i den tilldelades inkorg. Om den som tilldelats är en grupp visas uppgiften i Inkorgen för alla gruppmedlemmar tills en enskild person gör anspråk på eller delegerar uppgiften.
 
 Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Din inkorg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/inbox.html#inbox-in-the-header).
 
-Sammanfattningsvis kan du i Inkorgen skapa ett nytt program och hantera tilldelade uppgifter.
+Sammanfattningsvis kan du i Inkorgen skapa ett program och hantera tilldelade uppgifter.
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ Sammanfattningsvis kan du i Inkorgen skapa ett nytt program och hantera tilldela
 
 ## Hantera uppgifter {#manage-tasks}
 
-När ett Forms-arbetsflöde utlöses och du är tilldelad eller en del av den tilldelade gruppen, visas en uppgift i Inkorgen. Du kan visa uppgiftsinformation och utföra tillgängliga åtgärder för uppgiften inifrån Inkorgen.
+När en Forms-arbetsflödesutlösare och du är tilldelad eller en del av den tilldelade gruppen, visas en uppgift i din Inkorg. Du kan visa uppgiftsinformation och utföra tillgängliga åtgärder för uppgiften inifrån Inkorgen.
 
 ### Anspråk eller delegera uppgifter {#claim-or-delegate-tasks}
 
@@ -57,7 +57,7 @@ Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla
 
 ### Visa information och utför åtgärder på uppgifter {#view-details-and-perform-actions-on-tasks}
 
-När du öppnar en uppgift kan du visa uppgiftsinformation och utföra tillgängliga åtgärder. Vilka åtgärder som är tillgängliga för en uppgift definieras i steget Tilldela uppgift i det associerade Forms-arbetsflödet.
+När du öppnar en uppgift kan du visa uppgiftsinformation och utföra tillgängliga åtgärder. Vilka åtgärder som är tillgängliga för en uppgift definieras i steget Tilldela uppgift i den associerade Formens Workflow.
 
 1. Tryck för att markera aktivitetens miniatyrbild. Alternativ för att öppna eller delegera den valda uppgiften visas högst upp.
 1. Tryck **Öppna** för att visa information om uppgifter och vidta åtgärder. Den detaljerade uppgiftsvyn öppnas. I den här vyn kan du visa aktivitetsinformation och vidta åtgärder för uppgiften.
@@ -87,19 +87,19 @@ Fliken Formulär i området för huvudinnehållet visar eventuella bifogade form
 
 Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem) för det associerade arbetsflödet.
 
-Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan trycka **[!UICONTROL View Details]** för att få information om det stadiet. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare om uppgiften.
+Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan trycka **[!UICONTROL View Details]** för att få information om det stadiet. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare, om uppgiften.
 
 ![arbetsflödesinformation](assets/workflow-details.png)
 
 #### Verktygsfältet Åtgärder {#actions-toolbar}
 
-Verktygsfältet Åtgärder visar alla tillgängliga alternativ för uppgiften. Medan Spara, Återställ och Delegera är standardåtgärder konfigureras andra tillgängliga åtgärder i [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem). I exemplet ovan har Godkänn och Avvisa konfigurerats i arbetsflödet.
+Verktygsfältet Åtgärder visar alla tillgängliga alternativ för uppgiften. När Spara, Återställ och Delegera är standardåtgärder konfigureras andra tillgängliga åtgärder i [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem). I exemplet ovan har Godkänn och Avvisa konfigurerats i arbetsflödet.
 
 När du utför en åtgärd fortsätter den i arbetsflödet.
 
 ### Visa slutförda uppgifter {#view-completed-tasks}
 
-AEM Inkorg visar bara aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, t.ex. uppgiftstyp, status, start- och slutdatum. Så här visar du slutförda uppgifter:
+AEM Inkorg visar bara aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, till exempel uppgiftstyp, status, start- och slutdatum. Så här visar du slutförda uppgifter:
 
 1. I AEM Inkorg trycker du ![toggle-side-panel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
 1. Tryck **[!UICONTROL Task Status]** dragspelspanel och markera **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
@@ -120,9 +120,9 @@ The **[!UICONTROL Workflow Details]** -fliken visar varje steg i arbetsflödet. 
 
 ## Felsökning {#troubleshooting-workflows}
 
-### Det går inte att visa objekt som är relaterade till AEM arbetsflöde i AEM {#unable-to-see-aem-worklow-items}
+### Det går inte att visa objekt som är relaterade till AEM arbetsflöde i AEM Inkorg {#unable-to-see-aem-worklow-items}
 
-En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM i AEM. Lös problemet genom att lägga till indexen nedan i din AEM och återskapa indexet.
+En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM arbetsflöde i AEM Inkorg. Lös problemet genom att lägga till indexen nedan i din AEM databas och återskapa indexet.
 
 1. Använd någon av följande metoder för att lägga till index:
 

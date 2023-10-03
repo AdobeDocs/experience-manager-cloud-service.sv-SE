@@ -1,11 +1,11 @@
 ---
-title: Importera eller exportera anpassningsbara Forms- och AEM Forms-resurser
-description: Funderar du på att migrera adaptiva Forms och resurser till och från AEM? Lär dig hur du importerar och exporterar adaptiva Forms, PDF forms, teman och andra stödresurser från en [!DNL AEM Forms] -instans.
-seo-description: Looking to migrate Adaptive Forms and assets to and from an AEM instances? Learn here how to import and export Adaptive Forms, PDF forms, themes, and other supporting assets from an [!DNL AEM Forms] instance.
+title: Lär dig att importera, exportera och ordna adaptiva Forms, PDF forms och andra resurser på en[!DNL AEM Forms] instance
+description: Lär dig att migrera adaptiva Forms, PDF forms, teman och andra stödresurser till och från en AEM.
 topic-tags: forms-manager
-source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
+exl-id: f5105fb7-b8c0-4656-8095-b21d392746c0
+source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1132'
 ht-degree: 1%
 
 ---

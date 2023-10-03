@@ -1,20 +1,20 @@
 ---
 title: Hur skapar man en formulärsekvens i flera steg?
-description: Med [!DNL Experience Manager Forms]kan du definiera en sekvens med formulärpaneler så att användarna kan navigera och fylla i ett anpassat formulär. Gå ett steg längre genom att använda fallbaserad metod som exempel för att skapa formulärsekvenser i flera steg.
+description: Med [!DNL Experience Manager Forms]kan du definiera en sekvens med formulärpaneler så att användarna kan navigera och fylla i ett anpassat formulär.
 feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 6b3f9131-db6b-451b-a932-b57d809222eb
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
 # Introduktion till formulärsekvenser i flera steg {#introduction-to-multi-step-form-sequence}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -47,7 +47,7 @@ Låt oss ta ett exempel där du måste skapa en sekvens för att fylla i, verifi
 
    * **[!UICONTROL Confirmation]**: Den innehåller **[!UICONTROL Summary]** som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i [!UICONTROL Summary] , visa ett tackmeddelande, visa en länk till det genererade PDF och så vidare.
 
-1. Välj layouten för rotpanelen som **[!UICONTROL Wizard]**.
+1. Markera rotpanelens layout som **[!UICONTROL Wizard]**.
 1. Slutför de återstående stegen för att skapa formulärmallen. <!-- For more information, see [Creating a custom Adaptive Form template](custom-adaptive-forms-templates.md). -->
 
 När du har definierat formulärsekvensen i formulärmallen kan du använda den för att skapa formulär som har den grundläggande strukturen definierad som sekvensen på plats, även om du alltid kan anpassa formuläret efter dina behov.

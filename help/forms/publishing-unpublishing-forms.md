@@ -1,18 +1,13 @@
 ---
-title: Publicera och avpublicera formulär och dokument
-seo-title: Publishing and unpublishing forms and documents
-description: Du kan schemalägga publicering och avpublicering av formulär. Publicerade formulär replikeras på publiceringsinstansen.
-seo-description: You can schedule publishing and unpublishing of forms. Published forms are replicated on the publish instance.
-uuid: 0bad5608-b7a8-4599-81cc-2cd0a3dc7dd5
+title: Hur publicerar och avpublicerar man blanketter och dokument?
+description: Schemalägg publicering och avpublicering av din adaptiva Forms. Publicerade formulär replikeras på publiceringsinstansen.
 content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-content-strategy: max-2018
 discoiquuid: 32a7a50c-74f4-49bc-a0bd-a9ec142527cb
-docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+docset: aem65s
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
@@ -20,7 +15,7 @@ ht-degree: 0%
 
 # Publicera och avpublicera formulär och dokument{#publishing-and-unpublishing-forms-and-documents}
 
-[!DNL AEM Forms] kan du enkelt skapa, publicera och avpublicera formulär. The [!DNL AEM Forms] server innehåller två instanser: Skapa och publicera. Författarinstans används för att skapa och hantera formulärresurser och resurser. Publiceringsinstansen används för att hålla resurser och relaterade resurser tillgängliga för slutanvändare.
+[!DNL AEM Forms] kan du enkelt skapa, publicera och avpublicera formulär. The [!DNL AEM Forms] server innehåller två instanser: Författare och Publicera. Författarinstans används för att skapa och hantera formulärresurser och resurser. Publiceringsinstansen används för att hålla resurser och relaterade resurser tillgängliga för slutanvändare.
 
 ## Resurser som stöds   {#supported-assets-nbsp}
 
@@ -79,8 +74,7 @@ En resurs kan ha följande lägen:
       >
       >Markera inte flera resurser. Det går inte att publicera flera resurser samtidigt.
 
-
-1. När publiceringsprocessen startar visas en bekräftelsedialogruta med en lista över alla relaterade resurser och resurser. Tryck på i dialogrutan som innehåller relaterade resurser **[!UICONTROL Publish]**. Resursen publiceras och dialogrutan Publicera resurser har slutförts visas.
+1. När publiceringsprocessen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. Tryck på i dialogrutan som innehåller relaterade resurser **[!UICONTROL Publish]**. Resursen publiceras och dialogrutan Publicera resurser har slutförts visas.
 
    >[!NOTE]
    >
@@ -130,7 +124,7 @@ Följ de här stegen för att publicera alla Correspondence Management-resurser 
 Följ de här stegen för att schemalägga datum och tid för publicering och avpublicering av Forms- och dokumentresurser:
 
 1. Välj en resurs och tryck **[!UICONTROL View Properties]**. Sidan Metadataegenskaper öppnas.
-1. På sidan Metadataegenskaper trycker du på **[!UICONTROL Advanced]** och sedan trycka **[!UICONTROL Edit]** ![illustrator_cc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
+1. Tryck på på Egenskaper för metadata **[!UICONTROL Advanced]** och sedan trycka **[!UICONTROL Edit]** ![illustrator_cc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
 1. I **[!UICONTROL Publish On Time]** och **[!UICONTROL Publish Off Time]** väljer du datum och tid.\
    Tryck **[!UICONTROL Done]** ![aem6forms_check](assets/aem6forms_check.png).
 
@@ -140,7 +134,7 @@ Följ de här stegen för att schemalägga datum och tid för publicering och av
 1. Använd något av följande för att välja och avpublicera en resurs.
 
    1. Flytta pekaren över en resurs och tryck på **[!UICONTROL Unpublish]** ![avpublicera](assets/unpublish.png).
-   1. Gör något av följande och tryck sedan på Avpublicera:
+   1. Gör något av följande och tryck sedan på Unpublish (Avpublicera):
 
       * Tryck på om du är i kortvyn **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och tryck på resursen. Resursen har valts.
 
@@ -198,6 +192,6 @@ Så här aktiverar du autentisering för dina formulär:
 1. Öppna configMgr i publiceringsinstansen i webbläsaren.\
    URL: `https://<hostname>:<PublishPort>/system/console/configMgr`
 
-1. Klicka på Adobe Experience Manager Web Console **Autentiseringstjänst för Apache Sling** för att konfigurera den.
+1. I Adobe Experience Manager Web Console-konfigurationen klickar du på **Autentiseringstjänst för Apache Sling** för att konfigurera den.
 1. I dialogrutan Apache Sling Authentication Service som visas använder du **+** för att lägga till banor.\
    När du lägger till en sökväg aktiveras autentiseringstjänsten för formulär i den sökvägen.

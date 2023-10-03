@@ -1,15 +1,14 @@
 ---
 title: Konfigurera anpassad Forms-cache
-description: Cacheminnet för Adaptiv Forms är särskilt utformat för adaptiva Forms och dokument. Den cachelagrar adaptiva Forms-dokument och adaptiva dokument i syfte att minska den tid som krävs för att återge ett adaptivt formulär eller dokument på klienten.
+description: Anpassningsbart Forms-cacheminne är utformat för adaptiva Forms och dokument med målet att minska den tid som krävs för att återge ett adaptivt formulär eller dokument.
 uuid: ba8f79fd-d8dc-4863-bc0d-7c642c45505c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
-docset: aem65
-source-git-commit: 92c123817a654d0103d0f7b8e457489d9e82c2ce
+source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -38,23 +37,23 @@ Miljön är konfigurerad att använda cacheanpassad Forms och relaterade resurse
 
 ## (Valfritt) Konfigurera cache för adaptiv form på Dispatcher {#configure-the-cache}
 
-Du kan också konfigurera Adaptiv formulärcache-lagring på Dispatcher för ytterligare prestandaförbättringar.
+Du kan även konfigurera Adaptiv formulärcache-lagring på Dispatcher för att få ytterligare prestandaförbättringar.
 
 ### Krav {#pre-requisites}
 
-* Aktivera [sammanfoga eller förifylla data på klienten](prepopulate-adaptive-form-fields.md#prefill-at-client) alternativ. Det hjälper till att sammanfoga unika data för varje instans av ett förfyllt formulär.
-* [Aktivera tömningsagent för varje publiceringsinstans](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-a-publishing-instance). Det ger bättre cachningsprestanda för Adaptive Forms. Standardwebbadressen för rensningsagenter är `http://[server]:[port]]/etc/replication/agents.publish/flush.html`.
+* Aktivera [sammanfoga eller förifylla data hos klienten](prepopulate-adaptive-form-fields.md#prefill-at-client) alternativ. Det hjälper till att sammanfoga unika data för varje instans av ett förfyllt formulär.
+* [Aktivera en rensningsagent för varje publiceringsinstans](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=en#invalidating-dispatcher-cache-from-a-publishing-instance). Det ger bättre cachningsprestanda för Adaptive Forms. Standardwebbadressen för rensningsagenter är `http://[server]:[port]]/etc/replication/agents.publish/flush.html`.
 
 ### Att tänka på vid cachelagring av adaptiv Forms på en Dispatcher {#considerations}
 
 * När du använder cacheminnet för Adaptiv Forms använder du AEM [!DNL Dispatcher] för att cachelagra klientbibliotek (CSS och JavaScript) för ett adaptivt formulär.
 * När du utvecklar anpassade komponenter ska du på den server som används för utveckling inaktivera den adaptiva Forms-cachen.
-* URL:er utan tillägg cachelagras inte. Exempel: URL med mönster `/content/forms/[folder-structure]/[form-name].html` cachelagras och URL:er med mönster ignoreras `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`. Använd URL:er med tillägg för att utnyttja fördelarna med cachning.
+* URL:er utan tillägg cachelagras inte. Exempel: URL med mönster `/content/forms/[folder-structure]/[form-name].html` cachelagras och URL:er med mönster ignoreras vid cachelagring `/content/dam/formsanddocument/[folder-name]/<form-name>/jcr:content`. Använd URL:er med tillägg för att utnyttja fördelarna med cachning.
 * Överväganden för lokaliserade adaptiva Forms:
    * Använd URL-format `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`
    * Inaktivera med webbläsarens språkområde <!-- [Disable using browser locale](supporting-new-language-localization.md#how-localization-of-adaptive-form-works) -->för URL:er med format `http://host:port/content/forms/af/<adaptivefName>.html`.
    * När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`och **[!UICONTROL Use Browser Locale]** i konfigurationshanteraren är inaktiverad, används den icke-lokaliserade versionen av det adaptiva formuläret. Det icke-lokaliserade språket är det språk som används vid utvecklingen av det adaptiva formuläret. Det språk som är konfigurerat för webbläsaren (webbläsarens språkområde) beaktas inte och en icke-lokaliserad version av det anpassade formuläret används.
-   * När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`och **[!UICONTROL Use Browser Locale]** när konfigurationshanteraren är aktiverad, tillhandahålls en lokaliserad version av det adaptiva formuläret, om en sådan finns. Språket i det lokaliserade adaptiva formuläret baseras på det språk som är konfigurerat för webbläsaren (webbläsarens språkområde). Det kan leda till [cachelagra endast första instansen av ett adaptivt formulär]. Om du vill förhindra att ett problem inträffar på din instans kan du läsa [felsökning](#only-first-insatnce-of-adptive-forms-is-cached).
+   * När du använder URL-format `http://host:port/content/forms/af/<adaptivefName>.html`och **[!UICONTROL Use Browser Locale]** när konfigurationshanteraren är aktiverad, tillhandahålls en lokaliserad version av det adaptiva formuläret, om en sådan finns. Språket i det lokaliserade adaptiva formuläret baseras på det språk som är konfigurerat för webbläsaren (webbläsarens språkområde). Det kan leda till [cachelagra endast den första instansen av ett adaptivt formulär]. Om du vill förhindra att ett problem inträffar på din instans kan du läsa [felsökning](#only-first-insatnce-of-adptive-forms-is-cached).
 
 ### Aktivera cachelagring vid Dispatcher
 
@@ -92,7 +91,7 @@ Utför stegen nedan så att du kan aktivera och konfigurera cachelagring av Adap
    * Ett anpassat formulär finns kvar i cachen tills en uppdaterad version av formuläret inte publiceras.
 
    * När en nyare version av en resurs som refereras i ett adaptivt formulär publiceras blir den adaptiva formen automatiskt ogiltig. Det finns några undantag för automatisk ogiltigförklaring av refererade resurser. Information om hur du använder undantag finns i [felsökning](#troubleshooting) -avsnitt.
-1. [Lägg till nedanstående regeldispatcher.vilken eller vilken anpassad regelfil som helst](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-documents-to-cache). URL:er som inte stöder cachelagring utesluts. Exempel: Interaktiv kommunikation.
+1. [Lägg till nedanstående regeldispatcher.vilken eller vilken anpassad regelfil som helst](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-documents-to-cache). URL:er som inte stöder cachelagring utesluts. Interaktiv kommunikation.
 
    ```JSON
       /0000 {
@@ -126,7 +125,7 @@ Utför stegen nedan så att du kan aktivera och konfigurera cachelagring av Adap
       }
    ```
 
-Din AEM är konfigurerad att cachelagra Adaptiv Forms. Den cachelagrar alla typer av adaptiva Forms. Om du behöver kontrollera användaråtkomstbehörighet för en sida innan du levererar den cachelagrade sidan, se [cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
+Din AEM är konfigurerad att cachelagra Adaptiv Forms. Den cachelagrar alla typer av adaptiva Forms. Om du behöver kontrollera behörigheter för användaråtkomst för en sida innan du levererar den cachelagrade sidan, se [cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 
 ## Felsökning {#troubleshooting}
 
@@ -134,7 +133,7 @@ Din AEM är konfigurerad att cachelagra Adaptiv Forms. Den cachelagrar alla type
 
 #### Problem {#issue1}
 
-När du markerar och lägger till bilder eller videoklipp via en filläsare i ett anpassat formulär, och de redigeras i Resursredigeraren, ogiltigförklaras inte sådana resurser automatiskt från Dispatcher-cachen.
+När du markerar och lägger till bilder eller videoklipp via en filläsare i ett adaptivt formulär, och de redigeras i Resursredigeraren, ogiltigförklaras inte sådana resurser automatiskt från Dispatcher-cachen.
 
 #### Lösning {#Solution1}
 
@@ -148,7 +147,7 @@ När du lägger till ett innehållsfragment eller en Experience Fragment i ett a
 
 #### Lösning {#Solution2}
 
-Efter publicering av uppdaterat innehållsfragment eller Experience Fragment, ska du uttryckligen avpublicera och publicera den adaptiva Forms som använder dessa resurser.
+När du har publicerat ett uppdaterat innehållsfragment eller Experience Fragment kan du uttryckligen avpublicera och publicera det adaptiva Forms som använder dessa resurser.
 
 ### Endast den första instansen av ett adaptivt formulär cachelagras{#only-first-insatnce-of-adptive-forms-is-cached}
 

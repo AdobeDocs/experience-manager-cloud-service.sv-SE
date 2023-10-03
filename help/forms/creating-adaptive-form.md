@@ -1,13 +1,13 @@
 ---
-title: Skapa adaptiva Forms
-description: Lär dig hur du skapar ett adaptivt formulär med [!DNL Experience Manager Forms]. Adaptiva Forms är responsiva HTML5-formulär som effektiviserar informationsinsamling och -bearbetning. Mer information om hur du skapar ett adaptivt formulär baserat på en formulärdatamodell och ett XML- eller JSON-schema.
+title: Hur skapar man Adaptiv Forms?
+description: Lär dig skapa ett adaptivt formulär som effektiviserar informationsinsamling och -bearbetning. Lär dig även att skapa adaptiva formulär baserade på en formulärdatamodell.
 feature: Adaptive Forms
 role: User, Developer
 level: Beginner
 exl-id: 38ca5eea-793b-420b-ae60-3a0bd83caf00
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---

@@ -1,13 +1,13 @@
 ---
 title: Hur konfigurerar jag datakällor?
-description: Med Experience Manager Forms dataintegrering kan du konfigurera och ansluta till olika datakällor. Lär dig konfigurera RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster som datakällor och använda dem för att skapa formulärdatamodeller.
+description: Lär dig konfigurera RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster som datakällor för en formulärdatamodell.
 feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2022'
 ht-degree: 0%
 
 ---

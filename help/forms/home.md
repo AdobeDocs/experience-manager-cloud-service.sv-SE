@@ -1,12 +1,12 @@
 ---
 title: Introduktion till [!DNL AEM Forms] as a Cloud Service
-description: Upptäck AEM Forms och lär dig hur du kan producera affärsklara formulär och dokument. Läs mer om Platform-as-a-Service (PaaS) och hur du hanterar digitala formulär och affärsprocesser i storföretagsklass och hur du kopplar Forms till Adobe Sign och aktuella datakällor.
+description: Upptäck AEM Forms för att ta fram blanketter för affärsprocesser, skapa arbetsflöden för affärsprocesser och använda dokumenttjänster för att ta fram och skydda dokument.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: 8db67ec3b507247da79e00866906ad70750d5d30
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 4%
+source-wordcount: '1149'
+ht-degree: 1%
 
 ---
 

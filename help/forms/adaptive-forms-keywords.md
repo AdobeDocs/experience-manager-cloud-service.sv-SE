@@ -1,15 +1,13 @@
 ---
-title: Adaptiva Forms-nyckelord
-seo-title: Adaptive Forms keywords
-description: Du kan inte använda dessa reserverade ord som identifierare i din adaptiva Forms.
-seo-description: You cannnot use these reserved words as identifiers in your Adaptive Forms.
+title: Adaptiv Forms-reserverade nyckelord
+description: Reserverade nyckelord som du inte kan använda som identifierare i din adaptiva Forms.
 uuid: 79e77692-2f0c-493b-8c2c-c408ff3dcece
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 678e9dfc-2c46-430a-8da9-0329dda80090
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---

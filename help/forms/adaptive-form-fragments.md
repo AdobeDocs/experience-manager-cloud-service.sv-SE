@@ -1,16 +1,14 @@
 ---
 title: Adaptiva formulärfragment
-seo-title: Adaptive Form Fragments
-description: Adaptiv Forms har en funktion för att skapa ett formulärsegment, t.ex. en panel eller en grupp med fält, som att använda det i ett adaptivt formulär. Du kan också spara en befintlig panel som fragment.
-seo-description: Adaptive Forms provides a mechanism to create a form segment, such as a panel or a group of fields, as use it in any Adaptive Form. You can also save an existing panel as fragment.
+description: Formulärfragment är en modulär och återanvändbar komponent i ett formulär. Lär dig att skapa formulärfragment och återanvända dem i olika formulär för att skapa en effektiv formulärsammansättning.
 uuid: bb4830b5-82a0-4026-9dae-542daed10e6f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
-source-git-commit: 17df7ef15fbd4077201f7e0678ffc9ea2732863d
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2003'
 ht-degree: 0%
 
 ---

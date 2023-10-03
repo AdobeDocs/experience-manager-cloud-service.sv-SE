@@ -1,13 +1,13 @@
 ---
 title: Hur skapar man en formulärdatamodell?
-description: Experience Manager Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med formulärdatamodeller. Lär dig hur du skapar formulärdatamodeller med eller utan konfigurerade datakällor.
+description: Lär dig skapa en formulärdatamodell (FDM) och skicka eller hämta data till en datakälla med hjälp av ett adaptivt formulär eller ett AEM arbetsflöde.
 feature: Form Data Model
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: b17b7441-912c-44c7-a835-809f014a8c86
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ![Dataintegrering](do-not-localize/data-integeration.png)
 
-[!DNL Experience Manager Forms] dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med formulärdatamodeller. En formulärdatamodell bygger på datakällor för datautbyte. Du kan dock skapa en formulärdatamodell med eller utan en datakälla. Det finns två sätt att skapa en utifrån datamodell beroende på om du har konfigurerat datakällor:
+[!DNL Experience Manager Forms] dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med formulärdatamodeller. En formulärdatamodell bygger på datakällor för datautbyte, men du kan skapa en formulärdatamodell med eller utan en datakälla. Det finns två sätt att skapa en utifrån datamodell beroende på om du har konfigurerat datakällor:
 
 * **Använda förkonfigurerade datakällor**: Om du har konfigurerat datakällor enligt beskrivningen i [Konfigurera datakällor](configure-data-sources.md)kan du markera dem när du skapar en formulärdatamodell. Den hämtar alla datamodellsobjekt, egenskaper och tjänster från de valda datakällorna som är tillgängliga för användning i formulärdatamodellen.
 
@@ -42,18 +42,18 @@ Kontrollera att du har konfigurerat de datakällor som du vill använda i formul
 
    * Ange ett namn för formulärdatamodellen.
    * (**Valfritt**) Ange rubrik, beskrivning och taggar för formulärdatamodellen.
-   * (**Valfritt och endast tillämpligt om datakällor har konfigurerats**) Tryck på bockikonen bredvid **[!UICONTROL Data Source Configuration]** och välj konfigurationsnoden där molntjänster för de datakällor som du vill använda finns. Den begränsar listan med datakällor som är tillgängliga för val på nästa sida till de som är tillgängliga i den valda konfigurationsnoden. Men om [!DNL Experience Manager] datakällor för användarprofiler listas som standard. Om du inte väljer en konfigurationsnod visas datakällor från alla konfigurationsnoder.
+   * (**Valfritt och endast tillämpligt om datakällor har konfigurerats**) Tryck på bockikonen bredvid **[!UICONTROL Data Source Configuration]** och välj den konfigurationsnod där molntjänster för de datakällor som du vill använda finns. Den begränsar listan med datakällor som är tillgängliga för val på nästa sida till de som är tillgängliga i den valda konfigurationsnoden. Men om [!DNL Experience Manager] datakällor för användarprofiler listas som standard. Om du inte väljer en konfigurationsnod visas datakällor från alla konfigurationsnoder.
 
 1. Tryck på **[!UICONTROL Next]**.
 
-1. (**Gäller endast om datakällor har konfigurerats**) **[!UICONTROL Select Datasource]** visas tillgängliga datakällor, om det finns några. Välj datakällor som du vill använda i formulärdatamodellen.
+1. (**Gäller endast om datakällor har konfigurerats**) **[!UICONTROL Select Datasource]** visas tillgängliga datakällor, om det finns några. Välj de datakällor som du vill använda i formulärdatamodellen.
 1. Tryck **[!UICONTROL Create]** och i bekräftelsedialogrutan trycker du på **[!UICONTROL Open]** för att öppna formulärdatamodellredigeraren.
 
    Låt oss granska de olika komponenterna i användargränssnittet för formulärdatamodellsredigeraren.
 
    ![En formulärdatamodell med tre datakällor - en RESTful-tjänst, [!DNL Experience Manager] användarprofil och RDBMS](assets/fdm-ui.png)
 
-   S. **[!UICONTROL Data Sources]** Visar datakällor i en formulärdatamodell. Expandera en datakälla för att visa dess datamodellsobjekt och tjänster.
+   S. **[!UICONTROL Data Sources]** Visar datakällor i en formulärdatamodell. Expandera en datakälla om du vill visa dess datamodellsobjekt och -tjänster.
 
    B. **[!UICONTROL Refresh Data Source Definitions]** Hämtar alla ändringar i datakälldefinitioner från konfigurerade datakällor och uppdaterar dem på fliken Datakällor i formulärdatamodellens redigerare.
 
@@ -72,16 +72,16 @@ Mer information om redigeraren för formulärdatamodellen och hur du kan arbeta 
 Gör följande för att lägga till eller uppdatera datakällor till en befintlig formulärdatamodell.
 
 1. Gå till **[!UICONTROL Forms > Data Integrations]** väljer du den formulärdatamodell i vilken du vill lägga till eller uppdatera datakällor och trycker **[!UICONTROL Properties]**.
-1. I egenskaperna för formulärdatamodellen går du till **[!UICONTROL Update Source]** -fliken.
+1. Gå till egenskaperna för formulärdatamodellen **[!UICONTROL Update Source]** -fliken.
 
    I **[!UICONTROL Update Source]** tab:
 
    * Tryck på bläddringsikonen i dialogrutan **[!UICONTROL Context-Aware Configuration]** och välj en konfigurationsnod där molnkonfigurationen för den datakälla som du vill lägga till finns. Om du inte väljer en nod finns molnkonfigurationer endast i `global` visas när du trycker **[!UICONTROL Add Sources]**.
 
-   * Om du vill lägga till en ny datakälla trycker du **[!UICONTROL Add Sources]** och välj de datakällor som ska läggas till i formulärdatamodellen. Alla datakällor konfigurerade i `global` och den valda konfigurationsnoden (om sådan finns) visas.
+   * Om du vill lägga till en ny datakälla trycker du **[!UICONTROL Add Sources]** och välj datakällor att lägga till i formulärdatamodellen. Alla datakällor konfigurerade i `global` och den valda konfigurationsnoden (om sådan finns) visas.
 
    * Om du vill ersätta en befintlig datakälla med en annan datakälla av samma typ trycker du på **[!UICONTROL Edit]** -ikonen för datakällan och välj i listan över tillgängliga datakällor.
-   * Om du vill ta bort en befintlig datakälla trycker du på **[!UICONTROL Delete]** -ikon för datakällan. Ikonen Ta bort är inaktiverad om ett datamodellsobjekt i datakällan läggs till i formulärdatamodellen.
+   * Ta bort en befintlig datakälla genom att trycka på **[!UICONTROL Delete]** -ikon för datakällan. Ikonen Ta bort är inaktiverad om ett datamodellsobjekt i datakällan läggs till i formulärdatamodellen.
 
      ![fdm-properties](assets/fdm-properties.png)
 
@@ -107,16 +107,16 @@ Aktivera distributionsspecifika molnkonfigurationer i [!UICONTROL Form Data Mode
    1. Skapa paket med filter `/conf/{foldername}/settings/cloudconfigs/fdm`. Använd samma `{foldername}` som i steg 1. Och ersätt `fdm` med `azurestorage` för Azure-lagringskonfiguration.
    1. Skapa och hämta paket. Mer information finns i [paketåtgärder](/help/implementing/developing/tools/package-manager.md).
 
-1. Integrera molnkonfiguration i [!DNL Experience Manager] Arketype Project.
+1. Integrera molnkonfiguration i [!DNL Experience Manager] Arketype-projekt.
    1. Zippa upp det hämtade paketet.
    1. Kopiera `jcr_root` och skicka den till `ui.content` > `src` > `main` > `content`.
-   1. Uppdatera `ui.content` > `src` > `main` > `content` > `META-INF` > `vault` > `filter.xml` innehåller filter `/conf/{foldername}/settings/cloudconfigs/fdm`. Mer information finns i [ui.content-modulen AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html). När detta arkivtypsprojekt distribueras via CM-pipeline installeras samma molnkonfiguration i alla miljöer (eller körningslägen). Om du vill ändra värdet på fält (t.ex. URL) för molnkonfigurationer baserat på miljö använder du OSGi-konfigurationen som beskrivs i följande steg.
+   1. Uppdatera `ui.content` > `src` > `main` > `content` > `META-INF` > `vault` > `filter.xml` innehåller filter `/conf/{foldername}/settings/cloudconfigs/fdm`. Mer information finns i [ui.content-modulen AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html). När detta arkivtypsprojekt distribueras via CM-pipeline installeras samma molnkonfiguration i alla miljöer (eller körningslägen). Om du vill ändra värdet för fält (t.ex. URL) för molnkonfigurationer baserat på miljö använder du OSGi-konfigurationen som beskrivs i följande steg.
 
 1. Skapa en kontextmedveten konfiguration för Apache Sling. Så här skapar du OSGi-konfigurationen:
    1. **Konfigurera OSGi-konfigurationsfiler i [!DNL Experience Manager] Arketype-projekt.**
-Skapa OSGi Factory Configuration-filer med PID `org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider`. Skapa en fil med samma namn i varje körningslägesmapp där värdena måste ändras för varje körningsläge. Mer information finns i [Konfigurera OSGi för [!DNL Adobe Experience Manager]](/help/implementing/deploying/configuring-osgi.md#creating-sogi-configurations).
+Skapa OSGi Factory Configuration-filer med PID `org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider`. Skapa en fil med samma namn i varje körningslägesmapp där värdena måste ändras för varje körningsläge. Mer information finns i [Konfigurerar OSGi för [!DNL Adobe Experience Manager]](/help/implementing/deploying/configuring-osgi.md#creating-sogi-configurations).
 
-   1. **Ange konfigurationsjson för OSGI.** Så här använder du Åsidosättningsprovider för kontextmedveten konfiguration för Apache Sling:
+   1. **Ställ in OSGI-konfigurationsjson.** Så här använder du Åsidosättningsprovider för kontextmedveten konfiguration för Apache Sling:
       1. On local development instance `/system/console/configMgr`väljer du OSGi-fabrikskonfiguration med namnet **[!UICONTROL Apache Sling Context-Aware Configuration Override Provider: OSGi configuration]**.
       1. Ange beskrivning.
       1. Välj **[!UICONTROL enabled]**.

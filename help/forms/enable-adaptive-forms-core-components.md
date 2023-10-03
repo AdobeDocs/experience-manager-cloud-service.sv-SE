@@ -1,17 +1,16 @@
 ---
-title: Aktivera adaptiva Forms Core-komponenter
-description: Lär dig hur du aktiverar adaptiva Forms Core Components på AEM Forms as a Cloud Service med vår steg-för-steg-guide. I vår självstudiekurs får du hjälp med processen så att du enkelt kan aktivera den här kraftfulla funktionen i din AEM Forms-miljö.
-seo-description: Learn how to enable Adaptive Forms Core Components on AEM Forms as a Cloud Service with our step-by-step guide. Our tutorial walks you through the process, making it easy to enable this powerful feature for your AEM Forms environment.
+title: Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö
+description: Lär dig hur du aktiverar adaptiva Forms Core-komponenter på AEM Forms as a Cloud Service.
 contentOwner: Khushwant Singh
 docset: CloudService
 role: Admin
-source-git-commit: 755bab29e7b6c49540dee47d6bec13e9421bfc43
+exl-id: 32a574e2-faa9-4724-a833-1e4c584582cf
+source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera adaptiva Forms Core-komponenter {#enable-headless-adaptive-forms-on-aem-forms-cloud-service}
 
@@ -356,4 +355,3 @@ Så här kontrollerar du att adaptiva Forms Core-komponenter är aktiverade för
    ![leta reda på artefakten core-forms-components-af-core i all/pom.xml](/help/forms/assets/enable-headless-adaptive-forms-on-aem-forms-cloud-service-locate-core-af-artifact.png)
 
    Om det finns beroenden aktiveras adaptiva Forms Core-komponenter för din miljö.
-

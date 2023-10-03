@@ -1,17 +1,15 @@
 ---
-title: Skapa tillgänglig adaptiv Forms
-seo-title: Creating accessible Adaptive Forms
-description: AEM Forms innehåller verktyg och verktyg för att skapa tillgänglig Adaptiv Forms och hjälper er att följa tillgänglighetsstandarder.
-seo-description: AEM Forms provides you tools and to create accessible Adaptive Forms and helps comply with accessibility standards.
+title: Hur skapar man tillgänglig adaptiv Forms?
+description: AEM Forms innehåller verktyg för att skapa tillgänglig Adaptiv Forms och hjälper till att följa tillgänglighetsstandarder.
 uuid: 6472bc2d-47ca-4883-88b7-5de0b758fd00
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1e95c66b-d132-4c44-a1dc-31fd09af8113
 docset: aem65
 exl-id: 3b5247fa-decb-40eb-a629-6d834976d33c
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '2003'
+source-wordcount: '2004'
 ht-degree: 0%
 
 ---
@@ -43,27 +41,27 @@ Med verktyget för hjälpmedelsförberedda namn- och beskrivningsgranskare (ANDI
 * Identifierar problem med tangentbordstillgänglighet och färgkontrast
 * Identifierar tydligt skärmläsarinnehållet enligt standarderna
 
-ANDI fungerar med alla större webbläsare. Se, [ANDI:s dokumentation](https://www.ssa.gov/accessibility/andi/help/install.html) för detaljerade anvisningar om hur du konfigurerar och använder verktyget.
+ANDI fungerar med alla större webbläsare. Se, [ANDI:s dokumentation](https://www.ssa.gov/accessibility/andi/help/install.html) om du vill ha detaljerade anvisningar om hur du konfigurerar och använder verktyget.
 
-### Ladda ned och installera temat Ultramarine-Accessible
+### Hämta och installera temat Ultramarine-Accessible
 
-Temat Ultramarine-Accessible är ett referenstema. Det visar hur du åtgärdar färgkontrast och andra tillgänglighetsrelaterade problem i en adaptiv form. Adobe rekommenderar att du skapar ett anpassat tema för produktionsmiljön baserat på de format som din organisation har godkänt. Så här överför du temat till din AEM:
+Temat Ultramarine-Accessible är ett referenstema. Det visar hur du åtgärdar färgkontrast och andra tillgänglighetsrelaterade problem i en adaptiv form. Adobe rekommenderar att du skapar ett anpassat tema för produktionsmiljön baserat på de format som din organisation har godkänt. Utför följande steg för att överföra temat till din AEM:
 
 1. Hämta temapaketet.
-1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigering](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** på AEM.
+1. Navigera till **[!UICONTROL Experience Manager]** > **[!UICONTROL Navigation]** ![Navigering](assets/Smock_Compass_18_N.svg) > **[!UICONTROL Forms]** på din AEM.
 1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL File Upload]**. Markera och överför filen x Ultramarine-Accessible-Theme.zip. Temat överförs till din AEM.
 
 ## Göra ett adaptivt formulär tillgängligt
 
-Du bör fokusera på fyra viktiga aspekter: tangentbordsnavigering, färgkontrast, meningsfull alternativ text för bilder och lämpliga etiketter för formulärkontroller för att göra ett adaptivt formulär tillgängligt. Gör så här för att göra din befintliga Adaptive Forms tillgänglig:
+Du bör fokusera på fyra nyckelaspekter: tangentbordsnavigering, färgkontrast, meningsfull alternativ text för bilder och lämpliga etiketter för formulärkontroller för att göra ett adaptivt formulär tillgängligt. Gör så här för att göra din befintliga Adaptive Forms tillgänglig:
 
-### 1. Använda ett tillgängligt tema och utföra ytterligare korrigeringar
+### 1. Använd ett tillgängligt tema och utför ytterligare korrigeringar
 
 Använd temat Ultramarine-Accessible i din befintliga adaptiva form. Så här använder du temat:
 
 1. Öppna det adaptiva formuläret för redigering.
 1. Markera en komponent och tryck på den överordnade ikonen. Tryck på **[!UICONTROL Adaptive Form Container]** och tryck sedan på konfigurationsikonen.
-1. Välj temat Ultramarine-Accessible i egenskapswebbläsaren och tryck **[!UICONTROL Save]** ikon.
+1. Välj temat Ultramarine-Accessible i egenskapswebbläsaren och tryck **[!UICONTROL Save]** -ikon.
 1. Uppdatera webbläsarfönstret. Temat tillämpas på den adaptiva formen.
 
 När du har tillämpat ett tillgängligt tema utför du följande korrigeringar. Förutom tillgänglighetskorrigeringar som ingår i det tillgängliga temat finns det korrigeringar:
@@ -86,13 +84,13 @@ När du har tillämpat ett tillgängligt tema utför du följande korrigeringar.
 
 1. Ersätt datuminmatningsfält med datumväljarfält.
 
-1. Ange visnings-, validerings- och redigeringsmönster för datumväljarkomponenten. Ange även ett eget valideringsfelmeddelande. Du har t.ex. angett ett ogiltigt datum. Datumets korrekta format är YYY-MM-DD.
+1. Ange visnings-, validerings- och redigeringsmönster för datumväljarkomponenten. Ange även ett eget valideringsfelmeddelande. Du har till exempel angett ett ogiltigt datum. Datumets korrekta format är YYY-MM-DD.
 
-1. Ange anpassad hjälpmedelstext för datumväljarkomponenten. Ange t.ex. födelsedatum. Skärmläsare läser dessa anpassade hjälpmedelstexter.
+1. Ange anpassad hjälpmedelstext för datumväljarkomponenten. Ange t.ex. ditt födelsedatum. Skärmläsare läser dessa anpassade hjälpmedelstexter.
 
 1. Använd kort beskrivning i stället för lång beskrivning för adaptiva formulärkomponenter. En lång beskrivning lägger till en hjälpknapp. Kontrollera att det adaptiva formuläret inte har någon hjälpknapp.
 
-1. Lägg till anpassad hjälpmedelstext i alla skrivskyddade celler i tabeller. Inaktivera även alla skrivskyddade celler i tabeller.
+1. Lägg till anpassad hjälpmedelstext i alla skrivskyddade celler i tabeller. Du kan även inaktivera alla skrivskyddade celler i tabeller.
 
 1. Ta bort signaturfält för skript, om sådana finns i det adaptiva formuläret. Konfigurera det adaptiva formuläret som ska användas [!DNL Adobe Sign] för en smidig digital signeringsupplevelse.
 
@@ -148,7 +146,7 @@ Vi rekommenderar att du använder standardfärgerna för teckensnitt och bakgrun
 
 ### 5. Kontrollera att formulärkontrollerna är tangentbordstillgängliga {#ensure-that-form-controls-are-keyboard-accessible}
 
-Ett hjälpmedelsanpassat formulär kan fyllas i helt med bara tangentbordet eller en motsvarande indataenhet. Användare med nedsatt rörelseförmåga eller nedsatt syn har kanske inget annat val än att använda tangentbordet och många användare som kan använda en mus föredrar tangentbordsinmatning. Genom att använda de olika indatametoderna kan du inte bara skapa hjälpmedelsförberedda formulär, du kan också skapa formulär som bättre passar alla användares önskemål.
+Ett hjälpmedelsanpassat formulär kan fyllas i helt och hållet med bara tangentbordet eller en motsvarande indataenhet. Användare med nedsatt rörelseförmåga eller nedsatt syn har kanske inget annat val än att använda tangentbordet och många användare som kan använda en mus föredrar tangentbordsinmatning. Genom att använda de olika indatametoderna kan du inte bara skapa hjälpmedelsförberedda formulär, du kan också skapa formulär som bättre passar alla användares önskemål.
 
 Följande kortkommandon finns i [!DNL AEM Forms].
 

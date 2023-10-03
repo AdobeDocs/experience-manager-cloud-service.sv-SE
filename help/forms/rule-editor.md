@@ -1,13 +1,13 @@
 ---
-title: Hur använder man den anpassningsbara regelredigeraren i Forms?
-description: Med den anpassningsbara regelredigeraren i Forms kan du lägga till dynamiskt beteende och bygga in komplex logik i formulär utan kodning eller skript. Kom igång med att förstå en regel och riktlinjer för att välja en regelkonstruktion. Läs mer om tillgängliga operatortyper och händelser i regelredigeraren.
+title: Vad är Adaptiv regelredigerare i Forms?
+description: Med den anpassningsbara regelredigeraren i Forms kan du lägga till dynamiskt beteende och bygga in komplex logik i formulär utan kodning eller skript.
 feature: Adaptive Forms
 role: User
 level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
-source-git-commit: 21db924a8d925f9964cc7af6743764c119208159
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '6247'
+source-wordcount: '6223'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att 
 * Validera värdet för ett objekt
 * Kör funktioner för att beräkna värdet för ett objekt
 * Anropa en formulärdatamodelltjänst och utföra en åtgärd
-* Ange ett objekts egenskap
+* Ange egenskap för ett objekt
 
 <!-- Rule editor replaces the scripting capabilities in [!DNL Experience Manager 6.1 Forms] and earlier releases. However, your existing scripts are preserved in the new rule editor. For more information about working with existing scripts in the rule editor, see [Impact of rule editor on existing scripts](rule-editor.md#p-impact-of-rule-editor-on-existing-scripts-p). -->
 
@@ -41,7 +41,7 @@ Användare som läggs till i användargruppen för formulär kan skapa skript oc
 
 ## Förstå en regel {#understanding-a-rule}
 
-En regel är en kombination av åtgärder och villkor. I regelredigeraren omfattar åtgärder aktiviteter som dölja, visa, aktivera, inaktivera eller beräkna värdet för ett objekt i ett formulär. Villkor är booleska uttryck som utvärderas genom att utföra kontroller och åtgärder på ett formulärobjekts tillstånd, värde eller egenskap. Åtgärder utförs baserat på värdet ( `True` eller `False`) returneras genom att ett villkor utvärderas.
+En regel är en kombination av åtgärder och villkor. I regelredigeraren omfattar åtgärderna aktiviteter som att dölja, visa, aktivera, inaktivera eller beräkna värdet för ett objekt i ett formulär. Villkor är booleska uttryck som utvärderas genom att kontroller och åtgärder utförs på ett formulärobjekts status, värde eller egenskap. Åtgärder utförs baserat på värdet ( `True` eller `False`) returneras genom att ett villkor utvärderas.
 
 Regelredigeraren innehåller en uppsättning fördefinierade regeltyper, till exempel När, Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera, som hjälper dig att skriva regler. Med varje regeltyp kan du definiera villkor och åtgärder i en regel. I dokumentet förklaras dessutom varje regeltyp i detalj.
 
@@ -49,11 +49,11 @@ En regel följer vanligtvis någon av följande konstruktioner:
 
 **Condition-Action** I den här konstruktionen definierar en regel först ett villkor följt av en åtgärd som ska utlösas. Konstruktionen är jämförbar med if-then-programsatsen i programmeringsspråk.
 
-I regelredigeraren **framtvingar regeltypen When** villkorsåtgärdskonstruktionen.
+I regelredigeraren **När** regeltypen framtvingar konstruktorn för villkorsåtgärd.
 
 **Åtgärd-villkor I den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor** för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
 
-Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa Dölj och Aktivera Inaktivera, och tvärtom. Du kan inte ändra den alternativa standardåtgärden.
+Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa dölj och för Aktivera är Inaktivera, och motsatt sätt. Du kan inte ändra den alternativa standardåtgärden.
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du k
 
 The **[!UICONTROL When]** regeltypen följer efter **condition-action-alternate action** regelkonstruktion, eller ibland bara **villkorsåtgärd** konstruera. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret är uppfyllt ( `True`). När du använder regeltypen När kan du använda flera operatorer för AND och OR för att skapa [kapslade uttryck](#nestedexpressions).
 
-Med hjälp av regeltypen When kan du utvärdera ett villkor för ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
+Med regeltypen När kan du utvärdera ett villkor i ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
 
 I klartext struktureras en typisk When-regel på följande sätt:
 
@@ -124,13 +124,13 @@ _
 
 När du har en flervärdeskomponent, till exempel alternativknappar eller lista, hämtas alternativen automatiskt när du skapar en regel för den komponenten och görs tillgängliga för regelskaparen. Du behöver inte skriva alternativvärdena igen.
 
-En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknappar) automatiskt och görs tillgängliga för regelskaparen enligt följande:
+En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknapparna) automatiskt och görs tillgängliga för regelskaparen enligt följande:
 
 ![Flera värden visar alternativ](assets/multivaluefcdisplaysoptions.png)
 
 När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
 
-![Tydligt värde på](assets/clearvalueof.png)
+![Rensa värdet för](assets/clearvalueof.png)
 
 **[!UICONTROL Hide]** Döljer det angivna objektet.
 
@@ -140,9 +140,9 @@ När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtg
 
 **[!UICONTROL Disable]** Inaktiverar det angivna objektet.
 
-**[!UICONTROL Invoke service]** Anropar en tjänst som konfigurerats i en formulärdatamodell. När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller på [!DNL Experience Manager] -instans. När du väljer en formulärdatamodelltjänst visas fler fält där du kan mappa formulärobjekt med indata- och utdataparametrar för den angivna tjänsten. Se exempelregel för att anropa formulärdatamodelltjänster.
+**[!UICONTROL Invoke service]** Anropar en tjänst som konfigurerats i en formulärdatamodell. När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller på [!DNL Experience Manager] -instans. När du väljer en tjänst för formulärdatamodell visas fler fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten. Se exempelregel för anrop av Form Data Model-tjänster.
 
-Utöver Form Data Model-tjänsten kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En Form Data Model-tjänst har dock många fördelar och det rekommenderade sättet att anropa en tjänst.
+Förutom tjänsten Form Data Model kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En Form Data Model-tjänst har dock många fördelar och det rekommenderade sättet att anropa en tjänst.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md).
 
@@ -218,7 +218,7 @@ Exempel på Ange värderegel med hjälp av formulärdatamodelltjänsten
 
 >[!NOTE]
 >
->Dessutom kan du använda Ange regelvärde för att fylla i alla värden i en listrutekomponent från utdata från en formulärdatamodelltjänst eller en webbtjänst. Se dock till att det utdataargument du väljer är av en arraytyp. Alla värden som returneras i en array blir tillgängliga i den angivna listrutan.
+>Dessutom kan du använda Ange regelvärde för att fylla i alla värden i en listrutekomponent från utdata från en formulärdatamodelltjänst eller en webbtjänst. Kontrollera dock att utdataargumentet som du väljer är av en matristyp. Alla värden som returneras i en matris blir tillgängliga i den angivna listrutan.
 
 ### [!UICONTROL Show] {#show}
 

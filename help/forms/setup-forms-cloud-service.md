@@ -1,9 +1,10 @@
 ---
-title: Anmäl dig till AEM Forms as a Cloud Service
-description: Lär dig konfigurera och konfigurera [!DNL Adobe Experience Manager (AEM) Forms] as a Cloud Service miljö
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+title: Så här skapar du en [!DNL AEM Forms] as a Cloud Service miljö?
+description: Lär dig konfigurera och konfigurera [!DNL AEM Forms] as a Cloud Service miljö.
+exl-id: 42f53662-fbcf-4676-9859-bf187ee9e4af
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '640'
 ht-degree: 1%
 
 ---

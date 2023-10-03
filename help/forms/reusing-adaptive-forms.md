@@ -1,19 +1,18 @@
 ---
-title: Återanvända metadataegenskaper i ett adaptivt formulär
-seo-title: Reuse metadata properties of an Adaptive Form
-description: Du kan återanvända ett befintligt adaptivt formulär för att skapa ett nytt adaptivt Forms.
+title: Hur återanvänder man metadataegenskaper i ett adaptivt formulär?
+description: Upptäck att effektivt återanvända ett befintligt adaptivt formulär och skapa ett nytt.
 seo-description: You can reuse an existing Adaptive Form to create new Adaptive Forms.
 exl-id: fb8cf3a9-fd19-46bf-b40e-2af76ca68b9f
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
 
 # Återanvända metadataegenskaper i ett adaptivt formulär {#reusing-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 
 | Version | Artikellänk |
@@ -25,7 +24,7 @@ Om du vill använda vissa av egenskaperna i ett befintligt adaptivt formulär f�
 
 >[!NOTE]
 >
->Status och granskningsinformation kopieras inte. Om det adaptiva formuläret till exempel publiceras och sedan kopieras, är det inklistrade adaptiva formuläret inte publicerat. På samma sätt gäller att om en kopierad resurs håller på att granskas är den inklistrade resursen inte under samma granskning.
+>Status och granskningsinformation kopieras inte. Om det adaptiva formuläret till exempel publiceras och du sedan kopierar det, kommer det inklistrade adaptiva formuläret att vara i opublicerat läge. På samma sätt gäller att om en kopierad resurs håller på att granskas är den inklistrade resursen inte under samma granskning.
 
 ## Kopiera ett anpassat formulär {#copy-an-adaptive-form}
 

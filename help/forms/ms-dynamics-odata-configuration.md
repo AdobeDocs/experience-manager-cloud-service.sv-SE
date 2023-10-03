@@ -1,13 +1,13 @@
 ---
 title: Konfigurera [!DNL Microsoft Dynamics] OData?
-description: Lär dig hur du skapar formulärdatamodell baserat på de entiteter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Microsoft Dynamics] för att möjliggöra arbetsflöden.
+description: Lär dig skapa formulärdatamodell baserat på de entiteter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service.
 feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb7b41f0-fd4f-4ba6-9f45-792a66ba6368
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '937'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ![dataintegrering](assets/data-integeration.png)
 
-[!DNL Microsoft Dynamics] är ett CRM- och ERP-program (Enterprise Resource Planning) som innehåller företagslösningar för att skapa och hantera kundkonton, kontakter, leads, möjligheter och ärenden. [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) erbjuder en OData-molntjänstkonfiguration som integrerar Forms med både online och lokalt [!DNL Microsoft Dynamics] server. Det gör att du kan skapa formulärdatamodell baserat på de enheter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Microsoft Dynamics] för att möjliggöra arbetsflöden. Till exempel:
+[!DNL Microsoft Dynamics] är ett CRM- och ERP-program (Enterprise Resource Planning) som innehåller företagslösningar för att skapa och hantera kundkonton, kontakter, leads, möjligheter och ärenden. [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) erbjuder en OData-molntjänstkonfiguration som integrerar Forms med både online och lokalt [!DNL Microsoft Dynamics] server. Det gör att du kan skapa formulärdatamodell baserat på de enheter, attribut och tjänster som definieras i [!DNL Microsoft Dynamics] service. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Microsoft Dynamics] server för att möjliggöra arbetsflöden. Till exempel:
 
 * Fråga [!DNL Microsoft Dynamics] server för data och förifylla Adaptive Forms
 * Skriv data i [!DNL Microsoft Dynamics] om inlämning av anpassade formulär
@@ -46,7 +46,7 @@ Innan du börjar konfigurera och konfigurera [!DNL Microsoft Dynamics]måste du 
    * [!DNL Microsoft Dynamics] 365 lokal
    * [!DNL Microsoft Dynamics] 2016 lokal
 
-* [Registrerade ansökan för [!DNL Microsoft Dynamics] onlinetjänst med [!DNL Microsoft Azure] Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. Dessa värden används medan [konfigurera molntjänster för [!DNL Microsoft Dynamics] service](#configure-cloud-service-for-your-microsoft-dynamics-service).
+* [Registrerade ansökan för [!DNL Microsoft Dynamics] webbtjänst med [!DNL Microsoft Azure] Active Directory](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory). Notera värdena för klient-ID (kallas även program-ID) och klienthemlighet för den registrerade tjänsten. Dessa värden används medan [konfigurera molntjänster för [!DNL Microsoft Dynamics] service](#configure-cloud-service-for-your-microsoft-dynamics-service).
 
 ## Ange URL för svar för registrerad [!DNL Microsoft Dynamics] program {#set-reply-url-for-registered-microsoft-dynamics-application}
 
@@ -60,13 +60,13 @@ Gör följande för att ange svars-URL för registrerad [!DNL Microsoft Dynamics
 
    `https://[server]:[port]/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html`
 
-   ![Azure-katalog](assets/azure_directory_new.png)
+   ![Azure-katalogen](assets/azure_directory_new.png)
 
 1. Spara konfigurationen.
 
 ## Konfigurera [!DNL Microsoft Dynamics] för IFD {#configure-microsoft-dynamics-for-ifd}
 
-[!DNL Microsoft Dynamics] använder anspråksbaserad autentisering för att ge åtkomst till data på [!DNL Microsoft Dynamics] CRM-server till externa användare. Så här aktiverar du det här: [!DNL Microsoft Dynamics] för installation mot Internet (IFD) och konfigurera anspråksinställningar.
+[!DNL Microsoft Dynamics] använder anspråksbaserad autentisering för att ge åtkomst till data på [!DNL Microsoft Dynamics] CRM-server till externa användare. Gör följande för att konfigurera [!DNL Microsoft Dynamics] för installation mot Internet (IFD) och konfigurera anspråksinställningar.
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ Gör följande för att registrera en OAuth-klient på AD FS-datorn (Active Dire
 
 1. [!DNL Microsoft Dynamics] använder HTTPS-protokoll. Anropa AD FS-slutpunkter från [!DNL Forms] server, installera [!DNL Microsoft Dynamics] platscertifikat till Java-certifikatarkiv med `keytool` kommando på datorn som körs [!DNL Experience Manager Forms].
 
-## Konfigurera molntjänsten för [!DNL Microsoft Dynamics] service {#configure-cloud-service-for-your-microsoft-dynamics-service}
+## Konfigurera molntjänsten för din [!DNL Microsoft Dynamics] service {#configure-cloud-service-for-your-microsoft-dynamics-service}
 
 En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjänst i [!DNL Experience Manager] as a Cloud Service, kontrollera att du har tjänstens rot-URL och gör följande:
 
@@ -120,16 +120,16 @@ En OData-tjänst identifieras av tjänstens rot-URL. Konfigurera en OData-tjäns
 
 >[!NOTE]
 >
->Om du vill konfigurera steg-för-steg-guiden [!DNL Microsoft Dynamics 365], online eller lokalt, se [[!DNL Microsoft Dynamics] OData-konfiguration](ms-dynamics-odata-configuration.md).
+>Stegvisa anvisningar för konfiguration [!DNL Microsoft Dynamics 365], online eller lokalt, se [[!DNL Microsoft Dynamics] OData-konfiguration](ms-dynamics-odata-configuration.md).
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Tryck för att välja den mapp där du vill skapa en molnkonfiguration.
 
-   Se [Konfigurera mapp för molntjänstkonfigurationer](#cloud-folder) om du vill ha information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
+   Se [Konfigurera mapp för molntjänstkonfigurationer](#cloud-folder) för information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer.
 
 1. Tryck **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL OData Service]** från **[!UICONTROL Service Type]** nedrullningsbar meny, där du kan bläddra och välja en miniatyrbild för konfigurationen, och trycka på **[!UICONTROL Next]**.
 I **[!UICONTROL Authentication Settings]** tab:
 
-   1. Ange värdet för **[!UICONTROL Service Root]** fält. Gå till Dynamics-instansen och navigera till **[!UICONTROL Developer Resources]** för att visa värdet för fältet Tjänstrot. Till exempel https://&lt;tenant-name>/api/data/v9.1/
+   1. Ange värdet för **[!UICONTROL Service Root]** fält. Gå till Dynamics-instansen och navigera till **[!UICONTROL Developer Resources]** om du vill visa värdet för fältet Tjänstrot. Till exempel https://&lt;tenant-name>/api/data/v9.1/
 
    1. Välj **[!UICONTROL OAuth 2.0]** som autentiseringstyp.
 

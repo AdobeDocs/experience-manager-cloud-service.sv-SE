@@ -1,14 +1,12 @@
 ---
-title: Konfigurera delade köer
-seo-title: Configure shared queues
+title: Hur konfigurerar jag delade köer?
 description: Lär dig hur du använder delade köer för Forms-centrerade arbetsflöden på [!DNL AEM Forms] på OSGi.
-seo-description: Learn how to use shared queues for Forms-centric workflows on [!DNL AEM Forms] on OSGi.
 topic-tags: process
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 docset: aem65
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---

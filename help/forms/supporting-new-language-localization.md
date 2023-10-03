@@ -1,8 +1,8 @@
 ---
-title: Lägga till stöd för nya språkområden i ett anpassat formulär
-description: Med AEM Forms kan du lägga till nya språk för lokalisering av anpassningsbara formulär. Engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska (Brasilien) (pt-BR), kinesiska (zh-CN), kinesiska (zh-TW) och koreanska (ko-KR) språk.
+title: Hur lägger man till stöd för nya språk i ett anpassat formulär?
+description: För Adaptiv Forms kan du lägga till språkområden för fler språk förutom det som finns i kartongen.
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
-source-git-commit: 23f915f0e2e33b9cf1313d15cb98a0a4f8243746
+source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 0%
@@ -28,11 +28,11 @@ Lokaliseringen av anpassningsbara formulär bygger på två typer av språkordli
 
 * **Formulärspecifik ordlista** Innehåller strängar som används i adaptiva formulär. Till exempel etiketter, fältnamn, felmeddelanden och hjälpbeskrivningar. Den hanteras som en uppsättning XLIFF-filer för varje språkområde och du kan komma åt den på `[author-instance]/libs/cq/i18n/gui/translator.html`.
 
-* **Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, AEM klientbiblioteket. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Du hittar dessa ordlistor på `[author-instance]/libs/fd/xfaforms/clientlibs/I18N`. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor inte uppdateras så ofta kan olika JavaScript-filer för varje språkområde användas för att cachelagra dem och minska användningen av nätverksbandbredd vid åtkomst av olika adaptiva formulär på samma server.
+* **Globala ordlistor** Det finns två globala ordlistor, som hanteras som JSON-objekt, i AEM klientbibliotek. De här ordlistorna innehåller standardfelmeddelanden, namn på månader, valutasymboler, datum- och tidsmönster osv. Du hittar dessa ordlistor på `[author-instance]/libs/fd/xfaforms/clientlibs/I18N`. Dessa platser innehåller separata mappar för varje språkområde. Eftersom globala ordlistor inte uppdateras så ofta kan olika JavaScript-filer för varje språkområde användas för att cachelagra dem och minska användningen av nätverksbandbredd vid åtkomst av olika adaptiva formulär på samma server.
 
 ## Lägg till stöd för nya språk {#add-support-for-new-locales}
 
-Gör följande för att lägga till stöd för en språkinställning:
+Utför följande steg för att lägga till stöd för en ny språkinställning:
 
 1. [Lägg till lokaliseringsstöd för språk som inte stöds](#add-localization-support-for-non-supported-locales)
 1. [Använd tillagda språk i Adaptiv Forms](#use-added-locale-in-af)
@@ -41,7 +41,7 @@ Gör följande för att lägga till stöd för en språkinställning:
 
 AEM Forms har för närvarande stöd för lokalisering av Adaptivt Forms-innehåll på engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR).
 
-Så här lägger du till stöd för en språkinställning:
+Så här lägger du till stöd för en ny språkinställning i den adaptiva Forms-miljön:
 
 1. [Klona din databas](#clone-the-repository)
 1. [Lägg till en språkinställning i tjänsten GuideLocalizationService](#add-a-locale-to-the-guide-localization-service)
@@ -69,7 +69,7 @@ Så här lägger du till stöd för en språkinställning:
 1. Skapa i mappen UI.content `etc/clientlibs` mapp.
 1. Skapa sedan en mapp med namnet som `locale-name` under `etc/clientlibs` som behållare för xfa och af clientlibs.
 
-##### 3.1 Lägg till XFA-klientbibliotek för en språkinställning i mappen locale name
+##### 3.1 Lägg till XFA-klientbibliotek för en språkinställning i en mapp för språkinställningar
 
 Skapa en nod med namnet som `[locale-name]_xfa` och skriv som `cq:ClientLibraryFolder` under `etc/clientlibs/locale_name`, med kategori `xfaforms.I18N.<locale>`och lägg till följande filer:
 
@@ -144,11 +144,11 @@ Om du vill åsidosätta webbläsarens språkområde för användare kan du skick
 Om det inte finns något klientbibliotek för det begärda språket söker programmet efter språkkoden i klientbiblioteket. Om det begärda språket till exempel är `en_ZA` (South Africa English) och klientbiblioteket för `en_ZA` finns inte, det adaptiva formuläret använder klientbiblioteket `en` (Engelska), om det finns. Om det inte finns någon av dem används lexikonet för `en` språkinställning.
 
 
-När språkinställningen har identifierats väljer adaptiv form den formulärspecifika ordlistan. Om det inte går att hitta den formulärspecifika ordlistan för den begärda språkversionen används ordlistan för det språk som Adaptiv form har skapats i.
+När språkinställningen har identifierats väljer adaptiv form den formulärspecifika ordlistan. Om det inte går att hitta den formulärspecifika ordlistan för den begärda språkversionen används ordlistan för det språk som Adaptiv form har skapats på.
 
 Om det inte finns någon språkinformation levereras Adaptiv form på formulärets originalspråk. Det ursprungliga språket är det språk som används vid utvecklingen av det adaptiva formuläret.
 
-Hämta [exempelklientbibliotek](/help/forms/assets/locale-support-sample.zip) för att lägga till stöd för nya språk. Du måste ändra innehållet i mappen på det språk som krävs.
+Få en [exempelklientbibliotek](/help/forms/assets/locale-support-sample.zip) för att lägga till stöd för nya språk. Du måste ändra innehållet i mappen på det språk som krävs.
 
 ## De bästa sätten att stödja ny lokalisering {#best-practices}
 

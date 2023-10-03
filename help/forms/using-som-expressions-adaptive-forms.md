@@ -1,16 +1,14 @@
 ---
-title: Använda SOM-uttryck i Adaptive Forms
-seo-title: Using SOM expressions in Adaptive Forms
-description: Lär dig hur du extraherar SOM-uttryck för en panel i ett adaptivt formulär.
-seo-description: Learn how to extract SOM expressions of a panel of an Adaptive Form.
+title: Hur använder man SOM-uttryck i Adaptive Forms?
+description: Lär dig hur du extraherar SOM-uttryck för en panel i Adaptive Forms.
 uuid: c5d55aff-fb69-4a1c-96ea-fb3f9322cbb0
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 13f00bb2-561f-4d64-8829-292c663abeab
 docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '347'
 ht-degree: 0%
 
 ---

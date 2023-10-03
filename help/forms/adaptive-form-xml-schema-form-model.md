@@ -1,13 +1,13 @@
 ---
 title: Utforma XML-schema för ett adaptivt formulär
-description: Lär dig hur du använder XML-schema som formulärmodell i ett adaptivt formulär. Gräv djupare med ett exempel på ett XML-schema, lägg till specialegenskaper i fält med XML-schema och begränsa tillåtna värden för en adaptiv formulärkomponent.
+description: Lär dig att skapa ett XML-schema för ett adaptivt formulär och skapa ett adaptivt formulär baserat på schemat för att skapa schemaklagomål.
 feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 5b8ad9a8-77d4-4234-a4d7-c8964b975e96
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '950'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Att skapa ett adaptivt formulär med ett XML-schema som formulärmodell kräver 
 
 ## Använda ett XML-schema som formulärmodell {#using-an-xml-schema-as-form-model}
 
-[!DNL Experience Manager Forms] har stöd för att skapa ett adaptivt formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller används av det bakomliggande systemet i organisationen.
+[!DNL Experience Manager Forms] har stöd för att skapa ett adaptivt formulär genom att använda ett befintligt XML-schema som formulärmodell. Det här XML-schemat representerar strukturen i vilken data produceras eller förbrukas av det bakomliggande systemet i organisationen.
 
 De viktigaste funktionerna i ett XML-schema är:
 
@@ -67,10 +67,10 @@ Den här mappningen av XML-element med adaptiva formulärkomponenter är följan
   <tr>
    <td><code class="code">xs:enumeration
       </code></td>
-   <td>Nedrullningsbar listruta</td>
+   <td>Listruta</td>
   </tr>
   <tr>
-   <td>Alla komplexa element</td>
+   <td>Alla komplexa tytelement</td>
    <td>Panel</td>
   </tr>
  </tbody>
@@ -215,7 +215,7 @@ Du kan lägga till följande begränsningar i XML-schemaelement för att begrän
   <tr>
    <td><p><code>exclusiveMaximum</code></p> </td>
    <td><p>Boolean</p> </td>
-   <td><p>Om true måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än det numeriska värdet eller datumet som anges för egenskapen maximum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än eller lika med det numeriska värdet eller datumet som anges för egenskapen maximum.</p> </td>
+   <td><p>Om värdet är true måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än det numeriska värdet eller datumet som anges för egenskapen maximum.</p> <p>Om värdet är false måste det numeriska värdet eller datumet som anges i formulärets komponent vara mindre än eller lika med det numeriska värdet eller datumet som anges för egenskapen maximum.</p> </td>
    <td>
     <ul>
      <li>Numerisk ruta</li>
@@ -293,7 +293,7 @@ Du har två alternativ:
 
 **Vad är en bindRef?**
 
-A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det avgör `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. A `bindRef`används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
+A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schemaelement eller attribut. Det dikterar `XPath` där värdet som hämtas från den här komponenten eller det här fältet är tillgängligt i XML-utdata. A `bindRef`används också när ett fältvärde fylls i i förväg från förfylld (förifylld) XML.
 
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 

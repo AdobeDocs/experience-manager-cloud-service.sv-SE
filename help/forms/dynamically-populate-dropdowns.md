@@ -1,17 +1,13 @@
 ---
-title: Fylla i nedrullningsbara listor dynamiskt
-seo-title: Dynamically populating drop-down lists
-description: Procedur för att dynamiskt fylla i nedrullningsbara listor baserat på viss logik
-seo-description: Procedure to dynamically populate drop-down lists based on some logic
+title: Hur fyller du i listrutor dynamiskt?
+description: Lär dig skapa en överlappande listruta eller fylla i listrutor dynamiskt.
 uuid: b3408aee-ac24-43af-a380-a5892abf0248
 content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: customization
 discoiquuid: ad6db3fd-0d26-4241-bf73-be74b7f6e509
-docset: aem65
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
@@ -28,7 +24,7 @@ ht-degree: 0%
 
 ## Procedur för att dynamiskt fylla i nedrullningsbara listor {#procedure-to-dynamically-populate-drop-down-lists}
 
-Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista baserad på ett värde som du väljer i **Land** nedrullningsbar lista. Om du väljer Australien i dialogrutan **Land** nedrullningsbar lista, **Läge** i den nedrullningsbara listan visas lägena i Australien. I proceduren nedan beskrivs hur du utför den här uppgiften.
+Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista baserad på ett värde som du väljer i **Land** listruta. Om du väljer Australien i dialogrutan **Land** nedrullningsbar lista **Läge** i den nedrullningsbara listan visas lägena i Australien. I proceduren nedan beskrivs hur du utför den här uppgiften.
 
 1. Skapa ett projekt med följande moduler:
 
@@ -148,7 +144,7 @@ Tänk dig ett scenario där du vill fylla i **Läge** nedrullningsbar lista base
 
 1. Skapa en nedrullningsbar nod under en viss mapphierarki i program (skapa till exempel en nod under /apps/myfolder/demo). Se till att `sling:resourceType` -parametern för noden är densamma som den som servleten pekar på (/apps/populatedDrop).
 
-   ![Skapa en nedrullningsbar nod](assets/dropdown-node.png)
+   ![Skapa en listnod](assets/dropdown-node.png)
 
 1. Paketera noden och bädda in .jar-filen på en viss plats (till exempel /apps/myfolder/demo/install/). Distribuera samma fil på servern.
 1. Skapa ett anpassat formulär och lägg till två listrutor, Land och Delstat. Listan Land kan innehålla namn på länder. Tillståndslistan kan dynamiskt fylla i namn på lägen för det land du väljer i den första listan.
