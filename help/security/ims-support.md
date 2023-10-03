@@ -2,9 +2,9 @@
 title: IMS-stöd för Adobe Experience Manager as a Cloud Service
 description: Stöd för Image Management System i Adobe Experience Manager as a Cloud Service
 exl-id: fb563dbd-a761-4d83-9da1-58f8e462b383
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 361881807e8704dfcb27075365cb73a7f659c82d
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '1978'
 ht-degree: 37%
 
 ---
@@ -21,9 +21,7 @@ ht-degree: 37%
 >
 >Se [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS för att AEM as a Cloud Service. Läs också om hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM samt funktioner och funktioner. Adobe ID krävs.
 
->[!NOTE]
->
->AEM stöder för närvarande inte tilldelning av grupper till profiler. Användare bör läggas till individuellt i stället.
+{{ims-group-profiles}}
 
 ## Viktiga funktioner {#key-highlights}
 
@@ -88,7 +86,7 @@ Med verktyget för användarsynkronisering (UST i korthet) kan Adobe företagsku
 
 När användarsynkronisering körs hämtar den en lista över användare från organisationens Active Directory och jämför den med listan över användare i Admin Console. Därefter anropas API:t för användarhantering i Adobe så att Admin Console synkroniseras med organisationens katalog. Flödet är enkelriktat. Ändringar som görs i Admin Console överförs inte till katalogen.
 
-Med verktyget kan systemadministratören mappa användargrupper i kundens katalog med produktkonfigurationer och användargrupper i Admin Console.
+Med verktyget kan systemadministratören mappa användargrupper i kundens katalog med produktkonfiguration och användargrupper i Admin Console.
 
 För att konfigurera användarsynkronisering måste organisationen skapa en uppsättning autentiseringsuppgifter på samma sätt som de använder [API för användarhantering](https://developer.adobe.com/umapi/).
 
@@ -132,7 +130,7 @@ Nedan visas de viktigaste OSGI-konfigurationerna som måste ändras för att än
 
 ### Hantera produkter och användaråtkomst i Admin Console {#managing-products-and-user-access-in-admin-console}
 
-När produktadministratören loggar in på Admin Console visas flera instanser av den AEM as a Cloud Service produktkontexten, vilket visas nedan. Välj till exempel någon av produkterna i **Översikt** sida:
+När produktadministratören loggar in på Admin Console visas flera instanser av den AEM as a Cloud Service produktkontexten, vilket visas nedan. Välj till exempel någon av produkterna i **Ökning** sida:
 
 ![Inloggning på instanser](/help/security/assets/ims6.png)
 
@@ -191,7 +189,7 @@ När autentiseringen är klar omdirigeras användaren tillbaka till AEM och logg
 
 Åtkomstkontrollistorna och behörigheterna fortsätter att hanteras i AEM. Användargrupper som synkroniseras från IMS kan tilldelas lokala grupper där åtkomstkontrollistor och behörigheter definieras.
 
-I exemplet nedan läggs synkroniserade grupper till i den lokala **Dam_Users** som exempel.
+I exemplet nedan läggs synkroniserade grupper till i den lokala **Dam_Users** gruppera som exempel.
 
 Användaren ingår i följande grupper i IMS:
 
@@ -214,7 +212,7 @@ Som visas nedan är gruppen **AEM-GRP_008** ärver behörigheter och behörighet
 
 För att kunna komma åt Cloud Manager eller miljöer på AEM as a Cloud Service måste du tilldelas Profiler för Cloud Manager-produkten.
 
-Mer information om användarroller som styr tillgängligheten av specifika funktioner i Cloud Manager finns i Rolldefinitioner.
+Mer information om roller för användare som styr tillgängligheten av specifika funktioner i Cloud Manager finns i Rolldefinitioner.
 
 >[!NOTE]
 >Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de roller som har specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions.html?lang=en).
