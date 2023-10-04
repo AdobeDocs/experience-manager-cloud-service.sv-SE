@@ -1,21 +1,21 @@
 ---
-title: Redigera i sammanhang
-description: Se hur du kan använda den universella redigeraren för att redigera olika delar av innehållet på plats och i sitt sammanhang i alla implementeringar.
+title: Redigera i kontext med den universella redigeraren
+description: Upptäck hur du kan använda den universella redigeraren för att redigera olika delar av innehållet på plats och i sitt sammanhang i alla implementeringar.
 hidefromtoc: true
 index: false
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+exl-id: a4854a56-9434-4d15-a56a-f1798f27263a
+source-git-commit: 226df8999d1344ffe8acb2a9ce75b58634300a11
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
 
-
-# Redigera i sammanhang {#editing-in-context}
+# Redigera i kontext med den universella redigeraren {#editing-in-context}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_edit_inline_universal_editor"
->title="Redigera i sitt sammanhang"
+>title="Redigera i kontext med den universella redigeraren"
 >abstract="Se hur era headless-appar kan utnyttja den universella redigeraren för att ge dina författare lättanvända kontextredigeringar."
 
 >[!CONTEXTUALHELP]
