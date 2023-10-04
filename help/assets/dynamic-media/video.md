@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 1df4f371fe4a98b910634b4742d9ff1a9448674f
+source-git-commit: 00cd62aa64c183a0560326feaacda1db70627858
 workflow-type: tm+mt
-source-wordcount: '9310'
+source-wordcount: '9316'
 ht-degree: 1%
 
 ---
@@ -551,6 +551,7 @@ Samtidigt som du skapar ett Adobe Support-ärende där DASH är aktiverat på di
 1. Om du vill skapa ett supportärende följer du instruktionerna och ser till att du anger följande information:
 
    * Primärt kontaktnamn, e-postadress, telefon.
+   * Ditt program-ID och ditt miljö-ID.
    * Namn på ditt Dynamic Media-konto.
    * Ange att stöd för DASH, multi-subtitle och multi-audio-spår ska aktiveras på ditt Dynamic Media-konto på Experience Manager 6.5.
 
