@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: 5c482e5f883633c04d70252788b01f878156bac8
+source-git-commit: a6d19de48f114982942b0b8a6f6cbdc38b0d4dfa
 workflow-type: tm+mt
-source-wordcount: '2142'
+source-wordcount: '2191'
 ht-degree: 3%
 
 ---
@@ -20,9 +20,6 @@ ht-degree: 3%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content.html#top-up-extraction-process" text="Extrahering uppifrån"
 
 Följ stegen nedan för att importera din migreringsuppsättning med Cloud Acceleration Manager:
-
->[!NOTE]
->Kom du ihåg att logga en supportbiljett för det här intaget? Se [Viktigt att tänka på innan du använder verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html#important-considerations) och andra överväganden för att underlätta intag.
 
 1. Gå till Cloud Acceleration Manager. Klicka på projektkortet och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och klicka **Nytt intag**
 
@@ -120,21 +117,27 @@ Det här meddelandet anger att Cloud Acceleration Manager inte kunde nå målmil
 > Fältet &quot;Migreringstoken&quot; visas eftersom det i ett fåtal fall inte är tillåtet att hämta denna token. Genom att tillåta manuell inmatning kan användaren snabbt påbörja intagningen utan ytterligare hjälp. Om token anges och meddelandet fortfarande visas, var det inte problemet att hämta token.
 
 * AEM as a Cloud Service bevarar miljötillståndet och måste ibland starta om migreringstjänsten av olika vanliga orsaker. Om tjänsten startas om kan den inte nås, men är tillgänglig så småningom.
-* Det är möjligt att en annan process körs på instansen. Om till exempel Release Orchestrator tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. Därför, och risken att scenen eller produktionsinstansen skadas, är det mycket viktigt att du pausar uppdateringar under ett intag.
+* Det är möjligt att en annan process körs på instansen. Om [Uppdateringar av AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates.html) installerar en uppdatering, systemet kanske är upptaget och migreringstjänsten är inte tillgänglig regelbundet. När den processen är klar kan ett nytt försök att starta intaget göras.
 * Om en [IP-Tillåtelselista har tillämpats](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) via Cloud Manager blockerar det Cloud Acceleration Manager från att nå migreringstjänsten. Det går inte att lägga till en IP-adress för frågor eftersom adressen är dynamisk. För närvarande är den enda lösningen att inaktivera IP-tillåtelselista när intaget körs.
 * Det kan finnas andra skäl till att en utredning behöver göras. Kontakta Adobe kundtjänst om ditt intag fortfarande misslyckas.
 
-### Automatiska uppdateringar via Release Orchestrator är fortfarande aktiverat
+### AEM och förslag
 
-Frisläpp Orchestrator håller automatiskt miljön uppdaterad genom att uppdatera automatiskt. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön. En bra anledning att logga en kundsupportbiljett innan ett förtäring påbörjas (se&quot;Obs&quot; ovan), så att det går att schemalägga en tillfällig inaktivering av Release Orchestrator.
+[Uppdateringar av AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates.html) används automatiskt i miljöer för att hålla dem uppdaterade med den senaste AEM as a Cloud Service versionen. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön.
 
-Om Release Orchestrator fortfarande körs när ett intag startas visas det här meddelandet i användargränssnittet. Du kan välja att fortsätta i alla fall och ta risken genom att markera fältet och trycka på knappen igen.
+Om&quot;AEM versionsuppdateringar&quot; introduceras i målprogrammet görs ett försök att inaktivera kön innan den startas. När inmatningen är klar återställs versionsuppdaterarläget till det tillstånd det hade innan inmatningen/tilläggen startades.
 
 >[!NOTE]
 >
-> Utgåva av Orchestrator distribueras nu till utvecklingsmiljöer, så det bör även göras pausande uppdateringar för dessa miljöer.
+> Du behöver inte längre logga en supportanmälan för att inaktivera AEM versionsuppdateringar.
 
-![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_ingestion.png)
+Om&quot;AEM versionsuppdateringar&quot; är aktiv (d.v.s. uppdateringar körs eller köas för att köras), kommer importen inte att börja och följande meddelande visas i användargränssnittet. När uppdateringarna är klara kan intaget startas. Molnhanteraren kan användas för att se det aktuella läget för programmets pipelines.
+
+>[!NOTE]
+>
+> &quot;AEM versionsuppdateringar&quot; körs i miljöns pipeline och väntar tills pipeline är klar. Om uppdateringar köas längre än förväntat kontrollerar du att ett anpassat arbetsflöde inte har pipeline oavsiktligt låst.
+
+![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_active.png)
 
 ### Inmatningsfel i toppklass på grund av Unikhetsbegränsningsöverträdelse
 

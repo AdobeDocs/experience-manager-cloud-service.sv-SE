@@ -2,10 +2,10 @@
 title: Riktlinjer och bästa praxis för användning av verktyget Innehållsöverföring
 description: Lär dig riktlinjerna och de bästa sätten att använda verktyget Innehållsöverföring.
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
-source-git-commit: d67c5c9baafb9b7478f1d1c2ad924f5a8250a1ee
+source-git-commit: 5f805122fb52d7f5268075bd7a6a0232e7e8d2ff
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 10%
+source-wordcount: '1432'
+ht-degree: 11%
 
 ---
 
@@ -78,12 +78,6 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 * De användare och grupper som överförs av verktyget Innehållsöverföring är bara de som krävs för att innehållet ska uppfylla behörigheterna. The _Extrahering_ processen kopierar hela `/home` i migreringsuppsättningen, och det gör användarmappning genom att lägga till ett fält som är gjort från varje användares e-postadress. Mer information finns i [Användarmappning och huvudmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/user-mapping-and-migration.md). The _Inmatning_ process kopierar alla användare och grupper som refereras i de migrerade innehålls-ACL:erna. Se [Migrerar stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md) om du vill ha mer information om grupper som används i en CUG-princip (Closed User Group).
 
 * Under extraheringsfasen körs Content Transfer Tool på en aktiv AEM-källinstans.
-
-* När du är klar med *Extrahering* fas i innehållsöverföringsprocessen och innan du påbörjar *Inmatningsfas* att lägga in innehåll i AEM as a Cloud Service *Scen* eller *Produktion* instanser loggar du en supportanmälan. Meddela Adobe om att du tänker köra *Inmatning* så att Adobe kan säkerställa att inga avbrott inträffar under *Inmatning* -processen. Logga supportanmälan en vecka före ditt planerade *Inmatning* datum. När du har skickat in supportanmälan ger supportteamet vägledning om nästa steg. Du kan skicka in en supportanmälan med följande information:
-
-   * Exakt datum och beräknad tid (med din tidszon) när du tänker starta *Inmatning* fas.
-   * Miljötyp (Stage eller Production) som du vill importera data till.
-   * Program-ID.
 
 * The *Inmatningsfas* för författaren skalas ned för hela författardistributionen. Det innebär att författarens AEM inte är tillgängligt under hela importen. Se även till att inga rörledningar för Cloud Manager körs när du kör *Inmatning* fas.
 
