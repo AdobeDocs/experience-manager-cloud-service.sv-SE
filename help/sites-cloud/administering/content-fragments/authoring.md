@@ -3,13 +3,13 @@ title: Skapa innehållsfragment
 description: Lär dig hur du skapar innehåll för dina innehållsfragment och sedan skapar varianter av det innehållet utifrån syfte. Detta ger större flexibilitet för både headless-leverans och redigering av sidor.
 feature: Content Fragments
 role: User, Developer, Architect
-source-git-commit: 2a4538ad8b52615ffdee110393bfbc01f57694f4
+exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
+source-git-commit: e92e0d76ed5aa904c3e16bcfda13650fb6a8b5b6
 workflow-type: tm+mt
-source-wordcount: '2249'
+source-wordcount: '2253'
 ht-degree: 0%
 
 ---
-
 
 # Skapa innehållsfragment {#authoring-content-fragments}
 
@@ -32,23 +32,9 @@ Den här redigeraren innehåller:
 * Möjlighet att [visa och öppna överordnade referenser](#view-parent-references).
 * En hierarkisk vy av innehållsavsnittet och dess referenser med hjälp av [Strukturträd](#structure-tree).
 
->[!CAUTION]
+>[!WARNING]
 >
 >Redigeraren som beskrivs i det här avsnittet är *endast* finns i *online* Adobe Experience Manager (AEM) as a Cloud Service.
-
->[!CAUTION]
->
->Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
-> 
->Om du till exempel inte har `edit` behörigheter som redigeraren ska vara skrivskyddad.
-
->[!NOTE]
->
->I Assets-dokumentationen finns fullständig information om [ursprunglig Content Fragment-redigerare](/help/assets/content-fragments/content-fragments-variations.md) - det finns på båda **Resurser** konsolen och **Innehållsfragment** konsol.
-
->[!NOTE]
->
->Ditt projektteam kan anpassa redigeraren om det behövs. Se [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md) för mer information.
 
 ## Innehållsfragmentsredigerare {#content-fragment-editor}
 
@@ -76,12 +62,6 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
    * if **Platshållare för flik** fält definieras i den modell de visas här och kan användas för navigering. De visas antingen vågrätt eller som en listruta
 
 ![Content Fragment Editor - Översikt](assets/cf-authoring-overview.png)
-
->[!CAUTION]
->
->En innehållsfragmentmodell kan ofta definiera datafält med namnet **Titel** och **Beskrivning**. Om fälten finns är de användardefinierade och kan uppdateras i *central panel* när du redigerar fragmentet.
->
->Innehållsfragmentet och dess varianter har också metadatafält (variationsegenskaper) som anropas **Titel** och **Beskrivning**. De här fälten är en integrerad del av ett innehållsfragment och definieras från början när fragmentet. De kan uppdateras i *höger panel* när du redigerar fragmentet.
 
 ## Navigera i innehållsfragmentsstrukturen {#navigate-structure}
 
@@ -494,3 +474,19 @@ The **Fält** På panelen visas alla fält i innehållsfragmentet. Ikonen indike
   </tr>
  </tbody>
 </table>
+
+## Bra att veta {#good-to-know}
+
+Dessutom:
+
+* Om du vill redigera ett innehållsfragment behöver du [lämpliga behörigheter](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions). Kontakta systemadministratören om du har problem.
+
+  Om du till exempel inte har `edit` behörigheter som redigeraren ska vara skrivskyddad.
+
+* En innehållsfragmentmodell kan ofta definiera datafält med namnet **Titel** och **Beskrivning**. Om fälten finns är de användardefinierade och kan uppdateras i *central panel* när du redigerar fragmentet.
+
+  Innehållsfragmentet och dess varianter har också metadatafält (variationsegenskaper) som anropas **Titel** och **Beskrivning**. De här fälten är en integrerad del av ett innehållsfragment och definieras från början när fragmentet. De kan uppdateras i *höger panel* när du redigerar fragmentet.
+
+* I Assets-dokumentationen finns fullständig information om [ursprunglig Content Fragment-redigerare](/help/assets/content-fragments/content-fragments-variations.md) - det finns på båda **Resurser** konsolen och **Innehållsfragment** konsol.
+
+* Ditt projektteam kan anpassa redigeraren om det behövs. Se [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md) för mer information.
