@@ -1,26 +1,26 @@
 ---
-title: Publicera innehåll med den universella visuella redigeraren
-description: Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+title: Publicera innehåll med den universella redigeraren
+description: Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 exl-id: aee34469-37c2-4571-806b-06c439a7524a
-source-git-commit: 0f62245d31074ab7a64d86b97ef3b1a8d7533001
+source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
 
 
-# Publicera innehåll med den universella visuella redigeraren {#publishing}
+# Publicera innehåll med den universella redigeraren {#publishing}
 
-Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 
 ## Likheter med AEM {#similarities}
 
-För användare av AEM fungerar processen att publicera innehåll med den universella visuella redigeraren som du är van vid: När innehållet publiceras i AEM replikeras det från författarnivån till publiceringsnivån.
+För användare av AEM fungerar processen att publicera innehåll med den universella redigeraren som du är van vid: vid publicering i AEM replikeras innehållet från författarnivån till publiceringsnivån.
 
 ## Skillnader {#differences}
 
-Det som gör publiceringen med den universella Visual Editor lite annorlunda är inte så mycket själva redigeraren, utan snarare den externa värdtjänsten för appen som den universella redigeraren gör möjlig.
+Det som gör publicering med den universella redigeraren lite annorlunda är inte så mycket själva redigeraren, utan snarare den externa värdfunktionen för appen som den universella redigeraren gör möjlig.
 
 När det finns en extern värd är det webappens sak att se till att innehåll läses in från författarnivån när appen öppnas av författare i redigeraren, och att det läses in från publiceringsnivån när besökarna öppnar appen.
 

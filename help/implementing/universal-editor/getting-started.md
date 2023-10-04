@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: 0f62245d31074ab7a64d86b97ef3b1a8d7533001
+source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '803'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Det finns ett antal steg för att komma igång med AEM och instrumentera den så
 1. [Lägg till nödvändig OSGi-konfiguration.](#osgi-configurations)
 1. [Instrumentera sidan.](#instrument-page)
 
-Det här dokumentet vägleder dig genom dessa steg.
+Det här dokumentet vägleder dig genom de här stegen.
 
 ## Begär åtkomst till den universella redigeraren {#request-access}
 
@@ -42,7 +42,7 @@ Klicka **Begär åtkomst** och fylla i formuläret enligt anvisningarna för att
 
 ## Include the Universal Editor Core Library {#core-library}
 
-Innan ditt program kan instrumenteras för användning med den universella redigeraren måste det innehålla följande beroenden.
+Innan ditt program kan instrumenteras för användning med den universella redigeraren måste det innehålla följande beroende.
 
 ```javascript
 @adobe/universal-editor-cors
@@ -69,7 +69,7 @@ För att kunna redigera AEM med din app med Universal Editor måste CORS och coo
 Följande [OSGi-konfigurationer måste anges för AEM.](/help/implementing/deploying/configuring-osgi.md)
 
 * `SameSite Cookies = None` in `com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`
-* Ta bort X-FRAME-OPTIONS: SAMEORIGIN Header in `org.apache.sling.engine.impl.SlingMainServlet`
+* Ta bort X-FRAME-OPTIONS: SAMEORIGIN Header i `org.apache.sling.engine.impl.SlingMainServlet`
 
 ### com.day.crx.security.token.impl.impl.TokenAuthenticationHandler {#samesite-cookies}
 
@@ -86,7 +86,7 @@ Den här egenskapen måste anges i `com.day.crx.security.token.impl.impl.TokenAu
 
 ### org.apache.sling.engine.impl.SlingMainServlet {#sameorigin}
 
-X-frame-options: SAMEORIGIN förhindrar återgivning AEM sidor i en iframe. Om du tar bort sidhuvudet kan sidorna läsas in.
+X-Frame-Options: SAMEORIGIN förhindrar återgivning AEM sidor i en iframe. Om du tar bort sidhuvudet kan sidorna läsas in.
 
 Den här egenskapen måste anges i `org.apache.sling.engine.impl.SlingMainServlet` OSGi-konfiguration.
 
@@ -116,9 +116,9 @@ Anslutningar som används i appen lagras som `<meta>` taggar på sidans `<head>`
 * `<protocol>` - Detta anger vilket beständighets-plugin-program för Universal Editor Persistence Service som ska användas. T.ex. `aem`
 * `<url>` - Detta är URL:en till det system där ändringarna ska kvarstå. T.ex. `http://localhost:4502`
 
-Identifieraren `adobe:aem:editor` representerar anslutningen för Adobe Universal Editor.
+Identifierare `adobe:aem:editor` representerar anslutningen för Adobe Universal Editor.
 
-`itemid`s kommer att använda `urn` för att förkorta identifieraren.
+`itemid`s använder `urn` för att förkorta identifieraren.
 
 ```html
 itemid="urn:<referenceName>:<resource>"
@@ -173,7 +173,7 @@ Mer information om Universal Editor finns i de här dokumenten.
 
 * [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar, så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
 * [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
-* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.

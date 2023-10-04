@@ -2,9 +2,9 @@
 title: Universal Editor Architecture
 description: Läs mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 exl-id: e6f40743-0f21-4fb6-bf23-76426ee174be
-source-git-commit: 0f62245d31074ab7a64d86b97ef3b1a8d7533001
+source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Den universella redigeraren består av fyra viktiga byggblock som interagerar s�
 1. [Redigerare](#editors)
 1. [Remote App](#remote-app)
 1. [API-lager](#api-layer)
-1. [Lager för beständighet](#persistence-layer)
+1. [Beständigt lager](#persistence-layer)
 
 I det här dokumentet beskrivs dessa byggstenar och hur de utbyter data.
 
@@ -29,7 +29,7 @@ I det här dokumentet beskrivs dessa byggstenar och hur de utbyter data.
 
 >[!TIP]
 >
->Se dokumentet för att se hur den universella redigeraren och dess arkitektur fungerar. [Komma igång med Universal Editor i AEM](getting-started.md) om du vill lära dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
+>Se dokumentet för att se hur den universella redigeraren och dess arkitektur fungerar [Komma igång med Universal Editor i AEM](getting-started.md) om du vill lära dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 
 ### Redigerare {#editors}
 
@@ -47,7 +47,7 @@ Den universella redigeraren strävar efter ett minimum av SDK, och därför är 
 * **Innehållsdata** - För den universella redigeraren är varken källsystemen för innehållsdata eller hur de konsumeras viktigt. Det är bara viktigt att definiera och tillhandahålla de attribut som krävs med kontextredigerbara data.
 * **Beständiga data** - För varje redigerbar data finns det en URN-identifierare. Denna URN används för att dirigera beständigheten till rätt system och resurs.
 
-### Lager för beständighet {#persistence-layer}
+### Beständigt lager {#persistence-layer}
 
 * **Content Fragment Model** - För att stöda en rät för redigering av egenskaper för innehållsfragment, redigeraren för innehållsfragment och formulärbaserade redigerare krävs modeller per komponent och innehållsfragment.
 * **Innehåll** - Innehåll kan lagras var som helst, t.ex. i AEM, Magento.
@@ -66,7 +66,7 @@ Universal Editor skickar alla innehållsändringar till en central tjänst som k
 
 ![Återgivning på serversidan](assets/server-side.png)
 
-### Statisk webbplatsgenerering {#static-generation}
+### Skapa statisk plats {#static-generation}
 
 ![Statisk webbplatsgenerering](assets/static-generation.png)
 
@@ -80,7 +80,7 @@ Mer information om Universal Editor finns i de här dokumenten.
 
 * [Introduktion till Universal Editor](introduction.md) - Lär dig hur den universella redigeraren möjliggör redigering av alla aspekter av innehåll i alla implementeringar, så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
 * [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
-* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.

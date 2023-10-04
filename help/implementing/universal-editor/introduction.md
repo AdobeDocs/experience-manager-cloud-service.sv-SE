@@ -1,18 +1,18 @@
 ---
-title: Introduktion till Universal Visual Editor
-description: Se hur den universella Visual Editor (alias. Universal Editor) möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
+title: Introduktion till Universal Editor
+description: Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
-source-git-commit: 0f62245d31074ab7a64d86b97ef3b1a8d7533001
+source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
 
-# Introduktion till Universal Visual Editor {#introduction}
+# Introduktion till Universal Editor {#introduction}
 
-Se hur den universella Visual Editor (alias. Universal Editor) möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
+Se hur den universella redigeraren möjliggör WYSIWYG-redigering av headless och headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
 
 ## Bakgrund {#background}
 
@@ -32,7 +32,7 @@ Eftersom upplevelser kan byggas på många olika sätt kan alla implementeringar
 
 Användare tror ofta att en headless-implementering begränsar författarens möjlighet att redigera allt innehåll i ett formulärbaserat användargränssnitt, men så är inte fallet med den universella redigeraren
 
-Kraven för en implementering som ska använda den universella redigeraren är raka framifrån och har stöd för följande:
+Kraven för en implementering som ska använda den universella redigeraren är raka framifrån och stöder följande:
 
 * **Valfri arkitektur** - Återgivning på serversidan, edge-side-återgivning, rendering på klientsidan osv.
 * **Alla ramverk** - Vanilla AEM, eller andra ramverk från tredje part som React, Next.js, Angular osv.
@@ -40,7 +40,7 @@ Kraven för en implementering som ska använda den universella redigeraren är r
 
 ### Allt innehåll {#any-content}
 
-En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som den AEM sidredigeraren. Men med den universella redigeraren kan skribenterna redigera **alla** innehåll visuellt och i sitt sammanhang och har stöd för
+En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som den AEM sidredigeraren. Men den universella redigeraren kan redigera **alla** innehåll visuellt och i sitt sammanhang och har stöd för
 
 * **AEM sidstrukturer** - Kapslad `cq:Components` av `cq:Pages`, inklusive Experience Fragments
 * **AEM innehållsfragment** - Redigera innehåll från innehållsfragment så som de visas i sitt sammanhang.
@@ -58,13 +58,13 @@ Genom att frikoppla redigeringsupplevelsen från ett visst innehållsleveranssys
 
 ![The value of the Universal Editor](assets/value.png)
 
-* **Leverera exceptionella upplevelser** - För att yrkesutövare ska kunna skapa en övertygande upplevelse för besökare kan yrkesutövare skapa och redigera innehållet i förhandsvisningssammanhang. På så sätt kan de skapa innehåll som passar upplevelsens design och som utgör en meningsfull resa för besökarna.
+* **Leverera enastående upplevelser** - För att yrkesutövare ska kunna skapa en övertygande upplevelse för besökare kan yrkesutövare skapa och redigera innehållet i förhandsvisningssammanhang. På så sätt kan de skapa innehåll som passar upplevelsens design och som utgör en meningsfull resa för besökarna.
 * **Öka innehållshastigheten** - För att effektivisera yrkesutövarnas arbetsflöde tillåter den universella redigeraren redigering av innehåll i förhandsgranskningen som vägledning för användarna genom att endast visa de alternativ som är relevanta för det sammanhanget och som gör arbetsflödet oberoende av innehållskällorna.
 * **Avancerad utvecklarupplevelse** - För att stödja heterogena applikationslandskap i verkligheten är den universella redigeraren helt fristående och teknikberoende, vilket gör att utvecklare kan använda den teknologi de föredrar för att implementera upplevelsen.
 
-## Universal Visual Editor och Content Fragment Editor {#universal-editor-content-fragment-editor}
+## Universal Editor och Content Fragment Editor {#universal-editor-content-fragment-editor}
 
-Vid första anblicken kan det verka som den universella visuella redigeraren och Content Fragment Editor har liknande redigeringsfunktioner. Men de här redigerarna har mycket olika funktioner och de utför olika arbetsuppgifter för marknadsföringsavdelningen.
+Vid första anblicken kan det verka som den universella redigeraren och Content Fragment Editor har liknande redigeringsfunktioner. Men de här redigerarna har mycket olika funktioner och de utför olika arbetsuppgifter för marknadsföringsavdelningen.
 
 ### Innehållsfragmentsredigerare {#content-fragment-editor}
 
@@ -72,7 +72,7 @@ En marknadsförare vill skapa innehåll utan att behöva bry sig om layouten, s�
 
 * Det underliggande jobbet är att skala innehållsstrategin.
 
-### Universal Visual Editor {#universal-editor}
+### Universal Editor {#universal-editor}
 
 En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i ett visst sammanhang för att leverera en exceptionell upplevelse.
 
@@ -89,7 +89,7 @@ Tala med din Adobe-kontakt för mer information om kommande funktioner som plane
 Mer information om Universal Editor finns i de här dokumenten.
 
 * [Skapa innehåll med den universella redigeraren](authoring.md) - Lär dig hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
-* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella Visual Editor publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+* [Publicera innehåll med den universella redigeraren](publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Komma igång med Universal Editor i AEM](getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 * [Universal Editor Architecture](architecture.md) - Lär dig mer om arkitekturen i den universella redigeraren och hur data flödar mellan tjänster och lager.
 * [Attribut och typer](attributes-types.md) - Läs mer om de dataattribut och datatyper som krävs för den universella redigeraren.
