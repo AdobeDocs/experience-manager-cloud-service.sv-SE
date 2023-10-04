@@ -4,7 +4,7 @@ description: Lär dig hur du skapar innehåll för dina innehållsfragment och s
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
-source-git-commit: e92e0d76ed5aa904c3e16bcfda13650fb6a8b5b6
+source-git-commit: b8206ffc0947de4fed085a03a6f90b5ac0f85aab
 workflow-type: tm+mt
 source-wordcount: '2253'
 ht-degree: 0%
@@ -27,8 +27,7 @@ Den här redigeraren innehåller:
 * [Förhandsgranska](#preview-content-fragment) av den renderade upplevelsen som levereras av innehållsfragmentet.
 * Möjlighet att [Publicera](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) från redigeraren.
 * Möjlighet att [visa och öppna, associerade språkkopior](#view-language-copies) i redigeraren.
-* Möjlighet att [visa versionsinformation](#view-version-history) i redigeraren.
-   * Du kan också återgå till en vald version.
+* Möjlighet att [visa versionsinformation](#view-version-history) i redigeraren. Du kan också återgå till en vald version.
 * Möjlighet att [visa och öppna överordnade referenser](#view-parent-references).
 * En hierarkisk vy av innehållsavsnittet och dess referenser med hjälp av [Strukturträd](#structure-tree).
 
