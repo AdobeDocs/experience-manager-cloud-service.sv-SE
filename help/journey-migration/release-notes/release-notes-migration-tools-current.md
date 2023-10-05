@@ -1,17 +1,17 @@
 ---
-title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.09.0
-description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.09.0
+title: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.10.0
+description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2022.10.0
 feature: Release Information
-source-git-commit: 9abce12c396ee74d36019218dd8b4fa72f762256
+source-git-commit: 2ff6aeeb0145695aa44c79f42aefd53c7c545fea
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 3%
+source-wordcount: '124'
+ht-degree: 4%
 
 ---
 
-# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.09.0 {#release-notes}
+# Versionsinformation för migreringsverktyg i AEM as a Cloud Service version 2023.10.0 {#release-notes}
 
-Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.09.0.
+Den här sidan innehåller versionsinformation för migreringsverktyg i AEM as a Cloud Service 2022.10.0.
 
 ## Content Transfer Tool {#ctt-release}
 
@@ -21,10 +21,4 @@ Releasedatum för Content Transfer Tool v3.0.0 är 7 september 2023.
 
 ### Nyheter {#what-is-new-ctt}
 
-Verktyget Innehållsöverföring har förbättrats avsevärt och ger följande fördelar:
-* Minskad överföringstid vid migrering av en delmängd av en innehållsdatabas genom att använda AzCopy för att endast kopiera de blob-ID som krävs i stället för att kopiera alla blob-ID:n
-* Snabbare uppdatering av differentiellt innehåll med Oak-upgrade
-* Förbättrad tillförlitlighet genom att separera indexeringsprocessen från innehållsöverföringsprocessen. Om indexeringen misslyckas behöver innehållet inte importeras igen. Endast indexeringen startar om automatiskt, vilket sparar både tid och pengar
-
-
-
+Ändringar har gjorts i innehållsöverföringsprocessen - Du behöver inte längre skicka in en kundtjänst-/supportbiljett för att inaktivera AEM versionsuppdateringar i målmiljön. Processen är nu automatiserad. Mer information finns i [AEM och förslag](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content.html#aem-version-updates-and-ingestions)
