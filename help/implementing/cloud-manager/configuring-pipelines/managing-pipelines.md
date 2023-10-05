@@ -3,12 +3,13 @@ title: Hantera pipelines
 description: Lär dig hur du hanterar dina befintliga rörledningar, inklusive redigering, körning och borttagning av dem.
 index: true
 exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: b8d692e354851a31b4f66b24135c863b5ca723b4
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
+
 
 # Hantera pipelines {#managing-pipelines}
 
@@ -74,7 +75,9 @@ Beroende på typen av pipeline kan du eventuellt avbryta körningen genom att kl
 >
 >Du kan inte ta bort en pågående pipeline.
 
-## Visa detaljer {#view-details}
+## Visa information om pipeline {#view-details}
+
+Du kan visa information om en pipeline för att se status och loggar för den senaste körningen.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
@@ -84,8 +87,32 @@ Beroende på typen av pipeline kan du eventuellt avbryta körningen genom att kl
 
 ![Information om pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-running-details.png)
 
-Här kan du se status för de olika stegen i pipeline och hämta byggloggar för diagnostik. Se dokumentet [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md) för mer information.
+Här kan du se status för de olika stegen i pipeline och hämta byggloggar för diagnostik. Se dokumentet [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md) för mer information om koddistribution och testkörning.
 
 >[!NOTE]
 >
 >Du kan bara visa information om en pipeline som körs eller har körts minst en gång.
+
+## Avbryt pipelines {#cancel}
+
+Om en pipeline befinner sig i validerings- eller byggarfasen kan du avbryta pipelinekörningen.
+
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+
+1. Klicka på ellipsknappen för pipeline som du vill avbryta på sidan med programöversikten **Pipelines** kort.
+
+   ![Avbryta en pipeline](/help/implementing/cloud-manager/assets/cancel-pipeline.png)
+
+1. Tryck eller klicka **Avbryt**.
+
+Du kan även avbryta en pipeline från informationssidan för pipeline.
+
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+
+1. Navigera till **Pipelines** -fliken från **Programöversikt** och tryck eller klicka på den pipeline som du vill avbryta.
+
+1. Du dirigeras till informationssidan för den aktuella pipelinen.
+
+   ![Avbryt pipeline-information](/help/implementing/cloud-manager/assets/cancel-pipeline-details.png)
+
+1. Tryck eller klicka **Avbryt**.

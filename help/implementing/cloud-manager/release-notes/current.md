@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2023.9.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2023.9.0 i AEM as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2023.10.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2023.10.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: a5e8c11340ab5eacdefb22da302f9e35d9429bc7
+source-git-commit: 661eac787439e6e696574a6973afa7e39eeb443e
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2023.9.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2023.10.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-Den här sidan dokumenterar versionsinformationen för Cloud Manager version 2023.9.0 i AEM as a Cloud Service.
+Den här sidan dokumenterar versionsinformationen för Cloud Manager version 2023.10.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,16 +21,31 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager version 202
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2023.9.0 i AEM as a Cloud Service är 14 september 2023. Nästa version är planerad till den 5 oktober 2023.
+Releasedatum för Cloud Manager version 2023.10.0 i AEM as a Cloud Service är 5 oktober 2023. Nästa version planeras till den 2 november 2023.
 
 ## Nyheter {#what-is-new}
 
-* CDN-loggar kan hämtas via användargränssnittet i Cloud Manager, om de är tillgängliga.
-* Användare kan nu välja att inkludera Experience Audit-testning som drivs av Google LightHouse i icke-produktionsrörledningar i full hög.
+* [Nu kan du avbryta en pipeline utan problem](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#cancel) i validerings- och konstruktionsstegen.
+* Förbättringar av [indexering](/help/operations/indexing.md) har kortare varaktighet för pipeline när nya index distribueras.
+   * Förbättringarna varierar beroende på innehållsprofilen.
+* Automatisk [uppdateringar för utvecklingsmiljöer](/help/implementing/cloud-manager/manage-environments.md#updating-environments) är aktiverade som standard för nya program, vilket sparar tid när du behöver köra uppdateringar manuellt.
+   * Den här uppdateringen kommer att lanseras stegvis.
+* I oktober 2023-versionen av Cloud Manager uppdateras Java- och Maven-versionerna med en stegvis utrullning.
+   * Apache Maven uppdateras till version 3.8.8.
+   * Java-versionerna uppdateras till Oraclet JDK 8u371 och Oraclet JDK 11.0.20.
+   * Som standard är `JAVA_HOME` miljövariabeln uppdateras till `/usr/lib/jvm/jdk1.8.0_371` som innehåller Oraclet JDK 8u371.
+   * Se dokumentet [Bygg miljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) för mer information.
+   * [Se OpenJDK-råden](https://openjdk.org/groups/vulnerability/advisories/) om du vill ha information om säkerhet och felkorrigeringar i dessa JDK-uppdateringar.
 
 ## Tidig användning {#early-adoption}
 
 Bli en del av vårt program för tidig användning och få möjlighet att testa några kommande funktioner.
+
+### Anpassade behörigheter {#custom-permissions}
+
+[Anpassade behörigheter för Cloud Manager](/help/implementing/cloud-manager/custom-permissions.md) Med kan du skapa nya anpassade behörighetsprofiler med konfigurerbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Manager.
+
+om du är intresserad av att testa den nya funktionen och dela med dig av dina synpunkter, skicka ett e-postmeddelande `Grp-CloudManager-custom-permissions@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
 
 ### Självbetjäning för återställning av innehåll {#content-restore}
 
@@ -52,9 +67,3 @@ Om du vill testa den här nya funktionen och dela med dig av dina synpunkter ski
 Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen källkod som förbättrar kvaliteten på dina webbprogram. Du kan köra det mot alla webbsidor, offentliga eller som kräver autentisering. Den har granskningar av prestanda, tillgänglighet, progressiva webbprogram, SEO med mera.
 
 Är du intresserad av att testa den nya instrumentpanelen? Skicka e-post till `aem-lighthouse-pilot@adobe.com` via ditt e-postmeddelande som är kopplat till din Adobe ID så kommer vi igång.
-
-## Felkorrigeringar {#bug-fixes}
-
-* När ett program tas bort tas även associerade, pågående pipeline bort.
-* Om en pipeline pågår visas **Skicka** knappen på **GoLive-klart** dialogrutan är nu inaktiverad och informerar användaren om att live-datumet inte kan anges på grund av den pågående pipeline.
-* Ett tillfälligt fel har korrigerats där alla steg i en pipeline-körning markerades som slutförda, men statusen för pipelinen fortfarande kördes, vilket gav intryck av att ha fastnat.

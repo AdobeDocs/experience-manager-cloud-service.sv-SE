@@ -2,12 +2,13 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 928a3f0d8ee98e211aa03ad3d0fd83b780e98bbc
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
+
 
 # AEM as a Cloud Service team- och produktprofiler {#product-profiles}
 
@@ -15,11 +16,11 @@ Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begräns
 
 ## Produktprofiler {#profiles}
 
-När du ger en användare åtkomst till en viss Adobe-lösning behöver du inte nödvändigtvis ge dem fullständig åtkomst. Med produktprofiler kan varje lösning ha en egen uppsättning användarbehörigheter. Dessa är tillgängliga via [Admin Console](/help/journey-onboarding/admin-console.md).
+När du ger en användare åtkomst till en viss Adobe-lösning behöver du inte nödvändigtvis ge dem fullständig åtkomst. Med produktprofiler kan varje lösning ha en egen uppsättning användarbehörigheter. Dessa är tillgängliga och tillgängliga via [Admin Console](/help/journey-onboarding/admin-console.md).
 
 ## AEM as a Cloud Service produktprofiler {#aem-product-profiles}
 
-AEM as a Cloud Service är ett fullständigt molnbaserat erbjudande som ger AEM som en tjänst. AEM levereras på ett inbyggt sätt i molnet, med nya attribut som alltid på, alltid aktuella, alltid säkra och alltid i stor skala. Samtidigt behåller AEM det huvudsakliga mervärdet som ger kunderna en anpassningsbar plattform och gör det möjligt för företagsgrupper att integrera i sina utvecklings- och leveransrutiner. Se [Introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md) om du vill veta mer om AEM as a Cloud Service.
+AEM as a Cloud Service är ett fullständigt molnbaserat erbjudande som ger AEM som en tjänst. AEM levereras på ett inbyggt sätt i molnet, med nya attribut som alltid på, alltid aktuella, alltid säkra och alltid i stor skala. Samtidigt behåller AEM det huvudsakliga mervärdet som utgör en anpassningsbar plattform för kunder och gör det möjligt för företagsgrupper att integrera i sina utvecklings- och leveransrutiner. Se [Introduktion till Adobe Experience Manager as a Cloud Service](/help/overview/introduction.md) om du vill veta mer om AEM as a Cloud Service.
 
 Dina AEM as a Cloud Service teammedlemmar läggs till och tilldelas en eller flera av följande produktprofiler via Admin Console under introduktionen.
 
@@ -54,10 +55,18 @@ Cloud Manager har förkonfigurerade produktprofiler som kan ses som rollbaserade
 
 Var och en av produktprofilerna har särskilda behörigheter kopplade till sig.
 
-* **Företagsägare** - I den här rollen har du behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö, distribuera kod AEM miljön eller utföra kvalitetskontroller av kod.
-* **Distributionshanteraren** - I den här rollen har du behörighet att lägga till eller uppdatera en miljö, köra valfri pipeline och distribuera kod till AEM eller utföra kodkvalitetskontroller.
-* **Utvecklare** - I den här rollen har du behörighet att skapa personliga åtkomsttoken för åtkomst till Git.
-* **Programhanteraren** - I den här rollen har du behörighet att schemalägga rörledningar, åsidosätta de tre skiktens kvalitetsgates och ge produktionsgodkännande.
+* **Business Owner**
+   * I den här rollen har du behörighet att lägga till ett nytt program eller redigera ett program, lägga till eller uppdatera en miljö, distribuera kod AEM miljön eller utföra kodkvalitetskontroller.
+   * Den här användaren ansvarar för att definiera KPI:er, godkänna produktionsdistributioner och åsidosätta viktiga 3-nivåfel vid behov.
+* **Deployment Manager**
+   * I den här rollen har du behörighet att lägga till eller uppdatera en miljö, köra valfri pipeline och distribuera kod till AEM eller utföra kodkvalitetskontroller.
+   * Den här användaren hanterar distributionsåtgärder och använder Cloud Manager för att utföra mellanlagrings-/produktionsdistributioner, redigera CI/CD-pipelines, godkänna viktiga 3-skiktsfel vid behov och har åtkomst till Git-databasen.
+* **Developer**
+   * I den här rollen har du behörighet att skapa personliga åtkomsttoken för åtkomst till Git.
+   * Den här användaren utvecklar och testar anpassad programkod och använder i första hand Cloud Manager för att visa distributionsstatus och få åtkomst till Git-databasen för kodimplementeringar.
+* **Program Manager**
+   * I den här rollen har du behörighet att schemalägga pipelines, åsidosätta de tre skiktens kvalitetsgates och tillhandahålla produktionsgodkännande.
+   * Den här användaren använder Cloud Manager för att utföra teamkonfiguration, granska status, visa KPI:er och kan godkänna viktiga 3-nivåfel när det behövs.
 
 En användare kan tilldelas till flera produktprofiler. Du kan till exempel tilldela båda **Företagsägare** och **Distributionshantering** r roller till en användare ger dem summan av dessa behörigheter.
 
