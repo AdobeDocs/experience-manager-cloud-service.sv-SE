@@ -1,16 +1,16 @@
 ---
-title: Bädda in anpassningsbara formulär på en extern webbsida
-description: Lär dig bädda in ett anpassat formulär på en extern webbsida
+title: Hur bäddar jag in ett anpassat formulär baserat på kärnkomponenter på en extern webbsida?
+description: Lär dig bädda in en adaptiv Forms på en webbplats.
 contentOwner: Khushwant Singh
 docset: CloudService
 role: Developer
-source-git-commit: 6d0e3ee08862030e9eb7d068b251d13bc3e8e08f
+exl-id: 198f6f76-1134-4818-89a0-6ddc84ff956c
+source-git-commit: 2d4a81aa0d6755270d4d6efb8649782f4bde4537
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
-
 
 # Bädda in anpassningsbara formulär baserade på kärnkomponenter på en extern webbsida {#embed-adaptive-form-in-external-web-page}
 
@@ -162,6 +162,3 @@ Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 1. Vid AEM publiceringsinstans går du till AEM Web Console Configuration Manager på `https://'[server]:[port]'/system/console/configMgr`.
 1. Leta reda på och öppna **Apache Sling Referer-filter** konfiguration.
 1. I fältet Tillåtna värdar anger du den domän där webbsidan finns. Det gör att värddatorn kan göra POST-förfrågningar till AEM. Du kan också använda reguljära uttryck för att ange en serie externa programdomäner.
-
-
-

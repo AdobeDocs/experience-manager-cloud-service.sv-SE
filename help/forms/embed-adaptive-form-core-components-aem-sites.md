@@ -4,9 +4,9 @@ description: Använd komponenter för adaptiv Form Core på en AEM Sites-sida f�
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 2d4a81aa0d6755270d4d6efb8649782f4bde4537
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2031'
 ht-degree: 0%
 
 ---
@@ -267,3 +267,8 @@ Sidan AEM webbplatser innehåller en referens till det adaptiva formuläret. Nä
 
 * Sidhuvud och sidfot i det ursprungliga formuläret inkluderas inte i det inbäddade formuläret.
 * Användarutkast och inskickade inbäddade formulär stöds och visas på flikarna Utkast och Skickat Forms på Forms Portal.
+
+>[!MORELIKETHIS]
+>
+>* [Bädda in anpassningsbara formulär baserade på kärnkomponenter på en extern webbsida](/help/forms/embed-adaptive-form-core-components-external-web-page.md)
+>* [Bädda in anpassningsbara formulär på en extern webbsida](/help/forms/embed-adaptive-form-external-web-page.md)
