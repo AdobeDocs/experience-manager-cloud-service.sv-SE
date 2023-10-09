@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 00cd62aa64c183a0560326feaacda1db70627858
+source-git-commit: 51b048f753fe2e548d0ffdd9e3a903b21032aed7
 workflow-type: tm+mt
-source-wordcount: '9316'
+source-wordcount: '9331'
 ht-degree: 1%
 
 ---
@@ -521,7 +521,7 @@ See [Adobe Developer Connection](https://help.adobe.com/en_US/scene7/using/WSef8
 
 
 
-### Aktivera stöd för DASH, multi-subtitle och multi-audio-spår på ditt Dynamic Media-konto {#enable-dash}
+## Aktivera stöd för DASH, multi-subtitle och multi-audio-spår på ditt Dynamic Media-konto {#enable-dash}
 
 **Aktivera DASH-stöd för ditt konto**
 DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Eller så kan du välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** är valt som uppspelningstyp i visningsförinställningen.
@@ -539,7 +539,7 @@ Du aktiverar DASH-support för ditt konto via ett Adobe-kundsupportärende som d
 
 **Aktivera stöd för flera undertexter och flerljudspår på ditt konto**
 
-Samtidigt som du skapar ett Adobe Support-ärende där DASH är aktiverat på ditt konto kan du också dra nytta av att ha stöd för multi-subtitle och multi-audio track automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny serverdelsarkitektur som har stöd för att lägga till spår med flera undertexter och flera ljud i videoklipp.
+Samtidigt som du skapar ett Adobe-supportärende där DASH är aktiverat på ditt konto kan du också dra nytta av att stödet för multi-subtitle och multi-audio-spår är automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny serverdelsarkitektur som har stöd för att lägga till spår med flera undertexter och flera ljud i videoklipp.
 
 >[!IMPORTANT]
 >
@@ -551,8 +551,9 @@ Samtidigt som du skapar ett Adobe Support-ärende där DASH är aktiverat på di
 1. Om du vill skapa ett supportärende följer du instruktionerna och ser till att du anger följande information:
 
    * Primärt kontaktnamn, e-postadress, telefon.
-   * Ditt program-ID och ditt miljö-ID.
-   * Namn på ditt Dynamic Media-konto.
+   * Din Cloud Service-miljö (program-ID och miljö-ID).
+   * Dynamic Media företagskontonamn.
+   * Din Dynamic Media-region: Nordamerika (NA), Asien-Stillahavsområdet (APAC) eller Europa-Mellanöstern-Asien (EMEA).
    * Ange att stöd för DASH, multi-subtitle och multi-audio-spår ska aktiveras på ditt Dynamic Media-konto på Experience Manager 6.5.
 
 1. Adobe kundsupport lägger till dig i kundens väntelista baserat på i vilken ordning förfrågningarna skickas.
@@ -887,7 +888,7 @@ Se [Hantera statiskt innehåll (inte bildinnehåll)](https://experienceleague.ad
 
 ## Lägga till kapitelmarkörer i video {#adding-chapter-markers-to-video}
 
-Du kan göra det enklare att titta på och navigera i videoklipp med långa formulär genom att lägga till kapitelmarkörer i enstaka videor eller i adaptiva videouppsättningar. När en användare spelar upp videon kan han/hon välja kapitelmarkörer på tidslinjen (kallas även videobandspelare). De kan enkelt navigera till sin intressepunkt eller direkt gå över till nytt innehåll, ny utbildning och nya demonstrationer.
+Du kan göra dina videoklipp i långa format enklare att titta på och navigera genom att lägga till kapitelmarkörer i enstaka videor eller i adaptiva videouppsättningar. När en användare spelar upp videon kan han/hon välja kapitelmarkörer på tidslinjen (kallas även videobandspelare). De kan enkelt navigera till sin intressepunkt eller direkt gå över till nytt innehåll, ny utbildning och nya demonstrationer.
 
 >[!NOTE]
 >
