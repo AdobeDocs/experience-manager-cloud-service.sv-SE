@@ -1,13 +1,13 @@
 ---
 title: Konfigurera trafikfilterregler med WAF-regler
 description: Använd trafikfilterregler med WAF-regler för att filtrera trafik
-source-git-commit: ce7b6922f92208c06f85afe85818574bf2bc8f6d
+exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
+source-git-commit: 445134438c1a43276235b069ab44f99f7255aed1
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2740'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera trafikfilterregler med WAF-regler för att filtrera trafik {#configuring-cdn-and-waf-rules-to-filter-traffic}
 
@@ -32,8 +32,7 @@ Trafikfilterregler kan distribueras till alla typer av molnmiljöer (RDE, dev, s
 
    ```
    config/
-        cdn/
-           cdn.yaml
+        cdn.yaml
    ```
 
 1. `cdn.yaml` ska innehålla metadata samt en lista över trafikfilterregler och WAF-regler.
@@ -46,7 +45,15 @@ Trafikfilterregler kan distribueras till alla typer av molnmiljöer (RDE, dev, s
    data:
      trafficFilters:
        rules:
-         ...
+       # Block simple path
+       - name: block-path
+         when:
+           allOf:
+             - reqProperty: tier
+               matches: "author|publish"
+             - reqProperty: path
+               equals: '/block/me'
+         action: block
    ```
 
 Parametern &quot;kind&quot; ska ställas in på &quot;CDN&quot; och versionen ska ställas in på schemaversionen, som för närvarande är &quot;1&quot;. Se exemplen längre fram.
@@ -81,6 +88,7 @@ Parametern &quot;kind&quot; ska ställas in på &quot;CDN&quot; och versionen sk
       > Användarna måste vara inloggade som Deployment Manager för att kunna konfigurera eller köra dessa pipelines.
       > Dessutom kan du bara konfigurera och köra en Config-pipeline per miljö.
 
+   1. Ange kodplats där rotkonfigurationen lagras (t.ex. /config).
    1. Välj **Spara**. Din nya pipeline kommer att visas i pipeline-kortet och kan köras när du är klar.
    1. Kommandoraden kommer att användas för RDE, men RDE stöds inte för närvarande.
 
@@ -171,6 +179,7 @@ En grupp villkor består av flera enkla och/eller gruppvillkor.
 | **doesNotMatch** | `string` | true om get-resultatet inte matchar angivet regex |
 | **in** | `array[string]` | true om den angivna listan innehåller get-resultat |
 | **notIn** | `array[string]` | true om den angivna listan inte innehåller get-resultat |
+| **exists** | `boolean` | true om värdet är true och egenskapen finns eller om värdet är false och egenskapen inte finns |
 
 ### Åtgärdsstruktur {#action-structure}
 
@@ -188,7 +197,7 @@ Anges av `action` fält som kan vara en sträng som anger åtgärdstyp (allow, b
 
 ### WAF-flagglista {#waf-flags-list}
 
-The `wafFlag` kan innehålla följande:
+The `wafFlags` kan innehålla följande:
 
 | **Flagga-ID** | **Flaggnamn** | **Beskrivning** |
 |---|---|---|
@@ -318,7 +327,7 @@ data:
           wafFlags: [ SQLI, XSS]
 ```
 
-**Exempel 4**
+**Exempel 5**
 
 Den här regeln blockerar åtkomst till OFAC-länder:
 
@@ -333,7 +342,8 @@ data:
       - name: block-ofac-countries
         when:
           allOf:
-            - { reqProperty: tier, equals: publish }
+            - reqProperty: tier
+              matches: "author|publish"
             - reqProperty: clientCountry
               in:
                 - SY
@@ -379,8 +389,8 @@ data:
   trafficFilters:
     - name: limit-requests-client-ip
       when:
-        reqProperty: path
-        like: '*'
+        - reqProperty: tier
+        - matches: "author|publish"
       rateLimit:
         limit: 60
         window: 10
