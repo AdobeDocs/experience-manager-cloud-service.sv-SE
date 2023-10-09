@@ -2,9 +2,9 @@
 title: Anpassade regler för kodkvalitet
 description: Den här sidan beskriver de anpassade regler för kodkvalitet som körs av Cloud Manager som en del av testningen av kodkvalitet. De bygger på god praxis från Adobe Experience Manager Engineering.
 exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 57a7cd3fd2bfc34ebcee82832e020cf45887afa9
 workflow-type: tm+mt
-source-wordcount: '3502'
+source-wordcount: '3868'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Följande avsnitt innehåller information om SonarQube-regler som körs av Cloud
 
 * **Nyckel**: CQRules:CWE-676
 * **Typ**: Sårbarhet
-* **Allvarlighetsgrad**: Viktigt
+* **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
 Metoderna `Thread.stop()` och `Thread.interrupt()` kan ge upphov till problem som inte går att reproducera och ibland även säkerhetsluckor. Deras användning bör övervakas noggrant och valideras. I allmänhet är meddelandeöverföring ett säkrare sätt att uppnå samma sak.
@@ -90,7 +90,7 @@ public class DoThis implements Runnable {
 
 * **Nyckel**: CQRules:CWE-134
 * **Typ**: Sårbarhet
-* **Allvarlighetsgrad**: Viktigt
+* **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
 Om du använder en formatsträng från en extern källa (t.ex. en begärandeparameter eller ett användargenererat innehåll) kan programmet utsättas för denial of service-attacker. Det finns tillfällen då en formatsträng kan styras externt, men bara tillåts från betrodda källor.
@@ -183,11 +183,11 @@ public void orDoThis() {
 ### Stäng alltid ResursResolver-objekt {#resourceresolver-objects-should-always-be-closed}
 
 * **Nyckel**: CQRules:CQBP-72
-* **Typ**: Code Smell
-* **Allvarlighetsgrad**: Viktigt
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
-`ResourceResolver` objekt som hämtats från `ResourceResolverFactory` förbruka systemresurser. Även om det finns åtgärder för att återkräva dessa resurser när en `ResourceResolver` används inte längre, det är mer effektivt att uttryckligen stänga alla öppna `ResourceResolver` objekt genom att anropa `close()` -metod.
+`ResourceResolver` objekt som hämtas från `ResourceResolverFactory` förbruka systemresurser. Även om det finns åtgärder för att återkräva dessa resurser när en `ResourceResolver` används inte längre, det är mer effektivt att uttryckligen stänga alla öppna `ResourceResolver` objekt genom att anropa `close()` -metod.
 
 En relativt vanlig missuppfattning är att `ResourceResolver` objekt som skapats med en befintlig JCR-session ska inte stängas explicit eller så stängs den underliggande JCR-sessionen. Detta är inte fallet. Oavsett hur `ResourceResolver` öppnas, ska den stängas när den inte längre används. Sedan `ResourceResolver` implementerar `Closeable` -gränssnittet kan du också använda `try-with-resources` syntax i stället för explicit anrop `close()`.
 
@@ -225,8 +225,8 @@ public void orDoThis(Session session) throws Exception {
 ### Använd inte SSLING-serversökvägar för att registrera servlets {#do-not-use-sling-servlet-paths-to-register-servlets}
 
 * **Nyckel**: CQRules:CQBP-75
-* **Typ**: Code Smell
-* **Allvarlighetsgrad**: Viktigt
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
 Enligt beskrivningen i [Sling-dokumentation](https://sling.apache.org/documentation/the-sling-engine/servlets.html), rekommenderas inte bindningsservrar av sökvägar. Sökvägsbundna servrar kan inte använda vanliga JCR-åtkomstkontroller och därför krävs ytterligare säkerhetsproblem. I stället för att använda sökvägsbundna servrar rekommenderar vi att du skapar noder i databasen och registrerar servlets efter resurstyp.
@@ -245,7 +245,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 ### Undantag som fångas upp ska loggas eller kastas, inte båda {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
 
 * **Nyckel**: CQRules:CQBP-44—CatchAndeitherLogOrThrow
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -286,8 +286,8 @@ public void orDoThis() throws MyCustomException {
 
 ### Undvik loggsatser som omedelbart följs av en throw-sats {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
-* **Nyckel**: CQRules:CQBP-44 - ConsecutiousLogAndThrow
-* **Typ**: Code Smell
+* **Nyckel**: CQRules:CQBP-44—ConsecutiousLogAndThrow
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -313,7 +313,7 @@ public void doThis() throws Exception {
 ### Undvik att logga på INFO när du hanterar GET- eller HEAD-förfrågningar {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
 * **Nyckel**: CQRules:CQBP-44—LogInfoInGetOrHeadRequests
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 
 I allmänhet bör INFO-loggnivån användas för att avgränsa viktiga åtgärder och Experience Manager är som standard konfigurerad för att logga på INFO-nivå eller högre. Metoderna GET och HEAD bör aldrig vara skrivskyddade och därför inte utgöra några viktiga åtgärder. Loggning på INFO-nivå som svar på GET- eller HEAD-förfrågningar skapar troligen avsevärt loggbrus, vilket gör det svårare att identifiera användbar information i loggfiler. Loggning vid hantering av GET- eller HEAD-begäranden bör finnas antingen på WARN- eller FEL-nivå när något har gått fel eller på DEBUG- eller TRACE-nivå om mer detaljerad felsökningsinformation skulle vara till hjälp.
@@ -341,7 +341,7 @@ public void doGet() throws Exception {
 ### Använd inte Exception.getMessage() som första parameter i en loggningssats {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
 
 * **Nyckel**: CQRules:CQBP-44—ExceptionGetMessageIsFirstLogParam
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -374,7 +374,7 @@ public void doThis() {
 ### Inloggning av catch-block ska ske på WARN- eller ERROR-nivå {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
 
 * **Nyckel**: CQRules:CQBP-44—WrongLogLevelInCatchBlock
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -407,7 +407,7 @@ public void doThis() {
 ### Skriv inte ut stackspår till konsolen {#do-not-print-stack-traces-to-the-console}
 
 * **Nyckel**: CQRules:CQBP-44—ExceptionPrintStackTrace
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -440,7 +440,7 @@ public void doThis() {
 ### Exportera inte till standardutdata eller standardfel {#do-not-output-to-standard-output-or-standard-error}
 
 * **Nyckel**: CQRules:CQBP-44—LogLevelConsolePrinters
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -473,11 +473,11 @@ public void doThis() {
 ### Undvik hårdkodade sökvägar för /appar och /libs {#avoid-hardcoded-apps-and-libs-paths}
 
 * **Nyckel**: CQRules:CQBP-71
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
-Vanligtvis banor som börjar med `/libs` och `/apps` ska inte hårdkodas eftersom sökvägarna som de refererar till vanligtvis lagras som sökvägar i förhållande till sökbanan för Sling, som är inställd på `/libs,/apps` som standard. Om du använder den absoluta sökvägen kan det orsaka subtila defekter som bara skulle visas senare i projektets livscykel.
+Vanligtvis banor som börjar med `/libs` och `/apps` ska inte hårdkodas eftersom de sökvägar de refererar till vanligtvis lagras som sökvägar i förhållande till sökbanan för Sling, som är inställd på `/libs,/apps` som standard. Om du använder den absoluta sökvägen kan det orsaka subtila defekter som bara skulle visas senare i projektets livscykel.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-13}
 
@@ -537,9 +537,9 @@ Följande avsnitt innehåller information om de OakPAL-kontroller som körs av C
 
 API:t för Experience Manager innehåller Java™-gränssnitt och -klasser som endast är avsedda att användas - men inte implementeras - av anpassad kod. Gränssnittet `com.day.cq.wcm.api.Page` bör endast genomföras av Experience Manager.
 
-När nya metoder läggs till i dessa gränssnitt påverkar dessa ytterligare metoder inte befintlig kod som använder dessa gränssnitt. Det betyder att nya metoder i dessa gränssnitt anses vara bakåtkompatibla. Men om anpassad kod implementerar ett av dessa gränssnitt har den anpassade koden skapat en risk vad gäller bakåtkompatibilitet för kunden.
+När nya metoder läggs till i dessa gränssnitt påverkar dessa ytterligare metoder inte befintlig kod som använder dessa gränssnitt. Det betyder att tillägg av nya metoder i dessa gränssnitt anses vara bakåtkompatibelt. Men om anpassad kod implementerar ett av dessa gränssnitt har den anpassade koden skapat en risk vad gäller bakåtkompatibilitet för kunden.
 
-Gränssnitt och klasser - som implementeras av Experience Manager - kommenteras med `org.osgi.annotation.versioning.ProviderType` eller ibland en liknande äldre anteckning `aQute.bnd.annotation.ProviderType`. Den här regeln identifierar de fall där ett sådant gränssnitt implementeras eller en klass utökas av anpassad kod.
+Gränssnitt och klasser - som implementerats av Experience Manager - kommenteras med `org.osgi.annotation.versioning.ProviderType` eller ibland en liknande äldre anteckning `aQute.bnd.annotation.ProviderType`. Den här regeln identifierar de fall där ett sådant gränssnitt implementeras eller en klass utökas av anpassad kod.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-3}
 
@@ -555,12 +555,12 @@ public class DontDoThis implements Page {
 
 * **Nyckel**: IndexTikaNode
 * **Typ**: Fel
-* **Allvarlighetsgrad**: Blockera
+* **Allvarlighetsgrad**: Blockerare
 * **Sedan**: 2021.8.0
 
 Flera färdiga Experience Manager Oak-index innehåller en Tika-konfiguration och anpassningar av dessa index måste innehålla en Tika-konfiguration. Den här regeln söker efter anpassningar av `damAssetLucene`, `lucene`och `graphqlConfig` index och ger upphov till ett problem om `tika`  noden saknas eller om `tika` noden saknar en underordnad nod med namnet `config.xml`.
 
-Se [indexeringsdokumentation](/help/operations/indexing.md#preparing-the-new-index-definition) om du vill ha mer information om hur du anpassar indexdefinitioner.
+Se [indexeringsdokumentation](/help/operations/indexing.md#preparing-the-new-index-definition) för mer information om hur du anpassar indexdefinitioner.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-indextikanode}
 
@@ -570,7 +570,6 @@ Se [indexeringsdokumentation](/help/operations/indexing.md#preparing-the-new-ind
       - async: [async]
       - evaluatePathRestrictions: true
       - includedPaths: /content/dam
-      - reindex: false
       - tags: [visualSimilaritySearch]
       - type: lucene
 ```
@@ -583,7 +582,6 @@ Se [indexeringsdokumentation](/help/operations/indexing.md#preparing-the-new-ind
       - async: [async]
       - evaluatePathRestrictions: true
       - includedPaths: /content/dam
-      - reindex: false
       - tags: [visualSimilaritySearch]
       - type: lucene
       + tika
@@ -594,10 +592,10 @@ Se [indexeringsdokumentation](/help/operations/indexing.md#preparing-the-new-ind
 
 * **Nyckel**: IndexAsyncProperty
 * **Typ**: Fel
-* **Allvarlighetsgrad**: Blockera
+* **Allvarlighetsgrad**: Blockerare
 * **Sedan**: 2021.8.0
 
-Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör detta kan det leda till att systemet blir instabilt. Mer information om strukturen i Lucene-index finns i [Oak-dokumentation.](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition)
+Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör detta kan det leda till att systemet blir instabilt. Mer information om strukturen i Lucene-index finns i [Läs dokumentationen.](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition)
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-indexasync}
 
@@ -606,11 +604,8 @@ Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör 
     + damAssetLucene-1-custom
       - evaluatePathRestrictions: true
       - includedPaths: /content/dam
-      - reindex: false
       - type: lucene
-      - reindex: false
       - tags: [visualSimilaritySearch]
-      - type: lucene
       + tika
         + config.xml
 ```
@@ -623,7 +618,6 @@ Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör 
       - async: [async]
       - evaluatePathRestrictions: true
       - includedPaths: /content/dam
-      - reindex: false
       - tags: [visualSimilaritySearch]
       - type: lucene
       + tika
@@ -634,7 +628,7 @@ Oak-index av typen `lucene` måste alltid indexeras asynkront. Om du inte gör 
 
 * **Nyckel**: IndexDamAssetLucene
 * **Typ**: Fel
-* **Allvarlighetsgrad**: Blockera
+* **Allvarlighetsgrad**: Blockerare
 * **Sedan**: 2021.6.0
 
 För att resurssökningen ska fungera korrekt i Experience Manager Assets måste du anpassa `damAssetLucene` Oak-indexet måste följa en uppsättning riktlinjer som är specifika för detta index. Den här regeln kontrollerar att indexdefinitionen måste ha en egenskap med flera värden som heter `tags` som innehåller värdet `visualSimilaritySearch`.
@@ -647,7 +641,6 @@ För att resurssökningen ska fungera korrekt i Experience Manager Assets måste
       - async: [async, nrt]
       - evaluatePathRestrictions: true
       - includedPaths: /content/dam
-      - reindex: false
       - type: lucene
       + tika
         + config.xml
@@ -661,7 +654,6 @@ För att resurssökningen ska fungera korrekt i Experience Manager Assets måste
       - async: [async, nrt]
       - evaluatePathRestrictions: true
       - includedPaths: /content/dam
-      - reindex: false
       - tags: [visualSimilaritySearch]
       - type: lucene
       + tika
@@ -681,7 +673,7 @@ Det har länge varit en god praxis att `/libs` innehållsträdet i Experience Ma
 
 * **Nyckel**: DuplicateOsgiConfigurations
 * **Typ**: Fel
-* **Allvarlighetsgrad**: Viktigt
+* **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2019.6.0
 
 Ett vanligt problem som inträffar i komplexa projekt är när samma OSGi-komponent konfigureras flera gånger. Detta skapar en tvetydighet om vilken konfiguration som är tillämplig. Den här regeln är&quot;körningsmedveten&quot; eftersom den bara identifierar problem där samma komponent har konfigurerats flera gånger i samma körningsläge eller en kombination av körningslägen.
@@ -719,12 +711,12 @@ Ett vanligt problem som inträffar i komplexa projekt är när samma OSGi-kompon
 
 * **Nyckel**: ConfigAndInstallShouldOnlyContainOsgiNodes
 * **Typ**: Fel
-* **Allvarlighetsgrad**: Viktigt
+* **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2019.6.0
 
 Av säkerhetsskäl innehåller sökvägar `/config/` och `/install/` kan endast läsas av administratörer i Experience Manager och bör endast användas för OSGi-konfigurationer och OSGi-paket. Om du placerar andra typer av innehåll under banor som innehåller dessa segment, kommer programbeteendet att variera oavsiktligt mellan administrativa och icke-administrativa användare.
 
-Ett vanligt problem är att använda namngivna noder `config` i komponentdialogrutor eller när du anger RTF-redigeringskonfigurationen för infogad redigering. För att lösa det här problemet bör namnet på den felande noden ändras till ett kompatibelt namn. För RTF-redigerarkonfigurationen använder du `configPath` på `cq:inplaceEditing` för att ange den nya platsen.
+Ett vanligt problem är att använda namngivna noder `config` i komponentdialogrutor eller när du anger RTF-redigeringskonfigurationen för infogad redigering. För att lösa det här problemet bör namnet på den felande noden ändras till ett kompatibelt namn. För RTF-redigerarkonfigurationen använder du `configPath` -egenskapen på `cq:inplaceEditing` nod som anger den nya platsen.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-config-install}
 
@@ -749,14 +741,14 @@ Ett vanligt problem är att använda namngivna noder `config` i komponentdialogr
 
 * **Nyckel**: PackageOverlaps
 * **Typ**: Fel
-* **Allvarlighetsgrad**: Viktigt
+* **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2019.6.0
 
 Liknar [Paket får inte innehålla en dubblettregel för OSGi-konfigurationer,](#oakpal-package-osgi) detta är ett vanligt problem i komplexa projekt där samma nodsökväg skrivs av flera separata innehållspaket. Även om beroenden för innehållspaket kan användas för att säkerställa ett konsekvent resultat är det bättre att undvika överlappningar helt och hållet.
 
 ### Standardredigeringsläget får inte vara ett klassiskt användargränssnitt {#oakpal-default-authoring}
 
-* **Nyckel**: KlassisktUIAuthoringMode
+* **Nyckel**: ClassicUIAuthoringMode
 * **Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
@@ -773,7 +765,7 @@ OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` defin
 Experience Manager-komponenter som har en klassisk användargränssnittsdialogruta bör alltid ha en motsvarande dialogruta för användargränssnittet. Båda ger en optimal redigeringsupplevelse och är kompatibla med Cloud Servicens distributionsmodell, där det klassiska användargränssnittet inte stöds. Den här regeln verifierar följande scenarier:
 
 * En komponent med en klassisk användargränssnittsdialogruta (d.v.s. en `dialog` underordnad nod) måste ha en motsvarande Touch UI-dialogruta (d.v.s. en `cq:dialog` underordnad nod).
-* En komponent med en klassisk dialogruta för användargränssnittsdesign (d.v.s. en `design_dialog` nod) måste ha en motsvarande dialogruta för Touch UI-design (d.v.s. en `cq:design_dialog` underordnad nod).
+* En komponent med en klassisk dialogruta för användargränssnittsdesign (dvs. en `design_dialog` nod) måste ha en motsvarande dialogruta för Touch UI-design (d.v.s. en `cq:design_dialog` underordnad nod).
 * En komponent med både en klassisk användargränssnittsdialogruta och en klassisk dialogruta för användargränssnittsdesign måste ha både en motsvarande dialogruta för användargränssnittet för touchredigering och en motsvarande designdialogruta för användargränssnittet för touchgränssnitt.
 
 Dokumentationen för Experience Manager Moderniseringsverktyg innehåller dokumentation och verktyg för hur du konverterar komponenter från det klassiska användargränssnittet till Touch-användargränssnittet. Se [dokumentationen för Experience Manager Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/) för mer information.
@@ -811,7 +803,7 @@ Kunder som använder omvänd replikering bör kontakta Adobe för att få altern
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-Klientbibliotek i Experience Manager kan innehålla statiska resurser som bilder och teckensnitt. Enligt beskrivningen i dokumentet [Använda preprocessorer,](/help/implementing/developing/introduction/clientlibs.md#using-preprocessors) när du använder proxyanslutna klientbibliotek måste dessa statiska resurser finnas i en underordnad mapp med namnet `resources` att effektivt refereras till i publiceringsinstanser.
+Klientbibliotek i Experience Manager kan innehålla statiska resurser som bilder och teckensnitt. Enligt beskrivningen i dokumentet [Med preprocessorer,](/help/implementing/developing/introduction/clientlibs.md#using-preprocessors) när du använder proxyanslutna klientbibliotek måste dessa statiska resurser finnas i en underordnad mapp med namnet `resources` att effektivt refereras till i publiceringsinstanser.
 
 #### Kod som inte uppfyller kraven {#non-compliant-proxy-enabled}
 
@@ -835,21 +827,21 @@ Klientbibliotek i Experience Manager kan innehålla statiska resurser som bilder
         + myimage.jpg
 ```
 
-### Användning av arbetsflöden som inte är kompatibla med Cloud Service {#oakpal-usage-cloud-service}
+### Användning av arbetsflödesprocesser som inte är kompatibla med Cloud Service {#oakpal-usage-cloud-service}
 
 * **Nyckel**: CloudServiceIncompatibleWorkflowProcess
 * **Typ**: Fel
-* **Allvarlighetsgrad**: Viktigt
+* **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2021.2.0
 
 I och med övergången till tillgångsmikrotjänster för tillgångsbearbetning på Experience Manager as a Cloud Service har flera arbetsflödesprocesser som användes på plats och i AMS-versioner av Experience Manager blivit antingen ostödda eller onödiga.
 
 Migreringsverktyget i [Experience Manager as a Cloud Service Assets GitHub-databas](https://github.com/adobe/aem-cloud-migration) kan användas för att uppdatera arbetsflödesmodeller under migrering till Experience Manager as a Cloud Service.
 
-### Användning av statiska mallar rekommenderas inte till förmån för redigerbara mallar {#oakpal-static-template}
+### Användning av statiska mallar rekommenderas inte för redigerbara mallar {#oakpal-static-template}
 
 * **Nyckel**: StaticTemplateUsage
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -860,7 +852,7 @@ Migrering från statiska till redigerbara mallar kan till stor del automatiseras
 ### Användning av äldre baskomponenter rekommenderas inte {#oakpal-usage-legacy}
 
 * **Nyckel**: LegacyFoundationComponentUsage
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -871,7 +863,7 @@ Den här konverteringen kan underlättas av [Moderniseringsverktyg för Experien
 ### Använd endast namn och ordning för körningsläge som stöds {#oakpal-supported-runmodes}
 
 * **Nyckel**: SupportedRunmode
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -880,7 +872,7 @@ Experience Manager as a Cloud Service tillämpar en strikt namngivningsprincip f
 ### Definitionsnoder för anpassade sökindex måste vara direkt underordnade /oak:index {#oakpal-custom-search}
 
 * **Nyckel**: OakIndexLocation
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -889,7 +881,7 @@ Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d
 ### Definitionsnoder för anpassade sökindex måste ha en compatVersion av 2 {#oakpal-custom-search-compatVersion}
 
 * **Nyckel**: IndexCompatVersion
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -898,7 +890,7 @@ Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (t
 ### Underordnade noder för anpassade sökindexdefinitionsnoder måste vara av typen nt:undefined {#oakpal-descendent-nodes}
 
 * **Nyckel**: IndexDescendantNodeType
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -907,16 +899,16 @@ Det är svårt att felsöka problem när en anpassad sökindexdefinitionsnod har
 ### Definitionsnoder för anpassade sökindex måste innehålla en underordnad nod med namnet indexRules som har underordnade noder {#oakpal-custom-search-index}
 
 * **Nyckel**: IndexRulesNode
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
-En korrekt definierad definitionsnod för ett anpassat sökindex måste innehålla en underordnad nod med namnet `indexRules` som i sin tur måste ha minst ett barn. Mer information finns i [Oak-dokumentation.](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
+En korrekt definierad definitionsnod för ett anpassat sökindex måste innehålla en underordnad nod med namnet `indexRules` som i sin tur måste ha minst ett barn. Mer information finns i [Läs dokumentationen.](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
 ### Definitionsnoder för anpassade sökindex måste följa namnkonventioner {#oakpal-custom-search-definitions}
 
 * **Nyckel**: IndexName
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -926,7 +918,7 @@ Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d
 
 * **Nyckel**: IndexType
 * **Typ**: Fel
-* **Allvarlighetsgrad**: Blockera
+* **Allvarlighetsgrad**: Blockerare
 * **Sedan**: Version 2021.2.0 (ändrad typ och allvarlighetsgrad 2021.8.0)
 
 Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) har en `type` egenskap med värdet inställt på `lucene`. Indexering med äldre indextyper måste uppdateras innan migrering till Experience Manager as a Cloud Service görs. Se [Innehållssökning och indexering](/help/operations/indexing.md#how-to-use) för mer information.
@@ -934,7 +926,7 @@ Experience Manager as a Cloud Service kräver anpassade sökindexdefinitioner (d
 ### Definitionsnoder för anpassade sökindex får inte innehålla en egenskap med namnet seed {#oakpal-property-name-seed}
 
 * **Nyckel**: IndexSeedProperty
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -943,8 +935,213 @@ Experience Manager as a Cloud Service tillåter inte anpassade sökindexdefiniti
 ### Definitionsnoder för anpassade sökindex får inte innehålla egenskapen reindex {#oakpal-reindex-property}
 
 * **Nyckel**: IndexReindexProperty
-* **Typ**: Code Smell
+* **Typ**: Kodmeddelande
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
 Experience Manager as a Cloud Service tillåter inte anpassade sökindexdefinitioner (d.v.s. noder av typen `oak:QueryIndexDefinition`) som innehåller en egenskap med namnet `reindex`. Indexering med den här egenskapen måste uppdateras innan migrering till Experience Manager as a Cloud Service. Se dokumentet [Innehållssökning och indexering](/help/operations/indexing.md#how-to-use) för mer information.
+
+### Anpassade DAM-resursklassnoder får inte ange queryPaths {#oakpal-damAssetLucene-queryPaths}
+
+* **Nyckel**: IndexDamAssetLucene
+* **Typ**: Fel
+* **Allvarlighetsgrad**: Blockerare
+* **Sedan**: Version 2022.1.0
+
+#### Kod som inte uppfyller kraven {#non-compliant-code-damAssetLucene-queryPaths}
+
+```text
++ oak:index
+    + damAssetLucene-1-custom-1
+      - async: [async, nrt]
+      - evaluatePathRestrictions: true
+      - includedPaths: [/content/dam]
+      - queryPaths: [/content/dam]
+      - type: lucene
+      + tika
+        + config.xml
+```
+
+#### Kompatibel kod {#compliant-code-damAssetLucene-queryPaths}
+
+```text
++ oak:index
+    + damAssetLucene-1-custom-2
+      - async: [async, nrt]
+      - evaluatePathRestrictions: true
+      - includedPaths: [/content/dam]
+      - tags: [visualSimilaritySearch]
+      - type: lucene
+      + tika
+        + config.xml
+```
+
+### Om indexdefinitionen för anpassad sökning innehåller compatVersion måste den anges till 2 {#oakpal-compatVersion}
+
+* **Nyckel**: IndexCompatVersion
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Större
+* **Sedan**: Version 2022.1.0
+
+
+### Indexnoden som anger includedPaths ska även ange queryPaths med samma värden {#oakpal-included-paths-without-query-paths}
+
+* **Nyckel**: IndexIncludedPathsWithoutQueryPaths
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2023.1.0
+
+För anpassade index gäller båda `includedPaths` och `queryPaths` ska konfigureras med identiska värden. Om en anges måste den andra matcha den. Det finns dock ett specialfall för index med `damAssetLucene`, inklusive anpassade versioner. Därför bör du bara ange `includedPaths`.
+
+### Indexnod som anger nodeScopeIndex för allmän nodtyp ska även ange includedPaths och queryPaths {#oakpal-full-text-on-generic-node-type}
+
+* **Nyckel**: IndexFulltextOnGenericType
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2023.1.0
+
+När du anger `nodeScopeIndex` egenskap för en &quot;generisk&quot; nodtyp som `nt:unstructured` eller `nt:base`måste du också ange `includedPaths` och `queryPaths` egenskaper.
+`nt:base` kan betraktas som&quot;generiskt&quot; eftersom alla nodtyper ärver från det. Så ställa in en `nodeScopeIndex` på `nt:base` indexerar alla noder i databasen. På samma sätt `nt:unstructured` betraktas också som&quot;generiskt&quot; eftersom det finns många noder i databaser av den här typen.
+
+#### Kod som inte uppfyller kraven {#non-compliant-code-full-text-on-generic-node-type}
+
+```text
++ oak:index/acme.someIndex-custom-1
+  - async: [async, nrt]
+  - evaluatePathRestrictions: true
+  - tags: [visualSimilaritySearch]
+  - type: lucene
+    + indexRules
+      - jcr:primaryType: nt:unstructured
+      + nt:base
+        - jcr:primaryType: nt:unstructured
+        + properties
+          + acme.someIndex-custom-1
+            - nodeScopeIndex: true
+```
+
+#### Kompatibel kod {#compliant-code-full-text-on-generic-node-type}
+
+```text
++ oak:index/acme.someIndex-custom-1
+  - async: [async, nrt]
+  - evaluatePathRestrictions: true
+  - tags: [visualSimilaritySearch]
+  - type: lucene
+  - includedPaths: ["/content/dam/"] 
+  - queryPaths: ["/content/dam/"]
+    + indexRules
+      - jcr:primaryType: nt:unstructured
+      + nt:base
+        - jcr:primaryType: nt:unstructured
+        + properties
+          + acme.someIndex-custom-1
+            - nodeScopeIndex: true
+```
+
+### Egenskapen queryLimitReads för frågemotorn ska inte åsidosättas {#oakpal-query-limit-reads}
+
+* **Nyckel**: OverrideOfQueryLimitReads
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2023.1.0
+
+Om du åsidosätter standardvärdet kan det leda till mycket långsam sidläsning, särskilt när mer innehåll läggs till.
+
+### Flera aktiva versioner av samma index {#oakpal-multiple-active-versions}
+
+* **Nyckel**: IndexDetectMultipleActiveVersionsOfSameIndex
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2023.1.0
+
+#### Kod som inte uppfyller kraven {#non-compliant-code-multiple-active-versions}
+
+```text
++ oak:index
+  + damAssetLucene-1-custom-1
+    ...
+  + damAssetLucene-1-custom-2
+    ...
+  + damAssetLucene-1-custom-3
+    ...
+```
+
+#### Kompatibel kod {#compliant-code-multiple-active-versions}
+
+```text
++ damAssetLucene-1-custom-3
+    ...
+```
+
+
+### Namnet på helt anpassade indexdefinitioner bör överensstämma med de officiella riktlinjerna {#oakpal-fully-custom-index-name}
+
+* **Nyckel**: IndexValidFullyCustomName
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2023.1.0
+
+Det förväntade mönstret för helt anpassade indexnamn är: `[prefix].[indexName]-custom-[version]`. Mer information finns i dokumentet [Innehållssökning och indexering](/help/operations/indexing.md).
+
+
+### Samma egenskap med olika analyserade värden i samma indexdefinition {#oakpal-same-property-different-analyzed-values}
+
+#### Kod som inte uppfyller kraven {#non-compliant-code-same-property-different-analyzed-values}
+
+```text
++ indexRules
+  + dam:Asset
+    + properties
+      + status
+        - name: status
+        - analyzed: true
+  + dam:cfVariationNode
+    + properties
+      + status
+        - name: status
+```
+
+#### Kompatibel kod {#compliant-code-same-property-different-analyzed-values}
+
+Exempel:
+
+```text
++ indexRules
+  + dam:Asset
+    + properties
+      + status
+        - name: status
+        - analyzed: true
+  + dam:cfVariationNode
+    + properties
+      + status
+        - name: status
+        - analyzed: true
+```
+
+Exempel:
+
+```text
++ indexRules
+  + dam:Asset
+    + properties
+      + status
+        - name: status
+  + dam:cfVariationNode
+    + properties
+      + status
+        - name: status
+        - analyzed: true
+```
+
+Om den analyserade egenskapen inte uttryckligen har angetts, kommer standardvärdet att vara false.
+
+### Tagg, egenskap
+
+* **Nyckel**: IndexHasValidTagsProperty
+* **Typ**: Kodmeddelande
+* **Allvarlighetsgrad**: Mindre
+* **Sedan**: Version 2023.1.0
+
+För specifika index måste du behålla taggegenskapen och dess aktuella värden. Det går att lägga till nya värden i taggegenskapen, men om du tar bort befintliga värden (eller egenskapen helt) kan det leda till oväntade resultat.
