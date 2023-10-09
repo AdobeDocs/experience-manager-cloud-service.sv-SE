@@ -2,7 +2,7 @@
 title: Optimera GraphQL-frågor
 description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, sidlägger och sorterar innehållsfragment i Adobe Experience Manager as a Cloud Service för leverans av headless-innehåll.
 exl-id: 67aec373-4e1c-4afb-9c3f-a70e463118de
-source-git-commit: ba864cb28d2de0559d36f113e8e154ed5c115cae
+source-git-commit: 2ac93fbe0075cc2c88def444daba613e8b40c018
 workflow-type: tm+mt
 source-wordcount: '1877'
 ht-degree: 0%
@@ -104,7 +104,7 @@ För att minska prestanda- och minnesproblem måste den här första resultatmä
 I AEM finns det två sätt att optimera GraphQL-frågor:
 
 * [Hybridfiltrering](#use-aem-graphql-hybrid-filtering)
-* [Sidindelning](#use-graphql-pagination) (eller sidnumrering)
+* [Sidindelning](#use-aem-graphql-pagination) (eller sidnumrering)
 
    * [Sortering](#use-graphql-sorting) är inte direkt relaterat till optimering, men är relaterat till sidindelning
 
