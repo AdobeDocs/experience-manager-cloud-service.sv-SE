@@ -3,10 +3,10 @@ title: Komma igång med Edge Delivery Services
 description: Komma igång med Edge Delivery Services.
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
-source-git-commit: 6a4a257b3ca3d2db76d43707792d97db87974593
+source-git-commit: beaadc7b59223d527b61ed43d44fcd97a0079e0d
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 0%
+source-wordcount: '832'
+ht-degree: 2%
 
 ---
 
@@ -60,7 +60,7 @@ Adobe har tre kanaler som kan hjälpa dig med Edge Delivery Services:
 
 ### Använd communityresurser {#community-resource}
 
-Adobe har två communityresurser som hjälper dig med Edge Delivery, [Experience League Community](https://adobe.ly/3Q6kTKl) och [Discord channel](https://discord.gg/YFTKQK8M).
+Adobe har två communityresurser som hjälper dig med Edge Delivery, [Experience League Community](https://adobe.ly/3Q6kTKl) och [Discord channel](https://discord.gg/aem-live).
 
 ### Så här kommer du åt din produktsamarbetskanal {#collab-channel}
 
