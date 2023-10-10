@@ -5,10 +5,10 @@ contentOwner: Vishabh Gupta
 feature: Brand Portal,Asset Distribution,Configuration
 role: User
 exl-id: 1cc438bc-8cad-4421-af03-c1f6d750e0a8
-source-git-commit: 780d04852d3760f92c6f0c5edf77630d4bb5a343
+source-git-commit: 7f806c457f7bef1c5309bbc6f69d3989af1b06d3
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 89%
+source-wordcount: '1168'
+ht-degree: 86%
 
 ---
 
@@ -32,6 +32,8 @@ Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen
 >[!NOTE]
 >
 >Adobe rekommenderar stegvis publicering, helst vid tidpunkter med låg belastning, för att AEM-författaren inte ska uppta för mycket resurser.
+>Resurser ska publiceras gruppvis. Rekommendationen för batchstorlek är 15 kB.
+> För [!DNL Experience Manager Assets] som [!DNL Cloud Service], är den överföringshastighet som observeras under labbförhållanden 1000 tillgångar per timme. Frekvensen observeras med en genomsnittlig storlek på 10 MB för resurserna.
 
 ## Publicera resurser på varumärkesportalen {#publish-assets-to-bp}
 
