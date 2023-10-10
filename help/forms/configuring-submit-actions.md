@@ -2,9 +2,9 @@
 title: Konfigurera en Skicka-åtgärd för ett anpassat formulär
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: a635a727e431a73086a860249e4f42d297882298
+source-git-commit: ba83b35f411ffd51e0032e7c7f12c7c82cd982ad
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3218'
 ht-degree: 0%
 
 ---
@@ -184,8 +184,9 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lagring:
 1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
 1. När du valt **[!UICONTROL Microsoft® SharePoint]** omdirigeras du till **[!UICONTROL SharePoint Browser]**.
 1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
-1. Klicka på **[!UICONTROL Create]**. Konfigurationsguiden för SharePoint visas.
-   ![SharePoint-konfiguration](/help/forms/assets/sharepoint_configuration.png)
+1. Klicka **[!UICONTROL Create]** > **[!UICONTROL SharePoint Document Library]** i listrutan. Konfigurationsguiden för SharePoint visas.
+
+![SharePoint-konfiguration](/help/forms/assets/sharepoint_configuration.png)
 1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
    * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
    * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
@@ -210,6 +211,7 @@ Nu kan du använda den här SharePoint Sites-konfigurationen för att skicka-åt
 ### Använda SharePoint Configuration i en adaptiv form {#use-sharepoint-configuartion-in-af}
 
 Du kan använda den skapade SharePoint-konfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint-mapp. Så här använder du en SharePoint-lagringskonfiguration i ett adaptivt format:
+
 1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form.md).
 
    >[!NOTE]
