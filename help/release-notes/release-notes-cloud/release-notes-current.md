@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 8c878833118b2d8dc51e8cfa2c15ce70efbd3deb
+source-git-commit: ab0fc832eb66bcf9a0fcd4f08b481845f3664e14
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,11 @@ Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktue
 
 Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-notes/maintenance/latest.md).
 
-<!-- 
+## Släpp video {#release-video}
 
-## Release Video {#release-video}
+Titta på videon med versionsöversikten för september 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.9.0:
 
-Have a look at the September 2023 Release Overview video for a summary of the features added in the 2023.9.0 release:
-
->[!VIDEO](put new link here)
-
--->
+>[!VIDEO](https://video.tv.adobe.com/v/3424826/?quality=12)
 
 ## Edge Delivery Services {#edge-delivery}
 
