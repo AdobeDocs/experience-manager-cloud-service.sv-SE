@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: Lär dig grunderna i cachning på AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: a6714e79396f006f2948c34514e5454fef84b5d8
+source-git-commit: 469c5f0e115cc57cf7624aecf5b9f45645f2e99a
 workflow-type: tm+mt
-source-wordcount: '2803'
+source-wordcount: '2878'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,33 @@ I båda fallen kan cachelagringshuvuden åsidosättas på en mer detaljerad niv�
 ```
 
 Var försiktig så att du inte cachelagrar för mycket när du ändrar cache-huvudena i Dispatcher-lagret. Läs mer i avsnittet HTML/text [ovan](#html-text). Se även till att resurser som ska hållas privata (i stället för cachelagrade) inte ingår i `LocationMatch` -filter.
+
+JCR-resurser (större än 16 kB) som lagras i blobbutiken hanteras vanligtvis som 302 omdirigeringar av AEM. Dessa omdirigeringar fångas upp och följs av CDN och innehållet levereras direkt från blobbbutiken. Endast en begränsad uppsättning rubriker kan anpassas för dessa svar. för att t.ex. anpassa `Content-Disposition` Du bör använda dispatcherdirektiven på följande sätt:
+
+```
+<LocationMatch "\.(?i:pdf)$">
+  ForceType application/pdf
+  Header set Content-Disposition inline
+  </LocationMatch>
+```
+
+Listan med rubriker som kan anpassas för blobbsvar är:
+
+```
+content-security-policy
+x-frame-options
+x-xss-protection
+x-content-type-options
+x-robots-tag
+access-control-allow-origin
+content-disposition
+permissions-policy
+referrer-policy
+x-vhost
+content-disposition
+cache-control
+vary
+```
 
 #### Nytt standardbeteende för cachelagring {#new-caching-behavior}
 
