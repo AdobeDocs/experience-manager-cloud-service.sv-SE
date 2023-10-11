@@ -2,10 +2,10 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 13c67c35238c5138120f6d0d4845c759221d65ad
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 75%
+source-wordcount: '2015'
+ht-degree: 68%
 
 ---
 
@@ -147,9 +147,9 @@ Det finns olika huvudkomponenter i den nya arkitekturen:
 
    * Redigeringsnivån läser och skriver innehåll från och till det beständiga lagret.
 
-   * BLOB-lagringen delas av alla publicerings-, förhandsgransknings- och författarnivåer. filer är inte *flyttad*.
+   * BLOB-lagringen delas av alla publicerings-, förhandsgransknings- och författarnivåer. Filerna är inte *flyttad*.
 
-   * När innehåll godkänns från författarnivån är detta en indikation på att det kan aktiveras och därför skickas till publiceringsskiktet för beständighet. eller eventuellt till förhandsvisningsnivån. Detta sker via replikeringstjänsten, en pipeline för mellanprogram. Den här pipeline tar emot det nya innehållet, där de enskilda publiceringstjänstens (eller förhandsgranskningstjänstens) noder prenumererar på det innehåll som skickas till pipeline.
+   * När innehåll har godkänts från författarnivån är detta en indikation på att det kan aktiveras och därför skickas till publiceringsskiktets beständiga lager, eller eventuellt till förhandsgranskningsnivån. Detta sker via replikeringstjänsten, en pipeline för mellanprogram. Den här pipeline tar emot det nya innehållet, där de enskilda publiceringstjänstens (eller förhandsgranskningstjänstens) noder prenumererar på det innehåll som skickas till pipeline.
 
      >[!NOTE]
      >
@@ -198,3 +198,26 @@ Den nya arkitekturen för AEM as a Cloud Service introducerar några grundlägga
 * Begreppet med en huvudnod introducerades för att automatisera publiceringsnodernas livscykel. Huvudnoden är en specialiserad publiceringsnod som inga slutanvändare har åtkomst till och som alla noder i publiceringstjänsten skapas från. Underhållsåtgärder som komprimering utförs på innehållsdatabasen som är kopplad till huvudnoden. Publiceringsnoderna återvinns dagligen och behöver inget rutinunderhåll. Tidigare måste driften stoppas för sådant underhåll, särskilt för redigeringsinstansen.
 
 * Arkitekturen separerar programinnehållet helt från programkoden och konfigurationen. Kod och konfigurering är i stort sett oföränderliga och inbäddade i baslinjebilden som används för att skapa de olika noderna i redigerings- och publiceringstjänsterna. Det innebär att det finns en absolut garanti för att varje nod är identisk och att ändringar i kod och konfiguration bara kan göras globalt genom att man kör en Cloud Manager-pipeline.
+
+## AEM med Edge Delivery Services {#aem-with-edge-delivery-services}
+
+Med tillägg av Edge Delivery Services levererar AEM exceptionella upplevelser som skapar engagemang och konverteringar. AEM gör det genom att leverera slagkraftiga upplevelser som är snabba att skapa och utveckla. Edge Delivery Services är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Med Edge Delivery Services kan du öka konverteringsgraden, minska kostnaderna och skapa extrem innehållshastighet.
+
+Den uppdaterade arkitekturen består av följande:
+
+* Content Management, nu med ett urval redigeringsprogram:
+   * Universal Visual Editor
+   * Innehållsfragmentsredigerare
+   * Page Editor
+   * Dokumentbaserad redigering, antingen från SharePoint eller Google Drive
+* Experience Delivery, nu med:
+   * Edge Delivery Services
+* Tilläggstjänster för snabb och effektiv leverans av innehåll och kod
+
+![AEM as a Cloud Service Overview - med Edge Delivery Services](assets/AEMaaCS-Edge-Architecture.png "AEM as a Cloud Service Overview - med Edge Delivery Services")
+
+Se även:
+
+* [AEM as a Cloud Service Overview - med Edge Delivery Services](/help/edge/overview.md)
+* [Använda Edge Delivery Services](/help/edge/using.md)
+* [Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)
