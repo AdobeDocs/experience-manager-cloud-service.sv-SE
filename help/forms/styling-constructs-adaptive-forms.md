@@ -1,12 +1,12 @@
 ---
-title: Hur formaterar jag konstruktioner för Adaptive Forms?
+title: Hur anpassar man utseendet på anpassningsbara formulär?
 description: Använd LESS-ramverket för Adaptive Forms för att anpassa utseendet på Adaptive Forms.
 uuid: d2e45ad9-7322-43ce-a1dd-ad97e2eea742
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: ed50fa70-a8dd-4cc6-82a9-d59de0fa417d
 docset: aem65
-source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
 source-wordcount: '2315'
 ht-degree: 0%

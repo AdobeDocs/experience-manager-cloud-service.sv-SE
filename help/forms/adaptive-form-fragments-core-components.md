@@ -1,16 +1,16 @@
 ---
-title: Adaptiva formulärfragment
+title: Vad är adaptiva formulärfragment?
 description: Adaptiv Forms har en funktion för att skapa ett formulärsegment, t.ex. en panel eller en grupp med fält, som att använda det i ett adaptivt formulär. Du kan också spara en befintlig panel som fragment.
 topic-tags: author
 keywords: Lägg till adaptiva formulärfragment, adaptiva formulärfragment, skapa ett formulärfragment, lägga till ett fragment i ett adaptivt formulär, hantera fragment
 feature: Adaptive Forms
-source-git-commit: 290cdecdb355b5c9a872d0f12ac701d271a258d4
+exl-id: 3a9ad1b7-2f6f-4ca9-a1c9-549c4238c59e
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1740'
 ht-degree: 0%
 
 ---
-
 
 # Skapa och använda adaptiva Forms-fragment i ett adaptivt formulär baserat på kärnkomponenter {#adaptive-form-fragments}
 

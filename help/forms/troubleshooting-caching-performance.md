@@ -1,10 +1,11 @@
 ---
-title: Felsökning av cachelagringsprestanda
-description: Hur felsöker jag problem med cachelagring för AEM Forms as a Cloud Service?
+title: Hur felsöker vi cachningsrelaterade problem för AEM Forms as a Cloud Service?
+description: Felsöka problem med cachelagring för AEM Forms as a Cloud Service.
 contentOwner: khsingh
-source-git-commit: 6dd34937a8aeb6c7ddfc0fb1180a112de534dd4b
+exl-id: eae44a6f-25b4-46e9-b38b-5cec57b6772c
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---

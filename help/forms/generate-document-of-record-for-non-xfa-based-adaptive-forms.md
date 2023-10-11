@@ -1,10 +1,10 @@
 ---
-title: Generera ett urkunder för Adaptive Forms
+title: Hur skapar man ett urkunder för AEM Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (DoR) för Adaptiv Forms.
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '3999'
+source-wordcount: '4000'
 ht-degree: 0%
 
 ---

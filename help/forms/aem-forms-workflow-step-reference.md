@@ -1,12 +1,12 @@
 ---
-title: Använd blankettbaserade AEM för att automatisera affärsprocesserna
+title: Vilka arbetsflödessteg kan användas på AEM Forms Cloud Service för att skapa ett arbetsflöde eller för automatisering av affärsprocesser (BPM)?
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
 keywords: Använd AEM arbetsflöden, tilldela uppgiftssteg, konvertera till PDF/A-steg, generera dokument för inspelat steg, använda arbetsflöden, signera dokumentsteg, generera utskrivet steg, generera icke-interaktiva utdata från PDF
-source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '6782'
+source-wordcount: '6795'
 ht-degree: 0%
 
 ---

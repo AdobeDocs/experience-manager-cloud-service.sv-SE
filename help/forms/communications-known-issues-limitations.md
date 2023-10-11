@@ -1,10 +1,10 @@
 ---
-title: Kända fel och metodtips i AEM Forms
+title: Vad är överväganden, kända problem och bästa praxis i AEM Forms?
 description: Kända fel och metodtips för AEM Forms Communication API:er är viktiga.
 exl-id: e95615dd-e494-40cd-9cdf-6e9761ca3b3e
-source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---

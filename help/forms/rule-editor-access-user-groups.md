@@ -1,12 +1,12 @@
 ---
-title: Hur ger jag regelredigeraren åtkomst till valda användargrupper?
+title: Hur får man åtkomst till regelredigeraren för anpassade formulär för att välja användargrupper?
 description: Det finns olika typer av användare med olika kunskaper som fungerar med Adaptive Forms. Lär dig hur du begränsar regelredigeringsåtkomsten för användare baserat på deras roll eller funktion.
 feature: Adaptive Forms
 role: User
 level: Beginner, Intermediate
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---

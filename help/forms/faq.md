@@ -1,12 +1,12 @@
 ---
-title: Forms as a Cloud Service - frågor och svar
+title: Frågor och svar om AEM Forms as a Cloud Service
 description: Forms as a Cloud Service - frågor och svar
 contentOwner: khsingh
 exl-id: 0b14b680-7da5-4e0b-bd6a-c379d148f9d7
 index: false
-source-git-commit: 93e7c4b31ea3037c98b64790ffdee11f94cc6134
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '995'
 ht-degree: 0%
 
 ---
@@ -45,12 +45,12 @@ Du kan ladda ned [!DNL JavaScript™] API-referensdokumentation från[!DNL  Mave
    1. Öppna filen index.html för att visa API-referensdokumentationen.
 
 * **Kan jag fortsätta använda befintliga teman och mallar?**
-Ja, du kan fortsätta använda teman som skapats med AEM 6.4 Forms och AEM 6.5 Forms när du har använt [Migreringsverktyg](migrate-to-forms-as-a-cloud-service.md) för att flytta dem till [!DNL AEM Forms] as a Cloud Service.
+Ja, du kan fortsätta använda teman som skapats med AEM 6.4 Forms och AEM 6.5 Forms när du har använt [Migreringsverktyg](migrate-to-forms-as-a-cloud-service.md) flytta dem till [!DNL AEM Forms] as a Cloud Service.
 
-   Du kan också skapa ett projekt baserat på [!DNL AEM Forms] as a Cloud Service [Arketyp](setup-local-development-environment.md#forms-cloud-service-local-development-environment) och använd de medföljande exempeltemana och mallarna.
+  Du kan också skapa ett projekt baserat på [!DNL AEM Forms] as a Cloud Service [Arketyp](setup-local-development-environment.md#forms-cloud-service-local-development-environment) och använd medföljande exempelteman och mallar.
 
 * **Kan jag producera schemakompatibla data?**
-Ja, du kan skapa Adaptiv Forms för att skapa schemakompatibla data.
+Ja, du kan skapa Adaptiv Forms för att ta fram schemakompatibla data.
 
 <!-- * **Can I pass custom parameters to the prefill service?**
 Custom parameters are planned for an upcoming release. -->
@@ -58,18 +58,18 @@ Custom parameters are planned for an upcoming release. -->
 * **Kan jag cachelagra skyddat innehåll?**
 Cachelagring av funktioner för skyddat innehåll är inaktiverat som standard. Om du vill aktivera funktionen kan du följa instruktionerna på [Cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 
-* **Jag har en lokaliserad adaptiv form, återger den inte lokaliserad version? Vad kan vara orsaken och hur kan man lösa den?**
+* **Jag har en lokaliserad adaptiv form. Den återger inte en lokaliserad version? Vad kan vara orsaken och hur kan man lösa den?**
 
-   URL-konventionen för lokaliserade adaptiva Forms har nu stöd för att ange nationella inställningar i URL:en. Ny URL-konvention möjliggör cachelagring av lokaliserade formulär på en Dispatcher eller CDN. I Cloud Service-miljön använder du URL-formatet `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`. Adobe rekommenderar att du använder Dispatcher eller CDN-cachning. Det förbättrar återgivningshastigheten för förfyllda formulär.
+  URL-konventionen för lokaliserade adaptiva Forms har nu stöd för att ange nationella inställningar i URL:en. Ny URL-konvention möjliggör cachelagring av lokaliserade formulär på en Dispatcher eller CDN. I Cloud Service-miljön använder du URL-formatet `http://host:port/content/forms/af/<afName>.<locale>.html` begära en lokaliserad version av ett adaptivt formulär i stället för `http://host:port/content/forms/af/afName.html?afAcceptLang=<locale>`. Adobe rekommenderar att du använder Dispatcher eller CDN-cachning. Det förbättrar återgivningshastigheten för förfyllda formulär.
 
-* **Jag har uppdaterat en adaptiv form; den uppdaterade versionen inte är tillgänglig för kunder?**
+* **Jag har uppdaterat ett adaptivt formulär. Är den uppdaterade versionen inte tillgänglig för kunder?**
 Som standard uppdaterar CDN cachen efter var femte minut, väntar i 5 minuter och söker sedan efter den uppdaterade versionen.
 
 * **Kan jag använda signatursteget i ett adaptivt formulär för att skapa en signeringsupplevelse i webbläsaren?**
 Nej, signatursteget är inte tillgängligt för [!DNL Forms] as a Cloud Service. Ta bort signatursteget i din adaptiva Forms. Låt användarna signera ett anpassat formulär efter att de har skickat in det i stället för signatursteget. Det hjälper dig att fortsätta tillhandahålla en signeringsupplevelse i webbläsaren.
 
 * **Kan jag använda steget Verifiera i ett adaptivt formulär?**
-Nej, steget Verifiera är inte tillgängligt för [!DNL Forms] as a Cloud Service. Ta bort verifieringssteget från din befintliga Adaptive Forms innan du flyttar sådana formulär till en Cloud Service-miljö.
+Nej, det går inte att verifiera [!DNL Forms] as a Cloud Service. Ta bort verifieringssteget från din befintliga Adaptive Forms innan du flyttar sådana formulär till en Cloud Service-miljö.
 
 * **Kan jag lägga till diagram i ett adaptivt formulär?**
 Ja, du kan lägga till diagram i Adaptiv Forms. Adaptiv Forms tillhandahåller en diagramkomponent. Du kan använda den för att lägga till diagram i ett adaptivt formulär.
@@ -82,16 +82,16 @@ Formulärdatamodellen innehåller ingen metod för att använda anpassade certif
 
 * **Kan jag använda Forms Portal-åtgärden Adaptiv Forms?**
 
-   Du kan ändra din befintliga adaptiva Forms så att du kan använda den [Skicka till REST-slutpunkt](configuring-submit-actions.md#submit-to-rest-endpoint), [Skicka e-post](configuring-submit-actions.md#send-email), [Skicka med formulärdatamodell](configuring-submit-actions.md#submit-using-form-data-model)och [Anropa ett AEM arbetsflöde](configuring-submit-actions.md#invoke-an-aem-workflow) Skicka åtgärder. Forms Portal och Forms Portal har ännu inte släppts. Håll ett öga på månadsversionsinformationen om vilka funktioner som är tillgängliga.
+  Du kan ändra din befintliga adaptiva Forms så att du kan använda den [Skicka till REST-slutpunkt](configuring-submit-actions.md#submit-to-rest-endpoint), [Skicka e-post](configuring-submit-actions.md#send-email), [Skicka med formulärdatamodell](configuring-submit-actions.md#submit-using-form-data-model)och [Anropa ett AEM](configuring-submit-actions.md#invoke-an-aem-workflow) Skicka åtgärder. Forms Portal och Forms Portal har ännu inte släppts. Håll ett öga på månadsversionsinformationen om vilka funktioner som är tillgängliga.
 
 * **Kan jag använda [!DNL AEM Forms] app med [!DNL AEM Forms] as a Cloud Service?**
 
-   Adaptiv Forms har en responsiv design. Dessa formulär ändrar utseende, design och interaktivitet baserat på den underliggande enheten. Du kan fortsätta använda Adaptiv Forms på mobila enheter samtidigt som du håller ett öga på månadsversionsinformationen för att se om funktionerna är tillgängliga.
+  Adaptiv Forms har en responsiv design. Dessa formulär ändrar utseende, design och interaktivitet baserat på den underliggande enheten. Du kan fortsätta använda Adaptiv Forms på mobila enheter samtidigt som du håller ett öga på månadsversionsinformationen för att se om funktionerna är tillgängliga.
 
 * **Vilka funktioner ingår inte i den ursprungliga GA-versionen?**
 Forms Portal, [!DNL AEM Forms] app, integrering med Adobe Analytics och integrering med Adobe Target ingår inte i den första GA-versionen. Information om de nya funktionerna finns i månadsversionskommentarerna.
 
-* **Jag har designat en [JSON-schema för att skapa ett anpassat formulär](adaptive-form-json-schema-form-model.md). JSON-schemat definierar händelser för vissa komponenter i adaptiva formulär. Stöder AEM Forms as a Cloud Service event?**
+* **Jag har designat en [JSON-schema för att skapa ett anpassat formulär](adaptive-form-json-schema-form-model.md). JSON-schemat definierar händelser för vissa komponenter i adaptiva formulär. Har AEM Forms as a Cloud Service stöd för event?**
 Skapa det adaptiva formuläret baserat på JSON-schemat i Forms-miljön Experience Manager 6.5 och använd [Migreringsverktyg](migrate-to-forms-as-a-cloud-service.md) för att migrera sådana adaptiva Forms till AEM Forms as a Cloud Service. Verktyget konverterar sådana händelser till klientbibliotek och du kan fortsätta använda Adaptive Forms med händelser i en Cloud Service-miljö.
 
 <!-- 

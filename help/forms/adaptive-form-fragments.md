@@ -1,14 +1,14 @@
 ---
-title: Adaptiva formulärfragment
+title: Hur skapar och använder man adaptiva formulärfragment?
 description: Formulärfragment är en modulär och återanvändbar komponent i ett formulär. Lär dig att skapa formulärfragment och återanvända dem i olika formulär för att skapa en effektiv formulärsammansättning.
 uuid: bb4830b5-82a0-4026-9dae-542daed10e6f
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '2003'
+source-wordcount: '2008'
 ht-degree: 0%
 
 ---

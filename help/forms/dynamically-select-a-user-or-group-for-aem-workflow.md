@@ -1,11 +1,11 @@
 ---
-title: Dynamiskt användar- eller gruppval i AEM
+title: Hur väljer man användare i AEM?
 description: Lär dig hur du väljer en användare eller grupp för en [!DNL AEM Forms] arbetsflöde vid körning.
 content-type: troubleshooting
 topic-tags: publish
-source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---

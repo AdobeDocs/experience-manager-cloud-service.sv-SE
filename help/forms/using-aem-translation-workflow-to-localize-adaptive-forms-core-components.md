@@ -1,11 +1,11 @@
 ---
-title: Hur översätter man en baskomponentbaserad adaptiv form?
+title: Hur kan vi översätta en grundkomponentbaserad adaptiv form?
 description: Lär dig skapa en formulärdatamodell i AEM Forms, testa modellen med exempeldata och tjänster och konfigurera olika alternativ för en modell.
 feature: Adaptive Forms
 exl-id: ad46bf0f-e6ec-4c52-9695-5768a9968e16
-source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---

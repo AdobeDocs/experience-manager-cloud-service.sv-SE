@@ -1,15 +1,15 @@
 ---
-title: Använd Google reCAPTCHA i en AEM anpassad form
+title: Hur använder man Google reCAPTCHA i AEM Adaptiv form?
 description: Förbättra säkerheten med Google reCAPTCHA-tjänsten utan problem. Stegvisa anvisningar inifrån!
 topic-tags: Adaptive Forms, author
 keywords: Google reCAPTCHA-tjänst, Adaptiv Forms, CAPTCHA-utmaning, startalternativ, kärnkomponenter, säkerhet för inskickande av formulär, skydd mot skräppost
-source-git-commit: 7c197be7819d6fcbf028237401d05236f90734d1
+exl-id: d116f979-efb6-4fac-8202-89afd1037b2c
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
-
 
 # Använd Google reCAPTCHA i ett AEM anpassat formulär baserat på kärnkomponenter {#using-reCAPTCHA-in-adaptive-forms}
 

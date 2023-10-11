@@ -1,11 +1,11 @@
 ---
-title: Hur man förhandsgranskar ett adaptivt formulär
+title: Hur förhandsgranskar man ett anpassat formulär?
 description: Användarna kan förhandsgranska blanketterna innan de publiceras eller aktiveras för att säkerställa att de motsvarar förväntningarna. Alternativen för förhandsgranskning kan variera mellan olika formulärtyper som stöds.
 uuid: 9ec359ea-f518-441c-9c3d-e3c1ea07a532
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 377d804d-4a75-4c93-8125-d2660cf56418
-source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%

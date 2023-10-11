@@ -1,10 +1,10 @@
 ---
-title: "[!DNL AEM Forms] as a Cloud Service release notes"
-description: "[!DNL AEM Forms] as a Cloud Service release notes"
+title: Versionsinformation för AEM Forms as a Cloud Service
+description: Läs om nya funktioner, betaversioner, förhandsversionsinformation med mera för AEM Forms as a Cloud Service.
 exl-id: 35950b81-6e45-4a75-bd27-8c28fd68e42e
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 8074c0e9566b679830a56094bc9b47cb22f4bb4a
 workflow-type: tm+mt
-source-wordcount: '2015'
+source-wordcount: '2028'
 ht-degree: 2%
 
 ---

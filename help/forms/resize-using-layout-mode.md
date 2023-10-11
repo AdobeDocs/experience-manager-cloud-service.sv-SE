@@ -1,13 +1,13 @@
 ---
-title: Hur använder man layoutläget för att ändra storlek på komponenter för adaptiva Forms?
+title: Hur använder jag layoutläget för att ändra storlek på komponenter för anpassningsbara formulär?
 description: Definiera placeringen av AEM Forms-komponenterna, lär dig komma åt layoutläget, ändra storlek på komponenter, ändra storlek på paneler och definiera layout med flera kolumner för en panel.
 feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 53896a8e-4568-460b-bca7-994baea0c8eb
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---

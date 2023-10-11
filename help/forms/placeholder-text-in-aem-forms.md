@@ -1,9 +1,9 @@
 ---
-title: Platshållartext i [!DNL AEM Forms]
-description: Platshållartext är avsedd att hjälpa användaren med datainmatning när kontrollen inte har något värde. Det kan vara ett exempelvärde eller en kort beskrivning av det förväntade formatet.
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+title: Hur lägger jag till platshållartext i formulärfält?
+description: Platshållartext är avsedd att hjälpa användaren med datainmatning när kontrollen saknar värde. Det kan vara ett exempelvärde eller en kort beskrivning av det förväntade formatet.
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---

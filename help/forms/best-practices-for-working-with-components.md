@@ -1,11 +1,9 @@
 ---
-title: Bästa tillvägagångssätt vid arbete med komponenter
-seo-title: Best practices for working with components
-description: Vissa bästa metoder och viktiga punkter att komma ihåg när du arbetar med adaptiva formulärkomponenter
-seo-description: Some best practices and key points to remember when working with Adaptive Form components
-source-git-commit: 7163eb2551f5e644f6d42287a523a7dfc626c1c4
+title: Bästa praxis och viktiga punkter att komma ihåg när du arbetar med AEM adaptiva formulär.
+description: Vissa bästa metoder och viktiga punkter att komma ihåg när du arbetar med adaptiva formulärkomponenter.
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
@@ -28,20 +26,20 @@ Nedan följer några tips om hur du bäst kommer ihåg när du arbetar med adapt
 
 * Vissa komponenter för anpassade formulär, som e-post och telefon, innehåller färdiga valideringsmönster. Du kan dock ange anpassad validering genom att uppdatera **[!UICONTROL Validation Pattern]** under mönsterdragspelet i komponentegenskaperna. Mer information om standardvalideringar finns i komponentbeskrivningarna i tabellen ovan.
 
-* Anpassningsbara Forms-fält, t.ex. Numeric Box och Email, kan konfigureras så att de innehåller speciella HTML5-indatatyper. När de här fälten är i fokus på mobila enheter och surfplattor visas särskilda alfabet, siffror och tecken som är vanliga för inmatningsinformation i fälten. Det gör det lättare för användarna att ange information snabbt utan att behöva växla mellan teckenuppsättningar på knappsatsen. Om du vill tillåta specialindata för en komponent aktiverar du **[!UICONTROL Use HTML Type Number]** i komponentegenskaperna.
+* Anpassningsbara Forms-fält, t.ex. Numeric Box och Email, kan konfigureras så att de innehåller speciella HTML5-indatatyper. När de här fälten är i fokus på mobila enheter och surfplattor visas särskilda alfabet, siffror och tecken som används ofta för att mata in information i fälten. Det gör det lättare för användarna att ange information snabbt utan att behöva växla mellan teckenuppsättningar på knappsatsen. Aktivera **[!UICONTROL Use HTML Type Number]** kryssrutan i komponentegenskaperna.
 
-* Du kan aktivera en textrutekomponent för att acceptera RTF. Aktivera alternativet **[!UICONTROL Allow Rich Text]** i komponentegenskaperna.
+* Du kan aktivera en textrutekomponent för att acceptera RTF. Om du vill aktivera RTF för en textruta aktiverar du **[!UICONTROL Allow Rich Text]** i komponentegenskaperna.
 
 * Du kan aktivera komponenterna Textruta, E-post och Telefon för att autofylla värden för fält som namn, adress, kreditkort, telefon och e-post från informationen som lagras i webbläsarens autofyllningsinställningar. Om du vill aktivera den här funktionen väljer du **[!UICONTROL Enable Autofill]** i komponentegenskaperna och markera en **[!UICONTROL Autofill Attribute]**. När en användare fyller i ett adaptivt formulär föreslås värdena från profilen för automatisk ifyllning i webbläsaren eller baserat på de värden som användaren tidigare fyllt i. Observera att Autofyll fungerar om autofyllningsinställningarna i användarens webbläsare är aktiverade.
 
 * Ange värden för alternativknappar och kryssruteobjekt i `{value}={text}` format i komponentegenskaper.
-* Komponenten för bifogad fil tillåter som standard att användaren bara kan bifoga en fil. Du kan dock konfigurera komponentegenskaperna så att de stöder flera bifogade filer. Om en användare dessutom bifogar flera filer med samma filnamn kan de bifogade filerna orsaka problem. Därför rekommenderar vi att du kopplar en unik identifierare till varje bifogad fil när formuläret skickas. Så här gör du:
+* Komponenten för bifogad fil tillåter som standard endast användare att bifoga en fil. Du kan dock konfigurera komponentegenskaperna så att de stöder flera bifogade filer. Om en användare dessutom bifogar flera filer med samma filnamn kan de bifogade filerna orsaka problem. Därför rekommenderar vi att du kopplar en unik identifierare till varje bifogad fil när formuläret skickas. Så här gör du:
 
-   1. På [!DNL AEM Forms] server, navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
+   1. På din [!DNL AEM Forms] server, navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Web Console]**.
    1. Söka och trycka **[!UICONTROL Adaptive Forms Configuration Service]**.
-   1. Aktivera **[!UICONTROL Make File Names Unique]**. Som standard är den inaktiverad.
+   1. Aktivera i dialogrutan Adaptiv Forms Configuration Service **[!UICONTROL Make File Names Unique]**. Som standard är den inaktiverad.
 
-* Om du vill att användare ska kunna bifoga ett PDF i webbläsaren Safari måste du se till att **application/pdf** läggs till i egenskapen Filtyper som stöds i den bifogade filkomponenten. Adaptiv Forms skapad med tidigare [!DNL AEM Forms] versionen kan innehålla **.pdf** i stället för **application/pdf** i egenskapen Filtyper som stöds.
+* Om du vill att användare ska kunna bifoga ett PDF i webbläsaren Safari måste du se till att **application/pdf** läggs till i egenskapen Filtyper som stöds i den bifogade filkomponenten. Adaptiv Forms skapad med tidigare [!DNL AEM Forms] versionen kan innehålla **PDF** i stället för **application/pdf** i egenskapen Filtyper som stöds.
 
 >[!NOTE]
 >

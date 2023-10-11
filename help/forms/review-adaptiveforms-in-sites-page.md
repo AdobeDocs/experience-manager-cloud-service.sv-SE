@@ -1,12 +1,12 @@
 ---
-title: Hur skapar och hanterar man granskningar av Adaptive Forms som är inbäddade eller skapade på webbplatssidan?
+title: Hur skickar man ett anpassat formulär för granskning? Hur hanterar man granskningar för ett formulär som är anpassat?
 description: Granskning är en mekanism som gör att granskare kan utföra olika uppgifter för adaptiva formulär med steget Tilldela uppgift.
 feature: Adaptive Forms
 hide: true
 hidefromtoc: true
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---

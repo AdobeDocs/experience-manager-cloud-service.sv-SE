@@ -1,17 +1,17 @@
 ---
-title: Hur skapar man en anpassad formulärmall?
+title: Hur skapar vi en anpassad formulärmall?
 description: Skapa adaptiva formulärmallar för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 exl-id: a882cba2-c621-4ff7-a972-c504641b5639
-source-git-commit: ca0c9f102488c38dbe8c969b54be7404748cbc00
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2031'
 ht-degree: 1%
 
 ---
 
 # Skapa en adaptiv formulärmall {#adaptive-form-templates}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-program, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptive Forms med grundläggande komponenter. </span>
+<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -39,7 +39,7 @@ I Experience Manager finns en global mapp där du kan ordna mallar. Den är dock
 När du har skapat en mapp öppnar du mappen och utför följande steg för att skapa en mall:
 
 1. Tryck **[!UICONTROL Create]** i den mapp du har skapat.
-1. I avsnittet Välj en malltyp väljer du **[!UICONTROL Adaptive Form template]** och trycka **[!UICONTROL Next]**.
+1. I avsnittet Välj en malltyp väljer du **[!UICONTROL Adaptive Form template]** och knacka **[!UICONTROL Next]**.
 
 1. Ange en malltitel i avsnittet Mallinformation och tryck på **[!UICONTROL Create]**.
 Du kan också ange en beskrivning.
@@ -53,11 +53,11 @@ När du öppnar en mall för redigering kan du se följande AEM Editor-komponent
 * **Verktygsfältet Sida**
 Innehåller följande alternativ:
 
-   * **Växla sidopanel**: Här kan du visa eller dölja sidofältet.
-   * **Sidinformation**: Här kan du ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
+   * **Växla sidopanel**: Visa eller dölj sidofältet.
+   * **Sidinformation**: Gör att du kan ange information som publicerings-/avpubliceringstid, miniatyrbilder, klientbibliotek, sidprincip och klientbibliotek för siddesign.
      <!-- * **Emulator**: Lets you simulate and customize the look for different devices.-->
    * **Lägesväljare:** Här kan du ändra läge.Du kan välja **[!UICONTROL Structure]** läge, **[!UICONTROL Initial Content]**, **[!UICONTROL Layout Control]** läge. I strukturläget kan du lägga till och anpassa sidhuvud och sidfot. Med det inledande innehållsläget kan du anpassa formulärinnehållet.
-   * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningsläge.
+   * **Förhandsgranska:** Gör att du kan förhandsgranska hur mallen ser ut när du publicerar den. Du kan använda Lagerväljaren och Förhandsgranska för att växla redigerings- och förhandsgranskningslägen.
 * **Sidofält:** Tillhandahåller webbläsarna Innehåll, Egenskaper, Resurser och Komponenter.
 * **Komponentverktygsfältet:** När du markerar en komponent visas ett verktygsfält där du kan anpassa komponenten.
 * **Sida**: Det område där du lägger till innehåll för att skapa mallen.
@@ -93,7 +93,7 @@ Sidhuvud och sidfot som lagts till i strukturlagret
 
 #### Låsa/låsa upp komponenter i strukturlagret {#locking-unlocking-components-in-the-structure-layer}
 
-När du redigerar mallen med strukturlagret markerat kan du låsa upp mallens sidhuvud och sidfot. Om en komponent är olåst i mallen kan formulärförfattare redigera komponenten i det adaptiva formulär som använder mallen. Genom att låsa en komponent kan formulärförfattare inte redigera den i det adaptiva formuläret. Alternativet Lås är tillgängligt i komponentens verktygsfält.
+När du redigerar mallen med strukturlagret markerat kan du låsa upp mallens sidhuvud och sidfot. Om en komponent är olåst i mallen kan formulärförfattare redigera komponenten i det adaptiva formulär som använder mallen. Genom att låsa en komponent förhindrar du att formulärförfattare redigerar den i det adaptiva formuläret. Alternativet Lås är tillgängligt i komponentens verktygsfält.
 
 Du kan till exempel lägga till rubrikkomponenten i mallen. När du markerar komponenten kan du se ett låsalternativ i komponentens verktygsfält. Vanligtvis innehåller rubriken företagsnamn och logotyp, och du vill inte att formulärförfattare ska ändra logotypen och rubriken i en mall. I ett adaptivt formulär som skapats med mallen med huvudkomponenten låst kan formulärförfattare inte ändra logotypen och företagsnamnet.
 
@@ -132,7 +132,7 @@ Du har lagt till en logotyp, angett en rubrik och lagt till en sidfot i struktur
 * Du kan dra och släppa panelkomponenten från komponentwebbläsaren i sidofältet.
 * Du kan lägga till en underordnad panel till `guideRootPanel` i komponentens verktygsfält.
 
-Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och tryck på ![cmppr](assets/configure-icon.svg) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten: tryck på innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Tryck ![cmppr](assets/configure-icon.svg) i komponentens verktygsfält för att öppna dess egenskaper. Välj **[!UICONTROL Tabs on Top]** och trycka **[!UICONTROL Done]**. Flikmallstrukturen används.
+Om du vill skapa flikarna Allmän information och Professional Information lägger du till två paneler i den underordnade panelen i `guideRootPanel`. Markera panelerna och tryck på ![cmppr](assets/configure-icon.svg) för att öppna egenskaperna i sidofältet. Ändra elementnamnen som `general-info` och `professional-info`och titlar som General Information respektive Professional Information. I sidlisten: tryck på innehåll för att öppna innehållsläsaren. På fliken Formulärobjekt väljer du `guideRootPanel`. I redigeraren markeras guideRootPanel. Tryck ![cmppr](assets/configure-icon.svg) i komponentens verktygsfält för att öppna dess egenskaper. I fältet Panellayout väljer du **[!UICONTROL Tabs on Top]** och knacka **[!UICONTROL Done]**. Flikmallstrukturen används.
 
 #### Lägga till innehåll på flikar {#adding-content-in-tabs}
 
@@ -156,7 +156,7 @@ När du skapar ett adaptivt formulär kan du se mallen som visas när du ombeds 
 
 ## Importera eller exportera en mall {#importing-or-exporting-a-template}
 
-Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till ett annat [!DNL AEM Forms] -instansen importeras den utan sin mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från `/conf` nod i `https://<server>:<port>/crx/packmgr`och lägga in den i [!DNL AEM Forms] instans där du vill överföra formuläret. Du kan också [Skapa en mall med AEM Archeype och distribuera den till din Cloud Services](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html#prerequisites).
+Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till ett annat [!DNL AEM Forms] -instansen importeras den utan sin mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från `/conf` nod i `https://<server>:<port>/crx/packmgr`och lägga in den i [!DNL AEM Forms] instans där du vill överföra formuläret. Du kan också [Skapa en mall med AEM Archeype och distribuera den till din Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html#prerequisites).
 
 >[!NOTE]
 >
@@ -216,7 +216,7 @@ Du kan också spara ett anpassat formulär som en mall för framtida bruk. Så h
 
 >[!NOTE]
 >
->Om du vill använda samma behållarprofil som för det adaptiva källformuläret bör du spara mallen i samma mapp som källformuläret. Om mallen sparas i en annan mapp än den som skapas använder en standardbehållarprincip.
+>Om du vill använda samma behållarprofil som för det adaptiva källformuläret bör du spara mallen i samma mapp som det adaptiva källformuläret. Om mallen sparas i en annan mapp används en standardbehållarprofil för den skapade mallen.
 
 ## Recommendations {#recommendations}
 

@@ -1,13 +1,13 @@
 ---
-title: Vad är Adaptiv regelredigerare i Forms?
+title: Hur använder man regelredigeraren för att lägga till regler i formulärfält för att lägga till dynamiskt beteende och skapa komplex logik i ett anpassat formulär?
 description: Med den anpassningsbara regelredigeraren i Forms kan du lägga till dynamiskt beteende och bygga in komplex logik i formulär utan kodning eller skript.
 feature: Adaptive Forms
 role: User
 level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '6223'
+source-wordcount: '6241'
 ht-degree: 0%
 
 ---

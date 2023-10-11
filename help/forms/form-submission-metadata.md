@@ -1,12 +1,12 @@
 ---
-title: Lägg till information från användardata till metadata för formuläröverföring
+title: Hur uppdaterar man metadata i ett inskickat formulär?
 description: Lär dig hur du lägger till information i metadata för ett skickat formulär med användardata. Lär dig mer om hur du visar uppdaterade metadata för inlämning av formulär i CRX-databasen.
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: b8366fc19a89582f195778c92278cc1e15b15617
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---

@@ -1,10 +1,10 @@
 ---
-title: AEM Forms as a Cloud Service Architecture
+title: AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs
 description: Förstå arkitekturen i [!DNL AEM Forms] as a Cloud Service att lära sig om plattformens skalbarhet, flexibilitet och prestanda.
 exl-id: 9d677bee-50ca-460e-b503-6b7799900735
-source-git-commit: b2c8e739c4e1c5289ca263360f4f59b8a2c05f5b
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1071'
 ht-degree: 1%
 
 ---

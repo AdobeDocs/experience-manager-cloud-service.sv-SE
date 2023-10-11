@@ -1,10 +1,10 @@
 ---
-title: Hur lägger jag till variabler i AEM?
+title: Hur lägger vi till variabler AEM arbetsflödesstegen?
 description: Lär dig skapa en variabel, ange ett värde för variabeln och använda den i [!DNL AEM Forms] Arbetsflödessteg.
 exl-id: d9139ea9-2f86-476c-8767-b36766790f2c
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '2065'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---

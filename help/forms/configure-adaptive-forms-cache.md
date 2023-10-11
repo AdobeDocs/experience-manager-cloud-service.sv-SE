@@ -1,14 +1,14 @@
 ---
-title: Konfigurera anpassad Forms-cache
+title: Vad är cacheminne för anpassningsbara formulär? och hur man cache-lagrar ett AEM anpassat formulär?
 description: Anpassningsbart Forms-cacheminne är utformat för adaptiva Forms och dokument med målet att minska den tid som krävs för att återge ett adaptivt formulär eller dokument.
 uuid: ba8f79fd-d8dc-4863-bc0d-7c642c45505c
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Configuration
 discoiquuid: 9fa6f761-58ca-4cd0-8992-b9337dc1a279
-source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
+source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---

@@ -1,10 +1,10 @@
 ---
-title: Hur skapar och använder man teman i Adaptive Forms?
+title: Hur skapar och använder vi teman i Adaptive Forms?
 description: Du kan använda teman för att utforma och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '2651'
+source-wordcount: '2652'
 ht-degree: 0%
 
 ---

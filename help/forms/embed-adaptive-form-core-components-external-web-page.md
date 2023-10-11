@@ -1,13 +1,13 @@
 ---
-title: Hur bäddar jag in ett anpassat formulär baserat på kärnkomponenter på en extern webbsida?
-description: Lär dig bädda in en adaptiv Forms på en webbplats.
+title: Hur kan vi bädda in anpassningsbara formulär på en extern webbsida?
+description: Lär dig bädda in ett anpassat formulär på en extern webbsida
 contentOwner: Khushwant Singh
 docset: CloudService
 role: Developer
 exl-id: 198f6f76-1134-4818-89a0-6ddc84ff956c
-source-git-commit: 2d4a81aa0d6755270d4d6efb8649782f4bde4537
+source-git-commit: fb3d3732f698015151d9703bfddfe94b531d31b6
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---

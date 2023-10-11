@@ -1,14 +1,14 @@
 ---
-title: Aktivera Adobe Analytics för ett adaptivt formulär
+title: Hur aktiverar man Adobe Analytics för ett adaptivt formulär?
 description: Experience Cloud Setup Automation kan koppla Adobe Analytics till ett adaptivt formulär för att spåra insikter om besökarinteraktioner och engagemang.
 keywords: Aktivera Adobe Analytics för ett adaptivt formulär med Experience Cloud Setup Automation, Enable Adobe Analytics in Forms, Adobe Analytics in Adaptive Forms, Forms analytics integration, Forms and Adobe Analytics
-source-git-commit: 4daba42c9d8a7eff5d3ef6f9581c52c787666ed1
+exl-id: 0e1aa040-08b4-4c1a-b247-ad6fff410187
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
-
 
 # Aktivera Adobe Analytics för ett adaptivt formulär med Experience Cloud Setup Automation {#integrate-adobe-analytics-to-aem-forms-with-experience-cloud-setup-automation}
 

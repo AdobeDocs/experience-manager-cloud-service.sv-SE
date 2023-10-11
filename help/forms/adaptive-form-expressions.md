@@ -1,10 +1,10 @@
 ---
-title: Adaptiva formuläruttryck
+title: Vad är adaptiva formuläruttryck?
 seo-title: Adaptive Form Expressions
 description: Använd adaptiva Forms-uttryck för att lägga till automatisk validering, beräkning och aktivera eller inaktivera synlighet för ett avsnitt.
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2697'
 ht-degree: 0%
 
 ---

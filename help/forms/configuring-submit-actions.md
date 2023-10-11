@@ -1,8 +1,8 @@
 ---
-title: Konfigurera en Skicka-åtgärd för ett anpassat formulär
+title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: ba83b35f411ffd51e0032e7c7f12c7c82cd982ad
+source-git-commit: fb3d3732f698015151d9703bfddfe94b531d31b6
 workflow-type: tm+mt
 source-wordcount: '3218'
 ht-degree: 0%

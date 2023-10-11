@@ -1,13 +1,13 @@
 ---
-title: Hur använder man formulärdatamodellen?
+title: Hur skapar vi en formulärdatamodell för ett adaptivt formulär?
 description: Lär dig skapa adaptiva Forms och fragment baserade på en formulärdatamodell (FDM). Generera och redigera exempeldata för datamodellsobjekt i FDM.
 feature: Form Data Model
 role: User
 level: Beginner, Intermediate
 exl-id: 827ce457-6585-46fb-8e28-1d970a40d949
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
