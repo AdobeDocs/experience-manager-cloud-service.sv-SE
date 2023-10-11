@@ -30,8 +30,8 @@ Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att 
 * Visa eller dölja ett objekt
 * Aktivera eller inaktivera ett objekt
 * Ange ett värde för ett objekt
-* Validera värdet för ett objekt
-* Kör funktioner för att beräkna värdet för ett objekt
+* Verifiera värdet för ett objekt
+* Köra funktioner för att beräkna värdet för ett objekt
 * Anropa en formulärdatamodelltjänst och utföra en åtgärd
 * Ange egenskap för ett objekt
 
@@ -51,9 +51,9 @@ En regel följer vanligtvis någon av följande konstruktioner:
 
 I regelredigeraren **När** regeltypen framtvingar konstruktorn för villkorsåtgärd.
 
-**Åtgärd-villkor I den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor** för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
+**Action-Condition** I den här konstruktionen definierar en regel först en åtgärd som ska utlösas följt av villkor för utvärdering. En annan variant av den här konstruktionen är action-condition-alternate action, som också definierar en alternativ åtgärd som ska utlösas om villkoret returnerar False.
 
-Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa dölj och för Aktivera är Inaktivera, och motsatt sätt. Du kan inte ändra den alternativa standardåtgärden.
+Regeltyperna Visa, Dölj, Aktivera, Inaktivera, Ange värde för och Validera i regelredigeraren framtvingar regelkonstruktionen för åtgärdsvillkor. Som standard är den alternativa åtgärden för Visa är Dölj och för Aktivera är Inaktivera, och tvärtom. Du kan inte ändra den alternativa standardåtgärden.
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ The **[!UICONTROL When]** regeltypen följer efter **condition-action-alternate 
 
 Med regeltypen När kan du utvärdera ett villkor i ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
 
-I klartext struktureras en typisk When-regel på följande sätt:
+I klartext är en typisk When-regel strukturerad på följande sätt:
 
 `When on Object A:`
 
@@ -122,9 +122,9 @@ OCH
 
 _
 
-När du har en flervärdeskomponent, till exempel alternativknappar eller lista, hämtas alternativen automatiskt när du skapar en regel för den komponenten och görs tillgängliga för regelskaparen. Du behöver inte skriva alternativvärdena igen.
+När du har en komponent med flera värden, till exempel alternativknappar eller lista, hämtas alternativen automatiskt när du skapar en regel för den komponenten och görs tillgängliga för regelskaparen. Du behöver inte ange alternativvärdena igen.
 
-En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknapparna) automatiskt och görs tillgängliga för regelskaparen enligt följande:
+En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När du skapar regeln hämtas alternativen (alternativknapparna) automatiskt och görs tillgängliga för regelskaparen enligt följande:
 
 ![Flera värden visar alternativ](assets/multivaluefcdisplaysoptions.png)
 
@@ -210,15 +210,15 @@ När (valfritt):
 
 (Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
 
-I följande exempel tas värdet i `dependentid` fältet som indata och värdet för `Relation` fältet anges till utdata från argumentet `Relation` för `getDependent` tjänsten Formulärdatamodell.
+I följande exempel används värdet i `dependentid` field som indata och fältets värde `Relation` anges till utdata `Relation` från argumentet `getDependent` för tjänsten Form Data Model.
 
 ![Set-value-web-service](assets/set-value-web-service.png)
 
-Exempel på Ange värderegel med hjälp av formulärdatamodelltjänsten
+Exempel på regel för att ange värde med tjänsten Formulärdatamodell
 
 >[!NOTE]
 >
->Dessutom kan du använda Ange regelvärde för att fylla i alla värden i en listrutekomponent från utdata från en formulärdatamodelltjänst eller en webbtjänst. Kontrollera dock att utdataargumentet som du väljer är av en matristyp. Alla värden som returneras i en matris blir tillgängliga i den angivna listrutan.
+>Dessutom kan du använda Ange värde för regel för att fylla i alla värden i en nedrullningsbar listkomponent från utdata från en formulärdatamodelltjänst eller en webbtjänst. Se dock till att det utdataargument som du väljer är av en matristyp. Alla värden som returneras i en matris blir tillgängliga i den angivna listrutan.
 
 ### [!UICONTROL Show] {#show}
 

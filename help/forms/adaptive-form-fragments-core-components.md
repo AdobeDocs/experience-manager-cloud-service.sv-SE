@@ -37,15 +37,15 @@ Du kan skapa ett adaptivt formulärfragment från grunden eller spara en panel i
 1. Ange rubrik, namn, beskrivning och taggar för fragmentet. Se till att du anger ett unikt namn för fragmentet. Om det redan finns ett annat fragment med samma namn går det inte att skapa fragmentet.
 1. Välj en formulärmall. Du kan skapa ett formulärfragment för Core Components-baserade Adaptive Forms- eller Foundation Components-baserade Adaptive Forms.
    * Om du vill skapa formulärfragment för kärnkomponentbaserade formulär väljer du en mall baserad på kärnkomponenter.
-   * Om du vill skapa formulärfragment för formulär baserade på Foundation Components väljer du en mall för Foundation Components. Till exempel /libs/fd/af/templateForFragment/defaultFragmentTemplate.
+   * Om du vill skapa formulärfragment för Foundation Components-baserade formulär väljer du en Foundation Components-mall. Till exempel /libs/fd/af/templateForFragment/defaultFragmentTemplate.
 
-   När du skapar formulärfragment för kärnkomponentbaserade formulär använder du alternativet Välj formulärtema för att välja ett kärnkomponentbaserat tema.
+   När du skapar formulärfragment för Core Components-baserade formulär använder du alternativet Select Form Theme för att välja ett Core Components-baserat tema.
 
-1. Klicka för att öppna **fliken Formulärmodell** och **välj någon av följande modeller för fragmentet i listrutan Välj från** :
+1. Klicka för att öppna **fliken Form Model** och välj en av följande modeller för fragmentet i **listrutan Select From** :
 
    ![Visar modelltyp på fliken Formulärmodell](assets/create-af-1-1.png)
 
-   * **Ingen**: Anger att fragmentet ska skapas från grunden utan att någon formulärmodell används.
+   * **Ingen**: Anger att fragmentet ska skapas från grunden utan att använda någon formulärmodell.
 
      >[!NOTE]
      >
@@ -149,7 +149,7 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
   </tr>
   <tr>
    <td><p>Förhandsvisning</p> </td>
-   <td><p>Innehåller alternativ för att förhandsgranska fragmentet som en HTML-förhandsgranskning eller en anpassad förhandsgranskning genom att sammanfoga data från en XML-fil med fragmentet. Mer information finns i Förhandsgranska <a>ett formulär</a>.<br /> <br /> </p> </td>
+   <td><p>Innehåller alternativ för att förhandsgranska fragmentet som en HTML-fil eller en anpassad förhandsgranskning genom att sammanfoga data från en XML-fil med fragmentet. Mer information finns i <a>Förhandsgranska ett formulär</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Starta granskning/hantera granskning</p> </td>
@@ -157,11 +157,11 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
   </tr>
   <tr>
    <td><p>Lägg till ordlista</p> </td>
-   <td><p>Genererar en ordlista för lokalisering av det markerade fragmentet. Mer information finns i <a>Lokalisera adaptiva Forms</a>.<br /> <br /> </p> </td>
+   <td><p>Genererar en ordlista för att lokalisera det markerade fragmentet. Mer information finns i <a>Lokalisera adaptiv Forms</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>Publicera / Avpublicera</p> </td>
-   <td><p>Publicerar/avpublicerar det valda fragmentet.<br /> <br /> </p> </td>
+   <td><p>Publicera/avpublicera</p> </td>
+   <td><p>Publicerar/avpublicerar det markerade fragmentet.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Ta bort</p> </td>
@@ -181,9 +181,9 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
 * Du kan inte redigera ett adaptivt formulärfragment, som infogas med referens, i ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.
 * När du publicerar ett adaptivt formulär måste du publicera de fristående adaptiva formulärfragmenten som infogats med referens i det adaptiva formuläret.
 * När du publicerar om ett uppdaterat adaptivt formulärfragment återspeglas ändringarna i de publicerade instanserna av det adaptiva formuläret där fragmentet används.
-* Adaptivt formulär som innehåller komponenten Verify stöder inte anonyma användare. Det rekommenderas inte heller att använda komponenten Verify i ett adaptivt formulärfragment.
-* (**Endast** Mac) För att säkerställa att formulärfragmentfunktionen fungerar perfekt i alla scenarier lägger du till följande post i filen /private/etc/hosts:
-  `127.0.0.1 <Host machine>`**Värddator**: Apple Mac-datorn där AEM Forms distribueras.
+* Adaptivt formulär som innehåller komponenten Verify har inte stöd för anonyma användare. Det rekommenderas inte heller att använda komponenten Verify i ett adaptivt formulärfragment.
+* (**Endast** Mac) Om du vill vara säker på att funktionen för formulärfragment fungerar perfekt i alla scenarier lägger du till följande post i filen /private/etc/hosts:
+  `127.0.0.1 <Host machine>`**Värddator**: Den Apple Mac-dator som AEM Forms distribueras på.
 
 ## Referensfragment {#reference-fragments}
 
