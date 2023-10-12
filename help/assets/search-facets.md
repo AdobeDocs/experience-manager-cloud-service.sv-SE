@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du skapar, ändrar och använder s
 feature: Search,Metadata
 role: User,Admin
 exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 220350e6669c38ea602c2796ec1d5559992338ec
 workflow-type: tm+mt
-source-wordcount: '2327'
+source-wordcount: '2386'
 ht-degree: 16%
 
 ---
@@ -303,6 +303,18 @@ På samma sätt som du lägger till ett egenskapsprediat eller ett alternativpre
   </tr>
  </tbody>
 </table>
+
+## Ta bort standardsökfaktorer {#removing-default-search-facets}
+
+Adobe rekommenderar att du är försiktig när du tar bort standardsökfaktorer för att undvika prestandaproblem. Om du tar bort standardsökfaktorer kan det också påverka standardfunktionen.
+
+Ta inte bort följande dolda fält eftersom det orsakar ett frågeprestandaproblem med OmniSearch och smarta samlingar:
+
+* group.2_group.type=dam:Asset
+
+* group.1_group.type=nt:folder
+
+* group.p.or=true
 
 ## Återställ standardsökfaktorer {#restoring-default-search-facets}
 
