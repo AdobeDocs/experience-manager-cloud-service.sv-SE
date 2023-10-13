@@ -8,9 +8,9 @@ user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fu
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
-source-git-commit: 2218aa58c6105d5fbfc08975e9e39d6476f4b173
+source-git-commit: 66a6897a28bb7fa57992c6782c001629f0f1d0c5
 workflow-type: tm+mt
-source-wordcount: '4333'
+source-wordcount: '4325'
 ht-degree: 19%
 
 ---
@@ -581,7 +581,6 @@ ht-degree: 19%
          + [Salesforce-programintegrering med OAuth 2.0-klientautentiseringsflöde](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
          + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
          + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
-         + [Ansluta ett anpassat formulär till Microsoft SharePoint List](/help/forms/connect-aem-adaptive-form-to-sharepointlist.md)
          + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
          + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
          + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
