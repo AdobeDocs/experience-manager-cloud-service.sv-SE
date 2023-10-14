@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 description: Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector]
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
-source-git-commit: 9981fb1ac5ddf5d918cf76476fa185c524749c70
+source-git-commit: f5f2c460815d273fe445c6f415dee7776cc18fce
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1300'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,20 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Work
 
 ## Releasedatum {#release-date}
 
-Releasedatum för den senaste versionen, 1.9.13 av [!DNL Workfront for Experience Manager enhanced connector] är 11 september 2023.
+Releasedatum för den senaste versionen, 1.9.14 av [!DNL Workfront for Experience Manager enhanced connector] är 13 oktober 2023.
 
 ## Frigör högdagrar {#release-highlights}
 
-Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande uppdateringar:
+Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande felkorrigeringar:
 
-* Med den förbättrade kopplingen för Experience Manager hämtas alla händelseprenumerationer från Workfront samtidigt som en händelseprenumeration för ett projekt tas bort, vilket kan påverka programmets prestanda.
+* När händelseprenumerationer är inaktiverade under Avancerade inställningar kan du fortfarande välja alternativ för att **Prenumerera på dokumentuppdateringshändelser för att uppdatera AEM metadata**, **Publicera allt projektmaterial till Brand Portal när projektet är klart** och **Aktivera kommentarsynkronisering**.
 
-* När en resurs skickas från Workfront till Experience Manager är resursens MIME-typ inte inställd på `dc:format` i Experience Manager.
+* Vissa av resurserna som lagras i Experience Manager återges inte korrekt när du förhandsgranskar dem i Workfront.
 
-* Workfront projekt-ID:n som lagras på den utökade anslutningen Experience Manager innehåller dubbletter.
+* Vid omkonfigurering av Experience Manager-anslutning med Workfront skapas inte händelseprenumerationer som uppdatering av kommentarsynkronisering, borttagning och dokumentuppdatering.
+
+* Större prestandaförbättringar i API för att skapa länkade mappar, uppdatera, aktivera länkade mappar, aktivera och inaktivera kommentarsynkronisering, spara avancerade inställningar på koppling.
+
 
 >[!NOTE]
 >
@@ -34,7 +37,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar dig [uppgradera till den senaste 1.9.13-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
+>Adobe rekommenderar dig [uppgradera till den senaste 1.9.14-versionen](/help/assets/workfront-connector-install.md) i [!DNL Workfront for Experience Manager enhanced connector].
 
 ## Kända fel {#known-issues}
 
@@ -43,6 +46,14 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen är **[!UICONTROL Send to]** som finns i **[!UICONTROL More]** I listrutan kan du inte välja målmål i Experience Manager. The **[!UICONTROL Send to]** fungerar korrekt med **[!UICONTROL Document Actions]** listruta. The **[!UICONTROL Send to]** alternativet fungerar korrekt för **[!UICONTROL More]** nedrullningsbar lista och **[!UICONTROL Document Actions]** nedrullningsbar lista som finns i nya Workfront.
 
 ## Tidigare versioner {#previous-releases}
+
+### September 2023-utgåvan {#september-2023-release}
+
+* Med den förbättrade kopplingen för Experience Manager hämtas alla händelseprenumerationer från Workfront samtidigt som en händelseprenumeration för ett projekt tas bort, vilket kan påverka programmets prestanda.
+
+* När en resurs skickas från Workfront till Experience Manager är resursens MIME-typ inte inställd på `dc:format` i Experience Manager.
+
+* Workfront projekt-ID:n som lagras på den utökade anslutningen Experience Manager innehåller dubbletter.
 
 ### Augustiversionen 2023 {#august-2023-release}
 
