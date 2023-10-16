@@ -2,9 +2,9 @@
 title: Predikatreferens för Query Builder
 description: Förutse referens för Query Builder API på AEM as a Cloud Service.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: e10c39c1d7fa05b738dd8f25662617a3a9568f83
 workflow-type: tm+mt
-source-wordcount: '2252'
+source-wordcount: '2295'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,8 @@ Namnet&quot;root&quot; används aldrig i en fråga, utan är implicit.
 * **`p.limit`** - ett tal som anger sidstorleken.
 * **`p.guessTotal`** - rekommenderas: undvik att beräkna det totala resultatet, vilket kan vara kostsamt. Antingen en siffra som anger den högsta summan som ska räknas upp till (till exempel 1000, ett tal som ger användarna tillräckligt med feedback på grovstorleken och exakta tal för mindre resultat). Eller `true` för att räkna endast upp till det minsta nödvändiga `p.offset` + `p.limit`.
 * **`p.excerpt`** - om inställt på `true`, inkludera utdrag av fullständig text i resultatet.
+* **`p.indexTag`** - om den anges kommer att innehålla ett alternativ för indextagg i frågan (se [Indextagg för frågealternativ](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#query-option-index-tag)).
+* **`p.facetStrategy`** - om inställt på `oak`kommer Query Builder att delegera facetextraheringen till Oak (se [Fasetter](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#facets)).
 * **`p.hits`** - (endast för JSON-servleten) väljer du hur träffar skrivs som JSON, med dessa standardträffar (utbyggbara med hjälp av tjänsten ResultHitWriter).
    * **`simple`** - minimala objekt som `path`, `title`, `lastmodified`, `excerpt` (om angivet).
    * **`full`** - sling JSON rendering av noden, med `jcr:path` som anger träffens sökväg. Som standard listas bara nodens direkta egenskaper, inklusive ett djupare träd med `p.nodedepth=N`, med 0 betyder hela det oändliga underträdet. Lägg till `p.acls=true` för att inkludera JCR-behörigheterna för den aktuella sessionen för det angivna resultatobjektet (mappningar: `create` = `add_node`, `modify` = `set_property`, `delete` = `remove`).

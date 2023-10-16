@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Lär dig mer om innehållssökning och indexering på AEM as a Cloud Service.
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: d567115445c0a068380e991452d9b976535e3a1d
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2433'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,11 @@ Begränsningar:
 * Internt kan andra index konfigureras och användas för frågor. Till exempel frågor som skrivs mot `damAssetLucene` index kan på Skyline faktiskt köras mot en Elasticsearch-version av detta index. Skillnaden är vanligtvis inte synlig för programmet och användaren, men vissa verktyg, som `explain` rapportera ett annat index. Skillnader mellan Lucene-index och Elastic Index finns i [den elastiska dokumentationen i Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/elastic.html). Kunderna behöver inte, och kan inte, konfigurera Elasticsearch-index direkt.
 * Sök efter liknande funktionsvektorer (`useInSimilarity = true`) stöds inte.
 
+>[!TIP]
+>
+>Mer information om indexering och frågor, inklusive en detaljerad beskrivning av avancerade sök- och indexeringsfunktioner, finns i [Apache Oak-dokumentation](https://jackrabbit.apache.org/oak/docs/query/query.html).
+
+
 ## Användning {#how-to-use}
 
 Indexdefinitioner kan kategoriseras i tre primära användningsområden:
@@ -54,11 +59,15 @@ En indexdefinition kan delas in i någon av följande kategorier:
 
 3. Helt anpassat index: Det går att skapa ett helt nytt index från grunden. Deras namn måste ha ett prefix för att namnkonflikter ska undvikas. Till exempel: `/oak:index/acme.product-1-custom-2`, där prefixet är `acme.`
 
+>[!NOTE]
+>
+>Nu kommer nya index på `dam:Asset` nodtype (speciellt fulltextindex) rekommenderas inte eftersom dessa kan skapa konflikter med OOTB-funktioner, vilket kan leda till funktions- och prestandaproblem. I allmänhet läggs ytterligare egenskaper till i den aktuella `damAssetLucene-*` indexversionen är det lämpligaste sättet att indexera frågor på `dam:Asset` nodetype (dessa ändringar sammanfogas automatiskt till en ny produktversion av indexet om det släpps senare). Kontakta Adobe support om du är osäker.
+
 ## Förbereder den nya indexdefinitionen {#preparing-the-new-index-definition}
 
 >[!NOTE]
 >
->Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-8`, please copy the latest out-of-box index definition from a *Cloud Service* med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt namn på den till `damAssetLucene-8-custom-1` (eller senare) och lägg till anpassningar i XML-filen. Detta säkerställer att de nödvändiga konfigurationerna inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-8/tika` krävs i det anpassade indexvärdet för molntjänsten. Den finns inte i molnet-SDK:n.
+>Om du till exempel anpassar ett index som inte finns i kartongen `damAssetLucene-8`, please copy the latest out-of-box index definition from a *Cloud Service* med hjälp av CRX DE Package Manager (`/crx/packmgr/`) . Byt namn på den till `damAssetLucene-8-custom-1` (eller senare) och lägg till anpassningar i XML-filen. Detta säkerställer att de nödvändiga konfigurationerna inte tas bort av misstag. Till exempel `tika` nod under `/oak:index/damAssetLucene-8/tika` krävs i det anpassade indexet som distribueras till en AEM Cloud Service-miljö, men inte på den lokala AEM SDK:n.
 
 Om du vill anpassa ett OOTB-index förbereder du ett nytt paket som innehåller den faktiska indexdefinitionen som följer namnmönstret:
 
