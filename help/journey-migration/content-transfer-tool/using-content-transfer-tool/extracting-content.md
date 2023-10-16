@@ -2,7 +2,7 @@
 title: Extraherar innehåll från källa
 description: Lär dig hur du extraherar innehåll från en Adobe Experience Manager-källinstans (AEM) och senare överför det till en Cloud Service AEM.
 exl-id: c5c08c4e-d5c3-4a66-873e-96986e094fd3
-source-git-commit: 44a3f3c4ca08cffa06056ea85adc58e3cf1f2f1c
+source-git-commit: 031ddfa2da0fc5ecc92267eae1f9dcaac394573d
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 22%
@@ -36,7 +36,7 @@ Följ stegen nedan för att extrahera migreringsuppsättningen från Content Tra
 
 1. Då öppnas dialogrutan Extrahering. Klicka **Extract** för att starta extraheringsfasen.
 
-   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam14.png)
+   ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam14b.png)
 
    >[!NOTE]
    >Du kan också skriva över mellanlagringsbehållaren under extraheringsfasen. If **Skriv över mellanlagringsbehållare** är inaktiverat kan extraheringen för efterföljande migreringar snabbas upp om innehållssökvägarna eller inkluderingsversionsinställningarna inte har ändrats. Om innehållssökvägarna eller inkluderingsversionsinställningarna har ändrats **Skriv över mellanlagringsbehållare** ska vara aktiverat.
