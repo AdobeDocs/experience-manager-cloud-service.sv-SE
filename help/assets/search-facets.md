@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du skapar, ändrar och använder s
 feature: Search,Metadata
 role: User,Admin
 exl-id: f994c1bf-3f9d-4cb2-88f4-72a9ad6fa999
-source-git-commit: 220350e6669c38ea602c2796ec1d5559992338ec
+source-git-commit: 35d70cd3843b5e0857a24a17746e05072aed7e1b
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '2389'
 ht-degree: 16%
 
 ---
@@ -342,6 +342,7 @@ Om du inte har tilldelats en administratörsroll finns det en lista med behörig
 
 **Se även**
 
+* [Sök efter bästa praxis](search-best-practices.md)
 * [Översätt resurser](translate-assets.md)
 * [HTTP API för Assets](mac-api-assets.md)
 * [Resurser som stöds i filformat](file-format-support.md)
