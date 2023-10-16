@@ -3,9 +3,9 @@ title: Bästa praxis för frågor och indexering
 description: Lär dig hur du optimerar index och frågor baserat på Adobe riktlinjer för bästa praxis.
 topic-tags: best-practices
 exl-id: 37eae99d-542d-4580-b93f-f454008880b1
-source-git-commit: 1cdda5f793d853493f1f61eefebbf2af8cdeb6cb
+source-git-commit: ddd67a69bea2e2109ce93a91f42e8f365424f80f
 workflow-type: tm+mt
-source-wordcount: '3141'
+source-wordcount: '3144'
 ht-degree: 0%
 
 ---
@@ -315,4 +315,15 @@ Detta kan inträffa av flera orsaker -
    * I det här fallet måste alla resultat som returneras av indexet läsas av frågemotorn och sorteras i minnet.
    * Detta är många gånger långsammare än att tillämpa sortering i den underliggande indexfrågan.
 1. Frågeutföraren försöker iterera igenom en stor resultatuppsättning.
-   * Detta kan inträffa av en rad orsaker - | Orsak | Minska | |—|—| | Kommissionen för `p.guessTotal` (eller användningen av en mycket stor gissningssumma) som gör att QueryBuilder itererar fram ett stort antal resultat från resultaträkning |Ange `p.guessTotal` med ett lämpligt värde | | Användningen av en stor eller obegränsad gräns i Query Builder (dvs. `p.limit=-1`) |Använd ett lämpligt värde för `p.limit` (helst 1000 eller lägre) | | Användning av ett filterpredikat i Query Builder som filtrerar stora mängder resultat från den underliggande JCR-frågan | Ersätt filtreringspredikat med begränsningar som kan tillämpas i den underliggande JCR-frågan | | Användning av en jämförelsebaserad sortering i QueryBuilder |Ersätt med egenskapsbaserad ordning i den underliggande JCR-frågan (med egenskaper som indexerats enligt ordning) | | Filtrering av ett stort antal resultat på grund av åtkomstkontroll |Använd ytterligare indexerad egenskap eller sökvägsbegränsning för frågan för att spegla åtkomstkontrollen | | Användning av&quot;offsetnumrering&quot; med stor förskjutning |Använd [Sidnumrering av nyckeluppsättning](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Keyset_Pagination)| | Upprepning av stora eller obegränsade resultatvärden |Använd [Sidnumrering av nyckeluppsättning](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Keyset_Pagination)| | Felaktigt index valt |Använd taggar i fråga och indexdefinition för att säkerställa att det förväntade indexvärdet används|
+   * Denna situation kan inträffa av en rad orsaker, som anges nedan:
+
+| Orsak | Minska |
+|----------|--------------|
+| Kommissionen för `p.guessTotal` (eller användningen av en mycket stor gissningssumma) som gör att QueryBuilder itererar fram ett stort antal resultat från resultaträkning | Ange `p.guessTotal` med ett lämpligt värde |
+| Användningen av en stor eller obegränsad gräns i Query Builder (dvs. `p.limit=-1`) | Använd ett lämpligt värde för `p.limit` (helst 1000 eller lägre) |
+| Användning av ett filterpredikat i Query Builder som filtrerar stora mängder resultat från den underliggande JCR-frågan | Ersätt filtreringspredikat med begränsningar som kan tillämpas i den underliggande JCR-frågan |
+| Användning av en jämförelsebaserad sortering i QueryBuilder | Ersätt med egenskapsbaserad ordning i den underliggande JCR-frågan (med egenskaper som indexerats som ordnade) |
+| Filtrering av ett stort antal resultat på grund av åtkomstkontroll | Använd ytterligare indexerad egenskap eller sökvägsbegränsning för frågan för att spegla åtkomstkontrollen |
+| Användning av&quot;offsetnumrering&quot; med stor förskjutning | Överväg att använda [Sidnumrering av nyckeluppsättning](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Keyset_Pagination) |
+| Iteration av stora eller obegränsade resultatvärden | Överväg att använda [Sidnumrering av nyckeluppsättning](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Keyset_Pagination) |
+| Felaktigt index valt | Använd taggar i fråga och indexdefinition för att säkerställa att det förväntade indexet används |
