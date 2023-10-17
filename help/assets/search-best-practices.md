@@ -2,9 +2,9 @@
 title: Sök efter bästa praxis för [!DNL Adobe Experience Manager] som [!DNL Cloud Service]
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
-source-git-commit: 31526510cc32c9587e76da522d9377afd837d991
+source-git-commit: 2c9316431d588241b470c8146c9444dbfc0af5fd
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2455'
 ht-degree: 1%
 
 ---
@@ -299,13 +299,11 @@ The newly added assets are not indexed.
 
 <table>
     <tr>
-        <th> S.No.</th>
         <th> Parametrar </th>
         <th> Administratörsvy </th>
         <th> Resursvy </th>
     </tr>
     <tr>
-        <td> 1. </td>
         <td> Anpassade aspekter </td>
         <td> Du kan lägga till <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en">anpassade sökfaktorer efter behov.</td>
         <td> De anpassade faktorerna stöds delvis i resursvyn. De aspekter som stöds är:
@@ -319,37 +317,31 @@ The newly added assets are not indexed.
         </td>
     </tr>
     <tr>
-        <td> 2. </td>
         <td> Operatorer </td>
         <td> Stöder AND, OR och NOT </td>
         <td> Stöds inte </td>
     </tr>
     <tr>
-        <td> 3. </td>
         <td> Jokertecken </td>
         <td> Stöder frågetecken (?) och asterisk (*).</td>
         <td> Stöds inte </td>
     </tr>
     <tr>
-        <td> 4. </td>
         <td> Öka sökresultat </td>
         <td> Stöds </td>
         <td> Stöds inte </td>
     </tr>
      <tr>
-        <td> 5. </td>
         <td> Rensa alla filter samtidigt </td>
         <td> Stöds inte </td>
         <td> Stöds</td>
     </tr>
      <tr>
-        <td> 6. </td>
         <td> Filer/mappar/Filer och mappar </td>
         <td> Stöds </td>
         <td> Det finns ett alternativ för att välja en mapp under Filtyp </td>
     </tr>
      <tr>
-        <td> 7. </td>
         <td> Resursstatus </td>
         <td> 
             Följande alternativ stöds:
@@ -374,7 +366,6 @@ The newly added assets are not indexed.
         </td>
     </tr>
      <tr>
-        <td> 8. </td>
         <td> Filtyp </td>
         <td>
         Följande alternativ stöds:
@@ -398,7 +389,6 @@ The newly added assets are not indexed.
         </td>
     </tr>
      <tr>
-        <td> 9. </td>
         <td> Filstorlek </td>
         <td>
         Följande alternativ stöds:
@@ -410,7 +400,6 @@ The newly added assets are not indexed.
         <td> Stöds inte </td>
     </tr>
      <tr>
-        <td> 10. </td>
         <td> Andra filter </td>
         <td>
             <ul>
@@ -427,7 +416,6 @@ The newly added assets are not indexed.
         <td> Stöds inte </td>
     </tr>
      <tr>
-        <td> 11. </td>
         <td> Sök liknande </td>
         <td> Stöds </td>
         <td> Stöds inte </td>
