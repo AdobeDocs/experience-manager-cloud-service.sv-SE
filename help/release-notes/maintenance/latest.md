@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 3fbdb150a9a1c133b4910603682e37f1c5d885d2
+source-git-commit: e771913562b3770e5a504432d40c770804aadc4b
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '435'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,8 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 1380
 
 ### Kända fel {#known-issues-13804}
 
-Ingen.
+* CQ-4354836: Det går inte att starta arbetsflödet eller skapa aktivitet från projektkonsolen.
+* CQ-4354834: Användare kan inte lägga till kommentarer i en inkorgsuppgift.
 
 ### Inbäddade tekniker {#embedded-tech-13804}
 
