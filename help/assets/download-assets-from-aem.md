@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: 3a14f3b6f75f6021a7843a5a8a3439d6ea7f886d
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1358'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan 
 >Recipients of emails must be members of the `dam-users` group to access the ZIP download link in the email message. To be able to download the assets, the members must have permissions to launch workflows that trigger downloading of assets.
 -->
 
-Följande resurstyper kan inte hämtas: Bilduppsättningar, snurruppsättningar, blandade medieuppsättningar och Carousel-uppsättningar.
+Följande resurstyper kan inte laddas ned: Bilduppsättningar, snurpuppsättningar, blandade medieuppsättningar och Carousel-uppsättningar.
 
 Du kan hämta resurser från Experience Manager på följande sätt:
 
@@ -36,7 +36,7 @@ Du kan hämta resurser från Experience Manager på följande sätt:
 * [Experience Manager användargränssnitt](#download-assets)
 * [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)
 * [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
-* [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
+* [Skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
 
 ## Hämta resurser med [!DNL Experience Manager] gränssnitt {#download-assets}
 
@@ -82,7 +82,7 @@ Så här hämtar du resurser:
    | **[!UICONTROL Create separate folder for each asset]** | Välj det här alternativet om du vill skapa en mapp för varje resurs som innehåller alla hämtade återgivningar för resursen. Om du inte markerar det här alternativet finns varje resurs (och dess återgivningar om de har valts för hämtning) i den överordnade mappen för det genererade arkivet. |
    | **[!UICONTROL Email]** | Välj det här alternativet om du vill skicka ett e-postmeddelande (som innehåller en länk till din hämtning) till en annan användare. Mottagaranvändaren måste vara medlem i `dam-users` grupp. Standardmallar för e-post finns på följande platser:<ul><li>`/libs/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/libs/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> Mallar som du anpassar under distributionen finns på följande platser: <ul><li>`/apps/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/apps/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul>Du kan lagra klientspecifika anpassade mallar på följande platser:<ul><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/downloadasset`.</li><li>`/conf/<tenant_specific_config_root>/settings/dam/workflow/notification/email/transientworkflowcompleted`.</li></ul> |
    | **[!UICONTROL Asset(s)]** | Välj det här alternativet om du vill hämta resursen i dess ursprungliga form.<br>Alternativet Delresurser är tillgängligt om den ursprungliga tillgången har delresurser. |
-   | **[!UICONTROL Rendition(s)]** | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka återgivningar som är tillgängliga beror på vilken resurs du har valt. |
+   | **[!UICONTROL Rendition(s)]** | En återgivning är den binära representationen av en resurs. Resurser har en primär representation - den som utgörs av den överförda filen. De kan ha ett valfritt antal representationer. <br> Med det här alternativet kan du välja de återgivningar du vill hämta. Vilka återgivningar som är tillgängliga beror på vilken resurs du har valt. |
    | **[!UICONTROL Smart Crops]** | Välj det här alternativet om du vill hämta alla smarta beskärningsåtergivningar för den valda resursen inifrån [!DNL Experience Manager]. En ZIP-fil med renderingarna Smart Crop skapas och hämtas till din lokala dator. |
    | **[!UICONTROL Dynamic Rendition(s)]** | Välj det här alternativet om du vill generera en serie alternativa återgivningar i realtid. När du väljer det här alternativet väljer du också de återgivningar som du vill skapa dynamiskt genom att välja bland [Bildförinställning](/help/assets/dynamic-media/image-presets.md) lista. <br>Du kan dessutom välja storlek och måttenhet, format, färgrymd, upplösning och alla valfria bildmodifierare, t.ex. invertering av bilden. Alternativet är bara tillgängligt om du har [!DNL Dynamic Media] aktiverat. |
 
@@ -112,7 +112,7 @@ Standardservleten i [!DNL Experience Manager] tillåter autentiserade användare
 
 Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar den dagliga hämtningen. Ett högt värde kan påverka prestandan.
 
-1. Skapa en mapp med en namnkonvention som anger publiceringskörningsläget som mål, det vill säga `config.publish`:
+1. Skapa en mapp med en namnkonvention som anger publiceringskörningsläget, det vill säga `config.publish`:
 
    `/apps/<your-app-name>/config.publish`
 
@@ -128,9 +128,18 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 
 Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att förhindra DoS-liknande risker. The `Asset Download Servlet` kan inaktiveras på en [!DNL Experience Manager] skapa och publicera instanser genom att uppdatera dispatcherns konfiguration för att blockera alla förfrågningar om hämtning av resurser. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
-1. Om du vill blockera resurshämtningsbegäranden via en dispatcher-konfiguration redigerar du `dispatcher.any` konfigurera och lägga till en ny regel i [filtersektion](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring).
+1. Om du vill blockera hämtningsbegäranden via en dispatcherns konfiguration redigerar du `dispatcher.any` konfigurera och lägga till en ny regel i [filtersektion](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring).
 
    `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
+
+## OnTime/OffTime-återgivning {#on-off-time-rendition}
+
+Aktivera `OnOffTimeAssetAccessFilter` måste du skapa en OSGi-konfiguration. Den här tjänsten tillåter blockering av åtkomst till återgivningar och metadata utöver själva resursen baserat på tidsinställningarna på/av. OSGi-konfigurationen ska vara för `com.day.cq.dam.core.impl.servlet.OnOffTimeAssetAccessFilter`. Följ stegen nedan:
+
+1. Skapa en konfigurationsfil på `/apps/system/config/com.day.cq.dam.core.impl.servlet.OnOffTimeAssetAccessFilter.cfg.json`. Filen ska innehålla `{}` som innehåll, vilket innebär en tom OSGi-konfiguration för motsvarande OSGi-komponent. Den här åtgärden aktiverar tjänsten.
+1. Distribuera koden, inklusive den nya konfigurationen, via [!DNL Cloud Manager].
+1. När de distribuerats är återgivningarna och metadata tillgängliga enligt objektens tidsinställningar. Om det aktuella datumet eller den aktuella tiden infaller före eller efter tidpunkten för avaktiveringen visas ett felmeddelande.
+Mer information om hur du lägger till en tom OSGi-konfiguration finns i [stödlinje](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=en).
 
 ## Tips och begränsningar {#tips-limitations}
 

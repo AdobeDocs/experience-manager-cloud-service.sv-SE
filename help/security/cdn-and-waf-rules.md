@@ -2,9 +2,9 @@
 title: Konfigurera trafikfilterregler med WAF-regler
 description: Använd trafikfilterregler med WAF-regler för att filtrera trafik
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 445134438c1a43276235b069ab44f99f7255aed1
+source-git-commit: 9345ec974c9fbd525b12b53d20d98809cd72cb04
 workflow-type: tm+mt
-source-wordcount: '2740'
+source-wordcount: '3810'
 ht-degree: 0%
 
 ---
@@ -526,3 +526,296 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 | *_Bläddra* | Den tid (i sekunder) som ett svar har cachelagrats (i alla noder). |
 | *pop* | Datacenter för CDN-cacheservern. |
 | *regler* | Namnet på matchande regler.<br><br>Anger också om matchningen resulterade i ett block. <br><br>Till exempel &quot;`match=Enable-SQL-Injection-and-XSS-waf-rules-globally,waf=SQLI,action=blocked`&quot;<br><br>Tom om inga regler matchade. |
+
+## Självstudiekurs om verktyg för instrumentpanel  {#dashboard-tooling}
+
+Adobe tillhandahåller en mekanism för att hämta instrumentpanelsverktyg till din dator för att importera CDN-loggar som hämtats via Cloud Manager. Med den här verktygen kan du analysera trafiken för att hitta rätt trafikfilterregler som ska deklareras, inklusive WAF-regler. Det här avsnittet innehåller först några instruktioner för att bli bekant med kontrollpanelsverktygen i en utvecklingsmiljö, följt av vägledning om hur du använder dessa kunskaper för att skapa regler i en produktmiljö.
+
+Kunder som använder trafikfilterregler för tidiga användare bör begära en zip av kontrollpanelsverktygen, som innehåller en README-fil som beskriver hur Docker-behållaren läses in och CDN-loggarna importeras.
+
+
+### Bekanta dig med kontrollpanelsverktygen {#dashboard-getting-familiar}
+
+1. Skapa en icke-produktionskonfigurationspipeline för Cloud Manager som är associerad med en dev-miljö. Välj först alternativet Distributionsförlopp. Välj sedan Måldistribution, Konfigurera, din databas, Git-grenen och ange kodplatsen till /config.
+
+   ![Lägg till utvalda distributioner av icke-produktionspipeline](/help/security/assets/waf-select-pipeline1.png)
+
+   ![Lägg till produktionsflöde som valts som mål](/help/security/assets/waf-select-pipeline2.png)
+
+
+1. Skapa en mappkonfiguration på rotnivå på arbetsytan och lägg till en fil med namnet cdn.yaml, där du deklarerar en enkel regel och anger den i loggläge i stället för i blockeringsläge.
+
+   ```
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev"]
+   data:
+     trafficFilters:
+       rules:
+       # Log request on simple path
+       - name: log-rule-example
+         when:
+           allOf:
+             - reqProperty: tier
+               matches: "author|publish"
+             - reqProperty: path
+               equals: '/log/me'
+         action: log
+   ```
+
+1. Verkställ och push-implementera ändringarna och distribuera konfigurationen med hjälp av konfigurationsflödet.
+
+   ![Kör konfigurationsförlopp](/help/security/assets/waf-run-pipeline.png)
+
+1. När konfigurationen har distribuerats kan du försöka komma åt https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me via webbläsaren eller med kommandot Kontroll nedan. Du bör få en felsida 404 eftersom den sidan inte finns.
+
+   ```
+   curl -svo /dev/null https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me
+   ```
+
+1. Hämta CDN-loggarna från Cloud Manager och validera att reglerna matchar varandra som förväntat, med en regelegenskap som matchar regelnamnet:
+
+   ```
+   "rules": "match=log-rule-example"
+   ```
+
+   ![Välj hämtningsloggar](/help/security/assets/waf-download-logs1.png)
+
+   ![Hämtningsloggar](/help/security/assets/waf-download-logs2.png)
+
+1. Läs in Docker-bilden med kontrollpanelsverktygen och följ README för att importera CDN-loggarna. Välj rätt tidsperiod, rätt miljö och rätt filter enligt följande skärmbilder.
+
+   ![Välj tid från kontrollpanelen](/help/security/assets/dashboard-select-time.png)
+
+   ![Välj miljö från kontrollpanelen](/help/security/assets/dashboard-select-env.png)
+
+1. När rätt filter har tillämpats bör du kunna se en kontrollpanel som har lästs in med förväntade data. På skärmbilden nedan har regelloggen-rule-example utlösts tre gånger under de senaste två timmarna av samma IP-adress som finns i Irland, med en webbläsare och bläddring.
+
+   ![Visa DV-instrumentpanelsdata](/help/security/assets/dashboard-see-data-logmode.png)
+   ![Visa widgetar för instrumentpanelsdata](/help/security/assets/dashboard-see-data-logmode2.png)
+
+1. Ändra nu cdn.yaml så att regeln försätts i blockläge för att säkerställa att sidorna blockeras som förväntat. Utför sedan, push och utlöser konfigurationsflödet som tidigare.
+
+   ```
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev"]
+   data:
+     trafficFilters:
+       rules:
+       # Log request on simple path
+       - name: log-rule-example
+         when:
+           allOf:
+             - reqProperty: tier
+               matches: "author|publish"
+             - reqProperty: path
+               equals: '/log/me'
+         action: block
+   ```
+
+1. När konfigurationen har distribuerats kan du försöka komma åt https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me via webbläsaren eller med kommandot Kontroll nedan. Du bör få en felsida på 406 som anger att begäran blockerades.
+
+   ```
+   curl -svo /dev/null https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me
+   ```
+
+1. Återigen hämtar du CDN-loggar i Cloud Manager (Obs! Det kan ta upp till 5 minuter innan nya begäranden visas i CDN-loggarna) och importerar dem till instrumentpanelsverktygen som vi gjorde tidigare. Uppdatera instrumentpanelen när du är klar. Som du kan se på skärmbilden nedan blockeras förfrågningar till /log/me av vår regel.
+
+   ![Visa produktkontrollpanelsdata](/help/security/assets/dashboard-see-data-blockmode.png)
+   ![Visa produktkontrollpanelsdata](/help/security/assets/dashboard-see-data-blockmode2.png)
+
+1. Om du har aktiverat WAF-trafikfilter (detta kräver ytterligare licens när funktionen är GA) upprepar du med en regel för WAF-trafikfilter, i loggläge och distribuerar reglerna.
+
+   ```
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev"]
+   data:
+     trafficFilters:
+       rules:
+         - name: log-waf-flags
+           when:
+             reqProperty: tier
+             matches: "author|publish"
+           action:
+             type: log
+             wafFlags:
+                 - SANS
+                 - SIGSCI-IP
+                 - TORNODE
+                 - NOUA
+                 - SCANNER
+                 - USERAGENT
+                 - PRIVATEFILE
+                 - ABNORMALPATH
+                 - TRAVERSAL
+                 - NULLBYTE
+                 - BACKDOOR
+                 - LOG4J-JNDI
+                 - SQLI
+                 - XSS
+                 - CODEINJECTION
+                 - CMDEXE
+                 - NO-CONTENT-TYPE
+                 - UTF8
+   ```
+
+1. Använd ett verktyg som [nikto](https://github.com/sullo/nikto/tree/master) för att generera matchande begäranden. Kommandot nedan skickar runt 550 skadliga förfrågningar på mindre än en minut.
+
+   ```
+   ./nikto.pl -useragent "MyAgent (Demo/1.0)" -D V -Tuning 9 -ssl -h https://publish-pXXXXX-eYYYYY.adobeaemcloud.com
+   ```
+
+1. Hämta CDN-loggarna från Cloud Manager (kom ihåg att det kan ta upp till 5 minuter att visa dem) och validera att både de matchande deklarerade reglerna och WAF-flaggorna visas.
+
+   Som ni ser flaggas flera av de förfrågningar som gjorts av Nikto av WAF som skadliga. Vi ser att Nikto försökte utnyttja säkerhetsluckorna CMDEXE, SQLI och NULLBYTE. Om du nu ändrar åtgärden från logg till block och återutlöser en skanning med Nikto blockeras alla tidigare flaggade begäranden den här gången.
+
+   ![Visa WAF-data](/help/security/assets/dashboard-see-data-waf.png)
+
+
+   Observera att när en begäran matchar någon av WAF-flaggorna, kommer dessa WAF-flaggor att visas, även om de inte är en del av den deklarerade regeln. Detta är så att du alltid är medveten om potentiellt ny skadlig trafik, som du ännu inte har deklarerat matchningsregler för. Exempel:
+
+   ```
+   "rules": "match=log-waf-flags,waf=SQLI,action=blocked"
+   ```
+
+1. Upprepa med en regel som använder hastighetsbegränsning i loggläge. Som alltid, implementera, push och utlösa konfigurationsflödet för att tillämpa konfigurationen.
+
+   ```
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev"]
+   data:
+     trafficFilters:
+       rules:
+         - name: limit-requests-client-ip
+           when:
+             reqProperty: tier
+             matches: "author|publish"
+           rateLimit:
+             limit: 10
+             window: 1
+             penalty: 60
+             groupBy:
+               - reqProperty: clientIp
+           action: log
+   ```
+
+1. Använd ett verktyg som [Vegeta](https://github.com/tsenart/vegeta) för att generera trafik.
+
+   ```
+   echo "GET https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com" | vegeta attack -duration=5s
+   ```
+
+1. När du har kört verktyget kan du hämta CDN-loggar och importera dem på kontrollpanelen för att verifiera att hastighetsbegränsningsregeln har utlösts
+
+   Nu när du är bekant med hur trafikfilterregler fungerar kan du gå över till produktionsmiljön.
+
+### Distribuera regler till produktionsmiljön {#dashboard-prod-env}
+
+Se till att först deklarera regler i loggläge för att validera att det inte finns några falska positiva inställningar, vilket betyder legitim trafik som skulle blockeras felaktigt.
+
+1. Skapa en produktionskonfigurationspipeline som är kopplad till produktionsmiljön.
+
+1. Kopiera de rekommenderade reglerna nedan till cdn.yaml. Du kanske vill ändra reglerna baserat på de unika egenskaperna i webbplatsens livstrafik. Bekräfta, push och utlösa konfigurationsflödet. Kontrollera att reglerna är i loggläge.
+
+```
+kind: "CDN"
+version: "1"
+metadata:
+  envTypes: ["dev"]
+data:
+  trafficFilters:
+    rules:
+    #  Block client for 5m when it exceeds 100 req/sec on a time window of 1sec
+    - name: limit-requests-client-ip
+      when:
+        reqProperty: path
+        like: '*'
+      rateLimit:
+        limit: 100
+        window: 1
+        penalty: 300
+        groupBy:
+          - reqProperty: clientIp
+      action: block
+      # Block requests coming from OFAC countries
+      - name: block-ofac-countries
+        when:
+          allOf:
+            - { reqProperty: tier, equals: publish }
+            - reqProperty: clientCountry
+              in:
+                - SY
+                - BY
+                - MM
+                - KP
+                - IQ
+                - CD
+                - SD
+                - IR
+                - LR
+                - ZW
+                - CU
+                - CI
+        action: block
+        # Enable recommended WAF protections (only works if WAF is enabled for your environment)
+        - name: block-waf-flags-globally
+          when:
+            reqProperty: tier
+            matches: "author|publish"
+          action:
+            type: block
+            wafFlags:
+              - SANS
+              - SIGSCI-IP
+              - TORNODE
+              - NOUA
+              - SCANNER
+              - USERAGENT
+              - PRIVATEFILE
+              - ABNORMALPATH
+              - TRAVERSAL
+              - NULLBYTE
+              - BACKDOOR
+              - LOG4J-JNDI
+              - SQLI
+              - XSS
+              - CODEINJECTION
+              - CMDEXE
+              - NO-CONTENT-TYPE
+              - UTF8
+        # Disable protection against CMDEXE on /bin
+        - name: allow-cdmexe-on-root-bin
+          when:
+            allOf:
+              - reqProperty: tier
+                matches: "author|publish"
+              - reqProperty: path
+                matches: "^/bin/.*"
+          action:
+            type: allow
+            wafFlags:
+              - CMDEXE
+```
+
+1. Lägg till eventuella ytterligare regler för att blockera skadlig trafik som du kanske känner till. Exempel: vissa IP-adresser som har attackerat din webbplats.
+
+1. Efter några minuter, timmar eller dagar, beroende på webbplatsens trafikvolym, hämtar du CDN-loggar från Cloud Manager och analyserar dem med kontrollpanelen.
+
+1. Här är några överväganden:
+   1. Trafikmatchningsdeklarerade regler visas i diagram och begärandeloggar så att du enkelt kan kontrollera om dina deklarerade regler aktiveras.
+   1. WAF-flaggor som matchar trafik visas i diagram och begärandeloggar, även om du inte loggade in dem i en regel. Detta för att ni alltid är medvetna om potentiellt ny skadlig trafik och kan skapa nya regler efter behov. Titta på WAF-flaggor som inte återspeglas i de deklarerade reglerna och överväg att deklarera dem.
+   1. Om du vill hitta matchande regler kontrollerar du om det finns falskt positiva inställningar i förfrågningsloggarna och om du kan filtrera bort dem från reglerna. De kanske bara är falska positiva för vissa banor.
+
+1. Ställ in lämpliga regler på blockläge och överväg även att lägga till ytterligare regler. Vissa av reglerna kanske ska vara i loggläge när du analyserar mer trafik.
+
+1. Distribuera om konfigurationen
+
+1. Iterera och analysera instrumentpanelerna ofta.
+
