@@ -2,9 +2,9 @@
 title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
-source-git-commit: 6d949d9f31cc13b30f8ba06058911ddfe8e817af
+source-git-commit: ddc7ddbcd1761b4320e1c7a30a015d844ef3e0c0
 workflow-type: tm+mt
-source-wordcount: '3218'
+source-wordcount: '3226'
 ht-degree: 0%
 
 ---
@@ -403,3 +403,7 @@ Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassad
 När du förifyller en formulärdatamodell eller ett schemabaserat adaptivt formulär med XML- eller JSON-data klagar till ett schema som inte innehåller data `<afData>`, `<afBoundData>`och `</afUnboundData>` -taggar, försvinner data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, JSON-schema eller en formulärdatamodell. Obegränsade fält är adaptiva formulärfält utan `bindref` -egenskap.
 
 <!-- For more information, see [Customizing Pages shown by the Error Handler](/help/sites-developing/customizing-errorhandler-pages.md). -->
+
+>[!MORELIKETHIS]
+>
+>* [Skapa en anpassad inskickningsåtgärd för Adaptiv Forms](/help/forms/custom-submit-action-form.md)

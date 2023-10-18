@@ -2,9 +2,9 @@
 title: Hur skapar och använder vi teman i Adaptive Forms?
 description: Du kan använda teman för att utforma och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: d0e5a63896ccbeb32b565680276b461fbbf19e9c
 workflow-type: tm+mt
-source-wordcount: '2652'
+source-wordcount: '2634'
 ht-degree: 0%
 
 ---
@@ -418,7 +418,11 @@ Om du vill ange information som logotypbild, företagsnamn i sidhuvud och copyri
 * [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
 
 
-## Relaterad artikel {#related-article}
+>[!MORELIKETHIS]
+>
+>* [Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö](/help/forms/enable-adaptive-forms-core-components.md)
 
-* [Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö](/help/forms/enable-adaptive-forms-core-components.md)
-* [Skapa en fristående grundkomponentbaserad adaptiv form](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/creating-adaptive-form-core-components.html)
+
+## Se även {#see-also}
+
+{{see-also}}

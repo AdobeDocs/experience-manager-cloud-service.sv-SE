@@ -5,14 +5,14 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 77131cc2-9cb1-4a00-bbc4-65b1a66e76f5
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '1770'
 ht-degree: 0%
 
 ---
 
-# Skapa en anpassad Skicka-åtgärd för Adaptiv Forms {#writing-custom-submit-action-for-adaptive-forms}
+# Skapa en anpassad inskickningsåtgärd för Adaptiv Forms {#writing-custom-submit-action-for-adaptive-forms}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -25,7 +25,7 @@ Du kan skapa en anpassad Skicka-åtgärd för att lägga till funktioner som int
 
 ## XML-dataformat {#xml-data-format}
 
-XML-data skickas till servern med **`jcr:data`** request-parameter. Skicka åtgärder kan komma åt parametern för att bearbeta data. I följande kod beskrivs formatet för XML-data. Fälten som är bundna till formulärmodellen visas i **`afBoundData`** -avsnitt. Obundna fält visas i `afUnoundData`-avsnitt. <!--For more information about the format of the `data.xml` file, see [Introduction to prepopulating Adaptive Form fields](prepopulate-adaptive-form-fields.md).-->
+XML-data skickas till servern med **`jcr:data`** request-parameter. Skicka åtgärder kan komma åt parametern för att bearbeta data. I följande kod beskrivs formatet för XML-data. Fälten som är bundna till formulärmodellen visas i dialogrutan **`afBoundData`** -avsnitt. Obundna fält visas i `afUnoundData`-avsnitt. <!--For more information about the format of the `data.xml` file, see [Introduction to prepopulating Adaptive Form fields](prepopulate-adaptive-form-fields.md).-->
 
 ```xml
 <?xml ?>
@@ -73,13 +73,13 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 När du bifogar filer till det adaptiva formuläret validerar servern de bifogade filerna efter att det adaptiva formuläret skickats in och returnerar ett felmeddelande om:
 
-* Bifogade filer innehåller ett filnamn som börjar med (.) tecken, innehåller \ / : * ? &quot; &lt; > | ; % $-tecken, eller innehåller speciella filnamn som är reserverade för Windows-operativsystem som `nul`, `prn`, `con`, `lpt`, eller `com`.
+* Bifogade filer innehåller ett filnamn som börjar med (.) tecken, innehåller \ / : * ? &quot; &lt; > |; % $-tecken, eller innehåller speciella filnamn som är reserverade för Windows operativsystem som t.ex. `nul`, `prn`, `con`, `lpt`, eller `com`.
 
 * Storleken på den bifogade filen är 0 byte.
 
 * Den bifogade filens format definieras inte i [Filtyper som stöds](https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text) när komponenten Bifogad fil konfigureras i ett adaptivt formulär.
 
-### Vidarebefordra sökväg och omdirigerings-URL {#forward-path-and-redirect-url}
+### Framåtsökväg och omdirigerings-URL {#forward-path-and-redirect-url}
 
 När du har utfört den nödvändiga åtgärden vidarebefordrar servern Skicka begäran till sökvägen framåt. En åtgärd använder API:t setForwardPath för att ställa in framåtsökvägen på tjänsten Skicka stödlinje.
 
@@ -95,9 +95,9 @@ Om åtgärden inte har någon framåtriktad sökväg dirigeras webbläsaren om m
 
 En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
-* **addfields.jsp**: Skriptet innehåller de åtgärdsfält som läggs till i filen HTML under återgivningen. Använd det här skriptet för att lägga till dolda indataparametrar som krävs vid överföring i skriptet post.POST.jsp.
-* **dialog.xml**: Det här skriptet liknar dialogrutan CQ Component. Det innehåller konfigurationsinformation som författaren anpassar. Fälten visas på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär när du väljer åtgärden Skicka.
-* **post.POST.jsp**: Submit-servern anropar det här skriptet med data som du skickar och ytterligare data i föregående avsnitt. Om du kör en åtgärd på den här sidan måste du köra skriptet post.POST.jsp. Om du vill registrera åtgärden Skicka med den adaptiva Forms som ska visas i dialogrutan Redigera anpassat formulär lägger du till dessa egenskaper i slingan:Folder:
+* **addfields.jsp**: Det här skriptet innehåller de åtgärdsfält som läggs till i filen HTML under återgivningen. Använd det här skriptet för att lägga till dolda indataparametrar som krävs vid överföring i skriptet post.POST.jsp.
+* **dialog.xml**: Det här skriptet liknar CQ Component dialog. Det innehåller konfigurationsinformation som författaren anpassar. Fälten visas på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär när du väljer åtgärden Skicka.
+* **post.POST.jsp**: Sändningsservern anropar det här skriptet med de data som du skickar och de ytterligare data som finns i föregående avsnitt. Om du kör en åtgärd på den här sidan måste du köra skriptet post.POST.jsp. Om du vill registrera åtgärden Skicka med den adaptiva Forms som ska visas i dialogrutan Redigera anpassat formulär lägger du till dessa egenskaper i slingan:Folder:
 
    * **guideComponentType** av typen String och value **fd/af/components/guidepittype**
    * **guideDataModel** av typen String som anger vilken typ av adaptiv form som åtgärden Skicka gäller för. <!--**xfa** is supported for XFA-based Adaptive Forms while -->**xsd** stöds för XSD-baserad Adaptive Forms. **grundläggande** stöds för Adaptive Forms som inte använder XDP eller XSD. Om du vill visa åtgärden för flera typer av Adaptiv Forms lägger du till motsvarande strängar. Avgränsa varje sträng med kommatecken. Gör till exempel en åtgärd synlig på <!--XFA- and -->XSD-baserad Adaptiv Forms, ange värdet som <!--**xfa** and--> **xsd**.
@@ -110,11 +110,11 @@ En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
 Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och skickar sedan ett e-postmeddelande till dig. Det adaptiva formuläret innehåller innehållet i OTB-inlämningsåtgärdsarkivet (föråldrat) som sparar data i CRX-databasen. Dessutom innehåller AEM en [E-post](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/day/cq/mailer/package-summary.html) API som kan användas för att skicka e-post. Konfigurera tjänsten Day CQ Mail via systemkonsolen innan du använder e-post-API:t. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (borttaget) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
 
-1. Logga in på CRXDE Lite på https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
+1. Logga in på CRXDE Lite på URL:en https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
 
    ![Skärmbild som visar hur en nod skapas med egenskapen sling:Folder](assets/step1.png)
 
-1. **Ange de obligatoriska konfigurationsfälten.**
+1. **Ange obligatoriska konfigurationsfält.**
 
    Lägg till den konfiguration som krävs för Store-åtgärden. Kopiera **cq:dialog** noden i Store-åtgärden från /libs/fd/af/components/guideSubittype/store till åtgärdsmappen på /apps/custom_submit_action/store_and_email.
 
@@ -390,3 +390,7 @@ Perform the following steps to create a custom Submit Action that saves the data
    Select the action in the Adaptive Form. The action sends an email and stores the data. 
 
 -->
+
+>[!MORELIKETHIS]
+>
+>* [Konfigurera en Skicka-åtgärd för ett anpassat formulär](/help/forms/configure-submit-actions-core-components.md)

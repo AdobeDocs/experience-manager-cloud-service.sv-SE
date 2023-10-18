@@ -3,7 +3,7 @@ title: Hur skapar man repeterbara paneler i komponenter med adaptiv Form Core?
 description: Lär dig att skapa upprepningsbara avsnitt eller fält i en adaptiv form.
 role: Architect, Developer, Admin, User
 exl-id: 02521bf3-83c1-40a0-8fe6-23af240727e9
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: d0e5a63896ccbeb32b565680276b461fbbf19e9c
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 0%
@@ -225,9 +225,14 @@ I följande kod visas `SampleType`I panelen används egenskapen minOcCours och m
 ```
 
 
-## Relaterade artiklar
+## Se även {#see-also}
 
-* [Skapa ett adaptivt formulär](creating-adaptive-form-core-components.md)
-* [Skapa stilar eller teman för formulären](using-themes-in-core-components.md)
-* [Lägga till dynamiskt beteende i formulär med regelredigeraren](rule-editor.md)
-* [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
+{{see-also}}
+
+
+>[!MORELIKETHIS]
+>
+>* [Skapa ett adaptivt formulär](creating-adaptive-form-core-components.md)
+>* [Skapa stilar eller teman för formulären](using-themes-in-core-components.md)
+>* [Lägga till dynamiskt beteende i formulär med regelredigeraren](rule-editor.md)
+>* [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)

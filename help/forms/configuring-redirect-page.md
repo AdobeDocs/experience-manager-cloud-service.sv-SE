@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: e4dc01d2-7c89-4bd8-af0a-1d2df4676a9a
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '202'
 ht-degree: 2%
 
 ---
@@ -32,6 +32,10 @@ Formulärförfattare kan konfigurera en sida för varje formulär som formulära
 
    Omdirigeringssidkonfiguration
 
-Formulärförfattare kan använda följande parametrar som skickas till sidan Tack. För alla tillgängliga Skicka-åtgärder `status` och `owner` parametrar skickas. Förutom dessa två parametrar skickas ytterligare några parametrar för följande Skicka-åtgärder:
+Formulärförfattare kan använda följande parametrar som skickas till sidan Tack. För alla tillgängliga Skicka-åtgärder, `status` och `owner` parametrar skickas. Förutom dessa två parametrar skickas ytterligare några parametrar för följande Skicka-åtgärder:
 
-* **[!UICONTROL Submit to REST endpoint]**: Parametrar som lagts till för mappning mellan fältparametrar skickas. `status` och `owner` parametrar skickas inte i den här åtgärden. Mer information finns i [Konfigurera åtgärden Skicka till REST-slutpunkt](configuring-submit-actions.md).
+* **[!UICONTROL Submit to REST endpoint]**: Parametrar som lagts till för mappning mellan fältparametrar skickas. `status` och `owner` parametrar skickas inte i denna Skicka-åtgärd. Mer information finns i [Konfigurera åtgärden Skicka till REST-slutpunkt](configuring-submit-actions.md).
+
+>[!MORELIKETHIS]
+>
+>* [Konfigurera en omdirigeringssida eller ett tackmeddelande](/help/forms/configure-redirect-page-or-thank-you-message.md)

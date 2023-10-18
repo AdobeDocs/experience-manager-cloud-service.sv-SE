@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: develop
 discoiquuid: 56b6a573-8aba-43e7-acb7-c2da45869d95
 docset: aem65
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
@@ -45,3 +45,8 @@ Sidnollinnehåll visas som standard när ett visningsprogram som inte är Adobe 
 >[!NOTE]
 >
 >Den anpassade egenskap som du just skapade kanske inte visas korrekt i dialogrutan Formuläregenskaper när du öppnar formuläret igen. Det fungerar dock bra och formuläret visar det uppdaterade sidnollmeddelandet.
+
+>[!MORELIKETHIS]
+>
+>* [Hämta och installera Forms Designer för att skapa dokumentmallar](/help/forms/installing-configuring-designer.md)
+>* [Använd Forms Designer för att skapa DoR-mallar (Document of Record) och formulärfragment?](/help/forms/use-forms-designer.md)

@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 6b3f9131-db6b-451b-a932-b57d809222eb
-source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -51,3 +51,8 @@ Låt oss ta ett exempel där du måste skapa en sekvens för att fylla i, verifi
 1. Slutför de återstående stegen för att skapa formulärmallen. <!-- For more information, see [Creating a custom Adaptive Form template](custom-adaptive-forms-templates.md). -->
 
 När du har definierat formulärsekvensen i formulärmallen kan du använda den för att skapa formulär som har den grundläggande strukturen definierad som sekvensen på plats, även om du alltid kan anpassa formuläret efter dina behov.
+
+
+## Se även {#see-also}
+
+{{see-also}}

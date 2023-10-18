@@ -2,9 +2,9 @@
 title: Hur skaffar man referensteman och mallar för AEM?
 description: AEM Forms innehåller exempel på adaptiva formulärteman, mallar och formulärdatamodeller som hjälper dig att snabbt skapa formulär.
 exl-id: 81588759-22da-4123-92fe-5ca97e97f1e4
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '839'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -120,3 +120,8 @@ Du kan hämta följande formulärdatamodeller genom att installera [Referensinne
 * Salesforce
 
 Mer information om hur du använder dessa modeller finns i [Konfigurera molntjänsterna Microsoft Dynamics 365 och Salesforce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en#configure-dynamics-cloud-service)
+
+
+## Se även {#see-also}
+
+{{see-also}}

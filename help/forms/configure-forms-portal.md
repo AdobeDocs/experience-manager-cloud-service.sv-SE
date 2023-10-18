@@ -2,9 +2,9 @@
 title: Hur skapar man en Forms Portal på en Experience Manager Sites-sida?
 description: Lär dig hur du skapar en Forms Portal och använder färdiga komponenter på en AEM Sites-sida.
 exl-id: 13cfe3ba-2e85-46bf-a029-2673de69c626
-source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
+source-git-commit: e48272f4d36c608d516c7a947fc16cff3a3b408e
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1761'
 ht-degree: 0%
 
 ---
@@ -182,3 +182,19 @@ Du kan konfigurera funktionen för att spara automatiskt för ett anpassat formu
 1. Välj **[!UICONTROL Enable]** om du vill att formuläret ska sparas automatiskt. Du kan konfigurera följande:
 * Som standard är [!UICONTROL Adaptive Form Event] är inställt på &quot;true&quot;, vilket betyder att formuläret sparas automatiskt efter varje händelse.
 * I [!UICONTROL Trigger], konfigurera så att automatiskt sparas baserat på förekomsten av en händelse eller efter ett visst tidsintervall.
+
+## Se även {#see-also}
+
+{{see-also}}
+
+
+
+<!--
+
+>[!MORELIKETHIS]
+>
+>* [Configure data sources for AEM Forms](/help/forms/configure-data-sources.md)
+>* [Configure Azure storage for AEM Forms](/help/forms/configure-azure-storage.md)
+>* [Integrate Microsoft Dynamics 365 and Salesforce with Adaptive Forms](/help/forms/configure-msdynamics-salesforce.md)
+
+-->

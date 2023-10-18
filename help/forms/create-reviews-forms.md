@@ -3,9 +3,9 @@ title: Hur skapar och hanterar man granskningar i blanketter?
 description: Använd granskningsfunktionen för att lägga till granskare och låta granskare kommentera ett formulär.
 topic-tags: forms-manager
 exl-id: 378049f8-bf21-4595-819d-ba5fba7023c0
-source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -114,3 +114,17 @@ I det här avsnittet beskrivs vad som händer på **Granska uppdatering/Slut**:
    1. **Alla**: Granskningen visas i avsnittet Tidigare granskningar. Inga fler kommentarer kan läggas till.
 
    ![granskning slutförd](assets/review-complete-imgg.png)
+
+
+## Se även {#see-also}
+
+{{see-also}}
+
+
+<!--
+
+>[!MORELIKETHIS]
+>
+>* [Associating submission reviewers with a form](/help/forms/adding-reviewers-form.md)
+
+-->

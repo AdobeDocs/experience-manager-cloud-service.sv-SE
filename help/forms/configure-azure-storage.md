@@ -2,7 +2,7 @@
 title: Hur konfigurerar jag Azure-lagring?
 description: Lär dig hur du integrerar formulär med Azure-lagringsservern.
 exl-id: 606383b3-293c-43d2-9ba0-5843c4e0caa8
-source-git-commit: b6dcb6308d1f4af7a002671f797db766e5cfe9b5
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![dataintegrering](assets/data-integeration.png)
 
-[[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) ger en [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Azure] för att möjliggöra arbetsflöden. Till exempel:
+[[!DNL Experience Manager Forms] Dataintegrering](data-integration.md) ger en [!DNL Azure] lagringskonfiguration för att integrera formulär med [!DNL Azure] lagringstjänster. Formulärdatamodellen kan användas för att skapa adaptiv Forms som interagerar med [!DNL Azure] server för att möjliggöra arbetsflöden. Till exempel:
 
 * Skriv data i [!DNL Azure] om inlämning av anpassade blanketter.
 * Skriv data i [!DNL Azure] via anpassade entiteter som definierats i formulärdatamodellen och vice versa.
@@ -33,15 +33,15 @@ Innan du utför dessa steg måste du se till att du har en [!DNL Azure] lagrings
 
 ## Skapa formulärdatamodell {#create-azure-form-data-model}
 
-När du har skapat [!DNL Azure] lagringskonfiguration kan du [skapa formulärdatamodellen](create-form-data-models.md). Ange mappen som innehåller [!DNL Azure] i **[!UICONTROL Data Source Configuration]** när formulärdatamodellen skapades. Du kan sedan välja konfigurationen från listan med konfigurationer som finns i det angivna mappnamnet.
+När du har skapat [!DNL Azure] lagringskonfiguration kan du [skapa formulärdatamodellen](create-form-data-models.md). Ange den mapp som innehåller [!DNL Azure] i **[!UICONTROL Data Source Configuration]** när formulärdatamodellen skapades. Du kan sedan välja konfigurationen från listan med konfigurationer som finns i det angivna mappnamnet.
 
 ### Lägg till [!DNL Azure] tjänster till formulärdatamodellen {#add-azure-services}
 
-När du har skapat objekten för formulärdatamodell och datamodell kan du lägga till [!DNL Azure] till formulärdatamodellen.
+När du har skapat objekten för formulärdatamodell och datamodell kan du lägga till [!DNL Azure] tjänster till formulärdatamodellen.
 
 Lägg till [!DNL Azure] tjänster:
 
-1. I redigeringsläget väljer du tjänsterna i **[!UICONTROL Services]** till vänster och tryck **[!UICONTROL Add Selected]**. De valda tjänsterna visas i **[!UICONTROL Services]** -fliken i formulärdatamodellen.
+1. I redigeringsläget väljer du tjänsterna i **[!UICONTROL Services]** till vänster och tryck **[!UICONTROL Add Selected]**. De valda tjänsterna visas i **[!UICONTROL Services]** i formulärdatamodellen.
 
    ![Lägg till markerade tjänster](assets/select-services.png)
 
@@ -75,7 +75,7 @@ Lägg till [!DNL Azure] tjänster:
      </tr>
      <tr>
       <td>Hämta lista över blob-ID:n från Azure</td>
-      <td>Hämta en lista med blob-ID:n från Azure baserat på numret som definierats i indatabegäran.</td>
+      <td>Hämta en lista med blob-ID:n från Azure baserat på det nummer som har definierats i indatabegäran.</td>
      </tr>
      <tr>
       <td>Hämta SAS-URL:er för Blobs från Azure</td>
@@ -92,7 +92,7 @@ Lägg till [!DNL Azure] tjänster:
 
 Så här definierar du en objektegenskap för datamodell som en söknyckel:
 
-1. I **[!UICONTROL Model]** väljer du datamodellens objektegenskap och trycker **[!UICONTROL Edit Properties]**.
+1. I **[!UICONTROL Model]** väljer du datamodellens objektegenskap och trycker på **[!UICONTROL Edit Properties]**.
 1. Byt **[!UICONTROL Search Key]** växla till ON-läge. Det här alternativet är bara tillgängligt för primära datatyper.
 1. Tryck **[!UICONTROL Done]** och sedan trycka **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
@@ -101,3 +101,13 @@ När du har definierat egenskaper för datamodellsobjekt som söknycklar lagras 
 >[!NOTE]
 >
 >Endast 10 söknycklar tillåts per Azure-enhet eftersom Azure bara tillåter 10 taggar per blob och egenskapsvärden som markerats som söknycklar lagras i Azure-indextaggar efter hashning.
+
+<!--
+
+>[!MORELIKETHIS]
+>
+>* [Configure data sources for AEM Forms](/help/forms/configure-data-sources.md)
+>* [Integrate Microsoft Dynamics 365 and Salesforce with Adaptive Forms](/help/forms/configure-msdynamics-salesforce.md)
+>  [Add Forms Portal to an AEM Sites page](/help/forms/configure-forms-portal.md)
+
+-->

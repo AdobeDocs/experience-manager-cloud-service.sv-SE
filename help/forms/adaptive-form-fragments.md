@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2014'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 
    * **Titel**: Fragmentets namn. Standardvärdet är panelens namn.
 
-   * **Beskrivning**: Beskrivning av fragmentet.
+   * **Beskrivning: Beskrivning** av fragmentet.
 
    * **Taggar**: Taggar metadata för fragmentet.
 
@@ -120,7 +120,7 @@ Alla fragment som du infogar i Adaptiv Forms visas som en platshållarbild. Plat
 
 Utför följande steg för att visa fullständiga fragment i formulär:
 
-1. Gå till konfigurationssidan för AEM webbkonsol på https:host *]:[*[*port*]/system/console/configMgr.
+1. Gå AEM webbkonsolens konfigurationssida på https:[*värd*]:[*port*]/system/console/configMgr.
 
 1. Sök och klicka **[!UICONTROL Adaptive Form Configuration Service]** för att öppna den i redigeringsläge.
 1. Inaktivera **[!UICONTROL Enable Placeholder in place of Fragment]** om du vill visa hela fragment i stället för platshållarbilden.
@@ -249,3 +249,7 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 ## Referensfragment {#reference-fragments}
 
 Referensadaptiva formulärfragment som du kan använda för att skapa formuläret finns tillgängliga. Mer information finns i [Referensfragment](reference-adaptive-form-fragments.md).
+
+>[!MORELIKETHIS]
+>
+>* [Adaptiva formulärfragment i kärnkomponenter](/help/forms/adaptive-form-fragments-core-components.md)

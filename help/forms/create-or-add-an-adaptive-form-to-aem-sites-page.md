@@ -4,9 +4,9 @@ description: Upptäck hur du skapar eller lägger till ett anpassat formulär p�
 feature: Adaptive Forms, Page Editor, Authoring
 Keywords: AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 exl-id: a1846c5d-7b0f-4f48-9d15-96b2a8836a9d
-source-git-commit: a1b63508ed7040c719778bd1c422728bc0e2e4f2
+source-git-commit: 7b797524d0df764c497baa6e4ffd0b3cabd368ca
 workflow-type: tm+mt
-source-wordcount: '3140'
+source-wordcount: '3132'
 ht-degree: 0%
 
 ---
@@ -262,6 +262,7 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
 * [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
 
 
-## Relaterad artikel {#related-article}
+## Se även {#see-also}
 
-* [Skapa en fristående grundkomponentbaserad adaptiv form](/help/forms/creating-adaptive-form-core-components.md)
+{{see-also}}
+

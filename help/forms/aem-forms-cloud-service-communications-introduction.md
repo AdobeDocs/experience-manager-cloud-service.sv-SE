@@ -3,9 +3,9 @@ title: Vad är Forms API:er för as a Cloud Service Communication?
 description: Använd kommunikations-API:er för att signera, certifiera eller skydda dina dokument, för att automatisera PDF-genereringsprocesser och för att konvertera PDF-dokument till ett annat format.
 Keywords: How to generate document?, Generate PDF document, Manipulation PDF documents, Assembling PDF documents, Validating PDF document, APIs used in encrypting or decrypting PDFs
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1437'
 ht-degree: 1%
 
 ---
@@ -302,6 +302,6 @@ When such an interactive PDF document is flattened using the Communications APIs
 
 ## Se även {#see-also}
 
-
 * [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
 * [Kommunikationsbearbetning - batch-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)

@@ -4,7 +4,7 @@ description: Lär dig hur du lägger till information i metadata för ett skicka
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%

@@ -2,9 +2,9 @@
 title: Hur lägger jag till stöd för nya språkområden i ett adaptivt formulär baserat på Foundation Components?
 description: För Adaptiv Forms kan du lägga till språkområden för fler språk förutom det som finns i kartongen.
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -157,3 +157,8 @@ Få en [exempelklientbibliotek](/help/forms/assets/locale-support-sample.zip) f�
 * När nya fält läggs till i ett befintligt adaptivt formulär:
    * **För maskinöversättning**: Återskapa ordlistan och kör översättningsprojektet. Fält som läggs till i ett adaptivt formulär när du har skapat ett översättningsprojekt förblir oöversatta.
    * **För mänsklig översättning**: Exportera ordlistan via `[server:port]/libs/cq/i18n/gui/translator.html`. Uppdatera ordlistan för de nya fälten och överför den.
+
+
+## Se även {#see-also}
+
+{{see-also}}

@@ -8,9 +8,9 @@ contentOwner: Ruchita Srivastav
 content-type: reference
 feature: Adaptive Forms
 exl-id: 198a26a9-d6bb-457d-aab8-0a5d15177c48
-source-git-commit: defeee2fee42c6274c71438d6f9fde6e49a05081
+source-git-commit: e48272f4d36c608d516c7a947fc16cff3a3b408e
 workflow-type: tm+mt
-source-wordcount: '2439'
+source-wordcount: '2431'
 ht-degree: 0%
 
 ---
@@ -407,7 +407,10 @@ Using this custom error handler, the adaptive form converts the fields listed in
 
 ## Se även {#see-also}
 
-* [Skapa och använda anpassade felhanterare i Adaptive Forms (Core Components)](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
-* [Skapa en fristående grundkomponentbaserad adaptiv form](/help/forms/creating-adaptive-form-core-components.md)
-* [Skapa stilar eller teman för formulären](/help/forms/using-themes-in-core-components.md)
-* [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+{{see-also}}
+
+>[!MORELIKETHIS]
+>
+>* [Skapa och använda anpassade felhanterare i Adaptive Forms (Core Components)](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
+>* [Skapa stilar eller teman för formulären](/help/forms/using-themes-in-core-components.md)
+>* [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)

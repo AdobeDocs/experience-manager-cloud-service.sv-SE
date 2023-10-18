@@ -5,9 +5,9 @@ topic-tags: author
 keywords: Lägg till adaptiva formulärfragment, adaptiva formulärfragment, skapa ett formulärfragment, lägga till ett fragment i ett adaptivt formulär, hantera fragment
 feature: Adaptive Forms
 exl-id: 3a9ad1b7-2f6f-4ca9-a1c9-549c4238c59e
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1709'
 ht-degree: 0%
 
 ---
@@ -190,8 +190,8 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
 Det finns referensfragment för adaptiva formulär som du kan använda för att skapa formuläret.
 <!-- For more information, see [Reference Fragments](../../forms/using/reference-adaptive-form-fragments.md). -->
 
+
+
 ## Se även {#see-also}
 
-* [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [Skapa eller lägga till teman i Adaptiv Forms](/help/forms/using-themes-in-core-components.md)
-* [Använd Google reCAPTCHA i ett AEM anpassat formulär baserat på kärnkomponenter](/help/forms/captcha-adaptive-forms-core-components.md)
+{{see-also}}

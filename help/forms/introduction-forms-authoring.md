@@ -8,9 +8,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: ba70921e-db7e-43f6-902c-1065d3b13aef
 docset: aem65
 exl-id: 16f86dae-86fb-481b-8978-b8898705ed7e
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2469'
 ht-degree: 0%
 
 ---
@@ -362,3 +362,7 @@ Innehållsstrukturen innehåller vanligtvis följande primära komponenter:
 * **verktygsfält:** En behållare för anpassat formulär har ett associerat globalt verktygsfält som är globalt för formuläret. Det här verktygsfältet kan läggas till med **[!UICONTROL Add Toolbar]** i redigeringsfältet där författare kan lägga till åtgärder som Skicka, Spara, Återställ och så vidare.
 
 * **resurser:** Den här noden innehåller ytterligare information som används för formulärredigering. Exempel: formulärmodellinformation, lokaliseringsinformation osv.
+
+## Se även {#see-also}
+
+{{see-also}}

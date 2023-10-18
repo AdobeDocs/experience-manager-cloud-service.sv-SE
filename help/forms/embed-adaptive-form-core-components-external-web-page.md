@@ -5,7 +5,7 @@ contentOwner: Khushwant Singh
 docset: CloudService
 role: Developer
 exl-id: 198f6f76-1134-4818-89a0-6ddc84ff956c
-source-git-commit: fb3d3732f698015151d9703bfddfe94b531d31b6
+source-git-commit: a942e87a33775851631a1fe123fa3e8d2686bb30
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%
@@ -162,3 +162,11 @@ Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 1. Vid AEM publiceringsinstans går du till AEM Web Console Configuration Manager på `https://'[server]:[port]'/system/console/configMgr`.
 1. Leta reda på och öppna **Apache Sling Referer-filter** konfiguration.
 1. I fältet Tillåtna värdar anger du den domän där webbsidan finns. Det gör att värddatorn kan göra POST-förfrågningar till AEM. Du kan också använda reguljära uttryck för att ange en serie externa programdomäner.
+
+<!--
+
+>[!MORELIKETHIS]
+>
+>* [Embed adaptive form based on core components to AEM sites](/help/forms/embed-adaptive-form-core-components-aem-sites.md)
+
+-->

@@ -4,9 +4,9 @@ description: Förbättra säkerheten med Google reCAPTCHA-tjänsten utan problem
 topic-tags: Adaptive Forms, author
 keywords: Google reCAPTCHA-tjänst, Adaptiv Forms, CAPTCHA-utmaning, startalternativ, kärnkomponenter, säkerhet för inskickande av formulär, skydd mot skräppost
 exl-id: d116f979-efb6-4fac-8202-89afd1037b2c
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -106,9 +106,6 @@ Tap the **[!UICONTROL Currency Value]** field in the form and create the followi
 **F: Kan jag använda mer än en Captcha-komponent i en adaptiv form?**
 **Ans:** Det går inte att använda mer än en Captcha-komponent i ett adaptivt formulär. Vi rekommenderar inte att du använder Captcha-komponenten i ett fragment eller i en panel som är markerad för lat inläsande.
 
-## Se även
+## Se även {#see-also}
 
-* [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
-* [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments-core-components.md)
-* [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [Använd Google reCAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
+{{see-also}}

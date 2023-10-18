@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 8eeb9c5e-6866-4bfe-b922-1f028728ef0d
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
@@ -770,3 +770,15 @@ Du har två alternativ:
 **Vad ska tillägget för JSON-schemafilen vara?**
 
 Tillägget för JSON-schemafilen måste vara .schema.json. Till exempel: &lt;filename>.schema.json.
+
+## Se även {#see-also}
+
+{{see-also}}
+
+<!--
+
+>[!MORELIKETHIS]
+>
+>* [Design XML Schema for an Adaptive Form](/help/forms/adaptive-form-xml-schema-form-model.md)
+
+-->

@@ -3,9 +3,9 @@ title: Hur kan vi översätta en grundkomponentbaserad adaptiv form?
 description: Lär dig skapa en formulärdatamodell i AEM Forms, testa modellen med exempeldata och tjänster och konfigurera olika alternativ för en modell.
 feature: Adaptive Forms
 exl-id: ad46bf0f-e6ec-4c52-9695-5768a9968e16
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -83,3 +83,7 @@ Utför följande steg för att lokalisera ett formulär och dess urkunder med pe
    ![Importera översättningsfil](/help/forms/assets/adaptive-forms-core-components-start-translation-import.png)
 
 1. Om du vill förhandsgranska det lokaliserade formuläret väljer du det lokaliserade formuläret i användargränssnittet i AEM Forms. Klicka på **[!UICONTROL Preview]** >**[!UICONTROL Preview as HTML]**. Öppna formuläret igen när du har lagt till `afAcceptLang=<locale code>` till formulärets URL. Lägg till exempel `afAcceptLang=de`för att öppna den tyska versionen av formuläret.
+
+## Se även {#see-also}
+
+{{see-also}}

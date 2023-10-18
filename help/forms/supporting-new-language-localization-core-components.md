@@ -2,9 +2,9 @@
 title: Hur lägger jag till stöd för nya språkområden i en adaptiv form som bygger på kärnkomponenterna?
 description: Lär dig hur du lägger till nya språkområden i ett adaptivt formulär.
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -176,6 +176,10 @@ Utför följande steg för att förhandsgranska en anpassad version med nyligen 
 
 ## Se mer
 
-* [Använd maskinöversättning eller mänsklig översättning för att översätta en grundläggande komponentbaserad adaptiv form](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
 * [Generera urkunder för Adaptive Forms](/help/forms/generate-document-of-record-core-components.md)
 * [Lägga till ett anpassat formulär på en AEM Sites-sida eller ett Experience Fragment](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+
+
+## Se även {#see-also}
+
+{{see-also}}

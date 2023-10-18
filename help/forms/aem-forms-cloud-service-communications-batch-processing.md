@@ -2,9 +2,9 @@
 title: Skapa PDF i batch utan ansträngning - Lär dig mer om konsten med batchbearbetning - Självhjälp för att generera miljontals PDF-dokument!
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1735'
 ht-degree: 0%
 
 ---
@@ -171,3 +171,10 @@ Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `re
 ## API-referensdokumentation
 
 API-referensdokumentationen innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns i .yaml-format. Du kan ladda ned [Grupp-API:er](assets/batch-api.yaml) och ladda upp den till Postman för att kontrollera API:ernas funktionalitet.
+
+>[!MORELIKETHIS]
+>
+>* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
+>* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
+>* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
+>* [Kommunikationsbearbetning - batch-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)

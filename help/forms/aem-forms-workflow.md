@@ -4,9 +4,9 @@ seo-title: Rapidly build Adaptive Forms-based processes, automate document servi
 description: 'Använd AEM Forms Workflow för att automatisera och snabbt skapa affärsprocessarbetsflöden. Exempel: granska och godkänna, PDF Generation, Adobe Sign arbetsflöden.'
 uuid: 797ba0f7-a378-45ac-9f82-fa9a952027be
 topic-tags: publish, document_services
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '2350'
+source-wordcount: '2367'
 ht-degree: 0%
 
 ---
@@ -270,3 +270,9 @@ You can use the Assign Task and Send Email steps of AEM Workflows to send an ema
 ### Rensa arbetsflödesinstanser {#purge-workflow-instances}
 
 Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen. Mer information finns i [Vanlig tömning av arbetsflödesinstanser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/maintenance.html) tömning av arbetsflödesinstanser
+
+
+>[!MORELIKETHIS]
+>
+>* [Använd arbetsflödet AEM översättning för att lokalisera adaptiv Forms och arkivdokument](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms.md)
+>* [Variabler i Forms-centrerade AEM](/help/forms/variable-in-aem-workflows.md)

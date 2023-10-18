@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 5b8ad9a8-77d4-4234-a4d7-c8964b975e96
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '959'
 ht-degree: 0%
 
 ---
@@ -298,3 +298,7 @@ A `bindRef` är anslutningen mellan en adaptiv formulärkomponent och ett schema
 **Varför kan jag inte dra enskilda element i ett delformulär (struktur som genereras från en komplex typ) för repeterbara delformulär (värdena minOcCours och maxOccurs är större än 1)?**
 
 I ett upprepningsbart delformulär måste du använda delformuläret Fullständigt. Om du bara vill ha selektiva fält använder du hela strukturen och tar bort de oönskade.
+
+>[!MORELIKETHIS]
+>
+>* [Utforma JSON-schema för ett adaptivt formulär](/help/forms/adaptive-form-json-schema-form-model.md)

@@ -3,9 +3,9 @@ title: Introduktion till [!DNL AEM Forms] as a Cloud Service
 description: Upptäck AEM Forms för att ta fram företagsklara formulär, skapa arbetsflöden för företagsprocesser och använda dokumenttjänster för att ta fram och skydda dokument.
 landing-page-description: Lär dig hur du använder formulär i AEM as a Cloud Service.
 exl-id: aa5ef10c-ba78-4a9d-8b2b-a72a7a306888
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: d0e5a63896ccbeb32b565680276b461fbbf19e9c
 workflow-type: tm+mt
-source-wordcount: '1149'
+source-wordcount: '1151'
 ht-degree: 3%
 
 ---
@@ -67,11 +67,10 @@ Tjänsten integreras med Adobe Analytics så att ni kan hämta in och spåra pre
 | Datakällor | Koppla enkelt formulär och dokument till externa datakällor för att hämta och skicka data: <ul><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-data-sources.html?lang=en">Anslut till en RDBMS- eller återställningsslutpunkt</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en">Anslut till molntjänsten Microsoft® Dynamics 365 eller Salesforce</a></li><li><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html?lang=en">Anslut till Microsoft® Azure Blob Storage</a></li></ul> |
 
 
-## Relaterade artiklar
-
-* [Gå med i en Cloud Service-miljö](/help/forms/setup-forms-cloud-service.md)
-* [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
-* [Migrera från AEM 6.5 Forms till Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
-
-
+>[!MORELIKETHIS]
+>
+>* [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
+>* [Gå med i en Cloud Service-miljö](/help/forms/setup-forms-cloud-service.md)
+>* [Konfigurera en lokal utvecklingsmiljö](/help/forms/setup-local-development-environment.md)
+>* [Migrera från AEM 6.5 Forms till Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
 

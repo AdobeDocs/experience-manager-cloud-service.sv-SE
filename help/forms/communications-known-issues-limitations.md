@@ -2,9 +2,9 @@
 title: Vad är överväganden, kända problem och bästa praxis i AEM Forms?
 description: Kända fel och metodtips för AEM Forms Communication API:er är viktiga.
 exl-id: e95615dd-e494-40cd-9cdf-6e9761ca3b3e
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1748'
 ht-degree: 0%
 
 ---
@@ -202,4 +202,12 @@ Jämfört med en lokal miljö ger Cloud Servicen ytterligare fördelar med autom
 **Where is data hosted?** -->
 
 **Kan jag köra flera gruppåtgärder samtidigt?**
-Ja, du kan köra flera batchåtgärder samtidigt. Använd alltid olika käll- och målmappar för varje åtgärd för att undvika konflikter.
+Ja, du kan köra flera gruppåtgärder samtidigt. Använd alltid olika käll- och målmappar för varje åtgärd för att undvika konflikter.
+
+>[!MORELIKETHIS]
+>
+>* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
+>* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
+>* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
+>* [Kommunikationsbearbetning - batch-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+

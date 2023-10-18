@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: 25adabfb-ff19-4cb2-aef5-0a8086d2e552
-source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
+source-git-commit: e48272f4d36c608d516c7a947fc16cff3a3b408e
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '751'
 ht-degree: 1%
 
 ---
@@ -132,3 +132,12 @@ Så här definierar du format för ett läge för en komponent:
 Du kan också simulera status för lyckade och fel. Tryck på ikonen Expandera för att visa **[!UICONTROL Simulate Success]** och **[!UICONTROL Simulate Error]** alternativ.
 
 ![Simulera lägen](assets/simulate-states.png)
+
+
+## Se även {#see-also}
+
+{{see-also}}
+
+>[!MORELIKETHIS]
+>
+>* [Använd teman i komponenter med adaptiv form](/help/forms/using-themes-in-core-components.md)

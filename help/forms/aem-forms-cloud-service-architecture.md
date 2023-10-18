@@ -2,9 +2,9 @@
 title: AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs
 description: Förstå arkitekturen i [!DNL AEM Forms] as a Cloud Service att lära sig om plattformens skalbarhet, flexibilitet och prestanda.
 exl-id: 9d677bee-50ca-460e-b503-6b7799900735
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1093'
 ht-degree: 1%
 
 ---
@@ -193,3 +193,10 @@ När du konfigurerar och konfigurerar [!DNL AEM Forms] i en as a Cloud Service m
 ## Felsökning {#debugging}
 
 AEM as a Cloud Service använder självbetjäning, skalbar, molninfrastruktur. Det kräver att AEM utvecklare förstår och felsöker olika aspekter av AEM as a Cloud Service, från att bygga och distribuera till att få information om AEM program som körs. Mer information finns i [Felsökning AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/overview.html).
+
+
+>[!MORELIKETHIS]
+>
+>* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
+>* [Batchbearbetning av AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+>* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)

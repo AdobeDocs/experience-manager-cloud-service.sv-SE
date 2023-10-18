@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: b17b7441-912c-44c7-a835-809f014a8c86
-source-git-commit: e2f2aa18e2412bc92d1385a125281ecfb81f2ce8
+source-git-commit: a942e87a33775851631a1fe123fa3e8d2686bb30
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -139,3 +139,8 @@ När det här arketype-projektet distribueras via CM-pipeline, kommer åsidosät
 Nu har du en formulärdatamodell med datakällor tillagda. Därefter kan du redigera formulärdatamodellen för att lägga till och konfigurera datamodellsobjekt och -tjänster, lägga till associationer mellan datamodellsobjekt, redigera egenskaper, lägga till anpassade datamodellsobjekt och egenskaper, generera exempeldata osv.
 
 Mer information finns i [Arbeta med formulärdatamodell](work-with-form-data-model.md).
+
+
+>[!MORELIKETHIS]
+>
+>* [Använd formulärdatamodell](/help/forms/using-form-data-model.md)

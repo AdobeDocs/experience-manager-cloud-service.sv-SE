@@ -2,9 +2,9 @@
 title: Hur skapar man ett urkunder för AEM Forms?
 description: Lär dig att generera en mall för ett dokument för inspelning (DoR) för Adaptiv Forms.
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '4000'
+source-wordcount: '4002'
 ht-degree: 0%
 
 ---
@@ -503,3 +503,8 @@ En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a 
 1. Öppna konfigurationshanteraren för Cloud Service SDK. Standardwebbadressen är: <http://localhost:4502/system/console/configMgr>.
 1. Leta reda på och öppna **[!UICONTROL Adaptive Forms and Interactive Communication Web Channel]** konfiguration.
 1. Ange sökvägen till XCI-filen och klicka på **[!UICONTROL Save]**.
+
+
+## Se även {#see-also}
+
+{{see-also}}

@@ -2,9 +2,9 @@
 title: Hur använder man Forms as a Cloud Service för att sammanfoga data med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript?
 description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera utdata i formaten PCL, ZPL och PostScript
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '731'
 ht-degree: 0%
 
 ---
@@ -142,3 +142,10 @@ The [API-referensdokumentation](https://developer.adobe.com/experience-manager-f
 >[!NOTE]
 >
 >Endast medlemmar i gruppen med formuläranvändare har åtkomst till kommunikationsAPI:er.
+
+>[!MORELIKETHIS]
+>
+>* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
+>* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
+>* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
+>* [Kommunikationsbearbetning - batch-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)

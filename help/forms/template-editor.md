@@ -2,9 +2,9 @@
 title: Hur skapar vi en anpassad formulärmall?
 description: Skapa adaptiva formulärmallar för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 exl-id: a882cba2-c621-4ff7-a972-c504641b5639
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '2031'
+source-wordcount: '2033'
 ht-degree: 1%
 
 ---
@@ -223,3 +223,8 @@ Du kan också spara ett anpassat formulär som en mall för framtida bruk. Så h
 * När du ändrar egenskaper för formuläret i mallredigeraren ska du inte använda egenskapen BindReference.
 * Om du vill lägga till en brytpunkt skapar du den när du skapar en anpassad formulärmall.
 Mer information om brytpunkter finns i [Responsiv layout](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/responsive-layout.html#authoring).
+
+
+## Se även {#see-also}
+
+{{see-also}}

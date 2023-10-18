@@ -2,9 +2,9 @@
 title: Vilka layoutfunktioner har Adaptive Forms?
 description: Layout och utseende för Adaptive Forms på olika enheter styrs av layoutinställningarna. Förstå de olika layouterna och hur de ska användas.
 exl-id: e30c6ff9-692b-4415-8f14-b4ef616b2d12
-source-git-commit: 92f89243b79c6c2377db3ca2b8ea244957416626
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,11 @@ Den här layouten, som namnet föreslår, visar bara navigeringsmenyn och navige
 
 ![Mobila layouter utan panelrubriker i formulärrubrikerna](assets/mobile-layout2.png)
 
+## Se även {#see-also}
+
+{{see-also}}
+
+
 <!-- ## Toolbar layouts {#toolbar-layouts}
 
 A Toolbar Layout controls positioning and display of any action buttons that you add to your Adaptive Forms. The layout can be added at a form level or at a panel level.
@@ -146,3 +151,5 @@ For the Mobile layout, you can add action buttons using icons.
 ![Mobile fixed layout for toolbar](assets/toolbar_layout_mobile_fixed.png)
 
 Mobile fixed layout for toolbar-->
+
+

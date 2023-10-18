@@ -4,9 +4,9 @@ description: Med AEM Forms kan du lägga till sammanhangsberoende hjälp i anpas
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
@@ -65,3 +65,7 @@ Om du lägger till hjälp för panelen visas en **?** -ikonen bredvid panelbeskr
 
 ![Exempel på sammanhangsberoende hjälp på formulärpanelsnivå](assets/photoshop-1.png)
 
+>[!MORELIKETHIS]
+>
+>* [Lägga till platshållartext i formulärfält](/help/forms/placeholder-text-in-aem-forms.md)
+>* [Lägg till fotnot i ett anpassat formulär för formaterad text](/help/forms/footnotes-richtextsupport.md)

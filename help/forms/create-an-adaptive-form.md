@@ -7,13 +7,13 @@ role: User, Developer
 level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+exl-id: 6f1c3fe7-b61e-47ce-b565-15b4904db092
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2670'
 ht-degree: 0%
 
 ---
-
 
 # Skapa ett adaptivt formulär {#creating-an-adaptive-form}
 
@@ -271,7 +271,4 @@ Du kan också ändra formulärmodellens egenskaper i den adaptiva formulärredig
 
 >[!MORELIKETHIS]
 >
->* [Skapa ett anpassat formulär på AEM Sites-sidan eller i Experience Fragment](create-or-add-an-adaptive-form-to-aem-sites-page.md)
->* [Skapa ett anpassat anpassat Forms-tema](using-themes-in-core-components.md)
->* [Konfigurera skicka-åtgärder för ett formulär](configuring-submit-actions.md)
->* [Tillgängliga adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#components)
+>* [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)

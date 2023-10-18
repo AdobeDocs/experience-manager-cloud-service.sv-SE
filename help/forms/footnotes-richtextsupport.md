@@ -2,9 +2,9 @@
 title: Hur lägger man till fotnot i ett anpassat formulär?
 description: Använd RTF-redigerare (Rich Text Editor) för fotnoter i en adaptiv form.
 exl-id: f04dae84-daab-42f8-876f-02fe426f62be
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -55,3 +55,8 @@ Så här lägger du till en fotnot i Adaptiv Forms:
 1. Spara egenskaperna.
 
 Vid körning visas siffran i texten som upphöjd och motsvarande beskrivning visas i **[!UICONTROL Footnote]** komponenten vid den position där [!UICONTROL Footnote Placeholder] placeras på det adaptiva formuläret. Du kan navigera direkt till fotnotsbeskrivningen genom att klicka på motsvarande nummer på [!UICONTROL Footnote].
+
+
+## Se även {#see-also}
+
+{{see-also}}

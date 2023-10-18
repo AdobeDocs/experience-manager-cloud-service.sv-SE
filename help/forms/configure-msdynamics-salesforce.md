@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag Microsoft Dynamics 365 och Salesforce från kartongdatamodeller för Adaptiv Forms?
 description: Lär dig hur du integrerar Microsoft Dynamics 365 och Salesforce med Adaptiv Forms.
 exl-id: 2a43b2db-2dfb-4c79-88be-ea770b44dac1
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -100,3 +100,9 @@ A [!DNL Microsoft® Dynamics 365] Formulärdatamodellen är tillgänglig direkt 
 Om du vill komma åt formulärdatamodellen går du till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**. Listan med tillgängliga mappar innehåller en mapp med den titel som angetts för `DappTitle`  while [generera AEM arkivtypprojekt](setup-local-development-environment.md#forms-cloud-service-local-development-environment). Tryck på mappnamnet och välj **[!UICONTROL Microsoft® Dynamics 365 Data Model]** och tryck på Redigera ![Redigera](assets/edit.png) om du vill visa formulärdatamodellen.
 
 När du har konfigurerat [[!DNL Microsoft® Dynamics 365] Konfigurationstjänst för molnet](#configure-dynamics-cloud-service)kan du integrera adaptiva formulär direkt [!DNL Microsoft® Dynamics 365] Datamodell.
+
+>[!MORELIKETHIS]
+>
+* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
+* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
+[Lägg till Forms Portal på en AEM Sites-sida](/help/forms/configure-forms-portal.md)

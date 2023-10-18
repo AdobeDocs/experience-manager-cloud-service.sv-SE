@@ -3,9 +3,9 @@ title: Hur väljer man användare i AEM?
 description: Lär dig hur du väljer en användare eller grupp för en [!DNL AEM Forms] arbetsflöde vid körning.
 content-type: troubleshooting
 topic-tags: publish
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -345,3 +345,7 @@ public class DummyRecipientChoser implements RecipientInfoSpecifier {
 
 }
 ```
+
+>[!MORELIKETHIS]
+>
+>* [Använd AEM Forms arbetsflöde för automatisering av affärsprocesser](/help/forms/aem-forms-workflow.md)

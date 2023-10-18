@@ -1,9 +1,9 @@
 ---
 title: Importera och exportera resurser till [!DNL AEM Forms]?
 description: Lär dig hur du använder DocuSign med ett adaptivt formulär för att samla in e-signaturer.
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1274'
 ht-degree: 0%
 
 ---
@@ -242,3 +242,8 @@ The side panel also lets you save your search settings with names of your choice
 For more information and instructions on using search, filters, saved search, and side panel, see [Search](/help/sites-authoring/search.md).
 
 -->
+
+>[!MORELIKETHIS]
+>
+>* [Importera formulärmallar för export](/help/forms/import-export-forms-templates.md)
+>* [Använd teman i komponenter med adaptiv form](/help/forms/using-themes-in-core-components.md)

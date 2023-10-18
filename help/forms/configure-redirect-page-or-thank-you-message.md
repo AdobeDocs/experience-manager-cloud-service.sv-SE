@@ -4,13 +4,13 @@ description: Lär dig hur användare kan visa ett tackmeddelande eller omdiriger
 feature: Adaptive Forms
 role: User
 level: Intermediate
-source-git-commit: b104c7ddd102b3600384bf7472b166131e334c35
+exl-id: 27decf88-a2ab-4b52-b6ae-babb1d3abdaa
+source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurerar omdirigeringssida {#configuring-redirect-page}
 
@@ -18,7 +18,7 @@ När en [Core Components based Adaptive Form](creating-adaptive-form-core-compon
 
 1. Öppna det adaptiva formuläret för redigering.
 1. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
-1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/assets/configure-icon.svg) ikon. Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
+1. Klicka på egenskaperna för den adaptiva formulärbehållaren ![Egenskaper för adaptiv formulärbehållare](/help/forms/assets/configure-icon.svg) -ikon. Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
 1. Öppna **[!UICONTROL Submission]** -fliken. Alternativ för att konfigurera en omdirigeringssida eller ett meddelande visas:
 
    ![Dialogrutan Skicka med Guide Container för att konfigurera en omdirigeringssida eller ett meddelande](/help/forms/assets/adaptive-forms-core-components-redirect-page-or-thank-you-message.png)
@@ -32,3 +32,11 @@ Formulärförfattare kan konfigurera en sida för varje formulär som formulära
 **Relaterad**
 
 * [Konfigurera omdirigeringssida (Foundation Forms)](configuring-redirect-page.md)
+
+>[!MORELIKETHIS]
+>
+>* [Konfigurera en omdirigeringssida](/help/forms/configuring-redirect-page.md)
+
+## Se även {#see-also}
+
+{{see-also}}

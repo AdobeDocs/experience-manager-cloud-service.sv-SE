@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag Unified Storage Connector för AEM Forms?
 description: Lär dig hur du hanterar anslutningsprogrammet för enhetlig lagring för AEM Forms. Använd Unified Storage Connector för att ansluta AEM Forms till externa datalager.
 exl-id: c93d0242-0c15-4d69-82a1-d6fcc7da4bae
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '572'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Skapa en Azure-lagringskonfiguration och referera till den konfigurationen med U
 
 Innan du utför dessa steg måste du se till att du har en [!DNL Azure] lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till [!DNL Azure] lagringskonto.
 
-Utför följande steg för att skapa en [!DNL Azure] lagringskonfiguration:
+Så här skapar du en [!DNL Azure] lagringskonfiguration:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
 1. Välj en mapp för att skapa konfigurationen och tryck på **[!UICONTROL Create]**.
@@ -66,3 +66,10 @@ Nedan följer några riktlinjer när du använder AEM arbetsflöden och lagrar d
 * Använd inte ett anpassat AEM arbetsflödessteg i en arbetsflödesmodell för att lagra data i CRX DE-databasen.
 
 * När du [konfigurera en AEM arbetsflödesmodell för extern datalagring](#configure-workflow-external-data-storage)ska du inte skapa anpassade kolumner för AEM Inkorg eftersom värdena för de anpassade kolumnerna inte hämtas om arbetsobjektet i AEM Inkorg tillhör ett arbetsflöde som är markerat för extern lagring.
+
+>[!MORELIKETHIS]
+>
+>* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
+>* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
+>* [Integrera Microsoft Dynamics 365 och Salesforce med adaptiv Forms](/help/forms/configure-msdynamics-salesforce.md)
+>  [Lägg till Forms Portal på en AEM Sites-sida](/help/forms/configure-forms-portal.md)

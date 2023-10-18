@@ -6,14 +6,14 @@ feature: Adaptive Forms
 role: User
 level: Intermediate
 exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: 867b87e0b22fdc4f0466b517e8a04c18fb2dc860
 workflow-type: tm+mt
 source-wordcount: '3003'
 ht-degree: 0%
 
 ---
 
-# Använda [!DNL Adobe Sign] i adaptiv form {#using-adobe-sign-in-an-adaptive-form}
+# Använd [!DNL Adobe Sign] i adaptiv form {#using-adobe-sign-in-an-adaptive-form}
 
 <span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
@@ -361,7 +361,12 @@ När [!DNL Adobe Sign] tjänsten är konfigurerad för ett adaptivt formulär. T
 
 * Använd separata e-postadresser för att konfigurera [!DNL Adobe Sign] och för den första eller enda mottagaren. E-postadressen till den första mottagaren eller den enda mottagaren (om det finns en enda mottagare) kan inte vara identisk med [!DNL Adobe Sign] konto som används för att konfigurera AEM Cloud Service.
 
-## Relaterade artiklar {#related-articles}
+>[!MORELIKETHIS]
+>
+>* [Integrera [!DNL Adobe Sign] med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md)
+>* [Bästa tillvägagångssätt för att använda [!DNL Adobe Sign] med Adaptiv Forms](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)
 
-* [Integrera [!DNL Adobe Sign] med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md)
-* [Bästa tillvägagångssätt för att använda [!DNL Adobe Sign] med Adaptiv Forms](https://medium.com/adobetech/using-adobe-sign-to-e-sign-an-adaptive-form-heres-the-best-way-to-do-it-dc3e15f9b684)
+
+## Se även {#see-also}
+
+{{see-also}}
