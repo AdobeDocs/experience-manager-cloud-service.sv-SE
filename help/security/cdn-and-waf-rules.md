@@ -2,7 +2,7 @@
 title: Konfigurera trafikfilterregler med WAF-regler
 description: Använd trafikfilterregler med WAF-regler för att filtrera trafik
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 9345ec974c9fbd525b12b53d20d98809cd72cb04
+source-git-commit: 146b85093331fe26da891252c398fc24d4f7c0d6
 workflow-type: tm+mt
 source-wordcount: '3810'
 ht-degree: 0%
@@ -165,7 +165,7 @@ En grupp villkor består av flera enkla och/eller gruppvillkor.
 | reqProperty | `string` | Request-egenskap.<br><br>En av: `path` , `queryString`, `method`, `tier`, `domain`, `clientIp`, `clientCountry`<br><br>Egenskapen domain är en gemener transformering av begärans värdhuvud. Det är användbart för strängjämförelser så att matchningar inte missas på grund av skiftlägeskänslighet.<br><br>The `clientCountry` använder två bokstavskoder som visas på [https://en.wikipedia.org/wiki/Regional_indicator_symbol](https://en.wikipedia.org/wiki/Regional_indicator_symbol) |
 | reqHeader | `string` | Returnerar begärandehuvud med angivet namn |
 | queryParam | `string` | Returnerar frågeparameter med angivet namn |
-| cookie | `string` | Returnerar cookie med angivet namn |
+| reqCookie | `string` | Returnerar cookie med angivet namn |
 
 **Förutse**
 
