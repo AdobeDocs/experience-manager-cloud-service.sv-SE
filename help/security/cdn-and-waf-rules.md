@@ -2,9 +2,9 @@
 title: Konfigurera trafikfilterregler med WAF-regler
 description: Använd trafikfilterregler med WAF-regler för att filtrera trafik
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 550ef9a969dc184fccbfd3b79716744cd80ce463
+source-git-commit: 218bf89a21f6b5e7f2027a88c488838b3e72b80e
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '3810'
 ht-degree: 0%
 
 ---
@@ -532,7 +532,7 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 
 Adobe tillhandahåller en mekanism för att hämta instrumentpanelsverktyg till din dator för att importera CDN-loggar som hämtats via Cloud Manager. Med den här verktygen kan du analysera trafiken för att hitta rätt trafikfilterregler som ska deklareras, inklusive WAF-regler. Det här avsnittet innehåller först några instruktioner för att bli bekant med kontrollpanelsverktygen i en utvecklingsmiljö, följt av vägledning om hur du använder dessa kunskaper för att skapa regler i en produktmiljö.
 
-Kunder som använder trafikfilterregler för tidiga användare bör begära en zip av kontrollpanelsverktygen, som innehåller en README-fil som beskriver hur Docker-behållaren läses in och CDN-loggarna importeras.
+Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) Github-arkiv.
 
 
 ### Bekanta dig med kontrollpanelsverktygen {#dashboard-getting-familiar}
