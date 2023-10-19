@@ -2,7 +2,7 @@
 title: OAuth2-stöd för e-posttjänsten
 description: Oauth2-stöd för e-posttjänsten i Adobe Experience Manager as a Cloud Service
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 417efad485226464b396c3ac3ef5ca8968309792
 workflow-type: tm+mt
 source-wordcount: '679'
 ht-degree: 0%
@@ -56,9 +56,15 @@ Använd följande information för att konfigurera OAuth2 för e-posttjänsten p
 
 Generera sedan uppdateringstoken, som är en del av OSGi-konfigurationen i ett efterföljande steg, genom att göra följande:
 
-1. Öppna följande URL i webbläsaren när du har ersatt den `clientID` och `tenantID` med specifika värden för ditt konto: `https://login.microsoftonline.com/%3ctenantID%3e/oauth2/v2.0/authorize?client_id=%3cclientId%3e&response_type=code&redirect_uri=http://localhost&response_mode=query&scope=https://outlook.office.com/SMTP.Send%20email%20openid%20profile%20offline_access&state=12345`.
+1. Öppna följande URL i webbläsaren när du har ersatt den `clientID` och `tenantID` med specifika värden för ditt konto:
+
+   `https://login.microsoftonline.com/%3ctenantID%3e/oauth2/v2.0/authorize?client_id=%3cclientId%3e&response_type=code&redirect_uri=http://localhost&response_mode=query&scope=https://outlook.office.com/SMTP.Send%20email%20openid%20profile%20offline_access&state=12345`
+
 1. Tillåt tillstånd när du blir tillfrågad.
-1. URL:en dirigeras om till en ny plats, som har följande format: `http://localhost/?code=<code>&state=12345&session_state=4f984c6b-cc1f-47b9-81b2-66522ea83f81#`.
+1. URL:en dirigeras om till en ny plats, som har följande format:
+
+   `http://localhost/?code=<code>&state=12345&session_state=4f984c6b-cc1f-47b9-81b2-66522ea83f81#`
+
 1. Kopiera värdet för `<code>` i exemplet ovan.
 1. Använd följande cURL-kommando för att hämta refreshToken. Ersätt tenantID, clientID och clientSecret med värdena för ditt konto och värdet för `<code>`:
 
