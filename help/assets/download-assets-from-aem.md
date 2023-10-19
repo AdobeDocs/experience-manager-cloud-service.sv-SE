@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 3a14f3b6f75f6021a7843a5a8a3439d6ea7f886d
+source-git-commit: d25d433203b8ec6787dec87a9ec35092a247096e
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1359'
 ht-degree: 2%
 
 ---
@@ -132,7 +132,7 @@ Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att 
 
    `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
-## OnTime/OffTime-återgivning {#on-off-time-rendition}
+## OnTime- eller OffTime-återgivning {#on-off-time-rendition}
 
 Aktivera `OnOffTimeAssetAccessFilter` måste du skapa en OSGi-konfiguration. Den här tjänsten tillåter blockering av åtkomst till återgivningar och metadata utöver själva resursen baserat på tidsinställningarna på/av. OSGi-konfigurationen ska vara för `com.day.cq.dam.core.impl.servlet.OnOffTimeAssetAccessFilter`. Följ stegen nedan:
 
