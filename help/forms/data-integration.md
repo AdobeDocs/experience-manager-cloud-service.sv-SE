@@ -2,9 +2,9 @@
 title: Ansluta en databas till [!DNL AEM Forms] as a Cloud Service?
 description: Hämta och spara data till RESTful web services, SOAP-based web services och OData services från ett adaptivt formulär eller ett AEM arbetsflöde.
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: 596cd08a98b1d9d47825438e1d64b6db3f847271
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,12 @@ ht-degree: 0%
 | AEM as a Cloud Service | Den här artikeln |
 
 
+
 ![Dataintegrering](do-not-localize/data-integeration.png)
 
 Företagsinfrastrukturer omfattar olika datasystem eller datakällor som databaser, webbtjänster, REST-tjänster, OData-tjänster och CRM-lösningar. Tillsammans utgör de ett informationssystem som skickar data till affärssystemen för att utföra den dagliga verksamheten. Å andra sidan hämtar applikationerna in data och skickar tillbaka dem för att uppdatera datakällorna.
 
-[!DNL AEM Forms] program som Adaptiv Forms och interaktiv kommunikation kräver integration med datakällor för att hämta in kunddata när formulär återges och interaktiv kommunikation skapas. Det finns situationer när data hämtas från datakällor baserat på användarindata i Adaptive Forms. Dessutom kan inskickade data i adaptiva formulär skrivas tillbaka för att uppdatera respektive datakälla.
+När du ansluter adaptivt formulär till en databas krävs integration med datakällor för att hämta kunddata när du återger formulär. Det finns situationer när data hämtas från datakällor baserat på användarindata i Adaptive Forms. När du skickar ett adaptivt formulär till en databas kan du dessutom skriva tillbaka inskickade adaptiva formulärdata för att uppdatera de olika datakällorna.
 
 Ett distribuerat modulärt system har sina fördelar, men utmaningen består i att integrera och skapa dataassociationer mellan datakällor. Dataintegrering är nyckeln till en fungerande och effektiv företagsinfrastruktur med olika datakällor kopplade till applikationer för utbyte av affärsdata.
 
@@ -36,20 +37,20 @@ Ett distribuerat modulärt system har sina fördelar, men utmaningen består i a
 * Bygg kopplingar mellan datamodellsobjekt inom och mellan datakällor.
 * Anropa datamodellsobjekttjänster för att fråga efter eller skriva data till och från datakällor.
 
-När du har skapat en formulärdatamodell kan du använda den i olika arbetsflöden för adaptiv form och interaktiv kommunikation, till exempel:
+När du har skapat en formulärdatamodell kan du använda den för att:
 
-* Skapa adaptiv Forms och interaktiv kommunikation baserat på formulärdatamodell
-* Förifyll adaptiva Forms och interaktiv kommunikation från konfigurerade datakällor
+* Skapa adaptiv Forms baserad på en formulärdatamodell
+* Förifyll anpassad Forms från konfigurerade datakällor
 * Anropa datakälltjänster/åtgärder med hjälp av regler för anpassat formulär
 * Skriv data för anpassat formulär till datakällor
 
 ## Kom igång med dataintegrering {#get-started-with-data-integration}
 
-Det första steget för att implementera dataintegrering är att identifiera och konfigurera datakällor som lagrar information som du vill använda i Adaptiv Forms och interaktiva kommunikationssituationer. Därefter skapar du en formulärdatamodell som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms och interaktiv kommunikation baserat på en formulärdatamodell där adaptiva formulärfält eller platshållare i interaktiv kommunikation är bundna till respektive datakällans egenskaper.
+Det första steget för att implementera dataintegrering för att skicka adaptiva formulär till en databas är att identifiera och konfigurera datakällor som lagrar information som du vill använda i adaptiva Forms. Därefter skapar du en formulärdatamodell som använder datamodellsobjekt, egenskaper och tjänster från en eller flera datakällor. Du kan skapa adaptiv Forms baserat på en formulärdatamodell där fält för adaptiv form är bundna till respektive egenskaper för datakälla.
 
 [!DNL AEM Forms] I kan du även skapa en formulärdatamodell som är oberoende av datakällor och associera eller binda datamodellsobjekt och egenskaper i formulärdatamodellen med datakällan senare. Det eliminerar eventuella beroenden till datakällor när du arbetar med en formulärdatamodell.
 
-Läs följande för att komma igång, förstå och implementera dataintegrering.
+Läs följande för att komma igång, förstå och implementera dataintegrering:
 
 * [Konfigurera datakällor](configure-data-sources.md)
 * [Skapa formulärdatamodell](create-form-data-models.md)
