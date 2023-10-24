@@ -2,9 +2,9 @@
 title: Konfigurera trafikfilterregler med WAF-regler
 description: Använd trafikfilterregler med WAF-regler för att filtrera trafik
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 218bf89a21f6b5e7f2027a88c488838b3e72b80e
+source-git-commit: 5231d152a67b72909ca5b38f0bbc40616ccd4739
 workflow-type: tm+mt
-source-wordcount: '3810'
+source-wordcount: '3661'
 ht-degree: 0%
 
 ---
@@ -166,6 +166,7 @@ En grupp villkor består av flera enkla och/eller gruppvillkor.
 | reqHeader | `string` | Returnerar begärandehuvud med angivet namn |
 | queryParam | `string` | Returnerar frågeparameter med angivet namn |
 | reqCookie | `string` | Returnerar cookie med angivet namn |
+| postParam | `string` | Returnerar parametern med det angivna namnet från brödtexten. Fungerar bara när brödtexten är av innehållstyp `application/x-www-form-urlencoded` |
 
 **Förutse**
 
@@ -208,12 +209,9 @@ The `wafFlags` kan innehålla följande:
 | TRAVERSAL | Kataloggenomgång | Directory Traversal är ett försök att navigera i behöriga mappar i ett system för att kunna hämta känslig information. |
 | USERAGENT | Attackverktyg | Attack Tooling är användning av automatiserad programvara för att identifiera säkerhetsproblem eller för att försöka utnyttja en upptäckt säkerhetslucka. |
 | LOG4J-JNDI | Log4J JNDI | Log4J JNDI-attacker försöker utnyttja [Log4Shell-sårbarhet](https://en.wikipedia.org/wiki/Log4Shell) finns i Log4J-versioner tidigare än 2.16.0 |
-| AWS SSRF | AWS-SSRF | SSRF (Server Side Request Forgery) är en begäran som försöker skicka begäranden från webbprogrammet till interna målsystem. AWS SSRF-attacker använder SSRF för att få Amazon Web Services-nycklar (AWS) och få tillgång till S3-bucket och deras data. |
 | BHH | Felaktiga Hop-huvuden | Felaktiga Hop-huvuden anger ett försök till HTTP-smuggling via en felformaterad Transfer-Encoding (TE) eller Content-Length (CL)-rubrik, eller en korrekt formaterad TE- och CL-rubrik |
 | ABNORMALPATH | Onormal bana | Onormal bana anger att den ursprungliga banan skiljer sig från den normaliserade banan (till exempel `/foo/./bar` normaliseras till `/foo/bar`) |
-| KOMPRIMERAD | Komprimering upptäcktes | POSTENS begärandetext är komprimerad och kan inte inspekteras. Om t.ex. begärandehuvudet &quot;Content-Encoding: gzip&quot; anges och POSTENS brödtext inte är oformaterad text. |
 | DUBBELKODNING | Dubbel kodning | Dubbel kodning används för att kontrollera om HTML-tecken med dubbel kodning kan användas |
-| FORCEFULBROWSING | Tvingad bläddring | Tvingad bläddring är det misslyckade försöket att komma åt administratörssidor |
 | NOTUTF8 | Ogiltig kodning | Ogiltig kodning kan göra att servern översätter skadliga tecken från en begäran till ett svar, vilket kan orsaka denial of service eller XSS |
 | JSON-ERROR | JSON-kodningsfel | En begärandetext för POST, PUT eller PATCH som har angetts som innehåller JSON i begärandehuvudet för Content-Type men som innehåller JSON-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
 | MALFORMED-DATA | Felformaterade data i begärandetexten | En begärandetext för POST, PUT eller PATCH som har fel format enligt begärandehuvudet Content-Type. Om en begäranderubrik av typen&quot;Content-Type: application/x-www-form-urlencoded&quot; anges och innehåller en POST som är json. Detta är ofta ett programmeringsfel, en automatiserad eller skadlig begäran. Kräver agent 3.2 eller högre. |
@@ -222,9 +220,7 @@ The `wafFlags` kan innehålla följande:
 | INNEHÅLLSTYP | Begäranhuvudet Content-Type saknas | En POST-, PUT- eller PATCH-begäran som inte har någon Content-Type-begäranderubrik. Som standard ska programservrar anta&quot;Content-Type: text/plain; charset=us-ascii&quot; i det här fallet. Många automatiska och skadliga förfrågningar kanske saknar&quot;Innehållstyp&quot;. |
 | NOUA | Ingen användaragent | Många automatiserade och skadliga förfrågningar använder falska eller saknade användaragenter för att göra det svårt att identifiera vilken typ av enhet som framställningarna görs på. |
 | TORNODE | Tor Traffic | Tor är programvara som döljer en användares identitet. En spik i Tor-trafiken kan indikera en angripare som försöker maskera sin plats. |
-| DATACENTER | Datacentertrafik | Datacentralstrafik är icke-organisk trafik som härrör från identifierade värdtjänstleverantörer. Den här typen av trafik är vanligtvis inte kopplad till en riktig slutanvändare. |
 | NULLBYTE | Null byte | Null-byte visas normalt inte i en begäran och anger att begäran är felformaterad och potentiellt skadlig. |
-| IMPOSTOR | SearchBot Impostor | Sökrobotimporteraren är någon som låtsas vara en sökrobot från Google eller Bing, men som inte är berättigad. Observera att är inte beroende av ett svar för sig självt, utan måste lösas i molnet först, så det bör inte användas i en förregel. |
 | PRIVATEFILE | Privata filer | Privata filer är vanligtvis konfidentiella, till exempel Apache `.htaccess` eller en konfigurationsfil som kan läcka känslig information |
 | SKANNER | Skanner | Identifierar vanliga skanningstjänster och verktyg |
 | RESPONSESPLIST | HTTP-svarsdelning | Identifierar när CRLF-tecken skickas som indata till programmet för att mata in rubriker i HTTP-svaret |
