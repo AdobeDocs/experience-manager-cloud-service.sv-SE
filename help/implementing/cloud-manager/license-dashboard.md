@@ -1,15 +1,15 @@
 ---
-title: Licenspanelen
+title: Licensieringspanel
 description: Med Cloud Manager får du en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller klientorganisation.
 exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: fbfb5d3ee8dbc8bc4cbe118fd4ce97284f712bb4
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '665'
 ht-degree: 0%
 
 ---
 
-# Licenspanelen {#license-dashboard}
+# Licensieringspanel {#license-dashboard}
 
 Med Cloud Manager får du en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller klientorganisation.
 
@@ -17,7 +17,7 @@ Med Cloud Manager får du en kontrollpanel där du enkelt kan se vilka AEMaaCS-p
 
 Licensinstrumentpanelen för Cloud Manager ger enkel åtkomst till följande information:
 
-1. Rätt till lösningar för alla program, inklusive vad som används och vad som är tillgängligt
+1. Du har tillgång till lösningsrättigheter i alla program, inklusive vad som används och vad som är tillgängligt
 1. Förbrukningsstatistik för innehållsbegäran trendade per månad för webbplatslösningen
 
 ## Använda License Dashboard {#using-dashboard}
@@ -32,7 +32,7 @@ Följ de här stegen för att få åtkomst till din kontrollpanel för licenser.
 
 1. På produktöversikten växlar du till **Licens** -fliken.
 
-![Licenspanelen](assets/license-dashboard.png)
+![Licensieringspanel](assets/license-dashboard.png)
 
 Kontrollpanelen är uppdelad i tre avsnitt som visar dig:
 
@@ -40,16 +40,16 @@ Kontrollpanelen är uppdelad i tre avsnitt som visar dig:
 * **Tillägg** - I det här avsnittet sammanfattas vilka tillägg till licensierade lösningar som du har tillgång till.
 * **Sandbox &amp; Development Environment** - I det här avsnittet sammanfattas vilka miljöer du har.
 
-I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om något alls. För närvarande visas bara platslösningar även om det finns andra lösningar i klientorganisationen.
+I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om något alls. För närvarande visas bara platslösningar, även om det finns andra lösningar i klientorganisationen.
 
-* The **Status** kolumn visar antalet ej använda berättiganden jämfört med totalt antal tillgängliga för klienten.
+* The **Status** kolumn visar antalet oanvända berättiganden jämfört med det totala tillgängliga för klienten.
 * The **Konfigurerad den** -kolumnen anger de program som lösningsberättigandet har tillämpats på.
-   * Ett berättigande anses bara användas när en produktionsmiljö har skapats eller om det redan finns en, om en uppdateringspipeline har körts på den.
+   * Ett berättigande anses bara användas när en produktionsmiljö har skapats eller om det finns en sådan, om en uppdateringspipeline har körts på den.
 * The **Användning** kolumn visas de innehållsbegäranden som har förbrukats under de senaste 12 månaderna som ett diagram när du klickar på det.
 
 >[!TIP]
 >
->Se [Admin Console - översikt](https://helpx.adobe.com/enterprise/using/admin-console.html) om du vill veta hur du hanterar dina Adobe-rättigheter i hela organisationen från Admin Console.
+>Om du vill veta hur du hanterar dina Adobe-rättigheter i hela organisationen från Admin Console går du till [Admin Console - översikt](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Vanliga frågor {#faq}
 
@@ -59,7 +59,9 @@ En innehållsbegäran är en begäran som kommer in i AEM Sites eller något ann
 
 En innehållsbegäran räknas för varje sidvy eller för var femte API-anrop, mätt i ingressen till det första cachelagringssystemet som tar emot en innehållsbegäran. Innehållsbegäranden räknas endast mot produktionsmiljöer.
 
-Innehållsförfrågningar utesluter förfrågningar eller aktiviteter som initierats av eller på uppdrag av Adobe enbart i syfte att tillhandahålla produkter och tjänster. Användaragenttrafik som identifieras av Adobe från botar, crawler och spindlar som hör till vanliga sökmotorer och tjänster inom sociala medier är också utesluten.
+Innehållsförfrågningar exkluderar förfrågningar eller aktiviteter som initierats av eller på uppdrag av Adobe enbart i syfte att tillhandahålla produkter och tjänster. Användaragenttrafik som identifieras av Adobe från botar, crawler och spindlar som hör till vanliga sökmotorer och tjänster inom sociala medier är också utesluten.
+
+Se även [Förstå begäranden om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md).
 
 ### Hur mäter Adobe Experience Manager förfrågningar om innehåll? {#how-are-content-requests-measured}
 
@@ -67,26 +69,16 @@ Innehållsförfrågningar spåras på AEM as a Cloud Service edge-servrar. Urspr
 
 AEM har också regler för att utesluta välkända organ, inklusive välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst.
 
+Se även [Förstå begäranden om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md).
+
 ### Varför visar min analysrapport andra resultat än AEM innehållsförfrågningar? {#why-are-reports-different}
 
-Innehållsförfrågningar kommer att innehålla avvikelser med en organisations analysrapporteringsverktyg som sammanfattas i den här tabellen.
-
-| Orsak till avvikelse | Förklaring |
-|---|---|
-| Taggar | Alla sidor som spåras som AEM innehållsförfrågningar kan taggas med Analytics-spårning eller inte. Alla API-anrop som spåras som AEM kommer inte att taggas av en organisations analysverktyg.<br>Sidor eller API-anrop kan taggas för att spåra åtgärder eller bara unika sidvyer i stället för alla vyer. |
-| Tag Management Rules | Regelinställningar för tagghantering kan resultera i olika konfigurationer för datainsamling på en sida, vilket resulterar i en kombination av avvikelser med spårning av innehållsbegäran. |
-| Bots | Okända botar som inte har föridentifierats och tagits bort av AEM kan orsaka spårningsavvikelser. |
-| Rapportsviter | Sidor som ingår i samma AEM och domän kan skicka data till olika rapportsviter i Analytics. |
-| Övervaknings- och säkerhetsverktyg från tredje part | Övervaknings- och säkerhetssökningsverktygen kan generera innehållsförfrågningar för AEM som inte spåras i analysrapporter. |
-| Förhämtningsbegäranden | Om du använder en förhämtningstjänst för att förhandsladda sidor för att öka hastigheten kan det medföra att trafiken för innehållsförfrågningar ökar avsevärt. |
-| DOS | Adobe gör sitt yttersta för att automatiskt upptäcka och filtrera bort trafik från DDOS-attacker, men det finns ingen garanti för att alla möjliga DDOS-attacker identifieras |
-| Trafikblockerare | Om du använder en spårningsblockerare i en webbläsare kan det hända att vissa begäranden inte spåras. |
-| Brandväggar | Brandväggar kan blockera Analytics-spårning. Detta är vanligare med brandväggar. |
+Innehållsförfrågningar kan innehålla avvikelser med en organisations analysrapporteringsverktyg. Mer information finns i [Förstå begäranden om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md).
 
 ### Vad gör jag om jag vill veta mer om min innehållsförfrågningsvolym? {#current-request-volumes}
 
-Om du vill ha ytterligare insikter om hur många innehållsförfrågningar som visas på License Dashboard kan ditt Adobe-team tillhandahålla en rapport som visar de viktigaste volymdrivrutinerna för innehållsförfrågningar. Kontakta ert Adobe-team eller Adobe kundtjänst för att få en rapport om hur ni bäst använder dem.
+Om du vill ha ytterligare insikter om hur många innehållsförfrågningar som visas på License Dashboard kan ditt Adobe-team tillhandahålla en rapport som visar de viktigaste volymdrivrutinerna för innehållsförfrågningar. Kontakta ert Adobe-team eller Adobe kundsupport för att få en rapport över de viktigaste användningsområdena.
 
 ### Vad händer om jag använder mitt eget CDN? {#using-own-cdn}
 
-Licensinstrumentpanelen visar endast data som spåras av Cloud Servicens CDN.  Om du väljer att ta med ditt eget CDN (BYOCDN) kommer du att rapportera din innehållsbegärandevolym till Adobe på årsbasis, vilket framgår av ditt avtal.
+På kontrollpanelen för licenser visas endast data som spåras av Cloud Servicens CDN. Om du väljer att ta med ditt eget CDN (BYOCDN) rapporterar du antalet innehållsförfrågningar till Adobe på årsbasis, vilket framgår av ditt avtal.
