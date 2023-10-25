@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 5e6d209729809952b2478fd0a71b32668ba41230
+source-git-commit: c9ad4b6f2ae5107569c556ca11c75868c9e4be63
 workflow-type: tm+mt
-source-wordcount: '4336'
+source-wordcount: '4335'
 ht-degree: 19%
 
 ---
@@ -168,7 +168,7 @@ ht-degree: 19%
    + [IMS-stöd för AEM as a Cloud Service](/help/security/ims-support.md)
    + [Stöd för samma webbplats-cookie AEM as a Cloud Service](/help/security/same-site-cookie-support.md)
    + [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md)
-   + [Konfigurera trafikfilterregler med WAF-regler för att filtrera trafik](/help/security/cdn-and-waf-rules.md)
+   + [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md)
    + [AEM as a Cloud Service säkerhetsfrågor](/help/security/security-considerations.md)
 + Introduktion till {#onboarding}
    + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)
@@ -578,7 +578,7 @@ ht-degree: 19%
          + [Koppla AEM Forms till databas eller datakälla](/help/forms/data-integration.md)
          + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
          + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
-         + [Salesforce-programintegrering med OAuth 2.0-klientautentiseringsflöde](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+         + [Ansluta anpassat formulär till Salesforce-program med OAuth 2.0-klientens autentiseringsflöde](/help/forms/oauth2-client-credentials-flow-for-server-to-server-integration.md)
          + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
          + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
          + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
