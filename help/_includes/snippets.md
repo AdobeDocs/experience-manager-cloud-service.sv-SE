@@ -1,7 +1,7 @@
 ---
-source-git-commit: 867b87e0b22fdc4f0466b517e8a04c18fb2dc860
+source-git-commit: c20f59770f4eb722d49a96952126993577bfd65e
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 0%
 >[!NOTE]
 >
 >AEM stöder för närvarande inte tilldelning av grupper till profiler. Användare bör läggas till individuellt i stället.
+
+## WAF Config Limited Release {#waf-limited-release}
+
+[!BADGE WAF-DDOS-skydd kommer att finnas tillgängligt i slutet av 2023.]{type=Caution tooltip="WAF-DDOS-skydd kommer att finnas tillgängligt i slutet av 2023."}
 
 ## Se även {#see-also}
 

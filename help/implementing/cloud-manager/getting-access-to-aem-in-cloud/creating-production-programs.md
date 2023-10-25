@@ -2,9 +2,9 @@
 title: Skapa produktionsprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: ecb168e9261b3e3ed89e4cbe430b3da9f777a795
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
@@ -32,16 +32,19 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
 1. Du kan också lägga till en bild i programmet genom att dra och släppa en bildfil i **Lägg till en programavbildning** markera eller klicka på en bild i en filläsare. Tryck eller klicka **Fortsätt**.
 
-1. Om du har utökade säkerhetsrättigheter **Förbättrat skydd** kan du välja att **Aktivera förbättrat skydd** för produktionsprogrammet. Om det behövs markerar du alternativet för att aktivera förbättrat skydd och trycker eller klickar på **Fortsätt**.
+1. Om du har de rättigheter du behöver **Säkerhet** visas och du kan välja att aktivera **HIPAA** och/eller **WAF-DDOS-skydd** för produktionsprogrammet. Om det behövs för det program du skapar kontrollerar du de tillämpliga alternativen och trycker eller klickar på **Fortsätt**.
 
-   * Förbättrat skydd kan inte aktiveras eller inaktiveras efter att programmet har skapats.
-   * [Läs mer](https://www.adobe.com/go/hipaa-ready) om implementering av Adobe HIPAA-klar lösning.
+   * HIPAA kan inte aktiveras eller inaktiveras efter att programmet har skapats.
+      * [Läs mer](https://www.adobe.com/go/hipaa-ready) om implementering av Adobe HIPAA-klar lösning.
+   * När det är aktiverat kan WAF-DDOS-skyddet sedan konfigureras genom att konfigurera en [icke-produktionsrörledning.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
 
-   ![Förbättrat skydd, alternativ](assets/create-production-program-enhanced.png)
+   {{waf-limited-release}}
+
+   ![Säkerhetsalternativ](assets/create-production-program-security.png)
 
 1. På **Lösningar och tillägg** väljer du de lösningar som ska ingå i programmet.
 
-   * Om du är osäker på om du behöver ett eller flera program för de olika lösningar du har tillgängliga väljer du det som intresserar dig mest. Du kan aktivera ytterligare lösningar genom att [redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) senare. Se [Introduktion till produktionsprogramdokument](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för fler rekommendationer för programkonfiguration.
+   * Om du är osäker på om du behöver ett eller flera program för de olika lösningar du har tillgängliga väljer du det som intresserar dig mest. Du kan aktivera ytterligare lösningar genom att [redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) senare. Se [Introduktion till produktionsprogramdokument](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) om du vill ha fler rekommendationer för programkonfiguration.
    * Om du valde **Aktivera förbättrat skydd** tidigare får du bara välja så många lösningar som det finns tillgängliga HIPAA-berättiganden för.
 
    ![Välj lösningar](assets/setup-prod-select.png)
@@ -65,13 +68,13 @@ Ditt program skapas av Cloud Manager och visas och kan väljas på landningssida
 
 ![Översikt över Cloud Manager](assets/navigate-cm.png)
 
-## Använd ditt program {#acessing}
+## Använd ditt program {#accessing}
 
 1. När du ser ditt programkort på landningssidan väljer du ellipsknappen för att visa de menyalternativ som är tillgängliga för dig.
 
    ![Programöversikt](assets/program-overview.png)
 
-1. Välj **Programöversikt** för att gå till Cloud Managers **Översikt** sida.
+1. Välj **Programöversikt** för att gå till Cloud Managers **Ökning** sida.
 
 1. Huvudkortet på översiktssidan hjälper dig att skapa en miljö, en produktionsprocess och slutligen en produktionsprocess.
 

@@ -3,9 +3,9 @@ title: Konfigurera icke-produktionsförlopp
 description: Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
 index: true
 exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: ecb168e9261b3e3ed89e4cbe430b3da9f777a795
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1290'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,8 @@ ht-degree: 0%
 # Konfigurera icke-produktionsförlopp {#configuring-non-production-pipelines}
 
 Lär dig hur du konfigurerar icke-produktionsrörledningar för att testa kodens kvalitet innan du distribuerar den till produktionsmiljöer.
+
+En användare måste ha **[Distributionshanteraren](/help/onboarding/cloud-manager-introduction.md#role-based-permissions)** roll för att konfigurera icke-produktionsrörledningar.
 
 ## Icke-produktionsförlopp {#non-production-pipelines}
 
@@ -62,40 +64,16 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
 
 1. På **Källkod** -fliken i **Lägg till icke-produktionsförlopp** måste du välja vilken typ av kod som pipeline ska bearbeta.
 
-   * **[Front-End-kod](#front-end-code)**
-   * **[Fullständig stackkod](#full-stack-code)**
-   * **[Webbnivåkonfiguration](#web-tier-config)**
+   * **[Fullständig stapelkod](#full-stack-code)**
+   * **[Målinriktad distribution](#targeted-deployment)**
 
-Hur du slutför skapandet av din icke-produktionsprocess varierar beroende på vilket alternativ du har för **Källkod** du markerade. Följ länkarna ovan för att gå till nästa avsnitt i det här dokumentet så att du kan slutföra konfigurationen av din pipeline.
+Se dokumentet [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) för mer information om olika typer av rörledningar.
 
-### Front-End-kod {#front-end-code}
+Hur du slutför skapandet av din icke-produktionsprocess varierar beroende på vilken typ av källkod du har valt. Följ länkarna ovan för att gå till nästa avsnitt i det här dokumentet så att du kan slutföra konfigurationen av din pipeline.
 
-En frontkodspipeline distribuerar frontkodsbyggen som innehåller ett eller flera gränssnittsprogram på klientsidan. Se dokumentet [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) om du vill ha mer information om den här typen av pipeline.
+### Fullständig stapelkod {#full-stack-code}
 
-Följ de här stegen för att slutföra konfigurationen av produktionsflödet för icke-produktion av slutkod.
-
-1. På **Källkod** måste du definiera följande alternativ.
-
-   * **Berättigade driftsättningsmiljöer** - Om din pipeline är en distributionsprocess måste du välja till vilka miljöer den ska distribueras.
-   * **Databas** - Det här alternativet definierar från vilken Git-repo som pipelinen ska hämta koden.
-
-   >[!TIP]
-   > 
-   >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
-
-   * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
-      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Här hittas de matchande grenar som du kan välja.
-   * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
-
-   ![Front-end-pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-front-end.png)
-
-1. Klicka **Spara**.
-
-Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
-
-### Fullständig stackkod {#full-stack-code}
-
-En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationen. Se dokumentet [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#full-stack-pipeline) om du vill ha mer information om den här typen av pipeline.
+En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationen.
 
 >[!NOTE]
 >
@@ -115,32 +93,48 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Det hjälper dig att hitta matchande grenar som du kan välja.
    * **Ignorera webbnivåkonfiguration** - När du markerar det här alternativet distribueras inte webbnivåkonfigurationen.
-
    * **Pipeline** - Om din pipeline är en distributionsprocess kan du välja att köra en testfas. Markera de alternativ som du vill aktivera i den här fasen. Om inget av alternativen är markerat visas inte testfasen när pipeline körs.
 
       * **Funktionstestning av produkten** - Kör [funktionsprovningar av produkter](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) mot utvecklingsmiljön.
       * **Anpassad funktionstestning** - Kör [anpassade funktionstester](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) mot utvecklingsmiljön.
-      * **Testning av anpassat användargränssnitt** - Kör [anpassade gränssnittstester](/help/implementing/cloud-manager/ui-testing.md) för anpassade program.
+      * **Anpassade gränssnittstestningar** - Kör [anpassade gränssnittstester](/help/implementing/cloud-manager/ui-testing.md) för anpassade program.
+      * **Experience Audit** - Kör [Experience Audit](/help/implementing/cloud-manager/experience-audit-testing.md)
 
    ![Pipeline i full hög](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-full-stack.png)
 
 1. Klicka **Spara**.
 
-Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
+Pipelinen har sparats och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
 
-### Webbnivåkonfiguration {#web-tier-config}
+### Målinriktad distribution {#targeted-deployment}
 
-En konfigurationspipeline för webbskikt Distribuerar konfigurationer för HTTPD/Dispatcher. Se [CI/CD-rör](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipeline) om du vill ha mer information om den här typen av pipeline.
+En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en sådan distribution kan du välja **Inkludera** någon av följande typer av kod:
+
+* **[Konfig](#config)** - Konfigurera inställningar för din AEM, underhållsuppgifter, CDN-regler med mera.
+   * Se dokumentet [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) om du vill lära dig hur du hanterar trafikfilterregler i din databas så att de distribueras på rätt sätt.
+* **[Front End-kod](#front-end-code)** - Konfigurera JavaScript och CSS för den främre delen av AEM.
+   * Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
+   * Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) om hur den här processen fungerar tillsammans med vissa överväganden för att vara medveten om att utnyttja hela potentialen i den här processen.
+* **[Webbnivåkonfiguration](#web-tier-config)** - Konfigurera dispatcheregenskaper för att lagra, bearbeta och leverera webbsidor till klienten.
 
 >[!NOTE]
 >
->Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
+>* Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
+>* Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
+> * Det kan bara finnas en enda pipeline för konfigurationsdistribution per miljö.
 
-Följ de här stegen för att slutföra konfigurationen av icke-produktionsflödet för kod på webbnivå.
+Stegen för att slutföra skapandet av din icke-produktion, målinriktade distributionsprocess är desamma när du väljer en distributionstyp.
 
-1. På **Källkod** måste du definiera följande alternativ.
+1. Välj vilken distributionstyp du behöver.
 
-   * **Berättigade driftsättningsmiljöer** - Om din pipeline är en distributionsprocess måste du välja till vilka miljöer den ska distribueras.
+![Alternativ för målinriktad distribution](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-targeted-deployment.png)
+
+1. Definiera **Berättigade driftsättningsmiljöer**.
+
+   * Om din pipeline är en distributionsprocess måste du välja till vilka miljöer den ska distribueras.
+
+1. Under **Källkod** definierar du följande alternativ:
+
    * **Databas** - Det här alternativet definierar från vilken Git-repo som pipelinen ska hämta koden.
 
    >[!TIP]
@@ -148,25 +142,16 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
    >Se [Lägga till och hantera databaser](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) så att du kan lära dig hur du lägger till och hanterar databaser i Cloud Manager.
 
    * **Git-gren** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
+      * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Här hittas de matchande grenar som du kan välja.
    * **Kodplats** - Det här alternativet definierar den sökväg i förgreningen för den valda rapporten från vilken pipelinen ska hämta koden.
-      * För konfigurationspipelines på webbnivå innehåller den här sökvägen vanligtvis `conf.d`, `conf.dispatcher.d`och `opt-in` kataloger.
-      * Om projektstrukturen till exempel genererades från [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) banan `/dispatcher/src`.
 
-   ![Rörledning på webbnivå](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-web-tier.png)
+   ![Konfigurerar distributionspipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-config-deployment.png)
 
 1. Klicka **Spara**.
 
->[!NOTE]
->
->Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
+Pipelinen har sparats och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
 
-Pipelinen sparas och du kan nu [hantera dina rörledningar](managing-pipelines.md) på **Pipelines** på **Programöversikt** sida.
-
-## Developing Sites with the Front-End Pipeline {#developing-with-front-end-pipeline}
-
-Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
-
-Se dokumentet [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) om hur den här processen fungerar tillsammans med vissa överväganden för att vara medveten om att utnyttja hela potentialen i den här processen.
+När en riktad distributionsprocess körs, konfigurationer [såsom WAF-konfigurationer](/help/security/traffic-filter-rules-including-waf.md) distribueras, förutsatt att de sparas i den miljö, databas och gren som du definierade i pipeline.
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 

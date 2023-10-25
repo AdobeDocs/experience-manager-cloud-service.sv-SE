@@ -2,12 +2,13 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: c9ad4b6f2ae5107569c556ca11c75868c9e4be63
+source-git-commit: 221f6df73fe660c6f8dbf79affdccdd081ad3906
 workflow-type: tm+mt
-source-wordcount: '4381'
+source-wordcount: '4210'
 ht-degree: 0%
 
 ---
+
 
 # Trafikfilterregler inklusive WAF-regler {#traffic-filter-rules-including-waf-rules}
 
@@ -16,59 +17,61 @@ ht-degree: 0%
 >Den här funktionen är ännu inte allmänt tillgänglig. Om du vill gå med i det pågående programmet för tidiga användare skickar du e-post **aemcs-waf-adopter@adobe.com**, inklusive namnet på organisationen och sammanhanget om ditt intresse för funktionen.
 
 Trafikfilterregler kan användas för att blockera eller tillåta förfrågningar i CDN-lagret, vilket kan vara användbart i scenarier som:
-* begränsa åtkomsten till specifika domäner till intern företagstrafik innan en ny webbplats publiceras
-* fastställa gränsvärden för att bli mindre mottagliga för volymetriska DDoS-attacker
-* förhindra att IP-adresser som du vet är skadliga riktas mot dina sidor
+
+* Begränsa åtkomsten till specifika domäner till intern företagstrafik innan en ny webbplats publiceras
+* Fastställande av hastighetsgränser så att de blir mindre mottagliga för volymetriska DDoS-attacker
+* Förhindra att IP-adresser som du vet är skadliga riktas mot dina sidor
 
 Vissa av dessa trafikfilterregler är tillgängliga för alla AEM as a Cloud Service webbplatser och Forms-kunder. De arbetar huvudsakligen med egenskaper för begäran och begäranrubriker, inklusive IP, värdnamn, sökväg och användaragent.
 
 En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhetslicens eller en licens för skydd av WAF-DDoS. Dessa kraftfulla regler kallas för trafikfilterregler för WAF (Web Application Firewall) (eller för korta WAF-regler) och har tillgång till [WAF-flaggor](#waf-flags-list) beskrivs senare i den här artikeln. Webbplatser och Forms-kunder kan kontakta sitt Adobe-kontoteam för att få information om hur man licensierar den här avancerade funktionen.
 
-Trafikfilterregler kan distribueras via Cloud Managers Configuration Pipeline till olika typer av dev-, stage- och produktionsmiljöer i produktionsprogram (inte sandlådeprogram). Stöd för de regionala utvecklingsföretagen kommer i framtiden.
+Trafikfilterregler kan distribueras via Cloud Managers konfigurationspipelines för att dev, stage och produktionsmiljötyper i produktionsprogram (icke-sandlådeprogram). Stöd för de regionala utvecklingsföretagen kommer i framtiden.
 
-## Hur den här artikeln är organiserad {#how-organized}
+## Hur den här artikeln ordnas {#how-organized}
 
 Den här artikeln är indelad i följande avsnitt:
-* Trafikskydd - översikt: Lär dig hur du skyddas från skadlig trafik.
-* Föreslagen process för att konfigurera regler: Läs om en högnivåmetod för att skydda din webbplats.
-* Inställningar: Upptäck hur du konfigurerar, konfigurerar och distribuerar trafikfilterregler, inklusive avancerade WAF-regler.
-* Regelsyntax: Läs om hur du deklarerar trafikfilterregler i konfigurationsfilen cdn.yaml. Detta omfattar både trafikfilterreglerna som är tillgängliga för alla Sites- och Forms-kunder samt underkategorin med WAF-regler för dem som licensierar den funktionen.
-* Regelexempel: Se exempel på deklarerade regler för att hjälpa dig på vägen.
-* Regler för hastighetsbegränsning: Lär dig hur du använder regler för hastighetsbegränsning för att skydda din webbplats från attacker med stora volymer.
-* CDN-loggar: Se vad som deklarerats och vilka WAF-flaggor som matchar trafiken.
-* Kontrollpanelsverktyg: Analysera CDN-loggarna för att hitta nya trafikfilterregler.
-* Självstudiekurs: Praktiska kunskaper om funktionen, inklusive hur du använder kontrollpanelsverktyg för att deklarera rätt regler.
+
+* **Trafikskydd - översikt:** Lär dig hur du skyddas mot skadlig trafik.
+* **Föreslagen process för att konfigurera regler:** Läs om en högnivåmetod för att skydda er webbplats.
+* **Inställningar:** Upptäck hur du konfigurerar, konfigurerar och distribuerar trafikfilterregler, inklusive avancerade WAF-regler.
+* **Regelsyntax:** Läs om hur du deklarerar trafikfilterregler i `cdn.yaml` konfigurationsfil. Detta omfattar både trafikfilterreglerna som är tillgängliga för alla Sites- och Forms-kunder samt underkategorin med WAF-regler för dem som licensierar den funktionen.
+* **Exempel på regler:** Se exempel på deklarerade regler som hjälper dig att komma igång.
+* **Regler för hastighetsbegränsning:** Lär dig hur du använder hastighetsbegränsande regler för att skydda din webbplats från attacker med stora volymer.
+* **CDN-loggar:** Se vilka regler och WAF-flaggor som matchar er trafik.
+* **Kontrollpanelsverktyg:** Analysera dina CDN-loggar och hitta nya trafikfilterregler.
+* **Självstudiekurs:** Praktisk kunskap om funktionen, inklusive hur du använder kontrollpanelsverktyg för att deklarera rätt regler.
 <!-- About the tutorial: sets the context for a linked tutorial, which gives you practical knowledge about the feature, including how to use dashboard tooling to declare the right rules. -->
 
 ## Trafikskydd - översikt {#traffic-protection-overview}
 
 I det digitala landskapet är skadlig trafik ett hot som aldrig tidigare förekommit. Vi inser hur allvarlig risken är och erbjuder flera strategier för att skydda kundens tillämpningar och mildra attacker när de inträffar.
 
-Vid kanten absorberar det hanterade CDN-nätverket i Adobe DDoS-attacker i nätverkslagret (lager 3 och 4), inklusive översvämnings- och reflektions-/amplifieringsattacker.
+Vid kanten absorberar det hanterade CDN-nätverket i Adobe DDoS-attacker i nätverkslagret (lager 3 och 4), inklusive översvämnings- och speglings-/amplifieringsattacker.
 
-Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämring på grund av oväntat höga trafikökningar över ett visst tröskelvärde. I händelse av en DDoS-attack som påverkar webbplatsens tillgänglighet, varnas Adobe ledningsgrupper och vidtar åtgärder för att minska risken.
+Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämringar på grund av oväntat höga trafikökningar över ett visst tröskelvärde. I händelse av en DDoS-attack som påverkar webbplatsens tillgänglighet, varnas Adobe ledningsgrupper och vidtar åtgärder för att minska risken.
 
-Kunderna kan vidta förebyggande åtgärder för att mildra Application Layer-attacker (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
+Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
 På exempelvis lagret Apache kan man konfigurera antingen [avsändarmodul](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection.html?lang=en) för att begränsa åtkomsten till visst innehåll.
 
-Och som beskrivs i den här artikeln kan reglerna för trafikfilterregler distribueras till CDN med hjälp av Cloud Managers Configuration Pipeline. Utöver trafikförfrågningsbaserade trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker kan kunderna även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
+Som beskrivs i den här artikeln kan trafikfilterregler distribueras till CDN med hjälp av Cloud Managers konfigurationsflöde. Utöver trafikförfrågningsbaserade trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker kan kunderna även licensiera en kraftfull underkategori av trafikfilterregler som kallas för WAF-regler.
 
 ## Föreslagen process {#suggested-process}
 
-Här följer en högnivårekommenderad process från början till slut för att komma på rätt trafikfilterregler:
+Nedan följer en högnivårekommenderad process från början till slut för att komma fram till rätt trafikfilterregler:
 
 1. Konfigurera en icke-produktions- och produktionskonfigurationspipeline, enligt beskrivningen i [Inställningar](#setup) -avsnitt.
 1. Kunder som har licensierat underkategorin för reglerna för WAF-trafikfilter bör aktivera dem i Cloud Manager.
 1. Läs igenom och prova självstudiekursen för att få en större förståelse för hur du använder trafikfilterregler, inklusive WAF-regler om de har licensierats. Självstudiekursen leder dig genom att distribuera regler till en utvecklingsmiljö, simulera skadlig trafik, ladda ned [CDN-loggar](#cdn-logs)och analysera dem i [kontrollpanelsverktyg](#dashboard-tooling).
-1. Kopiera de rekommenderade initialreglerna till cdn.yaml och distribuera konfigurationen till produktion i loggläge.
+1. Kopiera de rekommenderade initialreglerna till `cdn.yaml` och distribuera konfigurationen till produktionen i loggläge.
 1. Analysera resultatet efter att ha samlat in viss trafik med [kontrollpanelsverktyg](#dashboard-tooling) för att se om det fanns några träffar. Leta efter falska positiva inställningar och gör nödvändiga justeringar för att aktivera standardreglerna i blockläge.
 1. Lägg till anpassade regler baserat på analys av CDN-loggarna, först testning med simulerad trafik i utvecklingsmiljöer, innan distributionen till scenen och produktionen i loggläge görs, sedan blockläge.
 1. Övervaka trafiken kontinuerligt och ändra reglerna allt eftersom hotelandskapet utvecklas.
 
 ## Inställningar {#setup}
 
-1. Skapa först följande mapp- och filstruktur för mappen på den översta nivån i Git:
+1. Skapa först följande mapp- och filstruktur för mappen på den översta nivån i projektet i Git:
 
    ```
    config/
@@ -96,41 +99,23 @@ Här följer en högnivårekommenderad process från början till slut för att 
          action: block
    ```
 
-Parametern &quot;kind&quot; ska ställas in på &quot;CDN&quot; och versionen ska ställas in på schemaversionen, som för närvarande är &quot;1&quot;. Se exemplen längre fram.
+The `kind` parametern ska anges till `CDN` och versionen bör anges till schemaversionen, som för närvarande är `1`. Se exemplen längre fram.
 
 
 <!-- Two properties -- `envType` and `envId` -- may be included to limit the scope of the rules. The envType property may have values "dev", "stage", or "prod", while the envId property is the environment (e.g., "53245"). This approach is useful if it is desired to have a single configuration pipeline, even if some environments have different rules. However, a different approach could be to have multiple configuration pipelines, each pointing to different repositories or git branches. -->
 
 1. För att konfigurera WAF-regler måste WAF vara aktiverat i Cloud Manager, vilket beskrivs nedan för både nya och befintliga programscenarier. Observera att en separat licens måste köpas för WAF.
 
-   1. Om du vill konfigurera WAF för ett nytt program ska du kontrollera **WAF-DDOS-skydd** kryssrutan i **Säkerhet** enligt nedan. Fortsätt genom att följa stegen som beskrivs i [Lägg till produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md) för att skapa ditt program
+   1. Om du vill konfigurera WAF för ett nytt program ska du kontrollera **WAF-DDOS-skydd** kryssruta på **Säkerhet** när du [lägga till ett produktionsprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
 
-   1. Om du vill konfigurera WAF för ett befintligt program väljer du **Redigera program** genom att följa stegen som beskrivs i [Redigeringsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) dokumentation. Sedan i **Säkerhet** kan du när som helst avmarkera eller kontrollera alternativet WAF-DDOS
+   1. Så här konfigurerar du WAF för ett befintligt program: [redigera ditt program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) och **Säkerhet** avmarkera eller kontrollera **WAF-DDOS** när som helst.
 
-1. För andra miljötyper än RDE kör du Cloud Managers konfigurationsflöde, som kan konfigureras enligt beskrivningen nedan.
+1. För andra miljötyper än RDE skapar du en riktad distributionskonfiguration i Cloud Manager.
 
-   1. På ditt pipeline-kort på startsidan för Cloud Manager väljer du **Lägg till produktionspipeline** eller **Lägg till icke-produktionsförlopp** för att starta guiden Lägg till pipeline
-   1. Välj **Distributionsförlopp** på konfigurationsfliken
+   * [Se det här dokumentet för produktion av rörledningar.](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md)
+   * [Se det här dokumentet för icke-produktionsrörledningar.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
 
-      ![Välj alternativet Distributionsförlopp](/help/security/assets/deployment.png)
-
-   1. Ge pipelinen ett namn och välj distributionsutlösare och välj sedan **Fortsätt**
-   1. I **Källkod** flik, välja **Målinriktad distribution** väljer **Konfig**
-
-      ![Välj målinriktad distribution](/help/security/assets/target-deployment.png)
-
-   1. Välj databas och gren efter behov. Om det finns en konfigurationspipeline för den valda miljön är det här valet inaktiverat.
-
-      ![Översikt över en konfigurationspipeline](/help/security/assets/config-pipeline.png)
-
-      >[!NOTE]
-      >
-      > Användarna måste vara inloggade som Deployment Manager för att kunna konfigurera eller köra dessa pipelines.
-      > Dessutom kan du bara konfigurera och köra en Config-pipeline per miljö.
-
-   1. Ange kodplats där rotkonfigurationen lagras (t.ex. /config).
-   1. Välj **Spara**. Din nya pipeline kommer att visas i pipeline-kortet och kan köras när du är klar.
-   1. Kommandoraden kommer att användas för RDE, men RDE stöds inte för närvarande.
+Kommandoraden kommer att användas för RDE, men RDE stöds inte för närvarande.
 
 ## Syntax för trafikfilterregler {#rules-syntax}
 
@@ -159,13 +144,13 @@ data:
           wafFlags: [ SQLI, XSS]
 ```
 
-Formatet på trafikfilterreglerna i filen cdn.yaml beskrivs nedan. Se några [andra exempel](#examples) i ett senare avsnitt, samt i ett separat avsnitt om [Regler för hastighetsbegränsning](#rate-limit-rules).
+Formatet på trafikfilterreglerna i `cdn.yaml` filen beskrivs nedan. Se några [andra exempel](#examples) i ett senare avsnitt, samt i ett separat avsnitt om [Regler för hastighetsbegränsning](#rate-limit-rules).
 
 
 | **Egenskap** | **De flesta trafikfilterreglerna** | **WAF-trafikfilterregler** | **Typ** | **Standardvärde** | **Beskrivning** |
 |---|---|---|---|---|---|
 | name | X | X | `string` | - | Regelnamn (64 tecken långt, får bara innehålla alfanumeriska tecken och - ) |
-| när | X | X | `Condition` | - | Den grundläggande strukturen är:<br><br>`{ <getter>: <value>, <predicate>: <value> }`<br><br>Se Syntaxen för villkorsstruktur nedan, som beskriver get-ters, prediates och hur du kombinerar flera villkor. |
+| när | X | X | `Condition` | - | Den grundläggande strukturen är:<br><br>`{ <getter>: <value>, <predicate>: <value> }`<br><br>[Se Syntax för villkorsstruktur](#condition-structure) nedan, som beskriver get-metoderna, predikaten och hur du kombinerar flera villkor. |
 | åtgärd | X | X | `Action` | logg | log, allow, block, log eller action object Standardvärdet är log |
 | rateLimit | X |   | `RateLimit` | inte definierad | Konfiguration för hastighetsbegränsning. Hastighetsbegränsning är inaktiverad om den inte är definierad.<br><br>Det finns ett separat avsnitt nedan som beskriver rateLimit-syntaxen, tillsammans med exempel. |
 
@@ -342,7 +327,7 @@ data:
 
 **Exempel 4**
 
-Den här regeln blockerar begäranden till path /block-me och blockerar alla begäranden som matchar ett SQLI- eller XSS-mönster. I det här exemplet finns det en regel för WAF-trafikfilter som refererar till SQLI och XSS [WAF-flaggor](#waf-flags-list)som kräver en separat licens.
+Den här regeln blockerar begäranden till sökväg `/block-me`och blockerar alla förfrågningar som matchar `SQLI` eller `XSS` mönster. I det här exemplet finns det en regel för WAF-trafikfilter som refererar till `SQLI` och `XSS` [WAF-flaggor](#waf-flags-list)som kräver en separat licens.
 
 ```
 kind: "CDN"
@@ -462,9 +447,9 @@ data:
 
 AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara för fall som till exempel optimering av träffkvoten och konfigurering av CDN- och WAF-regler. CDN-loggar visas i Cloud Manager **Hämta loggar** när du väljer Författare eller Publiceringstjänst.
 
-Observera att CDN-loggar kan vara upp till 5 minuter fördröjda.
+Observera att CDN-loggar kan fördröjas upp till 5 minuter.
 
-Egenskapen&quot;rules&quot; beskriver vilka trafikfilterregler som matchas och har följande mönster:
+The `rules` egenskapen beskriver vilka trafikfilterregler som matchas och har följande mönster:
 
 ```
 "rules": "match=<matching-customer-named-rules-that-are-matched>,waf=<matching-WAF-rules>,action=<action_type>"
@@ -478,14 +463,14 @@ Till exempel:
 
 Reglerna fungerar på följande sätt:
 
-* Alla matchande regelnamn som har deklarerats av kunden visas i attributet match.
-* åtgärdsattributet innehåller information om huruvida reglerna har lett till blockering, tillstånd eller loggning.
-* om WAF är licensierat och aktiverat listas alla SWF-regler (t.ex. SQLI; observera att detta är oberoende av det kunddeklarerade namnet) som upptäcktes, oavsett om SWF-reglerna listades i konfigurationen.
-* om inga kunddeklarerade regler matchar och inga waf-regler matchar, kommer egenskapen för regelattribut att vara tom.
+* Det kunddeklarerade regelnamnet för matchande regler visas i attributet match.
+* Åtgärdsattributet anger om reglerna har en effekt av blockering, tillåtelse eller loggning.
+* Om WAF är licensierat och aktiverat listas alla SWF-regler (t.ex. SQLI; observera att detta är oberoende av det kunddeklarerade namnet) som har identifierats, oavsett om SWF-reglerna har listats i konfigurationen.
+* Om inga kunddeklarerade regler matchar och inga SWF-regler matchar, kommer egenskapen för regelattribut att vara tom.
 
 I allmänhet visas matchande regler i loggposten för alla förfrågningar till CDN, oavsett om det är en CDN-träff, ett pass eller en miss. Däremot visas WAF-regler i loggposten endast för begäranden till CDN som betraktas som CDN-missar eller -pass, men inte CDN-träffar.
 
-I exemplet nedan visas ett exempel på cdn.yaml och två CDN-loggposter:
+Exemplet nedan visar ett exempel `cdn.yaml` och två CDN-loggposter:
 
 
 ```
@@ -574,25 +559,26 @@ Adobe tillhandahåller en mekanism för att hämta instrumentpanelsverktyg till 
 
 Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) Github-arkiv.
 
-Se självstudiekursen för konkreta anvisningar om hur du använder kontrollpanelsverktygen.
+[Se självstudiekursen](#tutorial) om du vill ha konkreta anvisningar om hur du använder kontrollpanelsverktygen.
 
 ## Självstudiekurs {#tutorial}
 
 Adobe tillhandahåller en mekanism för att hämta instrumentpanelsverktyg till din dator för att importera CDN-loggar som hämtats via Cloud Manager. Med den här verktygen kan du analysera trafiken för att hitta rätt trafikfilterregler som ska deklareras, inklusive WAF-regler. Det här avsnittet innehåller först några instruktioner för att bli bekant med kontrollpanelsverktygen i en utvecklingsmiljö, följt av vägledning om hur du använder dessa kunskaper för att skapa regler i en produktmiljö.
 
-Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) Github-arkiv.
+Kontrollpanelsverktygen kan klonas direkt från [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) GitHub-databas.
 
 
 ### Bekanta dig med kontrollpanelsverktygen {#dashboard-getting-familiar}
 
-1. Skapa en icke-produktionskonfigurationspipeline för Cloud Manager som är associerad med en dev-miljö. Välj först alternativet Distributionsförlopp. Välj sedan Måldistribution, Konfigurera, din databas, Git-grenen och ange kodplatsen till /config.
+1. Skapa en icke-produktionskonfigurationspipeline för Cloud Manager som är kopplad till en utvecklingsmiljö. Markera först **Distributionsförlopp** alternativ. Välj sedan **Målinriktad distribution**, Config, din databas, Git-grenen och ange kodplatsen till /config.
 
    ![Lägg till utvalda distributioner av icke-produktionspipeline](/help/security/assets/waf-select-pipeline1.png)
 
    ![Lägg till produktionsflöde som valts som mål](/help/security/assets/waf-select-pipeline2.png)
 
+[I det här dokumentet finns mer information om hur du ställer in icke-produktionsrörledningar.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
 
-1. Skapa en mappkonfiguration på rotnivå på arbetsytan och lägg till en fil med namnet cdn.yaml, där du deklarerar en enkel regel och anger den i loggläge i stället för i blockeringsläge.
+1. Skapa en mappkonfiguration på rotnivå på arbetsytan och lägg till en fil med namnet `cdn.yaml`, där du deklarerar en enkel regel och anger den i loggläge i stället för i blockeringsläge.
 
 ```
 kind: "CDN"
@@ -617,7 +603,7 @@ data:
 
    ![Kör konfigurationsförlopp](/help/security/assets/waf-run-pipeline.png)
 
-1. När konfigurationen har distribuerats kan du försöka komma åt https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me via webbläsaren eller med kommandot Kontroll nedan. Du bör få en felsida 404 eftersom den sidan inte finns.
+1. När konfigurationen har distribuerats kan du försöka komma åt den `https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me` med webbläsaren eller med kommandot Rulla nedan. Du bör få en felsida 404 eftersom den sidan inte finns.
 
    ```
    curl -svo /dev/null https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me
@@ -665,13 +651,13 @@ data:
       action: block
 ```
 
-1. När konfigurationen har distribuerats kan du försöka komma åt https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me via webbläsaren eller med kommandot Kontroll nedan. Du bör få en felsida på 406 som anger att begäran blockerades.
+1. När konfigurationen har distribuerats kan du försöka komma åt den `https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me` med webbläsaren eller med kommandot Rulla nedan. Du bör få en felsida på 406 som anger att begäran blockerades.
 
    ```
    curl -svo /dev/null https://publish-pXXXXX-eYYYYYY.adobeaemcloud.com/log/me
    ```
 
-1. Återigen hämtar du CDN-loggar i Cloud Manager (Obs! Det kan ta upp till 5 minuter innan nya begäranden visas i CDN-loggarna) och importerar dem till instrumentpanelsverktygen som vi gjorde tidigare. Uppdatera instrumentpanelen när du är klar. Som du kan se på skärmbilden nedan blockeras förfrågningar till /log/me av vår regel.
+1. Återigen hämtar du CDN-loggar i Cloud Manager (Obs! Det kan ta upp till 5 minuter innan nya begäranden visas i CDN-loggarna) och importerar dem till instrumentpanelsverktygen som vi gjorde tidigare. Uppdatera instrumentpanelen när du är klar. Som du kan se i skärmbilden nedan, begär `/log/me` är blockerade av vår regel.
 
    ![Visa produktkontrollpanelsdata](/help/security/assets/dashboard-see-data-blockmode.png)
    ![Visa produktkontrollpanelsdata](/help/security/assets/dashboard-see-data-blockmode2.png)
@@ -767,7 +753,7 @@ data:
 
    ![Visa WAF-data](/help/security/assets/waf-dashboard-ratelimiter-2.png)
 
-   Som du kan se vår regel *limit-requests-client-ip* har utlösts.
+   Som du kan se vår regel **limit-requests-client-ip** har utlösts.
 
    Nu när du är bekant med hur trafikfilterregler fungerar kan du gå över till produktionsmiljön.
 
@@ -870,7 +856,7 @@ data:
 
 1. Ställ in lämpliga regler på blockläge och överväg även att lägga till ytterligare regler. Vissa av reglerna kanske ska vara i loggläge när du analyserar mer trafik.
 
-1. Distribuera om konfigurationen
+1. Distribuera om konfigurationen.
 
 1. Iterera och analysera instrumentpanelerna ofta.
 

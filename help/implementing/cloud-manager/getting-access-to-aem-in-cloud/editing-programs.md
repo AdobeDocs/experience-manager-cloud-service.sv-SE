@@ -2,9 +2,9 @@
 title: Redigeringsprogram
 description: Lär dig hur du redigerar produktions- och sandlådeprogram för att justera deras alternativ efter att du har skapat dem.
 exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
-source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
+source-git-commit: ecb168e9261b3e3ed89e4cbe430b3da9f777a795
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
@@ -53,15 +53,19 @@ Du måste vara medlem i **Företagsägare** roll för att redigera program eller
    * Detta datum är endast avsett som information. Den aktiverar Go Live-widgeten på programöversiktssidan. Det innehåller i sin tur länkar till Adobe Experience Manager (AEM) as a Cloud Service best practice-dokumentation för att passa in i kundresan, vilket leder till en lyckad Go Live-upplevelse.
    * Den här fliken är inte tillgänglig för sandlådeprogram.
 
+1. Om de begärda berättigandena finns tillgängliga för programmet, **Säkerhet** visas var du kan ändra säkerhetsalternativen för programmet.
+
+   ![Redigera säkerhetsinställningar](assets/edit-program-security.png)
+
+   * HIPAA kan inte aktiveras eller inaktiveras efter [skapa program.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
+      * [Läs mer](https://www.adobe.com/go/hipaa-ready) om implementering av Adobe HIPAA-klar lösning.
+   * När det är aktiverat kan WAF-DDOS-skyddet sedan konfigureras genom att konfigurera en [icke-produktionsrörledning.](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
+
+   {{waf-limited-release}}
+
 1. Klicka **Uppdatera** för att spara ändringarna i programmet.
 
 Varje gång ett program redigeras, som att lägga till eller ta bort en lösning eller ett tillägg, börjar ändringarna gälla efter nästa distribution.
-
-Om ditt produktionsprogram hade förbättrat säkerheten aktiverat, ytterligare **Förbättrat skydd** -fliken är tillgänglig i **Redigera program** för att bekräfta att funktionen är aktiv för programmet.
-
-![Förbättrat skydd är aktivt för ett program](assets/edit-program-enhanced.png)
-
-Du kan inte redigera den här inställningen efter att programmet har skapats. Mer information om alternativet Förbättrat skydd finns i [Skapa produktionsprogram](creating-production-programs.md).
 
 ## Tar bort sandlådeprogram {#delete-sandbox-program}
 
