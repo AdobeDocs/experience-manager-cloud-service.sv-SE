@@ -5,9 +5,9 @@ uuid: 6eefbe84-6496-4bf8-b065-212aa50cd074
 topic-tags: grdp
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 discoiquuid: 9f400560-8152-4d07-a946-e514e9b9cedf
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: f70e18b1c21fd530587694f91c3969e831cfc640
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Du kan komma åt och ta bort användardata från en arbetsflödesinstans i datab
 Du kan dock inte identifiera eller så kan resultatet vara tvetydigt när du identifierar arbetsflöden som är kopplade till en initierare i följande scenarier:
 
 * **Arbetsflöde som aktiveras via en bevakad mapp**: En arbetsflödesinstans kan inte identifieras med sin initierare om arbetsflödet utlöses av en bevakad mapp. I det här fallet kodas användarinformationen i de lagrade data.
-* **Arbetsflöde initierat från publiceringens AEM**: Alla arbetsflödesinstanser skapas med en tjänstanvändare när adaptiv Forms, interaktiv kommunikation eller brev skickas från AEM publiceringsinstans. I dessa fall hämtas inte användarnamnet för den inloggade användaren i arbetsflödets instansdata.
+* **Arbetsflöde initierat från publiceringens AEM**: Alla arbetsflödesinstanser skapas med en tjänstanvändare när Adaptive Forms eller brev skickas från AEM publiceringsinstans. I dessa fall hämtas inte användarnamnet för den inloggade användaren i arbetsflödets instansdata.
 
 ### Åtkomst till användardata {#access}
 

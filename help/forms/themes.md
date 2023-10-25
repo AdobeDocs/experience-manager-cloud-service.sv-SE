@@ -2,9 +2,9 @@
 title: Hur kan vi skapa och använda teman för att utforma ett anpassat formulär?
 description: Använd adaptiva formulärteman för att utforma och ge en visuell identitet till ett adaptivt formulär. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: f70e18b1c21fd530587694f91c3969e831cfc640
 workflow-type: tm+mt
-source-wordcount: '5444'
+source-wordcount: '5441'
 ht-degree: 0%
 
 ---
@@ -650,7 +650,7 @@ Du kan se den genererade CSS-koden med följande alternativ:
     
     **Temeredigeraren:**
     
-    Med Theme Editor kan du skapa teman som du kan använda för att utforma formuläret &lt;!>— eller interaktiv kommunikation —>. Du kan ange komponenternas format i ett tema, vilket ger enhetlighet i utseende och känsla i flera formulär &lt;!>— eller interaktiv kommunikation —> du utvecklar. Du bör ange formatinformation i ett tema och sedan använda temat i ett formulär.
+    Med Theme Editor kan du skapa teman som du kan använda för att utforma formuläret &lt;!>— eller interaktiv kommunikation —>. Du kan ange komponenternas format i ett tema, vilket ger enhetlighet i utseende och känsla i flera formulär som du utvecklar. Du bör ange formatinformation i ett tema och sedan använda temat i ett formulär.
     
     ***Textformat:**
     

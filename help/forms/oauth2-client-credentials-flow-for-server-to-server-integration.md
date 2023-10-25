@@ -3,14 +3,14 @@ title: Hur integrerar man Salesforce med OAuth 2.0-klientautentiseringsflödet m
 description: Lär dig integrera Salesforce med AEM Forms med OAuth 2.0-klientautentiseringsflödet.
 Keywords: Integration of Salesforce using OAuth 2.0 client credential flow, salesforce integration with oauth2 using client credential flow, salesforce and client credential integration
 exl-id: 2c2029ab-6fb4-41a6-846c-175c3a79d921
-source-git-commit: d33c7278d16a8cce76c87b606ca09aa91f1c3563
+source-git-commit: f70e18b1c21fd530587694f91c3969e831cfc640
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '383'
 ht-degree: 2%
 
 ---
 
-# Integrering av Salesforce med OAuth 2.0-klientautentiseringsflöde {#configure-salesforce-with-ouath-2.0-client-credential}
+# Ansluta anpassat formulär till Salesforce med OAuth 2.0-klientens autentiseringsflöde {#configure-salesforce-with-ouath-2.0-client-credential}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -20,6 +20,7 @@ ht-degree: 2%
 Du kan använda klientautentiseringsuppgifter för OAuth 2.0 för att integrera AEM Forms med Salesforce-programmet. OAuth 2.0-klientens autentiseringsuppgifter är en standard och säker metod för direkt kommunikation utan användarinblandning.
 
 ![Arbetsflöde vid inställning av kommunikation mellan AEM Forms och Salesforce-program](/help/forms/assets/salesforce-workflow.png)
+
 AEM Forms utbyter klientautentiseringsuppgifterna (konsumentnyckel och hemlighet), som definieras i det Salesforce-anslutna programmet, för att få en åtkomsttoken.
 
 Det finns många fördelar med att använda OAuth 2.0-klientautentiseringsuppgifter för autentisering över autentisering av Authorization Code Flow:
@@ -38,7 +39,7 @@ Innan du ställer in kommunikation mellan ett Salesforce-program och en AEM-milj
 
 ## Konfigurera Salesforce-program med OAuth 2.0-klientautentiseringsflöde {#steps-to-create-aem-datasource-configuration}
 
-Så här integrerar du Salesforce-program med ett adaptivt formulär med autentiseringsinställningar för OAuth 2.0-klientautentisering:
+Så här ansluter du adaptivt formulär till Salesforce-programmet med autentiseringsinställningarna för OAuth 2.0-klientautentisering:
 
 1. Logga in på din Author-instans.
 1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Data Sources]**.
@@ -66,4 +67,6 @@ Så här integrerar du Salesforce-program med ett adaptivt formulär med autenti
 1. Klicka på **[!UICONTROL Test Connection]**.
 1. Om anslutningen lyckas klickar du på **[!UICONTROL Create]** -knappen.
 
-Nu kan du [skapa formulärdatamodellen](/help/forms/create-form-data-models.md) för att integrera den konfigurerade datakällan med ditt adaptiva formulär.
+Nu kan du [skapa formulärdatamodellen](/help/forms/create-form-data-models.md) för att skicka anpassat formulär till Salesforce-programmet.
+
+
