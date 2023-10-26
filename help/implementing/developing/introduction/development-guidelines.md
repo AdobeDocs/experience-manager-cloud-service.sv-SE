@@ -2,9 +2,9 @@
 title: Utvecklingsriktlinjer för AEM as a Cloud Service
 description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och om viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
-source-git-commit: 5aa4a049bc6a69f161ad04d2a64ab0871e672432
+source-git-commit: 1683819d4f11d4503aa0d218ecff6375fc5c54d1
 workflow-type: tm+mt
-source-wordcount: '2746'
+source-wordcount: '2733'
 ht-degree: 1%
 
 ---
@@ -69,9 +69,6 @@ Förutom att tillhandahålla timeout bör även en korrekt hantering av sådana 
 
 ## Hantera hastighetsbegränsningar för begäranden {#rate-limit-handling}
 
->[!NOTE]
->HTTP-felsvaret ändras från 503 till 429 under veckan 7 augusti 2023.
->
 När antalet inkommande begäranden som ska AEM överstiger felfria nivåer, svarar AEM på nya begäranden med HTTP-felkod 429. Program som anropar programmatiska AEM kan överväga att koda på ett defensivt sätt och försöka igen efter några sekunder med en exponentiell bakåtstrategi. Före mitten av augusti 2023 svarade AEM på samma villkor med HTTP-felkod 503.
 
 ## Inga klassiska gränssnittsanpassningar {#no-classic-ui-customizations}
