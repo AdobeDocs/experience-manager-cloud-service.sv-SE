@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: e771913562b3770e5a504432d40c770804aadc4b
+source-git-commit: aa9629c3e48ca0bf4654351462a94777af9ed651
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 1%
+source-wordcount: '606'
+ht-degree: 0%
 
 ---
 
@@ -13,41 +13,68 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Version 13804 {#release-13804}
+## Utgåva 14029 {#release-14029}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 13804, som offentliggjordes den 10 oktober 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 13665.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 14029, som offentliggjordes den 25 oktober 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 13804.
 
-2023.10.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
+2023.11.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-13804}
+### Förbättringar {#enhancements-14029}
 
-* GRANITE-47238: Underhåll av granskningslogg - Töm kronjobb för att använda kundkonfigurationen.
-* GRANITE-47123: Publicera (Sling) - Förbättra starttiden genom att initiera standardsökvägscachen asynkront som standard.
-* GRANITE-46618: Publicera (replikering) - Förbättra starthastigheten för publiceringen genom att gruppera replikeringsstatusmeddelanden.
-* GRANITE-47136: Indexering (hämtning) - Förbättra hämtningshastigheten för ny parallell indexhämtare (genom att inaktivera validering av kontrollsumma).
-* GRANITE-47211: Publicera (Infra) - Förbättra frikopplingen av publiceringsskiktens distributioner (genom att lagra och hämta namn på segmentlagerrevision).
-* GRANITE-47267: Uppdatering till Apache Felix Http Jetty 4.2.18 (inkluderar buggfix för parameterhantering av begäranden ([FELIX-6625](https://issues.apache.org/jira/browse/FELIX-6625)) med prestandaförbättringar för lokal utveckling och RDE-utveckling).
-* GRANITE-47247: Uppdatera till Sling Servlets Resolver 2.9.14 med prestandaförbättringar för serverupplösning.
+* ASSETS-28551: Förbättra skalbarheten för användargränssnittet för Mina länkresurser
+* ASSETS-28566: Lägg till dam:metadataForm Lucene-index
+* ASSETS-29281: Uppdatera RAPI för att skicka v2-nedladdningshändelser
 
-### Åtgärdade problem {#fixed-issues-13804}
+### Åtgärdade problem {#fixed-issues-14029}
 
-* GRANITE-47376: Författare (Infra) - Korrigera för DiscoveryTopologyOdefinierade fel efter rullande omstart.
-* CQ-4353436: AEM Web Console (Sling) - Tomma konfigurationer i ServiceUserMapperImpl-validerare (Principal/User) bryter AEM Instance ([SLING-11912](https://issues.apache.org/jira/browse/SLING-11912)).
-* SKYOPS-63925: Transformeringsjobb - Undvik TransformJob-fel med JDK 11 - ZipException: Ogiltiga CEN-rubrikfel (med flaggan disableZip64ExtraFieldValidation JVM).
-* SKYOPS-63361: Transformeringsjobb (loggning) Förbättrad loggning med transformeringsjobb (understeget CUSTOMER_EXTRACT).
-* SKYOPS-64103: FACT-verktyg (loggning) - Minska eller korta av fel- och varningsmeddelanden för Clientlib-kompilering.
-* SKYOPS-65109: FACT-verktyget (felhantering) - Innehållspaket med olösta beroenden resulterar i ett korrekt rapporterat fel.
-* SKYOPS-65368: FACT-verktyget (felhantering) - Verktyget körs i en oändlig inkluderingscykel och kan till slut ta slut i cirkulära inbäddningar av Clientlibs.
-* SKYOPS-64031: RDE - ComponentCacheImpl kan försättas i ett inkonsekvent tillstånd på grund av duplicerad ResourceResolverFactory-registrering ([SLING-12019](https://issues.apache.org/jira/browse/SLING-12019)).
-* ASSETS-29105: RDE - Begränsningsprovidern saknas i SecurityProviderRegistration requiredServicePids i RDE-funktionsmodellen.
-* GRANITE-44674: CoralUI - Den datepicker-funktion som krävs är felaktig.
+* ASSETS-25199: image core component not show right smart crop
+* ASSETS-26142: unified-shell.js customEnvLabel har inte angetts eller har inte gjorts om om identifieringsbegäran misslyckas eller avbryts
+* ASSETS-26416: Relativ datumpredikat definieras alltid som &quot;för 1 dag(ar) sedan&quot; i sökformuläret
+* ASSETS-27321: rensa gruppcache vid ändringar av teammedlemskap
+* ASSETS-27591: Åtgärda beroendet av gammal org.json
+* ASSETS-28439: Smarta taggar Blocklist NPE när global blockeringslista inte har konfigurerats
+* ASSETS-28612: BlockedTagResolver fix in &quot;database-api&quot;
+* ASSETS-28634: Omnissearch-fältet i Adobe stock får inte automatiskt tillagda tillgångsdata
+* ASSETS-28727: Listan Bearbetar profilkonfiguration visar inte de angivna anpassade värdena för höjd och bredd
+* ASSETS-29056: Lägg till omkodningsrenderingar AEM standardbearbetningsprofil
+* ASSETS-29105: Begränsningsprovidern saknas i SecurityProviderRegistration requiredServicePids i RDE-funktionsmodellen
+* ASSETS-29106: View on Adobe stock returnerar fel om det enhetliga gränssnittet är aktiverat AEM
+* ASSETS-29115: Ta bort konfigurationsegenskapen för sökvägar för begränsningsprovider
+* ASSETS-29208: Fel vid överföring av resurser orsakade av begäranden som skickats till en författarposition innan tjänsten CompleteUploadAssetServlet har registrerats
+* ASSETS-29297: Problem när sökning med utcheckat filter skapades
+* ASSETS-29363: Metadataprofilen tillämpar inte standardvärden för IPTC
+* ASSETS-29404: Listfrågegräns för länkdelsrapport
+* ASSETS-29431: Ta bort gamla funktionsflaggor
+* ASSETS-29443: Unified Shell Hero förblir synlig och klickbar när huvudläget för Granite Shell ändras till &quot;selection&quot;
+* ASSETS-29476: scene7DAMService.getS7FileReference(asset) API-anropet returnerar inte det förväntade värdet.
+* ASSETS-29515: Resurser/noder med&quot;jcr:lastModifiedBy&quot;:&quot;workflow-process-service&quot; visas som&quot;extern användare&quot; i listvyn
+* ASSETS-29579: Användare som inte är administratörer kan inte skapa bilduppsättning
+* ASSETS-29631: Använd dam:roles för säker leverans/sökning
+* ASSETS-29689: dc:roles (och den nya egenskapen dam:roles) ska filtreras från AEM
+* ASSETS-29738: Resursöverföringsbegränsningen misslyckas med NullPointerException
+* ASSETS-29779: Små resurser kan inte bearbetas till webben eftersom de inte lagras i blob
+* ASSETS-29892: Export av metadata misslyckas för mappar med ett stort antal resurser
+* ASSETS-29996: &quot;Extern användare&quot; som modifierare när resurser laddas upp regelbundet endast på PROD-instans
+* ASSETS-30167: HTML för adobe_dam:Restriktioner efter överföring av en resurs
+* ASSETS-30276: Dela länkens användargränssnitt: kan inte dela från resursinformation
+* ASSETS-30434: Händelsen för slutförd tillgångsbearbetning skickades inte till pipeline
+* ASSETS-30519: Lägg till RAPI i REDMetricsServletFilter
+* CQ-4354413: QueryBuilder: Frågor med hakparenteser översätts felaktigt till xpath
+* CQ-4354834: Det går inte att lägga till kommentarer i inkorgen
+* CQ-4354836: Det går inte att starta arbetsflödet eller skapa aktivitet från projektkonsolen
+* CQ-4354867: ToggleCondition-referensen refererar till ett fält som inte finns i InstanceActionServlet
+* CQ-4354895: AEM Translation Kit: 12 oktober
+* GRANITE-45560: Vanlig schemarepresentation i Eventing-kuvert
+* GRANITE-47267: Uppdatering till Apache Felix HTTP Jetty 4.2.18
+* GRANITE-47599: Innehållsimporten misslyckas sedan uppgraderingen 13323 (JCRVLT-721)
+* GRANITE-47873: Uppdatering till Apache Felix Webconsole 4.9.6
 
-### Kända fel {#known-issues-13804}
+### Kända fel {#known-issues-14029}
 
 * CQ-4354836: Det går inte att starta arbetsflödet eller skapa aktivitet från projektkonsolen.
 * CQ-4354834: Användare kan inte lägga till kommentarer i en inkorgsuppgift.
 
-### Inbäddade tekniker {#embedded-tech-13804}
+### Inbäddade tekniker {#embedded-tech-14029}
 
 | Teknik | Version | Länk |
 |---|---|---|
