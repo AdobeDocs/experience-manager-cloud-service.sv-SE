@@ -23,7 +23,7 @@ När varje steg har slutförts (extrahering och förtäring) kontrollerar du log
 
 ## Steg för att visa loggar {#viewing-logs}
 
-### Extraktionsloggar
+### Extraheringsloggar
 
 Om du vill visa extraheringsloggarna går du till Adobe Experience Manager-källinstansen och väljer önskad migreringsuppsättning.
 

@@ -19,7 +19,7 @@ ht-degree: 4%
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet. Som [!DNL Adobe Experience Manager] som [!DNL Cloud Service] innehåller en distributionsmodell som bygger på molnet, och vissa funktioner har ersatts av molnbaserade motsvarigheter.
 
-Att meddela att borttagning/ersättning av [!DNL Experience Manager] funktioner gäller följande regler:
+Att informera om den förestående borttagningen/ersättningen av [!DNL Experience Manager] funktioner gäller följande regler:
 
 1. Föråldringsanmälan kommer först. Föråldrade funktioner är fortfarande tillgängliga men har inte förbättrats ytterligare.
 1. Funktioner som annonserats vara borttagna så snart som möjligt i den senare större versionen. Det faktiska måldatumet för borttagning tillkännages.
@@ -34,12 +34,12 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 | Funktioner | Inaktuell funktion | Ersättning |
 | ------------ | ------------------ | ----------- |
-| [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. | Funktionen kommer snart att tas bort. |
+| [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. | Funktionen tas bort snart. |
 | [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md) nu. |
 | [!DNL Assets] | `DAM Asset Update` arbetsflöde för att bearbeta inkapslade bilder. | Tillgångsanvändning [tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md) nu. |
 | [!DNL Assets] | Överför resurser direkt till [!DNL Experience Manager]. Se [inaktuella API:er för överföring av resurser](/help/assets/developer-reference-material-apis.md#deprecated-asset-upload-api). | Använd [Direkt binär överföring](/help/assets/add-assets.md). Mer teknisk information finns i [API:er för direktöverföring](/help/assets/developer-reference-material-apis.md#upload-binary). |
 | [!DNL Assets] | [Vissa arbetsflödessteg](/help/assets/developer-reference-material-apis.md#post-processing-workflows-steps) in `DAM Asset Update` arbetsflödet stöds inte, inklusive anrop av kommandoradsverktyg som [!DNL ImageMagick]. | [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) som ersätter många arbetsflöden. Använd [efterbehandlingsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows). |
-| [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd vid generering av miniatyrbilder för MPEG [Resursmikrotjänster](/help/assets/asset-microservices-overview.md). För MPEG-omkodning använder du [Dynamic Media](/help/assets/manage-video-assets.md). |
+| [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd för att skapa miniatyrbilder av FFmpeg [Resursmikrotjänster](/help/assets/asset-microservices-overview.md). För MPEG-omkodning använder du [Dynamic Media](/help/assets/manage-video-assets.md). |
 | [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera i replikeringsagenten (borttagning efter 30 september 2021) | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) metoder |
 | [!DNL Foundation] | Varken replikeringsagentens administratörsskärms Distribute-flik eller replikerings-API:t kan användas för att replikera innehållspaket över 10 MB (verkställning efter 12 september 2022) | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [arbetsflöde för publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) metoder |
 
@@ -50,7 +50,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience Manager] med [!DNL Experience Manager] som [!DNL Cloud Service].
 
-| Yta | Funktion | Ersättning | Borttagningsdatum för mål |
+| Område | Funktion | Ersättning | Borttagningsdatum för mål |
 | ------------ | ------------------ | ----------- | ------------------- |
 | Användargränssnitt | Klassiskt användargränssnitt har tagits bort från produktanvändargränssnittet. Det finns ett fåtal klassiska användargränssnittsdialogrutor för vissa funktioner, som Länkkontroll, Rensa version och vissa Cloud Service. Kommande [produktuppdateringar](/help/release-notes/home.md) kan ta bort Classic UI-tillgängligheten ytterligare. | Standardgränssnitt | Borttagen |
 | [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/scene7.html#integration) och [Dynamic Media hybridläge](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dynamic.html#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamic Media](/help/assets/dynamic-media/dynamic-media.md) tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
@@ -60,7 +60,7 @@ I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience
 | [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard | Mars 2022 |
-| [!DNL Foundation] | Stöd för com.adobe.granite.oauth.server | Integration med Adobe IMS | Mars 2023 |
+| [!DNL Foundation] | Stöd för com.adobe.granite.oauth.server | Integrering med Adobe IMS | Mars 2023 |
 
 
 ## Java API {#java-api}

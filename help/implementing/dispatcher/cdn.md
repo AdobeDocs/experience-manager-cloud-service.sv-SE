@@ -131,7 +131,7 @@ Det AEM CDN lägger till rubriker i varje begäran med:
 >
 >Om det finns ett kundhanterat CDN återspeglar dessa rubriker kundens CDN-proxyserver snarare än den faktiska klienten. För kundhanterad CDN bör därför rubriker i geopositionering hanteras av kundens CDN.
 
-Värdena för landskoderna är de Alpha-2-koder som beskrivs [här](https://en.wikipedia.org/wiki/ISO_3166-1).
+Värdena för landskoderna är de Alpha-2 koder som beskrivs [här](https://en.wikipedia.org/wiki/ISO_3166-1).
 
 Värdena för kontinentkoderna är:
 

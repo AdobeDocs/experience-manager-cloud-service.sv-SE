@@ -15,7 +15,7 @@ I den här delen av den AEM as a Cloud Service migreringsresan får du lära dig
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå varför du bör använda en molnbaserad version av AEM och de olika faserna för migrering till AEM as a Cloud Service. Efter läsning bör du:
+Det här dokumentet hjälper dig att förstå varför du bör använda en molnbaserad version av AEM och de olika faserna för migrering till AEM as a Cloud Service. När du har läst bör du:
 
 * Förstå fördelarna med att flytta AEM as a Cloud Service
 * Bekanta dig med de breda steg du måste ta så att du kan gå över till molnet

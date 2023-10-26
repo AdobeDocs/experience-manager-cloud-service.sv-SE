@@ -30,9 +30,9 @@ I resursvyn kan du visa realtidsdata för din resursvymiljö med Insikter-instru
 
 Klicka **[!UICONTROL Insights]** som finns i det vänstra navigeringsfönstret för att visa följande automatiskt genererade diagram:
 
-* **Nedladdningar**: Antalet resurser som hämtats från resursvyn under de senaste 30 dagarna eller 12 månaderna representeras med hjälp av ett linjediagram.
+* **Nedladdningar**: Antalet resurser som hämtats från resursvyn under de senaste 30 dagarna eller 12 månaderna representeras av ett linjediagram.
 
-* **Överföringar**: Antalet resurser som har överförts till resursvyn under de senaste 30 dagarna eller 12 månaderna representeras med hjälp av ett linjediagram.
+* **Överföringar**: Antalet resurser som har överförts till resursvymiljön under de senaste 30 dagarna eller 12 månaderna visas i ett linjediagram.
 
 * **Vanliga sökningar**: Visa de mest sökbara termerna tillsammans med det antal gånger som de har sökts igenom i resursvyn under de senaste 30 dagarna eller 12 månaderna i tabellformat.
 
@@ -48,7 +48,7 @@ Så här skapar du en hämtningsrapport:
 
 1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** och klicka **[!UICONTROL Create Report]**.
 
-1. I [!UICONTROL Configuration] -fliken, ange rapporttypen som **[!UICONTROL Download]**.
+1. I [!UICONTROL Configuration] -flik anger du rapporttypen som **[!UICONTROL Download]**.
 
 1. Ange en rubrik och en valfri beskrivning för rapporten.
 
@@ -64,7 +64,7 @@ Så här skapar du en hämtningsrapport:
 
 1. Klicka på **[!UICONTROL Create]**.
 
-   ![Hämta rapport](assets/download-reports-config.png)
+   ![Ladda ned rapport](assets/download-reports-config.png)
 
 I följande tabell förklaras användningen av alla kolumner som du kan lägga till i rapporten:
 
@@ -96,7 +96,7 @@ I följande tabell förklaras användningen av alla kolumner som du kan lägga t
      </tr>
      <tr>
       <td>Hämtningsdatum</td>
-      <td>Det datum då hämtningsåtgärden för resursen utförs.</td>
+      <td>Datumet då hämtningsåtgärden för resursen utförs.</td>
      </tr>
      <tr>
       <td>Författare</td>
@@ -127,7 +127,7 @@ Så här skapar du en överföringsrapport:
 
 1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]** och klicka **[!UICONTROL Create Report]**.
 
-1. I [!UICONTROL Configuration] -fliken, ange rapporttypen som **[!UICONTROL Upload]**.
+1. I [!UICONTROL Configuration] -flik anger du rapporttypen som **[!UICONTROL Upload]**.
 
 1. Ange en rubrik och en valfri beskrivning för rapporten.
 
@@ -209,7 +209,7 @@ Den valda rapporten hämtas i CSV-format. Kolumnerna som visas i CSV-rapporten b
 
 ## Ta bort en rapport {#delete-report}
 
-Så här tar du bort en rapport:
+Ta bort en rapport:
 
 1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL Reports]**.
 

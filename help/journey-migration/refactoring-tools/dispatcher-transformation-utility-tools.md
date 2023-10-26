@@ -35,7 +35,7 @@ Se [Dispatcher i molnet](https://experienceleague.adobe.com/docs/experience-mana
 
 ## AEM Dispatcher Converter {#aem-dispatcher-converter}
 
-Med AEM Dispatcher Converter kan man omfaktorisera befintliga konfigurationer av hanterade tjänster eller Adobe Managed Services Dispatcher till AEM as a Cloud Service kompatibla Dispatcher-konfigurationer.
+AEM Dispatcher Converter kan omfaktorisera befintliga konfigurationer för Managed Services Dispatcher på plats eller Adobe till AEM as a Cloud Service kompatibla Dispatcher-konfigurationer.
 
 ## Använda AEM Dispatcher Converter   {#using-dispatcher-converter}
 

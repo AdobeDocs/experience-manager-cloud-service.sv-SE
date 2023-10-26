@@ -40,12 +40,12 @@ Du kan till exempel skapa en modell som representerar datastrukturen för en res
 
 1. Guiden Skapa modell vägleder dig genom att skapa din modell. Ange den obligatoriska informationen.
 
-   * **Modelltitel** - En kort etikett för modellen och anger vanligtvis syftet med modellen. Du kan anropa den nya modellen `Adventure`.
+   * **Modelltitel** - En kort etikett på modellen och anger vanligtvis syftet med modellen. Du kan anropa den nya modellen `Adventure`.
    * **Aktivera modell** - Det här alternativet är markerat som standard och måste markeras för att det ska gå att skapa innehållsfragment baserat på den här modellen.
 
-1. När de obligatoriska fälten har fyllts i klickar du på **Skapa** längst upp till höger för att skapa modellen.
+1. När de obligatoriska fälten har fyllts i klickar du **Skapa** längst upp till höger för att skapa modellen.
 
-1. The **Lyckades** bekräftar att modellen skapades. Klicka **Öppna** i dialogrutan så att du kan öppna den nya innehållsfragmentmodellen i redigeraren på en ny flik. Fortsätt sedan till nästa steg för att lägga till datafält i modellen.
+1. The **Lyckades** bekräftar att modellen har skapats. Klicka **Öppna** i dialogrutan så att du kan öppna den nya innehållsfragmentmodellen i redigeraren på en ny flik. Fortsätt sedan till nästa steg för att lägga till datafält i modellen.
 
 ![Steg 2 och 3 av att skapa en modell för innehållsfragment](assets/do-not-localize/create-model.png)
 
@@ -59,7 +59,7 @@ I redigeraren för innehållsfragmentmodellen konfigurerar du de datatyper och e
 >
 >Det är viktigt att du följer namnschemat i följande instruktioner eftersom dessa specifika namn hänvisas till i senare moduler.
 
-1. Dra en **Enkelradig text** fält från **Datatyper** till höger om redigeraren och släpp den i modellen för innehållsfragment.
+1. Dra en **Enkelradig text** fält från **Datatyper** till höger om redigeraren och släpp den i innehållsfragmentmodellen.
 
 1. När en datatyp har placerats ut **Datatyper** kolumnen ändras automatiskt till **Egenskaper** där du kan definiera information om den datatyp du placerat ut. För det här första fältet vill du lagra titeln på resan eller äventyret. Ange följande egenskaper.
 

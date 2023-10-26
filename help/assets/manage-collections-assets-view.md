@@ -72,7 +72,7 @@ Så här skapar du en samling:
 
 Så här lägger du till resurser i en samling:
 
-1. Klicka **[!UICONTROL Assets]** i den vänstra listen och välj de resurser som du behöver lägga till i en samling.
+1. Klicka **[!UICONTROL Assets]** i den vänstra listen och välj de resurser som du vill lägga till i en samling.
 
 1. Klicka på **[!UICONTROL Add to Collection]**.
 
@@ -100,13 +100,13 @@ Så här skapar du en smart samling:
 
 1. Klicka **[!UICONTROL Filter]** och [definiera sökvillkoren](search-assets-view.md#refine-search-results).
 
-1. Klicka **[!UICONTROL Save as]** och sedan markera **[!UICONTROL Smart Collection]**.
+1. Klicka **[!UICONTROL Save as]** och sedan **[!UICONTROL Smart Collection]**.
 
    ![Skapa smart samling](assets/create-smart-collection.png)
 
 1. På [!UICONTROL Create Smart Collection] anger du en rubrik och en beskrivning för den smarta samlingen.
 
-1. Välj **[!UICONTROL Public Collection]** om alla användare behöver komma åt samlingen. Välj **[!UICONTROL Private Collection]** om du behöver en begränsad grupp användare för att komma åt samlingen.
+1. Välj **[!UICONTROL Public Collection]** om du behöver alla användare för att komma åt samlingen. Välj **[!UICONTROL Private Collection]** om du behöver en begränsad grupp användare för att komma åt samlingen.
 
 1. Klicka **[!UICONTROL Create]** för att skapa den smarta samlingen.
 
@@ -114,11 +114,11 @@ Så här skapar du en smart samling:
 
 Så här redigerar du en smart samling:
 
-1. Klicka **[!UICONTROL Collections]** till vänster och dubbelklicka sedan på namnet på samlingen som du vill redigera.
+1. Klicka **[!UICONTROL Collections]** i den vänstra listen och dubbelklicka sedan på namnet på samlingen som du vill redigera.
 
 1. Klicka på **[!UICONTROL Edit Smart Collection]**.
 
-1. På [!UICONTROL Edit Smart Collection Filters] dialogruta, [uppdatera sökvillkoren](search-assets-view.md#refine-search-results) för den smarta samlingen.
+1. På [!UICONTROL Edit Smart Collection Filters] dialogruta, [uppdatera sökvillkoren](search-assets-view.md#refine-search-results) för Smart Collection.
 
 1. Klicka på **[!UICONTROL Save]**.
 

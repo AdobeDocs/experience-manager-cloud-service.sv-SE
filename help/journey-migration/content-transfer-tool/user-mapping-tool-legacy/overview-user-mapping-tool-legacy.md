@@ -38,7 +38,7 @@ En stor förändring i AEM as a Cloud Service är den helt integrerade användni
 
 ## Verktyg för användarmappning {#mapping-tool}
 
-Verktyget Innehållsöverföring (utan användarmappning) migrerar alla användare och grupper som är kopplade till innehållet som migreras. Verktyget för användarmappning är en del av verktyget för innehållsöverföring. Dess enda syfte är att redigera användarna så att de identifieras korrekt av IMS, den enkla inloggningsfunktionen som används av AEM as a Cloud Service. När ändringarna är klara migrerar verktyget Innehållsöverföring det angivna innehållets användare och grupper som vanligt.
+Verktyget Innehållsöverföring (utan användarmappning) migrerar alla användare och grupper som är kopplade till det innehåll som migreras. Verktyget för användarmappning är en del av verktyget för innehållsöverföring. Dess enda syfte är att redigera användarna så att de identifieras korrekt av IMS, den enkla inloggningsfunktionen som används av AEM as a Cloud Service. När ändringarna är klara migrerar verktyget Innehållsöverföring det angivna innehållets användare och grupper som vanligt.
 
 ### What&#39;s Next {#whats-next}
 

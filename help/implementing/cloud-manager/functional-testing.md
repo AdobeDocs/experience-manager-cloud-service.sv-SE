@@ -17,11 +17,11 @@ ht-degree: 0%
 >title="Funktionstestning"
 >abstract="Lär dig mer om de tre olika typerna av funktionstestning som är inbyggda i den AEM as a Cloud Service driftsättningsprocessen för att säkerställa att koden är tillförlitlig och av hög kvalitet."
 
-Läs om de tre olika typerna av funktionstestning som ingår i [AEM as a Cloud Service distributionsprocess](/help/implementing/cloud-manager/deploy-code.md) för att säkerställa kvaliteten och tillförlitligheten i koden.
+Läs mer om de tre olika typerna av funktionstestning som ingår i [AEM as a Cloud Service distributionsprocess](/help/implementing/cloud-manager/deploy-code.md) för att säkerställa kvaliteten och tillförlitligheten i koden.
 
 ## Omfång
 
-Syftet med de funktionella teststegen i molnhanterarens pipeline är att säkerställa att de viktigaste funktionerna i ditt program fungerar som förväntat.
+Syftet med de funktionella teststegen i molnhanterarens pipeline är att se till att de viktigaste funktionerna i ditt program fungerar som förväntat.
 
 Denna testfas är den sista nivån av automatiserad testning innan koden distribueras till produktionen.
 
@@ -33,9 +33,9 @@ Det finns tre olika typer av funktionstestning på AEM as a Cloud Service.
 
 * [Funktionstestning av produkten](#product-functional-testing)
 * [Anpassad funktionstestning](#custom-functional-testing)
-* [Testning av anpassat användargränssnitt](#custom-ui-testing)
+* [Anpassade gränssnittstestningar](#custom-ui-testing)
 
-För alla funktionstester kan detaljerade testresultat hämtas som `.zip` genom att använda **Hämta bygglogg** på skärmen som utgör en del av [distributionsprocess](/help/implementing/cloud-manager/deploy-code.md).
+För alla funktionstester kan de detaljerade resultaten av testerna hämtas som `.zip` genom att använda **Hämta bygglogg** på skärmen för byggöversikt som en del av [distributionsprocess](/help/implementing/cloud-manager/deploy-code.md).
 
 Loggarna innehåller inte loggarna för den faktiska AEM körningsprocessen. Information om hur du kommer åt loggarna finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) för mer information.
 
@@ -46,9 +46,9 @@ Både produktfunktionstesterna och de anpassade funktionstesterna baseras på [A
 Funktionstester för produkter är en uppsättning stabila HTTP-integrationstester (IT) av kärnfunktionalitet i AEM som redigerings- och replikeringsuppgifter. Dessa tester underhålls av Adobe och är avsedda att förhindra att ändringar i anpassad programkod driftsätts om kärnfunktionen bryts.
 
 * [Produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md): Funktionstester för produkter körs automatiskt när du distribuerar ny kod till Cloud Manager och kan inte hoppas över.
-* [Icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md): Du kan välja att produktfunktionstester ska köras varje gång du utför en icke-produktionsprocess.
+* [Icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md): Du kan välja att produktfunktionstester ska köras varje gång du utför icke-produktionsflödet.
 
-Funktionstester av produkter underhålls som ett öppen källkodsprojekt. Se [funktionsprovningar av produkter](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) i GitHub om du vill ha mer information.
+Funktionstester för produkter underhålls som ett öppen källkodsprojekt. Se [funktionsprovningar av produkter](https://github.com/adobe/aem-test-samples/tree/aem-cloud/smoke) i GitHub för mer information.
 
 ### Anpassad funktionstestning {#custom-functional-testing}
 
@@ -59,9 +59,9 @@ Anpassad funktionstestning körs både för anpassade koddistributioner och push
 Se [Java Functional Tests](/help/implementing/cloud-manager/java-functional-testing.md) för mer information.
 
 
-### Testning av anpassat användargränssnitt {#custom-ui-testing}
+### Anpassade gränssnittstestningar {#custom-ui-testing}
 
 Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina program. Användargränssnittstester är självstudiebaserade tester som paketeras i en Docker-bild för ett brett urval av språk och ramverk som Java och Maven, Node och WebDriver.io eller andra ramverk och tekniker som bygger på Selenium.
 
-Se [Testning av anpassat användargränssnitt](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing) för mer information.
+Se [Anpassade gränssnittstestningar](/help/implementing/cloud-manager/ui-testing.md#custom-ui-testing) för mer information.
 

@@ -94,7 +94,7 @@ På rad 25 anger du från vilken GraphQL beständig fråga appen ska hämta data
 
 1. När den här ändringen har gjorts bör programmet uppdatera automatiskt och skriva ut det råa JSON-svaret från din beständiga fråga till `#output` div. Om du ser ett felmeddelande bör du kontrollera konsolen för mer information. Nå ut [via e-post](mailto:aem-headless-trials-support@adobe.com?subject=AEM%20Trials%20support%20request) om du fortfarande har problem med det här steget.
 
-1. Innehåller detta JSON exakt de egenskaper som din app behöver? Om inte, gå tillbaka till [Extrahera innehåll med GraphQL API](https://experience.adobe.com/experiencemanager/learn/extract_content_using_graphql) utbildningsguide för att göra ändringar. Glöm inte att spara och publicera frågan när du är klar.
+1. Innehåller denna JSON exakt de egenskaper som din app behöver? Om inte, gå tillbaka till [Extrahera innehåll med GraphQL API](https://experience.adobe.com/experiencemanager/learn/extract_content_using_graphql) utbildningsguide för att göra ändringar. Glöm inte att spara och publicera frågan när du är klar.
 
 ## Ändra JSON-återgivning {#change-rendering}
 

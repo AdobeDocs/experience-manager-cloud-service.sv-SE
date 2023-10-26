@@ -46,6 +46,6 @@ Efter en återställning uppdateras den AEM versionen till den senaste.
 
 ## Säkerhetskopiering offline {#offsite-backup}
 
-Även om regelbundna säkerhetskopieringar täcker risken för oavsiktliga borttagningar eller tekniska fel i AEM Cloud Services, måste även riskerna som kan uppstå om en region slutar fungera täckas. Förutom tillgänglighet är den största risken i sådana dataområdesavbrott i första hand en dataförlust.
+Även om regelbundna säkerhetskopieringar täcker risken för oavsiktliga raderingar eller tekniska fel inom AEM Cloud Service måste även de risker som kan uppstå om en region inte fungerar täckas. Förutom tillgänglighet är den största risken i sådana dataområdesavbrott i första hand en dataförlust.
 AEM as a Cloud Service täcker denna risk som standard för alla AEM produktionsmiljöer. Det kopierar kontinuerligt hela AEM till en fjärrregion och gör det tillgängligt för återställning i tre månader. Adobe anropar den här funktionen för säkerhetskopiering offline.
-Återställningen av AEM Cloud-tjänster för scen- och produktionsmiljöer utförs av AEM Service Reliable Engineering om dataregionsfel uppstår.
+Återställandet av AEM Cloud Service för fas- och produktionsmiljöer utförs av AEM Service Reliable Engineering om dataregionsfel uppstår.

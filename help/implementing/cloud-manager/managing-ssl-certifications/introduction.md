@@ -29,7 +29,7 @@ När en entitet begär ett certifikat från en certifikatutfärdare slutför cer
 
 >[!IMPORTANT]
 >
->Molnhanteraren tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste hämtas från certifikatutfärdare.
+>Molnhanteraren tillhandahåller inte SSL-certifikat eller privata nycklar. Dessa måste hämtas från certifikatutfärdare (CA).
 
 ## SSL-hanteringsfunktioner i molnhanteraren {#features}
 
@@ -65,7 +65,7 @@ Vid en given tidpunkt tillåter Cloud Manager att högst 50 SSL-certifikat insta
 Om du har nått gränsen kan du granska dina certifikat och överväga:
 
 * Tar bort certifikat som gått ut.
-* Gruppera flera domäner i samma certifikat eftersom ett certifikat kan omfatta flera domäner (upp till 100 SAN-nätverk).
+* Gruppera flera domäner i samma certifikat eftersom ett certifikat kan omfatta flera domäner (upp till 100 SAN).
 
 ## Läs mer {#learn-more}
 

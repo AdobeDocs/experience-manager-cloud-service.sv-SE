@@ -135,7 +135,7 @@ I följande fall är det att föredra att använda handkodning för att skapa ex
   >Definitionen av åtkomstkontrollistor kräver att nodstrukturerna redan finns. Därför kan det vara nödvändigt att skapa en sökvägsprogramsats innan.
 
 * Lägg till sökväg (t.ex. för rotmappsstrukturer)
-* Lägga till CND-filer (nodetypdefinitioner)
+* Lägga till CND (nodetypdefinitioner)
 
 Repoinit är att föredra för de här användningsområdena för innehållsändringar som stöds på grund av följande fördelar:
 
@@ -303,12 +303,12 @@ AEM as a Cloud Service tillåter inte att körningslägen används för att inst
 De körlägeskonfigurationer som stöds är:
 
 * **config** (*Standardvärdet gäller för alla AEM*)
-* **config.author** (*Gäller alla AEM Author-tjänster*)
+* **config.author** (*Gäller för alla AEM författartjänster*)
 * **config.author.dev** (*Gäller för AEM Dev Author Service*)
 * **config.author.rde** (*Gäller AEM RDE Author Service*)
 * **config.author.stage** (*Gäller för AEM mellanlagringsförfattartjänst*)
 * **config.author.prod** (*Gäller för tjänsten AEM Production Author*)
-* **config.publish** (*Gäller AEM Publish Service*)
+* **config.publish** (*Gäller AEM Publiceringstjänst*)
 * **config.publish.dev** (*Gäller för AEM Dev Publish Service*)
 * **config.publish.rde** (*Gäller AEM RDE-publiceringstjänsten*)
 * **config.publish.stage** (*Gäller för AEM mellanlagringspubliceringstjänst*)

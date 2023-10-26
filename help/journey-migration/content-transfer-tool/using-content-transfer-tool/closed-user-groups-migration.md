@@ -3,7 +3,8 @@ title: Migrerar stängda användargrupper
 description: Läs mer om de speciella överväganden som krävs för att aktivera stängda användargrupper efter att du har migrerat innehåll till Adobe Experience Manager as a Cloud Service.
 hide: true
 hidefromtoc: true
-source-git-commit: 97a6a7865f696f4d61a1fb4e25619caac7b68b51
+exl-id: f62ed751-d5e2-4a01-8910-c844afab5733
+source-git-commit: 0109cea1be85e647fb6c04dde4714b162bdc75a5
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 0%
@@ -46,4 +47,3 @@ Sammanfattningsvis är det här stegen för att aktivera CUG efter en migrering:
    - Om den inte gör det kan du använda Paket för att installera den på målinstansen (eller skapa den manuellt där) och aktivera den och dess medlemmar. Kontrollera sedan att den finns vid publicering.
 1. Publicera om alla sidor som är kopplade till en CUG-princip och kontrollera att den publiceras, till exempel genom att redigera sidan först. Det är viktigt att publicera om alla.
    - När alla sidor har publicerats om kontrollerar du att de fungerar för varje CUG-skyddad sida.
-

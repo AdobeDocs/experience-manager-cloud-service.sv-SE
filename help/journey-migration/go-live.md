@@ -48,7 +48,7 @@ Innan du kan utföra produktionsmigreringen följer du stegen för implementerin
 
 Efter den första migreringen från produktionen måste du utföra stegvisa översikter för att se till att ditt innehåll är uppdaterat på molninstansen. Därför rekommenderar vi att du följer dessa bästa metoder:
 
-* Samla in data om mängden innehåll. Till exempel: en vecka, två veckor eller en månad.
+* Samla in data om mängden innehåll. Exempel: per en vecka, två veckor eller en månad.
 * Se till att planera de översta bilderna på ett sådant sätt att du undviker mer än 48 timmars extrahering och förtäring av innehåll. Detta rekommenderas så att de översta delarna av innehållet får plats i en heltalsram.
 * Planera antalet toppavhopp och använd dessa uppskattningar för att planera runt Go-Live-datumet.
 
@@ -56,10 +56,10 @@ Efter den första migreringen från produktionen måste du utföra stegvisa öve
 
 Som tidigare nämnts måste du schemalägga en frysperiod för kod och innehåll. Använd följande frågor för att planera frysningsperioden:
 
-* Hur länge måste jag frysa redigeringsaktiviteterna?
+* Hur länge måste jag frysa innehållsredigeringsaktiviteterna?
 * Hur länge ska jag be mitt leveransteam sluta lägga till nya funktioner?
 
-Som svar på den första frågan bör du fundera över hur lång tid det har tagit att genomföra testkörningar i icke-produktionsmiljöer. För att svara på den andra frågan behöver du ha ett nära samarbete mellan teamet som lägger till nya funktioner och teamet som omstrukturerar koden. Målet är att se till att all kod som läggs till i den befintliga distributionen också läggs till, testas och distribueras till molntjänstgrenen. Vanligtvis innebär det att mängden fryst kod är lägre.
+Som svar på den första frågan bör du fundera över hur lång tid det har tagit att genomföra testkörningar i icke-produktionsmiljöer. För att svara på den andra frågan behöver du ha ett nära samarbete mellan teamet som lägger till nya funktioner och teamet som omfaktoriserar koden. Målet är att se till att all kod som läggs till i den befintliga distributionen också läggs till, testas och distribueras till molntjänstgrenen. Vanligtvis innebär det att mängden fryst kod är lägre.
 
 Dessutom måste du planera för en frysning av innehållet när den slutliga innehållsuppdateringen är schemalagd.
 
@@ -84,9 +84,9 @@ När du utför produktionsmigreringen bör du undvika att köra verktyget Inneh�
 * Om en kund kräver att innehållsversioner migreras under en översta migrering migreras inte versionerna när innehållsöverföringsverktyget körs från en klon. Även om klonen ofta återskapas från en live-författare återställs de kontrollpunkter som används av verktyget Innehållsöverföring för att beräkna deltarna varje gång en klon skapas.
 * Eftersom en klon inte kan uppdateras som helhet måste ACL-frågepaketet användas för att paketera och installera det innehåll som läggs till eller redigeras från produktion till kloning. Problemet med den här metoden är att allt borttaget innehåll i källinstansen aldrig kommer till klonen om det inte tas bort manuellt från både källan och klonen. Detta introducerar möjligheten att det borttagna innehållet i produktionen inte tas bort på klonen och AEM as a Cloud Service.
 
-**Optimera belastningen på AEM när innehållsmigreringen utförs**
+**Optimera inläsningen på AEM när innehållsmigreringen utförs**
 
-Kom ihåg att belastningen på AEM är större under extraheringsfasen. Du bör vara medveten om att
+Kom ihåg att belastningen på AEM är större under extraheringsfasen. Du bör vara medveten om följande:
 
 * Innehållsöverföringsverktyget är en extern Java-process som använder en JVM-heap på 4 GB
 * Icke-AzCopy-versionen hämtar binärfiler, lagrar dem på ett temporärt utrymme på AEM, förbrukar disk-I/O och överför dem sedan till Azure-behållaren som förbrukar nätverksbandbredd
@@ -116,7 +116,7 @@ Båda ovanstående poster identifieras och rapporteras i [Best Practice Analyzer
 Granska den här listan över aktiviteter för att säkerställa att du utför en smidig och lyckad migrering.
 
 * Köra en produktionsprocess från början till slut med funktions- och gränssnittstestning för att säkerställa en **alltid aktuell** AEM produktupplevelse. Se följande resurser.
-   * [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md)
+   * [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md)
    * [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing)
    * [UI-testning](/help/implementing/cloud-manager/ui-testing.md)
 * Migrera innehåll till produktion och se till att det finns en relevant delmängd tillgänglig på testningen.
@@ -144,7 +144,7 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
          * [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)
          * [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
       * Hantera anpassade domännamn (DNS)
-         * För att vara säker på att DNS-rensningen inte kommer att orsaka oväntade problem är det bäst att skapa en testunderdomän för att ansluta din produktionsinstans till innan du publicerar och göra en omgång av UAT-testning. Om din domän är example.com kan du skapa en subdomain test.example.com och använda den i produktionen. Under UAT-testningen av domänen ska du söka efter saker som rätt länkomdirigering, cachelagring och dispatcherkonfigurationer.
+         * För att vara säker på att DNS-rensningen inte kommer att orsaka oväntade problem är det bäst att skapa en testunderdomän för att ansluta din produktionsinstans till innan du publicerar och göra en omgång av UAT-testning. Om din domän är example.com kan du skapa en underdomän test.example.com och använda den i produktionen. Under UAT-testningen av domänen ska du söka efter saker som rätt länkomdirigering, cachelagring och dispatcherkonfigurationer.
          * [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
          * [Lägga till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md)
          * [Hantera eget domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md)
@@ -152,7 +152,7 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
       * TTL är den tid som en DNS-post finns kvar i ett cacheminne innan servern tillfrågas om en uppdatering.
       * Om du har en mycket hög TTL tar det längre tid att sprida uppdateringar till DNS-posten.
 * Kör prestanda- och säkerhetstester som uppfyller dina affärskrav och mål.
-* Klipp ut och se till att den faktiska publiceringen utförs utan någon ny distribution eller uppdatering av innehållet.
+* Klipp ut och se till att den faktiska publiceringen utförs utan någon ny driftsättning eller uppdatering av innehållet.
 * Skapa meddelandeprofiler för Admin Console. Se [Meddelandeprofiler](/help/journey-onboarding/notification-profiles.md)
 
 Du kan alltid referera till listan om du behöver kalibrera om dina uppgifter när du utför migreringen.

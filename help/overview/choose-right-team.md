@@ -33,7 +33,7 @@ Ett vinnande team behöver nio personer i rätt platser, precis som ert driftsä
 | Roll | Kompetens | Kapacitetsnivå | Kvaliteter |
 |--- |--- |--- |--- |
 | Projektledare | PMP-certifiering, Agile-certifiering, erfarenhet av riskhantering | Expert | Rättsligt, konsekvent, ansvarsfullt, organiserat, positivt, lättillgängligt, villigt att anamma förändring |
-| Scrum Överordnad | ScrumMaster-certifiering, Agile-certifiering, förenklingsupplevelse | Expert | Enhetlig, kreativ |
+| Scrum Master | ScrumMaster-certifiering, Agile-certifiering, förenklingsupplevelse | Expert | Enhetlig, kreativ |
 | Produktägare | Agile-certifiering, god förståelse för företagets behov | Expert | Balanserad, säker |
 | IT-ansvariga för säkerhet, infrastruktur, verktyg | CISM-certifiering, Adobe Experience Manager Component Developer-certifiering | Expert | Detaljorienterad |
 | Strategister/Power Users | Kunskap i Adobe Experience Manager Sites | Till expert | Tensiöst, nyfiken, grundligt, öppet sinne, villig att omfamna förändring, samarbete |
@@ -59,7 +59,7 @@ Du kanske redan har de flesta personer som behövs för att köra en lyckad impl
 | Roll | Kompetens | Kapacitetsnivå | Kvaliteter |
 |--- |--- |--- |--- |
 | Projektledare | PMP-certifiering, Agile-certifiering, erfarenhet av riskhantering | Expert | Rättsligt, konsekvent, ansvarsfullt, organiserat, positivt, lättillgängligt, villigt att anamma förändring |
-| Scrum Överordnad | ScrumMaster-certifiering, Agile-certifiering, förenklingsupplevelse | Expert | Enhetlig, kreativ |
+| Scrum Master | ScrumMaster-certifiering, Agile-certifiering, förenklingsupplevelse | Expert | Enhetlig, kreativ |
 | Produktägare | Agile-certifiering, god förståelse för företagets behov | Expert | Balanserad, säker |
 | IT-ansvariga för säkerhet, infrastruktur, verktyg | CISM-certifiering, Adobe Experience Manager Component Developer-certifiering | Expert | Detaljorienterad |
 | Strategister/Power Users | Kunskap i Adobe Experience Manager Sites | Till expert | Tensiöst, nyfiken, grundligt, öppet sinne, villig att omfamna förändring, samarbete |
