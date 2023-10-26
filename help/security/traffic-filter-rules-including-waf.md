@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 1683819d4f11d4503aa0d218ecff6375fc5c54d1
+source-git-commit: 00d3323be28fe12729204ef00e336c7a4c63cda7
 workflow-type: tm+mt
-source-wordcount: '3312'
+source-wordcount: '3480'
 ht-degree: 0%
 
 ---
@@ -118,6 +118,10 @@ The `kind` parametern ska anges till `CDN` och versionen bör anges till schemav
 
 Kommandoraden kommer att användas för RDE, men RDE stöds inte för närvarande.
 
+**Anteckningar**
+
+* Du kan använda `yq` för att lokalt validera YAML-formateringen i konfigurationsfilen (t.ex. `yq cdn.yaml`).
+
 ## Syntax för trafikfilterregler {#rules-syntax}
 
 Du kan konfigurera `traffic filter rules` för att matcha på mönster som IP, användaragent, begäranrubriker, värdnamn, geo och url.
@@ -152,7 +156,7 @@ Formatet på trafikfilterreglerna i `cdn.yaml` filen beskrivs nedan. Se några [
 |---|---|---|---|---|---|
 | name | X | X | `string` | - | Regelnamn (64 tecken långt, får bara innehålla alfanumeriska tecken och - ) |
 | när | X | X | `Condition` | - | Den grundläggande strukturen är:<br><br>`{ <getter>: <value>, <predicate>: <value> }`<br><br>[Se Syntax för villkorsstruktur](#condition-structure) nedan, som beskriver get-metoderna, predikaten och hur du kombinerar flera villkor. |
-| åtgärd | X | X | `Action` | logg | log, allow, block, log eller action object Standardvärdet är log |
+| åtgärd | X | X | `Action` | logg | log-, allow-, block- eller Action-objekt. Standard är logg |
 | rateLimit | X |   | `RateLimit` | inte definierad | Konfiguration för hastighetsbegränsning. Hastighetsbegränsning är inaktiverad om den inte är definierad.<br><br>Det finns ett separat avsnitt nedan som beskriver rateLimit-syntaxen, tillsammans med exempel. |
 
 ### Villkorsstruktur {#condition-structure}
@@ -188,11 +192,11 @@ En grupp villkor består av flera enkla och/eller gruppvillkor.
 
 | **Egenskap** | **Typ** | **Beskrivning** |
 |---|---|---|
-| reqProperty | `string` | Request-egenskap.<br><br>En av: `path` , `queryString`, `method`, `tier`, `domain`, `clientIp`, `clientCountry`<br><br>Egenskapen domain är en gemener transformering av begärans värdhuvud. Det är användbart för strängjämförelser så att matchningar inte missas på grund av skiftlägeskänslighet.<br><br>The `clientCountry` använder två bokstavskoder som visas på [https://en.wikipedia.org/wiki/Regional_indicator_symbol](https://en.wikipedia.org/wiki/Regional_indicator_symbol) |
+| reqProperty | `string` | Request-egenskap.<br><br>En av:<br><ul><li>`path`: Returnerar den fullständiga sökvägen till en URL utan frågeparametrarna.</li><li>`queryString`: Returnerar frågedelen av en URL</li><li>`method`: Returnerar HTTP-metoden som används i begäran.</li><li>`tier`: Returnerar ett av `author`, `preview` eller `publish`.</li><li>`domain`: Returnerar egenskapen domain (enligt definitionen i `Host` sidhuvud) i gemener</li><li>`clientIp`: Returnerar klient-IP.</li><li>`clientCountry`: Returnerar en kod med två bokstäver ([https://en.wikipedia.org/wiki/Regional_indicator_symbol](https://en.wikipedia.org/wiki/Regional_indicator_symbol) som anger i vilket land kunden befinner sig.</li></ul> |
 | reqHeader | `string` | Returnerar begärandehuvud med angivet namn |
 | queryParam | `string` | Returnerar frågeparameter med angivet namn |
 | reqCookie | `string` | Returnerar cookie med angivet namn |
-| postParam | `string` | Returnerar parametern med det angivna namnet från brödtexten. Fungerar bara när brödtexten är av innehållstyp `application/x-www-form-urlencoded` |
+| postParam | `string` | Returnerar Post-parametern med det angivna namnet från begärandetexten. Fungerar bara när brödtexten är av innehållstyp `application/x-www-form-urlencoded` |
 
 **Förutse**
 
@@ -207,6 +211,19 @@ En grupp villkor består av flera enkla och/eller gruppvillkor.
 | **in** | `array[string]` | true om den angivna listan innehåller get-resultat |
 | **notIn** | `array[string]` | true om den angivna listan inte innehåller get-resultat |
 | **exists** | `boolean` | true om värdet är true och egenskapen finns eller om värdet är false och egenskapen inte finns |
+
+**Anteckningar**
+
+* Egenskapen request `clientIp` kan bara användas med följande predikat: `equals`, `doesNotEqual`, `in`, `notIn`. `clientIp` kan också jämföras med IP-intervall när du använder `in` och `notIn` predikar. I följande exempel implementeras ett villkor för att utvärdera om en klient-IP ligger i IP-intervallet 192.168.0.0/24 (från 192.168.0.0 till 192.168.0.255):
+
+```
+when:
+  reqProperty: clientIp
+  in: [ "192.168.0.0/24" ]
+```
+
+* Vi rekommenderar användning av [regex101](https://regex101.com/) och [Snabb vänteläge](https://fiddle.fastly.dev/) när du arbetar med regex. Du kan även läsa mer om hur Fastly hanterar regex i detta [artikel](https://developer.fastly.com/reference/vcl/regex/#best-practices-and-common-mistakes).
+
 
 ### Åtgärdsstruktur {#action-structure}
 
@@ -259,6 +276,8 @@ The `wafFlags` egenskapen, som kan användas i de licensbara reglerna för WAF-t
 * Om en regel matchas och blockeras svarar CDN med en `406` returkod.
 
 * Konfigurationsfilerna bör inte innehålla hemligheter eftersom de skulle kunna läsas av alla som har åtkomst till Git-databasen.
+
+* IP-Tillåtelselista som definieras i Cloud Manager har högre prioritet än trafikfilterreglerna.
 
 ## Exempel på regler {#examples}
 
@@ -396,9 +415,10 @@ Kursen beräknas per CDN POP. Anta till exempel att POP i Montreal, Miami och Du
 | **Egenskap** | **Typ** | **Standard** | **MENING** |
 |---|---|---|---|
 | limit | heltal mellan 10 och 10000 | obligatoriskt | Begärandefrekvens (per CDN POP) i begäranden per sekund som regeln aktiveras för. |
-| window | heltal: 1, 10 eller 60 | 10 | Provningsfönstret i sekunder för vilket begärandehastigheten beräknas. |
+| window | heltal: 1, 10 eller 60 | 10 | Provningsfönstret i sekunder för vilket begärandehastigheten beräknas. Räknarnas noggrannhet beror på fönstrets storlek (större fönsternoggrannhet). Du kan till exempel förvänta dig 50 % noggrannhet för det sekundära fönstret och 90 % noggrannhet för det sekundära fönstret. |
 | påföljd | heltal mellan 60 och 3600 | 300 (5 minuter) | En period i sekunder för vilken matchande begäranden blockeras (avrundat till närmaste minut). |
 | groupBy | array[Getter] | ingen | Räknaren för hastighetsbegränsning sammanställs av en uppsättning egenskaper för begäran (till exempel clientIp). |
+
 
 ### Exempel {#ratelimiting-examples}
 
