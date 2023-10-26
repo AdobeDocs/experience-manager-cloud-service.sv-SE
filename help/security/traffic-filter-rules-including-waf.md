@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 00d3323be28fe12729204ef00e336c7a4c63cda7
+source-git-commit: aca385ff9a44733a6529c7e78e73fc1b138c1177
 workflow-type: tm+mt
-source-wordcount: '3480'
+source-wordcount: '3453'
 ht-degree: 0%
 
 ---
@@ -227,7 +227,7 @@ when:
 
 ### Åtgärdsstruktur {#action-structure}
 
-Anges av `action` fält som kan vara en sträng som anger åtgärdstyp (allow, block, log) och antar standardvärden för alla andra alternativ, eller ett objekt där regeltypen definieras via `type` obligatoriskt fält tillsammans med andra alternativ som gäller för den typen.
+An `action` kan antingen vara en sträng som anger åtgärden (tillåt, blockera eller logg), eller ett objekt som består av både åtgärdstypen (tillåt, blockera eller logg) och alternativ som wafFlags och/eller status.
 
 **Åtgärdstyper**
 
@@ -278,6 +278,8 @@ The `wafFlags` egenskapen, som kan användas i de licensbara reglerna för WAF-t
 * Konfigurationsfilerna bör inte innehålla hemligheter eftersom de skulle kunna läsas av alla som har åtkomst till Git-databasen.
 
 * IP-Tillåtelselista som definieras i Cloud Manager har högre prioritet än trafikfilterreglerna.
+
+* WAF-regelmatchningar visas bara i CDN-loggar för CDN-missar och -pass, inte träffar.
 
 ## Exempel på regler {#examples}
 
@@ -491,7 +493,7 @@ Reglerna fungerar på följande sätt:
 * Om WAF är licensierat och aktiverat visas `waf` Alla WAF-flaggor (t.ex. SQLI) som har identifierats listas i -attributet, oavsett om WAF-flaggorna finns listade i några regler eller inte. Detta är för att ge insikter i eventuella nya regler att deklarera.
 * Om inga kunddeklarerade regler matchar och inga SWF-regler matchar `rules` egenskapen kommer att vara tom.
 
-I allmänhet visas matchande regler i loggposten för alla förfrågningar till CDN, oavsett om det är en CDN-träff, ett pass eller en miss. Däremot visas WAF-regler i loggposten endast för begäranden till CDN som betraktas som CDN-missar eller -pass, men inte CDN-träffar.
+Som tidigare nämnts visas matchningar av WAF-regler endast i CDN-loggar för CDN-missar och -pass, inte träffar.
 
 Exemplet nedan visar ett exempel `cdn.yaml` och två CDN-loggposter:
 
