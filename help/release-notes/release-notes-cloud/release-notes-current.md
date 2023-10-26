@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 8870e090d13504421c8056315918e13f4a50ee28
+source-git-commit: 6e834244f3de7e615df12b137f2ae90a11e64ad0
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell version (2023.9.0) är 28 september 2023. Nästa funktionsrelease (2023.10.0) planeras till 26 oktober 2023.
+Utgivningsdatumet [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2023.10.0) är 26 oktober 2023. Nästa funktionsrelease (2023.11.0) planeras till 30 november 2023.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -34,33 +34,29 @@ Du kan hitta den senaste underhållsreleasenumerationen [här](/help/release-not
 
 ## Släpp video {#release-video}
 
-Titta på videon med versionsöversikten för september 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.9.0:
+Titta på videon med versionsöversikten för oktober 2023 om du vill se en sammanfattning av funktioner som lagts till i version 2023.10.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3424826/?quality=12)
-
-## Edge Delivery Services {#edge-delivery}
-
-Edge Delivery är en ny uppsättning sammanställningsbara tjänster med fokus på att maximera innehållets effekt och få mätbara affärsresultat vid kundinteraktionen.
-
-Läs mer om Edge Delivery Services i artikeln [här](/help/edge/overview.md).
+>[!VIDEO](https://video.tv.adobe.com/v/3425186/?quality=12)
 
 ## [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#assets}
 
+### Nya funktioner {#assets-features}
+
+**AEM Assets-tillägg för Adobe Express**: Experience Manager Assets har nu en [tillägg för Adobe Express](/help/assets/addon-adobe-express.md). Tillägget ger dig direktåtkomst till resurser som lagras i Experience Manager Assets inifrån användargränssnittet för Adobe Expressen. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan Express och sedan spara nytt eller redigerat innehåll i en AEM Assets-databas. Tillägget ger följande fördelar:
+
+* Ökat återanvändning av innehåll genom att redigera och spara nya resurser i AEM
+
+* Minskar den totala tiden och arbetet med att skapa nya resurser eller skapa nya versioner av befintliga resurser
+
+  ![Inkludera resurser från resurstillägg](/help/assets/assets/aem-assets-add-on-include-assets.png)
+
 ### Nya funktioner i resursvyn {#assets-view-features}
 
-**Tilldela metadataformulär till en mapp**
+* **Massimportera resurser från OneDrive-datakällan**: Nu kan administratörer [importera ett stort antal resurser från OneDrive till AEM Assets](/help/assets/bulk-import-assets-view.md#onedrive-developer-application). Den uppdaterade listan över de datakällor som stöds för bulkimport är Azure, AWS, Google Cloud, Dropbox och OneDrive.
 
-Nu kan du tilldela metadataformulär till en viss mapp i distributionen. Alla resurser i mappen, inklusive resurser i undermapparna, visar sedan egenskaper som definierats i det tilldelade metadataformuläret.
+  ![tilldela metadataformulär till en mapp](/help/assets/assets/bulk-import-source-details-onedrive.png)
 
-![tilldela metadataformulär till en mapp](/help/release-notes/assets/assign-to-folder.png)
-
-### Nya funktioner i administrationsvyn {#admin-view-features}
-
-* **Integrera AEM Assets as a Cloud Service med dokumentbaserad framtagning av Edge Delivery Services**: Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services så att webbutvecklare kan [använda bilder som finns i AEM Assets-databaser när du redigerar dokument i Microsoft Word eller Google Docs](/help/edge/using.md#integrate-assets-edge).
-
-* **Extract ZIP-arkiv**: Möjlighet att välja ZIP-arkiv som hanteras i Experience Manager och [extrahera filerna direkt i Experience Manager](/help/assets/manage-digital-assets.md#extract-zip-archives) utan att ladda ned dem.
-
-  ![Fäst objekt för grupper](/help/release-notes/assets/extract-archive.png)
+* **Stöd för olika sorters tillstånd för bibliotek**: Med Experience Manager Assets kan du nu konfigurera åtkomst till Creative Cloud-bibliotek i en annan IMS-organisation. Det ger enklare åtkomst till de senaste produktövergripande arbetsflödena mellan Creative Cloud och Experience Manager och minskar tiden och arbetet för kreatörerna.
 
 ### Förhandsversioner av funktioner som finns i [!DNL Experience Manager Assets] {#prerelease-features-assets}
 
@@ -72,30 +68,17 @@ Nu kan du tilldela metadataformulär till en viss mapp i distributionen. Alla re
 
 ### Nya funktioner i [!DNL Experience Manager Forms] {#forms-features}
 
-* [**Google reCAPTCHA - företagssupport**](/help/forms/captcha-adaptive-forms-core-components.md): Använd Google reCAPTCHA Enterprise i en adaptiv form för att få bättre skydd mot bedräglig aktivitet och skräppost, vilket ger en säkrare användarupplevelse. Med avancerad riskanalys och smidig integrering kan äkta användare enkelt skicka in formulär medan bots blockeras effektivt.
+* **Anpassade egenskaper för Adaptive Forms**: Du kan koppla anpassade attribut (nyckelvärdepar) till en formulärmall eller adaptiv formulärkomponent så att formulärutvecklare kan leverera dynamiska formulärbeteenden som anpassar sig utifrån värdena för dessa anpassade attribut. Utvecklare kan till exempel skapa olika renderingar av en Headless Forms-komponent på mobil-, dator- eller webbplattformar baserat på värdena för anpassade attribut, vilket avsevärt förbättrar användarupplevelsen på en mängd olika enheter.
 
-* [**Adobe Analytics med Experience Cloud Setup Automation för Forms**](/help/forms/enable-adobe-analytics-adaptive-form-using-experience-cloud-setup-automation.md): Nu kan du aktivera Adobe Analytics med Experience Cloud Setup Automation (Automatisering av installationsprogram) med ett par knappar. Det gör att ni kan koppla AEM Forms as a Cloud Service till Experience Platform-taggar och Adobe Analytics för att hämta in och spåra prestandamått för era publicerade formulär.
+* **Teman och mallar**: Kom igång snabbt med att skapa formulär med våra nya teman och mallar, som är skräddarsydda för både erfarna yrkesverksamma och nya formulärförfattare. Dessa välstrukturerade teman och mallar är sömlöst byggda med adaptiva Forms Core-komponenter och gör att du snabbt kan börja skapa formulär för vanliga användningsområden.
 
-  >[!VIDEO](https://video.tv.adobe.com/v/3424577/enable-adobe-analytics/?quality=12&learn=on)
+  ![Körklara mallar](/help/forms/assets/form-templates-ootb.png)
 
-* [**Adobe Analytics rapportmall för Adaptiv Forms**](/help/forms/view-understand-aem-forms-analytics-reports.md): Forms as a Cloud Service tillhandahåller nu en Adobe Analytics-rapport, OOTB. Det hjälper er att förstå hur era formulär fungerar. Med hjälp av formulärnivåstatistik får du insikt i hur formuläret fungerar med flera nyckeltal (KPI) som återgivningar, besökare, inskickat material, genomsnittlig fyllnadstid. Genom att följa upp användarbeteenden och feedback kan du identifiera områden i formuläret som orsakar förvirring och vägleda förbättringar av formulärets design och funktion.
+### Förhandsversioner av funktioner som finns i [!DNL Forms] {#pre-release-features-available-in-forms-channel}
 
-  ![Analysrapport om användarinteraktion med adaptiva formulär](/help/forms/assets/forms-analytics-report.png)
+* **Skicka Forms till Microsoft SharePoint List**: AEM Forms erbjuder en OOTB-integrering för att skicka in formulärdata direkt till SharePoint List, vilket gör att du kan utnyttja SharePoint Lists funktioner.
 
-* **[Form Fragment in Adaptive Forms based on Core Components](/help/forms/adaptive-form-fragments-core-components.md)**: Ta farväl av dubbelarbete, optimera det digitala arkivet och förbättra samarbetet när ni utökar upplevelsen av formulärgenereringen med formulärfragment. Dessa återanvändbara komponenter kan smidigt integreras i flera formulär, vilket effektiviserar skapandet av enhetliga och proffsiga formulär. Form Fragments säkerställer återanvändbarhet, standardisering och enhetlig varumärkesexponering genom funktionen&quot;change once and mirror everywhere&quot;. Upplev bättre underhålls- och effektivitetsvinster i takt med att uppdateringar som görs på ett och samma ställe sprids automatiskt i alla formulär som använder dessa fragment.
-
-* **[Förbättrat arbetsflöde i Adobe Sign](/help/forms/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step)**: Adobe Sign Workflow-steget har förbättrats och innehåller följande:
-   * **Myndighets-ID-baserad autentisering för Adobe Sign**: Adobe Acrobat Sign Government ID-Based Authentication erbjuder ytterligare ett verifieringslager genom att användarna kan autentisera sin identitet med hjälp av foto-ID:n (körkort, nationellt ID, pass). Genom att utnyttja pålitliga identifieringsdokument ger den här förbättringen ett extra förtroende för signeringsprocessen, vilket gör den idealisk för scenarier som kräver högre säkerhet, regelefterlevnad och användarvalidering.
-
-   * **Granskningsspår för Adobe Sign-dokument**: Använd funktionen Granskningsspår för att få detaljerade insikter om livscykeln för dina Adobe Sign-dokument. Med granskningsspåret kan du nu föra ett omfattande register över alla åtgärder och interaktioner som rör dina dokument. Detta inkluderar information som vem som visade, redigerade eller signerade dokumentet, tillsammans med tidsstämplar för varje händelse. Den här förbättringen är avgörande för att upprätthålla regelefterlevnaden, lösa tvister och säkerställa integriteten för dina digitala avtal.
-
-   * **Nya roller för avtalsmottagare utöver bara signeraren**: Adobe Acrobat Sign har möjlighet att utöka rollerna för avtalsmottagare utöver bara signeraren för att bättre matcha deras arbetsflödesbehov. När det här alternativet är aktiverat kan varje mottagare i ett avtal konfigureras individuellt, med signerare som standard.
-
-* **Stöd för sidantal i kommunikations-API:er**: Nu kan du, tillsammans med att hämta ditt dokument via kommunikations-API:erna, även få värdefull information om antalet sidor i dokumentet.
-
-* **[Felhantering med anpassade felhanterare i regelredigeraren](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)**: Du kan nu anropa en anpassad funktion som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
-
-* **[64-bitarsversion av AEM Forms Designer](/help/forms/installing-configuring-designer.md)**: 64-bitarsversionen av AEM Forms Designer ger bättre prestanda, skalbarhet och minneshantering så att du kan skapa formulär. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Utöka dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med den här banbrytande releasen.
+  >[!VIDEO](https://video.tv.adobe.com/v/3424820/connect-aem-adaptive-form-to-sharepointlist/?quality=12&learn=on)
 
 ### Program för tidig användning {#forms-early-adopter}
 
@@ -103,30 +86,17 @@ Nu kan du tilldela metadataformulär till en viss mapp i distributionen. Alla re
 
   Du kan skriva till `aem-forms-early-adopter-program@adobe.com` från ditt officiella e-post-id för att gå med i programmet för tidiga användare och begära åtkomst till funktionen.
 
-* **[Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html)**: Använd Headless Adaptive Forms för att ge utvecklarna möjlighet att skapa, publicera och hantera interaktiva formulär som kan öppnas och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
-
-   * bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
-   * integrera formulär direkt i era datorprogram och mobilappar, webbplatser och chattapplikationer
-   * återanvända era egna gränssnittskomponenter med blankettapplikationer
-   * använder kraften i Adobe Experience Manager Forms
-
-  Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från ditt officiella e-post-ID till att gå med i det tidiga adopterprogrammet.
-
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation {#foundation}
 
-### Nytt CDN-cachningsbeteende för kampanjrelaterade URL-parametrar {#cache-url-params}
+### Trafikfilterregler, inklusive WAF {#traffic-filter-rules-waf}
 
-I nya miljöer tar CDN bort marknadsföringsrelaterade frågeparametrar som standard för att öka marknadsföringskampanjens resultat och cacha träfffrekvenser. Befintliga miljöer påverkas inte. [Läs mer.](/help/implementing/dispatcher/caching.md#marketing-parameters)
+[Filtrera trafiken vid hanterad CDN i Adobe](/help/security/traffic-filter-rules-including-waf.md) genom att deklarera regler som matchar webbplatstrafiken efter egenskaper som URL, IP-adress och användaragent, eller ange anpassade trafikhastighetsgränser för att skydda mot DoS-attacker. Kunderna kan även licensiera en uppsättning avancerade regler för Web Application Firewall (WAF) för extra skydd mot avancerade hot mot webbplatser.
 
-### Trafikfilterregler (inklusive WAF-regler) program för tidig användning {#waf-early-adopter}
+Vi rekommenderar att du lär dig trafikfilterregler genom att [testa en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)! Här får du hjälp med att konfigurera en ny konfigurationspipeline för Cloud Manager, deklarera regler i en konfigurationsfil och analysera CDN-loggar för skadlig trafik.
 
-Filtrera trafiken vid CDN baserat på:
-* begäranrubriker och egenskaper (t.ex. IP-adress)
-* trafikmönster som man vet är associerade med skadlig trafik
+Trafikfilterregler finns nu tillgängliga i dev-miljöer, med en gradvis utrullning till scen- och prodmiljöer i november. Du kan begära tidigare åtkomst på scenen och produkten via e-post **aemcs-waf-adopter@adobe.com**.
 
-Är du intresserad av att testa funktionen och ge feedback? Skicka e-post till **aemcs-waf-adopter@adobe.com** från ditt officiella e-post-ID om du vill veta mer om programmet för tidig användning. Utrymmet är begränsat.
-
-Läs mer om funktionen i artikeln [här](/help/security/traffic-filter-rules-including-waf.md).
+De avancerade reglerna för WAF-trafikfilter kan licensieras senare i år genom erbjudandena Förbättrat skydd eller WAF-DDoS-skydd.
 
 ## Cloud Manager {#cloud-manager}
 

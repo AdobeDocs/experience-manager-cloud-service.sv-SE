@@ -1,12 +1,11 @@
 ---
 title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
-description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
-hide: true
-hidefromtoc: true
+description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna
+keywords: hur du väljer en inskickningsåtgärd för ett tilläggsformulär, kopplar ett adaptivt formulär till SharePoint-listan, kopplar ett adaptivt formulär till SharePoint-dokumentbiblioteket, kopplar ett adaptivt formulär till formulärdatamodellen
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: f79ed400ac2c1956dd7946cec2881f4e77d4bd41
 workflow-type: tm+mt
-source-wordcount: '3397'
+source-wordcount: '3473'
 ht-degree: 0%
 
 ---
@@ -107,22 +106,34 @@ Aktivera [!UICONTROL Attach Document of Record] finns i dokumentationen om [konf
 
 ## Skicka till SharePoint {#submit-to-sharedrive}
 
-The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen. Använd **[!UICONTROL Submit to SharePoint]** Skicka åtgärd i anpassad form:
+The **[!UICONTROL Submit to SharePoint]** Skicka åtgärd kopplar ett adaptivt formulär till en Microsoft® SharePoint-lagring. Du kan skicka formulärdatafilen, bifogade filer eller arkivdokument till den anslutna Microsoft® Sharepoint-lagringsplatsen.
 
-1. [Skapa en SharePoint-konfiguration](#create-a-sharepoint-configuration-create-sharepoint-configuration): Den ansluter AEM Forms till din Microsoft® Sharepoint-lagring.
+<!--
+Using Submit to SharePoint, you can:
+* [Connect an Adaptive Form to SharePoint Document Library](#connect-af-sharepoint-doc-library)
+* [Connect an Adaptive Form to SharePoint List](#connect-af-sharepoint-list)
+-->
+
+### Ansluta ett anpassat formulär till SharePoint Document Library {#connect-af-sharepoint-doc-library}
+
+Använd **[!UICONTROL Submit to SharePoint Document Library]** Skicka åtgärd i anpassad form:
+
+1. [Skapa en SharePoint Document Library-konfiguration](#create-a-sharepoint-configuration-create-sharepoint-configuration): Den ansluter AEM Forms till din Microsoft® Sharepoint-lagring.
 2. [Använda Skicka till SharePoint-åtgärden i ett anpassat formulär](#use-sharepoint-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
 
-### Skapa en SharePoint-konfiguration {#create-sharepoint-configuration}
+#### Skapa en SharePoint Document Library-konfiguration {#create-sharepoint-configuration}
 
-Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lagring:
+Så här ansluter du AEM Forms till Microsoft® Sharepoint Document Library:
 
-1. Gå till **AEM Forms** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
-1. Välj en **Konfigurationsbehållare**. Klicka inte i kryssrutan i konfigurationsbehållaren. Klicka på namnet på konfigurationsbehållaren för att markera den. Konfigurationen lagras i den valda konfigurationsbehållaren.
-1. Klicka på **[!UICONTROL Create]**. Konfigurationsguiden för SharePoint visas.
-   ![SharePoint-konfiguration](/help/forms/assets/sharepoint_configuration.png)
+1. Gå till **AEM Forms Author** instans > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.
+1. När du valt **[!UICONTROL Microsoft® SharePoint]** omdirigeras du till **[!UICONTROL SharePoint Browser]**.
+1. Välj en **Konfigurationsbehållare**. Konfigurationen lagras i den valda konfigurationsbehållaren.
+1. Klicka **[!UICONTROL Create]** > **[!UICONTROL SharePoint Document Library]** i listrutan. Konfigurationsguiden för SharePoint visas.
+
+![SharePoint-konfiguration](/help/forms/assets/sharepoint_configuration.png)
 1. Ange **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** och **[!UICONTROL OAuth URL]**. Mer information om hur du hämtar klient-ID, klienthemlighet, klient-ID för OAuth-URL finns i [Microsoft® Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
    * Du kan hämta `Client ID` och `Client Secret` från Microsoft® Azure-portalen.
-   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din AEM Forms Author-instans.
+   * Lägg till omdirigerings-URI som i Microsoft® Azure-portalen som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html`. Ersätt `[author-instance]` med webbadressen till din Author-instans.
    * Lägg till API-behörigheter `offline_access` och `Sites.Manage.All` för att ge läs- och skrivbehörigheter.
    * Använd OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` från Microsoft® Azure-portalen.
 
@@ -132,34 +143,95 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lagring:
 
 1. Klicka på **[!UICONTROL Connect]**. Vid en lyckad anslutning `Connection Successful` visas.
 
-1. Om du vill välja en mapp där data ska sparas väljer du **SharePoint Site** > **Dokumentbibliotek** > **SharePoint-mapp**, .
+1. Välj nu **SharePoint Site** > **Dokumentbibliotek** > **SharePoint-mapp**, för att spara data.
 
    >[!NOTE]
    >
-   >* Som standard är `forms-ootb-storage-adaptive-forms-submission` finns i den valda SharePoint-platsen. Om mappen inte är tillgänglig använder du **Skapa mapp** för att skapa den.
+   >* Som standard `forms-ootb-storage-adaptive-forms-submission` finns på den valda SharePoint-webbplatsen.
+   >* Skapa en mapp som `forms-ootb-storage-adaptive-forms-submission`, om de inte redan finns i `Documents` bibliotek för den valda SharePoint-webbplatsen genom att klicka på **Skapa mapp**.
 
-Nu kan du använda den här SharePoint Sites-konfigurationen för **Skicka till SharePoint** skicka-åtgärd i adaptiv form.
+Nu kan du använda den här SharePoint Sites-konfigurationen för att skicka-åtgärden i ett adaptivt formulär.
 
-### Använda Skicka till SharePoint-åtgärden i ett anpassat formulär {#use-sharepoint-configuartion-in-af}
+#### Använda SharePoint Document Library Configuration i ett adaptivt formulär {#use-sharepoint-configuartion-in-af}
 
-Du kan använda den SharePoint-konfiguration som skapades i föregående avsnitt om du vill spara data eller postdokument i en SharePoint-mapp. Utför följande steg för att använda åtgärden Skicka till SharePoint i anpassad form:
+Du kan använda den skapade SharePoint Document Library-konfigurationen i ett adaptivt formulär för att spara data eller generera Document of Record i en SharePoint-mapp. Utför följande steg för att använda lagringskonfigurationen för SharePoint Document Library i ett adaptivt formulär som:
 
-1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form.md). Välj [!UICONTROL Configuration Container] används för [skapa en SharePoint-konfiguration](#create-sharepoint-configuration).
+1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form-core-components.md).
 
    >[!NOTE]
    >
-   > När nej [!UICONTROL Configuration Container] markeras, den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
+   > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär där du har skapat ditt SharePoint Document Library-lagringsutrymme.
+   > * Om nej [!UICONTROL Configuration Container] markeras och sedan den globala [!UICONTROL Storage Configuration] visas i egenskapsfönstret för Skicka åtgärd.
 
 1. Välj **Skicka åtgärd** as **[!UICONTROL Submit to SharePoint]**.
-1. Välj den konfigurerade **[!UICONTROL Storage Configuration]**. Den anger vilken mapp i SharePoint som formulärdata och arkivdokument ska sparas i.
+   ![SharePoint GIF](/help/forms/assets/sharedrive-video.gif)
+1. Välj **[!UICONTROL Storage Configuration]**, där du vill spara dina data.
 1. Klicka **[!UICONTROL Save]** för att spara Skicka-inställningarna.
 
-När du skickar formuläret sparas data på den angivna lagringsplatsen för Microsoft® Sharepoint (mapp).
-Mappstrukturen för sparade data är `/folder_name/form_name/year/month/date/submission_id/data`.
+När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen.
+Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+
+<!--
+
+### Connect an Adaptive Form to Microsoft® SharePoint List {#connect-af-sharepoint-list}
+
+<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424820/connect-aem-adaptive-form-to-sharepointlist/?quality=12&learn=on)
+
+To use the [!UICONTROL Submit to SharePoint List] Submit Action in an Adaptive Form:
+
+1. [Create a SharePoint List Configuration](#create-sharepoint-list-configuration): It connects AEM Forms to your Microsoft® Sharepoint List Storage.
+1. [Use the Submit using Form Data Model in an Adaptive Form](#use-submit-using-fdm): It connects your Adaptive Form to configured Microsoft® SharePoint.
+
+#### Create a SharePoint List Configuration {#create-sharepoint-list-configuration}
+
+To connect AEM Forms to your Microsoft&reg; Sharepoint List:
+
+1. Go to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.   
+1. Select a **Configuration Container**. The configuration is stored in the selected Configuration Container. 
+1. Click **[!UICONTROL Create]** > **[!UICONTROL SharePoint List]** from the drop-down list. The SharePoint configuration wizard appears.  
+1. Specify the **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** and **[!UICONTROL OAuth URL]**. For information on how to retrieve Client ID, Client Secret, Tenant ID for OAuth URL, see [Microsoft&reg; Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
+    * You can retrieve the `Client ID` and `Client Secret` of your app from the Microsoft&reg; Azure portal.
+    * In the Microsoft&reg; Azure portal, add the Redirect URI as `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html`. Replace `[author-instance]` with the URL of your Author instance.
+    * Add the API permissions `offline_access` and `Sites.Manage.All` in the **Microsoft® Graph** tab to provide read/write permissions. Add `AllSites.Manage` permission in the **Sharepoint** tab to interact remotely with SharePoint data.
+    * Use OAuth URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Replace `<tenant-id>` with the `tenant-id` of your app from the Microsoft&reg; Azure portal.
+
+      >[!NOTE]
+      >
+      > The **client secret** field is mandatory or optional depends upon your Azure Active Directory application configuration. If your application is configured to use a client secret, it is mandatory to provide the client secret.
+
+1. Click **[!UICONTROL Connect]**. On a successful connection, the `Connection Successful` message appears.
+1. Select **[!UICONTROL SharePoint Site]** and **[!UICONTROL SharePoint List]** from the drop-down list.
+1. Tap **[!UICONTROL Create]** to create the cloud configuration for the Microsoft® SharePointList.
+
+
+#### Use the Submit using Form Data Model in an Adaptive Form {#use-submit-using-fdm}
+
+You can use the created SharePoint List configuration in an Adaptive Form, to save data or generated Document of Record in a SharePoint List folder. Perform the following steps to use a SharePoint List storage configuration in an Adaptive Form as:
+
+1. [Create a Form Data Model using Microsoft® SharePoint List configuration](/help/forms/create-form-data-models.md)
+1. [Configure the Form Data Model to retrieve and send data](/help/forms/work-with-form-data-model.md#configure-services)
+1. [Create an Adaptive Form](/help/forms/creating-adaptive-form-core-components.md)
+1. [Configure Submit action using a Form Data Model](/help/forms/configuring-submit-actions.md#submit-using-form-data-model)
+
+When you submit the form, the data is saved in the specified Microsoft&reg; Sharepoint List Storage. 
+
+>[!NOTE]
+>
+> In Microsoft® SharePoint List, the following column types are not supported:
+> * image column
+> * metadata column
+> * person column
+> * external data column
+
+-->
 
 ## Skicka med formulärdatamodell {#submit-using-form-data-model}
 
 The **[!UICONTROL Submit using Form Data Model]** Skicka åtgärd skriver skickade adaptiva formulärdata för det angivna datamodellsobjektet i en formulärdatamodell till datakällan. När du konfigurerar åtgärden Skicka kan du välja ett datamodellsobjekt vars skickade data du vill skriva tillbaka till dess datakälla.
+
+Du kan ansluta ett adaptivt formulär till en Microsoft SharePoint-lista med hjälp av åtgärden Skicka formulärdatamodell.
 
 Dessutom kan du skicka en bifogad fil med en formulärdatamodell och en DoR-fil (Document of Record) till datakällan. Mer information om formulärdatamodell finns i [[!DNL AEM Forms] Dataintegrering](data-integration.md).
 
@@ -247,7 +319,11 @@ Innan du använder **[!UICONTROL Invoke an AEM Workflow]** Skicka åtgärd konfi
 
 ## Skicka till OneDrive {#submit-to-onedrive}
 
-The **[!UICONTROL Submit to OneDrive]** Skicka åtgärd kopplar ett anpassat formulär till en Microsoft® OneDrive. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till den anslutna Microsoft® OneDrive-lagringsplatsen. Använd [!UICONTROL Submit to OneDrive] Skicka åtgärd i anpassad form:
+The **[!UICONTROL Submit to OneDrive]** Skicka åtgärd kopplar ett anpassat formulär till en Microsoft® OneDrive. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till den anslutna Microsoft® OneDrive-lagringsplatsen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424864/connect-aem-adaptive-form-to-onedrive/?quality=12&learn=on)
+
+Använd [!UICONTROL Submit to OneDrive] Skicka åtgärd i anpassad form:
 
 1. [Skapa en OneDrive-konfiguration](#create-a-onedrive-configuration-create-onedrive-configuration): Den ansluter AEM Forms till din Microsoft® OneDrive-lagring.
 2. [Använd Skicka till OneDrive-åtgärden i ett anpassat formulär](#use-onedrive-configuration-in-an-adaptive-form-use-onedrive-configuartion-in-af): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® OneDrive.
@@ -330,7 +406,7 @@ Nu kan du använda den här Azure Storage-behållarkonfigurationen för överfö
 ### Använd Azure Storage-konfigurationen i ett adaptivt formulär {#use-azure-storage-configuartion-in-af}
 
 Du kan använda den skapade Azure Storage-behållarkonfigurationen i ett adaptivt formulär för att spara data eller skapa ett dokument av posten i Azure Storage-behållaren. Utför följande steg för att använda konfigurationen av Azure Storage-behållaren i ett adaptivt formulär som:
-1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form.md).
+1. Skapa en [Adaptiv form](/help/forms/creating-adaptive-form-core-components.md).
 
    >[!NOTE]
    >
@@ -347,6 +423,8 @@ När du skickar formuläret sparas data i den angivna Azure Storage-behållarkon
 Mappstrukturen som data ska sparas i är `/configuration_container/form_name/year/month/date/submission_id/data`.
 
 Så här anger du värden för en konfiguration: [Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart)och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service.
+
+
 
 
 ## Skicka till Power Automate {#microsoft-power-automate}
@@ -417,3 +495,16 @@ Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassad
 När du förifyller en formulärdatamodell eller ett schemabaserat adaptivt formulär med XML- eller JSON-data klagar till ett schema som inte innehåller data `<afData>`, `<afBoundData>`och `</afUnboundData>` -taggar, försvinner data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, JSON-schema eller en formulärdatamodell. Obegränsade fält är adaptiva formulärfält utan `bindref` -egenskap.
 
 <!-- For more information, see [Customizing Pages shown by the Error Handler](/help/sites-developing/customizing-errorhandler-pages.md). -->
+
+
+## Se nästa
+
+* [Skapa stilar eller teman för formulären](using-themes-in-core-components.md)
+* [Skapa en adaptiv form (kärnkomponenter)](/help/forms/creating-adaptive-form-core-components.md)
+* [Skapa en anpassad inskickningsåtgärd för Adaptiv Forms](/help/forms/custom-submit-action-form.md)
+
+
+## Se även {#see-also}
+
+{{see-also}}
+

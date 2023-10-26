@@ -3,7 +3,9 @@ title: Hur ansluter AEM adaptiva formulär till Microsoft® SharePoint List?
 description: Koppla ett anpassat formulär till Microsoft® SharePoint List. Lär dig hur du konfigurerar Microsoft® SharePoint-listan och skapar en formulärdatamodell med hjälp av konfigurationen. Dessutom får du lära dig att integrera FDM med ditt adaptiva formulär.
 role: User, Developer
 keywords: ansluta AEM adaptiva blanketter till Microsoft SharePoint List, ansluta adaptiva blanketter till Microsoft SharePoint List, integrera AEM adaptiva blanketter i Microsoft SharePoint List, integrera adaptiva blanketter till Microsoft SharePoint List, skicka data från ett adaptivt formulär till SharePoint List, skicka AEM arbetsflöde till SharePoint List.
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+hide: true
+hidefromToC: true
+source-git-commit: f79ed400ac2c1956dd7946cec2881f4e77d4bd41
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 0%

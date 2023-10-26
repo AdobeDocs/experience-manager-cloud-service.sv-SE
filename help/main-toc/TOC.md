@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: c9ad4b6f2ae5107569c556ca11c75868c9e4be63
+source-git-commit: f79ed400ac2c1956dd7946cec2881f4e77d4bd41
 workflow-type: tm+mt
-source-wordcount: '4335'
+source-wordcount: '4344'
 ht-degree: 19%
 
 ---
@@ -592,6 +592,7 @@ ht-degree: 19%
             + [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
             + [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments-core-components.md)
             + [Skapa teman för ett adaptivt formulär - kärnkomponenter](/help/forms/using-themes-in-core-components.md)
+            + [Skapa en adaptiv formulärmall baserad på kärnkomponenter](/help/forms/template-editor-core-components.md)
             + [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-core-components.md)
             + [Använd maskinöversättning eller mänsklig översättning för att översätta ett adaptivt formulär](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
             + [Konfigurera omdirigeringssida eller tackmeddelande](/help/forms/configure-redirect-page-or-thank-you-message.md)

@@ -5,7 +5,7 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
 exl-id: 1e812d93-4ba5-4589-b59b-2f564d754b0f
-source-git-commit: d0e5a63896ccbeb32b565680276b461fbbf19e9c
+source-git-commit: f79ed400ac2c1956dd7946cec2881f4e77d4bd41
 workflow-type: tm+mt
 source-wordcount: '2254'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
    * The `blank` -mallar ingår i alla nya as a Cloud Service AEM Forms-program.
    * Du kan installera referenspaketet via Package Manager för att lägga till `blank` till ditt as a Cloud Service AEM Forms-program.
-   * Du kan också [skapa en ny adaptiv Forms-mall (kärnkomponenter)](template-editor.md) från scratch.
+   * Du kan också [skapa en ny adaptiv Forms-mall (kärnkomponenter)](/help/forms/template-editor-core-components.md) från scratch.
    * Du kan också distribuera [exempelmallar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) i din miljö. Med dessa kan du snabbt börja skapa formulär.
 
 * **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter.  The `Canvas` -mallar ingår i alla nya as a Cloud Service AEM Forms-program. Du kan också distribuera [exempelteman](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) i din miljö. Dessa hjälper dig att börja utforma formulären och skapa en grundstruktur för att skapa eller anpassa ett tema efter företagets behov.
