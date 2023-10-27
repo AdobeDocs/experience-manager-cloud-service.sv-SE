@@ -3,9 +3,9 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: 6e834244f3de7e615df12b137f2ae90a11e64ad0
+source-git-commit: f1af229fa0fb75a6181eae545ac7e51b31f212f7
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -68,17 +68,12 @@ Titta på videon med versionsöversikten för oktober 2023 om du vill se en samm
 
 ### Nya funktioner i [!DNL Experience Manager Forms] {#forms-features}
 
-* **Anpassade egenskaper för Adaptive Forms**: Du kan koppla anpassade attribut (nyckelvärdepar) till en formulärmall eller adaptiv formulärkomponent så att formulärutvecklare kan leverera dynamiska formulärbeteenden som anpassar sig utifrån värdena för dessa anpassade attribut. Utvecklare kan till exempel skapa olika renderingar av en Headless Forms-komponent på mobil-, dator- eller webbplattformar baserat på värdena för anpassade attribut, vilket avsevärt förbättrar användarupplevelsen på en mängd olika enheter.
+* **[Anpassade egenskaper för Adaptive Forms](/help/forms/template-editor-core-components.md#add-a-custom-group-name-in-the-policy-of-template-editor)**: Du kan koppla anpassade attribut (nyckelvärdepar) till en formulärmall eller adaptiv formulärkomponent så att formulärutvecklare kan leverera dynamiska formulärbeteenden som anpassar sig utifrån värdena för dessa anpassade attribut. Utvecklare kan till exempel skapa olika renderingar av en Headless Forms-komponent på mobil-, dator- eller webbplattformar baserat på värdena för anpassade attribut, vilket avsevärt förbättrar användarupplevelsen på en mängd olika enheter.
 
 * **Teman och mallar**: Kom igång snabbt med att skapa formulär med våra nya teman och mallar, som är skräddarsydda för både erfarna yrkesverksamma och nya formulärförfattare. Dessa välstrukturerade teman och mallar är sömlöst byggda med adaptiva Forms Core-komponenter och gör att du snabbt kan börja skapa formulär för vanliga användningsområden.
 
   ![Körklara mallar](/help/forms/assets/form-templates-ootb.png)
 
-### Förhandsversioner av funktioner som finns i [!DNL Forms] {#pre-release-features-available-in-forms-channel}
-
-* **Skicka Forms till Microsoft SharePoint List**: AEM Forms erbjuder en OOTB-integrering för att skicka in formulärdata direkt till SharePoint List, vilket gör att du kan utnyttja SharePoint Lists funktioner.
-
-  >[!VIDEO](https://video.tv.adobe.com/v/3424820/connect-aem-adaptive-form-to-sharepointlist/?quality=12&learn=on)
 
 ### Program för tidig användning {#forms-early-adopter}
 
