@@ -2,13 +2,13 @@
 title: Hur skapar man en adaptiv blankettmall som bygger på kärnkomponenten?
 description: Skapa adaptiva formulärmallar baserade på kärnkomponenten för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 Keywords: create adaptive form template, create adaptive form template based on core components, Use template to create adpative form.
-source-git-commit: f79ed400ac2c1956dd7946cec2881f4e77d4bd41
+exl-id: c1c050d3-953e-4e56-a96b-d84f2ec05e5e
+source-git-commit: 25a4a6b9ae09cb71f50317990af1718db1e14355
 workflow-type: tm+mt
 source-wordcount: '1915'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en adaptiv formulärmall baserad på kärnkomponenter {#adaptive-form-templates}
 
@@ -290,4 +290,3 @@ You can also save an Adaptive Form as a template for future use. To save a Adapt
 ## Se även {#see-also}
 
 {{see-also}}
-

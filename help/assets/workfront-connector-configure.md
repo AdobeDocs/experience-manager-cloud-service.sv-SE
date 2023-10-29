@@ -4,9 +4,9 @@ description: Konfigurera [!DNL Workfront for Experience Manager enhanced connect
 role: Admin
 feature: Integrations
 exl-id: d4e1247a-342c-4bc4-83bf-4e4902468fb3
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: bb80414989aa5ceb624550d0ea41283c7d5da4c6
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som 
 >
 >* Adobe kräver installation och konfiguration av [!DNL Adobe Workfront for Experience Manager enhanced connector] endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services], stöds den inte av Adobe.
 >
->* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör denna koppling redundant, Om detta inträffar kan kunderna behöva gå över från att använda denna koppling.
+>* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör den här kopplingen överflödig. Om detta inträffar kan kunderna behöva gå över från att använda den här anslutningen.
 >
 >* Adobe har stöd för utökade anslutningsversioner 1.7.4 och senare. Tidigare förhandsversioner och anpassade versioner stöds inte. Information om hur du kontrollerar den förbättrade anslutningsversionen finns i steg 5 a i [installationsanvisningar för förbättrad anslutning](workfront-connector-install.md).
 >
@@ -36,7 +36,7 @@ En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som 
 
 ## Konfigurera händelseprenumerationer {#event-subscriptions}
 
-Evenemangsprenumerationer används för att meddela AEM om händelser som inträffar i [!DNL Adobe Workfront]. Det finns tre [!DNL Workfront for Experience Manager enhanced connector] funktioner som kräver att en händelseprenumeration fungerar är följande:
+Evenemangsprenumerationer används för att meddela AEM om händelser som inträffar i [!DNL Adobe Workfront]. Det finns tre [!DNL Workfront for Experience Manager enhanced connector] funktioner som kräver att en händelseprenumeration fungerar:
 
 * Automatiskt skapande av projektlänkade mappar.
 * Synkronisering av ändringar i anpassade formulärvärden för Workfront-dokument till AEM metadata för resurser.
@@ -44,7 +44,7 @@ Evenemangsprenumerationer används för att meddela AEM om händelser som inträ
 
 Aktivera händelseprenumerationer om du vill använda dessa funktioner.
 
-* Redigera [!UICONTROL Workfront Tools] Cloud Services som du skapade i steg 5 och väljer [!UICONTROL Event Subscriptions] -fliken.
+* Redigera [!UICONTROL Workfront Tools] Cloud Service som du skapade i steg 5 och väljer [!UICONTROL Event Subscriptions] -fliken.
 * Välj [!UICONTROL Workfront Custom Integration] som du skapade i avsnitt 6.
 * Klicka på [!UICONTROL Enable Workfront Event Subscriptions].
 
@@ -61,12 +61,12 @@ Så här prenumererar du på händelserna:
 ### Konfiguration av länkad mappstruktur {#linked-folder-structure}
 
 1. Gå till fliken Projektlänkade mappar i molntjänsterna.
-1. Överordnad sökväg för länkad mapp: Välj en mapp i DAM där du vill skapa de länkade mapparna. Om det lämnas tomt används /content/dam som standard. Se till att metadatamatchemat för Workfront Tools och Workfront-mappen för länkade mappar har tillämpats på den markerade mappen.
-1. Struktur för länkad mapp: Ange kommaavgränsade värden. Varje värde ska `DE:<some-project-custom-form-field>`, Portfolio, Program, Year, Name eller lite Literal String Value (det här sista med citattecken). Den är för närvarande inställd på Portfolio, Program, År, DE:Projekttyp, Namn.
-1. Skapa länkad mapptitel i Workfront med hjälp av kryssrutan Mappstrukturnamn bör vara markerad om mappens titel i Workfront ska innehålla alla mappar i strukturen. Annars är det den sista mappens namn.
+1. Länkad mappsökväg: Välj en mapp i DAM där du vill skapa de länkade mapparna. Om det lämnas tomt används /content/dam som standard. Se till att metadatamatchemat för Workfront Tools och Workfront-mappen för länkade mappar har tillämpats på den markerade mappen.
+1. Länkad mappstruktur: Ange kommaavgränsade värden. Varje värde ska `DE:<some-project-custom-form-field>`, Portfolio, Program, Year, Name eller lite Literal String Value (det här sista med citattecken). Den är för närvarande inställd på Portfolio, Program, År, DE:Projekttyp, Namn.
+1. Skapa länkad mapptitel i Workfront med hjälp av kryssrutan Mappstrukturnamn bör vara markerad om mappens titel i Workfront ska innehålla alla mappar i strukturen. I annat fall är det den sista mappens namn.
 1. Med undermappsmappar kan du ange en lista med mappar som ska skapas som en underordnad mapp till den länkade mappen.
 1. Projektstatus: Välj den status som projektet måste ställas in för för att skapa den länkade mappen.
-1. Skapa en länkad mapp i projekt med en portfölj: Lista med Portfolio som projektet måste tillhöra så att du kan skapa den länkade mappen. Lämna listan tom om du vill skapa den länkade mappen för alla projektportföljer.
+1. Skapa en länkad mapp i projekt med portfölj: Lista med Portfolio som projektet måste tillhöra så att du kan skapa den länkade mappen. Lämna listan tom om du vill skapa den länkade mappen för alla projektportföljer.
 1. Skapa en länkad mapp i projekt med anpassat formulärfält: Anpassat formulärfält och motsvarande värde som projektet måste ha för att du ska kunna skapa den länkade mappen. Den här konfigurationen ignoreras om den lämnas tom. Välj `CUSTOM FORMS: Create DAM Linked Folder` för fält och indata `Yes` för värdet.
 1. Klicka på Aktivera automatiskt skapande av länkade mappar. Om du går tillbaka till fliken Händelseabonnemang ser du att det nu finns en händelse för att skapa.
 
@@ -80,6 +80,7 @@ Metadatamappning mellan Workfront-projekt och AEM-mappar definieras AEM mappmeta
 
 Så här konfigurerar du mappningarna:
 
+1. Lägg till `jcr:read` behörigheter till `/conf/global/settings/dam/adminui-extension/foldermetadataschema` for `wf-workfront-users` grupp.
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Folder Metadata Schemas]**.
 1. Markera det mappmetadatamatchschema som du vill redigera och klicka på Redigera.
 1. Markera det formulärfält för mappmetadatamatchema som du vill redigera och välj fliken Inställningar på den högra panelen.
@@ -97,7 +98,7 @@ Metadatamappning mellan Adobe Workfront-dokument och -resurser definieras AEM me
 Så här konfigurerar du mappningarna:
 
 1. Navigera till **verktyg** > **Resurser** > **Metadata-scheman**.
-1. Välj det metadatamatchformulär som du vill redigera och klicka på **Redigera** eller skapa ett nytt metadatchema från grunden.
+1. Markera det metadatamatchemaformulär som du vill redigera och klicka på **Redigera** eller skapa ett nytt metadatchema från grunden.
 1. Markera det formulärfält för metadatdataschema som du vill redigera och markera **Inställningar** på den högra panelen.
 1. I [!DNL Workfront] Anpassat formulärfält markerar namnet på [!DNL Workfront] fält som du vill mappa till den markerade AEM. Tillgängliga alternativ är:
 
@@ -107,7 +108,7 @@ Så här konfigurerar du mappningarna:
    * Anpassade formulärfält för uppgift
    * Projektöversiktsfält (ID, namn, beskrivning eller referensnummer)
 
-1. Om [!DNL Workfront] fält markerat i [!UICONTROL Workfront Custom Form Field] är ett fält av typen Workfront-användare måste du ange vilket Workfront-användarfält du vill mappa. Om du vill göra det markerar du Hämta värde från objektfältet som Workfront refererar till och anger sedan namnet på [!UICONTROL Workfront User Custom Form Field] som värdet ska mappas från.
+1. I det fall [!DNL Workfront] fält markerat i [!UICONTROL Workfront Custom Form Field] är ett fält av typen Workfront-användare måste du ange vilket Workfront-användarfält som du vill mappa. Om du vill göra det markerar du Hämta värde från objektfältet som Workfront refererar till och anger sedan namnet på [!UICONTROL Workfront User Custom Form Field] som värdet ska mappas från.
 
    ![konfiguration för metadatamappning](/help/assets/assets/wf-metadata-mapping-config1.png)
 
@@ -119,7 +120,7 @@ I det här arbetsflödessteget kan en användare mappa en egenskap till en [!DNL
 
 **ID-egenskap**: I det här fältet kan du ange sökvägen till ID:t för det Workfront-objekt som egenskaperna ska mappas till. Sökvägen som anges i det här fältet ska vara relativ till arbetsflödets nyttolast.
 
-**Egenskapstilldelningar**: I det här multifältet kan du ange mappningar mellan AEM och Workfront-fält. Varje objekt i flerfältet anger en mappning. Varje mappning ska ha formatet `<workfront-field>=<aem-mapped-property>`.
+**Egenskapstilldelningar**: Med detta multifält kan du ange mappningar mellan AEM och Workfront-fält. Varje objekt i flerfältet anger en mappning. Varje mappning ska ha formatet `<workfront-field>=<aem-mapped-property>`.
 
 * The `workfront-field` kan
 
@@ -132,16 +133,16 @@ I det här arbetsflödessteget kan en användare mappa en egenskap till en [!DNL
    * En AEM. Den här referensen ska vara relativ till arbetsflödets nyttolast.
    * Ett namngivet värde. Dessa bör omges av hakparenteser.
    * En sammanfogning av de tre ovanstående objekten. Ange det med `{+}`.
-   * En ändring av de tre ovanstående objekten genom att omge värdet med `{replace(<value>,"old-char","new-char")}`.
+   * En ändring av ovanstående 3 objekt genom att omge värdet med `{replace(<value>,"old-char","new-char")}`.
 
-* Några exempel är:
+* Exempel:
 
    * `status="INP"`
    * `DE:Asset Type=jcr:content/metadata/assetType`
    * `DE:Path={path}`
    * `URL="https://my-aem-author/assets.html"{+}{path}`
 
-![Konfiguration för att mappa egenskap](/help/assets/assets/wf-map-property-config.png)
+![Konfiguration för mappningsegenskap](/help/assets/assets/wf-map-property-config.png)
 
 ## Ange status {#set-status}
 
@@ -187,7 +188,7 @@ Om du vill behålla versionshistorik för resurser i AEM konfigurerar du resursv
 
 Med det här arbetsflödessteget kan användare bifoga ett anpassat formulär till ett [!DNL Workfront] artefakt. Det här arbetsflödessteget kan läggas till i alla arbetsflödesmodeller. The [!DNL Workfront] artefakt det här steget påverkar slås upp med en relativ sökväg från nyttolasten.
 
-I arbetsflödesredigeraren i Experience Manager redigerar du egenskaperna för [!UICONTROL Workfront - Attach custom form] arbetsflödessteg.
+Redigera egenskaperna för arbetsflödesredigeraren i Experience Manager [!UICONTROL Workfront - Attach custom form] arbetsflödessteg.
 
 ![anpassade formulär](/help/assets/assets/wf-custom-forms.png).
 
@@ -203,6 +204,6 @@ I arbetsflödesredigeraren i Experience Manager redigerar du egenskaperna för [
 
 ## Anpassade formuläruppdateringar för Workfront {#subscribe-workfront-doc-custom-form-updates}
 
-Prenumerera på ändringarna i [!DNL Workfront] anpassade formulär väljer du det relevanta alternativet i dialogrutan **[!UICONTROL Advanced]** -fliken. När du prenumererar på dessa uppdateringar uppdateras dina mappade [!DNL Experience Manager] metadatafält när motsvarande fält i [!DNL Workfront] anpassat dokumentformulär ändras.
+Prenumerera på ändringarna i [!DNL Workfront] anpassade formulär väljer du relevant alternativ i dialogrutan **[!UICONTROL Advanced]** -fliken. När du prenumererar på dessa uppdateringar uppdateras dina mappade [!DNL Experience Manager] metadatafält när motsvarande fält i [!DNL Workfront] anpassat formulär för dokument ändras.
 
 ![Konfigurera anpassade formuläruppdateringar i Workfront [!DNL Experience Manager]](/help/assets/assets/wf-custom-form-update.png)

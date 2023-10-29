@@ -1,13 +1,13 @@
 ---
 title: Förstå begäranden om Cloud Service innehåll
 description: Om du har köpt innehållsförfrågningslicenser från Adobe kan du ta reda på vilka typer av innehållsförfrågningar som Adobe Experience Cloud som en tjänst mäter och varianterna med en organisations analysrapporteringsverktyg.
-source-git-commit: e34b21194e35b2f56dd1e7df2165c3fa5c0cb7da
+exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
+source-git-commit: 25a4a6b9ae09cb71f50317990af1718db1e14355
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 0%
 
 ---
-
 
 # Begäranden om Cloud Service
 
@@ -67,5 +67,3 @@ Se även [Licensieringspanel](/help/implementing/cloud-manager/license-dashboard
 | Uteslut Commerce integrationa frameworkar | Exkluderad | Detta är begäranden som skickas till AEM som vidarebefordras till Commerce integrationa frameworken - URL:en börjar med `/api/graphql`- för att undvika dubbelräkning kan de inte faktureras för Cloud Service. |
 | Exkludera `manifest.json` | Exkluderad | Manifestet är inte ett API-anrop. Här finns information om hur du installerar webbplatser på datorer och mobiltelefoner. Adobe ska inte räkna JSON-begäran till `/etc.clientlibs/*/manifest.json` |
 | Exkludera `favicon.ico` | Exkluderad | Även om det returnerade innehållet inte ska vara HTML eller JSON observerar vi att i vissa scenarier, som SAML-autentiseringsflöden, kan favoritikoner returneras eftersom HTML därför uttryckligen utesluts från räkningen. |
-
-

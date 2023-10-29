@@ -2,13 +2,13 @@
 title: Sök efter bästa praxis för [!DNL Adobe Experience Manager] som [!DNL Cloud Service]
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
-source-git-commit: 2c9316431d588241b470c8146c9444dbfc0af5fd
+exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
+source-git-commit: 25a4a6b9ae09cb71f50317990af1718db1e14355
 workflow-type: tm+mt
 source-wordcount: '2455'
 ht-degree: 1%
 
 ---
-
 
 # Bästa praxis för AEM-sökning
 
