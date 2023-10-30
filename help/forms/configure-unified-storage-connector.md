@@ -1,23 +1,23 @@
 ---
-title: Hur konfigurerar jag Unified Storage Connector för AEM Forms?
-description: Lär dig hur du hanterar anslutningsprogrammet för enhetlig lagring för AEM Forms. Använd Unified Storage Connector för att ansluta AEM Forms till externa datalager.
+title: Hur konfigurerar jag USC (Unified Storage Connector) för AEM Forms?
+description: Lär dig hantera USC (Unified Storage Connector) för AEM Forms. Använd USC (Unified Storage Connector) för att ansluta AEM Forms till externa datalagringsplatser.
 exl-id: c93d0242-0c15-4d69-82a1-d6fcc7da4bae
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: c33f59cb56decf1e5bbbe0b5bb084e906585e702
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
 
-# Hantera koppling för enhetlig lagring för AEM Forms {#manage-unified-storage-connector}
+# Hantera USC (Unified Storage Connector) för AEM Forms {#manage-unified-storage-connector}
 
-Du kan använda Unified Storage Connector för att ansluta AEM Forms till externa datalager.
+Du kan använda USC (Unified Storage Connector) för att ansluta AEM Forms till externa datalagringsplatser.
 
-Du kan till exempel fylla i värden för fält i ett anpassat formulär och skicka det till ett AEM arbetsflöde. Du kan konfigurera AEM arbetsflöden ytterligare för att lagra data i en extern lagringsplats, till exempel Microsoft Azure-lagringsservern. Använd Unified Storage Connector för att skapa en anslutning mellan AEM arbetsflöden och det externa lagringsutrymmet.
+Du kan till exempel fylla i värden för fält i ett anpassat formulär och skicka det till ett AEM arbetsflöde. Du kan konfigurera AEM arbetsflöden ytterligare för att lagra data i en extern lagringsplats, till exempel Microsoft Azure-lagringsservern. Använd USC (Unified Storage Connector) för att skapa en anslutning mellan AEM arbetsflöden och det externa lagringsutrymmet.
 
 ## Ansluta AEM arbetsflöden med en Microsoft Azure-lagringsserver {#connect-workflows-with-azure}
 
-Skapa en Azure-lagringskonfiguration och referera till den konfigurationen med Unified Storage Connector. Du kan sedan konfigurera AEM arbetsflödesmodeller för att externalisera datalagringen för att ansluta dem till en Azure-lagringsserver.
+Skapa en Azure-lagringskonfiguration och referera till den konfigurationen med hjälp av USC (Unified Storage Connector). Du kan sedan konfigurera AEM arbetsflödesmodeller för att externalisera datalagringen för att ansluta dem till en Azure-lagringsserver.
 
 ### Skapa [!DNL Azure] lagringskonfiguration {#create-azure-storage-configuration}
 
@@ -31,9 +31,9 @@ Så här skapar du en [!DNL Azure] lagringskonfiguration:
 1. Ange namnet på [!DNL Azure] lagringskonto i **[!UICONTROL Azure Storage Account]** fält.
 1. Ange nyckeln för åtkomst till Azure-lagringskontot i **[!UICONTROL Azure Access Key]** fält och knacka **[!UICONTROL Save]**.
 
-### Konfigurera koppling för enhetlig lagring för AEM arbetsflöden {#configure-unified-storage-connector-workflows}
+### Konfigurera USC (Unified Storage Connector) för AEM {#configure-unified-storage-connector-workflows}
 
-Så här konfigurerar du Unified Storage Connector för AEM arbetsflöden:
+Utför följande steg för att konfigurera USC (Unified Storage Connector) för AEM arbetsflöden:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Unified Storage Connector]**.
 

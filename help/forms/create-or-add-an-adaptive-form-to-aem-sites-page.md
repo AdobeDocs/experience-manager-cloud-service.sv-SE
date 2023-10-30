@@ -4,9 +4,9 @@ description: Upptäck hur du skapar eller lägger till ett anpassat formulär p�
 feature: Adaptive Forms, Page Editor, Authoring
 Keywords: AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 exl-id: a1846c5d-7b0f-4f48-9d15-96b2a8836a9d
-source-git-commit: 7b797524d0df764c497baa6e4ffd0b3cabd368ca
+source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3123'
 ht-degree: 0%
 
 ---
@@ -255,14 +255,21 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
    * Om du vill konfigurera en omdirigerings-URL för alternativet Skicka väljer du **[!UICONTROL Redirect to URL]** och bläddra och markera en AEM Sites-sida, eller ange en URL-adress för en extern sida.
    * Om du vill konfigurera ett anpassat meddelande eller ett tackmeddelande väljer du alternativet Skicka i **[!UICONTROL Show Message]** och skriv ett meddelande i **[!UICONTROL Message content]** box. Det är en RTF-ruta som du kan använda helskärmsalternativet för att visa alla tillgängliga RTF-objekt.
 
-## Se nästa
 
-* [Skapa stilar eller teman för formulären](using-themes-in-core-components.md)
-* [Lägga till dynamiskt beteende i formulär med regelredigeraren](rule-editor.md)
-* [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
+<!--
+## See next
 
+* [Create style or themes for your forms](using-themes-in-core-components.md)
+* [Add dynamic behavior to forms using the rule editor](rule-editor.md)
+* [Set layout of forms for different screen sizes and device types](/help/sites-cloud/authoring/features/responsive-layout.md)
+
+-->
 
 ## Se även {#see-also}
 
 {{see-also}}
+
+* [Lägga till dynamiskt beteende i formulär med regelredigeraren](rule-editor.md)
+* [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
+
 

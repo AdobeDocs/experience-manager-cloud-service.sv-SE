@@ -3,9 +3,9 @@ title: Hur skapar man en adaptiv blankettmall som bygger på kärnkomponenten?
 description: Skapa adaptiva formulärmallar baserade på kärnkomponenten för att definiera den grundläggande strukturen och det ursprungliga innehållet med mallredigeraren.
 Keywords: create adaptive form template, create adaptive form template based on core components, Use template to create adpative form.
 exl-id: c1c050d3-953e-4e56-a96b-d84f2ec05e5e
-source-git-commit: 25a4a6b9ae09cb71f50317990af1718db1e14355
+source-git-commit: 25a1504e2655e414f32dfea20e416889cea06dcc
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1913'
 ht-degree: 0%
 
 ---
@@ -282,11 +282,18 @@ You can also save an Adaptive Form as a template for future use. To save a Adapt
 * Begränsa antalet mallar så att de matchar de i grunden olika formulärtyperna som finns på webbplatserna
 * Ge de anpassade komponenter som används i en mall den flexibilitet och konfigurationsmöjligheter som behövs.
 
-## Se nästa
+<!--
+## See next
 
-* [Skapa stilar eller teman för formulären](using-themes-in-core-components.md)
-* [Skapa en adaptiv form (kärnkomponenter)](/help/forms/creating-adaptive-form-core-components.md)
+* [Create style or themes for your forms](using-themes-in-core-components.md)
+* [Create an Adaptive Form (core components)](/help/forms/creating-adaptive-form-core-components.md)
+
+-->
 
 ## Se även {#see-also}
 
 {{see-also}}
+
+* [Skapa stilar eller teman för formulären](using-themes-in-core-components.md)
+* [Skapa en adaptiv form (kärnkomponenter)](/help/forms/creating-adaptive-form-core-components.md)
+

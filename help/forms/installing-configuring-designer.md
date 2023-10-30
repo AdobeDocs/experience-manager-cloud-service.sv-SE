@@ -3,7 +3,7 @@ title: Hur laddar man ned och installerar Forms Designer för att skapa dokument
 description: Använd Forms Designer för att skapa XDP- och PDF-blankettmallar som fungerar som mall för ett arkivdokument.
 keywords: Installera Designer, installera Forms Designer, krav för installation av Forms Designer
 exl-id: d6f1cb21-c48b-406d-8d47-482d7a1b4cc3
-source-git-commit: 0f8aed76af4d2640094a76f2805f73a0a619e33f
+source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 1%
@@ -74,8 +74,13 @@ Så här installerar du Designer:
 * [Använda anpassade teckensnitt](/help/forms/use-custom-fonts.md)
 * [Skapa en fristående grundkomponentbaserad adaptiv form](/help/forms/creating-adaptive-form-core-components.md)
 * [Skapa eller lägga till ett anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Använd Forms Designer för att skapa DoR-mallar och formulärfragment](/help/forms/use-forms-designer.md)
 
+
+<!--
 
 >[!MORELIKETHIS]
 >
->* [Använd Forms Designer för att skapa DoR-mallar och formulärfragment](/help/forms/use-forms-designer.md)
+>* [Use Forms Designer to create Document of Record (DoR) templates and form fragments](/help/forms/use-forms-designer.md)
+
+-->

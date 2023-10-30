@@ -2,9 +2,9 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: aca385ff9a44733a6529c7e78e73fc1b138c1177
+source-git-commit: 8df8322eef7c74932d6feeeb4a7a6045935edd88
 workflow-type: tm+mt
-source-wordcount: '3453'
+source-wordcount: '3473'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 # Trafikfilterregler inklusive WAF-regler {#traffic-filter-rules-including-waf-rules}
 
 >[!NOTE]
->Den här funktionen kommer snart att vara tillgänglig i utvecklingsmiljöer, med en gradvis övergång till scen- och produktmiljöer i november. Du kan begära tidigare åtkomst på scenen och produkten via e-post **aemcs-waf-adopter@adobe.com**.
+>Den här funktionen är nu tillgänglig i utvecklingsmiljöer, med en gradvis övergång till scen- och produktmiljöer senare i november. Du kan begära tidigare åtkomst på scenen och produkten via e-post **aemcs-waf-adopter@adobe.com**.
 
 Trafikfilterregler kan användas för att blockera eller tillåta förfrågningar i CDN-lagret, vilket kan vara användbart i scenarier som:
 
@@ -26,6 +26,8 @@ De flesta av dessa trafikfilterregler är tillgängliga för alla AEM as a Cloud
 En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhetslicens eller en licens för WAF-DDoS-skydd, och kommer att vara tillgänglig senare i år. Dessa kraftfulla regler kallas för trafikfilterregler för WAF (Web Application Firewall) (eller för korta WAF-regler) och har tillgång till [WAF-flaggor](#waf-flags-list) beskrivs senare i den här artikeln.
 
 Trafikfilterregler kan distribueras via Cloud Managers konfigurationspipelines för att dev, stage och produktionsmiljötyper i produktionsprogram (icke-sandlådeprogram). Stöd för de regionala utvecklingsföretagen kommer i framtiden.
+
+[Följ igenom en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
 
 ## Hur den här artikeln ordnas {#how-organized}
 

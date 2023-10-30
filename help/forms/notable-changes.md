@@ -3,9 +3,9 @@ title: Vilka är skillnaderna mellan AEM 6.5 Forms och AEM Cloud Service?
 description: Jämför AEM 6.5 Forms och AEM Cloud Services och lär dig de viktigaste förändringarna innan du uppgraderar eller migrerar till Cloud Service.
 exl-id: 46fcc1b4-8fd5-40e1-b0fc-d2bc9df3802e
 contentOwner: khsingh
-source-git-commit: 7e3eb3426002408a90e08bee9c2a8b7a7bfebb61
+source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
@@ -113,13 +113,20 @@ Forms as a Cloud Service tillhandahåller RESTful-API:er för dokumentgenerering
 
 * Du kan använda API:er för kommunikation för att skapa anpassade dokument on-demand eller gruppvis på Forms as a Cloud Service. Du kan använda en AEM 6.5 Forms-miljö för interaktiv kommunikation och användargränssnitt för agenter.
 
-## Se nästa
+## Se även
 
 * [Migrera från AEM Forms (On-Premise och AMS) till AEM Forms as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
 * [Lägg till eller skapa Adaptiv Forms på AEM Sites Page](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [Skapa en adaptiv form (kärnkomponenter)](/help/forms/creating-adaptive-form-core-components.md)
-
-## Ytterligare information
-
 * [Introduktion till AEM Forms as a Cloud Service](/help/forms/home.md)
 * [Konfigurera en lokal utvecklingsmiljö och ett inledande utvecklingsprojekt](/help/forms/setup-local-development-environment.md)
+
+
+<!--
+
+## Additional Information
+
+* [Introduction to AEM Forms as a Cloud Service](/help/forms/home.md)
+* [Set up a local development environment and initial development project](/help/forms/setup-local-development-environment.md)
+
+-->

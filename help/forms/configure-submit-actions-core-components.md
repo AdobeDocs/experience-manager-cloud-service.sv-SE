@@ -3,9 +3,9 @@ title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna
 keywords: hur du väljer en inskickningsåtgärd för ett tilläggsformulär, kopplar ett adaptivt formulär till SharePoint-listan, kopplar ett adaptivt formulär till SharePoint-dokumentbiblioteket, kopplar ett adaptivt formulär till formulärdatamodellen
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
-source-git-commit: f79ed400ac2c1956dd7946cec2881f4e77d4bd41
+source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
 workflow-type: tm+mt
-source-wordcount: '3473'
+source-wordcount: '3450'
 ht-degree: 0%
 
 ---
@@ -497,12 +497,14 @@ När du förifyller en formulärdatamodell eller ett schemabaserat adaptivt form
 <!-- For more information, see [Customizing Pages shown by the Error Handler](/help/sites-developing/customizing-errorhandler-pages.md). -->
 
 
-## Se nästa
+<!--
+## See next
 
-* [Skapa stilar eller teman för formulären](using-themes-in-core-components.md)
-* [Skapa en adaptiv form (kärnkomponenter)](/help/forms/creating-adaptive-form-core-components.md)
-* [Skapa en anpassad inskickningsåtgärd för Adaptiv Forms](/help/forms/custom-submit-action-form.md)
+* [Create style or themes for your forms](using-themes-in-core-components.md)
+* [Create an Adaptive Form (core components)](/help/forms/creating-adaptive-form-core-components.md)
+* [Create a custom Submit Action for Adaptive Forms](/help/forms/custom-submit-action-form.md)
 
+-->
 
 ## Se även {#see-also}
 

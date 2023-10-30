@@ -2,9 +2,9 @@
 title: Hur skapar och använder vi teman i Adaptive Forms?
 description: Du kan använda teman för att utforma och ge en visuell identitet till ett adaptivt formulär med hjälp av kärnkomponenterna. Du kan dela ett tema med ett valfritt antal adaptiva Forms.
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: d0e5a63896ccbeb32b565680276b461fbbf19e9c
+source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
 workflow-type: tm+mt
-source-wordcount: '2634'
+source-wordcount: '2632'
 ht-degree: 0%
 
 ---
@@ -410,19 +410,29 @@ Om du vill ange information som logotypbild, företagsnamn i sidhuvud och copyri
 
 **Ans:** När anpassningar görs på både global nivå och komponentnivå prioriteras anpassningen på komponentnivå.
 
-## Se nästa
+<!--
 
-* [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
-* [Generera urkunder för adaptiva Forms (kärnkomponenter)](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
-* [Skapa en adaptiv Forms med upprepningsbara avsnitt](/help/forms/create-forms-repeatable-sections.md)
-* [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
+## See next
+
+* [Set layout of forms for different screen sizes and device types](/help/sites-cloud/authoring/features/responsive-layout.md)
+* [Generate Document of Record for Adaptive Forms (Core Components](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
+* [Create an Adaptive Forms with Repeatable sections](/help/forms/create-forms-repeatable-sections.md)
+* [Sample themes templates and form data models](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
 
 
 >[!MORELIKETHIS]
 >
->* [Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö](/help/forms/enable-adaptive-forms-core-components.md)
+>* [Enable Adaptive Forms Core Components on AEM Forms as a Cloud Service and local development environment](/help/forms/enable-adaptive-forms-core-components.md)
+
+-->
 
 
 ## Se även {#see-also}
 
 {{see-also}}
+
+* [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
+* [Generera urkunder för adaptiva Forms (kärnkomponenter)](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
+* [Skapa en adaptiv Forms med upprepningsbara avsnitt](/help/forms/create-forms-repeatable-sections.md)
+* [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
+* [Aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och lokala utvecklingsmiljö](/help/forms/enable-adaptive-forms-core-components.md)

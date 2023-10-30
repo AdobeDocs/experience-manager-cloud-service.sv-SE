@@ -5,9 +5,9 @@ role: User, Developer
 keywords: ansluta AEM adaptiva blanketter till Microsoft SharePoint List, ansluta adaptiva blanketter till Microsoft SharePoint List, integrera AEM adaptiva blanketter i Microsoft SharePoint List, integrera adaptiva blanketter till Microsoft SharePoint List, skicka data från ett adaptivt formulär till SharePoint List, skicka AEM arbetsflöde till SharePoint List.
 hide: true
 hidefromToC: true
-source-git-commit: f79ed400ac2c1956dd7946cec2881f4e77d4bd41
+source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -86,16 +86,12 @@ Lär dig hur [använd AEM](https://experienceleague.adobe.com/docs/experience-ma
 * [Konfigurera datakällor](/help/forms/configuring-submit-actions.md)
 * [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
 * [Använd Forms-centrerade AEM - stegvis referens för att automatisera affärsprocesser](/help/forms/aem-forms-workflow-step-reference.md)
-
-## Ytterligare information
-
+* [Skapa en anpassad inskickningsåtgärd för Adaptiv Forms](/help/forms/custom-submit-action-form.md)
 * [Skapa eller lägga till ett adaptivt formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [Bädda in ett anpassat formulär på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
 * [Skapa, använda och anpassa teman i ett adaptivt formulär](/help/forms/using-themes-in-core-components.md)
 
->[!MORELIKETHIS]
->
->* [Skapa en anpassad inskickningsåtgärd för Adaptiv Forms](/help/forms/custom-submit-action-form.md)
+
 
 
 
