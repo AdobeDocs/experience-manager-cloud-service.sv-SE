@@ -4,9 +4,9 @@ description: Lär dig hur du använder AEM Content Fragment-modeller för att sk
 hidefromtoc: true
 index: false
 exl-id: ace9b9f3-8bc6-4a36-a51c-ff60cdd339ce
-source-git-commit: e507b409e4d2382b1eac54b11a9ad68fd965db4b
+source-git-commit: 07f61a3f6a794e18bc2e02e966392cdce3103a81
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1009'
 ht-degree: 0%
 
 ---
@@ -98,6 +98,7 @@ Följ samma steg som ovan för att lägga till dessa ytterligare fält. Den enda
 
    * **Återge som:** **Innehållsreferens** - När du skapar ett äventyr pekar det här fältet på bildresursen som representerar den här resan.
    * **Fältetikett:** `Image` - Den etikett som visas för det här fältet när du skapar ett äventyr.
+   * **Rotsökväg:** `/content/dam/aem-demo-assets/en` - Detta anger en startpunktssökväg när du bläddrar efter resurser med resursväljaren.
 
 1. När du har lagt till de nödvändiga fälten för modellen för innehållsfragment, klickar du på längst upp till höger i fönstret **Spara**.
 
