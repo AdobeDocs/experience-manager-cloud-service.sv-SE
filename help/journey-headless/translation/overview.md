@@ -2,7 +2,7 @@
 title: AEM översättningsresa utan rubrik
 description: Börja här för en guidad resa genom att översätta ert headless-innehåll med AEM kraftfulla översättningsverktyg.
 exl-id: b677f691-5257-43c3-a4b9-c34932577b31
-source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
+source-git-commit: f4e28d89023e8f326e6816ebd8168e1e31e772ce
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 1%
@@ -66,8 +66,8 @@ Du kommer att utforska många ämnen under den här resan. I följande artiklar 
 | 0 | AEM översättningsresa utan rubrik | Det här dokumentet |
 | 1 | [Lär dig mer om headless-innehåll och hur du översätter det i AEM](learn-about.md) | Lär dig headless-koncept, hur de AEM och teorin om AEM översättning. |
 | 2 | [Kom igång med AEM headless translation](getting-started.md) | Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar. |
-| 3 | [Konfigurera översättningskopplingen](configure-connector.md) | Lär dig hur du ansluter AEM till en översättningstjänst. |
-| 4 | [Översätta innehåll](translate-content.md) | Använd översättningskopplingen och reglerna för att översätta ditt headless-innehåll. |
+| 3 | [Konfigurera översättningsintegrering](configure-connector.md) | Lär dig hur du ansluter AEM till en översättningstjänst. |
+| 4 | [Översätta innehåll](translate-content.md) | Använd översättningsintegrering och regler för att översätta ert headless-innehåll. |
 | 5 | [Publicera översatt innehåll](publish-content.md) | Lär dig hur du publicerar översatt innehåll och uppdaterar översättningen när det underliggande innehållet uppdateras. |
 
 ## What&#39;s Next {#what-is-next}

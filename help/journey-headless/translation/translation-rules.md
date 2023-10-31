@@ -2,7 +2,7 @@
 title: Konfigurera översättningsregler för Headless-innehåll
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: f4e28d89023e8f326e6816ebd8168e1e31e772ce
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -15,12 +15,12 @@ Lär dig hur du definierar översättningsregler för att identifiera innehåll 
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM översättningsresan utan headless [Konfigurera översättningskoppling](configure-connector.md) du lärde dig att installera och konfigurera översättningskopplingen och bör nu:
+I det föregående dokumentet om den AEM översättningsresan utan headless [Konfigurera översättningsintegrering](configure-connector.md) du lärde dig att installera och konfigurera översättningsintegrationen och bör nu:
 
 * Förstå de viktiga parametrarna i översättningsintegreringsramverket i AEM.
 * Du kan skapa en egen anslutning till översättningstjänsten.
 
-Nu när du har konfigurerat din koppling tar den här artikeln dig igenom nästa steg för att identifiera vilket innehåll du behöver översätta.
+Nu när integreringen är klar tar den här artikeln dig igenom nästa steg för att identifiera vilket innehåll du behöver översätta.
 
 >[!CAUTION]
 >
@@ -100,7 +100,7 @@ Nu när du är klar med den här delen av den headless översättningsresan ska 
 * Förstå vad översättningsreglerna gör.
 * Ange egna översättningsregler.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Översätta innehåll](translate-content.md) där du får lära dig hur dina kontakter och regler fungerar tillsammans för att översätta rubrikfritt innehåll.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Översätta innehåll](translate-content.md) där du får lära dig hur integrering och regler fungerar tillsammans för att översätta headless-innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 

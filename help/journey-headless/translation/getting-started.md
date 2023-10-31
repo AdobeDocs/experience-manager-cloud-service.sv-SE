@@ -2,7 +2,7 @@
 title: Kom igång med AEM Headless Translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 04ae2cd6-aba3-4785-9099-2f6ef24e1daf
-source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
+source-git-commit: f4e28d89023e8f326e6816ebd8168e1e31e772ce
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
@@ -178,7 +178,7 @@ Nu när du är klar med den här delen av den headless översättningsresan ska 
 * Förstå hur AEM lagrar headless-innehåll.
 * Bekanta dig med AEM översättningsverktyg.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Konfigurera översättningskopplingen](configure-connector.md) där du får lära dig att ansluta AEM till en översättningstjänst.|
+Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Konfigurera översättningsintegrering](configure-connector.md) där du får lära dig att ansluta AEM till en översättningstjänst.|
 
 ## Ytterligare resurser {#additional-resources}
 

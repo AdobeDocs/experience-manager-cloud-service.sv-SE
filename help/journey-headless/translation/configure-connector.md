@@ -1,15 +1,15 @@
 ---
-title: Konfigurera Translation Connector för Headless-innehåll
+title: Konfigurera översättningsintegrering för Headless-innehåll
 description: Lär dig hur du ansluter AEM till en översättningstjänst.
 exl-id: c91b2701-7ede-4d0b-93dd-3636c6638be2
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: f4e28d89023e8f326e6816ebd8168e1e31e772ce
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
 
 ---
 
-# Konfigurera översättningsanslutningen {#configure-connector}
+# Konfigurera översättningsintegrering {#configure-integration}
 
 Lär dig hur du ansluter AEM till en översättningstjänst.
 
@@ -25,7 +25,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du kan ta d
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du konfigurerar en AEM till den översättningstjänst du valt. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur du konfigurerar en AEM integrering till den översättningstjänst du valt. När du har läst bör du:
 
 * Förstå de viktiga parametrarna i översättningsintegreringsramverket i AEM.
 * Du kan skapa en egen anslutning till översättningstjänsten.
@@ -48,7 +48,7 @@ Det första steget är att välja vilken översättningstjänst du vill använda
 >
 >Översättningsexperten ansvarar vanligtvis för att välja vilken översättningstjänst som ska användas, men administratören ansvarar vanligtvis för att installera det nödvändiga översättningsanslutningspaketet.
 
-För den här resan använder vi Microsoft Translator som AEM tillhandahåller en körklar testlicens. Se [Ytterligare resurser](#additional-resources) om du vill ha mer information om den här providern.
+För den här resan använder vi Microsoft Translator som AEM tillhandahåller en körklar testlicens. Se [Ytterligare resurser](#additional-resources) för mer information om den här providern.
 
 Om du väljer en annan provider måste administratören installera kopplingspaketet enligt översättningstjänstens instruktioner.
 
@@ -66,20 +66,20 @@ När kopplingspaketet för den översättningstjänst du föredrar har installer
 
 * Vilken översättningstjänstleverantör som ska användas
 * Om översättning till människa eller dator ska utföras
-* Om annat innehåll som är associerat med innehållsfragmentet ska översättas, t.ex. taggar
+* Om annat innehåll som är associerat med innehållsfragmentet ska översättas, till exempel taggar
 
 Så här skapar du en ny översättningskonfiguration:
 
-1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** -> **Cloud Services** -> **Cloud Services för översättning**.
+1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på ett visst projekt eller kan vara globalt.
    * I det här fallet kan till exempel en konfiguration göras globalt för att gälla allt innehåll, eller bara för WKND-projektet.
 
    ![Plats för översättningskonfiguration](assets/translation-configuration-location.png)
 
-1. Ange följande information i fälten och klicka eller tryck sedan på **Skapa**.
+1. Ange följande information i fälten och klicka eller tryck sedan **Skapa**.
    1. Välj **Konfigurationstyp** i listrutan. Välj **Översättningsintegrering** från listan.
-   1. Ange **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Services** console och in page property drop-down lists.
-   1. Du kan även skriva en **Namn** som ska användas för den databasnod som lagrar konfigurationen.
+   1. Ange en **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Service** console och in page property drop-down lists.
+   1. Om du vill kan du skriva **Namn** som ska användas för den databasnod som lagrar konfigurationen.
 
    ![Skapa översättningskonfiguration](assets/create-translation-configuration.png)
 
@@ -92,14 +92,14 @@ Så här skapar du en ny översättningskonfiguration:
 1. Ange följande information.
 
    1. **Översättningsmetod** - Välj **Maskinöversättning** eller **Översättning av människor** beroende på översättningsleverantör. För den här resan antar vi maskinöversättning.
-   1. **Översättningsproviders** - Välj den koppling du installerade för översättningstjänsten i listan.
+   1. **Översättningsproviders** - Välj den koppling du har installerat för översättningstjänsten i listan.
    1. **Innehållskategori** - Välj den kategori som bäst passar översättningen (endast för maskinöversättning).
-   1. **Översätt innehållsfragmentresurser** - Markera det här alternativet om du vill översätta resurser som är kopplade till innehållsfragment.
+   1. **Översätt resurser för innehållsfragment** - Markera det här alternativet om du vill översätta resurser som är kopplade till innehållsfragment.
    1. **Översätt resurser** - Markera detta för att översätta resurserna.
    1. **Översätt metadata** - Markera det här alternativet om du vill översätta metadata för resurser.
    1. **Översätt taggar** - Markera det här alternativet om du vill översätta taggar som är kopplade till resursen.
    1. **Automatisk översättning** - Markera den här egenskapen om du vill att översättningar ska skickas automatiskt till översättningstjänsten.
-   1. **Inaktivera översättning med endast uppdatering** - När det här alternativet är markerat skickas alla översättningsbara fält för översättning när du uppdaterar översättningsprojektet, inte bara de som ändrats sedan den senaste översättningen. Att uppdatera översättningsprojektet diskuteras senare under kundresan.
+   1. **Inaktivera översättning med endast uppdatering** - När det här alternativet är markerat skickas alla översättningsbara fält för översättning när du uppdaterar översättningsprojektet, inte bara de som ändrats sedan den senaste översättningen. Uppdateringen av ditt översättningsprojekt diskuteras senare under kundresan.
    1. **Aktivera fält för innehållsmodell för översättning** - Markera det här alternativet så att översättningskonfigurationen automatiskt känner igen fält i innehållsmodellerna baserat på **Översättningsbar** flagga.
 
 1. Tryck eller klicka **Spara och stäng**.
@@ -118,7 +118,7 @@ Det gör du genom att navigera till innehållets språkrot. I våra exempel är 
 
 1. Gå till den globala navigeringen och gå till **Navigering** -> **Resurser** -> **Filer**.
 1. I resurskonsolen väljer du den språkrot som du vill konfigurera och klickar eller trycker på **Egenskaper**.
-1. Tryck eller klicka på **Cloud Services** -fliken.
+1. Tryck eller klicka på **Cloud Service** -fliken.
 1. Under **Cloud Service Configurations** i **Lägg till konfiguration** väljer du kontakt. Den ska visas i listrutan när du har installerat paketet som [som beskrivits tidigare.](#connect-translation-provider)
 1. Under **Cloud Service Configurations** i **Lägg till konfiguration** väljer du även din konfiguration.
 1. Tryck eller klicka **Spara och stäng**.
