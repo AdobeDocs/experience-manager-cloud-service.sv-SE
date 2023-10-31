@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
 exl-id: 1e812d93-4ba5-4589-b59b-2f564d754b0f
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: 4cebcd58a0d6fd429cde3d739095c131cc76d9e5
 workflow-type: tm+mt
-source-wordcount: '2231'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -205,7 +205,6 @@ Du kan använda förifyllningstjänsten för formulärdatamodell för att fylla 
 ## Se även {#see-also}
 
 {{see-also}}
-
 * [Lägga till dynamiskt beteende i formulär med regelredigeraren](rule-editor.md)
 * [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/features/responsive-layout.md)
 
