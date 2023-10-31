@@ -2,9 +2,9 @@
 title: Skapa och ordna sidor
 description: Lär dig hur du organiserar din webbplats genom att skapa och hantera sidor med AEM.
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
+source-git-commit: b658f303d25cca958c08a95ead12fa3b987bcb3b
 workflow-type: tm+mt
-source-wordcount: '2543'
+source-wordcount: '2451'
 ht-degree: 2%
 
 ---
@@ -373,18 +373,15 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
 #### Asynkrona åtgärder {#asynchronous-actions}
 
-Vanligtvis utförs en åtgärd för att flytta eller byta namn på en sida direkt. Detta betraktas som synkron bearbetning och ytterligare åtgärder i gränssnittet blockeras tills åtgärden är klar.
+Åtgärder för att flytta sidor bearbetas alltid asynkront, vilket gör att användaren kan fortsätta att redigera i gränssnittet utan hinder.
 
-Om antalet sidor som påverkas ligger över en definierad gräns bearbetas åtgärden asynkront, så att användaren kan fortsätta att redigera i gränssnittet utan att detta hindras av åtgärden för att flytta sidan eller byta namn.
+* Användaren måste definiera när den asynkrona åtgärden ska utföras
+   * **Nu** kör det asynkrona jobbet omedelbart.
+   * **Senare** låter användaren definiera när det asynkrona jobbet ska starta.
 
-* När du klickar **Flytta** AEM i det sista steget ovan kontrollerar den konfigurerade gränsen.
-* Om antalet sidor som påverkas ligger under gränsen utförs en synkron åtgärd.
-* Om antalet sidor som påverkas ligger över gränsen utförs en asynkron åtgärd.
-   * Användaren måste definiera när den asynkrona åtgärden ska utföras
-      * **Nu** kör det asynkrona jobbet omedelbart.
-      * **Senare** låter användaren definiera när det asynkrona jobbet ska starta.
-
-        ![Asynkron flyttning av sida](/help/sites-cloud/authoring/assets/asynchronous-page-move.png)
+<!--
+  ![Asynchronous page move](assets/asynchronous-page-move.png)
+-->
 
 Status för asynkrona jobb kan kontrolleras i [**Status för asynkrona jobb** kontrollpanel](/help/operations/asynchronous-jobs.md#monitor-the-status-of-asynchronous-operations) på **Global navigering** -> **verktyg** -> **Operationer** -> **Jobb**
 

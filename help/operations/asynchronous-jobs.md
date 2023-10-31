@@ -2,9 +2,9 @@
 title: Asynkrona jobb
 description: Adobe Experience Manager optimerar prestanda genom att asynkront slutföra vissa resurskrävande uppgifter som bakgrundsåtgärder.
 exl-id: 9c5c4604-1290-4dea-a14d-08f3ab3ef829
-source-git-commit: 26ca2addb14f62588035323ce886ae890919b759
+source-git-commit: b658f303d25cca958c08a95ead12fa3b987bcb3b
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '810'
 ht-degree: 71%
 
 ---
@@ -19,7 +19,6 @@ Dessa åtgärder omfattar:
 * Att flytta många resurser eller resurser med många referenser.
 * Att exportera/importera metadata för resurser i grupp.
 * Att hämta resurser som ligger över det angivna gränsvärdet från en fjärrdistribution av Experience Manager.
-* Att flytta sidor.
 * Att öppna Live-kopior.
 
 Du kan visa status för asynkrona jobb från **[!UICONTROL Background Operations]** instrumentpanel på **Global navigering** -> **verktyg** -> **Allmänt** -> **Jobb**.
@@ -121,21 +120,7 @@ Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsv�
 
    ![Gränsvärde för resursflyttning](assets/async-move-threshold.png)
 
-1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Till exempel misslyckades.
-1. Spara ändringarna.
-
-### Konfigurera asynkrona åtgärder för att flytta sidor {#configuring-asynchronous-page-move-operations}
-
-Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet utförs flytten asynkront.
-
-1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
-1. Navigera till **OSGi** > **Konfiguration**
-1. Öppna **[!UICONTROL Async Page Move Operation Job Processing Configuration.]** via webbkonsolen
-1. I fältet **[!UICONTROL Threshold number of references]** ska du ange gränsvärdet för antal referenser gällande asynkron bearbetning för att flytta sidor.
-
-   ![Tröskelvärde för att flytta sidor](assets/async-page-move.png)
-
-1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Till exempel misslyckades.
+1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Lyckades, misslyckades till exempel.
 1. Spara ändringarna.
 
 ### Konfigurera asynkrona MSM-åtgärder {#configuring-asynchronous-msm-operations}
@@ -143,7 +128,7 @@ Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet ut
 1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
 1. Navigera till **OSGi** > **Konfiguration**
 1. Öppna **[!UICONTROL Async Page Move Operation Job Processing Configuration.]** via webbkonsolen
-1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Till exempel misslyckades.
+1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Lyckades, misslyckades till exempel.
 
    ![MSM-konfiguration](assets/async-msm.png)
 
@@ -154,4 +139,3 @@ Om antalet referenser till de sidor som ska flyttas överstiger gränsvärdet ut
 >* [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md)
 >* [Importera och exportera resursers metadata gruppvis](/help/assets/metadata-import-export.md).
 >* [Använd länkade resurser för att dela DAM-resurser från fjärrdistributioner](/help/assets/use-assets-across-connected-assets-instances.md).
-
