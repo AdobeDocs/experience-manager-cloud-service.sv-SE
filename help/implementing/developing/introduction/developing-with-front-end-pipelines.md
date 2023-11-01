@@ -2,7 +2,7 @@
 title: Developing Sites with the Front-End Pipeline
 description: Med den integrerade utvecklingsmiljön får utvecklarna större oberoende och utvecklingsprocessen kan bli betydligt snabbare. I det här dokumentet beskrivs några särskilda aspekter av den inledande konstruktionsprocessen som bör anges.
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 36e40976c43826efd7921cd9429373fe97a20426
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->Om du inte känner till hur du använder frontendriet och vilka fördelar det kan ge kan du titta på [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md) som ett exempel på hur du snabbt distribuerar en ny webbplats och anpassar dess tema helt oberoende av serverutvecklingen.
+>Om du inte känner till hur du använder frontendspipelinen och vilka fördelar den kan ge kan du ta en titt på [Skapa snabbt webbplatser](/help/journey-sites/quick-site/overview.md) som ett exempel på hur du snabbt distribuerar en ny webbplats och anpassar dess tema helt oberoende av serverutvecklingen.
 
 ## Front-End Build Contract {#front-end-build-contract}
 
@@ -30,7 +30,7 @@ Innehållet i `dist` är den mapp som distribueras till AEM as a Cloud Service f
 
 Som standard används nod 14 i den främre pipelinen, men 12 och 16 är också tillgängliga.
 
-Du kan använda `CM_CUSTOM_VAR_NODE_VERSION` systemvariabel för att ange önskad version.
+Du kan använda `NODE_VERSION` systemvariabel för att ange önskad version.
 
 ## En källa för sanning {#single-source-of-truth}
 
@@ -38,8 +38,8 @@ Ett allmänt bra tillvägagångssätt är att behålla en enda sanningskälla f�
 
 Av denna anledning, och särskilt när flera rörledningar för framände skapas, rekommenderas att en systematisk namnkonvention upprätthålls, som följande:
 
-* Namnet på frontmodulen, som definieras av `name` egenskapen för `package.json` filen, ska innehålla namnet på den plats den gäller för. För en plats som finns på `/content/wknd`, namnet på frontmodulen skulle vara ungefär som `wknd-theme`.
-* När en frontendmodul delar samma Git-databas med andra moduler bör namnet på dess mapp vara lika med, eller innehålla samma namn för, frontendmodulen. Om till exempel front end-modulen har ett namn `wknd-theme`, skulle namnet på den omslutande mappen vara något som `wknd-theme-sources`.
+* Namnet på frontmodulen, som definieras av `name` egenskapen för `package.json` filen, ska innehålla namnet på den plats den gäller för. Till exempel för en plats som finns på `/content/wknd`, namnet på frontmodulen skulle vara ungefär som `wknd-theme`.
+* När en front-end-modul delar samma Git-databas med andra moduler, ska namnet på dess mapp vara lika med, eller innehålla samma namn på, front end-modulen. Om till exempel front end-modulen har ett namn `wknd-theme`, skulle namnet på den omslutande mappen vara något som `wknd-theme-sources`.
 * Namnet på Cloud Managers frontendpipeline bör även innehålla namnet på den främre slutmodulen och även lägga till miljön som den distribuerar till (produktion eller utveckling). Till exempel för frontmodulen med namnet `wknd-theme`kan rörledningen heta något som `wknd-theme-prod`.
 
 En sådan konvention bör effektivt förhindra följande misstag i samband med driftsättningen:
@@ -59,11 +59,11 @@ Följande steg rekommenderas i allmänhet när det är nödvändigt att ändra H
 1. Back-end-teamet skapar först en utvecklingsmiljö med nya HTML och/eller JSON-utdata.
    1. Via rörledningen för hela stacken distribuerar de den kod som krävs för att återge de nya HTML- och/eller JSON-utdata som önskas.
    1. Om det är i en miljö som front-end-teamet inte tidigare har åtkomst till måste följande steg utföras.
-      1. URL: Utvecklingsteamet måste känna till URL:en för den utvecklingsmiljön.
-      1. ACL: front-end-teamet måste få en lokal AEM med rättigheter som liknar&quot;Medarbetare&quot;.
-      1. Git: front-end-teamet måste ha en separat Git-plats för front-end-modulen som är särskilt inriktad på den utvecklingsmiljön.
+      1. URL: Front-end-teamet måste känna till URL:en för den utvecklingsmiljön.
+      1. ACL: Det lokala teamet måste ges en lokal AEM med rättigheter som liknar&quot;Medarbetare&quot;.
+      1. Git: Front-end-teamet måste ha en separat Git-plats för front-end-modulen som specifikt anger den utvecklingsmiljön som mål.
          * Ett vanligt tillvägagångssätt är att skapa en `dev` så att de ändringar som gjorts för utvecklingsmiljön sedan enkelt kan sammanfogas i `main` filial som ska distribueras till produktionsmiljön.
-      1. Rörledning: front-end-teamet måste ha en front-end-pipeline som distribueras till utvecklingsmiljön. Den rörledningen distribuerar den frontdelsmodul som vanligtvis finns i `dev` gren, enligt beskrivningen i föregående punkt.
+      1. Pipeline: Det måste finnas en frontendgrupp som distribuerar till utvecklingsmiljön. Den rörledningen distribuerar den frontdelsmodul som vanligtvis finns i `dev` gren, enligt beskrivningen i föregående punkt.
 1. Det ledande teamet får sedan CSS- och JS-koden att fungera med både gamla och nya utdata.
    1. Som vanligt för att utveckla lokalt:
       1. The `npx aem-site-theme-builder proxy` -kommandot som körs i front end-modulen startar en proxyserver som begär innehållet från en AEM-miljö och ersätter CSS- och JS-filerna för front end-modulen med de som finns i den lokala `dist` mapp.

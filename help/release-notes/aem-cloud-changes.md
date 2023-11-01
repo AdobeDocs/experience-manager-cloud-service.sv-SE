@@ -2,9 +2,9 @@
 title: Betydande ändringar av Adobe Experience Manager (AEM) as a Cloud Service
 description: Observerbara ändringar av Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: fe11d779-66cd-45aa-aa6b-c819b88d2405
-source-git-commit: 78ead5f15c2613d9c3bed3025b43423a66805c59
+source-git-commit: 30edc83364dd9666b94f54048abc8b7f92ad6ce3
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '871'
 ht-degree: 7%
 
 ---
@@ -79,21 +79,7 @@ Förutom ändringarna under `/home` på publiceringsnivån tillåts inte direkta
 
 ## Anpassade körningslägen tillåts inte {#custom-runmodes}
 
-Följande körningslägen är färdiga för AEM Cloud Service:
-
-* `author`
-* `publish`
-* `prod`
-* `author.prod`
-* `publish.prod`
-* `stage`
-* `author.stage`
-* `publish.stage`
-* `dev`
-* `author.dev`
-* `publish.dev`
-
-Ytterligare eller anpassade körningslägen är inte möjliga i AEM Cloud Service.
+Ytterligare eller anpassade körningslägen är inte möjliga i AEM Cloud Service. En lista över körningslägen som finns för AEM Cloud Service finns i dokumentet [Distribuerar till AEM as a Cloud Service.](/help/implementing/deploying/overview.md#runmodes)
 
 ## Borttagning av replikeringsagenter och relaterade ändringar {#replication-agents}
 

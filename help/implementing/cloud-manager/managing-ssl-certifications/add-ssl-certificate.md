@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat
 description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: 6db3565fefe4c826bb40695d0fa84368fd3f283b
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -17,29 +17,9 @@ Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjän
 >
 >Det kan ta några dagar innan ett certifikat etableras. Adobe rekommenderar därför att certifikatet tillhandahålls i god tid i förväg.
 
-## Certifikatformat {#certificate-format}
+## Certifikatkrav {#certificate-requirements}
 
-SSL-certifikatfiler måste vara i PEM-format för att kunna installeras med Cloud Manager. Vanliga filtillägg för PEM-formatet är bland annat `.pem,` .`crt`, `.cer`och `.cert`.
-
-Följande `openssl` kan användas för att konvertera certifikat som inte är PEM-certifikat.
-
-* Konvertera PFX till PEM
-
-  ```shell
-  openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes
-  ```
-
-* Konvertera P7B till PEM
-
-  ```shell
-  openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer
-  ```
-
-* Konvertera DER till PEM
-
-  ```shell
-  openssl x509 -inform der -in certificate.cer -out certificate.pem
-  ```
+Läs igenom avsnittet **Certifikatkrav** av dokumentet [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md#requirements) för att säkerställa att det certifikat du vill lägga till stöds av AEM as a Cloud Service.
 
 ## Lägga till ett certifikat {#adding-a-cert}
 

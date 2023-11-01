@@ -2,9 +2,9 @@
 title: Introduktion till hantering av SSL-certifikat
 description: Lär dig hur du får tillgång till självbetjäningsverktyg i Cloud Manager för att installera SSL-certifikat.
 exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: 6db3565fefe4c826bb40695d0fa84368fd3f283b
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '679'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ AEM as a Cloud Service stöder endast `https` webbplatser.
 * Kunder med flera anpassade domäner vill inte överföra ett certifikat varje gång de lägger till en domän.
 * Sådana kunder tjänar på att skaffa ett certifikat med flera domäner.
 
-## Krav {#requirements}
+## Certifikatkrav {#requirements}
 
 * AEM as a Cloud Service godkänner endast certifikat som överensstämmer med OV- (Organization Validation) eller EV-principen (Extended Validation).
 * Alla certifikat måste vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare (CA) med en matchande 2 048-bitars RSA privat nyckel.
@@ -57,6 +57,30 @@ AEM as a Cloud Service stöder endast `https` webbplatser.
 * Självsignerade certifikat accepteras inte.
 
 OV- och EV-certifikat ger användarna extra, CA-validerad information som kan användas för att avgöra om ägaren till en webbplats, avsändaren av ett e-postmeddelande eller den digitala undertecknaren av körbar kod eller PDF-dokument är betrodd. DV-certifikat tillåter inte sådan ägarskapsverifiering.
+
+### Certifikatformat {#certificate-format}
+
+SSL-certifikatfiler måste vara i PEM-format för att kunna installeras med Cloud Manager. Vanliga filtillägg för PEM-formatet är bland annat `.pem,` .`crt`, `.cer`och `.cert`.
+
+Följande `openssl` kan användas för att konvertera certifikat som inte är PEM-certifikat.
+
+* Konvertera PFX till PEM
+
+  ```shell
+  openssl pkcs12 -in certificate.pfx -out certificate.cer -nodes
+  ```
+
+* Konvertera P7B till PEM
+
+  ```shell
+  openssl pkcs7 -print_certs -in certificate.p7b -out certificate.cer
+  ```
+
+* Konvertera DER till PEM
+
+  ```shell
+  openssl x509 -inform der -in certificate.cer -out certificate.pem
+  ```
 
 ## Begränsningar {#limitations}
 
