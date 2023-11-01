@@ -3,9 +3,9 @@ title: Uppdateringar av AEM
 description: Läs om hur Adobe Experience Manager (AEM) as a Cloud Service använder kontinuerlig integrering och leverans (CI/CD) för att hålla dina projekt uppdaterade.
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
-source-git-commit: 57d6b50ef5256bf6e8fce84100eed4690b77cb87
+source-git-commit: 9bfea65c07da5da044df8f698e409eab5c4320fb
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,18 @@ Innan instanserna uppdateras automatiskt kommer en ny AEM att publiceras 3-5 dag
 
 Det finns två typer AEM versionsuppdateringar:
 
-* **AEM underhållsuppdateringar**
+* [**AEM underhållsuppdateringar**](/help/release-notes/maintenance/latest.md)
 
-   * De kan frisläppas dagligen.
    * De är främst avsedda för underhåll, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
    * Den har minimal inverkan eftersom ändringarna tillämpas regelbundet.
 
-* **Nya funktioner**
+* [**Uppdateringar av nya funktioner**](/help/release-notes/release-notes-cloud/release-notes-current.md)
 
-   * De släpps på [förutsägbart månadsschema.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html)
+   * De släpps enligt ett förutsägbart månadsschema.
+
+>[!NOTE]
+>
+> Kontrollera nyckeldatum för månatliga releaser på [Experience Manager släpper en färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
 
 ## Uppdateringsfel {#update-failure}
 
