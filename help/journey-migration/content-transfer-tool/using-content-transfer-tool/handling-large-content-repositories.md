@@ -2,9 +2,9 @@
 title: Hantera stora innehållsdatabaser
 description: I det här avsnittet beskrivs hantering av stora innehållsdatabaser
 exl-id: 21bada73-07f3-4743-aae6-2e37565ebe08
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 858e10f99e2015a1488bb9e1d0990a553c5f6d04
 workflow-type: tm+mt
-source-wordcount: '1813'
+source-wordcount: '1835'
 ht-degree: 0%
 
 ---
@@ -191,6 +191,9 @@ Om ett problem uppstår med AzCopy misslyckas extraheringen omedelbart och extra
 
 Eventuella blobbar som kopierades före felet hoppas över automatiskt av AzCopy vid efterföljande körningar och behöver inte kopieras igen.
 
+>[!TIP]
+>Ett intag kan nu schemaläggas att starta automatiskt omedelbart efter att en extrahering har slutförts. Se [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) för mer information.
+
 #### För fildatalager {#file-data-store-extract}
 
 När AzCopy körs för källfilens dataStore bör du se meddelanden som dessa i loggarna som anger att mapparna bearbetas:
@@ -198,8 +201,7 @@ När AzCopy körs för källfilens dataStore bör du se meddelanden som dessa i 
 
 ### 5. Integmentera med AzCopy {#ingesting-azcopy}
 
-Se [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md)
-om du vill ha allmän information om hur du importerar innehåll till målet från CAM-hanteraren (Cloud Acceleration Manager), inklusive anvisningar om hur du använder AzCopy (pre-copy) eller inte, i dialogrutan Nytt intag.
+Se [Infoga innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) om du vill ha allmän information om hur du importerar innehåll till målet från CAM-hanteraren (Cloud Acceleration Manager), inklusive anvisningar om hur du använder AzCopy (pre-copy) eller inte, i dialogrutan Nytt intag.
 
 För att du ska kunna utnyttja AzCopy vid intag måste du ha en AEM as a Cloud Service version som är minst version 2021.6.5561.
 

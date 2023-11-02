@@ -2,9 +2,9 @@
 title: Infoga innehåll i Cloud Service
 description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
-source-git-commit: a6d19de48f114982942b0b8a6f6cbdc38b0d4dfa
+source-git-commit: 28cbdff5756b0b25916f8d9a523ab4745873b5fa
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2324'
 ht-degree: 3%
 
 ---
@@ -31,27 +31,35 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
 
 1. Ange nödvändig information för att skapa ett intag.
 
-   * Välj den migreringsuppsättning som innehåller extraherade data som källa.
+   * **Migreringsuppsättning:** Välj den migreringsuppsättning som innehåller extraherade data som källa.
       * Migreringsuppsättningar kommer att upphöra efter en längre inaktivitetsperiod, så det förväntas att intaget sker relativt snart efter att extraktionen har utförts. Granska [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) för mer information.
-   * Välj målmiljö. I den här miljön importeras migreringsuppsättningens innehåll. Välj nivån. (Författare/Publicera). Snabba utvecklingsmiljöer stöds inte.
+
+   >[!TIP]
+   > Om extraheringen körs visas en dialogruta. När extraheringen har slutförts startas intaget automatiskt. Om extraheringen misslyckas eller stoppas kommer intagningsjobbet att avbrytas.
+
+   * **Mål:** Välj målmiljö. I den här miljön importeras migreringsuppsättningens innehåll.
+      * Inställningarna har inte stöd för en Rapid Development Environment-destination (RDE) och de visas inte som ett möjligt målval, även om användaren har åtkomst till den.
+      * En migreringsuppsättning kan importeras till flera destinationer samtidigt, men målet kan vara att bara ha ett som kör eller väntar på inmatning åt gången.
+
+   * **Nivå:** Välj nivån. (Författare/Publicera).
+      * Om källan var `Author`rekommenderar vi att du importerar det till `Author` på målet. Om källan var `Publish`, ska målet vara `Publish` också.
 
    >[!NOTE]
-   >Följande anmärkningar gäller inhämtning av innehåll:
-   > Om källan var författare rekommenderar vi att du importerar den till nivån Författare på målet. Om källan var Publish ska även målet vara Publish.
    > Om målnivån är `Author`, stängs författarinstansen av under den tid som inmatningen pågår och blir otillgänglig för användare (till exempel författare eller alla som utför underhåll). Orsaken är att skydda systemet och förhindra alla ändringar som antingen kan gå förlorade eller orsaka en konflikt i intaget. Se till att ditt team är medvetna om detta. Observera också att miljön visas i viloläge under författarintaget.
-   > Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intaget. Se [Ingesting with AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#ingesting-azcopy) för mer information.
-   > Om du använder inmatning med förkopia (för S3 eller Azure Data Store) bör du endast köra Author-intagning. Det snabbar upp publiceringsintrycket när det körs senare.
-   > Inställningarna stöder inte ett mål för Rapid Development Environment (RDE) och visas inte som ett möjligt målalternativ, även om användaren har åtkomst till det.
 
-   >[!IMPORTANT]
-   > Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
-
-   * Välj `Wipe` value
+   * **Svep:** Välj `Wipe` value
       * The **Svep** anger målets startpunkt för inmatningen. If **Svep** är aktiverat återställs målet, inklusive allt innehåll, till den version av AEM som anges i Cloud Manager. Om det inte är aktiverat behåller målet sitt aktuella innehåll som startpunkt.
       * Observera att det här alternativet gör det **NOT** påverka hur innehållsintaget kommer att ske. Inmatningen använder alltid en innehållsersättningsstrategi och _not_ en strategi för sammanfogning av innehåll så att, i båda **Svep** och **Ej svep** om en migreringsuppsättning matas in skrivs innehållet i samma sökväg över på destinationen. Om till exempel migreringsuppsättningen innehåller `/content/page1` och målet innehåller redan `/content/page1/product1`, tar det bort hela `page1` bana och dess undersidor, inklusive `product1`och ersätt den med innehållet i migreringsuppsättningen. Detta innebär att noggrann planering måste göras när du utför en **Ej svep** Inmatning till ett mål som innehåller innehåll som bör behållas.
 
    >[!IMPORTANT]
    > Om inställningen **Svep** är aktiverat för inmatningen, återställs hela den befintliga databasen inklusive användarbehörigheter för målinstansen av Cloud Servicen. Återställningen gäller även för en admin-användare som lagts till i **administratörer** gruppen och den användaren måste läggas till i administratörsgruppen igen för att påbörja ett intag.
+
+   * **Förkopia:** Välj `Pre-copy` value
+      * Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intaget. Se [Ingesting with AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#ingesting-azcopy) för mer information.
+      * Om du använder inmatning med förkopia (för S3 eller Azure Data Store) bör du köra `Author` enbart intag. Det snabbar upp `Publish` intag när det körs senare.
+
+   >[!IMPORTANT]
+   > Du kan bara initiera ett intag till målmiljön om du tillhör den lokala **AEM administratörer** på Cloud Servicens författartjänst. Om du inte kan påbörja ett intag, se [Det går inte att starta matning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
 
 1. Klicka **Ingest**.
 
@@ -162,6 +170,9 @@ Lösningen kan kräva att extraheringen av den övre delen görs igen utan den f
 
 Bästa tillvägagångssätt visar att om en **Ej svep** Tillåtelse måste utföras med en migreringsuppsättning som innehåller versioner (dvs. extraheras med&quot;include versions&quot;=true). Det är viktigt att innehållet på destinationen ändras så lite som möjligt, tills migreringsresan är klar. I annat fall kan dessa konflikter uppstå.
 
+### Inmatningen har avbrutits
+
+Ett intag som skapades med en pågående extrahering som källmigreringsuppsättning kommer att vänta tålt tills extraheringen lyckas, och då kommer det att starta normalt. Om extraheringen misslyckas eller stoppas, påbörjas inte intaget och indexeringsjobbet utan avbryts. I det här fallet kontrollerar du extraheringen för att fastställa varför den misslyckades, åtgärdar problemet och börjar extrahera igen. När den fasta extraheringen körs kan ett nytt intag schemaläggas.
 
 ## What&#39;s Next {#whats-next}
 
