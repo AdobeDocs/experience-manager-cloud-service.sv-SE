@@ -2,9 +2,9 @@
 title: Användarmappning och huvudmigrering
 description: Översikt över användarmappning och migrering av huvudnamn på AEM as a Cloud Service.
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: 2fdfb65543fa2942e809aa5d379f4000e40bd517
+source-git-commit: 2f5eeb0333cee13b12edefd0f95541a891e30960
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '1003'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ En stor förändring i AEM as a Cloud Service är den helt integrerade användni
 
 ## Information om huvudmigrering {#principal-migration-detail}
 
-Verktyget Innehållsöverföring och Cloud Acceleration Manager migrerar alla objekt som är associerade med det innehåll som migreras till molnsystemet.  Verktyget Innehållsöverföring gör detta genom att kopiera alla objekt från AEM under extraheringsprocessen.  CAM Ingestion väljer och migrerar sedan endast de objekt som är associerade med innehållet som ska importeras.
+Verktyget Innehållsöverföring och Cloud Acceleration Manager migrerar alla objekt som är associerade med det innehåll som migreras till molnsystemet.  Verktyget Innehållsöverföring gör detta genom att kopiera alla objekt från AEM under extraheringsprocessen.  CAM Ingestion väljer och migrerar sedan endast de objekt som är associerade med innehållet som ska importeras. Om ett huvudnamn finns i en ACL- eller CUG-princip för migrerat innehåll, migreras det huvudkontot och alla grupper det finns i och deras överordnade (överordnade) grupper migreras. Om ett huvudnamn i innehållet är en grupp migreras även alla dess underordnade (underordnade) grupper och användare.
 
 ## Information om användarmappning {#user-mapping-detail}
 

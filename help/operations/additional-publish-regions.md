@@ -1,13 +1,13 @@
 ---
 title: Ytterligare publiceringsregioner
 description: Läs om hur AEM as a Cloud Service stöder ytterligare publiceringsregioner för ökad tillgänglighet och minskad latens.
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+exl-id: b9ac3c6a-eb8b-461d-8f1d-a0356046a3f9
+source-git-commit: 4f11d1958cbfb252f29a7815af8800426d945ebd
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
-
 
 # Ytterligare publiceringsregioner {#additional-publish-regions}
 
@@ -36,6 +36,11 @@ När du har licensierat ytterligare en publiceringsregion konfigureras regionern
 
 Ytterligare publiceringsregioner används i scen- och produktionsmiljöer, men inte i RDE- eller utvecklingsmiljöer.
 
+Om en region blir otillgänglig behöver kunderna inte hantera dirigeringen av trafik till tillgängliga regioner eftersom den hanteras av Adobe CDN.
+
+Så som beskrivs i avsnittet Avancerade överväganden om nätverksarbete nedan rekommenderas att kunder som använder avancerade nätverk konfigurerar det för varje ytterligare publiceringsregion så att tillgängligheten upprätthålls om en region blir otillgänglig.
+
+
 ## Avancerade nätverksöverväganden {#advanced-networking-considerations}
 
 När ytterligare en publiceringsregion är aktiverad för ett program med avancerade nätverk redan konfigurerat, dirigeras trafiken i den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard genom den primära regionen. För att kunna utnyttja den ökade tillgängligheten rekommenderar vi att du aktiverar avancerade nätverk i de övriga regionerna.
@@ -49,6 +54,6 @@ Tänk på följande begränsningar när du funderar på att använda ytterligare
 * Ytterligare publiceringsregioner kan bara läggas till i AEM Sites. Ytterligare publiceringsregioner omfattar inte andra AEM lösningar eller relaterade funktioner som körs i samma program (t.ex. AEM Forms eller Adobe Learning Manager).
 * Ytterligare regioner kan bara läggas till om associerade berättiganden är tillgängliga och inte används i klientorganisationen.
 * Högst tre ytterligare publiceringsregioner kan läggas till i en enskild miljö.
-* Ytterligare regioner finns endast i produktionsprogram. Funktionen är inte tillgänglig i sandlådeprogram.
+* Ytterligare regioner är endast tillgängliga i produktionsprogram. Funktionen är inte tillgänglig i sandlådeprogram.
 * Ytterligare publiceringsregioner används endast i scen- och produktionsmiljöer, inte i RDE- eller utvecklingsmiljöer.
 * Ytterligare publiceringsregioner kräver att ditt program uppdateras till AEM version 12142 eller senare.
