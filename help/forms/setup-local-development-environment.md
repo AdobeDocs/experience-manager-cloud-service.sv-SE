@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag en lokal utvecklingsmiljö för AEM Forms?
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: 7a65aa82792500616f971df52b8ddb6d893ab89d
+source-git-commit: a0433718a223a6d3aa7740232caa17650bce5ff6
 workflow-type: tm+mt
-source-wordcount: '2805'
+source-wordcount: '2841'
 ht-degree: 1%
 
 ---
@@ -265,6 +265,10 @@ After the repository is cloned, [integrate your Git repo with Cloud Manager](htt
    * Använd `includeFormsenrollment=y` om du vill inkludera Forms-specifika konfigurationer, teman, mallar, kärnkomponenter och beroenden som krävs för att skapa Adaptiv Forms. Om du använder Forms Portal anger du `includeExamples=y` alternativ. Dessutom läggs kärnkomponenterna i Forms Portal till i projektet.
 
    * Använd `includeFormscommunications=y` möjlighet att inkludera Forms Core-komponenter och beroenden som krävs för att inkludera funktionen för kundkommunikation.
+
+     >[!WARNING]
+     >
+     * När du skapar ett Arketype-projekt med version 45 är [AEM Archetype-projektmapp]/pom.xml ställer först in versionen för formulärets kärnkomponenter till 2.0.64. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera formulärkärnkomponentens version till 2.0.62.
 
 1. Distribuera projektet till din lokala utvecklingsmiljö. Du kan använda följande kommando för att distribuera till den lokala utvecklingsmiljön
 
