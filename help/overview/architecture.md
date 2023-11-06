@@ -2,9 +2,9 @@
 title: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service
 description: Introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service.
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
-source-git-commit: 689b672e75c4e4d2fa8f716d93c65418f332a266
+source-git-commit: b610de53d1bd1b120a2642336aac1713444bfd3e
 workflow-type: tm+mt
-source-wordcount: '2656'
+source-wordcount: '2665'
 ht-degree: 9%
 
 ---
@@ -66,7 +66,7 @@ Det finns fyra typer av [miljö](/help/implementing/cloud-manager/manage-environ
 
 Ett AEM program kan konfigureras med [Edge Delivery Services](/help/edge/overview.md) också.
 
-När AEM har konfigurerats kan de referera till GitHub-koddatabaser som används för att skapa upplevelser med Edge Delivery Services. Därför blir nya konfigurationsalternativ tillgängliga för de associerade upplevelserna. Dessa omfattar bland annat att ställa in det Adobe-hanterade CDN, och få tillgång till licensstatistik eller SLA-rapporter.
+När AEM har konfigurerats kan de referera till GitHub-koddatabaser som används för att skapa upplevelser med Edge Delivery Services. Därför blir nya konfigurationsalternativ tillgängliga för de associerade upplevelserna. Det kan vara att konfigurera CDN som hanteras i Adobe och få tillgång till licensstatistik och SLA-rapporter.
 
 ## Tjänstarkitektur {#service-architecture}
 
@@ -198,7 +198,7 @@ I båda fallen utförs samma uppsättning automatiska tester. Den består av tes
 
 * som Adobe bidragit med för att säkerställa produktens integritet
 * tester från kunden
-   * Funktionstester: http
+   * Funktionstester: via http-begäranden till AEM författare eller publiceringsnivå
    * Gränssnittstester: baserade på selen- eller Cypress-teknik
 
 Dessa automatiserade tester körs på scenmiljön, och det är därför viktigt att scenmiljöinnehållet hålls så nära som möjligt med innehållet i Production-instansen.
