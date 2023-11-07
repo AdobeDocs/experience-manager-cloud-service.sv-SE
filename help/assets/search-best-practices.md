@@ -3,9 +3,9 @@ title: Sök efter bästa praxis för [!DNL Adobe Experience Manager] som [!DNL C
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
-source-git-commit: 8fc09f11127b29a6cd0f56f4e9d217b9756bbb8f
+source-git-commit: 780f0dee9a2a0fd7fa63b93bdd8be6bc23eef04f
 workflow-type: tm+mt
-source-wordcount: '2514'
+source-wordcount: '2455'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Du kan göra sökningen mer specifik genom att lägga till nyckelordet för sök
 
 Om du arbetar i **[!UICONTROL Assets view]** också.
 
-[Se en video om hur du gör en grundsökning i AEM Assets](https://video.tv.adobe.com/v/3425489)
+>[!VIDEO](https://video.tv.adobe.com/v/3425489)
 
 ## Filer och mappar {#files-folders}
 
@@ -67,7 +67,7 @@ Markera mappen i sökvägen och navigera till den önskade mappen om du vill sö
 
 ![Söka med filer och mappar](assets/files-folders.png)
 
-[Titta på en video som gör sökningar i AEM Assets med hjälp av filer och mappar](https://video.tv.adobe.com/v/3425487)
+>[!VIDEO](https://video.tv.adobe.com/v/3425487)
 
 ## Operatorer {#operators}
 
@@ -119,7 +119,7 @@ Asterisk är en jokeroperator som används för att bredda sökningen genom att 
 * `car*` returnerar tillgångar med tvätt, bärare, transport osv.
 * `*car` returnerar resurser med modern bil, sportbil och så vidare.
 
-[Titta på en video där du kan söka i AEM Assets med jokertecken](https://video.tv.adobe.com/v/3425488)
+>[!VIDEO](https://video.tv.adobe.com/v/3425488)
 
 **[!UICONTROL Assets view]** stöder inte användning av jokertecken.
 
@@ -187,7 +187,7 @@ Så här söker du efter resurser med hjälp av det nämnda scenariot i **[!UICO
 1. Gå till sökfilter.
 1. Gå till Filter. Under [!UICONTROL MIME Type]markerar du alla angivna MIME-typer, men avmarkerar PNG.
 
-[Titta på en video där du kan söka i AEM Assets med hjälp av filter](https://video.tv.adobe.com/v/3425486)
+>[!VIDEO](https://video.tv.adobe.com/v/3425486)
 
 ## Avancerad sökning {#advanced-search}
 
@@ -241,7 +241,7 @@ Du kan hämta specifika villkor med olika sökfilter. Tagg är ett nyckelord som
 
 Om du arbetar i **[!UICONTROL Assets view]** också.
 
-[Titta på en video som gör sökningar i AEM Assets med avancerad sökning](https://video.tv.adobe.com/v/3425490)
+>[!VIDEO](https://video.tv.adobe.com/v/3425490)
 
 **Scenario 9: Hitta liknande matchningar för röd färgbil**
 
