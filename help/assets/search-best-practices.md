@@ -3,7 +3,7 @@ title: Sök efter bästa praxis för [!DNL Adobe Experience Manager] som [!DNL C
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
-source-git-commit: 780f0dee9a2a0fd7fa63b93bdd8be6bc23eef04f
+source-git-commit: a3f7564932e7f9318841623376f62dad91ceca18
 workflow-type: tm+mt
 source-wordcount: '2455'
 ht-degree: 1%
@@ -46,7 +46,9 @@ Du kan göra sökningen mer specifik genom att lägga till nyckelordet för sök
 
 Om du arbetar i **[!UICONTROL Assets view]** också.
 
+<!--
 >[!VIDEO](https://video.tv.adobe.com/v/3425489)
+-->
 
 ## Filer och mappar {#files-folders}
 
@@ -67,7 +69,9 @@ Markera mappen i sökvägen och navigera till den önskade mappen om du vill sö
 
 ![Söka med filer och mappar](assets/files-folders.png)
 
+<!--
 >[!VIDEO](https://video.tv.adobe.com/v/3425487)
+-->
 
 ## Operatorer {#operators}
 
@@ -119,7 +123,9 @@ Asterisk är en jokeroperator som används för att bredda sökningen genom att 
 * `car*` returnerar tillgångar med tvätt, bärare, transport osv.
 * `*car` returnerar resurser med modern bil, sportbil och så vidare.
 
+<!--
 >[!VIDEO](https://video.tv.adobe.com/v/3425488)
+-->
 
 **[!UICONTROL Assets view]** stöder inte användning av jokertecken.
 
@@ -187,7 +193,9 @@ Så här söker du efter resurser med hjälp av det nämnda scenariot i **[!UICO
 1. Gå till sökfilter.
 1. Gå till Filter. Under [!UICONTROL MIME Type]markerar du alla angivna MIME-typer, men avmarkerar PNG.
 
+<!--
 >[!VIDEO](https://video.tv.adobe.com/v/3425486)
+-->
 
 ## Avancerad sökning {#advanced-search}
 
@@ -241,7 +249,9 @@ Du kan hämta specifika villkor med olika sökfilter. Tagg är ett nyckelord som
 
 Om du arbetar i **[!UICONTROL Assets view]** också.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425490)
+<!--
+>[!VIDEO](https://video.tv.adobe.com/v/3425490)  
+-->
 
 **Scenario 9: Hitta liknande matchningar för röd färgbil**
 
