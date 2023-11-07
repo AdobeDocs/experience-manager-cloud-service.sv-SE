@@ -2,10 +2,10 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 01f148dbe885c96b27f88a88e7020a1008f4c1d3
+source-git-commit: e7e565556b382a662fb8afc5aadaa26d2357e294
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 1%
+source-wordcount: '1193'
+ht-degree: 0%
 
 ---
 
@@ -13,67 +13,103 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 14029 {#release-14029}
+## Utgåva 14157 {#release-14157}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 14029, som offentliggjordes den 25 oktober 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 13804.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 14157, som offentliggjordes den 7 november 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 14029.
 
 2023.11.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-14029}
+### Förbättringar {#enhancements-14157}
 
-* ASSETS-28551: Förbättra skalbarheten för användargränssnittet för Mina länkresurser
-* ASSETS-28566: Lägg till dam:metadataForm Lucene-index
-* ASSETS-29281: Uppdatera RAPI för att skicka v2-nedladdningshändelser
+* ASSETS-29631: Assets Cloud: Använd dam:roles för säker leverans/sökning.
+* CQ-4354515: Translations: Option to Suppress translation of referenced resources.
+* FORMS-9993: Definiera steg för att flytta Forms Core-komponenter till Skyline.
+* FORMS-10570: Inbyggt EC API:er i API - första routern.
+* GRANITE-48143: Uppgradera Sling ResourceMerger till 1.4.4.
+* SITES-14874: Eventing: Expandera CFM-trädet för modellhändelser för att inkludera metadataändringar.
+* SITES-2719: Content Fragments: Tagging support for Content Fragment Variations (re-enabled).
+* SITES-3619: Innehållsfragment: GraphQL CF-varianttaggar returnerar i JSON och filtrerar efter varianttagg (återaktiverat).
+* SITES-13750: Content Fragments: Delete tags for a Content Fragment Model.
+* SITES-13920: Content Fragments: Support for minItems config for multiple fields (prerelease).
+* SITES-14080: Content Fragments: Delete tag of a Content Fragment Variation.
+* SITES-14770: Innehållsfragment: Fragmentvarianten ska innehålla egenskapen fieldTags.
+* SITES-15356: Content Fragments: Returnerar tagg som svarshuvud när en resurs skapas.
+* SITES-15357: Content Fragments: Allow publishing of fragments without their references.
+* SITES-15938: Content Fragments: Missing content reference metadata.
+* SITES-16078: Content Fragments: Fill in the validation result property of the variation when a fragment is hämtad.
+* SITES-16545: Innehållsfragment: Lägg till slutpunkt för hämtning av referenser för variationen för ett innehållsfragment.
+* SITES-16853: Content Fragments: Remove /adobe/sites/cf/fragments/{fragmentId}/variation/{name}/tags slutpunkt.
 
-### Åtgärdade problem {#fixed-issues-14029}
+### Åtgärdade problem {#fixed-issues-14157}
 
-* ASSETS-25199: image core component not show right smart crop
-* ASSETS-26142: unified-shell.js customEnvLabel har inte angetts eller har inte gjorts om om identifieringsbegäran misslyckas eller avbryts
-* ASSETS-26416: Relativ datumpredikat definieras alltid som &quot;för 1 dag(ar) sedan&quot; i sökformuläret
-* ASSETS-27321: rensa gruppcache vid ändringar av teammedlemskap
-* ASSETS-27591: Åtgärda beroendet av gammal org.json
-* ASSETS-28439: Smarta taggar Blocklist NPE när global blockeringslista inte har konfigurerats
-* ASSETS-28612: BlockedTagResolver fix in &quot;database-api&quot;
-* ASSETS-28634: Omnissearch-fältet i Adobe stock får inte automatiskt tillagda tillgångsdata
-* ASSETS-28727: Listan Bearbetar profilkonfiguration visar inte de angivna anpassade värdena för höjd och bredd
-* ASSETS-29056: Lägg till omkodningsrenderingar AEM standardbearbetningsprofil
-* ASSETS-29105: Begränsningsprovidern saknas i SecurityProviderRegistration requiredServicePids i RDE-funktionsmodellen
-* ASSETS-29106: View on Adobe stock returnerar fel om det enhetliga gränssnittet är aktiverat AEM
-* ASSETS-29115: Ta bort konfigurationsegenskapen för sökvägar för begränsningsprovider
-* ASSETS-29208: Fel vid överföring av resurser orsakade av begäranden som skickats till en författarposition innan tjänsten CompleteUploadAssetServlet har registrerats
-* ASSETS-29297: Problem när sökning med utcheckat filter skapades
-* ASSETS-29363: Metadataprofilen tillämpar inte standardvärden för IPTC
-* ASSETS-29404: Listfrågegräns för länkdelsrapport
-* ASSETS-29431: Ta bort gamla funktionsflaggor
-* ASSETS-29443: Unified Shell Hero förblir synlig och klickbar när huvudläget för Granite Shell ändras till &quot;selection&quot;
-* ASSETS-29476: scene7DAMService.getS7FileReference(asset) API-anropet returnerar inte det förväntade värdet.
-* ASSETS-29515: Resurser/noder med&quot;jcr:lastModifiedBy&quot;:&quot;workflow-process-service&quot; visas som&quot;extern användare&quot; i listvyn
-* ASSETS-29579: Användare som inte är administratörer kan inte skapa bilduppsättning
-* ASSETS-29631: Använd dam:roles för säker leverans/sökning
-* ASSETS-29689: dc:roles (och den nya egenskapen dam:roles) ska filtreras från AEM
-* ASSETS-29738: Resursöverföringsbegränsningen misslyckas med NullPointerException
-* ASSETS-29779: Små resurser kan inte bearbetas till webben eftersom de inte lagras i blob
-* ASSETS-29892: Export av metadata misslyckas för mappar med ett stort antal resurser
-* ASSETS-29996: &quot;Extern användare&quot; som modifierare när resurser laddas upp regelbundet endast på PROD-instans
-* ASSETS-30167: HTML för adobe_dam:Restriktioner efter överföring av en resurs
-* ASSETS-30276: Dela länkens användargränssnitt: kan inte dela från resursinformation
-* ASSETS-30434: Händelsen för slutförd tillgångsbearbetning skickades inte till pipeline
-* ASSETS-30519: Lägg till RAPI i REDMetricsServletFilter
-* CQ-4354413: QueryBuilder: Frågor med hakparenteser översätts felaktigt till xpath
-* CQ-4354834: Det går inte att lägga till kommentarer i inkorgen
-* CQ-4354836: Det går inte att starta arbetsflödet eller skapa aktivitet från projektkonsolen
-* CQ-4354867: ToggleCondition-referensen refererar till ett fält som inte finns i InstanceActionServlet
-* CQ-4354895: AEM Translation Kit: 12 oktober
-* GRANITE-45560: Vanlig schemarepresentation i Eventing-kuvert
-* GRANITE-47267: Uppdatering till Apache Felix HTTP Jetty 4.2.18
-* GRANITE-47599: Innehållsimporten misslyckas sedan uppgraderingen 13323 (JCRVLT-721)
-* GRANITE-47873: Uppdatering till Apache Felix Webconsole 4.9.6
-
-### Kända fel {#known-issues-14029}
-
+* Flera tillgänglighetsproblem har åtgärdats
 * ASSETS-31015: Det går inte att överföra filer till Assets med okända filtillägg.
+* ASSETS-24739: Inaktivera den anpassade åtgärdsslutpunkten Frame.io vid publicering.
+* CMGR-49845: Innehållsomformning: Problem med att identifiera rätt rotsökväg för angiven kontrollpunkt.
+* CMGR-49709: Innehållsomformning: Uppdatera egenskapsfiltret om du vill ignorera ytterligare egenskaper.
+* CQ-4354503: Adobe IMS-konfiguration tas bort slumpmässigt.
+* CQ-4354414: ConfigurationReplicationEventHandler skapar många enskilda tömningsåtgärder.
+* CQ-4354401: Översättningar: Resurser som skapats av projekt måste sparas innan resursbearbetningen startar.
+* CQ-4354430: Översättningar: Hämtar ett fel när resurser som inte ingår i en språkmappstruktur läggs till i ett översättningsprojekt.
+* CQ-4354412: Översättningar: Om översättningsjobbsinnehåll tas bort tas inte allt refererat innehåll bort.
+* CQ-4354636: Översättningar: Att skapa en språkkopia på språkets rotnivå justerar inte sökvägarna på sidan.
+* CQ-4354700: Arbetsflöden: Arbetsflödets nyttolastskärm läses inte in.
+* CQ-4354834: Arbetsflöden: Det går inte att lägga till kommentarer i inkorg för arbetsflöde.
+* FORMS-11302: Rubriken på komponenten som redigeras i RTE visas felaktigt i den adaptiva formulärredigeraren > Regelredigeraren.
+* GRANITE-45706: i18n-import misslyckas om nyckelvärdet har &quot;kappa&quot;) och &quot;katt&quot;.
+* SITES-14156: Eventing: Publish events skickas inte alltid.
+* SITES-14520: GraphQL: Dåliga prestanda med paginerade grafikfrågor på grund av FT_SITES-2719.
+* SITES-16444: GraphQL: DataFetchingException för samma namnfält som saknas i GraphQL-frågan.
+* SITES-16225: GraphQL: Innehållstyper för modellfält och RTE-fragmentfält som returneras av Java API är inte korrekta.
+* SITES-15373: Content Fragments: The /adobe/sites/cf/fragments/{fragmentId}/variation/{name}/tags slutpunkten använder inte rätt resursnamnkonventioner.
+* SITES-15709: Content Fragments: Create Model endpoint issue when creating Boolean Field.
+* SITES-15727: Content Fragments: Field of type &quot;Tag&quot; kan bara läggas till en gång i modellredigeraren.
+* SITES-15782: Content Fragments: Missing unique property from field model of Enumeration type.
+* SITES-15786: Content Fragments: Content Fragment cannot be created in folder containing &#39;.
+* SITES-15790: Content Fragments: Update Location header for Version Creation.
+* SITES-15923: Innehållsfragment: CF Admin visar inte alla mappar.
+* SITES-15987: Content Fragments: Getting 500 while creating variant.
+* SITES-16067: Content Fragments: MIME-typen för fält med långt textfragment kan inte ändras.
+* SITES-16074: Content Fragments: Taggfält som inte är String[] kan inte hämtas från JCR.
+* SITES-16079: Content Fragments: /fragments/{id}/references började returnera dubbletter.
+* SITES-16118: Innehållsfragment: Om ett fragment är patchat och ett fragmentfält saknas i modellen genereras ett undantag.
+* SITES-16119: Innehållsfragment: Om fragmentets metadata innehåller okända fält genereras ett undantag.
+* SITES-16121: Innehållsfragment: Ett undantag genereras vid hämtning av ett modelldatumfält.
+* SITES-16123: Innehållsfragment: Om en resurs inte är ett innehållsfragment genereras ett undantag vid slutpunkten för get fragments.
+* SITES-16208: Content Fragments: ContentFragmentModelIdentifier visar en vilseledande title-egenskap.
+* SITES-16707: Content Fragments: Content Fragment Models data types are not correctly read.
+* SITES-16818: Content Fragments: Perform delete only when tags present.
+* SITES-16207: Innehållsfragment: Åtgärden POST /adobe/sites/cf/models returnerar två olika OK-statuskoder.
+* SITES-15616: Innehållsfragment: Publiceringsslutpunkten publicerar inte ibland alla referenser för ett innehållsfragment.
+* SITES-16027: Innehållsfragment: Variationsreferensinformation saknas i fragmentsvar.
+* SITES-16243: Innehållsfragment: Sök och ersätt fungerar inte med fält med återgivning som: Flera.
+* SITES-16250: Content Fragments: Patching a CF returnerar ibland ett felaktigt tagghuvud.
+* SITES-16686: Content Fragments: Content Fragment non-fragment references serialized when parent reference is at max depth.
+* SITES-16234: ContextHub: Det korrekta namnet på vald profilaktivitet visas inte när mål för start anges.
+* SITES-12880: Fast-Track: Korrigera lokalisering för platser > Konfigurationsanalys.
+* SITES-16103: Experience Fragments: Målalternativen visas inte under Cloud Service på grund av ett konsolfel.
+* SITES-16001: MSM: Möjlighet att utesluta komponenter för flera fält från utrullningskonfigurationen när Live Copy skapas.
+* SITES-16559: MSM: Rollout configs removed during rollout process for experience fragments.
+* SITES-16797: MSM: Fast återaktiveringsarv för ett CF-fält i Redigeraren.
+* SITES-16273: Page Editor: Copy paste error inside aem sites pages from the clipboard.
+* SITES-16126: Sites Admin: Det tar lång tid för icke-administratörer att redigera efter SITES-10288.
+* FORMS-10534: Ett fel inträffar i regelredigeraren när alternativet Boolean-operand väljs.
+* FORMS-10248: I en adaptiv form, när datavärdet är av typen Boolean, kan reglerna inte ange korrekta värden för alternativknappar eller kryssrutekomponenter.
+* FORMS-11361: Den nedrullningsbara komponenten väljer automatiskt det första alternativet i listan.
+* FORMS-11413: Ett fel relaterat till Forms Portal-förifyllningstjänsten aktiveras av Adaptive Forms, även när tjänsten inte används.
+* FORMS-11433: När en komponent som inte är en formulärkomponent ingår i ett adaptivt formulär slutförs inte överföringsprocessen.
+* FORMS-11206: När en användare försöker schemalägga ett publiceringsarbetsflöde för ett adaptivt formulär fungerar det inte som förväntat.
+* FORMS-11546: En ARIA-etikett saknas för upprepade paneler i adaptiv form, vilket påverkar tillgängligheten.
+* FORMS-11095: Attributet ARIA är felaktigt definierat för fält för telefonnummer, e-postadress och nummer, vilket leder till problem med tillgänglighet.
+* FORMS-9894: API:t för utdatatjänsten genererar en felaktig felkod när en användare anger en ogiltig databassökväg, vilket kan förvirra användare som stöter på det här problemet.
+* FORMS-11404: Tjänsten ImportData uppvisar ett inkonsekvent beteende när du sammanfogar olika XML-data med en läsarutökad PDF. Det kan vara bra att behålla egenskaper för läsartillägg för ett utdatadokument från PDF, men inte för andra utdata-PDF.
 
-### Inbäddade tekniker {#embedded-tech-14029}
+
+### Kända fel {#known-issues-14157}
+
+Ingen.
+
+### Inbäddade tekniker {#embedded-tech-14157}
 
 | Teknik | Version | Länk |
 |---|---|---|
