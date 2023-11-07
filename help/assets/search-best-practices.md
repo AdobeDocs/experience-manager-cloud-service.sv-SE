@@ -3,9 +3,9 @@ title: Sök efter bästa praxis för [!DNL Adobe Experience Manager] som [!DNL C
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
-source-git-commit: 25a4a6b9ae09cb71f50317990af1718db1e14355
+source-git-commit: 8fc09f11127b29a6cd0f56f4e9d217b9756bbb8f
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2514'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ Du kan göra sökningen mer specifik genom att lägga till nyckelordet för sök
 
 Om du arbetar i **[!UICONTROL Assets view]** också.
 
-<!--[Watch a video to perform a simple search in AEM Assets] ()-->
+[Se en video om hur du gör en grundsökning i AEM Assets](https://video.tv.adobe.com/v/3425489)
 
 ## Filer och mappar {#files-folders}
 
@@ -67,7 +67,7 @@ Markera mappen i sökvägen och navigera till den önskade mappen om du vill sö
 
 ![Söka med filer och mappar](assets/files-folders.png)
 
-<!--[Watch a video to perform search in AEM Assets using Files and Folders] ()-->
+[Titta på en video som gör sökningar i AEM Assets med hjälp av filer och mappar](https://video.tv.adobe.com/v/3425487)
 
 ## Operatorer {#operators}
 
@@ -119,7 +119,7 @@ Asterisk är en jokeroperator som används för att bredda sökningen genom att 
 * `car*` returnerar tillgångar med tvätt, bärare, transport osv.
 * `*car` returnerar resurser med modern bil, sportbil och så vidare.
 
-<!--[Watch a video to perform a search in AEM Assets using wildcards] ()-->
+[Titta på en video där du kan söka i AEM Assets med jokertecken](https://video.tv.adobe.com/v/3425488)
 
 **[!UICONTROL Assets view]** stöder inte användning av jokertecken.
 
@@ -172,8 +172,6 @@ Utför följande steg i **[!UICONTROL Assets view]**:
 1. Gå till Filter. Under [!UICONTROL MIME Type] väljer du [!UICONTROL PDF].
 1. Gå till [!UICONTROL Asset Status], markera [!UICONTROL All] för att inkludera alla publicerade och opublicerade resurser.
 
-<!--[Watch a video to perform search in AEM Assets using various filters] ()-->
-
 **Scenario 5: Sök efter alla bilder utom PNG**
 
 När du är osäker på titeln eller metabeskrivningen för en resurs kan du använda olika sökfilter för att göra sökningen mer relevant. Om du till exempel vill söka efter resurser i **[!UICONTROL Admin view]** följer du stegen nedan:
@@ -188,6 +186,8 @@ Så här söker du efter resurser med hjälp av det nämnda scenariot i **[!UICO
 
 1. Gå till sökfilter.
 1. Gå till Filter. Under [!UICONTROL MIME Type]markerar du alla angivna MIME-typer, men avmarkerar PNG.
+
+[Titta på en video där du kan söka i AEM Assets med hjälp av filter](https://video.tv.adobe.com/v/3425486)
 
 ## Avancerad sökning {#advanced-search}
 
@@ -240,6 +240,8 @@ Du kan hämta specifika villkor med olika sökfilter. Tagg är ett nyckelord som
 ![Söka med taggar](assets/search-tags.png)
 
 Om du arbetar i **[!UICONTROL Assets view]** också.
+
+[Titta på en video som gör sökningar i AEM Assets med avancerad sökning](https://video.tv.adobe.com/v/3425490)
 
 **Scenario 9: Hitta liknande matchningar för röd färgbil**
 
