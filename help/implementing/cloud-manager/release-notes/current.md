@@ -3,9 +3,9 @@ title: Versionsinformation om Cloud Manager 2023.10.0 i Adobe Experience Manager
 description: Detta är versionsinformationen för Cloud Manager 2023.10.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: b760b3a65d89b0b4f924379fc460015a58e2ed3e
+source-git-commit: 36f7ece65c1312ff3ac463cd8c6abb2882b99043
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ Releasedatum för Cloud Manager version 2023.10.0 i AEM as a Cloud Service är 5
    * Den här uppdateringen kommer att lanseras stegvis.
 * I oktober 2023-versionen av Cloud Manager uppdateras Java-versionerna med en stegvis utrullning.
    * De mindre versionerna för Java 8 och 11 samt Maven har uppdaterats och kommer att lanseras stegvis under de kommande två månaderna. Den nya versionen har flera säkerhetskorrigeringar och felkorrigeringar. De nya versionerna är
-   * *Maven: 3.8.8*
-   * *Java 8 version: /usr/lib/jvm/jdk1.8.0_371*
-   * *Java 11 version: /usr/lib/jvm/jdk-11.0.20*
+      * **Maven:** `3.8.8`
+      * **Java 8-version:** `/usr/lib/jvm/jdk1.8.0_371`
+      * **Java 11-version:** `/usr/lib/jvm/jdk-11.0.20`
    * [Se OpenJDK-råden](https://openjdk.org/groups/vulnerability/advisories/) om du vill ha information om säkerhet och felkorrigeringar i dessa JDK-uppdateringar.
 
 ## Tidig användning {#early-adoption}
@@ -66,3 +66,15 @@ Om du vill testa den här nya funktionen och dela med dig av dina synpunkter ski
 Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen källkod som förbättrar kvaliteten på dina webbprogram. Du kan köra det mot alla webbsidor, offentliga eller som kräver autentisering. Den har granskningar av prestanda, tillgänglighet, progressiva webbprogram, SEO med mera.
 
 Är du intresserad av att testa den nya instrumentpanelen? Skicka e-post till `aem-lighthouse-pilot@adobe.com` via ditt e-postmeddelande som är kopplat till din Adobe ID så kommer vi igång.
+
+## Kända fel {#known-issues}
+
+Det finns ett känt fel som förhindrar [Konfigurera distributionspipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md##config-deployment-pipeline) från att knuffas till produktion.
+
+Om **Pausa innan du distribuerar till produktion** är ett alternativ som krävs för en pipeline för konfigurationsdistribution. Följande är den föreslagna lösningen tills felet har åtgärdats.
+
+1. Kör pipelinen.
+1. Testa koden i mellanlagringsmiljön.
+1. När distributionen och godkännandet blir tillgängligt klickar du på **Avvisa**.
+1. Redigera pipeline för att inaktivera **Pausa innan du distribuerar till produktion** alternativ.
+1. Kör pipelinen igen. Den kommer att köras igen vid mellanlagring och sedan vid produktion.
