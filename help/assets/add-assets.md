@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 4305b334afd3337b849d80e79ca4669802cd4be8
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3115'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Förutom den vanligaste webbläsaröverföringen kan du använda andra metoder för att lägga till resurser i [!DNL Experience Manager] databasen finns. Dessa andra metoder är skrivbordsklienter, som Adobe Asset Link eller [!DNL Experience Manager] skrivbordsapp, uppladdnings- och inmatningsskript som kunderna skapar samt automatiserade inmatningsintegreringar som [!DNL Experience Manager] tillägg.
 
-Medan du kan överföra och hantera binära filer i [!DNL Experience Manager], har de vanligaste filformaten stöd för ytterligare tjänster, som extrahering av metadata eller generering av förhandsgranskning/återgivning. Se [filformat som stöds](file-format-support.md) för mer information.
+Medan du kan överföra och hantera binära filer i [!DNL Experience Manager], har de vanligaste filformaten stöd för ytterligare tjänster, som extrahering av metadata eller generering av förhandsgranskning/återgivning. Se [filformat](file-format-support.md) för mer information.
 
 Du kan också välja att utföra ytterligare bearbetning av de överförda resurserna. Flera resursbearbetningsprofiler kan konfigureras för mappen, till vilken resurser överförs, för att lägga till specifika metadata, återgivningar eller bildbehandlingstjänster. Se [bearbeta resurser när de överförs](#process-when-uploaded).
 
@@ -58,13 +58,13 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
    To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 -->
 
-Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet.
+Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet. [!DNL Experience Manager] kan hantera mappar med mer än 1 000 resurser. Om du vill överföra fler objekt i en sådan mapp med fler än 1 000 befintliga objekt kan det leda till fördröjd överföring eller skapande av den nya mappen.
 
 >[!IMPORTANT]
 >
 >Resurser som du överför till Experience Manager och som har ett filnamn som är längre än 100 tecken får ett kortare namn när de används i Dynamic Media.
 >
->De första 100 tecknen i filnamnet används som de är; återstående tecken ersätts med en alfanumerisk sträng. Den här namnbytesmetoden ger ett unikt namn när resursen används i Dynamic Media. Den är också avsedd att rymma den maximala längden för filnamn i Dynamic Media.
+>De första 100 tecknen i filnamnet används som de är. Alla återstående tecken ersätts med en alfanumerisk sträng. Den här namnbytesmetoden ger ett unikt namn när resursen används i Dynamic Media. Den är också avsedd att rymma den maximala längden för filnamn i Dynamic Media.
 
 
 1. I [!DNL Assets] -användargränssnittet, navigera till den plats där du vill lägga till digitala resurser.
@@ -110,13 +110,13 @@ If you upload many assets to [!DNL Experience Manager], the I/O requests to serv
 
 Du kan överföra en resurs med samma sökväg (samma namn och samma plats) som en befintlig resurs. En varningsdialogruta med följande alternativ visas:
 
-* Ersätt befintlig resurs: Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar och beskärning) som du har gjort i den befintliga resursen bort.
+* Ersätt befintlig resurs: Om du ersätter en befintlig resurs tas metadata för resursen och eventuella tidigare ändringar (till exempel anteckningar och beskärning) som du har gjort för den befintliga resursen bort.
 
   >[!NOTE]
   >
   >Alternativet att ersätta resurser är inte tillgängligt om resursen är låst eller utcheckad.
 
-* Skapa en ny version: En ny version av den befintliga resursen skapas i databasen. Du kan visa de två versionerna i [!UICONTROL Timeline] och kan vid behov återgå till den tidigare versionen.
+* Skapa en annan version: En ny version av den befintliga resursen skapas i databasen. Du kan visa de två versionerna i [!UICONTROL Timeline] och kan vid behov återgå till den tidigare versionen.
 * Behåll båda: Om du väljer att behålla båda resurserna får den nya resursen ett nytt namn.
 
 Bevara den duplicerade resursen i [!DNL Assets], klicka **[!UICONTROL Keep]**. Om du vill ta bort den duplicerade resursen som du överförde klickar du på **[!UICONTROL Delete]**.
@@ -135,14 +135,14 @@ Om du vill anpassa namngivningskonventionerna för din organisation väljer du [
 Inspelaren av gruppresurser kan hantera många resurser effektivt. Men ett storskaligt intag är inte bara en stor fildump eller en tillfällig migrering. För att ett storskaligt intag ska bli ett meningsfullt projekt som passar ert företag och är effektivt, måste ni planera migreringen och strukturera resursorganisationen. Alla förslag skiljer sig åt, i stället för att generalisera, vilket spelar en avgörande roll för den nya databassammansättningen och affärsbehoven. Nedan följer några övergripande förslag på hur du kan planera och utföra ett massintagande:
 
 * Kuratresurser: Ta bort resurser som inte behövs i DAM. Överväg att ta bort oanvända, föråldrade eller duplicerade resurser. Sådan hushållning minskar överförda data och insamlade resurser, vilket leder till snabbare frågor.
-* Ordna resurser: Överväg att ordna innehållet i någon logisk ordning, t.ex. efter filstorlek, filformat, skiftläge eller prioritet. I allmänhet kräver stora komplexa filer mer bearbetning. Du kan också överväga att importera stora filer separat med hjälp av filstorleksfiltreringsalternativet (som beskrivs nedan).
+* Ordna resurser: Överväg att ordna innehållet i någon logisk ordning, t.ex. efter filstorlek, filformat, skiftläge eller prioritet. I allmänhet kräver stora komplexa filer mer bearbetning. Du kan också överväga att importera stora filer separat med filstorleksfiltreringsalternativet (som beskrivs nedan).
 * Större frågor: Överväg att dela upp ditt intag i flera massintagningsprojekt. q gör att du kan se innehållet snabbare och uppdatera ditt intag efter behov. Du kan t.ex. importera bearbetningsintensiva resurser under icke-toppade timmar eller gradvis i flera segment. Du kan emellertid importera mindre och enklare resurser som inte kräver mycket bearbetning på en gång.
 
 Om du vill överföra fler filer använder du någon av följande metoder. Se även [användningsfall och -metoder](#upload-methods-comparison)
 
 * [API:er för överföring av resurser](developer-reference-material-apis.md#asset-upload): Använd ett anpassat överföringsskript eller verktyg som använder API:er för att lägga till ytterligare hantering av resurser (t.ex. översätta metadata eller byta namn på filer), om det behövs.
 * [[!DNL Experience Manager] datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html): Användbart för kreatörer och marknadsförare som överför resurser från det lokala filsystemet. Använd den för att överföra kapslade mappar som är tillgängliga lokalt.
-* [Verktyget Massintag](#asset-bulk-ingestor): Används för konsumtion av stora mängder resurser, antingen vid enstaka tillfällen eller vid första driftsättningen [!DNL Experience Manager].
+* [Verktyget Massintag](#asset-bulk-ingestor): Används för konsumtion av stora mängder resurser, antingen vid enstaka tillfällen eller vid initiala distributioner [!DNL Experience Manager].
 
 ### Verktyget Importera flera resurser {#asset-bulk-ingestor}
 
@@ -156,7 +156,7 @@ Följande bild visar de olika faserna när du importerar resurser till Experienc
 
 **Förutsättningar**
 
-Det krävs ett externt lagringskonto eller en bucket från Azure eller AWS för att den här funktionen ska kunna användas.
+Ett externt lagringskonto eller en bucket från Azure eller AWS krävs för att använda den här funktionen.
 
 >[!NOTE]
 >
@@ -179,13 +179,13 @@ Så här konfigurerar du verktyget för massimport:
 
 1. Ange värdena för att skapa en anslutning till datakällan. Om du till exempel väljer **Azure Blob Storage** som datakälla anger du värdena för Azure-lagringskontot, Azure-blobbehållaren och Azure-åtkomstnyckeln.
 
-1. Välj önskat autentiseringsläge i listrutan. **Azure Access Key** ger fullständig åtkomst till Azure-lagringskontot, medan **Azure SAS-token** låter administratören begränsa möjligheterna för token med hjälp av behörigheter och utgångsprofiler.
+1. Välj önskat autentiseringsläge i listrutan. **Azure Access-nyckel** ger fullständig åtkomst till Azure-lagringskontot, medan **Azure SAS-token** låter administratören begränsa möjligheterna för token med hjälp av behörigheter och utgångsprofiler.
 
 1. Ange namnet på rotmappen som innehåller resurser i datakällan i **[!UICONTROL Source Folder]** fält.
 
-1. (Valfritt) Ange den minsta filstorleken för resurser i MB för att inkludera dem i inmatningsprocessen i **[!UICONTROL Filter by Min Size]** fält.
+1. (Valfritt) Ange den minsta filstorleken för resurser i MB för att inkludera dem i överföringsprocessen i **[!UICONTROL Filter by Min Size]** fält.
 
-1. (Valfritt) Ange den maximala filstorleken för resurser i MB för att inkludera dem i inmatningsprocessen i **[!UICONTROL Filter by Max Size]** fält.
+1. (Valfritt) Ange den maximala filstorleken för resurser i MB för att inkludera dem i överföringsprocessen i **[!UICONTROL Filter by Max Size]** fält.
 
 1. (Valfritt) Ange en kommaavgränsad lista med MIME-typer som ska uteslutas från intaget i dialogrutan **[!UICONTROL Exclude MIME Types]** fält. Till exempel, `image/jpeg, image/.*, video/mp4`. Se [alla filformat som stöds](/help/assets/file-format-support.md).
 
@@ -311,7 +311,7 @@ Following are the file naming conventions that are applied while uploading asset
 &Dagger; The list of characters is a whitespace-separated list.
 -->
 
-#### Schemalägg en engångs- eller återkommande bulkimport {#schedule-bulk-import}
+#### Schemalägg en engångs- eller återkommande massimport {#schedule-bulk-import}
 
 Så här schemalägger du en enstaka eller återkommande bulkimport:
 
@@ -328,7 +328,7 @@ Om du vill visa målplatsen för resurserna där resurserna importeras efter att
 
 #### Kör verktyget Massimport {#run-bulk-import-tool}
 
-Efter [konfigurera verktyget Massimport](#configure-bulk-ingestor-tool) och valfritt [hantera konfigurationen för verktyget Massimport](#manage-bulk-import-configuration)kan du köra konfigurationsjobbet för att starta massinmatningen av resurser.
+Efter [konfigurera verktyget Massimport](#configure-bulk-ingestor-tool) och eventuellt [hantera konfigurationen av verktyget för massimport](#manage-bulk-import-configuration)kan du köra konfigurationsjobbet för att starta massinmatningen av resurser.
 
 Om du vill starta processen för massimport går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]** väljer du [Konfiguration av massimport](#configure-bulk-ingestor-tool)och klicka sedan på **[!UICONTROL Run]**. Klicka **[!UICONTROL Run]** igen för att bekräfta.
 
