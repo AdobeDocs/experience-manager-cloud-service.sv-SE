@@ -6,9 +6,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 discoiquuid: 1a32eb24-db3b-4fad-b1c7-6326b5af4e5e
 docset: aem65
-source-git-commit: 8de3189495c374fad156e7e6cb23c96c84ece482
+source-git-commit: cf7c9fc3f254628f2efee2e00ed295e038d17c99
 workflow-type: tm+mt
-source-wordcount: '2152'
+source-wordcount: '2132'
 ht-degree: 0%
 
 ---
@@ -41,23 +41,23 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
 1. Klicka för att öppna **Formulärmodell** -fliken och från **Välj från** väljer du en av följande modeller för fragmentet:
 
-   * **Ingen**: Anger att fragmentet ska skapas från grunden utan att använda någon formulärmodell.
+   * **Ingen**: Anger att fragmentet ska skapas från grunden utan att någon formulärmodell används.
 
      >[!NOTE]
      >
-     > I Adaptiv Forms baserat på kärnkomponenter kan du använda ett enda formulärfragment flera gånger i ett formulär. Det stöder både icke-baserade och schemabaserade formulärfragment.
+     > I Adaptiv Forms kan du använda ett enda formulärfragment (baserat på kärnkomponenter) flera gånger i ett formulär. Den har stöd för både icke-baserade och schemabaserade formulärfragment.
 
-   * **Formulärmall**: Anger att fragmentet ska skapas med en XDP-mall som överförts till [!DNL AEM Forms]. Välj lämplig XDP-mall som formulärmodell för fragmentet.
+   * **Formulärmall**: Anger att fragmentet ska skapas med hjälp av en XDP-mall som överförts till [!DNL AEM Forms]. Välj lämplig XDP-mall som formulärmodell för fragmentet.
 
-   ![Skapa ett adaptivt formulär med formulärmallen som modell](assets/form-template-model.png)
+   ![Skapa ett adaptivt formulär med formulärmall som modell](assets/form-template-model.png)
 
-   De delformulär som är markerade som fragment i den valda formulärmallen visas också. Du kan välja ett delformulär för Adaptivt formulärfragment i listrutan.
+   Delformulären som är markerade som fragment i den valda formulärmallen visas också. Du kan välja ett delformulär för Adaptivt formulärfragment i listrutan.
 
    ![Välj delformulär från den angivna formulärmallen](assets/fragment-subform.png)
 
    Dessutom kan du skapa ett adaptivt formulärfragment med hjälp av delformulär som inte är markerade som fragment i formulärmallen genom att ange SOM-uttrycket för delformuläret i listrutan.
 
-   * **XML-schema**: Anger att fragmentet ska skapas med hjälp av ett XML-schema som överförts till [!DNL AEM Forms]. Du kan överföra eller välja bland de tillgängliga XML-schemana som formulärmodell för fragmentet.
+   * **XML-schema**: Anger att fragmentet ska skapas med ett XML-schema som har överförts till [!DNL AEM Forms]. Du kan överföra eller välja bland tillgängliga XML-scheman som formulärmodell för fragmentet.
 
    ![Skapa ett adaptivt formulärfragment baserat på ett XML-schema som modell](assets/xml-schema-model.png)
 
@@ -69,7 +69,7 @@ Du kan skapa ett anpassat formulärfragment från grunden eller spara en panel i
 
 I redigeringsläge kan du dra och släppa alla adaptiva formulärkomponenter från AEM-sidan till fragmentet. <!-- For information about Adaptive Form components, see Introduction to authoring Adaptive Forms. -->
 
-Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärmodell för fragmentet visas en ny flik som visar formulärmodellhierarkin i innehållssökaren. Du kan dra och släppa formulärmodellelement till fragmentet. De tillagda elementen för formulärmodell konverteras till formulärkomponenter samtidigt som de ursprungliga egenskaperna från den associerade XDP- eller XSD-filen behålls.
+Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärmodell för fragmentet visas en ny flik som visar formulärmodellhierarkin i innehållssökaren. Du kan dra och släppa formulärmodellelement till fragmentet. De tillagda formulärmodellelementen konverteras till formulärkomponenter samtidigt som de ursprungliga egenskaperna från den associerade XDP- eller XSD-filen behålls.
 
 ### Spara panelen som ett fragment {#save-panel-as-a-fragment}
 
@@ -98,7 +98,7 @@ Om du dessutom har valt ett XML-schema eller en XDP-formulärmall som formulärm
 
    * **Formulärmodell**: Beroende på formulärmodellen för det adaptiva formuläret visas det här fältet **XML-schema**, **Formulärmall**, eller **Ingen**. Det är ett icke-redigerbart fält.
 
-   * **Fragmentmodellrot**: Visas endast i XSD-baserad Adaptive Forms. Den anger fragmentmodellens rot. Du kan **/** eller den komplexa XSD-typen i listrutan. Observera att du bara kan återanvända fragmentet i ett annat adaptivt formulär om du väljer den komplexa typen som fragmentmodellrot.
+   * **Fragment Model Root**: Visas bara i XSD-baserad adaptiv Forms. Den anger fragmentmodellens rot. Du kan välja **/** eller XSD-komplextypen från rullgardinsmenyn. Observera att du bara kan återanvända fragmentet i ett annat adaptivt formulär om du väljer den komplexa typen som fragmentmodellrot.
 Om du väljer **/** som fragmentmodellrot är det fullständiga XSD-trädet från roten synligt på fliken Adaptiv formulärdatamodell. För en fragmentmodellrot av en komplex typ visas bara de underordnade för den valda komplexa typen på fliken Adaptiv formulärdatamodell.
 
    * **XSD-referens**: Visas endast i XSD-baserad Adaptive Forms. Den visar platsen för XML-schemat.
@@ -137,29 +137,29 @@ De adaptiva formulärfragment som du skapar visas på fliken Adaptiva formulärf
 1. Öppna det adaptiva formuläret i redigeringsläge där du vill infoga ett adaptivt formulärfragment.
 1. Klicka **Resurser** ![assets-browser](assets/assets-browser.png) i sidlisten. Välj **Adaptiva formulärfragment** i listrutan.
 
-   Du kan också välja att visa alla adaptiva formulärfragment eller filter baserat på deras formulärmodell - Formulärmall, XML-schema eller Grundläggande.
+   Du kan också välja att visa alla adaptiva formulärfragment eller filter baserat på formulärmodellen - Formulärmall, XML-schema eller Grundläggande.
 
 1. Dra och släpp ett adaptivt formulärfragment på det adaptiva formuläret.
 
    >[!NOTE]
    >
-   >Det adaptiva formulärfragmentet är inte aktiverat för redigering i det adaptiva formuläret. Dessutom kan du inte använda ett XSD-baserat fragment i en JSON-baserad adaptiv form och tvärtom.
+   >Det adaptiva formulärfragmentet är inte aktiverat för redigering inifrån det adaptiva formuläret. Dessutom kan du inte använda ett XSD-baserat fragment i ett JSON-baserat adaptivt formulär och tvärtom.
 
 Det adaptiva formulärfragmentet infogas som referens i det adaptiva formuläret och synkroniseras med det fristående adaptiva formulärfragmentet. Det innebär att när du uppdaterar det adaptiva formulärfragmentet återspeglas ändringarna i alla adaptiva Forms där fragmentet används.
 
 ### Bädda in ett fragment i adaptiv form {#embed-a-fragment-in-adaptive-form}
 
-Du kan välja att bädda in ett adaptivt formulärfragment i ett adaptivt formulär genom att klicka på **knappen Embed Asset: *fragmentName*>** i panelens verktygsfält i det tillagda fragmentet, vilket visas i följande exempelbild.
+Du kan välja att bädda in ett adaptivt formulärfragment i ett adaptivt formulär genom att klicka på **Bädda in resurs: &lt;*fragmentName*>** på panelens verktygsfält för det tillagda fragmentet, vilket visas i följande exempelbild.
 
-![Bädda in ett formulärfragment i adaptivt formulär](assets/embed-fragment.png)
+![Bädda in ett formulärfragment i anpassat formulär](assets/embed-fragment.png)
 
 >[!NOTE]
 >
->Det inbäddade fragmentet är inte längre länkat till det fristående fragmentet. Du kan redigera komponenterna i det inbäddade fragmentet inifrån det adaptiva formuläret.
+>Det inbäddade fragmentet är inte längre länkat till det fristående fragmentet. Du kan redigera komponenterna i det inbäddade fragmentet i det adaptiva formuläret.
 
-### Använda fragment i fragment {#using-fragments-within-fragments}
+### Använda fragment inom fragment {#using-fragments-within-fragments}
 
-Du kan skapa kapslade adaptiva formulärfragment, vilket innebär att du kan dra och släppa ett fragment i ett annat fragment och ha en kapslad fragmentstruktur.
+Du kan skapa kapslade adaptiva formulärfragment, vilket betyder att du kan dra och släppa ett fragment i ett annat fragment och ha en kapslad fragmentstruktur.
 
 ### Ändra fragment {#change-fragments}
 
@@ -173,25 +173,25 @@ Du kan använda ett schemabaserat formulärfragment flera gånger i ett adaptivt
 
 >[!NOTE]
 >
-> * Om du använder icke-baserade formulärfragment flera gånger i ett adaptivt formulär sker datasynkronisering mellan fragmentfälten. Du kan använda en [formulärfragment (baserat på kärnkomponenter)](/help/forms/adaptive-form-fragments-core-components.md)  flera gånger i ett formulär. Den stöder både icke-baserade och schemabaserade formulärfragment utan problem med datasynkronisering.
+> Om du använder icke-baserade formulärfragment flera gånger i ett adaptivt formulär sker datasynkronisering mellan fragmentens fält. Du kan använda ett enda [formulärfragment (baserat på kärnkomponenter)](/help/forms/adaptive-form-fragments-core-components.md) som inte är knutet till någon formulärdatamodell flera gånger i ett formulär utan att det uppstår problem med datasynkroniseringen.
 
 ## Automatisk mappning av fragment för databindning {#auto-mapping-of-fragments-for-data-binding}
 
-När du skapar ett adaptivt formulärfragment med en XFA-formulärmall eller en XSD-komplex typ och drar och släpper fragmentet till en adaptiv form, ersätts XFA-fragmentet eller XSD-komplex typ automatiskt med motsvarande adaptiv formulärfragment vars fragmentmodellrot är mappad till XFA-fragmentet eller XSD-komplex typ.
+När du skapar ett adaptivt formulärfragment med en XFA-formulärmall eller XSD-komplex typ och drar och släpper fragmentet till ett adaptivt formulär, ersätts XFA-fragmentet eller den komplexa XSD-typen automatiskt med motsvarande adaptiva formulärfragment vars fragmentmodellrot mappas till XFA-fragmentet eller XSD-komplextypen.
 
 Du kan ändra fragmentresursen och dess bindningar i dialogrutan Redigera komponent.
 
 >[!NOTE]
 >
->Du kan också dra och släppa ett bundet adaptivt formulärfragment från biblioteket för adaptiva formulärfragment i AEM innehållssökaren och ange rätt bindningsreferens från dialogrutan Redigera komponent i panelen Adaptivt formulärfragment.
+>Du kan också dra och släppa ett bundet adaptivt formulärfragment från biblioteket för adaptivt formulärfragment i AEM innehållssökare och ange rätt bindningsreferens från dialogrutan Redigera komponent på panelen Adaptivt formulärfragment.
 
 ## Hantera fragment {#manage-fragments}
 
-Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av användargränssnittet [!DNL AEM Forms] .
+Du kan utföra flera åtgärder på adaptiva formulärfragment med [!DNL AEM Forms] Gränssnitt.
 
 1. Gå till `https://[hostname]:'port'/aem/forms.html`.
 
-1. Klicka på **Select** i verktygsfältet för [!DNL AEM Forms] användargränssnittet och välj ett adaptivt formulärfragment. I verktygsfältet visas följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
+1. Klicka **Välj** i [!DNL AEM Forms] Användargränssnittets verktygsfält och välj ett adaptivt formulärfragment. I verktygsfältet visas följande åtgärder som du kan utföra på det valda adaptiva formulärfragmentet.
 
 <table>
  <tbody>
@@ -254,16 +254,18 @@ Om du vill lokalisera ett adaptivt formulär som innehåller adaptiva formulärf
 * Ett fragment i ett adaptivt formulär som använder en annan formulärdatamodell stöds inte. Ett XDP-baserat fragment stöds till exempel inte i en XSD-baserad Adaptiv form och vice versa.
 * Anpassade formulärfragment kan användas via fliken Adaptiva formulärfragment i AEM innehållssökaren.
 * Alla uttryck, skript och format i ett fristående adaptivt formulärfragment behålls när de infogas som referens eller bäddas in i ett adaptivt formulär.
-* Du kan inte redigera ett adaptivt formulärfragment, som infogas som referens, inifrån ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.
-* När du publicerar ett adaptivt formulär måste du publicera de fristående adaptiva formulärfragment som infogats med referens i det adaptiva formuläret.
-* När du publicerar om ett uppdaterat adaptivt formulärfragment återspeglas ändringarna i de publicerade instanserna av det adaptiva formulär som fragmentet används i.
-* Adaptiv form som innehåller Verifiera-komponenten stöder inte anonyma användare. Du bör inte heller använda komponenten Verify i ett adaptivt formulärfragment.
+* Du kan inte redigera ett adaptivt formulärfragment som infogas med referens i ett adaptivt formulär. Om du vill redigera kan du antingen redigera det fristående adaptiva formulärfragmentet eller bädda in fragmentet i det adaptiva formuläret.
+* När du publicerar ett adaptivt formulär måste du publicera de fristående adaptiva formulärfragmenten som infogats som referens i det adaptiva formuläret.
+* När du publicerar om ett uppdaterat adaptivt formulärfragment återspeglas ändringarna i de publicerade instanserna av det adaptiva formulär där fragmentet används.
+* Adaptivt formulär som innehåller komponenten Verify har inte stöd för anonyma användare. Det rekommenderas inte heller att använda komponenten Verify i ett adaptivt formulärfragment.
 * (**Endast** Mac) Om du vill vara säker på att funktionen för formulärfragment fungerar perfekt i alla scenarier lägger du till följande post i filen /private/etc/hosts:
-  `127.0.0.1 <Host machine>`**Värddator**: Den Apple Mac-dator som [!DNL AEM Forms] är driftsatt.
+  `127.0.0.1 <Host machine>` **Värddator**: Den Apple Mac-dator som [!DNL AEM Forms] distribueras.
 
-## Referensfragment {#reference-fragments}
+<!--
+## Reference Fragments {#reference-fragments}
 
-Referensadaptiva formulärfragment som du kan använda för att skapa formuläret finns tillgängliga. Mer information finns i [Referensfragment](reference-adaptive-form-fragments.md).
+Reference Adaptive Form Fragments that you can use to create your form are available. For more information, see [Reference Fragments](reference-adaptive-form-fragments.md).
+-->
 
 >[!MORELIKETHIS]
 >

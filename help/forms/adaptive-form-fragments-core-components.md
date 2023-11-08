@@ -5,9 +5,9 @@ topic-tags: author
 keywords: Lägg till adaptiva formulärfragment, adaptiva formulärfragment, skapa ett formulärfragment, lägga till ett fragment i ett adaptivt formulär, hantera fragment
 feature: Adaptive Forms
 exl-id: 3a9ad1b7-2f6f-4ca9-a1c9-549c4238c59e
-source-git-commit: 8de3189495c374fad156e7e6cb23c96c84ece482
+source-git-commit: 1bdd9e323e74a3f2bb06bff52235742e9e22a136
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1769'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Du kan skapa ett adaptivt formulärfragment från grunden eller spara en panel i
 
      >[!NOTE]
      >
-     > I Adaptiv Forms baserat på kärnkomponenter kan du använda ett enda formulärfragment flera gånger i ett formulär. Den har stöd för både icke-baserade och schemabaserade formulärfragment.
+     > I Adaptiv Forms kan du använda ett enda formulärfragment (baserat på kärnkomponenter) flera gånger. Den har stöd för både icke-baserade och schemabaserade formulärfragment.
 
    * **Schema**: Anger att fragmentet ska skapas med ett XML- eller JSON-schema som överförts till AEM Forms. Du kan överföra eller välja bland de tillgängliga XML- eller JSON-schemana som formulärmodell för fragmentet. När du väljer ett XML-schema kan du även skapa ett adaptivt formulärfragment genom att välja en complexType som finns i det valda schemat i listrutan **[!UICONTROL XML Schema Complex Type]** . När du väljer ett JSON-schema kan du också skapa ett adaptivt formulärfragment genom att välja en schemadefinition som finns i det valda schemat från **[!UICONTROL JSON Schema Definitions]** listruta.
    * **Formulärdatamodell**: Anger att fragmentet ska skapas med en formulärdatamodell. Du kan skapa ett adaptivt formulärfragment baserat på endast ett datamodellsobjekt i en formulärdatamodell. Expandera listrutan Definitioner för formulärdatamodell. Den visar alla datamodellsobjekt i den angivna formulärdatamodellen. Markera ett datamodellsobjekt i listan.
