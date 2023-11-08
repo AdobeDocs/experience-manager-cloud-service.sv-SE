@@ -4,9 +4,9 @@ description: Betydande ändringar i [!DNL Adobe Experience Manager Assets] in [!
 feature: Release Information
 role: User,Leader,Architect,Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: bd0981b262f645653723f1b35d871808506d47ba
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1031'
 ht-degree: 1%
 
 ---
@@ -49,16 +49,16 @@ Om du vill göra en komplett validering av koden och processen, inklusive tillg�
 
 [!DNL Experience Manager] som [!DNL Cloud Service] innehåller många nya funktioner och fler prestandaförbättringar för befintliga funktioner. När du går från [!DNL Experience Manager] 6,5 till [!DNL Experience Manager] som [!DNL Cloud Service]kan du lägga märke till att vissa funktioner antingen fungerar annorlunda, inte är tillgängliga eller är delvis tillgängliga. Nedan följer en lista över sådana funktioner. Se även [borttagna och borttagna funktioner](/help/release-notes/deprecated-removed-features.md).
 
-| Funktion eller användningsfall | Status i [!DNL Experience Manager] som [!DNL Cloud Service] | Kommentarer |
+| Funktion eller användningsfall | Status i [!DNL Experience Manager] som [!DNL Cloud Service] | Kommentar |
 |-----|-----|-----|
-| [Identifiering av duplicerade resurser](/help/assets/manage-digital-assets.md#detect-duplicate-assets) | Fungerar annorlunda | Se [hur det fungerade [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html). |
+| [Identifiering av duplicerade resurser](/help/assets/detect-duplicate-assets.md) | Fungerar annorlunda | Se [hur det fungerade [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html). |
 | [För FPO-återgivningar (Placement Only)](/help/assets/configure-fpo-renditions.md) | Fungerar annorlunda | Vid bearbetning av profiler används objektmikrotjänster för att generera FPO-återgivningar. I Experience Manager 6.5, en tredjepartslösning som [!DNL ImageMagick] var tillgänglig för att generera återgivningarna. |
-| Återskrivning av metadata | Fungerar annorlunda | Inaktiverad som standard. Aktivera motsvarande startprogram för arbetsflödet om det behövs. Återskrivning hanteras av resursmikrotjänster. |
+| Tillbakaskrivning av metadata | Fungerar annorlunda | Inaktiverad som standard. Aktivera motsvarande startprogram för arbetsflödet om det behövs. Återskrivning hanteras av resursmikrotjänster. |
 | Bearbetning av resurser som överförts med hjälp av Package Manager | Kräver manuell åtgärd | Bearbeta manuellt med **[!UICONTROL Reprocess Asset]** åtgärd. |
-| MIME-typidentifiering | Stöds inte. | Om du överför en digital resurs utan ett tillägg eller med ett felaktigt tillägg kanske den inte bearbetas som du vill. Användarna kan fortfarande lagra de binära filerna utan filtillägg i DAM. Se [MIME-typidentifiering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/detect-asset-mime-type-with-tika.html). |
-| Generering av deltillgångar för sammansatta tillgångar | Stöds inte. | Beroende användningsfall som kommentarer kanske inte uppfylls. Se [skapa underresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets). Förhandsgranskning av vissa filtyper i PDF är tillgänglig från [2021.7.0-utgåvan](/help/release-notes/release-notes-cloud/release-notes-current.md). |
+| MIME-typdetektering | Stöds inte. | Om du överför en digital resurs utan ett tillägg eller med ett felaktigt tillägg kanske den inte bearbetas som du vill. Användarna kan fortfarande lagra de binära filerna utan filnamnstillägg i DAM. Se [MIME-typidentifiering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/detect-asset-mime-type-with-tika.html). |
+| Generering av deltillgångar för sammansatta tillgångar | Stöds inte. | Beroende användningsexempel som anteckningar kanske inte uppfylls. Se [skapa underresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-linked-subassets.html#generate-subassets). Förhandsgranskning av vissa filtyper i PDF är tillgänglig från [2021.7.0-utgåvan](/help/release-notes/release-notes-cloud/release-notes-current.md). |
 | Redigera bilder | Stöds inte | Det går inte att redigera resurser på Experience Manager-as a Cloud Service. Se [hur det fungerade i Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html#editing-images). |
-| Startsida | Stöds inte | Se [[!DNL Assets] Home Page experience in [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-home-page.html) |
+| Startsida | Stöds inte | Se [[!DNL Assets] Startsidan i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-home-page.html) |
 | Extrahera resurser från ZIP-arkiv | Stöds inte | Se [ZIP-extrahering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html#extractzip). |
 | Värderingar av tillgångar | Stöds inte | Värderingswidgeten i metadataramedigeraren stöds inte. |
 | filtret Innehållsdisposition | Stöds inte | Ett vanligt användningsexempel `ContentDispositionFilter` ska låta administratörer konfigurera [!DNL Experience Manager] för att skicka HTML-filer och öppna PDF i stället för att ladda ned dem. På Publish-instanserna kan du hantera dispositionen med Dispatcher-konfigurationen. På författarinstanserna rekommenderar Adobe inte att du ändrar Content Disposition-huvudet. Se [Innehållsdispositionsfilter i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/content-disposition-filter.html). |
@@ -92,5 +92,4 @@ Om du vill göra en komplett validering av koden och processen, inklusive tillg�
 >* [Arkitekturen](/help/overview/architecture.md)
 >* [Betydande ändringar](/help/release-notes/aem-cloud-changes.md)
 >* [Betydande ändringar [!DNL Sites]](/help/sites-cloud/sites-cloud-changes.md)
->* [Videosjälvstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
-
+>* [Videokurser](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)

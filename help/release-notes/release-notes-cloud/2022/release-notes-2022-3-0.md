@@ -2,7 +2,7 @@
 title: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 761f1605-c421-4f3a-8f90-af23f4f047b1
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: bd0981b262f645653723f1b35d871808506d47ba
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 * Nu kan du använda [!DNL Experience Manager Assets] användargränssnitt till:
 
-   * Konfigurera [identifiering av duplicerade resurser](/help/assets/manage-digital-assets.md#detect-duplicate-assets) i en databas.
+   * Konfigurera [identifiering av duplicerade resurser](/help/assets/detect-duplicate-assets.md) i en databas.
 
    * Konfigurera [lägga till digitala vattenstämplar](/help/assets/watermark-assets.md) till bilder.
 
@@ -74,16 +74,16 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 
 * **Använd osynlig CAPTCHA i ett adaptivt formulär**: Du kan använda den osynliga CAPTCHA-funktionen för att visa CAPTCHA-utmaningen endast om en misstänkt aktivitet inträffar. Om ingen misstänkt aktivitet hittas visas inte CAPTCHA-utmaningen.
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
-* Förbättrad SEO för scenarier med flera butiker: URL-format för PDP/PLP kan nu konfigureras på en butiksnivå via CIF-konfigurationsegenskaperna för molnkonfiguration
+* Förbättrad SEO för scenarier med flera butiker: URL-format för PDP/PLP kan nu konfigureras på en butiksnivå via CIF Cloud Config-egenskaper
 * Produktväljaren har stöd för mellanlagrade produkter via ett nytt filteralternativ i användargränssnittet.  Detta gör att innehållsutvecklare kan förbereda innehållshantering för kommande produktlanseringar
-* Förenklad CIF-konfigurationshantering och felhantering genom att använda CIF Cloud Config-namn i stället för konfigurationsproxy-URL
+* Förenklad CIF och felhantering genom att använda CIF Cloud Config-namn i stället för config proxy-URL
 * Manuellt kategorival för produktlista och Carousel-komponenter. På så sätt kan innehållsutvecklare använda dessa komponenter på innehållssidor, utanför katalogupplevelsen
 
-### Nya funktioner som är tillgängliga i CIF-prerelease channel {#prerelease-features-cif}
+### Nya funktioner i CIF prerelease channel {#prerelease-features-cif}
 
 * AEM CIF Search Core Component support Commerce LiveSearch
 
