@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: e7e565556b382a662fb8afc5aadaa26d2357e294
+source-git-commit: 2f0a7171f93bb5bc947dba5edb59a8e0e538e052
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -101,9 +101,6 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 141
 * FORMS-11206: När en användare försöker schemalägga ett publiceringsarbetsflöde för ett adaptivt formulär fungerar det inte som förväntat.
 * FORMS-11546: En ARIA-etikett saknas för upprepade paneler i adaptiv form, vilket påverkar tillgängligheten.
 * FORMS-11095: Attributet ARIA är felaktigt definierat för fält för telefonnummer, e-postadress och nummer, vilket leder till problem med tillgänglighet.
-* FORMS-9894: API:t för utdatatjänsten genererar en felaktig felkod när en användare anger en ogiltig databassökväg, vilket kan förvirra användare som stöter på det här problemet.
-* FORMS-11404: Tjänsten ImportData uppvisar ett inkonsekvent beteende när du sammanfogar olika XML-data med en läsarutökad PDF. Det kan vara bra att behålla egenskaper för läsartillägg för ett utdatadokument från PDF, men inte för andra utdata-PDF.
-
 
 ### Kända fel {#known-issues-14157}
 
