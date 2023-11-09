@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: 2f0a7171f93bb5bc947dba5edb59a8e0e538e052
+source-git-commit: a8651a44300772b5c9706a5fd85e7fefef72e47d
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsutgåvan av Experience Manager as a Cloud Service.
 
-## Utgåva 14157 {#release-14157}
+## Utgåva 14227 {#release-14227}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 14157, som offentliggjordes den 7 november 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 14029.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 14227, som offentliggjordes den 9 november 2023. Den här underhållsversionen är en uppdatering från den tidigare underhållsversionen 14029. Underhållsutgåva 14227 ersätter 14157 för att åtgärda ett problem.
 
 2023.11.0 Funktionsaktivering innehåller alla funktioner som finns i den här underhållsversionen. Se [Roadmap för lanseringar av Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för mer information.
 
-### Förbättringar {#enhancements-14157}
+### Förbättringar {#enhancements-14227}
 
 * ASSETS-29631: Assets Cloud: Använd dam:roles för säker leverans/sökning.
 * CQ-4354515: Translations: Option to Suppress translation of referenced resources.
@@ -40,7 +40,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 141
 * SITES-16545: Innehållsfragment: Lägg till slutpunkt för hämtning av referenser för variationen för ett innehållsfragment.
 * SITES-16853: Content Fragments: Remove /adobe/sites/cf/fragments/{fragmentId}/variation/{name}/tags slutpunkt.
 
-### Åtgärdade problem {#fixed-issues-14157}
+### Åtgärdade problem {#fixed-issues-14227}
 
 * Flera tillgänglighetsproblem har åtgärdats
 * ASSETS-31015: Det går inte att överföra filer till Assets med okända filtillägg.
@@ -85,7 +85,6 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 141
 * SITES-16243: Innehållsfragment: Sök och ersätt fungerar inte med fält med återgivning som: Flera.
 * SITES-16250: Content Fragments: Patching a CF returnerar ibland ett felaktigt tagghuvud.
 * SITES-16686: Content Fragments: Content Fragment non-fragment references serialized when parent reference is at max depth.
-* SITES-16234: ContextHub: Det korrekta namnet på vald profilaktivitet visas inte när mål för start anges.
 * SITES-12880: Fast-Track: Korrigera lokalisering för platser > Konfigurationsanalys.
 * SITES-16103: Experience Fragments: Målalternativen visas inte under Cloud Service på grund av ett konsolfel.
 * SITES-16001: MSM: Möjlighet att utesluta komponenter för flera fält från utrullningskonfigurationen när Live Copy skapas.
@@ -102,11 +101,11 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 141
 * FORMS-11546: En ARIA-etikett saknas för upprepade paneler i adaptiv form, vilket påverkar tillgängligheten.
 * FORMS-11095: Attributet ARIA är felaktigt definierat för fält för telefonnummer, e-postadress och nummer, vilket leder till problem med tillgänglighet.
 
-### Kända fel {#known-issues-14157}
+### Kända fel {#known-issues-14227}
 
 Ingen.
 
-### Inbäddade tekniker {#embedded-tech-14157}
+### Inbäddade tekniker {#embedded-tech-14227}
 
 | Teknik | Version | Länk |
 |---|---|---|
