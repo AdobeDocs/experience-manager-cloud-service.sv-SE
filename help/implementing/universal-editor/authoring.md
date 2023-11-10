@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
+source-git-commit: c6d4300e6e031a4958277fa3bce251ac6aa5dbc9
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2442'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Gränssnittet är uppdelat i fem huvudområden.
 * [The Universal Editor header](#universal-editor-header)
 * [Skrivskenan](#mode-rail)
 * [Redigeraren](#editor)
-* [Komponenträgen](#component-rail)
+* [Egenskapsfältet](#properties-rail)
 
 ![Universellt redigeringsgränssnitt](assets/ui.png)
 
@@ -102,11 +102,19 @@ Rubriken Universal Editor visas alltid längst upp på skärmen precis nedanför
 
 ![The Universal Editor header](assets/universal-editor-header.png)
 
-#### Hamburger-menyn {#hamburger-menu}
+#### Hemknappen {#home-button}
 
-Hamburgermenyn är inte implementerad än.
+Hemknappen återgår till startsidan för Universal Editor
 
-![Hamburger-menyn](assets/hamburger-menu.png)
+![Hamburger-menyn](assets/home-button.png)
+
+På startsidan anger du URL-adressen till den webbplats som du vill redigera med Universal Editor.
+
+![Startsida](assets/start-page.png)
+
+>[!NOTE]
+>
+>Alla sidor som du vill redigera med Universal Editor måste vara [som har stöd för Universal Editor.](getting-started.md)
 
 #### Platsfält {#location-bar}
 
@@ -121,6 +129,12 @@ Platsfältet visar adressen till sidan som du redigerar. Tryck eller klicka för
 >[!NOTE]
 >
 >Alla sidor som du vill redigera med Universal Editor måste vara [som har stöd för Universal Editor.](getting-started.md)
+
+#### Inställningar för autentiseringshuvud {#authentication-settings}
+
+Tryck eller klicka på ikonen för inställningar för autentiseringshuvudet om du behöver ange en autentiseringshemlighet.
+
+![Inställningsknapp för autentiseringsrubriker](assets/authentication-header-settings.png)
 
 #### Emulatorinställningar {#emulator}
 
@@ -162,7 +176,7 @@ Tryck eller klicka på publiceringsknappen så att du kan publicera ändringarna
 
 ### Mode Rail {#rail}
 
-Lägesfältet visas alltid längs den vänstra sidan av redigeraren. Du kan enkelt växla mellan olika redigeringslägen i redigeraren.
+Lägesfältet ligger precis under hemknappen och finns alltid till vänster i redigeraren. Det gör det enkelt att växla mellan olika användningslägen i redigeraren.
 
 ![Skrivskenan](assets/mode-rail.png)
 
@@ -176,29 +190,18 @@ I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i
 >
 >Använda snabbtangenten `P` för att växla till förhandsvisningsläge.
 
-#### Medieläge {#media-mode}
-
-I medieläge kan innehållsförfattaren klicka för att välja medieinnehåll.
-
-![Medieläge](assets/media-mode.png)
-
-Information om innehållet visas i komponentfältet och författaren kan också [redigera medieinnehållet.](#editing-media)
-
->[!TIP]
->
->Använda snabbtangenten `M` för att växla till medieläge.
-
 #### Komponentläge {#component-mode}
 
-I komponentläget kan innehållsförfattaren klicka för att markera komponenter och redigera dem, inklusive:
+I komponentläget kan innehållsförfattaren klicka för att markera komponenter och redigera dem:
 
 * [Redigera oformaterad text](#editing-content) på plats.
-* [Redigera RTF](#editing-rich-text) på plats med ytterligare formateringsalternativ som visas i komponentspåret.
+* [Redigera RTF](#editing-rich-text) på plats med ytterligare formateringsalternativ som visas i egenskapsfältet.
+* [Redigera medieinnehåll](#editing-media)
 * [Redigera innehållsfragment](#edit-content-fragment)
 
 ![Komponentläge](assets/component-mode.png)
 
-När du väljer en [Innehållsfragment](/help/assets/content-fragments/content-fragments.md), visas informationen om den i komponentfältet där du kan redigera innehållsfragmentet.
+När du markerar en komponent visas information om dess innehåll i [Egenskaper.](#properties-rail) Beroende på innehållstypen kan du redigera antingen på plats eller i egenskapsfältet.
 
 >[!TIP]
 >
@@ -213,15 +216,15 @@ Redigeraren tar upp större delen av fönstret och är där sidan som anges i [p
 
 ![Redigerare](assets/editor.png)
 
-### Komponentspår {#component-rail}
+### Properties Rail {#properties-rail}
 
-Komponentlisten visas alltid till höger i redigeraren. Beroende på dess läge kan det visa information för en komponent som är markerad i innehållet eller hierarkin för sidinnehållet.
+Egenskapsfältet visas alltid längs den högra sidan av redigeraren. Beroende på dess läge kan det visa information för en komponent som är markerad i innehållet eller hierarkin för sidinnehållet.
 
-![Komponenträgen](assets/component-rail.png)
+![Egenskapsfältet](assets/component-rail.png)
 
 #### Egenskapsläge {#properties-mode}
 
-I egenskapsläget visar rälen egenskaperna för den komponent som är markerad i redigeraren. Det här är standardläget för komponenträlen när en sida läses in.
+I egenskapsläget visar rälen egenskaperna för den komponent som är markerad i redigeraren. Det här är standardläget för egenskapsfältet när en sida läses in.
 
 ![Egenskapsläge](assets/properties-mode.png)
 
@@ -234,20 +237,6 @@ Observera att inte alla komponenter har information som kan visas och/eller redi
 >[!TIP]
 >
 >Använda snabbtangenten `D` för att växla till egenskapsläge.
-
-##### Redigera {#edit}
-
-När [komponentläge,](#component-mode) redigeringsalternativen för den markerade komponenten visas i komponenträlen. I komponenträlen kan du redigera den markerade komponenten. Du kan även trycka eller klicka på redigeringsknappen.
-
-![Ikonen Redigera](assets/edit.png)
-
-Om du trycker eller klickar på redigeringsknappen öppnas knappen [Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) på en ny flik. Detta ger dig tillgång till den fulla kraften i Content Fragment Editor för att redigera det tillhörande innehållsfragmentet.
-
-Beroende på arbetsflödets behov kan du redigera innehållsfragmentet i den universella redigeraren eller direkt i redigeraren för innehållsfragment.
-
->[!TIP]
->
->Använda snabbtangenten `E` om du vill redigera en markerad komponent.
 
 #### Läge för innehållsträd {#content-tree-mode}
 
@@ -263,13 +252,29 @@ När du väljer ett objekt i innehållsträdet rullar redigeraren till det inneh
 >
 >Använda snabbtangenten `F` för att växla till innehållsträdsläge.
 
+##### Redigera {#edit}
+
+När [komponentläge,](#component-mode) Redigeringsalternativen för den markerade komponenten visas i egenskapsfältet. I egenskapsfältet kan du redigera den markerade komponenten. Om den markerade komponenten är ett innehållsfragment kan du också trycka eller klicka på redigeringsknappen.
+
+![Ikonen Redigera](assets/edit.png)
+
+Om du trycker eller klickar på redigeringsknappen öppnas knappen [Innehållsfragmentsredigerare](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor) på en ny flik. Detta ger dig tillgång till den fulla kraften i Content Fragment Editor för att redigera det tillhörande innehållsfragmentet.
+
+Beroende på arbetsflödets behov kan du redigera innehållsfragmentet i den universella redigeraren eller direkt i redigeraren för innehållsfragment.
+
+>[!TIP]
+>
+>Använda snabbtangenten `E` om du vill redigera en markerad komponent.
+
 ##### Lägg till {#add}
 
-Om du väljer en behållarkomponent i innehållsträdet eller i redigeraren visas alternativet Lägg till på komponenträlen.
+Om du väljer en behållarkomponent i innehållsträdet eller i redigeraren visas alternativet Lägg till i egenskapsfältet.
 
 ![Ikonen Lägg till](assets/ue-add-component-icon.png)
 
 Om du trycker eller klickar på knappen Lägg till öppnas en listruta med komponenter som är tillgängliga för [lägg till i den markerade behållaren.](#adding-components)
+
+![Lägg till snabbmeny](assets/add-context-menu.png)
 
 >[!TIP]
 >
@@ -277,7 +282,7 @@ Om du trycker eller klickar på knappen Lägg till öppnas en listruta med kompo
 
 ##### Ta bort {#delete}
 
-Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas borttagningsalternativet på komponenträlen.
+Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet eller i redigeraren visas borttagningsalternativet på egenskapslisten.
 
 ![Ikonen Ta bort](assets/ue-delete-component-icon.png)
 
@@ -289,15 +294,15 @@ Tryck eller klicka på knappen Ta bort [tar bort komponenten.](#deleting-compone
 
 ## Redigera innehåll {#editing-content}
 
-Det är enkelt och intuitivt att redigera innehåll. I redigeringslägen ([medieläge](#media-mode) och [komponentläge](#component-mode)) när du för musen över innehåll i redigeraren markeras redigerbart innehåll med en blå ruta.
+Det är enkelt och intuitivt att redigera innehåll. I [komponentläge](#component-mode)när du för musen över innehåll i redigeraren markeras redigerbart innehåll med en blå ruta.
 
 ![Redigerbart innehåll markeras med en blå ruta](assets/editable-content.png)
 
 >[!TIP]
 >
->Observera att när du trycker eller klickar på ett innehåll i redigeringsläget markeras det för redigering. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
+>Observera att när du trycker eller klickar på innehåll i komponentläget markeras det för redigering. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläge.](#preview-mode)
 
-Beroende på [läge](#mode-rail) du befinner dig i och det innehåll du väljer kan ha olika redigeringsalternativ och du kan granska ytterligare egenskaper för innehållet med hjälp av [komponentskena.](#component-rail)
+Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet i [Egenskaper.](#properties-rail)
 
 ### Redigera oformaterad text {#edit-plain-text}
 
@@ -307,11 +312,11 @@ Om du är [komponentläge](#component-mode) och markerar en oformaterad textkomp
 
 Tryck på Enter eller tryck eller klicka utanför textrutan för att spara ändringarna.
 
-När du trycker eller klickar för att markera textkomponenten visas informationen om den i komponenträlen. Du kan också redigera texten på rälsen.
+När du trycker eller klickar för att markera textkomponenten visas detaljerna i egenskapsfältet. Du kan också redigera texten på rälsen.
 
-![Redigera text i komponenträlen](assets/ue-editing-text-component-rail.png)
+![Redigera text i egenskapsfältet](assets/ue-editing-text-component-rail.png)
 
-Dessutom finns information om texten i komponentspåret. Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i komponenträlen.
+Dessutom finns information om texten i egenskapsfältet. Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i egenskapsfältet.
 
 ### Redigera RTF {#edit-rich-text}
 
@@ -321,19 +326,19 @@ Tryck på Enter eller tryck eller klicka utanför textrutan för att spara ändr
 
 ![Redigera en RTF-komponent](assets/rich-text-editing.png)
 
-Dessutom är formateringsalternativ och information på texten tillgängliga i komponentspåret. Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i komponenträlen.
+Dessutom finns formateringsalternativ och information om texten i egenskapsfältet. Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i egenskapsfältet.
 
 ### Redigera media {#edit-media}
 
-Om du är [medieläge](#media-mode) och du markerar en bild kan du visa information om den i komponenträlen.
+Om du är [komponentläge](#component-mode) och du väljer en bild kan du visa informationen om den i egenskapsfältet.
 
 ![Redigera media](assets/ue-edit-media.png)
 
-Tryck eller klicka på **Ersätt** under förhandsgranskningen av den markerade bilden i komponentlisten för att ersätta bilden med en annan bild från ditt resursbibliotek.
+Tryck eller klicka på **Ersätt** under förhandsgranskningen av den markerade bilden i egenskapsfältet för att ersätta bilden med en annan bild från ditt resursbibliotek.
 
 1. The [resursväljare](/help/assets/asset-selector.md#using-asset-selector) öppnas så att du kan välja en resurs.
 1. Tryck eller klicka för att välja en ny resurs.
-1. Tryck eller klicka **Välj** för att återgå till den del av järnvägen där tillgången ersattes.
+1. Tryck eller klicka **Välj** för att gå tillbaka till egenskapsfältet där tillgången ersattes.
 
 Ändringarna sparas automatiskt i innehållet.
 
@@ -343,15 +348,15 @@ Tryck eller klicka på **Ersätt** under förhandsgranskningen av den markerade 
 
 ### Redigera innehållsfragment {#edit-content-fragment}
 
-Om du är [komponentläge](#component-mode) och du väljer [Innehållsfragment,](/help/sites-cloud/administering/content-fragments/overview.md) du kan redigera informationen i komponenterna.
+Om du är [komponentläge](#component-mode) och du väljer [Innehållsfragment,](/help/sites-cloud/administering/content-fragments/overview.md) Du kan redigera informationen i egenskapsfältet.
 
 ![Redigera ett innehållsfragment](assets/ue-edit-cf.png)
 
-De fält som definieras i innehållsmodellen för det valda innehållsfragmentet visas och kan redigeras i komponentfältet.
+De fält som definieras i innehållsmodellen för det valda innehållsfragmentet visas och kan redigeras i egenskapsfältet.
 
 Om du markerar ett fält som är relaterat till ett innehållsfragment läses innehållsfragmentet in i komponentspåret och fältet rullas automatiskt till.
 
-Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i komponenträlen.
+Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet i egenskapsfältet.
 
 Om du vill redigera ditt innehållsfragment i dialogrutan [Innehållsfragmentsredigerare](/help/sites-cloud/administering/content-fragments/authoring.md) i stället klickar du på [redigeringsknapp](#edit) i lägesrälen.
 
@@ -360,7 +365,7 @@ Beroende på arbetsflödets behov kan du redigera innehållsfragmentet i den uni
 ### Lägga till komponenter i behållare {#adding-components}
 
 1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
-1. Tryck eller klicka sedan på ikonen Lägg till i komponenträlen.
+1. Tryck eller klicka sedan på ikonen Lägg till i egenskapsfältet.
 
    ![Välja en komponent som ska läggas till i en behållare](assets/ue-add-component.png)
 
@@ -375,7 +380,7 @@ Komponenten infogas i behållaren och kan redigeras i redigeraren.
 1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
 1. Tryck eller klicka på ikonen för avfasning för behållaren för att expandera dess innehåll i innehållsträdet.
 1. Markera sedan en komponent i behållaren i innehållsträdet.
-1. Tryck eller klicka på ikonen Ta bort i komponenträlen.
+1. Tryck eller klicka på ikonen Ta bort i egenskapsfältet.
 
    ![Ta bort en komponent](assets/ue-delete-component.png)
 
@@ -402,7 +407,7 @@ Komponenterna ordnas om i både innehållsträdet och i redigeraren
 
 När du är klar med redigeringen av innehållet vill du ofta navigera i det och se hur det ser ut i innehållet på andra sidor. I [förhandsgranskningsläge](#preview-mode) Du kan klicka på länkar för att navigera i innehållet som en läsare skulle kunna. Innehållet återges i redigeraren på samma sätt som det publiceras.
 
-Observera att när du trycker eller klickar på ett innehåll i förhandsgranskningsläget fungerar det som om det gjordes för en läsare av innehållet. Om du vill markera innehållet för redigering växlar du till ett redigeringsläge som [komponentläge](#component-mode) eller [medieläge.](#media-mode)
+Observera att när du trycker eller klickar på ett innehåll i förhandsgranskningsläget fungerar det som om det gjordes för en läsare av innehållet. Om du vill markera innehållet för redigering växlar du till [komponentläge.](#component-mode)
 
 ## Ytterligare resurser {#additional-resources}
 

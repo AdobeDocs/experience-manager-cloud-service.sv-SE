@@ -2,12 +2,13 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: 79fe3133a6b0553209b14c4cf47faa9db28caacc
+source-git-commit: 6c3b286182ae33cafadf51e653c2076d1911e444
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
+
 
 # Komma igång med Universal Editor i AEM {#getting-started}
 
@@ -109,14 +110,17 @@ De instrumentattribut som läggs till på sidan består huvudsakligen av [HTML M
 Anslutningar som används i appen lagras som `<meta>` taggar på sidans `<head>`.
 
 ```html
-<meta name="urn:adobe:aem:editor:<referenceName>" content="<protocol>:<url>">
+<meta name="urn:adobe:aue:<category>:<referenceName>" content="<protocol>:<url>">
 ```
 
+* `<category>` - Det här är en klassificering av anslutningen med två alternativ.
+   * `system` - För anslutningsslutpunkter
+   * `config` - för [definiera valfria konfigurationsinställningar](#configuration-settings)
 * `<referenceName>` - Det här är ett kort namn som återanvänds i dokumentet för att identifiera anslutningen. T.ex. `aemconnection`
 * `<protocol>` - Detta anger vilket beständighets-plugin-program för Universal Editor Persistence Service som ska användas. T.ex. `aem`
 * `<url>` - Detta är URL:en till det system där ändringarna ska kvarstå. T.ex. `http://localhost:4502`
 
-Identifierare `adobe:aem:editor` representerar anslutningen för Adobe Universal Editor.
+Identifierare `urn:adobe:aue:system` representerar anslutningen för Adobe Universal Editor.
 
 `itemid`s använder `urn` för att förkorta identifieraren.
 
@@ -134,10 +138,12 @@ itemid="urn:<referenceName>:<resource>"
 ### Exempelanslutning {#example}
 
 ```html
+<meta name="urn:adobe:aue:system:<referenceName>" content="<protocol>:<url>">
+
 <html>
 <head>
-    <meta name="urn:adobe:aem:editor:aemconnection" content="aem:https://localhost:4502">
-    <meta name="urn:adobe:aem:editor:fcsconnection" content="fcs:https://example.franklin.adobe.com/345fcdd">
+    <meta name="urn:adobe:aue:system:aemconnection" content="aem:https://localhost:4502">
+    <meta name="urn:adobe:aue:system:fcsconnection" content="fcs:https://example.franklin.adobe.com/345fcdd">
 </head>
 <body>
         <aside>
@@ -147,9 +153,9 @@ itemid="urn:<referenceName>:<resource>"
               <p itemprop="title" itemtype="text">Journalist</p>
               <img itemprop="avatar" src="https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg" itemtype="image" alt="avatar"/>
             </li>
- 
+
 ...
- 
+
             <li itemscope itemid="urn:fcsconnection:/documents/mytext" itemtype="component">
               <p itemprop="name" itemtype="text">John Smith</p>
               <p itemid="urn:aemconnection/content/example/another-source" itemprop="title" itemtype="text">Photographer</p>
@@ -159,6 +165,28 @@ itemid="urn:<referenceName>:<resource>"
         </aside>
 </body>
 </html>
+```
+
+### Konfigurationsinställningar {#configuration-settings}
+
+Du kan använda `config` i anslutningens URN för att ange service- och tilläggsslutpunkter om det behövs.
+
+Om du inte vill använda Universal Editor, som hanteras av Adobe, men din egen värdversion, kan du ange detta i en metatagg. Om du vill skriva över standardtjänstslutpunkten som Universell redigerare tillhandahåller anger du en egen tjänstslutpunkt:
+
+* Meta name - `urn:adobe:aue:config:service`
+* Metainnehåll - `content="https://adobe.com"` (exempel)
+
+```html
+<meta name="urn:adobe:aue:config:service" content="<url>">
+```
+
+Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en metatagg. Om du vill hämta tillägg anger du slutpunkterna för tillägget:
+
+* Meta name: `urn:adobe:aue:config:extensions`
+* Metainnehåll: `content="https://adobe.com,https://anotherone.com,https://onemore.com"` (exempel)
+
+```html
+<meta name="urn:adobe:aue:config:extensions" content="<url>,<url>,<url>">
 ```
 
 ## Du är redo att använda den universella redigeraren {#youre-ready}
