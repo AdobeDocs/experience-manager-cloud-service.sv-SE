@@ -5,9 +5,9 @@ feature: Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: f79ed400ac2c1956dd7946cec2881f4e77d4bd41
+source-git-commit: b9fb484135fb2d16758548c525b59f5ba011afb5
 workflow-type: tm+mt
-source-wordcount: '2031'
+source-wordcount: '2032'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 [!DNL Experience Manager Forms] Med dataintegrering kan du konfigurera och ansluta till olika datakällor. Följande typer stöds:
 
-* Relationsdatabaser - MySQL, [!DNL Microsoft® SQL Server], [!DNL IBM® DB2®]och [!DNL Oracle RDBMS]
+* Relationsdatabaser - MySQL, [!DNL Microsoft® SQL Server], [!DNL IBM® DB2®], postgreSQL, och [!DNL Oracle RDBMS]
 * RESTful web services
 * SOAP-baserade webbtjänster
 * OData-tjänster (version 4.0)
