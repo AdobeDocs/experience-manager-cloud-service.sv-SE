@@ -4,12 +4,13 @@ description: Upptäck hur du kan använda den universella redigeraren för att r
 hidefromtoc: true
 index: false
 exl-id: a4854a56-9434-4d15-a56a-f1798f27263a
-source-git-commit: 226df8999d1344ffe8acb2a9ce75b58634300a11
+source-git-commit: 2c7ad41ec44ed2627bfcfe206c1b7ba660cef9c0
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '977'
 ht-degree: 0%
 
 ---
+
 
 # Redigera i kontext med den universella redigeraren {#editing-in-context}
 
@@ -38,11 +39,11 @@ Redigering på plats och i sitt sammanhang kan ofta vara fördelaktigt jämfört
 
 Med den universella redigeraren kan du smidigt redigera text både i sitt sammanhang och på plats, vilket gör det enkelt och intuitivt att skapa innehåll.
 
-1. Redigeraren bör läsas in som standard i **Text** läge. Om inte, tryck eller klicka på **Text** i fältet mode till vänster om redigeraren.
+1. Redigeraren bör läsas in som standard i **Komponenter** läge. Om inte, tryck eller klicka på **Komponenter** i fältet mode till vänster om redigeraren.
 
-1. Tryck eller klicka på titeln för den senaste artikeln för att redigera den.
+1. Dubbeltryck eller klicka på titeln för den senaste artikeln för att redigera den.
 
-   ![Universell redigerare](assets/do-not-localize/ue-text-mode.png)
+   ![Universell redigerare](assets/do-not-localize/ue-component-mode.png)
 
 1. Komponenten markeras enligt en blå kant med en tabb som anger att det är en textkomponent. Det finns en markör i kanten som väntar på textinmatning. Ändra texten till `Aloha Spirit in Lofoten`.
 
@@ -56,11 +57,9 @@ Den universella redigeraren sparar ändringarna automatiskt i redigeringsmiljön
 
 Du kan också byta ut bilder samtidigt som du behåller innehållet genom att använda den universella redigeraren.
 
-1. Ändra redigeraren till **Media** genom att trycka på eller klicka på **Media** på skrivskenan.
+1. Återstår i **Komponenter** markerar du surfarens bild genom att trycka eller klicka på den.
 
-1. Tryck eller klicka på surfarens bild för att markera den.
-
-1. I komponentspåret kan du se detaljerna för resursen. Tryck eller klicka **Ersätt**.
+1. I komponentspåret kan du se detaljerna för resursen. Tryck eller klicka på **Aktuell bild** miniatyrbild.
 
    ![Markera en bild som ska redigeras](assets/do-not-localize/ue-edit-media.png)
 
@@ -82,7 +81,7 @@ Med den universella redigeraren kan du interagera med ditt innehåll i dess samm
 
 1. Reader kan finnas på olika enheter med olika proportioner, så redigeraren erbjuder emuleringslägen för att se hur sidan kommer att visas för användarna. Välj till exempel alternativet för mobil enhet i stående läge.
 
-   ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-3.png)
+   ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-2.png)
 
 1. Se innehållsändringen i redigeraren. Emulatorns ikon ändras också för att återspegla det läge emulatorn är i. Tryck eller klicka var som helst utanför emulatormenyn för att stänga den och interagera med innehållet.
 
@@ -118,12 +117,12 @@ För att snabba upp redigeringen av innehåll när strukturerad redigering av he
 
 1. I fältet mode till vänster om redigeraren väljer du **Komponenter**. På så sätt kan du välja sidkomponenter i redigeraren.
 
-1. Tryck eller klicka på någon av äventyren för att markera den.
+1. Tryck eller klicka på något av äventyren som **Bali Surf Camp** för att markera den.
 
-   * Observera den markerade komponentens blå kontur. Fliken ska vara **referens** när ett innehållsfragment är markerat.
+   * Observera den markerade komponentens blå kontur. Fliken ska visa namnet på innehållsfragmentet när ett innehållsfragment är markerat. I detta fall **Bali Surf Camp**.
    * Eftersom den universella redigeraren tillåter att du markerar ett objekt på sidan, kan komponenter som är delar av ett innehållsfragment också markeras individuellt. Tryck eller klicka där det visas på bilden för att markera hela komponenten för innehållsfragment.
 
-1. En ny **Redigera** visas på skrivlisten. Tryck eller klicka på **Redigera** om du vill öppna redigeraren för innehållsfragment på en ny flik.
+1. The **Redigera** visas på komponenträlen. Tryck eller klicka på **Redigera** om du vill öppna redigeraren för innehållsfragment på en ny flik.
 
 ![Markera innehållsfragment i den universella redigeraren](assets/do-not-localize/ue-content-fragments.png)
 
