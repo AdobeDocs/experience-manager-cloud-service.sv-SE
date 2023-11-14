@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 92e7e64f25fdb2b4d8fbfe0da6da4bc81b9c96a1
+source-git-commit: a6d43e6d4138305c2f98dfb6e33946d36fb50fe1
 workflow-type: tm+mt
-source-wordcount: '4372'
+source-wordcount: '4381'
 ht-degree: 19%
 
 ---
@@ -88,6 +88,7 @@ ht-degree: 19%
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2023 {#2023}
+         + [Versionsinformation för 2023.10.0](/help/implementing/cloud-manager/release-notes/2023/2023-10-0.md)
          + [Versionsinformation för 2023.9.0](/help/implementing/cloud-manager/release-notes/2023/2023-9-0.md)
          + [Versionsinformation för 2023.8.0](/help/implementing/cloud-manager/release-notes/2023/2023-8-0.md)
          + [Versionsinformation för 2023.7.0](/help/implementing/cloud-manager/release-notes/2023/2023-7-0.md)
@@ -843,6 +844,7 @@ ht-degree: 19%
          + [Använda Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
          + [Använda flera databaser](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md)
          + [Installation av Enterprise Development Team](/help/implementing/cloud-manager/managing-code/enterprise-team-dev-setup.md)
+         + [Arbeta med dina egna GitHub-databaser](/help/implementing/cloud-manager/managing-code/byo-github.md)
       + [Miljövariabler](/help/implementing/cloud-manager/environment-variables.md)
       + Cloud Manager CI-CD-pipeline {#cicd-pipelines}
          + [Introduktion](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md)

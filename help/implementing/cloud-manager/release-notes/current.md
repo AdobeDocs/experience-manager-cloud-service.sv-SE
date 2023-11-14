@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation om Cloud Manager 2023.10.0 i Adobe Experience Manager as a Cloud Service
-description: Detta är versionsinformationen för Cloud Manager 2023.10.0 i AEM as a Cloud Service.
+title: Versionsinformation för Cloud Manager 2023.11.0 i Adobe Experience Manager as a Cloud Service
+description: Detta är versionsinformationen för Cloud Manager 2023.11.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 36f7ece65c1312ff3ac463cd8c6abb2882b99043
+source-git-commit: b51b3c9aed4d9dacbf12a6cad5f8923d82766bd9
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Cloud Manager 2023.10.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation för Cloud Manager 2023.11.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-Den här sidan dokumenterar versionsinformationen för Cloud Manager version 2023.10.0 i AEM as a Cloud Service.
+Den här sidan dokumenterar versionsinformationen för Cloud Manager version 2023.11.0 i AEM as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,24 +21,27 @@ Den här sidan dokumenterar versionsinformationen för Cloud Manager version 202
 
 ## Releasedatum {#release-date}
 
-Releasedatum för Cloud Manager version 2023.10.0 i AEM as a Cloud Service är 5 oktober 2023. Nästa version planeras till den 2 november 2023.
+Releasedatum för Cloud Manager version 2023.11.0 i AEM as a Cloud Service är 14 november 2023. Nästa version planeras till den 7 december 2023.
 
 ## Nyheter {#what-is-new}
 
-* Förbättringar av [indexering](/help/operations/indexing.md) har kortare varaktighet för pipeline när nya index distribueras.
-   * Förbättringarna varierar beroende på innehållsprofilen.
-* Automatisk [uppdateringar för utvecklingsmiljöer](/help/implementing/cloud-manager/manage-environments.md#updating-environments) är aktiverade som standard för nya program, vilket sparar tid när du behöver köra uppdateringar manuellt.
-   * Den här uppdateringen kommer att lanseras stegvis.
-* I oktober 2023-versionen av Cloud Manager uppdateras Java-versionerna med en stegvis utrullning.
-   * De mindre versionerna för Java 8 och 11 samt Maven har uppdaterats och kommer att lanseras stegvis under de kommande två månaderna. Den nya versionen har flera säkerhetskorrigeringar och felkorrigeringar. De nya versionerna är
-      * **Maven:** `3.8.8`
-      * **Java 8-version:** `/usr/lib/jvm/jdk1.8.0_371`
-      * **Java 11-version:** `/usr/lib/jvm/jdk-11.0.20`
-   * [Se OpenJDK-råden](https://openjdk.org/groups/vulnerability/advisories/) om du vill ha information om säkerhet och felkorrigeringar i dessa JDK-uppdateringar.
+* Brandvägg för webbaserade program-DDOS-skydd (WAF-DDOS) finns nu att köpa som en del av dina AEM as a Cloud Service rättigheter och [kan konfigureras på ett självbetjäningssätt.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
+* Specialiserad [Konfigurera distributionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) Nu finns det pipelines för att konfigurera miljöinställningar, underhållsuppgifter, CDN-regler och mycket mer på några minuter.
+* [När innehåll kopieras](/help/implementing/developing/tools/content-copy.md) från en högre miljö till en utvecklingsmiljö visas nu ett meddelande som talar om försiktighet vid kopiering av stora innehållsuppsättningar eftersom utvecklingsmiljöer är kapacitetsbegränsade.
+* [Informationssidan för pipeline-körning](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) visar nu alla steg i en pipeline-körning med de som ännu inte har börjat nedtonade.
+* På båda **[Aktivitet](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#activity)** och **[Pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#pipelines)** på sidor är en sammanfattning av pipeline-körningen nu tillgänglig när du klickar på en pipeline med en körningsstatus.
+* En ny **Varaktighet** -avsnittet har lagts till i [informationssida för pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) som omfattar den genomsnittliga tiden för rörledningssteget baserat på den historiska trenden för det programmet.
+* På sidan för pipeline-körning visas nu varaktighet för de slutförda stegen.
 
 ## Tidig användning {#early-adoption}
 
 Bli en del av vårt program för tidig användning och få möjlighet att testa några kommande funktioner.
+
+### Hämta din egen GitHub {#byo-github}
+
+Om du använder GitHub för att hantera dina databaser, [du kan nu validera kod direkt i dina GitHub-databaser via Cloud Manager.](/help/implementing/cloud-manager/managing-code/byo-github.md) Integreringen eliminerar behovet av att konsekvent synkronisera kod med Adobe-databasen och gör att du kan verifiera pull-begäranden innan du sammanfogar dem i huvudgrenarna.
+
+Om du vill testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `Grp-CloudManager_BYOG@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
 
 ### Anpassade behörigheter {#custom-permissions}
 

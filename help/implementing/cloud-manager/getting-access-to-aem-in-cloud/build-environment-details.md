@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: 08cb1b4fc74e03a931551042814afb2d722005a5
+source-git-commit: 7945d67fe7d258af7131076d2416cbe121354a62
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -19,25 +19,21 @@ Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 Cloud Manager bygger och testar koden med en specialiserad byggmiljö.
 
 * Byggmiljön är Linux-baserad och kommer från Ubuntu 18.04.
-* Med [Oktober 2023-versionen av Cloud Manager,](/help/implementing/cloud-manager/release-notes/current.md) Java- och Maven-versionerna uppdateras kontinuerligt.
-   * Apache Maven 3.6.0 eller 3.8.8 är installerad.
-   * De Java-versioner som är installerade är Oracle JDK 8u202 och Oracle JDK 11.0.2 eller Oracle JDK 8u371 och Oracle JDK 11.0.20.
-   * Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_202` som innehåller Oraclet JDK 8u202 eller till `/usr/lib/jvm/jdk1.8.0_371` som innehåller Oraclet JDK 8u371. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
+* Apache Maven 3.8.8 är installerad.
+* Java-versionerna är Oracle JDK 8u371 och Oracle JDK 11.0.20.
+* Som standard är `JAVA_HOME` Miljövariabeln är inställd på `/usr/lib/jvm/jdk1.8.0_371` som innehåller Oraclet JDK 8u371. Se [Alternate Maven Execution JDK Version](#alternate-maven-jdk-version) för mer information.
 * Det finns ytterligare systempaket installerade som är nödvändiga.
-
    * `bzip2`
    * `unzip`
    * `libpng`
    * `imagemagick`
    * `graphicsmagick`
-
 * Andra paket kan installeras vid byggtillfället enligt beskrivningen i avsnittet [Installerar ytterligare systempaket.](#installing-additional-system-packages)
 * Varje bygge görs i en absolut miljö. Byggbehållaren behåller inte något läge mellan körningarna.
 * Maven körs alltid med följande tre kommandon.
-
-* `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
-* `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
-* `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
+   * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
+   * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
+   * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven konfigureras på systemnivå med en `settings.xml` -fil, som automatiskt inkluderar den offentliga Adobe-artefaktdatabasen med en profil med namnet `adobe-public`. (Se [Adobe Public Maven Repository](https://repo1.maven.org/) för mer information).
 
 >[!NOTE]

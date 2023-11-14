@@ -3,9 +3,9 @@ title: Hantera pipelines
 description: Lär dig hur du hanterar dina befintliga rörledningar, inklusive redigering, körning och borttagning av dem.
 index: true
 exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
-source-git-commit: b8d692e354851a31b4f66b24135c863b5ca723b4
+source-git-commit: 01a89f779689733fb82a556291e091026def63e0
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,38 @@ Längst ned i listan med rörledningar finns allmänna alternativ.
 * **Visa alla** - Tar användaren till skärmen Pipelines för att visa alla pipelines i en mer detaljerad tabell.
 * **Åtkomst till svarsinformation** - Visar den information som krävs för att komma åt Cloud Managers Git-databas
 * **Läs mer** - Navigerar till CI/CD pipeline-dokumentationsresurser.
+
+## Fönstret Pipelines {#pipelines}
+
+The **Pipelines** visas en fullständig lista över alla pipelines för det valda programmet. Detta är användbart eftersom det ger mer omfattande information än vad som finns i [Pipelinekort.](#pipeline-card)
+
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+
+1. Från **Programöversikt** sida, tryck eller klicka på **Pipelines** för att växla till **Pipelines** -fönstret.
+
+1. Här visas en lista över alla rörledningar för programmet samt start och stopp för pipelinekörning på samma sätt som i **Förloppskort**.
+
+Om en pipeline körs håller du pekaren över den **Status** -kolumnen visar information om körningen.
+
+![Information om pipeline-körning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-status.png)
+
+Tryck eller klicka **Visa detaljer** tar dig till [information om pipelinekörningen.](#view-details)
+
+## Aktivitetsfönster {#activity}
+
+The **Verksamhet** visas en fullständig lista över alla pipelines-körningar för det valda programmet.
+
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
+
+1. Från **Programöversikt** sida, tryck eller klicka på **Aktivitet** för att växla till **Aktivitet** -fönstret.
+
+1. Här visas en lista över alla pipeline-körningar för programmet, inklusive aktuella och historiska körningar.
+
+Om en pipeline körs håller du pekaren över den **Status** -kolumnen visar information om körningen.
+
+![Information om pipeline-körning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-activity.png)
+
+Tryck eller klicka **Visa detaljer** tar dig till [information om pipelinekörningen.](#view-details)
 
 ## Löpande rörledningar {#running-pipelines}
 
@@ -88,6 +120,16 @@ Du kan visa information om en pipeline för att se status och loggar för den se
 ![Information om pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-running-details.png)
 
 Här kan du se status för de olika stegen i pipeline och hämta byggloggar för diagnostik. Se dokumentet [Distribuera koden](/help/implementing/cloud-manager/deploy-code.md) för mer information om koddistribution och testkörning.
+
+Alla steg i en pipeline-körning visas med de som ännu inte har startats nedtonade. De färdiga stegen visar varaktigheten.
+
+När ett pipeline-steg är klart visas en sammanfattning.
+
+![Stegsammanfattning](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-step.png)
+
+Tryck eller klicka på **Visa detaljer** länk för att visa **Varaktighet** -avsnitt. Detta inbegriper den genomsnittliga rörledningens varaktighet på grundval av den historiska trenden för det programmet.
+
+![Varaktighet](/help/implementing/cloud-manager/assets/configure-pipeline/duration.png)
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 title: Nyheter och skillnader – Adobe Experience Manager as a Cloud Service
 description: Nyheter och skillnader – Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: d1ce126e-960c-4367-b741-af709dd81010
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: 83b5d9a3ff0e9a3c69e36a97a3f733b05f827d3b
 workflow-type: tm+mt
-source-wordcount: '1896'
-ht-degree: 77%
+source-wordcount: '1897'
+ht-degree: 76%
 
 ---
 
@@ -81,13 +81,13 @@ Det finns två typer AEM versionsuppdateringar:
    * Är främst avsedda för underhåll, inklusive de senaste felkorrigeringarna och säkerhetsuppdateringarna.
    * Påverkar inte särskilt mycket eftersom ändringarna tillämpas regelbundet.
 
-* **Nya funktionsuppdateringar**
+* **Nya funktioner**
 
-   * släpps enligt ett förutsägbart månadsschema.
+   * Publiceras enligt ett förutsägbart månadsschema.
 
 >[!TIP]
 >
->Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
+>Mer information finns i [Uppdateringar av AEM](/help/implementing/deploying/aem-version-updates.md).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -121,7 +121,7 @@ Cloud Manager har utvecklats till en självbetjäningsportal där huvudkomponent
 
 * Meddelas om viktiga livscykelhändelser för dessa komponenter (t.ex. produktuppdateringar).
 
-Cloud Manager skapar miljöer i datacentraler i många geografiska regioner, vilket ger global täckning. CDN:s (Points of Presence) garanterar leverans av innehåll med låg latens för kunder i hela världen.
+Cloud Manager skapar miljöer i datacentraler i många geografiska regioner, vilket ger global täckning. CDN:s (Points of Presence) garanterar leverans av innehåll med låg latens för kunder som finns i hela världen.
 
 
 ## Onboarding {#onboarding}
@@ -206,7 +206,7 @@ För att stödja snabba iterationer och utveckling är det också möjligt att u
 
 >[!NOTE]
 >
->Du får mer information om du börjar med [säkerhetskopiering](/help/operations/backup.md), [indexering](/help/operations/indexing.md) och [andra underhållsåtgärder](/help/operations/maintenance.md).
+>Mer information börjar med [innehållsåterställning](/help/operations/backup.md), [Indexering](/help/operations/indexing.md)och [andra underhållsaktiviteter](/help/operations/maintenance.md).
 
 Med AEM as a Cloud Service automatiseras sådana åtgärder så att tjänsten inte längre behöver avbrytas.
 
@@ -274,6 +274,6 @@ Mer information finns i:
 
 >[!TIP]
 >
->När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboarding Journey](/help/journey-onboarding/overview.md).
+>När du har en översikt över AEM as a Cloud Service kan du snabbt komma igång genom att granska [Onboardresa](/help/journey-onboarding/overview.md).
 >
->Är du redan upptagen eller redo att dyka upp i testning AEM funktioner? Installera [AEM Reference Demos Add-on](/help/journey-sites/demos-add-on/overview.md) att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.
+>Är du redan upptagen eller redo att dyka upp i testning AEM funktioner? Installera [AEM Reference Demos Add-on](/help/journey-sites/demos-add-on/overview.md) för att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.

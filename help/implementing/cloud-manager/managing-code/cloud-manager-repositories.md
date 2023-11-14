@@ -2,9 +2,9 @@
 title: Cloud Manager-databaser
 description: Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Manager.
 exl-id: 6e1cf636-78f5-4270-9a21-38b4d5e5a0b0
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: af8ab1f741c658dcb47bdf0d37e403fcb180631a
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,11 @@ Lär dig hur du skapar, visar och tar bort Git-databaser i Cloud Manager.
 
 Följ de här stegen för att visa och hantera databaser i Cloud Manager.
 
-1. Från **Programöversikt** sida, klicka på **Databaser** och navigera till **Databaser** sida.
+1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Klicka på **Lägg till databas** för att starta guiden.
+1. Från **Programöversikt** sida, tryck eller klicka på **Databaser** för att växla till **Databaser** sida.
+
+1. Klicka på **Lägg till databas**.
 
    ![Knappen Lägg till databas](/help/implementing/cloud-manager/assets/repos/create-repo2.png)
 
@@ -76,7 +78,7 @@ $ git submodule update --init
 
 Den här tekniken är ett möjligt alternativ till den lösning som beskrivs i dokumentet [Arbeta med Git-databaser med flera källor](/help/implementing/cloud-manager/managing-code/working-with-multiple-source-git-repositories.md) för organisationer som känner sig bekväma med att använda Git-undermoduler och inte vill hantera en extern sammanfogningsprocess.
 
-Låt oss till exempel säga att det finns tre databaser, där var och en innehåller en gren med namnet `main`. I den primära databasen, det vill säga den som konfigurerats i pipelines, är `main` grenen har en `pom.xml` fil som deklarerar projekten i de två andra databaserna.
+Låt oss till exempel säga att det finns tre databaser, där var och en innehåller en gren med namnet `main`. I den primära databasen, det vill säga den som är konfigurerad i pipelines, `main` grenen har en `pom.xml` fil som deklarerar projekten i de två andra databaserna.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
