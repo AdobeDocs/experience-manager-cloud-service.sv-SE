@@ -2,14 +2,20 @@
 title: Hur skaffar man referensteman och mallar för AEM?
 description: AEM Forms innehåller exempel på adaptiva formulärteman, mallar och formulärdatamodeller som hjälper dig att snabbt skapa formulär.
 exl-id: 81588759-22da-4123-92fe-5ca97e97f1e4
-source-git-commit: 57e421a865b664c0adb7af93b33bd4b6b32049ab
+source-git-commit: dd0c45352ea402065c7c6fced1394849ed9c316c
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
 
 # Referensteman, mallar och formulärdatamodeller {#reference-themes-templates-and-data-models}
+
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| Adaptiva Forms Core-komponenter | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) |
+| AEM as a Cloud Service | Den här artikeln |
 
 <span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
