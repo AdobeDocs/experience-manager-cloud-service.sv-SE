@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 4305b334afd3337b849d80e79ca4669802cd4be8
+source-git-commit: 408fdf3cac2943fc6c8abfa8d3e94b212a1e455f
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3138'
 ht-degree: 0%
 
 ---
@@ -384,7 +384,7 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 
 * Direkt binär överföring är en ny metod för att överföra resurser. Den stöds som standard av produktfunktioner och klienter, som [!DNL Experience Manager] användargränssnitt, [!DNL Adobe Asset Link]och [!DNL Experience Manager] datorprogram. All anpassad kod som anpassas eller utökas av kundens tekniska team måste använda de nya API:erna och protokollen för överföring.
 
-* Adobe rekommenderar att du lägger till högst 1 000 resurser i varje mapp i [!DNL Experience Manager Assets]. Du kan lägga till fler resurser i en mapp, men det kan hända att du får prestandaproblem, till exempel långsammare navigering i sådana mappar.
+* Adobe rekommenderar att du lägger till högst 1 000 resurser i varje mapp i [!DNL Experience Manager Assets]. Om du försöker göra det kan du få ett varningsmeddelande med texten &quot;This directory contains 1000+ items. Överföringar och nya mappar kan fördröjas.&quot; Du kan fortfarande lägga till fler resurser i en mapp, men det kan uppstå prestandaproblem, till exempel långsammare navigering i sådana mappar.
 
 * När du väljer **[!UICONTROL Replace]** i [!UICONTROL Name Conflict] visas resurs-ID:t för den nya resursen. Detta ID skiljer sig från ID:t för föregående resurs. If [Resursinsikter](/help/assets/assets-insights.md) är aktiverat för att spåra visningar eller klickningar med [!DNL Adobe Analytics]blir det återskapade resurs-ID:t ogiltigt för de data som hämtats för resursen på [!DNL Analytics].
 
