@@ -4,9 +4,9 @@ description: Lägg till digitala resurser i [!DNL Adobe Experience Manager] som 
 feature: Asset Management,Upload
 role: User,Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: 408fdf3cac2943fc6c8abfa8d3e94b212a1e455f
+source-git-commit: 5dfcf1c5484b978c1a778eb99a09421533234734
 workflow-type: tm+mt
-source-wordcount: '3138'
+source-wordcount: '3106'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
    To configure the cleanup task for the unfinished chunk upload jobs, go to `https://[aem_server]:[port]/system/console/configMgr/org.apache.sling.servlets.post.impl.helper.ChunkCleanUpTask`.
 -->
 
-Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet. [!DNL Experience Manager] kan hantera mappar med mer än 1 000 resurser. Om du vill överföra fler objekt i en sådan mapp med fler än 1 000 befintliga objekt kan det leda till fördröjd överföring eller skapande av den nya mappen.
+Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på skrivbordet och dra användargränssnittet (webbläsaren) till målmappen. Du kan också starta en överföring från användargränssnittet.
 
 >[!IMPORTANT]
 >
