@@ -2,9 +2,9 @@
 title: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Aktuell underhållsanvisning för [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
-source-git-commit: a8651a44300772b5c9706a5fd85e7fefef72e47d
+source-git-commit: 1a128e35be06d018ec25fb0e6a479cfd0d242dbd
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 142
 
 ### Förbättringar {#enhancements-14227}
 
-* ASSETS-29631: Assets Cloud: Använd dam:roles för säker leverans/sökning.
+<!--* ASSETS-29631: Assets Cloud: Use dam:roles for secure delivery/search.-->
 * CQ-4354515: Translations: Option to Suppress translation of referenced resources.
 * FORMS-9993: Definiera steg för att flytta Forms Core-komponenter till Skyline.
 * FORMS-10570: Inbyggt EC API:er i API - första routern.
