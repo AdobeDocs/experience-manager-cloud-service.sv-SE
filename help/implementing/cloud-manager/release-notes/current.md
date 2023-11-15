@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager 2023.11.0 i Adobe Experience Manag
 description: Detta är versionsinformationen för Cloud Manager 2023.11.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: b51b3c9aed4d9dacbf12a6cad5f8923d82766bd9
+source-git-commit: 71746b00c2d4ee05126af54241db30a7d3aeab1c
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,10 @@ Releasedatum för Cloud Manager version 2023.11.0 i AEM as a Cloud Service är 1
 * [Informationssidan för pipeline-körning](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) visar nu alla steg i en pipeline-körning med de som ännu inte har börjat nedtonade.
 * På båda **[Aktivitet](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#activity)** och **[Pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#pipelines)** på sidor är en sammanfattning av pipeline-körningen nu tillgänglig när du klickar på en pipeline med en körningsstatus.
 * En ny **Varaktighet** -avsnittet har lagts till i [informationssida för pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) som omfattar den genomsnittliga tiden för rörledningssteget baserat på den historiska trenden för det programmet.
-* På sidan för pipeline-körning visas nu varaktighet för de slutförda stegen.
+* På [sidan för pipeline-körning,](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#activity-window) de färdiga stegen visar nu varaktighet.
+* Körningar som [återanvänd build-artefakter](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) kommer nu att visa länken till den körning som ursprungligen skapade dessa artefakter.
+* Alternativet som ska väljas **Viktiga måttfel** kan nu konfigureras för [pipelines för kodkvalitet](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) också.
+
 
 ## Tidig användning {#early-adoption}
 
