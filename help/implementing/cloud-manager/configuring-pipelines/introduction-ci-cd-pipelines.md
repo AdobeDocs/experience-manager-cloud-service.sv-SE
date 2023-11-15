@@ -3,9 +3,9 @@ title: CI/CD-rör
 description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
-source-git-commit: ecb168e9261b3e3ed89e4cbe430b3da9f777a795
+source-git-commit: b47b1998fe716a8409d8d3cf0102e25c48828819
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1443'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ En icke-produktionspipeline används främst för att köra kodkvalitetssökning
 Förutom produktion och icke-produktion kan rörledningar differentieras efter vilken typ av kod de använder.
 
 * **[Kompletta stackrör](#full-stack-pipeline)** - Driftsätt samtidigt kodbyggen i bakände och framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationer
-* **[Konfigurera distributionsförlopp](#config-deployment-pipeline)** - Konfigurera inställningar för din AEM, underhållsuppgifter, CDN-regler med mera.
+* **[Konfigurera rörledningar](#config-deployment-pipeline)** - Konfigurera inställningar för din AEM, underhållsuppgifter, CDN-regler med mera.
 * **[Front-End Pipelines](#front-end)** - Använd kodbyggen som innehåller ett eller flera gränssnittsprogram på klientsidan
 * **[Konfigurationsrör för webbnivå](#web-tier-config-pipelines)** - Distribuerar konfigurationer för HTTPD/Dispatcher
 
@@ -111,15 +111,15 @@ Om du vill veta mer om hur du konfigurerar rörledningar i full hög läser du i
 * [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#full-stack-code)
 * [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#full-stack-code)
 
-## Konfigurera distributionsförlopp {#config-deployment-pipeline}
+## Konfigurera rörledningar {#config-deployment-pipeline}
 
-Med en pipeline för konfigurationsdistribution kan du distribuera konfigurationsinställningar i AEM för underhållsuppgifter, CDN-regler och mycket annat.
+Med ett konfigurationsflöde kan du distribuera konfigurationsinställningar i AEM för underhållsuppgifter, CDN-regler och mycket annat.
 
 Se dokumentet [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) om du vill lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
 
-### Konfigurerar konfigurationsdistributionsförlopp {#configure-config-deployment}
+### Konfigurera konfigurationsförlopp {#configure-config-deployment}
 
-Mer information om hur du konfigurerar pipelines för distribution finns i följande dokument:
+Mer information om hur du konfigurerar pipelines finns i följande dokument:
 
 * [Lägga till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md#targeted-deployment)
 * [Lägga till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#targeted-deployment)

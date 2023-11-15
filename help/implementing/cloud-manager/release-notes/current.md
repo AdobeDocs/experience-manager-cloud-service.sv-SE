@@ -3,9 +3,9 @@ title: Versionsinformation för Cloud Manager 2023.11.0 i Adobe Experience Manag
 description: Detta är versionsinformationen för Cloud Manager 2023.11.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 71746b00c2d4ee05126af54241db30a7d3aeab1c
+source-git-commit: 3a9eaa162d62cd3e674f14ba39ed7c96ad271f79
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Releasedatum för Cloud Manager version 2023.11.0 i AEM as a Cloud Service är 1
 ## Nyheter {#what-is-new}
 
 * Brandvägg för webbaserade program-DDOS-skydd (WAF-DDOS) finns nu att köpa som en del av dina AEM as a Cloud Service rättigheter och [kan konfigureras på ett självbetjäningssätt.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
-* Specialiserad [Konfigurera distributionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) Nu finns det pipelines för att konfigurera miljöinställningar, underhållsuppgifter, CDN-regler och mycket mer på några minuter.
+* Specialiserad [config pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) finns nu för att konfigurera miljöinställningar, underhållsuppgifter, CDN-regler och mycket mer på några minuter.
 * [När innehåll kopieras](/help/implementing/developing/tools/content-copy.md) från en högre miljö till en utvecklingsmiljö visas nu ett meddelande som talar om försiktighet vid kopiering av stora innehållsuppsättningar eftersom utvecklingsmiljöer är kapacitetsbegränsade.
 * [Informationssidan för pipeline-körning](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) visar nu alla steg i en pipeline-körning med de som ännu inte har börjat nedtonade.
 * På båda **[Aktivitet](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#activity)** och **[Pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#pipelines)** på sidor är en sammanfattning av pipeline-körningen nu tillgänglig när du klickar på en pipeline med en körningsstatus.
@@ -75,9 +75,9 @@ Kontrollpanelen använder Google Lightroom, ett automatiserat verktyg med öppen
 
 ## Kända fel {#known-issues}
 
-Det finns ett känt fel som förhindrar [Konfigurera distributionspipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md##config-deployment-pipeline) från att knuffas till produktion.
+Det finns ett känt fel som förhindrar [config pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md##config-deployment-pipeline) från att knuffas till produktion.
 
-Om **Pausa innan du distribuerar till produktion** är ett alternativ som krävs för en pipeline för konfigurationsdistribution. Följande är den föreslagna lösningen tills felet har åtgärdats.
+Om **Pausa innan du distribuerar till produktion** är ett alternativ som krävs för en konfigurationspipeline. Följande är den föreslagna lösningen tills felet har åtgärdats.
 
 1. Kör pipelinen.
 1. Testa koden i mellanlagringsmiljön.

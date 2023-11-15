@@ -3,9 +3,9 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: edc5d88b4ffc4e13299d21f6579f5f52c40e0773
+source-git-commit: b47b1998fe716a8409d8d3cf0102e25c48828819
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en så
 >
 >* Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
 >* Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
-> * Det kan bara finnas en enda pipeline för konfigurationsdistribution per miljö.
+> * Det kan bara finnas en konfigurationspipeline per miljö.
 
 Stegen för att slutföra skapandet av din produktion är riktade distributionsflöden desamma när du väljer en distributionstyp.
 
@@ -158,7 +158,7 @@ Stegen för att slutföra skapandet av din produktion är riktade distributionsf
    * **Pausa innan du distribuerar till produktion** - Det här alternativet pausar pipeline innan den distribueras till produktion.
    * **Schemalagd** - Med det här alternativet kan användaren aktivera den schemalagda produktionsdistributionen. Endast tillgängligt för riktade distributioner på webbnivå.
 
-   ![Konfigurerar distributionspipeline](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-config-deployment.png)
+   ![Konfigurera pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/prod-pipeline-config-deployment.png)
 
 1. Klicka **Spara**.
 
