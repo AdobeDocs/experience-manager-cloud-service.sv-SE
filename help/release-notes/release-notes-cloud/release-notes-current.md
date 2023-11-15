@@ -3,7 +3,7 @@ title: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Clo
 description: Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
-source-git-commit: f1af229fa0fb75a6181eae545ac7e51b31f212f7
+source-git-commit: afb3de515336d3d13b392f8fcc4d263f4f063689
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 0%
@@ -87,7 +87,7 @@ Titta på videon med versionsöversikten för oktober 2023 om du vill se en samm
 
 [Filtrera trafiken vid hanterad CDN i Adobe](/help/security/traffic-filter-rules-including-waf.md) genom att deklarera regler som matchar webbplatstrafiken efter egenskaper som URL, IP-adress och användaragent, eller ange anpassade trafikhastighetsgränser för att skydda mot DoS-attacker. Kunderna kan även licensiera en uppsättning avancerade regler för Web Application Firewall (WAF) för extra skydd mot avancerade hot mot webbplatser.
 
-Vi rekommenderar att du lär dig trafikfilterregler genom att [testa en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)! Här får du hjälp med att konfigurera en ny konfigurationspipeline för Cloud Manager, deklarera regler i en konfigurationsfil och analysera CDN-loggar för skadlig trafik.
+Vi rekommenderar att du behärskar trafikfilterreglerna genom att [testa en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)! Här får du hjälp med att konfigurera en ny konfigurationspipeline för Cloud Manager, deklarera regler i en konfigurationsfil och analysera CDN-loggar för skadlig trafik.
 
 Trafikfilterregler finns nu tillgängliga i dev-miljöer, med en gradvis utrullning till scen- och prodmiljöer i november. Du kan begära tidigare åtkomst på scenen och produkten via e-post **aemcs-waf-adopter@adobe.com**.
 
