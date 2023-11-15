@@ -2,9 +2,9 @@
 title: Komma åt och hantera loggar
 description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: c4bd0390fc67b3d8e985c0cd2b1f436ae13420ee
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '313'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 
-Du kan komma åt en lista över tillgängliga loggfiler för den valda miljön med **Miljö** från **Översikt** sida eller miljöinformationssida.
+Du kan komma åt en lista över tillgängliga loggfiler för den valda miljön med **Miljö** från **Ökning** sida eller miljöinformationssida.
 
 ## Laddar ned loggar {#download-logs}
 
@@ -22,7 +22,7 @@ Så här hämtar du loggar:
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
 1. Välj **Hämta loggar** på ellipsmenyn.
 
@@ -82,4 +82,9 @@ Environment Id Service    Name
 Se följande ytterligare resurser för att lära dig mer om Cloud Manager API och Adobe I/O CLI:
 
 * [API-dokumentation för Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/)
-* [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+* [ADOBE I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+
+Mer information om loggfiler på AEM as a Cloud Service finns i följande resurser:
+
+* [Loggfiler AEM Cloud 5](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-log-files.html)
+* [Felsöka AEM as a Cloud Service med loggar](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
