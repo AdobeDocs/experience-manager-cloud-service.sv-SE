@@ -2,18 +2,15 @@
 title: Trafikfilterregler inklusive WAF-regler
 description: Konfigurera trafikfilterregler inklusive Brandväggsregler för webbprogram (WAF)
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
-source-git-commit: 8df8322eef7c74932d6feeeb4a7a6045935edd88
+source-git-commit: a129c188e9ec6871c86245acb5f0bf0333fdc340
 workflow-type: tm+mt
-source-wordcount: '3473'
+source-wordcount: '3441'
 ht-degree: 0%
 
 ---
 
 
 # Trafikfilterregler inklusive WAF-regler {#traffic-filter-rules-including-waf-rules}
-
->[!NOTE]
->Den här funktionen är nu tillgänglig i utvecklingsmiljöer, med en gradvis övergång till scen- och produktmiljöer senare i november. Du kan begära tidigare åtkomst på scenen och produkten via e-post **aemcs-waf-adopter@adobe.com**.
 
 Trafikfilterregler kan användas för att blockera eller tillåta förfrågningar i CDN-lagret, vilket kan vara användbart i scenarier som:
 
