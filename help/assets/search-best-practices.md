@@ -3,9 +3,9 @@ title: Sök efter bästa praxis för [!DNL Adobe Experience Manager] som [!DNL C
 description: Metodtips om hur du söker efter, hittar och hämtar metadata för resurser i programmet.
 contentOwner: KK
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
-source-git-commit: 6638298056f2dae027db4df8c31c3fd59812a56b
+source-git-commit: b3b2cc516743243fbfdcf6189bfd851a1272bf78
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2431'
 ht-degree: 1%
 
 ---
@@ -38,11 +38,11 @@ Sökresultaten som matchar alla söktermer i metadatafält visas först, följt 
 
 Ange `classic car` som söknyckelord och klicka på Sök. Du kan visa sökförslagen i en nedrullningsbar lista medan du skriver nyckelordet. Sökförslagen baseras på innehållet i sökindexet i din Experience Manager-distribution. Om du inte kan visa rätt resurser på den nedrullningsbara menyn kan du visa resultatlistan genom att trycka på Retur. Resultaten sorteras efter relevans, med början från närmaste träffar.
 
-![Utför grundläggande sökmetod 1](assets/simple-search-1.png)
+<!--![Performing basic search method 1](assets/simple-search-1.png)-->
 
 Du kan göra sökningen mer specifik genom att lägga till nyckelordet för sökning inom dubbla citattecken (&quot; &quot;). Den här sökningen innehåller bara resurser som innehåller de angivna villkoren tillsammans. Sökvillkoren ser ut som - `"classic car"`. Därför resulterar sökresultaten med båda termerna `classic` och `car` visas.
 
-![Hitta exakt matchning](assets/simple-search-2.png)
+<!--![Finding exact match](assets/simple-search-2.png)-->
 
 Om du arbetar i **[!UICONTROL Assets view]** också.
 
@@ -65,7 +65,7 @@ Så här uppnår du detta scenario:
 Markera mappen i sökvägen och navigera till den önskade mappen om du vill söka i den specifika mappen.
 3. Välj Filer i listrutan om du vill visa alla filer med nyckelordet `classic car`.
 
-![Söka med filer och mappar](assets/files-folders.png)
+<!--![Search using files and folders](assets/files-folders.png)-->
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425487)
 
@@ -164,7 +164,7 @@ Utför följande steg i **[!UICONTROL Admin view]**:
 1. Välj [!UICONTROL PDF].
 1. Gå till [!UICONTROL Status] > [!UICONTROL Publish] > [!UICONTROL Unpublished].
 
-![Exempel på filter 2](assets/filter-2.png)
+<!--![Filter example 2](assets/filter-2.png)-->
 
 Utför följande steg i **[!UICONTROL Assets view]**:
 
@@ -180,7 +180,7 @@ När du är osäker på titeln eller metabeskrivningen för en resurs kan du anv
 1. Gå till Filter. Under [!UICONTROL File Type], expandera [!UICONTROL Images] och markera [!UICONTROL Web enabled]
 1. Avmarkera PNG.
 
-![Sök i alla bilder utom jeep](assets/images-png.png)
+<!--![Search all images except jeep](assets/images-png.png)-->
 
 Så här söker du efter resurser med hjälp av det nämnda scenariot i **[!UICONTROL Assets view]** följer du stegen nedan:
 
@@ -203,7 +203,7 @@ Så här söker du efter scenario 6:
 2. Navigera till filterpanelen och välj Dokument under Filtyp.
 3. Förfina sökningen med jokertecknet asterisk. Typ `"classic car"` om du vill söka efter alla resurser som innehåller `classic car` nyckelord.
 
-![Scenario 6](assets/scenario-6.png)
+<!--![Scenario 6](assets/scenario-6.png)-->
 
 Scenario 6 kan inte köras i **[!UICONTROL Assets view]** eftersom det inte stöder användningen av jokertecken.
 
@@ -213,7 +213,7 @@ Så här söker du efter scenario 7:
 
 Skriv `car - classic` i sökfältet. Navigera till filterpanelen och välj Dokument under Filtyp. Sökordningen baseras på följande: Prioritet 1: Metadataprioritet 2: Smarta taggar
 
-![Scenario 7](assets/scenario-7.png)
+<!--![Scenario 7](assets/scenario-7.png)-->
 
 Scenario 7 kan inte köras i **[!UICONTROL Assets view]** eftersom det inte stöder användningen av jokertecken.
 
@@ -237,7 +237,7 @@ When you are unsure about the title or meta description of an asset, you can use
 
 Du kan hämta specifika villkor med olika sökfilter. Tagg är ett nyckelord som tilldelas till en resurs för att göra den identifierbar bland ett stort antal resurser. I det här scenariot söker du efter resurser med *jeep* -taggar i den. Skriv `tags:jeep` i sökfältet. Endast resurser som uppfyller det här villkoret visas i sökresultatet.
 
-![Söka med taggar](assets/search-tags.png)
+<!--![Search using tags](assets/search-tags.png)-->
 
 Om du arbetar i **[!UICONTROL Assets view]** också.
 
