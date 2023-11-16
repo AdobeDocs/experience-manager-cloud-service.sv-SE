@@ -2,9 +2,9 @@
 title: GoLive Phase i Cloud Acceleration Manager
 description: Den här sidan innehåller en översikt över GoLive-fasen i Cloud Acceleration Manager.
 exl-id: 2ec31445-899d-40b8-b3eb-073cb07aff12
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '147'
 ht-degree: 2%
 
 ---

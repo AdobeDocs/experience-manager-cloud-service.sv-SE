@@ -2,10 +2,10 @@
 title: Responsiv layout
 description: AEM kan du förverkliga en responsiv layout för dina sidor
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 7%
+source-wordcount: '1734'
+ht-degree: 6%
 
 ---
 
@@ -120,7 +120,7 @@ När du t.ex. väljer enheten **iPhone 6 Plus** (definierat med en bredd på 540
 
    ![Flödet](/help/sites-cloud/authoring/assets/responsive-layout-fold.png)
 
-   * Flödet kan också betraktas som sidradbrytningen (ska inte blandas ihop med [brytpunkter](#layout-definitions-device-emulation-and-breakpoints)) för innehållet. Detta visas för att underlätta för användaren att visa vilken del av innehållet som kommer att visas på enheten före rullning.
+   * Flödet kan också betraktas som sidradbrytningen (ska inte blandas ihop med [brytpunkter](#layout-definitions-device-emulation-and-breakpoints)) för innehållet. Detta visas för att underlätta för användaren att visa vilken del av innehållet som visas på enheten innan det rullas.
    * Flödets linje visas inte om höjden på den enhet som emuleras är högre än skärmstorleken.
    * Flödet visas för författarens bekvämlighet och visas inte på den publicerade sidan.
 
@@ -136,7 +136,7 @@ A **Layoutbehållare** är ett styckesystem som
 >
 >Om den inte redan är tillgänglig **Layoutbehållare** måste aktiveras explicit för ett styckesystem/en styckesida. <!-- If not already available, the **Layout Container** must be explicitly [activated for a paragraph system/page](/help/sites-administering/configuring-responsive-layout.md).-->
 
-1. **Layoutbehållaren** är tillgänglig som en standardkomponent i [komponentläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). Härifrån kan du dra den till önskad plats på sidan och sedan ser du platshållaren **Dra komponenter hit**.
+1. **Layoutbehållaren** är tillgänglig som en standardkomponent i [komponentläsaren](/help/sites-cloud/authoring/fundamentals/environment-tools.md#components-browser). Härifrån kan du dra den till önskad plats på sidan där du kan se **Dra komponenter hit** platshållare.
 1. Du kan sedan lägga till komponenter i layoutbehållaren. De här komponenterna innehåller det faktiska innehållet:
 
    ![Layoutbehållare](/help/sites-cloud/authoring/assets/responsive-layout-add-to-layout-container.png)
@@ -202,7 +202,7 @@ I layoutläget kan du utföra olika åtgärder på ett rutnät:
 
   ![Dölj komponent](/help/sites-cloud/authoring/assets/responsive-layout-hide.png)
 
-* I **Layout** läge där du kan trycka/klicka på **Dra komponenter hit** om du vill markera hela komponenten. Verktygsfältet visas för det här läget.
+* I **Layout** det läge du kan trycka/klicka på **Dra komponenter hit** om du vill markera hela komponenten. Verktygsfältet visas för det här läget.
 
   Verktygsfältet har olika alternativ beroende på layoutkomponentens läge och vilka komponenter som tillhör det. Till exempel:
 

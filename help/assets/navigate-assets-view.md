@@ -3,9 +3,9 @@ title: "[!DNL Assets view] användargränssnitt"
 description: Förstå användargränssnittet för och navigering i [!DNL Assets view].
 role: User
 exl-id: 534a8084-88f7-410e-b872-719e47e62b10
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ I [!DNL Assets view]kan du visa resurser, mappar och sökresultat i fyra olika t
 
 Om du vill hitta en resurs kan du sortera resurserna i stigande eller fallande ordning efter `Name`, `Relevancy`, `Size`, `Modified`och `Created`.
 
-Om du vill navigera till en mapp dubbelklickar du på mappens miniatyrbilder eller väljer mappen från vänster sidopanel. Om du vill visa information om en mapp markerar du den och klickar på Information i verktygsfältet högst upp. Om du vill navigera uppåt och nedåt i hierarkin använder du vänster sidospalt eller de synliga spåren högst upp.
+Om du vill navigera till en mapp dubbelklickar du på mappens miniatyrbilder eller väljer mappen från vänster sidofält. Om du vill visa information om en mapp markerar du den och klickar på Information i verktygsfältet högst upp. Om du vill navigera uppåt och nedåt i hierarkin använder du vänster sidospalt eller de synliga spåren högst upp.
 
 ![Bläddra bland mappar](assets/browsing-folders.png)
 

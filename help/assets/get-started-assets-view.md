@@ -3,9 +3,9 @@ title: Kom igång med [!DNL Assets View]
 description: Hur man får åtkomst till, kan logga in på, vilka användningsfall som stöds och kända problem med [!DNL Assets View].
 role: User, Leader
 exl-id: 7917b2a0-8340-4d94-aa6f-30ce986fa752
-source-git-commit: 5a7938d5e52388516f8b66bbcf8ffdee332a51a3
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Om du vill öppna inställningarna klickar du på avataren i det övre högra h�
 
 Om du är en del av olika organisationer kan du även ändra organisationen och få tillgång till dina konton i olika organisationer.
 
-Ändra [!UICONTROL Experience Cloud preferences], klicka [!UICONTROL Preferences].
+Ändra dina [!UICONTROL Experience Cloud preferences], klicka [!UICONTROL Preferences].
 
 ![Inställning för växling av mörkt och ljust tema](assets/theme-change.png)
 

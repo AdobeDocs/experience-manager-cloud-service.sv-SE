@@ -2,9 +2,9 @@
 title: Formatsystem
 description: Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör den mer flexibel.
 exl-id: 224928dd-e365-4f3e-91af-4d8d9f47efdd
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1319'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör komponenten mer flexibel.
 
-På så sätt elimineras behovet av att utveckla en anpassad komponent för varje format eller att anpassa komponentdialogrutan för att aktivera sådana formatfunktioner. Det leder till mer återanvändbara komponenter som snabbt och enkelt kan anpassas efter innehållsförfattarnas behov utan någon AEM bakomliggande utveckling.
+På så sätt elimineras behovet av att utveckla en anpassad komponent för varje format eller att anpassa komponentdialogrutan för att aktivera sådana formatfunktioner. Det leder till mer återanvändbara komponenter som snabbt och enkelt kan anpassas efter innehållsförfattarnas behov utan någon AEM backend-utveckling.
 
 ## Användningsfall {#use-case}
 
@@ -56,34 +56,34 @@ Följande diagram visar arkitekturen i Style System.
 
 ## Använd {#use}
 
-För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)implementering av kärnkomponentens [titelkomponent](https://www.adobe.com/go/aem_cmp_title_v2) som ett exempel.
+För att demonstrera funktionen använder vi [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)implementering av kärnkomponentens [titelkomponent](https://www.adobe.com/go/aem_cmp_title_v2) som ett exempel.
 
 Följande avsnitt [Som innehållsförfattare](#as-a-content-author) och [Som mallskapare](#as-a-template-author) beskriver hur du testar funktionaliteten i Style System med Style System of WKND.
 
 Om du vill använda Style System för dina egna komponenter gör du följande:
 
-1. Installera CSS som klientbibliotek enligt beskrivningen i avsnittet [Översikt](#overview).
+1. Installera CSS som klientbibliotek enligt beskrivningen i avsnittet [Ökning](#overview).
 1. Konfigurera de CSS-klasser som du vill göra tillgängliga för innehållsförfattarna enligt beskrivningen i avsnittet [Som mallskapare](#as-a-template-author).
 1. Innehållsförfattare kan sedan använda de format som beskrivs i avsnittet [Som innehållsförfattare](#as-a-content-author).
 
 ### Som innehållsförfattare {#as-a-content-author}
 
-1. När du har installerat WKND-projektet går du till WKND:s överordnad engelska språksida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en` och redigera sidan.
+1. När du har installerat WKND-projektet går du till WKND:s engelska huvudsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en` och redigera sidan.
 1. Välj en **Titel** komponenten längre ned på sidan
 
    ![Formatsystem för författaren](/help/sites-cloud/authoring/assets/style-system-author1.png)
 
 1. Tryck eller klicka på **Stilar** i verktygsfältet i **Lista** om du vill öppna stilmenyn och ändra komponentens utseende.
 
-   ![Markera format](/help/sites-cloud/authoring/assets/style-system-author2.png)
+   ![Välja format](/help/sites-cloud/authoring/assets/style-system-author2.png)
 
    >[!NOTE]
    >
-   >I det här exemplet **Färger** format (**Svart**, **Vit** och **Grå**) utesluter varandra, medan **Stil** alternativ (**Understruken**, **Högerjustera** och **Mini-avstånd**) kan kombineras. Detta kan [konfigureras i mallen som mallskapare](#as-a-template-author).
+   >I det här exemplet **Färger** stilar (**Svart**, **Vit** och **Grå**) utesluter varandra, medan **Stil** alternativ (**Understruken**, **Högerjustera** och **Mini-mellanrum**) kan kombineras. Detta kan [konfigureras i mallen som mallskapare](#as-a-template-author).
 
 ### Som mallskapare {#as-a-template-author}
 
-1. När du redigerade WKND:s engelska överordnad hemsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en`, redigera sidans mall via **Sidinformation -> Redigera mall**.
+1. Under redigeringen av WKND:s engelska huvudsida på `http://<host>:<port>/sites.html/content/wknd/language-masters/en`, redigera sidans mall via **Sidinformation -> Redigera mall**.
 
    ![Redigera mall](/help/sites-cloud/authoring/assets/style-system-edit-template.png)
 
@@ -95,9 +95,9 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
    ![Redigera egenskaper](/help/sites-cloud/authoring/assets/style-system-properties.png)
 
-   * **Gruppnamn:** Format kan grupperas tillsammans på den formatmeny som innehållsförfattaren ska se när komponentens format konfigureras.
-   * **Du kan kombinera format:** Tillåter att flera format i den gruppen markeras samtidigt.
-   * **Formatnamn:** Beskrivningen av det format som ska visas för innehållsförfattaren när komponentens format konfigureras.
+   * **Gruppnamn:** Format kan grupperas tillsammans på den formatmeny som innehållsförfattaren ser när komponentens format konfigureras.
+   * **Du kan kombinera format:** Tillåter att flera format i den gruppen kan markeras samtidigt.
+   * **Formatnamn:** Den beskrivning av formatet som ska visas för innehållsförfattaren när komponentens format konfigureras.
    * **CSS-klasser:** Det faktiska namnet på CSS-klassen som är associerad med formatet.
 
    Använd draghandtagen för att ordna gruppernas och gruppernas inbördes ordning. Använd ikonerna för att lägga till eller ta bort för att lägga till eller ta bort grupper eller format i grupper.
@@ -153,7 +153,7 @@ Den här egenskapen ställs in på `cq:Component` nod. Till exempel:
 Undvik att definiera elementnamn för format som kan kombineras. När flera elementnamn definieras är prioritetsordningen:
 >
 1. HTML har företräde framför allt: `data-sly-resource="${'path/to/resource' @ decorationTagName='span'}`
-1. Sedan används det första formatet i listan med format som är konfigurerade i komponentens profil bland flera aktiva format.
+1. När det sedan finns flera aktiva format används det första formatet i listan med format som är konfigurerade i komponentens profil.
 1. Slutligen är komponentens `cq:htmlTag`/ `cq:tagName` betraktas som ett reservvärde.
 >
 

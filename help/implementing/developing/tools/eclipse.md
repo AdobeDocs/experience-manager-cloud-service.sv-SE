@@ -2,9 +2,9 @@
 title: AEM Developer Tools for Eclipse
 description: Lär dig hur du använder AEM Developer Tools för Eclipse, ett Eclipse-plugin-program baserat på Eclipse-pluginprogrammet för Apache Sling.
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
-source-git-commit: a1a92f8767186ba9e93b6b30870ecfa9f3b3bc28
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1192'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ Innan du använder AEM Developer Tools måste du:
 
 >[!NOTE]
 >
->På macOS högerklickar du på **Eclipse.app** och sedan markera **Visa paketinnehåll** för att hitta `eclipse.ini`**.**
+>På macOS högerklickar du **Eclipse.app** och sedan markera **Visa paketinnehåll** för att hitta `eclipse.ini`**.**
 
 ## Installera AEM Developer Tools for Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
 
@@ -194,7 +194,7 @@ Du kan använda **Nytt projekt** för att skapa rätt struktur för dig:
 
 När du är klar bör du låta paketet köras på din instans, och när du sparar synkroniseras alla ändringar automatiskt till instansen.
 
-Om du vill återskapa ett paket från projektet högerklickar du på `PROJECT.ui.apps` eller `PROJECT.ui.content` och välja **Kör som** -> **Maven Install**.
+Högerklicka på `PROJECT.ui.apps` eller `PROJECT.ui.content` och välja **Kör som** -> **Maven Install**.
 
 Nu har du en målmapp som skapats med ditt paket inuti (anropas till exempel `PROJECT.ui.apps-0.0.1-SNAPSHOT.zip`).
 

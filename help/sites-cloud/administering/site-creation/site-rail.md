@@ -4,9 +4,9 @@ description: Lär dig de kraftfulla funktionerna i webbplatsspåret för att enk
 feature: Administering
 role: Admin
 exl-id: 45785e5a-4fa2-4cf2-a300-f1865f6f5807
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Markera platsens rot för att visa temainformation om platsen när webbplatsspå
 
 Den aktuella versionen av temat visas med sin implementeringshash tillsammans med tidsstämpeln för den senaste uppdateringen.
 
-Tryck eller klicka på **Välj version** om du vill visa tidigare versioner av temat.
+Tryck eller klicka **Välj version** om du vill visa tidigare versioner av temat.
 
 ![Välj temaversion](/help/sites-cloud/administering/assets/select-theme-versions.png)
 

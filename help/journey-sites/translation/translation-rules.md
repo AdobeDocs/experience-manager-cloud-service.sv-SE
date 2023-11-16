@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 831009b8-8e09-4b0f-b0fd-4e21221c1455
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Nu när du har konfigurerat din koppling tar den här artikeln dig igenom nästa
 Det här dokumentet hjälper dig att förstå hur du använder AEM översättningsregler för att identifiera ditt översättningsinnehåll. När du har läst det här dokumentet bör du:
 
 * Förstå vad översättningsreglerna gör.
-* Du kan definiera egna översättningsregler.
+* Ange egna översättningsregler.
 
 ## Översättningsregler {#translation-rules}
 
@@ -68,7 +68,7 @@ AEM skapar automatiskt översättningsregler för allt innehåll. Så här visar
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
 
 1. De översatta sidegenskaperna finns under **Allmänt** i listan. Du kan lägga till eller uppdatera befintliga egenskapsnamn som du vill inkludera explicit i översättning.
-   1. Ange egenskapsnamnet i **Ny egenskap** fält.
+   1. Ange egenskapsnamnet i dialogrutan **Ny egenskap** fält.
    1. Alternativen **Översätt** och **Inherit** kontrolleras automatiskt.
    1. Tryck eller klicka **Lägg till**.
    1. Upprepa dessa steg för alla fält som du måste översätta.
@@ -95,9 +95,9 @@ Sådana funktioner behövs vanligtvis inte för att komma igång med lokaliserin
 Nu när du är klar med den här delen av AEM Sites översättningsresa ska du:
 
 * Förstå vad översättningsreglerna gör.
-* Du kan definiera egna översättningsregler.
+* Ange egna översättningsregler.
 
-Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att nästa gång du granskar dokumentet [Översätta innehåll](translate-content.md) där du får lära dig hur era kopplingar och regler fungerar tillsammans för att översätta innehåll.
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att granska nästa gång dokumentet [Översätta innehåll](translate-content.md) där du lär dig hur era kontakter och regler fungerar tillsammans för att översätta innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 

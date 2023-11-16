@@ -1,10 +1,10 @@
 ---
 title: Implementera en AEM-anslutning
-description: Lär dig hur du bygger, testar och implementerar en AEM. Du får också lära dig mer om vanliga integreringsmönster.
+description: Lär dig hur du bygger, testar och implementerar en AEM. Du lär dig också om vanliga integreringsmönster.
 exl-id: 70024424-8c52-493e-bbc9-03d238b8a5f5
-source-git-commit: 5482e94bc1a2e7524eb699f2ae766ba40c138e91
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '979'
 ht-degree: 6%
 
 ---
@@ -65,16 +65,16 @@ Befintliga anslutningar kan också behöva omarbetas för att kunna flytta en ko
 
 Vi rekommenderar att större delen av kopplingskoden placeras under `/apps/connectors/<vendor>` för att främja en ren databasstruktur för kunder som har flera kontakter.
 
-Konfigurationer av Cloud Services
+Konfigurationer av Cloud Service
 -----------------------------
 
-En aspekt av anslutningsimplementeringen är att koden som stöder konfigurationen av kopplingen är. Den här koden gör att ett kort med kopplingens namn visas under Verktyg > Åtgärder > Cloud Services. Vid klickning visas en [konfigurationsläsare](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) öppnas där kunden väljer den överordnade mappen som ska innehålla kopplingskonfigurationen. Kopplingskoden ska resultera i ett formulär med alla egenskaper som måste konfigureras, och slutligen lagra värdena i en konfigurationsmapp under `/conf`. Den här mappen kan senare väljas på fliken Webbplatsegenskaper eller på fliken Resursegenskaper.
+En aspekt av anslutningsimplementeringen är att koden som stöder konfigurationen av kopplingen är. Den här koden gör att ett kort med kopplingens namn visas under Verktyg > Åtgärder > Cloud Service. Vid klickning visas en [konfigurationsläsare](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) öppnas där kunden väljer den överordnade mappen som ska innehålla kopplingskonfigurationen. Kopplingskoden ska resultera i ett formulär med alla egenskaper som måste konfigureras, och slutligen lagra värdena i en konfigurationsmapp under `/conf`. Den här mappen kan senare väljas på fliken Webbplatsegenskaper eller på fliken Resursegenskaper.
 
 
 Kontextmedvetna konfigurationer
 -----------------------------
 
-[Kontextmedvetna konfigurationer](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) gör det möjligt att skapa lager i olika mappar, inklusive `/libs`, `/apps`, `/conf` och undermappar under `/conf`. Det har stöd för arv så att kunden kan konfigurera den globala konfigurationen samtidigt som specifika ändringar görs för varje mikroplats. Eftersom den här funktionen kan användas för konfigurationer av Cloud Services bör kopplingskoden referera till konfigurationen med hjälp av det kontextmedvetna konfigurations-API:t i stället för att referera till en specifik konfigurationsnod.
+[Kontextmedvetna konfigurationer](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) gör det möjligt att skapa lager i olika mappar, inklusive `/libs`, `/apps`, `/conf` och undermappar under `/conf`. Det har stöd för arv så att kunden kan konfigurera den globala konfigurationen samtidigt som specifika ändringar görs för varje mikroplats. Eftersom den här funktionen kan användas för konfigurationer av Cloud Service bör kopplingskoden referera till konfigurationen med hjälp av det kontextmedvetna konfigurations-API:t i stället för att referera till en specifik konfigurationsnod.
 
 Om ändrade konfigurationer används i Connector ska du skapa Connector som hanterar/sammanfogar eventuella framtida uppdateringar av standardkonfigurationer som tillhandahålls av Connector med eventuella kundkonfigurationer. Kom ihåg att om du ändrar anpassat (som det ändrats av kunden) innehåll eller konfiguration utan kundvarning och samtycke kan det hända att det inte fungerar (eller att det inte fungerar som det ska) med Connector-funktionen.
 

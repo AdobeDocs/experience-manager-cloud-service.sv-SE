@@ -2,9 +2,9 @@
 title: AEM as a Cloud Service team- och produktprofiler
 description: Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till era licensierade Adobe-lösningar.
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
-source-git-commit: 928a3f0d8ee98e211aa03ad3d0fd83b780e98bbc
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ AEM as a Cloud Service är ett fullständigt molnbaserat erbjudande som ger AEM 
 
 Dina AEM as a Cloud Service teammedlemmar läggs till och tilldelas en eller flera av följande produktprofiler via Admin Console under introduktionen.
 
-* **AEM administratörer**: En AEM administratör tilldelas vanligtvis till utvecklare, särskilt utvecklare som måste ha tillgång till exempelvis utvecklingsmiljöerna. AEM administratörs produktprofil används för att ge administratörsbehörighet i den associerade AEM.
+* **AEM administratörer**: En AEM administratör tilldelas vanligtvis till utvecklare, särskilt utvecklare som behöver åtkomst till till exempel utvecklingsmiljöer. AEM administratörs produktprofil används för att ge administratörsbehörighet i den associerade AEM.
 
 * **AEM**: AEM användare är de användare i organisationen som i allmänhet använder AEM as a Cloud Service för att skapa innehåll. Dessa användare måste ha åtkomst till AEM för att kunna utföra sina uppgifter. AEM produktprofil tilldelas vanligtvis till en författare som skapar och granskar innehåll AEM. Det här innehållet kan vara av många typer, till exempel sidor, resurser, publikationer och så vidare. De AEM användarnas produktprofil som visas nedan tilldelas dessa medlemmar.
 

@@ -2,9 +2,9 @@
 title: Lägga till ett SSL-certifikat
 description: Lär dig hur du lägger till ett eget SSL-certifikat med hjälp av självbetjäningsverktygen i Cloud Manager.
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
-source-git-commit: 6db3565fefe4c826bb40695d0fa84368fd3f283b
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -29,11 +29,11 @@ Följ de här stegen för att lägga till ett certifikat med hjälp av Cloud Man
 
 1. Navigera till **Miljö** från **Ökning** sida.
 
-1. Klicka på **SSL-certifikat** från den vänstra navigeringspanelen. En tabell med information om eventuella befintliga SSL-certifikat visas på huvudskärmen.
+1. Klicka **SSL-certifikat** från den vänstra navigeringspanelen. En tabell med information om eventuella befintliga SSL-certifikat visas på huvudskärmen.
 
    ![Lägga till ett SSL-certifikat](/help/implementing/cloud-manager/assets/ssl/ssl-cert-1.png)
 
-1. Klicka på **Lägg till SSL-certifikat** att öppna **Lägg till SSL-certifikat** -dialogrutan.
+1. Klicka **Lägg till SSL-certifikat** att öppna **Lägg till SSL-certifikat** -dialogrutan.
 
    * Ange ett namn för ditt certifikat i **Certifikatnamn**.
       * Detta är endast avsett som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt certifikat.

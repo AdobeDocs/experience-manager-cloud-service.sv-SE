@@ -2,9 +2,9 @@
 title: Skapa sidmallar
 description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '4570'
+source-wordcount: '4567'
 ht-degree: 9%
 
 ---
@@ -607,7 +607,7 @@ Med hjälp av sidegenskaper kan du definiera nödvändiga klientbibliotek genom 
 
 >[!NOTE]
 >
->Mallförfattaren kan ange sidprincipen för mallen, men han eller hon måste få information om lämpliga klientbibliotek från utvecklaren.
+>Även om mallskaparen kan ange sidprincipen för mallen måste han/hon få information om lämpliga klientbibliotek från utvecklaren.
 
 ### Redigera en mall - Inledande sidegenskaper - Författare {#editing-a-template-initial-page-properties-author}
 

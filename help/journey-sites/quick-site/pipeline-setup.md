@@ -2,9 +2,9 @@
 title: Konfigurera din pipeline
 description: Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
 exl-id: 0d77d1a6-98f3-4961-9283-f52c1b5b2a7b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '965'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Nu visas en översikt över programmet. Sidan ser annorlunda ut men liknar det h
 
 ![Översikt över Cloud Manager](assets/cloud-manager-overview.png)
 
-Observera namnet på programmet som du har öppnat eller kopierat URL:en. Du måste skicka detta till den som utvecklar dokumentet senare.
+Observera namnet på programmet som du har öppnat eller kopierat URL:en. Du måste skicka detta till den som utvecklar gränssnittet senare.
 
 ## Skapa en frontpipeline {#create-front-end-pipeline}
 

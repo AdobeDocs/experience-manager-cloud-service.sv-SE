@@ -2,9 +2,9 @@
 title: Publicera översatt rubrikfritt innehåll
 description: Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna när innehållet uppdateras.
 exl-id: eb8d1152-ed37-47ca-86a8-6a66c010ee62
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1387'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ I det föregående dokumentet om den AEM översättningsresan utan headless [Öv
 * Skapa nya översättningsprojekt.
 * Använd översättningsprojekt för att översätta ert headless-innehåll.
 
-Nu när den första översättningen är klar går den här artikeln igenom nästa steg när du publicerar innehållet och vad du ska göra för att uppdatera översättningarna när det underliggande innehållet i språkroten ändras.
+Nu när den första översättningen är klar går den här artikeln igenom nästa steg i publiceringen av det innehållet och vad du ska göra för att uppdatera översättningarna när det underliggande innehållet i språkroten ändras.
 
 ## Syfte {#objective}
 
@@ -33,7 +33,7 @@ Det här dokumentet hjälper dig att förstå hur du publicerar headless-innehå
 
 ## AEM Author-Publish Model {#author-publish}
 
-Innan du publicerar ditt innehåll är det en bra idé att förstå AEM författarpubliceringsmodell. AEM delar in användare i två grupper.
+Innan du publicerar ditt innehåll är det en bra idé att förstå AEM författarpubliceringsmodell. I förenklad form delar AEM in användare i två grupper.
 
 1. De som skapar och hanterar innehållet och systemet
 1. De som konsumerar innehållet från systemet
@@ -80,7 +80,7 @@ Ditt översatta headless-innehåll publiceras nu! Den kan nu nås och användas 
 >
 >Du kan markera flera objekt (d.v.s. flera språkmappar) när du publicerar, så att du kan publicera flera översättningar samtidigt.
 
-Det finns ytterligare alternativ när du publicerar innehåll, till exempel schemaläggning av en publiceringstid, som ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) i slutet av dokumentet om du vill ha mer information.
+Det finns ytterligare alternativ när du publicerar innehåll, till exempel schemaläggning av en publiceringstid, som ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) finns i slutet av dokumentet.
 
 ## Uppdatera ditt översatta innehåll {#updating-translations}
 
@@ -95,7 +95,7 @@ Som tidigare skiljer sig dock processen något om du väljer att automatiskt ska
 1. Navigera till **Navigering** -> **Resurser** -> **Filer**. Kom ihåg att innehåll utan rubrik i AEM lagras som resurser som kallas för innehållsfragment.
 1. Välj språkroten för projektet. I det här fallet har vi valt `/content/dam/wknd/en`.
 1. Tryck eller klicka på rälsväljaren och visa **Referenser** -panelen.
-1. Tryck eller klicka på **Språkkopior**.
+1. Tryck eller klicka **Språkkopior**.
 1. Kontrollera **Språkkopior** kryssrutan.
 1. Expandera avsnittet **Uppdatera språkkopior** längst ned på referenspanelen.
 1. I **Projekt** listruta, välja **Lägg till i ett befintligt översättningsprojekt**.
@@ -110,7 +110,7 @@ Innehållet läggs till i det befintliga översättningsprojektet. Så här visa
 1. Tryck eller klicka på det projekt som du just har uppdaterat.
 1. Tryck eller klicka på språket eller något av språken som du uppdaterade.
 
-Du ser att ett nytt jobbkort har lagts till i projektet. I det här exemplet har en annan spanska översättning lagts till.
+Ett nytt jobbkort har lagts till i projektet. I det här exemplet har en annan spanska översättning lagts till.
 
 ![Ytterligare översättningsjobb har lagts till](assets/additional-translation-job.png)
 

@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: b8ab2525-3f15-4844-866c-da47bfc7518c
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2590'
+source-wordcount: '2586'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Använd översättningskopplingen och reglerna för att översätta innehållet.
 I det föregående dokumentet om AEM Sites översättningsresa [Konfigurera översättningsregler](translation-rules.md) du lärde dig att använda AEM översättningsregler för att identifiera översättningsinnehåll. Nu bör du:
 
 * Förstå vad översättningsreglerna gör.
-* Du kan definiera egna översättningsregler.
+* Ange egna översättningsregler.
 
 Nu när du har konfigurerat dina regler för koppling och översättning tar den här artikeln dig igenom nästa steg när du översätter ditt AEM Sites-innehåll.
 
@@ -56,11 +56,11 @@ Båda metoderna beskrivs i följande avsnitt.
 För rättighetsinnehavare som också ansvarar för översättning är det ofta enklare att AEM automatiskt skapa översättningsprojektet. Så här skapar AEM automatiskt ett översättningsprojekt baserat på din innehållssökväg:
 
 1. Navigera till **Navigering** -> **Webbplatser** och trycka eller klicka på projektet.
-1. Leta reda på projektets språkrot. Om du t.ex. har språkroten engelska, `/content/<your-project>/en`.
+1. Leta reda på projektets språkrot. Om du t.ex. har språkroten engelska `/content/<your-project>/en`.
    * Observera att de andra språkmapparna är tomma platshållare före den första översättningen. Dessa skapas vanligtvis av innehållsarkitekten.
 1. Leta reda på projektets språkrot.
 1. Tryck eller klicka på rälsväljaren och visa **Referenser** -panelen.
-1. Tryck eller klicka på **Språkkopior**.
+1. Tryck eller klicka **Språkkopior**.
 1. Kontrollera **Språkkopior** kryssrutan.
 1. Expandera avsnittet **Uppdatera språkkopior** längst ned på referenspanelen.
 1. I **Projekt** listruta, välja **Skapa översättningsprojekt**.
@@ -89,7 +89,7 @@ För översättningsprojektledare är det ofta nödvändigt att manuellt välja 
    ![Skapa projektmapp](assets/create-project-folder.png)
 
 1. Tryck eller klicka på mappen för att öppna den.
-1. Tryck eller klicka på **Skapa** -> **Projekt**.
+1. I den nya projektmappen: tryck eller klicka **Skapa** -> **Projekt**.
 1. Projekten bygger på mallar. Tryck eller klicka på **Översättningsprojekt** för att markera den och sedan trycka eller klicka på **Nästa**.
 
    ![Välj översättningsprojektmall](assets/select-translation-project-template.png)
@@ -150,19 +150,19 @@ Om du vill se detaljerna i innehållet som ingår i det här projektet:
    ![Information om översättningsjobb](assets/translation-job-detail.png)
 
 1. Tryck eller klicka på en rad för att visa detaljerna på den raden. Tänk på att en rad kan representera flera innehållsobjekt som ska översättas.
-1. Tryck eller klicka på markeringsrutan för ett radobjekt för att visa ytterligare alternativ, som alternativet att ta bort det från jobbet eller visa det i platskonsolen.
+1. Tryck eller klicka på markeringsrutan för ett radobjekt om du vill se ytterligare alternativ, som alternativet att ta bort det från jobbet eller visa det i platskonsolen.
 
    ![Alternativ för översättningsjobb](assets/translation-job-options.png)
 
 Översättningsjobbets innehåll startar vanligtvis i **Utkast** enligt **Läge** kolumn i **Översättningsjobb** -fönstret.
 
-Starta översättningsjobbet genom att gå tillbaka till översättningsprojektöversikten och trycka eller klicka på knappen för att markera översättningen längst upp i **Översättningsjobb** och välj **Starta**.
+Om du vill starta översättningsjobbet går du tillbaka till översikten över översättningsprojektet och trycker eller klickar på knappen för att markera översättningen längst upp i dialogrutan **Översättningsjobb** och välj **Starta**.
 
 ![Starta översättningsjobb](assets/start-translation-job.png)
 
 AEM kommunicerar nu med din översättningskonfiguration och koppling för att skicka innehållet till översättningstjänsten. Du kan visa översättningens förlopp genom att gå tillbaka till **Översättningsjobb** och visa **Läge** kolumn för posterna.
 
-![Översättningsjobb godkänt](assets/translation-job-approved.png)
+![Översättningsjobbet har godkänts](assets/translation-job-approved.png)
 
 Maskinöversättningar returneras automatiskt med statusen **Godkänd**. Översättning till människor möjliggör mer interaktion, men ligger utanför den här resan.
 
@@ -174,7 +174,7 @@ Maskinöversättningar returneras automatiskt med statusen **Godkänd**. Övers�
 >
 >Om du inte inaktiverade projektalternativet **Ta bort start efter erbjudande** as [som beskrivs i föregående avsnitt,](#using-translation-project) översatta objekt visas med **Borttagen** tillstånd. Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
 >
->Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill lära dig mer om hur AEM bearbetar översättningar finns mer information i [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
+>Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill lära dig mer om hur AEM bearbetar översättningar finns mer information i [ytterligare resurser](#additional-resources) i slutet av artikeln.
 
 ### Använda ett manuellt skapat översättningsprojekt {#using-manual-project}
 
@@ -192,7 +192,7 @@ Så här lägger du till innehåll i ett översättningsjobb:
    ![Sökvägsläsare](assets/path-browser.png)
 
 1. Tryck eller klicka **Välj** för att lägga till det markerade innehållet i jobbet.
-1. I **Översätt** dialogruta, ange att du vill **Skapa språkkopia**.
+1. I **Översätt** anger du att du vill **Skapa språkkopia**.
 
    ![Skapa språkkopia](assets/translate-copy-master.png)
 
@@ -200,7 +200,7 @@ Så här lägger du till innehåll i ett översättningsjobb:
 
    ![Innehåll som lagts till i översättningsjobb](assets/content-added.png)
 
-1. Tryck eller klicka på markeringsrutan för ett radobjekt för att visa ytterligare alternativ, som alternativet att ta bort det från jobbet eller visa det i platskonsolen.
+1. Tryck eller klicka på markeringsrutan för ett radobjekt om du vill se ytterligare alternativ, som alternativet att ta bort det från jobbet eller visa det i platskonsolen.
 
    ![Alternativ för översättningsjobb](assets/translation-job-options.png)
 
@@ -208,21 +208,21 @@ Så här lägger du till innehåll i ett översättningsjobb:
 
 >[!TIP]
 >
->Sökvägsläsaren är ett kraftfullt verktyg som du kan använda för att söka efter, filtrera och navigera i ditt innehåll. Tryck eller klicka på **Endast innehåll/filter** för att växla sidopanelen och visa avancerade filter som **Ändringsdatum** eller **Översättningsstatus**.
+>Sökvägsläsaren är ett kraftfullt verktyg med vilket du kan söka efter, filtrera och navigera i innehållet. Tryck eller klicka på **Endast innehåll/filter** för att växla sidopanelen och visa avancerade filter som **Ändringsdatum** eller **Översättningsstatus**.
 >
 >Du kan läsa mer om sökvägsläsaren i [ytterligare resursavsnitt.](#additional-resources)
 
-Du kan använda föregående steg för att lägga till nödvändigt innehåll till alla språk (jobb) för projektet. När du har markerat allt innehåll kan du starta översättningen.
+Du kan använda föregående steg för att lägga till nödvändigt innehåll till alla språk (jobb) för projektet. När du har markerat allt innehåll kan du påbörja översättningen.
 
 Översättningsjobbets innehåll startar vanligtvis i **Utkast** enligt **Läge** kolumn i **Översättningsjobb** -fönstret.
 
-Starta översättningsjobbet genom att gå tillbaka till översättningsprojektöversikten och trycka eller klicka på knappen för att markera översättningen längst upp i **Översättningsjobb** och välj **Starta**.
+Om du vill starta översättningsjobbet går du tillbaka till översikten över översättningsprojektet och trycker eller klickar på knappen för att markera översättningen längst upp i dialogrutan **Översättningsjobb** och välj **Starta**.
 
 ![Starta översättningsjobb](assets/start-translation-job.png)
 
 AEM kommunicerar nu med din översättningskonfiguration och koppling för att skicka innehållet till översättningstjänsten. Du kan visa översättningens förlopp genom att gå tillbaka till **Översättningsjobb** och visa **Läge** kolumn för posterna.
 
-![Översättningsjobb godkänt](assets/translation-job-approved.png)
+![Översättningsjobbet har godkänts](assets/translation-job-approved.png)
 
 Maskinöversättningar returneras automatiskt med statusen **Godkänd**. Översättning till människor möjliggör mer interaktion, men ligger utanför den här resan.
 
@@ -234,7 +234,7 @@ Maskinöversättningar returneras automatiskt med statusen **Godkänd**. Övers�
 >
 >Om du inte inaktiverade projektalternativet **Ta bort start efter erbjudande** as [som beskrivs i föregående avsnitt,](#using-translation-project) översatta objekt visas med **Borttagen** tillstånd. Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
 >
->Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill lära dig mer om hur AEM bearbetar översättningar finns mer information i [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
+>Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill lära dig mer om hur AEM bearbetar översättningar finns mer information i [ytterligare resurser](#additional-resources) i slutet av artikeln.
 
 ## Granskning av översatt innehåll {#reviewing}
 
@@ -250,7 +250,7 @@ Tryck eller klicka på den ikonen för att öppna det översatta innehållet i k
 
 Du kan ändra det översatta innehållet ytterligare, förutsatt att du har rätt behörighet, men att redigera innehåll ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet om du vill ha mer information om det här avsnittet.
 
-Projektets syfte är att samla alla resurser som hör till en översättning på ett och samma ställe för enkel åtkomst och en tydlig översikt. Men som du kan se genom att visa detaljerna för ett översatt objekt, flödar översättningarna tillbaka till webbplatsmappen för översättningsspråket. I det här exemplet är mappen
+Projektets syfte är att samla alla resurser som hör till en översättning på ett och samma ställe för enkel åtkomst och en tydlig översikt. Men som du kan se genom att visa detaljerna för ett översatt objekt, flödar översättningarna i sig tillbaka till webbplatsmappen för översättningsspråket. I det här exemplet är mappen
 
 ```text
 /content/<your-project>/es
@@ -262,7 +262,7 @@ Om du navigerar till den här mappen via **Navigering** -> **Webbplatser** ser d
 
 AEM översättningsramverk tar emot översättningarna från översättningskopplingen och skapar sedan automatiskt innehållsstrukturen baserat på språkroten och med hjälp av översättningarna från kopplingen.
 
-Det är viktigt att förstå att detta innehåll inte publiceras och därför inte är tillgängligt för konsumtion. Vi kommer att lära oss om den här strukturen för författarpublicering och se hur vi kan publicera vårt översatta innehåll i nästa steg av översättningsresan.
+Det är viktigt att förstå att detta innehåll inte publiceras och därför inte är tillgängligt för konsumtion. Du lär dig mer om den här strukturen för författarpublicering och hur du publicerar vårt översatta innehåll i nästa steg av översättningsresan.
 
 ## Översättning av människor {#human-translation}
 
@@ -278,7 +278,7 @@ Nu när du är klar med den här delen av AEM Sites översättningsresa ska du:
 * Skapa nya översättningsprojekt.
 * Använd översättningsprojekt för att översätta innehållet.
 
-Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att nästa gång du granskar dokumentet [Publicera översatt innehåll](publish-content.md) där du får lära dig hur du publicerar översatt innehåll och hur du uppdaterar översättningarna när rotinnehållet för ditt språk ändras.
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att granska nästa gång dokumentet [Publicera översatt innehåll](publish-content.md) där du lär dig hur du publicerar översatt innehåll och hur du uppdaterar översättningarna när rotinnehållet för ditt språk ändras.
 
 ## Ytterligare resurser {#additional-resources}
 

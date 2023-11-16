@@ -2,7 +2,7 @@
 title: Miljövariabler för Cloud Manager
 description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Manager och tillhandahållas i körningsmiljön, som används i OSGi-konfigurationen.
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
-source-git-commit: 15a53778e0934a1940efa5cc88467c20b4b67fe4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Exempel på vanliga användningsområden är:
 1. Cloud Manager visar de olika tillgängliga programmen. Välj den du vill hantera.
 1. Välj **Miljö** väljer du sedan den miljö som du vill skapa en miljövariabel för i den vänstra navigeringspanelen.
 1. I detalj om miljön väljer du **Konfiguration** välj **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.
-   * Om du lägger till en miljövariabel för första gången visas ett **Lägg till konfiguration** i mitten av sidan. Du kan använda den här knappen **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.
+   * Om du lägger till en miljövariabel för första gången kan du se **Lägg till konfiguration** i mitten av sidan. Du kan använda den här knappen **Lägg till** för att öppna **Miljökonfiguration** -dialogrutan.
 
    ![Fliken Konfiguration](assets/configuration-tab.png)
 

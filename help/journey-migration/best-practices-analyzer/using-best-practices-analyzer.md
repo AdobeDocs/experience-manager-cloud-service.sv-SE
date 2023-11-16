@@ -1,11 +1,11 @@
 ---
 title: Använda Best Practices Analyzer
-description: Lär dig hur du använder Best Practices Analyzer för att förstå hur redo du är att uppgradera.
+description: Lär dig hur du använder Best Practices Analyzer för att förstå uppgraderingsberedskapen.
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2484'
-ht-degree: 37%
+source-wordcount: '2478'
+ht-degree: 38%
 
 ---
 
@@ -61,7 +61,7 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic1.png)
 
-1. Klicka på **Generera rapport** för att köra Best Practices Analyzer.
+1. Klicka **Generera rapport** för att köra Best Practices Analyzer.
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic2.png)
 
@@ -69,7 +69,7 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic3.png)
 
-1. När BPA-rapporten har genererats visas en sammanfattning och antalet resultat i tabellformat, ordnade efter typ av fynd och prioritetsnivå. Om du vill ha mer information om en viss sökning kan du klicka på talet som motsvarar sökningstypen i tabellen.
+1. När BPA-rapporten har genererats visas en sammanfattning och antalet resultat i ett tabellformat, ordnade efter typ av fynd och prioritetsnivå. Om du vill ha mer information om en viss sökning kan du klicka på talet som motsvarar sökningstypen i tabellen.
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/BPA_pic4.png)
 

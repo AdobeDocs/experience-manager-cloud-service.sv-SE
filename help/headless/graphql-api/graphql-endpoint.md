@@ -3,9 +3,9 @@ title: Hantera GraphQL-slutpunkter i AEM
 description: Lär dig hur du hanterar GraphQL slutpunkter i Adobe Experience Manager as a Cloud Service för leverans av headless-material.
 feature: Content Fragments,GraphQL API
 exl-id: f7164ae3-4074-4db7-8c43-a79cc2ef00b1
-source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---

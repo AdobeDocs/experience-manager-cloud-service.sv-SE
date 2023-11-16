@@ -2,9 +2,9 @@
 title: Lägga till ett anpassat domännamn
 description: Lär dig hur du lägger till ett anpassat domännamn med hjälp av Cloud Manager.
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
-source-git-commit: d3021a4dd78a0ca86352a81965ce92868e94664a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Följ de här stegen för att lägga till ett eget domännamn från **Domäninst
 
 1. Navigera till **Miljö** från **Ökning** sida.
 
-1. Klicka på **Domäninställningar** i den vänstra navigeringspanelen.
+1. Klicka **Domäninställningar** i den vänstra navigeringspanelen.
 
    ![Fönstret Domäninställningar](/help/implementing/cloud-manager/assets/cdn/cdn-create.png)
 
@@ -50,7 +50,7 @@ Följ de här stegen för att lägga till ett eget domännamn från **Domäninst
 
 1. Välj **Domän-SSL-certifikat** som är associerat med domännamnet i listrutan och väljer **Fortsätt**.
 
-1. The **Lägg till domännamn** öppnas och du kommer att fortsätta verifiera domännamnet. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka på **Skapa**.
+1. The **Lägg till domännamn** öppnas och du kommer att fortsätta verifiera domännamnet. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka **Skapa**.
 
    ![Verifiering av domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create6.png)
 
@@ -82,7 +82,7 @@ Följ de här stegen för att lägga till ett eget domännamn från **Miljö** s
 
    1. Ange det anpassade domännamnet.
    1. Välj SSL-certifikatet som är associerat med det här namnet i listrutan.
-   1. Klicka på **+Lägg till**.
+   1. Klicka **+Lägg till**.
 
    ![Lägg till anpassat domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create3.png)
 
@@ -94,7 +94,7 @@ Följ de här stegen för att lägga till ett eget domännamn från **Miljö** s
    >
    >Inkludera inte `http://`, `https://`eller blanksteg när du anger domännamnet.
 
-1. The **Lägg till domännamn** öppnas och du kommer att fortsätta verifiera domännamnet. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka på **Skapa**.
+1. The **Lägg till domännamn** öppnas och du kommer att fortsätta verifiera domännamnet. Följ instruktionerna som följer för att bevisa att du är domänägare i din miljö. Klicka **Skapa**.
 
    ![Verifiering av domännamn](/help/implementing/cloud-manager/assets/cdn/cdn-create6.png)
 

@@ -2,9 +2,9 @@
 title: Meddelanden
 description: Lär dig hur du får information om pipeline-distributioner med hjälp av Adobe Experience Cloud meddelandesystem.
 exl-id: c1c740b0-c873-45a8-9518-a856db2be75b
-source-git-commit: d95b432f74a7b52efc9fd1cf0e380c3f5237503c
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---

@@ -2,9 +2,9 @@
 title: Aktivera JSON-export för en komponent
 description: Komponenter kan anpassas för att generera JSON-export av deras innehåll baserat på ett modellramverk.
 exl-id: e9be5c0c-618e-4b56-a365-fcdd185ae808
-source-git-commit: 3d20f4bca566edcdb5f13eab581c33b7f3cf286d
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '468'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Komponenter kan anpassas för att generera JSON-export av deras innehåll basera
 
 JSON-exporten baseras på [Sling Models](https://sling.apache.org/documentation/bundles/models.html)och på [Export av försäljningsmodell](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130) som i sig förlitar sig på [Jackson annotations](https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations)).
 
-Det innebär att komponenten måste ha en Sling-modell om den behöver exportera JSON. Därför måste du följa dessa två steg för att aktivera JSON-export för alla komponenter.
+Det innebär att komponenten måste ha en Sling-modell om den behöver exportera JSON. Följ därför de här två stegen för att aktivera JSON-export för alla komponenter.
 
 * [Definiera en segmentmodell för komponenten](#define-a-sling-model-for-the-component)
 * [Anteckna gränssnittet för segmenteringsmodellen](#annotate-the-sling-model-interface)

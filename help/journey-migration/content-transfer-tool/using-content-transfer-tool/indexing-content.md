@@ -2,9 +2,9 @@
 title: Indexering efter migrering av innehåll
 description: Lär dig hur migreringsprocessen indexerar det inkapslade Cloud Servicen i målinstansen.
 exl-id: a13d5df4-b351-410a-9336-1b34a8af21b6
-source-git-commit: 0109cea1be85e647fb6c04dde4714b162bdc75a5
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ När importen är klar initieras indexeringsjobbet automatiskt. Inmatningsjobbra
 
 ### Complete
 
-När indexeringsjobbet lyckas är instansen klar att användas med optimala prestanda. I det här skedet kommer indexeringsjobbloggarna att vara tillgängliga för visning eller nedladdning för att kunna inspektera dem.
+När indexeringsjobbet lyckas är instansen klar att användas med optimala prestanda. Nu kan du visa eller ladda ned indexeringsjobbloggar för att inspektera dem.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-indexing/complete.png)
 
 ### Fel
 
-Indexeringen av målinstansen kommer troligtvis att lyckas. I vissa fall kan det misslyckas och raden för ingrepp visas enligt följande. I samtliga fall kan du ta reda på lite detaljer om felet genom att hovra över felstatusen, och du kan få mer information som hjälper dig att avgöra nästa steg. I det här skedet kommer indexeringsjobbloggarna att vara tillgängliga för visning eller nedladdning för att hjälpa till att identifiera felets källa. Om nästa steg inte är klart kontaktar du Adobe Support med information om intaget och indexeringsloggen.
+Indexeringen av målinstansen kommer troligtvis att lyckas. I vissa fall kan det misslyckas och raden för ingrepp visas enligt följande. I samtliga fall kan du ta reda på lite detaljer om felet genom att hovra över felstatusen, och du kan få mer information som hjälper dig att avgöra nästa steg. Nu kan du visa eller ladda ned indexeringsjobbloggar för att hitta felets källa. Om nästa steg inte är klart kontaktar du Adobe Support med information om intaget och indexeringsloggen.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-indexing/failed.png)
 

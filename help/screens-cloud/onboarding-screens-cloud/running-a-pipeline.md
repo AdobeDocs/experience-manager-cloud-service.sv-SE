@@ -2,7 +2,7 @@
 title: Köra en pipeline
 description: På den här sidan beskrivs hur du kör en pipeline för skärmar som ett Cloud Service-projekt i Cloud Manager.
 exl-id: 3203cff7-5668-4f50-a2c5-80ae474b439d
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 1%
@@ -22,11 +22,11 @@ I följande avsnitt beskrivs hur du konfigurerar CI/CD-flödet och distribuerar 
 
 ## Steg för att köra en pipeline för ditt skärmsprojekt i Cloud Manager {#steps-branch-creation}
 
-1. När miljökonfigurationen är klar visas uppdateringen av åtgärdskortet i Cloud Managers **Översikt** sida.
+1. När miljökonfigurationen är klar visas uppdateringen av åtgärdskortet i Cloud Managers **Ökning** sida.
 
    ![bild](/help/screens-cloud/assets/onboarding/add-environ3.png)
 
-1. Klicka **Konfigurera pipeline** från **Översikt** sida.
+1. Klicka **Konfigurera pipeline** från **Ökning** sida.
 
 1. Klicka **Nästa** efter att du har valt grenen.
 
@@ -52,7 +52,7 @@ I följande avsnitt beskrivs hur du konfigurerar CI/CD-flödet och distribuerar 
 
    ![bild](/help/screens-cloud/assets/onboarding/run-pipeline4.png)
 
-1. När byggprocessen är klar visas en länk från **Miljö** Kort från Cloud Managers **Översikt** sida.
+1. När byggprocessen är klar kan du se en författarlänk från **Miljö** Kort från Cloud Managers **Ökning** sida.
 
    ![bild](/help/screens-cloud/assets/onboarding/run-pipeline5.png)
 

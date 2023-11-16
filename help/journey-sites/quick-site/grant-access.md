@@ -2,9 +2,9 @@
 title: Bevilja åtkomst till klientutvecklaren
 description: Anlita gränssnittsutvecklare i Cloud Manager så att de får tillgång till era AEM och er pipeline.
 exl-id: 58e95c92-b859-4bb9-aa62-7766510486fd
-source-git-commit: 13cb8ae059f0a77e517d2e64eae96a08f88ac075
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I det föregående dokumentet från den AEM snabbplatsgenereringsresan [Konfigur
 * Förstå vad en rörledning är.
 * Lär dig hur du konfigurerar en frontendpipeline i Cloud Manager.
 
-Nu måste du ge din frontendutvecklare åtkomst till Cloud Manager via introduktionsprocessen så att frontendutvecklaren kan komma åt AEM Git-databasen och den pipeline du har skapat.
+Nu måste du ge frontendutvecklare åtkomst till Cloud Manager via introduktionsprocessen så att frontendutvecklaren kan komma åt AEM Git-databasen och den pipeline du har skapat.
 
 ## Syfte {#objective}
 
@@ -65,7 +65,7 @@ Först måste du lägga till frontutvecklaren som användare med Admin Console.
 
    ![Produktprofiler](assets/product-profiles.png)
 
-1. Om du vill tilldela frontend-utvecklaren till rätt profiler trycker eller klickar du på **Användare** och sedan **Lägg till användare** -knappen.
+1. Om du vill tilldela frontend-utvecklaren till rätt profiler trycker eller klickar du på **Användare** -fliken och sedan **Lägg till användare** -knappen.
 
    ![Lägg till användare](assets/add-user.png)
 
@@ -81,7 +81,7 @@ Först måste du lägga till frontutvecklaren som användare med Admin Console.
 
 Den inbjudna frontendutvecklaren kan komma åt Cloud Manager genom att klicka på länken i välkomstmeddelandet och logga in med sin Adobe ID.
 
-## Lämna över till frontendutvecklare {#handover}
+## Lämna över till front-end Developer {#handover}
 
 Med en e-postinbjudan till Cloud Manager på vägen till den som utvecklar gränssnittet kan du och AEM nu ge den som utvecklar gränssnittet den återstående information som behövs för att börja anpassa produkten.
 
@@ -98,10 +98,10 @@ Nu när du har slutfört den här delen av AEM snabbwebbplats bör du känna til
 * Så här lägger du till en frontendutvecklare som användare.
 * Så här tilldelar du de roller som krävs till frontendutvecklaren.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att nästa gång du granskar dokumentet [Hämta information om Git-databasåtkomst,](retrieve-access.md) som endast växlar perspektiv till frontendutvecklaren och förklarar hur gränssnittsutvecklarna använder Cloud Manager för att få åtkomst till Git-databasinformation.
+Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Hämta information om Git-databasåtkomst,](retrieve-access.md) som endast växlar perspektiv till frontendutvecklaren och förklarar hur gränssnittsutvecklarna använder Cloud Manager för att få åtkomst till Git-databasinformation.
 
 ## Ytterligare resurser {#additional-resources}
 
 Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebbplats genom att granska dokumentet [Hämta användaruppgifter för frontendutvecklare,](retrieve-access.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
 
-* [Onboarding Journey](/help/journey-onboarding/overview.md) - Den här guiden fungerar som en startpunkt för att säkerställa att era team är konfigurerade och har tillgång till AEM as a Cloud Service.
+* [Onboardresa](/help/journey-onboarding/overview.md) - Den här guiden fungerar som en startpunkt för att säkerställa att era team är konfigurerade och har tillgång till AEM as a Cloud Service.

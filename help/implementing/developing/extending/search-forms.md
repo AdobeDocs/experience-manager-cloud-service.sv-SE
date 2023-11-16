@@ -2,16 +2,16 @@
 title: Konfigurera sökformulär
 description: Konfigurera Sök i Forms för Adobe Experience Manager as a Cloud Service.
 exl-id: b06649c4-cc91-44e3-8699-00e90140b90d
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2037'
+source-wordcount: '2035'
 ht-degree: 2%
 
 ---
 
 # Konfigurera sökformulär {#configuring-search-forms}
 
-Adobe Experience Manager as a Cloud Service har kraftfulla [Sök](/help/sites-cloud/authoring/getting-started/search.md) mekanism.
+Adobe Experience Manager as a Cloud Service har en kraftfull [Sök](/help/sites-cloud/authoring/getting-started/search.md) mekanism.
 
 I kombination med detta finns det också en uppsättning fördefinierade alternativ som hjälper dig att filtrera innehållet. Dessa innehåller fördefinierade egenskaper som **Ändringsdatum**, **Publiceringsstatus**, eller **LiveCopy-status** så att du snabbt kan hitta de resurser du behöver.
 
@@ -46,12 +46,12 @@ Standardkonfigurationerna (i alfabetisk ordning) är:
 * **Resursadministratörssökväg**
 * **Sidredigeraren (dokumentsökning)**
 * **Page Editor (Experience Fragments Search)**
-* **Page Editor (bildsökning)**
+* **Sidredigeraren (bildsökning)**
 * **Page Editor (manuskriptsökning)**
 * **Sidredigeraren (sidsökning)**
 * **Page Editor (Styckesökning)**
 * **Page Editor (produktsökning)**
-* **Page Editor (Scene7 Search)**
+* **Sidredigeraren (Scene7-sökning)**
 * **Sidredigeraren (videosökning)**
 * **Sökväg för projektadministratör**
 * **Sökväg för projektöversättning**
@@ -286,7 +286,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
    <td>
     <ul>
      <li>Fältetikett</li>
-     <li>Publicera egenskapsnamn*</li>
+     <li>Namn på publiceringsegenskap*</li>
      <li>Egenskapsnamn för låsta sidor*</li>
      <li>Beskrivning</li>
     </ul> </td>
@@ -509,7 +509,7 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
   Egenskapen som ska genomsökas. Den använder en relativ sökväg och jokertecknen `*/*/*` ange egenskapens djup i förhållande till `jcr:content` nod (varje asterisk representerar en nodnivå).
 
-  Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` på `jcr:content` nod `*/jcr:content/x`
+  Om du bara vill söka på en underordnad nod på första nivån för resursen som har `x` -egenskapen på `jcr:content` nod använder `*/jcr:content/x`
 
 * **Egenskapsdjup**
 
@@ -517,7 +517,7 @@ Beroende på predikatet finns ett urval av inställningar tillgängliga för kon
 
 * **Egenskapsvärde**
 
-  Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk. till exempel `cq:Page` eller
+  Egenskapsvärdet som en absolut sträng eller som ett uttrycksspråk, till exempel `cq:Page` eller
 
   `${empty requestPathInfo.suffix ? "/content" : requestPathInfo.suffix}`.
 
@@ -540,9 +540,9 @@ I praktiken samma som **Sökväg till alternativ**, det är bara det här som fi
 Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter ett urval. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
 * **Egenskapsnamn för Publicera och Live-kopia**
-Etiketterna för publicerings- och Live copy-kryssrutorna för det platsspecifika predikatet.
+Etiketterna för publicerings- och Live copy-kryssrutorna för platsspecifika predikat.
 
-* &amp;Sista; på fältetiketterna i **Inställningar** -fliken betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
+* Det &amp;sista; på fältetiketterna i **Inställningar** -fliken betyder att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
 
 ## Konfigurera din sökning i Forms {#configuring-your-search-forms}
 
@@ -551,7 +551,7 @@ Etiketterna för publicerings- och Live copy-kryssrutorna för det platsspecifik
 1. Navigera till **verktyg**, **Allmänt**, **Sök i Forms**.
 
 1. Välj den konfiguration som du vill anpassa.
-1. Använd **Redigera** om du vill öppna konfigurationen för uppdatering.
+1. Använd **Redigera** -ikonen för att öppna konfigurationen för uppdatering.
 1. Om du gör en ny anpassning vill du antagligen [lägga till nya predikatfält och definiera inställningarna](#add-edit-a-predicate-field-and-define-field-settings) efter behov. Om en befintlig anpassning finns kan du välja ett befintligt fält och [uppdatera inställningarna](#add-edit-a-predicate-field-and-define-field-settings).
 1. Välj **Klar** för att spara konfigurationen. Ändringarna visas nästa gång konfigurationen används.
 
@@ -575,7 +575,7 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    * Du lägger till ett nytt fält:
 
-     När du har lagt till predikatet **Inställningar** öppnar och visar de egenskaper som kan definieras.
+     När du har lagt till predikatet **Inställningar** öppnas och visar de egenskaper som kan definieras.
 
    * Du vill uppdatera ett befintligt predikat:
 
@@ -585,7 +585,7 @@ Du kan lägga till eller redigera fält och definiera/uppdatera deras inställni
 
    ![ändra predikat](assets/csf-modify-predicate.png)
 
-1. Gör önskade ändringar och bekräfta med **Klar**. Ändringarna visas nästa gång konfigurationen används.
+1. Gör dina ändringar efter behov och bekräfta med **Klar**. Ändringarna visas nästa gång konfigurationen används.
 
 ### Förhandsgranska sökkonfigurationen {#previewing-the-search-configuration}
 
@@ -628,13 +628,13 @@ En anpassad konfiguration tas bort från konsolen:
 
 ### Förutsägelser för tillägg av alternativ {#adding-options-predicates}
 
-Alternativpredikat (Alternativ, Alternativ-egenskap) gör att du kan konfigurera ett objekt som du vill söka efter. De används vanligtvis för att söka efter något direkt under sidan. till exempel en egenskap på sidnoden.
+Alternativpredikat (Alternativ, Alternativ-egenskap) gör att du kan konfigurera ett objekt som du vill söka efter. De används vanligtvis för att söka efter något direkt under sidan, till exempel en egenskap på sidnoden.
 
 I följande exempel (som används för att söka efter mallen som används för att skapa en sida) visas stegen som ingår:
 
 1. Skapa noden som definierar den egenskap som du vill söka efter.
 
-   Du måste ha en rotnod som innehåller definitioner av de enskilda alternativen för att vara tillgängliga för användaren.
+   Du behöver en rotnod som innehåller definitioner av de enskilda alternativen för att vara tillgängliga för användaren.
 
    Noderna för de enskilda alternativen behöver egenskaperna:
 
@@ -645,9 +645,9 @@ I följande exempel (som används för att söka efter mallen som används för 
 
    >[!NOTE]
    >
-   >Du ***måste*** ändrar ingenting i `/libs` bana.
+   >Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
    >
-   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
    >
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >

@@ -2,9 +2,9 @@
 title: Grundläggande hantering
 description: Bekanta dig med navigering i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
-source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2975'
+source-wordcount: '2970'
 ht-degree: 3%
 
 ---
@@ -133,7 +133,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   I mitten av spåret, och alltid med beskrivningen av det markerade objektet, kan du navigera i en viss konsol med hjälp av de synliga kolumnerna. I **Webbplatser** kan du navigera på webbplatsnivå.
 
-  Klicka bara på den breda texten för att visa en listruta med hierarkinivåerna för det markerade objektet. Klicka på en post för att hoppa till den platsen.
+  Klicka bara på den synliga texten för att visa en listruta med hierarkinivåerna för det markerade objektet. Klicka på en post för att hoppa till den platsen.
 
   ![Exempel på expanderade vägbeskrivningar](/help/sites-cloud/authoring/assets/breadcrumbs-example.png)
 
@@ -171,7 +171,7 @@ Det finns olika hjälpresurser:
 
 * **Verktygsfältet Konsol**
 
-  Beroende på var du befinner dig **Hjälp** öppnas lämpliga resurser:
+  Beroende på var du befinner dig **Hjälp** ikon öppnar lämpliga resurser:
 
   ![Hjälpikon](/help/sites-cloud/authoring/assets/help-console.png)
 

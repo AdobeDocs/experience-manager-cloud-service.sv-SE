@@ -2,9 +2,9 @@
 title: Konfigurera översättningsintegrering för Headless-innehåll
 description: Lär dig hur du ansluter AEM till en översättningstjänst.
 exl-id: c91b2701-7ede-4d0b-93dd-3636c6638be2
-source-git-commit: f4e28d89023e8f326e6816ebd8168e1e31e772ce
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1230'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Nu när du är klar med den här delen av den headless översättningsresan ska 
 * Förstå de viktiga parametrarna i översättningsintegreringsramverket i AEM.
 * Du kan skapa en egen anslutning till översättningstjänsten.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Översätta innehåll,](translation-rules.md) där du får lära dig hur du använder din konfiguration hittills för att faktiskt översätta ditt innehåll.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Översätta innehåll,](translation-rules.md) där du lär dig hur du använder din konfiguration hittills för att faktiskt översätta ditt innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 

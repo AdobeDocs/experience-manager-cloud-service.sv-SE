@@ -2,9 +2,9 @@
 title: Launches
 description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
 exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '901'
 ht-degree: 5%
 
 ---

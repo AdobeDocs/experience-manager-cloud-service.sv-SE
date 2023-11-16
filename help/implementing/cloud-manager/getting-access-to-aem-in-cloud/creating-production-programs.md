@@ -2,9 +2,9 @@
 title: Skapa produktionsprogram
 description: Lär dig hur du använder Cloud Manager för att skapa ett eget produktionsprogram för livstrafik.
 exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
-source-git-commit: ecb168e9261b3e3ed89e4cbe430b3da9f777a795
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka på **Lägg till program** från skärmens övre högra hörn.
+1. Klicka **Lägg till program** från skärmens övre högra hörn.
 
    ![Startsida för molnhanterare](assets/log-in.png)
 
@@ -49,7 +49,7 @@ Följ de här stegen för att skapa ett produktionsprogram.
 
    ![Välj lösningar](assets/setup-prod-select.png)
 
-1. Klicka på avrivningen före lösningsnamnen för att visa valfria tillägg, som att välja **Handel** tilläggsalternativ under **Webbplatser**.
+1. Klicka på nedtryckningen före lösningsnamnet för att visa valfria tillägg, som att välja **Handel** tilläggsalternativ under **Webbplatser**.
 
    ![Välj tillägg](assets/setup-prod-commerce.png)
 

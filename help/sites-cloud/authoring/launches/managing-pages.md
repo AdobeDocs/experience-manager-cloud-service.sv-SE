@@ -2,9 +2,9 @@
 title: Hantera sidor i Launch
 description: Du kan skapa nya sidor i Launch. Du kan också ta bort oönskade sidor.
 exl-id: 214c8c2f-d09a-4ce9-b474-9505b76084f7
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -25,34 +25,32 @@ Du kan navigera i startstrukturen från:
 * Sidredigeraren:
 
    * Välj **Navigera** för att öppna strukturen för Launch i konsolen:
-      ![Navigera från sidredigeraren](/help/sites-cloud/authoring/assets/launches-navigate-page-editor.png)
+     ![Navigera från sidredigeraren](/help/sites-cloud/authoring/assets/launches-navigate-page-editor.png)
 
-      >[!NOTE]
-      >
-      >Du kan också:
-      >
-      >* **Lämna** starta och återgå till att redigera källsidan
+     >[!NOTE]
+     >
+     >Du kan också:
+     >
+     >* **Lämna** starta och återgå till att redigera källsidan
 
-
-* The **Startar** Konsol: Om du väljer en viss programstart kan du sedan välja **Hantera innehåll**:
-   ![Starta konsolen - Hantera innehåll](/help/sites-cloud/authoring/assets/launches-navigate-launches-console.png)
+* The **Startar** Konsol: Om du väljer en viss start kan du sedan välja **Hantera innehåll**:
+  ![Starta konsolen - Hantera innehåll](/help/sites-cloud/authoring/assets/launches-navigate-launches-console.png)
 
 * The **Webbplatser** Konsol: Om du väljer en viss källsida och öppnar **Referenser** kan du sedan välja **Startar** följt av **Hantera innehåll**:
-   ![Starta konsolen - Hantera innehåll](/help/sites-cloud/authoring/assets/launches-navigate-sites-console.png)
+  ![Starta konsolen - Hantera innehåll](/help/sites-cloud/authoring/assets/launches-navigate-sites-console.png)
 
-   >[!NOTE]
-   >
-   >Du kan också välja **Startar konsolen** för åtkomst **Hantera innehåll** (och andra åtgärder).
+  >[!NOTE]
+  >
+  >Du kan också välja **Startar konsolen** för åtkomst **Hantera innehåll** (och andra åtgärder).
 
 Alla dessa startpunkter öppnas i webbplatskonsolen där du kan:
 
 * Navigera,
 * **Skapa** nya sidor,
-* Välja ut befintliga sidor och vidta åtgärder. till exempel **Redigera**, öppna **Egenskaper**, **Lås**, **Kopiera**, **Klistra in** och **Ta bort**
-
-   ![Navigera till starten i webbplatskonsolen från Hantera innehåll](/help/sites-cloud/authoring/assets/launches-navigate-manage-content.png)
-* Använd **Referenser** till **Startkälla** sidor:
-   ![Platskonsolen - startkälla](/help/sites-cloud/authoring/assets/launches-navigate-launch-source.png)
+* Välj befintliga sidor och vidta åtgärder, till exempel **Redigera**, öppna **Egenskaper**, **Lås**, **Kopiera**, **Klistra in** och **Ta bort**
+  ![Navigera till starten i webbplatskonsolen från Hantera innehåll](/help/sites-cloud/authoring/assets/launches-navigate-manage-content.png)
+* Använd **Referenser** för att återgå till **Startkälla** sidor:
+  ![Platskonsolen - startkälla](/help/sites-cloud/authoring/assets/launches-navigate-launch-source.png)
 
 ## Lägg till sidor i startfönstret {#add-pages-to-launch}
 

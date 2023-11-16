@@ -4,9 +4,9 @@ description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering
 role: Admin
 exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '3770'
+source-wordcount: '3769'
 ht-degree: 0%
 
 ---
@@ -149,7 +149,7 @@ Om paketet har ändrats eller aldrig byggts visas statusen som en länk för att
 
 ## Paketinställningar {#package-settings}
 
-Ett paket är i princip en uppsättning filter och databasdata som baseras på dessa filter. Med hjälp av gränssnittet för pakethanteraren kan du klicka på ett paket och sedan på knappen **Redigera** om du vill visa information om ett paket med följande inställningar.
+Ett paket är i princip en uppsättning filter och databasdata som baseras på dessa filter. Med hjälp av gränssnittet för pakethanteraren kan du klicka på ett paket och sedan på **Redigera** om du vill visa information om ett paket med följande inställningar.
 
 * [Allmänna inställningar](#general-settings)
 * [Paketfilter](#package-filters)

@@ -2,9 +2,9 @@
 title: Versionsinformation för 2023.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2023.9.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: d747f58b-8d6c-418d-9d2b-ec3ae4b6dc03
-source-git-commit: 25a4a6b9ae09cb71f50317990af1718db1e14355
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Nu kan du tilldela metadataformulär till en viss mapp i distributionen. Alla re
 
 ### Nytt CDN-cachningsbeteende för kampanjrelaterade URL-parametrar {#cache-url-params}
 
-I nya miljöer tar CDN bort marknadsföringsrelaterade frågeparametrar som standard för att öka marknadsföringskampanjens resultat och cacha träfffrekvenser. Befintliga miljöer påverkas inte. [Läs mer.](/help/implementing/dispatcher/caching.md#marketing-parameters)
+I nya miljöer tar CDN bort marknadsföringsrelaterade frågeparametrar som standard, vilket ökar marknadsföringskampanjens prestanda och cachelagrar träfffrekvenser. Befintliga miljöer påverkas inte. [Läs mer.](/help/implementing/dispatcher/caching.md#marketing-parameters)
 
 ### Trafikfilterregler (inklusive WAF-regler) program för tidig användning {#waf-early-adopter}
 

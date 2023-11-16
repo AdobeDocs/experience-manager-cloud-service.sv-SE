@@ -2,9 +2,9 @@
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
 exl-id: 6e5c7f14-c980-48e3-8bdd-a7ec10a9e680
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '609'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som
 
 ### Helskärm och avslutande {#fullscreen-and-exiting}
 
-Om du vill fokusera på visst innehåll kan du klicka på helskärmsikonen för endera sidan av diff-ikonen och förstora den till hela webbläsarfönstret.
+Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen för någon av sidorna i den sida som skiljer sig åt för att förstora den till hela webbläsarfönstret.
 
 ![Helskärmsknapp](/help/sites-cloud/authoring/assets/versions-full-screen.png)
 

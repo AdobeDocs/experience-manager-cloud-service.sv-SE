@@ -2,9 +2,9 @@
 title: Översätt rubrikfritt innehåll
 description: Använd översättningskopplingen för att översätta ditt headless-innehåll.
 exl-id: 3bfbf186-d684-4742-8c5c-34c34ff3adb5
-source-git-commit: f4e28d89023e8f326e6816ebd8168e1e31e772ce
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2170'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ För rättighetsinnehavare som också ansvarar för översättning är det ofta 
 1. Navigera till **Navigering** -> **Resurser** -> **Filer**. Kom ihåg att innehåll utan rubrik i AEM lagras som resurser som kallas för innehållsfragment.
 1. Välj språkroten för projektet. I det här fallet har vi valt `/content/dam/wknd/en`.
 1. Tryck eller klicka på rälsväljaren och visa **Referenser** -panelen.
-1. Tryck eller klicka på **Språkkopior**.
+1. Tryck eller klicka **Språkkopior**.
 1. Kontrollera **Språkkopior** kryssrutan.
 1. Expandera avsnittet **Uppdatera språkkopior** längst ned på referenspanelen.
 1. I **Projekt** listruta, välja **Skapa översättningsprojekt**.
@@ -226,7 +226,7 @@ Om du navigerar till den här mappen via **Navigering** -> **Filer** -> **Resurs
 
 AEM översättningsramverk tar emot översättningarna från översättningskopplingen och skapar sedan automatiskt innehållsstrukturen baserat på språkroten och med hjälp av översättningarna från kopplingen.
 
-Det är viktigt att förstå att detta innehåll inte publiceras och därför inte är tillgängligt för era headless-tjänster. Vi kommer att lära oss om den här strukturen för författarpublicering och se hur vi kan publicera vårt översatta innehåll i nästa steg av översättningsresan.
+Det är viktigt att förstå att detta innehåll inte publiceras och därför inte är tillgängligt för era headless-tjänster. Du lär dig mer om den här strukturen för författarpublicering och hur du publicerar översatt innehåll i nästa steg av översättningsresan.
 
 ## Översättning av människor {#human-translation}
 
@@ -242,7 +242,7 @@ Nu när du är klar med den här delen av den headless översättningsresan ska 
 * Skapa nya översättningsprojekt.
 * Använd översättningsprojekt för att översätta ert headless-innehåll.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Publicera översatt innehåll](publish-content.md) där du får lära dig hur du publicerar översatt innehåll och hur du uppdaterar översättningarna när rotinnehållet för ditt språk ändras.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Publicera översatt innehåll](publish-content.md) där du lär dig hur du publicerar översatt innehåll och hur du uppdaterar översättningarna när rotinnehållet för ditt språk ändras.
 
 ## Ytterligare resurser {#additional-resources}
 

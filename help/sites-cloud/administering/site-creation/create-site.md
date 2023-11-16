@@ -4,9 +4,9 @@ description: Lär dig hur du använder AEM för att skapa en webbplats med hjäl
 feature: Administering
 role: Admin
 exl-id: 9c71c167-2934-4210-abd9-ab085b36593b
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Innan innehållsförfattare kan skapa sidor med innehåll måste webbplatsen fö
 
 Med AEM snabbverktyg kan andra användare snabbt skapa en ny webbplats från grunden med hjälp av webbplatsmallar.
 
-Med verktyget Skapa snabbwebbplats kan du snabbt anpassa temat och formatet för den AEM webbplatsen (JavaScript, CSS och statiska resurser). Detta gör att gränssnittsutvecklaren, som inte behöver ha någon kunskap om AEM, kan arbeta separat och parallellt med innehållsskaparna. Den AEM administratören laddar ned webbplatstemat och skickar det till den frontendutvecklare som anpassar det med sina favoritverktyg och sedan implementerar ändringarna i den AEM koddatabasen, som sedan distribueras.
+Med verktyget Skapa snabbwebbplats kan du snabbt anpassa temat och formatet för AEM (JavaScript, CSS och statiska resurser). Detta gör att gränssnittsutvecklaren, som inte behöver ha någon kunskap om AEM, kan arbeta separat och parallellt med innehållsskaparna. Den AEM administratören laddar ned webbplatstemat och skickar det till den frontendutvecklare som anpassar det med sina favoritverktyg och sedan implementerar ändringarna i den AEM koddatabasen, som sedan distribueras.
 
 Det här dokumentet fokuserar på att skapa webbplatser med verktyget Skapa snabbwebbplats. Om du vill ha en översikt över arbetsflödet för att skapa och anpassa webbplatser går du till [AEM för att skapa webbplatser snabbt](/help/journey-sites/quick-site/overview.md)
 
-## Struktur för planeringswebbplats {#structure}
+## Struktur för planeringsplats {#structure}
 
 Ta tid till att fundera över webbplatsens syfte och planerade innehåll långt i förväg. Detta styr hur du utformar webbplatsens struktur. En bra webbplatsstruktur har stöd för enkel navigering och innehållsidentifiering för webbplatsens besökare och har stöd för olika AEM funktioner som [hantering och översättning av flera webbplatser](/help/sites-cloud/administering/msm-and-translation.md).
 
@@ -75,13 +75,13 @@ Det är enkelt att använda en mall för att skapa en plats.
 
    * Platsens titel visas i webbläsarens namnlist.
    * Webbplatsnamnet blir en del av webbadressen.
-   * Platsnamnet måste uppfylla [AEM sidnamnskonventioner](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#page-name-restrictions-and-best-practices).
+   * Platsnamnet måste uppfylla [AEM sidnamnkonventioner](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#page-name-restrictions-and-best-practices).
 
 1. Tryck eller klicka **Skapa** och webbplatsen skapas från webbplatsmallen.
 
    ![Information om den nya platsen](../assets/create-site-details.png)
 
-1. I bekräftelsedialogrutan som visas trycker du på eller klickar på **Klar**.
+1. I bekräftelsedialogrutan som visas: tryck eller klicka **Klar**.
 
    ![Dialogrutan Slutfört](../assets/success.png)
 

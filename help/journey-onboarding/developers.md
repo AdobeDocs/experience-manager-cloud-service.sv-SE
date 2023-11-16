@@ -4,9 +4,9 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: f57a856b-0932-4e8f-be59-a19fe692e2ab
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1411'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Uppgifter för utvecklare och distributionsansvarig {#developer-deployment-manager}
 
-I den här valfria delen av [startresan,](overview.md) kommer du att lära dig hur utvecklare och driftsättningsansvariga kan få åtkomst till Git för att utveckla program och använda rörledningar för att driftsätta dem.
+I den här valfria delen av [startresan,](overview.md) får du lära dig hur utvecklare och driftsättningsansvariga kan få åtkomst till Git för att utveckla program och använda rörledningar för att driftsätta dem.
 
 ## Story hittills {#story-so-far}
 
@@ -82,7 +82,7 @@ Följ de här stegen för att skapa din första icke-produktionspipeline.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Öppna **Pipelines** från startskärmen i Cloud Manager. Klicka på **+Lägg till** och markera **Lägg till icke-produktionsförlopp**.
+1. Öppna **Pipelines** från startskärmen i Cloud Manager. Klicka **+Lägg till** och markera **Lägg till icke-produktionsförlopp**.
 
    ![Lägg till icke-produktionsflöde](/help/implementing/cloud-manager/assets/configure-pipeline/nonprod-pipeline-add1.png)
 

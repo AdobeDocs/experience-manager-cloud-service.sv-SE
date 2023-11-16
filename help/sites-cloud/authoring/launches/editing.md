@@ -2,7 +2,7 @@
 title: Redigera Launches
 description: När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
 exl-id: d3cd3383-e0a0-4019-9f97-8baa3be99e6e
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 17%
@@ -26,7 +26,7 @@ När du redigerar sidan visas en indikation i det övre verktygsfältet tillsamm
 >
 >Du får inte flytta en sida inom en start. Om du försöker utföra den här åtgärden utlöses ett varningsmeddelande:
 >
->* Varning: Den här sidan är startkällan. Det är inte tillåtet att flytta sidan.
+>* Varning! Den här sidan är källan till en start. Det är inte tillåtet att flytta sidan.
 
 ### Redigera startsidor som är beroende av en Live-kopia {#editing-launch-pages-subject-to-a-live-copy}
 
@@ -37,7 +37,7 @@ Om din lansering baseras på en [Live Copy](/help/sites-cloud/administering/msm/
 
 En live-kopia används för att synkronisera innehåll *från* källgrenen *till* startgrenen (för att hålla startsidan uppdaterad med ändringarna i källan).
 
-Du kan göra ändringar på samma sätt som du kan redigera en vanlig Live-kopia; till exempel:
+Du kan göra ändringar på samma sätt som du kan redigera en vanlig Live-kopia, till exempel:
 
 * Om du klickar på ett stängt hänglås bryts synkroniseringen och du kan göra nya uppdateringar av innehållet när du startar programmet. När du har låst upp (öppet hänglås) skrivs inte ändringarna över av ändringar som gjorts på samma plats i källgrenen.
 * **Gör uppehåll i** (och **återuppta**) arv för en viss sida.
@@ -56,7 +56,7 @@ Om du vill spåra de ändringar du har gjort kan du visa startsidan i **Referens
 
 1. De två sidorna (start och källa) öppnas sida vid sida.
 
-   Mer information om hur du använder funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
+   Mer information om hur du använder den här funktionen finns i [Sidskillnader](/help/sites-cloud/authoring/features/page-diff.md).
 
 ## Ändra använda källsidor {#changing-the-source-pages-used}
 
@@ -72,7 +72,7 @@ Du kan när som helst lägga till eller ta bort sidor till/från intervallet med
 
 >[!NOTE]
 >
->Om du vill lägga till sidor i en programstart måste de ligga under en gemensam språkrot. det vill säga, inom en enda plats.
+>Om du vill lägga till sidor i en programstart måste de ligga under en gemensam språkrot, det vill säga inom en enda plats.
 
 ## Redigera en startkonfiguration {#editing-a-launch-configuration}
 

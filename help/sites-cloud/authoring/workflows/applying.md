@@ -1,24 +1,24 @@
 ---
 title: Använda arbetsflöden på sidor
-description: När du redigerar kan du anropa arbetsflöden för att göra något på sidorna; det går även att använda mer än ett arbetsflöde.
+description: När du redigerar kan du anropa arbetsflöden för att utföra åtgärder på dina sidor. Det går också att använda mer än ett arbetsflöde.
 exl-id: 86e71f0e-e53e-40bc-901d-2a1ab347bd0a
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '657'
 ht-degree: 11%
 
 ---
 
 # Använda arbetsflöden på sidor {#applying-workflows-to-pages}
 
-När du redigerar kan du anropa arbetsflöden för att göra något på sidorna; det går även att använda mer än ett arbetsflöde.
+När du redigerar kan du anropa arbetsflöden för att utföra åtgärder på dina sidor. Det går också att använda mer än ett arbetsflöde.
 
 När du använder arbetsflödet anger du följande information:
 
 * Det arbetsflöde som ska användas.
    * Du kan använda vilket arbetsflöde som helst (som du fått tillgång till av AEM-administratören).
 * Alternativt kan du använda en titel som hjälper till att identifiera arbetsflödesinstansen i en användares inkorg.
-* Arbetsflödets nyttolast. detta kan vara en eller flera sidor.
+* Arbetsflödets nyttolast. Det kan vara en eller flera sidor.
 
 Arbetsflöden kan startas från:
 
@@ -52,9 +52,7 @@ Du kan starta ett arbetsflöde från:
 * [alternativet Skapa i verktygsfältet Platser](#starting-a-workflow-from-the-sites-toolbar).
 * [tidslinjespår i webbplatskonsolen](#starting-a-workflow-from-the-timeline).
 
-I båda fallen måste du:
-
-* [Ange arbetsflödesinformation i guiden Skapa arbetsflöde](#specifying-workflow-details-in-the-create-workflow-wizard).
+I båda fallen måste du [Ange arbetsflödesinformation i guiden Skapa arbetsflöde](#specifying-workflow-details-in-the-create-workflow-wizard).
 
 ### Starta ett arbetsflöde från verktygsfältet Platser {#starting-a-workflow-from-the-sites-toolbar}
 
@@ -83,7 +81,7 @@ Från **Tidslinje** du kan starta ett arbetsflöde som ska användas för den va
 
 The **Skapa arbetsflöde** hjälper dig att välja arbetsflöde och ange nödvändig information.
 
-När du har öppnat **Skapa arbetsflöde** guide från antingen
+När du har öppnat **Skapa arbetsflöde** guide från antingen:
 
 * [alternativet Skapa i verktygsfältet Platser](#starting-a-workflow-from-the-sites-toolbar).
 * [tidslinjespår i webbplatskonsolen](#starting-a-workflow-from-the-timeline).
@@ -118,11 +116,11 @@ Du kan ange information:
 
 1. I **Omfång** steg du kan välja:
 
-   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) och välja ut ytterligare resurser, i webbläsaren klickar/trycker du **Välj** för att lägga till innehållet i arbetsflödesinstansen.
+   * **Lägg till innehåll** för att öppna [sökvägsläsare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#path-browser) och välj ytterligare resurser. När du är i webbläsaren klickar/trycker du **Välj** för att lägga till innehållet i arbetsflödesinstansen.
 
    * En befintlig resurs som visar ytterligare åtgärder:
 
-      * **Inkludera underordnade** om du vill ange att underordnade resurser ska inkluderas i arbetsflödet.
+      * **Inkludera underordnade** om du vill ange att underordnade för den resursen ska inkluderas i arbetsflödet.
 En dialogruta öppnas där du kan förfina markeringen enligt:
 
          * Inkludera endast omedelbara barn.

@@ -2,9 +2,9 @@
 title: Verifierar innehållsöverföringar
 description: Använd verktyget Innehållsöverföring för att validera innehållsöverföringar
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
-source-git-commit: c8739388ac21dd40d6757815af6f2732991d216b
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1077'
 ht-degree: 1%
 
 ---
@@ -138,7 +138,7 @@ Se [Användarmappning och huvudmigrering](/help/journey-migration/content-transf
 
 När extraheringen och intaget har slutförts finns en sammanfattning och rapport om den huvudsakliga migreringen. Den här informationen kan användas för att validera vilka användare och grupper som migrerats och, kanske, för att avgöra varför vissa inte gjorde det.
 
-Om du vill visa den här informationen går du till Cloud Acceleration Manager. Klicka på ditt projektkort och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och hitta det intag du vill verifiera. Klicka på de tre punkterna (**...**) för det intrycket och klicka sedan på **Visa huvudsammanfattning** i listrutan.
+Om du vill visa den här informationen går du till Cloud Acceleration Manager. Klicka på projektkortet och klicka på kortet för innehållsöverföring. Navigera till **Inmatningsjobb** och hitta det intag du vill verifiera. Klicka på de tre punkterna (**...**) för det intrycket och klicka sedan **Visa huvudsammanfattning** i listrutan.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-action.png)
 

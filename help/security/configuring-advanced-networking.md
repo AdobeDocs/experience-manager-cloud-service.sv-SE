@@ -2,9 +2,9 @@
 title: Konfigurera avancerat nätverk för AEM as a Cloud Service
 description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN eller en flexibel eller dedikerad IP-adress för AEM as a Cloud Service
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
-source-git-commit: 46ff33808e710b511db7cfcdad931c14846d8cfe
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3598'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter inn
 
 Om konfigurationen för flexibel portutgångar som omfattar programmet är klar kan du `PUT /program/<program_id>/environment/<environment_id>/advancedNetworking` Slutpunkten måste anropas per miljö för att nätverk på miljönivå ska kunna aktiveras och för att eventuella regler för portvidarebefordran ska kunna deklareras. Parametrar kan konfigureras per miljö för att ge flexibilitet.
 
-Regler för portvidarebefordran bör deklareras för alla andra målportar än 80/443, men bara om inte http- eller https-protokoll används, genom att ange uppsättningen målvärdar (namn eller IP och med portar). Klientanslutningen som använder port 80/443 över http/https måste fortfarande använda proxyinställningar i anslutningen för att egenskaperna för avancerade nätverk ska kunna tillämpas på anslutningen. För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
+Regler för portvidarebefordran bör deklareras för alla andra målportar än 80/443, men bara om inte http- eller https-protokoll används, genom att ange uppsättningen målvärdar (namn eller IP och med portar). Klientanslutningen som använder port 80/443 över http/https måste fortfarande använda proxyinställningar i anslutningen för att egenskaperna för avancerade nätverk ska tillämpas på anslutningen. För varje målvärd måste kunderna mappa den avsedda destinationsporten till en port från 30000 till 30999.
 
 API:t bör svara på bara några sekunder, vilket anger uppdateringsstatus och efter cirka 10 minuter, slutpunktens `GET` -metoden ska ange att avancerade nätverk är aktiverade.
 

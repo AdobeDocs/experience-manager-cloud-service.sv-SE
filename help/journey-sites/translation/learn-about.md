@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 1e5e739a-1fbd-49cf-b529-335696d7e2f4
-source-git-commit: 96a0dacf69f6f9c5744f224d1a48b2afa11fb09e
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '491'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig AEM Sites koncept och teorin om AEM översättning.
 Det här dokumentet hjälper dig att förstå hur AEM Sites innehåll skapas och hur sådant innehåll kan översättas. När du har läst bör du:
 
 * Förstå de grundläggande begreppen för att skapa innehåll i AEM Sites.
-* Läs om hur AEM stöder översättning.
+* Lär dig mer om hur AEM stöder översättning.
 
 ## AEM Sites - översikt {#aem-sites}
 
@@ -47,16 +47,16 @@ På en hög nivå består översättning i AEM av fyra enkla steg:
 1. Granska och publicera det översatta innehållet.
 
 
-Under kundresan får du lära dig mer om hur AEM översätter innehåll steg för steg.
+På vägen får du lära dig mer om hur AEM översätter innehåll steg för steg.
 
 ## What&#39;s Next {#what-is-next}
 
 Tack för att du kom igång med din AEM Sites översättningsresa! Nu när du läser det här dokumentet bör du:
 
 * Lär dig grunderna i AEM Sites framtagning av innehåll.
-* Läs om hur AEM stöder översättning.
+* Lär dig mer om hur AEM stöder översättning.
 
-Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att nästa gång du granskar dokumentet [Kom igång med AEM Sites translation](getting-started.md) där du får en översikt över hur AEM hanterar innehåll och lär dig mer om översättningsverktygen.
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att granska nästa gång dokumentet [Kom igång med AEM Sites translation](getting-started.md) där du får en översikt över hur AEM hanterar innehåll och lär dig mer om översättningsverktygen.
 
 ## Ytterligare resurser {#additional-resources}
 

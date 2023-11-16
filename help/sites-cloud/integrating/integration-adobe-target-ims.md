@@ -2,9 +2,9 @@
 title: IMS-konfiguration som ska användas vid integrering med Adobe Target
 description: Läs mer om IMS-konfiguration för användning vid integrering med Adobe Target
 exl-id: b5474b70-bedc-4cc9-ad47-89dcb2415e3a
-source-git-commit: 155b24c4b46e8baebd6215c0717d9f2adde95017
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '880'
 ht-degree: 1%
 
 ---
@@ -154,7 +154,7 @@ Välj **Visa** (till höger om en viss projektpost) om du vill visa mer informat
 * APIS
    * Exempel: Adobe Target
 
-Vissa av dessa behöver du för att slutföra integreringen av Adobe Target i AEM baserat på IMS.
+Vissa av dessa måste integreras i AEM baserat på IMS.
 
 ## Slutför IMS-konfigurationen i AEM {#completing-the-ims-configuration-in-aem}
 
@@ -196,7 +196,7 @@ Så här bekräftar du att konfigurationen fungerar som förväntat:
 
    ![Kontrollera hälsa](assets/integrate-target-ims-12.png)
 
-1. Om du lyckas visas ett bekräftelsemeddelande.
+1. Om det lyckas visas ett bekräftelsemeddelande.
 
 ## Slutför integrationen med Adobe Target {#complete-the-integration-with-adobe-target}
 
@@ -211,7 +211,7 @@ The configuration can now be referenced for a Cloud Service to use the Target St
 1. Open the **Tools** menu. Then, within the **Cloud Services** section, select **Legacy Cloud Services**.
 1. Scroll down to **Adobe Target** and select **Configure now**.
 
-   The **Create Configuration** dialog will open.
+   The **Create Configuration** dialog opens.
 
 1. Enter a **Title** and, if you want, a **Name** (if left blank it is generated from the title).
 
@@ -219,7 +219,7 @@ The configuration can now be referenced for a Cloud Service to use the Target St
 
 1. Confirm with **Create**.
 
-   The **Edit Component** dialog will open.
+   The **Edit Component** dialog opens.
 
 1. Enter the details in the **Adobe Target Settings** tab:
 

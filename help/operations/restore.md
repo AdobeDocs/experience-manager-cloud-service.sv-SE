@@ -2,9 +2,9 @@
 title: Innehållsåterställning i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service innehåll från en säkerhetskopia med hjälp av Cloud Manager.
 exl-id: 921d0c5d-5c29-4614-ad4b-187b96518d1f
-source-git-commit: bf8493909fa995ec30d67646aec5b712318dbf75
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---

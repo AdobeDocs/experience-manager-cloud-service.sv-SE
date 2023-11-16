@@ -2,16 +2,16 @@
 title: Anpassade felsidor
 description: AEM har en standardfelhanterare för hantering av HTTP-fel, som kan anpassas.
 exl-id: b74c65d1-8ef5-4ad4-8255-8187f3b1d84c
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
 
 # Anpassa felsidor {#customizing-error-pages}
 
-AEM har en standardfelhanterare för hantering av HTTP-fel. genom att till exempel visa:
+AEM innehåller en standardfelhanterare för hantering av HTTP-fel, till exempel genom att visa:
 
 ![Standardfelmeddelande](assets/error-message-standard.png)
 
@@ -47,7 +47,7 @@ Du kan utveckla egna skript för att anpassa sidorna som visas i felhanteraren n
 
 >[!CAUTION]
 >
->The `404.jsp` Skriptet har utformats särskilt för att AEM autentiseringen. särskilt för att möjliggöra systeminloggning vid dessa fel.
+>The `404.jsp` skriptet har utformats särskilt för att AEM autentiseringen, särskilt för att tillåta systeminloggning vid dessa fel.
 >
 >Därför bör det här manuset ersättas med stor omsorg.
 
@@ -62,7 +62,7 @@ När bearbetningen av en begäran resulterar i ett undantag, är Apache Sling-ra
    * HTTP-svarskoden 500
    * Undantagets stackspårning
 
-Av [anpassa de sidor som visas i felhanteraren](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` kan skapas. Det används dock bara om `HttpServletResponse.sendError(500)` exekveras uttryckligen, d.v.s. från en undantagskattekare.
+Av [anpassa de sidor som visas i felhanteraren](#how-to-customize-pages-shown-by-the-error-handler) a `500.jsp` kan skapas. Det används dock bara om `HttpServletResponse.sendError(500)` körs explicit, det vill säga från en undantagskatalog.
 
 Annars är svarskoden inställd på 500, men `500.jsp` skriptet körs inte.
 
@@ -71,7 +71,7 @@ Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsam
 >[!NOTE]
 >
 >I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. Om du vill att det faktiska svaret från backend ska gå igenom måste du lägga till följande rubrik i svaret: `x-aem-error-pass: true`.
->Detta fungerar bara för svar som kommer från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
+>Detta fungerar bara för svar från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
 
 >[!CAUTION]
 >

@@ -2,9 +2,9 @@
 title: Kontrollerar DNS-poststatus
 description: Lär dig hur du avgör om dina DNS-inställningar kan matchas korrekt med hjälp av Cloud Manager.
 exl-id: 76ca1584-e21d-4e3a-a08a-82b2779167cf
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ I Cloud Manager kan du avgöra om ditt domännamn matchar din AEM as a Cloud Ser
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Miljö** från **Översikt** sida.
+1. Navigera till **Miljö** från **Ökning** sida.
 
-1. Klicka på **Domäninställningar** i den vänstra navigeringspanelen.
+1. Klicka **Domäninställningar** i den vänstra navigeringspanelen.
 
 1. Klicka på **Status** -ikon för domännamnet.
 
 Cloud Manager utför en DNS-sökning efter ditt domännamn och visar ett av följande statusmeddelanden.
 
-* **DNS-status kunde inte hittas** - DNS-status kan inte identifieras förrän ditt anpassade domännamn har verifierats och distribuerats.
+* **DNS-status kunde inte identifieras** - DNS-status kommer inte att identifieras förrän ditt anpassade domännamn har verifierats och distribuerats.
 
    * Den här statusen visas även när ditt anpassade domännamn håller på att tas bort.
 

@@ -2,9 +2,9 @@
 title: Hantera innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur du använder Resurskonsolen för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
 exl-id: 333ad877-db2f-454a-a3e5-59a936455932
-source-git-commit: 2a4538ad8b52615ffdee110393bfbc01f57694f4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1873'
 ht-degree: 5%
 
 ---
@@ -319,7 +319,7 @@ Till exempel:
 
 The **Jämför med aktuell** finns tillgänglig från [Tidslinje](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments) när du har valt en viss version.
 
-Den här öppnas:
+Den öppnas:
 
 * den **Aktuell** (senaste) version (vänster)
 

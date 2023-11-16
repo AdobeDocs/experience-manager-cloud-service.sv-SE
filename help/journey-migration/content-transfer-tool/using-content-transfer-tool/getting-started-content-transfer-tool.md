@@ -2,9 +2,9 @@
 title: Komma igång med verktyget Innehållsöverföring
 description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: 9c45a46bc50625301529d5433c78fc9c706f8071
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1427'
 ht-degree: 6%
 
 ---
@@ -98,7 +98,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
    >
    >Namnet måste följa samma konventioner som en AEM nod så det får inte innehålla något av följande tecken: . / : [ ] | *
 
-1. Nu bör du se din migreringslista i listvyn. Klicka på symbolen med tre punkter (**...**) för att öppna listrutan och klicka på **Kopiera extraheringsnyckel**. Du behöver den här nyckeln under extraheringsfasen. Kopiera den här extraheringsnyckeln.
+1. Nu bör du se din migreringslista i listvyn. Markera symbolen med tre punkter (**...**) för att öppna listrutan och välja **Kopiera extraheringsnyckel**. Du behöver den här nyckeln under extraheringsfasen. Kopiera den här extraheringsnyckeln.
 
    >[!NOTE]
    >
@@ -118,7 +118,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
 
 1. När du har installerat den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen går du till **Åtgärder - innehållsmigrering**
 
-1. Klicka på **Skapa migreringsuppsättning**
+1. Klicka **Skapa migreringsuppsättning**
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam5.png)
 
@@ -149,7 +149,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
       >* `/home`
       >* `/etc` (vissa `/etc` banor kan markeras i CTT)
 
-1. Klicka på **Spara** när du har fyllt i alla fält i **Skapa migreringsuppsättning** informationsskärmen.
+1. Klicka **Spara** när du har fyllt i alla fält i **Skapa migreringsuppsättning** informationsskärmen.
 
 <!-- 1. You will view your migration set in the **Content Transfer** wizard, as shown in the figure below.
 
@@ -161,7 +161,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
    * A *green cloud* indicates that you can complete the extraction process.
    * A *yellow icon* indicates that you did not create the existing migration set and the specific one is created by some other user in the same instance.
 
-1. Select a migration set and click on **Properties** to view or edit the migration set properties. While editing properties, it is not possible to change the **Migration Set name** or the **Service URL**. 
+1. Select a migration set and click **Properties** to view or edit the migration set properties. While editing properties, it is not possible to change the **Migration Set name** or the **Service URL**. 
 
    ![image](/help/journey-migration/content-transfer-tool/assets-ctt/ctt06.png) -->
 
@@ -179,11 +179,11 @@ Följ stegen nedan för att göra en storlekskontroll:
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam8.png)
 
-1. Det här öppnar **Kontrollera storlek** -dialogrutan.
+1. Då öppnas **Kontrollera storlek** -dialogrutan.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam9.png)
 
-1. Klicka på **Kontrollera storlek** för att starta processen. Du kommer sedan tillbaka till vyn med migreringsuppsättningslistor och du bör se ett meddelande som anger att **Kontrollera storlek** är igång.
+1. Klicka **Kontrollera storlek** för att starta processen. Du kommer sedan tillbaka till vyn med migreringsuppsättningslistor och du bör se ett meddelande som anger att **Kontrollera storlek** är igång.
 
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam10.png)
 

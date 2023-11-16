@@ -4,9 +4,9 @@ description: Upptäck hur du kan använda den universella redigeraren för att r
 hidefromtoc: true
 index: false
 exl-id: a4854a56-9434-4d15-a56a-f1798f27263a
-source-git-commit: 2c7ad41ec44ed2627bfcfe206c1b7ba660cef9c0
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Redigering på plats och i sitt sammanhang kan ofta vara fördelaktigt jämfört
 
 >[!NOTE]
 >
->Om du vill använda den universella redigeraren i den här testversionen måste du använda Chrome som webbläsare och inte i Incognito-läge. Detta är en begränsning av testversionen, inte av Universal Editor.
+>Om du vill använda den universella redigeraren i den här testversionen måste du använda Chrome som webbläsare och inte i inkogenitläge. Detta är en begränsning av testversionen, inte av Universal Editor.
 
 Med den universella redigeraren kan du smidigt redigera text både i sitt sammanhang och på plats, vilket gör det enkelt och intuitivt att skapa innehåll.
 
@@ -79,7 +79,7 @@ Med den universella redigeraren kan du interagera med ditt innehåll i dess samm
 
    ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-1.png)
 
-1. Reader kan finnas på olika enheter med olika proportioner, så redigeraren erbjuder emuleringslägen för att se hur sidan kommer att visas för användarna. Välj till exempel alternativet för mobil enhet i stående läge.
+1. Reader kan finnas på olika enheter med olika proportioner, så redigeraren erbjuder emuleringslägen för att se hur sidan visas för användarna. Välj till exempel alternativet för mobil enhet i stående läge.
 
    ![Emulatormenyalternativet](assets/do-not-localize/ue-emulator-2.png)
 
@@ -87,7 +87,7 @@ Med den universella redigeraren kan du interagera med ditt innehåll i dess samm
 
 1. Återställa emulatorn till skrivbordsläge.
 
-Du kan också ange exakta dimensioner för emulatorn och rotera den emulerade enheten för att kunna visa innehållet på valfri målenhet.
+Du kan också ange exakta dimensioner för emulatorn och rotera den emulerade enheten för att visa innehållet på valfri målenhet.
 
 ## Förhandsgranska och publicera {#preview}
 

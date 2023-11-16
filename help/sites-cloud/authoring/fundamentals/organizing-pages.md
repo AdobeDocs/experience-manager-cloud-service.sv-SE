@@ -2,9 +2,9 @@
 title: Skapa och ordna sidor
 description: Lär dig hur du organiserar din webbplats genom att skapa och hantera sidor med AEM.
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
-source-git-commit: b658f303d25cca958c08a95ead12fa3b987bcb3b
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2451'
+source-wordcount: '2449'
 ht-degree: 2%
 
 ---
@@ -225,7 +225,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    >
    >Om du skapar en sida med ett namn som redan finns på den platsen, genereras automatiskt en variant av namnet genom att en siffra läggs till. Om `beach` finns redan, en ny sida blir `beach1`.
 
-1. Om du återgår till konsolen ser du den nya sidan:
+1. Om du återgår till konsolen kan du se din nya sida:
 
    ![Resultat av ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-result.png)
 

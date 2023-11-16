@@ -4,9 +4,9 @@ description: Experience Cloud Setup Automation är ett enkelt och automatiserat 
 feature: Administering
 role: Admin
 exl-id: 351ead2c-7b0d-4bd9-a020-47516948d467
-source-git-commit: 635f4c990c27a7646d97ebd08b453c71133f01b3
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ I den här videon utforskas hur en AEM är integrerad med Experience Platform Ta
 
 ## Krav
 
-Automatiseringskonfigurationen är utformad för att fungera direkt med en AEM sajt som byggts med [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) med [Adobe-klientdatalager](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) aktiverat. Du kan skapa en ny webbplats där dessa funktioner aktiveras automatiskt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller genom att skapa en plats med en [Webbplatsmall](/help/journey-sites/quick-site/create-site.md).
+Automatiseringskonfigurationen är utformad för att fungera direkt med en AEM sajt som byggts med [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) med [Adobe-klientdatalager](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) aktiverat. Du kan skapa en ny webbplats där dessa funktioner aktiveras automatiskt med [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller genom att skapa en plats med en [Webbplatsmall](/help/journey-sites/quick-site/create-site.md).
 
 ## Förutsättningar {#prerequisites}
 
@@ -46,7 +46,7 @@ Miljön bör nu vara redo för Experience Cloud Setup Automation.
 1. Navigera till **Webbplatser** och välj roten på webbplatsen som ska integreras med Adobe Analytics.
 1. Expandera menyn för sidospåret och tryck **Konfigurationsanalys**.
 
-   Det här är ett nytt alternativ på sidospåret som öppnar en panel med kontroller och status för Experience Cloud Setup Automation.
+   Det här är ett nytt alternativ på sidospåret som öppnar en panel med kontroller och status för automatisk installation av Experience Cloud.
 1. Tryck på **Integrera analyser** -knappen.
 1. Ange ett namn för **Report Suite-ID**.
 
@@ -74,7 +74,7 @@ När automatiseringen är klar validerar du att webbplatsen nu kör Analytics-h�
 Navigera sedan till Adobe Analytics för att visa data som flödar in från händelser på AEM webbplats.
 
 1. Navigera till Adobe Analytics i samma IMS-organisation som din AEM.
-1. Skapa en ny översiktsrapport för AEM Sites genom att navigera till **Rapporter** > **Engagemang** > **Adobe Experience Manager** > **Översikt över webbplatsprestanda**.
+1. Skapa en ny översiktsrapport för AEM Sites genom att navigera till **Rapporter** > **Engagemang** > **Adobe Experience Manager** > **Platsprestandaöversikt**.
 1. Tryck **Öppna rapport**.
 1. Välj **Report Suite-ID** som matchar namnet på Report Suite som användes i föregående övning.
 1. Visa dataflödet för analyser i den nya mallen över tid.

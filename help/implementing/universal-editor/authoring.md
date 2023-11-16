@@ -2,9 +2,9 @@
 title: Skapa innehåll med den universella redigeraren
 description: Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den universella redigeraren.
 exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
-source-git-commit: c6d4300e6e031a4958277fa3bce251ac6aa5dbc9
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2442'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Om du vill skapa innehåll för ett program med den universella redigeraren mås
 
 ## Logga in {#sign-in}
 
-När appen har instrumenterats för att fungera med den universella redigeraren måste du logga in i den universella redigeraren. Du behöver en Adobe ID för att logga in och [har tillgång till den universella redigeraren.](getting-started.md#request-access)
+När programmet har instrumenterats för att fungera med den universella redigeraren loggar du in i den universella redigeraren. Du behöver en Adobe ID för att logga in och [har tillgång till den universella redigeraren.](getting-started.md#request-access)
 
 När du har loggat in anger du URL-adressen till sidan som du vill redigera i dialogrutan [platsfält.](#location-bar) så att du kan börja redigera innehåll som [textinnehåll](#text-mode) eller [mediainnehåll.](#media-mode)
 
@@ -192,7 +192,7 @@ I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i
 
 #### Komponentläge {#component-mode}
 
-I komponentläget kan innehållsförfattaren klicka för att markera komponenter och redigera dem:
+I komponentläget kan innehållsförfattaren välja komponenter som ska redigeras:
 
 * [Redigera oformaterad text](#editing-content) på plats.
 * [Redigera RTF](#editing-rich-text) på plats med ytterligare formateringsalternativ som visas i egenskapsfältet.

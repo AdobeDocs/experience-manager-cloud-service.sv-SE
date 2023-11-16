@@ -2,16 +2,16 @@
 title: Förstå segmentering
 description: Segmentering är en viktig faktor när man skapar en kampanj
 exl-id: 36a9623a-bb19-498a-a0e9-ef80582b1fcf
-source-git-commit: 90de3cf9bf1c949667f4de109d0b517c6be22184
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
 # Förstå segmentering {#understanding-segmentation}
 
-Segmentering är en viktig faktor när man skapar en kampanj. I de flesta fall måste ni ha definierade segment innan ni kan påbörja kampanjen.
+Segmentering är en viktig faktor när man skapar en kampanj. I de flesta fall måste du ha definierat segment innan du kan starta kampanjen.
 
 Besökare har olika intressen och mål när de besöker en webbplats. Att förstå dessa mål och uppfylla förväntningarna är en viktig framgångsrik faktor för onlinemarknadsföring.
 
@@ -36,13 +36,13 @@ Vid diskussion av segmentering används följande terminologi:
 * **Trait** - En egenskap är en egenskap hos en besökare som kan användas för att bestämma medlemskap i ett visst segment.
 * **Segment** - Ett segment är en samling besökare som delar vissa egenskaper. Segmenten bör vara distinkta, med ett minimum av överlappning med andra segment.
 * **Beteendeegenskaper** - Beteenden är sådana som relaterar till besökarens beteende på webbplatsen. Bland dessa finns:
-   * Intresset på er webbplats; inklusive besökta sidor och köpta produkter
-   * Intresse för den webbplats som refererar. inklusive söktermer som används eller annonser som klickats på
-   * Intresse av andra anläggningar. med verktyg som Spyjax
-   * Besökarlojalitet; besökets längd, besöksfrekvens
+   * Intresset hos er webbplats, inklusive besökta sidor och köpta produkter
+   * Intressen på den refererande webbplatsen, inklusive söktermer som används eller annonser som klickats på
+   * Intressen av andra webbplatser; fastställs med verktyg som Spyjax
+   * Besökarens lojalitet, besökets varaktighet, besöksfrekvens
 * **Demografiska egenskaper** - Dessa är utvalda populationsegenskaper, bland annat:
    * Ålder
-   * Inkomst
+   * Intäkter
    * Familjestorlek
    * Civilstånd
    * Kön

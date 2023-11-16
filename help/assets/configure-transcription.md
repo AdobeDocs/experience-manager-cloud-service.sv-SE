@@ -11,9 +11,9 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1627'
 ht-degree: 0%
 
 ---

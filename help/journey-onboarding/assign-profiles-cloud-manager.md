@@ -4,9 +4,9 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 555688e5-f937-462c-9fcc-b90685f1882b
-source-git-commit: f7525b6b37e486a53791c2331dc6000e5248f8af
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1528'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Tilldela teammedlemmar till Cloud Manager-produktprofiler {#assign-team-members}
 
-I den här delen av [startresan,](overview.md) du får lära dig hur du tilldelar teammedlemmar till Cloud Manager-produktprofiler.
+I den här delen av [startresan,](overview.md) om du vill lära dig hur du tilldelar teammedlemmar till Cloud Managers produktprofiler.
 
 ## Syfte {#objective}
 
-I det föregående steget på denna resa [som kommer till Admin Console,](admin-console.md) du har lärt dig logga in på Admin Console och verifiera dina behörigheter som systemadministratör. Nu kan du ge teammedlemmarna tillgång till Cloud Manager. Det gör du genom att tilldela produktprofiler.
+I det föregående steget på denna resa [som har åtkomst till Admin Console,](admin-console.md) du har lärt dig logga in på Admin Console och verifiera dina behörigheter som systemadministratör. Nu kan du ge teammedlemmarna tillgång till Cloud Manager. Det gör du genom att tilldela produktprofiler.
 
 När du ger användare åtkomst till en Adobe-lösning behöver du inte nödvändigtvis ge dem full åtkomst. Med produktprofiler kan varje lösning ha en egen uppsättning användarbehörigheter. Du använder Admin Console för att tilldela produktprofiler.
 
@@ -33,7 +33,7 @@ När du har läst det här dokumentet bör du:
 
 ## Förutsättningar {#prerequisites}
 
-Om du vill tilldela teammedlemmar till produktprofiler måste du ha information om dina teammedlemmar, som behöver komma åt AEM as a Cloud Service, inklusive:
+Om du vill tilldela teammedlemmar till produktprofiler måste du ha information om teammedlemmarna, som behöver få tillgång AEM as a Cloud Service, inklusive:
 
 * Namn
 * E-postadresser
@@ -65,7 +65,7 @@ Innan ditt team kan göra något annat måste de integreras i Cloud Manager geno
 
 Med Admin Console kan du se en lista över Cloud Manager-profiler.
 
-1. Logga in på Adobe Admin Console på [adminconsole.adobe.com](https://adminconsole.adobe.com/) och **Översikt** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
+1. Logga in på Adobe Admin Console på [adminconsole.adobe.com](https://adminconsole.adobe.com/) och från **Ökning** sida, markera **Adobe Experience Manager as a Cloud Service** från **Produkter och tjänster** kort.
 
    ![AEM som produkt](/help/journey-onboarding/assets/assign-team1.png)
 
@@ -73,7 +73,7 @@ Med Admin Console kan du se en lista över Cloud Manager-profiler.
 
    ![Cloud Manager](/help/journey-onboarding/assets/assign-team2.png)
 
-1. Du ser en lista över förkonfigurerade Cloud Manager-produktprofiler.
+1. Du kan se en lista över förkonfigurerade Cloud Manager-produktprofiler.
 
    ![Produktprofiler](/help/journey-onboarding/assets/assign-team3.png)
 
@@ -91,7 +91,7 @@ Nu kan du lägga till användare och tilldela dem till **Företagsägare** produ
 
 1. Identifiera de användare som behöver hantera Cloud Manager-program. De här är dina **Affärsägare**.
 
-1. Logga in på Admin Console vid `[adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise/overview)` och **Översikt** sida, markera **Adobe Experience Manager as a Cloud Service** produkt från **Produkter och tjänster** kort.
+1. Logga in på Admin Console vid `[adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise/overview)` och **Ökning** sida, markera **Adobe Experience Manager as a Cloud Service** produkt från **Produkter och tjänster** kort.
 
    ![Produkter och tjänster](/help/journey-onboarding/assets/assign-team1.png)
 
@@ -118,11 +118,11 @@ Nu kan du lägga till användare och tilldela dem till **Företagsägare** produ
 
 Dina **Företagsägare** har tilldelats och har nu åtkomst till Cloud Manager. Glöm inte att utse dig själv till systemadministratör för **Företagsägare** profil.
 
-## Tilldela produktprofilen för Deployment Manager {#assign-deployment-manager}
+## Tilldela produktprofilen för Distributionshanteraren {#assign-deployment-manager}
 
 1. Identifiera de användare som behöver distribuera kod.
 
-1. Logga in på Admin Console vid `[adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise/overview)` och **Översikt** sidmarkering **Adobe Experience Manager as a Cloud Service** produkten från **Produkter och tjänster** kort.
+1. Logga in på Admin Console vid `[adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise/overview)` och **Ökning** sidmarkering **Adobe Experience Manager as a Cloud Service** produkten från **Produkter och tjänster** kort.
 
    ![Produkter och tjänster](/help/journey-onboarding/assets/assign-team1.png)
 
@@ -146,7 +146,7 @@ Dina **Distributionshanteraren** har tilldelats och har nu åtkomst till Cloud M
 
 1. Identifiera de användare som behöver utveckla AEM program och hantera kod.
 
-1. Logga in på Admin Console vid `[adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise/overview)` och **Översikt** sidmarkering **Adobe Experience Manager as a Cloud Service** produkten från **Produkter och tjänster** kort.
+1. Logga in på Admin Console vid `[adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise/overview)` och **Ökning** sidmarkering **Adobe Experience Manager as a Cloud Service** produkten från **Produkter och tjänster** kort.
 
    ![Produkter och tjänster](/help/journey-onboarding/assets/assign-team1.png)
 
@@ -168,7 +168,7 @@ Dina **Utvecklare** har tilldelats och har nu åtkomst till Cloud Manager. Beroe
 
 ## What&#39;s Next {#whats-next}
 
-Grattis! Ditt nybildade Cloud Manager-team (inklusive dig själv som är tilldelad till **Företagsägare** profil) har konfigurerats. I rollen **Företagsägare**&#x200B;är du nu bara ett steg ifrån att logga in i Cloud Manager och skapa dina molnresurser.
+Grattis! Ditt nybildade Cloud Manager-team (inklusive dig själv som tilldelats till **Företagsägare** profil) har konfigurerats. I rollen **Företagsägare**&#x200B;är du nu bara ett steg ifrån att logga in i Cloud Manager och skapa dina molnresurser.
 
 Under den här delen av introduktionsresan lärde du dig att tilldela teammedlemmar till profiler i Admin Console. Nu bör du:
 
@@ -177,7 +177,7 @@ Under den här delen av introduktionsresan lärde du dig att tilldela teammedlem
 * Lär dig de tre viktiga produktprofilerna för Cloud Manager: **Företagsägare**, **Distributionshanteraren** och **Utvecklare**.
 * Du kan tilldela teammedlemmar till Cloud Manager-produktprofiler.
 
-Du är nu redo att fortsätta din introduktionsresa genom att nästa gång du granskar dokumentet [Access Cloud Manager,](cloud-manager.md) där du får lära dig att komma åt Cloud Manager och skapa dina projektresurser.
+Du är nu redo att fortsätta din introduktionsresa genom att granska dokumentet nästa gång [Access Cloud Manager,](cloud-manager.md) där du får lära dig att komma åt Cloud Manager och skapa dina projektresurser.
 
 ## Ytterligare resurser {#additional-resources}
 

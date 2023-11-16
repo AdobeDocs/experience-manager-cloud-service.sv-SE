@@ -2,9 +2,9 @@
 title: Förhandsgranska innehåll
 description: Lär dig hur du använder AEM förhandsvisningstjänst för att förhandsgranska innehåll innan du publicerar.
 exl-id: 6b4b57f6-2e66-4c83-94d9-bc1e0daab0f3
-source-git-commit: 1804eacb5399dc38c97ff953031666711b9a0e4f
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Mer information om förhandsvisningsmiljöerna finns i [Hantera miljöer](/help/
 
 Du kan publicera innehåll till förhandsgranskningstjänsten med **Hanterad publikation** Gränssnitt.
 
-1. På webbplatskonsolen markerar du den eller de sidor du vill skicka för förhandsgranskning och klickar på **Hantera publikation** knapp
-1. I följande guide väljer du **Förhandsgranska** som mål
+1. Markera den eller de sidor du vill skicka för förhandsgranskning i webbplatskonsolen och klicka på knappen **Hantera publikation** -knappen.
+1. I följande guide väljer du **Förhandsgranska** som mål.
 
    ![hanterad publikation](/help/sites-cloud/authoring/assets/previewmanagedpublication.png)
 

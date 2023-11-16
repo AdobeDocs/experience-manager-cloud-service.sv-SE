@@ -2,9 +2,9 @@
 title: Konfigurera översättningsregler för Headless-innehåll
 description: Lär dig hur du definierar översättningsregler för att identifiera innehåll för översättning.
 exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
-source-git-commit: f4e28d89023e8f326e6816ebd8168e1e31e772ce
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ Nu när du är klar med den här delen av den headless översättningsresan ska 
 * Förstå vad översättningsreglerna gör.
 * Ange egna översättningsregler.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Översätta innehåll](translate-content.md) där du får lära dig hur integrering och regler fungerar tillsammans för att översätta headless-innehåll.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Översätta innehåll](translate-content.md) där du lär dig hur integrering och regler fungerar tillsammans för att översätta headless-innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -2,9 +2,9 @@
 title: Registrerar spelare på skärmar as a Cloud Service
 description: Den här sidan beskriver hur du registrerar spelare på skärmar as a Cloud Service.
 exl-id: 1a0d6b22-71b1-4f3c-acaa-82d8d9c0f81a
-source-git-commit: fb82970154fa37e3b3d1591a2e25989853ec6b90
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '499'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Det här dokumentet hjälper dig att förstå hur du registrerar spelare i Scree
 
 När du har installerat spelaren på skärmen as a Cloud Service kan du registrera spelaren från Screens Services Provider.
 
-Följ stegen nedan för att registrera spelaren:
+Registrera spelaren genom att följa stegen nedan:
 
 1. Logga in på Screens Services Provider.
 
@@ -40,22 +40,22 @@ Följ stegen nedan för att registrera spelaren:
    ![bild](/help/screens-cloud/assets/player/register-player2.png)
 
    1. **Registreringskodens namn**: Namn på din registreringskod
-   1. **Registreringskoden upphör**: Sista giltighetsdatum för din registreringskod
+   1. **Registreringskoden förfaller**: Sista giltighetsdatum för din registreringskod
    1. **Begränsa användning**: Växla knappen för att stänga av användningsgränsen för din registreringskod. Som standard är alternativet Begränsa användning inaktiverat.
    1. **Användningsgräns**: Ange antalet för din användningsgräns
 
-1. Klicka på **Skapa** för att skapa registreringskoden. Spelaren visas med registreringskoden i listan.
+1. Klicka **Skapa** för att skapa registreringskoden. Du kan se din spelare med registreringskoden i listan.
 
    ![bild](/help/screens-cloud/assets/player/register-player3.png)
 
 1. Klicka på värdet under kolumnen **REGISTRERINGSKOD**  om du vill kopiera värdet till Urklipp.
 
-1. Klistra in det här värdet i **Ange kod** i **Spelarregistrering** -fliken i administratörsgränssnittet för AEM Screens Player och klicka på **Registrera**.
+1. Klistra in värdet i **Ange kod** fältet i **Spelarregistrering** -fliken i administratörsgränssnittet för AEM Screens-spelaren och klicka på **Registrera**.
 
    ![bild](/help/screens-cloud/assets/player/register-player4.png)
 
 
-1. När du har lagt till koden ser du att spelaren nu är registrerad i administratörsgränssnittet för spelaren.
+1. När du har lagt till koden kan du se att spelaren nu är registrerad från spelarens administratörsgränssnitt.
 
    ![bild](/help/screens-cloud/assets/player/register-player5.png)
 
@@ -65,7 +65,7 @@ Följ stegen nedan för att registrera spelaren:
 
    >[!IMPORTANT]
    >**Rekommendationer om bästa praxis för säkerhet vid användning av registreringskod**
-   >Det bästa sättet är att begränsa användningen av registreringskoden. Om en registreringskod har komprometterats men har en gräns på 100 registreringar kan angriparen bara registrera upp till det numret, men inte mer. Du kan alltid uppdatera användningsgränsen när registreringskoden har skapats och vissa av kundens spelare har redan registrerats. Om kunden observerar ovanlig registreringsaktivitet för en viss registreringskod kan de sänka gränsen i realtid medan de undersöker och kan öka antalet tillbaka om det var ett falskt larm, utan att det påverkar de spelare som redan är registrerade.
+   >Det bästa sättet är att begränsa användningen av registreringskoden. Om en registreringskod har komprometterats men har en gräns på 100 registreringar kan angriparen bara registrera upp till det numret, men inte fler. Du kan alltid uppdatera användningsgränsen när registreringskoden har skapats och vissa av kundens spelare har redan registrerats. Om kunden observerar ovanlig registreringsaktivitet för en viss registreringskod kan de sänka gränsen i realtid medan de undersöker och kan öka antalet tillbaka om det var ett falskt larm, utan att det påverkar de spelare som redan är registrerade.
 
 
 ## What&#39;s Next {#whats-next}

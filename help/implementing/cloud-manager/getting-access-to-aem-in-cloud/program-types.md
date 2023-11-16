@@ -2,9 +2,9 @@
 title: Program och programtyper
 description: Lär dig mer om Cloud Managers hierarki och hur de olika typerna av program passar in i dess struktur och hur de skiljer sig åt.
 exl-id: 507df619-a5b5-419a-9e38-db77541425a2
-source-git-commit: fc14675e47e7a61bf36acb9a16756a593189b702
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---

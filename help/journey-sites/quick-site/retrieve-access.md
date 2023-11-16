@@ -2,9 +2,9 @@
 title: Hämta Git-databasåtkomstinformation
 description: Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst till Git-databasinformation.
 exl-id: 3ef1cf86-6da4-4c09-9cfc-acafc8f6dd5c
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '889'
 ht-degree: 3%
 
 ---
@@ -88,7 +88,7 @@ Nu visas en översikt över programmet. Sidan ser annorlunda ut men liknar det h
 
 ## Hämta information om databasåtkomst {#repo-access}
 
-1. I **Pipelines** på Cloud Manager-sidan trycker eller klickar du på **Åtkomst till svarsinformation** -knappen.
+1. I **Pipelines** på Cloud Manager-sidan trycker du på eller klickar på **Åtkomst till svarsinformation** -knappen.
 
    ![Pipelines](assets/pipelines-repo-info.png)
 
@@ -96,7 +96,7 @@ Nu visas en översikt över programmet. Sidan ser annorlunda ut men liknar det h
 
    ![Repo info](assets/repo-info.png)
 
-1. Tryck eller klicka på **Generera lösenord** för att skapa ett lösenord för dig själv.
+1. Tryck eller klicka på **Generera lösenord** om du vill skapa ett lösenord för dig själv.
 
 1. Spara lösenordet som genererats i en säker lösenordshanterare. Lösenordet visas aldrig igen.
 
@@ -111,7 +111,7 @@ Nu när du är klar med den här delen av AEM snabbwebbplats:
 * Förstå vad Cloud Manager är på en hög nivå.
 * Har hämtat dina autentiseringsuppgifter för att få åtkomst till AEM Git så att du kan genomföra dina anpassningar.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att nästa gång du granskar dokumentet [Anpassa webbplatstemat,](customize-theme.md) där du får lära dig hur webbplatstemat byggs, hur du anpassar och hur du testar med hjälp av live-AEM.
+Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Anpassa webbplatstemat,](customize-theme.md) där du får lära dig hur webbplatstemat byggs, hur du anpassar och hur du testar med hjälp av AEM innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment och GraphQL API som et
 hidefromtoc: true
 index: false
 exl-id: f5e379c8-e63e-41b3-a9fe-1e89d373dc6b
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,7 @@ Du skapar en beständig fråga som innehåller data som du vill använda från k
 
    >[!NOTE]
    >
-   >Om du inte använde samma fältbeskrivningar som beskrivs i de tidigare modulerna måste du uppdatera fältnamnen i den här frågan.
+   >Om du inte använde samma fältbeskrivningar som i de tidigare modulerna uppdaterar du fältnamnen i den här frågan.
    >
    >Använd funktionen Komplettera automatiskt (Ctrl+Blanksteg eller Alt+Blanksteg) i GraphQL så som beskrivs ovan för att identifiera de tillgängliga egenskaperna.
 
@@ -183,7 +183,7 @@ Du skapar en beständig fråga som innehåller data som du vill använda från k
 
 1. Frågan bevaras så som den bekräftas av ett banderollmeddelande längst ned på skärmen. Frågan visas även i den vänstra panelen med beständiga frågor i fönstret.
 
-1. För att den beständiga frågan ska vara tillgänglig för allmänheten måste den publiceras, ungefär som hur dina innehållsfragment måste publiceras. Klicka på **Publicera** längst upp till höger i frågeredigeraren för att publicera frågan.
+1. För att den beständiga frågan ska vara tillgänglig för allmänheten måste den publiceras, på ungefär samma sätt som dina innehållsfragment måste publiceras. Klicka **Publicera** längst upp till höger i frågeredigeraren för att publicera frågan.
 
 1. Publiceringen bekräftas av ett banderollmeddelande.
 

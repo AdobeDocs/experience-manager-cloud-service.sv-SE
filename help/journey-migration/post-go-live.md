@@ -2,9 +2,9 @@
 title: Post GoLive
 description: Lär dig hur du övervakar problem och förbättrar prestanda
 exl-id: 487f0b51-501b-48fc-a796-3cb8a6d64462
-source-git-commit: 1b9d49ce1ef8ad4b0a11400b41d8c9b880cbf884
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '482'
 ht-degree: 9%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs.html" text="Komma åt och hantera loggar"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service utvecklingsverktyg"
 
-Den här resan är den sista delen, så du får lära dig att övervaka problem och förbättra resultatet när migreringen är klar. Du bör se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar.
+Den här resan är den sista delen, så du lär dig att övervaka problem och förbättra resultatet när migreringen är klar. Du bör se till att tillfälliga filer rensas, granska bästa praxis för kontinuerlig utveckling och hantera loggar.
 
 ## Story hittills {#story-so-far}
 

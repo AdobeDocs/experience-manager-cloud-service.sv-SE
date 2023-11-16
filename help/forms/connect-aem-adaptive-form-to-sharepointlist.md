@@ -1,13 +1,13 @@
 ---
-title: Hur ansluter AEM adaptiva formulär till Microsoft® SharePoint List?
-description: Koppla ett anpassat formulär till Microsoft® SharePoint List. Lär dig hur du konfigurerar Microsoft® SharePoint-listan och skapar en formulärdatamodell med hjälp av konfigurationen. Dessutom får du lära dig att integrera FDM med ditt adaptiva formulär.
+title: Hur ansluter AEM anpassat formulär till Microsoft&reg; SharePoint List?
+description: Koppla ett anpassat formulär till Microsoft&reg; SharePoint List. Lär dig hur du konfigurerar listan Microsoft&reg; SharePoint och skapar en formulärdatamodell med hjälp av konfigurationen. Dessutom får du lära dig hur du integrerar FDM med ditt adaptiva formulär.
 role: User, Developer
 keywords: ansluta AEM adaptiva blanketter till Microsoft SharePoint List, ansluta adaptiva blanketter till Microsoft SharePoint List, integrera AEM adaptiva blanketter i Microsoft SharePoint List, integrera adaptiva blanketter till Microsoft SharePoint List, skicka data från ett adaptivt formulär till SharePoint List, skicka AEM arbetsflöde till SharePoint List.
 hide: true
 hidefromToC: true
-source-git-commit: 397e7d4f23202b8ae7419b0ad5436a6a10e2efb8
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -30,15 +30,15 @@ Instruktioner om hur du integrerar en **Microsoft® SharePoint Document Library*
 
 Utför följande steg innan du ansluter ett adaptivt formulär till Microsoft® SharePoint List:
 
-1. [Konfigurera Microsoft® SharePoint List](/help/forms/configure-data-sources.md#configure-microsoft-sharepoint-list)
-1. [Skapa en formulärdatamodell med Microsoft® SharePoint List-konfiguration](/help/forms/create-form-data-models.md)
+1. [Konfigurera Microsoft](/help/forms/configure-data-sources.md#configure-microsoft-sharepoint-list)
+1. [Skapa en formulärdatamodell med Microsoft](/help/forms/create-form-data-models.md)
 1. [Konfigurera formulärdatamodellen för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
 1. [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md)
 
 Nu kan du:
 
-* [Koppla Microsoft® SharePoint List till ett adaptivt formulär](#connect-an-adaptive-form-to-microsoft-sharepoint-list-connect-af-sharepoint-list)
-* [Koppla Microsoft® SharePoint List till ett AEM arbetsflöde](#connect-sharepoint-list-workflow)
+* [Connect Microsoft](#connect-an-adaptive-form-to-microsoft-sharepoint-list-connect-af-sharepoint-list)
+* [Connect Microsoft](#connect-sharepoint-list-workflow)
 
 ## Ansluta ett anpassat formulär till Microsoft® SharePoint List {#connect-af-sharepoint-list}
 
@@ -73,7 +73,7 @@ Lär dig hur [använd AEM](https://experienceleague.adobe.com/docs/experience-ma
 
 ## Bästa praxis {#best-practices}
 
-<!-- * For storing data in a tabular format or implementing data permissions, it is advisable to use Microsoft® SharePoint List rather than Microsoft® SharePoint Document Library. -->
+<!-- * For storing data in a tabular format or implementing data permissions, it is advisable to use Microsoft&reg; SharePoint List rather than Microsoft&reg; SharePoint Document Library. -->
 * I Microsoft® SharePoint List stöds inte följande kolumntyper:
    * bildkolumn
    * metadatakolumn

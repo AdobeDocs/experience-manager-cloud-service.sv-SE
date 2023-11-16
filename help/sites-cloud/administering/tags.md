@@ -1,13 +1,13 @@
 ---
 title: Administrera taggar
 description: Lär dig hur du administrerar taggar i AEM för att ordna ditt innehåll.
-source-git-commit: af60a2b8f1e2dd7fc55247ecb0251d7b85f63eb3
+exl-id: 42480699-b7a7-4678-a763-569a9b7573e2
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2268'
 ht-degree: 0%
 
 ---
-
 
 # Administrera taggar {#administering-tags}
 

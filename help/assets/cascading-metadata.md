@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 1d3ad496-a964-476e-b1da-4aa6d8ad53b7
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '936'
 ht-degree: 11%
 
 ---
@@ -27,7 +27,7 @@ Här följer några exempel där du kan definiera överlappande metadata:
 * Ändra alternativen som visas för ett visst fält baserat på värdet som anges i ett annat fält.
 * Ange standardvärdet för metadata i ett visst fält baserat på det värde som anges i ett annat fält.
 
-## Konfigurera metadata i [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
+## Konfigurera överlappande metadata i [!DNL Experience Manager] {#configure-cascading-metadata-in-aem}
 
 Tänk dig ett scenario där du vill visa överlappande metadata baserat på den typ av resurs som är markerad. Några exempel
 
@@ -69,7 +69,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
    >
    >När du lägger till alternativ och klickar på popup-fältet förvrängs gränssnittet och ikonen Ta bort för alternativen slutar att fungera. Klicka inte på listrutan förrän du har sparat ändringarna. Om du råkar ut för det här problemet sparar du schemat och öppnar det igen för att fortsätta redigera.
 
-1. (Valfritt) Lägg till de andra obligatoriska fälten. Exempel: format, kodek och längd för resurstypen video.
+1. (Valfritt) Lägg till andra obligatoriska fält. Exempel: format, kodek och längd för resurstypen video.
 
    Lägg på samma sätt till beroende fält för andra resurstyper. Du kan till exempel lägga till fältantal och författare för dokumentresurser som PDF och Word.
 
@@ -109,7 +109,7 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 1. Navigera till mappen som du tillämpade metadatamodeller på och öppna egenskapssidan för en resurs. Beroende på vad du väljer i fältet Resurstyp visas relevanta överlappande metadatafält.
 
    ![Överlappande metadata för videoresurs](assets/video_asset.png)
-   *Bild: Överlappande metadata för videoresurs*
+   *Bild: Cascading metadata for Video asset*
 
    ![Överlappande metadata för dokumentresurs](assets/doc_type_fields.png)
    *Bild: Överlappande metadata för dokumentresurs*

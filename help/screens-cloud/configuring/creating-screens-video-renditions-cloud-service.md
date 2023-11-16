@@ -2,9 +2,9 @@
 title: Skapa videoåtergivningar på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar videoåtergivningar på skärmar as a Cloud Service.
 exl-id: a9c46036-cd29-47fa-81d9-c865cf22c98a
-source-git-commit: 900cdc53475446b9d93cb071f281da5dbe043888
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
@@ -43,9 +43,9 @@ Följ stegen nedan för att skapa videoåtergivningar på skärmar som är as a 
 
    ![Dialogrutan Bearbetar profil med knappen Lägg till ny markerad.](/help/screens-cloud/assets/configure/screens-video-4a.png)
 
-1. Ange **Kodningsnamn** som **screens-fullhd** och **Bithastighet** as **2500**.
+1. Ange **Kodningsnamn** till exempel **screens-fullhd** och **Bithastighet** as **2500**.
 
-   ![Dialogrutan Bearbetar profil med knappen Spara markerad.](/help/screens-cloud/assets/configure/screens-video-4.png)
+   ![Bearbetar profildialogrutan med knappen Spara markerad.](/help/screens-cloud/assets/configure/screens-video-4.png)
 
    >[!IMPORTANT]
    >Använd kodningsnamnet som börjar med &quot;screens-&quot;. Endast dessa videoåtergivningar anses spela upp videoupplevelsen på skärmar as a Cloud Service. Ange den bithastighet som fungerar för videoklipp (2 500 kbit/s för video med upplösningen 720 pixlar och 5 000 kbit/s för video med upplösningen 1 080 pixlar).
@@ -66,4 +66,4 @@ Följ stegen nedan för att skapa videoåtergivningar på skärmar som är as a 
    >[!NOTE]
    >
    >* Du kan skapa flera Bearbeta-profiler och använda dem för motsvarande mappar, så att videofilmerna i dessa mappar får de specifika videoåtergivningarna.
-   >* När du överför videofilmer till den mapp där en bearbetningsprofil används, bearbetas videofilmer. Konfigurerade återgivningar skapas, som används av skärmenheter för att spela upp videoklipp.
+   >* När du överför videoklipp till den mapp där en bearbetningsprofil används, bearbetas videoklipp. Konfigurerade återgivningar skapas, som används av skärmenheter för att spela upp videoklipp.

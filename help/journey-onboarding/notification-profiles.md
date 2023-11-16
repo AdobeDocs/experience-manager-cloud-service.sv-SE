@@ -4,9 +4,9 @@ description: Lär dig hur du skapar användarprofiler i Admin Console för att h
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 4edecfcd-6301-4a46-98c7-eb5665f48995
-source-git-commit: afb20efe8ed078a508f828c5df4e079f99dfab21
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Eftersom användarprofiler skapas och underhålls i Admin Console måste du gör
 
 ## Skapa nya produktprofiler för Cloud Manager {#create-profiles}
 
-För att kunna ställa in mottagning av meddelanden måste du skapa två användarprofiler. Dessa steg får endast utföras en gång.
+Skapa två användarprofiler för att konfigurera mottagning av meddelanden på rätt sätt. De här stegen utförs bara en gång.
 
 1. Logga in Admin Console på [`https://adminconsole.adobe.com`.](https://adminconsole.adobe.com)
 
@@ -52,7 +52,7 @@ För att kunna ställa in mottagning av meddelanden måste du skapa två använd
 
    ![Lista över förekomster i Admin Console](assets/cloud_manager_instance.png)
 
-1. Du ser listan över alla konfigurerade Cloud Manager-produktprofiler.
+1. Du kan se en lista över alla konfigurerade Cloud Manager-produktprofiler.
 
    ![Produktprofiler i Admin Console](assets/cloud_manager_profiles.png)
 

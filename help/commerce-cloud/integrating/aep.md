@@ -1,6 +1,6 @@
 ---
-title: AEM-CIF-komponenter och integrering med Adobe Experience Platform
-description: Lär dig hur du skickar händelsedata för butiker från en AEM produktsida till Experience Platform med CIF-anslutningsprogrammet Experience Platform.
+title: AEM-CIF kärnkomponenter och integrering med Adobe Experience Platform
+description: Lär dig hur du skickar händelsedata för butiker från en AEM produktsida till Experience Platform med hjälp av CIF - Experience Platform Connector.
 sub-product: Commerce
 version: Cloud Service
 activity: setup
@@ -11,16 +11,16 @@ level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
 exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2076'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
 
-# AEM-CIF-komponenter och integrering med Adobe Experience Platform {#aem-cif-aep-integration}
+# AEM-CIF kärnkomponenter och integrering med Adobe Experience Platform {#aem-cif-aep-integration}
 
-The [Commerce Integration Framework (CIF)](https://github.com/adobe/aem-core-cif-components) grundkomponenterna ger smidig integration med [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-overview.html?lang=en) att vidarebefordra butikshändelser och deras data från interaktioner på klientsidan som __lägg till i kundvagn__.
+The [Commerce integration framework (CIF)](https://github.com/adobe/aem-core-cif-components) grundkomponenterna ger smidig integration med [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-overview.html?lang=en) att vidarebefordra butikshändelser och deras data från interaktioner på klientsidan som __lägg till i kundvagn__.
 
 The [AEM CIF-kärnkomponenter](https://github.com/adobe/aem-core-cif-components) project innehåller ett JavaScript-bibliotek som kallas [Adobe Experience Platform Connector for Adobe Commerce](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för att samla in händelsedata från din Commerce Store. Dessa händelsedata skickas till Experience Platform där de används i andra Adobe Experience Cloud-produkter, som Adobe Analytics och Adobe Target, för att skapa en helhetsprofil som täcker en kundresa. Genom att ansluta Commerce-data till andra produkter i Adobe Experience Cloud kan ni utföra uppgifter som att analysera användarbeteenden på er webbplats, utföra AB-tester och skapa personaliserade kampanjer.
 
@@ -28,7 +28,7 @@ Läs mer om [Experience Platform datainsamling](https://experienceleague.adobe.c
 
 ## Skicka `addToCart` händelsedata till Experience Platform {#send-addtocart-to-aep}
 
-Följande steg visar hur du skickar `addToCart` händelsedata från AEM produktsidor till Experience Platform med CIF - Experience Platform Connector. Genom att använda webbläsartillägget Adobe Experience Platform Debugger kan du testa och granska skickade data.
+Följande steg visar hur du skickar `addToCart` händelsedata från AEM produktsidor till Experience Platform med hjälp av CIF-Experience Platform-kopplingen. Genom att använda webbläsartillägget Adobe Experience Platform Debugger kan du testa och granska skickade data.
 
 ![Granska händelsedata för addToCart i Adobe Experience Platform Debugger](../assets/aep-integration/EventData-AEM-AEP.png)
 
@@ -48,7 +48,7 @@ Följ [Lokal installation](https://experienceleague.adobe.com/docs/experience-ma
 
 ### Projektinställningar
 
-Följ [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/developing/develop.html?#project) steg för att skapa ett helt nytt AEM Commerce-projekt (CIF).
+Följ [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/developing/develop.html?#project) steg för att skapa ett helt nytt projekt AEM Commerce (CIF).
 
 >[!TIP]
 >
@@ -170,9 +170,9 @@ För [`InMemoryCache`](https://www.apollographql.com/docs/react/caching/cache-co
    ]
    ```
 
-### Initiera kärnkomponenterna Peregrine och CIF
+### Initiera Peregrine och CIF kärnkomponenter
 
-Om du vill initiera de React-baserade Premiere- och CIF-kärnkomponenterna skapar du den konfiguration och de JavaScript-filer som krävs.
+Om du vill initiera den Reaktionsbaserade Premiere och CIF kärnkomponenter skapar du de konfigurations- och JavaScript-filer som behövs.
 
 1. Navigera till `ui.frontend` och skapa följande mapp: `src/main/webpack/components/commerce/App`
 
@@ -440,7 +440,7 @@ Om du vill utlösa händelsen kan du använda AEM författare eller publicerings
 
 1. Klicka på i det övre åtgärdsfältet __Visa som publicerad__ klickar du sedan på valfri kategori i butikens navigering.
 
-1. Klicka på ett valfritt produktkort i __Produktsida__ väljer __färg, storlek__ för att aktivera __Lägg i kundvagnen__ -knappen.
+1. Klicka på ett önskat produktkort i __Produktsida__ väljer __färg, storlek__ för att aktivera __Lägg i kundvagnen__ -knappen.
 
 
 1. Öppna __Adobe Experience Platform Debugger__ tillägg från webbläsarens tilläggspanel och välj __Experience Platform Wed SDK__ till vänster.

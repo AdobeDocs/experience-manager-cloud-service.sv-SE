@@ -2,9 +2,9 @@
 title: Arbeta med dina egna GitHub-databaser i Cloud Manager
 description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med dina egna GitHub-databaser.
 feature: Release Information
-source-git-commit: 8d689ea08ab7caf9cb0fa84df23d7e0fd906f379
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Konfigurationen består av två huvudsteg:
 
 ### Lägg till databas {#add-repo}
 
-1. I Cloud Manager kan du gå till **Programöversikt** sida, tryck eller klicka på **Databaser** för att växla till **Databaser** sida och klicka på **Lägg till databas**.
+1. I Cloud Manager kan du gå till **Programöversikt** , tryck eller klicka på **Databaser** för att växla till **Databaser** sida och klicka **Lägg till databas**.
 
 1. I **Lägg till databas** dialogruta, välja **Privat databas** som databastyp.
 
@@ -65,7 +65,7 @@ Cloud Manager känner nu till din GitHub-databas, men den behöver fortfarande �
 
 1. Tillbaka i **Validering av privat databasägande** har Cloud Manager genererat innehållet i den privata filen i **Hemligt filinnehåll** fält. Kopiera innehållet från det fältet.
 
-   * Innehållet i den hemliga filen visas bara en gång. Om du inte kopierar innehållet innan du stänger det här fönstret måste du generera om hemligheten.
+   * Innehållet i den hemliga filen visas bara en gång. Generera om hemligheten om du inte kopierar innehållet innan du stänger det här fönstret.
 
    ![Kopiera hemligt filinnehåll](/help/implementing/cloud-manager/assets/repos/new-secret.png)
 
@@ -81,7 +81,7 @@ Till valideringen visas databasen med en röd ikon, som anger att den ännu inte
 
 Observera att **Typ** kolumnen identifierar enkelt databaser som tillhandahålls av Adobe (**Adobe**) och dina egna GitHub-databaser (**GitHub**).
 
-Om du behöver gå tillbaka till databasen vid ett senare datum för att slutföra valideringen kan du gå till **Databaser** trycker eller klickar du på ellipsknappen på raden som representerar GitHub-databasen som du just lade till och väljer **Ägarverifiering** i listrutan.
+Om du behöver gå tillbaka till databasen vid ett senare datum för att slutföra valideringen, på **Databaser** trycker eller klickar du på ellipsknappen på raden som representerar GitHub-databasen som du just lade till och väljer **Ägarverifiering** i listrutan.
 
 ## Använda dina egna GitHub-databaser med Cloud Manager {#using}
 

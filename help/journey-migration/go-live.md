@@ -2,9 +2,9 @@
 title: GoLive
 description: Lär dig hur du utför migreringen när koden och innehållet är molnklara
 exl-id: 10ec0b04-6836-4e26-9d4c-306cf743224e
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >title="Go-Live-förberedelser"
 >abstract="För att säkerställa en smidig och framgångsrik publicering på AEM as a Cloud Service bör du planera för frysningsperioder för kod och innehåll, testning av iterationer, innehållsuppdateringar, prestandatester, säkerhetstester med mera."
 
-Under den här delen av resan får du lära dig att planera och utföra migreringen när både koden och innehållet är klara att flyttas över till AEM as a Cloud Service. Dessutom får du lära dig vad som är bästa praxis och kända begränsningar när du utför migreringen.
+Under den här delen av resan får du lära dig att planera och utföra migreringen när både koden och innehållet är klara att flyttas över till AEM as a Cloud Service. Dessutom får du lära dig vilka metoder och begränsningar som är bäst när du utför migreringen.
 
 ## Story hittills {#story-so-far}
 
@@ -138,7 +138,7 @@ Granska den här listan över aktiviteter för att säkerställa att du utför e
 * Konfigurera CDN, SSL och DNS.
    * Om du använder ditt eget CDN anger du en supportanmälan för att konfigurera lämplig routning.
       * Se avsnittet [Customer CDN points to AEM Managed CDN](/help/implementing/dispatcher/cdn.md#point-to-point-cdn) i CDN-dokumentationen för mer information.
-      * Du måste konfigurera SSL och DNS enligt dokumentationen från CDN-leverantören.
+      * Konfigurera SSL och DNS enligt dokumentationen från CDN-leverantören.
    * Om du inte använder ytterligare ett CDN hanterar du SSL och DNS enligt följande dokumentation:
       * Hantera SSL-certifikat
          * [Introduktion till hantering av SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction.md)

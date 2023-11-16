@@ -5,9 +5,9 @@ contentOwner: AK
 feature: Brand Portal,Asset Distribution,Configuration
 role: Admin
 exl-id: 078e522f-bcd8-4734-95db-ddc8772de785
-source-git-commit: ac393e4b275693fae7413fb79496052d106b219c
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2447'
+source-wordcount: '2443'
 ht-degree: 11%
 
 ---
@@ -86,7 +86,7 @@ Utför följande steg om du inte är säker på Brand Portal URL:
 
 1. Logga in på [Admin Console](https://adminconsole.adobe.com/) och navigera till **[!UICONTROL Products]**.
 1. Välj **[!UICONTROL Adobe Experience Manager Brand Portal – Brand Portal]**.
-1. Klicka på **[!UICONTROL Go to Brand Portal]** för att öppna Brand Portal direkt i webbläsaren.
+1. Klicka **[!UICONTROL Go to Brand Portal]** för att öppna Brand Portal direkt i webbläsaren.
 
    Eller kopiera Brand Portal tenant-URL:en från **[!UICONTROL Go to Brand Portal]** och klistra in den i webbläsaren för att öppna Brand Portal gränssnitt.
 
@@ -444,7 +444,7 @@ Perform the following steps to validate the configuration:
 
    ![test-bpconfig3](assets/test-bpconfig3.png)
 
-1. To verify the connection between AEM Assets as a [!DNL Cloud Service] and Brand Portal, click on the **[!UICONTROL Test Connection]** icon.
+1. To verify the connection between AEM Assets as a [!DNL Cloud Service] and Brand Portal, click the **[!UICONTROL Test Connection]** icon.
 
    ![test-bpconfig4](assets/test-bpconfig4.png)
 

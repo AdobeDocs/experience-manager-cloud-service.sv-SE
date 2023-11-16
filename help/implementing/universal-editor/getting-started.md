@@ -2,9 +2,9 @@
 title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
-source-git-commit: 6c3b286182ae33cafadf51e653c2076d1911e444
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '922'
 ht-degree: 0%
 
 ---
@@ -171,7 +171,7 @@ itemid="urn:<referenceName>:<resource>"
 
 Du kan använda `config` i anslutningens URN för att ange service- och tilläggsslutpunkter om det behövs.
 
-Om du inte vill använda Universal Editor, som hanteras av Adobe, men din egen värdversion, kan du ange detta i en metatagg. Om du vill skriva över standardtjänstslutpunkten som Universell redigerare tillhandahåller anger du en egen tjänstslutpunkt:
+Om du inte vill använda Universal Editor, som hanteras av Adobe, men din egen värdversion, kan du ange detta i en metatagg. Om du vill skriva över standardtjänstslutpunkten som tillhandahålls av Universal Editor anger du en egen tjänstslutpunkt:
 
 * Meta name - `urn:adobe:aue:config:service`
 * Metainnehåll - `content="https://adobe.com"` (exempel)

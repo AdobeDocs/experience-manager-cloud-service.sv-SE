@@ -2,9 +2,9 @@
 title: Arbeta med riktat innehåll på flera webbplatser
 description: Om ni behöver hantera riktat innehåll, t.ex. aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll
 exl-id: 03d2d640-8de8-4c4c-8a1d-756bb2dc8457
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2890'
+source-wordcount: '2889'
 ht-degree: 4%
 
 ---
@@ -144,7 +144,7 @@ Områden kan omfatta aktiviteter och erbjudanden. När du har skapat ett område
 
 >[!NOTE]
 >
->Standardområdet som kallas masterområde komprimeras som standard när du trycker eller klickar på namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke på konsolen **Aktivitet** eller **Erbjudanden** visas konsolen **Område**.
+>Standardområdet som kallas mallområde komprimeras som standard när du trycker eller klickar på namnet på ett varumärke **tills** du skapar ett annat område. När du sedan väljer ett varumärke på konsolen **Aktivitet** eller **Erbjudanden** visas konsolen **Område**.
 
 Så här skapar du ett nytt område:
 

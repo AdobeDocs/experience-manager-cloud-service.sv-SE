@@ -2,9 +2,9 @@
 title: New Relic One
 description: Läs mer om New Relic One APM-tjänst (Application Performance Monitoring) för AEM as a Cloud Service och hur du kan komma åt den.
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
-source-git-commit: 6ba6dddd8f949e55a0575bd373c0b87dc2d7f2b5
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1730'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Så här kommer du åt New Relic One via Cloud Manager:
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation.
 
-1. Klicka på det program du vill använda New Relic One för.
+1. Klicka på det program som du vill använda New Relic One för.
 
 1. Längst ned på **Miljö** på programöversiktssidan klickar du på ellipsknappen och väljer **Öppna New Relic**.
 

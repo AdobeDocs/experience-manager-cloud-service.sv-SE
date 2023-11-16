@@ -3,13 +3,13 @@ title: Modeller för innehållsfragment
 description: Lär dig hur Content Fragment Models fungerar som grund för dina Content Fragments i AEM. Med dessa fragment kan du skapa strukturerat innehåll som ska användas för rubrikfri leverans eller sidredigering.
 feature: Content Fragments
 role: User, Developer, Architect
-source-git-commit: 3d20f4bca566edcdb5f13eab581c33b7f3cf286d
+exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '3064'
+source-wordcount: '3061'
 ht-degree: 1%
 
 ---
-
 
 # Modeller för innehållsfragment {#content-fragment-models}
 
@@ -181,6 +181,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Tillåter att flikar kan användas när innehållet i innehållsfragmentet redigeras.
       * Dessa visas som avgränsare i modellredigeraren, och delar upp avsnitt i listan med innehållsdatatyper. Varje instans representerar början på en ny flik.
       * I fragmentredigeraren visas varje instans som en flik.
+
      >[!NOTE]
      >
      >Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schema.
@@ -198,7 +199,7 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
   >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
 * **Återge som**
-De olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan ange om författaren ska se en enda instans av fältet eller om den ska kunna skapa flera instanser.
+De olika alternativen för att realisera/återge fältet i ett fragment. Detta gör ofta att du kan definiera om författaren ska se en enda instans av fältet eller om han eller hon ska kunna skapa flera instanser.
 
 * **Fältetikett**
 Ange en **Fältetikett** autogenererar en **Egenskapsnamn**, som sedan kan uppdateras manuellt vid behov.

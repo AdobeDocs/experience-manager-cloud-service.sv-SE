@@ -4,7 +4,7 @@ description: Lär dig hur du integrerar Adobe Target med AEM as a Cloud Service 
 feature: Administering
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
-source-git-commit: 957758a8d3c16328e7638356e7ee6df3e561386d
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Om du vill exportera Experience Fragments och/eller Content Fragments till Targe
 
 ## Skapa Adobe Target-konfigurationen {#create-configuration}
 
-1. Navigera till **verktyg** → **Cloud Services**.
+1. Navigera till **verktyg** → **Cloud Service**.
    ![Navigering](assets/cloudservice1.png "Navigering")
 2. Välj **Adobe Target**.
 3. Välj **Skapa** -knappen.

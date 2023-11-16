@@ -2,9 +2,9 @@
 title: Komma igång med AEM Headless as a Cloud Service
 description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
-source-git-commit: b302aa1140fc14044e85fd61ed2d361b71e6be34
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '3098'
+source-wordcount: '3096'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ AEM erbjuder två kraftfulla API:er för att ändra ert innehåll utan problem.
 * Med GraphQL API kan du skapa förfrågningar om åtkomst till och leverans av innehållsfragment.
 * Med Resurser REST API kan du skapa och ändra innehållsfragment (och andra resurser).
 
-Du kommer att lära dig mer om dessa API:er och hur du använder dem i en senare del av den AEM resan utan headless. Eller se [ytterligare resurser](#additional-resources) för mer information.
+Du lär dig mer om dessa API:er och hur du kan använda dem i en senare del av den AEM resan. Eller se [ytterligare resurser](#additional-resources) nedan för mer dokumentation.
 
 ## Headless Integration Levels {#integration-levels}
 
@@ -273,7 +273,7 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 * Tänk på AEM integrationsnivåer utan motstycke.
 * Du kan definiera projektet utifrån dess omfång.
 
-Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar dokumentet [Vägen till din första upplevelse med AEM utan headless](path-to-first-experience.md) där du får lära dig hur du ställer in de verktyg som behövs och hur du börjar fundera på att modellera data i AEM.
+Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar dokumentet [Vägen till din första upplevelse med AEM utan headless](path-to-first-experience.md) där du får lära dig hur du ställer in nödvändiga verktyg och hur du börjar fundera på att modellera data i AEM.
 
 ## Ytterligare resurser {#additional-resources}
 

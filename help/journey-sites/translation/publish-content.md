@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 081167dd-da4c-48d2-a6d3-f95e873be3e9
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ I det föregående dokumentet om AEM Sites översättningsresa [Översätta inne
 * Skapa nya översättningsprojekt.
 * Använd översättningsprojekt för att översätta innehållet.
 
-Nu när den första översättningen är klar går den här artikeln igenom nästa steg när du publicerar innehållet och vad du ska göra för att uppdatera översättningarna när det underliggande innehållet i språkroten ändras.
+Nu när den första översättningen är klar går den här artikeln igenom nästa steg i publiceringen av det innehållet och vad du ska göra för att uppdatera översättningarna när det underliggande innehållet i språkroten ändras.
 
 ## Syfte {#objective}
 
@@ -36,7 +36,7 @@ Det här dokumentet hjälper dig att förstå hur du publicerar innehåll i AEM 
 
 ## AEM Author-Publish Model {#author-publish}
 
-Innan du publicerar ditt innehåll är det en bra idé att förstå AEM författarpubliceringsmodell. AEM delar in användare i två grupper.
+Innan du publicerar ditt innehåll är det en bra idé att förstå AEM författarpubliceringsmodell. I förenklad form delar AEM in användare i två grupper.
 
 1. De som skapar och hanterar innehållet och systemet
 1. De som konsumerar innehållet från systemet
@@ -83,7 +83,7 @@ Ditt översatta innehåll publiceras nu! Den kan nu nås och konsumeras.
 >
 >Du kan markera flera objekt (d.v.s. flera språkmappar) när du publicerar för att publicera flera översättningar samtidigt.
 
-Det finns ytterligare alternativ när du publicerar innehåll, till exempel schemaläggning av en publiceringstid, som ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) i slutet av dokumentet om du vill ha mer information.
+Det finns ytterligare alternativ när du publicerar innehåll, till exempel schemaläggning av en publiceringstid, som ligger utanför den här kundresan. Se [Ytterligare resurser](#additional-resources) finns i slutet av dokumentet.
 
 ## Uppdatera ditt översatta innehåll {#updating-translations}
 
@@ -98,7 +98,7 @@ Som tidigare skiljer sig dock processen något om du väljer att automatiskt ska
 1. Navigera till **Navigering** -> **Resurser** -> **Filer**. Kom ihåg att innehåll i AEM lagras under `/content`.
 1. Välj språkroten för projektet. I det här fallet har vi valt `/content/wknd/en`.
 1. Tryck eller klicka på rälsväljaren och visa **Referenser** -panelen.
-1. Tryck eller klicka på **Språkkopior**.
+1. Tryck eller klicka **Språkkopior**.
 1. Kontrollera **Språkkopior** kryssrutan.
 1. Expandera avsnittet **Uppdatera språkkopior** längst ned på referenspanelen.
 1. I **Projekt** listruta, välja **Lägg till i ett befintligt översättningsprojekt**.
@@ -113,11 +113,11 @@ Innehållet läggs till i det befintliga översättningsprojektet. Så här visa
 1. Tryck eller klicka på det projekt som du just har uppdaterat.
 1. Tryck eller klicka på språket eller något av språken som du uppdaterade.
 
-Du ser att ett nytt jobbkort har lagts till i projektet. I det här exemplet har en annan spanska översättning lagts till.
+Ett nytt jobbkort har lagts till i projektet. I det här exemplet har en annan spanska översättning lagts till.
 
 ![Ytterligare översättningsjobb har lagts till](assets/additional-translation-job.png)
 
-Du kan märka att statistiken på det nya kortet är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som behöver översättas. Detta inkluderar omöversättning av uppdaterat innehåll och förstagångsöversättning av nytt innehåll.
+Du kan lägga märke till att statistiken på det nya kortet är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som behöver översättas. Detta inkluderar omöversättning av uppdaterat innehåll och förstagångsöversättning av nytt innehåll.
 
 Från och med nu [starta och hantera översättningsjobbet på samma sätt som du gjorde originalet.](translate-content.md#using-translation-project)
 
@@ -155,11 +155,11 @@ Från och med nu [starta och hantera översättningsjobbet på samma sätt som d
 
 Grattis! Du har slutfört AEM Sites översättningsresa! Nu bör du:
 
-* Få en grundläggande förståelse AEM innehållshanteringsfunktioner.
+* Lär dig grundläggande kunskaper AEM innehållshanteringsfunktioner.
 * Förstå AEM översättningsfunktioner och hur de relaterar till webbplatsens innehåll.
 * Ha möjlighet att börja översätta eget innehåll.
 
-Du är nu redo att översätta ditt eget innehåll i AEM. AEM är dock ett kraftfullt verktyg och det finns många andra alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) om du vill veta mer om de funktioner du såg under den här resan.
+Nu kan du översätta ditt eget innehåll i AEM. AEM är dock ett kraftfullt verktyg och det finns många andra alternativ. Se vilka ytterligare resurser som finns i [Avsnittet Ytterligare resurser](#additional-resources) om du vill veta mer om de funktioner du såg under den här resan.
 
 ## Ytterligare resurser {#additional-resources}
 

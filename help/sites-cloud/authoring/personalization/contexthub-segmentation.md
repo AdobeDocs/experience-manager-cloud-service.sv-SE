@@ -2,9 +2,9 @@
 title: Konfigurera segmentering med ContextHub
 description: Lär dig konfigurera segmentering med ContextHub.
 exl-id: fbc38611-dbee-426e-b823-df64b6730c45
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Segmentering är en viktig faktor när man skapar en kampanj. Se [Förstå segmentering](segmentation.md) för information om hur segmentering fungerar och nyckeltermer.
 
-Beroende på den information du redan har samlat in om webbplatsbesökarna och vilka mål du vill uppnå, måste du definiera de segment och strategier som behövs för målinnehållet.
+Beroende på den information du redan har samlat in om webbplatsbesökarna och de mål du vill uppnå, kan du definiera de segment och strategier som behövs för det riktade innehållet.
 
 Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. [Verksamhet](activities.md) som definieras här kan inkluderas på alla sidor och definiera vilket besökarsegment som det specialiserade innehållet gäller.
 

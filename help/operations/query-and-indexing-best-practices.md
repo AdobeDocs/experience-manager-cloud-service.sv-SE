@@ -3,9 +3,9 @@ title: Bästa praxis för frågor och indexering
 description: Lär dig hur du optimerar index och frågor baserat på Adobe riktlinjer för bästa praxis.
 topic-tags: best-practices
 exl-id: 37eae99d-542d-4580-b93f-f454008880b1
-source-git-commit: ddd67a69bea2e2109ce93a91f42e8f365424f80f
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '3144'
+source-wordcount: '3133'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ Tabellerna&quot;Långsvisa frågor&quot; och&quot;Populära frågor&quot; inneh�
 * Frågesatsen själv.
 * Information om den senaste tråd som utförde frågan, vilket gör att sidan eller programfunktionen som kör frågan kan identifieras.
 * Poäng för&quot;Läsoptimering&quot; för frågan.
-   * Detta beräknas som förhållandet mellan antalet rader/noder som har genomsökts för att köra frågan och antalet matchande resultat som har lästs.
+   * Detta beräknas som förhållandet mellan antalet rader/noder som har skannats för att köra frågan och antalet matchande resultat som har lästs.
    * En fråga där varje begränsning (och eventuell ordning) kan hanteras vid indexvärdet får normalt 90 % eller högre.
 * Information om maximalt antal rader -
    * Läs - vilket anger att en rad inkluderades som en del av en resultatuppsättning.
@@ -132,11 +132,12 @@ The `Reset Statistics` finns ett alternativ för att ta bort all befintlig stati
 
 ### Förklara fråga
 
-Med verktyget Förklara fråga kan utvecklare förstå frågekörningsplanen (se [Läsa frågekörningsplanen](#reading-query-execution-plan)), inklusive information om eventuella index som används när frågan körs. Detta kan användas för att förstå hur effektivt en fråga indexeras för att förutsäga, eller retroaktivt analysera dess prestanda.
+Med verktyget Förklara fråga kan utvecklare förstå frågekörningsplanen (se [Läsa frågekörningsplanen](#reading-query-execution-plan)), inklusive information om eventuella index som används när frågan körs. Detta kan användas för att förstå hur effektivt en fråga indexeras för att förutsäga eller retroaktivt analysera dess prestanda.
 
 #### Förklara en fråga
 
 Så här förklarar du en fråga:
+
 * Välj lämpligt frågespråk med `Language` nedrullningsbar meny.
 * Ange frågesatsen i dialogrutan `Query` fält.
 * Om det behövs väljer du hur frågan ska köras med de angivna kryssrutorna.
@@ -238,7 +239,7 @@ I det här avsnittet av planen anges att
 
 Frågekörningsplanen resulterar i alla resurser under `/content/dam` som läses från indexet och sedan filtreras ytterligare av frågemotorn (som bara inkluderar de som matchar den icke-indexerade egenskapsbegränsningen i resultatuppsättningen).
 
-Även om bara en liten andel av resurserna matchar begränsningen `jcr:content/metadata/myProperty = "My Property Value"`måste frågan läsa ett stort antal noder för att kunna fylla i den begärda sidan. Detta kan resultera i en fråga som inte fungerar som den ska och som visas som låg `Read Optimization` poäng i verktyget Query Performance) och kan leda till WARN-meddelanden som anger att ett stort antal noder gås igenom (se [Indexgenomgång](#index-traversal)).
+Även om bara en liten andel av resurserna matchar begränsningen `jcr:content/metadata/myProperty = "My Property Value"`behöver frågan läsa ett stort antal noder för att fylla i den begärda sidan med resultat. Detta kan resultera i en fråga som inte fungerar som den ska och som visas som låg `Read Optimization` poäng i verktyget Query Performance) och kan leda till WARN-meddelanden som anger att ett stort antal noder gås igenom (se [Indexgenomgång](#index-traversal)).
 
 Om du vill optimera prestandan för den andra frågan skapar du en anpassad version av `damAssetLucene-9` index (`damAssetLucene-9-custom-1`) och lägga till följande egenskapsdefinition -
 

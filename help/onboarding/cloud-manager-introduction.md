@@ -2,9 +2,9 @@
 title: Introduktion till Cloud Manager
 description: Läs om hur Cloud Manager stöder ditt AEM genom program, miljöer och rörledningar.
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
-source-git-commit: 928a3f0d8ee98e211aa03ad3d0fd83b780e98bbc
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Du kan även navigera till Cloud Managers program- och produktsida från Adobe E
 
 1. Välj **Experience Manager**.
 
-1. På **Cloud Manager** kort, klicka på **Starta**
+1. På **Cloud Manager** kort, klicka **Starta**
 
 ## Rollbaserade behörigheter i Cloud Manager {#role-based-permissions}
 

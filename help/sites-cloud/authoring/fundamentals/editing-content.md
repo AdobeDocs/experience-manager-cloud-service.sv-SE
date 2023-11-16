@@ -2,9 +2,9 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2983'
+source-wordcount: '2978'
 ht-degree: 4%
 
 ---
@@ -153,7 +153,7 @@ Du kan lägga till en ny komponent med **Dra komponenter hit** styckesystemets r
 
    * Om du använder en stationär enhet kan du dubbelklicka på **Dra komponenter hit** box.
 
-   * The **Infoga ny komponent** öppnas så att du kan välja önskad komponent:
+   * The **Infoga ny komponent** öppnas en dialogruta där du kan välja önskad komponent:
 
      ![Infoga ny komponent, dialogruta](/help/sites-cloud/authoring/assets/editing-insert-component-selection.png)
 
@@ -185,7 +185,7 @@ Om du behöver göra en snabb ändring i en resurs när du bläddrar bland resur
 
 ## Komponentverktygsfältet {#component-toolbar}
 
-Om du väljer en komponent öppnas verktygsfältet. Detta ger åtkomst till olika åtgärder som kan utföras på komponenten.
+När du väljer en komponent öppnas verktygsfältet. Detta ger åtkomst till olika åtgärder som kan utföras på komponenten.
 
 De faktiska åtgärder som är tillgängliga för användaren visas som lämpliga och alla åtgärder kan inte beskrivas här.
 

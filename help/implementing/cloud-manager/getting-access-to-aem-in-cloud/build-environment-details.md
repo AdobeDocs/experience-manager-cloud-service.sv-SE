@@ -2,9 +2,9 @@
 title: Bygg miljö
 description: Lär dig mer om Cloud Managers byggmiljö och hur den bygger och testar din kod.
 exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
-source-git-commit: 7945d67fe7d258af7131076d2416cbe121354a62
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---

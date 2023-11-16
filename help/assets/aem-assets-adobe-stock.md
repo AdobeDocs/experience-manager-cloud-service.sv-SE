@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Search,Adobe Stock
 role: Admin,User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2337'
+source-wordcount: '2335'
 ht-degree: 4%
 
 ---

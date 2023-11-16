@@ -3,9 +3,9 @@ title: Kom igång med [!DNL Assets view]
 description: Hur man får åtkomst till, kan logga in på, vilka användningsfall som stöds och kända problem med [!DNL Assets view].
 role: User, Leader
 exl-id: 7917b2a0-8340-4d94-aa6f-30ce986fa752
-source-git-commit: 88cbaae2ad8b610b8cd14b3ba0a92e7238ae8e9f
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '378'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Används [!DNL Assets view], logga in på [https://experience.adobe.com/#/assets
 
 ## Få åtkomst till [!DNL Assets view] {#get-access}
 
-Adobe tillhandahåller lösningen och lägger till den utsedda personen från din organisation som administratör. Administratörerna kan ge åtkomst till olika användare i organisationen genom att använda [[!DNL Admin Console]](https://helpx.adobe.com/enterprise/using/admin-console.html). Kontakta organisationens administratör för frågor som rör din åtkomst.
+Adobe tillhandahåller lösningen och lägger till den utsedda personen från din organisation som administratör. Administratörerna kan ge åtkomst till olika användare i organisationen genom att använda [[!DNL Admin Console]](https://helpx.adobe.com/enterprise/using/admin-console.html). Om du har frågor som rör din åtkomst kontaktar du organisationens administratör.
 
 När du loggar in, efter att du angett inloggningsuppgifterna, [!DNL Assets view] uppmanar dig att välja ett konto. I det här fallet väljer du `Company or School Account` för att fortsätta.
 
@@ -37,7 +37,7 @@ Om du vill öppna inställningarna klickar du på avataren i det övre högra h�
 
 Om du är en del av olika organisationer kan du även ändra organisationen och få tillgång till dina konton i olika organisationer.
 
-Ändra [!UICONTROL Experience Cloud preferences], klicka [!UICONTROL Preferences].
+Ändra dina [!UICONTROL Experience Cloud preferences], klicka [!UICONTROL Preferences].
 
 ![Inställning för växling av mörkt och ljust tema](assets/theme-change.png)
 

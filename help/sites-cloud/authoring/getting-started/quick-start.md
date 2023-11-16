@@ -2,9 +2,9 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1561'
 ht-degree: 4%
 
 ---
@@ -93,11 +93,11 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 1. Kolumnvy:
 
-   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock för att visa att den har markerats.
+   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock som visar att den har markerats.
 
 1. Listvy:
 
-   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock för att visa att den har markerats.
+   * Tryck/klicka på miniatyrbilden för resursen - miniatyrbilden visas med en bock som visar att den har markerats.
 
 1. Kortvy:
 
@@ -292,7 +292,7 @@ Låsikonen ser till exempel ut så här:
 
    ![Referensvy](/help/sites-cloud/authoring/assets/references-list.png)
 
-1. Tryck/klicka på den typ av referens som krävs för att visa mer information och (när det är lämpligt) vidta ytterligare åtgärder.
+1. Tryck/klicka på önskad referenstyp för att visa mer information och (när det är lämpligt) vidta ytterligare åtgärder.
 
 ### Skapa en version av din sida {#creating-a-version-of-your-page}
 
@@ -318,7 +318,7 @@ Samma grundläggande funktion används när du återställer och/eller jämför 
 
    Om en version av sidan redan har sparats visas den på tidslinjen.
 
-1. Tryck/klicka på den version som du vill återställa - då visas ytterligare åtgärdsknappar:
+1. Tryck/klicka på den version som du vill återställa. Då visas ytterligare åtgärdsknappar:
 
    * **Återgå till den här versionen**
 

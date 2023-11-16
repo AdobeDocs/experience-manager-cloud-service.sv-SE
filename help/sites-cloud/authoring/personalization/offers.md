@@ -2,7 +2,7 @@
 title: Skapa och hantera erbjudanden (Erbjudandekonsol)
 description: Använd offertkonsolen för att skapa erbjudanden som du kan använda i aktivitetsupplevelser
 exl-id: 81d2fda2-06a9-48f6-820a-dd9e11d94fcc
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 0%
@@ -25,7 +25,7 @@ The **Erbjudanden** Konsolen kommer att bli inaktuell i framtiden. Så från och
 >
 >Kunder som inte har tidigare erbjudanden kommer inte att se **Erbjudanden** konsol.
 >
->Alla kunder kan använda **Upplevelsefragment - erbjudanden** att skapa och hantera erbjudanden.
+>Alla kunder kan använda **Upplevelsefragment** att skapa och hantera erbjudanden.
 
 ## Konvertera ett äldre erbjudande till ett upplevelsefragment {#convert-legacy-offer-to-experience-fragment}
 
@@ -86,7 +86,7 @@ Lägg till taggar, om det behövs.
 
 1. Bekräfta med **Klar**.
 
-   Om du nu navigerar till **Experience Fragment-erbjudanden** kommer du att se ditt nya upplevelsefragment tillsammans med tillhörande varianter.
+   Om du nu navigerar till **Experience Fragment-erbjudanden** konsolen kan du se ditt nya upplevelsefragment, tillsammans med tillhörande varianter.
 
 ### Målinriktad med erbjudandemallen {#targeting-offers-template}
 
@@ -97,11 +97,11 @@ Lägg till taggar, om det behövs.
 >Som med **Erbjudanden** konsolen är inte längre tillgänglig:
 >
 >* när det senaste äldre erbjudandet har konverterats till Experience Fragments
->* när äldre erbjudanden är inaktuella (i framtiden)
+>* när äldre erbjudanden är föråldrade (i framtiden)
 >
 >Därför rekommenderar vi att du använder Experience Fragments, inte det här alternativet.
 
-För kunder med tidigare erbjudanden **Använd erbjudandemall** är synliga när komponenter som **not** Upplevelsefragment:
+För kunder med tidigare erbjudanden **Använd erbjudandemall** är synliga när du aktiverar komponenter som **not** Upplevelsefragment:
 
 ![Dialogrutan Konvertera till upplevelsefragmentvariationer](/help/sites-cloud/authoring/assets/offers-legacy-target-non-experience-fragment.png)
 
@@ -142,7 +142,7 @@ Lägg till en mapp i erbjudandebiblioteket för ett varumärke för att ordna oc
 1. Öppna den plats där du vill skapa mappen i konsolen Erbjudanden. Öppna till exempel varumärket för att skapa en mapp på den översta nivån eller öppna en annan mapp i biblioteket.
 1. Klicka eller tryck **Skapa** > **Skapa mapp eller erbjudande**.
 
-   ![Skapa erbjudandemapp](/help/sites-cloud/authoring/assets/offers-create-folder.png)
+   ![Skapar erbjudandemapp](/help/sites-cloud/authoring/assets/offers-create-folder.png)
 
 1. Välj **Mapp** och klicka **Nästa**.
 1. Skriv en rubrik för mappen som du vill att den ska visas i erbjudandebiblioteket och skriv eller välj taggar.
@@ -160,10 +160,10 @@ När du har skapat erbjudandet kan du öppna det och redigera innehållet.
 1. I konsolen Erbjudanden öppnar du den plats där du vill skapa erbjudandet. Öppna till exempel varumärket för att skapa ett erbjudande på högsta nivå eller öppna en mapp i biblioteket.
 1. Klicka eller tryck **Skapa** > **Skapa mapp eller erbjudande**.
 
-   ![Skapa erbjudandemapp](/help/sites-cloud/authoring/assets/offers-create-folder.png)
+   ![Skapar erbjudandemapp](/help/sites-cloud/authoring/assets/offers-create-folder.png)
 
 1. Välj **Erbjudandesida** mall och sedan klicka eller peka **Nästa**.
-1. Skriv en titel för erbjudandet och välj eller skriv in en eller flera taggar som du vill associera med erbjudandet. Klicka eller tryck sedan på **Skapa**.
+1. Skriv en titel för erbjudandet och välj eller skriv in en eller flera taggar som ska kopplas till erbjudandet. Klicka eller tryck sedan **Skapa**.
 1. Öppna erbjudandet för redigering genom att klicka eller trycka på **Öppna sida**.
 
 ### Redigera ett erbjudande {#editing-an-offer}
@@ -188,7 +188,7 @@ Du kan ta bort ett erbjudande när du visar antingen mappinnehåll i ett erbjuda
 1. Klicka på eller tryck i dialogrutan som visas **Ta bort** för att bekräfta borttagningen.
 1. Om erbjudandet används i en eller flera upplevelser visas en dialogruta som anger att det hänvisas till erbjudandet:
 
-   * Om du vill ta bort erbjudandet och ta bort det från upplevelserna klickar eller trycker du **Tvinga borttagning**.
+   * Om du vill ta bort erbjudandet och ta bort det från upplevelserna klickar eller trycker du på **Tvinga borttagning**.
    * Klicka eller tryck för att behålla erbjudandet **Avbryt**.
 
 ### Söker efter erbjudanden {#searching-for-offers}

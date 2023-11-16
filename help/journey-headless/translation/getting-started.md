@@ -2,9 +2,9 @@
 title: Kom igång med AEM Headless Translation
 description: Lär dig hur du ordnar ditt headless-innehåll och hur AEM översättningsverktyg fungerar.
 exl-id: 04ae2cd6-aba3-4785-9099-2f6ef24e1daf
-source-git-commit: f4e28d89023e8f326e6816ebd8168e1e31e772ce
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Innehållsarkitekten arbetar tidigt i projektet för att definiera den här stru
 Eftersom innehållsmodellerna definierar innehållsstrukturen måste du veta vilka fält i modellerna som måste översättas. I allmänhet arbetar du med innehållsarkitekten för att definiera detta. Följ stegen nedan för att bläddra bland fälten i dina innehållsmodeller.
 
 1. Navigera till **verktyg** -> **Allmänt** -> **Modeller för innehållsfragment**.
-1. Modeller för innehållsfragment lagras vanligtvis i en mappstruktur. Tryck eller klicka på mappen för ditt projekt.
+1. Modeller för innehållsfragment lagras vanligtvis i en mappstruktur. Tryck eller klicka på mappen för projektet.
 1. Modellerna listas. Tryck eller klicka på modellen för att visa informationen.
    ![Modeller för innehållsfragment](assets/content-fragment-models.png)
 1. The **Modellredigerare för innehållsfragment** öppnas.
@@ -178,7 +178,7 @@ Nu när du är klar med den här delen av den headless översättningsresan ska 
 * Förstå hur AEM lagrar headless-innehåll.
 * Bekanta dig med AEM översättningsverktyg.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Konfigurera översättningsintegrering](configure-connector.md) där du får lära dig att ansluta AEM till en översättningstjänst.|
+Bygg vidare på den här kunskapen och fortsätt din AEM resa med headless translation genom att nästa gång du granskar dokumentet [Konfigurera översättningsintegrering](configure-connector.md) där du lär dig hur du ansluter AEM till en översättningstjänst.|
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -2,9 +2,9 @@
 title: Skapa Launches
 description: Du kan skapa en startsida som gör det möjligt att uppdatera en ny version av befintliga webbsidor för framtida aktivering.
 exl-id: 216ccb7a-1409-4f55-8be2-2b088f91a430
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1042'
 ht-degree: 12%
 
 ---
@@ -41,7 +41,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
 1. Beroende på vilken konsol du använder:
    * **Launches**:
-      1. Välj **Skapa start** i verktygsfältet för att öppna guiden.
+      1. Välj **Skapa start** Öppna guiden i verktygsfältet.
    * **Sites**:
       1. Välj **Skapa** i verktygsfältet för att öppna markeringsrutan.
       1. Välj **Skapa start** för att öppna guiden.
@@ -54,7 +54,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
 1. I **Välj källa** steg du behöver **Lägg till sidor**. Du kan markera flera sidor och ange sökvägen för varje sida:
    * Navigera till önskad plats.
-   * Markera källsidorna och bekräfta (bockmarkering).
+   * Markera källsidan/källsidorna och bekräfta (bockmarkering).
 
    Upprepa efter behov.
 
@@ -62,7 +62,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    >[!NOTE]
    >
-   >Om du vill lägga till sidor och/eller grenar i en lansering måste de finnas på en webbplats. d.v.s. under en gemensam toppnivårot.
+   >Om du vill lägga till sidor och/eller grenar i en programstart måste de finnas på en plats, det vill säga under en gemensam toppnivårot.
    >
    >Om en webbplats innehåller språkrötter under den översta nivån måste sidorna och grenarna för en start ligga under en gemensam språkrot.
 
@@ -82,7 +82,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    * **med befintligt innehåll**: det ursprungliga innehållet används för att skapa starten.
    * **använda en ny mall för att ersätta sidan**: Se [Skapa start med ny mall](#create-launch-with-new-template) för mer information.
    * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår du genom att göra starten till [Live Copy](/help/sites-cloud/administering/msm/overview.md). Som standard är det här alternativet markerat.—>
-   * **Startdatum**: Datum och tid då startkopian ska aktiveras (beroende på **Produktionsklar** Flagga. se [Startar - ordningen för händelser](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events)).
+   * **Startdatum**: Det datum och den tidpunkt då startkopian ska aktiveras (beroende på **Produktionsklar** flagga, se [Startar - ordningen för händelser](/help/sites-cloud/authoring/launches/overview.md#launches-the-order-of-events)).
 
    ![Startegenskaper](/help/sites-cloud/authoring/assets/launches-properties.png)
 
@@ -101,11 +101,11 @@ När du skapar en startsida kan du välja om du vill använda en ny mall:
 >
 >Det här alternativet är endast tillgängligt när du skapar en start från **Webbplatser** konsol. Det är inte tillgängligt när du skapar en start från **Startar** konsol.
 
-![Skapa en start med en ny mall](/help/sites-cloud/authoring/assets/launches-create-new-template.png)
+![Skapa en startsida med en ny mall](/help/sites-cloud/authoring/assets/launches-create-new-template.png)
 
 Om du väljer det här alternativet kommer det att:
 
-* Uppdatera andra tillgängliga alternativ,
+* Uppdatera de andra tillgängliga alternativen,
 * Inkludera ett nytt steg där du kan välja önskad mall.
 
 ![Välja en ny mall](/help/sites-cloud/authoring/assets/launches-select-template.png)

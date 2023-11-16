@@ -3,9 +3,9 @@ title: Cache i AEM as a Cloud Service
 description: Lär dig grunderna i cachning på AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
-source-git-commit: 469c5f0e115cc57cf7624aecf5b9f45645f2e99a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2874'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ I båda fallen kan cachelagringshuvuden åsidosättas på en mer detaljerad niv�
 
 Var försiktig så att du inte cachelagrar för mycket när du ändrar cache-huvudena i Dispatcher-lagret. Läs mer i avsnittet HTML/text [ovan](#html-text). Se även till att resurser som ska hållas privata (i stället för cachelagrade) inte ingår i `LocationMatch` -filter.
 
-JCR-resurser (större än 16 kB) som lagras i blobbutiken hanteras vanligtvis som 302 omdirigeringar av AEM. Dessa omdirigeringar fångas upp och följs av CDN och innehållet levereras direkt från blobbbutiken. Endast en begränsad uppsättning rubriker kan anpassas för dessa svar. för att t.ex. anpassa `Content-Disposition` Du bör använda dispatcherdirektiven på följande sätt:
+JCR-resurser (större än 16 kB) som lagras i blobbutiken hanteras vanligtvis som 302 omdirigeringar av AEM. Dessa omdirigeringar fångas upp och följs av CDN och innehållet levereras direkt från blobbbutiken. Endast en begränsad uppsättning rubriker kan anpassas för dessa svar. Anpassa `Content-Disposition` Du bör använda dispatcherdirektiven på följande sätt:
 
 ```
 <LocationMatch "\.(?i:pdf)$">
@@ -232,7 +232,7 @@ När en begäran från HEAD tas emot i CDN i Adobe för en resurs som är **not*
 
 Webbplatsadresser innehåller ofta marknadsföringskampanjparametrar som används för att spåra en kampanjs framgång.
 
-För miljöer som skapats i oktober 2023 eller senare kommer CDN att ta bort vanliga marknadsföringsrelaterade frågeparametrar, särskilt de som matchar följande regex-mönster, för att bättre kunna cache-lagra begäranden:
+För miljöer som skapats i oktober 2023 eller senare kommer CDN att ta bort vanliga marknadsföringsrelaterade frågeparametrar, särskilt de som matchar följande regex-mönster, för att bättre cachelagra begäranden:
 
 ```
 ^(utm_.*|gclid|gdftrk|_ga|mc_.*|trk_.*|dm_i|_ke|sc_.*|fbclid)$

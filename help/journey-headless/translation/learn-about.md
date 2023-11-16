@@ -2,9 +2,9 @@
 title: Lär dig mer om Headless-innehåll och översättning i AEM
 description: Lär dig headless-koncept, hur de AEM och teorin om AEM översättning.
 exl-id: 72bb6646-e573-4576-8d17-49787d8c8c7f
-source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Förutom kraftfulla verktyg för att skapa, hantera och leverera traditionella w
 
 Tack vare AEM kan det leverera innehåll antingen utan huvud eller stackar eller i båda modellerna samtidigt. För översättningsexperten kan samma uppsättning översättningsverktyg användas för båda typerna av innehåll, vilket ger en enhetlig metod för översättning av ditt innehåll.
 
-Under kundresan kommer du att lära dig mer om hur AEM översätter innehåll, men på en hög nivå är konceptet enkelt:
+Lär dig mer om hur AEM översätter innehåll, men på en hög nivå är konceptet enkelt:
 
 1. Definiera en anslutning till en översättningstjänst genom att konfigurera översättningsintegreringsramverket.
 1. Definiera vilket innehåll som ska översättas med översättningsregler.

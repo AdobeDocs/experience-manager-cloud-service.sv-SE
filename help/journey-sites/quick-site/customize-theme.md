@@ -2,9 +2,9 @@
 title: Anpassa webbplatstemat
 description: Lär dig hur webbplatstemat byggs, hur du anpassar och hur du testar med AEM.
 exl-id: b561bee0-3a64-4dd3-acb8-996f0ca5bfab
-source-git-commit: 64509c13abacd6a6b54b58245acbf510feafdffa
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Den här delen av resan tar nästa steg och går in i webbplatstemat och visar h
 I det här dokumentet förklaras hur det AEM webbplatstemat byggs, hur det anpassas och hur du testar det med AEM. När du har läst bör du:
 
 * Förstå webbplatsens grundläggande struktur och hur du redigerar den.
-* Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokal proxy.
+* Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokala utkast.
 * Lär dig hur du implementerar dina ändringar i AEM Git-databasen.
 
 ## Ansvarig roll {#responsible-role}
@@ -42,14 +42,14 @@ Extrahera temat från AEM administratör till den plats där du vill redigera te
 
 Du ser att temat är ett typiskt frontprojekt. De viktigaste delarna i strukturen är:
 
-* `src/main.ts`: Huvudingångspunkten för JS- och CSS-temat
+* `src/main.ts`: Huvudstartpunkten för JS- och CSS-temat
 * `src/site`: JS- och CSS-filer som gäller för hela platsen
-* `src/components`: JS- och CSS-filer som är specifika för AEM
+* `src/components`: JS- och CSS-filer som är specifika för AEM komponenter
 * `src/resources`: Statiska filer som ikoner, logotyper och teckensnitt
 
 >[!TIP]
 >
->Om du vill veta mer om det AEM vanliga webbplatstemat kan du läsa GitHub-länken i [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet.
+>Om du vill veta mer om det AEM vanliga webbplatstemat kan du läsa GitHub-länken i [Ytterligare resurser](#additional-resources) i slutet av dokumentet.
 
 När du känner dig trygg med temaprojektets struktur kan du starta den lokala proxyn så att du kan se alla temaanpassningar i realtid baserat på det faktiska AEM innehållet.
 
@@ -64,7 +64,7 @@ När du känner dig trygg med temaprojektets struktur kan du starta den lokala p
 
    ![npm run live](assets/npm-run-live.png)
 
-1. När proxyservern startas öppnas automatiskt en webbläsare för att `http://localhost:7001/`. Tryck eller klicka **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)** och logga in med de autentiseringsuppgifter för proxyanvändare som du får av AEM.
+1. När proxyservern startas öppnas en webbläsare automatiskt för att `http://localhost:7001/`. Tryck eller klicka **LOGGA IN LOKALT (ENDAST ADMINISTRATÖRSÅTGÄRDER)** och logga in med de autentiseringsuppgifter för proxyanvändare som du har fått från AEM.
 
    ![Logga in lokalt](assets/sign-in-locally.png)
 
@@ -77,7 +77,7 @@ När du känner dig trygg med temaprojektets struktur kan du starta den lokala p
    * Om den angivna sökvägen till exempel `/content/<your-site>/en/home.html?wcmmode=disabled`
    * Du ändrar URL:en till `http://localhost:7001/content/<your-site>/en/home.html?wcmmode=disabled`
 
-   ![Proxyinnehåll](assets/proxied-sample-content.png)
+   ![Proxybaserat exempelinnehåll](assets/proxied-sample-content.png)
 
 Du kan navigera på webbplatsen för att utforska innehållet. Webbplatsen hämtas direkt från live-AEM så att du kan anpassa temat efter det verkliga innehållet.
 
@@ -89,7 +89,7 @@ Nu kan du börja anpassa temat. Följande är ett enkelt exempel som illustrerar
 
    ![Redigera tema](assets/edit-theme.png)
 
-1. Redigera variabeln `$color-background` och ange ett annat värde än vitt. I det här exemplet `orange` används.
+1. Redigera variabeln `$color-background` och ange ett annat värde än vitt. I detta exempel `orange` används.
 
    ![Redigerat tema](assets/edited-theme.png)
 
@@ -132,15 +132,15 @@ Dina anpassningar lagras nu säkert i AEM Git-databasen.
 Nu när du är klar med den här delen av AEM snabbwebbplats:
 
 * Förstå webbplatsens grundläggande struktur och hur du redigerar den.
-* Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokal proxy.
+* Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokala utkast.
 * Lär dig hur du implementerar dina ändringar i AEM Git-databasen.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att nästa gång du granskar dokumentet [Driftsätt ditt anpassade tema,](deploy-theme.md) där du får lära dig hur du distribuerar temat med hjälp av frontendriet.
+Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Använd ditt anpassade tema,](deploy-theme.md) där du lär dig hur du distribuerar temat med hjälp av frontendriet.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebbplats genom att granska dokumentet [Driftsätt ditt anpassade tema,](deploy-theme.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
+Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebbplats genom att granska dokumentet [Använd ditt anpassade tema,](deploy-theme.md) Nedan följer ytterligare, valfria resurser som fördjupar sig i några koncept som nämns i det här dokumentet, men som inte behöver fortsätta på resan.
 
-* [AEM](https://github.com/adobe/aem-site-template-standard-theme-e2e) - Detta är GitHub-databasen för AEM webbplatstema.
+* [AEM webbplatstema](https://github.com/adobe/aem-site-template-standard-theme-e2e) - Detta är GitHub-databasen för AEM webbplatstema.
 * [npm](https://www.npmjs.com) - AEM teman som används för att snabbt skapa webbplatser baseras på npm.
 * [webbpaket](https://webpack.js.org) - AEM teman som används för att snabbt bygga sajter bygger på webbpaket.

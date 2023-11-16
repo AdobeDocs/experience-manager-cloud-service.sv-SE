@@ -2,9 +2,9 @@
 title: Hantera produktkatalogsidor och mallar
 description: Lär dig hur du hanterar produktkatalogsidor och mallar
 exl-id: 0d795d85-c865-40d5-941e-e02ee96fdd11
-source-git-commit: 940a01cd3b9e4804bfab1a5970699271f624f087
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Lär dig hur du hanterar produktkatalogsidor och mallar.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om redigeringsresan AEM innehåll och handel [Komma igång med AEM CIF-grunderna](getting-started.md)har du lärt dig grunderna i CIF-redigering.
+I det föregående dokumentet om redigeringsresan AEM innehåll och handel [Komma igång med AEM CIF grunderna](getting-started.md)har du lärt dig grunderna i CIF.
 
 Den här artikeln bygger på dessa grunder.
 
@@ -31,17 +31,17 @@ Det här dokumentet hjälper dig att förstå hur du hanterar produktkatalogsido
 
 Venia storefront har en typisk produktkatalogsupplevelse med navigering, landning, kategori (PLP) och produktinformationssidor (PDP).
 
-Katalogsidor skapas dynamiskt med en AEM CIF-katalogmall och realtidsproduktdata som hämtas från e-handelsslutpunkten vid behov. Varje katalog har en allmän mall för produkt- och kategorisidor.
+Katalogsidor skapas dynamiskt med en AEM CIF katalogmall och produktdata i realtid som hämtas från e-handelsslutpunkten vid behov. Varje katalog har en allmän mall för produkt- och kategorisidor.
 ![katalogstruktur](assets/catalog-structure.png)
 
 Navigeringskomponenten visar innehåll och katalogsidor. Det går att visa antingen kataloglandningssidan eller kategorierna på första nivån i navigeringen. Om du placerar pekaren över en kategori visas kategorier på andra nivån som en andra rad.
 ![katalognavigering](assets/catalog-navigation.png)
 
-Om du klickar på en kategori öppnas kategorisidan (eller produktlistsidan).
+När du klickar på en kategori öppnas kategorisidan (eller produktlistsidan).
 
 ![PLP](assets/catalog-plp.png)
 
-Om du klickar på en produkt öppnas informationssidan.
+När du klickar på en produkt öppnas informationssidan.
 
 ![PLP](assets/catalog-pdp.png)
 
@@ -52,7 +52,7 @@ Om du klickar på en produkt öppnas informationssidan.
 Den generiska mallen för Venedig-katalog använder kärnkomponenten för produktlistan. Den här komponenten visar kategoribilden om den är tillgänglig och produkter från kategorin.
 ![kategorimall](assets/category-template.png)
 
-Den generiska Venias produktmall använder kärnkomponenten för produktinformation. Den här komponenten visar produktinformation för olika produkttyper och åtgärd för tillägg i kundvagnen.
+Den generiska Venias produktmall använder kärnkomponenten för produktinformation. Den här komponenten visar produktinformation för olika produkttyper och åtgärd för att lägga till i kundvagnen.
 ![produktmall](assets/product-template.png)
 
 ### Redigera mallar {#edit-templates}
@@ -61,7 +61,7 @@ Du kan redigera mallar antingen genom att öppna mallsidan direkt eller genom at
 
 ### Kategori- eller produktspecifika mallar {#specific}
 
-CIF har stöd för flera mallar med bara några klick. Om du vill skapa en annan mall väljer du den generiska mallen från respektive kategori och skapar en ny sida med **Skapa** åtgärd.
+CIF stöder flera mallar med bara några klick. Om du vill skapa en annan mall väljer du den generiska mallen från respektive kategori och skapar en ny sida med **Skapa** åtgärd.
 
 ![skapa mallsida](assets/create-template-page.png)
 
@@ -71,13 +71,13 @@ Välj respektive produkt- eller kategorimall.
 
 Ange rubriken och skapa sidan.
 
-![skapa mallpost](assets/create-template-enter.png)
+![skapa mallinmatning](assets/create-template-enter.png)
 
 Observera att du nu har en specifik mall under den generiska.
 
 ![skapa mallhierarki](assets/create-template-hierachry.png)
 
-Öppna mallen. Det ser ut precis som den allmänna kategorimallen.
+Öppna mallen. Den ser ut precis som den allmänna kategorimallen.
 
 ![skapa mall ny](assets/create-template-new.png)
 
@@ -85,11 +85,11 @@ Lägg till en bild ovanpå sidan.
 
 ![skapa malluppdatering](assets/create-template-update.png)
 
-Mallen kan förhandsgranskas med alla kategorier och produkter. Öppna **Sidinformation** och sedan markera **Visa med kategori/produkt**. Välj produkt/kategori i väljaren för att få en förhandsvisning av den här produkten/kategorin. Välj **Köp looken** för att få en förhandsgranskning av den uppdaterade mallen.
+Mallen kan förhandsgranskas med alla kategorier och produkter. Öppna **Sidinformation** och sedan **Visa med kategori/produkt**. Välj produkt/kategori i väljaren för att få en förhandsvisning av den här produkten/kategorin. Välj **Köp looken** för att få en förhandsgranskning av den uppdaterade mallen.
 
 ![skapa mall ](assets/create-template-picker.png)
 
-Nu måste vi tilldela mallen till den specifika kategorin. Öppna egenskaper i **Sidinformation** och växla till fliken E-handel. Klicka på mappikonen för att välja **Köp looken** -kategorin i kategoriväljaren. Du kan tilldela flera kategorier till en mall och även inkludera underkategorier genom att markera kryssrutan.
+Nu måste vi tilldela den här mallen till den specifika kategorin. Öppna egenskaper i **Sidinformation** och växla till fliken E-handel. Klicka på mappikonen och välj **Köp looken** -kategorin i kategoriväljaren. Du kan tilldela flera kategorier till en mall och även inkludera underkategorier genom att markera kryssrutan.
 
 ![skapa mallkoppling](assets/create-template-associate.png)
 
@@ -114,4 +114,4 @@ Bygg vidare på denna kunskap och fortsätt din resa genom att nästa gång du g
 Vi rekommenderar att du går vidare till nästa del av resan genom att granska dokumentet [Hantera testade produktkataloger](staged-catalog.md), är följande ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men som inte behöver fortsätta på den lösa resan:
 
 * [Skapa flera kategori- och produktsidor](/help/commerce-cloud/authoring/multi-template-usage.md)
-* [Migreringsguide för Experience Manager Cloud Servicen](/help/commerce-cloud/migration.md) - Så här migrerar du till CIF-tillägget (AEM Commerce Integration Framework) från en gammal version
+* [Migreringsguide för Experience Manager Cloud Servicen](/help/commerce-cloud/migration.md) - Så här migrerar du till AEM Commerce integration framework (CIF)-tillägget från en gammal version

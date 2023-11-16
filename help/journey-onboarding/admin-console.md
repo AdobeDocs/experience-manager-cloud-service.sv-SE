@@ -2,16 +2,16 @@
 title: Åtkomst till Admin Console
 description: När du har förstått de förberedelser som krävs för att komma igång och grunderna i AEMaaCS-strukturen är du redo att logga in på Admin Console för första gången.
 exl-id: 0ccce328-a356-4ba9-b7fe-f67abc25b924
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
 
 # Åtkomst till Admin Console {#accessing-admin-console}
 
-I den här delen av [startresan,](overview.md) innan du loggar in i systemet för första gången får du lära dig mer om de förberedelser som krävs.
+I den här delen av [startresan,](overview.md) om du vill veta mer om de förberedelser som krävs innan du kan logga in i systemet för första gången.
 
 ## Syfte {#objective}
 
@@ -30,7 +30,7 @@ Adobe Admin Console är en central plats för att administrera och hantera licen
 
 ## Adobe ID {#adobe-id}
 
-För att kunna logga in på Admin Console måste du ha en Adobe ID. Och Adobe ID är ett konto som är knutet till en viss e-postadress som krävs för att logga in och få åtkomst AEM as a Cloud Service lösningar eller någon av dina Adobe-lösningar. Genom att använda din Adobe ID behåller du alla dina planer och produkter för Adobe som är kopplade till ett enda konto.
+För att kunna logga in på Admin Console behöver du en Adobe ID. Och Adobe ID är ett konto som är knutet till en viss e-postadress som krävs för att logga in och få åtkomst AEM as a Cloud Service lösningar eller någon av dina Adobe-lösningar. Genom att använda din Adobe ID behåller du alla dina planer och produkter för Adobe som är kopplade till ett enda konto.
 
 När du som systemadministratör konfigurerar ditt team i Admin Console anger du den e-postadress som ska användas som Adobe ID.
 
@@ -66,7 +66,7 @@ Innan du kan använda Admin Console för att administrera användare i ditt team
 
    ![Granska administratörer](/help/journey-onboarding/assets/get-started2.png)
 
-1. När du klickar på **Administratörer** från **Användare** kan du söka genom att ange Adobe ID e-postadress, användarnamn, förnamn eller efternamn.
+1. När du klickat **Administratörer** från **Användare** kan du söka genom att ange Adobe ID e-postadress, användarnamn, förnamn eller efternamn.
 
    ![Sök efter användare](/help/journey-onboarding/assets/get-started3.png)
 
@@ -82,7 +82,7 @@ AEM as a Cloud Service levereras förkonfigurerat med Adobe Identity Management 
 
 Genom att använda IMS konsoliderar AEM as a Cloud Service inloggningsupplevelsen mellan AEM och resten av Adobe Experience Cloud. Organisationer med flera Adobe-produkter har särskilt stor nytta av att skapa rollbaserade grupper i Admin Console och sedan tilldela åtkomst till flera produkter, inklusive AEM as a Cloud Service via IMS.
 
-Du får lära dig mer om produktprofiler och hur du tilldelar användare under nästa del av den här introduktionsresan.
+Du lär dig mer om produktprofiler och hur du tilldelar användare i nästa del av den här introduktionsresan.
 
 ## Kontakta supporten för Adobe {#support}
 

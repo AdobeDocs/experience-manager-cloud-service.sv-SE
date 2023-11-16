@@ -2,9 +2,9 @@
 title: Förberedelse för introduktion
 description: Innan introduktionsprocessen börjar finns det ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet.
 exl-id: 86139b1a-c22a-4716-a0f9-cf142cbc6c53
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ AEM as a Cloud Service är ett kraftfullt och flexibelt verktyg med många tillg
 När du har läst det här dokumentet kommer du att förstå
 
 * Vilket kontraktet med Adobe definierar.
-* Vilka Adobe förbehåller sig rätten.
+* Vilka Adobe ska ha?
 * Hur det avtalet påverkar introduktionsprocessen.
 * Hur du förbereder dig för ditt introduktionssamtal.
 
@@ -56,7 +56,7 @@ När avtalet är klart schemalägger Adobe-introduktionsteamet ett samtal med re
 
 Deltagare i din organisation ska inkludera:
 
-* Företagsledning
+* Affärsledare
 * Tekniker
 * Din implementeringspartner
 
@@ -84,7 +84,7 @@ E-postmeddelandet innehåller detaljerad information om hur du kommer igång med
 Nu bör du ha en grundläggande förståelse för:
 
 * Vilket kontraktet med Adobe definierar.
-* Vilka Adobe förbehåller sig rätten.
+* Vilka Adobe ska ha?
 * Hur det avtalet påverkar introduktionsprocessen.
 * Hur du förbereder dig för ditt introduktionssamtal.
 

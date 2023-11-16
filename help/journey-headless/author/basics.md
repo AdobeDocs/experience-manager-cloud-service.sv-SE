@@ -2,9 +2,9 @@
 title: Lär dig grunderna i redigering
 description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
-source-git-commit: d6b98559e7cbe5fc5bd05d9cf37225e960e668e7
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1727'
 ht-degree: 1%
 
 ---
@@ -216,7 +216,7 @@ När redigeraren öppnas ser du:
 
 Ett fragment kan till exempel:
 
-* Kräver flera uppgifter, andra med en viss typ. För rubrikfritt innehåll är referenser viktiga (du kommer att lära dig mer om dem senare under din resa).
+* Kräver flera uppgifter, andra med en viss typ. För rubrikfritt innehåll är referenser viktiga (du lär dig mer om dem senare under din resa).
 
 * Gör att du kan skriva ett långt textavsnitt. Här finns ytterligare alternativ för att hantera och formatera texten. Du kan även öppna enskilda textfält i en helskärmsredigerare (med den lilla skärmliknande ikonen till höger)
 
@@ -240,7 +240,7 @@ OK, det kan verka lite konstigt, men så fort du öppnar Content Fragment Editor
 
 * **Modeller för innehållsfragment**
 
-  Namnet på modellen för innehållsfragment visas på den högra panelen i redigeraren. Det här är också en länk som tar dig till modellredigeraren.
+  Du kan se namnet på modellen för innehållsfragment på den högra panelen i redigeraren. Det här är också en länk som tar dig till modellredigeraren.
 Modeller för innehållsfragment är faktiskt viktiga för dina innehållsfragment när de definierar den struktur som du använder. Men att skapa och redigera dem är (vanligtvis) en annan persons ansvar, innehållsarkitekten.
 
   >[!NOTE]

@@ -2,50 +2,50 @@
 title: Aktivera AEM Screens för din demowebbplats
 description: Lär dig hur du aktiverar AEM Screens as a Cloud Service upplevelse på din demosajt.
 exl-id: 369eea9f-2e81-4b87-841c-188b67657bab
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '2665'
 ht-degree: 0%
 
 ---
 
 # Aktivera AEM Screens för din demowebbplats {#enable-screens}
 
-Lär dig hur du får en komplett as a Cloud Service AEM Screens-upplevelse på din demosajt.
+Lär dig hur du får en komplett as a Cloud Service AEM Screens-upplevelse på din demowebbplats.
 
 >[!NOTE]
 >
->AEM Screens Demo kräver att skärmtillägget läggs till i Cloud Manager-programmet. Lär dig [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/adding-screens-addon/add-on-new-program-screens-cloud.html) hur du lägger till det.
+>AEM Screens Demo kräver att skärmtillägget läggs till i Cloud Manager-programmet. Läs [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/adding-screens-addon/add-on-new-program-screens-cloud.html) hur du lägger till det.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om AEM Reference Demos Add-on-resan, [Skapa demowebbplats,](create-site.md) du skapade en demowebbplats baserat på mallarna för tillägget Referensdemo. Nu bör du:
+I det föregående dokumentet om AEM Reference Demos Add-on, [Skapa demowebbplats,](create-site.md) du skapade en demowebbplats baserat på mallarna för tillägget Referensdemo. Nu bör du:
 
 * Lär dig hur du kommer åt AEM.
 * Lär dig hur du skapar en webbplats baserad på en mall.
 * Förstå grunderna för navigering i webbplatsstrukturen och redigering av en sida.
 
-Nu när du har en egen demosajt att utforska och förstår verktygen som hjälper dig att hantera dina demosajter kan du aktivera den fullständiga as a Cloud Service AEM Screens-upplevelsen för dina demosajter.
+Nu när du har en egen demosajt att utforska och förstår verktygen som hjälper dig att hantera dina demosajter kan du aktivera AEM Screens fullständiga as a Cloud Service upplevelse för dina demosajter.
 
 ## Syfte {#objective}
 
-Tillägget AEM Reference Demos innehåller AEM Screens-innehåll för We.Cafe, ett kaféföretag. Det här dokumentet hjälper dig att förstå hur du kör demokonfigurationen We.Cafe i AEM Screens. Efter läsning bör du:
+Tillägget AEM Reference Demos innehåller AEM Screens-innehåll för We.Cafe, ett kaféföretag. Det här dokumentet hjälper dig att förstå hur du kör demokonfigurationen We.Cafe i AEM Screens. När du har läst bör du:
 
 * Lär dig grunderna i AEM Screens.
 * Förstå demoinnehållet för We.Cafe.
-* Lär dig hur du konfigurerar AEM Screens för We.Cafe.
+* Lär dig konfigurera AEM Screens för We.Cafe.
    * Lär dig skapa ett skärmsprojekt för We.Cafe.
    * Kan konfigurera en simulerad vädertjänst med Google Sheets och API:er.
    * Simulera dynamiskt föränderligt skärminnehåll baserat på din&quot;vädertjänst&quot;.
    * Installera och använd skärmspelaren.
 
-## Skärmar {#understand-screens}
+## Förstå skärmar {#understand-screens}
 
-AEM Screens as a Cloud Service är en digital signeringslösning som gör att marknadsförare kan skapa och hantera dynamiska digitala upplevelser i stor skala. Med AEM Screens as a Cloud Service kan ni skapa engagerande och dynamiska digitala signeringsupplevelser som ska användas på offentliga platser.
+AEM Screens as a Cloud Service är en digital signeringslösning som gör det möjligt för marknadsförare att skapa och hantera dynamiska digitala upplevelser i stor skala. Med AEM Screens as a Cloud Service kan ni skapa engagerande och dynamiska digitala signeringsupplevelser som ska användas på offentliga platser.
 
 >[!TIP]
 >
->Mer information om AEM Screens as a Cloud Service finns i [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet.
+>Mer information om AEM Screens as a Cloud Service finns i [Ytterligare resurser](#additional-resources) i slutet av dokumentet.
 
 Genom att installera tillägget AEM Reference Demos får du automatiskt tillgång till Web.Cafe-innehåll för AEM Screens i din demoredigeringsmiljö. Stegen som beskrivs i [Distribuera ett projekt för demonstrationsskärmar](#deploy-project) hjälper er att få ut det mesta av AEM Screens genom att publicera materialet och distribuera det till mediespelare osv.
 
@@ -70,7 +70,7 @@ Platsen New York antas befinna sig i en mindre butik som inte har så mycket utr
 
 >[!NOTE]
 >
->Om du bestämmer dig för att ansluta till Cloud Servicen Skärmar i dialogrutan [Anslut skärmar as a Cloud Service](#connect-screens) skapar du platserna som mappar under visas. Se [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet om du vill ha mer information om hur det visas.
+>Om du bestämmer dig för att ansluta till Cloud Servicen Skärmar i [Anslut skärmar as a Cloud Service](#connect-screens) skapar du platserna som mappar under visas. Se [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet om du vill ha mer information om hur det visas.
 
 ### Cafélayouter {#care-layouts}
 
@@ -90,9 +90,9 @@ Den sista bilden på ingångskanalerna är också riktad (d.v.s. dynamiskt ändr
 
 ## Distribuera ett projekt för demonstrationsskärmar {#deploy-project}
 
-Använda demoinnehåll i sandlådan som du skapade i [Skapa program](create-program.md) måste en plats skapas baserat på en mall.
+Så här använder du demoinnehåll i sandlådan som du skapade i [Skapa program](create-program.md) måste en plats skapas baserat på en mall.
 
-Om du inte redan har skapat en demowebbplats för We.Cafe följer du bara samma steg som i [Skapa demowebbplats](create-site.md) -avsnitt. När du väljer en mall väljer du bara **Webbplatsmall för We.Cafe**.
+Om du inte redan har skapat en demowebbplats för We.Cafe följer du bara samma steg som i [Skapa demowebbplats](create-site.md) -avsnitt. När du väljer mall väljer du bara **Webbplatsmall för We.Cafe**.
 
 ![Mallen We.Cafe](assets/wecafe-template.png)
 
@@ -119,11 +119,11 @@ Först måste du skapa en Google API-nyckel för att underlätta datautbyte.
 
 1. Logga in på ett Google-konto.
 1. Öppna molnkonsolen med den här länken `https://console.cloud.google.com`.
-1. Skapa ett projekt genom att klicka på det aktuella projektnamnet längst upp till vänster i verktygsfältet efter **Google Cloud Platform** label.
+1. Skapa ett projekt genom att klicka på det aktuella projektnamnet längst upp till vänster i verktygsfältet efter **Google Cloud Platform** etikett.
 
    ![Google Cloud Console](assets/google-cloud-console.png)
 
-1. Klicka på **NYTT PROJEKT**.
+1. Klicka på i projektväljardialogrutan **NYTT PROJEKT**.
 
    ![Nytt projekt](assets/new-project.png)
 
@@ -135,9 +135,9 @@ Först måste du skapa en Google API-nyckel för att underlätta datautbyte.
 
    ![API:er och tjänster](assets/apis-services.png)
 
-1. Klicka på i den vänstra panelen i fönstret API:er och tjänster **Autentiseringsuppgifter** längst upp i fönstret och klicka sedan på **SKAPA AUTENTISERINGSUPPGIFTER** och **API-nyckel**.
+1. Klicka på i den vänstra panelen i fönstret API:er och tjänster **Referenser** längst upp i fönstret och klicka sedan på **SKAPA AUTENTISERINGSUPPGIFTER** och **API-nyckel**.
 
-   ![Autentiseringsuppgifter](assets/credentials.png)
+   ![Referenser](assets/credentials.png)
 
 1. Kopiera den nya API-nyckeln i dialogrutan och spara den för senare bruk. Klicka **STÄNG** så att du kan stänga dialogrutan.
 
@@ -165,7 +165,7 @@ Nu kan du skapa ett Google-kalkylblad för att lagra dina väderdata.
 1. Definiera temperaturen genom att ange `32` i cell A2.
 1. Dela dokumentet genom att klicka **Dela** längst upp till höger i fönstret och under **Hämta länk**, klicka **Ändra**.
 
-   ![Dela kalkylblad](assets/share-sheet.png)
+   ![Dela blad](assets/share-sheet.png)
 
 1. Kopiera länken till nästa steg.
 
@@ -215,15 +215,15 @@ AEM Screens kan ändra innehåll dynamiskt baserat på sammanhang. Demon We.Cafe
 
 >[!TIP]
 >
->Mer information om ContextHub finns i [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet.
+>Mer information om ContextHub finns i [Ytterligare resurser](#additional-resources) i slutet av dokumentet.
 
 När skärminnehållet visas anropar ContextHub vädertjänsten för att hitta den aktuella temperaturen för att avgöra vilket innehåll som ska visas.
 
 I demosyfte kan du ändra värdena i bladet. ContextHub känner igen detta och innehållet justeras i kanalen enligt den uppdaterade temperaturen.
 
-1. På AEMaaCS-författarinstansen går du till **Global navigering -> Verktyg -> Webbplatser -> ContextHub**.
+1. Gå till AEMaaCS-författarinstansen **Global navigering -> Verktyg -> Webbplatser -> ContextHub**.
 1. Välj den konfigurationsbehållare som har samma namn som det du gav projektet när du skapade Skärmar-projektet från **Webbplatsmall för We.Cafe**.
-1. Välj **Configuration -> ContextHub Configuration -> Google Sheets** sedan klicka **Nästa** överst till höger.
+1. Välj **Configuration -> ContextHub Configuration -> Google Sheets** klicka sedan på **Nästa** överst till höger.
 1. Konfigurationen bör redan ha förkonfigurerade JSON-data. Det finns två värden som måste ändras:
    1. Ersätt `[your Google Sheets id]` med det blad-ID som [du sparade tidigare](#create-spreadsheet).
    1. Ersätt `[your Google API Key]` med API-nyckeln som [du sparade tidigare](#create-api-key).
@@ -264,7 +264,7 @@ Du kan också förhandsgranska demon i kanalredigeraren i AEMaaCS.
 
 >[!TIP]
 >
->Mer information om kanalredigeraren finns i [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet.
+>Mer information om kanalredigeraren finns i [Ytterligare resurser](#additional-resources) i slutet av dokumentet.
 
 ### Konfigurera AEM Screens as a Cloud Service {#configure-screens}
 
@@ -274,7 +274,7 @@ Först måste du publicera ditt demoinnehåll för skärmar på AEM Screens as a
 1. Navigera till as a Cloud Service skärmar på `https://experience.adobe.com/screens` och logga in.
 1. Kontrollera att du är i rätt ordning i skärmens övre högra hörn.
 
-   ![Kontrollera din skärmorganisation](assets/screens-org.png)
+   ![Kontrollera din Screens-organisation](assets/screens-org.png)
 
 1. Klicka på i det övre vänstra hörnet **Redigera inställningar** -ikonen, formad som ett kugghjul.
 
@@ -288,7 +288,7 @@ Först måste du publicera ditt demoinnehåll för skärmar på AEM Screens as a
 
    ![Information om demokanal](assets/screens-channels.png)
 
-1. Klicka **Visar** i den vänstra panelen. Du har ännu inte skapat något för din demo. Du kan simulera platsen för We.Cafe genom att skapa mappar för varje. Klicka **Skapa** längst upp till höger på skärmen och välj **Mapp**.
+1. Klicka **Visar** till vänster. Du har ännu inte skapat något för din demo. Du kan simulera platsen för We.Cafe genom att skapa mappar för varje. Klicka **Skapa** längst upp till höger på skärmen och välj **Mapp**.
 
    ![Skapa visning](assets/screens-displays.png)
 
@@ -323,9 +323,9 @@ Först måste du skapa en registreringskod för att säkert ansluta en spelare t
 1. Navigera till as a Cloud Service skärmar på `https://experience.adobe.com/screens` och logga in.
 1. Kontrollera att du är i rätt ordning i skärmens övre högra hörn.
 
-   ![Kontrollera din skärmorganisation](assets/screens-org.png)
+   ![Kontrollera din Screens-organisation](assets/screens-org.png)
 
-1. Klicka på i den vänstra panelen **Spelarhantering -> Registreringskoder** och sedan klicka **Skapa kod** längst upp till höger på skärmen.
+1. Klicka på i den vänstra panelen **Player Management -> Registration Codes** och sedan klicka **Skapa kod** längst upp till höger på skärmen.
 
 ![Registreringskoder](assets/registration-codes.png)
 
@@ -358,7 +358,7 @@ Först måste du skapa en registreringskod för att säkert ansluta en spelare t
 1. Navigera till as a Cloud Service skärmar på `https://experience.adobe.com/screens` och logga in.
 1. Kontrollera att du är i rätt ordning i skärmens övre högra hörn.
 
-   ![Kontrollera din skärmorganisation](assets/screens-org.png)
+   ![Kontrollera din Screens-organisation](assets/screens-org.png)
 
 1. Klicka på i den vänstra panelen **Spelarhantering -> Spelare** och du ser den spelare som du har installerat och registrerat tidigare.
 
@@ -386,9 +386,9 @@ Nu när du har slutfört den här delen av AEM Reference Demo Add-on ska du:
 
 * Lär dig grunderna i AEM Screens.
 * Förstå demoinnehållet för We.Cafe.
-* Lär dig hur du konfigurerar AEM Screens för We.Cafe.
+* Lär dig konfigurera AEM Screens för We.Cafe.
 
-Nu är du redo att utforska möjligheterna i AEM Screens med dina egna demosajter. Fortsätt till nästa avsnitt av resan, [Hantera dina demosajter,](manage.md) där du får lära dig mer om de verktyg som finns för att hantera dina demowebbplatser och hur du tar bort dem.
+Nu är du redo att utforska möjligheterna i AEM Screens med dina egna demosajter. Fortsätt till nästa avsnitt av resan, [Hantera dina demowebbplatser,](manage.md) där du får lära dig mer om de verktyg du kan använda för att hantera dina demowebbplatser och hur du tar bort dem.
 
 Du kan även ta en titt på några av de tillgängliga resurserna i [Avsnittet Ytterligare resurser](#additional-resources) om du vill veta mer om de funktioner du såg under den här resan.
 

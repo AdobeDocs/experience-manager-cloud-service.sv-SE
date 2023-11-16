@@ -2,9 +2,9 @@
 title: Åtkomst till databaser
 description: Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering för självbetjäning från Cloud Manager.
 exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
-source-git-commit: 9ec45753f56d0576e75f148ca0165c0ccd621f23
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---

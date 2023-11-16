@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.3.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 761f1605-c421-4f3a-8f90-af23f4f047b1
-source-git-commit: bd0981b262f645653723f1b35d871808506d47ba
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1151'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Ta en titt på [Mars 2022 - versionsöversikt](https://video.tv.adobe.com/v/3414
 ### Nyheter {#what-is-new-cif}
 
 * Förbättrad SEO för scenarier med flera butiker: URL-format för PDP/PLP kan nu konfigureras på en butiksnivå via CIF Cloud Config-egenskaper
-* Produktväljaren har stöd för mellanlagrade produkter via ett nytt filteralternativ i användargränssnittet.  Detta gör att innehållsutvecklare kan förbereda innehållshantering för kommande produktlanseringar
+* Produktväljaren stöder mellanlagrade produkter genom ett nytt filteralternativ i användargränssnittet.  Detta gör att innehållsutvecklare kan förbereda innehållshantering för kommande produktlanseringar
 * Förenklad CIF och felhantering genom att använda CIF Cloud Config-namn i stället för config proxy-URL
 * Manuellt kategorival för produktlista och Carousel-komponenter. På så sätt kan innehållsutvecklare använda dessa komponenter på innehållssidor, utanför katalogupplevelsen
 

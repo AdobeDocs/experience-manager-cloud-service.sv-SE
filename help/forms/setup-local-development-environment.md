@@ -2,9 +2,9 @@
 title: Hur konfigurerar jag en lokal utvecklingsmiljö för AEM Forms?
 description: Konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager Forms as a Cloud Service
 exl-id: 12877a77-094f-492a-af58-cffafecf79ae
-source-git-commit: a0433718a223a6d3aa7740232caa17650bce5ff6
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2841'
+source-wordcount: '2840'
 ht-degree: 1%
 
 ---
@@ -88,7 +88,7 @@ Om du vill hämta den senaste versionen av Adobe Experience Manager as a Cloud S
 
 1. Navigera till fliken **[!UICONTROL AEM as a Cloud Service]**.
 1. Sortera efter publicerat datum i fallande ordning.
-1. Klicka på den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms add-on), formulärreferensmaterial eller Forms Designer.
+1. Klicka på den senaste versionen av Adobe Experience Manager as a Cloud Service SDK, Experience Manager Forms feature archive (AEM Forms-tillägg), formulärreferensmaterial eller Forms Designer.
 1. Granska och godkänn slutanvändaravtalet. Tryck på **[!UICONTROL Download]** -knappen.
 
 ## Ställ in utvecklingsverktyg för AEM projekt {#setup-development-tools-for-AEM-projects}

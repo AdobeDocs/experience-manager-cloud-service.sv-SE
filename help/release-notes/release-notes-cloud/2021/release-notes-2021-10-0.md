@@ -2,9 +2,9 @@
 title: Versionsinformation om 2021.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation om 2021.10.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: ab584923-5f06-4b54-941b-e00bc1158b81
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1436'
 ht-degree: 0%
 
 ---
@@ -73,17 +73,17 @@ No customer-reported bugs fixed in Oct release. Details in CQDOC-18404.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att anmäla dig till betaprogrammet.
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
-* CIF-tillägget stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
+* Tillägget CIF stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
 
-* Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF-ikon har lagts till i verktygsfältet för textredigering som öppnar väljarna för att snabbt söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
+* Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF ikon har lagts till i verktygsfältet som öppnar väljarna för att snabbt söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
 
 * Befintlig snabbkundvagn och utcheckning har ersatts med dedikerade AEM- och utcheckningssidor. Komponenterna på dessa sidor byggs med Adobe Commerce utökningsbara Premiere-komponenter
 
-* Handlare kan dölja vissa produktkatalogkategorier i navigeringen med Commerce-serverdelen. CIF Navigation Core Component (kärnkomponent för CIF-navigering) respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
+* Handlare kan dölja vissa produktkatalogkategorier i navigeringen med Commerce-serverdelen. Den CIF kärnkomponenten för navigering respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
 
 * AEM Storefront Venia returnerar HTTP 404-fel om kategori eller produktsida inte hittas
 

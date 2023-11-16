@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: 9bfc3995-ac8e-488e-b68f-9e1b5b4a3176
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1399'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Redigera en sida:
 
    ![Redigera en sida](assets/sites-editor-title.png)
 
-Du kan när som helst återgå till webbplatskonsolen genom att växla tillbaka till den fliken i webbläsaren. Med hjälp av webbplatsredigeraren kan du snabbt visa innehållet på sidan så som innehållsförfattarna och målgruppen ser det.
+Du kan när som helst återgå till webbplatskonsolen genom att växla tillbaka till den fliken i webbläsaren. Med hjälp av webbplatsredigeraren kan du snabbt visa innehållet på sidan så som innehållsförfattarna och målgruppen kan se det.
 
 >[!NOTE]
 >
@@ -201,7 +201,7 @@ Nu när du är klar med den här delen av AEM Sites översättningsresa ska du:
 * Förstå hur AEM lagrar innehåll.
 * Bekanta dig med AEM översättningsverktyg.
 
-Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att granska nästa gång dokumentet [Konfigurera översättningskopplingen](configure-connector.md) där du får lära dig att ansluta AEM till en översättningstjänst.|
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att granska nästa gång dokumentet [Konfigurera översättningskopplingen](configure-connector.md) där du lär dig hur du ansluter AEM till en översättningstjänst.|
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -2,10 +2,10 @@
 title: Din inkorg
 description: Lär dig hur du använder meddelanden som kommer in i din Inkorg för att hantera dina uppgifter.
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
-source-git-commit: 31e6ec8e9977c8787e14481ee3a94df767262aec
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 15%
+source-wordcount: '912'
+ht-degree: 14%
 
 ---
 
@@ -47,7 +47,7 @@ Så här öppnar du AEM inkorg:
 
 1. Klicka/tryck på indikatorn i verktygsfältet.
 
-1. Välj **Visa alla**. **AEM -inkorgen** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
+1. Välj **Visa alla**. The **AEM** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
    För båda vyerna kan du även definiera [Visa inställningar](#inbox-view-settings). Vilka alternativ som är tillgängliga beror på den aktuella vyn.

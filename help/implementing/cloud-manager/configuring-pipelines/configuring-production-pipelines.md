@@ -3,9 +3,9 @@ title: Konfigurera produktionsförlopp
 description: Lär dig hur du konfigurerar produktionspipelines för att skapa och distribuera kod till produktionsmiljöer.
 index: true
 exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
-source-git-commit: b47b1998fe716a8409d8d3cf0102e25c48828819
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1412'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ När du har konfigurerat programmet och har minst en miljö som använder [!UICO
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Navigera till **Pipelines** från **Programöversikt** sida och klicka på **Lägg till** för att markera **Lägg till produktionspipeline**.
+1. Navigera till **Pipelines** från **Programöversikt** sida och klicka **Lägg till** för att markera **Lägg till produktionspipeline**.
 
    ![Pipelines-kortet i programhanteraren - översikt](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-1.png)
 
@@ -111,7 +111,7 @@ Följ de här stegen för att slutföra konfigurationen av produktionsflödet f�
    * Du kan lägga till högst 25 banor.
    * Om du inte definierar några sökvägar inkluderas webbplatsens hemsida som standard i Experience Audit.
 
-1. Klicka på **Spara** för att spara på rörledningen.
+1. Klicka **Spara** för att spara på rörledningen.
 
 Sökvägar som har konfigurerats för Experience Audit skickas till tjänsten och utvärderas utifrån prestanda-, hjälpmedels-, SEO-test (sökmotoroptimering), bästa praxis och PWA-tester (Progressive Web App) när pipeline körs. Se [Upplevelsegranskningsresultat](/help/implementing/cloud-manager/experience-audit-testing.md) för mer information.
 

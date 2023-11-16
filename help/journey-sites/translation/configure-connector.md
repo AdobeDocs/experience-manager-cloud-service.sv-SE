@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: d1a3eb42-e9e4-4118-9ff7-7aab5519cf0d
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Det första steget är att välja vilken översättningstjänst du vill använda
 >
 >Översättningsexperten ansvarar vanligtvis för att välja vilken översättningstjänst som ska användas, men administratören ansvarar vanligtvis för att installera det nödvändiga översättningsanslutningspaketet.
 
-För den här resan använder vi Microsoft Translator som AEM tillhandahåller en körklar testlicens. Se [Ytterligare resurser](#additional-resources) om du vill ha mer information om den här providern.
+För den här resan använder vi Microsoft Translator som AEM tillhandahåller en körklar testlicens. Se [Ytterligare resurser](#additional-resources) för mer information om den här providern.
 
 Om du väljer en annan provider måste administratören installera kopplingspaketet enligt översättningstjänstens instruktioner.
 
@@ -69,21 +69,21 @@ När kopplingspaketet för den översättningstjänst du föredrar har installer
 
 * Vilken översättningstjänstleverantör som ska användas
 * Om översättning till människa eller dator ska utföras
-* Om annat innehåll som är associerat med sidorna ska översättas, t.ex. taggar
+* Om annat innehåll som är associerat med sidorna ska översättas, till exempel taggar
 
 Så här skapar du en ny översättningskonfiguration:
 
-1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** -> **Cloud Services** -> **Cloud Services för översättning**.
+1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på ett visst projekt eller kan vara globalt.
    * I det här fallet kan till exempel en konfiguration göras globalt för att gälla allt innehåll, eller bara för WKND-projektet.
 
    ![Plats för översättningskonfiguration](assets/translation-configuration-location.png)
 
 1. Klicka eller tryck **Skapa** i verktygsfältet för att skapa den nya konfigurationen.
-1. Ange följande information i fälten och klicka eller tryck sedan på **Skapa**.
+1. Ange följande information i fälten och klicka eller tryck sedan **Skapa**.
    1. Välj **Konfigurationstyp** i listrutan. Välj **Översättningsintegrering** från listan.
-   1. Ange **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Services** console och in page property drop-down lists.
-   1. Du kan även skriva en **Namn** som ska användas för den databasnod som lagrar konfigurationen.
+   1. Ange en **Titel** för din konfiguration. The **Titel** identifierar konfigurationen i **Cloud Service** console och in page property drop-down lists.
+   1. Om du vill kan du skriva **Namn** som ska användas för den databasnod som lagrar konfigurationen.
 
    ![Skapa översättningskonfiguration](assets/create-translation-configuration.png)
 
@@ -96,7 +96,7 @@ Så här skapar du en ny översättningskonfiguration:
 1. Ange följande information.
 
    1. **Översättningsmetod** - Välj **Maskinöversättning** eller **Översättning av människor** beroende på översättningsleverantör. För den här resan antar vi maskinöversättning.
-   1. **Översättningsproviders** - Välj den koppling du installerade för översättningstjänsten i listan.
+   1. **Översättningsproviders** - Välj den koppling du har installerat för översättningstjänsten i listan.
    1. **Innehållskategori** - Välj den kategori som bäst passar översättningen (endast för maskinöversättning).
    1. **Översätt sidresurser** - Välj **Använda arbetsflöde för översättning av webbplatser** för att översätta resurser som är kopplade till webbplatssidorna.
    1. **Översätt komponentsträngar** - Markera det här alternativet om du vill översätta komponentinformation.
@@ -119,7 +119,7 @@ Det gör du genom att navigera till innehållets språkrot. I våra exempel är 
 
 1. Gå till den globala navigeringen och gå till **Navigering** -> **Resurser** -> **Filer**.
 1. I resurskonsolen väljer du den språkrot som du vill konfigurera och klickar eller trycker på **Egenskaper**.
-1. Tryck eller klicka på **Cloud Services** -fliken.
+1. Tryck eller klicka på **Cloud Service** -fliken.
 1. Under **Cloud Service Configurations** i **Lägg till konfiguration** väljer du kontakt. Den ska visas i listrutan när du har installerat paketet som [som beskrivits tidigare.](#connect-translation-provider)
 1. Under **Cloud Service Configurations** i **Lägg till konfiguration** väljer du även din konfiguration.
 1. Tryck eller klicka **Spara och stäng**.
@@ -133,7 +133,7 @@ Nu när du är klar med den här delen av AEM Sites översättningsresa ska du:
 * Förstå de viktiga parametrarna i översättningsintegreringsramverket i AEM.
 * Du kan skapa en egen anslutning till översättningstjänsten.
 
-Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att nästa gång du granskar dokumentet [Konfigurera översättningsregler,](translation-rules.md) där du får lära dig att definiera vilket innehåll som ska översättas.
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att granska nästa gång dokumentet [Konfigurera översättningsregler,](translation-rules.md) där du lär dig definiera vilket innehåll som ska översättas.
 
 ## Ytterligare resurser {#additional-resources}
 

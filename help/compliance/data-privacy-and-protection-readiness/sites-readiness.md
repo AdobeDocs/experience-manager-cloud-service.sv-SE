@@ -1,10 +1,10 @@
 ---
 title: Dataskydd och dataintegritet - beredskap för Adobe Experience Manager as a Cloud Service webbplatser
-description: Läs mer om Adobe Experience Manager as a Cloud Service Sites support för de olika dataskydds- och datasekretessreglerna. bland annat EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag och hur man ska följa detta när man genomför ett nytt AEM as a Cloud Service projekt.
+description: Läs om Adobe Experience Manager as a Cloud Service Sites support for the various Data Protection and Data Privacy Regulations, including the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act and how to compliance when implementation a new AEM as a Cloud Service project.
 exl-id: fdcad111-0cdd-46cc-964c-3f8669ca2030
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Så här avanmäler du:
 
 1. Bläddra nedåt till **Tjänster** - **Data om användning av tjänsten Experience Cloud**.
 
-1. Markera den refererade länken; för närvarande namngiven **här**.
+1. Markera den refererade länken, som för närvarande heter **här**.
 
 1. Du får följande information tillsammans med alternativen för att avanmäla dig eller i:
 
@@ -82,7 +82,7 @@ Mer information om hur du hanterar förfrågningar från registrerade personer g
 
 AEM Sites innehåller en valfri integrering med Personalization Foundation by Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade personer gällande Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/cmp-privacy-and-general-data-protection-regulation.html).
+Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 
@@ -92,7 +92,7 @@ AEM provides an optional data layer with [ContextHub](/help/sites-developing/con
 
 AEM tillhandahåller ett valfritt datalager med ContextHub. På så sätt behålls besökarspecifika data i webbläsaren som ska användas för regelbaserad personalisering.
 
-Som standard lagras dessa besökardata inte i AEM. AEM skickar regler till datalagret för att fatta personaliseringsbeslut i webbläsaren.
+Som standard lagras inte besökardata i AEM, AEM skickar regler till datalagret för att fatta personaliseringsbeslut i webbläsaren.
 
 ### Implementera anmälan/avanmälan {#implementing-opt-in-opt-out}
 
@@ -130,7 +130,7 @@ I dessa riktlinjer används anmälan som standard. Därför måste en besökare 
 
 Om du vill förhandsgranska den beständiga ContextHub som används kan användaren:
 
-* Använda webbläsarens konsol. till exempel:
+* Använd webbläsarens konsol, till exempel:
 
    * Krom:
 
@@ -229,7 +229,7 @@ Så här rensar du ContextHub-beständighet:
   ContextHub.resetAllStores();
   ```
 
-* för att rensa ett visst beständigt lager, sessionStorage:
+* Så här rensar du ett visst beständigt lager, till exempel sessionStorage:
 
   ```
   var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.SESSION });

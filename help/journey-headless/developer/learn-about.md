@@ -2,9 +2,9 @@
 title: Läs om CMS Headless Development
 description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om headless-teknik och varför du skulle använda den.
 exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
-source-git-commit: 94e5d0e84d5c55d0ff61a705e079b4dc8e32a777
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1636'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ Tack för att du kom igång med AEM resa utan trassel! Nu när du läser det hä
 * Förstå varför och när headless behövs.
 * Lär dig på en hög nivå hur headless-koncept används och hur de hänger ihop.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa utan trassel genom att nästa gång du granskar dokumentet [Komma igång med AEM Headless as a Cloud Service](getting-started.md) där du får lära dig hur du ställer in de verktyg som behövs och hur du börjar fundera på hur AEM ser på headless-innehållsleverans och dess förutsättningar.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa utan trassel genom att nästa gång du granskar dokumentet [Komma igång med AEM Headless as a Cloud Service](getting-started.md) där du får lära dig hur du konfigurerar de verktyg som behövs och hur du börjar fundera på hur AEM hanterar headless-innehållsleverans och dess förutsättningar.
 
 ## Ytterligare resurser {#additional-resources}
 

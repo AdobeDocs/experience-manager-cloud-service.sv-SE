@@ -3,13 +3,13 @@ title: Hantera innehållsfragment
 description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och redigeraren, som bas för ditt headless-innehåll, eller för att skapa sidor.
 feature: Content Fragments
 role: User, Developer, Architect
-source-git-commit: d381cc80e2c15ea35f9fd23baa78806ce15ec1af
+exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2540'
+source-wordcount: '2532'
 ht-degree: 0%
 
 ---
-
 
 # Hantera innehållsfragment {#managing-content-fragments}
 
@@ -130,7 +130,7 @@ Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja 
 
 #### Åtgärder för ett (markerat) innehållsfragment {#actions-selected-content-fragment}
 
-Om du väljer ett visst fragment öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för det fragmentet. Du kan också markera flera fragment. Markeringen av funktionsmakron justeras därefter.
+Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för det fragmentet. Du kan också markera flera fragment. Markeringen av funktionsmakron justeras därefter.
 
 ![Konsol för innehållsfragment - verktygsfält för ett valt fragment](assets/cf-managing-console-fragment-toolbar.png)
 
@@ -190,7 +190,7 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
    * Endast information.
    * Kan användas för [Snabb filtrering](#fast-filtering).
 * **Refererad av**:
-   * Tillhandahåller en länk som öppnar en dialogruta med alla [överordnade referenser](#parent-references-fragment)  av det fragmentet, inklusive referenser till innehållsfragment, upplevelsefragment och sidor. Klicka på **Titel** i dialogrutan.
+   * Tillhandahåller en länk som öppnar en dialogruta med alla [överordnade referenser](#parent-references-fragment)  av det fragmentet, inklusive referenser till innehållsfragment, upplevelsefragment och sidor. Om du vill öppna en viss referens klickar du på **Titel** i dialogrutan.
 
      ![Konsolen Innehållsfragment - dialogrutan Referenser](assets/cf-managing-console-references-dialog.png)
 
@@ -200,7 +200,7 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 
      ![Konsol för innehållsfragment - språkindikator](assets/cf-managing-console-language-indicator.png)
 
-   * Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Klicka på **Titel** i dialogrutan.
+   * Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
 
      ![Konsol för innehållsfragment - språkdialogruta](assets/cf-managing-console-languages-dialog.png)
 
@@ -223,7 +223,7 @@ Så här skapar du ett innehållsfragment:
    >
    >Om du vill ha platsen för det nya fragmentet fördefinierad kan du navigera till mappen där du vill skapa fragmentet, eller ange platsen när du skapar fragmentet.
 
-1. The **Nytt innehållsfragment** öppnas en dialogruta där du kan ange
+1. The **Nytt innehållsfragment** öppnas dialogrutan där du kan ange:
 
    * **Plats** - den här fylls i automatiskt med den aktuella platsen, men du kan välja en annan plats om det behövs
    * **Content Fragment Model** - välj den modell som ska användas som bas för fragmentet i listrutan.
@@ -396,7 +396,7 @@ Information om överordnade referenser finns i
 * **Referenser** kolumn i konsolen Innehållsfragment
 * den [överordnad referenslänk i det övre verktygsfältet i redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#view-parent-references)
 
-Båda innehåller en länk som öppnar en dialogruta med alla överordnade referenser till det fragmentet, inklusive referenser till innehållsfragment, Experience Fragments och pages. Klicka på **Titel** eller länkikonen i dialogrutan.
+Båda innehåller en länk som öppnar en dialogruta med alla överordnade referenser till det fragmentet, inklusive referenser till innehållsfragment, Experience Fragments och pages. Om du vill öppna en viss referens klickar du på **Titel** eller länkikonen i dialogrutan.
 
 Till exempel:
 
@@ -413,7 +413,7 @@ Ikonen anger språkområdet för innehållsfragmentet tillsammans med det totala
 
 ![Konsol för innehållsfragment - språkindikator](assets/cfc-console-language-indicator.png)
 
-Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Klicka på **Titel** i dialogrutan.
+Klicka/tryck på antalet för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
 
 ![Konsol för innehållsfragment - språkdialogruta](assets/cf-managing-console-languages-dialog.png)
 

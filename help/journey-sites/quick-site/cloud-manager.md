@@ -2,9 +2,9 @@
 title: Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser
 description: Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.
 exl-id: 5d264078-e552-48ca-8d82-294a646e6b1f
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Den här delen av resan gäller både AEM och Cloud Manager-administratören.
 
 Det finns flera krav innan du börjar skapa och anpassa webbplatser med verktyget Skapa snabbwebbplats.
 
-Eftersom resan är avsedd för både gränssnittsutvecklare, administratörer och kombinationer av alla roller listas kraven för båda här.
+Eftersom den här resan är avsedd för både gränssnittsutvecklare, administratörer och kombinationer av alla roller listas kraven för båda här.
 
 Det är viktigt att förstå att det inte krävs någon AEM eller kunskap för den som utvecklar gränssnittet.
 
@@ -86,7 +86,7 @@ För den här resan behövs ingen fullständig förståelse för Cloud Manager. 
 * **PROGRAM** - Varje innehavare har ett eller flera program som ofta återspeglar kundens licensierade lösningar.
 * **MILJÖ** - Varje program har flera miljöer, t.ex. produktion för direktinnehåll, en för mellanlagring och en för utvecklingsändamål.
 * **DATABAS** - Miljöerna har Git-databaser där program- och front end-kod underhålls.
-* **VERKTYG OCH ARBETSFLÖDEN** - Pipelines hanterar distributionen av kod från databaserna till miljöerna.
+* **VERKTYG OCH ARBETSFLÖDEN** - Pipelines hanterar distributionen av kod från databaser till miljöer.
 
 Ett exempel är ofta användbart när hierarkin ska sammanställas.
 
@@ -117,7 +117,7 @@ Nu när du är klar med den här delen av AEM snabbwebbplats:
 * Förstå hur AEM Sites och Cloud Manager samarbetar för att underlätta utvecklingen på frontend
 * Se hur anpassningssteget i gränssnittet är helt fristående från AEM och kräver ingen AEM kunskap.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att nästa gång du granskar dokumentet [Skapa webbplats från mall,](create-site.md) där du får lära dig hur du snabbt skapar en ny AEM med hjälp av en mall.
+Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Skapa webbplats från mall,](create-site.md) där du lär dig att snabbt skapa en ny AEM med hjälp av en mall.
 
 ## Ytterligare resurser {#additional-resources}
 

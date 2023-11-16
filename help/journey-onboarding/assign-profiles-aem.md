@@ -1,12 +1,12 @@
 ---
 title: Tilldela AEM produktprofiler
-description: När du har konfigurerat dina molnresurser måste du ge ditt team åtkomst till AEM med hjälp AEM produktprofiler.
+description: När du har konfigurerat dina molnresurser kan du ge ditt team åtkomst till AEM med hjälp av AEM produktprofiler.
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: c00f5d28-85af-4bd3-a50c-913d1342241c
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 0%
 >title="Tilldela AEM produktprofiler"
 >abstract="Du har inte rätt att använda Experience Manager Assets. Kontakta administratören."
 
-I den här delen av [startresan,](overview.md) du får lära dig att ge ditt team tillgång till AEM med hjälp av AEM produktprofiler.
+I den här delen av [startresan,](overview.md) får du lära dig att ge ditt team tillgång till AEM med hjälp av AEM produktprofiler.
 
 ## Syfte {#objective}
 
-När du har läst det föregående dokumentet på den här introduktionsresan, [Skapa miljöer,](create-environments.md) och få dina molnresurser konfigurerade måste du ge teamet tillgång till AEM med hjälp av AEM produktprofiler. Som systemadministratör gör du detta genom att tilldela AEM produktprofiler.
+När du har läst det föregående dokumentet under den här introduktionsresan, [Skapa miljöer,](create-environments.md) och få dina molnresurser konfigurerade kan du ge ditt team åtkomst till AEM med AEM produktprofiler. Som systemadministratör gör du detta genom att tilldela AEM produktprofiler.
 
 När du har läst det här dokumentet bör du förstå:
 
@@ -74,7 +74,7 @@ Följ de här stegen för att se de AEM produktprofilerna från Admin Console.
 
    ![Markera instans](/help/journey-onboarding/assets/cloud-profiles-1.png)
 
-1. Du ser en lista över AEM as a Cloud Service produktprofiler som kan tilldelas en användare baserat på deras roller.
+1. Du kan se en lista över AEM as a Cloud Service produktprofiler som kan tilldelas en användare baserat på deras roller.
 
    ![Produktprofiler](/help/journey-onboarding/assets/cloud-profiles-2.png)
 
@@ -92,7 +92,7 @@ Dessa uppgifter kräver att du är systemadministratör för **Företagsägare**
 
    ![Tilldela åtkomst](/help/journey-onboarding/assets/add-team2.png)
 
-1. Välj `AEM Administrator` eller `AEM User` och klicka på **Lägg till användare** som visas nedan och skicka in den information som behövs för att lägga till teammedlemmen.
+1. Välj `AEM Administrator` eller `AEM User` och klicka **Lägg till användare** som visas nedan och skicka in den information som behövs för att lägga till teammedlemmen.
 
    ![Lägg till teammedlem](/help/journey-onboarding/assets/add-team3.png)
 
@@ -107,7 +107,7 @@ Grattis! De användare du har tilldelat till AEM as a Cloud Service produktprofi
 Men om du bättre vill förstå hur författare och utvecklare använder systemet kan du fortsätta med två valfria delar av den här introduktionsresan:
 
 * [Uppgifter för utvecklare och distributionsansvarig](developers.md) - Där får du lära dig hur utvecklare får tillgång till Git för att lagra sin egen kod och distribuera den med hjälp av Cloud Manager-pipelines.
-* [AEM användaruppgifter](aem-users.md) - Där får du lära dig hur du kommer åt den AEM miljön där du kan börja skapa innehåll.
+* [AEM användaruppgifter](aem-users.md) - Där du lär dig hur du kommer åt den AEM miljön där du kan börja skapa innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 

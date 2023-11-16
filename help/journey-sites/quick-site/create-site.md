@@ -2,9 +2,9 @@
 title: Skapa webbplats från mall
 description: Lär dig hur du snabbt skapar en ny AEM med hjälp av en webbplatsmall.
 exl-id: 31bb04c2-b3cc-44ca-b517-5b0d66d9b1fa
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1504'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Det här dokumentet hjälper dig att förstå hur du snabbt kan skapa en ny AEM 
 
 ## Ansvarig roll {#responsible-role}
 
-Den här delen av resan gäller AEM.
+Den här delen av resan gäller för AEM.
 
 ## Webbplatsmallar {#site-templates}
 
@@ -40,8 +40,8 @@ Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i 
 
 * `files`: Mapp med UI-kit, XD och eventuellt andra filer
 * `previews`: Mapp med skärmbilder av platsmallen
-* `site`: Innehållspaket för det innehåll som kopieras för varje plats som skapas från den här mallen, t.ex. sidmallar, sidor osv.
-* `theme`: Källor till malltemat för att ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript osv.
+* `site`: Innehållspaket med innehåll som kopieras för varje plats som skapas från den här mallen, t.ex. sidmallar, sidor osv.
+* `theme`: Källor till malltemat för att ändra hur webbplatsen ser ut, t.ex. CSS, JavaScript etc.
 
 Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt kan skapa en webbplats. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du tillgodose olika affärsbehov.
 
@@ -75,11 +75,11 @@ Det är mycket enkelt att använda en mall för att skapa en ny webbplats.
 
    ![Skapa en ny plats från en mall](assets/create-site-from-template.png)
 
-1. Tryck eller klicka på **Importera** överst i den vänstra kolumnen.
+1. Tryck eller klicka på i guiden Skapa plats **Importera** överst i den vänstra kolumnen.
 
    ![Guiden Skapa webbplats](assets/site-creation-wizard.png)
 
-1. Leta reda på mallen i filläsaren [du laddat ned tidigare](#obtaining-template) och klicka **Överför**.
+1. Leta reda på mallen i filläsaren [du laddat ned tidigare](#obtaining-template) och trycka eller klicka **Överför**.
 
 1. När den har överförts visas den i listan med tillgängliga mallar. Tryck eller klicka på den för att markera den (vilket även visar information om mallen i den högra kolumnen) och tryck eller klicka sedan på den **Nästa**.
 
@@ -94,11 +94,11 @@ Det är mycket enkelt att använda en mall för att skapa en ny webbplats.
 
    ![Information om den nya platsen](assets/create-site-details.png)
 
-1. I bekräftelsedialogrutan som visas trycker du på eller klickar på **Klar**.
+1. I bekräftelsedialogrutan som visas: tryck eller klicka **Klar**.
 
    ![Dialogrutan Slutfört](assets/success.png)
 
-1. På webbplatskonsolen är de nya platserna synliga och kan navigeras för att utforska den grundläggande strukturen enligt mallen.
+1. På webbplatskonsolen är de nya platserna synliga och kan navigeras för att utforska den grundläggande strukturen som definieras av mallen.
 
    ![Ny webbplatsstruktur](assets/new-site.png)
 
@@ -113,17 +113,17 @@ Webbplatsmallar är mycket kraftfulla och flexibla och alla nummer kan skapas f�
 
 ## Exempelsida {#example-page}
 
-Om du behöver ytterligare anpassning av gränssnittet bör du komma ihåg att den som utvecklar gränssnittet kanske inte känner till informationen om ditt innehåll. Därför är det en bra idé att ge utvecklaren en väg till typiskt innehåll som kan användas som referensbas när temat anpassas. Ett typiskt exempel är hemsidan för webbplatsens överordnad språk.
+Om du behöver anpassa gränssnittet ytterligare bör du tänka på att den som utvecklar gränssnittet kanske inte känner till detaljerna i materialet. Därför är det en bra idé att ge utvecklaren en väg till typiskt innehåll som kan användas som referensbas när temat anpassas. Ett typiskt exempel är startsidan för webbplatsens huvudspråk.
 
-1. Navigera till startsidan för webbplatsens överordnad språk i webbläsaren och tryck eller klicka på sidan för att markera den och sedan på eller klicka på **Redigera** på menyraden.
+1. Navigera till startsidan för webbplatsens huvudspråk i webbläsaren och tryck eller klicka sedan på sidan för att markera den och tryck eller klicka på den **Redigera** på menyraden.
 
    ![Normal hemsida](assets/home-page-in-console.png)
 
-1. I redigeraren väljer du **Sidinformation** i verktygsfältet och sedan **Visa som publicerad**.
+1. I Editor väljer du **Sidinformation** i verktygsfältet och sedan **Visa som publicerad**.
 
    ![Redigera hemsidan](assets/home-page-edit.png)
 
-1. Kopiera sökvägen till innehållet från adressfältet på fliken som öppnas. Det ser ut som `/content/<your-site>/en/home.html?wcmmode=disabled`.
+1. Kopiera sökvägen till innehållet från adressfältet på fliken som öppnas. Det kommer att se ut som `/content/<your-site>/en/home.html?wcmmode=disabled`.
 
    ![Startsida](assets/home-page.png)
 
@@ -141,7 +141,7 @@ Nu när webbplatsen har skapats kan temat för webbplatsen som genererats av mal
 
    ![Hämta temakällor](assets/download-theme-sources.png)
 
-Du har nu en kopia av temats källfiler i dina nedladdningsfiler.
+Du har nu en kopia av temakällfilerna i dina nedladdningsfiler.
 
 ## Konfigurera proxyanvändare {#proxy-user}
 
@@ -174,7 +174,7 @@ Nu när du är klar med den här delen av AEM snabbwebbplats:
 * Lär dig hur du skapar en ny plats med hjälp av en mall.
 * Se hur du laddar ned mallen från din nya webbplats och kan ge den till frontutvecklaren.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att nästa gång du granskar dokumentet [Konfigurera din pipeline,](pipeline-setup.md) där du skapar en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
+Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Konfigurera din pipeline,](pipeline-setup.md) där du skapar en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 role: User
 feature: Collaboration
 exl-id: d48f6daf-af81-4024-bff2-e8bf6d683b0c
-source-git-commit: 5da4be3ec9af6a00cce8d80b8eea7f7520754a1d
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '603'
 ht-degree: 2%
 
 ---
@@ -25,13 +25,13 @@ Du kan skapa en privat mapp i [!DNL Adobe Experience Manager Assets] användargr
 >
 >Den privata mappen har minst en medlem med ägarrollen.
 >
->Om du vill skapa en privat mapp måste du `Read` och `Modify` behörigheter för den överordnade mappen som du skapar en privat mapp i. Om du inte är administratör är dessa behörigheter inte aktiverade som standard `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar.
+>Du måste `Read` och `Modify` behörigheter för den överordnade mappen som du skapar en privat mapp i. Om du inte är administratör är dessa behörigheter inte aktiverade som standard `/content/dam`. I så fall måste du först skaffa dessa behörigheter för ditt användar-ID/din grupp innan du försöker skapa privata mappar.
 
 ## Skapa och dela privat mapp  {#create-share-private-folder}
 
 Så här skapar och delar du en privat mapp:
 
-1. I [!DNL Assets] konsol, klicka på **[!UICONTROL Create]** i verktygsfältet och välj **[!UICONTROL Folder]** på menyn.
+1. I [!DNL Assets] klickar du på **[!UICONTROL Create]** i verktygsfältet och välj **[!UICONTROL Folder]** på menyn.
 
    ![Skapa resursmapp](assets/create-folder.png)
 

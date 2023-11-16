@@ -2,10 +2,10 @@
 title: Redigera sidegenskaper
 description: Lär dig hur du definierar de egenskaper som krävs för att hantera en sida i AEM.
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2279'
-ht-degree: 3%
+source-wordcount: '2280'
+ht-degree: 2%
 
 ---
 
@@ -227,7 +227,7 @@ Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Liv
 
 ### Förhandsgranska {#preview}
 
-När en förhandsvisningsmiljö är aktiverad ser du:
+När en förhandsvisningsmiljö är aktiverad ser du följande:
 
 * URL för förhandsgranskning - den URL som används för att komma åt innehållet i förhandsvisningsmiljön
 
@@ -286,7 +286,7 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 
 1. Öppna sidan som du vill redigera egenskaper för.
 1. Välj **Sidinformation** -ikon för att öppna markeringsmenyn:
-1. Välj **Öppna egenskaper** så öppnas en dialogruta där du kan redigera egenskaperna. Följande knappar finns också till höger om verktygsfältet:
+1. Välj **Öppna egenskaper** och en dialogruta öppnas där du kan redigera egenskaperna, sorterade efter lämplig flik. Följande knappar finns också till höger om verktygsfältet:
    * **Avbryt**
    * **Spara och stäng**
 1. Använd **Spara och stäng** för att spara ändringarna.

@@ -2,9 +2,9 @@
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1536'
+source-wordcount: '1527'
 ht-degree: 1%
 
 ---

@@ -4,9 +4,9 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 86700cce-139f-451e-9c21-b38b6332f773
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # AEM användaruppgifter {#aem-user-tasks}
 
-I den här valfria delen av [startresan,](overview.md) du får lära dig hur AEM kan komma åt AEM as a Cloud Service för att skapa innehåll.
+I den här valfria delen av [startresan,](overview.md) du lär dig hur AEM kan komma åt AEM as a Cloud Service för att skapa innehåll.
 
 ## Story hittills {#story-so-far}
 
@@ -44,15 +44,15 @@ Innan du påbörjar de uppgifter som beskrivs som AEM användare i det här doku
 * Systemadministratören har tilldelat användare till **AEM** eller **AEM administratörer** produktprofiler.
 * Molnresurser har konfigurerats.
 
-## Logga in i AEM {#login-aem}
+## Logga in AEM {#login-aem}
 
 Som AEM måste du logga in AEM för att börja skapa innehåll.
 
 1. Navigera till inloggningssidan för Cloud Manager på [`https://my.cloudmanager.adobe.com`.](https://my.cloudmanager.adobe.com/)
 
-1. Välj lämpligt program från Cloud Managers **Program och produkter** sidan som startar **Översikt** sida. Fråga systemadministratören om du är osäker på vilket program du ska få åtkomst till.
+1. Välj lämpligt program från Cloud Managers **Program och produkter** sidan som startar **Ökning** sida. Fråga systemadministratören om du är osäker på vilket program du ska använda.
 
-1. Från **Översikt** i Cloud Manager klickar du på författarlänken på **Miljö** kort.
+1. Från **Ökning** i Cloud Manager klickar du på författarlänken på sidan **Miljö** kort.
 
    ![Miljökort](/help/journey-onboarding/assets/author-environ.png)
 
@@ -77,7 +77,7 @@ Om du är intresserad av hur utvecklare och distributionsansvariga skapar och ha
 
 >[!TIP]
 >
->Nu när du är ombord kan du [lära dig hur du enkelt lägger till tillägget AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) till en sandlådemiljö med minimal AEM och möjlighet att testa de kraftfulla funktionerna i AEM med omfattande exempel baserade på bästa praxis.
+>Nu när du är ombord kan du [lära dig hur du enkelt lägger till AEM Reference Demos Add-On](/help/journey-sites/demos-add-on/overview.md) till en sandlådemiljö med minimal AEM och möjlighet att testa de kraftfulla funktionerna i AEM med omfattande exempel baserade på bästa praxis.
 
 ## Ytterligare resurser {#additional-resources}
 

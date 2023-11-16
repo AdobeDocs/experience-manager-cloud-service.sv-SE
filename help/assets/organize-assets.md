@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Management, Search
 role: User
 exl-id: 6b3ce076-2dd9-47f6-9b68-4fa52bfedd42
-source-git-commit: f0e9fe0bdf35cc001860974be1fa2a7d90f7a3a9
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '920'
 ht-degree: 1%
 
 ---
@@ -64,20 +64,20 @@ Det mest grundläggande sättet att ordna resurser är att spara resurserna i ma
 * Vanligtvis växer databasen med digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning tidigt när du skapar innehåll.
 * Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att arbeta och hantera ert material bättre. Resurser som placeras i följande typer av mappar kan till exempel hjälpa dig att dela upp dina resurser:
 
-   * **Utvecklingsmappar**: innehåller digitala resurser som du arbetar med just nu.
+   * **Utvecklingsmappar**: innehåller digitala resurser som du för närvarande arbetar med.
    * **Klientmappar**: innehåller digitala resurser baserade på klienter eller projektnamn.
    * **Primära mappar**: innehåller digitala källresurser.
    * **Återgivningsmappar**: innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
    * **Filstorleksmappar**: innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
    * **Mellanlagringsmappar**: innehåller digitala resurser som är klara att publiceras live på din webbplats.
-   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer, som bilder, dokument och multimedia.
+   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer, t.ex. bilder, dokument och multimedia.
    * **Arkivera mappar**: innehåller pensionerade digitala resurser.
    * **Datumbaserade mappar**: innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
 * Om en resurs redan har publicerats använder du [!DNL Experience Manager] om du vill flytta resursen till en annan mapp och publicera på nytt från den nya platsen. Den ursprungliga publicerade resursplatsen är fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock *vilse* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
 
-## Ordna resurser med taggar {#use-tags-to-organize-assets}
+## Ordna resurser med hjälp av taggar {#use-tags-to-organize-assets}
 
 Om du lägger till taggar i resurser blir det enklare att hämta dem under en sökning, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda AI-algoritmer i Adobe Sensei för tillgångsidentifiering.
 

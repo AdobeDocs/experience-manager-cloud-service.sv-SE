@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Asset Management, Collaboration, Asset Distribution
 role: User, Admin
 exl-id: 14e897cc-75c2-42bd-8563-1f5dd23642a0
-source-git-commit: 177021106fc67e67a8cd6645a6684185331dd6f4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1299'
 ht-degree: 2%
 
 ---
@@ -89,11 +89,11 @@ Alla användare som har tillgång till länken för delade resurser kan hämta d
 
   ![Hämta kö](assets/queue-download.png)
 
-* Klicka på **[!UICONTROL Download Inbox]** om du vill visa status för nedladdningen. För stora nedladdningar klickar du på **[!UICONTROL Refresh]** för att uppdatera statusen.
+* När nedladdningsfilen är klar klickar du på **[!UICONTROL Download Inbox]** om du vill visa status för nedladdningen. För stora nedladdningar klickar du på **[!UICONTROL Refresh]** för att uppdatera statusen.
 
   ![Hämta inkorg](assets/link-sharing-download-inbox.png)
 
-* Klicka på **[!UICONTROL Download]** för att ladda ned zip-filen.
+* Klicka på knappen **[!UICONTROL Download]** för att ladda ned zip-filen.
 
 <!--
 You can also copy the auto-generated link and share it with the users. The default expiration time for the link is one day.

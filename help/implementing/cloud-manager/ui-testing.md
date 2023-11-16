@@ -2,9 +2,9 @@
 title: UI-testning
 description: Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa och automatiskt köra gränssnittstester för dina anpassade program
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2385'
 ht-degree: 0%
 
 ---
@@ -183,7 +183,7 @@ Ta med en `testing.properties` fil i build-artefakten, lägga till en `include` 
 
 >[!NOTE]
 >
->Om projektet inte innehåller den här raden måste du redigera filen för att kunna välja gränssnittstestning.
+>Om projektet inte innehåller den här raden redigerar du filen för att välja gränssnittstestning.
 >
 >Filen kan innehålla en rad som anger att den inte ska redigeras. Detta beror på att det introducerades i ditt projekt innan gränssnittstestning för deltagande introducerades och att klienterna inte var avsedda att redigera filen. Detta kan ignoreras.
 

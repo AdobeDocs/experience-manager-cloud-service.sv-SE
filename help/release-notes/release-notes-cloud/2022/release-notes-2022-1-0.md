@@ -2,9 +2,9 @@
 title: Versionsinformation för 2022.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för 2022.1.0-utgåvan av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1c40ab67-8fd7-4f29-b8c9-dd98b6d5b490
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1074'
 ht-degree: 1%
 
 ---
@@ -81,7 +81,7 @@ Ta en titt på [Versionsöversikt januari 2022](https://video.tv.adobe.com/v/340
 * **[Assembler API](https://www.adobe.io/experience-manager-forms-cloud-service-developer-reference/references/assembler-sync/)**: Sammanställ API:er för att kombinera, ordna om, förbättra och få information om PDF-dokument.
 
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
@@ -123,7 +123,7 @@ Releasedatum för Content Transfer Tool v1.8.6 är 3 februari 2022.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Innehållsvalidering - Användare kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats med verktyget Innehållsöverföring har importerats till målinstansen. Om du vill använda den här funktionen måste du aktivera den i `System Console` i AEM. Se [Verifierar innehållsöverföringar - Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html?lang=en#getting-started) för mer information.
+* Innehållsvalidering - Användare kan på ett tillförlitligt sätt avgöra om allt innehåll som extraherats med verktyget Innehållsöverföring har importerats till målinstansen. Om du vill använda den här funktionen aktiverar du den i `System Console` i AEM. Se [Verifierar innehållsöverföringar - Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html?lang=en#getting-started) för mer information.
 
 ### Felkorrigeringar {#bug-fixes-ctt}
 

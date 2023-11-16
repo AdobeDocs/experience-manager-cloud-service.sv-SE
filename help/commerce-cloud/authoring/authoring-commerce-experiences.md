@@ -2,9 +2,9 @@
 title: Redigering av handelsupplevelser
 description: Lär dig skapa och bygga e-handelsrelaterade upplevelser effektivt genom att få tillgång till produktdata och innehåll utan att lämna sammanhanget.
 exl-id: 45d697b7-ec96-4c26-be2a-3395b731d52d
-source-git-commit: ba0c1e13f311f48ac138f2c3ca582835a4a83bf6
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '717'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Översikt {#overview}
 
-Tillägget CIF utökar AEM med e-handelsspecifika funktioner. På så sätt kan författare skapa och hantera e-handelsrelaterade upplevelser effektivt genom att få tillgång till produktdata och innehåll utan att lämna sammanhanget.
+CIF utökar AEM med e-handelsspecifika funktioner. På så sätt kan författare skapa och hantera e-handelsrelaterade upplevelser effektivt genom att få tillgång till produktdata och innehåll utan att lämna sammanhanget.
 
 ## Väljare {#pickers}
 
@@ -65,7 +65,7 @@ I motsats till resurser kan produkter läggas till på en sida (vilket skapar en
 
 ### Lägga till länkar i textfält med RTE {#rte}
 
-CIF-produktkatalogsidor är virtuella sidor som återges direkt. Därför går det inte att bädda in hyperlänkar som för vanliga AEM. CIF lägger till en ny åtgärd,&quot;Commerce Links&quot;, i textredigeraren. Den här åtgärden fungerar precis som den vanliga hyperlänksåtgärden, men tillåter författare att välja en produkt eller kategori med hjälp av väljarna.
+CIF produktkatalogsidor är virtuella sidor som återges direkt. Därför går det inte att bädda in hyperlänkar som för vanliga AEM. CIF lägger till en ny åtgärd,&quot;Commerce Links&quot;, i textredigeraren. Den här åtgärden fungerar precis som den vanliga hyperlänksåtgärden, men tillåter författare att välja en produkt eller kategori med hjälp av väljarna.
 
 ![RTE](../assets/authoring/RTE.png)
 

@@ -2,9 +2,9 @@
 title: Visa loggar för en migreringsuppsättning i verktyget Innehållsöverföring
 description: Visa loggar för en migreringsuppsättning i verktyget Innehållsöverföring
 exl-id: aed1ac83-a2fb-425e-aca4-39cd0bb42fd3
-source-git-commit: 9d236e459f13fec6f0aaf80f588d20760636b9bb
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '244'
 ht-degree: 11%
 
 ---
@@ -38,6 +38,6 @@ Följ sedan stegen nedan:
 
 ### Inmatningsloggar
 
-Om du vill visa stockar för inmatning går du till listan Inmatningsjobb i Cloud Acceleration Manager, letar upp önskat migreringsjobb och klickar på de tre punkterna (**...**) av jobbet. Du kan sedan klicka på **Hämtningslogg** för att ladda ned loggar.
+Om du vill visa inmatningsloggar går du till listan Inmatningsjobb i Cloud Acceleration Manager, letar upp det önskade migreringsjobbet och klickar på de tre punkterna (**...**) av jobbet. Du kan sedan klicka **Hämtningslogg** för att ladda ned loggar.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam28.png)

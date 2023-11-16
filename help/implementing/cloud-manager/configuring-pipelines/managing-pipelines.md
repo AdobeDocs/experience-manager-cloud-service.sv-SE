@@ -3,9 +3,9 @@ title: Hantera pipelines
 description: Lär dig hur du hanterar dina befintliga rörledningar, inklusive redigering, körning och borttagning av dem.
 index: true
 exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
-source-git-commit: 01a89f779689733fb82a556291e091026def63e0
+source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ The **Pipelines** visas en fullständig lista över alla pipelines för det vald
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Från **Programöversikt** sida, tryck eller klicka på **Pipelines** för att växla till **Pipelines** -fönstret.
+1. Från **Programöversikt** , tryck eller klicka på **Pipelines** för att växla till **Pipelines** -fönstret.
 
 1. Här visas en lista över alla rörledningar för programmet samt start och stopp för pipelinekörning på samma sätt som i **Förloppskort**.
 
@@ -57,7 +57,7 @@ The **Verksamhet** visas en fullständig lista över alla pipelines-körningar f
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välja lämplig organisation och lämpligt program.
 
-1. Från **Programöversikt** sida, tryck eller klicka på **Aktivitet** för att växla till **Aktivitet** -fönstret.
+1. Från **Programöversikt** , tryck eller klicka på **Aktivitet** för att växla till **Aktivitet** -fönstret.
 
 1. Här visas en lista över alla pipeline-körningar för programmet, inklusive aktuella och historiska körningar.
 
@@ -91,7 +91,7 @@ Beroende på typen av pipeline kan du eventuellt avbryta körningen genom att kl
       * [Konfigurera produktionsförlopp](configuring-production-pipelines.md)
       * [Konfigurera icke-produktionsförlopp](configuring-non-production-pipelines.md)
 
-1. Klicka på **Uppdatera** när du är klar med redigeringen.
+1. Klicka **Uppdatera** när du är klar med redigeringen.
 
 >[!NOTE]
 >
