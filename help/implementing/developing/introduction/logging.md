@@ -2,9 +2,9 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 8f20876be6b01e1994fb8f91d4a1b4a113588a3e
+source-git-commit: 12bdd43b870e30984e2812baea956e06ca7c879c
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2683'
 ht-degree: 1%
 
 ---
@@ -523,7 +523,8 @@ Observera att funktionen Splunk Fording ännu inte stöder CDN-loggar.
 "cache": "PASS",
 "status": 200,
 "res_age": 0,
-"pop": "PAR"
+"pop": "PAR",
+"rules": "match=Enable-SQL-Injection-and-XSS-waf-rules-globally,waf=SQLI,action=blocked"
 }
 ```
 
@@ -547,6 +548,8 @@ CDN-loggarna skiljer sig från de andra loggarna på så sätt att de följer et
 | *status* | HTTP-statuskoden som ett heltalsvärde. |
 | *_Bläddra* | Den tid (i sekunder) som ett svar har cachelagrats (i alla noder). |
 | *pop* | Datacenter för CDN-cacheservern. |
+| *regler* | Namnen på matchande [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md) och WAF-flaggor, som även anger om matchningen resulterade i ett block. Tom om inga regler matchade. |
+
 
 ## Åtkomst till loggar {#how-to-access-logs}
 
