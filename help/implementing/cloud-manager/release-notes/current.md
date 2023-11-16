@@ -3,7 +3,7 @@ title: Versionsinformation för Cloud Manager 2023.11.0 i Adobe Experience Manag
 description: Detta är versionsinformationen för Cloud Manager 2023.11.0 i AEM as a Cloud Service.
 feature: Release Information
 exl-id: 9c73d7ab-c2c2-4803-a07b-e9054220c6b2
-source-git-commit: 3a9eaa162d62cd3e674f14ba39ed7c96ad271f79
+source-git-commit: 4e2ea040ec14515525424b42f524601d34786cb8
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Releasedatum för Cloud Manager version 2023.11.0 i AEM as a Cloud Service är 1
 ## Nyheter {#what-is-new}
 
 * Brandvägg för webbaserade program-DDOS-skydd (WAF-DDOS) finns nu att köpa som en del av dina AEM as a Cloud Service rättigheter och [kan konfigureras på ett självbetjäningssätt.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
-* Specialiserad [config pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) finns nu för att konfigurera miljöinställningar, underhållsuppgifter, CDN-regler och mycket mer på några minuter.
+* Specialiserad [config pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) är nu tillgängliga för att konfigurera och distribuera trafikfilterregler, inklusive WAF-regler, på några minuter.
 * [När innehåll kopieras](/help/implementing/developing/tools/content-copy.md) från en högre miljö till en utvecklingsmiljö visas nu ett meddelande som talar om försiktighet vid kopiering av stora innehållsuppsättningar eftersom utvecklingsmiljöer är kapacitetsbegränsade.
 * [Informationssidan för pipeline-körning](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#view-details) visar nu alla steg i en pipeline-körning med de som ännu inte har börjat nedtonade.
 * På båda **[Aktivitet](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#activity)** och **[Pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#pipelines)** på sidor är en sammanfattning av pipeline-körningen nu tillgänglig när du klickar på en pipeline med en körningsstatus.

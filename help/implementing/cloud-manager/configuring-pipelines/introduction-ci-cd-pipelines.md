@@ -3,9 +3,9 @@ title: CI/CD-rör
 description: Lär dig mer om Cloud Managers pipelines för CI/CD och hur de kan användas för att driftsätta koden på ett effektivt sätt.
 index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
-source-git-commit: b47b1998fe716a8409d8d3cf0102e25c48828819
+source-git-commit: 8b8f10bfaad2d8d7d409384e01a2c65a588d77e0
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1423'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ En icke-produktionspipeline används främst för att köra kodkvalitetssökning
 Förutom produktion och icke-produktion kan rörledningar differentieras efter vilken typ av kod de använder.
 
 * **[Kompletta stackrör](#full-stack-pipeline)** - Driftsätt samtidigt kodbyggen i bakände och framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationer
-* **[Konfigurera rörledningar](#config-deployment-pipeline)** - Konfigurera inställningar för din AEM, underhållsuppgifter, CDN-regler med mera.
+* **[Konfigurera rörledningar](#config-deployment-pipeline)** - Konfigurera och distribuera trafikfilterregler, inklusive WAF-regler, på några minuter
 * **[Front-End Pipelines](#front-end)** - Använd kodbyggen som innehåller ett eller flera gränssnittsprogram på klientsidan
 * **[Konfigurationsrör för webbnivå](#web-tier-config-pipelines)** - Distribuerar konfigurationer för HTTPD/Dispatcher
 
@@ -113,7 +113,7 @@ Om du vill veta mer om hur du konfigurerar rörledningar i full hög läser du i
 
 ## Konfigurera rörledningar {#config-deployment-pipeline}
 
-Med ett konfigurationsflöde kan du distribuera konfigurationsinställningar i AEM för underhållsuppgifter, CDN-regler och mycket annat.
+Med ett konfigurationsflöde kan du konfigurera och distribuera trafikfilterregler, inklusive WAF-regler, inom några minuter.
 
 Se dokumentet [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md) om du vill lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
 
@@ -129,10 +129,6 @@ Mer information om hur du konfigurerar pipelines finns i följande dokument:
 Front-end-kod är kod som används som statiska filer. Den är skild från gränssnittskod som hanteras av AEM och kan innehålla webbplatsteman, kunddefinierade SPA, SPA och andra lösningar.
 
 Med rörledningar kan era team effektivisera design- och utvecklingsprocessen genom att möjliggöra snabbare driftsättning av frontkodasynkron backend-utveckling. Detta dedikerade tillvägagångssätt distribuerar JavaScript och CSS till AEM distributionslager som ett tema, vilket resulterar i en ny temaversion som kan refereras från sidor som levereras av AEM.
-
->[!IMPORTANT]
->
->Du måste ha AEM version `2021.10.5933.20211012T154732Z ` eller senare när AEM Sites är aktiverat för att använda rörledningar för frontservrar.
 
 >[!NOTE]
 >
