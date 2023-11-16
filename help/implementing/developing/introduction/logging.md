@@ -2,10 +2,10 @@
 title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för enskilda tjänster eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
-source-git-commit: 12bdd43b870e30984e2812baea956e06ca7c879c
+source-git-commit: 9d1aab8f615f9e6aa9751fe978a56c915c9a8797
 workflow-type: tm+mt
-source-wordcount: '2683'
-ht-degree: 1%
+source-wordcount: '2757'
+ht-degree: 0%
 
 ---
 
@@ -556,6 +556,16 @@ CDN-loggarna skiljer sig från de andra loggarna på så sätt att de följer et
 ### Molnmiljöer {#cloud-environments}
 
 Du kommer åt AEM as a Cloud Service loggar för molntjänster antingen genom att hämta via Cloud Manager-gränssnittet eller genom att anpassa loggarna på kommandoraden med kommandoradsgränssnittet i Adobe I/O. Mer information finns i [Loggningsdokumentation för Cloud Manager](/help/implementing/cloud-manager/manage-logs.md).
+
+### Loggar för ytterligare publiceringsregioner {#logs-for-additional-publish-regions}
+
+Om ytterligare publiceringsregioner är aktiverade för en viss miljö, kommer loggar för varje region att vara tillgängliga för hämtning från Cloud Manager, vilket nämns ovan.
+
+I AEM loggar och dispatcherloggar för de ytterligare publiceringsregionerna anges regionen med de tre första bokstäverna efter miljö-ID, vilket visas i exemplet av **nld2** i exemplet nedan, som avser en ytterligare AEM publiceringsinstans i Nederländerna:
+
+```
+cm-p7613-e12700-nld2-aem-publish-bcbb77549-5qmmt 127.0.0.1 - 07/Nov/2023:23:57:11 +0000 "HEAD /libs/granite/security/currentuser.json HTTP/1.1" 200 - "-" "Java/11.0.19"
+```
 
 ### Lokal SDK {#local-sdk}
 

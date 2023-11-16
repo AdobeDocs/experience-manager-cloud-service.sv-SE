@@ -2,10 +2,10 @@
 title: Komma åt och hantera loggar
 description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i utvecklingsprocessen på AEM as a Cloud Service.
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
-source-git-commit: c4bd0390fc67b3d8e985c0cd2b1f436ae13420ee
+source-git-commit: 7272f6ebd1b9c4e67985cba0221d8cafbeb1560a
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 3%
+source-wordcount: '345'
+ht-degree: 2%
 
 ---
 
@@ -32,11 +32,17 @@ Så här hämtar du loggar:
 
    ![Dialogrutan Hämta loggar](assets/download-preview.png)
 
+   Om [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) är aktiverade för din miljö kan du välja varje region och hämta dess loggar separat, vilket visas nedan:
+
+   ![Hämta loggar för ytterligare publiceringsregioner](assets/download-publish-region-logs.png)
+
 1. När du har valt tjänsten klickar du på nedladdningsikonen bredvid den logg du vill hämta.
 
 Du kan även komma åt dina loggar från **Miljö** sida.
 
 ![Loggar från miljöskärmen](assets/download-logs.png)
+
+
 
 ## Loggar via API {#logs-through-api}
 

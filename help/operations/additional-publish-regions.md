@@ -2,9 +2,9 @@
 title: Ytterligare publiceringsregioner
 description: Läs om hur AEM as a Cloud Service stöder ytterligare publiceringsregioner för ökad tillgänglighet och minskad latens.
 exl-id: b9ac3c6a-eb8b-461d-8f1d-a0356046a3f9
-source-git-commit: 4f11d1958cbfb252f29a7815af8800426d945ebd
+source-git-commit: c0c669f847c9ef64b1fa22cfc24ac693c3c8ad90
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ Så som beskrivs i avsnittet Avancerade överväganden om nätverksarbete nedan 
 När ytterligare en publiceringsregion är aktiverad för ett program med avancerade nätverk redan konfigurerat, dirigeras trafiken i den extra publiceringsregionen som matchar de avancerade nätverksreglerna som standard genom den primära regionen. För att kunna utnyttja den ökade tillgängligheten rekommenderar vi att du aktiverar avancerade nätverk i de övriga regionerna.
 
 Se [Avancerad nätverkskonfiguration för ytterligare publiceringsregioner](/help/security/configuring-advanced-networking.md#advanced-networking-configuration-for-additional-publish-regions) i dokumentationen för avancerade nätverk, där du får mer information om hur du lägger till avancerade nätverkskonfigurationer i ytterligare regioner utan att förlora anslutningen.
+
+## Loggning {#logging}
+
+Om ytterligare publiceringsregioner är aktiverade kommer separata loggar för varje region att göras tillgängliga via Cloud Manager. Mer information finns i [Åtkomst till och hantering av loggar](/help/implementing/cloud-manager/manage-logs.md) och [Loggar för ytterligare publiceringsregioner](/help/implementing/developing/introduction/logging.md#logs-for-additional-publish-regions).
 
 ## Begränsningar {#limitations}
 
