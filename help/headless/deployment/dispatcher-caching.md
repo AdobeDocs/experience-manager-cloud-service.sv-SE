@@ -2,13 +2,13 @@
 title: GraphQL Persistent Queries - aktivera cachelagring i Dispatcher
 description: Dispatcher är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Du kan aktivera cachelagring för beständiga frågor i AEM Headless.
 feature: Dispatcher, GraphQL API
-source-git-commit: 0066bfba3a403791c6a35b1280ae04b576315566
+exl-id: 30a97e56-6699-41c4-a4eb-fc6236667f8f
+source-git-commit: ea5b404e83c11f0057342bff22ba45e6b0ead124
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
-
 
 # GraphQL Persistent Queries - aktivera cachelagring i Dispatcher {#graphql-persisted-queries-enabling-caching-dispatcher}
 
@@ -37,6 +37,27 @@ Om du vill aktivera cachelagring av beständiga frågor definierar du variabeln 
    ```xml
    Define CACHE_GRAPHQL_PERSISTED_QUERIES
    ```
+
+>[!NOTE]
+>
+>När Dispatcher-cachning är aktiverat för beständiga frågor med hjälp av `Define CACHE_GRAPHQL_PERSISTED_QUERIES` en `ETag` skickas till svaret av Dispatcher.
+>
+>Som standard är `ETag` har konfigurerats med följande direktiv:
+>
+>```
+>FileETag MTime Size 
+>```
+>
+>Den här inställningen kan dock orsaka problem när den används på de beständiga frågesvaren, eftersom den inte tar hänsyn till små ändringar i svaret.
+>
+>Att uppnå individuella `ETag` beräkningar på *var* ett unikt svar `FileETag Digest` -inställningen måste användas i dispatcherkonfigurationen:
+>
+>```xml
+><Directory />    
+>   ...    
+>   FileETag Digest
+></Directory> 
+>```
 
 >[!NOTE]
 >
