@@ -2,9 +2,9 @@
 title: Sidmallar
 description: Sidmallar används när du skapar en sida som används som bas för den nya sidan
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '3291'
+source-wordcount: '3287'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ När du skapar en ny redigerbar mall:
 
 1. Använd det för att skapa innehållssidor.
 
-   * När du använder en mall för att skapa en ny sida finns det ingen synlig skillnad och ingen indikation mellan statiska och redigerbara mallar.
+   * När du använder en mall för att skapa en sida finns det ingen synlig skillnad och ingen indikation mellan statiska och redigerbara mallar.
    * För sidförfattaren är processen genomskinlig.
 
    Mer information om hur en sidförfattare använder mallar för att skapa en sida finns i [Skapa och ordna sidor](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#templates).
@@ -141,11 +141,11 @@ Du kan använda följande mappar för att ordna dina mallar:
 >
 >Även om du kan kapsla dina mappar när de visas i **Mallar** konsolen som visas som en platt struktur.
 
-I en AEM `global` mappen finns redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen. Du kan lägga till dina standardmallar i den här mappen eller skapa en ny mapp (rekommenderas).
+I en AEM `global` mappen finns redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen. Du kan lägga till dina standardmallar i den här mappen eller skapa en mapp (rekommenderas).
 
 >[!NOTE]
 >
->Det är bäst att skapa en ny mapp för dina anpassade mallar och inte använda `global` mapp.
+>Det är bäst att skapa en mapp som innehåller dina anpassade mallar och inte använda `global` mapp.
 
 >[!CAUTION]
 >
@@ -161,7 +161,7 @@ Malltyper och profiler ärvs i alla mappar enligt följande prioritetsordning:
 
 En lista över alla tillåtna poster skapas. Om några konfigurationer överlappar ( `path`/ `label`) visas bara den instans som ligger närmast den aktuella mappen för användaren.
 
-Om du vill skapa en ny mapp kan du göra det här:
+Om du vill skapa en mapp kan du göra det här:
 
 * Programmerat eller med CRXDE Lite
 * Använda [Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser)

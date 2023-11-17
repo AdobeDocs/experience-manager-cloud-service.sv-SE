@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar metadata i resursvyn. Bättre metadatahant
 role: User,Leader,Admin,Architect,Developer
 contentOwner: AG
 exl-id: cfc105d1-41fc-4418-9905-b2a28a348682
-source-git-commit: d663c258a83473ec8d3c68bc5683955003d889c7
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ I den här videon visas stegsekvensen:
 
 När ett formulär har skapats används det automatiskt när användare överför en resurs av den matchande MIME-typen.
 
-Om du vill återanvända ett befintligt formulär och skapa ett nytt, markerar du ett metadataformulär, klickar på **[!UICONTROL Copy]** ange ett namn i verktygsfältet och klicka på **[!UICONTROL Confirm]**. Du kan redigera ett metadataformulär om du vill ändra det. När du ändrar ett formulär används det för resurser som överförts efter ändringen. De befintliga resurserna ändras inte.
+Om du vill återanvända ett befintligt formulär för att skapa ett formulär markerar du ett metadataformulär, klickar på **[!UICONTROL Copy]** ange ett namn i verktygsfältet och klicka på **[!UICONTROL Confirm]**. Du kan redigera ett metadataformulär om du vill ändra det. När du ändrar ett formulär används det för resurser som överförts efter ändringen. De befintliga resurserna ändras inte.
 
 ## Egenskapskomponenter {#property-components}
 
@@ -145,7 +145,7 @@ Nedan visas en översikt över varje egenskapstyp och hur de lagras.
 * Kontakt [Kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
 <!-- TBD: Cannot create a form using the second option. Documenting only the first option for now.
-To reuse an existing form to create a new form, do one of these:
+To reuse an existing form to create a form, do one of these:
 
 * Select a metadata form and click **[!UICONTROL Copy]** from the toolbar, provide a name, and click **[!UICONTROL Confirm]**.
 

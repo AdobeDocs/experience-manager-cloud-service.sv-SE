@@ -2,10 +2,10 @@
 title: Hantera projekt
 description: Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet som du kan komma åt och hantera i projektkonsolen
 exl-id: be4616e7-18bc-4b2d-89f6-d04178ac7f3a
-source-git-commit: 1994b90e3876f03efa571a9ce65b9fb8b3c90ec4
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 12%
+source-wordcount: '892'
+ht-degree: 11%
 
 ---
 
@@ -21,7 +21,7 @@ I Projekt kan du skapa ett projekt, associera resurser med projektet och även t
 
 ## Skapa ett projekt {#creating-a-project}
 
-AEM innehåller de här mallarna som du kan välja mellan när du skapar ett projekt:
+I AEM finns de här mallarna som du kan välja mellan när du skapar ett projekt:
 
 * Enkelt projekt
 * Medieprojekt
@@ -31,7 +31,7 @@ AEM innehåller de här mallarna som du kan välja mellan när du skapar ett pro
 * Product Photo Shoot Project 
 -->
 
-Du skapar ett projekt på samma sätt med alla projekt. Projekttyperna skiljer sig åt bland annat vad gäller tillgängliga [användarroller](/help/sites-cloud/authoring/projects/overview.md) och [arbetsflöden](/help/sites-cloud/authoring/projects/workflows.md).  Så här skapar du ett nytt projekt:
+Du skapar ett projekt på samma sätt med alla projekt. Projekttyperna skiljer sig åt bland annat vad gäller tillgängliga [användarroller](/help/sites-cloud/authoring/projects/overview.md) och [arbetsflöden](/help/sites-cloud/authoring/projects/workflows.md).  Så här skapar du ett projekt:
 
 1. I **Projekt** trycker/klickar du på **Skapa** för att öppna guiden **Skapa projekt**:
 1. Välj en mall och klicka på **Nästa**.
@@ -81,7 +81,7 @@ Samma metod används för att ta bort ett projekt från konsolen eller en länka
 
 ### Lägga till objekt i en platta {#adding-items-to-a-tile}
 
-I vissa rutor kanske du vill lägga till mer än ett objekt. Du kan till exempel ha flera arbetsflöden som körs samtidigt eller fler än en upplevelse.
+I vissa rutor kanske du vill lägga till mer än ett objekt. Du kan till exempel ha flera arbetsflöden som körs samtidigt eller fler än en funktion.
 
 Så här lägger du till objekt i en platta:
 
@@ -89,7 +89,7 @@ Så här lägger du till objekt i en platta:
 
    ![Lägg till objekt i en ruta](/help/sites-cloud/authoring/assets/project-workflows.png)
 
-1. Lägg till ett objekt i rutan på samma sätt som när du skapar en ny platta. Projektpaneler beskrivs [här](/help/sites-cloud/authoring/projects/overview.md#project-tiles). I det här exemplet har ett annat arbetsflöde lagts till.
+1. Lägg till ett objekt i plattan på samma sätt som när du skapar en ny platta. Projektpaneler beskrivs [här](/help/sites-cloud/authoring/projects/overview.md#project-tiles). I det här exemplet har ett annat arbetsflöde lagts till.
 
 ### Öppna en platta {#opening-a-tile}
 
@@ -117,7 +117,7 @@ Projektets tidslinje innehåller information om när resurser i projektet senast
 
 ### Visa aktiva/inaktiva projekt {#viewing-active-inactive-projects}
 
-Växla mellan aktiva och inaktiva projekt i **Projekt** konsol, klicka **Växla aktiva projekt**. Om ikonen har en bockmarkering visas de aktiva projekten.
+Växla mellan aktiva och inaktiva projekt i dialogrutan **Projekt** konsol, klicka **Växla aktiva projekt**. Om ikonen har en bockmarkering visas de aktiva projekten.
 
 ![Knappen Växla aktiva projekt](/help/sites-cloud/authoring/assets/projects-active.png)
 

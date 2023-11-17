@@ -1,13 +1,13 @@
 ---
 title: Utöka Multi Site Manager
 description: Lär dig hur du utökar funktionerna i Multi Site Manager.
-source-git-commit: f159f0ef86c2b82da4e7308a0892b4947b6e43fb
+exl-id: 4b7a23c3-65d1-4784-9dea-32fcceca37d1
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2435'
 ht-degree: 0%
 
 ---
-
 
 # Utöka Multi Site Manager {#extending-the-multi-site-manager}
 
@@ -165,7 +165,7 @@ Den nya utrullningskonfigurationen är sedan tillgänglig för dig när du stäl
 
 ### Skapa utrullningskonfiguration {#create-the-rollout-configuration}
 
-Så här skapar du en ny utrullningskonfiguration:
+Så här skapar du en utrullningskonfiguration:
 
 1. Öppna CRXDE Lite at `https://<host>:<port>/crx/de`.
 

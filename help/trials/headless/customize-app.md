@@ -4,9 +4,9 @@ description: Använd en React-exempelapp för att lära dig hur du anpassar inne
 hidefromtoc: true
 index: false
 exl-id: 32290ad4-d915-41b7-a073-2637eb38e978
-source-git-commit: 3177832b32c98bf463c763dafe2d9e284dc2ac28
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,7 @@ Nu när du har uppdaterat bilden av budgivaren ska vi gå igenom hur man lägger
 
 1. Välj **Mtn Biking - köpbar** lager.
 
-1. Om du vill skapa en ny utlysning på den här panelen måste du skapa en ny Content Fragment som kan köpas. Tryck eller klicka på **+ Skapa nytt fragment** -knappen.
+1. Om du vill ringa upp den här panelen skapar du en Content Fragment som kan köpas. Tryck eller klicka på **+ Skapa nytt fragment** -knappen.
 
    ![Lägg till en köpbar stund](assets/do-not-localize/add-reference-1-5.png)
 

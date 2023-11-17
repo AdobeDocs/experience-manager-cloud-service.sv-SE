@@ -2,9 +2,9 @@
 title: Hantera dina demowebbplatser
 description: Lär dig mer om de verktyg du kan använda för att hantera demowebbplatser och hur du tar bort dem.
 exl-id: 988c6e09-c43e-415f-8d61-998c294c5a11
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '942'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Du kan ta bort mallar på samma sätt under rubriken **Ta bort webbplatsmallar**
 Grattis! Du har slutfört AEM Reference Demos-tillägget! Nu bör du:
 
 * Få en grundläggande förståelse för Cloud Manager och förstå hur rörledningar levererar innehåll och konfiguration till AEM.
-* Lär dig hur du använder Cloud Manager för att skapa ett nytt program.
+* Lär dig hur du använder Cloud Manager för att skapa ett program.
 * Lär dig hur du aktiverar tillägget Referensdemonstrationer för det nya programmet och kan köra en pipeline för att distribuera tilläggsinnehållet.
 * Lär dig hur du får åtkomst till AEM redigeringsmiljö för att skapa en plats som är baserad på en mall.
 * Lär dig hur du får tillgång till självbetjäningsdemoverktygen.

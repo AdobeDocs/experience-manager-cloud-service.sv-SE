@@ -2,9 +2,9 @@
 title: Anpassade behörigheter
 description: Lär dig hur du kan använda anpassade behörigheter för att skapa nya anpassade behörighetsprofiler med konfigureringsbara behörigheter för att begränsa åtkomst till program, pipelines och miljöer för användare av Cloud Managers.
 exl-id: 167da985-7f19-45b3-90a3-884817907da2
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1501'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ I det här avsnittet beskrivs de här stegen. Det kan vara praktiskt att använd
 
 ### Skapa en ny produktprofil {#create}
 
-Du måste först skapa en ny produktprofil innan du kan tilldela anpassade behörigheter.
+Du måste först skapa en produktprofil innan du kan tilldela anpassade behörigheter.
 
 1. Logga in i Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)
 
@@ -123,10 +123,10 @@ Följande behörigheter är tillgängliga för att skapa anpassade profiler.
 
 | Behörighet | Beskrivning |
 |---|---|
-| Skapa program | Tillåt användare att skapa ett nytt program |
+| Skapa program | Tillåt användare att skapa ett program |
 | Programåtkomst | Ge användarna åtkomst till program |
 | Programredigering | Tillåt användare att redigera program |
-| Miljöskapande | Tillåt användare att skapa en ny miljö |
+| Miljöskapande | Tillåt användare att skapa en miljö |
 | Miljöredigering | Tillåt användare att uppdatera och redigera miljöer |
 | Miljöloggar Läs | Tillåt användare att läsa miljöloggar |
 | Skapa pipeline | Tillåt användare att skapa nya rörledningar |
@@ -145,7 +145,7 @@ Behörigheter på organisationsnivå avser behörigheter som alltid ges i alla p
 
 Följande behörigheter är behörigheter på organisationsnivå:
 
-* **Skapa program** - Med den här behörigheten kan användare skapa ett nytt program i organisationen.
+* **Skapa program** - Med den här behörigheten kan användare skapa ett program i organisationen.
 * **Datainformationsåtkomst** Behörigheten på innehavar-/organisationsnivå ger användarna möjlighet att generera användarnamn, lösenord och databas-URL för åtkomst och att bidra till kundprojekt.
    * Användarnamn och lösenord för databasåtkomst är gemensamma för alla rapporter i organisationen, men databasens URL är unik för varje program.
    * Se dokumentet [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md) för mer information.

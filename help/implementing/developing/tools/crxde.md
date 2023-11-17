@@ -2,9 +2,9 @@
 title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1683'
 ht-degree: 0%
 
 ---
@@ -206,7 +206,7 @@ Så här skapar du en egenskap med CRXDE Lite:
 
 ## Skapa en fil {#creating-a-file}
 
-Så här skapar du en ny fil med CRXDE Lite:
+Så här skapar du en fil med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
 1. I [**Utforskarfönster**,](#explorer-pane) högerklicka på komponenten där du vill skapa filen, välj **Skapa** sedan **Skapa fil**.

@@ -1,17 +1,17 @@
 ---
 title: Skapa webbplats från mall
-description: Lär dig hur du snabbt skapar en ny AEM med hjälp av en webbplatsmall.
+description: Lär dig hur du snabbt skapar en AEM webbplats med hjälp av en webbplatsmall.
 exl-id: 31bb04c2-b3cc-44ca-b517-5b0d66d9b1fa
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
 
 # Skapa webbplats från mall {#create-site-from-template}
 
-Lär dig hur du snabbt skapar en ny AEM med hjälp av en webbplatsmall.
+Lär dig hur du snabbt skapar en AEM webbplats med hjälp av en webbplatsmall.
 
 ## Story hittills {#story-so-far}
 
@@ -20,14 +20,14 @@ I det föregående dokumentet från den AEM snabbplatsgenereringsresan [Förstå
 * Förstå hur AEM Sites och Cloud Manager samarbetar för att underlätta utvecklingen på frontend
 * Se hur anpassningssteget i gränssnittet är helt fristående från AEM och kräver ingen AEM kunskap.
 
-Den här artikeln bygger på dessa grundläggande funktioner så att du kan ta det första konfigurationssteget och skapa en ny webbplats som du sedan kan anpassa med hjälp av verktygen i gränssnittet.
+Den här artikeln bygger på dessa grundläggande funktioner så att du kan ta det första konfigurationssteget och skapa en webbplats för en mall som du sedan kan anpassa med hjälp av verktygen i gränssnittet.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du snabbt kan skapa en ny AEM med hjälp av en platsmall. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur du snabbt skapar en AEM webbplats med hjälp av en platsmall. När du har läst bör du:
 
 * Lär dig hur du hämtar AEM webbplatsmallar.
-* Lär dig hur du skapar en ny plats med hjälp av en mall.
+* Lär dig hur du skapar en plats med hjälp av en mall.
 * Se hur du laddar ned mallen från din nya webbplats och kan ge den till frontutvecklaren.
 
 ## Ansvarig roll {#responsible-role}
@@ -65,7 +65,7 @@ När du har laddat ned den kan du ladda upp den till AEM på samma sätt som and
 
 ## Installera en platsmall {#installing-template}
 
-Det är mycket enkelt att använda en mall för att skapa en ny webbplats.
+Det är enkelt att använda en mall för att skapa en plats.
 
 1. Logga in i AEM redigeringsmiljö och navigera till webbplatskonsolen
 
@@ -171,7 +171,7 @@ Du har nu slutfört konfigurationen. Innehållsförfattare kan nu börja skapa i
 Nu när du är klar med den här delen av AEM snabbwebbplats:
 
 * Lär dig hur du hämtar AEM webbplatsmallar.
-* Lär dig hur du skapar en ny plats med hjälp av en mall.
+* Lär dig hur du skapar en plats med hjälp av en mall.
 * Se hur du laddar ned mallen från din nya webbplats och kan ge den till frontutvecklaren.
 
 Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Konfigurera din pipeline,](pipeline-setup.md) där du skapar en pipeline för frontend för att hantera anpassningen av webbplatsens tema.

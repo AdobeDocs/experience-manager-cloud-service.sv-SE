@@ -2,9 +2,9 @@
 title: Konfigurera din pipeline
 description: Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens tema.
 exl-id: 0d77d1a6-98f3-4961-9283-f52c1b5b2a7b
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens te
 I det föregående dokumentet från den AEM snabbplatsgenereringsresan [Skapa webbplats från mall,](create-site.md) du lärde dig att använda en webbplatsmall för att snabbt skapa en AEM webbplats som kan anpassas ytterligare med hjälp av front-end-verktygen, och nu bör du:
 
 * Lär dig hur du hämtar AEM webbplatsmallar.
-* Lär dig hur du skapar en ny plats med hjälp av en mall.
+* Lär dig hur du skapar en plats med hjälp av en mall.
 * Se hur du laddar ned mallen från din nya webbplats och kan ge den till frontutvecklaren.
 
 Den här artikeln bygger på dessa grundläggande funktioner så att ni kan skapa en frontpipeline, som utvecklaren senare kommer att använda för att driftsätta gränssnittsanpassningar.

@@ -2,9 +2,9 @@
 title: Skapa och hantera erbjudanden (Erbjudandekonsol)
 description: Använd offertkonsolen för att skapa erbjudanden som du kan använda i aktivitetsupplevelser
 exl-id: 81d2fda2-06a9-48f6-820a-dd9e11d94fcc
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1391'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ A **Konvertera till upplevelsefragmentvariation** har implementerats för att hj
 
 >[!NOTE]
 >
->Du kan också skapa en ny Experience Fragment själv, manuellt överföra innehållet från ditt gamla erbjudande till fragmentet och sedan ta bort det gamla erbjudandet.
+>Du kan också skapa en Experience Fragment själv, manuellt överföra innehållet från ditt gamla erbjudande till fragmentet och sedan ta bort det gamla erbjudandet.
 
 >[!CAUTION]
 >

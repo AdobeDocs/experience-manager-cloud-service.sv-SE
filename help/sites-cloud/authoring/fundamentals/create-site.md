@@ -1,12 +1,12 @@
 ---
 title: Skapa en ny plats
-description: Lär dig hur administratörer använder AEM för att skapa en ny webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
+description: Lär dig hur administratörer använder AEM för att skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
 feature: Administering
 role: Admin
 exl-id: 50105d03-9d94-4aec-b0a7-0b88e3fe50e0
-source-git-commit: 53d4e22805774c0b994ee2bba429c19506639014
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapa en ny plats {#new-site}
 
-Lär dig hur administratörer använder AEM skapa en ny webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
+Lär dig hur administratörer använder AEM skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
 
 {{edge-delivery-authoring}}
 

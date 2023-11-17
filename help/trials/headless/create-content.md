@@ -4,9 +4,9 @@ description: Använd modellen för innehållsfragment som du skapade tidigare f�
 hidefromtoc: true
 index: false
 exl-id: d74cf5fb-4c4a-4363-a500-6e2ef6811e60
-source-git-commit: 91e9711e10a7aa8e3c7fa0b4cc25a098741e53b1
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 Content Fragments representerar ditt headless-innehåll och är baserade på fördefinierade strukturer, som kallas Content Fragment-modeller. Du har redan skapat en modell i en tidigare modul.
 
-I den här modulen skapar du ett nytt innehållsfragment baserat på den modellen med hjälp av konsolen Innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
+I den här modulen skapar du ett innehållsfragment baserat på den modellen med konsolen Innehållsfragment. Tänk på Content Fragment-konsolen som ditt bibliotek med headless-innehåll. Använd det för att skapa nya innehållsfragment och hantera befintliga fragment.
 
 Konsolen för innehållsfragment används för att skapa och redigera headless-innehåll i olika distributionskanaler och oberoende av sammanhang, vilket kan vara den mest effektiva metoden i många fall. I en senare modul kommer vi att utforska redigering av headless-innehåll på plats och i sitt sammanhang.
 

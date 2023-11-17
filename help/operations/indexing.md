@@ -2,9 +2,9 @@
 title: Innehållssökning och indexering
 description: Lär dig mer om innehållssökning och indexering på AEM as a Cloud Service.
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
-source-git-commit: d567115445c0a068380e991452d9b976535e3a1d
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '2433'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Indexdefinitioner kan kategoriseras i tre primära användningsområden:
 2. **Uppdatera** en befintlig indexdefinition genom att lägga till en ny version.
 3. **Ta bort** en indexdefinition som inte längre behövs.
 
-För båda punkterna 1 och 2 ovan måste du skapa en ny indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md) dokumentation.
+För båda punkterna 1 och 2 ovan måste du skapa en indexdefinition som en del av din anpassade kodbas i respektive Cloud Manager-utgåva. Mer information finns i [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md) dokumentation.
 
 ## Indexnamn {#index-names}
 

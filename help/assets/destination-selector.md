@@ -3,13 +3,13 @@ title: Målväljare för AEM as a Cloud Service
 description: Använd AEM målväljare för att visa och välja resurser som du kan använda som en kopia av den ursprungliga resursen.
 contentOwner: Adobe
 role: Admin,User
-source-git-commit: cf783a91d33bc7a42e177ace3ca49844f14a6a79
+exl-id: 7e7bc1ee-d580-4c88-b550-273e8b0620ba
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
-
 
 # Micro-FrontEnd-målväljare {#Overview}
 
@@ -212,7 +212,7 @@ Du kan definiera målväljaren [egenskaper](#destination-selector-properties) i 
 
 ### Exempel 1: Skapa en mapp i målväljaren
 
-Med målväljaren kan du skapa en ny mapp för att överföra, flytta eller kopiera resurser på en viss plats.
+Med målväljaren kan du skapa en mapp för att överföra, flytta eller kopiera resurser på en viss plats.
 
 ![create-folder-destination-selector](assets/create-folder-destination-selector.png)
 
@@ -261,7 +261,7 @@ Det är ett exempel på `optionsFormSetup` -egenskap. Du kan använda den här f
 
 ### Skapa en ny mapp {#create-new-folder}
 
-Du kan skapa en ny mapp i målmappen för [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
+Du kan skapa en mapp i målmappen för [!DNL Adobe Experience Manager] som [!DNL Cloud Service].
 
 ### Typer av vy {#types-of-view}
 

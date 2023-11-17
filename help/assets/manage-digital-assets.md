@@ -6,9 +6,9 @@ mini-toc-levels: 3
 feature: Asset Management,Publishing,Collaboration,Asset Processing
 role: User,Architect,Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: bd0981b262f645653723f1b35d871808506d47ba
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '4198'
+source-wordcount: '4196'
 ht-degree: 9%
 
 ---
@@ -31,7 +31,7 @@ När du organiserar en samling resurser, till exempel, alla `Nature` kan du skap
 >* Dela en resursmapp av typen `sling:OrderedFolder`, stöds inte vid delning till Experience Cloud. Om du vill dela en mapp ska du inte markera [!UICONTROL Ordered] när du skapar en mapp.
 >* Experience Manager tillåter inte att `subassets` ord som namnet på en mapp. Det är ett nyckelord reserverat för nod som innehåller delresurser för sammansatta resurser
 
-1. Navigera till den plats i mappen med digitala resurser där du vill skapa en ny mapp. Klicka på **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
+1. Navigera till den plats i mappen med digitala resurser där du vill skapa en mapp. Klicka på **[!UICONTROL Create]**. Välj **[!UICONTROL New Folder]**.
 1. I **[!UICONTROL Title]** anger du ett mappnamn. Som standard använder DAM den titel som du angav som mappnamn. När mappen har skapats kan du åsidosätta standardmappen och ange ett annat mappnamn.
 1. Klicka på **[!UICONTROL Create]**. Mappen visas i mappen med digitala resurser.
 
@@ -54,7 +54,7 @@ Så här extraherar du ZIP-filerna:
 1. Klicka på **[!UICONTROL Extract Archive]** som finns i åtgärdsfältet.
 1. Välj den mapp där du behöver spara de extraherade resurserna som är tillgängliga i den komprimerade mappen.
 1. Klicka på **[!UICONTROL Next]**.
-1. Välj lämpligt beteende för att hantera filnamnskonflikter under extraheringen. Du kan välja att skapa en ny version av en befintlig resurs, ersätta resursen, behålla båda resurserna i målmappen eller hoppa över extraheringen av den nya resursen.
+1. Välj lämpligt beteende för att hantera filnamnskonflikter under extraheringen. Du kan välja att skapa en version av en befintlig resurs, ersätta resursen, behålla båda resurserna i målmappen eller hoppa över extraheringen av den nya resursen.
 1. Klicka på **[!UICONTROL Extract]**. Zippextraheringsprocessen startar. När processen är klar kan du visa de extraherade resurserna i målmappen.
 
    ![ZIP-extrahering](assets/zip-extraction.png)

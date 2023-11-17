@@ -5,7 +5,7 @@ role: User, Developer
 keywords: ansluta AEM adaptiva blanketter till Microsoft SharePoint List, ansluta adaptiva blanketter till Microsoft SharePoint List, integrera AEM adaptiva blanketter i Microsoft SharePoint List, integrera adaptiva blanketter till Microsoft SharePoint List, skicka data från ett adaptivt formulär till SharePoint List, skicka AEM arbetsflöde till SharePoint List.
 hide: true
 hidefromToC: true
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Så här integrerar du Microsoft® SharePoint List i ett AEM arbetsflöde:
 1. [Skapa ett arbetsflöde för att anropa en formulärdatamodell](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html)
 
    <!--
-    To create a new workflow with the editor, perform the following steps:
+    To create a workflow with the editor:
     1.  Go to your **AEM Forms Author** instance > **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
     1.  Click **[!UICONTROL Create]** > **[!UICONTROL Create Model]**. The Add Workflow Model dialog appears. 
     1. Specify **[!UICONTROL Title]** and **[!UICONTROL Name (optional)]**.

@@ -2,9 +2,9 @@
 title: Redigera sidinnehåll
 description: När sidan har skapats kan du redigera innehållet för att göra de uppdateringar du behöver
 exl-id: 8af0f621-14e8-4605-a51a-a3be21f19092
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '2978'
+source-wordcount: '2975'
 ht-degree: 4%
 
 ---
@@ -161,7 +161,7 @@ Du kan lägga till en ny komponent med **Dra komponenter hit** styckesystemets r
 
 ### Infoga en komponent med Resursläsaren {#inserting-a-component-using-the-assets-browser}
 
-Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [resurshanterare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser). Då skapas automatiskt en ny komponent av lämplig typ (och som innehåller resursen).
+Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [resurshanterare](/help/sites-cloud/authoring/fundamentals/environment-tools.md#assets-browser). Då skapas automatiskt en komponent av lämplig typ (och som innehåller resursen).
 
 Det här beteendet kan konfigureras för din installation. Mer information finns i Konfigurera ett styckesystem så att en komponentinstans skapas när du drar en resurs. <!--This behavior can be configured for your installation. See [Configuring a Paragraph System so that Dragging an Asset Creates a Component Instance](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance) for further details.-->
 
@@ -261,7 +261,7 @@ De faktiska åtgärder som är tillgängliga för användaren visas som lämplig
 
 * **Konvertera till en upplevelsefragmentvariation**
 
-  Detta gör att du kan skapa en ny [upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) från den markerade komponenten eller lägg till den i ett befintligt upplevelsefragment.
+  Detta gör att du kan skapa en [upplevelsefragment](/help/sites-cloud/authoring/fundamentals/experience-fragments.md) från den markerade komponenten eller lägg till den i ett befintligt upplevelsefragment.
 
   ![Knappen Konvertera till Experience Fragment](/help/sites-cloud/authoring/assets/editing-component-toolbar-xf.png)
 

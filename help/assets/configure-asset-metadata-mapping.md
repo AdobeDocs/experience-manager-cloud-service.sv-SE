@@ -2,9 +2,9 @@
 title: Konfigurera metadatamappning mellan Workfront och Experience Manager Assets
 description: Mappa metadatafälten för resurser mellan as a Cloud Service Adobe Workfront- och Experience Manager-program. När du skickar en resurs från Workfront till Experience Manager Assets kan du mappa metadata för resursen i Experience Manager Assets genom att mappa metadatafält.
 exl-id: 71400769-b2bc-4f5d-8b6b-a73598e837b4
-source-git-commit: 8bdd89f0be5fe7c9d4f6ba891d7d108286f823bb
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
@@ -41,22 +41,22 @@ Så här anger du metadatamappning för fälten Projektnamn, Dokumentnamn och Do
 
 1. Välj Experience Manager Assets-integrering och klicka på **[!UICONTROL Edit]**.
 
-1. Klicka på **[!UICONTROL Metadata]**. I **[!UICONTROL Assets]** mappa [!UICONTROL Project] > [!UICONTROL Name] Workfront-fält till `wm:projectName` Fält i Experience Manager Assets. Om du inte hittar den exakta matchningen rekommenderar Adobe att du söker efter den bästa matchningen för att mappa fältet Workfront och Experience Manager Assets. Du kan undvika att mappa fält med olika datatyper. Du kan till exempel mappa ett Workfront-datumfält till ett Assets-beskrivningsfält.
-1. Mappa [!UICONTROL Document] > [!UICONTROL Name] Workfront-fält till `wm:documentName` Fält i Experience Manager Assets.
+1. Klicka på **[!UICONTROL Metadata]**. I **[!UICONTROL Assets]** mappa [!UICONTROL Project] > [!UICONTROL Name] Workfront-fält till `wm:projectName` Experience Manager Assets. Om du inte hittar den exakta matchningen rekommenderar Adobe att du söker efter den bästa matchningen för att mappa fältet Workfront och Experience Manager Assets. Du kan undvika att mappa fält med olika datatyper. Du kan till exempel mappa ett Workfront-datumfält till ett Assets-beskrivningsfält.
+1. Mappa [!UICONTROL Document] > [!UICONTROL Name] Workfront-fält till `wm:documentName` Experience Manager Assets.
 
    ![Mappning i Workfront](assets/workfront-metadata-mapping.png)
 
-1. Mappa [!UICONTROL Document] > [!UICONTROL Description] Workfront-fält till `dc:description` Fält i Experience Manager Assets.
+1. Mappa [!UICONTROL Document] > [!UICONTROL Description] Workfront-fält till `dc:description` Experience Manager Assets.
 
    >[!VIDEO](https://video.tv.adobe.com/v/344255)
 
 ## Skicka bilden från Workfront till Experience Manager Assets {#send-image-workfront-assets}
 
-Så här skickar du bilden från Workfront till Experience Manager Assets:
+Skicka bilden från Workfront till Experience Manager Assets:
 
 1. Klicka på ikonen Huvudmeny ![Visa meny](assets/show-menu.svg) i det övre högra hörnet av Adobe Workfront-programmet och klicka sedan på **[!UICONTROL Projects]**.
 
-1. Klicka **[!UICONTROL New Project]** för att skapa ett nytt projekt.
+1. Klicka **[!UICONTROL New Project]** för att skapa ett projekt.
 
 1. Klicka **[!UICONTROL Documents]** som finns i den vänstra rutan drar och markerar sedan den bild som du vill skicka till Experience Manager Assets.
 
@@ -82,7 +82,7 @@ Så här konfigurerar du metadatamappning med ett nytt metadataformulär i Exper
 
 1. Markera schemaformuläret och klicka på **[!UICONTROL Edit]**.
 
-1. (Valfritt) Klicka på Formulärredigeraren för metadatamodell i `+` för att skapa en ny flik för Workfront-fälten.
+1. (Valfritt) Klicka på Formulärredigeraren för metadatamodell i `+` för att skapa en flik för Workfront-fälten.
 
 1. Klicka på **[!UICONTROL Build Form]** och dra **[!UICONTROL Single Line Text]** till formuläret. Klicka på komponenten i formuläret. I **[!UICONTROL Build Form]** tab:
 
@@ -93,7 +93,7 @@ Så här konfigurerar du metadatamappning med ett nytt metadataformulär i Exper
 
       När du konfigurerar mappningar i Workfront har du mappat `wm:projectName` Experience Manager Assets-fält till Projekt > Namn på Workfront-fält.
 
-      `wm` refererar till namnutrymmets namn och `projectName` refererar till egenskapsrubriken. Använd `namespace:propertyTitle` format för att definiera mappningar av metadatafält.
+      `wm` refererar till namnutrymmets namn och `projectName` refererar till egenskapens titel. Använd `namespace:propertyTitle` format för att definiera mappningar av metadatafält.
 
       ![Skicka till AEM](assets/metadata-schema-mapping.png)
 
@@ -125,7 +125,7 @@ Så här använder du metadatainställningar för bildmappen:
 
 1. Välj metadatamatchemat i listan och klicka på **[!UICONTROL Apply to Folder(s)]**.
 
-1. Välj målmappen som [bilden skickas från Adobe Workfront-programmet](#send-image-workfront-assets) och klicka **[!UICONTROL Apply]**.
+1. Välj målmappen som [bilden skickas från Adobe Workfront](#send-image-workfront-assets) och klicka **[!UICONTROL Apply]**.
 
 Du kan navigera till bilden i Experience Manager Assets och visa de metadata som är associerade med bilden. Markera bilden och klicka på **[!UICONTROL Properties]** för att visa bildens metadata.
 

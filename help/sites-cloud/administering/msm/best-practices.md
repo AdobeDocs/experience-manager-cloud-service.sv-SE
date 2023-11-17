@@ -4,9 +4,9 @@ description: Lär dig de bästa arbetssätten som skapats av tekniker och konsul
 feature: Multi Site Manager
 role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Observera att AEM har två metoder för att skapa Live-kopior:
 
 Tänk på följande när du skapar en plats:
 
-* Om du vill skapa en ny plats behöver du en [konfiguration av utkast](creating-live-copies.md#managing-blueprint-configurations).
+* Om du vill skapa en plats behöver du en [konfiguration av utkast](creating-live-copies.md#managing-blueprint-configurations).
 * Om du vill att språksökvägar ska kunna väljas på en ny plats måste motsvarande språkrörelser finnas i planen (källa).
 * En gång en [ny webbplats har skapats som en Live Copy](creating-live-copies.md#creating-a-live-copy-of-a-site-from-a-blueprint-configuration) (med **Skapa** sedan **Plats**) är de två första nivåerna i den här Live Copy *grund*. Sidans underordnade hör inte till live-relationen, men en utrullning kommer ändå att gå ned om en live-relation som matchar utlösaren hittas.
 

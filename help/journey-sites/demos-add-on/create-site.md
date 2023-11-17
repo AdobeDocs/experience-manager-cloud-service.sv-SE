@@ -2,9 +2,9 @@
 title: Skapa demowebbplats
 description: Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mallar.
 exl-id: e76fd283-12b2-4139-9e71-2e145b9620b1
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mal
 
 I det föregående dokumentet om AEM Reference Demos Add-On-resan, [Create Program,](create-program.md) du tog det första konfigurationssteget för att skapa ett program för testning och använde en pipeline för att distribuera tilläggsinnehållet. Nu bör du:
 
-* Lär dig hur du använder Cloud Manager för att skapa ett nytt program.
+* Lär dig hur du använder Cloud Manager för att skapa ett program.
 * Lär dig hur du aktiverar tillägget Referensdemonstrationer för det nya programmet.
 * Du kan köra en pipeline för att distribuera tilläggsinnehållet.
 
@@ -25,7 +25,7 @@ I den här artikeln beskrivs nästa steg i processen genom att skapa en ny webbp
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du skapar en ny plats baserat på mallarna i tillägget Referensdemo. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur du skapar en webbplats baserat på mallarna för tillägget Referensdemo. När du har läst bör du:
 
 * Lär dig hur du kommer åt AEM.
 * Lär dig hur du skapar en webbplats baserad på en mall.

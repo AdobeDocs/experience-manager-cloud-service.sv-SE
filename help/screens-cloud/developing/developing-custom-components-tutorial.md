@@ -2,9 +2,9 @@
 title: Utveckla en anpassad komponent för skärmar as a Cloud Service
 description: I följande självstudiekurs går du igenom stegen för att skapa en anpassad komponent för AEM Screens. AEM Screens återanvänder många befintliga designmönster och tekniker från andra AEM produkter. I självstudiekursen beskrivs skillnader och speciella överväganden när du utvecklar för AEM Screens.
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '2107'
+source-wordcount: '2106'
 ht-degree: 0%
 
 ---
@@ -329,7 +329,7 @@ AEM Screens-komponenter återges annorlunda i redigeringsläge jämfört med fö
 
 1. Kopiera och klistra in `shared` klientbiblioteksmapp för att skapa ett klientbibliotek med namnet `production`.
 
-   ![Kopiera det delade klientbiblioteket för att skapa ett nytt produktionsklientbibliotek](/help/screens-cloud/developing/assets/copy-clientlib.gif)
+   ![Kopiera det delade klientbiblioteket för att skapa ett produktionsklientbibliotek](/help/screens-cloud/developing/assets/copy-clientlib.gif)
 
    Kopiera det delade klientbiblioteket för att skapa ett produktionsklientbibliotek.
 

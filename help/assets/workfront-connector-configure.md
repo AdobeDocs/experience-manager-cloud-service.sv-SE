@@ -4,9 +4,9 @@ description: Konfigurera [!DNL Workfront for Experience Manager enhanced connect
 role: Admin
 feature: Integrations
 exl-id: d4e1247a-342c-4bc4-83bf-4e4902468fb3
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ Metadatamappning mellan Adobe Workfront-dokument och -resurser definieras AEM me
 Så här konfigurerar du mappningarna:
 
 1. Navigera till **verktyg** > **Resurser** > **Metadata-scheman**.
-1. Markera det metadatamatchemaformulär som du vill redigera och klicka på **Redigera** eller skapa ett nytt metadatchema från grunden.
+1. Markera det metadatamatchemaformulär som du vill redigera och klicka på **Redigera** eller skapa ett metadatamatchema från grunden.
 1. Markera det formulärfält för metadatdataschema som du vill redigera och markera **Inställningar** på den högra panelen.
 1. I [!DNL Workfront] Anpassat formulärfält markerar namnet på [!DNL Workfront] fält som du vill mappa till den markerade AEM. Tillgängliga alternativ är:
 

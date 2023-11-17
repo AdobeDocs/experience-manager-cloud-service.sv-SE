@@ -2,7 +2,7 @@
 title: Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser
 description: Lär dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser.
 exl-id: 5d264078-e552-48ca-8d82-294a646e6b1f
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
 source-wordcount: '1127'
 ht-degree: 0%
@@ -117,7 +117,7 @@ Nu när du är klar med den här delen av AEM snabbwebbplats:
 * Förstå hur AEM Sites och Cloud Manager samarbetar för att underlätta utvecklingen på frontend
 * Se hur anpassningssteget i gränssnittet är helt fristående från AEM och kräver ingen AEM kunskap.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Skapa webbplats från mall,](create-site.md) där du lär dig att snabbt skapa en ny AEM med hjälp av en mall.
+Bygg vidare på den här kunskapen och fortsätt din AEM snabbwebbplats genom att granska dokumentet nästa gång [Skapa webbplats från mall,](create-site.md) där du lär dig hur du snabbt skapar en ny AEM med hjälp av en mall.
 
 ## Ytterligare resurser {#additional-resources}
 

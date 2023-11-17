@@ -5,9 +5,9 @@ index: true
 hide: false
 hidefromtoc: false
 exl-id: d1a3eb42-e9e4-4118-9ff7-7aab5519cf0d
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ När kopplingspaketet för den översättningstjänst du föredrar har installer
 * Om översättning till människa eller dator ska utföras
 * Om annat innehåll som är associerat med sidorna ska översättas, till exempel taggar
 
-Så här skapar du en ny översättningskonfiguration:
+Så här skapar du en översättningskonfiguration:
 
 1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på ett visst projekt eller kan vara globalt.

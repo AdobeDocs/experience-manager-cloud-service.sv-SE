@@ -2,9 +2,9 @@
 title: Experience Fragments
 description: Använd Adobe Experience Manager as a Cloud Service Experience Fragments för att göra upplevelserna återanvändbara och flexibla.
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
-source-git-commit: bad2225e7c5f2554ebd51c0e7e737296c3aa552b
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2043'
 ht-degree: 4%
 
 ---
@@ -279,7 +279,7 @@ Du kan välja en eller flera komponenter för att skapa en byggsten för återvi
 
 ### Skapa ett byggblock {#creating-a-building-block}
 
-Så här skapar du ett nytt byggblock:
+Så här skapar du ett byggblock:
 
 1. Välj de komponenter som du vill återanvända i Experience Fragment-redigeraren:
 

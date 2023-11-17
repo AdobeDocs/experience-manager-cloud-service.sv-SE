@@ -2,9 +2,9 @@
 title: Redigeringsmiljö och -verktyg
 description: I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehåll
 exl-id: cc3bd4cf-93bd-429d-9a2a-4a02a7b42f7c
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '2164'
+source-wordcount: '2163'
 ht-degree: 9%
 
 ---
@@ -120,7 +120,7 @@ Om du vill lägga till en resurs på sidan markerar och drar du den till önskad
 
 * En befintlig komponent av lämplig typ.
    * Du kan till exempel dra en resurs av typen bild till en bildkomponent.
-* A [platshållare](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-placeholder) i styckesystemet för att skapa en ny komponent av lämplig typ.
+* A [platshållare](/help/sites-cloud/authoring/fundamentals/editing-content.md#component-placeholder) i styckesystemet för att skapa en komponent av lämplig typ.
    * Du kan till exempel dra en resurs av typen bild till styckesystemet för att skapa en bildkomponent.
 
 >[!NOTE]

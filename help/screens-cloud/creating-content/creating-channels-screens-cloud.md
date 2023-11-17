@@ -2,9 +2,9 @@
 title: Skapa och hantera kanaler på skärmar as a Cloud Service
 description: På den här sidan beskrivs hur du skapar och hanterar kanaler på skärmar as a Cloud Service.
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1086'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Det här dokumentet hjälper dig att förstå hur du skapar och hanterar kanaler
 >**Förutsättningar**
 >Innan du startar det här avsnittet av handboken bör du granska [Skapa och hantera projekt på skärmar as a Cloud Service](/help/screens-cloud/creating-content/creating-projects-screens-cloud.md).
 
-Följ stegen nedan för att skapa en ny sekvenskanal på as a Cloud Service Skärmar:
+Följ stegen nedan för att skapa en sekvenskanal på as a Cloud Service Skärmar:
 
 1. Navigera till Screens Content Provider.
 

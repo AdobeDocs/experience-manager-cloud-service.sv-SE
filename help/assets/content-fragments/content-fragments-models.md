@@ -2,9 +2,9 @@
 title: Modeller för innehållsfragment (resurser - innehållsfragment)
 description: Lär dig hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM och hur du skapar innehållsfragment med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
-source-git-commit: f499edbc05b71495c072564bb065a07c34a9e236
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '2937'
+source-wordcount: '2935'
 ht-degree: 2%
 
 ---
@@ -297,7 +297,7 @@ Detta anger en rotsökväg för alla fragment som refereras.
 
 * **Tillåt skapande av fragment**
 
-  Detta gör att fragmentförfattaren kan skapa ett nytt fragment baserat på lämplig modell.
+  Detta gör att fragmentförfattaren kan skapa ett fragment baserat på lämplig modell.
 
    * **fragmentreferencecomposite** - låter fragmentförfattaren skapa en sammansatt bild genom att markera flera fragment
 

@@ -2,9 +2,9 @@
 title: Snabbstartsguide till redigering av sidor
 description: En snabb guide på hög nivå som hjälper dig att komma igång med att skapa sidinnehåll
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1560'
 ht-degree: 4%
 
 ---
@@ -76,7 +76,7 @@ Det finns olika aspekter av att hitta en sida. Du kan navigera och/eller söka e
 
 ### Skapa en ny sida {#creating-a-new-page}
 
-Till [skapa en ny sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page):
+Till [skapa en sida](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#creating-a-new-page):
 
 1. [Navigera till platsen](#finding-your-page) där du vill skapa den nya sidan.
 1. Använd **Skapa** ikon och sedan markera **Sida** från listan:

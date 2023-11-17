@@ -2,9 +2,9 @@
 title: Administrera taggar
 description: Lär dig hur du administrerar taggar i AEM för att ordna ditt innehåll.
 exl-id: 42480699-b7a7-4678-a763-569a9b7573e2
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2265'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Taggen skapas och konsolen uppdateras för att visa den nya taggen.
 Taggar gör det möjligt att skapa en egen taxonomi som är anpassad efter organisationens behov.
 
 * Du kan skapa underordnade taggar för befintliga taggar genom att markera den överordnade taggen i konsolen innan du skapar den nya taggen.
-* Om du skapar en tagg utan att markera ett namnutrymme eller en annan tagg, skapar du effektivt ett nytt namnutrymme.
+* Om du skapar en tagg utan att markera ett namnutrymme eller en annan tagg, skapar du effektivt ett namnutrymme.
 
 ### Publiceringstaggar {#publishing-tags}
 

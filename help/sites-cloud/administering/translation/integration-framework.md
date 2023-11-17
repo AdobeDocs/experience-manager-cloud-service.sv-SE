@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar TLF (Translation Integration Framework
 feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
-source-git-commit: 7d09cafc4f8518fee185d3f9efc76c33ec20f9a3
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ När du har konfigurerat ett ramverk för översättningsintegrering kan du [ass
 >
 >En översikt över funktionerna för innehållsöversättning i AEM finns på [Översätta innehåll för flerspråkiga webbplatser](overview.md).
 
-En enda konfiguration av ramverket styr hur sidinnehåll och resurser översätts. Så här skapar du en ny översättningskonfiguration:
+En enda konfiguration av ramverket styr hur sidinnehåll och resurser översätts. Så här skapar du en översättningskonfiguration:
 
 1. I [global navigeringsmeny,](/help/sites-cloud/authoring/getting-started/basic-handling.md#global-navigation) klicka eller trycka **Verktyg -> Cloud Service - och översättnings-Cloud Service**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på en viss webbplats eller kan vara globalt.

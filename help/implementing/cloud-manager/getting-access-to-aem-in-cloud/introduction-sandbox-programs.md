@@ -2,9 +2,9 @@
 title: Introduktion till sandlådeprogram
 description: Lär dig vilka sandlådeprogram som skiljer sig från produktionsprogram.
 exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
-source-git-commit: a01583483fa89f89b60277c2ce4e1c440590e96c
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Ett sandlådeprogram är ett av de två tillgängliga programmen i AEM Cloud Ser
 
 ## Automatiskt skapande {#auto-creation}
 
-I sandlådeprogram skapas automatiskt. När du skapar ett nytt sandlådeprogram Cloud Manager automatiskt:
+I sandlådeprogram skapas automatiskt. När du skapar ett sandlådeprogram, Cloud Manager automatiskt:
 
 * Lägger till AEM Sites och AEM Assets som lösningar i programmet.
 * Ställer in en projekt-Git-databas med ett exempelprojekt baserat på [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
@@ -49,7 +49,7 @@ Anpassade domäner och IP-tillåtelselista är inte tillgängliga i sandlådepro
 
 ### Inget avancerat nätverk {#advanced-networking}
 
-[Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (till exempel är självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar och så vidare) inte tillgängliga i sandlådeprogram.
+[Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (till exempel kan du inte använda självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar och så vidare) i sandlådeprogram.
 
 ### Manuella AEM {#updates}
 
@@ -58,7 +58,7 @@ AEM uppdateras inte automatiskt i sandlådeprogram, men kan tillämpas manuellt 
 * En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.
 * En manuell uppdatering av antingen en produktions- eller staging-miljö uppdaterar automatiskt den andra. Miljöuppsättningen Production+Stage måste finnas i samma AEM.
 
-Se [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md) för mer information.
+Se [AEM](/help/implementing/deploying/aem-version-updates.md) för mer information.
 
 Se [Uppdaterar miljö](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment) för att lära dig hur man uppdaterar en miljö.
 
@@ -72,4 +72,4 @@ Se [Viloläge och avvänjningsmiljöer för sandlådor](/help/implementing/cloud
 
 Eftersom ett sandlådeprogram vanligtvis skapas för att användas i utbildningssyfte, för att köra demonstrationer, aktivering eller konceptbevis (POC), är teknisk support inte tillgänglig för problem som uppstår i ett sandlådeprogram.
 
-Om du får problem med att skapa och hantera dina sandlådeprogram omfattas detta fortfarande av den tekniska supporten.
+Om du får problem med att skapa och hantera dina sandlådeprogram omfattas detta fortfarande av teknisk support.

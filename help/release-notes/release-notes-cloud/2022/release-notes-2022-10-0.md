@@ -2,9 +2,9 @@
 title: Versionsinformation för version 2022.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Versionsinformation för version 2022.10.0 av [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 8fce7c50-f322-4bcf-bd76-390faedfd5b7
-source-git-commit: 87630d9530194fd0c6d88e05a17db108b765ccb6
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -69,10 +69,10 @@ Titta på videon med versionsöversikten för oktober 2022 om du vill se en samm
    * **[Formulärdatamodell i mallredigerare](/help/forms/creating-adaptive-form.md#edit-form-model-properties-of-an-adaptive-form-edit-form-model)**: Du kan koppla ett formulärdatamodellschema till en anpassad formulärmall i mallredigeraren. Det minskar tiden det tar att skapa ett adaptivt formulär. Alternativet läggs också till i Adaptiv Forms-redigerare så att användare kan välja eller ändra formulärdatamodellen för befintliga formulär.
    * **[Dokument för post i mallredigeraren](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#document-of-record-support-in-adaptive-form-editor-dor-support-in-adaptiveform)**: Du kan nu standardisera dokumentgenereringen för alla formulär som skapas med en mall. Detta bidrar till att förbättra regelefterlevnaden och standardiseringen för organisationens krav.
 
-* **[Starta guiden Adaptivt formulär från en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)**: AEM Sites-sidan har utökat stöd för Adaptive Forms. Nu kan du skapa ett nytt adaptivt formulär eller bädda in ett befintligt adaptivt formulär medan du finns kvar på AEM Sites-sidan.
+* **[Starta guiden Adaptivt formulär från en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)**: AEM Sites-sidan har utökat stöd för Adaptive Forms. Nu kan du skapa ett adaptivt formulär eller bädda in ett befintligt adaptivt formulär medan du finns kvar på AEM Sites-sidan.
 * **[Ändra visningsjustering för kryssrutor och alternativknappar i DoR](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#customize-the-branding-information-in-document-of-record-customize-the-branding-information-in-document-of-record)**: Du kan nu ange önskad justering (Vågrät, Lodrät, Samma som Adaptiv Forms) för kryssrutan och alternativknappen i Postdokumentet. Med det här alternativet anger du placeringen av kryssrutor och alternativknappar i postdokumentet.
 
-## CIF-tillägg {#cloud-services-cif}
+## CIF {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 

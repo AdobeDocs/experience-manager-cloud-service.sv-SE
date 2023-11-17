@@ -2,9 +2,9 @@
 title: Konfigurera översättningsintegrering för Headless-innehåll
 description: Lär dig hur du ansluter AEM till en översättningstjänst.
 exl-id: c91b2701-7ede-4d0b-93dd-3636c6638be2
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1229'
 ht-degree: 0%
 
 ---
@@ -68,9 +68,9 @@ När kopplingspaketet för den översättningstjänst du föredrar har installer
 * Om översättning till människa eller dator ska utföras
 * Om annat innehåll som är associerat med innehållsfragmentet ska översättas, till exempel taggar
 
-Så här skapar du en ny översättningskonfiguration:
+Så här skapar du en översättningskonfiguration:
 
-1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** -> **Cloud Service** -> **Cloud Service för översättning**.
+1. Klicka eller tryck på den globala navigeringsmenyn **verktyg** > **Cloud Service** > **Cloud Service för översättning**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på ett visst projekt eller kan vara globalt.
    * I det här fallet kan till exempel en konfiguration göras globalt för att gälla allt innehåll, eller bara för WKND-projektet.
 

@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Metadata
 role: User,Admin
 exl-id: 1d3ad496-a964-476e-b1da-4aa6d8ad53b7
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '934'
 ht-degree: 11%
 
 ---
@@ -41,9 +41,9 @@ Oavsett vilken resurstyp du väljer visas copyrightinformationen som ett obligat
 
    ![select_form](assets/select_form.png)
 
-1. (Valfritt) Skapa ett nytt fält som ska villkoraliseras i metadataramedigeraren. Ange ett namn och en egenskapssökväg i dialogrutan **[!UICONTROL Settings]** -fliken.
+1. (Valfritt) Skapa ett fält som ska villkoraliseras i metadataramedigeraren. Ange ett namn och en egenskapssökväg i dialogrutan **[!UICONTROL Settings]** -fliken.
 
-   Skapa en ny flik genom att trycka/klicka `+` för att lägga till en flik och sedan lägga till ett metadatafält.
+   Skapa en flik genom att trycka/klicka `+` för att lägga till en flik och sedan lägga till ett metadatafält.
 
    ![add_tab](assets/add_tab.png)
 

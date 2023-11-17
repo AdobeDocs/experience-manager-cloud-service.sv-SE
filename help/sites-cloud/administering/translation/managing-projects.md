@@ -4,9 +4,9 @@ description: Lär dig hur du skapar och hanterar både maskinöversättning och 
 feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
-source-git-commit: 5ad33f0173afd68d8868b088ff5e20fc9f58ad5a
+source-git-commit: e2505c0fec1da8395930f131bfc55e1e2ce05881
 workflow-type: tm+mt
-source-wordcount: '4077'
+source-wordcount: '4075'
 ht-degree: 0%
 
 ---
@@ -448,9 +448,10 @@ Så här jämför du språkkopior med språkinställningen:
 
 ## Flytta eller byta namn på en källsida {#move-source}
 
-Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#moving-or-renaming-a-page)om du översätter sidan igen efter flytten skapas en ny språkkopia baserad på det nya sidnamnet/den nya platsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där.
+Om en redan översatt källsida måste [ändrat namn eller flyttat](/help/sites-cloud/authoring/fundamentals/organizing-pages.md#moving-or-renaming-a-page), översätter sidan igen efter flytten, skapar en språkkopia baserad på det nya sidnamnet/den nya sidplatsen. Den gamla språkkopian som baseras på föregående namn/plats kommer fortfarande att finnas där.
 
 Det bästa sättet i detta scenario är att följa denna procedur:
+
 1. Avpublicera de språkkopior som är associerade med den källsida som du vill flytta.
 1. Ta bort dem.
 1. Skapa nya språkkopior från den nyligen flyttade källsidan.
