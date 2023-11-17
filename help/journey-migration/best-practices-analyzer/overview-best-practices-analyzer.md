@@ -2,7 +2,7 @@
 title: Översikt över Best Practices Analyzer
 description: Lär dig hur du använder Best Practices Analyzer för att bedöma om AEM följer rekommenderade metoder
 exl-id: 46c567f8-91e2-4d85-98bd-61d183b887d5
-source-git-commit: 8c73805b6ed1b7a03c65b4d21a4252c1412a5742
+source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 27%
@@ -14,9 +14,9 @@ ht-degree: 27%
 >[!CONTEXTUALHELP]
 >id="aemcloud_bpa_overview"
 >title="Översikt över Best Practices Analyzer"
->abstract="Best Practices Analyzer ger en utvärdering av den aktuella AEM-implementeringen genom att ange områden som inte följer AEM bästa praxis. Det ger också vägledning om nästa steg för att anta AEM bästa praxis. Dessutom går det snabbare att bedöma om man är redo att gå över från en befintlig driftsättning av Adobe Experience Manager (AEM) till AEM as a Cloud Service."
+>abstract="Best Practices Analyzer ger en utvärdering av den aktuella AEM-implementeringen genom att ange områden som inte följer AEM bästa praxis. Det ger också vägledning om nästa steg för att anta AEM bästa praxis. Det snabbar också upp processerna för bedömning av beredskap att gå över från en befintlig driftsättning av Adobe Experience Manager (AEM) till AEM as a Cloud Service."
 
-Best Practices Analyzer ger en utvärdering av den aktuella AEM-implementeringen genom att ange områden som inte följer AEM bästa praxis. Det ger också vägledning om nästa steg för att anta AEM bästa praxis. Dessutom går det snabbare att bedöma om man är redo att gå över från en befintlig driftsättning av Adobe Experience Manager (AEM) till AEM as a Cloud Service.
+Best Practices Analyzer ger en utvärdering av den aktuella AEM-implementeringen genom att ange områden som inte följer AEM bästa praxis. Det ger också vägledning om nästa steg för att anta AEM bästa praxis. Det snabbar också upp processerna för bedömning av beredskap att gå över från en befintlig driftsättning av Adobe Experience Manager (AEM) till AEM as a Cloud Service.
 
 Verktyget genererar en rapport som identifierar områden med potentiell refaktorisering, vilket är det första steget i övergångsprocessen till AEM as a Cloud Service.
 
